@@ -2,7 +2,6 @@ import React, {useState, useRef, useEffect} from 'react';
 import {Text, View, Animated, SafeAreaView, StatusBar, StyleSheet} from 'react-native';
 import Header from './Header';
 import ListItem from './ListItem';
-import {generateData} from './data';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const {diffClamp} = Animated;
