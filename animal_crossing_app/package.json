@@ -17,6 +17,7 @@
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.4.tar.gz",
     "react-native-animated-header": "^1.0.7",
+    "react-native-fade-in-out": "^1.0.3",
     "react-native-gesture-handler": "^1.8.0",
     "react-native-header-scroll-view": "^2.0.0",
     "react-native-reanimated": "^1.13.2",
@@ -25,7 +26,8 @@
     "react-native-viewport-units": "0.0.5",
     "react-native-web": "~0.13.12",
     "react-navigation-collapsible": "^5.8.1",
-    "reanimated-bottom-sheet": "^1.0.0-alpha.22"
+    "reanimated-bottom-sheet": "^1.0.0-alpha.22",
+    "expo-font": "~8.3.0"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0"

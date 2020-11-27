@@ -91,11 +91,16 @@ export default (props) =>{
       for(var x = 0; x < props.searchKey[item.dataSet].length; x++){
         if(search==="Search" || search==="" || item.[props.searchKey[item.dataSet][x]].toLowerCase().includes(search.toLowerCase())){
           //Search result found...
-          if(props.showVariations===false && item.[props.textProperty[item.dataSet]]===previousVariation){
-            previousVariation = item.[props.textProperty[item.dataSet]];
+          if(props.showVariations===false){
+            if(item.[props.textProperty[item.dataSet]]===previousVariation){
+              previousVariation = item.[props.textProperty[item.dataSet]];
+            } else {
+              dataUpdated = [...dataUpdated, item];
+              previousVariation = item.[props.textProperty[item.dataSet]];
+            }
           } else {
             dataUpdated = [...dataUpdated, item];
-            previousVariation = item.[props.textProperty[item.dataSet]];
+            break;
           }
         }
       }

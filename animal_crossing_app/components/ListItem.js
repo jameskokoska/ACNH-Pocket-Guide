@@ -10,6 +10,7 @@ import {
   Vibration,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import TextFont from './TextFont';
 
 const {width} = Dimensions.get('window');
 
@@ -28,7 +29,7 @@ const ListItem = (props) => {
             }}
           />
           <View style={styles.gridBoxText}>
-            <Text style={{textAlign:'center'}}>{capitalize(props.item.[props.textProperty[props.item.dataSet]])}</Text>
+            <TextFont bold={false} style={{textAlign:'center'}}>{capitalize(props.item.[props.textProperty[props.item.dataSet]])}</TextFont>
           </View>
         </View>
       </TouchableNativeFeedback>

@@ -1,14 +1,26 @@
 import React, {useRef, Component} from 'react';
-import {Text, View, DrawerLayoutAndroid, Animated, SafeAreaView, StatusBar, StyleSheet} from 'react-native';
+import {Text, View, DrawerLayoutAndroid, Animated, SafeAreaView, StatusBar, StyleSheet, ActivityIndicator} from 'react-native';
 import ListPage from './components/ListPage';
+import SidebarElement from './components/SidebarElement';
+
 const art = require("./assets/data/art.json");
 const fencing = require("./assets/data/fencing.json");
-const showVariations = false;
- const navigationView = (
-    <View>
-      <Text style={{ margin: 10, fontSize: 15 }}>I'm in the Drawer!</Text>
-    </View>
-  );
+const navigationView = (<>
+  <View style={{ margin: 100}}>
+    <Text>ACNH Pocket</Text>
+  </View>
+  <View>
+    <SidebarElement image={require("./assets/icons/house.png")} title="Home"/>
+    <SidebarElement image={require("./assets/icons/bugs.png")} title="Creatures and Museum"/>
+    <SidebarElement image={require("./assets/icons/leaf.png")} title="Items"/>
+    <SidebarElement image={require("./assets/icons/emote.png")} title="Emoticons"/>
+    <SidebarElement image={require("./assets/icons/crafting.png")} title="Crafting + Tools"/>
+    <SidebarElement image={require("./assets/icons/cat.png")} title="Villagers"/>
+    <SidebarElement image={require("./assets/icons/construction.png")} title="Construction"/>
+    <SidebarElement image={require("./assets/icons/season.png")} title="Misc. Timetables"/>
+  </View>
+  </>
+);
 
 // TODO
 // Search bar functionality
@@ -22,10 +34,10 @@ const showVariations = false;
 class App extends Component {
   render() {
     return (
-      <DrawerLayoutAndroid drawerWidth={300} drawerPosition={"left"} renderNavigationView={() => navigationView}>
+      <DrawerLayoutAndroid drawerWidth={280} drawerPosition={"left"} renderNavigationView={() => navigationView}>
         <ListPage 
           data={[art,fencing]}
-          showVariations={showVariations}
+          showVariations={false}
           title="Art"
           imageProperty={["Image","Image"]}
           textProperty={["Name","Name"]}
