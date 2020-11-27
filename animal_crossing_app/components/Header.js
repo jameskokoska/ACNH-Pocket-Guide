@@ -1,8 +1,9 @@
-import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import React, {useState} from 'react';
+import {StyleSheet, Text, View, TextInput} from 'react-native';
 import Search from '../assets/svg/Search';
 
 const Header = (props) => {
+  const [search, setSearch] = useState('Search')
   return (
     <>
       <View style={[styles.topSpace, {height: props.headerHeight / 1.5,}]}>
@@ -12,7 +13,7 @@ const Header = (props) => {
           <Text style={styles.title}>{props.title}</Text>
           <View style={styles.searchBox}>
             <Search />
-            <Text style={styles.searchText}>Search</Text>
+            <TextInput style={styles.searchText} value={search} onChangeText={function(text){setSearch(text); props.updateSearch(text);}} onFocus={() => setSearch("")} onBlur={() => setSearch("Search")}/>
           </View>
         </View>
       </View>
@@ -46,6 +47,8 @@ const styles = StyleSheet.create({
     fontSize: 17,
     lineHeight: 22,
     marginLeft: 8,
+    width:'100%',
+    paddingRight: 25,
   },
   searchBox: {
     paddingVertical: 8,

@@ -19,16 +19,16 @@ const ListItem = (props) => {
     <View style={styles.gridWrapper}>
       <TouchableNativeFeedback onLongPress={() => {longPress(props.item.checkListKey, collected); setCollected(collected==="true" ? "false":"true");}}>
         <View style={styles.gridBox}>
-          <View style={[styles.gridCheckMark,{opacity: collected==="true" ? 0:1}]}>
+          <View style={[styles.gridCheckMark,{opacity: collected==="true" ? 1:0}]}>
           </View>
           <Image
             style={styles.gridBoxImage}
             source={{
-              uri: props.item.[props.imageProperty],
+              uri: props.item.[props.imageProperty[props.item.dataSet]],
             }}
           />
           <View style={styles.gridBoxText}>
-            <Text style={{textAlign:'center'}}>{capitalize(props.item.[props.textProperty])}</Text>
+            <Text style={{textAlign:'center'}}>{capitalize(props.item.[props.textProperty[props.item.dataSet]])}</Text>
           </View>
         </View>
       </TouchableNativeFeedback>
@@ -103,5 +103,4 @@ function longPress(checkListKeyString, collected){
   Vibration.vibrate(15);
   AsyncStorage.setItem(checkListKeyString, collected==="false" ? "true":"false")
   console.log(checkListKeyString)
-  console.log(collected)
 }
