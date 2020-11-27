@@ -11,7 +11,7 @@ export default (props) =>{
   const ref = useRef(null);
 
   const scrollY = useRef(new Animated.Value(0));
-  const scrollYClamped = diffClamp(scrollY.current, 0, headerHeight/1.5);
+  const scrollYClamped = diffClamp(scrollY.current, 0, headerHeight/0.85); //or 1.5
 
   const translateY = scrollYClamped.interpolate({
     inputRange: [0, headerHeight],
@@ -47,6 +47,7 @@ export default (props) =>{
   }
 
   useEffect(() => {
+    
     var checkListKeyString = "";
     var dataLoadingTotal = [];
     async function getData() {

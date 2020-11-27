@@ -15,10 +15,15 @@ import TextFont from './TextFont';
 const {width} = Dimensions.get('window');
 
 const ListItem = (props) => {
+  //props.item.dataSet=0
   const [collected, setCollected] = useState(props.item.collected);
   return (
     <View style={styles.gridWrapper}>
-      <TouchableNativeFeedback onLongPress={() => {longPress(props.item.checkListKey, collected); setCollected(collected==="true" ? "false":"true");}}>
+      <TouchableNativeFeedback onLongPress={() => {  
+        console.log(props.item);
+        longPress(props.item.checkListKey, collected); 
+        setCollected(collected==="true" ? "false":"true");
+      }}>
         <View style={styles.gridBox}>
           <View style={[styles.gridCheckMark,{opacity: collected==="true" ? 1:0}]}>
           </View>
