@@ -4,13 +4,11 @@ import ListPage from './components/ListPage';
 import SidebarElement from './components/SidebarElement';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import FAB from './components/FAB';
+import TabsPage from './pages/TabsPage';
+import HomePage from './pages/HomePage';
 
 const {width} = Dimensions.get('window');
 
-
-const art = require("./assets/data/art.json");
-const fencing = require("./assets/data/fencing.json");
-const reactions = require("./assets/data/reactions.json");
 
 function NavigationView(props) {
   return (
@@ -30,44 +28,6 @@ function NavigationView(props) {
   )
 }
 
-const FirstRoute = () => (
-  <ListPage 
-    data={[reactions]}
-    showVariations={false}
-    title="Reactions"
-    imageProperty={["Image"]}
-    textProperty={["Name"]}
-    checkListKey={[["emojiCheckList","Name"]]}
-    searchKey={[["Name"]]}
-  />
-  
-);
-
-const SecondRoute = () => (
-  <ListPage 
-    data={[art,fencing]}
-    showVariations={false}
-    title="Art"
-    imageProperty={["Image","Image"]}
-    textProperty={["Name","Name"]}
-    checkListKey={[["artCheckList","Name","Genuine"],["fenceCheckList","Name"]]}
-    searchKey={[["Name","Genuine"],["Name"]]}
-  />
-);
-  {/*pass in list of what will be displayed in popup sheet*/}
-
-
-const renderTabBar = props => (
-  <TabBar
-    {...props}
-    indicatorStyle={{ backgroundColor: 'white', height:'100%', opacity: 0.3, borderRadius: 10 }}
-    style={{ backgroundColor: 'black'}}
-    getLabelText={({ route }) => route.title}
-  />
-);
-
-
-const initialLayout = { width: Dimensions.get('window').width };
 
 // TODO
 // Search bar functionality
@@ -85,16 +45,9 @@ class App extends Component {
     this.setPage = this.setPage.bind(this);
     this.state = {
       currentPage: 0,
-      index: 0,
-      routes: [
-        { key: 'first', title: 'Reactions' },
-        { key: 'second', title: 'Art' },
-      ],
     }
   }
 
-  
-  handleIndexChange = index => this.setState({index});
   openDrawer() {
     this.drawer.openDrawer();
   }
@@ -106,22 +59,14 @@ class App extends Component {
   
   render(){
     var currentPageView;
-    if(this.state.currentPage===0){
-      currentPageView = 
-        <TabView
-          lazy
-          navigationState={this.state}
-          renderScene={SceneMap({
-            first: FirstRoute,
-            second: SecondRoute,
-          })}
-          onIndexChange={this.handleIndexChange}
-          initialLayout={initialLayout}
-          renderTabBar={renderTabBar}
-        />
+    if (this.state.currentPage===0){
+      currentPageView = <HomePage/>
+    } else if(this.state.currentPage===1){
+      currentPageView = <TabsPage/>
+    } else if (this.state.currentPage===2){
+      currentPageView = <TabsPage/>
     } else {
-      currentPageView = 
-        <Text>Page 2</Text>
+      currentPageView = <Text>Default</Text>
     }
     
     return (
@@ -138,9 +83,3 @@ class App extends Component {
     
 }
 export default App;
-
-const styles = StyleSheet.create({
-  scene: {
-    flex: 1,
-  },
-});
