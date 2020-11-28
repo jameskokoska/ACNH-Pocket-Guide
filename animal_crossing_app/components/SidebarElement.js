@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {
   Dimensions,
   StyleSheet,
@@ -11,15 +11,17 @@ import {
 } from 'react-native';
 import TextFont from './TextFont'
 
-const SidebarElement = (props) => {
-  return (
-    <TouchableNativeFeedback>
-      <View style={styles.sidebarBox}>
-          <Image style={styles.sidebarImage} source={props.image}/>
-          <TextFont bold={true} style={styles.sidebarTitle}>{props.title}</TextFont>
-      </View>
-    </TouchableNativeFeedback>
-  );
+class SidebarElement extends Component {
+  render(){
+    return (
+      <TouchableNativeFeedback onPress={() => {Vibration.vibrate(20); this.props.setPage(this.props.pageNum);}}>
+        <View style={styles.sidebarBox}>
+            <Image style={styles.sidebarImage} source={this.props.image}/>
+            <TextFont bold={true} style={styles.sidebarTitle}>{this.props.title}</TextFont>
+        </View>
+      </TouchableNativeFeedback>
+    );
+  }
 };
 
 const styles = StyleSheet.create({
