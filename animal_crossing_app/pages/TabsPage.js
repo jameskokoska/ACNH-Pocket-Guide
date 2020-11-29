@@ -25,6 +25,7 @@ const FirstRoute = () => (
     title="Reactions"
     imageProperty={["Image"]}
     textProperty={["Name"]}
+    textProperty2={["Image"]}
     checkListKey={[["emojiCheckList","Name"]]}
     searchKey={[["Name"]]}
     gridType="row" //smallGrid, largeGrid, row

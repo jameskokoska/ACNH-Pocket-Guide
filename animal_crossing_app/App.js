@@ -6,6 +6,8 @@ import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import FAB from './components/FAB';
 import TabsPage from './pages/TabsPage';
 import HomePage from './pages/HomePage';
+import FadeInOut from './components/FadeInOut';
+import Check from './components/Check';
 
 const {width} = Dimensions.get('window');
 
@@ -23,6 +25,11 @@ function NavigationView(props) {
       <SidebarElement image={require("./assets/icons/cat.png")} title="Villagers" pageNum={5} setPage={props.setPage}/>
       <SidebarElement image={require("./assets/icons/construction.png")} title="Construction" pageNum={6} setPage={props.setPage}/>
       <SidebarElement image={require("./assets/icons/season.png")} title="Misc. Timetables" pageNum={7} setPage={props.setPage}/>
+      <View style={{backgroundColor:"grey", width:"87%", height:3, margin:20}}/>
+      <SidebarElement image={require("./assets/icons/settings.png")} title="Settings" pageNum={8} setPage={props.setPage}/>
+      <SidebarElement image={require("./assets/icons/magnifyingGlass.png")} title="About" pageNum={9} setPage={props.setPage}/>
+      <View style={{margin:15}}/>
+
     </ScrollView>
     </View>
   )
@@ -64,7 +71,7 @@ class App extends Component {
     } else if(this.state.currentPage===1){
       currentPageView = <TabsPage/>
     } else if (this.state.currentPage===2){
-      currentPageView = <TabsPage/>
+      currentPageView = <Check play={false}/>
     } else {
       currentPageView = <Text>Default</Text>
     }

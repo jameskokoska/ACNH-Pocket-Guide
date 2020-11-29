@@ -38,7 +38,6 @@ export default (props) =>{
     },
   );
 
-  const [loading, setLoading] = useState(true);
   const [dataLoaded, setDataLoaded] = useState(null);
   const [search, setSearch] = useState("Search");
 
@@ -51,7 +50,6 @@ export default (props) =>{
     var checkListKeyString = "";
     var dataLoadingTotal = [];
     async function getData() {
-      setLoading(true);
       //Loop through all datasets
       for(var dataSet = 0; dataSet < props.data.length; dataSet++){
         var dataLoading = props.data[dataSet];
@@ -75,12 +73,11 @@ export default (props) =>{
         dataLoadingTotal = dataLoadingTotal.concat(dataLoading);
       }
       setDataLoaded(dataLoadingTotal);
-      setLoading(false);
     }
     getData();
   }, []);
 
-  if(loading){
+  if(dataLoaded===null){
     return <Header title={props.title} headerHeight={headerHeight} />
   } else {
     var dataUpdated = [];
@@ -134,6 +131,7 @@ export default (props) =>{
                 showVariations={props.showVariations}
                 imageProperty={props.imageProperty} 
                 textProperty={props.textProperty}
+                textProperty2={props.textProperty2}
                 gridType={props.gridType}
               />}
             keyExtractor={(item, index) => `list-item-${index}-${item.color}`}

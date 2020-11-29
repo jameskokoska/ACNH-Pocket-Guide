@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {StyleSheet, View, TextInput, Text} from 'react-native';
+import {StyleSheet, View, TextInput, Text, Vibration} from 'react-native';
 import Search from '../assets/svg/Search';
 import TextFont from './TextFont'
 
@@ -14,7 +14,7 @@ const Header = (props) => {
           <TextFont style={styles.title} bold={true}>{props.title}</TextFont>
           <View style={styles.searchBox}>
             <Search />
-            <TextInput style={styles.searchText} value={search} onChangeText={function(text){setSearch(text); props.updateSearch(text);}} onFocus={() => setSearch("")} onBlur={function(){if(search===""){setSearch("Search"); props.updateSearch("Search");}else{setSearch(search);}}}/>
+            <TextInput style={styles.searchText} value={search} onChangeText={function(text){setSearch(text); props.updateSearch(text);}} onFocus={() => {setSearch(""); Vibration.vibrate(15);}} onBlur={function(){if(search===""){setSearch("Search"); props.updateSearch("Search");}else{setSearch(search);}}}/>
           </View>
         </View>
       </View>

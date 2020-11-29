@@ -11,6 +11,8 @@ import {
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import TextFont from './TextFont';
+import FadeInOut from './FadeInOut';
+import Check from './Check';
 
 const {width} = Dimensions.get('window');
 
@@ -26,8 +28,9 @@ const ListItem = (props) => {
           setCollected(collected==="true" ? "false":"true");
         }}>
           <View style={styles.gridBox}>
-            <View style={[styles.checkMark,{opacity: collected==="true" ? 1:0}]}>
-            </View>
+            <FadeInOut style={{position:'absolute', right: -4, top: -7}} fadeIn={collected==="true"} fadeInOut={false} scaleInOut={false}>
+              <Check style={{position:'absolute', right: -6, top: -7}} play={collected==="true"} width={53} height={53}/>
+            </FadeInOut>
             <Image
               style={styles.gridBoxImage}
               source={{
@@ -50,8 +53,9 @@ const ListItem = (props) => {
           setCollected(collected==="true" ? "false":"true");
         }}>
           <View style={styles.gridBoxLarge}>
-            <View style={[styles.checkMark,{opacity: collected==="true" ? 1:0}]}>
-            </View>
+            <FadeInOut style={{position:'absolute', right: -4, top: -7}} fadeIn={collected==="true"} fadeInOut={false} scaleInOut={false}>
+              <Check style={{position:'absolute', right: -6, top: -7}} play={collected==="true"} width={53} height={53}/>
+            </FadeInOut>
             <Image
               style={styles.gridBoxImageLarge}
               source={{
@@ -87,12 +91,16 @@ const ListItem = (props) => {
                 <TextFont bold={true} style={{fontSize:21}}>{capitalize(props.item.[props.textProperty[props.item.dataSet]])}</TextFont>
               </View>
               <View style={styles.rowTextBottom}>
-                <TextFont bold={false} style={{fontSize:16}}>{capitalize(props.item.[props.textProperty[props.item.dataSet]])}</TextFont>
+                <TextFont bold={false} style={{fontSize:16}}>{capitalize(props.item.[props.textProperty2[props.item.dataSet]])}</TextFont>
               </View>
             </View>
-            <TouchableOpacity style={{position:"absolute", right: 10}}>
-              <View style={[styles.checkMarkLarge,{opacity: collected==="true" ? 1:0}]}>
-              </View>
+            <TouchableOpacity style={{position:"absolute", right: -10}} 
+              onPress={() => {  
+              console.log(props.item);
+              longPress(props.item.checkListKey, collected); 
+              setCollected(collected==="true" ? "false":"true");
+            }}>
+              <Check play={collected==="true"} width={100} height={100}/>
             </TouchableOpacity>
           </View>
         </TouchableNativeFeedback>
@@ -105,12 +113,7 @@ const ListItem = (props) => {
 export default ListItem;
 
 const styles = StyleSheet.create({
-  checkMarkLarge:{
-    backgroundColor: "#38b548",
-    borderRadius: 100,
-    height: 54,
-    width: 54,
-  },
+
   rowTextBottom:{
     width: "100%",
     paddingLeft: 4,
@@ -141,7 +144,7 @@ const styles = StyleSheet.create({
     padding: 13,
     alignItems: 'center',
     flexDirection:"row",
-    backgroundColor: "#DDDDDD",
+    backgroundColor: "white",
     height: 88,
     width: "100%",
     borderRadius:10,
@@ -156,9 +159,6 @@ const styles = StyleSheet.create({
     marginTop: 7,
   },
   checkMark:{
-    position:'absolute',
-    right: -4,
-    top: -7,
     backgroundColor: "#38b548",
     borderRadius: 25,
     height: 28,
@@ -248,7 +248,11 @@ function capitalize(name) {
 }
 
 function longPress(checkListKeyString, collected){
-  Vibration.vibrate(15);
+  if(collected==="false"){
+    Vibration.vibrate([10,10,260,25]);
+  } else {
+    Vibration.vibrate(10);
+  }
   AsyncStorage.setItem(checkListKeyString, collected==="false" ? "true":"false")
   console.log(checkListKeyString)
 }
