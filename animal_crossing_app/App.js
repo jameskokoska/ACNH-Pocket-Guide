@@ -5,13 +5,15 @@ import SidebarElement from './components/SidebarElement';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import FAB from './components/FAB';
 import TabsPage from './pages/TabsPage';
+import SongsPage from './pages/SongsPage';
 import HomePage from './pages/HomePage';
 import FadeInOut from './components/FadeInOut';
 import Check from './components/Check';
 import Onboarding from 'react-native-onboarding-swiper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import TextFont from './components/TextFont'
+import TextFont from './components/TextFont';
 import LottieView from 'lottie-react-native';
+import Popup from './components/Popup';
 
 const {width} = Dimensions.get('window');
 
@@ -22,16 +24,18 @@ function NavigationView(props) {
       <ScrollView>
       <Text style={{margin: 100}}>ACNH Pocket</Text>
       <SidebarElement image={require("./assets/icons/house.png")} title="Home" pageNum={0} setPage={props.setPage}/>
-      <SidebarElement image={require("./assets/icons/bugs.png")} title="Creatures and Museum" pageNum={1} setPage={props.setPage}/>
-      <SidebarElement image={require("./assets/icons/leaf.png")} title="Items" pageNum={2} setPage={props.setPage}/>
-      <SidebarElement image={require("./assets/icons/emote.png")} title="Emoticons" pageNum={3} setPage={props.setPage}/>
-      <SidebarElement image={require("./assets/icons/crafting.png")} title="Crafting + Tools" pageNum={4} setPage={props.setPage}/>
-      <SidebarElement image={require("./assets/icons/cat.png")} title="Villagers" pageNum={5} setPage={props.setPage}/>
-      <SidebarElement image={require("./assets/icons/construction.png")} title="Construction" pageNum={6} setPage={props.setPage}/>
-      <SidebarElement image={require("./assets/icons/season.png")} title="Misc. Timetables" pageNum={7} setPage={props.setPage}/>
+      <SidebarElement image={require("./assets/icons/book.png")} title="All Items" pageNum={1} setPage={props.setPage}/>
+      <SidebarElement image={require("./assets/icons/bugs.png")} title="Creatures and Museum" pageNum={2} setPage={props.setPage}/>
+      <SidebarElement image={require("./assets/icons/leaf.png")} title="Items" pageNum={3} setPage={props.setPage}/>
+      <SidebarElement image={require("./assets/icons/music.png")} title="Songs" pageNum={4} setPage={props.setPage}/>
+      <SidebarElement image={require("./assets/icons/emote.png")} title="Emoticons" pageNum={5} setPage={props.setPage}/>
+      <SidebarElement image={require("./assets/icons/crafting.png")} title="Crafting + Tools" pageNum={6} setPage={props.setPage}/>
+      <SidebarElement image={require("./assets/icons/cat.png")} title="Villagers" pageNum={7} setPage={props.setPage}/>
+      <SidebarElement image={require("./assets/icons/construction.png")} title="Construction" pageNum={8} setPage={props.setPage}/>
+      <SidebarElement image={require("./assets/icons/season.png")} title="Misc. Timetables" pageNum={9} setPage={props.setPage}/>
       <View style={{backgroundColor:"grey", width:"87%", height:3, margin:20}}/>
-      <SidebarElement image={require("./assets/icons/settings.png")} title="Settings" pageNum={8} setPage={props.setPage}/>
-      <SidebarElement image={require("./assets/icons/magnifyingGlass.png")} title="About" pageNum={9} setPage={props.setPage}/>
+      <SidebarElement image={require("./assets/icons/settings.png")} title="Settings" pageNum={10} setPage={props.setPage}/>
+      <SidebarElement image={require("./assets/icons/magnifyingGlass.png")} title="About" pageNum={11} setPage={props.setPage}/>
       <View style={{margin:15}}/>
 
     </ScrollView>
@@ -59,6 +63,7 @@ class App extends Component {
     this.state = {
       loaded: false,
       currentPage: 0,
+      open:false,
     }
   }
   async componentDidMount(){
@@ -83,7 +88,6 @@ class App extends Component {
     this.drawer.closeDrawer();
   }
   
-  
   render(){
     var currentPageView;
     if (this.state.currentPage===0){
@@ -91,11 +95,16 @@ class App extends Component {
     } else if(this.state.currentPage===1){
       currentPageView = <TabsPage/>
     } else if (this.state.currentPage===2){
-      currentPageView = <Check play={false}/>
+      currentPageView = 
+      <>
+       <Button title="button" onPress={() => this.setState({open:!this.state.open})}/>
+        <Popup popupVisible={this.state.open} close={() => this.setState({open:!this.state.open})}/>
+      </>
+    } else if (this.state.currentPage===4){
+      currentPageView = <SongsPage/>
     } else {
       currentPageView = <Text>Default</Text>
     }
-    
 
     if(!this.state.loaded){
       return <View/>
@@ -132,8 +141,16 @@ class App extends Component {
             subtitle: <TextFont style={{fontSize: 20}} bold={true}>Awesome features... WOW!</TextFont>,
           },
           {
-            backgroundColor: '#fff',
-            image: <Image style={{height: 300, width: 300, resizeMode:'contain'}} source={require('./assets/icons/palmIcon.png')} />,
+            backgroundColor: 'grey',
+            image: <LottieView 
+              autoPlay
+              loop={false}
+              style={{
+                width: 400,
+                height: 400,
+              }} 
+              source={require('./assets/trackCollectionsAnimation.json')}
+            />,
             title: <Button title="Get Started" onPress={() => {AsyncStorage.setItem("firstLogin", "false"); this.setState({firstLogin:false})}} style={{height: 300, width: 300, resizeMode:'contain'}}/>,
             subtitle: <View/>,
           },
@@ -151,8 +168,6 @@ class App extends Component {
         </DrawerLayoutAndroid>
       );
     }
-    
   }
-    
 }
 export default App;

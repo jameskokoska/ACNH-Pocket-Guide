@@ -132,6 +132,7 @@ export default (props) =>{
                 imageProperty={props.imageProperty} 
                 textProperty={props.textProperty}
                 textProperty2={props.textProperty2}
+                textProperty3={props.textProperty3}
                 gridType={props.gridType}
               />}
             keyExtractor={(item, index) => `list-item-${index}-${item.color}`}

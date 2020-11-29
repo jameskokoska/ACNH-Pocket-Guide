@@ -28,7 +28,7 @@ const ListItem = (props) => {
           setCollected(collected==="true" ? "false":"true");
         }}>
           <View style={styles.gridBox}>
-            <FadeInOut style={{position:'absolute', right: -4, top: -7}} fadeIn={collected==="true"} fadeInOut={false} scaleInOut={false}>
+            <FadeInOut style={{position:'absolute', right: -4, top: -7, zIndex:10}} fadeIn={collected==="true"} fadeInOut={false} scaleInOut={false}>
               <Check style={{position:'absolute', right: -6, top: -7}} play={collected==="true"} width={53} height={53}/>
             </FadeInOut>
             <Image
@@ -53,7 +53,7 @@ const ListItem = (props) => {
           setCollected(collected==="true" ? "false":"true");
         }}>
           <View style={styles.gridBoxLarge}>
-            <FadeInOut style={{position:'absolute', right: -4, top: -7}} fadeIn={collected==="true"} fadeInOut={false} scaleInOut={false}>
+            <FadeInOut style={{position:'absolute', right: -4, top: -7, zIndex:10}} fadeIn={collected==="true"} fadeInOut={false} scaleInOut={false}>
               <Check style={{position:'absolute', right: -6, top: -7}} play={collected==="true"} width={53} height={53}/>
             </FadeInOut>
             <Image
@@ -88,19 +88,22 @@ const ListItem = (props) => {
             </View>
             <View style={styles.rowTextContainer}>
               <View style={styles.rowTextTop}>
-                <TextFont bold={true} style={{fontSize:21}}>{capitalize(props.item.[props.textProperty[props.item.dataSet]])}</TextFont>
+                <TextFont bold={true} style={{fontSize:20}}>{capitalize(props.item.[props.textProperty[props.item.dataSet]])}</TextFont>
               </View>
               <View style={styles.rowTextBottom}>
-                <TextFont bold={false} style={{fontSize:16}}>{capitalize(props.item.[props.textProperty2[props.item.dataSet]])}</TextFont>
+                <TextFont bold={true} style={{fontSize:16}}>{capitalize(props.item.[props.textProperty2[props.item.dataSet]])}</TextFont>
+              </View>
+              <View style={styles.rowTextBottom}>
+                <TextFont bold={true} style={{fontSize:16}}>{capitalize(props.item.[props.textProperty3[props.item.dataSet]])}</TextFont>
               </View>
             </View>
-            <TouchableOpacity style={{position:"absolute", right: -10}} 
+            <TouchableOpacity style={{position:"absolute", right: -5}} 
               onPress={() => {  
               console.log(props.item);
               longPress(props.item.checkListKey, collected); 
               setCollected(collected==="true" ? "false":"true");
             }}>
-              <Check play={collected==="true"} width={100} height={100}/>
+              <Check play={collected==="true"} width={90} height={90}/>
             </TouchableOpacity>
           </View>
         </TouchableNativeFeedback>
@@ -118,16 +121,18 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingLeft: 4,
     paddingRight: 3,
+    marginTop: 1,
   },
   rowTextTop:{
     width: "100%",
     paddingLeft: 3,
     paddingRight: 3,
+    marginBottom: 2
   },
   rowTextContainer:{
     margin:6,
     marginLeft: 10,
-    marginRight: 130,
+    marginRight: 125,
   },
   rowImageBackground:{
     width: 70,
@@ -249,7 +254,7 @@ function capitalize(name) {
 
 function longPress(checkListKeyString, collected){
   if(collected==="false"){
-    Vibration.vibrate([10,10,260,25]);
+    Vibration.vibrate([0,10,260,25]);
   } else {
     Vibration.vibrate(10);
   }
