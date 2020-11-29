@@ -24,6 +24,7 @@
     "react-native-fade-in-out": "^1.0.3",
     "react-native-gesture-handler": "^1.7.0",
     "react-native-header-scroll-view": "^2.0.0",
+    "react-native-onboarding-swiper": "^1.1.4",
     "react-native-reanimated": "^1.13.2",
     "react-native-render-html": "^4.2.4",
     "react-native-safe-module": "^1.2.0",
