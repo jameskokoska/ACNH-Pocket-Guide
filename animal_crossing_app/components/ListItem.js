@@ -17,33 +17,145 @@ const {width} = Dimensions.get('window');
 const ListItem = (props) => {
   //props.item.dataSet=0
   const [collected, setCollected] = useState(props.item.collected);
-  return (
-    <View style={styles.gridWrapper}>
-      <TouchableNativeFeedback onLongPress={() => {  
-        console.log(props.item);
-        longPress(props.item.checkListKey, collected); 
-        setCollected(collected==="true" ? "false":"true");
-      }}>
-        <View style={styles.gridBox}>
-          <View style={[styles.gridCheckMark,{opacity: collected==="true" ? 1:0}]}>
+  if(props.gridType==="smallGrid"){
+    return (
+      <View style={styles.gridWrapper}>
+        <TouchableNativeFeedback onLongPress={() => {  
+          console.log(props.item);
+          longPress(props.item.checkListKey, collected); 
+          setCollected(collected==="true" ? "false":"true");
+        }}>
+          <View style={styles.gridBox}>
+            <View style={[styles.checkMark,{opacity: collected==="true" ? 1:0}]}>
+            </View>
+            <Image
+              style={styles.gridBoxImage}
+              source={{
+                uri: props.item.[props.imageProperty[props.item.dataSet]],
+              }}
+            />
+            <View style={styles.gridBoxText}>
+              <TextFont bold={false} style={{textAlign:'center'}}>{capitalize(props.item.[props.textProperty[props.item.dataSet]])}</TextFont>
+            </View>
           </View>
-          <Image
-            style={styles.gridBoxImage}
-            source={{
-              uri: props.item.[props.imageProperty[props.item.dataSet]],
-            }}
-          />
-          <View style={styles.gridBoxText}>
-            <TextFont bold={false} style={{textAlign:'center'}}>{capitalize(props.item.[props.textProperty[props.item.dataSet]])}</TextFont>
+        </TouchableNativeFeedback>
+      </View>
+    );
+  } else if (props.gridType==="largeGrid"){
+    return( 
+      <View style={styles.gridWrapper}>
+        <TouchableNativeFeedback onLongPress={() => {  
+          console.log(props.item);
+          longPress(props.item.checkListKey, collected); 
+          setCollected(collected==="true" ? "false":"true");
+        }}>
+          <View style={styles.gridBoxLarge}>
+            <View style={[styles.checkMark,{opacity: collected==="true" ? 1:0}]}>
+            </View>
+            <Image
+              style={styles.gridBoxImageLarge}
+              source={{
+                uri: props.item.[props.imageProperty[props.item.dataSet]],
+              }}
+            />
+            <View style={styles.gridBoxTextLarge}>
+              <TextFont bold={false} style={{textAlign:'center'}}>{capitalize(props.item.[props.textProperty[props.item.dataSet]])}</TextFont>
+            </View>
           </View>
-        </View>
-      </TouchableNativeFeedback>
-    </View>
-  );
+        </TouchableNativeFeedback>
+      </View>
+    )
+  } else { //Row component
+    return( 
+      <View>
+        <TouchableNativeFeedback onLongPress={() => {  
+          console.log(props.item);
+          longPress(props.item.checkListKey, collected); 
+          setCollected(collected==="true" ? "false":"true");
+        }}>
+          <View style={styles.row}>
+            <View style={styles.rowImageBackground}>
+              <Image
+                style={styles.rowImage}
+                source={{
+                  uri: props.item.[props.imageProperty[props.item.dataSet]],
+                }}
+              />
+            </View>
+            <View style={styles.rowTextContainer}>
+              <View style={styles.rowTextTop}>
+                <TextFont bold={true} style={{fontSize:21}}>{capitalize(props.item.[props.textProperty[props.item.dataSet]])}</TextFont>
+              </View>
+              <View style={styles.rowTextBottom}>
+                <TextFont bold={false} style={{fontSize:16}}>{capitalize(props.item.[props.textProperty[props.item.dataSet]])}</TextFont>
+              </View>
+            </View>
+            <TouchableOpacity style={{position:"absolute", right: 10}}>
+              <View style={[styles.checkMarkLarge,{opacity: collected==="true" ? 1:0}]}>
+              </View>
+            </TouchableOpacity>
+          </View>
+        </TouchableNativeFeedback>
+      </View>
+    )
+  }
+  
 };
 
+export default ListItem;
+
 const styles = StyleSheet.create({
-  gridCheckMark:{
+  checkMarkLarge:{
+    backgroundColor: "#38b548",
+    borderRadius: 100,
+    height: 54,
+    width: 54,
+  },
+  rowTextBottom:{
+    width: "100%",
+    paddingLeft: 4,
+    paddingRight: 3,
+  },
+  rowTextTop:{
+    width: "100%",
+    paddingLeft: 3,
+    paddingRight: 3,
+  },
+  rowTextContainer:{
+    margin:6,
+    marginLeft: 10,
+    marginRight: 130,
+  },
+  rowImageBackground:{
+    width: 70,
+    height: 70,
+    backgroundColor: 'blue',
+    borderRadius: 100,
+  },
+  rowImage:{
+    height: 70,
+    width: 70,
+    resizeMode:'contain',
+  },
+  row: {
+    padding: 13,
+    alignItems: 'center',
+    flexDirection:"row",
+    backgroundColor: "#DDDDDD",
+    height: 88,
+    width: "100%",
+    borderRadius:10,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+    elevation: 3,
+    marginTop: 7,
+  },
+  checkMark:{
     position:'absolute',
     right: -4,
     top: -7,
@@ -70,16 +182,31 @@ const styles = StyleSheet.create({
     paddingLeft: 3,
     paddingRight: 3
   },
+  gridBoxTextLarge: {
+    flex: 1,
+    width: 130,
+    marginTop: 5,
+    paddingLeft: 3,
+    paddingRight: 3
+  },
   gridWrapper: {
     marginVertical: 3, 
     alignItems: 'center', 
-    padding: 3
+    flex: 1,
   },
   gridBoxImage: {
     height: 90,
     width: 90,
     borderRadius:5,
     marginTop: 10,
+    resizeMode:'contain',
+  },
+  gridBoxImageLarge: {
+    height: 150,
+    width: 150,
+    borderRadius:5,
+    marginTop: 15,
+    resizeMode:'contain',
   },
   gridBox: {
     alignItems: "center",
@@ -97,9 +224,24 @@ const styles = StyleSheet.create({
     elevation: 3,
     margin: 2,
   },
+  gridBoxLarge: {
+    alignItems: "center",
+    backgroundColor: "#DDDDDD",
+    height: 200,
+    width: 180,
+    borderRadius:10,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+    elevation: 3,
+    margin: 2,
+  },
 });
 
-export default ListItem;
 
 function capitalize(name) {
   return name.replace(/\b(\w)/g, s => s.toUpperCase());

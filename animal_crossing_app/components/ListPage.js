@@ -106,29 +106,40 @@ export default (props) =>{
         }
       }
     }
+    var numColumns=3;
+    console.log(props.gridType)
+    if(props.gridType==="smallGrid"){
+      numColumns=3;
+    } else if (props.gridType==="largeGrid"){
+      numColumns=2;
+    } else if (props.gridType==="row"||props.gridType===undefined){
+      numColumns=1;
+    }
     return (
       <SafeAreaView style={styles.container}>
         <StatusBar backgroundColor="#1c1c1c" style="light" />
         <Animated.View style={[styles.header, {transform: [{translateY}]}]}>
           <Header title={props.title} headerHeight={headerHeight} updateSearch={updateSearch}/>
         </Animated.View>
-        <Animated.FlatList
-          scrollEventThrottle={16}
-          contentContainerStyle={{paddingTop: headerHeight*1.19}}
-          onScroll={handleScroll}
-          ref={ref}
-          data={dataUpdated}
-          renderItem={({ item }) =>
-            <ListItem 
-              item={item}
-              showVariations={props.showVariations}
-              imageProperty={props.imageProperty} 
-              textProperty={props.textProperty}
-            />}
-          keyExtractor={(item, index) => `list-item-${index}-${item.color}`}
-          numColumns={3}
-          columnWrapperStyle={{justifyContent:'center'}}
-        />
+        <View style={{paddingLeft:15,paddingRight:15}}>
+          <Animated.FlatList
+            scrollEventThrottle={16}
+            contentContainerStyle={{paddingTop: headerHeight*1.19}}
+            onScroll={handleScroll}
+            ref={ref}
+            data={dataUpdated}
+            renderItem={({ item }) =>
+              <ListItem
+                item={item}
+                showVariations={props.showVariations}
+                imageProperty={props.imageProperty} 
+                textProperty={props.textProperty}
+                gridType={props.gridType}
+              />}
+            keyExtractor={(item, index) => `list-item-${index}-${item.color}`}
+            numColumns={numColumns}
+          />
+        </View>
       </SafeAreaView>
     );
   }

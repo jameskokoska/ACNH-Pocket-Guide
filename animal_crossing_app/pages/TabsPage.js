@@ -27,6 +27,7 @@ const FirstRoute = () => (
     textProperty={["Name"]}
     checkListKey={[["emojiCheckList","Name"]]}
     searchKey={[["Name"]]}
+    gridType="row" //smallGrid, largeGrid, row
   />
   
 );
@@ -40,6 +41,7 @@ const SecondRoute = () => (
     textProperty={["Name","Name"]}
     checkListKey={[["artCheckList","Name","Genuine"],["fenceCheckList","Name"]]}
     searchKey={[["Name","Genuine"],["Name"]]}
+    gridType="smallGrid"
   />
 );
 
