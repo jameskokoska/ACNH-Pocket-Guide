@@ -45,17 +45,6 @@ function NavigationView(props) {
 }
 
 
-// TODO
-// Search bar functionality
-// Custom fonts
-// Add components for home screen
-// Home screen clock
-// Animations (background) and checkmark animations
-// Popup pages and respective components
-// Row boxes (for row lists)
-
-
-
 class App extends Component {
   constructor() {
     super();

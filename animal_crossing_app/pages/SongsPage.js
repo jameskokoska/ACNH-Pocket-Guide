@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Dimensions, Text} from 'react-native';
+import {View, Dimensions, Text} from 'react-native';
 import ListPage from '../components/ListPage';
 import LottieView from 'lottie-react-native';
 
@@ -11,9 +11,7 @@ class SongsPage extends Component {
   render(){
     return(
       <>
-      <LottieView 
-        autoPlay
-        loop
+      <View pointerEvents="none"  
         style={{
           width: width,
           position:'absolute',
@@ -24,11 +22,17 @@ class SongsPage extends Component {
             { rotate: '0deg'},
           ],
         }} 
-        source={require('../assets/waveAnimation.json')}
-      />
-      <LottieView 
-        autoPlay
-        loop
+      >
+        <LottieView 
+          autoPlay
+          loop
+          style={{
+            width: width,
+          }} 
+          source={require('../assets/waveAnimation.json')}
+        />
+      </View>
+      <View pointerEvents="none" 
         style={{
           width: width,
           position:'absolute',
@@ -36,11 +40,19 @@ class SongsPage extends Component {
           zIndex:5,
           transform: [
             { scale: 1.1 },
-            { rotate: '90deg'},
+            { rotate: '180deg'},
           ],
+        }} 
+      >
+      <LottieView 
+        autoPlay
+        loop
+        style={{
+          width: width,
         }} 
         source={require('../assets/waveAnimation.json')}
       />
+      </View>
         <ListPage 
           data={[music]}
           showVariations={false}
