@@ -120,6 +120,7 @@ export default (props) =>{
         </Animated.View>
         <View style={{paddingLeft:15,paddingRight:15}}>
           <Animated.FlatList
+            initialNumToRender={9}
             scrollEventThrottle={16}
             contentContainerStyle={{paddingTop: headerHeight*1.19}}
             onScroll={handleScroll}

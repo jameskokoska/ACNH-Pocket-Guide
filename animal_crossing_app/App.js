@@ -85,7 +85,8 @@ class App extends Component {
   }
   setPage(pageNum) {
     console.log(pageNum)
-    this.setState({currentPage: pageNum})
+    if(this.state.pageNum!==pageNum)
+      this.setState({currentPage: pageNum})
     this.drawer.closeDrawer();
   }
   
