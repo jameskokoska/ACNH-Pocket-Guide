@@ -38,6 +38,7 @@
     "react-native-side-menu-updated": "^1.2.1",
     "react-native-spring-scrollview": "^2.0.23",
     "react-native-svg": "^12.1.0",
+    "react-native-swipe-gestures": "^1.0.5",
     "react-native-tab-view": "^2.15.2",
     "react-native-viewport-units": "0.0.5",
     "react-native-web": "~0.13.12",

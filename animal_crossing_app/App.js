@@ -15,6 +15,8 @@ import TextFont from './components/TextFont';
 import LottieView from 'lottie-react-native';
 import Popup from './components/Popup';
 import CreditsPage from './pages/CreditsPage';
+import {getStorage, getStorageData} from './LoadJsonData';
+const reactions = require("./assets/data/reactions.json");
 
 const {width} = Dimensions.get('window');
 
@@ -59,18 +61,11 @@ class App extends Component {
   }
   async componentDidMount(){
     // await AsyncStorage.setItem("firstLogin", "true");
-    await AsyncStorage.setItem("skipSplash", "1000");  //set to 0 to skip, 600 to play splash airplane
+    await AsyncStorage.setItem("skipSplash", "0");  //set to 0 to skip, 600 to play splash airplane
 
-    const firstLogin = await AsyncStorage.getItem("firstLogin");
-    if(firstLogin === null) {
-      await AsyncStorage.setItem("firstLogin", "true");
-      firstLogin = "true";
-    }
-    const skipSplash = await AsyncStorage.getItem("skipSplash");
-    if(skipSplash === null) {
-      await AsyncStorage.setItem("skipSplash", "0");
-      skipSplash = "0";
-    }
+    const firstLogin = await getStorage("firstLogin","true");
+    const skipSplash = await getStorage("skipSplash","0");
+    this.dataLoaded = await getStorageData([require("./assets/data/reactions.json")],[["emojiCheckList","Name"]],"false")
 
     this.timeoutHandle = setTimeout(()=>{
       this.setState({
@@ -100,7 +95,7 @@ class App extends Component {
     if (this.state.currentPage===0){
       currentPageView = <FadeInOut fadeIn={true}><HomePage/></FadeInOut>
     } else if(this.state.currentPage===1){
-      currentPageView = <TabsPage/>
+      currentPageView = <TabsPage dataLoaded={this.dataLoaded} openDrawer={this.openDrawer}/>
     } else if (this.state.currentPage===2){
       currentPageView = 
       <>

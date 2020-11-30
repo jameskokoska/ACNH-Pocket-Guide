@@ -5,7 +5,7 @@ import ListPage from '../components/ListPage';
 
 const art = require("../assets/data/art.json");
 const fencing = require("../assets/data/fencing.json");
-const reactions = require("../assets/data/reactions.json");
+
 
 const width = { width: Dimensions.get('window').width };
 
@@ -18,21 +18,23 @@ const renderTabBar = props => (
   />
 );
 
-const FirstRoute = () => (
-  <ListPage 
-    data={[reactions]}
-    showVariations={false}
-    title="Reactions"
-    imageProperty={["Image"]}
-    textProperty={["Name"]}
-    textProperty2={["Icon Filename"]}
-    textProperty3={["Source"]}
-    checkListKey={[["emojiCheckList","Name"]]}
-    searchKey={[["Name"]]}
-    gridType="row" //smallGrid, largeGrid, row
-  />
+function FirstRoute(dataLoaded){
+  return (
+    <ListPage 
+      showVariations={false}
+      title="Reactions"
+      imageProperty={["Image"]}
+      textProperty={["Name"]}
+      textProperty2={["Icon Filename"]}
+      textProperty3={["Source"]}
+      checkListKey={[["emojiCheckList","Name"]]}
+      searchKey={[["Name"]]}
+      gridType="row" //smallGrid, largeGrid, row
+      dataLoaded={dataLoaded}
+    />
+  )
   
-);
+}
 
 const SecondRoute = () => (
   <ListPage 
@@ -58,16 +60,30 @@ class TabsPage extends Component {
       ],
     }
   }
+
+  renderScene = ({ route }) => {
+    switch (route.key) {
+      case 'first':
+        return FirstRoute(this.props.dataLoaded);
+      case 'second':
+        return SecondRoute;
+      case 'third':
+        return <View style={{flex: 1, backgroundColor: 'rgba(0,0,0,0.2)'}} />;
+      default:
+        return null;
+    }
+  };
+
   handleIndexChange = index => this.setState({index});
+
   render(){
     return(
       <TabView
+        tabBarPosition={"top"}
+        gestureHandlerProps={{ failOffsetX: this.state.index === 0 ? 1 : 100}}
         lazy
         navigationState={this.state}
-        renderScene={SceneMap({
-          first: FirstRoute,
-          second: SecondRoute,
-        })}
+        renderScene={this.renderScene}
         onIndexChange={this.handleIndexChange}
         initialLayout={width}
         renderTabBar={renderTabBar}
