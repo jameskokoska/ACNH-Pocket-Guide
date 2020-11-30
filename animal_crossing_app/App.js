@@ -65,19 +65,35 @@ class App extends Component {
       loaded: false,
       currentPage: 0,
       open:false,
+      fadeInTitle:true,
     }
   }
   async componentDidMount(){
+    // await AsyncStorage.setItem("firstLogin", "true");
+    await AsyncStorage.setItem("skipSplash", "1000");  //set to 0 to skip, 600 to play splash airplane
+
     const firstLogin = await AsyncStorage.getItem("firstLogin");
     if(firstLogin === null) {
       await AsyncStorage.setItem("firstLogin", "true");
       firstLogin = "true";
     }
+    const skipSplash = await AsyncStorage.getItem("skipSplash");
+    if(skipSplash === null) {
+      await AsyncStorage.setItem("skipSplash", "0");
+      skipSplash = "0";
+    }
 
-    this.setState({
-      loaded:true,
-      firstLogin: firstLogin
-    });
+    this.timeoutHandle = setTimeout(()=>{
+      this.setState({
+        fadeInTitle: false,
+      });
+    }, parseInt(skipSplash));
+    this.timeoutHandle = setTimeout(()=>{
+      this.setState({
+        loaded:true,
+        firstLogin: firstLogin,
+      });
+    }, parseInt(skipSplash)+10);
   }
 
   openDrawer() {
@@ -93,7 +109,7 @@ class App extends Component {
   render(){
     var currentPageView;
     if (this.state.currentPage===0){
-      currentPageView = <HomePage/>
+      currentPageView = <FadeInOut fadeIn={true}><HomePage/></FadeInOut>
     } else if(this.state.currentPage===1){
       currentPageView = <TabsPage/>
     } else if (this.state.currentPage===2){
@@ -115,7 +131,22 @@ class App extends Component {
     }
 
     if(!this.state.loaded){
-      return <View/>
+      return <FadeInOut fadeIn={this.state.fadeInTitle}>
+        <LottieView 
+          autoPlay
+          loop
+          style={{
+            top: "50%",
+            width: "100%",
+            zIndex:1,
+            transform: [
+              { scale: 1.25 },
+              { rotate: '0deg'},
+            ],
+          }} 
+          source={require('./assets/airplane.json')}
+        />
+      </FadeInOut>
     } else if (this.state.firstLogin==="true"){
       return <Onboarding
         showDone={false}
@@ -166,14 +197,14 @@ class App extends Component {
       />
     } else {
       return (
-        <DrawerLayoutAndroid style={{elevation: 0,}} 
-          drawerBackgroundColor="rgba(0,0,0,0.01)" 
-          ref={_drawer => (this.drawer = _drawer)} 
-          drawerWidth={width} drawerPosition={"left"} 
-          renderNavigationView={() => <NavigationView setPage={this.setPage}/>}>
-          {currentPageView}
-          <FAB backgroundColor='red' openDrawer={this.openDrawer}/>
-        </DrawerLayoutAndroid>
+          <DrawerLayoutAndroid style={{elevation: 0,}} 
+            drawerBackgroundColor="rgba(0,0,0,0.01)" 
+            ref={_drawer => (this.drawer = _drawer)} 
+            drawerWidth={width} drawerPosition={"left"} 
+            renderNavigationView={() => <NavigationView setPage={this.setPage}/>}>
+              {currentPageView}
+            <FAB backgroundColor='red' openDrawer={this.openDrawer}/>
+          </DrawerLayoutAndroid>
       );
     }
   }

@@ -43,10 +43,15 @@ const styles = StyleSheet.create({
     paddingRight: 13,
     paddingTop: 4,
     paddingBottom: 4,
+    elevation: 5
   },
   monthDay:{
     fontSize:35,
     color:"white",
+    elevation: 5,
+    textShadowColor: 'rgba(0, 0, 0, 0.4)',
+    textShadowOffset: {width: 1, height: 1},
+    textShadowRadius: 20
   },
   line:{
     marginTop: 1,
@@ -54,6 +59,7 @@ const styles = StyleSheet.create({
     borderRadius:100,
     height: 5,
     backgroundColor: 'white',
+    elevation: 5
   },
   meridian:{
     fontSize:38,
@@ -61,9 +67,17 @@ const styles = StyleSheet.create({
     marginBottom: 7,
     color: "white",
     alignSelf: "flex-end",
+    elevation: 5,
+    textShadowColor: 'rgba(0, 0, 0, 0.4)',
+    textShadowOffset: {width: 1, height: 1},
+    textShadowRadius: 20
   },
   clockTime: {
     fontSize: 70,
     color: "white",
+    elevation: 5,
+    textShadowColor: 'rgba(0, 0, 0, 0.4)',
+    textShadowOffset: {width: 1, height: 1},
+    textShadowRadius: 20
   },
 })

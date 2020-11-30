@@ -12,13 +12,13 @@ class FadeInOut extends Component {
     this.fadeInOut = true;
     this.scaleInOut = true;
   }
-  // componentDidMount(){
-  //   if(this.props.fadeIn===true){
-  //     this.animateIn();
-  //   } else if(this.props.fadeIn===false){
-  //     this.animateOut();
-  //   }
-  // }
+  componentDidMount(){
+    if(this.props.fadeIn===true){
+      this.animateIn();
+    } else if(this.props.fadeIn===false){
+      this.animateOut();
+    }
+  }
   componentDidUpdate(prevProps) {
     if(this.props.fadeIn===true){
       this.animateIn();
