@@ -8,6 +8,18 @@ const {diffClamp} = Animated;
 const headerHeight = 130 * 2;
 
 export default (props) =>{
+  const renderItem = (({ item }) =>
+    <ListItem
+      item={item}
+      showVariations={props.showVariations}
+      imageProperty={props.imageProperty} 
+      textProperty={props.textProperty}
+      textProperty2={props.textProperty2}
+      textProperty3={props.textProperty3}
+      gridType={props.gridType}
+      key={item.checkListKeyString}
+    />
+  )
   const ref = useRef(null);
 
   const scrollY = useRef(new Animated.Value(0));
@@ -118,28 +130,17 @@ export default (props) =>{
         <Animated.View style={[styles.header, {transform: [{translateY}]}]}>
           <Header title={props.title} headerHeight={headerHeight} updateSearch={updateSearch}/>
         </Animated.View>
-        <View style={{paddingLeft:15,paddingRight:15}}>
-          <Animated.FlatList
-            initialNumToRender={9}
-            scrollEventThrottle={16}
-            contentContainerStyle={{paddingTop: headerHeight*1.19}}
-            onScroll={handleScroll}
-            ref={ref}
-            data={dataUpdated}
-            renderItem={({ item }) =>
-              <ListItem
-                item={item}
-                showVariations={props.showVariations}
-                imageProperty={props.imageProperty} 
-                textProperty={props.textProperty}
-                textProperty2={props.textProperty2}
-                textProperty3={props.textProperty3}
-                gridType={props.gridType}
-              />}
-            keyExtractor={(item, index) => `list-item-${index}-${item.color}`}
-            numColumns={numColumns}
-          />
-        </View>
+        <Animated.FlatList
+          initialNumToRender={9}
+          scrollEventThrottle={16}
+          contentContainerStyle={{paddingTop: headerHeight*1.22, paddingLeft: 15, paddingRight: 15}}
+          onScroll={handleScroll}
+          ref={ref}
+          data={dataUpdated}
+          renderItem={renderItem}
+          keyExtractor={(item, index) => `list-item-${index}-${item.color}`}
+          numColumns={numColumns}
+        />
       </SafeAreaView>
     );
   }

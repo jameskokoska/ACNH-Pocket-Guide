@@ -6,13 +6,13 @@ import {
   TouchableOpacity,
   View,
   TouchableNativeFeedback,
-  Image,
   Vibration,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import TextFont from './TextFont';
-import FadeInOut from './FadeInOut';
 import Check from './Check';
+import CachedImage from 'react-native-expo-cached-image';
+
 
 const {width} = Dimensions.get('window');
 
@@ -28,10 +28,8 @@ const ListItem = (props) => {
           setCollected(collected==="true" ? "false":"true");
         }}>
           <View style={styles.gridBox}>
-            <FadeInOut style={{position:'absolute', right: -4, top: -7, zIndex:10}} fadeIn={collected==="true"} fadeInOut={false} scaleInOut={false}>
-              <Check style={{position:'absolute', right: -6, top: -7}} play={collected==="true"} width={53} height={53}/>
-            </FadeInOut>
-            <Image
+            <Check style={{position:'absolute', right: -9, top: -9, zIndex:10}} play={collected==="true"} width={53} height={53}/>
+            <CachedImage
               style={styles.gridBoxImage}
               source={{
                 uri: props.item.[props.imageProperty[props.item.dataSet]],
@@ -53,10 +51,8 @@ const ListItem = (props) => {
           setCollected(collected==="true" ? "false":"true");
         }}>
           <View style={styles.gridBoxLarge}>
-            <FadeInOut style={{position:'absolute', right: -4, top: -7, zIndex:10}} fadeIn={collected==="true"} fadeInOut={false} scaleInOut={false}>
-              <Check style={{position:'absolute', right: -6, top: -7}} play={collected==="true"} width={53} height={53}/>
-            </FadeInOut>
-            <Image
+            <Check style={{position:'absolute', right: -8, top: -10, zIndex:10}} play={collected==="true"} width={53} height={53}/>
+            <CachedImage
               style={styles.gridBoxImageLarge}
               source={{
                 uri: props.item.[props.imageProperty[props.item.dataSet]],
@@ -79,7 +75,7 @@ const ListItem = (props) => {
         }}>
           <View style={styles.row}>
             <View style={styles.rowImageBackground}>
-              <Image
+              <CachedImage
                 style={styles.rowImage}
                 source={{
                   uri: props.item.[props.imageProperty[props.item.dataSet]],
@@ -103,7 +99,7 @@ const ListItem = (props) => {
               longPress(props.item.checkListKey, collected); 
               setCollected(collected==="true" ? "false":"true");
             }}>
-              <Check play={collected==="true"} width={90} height={90}/>
+              <Check fadeOut={false} play={collected==="true"} width={90} height={90}/>
             </TouchableOpacity>
           </View>
         </TouchableNativeFeedback>
@@ -254,7 +250,7 @@ function capitalize(name) {
 
 function longPress(checkListKeyString, collected){
   if(collected==="false"){
-    Vibration.vibrate([0,10,260,25]);
+    Vibration.vibrate([0,10,220,20]);
   } else {
     Vibration.vibrate(10);
   }

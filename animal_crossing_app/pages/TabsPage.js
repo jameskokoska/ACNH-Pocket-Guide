@@ -36,13 +36,13 @@ const FirstRoute = () => (
 
 const SecondRoute = () => (
   <ListPage 
-    data={[art,fencing]}
+    data={[art,fencing,art]}
     showVariations={false}
     title="Art"
-    imageProperty={["Image","Image"]}
-    textProperty={["Name","Name"]}
-    checkListKey={[["artCheckList","Name","Genuine"],["fenceCheckList","Name"]]}
-    searchKey={[["Name","Genuine"],["Name"]]}
+    imageProperty={["Image","Image","Image"]}
+    textProperty={["Name","Name","Name"]}
+    checkListKey={[["artCheckList","Name","Genuine"],["fenceCheckList","Name"],["fenceCheckList","Name"]]}
+    searchKey={[["Name","Genuine"],["Name"],["Name"]]}
     gridType="smallGrid"
   />
 );

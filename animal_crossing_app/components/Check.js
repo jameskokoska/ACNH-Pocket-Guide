@@ -10,6 +10,11 @@ class Check extends Component {
     this.state = {
       progress: new Animated.Value(0),
     };
+    if(props.fadeOut===false){
+      this.checkMarkAnimationJSON = require('../assets/checkAnimationNoFade.json');
+    } else {
+      this.checkMarkAnimationJSON = require('../assets/checkAnimationFade.json');
+    }
   }
   componentDidMount(){
     if(this.props.play===true){
@@ -25,7 +30,7 @@ class Check extends Component {
         this.state.progress.setValue(0);
         this.animateIn();
       } else if(this.props.play===false){
-        this.state.progress.setValue(0.4);
+        this.state.progress.setValue(0.13);
         this.animateOut();
       }
     }
@@ -59,7 +64,7 @@ class Check extends Component {
         style={[this.props.style,{
           width: this.props.width,
           height: this.props.height,
-        }]} source={require('../assets/checkAnimation2.json')}
+        }]} source={this.checkMarkAnimationJSON}
       />
     );
   }
