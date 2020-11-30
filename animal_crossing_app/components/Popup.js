@@ -9,16 +9,53 @@ import {
   Vibration
 } from "react-native";
 import TextFont from "./TextFont"
+import ButtonComponent from "./ButtonComponent"
+
+// <Popup 
+//  button1={"OK"} 
+//  button1Action={()=>{console.log("OK")}}
+//  button2={"Cancel"} 
+//  button2Action={()=>{console.log("Cancel")}}
+//  popupVisible={this.state.open} 
+//  close={() => this.setState({open:!this.state.open})}
+// />
+
 
 class Popup extends Component {
   constructor(props) {
     super(props);
     this.state = {
       popupVisible: false
-    };
+    };   
+    
   }
   componentDidMount() {
     this.setPopupVisible(this.props.popupVisible);
+    
+    if(this.props.button1!==undefined){
+      this.Button1 = <ButtonComponent
+        text={this.props.button1}
+        color={"#2196F3"}
+        vibrate={5}
+        onPress={() => {
+          this.setPopupVisible(!this.state.popupVisible);
+          this.props.close();
+          this.props.button1Action();
+        }}
+      />
+    }
+    if(this.props.button2!==undefined){
+      this.Button2 = <ButtonComponent
+        text={"Cancel"}
+        color={"red"}
+        vibrate={10}
+        onPress={() => {
+          this.setPopupVisible(!this.state.popupVisible);
+          this.props.close();
+          this.props.button2Action();
+        }}
+      /> 
+    }
   }
   componentDidUpdate(){
     if(this.props.popupVisible===true&&this.state.popupVisible===false)
@@ -30,13 +67,11 @@ class Popup extends Component {
   }
 
   render(){
-    const {popupVisible} = this.state;
     return (
-      <View style={styles.centeredView}>
         <Modal
           animationType="fade"
           transparent={true}
-          visible={popupVisible}
+          visible={this.state.popupVisible}
           onRequestClose={() => {
             Alert.alert("Modal has been closed.");
           }}
@@ -47,33 +82,12 @@ class Popup extends Component {
             <TextFont bold={false} style={{fontSize: 18}}>This is some text...</TextFont>
 
             <View style={{flexDirection:"row"}}>
-              <TouchableOpacity
-                style={{marginLeft: 10, marginRight: 10, marginTop: 20, paddingLeft: 20, paddingRight: 20, paddingTop: 10, paddingBottom: 10, borderRadius: 7, backgroundColor: "red" }}
-                activeOpacity={0.5}
-                onPress={() => {
-                  this.setPopupVisible(!popupVisible);
-                  this.props.close();
-                  Vibration.vibrate(15);
-                }}
-              >
-                <TextFont style={{fontSize: 16, color: "white"}}>Cancel</TextFont>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={{marginLeft: 10, marginRight: 10, marginTop: 20, paddingLeft: 20, paddingRight: 20, paddingTop: 10, paddingBottom: 10, borderRadius: 7, backgroundColor: "#2196F3" }}
-                activeOpacity={0.5}
-                onPress={() => {
-                  this.setPopupVisible(!popupVisible);
-                  this.props.close();
-                  Vibration.vibrate(5);
-                }}
-              >
-                <TextFont style={{fontSize: 16, color: "white"}}>OK</TextFont>
-              </TouchableOpacity>
+              {this.Button2}
+              {this.Button1}
             </View>
           </View>
         </View>
       </Modal>
-    </View>
     )
   }
 }

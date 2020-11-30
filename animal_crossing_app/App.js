@@ -14,6 +14,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import TextFont from './components/TextFont';
 import LottieView from 'lottie-react-native';
 import Popup from './components/Popup';
+import CreditsPage from './pages/CreditsPage';
 
 const {width} = Dimensions.get('window');
 
@@ -98,10 +99,16 @@ class App extends Component {
       currentPageView = 
       <>
        <Button title="button" onPress={() => this.setState({open:!this.state.open})}/>
-        <Popup popupVisible={this.state.open} close={() => this.setState({open:!this.state.open})}/>
+       <Button title="button" onPress={() => this.setState({open:!this.state.open})}/>
+       <Button title="button" onPress={() => this.setState({open:!this.state.open})}/>
+       <Button title="button" onPress={() => this.setState({open:!this.state.open})}/>
+       <Button title="button" onPress={() => this.setState({open:!this.state.open})}/>
+        <Popup button1={"OK"} button1Action={()=>{console.log("OK")}} button2={"Cancel"} button2Action={()=>{console.log("Cancel")}} popupVisible={this.state.open} close={() => this.setState({open:!this.state.open})}/>
       </>
     } else if (this.state.currentPage===4){
       currentPageView = <SongsPage/>
+    } else if (this.state.currentPage===3){
+      currentPageView = <CreditsPage/>
     } else {
       currentPageView = <Text>Default</Text>
     }

@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import Clock from '../components/Clock';
 import HomeContentArea from '../components/HomeContentArea';
+import EventContainer from '../components/EventContainer';
+import StoreHoursContainer from '../components/StoreHoursContainer';
 
 class HomePage extends Component {
   render(){
@@ -11,7 +13,9 @@ class HomePage extends Component {
           <Clock/>
           <HomeContentArea backgroundColor="gray" accentColor="green" title="Section">
             <Text>Hello</Text>
-            <Clock/>
+            <EventContainer backgroundColor="black" textColor="white" image={require("../assets/icons/music.png")} text="K.K. Slider" textBottom="8 - 12 PM" month="Nov" day="31"/>
+            <EventContainer backgroundColor="black" textColor="white" image={require("../assets/icons/music.png")} text="K.K. Slider" textBottom="8 - 12 PM" month="Nov" day="31"/>
+
           </HomeContentArea>
           <HomeContentArea backgroundColor="black" accentColor="black"  title="SectionYeet">
             <Clock/>
@@ -19,7 +23,8 @@ class HomePage extends Component {
           </HomeContentArea>
           <HomeContentArea backgroundColor="orange" accentColor="green"title="Collected">
             <Text>Hello</Text>
-            <Clock/>
+            <StoreHoursContainer backgroundColor="green" textColor="white" image={require("../assets/icons/able.png")} text="Able Sisters" textBottom="8 - 12 PM"/>
+            <StoreHoursContainer backgroundColor="green" textColor="white" image={require("../assets/icons/able.png")} text="Able Sisters" textBottom="8 - 12 PM"/>
           </HomeContentArea>
           <View style={{height:1000}}/>
         </ScrollView>
