@@ -16,6 +16,7 @@ import LottieView from 'lottie-react-native';
 import Popup from './components/Popup';
 import CreditsPage from './pages/CreditsPage';
 import {getStorage, getStorageData} from './LoadJsonData';
+import {ExportFile, LoadFile} from './components/LoadFile';
 const reactions = require("./assets/data/reactions.json");
 
 const {width} = Dimensions.get('window');
@@ -110,6 +111,8 @@ class App extends Component {
       currentPageView = <SongsPage/>
     } else if (this.state.currentPage===3){
       currentPageView = <CreditsPage/>
+    } else if (this.state.currentPage===5){
+      currentPageView = <View><ExportFile/><LoadFile/></View>
     } else {
       currentPageView = <Text>Default</Text>
     }
