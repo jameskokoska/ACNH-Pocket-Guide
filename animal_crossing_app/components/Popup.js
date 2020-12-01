@@ -15,7 +15,9 @@ import ButtonComponent from "./ButtonComponent"
 //  button1={"OK"} 
 //  button1Action={()=>{console.log("OK")}}
 //  button2={"Cancel"} 
-//  button2Action={()=>{console.log("Cancel")}}
+//  text={"Title"}
+//  TextLower={"Description"}
+//  button2Action={()=>{ }}
 //  popupVisible={this.state.open} 
 //  close={() => this.setState({open:!this.state.open})}
 // />
@@ -72,15 +74,11 @@ class Popup extends Component {
           animationType="fade"
           transparent={true}
           visible={this.state.popupVisible}
-          onRequestClose={() => {
-            Alert.alert("Modal has been closed.");
-          }}
         >
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <TextFont bold={true} style={{fontSize: 28}}>Hello World!</TextFont>
-            <TextFont bold={false} style={{fontSize: 18}}>This is some text...</TextFont>
-
+            <TextFont bold={true} style={{fontSize: 28, textAlign:"center"}}>{this.props.text}</TextFont>
+            <TextFont bold={false} style={{fontSize: 18, textAlign:"center"}}>{this.props.textLower}</TextFont>
             <View style={{flexDirection:"row"}}>
               {this.Button2}
               {this.Button1}
