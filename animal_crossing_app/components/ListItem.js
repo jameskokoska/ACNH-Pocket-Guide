@@ -12,19 +12,21 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import TextFont from './TextFont';
 import Check from './Check';
 import CachedImage from 'react-native-expo-cached-image';
-
+import {updateDataGlobal} from "../LoadJsonData"
 
 const {width} = Dimensions.get('window');
 
 const ListItem = (props) => {
   //props.item.dataSet=0
   const [collected, setCollected] = useState(props.item.collected);
+  if(collected!==props.item.collected){
+    setCollected(props.item.collected)
+  }
   if(props.gridType==="smallGrid"){
     return (
       <View style={styles.gridWrapper}>
         <TouchableNativeFeedback onLongPress={() => {  
-          console.log(props.item);
-          longPress(props.item.checkListKey, collected); 
+          longPress(props.item.checkListKey, collected, props.item.index, props.dataGlobalName); 
           setCollected(collected==="true" ? "false":"true");
         }}>
           <View style={styles.gridBox}>
@@ -46,8 +48,7 @@ const ListItem = (props) => {
     return( 
       <View style={styles.gridWrapper}>
         <TouchableNativeFeedback onLongPress={() => {  
-          console.log(props.item);
-          longPress(props.item.checkListKey, collected); 
+          longPress(props.item.checkListKey, collected, props.item.index, props.dataGlobalName); 
           setCollected(collected==="true" ? "false":"true");
         }}>
           <View style={styles.gridBoxLarge}>
@@ -69,9 +70,10 @@ const ListItem = (props) => {
     return( 
       <View>
         <TouchableNativeFeedback onLongPress={() => {  
-          console.log(props.item);
-          longPress(props.item.checkListKey, collected); 
-          setCollected(collected==="true" ? "false":"true");
+          console.log(global.dataLoadedReactions[props.item.index])
+          console.log(props.item)
+          // longPress(props.item.checkListKey, collected, props.item.index, props.dataGlobalName); 
+          // setCollected(collected==="true" ? "false":"true");
         }}>
           <View style={styles.row}>
             <View style={styles.rowImageBackground}>
@@ -95,8 +97,7 @@ const ListItem = (props) => {
             </View>
             <TouchableOpacity style={{position:"absolute", right: -5}} 
               onPress={() => {  
-              console.log(props.item);
-              longPress(props.item.checkListKey, collected); 
+              longPress(props.item.checkListKey, collected, props.item.index, props.dataGlobalName ); 
               setCollected(collected==="true" ? "false":"true");
             }}>
               <Check fadeOut={false} play={collected==="true"} width={90} height={90}/>
@@ -248,12 +249,16 @@ function capitalize(name) {
   return name.replace(/\b(\w)/g, s => s.toUpperCase());
 }
 
-function longPress(checkListKeyString, collected){
+function longPress(checkListKeyString, collected, index, dataGlobalName){
   if(collected==="false"){
     Vibration.vibrate([0,10,220,20]);
   } else {
     Vibration.vibrate(10);
   }
-  AsyncStorage.setItem(checkListKeyString, collected==="false" ? "true":"false")
-  console.log(checkListKeyString)
+  AsyncStorage.setItem(checkListKeyString, collected==="false" ? "true":"false");
+  // global.dataLoadedReactions[index].collected = collected;
+  // console.log(global.dataLoadedReactions[index])
+  updateDataGlobal(dataGlobalName, index, collected==="false" ? "true":"false")
+  console.log(checkListKeyString);
+  console.log(collected);
 }

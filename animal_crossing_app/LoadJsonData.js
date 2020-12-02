@@ -33,8 +33,27 @@ export async function getStorageData(data, checkListKey, defaultValue){
       dataLoading[i].dataSet=dataSet;
       dataLoading[i].collected=value;
       dataLoading[i].checkListKey=checkListKeyString;
+      dataLoading[i].index=i;
     }
     dataLoadingTotal = dataLoadingTotal.concat(dataLoading);
   }
   return dataLoadingTotal;
+}
+
+export function determineDataGlobal(dataGlobalName){
+  if(dataGlobalName==="dataLoadedReactions")
+    return global.dataLoadedReactions;
+  else if(dataGlobalName==="dataLoadedArt")
+    return global.dataLoadedArt;
+  else if(global.dataLoadedReactions==="dataLoadedMusic")
+    return global.dataLoadedMusic;
+}
+
+export function updateDataGlobal(dataGlobalName, index, collected){
+  if(dataGlobalName==="dataLoadedReactions")
+    global.dataLoadedReactions[index].collected=collected;
+  else if(dataGlobalName==="dataLoadedArt")
+    global.dataLoadedArt[index].collected=collected;
+  else if(global.dataLoadedReactions==="dataLoadedMusic")
+    global.dataLoadedMusic[index].collected=collected;
 }

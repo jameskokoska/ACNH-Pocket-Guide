@@ -3,6 +3,7 @@ import {Text, View, Animated, SafeAreaView, StatusBar, StyleSheet, TextInput} fr
 import Header from './Header';
 import ListItem from './ListItem';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {determineDataGlobal} from "../LoadJsonData"
 
 const {diffClamp} = Animated;
 const headerHeight = 130 * 2;
@@ -18,6 +19,7 @@ export default (props) =>{
       textProperty3={props.textProperty3}
       gridType={props.gridType}
       key={item.checkListKeyString}
+      dataGlobalName={props.dataGlobalName}
     />
   )
   const ref = useRef(null);
@@ -58,8 +60,10 @@ export default (props) =>{
   var dataUpdated = [];
   var previousVariation = "";
   var item;
-  for(var i = 0; i < props.dataLoaded.length; i++){
-    item = props.dataLoaded[i];
+  var dataLoaded = determineDataGlobal(props.dataGlobalName);
+  console.log(determineDataGlobal(props.dataGlobalName)[1])
+  for(var i = 0; i < dataLoaded.length; i++){
+    item = dataLoaded[i];
     //Loop through the specific search criteria specified for this dataset
     for(var x = 0; x < props.searchKey[item.dataSet].length; x++){
       if(search==="Search" || search==="" || item.[props.searchKey[item.dataSet][x]].toLowerCase().includes(search.toLowerCase())){
@@ -101,7 +105,7 @@ export default (props) =>{
         ref={ref}
         data={dataUpdated}
         renderItem={renderItem}
-        keyExtractor={(item, index) => `list-item-${index}-${item.Title}`}
+        keyExtractor={(item, index) => `list-item-${index}-${item.checkListKeyString}`}
         numColumns={numColumns}
       />
     </SafeAreaView>

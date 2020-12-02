@@ -17,17 +17,17 @@ const renderTabBar = props => (
 
 const FirstRoute = () => (
   <ListPage 
-      showVariations={false}
-      title="Reactions"
-      imageProperty={["Image"]}
-      textProperty={["Name"]}
-      textProperty2={["Icon Filename"]}
-      textProperty3={["Source"]}
-      checkListKey={[["emojiCheckList","Name"]]}
-      searchKey={[["Name"]]}
-      gridType="row" //smallGrid, largeGrid, row
-      dataLoaded={global.dataLoadedReactions}
-    />
+    showVariations={false}
+    title="Reactions"
+    imageProperty={["Image"]}
+    textProperty={["Name"]}
+    textProperty2={["Icon Filename"]}
+    textProperty3={["Source"]}
+    checkListKey={[["emojiCheckList","Name"]]}
+    searchKey={[["Name"]]}
+    gridType="row" //smallGrid, largeGrid, row
+    dataGlobalName={"dataLoadedReactions"}
+  />
 )
 
 const SecondRoute = () => (
@@ -39,7 +39,7 @@ const SecondRoute = () => (
     checkListKey={[["artCheckList","Name","Genuine"],["fenceCheckList","Name"],["fenceCheckList","Name"]]}
     searchKey={[["Name","Genuine"],["Name"],["Name"]]}
     gridType="smallGrid"
-    dataLoaded={global.dataLoadedArt}
+    dataGlobalName={"dataLoadedArt"}
   />
 )
 
@@ -66,6 +66,7 @@ class TabsPage extends Component {
   render(){
     return(
       <TabView
+        lazy
         tabBarPosition={"top"}
         gestureHandlerProps={{ failOffsetX: this.state.index === 0 ? 1 : 100}}
         navigationState={this.state}

@@ -5,11 +5,11 @@ import HomeContentArea from '../components/HomeContentArea';
 import EventContainer from '../components/EventContainer';
 import StoreHoursContainer from '../components/StoreHoursContainer';
 import LottieView from 'lottie-react-native';
-import Overlay from "./Overlay"
 
 class HomePage extends Component {
   render(){
-      return <Overlay navigation={this.props.navigation}>
+      return <>
+        
         <ScrollView>
           <View style={{height:45}}/>
           <Clock/>
@@ -53,7 +53,7 @@ class HomePage extends Component {
           <View style={styles.homeScreenBackgroundBottom}>
           </View>
         </View>
-      </Overlay>
+      </>
   }
 }
 export default HomePage;
