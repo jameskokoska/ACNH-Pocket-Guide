@@ -12,7 +12,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import TextFont from './TextFont';
 import Check from './Check';
 import CachedImage from 'react-native-expo-cached-image';
-import {updateDataGlobal} from "../LoadJsonData"
+import {updateDataGlobal, determineDataGlobal} from "../LoadJsonData"
 
 const {width} = Dimensions.get('window');
 
@@ -257,5 +257,6 @@ function longPress(checkListKeyString, collected, index, dataGlobalName){
   AsyncStorage.setItem(checkListKeyString, collected==="false" ? "true":"false");
   updateDataGlobal(dataGlobalName, index, collected==="false" ? "true":"false")
   console.log(checkListKeyString);
+  console.log(determineDataGlobal(dataGlobalName)[index])
   console.log(collected);
 }

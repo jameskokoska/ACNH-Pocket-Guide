@@ -16,10 +16,12 @@ export async function getStorageData(data, checkListKey, defaultValue){
   var checkListKeyString = "";
   var dataLoadingTotal = [];
   //Loop through all datasets
+  var totalIndex = -1;
   for(var dataSet = 0; dataSet <data.length; dataSet++){
     var dataLoading = data[dataSet];
     //Loop through that specific dataset
     for(var i = 0; i < dataLoading.length; i++){
+      totalIndex++;
       checkListKeyString = checkListKey[dataSet][0]
       //Loop through specific checklistKey property for that dataset
       for(var x = 1; x < checkListKey[dataSet].length; x++){
@@ -34,7 +36,7 @@ export async function getStorageData(data, checkListKey, defaultValue){
       dataLoading[i].dataSet=dataSet;
       dataLoading[i].collected=value;
       dataLoading[i].checkListKey=checkListKeyString;
-      dataLoading[i].index=i;
+      dataLoading[i].index=totalIndex;
     }
     dataLoadingTotal = dataLoadingTotal.concat(dataLoading);
   }
