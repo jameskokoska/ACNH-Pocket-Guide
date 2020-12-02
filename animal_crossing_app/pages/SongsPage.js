@@ -54,7 +54,7 @@ class SongsPage extends Component {
       />
       </View>
         <ListPage 
-          data={[music]}
+          dataLoaded={global.dataLoadedMusic}
           showVariations={false}
           title="Music"
           imageProperty={["Album Image"]}

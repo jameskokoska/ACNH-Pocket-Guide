@@ -14,10 +14,10 @@ import TextFont from './TextFont'
 class SidebarElement extends Component {
   render(){
     return (
-      <TouchableNativeFeedback onPress={() => {Vibration.vibrate(15); this.props.setPage(this.props.pageNum);}}>
+      <TouchableNativeFeedback onPress={() => {Vibration.vibrate(15); this.props.navigation.navigate(this.props.name);}}>
         <View style={styles.sidebarBox}>
             <Image style={styles.sidebarImage} source={this.props.image}/>
-            <TextFont bold={true} style={styles.sidebarTitle}>{this.props.title}</TextFont>
+            <TextFont bold={true} style={styles.sidebarTitle}>{this.props.name}</TextFont>
         </View>
       </TouchableNativeFeedback>
     );

@@ -53,7 +53,10 @@ class Check extends Component {
   };
 
   render() {
-    return (
+    if((this.props.fadeOut===true || this.props.fadeOut===undefined) && !this.props.play){
+      return <View/>
+    } else {
+      return (
       <LottieView 
         loop={false}
         progress={this.state.progress}
@@ -65,8 +68,9 @@ class Check extends Component {
           width: this.props.width,
           height: this.props.height,
         }]} source={this.checkMarkAnimationJSON}
-      />
-    );
+      />);
+    }
+    
   }
 }
 

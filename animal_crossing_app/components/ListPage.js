@@ -101,7 +101,7 @@ export default (props) =>{
         ref={ref}
         data={dataUpdated}
         renderItem={renderItem}
-        keyExtractor={(item, index) => `list-item-${index}-${item.color}`}
+        keyExtractor={(item, index) => `list-item-${index}-${item.Title}`}
         numColumns={numColumns}
       />
     </SafeAreaView>

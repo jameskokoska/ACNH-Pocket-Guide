@@ -1,13 +1,10 @@
 import React, {Component} from 'react';
-import {Dimensions, Text} from 'react-native';
+import {ScrollView, Dimensions, Text} from 'react-native';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import ListPage from '../components/ListPage';
 
-const art = require("../assets/data/art.json");
-const fencing = require("../assets/data/fencing.json");
-
-
 const width = { width: Dimensions.get('window').width };
+
 
 const renderTabBar = props => (
   <TabBar
@@ -18,9 +15,8 @@ const renderTabBar = props => (
   />
 );
 
-function FirstRoute(dataLoaded){
-  return (
-    <ListPage 
+const FirstRoute = () => (
+  <ListPage 
       showVariations={false}
       title="Reactions"
       imageProperty={["Image"]}
@@ -30,15 +26,12 @@ function FirstRoute(dataLoaded){
       checkListKey={[["emojiCheckList","Name"]]}
       searchKey={[["Name"]]}
       gridType="row" //smallGrid, largeGrid, row
-      dataLoaded={dataLoaded}
+      dataLoaded={global.dataLoadedReactions}
     />
-  )
-  
-}
+)
 
 const SecondRoute = () => (
   <ListPage 
-    data={[art,fencing,art]}
     showVariations={false}
     title="Art"
     imageProperty={["Image","Image","Image"]}
@@ -46,8 +39,9 @@ const SecondRoute = () => (
     checkListKey={[["artCheckList","Name","Genuine"],["fenceCheckList","Name"],["fenceCheckList","Name"]]}
     searchKey={[["Name","Genuine"],["Name"],["Name"]]}
     gridType="smallGrid"
+    dataLoaded={global.dataLoadedArt}
   />
-);
+)
 
 class TabsPage extends Component {
   constructor() {
@@ -61,30 +55,22 @@ class TabsPage extends Component {
     }
   }
 
-  renderScene = ({ route }) => {
-    switch (route.key) {
-      case 'first':
-        return FirstRoute(this.props.dataLoaded);
-      case 'second':
-        return SecondRoute;
-      case 'third':
-        return <View style={{flex: 1, backgroundColor: 'rgba(0,0,0,0.2)'}} />;
-      default:
-        return null;
-    }
-  };
+  renderScene = SceneMap({
+    first: FirstRoute,
+    second: SecondRoute,
+  });
 
   handleIndexChange = index => this.setState({index});
+
 
   render(){
     return(
       <TabView
         tabBarPosition={"top"}
         gestureHandlerProps={{ failOffsetX: this.state.index === 0 ? 1 : 100}}
-        lazy
         navigationState={this.state}
         renderScene={this.renderScene}
-        onIndexChange={this.handleIndexChange}
+        onIndexChange={(this.handleIndexChange)}
         initialLayout={width}
         renderTabBar={renderTabBar}
       />
