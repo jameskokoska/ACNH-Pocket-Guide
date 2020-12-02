@@ -68,16 +68,16 @@ class App extends Component {
     global.dataLoadedReactions = await getStorageData([require("./assets/data/reactions.json")],[["emojiCheckList","Name"]],"false")
     global.dataLoadedArt = await getStorageData([require("./assets/data/art.json"),require("./assets/data/fencing.json")],[["artCheckList","Name","Genuine"],["fenceCheckList","Name"],["fenceCheckList","Name"]],"false")
     global.dataLoadedMusic = await getStorageData([require("./assets/data/music.json")],[["emojiCheckList","Name"]],"false")
-    console.log("DONE")
+    console.log("DONE Loading")
     this.timeoutHandle = setTimeout(()=>{
       this.setState({
         fadeInTitle: false,
+        firstLogin: firstLogin,
       });
     }, parseInt(skipSplash));
     this.timeoutHandle = setTimeout(()=>{
       this.setState({
         loaded:true,
-        firstLogin: firstLogin,
       });
     }, parseInt(skipSplash)+10);
   }

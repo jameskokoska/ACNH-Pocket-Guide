@@ -7,6 +7,7 @@ export async function getStorage(storageKey, defaultValue){
   const valueReturned = await AsyncStorage.getItem(storageKey);
   if(valueReturned === null) {
     await AsyncStorage.setItem(storageKey, defaultValue);
+    return defaultValue;
   }
   return valueReturned;
 }
