@@ -70,10 +70,9 @@ const ListItem = (props) => {
     return( 
       <View>
         <TouchableNativeFeedback onLongPress={() => {  
-          console.log(global.dataLoadedReactions[props.item.index])
           console.log(props.item)
-          // longPress(props.item.checkListKey, collected, props.item.index, props.dataGlobalName); 
-          // setCollected(collected==="true" ? "false":"true");
+          longPress(props.item.checkListKey, collected, props.item.index, props.dataGlobalName); 
+          setCollected(collected==="true" ? "false":"true");
         }}>
           <View style={styles.row}>
             <View style={styles.rowImageBackground}>
@@ -256,8 +255,6 @@ function longPress(checkListKeyString, collected, index, dataGlobalName){
     Vibration.vibrate(10);
   }
   AsyncStorage.setItem(checkListKeyString, collected==="false" ? "true":"false");
-  // global.dataLoadedReactions[index].collected = collected;
-  // console.log(global.dataLoadedReactions[index])
   updateDataGlobal(dataGlobalName, index, collected==="false" ? "true":"false")
   console.log(checkListKeyString);
   console.log(collected);

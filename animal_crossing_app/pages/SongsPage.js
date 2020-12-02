@@ -54,7 +54,6 @@ class SongsPage extends Component {
       />
       </View>
         <ListPage 
-          dataLoaded={global.dataLoadedMusic}
           showVariations={false}
           title="Music"
           imageProperty={["Album Image"]}
@@ -62,6 +61,7 @@ class SongsPage extends Component {
           checkListKey={[["songCheckList","Name"]]}
           searchKey={[["Name"]]}
           gridType="largeGrid" //smallGrid, largeGrid, row
+          dataGlobalName={"dataLoadedMusic"}
         />
       </>
     )

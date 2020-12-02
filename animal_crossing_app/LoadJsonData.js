@@ -45,8 +45,9 @@ export function determineDataGlobal(dataGlobalName){
     return global.dataLoadedReactions;
   else if(dataGlobalName==="dataLoadedArt")
     return global.dataLoadedArt;
-  else if(global.dataLoadedReactions==="dataLoadedMusic")
+  else if(dataGlobalName==="dataLoadedMusic"){
     return global.dataLoadedMusic;
+  }
 }
 
 export function updateDataGlobal(dataGlobalName, index, collected){
@@ -54,6 +55,6 @@ export function updateDataGlobal(dataGlobalName, index, collected){
     global.dataLoadedReactions[index].collected=collected;
   else if(dataGlobalName==="dataLoadedArt")
     global.dataLoadedArt[index].collected=collected;
-  else if(global.dataLoadedReactions==="dataLoadedMusic")
+  else if(dataGlobalName==="dataLoadedMusic")
     global.dataLoadedMusic[index].collected=collected;
 }

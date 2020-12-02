@@ -61,7 +61,6 @@ export default (props) =>{
   var previousVariation = "";
   var item;
   var dataLoaded = determineDataGlobal(props.dataGlobalName);
-  console.log(determineDataGlobal(props.dataGlobalName)[1])
   for(var i = 0; i < dataLoaded.length; i++){
     item = dataLoaded[i];
     //Loop through the specific search criteria specified for this dataset
@@ -83,7 +82,6 @@ export default (props) =>{
     }
   }
   var numColumns=3;
-  console.log(props.gridType)
   if(props.gridType==="smallGrid"){
     numColumns=3;
   } else if (props.gridType==="largeGrid"){

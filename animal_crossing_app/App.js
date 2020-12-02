@@ -17,7 +17,7 @@ import Popup from './components/Popup';
 import CreditsPage from './pages/CreditsPage';
 import {getStorage, getStorageData} from './LoadJsonData';
 import {ExportFile, LoadFile} from './components/LoadFile';
-import 'react-native-gesture-handler';
+
 
 const {width} = Dimensions.get('window');
 
