@@ -9,7 +9,6 @@ import SongsPage from './pages/SongsPage';
 import HomePage from './pages/HomePage';
 import FadeInOut from './components/FadeInOut';
 import Check from './components/Check';
-import Onboarding from 'react-native-onboarding-swiper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import TextFont from './components/TextFont';
 import LottieView from 'lottie-react-native';
@@ -17,7 +16,7 @@ import Popup from './components/Popup';
 import CreditsPage from './pages/CreditsPage';
 import {getStorage, getStorageData} from './LoadJsonData';
 import {ExportFile, LoadFile} from './components/LoadFile';
-
+import Onboard from './pages/Onboard';
 
 const {width} = Dimensions.get('window');
 
@@ -52,6 +51,7 @@ class App extends Component {
     super();
     this.openDrawer = this.openDrawer.bind(this);
     this.setPage = this.setPage.bind(this);
+    this.setFirstLogin = this.setFirstLogin.bind(this);
     this.state = {
       loaded: false,
       currentPage: 0,
@@ -60,7 +60,7 @@ class App extends Component {
     }
   }
   async componentDidMount(){
-    // await AsyncStorage.setItem("firstLogin", "true");
+    await AsyncStorage.setItem("firstLogin", "true");
     await AsyncStorage.setItem("skipSplash", "0");  //set to 0 to skip, 600 to play splash airplane
 
     const firstLogin = await getStorage("firstLogin","true");
@@ -90,6 +90,10 @@ class App extends Component {
     if(this.state.pageNum!==pageNum)
       this.setState({currentPage: pageNum})
     this.drawer.closeDrawer();
+  }
+
+  setFirstLogin(firstLogin){
+    this.setState({firstLogin: firstLogin})
   }
   
   render(){
@@ -136,53 +140,7 @@ class App extends Component {
         />
       </FadeInOut>
     } else if (this.state.firstLogin==="true"){
-      return <Onboarding
-        showDone={false}
-        skipLabel= {<TextFont style={{fontSize: 20, color:"gray"}}>Skip</TextFont>}
-        nextLabel= {
-          <View style={{transform: [{ rotate: '180deg'}]}}>
-            <LottieView 
-              autoPlay
-              loop
-              style={{
-                width: 45,
-                height: 45,
-              }} 
-              source={require('./assets/arrow.json')}
-            />
-          </View>
-        }
-        onDone={() => {AsyncStorage.setItem("firstLogin", "false"); this.setState({firstLogin:false})}}
-        onSkip={() => {AsyncStorage.setItem("firstLogin", "false"); this.setState({firstLogin:false})}}
-        pages={[
-          {
-            backgroundColor: '#fff',
-            image: <Image style={{height: 300, width: 300, resizeMode:'contain'}} source={require('./assets/icons/palmIcon.png')} />,
-            title: <TextFont style={{fontSize: 30, width: "70%", textAlign:'center'}} bold={true}>Welcome to ACNH Pocket Guide</TextFont>,
-            subtitle: <TextFont style={{fontSize: 20}} bold={true}>Awesome features... WOW!</TextFont>,
-          },
-          {
-            backgroundColor: 'green',
-            image: <Image style={{height: 300, width: 300, resizeMode:'contain'}} source={require('./assets/icons/palmIcon.png')} />,
-            title: <TextFont style={{fontSize: 30, width: "70%", textAlign:'center'}} bold={true}>Welcome to ACNH Pocket Guide</TextFont>,
-            subtitle: <TextFont style={{fontSize: 20}} bold={true}>Awesome features... WOW!</TextFont>,
-          },
-          {
-            backgroundColor: 'grey',
-            image: <LottieView 
-              autoPlay
-              loop={false}
-              style={{
-                width: 400,
-                height: 400,
-              }} 
-              source={require('./assets/trackCollectionsAnimation.json')}
-            />,
-            title: <Button title="Get Started" onPress={() => {AsyncStorage.setItem("firstLogin", "false"); this.setState({firstLogin:false})}} style={{height: 300, width: 300, resizeMode:'contain'}}/>,
-            subtitle: <View/>,
-          },
-        ]}
-      />
+      return <Onboard setFirstLogin={this.setFirstLogin}/>
     } else {
       return (
           <DrawerLayoutAndroid style={{elevation: 0,}} 
