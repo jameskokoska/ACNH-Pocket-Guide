@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {Component, useState, useEffect } from 'react';
 import {
   Dimensions,
   StyleSheet,
@@ -16,97 +16,109 @@ import {updateDataGlobal, determineDataGlobal} from "../LoadJsonData"
 
 const {width} = Dimensions.get('window');
 
-const ListItem = (props) => {
-  //props.item.dataSet=0
-  const [collected, setCollected] = useState(props.item.collected);
-  if(collected!==props.item.collected){
-    setCollected(props.item.collected)
+class ListItem extends Component{
+  constructor(props) {
+    super(props);
+    this.setCollected = this.setCollected.bind(this);
+    this.state = {
+      collected: props.item.collected,
+    }
   }
-  if(props.gridType==="smallGrid"){
-    return (
-      <View style={styles.gridWrapper}>
-        <TouchableNativeFeedback onLongPress={() => {  
-          longPress(props.item.checkListKey, collected, props.item.index, props.dataGlobalName); 
-          setCollected(collected==="true" ? "false":"true");
-        }}>
-          <View style={styles.gridBox}>
-            <Check style={{position:'absolute', right: -9, top: -9, zIndex:10}} play={collected==="true"} width={53} height={53}/>
-            <CachedImage
-              style={styles.gridBoxImage}
-              source={{
-                uri: props.item.[props.imageProperty[props.item.dataSet]],
-              }}
-            />
-            <View style={styles.gridBoxText}>
-              <TextFont bold={false} style={{textAlign:'center'}}>{capitalize(props.item.[props.textProperty[props.item.dataSet]])}</TextFont>
-            </View>
-          </View>
-        </TouchableNativeFeedback>
-      </View>
-    );
-  } else if (props.gridType==="largeGrid"){
-    return( 
-      <View style={styles.gridWrapper}>
-        <TouchableNativeFeedback onLongPress={() => {  
-          longPress(props.item.checkListKey, collected, props.item.index, props.dataGlobalName); 
-          setCollected(collected==="true" ? "false":"true");
-        }}>
-          <View style={styles.gridBoxLarge}>
-            <Check style={{position:'absolute', right: -8, top: -10, zIndex:10}} play={collected==="true"} width={53} height={53}/>
-            <CachedImage
-              style={styles.gridBoxImageLarge}
-              source={{
-                uri: props.item.[props.imageProperty[props.item.dataSet]],
-              }}
-            />
-            <View style={styles.gridBoxTextLarge}>
-              <TextFont bold={false} style={{textAlign:'center'}}>{capitalize(props.item.[props.textProperty[props.item.dataSet]])}</TextFont>
-            </View>
-          </View>
-        </TouchableNativeFeedback>
-      </View>
-    )
-  } else { //Row component
-    return( 
-      <View>
-        <TouchableNativeFeedback onLongPress={() => {  
-          console.log(props.item)
-          longPress(props.item.checkListKey, collected, props.item.index, props.dataGlobalName); 
-          setCollected(collected==="true" ? "false":"true");
-        }}>
-          <View style={styles.row}>
-            <View style={styles.rowImageBackground}>
+  setCollected(collected){
+    this.setState({collected: collected})
+  }
+  componentWillUnmount(){
+    this.setState({unMounting:true})
+  }
+  render(){
+    if(this.state.collected!==this.props.item.collected){
+      this.setCollected(this.props.item.collected)
+    }
+    if(this.props.gridType==="smallGrid"){
+      return (
+        <View style={styles.gridWrapper}>
+          <TouchableNativeFeedback onLongPress={() => {  
+            longPress(this.props.item.checkListKey, this.state.collected, this.props.item.index, this.props.dataGlobalName); 
+            this.setCollected(this.state.collected==="true" ? "false":"true");
+          }}>
+            <View style={styles.gridBox}>
+              <Check style={{position:'absolute', right: -9, top: -9, zIndex:10}} play={this.state.collected==="true"} width={53} height={53}/>
               <CachedImage
-                style={styles.rowImage}
+                style={styles.gridBoxImage}
                 source={{
-                  uri: props.item.[props.imageProperty[props.item.dataSet]],
+                  uri: this.props.item.[this.props.imageProperty[this.props.item.dataSet]],
                 }}
               />
-            </View>
-            <View style={styles.rowTextContainer}>
-              <View style={styles.rowTextTop}>
-                <TextFont bold={true} style={{fontSize:20}}>{capitalize(props.item.[props.textProperty[props.item.dataSet]])}</TextFont>
-              </View>
-              <View style={styles.rowTextBottom}>
-                <TextFont bold={true} style={{fontSize:16}}>{capitalize(props.item.[props.textProperty2[props.item.dataSet]])}</TextFont>
-              </View>
-              <View style={styles.rowTextBottom}>
-                <TextFont bold={true} style={{fontSize:16}}>{capitalize(props.item.[props.textProperty3[props.item.dataSet]])}</TextFont>
+              <View style={styles.gridBoxText}>
+                <TextFont bold={false} style={{textAlign:'center'}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
               </View>
             </View>
-            <TouchableOpacity style={{position:"absolute", right: -5}} 
-              onPress={() => {  
-              longPress(props.item.checkListKey, collected, props.item.index, props.dataGlobalName ); 
-              setCollected(collected==="true" ? "false":"true");
-            }}>
-              <Check fadeOut={false} play={collected==="true"} width={90} height={90}/>
-            </TouchableOpacity>
-          </View>
-        </TouchableNativeFeedback>
-      </View>
-    )
+          </TouchableNativeFeedback>
+        </View>
+      );
+    } else if (this.props.gridType==="largeGrid"){
+      return( 
+        <View style={styles.gridWrapper}>
+          <TouchableNativeFeedback onLongPress={() => {  
+            longPress(this.props.item.checkListKey, this.state.collected, this.props.item.index, this.props.dataGlobalName); 
+            this.setCollected(this.state.collected==="true" ? "false":"true");
+          }}>
+            <View style={styles.gridBoxLarge}>
+              <Check style={{position:'absolute', right: -8, top: -10, zIndex:10}} play={this.state.collected==="true"} width={53} height={53}/>
+              <CachedImage
+                style={styles.gridBoxImageLarge}
+                source={{
+                  uri: this.props.item.[this.props.imageProperty[this.props.item.dataSet]],
+                }}
+              />
+              <View style={styles.gridBoxTextLarge}>
+                <TextFont bold={false} style={{textAlign:'center'}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
+              </View>
+            </View>
+          </TouchableNativeFeedback>
+        </View>
+      )
+    } else { //Row component
+      return( 
+        <View>
+          <TouchableNativeFeedback onLongPress={() => {  
+            console.log(this.props.item)
+            longPress(this.props.item.checkListKey, this.state.collected, this.props.item.index, this.props.dataGlobalName); 
+            this.setCollected(this.state.collected==="true" ? "false":"true");
+          }}>
+            <View style={styles.row}>
+              <View style={styles.rowImageBackground}>
+                <CachedImage
+                  style={styles.rowImage}
+                  source={{
+                    uri: this.props.item.[this.props.imageProperty[this.props.item.dataSet]],
+                  }}
+                />
+              </View>
+              <View style={styles.rowTextContainer}>
+                <View style={styles.rowTextTop}>
+                  <TextFont bold={true} style={{fontSize:20}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
+                </View>
+                <View style={styles.rowTextBottom}>
+                  <TextFont bold={true} style={{fontSize:16}}>{capitalize(this.props.item.[this.props.textProperty2[this.props.item.dataSet]])}</TextFont>
+                </View>
+                <View style={styles.rowTextBottom}>
+                  <TextFont bold={true} style={{fontSize:16}}>{capitalize(this.props.item.[this.props.textProperty3[this.props.item.dataSet]])}</TextFont>
+                </View>
+              </View>
+              <TouchableOpacity style={{position:"absolute", right: -5}} 
+                onPress={() => {  
+                longPress(this.props.item.checkListKey, this.state.collected, this.props.item.index, this.props.dataGlobalName ); 
+                this.setCollected(this.state.collected==="true" ? "false":"true");
+              }}>
+                <Check fadeOut={false} play={this.state.collected==="true"} width={90} height={90}/>
+              </TouchableOpacity>
+            </View>
+          </TouchableNativeFeedback>
+        </View>
+      )
+    }
   }
-  
 };
 
 export default ListItem;
