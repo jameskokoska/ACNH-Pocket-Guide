@@ -52,7 +52,8 @@
     "react-native-viewport-units": "0.0.5",
     "react-native-web": "~0.13.12",
     "react-navigation-collapsible": "^5.8.1",
-    "reanimated-bottom-sheet": "^1.0.0-alpha.22"
+    "reanimated-bottom-sheet": "^1.0.0-alpha.22",
+    "react-native-appearance": "~0.3.3"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0"

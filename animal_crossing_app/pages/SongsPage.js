@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {View, Dimensions, Text} from 'react-native';
 import ListPage from '../components/ListPage';
 import LottieView from 'lottie-react-native';
+import colors from '../Colors.js';
 
 const music = require("../assets/data/music.json");
 const {width} = Dimensions.get('window');
@@ -9,6 +10,8 @@ const {width} = Dimensions.get('window');
 
 class SongsPage extends Component {
   render(){
+      console.log(colors.mode)
+
     return(
       <>
       <View pointerEvents="none"  
@@ -62,6 +65,15 @@ class SongsPage extends Component {
           searchKey={[["Name"]]}
           gridType="largeGrid" //smallGrid, largeGrid, row
           dataGlobalName={"dataLoadedMusic"}
+          appBarColor={colors.bugAppBar[colors.mode]}
+          appBarImage={require("../assets/icons/bugTitleDark.png")}
+          titleColor={colors.textBlack[colors.mode]}
+          searchBarColor={colors.searchbarBG[colors.mode]}
+          backgroundColor={colors.lightDarkAccent[colors.mode]}
+          boxColor={colors.white[colors.mode]}
+          labelColor={colors.textBlack[colors.mode]}
+          accentColor={colors.fishAccent[colors.mode]}
+          specialLabelColor={colors.fishText[colors.mode]}
         />
       </>
     )

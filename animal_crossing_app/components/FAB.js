@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text, TouchableNativeFeedback} from 'react-native';
 import LottieView from 'lottie-react-native';
+import colors from '../Colors'
 
 class FAB extends Component {
   componentDidMount() {
@@ -8,7 +9,7 @@ class FAB extends Component {
   }
   render(){
     return(
-        <TouchableOpacity onPress={() => {this.animation.play(); this.props.openDrawer(); Vibration.vibrate(10);}} activeOpacity={0.7} style={[styles.FABShape,{backgroundColor: this.props.backgroundColor}]}>
+        <TouchableOpacity onPress={() => {this.animation.play(); this.props.openDrawer(); Vibration.vibrate(10);}} activeOpacity={0.7} style={[styles.FABShape,{backgroundColor: colors.FAB[colors.mode]}]}>
             <LottieView 
               ref={animation => {
                 this.animation = animation;

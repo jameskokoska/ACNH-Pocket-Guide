@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {ScrollView, Dimensions, Text} from 'react-native';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import ListPage from '../components/ListPage';
+import colors from '../Colors.js';
 
 const width = { width: Dimensions.get('window').width };
 
@@ -9,8 +10,10 @@ const width = { width: Dimensions.get('window').width };
 const renderTabBar = props => (
   <TabBar
     {...props}
-    indicatorStyle={{ backgroundColor: 'white', height:'100%', opacity: 0.3, borderRadius: 10 }}
-    style={{ backgroundColor: 'black'}}
+    indicatorStyle={{ backgroundColor: colors.lightDarkAccentHeavy[colors.mode], height:'100%', opacity: 0.6, borderRadius: 10 }}
+    style={{ backgroundColor: colors.white[colors.mode]}}
+    activeColor={colors.textBlack[colors.mode]}
+    inactiveColor={colors.textBlack[colors.mode]}
     getLabelText={({ route }) => route.title}
   />
 );
@@ -27,6 +30,15 @@ const FirstRoute = () => (
     searchKey={[["Name"]]}
     gridType="row" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedReactions"}
+    appBarColor={colors.bugAppBar[colors.mode]}
+    appBarImage={require("../assets/icons/bugTitleDark.png")}
+    titleColor={colors.textBlack[colors.mode]}
+    searchBarColor={colors.searchbarBG[colors.mode]}
+    backgroundColor={colors.lightDarkAccent[colors.mode]}
+    boxColor={colors.white[colors.mode]}
+    labelColor={colors.textBlack[colors.mode]}
+    accentColor={colors.fishAccent[colors.mode]}
+    specialLabelColor={colors.fishText[colors.mode]}
   />
 )
 
@@ -40,6 +52,15 @@ const SecondRoute = () => (
     searchKey={[["Name","Genuine"],["Name"],["Name"]]}
     gridType="smallGrid"
     dataGlobalName={"dataLoadedArt"}
+    appBarColor={colors.bugAppBar[colors.mode]}
+    appBarImage={require("../assets/icons/bugTitleDark.png")}
+    titleColor={colors.textBlack[colors.mode]}
+    searchBarColor={colors.searchbarBG[colors.mode]}
+    backgroundColor={colors.lightDarkAccent[colors.mode]}
+    boxColor={colors.white[colors.mode]}
+    labelColor={colors.textBlack[colors.mode]}
+    accentColor={colors.fishAccent[colors.mode]}
+    specialLabelColor={colors.fishText[colors.mode]}
   />
 )
 

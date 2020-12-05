@@ -20,6 +20,10 @@ export default (props) =>{
       gridType={props.gridType}
       key={item.checkListKeyString}
       dataGlobalName={props.dataGlobalName}
+      boxColor={props.boxColor}
+      labelColor={props.labelColor}
+      accentColor={props.accentColor}
+      specialLabelColor={props.specialLabelColor}
     />
   )
   const ref = useRef(null);
@@ -90,15 +94,15 @@ export default (props) =>{
     numColumns=1;
   }
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={[styles.container, {backgroundColor:props.backgroundColor}]}>
       <StatusBar backgroundColor="#1c1c1c" style="light" />
       <Animated.View style={[styles.header, {transform: [{translateY}]}]}>
-        <Header title={props.title} headerHeight={headerHeight} updateSearch={updateSearch}/>
+        <Header title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
       </Animated.View>
       <Animated.FlatList
         initialNumToRender={9}
         scrollEventThrottle={16}
-        contentContainerStyle={{paddingTop: headerHeight*1.22, paddingLeft: 15, paddingRight: 15}}
+        contentContainerStyle={{paddingTop: headerHeight*1.19, paddingLeft: 15, paddingRight: 15}}
         onScroll={handleScroll}
         ref={ref}
         data={dataUpdated}
@@ -126,9 +130,5 @@ const styles = StyleSheet.create({
     height: headerHeight / 2,
     width: '100%',
     paddingHorizontal: 10,
-  },
-  container: {
-    flex: 1,
-    backgroundColor: '#000',
   },
 });

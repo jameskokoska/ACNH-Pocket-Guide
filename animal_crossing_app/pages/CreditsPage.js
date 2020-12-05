@@ -4,6 +4,7 @@ import ListPage from '../components/ListPage';
 import LottieView from 'lottie-react-native';
 import TextFont from '../components/TextFont'
 import StoreHoursContainer from '../components/StoreHoursContainer';
+import colors from '../Colors'
 
 const music = require("../assets/data/music.json");
 const {width} = Dimensions.get('window');
@@ -12,7 +13,7 @@ const {width} = Dimensions.get('window');
 class CreditsPage extends Component {
   render(){
     return(
-      <View style={{backgroundColor:"black", height:"100%"}}>
+      <View style={{backgroundColor:colors.lightDarkAccent[colors.mode], height:"100%"}}>
         <ScrollView>
           <View style={{marginTop: 100}}/>
           <LottieView 
@@ -24,11 +25,11 @@ class CreditsPage extends Component {
             source={require('../assets/credits.json')}
           />
           <View style={{marginTop: 40}}/>
-          <TextFont bold={true} style={{fontSize: 40, marginLeft: 30, color:"white"}}>Credits</TextFont>
+          <TextFont bold={true} style={{fontSize: 40, marginLeft: 30, color:colors.textBlack[colors.mode]}}>Credits</TextFont>
           <View style={{marginTop: 20}}/>
           <View style={{height: 300}}>
-            <StoreHoursContainer backgroundColor="gray" textColor="white" image={require("../assets/icons/James.png")} text="James" textBottom="Lead Programmer"/>
-            <StoreHoursContainer backgroundColor="gray" textColor="white" image={require("../assets/icons/Ryan.png")} text="Ryan" textBottom="Lead Graphics"/>
+            <StoreHoursContainer backgroundColor={colors.white[colors.mode]} textColor={colors.textBlack[colors.mode]} image={require("../assets/icons/James.png")} text="James" textBottom="Lead Programmer"/>
+            <StoreHoursContainer backgroundColor={colors.white[colors.mode]} textColor={colors.textBlack[colors.mode]} image={require("../assets/icons/Ryan.png")} text="Ryan" textBottom="Lead Graphics"/>
           </View>
           <View style={{height: 50}}/>
           <TextFont bold={true} style={{fontSize: 20, marginLeft: 30, color:"white", marginBottom: 10}}>Additional Information</TextFont>

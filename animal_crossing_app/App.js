@@ -60,9 +60,9 @@ class App extends Component {
     }
   }
   async componentDidMount(){
-    await AsyncStorage.setItem("firstLogin", "true");
-    await AsyncStorage.setItem("skipSplash", "0");  //set to 0 to skip, 600 to play splash airplane
-
+    // await AsyncStorage.setItem("firstLogin", "true");
+    // await AsyncStorage.setItem("skipSplash", "0");  //set to 0 to skip, 600 to play splash airplane
+  
     const firstLogin = await getStorage("firstLogin","true");
     const skipSplash = await getStorage("skipSplash","0");
     global.dataLoadedReactions = await getStorageData([require("./assets/data/reactions.json")],[["emojiCheckList","Name"]],"false")
@@ -105,11 +105,11 @@ class App extends Component {
     } else if (this.state.currentPage===2){
       currentPageView = 
       <>
-       <Button title="button" onPress={() => this.setState({open:!this.state.open})}/>
-       <Button title="button" onPress={() => this.setState({open:!this.state.open})}/>
-       <Button title="button" onPress={() => this.setState({open:!this.state.open})}/>
-       <Button title="button" onPress={() => this.setState({open:!this.state.open})}/>
-       <Button title="button" onPress={() => this.setState({open:!this.state.open})}/>
+        <Button title="button" onPress={() => this.setState({open:!this.state.open})}/>
+        <Button title="button" onPress={() => this.setState({open:!this.state.open})}/>
+        <Button title="button" onPress={() => this.setState({open:!this.state.open})}/>
+        <Button title="button" onPress={() => this.setState({open:!this.state.open})}/>
+        <Button title="button" onPress={() => this.setState({open:!this.state.open})}/>
         <Popup button1={"OK"} button1Action={()=>{console.log("OK")}} button2={"Cancel"} button2Action={()=>{console.log("Cancel")}} popupVisible={this.state.open} close={() => this.setState({open:!this.state.open})}/>
       </>
     } else if (this.state.currentPage===4){
@@ -143,14 +143,14 @@ class App extends Component {
       return <Onboard setFirstLogin={this.setFirstLogin}/>
     } else {
       return (
-          <DrawerLayoutAndroid style={{elevation: 0,}} 
-            drawerBackgroundColor="rgba(0,0,0,0.01)" 
-            ref={_drawer => (this.drawer = _drawer)} 
-            drawerWidth={width} drawerPosition={"left"} 
-            renderNavigationView={() => <NavigationView setPage={this.setPage}/>}>
-              {currentPageView}
-            <FAB backgroundColor='red' openDrawer={this.openDrawer}/>
-          </DrawerLayoutAndroid>
+        <DrawerLayoutAndroid style={{elevation: 0,}} 
+          drawerBackgroundColor="rgba(0,0,0,0.01)" 
+          ref={_drawer => (this.drawer = _drawer)} 
+          drawerWidth={width} drawerPosition={"left"} 
+          renderNavigationView={() => <NavigationView setPage={this.setPage}/>}>
+            {currentPageView}
+          <FAB openDrawer={this.openDrawer}/>
+        </DrawerLayoutAndroid>
       );
     }
   }

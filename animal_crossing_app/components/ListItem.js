@@ -40,8 +40,10 @@ class ListItem extends Component{
           <TouchableNativeFeedback onLongPress={() => {  
             longPress(this.props.item.checkListKey, this.state.collected, this.props.item.index, this.props.dataGlobalName); 
             this.setCollected(this.state.collected==="true" ? "false":"true");
-          }}>
-            <View style={styles.gridBox}>
+          }}
+            background={TouchableNativeFeedback.Ripple(this.props.accentColor, false)}
+          >
+            <View style={[styles.gridBox, {backgroundColor:this.props.boxColor}]}>
               <Check style={{position:'absolute', right: -9, top: -9, zIndex:10}} play={this.state.collected==="true"} width={53} height={53}/>
               <CachedImage
                 style={styles.gridBoxImage}
@@ -50,7 +52,7 @@ class ListItem extends Component{
                 }}
               />
               <View style={styles.gridBoxText}>
-                <TextFont bold={false} style={{textAlign:'center'}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
+                <TextFont bold={false} style={{textAlign:'center', color:this.props.labelColor}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
               </View>
             </View>
           </TouchableNativeFeedback>
@@ -62,8 +64,10 @@ class ListItem extends Component{
           <TouchableNativeFeedback onLongPress={() => {  
             longPress(this.props.item.checkListKey, this.state.collected, this.props.item.index, this.props.dataGlobalName); 
             this.setCollected(this.state.collected==="true" ? "false":"true");
-          }}>
-            <View style={styles.gridBoxLarge}>
+          }}
+          background={TouchableNativeFeedback.Ripple(this.props.accentColor, false)}
+          >
+            <View style={[styles.gridBoxLarge, {backgroundColor:this.props.boxColor}]}>
               <Check style={{position:'absolute', right: -8, top: -10, zIndex:10}} play={this.state.collected==="true"} width={53} height={53}/>
               <CachedImage
                 style={styles.gridBoxImageLarge}
@@ -72,7 +76,7 @@ class ListItem extends Component{
                 }}
               />
               <View style={styles.gridBoxTextLarge}>
-                <TextFont bold={false} style={{textAlign:'center'}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
+                <TextFont bold={false} style={{textAlign:'center', color:this.props.labelColor}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
               </View>
             </View>
           </TouchableNativeFeedback>
@@ -85,9 +89,11 @@ class ListItem extends Component{
             console.log(this.props.item)
             longPress(this.props.item.checkListKey, this.state.collected, this.props.item.index, this.props.dataGlobalName); 
             this.setCollected(this.state.collected==="true" ? "false":"true");
-          }}>
-            <View style={styles.row}>
-              <View style={styles.rowImageBackground}>
+          }}
+          background={TouchableNativeFeedback.Ripple(this.props.accentColor, false)}
+          >
+            <View style={[styles.row,{backgroundColor:this.props.boxColor}]}>
+              <View style={[styles.rowImageBackground,{backgroundColor:this.props.accentColor}]}>
                 <CachedImage
                   style={styles.rowImage}
                   source={{
@@ -97,13 +103,13 @@ class ListItem extends Component{
               </View>
               <View style={styles.rowTextContainer}>
                 <View style={styles.rowTextTop}>
-                  <TextFont bold={true} style={{fontSize:20}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
+                  <TextFont bold={true} style={{fontSize:20, color:this.props.labelColor}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
                 </View>
                 <View style={styles.rowTextBottom}>
-                  <TextFont bold={true} style={{fontSize:16}}>{capitalize(this.props.item.[this.props.textProperty2[this.props.item.dataSet]])}</TextFont>
+                  <TextFont bold={true} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(this.props.item.[this.props.textProperty2[this.props.item.dataSet]])}</TextFont>
                 </View>
                 <View style={styles.rowTextBottom}>
-                  <TextFont bold={true} style={{fontSize:16}}>{capitalize(this.props.item.[this.props.textProperty3[this.props.item.dataSet]])}</TextFont>
+                  <TextFont bold={true} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(this.props.item.[this.props.textProperty3[this.props.item.dataSet]])}</TextFont>
                 </View>
               </View>
               <TouchableOpacity style={{position:"absolute", right: -5}} 
@@ -124,7 +130,6 @@ class ListItem extends Component{
 export default ListItem;
 
 const styles = StyleSheet.create({
-
   rowTextBottom:{
     width: "100%",
     paddingLeft: 4,
@@ -145,7 +150,6 @@ const styles = StyleSheet.create({
   rowImageBackground:{
     width: 70,
     height: 70,
-    backgroundColor: 'blue',
     borderRadius: 100,
   },
   rowImage:{
@@ -157,34 +161,11 @@ const styles = StyleSheet.create({
     padding: 13,
     alignItems: 'center',
     flexDirection:"row",
-    backgroundColor: "white",
     height: 88,
     width: "100%",
     borderRadius:10,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.22,
-    shadowRadius: 2.22,
-    elevation: 3,
+    elevation: 2,
     marginTop: 7,
-  },
-  checkMark:{
-    backgroundColor: "#38b548",
-    borderRadius: 25,
-    height: 28,
-    width: 28,
-    zIndex: 5,
-    shadowColor: "green",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 1,
-    shadowRadius: 3.84,
-    elevation: 5,
   },
   gridBoxText: {
     flex: 1,
@@ -223,7 +204,6 @@ const styles = StyleSheet.create({
   },
   gridBox: {
     alignItems: "center",
-    backgroundColor: "#DDDDDD",
     height: 150,
     width: 115,
     borderRadius:10,
@@ -239,18 +219,10 @@ const styles = StyleSheet.create({
   },
   gridBoxLarge: {
     alignItems: "center",
-    backgroundColor: "#DDDDDD",
     height: 200,
     width: 180,
     borderRadius:10,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.22,
-    shadowRadius: 2.22,
-    elevation: 3,
+    elevation: 4,
     margin: 2,
   },
 });
