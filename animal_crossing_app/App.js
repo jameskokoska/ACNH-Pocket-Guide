@@ -57,7 +57,7 @@ class App extends Component {
     this.setFirstLogin = this.setFirstLogin.bind(this);
     this.state = {
       loaded: false,
-      currentPage: 0,
+      currentPage: 1,
       open:false,
       fadeInTitle:true,
     }

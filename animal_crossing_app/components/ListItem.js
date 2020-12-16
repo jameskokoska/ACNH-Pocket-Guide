@@ -42,6 +42,7 @@ class ListItem extends Component{
             this.setCollected(this.state.collected==="true" ? "false":"true");
           }}
             background={TouchableNativeFeedback.Ripple(this.props.accentColor, false)}
+            onPress={this.props.openBottomSheet}
           >
             <View style={[styles.gridBox, {backgroundColor:this.props.boxColor}]}>
               <Check style={{position:'absolute', right: -9, top: -9, zIndex:10}} play={this.state.collected==="true"} width={53} height={53}/>
@@ -66,6 +67,7 @@ class ListItem extends Component{
             this.setCollected(this.state.collected==="true" ? "false":"true");
           }}
           background={TouchableNativeFeedback.Ripple(this.props.accentColor, false)}
+          onPress={this.props.openBottomSheet}
           >
             <View style={[styles.gridBoxLarge, {backgroundColor:this.props.boxColor}]}>
               <Check style={{position:'absolute', right: -8, top: -10, zIndex:10}} play={this.state.collected==="true"} width={53} height={53}/>
@@ -91,6 +93,7 @@ class ListItem extends Component{
             this.setCollected(this.state.collected==="true" ? "false":"true");
           }}
           background={TouchableNativeFeedback.Ripple(this.props.accentColor, false)}
+          onPress={this.props.openBottomSheet}
           >
             <View style={[styles.row,{backgroundColor:this.props.boxColor}]}>
               <View style={[styles.rowImageBackground,{backgroundColor:this.props.accentColor}]}>

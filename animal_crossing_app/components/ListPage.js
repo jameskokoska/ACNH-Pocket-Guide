@@ -1,9 +1,11 @@
 import React, {useState, useRef, useEffect} from 'react';
-import {Text, View, Animated, SafeAreaView, StatusBar, StyleSheet, TextInput} from 'react-native';
+import {TouchableWithoutFeedback, Text, View, Animated, SafeAreaView, StatusBar, StyleSheet, TextInput} from 'react-native';
 import Header from './Header';
 import ListItem from './ListItem';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {determineDataGlobal} from "../LoadJsonData"
+import BottomSheet from 'reanimated-bottom-sheet';
+import {Dimensions } from "react-native";
 
 const {diffClamp} = Animated;
 const headerHeight = 130 * 2;
@@ -20,6 +22,7 @@ export default (props) =>{
       gridType={props.gridType}
       key={item.checkListKeyString}
       dataGlobalName={props.dataGlobalName}
+      openBottomSheet={()=>{sheetRef.current.snapTo(0); openInvisibleClose()}}
       boxColor={props.boxColor}
       labelColor={props.labelColor}
       accentColor={props.accentColor}
@@ -56,11 +59,24 @@ export default (props) =>{
     },
   );
 
+
+  const [showInvisibleClose, setShowInvisibleClose] = useState(false);
+  function openInvisibleClose(){
+    console.log("open");
+    setShowInvisibleClose(true)
+  }
+
+  function closedSheet(){
+    console.log("CLOSE");
+    setShowInvisibleClose(false)
+  }
+
   const [search, setSearch] = useState("Search");
 
   function updateSearch(search){
     setSearch(search);
   }
+
   var dataUpdated = [];
   var previousVariation = "";
   var item;
@@ -93,8 +109,26 @@ export default (props) =>{
   } else if (props.gridType==="row"||props.gridType===undefined){
     numColumns=1;
   }
+  
+  const sheetRef = React.useRef(null);
+  const renderContent = () => (
+    <View
+      style={{
+        backgroundColor: 'white',
+        padding: 16,
+        height: 450,
+      }}
+    >
+      <Text>Swipe down to close</Text>
+    </View>
+  );
+
   return (
     <SafeAreaView style={[styles.container, {backgroundColor:props.backgroundColor}]}>
+      <TouchableWithoutFeedback onPress={()=>{sheetRef.current.snapTo(2);}}>
+        <View style={{zIndex:10, opacity: 0.5, backgroundColor:"black", position:"absolute", height: showInvisibleClose===true ? "100%":"0%", width: showInvisibleClose===true ? "100%":"0%"}}>
+        </View>
+      </TouchableWithoutFeedback>
       <StatusBar backgroundColor="#1c1c1c" style="light" />
       <Animated.View style={[styles.header, {transform: [{translateY}]}]}>
         <Header title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
@@ -109,6 +143,15 @@ export default (props) =>{
         renderItem={renderItem}
         keyExtractor={(item, index) => `list-item-${index}-${item.checkListKeyString}`}
         numColumns={numColumns}
+      />
+      
+      <BottomSheet
+        ref={sheetRef}
+        snapPoints={[450, 300, 0]}
+        borderRadius={40}
+        initialSnap={2}
+        renderContent={renderContent}
+        onCloseEnd={closedSheet}
       />
     </SafeAreaView>
   );
