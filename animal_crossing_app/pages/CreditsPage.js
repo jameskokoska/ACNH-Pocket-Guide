@@ -32,12 +32,12 @@ class CreditsPage extends Component {
             <StoreHoursContainer backgroundColor={colors.white[colors.mode]} textColor={colors.textBlack[colors.mode]} image={require("../assets/icons/Ryan.png")} text="Ryan" textBottom="Lead Graphics"/>
           </View>
           <View style={{height: 50}}/>
-          <TextFont bold={true} style={{fontSize: 20, marginLeft: 30, color:"white", marginBottom: 10}}>Additional Information</TextFont>
-          <Text style={{fontSize: 16, marginLeft: 30, marginRight: 30, color:"white"}}>This application was created using React Native, with the original App programmed in Flutter. This application and contents are NOT affiliated with Nintendo. All local artwork recreated/licensed. This application is not made for commercial use, and is provided at a price of 0$ (free) on the Google Play Store with no advertisements. All application source code is of property to respective owners/contributors listed on the Credits page and/or licenses associated within specific packages/libraries within this application.</Text>
-          <Text style={{fontSize: 16, marginLeft: 30, marginRight: 30, color:"white"}}>Twemoji Icons Graphics licensed under CC-BY 4.0: https://creativecommons.org/licenses/by/4.0/.</Text>
-          <Text style={{fontSize: 16, marginLeft: 30, marginRight: 30, color:"white"}}>All game data sourced from https://tinyurl.com/acnh-sheet. Thank you everyone for all the hard work and for making the spreadsheet!</Text>
-          <Text style={{fontSize: 16, marginLeft: 30, marginRight: 30, color:"white"}}>Seasons Data from capstone#3473.</Text>
-          <Text style={{fontSize: 16, marginLeft: 30, marginRight: 30, color:"white"}}>And thank YOU for downloading this application and showing your support.</Text>
+          <TextFont bold={true} style={{fontSize: 20, marginLeft: 30, color:colors.textBlack[colors.mode], marginBottom: 10}}>Additional Information</TextFont>
+          <Text style={{fontSize: 16, marginLeft: 30, marginRight: 30, color:colors.textBlack[colors.mode]}}>This application was created using React Native, with the original App programmed in Flutter. This application and contents are NOT affiliated with Nintendo. All local artwork recreated/licensed. This application is not made for commercial use, and is provided at a price of 0$ (free) on the Google Play Store with no advertisements. All application source code is of property to respective owners/contributors listed on the Credits page and/or licenses associated within specific packages/libraries within this application.</Text>
+          <Text style={{fontSize: 16, marginLeft: 30, marginRight: 30, color:colors.textBlack[colors.mode]}}>Twemoji Icons Graphics licensed under CC-BY 4.0: https://creativecommons.org/licenses/by/4.0/.</Text>
+          <Text style={{fontSize: 16, marginLeft: 30, marginRight: 30, color:colors.textBlack[colors.mode]}}>All game data sourced from https://tinyurl.com/acnh-sheet. Thank you everyone for all the hard work and for making the spreadsheet!</Text>
+          <Text style={{fontSize: 16, marginLeft: 30, marginRight: 30, color:colors.textBlack[colors.mode]}}>Seasons Data from capstone#3473.</Text>
+          <Text style={{fontSize: 16, marginLeft: 30, marginRight: 30, color:colors.textBlack[colors.mode]}}>And thank YOU for downloading this application and showing your support.</Text>
           <View style={{height: 100}}/>
         </ScrollView>
      </View>

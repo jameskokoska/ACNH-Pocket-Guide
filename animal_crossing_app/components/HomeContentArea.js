@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, Image} from 'react-native';
 import TextFont from './TextFont';
-
+import colors from '../Colors'
 
 class HomeContentArea extends Component {
   render(){
     var date="May 23";
-    return <View style={[styles.contentBackground,{backgroundColor:this.props.backgroundColor}]}>
+    return <View style={[styles.contentBackground,{backgroundColor:this.props.backgroundColor, borderColor:colors.shadow[colors.mode]}]}>
       <View style={styles.topTitlePosition}> 
-        <TextFont style={[styles.topTitle,{backgroundColor:this.props.accentColor}]} bold={true}>{this.props.title}</TextFont>
+        <TextFont style={[styles.topTitle,{backgroundColor:this.props.accentColor, color:this.props.titleColor}]} bold={true}>{this.props.title}</TextFont>
       </View>
       {this.props.children}
     </View>
@@ -23,14 +23,8 @@ const styles = StyleSheet.create({
     marginTop: 30,
     marginBottom: -70,
     paddingBottom: 60,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 3,
-    },
-    shadowOpacity: 0.29,
-    shadowRadius: 4.65,
     elevation: 6,
+    borderWidth: 1.1,
   },
   topTitlePosition:{
     position: "absolute",
@@ -44,13 +38,6 @@ const styles = StyleSheet.create({
     paddingRight: 18,
     paddingTop: 7,
     paddingBottom: 7,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 3,
-    },
-    shadowOpacity: 0.29,
-    shadowRadius: 4.65,
     elevation: 5,
   },
 })

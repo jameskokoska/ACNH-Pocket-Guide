@@ -12,12 +12,22 @@ import {
 import TextFont from './TextFont'
 
 class SidebarElement extends Component {
+ 
   render(){
+    var backgroundColor;
+    var elevation;
+    if(this.props.currentPage===this.props.pageNum){
+      backgroundColor=this.props.backgroundColor;
+      elevation = 4;
+    } else {
+      backgroundColor=this.props.unselectedColor;
+      elevation = 0;
+    }
     return (
       <TouchableNativeFeedback onPress={() => {Vibration.vibrate(15); this.props.setPage(this.props.pageNum);}}>
-        <View style={styles.sidebarBox}>
+        <View style={[styles.sidebarBox, {backgroundColor: backgroundColor,elevation: elevation}]}>
             <Image style={styles.sidebarImage} source={this.props.image}/>
-            <TextFont bold={true} style={styles.sidebarTitle}>{this.props.title}</TextFont>
+            <TextFont bold={true} style={[styles.sidebarTitle,{color:this.props.textColor}]}>{this.props.title}</TextFont>
         </View>
       </TouchableNativeFeedback>
     );
@@ -38,18 +48,9 @@ const styles = StyleSheet.create({
   sidebarBox: {
     alignItems: 'center',
     flexDirection:"row",
-    backgroundColor: "#DDDDDD",
-    height: 58,
-    borderRadius:10,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.22,
-    shadowRadius: 2.22,
-    elevation: 3,
-    margin: 5,
+    height: 54,
+    borderRadius:14,
+    margin: 4,
     marginLeft: "7%",
     marginRight: "7%",
   },
