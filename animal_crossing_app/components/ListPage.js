@@ -22,7 +22,7 @@ export default (props) =>{
       gridType={props.gridType}
       key={item.checkListKeyString}
       dataGlobalName={props.dataGlobalName}
-      openBottomSheet={()=>{sheetRef.current.snapTo(0); openInvisibleClose()}}
+      openBottomSheet={()=>{sheetRef.current.snapTo(0);}}
       boxColor={props.boxColor}
       labelColor={props.labelColor}
       accentColor={props.accentColor}
@@ -58,18 +58,6 @@ export default (props) =>{
       useNativeDriver: true,
     },
   );
-
-
-  const [showInvisibleClose, setShowInvisibleClose] = useState(false);
-  function openInvisibleClose(){
-    console.log("open");
-    setShowInvisibleClose(true)
-  }
-
-  function closedSheet(){
-    console.log("CLOSE");
-    setShowInvisibleClose(false)
-  }
 
   const [search, setSearch] = useState("Search");
 
@@ -112,23 +100,35 @@ export default (props) =>{
   
   const sheetRef = React.useRef(null);
   const renderContent = () => (
+    <>
     <View
       style={{
+        height: 500,
+      }}
+    >
+    </View>
+    <View
+      style={{
+        borderRadius: 50,
         backgroundColor: 'white',
         padding: 16,
-        height: 450,
+        height: Dimensions.get('window').height-500,
       }}
     >
       <Text>Swipe down to close</Text>
     </View>
+    </>
   );
-
+  const springConfig = {
+      damping: 20,
+      mass: 1,
+      stiffness: 135,
+      overshootClamping: true,
+      restSpeedThreshold: 0.01,
+      restDisplacementThreshold: 0.001
+  };
   return (
     <SafeAreaView style={[styles.container, {backgroundColor:props.backgroundColor}]}>
-      <TouchableWithoutFeedback onPress={()=>{sheetRef.current.snapTo(2);}}>
-        <View style={{zIndex:10, opacity: 0.5, backgroundColor:"black", position:"absolute", height: showInvisibleClose===true ? "100%":"0%", width: showInvisibleClose===true ? "100%":"0%"}}>
-        </View>
-      </TouchableWithoutFeedback>
       <StatusBar backgroundColor="#1c1c1c" style="light" />
       <Animated.View style={[styles.header, {transform: [{translateY}]}]}>
         <Header title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
@@ -147,11 +147,11 @@ export default (props) =>{
       
       <BottomSheet
         ref={sheetRef}
-        snapPoints={[450, 300, 0]}
+        snapPoints={[Dimensions.get('window').height, 0]}
         borderRadius={40}
-        initialSnap={2}
+        initialSnap={1}
         renderContent={renderContent}
-        onCloseEnd={closedSheet}
+        springConfig={springConfig}
       />
     </SafeAreaView>
   );

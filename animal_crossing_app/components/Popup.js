@@ -16,7 +16,7 @@ import ButtonComponent from "./ButtonComponent"
 //  button1Action={()=>{console.log("OK")}}
 //  button2={"Cancel"} 
 //  text={"Title"}
-//  TextLower={"Description"}
+//  textLower={"Description"}
 //  button2Action={()=>{ }}
 //  popupVisible={this.state.open} 
 //  close={() => this.setState({open:!this.state.open})}

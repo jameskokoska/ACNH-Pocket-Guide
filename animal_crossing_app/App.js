@@ -7,6 +7,7 @@ import FAB from './components/FAB';
 import TabsPage from './pages/TabsPage';
 import SongsPage from './pages/SongsPage';
 import HomePage from './pages/HomePage';
+import SettingsPage from './pages/SettingsPage';
 import FadeInOut from './components/FadeInOut';
 import Check from './components/Check';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -57,7 +58,7 @@ class App extends Component {
     this.setFirstLogin = this.setFirstLogin.bind(this);
     this.state = {
       loaded: false,
-      currentPage: 1,
+      currentPage: 6,
       open:false,
       fadeInTitle:true,
     }
@@ -128,6 +129,8 @@ class App extends Component {
       currentPageView = <CreditsPage/>
     } else if (this.state.currentPage===5){
       currentPageView = <View><ExportFile/><LoadFile/></View>
+    } else if (this.state.currentPage===6){
+      currentPageView = <SettingsPage/>
     } else {
       currentPageView = <Text>Default</Text>
     }
