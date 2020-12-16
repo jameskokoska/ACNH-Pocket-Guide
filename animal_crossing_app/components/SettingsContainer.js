@@ -2,24 +2,36 @@ import React, {Component} from 'react';
 import {Image, Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text, TouchableNativeFeedback} from 'react-native';
 import TextFont from './TextFont';
 import Popup from './Popup';
+import ToggleSwitch from 'toggle-switch-react-native'
+import colors from "../Colors"
 
 class SettingsContainer extends Component {
   constructor(){
     super();
     this.state = {
       open:false,
+      toggle:false,
     }
   }
   render(){
     return(
-      <TouchableOpacity onPress={() => this.setState({open:!this.state.open})}>
+      <TouchableOpacity activeOpacity={0.7} onPress={() => {this.setState({open:!this.state.open}); Vibration.vibrate(10);}}>
         <View style={[styles.settingsContainer,{backgroundColor:this.props.backgroundColor}]}>
           <Image style={styles.settingsImage} source={this.props.image}/>
           <View style={styles.textContainer}>
             <TextFont bold={true} style={[styles.textContainerTop,{color:this.props.textColor}]}>{this.props.text}</TextFont>
           </View>
-          <Popup text={this.props.text} textLower={this.props.description} button1={"OK"} button1Action={()=>{console.log("OK")}} popupVisible={this.state.open} close={() => this.setState({open:!this.state.open})}/>
+          <View style={{transform: [{ scale: 0.8 }]}}>
+            <ToggleSwitch
+              isOn={this.state.toggle}
+              onColor="#57b849"
+              offColor="#DFDFDF"
+              size="large"
+              onToggle={() => this.setState({toggle:!this.state.toggle})}
+            />
+          </View>
         </View>
+        <Popup text={this.props.text} textLower={this.props.description} button1={"OK"} button1Action={()=>{console.log("OK")}} popupVisible={this.state.open} close={() => this.setState({open:!this.state.open})}/>
       </TouchableOpacity>
     )
   }

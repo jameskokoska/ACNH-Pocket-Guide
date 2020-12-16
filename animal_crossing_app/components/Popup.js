@@ -8,8 +8,9 @@ import {
   View,
   Vibration
 } from "react-native";
-import TextFont from "./TextFont"
-import ButtonComponent from "./ButtonComponent"
+import TextFont from "./TextFont";
+import ButtonComponent from "./ButtonComponent";
+import colors from "../Colors";
 
 // <Popup 
 //  button1={"OK"} 
@@ -37,7 +38,7 @@ class Popup extends Component {
     if(this.props.button1!==undefined){
       this.Button1 = <ButtonComponent
         text={this.props.button1}
-        color={"#2196F3"}
+        color={colors.okButton[colors.mode]}
         vibrate={5}
         onPress={() => {
           this.setPopupVisible(!this.state.popupVisible);
@@ -49,7 +50,7 @@ class Popup extends Component {
     if(this.props.button2!==undefined){
       this.Button2 = <ButtonComponent
         text={"Cancel"}
-        color={"red"}
+        color={colors.cancelButton[colors.mode]}
         vibrate={10}
         onPress={() => {
           this.setPopupVisible(!this.state.popupVisible);
@@ -76,9 +77,9 @@ class Popup extends Component {
           visible={this.state.popupVisible}
         >
         <View style={styles.centeredView}>
-          <View style={styles.modalView}>
-            <TextFont bold={true} style={{fontSize: 28, textAlign:"center"}}>{this.props.text}</TextFont>
-            <TextFont bold={false} style={{fontSize: 18, textAlign:"center"}}>{this.props.textLower}</TextFont>
+          <View style={[styles.modalView,{backgroundColor: colors.white[colors.mode]}]}>
+            <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[colors.mode]}}>{this.props.text}</TextFont>
+            <TextFont bold={false} style={{fontSize: 18, textAlign:"center", color: colors.textBlack[colors.mode]}}>{this.props.textLower}</TextFont>
             <View style={{flexDirection:"row"}}>
               {this.Button2}
               {this.Button1}
@@ -100,17 +101,9 @@ const styles = StyleSheet.create({
   },
   modalView: {
     margin: 10,
-    backgroundColor: "white",
     borderRadius: 10,
     padding: 20,
     alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
     elevation: 5
   },
 });

@@ -60,5 +60,8 @@ const colors = {
     selectMisc : ["#c1d8d0", "#6d8387"],
     selectSettings : ["#cdd8df","#72818b"],
     selectAbout : ["#d5ddd6","#7d8986"],
+    okButton : ["#2196f3","#006db3"],
+    cancelButton : ["#d32f2f","#ab000d"],
+    template : ["#","#"],
 }
 module.exports = colors;
