@@ -6,6 +6,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {determineDataGlobal} from "../LoadJsonData"
 import BottomSheet from 'reanimated-bottom-sheet';
 import {Dimensions } from "react-native";
+import { LinearGradient } from 'expo-linear-gradient';
 
 const {diffClamp} = Animated;
 const headerHeight = 130 * 2;
@@ -101,12 +102,20 @@ export default (props) =>{
   const sheetRef = React.useRef(null);
   const renderContent = () => (
     <>
+    <LinearGradient
+      colors={['transparent','rgba(0,0,0,0.3)','rgba(0,0,0,0.3)' ]}
+      style={{position: 'absolute',
+              left: 0,
+              right: 0,
+              top: 0,
+              height: Dimensions.get('window').height,
+              width: Dimensions.get('window').width,}}
+    />
     <View
       style={{
         height: 500,
       }}
-    >
-    </View>
+    />
     <View
       style={{
         borderRadius: 50,
@@ -119,6 +128,7 @@ export default (props) =>{
     </View>
     </>
   );
+
   const springConfig = {
       damping: 20,
       mass: 1,
@@ -148,7 +158,6 @@ export default (props) =>{
       <BottomSheet
         ref={sheetRef}
         snapPoints={[Dimensions.get('window').height, 0]}
-        borderRadius={40}
         initialSnap={1}
         renderContent={renderContent}
         springConfig={springConfig}

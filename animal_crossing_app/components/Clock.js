@@ -1,32 +1,72 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, Image} from 'react-native';
 import TextFont from './TextFont';
-
+import {getMonth, getWeekDayShort} from './DateFunctions';
 
 class Clock extends Component {
   constructor(props){
     super(props);
-    this.state={
-      fontLoaded:false
+    var month = getMonth(new Date().getMonth());
+    var dayNum = new Date().getDate().toString();
+    var weekDay = getWeekDayShort(new Date().getDay()) + ".";
+    var hours = new Date().getHours();
+    var minutes = new Date().getMinutes();
+    var afternoon = false;
+    if(hours>12){
+      hours=hours-12;
+      afternoon=true;
+    }
+    this.state = {
+      date: month + " " + dayNum,
+      time: hours + ":" + minutes,
+      afternoonDisplay: afternoon ? "PM" : "AM",
+      weekDay: weekDay
     }
   }
-  async componentDidMount(){
+  componentDidMount(){
+    this.timeInterval = setInterval(() => {
+
+      var month = getMonth(new Date().getMonth());
+      var dayNum = new Date().getDate().toString();
+      var weekDay = getWeekDayShort(new Date().getDay()) + ".";
+      var hours = new Date().getHours();
+      var minutes = new Date().getMinutes();
+      var afternoon = false;
+      if(hours>12){
+        hours=hours-12;
+        afternoon=true;
+      }
+      this.setState({
+        date: month + " " + dayNum,
+        time: hours + ":" + minutes,
+        afternoonDisplay: afternoon ? "PM" : "AM",
+        weekDay: weekDay
+      })
+
+    }, 10000);
+
   }
+
+  componentWillUnmount(){
+    clearInterval(this.timeInterval)
+  }
+
   render(){
-    var date="May 23";
+    
+    
     return <View style={{alignItems: 'center'}}>
       {/* <Image
         style={{position:"absolute", top: -10, width:300, height: 200, resizeMode:'contain',}}
         source={require("../assets/icons/TestClock.png")}
       /> */}
       <View style={{flexDirection: 'row'}}> 
-        <TextFont style={styles.clockTime} bold={true}>1:26</TextFont>
-        <TextFont style={styles.meridian} bold={true}>PM</TextFont>
+        <TextFont style={styles.clockTime} bold={true}>{this.state.time}</TextFont>
+        <TextFont style={styles.meridian} bold={true}>{this.state.afternoonDisplay}</TextFont>
       </View>
-      <View style={[styles.line,{width:date.length*21+120}]}/> 
+      <View style={[styles.line,{width:this.state.date.length*21+120}]}/> 
       <View style={{flexDirection: 'row', alignItems: 'center'}}> 
-        <TextFont style={styles.monthDay} bold={true}>{date}</TextFont>
-        <TextFont style={styles.weekDay} bold={true}>Mon.</TextFont>
+        <TextFont style={styles.monthDay} bold={true}>{this.state.date}</TextFont>
+        <TextFont style={styles.weekDay} bold={true}>{this.state.weekDay}</TextFont>
       </View>
     </View>
   }

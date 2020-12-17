@@ -75,6 +75,7 @@ class Popup extends Component {
           animationType="fade"
           transparent={true}
           visible={this.state.popupVisible}
+          statusBarTranslucent
         >
         <View style={styles.centeredView}>
           <View style={[styles.modalView,{backgroundColor: colors.white[colors.mode]}]}>
@@ -97,7 +98,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     padding: 20,
-    marginTop: "10%",
+    paddingTop: "10%",
+    backgroundColor:"rgba(0,0,0,0.5)",
   },
   modalView: {
     margin: 10,

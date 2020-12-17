@@ -21,7 +21,7 @@ class SettingsContainer extends Component {
           <View style={styles.textContainer}>
             <TextFont bold={true} style={[styles.textContainerTop,{color:this.props.textColor}]}>{this.props.text}</TextFont>
           </View>
-          <View style={{transform: [{ scale: 0.8 }]}}>
+          <View style={{position:"absolute", right: 10, transform: [{ scale: 0.8 }]}}>
             <ToggleSwitch
               isOn={this.state.toggle}
               onColor="#57b849"
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   textContainer:{
-    marginLeft: 10,
+    marginLeft: 13,
   },
   settingsImage: {
     width: 30,
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
   },
   settingsContainer: {
     padding: 10,
-    paddingLeft: 15,
+    paddingLeft: 18,
     margin: 8,
     flexDirection:"row",
     flex:1,
