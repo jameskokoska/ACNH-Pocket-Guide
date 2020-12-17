@@ -4,13 +4,14 @@ import TextFont from './TextFont';
 import Popup from './Popup';
 import ToggleSwitch from 'toggle-switch-react-native'
 import colors from "../Colors"
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 class SettingsContainer extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
       open:false,
-      toggle:false,
+      toggle:this.props.currentValue === "true" ? true : false,
     }
   }
   render(){
@@ -21,13 +22,18 @@ class SettingsContainer extends Component {
           <View style={styles.textContainer}>
             <TextFont bold={true} style={[styles.textContainerTop,{color:this.props.textColor}]}>{this.props.text}</TextFont>
           </View>
-          <View style={{position:"absolute", right: 10, transform: [{ scale: 0.8 }]}}>
+          <View style={{position:"absolute", right: 8, transform: [{ scale: 0.75 }]}}>
             <ToggleSwitch
               isOn={this.state.toggle}
               onColor="#57b849"
               offColor="#DFDFDF"
               size="large"
-              onToggle={() => this.setState({toggle:!this.state.toggle})}
+              onToggle={() => {
+                AsyncStorage.setItem(this.props.keyName, !this.state.toggle === true ? "true" : "false");
+                global.settingsCurrent[this.props.index]["currentValue"] = !this.state.toggle === true ? "true" : "false";
+                this.setState({toggle:!this.state.toggle});
+                Vibration.vibrate(10);
+              }}
             />
           </View>
         </View>
@@ -40,7 +46,7 @@ export default SettingsContainer;
 
 const styles = StyleSheet.create({
   textContainerTop:{
-    fontSize: 18,
+    fontSize: 17,
   },
   textContainerBottom:{
     marginTop: 2,

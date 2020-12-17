@@ -15,7 +15,7 @@ import TextFont from './components/TextFont';
 import LottieView from 'lottie-react-native';
 import Popup from './components/Popup';
 import CreditsPage from './pages/CreditsPage';
-import {getStorage, getStorageData} from './LoadJsonData';
+import {getStorage, getStorageData, settings} from './LoadJsonData';
 import {ExportFile, LoadFile} from './components/LoadFile';
 import Onboard from './pages/Onboard';
 import colors from './Colors.js';
@@ -65,7 +65,6 @@ class App extends Component {
   }
   async componentDidMount(){
     // await AsyncStorage.setItem("firstLogin", "true");
-    // await AsyncStorage.setItem("skipSplash", "0");  //set to 0 to skip, 600 to play splash airplane
     this.backHandler = BackHandler.addEventListener(
       "hardwareBackPress",
       this.openDrawer
@@ -73,21 +72,28 @@ class App extends Component {
 
     const firstLogin = await getStorage("firstLogin","true");
     const skipSplash = await getStorage("skipSplash","0");
-    global.dataLoadedReactions = await getStorageData([require("./assets/data/reactions.json")],[["emojiCheckList","Name"]],"false")
-    global.dataLoadedArt = await getStorageData([require("./assets/data/art.json"),require("./assets/data/fencing.json")],[["artCheckList","Name","Genuine"],["fenceCheckList","Name"],["fenceCheckList","Name"]],"false")
-    global.dataLoadedMusic = await getStorageData([require("./assets/data/music.json")],[["emojiCheckList","Name"]],"false")
+    global.dataLoadedReactions = await getStorageData([require("./assets/data/reactions.json")],[["emojiCheckList","Name"]],"false");
+    global.dataLoadedArt = await getStorageData([require("./assets/data/art.json"),require("./assets/data/fencing.json")],[["artCheckList","Name","Genuine"],["fenceCheckList","Name"],["fenceCheckList","Name"]],"false");
+    global.dataLoadedMusic = await getStorageData([require("./assets/data/music.json")],[["emojiCheckList","Name"]],"false");
+    //Load Settings
+    global.settingsCurrent = settings;
+    for(var i = 0; i<settings.length; i++){
+      global.settingsCurrent[i]["currentValue"] = await getStorage(settings[i]["keyName"],settings[i]["defaultValue"]);
+      console.log(global.settingsCurrent[i]["keyName"])
+    }
+    
     console.log("DONE Loading")
     this.timeoutHandle = setTimeout(()=>{
       this.setState({
         fadeInTitle: false,
         firstLogin: firstLogin,
       });
-    }, parseInt(skipSplash));
+    }, 0);
     this.timeoutHandle = setTimeout(()=>{
       this.setState({
         loaded:true,
       });
-    }, parseInt(skipSplash)+10);
+    }, 10);
   }
 
   openDrawer() {
@@ -108,6 +114,13 @@ class App extends Component {
   }
   
   render(){
+    var fab;
+    if(global.settingsCurrent[5]["currentValue"]==="true"){
+      fab = <FAB openDrawer={this.openDrawer}/>;
+    } else {
+      fab = <View/>;
+    }
+    
     var currentPageView;
     if (this.state.currentPage===0){
       currentPageView = <FadeInOut fadeIn={true}><HomePage/></FadeInOut>
@@ -162,7 +175,7 @@ class App extends Component {
           drawerWidth={width} drawerPosition={"left"} 
           renderNavigationView={() => <NavigationView setPage={this.setPage} currentPage={this.state.currentPage}/>}>
             {currentPageView}
-          <FAB openDrawer={this.openDrawer}/>
+          {fab}
         </DrawerLayoutAndroid>
       );
     }

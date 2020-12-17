@@ -43,21 +43,72 @@ export async function getStorageData(data, checkListKey, defaultValue){
   return dataLoadingTotal;
 }
 
-export function determineDataGlobal(dataGlobalName){
-  if(dataGlobalName==="dataLoadedReactions")
+export function determineDataGlobal(datakeyName){
+  if(datakeyName==="dataLoadedReactions")
     return global.dataLoadedReactions;
-  else if(dataGlobalName==="dataLoadedArt")
+  else if(datakeyName==="dataLoadedArt")
     return global.dataLoadedArt;
-  else if(dataGlobalName==="dataLoadedMusic"){
+  else if(datakeyName==="dataLoadedMusic"){
     return global.dataLoadedMusic;
   }
 }
 
-export function updateDataGlobal(dataGlobalName, index, collected){
-  if(dataGlobalName==="dataLoadedReactions")
+export function updateDataGlobal(datakeyName, index, collected){
+  if(datakeyName==="dataLoadedReactions")
     global.dataLoadedReactions[index].collected=collected;
-  else if(dataGlobalName==="dataLoadedArt")
+  else if(datakeyName==="dataLoadedArt")
     global.dataLoadedArt[index].collected=collected;
-  else if(dataGlobalName==="dataLoadedMusic")
+  else if(datakeyName==="dataLoadedMusic")
     global.dataLoadedMusic[index].collected=collected;
 }
+
+export const settings = [
+  {
+    "keyName" : "settingsNorthernHemisphere",
+    "defaultValue" : "true",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/earth.png"),
+    "displayName" : "Northern hemisphere",
+    "description" : "Set your hemisphere, north or south. This will change the data displayed for creatures and events.",
+  },
+  {
+    "keyName" : "settingsAlwaysShowCatchphrase",
+    "defaultValue" : "false",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/speechBubble.png"),
+    "displayName" : "Always show catchphrase",
+    "description" : "",
+  },
+  {
+    "keyName" : "settingsListOnlyActiveCreatures",
+    "defaultValue" : "false",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/clockIcon.png"),
+    "displayName" : "List only active creatures",
+    "description" : "",
+  },
+  {
+    "keyName" : "settingsShowVariation",
+    "defaultValue" : "false",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/dice.png"),
+    "displayName" : "Show variations in lists",
+    "description" : "",
+  },
+  {
+    "keyName" : "settingsCreaturesLeavingWarning",
+    "defaultValue" : "false",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/alarmClock.png"),
+    "displayName" : "Creatures leaving warning",
+    "description" : "",
+  },
+  {
+    "keyName" : "settingsShowFAB",
+    "defaultValue" : "true",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/buttonIcon.png"),
+    "displayName" : "Show floating menu button",
+    "description" : "",
+  },
+]
