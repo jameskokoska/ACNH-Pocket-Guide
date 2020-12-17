@@ -20,8 +20,8 @@ import {ExportFile, LoadFile} from './components/LoadFile';
 import Onboard from './pages/Onboard';
 import colors from './Colors.js';
 
-const {width} = Dimensions.get('window');
-
+const {width} = Dimensions.get('window').width;
+const {height} = Dimensions.get('window').height;
 
 function NavigationView(props) {
   return (
@@ -56,6 +56,7 @@ class App extends Component {
     this.openDrawer = this.openDrawer.bind(this);
     this.setPage = this.setPage.bind(this);
     this.setFirstLogin = this.setFirstLogin.bind(this);
+    this.random = Math.random();
     this.state = {
       loaded: false,
       currentPage: 0,
@@ -71,7 +72,6 @@ class App extends Component {
     );
 
     const firstLogin = await getStorage("firstLogin","true");
-    const skipSplash = await getStorage("skipSplash","0");
     global.dataLoadedReactions = await getStorageData([require("./assets/data/reactions.json")],[["emojiCheckList","Name"]],"false");
     global.dataLoadedArt = await getStorageData([require("./assets/data/art.json"),require("./assets/data/fencing.json")],[["artCheckList","Name","Genuine"],["fenceCheckList","Name"],["fenceCheckList","Name"]],"false");
     global.dataLoadedMusic = await getStorageData([require("./assets/data/music.json")],[["emojiCheckList","Name"]],"false");
@@ -115,7 +115,7 @@ class App extends Component {
   
   render(){
     var fab;
-    if(global.settingsCurrent[5]["currentValue"]==="true"){
+    if(global.settingsCurrent!==undefined&&global.settingsCurrent[5]["currentValue"]==="true"){
       fab = <FAB openDrawer={this.openDrawer}/>;
     } else {
       fab = <View/>;
@@ -149,7 +149,11 @@ class App extends Component {
     }
 
     if(!this.state.loaded){
-      return <FadeInOut fadeIn={this.state.fadeInTitle}>
+      var splashScreens = [require('./assets/airplane.json'),require('./assets/balloon.json')];
+      var chosenSplashScreen = splashScreens[Math.floor(this.random * splashScreens.length)];
+      return <>
+      <View style={{position: "absolute", backgroundColor: "#34454f", width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
+      <FadeInOut fadeIn={this.state.fadeInTitle}>
         <LottieView 
           autoPlay
           loop
@@ -162,13 +166,16 @@ class App extends Component {
               { rotate: '0deg'},
             ],
           }} 
-          source={require('./assets/airplane.json')}
+          source={chosenSplashScreen}
         />
       </FadeInOut>
+      </>
     } else if (this.state.firstLogin==="true"){
       return <Onboard setFirstLogin={this.setFirstLogin}/>
     } else {
       return (
+        <>
+        <View style={{position: "absolute", backgroundColor: "#34454f", width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
         <DrawerLayoutAndroid style={{elevation: 0,}} 
           drawerBackgroundColor="rgba(0,0,0,0.01)" 
           ref={_drawer => (this.drawer = _drawer)} 
@@ -177,6 +184,7 @@ class App extends Component {
             {currentPageView}
           {fab}
         </DrawerLayoutAndroid>
+        </>
       );
     }
   }

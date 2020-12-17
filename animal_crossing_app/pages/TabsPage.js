@@ -88,7 +88,7 @@ class TabsPage extends Component {
     return(
       <TabView
         lazy
-        tabBarPosition={"top"}
+        tabBarPosition={global.settingsCurrent[6]["currentValue"] === "true" ? "bottom" : "top"}
         gestureHandlerProps={{ failOffsetX: this.state.index === 0 ? 1 : 100}}
         navigationState={this.state}
         renderScene={this.renderScene}

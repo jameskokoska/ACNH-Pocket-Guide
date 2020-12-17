@@ -111,4 +111,12 @@ export const settings = [
     "displayName" : "Show floating menu button",
     "description" : "",
   },
+  {
+    "keyName" : "settingsTabBarPosition",
+    "defaultValue" : "true",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/scroll.png"),
+    "displayName" : "Category labels on bottom",
+    "description" : "Show the category tabs on the bottom, or top of the screen",
+  },
 ]
