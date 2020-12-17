@@ -16,6 +16,9 @@ class Clock extends Component {
       hours=hours-12;
       afternoon=true;
     }
+    if(minutes.toString().length<2){
+      minutes = "0" + minutes;
+    }
     this.state = {
       date: month + " " + dayNum,
       time: hours + ":" + minutes,
@@ -35,6 +38,9 @@ class Clock extends Component {
       if(hours>12){
         hours=hours-12;
         afternoon=true;
+      }
+      if(minutes.toString().length<2){
+        minutes = "0" + minutes;
       }
       this.setState({
         date: month + " " + dayNum,
