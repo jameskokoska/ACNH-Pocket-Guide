@@ -116,6 +116,7 @@ class ListItem extends Component{
                 </View>
               </View>
               <TouchableOpacity style={{position:"absolute", right: -5}} 
+                activeOpacity={0.6}
                 onPress={() => {  
                 longPress(this.props.item.checkListKey, this.state.collected, this.props.item.index, this.props.dataGlobalName ); 
                 this.setCollected(this.state.collected==="true" ? "false":"true");
