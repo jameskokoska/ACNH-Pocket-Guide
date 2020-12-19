@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {Text, View, StyleSheet} from "react-native";
+import colors from '../Colors.js';
 
 class ActiveTime extends Component {
   constructor(props) {
@@ -21,14 +22,13 @@ class ActiveTime extends Component {
     } else {
       displayText = "no";
     }
-    return <Text style={styles.text}>{this.props.displayText2}</Text>
+    return <Text style={[styles.text,{backgroundColor: colors.textWhite[colors.mode]}]}>{this.props.displayText2}</Text>
   }
 }
 
 const styles = StyleSheet.create({
   text:{
     fontSize:26,
-    backgroundColor: "white",
     borderRadius: 100,
     marginLeft: 13,
     paddingLeft: 13,
