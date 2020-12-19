@@ -19,6 +19,7 @@ import {getStorage, getStorageData, settings} from './LoadJsonData';
 import {ExportFile, LoadFile} from './components/LoadFile';
 import Onboard from './pages/Onboard';
 import colors from './Colors.js';
+import ActiveTime from './components/ActiveTime'
 
 const {width} = Dimensions.get('window').width;
 const {height} = Dimensions.get('window').height;
@@ -59,7 +60,7 @@ class App extends Component {
     this.random = Math.random();
     this.state = {
       loaded: false,
-      currentPage: 0,
+      currentPage: 7,
       open:false,
       fadeInTitle:true,
     }
@@ -79,7 +80,7 @@ class App extends Component {
     global.settingsCurrent = settings;
     for(var i = 0; i<settings.length; i++){
       global.settingsCurrent[i]["currentValue"] = await getStorage(settings[i]["keyName"],settings[i]["defaultValue"]);
-      console.log(global.settingsCurrent[i]["keyName"])
+      //console.log(global.settingsCurrent[i]["keyName"])
     }
     
     console.log("DONE Loading")
@@ -144,6 +145,8 @@ class App extends Component {
       currentPageView = <View><ExportFile/><LoadFile/></View>
     } else if (this.state.currentPage===6){
       currentPageView = <SettingsPage/>
+    } else if (this.state.currentPage===7){
+      currentPageView = <ActiveTime displayText={"helloo"} displayText2={"yo"}/>
     } else {
       currentPageView = <Text>Default</Text>
     }

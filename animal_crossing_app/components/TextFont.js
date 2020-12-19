@@ -2,6 +2,8 @@ import * as Font from 'expo-font';
 import React, {Component} from 'react';
 import {Text} from 'react-native';
 
+//<TextFont bold={true}>My text here</TextFont>
+
 class TextFont extends Component {
   constructor(props){
     super(props);
