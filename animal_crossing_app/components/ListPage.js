@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, {Component, useState, useRef, useEffect} from 'react';
 import {TouchableWithoutFeedback, Text, View, Animated, SafeAreaView, StatusBar, StyleSheet, TextInput} from 'react-native';
 import Header from './Header';
 import ListItem from './ListItem';
@@ -23,7 +23,7 @@ export default (props) =>{
       gridType={props.gridType}
       key={item.checkListKeyString}
       dataGlobalName={props.dataGlobalName}
-      openBottomSheet={()=>{sheetRef.current.snapTo(0);}}
+      openBottomSheet={()=>{sheetRef.current.snapTo(0); bottomSheetRenderRef.current.update(item)}}
       boxColor={props.boxColor}
       labelColor={props.labelColor}
       accentColor={props.accentColor}
@@ -39,7 +39,6 @@ export default (props) =>{
     inputRange: [0, headerHeight],
     outputRange: [0, -(headerHeight)],
   });
-
 
   // const translateYNumber = useRef();
 
@@ -61,7 +60,6 @@ export default (props) =>{
   );
 
   const [search, setSearch] = useState("Search");
-
   function updateSearch(search){
     setSearch(search);
   }
@@ -100,34 +98,10 @@ export default (props) =>{
   }
   
   const sheetRef = React.useRef(null);
-  const renderContent = () => (
-    <>
-    <LinearGradient
-      colors={['transparent','rgba(0,0,0,0.3)','rgba(0,0,0,0.3)' ]}
-      style={{position: 'absolute',
-              left: 0,
-              right: 0,
-              top: 0,
-              height: Dimensions.get('window').height,
-              width: Dimensions.get('window').width,}}
-    />
-    <View
-      style={{
-        height: 500,
-      }}
-    />
-    <View
-      style={{
-        borderRadius: 50,
-        backgroundColor: 'white',
-        padding: 16,
-        height: Dimensions.get('window').height-500,
-      }}
-    >
-      <Text>Swipe down to close</Text>
-    </View>
-    </>
-  );
+  const bottomSheetRenderRef = React.useRef(null);
+  function renderContent() {
+    return <BottomSheetRender ref={bottomSheetRenderRef}/>;
+  }
 
   const springConfig = {
       damping: 20,
@@ -165,6 +139,53 @@ export default (props) =>{
     </SafeAreaView>
   );
 };
+
+class BottomSheetRender extends Component{
+  constructor() {
+    super();
+    this.update = this.update.bind(this);
+    this.state = {
+      item:"item"
+    }
+  }
+  update(item){
+    this.forceUpdate()
+    this.setState({
+      item:item
+    })
+    console.log("item available to popup:")
+    console.log(item)
+  }
+  render(){
+    
+    return <View>
+      <LinearGradient
+        colors={['transparent','rgba(0,0,0,0.3)','rgba(0,0,0,0.3)' ]}
+        style={{position: 'absolute',
+                left: 0,
+                right: 0,
+                top: 0,
+                height: Dimensions.get('window').height,
+                width: Dimensions.get('window').width,}}
+      />
+      <View
+        style={{
+          height: 500,
+        }}
+      />
+      <View
+        style={{
+          borderRadius: 50,
+          backgroundColor: 'white',
+          padding: 16,
+          height: Dimensions.get('window').height-500,
+        }}
+      >
+        <Text>{this.state.item["Name"]}</Text>
+      </View>
+    </View>
+  }
+}
 
 const styles = StyleSheet.create({
   text:{
