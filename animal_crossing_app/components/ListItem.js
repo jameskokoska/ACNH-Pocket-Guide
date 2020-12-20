@@ -118,7 +118,7 @@ class ListItem extends Component{
               <TouchableOpacity style={{position:"absolute", right: -5}} 
                 activeOpacity={0.6}
                 onPress={() => {  
-                longPress(this.props.item.checkListKey, this.state.collected, this.props.item.index, this.props.dataGlobalName ); 
+                longPress(this.props.item.checkListKey, this.state.collected, this.props.item.index, this.props.dataGlobalName); 
                 this.setCollected(this.state.collected==="true" ? "false":"true");
               }}>
                 <Check fadeOut={false} play={this.state.collected==="true"} width={90} height={90}/>

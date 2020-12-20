@@ -7,6 +7,7 @@ import {determineDataGlobal} from "../LoadJsonData"
 import BottomSheet from 'reanimated-bottom-sheet';
 import {Dimensions } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
+import {CircularImage, RightCornerCheck, LeftCornerImage, Title} from './BottomSheetComponents';
 
 const {diffClamp} = Animated;
 const headerHeight = 130 * 2;
@@ -100,7 +101,22 @@ export default (props) =>{
   const sheetRef = React.useRef(null);
   const bottomSheetRenderRef = React.useRef(null);
   function renderContent() {
-    return <BottomSheetRender ref={bottomSheetRenderRef}/>;
+    return <BottomSheetRender 
+      ref={bottomSheetRenderRef}
+      showVariations={props.showVariations}
+      imageProperty={props.imageProperty} 
+      textProperty={props.textProperty}
+      textProperty2={props.textProperty2}
+      textProperty3={props.textProperty3}
+      gridType={props.gridType}
+      key={item.checkListKeyString}
+      dataGlobalName={props.dataGlobalName}
+      openBottomSheet={()=>{sheetRef.current.snapTo(0); bottomSheetRenderRef.current.update(item)}}
+      boxColor={props.boxColor}
+      labelColor={props.labelColor}
+      accentColor={props.accentColor}
+      specialLabelColor={props.specialLabelColor}
+    />;
   }
 
   const springConfig = {
@@ -157,7 +173,6 @@ class BottomSheetRender extends Component{
     console.log(item)
   }
   render(){
-    
     return <View>
       <LinearGradient
         colors={['transparent','rgba(0,0,0,0.3)','rgba(0,0,0,0.3)' ]}
@@ -181,6 +196,24 @@ class BottomSheetRender extends Component{
           height: Dimensions.get('window').height-500,
         }}
       >
+          <CircularImage 
+            item={this.state.item}
+            imageProperty={this.props.imageProperty}
+            accentColor={this.props.accentColor}
+          />
+          <LeftCornerImage
+            item={this.state.item}
+            imageProperty={this.props.imageProperty}
+            accentColor={this.props.accentColor}
+          />
+          <RightCornerCheck
+            item={this.state.item}
+          />
+          <View style={{height: 55}}/>
+          <Title
+            item={this.state.item}
+            textProperty={this.props.textProperty}
+          />
         <Text>{this.state.item["Name"]}</Text>
       </View>
     </View>
