@@ -1,6 +1,6 @@
 import * as Font from 'expo-font';
 import React, {Component} from 'react';
-import {Text} from 'react-native';
+import {Vibration, Text} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export async function getStorage(storageKey, defaultValue){
@@ -60,6 +60,23 @@ export function updateDataGlobal(datakeyName, index, collected){
     global.dataLoadedArt[index].collected=collected;
   else if(datakeyName==="dataLoadedMusic")
     global.dataLoadedMusic[index].collected=collected;
+}
+
+export function checkOff(checkListKeyString, collected, index, dataGlobalName){
+  if(collected==="false"){
+    Vibration.vibrate([0,10,220,20]);
+  } else {
+    Vibration.vibrate(10);
+  }
+  AsyncStorage.setItem(checkListKeyString, collected==="false" ? "true":"false");
+  updateDataGlobal(dataGlobalName, index, collected==="false" ? "true":"false")
+  console.log(checkListKeyString);
+  console.log(determineDataGlobal(dataGlobalName)[index])
+  console.log(collected);
+}
+
+export function capitalize(name) {
+  return name.replace(/\b(\w)/g, s => s.toUpperCase());
 }
 
 export const settings = [

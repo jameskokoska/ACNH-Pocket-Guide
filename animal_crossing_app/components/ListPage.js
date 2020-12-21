@@ -24,7 +24,10 @@ export default (props) =>{
       gridType={props.gridType}
       key={item.checkListKeyString}
       dataGlobalName={props.dataGlobalName}
-      openBottomSheet={()=>{sheetRef.current.snapTo(0); bottomSheetRenderRef.current.update(item)}}
+      openBottomSheet={(updateCheckChild)=>{
+        sheetRef.current.snapTo(0); 
+        //pass in the check mark update function of that current element
+        bottomSheetRenderRef.current.update(item, updateCheckChild)}}
       boxColor={props.boxColor}
       labelColor={props.labelColor}
       accentColor={props.accentColor}
@@ -151,26 +154,29 @@ export default (props) =>{
         initialSnap={1}
         renderContent={renderContent}
         springConfig={springConfig}
+        enabledContentTapInteraction={false}
       />
     </SafeAreaView>
   );
 };
 
 class BottomSheetRender extends Component{
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.update = this.update.bind(this);
     this.state = {
-      item:"item"
+      item:"item",
     }
+    this.updateCheckChildFunction;
   }
-  update(item){
-    this.forceUpdate()
+  update(item, updateCheckChildFunction){
+    this.forceUpdate();
     this.setState({
-      item:item
+      item:item,
     })
     console.log("item available to popup:")
     console.log(item)
+    this.updateCheckChildFunction=updateCheckChildFunction;
   }
   render(){
     return <View>
@@ -208,6 +214,9 @@ class BottomSheetRender extends Component{
           />
           <RightCornerCheck
             item={this.state.item}
+            collected={this.state.item.collected}
+            dataGlobalName={this.props.dataGlobalName}
+            updateCheckChildFunction={this.updateCheckChildFunction}
           />
           <View style={{height: 55}}/>
           <Title

@@ -12,7 +12,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import TextFont from './TextFont';
 import Check from './Check';
 import CachedImage from 'react-native-expo-cached-image';
-import {updateDataGlobal, determineDataGlobal} from "../LoadJsonData"
+import {checkOff, capitalize} from "../LoadJsonData"
 
 const {width} = Dimensions.get('window');
 
@@ -38,7 +38,7 @@ class ListItem extends Component{
       return (
         <View style={styles.gridWrapper}>
           <TouchableNativeFeedback onLongPress={() => {  
-            longPress(this.props.item.checkListKey, this.state.collected, this.props.item.index, this.props.dataGlobalName); 
+            checkOff(this.props.item.checkListKey, this.state.collected, this.props.item.index, this.props.dataGlobalName); 
             this.setCollected(this.state.collected==="true" ? "false":"true");
           }}
             background={TouchableNativeFeedback.Ripple(this.props.accentColor, false)}
@@ -63,7 +63,7 @@ class ListItem extends Component{
       return( 
         <View style={styles.gridWrapper}>
           <TouchableNativeFeedback onLongPress={() => {  
-            longPress(this.props.item.checkListKey, this.state.collected, this.props.item.index, this.props.dataGlobalName); 
+            checkOff(this.props.item.checkListKey, this.state.collected, this.props.item.index, this.props.dataGlobalName); 
             this.setCollected(this.state.collected==="true" ? "false":"true");
           }}
           background={TouchableNativeFeedback.Ripple(this.props.accentColor, false)}
@@ -89,11 +89,11 @@ class ListItem extends Component{
         <View>
           <TouchableNativeFeedback onLongPress={() => {  
             console.log(this.props.item)
-            longPress(this.props.item.checkListKey, this.state.collected, this.props.item.index, this.props.dataGlobalName); 
+            checkOff(this.props.item.checkListKey, this.state.collected, this.props.item.index, this.props.dataGlobalName); 
             this.setCollected(this.state.collected==="true" ? "false":"true");
           }}
           background={TouchableNativeFeedback.Ripple(this.props.accentColor, false)}
-          onPress={this.props.openBottomSheet}
+          onPress={()=>{this.props.openBottomSheet(this.setCollected)}}
           >
             <View style={[styles.row,{backgroundColor:this.props.boxColor}]}>
               <View style={[styles.rowImageBackground,{backgroundColor:this.props.accentColor}]}>
@@ -118,7 +118,7 @@ class ListItem extends Component{
               <TouchableOpacity style={{position:"absolute", right: -5}} 
                 activeOpacity={0.6}
                 onPress={() => {  
-                longPress(this.props.item.checkListKey, this.state.collected, this.props.item.index, this.props.dataGlobalName); 
+                checkOff(this.props.item.checkListKey, this.state.collected, this.props.item.index, this.props.dataGlobalName); 
                 this.setCollected(this.state.collected==="true" ? "false":"true");
               }}>
                 <Check fadeOut={false} play={this.state.collected==="true"} width={90} height={90}/>
@@ -230,21 +230,3 @@ const styles = StyleSheet.create({
     margin: 2,
   },
 });
-
-
-function capitalize(name) {
-  return name.replace(/\b(\w)/g, s => s.toUpperCase());
-}
-
-function longPress(checkListKeyString, collected, index, dataGlobalName){
-  if(collected==="false"){
-    Vibration.vibrate([0,10,220,20]);
-  } else {
-    Vibration.vibrate(10);
-  }
-  AsyncStorage.setItem(checkListKeyString, collected==="false" ? "true":"false");
-  updateDataGlobal(dataGlobalName, index, collected==="false" ? "true":"false")
-  console.log(checkListKeyString);
-  console.log(determineDataGlobal(dataGlobalName)[index])
-  console.log(collected);
-}

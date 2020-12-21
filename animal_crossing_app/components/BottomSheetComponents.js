@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import {Text, View, StyleSheet} from "react-native";
+import {TouchableOpacity, Text, View, StyleSheet} from "react-native";
 import colors from '../Colors.js';
 import CachedImage from 'react-native-expo-cached-image';
 import Check from './Check';
 import TextFont from './TextFont'
+import {capitalize, checkOff} from '../LoadJsonData'
 
 export class CircularImage extends Component {
   render() {
@@ -43,13 +44,30 @@ export class LeftCornerImage extends Component {
 export class RightCornerCheck extends Component {
   constructor(props) {
     super(props);
+    this.setCollected = this.setCollected.bind(this);
     this.state = {
-
+      collected:props.collected
     };
   }
-
+  //update component when new data is passed into the class, or when the check mark local value changes
+  componentDidUpdate(prevProps) {
+    if(this.state.collected!==this.props.collected && this.state.collected===prevProps.collected || this.props.item !== prevProps.item)
+      this.setState({collected:this.props.collected});
+  }
+  setCollected(collected){
+    this.setState({collected: collected});
+    this.props.updateCheckChildFunction(this.state.collected==="true" ? "false":"true");
+    console.log("set");
+  }
   render() {
-    return <Check style={[styles.checkMark]} fadeOut={false} play={this.state.collected==="true"} width={135} height={135}/>
+    return <TouchableOpacity style={[styles.checkMark]} 
+              activeOpacity={0.6}
+              onPress={() => {  
+                checkOff(this.props.item.checkListKey, this.state.collected, this.props.item.index, this.props.dataGlobalName);
+                this.setCollected(this.state.collected==="true" ? "false":"true");
+            }}>
+      <Check fadeOut={false} play={this.state.collected==="true"} width={135} height={135}/>
+    </TouchableOpacity>
   }
 }
 
@@ -118,10 +136,10 @@ const styles = StyleSheet.create({
     marginBottom: -130/2,
     zIndex:50,
     elevation: 5,
-    margin: 20,
+    margin: 30,
     position: "absolute",
-    top:-7,
-    left:-7,
+    top:-15,
+    left:-15,
   },
   cornerImage:{
     height: 65,
@@ -131,11 +149,7 @@ const styles = StyleSheet.create({
   checkMark:{
     zIndex:50,
     position: "absolute",
-    top:-7,
-    right:-7,
+    top:-15,
+    right:-15,
   }
 })
-
-function capitalize(name) {
-  return name.replace(/\b(\w)/g, s => s.toUpperCase());
-}

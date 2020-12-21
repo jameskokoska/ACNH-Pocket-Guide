@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { Animated, Text, View, Easing } from "react-native";
 import LottieView from 'lottie-react-native';
-//<FadeInOut fadeIn={true} fadeInOut={true} scaleInOut={true}>
-//   <Text>Hi</Text>
-//</FadeInOut>
+
 class Check extends Component {
   constructor(props) {
     super(props);
