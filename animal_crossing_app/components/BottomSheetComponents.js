@@ -51,7 +51,7 @@ export class RightCornerCheck extends Component {
   }
   //update component when new data is passed into the class, or when the check mark local value changes
   componentDidUpdate(prevProps) {
-    if(this.state.collected!==this.props.collected && this.state.collected===prevProps.collected || this.props.item !== prevProps.item)
+    if(this.state.collected!==this.props.collected && this.state.collected===prevProps.collected || this.props.item !== prevProps.item || this.state.collected!==prevProps.item.collected)
       this.setState({collected:this.props.collected});
   }
   setCollected(collected){
@@ -135,7 +135,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: -130/2,
     zIndex:50,
-    elevation: 5,
     margin: 30,
     position: "absolute",
     top:-15,
