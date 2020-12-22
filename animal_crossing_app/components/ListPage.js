@@ -119,15 +119,11 @@ export default (props) =>{
   function renderContent() {
     return <BottomSheetRender 
       ref={bottomSheetRenderRef}
-      showVariations={props.showVariations}
       imageProperty={props.imageProperty} 
       textProperty={props.textProperty}
       textProperty2={props.textProperty2}
       textProperty3={props.textProperty3}
-      gridType={props.gridType}
-      key={item.checkListKeyString}
       dataGlobalName={props.dataGlobalName}
-      openBottomSheet={()=>{sheetRef.current.snapTo(0); bottomSheetRenderRef.current.update(item)}}
       boxColor={props.boxColor}
       labelColor={props.labelColor}
       accentColor={props.accentColor}
