@@ -51,7 +51,7 @@ class Check extends Component {
   };
 
   render() {
-    if((this.props.fadeOut===true || this.props.fadeOut===undefined) && !this.props.play){
+    if((this.props.fadeOut===true || this.props.fadeOut===undefined) && !this.props.play && !this.props.disablePopup){
       return <View/>
     } else {
       return (

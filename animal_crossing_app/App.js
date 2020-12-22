@@ -6,6 +6,7 @@ import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import FAB from './components/FAB';
 import TabsPage from './pages/TabsPage';
 import SongsPage from './pages/SongsPage';
+import EmoticonsPage from './pages/EmoticonsPage';
 import HomePage from './pages/HomePage';
 import SettingsPage from './pages/SettingsPage';
 import FadeInOut from './components/FadeInOut';
@@ -136,14 +137,16 @@ class App extends Component {
       </>
     } else if (this.state.currentPage===4){
       currentPageView = <SongsPage/>
-    } else if (this.state.currentPage===3){
-      currentPageView = <CreditsPage/>
     } else if (this.state.currentPage===5){
+      currentPageView = <EmoticonsPage/>
+    } else if (this.state.currentPage===8){
       currentPageView = <View><ExportFile/><LoadFile/></View>
-    } else if (this.state.currentPage===6){
-      currentPageView = <SettingsPage/>
     } else if (this.state.currentPage===7){
       currentPageView = <ActiveTime displayText={"helloo"} displayText2={"yo"}/>
+    } else if (this.state.currentPage===10){
+      currentPageView = <SettingsPage/>
+    } else if (this.state.currentPage===11){
+      currentPageView = <CreditsPage/>
     } else {
       currentPageView = <Text>Default</Text>
     }

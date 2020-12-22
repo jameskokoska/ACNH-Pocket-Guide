@@ -4,19 +4,13 @@ import ListPage from '../components/ListPage';
 import LottieView from 'lottie-react-native';
 import colors from '../Colors.js';
 
-const music = require("../assets/data/music.json");
-const {width} = Dimensions.get('window');
-
-
 class SongsPage extends Component {
   render(){
-      console.log(colors.mode)
-
     return(
       <>
       <View pointerEvents="none"  
         style={{
-          width: width,
+          width: Dimensions.get('window').width,
           position:'absolute',
           top:-5,
           zIndex:5,
@@ -24,20 +18,21 @@ class SongsPage extends Component {
             { scale: 1.1 },
             { rotate: '0deg'},
           ],
+          opacity: colors.musicWavesTransparency[colors.mode],
         }} 
       >
         <LottieView 
           autoPlay
           loop
           style={{
-            width: width,
+            width: Dimensions.get('window').width,
           }} 
           source={require('../assets/waveAnimation.json')}
         />
       </View>
       <View pointerEvents="none" 
         style={{
-          width: width,
+          width: Dimensions.get('window').width,
           position:'absolute',
           bottom:-20,
           zIndex:5,
@@ -45,19 +40,21 @@ class SongsPage extends Component {
             { scale: 1.1 },
             { rotate: '180deg'},
           ],
+          opacity: colors.musicWavesTransparency[colors.mode],
         }} 
       >
       <LottieView 
         autoPlay
         loop
         style={{
-          width: width,
+          width: Dimensions.get('window').width,
         }} 
         source={require('../assets/waveAnimation.json')}
       />
       </View>
         <ListPage 
-          showVariations={false}
+          disablePopup={[true]}
+          showVariations={[false]}
           title="Music"
           imageProperty={["Album Image"]}
           textProperty={["Name"]}
@@ -65,8 +62,7 @@ class SongsPage extends Component {
           searchKey={[["Name"]]}
           gridType="largeGrid" //smallGrid, largeGrid, row
           dataGlobalName={"dataLoadedMusic"}
-          appBarColor={colors.bugAppBar[colors.mode]}
-          appBarImage={require("../assets/icons/bugTitleDark.png")}
+          appBarColor={colors.musicAppBar[colors.mode]}
           titleColor={colors.textBlack[colors.mode]}
           searchBarColor={colors.searchbarBG[colors.mode]}
           backgroundColor={colors.lightDarkAccent[colors.mode]}

@@ -37,6 +37,8 @@ const colors = {
     floorWallAppBar : ["#1565c0","#204064"],
     floorWallAccent : ["#e3f2fd","#505E68"],
     emojipediaAppBar : ["#FFF176","#807623"],
+    musicAppBar : ["#5c6bc0","#253870"],
+    musicWavesTransparency: [0.9,0.4],
     artAppBar : ["#730000","#630000"],
     artAccent : ["#FFF0F5","#5A4043"],
     warningBackground : ["#ffccbc","#4d2a2c"],

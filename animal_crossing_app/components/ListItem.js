@@ -34,7 +34,17 @@ class ListItem extends Component{
     if(this.state.collected!==this.props.item.collected){
       this.setCollected(this.props.item.collected)
     }
+    var disablePopup;
+    if(this.props.disablePopup===undefined){
+      disablePopup=false;
+    } else {
+      disablePopup=this.props.disablePopup[this.props.item.dataSet];
+    }
     if(this.props.gridType==="smallGrid"){
+      var textProperty2Component = <View/>;
+      if(this.props.textProperty2!==undefined){
+        textProperty2Component = <TextFont bold={false} style={{textAlign:'center', color:this.props.labelColor, fontSize:12}}>{capitalize(this.props.item.[this.props.textProperty2[this.props.item.dataSet]])}</TextFont>
+      }
       return (
         <View style={styles.gridWrapper}>
           <TouchableNativeFeedback onLongPress={() => {  
@@ -42,10 +52,17 @@ class ListItem extends Component{
             this.setCollected(this.state.collected==="true" ? "false":"true");
           }}
             background={TouchableNativeFeedback.Ripple(this.props.accentColor, false)}
-            onPress={()=>{this.props.openBottomSheet(this.setCollected)}}
+            onPress={()=>{
+              if(disablePopup){
+                checkOff(this.props.item, this.state.collected, this.props.dataGlobalName); 
+                this.setCollected(this.state.collected==="true" ? "false":"true");
+              } else {
+                this.props.openBottomSheet(this.setCollected);
+              }
+            }}
           >
             <View style={[styles.gridBox, {backgroundColor:this.props.boxColor}]}>
-              <Check style={{position:'absolute', right: -9, top: -9, zIndex:10}} play={this.state.collected==="true"} width={53} height={53}/>
+              <Check style={{position:'absolute', right: -9, top: -9, zIndex:10}} play={this.state.collected==="true"} width={53} height={53} disablePopup={disablePopup}/>
               <CachedImage
                 style={styles.gridBoxImage}
                 source={{
@@ -53,7 +70,8 @@ class ListItem extends Component{
                 }}
               />
               <View style={styles.gridBoxText}>
-                <TextFont bold={false} style={{textAlign:'center', color:this.props.labelColor}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
+                <TextFont bold={true} style={{textAlign:'center', color:this.props.labelColor, fontSize:13}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
+                {textProperty2Component}
               </View>
             </View>
           </TouchableNativeFeedback>
@@ -67,10 +85,17 @@ class ListItem extends Component{
             this.setCollected(this.state.collected==="true" ? "false":"true");
           }}
           background={TouchableNativeFeedback.Ripple(this.props.accentColor, false)}
-          onPress={()=>{this.props.openBottomSheet(this.setCollected)}}
+          onPress={()=>{
+              if(disablePopup){
+                checkOff(this.props.item, this.state.collected, this.props.dataGlobalName); 
+                this.setCollected(this.state.collected==="true" ? "false":"true");
+              } else {
+                this.props.openBottomSheet(this.setCollected);
+              }
+            }}
           >
             <View style={[styles.gridBoxLarge, {backgroundColor:this.props.boxColor}]}>
-              <Check style={{position:'absolute', right: -8, top: -10, zIndex:10}} play={this.state.collected==="true"} width={53} height={53}/>
+              <Check style={{position:'absolute', right: -8, top: -10, zIndex:10}} play={this.state.collected==="true"} width={53} height={53} disablePopup={disablePopup}/>
               <CachedImage
                 style={styles.gridBoxImageLarge}
                 source={{
@@ -92,7 +117,14 @@ class ListItem extends Component{
             this.setCollected(this.state.collected==="true" ? "false":"true");
           }}
           background={TouchableNativeFeedback.Ripple(this.props.accentColor, false)}
-          onPress={()=>{this.props.openBottomSheet(this.setCollected)}}
+          onPress={()=>{
+              if(disablePopup){
+                checkOff(this.props.item, this.state.collected, this.props.dataGlobalName); 
+                this.setCollected(this.state.collected==="true" ? "false":"true");
+              } else {
+                this.props.openBottomSheet(this.setCollected);
+              }
+            }}
           >
             <View style={[styles.row,{backgroundColor:this.props.boxColor}]}>
               <View style={[styles.rowImageBackground,{backgroundColor:this.props.accentColor}]}>
@@ -120,7 +152,7 @@ class ListItem extends Component{
                 checkOff(this.props.item, this.state.collected, this.props.dataGlobalName); 
                 this.setCollected(this.state.collected==="true" ? "false":"true");
               }}>
-                <Check fadeOut={false} play={this.state.collected==="true"} width={90} height={90}/>
+                <Check fadeOut={false} play={this.state.collected==="true"} width={90} height={90} disablePopup={disablePopup}/>
               </TouchableOpacity>
             </View>
           </TouchableNativeFeedback>
@@ -177,7 +209,8 @@ const styles = StyleSheet.create({
     width: 100,
     height: 40,
     paddingLeft: 3,
-    paddingRight: 3
+    paddingRight: 3,
+    marginBottom: 13
   },
   gridBoxTextLarge: {
     flex: 1,

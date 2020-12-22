@@ -75,7 +75,7 @@ export class RightCornerCheck extends Component {
 
 export class Phrase extends Component {
   render() {
-    return <Text style={[styles.phrase,{fontStyle: 'italic', fontFamily:'serif',color:colors.textBlack[colors.mode]}]}>{'"'+ capitalize(this.props.item[this.props.popUpPhraseProperty[this.props.item.dataSet]]) + '"'}</Text>
+    return <Text style={[styles.phrase,{fontStyle: 'italic', fontFamily:'serif',color:this.props.specialLabelColor}]}>{'"'+ capitalize(this.props.item[this.props.popUpPhraseProperty[this.props.item.dataSet]]) + '"'}</Text>
   }
 }
 

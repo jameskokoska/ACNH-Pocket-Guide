@@ -17,6 +17,7 @@ export default (props) =>{
   const renderItem = (({ item }) =>
     <ListItem
       item={item}
+      disablePopup={props.disablePopup}
       showVariations={props.showVariations}
       imageProperty={props.imageProperty} 
       textProperty={props.textProperty}
@@ -85,7 +86,7 @@ export default (props) =>{
       for(var x = 0; x < props.searchKey[j].length; x++){
         if(search==="Search" || search==="" || item.[props.searchKey[j][x]].toLowerCase().includes(search.toLowerCase())){
           //Search result found...
-          if(props.showVariations===false){
+          if(props.showVariations[j]===false){
             if(item.[props.textProperty[j]]===previousVariation){
               previousVariation = item.[props.textProperty[j]];
             } else {
@@ -95,6 +96,8 @@ export default (props) =>{
               previousVariation = item.[props.textProperty[j]];
             }
           } else {
+            item.dataSet = j;
+            item.index = i;
             dataUpdated = [...dataUpdated, item];
             break;
           }
@@ -210,6 +213,7 @@ class BottomSheetRender extends Component{
       phrase = <Phrase
         item={this.state.item}
         popUpPhraseProperty={this.props.popUpPhraseProperty}
+        specialLabelColor={this.props.specialLabelColor}
       />
     } else {
       phrase = <View/>
