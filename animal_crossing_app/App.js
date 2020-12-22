@@ -8,6 +8,7 @@ import TabsPage from './pages/TabsPage';
 import SongsPage from './pages/SongsPage';
 import EmoticonsPage from './pages/EmoticonsPage';
 import ConstructionPage from './pages/ConstructionPage';
+import MuseumPage from './pages/MuseumPage';
 import HomePage from './pages/HomePage';
 import SettingsPage from './pages/SettingsPage';
 import FadeInOut from './components/FadeInOut';
@@ -76,7 +77,11 @@ class App extends Component {
     global.dataLoadedArt = await getStorageData([require("./assets/data/art.json"),require("./assets/data/fencing.json")],[["artCheckList","Name","Genuine"],["fenceCheckList","Name"],["fenceCheckList","Name"]],"false");
     global.dataLoadedMusic = await getStorageData([require("./assets/data/music.json")],[["emojiCheckList","Name"]],"false");
     global.dataLoadedConstruction = await getStorageData([require("./assets/data/construction.json"),require("./assets/data/fencing.json")],[["constructionCheckList","Name"],["fenceCheckList","Name"]],"false");
-
+    global.dataLoadedFish = await getStorageData([require("./assets/data/fish.json")],[["fishCheckList","Name"]],"false");
+    global.dataLoadedBugs = await getStorageData([require("./assets/data/insects.json")],[["bugCheckList","Name"]],"false");
+    global.dataLoadedSea = await getStorageData([require("./assets/data/seacreatures.json")],[["seaCheckList","Name"]],"false");
+    global.dataLoadedFossils = await getStorageData([require("./assets/data/fossils.json")],[["fossilCheckList","Name"]],"false");
+    global.dataLoadedArt = await getStorageData([require("./assets/data/art.json")],[["artCheckList","Name"]],"false");
     //Load Settings
     global.settingsCurrent = settings;
     for(var i = 0; i<settings.length; i++){
@@ -128,6 +133,8 @@ class App extends Component {
       currentPageView = <FadeInOut fadeIn={true}><HomePage/></FadeInOut>
     } else if(this.state.currentPage===1){
       currentPageView = <TabsPage openDrawer={this.openDrawer}/>
+    } else if(this.state.currentPage===2){
+      currentPageView = <MuseumPage/>
     } else if (this.state.currentPage===2){
       currentPageView = 
       <>

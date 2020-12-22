@@ -226,10 +226,12 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70,
     borderRadius: 100,
+    justifyContent: "center",
+    alignItems: "center",
   },
   rowImage:{
-    height: 70,
-    width: 70,
+    height: 60,
+    width: 60,
     resizeMode:'contain',
   },
   row: {

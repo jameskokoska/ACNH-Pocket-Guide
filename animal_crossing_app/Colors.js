@@ -13,6 +13,7 @@ const colors = {
     lightDarkAccentHeavy : ["#bcbfc2","#494c4d"],
     textBlack : ["#373737","#f2f2f2"],
     textWhite : ["#FFFFFF","#373737"],
+    textWhiteOnly : ["#FFFFFF","#FFFFFF"],
     textLight : ["#a8a8a8","#8c8c8c"],
     white : ["#FFFFFF","#2B2B2B"],
     checkRed : ["#F8DFE3","#805D62"],

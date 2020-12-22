@@ -204,8 +204,8 @@ const styles = StyleSheet.create({
     width: 130,
   },
   rowImage:{
-    height: 110,
-    width: 110,
+    height: 95,
+    width: 95,
     resizeMode:'contain',
   },
   cornerImageLabel:{

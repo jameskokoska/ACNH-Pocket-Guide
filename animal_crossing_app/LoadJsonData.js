@@ -50,6 +50,16 @@ export function determineDataGlobal(datakeyName){
     return global.dataLoadedMusic;
   else if(datakeyName==="dataLoadedConstruction")
     return global.dataLoadedConstruction;
+  else if(datakeyName==="dataLoadedFish")
+    return global.dataLoadedFish;
+  else if(datakeyName==="dataLoadedBugs")
+    return global.dataLoadedBugs;
+  else if(datakeyName==="dataLoadedSea")
+    return global.dataLoadedSea;
+  else if(datakeyName==="dataLoadedFossils")
+    return global.dataLoadedFossils;
+  else if(datakeyName==="dataLoadedArt")
+    return global.dataLoadedArt;
 }
 
 export function updateDataGlobal(datakeyName, index, collected, dataSet){
@@ -61,6 +71,16 @@ export function updateDataGlobal(datakeyName, index, collected, dataSet){
     global.dataLoadedMusic[dataSet][index].collected=collected;
   else if(datakeyName==="dataLoadedConstruction")
     global.dataLoadedConstruction[dataSet][index].collected=collected;
+  else if(datakeyName==="dataLoadedFish")
+    global.dataLoadedFish[dataSet][index].collected=collected;
+  else if(datakeyName==="dataLoadedBugs")
+    global.dataLoadedBugs[dataSet][index].collected=collected;
+  else if(datakeyName==="dataLoadedSea")
+      global.dataLoadedSea[dataSet][index].collected=collected;
+  else if(datakeyName==="dataLoadedFossils")
+      global.dataLoadedFossils[dataSet][index].collected=collected;
+  else if(datakeyName==="dataLoadedArt")
+      global.dataLoadedArt[dataSet][index].collected=collected;
 }
 
 export function checkOff(item, collected, dataGlobalName){
