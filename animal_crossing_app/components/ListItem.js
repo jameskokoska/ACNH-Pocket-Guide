@@ -7,12 +7,13 @@ import {
   View,
   TouchableNativeFeedback,
   Vibration,
+  Image,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import TextFont from './TextFont';
 import Check from './Check';
 import CachedImage from 'react-native-expo-cached-image';
-import {checkOff, capitalize} from "../LoadJsonData"
+import {checkOff, capitalize, commas} from "../LoadJsonData"
 
 const {width} = Dimensions.get('window');
 
@@ -103,7 +104,46 @@ class ListItem extends Component{
                 }}
               />
               <View style={styles.gridBoxTextLarge}>
-                <TextFont bold={false} style={{textAlign:'center', color:this.props.labelColor}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
+                <TextFont bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
+              </View>
+            </View>
+          </TouchableNativeFeedback>
+        </View>
+      )
+    } else if (this.props.gridType==="largeGridSmaller"){
+      var priceComponent = <View/>
+      if(this.props.textProperty2==="construction" && this.props.item["Buy"] !== undefined && this.props.item["Buy"] !== "5000" && this.props.item["Buy"] !== "NFS"){
+        priceComponent = <View style={{flexDirection:"row", alignItems:"center", justifyContent:"center", marginTop: 3}}><Image style={{width:15,height:15,resizeMode:'contain',  marginRight:3}} source={require("../assets/icons/bellBag.png")}/><TextFont bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{commas(this.props.item["Buy"])}</TextFont></View>
+      } else if(this.props.textProperty2==="construction" && this.props.item["Sell"] !== undefined){
+        priceComponent = <View style={{flexDirection:"row", alignItems:"center", justifyContent:"center", marginTop: 3}}><Image style={{width:15,height:15,resizeMode:'contain',  marginRight:3}} source={require("../assets/icons/coin.png")}/><TextFont bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{commas(this.props.item["Sell"])}</TextFont></View>
+      }
+      return( 
+        <View style={styles.gridWrapper}>
+          <TouchableNativeFeedback onLongPress={() => {  
+            checkOff(this.props.item, this.state.collected, this.props.dataGlobalName); 
+            this.setCollected(this.state.collected==="true" ? "false":"true");
+          }}
+          background={TouchableNativeFeedback.Ripple(this.props.accentColor, false)}
+          onPress={()=>{
+              if(disablePopup){
+                checkOff(this.props.item, this.state.collected, this.props.dataGlobalName); 
+                this.setCollected(this.state.collected==="true" ? "false":"true");
+              } else {
+                this.props.openBottomSheet(this.setCollected);
+              }
+            }}
+          >
+            <View style={[styles.gridBoxLarge, {backgroundColor:this.props.boxColor}]}>
+              <Check style={{position:'absolute', right: -8, top: -10, zIndex:10}} play={this.state.collected==="true"} width={53} height={53} disablePopup={disablePopup}/>
+              <CachedImage
+                style={styles.gridBoxImageLargeSmaller}
+                source={{
+                  uri: this.props.item.[this.props.imageProperty[this.props.item.dataSet]],
+                }}
+              />
+              <View style={styles.gridBoxTextLargeSmaller}>
+                <TextFont bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
+                {priceComponent}
               </View>
             </View>
           </TouchableNativeFeedback>
@@ -199,7 +239,7 @@ const styles = StyleSheet.create({
     height: 88,
     width: "100%",
     borderRadius:10,
-    elevation: 2,
+    elevation: 0,
     marginTop: 7,
   },
   gridBoxText: {
@@ -216,6 +256,15 @@ const styles = StyleSheet.create({
     flex: 1,
     width: 130,
     marginTop: 5,
+    paddingLeft: 3,
+    paddingRight: 3
+  },
+  gridBoxTextLargeSmaller: {
+    flex: 1,
+    width: 130,
+    justifyContent: "center",
+    height: 25,
+    marginTop: 0,
     paddingLeft: 3,
     paddingRight: 3
   },
@@ -238,6 +287,13 @@ const styles = StyleSheet.create({
     marginTop: 15,
     resizeMode:'contain',
   },
+  gridBoxImageLargeSmaller: {
+    height: 120,
+    width: 120,
+    borderRadius:5,
+    marginTop: 15,
+    resizeMode:'contain',
+  },
   gridBox: {
     alignItems: "center",
     height: 150,
@@ -250,7 +306,7 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.22,
     shadowRadius: 2.22,
-    elevation: 3,
+    elevation: 0,
     margin: 2,
   },
   gridBoxLarge: {
@@ -258,7 +314,7 @@ const styles = StyleSheet.create({
     height: 200,
     width: 180,
     borderRadius:10,
-    elevation: 4,
+    elevation: 0,
     margin: 2,
   },
 });

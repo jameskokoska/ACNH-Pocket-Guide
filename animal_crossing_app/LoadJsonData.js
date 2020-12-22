@@ -46,9 +46,10 @@ export function determineDataGlobal(datakeyName){
     return global.dataLoadedReactions;
   else if(datakeyName==="dataLoadedArt")
     return global.dataLoadedArt;
-  else if(datakeyName==="dataLoadedMusic"){
+  else if(datakeyName==="dataLoadedMusic")
     return global.dataLoadedMusic;
-  }
+  else if(datakeyName==="dataLoadedConstruction")
+    return global.dataLoadedConstruction;
 }
 
 export function updateDataGlobal(datakeyName, index, collected, dataSet){
@@ -58,6 +59,8 @@ export function updateDataGlobal(datakeyName, index, collected, dataSet){
     global.dataLoadedArt[dataSet][index].collected=collected;
   else if(datakeyName==="dataLoadedMusic")
     global.dataLoadedMusic[dataSet][index].collected=collected;
+  else if(datakeyName==="dataLoadedConstruction")
+    global.dataLoadedConstruction[dataSet][index].collected=collected;
 }
 
 export function checkOff(item, collected, dataGlobalName){
@@ -76,8 +79,16 @@ export function checkOff(item, collected, dataGlobalName){
 export function capitalize(name) {
   if(name!==undefined){
     return name.replace(/\b(\w)/g, s => s.toUpperCase());
-  }else {
+  } else {
     return "null";
+  }
+}
+
+export function commas(number) {
+  if(number!==undefined){
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  } else {
+    return "null"
   }
 }
 

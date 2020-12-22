@@ -123,9 +123,9 @@ export default HomePage;
 const styles = StyleSheet.create({
   dayHeader:{
     fontSize: 20,
-    marginTop: 18,
+    marginTop: 15,
     marginLeft: 20,
-    marginBottom: 8,
+    marginBottom: 4,
   },
   homeScreenList: {
     alignItems: 'center',

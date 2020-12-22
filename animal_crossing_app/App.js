@@ -7,6 +7,7 @@ import FAB from './components/FAB';
 import TabsPage from './pages/TabsPage';
 import SongsPage from './pages/SongsPage';
 import EmoticonsPage from './pages/EmoticonsPage';
+import ConstructionPage from './pages/ConstructionPage';
 import HomePage from './pages/HomePage';
 import SettingsPage from './pages/SettingsPage';
 import FadeInOut from './components/FadeInOut';
@@ -74,6 +75,8 @@ class App extends Component {
     global.dataLoadedReactions = await getStorageData([require("./assets/data/reactions.json")],[["emojiCheckList","Name"]],"false");
     global.dataLoadedArt = await getStorageData([require("./assets/data/art.json"),require("./assets/data/fencing.json")],[["artCheckList","Name","Genuine"],["fenceCheckList","Name"],["fenceCheckList","Name"]],"false");
     global.dataLoadedMusic = await getStorageData([require("./assets/data/music.json")],[["emojiCheckList","Name"]],"false");
+    global.dataLoadedConstruction = await getStorageData([require("./assets/data/construction.json"),require("./assets/data/fencing.json")],[["constructionCheckList","Name"],["fenceCheckList","Name"]],"false");
+
     //Load Settings
     global.settingsCurrent = settings;
     for(var i = 0; i<settings.length; i++){
@@ -139,6 +142,8 @@ class App extends Component {
       currentPageView = <SongsPage/>
     } else if (this.state.currentPage===5){
       currentPageView = <EmoticonsPage/>
+    } else if (this.state.currentPage===8){
+      currentPageView = <ConstructionPage/>
     } else if (this.state.currentPage===8){
       currentPageView = <View><ExportFile/><LoadFile/></View>
     } else if (this.state.currentPage===7){

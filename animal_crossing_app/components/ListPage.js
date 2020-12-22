@@ -108,7 +108,7 @@ export default (props) =>{
   var numColumns=3;
   if(props.gridType==="smallGrid"){
     numColumns=3;
-  } else if (props.gridType==="largeGrid"){
+  } else if (props.gridType==="largeGrid" || props.gridType==="largeGridSmaller"){
     numColumns=2;
   } else if (props.gridType==="row"||props.gridType===undefined){
     numColumns=1;

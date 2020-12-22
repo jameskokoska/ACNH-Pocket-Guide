@@ -45,7 +45,7 @@ const colors = {
     seaAppBar : ["#A2D0F7","#536991"],
     seaAccent : ["#E3F2FD","#434C53"],
     musicWaves : ["#404662","#a9afdd"],
-    constructionAppBar : ["#ffa726","#8F6200"],
+    constructionAppBar : ["#ffc46e","#8F6200"],
     skyColor : ["#aad5f0","#1a1a1a"],
     grassColor : ["#b6d996","#4c6337"],
     eventsColor : ["#ffe366","#333333"],
