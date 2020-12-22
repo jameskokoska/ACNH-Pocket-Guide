@@ -38,11 +38,11 @@ class ListItem extends Component{
       return (
         <View style={styles.gridWrapper}>
           <TouchableNativeFeedback onLongPress={() => {  
-            checkOff(this.props.item.checkListKey, this.state.collected, this.props.item.index, this.props.dataGlobalName); 
+            checkOff(this.props.item, this.state.collected, this.props.dataGlobalName); 
             this.setCollected(this.state.collected==="true" ? "false":"true");
           }}
             background={TouchableNativeFeedback.Ripple(this.props.accentColor, false)}
-            onPress={this.props.openBottomSheet}
+            onPress={()=>{this.props.openBottomSheet(this.setCollected)}}
           >
             <View style={[styles.gridBox, {backgroundColor:this.props.boxColor}]}>
               <Check style={{position:'absolute', right: -9, top: -9, zIndex:10}} play={this.state.collected==="true"} width={53} height={53}/>
@@ -63,11 +63,11 @@ class ListItem extends Component{
       return( 
         <View style={styles.gridWrapper}>
           <TouchableNativeFeedback onLongPress={() => {  
-            checkOff(this.props.item.checkListKey, this.state.collected, this.props.item.index, this.props.dataGlobalName); 
+            checkOff(this.props.item, this.state.collected, this.props.dataGlobalName); 
             this.setCollected(this.state.collected==="true" ? "false":"true");
           }}
           background={TouchableNativeFeedback.Ripple(this.props.accentColor, false)}
-          onPress={this.props.openBottomSheet}
+          onPress={()=>{this.props.openBottomSheet(this.setCollected)}}
           >
             <View style={[styles.gridBoxLarge, {backgroundColor:this.props.boxColor}]}>
               <Check style={{position:'absolute', right: -8, top: -10, zIndex:10}} play={this.state.collected==="true"} width={53} height={53}/>
@@ -88,8 +88,7 @@ class ListItem extends Component{
       return( 
         <View>
           <TouchableNativeFeedback onLongPress={() => {  
-            console.log(this.props.item)
-            checkOff(this.props.item.checkListKey, this.state.collected, this.props.item.index, this.props.dataGlobalName); 
+            checkOff(this.props.item, this.state.collected, this.props.dataGlobalName); 
             this.setCollected(this.state.collected==="true" ? "false":"true");
           }}
           background={TouchableNativeFeedback.Ripple(this.props.accentColor, false)}
@@ -118,7 +117,7 @@ class ListItem extends Component{
               <TouchableOpacity style={{position:"absolute", right: -5}} 
                 activeOpacity={0.6}
                 onPress={() => {  
-                checkOff(this.props.item.checkListKey, this.state.collected, this.props.item.index, this.props.dataGlobalName); 
+                checkOff(this.props.item, this.state.collected, this.props.dataGlobalName); 
                 this.setCollected(this.state.collected==="true" ? "false":"true");
               }}>
                 <Check fadeOut={false} play={this.state.collected==="true"} width={90} height={90}/>

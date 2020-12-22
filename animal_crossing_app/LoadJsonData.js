@@ -16,9 +16,9 @@ export async function getStorageData(data, checkListKey, defaultValue){
   var checkListKeyString = "";
   var dataLoadingTotal = [];
   //Loop through all datasets
-  var totalIndex = -1;
   for(var dataSet = 0; dataSet <data.length; dataSet++){
     var dataLoading = data[dataSet];
+    var totalIndex = -1;
     //Loop through that specific dataset
     for(var i = 0; i < dataLoading.length; i++){
       totalIndex++;
@@ -33,12 +33,10 @@ export async function getStorageData(data, checkListKey, defaultValue){
         await AsyncStorage.setItem(checkListKeyString, defaultValue);
         value = defaultValue;
       }
-      dataLoading[i].dataSet=dataSet;
       dataLoading[i].collected=value;
       dataLoading[i].checkListKey=checkListKeyString;
-      dataLoading[i].index=totalIndex;
     }
-    dataLoadingTotal = dataLoadingTotal.concat(dataLoading);
+    dataLoadingTotal.push(dataLoading);
   }
   return dataLoadingTotal;
 }
@@ -53,30 +51,34 @@ export function determineDataGlobal(datakeyName){
   }
 }
 
-export function updateDataGlobal(datakeyName, index, collected){
+export function updateDataGlobal(datakeyName, index, collected, dataSet){
   if(datakeyName==="dataLoadedReactions")
-    global.dataLoadedReactions[index].collected=collected;
+    global.dataLoadedReactions[dataSet][index].collected=collected;
   else if(datakeyName==="dataLoadedArt")
-    global.dataLoadedArt[index].collected=collected;
+    global.dataLoadedArt[dataSet][index].collected=collected;
   else if(datakeyName==="dataLoadedMusic")
-    global.dataLoadedMusic[index].collected=collected;
+    global.dataLoadedMusic[dataSet][index].collected=collected;
 }
 
-export function checkOff(checkListKeyString, collected, index, dataGlobalName){
+export function checkOff(item, collected, dataGlobalName){
   if(collected==="false"){
     Vibration.vibrate([0,10,220,20]);
   } else {
     Vibration.vibrate(10);
   }
-  AsyncStorage.setItem(checkListKeyString, collected==="false" ? "true":"false");
-  updateDataGlobal(dataGlobalName, index, collected==="false" ? "true":"false")
-  console.log(checkListKeyString);
-  console.log(determineDataGlobal(dataGlobalName)[index])
-  console.log(collected);
+  AsyncStorage.setItem(item.checkListKey, collected==="false" ? "true":"false");
+  updateDataGlobal(dataGlobalName, item.index, collected==="false" ? "true":"false", item.dataSet)
+  // console.log(item.checkListKey);
+  // console.log(determineDataGlobal(dataGlobalName)[item.dataSet][item.index])
+  // console.log(collected);
 }
 
 export function capitalize(name) {
-  return name.replace(/\b(\w)/g, s => s.toUpperCase());
+  if(name!==undefined){
+    return name.replace(/\b(\w)/g, s => s.toUpperCase());
+  }else {
+    return "null";
+  }
 }
 
 export const settings = [

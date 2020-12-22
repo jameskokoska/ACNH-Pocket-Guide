@@ -63,7 +63,7 @@ export class RightCornerCheck extends Component {
     return <TouchableOpacity style={[styles.checkMark]} 
               activeOpacity={0.6}
               onPress={() => {  
-                checkOff(this.props.item.checkListKey, this.state.collected, this.props.item.index, this.props.dataGlobalName);
+                checkOff(this.props.item, this.state.collected, this.props.dataGlobalName);
                 this.setCollected(this.state.collected==="true" ? "false":"true");
             }}>
       <Check fadeOut={false} play={this.state.collected==="true"} width={135} height={135}/>

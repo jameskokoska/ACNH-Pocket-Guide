@@ -25,6 +25,7 @@ export default (props) =>{
       key={item.checkListKeyString}
       dataGlobalName={props.dataGlobalName}
       openBottomSheet={(updateCheckChild)=>{
+        console.log(updateCheckChild)
         sheetRef.current.snapTo(0); 
         //pass in the check mark update function of that current element
         bottomSheetRenderRef.current.update(item, updateCheckChild)}}
@@ -71,23 +72,28 @@ export default (props) =>{
   var dataUpdated = [];
   var previousVariation = "";
   var item;
-  var dataLoaded = determineDataGlobal(props.dataGlobalName);
-  for(var i = 0; i < dataLoaded.length; i++){
-    item = dataLoaded[i];
-    //Loop through the specific search criteria specified for this dataset
-    for(var x = 0; x < props.searchKey[item.dataSet].length; x++){
-      if(search==="Search" || search==="" || item.[props.searchKey[item.dataSet][x]].toLowerCase().includes(search.toLowerCase())){
-        //Search result found...
-        if(props.showVariations===false){
-          if(item.[props.textProperty[item.dataSet]]===previousVariation){
-            previousVariation = item.[props.textProperty[item.dataSet]];
+  var dataLoaded2D = determineDataGlobal(props.dataGlobalName);
+  for(var j = 0; j < dataLoaded2D.length; j++){
+    var dataLoaded = dataLoaded2D[j];
+    for(var i = 0; i < dataLoaded.length; i++){
+      item = dataLoaded[i];
+      //Loop through the specific search criteria specified for this dataset
+      for(var x = 0; x < props.searchKey[j].length; x++){
+        if(search==="Search" || search==="" || item.[props.searchKey[j][x]].toLowerCase().includes(search.toLowerCase())){
+          //Search result found...
+          if(props.showVariations===false){
+            if(item.[props.textProperty[j]]===previousVariation){
+              previousVariation = item.[props.textProperty[j]];
+            } else {
+              item.dataSet = j;
+              item.index = i;
+              dataUpdated = [...dataUpdated, item];
+              previousVariation = item.[props.textProperty[j]];
+            }
           } else {
             dataUpdated = [...dataUpdated, item];
-            previousVariation = item.[props.textProperty[item.dataSet]];
+            break;
           }
-        } else {
-          dataUpdated = [...dataUpdated, item];
-          break;
         }
       }
     }
