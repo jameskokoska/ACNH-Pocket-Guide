@@ -39,6 +39,9 @@ const FirstRoute = () => (
     labelColor={colors.textBlack[colors.mode]}
     accentColor={colors.fishAccent[colors.mode]}
     specialLabelColor={colors.fishText[colors.mode]}
+    popUpCornerImageProperty={["Image"]}
+    popUpCornerImageLabelProperty={["Name"]}
+    popUpPhraseProperty={["Name"]}
   />
 )
 

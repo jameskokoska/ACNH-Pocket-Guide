@@ -7,7 +7,8 @@ import {determineDataGlobal} from "../LoadJsonData"
 import BottomSheet from 'reanimated-bottom-sheet';
 import {Dimensions } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
-import {CircularImage, RightCornerCheck, LeftCornerImage, Title} from './BottomSheetComponents';
+import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from './BottomSheetComponents';
+import colors from "../Colors.js"
 
 const {diffClamp} = Animated;
 const headerHeight = 130 * 2;
@@ -33,6 +34,9 @@ export default (props) =>{
       labelColor={props.labelColor}
       accentColor={props.accentColor}
       specialLabelColor={props.specialLabelColor}
+      popUpCornerImageProperty={props.popUpCornerImageProperty}
+      popUpCornerImageLabelProperty={props.popUpCornerImageLabelProperty}
+      popUpPhraseProperty={props.popUpPhraseProperty}
     />
   )
   const ref = useRef(null);
@@ -125,6 +129,9 @@ export default (props) =>{
       labelColor={props.labelColor}
       accentColor={props.accentColor}
       specialLabelColor={props.specialLabelColor}
+      popUpCornerImageProperty={props.popUpCornerImageProperty}
+      popUpCornerImageLabelProperty={props.popUpCornerImageLabelProperty}
+      popUpPhraseProperty={props.popUpPhraseProperty}
     />;
   }
 
@@ -145,7 +152,7 @@ export default (props) =>{
       <Animated.FlatList
         initialNumToRender={9}
         scrollEventThrottle={16}
-        contentContainerStyle={{paddingTop: headerHeight*1.19, paddingLeft: 15, paddingRight: 15}}
+        contentContainerStyle={{paddingTop: headerHeight*1.18, paddingLeft: 15, paddingRight: 15}}
         onScroll={handleScroll}
         ref={ref}
         data={dataUpdated}
@@ -185,6 +192,29 @@ class BottomSheetRender extends Component{
     this.updateCheckChildFunction=updateCheckChildFunction;
   }
   render(){
+    var offSetTop = 200;
+    var leftCornerImage;
+    if(this.props.popUpCornerImageProperty!==undefined && this.props.popUpCornerImageLabelProperty!==undefined){
+      leftCornerImage = <LeftCornerImage
+        item={this.state.item}
+        imageProperty={this.props.imageProperty}
+        accentColor={this.props.accentColor}
+        popUpCornerImageProperty={this.props.popUpCornerImageProperty}
+        popUpCornerImageLabelProperty={this.props.popUpCornerImageLabelProperty}
+      />
+    }else{
+      leftCornerImage = <View/>
+    }
+    var phrase;
+    if(this.props.popUpPhraseProperty!==undefined){
+      phrase = <Phrase
+        item={this.state.item}
+        popUpPhraseProperty={this.props.popUpPhraseProperty}
+      />
+    } else {
+      phrase = <View/>
+    }
+      
     return <View>
       <LinearGradient
         colors={['transparent','rgba(0,0,0,0.3)','rgba(0,0,0,0.3)' ]}
@@ -197,15 +227,15 @@ class BottomSheetRender extends Component{
       />
       <View
         style={{
-          height: 500,
+          height: offSetTop,
         }}
       />
       <View
         style={{
           borderRadius: 50,
-          backgroundColor: 'white',
+          backgroundColor: colors.white[colors.mode],
           padding: 16,
-          height: Dimensions.get('window').height-500,
+          height: Dimensions.get('window').height-offSetTop,
         }}
       >
           <CircularImage 
@@ -213,23 +243,39 @@ class BottomSheetRender extends Component{
             imageProperty={this.props.imageProperty}
             accentColor={this.props.accentColor}
           />
-          <LeftCornerImage
-            item={this.state.item}
-            imageProperty={this.props.imageProperty}
-            accentColor={this.props.accentColor}
-          />
+          {leftCornerImage}
           <RightCornerCheck
             item={this.state.item}
             collected={this.state.item.collected}
             dataGlobalName={this.props.dataGlobalName}
             updateCheckChildFunction={this.updateCheckChildFunction}
           />
-          <View style={{height: 55}}/>
+          <View style={{height: 50}}/>
           <Title
             item={this.state.item}
             textProperty={this.props.textProperty}
           />
-        <Text>{this.state.item["Name"]}</Text>
+          {phrase}
+          <InfoLine
+            image={require("../assets/icons/house.png")} 
+            item={this.state.item}
+            textProperty={this.props.textProperty}
+          />
+          <InfoLineDouble
+            image={require("../assets/icons/house.png")} 
+            item={this.state.item}
+            textProperty={this.props.textProperty}
+          />
+          <InfoLineTriple
+            image={require("../assets/icons/house.png")} 
+            item={this.state.item}
+            textProperty={this.props.textProperty}
+          />
+          <InfoLineBeside
+            image={require("../assets/icons/house.png")} 
+            item={this.state.item}
+            textProperty={this.props.textProperty}
+          />
       </View>
     </View>
   }

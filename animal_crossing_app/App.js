@@ -21,12 +21,9 @@ import Onboard from './pages/Onboard';
 import colors from './Colors.js';
 import ActiveTime from './components/ActiveTime'
 
-const {width} = Dimensions.get('window').width;
-const {height} = Dimensions.get('window').height;
-
 function NavigationView(props) {
   return (
-    <View style={{marginRight: "30%", height:"100%", backgroundColor:colors.textWhite[colors.mode]}}>
+    <View style={{marginRight: "28%", height:"100%", backgroundColor:colors.textWhite[colors.mode]}}>
       <ScrollView>
         <View style={{backgroundColor: colors.topSidebar[colors.mode], marginBottom: 10}}>
           <TextFont bold={true} style={{marginLeft: 15, marginTop: 130, marginBottom: 10, fontSize: 34, color: colors.textBlack[colors.mode]}}>ACNH Pocket</TextFont>
@@ -155,7 +152,7 @@ class App extends Component {
       var splashScreens = [require('./assets/airplane.json'),require('./assets/balloon.json')];
       var chosenSplashScreen = splashScreens[Math.floor(this.random * splashScreens.length)];
       return <>
-      <View style={{position: "absolute", backgroundColor: "#34454f", width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
+      <View style={{position: "absolute", backgroundColor: colors.background[colors.mode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
       <FadeInOut fadeIn={this.state.fadeInTitle}>
         <LottieView 
           autoPlay
@@ -178,11 +175,11 @@ class App extends Component {
     } else {
       return (
         <>
-        <View style={{position: "absolute", backgroundColor: "#34454f", width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
+        <View style={{position: "absolute", backgroundColor: colors.background[colors.mode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
         <DrawerLayoutAndroid style={{elevation: 0,}} 
           drawerBackgroundColor="rgba(0,0,0,0.01)" 
           ref={_drawer => (this.drawer = _drawer)} 
-          drawerWidth={width} drawerPosition={"left"} 
+          drawerWidth={Dimensions.get('window').width} drawerPosition={"left"} 
           renderNavigationView={() => <NavigationView setPage={this.setPage} currentPage={this.state.currentPage}/>}>
             {currentPageView}
           {fab}

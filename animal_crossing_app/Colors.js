@@ -3,6 +3,7 @@ import { Appearance } from 'react-native-appearance';
 const colors = {
     mode: Appearance.getColorScheme()==="light" ? 0 : 1,
     modeReverse: Appearance.getColorScheme()==="light" ? 1 : 0,
+    background: ["#ebebeb","#1a1a1a"], //"#34454f" original
     FAB: ["#49599a", "#455a64"],
     searchbarBG : ["#DFDFDF", "#A3A3A3"],
     searchbarIcon : ["#000000","#FFFFFF"],
@@ -10,8 +11,9 @@ const colors = {
     shadowPopUp : ["#000000", "#000000"],
     lightDarkAccent : ["#F5F5F5","#1A1A1A"],
     lightDarkAccentHeavy : ["#bcbfc2","#494c4d"],
-    textBlack : ["#373737","#FFFFFF"],
+    textBlack : ["#373737","#f2f2f2"],
     textWhite : ["#FFFFFF","#373737"],
+    textLight : ["#a8a8a8","#8c8c8c"],
     white : ["#FFFFFF","#2B2B2B"],
     checkRed : ["#F8DFE3","#805D62"],
     checkGreen : ["#A0DDA1","#557E55"],
