@@ -13,33 +13,78 @@ import TextFont from './TextFont'
 // />
 
 
-class EventContainer extends Component {
-  componentDidMount() {
-    
+function getPhoto(name){
+  switch(name){
+    case "leaf.png":
+      return require("../assets/icons/leaf.png");
+    case "fish.png":
+      return require("../assets/icons/fish.png");
+    case "bugs.png":
+      return require("../assets/icons/bugs.png");
+    case "popper.png":
+      return require("../assets/icons/popper.png");
+    case "heart.png":
+      return require("../assets/icons/heart.png");
+    case "snow.png":
+      return require("../assets/icons/snow.png");
+    case "fireworks.png":
+      return require("../assets/icons/fireworks.png");
+    case "fullmoon.png":
+      return require("../assets/icons/fullmoon.png");
+    case "pumpkin.png":
+      return require("../assets/icons/pumpkin.png");
+    case "corn.png":
+      return require("../assets/icons/corn.png");
+    case "present.png":
+      return require("../assets/icons/present.png");
+    case "popper.png":
+      return require("../assets/icons/popper.png");
+    case "bunny.png":
+      return require("../assets/icons/bunny.png");
+    case "blossom.png":
+      return require("../assets/icons/blossom.png");
+    case "music.png":
+      return require("../assets/icons/music.png");
+    case "turnip.png":
+      return require("../assets/icons/turnip.png");
+    default:
+      break;
   }
+}
+
+export class EventContainer extends Component {
   render(){
-    getEventsDay(1,16,2021,6);
+    var image = <View/>
+    if(this.props.image.startsWith("http")){
+      image = <Image style={[styles.eventImage]} source={{uri:this.props.image}}/>
+    } else {
+      image = <Image style={styles.eventImage} source={getPhoto(this.props.image)}/>
+    }
     return(
         <View style={[styles.eventContainer,{backgroundColor:this.props.backgroundColor}]}>
-          <Image style={styles.eventImage} source={this.props.image}/>
+          {image}
           <View style={styles.textContainer}>
             <TextFont bold={true} style={[styles.textContainerTop,{color:this.props.textColor}]}>{this.props.text}</TextFont>
             <TextFont style={[styles.textContainerBottom,{color:this.props.textColor}]}>{this.props.textBottom}</TextFont>
           </View>
           <View style={{width: 30, alignItems:"center", marginLeft: -8}}>
             <Image style={styles.eventCalendar} source={require("../assets/icons/calendarIcon.png")}/>
-            <TextFont bold={true} style={{position:"absolute", top:1, textAlign:"center",color:"brown", fontSize: 12}}>{this.props.month}</TextFont>
-            <TextFont bold={true} style={{position:"absolute", top:17, textAlign:"center",color:"brown", fontSize: 25}}>{this.props.day}</TextFont>
+            <TextFont bold={true} style={{position:"absolute", top:1, textAlign:"center",color:"black", fontSize: 12, opacity: 0.8}}>{this.props.month}</TextFont>
+            <TextFont bold={true} style={{position:"absolute", top:17, textAlign:"center",color:"black", fontSize: 25, opacity: 0.8}}>{this.props.day}</TextFont>
           </View>
         </View>
     )
   }
 }
-export default EventContainer;
 
-function getEventsDay(currentMonth, currentDay, currentYear, dayOfWeek){
+export function getEventsDay(currentDate){
+  var currentMonth = currentDate.getMonth();
+  var currentDay = currentDate.getDate();
+  var currentYear = currentDate.getYear();
+  var dayOfWeek = currentDate.getDay()
   var totalEvents = [];
   var northernHemisphere = global.settingsCurrent[0]["currentValue"]==="true";
+  var eventDatum;
   if(dayOfWeek===6){
     eventDatum = {
         "Name": "Daisy Mae",
@@ -105,8 +150,6 @@ function getEventsDay(currentMonth, currentDay, currentYear, dayOfWeek){
       totalEvents.push(eventDatum);
     }
   }
-  console.log(totalEvents)
-  console.log(getSpecialOccurrenceDate(2021, 1, require("../assets/data/events.json")))
   return totalEvents;
 }
 
