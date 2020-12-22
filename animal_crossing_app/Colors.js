@@ -51,7 +51,8 @@ const colors = {
     eventsColor : ["#ffe366","#333333"],
     storeHoursColor : ["#8fc6f7","#333333"],
     activeCreaturesColor : ["#ff8d7e","#333333"],
-    sectionBackground1 : ["#f5f5f5", "#262626"],
+    sectionBackground1 : ["#f5f5f5", "#1A1A1A"],
+    eventBackground : ["#FFFFFF", "#262626"],
     sectionBackground2 : ["#fafafa", "#171717"],
     topSidebar : ["#e7f3e9","#6d746e"],
     selectHome : ["#d6d4c9", "#8f8e80"],
@@ -67,6 +68,9 @@ const colors = {
     selectAbout : ["#d5ddd6","#7d8986"],
     okButton : ["#2196f3","#006db3"],
     cancelButton : ["#d32f2f","#ab000d"],
+    closedStore : ["#ffd9d9","#654848"],
+    openStore : ["#81c784","#519657"],
+    closingSoonStore : ["#e6ee9c","#cabf45"],
     template : ["#","#"],
 }
 module.exports = colors;

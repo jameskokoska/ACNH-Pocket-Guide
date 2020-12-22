@@ -1,19 +1,25 @@
 import React, {Component} from 'react';
 import {Image, Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text, TouchableNativeFeedback} from 'react-native';
 import TextFont from './TextFont'
-
+import colors from "../Colors"
 
 class StoreHoursContainer extends Component {
-  componentDidMount() {
-    
-  }
   render(){
+    var backgroundColor;
+    var currentHour = new Date().getHours();
+    if(currentHour+1===this.props.closeHour){
+      backgroundColor = colors.closingSoonStore[colors.mode]
+    } else if(currentHour >= this.props.openHour && currentHour < this.props.closeHour){
+      backgroundColor = colors.openStore[colors.mode];
+    } else {
+      backgroundColor = colors.closedStore[colors.mode];
+    }
     return(
-        <View style={[styles.storeContainer,{backgroundColor:this.props.backgroundColor}]}>
+        <View style={[styles.storeContainer,{backgroundColor:backgroundColor}]}>
           <Image style={styles.storeImage} source={this.props.image}/>
           <View style={styles.textContainer}>
-            <TextFont bold={true} style={[styles.textContainerTop,{color:this.props.textColor}]}>{this.props.text}</TextFont>
-            <TextFont style={[styles.textContainerBottom,{color:this.props.textColor}]}>{this.props.textBottom}</TextFont>
+            <TextFont bold={true} style={[styles.textContainerTop,{color:colors.textBlack[colors.mode]}]}>{this.props.text}</TextFont>
+            <TextFont style={[styles.textContainerBottom,{color:colors.textBlack[colors.mode]}]}>{this.props.textBottom}</TextFont>
           </View>
         </View>
     )

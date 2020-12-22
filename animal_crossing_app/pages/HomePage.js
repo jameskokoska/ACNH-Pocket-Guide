@@ -45,8 +45,8 @@ class HomePage extends Component {
           {todayEvents.map( (event, index)=>
             <EventContainer 
               key={event["Name"]} 
-              backgroundColor={colors.sectionBackground1[colors.mode]}
-              textColor="white"
+              backgroundColor={colors.eventBackground[colors.mode]}
+              textColor={colors.textBlack[colors.mode]}
               image={event["Image"]}
               text={event["Name"]}
               textBottom={capitalize(event["Time"])}
@@ -58,8 +58,8 @@ class HomePage extends Component {
           {tomorrowEvents.map( (event, index)=>
             <EventContainer 
               key={event["Name"]} 
-              backgroundColor={colors.sectionBackground1[colors.mode]}
-              textColor="white"
+              backgroundColor={colors.eventBackground[colors.mode]}
+              textColor={colors.textBlack[colors.mode]}
               image={event["Image"]}
               text={event["Name"]}
               textBottom={capitalize(event["Time"])}
@@ -71,8 +71,8 @@ class HomePage extends Component {
           {thisWeekEvents.map( (event, index)=>
             <EventContainer 
               key={event["Name"]} 
-              backgroundColor={colors.sectionBackground1[colors.mode]}
-              textColor="white"
+              backgroundColor={colors.eventBackground[colors.mode]}
+              textColor={colors.textBlack[colors.mode]}
               image={event["Image"]}
               text={event["Name"]}
               textBottom={capitalize(event["Time"])}
@@ -82,16 +82,16 @@ class HomePage extends Component {
           )}
           <View style={{height: 30}}/>
         </HomeContentArea>
-        <HomeContentArea backgroundColor={colors.sectionBackground2[colors.mode]} accentColor={colors.storeHoursColor[colors.mode]} title="SectionYeet" titleColor={colors.storeHoursColor[colors.modeReverse]}>
-          <Clock/>
-          <Text>Hello</Text>
+        <HomeContentArea backgroundColor={colors.sectionBackground2[colors.mode]} accentColor={colors.storeHoursColor[colors.mode]} title="Store Hours" titleColor={colors.storeHoursColor[colors.modeReverse]}>
+          <View style={{height: 15}}/>
+          <StoreHoursContainer image={require("../assets/icons/nook.png")} text="Nook's Cranny" textBottom="8 AM - 10 PM" openHour={8} closeHour={22}/>
+          <StoreHoursContainer image={require("../assets/icons/able.png")} text="Able Sisters" textBottom="9 AM - 9 PM" openHour={9} closeHour={21}/>
+          <View style={{height: 15}}/>
         </HomeContentArea>
-        <HomeContentArea backgroundColor={colors.sectionBackground1[colors.mode]} accentColor={colors.activeCreaturesColor[colors.mode]} title="Collected" titleColor={colors.activeCreaturesColor[colors.modeReverse]}>
-          <Text>Hello</Text>
-          <StoreHoursContainer backgroundColor="green" textColor="white" image={require("../assets/icons/able.png")} text="Able Sisters" textBottom="8 - 12 PM"/>
-          <StoreHoursContainer backgroundColor="green" textColor="white" image={require("../assets/icons/able.png")} text="Able Sisters" textBottom="8 - 12 PM"/>
+        <HomeContentArea backgroundColor={colors.sectionBackground1[colors.mode]} accentColor={colors.activeCreaturesColor[colors.mode]} title="Active Creatures" titleColor={colors.activeCreaturesColor[colors.modeReverse]}>
+          <View style={{height: 30}}/>
+          <View style={{height: 30}}/>
         </HomeContentArea>
-        <View style={{height:1000}}/>
       </ScrollView>
       <View style={{position:"absolute", width: "100%", height:"100%", zIndex:-5}}>
         <LottieView 
