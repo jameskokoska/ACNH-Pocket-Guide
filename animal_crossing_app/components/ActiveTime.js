@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {AppRegistry, StyleSheet, ScrollView , StatusBar, Text, View} from "react-native";
 import colors from '../Colors.js';
-import PieChart from 'react-native-pie-chart';
+// import PieChart from 'react-native-pie-chart';
 
 class ActiveTime extends Component {
   constructor(props) {

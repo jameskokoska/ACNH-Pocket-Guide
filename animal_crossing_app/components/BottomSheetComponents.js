@@ -63,7 +63,7 @@ export class RightCornerCheck extends Component {
                 checkOff(this.props.item, this.state.collected, this.props.dataGlobalName);
                 this.setCollected(this.state.collected==="true" ? "false":"true");
             }}>
-      <Check fadeOut={false} play={this.state.collected==="true"} width={135} height={135}/>
+      <Check checkType={this.props.checkType} fadeOut={false} play={this.state.collected==="true"} width={135} height={135}/>
     </TouchableOpacity>
   }
 }
@@ -102,16 +102,26 @@ export class InfoLine extends Component {
     if(this.props.ending!==undefined){
       ending=this.props.ending;
     }
-    return <View style={[styles.infoLineBox]}>
+    var text=capitalizeFirst(commas(this.props.item[this.props.textProperty[this.props.item.dataSet]]));
+    if(this.props.textProperty2 !== undefined && this.props.item[this.props.textProperty[this.props.item.dataSet]] !== this.props.item[this.props.textProperty2[this.props.item.dataSet]]){
+      text+= ", " + capitalizeFirst(commas(this.props.item[this.props.textProperty2[this.props.item.dataSet]]))
+    }
+    var marginLeft = 40;
+    var marginRight = 40;
+    if(this.props.beside===true){
+      marginLeft=0;
+      marginRight=0;
+    }
+    return <View style={[styles.infoLineBox,{marginLeft: marginLeft, marginRight: marginRight,}]}>
             <Image style={styles.infoLineImage} source={this.props.image}/>
-            <TextFont bold={true} style={[styles.infoLineTitle,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(commas(this.props.item[this.props.textProperty[this.props.item.dataSet]])) + ending}</TextFont>
+            <TextFont bold={true} style={[styles.infoLineTitle,{color:colors.textBlack[colors.mode]}]}>{text + ending}</TextFont>
         </View>
   }
 }
 
 export class InfoLineDouble extends Component {
   render() {
-    return <View style={[styles.infoLineBox]}>
+    return <View style={[styles.infoLineBox,{marginLeft: 40, marginRight: 40,}]}>
             <Image style={styles.infoLineImage} source={this.props.image}/>
             <View>
               <TextFont bold={true} style={[styles.infoLineTitleDouble,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
@@ -123,7 +133,7 @@ export class InfoLineDouble extends Component {
 
 export class InfoLineTriple extends Component {
   render() {
-    return <View style={[styles.infoLineBox]}>
+    return <View style={[styles.infoLineBox,{marginLeft: 40, marginRight: 40,}]}>
             <Image style={styles.infoLineImage} source={this.props.image}/>
             <View>
               <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
@@ -142,7 +152,9 @@ export class InfoLineBeside extends Component {
                 image={this.props.image1} 
                 item={this.props.item1}
                 textProperty={this.props.textProperty1}
+                textProperty2={this.props.textProperty12}
                 ending={this.props.ending1}
+                beside={true}
               />
             </View>
             <View style={{paddingLeft:10}}>
@@ -150,7 +162,9 @@ export class InfoLineBeside extends Component {
                 image={this.props.image2} 
                 item={this.props.item2}
                 textProperty={this.props.textProperty2}
+                textProperty2={this.props.textProperty22}
                 ending={this.props.ending2}
+                beside={true}
               />
             </View>
         </View>

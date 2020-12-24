@@ -64,7 +64,7 @@ class ListItem extends Component{
             }}
           >
             <View style={[styles.gridBox, {backgroundColor:this.props.boxColor}]}>
-              <Check style={{position:'absolute', right: -9, top: -9, zIndex:10}} play={this.state.collected==="true"} width={53} height={53} disablePopup={disablePopup}/>
+              <Check checkType={this.props.checkType} style={{position:'absolute', right: -9, top: -9, zIndex:10}} play={this.state.collected==="true"} width={53} height={53} disablePopup={disablePopup}/>
               <CachedImage
                 style={styles.gridBoxImage}
                 source={{
@@ -97,7 +97,7 @@ class ListItem extends Component{
             }}
           >
             <View style={[styles.gridBoxLarge, {backgroundColor:this.props.boxColor}]}>
-              <Check style={{position:'absolute', right: -8, top: -10, zIndex:10}} play={this.state.collected==="true"} width={53} height={53} disablePopup={disablePopup}/>
+              <Check checkType={this.props.checkType} style={{position:'absolute', right: -8, top: -10, zIndex:10}} play={this.state.collected==="true"} width={53} height={53} disablePopup={disablePopup}/>
               <CachedImage
                 style={styles.gridBoxImageLarge}
                 source={{
@@ -135,7 +135,7 @@ class ListItem extends Component{
             }}
           >
             <View style={[styles.gridBoxLarge, {backgroundColor:this.props.boxColor}]}>
-              <Check style={{position:'absolute', right: -8, top: -10, zIndex:10}} play={this.state.collected==="true"} width={53} height={53} disablePopup={disablePopup}/>
+              <Check checkType={this.props.checkType} style={{position:'absolute', right: -8, top: -10, zIndex:10}} play={this.state.collected==="true"} width={53} height={53} disablePopup={disablePopup}/>
               <CachedImage
                 style={styles.gridBoxImageLargeSmaller}
                 source={{
@@ -198,7 +198,7 @@ class ListItem extends Component{
                 checkOff(this.props.item, this.state.collected, this.props.dataGlobalName); 
                 this.setCollected(this.state.collected==="true" ? "false":"true");
               }}>
-                <Check fadeOut={false} play={this.state.collected==="true"} width={90} height={90} disablePopup={disablePopup}/>
+                <Check checkType={this.props.checkType} fadeOut={false} play={this.state.collected==="true"} width={90} height={90} disablePopup={disablePopup}/>
               </TouchableOpacity>
             </View>
           </TouchableNativeFeedback>

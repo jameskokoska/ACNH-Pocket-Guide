@@ -8,7 +8,10 @@ class Check extends Component {
     this.state = {
       progress: new Animated.Value(0),
     };
-    if(props.fadeOut===false){
+    if(props.checkType==="heart") {
+      this.checkMarkAnimationJSON = require('../assets/heartAnimationNoFade.json');
+    }
+    else if(props.fadeOut===false){
       this.checkMarkAnimationJSON = require('../assets/checkAnimationNoFade.json');
     } else {
       this.checkMarkAnimationJSON = require('../assets/checkAnimationFade.json');

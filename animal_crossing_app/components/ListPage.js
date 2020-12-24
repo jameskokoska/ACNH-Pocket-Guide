@@ -14,6 +14,7 @@ import SeaPopup from "../popups/SeaPopup"
 import FossilPopup from "../popups/FossilPopup"
 import BugPopup from "../popups/BugPopup"
 import ArtPopup from "../popups/ArtPopup"
+import VillagerPopup from "../popups/VillagerPopup"
 
 const {diffClamp} = Animated;
 const headerHeight = 130 * 2;
@@ -44,6 +45,7 @@ export default (props) =>{
       popUpCornerImageLabelProperty={props.popUpCornerImageLabelProperty}
       popUpPhraseProperty={props.popUpPhraseProperty}
       popUpContainer={props.popUpContainer}
+      checkType={props.checkType}
     />
   )
   const ref = useRef(null);
@@ -138,6 +140,7 @@ export default (props) =>{
       popUpCornerImageLabelProperty={props.popUpCornerImageLabelProperty}
       popUpPhraseProperty={props.popUpPhraseProperty}
       popUpContainer={props.popUpContainer}
+      checkType={props.checkType}
     />;
   }
 
@@ -235,6 +238,8 @@ class BottomSheetRender extends Component{
         popUpContainer = <BugPopup item={this.state.item}/>
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="ArtPopup"){
         popUpContainer = <ArtPopup item={this.state.item}/>
+      } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="VillagerPopup"){
+        popUpContainer = <VillagerPopup item={this.state.item}/>
       }
     }
     
@@ -277,6 +282,7 @@ class BottomSheetRender extends Component{
             collected={this.state.item.collected}
             dataGlobalName={this.props.dataGlobalName}
             updateCheckChildFunction={this.updateCheckChildFunction}
+            checkType={this.props.checkType}
           />
           <View style={{height: 60}}/>
           {phrase}

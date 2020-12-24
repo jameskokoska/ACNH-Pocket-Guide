@@ -9,6 +9,7 @@ import SongsPage from './pages/SongsPage';
 import EmoticonsPage from './pages/EmoticonsPage';
 import ConstructionPage from './pages/ConstructionPage';
 import MuseumPage from './pages/MuseumPage';
+import VillagersPage from './pages/VillagersPage';
 import HomePage from './pages/HomePage';
 import SettingsPage from './pages/SettingsPage';
 import FadeInOut from './components/FadeInOut';
@@ -60,7 +61,7 @@ class App extends Component {
     this.random = Math.random();
     this.state = {
       loaded: false,
-      currentPage: 2,
+      currentPage: 7,
       open:false,
       fadeInTitle:true,
     }
@@ -82,6 +83,8 @@ class App extends Component {
     global.dataLoadedSea = await getStorageData([require("./assets/data/seacreatures.json")],[["seaCheckList","Name"]],"false");
     global.dataLoadedFossils = await getStorageData([require("./assets/data/fossils.json")],[["fossilCheckList","Name"]],"false");
     global.dataLoadedArt = await getStorageData([require("./assets/data/art.json")],[["artCheckList","Name"]],"false");
+    global.dataLoadedVillagers = await getStorageData([require("./assets/data/villagers.json")],[["villagerCheckList","Name"]],"false");
+
     //Load Settings
     global.settingsCurrent = settings;
     for(var i = 0; i<settings.length; i++){
@@ -154,6 +157,8 @@ class App extends Component {
     } else if (this.state.currentPage===8){
       currentPageView = <View><ExportFile/><LoadFile/></View>
     } else if (this.state.currentPage===7){
+      currentPageView = <VillagersPage/>
+    } else if (this.state.currentPage===9){
       currentPageView = <ActiveTime displayText={"helloo"} displayText2={"yo"}/>
     } else if (this.state.currentPage===10){
       currentPageView = <SettingsPage/>

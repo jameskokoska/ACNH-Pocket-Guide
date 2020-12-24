@@ -60,6 +60,8 @@ export function determineDataGlobal(datakeyName){
     return global.dataLoadedFossils;
   else if(datakeyName==="dataLoadedArt")
     return global.dataLoadedArt;
+  else if(datakeyName==="dataLoadedVillagers")
+    return global.dataLoadedVillagers;
 }
 
 export function updateDataGlobal(datakeyName, index, collected, dataSet){
@@ -76,11 +78,13 @@ export function updateDataGlobal(datakeyName, index, collected, dataSet){
   else if(datakeyName==="dataLoadedBugs")
     global.dataLoadedBugs[dataSet][index].collected=collected;
   else if(datakeyName==="dataLoadedSea")
-      global.dataLoadedSea[dataSet][index].collected=collected;
+    global.dataLoadedSea[dataSet][index].collected=collected;
   else if(datakeyName==="dataLoadedFossils")
-      global.dataLoadedFossils[dataSet][index].collected=collected;
+    global.dataLoadedFossils[dataSet][index].collected=collected;
   else if(datakeyName==="dataLoadedArt")
-      global.dataLoadedArt[dataSet][index].collected=collected;
+    global.dataLoadedArt[dataSet][index].collected=collected;
+  else if(datakeyName==="dataLoadedVillagers")
+    global.dataLoadedVillagers[dataSet][index].collected=collected;
 }
 
 export function checkOff(item, collected, dataGlobalName){
