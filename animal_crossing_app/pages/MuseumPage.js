@@ -39,9 +39,10 @@ const FishRoute = () => (
     labelColor={colors.textBlack[colors.mode]}
     accentColor={colors.fishAccent[colors.mode]}
     specialLabelColor={colors.fishText[colors.mode]}
-    popUpCornerImageProperty={["Icon Image"]}
+    popUpCornerImageProperty={["Where/How"]}
     popUpCornerImageLabelProperty={["Where/How"]}
     popUpPhraseProperty={["Catch phrase"]}
+    popUpContainer={[["FishPopup",400]]} //name of the popup class and height
   />
 )
 
@@ -66,7 +67,7 @@ const BugsRoute = () => (
     labelColor={colors.textBlack[colors.mode]}
     accentColor={colors.bugAccent[colors.mode]}
     specialLabelColor={colors.bugText[colors.mode]}
-    popUpCornerImageProperty={["Icon Image"]}
+    popUpCornerImageProperty={["Where/How"]}
     popUpCornerImageLabelProperty={["Where/How"]}
     popUpPhraseProperty={["Catch phrase"]}
   />
@@ -93,7 +94,7 @@ const SeaRoute = () => (
     labelColor={colors.textBlack[colors.mode]}
     accentColor={colors.fishAccent[colors.mode]}
     specialLabelColor={colors.fishText[colors.mode]}
-    popUpCornerImageProperty={["Icon Image"]}
+    popUpCornerImageProperty={["Where/How"]}
     popUpCornerImageLabelProperty={["Where/How"]}
     popUpPhraseProperty={["Catch phrase"]}
   />
@@ -120,7 +121,6 @@ const FossilsRoute = () => (
     specialLabelColor={colors.fishText[colors.mode]}
     popUpCornerImageProperty={["Icon Image"]}
     popUpCornerImageLabelProperty={["Name"]}
-    popUpPhraseProperty={["Name"]}
   />
 )
 

@@ -14,6 +14,9 @@ class StoreHoursContainer extends Component {
     } else {
       backgroundColor = colors.closedStore[colors.mode];
     }
+    if(this.props.backgroundColor!==undefined){
+      backgroundColor=this.props.backgroundColor;
+    }
     return(
         <View style={[styles.storeContainer,{backgroundColor:backgroundColor}]}>
           <Image style={styles.storeImage} source={this.props.image}/>

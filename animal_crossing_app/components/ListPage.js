@@ -9,6 +9,7 @@ import {Dimensions } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
 import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from './BottomSheetComponents';
 import colors from "../Colors.js"
+import FishPopup from "../popups/FishPopup"
 
 const {diffClamp} = Animated;
 const headerHeight = 130 * 2;
@@ -38,6 +39,7 @@ export default (props) =>{
       popUpCornerImageProperty={props.popUpCornerImageProperty}
       popUpCornerImageLabelProperty={props.popUpCornerImageLabelProperty}
       popUpPhraseProperty={props.popUpPhraseProperty}
+      popUpContainer={props.popUpContainer}
     />
   )
   const ref = useRef(null);
@@ -131,6 +133,7 @@ export default (props) =>{
       popUpCornerImageProperty={props.popUpCornerImageProperty}
       popUpCornerImageLabelProperty={props.popUpCornerImageLabelProperty}
       popUpPhraseProperty={props.popUpPhraseProperty}
+      popUpContainer={props.popUpContainer}
     />;
   }
 
@@ -196,7 +199,6 @@ class BottomSheetRender extends Component{
     if(this.props.popUpCornerImageProperty!==undefined && this.props.popUpCornerImageLabelProperty!==undefined){
       leftCornerImage = <LeftCornerImage
         item={this.state.item}
-        imageProperty={this.props.imageProperty}
         accentColor={this.props.accentColor}
         popUpCornerImageProperty={this.props.popUpCornerImageProperty}
         popUpCornerImageLabelProperty={this.props.popUpCornerImageLabelProperty}
@@ -204,6 +206,7 @@ class BottomSheetRender extends Component{
     }else{
       leftCornerImage = <View/>
     }
+
     var phrase;
     if(this.props.popUpPhraseProperty!==undefined){
       phrase = <Phrase
@@ -214,7 +217,15 @@ class BottomSheetRender extends Component{
     } else {
       phrase = <View/>
     }
-      
+    
+    var popUpContainer = <View/>
+    if(this.props.popUpContainer!==undefined && this.state.item.dataSet!==undefined){
+      if(this.props.popUpContainer[this.state.item.dataSet][0]==="FishPopup"){
+        popUpContainer = <FishPopup item={this.state.item}/>
+      }
+    }
+    
+
     return <View>
       <LinearGradient
         colors={['transparent','rgba(0,0,0,0.3)','rgba(0,0,0,0.3)' ]}
@@ -251,11 +262,12 @@ class BottomSheetRender extends Component{
             updateCheckChildFunction={this.updateCheckChildFunction}
           />
           <View style={{height: 50}}/>
+          {phrase}
           <Title
             item={this.state.item}
             textProperty={this.props.textProperty}
           />
-          {phrase}
+          {popUpContainer}
           <InfoLine
             image={require("../assets/icons/house.png")} 
             item={this.state.item}

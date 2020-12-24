@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Image, Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text, TouchableNativeFeedback} from 'react-native';
 import TextFont from './TextFont'
+import {getPhoto} from './GetPhoto'
 
 // <EventContainer 
 //  backgroundColor="black" 
@@ -11,46 +12,6 @@ import TextFont from './TextFont'
 //  month="Nov" 
 //  day="31"
 // />
-
-
-function getPhoto(name){
-  switch(name){
-    case "leaf.png":
-      return require("../assets/icons/leaf.png");
-    case "fish.png":
-      return require("../assets/icons/fish.png");
-    case "bugs.png":
-      return require("../assets/icons/bugs.png");
-    case "popper.png":
-      return require("../assets/icons/popper.png");
-    case "heart.png":
-      return require("../assets/icons/heart.png");
-    case "snow.png":
-      return require("../assets/icons/snow.png");
-    case "fireworks.png":
-      return require("../assets/icons/fireworks.png");
-    case "fullmoon.png":
-      return require("../assets/icons/fullmoon.png");
-    case "pumpkin.png":
-      return require("../assets/icons/pumpkin.png");
-    case "corn.png":
-      return require("../assets/icons/corn.png");
-    case "present.png":
-      return require("../assets/icons/present.png");
-    case "popper.png":
-      return require("../assets/icons/popper.png");
-    case "bunny.png":
-      return require("../assets/icons/bunny.png");
-    case "blossom.png":
-      return require("../assets/icons/blossom.png");
-    case "music.png":
-      return require("../assets/icons/music.png");
-    case "turnip.png":
-      return require("../assets/icons/turnip.png");
-    default:
-      break;
-  }
-}
 
 export class EventContainer extends Component {
   render(){

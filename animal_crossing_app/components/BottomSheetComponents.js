@@ -5,6 +5,7 @@ import CachedImage from 'react-native-expo-cached-image';
 import Check from './Check';
 import TextFont from './TextFont'
 import {capitalize, checkOff} from '../LoadJsonData'
+import {getPhotoCorner} from "./GetPhoto"
 
 export class CircularImage extends Component {
   render() {
@@ -28,16 +29,10 @@ export class LeftCornerImage extends Component {
 
     };
   }
-
   render() {
     return <>
       <View style={[styles.cornerImageBackground,{backgroundColor:this.props.accentColor}]}>
-        <CachedImage
-          style={styles.cornerImage}
-          source={{
-            uri: this.props.item[this.props.popUpCornerImageProperty[this.props.item.dataSet]],
-          }}
-        />
+        {getPhotoCorner(this.props.item[this.props.popUpCornerImageProperty[this.props.item.dataSet]])}
       </View>
       <TextFont style={[styles.cornerImageLabel,{color:colors.textLight[colors.mode]}]}>{this.props.item[this.props.popUpCornerImageLabelProperty[this.props.item.dataSet]]}</TextFont>
     </>
@@ -177,8 +172,8 @@ const styles = StyleSheet.create({
   phrase:{
     fontSize: 16,
     textAlign: "center",
-    paddingLeft: 65,
-    paddingRight: 65,
+    paddingLeft: 85,
+    paddingRight: 85,
     padding: 5,
   },
   titleContainer:{
@@ -228,11 +223,6 @@ const styles = StyleSheet.create({
     position: "absolute",
     top:-15,
     left:-15,
-  },
-  cornerImage:{
-    height: 65,
-    width: 65,
-    resizeMode:'contain',
   },
   checkMark:{
     zIndex:50,

@@ -13,7 +13,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import TextFont from './TextFont';
 import Check from './Check';
 import CachedImage from 'react-native-expo-cached-image';
-import {checkOff, capitalize, commas} from "../LoadJsonData"
+import {checkOff, capitalize, commas, removeBrackets} from "../LoadJsonData"
+import {getPhotoShadow} from "./GetPhoto"
 
 const {width} = Dimensions.get('window');
 
@@ -150,6 +151,10 @@ class ListItem extends Component{
         </View>
       )
     } else { //Row component
+      var fishShadow = <View/>
+      if(this.props.popUpContainer!==undefined && this.props.popUpContainer[this.props.item.dataSet][0]==="FishPopup"){
+        fishShadow = <View style={{position:"absolute", right: 75, bottom: 20,}}><Image style={{width:80,height:22,resizeMode:'contain',  marginRight:3}} source={getPhotoShadow(this.props.item,false)}/></View>
+      }
       return( 
         <View>
           <TouchableNativeFeedback onLongPress={() => {  
@@ -180,12 +185,13 @@ class ListItem extends Component{
                   <TextFont bold={true} style={{fontSize:20, color:this.props.labelColor}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
                 </View>
                 <View style={styles.rowTextBottom}>
-                  <TextFont bold={true} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(this.props.item.[this.props.textProperty2[this.props.item.dataSet]])}</TextFont>
+                  <TextFont bold={true} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(removeBrackets(this.props.item.[this.props.textProperty2[this.props.item.dataSet]]))}</TextFont>
                 </View>
                 <View style={styles.rowTextBottom}>
-                  <TextFont bold={true} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(this.props.item.[this.props.textProperty3[this.props.item.dataSet]])}</TextFont>
+                  <TextFont bold={true} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(removeBrackets(this.props.item.[this.props.textProperty3[this.props.item.dataSet]]))}</TextFont>
                 </View>
               </View>
+              {fishShadow}
               <TouchableOpacity style={{position:"absolute", right: -5}} 
                 activeOpacity={0.6}
                 onPress={() => {  

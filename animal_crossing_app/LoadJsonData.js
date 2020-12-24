@@ -112,6 +112,14 @@ export function commas(number) {
   }
 }
 
+export function removeBrackets(string){
+  if(string!==undefined){
+    return string.replace(/ *\([^)]*\) */g, "");
+  } else {
+    return "null"
+  }
+}
+
 export const settings = [
   {
     "keyName" : "settingsNorthernHemisphere",
