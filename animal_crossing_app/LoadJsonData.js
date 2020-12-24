@@ -104,6 +104,14 @@ export function capitalize(name) {
   }
 }
 
+export function capitalizeFirst(name) {
+  if(name!==undefined){
+    return name.charAt(0).toUpperCase() + name.slice(1);
+  } else {
+    return "null";
+  }
+}
+
 export function commas(number) {
   if(number!==undefined){
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")

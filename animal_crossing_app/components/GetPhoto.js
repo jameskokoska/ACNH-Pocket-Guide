@@ -46,7 +46,6 @@ export function getPhotoCorner(name){
   } else {
     name = name.toLowerCase();
   }
-  console.log(name);
   if(name.includes("sea") || name.includes("pier") || name.includes("shoreline"))
     return <Image source={require("../assets/icons/oceanIcon.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>
   else if(name.includes("river"))
@@ -73,6 +72,8 @@ export function getPhotoCorner(name){
     return <Image source={require("../assets/icons/snow.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
   else if(name.includes("villagers"))
     return <Image source={require("../assets/icons/cat.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+  else if(name.includes("fossil"))
+    return <Image source={require("../assets/icons/digIcon.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
   else
     return <Image source={require("../assets/icons/leaf.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
 }

@@ -4,7 +4,7 @@ import colors from '../Colors.js';
 import CachedImage from 'react-native-expo-cached-image';
 import Check from './Check';
 import TextFont from './TextFont'
-import {capitalize, checkOff} from '../LoadJsonData'
+import {commas, capitalize, checkOff, capitalizeFirst} from '../LoadJsonData'
 import {getPhotoCorner} from "./GetPhoto"
 
 export class CircularImage extends Component {
@@ -70,14 +70,22 @@ export class RightCornerCheck extends Component {
 
 export class Phrase extends Component {
   render() {
-    return <Text style={[styles.phrase,{fontStyle: 'italic', fontFamily:'serif',color:this.props.specialLabelColor}]}>{'"'+ capitalize(this.props.item[this.props.popUpPhraseProperty[this.props.item.dataSet]]) + '"'}</Text>
+    return <Text style={[styles.phrase,{fontStyle: 'italic', fontFamily:'serif',color:this.props.specialLabelColor}]}>{'"'+ capitalizeFirst(this.props.item[this.props.popUpPhraseProperty[this.props.item.dataSet]]) + '"'}</Text>
   }
 }
 
 export class Title extends Component {
   render() {
+    var paddingLeft = 70;
+    var paddingRight = 70;
+    var paddingTop = 25;
+    if(this.props.popUpPhraseProperty!==undefined){
+      paddingLeft = 10;
+      paddingRight = 10;
+      paddingTop = 10;
+    }
     if(this.props.item[this.props.textProperty[this.props.item.dataSet]]!==undefined){
-      return <View style={styles.titleContainer}>
+      return <View style={[styles.titleContainer,{paddingLeft: paddingLeft, paddingRight: paddingRight, paddingTop: paddingTop}]}>
         <TextFont style={[styles.title,{color:colors.textBlack[colors.mode]}]} bold={true}>
           {capitalize(this.props.item[this.props.textProperty[this.props.item.dataSet]])}
         </TextFont>
@@ -90,9 +98,13 @@ export class Title extends Component {
 
 export class InfoLine extends Component {
   render() {
+    var ending = "";
+    if(this.props.ending!==undefined){
+      ending=this.props.ending;
+    }
     return <View style={[styles.infoLineBox]}>
             <Image style={styles.infoLineImage} source={this.props.image}/>
-            <TextFont bold={true} style={[styles.infoLineTitle,{color:colors.textBlack[colors.mode]}]}>{capitalize(this.props.item[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
+            <TextFont bold={true} style={[styles.infoLineTitle,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(commas(this.props.item[this.props.textProperty[this.props.item.dataSet]])) + ending}</TextFont>
         </View>
   }
 }
@@ -102,8 +114,8 @@ export class InfoLineDouble extends Component {
     return <View style={[styles.infoLineBox]}>
             <Image style={styles.infoLineImage} source={this.props.image}/>
             <View>
-              <TextFont bold={true} style={[styles.infoLineTitleDouble,{color:colors.textBlack[colors.mode]}]}>{capitalize(this.props.item[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
-              <TextFont bold={true} style={[styles.infoLineTitleDouble,{color:colors.textBlack[colors.mode]}]}>{capitalize(this.props.item[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
+              <TextFont bold={true} style={[styles.infoLineTitleDouble,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
+              <TextFont bold={true} style={[styles.infoLineTitleDouble,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
             </View>
         </View>
   }
@@ -114,9 +126,9 @@ export class InfoLineTriple extends Component {
     return <View style={[styles.infoLineBox]}>
             <Image style={styles.infoLineImage} source={this.props.image}/>
             <View>
-              <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[colors.mode]}]}>{capitalize(this.props.item[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
-              <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[colors.mode]}]}>{capitalize(this.props.item[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
-              <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[colors.mode]}]}>{capitalize(this.props.item[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
+              <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
+              <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
+              <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
             </View>
         </View>
   }
@@ -127,16 +139,18 @@ export class InfoLineBeside extends Component {
     return <View style={[styles.infoLineBox]}>
             <View style={{paddingRight:10}}>
               <InfoLine 
-                image={this.props.image} 
-                item={this.props.item}
-                textProperty={this.props.textProperty}
+                image={this.props.image1} 
+                item={this.props.item1}
+                textProperty={this.props.textProperty1}
+                ending={this.props.ending1}
               />
             </View>
             <View style={{paddingLeft:10}}>
               <InfoLine
-                image={this.props.image} 
-                item={this.props.item}
-                textProperty={this.props.textProperty}
+                image={this.props.image2} 
+                item={this.props.item2}
+                textProperty={this.props.textProperty2}
+                ending={this.props.ending2}
               />
             </View>
         </View>
@@ -145,21 +159,21 @@ export class InfoLineBeside extends Component {
 
 const styles = StyleSheet.create({
   infoLineImage:{
-    width: 35,
-    height: 35,
+    width: 30,
+    height: 30,
     resizeMode:'contain',
   },
   infoLineTitle:{
     fontSize: 20,
-    marginLeft: 5,
+    marginLeft: 8,
   },
   infoLineTitleDouble:{
     fontSize: 17,
-    marginLeft: 5,
+    marginLeft: 8,
   },
   infoLineTitleTriple:{
     fontSize: 14,
-    marginLeft: 5,
+    marginLeft: 8,
   },
   infoLineBox: {
     alignItems: 'center',
@@ -167,7 +181,6 @@ const styles = StyleSheet.create({
     flexDirection:"row",
     height: 54,
     borderRadius:14,
-    margin: 4,
   },
   phrase:{
     fontSize: 16,
@@ -179,8 +192,7 @@ const styles = StyleSheet.create({
   titleContainer:{
     width:"100%",
     padding: 5,
-    paddingLeft: 75,
-    paddingRight: 75,
+    paddingBottom: 10,
     alignItems: "center",
   },
   title:{

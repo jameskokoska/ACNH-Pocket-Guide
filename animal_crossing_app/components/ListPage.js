@@ -10,6 +10,10 @@ import { LinearGradient } from 'expo-linear-gradient';
 import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from './BottomSheetComponents';
 import colors from "../Colors.js"
 import FishPopup from "../popups/FishPopup"
+import SeaPopup from "../popups/SeaPopup"
+import FossilPopup from "../popups/FossilPopup"
+import BugPopup from "../popups/BugPopup"
+import ArtPopup from "../popups/ArtPopup"
 
 const {diffClamp} = Animated;
 const headerHeight = 130 * 2;
@@ -218,14 +222,27 @@ class BottomSheetRender extends Component{
       phrase = <View/>
     }
     
+    //Add popup classes here
     var popUpContainer = <View/>
     if(this.props.popUpContainer!==undefined && this.state.item.dataSet!==undefined){
       if(this.props.popUpContainer[this.state.item.dataSet][0]==="FishPopup"){
         popUpContainer = <FishPopup item={this.state.item}/>
+      } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="SeaPopup"){
+        popUpContainer = <SeaPopup item={this.state.item}/>
+      } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="FossilPopup"){
+        popUpContainer = <FossilPopup item={this.state.item}/>
+      } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="BugPopup"){
+        popUpContainer = <BugPopup item={this.state.item}/>
+      } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="ArtPopup"){
+        popUpContainer = <ArtPopup item={this.state.item}/>
       }
     }
     
 
+    var popUpHeight = 400;
+    if(this.props.popUpContainer!==undefined && this.state.item.dataSet!==undefined){
+      popUpHeight = this.props.popUpContainer[this.state.item.dataSet][1];
+    }
     return <View>
       <LinearGradient
         colors={['transparent','rgba(0,0,0,0.3)','rgba(0,0,0,0.3)' ]}
@@ -238,7 +255,7 @@ class BottomSheetRender extends Component{
       />
       <View
         style={{
-          height: offSetTop,
+          height: Dimensions.get('window').height-popUpHeight,
         }}
       />
       <View
@@ -246,7 +263,7 @@ class BottomSheetRender extends Component{
           borderRadius: 50,
           backgroundColor: colors.white[colors.mode],
           padding: 16,
-          height: Dimensions.get('window').height-offSetTop,
+          height: popUpHeight,
         }}
       >
           <CircularImage 
@@ -261,33 +278,14 @@ class BottomSheetRender extends Component{
             dataGlobalName={this.props.dataGlobalName}
             updateCheckChildFunction={this.updateCheckChildFunction}
           />
-          <View style={{height: 50}}/>
+          <View style={{height: 60}}/>
           {phrase}
           <Title
             item={this.state.item}
             textProperty={this.props.textProperty}
+            popUpPhraseProperty={this.props.popUpPhraseProperty}
           />
           {popUpContainer}
-          <InfoLine
-            image={require("../assets/icons/house.png")} 
-            item={this.state.item}
-            textProperty={this.props.textProperty}
-          />
-          <InfoLineDouble
-            image={require("../assets/icons/house.png")} 
-            item={this.state.item}
-            textProperty={this.props.textProperty}
-          />
-          <InfoLineTriple
-            image={require("../assets/icons/house.png")} 
-            item={this.state.item}
-            textProperty={this.props.textProperty}
-          />
-          <InfoLineBeside
-            image={require("../assets/icons/house.png")} 
-            item={this.state.item}
-            textProperty={this.props.textProperty}
-          />
       </View>
     </View>
   }
