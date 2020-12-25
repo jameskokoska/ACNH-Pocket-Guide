@@ -19,6 +19,7 @@ import ClothingPopup from "../popups/ClothingPopup"
 import FurniturePopup from "../popups/FurniturePopup"
 import FloorWallsPopup from "../popups/FloorWallsPopup"
 import ToolsPopup from "../popups/ToolsPopup"
+import RecipesPopup from "../popups/RecipesPopup"
 
 
 const {diffClamp} = Animated;
@@ -259,6 +260,8 @@ class BottomSheetRender extends Component{
         popUpContainer = <FloorWallsPopup item={this.state.item}/>
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="ToolsPopup"){
         popUpContainer = <ToolsPopup item={this.state.item}/>
+      } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="RecipesPopup"){
+        popUpContainer = <RecipesPopup item={this.state.item}/>
       }
     }
     

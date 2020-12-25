@@ -5,7 +5,7 @@ import CachedImage from 'react-native-expo-cached-image';
 import Check from './Check';
 import TextFont from './TextFont'
 import {commas, capitalize, checkOff, capitalizeFirst} from '../LoadJsonData'
-import {getPhotoCorner} from "./GetPhoto"
+import {getPhotoCorner, getMaterialImage} from "./GetPhoto"
 
 export class CircularImage extends Component {
   render() {
@@ -106,6 +106,10 @@ export class InfoLine extends Component {
     if(this.props.ending!==undefined){
       ending=this.props.ending;
     }
+    var starting = "";
+    if(this.props.starting!==undefined){
+      starting=this.props.starting;
+    }
     var text=capitalizeFirst(commas(this.props.item[this.props.textProperty]));
     if(this.props.textProperty2 !== undefined && this.props.item[this.props.textProperty] !== this.props.item[this.props.textProperty2]){
       text+= ", " + capitalizeFirst(commas(this.props.item[this.props.textProperty2]))
@@ -113,11 +117,11 @@ export class InfoLine extends Component {
     if(text.toLowerCase()==="null" || text.toLowerCase()==="na"){
       return <View/>
     }
-    var imageSource = this.props.image;
+    var imageSource = <Image style={styles.infoLineImage} source={this.props.image}/>;
     if(this.props.item[this.props.ending]!== undefined && this.props.ending==="Exchange Currency" && text.toLowerCase()!=="nfs"){
       if(this.props.item[this.props.ending].toLowerCase().includes("miles")){
         ending= " miles"
-        imageSource = require("../assets/icons/miles.png")
+        imageSource = <Image style={styles.infoLineImage} source={require("../assets/icons/miles.png")}/>;
       } else {
         ending = " bells";
       }
@@ -126,9 +130,22 @@ export class InfoLine extends Component {
     } else if (this.props.ending==="Exchange Currency"){
       ending = " bells"
     }
+    if(this.props.textProperty.includes("Material")){
+      imageSource =  getMaterialImage(this.props.item[this.props.textProperty]);
+      if(imageSource === ""){
+        imageSource = <Image style={styles.infoLineImage} source={require("../assets/icons/leaf.png")}/>;
+      } else {
+        imageSource = <CachedImage
+          style={styles.infoLineImageItem}
+          source={{
+            uri: getMaterialImage(this.props.item[this.props.textProperty]),
+          }}
+        />
+      }      
+    }
     return <View style={[styles.infoLineBox]}>
-            <Image style={styles.infoLineImage} source={imageSource}/>
-            <TextFont adjustsFontSizeToFit={true} numberOfLines={2} bold={true} style={[styles.infoLineTitle,{color:colors.textBlack[colors.mode]}]}>{text + ending}</TextFont>
+            {imageSource}
+            <TextFont adjustsFontSizeToFit={true} numberOfLines={2} bold={true} style={[styles.infoLineTitle,{color:colors.textBlack[colors.mode]}]}>{starting + text + ending}</TextFont>
         </View>
   }
 }
@@ -212,6 +229,12 @@ const styles = StyleSheet.create({
   infoLineImage:{
     width: 30,
     height: 30,
+    resizeMode:'contain',
+  },
+  infoLineImageItem:{
+    width: 40,
+    height: 40,
+    marginRight: -8,
     resizeMode:'contain',
   },
   infoLineTitle:{

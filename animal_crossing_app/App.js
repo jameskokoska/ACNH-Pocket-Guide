@@ -137,50 +137,7 @@ class App extends Component {
       ["floorWallsCheckList","Name"],
     ],"false");
     global.dataLoadedTools = await getStorageData([require("./assets/data/tools.json")],[["toolsCheckList","Name","Variation"]],"false");
-    global.dataLoadedRecipes = await getStorageData([
-      require("./assets/data/housewares.json"),
-      require("./assets/data/miscellaneous.json"),
-      require("./assets/data/wall-mounted.json"),
-      require("./assets/data/photos.json"),
-      require("./assets/data/posters.json"),
-      require("./assets/data/headwear.json"),
-      require("./assets/data/accessories.json"),
-      require("./assets/data/tops.json"),
-      require("./assets/data/dress-up.json"),
-      require("./assets/data/clothingother.json"),
-      require("./assets/data/bottoms.json"),
-      require("./assets/data/socks.json"),
-      require("./assets/data/shoes.json"),
-      require("./assets/data/bags.json"),
-      require("./assets/data/umbrellas.json"),
-      require("./assets/data/floors.json"),
-      require("./assets/data/rugs.json"),
-      require("./assets/data/wallpaper.json"),
-      require("./assets/data/tools.json"),
-      require("./assets/data/fencing.json")
-    ],
-    [
-      ["recipesCheckList","Name"],
-      ["recipesCheckList","Name"],
-      ["recipesCheckList","Name"],
-      ["recipesCheckList","Name"],
-      ["recipesCheckList","Name"],
-      ["recipesCheckList","Name"],
-      ["recipesCheckList","Name"],
-      ["recipesCheckList","Name"],
-      ["recipesCheckList","Name"],
-      ["recipesCheckList","Name"],
-      ["recipesCheckList","Name"],
-      ["recipesCheckList","Name"],
-      ["recipesCheckList","Name"],
-      ["recipesCheckList","Name"],
-      ["recipesCheckList","Name"],
-      ["recipesCheckList","Name"],
-      ["recipesCheckList","Name"],
-      ["recipesCheckList","Name"],
-      ["recipesCheckList","Name"],
-      ["recipesCheckList","Name"],
-    ],"false");
+    global.dataLoadedRecipes = await getStorageData([require("./assets/data/recipes.json")],[["recipesCheckList","Name"]],"false");
 
     //Load Settings
     global.settingsCurrent = settings;
