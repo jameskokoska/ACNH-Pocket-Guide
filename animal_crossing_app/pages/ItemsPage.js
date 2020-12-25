@@ -71,7 +71,7 @@ const ClothingRoute = () => (
       "Closet Image",
       "Closet Image",
       "Closet Image",
-      "Closet Image",
+      "Storage Image",
     ]}
     textProperty={[
       "Name",
