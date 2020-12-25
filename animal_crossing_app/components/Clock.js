@@ -16,6 +16,9 @@ class Clock extends Component {
       hours=hours-12;
       afternoon=true;
     }
+    if(hours===0){
+      hours=12;
+    }
     if(minutes.toString().length<2){
       minutes = "0" + minutes;
     }
@@ -38,6 +41,9 @@ class Clock extends Component {
       if(hours>12){
         hours=hours-12;
         afternoon=true;
+      }
+      if(hours===0){
+        hours=12;
       }
       if(minutes.toString().length<2){
         minutes = "0" + minutes;
