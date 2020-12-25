@@ -44,8 +44,11 @@ class ListItem extends Component{
     }
     if(this.props.gridType==="smallGrid"){
       var textProperty2Component = <View/>;
-      if(this.props.textProperty2!==undefined){
-        textProperty2Component = <TextFont bold={false} style={{textAlign:'center', color:this.props.labelColor, fontSize:12}}>{capitalize(this.props.item.[this.props.textProperty2[this.props.item.dataSet]])}</TextFont>
+      if(this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]!==""){
+        if(this.props.textProperty2[this.props.item.dataSet]==="(DIY)")
+          textProperty2Component = <TextFont bold={false} style={{textAlign:'center', color:this.props.labelColor, fontSize:12}}>(DIY)</TextFont>
+        else 
+          textProperty2Component = <TextFont bold={false} style={{textAlign:'center', color:this.props.labelColor, fontSize:12}}>{capitalize(this.props.item.[this.props.textProperty2[this.props.item.dataSet]])}</TextFont>
       }
       return (
         <View style={styles.gridWrapper}>

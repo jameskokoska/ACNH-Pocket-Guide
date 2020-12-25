@@ -104,6 +104,8 @@ export function getPhotoCorner(name){
     return <Image source={require("../assets/icons/bunny.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
   else if(name.includes("treasure trawler"))
     return <Image source={require("../assets/icons/ship.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>
+  else if(name.includes("c.j."))
+    return <Image source={require("../assets/icons/beaver.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
   else
     return <Image source={require("../assets/icons/leaf.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
 }

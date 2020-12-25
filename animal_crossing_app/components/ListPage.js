@@ -158,7 +158,8 @@ export default (props) =>{
 
   //if bottom sheet is really large, allow scrolling
   var bottomSheetTopPadding = 0;
-  if(props.popUpContainer[0][1]>=1000 && global.settingsCurrent[6]["currentValue"]==="false"){
+  
+  if(props.popUpContainer!=undefined && props.popUpContainer[0][1]>=1000 && global.settingsCurrent[6]["currentValue"]==="false"){
     bottomSheetTopPadding = 70;
   }
 
@@ -179,13 +180,14 @@ export default (props) =>{
       <Animated.FlatList
         initialNumToRender={9}
         scrollEventThrottle={16}
-        contentContainerStyle={{paddingTop: headerHeight*1.18, paddingLeft: 15, paddingRight: 15}}
+        contentContainerStyle={{paddingTop: headerHeight*1.18, paddingLeft: 15, paddingRight: 15, paddingBottom: 120}}
         onScroll={handleScroll}
         ref={ref}
         data={dataUpdated}
         renderItem={renderItem}
         keyExtractor={(item, index) => `list-item-${index}-${item.checkListKeyString}`}
         numColumns={numColumns}
+        style={{paddingBottom: Dimensions.get('window').height}}
       />
       
       <BottomSheet

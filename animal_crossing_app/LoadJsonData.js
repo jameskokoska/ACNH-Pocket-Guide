@@ -70,6 +70,8 @@ export function determineDataGlobal(datakeyName){
     return global.dataLoadedRecipes;
   else if(datakeyName==="dataLoadedTools")
     return global.dataLoadedTools;
+  else if(datakeyName==="dataLoadedAll")
+    return global.dataLoadedAll;
 
 }
 
@@ -104,6 +106,8 @@ export function updateDataGlobal(datakeyName, index, collected, dataSet){
     global.dataLoadedRecipes[dataSet][index].collected=collected;
   else if(datakeyName==="dataLoadedTools")
     global.dataLoadedTools[dataSet][index].collected=collected;
+  else if(datakeyName==="dataLoadedAll")
+    global.dataLoadedAll[dataSet][index].collected=collected;
 }
 
 export function checkOff(item, collected, dataGlobalName){
