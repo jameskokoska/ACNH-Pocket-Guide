@@ -74,6 +74,18 @@ export function getPhotoCorner(name){
     return <Image source={require("../assets/icons/cat.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
   else if(name.includes("fossil"))
     return <Image source={require("../assets/icons/digIcon.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
+  else if(name.includes("able"))
+    return <Image source={require("../assets/icons/able.png")} style={{height: 60, width: 60, resizeMode:'contain'}}/>;
+  else if(name.includes("nook miles"))
+    return <Image source={require("../assets/icons/miles.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
+  else if(name.includes("nooks"))
+    return <Image source={require("../assets/icons/nook.png")} style={{height: 60, width: 60, resizeMode:'contain'}}/>;
+  else if(name.includes("crafting"))
+    return <Image source={require("../assets/icons/crafting.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
+  else if(name.includes("gulliver"))
+    return <Image source={require("../assets/icons/oceanIcon.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>
+  else if(name.includes("new year"))
+    return <Image source={require("../assets/icons/popper.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>
   else
     return <Image source={require("../assets/icons/leaf.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
 }

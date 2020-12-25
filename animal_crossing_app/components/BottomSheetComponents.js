@@ -102,19 +102,29 @@ export class InfoLine extends Component {
     if(this.props.ending!==undefined){
       ending=this.props.ending;
     }
-    var text=capitalizeFirst(commas(this.props.item[this.props.textProperty[this.props.item.dataSet]]));
-    if(this.props.textProperty2 !== undefined && this.props.item[this.props.textProperty[this.props.item.dataSet]] !== this.props.item[this.props.textProperty2[this.props.item.dataSet]]){
-      text+= ", " + capitalizeFirst(commas(this.props.item[this.props.textProperty2[this.props.item.dataSet]]))
+    var text=capitalizeFirst(commas(this.props.item[this.props.textProperty]));
+    if(this.props.textProperty2 !== undefined && this.props.item[this.props.textProperty] !== this.props.item[this.props.textProperty2]){
+      text+= ", " + capitalizeFirst(commas(this.props.item[this.props.textProperty2]))
     }
-    var marginLeft = 40;
-    var marginRight = 40;
-    if(this.props.beside===true){
-      marginLeft=0;
-      marginRight=0;
+    if(text.toLowerCase()==="null" || text.toLowerCase()==="na"){
+      return <View/>
     }
-    return <View style={[styles.infoLineBox,{marginLeft: marginLeft, marginRight: marginRight,}]}>
-            <Image style={styles.infoLineImage} source={this.props.image}/>
-            <TextFont bold={true} style={[styles.infoLineTitle,{color:colors.textBlack[colors.mode]}]}>{text + ending}</TextFont>
+    var imageSource = this.props.image;
+    if(this.props.item[this.props.ending]!== undefined && this.props.ending==="Exchange Currency" && text.toLowerCase()!=="nfs"){
+      if(this.props.item[this.props.ending].toLowerCase().includes("miles")){
+        ending= " miles"
+        imageSource = require("../assets/icons/miles.png")
+      } else {
+        ending = " bells";
+      }
+    } else if(text.toLowerCase()==="nfs"){
+      ending="";
+    } else if (this.props.ending==="Exchange Currency"){
+      ending = " bells"
+    }
+    return <View style={[styles.infoLineBox]}>
+            <Image style={styles.infoLineImage} source={imageSource}/>
+            <TextFont adjustsFontSizeToFit={true} numberOfLines={2} bold={true} style={[styles.infoLineTitle,{color:colors.textBlack[colors.mode]}]}>{text + ending}</TextFont>
         </View>
   }
 }
@@ -124,8 +134,8 @@ export class InfoLineDouble extends Component {
     return <View style={[styles.infoLineBox,{marginLeft: 40, marginRight: 40,}]}>
             <Image style={styles.infoLineImage} source={this.props.image}/>
             <View>
-              <TextFont bold={true} style={[styles.infoLineTitleDouble,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
-              <TextFont bold={true} style={[styles.infoLineTitleDouble,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
+              <TextFont bold={true} style={[styles.infoLineTitleDouble,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty])}</TextFont>
+              <TextFont bold={true} style={[styles.infoLineTitleDouble,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty])}</TextFont>
             </View>
         </View>
   }
@@ -136,9 +146,9 @@ export class InfoLineTriple extends Component {
     return <View style={[styles.infoLineBox,{marginLeft: 40, marginRight: 40,}]}>
             <Image style={styles.infoLineImage} source={this.props.image}/>
             <View>
-              <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
-              <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
-              <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
+              <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty])}</TextFont>
+              <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty])}</TextFont>
+              <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty])}</TextFont>
             </View>
         </View>
   }
@@ -146,7 +156,7 @@ export class InfoLineTriple extends Component {
 
 export class InfoLineBeside extends Component {
   render() {
-    return <View style={[styles.infoLineBox]}>
+    return <View style={[styles.infoLineBoxBeside]}>
             <View style={{paddingRight:10}}>
               <InfoLine 
                 image={this.props.image1} 
@@ -154,7 +164,6 @@ export class InfoLineBeside extends Component {
                 textProperty={this.props.textProperty1}
                 textProperty2={this.props.textProperty12}
                 ending={this.props.ending1}
-                beside={true}
               />
             </View>
             <View style={{paddingLeft:10}}>
@@ -164,7 +173,6 @@ export class InfoLineBeside extends Component {
                 textProperty={this.props.textProperty2}
                 textProperty2={this.props.textProperty22}
                 ending={this.props.ending2}
-                beside={true}
               />
             </View>
         </View>
@@ -180,6 +188,7 @@ const styles = StyleSheet.create({
   infoLineTitle:{
     fontSize: 20,
     marginLeft: 8,
+    maxWidth: "85%",
   },
   infoLineTitleDouble:{
     fontSize: 17,
@@ -189,12 +198,17 @@ const styles = StyleSheet.create({
     fontSize: 14,
     marginLeft: 8,
   },
+  infoLineBoxBeside: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection:"row",
+  },
   infoLineBox: {
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection:"row",
-    height: 54,
-    borderRadius:14,
+    paddingTop: 8,
+    paddingBottom: 8,
   },
   phrase:{
     fontSize: 16,

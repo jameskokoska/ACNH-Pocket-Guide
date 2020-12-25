@@ -13,7 +13,6 @@ export async function getStorage(storageKey, defaultValue){
 }
 
 export async function getStorageData(data, checkListKey, defaultValue){
-  var checkListKeyString = "";
   var dataLoadingTotal = [];
   //Loop through all datasets
   for(var dataSet = 0; dataSet <data.length; dataSet++){
@@ -22,15 +21,17 @@ export async function getStorageData(data, checkListKey, defaultValue){
     //Loop through that specific dataset
     for(var i = 0; i < dataLoading.length; i++){
       totalIndex++;
-      checkListKeyString = checkListKey[dataSet][0]
+      var checkListKeyString = checkListKey[dataSet][0];
       //Loop through specific checklistKey property for that dataset
       for(var x = 1; x < checkListKey[dataSet].length; x++){
         checkListKeyString += dataLoading[i].[checkListKey[dataSet][x]];
       }
       //Get value from storage
-      const value = await AsyncStorage.getItem(checkListKeyString);
+      var value="false";
+      if(global.collectionList.includes(checkListKeyString)){
+        value="true";
+      }
       if(value === null) {
-        await AsyncStorage.setItem(checkListKeyString, defaultValue);
         value = defaultValue;
       }
       dataLoading[i].collected=value;
@@ -62,6 +63,12 @@ export function determineDataGlobal(datakeyName){
     return global.dataLoadedArt;
   else if(datakeyName==="dataLoadedVillagers")
     return global.dataLoadedVillagers;
+  else if(datakeyName==="dataLoadedFurniture")
+    return global.dataLoadedFurniture;
+  else if(datakeyName==="dataLoadedClothing")
+    return global.dataLoadedClothing;
+  else if(datakeyName==="dataLoadedFloorWalls")
+    return global.dataLoadedFloorWalls;
 }
 
 export function updateDataGlobal(datakeyName, index, collected, dataSet){
@@ -85,19 +92,41 @@ export function updateDataGlobal(datakeyName, index, collected, dataSet){
     global.dataLoadedArt[dataSet][index].collected=collected;
   else if(datakeyName==="dataLoadedVillagers")
     global.dataLoadedVillagers[dataSet][index].collected=collected;
+  else if(datakeyName==="dataLoadedFurniture")
+      global.dataLoadedFurniture[dataSet][index].collected=collected;
+  else if(datakeyName==="dataLoadedClothing")
+      global.dataLoadedClothing[dataSet][index].collected=collected;
+  else if(datakeyName==="dataLoadedFloorWalls")
+      global.dataLoadedFloorWalls[dataSet][index].collected=collected;
 }
 
 export function checkOff(item, collected, dataGlobalName){
   if(collected==="false"){
     Vibration.vibrate([0,10,220,20]);
+    global.collectionList.push(item.checkListKey)
   } else {
     Vibration.vibrate(10);
+    collectionListRemove(item.checkListKey)
   }
-  AsyncStorage.setItem(item.checkListKey, collected==="false" ? "true":"false");
+  collectionListSave();
   updateDataGlobal(dataGlobalName, item.index, collected==="false" ? "true":"false", item.dataSet)
-  // console.log(item.checkListKey);
-  // console.log(determineDataGlobal(dataGlobalName)[item.dataSet][item.index])
-  // console.log(collected);
+  //console.log(global.collectionList)
+}
+
+function collectionListRemove(checkListKey){
+  if(global.collectionList.includes(checkListKey)){
+    global.collectionList = global.collectionList.filter(e => e !== checkListKey)
+    global.collectionList = global.collectionList.filter(e => e !== "")
+  }
+}
+
+function collectionListSave(){
+  var outputString = "";
+  for(var i = 0; i<global.collectionList.length; i++){
+    outputString += global.collectionList[i];
+    outputString += "\n";
+  }
+  AsyncStorage.setItem("collectedString", outputString);
 }
 
 export function capitalize(name) {
@@ -142,12 +171,12 @@ export const settings = [
     "description" : "Set your hemisphere, north or south. This will change the data displayed for creatures and events.",
   },
   {
-    "keyName" : "settingsAlwaysShowCatchphrase",
+    "keyName" : "settingsSkipSplashScreen",
     "defaultValue" : "false",
     "currentValue" : "",
-    "picture" : require("./assets/icons/speechBubble.png"),
-    "displayName" : "Always show catchphrase",
-    "description" : "",
+    "picture" : require("./assets/icons/hourglass.png"),
+    "displayName" : "Skip loading screen",
+    "description" : "If true, the app will load more efficiently and therefore will skip most of the opening plane/balloon animation",
   },
   {
     "keyName" : "settingsListOnlyActiveCreatures",

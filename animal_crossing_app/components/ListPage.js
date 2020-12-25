@@ -15,6 +15,8 @@ import FossilPopup from "../popups/FossilPopup"
 import BugPopup from "../popups/BugPopup"
 import ArtPopup from "../popups/ArtPopup"
 import VillagerPopup from "../popups/VillagerPopup"
+import ClothingPopup from "../popups/ClothingPopup"
+
 
 const {diffClamp} = Animated;
 const headerHeight = 130 * 2;
@@ -240,6 +242,8 @@ class BottomSheetRender extends Component{
         popUpContainer = <ArtPopup item={this.state.item}/>
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="VillagerPopup"){
         popUpContainer = <VillagerPopup item={this.state.item}/>
+      } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="ClothingPopup"){
+        popUpContainer = <ClothingPopup item={this.state.item}/>
       }
     }
     

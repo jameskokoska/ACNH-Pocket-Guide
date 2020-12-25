@@ -22,7 +22,7 @@ class TextFont extends Component {
   }
   render(){
     if(this.state.fontLoaded){
-      return <Text style={[this.props.style,{fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}]}>{this.props.children}</Text>
+      return <Text adjustsFontSizeToFit={this.props.adjustsFontSizeToFit} numberOfLines={this.props.numberOfLines} style={[this.props.style,{fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}]}>{this.props.children}</Text>
     } else {
       return <Text>Not loaded</Text>
     }

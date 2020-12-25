@@ -12,6 +12,7 @@ import MuseumPage from './pages/MuseumPage';
 import VillagersPage from './pages/VillagersPage';
 import HomePage from './pages/HomePage';
 import SettingsPage from './pages/SettingsPage';
+import ItemsPage from './pages/ItemsPage';
 import FadeInOut from './components/FadeInOut';
 import Check from './components/Check';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -61,7 +62,7 @@ class App extends Component {
     this.random = Math.random();
     this.state = {
       loaded: false,
-      currentPage: 7,
+      currentPage: 3,
       open:false,
       fadeInTitle:true,
     }
@@ -74,6 +75,8 @@ class App extends Component {
     );
 
     const firstLogin = await getStorage("firstLogin","true");
+    global.collectionList = (await getStorage("collectedString","")).split("\n");
+    console.log(global.collectionList)
     global.dataLoadedReactions = await getStorageData([require("./assets/data/reactions.json")],[["emojiCheckList","Name"]],"false");
     global.dataLoadedArt = await getStorageData([require("./assets/data/art.json"),require("./assets/data/fencing.json")],[["artCheckList","Name","Genuine"],["fenceCheckList","Name"],["fenceCheckList","Name"]],"false");
     global.dataLoadedMusic = await getStorageData([require("./assets/data/music.json")],[["emojiCheckList","Name"]],"false");
@@ -84,6 +87,32 @@ class App extends Component {
     global.dataLoadedFossils = await getStorageData([require("./assets/data/fossils.json")],[["fossilCheckList","Name"]],"false");
     global.dataLoadedArt = await getStorageData([require("./assets/data/art.json")],[["artCheckList","Name"]],"false");
     global.dataLoadedVillagers = await getStorageData([require("./assets/data/villagers.json")],[["villagerCheckList","Name"]],"false");
+    global.dataLoadedFurniture = await getStorageData([require("./assets/data/villagers.json")],[["villagerCheckList","Name"]],"false");
+    global.dataLoadedClothing = await getStorageData([
+      require("./assets/data/headwear.json"),
+      require("./assets/data/accessories.json"),
+      require("./assets/data/tops.json"),
+      require("./assets/data/dress-up.json"),
+      require("./assets/data/clothingother.json"),
+      require("./assets/data/bottoms.json"),
+      require("./assets/data/socks.json"),
+      require("./assets/data/shoes.json"),
+      require("./assets/data/bags.json"),
+      require("./assets/data/umbrellas.json")
+    ],
+    [
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name"],
+    ],"false");
+    global.dataLoadedFloorWalls = await getStorageData([require("./assets/data/villagers.json")],[["villagerCheckList","Name"]],"false");
 
     //Load Settings
     global.settingsCurrent = settings;
@@ -93,17 +122,19 @@ class App extends Component {
     }
     
     console.log("DONE Loading")
+    var splashScreenDelay = global.settingsCurrent[1].currentValue==="true" ? 0 : 500
+    console.log(splashScreenDelay)
     this.timeoutHandle = setTimeout(()=>{
       this.setState({
         fadeInTitle: false,
         firstLogin: firstLogin,
       });
-    }, 0);
+    }, 0+splashScreenDelay);
     this.timeoutHandle = setTimeout(()=>{
       this.setState({
         loaded:true,
       });
-    }, 10);
+    }, 10+splashScreenDelay);
   }
 
   openDrawer() {
@@ -148,6 +179,8 @@ class App extends Component {
         <Button title="button" onPress={() => this.setState({open:!this.state.open})}/>
         <Popup button1={"OK"} button1Action={()=>{console.log("OK")}} button2={"Cancel"} button2Action={()=>{console.log("Cancel")}} popupVisible={this.state.open} close={() => this.setState({open:!this.state.open})}/>
       </>
+    } else if (this.state.currentPage===3){
+      currentPageView = <ItemsPage/>
     } else if (this.state.currentPage===4){
       currentPageView = <SongsPage/>
     } else if (this.state.currentPage===5){
