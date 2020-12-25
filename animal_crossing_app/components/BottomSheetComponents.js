@@ -70,7 +70,11 @@ export class RightCornerCheck extends Component {
 
 export class Phrase extends Component {
   render() {
-    return <Text style={[styles.phrase,{fontStyle: 'italic', fontFamily:'serif',color:this.props.specialLabelColor}]}>{'"'+ capitalizeFirst(this.props.item[this.props.popUpPhraseProperty[this.props.item.dataSet]]) + '"'}</Text>
+    var end = "";
+    if(this.props.popUpPhraseProperty[0]==="Uses"){
+      end = " durability"
+    }
+    return <Text style={[styles.phrase,{fontStyle: 'italic', fontFamily:'serif',color:this.props.specialLabelColor}]}>{'"'+ capitalizeFirst(this.props.item[this.props.popUpPhraseProperty[this.props.item.dataSet]]) + end +'"'}</Text>
   }
 }
 

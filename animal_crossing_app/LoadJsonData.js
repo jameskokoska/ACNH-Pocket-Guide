@@ -12,7 +12,7 @@ export async function getStorage(storageKey, defaultValue){
   return valueReturned;
 }
 
-export async function getStorageData(data, checkListKey, defaultValue){
+export async function getStorageData(data, checkListKey, defaultValue, recipes=false){
   var dataLoadingTotal = [];
   //Loop through all datasets
   for(var dataSet = 0; dataSet <data.length; dataSet++){
@@ -66,6 +66,11 @@ export function determineDataGlobal(datakeyName){
     return global.dataLoadedClothing;
   else if(datakeyName==="dataLoadedFloorWalls")
     return global.dataLoadedFloorWalls;
+  else if(datakeyName==="dataLoadedRecipes")
+    return global.dataLoadedRecipes;
+  else if(datakeyName==="dataLoadedTools")
+    return global.dataLoadedTools;
+
 }
 
 export function updateDataGlobal(datakeyName, index, collected, dataSet){
@@ -90,11 +95,15 @@ export function updateDataGlobal(datakeyName, index, collected, dataSet){
   else if(datakeyName==="dataLoadedVillagers")
     global.dataLoadedVillagers[dataSet][index].collected=collected;
   else if(datakeyName==="dataLoadedFurniture")
-      global.dataLoadedFurniture[dataSet][index].collected=collected;
+    global.dataLoadedFurniture[dataSet][index].collected=collected;
   else if(datakeyName==="dataLoadedClothing")
-      global.dataLoadedClothing[dataSet][index].collected=collected;
+    global.dataLoadedClothing[dataSet][index].collected=collected;
   else if(datakeyName==="dataLoadedFloorWalls")
-      global.dataLoadedFloorWalls[dataSet][index].collected=collected;
+    global.dataLoadedFloorWalls[dataSet][index].collected=collected;
+  else if(datakeyName==="dataLoadedRecipes")
+    global.dataLoadedRecipes[dataSet][index].collected=collected;
+  else if(datakeyName==="dataLoadedTools")
+    global.dataLoadedTools[dataSet][index].collected=collected;
 }
 
 export function checkOff(item, collected, dataGlobalName){

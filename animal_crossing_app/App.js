@@ -13,6 +13,7 @@ import VillagersPage from './pages/VillagersPage';
 import HomePage from './pages/HomePage';
 import SettingsPage from './pages/SettingsPage';
 import ItemsPage from './pages/ItemsPage';
+import CraftingPage from './pages/CraftingPage';
 import FadeInOut from './components/FadeInOut';
 import Check from './components/Check';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -62,7 +63,7 @@ class App extends Component {
     this.random = Math.random();
     this.state = {
       loaded: false,
-      currentPage: 3,
+      currentPage: 6,
       open:false,
       fadeInTitle:true,
     }
@@ -78,7 +79,6 @@ class App extends Component {
     global.collectionList = (await getStorage("collectedString","")).split("\n");
     console.log(global.collectionList)
     global.dataLoadedReactions = await getStorageData([require("./assets/data/reactions.json")],[["emojiCheckList","Name"]],"false");
-    global.dataLoadedArt = await getStorageData([require("./assets/data/art.json"),require("./assets/data/fencing.json")],[["artCheckList","Name","Genuine"],["fenceCheckList","Name"],["fenceCheckList","Name"]],"false");
     global.dataLoadedMusic = await getStorageData([require("./assets/data/music.json")],[["emojiCheckList","Name"]],"false");
     global.dataLoadedConstruction = await getStorageData([require("./assets/data/construction.json"),require("./assets/data/fencing.json")],[["constructionCheckList","Name"],["fenceCheckList","Name"]],"false");
     global.dataLoadedFish = await getStorageData([require("./assets/data/fish.json")],[["fishCheckList","Name"]],"false");
@@ -135,6 +135,51 @@ class App extends Component {
       ["floorWallsCheckList","Name"],
       ["floorWallsCheckList","Name"],
       ["floorWallsCheckList","Name"],
+    ],"false");
+    global.dataLoadedTools = await getStorageData([require("./assets/data/tools.json")],[["toolsCheckList","Name","Variation"]],"false");
+    global.dataLoadedRecipes = await getStorageData([
+      require("./assets/data/housewares.json"),
+      require("./assets/data/miscellaneous.json"),
+      require("./assets/data/wall-mounted.json"),
+      require("./assets/data/photos.json"),
+      require("./assets/data/posters.json"),
+      require("./assets/data/headwear.json"),
+      require("./assets/data/accessories.json"),
+      require("./assets/data/tops.json"),
+      require("./assets/data/dress-up.json"),
+      require("./assets/data/clothingother.json"),
+      require("./assets/data/bottoms.json"),
+      require("./assets/data/socks.json"),
+      require("./assets/data/shoes.json"),
+      require("./assets/data/bags.json"),
+      require("./assets/data/umbrellas.json"),
+      require("./assets/data/floors.json"),
+      require("./assets/data/rugs.json"),
+      require("./assets/data/wallpaper.json"),
+      require("./assets/data/tools.json"),
+      require("./assets/data/fencing.json")
+    ],
+    [
+      ["recipesCheckList","Name"],
+      ["recipesCheckList","Name"],
+      ["recipesCheckList","Name"],
+      ["recipesCheckList","Name"],
+      ["recipesCheckList","Name"],
+      ["recipesCheckList","Name"],
+      ["recipesCheckList","Name"],
+      ["recipesCheckList","Name"],
+      ["recipesCheckList","Name"],
+      ["recipesCheckList","Name"],
+      ["recipesCheckList","Name"],
+      ["recipesCheckList","Name"],
+      ["recipesCheckList","Name"],
+      ["recipesCheckList","Name"],
+      ["recipesCheckList","Name"],
+      ["recipesCheckList","Name"],
+      ["recipesCheckList","Name"],
+      ["recipesCheckList","Name"],
+      ["recipesCheckList","Name"],
+      ["recipesCheckList","Name"],
     ],"false");
 
     //Load Settings
@@ -208,6 +253,8 @@ class App extends Component {
       currentPageView = <SongsPage/>
     } else if (this.state.currentPage===5){
       currentPageView = <EmoticonsPage/>
+    } else if (this.state.currentPage===6){
+      currentPageView = <CraftingPage/>
     } else if (this.state.currentPage===8){
       currentPageView = <ConstructionPage/>
     } else if (this.state.currentPage===8){
