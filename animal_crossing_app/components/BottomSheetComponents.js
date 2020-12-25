@@ -146,9 +146,11 @@ export class InfoLineTriple extends Component {
     var textLines = [];
     if(this.props.item[this.props.textProperty1]!=="None"){
       textLines.push(this.props.item[this.props.textProperty1]);
-    }else if (this.props.item[this.props.textProperty2]!=="None"){
+    }
+    if (this.props.item[this.props.textProperty2]!=="None"){
       textLines.push(this.props.item[this.props.textProperty2]);
-    }else if (this.props.item[this.props.textProperty3]!=="None"){
+    }
+    if (this.props.item[this.props.textProperty3]!=="None"){
       textLines.push(this.props.item[this.props.textProperty3]);
     }
     if(textLines.length===0){

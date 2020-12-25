@@ -126,7 +126,16 @@ class App extends Component {
       ["clothingCheckList","Name","Variation"],
       ["clothingCheckList","Name"],
     ],"false");
-    global.dataLoadedFloorWalls = await getStorageData([require("./assets/data/villagers.json")],[["villagerCheckList","Name"]],"false");
+    global.dataLoadedFloorWalls = await getStorageData([
+      require("./assets/data/floors.json"),
+      require("./assets/data/rugs.json"),
+      require("./assets/data/wallpaper.json")
+    ],
+    [
+      ["floorWallsCheckList","Name"],
+      ["floorWallsCheckList","Name"],
+      ["floorWallsCheckList","Name"],
+    ],"false");
 
     //Load Settings
     global.settingsCurrent = settings;

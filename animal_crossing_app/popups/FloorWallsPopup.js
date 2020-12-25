@@ -6,7 +6,7 @@ import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"
 
 
-class FurniturePopup extends Component {
+class FloorWallsPopup extends Component {
   constructor(props){
     super(props);
     this.state={
@@ -59,4 +59,4 @@ class FurniturePopup extends Component {
     </View>
   }
 }
-export default FurniturePopup;
+export default FloorWallsPopup;

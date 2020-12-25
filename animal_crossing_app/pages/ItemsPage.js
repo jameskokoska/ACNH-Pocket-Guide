@@ -204,31 +204,59 @@ const ClothingRoute = () => (
 )
 
 const FloorWallsRoute = () => (
-  <View/>
-  // <ListPage 
-  //   showVariations={[false]}
-  //   title="Art"
-  //   imageProperty={["Image"]}
-  //   textProperty={["Name"]}
-  //   textProperty2={[""]}
-  //   textProperty3={[""]}
-  //   checkListKey={[["floorWallsCheckList","Name"]]}
-  //   searchKey={[["Name"]]}
-  //   gridType="largeGridSmaller" //smallGrid, largeGrid, row
-  //   dataGlobalName={"dataLoadedArt"}
-  //   appBarColor={colors.floorWallsAppBar[colors.mode]}
-  //   titleColor={colors.textWhiteOnly[colors.mode]}
-  //   searchBarColor={colors.searchbarBG[colors.mode]}
-  //   backgroundColor={colors.lightDarkAccent[colors.mode]}
-  //   boxColor={colors.white[colors.mode]}
-  //   labelColor={colors.textBlack[colors.mode]}
-  //   accentColor={colors.floorWallsAccent[colors.mode]}
-  //   specialLabelColor={colors.fishText[colors.mode]}
-  //   popUpCornerImageProperty={["Icon Image"]}
-  //   popUpCornerImageLabelProperty={["Name"]}
-  //   popUpPhraseProperty={["Artist"]}
-  //   popUpContainer={[["ArtPopup",600]]}
-  // />
+  <ListPage 
+    showVariations={[
+      false,
+      false,
+      false,
+    ]}
+    title="Floor & Walls"
+    imageProperty={[
+      "Image",
+      "Image",
+      "Image",
+    ]}
+    textProperty={[
+      "Name",
+      "Name",
+      "Name",
+    ]}
+    checkListKey={[
+      ["floorWallsCheckList","Name"],
+      ["floorWallsCheckList","Name"],
+      ["floorWallsCheckList","Name"],
+    ]}
+    searchKey={[
+      ["Name"],
+      ["Name"],
+      ["Name"],
+    ]}
+    gridType="smallGrid" //smallGrid, largeGrid, row
+    dataGlobalName={"dataLoadedFloorWalls"}
+    appBarColor={colors.floorWallsAppBar[colors.mode]}
+    titleColor={colors.textWhiteOnly[colors.mode]}
+    searchBarColor={colors.searchbarBG[colors.mode]}
+    backgroundColor={colors.lightDarkAccent[colors.mode]}
+    boxColor={colors.white[colors.mode]}
+    labelColor={colors.textBlack[colors.mode]}
+    accentColor={colors.floorWallsAccent[colors.mode]}
+    specialLabelColor={colors.fishText[colors.mode]}
+    popUpCornerImageProperty={[
+      "Source",
+      "Source",
+      "Source",
+    ]}
+    popUpCornerImageLabelProperty={[
+      "Source",
+      "Source",
+      "Source",
+    ]}
+    popUpContainer={[
+      ["FloorWallsPopup",500],
+      ["FloorWallsPopup",500],
+      ["FloorWallsPopup",500],
+    ]}
+  />
 )
 
 

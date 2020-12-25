@@ -86,6 +86,8 @@ export function getPhotoCorner(name){
     return <Image source={require("../assets/icons/oceanIcon.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>
   else if(name.includes("new year"))
     return <Image source={require("../assets/icons/popper.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>
+  else if(name.includes("saharah"))
+    return <Image source={require("../assets/icons/saharah.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
   else
     return <Image source={require("../assets/icons/leaf.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
 }
