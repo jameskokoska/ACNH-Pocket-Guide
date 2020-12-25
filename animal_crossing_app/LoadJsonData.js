@@ -27,12 +27,9 @@ export async function getStorageData(data, checkListKey, defaultValue){
         checkListKeyString += dataLoading[i].[checkListKey[dataSet][x]];
       }
       //Get value from storage
-      var value="false";
+      var value=defaultValue;
       if(global.collectionList.includes(checkListKeyString)){
         value="true";
-      }
-      if(value === null) {
-        value = defaultValue;
       }
       dataLoading[i].collected=value;
       dataLoading[i].checkListKey=checkListKeyString;

@@ -87,7 +87,21 @@ class App extends Component {
     global.dataLoadedFossils = await getStorageData([require("./assets/data/fossils.json")],[["fossilCheckList","Name"]],"false");
     global.dataLoadedArt = await getStorageData([require("./assets/data/art.json")],[["artCheckList","Name"]],"false");
     global.dataLoadedVillagers = await getStorageData([require("./assets/data/villagers.json")],[["villagerCheckList","Name"]],"false");
-    global.dataLoadedFurniture = await getStorageData([require("./assets/data/villagers.json")],[["villagerCheckList","Name"]],"false");
+    global.dataLoadedFurniture = await getStorageData([
+      require("./assets/data/housewares.json"),
+      require("./assets/data/miscellaneous.json"),
+      require("./assets/data/wall-mounted.json"),
+      require("./assets/data/photos.json"),
+      require("./assets/data/posters.json")
+    ],
+    [
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name"],
+    ],"false");
     global.dataLoadedClothing = await getStorageData([
       require("./assets/data/headwear.json"),
       require("./assets/data/accessories.json"),

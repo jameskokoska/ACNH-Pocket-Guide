@@ -19,31 +19,76 @@ const renderTabBar = props => (
 );
 
 const FurnitureRoute = () => (
-  <View/>
-  // <ListPage 
-  //   showVariations={[false]}
-  //   title="Furniture"
-  //   imageProperty={["Icon Image"]}
-  //   textProperty={["Name"]}
-  //   textProperty2={["NH Jan"]}
-  //   textProperty3={["Shadow"]}
-  //   checkListKey={[["furnitureCheckList","Name","Variation","Pattern"]]}
-  //   searchKey={[["Name","Where/How"]]}
-  //   gridType="smallGrid" //smallGrid, largeGrid, row
-  //   dataGlobalName={"dataLoadedFurniture"}
-  //   appBarColor={colors.furnitureAppBar[colors.mode]}
-  //   titleColor={colors.textWhiteOnly[colors.mode]}
-  //   searchBarColor={colors.searchbarBG[colors.mode]}
-  //   backgroundColor={colors.lightDarkAccent[colors.mode]}
-  //   boxColor={colors.white[colors.mode]}
-  //   labelColor={colors.textBlack[colors.mode]}
-  //   accentColor={colors.furnitureAccent[colors.mode]}
-  //   specialLabelColor={colors.fishText[colors.mode]}
-  //   popUpCornerImageProperty={["Where/How"]}
-  //   popUpCornerImageLabelProperty={["Where/How"]}
-  //   popUpPhraseProperty={["Catch phrase"]}
-  //   popUpContainer={[["SeaPopup",600]]}
-  // />
+  <ListPage 
+    showVariations={[
+      false,
+      false,
+      false,
+      false,
+      false,
+    ]}
+    title="Furniture"
+    imageProperty={[
+      "Image",
+      "Image",
+      "Image",
+      "Image",
+      "Image",
+    ]}
+    textProperty={[
+      "Name",
+      "Name",
+      "Name",
+      "Name",
+      "Name",
+    ]}
+    checkListKey={[
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name"],
+    ]}
+    searchKey={[
+      ["Name"],
+      ["Name"],
+      ["Name"],
+      ["Name"],
+      ["Name"],
+    ]}
+    gridType="smallGrid" //smallGrid, largeGrid, row
+    dataGlobalName={"dataLoadedFurniture"}
+    appBarColor={colors.furnitureAppBar[colors.mode]}
+    titleColor={colors.textWhiteOnly[colors.mode]}
+    searchBarColor={colors.searchbarBG[colors.mode]}
+    backgroundColor={colors.lightDarkAccent[colors.mode]}
+    boxColor={colors.white[colors.mode]}
+    labelColor={colors.textBlack[colors.mode]}
+    accentColor={colors.furnitureAccent[colors.mode]}
+    specialLabelColor={colors.fishText[colors.mode]}
+    popUpCornerImageProperty={[
+      "Source",
+      "Source",
+      "Source",
+      "Source",
+      "Source",
+    ]}
+    popUpCornerImageLabelProperty={[
+      "Source",
+      "Source",
+      "Source",
+      "Source",
+      "Source",
+    ]}
+    popUpContainer={[
+      ["FurniturePopup",500],
+      ["FurniturePopup",500],
+      ["FurniturePopup",500],
+      ["FurniturePopup",500],
+      ["FurniturePopup",500],
+    ]}
+  />
 )
 
 const ClothingRoute = () => (

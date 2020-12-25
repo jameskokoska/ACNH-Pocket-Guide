@@ -134,8 +134,8 @@ export class InfoLineDouble extends Component {
     return <View style={[styles.infoLineBox,{marginLeft: 40, marginRight: 40,}]}>
             <Image style={styles.infoLineImage} source={this.props.image}/>
             <View>
-              <TextFont bold={true} style={[styles.infoLineTitleDouble,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty])}</TextFont>
-              <TextFont bold={true} style={[styles.infoLineTitleDouble,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty])}</TextFont>
+              <TextFont bold={true} style={[styles.infoLineTitleDouble,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty1])}</TextFont>
+              <TextFont bold={true} style={[styles.infoLineTitleDouble,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty2])}</TextFont>
             </View>
         </View>
   }
@@ -143,21 +143,47 @@ export class InfoLineDouble extends Component {
 
 export class InfoLineTriple extends Component {
   render() {
-    return <View style={[styles.infoLineBox,{marginLeft: 40, marginRight: 40,}]}>
+    var textLines = [];
+    if(this.props.item[this.props.textProperty1]!=="None"){
+      textLines.push(this.props.item[this.props.textProperty1]);
+    }else if (this.props.item[this.props.textProperty2]!=="None"){
+      textLines.push(this.props.item[this.props.textProperty2]);
+    }else if (this.props.item[this.props.textProperty3]!=="None"){
+      textLines.push(this.props.item[this.props.textProperty3]);
+    }
+    if(textLines.length===0){
+      return <View/>
+    } else if(textLines.length===3){
+      return <View style={[styles.infoLineBox]}>
             <Image style={styles.infoLineImage} source={this.props.image}/>
             <View>
-              <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty])}</TextFont>
-              <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty])}</TextFont>
-              <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty])}</TextFont>
+              <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(textLines[0])}</TextFont>
+              <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(textLines[1])}</TextFont>
+              <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(textLines[2])}</TextFont>
             </View>
         </View>
+    } else if (textLines.length===2){
+      return <View style={[styles.infoLineBox]}>
+            <Image style={styles.infoLineImage} source={this.props.image}/>
+            <View>
+              <TextFont bold={true} style={[styles.infoLineTitleDouble,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(textLines[0])}</TextFont>
+              <TextFont bold={true} style={[styles.infoLineTitleDouble,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(textLines[1])}</TextFont>
+            </View>
+        </View>
+    } else {
+      return <View style={[styles.infoLineBox]}>
+            <Image style={styles.infoLineImage} source={this.props.image}/>
+              <TextFont adjustsFontSizeToFit={true} numberOfLines={2} bold={true} style={[styles.infoLineTitle,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(textLines[0])}</TextFont>
+        </View>
+
+    }
+    
   }
 }
 
 export class InfoLineBeside extends Component {
   render() {
     return <View style={[styles.infoLineBoxBeside]}>
-            <View style={{paddingRight:10}}>
               <InfoLine 
                 image={this.props.image1} 
                 item={this.props.item1}
@@ -165,8 +191,6 @@ export class InfoLineBeside extends Component {
                 textProperty2={this.props.textProperty12}
                 ending={this.props.ending1}
               />
-            </View>
-            <View style={{paddingLeft:10}}>
               <InfoLine
                 image={this.props.image2} 
                 item={this.props.item2}
@@ -174,7 +198,6 @@ export class InfoLineBeside extends Component {
                 textProperty2={this.props.textProperty22}
                 ending={this.props.ending2}
               />
-            </View>
         </View>
   }
 }
@@ -209,6 +232,8 @@ const styles = StyleSheet.create({
     flexDirection:"row",
     paddingTop: 8,
     paddingBottom: 8,
+    marginLeft: 10,
+    marginRight: 10,
   },
   phrase:{
     fontSize: 16,
