@@ -15,6 +15,7 @@ import SettingsPage from './pages/SettingsPage';
 import ProfilePage from './pages/ProfilePage';
 import ItemsPage from './pages/ItemsPage';
 import AllItemsPage from './pages/AllItemsPage';
+import TestPage from './pages/TestPage';
 import CraftingPage from './pages/CraftingPage';
 import FadeInOut from './components/FadeInOut';
 import Check from './components/Check';
@@ -27,7 +28,7 @@ import {getStorage, getStorageData, settings, loadGlobalData} from './LoadJsonDa
 import {ExportFile, LoadFile} from './components/LoadFile';
 import Onboard from './pages/Onboard';
 import colors from './Colors.js';
-import ActiveTime from './components/ActiveTime'
+import ActiveTime from './components/ActiveTime.js';
 
 function NavigationView(props) {
   return (
@@ -154,7 +155,7 @@ class App extends Component {
         <Popup button1={"OK"} button1Action={()=>{console.log("OK")}} button2={"Cancel"} button2Action={()=>{console.log("Cancel")}} popupVisible={this.state.open} close={() => this.setState({open:!this.state.open})}/>
       </>
     } else if (this.state.currentPage===3){
-      currentPageView = <ItemsPage/>
+      currentPageView = <ActiveTime/>
     } else if (this.state.currentPage===4){
       currentPageView = <SongsPage/>
     } else if (this.state.currentPage===5){
