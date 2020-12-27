@@ -135,7 +135,7 @@ const ArtRoute = () => (
     textProperty={["Name"]}
     textProperty2={[""]}
     textProperty3={[""]}
-    checkListKey={[["artCheckList","Name"]]}
+    checkListKey={[["artCheckList","Name","Genuine"]]}
     searchKey={[["Name"]]}
     gridType="largeGridSmaller" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedArt"}

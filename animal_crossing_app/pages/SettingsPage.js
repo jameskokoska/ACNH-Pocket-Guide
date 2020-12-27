@@ -8,6 +8,7 @@ import colors from '../Colors';
 import ButtonComponent from "../components/ButtonComponent"
 import Popup from '../components/Popup'
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {ExportFile, LoadFile} from '../components/LoadFile';
 
 const music = require("../assets/data/music.json");
 const {width} = Dimensions.get('window');
@@ -42,10 +43,12 @@ class SettingsPage extends Component {
               
             />
           )}
-          <ButtonComponent text="Reset Data" onPress={() => {this.setState({open:true})}} vibrate={100} color={colors.cancelButton[colors.mode]}/>
-          <Popup text="Reset Data" textLower="Would you like to reset your collection? This action cannot be undone." button2={"Reset"} button1={"Cancel"} button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.setItem("collectedString", ""); this.setState({openRestart:true});}} popupVisible={this.state.open} close={() => this.setState({open:!this.state.open})}/>
-          <Popup text="Restart Required" textLower="Please restart the application." button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.setItem("collectedString", "");}} popupVisible={this.state.openRestart} close={() => this.setState({open:!this.state.open})}/>
           <View style={{height: 50}}/>
+          <ExportFile/><LoadFile/>
+          <View style={{height: 50}}/>
+          <ButtonComponent text="Reset Data" onPress={() => {this.setState({open:true})}} vibrate={100} color={colors.cancelButton[colors.mode]}/>
+          <Popup text="Reset Data" textLower="Would you like to reset your collection? This action cannot be undone." button2={"Reset"} button1={"Cancel"} button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.setItem("collectedString", ""); AsyncStorage.setItem("firstLogin", "true"); this.setState({openRestart:true});}} popupVisible={this.state.open} close={() => this.setState({open:!this.state.open})}/>
+          <Popup text="Restart Required" textLower="Please restart the application." button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.setItem("collectedString", "");}} popupVisible={this.state.openRestart} close={() => this.setState({open:!this.state.open})}/>
           <View style={{height: 100}}/>
         </ScrollView>
      </View>

@@ -244,7 +244,7 @@ class AllItemsPage extends Component {
             ["bugCheckList","Name"],
             ["seaCheckList","Name"],
             ["fossilCheckList","Name"],
-            ["artCheckList","Name"],
+            ["artCheckList","Name","Genuine"],
             ["villagerCheckList","Name"],
             ["songCheckList","Name"],
             ["emojiCheckList","Name"],
