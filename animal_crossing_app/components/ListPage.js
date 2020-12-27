@@ -156,12 +156,12 @@ export default (props) =>{
     />;
   }
 
-  //if bottom sheet is really large, allow scrolling
+  // //if bottom sheet is really large, allow scrolling
   var bottomSheetTopPadding = 0;
   
-  if(props.popUpContainer!=undefined && props.popUpContainer[0][1]>=1000 && global.settingsCurrent[6]["currentValue"]==="false"){
-    bottomSheetTopPadding = 70;
-  }
+  // if(props.popUpContainer!=undefined && props.popUpContainer[0][1]>=1000 && global.settingsCurrent[6]["currentValue"]==="false"){
+  //   bottomSheetTopPadding = 70;
+  // }
 
   const springConfig = {
       damping: 20,

@@ -39,6 +39,16 @@ export async function getStorageData(data, checkListKey, defaultValue, recipes=f
   return dataLoadingTotal;
 }
 
+export function countCollection(checkListKeyStart){
+  var count = 0;
+  for(var i = 0; i<global.collectionList.length; i++){
+    if(global.collectionList[i].includes(checkListKeyStart)){
+      count++
+    }
+  }
+  return count;
+}
+
 export function determineDataGlobal(datakeyName){
   if(datakeyName==="dataLoadedReactions")
     return global.dataLoadedReactions;

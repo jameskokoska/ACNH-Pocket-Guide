@@ -64,7 +64,7 @@ class App extends Component {
     this.random = Math.random();
     this.state = {
       loaded: false,
-      currentPage: 1,
+      currentPage: 0,
       open:false,
       fadeInTitle:true,
     }
@@ -200,12 +200,14 @@ class App extends Component {
       ["constructionCheckList","Name"],
       ["fenceCheckList","Name"],
     ],"false");
+
     //Load Settings
     global.settingsCurrent = settings;
     for(var i = 0; i<settings.length; i++){
       global.settingsCurrent[i]["currentValue"] = await getStorage(settings[i]["keyName"],settings[i]["defaultValue"]);
       //console.log(global.settingsCurrent[i]["keyName"])
     }
+    
     
     console.log("DONE Loading")
     var splashScreenDelay = global.settingsCurrent[1].currentValue==="true" ? 0 : 500

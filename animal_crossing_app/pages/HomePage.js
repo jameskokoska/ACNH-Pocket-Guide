@@ -4,9 +4,10 @@ import Clock from '../components/Clock';
 import HomeContentArea from '../components/HomeContentArea';
 import {EventContainer,getEventsDay} from '../components/EventContainer';
 import StoreHoursContainer from '../components/StoreHoursContainer';
+import ProgressContainer from '../components/ProgressContainer';
 import LottieView from 'lottie-react-native';
 import colors from '../Colors'
-import {capitalize} from "../LoadJsonData"
+import {capitalize,countCollection} from "../LoadJsonData"
 import TextFont from "../components/TextFont"
 
 function addDays(date, days) {
@@ -17,6 +18,17 @@ function addDays(date, days) {
 
 class HomePage extends Component {
   render(){
+    var fishCount = countCollection("fishCheckList");
+    var fishPercentage = fishCount/80 * 100;
+    var seaCount = countCollection("seaCheckList");
+    var seaPercentage = seaCount/40 * 100;
+    var bugsCount = countCollection("bugCheckList");
+    var bugsPercentage = bugsCount/80 * 100;
+    var fossilCount = countCollection("fossilCheckList");
+    var fossilPercentage = bugsCount/73 * 100;
+    var artCount = countCollection("artCheckList");
+    var artPercentage = artCount/43 * 100;
+
     var todayEvents = getEventsDay(new Date());
     var tomorrowEvents = getEventsDay(addDays(new Date(), 1));
     var thisWeekEvents = [];
@@ -81,6 +93,15 @@ class HomePage extends Component {
             />
           )}
           <View style={{height: 30}}/>
+        </HomeContentArea>
+        <HomeContentArea backgroundColor={colors.sectionBackground1[colors.mode]} accentColor={colors.storeHoursColor[colors.mode]} title="Collection" titleColor={colors.collectionColor[colors.modeReverse]}>
+          <View style={{height: 15}}/>
+          <ProgressContainer color={colors.fishAppBar[0]} backgroundColor={colors.white[colors.mode]} textColor={colors.textBlack[colors.mode]} percentage={fishPercentage} image={require("../assets/icons/fish.png")} text={"Fish " + fishCount + "/80"}/>
+          <ProgressContainer color={colors.fishAppBar[0]} backgroundColor={colors.white[colors.mode]} textColor={colors.textBlack[colors.mode]} percentage={seaPercentage} image={require("../assets/icons/octopus.png")} text={"Sea Creatures " + seaCount + "/40"}/>
+          <ProgressContainer color={colors.bugAppBar[0]} backgroundColor={colors.white[colors.mode]} textColor={colors.textBlack[colors.mode]} percentage={bugsPercentage} image={require("../assets/icons/bugs.png")} text={"Bugs " + bugsCount + "/80"}/>
+          <ProgressContainer color={colors.fossilAppBar[0]} backgroundColor={colors.white[colors.mode]} textColor={colors.textBlack[colors.mode]} percentage={fossilPercentage} image={require("../assets/icons/bones.png")} text={"Fossils " + fossilCount + "/73"}/>
+          <ProgressContainer color={colors.artAppBar[0]} backgroundColor={colors.white[colors.mode]} textColor={colors.textBlack[colors.mode]} percentage={artPercentage} image={require("../assets/icons/colorPalette.png")} text={"Art " + artCount + "/43"}/>
+          <View style={{height: 15}}/>
         </HomeContentArea>
         <HomeContentArea backgroundColor={colors.sectionBackground2[colors.mode]} accentColor={colors.storeHoursColor[colors.mode]} title="Store Hours" titleColor={colors.storeHoursColor[colors.modeReverse]}>
           <View style={{height: 15}}/>
