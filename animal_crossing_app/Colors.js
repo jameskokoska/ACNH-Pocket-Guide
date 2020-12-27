@@ -3,7 +3,7 @@ import { Appearance } from 'react-native-appearance';
 const colors = {
     mode: Appearance.getColorScheme()==="light" ? 0 : 1,
     modeReverse: Appearance.getColorScheme()==="light" ? 1 : 0,
-    background: ["#ebebeb","#1a1a1a"], //"#34454f" original
+    background: ["#f5f5f5","#1a1a1a"], //"#34454f" original
     FAB: ["#49599a", "#455a64"],
     searchbarBG : ["#DFDFDF", "#A3A3A3"],
     searchbarIcon : ["#000000","#FFFFFF"],

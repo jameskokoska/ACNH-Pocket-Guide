@@ -1,0 +1,387 @@
+{
+  "roses" : [
+    {
+      "percentage" : 50,
+      "parent1" : "red roses",
+      "parent1Special" : false,
+      "parent2" : "yellow roses",
+      "parent2Special" : false,
+      "child" : "orange roses",
+      "childSpecial" : true 
+    },
+    {
+      "percentage" : 25,
+      "parent1" : "red roses",
+      "parent1Special" : false,
+      "parent2" : "red roses",
+      "parent2Special" : false,
+      "child" : "black roses",
+      "childSpecial" : true
+    },
+    {
+      "percentage" : 25,
+      "parent1" : "red roses",
+      "parent1Special" : false,
+      "parent2" : "red roses",
+      "parent2Special" : false,
+      "child" : "pink roses",
+      "childSpecial" :  true
+    },
+    {
+      "percentage" : 50,
+      "parent1" : "red roses",
+      "parent1Special" : false,
+      "parent2" : "white roses",
+      "parent2Special" : false,
+      "child" : "pink roses",
+      "childSpecial" : true 
+    },
+    {
+      "percentage" : 25,
+      "parent1" : "white roses",
+      "parent1Special" : false,
+      "parent2" : "white roses",
+      "parent2Special" : false,
+      "child" : "purple roses",
+      "childSpecial" :  true
+    },
+    {
+      "percentage" : 100,
+      "parent1" : "yellow roses",
+      "parent1Special" : false,
+      "parent2" : "black roses",
+      "parent2Special" : true,
+      "child" : "orange roses",
+      "childSpecial" : true
+    },
+    {
+      "percentage" : 25,
+      "parent1" : "orange roses",
+      "parent1Special" : true,
+      "parent2" : "purple roses",
+      "parent2Special" : true,
+      "child" : "red roses",
+      "childSpecial" : true
+    },
+    {
+      "percentage" : 1.6,
+      "parent1" : "red roses",
+      "parent1Special" : true,
+      "parent2" : "red roses",
+      "parent2Special" : true,
+      "child" : "blue roses",
+      "childSpecial" : true 
+    }
+  ],
+  "pansies" : [
+    {
+      "percentage" : 100,
+      "parent1" : "red pansies",
+      "parent1Special" : false,
+      "parent2" : "yellow pansies",
+      "parent2Special" : false,
+      "child" : "orange pansies",
+      "childSpecial" : true
+    },
+    {
+      "percentage" : 25,
+      "parent1" : "white pansies",
+      "parent1Special" : false,
+      "parent2" : "white pansies",
+      "parent2Special" : false,
+      "child" : "blue pansies",
+      "childSpecial" : true
+    },
+    {
+      "percentage" : 100,
+      "parent1" : "blue pansies",
+      "parent1Special" : true,
+      "parent2" : "red pansies",
+      "parent2Special" : false,
+      "child" : "red pansies",
+      "childSpecial" : true
+    },
+    {
+      "percentage" : 6,
+      "parent1" : "red pansies",
+      "parent1Special" : true,
+      "parent2" : "red pansies",
+      "parent2Special" : true,
+      "child" : "purple pansies",
+      "childSpecial" :  true
+    }
+  ],
+  "windflowers": [
+    {
+      "percentage" : 100,
+      "parent1" : "red windflowers",
+      "parent1Special" : false,
+      "parent2" : "orange windflowers",
+      "parent2Special" : false,
+      "child" : "pink windflowers",
+      "childSpecial" :  true
+    },
+    {
+      "percentage" : 25,
+      "parent1" : "white windflowers",
+      "parent1Special" : false,
+      "parent2" : "white windflowers",
+      "parent2Special" : false,
+      "child" : "blue windflowers",
+      "childSpecial" :  true
+    },
+    {
+      "percentage" : 100,
+      "parent1" : "red windflowers",
+      "parent1Special" : false,
+      "parent2" : "blue windflowers",
+      "parent2Special" : true,
+      "child" : "red windflowers",
+      "childSpecial" :  true
+    },
+    {
+      "percentage" : 100,
+      "parent1" : "blue windflowers",
+      "parent1Special" : true,
+      "parent2" : "pink windflowers",
+      "parent2Special" : true,
+      "child" : "red windflowers",
+      "childSpecial" :  true
+    },
+    {
+      "percentage" : 25,
+      "parent1" : "pink windflowers",
+      "parent1Special" : true,
+      "parent2" : "blue windflowers",
+      "parent2Special" : true,
+      "child" : "pink windflowers",
+      "childSpecial" :  true
+    },
+    {
+      "percentage" : 6,
+      "parent1" : "red windflowers",
+      "parent1Special" : true,
+      "parent2" : "red windflowers",
+      "parent2Special" : true,
+      "child" : "purple windflowers",
+      "childSpecial" :  true
+    },
+    {
+      "percentage" : 6,
+      "parent1" : "pink windflowers",
+      "parent1Special" : true,
+      "parent2" : "pink windflowers",
+      "parent2Special" : true,
+      "child" : "purple windflowers",
+      "childSpecial" :  true
+    }
+  ],
+  "hyacinths":[
+    {
+      "percentage" : 50,
+      "parent1" : "red hyacinths",
+      "parent1Special" : false,
+      "parent2" : "yellow hyacinths",
+      "parent2Special" : false,
+      "child" : "orange hyacinths",
+      "childSpecial" :  true
+    },
+    {
+      "percentage" : 50,
+      "parent1" : "white hyacinths",
+      "parent1Special" : false,
+      "parent2" : "red hyacinths",
+      "parent2Special" : false,
+      "child" : "pink hyacinths",
+      "childSpecial" :  true
+    },
+    {
+      "percentage" : 25,
+      "parent1" : "white hyacinths",
+      "parent1Special" : false,
+      "parent2" : "white hyacinths",
+      "parent2Special" : false,
+      "child" : "blue hyacinths",
+      "childSpecial" :  true
+    },
+    {
+      "percentage" : 6,
+      "parent1" : "orange hyacinths",
+      "parent1Special" : true,
+      "parent2" : "orange hyacinths",
+      "parent2Special" : true,
+      "child" : "purple hyacinths",
+      "childSpecial" :  true
+    },
+    {
+      "percentage" : 25,
+      "parent1" : "blue hyacinths",
+      "parent1Special" : "island",
+      "parent2" : "blue hyacinths",
+      "parent2Special" : "island",
+      "child" : "purple hyacinths",
+      "childSpecial" : true
+    }
+  ],
+  "lilies":[
+    {
+      "percentage" : 50,
+      "parent1" : "red lilies",
+      "parent1Special" : false,
+      "parent2" : "yellow lilies",
+      "parent2Special" : false,
+      "child" : "orange lilies",
+      "childSpecial" :  true
+    },
+    {
+      "percentage" : 25,
+      "parent1" : "red lilies",
+      "parent1Special" : false,
+      "parent2" : "red lilies",
+      "parent2Special" : false,
+      "child" : "pink lilies",
+      "childSpecial" :  true
+    },
+    {
+      "percentage" : 50,
+      "parent1" : "red lilies",
+      "parent1Special" : false,
+      "parent2" : "white lilies",
+      "parent2Special" : false,
+      "child" : "pink lilies",
+      "childSpecial" : true 
+    },
+    {
+      "percentage" : 25,
+      "parent1" : "red lilies",
+      "parent1Special" : false,
+      "parent2" : "red lilies",
+      "parent2Special" : false,
+      "child" : "black lilies",
+      "childSpecial" :  true
+    }
+  ],
+  "cosmos":[
+    {
+      "percentage" : 100,
+      "parent1" : "red cosmos",
+      "parent1Special" : false,
+      "parent2" : "yellow cosmos",
+      "parent2Special" : false,
+      "child" : "orange cosmos",
+      "childSpecial" :  true
+    },
+    {
+      "percentage" : 100,
+      "parent1" : "red cosmos",
+      "parent1Special" : false,
+      "parent2" : "white cosmos",
+      "parent2Special" : true,
+      "child" : "pink cosmos",
+      "childSpecial" :  true
+    },
+    {
+      "percentage" : 25,
+      "parent1" : "orange cosmos",
+      "parent1Special" : true,
+      "parent2" : "orange cosmos",
+      "parent2Special" : true,
+      "child" : "black cosmos",
+      "childSpecial" :  true
+    }
+  ],
+  "mums":[
+    {
+      "percentage" : 100,
+      "parent1" : "white mums",
+      "parent1Special" : false,
+      "parent2" : "red mums",
+      "parent2Special" : false,
+      "child" : "pink mums",
+      "childSpecial" : true
+    },
+    {
+      "percentage" : 25,
+      "parent1" : "white mums",
+      "parent1Special" : false,
+      "parent2" : "white mums",
+      "parent2Special" : false,
+      "child" : "purple mums",
+      "childSpecial" : true
+    },
+    {
+      "percentage" : 100,
+      "parent1" : "red mums",
+      "parent1Special" : false,
+      "parent2" : "yellow mums",
+      "parent2Special" : false,
+      "child" : "yellow mums",
+      "childSpecial" : true
+    },
+    {
+      "percentage" : 6.25,
+      "parent1" : "yellow mums",
+      "parent1Special" : true,
+      "parent2" : "yellow mums",
+      "parent2Special" : true,
+      "child" : "green mums",
+      "childSpecial" : true
+    },
+    {
+      "percentage" : 25,
+      "parent1" : "yellow mums",
+      "parent1Special" : true,
+      "parent2" : "yellow mums",
+      "parent2Special" : true,
+      "child" : "purple mums",
+      "childSpecial" : true
+    },
+    {
+      "percentage" : 25,
+      "parent1" : "purple mums",
+      "parent1Special" : true,
+      "parent2" : "purple mums",
+      "parent2Special" : true,
+      "child" : "green mums",
+      "childSpecial" : true
+    }
+  ],
+  "tulips":[
+    {
+      "percentage" : 50,
+      "parent1" : "red tulips",
+      "parent1Special" : false,
+      "parent2" : "yellow tulips",
+      "parent2Special" : false,
+      "child" : "orange tulips",
+      "childSpecial" : true
+    },
+    {
+      "percentage" : 25,
+      "parent1" : "red tulips",
+      "parent1Special" : false,
+      "parent2" : "red tulips",
+      "parent2Special" : false,
+      "child" : "black tulips",
+      "childSpecial" : true
+    },
+    {
+      "percentage" : false,
+      "parent1" : "white tulips",
+      "parent1Special" : false,
+      "parent2" : "red tulips",
+      "parent2Special" : false,
+      "child" : "pink tulips",
+      "childSpecial" : true
+    },
+    {
+      "percentage" : 12,
+      "parent1" : "orange tulips",
+      "parent1Special" : true,
+      "parent2" : "orange tulips",
+      "parent2Special" : true,
+      "child" : "purple tulips",
+      "childSpecial" : true
+    }
+  ]
+}

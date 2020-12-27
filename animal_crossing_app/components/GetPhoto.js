@@ -128,14 +128,40 @@ export function getPhotoCornerSize(name){
   }
 }
 
-export function getMaterialImage(material){
-  var data = require("../assets/data/other.json");
-  for(var index = 0; index < data.length; index++){
-    if(data[index]["Name"]===material){
-      return data[index]["Inventory Image"]
-    }
+export function getMaterialImage(material, reduceComplexity=false, flowerSingle=false){
+  var materialStripped = material;
+  if(flowerSingle){
+    materialStripped = materialStripped.replace("roses", "rose");
+    materialStripped = materialStripped.replace("pansies", "pansy");
+    materialStripped = materialStripped.replace("windflowers", "windflower");
+    materialStripped = materialStripped.replace("hyacinths", "hyacinth");
+    materialStripped = materialStripped.replace("lilies", "lily");
+    materialStripped = materialStripped.replace("cosmos", "cosmos");
+    materialStripped = materialStripped.replace("mums", "mum");
+    materialStripped = materialStripped.replace("tulips", "tulip");
   }
-  return "";
+  var data = require("../assets/data/other.json");
+  if(reduceComplexity){
+    materialStripped = materialStripped.replace("-","");
+    materialStripped = materialStripped.replace(" ","");
+    for(var index = 0; index < data.length; index++){
+      var dataStripped = data[index]["Name"];
+      dataStripped = dataStripped.replace("-","");
+      dataStripped = dataStripped.replace(" ","");
+      if(dataStripped===materialStripped){
+        return data[index]["Inventory Image"]
+      }
+    }
+    return "";
+  } else {
+    for(var index = 0; index < data.length; index++){
+      if(data[index]["Name"]===material){
+        return data[index]["Inventory Image"]
+      }
+    }
+    return "";
+  }
+  
 }
 
 export function getSculpturePhotoFake(name){

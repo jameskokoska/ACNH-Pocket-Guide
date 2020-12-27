@@ -12,7 +12,6 @@ import MuseumPage from './pages/MuseumPage';
 import VillagersPage from './pages/VillagersPage';
 import HomePage from './pages/HomePage';
 import SettingsPage from './pages/SettingsPage';
-import ProfilePage from './pages/ProfilePage';
 import ItemsPage from './pages/ItemsPage';
 import AllItemsPage from './pages/AllItemsPage';
 import TestPage from './pages/TestPage';
@@ -24,6 +23,7 @@ import TextFont from './components/TextFont';
 import LottieView from 'lottie-react-native';
 import Popup from './components/Popup';
 import CreditsPage from './pages/CreditsPage';
+import FlowerPage from './pages/FlowerPage';
 import {getStorage, getStorageData, settings, loadGlobalData} from './LoadJsonData';
 import {ExportFile, LoadFile} from './components/LoadFile';
 import Onboard from './pages/Onboard';
@@ -66,7 +66,7 @@ class App extends Component {
     this.random = Math.random();
     this.state = {
       loaded: false,
-      currentPage: 10,
+      currentPage: 9,
       open:false,
       fadeInTitle:true,
     }
@@ -168,6 +168,8 @@ class App extends Component {
       currentPageView = <View><ExportFile/><LoadFile/></View>
     } else if (this.state.currentPage===7){
       currentPageView = <VillagersPage/>
+    } else if (this.state.currentPage===9){
+      currentPageView = <FlowerPage/>
     } else if (this.state.currentPage===9){
       currentPageView = <ActiveTime displayText={"helloo"} displayText2={"yo"}/>
     } else if (this.state.currentPage===10){
