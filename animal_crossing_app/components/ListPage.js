@@ -16,6 +16,10 @@ import BugPopup from "../popups/BugPopup"
 import ArtPopup from "../popups/ArtPopup"
 import VillagerPopup from "../popups/VillagerPopup"
 import ClothingPopup from "../popups/ClothingPopup"
+import FurniturePopup from "../popups/FurniturePopup"
+import FloorWallsPopup from "../popups/FloorWallsPopup"
+import ToolsPopup from "../popups/ToolsPopup"
+import RecipesPopup from "../popups/RecipesPopup"
 
 
 const {diffClamp} = Animated;
@@ -97,6 +101,12 @@ export default (props) =>{
         if(search==="Search" || search==="" || item.[props.searchKey[j][x]].toLowerCase().includes(search.toLowerCase())){
           //Search result found...
           if(props.showVariations[j]===false){
+            //If recipes item page, and its not DIY, remove
+            if(props.recipes){
+              if(item["DIY"]!=="Yes"){
+                continue;
+              }
+            }
             if(item.[props.textProperty[j]]===previousVariation){
               previousVariation = item.[props.textProperty[j]];
             } else {
@@ -244,6 +254,14 @@ class BottomSheetRender extends Component{
         popUpContainer = <VillagerPopup item={this.state.item}/>
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="ClothingPopup"){
         popUpContainer = <ClothingPopup item={this.state.item}/>
+      } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="FurniturePopup"){
+        popUpContainer = <FurniturePopup item={this.state.item}/>
+      } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="FloorWallsPopup"){
+        popUpContainer = <FloorWallsPopup item={this.state.item}/>
+      } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="ToolsPopup"){
+        popUpContainer = <ToolsPopup item={this.state.item}/>
+      } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="RecipesPopup"){
+        popUpContainer = <RecipesPopup item={this.state.item}/>
       }
     }
     
