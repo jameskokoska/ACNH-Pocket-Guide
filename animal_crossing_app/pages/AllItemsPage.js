@@ -227,7 +227,6 @@ class AllItemsPage extends Component {
             ["furnitureCheckList","Name","Variation","Pattern"],
             ["furnitureCheckList","Name","Variation","Pattern"],
             ["furnitureCheckList","Name","Variation","Pattern"],
-            ["furnitureCheckList","Name","Variation","Pattern"],
             ["furnitureCheckList","Name"],
             ["clothingCheckList","Name","Variation"],
             ["clothingCheckList","Name","Variation"],

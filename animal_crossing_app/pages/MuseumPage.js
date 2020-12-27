@@ -150,7 +150,7 @@ const ArtRoute = () => (
     popUpCornerImageProperty={["Source"]}
     popUpCornerImageLabelProperty={["Source"]}
     popUpPhraseProperty={["Artist"]}
-    popUpContainer={[["ArtPopup",1000]]}
+    popUpContainer={[["ArtPopup",1200]]}
   />
 )
 

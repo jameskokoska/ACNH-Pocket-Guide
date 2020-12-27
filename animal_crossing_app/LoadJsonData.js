@@ -121,6 +121,7 @@ export function updateDataGlobal(datakeyName, index, collected, dataSet){
 }
 
 export function checkOff(item, collected, dataGlobalName){
+  console.log(item.checkListKey);
   if(collected==="false"){
     Vibration.vibrate([0,10,220,20]);
     global.collectionList.push(item.checkListKey)
