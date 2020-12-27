@@ -25,9 +25,11 @@ class HomePage extends Component {
     var bugsCount = countCollection("bugCheckList");
     var bugsPercentage = bugsCount/80 * 100;
     var fossilCount = countCollection("fossilCheckList");
-    var fossilPercentage = bugsCount/73 * 100;
+    var fossilPercentage = fossilCount/73 * 100;
     var artCount = countCollection("artCheckList");
     var artPercentage = artCount/43 * 100;
+    var musicCount = countCollection("songCheckList");
+    var musicPercentage = musicCount/95 * 100;
 
     var todayEvents = getEventsDay(new Date());
     var tomorrowEvents = getEventsDay(addDays(new Date(), 1));
@@ -106,6 +108,7 @@ class HomePage extends Component {
           <ProgressContainer color={colors.bugAppBar[0]} backgroundColor={colors.white[colors.mode]} textColor={colors.textBlack[colors.mode]} percentage={bugsPercentage} image={require("../assets/icons/bugs.png")} text={"Bugs " + bugsCount + "/80"}/>
           <ProgressContainer color={colors.fossilAppBar[0]} backgroundColor={colors.white[colors.mode]} textColor={colors.textBlack[colors.mode]} percentage={fossilPercentage} image={require("../assets/icons/bones.png")} text={"Fossils " + fossilCount + "/73"}/>
           <ProgressContainer color={colors.artAppBar[0]} backgroundColor={colors.white[colors.mode]} textColor={colors.textBlack[colors.mode]} percentage={artPercentage} image={require("../assets/icons/colorPalette.png")} text={"Art " + artCount + "/43"}/>
+          <ProgressContainer color={colors.musicAppBar[0]} backgroundColor={colors.white[colors.mode]} textColor={colors.textBlack[colors.mode]} percentage={musicPercentage} image={require("../assets/icons/music.png")} text={"Songs " + musicCount + "/95"}/>
           <View style={{height: 15}}/>
         </HomeContentArea>
         <HomeContentArea backgroundColor={colors.sectionBackground2[colors.mode]} accentColor={colors.storeHoursColor[colors.mode]} title="Store Hours" titleColor={colors.storeHoursColor[colors.modeReverse]}>
