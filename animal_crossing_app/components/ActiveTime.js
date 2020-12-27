@@ -1,18 +1,11 @@
 import React, { Component } from "react";
-import {AppRegistry, StyleSheet, ScrollView , StatusBar, Text, View} from "react-native";
+import {AppRegistry, StyleSheet, ScrollView , StatusBar, Text, View, Dimensions} from "react-native";
 import colors from '../Colors.js';
-// import PieChart from 'react-native-pie-chart';
+import Svg, { Circle, Rect } from 'react-native-svg';
 
 class ActiveTime extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-
-    };
-  }
-
-  componentDidMount(){
-    
   }
 
   // render() {
@@ -27,33 +20,29 @@ class ActiveTime extends Component {
   // }
 
   render() {
-    const chart_wh = 250
-    const series = [123, 321, 123, 789, 537]
-    const sliceColor = ['#F44336','#2196F3','#FFEB3B', '#4CAF50', '#FF9800']
- 
+    const width = 50;
+    const size = width - 32;
+    const strokeWidth = 50;
+    const radius = (size - strokeWidth) / 2;
+    const circumference = radius * 2 * Math.PI;
+
     return (
-      <ScrollView style={{flex: 1}}>
-        <View style={styles.container}>
-          <StatusBar
-            hidden={true}
-          />
-          <Text style={styles.title}>Basic</Text>
-          <PieChart
-            chart_wh={chart_wh}
-            series={series}
-            sliceColor={sliceColor}
-          />
-          <Text style={styles.title}>Doughnut</Text>
-          <PieChart
-            chart_wh={chart_wh}
-            series={series}
-            sliceColor={sliceColor}
-            doughnut={true}
-            coverRadius={0.45}
-            coverFill={'#FFF'}
-          />
-        </View>
-      </ScrollView>
+      // <Svg height={size} width={size}>
+      //   <Circle
+      //     cx={size / 2}
+      //     cy={size / 2}
+      //     r={radius}
+      //     stroke="blue"
+      //   />
+      // </Svg>
+      <Svg height="1000" width="1000">
+        <Circle 
+        x={size/2}
+        cy={size/2}
+        r="50"
+        fill="pink"
+        />
+      </Svg>
     );
   }
 }
@@ -70,14 +59,6 @@ const styles = StyleSheet.create({
     elevation: 5,
     marginTop: 100
   },
-  container: {
-    flex: 1,
-    alignItems: 'center'
-  },
-  title: {
-    fontSize: 24,
-    margin: 10
-  }
 })
 
 export default ActiveTime;
