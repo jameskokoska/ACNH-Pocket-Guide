@@ -13,11 +13,8 @@ import VillagersPage from './pages/VillagersPage';
 import HomePage from './pages/HomePage';
 import SettingsPage from './pages/SettingsPage';
 import ItemsPage from './pages/ItemsPage';
-<<<<<<< HEAD
 import TestPage from './pages/TestPage';
-=======
 import CraftingPage from './pages/CraftingPage';
->>>>>>> 42ddb44b3cae943843af76056145951bc7c72c7d
 import FadeInOut from './components/FadeInOut';
 import Check from './components/Check';
 import AsyncStorage from '@react-native-async-storage/async-storage';
