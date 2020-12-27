@@ -320,7 +320,7 @@ export const settings = [
     "currentValue" : "",
     "picture" : require("./assets/icons/hourglass.png"),
     "displayName" : "Skip loading screen",
-    "description" : "If true, the app will load more efficiently and therefore will skip most of the opening plane/balloon animation",
+    "description" : "If enabled, the app will load more efficiently and therefore will skip most of the opening plane/balloon animation",
   },
   {
     "keyName" : "settingsListOnlyActiveCreatures",
@@ -328,7 +328,7 @@ export const settings = [
     "currentValue" : "",
     "picture" : require("./assets/icons/clockIcon.png"),
     "displayName" : "List only active creatures",
-    "description" : "",
+    "description" : "Only creatures that can be caught in the current month will be displayed.",
   },
   {
     "keyName" : "settingsShowVariation",
@@ -336,7 +336,7 @@ export const settings = [
     "currentValue" : "",
     "picture" : require("./assets/icons/dice.png"),
     "displayName" : "Show variations in lists",
-    "description" : "",
+    "description" : "Show the different colours/patterns of furniture and clothing items in the list.",
   },
   {
     "keyName" : "settingsCreaturesLeavingWarning",
@@ -344,7 +344,7 @@ export const settings = [
     "currentValue" : "",
     "picture" : require("./assets/icons/alarmClock.png"),
     "displayName" : "Creatures leaving warning",
-    "description" : "",
+    "description" : "Display a warning colour around creatures that won't be able to be caught in the next month.",
   },
   {
     "keyName" : "settingsShowFAB",
@@ -352,7 +352,7 @@ export const settings = [
     "currentValue" : "",
     "picture" : require("./assets/icons/buttonIcon.png"),
     "displayName" : "Show floating menu button",
-    "description" : "",
+    "description" : "Choose to display the menu button in the bottom right corner. The menu can be opened by dragging from the left of the screen.",
   },
   {
     "keyName" : "settingsTabBarPosition",
@@ -360,6 +360,6 @@ export const settings = [
     "currentValue" : "",
     "picture" : require("./assets/icons/scroll.png"),
     "displayName" : "Category labels on bottom",
-    "description" : "Show the category tabs on the bottom, or top of the screen",
+    "description" : "Show the category tabs on the bottom, or top of the screen in list pages with multiple categories.",
   },
 ]

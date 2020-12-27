@@ -9,6 +9,7 @@ import * as FileSystem from 'expo-file-system';
 import * as Permissions from 'expo-permissions';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {getStorage, collectionListSave, loadGlobalData} from "../LoadJsonData"
+import colors from "../Colors"
 
 class LoadFile extends Component {
   constructor() {
@@ -62,7 +63,7 @@ class LoadFile extends Component {
         />
         <ButtonComponent
           text={"Load Data"}
-          color={"#2196F3"}
+          color={colors.okButton[colors.mode]}
           vibrate={5}
           onPress={() => {
             this.setState({open:!this.state.open});
@@ -92,7 +93,7 @@ class ExportFile extends Component {
         />
         <ButtonComponent
         text={"Export Data"}
-        color={"#2196F3"}
+        color={colors.okButton[colors.mode]}
         vibrate={5}
         onPress={async () => {
           var data = await getStorage("collectedString","");
