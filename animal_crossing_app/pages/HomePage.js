@@ -47,6 +47,11 @@ class HomePage extends Component {
     if(thisWeekEvents.length>0){
       thisWeekTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[colors.mode]}]}>This Week</TextFont>
     }
+
+    var landscape = <LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, zIndex:1, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/home.json')}/>
+    if(new Date().getMonth()===11||new Date().getMonth()===0){
+      landscape = <LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, zIndex:1, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeSnow.json')}/>
+    }
     return <>
       <ScrollView>
         <View style={{height:45}}/>
@@ -115,22 +120,7 @@ class HomePage extends Component {
         </HomeContentArea>
       </ScrollView>
       <View style={{position:"absolute", width: "100%", height:"100%", zIndex:-5}}>
-        <LottieView 
-          autoPlay
-          loop
-          style={{
-            width: 425,
-            height: 232,
-            position:'absolute',
-            top:30,
-            zIndex:1,
-            transform: [
-              { scale: 1.25 },
-              { rotate: '0deg'},
-            ],
-          }} 
-          source={require('../assets/homeSnow.json')}
-        />
+        {landscape}
         <View style={[styles.homeScreenBackgroundTop,{backgroundColor:colors.skyColor[colors.mode]}]}>
         </View>
         <View style={[styles.homeScreenBackgroundBottom,{backgroundColor:colors.grassColor[colors.mode]}]}>

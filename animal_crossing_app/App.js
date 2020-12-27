@@ -12,6 +12,7 @@ import MuseumPage from './pages/MuseumPage';
 import VillagersPage from './pages/VillagersPage';
 import HomePage from './pages/HomePage';
 import SettingsPage from './pages/SettingsPage';
+import ProfilePage from './pages/ProfilePage';
 import ItemsPage from './pages/ItemsPage';
 import AllItemsPage from './pages/AllItemsPage';
 import CraftingPage from './pages/CraftingPage';
@@ -70,7 +71,8 @@ class App extends Component {
     }
   }
   async componentDidMount(){
-    // await AsyncStorage.setItem("firstLogin", "true");
+    await AsyncStorage.setItem("firstLogin", "true");
+    
     this.backHandler = BackHandler.addEventListener(
       "hardwareBackPress",
       this.openDrawer
