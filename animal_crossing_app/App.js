@@ -66,7 +66,7 @@ class App extends Component {
     this.random = Math.random();
     this.state = {
       loaded: false,
-      currentPage: 0,
+      currentPage: 10,
       open:false,
       fadeInTitle:true,
     }
@@ -92,11 +92,9 @@ class App extends Component {
       global.settingsCurrent[i]["currentValue"] = await getStorage(settings[i]["keyName"],settings[i]["defaultValue"]);
       //console.log(global.settingsCurrent[i]["keyName"])
     }
-    
-    
+    global.customTime = new Date(await getStorage("customDate",new Date().toString()));
     console.log("DONE Loading")
     var splashScreenDelay = global.settingsCurrent[1].currentValue==="true" ? 0 : 500
-    console.log(splashScreenDelay)
     this.timeoutHandle = setTimeout(()=>{
       this.setState({
         fadeInTitle: false,

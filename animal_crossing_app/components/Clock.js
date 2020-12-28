@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, Image} from 'react-native';
 import TextFont from './TextFont';
-import {getMonth, getWeekDayShort} from './DateFunctions';
+import {getCurrentDateObject, getMonth, getWeekDayShort} from './DateFunctions';
 
 class Clock extends Component {
   constructor(props){
     super(props);
-    var month = getMonth(new Date().getMonth());
-    var dayNum = new Date().getDate().toString();
-    var weekDay = getWeekDayShort(new Date().getDay()) + ".";
-    var hours = new Date().getHours();
-    var minutes = new Date().getMinutes();
+    var month = getMonth(getCurrentDateObject().getMonth());
+    var dayNum = getCurrentDateObject().getDate().toString();
+    var weekDay = getWeekDayShort(getCurrentDateObject().getDay()) + ".";
+    var hours = getCurrentDateObject().getHours();
+    var minutes = getCurrentDateObject().getMinutes();
     var afternoon = false;
     if(hours>12){
       hours=hours-12;
@@ -32,11 +32,11 @@ class Clock extends Component {
   componentDidMount(){
     this.timeInterval = setInterval(() => {
 
-      var month = getMonth(new Date().getMonth());
-      var dayNum = new Date().getDate().toString();
-      var weekDay = getWeekDayShort(new Date().getDay()) + ".";
-      var hours = new Date().getHours();
-      var minutes = new Date().getMinutes();
+      var month = getMonth(getCurrentDateObject().getMonth());
+      var dayNum = getCurrentDateObject().getDate().toString();
+      var weekDay = getWeekDayShort(getCurrentDateObject().getDay()) + ".";
+      var hours = getCurrentDateObject().getHours();
+      var minutes = getCurrentDateObject().getMinutes();
       var afternoon = false;
       if(hours>12){
         hours=hours-12;

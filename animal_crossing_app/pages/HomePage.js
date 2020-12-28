@@ -10,6 +10,7 @@ import colors from '../Colors'
 import {capitalize,countCollection} from "../LoadJsonData"
 import TextFont from "../components/TextFont"
 import ActiveCreatures from "../components/ActiveCreatures"
+import {getCurrentDateObject} from '../components/DateFunctions';
 
 function addDays(date, days) {
   var result = new Date(date);
@@ -32,11 +33,11 @@ class HomePage extends Component {
     var musicCount = countCollection("songCheckList");
     var musicPercentage = musicCount/95 * 100;
 
-    var todayEvents = getEventsDay(new Date());
-    var tomorrowEvents = getEventsDay(addDays(new Date(), 1));
+    var todayEvents = getEventsDay(getCurrentDateObject());
+    var tomorrowEvents = getEventsDay(addDays(getCurrentDateObject(), 1));
     var thisWeekEvents = [];
     for(var i=2; i<7; i++){
-      thisWeekEvents = thisWeekEvents.concat(getEventsDay(addDays(new Date(), i)));
+      thisWeekEvents = thisWeekEvents.concat(getEventsDay(addDays(getCurrentDateObject(), i)));
     }
     var todayTitle=<View/>
     if(todayEvents.length>0){
@@ -52,7 +53,7 @@ class HomePage extends Component {
     }
 
     var landscape = <LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, zIndex:1, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/home.json')}/>
-    if(new Date().getMonth()===11||new Date().getMonth()===0){
+    if(getCurrentDateObject().getMonth()===11||getCurrentDateObject().getMonth()===0){
       landscape = <LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, zIndex:1, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeSnow.json')}/>
     }
     return <>

@@ -375,4 +375,20 @@ export const settings = [
     "displayName" : "Category labels on bottom",
     "description" : "Show the category tabs on the bottom, or top of the screen in list pages with multiple categories.",
   },
+  {
+    "keyName" : "settingsScaleUI",
+    "defaultValue" : "false",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/clockIcon.png"),
+    "displayName" : "User Interface Scale",
+    "description" : "Use the recommended interface scale, or the system one when enabled",
+  },
+  {
+    "keyName" : "settingsUseCustomDate",
+    "defaultValue" : "false",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/clockIcon.png"),
+    "displayName" : "Use a custom date",
+    "description" : "Use the custom date selected when loading time-specific data.",
+  },
 ]

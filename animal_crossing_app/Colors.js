@@ -72,6 +72,7 @@ const colors = {
     selectSettings : ["#cdd8df","#72818b"],
     selectAbout : ["#d5ddd6","#7d8986"],
     okButton : ["#2196f3","#006db3"],
+    dateButton : ["#81c784","#519657"],
     cancelButton : ["#d32f2f","#ab000d"],
     closedStore : ["#ffd9d9","#654848"],
     openStore : ["#81c784","#519657"],
