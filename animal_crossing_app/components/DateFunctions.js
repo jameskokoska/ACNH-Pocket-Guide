@@ -8,7 +8,7 @@ function getMonth(currentMonth){
 }
 
 function getMonthShort(currentMonth){
-  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan',];
   return months[currentMonth];
 }
 

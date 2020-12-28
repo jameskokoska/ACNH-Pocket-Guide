@@ -18,6 +18,7 @@ const colors = {
     white : ["#FFFFFF","#2B2B2B"],
     checkRed : ["#F8DFE3","#805D62"],
     checkGreen : ["#A0DDA1","#557E55"],
+    creaturesLeavingBG : ["#E2B0B0","#6E3333"],
     fishAppBar : ["#A2D0F7","#536991"],
     fishAccent : ["#E3F2FD","#434C53"],
     fishText : ["#3F51B5","#9AA2D4"],

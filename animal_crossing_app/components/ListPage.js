@@ -53,6 +53,7 @@ export default (props) =>{
       popUpPhraseProperty={props.popUpPhraseProperty}
       popUpContainer={props.popUpContainer}
       checkType={props.checkType}
+      leaveWarning={props.leaveWarning}
     />
   )
   const ref = useRef(null);
@@ -114,6 +115,16 @@ export default (props) =>{
               var currentMonthShort = getMonthShort(new Date().getMonth());
               console.log(item[hemispherePre+currentMonthShort]);
               if(!isActive(item[hemispherePre+currentMonthShort])){
+                continue;
+              }
+            }
+            //If list only active creatures for the month, don't add it if === NA
+            console.log(global.settingsCurrent[2])
+            if(props.activeCreaturesMonth && global.settingsCurrent[2]["currentValue"] === "true"){
+              var hemispherePre = global.settingsCurrent[0]["currentValue"] === "true" ? "NH " : "SH "
+              var currentMonthShort = getMonthShort(new Date().getMonth());
+              console.log(item[hemispherePre+currentMonthShort]);
+              if(item[hemispherePre+currentMonthShort]==="NA"){
                 continue;
               }
             }

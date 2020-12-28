@@ -15,6 +15,8 @@ import Check from './Check';
 import CachedImage from 'react-native-expo-cached-image';
 import {checkOff, capitalize, commas, removeBrackets} from "../LoadJsonData"
 import {getPhotoShadow} from "./GetPhoto"
+import {getMonthShort} from "./DateFunctions"
+import colors from "../Colors"
 
 const {width} = Dimensions.get('window');
 
@@ -42,13 +44,35 @@ class ListItem extends Component{
     } else {
       disablePopup=this.props.disablePopup[this.props.item.dataSet];
     }
+
+    var boxColor = this.props.boxColor;
+    if(this.props.leaveWarning){
+      var hemispherePre = global.settingsCurrent[0]["currentValue"] === "true" ? "NH " : "SH "
+      var nextMonthShort = getMonthShort(new Date().getMonth()+1);
+      var currentMonthShort = getMonthShort(new Date().getMonth());
+      
+      if(this.props.item[hemispherePre+nextMonthShort]==="NA" && this.props.item[hemispherePre+currentMonthShort]!=="NA"){
+        boxColor = colors.creaturesLeavingBG[colors.mode];
+      }
+    }
+
+    var textProperty2Text;
+    if(this.props.textProperty2!==undefined){
+      textProperty2Text = this.props.textProperty2[this.props.item.dataSet];
+    }
+    if(this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]==="creatureTime"){
+      var hemispherePre = global.settingsCurrent[0]["currentValue"] === "true" ? "NH " : "SH "
+      var currentMonthShort = getMonthShort(new Date().getMonth());
+      textProperty2Text = this.props.item[hemispherePre+currentMonthShort];
+    }
+
     if(this.props.gridType==="smallGrid"){
       var textProperty2Component = <View/>;
       if(this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]!==""){
         if(this.props.textProperty2[this.props.item.dataSet]==="(DIY)")
           textProperty2Component = <TextFont bold={false} style={{textAlign:'center', color:this.props.labelColor, fontSize:12}}>(DIY)</TextFont>
         else 
-          textProperty2Component = <TextFont bold={false} style={{textAlign:'center', color:this.props.labelColor, fontSize:12}}>{capitalize(this.props.item.[this.props.textProperty2[this.props.item.dataSet]])}</TextFont>
+          textProperty2Component = <TextFont bold={false} style={{textAlign:'center', color:this.props.labelColor, fontSize:12}}>{capitalize(textProperty2Text)}</TextFont>
       }
       return (
         <View style={styles.gridWrapper}>
@@ -66,7 +90,7 @@ class ListItem extends Component{
               }
             }}
           >
-            <View style={[styles.gridBox, {backgroundColor:this.props.boxColor}]}>
+            <View style={[styles.gridBox, {backgroundColor:boxColor}]}>
               <Check checkType={this.props.checkType} style={{position:'absolute', right: -9, top: -9, zIndex:10}} play={this.state.collected==="true"} width={53} height={53} disablePopup={disablePopup}/>
               <CachedImage
                 style={styles.gridBoxImage}
@@ -99,7 +123,7 @@ class ListItem extends Component{
               }
             }}
           >
-            <View style={[styles.gridBoxLarge, {backgroundColor:this.props.boxColor}]}>
+            <View style={[styles.gridBoxLarge, {backgroundColor:boxColor}]}>
               <Check checkType={this.props.checkType} style={{position:'absolute', right: -8, top: -10, zIndex:10}} play={this.state.collected==="true"} width={53} height={53} disablePopup={disablePopup}/>
               <CachedImage
                 style={styles.gridBoxImageLarge}
@@ -137,7 +161,7 @@ class ListItem extends Component{
               }
             }}
           >
-            <View style={[styles.gridBoxLarge, {backgroundColor:this.props.boxColor}]}>
+            <View style={[styles.gridBoxLarge, {backgroundColor:boxColor}]}>
               <Check checkType={this.props.checkType} style={{position:'absolute', right: -8, top: -10, zIndex:10}} play={this.state.collected==="true"} width={53} height={53} disablePopup={disablePopup}/>
               <CachedImage
                 style={styles.gridBoxImageLargeSmaller}
@@ -174,7 +198,7 @@ class ListItem extends Component{
               }
             }}
           >
-            <View style={[styles.row,{backgroundColor:this.props.boxColor}]}>
+            <View style={[styles.row,{backgroundColor:boxColor}]}>
               <View style={[styles.rowImageBackground,{backgroundColor:this.props.accentColor}]}>
                 <CachedImage
                   style={styles.rowImage}
@@ -188,7 +212,7 @@ class ListItem extends Component{
                   <TextFont bold={true} style={{fontSize:20, color:this.props.labelColor}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
                 </View>
                 <View style={styles.rowTextBottom}>
-                  <TextFont bold={true} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(removeBrackets(this.props.item.[this.props.textProperty2[this.props.item.dataSet]]))}</TextFont>
+                  <TextFont bold={true} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(removeBrackets(textProperty2Text))}</TextFont>
                 </View>
                 <View style={styles.rowTextBottom}>
                   <TextFont bold={true} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(removeBrackets(this.props.item.[this.props.textProperty3[this.props.item.dataSet]]))}</TextFont>

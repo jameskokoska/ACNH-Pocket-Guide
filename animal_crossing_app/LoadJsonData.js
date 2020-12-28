@@ -357,7 +357,7 @@ export const settings = [
     "currentValue" : "",
     "picture" : require("./assets/icons/alarmClock.png"),
     "displayName" : "Creatures leaving warning",
-    "description" : "Display a warning colour around creatures that won't be able to be caught in the next month.",
+    "description" : "Display a red warning background colour around creatures that won't be able to be caught in the next month.",
   },
   {
     "keyName" : "settingsShowFAB",
