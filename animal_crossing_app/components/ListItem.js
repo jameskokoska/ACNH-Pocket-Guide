@@ -316,7 +316,6 @@ const styles = StyleSheet.create({
     resizeMode:'contain',
   },
   gridBoxImageLarge: {
-    backgroundColor:"red",
     height: "75%",
     width: "80%",
     borderRadius:5,
