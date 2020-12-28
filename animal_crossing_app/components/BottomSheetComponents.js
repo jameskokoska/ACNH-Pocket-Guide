@@ -9,6 +9,9 @@ import {getPhotoCorner, getMaterialImage} from "./GetPhoto"
 
 export class CircularImage extends Component {
   render() {
+    if(this.props.popUpCenterImage==="none"){
+      return <View/>
+    }
     return <View style={{width:"100%", alignItems: 'center'}}>
       <View style={[styles.rowImageBackground,{backgroundColor:this.props.accentColor}]}>
         <CachedImage
@@ -234,7 +237,7 @@ const styles = StyleSheet.create({
   infoLineImageItem:{
     width: 40,
     height: 40,
-    marginRight: -8,
+    margin: -5,
     resizeMode:'contain',
   },
   infoLineTitle:{

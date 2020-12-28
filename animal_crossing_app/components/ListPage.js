@@ -156,6 +156,13 @@ export default (props) =>{
     />;
   }
 
+  // //if bottom sheet is really large, allow scrolling
+  var bottomSheetTopPadding = 0;
+  
+  // if(props.popUpContainer!=undefined && props.popUpContainer[0][1]>=1000 && global.settingsCurrent[6]["currentValue"]==="false"){
+  //   bottomSheetTopPadding = 70;
+  // }
+
   const springConfig = {
       damping: 20,
       mass: 1,
@@ -173,18 +180,19 @@ export default (props) =>{
       <Animated.FlatList
         initialNumToRender={9}
         scrollEventThrottle={16}
-        contentContainerStyle={{paddingTop: headerHeight*1.18, paddingLeft: 15, paddingRight: 15}}
+        contentContainerStyle={{paddingTop: headerHeight*1.18, paddingLeft: 15, paddingRight: 15, paddingBottom: 120}}
         onScroll={handleScroll}
         ref={ref}
         data={dataUpdated}
         renderItem={renderItem}
         keyExtractor={(item, index) => `list-item-${index}-${item.checkListKeyString}`}
         numColumns={numColumns}
+        style={{paddingBottom: Dimensions.get('window').height}}
       />
       
       <BottomSheet
         ref={sheetRef}
-        snapPoints={[Dimensions.get('window').height, 0]}
+        snapPoints={[Dimensions.get('window').height-bottomSheetTopPadding, 0]}
         initialSnap={1}
         renderContent={renderContent}
         springConfig={springConfig}
@@ -270,6 +278,17 @@ class BottomSheetRender extends Component{
     if(this.props.popUpContainer!==undefined && this.state.item.dataSet!==undefined){
       popUpHeight = this.props.popUpContainer[this.state.item.dataSet][1];
     }
+
+
+    //disable circular image, if really big bottom sheet
+    var circularImage = <CircularImage 
+      item={this.state.item}
+      imageProperty={this.props.imageProperty}
+      accentColor={this.props.accentColor}
+    />
+    if(popUpHeight >= 1000){
+      circularImage = <View/>
+    }
     return <View>
       <LinearGradient
         colors={['transparent','rgba(0,0,0,0.3)','rgba(0,0,0,0.3)' ]}
@@ -293,11 +312,7 @@ class BottomSheetRender extends Component{
           height: popUpHeight,
         }}
       >
-          <CircularImage 
-            item={this.state.item}
-            imageProperty={this.props.imageProperty}
-            accentColor={this.props.accentColor}
-          />
+          {circularImage}
           {leftCornerImage}
           <RightCornerCheck
             item={this.state.item}

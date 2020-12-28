@@ -25,7 +25,7 @@ class EmoticonsPage extends Component {
           backgroundColor={colors.lightDarkAccent[colors.mode]}
           boxColor={colors.white[colors.mode]}
           labelColor={colors.textBlack[colors.mode]}
-          accentColor={colors.fishAccent[colors.mode]}
+          accentColor={colors.emojipediaAccent[colors.mode]}
           specialLabelColor={colors.fishText[colors.mode]}
         />
     )

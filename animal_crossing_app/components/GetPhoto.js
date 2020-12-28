@@ -103,7 +103,9 @@ export function getPhotoCorner(name){
   else if(name.includes("zipper"))
     return <Image source={require("../assets/icons/bunny.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
   else if(name.includes("treasure trawler"))
-    return <Image source={require("../assets/icons/ship.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
+    return <Image source={require("../assets/icons/ship.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>
+  else if(name.includes("c.j."))
+    return <Image source={require("../assets/icons/beaver.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
   else
     return <Image source={require("../assets/icons/leaf.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
 }
@@ -126,14 +128,154 @@ export function getPhotoCornerSize(name){
   }
 }
 
-export function getMaterialImage(material){
+export function getMaterialImage(material, reduceComplexity=false, flowerSingle=false){
+  var materialStripped = material;
+  if(flowerSingle){
+    materialStripped = materialStripped.replace("roses", "rose");
+    materialStripped = materialStripped.replace("pansies", "pansy");
+    materialStripped = materialStripped.replace("windflowers", "windflower");
+    materialStripped = materialStripped.replace("hyacinths", "hyacinth");
+    materialStripped = materialStripped.replace("lilies", "lily");
+    materialStripped = materialStripped.replace("cosmos", "cosmos");
+    materialStripped = materialStripped.replace("mums", "mum");
+    materialStripped = materialStripped.replace("tulips", "tulip");
+  }
   var data = require("../assets/data/other.json");
+  if(reduceComplexity){
+    materialStripped = materialStripped.replace("-","");
+    materialStripped = materialStripped.replace(" ","");
+    for(var index = 0; index < data.length; index++){
+      var dataStripped = data[index]["Name"];
+      dataStripped = dataStripped.replace("-","");
+      dataStripped = dataStripped.replace(" ","");
+      if(dataStripped===materialStripped){
+        return data[index]["Inventory Image"]
+      }
+    }
+    return "";
+  } else {
+    for(var index = 0; index < data.length; index++){
+      if(data[index]["Name"]===material){
+        return data[index]["Inventory Image"]
+      }
+    }
+    return "";
+  }
+  
+}
+
+export function getSculpturePhotoFake(name){
+  console.log(name)
+  var data = require("../assets/data/art.json");
   for(var index = 0; index < data.length; index++){
-    if(data[index]["Name"]===material){
-      return data[index]["Inventory Image"]
+    if(data[index]["Name"]===name && data[index]["Genuine"]==="No"){
+      return data[index]["Image"]
     }
   }
-  return "";
+  return "none";
+}
+
+export function getPaintingPhoto(name){
+  switch(name){
+    case "Academic Painting":
+      return require("../assets/icons/art/AcademicPainting.png");
+    case "Amazing Painting":
+      return require("../assets/icons/art/AmazingPainting.png");
+    case "Basic Painting":
+      return require("../assets/icons/art/BasicPainting.png");
+    case "Calm Painting":
+      return require("../assets/icons/art/CalmPainting.png");
+    case "Common Painting":
+      return require("../assets/icons/art/CommonPainting.png");
+    case "Detailed Painting":
+      return require("../assets/icons/art/DetailedPainting.png");
+    case "Dynamic Painting":
+      return require("../assets/icons/art/DynamicPainting.png");
+    case "Famous Painting":
+      return require("../assets/icons/art/FamousPainting.png");
+    case "Flowery Painting":
+      return require("../assets/icons/art/FloweryPainting.png");
+    case "Glowing Painting":
+      return require("../assets/icons/art/GlowingPainting.png");
+    case "Graceful Painting":
+      return require("../assets/icons/art/GracefulPainting.png");
+    case "Jolly Painting":
+      return require("../assets/icons/art/JollyPainting.png");
+    case "Moody Painting":
+      return require("../assets/icons/art/MoodyPainting.png");
+    case "Moving Painting":
+      return require("../assets/icons/art/MovingPainting.png");
+    case "Mysterious Painting":
+      return require("../assets/icons/art/MysteriousPainting.png");
+    case "Nice Painting":
+      return require("../assets/icons/art/NicePainting.png");
+    case "Perfect Painting":
+      return require("../assets/icons/art/PerfectPainting.png");
+    case "Quaint Painting":
+      return require("../assets/icons/art/QuaintPainting.png");
+    case "Scary Painting":
+      return require("../assets/icons/art/ScaryPainting.png");
+    case "Scenic Painting":
+      return require("../assets/icons/art/ScenicPainting.png");
+    case "Serene Painting":
+      return require("../assets/icons/art/SerenePainting.png");
+    case "Sinking Painting":
+      return require("../assets/icons/art/SinkingPainting.png");
+    case "Solemn Painting":
+      return require("../assets/icons/art/SolemnPainting.png");
+    case "Twinkling Painting":
+      return require("../assets/icons/art/TwinklingPainting.png");
+    case "Warm Painting":
+      return require("../assets/icons/art/WarmPainting.png");
+    case "Wild Painting Left Half.png":
+      return require("../assets/icons/art/WildPaintingLeftHalf.png");
+    case "Wild Painting Right Half":
+      return require("../assets/icons/art/WildPaintingRightHalf.png");
+    case "Wistful Painting":
+      return require("../assets/icons/art/WistfulPainting.png");
+    default:
+      return "none";
+  }
+}
+
+export function getPaintingPhotoFake(name){
+  switch(name){
+    case "Academic Painting":
+    console.log("ya")
+      return require("../assets/icons/art/AcademicPaintingFake.png");
+    case "Amazing Painting":
+      return require("../assets/icons/art/AmazingPaintingFake.png");
+    case "Basic Painting":
+      return require("../assets/icons/art/BasicPaintingFake.png");
+    case "Detailed Painting":
+      return require("../assets/icons/art/DetailedPaintingFake.png");
+    case "Famous Painting":
+      return require("../assets/icons/art/FamousPaintingFake.png");
+    case "Graceful Painting":
+      return require("../assets/icons/art/GracefulPaintingFake.png");
+    case "Jolly Painting":
+      return require("../assets/icons/art/JollyPaintingFake.png");
+    case "Moving Painting":
+      return require("../assets/icons/art/MovingPaintingFake.png");
+    case "Quaint Painting":
+      return require("../assets/icons/art/QuaintPaintingFake.png");
+    case "Scary Painting":
+      return require("../assets/icons/art/ScaryPaintingFake.png");
+    case "Scenic Painting":
+      return require("../assets/icons/art/ScenicPaintingFake.png");
+    case "Serene Painting":
+      return require("../assets/icons/art/SerenePaintingFake.png");
+    case "Solemn Painting":
+      return require("../assets/icons/art/SolemnPaintingFake.png");
+    case "Wild Painting Left Half.png":
+      return require("../assets/icons/art/WildPaintingLeftHalfFake.png");
+    case "Wild Painting Right Half":
+      return require("../assets/icons/art/WildPaintingRightHalfFake.png");
+    case "Wistful Painting":
+      return require("../assets/icons/art/WistfulPaintingFake.png");
+    default:
+      return "none"
+  }
 }
 
 export function getPhotoShadow(item, centered){

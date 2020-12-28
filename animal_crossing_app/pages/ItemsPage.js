@@ -21,11 +21,11 @@ const renderTabBar = props => (
 const FurnitureRoute = () => (
   <ListPage 
     showVariations={[
-      false,
-      false,
-      false,
-      false,
-      false,
+      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
+      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
+      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
+      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
+      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
     ]}
     title="Furniture"
     imageProperty={[
@@ -94,16 +94,16 @@ const FurnitureRoute = () => (
 const ClothingRoute = () => (
   <ListPage 
     showVariations={[
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
+      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
+      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
+      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
+      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
+      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
+      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
+      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
+      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
+      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
+      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
     ]}
     title="Clothing"
     imageProperty={[
@@ -206,9 +206,9 @@ const ClothingRoute = () => (
 const FloorWallsRoute = () => (
   <ListPage 
     showVariations={[
-      false,
-      false,
-      false,
+      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
+      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
+      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
     ]}
     title="Floor & Walls"
     imageProperty={[

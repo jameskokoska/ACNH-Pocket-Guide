@@ -108,7 +108,17 @@ export function getEventsDay(currentDate){
         "Time" : snapshot[i]["Time"],
         "Image" : snapshot[i]["Image"]
       }
-      totalEvents.push(eventDatum);
+      //Filter out birthdays so only villagers you hearted show up
+      if(snapshot[i]["Name"].includes("Birthday")){
+        for(var x = 0; x<global.collectionList.length; x++){
+          if(global.collectionList[x].includes(snapshot[i]["Name"].replace("'s Birthday","")) && global.collectionList[x].includes("villagerCheckList")){
+            totalEvents.push(eventDatum);
+          }
+        }
+      } else {
+        totalEvents.push(eventDatum);
+      }
+      
     }
   }
   return totalEvents;

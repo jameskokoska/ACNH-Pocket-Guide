@@ -3,7 +3,7 @@ import { Appearance } from 'react-native-appearance';
 const colors = {
     mode: Appearance.getColorScheme()==="light" ? 0 : 1,
     modeReverse: Appearance.getColorScheme()==="light" ? 1 : 0,
-    background: ["#ebebeb","#1a1a1a"], //"#34454f" original
+    background: ["#f5f5f5","#1a1a1a"], //"#34454f" original
     FAB: ["#49599a", "#455a64"],
     searchbarBG : ["#DFDFDF", "#A3A3A3"],
     searchbarIcon : ["#000000","#FFFFFF"],
@@ -38,9 +38,11 @@ const colors = {
     floorWallsAppBar : ["#1565c0","#204064"],
     floorWallsAccent : ["#e3f2fd","#505E68"],
     emojipediaAppBar : ["#FFF176","#807623"],
+    emojipediaAccent : ["#dbd388","#878468"],
     musicAppBar : ["#5c6bc0","#253870"],
+    musicAccent : ["#E3F2FD","#434C53"],
     musicWavesTransparency: [0.9,0.4],
-    artAppBar : ["#730000","#630000"],
+    artAppBar : ["#e57373","#630000"],
     artAccent : ["#FFF0F5","#5A4043"],
     warningBackground : ["#ffccbc","#4d2a2c"],
     seaAppBar : ["#A2D0F7","#536991"],
@@ -51,6 +53,7 @@ const colors = {
     grassColor : ["#b6d996","#4c6337"],
     eventsColor : ["#ffe366","#333333"],
     storeHoursColor : ["#8fc6f7","#333333"],
+    collectionColor : ["#c7a4ff","#333333"],
     activeCreaturesColor : ["#ff8d7e","#333333"],
     sectionBackground1 : ["#f5f5f5", "#1A1A1A"],
     eventBackground : ["#FFFFFF", "#262626"],

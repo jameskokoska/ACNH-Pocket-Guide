@@ -39,6 +39,16 @@ export async function getStorageData(data, checkListKey, defaultValue, recipes=f
   return dataLoadingTotal;
 }
 
+export function countCollection(checkListKeyStart){
+  var count = 0;
+  for(var i = 0; i<global.collectionList.length; i++){
+    if(global.collectionList[i].includes(checkListKeyStart)){
+      count++
+    }
+  }
+  return count;
+}
+
 export function determineDataGlobal(datakeyName){
   if(datakeyName==="dataLoadedReactions")
     return global.dataLoadedReactions;
@@ -70,6 +80,8 @@ export function determineDataGlobal(datakeyName){
     return global.dataLoadedRecipes;
   else if(datakeyName==="dataLoadedTools")
     return global.dataLoadedTools;
+  else if(datakeyName==="dataLoadedAll")
+    return global.dataLoadedAll;
 
 }
 
@@ -104,9 +116,12 @@ export function updateDataGlobal(datakeyName, index, collected, dataSet){
     global.dataLoadedRecipes[dataSet][index].collected=collected;
   else if(datakeyName==="dataLoadedTools")
     global.dataLoadedTools[dataSet][index].collected=collected;
+  else if(datakeyName==="dataLoadedAll")
+    global.dataLoadedAll[dataSet][index].collected=collected;
 }
 
 export function checkOff(item, collected, dataGlobalName){
+  console.log(item.checkListKey);
   if(collected==="false"){
     Vibration.vibrate([0,10,220,20]);
     global.collectionList.push(item.checkListKey)
@@ -126,7 +141,7 @@ function collectionListRemove(checkListKey){
   }
 }
 
-function collectionListSave(){
+export function collectionListSave(){
   var outputString = "";
   for(var i = 0; i<global.collectionList.length; i++){
     outputString += global.collectionList[i];
@@ -167,6 +182,129 @@ export function removeBrackets(string){
   }
 }
 
+export async function loadGlobalData(){
+  global.dataLoadedReactions = await getStorageData([require("./assets/data/reactions.json")],[["emojiCheckList","Name"]],"false");
+  global.dataLoadedMusic = await getStorageData([require("./assets/data/music.json")],[["songCheckList","Name"]],"false");
+  global.dataLoadedConstruction = await getStorageData([require("./assets/data/construction.json"),require("./assets/data/fencing.json")],[["constructionCheckList","Name"],["fenceCheckList","Name"]],"false");
+  global.dataLoadedFish = await getStorageData([require("./assets/data/fish.json")],[["fishCheckList","Name"]],"false");
+  global.dataLoadedBugs = await getStorageData([require("./assets/data/insects.json")],[["bugCheckList","Name"]],"false");
+  global.dataLoadedSea = await getStorageData([require("./assets/data/seacreatures.json")],[["seaCheckList","Name"]],"false");
+  global.dataLoadedFossils = await getStorageData([require("./assets/data/fossils.json")],[["fossilCheckList","Name"]],"false");
+  global.dataLoadedArt = await getStorageData([require("./assets/data/art.json")],[["artCheckList","Name"]],"false");
+  global.dataLoadedVillagers = await getStorageData([require("./assets/data/villagers.json")],[["villagerCheckList","Name"]],"false");
+  global.dataLoadedFurniture = await getStorageData([
+    require("./assets/data/housewares.json"),
+    require("./assets/data/miscellaneous.json"),
+    require("./assets/data/wall-mounted.json"),
+    require("./assets/data/photos.json"),
+    require("./assets/data/posters.json")
+  ],
+  [
+    ["furnitureCheckList","Name","Variation","Pattern"],
+    ["furnitureCheckList","Name","Variation","Pattern"],
+    ["furnitureCheckList","Name","Variation","Pattern"],
+    ["furnitureCheckList","Name","Variation","Pattern"],
+    ["furnitureCheckList","Name","Variation","Pattern"],
+    ["furnitureCheckList","Name"],
+  ],"false");
+  global.dataLoadedClothing = await getStorageData([
+    require("./assets/data/headwear.json"),
+    require("./assets/data/accessories.json"),
+    require("./assets/data/tops.json"),
+    require("./assets/data/dress-up.json"),
+    require("./assets/data/clothingother.json"),
+    require("./assets/data/bottoms.json"),
+    require("./assets/data/socks.json"),
+    require("./assets/data/shoes.json"),
+    require("./assets/data/bags.json"),
+    require("./assets/data/umbrellas.json")
+  ],
+  [
+    ["clothingCheckList","Name","Variation"],
+    ["clothingCheckList","Name","Variation"],
+    ["clothingCheckList","Name","Variation"],
+    ["clothingCheckList","Name","Variation"],
+    ["clothingCheckList","Name","Variation"],
+    ["clothingCheckList","Name","Variation"],
+    ["clothingCheckList","Name","Variation"],
+    ["clothingCheckList","Name","Variation"],
+    ["clothingCheckList","Name","Variation"],
+    ["clothingCheckList","Name"],
+  ],"false");
+  global.dataLoadedFloorWalls = await getStorageData(
+  [
+    require("./assets/data/floors.json"),
+    require("./assets/data/rugs.json"),
+    require("./assets/data/wallpaper.json")
+  ],
+  [
+    ["floorWallsCheckList","Name"],
+    ["floorWallsCheckList","Name"],
+    ["floorWallsCheckList","Name"],
+  ],"false");
+  global.dataLoadedTools = await getStorageData([require("./assets/data/tools.json")],[["toolsCheckList","Name","Variation"]],"false");
+  global.dataLoadedRecipes = await getStorageData([require("./assets/data/recipes.json")],[["recipesCheckList","Name"]],"false");
+  global.dataLoadedAll = await getStorageData(
+  [
+    require("./assets/data/housewares.json"),
+    require("./assets/data/miscellaneous.json"),
+    require("./assets/data/wall-mounted.json"),
+    require("./assets/data/photos.json"),
+    require("./assets/data/posters.json"),
+    require("./assets/data/headwear.json"),
+    require("./assets/data/accessories.json"),
+    require("./assets/data/tops.json"),
+    require("./assets/data/dress-up.json"),
+    require("./assets/data/clothingother.json"),
+    require("./assets/data/bottoms.json"),
+    require("./assets/data/socks.json"),
+    require("./assets/data/shoes.json"),
+    require("./assets/data/bags.json"),
+    require("./assets/data/umbrellas.json"),
+    require("./assets/data/recipes.json"),
+    require("./assets/data/tools.json"),
+    require("./assets/data/fish.json"),
+    require("./assets/data/insects.json"),
+    require("./assets/data/seacreatures.json"),
+    require("./assets/data/fossils.json"),
+    require("./assets/data/art.json"),
+    require("./assets/data/villagers.json"),
+    require("./assets/data/music.json"),
+    require("./assets/data/reactions.json"),
+    require("./assets/data/construction.json"),
+    require("./assets/data/fencing.json"),
+  ],
+  [
+    ["furnitureCheckList","Name","Variation","Pattern"],
+    ["furnitureCheckList","Name","Variation","Pattern"],
+    ["furnitureCheckList","Name","Variation","Pattern"],
+    ["furnitureCheckList","Name","Variation","Pattern"],
+    ["furnitureCheckList","Name"],
+    ["clothingCheckList","Name","Variation"],
+    ["clothingCheckList","Name","Variation"],
+    ["clothingCheckList","Name","Variation"],
+    ["clothingCheckList","Name","Variation"],
+    ["clothingCheckList","Name","Variation"],
+    ["clothingCheckList","Name","Variation"],
+    ["clothingCheckList","Name","Variation"],
+    ["clothingCheckList","Name","Variation"],
+    ["clothingCheckList","Name","Variation"],
+    ["clothingCheckList","Name"],
+    ["recipesCheckList","Name"],
+    ["toolsCheckList","Name","Variation"],
+    ["fishCheckList","Name"],
+    ["bugCheckList","Name"],
+    ["seaCheckList","Name"],
+    ["fossilCheckList","Name"],
+    ["artCheckList","Name"],
+    ["villagerCheckList","Name"],
+    ["songCheckList","Name"],
+    ["emojiCheckList","Name"],
+    ["constructionCheckList","Name"],
+    ["fenceCheckList","Name"],
+  ],"false");
+}
+
 export const settings = [
   {
     "keyName" : "settingsNorthernHemisphere",
@@ -182,7 +320,7 @@ export const settings = [
     "currentValue" : "",
     "picture" : require("./assets/icons/hourglass.png"),
     "displayName" : "Skip loading screen",
-    "description" : "If true, the app will load more efficiently and therefore will skip most of the opening plane/balloon animation",
+    "description" : "If enabled, the app will load more efficiently and therefore will skip most of the opening plane/balloon animation",
   },
   {
     "keyName" : "settingsListOnlyActiveCreatures",
@@ -190,7 +328,7 @@ export const settings = [
     "currentValue" : "",
     "picture" : require("./assets/icons/clockIcon.png"),
     "displayName" : "List only active creatures",
-    "description" : "",
+    "description" : "Only creatures that can be caught in the current month will be displayed.",
   },
   {
     "keyName" : "settingsShowVariation",
@@ -198,7 +336,7 @@ export const settings = [
     "currentValue" : "",
     "picture" : require("./assets/icons/dice.png"),
     "displayName" : "Show variations in lists",
-    "description" : "",
+    "description" : "Show the different colours/patterns of furniture and clothing items in the list.",
   },
   {
     "keyName" : "settingsCreaturesLeavingWarning",
@@ -206,7 +344,7 @@ export const settings = [
     "currentValue" : "",
     "picture" : require("./assets/icons/alarmClock.png"),
     "displayName" : "Creatures leaving warning",
-    "description" : "",
+    "description" : "Display a warning colour around creatures that won't be able to be caught in the next month.",
   },
   {
     "keyName" : "settingsShowFAB",
@@ -214,7 +352,7 @@ export const settings = [
     "currentValue" : "",
     "picture" : require("./assets/icons/buttonIcon.png"),
     "displayName" : "Show floating menu button",
-    "description" : "",
+    "description" : "Choose to display the menu button in the bottom right corner. The menu can be opened by dragging from the left of the screen.",
   },
   {
     "keyName" : "settingsTabBarPosition",
@@ -222,6 +360,6 @@ export const settings = [
     "currentValue" : "",
     "picture" : require("./assets/icons/scroll.png"),
     "displayName" : "Category labels on bottom",
-    "description" : "Show the category tabs on the bottom, or top of the screen",
+    "description" : "Show the category tabs on the bottom, or top of the screen in list pages with multiple categories.",
   },
 ]

@@ -135,7 +135,7 @@ const ArtRoute = () => (
     textProperty={["Name"]}
     textProperty2={[""]}
     textProperty3={[""]}
-    checkListKey={[["artCheckList","Name"]]}
+    checkListKey={[["artCheckList","Name","Genuine"]]}
     searchKey={[["Name"]]}
     gridType="largeGridSmaller" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedArt"}
@@ -145,12 +145,12 @@ const ArtRoute = () => (
     backgroundColor={colors.lightDarkAccent[colors.mode]}
     boxColor={colors.white[colors.mode]}
     labelColor={colors.textBlack[colors.mode]}
-    accentColor={colors.fishAccent[colors.mode]}
+    accentColor={colors.artAccent[colors.mode]}
     specialLabelColor={colors.fishText[colors.mode]}
-    popUpCornerImageProperty={["Icon Image"]}
-    popUpCornerImageLabelProperty={["Name"]}
+    popUpCornerImageProperty={["Source"]}
+    popUpCornerImageLabelProperty={["Source"]}
     popUpPhraseProperty={["Artist"]}
-    popUpContainer={[["ArtPopup",600]]}
+    popUpContainer={[["ArtPopup",1200]]}
   />
 )
 

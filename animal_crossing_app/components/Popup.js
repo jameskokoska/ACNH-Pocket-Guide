@@ -49,7 +49,7 @@ class Popup extends Component {
     }
     if(this.props.button2!==undefined){
       this.Button2 = <ButtonComponent
-        text={"Cancel"}
+        text={this.props.button2}
         color={colors.cancelButton[colors.mode]}
         vibrate={10}
         onPress={() => {
