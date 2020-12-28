@@ -30,7 +30,7 @@ class SpecificFlowerPage extends Component {
       <View style={{marginTop: 10}}/>
       {
         data[this.props.flowerGroup].map(flower=> (
-          <FlowerContainer flowerInfo={flower}/>
+          <FlowerContainer flowerInfo={flower} key={flower.parent1+flower.paren2+flower.child+flower.percentage+flower.parent1Special}/>
         ))
       }
       <View style={{marginTop: 100}}/>
