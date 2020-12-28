@@ -353,7 +353,7 @@ export const settings = [
   },
   {
     "keyName" : "settingsCreaturesLeavingWarning",
-    "defaultValue" : "false",
+    "defaultValue" : "true",
     "currentValue" : "",
     "picture" : require("./assets/icons/alarmClock.png"),
     "displayName" : "Creatures leaving warning",

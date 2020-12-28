@@ -66,7 +66,7 @@ class App extends Component {
     this.random = Math.random();
     this.state = {
       loaded: false,
-      currentPage: 0,
+      currentPage: 3,
       open:false,
       fadeInTitle:true,
     }

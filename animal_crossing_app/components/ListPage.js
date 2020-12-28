@@ -40,7 +40,6 @@ export default (props) =>{
       key={item.checkListKeyString}
       dataGlobalName={props.dataGlobalName}
       openBottomSheet={(updateCheckChild)=>{
-        console.log(updateCheckChild)
         sheetRef.current.snapTo(0); 
         //pass in the check mark update function of that current element
         bottomSheetRenderRef.current.update(item, updateCheckChild)}}
@@ -113,17 +112,14 @@ export default (props) =>{
             if(props.activeCreatures){
               var hemispherePre = global.settingsCurrent[0]["currentValue"] === "true" ? "NH " : "SH "
               var currentMonthShort = getMonthShort(new Date().getMonth());
-              console.log(item[hemispherePre+currentMonthShort]);
               if(!isActive(item[hemispherePre+currentMonthShort])){
                 continue;
               }
             }
             //If list only active creatures for the month, don't add it if === NA
-            console.log(global.settingsCurrent[2])
             if(props.activeCreaturesMonth && global.settingsCurrent[2]["currentValue"] === "true"){
               var hemispherePre = global.settingsCurrent[0]["currentValue"] === "true" ? "NH " : "SH "
               var currentMonthShort = getMonthShort(new Date().getMonth());
-              console.log(item[hemispherePre+currentMonthShort]);
               if(item[hemispherePre+currentMonthShort]==="NA"){
                 continue;
               }

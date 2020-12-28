@@ -38,9 +38,7 @@ function isActive(activeTime){
   if(activeTime!=="NA"||activeTime!=="All day"){
     var splitString = activeTime.replace(/[^\x00-\x7F]/g, "");
     splitString = splitString.replace("  ", " ");
-    console.log(splitString);
     splitString = splitString.split(" ");
-    console.log(splitString);
     var currentHour = new Date().getHours();
     const activeStart = parseActiveTime(splitString, 0);
     const activeEnd = parseActiveTime(splitString, 2);
