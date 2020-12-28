@@ -369,7 +369,7 @@ export const settings = [
   },
   {
     "keyName" : "settingsTabBarPosition",
-    "defaultValue" : "true",
+    "defaultValue" : "false",
     "currentValue" : "",
     "picture" : require("./assets/icons/scroll.png"),
     "displayName" : "Category labels on bottom",

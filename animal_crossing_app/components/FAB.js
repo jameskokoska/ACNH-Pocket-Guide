@@ -5,7 +5,6 @@ import colors from '../Colors'
 
 class FAB extends Component {
   componentDidMount() {
-    
   }
   render(){
     return(
@@ -16,8 +15,8 @@ class FAB extends Component {
               }}
               loop={false}
               style={{
-                width: 23,
-                height: 23,
+                width: 20,
+                height: 20,
               }} 
               source={require('../assets/menu.json')}
             />
@@ -29,8 +28,8 @@ export default FAB;
 
 const styles = StyleSheet.create({
     FABShape: {
-        height: 70,
-        width: 70,
+        height: 64,
+        width: 64,
         borderRadius: 1000,
         position: "absolute",
         right: 20,

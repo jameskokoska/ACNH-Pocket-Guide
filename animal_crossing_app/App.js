@@ -32,7 +32,7 @@ import ActiveTime from './components/ActiveTime.js';
 
 function NavigationView(props) {
   return (
-    <View style={{marginRight: "28%", height:"100%", backgroundColor:colors.textWhite[colors.mode]}}>
+    <View style={{width: 290, height:"100%", backgroundColor:colors.textWhite[colors.mode]}}>
       <ScrollView>
         <View style={{backgroundColor: colors.topSidebar[colors.mode], marginBottom: 10}}>
           <TextFont bold={true} style={{marginLeft: 15, marginTop: 130, marginBottom: 10, fontSize: 34, color: colors.textBlack[colors.mode]}}>ACNH Pocket</TextFont>
@@ -66,7 +66,7 @@ class App extends Component {
     this.random = Math.random();
     this.state = {
       loaded: false,
-      currentPage: 3,
+      currentPage: 2,
       open:false,
       fadeInTitle:true,
     }
@@ -190,14 +190,14 @@ class App extends Component {
           autoPlay
           loop
           style={{
-            top: "50%",
+            top: Dimensions.get('window').height/8,
             width: "100%",
             zIndex:1,
             transform: [
               { scale: 1.25 },
               { rotate: '0deg'},
             ],
-          }} 
+          }}
           source={chosenSplashScreen}
         />
       </FadeInOut>

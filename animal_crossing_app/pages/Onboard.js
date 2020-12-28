@@ -11,8 +11,11 @@ class Onboard extends Component {
   render(){
     return(
       <Onboarding
+        allowFontScaling={false}
+        transitionAnimationDuration={400}
         showDone={false}
         skipLabel= {<TextFont style={{fontSize: 20, color:"gray"}}>Skip</TextFont>}
+        imageContainerStyles = {{paddingBottom:30,}}
         nextLabel= {
           <View style={{transform: [{ rotate: '180deg'}]}}>
             <LottieView 
@@ -31,7 +34,7 @@ class Onboard extends Component {
         pages={[
           {
             backgroundColor: colors.white[0],
-            image: <Image style={{height: 300, width: 300, resizeMode:'contain'}} source={require('../assets/icons/palmIcon.png')} />,
+            image: <Image style={{height: 250, width: 250, resizeMode:'contain', margin:0}} source={require('../assets/icons/palmIcon.png')} />,
             title: <TextFont style={{fontSize: 30, width: "70%", textAlign:'center'}} bold={true}>Welcome to ACNH Pocket Guide</TextFont>,
             subtitle: <TextFont style={{fontSize: 16, textAlign:"center", paddingTop: 20,}} bold={true}>This is version 2.0 of this application. Enjoy!</TextFont>,
           },

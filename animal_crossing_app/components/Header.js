@@ -13,7 +13,7 @@ const Header = (props) => {
           <View style={styles.subHeader}>
             <TextFont style={[styles.title, {color: props.titleColor}]} bold={true}>{props.title}</TextFont>
             <View style={[styles.searchBox, {backgroundColor:props.searchBarColor}]}>
-              <TextInput style={styles.searchText} value={search} onChangeText={function(text){setSearch(text); props.updateSearch(text);}} onFocus={() => {setSearch(""); Vibration.vibrate(15);}} onBlur={function(){if(search===""){setSearch("Search"); props.updateSearch("Search");}else{setSearch(search);}}}/>
+              <TextInput allowFontScaling={false} style={styles.searchText} value={search} onChangeText={function(text){setSearch(text); props.updateSearch(text);}} onFocus={() => {setSearch(""); Vibration.vibrate(15);}} onBlur={function(){if(search===""){setSearch("Search"); props.updateSearch("Search");}else{setSearch(search);}}}/>
             </View>
           </View>
         </View>

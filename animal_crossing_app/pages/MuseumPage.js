@@ -15,6 +15,7 @@ const renderTabBar = props => (
     activeColor={colors.textBlack[colors.mode]}
     inactiveColor={colors.textBlack[colors.mode]}
     getLabelText={({ route }) => route.title}
+    labelStyle={{padding:0, margin:0}}
   />
 );
 

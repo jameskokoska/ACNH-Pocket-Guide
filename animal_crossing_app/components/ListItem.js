@@ -209,13 +209,13 @@ class ListItem extends Component{
               </View>
               <View style={styles.rowTextContainer}>
                 <View style={styles.rowTextTop}>
-                  <TextFont bold={true} style={{fontSize:20, color:this.props.labelColor}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
+                  <TextFont bold={true} numberOfLines={2} style={{fontSize:20, color:this.props.labelColor}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
                 </View>
                 <View style={styles.rowTextBottom}>
-                  <TextFont bold={true} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(removeBrackets(textProperty2Text))}</TextFont>
+                  <TextFont bold={true} numberOfLines={2} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(removeBrackets(textProperty2Text))}</TextFont>
                 </View>
                 <View style={styles.rowTextBottom}>
-                  <TextFont bold={true} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(removeBrackets(this.props.item.[this.props.textProperty3[this.props.item.dataSet]]))}</TextFont>
+                  <TextFont bold={true} numberOfLines={2} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(removeBrackets(this.props.item.[this.props.textProperty3[this.props.item.dataSet]]))}</TextFont>
                 </View>
               </View>
               {fishShadow}
@@ -263,8 +263,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   rowImage:{
-    height: 60,
-    width: 60,
+    height: 55,
+    width: 55,
     resizeMode:'contain',
   },
   row: {
@@ -316,8 +316,9 @@ const styles = StyleSheet.create({
     resizeMode:'contain',
   },
   gridBoxImageLarge: {
-    height: 150,
-    width: 150,
+    backgroundColor:"red",
+    height: "75%",
+    width: "80%",
     borderRadius:5,
     marginTop: 15,
     resizeMode:'contain',
@@ -332,7 +333,7 @@ const styles = StyleSheet.create({
   gridBox: {
     alignItems: "center",
     height: 150,
-    width: 115,
+    width: "92%",
     borderRadius:10,
     shadowColor: "#000",
     shadowOffset: {
@@ -347,7 +348,7 @@ const styles = StyleSheet.create({
   gridBoxLarge: {
     alignItems: "center",
     height: 200,
-    width: 180,
+    width: "94%",
     borderRadius:10,
     elevation: 0,
     margin: 2,

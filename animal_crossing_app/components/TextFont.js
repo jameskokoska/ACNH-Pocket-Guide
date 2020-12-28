@@ -10,6 +10,8 @@ class TextFont extends Component {
     this.state={
       fontLoaded:false
     }
+    Text.defaultProps = Text.defaultProps || {};
+    Text.defaultProps.allowFontScaling = false;
   }
   async componentDidMount(){
     await Font.loadAsync({

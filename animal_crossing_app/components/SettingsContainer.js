@@ -47,6 +47,7 @@ export default SettingsContainer;
 const styles = StyleSheet.create({
   textContainerTop:{
     fontSize: 17,
+    marginRight: 100,
   },
   textContainerBottom:{
     marginTop: 2,
