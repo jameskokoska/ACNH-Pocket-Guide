@@ -16,8 +16,8 @@ class ActiveTime extends Component {
     console.log(this.props.item["Name"]);
     // test functions
     const activeTime = this.props.item["NH Jan"];
-    console.log(activeTime);
-    isActive(activeTime);
+    // console.log(activeTime);
+    console.log(isActive(activeTime));
 
     return(
       // <View>

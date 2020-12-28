@@ -155,7 +155,7 @@ class App extends Component {
         <Popup button1={"OK"} button1Action={()=>{console.log("OK")}} button2={"Cancel"} button2Action={()=>{console.log("Cancel")}} popupVisible={this.state.open} close={() => this.setState({open:!this.state.open})}/>
       </>
     } else if (this.state.currentPage===3){
-      currentPageView = <ActiveTime item={require("./assets/data/fish.json")[0]}/>
+      currentPageView = <ActiveTime item={require("./assets/data/fish.json")[1]}/>
     } else if (this.state.currentPage===4){
       currentPageView = <SongsPage/>
     } else if (this.state.currentPage===5){

@@ -30,14 +30,14 @@ function parseActiveTime(activeTimea){
 
 function isActive(activeTime){
   // active time format: "4 AM – 9 PM"
-  const splitString = activeTime.split(" – ");
-  var currentHour = new Date().getHours();
-  console.log(splitString);
-  const activeStart = parseActiveTime(splitString[0]);
-  const activeEnd = parseActiveTime(splitString[1]);
-  currentHour = parseInt(currentHour);
   // check if it is available
-  if(activeTime!=="NA"||"All Day"){
+  if(activeTime!=="NA"||activeTime!=="All Day"){
+    const splitString = activeTime.split(" – ");
+    var currentHour = new Date().getHours();
+    console.log(splitString);
+    const activeStart = parseActiveTime(splitString[0]);
+    const activeEnd = parseActiveTime(splitString[1]);
+    currentHour = parseInt(currentHour);
     // check if current time is between available hours
     if(activeStart < currentHour < activeEnd){
       return true
