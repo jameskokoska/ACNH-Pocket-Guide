@@ -203,7 +203,7 @@ export default (props) =>{
     paddingBottom = 20;
   }
   return (
-    <SafeAreaView style={{backgroundColor:props.backgroundColor}}>
+    <View style={{backgroundColor:props.backgroundColor}}>
       {header}
       <Animated.FlatList
         nestedScrollEnabled
@@ -227,7 +227,7 @@ export default (props) =>{
         springConfig={springConfig}
         enabledContentTapInteraction={false}
       />
-    </SafeAreaView>
+    </View>
   );
 };
 

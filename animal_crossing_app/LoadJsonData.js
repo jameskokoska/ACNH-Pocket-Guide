@@ -126,16 +126,18 @@ export function updateDataGlobal(datakeyName, index, collected, dataSet){
 
 export function checkOff(item, collected, dataGlobalName){
   console.log(item.checkListKey);
-  if(collected==="false"){
-    Vibration.vibrate([0,10,220,20]);
-    global.collectionList.push(item.checkListKey)
-  } else {
-    Vibration.vibrate(10);
-    collectionListRemove(item.checkListKey)
+  if(item!==undefined){
+     if(collected==="false"){
+      Vibration.vibrate([0,10,220,20]);
+      global.collectionList.push(item.checkListKey)
+    } else {
+      Vibration.vibrate(10);
+      collectionListRemove(item.checkListKey)
+    }
+    collectionListSave();
+    updateDataGlobal(dataGlobalName, item.index, collected==="false" ? "true":"false", item.dataSet)
+    //console.log(global.collectionList)
   }
-  collectionListSave();
-  updateDataGlobal(dataGlobalName, item.index, collected==="false" ? "true":"false", item.dataSet)
-  //console.log(global.collectionList)
 }
 
 function collectionListRemove(checkListKey){
@@ -329,7 +331,7 @@ export const settings = [
   },
   {
     "keyName" : "settingsSkipSplashScreen",
-    "defaultValue" : "false",
+    "defaultValue" : "true",
     "currentValue" : "",
     "picture" : require("./assets/icons/hourglass.png"),
     "displayName" : "Skip loading screen",
@@ -374,14 +376,6 @@ export const settings = [
     "picture" : require("./assets/icons/scroll.png"),
     "displayName" : "Category labels on bottom",
     "description" : "Show the category tabs on the bottom, or top of the screen in list pages with multiple categories.",
-  },
-  {
-    "keyName" : "settingsScaleUI",
-    "defaultValue" : "false",
-    "currentValue" : "",
-    "picture" : require("./assets/icons/clockIcon.png"),
-    "displayName" : "User Interface Scale",
-    "description" : "Use the recommended interface scale, or the system one when enabled",
   },
   {
     "keyName" : "settingsUseCustomDate",

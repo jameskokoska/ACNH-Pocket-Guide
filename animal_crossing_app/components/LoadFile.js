@@ -17,6 +17,7 @@ class LoadFile extends Component {
     this.state = {
       open: false,
       openResult: false,
+      loadedNumber: 0,
     }
   }
   render(){
@@ -44,6 +45,7 @@ class LoadFile extends Component {
               }
               collectionListSave();
               loadGlobalData();
+              this.setState({loadedNumber:totalImport.length})
               console.log(global.collectionList)
             })
             this.setState({openResult:!this.state.openResult});
@@ -58,8 +60,8 @@ class LoadFile extends Component {
           button1Action={()=>{}}
           popupVisible={this.state.openResult} 
           close={() => this.setState({openResult:!this.state.openResult})}
-          text={"Imported Successful"}
-          textLower={"\nSuccessfully imported X entires. \n\nNote: If this has imported 0 entires, please double check you have chosen the correct file."}
+          text={"Import Results"}
+          textLower={"\nImported " + this.state.loadedNumber + " entires. \n\nNote: If this has imported 0 entires, please double check you have chosen the correct file."}
         />
         <ButtonComponent
           text={"Load Data"}
