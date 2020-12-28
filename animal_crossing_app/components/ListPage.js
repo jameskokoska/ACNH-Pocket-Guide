@@ -24,7 +24,7 @@ import RecipesPopup from "../popups/RecipesPopup"
 
 
 const {diffClamp} = Animated;
-const headerHeight = 130 * 2;
+const headerHeight = Dimensions.get('window').height*0.3;
 
 export default (props) =>{
   const renderItem = (({ item }) =>
@@ -40,7 +40,6 @@ export default (props) =>{
       key={item.checkListKeyString}
       dataGlobalName={props.dataGlobalName}
       openBottomSheet={(updateCheckChild)=>{
-        console.log(updateCheckChild)
         sheetRef.current.snapTo(0); 
         //pass in the check mark update function of that current element
         bottomSheetRenderRef.current.update(item, updateCheckChild)}}
@@ -53,6 +52,7 @@ export default (props) =>{
       popUpPhraseProperty={props.popUpPhraseProperty}
       popUpContainer={props.popUpContainer}
       checkType={props.checkType}
+      leaveWarning={props.leaveWarning}
     />
   )
   const ref = useRef(null);
@@ -112,8 +112,15 @@ export default (props) =>{
             if(props.activeCreatures){
               var hemispherePre = global.settingsCurrent[0]["currentValue"] === "true" ? "NH " : "SH "
               var currentMonthShort = getMonthShort(new Date().getMonth());
-              console.log(item[hemispherePre+currentMonthShort]);
               if(!isActive(item[hemispherePre+currentMonthShort])){
+                continue;
+              }
+            }
+            //If list only active creatures for the month, don't add it if === NA
+            if(props.activeCreaturesMonth && global.settingsCurrent[2]["currentValue"] === "true"){
+              var hemispherePre = global.settingsCurrent[0]["currentValue"] === "true" ? "NH " : "SH "
+              var currentMonthShort = getMonthShort(new Date().getMonth());
+              if(item[hemispherePre+currentMonthShort]==="NA"){
                 continue;
               }
             }
@@ -214,7 +221,7 @@ export default (props) =>{
       
       <BottomSheet
         ref={sheetRef}
-        snapPoints={[Dimensions.get('window').height-bottomSheetTopPadding, 0]}
+        snapPoints={[Dimensions.get('window').height, 0]}
         initialSnap={1}
         renderContent={renderContent}
         springConfig={springConfig}
@@ -302,15 +309,11 @@ class BottomSheetRender extends Component{
     }
 
 
-    //disable circular image, if really big bottom sheet
-    var circularImage = <CircularImage 
-      item={this.state.item}
-      imageProperty={this.props.imageProperty}
-      accentColor={this.props.accentColor}
-    />
-    if(popUpHeight >= 1000){
-      circularImage = <View/>
+    var topPadding = Dimensions.get('window').height-popUpHeight-220;
+    if(topPadding < 0){
+      topPadding = 0;
     }
+
     return <View>
       <LinearGradient
         colors={['transparent','rgba(0,0,0,0.3)','rgba(0,0,0,0.3)' ]}
@@ -323,18 +326,23 @@ class BottomSheetRender extends Component{
       />
       <View
         style={{
-          height: Dimensions.get('window').height-popUpHeight,
+          height: 80+topPadding,
         }}
       />
       <View
         style={{
-          borderRadius: 50,
+          borderTopLeftRadius: 50,
+          borderTopRightRadius: 50,
           backgroundColor: colors.white[colors.mode],
           padding: 16,
-          height: popUpHeight,
+          height: popUpHeight+140,
         }}
       >
-          {circularImage}
+          <CircularImage 
+            item={this.state.item}
+            imageProperty={this.props.imageProperty}
+            accentColor={this.props.accentColor}
+          />
           {leftCornerImage}
           <RightCornerCheck
             item={this.state.item}

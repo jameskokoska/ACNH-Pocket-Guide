@@ -63,7 +63,7 @@ class SongsPage extends Component {
           gridType="largeGrid" //smallGrid, largeGrid, row
           dataGlobalName={"dataLoadedMusic"}
           appBarColor={colors.musicAppBar[colors.mode]}
-          titleColor={colors.textBlack[colors.mode]}
+          titleColor={colors.textWhite[0]}
           searchBarColor={colors.searchbarBG[colors.mode]}
           backgroundColor={colors.lightDarkAccent[colors.mode]}
           boxColor={colors.white[colors.mode]}

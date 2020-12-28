@@ -353,11 +353,11 @@ export const settings = [
   },
   {
     "keyName" : "settingsCreaturesLeavingWarning",
-    "defaultValue" : "false",
+    "defaultValue" : "true",
     "currentValue" : "",
     "picture" : require("./assets/icons/alarmClock.png"),
     "displayName" : "Creatures leaving warning",
-    "description" : "Display a warning colour around creatures that won't be able to be caught in the next month.",
+    "description" : "Display a red warning background colour around creatures that won't be able to be caught in the next month.",
   },
   {
     "keyName" : "settingsShowFAB",
@@ -369,7 +369,7 @@ export const settings = [
   },
   {
     "keyName" : "settingsTabBarPosition",
-    "defaultValue" : "true",
+    "defaultValue" : "false",
     "currentValue" : "",
     "picture" : require("./assets/icons/scroll.png"),
     "displayName" : "Category labels on bottom",

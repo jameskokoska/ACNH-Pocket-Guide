@@ -71,7 +71,7 @@ export default ArtPopup;
 
 const styles = StyleSheet.create({
   comparisonImage:{
-    width: 400,
+    width: "90%",
     height:300,
     resizeMode: "contain"
   }

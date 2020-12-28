@@ -3,9 +3,9 @@ import {ScrollView, Dimensions, Text} from 'react-native';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import ListPage from '../components/ListPage';
 import colors from '../Colors.js';
+import {getMonthShort} from "../components/DateFunctions"
 
 const width = { width: Dimensions.get('window').width };
-
 
 const renderTabBar = props => (
   <TabBar
@@ -15,6 +15,7 @@ const renderTabBar = props => (
     activeColor={colors.textBlack[colors.mode]}
     inactiveColor={colors.textBlack[colors.mode]}
     getLabelText={({ route }) => route.title}
+    labelStyle={{padding:0, margin:0}}
   />
 );
 
@@ -22,9 +23,11 @@ const FishRoute = () => (
   <ListPage 
     showVariations={[false]}
     title="Fish"
+    activeCreaturesMonth={true}
+    leaveWarning = {global.settingsCurrent[4]["currentValue"]==="true" ? true : false}
     imageProperty={["Icon Image"]}
     textProperty={["Name"]}
-    textProperty2={["NH Jan"]}
+    textProperty2={["creatureTime"]}
     textProperty3={["Where/How"]}
     checkListKey={[["fishCheckList","Name"]]}
     searchKey={[["Name","Where/How"]]}
@@ -50,9 +53,11 @@ const BugsRoute = () => (
   <ListPage 
     showVariations={[false]}
     title="Bugs"
+    activeCreaturesMonth={true}
+    leaveWarning = {global.settingsCurrent[4]["currentValue"]==="true" ? true : false}
     imageProperty={["Icon Image"]}
     textProperty={["Name"]}
-    textProperty2={["NH Jan"]}
+    textProperty2={["creatureTime"]}
     textProperty3={["Where/How"]}
     checkListKey={[["bugCheckList","Name"]]}
     searchKey={[["Name","Where/How"]]}
@@ -78,9 +83,11 @@ const SeaRoute = () => (
   <ListPage 
     showVariations={[false]}
     title="Sea Creatures"
+    activeCreaturesMonth={true}
+    leaveWarning = {global.settingsCurrent[4]["currentValue"]==="true" ? true : false}
     imageProperty={["Icon Image"]}
     textProperty={["Name"]}
-    textProperty2={["NH Jan"]}
+    textProperty2={["creatureTime"]}
     textProperty3={["Shadow"]}
     checkListKey={[["seaCheckList","Name"]]}
     searchKey={[["Name","Where/How"]]}

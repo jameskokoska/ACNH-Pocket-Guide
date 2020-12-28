@@ -26,8 +26,8 @@ class SidebarElement extends Component {
     return (
       <TouchableNativeFeedback onPress={() => {Vibration.vibrate(15); this.props.setPage(this.props.pageNum);}}>
         <View style={[styles.sidebarBox, {backgroundColor: backgroundColor,elevation: elevation}]}>
-            <Image style={styles.sidebarImage} source={this.props.image}/>
-            <TextFont bold={true} style={[styles.sidebarTitle,{color:this.props.textColor}]}>{this.props.title}</TextFont>
+          <Image style={styles.sidebarImage} source={this.props.image}/>
+          <TextFont bold={true} style={[styles.sidebarTitle,{color:this.props.textColor}]}>{this.props.title}</TextFont>
         </View>
       </TouchableNativeFeedback>
     );
@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
     margin: 4,
     marginLeft: "7%",
     marginRight: "7%",
+    paddingRight: 50,
   },
 });
 

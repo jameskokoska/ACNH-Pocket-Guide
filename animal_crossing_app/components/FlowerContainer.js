@@ -74,14 +74,14 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   flowerImage: {
-    width: 70,
-    height: 70,
+    width: 55,
+    height: 55,
     margin: 10,
     resizeMode:'contain',
   },
   flowerImageCorner: {
-    width: 30,
-    height: 30,
+    width: 25,
+    height: 25,
     margin: 10,
     bottom: -3,
     right: -3,

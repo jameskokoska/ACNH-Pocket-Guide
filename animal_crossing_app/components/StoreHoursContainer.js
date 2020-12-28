@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
   },
   textContainer:{
     marginLeft: 30,
+    marginRight: 100,
   },
   storeImage: {
     width: 100,

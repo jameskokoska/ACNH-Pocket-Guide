@@ -12,9 +12,10 @@ class ActiveCreatures extends Component {
   }
   render(){
     return(
-      <View style={{height: 900}}>
+      <View style={{height: Dimensions.get('window').height}}>
       <ListPage 
           title=""
+          leaveWarning = {global.settingsCurrent[4]["currentValue"]==="true" ? true : false}
           activeCreatures={true}
           gridType="smallGrid" //smallGrid, largeGrid, row
           appBarColor={colors.emojipediaAppBar[colors.mode]}
