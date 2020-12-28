@@ -9,6 +9,7 @@ import {Dimensions } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
 import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from './BottomSheetComponents';
 import colors from "../Colors.js"
+import {getMonthShort, isActive} from "./DateFunctions"
 import FishPopup from "../popups/FishPopup"
 import SeaPopup from "../popups/SeaPopup"
 import FossilPopup from "../popups/FossilPopup"
@@ -107,6 +108,15 @@ export default (props) =>{
                 continue;
               }
             }
+            //If current active creatures, don't add it if not active
+            if(props.activeCreatures){
+              var hemispherePre = global.settingsCurrent[0]["currentValue"] === "true" ? "NH " : "SH "
+              var currentMonthShort = getMonthShort(new Date().getMonth());
+              console.log(item[hemispherePre+currentMonthShort]);
+              if(!isActive(item[hemispherePre+currentMonthShort])){
+                continue;
+              }
+            }
             if(item.[props.textProperty[j]]===previousVariation){
               previousVariation = item.[props.textProperty[j]];
             } else {
@@ -171,23 +181,35 @@ export default (props) =>{
       restSpeedThreshold: 0.01,
       restDisplacementThreshold: 0.001
   };
-  return (
-    <SafeAreaView style={[styles.container, {backgroundColor:props.backgroundColor}]}>
+
+  var header = (<>
       <StatusBar backgroundColor="#1c1c1c" style="light" />
       <Animated.View style={[styles.header, {transform: [{translateY}]}]}>
         <Header title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
       </Animated.View>
+    </>);
+  var paddingTop = headerHeight*1.18;
+  var paddingBottom = Dimensions.get('window').height;
+  if (props.title===""){
+    header = <View/>;
+    paddingTop = 20;
+    paddingBottom = 20;
+  }
+  return (
+    <SafeAreaView style={{backgroundColor:props.backgroundColor}}>
+      {header}
       <Animated.FlatList
+        nestedScrollEnabled
         initialNumToRender={9}
         scrollEventThrottle={16}
-        contentContainerStyle={{paddingTop: headerHeight*1.18, paddingLeft: 15, paddingRight: 15, paddingBottom: 120}}
+        contentContainerStyle={{paddingTop: paddingTop, paddingLeft: 15, paddingRight: 15, paddingBottom: 120}}
         onScroll={handleScroll}
         ref={ref}
         data={dataUpdated}
         renderItem={renderItem}
         keyExtractor={(item, index) => `list-item-${index}-${item.checkListKeyString}`}
         numColumns={numColumns}
-        style={{paddingBottom: Dimensions.get('window').height}}
+        style={{paddingBottom: paddingBottom}}
       />
       
       <BottomSheet

@@ -12,7 +12,7 @@ export async function getStorage(storageKey, defaultValue){
   return valueReturned;
 }
 
-export async function getStorageData(data, checkListKey, defaultValue, recipes=false){
+export async function getStorageData(data, checkListKey, defaultValue){
   var dataLoadingTotal = [];
   //Loop through all datasets
   for(var dataSet = 0; dataSet <data.length; dataSet++){
@@ -82,6 +82,8 @@ export function determineDataGlobal(datakeyName){
     return global.dataLoadedTools;
   else if(datakeyName==="dataLoadedAll")
     return global.dataLoadedAll;
+  else if(datakeyName==="dataLoadedCreatures")
+    return global.dataLoadedCreatures;
 
 }
 
@@ -118,6 +120,8 @@ export function updateDataGlobal(datakeyName, index, collected, dataSet){
     global.dataLoadedTools[dataSet][index].collected=collected;
   else if(datakeyName==="dataLoadedAll")
     global.dataLoadedAll[dataSet][index].collected=collected;
+  else if(datakeyName==="dataLoadedCreatures")
+    global.dataLoadedCreatures[dataSet][index].collected=collected;
 }
 
 export function checkOff(item, collected, dataGlobalName){
@@ -189,6 +193,15 @@ export async function loadGlobalData(){
   global.dataLoadedFish = await getStorageData([require("./assets/data/fish.json")],[["fishCheckList","Name"]],"false");
   global.dataLoadedBugs = await getStorageData([require("./assets/data/insects.json")],[["bugCheckList","Name"]],"false");
   global.dataLoadedSea = await getStorageData([require("./assets/data/seacreatures.json")],[["seaCheckList","Name"]],"false");
+  global.dataLoadedCreatures = await getStorageData([
+    require("./assets/data/fish.json"),
+    require("./assets/data/seacreatures.json"),
+    require("./assets/data/insects.json"),
+  ],[
+    ["fishCheckList","Name"],
+    ["seaCheckList","Name"],
+    ["bugCheckList","Name"]
+  ],"false");
   global.dataLoadedFossils = await getStorageData([require("./assets/data/fossils.json")],[["fossilCheckList","Name"]],"false");
   global.dataLoadedArt = await getStorageData([require("./assets/data/art.json")],[["artCheckList","Name"]],"false");
   global.dataLoadedVillagers = await getStorageData([require("./assets/data/villagers.json")],[["villagerCheckList","Name"]],"false");

@@ -9,6 +9,7 @@ import LottieView from 'lottie-react-native';
 import colors from '../Colors'
 import {capitalize,countCollection} from "../LoadJsonData"
 import TextFont from "../components/TextFont"
+import ActiveCreatures from "../components/ActiveCreatures"
 
 function addDays(date, days) {
   var result = new Date(date);
@@ -118,8 +119,7 @@ class HomePage extends Component {
           <View style={{height: 15}}/>
         </HomeContentArea>
         <HomeContentArea backgroundColor={colors.sectionBackground1[colors.mode]} accentColor={colors.activeCreaturesColor[colors.mode]} title="Active Creatures" titleColor={colors.activeCreaturesColor[colors.modeReverse]}>
-          <View style={{height: 30}}/>
-          <View style={{height: 30}}/>
+          <ActiveCreatures/>
         </HomeContentArea>
       </ScrollView>
       <View style={{position:"absolute", width: "100%", height:"100%", zIndex:-5}}>

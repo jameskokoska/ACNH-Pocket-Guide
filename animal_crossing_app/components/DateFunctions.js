@@ -7,6 +7,11 @@ function getMonth(currentMonth){
   return months[currentMonth];
 }
 
+function getMonthShort(currentMonth){
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return months[currentMonth];
+}
+
 function getWeekDay(currentWeekDay){
   var weekDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
   return days[currentWeekDay];
@@ -49,4 +54,4 @@ function isActive(activeTime){
   }
 }
 
-export {getMonth, getWeekDay, getWeekDayShort, isActive, parseActiveTime};
+export {getMonthShort, getMonth, getWeekDay, getWeekDayShort, isActive, parseActiveTime};
