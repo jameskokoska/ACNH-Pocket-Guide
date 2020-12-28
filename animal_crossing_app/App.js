@@ -206,7 +206,7 @@ class App extends Component {
         <Popup button1={"OK"} button1Action={()=>{console.log("OK")}} button2={"Cancel"} button2Action={()=>{console.log("Cancel")}} popupVisible={this.state.open} close={() => this.setState({open:!this.state.open})}/>
       </>
     } else if (this.state.currentPage===3){
-      currentPageView = <ActiveTime/>
+      currentPageView = <ActiveTime item={require("./assets/data/fish.json")[0]}/>
     } else if (this.state.currentPage===4){
       currentPageView = <SongsPage/>
     } else if (this.state.currentPage===5){
@@ -219,8 +219,6 @@ class App extends Component {
       currentPageView = <View><ExportFile/><LoadFile/></View>
     } else if (this.state.currentPage===7){
       currentPageView = <VillagersPage/>
-    } else if (this.state.currentPage===9){
-      currentPageView = <ActiveTime displayText={"helloo"} displayText2={"yo"}/>
     } else if (this.state.currentPage===10){
       currentPageView = <SettingsPage/>
     } else if (this.state.currentPage===11){

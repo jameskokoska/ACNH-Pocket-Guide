@@ -1,49 +1,29 @@
 import React, { Component } from "react";
-import {AppRegistry, StyleSheet, ScrollView , StatusBar, Text, View, Dimensions} from "react-native";
+import {AppRegistry, StyleSheet, ScrollView , StatusBar, Text, View, Dimensions, Image} from "react-native";
 import colors from '../Colors.js';
 import Svg, { Circle, Rect } from 'react-native-svg';
+import {parseActiveTime, isActive} from "./DateFunctions"
 
 class ActiveTime extends Component {
   constructor(props) {
     super(props);
+    this.state={
+    }
   }
 
-  // render() {
-  //   console.log(this.props);
-  //   var displayText;
-  //   if(this.props.displayText==="hello"){
-  //     displayText = "yes";
-  //   } else {
-  //     displayText = "no";
-  //   }
-  //   return <Text style={[styles.text,{backgroundColor: colors.textWhite[colors.mode]}]}>{this.props.displayText2}</Text>
-  // }
+  render(){
 
-  render() {
-    const width = 50;
-    const size = width - 32;
-    const strokeWidth = 50;
-    const radius = (size - strokeWidth) / 2;
-    const circumference = radius * 2 * Math.PI;
+    console.log(this.props.item["Name"])
+    // test functions
 
-    return (
-      // <Svg height={size} width={size}>
-      //   <Circle
-      //     cx={size / 2}
-      //     cy={size / 2}
-      //     r={radius}
-      //     stroke="blue"
-      //   />
-      // </Svg>
-      <Svg height="1000" width="1000">
-        <Circle 
-        x={size/2}
-        cy={size/2}
-        r="50"
-        fill="pink"
-        />
-      </Svg>
-    );
+    return(
+      // <View>
+      //   <Image source={require("../assets/icons/clockActive.png")} style={{height: 100, width: 100, resizeMode:'contain'}}/>
+      // </View>
+      <View>
+        <Image source={require("../assets/icons/months.png")} style={{height: 100, width: 100, resizeMode:'contain'}}/>
+      </View>
+    )
   }
 }
 
