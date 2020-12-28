@@ -20,8 +20,8 @@ function getWeekDayShort(currentWeekDay){
 function parseActiveTime(activeTime){
   // Format example: "4 AM"
   const splitString = activeTime.split(" ");
-  const hour = splitString[0];
-  const ampm = splitString[1];
+  const hour = parseInt(splitString[0]);
+  const ampm = parseInt(splitString[1]);
   if(ampm==="PM"&&hour!=="12"){
     hour = hour + 12
   }
