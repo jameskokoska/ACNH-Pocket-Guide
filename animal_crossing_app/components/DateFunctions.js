@@ -22,12 +22,11 @@ function getWeekDayShort(currentWeekDay){
   return weekDays[currentWeekDay];
 }
 
-function parseActiveTime(activeTimea){
+function parseActiveTime(splitString, offset){
   // Format example: "4 AM"
-  const splitString = activeTimea.split(" ");
-  var hour = parseInt(splitString[0]);
-  const ampm = splitString[1];
-  if(ampm==="PM"&&hour!=="12"){
+  var hour = parseInt(splitString[offset]);
+  const meridian = splitString[offset+1];
+  if(meridian==="PM"&&hour!=="12"){
     hour = hour + 12
   }
   return hour
@@ -36,12 +35,15 @@ function parseActiveTime(activeTimea){
 function isActive(activeTime){
   // active time format: "4 AM – 9 PM"
   // check if it is available
-  if(activeTime!=="NA"||activeTime!=="All Day"){
-    const splitString = activeTime.split(" – ");
-    var currentHour = new Date().getHours();
+  if(activeTime!=="NA"||activeTime!=="All day"){
+    var splitString = activeTime.replace(/[^\x00-\x7F]/g, "");
+    splitString = splitString.replace("  ", " ");
     console.log(splitString);
-    const activeStart = parseActiveTime(splitString[0]);
-    const activeEnd = parseActiveTime(splitString[1]);
+    splitString = splitString.split(" ");
+    console.log(splitString);
+    var currentHour = new Date().getHours();
+    const activeStart = parseActiveTime(splitString, 0);
+    const activeEnd = parseActiveTime(splitString, 2);
     currentHour = parseInt(currentHour);
     // check if current time is between available hours
     if(activeStart < currentHour < activeEnd){
