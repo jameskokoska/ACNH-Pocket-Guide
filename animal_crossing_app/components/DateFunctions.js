@@ -17,11 +17,11 @@ function getWeekDayShort(currentWeekDay){
   return weekDays[currentWeekDay];
 }
 
-function parseActiveTime(activeTime){
+function parseActiveTime(activeTimea){
   // Format example: "4 AM"
-  const splitString = activeTime.split(" ");
-  const hour = parseInt(splitString[0]);
-  const ampm = parseInt(splitString[1]);
+  const splitString = activeTimea.split(" ");
+  var hour = parseInt(splitString[0]);
+  const ampm = splitString[1];
   if(ampm==="PM"&&hour!=="12"){
     hour = hour + 12
   }
@@ -30,15 +30,16 @@ function parseActiveTime(activeTime){
 
 function isActive(activeTime){
   // active time format: "4 AM – 9 PM"
-  const splitString = activeTime.split(" - ")
-  const currentHour = new Date().getHours();
-  const activeStart = parseInt(splitString[0]);
-  const activeEnd = parseInt(splitString[1]);
+  const splitString = activeTime.split(" – ");
+  var currentHour = new Date().getHours();
+  console.log(splitString);
+  const activeStart = parseActiveTime(splitString[0]);
+  const activeEnd = parseActiveTime(splitString[1]);
   currentHour = parseInt(currentHour);
   // check if it is available
   if(activeTime!=="NA"||"All Day"){
     // check if current time is between available hours
-    if(activeStart < currentHour < splitString){
+    if(activeStart < currentHour < activeEnd){
       return true
     } else {
       return false;
