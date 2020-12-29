@@ -93,6 +93,12 @@ class App extends Component {
       //console.log(global.settingsCurrent[i]["keyName"])
     }
     global.customTime = new Date(await getStorage("customDate",new Date().toString()));
+    
+    console.log("loaded")
+    this.homePage = <FadeInOut fadeIn={true}><HomePage/></FadeInOut>
+    this.allItemsPage = <AllItemsPage/>
+    this.museumPage = <MuseumPage/>
+
     console.log("DONE Loading")
     var splashScreenDelay = global.settingsCurrent[1].currentValue==="true" ? 0 : 500
     this.timeoutHandle = setTimeout(()=>{
@@ -135,13 +141,13 @@ class App extends Component {
     
     var currentPageView;
     if (this.state.currentPage===0){
-      currentPageView = <FadeInOut fadeIn={true}><HomePage/></FadeInOut>
+      currentPageView = this.homePage
     } else if (this.state.currentPage===1){
-      currentPageView = <AllItemsPage/>
+      currentPageView = this.allItemsPage
     } else if(this.state.currentPage===1){
       currentPageView = <TabsPage openDrawer={this.openDrawer}/>
     } else if(this.state.currentPage===2){
-      currentPageView = <MuseumPage/>
+      currentPageView = this.museumPage
     } else if (this.state.currentPage===2){
       currentPageView = 
       <>

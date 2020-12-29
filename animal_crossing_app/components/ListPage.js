@@ -1,6 +1,6 @@
 import React, {Component, useState, useRef, useEffect} from 'react';
 import {TouchableWithoutFeedback, Text, View, Animated, SafeAreaView, StatusBar, StyleSheet, TextInput} from 'react-native';
-import Header from './Header';
+import Header, {HeaderLoading} from './Header';
 import ListItem from './ListItem';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {determineDataGlobal} from "../LoadJsonData"
@@ -89,59 +89,65 @@ export default (props) =>{
     setSearch(search);
   }
 
-  var dataUpdated = [];
-  var previousVariation = "";
-  var item;
-  var dataLoaded2D = determineDataGlobal(props.dataGlobalName);
-  for(var j = 0; j < dataLoaded2D.length; j++){
-    var dataLoaded = dataLoaded2D[j];
-    for(var i = 0; i < dataLoaded.length; i++){
-      item = dataLoaded[i];
-      //Loop through the specific search criteria specified for this dataset
-      for(var x = 0; x < props.searchKey[j].length; x++){
-        if(search==="Search" || search==="" || item.[props.searchKey[j][x]].toLowerCase().includes(search.toLowerCase())){
-          //Search result found...
-          if(props.showVariations[j]===false){
-            //If recipes item page, and its not DIY, remove
-            if(props.recipes){
-              if(item["DIY"]!=="Yes"){
-                continue;
+  const [data, setData] = useState("empty")
+
+  useEffect(()=>{
+    var dataUpdated = [];
+    var previousVariation = "";
+    var item;
+    var dataLoaded2D = determineDataGlobal(props.dataGlobalName);
+    for(var j = 0; j < dataLoaded2D.length; j++){
+      var dataLoaded = dataLoaded2D[j];
+      for(var i = 0; i < dataLoaded.length; i++){
+        item = dataLoaded[i];
+        //Loop through the specific search criteria specified for this dataset
+        for(var x = 0; x < props.searchKey[j].length; x++){
+          if(search==="Search" || search==="" || item.[props.searchKey[j][x]].toLowerCase().includes(search.toLowerCase())){
+            //Search result found...
+            if(props.showVariations[j]===false){
+              //If recipes item page, and its not DIY, remove
+              if(props.recipes){
+                if(item["DIY"]!=="Yes"){
+                  continue;
+                }
               }
-            }
-            //If current active creatures, don't add it if not active
-            if(props.activeCreatures){
-              var hemispherePre = global.settingsCurrent[0]["currentValue"] === "true" ? "NH " : "SH "
-              var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
-              if(!isActive(item[hemispherePre+currentMonthShort])){
-                continue;
+              //If current active creatures, don't add it if not active
+              if(props.activeCreatures){
+                var hemispherePre = global.settingsCurrent[0]["currentValue"] === "true" ? "NH " : "SH "
+                var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
+                if(!isActive(item[hemispherePre+currentMonthShort])){
+                  continue;
+                }
               }
-            }
-            //If list only active creatures for the month, don't add it if === NA
-            if(props.activeCreaturesMonth && global.settingsCurrent[2]["currentValue"] === "true"){
-              var hemispherePre = global.settingsCurrent[0]["currentValue"] === "true" ? "NH " : "SH "
-              var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
-              if(item[hemispherePre+currentMonthShort]==="NA"){
-                continue;
+              //If list only active creatures for the month, don't add it if === NA
+              if(props.activeCreaturesMonth && global.settingsCurrent[2]["currentValue"] === "true"){
+                var hemispherePre = global.settingsCurrent[0]["currentValue"] === "true" ? "NH " : "SH "
+                var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
+                if(item[hemispherePre+currentMonthShort]==="NA"){
+                  continue;
+                }
               }
-            }
-            if(item.[props.textProperty[j]]===previousVariation){
-              previousVariation = item.[props.textProperty[j]];
+              if(item.[props.textProperty[j]]===previousVariation){
+                previousVariation = item.[props.textProperty[j]];
+              } else {
+                item.dataSet = j;
+                item.index = i;
+                dataUpdated = [...dataUpdated, item];
+                previousVariation = item.[props.textProperty[j]];
+              }
             } else {
               item.dataSet = j;
               item.index = i;
               dataUpdated = [...dataUpdated, item];
-              previousVariation = item.[props.textProperty[j]];
+              break;
             }
-          } else {
-            item.dataSet = j;
-            item.index = i;
-            dataUpdated = [...dataUpdated, item];
-            break;
           }
         }
       }
     }
-  }
+    setData(dataUpdated)
+  }, [props, search])
+  
   var numColumns=3;
   if(props.gridType==="smallGrid"){
     numColumns=3;
@@ -202,21 +208,30 @@ export default (props) =>{
     paddingTop = 20;
     paddingBottom = 20;
   }
-  return (
+  if(data==="empty"){
+    return(<>
+        <HeaderLoading title={props.title} headerHeight={headerHeight} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
+      </>
+    )
+  } else {
+    return (
     <View style={{backgroundColor:props.backgroundColor}}>
       {header}
       <Animated.FlatList
         nestedScrollEnabled
-        initialNumToRender={9}
+        initialNumToRender={8}
         scrollEventThrottle={16}
         contentContainerStyle={{paddingTop: paddingTop, paddingLeft: 15, paddingRight: 15, paddingBottom: 120}}
         onScroll={handleScroll}
         ref={ref}
-        data={dataUpdated}
+        data={data}
         renderItem={renderItem}
         keyExtractor={(item, index) => `list-item-${index}-${item.checkListKeyString}`}
         numColumns={numColumns}
         style={{paddingBottom: paddingBottom}}
+        removeClippedSubviews={true}
+        updateCellsBatchingPeriod={500}
+        windowSize={10}
       />
       
       <BottomSheet
@@ -229,6 +244,8 @@ export default (props) =>{
       />
     </View>
   );
+  }
+  
 };
 
 class BottomSheetRender extends Component{
@@ -238,7 +255,7 @@ class BottomSheetRender extends Component{
     this.state = {
       item:"item",
     }
-    this.updateCheckChildFunction;
+    this.updateCheckChildFunction="";
   }
   update(item, updateCheckChildFunction){
     this.forceUpdate();
@@ -247,7 +264,9 @@ class BottomSheetRender extends Component{
     })
     console.log("item available to popup:")
     console.log(item)
-    this.updateCheckChildFunction=updateCheckChildFunction;
+    if(item!==undefined){
+      this.updateCheckChildFunction=updateCheckChildFunction;
+    }
   }
   render(){
     var offSetTop = 200;
@@ -308,12 +327,21 @@ class BottomSheetRender extends Component{
       popUpHeight = this.props.popUpContainer[this.state.item.dataSet][1];
     }
 
-
     var topPadding = Dimensions.get('window').height-popUpHeight-220;
     if(topPadding < 0){
       topPadding = 0;
     }
 
+    var rightCornerCheck = <View/>
+    if(this.state.item!==undefined && this.updateCheckChildFunction!==""){
+      rightCornerCheck = <RightCornerCheck
+        item={this.state.item}
+        collected={this.state.item.collected}
+        dataGlobalName={this.props.dataGlobalName}
+        updateCheckChildFunction={this.updateCheckChildFunction}
+        checkType={this.props.checkType}
+      />
+    }
     return <View>
       <LinearGradient
         colors={['transparent','rgba(0,0,0,0.3)','rgba(0,0,0,0.3)' ]}
@@ -344,13 +372,7 @@ class BottomSheetRender extends Component{
             accentColor={this.props.accentColor}
           />
           {leftCornerImage}
-          <RightCornerCheck
-            item={this.state.item}
-            collected={this.state.item.collected}
-            dataGlobalName={this.props.dataGlobalName}
-            updateCheckChildFunction={this.updateCheckChildFunction}
-            checkType={this.props.checkType}
-          />
+          {rightCornerCheck}
           <View style={{height: 60}}/>
           {phrase}
           <Title

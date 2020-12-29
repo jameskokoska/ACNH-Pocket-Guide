@@ -88,6 +88,9 @@ export function determineDataGlobal(datakeyName){
 }
 
 export function updateDataGlobal(datakeyName, index, collected, dataSet){
+  if(index===undefined||collected===undefined||dataSet===undefined){
+    return;
+  }
   if(datakeyName==="dataLoadedReactions")
     global.dataLoadedReactions[dataSet][index].collected=collected;
   else if(datakeyName==="dataLoadedArt")
@@ -205,7 +208,7 @@ export async function loadGlobalData(){
     ["bugCheckList","Name"]
   ],"false");
   global.dataLoadedFossils = await getStorageData([require("./assets/data/fossils.json")],[["fossilCheckList","Name"]],"false");
-  global.dataLoadedArt = await getStorageData([require("./assets/data/art.json")],[["artCheckList","Name"]],"false");
+  global.dataLoadedArt = await getStorageData([require("./assets/data/art.json")],[["artCheckList","Name","Genuine"]],"false");
   global.dataLoadedVillagers = await getStorageData([require("./assets/data/villagers.json")],[["villagerCheckList","Name"]],"false");
   global.dataLoadedFurniture = await getStorageData([
     require("./assets/data/housewares.json"),
@@ -311,7 +314,7 @@ export async function loadGlobalData(){
     ["bugCheckList","Name"],
     ["seaCheckList","Name"],
     ["fossilCheckList","Name"],
-    ["artCheckList","Name"],
+    ["artCheckList","Name","Genuine"],
     ["villagerCheckList","Name"],
     ["songCheckList","Name"],
     ["emojiCheckList","Name"],
@@ -376,6 +379,14 @@ export const settings = [
     "picture" : require("./assets/icons/scroll.png"),
     "displayName" : "Category labels on bottom",
     "description" : "Show the category tabs on the bottom, or top of the screen in list pages with multiple categories.",
+  },
+  {
+    "keyName" : "settingsLoadRender",
+    "defaultValue" : "false",
+    "currentValue" : "false",
+    "picture" : require("./assets/icons/clockIcon.png"),
+    "displayName" : "Preload the elements in a list",
+    "description" : "Turning this on will load more elements in the list before displaying. Useful to reduce any lag spikes while navigating the app.",
   },
   {
     "keyName" : "settingsUseCustomDate",

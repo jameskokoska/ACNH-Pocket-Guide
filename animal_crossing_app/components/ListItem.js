@@ -1,4 +1,4 @@
-import React, {Component, useState, useEffect } from 'react';
+import React, {PureComponent, useState, useEffect } from 'react';
 import {
   Dimensions,
   StyleSheet,
@@ -21,7 +21,7 @@ import {getCurrentDateObject} from "./DateFunctions"
 
 const {width} = Dimensions.get('window');
 
-class ListItem extends Component{
+class ListItem extends PureComponent{
   constructor(props) {
     super(props);
     this.setCollected = this.setCollected.bind(this);
@@ -32,13 +32,14 @@ class ListItem extends Component{
   setCollected(collected){
     this.setState({collected: collected})
   }
-  componentWillUnmount(){
-    this.setState({unMounting:true})
-  }
+  // componentWillUnmount(){
+  //   console.log("unmount")
+  //   this.setState({unMounting:true})
+  // }
   render(){
-    if(this.state.collected!==this.props.item.collected){
-      this.setCollected(this.props.item.collected)
-    }
+    // if(this.state.collected!==this.props.item.collected){
+    //   this.setCollected(this.props.item.collected)
+    // }
     var disablePopup;
     if(this.props.disablePopup===undefined){
       disablePopup=false;
