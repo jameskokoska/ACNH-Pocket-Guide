@@ -3,7 +3,7 @@ import {ImageBackground, StyleSheet, View, TextInput, Text, Vibration} from 'rea
 import TextFont from './TextFont'
 import FadeInOut from "./FadeInOut"
 import LottieView from 'lottie-react-native';
-
+import DelayInput from "react-native-debounce-input";
 const Header = (props) => {
   return (
     <>
@@ -16,7 +16,15 @@ const Header = (props) => {
               <TextFont style={[styles.title, {color: props.titleColor}]} bold={true}>{props.title}</TextFont>
             </FadeInOut>
             <View style={[styles.searchBox, {backgroundColor:props.searchBarColor}]}>
-              <TextInput placeholder={"Search"} allowFontScaling={false} style={styles.searchText} onChangeText={function(text){props.updateSearch(text);}} onFocus={() => {Vibration.vibrate(15);}}/>
+              <DelayInput
+                allowFontScaling={false}
+                placeholder={"Search"}
+                style={styles.searchText}
+                onChangeText={function(text){props.updateSearch(text);}} 
+                onFocus={() => {Vibration.vibrate(15);}}
+                minLength={2}
+                delayTimeout={400}
+              />
             </View>
           </View>
         </View>

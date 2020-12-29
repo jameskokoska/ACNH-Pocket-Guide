@@ -86,6 +86,7 @@ export default (props) =>{
 
   const [search, setSearch] = useState("Search");
   function updateSearch(search){
+    console.log(search)
     setSearch(search);
   }
 
@@ -271,7 +272,7 @@ class BottomSheetRender extends Component{
   render(){
     var offSetTop = 200;
     var leftCornerImage;
-    if(this.props.popUpCornerImageProperty!==undefined && this.props.popUpCornerImageLabelProperty!==undefined){
+    if(this.props.popUpCornerImageProperty[this.state.item.dataSet]!=="" && this.props.popUpCornerImageProperty!==undefined && this.props.popUpCornerImageLabelProperty!==undefined){
       leftCornerImage = <LeftCornerImage
         item={this.state.item}
         accentColor={this.props.accentColor}
