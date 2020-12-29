@@ -76,7 +76,7 @@ const colors = {
     cancelButton : ["#d32f2f","#ab000d"],
     closedStore : ["#ffd9d9","#654848"],
     openStore : ["#81c784","#519657"],
-    closingSoonStore : ["#e6ee9c","#cabf45"],
+    closingSoonStore : ["#e6ee9c","#9e9855"],
     template : ["#","#"],
 }
 module.exports = colors;

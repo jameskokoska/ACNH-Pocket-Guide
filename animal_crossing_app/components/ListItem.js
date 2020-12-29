@@ -9,7 +9,6 @@ import {
   Vibration,
   Image,
 } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import TextFont from './TextFont';
 import Check from './Check';
 import CachedImage from 'react-native-expo-cached-image';
