@@ -189,16 +189,16 @@ const ClothingRoute = () => (
       "Source",
     ]}
     popUpContainer={[
-      ["ClothingPopup",500],
-      ["ClothingPopup",500],
-      ["ClothingPopup",500],
-      ["ClothingPopup",500],
-      ["ClothingPopup",500],
-      ["ClothingPopup",500],
-      ["ClothingPopup",500],
-      ["ClothingPopup",500],
-      ["ClothingPopup",500],
-      ["ClothingPopup",500],
+      ["ClothingPopup",450],
+      ["ClothingPopup",450],
+      ["ClothingPopup",450],
+      ["ClothingPopup",450],
+      ["ClothingPopup",450],
+      ["ClothingPopup",450],
+      ["ClothingPopup",450],
+      ["ClothingPopup",450],
+      ["ClothingPopup",450],
+      ["ClothingPopup",450],
     ]}
   />
 )
@@ -252,9 +252,9 @@ const FloorWallsRoute = () => (
       "Source",
     ]}
     popUpContainer={[
-      ["FloorWallsPopup",500],
-      ["FloorWallsPopup",500],
-      ["FloorWallsPopup",500],
+      ["FloorWallsPopup",400],
+      ["FloorWallsPopup",400],
+      ["FloorWallsPopup",400],
     ]}
   />
 )

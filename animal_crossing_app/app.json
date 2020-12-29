@@ -25,8 +25,8 @@
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.dapperappdev.acnhpocketguide",
-      "versionCode": 10
+      "package": "com.acnh.pocket_guide",
+      "versionCode": 13
     },
     "web": {
       "favicon": "./assets/icon.png"

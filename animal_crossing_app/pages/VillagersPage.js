@@ -28,7 +28,7 @@ class VillagersPage extends Component {
           accentColor={colors.villagerAccent[colors.mode]}
           specialLabelColor={colors.fishText[colors.mode]}
           checkType={"heart"}
-          popUpContainer={[["VillagerPopup",580]]}
+          popUpContainer={[["VillagerPopup",450]]}
           popUpPhraseProperty={["Catchphrase"]}
         />
     )

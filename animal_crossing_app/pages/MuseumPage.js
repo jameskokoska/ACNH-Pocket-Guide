@@ -128,7 +128,7 @@ const FossilsRoute = () => (
     specialLabelColor={colors.fishText[colors.mode]}
     popUpCornerImageProperty={["Source"]}
     popUpCornerImageLabelProperty={["Source"]}
-    popUpContainer={[["FossilPopup",300]]}
+    popUpContainer={[["FossilPopup",250]]}
   />
 )
 
@@ -155,7 +155,7 @@ const ArtRoute = () => (
     popUpCornerImageProperty={["Source"]}
     popUpCornerImageLabelProperty={["Source"]}
     popUpPhraseProperty={["Artist"]}
-    popUpContainer={[["ArtPopup",1200]]}
+    popUpContainer={[["ArtPopup",1050]]}
   />
 )
 

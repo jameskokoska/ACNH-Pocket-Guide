@@ -38,7 +38,7 @@ const RecipesRoute = () => (
     specialLabelColor={colors.fishText[colors.mode]}
     popUpCornerImageProperty={["Source"]}
     popUpCornerImageLabelProperty={["Source"]}
-    popUpContainer={[["RecipesPopup",550]]}
+    popUpContainer={[["RecipesPopup",500]]}
   />
 )
 
@@ -62,7 +62,7 @@ const ToolsRoute = () => (
     specialLabelColor={colors.fishText[colors.mode]}
     popUpCornerImageProperty={["Source"]}
     popUpCornerImageLabelProperty={["Source"]}
-    popUpContainer={[["ToolsPopup",300]]}
+    popUpContainer={[["ToolsPopup",250]]}
     popUpPhraseProperty={["Uses"]}
   />
 )
