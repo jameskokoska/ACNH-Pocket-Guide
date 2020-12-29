@@ -2,6 +2,15 @@ import * as Font from 'expo-font';
 import React, {Component} from 'react';
 import {Text} from 'react-native';
 
+function getCurrentDateObject(){
+  if(global.settingsCurrent[global.settingsCurrent.length-1]["currentValue"]==="true"){
+    return global.customTime;
+  } else {
+    return new Date();
+  }
+}
+
+
 function getMonth(currentMonth){
   var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   return months[currentMonth];
@@ -54,4 +63,4 @@ function isActive(activeTime){
   }
 }
 
-export {getMonthShort, getMonth, getWeekDay, getWeekDayShort, isActive, parseActiveTime};
+export {getCurrentDateObject, getMonthShort, getMonth, getWeekDay, getWeekDayShort, isActive, parseActiveTime};

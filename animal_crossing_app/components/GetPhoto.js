@@ -5,6 +5,8 @@ export function getPhoto(name){
   switch(name){
     case "leaf.png":
       return require("../assets/icons/leaf.png");
+    case "applejuice.png":
+      return require("../assets/icons/applejuice.png");
     case "fish.png":
       return require("../assets/icons/fish.png");
     case "bugs.png":

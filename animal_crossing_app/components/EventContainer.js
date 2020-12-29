@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Image, Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text, TouchableNativeFeedback} from 'react-native';
 import TextFont from './TextFont'
 import {getPhoto} from './GetPhoto'
+import {getCurrentDateObject} from './DateFunctions';
 
 // <EventContainer 
 //  backgroundColor="black" 
