@@ -2,11 +2,12 @@ import React, {Component} from 'react';
 import {Image, Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text, TouchableNativeFeedback} from 'react-native';
 import TextFont from './TextFont'
 import colors from "../Colors"
+import {getCurrentDateObject} from "./DateFunctions"
 
 class StoreHoursContainer extends Component {
   render(){
     var backgroundColor;
-    var currentHour = new Date().getHours();
+    var currentHour = getCurrentDateObject().getHours();
     if(currentHour+1===this.props.closeHour){
       backgroundColor = colors.closingSoonStore[colors.mode]
     } else if(currentHour >= this.props.openHour && currentHour < this.props.closeHour){

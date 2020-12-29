@@ -149,7 +149,7 @@ class App extends Component {
     } else if(this.state.currentPage===2){
       currentPageView = <MuseumPage/>
     } else if (this.state.currentPage===3){
-      currentPageView = <ActiveTime item={require("./assets/data/fish.json")[0]}/>
+      currentPageView = <ItemsPage/>
     } else if (this.state.currentPage===4){
       currentPageView = <SongsPage/>
     } else if (this.state.currentPage===5){
@@ -203,6 +203,7 @@ class App extends Component {
           ref={_drawer => (this.drawer = _drawer)} 
           drawerWidth={Dimensions.get('window').width} drawerPosition={"left"} 
           renderNavigationView={() => <NavigationView setPage={this.setPage} currentPage={this.state.currentPage}/>}>
+            <StatusBar hidden={global.settingsCurrent[7]["currentValue"]==="false"} backgroundColor="#1c1c1c" style="light" />
             {currentPageView}
           {fab}
         </DrawerLayoutAndroid>

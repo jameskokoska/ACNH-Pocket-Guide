@@ -197,7 +197,6 @@ export default (props) =>{
   };
 
   var header = (<>
-      <StatusBar backgroundColor="#1c1c1c" style="light" />
       <Animated.View style={[styles.header, {transform: [{translateY}]}]}>
         <Header title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
       </Animated.View>

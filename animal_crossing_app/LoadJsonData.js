@@ -372,6 +372,7 @@ export const settings = [
     "displayName" : "Show floating menu button",
     "description" : "Choose to display the menu button in the bottom right corner. The menu can be opened by dragging from the left of the screen.",
   },
+  
   {
     "keyName" : "settingsTabBarPosition",
     "defaultValue" : "false",
@@ -381,12 +382,12 @@ export const settings = [
     "description" : "Show the category tabs on the bottom, or top of the screen in list pages with multiple categories.",
   },
   {
-    "keyName" : "settingsLoadRender",
+    "keyName" : "settingsShowStatusBar",
     "defaultValue" : "false",
-    "currentValue" : "false",
-    "picture" : require("./assets/icons/clockIcon.png"),
-    "displayName" : "Preload the elements in a list",
-    "description" : "Turning this on will load more elements in the list before displaying. Useful to reduce any lag spikes while navigating the app.",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/bell.png"),
+    "displayName" : "Show notification status bar",
+    "description" : "A restart may be required to see changes.",
   },
   {
     "keyName" : "settingsUseCustomDate",
