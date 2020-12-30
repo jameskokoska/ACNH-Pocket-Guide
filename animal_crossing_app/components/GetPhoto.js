@@ -229,7 +229,7 @@ export function getPaintingPhoto(name){
       return require("../assets/icons/art/TwinklingPainting.png");
     case "Warm Painting":
       return require("../assets/icons/art/WarmPainting.png");
-    case "Wild Painting Left Half.png":
+    case "Wild Painting Left Half":
       return require("../assets/icons/art/WildPaintingLeftHalf.png");
     case "Wild Painting Right Half":
       return require("../assets/icons/art/WildPaintingRightHalf.png");
