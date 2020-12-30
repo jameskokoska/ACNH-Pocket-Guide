@@ -249,13 +249,12 @@ class ActiveTime extends Component {
     // available + hours
     var activeTimeImages = [];
 
-    // gets current time
+    // gets current time stuff
     var hemispherePre = global.settingsCurrent[0]["currentValue"] === "true" ? "NH " : "SH ";
-    var currentMonthShort = getMonthShort(new Date().getMonth());
+    var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
     var currentHour = getCurrentDateObject().getHours();
-    //console.log(currentHour);
-    //console.log(this.props.item[hemispherePre+currentMonthShort]);
     var currentTimeRange = this.props.item[hemispherePre+currentMonthShort];
+    var timeRangeList = [];
 
     // build current month indicator image list
     for(var i=0; i<months.length; i++){
@@ -278,24 +277,21 @@ class ActiveTime extends Component {
 
     // get current time image
     currentTimeImage = imagePrefix + "hour" + currentHour + imageSuffix;
-    // build active time indicator image list
-    if(currentTimeRange!=="NA"){
-      console.log(currentTimeRange);
-      for(var i=0; i<24; i++){
-        //console.log(i);
-        //console.log(isActive2(this.props.item[hemispherePre+currentMonthShort], i));
-        if(isActive2(this.props.item[hemispherePre+currentMonthShort], i)){
-          activeTimeImages.push(imagePrefix + "available" + i + imageSuffix);
-        }
-      }
-    }
-    
-    // console.log(this.props.item["Name"]);
 
-    // test functions
-    // const activeTime = this.props.item["NH Mar"];
-    // console.log(activeTime);
-    // console.log(isActive(activeTime));
+    // build active time indicator image list
+    timeRangeList = currentTimeRange.split("; ");
+    console.log(timeRangeList);
+    console.log(timeRangeList.length);
+    for(var r=0; r<timeRangeList.length; r++){
+      console.log("TimeRangeList"+timeRangeList[r]);
+      if(timeRangeList[r]!=="NA"){
+        for(var i=0; i<24; i++){
+          if(isActive2(timeRangeList[r], i)){
+            activeTimeImages.push(imagePrefix + "available" + i + imageSuffix);
+          }
+        }
+      } 
+    }
 
     console.log(currentMonthImages);
     console.log(activeMonthImages);

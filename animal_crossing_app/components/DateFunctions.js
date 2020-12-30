@@ -69,6 +69,7 @@ function isActive(activeTime){
 function isActive2(activeTime, currentHour){
   // active time format: "4 AM – 9 PM"
   // check if it is available
+  //console.log(activeTime)
   if(activeTime!=="NA"){
     if(activeTime==="All day"){
       return true;
@@ -78,12 +79,12 @@ function isActive2(activeTime, currentHour){
     splitString = splitString.split(" ");
     const activeStart = parseActiveTime(splitString, 0);
     const activeEnd = parseActiveTime(splitString, 2);
+    currentHour = parseInt(currentHour);
     // check if current time is between available hours
+    console.log(splitString);
     console.log(activeStart);
     console.log(currentHour);
     console.log(activeEnd);
-    console.log(activeStart < activeEnd);
-    console.log(activeStart > activeEnd);
     if(activeStart < activeEnd){
       if(activeStart <= currentHour && currentHour <= activeEnd){
         console.log("trigger1")
