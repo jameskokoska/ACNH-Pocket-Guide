@@ -300,29 +300,29 @@ class ActiveTime extends Component {
     // console.log(this.props.item["Name"]);
 
     return(
-      <View style={{marginTop: 20, flexDirection: "row"}}>
-        <View style={{margin: 5, width: "50%", height: "auto"}}>
+      <View style={{width: Dimensions.get('window').width, marginTop: 20, flexDirection: "row", justifyContent:"space-evenly"}}>
+        <View style={{width: 160, height: 160, margin: 7,}}>
           {/* BG Month */}
-          <Image source={require("../assets/icons/activeTime/month.png")} style={{position: "absolute", maxWidth: "45%", maxHeight: "45%"}}/>
+          <Image source={require("../assets/icons/activeTime/month.png")} style={{position: "absolute", width: 160, height: 160}}/>
           {/* Current Month */}
           {currentMonthImages.map((object, index) => {
-            return <Image source={getImage(object)} key={index} style={{position: "absolute", maxWidth: "45%", maxHeight: "45%"}}></Image>
+            return <Image source={getImage(object)} key={index} style={{position: "absolute", width: 160, height: 160}}></Image>
           })}
           {/* Monthly Activity */}
           {activeMonthImages.map((object, index) => {
-            return <Image source={getImage(object)} key={index} style={{position: "absolute", maxWidth: "45%", maxHeight: "45%"}}></Image>
+            return <Image source={getImage(object)} key={index} style={{position: "absolute", width: 160, height: 160}}></Image>
           })}
         </View>
 
-        <View style={{margin: 5, width: "50%", height: "auto"}}>
+        <View style={{width: 160, height: 160, margin: 7,}}>
           {/* Daily Activity */}
           {activeTimeImages.map((object, index) => {
-            return <Image source={getImage(object)} key={index} style={{position: "absolute", maxWidth: "45%", maxHeight: "45%"}}></Image>
+            return <Image source={getImage(object)} key={index} style={{position: "absolute", width: 160, height: 160}}></Image>
           })}
           {/* Current Time */}
-          <Image source={getImage(currentTimeImage)} style={{position: "absolute", maxWidth: "45%", maxHeight: "45%"}}></Image>
+          <Image source={getImage(currentTimeImage)} style={{position: "absolute", width: 160, height: 160}}></Image>
           {/* BG Clock */}
-          <Image source={require("../assets/icons/activeTime/clock.png")} style={{position: "absolute", maxWidth: "45%", maxHeight: "45%"}}/>
+          <Image source={require("../assets/icons/activeTime/clock.png")} style={{position: "absolute", width: 160, height: 160}}/>
         </View>
 
       </View>
