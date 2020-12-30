@@ -44,7 +44,10 @@ function parseActiveTime(splitString, offset){
 function isActive(activeTime){
   // active time format: "4 AM – 9 PM"
   // check if it is available
-  if(activeTime!=="NA"||activeTime!=="All day"){
+  if(activeTime!=="NA"){
+    if(activeTime==="All day"){
+      return true;
+    }
     var splitString = activeTime.replace(/[^\x00-\x7F]/g, "");
     splitString = splitString.replace("  ", " ");
     splitString = splitString.split(" ");
@@ -54,7 +57,7 @@ function isActive(activeTime){
     currentHour = parseInt(currentHour);
     // check if current time is between available hours
     if(activeStart < currentHour < activeEnd){
-      return true
+      return true;
     } else {
       return false;
     }
@@ -63,4 +66,43 @@ function isActive(activeTime){
   }
 }
 
-export {getCurrentDateObject, getMonthShort, getMonth, getWeekDay, getWeekDayShort, isActive, parseActiveTime};
+function isActive2(activeTime, currentHour){
+  // active time format: "4 AM – 9 PM"
+  // check if it is available
+  if(activeTime!=="NA"){
+    if(activeTime==="All day"){
+      return true;
+    }
+    var splitString = activeTime.replace(/[^\x00-\x7F]/g, "");
+    splitString = splitString.replace("  ", " ");
+    splitString = splitString.split(" ");
+    const activeStart = parseActiveTime(splitString, 0);
+    const activeEnd = parseActiveTime(splitString, 2);
+    // check if current time is between available hours
+    console.log(activeStart);
+    console.log(currentHour);
+    console.log(activeEnd);
+    console.log(activeStart < activeEnd);
+    console.log(activeStart > activeEnd);
+    if(activeStart < activeEnd){
+      if(activeStart <= currentHour && currentHour <= activeEnd){
+        console.log("trigger1")
+        return true;
+      }else{
+        return false;
+      }
+    }
+    else if(activeStart > activeEnd){
+      if(activeStart <= currentHour || currentHour <= activeEnd){
+        console.log("trigger2")
+        return true;
+      }else{
+        return false;
+      }
+    }
+  }else{
+    return false;
+  }
+}
+
+export {getCurrentDateObject, getMonthShort, getMonth, getWeekDay, getWeekDayShort, isActive, isActive2, parseActiveTime};

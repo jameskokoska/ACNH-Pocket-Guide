@@ -4,6 +4,7 @@ import {Dimensions, Image, View, Text} from 'react-native';
 import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
 import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"
+import ActiveTime from "../components/ActiveTime";
 
 
 class FishPopup extends Component {
@@ -24,6 +25,7 @@ class FishPopup extends Component {
         textProperty2={["Sell"]}
         ending2={" bells"}
       />
+      <ActiveTime item={this.props.item}/>
     </View>
   }
 }

@@ -38,8 +38,8 @@ function NavigationView(props) {
           <TextFont bold={true} style={{marginLeft: 15, marginTop: 130, marginBottom: 10, fontSize: 34, color: colors.textBlack[colors.mode]}}>ACNH Pocket</TextFont>
         </View>
         <SidebarElement image={require("./assets/icons/house.png")} title="Home" pageNum={0} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectHome[colors.mode]} textColor={colors.textBlack[colors.mode]} unselectedColor={colors.textWhite[colors.mode]}/>
-        <SidebarElement image={require("./assets/icons/book.png")} title="All Items" pageNum={1} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectItems[colors.mode]} textColor={colors.textBlack[colors.mode]} unselectedColor={colors.textWhite[colors.mode]}/>
-        <SidebarElement image={require("./assets/icons/bugs.png")} title="Creatures and Museum" pageNum={2} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectCreatures[colors.mode]} textColor={colors.textBlack[colors.mode]} unselectedColor={colors.textWhite[colors.mode]}/>
+        <SidebarElement image={require("./assets/icons/book.png")} title="Everything" pageNum={1} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectItems[colors.mode]} textColor={colors.textBlack[colors.mode]} unselectedColor={colors.textWhite[colors.mode]}/>
+        <SidebarElement image={require("./assets/icons/bugs.png")} title="Creatures + Museum" pageNum={2} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectCreatures[colors.mode]} textColor={colors.textBlack[colors.mode]} unselectedColor={colors.textWhite[colors.mode]}/>
         <SidebarElement image={require("./assets/icons/leaf.png")} title="Items" pageNum={3} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectItems[colors.mode]} textColor={colors.textBlack[colors.mode]} unselectedColor={colors.textWhite[colors.mode]}/>
         <SidebarElement image={require("./assets/icons/music.png")} title="Songs" pageNum={4} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectSongs[colors.mode]} textColor={colors.textBlack[colors.mode]} unselectedColor={colors.textWhite[colors.mode]}/>
         <SidebarElement image={require("./assets/icons/emote.png")} title="Emoticons" pageNum={5} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectEmotes[colors.mode]} textColor={colors.textBlack[colors.mode]} unselectedColor={colors.textWhite[colors.mode]}/>
@@ -66,7 +66,7 @@ class App extends Component {
     this.random = Math.random();
     this.state = {
       loaded: false,
-      currentPage: 10,
+      currentPage: 3,
       open:false,
       fadeInTitle:true,
     }
@@ -153,7 +153,7 @@ class App extends Component {
         <Popup button1={"OK"} button1Action={()=>{console.log("OK")}} button2={"Cancel"} button2Action={()=>{console.log("Cancel")}} popupVisible={this.state.open} close={() => this.setState({open:!this.state.open})}/>
       </>
     } else if (this.state.currentPage===3){
-      currentPageView = <ActiveTime item={require("./assets/data/fish.json")[4]}/>
+      currentPageView = <ActiveTime item={require("./assets/data/fish.json")[0]}/>
     } else if (this.state.currentPage===4){
       currentPageView = <SongsPage/>
     } else if (this.state.currentPage===5){
