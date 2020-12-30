@@ -269,7 +269,7 @@ export function getPaintingPhotoFake(name){
       return require("../assets/icons/art/SerenePaintingFake.png");
     case "Solemn Painting":
       return require("../assets/icons/art/SolemnPaintingFake.png");
-    case "Wild Painting Left Half.png":
+    case "Wild Painting Left Half":
       return require("../assets/icons/art/WildPaintingLeftHalfFake.png");
     case "Wild Painting Right Half":
       return require("../assets/icons/art/WildPaintingRightHalfFake.png");
