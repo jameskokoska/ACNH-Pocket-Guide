@@ -82,11 +82,11 @@ const FurnitureRoute = () => (
       "Source",
     ]}
     popUpContainer={[
-      ["FurniturePopup",500],
-      ["FurniturePopup",500],
-      ["FurniturePopup",500],
-      ["FurniturePopup",500],
-      ["FurniturePopup",500],
+      ["FurniturePopup",460],
+      ["FurniturePopup",460],
+      ["FurniturePopup",460],
+      ["FurniturePopup",460],
+      ["FurniturePopup",460],
     ]}
   />
 )

@@ -81,13 +81,13 @@ function isActive2(activeTime, currentHour){
     const activeEnd = parseActiveTime(splitString, 2);
     currentHour = parseInt(currentHour);
     // check if current time is between available hours
-    console.log(splitString);
-    console.log(activeStart);
-    console.log(currentHour);
-    console.log(activeEnd);
+    // console.log(splitString);
+    // console.log(activeStart);
+    // console.log(currentHour);
+    // console.log(activeEnd);
     if(activeStart < activeEnd){
       if(activeStart <= currentHour && currentHour <= activeEnd){
-        console.log("trigger1")
+        // console.log("trigger1")
         return true;
       }else{
         return false;
@@ -95,7 +95,7 @@ function isActive2(activeTime, currentHour){
     }
     else if(activeStart > activeEnd){
       if(activeStart <= currentHour || currentHour <= activeEnd){
-        console.log("trigger2")
+        // console.log("trigger2")
         return true;
       }else{
         return false;

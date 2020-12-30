@@ -64,7 +64,7 @@ class LoadFile extends Component {
           textLower={"\nImported " + this.state.loadedNumber + " entires. \n\nNote: If this has imported 0 entires, please double check you have chosen the correct file."}
         />
         <ButtonComponent
-          text={"Load Data"}
+          text={"Import Data"}
           color={colors.okButton[colors.mode]}
           vibrate={5}
           onPress={() => {

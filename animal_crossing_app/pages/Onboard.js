@@ -50,12 +50,15 @@ class Onboard extends Component {
               autoPlay
               loop={true}
               style={{
-                width: 150,
-                height: 150,
+                width: 120,
+                height: 120,
+                transform: [
+                  { scale: 1.25 },
+                ],
               }} 
               source={require('../assets/balloon.json')}
             />,
-            title: <TextFont style={{fontSize: 30, width: "70%", textAlign:'center', color:colors.textBlack[colors.mode]}} bold={true}>Let's go!</TextFont>,
+            title: <TextFont style={{fontSize: 30, paddingTop: 20, width: "70%", textAlign:'center', color:colors.textBlack[colors.mode]}} bold={true}>Let's go!</TextFont>,
             subtitle: <>
               <ButtonComponent vibrate={10} color={colors.okButton[colors.mode]} text="Northern Hemisphere" onPress={() => {
                 AsyncStorage.setItem("firstLogin", "false"); 
@@ -69,6 +72,7 @@ class Onboard extends Component {
                 global.settingsCurrent[0]["currentValue"] = "false";
                 this.props.setFirstLogin(false);
               }} />
+              <TextFont style={{fontSize: 12, paddingTop: 30, width: "70%", textAlign:'center', color:colors.textBlack[colors.mode]}} bold={true}>You can import your exported data from the last version of the app in settings.</TextFont>
             </>,
           },
         ]}

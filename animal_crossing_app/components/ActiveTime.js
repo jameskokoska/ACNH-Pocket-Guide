@@ -280,10 +280,10 @@ class ActiveTime extends Component {
 
     // build active time indicator image list
     timeRangeList = currentTimeRange.split("; ");
-    console.log(timeRangeList);
-    console.log(timeRangeList.length);
+    // console.log(timeRangeList);
+    // console.log(timeRangeList.length);
     for(var r=0; r<timeRangeList.length; r++){
-      console.log("TimeRangeList"+timeRangeList[r]);
+      // console.log("TimeRangeList"+timeRangeList[r]);
       if(timeRangeList[r]!=="NA"){
         for(var i=0; i<24; i++){
           if(isActive2(timeRangeList[r], i)){
@@ -293,15 +293,14 @@ class ActiveTime extends Component {
       } 
     }
 
-    console.log(currentMonthImages);
-    console.log(activeMonthImages);
-    console.log(currentTimeImage);
-    console.log(activeTimeImages);
-    console.log(this.props.item["Name"]);
+    // console.log(currentMonthImages);
+    // console.log(activeMonthImages);
+    // console.log(currentTimeImage);
+    // console.log(activeTimeImages);
+    // console.log(this.props.item["Name"]);
 
     return(
-      <View style={{flexDirection: "row"}}>
-
+      <View style={{marginTop: 20, flexDirection: "row"}}>
         <View style={{margin: 5, width: "50%", height: "auto"}}>
           {/* BG Month */}
           <Image source={require("../assets/icons/activeTime/month.png")} style={{position: "absolute", maxWidth: "45%", maxHeight: "45%"}}/>

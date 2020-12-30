@@ -45,7 +45,7 @@ const FishRoute = () => (
     popUpCornerImageProperty={["Where/How"]}
     popUpCornerImageLabelProperty={["Where/How"]}
     popUpPhraseProperty={["Catch phrase"]}
-    popUpContainer={[["FishPopup",600]]} //name of the popup class and height
+    popUpContainer={[["FishPopup",550]]} //name of the popup class and height
   />
 )
 
@@ -75,7 +75,7 @@ const BugsRoute = () => (
     popUpCornerImageProperty={["Where/How"]}
     popUpCornerImageLabelProperty={["Where/How"]}
     popUpPhraseProperty={["Catch phrase"]}
-    popUpContainer={[["BugPopup",600]]}
+    popUpContainer={[["BugPopup",520]]}
   />
 )
 
@@ -90,7 +90,7 @@ const SeaRoute = () => (
     textProperty2={["creatureTime"]}
     textProperty3={["Shadow"]}
     checkListKey={[["seaCheckList","Name"]]}
-    searchKey={[["Name","Where/How"]]}
+    searchKey={[["Name"]]}
     gridType="row" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedSea"}
     appBarColor={colors.fishAppBar[colors.mode]}
@@ -103,7 +103,7 @@ const SeaRoute = () => (
     accentColor={colors.fishAccent[colors.mode]}
     specialLabelColor={colors.fishText[colors.mode]}
     popUpPhraseProperty={["Catch phrase"]}
-    popUpContainer={[["SeaPopup",600]]}
+    popUpContainer={[["SeaPopup",550]]}
   />
 )
 
@@ -155,7 +155,7 @@ const ArtRoute = () => (
     popUpCornerImageProperty={["Source"]}
     popUpCornerImageLabelProperty={["Source"]}
     popUpPhraseProperty={["Artist"]}
-    popUpContainer={[["ArtPopup",1050]]}
+    popUpContainer={[["ArtPopup",1000]]}
   />
 )
 
