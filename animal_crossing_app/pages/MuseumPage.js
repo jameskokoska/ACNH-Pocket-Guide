@@ -102,8 +102,6 @@ const SeaRoute = () => (
     labelColor={colors.textBlack[colors.mode]}
     accentColor={colors.fishAccent[colors.mode]}
     specialLabelColor={colors.fishText[colors.mode]}
-    popUpCornerImageProperty={["Where/How"]}
-    popUpCornerImageLabelProperty={["Where/How"]}
     popUpPhraseProperty={["Catch phrase"]}
     popUpContainer={[["SeaPopup",600]]}
   />

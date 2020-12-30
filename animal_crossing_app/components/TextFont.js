@@ -1,33 +1,17 @@
 import * as Font from 'expo-font';
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import {Text} from 'react-native';
 
 //<TextFont bold={true}>My text here</TextFont>
 
-class TextFont extends Component {
+class TextFont extends PureComponent {
   constructor(props){
     super(props);
-    this.state={
-      fontLoaded:false
-    }
     Text.defaultProps = Text.defaultProps || {};
     Text.defaultProps.allowFontScaling = false;
   }
-  async componentDidMount(){
-    await Font.loadAsync({
-      "ArialRounded": require('../assets/fonts/arialRound.ttf'),
-    });
-    await Font.loadAsync({
-      "ArialRoundedBold": require('../assets/fonts/arialRoundBold.ttf'),
-    });
-    this.setState({fontLoaded:true});
-  }
   render(){
-    if(this.state.fontLoaded){
-      return <Text adjustsFontSizeToFit={this.props.adjustsFontSizeToFit} numberOfLines={this.props.numberOfLines} style={[this.props.style,{fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}]}>{this.props.children}</Text>
-    } else {
-      return <Text>Not loaded</Text>
-    }
+    return <Text adjustsFontSizeToFit={this.props.adjustsFontSizeToFit} numberOfLines={this.props.numberOfLines} style={[this.props.style,{fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}]}>{this.props.children}</Text>
   }
 }
 export default TextFont;

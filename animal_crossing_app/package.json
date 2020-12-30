@@ -33,6 +33,7 @@
     "react-native-androw": "0.0.34",
     "react-native-animated-header": "^1.0.7",
     "react-native-appearance": "~0.3.3",
+    "react-native-debounce-input": "^1.0.5",
     "react-native-draggable-switch": "^1.1.1",
     "react-native-drawer": "^2.5.1",
     "react-native-drop-shadow": "0.0.2",

@@ -88,6 +88,9 @@ export function determineDataGlobal(datakeyName){
 }
 
 export function updateDataGlobal(datakeyName, index, collected, dataSet){
+  if(index===undefined||collected===undefined||dataSet===undefined){
+    return;
+  }
   if(datakeyName==="dataLoadedReactions")
     global.dataLoadedReactions[dataSet][index].collected=collected;
   else if(datakeyName==="dataLoadedArt")
@@ -126,16 +129,18 @@ export function updateDataGlobal(datakeyName, index, collected, dataSet){
 
 export function checkOff(item, collected, dataGlobalName){
   console.log(item.checkListKey);
-  if(collected==="false"){
-    Vibration.vibrate([0,10,220,20]);
-    global.collectionList.push(item.checkListKey)
-  } else {
-    Vibration.vibrate(10);
-    collectionListRemove(item.checkListKey)
+  if(item!==undefined){
+     if(collected==="false"){
+      Vibration.vibrate([0,10,220,20]);
+      global.collectionList.push(item.checkListKey)
+    } else {
+      Vibration.vibrate(10);
+      collectionListRemove(item.checkListKey)
+    }
+    collectionListSave();
+    updateDataGlobal(dataGlobalName, item.index, collected==="false" ? "true":"false", item.dataSet)
+    //console.log(global.collectionList)
   }
-  collectionListSave();
-  updateDataGlobal(dataGlobalName, item.index, collected==="false" ? "true":"false", item.dataSet)
-  //console.log(global.collectionList)
 }
 
 function collectionListRemove(checkListKey){
@@ -203,7 +208,7 @@ export async function loadGlobalData(){
     ["bugCheckList","Name"]
   ],"false");
   global.dataLoadedFossils = await getStorageData([require("./assets/data/fossils.json")],[["fossilCheckList","Name"]],"false");
-  global.dataLoadedArt = await getStorageData([require("./assets/data/art.json")],[["artCheckList","Name"]],"false");
+  global.dataLoadedArt = await getStorageData([require("./assets/data/art.json")],[["artCheckList","Name","Genuine"]],"false");
   global.dataLoadedVillagers = await getStorageData([require("./assets/data/villagers.json")],[["villagerCheckList","Name"]],"false");
   global.dataLoadedFurniture = await getStorageData([
     require("./assets/data/housewares.json"),
@@ -309,7 +314,7 @@ export async function loadGlobalData(){
     ["bugCheckList","Name"],
     ["seaCheckList","Name"],
     ["fossilCheckList","Name"],
-    ["artCheckList","Name"],
+    ["artCheckList","Name","Genuine"],
     ["villagerCheckList","Name"],
     ["songCheckList","Name"],
     ["emojiCheckList","Name"],
@@ -329,7 +334,7 @@ export const settings = [
   },
   {
     "keyName" : "settingsSkipSplashScreen",
-    "defaultValue" : "false",
+    "defaultValue" : "true",
     "currentValue" : "",
     "picture" : require("./assets/icons/hourglass.png"),
     "displayName" : "Skip loading screen",
@@ -367,6 +372,7 @@ export const settings = [
     "displayName" : "Show floating menu button",
     "description" : "Choose to display the menu button in the bottom right corner. The menu can be opened by dragging from the left of the screen.",
   },
+  
   {
     "keyName" : "settingsTabBarPosition",
     "defaultValue" : "false",
@@ -376,12 +382,12 @@ export const settings = [
     "description" : "Show the category tabs on the bottom, or top of the screen in list pages with multiple categories.",
   },
   {
-    "keyName" : "settingsScaleUI",
+    "keyName" : "settingsShowStatusBar",
     "defaultValue" : "false",
     "currentValue" : "",
-    "picture" : require("./assets/icons/clockIcon.png"),
-    "displayName" : "User Interface Scale",
-    "description" : "Use the recommended interface scale, or the system one when enabled",
+    "picture" : require("./assets/icons/bell.png"),
+    "displayName" : "Show notification status bar",
+    "description" : "A restart may be required to see changes.",
   },
   {
     "keyName" : "settingsUseCustomDate",

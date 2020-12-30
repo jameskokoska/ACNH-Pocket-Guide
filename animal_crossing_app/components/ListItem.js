@@ -1,4 +1,4 @@
-import React, {Component, useState, useEffect } from 'react';
+import React, {PureComponent, useState, useEffect } from 'react';
 import {
   Dimensions,
   StyleSheet,
@@ -9,7 +9,6 @@ import {
   Vibration,
   Image,
 } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import TextFont from './TextFont';
 import Check from './Check';
 import CachedImage from 'react-native-expo-cached-image';
@@ -17,10 +16,11 @@ import {checkOff, capitalize, commas, removeBrackets} from "../LoadJsonData"
 import {getPhotoShadow} from "./GetPhoto"
 import {getMonthShort} from "./DateFunctions"
 import colors from "../Colors"
+import {getCurrentDateObject} from "./DateFunctions"
 
 const {width} = Dimensions.get('window');
 
-class ListItem extends Component{
+class ListItem extends PureComponent{
   constructor(props) {
     super(props);
     this.setCollected = this.setCollected.bind(this);
@@ -31,13 +31,14 @@ class ListItem extends Component{
   setCollected(collected){
     this.setState({collected: collected})
   }
-  componentWillUnmount(){
-    this.setState({unMounting:true})
-  }
+  // componentWillUnmount(){
+  //   console.log("unmount")
+  //   this.setState({unMounting:true})
+  // }
   render(){
-    if(this.state.collected!==this.props.item.collected){
-      this.setCollected(this.props.item.collected)
-    }
+    // if(this.state.collected!==this.props.item.collected){
+    //   this.setCollected(this.props.item.collected)
+    // }
     var disablePopup;
     if(this.props.disablePopup===undefined){
       disablePopup=false;
@@ -48,8 +49,8 @@ class ListItem extends Component{
     var boxColor = this.props.boxColor;
     if(this.props.leaveWarning){
       var hemispherePre = global.settingsCurrent[0]["currentValue"] === "true" ? "NH " : "SH "
-      var nextMonthShort = getMonthShort(new Date().getMonth()+1);
-      var currentMonthShort = getMonthShort(new Date().getMonth());
+      var nextMonthShort = getMonthShort(getCurrentDateObject().getMonth()+1);
+      var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
       
       if(this.props.item[hemispherePre+nextMonthShort]==="NA" && this.props.item[hemispherePre+currentMonthShort]!=="NA"){
         boxColor = colors.creaturesLeavingBG[colors.mode];
@@ -62,7 +63,7 @@ class ListItem extends Component{
     }
     if(this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]==="creatureTime"){
       var hemispherePre = global.settingsCurrent[0]["currentValue"] === "true" ? "NH " : "SH "
-      var currentMonthShort = getMonthShort(new Date().getMonth());
+      var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
       textProperty2Text = this.props.item[hemispherePre+currentMonthShort];
     }
 

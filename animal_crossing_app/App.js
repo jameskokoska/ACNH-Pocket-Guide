@@ -4,7 +4,6 @@ import ListPage from './components/ListPage';
 import SidebarElement from './components/SidebarElement';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import FAB from './components/FAB';
-import TabsPage from './pages/TabsPage';
 import SongsPage from './pages/SongsPage';
 import EmoticonsPage from './pages/EmoticonsPage';
 import ConstructionPage from './pages/ConstructionPage';
@@ -25,10 +24,10 @@ import Popup from './components/Popup';
 import CreditsPage from './pages/CreditsPage';
 import FlowerPage from './pages/FlowerPage';
 import {getStorage, getStorageData, settings, loadGlobalData} from './LoadJsonData';
-import {ExportFile, LoadFile} from './components/LoadFile';
 import Onboard from './pages/Onboard';
 import colors from './Colors.js';
 import ActiveTime from './components/ActiveTime.js';
+import * as Font from 'expo-font';
 
 function NavigationView(props) {
   return (
@@ -66,7 +65,7 @@ class App extends Component {
     this.random = Math.random();
     this.state = {
       loaded: false,
-      currentPage: 3,
+      currentPage: 0,
       open:false,
       fadeInTitle:true,
     }
@@ -93,6 +92,15 @@ class App extends Component {
       //console.log(global.settingsCurrent[i]["keyName"])
     }
     global.customTime = new Date(await getStorage("customDate",new Date().toString()));
+
+    //Load Fonts
+    await Font.loadAsync({
+      "ArialRounded": require('./assets/fonts/arialRound.ttf'),
+    });
+    await Font.loadAsync({
+      "ArialRoundedBold": require('./assets/fonts/arialRoundBold.ttf'),
+    });
+
     console.log("DONE Loading")
     var splashScreenDelay = global.settingsCurrent[1].currentValue==="true" ? 0 : 500
     this.timeoutHandle = setTimeout(()=>{
@@ -138,38 +146,22 @@ class App extends Component {
       currentPageView = <FadeInOut fadeIn={true}><HomePage/></FadeInOut>
     } else if (this.state.currentPage===1){
       currentPageView = <AllItemsPage/>
-    } else if(this.state.currentPage===1){
-      currentPageView = <TabsPage openDrawer={this.openDrawer}/>
     } else if(this.state.currentPage===2){
       currentPageView = <MuseumPage/>
-    } else if (this.state.currentPage===2){
-      currentPageView = 
-      <>
-        <Button title="button" onPress={() => this.setState({open:!this.state.open})}/>
-        <Button title="button" onPress={() => this.setState({open:!this.state.open})}/>
-        <Button title="button" onPress={() => this.setState({open:!this.state.open})}/>
-        <Button title="button" onPress={() => this.setState({open:!this.state.open})}/>
-        <Button title="button" onPress={() => this.setState({open:!this.state.open})}/>
-        <Popup button1={"OK"} button1Action={()=>{console.log("OK")}} button2={"Cancel"} button2Action={()=>{console.log("Cancel")}} popupVisible={this.state.open} close={() => this.setState({open:!this.state.open})}/>
-      </>
     } else if (this.state.currentPage===3){
-      currentPageView = <ActiveTime item={require("./assets/data/fish.json")[0]}/>
+      currentPageView = <ItemsPage/>
     } else if (this.state.currentPage===4){
       currentPageView = <SongsPage/>
     } else if (this.state.currentPage===5){
       currentPageView = <EmoticonsPage/>
     } else if (this.state.currentPage===6){
       currentPageView = <CraftingPage/>
-    } else if (this.state.currentPage===8){
-      currentPageView = <ConstructionPage/>
-    } else if (this.state.currentPage===8){
-      currentPageView = <View><ExportFile/><LoadFile/></View>
     } else if (this.state.currentPage===7){
       currentPageView = <VillagersPage/>
-    } else if (this.state.currentPage===9){
+    } else if (this.state.currentPage===8){
+      currentPageView = <ConstructionPage/>
+    }else if (this.state.currentPage===9){
       currentPageView = <FlowerPage/>
-    } else if (this.state.currentPage===9){
-      currentPageView = <ActiveTime displayText={"helloo"} displayText2={"yo"}/>
     } else if (this.state.currentPage===10){
       currentPageView = <SettingsPage/>
     } else if (this.state.currentPage===11){
@@ -211,6 +203,7 @@ class App extends Component {
           ref={_drawer => (this.drawer = _drawer)} 
           drawerWidth={Dimensions.get('window').width} drawerPosition={"left"} 
           renderNavigationView={() => <NavigationView setPage={this.setPage} currentPage={this.state.currentPage}/>}>
+            <StatusBar hidden={global.settingsCurrent[7]["currentValue"]==="false"} backgroundColor="#1c1c1c" style="light" />
             {currentPageView}
           {fab}
         </DrawerLayoutAndroid>
