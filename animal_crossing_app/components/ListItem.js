@@ -36,9 +36,9 @@ class ListItem extends PureComponent{
   //   this.setState({unMounting:true})
   // }
   render(){
-    // if(this.state.collected!==this.props.item.collected){
-    //   this.setCollected(this.props.item.collected)
-    // }
+    if(this.state.collected!==this.props.item.collected){
+      this.setCollected(this.props.item.collected)
+    }
     var disablePopup;
     if(this.props.disablePopup===undefined){
       disablePopup=false;

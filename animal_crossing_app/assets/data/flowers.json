@@ -366,7 +366,7 @@
       "childSpecial" : true
     },
     {
-      "percentage" : false,
+      "percentage" : ,
       "parent1" : "white tulips",
       "parent1Special" : false,
       "parent2" : "red tulips",
