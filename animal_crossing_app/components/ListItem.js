@@ -73,7 +73,7 @@ class ListItem extends PureComponent{
         if(this.props.textProperty2[this.props.item.dataSet]==="(DIY)")
           textProperty2Component = <TextFont bold={false} style={{textAlign:'center', color:this.props.labelColor, fontSize:12}}>(DIY)</TextFont>
         else 
-          textProperty2Component = <TextFont bold={false} style={{textAlign:'center', color:this.props.labelColor, fontSize:12}}>{capitalize(textProperty2Text)}</TextFont>
+          textProperty2Component = <TextFont bold={false} style={{textAlign:'center', color:this.props.labelColor, fontSize:12}}>{capitalize(this.props.item[textProperty2Text])}</TextFont>
       }
       return (
         <View style={styles.gridWrapper}>
