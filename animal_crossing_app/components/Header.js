@@ -4,11 +4,39 @@ import TextFont from './TextFont'
 import FadeInOut from "./FadeInOut"
 import LottieView from 'lottie-react-native';
 import DelayInput from "react-native-debounce-input";
+import DropDownPicker from 'react-native-dropdown-picker'
+import colors from "../Colors"
+
 const Header = (props) => {
+  var dropDownPickerOpacity = 0
+  if(props.possibleFilters!== undefined && props.possibleFilters.length!==0){
+    dropDownPickerOpacity = 0.7
+  }
   return (
     <>
       <ImageBackground source={props.appBarImage} style={{width:"100%", backgroundColor: props.appBarColor}}>
-        <View style={[styles.topSpace, {height: props.headerHeight / 1.5,}]}>
+        <View style={{height: 10,}}/>
+        <DropDownPicker
+            items={props.possibleFilters}
+            placeholder={"Select filter..."}
+            defaultValue={[]}
+            multipleText="%d filters(s) applied"
+            dropDownMaxHeight={props.headerHeight-20}
+            containerStyle={{height: 45, marginLeft: 15, marginRight: 15}}
+            style={[{borderWidth: 0, backgroundColor: props.searchBarColor, opacity: dropDownPickerOpacity,borderTopLeftRadius: 8, borderTopRightRadius: 8,borderBottomLeftRadius: 8, borderBottomRightRadius: 8}]}
+            searchable={props.filterSearchable}
+            itemStyle={{
+                justifyContent: 'flex-start'
+            }}
+            multiple
+            searchablePlaceholderTextColor={colors.searchbarBG[colors.mode]}
+            labelStyle={{marginLeft:10, color:colors.textBlack[colors.mode]}}
+            customTickIcon={()=><View/>}
+            activeItemStyle={{borderRadius: 10, backgroundColor: colors.lightDarkAccent[colors.mode]}}
+            dropDownStyle={{borderBottomLeftRadius: 10, borderBottomRightRadius: 10, borderWidth: 0, backgroundColor: colors.filterBG[colors.mode], opacity: 0.98, }}
+            onChangeItem={item => props.updateSearch(item)}
+        />
+        <View style={[styles.topSpace, {height: props.headerHeight / 1.5 - 53,}]}>
         </View>
         <View style={{height: props.headerHeight / 2}}>
           <View style={styles.subHeader}>
@@ -34,16 +62,20 @@ const Header = (props) => {
 };
 
 export const HeaderLoading = (props) => {
-  const [search, setSearch] = useState('Search')
+  var dropDownPickerOpacity = 0
+  if(props.possibleFilters!== undefined && props.possibleFilters.length!==0){
+    dropDownPickerOpacity = 0.7
+  }
   return (
     <FadeInOut fadeIn={true}>
       <ImageBackground source={props.appBarImage} style={{width:"100%", backgroundColor: props.appBarColor}}>
-        <View style={[styles.topSpace, {height: props.headerHeight / 1.5,}]}>
+        <View style={{height: 55,}}/>
+        <View style={[styles.topSpace, {height: props.headerHeight / 1.5 - 53,}]}>
         </View>
         <View style={{height: props.headerHeight / 2}}>
           <View style={styles.subHeader}>
             <View style={[styles.searchBox, {backgroundColor:props.searchBarColor}]}>
-              <TextInput allowFontScaling={false} style={styles.searchText} value={""} onChangeText={function(text){setSearch(text); props.updateSearch(text);}} onFocus={() => {setSearch(""); Vibration.vibrate(15);}} onBlur={function(){if(search===""){setSearch("Search"); props.updateSearch("Search");}else{setSearch(search);}}}/>
+              <TextInput allowFontScaling={false} style={styles.searchText} value={""}/>
             </View>
           </View>
         </View>

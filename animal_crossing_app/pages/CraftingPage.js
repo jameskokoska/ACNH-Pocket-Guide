@@ -20,12 +20,14 @@ const renderTabBar = props => (
 
 const RecipesRoute = () => (
   <ListPage 
+    filters={["Category", "Source","Season/Event","Season/Event Exclusive",]}
+    filterSearchable = {true}
     showVariations={[false]}
     title="Recipes"
     imageProperty={["Image"]}
     textProperty={["Name"]}
     checkListKey={[["recipesCheckList","Name","Variation"]]}
-    searchKey={[["Name"]]}
+    searchKey={[["Name","Category", "Source","Season/Event","Season/Event Exclusive",]]}
     gridType="smallGrid" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedRecipes"}
     appBarColor={colors.toolsAppBar[colors.mode]}

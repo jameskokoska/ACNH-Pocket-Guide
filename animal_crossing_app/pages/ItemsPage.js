@@ -20,6 +20,8 @@ const renderTabBar = props => (
 
 const FurnitureRoute = () => (
   <ListPage 
+    filters = {["Tag", "Catalog", "Color 1","Color 2","Variation","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category",]}
+    filterSearchable = {true}
     showVariations={[
       global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
       global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
@@ -51,11 +53,11 @@ const FurnitureRoute = () => (
       ["furnitureCheckList","Name"],
     ]}
     searchKey={[
-      ["Name"],
-      ["Name"],
-      ["Name"],
-      ["Name"],
-      ["Name"],
+      ["Name","Tag", "Catalog", "Color 1","Color 2","Variation","Source", "Size", "Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category"],
+      ["Name","Tag", "Catalog", "Color 1","Color 2","Variation","Source", "Size", "Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category"],
+      ["Name","Tag", "Catalog", "Color 1","Color 2","Variation","Source", "Size", "Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category"],
+      ["Name","Tag", "Catalog", "Color 1","Color 2","Variation","Source", "Size", "Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category"],
+      ["Name","Tag", "Catalog", "Color 1","Color 2","Variation","Source", "Size", "Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category"],
     ]}
     gridType="smallGrid" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedFurniture"}
@@ -93,6 +95,8 @@ const FurnitureRoute = () => (
 
 const ClothingRoute = () => (
   <ListPage 
+    filters={["Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ]}
+    filterSearchable = {true}
     showVariations={[
       global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
       global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
@@ -143,16 +147,16 @@ const ClothingRoute = () => (
       ["clothingCheckList","Name"],
     ]}
     searchKey={[
-      ["Name"],
-      ["Name"],
-      ["Name"],
-      ["Name"],
-      ["Name"],
-      ["Name"],
-      ["Name"],
-      ["Name"],
-      ["Name"],
-      ["Name"],
+      ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
+      ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
+      ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
+      ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
+      ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
+      ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
+      ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
+      ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
+      ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
+      ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
     ]}
     gridType="smallGrid" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedClothing"}
@@ -205,6 +209,8 @@ const ClothingRoute = () => (
 
 const FloorWallsRoute = () => (
   <ListPage 
+    filters = {["Tag","Color 1","Color 2","Source","DIY","Size","Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series",]}
+    filterSearchable = {true}
     showVariations={[
       global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
       global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
@@ -227,9 +233,9 @@ const FloorWallsRoute = () => (
       ["floorWallsCheckList","Name"],
     ]}
     searchKey={[
-      ["Name"],
-      ["Name"],
-      ["Name"],
+      ["Name","Tag","Color 1","Color 2","Source","DIY","Size","Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series",],
+      ["Name","Tag","Color 1","Color 2","Source","DIY","Size","Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series",],
+      ["Name","Tag","Color 1","Color 2","Source","DIY","Size","Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series",],
     ]}
     gridType="smallGrid" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedFloorWalls"}

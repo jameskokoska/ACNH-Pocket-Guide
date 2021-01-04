@@ -3,8 +3,11 @@ import {TouchableWithoutFeedback, Text, View, Animated, SafeAreaView, StatusBar,
 import Header, {HeaderLoading} from './Header';
 import ListItem from './ListItem';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {determineDataGlobal} from "../LoadJsonData"
+import {determineDataGlobal, removeBrackets} from "../LoadJsonData"
 import BottomSheet from 'reanimated-bottom-sheet';
+import * as MediaLibrary from 'expo-media-library';
+import * as FileSystem from 'expo-file-system';
+import * as Permissions from 'expo-permissions';
 import {Dimensions } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
 import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from './BottomSheetComponents';
@@ -21,10 +24,21 @@ import FurniturePopup from "../popups/FurniturePopup"
 import FloorWallsPopup from "../popups/FloorWallsPopup"
 import ToolsPopup from "../popups/ToolsPopup"
 import RecipesPopup from "../popups/RecipesPopup"
-
+import * as exports from "./FilterDefinitions"
+Object.entries(exports).forEach(([name, exported]) => window[name] = exported);
 
 const {diffClamp} = Animated;
 const headerHeight = Dimensions.get('window').height*0.3;
+
+async function exportFilters(data, title){
+  const { status } = await Permissions.askAsync(Permissions.CAMERA_ROLL);
+  if (status === "granted") {
+    var fileUri = FileSystem.documentDirectory + "ACNHPocketGuideDataFilterDefinition"+title+".txt";
+    await FileSystem.writeAsStringAsync(fileUri, JSON.stringify(data), { encoding: FileSystem.EncodingType.UTF8 });
+    const asset = await MediaLibrary.createAssetAsync(fileUri)
+    await MediaLibrary.createAlbumAsync("Download", asset, false)
+  }
+}
 
 export default (props) =>{
   const renderItem = (({ item }) =>
@@ -91,19 +105,93 @@ export default (props) =>{
   }
 
   const [data, setData] = useState("empty")
+  const [possibleFiltersState, setPossibleFilters] = useState("empty")
 
   useEffect(()=>{
     var dataUpdated = [];
     var previousVariation = "";
     var item;
     var dataLoaded2D = determineDataGlobal(props.dataGlobalName);
+    if(possibleFiltersState==="empty" && global.settingsCurrent[11]["currentValue"]==="true"){
+      var possibleFilters = [];
+      if(global.settingsCurrent[global.settingsCurrent.length-2]["keyName"]==="settingsLogFilterDefinitions" && global.settingsCurrent[global.settingsCurrent.length-2]["currentValue"]==="true"){
+        var currentFilter;
+        if(props.filters!==undefined){
+          for(var x = 0; x < props.filters.length; x++){
+            for(var j = 0; j < dataLoaded2D.length; j++){
+              var dataLoaded = dataLoaded2D[j];
+              for(var i = 0; i < dataLoaded.length; i++){
+                item = dataLoaded[i];
+                currentFilter = {label:"", value:""};
+                var found = false;
+                for(var y = 0; y < possibleFilters.length; y++){
+                  if(possibleFilters[y].value===removeBrackets(item[props.filters[x]])){
+                    found = true;
+                  }
+                }
+                if(!found && item[props.filters[x]]!==undefined){
+                  currentFilter.label = props.filters[x] + " - " +item[props.filters[x]];
+                  currentFilter.value = removeBrackets(item[props.filters[x]]);
+                  possibleFilters.push(currentFilter)
+                }
+              }
+            }
+          }
+        }
+        setPossibleFilters(possibleFilters)
+        exportFilters(possibleFilters, props.title)
+      } else {
+        if(props.title==="Fish"){
+          setPossibleFilters(fishFilter)
+        } else if(props.title==="Bugs"){
+          setPossibleFilters(bugsFilter)
+        } else if(props.title==="Sea Creatures"){
+          setPossibleFilters(seaCreaturesFilter)
+        } else if(props.title==="Furniture"){
+          setPossibleFilters(furnitureFilter)
+        } else if(props.title==="Clothing"){
+          setPossibleFilters(clothingFilter)
+        } else if(props.title==="Floor & Walls"){
+          setPossibleFilters(floorWallsFilter)
+        } else if(props.title==="Emoticons"){
+          setPossibleFilters(emoticonsFilter)
+        } else if(props.title==="Recipes"){
+          setPossibleFilters(recipesFilter)
+        } else if(props.title==="Villagers"){
+          setPossibleFilters(villagersFilter)
+        } else if(props.title==="Everything"){
+          setPossibleFilters(everythingFilter)
+        } else {
+          setPossibleFilters([{label:"Filter definition has an error", value:""}]);
+        }
+      }
+    } else if (global.settingsCurrent[11]["currentValue"]==="false") {
+      setPossibleFilters([{label:"Filters turned off - Enable them in the settings", value:""}]);
+    }
+    
+    
     for(var j = 0; j < dataLoaded2D.length; j++){
       var dataLoaded = dataLoaded2D[j];
       for(var i = 0; i < dataLoaded.length; i++){
         item = dataLoaded[i];
         //Loop through the specific search criteria specified for this dataset
         for(var x = 0; x < props.searchKey[j].length; x++){
-          if(search==="Search" || search==="" || item.[props.searchKey[j][x]].toLowerCase().includes(search.toLowerCase())){
+          var searchFound = false;
+          if(search.constructor===Array && search.length !== 0){
+            for(var z = 0; z < search.length; z++){
+              if(item.[props.searchKey[j][x]]!==undefined && item.[props.searchKey[j][x]].toLowerCase().includes(search[z].toLowerCase())){
+                searchFound = true;
+                break;
+              }
+            }
+          } else if (search.constructor===Array && search.length === 0){
+            searchFound = true;
+          } else {
+            if(item.[props.searchKey[j][x]]!==undefined){
+              searchFound = item.[props.searchKey[j][x]].toLowerCase().includes(search.toLowerCase())
+            }
+          }
+          if(search==="Search" || search==="" || searchFound){
             //Search result found...
             if(props.showVariations[j]===false){
               //If recipes item page, and its not DIY, remove
@@ -198,8 +286,9 @@ export default (props) =>{
 
   var header = (<>
       <Animated.View style={[styles.header, {transform: [{translateY}]}]}>
-        <Header title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
+        <Header possibleFilters={possibleFiltersState} filterSearchable={props.filterSearchable} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
       </Animated.View>
+      
     </>);
   var paddingTop = headerHeight*1.18;
   var paddingBottom = Dimensions.get('window').height;

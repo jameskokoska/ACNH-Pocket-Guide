@@ -9,6 +9,7 @@ class EmoticonsPage extends Component {
   render(){
     return(
         <ListPage 
+          filters={["Source"]}
           disablePopup={[true]}
           showVariations={[false]}
           title="Emoticons"
@@ -16,7 +17,7 @@ class EmoticonsPage extends Component {
           textProperty={["Name"]}
           textProperty2={["Source"]}
           checkListKey={[["emojiCheckList","Name"]]}
-          searchKey={[["Name"]]}
+          searchKey={[["Name","Source"]]}
           gridType="smallGrid" //smallGrid, largeGrid, row
           dataGlobalName={"dataLoadedReactions"}
           appBarColor={colors.emojipediaAppBar[colors.mode]}

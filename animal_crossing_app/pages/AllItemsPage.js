@@ -9,6 +9,8 @@ class AllItemsPage extends Component {
   render(){
     return(
         <ListPage 
+          filters={["Source","Tag", "DIY", "Catalog", "Where/How","Weather","Shadow","Movement Speed", "Season/Event","Category", "Season/Event Exclusive", "Seasonality", "Personality","Species","Hobby","Style 1","Style 2","Color 1","Color 2","Variation","Style 1","Style 2","Size", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category"]}
+          filterSearchable = {true}
           title="Everything"
           gridType="smallGrid" //smallGrid, largeGrid, row
           appBarColor={colors.emojipediaAppBar[colors.mode]}
@@ -276,34 +278,34 @@ class AllItemsPage extends Component {
             ["fenceCheckList","Name"],
           ]}
           searchKey={[
+            ["Name","Tag", "Catalog", "Color 1","Color 2","Variation","Source", "Size", "Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category"],
+            ["Name","Tag", "Catalog", "Color 1","Color 2","Variation","Source", "Size", "Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category"],
+            ["Name","Tag", "Catalog", "Color 1","Color 2","Variation","Source", "Size", "Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category"],
+            ["Name","Tag", "Catalog", "Color 1","Color 2","Variation","Source", "Size", "Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category"],
+            ["Name","Tag", "Catalog", "Color 1","Color 2","Variation","Source", "Size", "Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category"],
+            ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
+            ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
+            ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
+            ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
+            ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
+            ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
+            ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
+            ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
+            ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
+            ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
+            ["Name","Tag","Color 1","Color 2","Source","DIY","Size","Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series",],
+            ["Name","Tag","Color 1","Color 2","Source","DIY","Size","Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series",],
+            ["Name","Tag","Color 1","Color 2","Source","DIY","Size","Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series",],
+            ["Name","Category", "Source","Season/Event","Season/Event Exclusive",],
+            ["Name"],
+            ["Name","Where/How", "Shadow"],
+            ["Name","Where/How","Weather"],
+            ["Name","Shadow","Movement Speed"],
             ["Name"],
             ["Name"],
+            ["Name","Personality","Species","Hobby","Style 1","Style 2","Color 1","Color 2"],
             ["Name"],
-            ["Name"],
-            ["Name"],
-            ["Name"],
-            ["Name"],
-            ["Name"],
-            ["Name"],
-            ["Name"],
-            ["Name"],
-            ["Name"],
-            ["Name"],
-            ["Name"],
-            ["Name"],
-            ["Name"],
-            ["Name"],
-            ["Name"],
-            ["Name"],
-            ["Name"],
-            ["Name"],
-            ["Name"],
-            ["Name"],
-            ["Name"],
-            ["Name"],
-            ["Name"],
-            ["Name"],
-            ["Name"],
+            ["Name","Source"],
             ["Name"],
             ["Name"],
           ]}

@@ -21,6 +21,8 @@ const renderTabBar = props => (
 
 const FishRoute = () => (
   <ListPage 
+    filters = {["Where/How","Shadow"]}
+    // filterSearchable = {true}
     showVariations={[false]}
     title="Fish"
     activeCreaturesMonth={true}
@@ -30,7 +32,7 @@ const FishRoute = () => (
     textProperty2={["creatureTime"]}
     textProperty3={["Where/How"]}
     checkListKey={[["fishCheckList","Name"]]}
-    searchKey={[["Name","Where/How"]]}
+    searchKey={[["Name","Where/How", "Shadow"]]}
     gridType="row" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedFish"}
     appBarColor={colors.fishAppBar[colors.mode]}
@@ -51,6 +53,7 @@ const FishRoute = () => (
 
 const BugsRoute = () => (
   <ListPage 
+    filters = {["Weather","Where/How"]}
     showVariations={[false]}
     title="Bugs"
     activeCreaturesMonth={true}
@@ -60,7 +63,7 @@ const BugsRoute = () => (
     textProperty2={["creatureTime"]}
     textProperty3={["Where/How"]}
     checkListKey={[["bugCheckList","Name"]]}
-    searchKey={[["Name","Where/How"]]}
+    searchKey={[["Name","Where/How","Weather"]]}
     gridType="row" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedBugs"}
     appBarColor={colors.bugAppBar[colors.mode]}
@@ -81,6 +84,7 @@ const BugsRoute = () => (
 
 const SeaRoute = () => (
   <ListPage 
+    filters = {["Shadow","Movement Speed"]}
     showVariations={[false]}
     title="Sea Creatures"
     activeCreaturesMonth={true}
@@ -90,7 +94,7 @@ const SeaRoute = () => (
     textProperty2={["creatureTime"]}
     textProperty3={["Shadow"]}
     checkListKey={[["seaCheckList","Name"]]}
-    searchKey={[["Name"]]}
+    searchKey={[["Name","Shadow","Movement Speed"]]}
     gridType="row" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedSea"}
     appBarColor={colors.fishAppBar[colors.mode]}

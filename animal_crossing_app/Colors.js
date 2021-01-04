@@ -11,6 +11,7 @@ const colors = {
     shadowPopUp : ["#000000", "#000000"],
     lightDarkAccent : ["#F5F5F5","#1A1A1A"],
     lightDarkAccentHeavy : ["#bcbfc2","#494c4d"],
+    filterBG : ["#ebebeb","#494c4d"],
     textBlack : ["#373737","#f2f2f2"],
     textWhite : ["#FFFFFF","#373737"],
     textWhiteOnly : ["#FFFFFF","#FFFFFF"],

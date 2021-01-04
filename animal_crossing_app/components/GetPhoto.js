@@ -243,7 +243,6 @@ export function getPaintingPhoto(name){
 export function getPaintingPhotoFake(name){
   switch(name){
     case "Academic Painting":
-    console.log("ya")
       return require("../assets/icons/art/AcademicPaintingFake.png");
     case "Amazing Painting":
       return require("../assets/icons/art/AmazingPaintingFake.png");

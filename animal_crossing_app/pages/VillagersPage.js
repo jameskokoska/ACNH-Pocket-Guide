@@ -9,13 +9,15 @@ class VillagersPage extends Component {
   render(){
     return(
         <ListPage 
+          filters={["Personality","Species","Hobby","Style 1","Style 2","Color 1","Color 2"]}
+          filterSearchable = {true}
           disablePopup={[false]}
           showVariations={[false]}
           title="Villagers"
           imageProperty={["Icon Image"]}
           textProperty={["Name"]}
           checkListKey={[["villagerCheckList","Name"]]}
-          searchKey={[["Name"]]}
+          searchKey={[["Name","Personality","Species","Hobby","Style 1","Style 2","Color 1","Color 2"]]}
           gridType="smallGrid" //smallGrid, largeGrid, row
           dataGlobalName={"dataLoadedVillagers"}
           appBarColor={colors.villagerAppBar[colors.mode]}
