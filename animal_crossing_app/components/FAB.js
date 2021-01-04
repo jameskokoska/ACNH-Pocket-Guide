@@ -8,7 +8,7 @@ class FAB extends Component {
   }
   render(){
     return(
-        <TouchableOpacity onPress={() => {this.animation.play(); this.props.openDrawer(); Vibration.vibrate(10);}} activeOpacity={0.7} style={[styles.FABShape,{backgroundColor: colors.FAB[colors.mode]}]}>
+        <TouchableOpacity onPress={() => {this.animation.play(); this.props.openDrawer(); global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate(10) : "";}} activeOpacity={0.7} style={[styles.FABShape,{backgroundColor: colors.FAB[colors.mode]}]}>
             <LottieView 
               ref={animation => {
                 this.animation = animation;

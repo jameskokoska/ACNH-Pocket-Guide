@@ -16,7 +16,7 @@ class SettingsContainer extends Component {
   }
   render(){
     return(
-      <TouchableOpacity activeOpacity={0.7} onPress={() => {this.setState({open:!this.state.open}); Vibration.vibrate(10);}}>
+      <TouchableOpacity activeOpacity={0.7} onPress={() => {this.setState({open:!this.state.open}); global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate(10) : "";}}>
         <View style={[styles.settingsContainer,{backgroundColor:this.props.backgroundColor}]}>
           <Image style={styles.settingsImage} source={this.props.image}/>
           <View style={styles.textContainer}>
@@ -32,7 +32,7 @@ class SettingsContainer extends Component {
                 AsyncStorage.setItem(this.props.keyName, !this.state.toggle === true ? "true" : "false");
                 global.settingsCurrent[this.props.index]["currentValue"] = !this.state.toggle === true ? "true" : "false";
                 this.setState({toggle:!this.state.toggle});
-                Vibration.vibrate(10);
+                global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate(10) : "";
               }}
             />
           </View>

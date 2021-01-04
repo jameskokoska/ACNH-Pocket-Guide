@@ -16,7 +16,7 @@ import {checkOff, capitalize, commas, removeBrackets} from "../LoadJsonData"
 import {getPhotoShadow} from "./GetPhoto"
 import {getMonthShort} from "./DateFunctions"
 import colors from "../Colors"
-import {getCurrentDateObject} from "./DateFunctions"
+import {getCurrentDateObject, parseActiveTime} from "./DateFunctions"
 
 const {width} = Dimensions.get('window');
 
@@ -65,6 +65,12 @@ class ListItem extends PureComponent{
       var hemispherePre = global.settingsCurrent[0]["currentValue"] === "true" ? "NH " : "SH "
       var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
       textProperty2Text = this.props.item[hemispherePre+currentMonthShort];
+      if(global.settingsCurrent[8].currentValue==="true" && textProperty2Text!=="NA" && textProperty2Text!=="All day"){
+        var splitString = textProperty2Text.replace(/[^\x00-\x7F]/g, "");
+        splitString = splitString.replace("  ", " ");
+        splitString = splitString.split(" ");
+        textProperty2Text = parseActiveTime(splitString, 0).toString()+":00" + " - " + parseActiveTime(splitString, 2).toString()+ ":00"
+      }
     }
 
     if(this.props.gridType==="smallGrid"){

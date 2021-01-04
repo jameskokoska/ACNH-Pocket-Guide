@@ -12,7 +12,7 @@ class Clock extends Component {
     var hours = getCurrentDateObject().getHours();
     var minutes = getCurrentDateObject().getMinutes();
     var afternoon = false;
-    if(hours>12){
+    if(hours>12 && global.settingsCurrent[8].currentValue==="false"){
       hours=hours-12;
       afternoon=true;
     }
@@ -22,10 +22,16 @@ class Clock extends Component {
     if(minutes.toString().length<2){
       minutes = "0" + minutes;
     }
+    var afternoonDisplay
+    if(global.settingsCurrent[8].currentValue==="false"){
+      afternoonDisplay = afternoon ? "PM" : "AM";
+    } else {
+      afternoonDisplay = ""
+    }
     this.state = {
       date: month + " " + dayNum,
       time: hours + ":" + minutes,
-      afternoonDisplay: afternoon ? "PM" : "AM",
+      afternoonDisplay: afternoonDisplay,
       weekDay: weekDay
     }
   }
@@ -38,7 +44,7 @@ class Clock extends Component {
       var hours = getCurrentDateObject().getHours();
       var minutes = getCurrentDateObject().getMinutes();
       var afternoon = false;
-      if(hours>12){
+      if(hours>12 && global.settingsCurrent[8].currentValue==="false"){
         hours=hours-12;
         afternoon=true;
       }
@@ -48,10 +54,16 @@ class Clock extends Component {
       if(minutes.toString().length<2){
         minutes = "0" + minutes;
       }
+      var afternoonDisplay
+      if(global.settingsCurrent[8].currentValue==="false"){
+        afternoonDisplay = afternoon ? "PM" : "AM";
+      } else {
+        afternoonDisplay = ""
+      }
       this.setState({
         date: month + " " + dayNum,
         time: hours + ":" + minutes,
-        afternoonDisplay: afternoon ? "PM" : "AM",
+        afternoonDisplay: afternoonDisplay,
         weekDay: weekDay
       })
 
@@ -64,8 +76,6 @@ class Clock extends Component {
   }
 
   render(){
-    
-    
     return <View style={{alignItems: 'center'}}>
       {/* <Image
         style={{position:"absolute", top: -10, width:300, height: 200, resizeMode:'contain',}}

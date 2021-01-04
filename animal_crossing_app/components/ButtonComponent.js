@@ -18,7 +18,7 @@ class ButtonComponent extends Component {
         <TouchableOpacity
           style={[this.props.style,{marginLeft: 10, marginRight: 10, marginTop: 20, paddingLeft: 20, paddingRight: 20, paddingTop: 10, paddingBottom: 10, borderRadius: 7, backgroundColor: this.props.color,  justifyContent: 'center', alignItems: 'center'}]}
           activeOpacity={0.5}
-          onPress={()=> {this.props.onPress(); Vibration.vibrate(this.props.vibrate);}}
+          onPress={()=> {this.props.onPress(); global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate(this.props.vibrate) : "";}}
         >
           <TextFont style={{fontSize: 16, color: "white"}}>{this.props.text}</TextFont>
         </TouchableOpacity>

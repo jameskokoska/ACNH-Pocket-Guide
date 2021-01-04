@@ -118,7 +118,7 @@ class App extends Component {
 
   openDrawer() {
     this.drawer.openDrawer();
-    Vibration.vibrate(8);
+    global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate(8) : "";
     return true;
   }
 

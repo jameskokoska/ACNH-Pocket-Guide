@@ -24,7 +24,7 @@ class SidebarElement extends Component {
       elevation = 0;
     }
     return (
-      <TouchableNativeFeedback onPress={() => {Vibration.vibrate(15); this.props.setPage(this.props.pageNum);}}>
+      <TouchableNativeFeedback onPress={() => {global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate(15) : ""; this.props.setPage(this.props.pageNum);}}>
         <View style={[styles.sidebarBox, {backgroundColor: backgroundColor,elevation: elevation}]}>
           <Image style={styles.sidebarImage} source={this.props.image}/>
           <TextFont bold={true} style={[styles.sidebarTitle,{color:this.props.textColor}]}>{this.props.title}</TextFont>

@@ -131,10 +131,10 @@ export function checkOff(item, collected, dataGlobalName){
   console.log(item.checkListKey);
   if(item!==undefined){
      if(collected==="false"){
-      Vibration.vibrate([0,10,220,20]);
+      global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate([0,10,220,20]) : "";
       global.collectionList.push(item.checkListKey)
     } else {
-      Vibration.vibrate(10);
+      global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate(10) : "";
       collectionListRemove(item.checkListKey)
     }
     collectionListSave();
@@ -396,10 +396,26 @@ export const settings = [
     "description" : "A restart may be required to see changes.",
   },
   {
+    "keyName" : "settingsUse24HourClock",
+    "defaultValue" : "false",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/fancyClock.png"),
+    "displayName" : "Use 24 Hour clock",
+    "description" : "Enable a 24 hour clock instead of the standard 12 hour format.",
+  },
+  {
+    "keyName" : "settingsEnableVibrations",
+    "defaultValue" : "true",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/vibration.png"),
+    "displayName" : "Enable haptic feedback",
+    "description" : "Enable/Disable the vibrations with certain actions.",
+  },
+  {
     "keyName" : "settingsUseCustomDate",
     "defaultValue" : "false",
     "currentValue" : "",
-    "picture" : require("./assets/icons/clockIcon.png"),
+    "picture" : require("./assets/icons/customTime.png"),
     "displayName" : "Use a custom date",
     "description" : "Use the custom date selected when loading time-specific data.",
   },
