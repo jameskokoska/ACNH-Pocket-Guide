@@ -162,7 +162,7 @@ export default (props) =>{
         } else if(props.title==="Everything"){
           setPossibleFilters(everythingFilter)
         } else {
-          setPossibleFilters([{label:"Filter definition has an error", value:""}]);
+          setPossibleFilters([]);
         }
       }
     } else if (global.settingsCurrent[11]["currentValue"]==="false") {
