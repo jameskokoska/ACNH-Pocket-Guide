@@ -11,6 +11,8 @@ https://play.google.com/store/apps/details?id=com.acnh.pocket_guide
 - Optimization of lists views and database access
 - Classes and functions to allow for modular programming page design
 - UI planning done all in Adobe XD, see UI assets/ folder
+- Loads stored data before application run
+- Automatically pre-generate filter definitions with developer setting based on data
 
 ## Features
 - Dark mode
@@ -28,6 +30,8 @@ https://play.google.com/store/apps/details?id=com.acnh.pocket_guide
 - Emoticon collection
 - Construction tasks and costs
 - Flower hybrids guide
+- Filters
+- 24 hour time, haptics settings 
 
 ## Screenshots
 Can be seen here: https://play.google.com/store/apps/details?id=com.acnh.pocket_guide or below
