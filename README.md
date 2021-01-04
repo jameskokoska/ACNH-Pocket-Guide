@@ -6,7 +6,7 @@ The goal of this rewrite is to make a more modular application that can be updat
 https://play.google.com/store/apps/details?id=com.acnh.pocket_guide
 
 ## Install Application Locally
-This application uses Expo. Install expo. Navigate into the ```animal_crossing_app``` folder (using cd ```.\animal_crossing|app\```) repositories root location. Then install dependencies using ```npm install```. After installing packages use ```npm start``` or ```expo start```. Open Expo development application on android device and connect through the localhost.
+This application uses Expo. Install expo. Navigate into the ```animal_crossing_app``` folder (using ```cd .\animal_crossing|app\```) repositories root location. Then install dependencies using ```npm install```. After installing packages use ```npm start``` or ```expo start```. Open the Expo development application on android device and connect through the localhost.
 
 ## Technical Features
 - Read and save information
