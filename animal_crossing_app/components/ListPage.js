@@ -354,7 +354,7 @@ class BottomSheetRender extends Component{
       />
       <View
         style={{
-          height: 80+topPadding,
+          height: global.settingsCurrent[10].currentValue==="false" ? 80 + topPadding : 160 + topPadding,
         }}
       />
       <View
@@ -363,7 +363,7 @@ class BottomSheetRender extends Component{
           borderTopRightRadius: 50,
           backgroundColor: colors.white[colors.mode],
           padding: 16,
-          height: popUpHeight+140,
+          height: global.settingsCurrent[10].currentValue==="false" ? popUpHeight+140 : popUpHeight+140,
         }}
       >
           <CircularImage 

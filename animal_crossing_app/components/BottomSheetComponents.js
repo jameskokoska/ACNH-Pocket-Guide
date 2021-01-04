@@ -13,9 +13,9 @@ export class CircularImage extends Component {
       return <View/>
     }
     return <View style={{width:"100%", alignItems: 'center'}}>
-      <View style={[styles.rowImageBackground,{backgroundColor:this.props.accentColor}]}>
+      <View style={[styles.rowImageBackground,{backgroundColor:this.props.accentColor, top: global.settingsCurrent[10].currentValue==="false" ? -130/2-20 : -210/2-60, height: global.settingsCurrent[10].currentValue==="false" ? 130 : 210, width: global.settingsCurrent[10].currentValue==="false" ? 130 : 210,}]}>
         <CachedImage
-          style={styles.rowImage}
+          style={[styles.rowImage, {height: global.settingsCurrent[10].currentValue==="false" ? 95 : 180, width: global.settingsCurrent[10].currentValue==="false" ? 95 : 180,}]}
           source={{
             uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
           }}
@@ -285,19 +285,14 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   rowImageBackground:{
-    borderRadius: 100,
+    borderRadius: 150,
     justifyContent: 'center',
     alignItems: 'center',
     zIndex:50,
     elevation: 5,
     position:"absolute",
-    top: -130/2-20,
-    height: 130,
-    width: 130,
   },
   rowImage:{
-    height: 95,
-    width: 95,
     resizeMode:'contain',
   },
   cornerImageLabel:{

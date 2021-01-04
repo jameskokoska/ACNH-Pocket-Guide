@@ -412,6 +412,14 @@ export const settings = [
     "description" : "Enable/Disable the vibrations with certain actions.",
   },
   {
+    "keyName" : "settingsLargerItemPreviews",
+    "defaultValue" : "false",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/magnifyingGlass.png"),
+    "displayName" : "Use larger images in popup",
+    "description" : "Use a larger image when previewing items in their popup",
+  },
+  {
     "keyName" : "settingsUseCustomDate",
     "defaultValue" : "false",
     "currentValue" : "",
