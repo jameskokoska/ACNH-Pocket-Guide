@@ -427,14 +427,14 @@ export const settings = [
     "displayName" : "Enable filters in lists",
     "description" : "Turning this off can increase performance of loading, for basic needs",
   },
-  {
-    "keyName" : "settingsLogFilterDefinitions",
-    "defaultValue" : "false",
-    "currentValue" : "",
-    "picture" : require("./assets/icons/filter.png"),
-    "displayName" : "DEBUG: LOG FILTER DEFINITIONS AFTER DATABASE UPDATE",
-    "description" : "Will output a file of the filter definitions after accessing each page",
-  },
+  // {
+  //   "keyName" : "settingsLogFilterDefinitions",
+  //   "defaultValue" : "false",
+  //   "currentValue" : "",
+  //   "picture" : require("./assets/icons/filter.png"),
+  //   "displayName" : "DEBUG: LOG FILTER DEFINITIONS AFTER DATABASE UPDATE",
+  //   "description" : "Will output a file of the filter definitions after accessing each page",
+  // },
   {
     "keyName" : "settingsUseCustomDate",
     "defaultValue" : "false",

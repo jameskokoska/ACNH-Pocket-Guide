@@ -125,13 +125,13 @@ export default (props) =>{
                 currentFilter = {label:"", value:""};
                 var found = false;
                 for(var y = 0; y < possibleFilters.length; y++){
-                  if(possibleFilters[y].value===props.filters[x] + "-" +removeBrackets(item[props.filters[x]])){
+                  if(possibleFilters[y].value===props.filters[x] + ":" +removeBrackets(item[props.filters[x]])){
                     found = true;
                   }
                 }
                 if(!found && item[props.filters[x]]!==undefined){
                   currentFilter.label = props.filters[x] + " - " +removeBrackets(item[props.filters[x]]);
-                  currentFilter.value = props.filters[x] + "-" +removeBrackets(item[props.filters[x]]);
+                  currentFilter.value = props.filters[x] + ":" +removeBrackets(item[props.filters[x]]);
                   possibleFilters.push(currentFilter)
                 }
               }
@@ -141,29 +141,29 @@ export default (props) =>{
         setPossibleFilters(possibleFilters)
         exportFilters(possibleFilters, props.title)
       } else {
+        var possibleFilters = [{label:"Collected", value:"Collected"},{label:"Not Collected", value:"Not Collected"}];
         if(props.title==="Fish"){
-          setPossibleFilters(fishFilter)
+          possibleFilters = [...possibleFilters, ...fishFilter];
         } else if(props.title==="Bugs"){
-          setPossibleFilters(bugsFilter)
+          possibleFilters = [...possibleFilters, ...bugsFilter];
         } else if(props.title==="Sea Creatures"){
-          setPossibleFilters(seaCreaturesFilter)
+          possibleFilters = [...possibleFilters, ...seaCreaturesFilter];
         } else if(props.title==="Furniture"){
-          setPossibleFilters(furnitureFilter)
+          possibleFilters = [...possibleFilters, ...furnitureFilter];
         } else if(props.title==="Clothing"){
-          setPossibleFilters(clothingFilter)
+          possibleFilters = [...possibleFilters, ...clothingFilter];
         } else if(props.title==="Floor & Walls"){
-          setPossibleFilters(floorWallsFilter)
+          possibleFilters = [...possibleFilters, ...floorWallsFilter];
         } else if(props.title==="Emoticons"){
-          setPossibleFilters(emoticonsFilter)
+          possibleFilters = [...possibleFilters, ...emoticonsFilter];
         } else if(props.title==="Recipes"){
-          setPossibleFilters(recipesFilter)
+          possibleFilters = [...possibleFilters, ...recipesFilter];
         } else if(props.title==="Villagers"){
-          setPossibleFilters(villagersFilter)
+          possibleFilters = [...possibleFilters, ...villagersFilter];
         } else if(props.title==="Everything"){
-          setPossibleFilters(everythingFilter)
-        } else {
-          setPossibleFilters([]);
-        }
+          possibleFilters = [...possibleFilters, ...everythingFilter];
+        } 
+        setPossibleFilters(possibleFilters);
       }
     } else if (global.settingsCurrent[11]["currentValue"]==="false") {
       setPossibleFilters([{label:"Filters turned off - Enable them in the settings", value:""}]);
@@ -181,8 +181,32 @@ export default (props) =>{
             for(var z = 0; z < search.length; z++){
               //If the property is in search, not needed
               // if(props.searchKey[j].includes(search[z].split("-")[0])){
+                //If property is Collected
+                var searchCollected = true;
+                if(search.includes("Collected")){
+                  searchCollected = false;
+                  if(global.collectionList.includes(item.["checkListKey"])){
+                    searchCollected = true;
+                    if(search.length===1){
+                      searchFound = true;
+                      break;
+                    }
+                  }
+                } else if(search.includes("Not Collected")){
+                  searchCollected = false;
+                  if(!global.collectionList.includes(item.["checkListKey"])){
+                    searchCollected = true;
+                    if(search.length===1){
+                      searchFound = true;
+                      break;
+                    }
+                  }
+                }
+                if(search.includes("Collected")&&search.includes("Not Collected")){
+                  searchCollected=true;
+                }
                 //Only check the property selected
-                if(item.[search[z].split("-")[0]]!==undefined && item.[search[z].split("-")[0]].toLowerCase().includes(search[z].split("-")[1].toLowerCase())){
+                if(searchCollected && item.[search[z].split(":")[0]]!==undefined && item.[search[z].split(":")[0]].toLowerCase().includes(search[z].split(":")[1].toLowerCase())){
                   searchFound = true;
                   break;
                 }

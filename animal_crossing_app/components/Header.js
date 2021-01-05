@@ -29,7 +29,7 @@ const Header = (props) => {
                 justifyContent: 'flex-start'
             }}
             multiple
-            searchablePlaceholderTextColor={colors.searchbarBG[colors.mode]}
+            searchablePlaceholderTextColor={colors.filterSearch[colors.mode]}
             labelStyle={{marginLeft:10, color:colors.textBlack[colors.mode]}}
             customTickIcon={()=><View/>}
             activeItemStyle={{borderRadius: 10, backgroundColor: colors.lightDarkAccent[colors.mode]}}
