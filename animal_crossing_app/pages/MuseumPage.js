@@ -32,7 +32,7 @@ const FishRoute = () => (
     textProperty2={["creatureTime"]}
     textProperty3={["Where/How"]}
     checkListKey={[["fishCheckList","Name"]]}
-    searchKey={[["Name","Where/How", "Shadow"]]}
+    searchKey={[["Name"]]}
     gridType="row" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedFish"}
     appBarColor={colors.fishAppBar[colors.mode]}
@@ -94,7 +94,7 @@ const SeaRoute = () => (
     textProperty2={["creatureTime"]}
     textProperty3={["Shadow"]}
     checkListKey={[["seaCheckList","Name"]]}
-    searchKey={[["Name","Shadow","Movement Speed"]]}
+    searchKey={[["Name"]]}
     gridType="row" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedSea"}
     appBarColor={colors.fishAppBar[colors.mode]}

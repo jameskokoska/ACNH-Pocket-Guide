@@ -53,11 +53,11 @@ const FurnitureRoute = () => (
       ["furnitureCheckList","Name"],
     ]}
     searchKey={[
-      ["Name","Tag", "Catalog", "Color 1","Color 2","Variation","Source", "Size", "Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category"],
-      ["Name","Tag", "Catalog", "Color 1","Color 2","Variation","Source", "Size", "Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category"],
-      ["Name","Tag", "Catalog", "Color 1","Color 2","Variation","Source", "Size", "Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category"],
-      ["Name","Tag", "Catalog", "Color 1","Color 2","Variation","Source", "Size", "Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category"],
-      ["Name","Tag", "Catalog", "Color 1","Color 2","Variation","Source", "Size", "Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category"],
+      ["Name",],
+      ["Name",],
+      ["Name",],
+      ["Name",],
+      ["Name",],
     ]}
     gridType="smallGrid" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedFurniture"}
@@ -147,16 +147,16 @@ const ClothingRoute = () => (
       ["clothingCheckList","Name"],
     ]}
     searchKey={[
-      ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
-      ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
-      ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
-      ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
-      ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
-      ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
-      ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
-      ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
-      ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
-      ["Name","Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ],
+      ["Name",],
+      ["Name",],
+      ["Name",],
+      ["Name",],
+      ["Name",],
+      ["Name",],
+      ["Name",],
+      ["Name",],
+      ["Name",],
+      ["Name",],
     ]}
     gridType="smallGrid" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedClothing"}
