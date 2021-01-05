@@ -5,12 +5,20 @@ import LottieView from 'lottie-react-native';
 import TextFont from '../components/TextFont'
 import StoreHoursContainer from '../components/StoreHoursContainer';
 import colors from '../Colors'
+import PopupRating from "../components/PopupRating"
+import ButtonComponent from "../components/ButtonComponent"
 
 const music = require("../assets/data/music.json");
 const {width} = Dimensions.get('window');
 
 
 class CreditsPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      show: false,
+    }
+  }
   render(){
     return(
       <View style={{backgroundColor:colors.lightDarkAccent[colors.mode], height:"100%"}}>
@@ -43,6 +51,8 @@ class CreditsPage extends Component {
             <TextFont bold={false} style={{color: colors.fishText[colors.mode], fontSize: 14, textAlign:"center"}}>{"Suggestions, bugs, or concerns? \nSend me an email!"}</TextFont>
             <TextFont bold={false} style={{color: colors.fishText[colors.mode], fontSize: 15, textAlign:"center"}}>dapperappdeveloper@gmail.com</TextFont>
           </TouchableOpacity>
+          <PopupRating show={this.state.show} noShow={()=>{this.setState({show:false})}}/>
+          <ButtonComponent vibrate={10} color={colors.dateButton[colors.mode]} onPress={()=>{this.setState({show:true})}} text={"Leave a rating"} />
           <View style={{height: 100}}/>
         </ScrollView>
      </View>

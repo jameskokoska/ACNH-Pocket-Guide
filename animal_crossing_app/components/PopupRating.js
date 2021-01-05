@@ -40,6 +40,10 @@ class PopupRating extends Component {
 
 
   render(){
+    if(this.props.show===true && this.state.popupVisible===false){
+      this.setState({popupVisible:true})
+      this.props.noShow();
+    }
     return (
       <>
         <Modal
