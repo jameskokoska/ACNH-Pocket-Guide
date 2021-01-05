@@ -28,6 +28,7 @@ import Onboard from './pages/Onboard';
 import colors from './Colors.js';
 import ActiveTime from './components/ActiveTime.js';
 import * as Font from 'expo-font';
+import PopupRating from './components/PopupRating'
 
 function NavigationView(props) {
   return (
@@ -63,6 +64,7 @@ class App extends Component {
     this.setPage = this.setPage.bind(this);
     this.setFirstLogin = this.setFirstLogin.bind(this);
     this.random = Math.random();
+    this.numLogins;
     this.state = {
       loaded: false,
       currentPage: 0,
@@ -79,6 +81,10 @@ class App extends Component {
     );
 
     const firstLogin = await getStorage("firstLogin","true");
+    const numLogins = parseInt(await getStorage("numLogins","0")) + 1;
+    await AsyncStorage.setItem("numLogins", numLogins.toString());
+    this.numLogins = numLogins;
+    console.log(numLogins)
     global.collectionList = (await getStorage("collectedString","")).split("\n");
     console.log(global.collectionList)
     
@@ -197,6 +203,7 @@ class App extends Component {
     } else {
       return (
         <>
+        <PopupRating numLogins={this.numLogins}/>
         <View style={{position: "absolute", backgroundColor: colors.background[colors.mode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
         <DrawerLayoutAndroid style={{elevation: 0,}} 
           drawerBackgroundColor="rgba(0,0,0,0.01)" 

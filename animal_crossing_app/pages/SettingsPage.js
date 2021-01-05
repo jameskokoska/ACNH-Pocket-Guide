@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {ScrollView, View, Dimensions, Text} from 'react-native';
+import {Linking,TouchableOpacity,ScrollView, View, Dimensions, Text} from 'react-native';
 import ListPage from '../components/ListPage';
 import LottieView from 'lottie-react-native';
 import TextFont from '../components/TextFont'
@@ -75,7 +75,12 @@ class SettingsPage extends Component {
           <ButtonComponent text="Reset Data" onPress={() => {this.setState({open:true})}} vibrate={100} color={colors.cancelButton[colors.mode]}/>
           <Popup text="Reset Data" textLower="Would you like to reset your collection? This action cannot be undone." button2={"Reset"} button1={"Cancel"} button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.setItem("collectedString", ""); AsyncStorage.setItem("firstLogin", "true"); this.setState({openRestart:true});}} popupVisible={this.state.open} close={() => this.setState({open:!this.state.open})}/>
           <Popup text="Restart Required" textLower="Please restart the application." button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.setItem("collectedString", "");}} popupVisible={this.state.openRestart} close={() => this.setState({open:!this.state.open})}/>
-          <View style={{height: 100}}/>
+          <View style={{height:50}}/>
+          <TouchableOpacity onPress={() => Linking.openURL('mailto:dapperappdeveloper@gmail.com') }>
+            <TextFont bold={false} style={{color: colors.fishText[colors.mode], fontSize: 14, textAlign:"center"}}>{"Suggestions, bugs, or concerns? \nSend me an email!"}</TextFont>
+            <TextFont bold={false} style={{color: colors.fishText[colors.mode], fontSize: 15, textAlign:"center"}}>dapperappdeveloper@gmail.com</TextFont>
+          </TouchableOpacity>
+          <View style={{height: 50}}/>
         </ScrollView>
      </View>
      </>

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {ScrollView, View, Dimensions, Text} from 'react-native';
+import {Linking, TouchableOpacity, ScrollView, View, Dimensions, Text} from 'react-native';
 import ListPage from '../components/ListPage';
 import LottieView from 'lottie-react-native';
 import TextFont from '../components/TextFont'
@@ -38,6 +38,11 @@ class CreditsPage extends Component {
           <Text style={{fontSize: 16, marginLeft: 30, marginRight: 30, color:colors.textBlack[colors.mode]}}>FlatIcons: from Freepik.</Text>
           <Text style={{fontSize: 16, marginLeft: 30, marginRight: 30, color:colors.textBlack[colors.mode]}}>All game data sourced from https://tinyurl.com/acnh-sheet. Thank you everyone for all the hard work and for making the spreadsheet!</Text>
           <Text style={{fontSize: 16, marginLeft: 30, marginRight: 30, color:colors.textBlack[colors.mode]}}>And thank YOU for downloading this application and showing your support.</Text>
+          <View style={{height:30}}/>
+          <TouchableOpacity onPress={() => Linking.openURL('mailto:dapperappdeveloper@gmail.com') }>
+            <TextFont bold={false} style={{color: colors.fishText[colors.mode], fontSize: 14, textAlign:"center"}}>{"Suggestions, bugs, or concerns? \nSend me an email!"}</TextFont>
+            <TextFont bold={false} style={{color: colors.fishText[colors.mode], fontSize: 15, textAlign:"center"}}>dapperappdeveloper@gmail.com</TextFont>
+          </TouchableOpacity>
           <View style={{height: 100}}/>
         </ScrollView>
      </View>
