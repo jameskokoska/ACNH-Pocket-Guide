@@ -17,7 +17,7 @@ class VillagersPage extends Component {
           imageProperty={["Icon Image"]}
           textProperty={["Name"]}
           checkListKey={[["villagerCheckList","Name"]]}
-          searchKey={[["Name","Personality","Species","Hobby","Style 1","Style 2","Color 1","Color 2"]]}
+          searchKey={[["Name"]]}
           gridType="smallGrid" //smallGrid, largeGrid, row
           dataGlobalName={"dataLoadedVillagers"}
           appBarColor={colors.villagerAppBar[colors.mode]}

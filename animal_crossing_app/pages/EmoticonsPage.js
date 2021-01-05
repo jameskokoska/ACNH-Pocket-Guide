@@ -17,7 +17,7 @@ class EmoticonsPage extends Component {
           textProperty={["Name"]}
           textProperty2={["Source"]}
           checkListKey={[["emojiCheckList","Name"]]}
-          searchKey={[["Name","Source"]]}
+          searchKey={[["Name"]]}
           gridType="smallGrid" //smallGrid, largeGrid, row
           dataGlobalName={"dataLoadedReactions"}
           appBarColor={colors.emojipediaAppBar[colors.mode]}

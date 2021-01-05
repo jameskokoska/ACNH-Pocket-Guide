@@ -27,7 +27,7 @@ const RecipesRoute = () => (
     imageProperty={["Image"]}
     textProperty={["Name"]}
     checkListKey={[["recipesCheckList","Name","Variation"]]}
-    searchKey={[["Name","Category", "Source","Season/Event","Season/Event Exclusive",]]}
+    searchKey={[["Name"]]}
     gridType="smallGrid" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedRecipes"}
     appBarColor={colors.toolsAppBar[colors.mode]}

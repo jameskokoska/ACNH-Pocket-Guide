@@ -63,7 +63,7 @@ const BugsRoute = () => (
     textProperty2={["creatureTime"]}
     textProperty3={["Where/How"]}
     checkListKey={[["bugCheckList","Name"]]}
-    searchKey={[["Name","Where/How","Weather"]]}
+    searchKey={[["Name"]]}
     gridType="row" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedBugs"}
     appBarColor={colors.bugAppBar[colors.mode]}

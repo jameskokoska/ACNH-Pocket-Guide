@@ -233,9 +233,9 @@ const FloorWallsRoute = () => (
       ["floorWallsCheckList","Name"],
     ]}
     searchKey={[
-      ["Name","Tag","Color 1","Color 2","Source","DIY","Size","Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series",],
-      ["Name","Tag","Color 1","Color 2","Source","DIY","Size","Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series",],
-      ["Name","Tag","Color 1","Color 2","Source","DIY","Size","Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series",],
+      ["Name"],
+      ["Name"],
+      ["Name"],
     ]}
     gridType="smallGrid" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedFloorWalls"}

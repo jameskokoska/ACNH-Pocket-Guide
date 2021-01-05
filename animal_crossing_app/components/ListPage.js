@@ -100,7 +100,7 @@ export default (props) =>{
 
   const [search, setSearch] = useState("Search");
   function updateSearch(search){
-    console.log(search)
+    // console.log(search)
     setSearch(search);
   }
 
@@ -125,13 +125,13 @@ export default (props) =>{
                 currentFilter = {label:"", value:""};
                 var found = false;
                 for(var y = 0; y < possibleFilters.length; y++){
-                  if(possibleFilters[y].value===removeBrackets(item[props.filters[x]])){
+                  if(possibleFilters[y].value===props.filters[x] + "-" +removeBrackets(item[props.filters[x]])){
                     found = true;
                   }
                 }
                 if(!found && item[props.filters[x]]!==undefined){
-                  currentFilter.label = props.filters[x] + " - " +item[props.filters[x]];
-                  currentFilter.value = removeBrackets(item[props.filters[x]]);
+                  currentFilter.label = props.filters[x] + " - " +removeBrackets(item[props.filters[x]]);
+                  currentFilter.value = props.filters[x] + "-" +removeBrackets(item[props.filters[x]]);
                   possibleFilters.push(currentFilter)
                 }
               }
@@ -179,10 +179,14 @@ export default (props) =>{
           var searchFound = false;
           if(search.constructor===Array && search.length !== 0){
             for(var z = 0; z < search.length; z++){
-              if(item.[props.searchKey[j][x]]!==undefined && item.[props.searchKey[j][x]].toLowerCase().includes(search[z].toLowerCase())){
-                searchFound = true;
-                break;
-              }
+              //If the property is in search, not needed
+              // if(props.searchKey[j].includes(search[z].split("-")[0])){
+                //Only check the property selected
+                if(item.[search[z].split("-")[0]]!==undefined && item.[search[z].split("-")[0]].toLowerCase().includes(search[z].split("-")[1].toLowerCase())){
+                  searchFound = true;
+                  break;
+                }
+              // }
             }
           } else if (search.constructor===Array && search.length === 0){
             searchFound = true;
