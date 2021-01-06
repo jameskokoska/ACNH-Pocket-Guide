@@ -16,32 +16,32 @@
         "Day Start": "NA",
         "Day End": "NA",
         "Special Day" : "Saturday",
-        "Special Occurrence": "3",
-        "Hemisphere": "NA",
+        "Special Occurrence": "2",
+        "Hemisphere": "Northern",
         "Time" : "9 AM - 6 PM",
         "Image" : "fish.png"
     },
     {
         "Name": "Bug-Off",
         "Month": "Jan",
-        "Day Start": "16",
+        "Day Start": "NA",
         "Day End": "NA",
-        "Special Day" : "NA",
-        "Special Occurrence": "NA",
+        "Special Day" : "Saturday",
+        "Special Occurrence": "3",
         "Hemisphere": "Southern",
         "Time" : "9 AM - 6 PM",
         "Image" : "bugs.png"
     },
     {
-        "Name": "Fishing Tourney",
+        "Name": "Bug-Off",
         "Month": "Feb",
         "Day Start": "NA",
         "Day End": "NA",
         "Special Day" : "Saturday",
-        "Special Occurrence": "2",
-        "Hemisphere": "NA",
+        "Special Occurrence": "3",
+        "Hemisphere": "Southern",
         "Time" : "9 AM - 6 PM",
-        "Image" : "fish.png"
+        "Image" : "bugs.png"
     },
     {
         "Name": "Valentine's Day",
@@ -55,39 +55,6 @@
         "Image" : "leaf.png"
     },
     {
-        "Name": "Bug-Off",
-        "Month": "Feb",
-        "Day Start": "20",
-        "Day End": "NA",
-        "Special Day" : "NA",
-        "Special Occurrence": "NA",
-        "Hemisphere": "Southern",
-        "Time" : "9 AM - 6 PM",
-        "Image" : "bugs.png"
-    },
-    {
-        "Name": "Festival",
-        "Month": "Feb",
-        "Day Start": "24",
-        "Day End": "NA",
-        "Special Day" : "NA",
-        "Special Occurrence": "NA",
-        "Hemisphere": "NA",
-        "Time" : "all day",
-        "Image" : "leaf.png"
-    },
-    {
-        "Name": "Fishing Tourney",
-        "Month": "Mar",
-        "Day Start": "NA",
-        "Day End": "NA",
-        "Special Day" : "Saturday",
-        "Special Occurrence": "3",
-        "Hemisphere": "NA",
-        "Time" : "9 AM - 6 PM",
-        "Image" : "fish.png"
-    },
-    {
         "Name": "Bunny Day",
         "Month": "Apr",
         "Day Start": "1",
@@ -95,30 +62,63 @@
         "Special Day" : "NA",
         "Special Occurrence": "NA",
         "Hemisphere": "NA",
-        "Time" : "all day",
-        "Image" : "leaf.png"
+        "Time" : "Ends on the 12th",
+        "Image" : "bunny.png"
     },
     {
-        "Name": "Cherry Blossom Season",
+        "Name": "Bunny Day End",
+        "Month": "Apr",
+        "Day Start": "12",
+        "Day End": "12",
+        "Special Day" : "NA",
+        "Special Occurrence": "NA",
+        "Hemisphere": "NA",
+        "Time" : "Ends on the 12th",
+        "Image" : "bunny.png"
+    },
+    {
+        "Name": "Cherry Blossoms",
         "Month": "Apr",
         "Day Start": "1",
         "Day End": "10",
         "Special Day" : "NA",
         "Special Occurrence": "NA",
-        "Hemisphere": "NA",
-        "Time" : "all day",
-        "Image" : "leaf.png"
+        "Hemisphere": "Northern",
+        "Time" : "Ends on the 10th",
+        "Image" : "blossom.png"
     },
     {
-        "Name": "Fishing Tourney",
+        "Name": "Cherry Blossoms End",
         "Month": "Apr",
-        "Day Start": "11",
-        "Day End": "NA",
+        "Day Start": "10",
+        "Day End": "10",
         "Special Day" : "NA",
         "Special Occurrence": "NA",
-        "Hemisphere": "NA",
-        "Time" : "9 AM - 6 PM",
-        "Image" : "fish.png"
+        "Hemisphere": "Northern",
+        "Time" : "Ends on the 10th",
+        "Image" : "blossom.png"
+    },
+    {
+        "Name": "Cherry Blossoms",
+        "Month": "Oct",
+        "Day Start": "1",
+        "Day End": "10",
+        "Special Day" : "NA",
+        "Special Occurrence": "NA",
+        "Hemisphere": "Southern",
+        "Time" : "Ends on the 10th",
+        "Image" : "blossom.png"
+    },
+    {
+        "Name": "Cherry Blossoms End",
+        "Month": "Oct",
+        "Day Start": "10",
+        "Day End": "10",
+        "Special Day" : "NA",
+        "Special Occurrence": "NA",
+        "Hemisphere": "Southern",
+        "Time" : "Ends on the 10th",
+        "Image" : "blossom.png"
     },
     {
         "Name": "Nature Day",
@@ -128,18 +128,18 @@
         "Special Day" : "NA",
         "Special Occurrence": "NA",
         "Hemisphere": "NA",
-        "Time" : "all day",
+        "Time" : "Ends on May 4th",
         "Image" : "leaf.png"
     },
     {
-        "Name": "Nature Day",
+        "Name": "Nature Day End",
         "Month": "May",
-        "Day Start": "1",
+        "Day Start": "4",
         "Day End": "4",
         "Special Day" : "NA",
         "Special Occurrence": "NA",
         "Hemisphere": "NA",
-        "Time" : "all day",
+        "Time" : "Ends on the 4th",
         "Image" : "leaf.png"
     },
     {
@@ -150,18 +150,40 @@
         "Special Day" : "NA",
         "Special Occurrence": "NA",
         "Hemisphere": "NA",
-        "Time" : "all day",
+        "Time" : "Ends on the 7th",
         "Image" : "leaf.png"
     },
     {
-        "Name": "International Museum Day",
+        "Name": "May Day Ends",
+        "Month": "May",
+        "Day Start": "7",
+        "Day End": "7",
+        "Special Day" : "NA",
+        "Special Occurrence": "NA",
+        "Hemisphere": "NA",
+        "Time" : "Ends on the 7th",
+        "Image" : "leaf.png"
+    },
+    {
+        "Name": "Museum Day",
         "Month": "May",
         "Day Start": "18",
         "Day End": "31",
         "Special Day" : "NA",
         "Special Occurrence": "NA",
         "Hemisphere": "NA",
-        "Time" : "all day",
+        "Time" : "Ends on the 31st",
+        "Image" : "leaf.png"
+    },
+    {
+        "Name": "Museum Day End",
+        "Month": "May",
+        "Day Start": "31",
+        "Day End": "31",
+        "Special Day" : "NA",
+        "Special Occurrence": "NA",
+        "Hemisphere": "NA",
+        "Time" : "Ends on the 31st",
         "Image" : "leaf.png"
     },
     {
@@ -181,7 +203,7 @@
         "Day Start": "NA",
         "Day End": "NA",
         "Special Day" : "Saturday",
-        "Special Occurrence": "3",
+        "Special Occurrence": "2",
         "Hemisphere": "NA",
         "Time" : "9 AM - 6 PM",
         "Image" : "fish.png"
@@ -194,16 +216,27 @@
         "Special Day" : "NA",
         "Special Occurrence": "NA",
         "Hemisphere": "NA",
-        "Time" : "all day",
+        "Time" : "Ends on the 30th",
+        "Image" : "leaf.png"
+    },
+    {
+        "Name": "Wedding Season End",
+        "Month": "June",
+        "Day Start": "30",
+        "Day End": "30",
+        "Special Day" : "NA",
+        "Special Occurrence": "NA",
+        "Hemisphere": "NA",
+        "Time" : "Ends on the 30th",
         "Image" : "leaf.png"
     },
     {
         "Name": "Bug-Off",
         "Month": "June",
-        "Day Start": "27",
+        "Day Start": "NA",
         "Day End": "NA",
-        "Special Day" : "NA",
-        "Special Occurrence": "NA",
+        "Special Day" : "Saturday",
+        "Special Occurrence": "4",
         "Hemisphere": "Northern",
         "Time" : "9 AM - 6 PM",
         "Image" : "bugs.png"
@@ -216,17 +249,6 @@
         "Special Day" : "Sunday",
         "Special Occurrence": "3",
         "Hemisphere": "NA",
-        "Time" : "all day",
-        "Image" : "leaf.png"
-    },
-    {
-        "Name": "Snow Boy",
-        "Month": "June",
-        "Day Start": "15",
-        "Day End": "NA",
-        "Special Day" : "NA",
-        "Special Occurrence": "NA",
-        "Hemisphere": "Southern",
         "Time" : "all day",
         "Image" : "leaf.png"
     },
@@ -244,10 +266,10 @@
     {
         "Name": "Bug-Off",
         "Month": "July",
-        "Day Start": "25",
+        "Day Start": "NA",
         "Day End": "NA",
-        "Special Day" : "NA",
-        "Special Occurrence": "NA",
+        "Special Day" : "Saturday",
+        "Special Occurrence": "4",
         "Hemisphere": "Northern",
         "Time" : "9 AM - 6 PM",
         "Image" : "bugs.png"
@@ -308,46 +330,24 @@
         "Image" : "fireworks.png"
     },
     {
-        "Name": "Fishing Tourney",
+        "Name": "Bug-Off",
         "Month": "Aug",
         "Day Start": "NA",
         "Day End": "NA",
         "Special Day" : "Saturday",
-        "Special Occurrence": "3",
-        "Hemisphere": "NA",
-        "Time" : "9 AM - 6 PM",
-        "Image" : "fish.png"
-    },
-    {
-        "Name": "Bug-Off",
-        "Month": "Aug",
-        "Day Start": "22",
-        "Day End": "NA",
-        "Special Day" : "NA",
-        "Special Occurrence": "NA",
+        "Special Occurrence": "4",
         "Hemisphere": "Northern",
         "Time" : "9 AM - 6 PM",
         "Image" : "bugs.png"
     },
     {
-        "Name": "Fishing Tourney",
+        "Name": "Bug-Off",
         "Month": "Sept",
         "Day Start": "NA",
         "Day End": "NA",
         "Special Day" : "Saturday",
-        "Special Occurrence": "3",
-        "Hemisphere": "NA",
-        "Time" : "9 AM - 6 PM",
-        "Image" : "fish.png"
-    },
-    {
-        "Name": "Bug-Off",
-        "Month": "Sept",
-        "Day Start": "26",
-        "Day End": "NA",
-        "Special Day" : "NA",
-        "Special Occurrence": "NA",
-        "Hemisphere": "NA",
+        "Special Occurrence": "4",
+        "Hemisphere": "Northern",
         "Time" : "9 AM - 6 PM",
         "Image" : "bugs.png"
     },
@@ -385,23 +385,12 @@
         "Image" : "pumpkin.png"
     },
     {
-        "Name": "Fishing Tourney",
-        "Month": "NA",
+        "Name": "Bug-Off",
+        "Month": "Nov",
         "Day Start": "NA",
         "Day End": "NA",
         "Special Day" : "Saturday",
         "Special Occurrence": "3",
-        "Hemisphere": "NA",
-        "Time" : "9 AM - 6 PM",
-        "Image" : "fish.png"
-    },
-    {
-        "Name": "Bug-Off",
-        "Month": "Nov",
-        "Day Start": "21",
-        "Day End": "NA",
-        "Special Day" : "NA",
-        "Special Occurrence": "NA",
         "Hemisphere": "Southern",
         "Time" : "9 AM - 6 PM",
         "Image" : "bugs.png"
@@ -418,36 +407,36 @@
         "Image" : "corn.png"
     },
     {
-        "Name": "Fishing Tourney",
+        "Name": "Bug-Off",
         "Month": "Dec",
         "Day Start": "NA",
         "Day End": "NA",
         "Special Day" : "Saturday",
-        "Special Occurrence": "2",
-        "Hemisphere": "NA",
-        "Time" : "9 AM - 6 PM",
-        "Image" : "fish.png"
-    },
-    {
-        "Name": "Bug-Off",
-        "Month": "Dec",
-        "Day Start": "19",
-        "Day End": "NA",
-        "Special Day" : "NA",
-        "Special Occurrence": "NA",
+        "Special Occurrence": "3",
         "Hemisphere": "Southern",
         "Time" : "9 AM - 6 PM",
         "Image" : "bugs.png"
     },
     {
-        "Name": "Snow Boy",
+        "Name": "Festive Season",
         "Month": "Dec",
         "Day Start": "15",
-        "Day End": "NA",
+        "Day End": "31",
         "Special Day" : "NA",
         "Special Occurrence": "NA",
-        "Hemisphere": "Northern",
-        "Time" : "all day",
+        "Hemisphere": "NA",
+        "Time" : "Ends on the 6th",
+        "Image" : "snow.png"
+    },
+    {
+        "Name": "Festive Season End",
+        "Month": "Jan",
+        "Day Start": "6",
+        "Day End": "6",
+        "Special Day" : "NA",
+        "Special Occurrence": "NA",
+        "Hemisphere": "NA",
+        "Time" : "Ends on the 6th",
         "Image" : "snow.png"
     },
     {

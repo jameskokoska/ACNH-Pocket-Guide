@@ -42,7 +42,7 @@ export class EventContainer extends Component {
 export function getEventsDay(currentDate){
   var currentMonth = currentDate.getMonth();
   var currentDay = currentDate.getDate();
-  var currentYear = currentDate.getYear();
+  var currentYear = currentDate.getFullYear();
   var dayOfWeek = currentDate.getDay()
   var totalEvents = [];
   var northernHemisphere = global.settingsCurrent[0]["currentValue"]==="true";
@@ -76,13 +76,16 @@ export function getEventsDay(currentDate){
   }
 
   var snapshot = require("../assets/data/events.json")
-  for(var i = 0; i < snapshot.length; i++){
+  for(var i = 1; i < snapshot.length; i++){
     if(northernHemisphere && snapshot[i]["Hemisphere"]==="Southern"){
       continue;
     } else if (!northernHemisphere && snapshot[i]["Hemisphere"]==="Northern"){
       continue;
     } else if(snapshot[i]["Day Start"]==="NA"){
+      // console.log(snapshot[i])
       var eventDay = getSpecialOccurrenceDate(currentYear, i, snapshot);
+      // console.log(eventDay)
+      // console.log(currentMonth)
       if(eventDay[0]===currentDay && eventDay[1]===currentMonth){
         eventDatum = {
           "Name": snapshot[i]["Name"],
@@ -97,7 +100,8 @@ export function getEventsDay(currentDate){
         }
         totalEvents.push(eventDatum);
       }
-    } else if(currentDay===parseInt(snapshot[i]["Day Start"]) && currentMonth===getMonthNumber(snapshot[i]["Month"])){
+      // ||currentDay<=parseInt(snapshot[i]["Day End"])
+    } else if((currentDay===parseInt(snapshot[i]["Day Start"]))&& currentMonth===getMonthNumber(snapshot[i]["Month"])){
       eventDatum = {
         "Name": snapshot[i]["Name"],
         "Month": snapshot[i]["Month"],
@@ -128,18 +132,19 @@ export function getEventsDay(currentDate){
 function getSpecialOccurrenceDate(currentYear, i, snapshot){
   var occurrence = 0;
   var eventDate;
+  var specialOccurrence = parseInt(snapshot[i]["Special Occurrence"]);
   for(var day = 1; day <= getDaysNumberMonth(snapshot[i]["Month"]); day++){
     if(day<10){
       eventDate = currentYear+"-"+getMonthNumber(snapshot[i]["Month"])+1+"-0"+day;
     } else {
       eventDate = currentYear+"-"+getMonthNumber(snapshot[i]["Month"])+1+"-"+day;
     }
+    // console.log(eventDate)
     if(new Date(eventDate).getDay()===parseInt(getDayOfWeekObject(snapshot[i]["Special Day"]))){
       occurrence++;
     }
-    var specialOccurrence = parseInt(snapshot[i]["Special Occurrence"]);
     if(occurrence==specialOccurrence){
-      return [day, getMonthNumber(snapshot[i]["Month"])+1];
+      return [day, getMonthNumber(snapshot[i]["Month"])];
     }
   }
   return "0";
