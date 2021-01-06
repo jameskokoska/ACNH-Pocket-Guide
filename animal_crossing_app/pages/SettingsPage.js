@@ -41,7 +41,7 @@ class SettingsPage extends Component {
         <ScrollView>
           <View style={{marginTop: 100}}/>
           <TextFont bold={true} style={{fontSize: 40, marginLeft: 30, color:colors.textBlack[global.darkMode]}}>Settings</TextFont>
-          <TextFont style={{fontSize: 13, marginLeft: 30, color:colors.textBlack[global.darkMode]}}>{"Note: some settings require you to change pages to update. \nTap each setting to learn more."}</TextFont>
+          <TextFont style={{fontSize: 13, marginHorizontal: 30, color:colors.textBlack[global.darkMode]}}>{"Note: some settings require you to change pages / restart. \nTap each setting to learn more."}</TextFont>
           <View style={{marginTop: 20}}/>
           {global.settingsCurrent.map( (setting, index)=>
             {

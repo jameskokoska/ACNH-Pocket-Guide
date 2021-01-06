@@ -74,7 +74,7 @@ export default (props) =>{
   const ref = useRef(null);
 
   const scrollY = useRef(new Animated.Value(0));
-  const scrollYClamped = diffClamp(scrollY.current, 0, headerHeight/0.85); //or 1.5
+  const scrollYClamped = diffClamp(scrollY.current, 0, headerHeight/0.8); //or 1.5
 
   const translateY = scrollYClamped.interpolate({
     inputRange: [0, headerHeight],

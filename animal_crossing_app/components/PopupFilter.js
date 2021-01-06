@@ -31,7 +31,29 @@ class PopupFilter extends Component {
 
   async componentDidMount(){
     var defaultValuesStored = (await getStorage(this.props.title+"Filters","")).split(",");
+
+    //Check for filters selected that don't exist, could cause errors, then reset them
     if(defaultValuesStored[0]!==""){
+      var errors = false;
+      for(var i = 0; i<defaultValuesStored.length; i++){
+        var found = false;
+        for(var x = 0; x<this.props.possibleFilters.length; x++){
+          if(this.props.possibleFilters[x].value===defaultValuesStored[i]){
+            found=true;
+          }
+        }
+        if(found===false){
+          console.log("error with saved filters, resetting");
+          errors = true;
+          break;
+        }
+      }
+      if(errors){
+        this.defaultValues=[];
+        await AsyncStorage.setItem(this.props.title+"Filters", "");
+        return;
+      }
+
       this.defaultValues = defaultValuesStored;
       setTimeout(function() {
         this.props.updateSearch(this.defaultValues);
@@ -51,6 +73,7 @@ class PopupFilter extends Component {
   async updateDefaultValues(item){
     this.defaultValues=item;
     await AsyncStorage.setItem(this.props.title+"Filters", this.defaultValues.toString());
+    this.props.updateSearch(item); 
   }
 
   render(){
@@ -77,7 +100,6 @@ class PopupFilter extends Component {
               <DropDownPicker
                 items={this.props.possibleFilters}
                 placeholder={"Select filter..."}
-                defaultValue={[]}
                 multipleText="%d filters(s) applied"
                 dropDownMaxHeight={Dimensions.get('window').height*0.55}
                 containerStyle={{height: 45, marginLeft: 15, marginRight: 15}}
@@ -93,7 +115,7 @@ class PopupFilter extends Component {
                 customTickIcon={()=><View/>}
                 activeItemStyle={{borderRadius: 10, backgroundColor: colors.lightDarkAccent[global.darkMode]}}
                 dropDownStyle={{borderBottomLeftRadius: 10, borderBottomRightRadius: 10, borderWidth: 0, backgroundColor: colors.filterBG[global.darkMode], opacity: 0.98, }}
-                onChangeItem={item => {this.props.updateSearch(item); this.updateDefaultValues(item)}}
+                onChangeItem={item => {this.updateDefaultValues(item)}}
                 defaultValue = {this.defaultValues}
               />
               <View style={{flexDirection:"row", position:"absolute", bottom: 20}}>
