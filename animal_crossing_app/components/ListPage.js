@@ -343,14 +343,14 @@ export default (props) =>{
         nestedScrollEnabled
         initialNumToRender={8}
         scrollEventThrottle={16}
-        contentContainerStyle={{paddingTop: paddingTop, paddingLeft: 15, paddingRight: 15, paddingBottom: 120}}
+        contentContainerStyle={{paddingTop: paddingTop+10, paddingLeft: 15, paddingRight: 15, paddingBottom: 120}}
         onScroll={handleScroll}
         ref={ref}
         data={data}
         renderItem={renderItem}
         keyExtractor={(item, index) => `list-item-${index}-${item.checkListKeyString}`}
         numColumns={numColumns}
-        style={{paddingBottom: paddingBottom}}
+        style={{paddingBottom: paddingBottom, marginTop: -10}}
         removeClippedSubviews={true}
         updateCellsBatchingPeriod={500}
         windowSize={10}
