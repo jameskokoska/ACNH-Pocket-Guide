@@ -76,6 +76,7 @@ const colors = {
     okButton : ["#2196f3","#006db3"],
     dateButton : ["#81c784","#519657"],
     cancelButton : ["#d32f2f","#ab000d"],
+    filtersResetButton : ["#ff8d7e","#e57373"],
     closedStore : ["#ffd9d9","#654848"],
     openStore : ["#81c784","#519657"],
     closingSoonStore : ["#e6ee9c","#9e9855"],

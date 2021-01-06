@@ -127,6 +127,13 @@ export function updateDataGlobal(datakeyName, index, collected, dataSet){
     global.dataLoadedCreatures[dataSet][index].collected=collected;
 }
 
+export function resetFilters(){
+  var filterKeys = ["FishFilters","BugsFilters","Sea CreaturesFilters","FossilsFilters","ArtFilters","FurnitureFilters","ClothingFilters","Floor & WallsFilters","MusicFilters","EmoticonsFilters","RecipesFilters","ToolsFilters","VillagersFilters","ConstructionFilters","EverythingFilters"]
+  for(var i =0; i < filterKeys.length; i++){
+    AsyncStorage.setItem(filterKeys[i], "");
+  }
+}
+
 export function checkOff(item, collected, dataGlobalName){
   console.log(item.checkListKey);
   if(item!==undefined){

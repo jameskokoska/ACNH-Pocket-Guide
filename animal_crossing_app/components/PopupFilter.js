@@ -31,7 +31,7 @@ class PopupFilter extends Component {
 
   async componentDidMount(){
     var defaultValuesStored = (await getStorage(this.props.title+"Filters","")).split(",");
-
+    console.log(this.props.title+"Filters")
     //Check for filters selected that don't exist, could cause errors, then reset them
     if(defaultValuesStored[0]!==""){
       var errors = false;
@@ -119,6 +119,18 @@ class PopupFilter extends Component {
                 defaultValue = {this.defaultValues}
               />
               <View style={{flexDirection:"row", position:"absolute", bottom: 20}}>
+                <ButtonComponent
+                  text={"Clear Filters"}
+                  color={colors.filtersResetButton[global.darkMode]}
+                  vibrate={5}
+                  onPress={() => {
+                    this.setPopupVisible(!this.state.popupVisible);
+                    this.props.close();
+                    this.defaultValues=[];
+                    AsyncStorage.setItem(this.props.title+"Filters", "");
+                    this.props.updateSearch(this.defaultValues);
+                  }}
+                />
                 <ButtonComponent
                   text={"OK"}
                   color={colors.okButton[global.darkMode]}
