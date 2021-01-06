@@ -400,7 +400,7 @@ export const settings = [
     "defaultValue" : "false",
     "currentValue" : "",
     "picture" : require("./assets/icons/fancyClock.png"),
-    "displayName" : "Use 24 Hour clock",
+    "displayName" : "Use 24 hour clock",
     "description" : "Enable a 24 hour clock instead of the standard 12 hour format.",
   },
   {
@@ -426,6 +426,24 @@ export const settings = [
     "picture" : require("./assets/icons/filter.png"),
     "displayName" : "Enable filters in lists",
     "description" : "Turning this off can increase performance of loading, for basic needs",
+  },
+  //12
+  {
+    "keyName" : "settingsAutoDarkMode",
+    "defaultValue" : "true",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/bulb.png"),
+    "displayName" : "Dark mode - follow system",
+    "description" : "Dark mode will follow system default, if your Android version does not support system dark mode, disable this and use the setting below.",
+  },
+  //13
+  {
+    "keyName" : "settingsDarkMode",
+    "defaultValue" : "false",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/autoMode.png"),
+    "displayName" : "Dark mode",
+    "description" : "Toggle dark mode, ensure auto dark mode is off to use this",
   },
   // {
   //   "keyName" : "settingsLogFilterDefinitions",

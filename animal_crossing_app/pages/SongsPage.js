@@ -18,7 +18,7 @@ class SongsPage extends Component {
             { scale: 1.1 },
             { rotate: '0deg'},
           ],
-          opacity: colors.musicWavesTransparency[colors.mode],
+          opacity: colors.musicWavesTransparency[global.darkMode],
         }} 
       >
         <LottieView 
@@ -40,7 +40,7 @@ class SongsPage extends Component {
             { scale: 1.1 },
             { rotate: '180deg'},
           ],
-          opacity: colors.musicWavesTransparency[colors.mode],
+          opacity: colors.musicWavesTransparency[global.darkMode],
         }} 
       >
       <LottieView 
@@ -62,13 +62,13 @@ class SongsPage extends Component {
           searchKey={[["Name"]]}
           gridType="largeGrid" //smallGrid, largeGrid, row
           dataGlobalName={"dataLoadedMusic"}
-          appBarColor={colors.musicAppBar[colors.mode]}
+          appBarColor={colors.musicAppBar[global.darkMode]}
           titleColor={colors.textWhite[0]}
-          searchBarColor={colors.searchbarBG[colors.mode]}
-          backgroundColor={colors.lightDarkAccent[colors.mode]}
-          boxColor={colors.white[colors.mode]}
-          labelColor={colors.textBlack[colors.mode]}
-          accentColor={colors.musicAccent[colors.mode]}
+          searchBarColor={colors.searchbarBG[global.darkMode]}
+          backgroundColor={colors.lightDarkAccent[global.darkMode]}
+          boxColor={colors.white[global.darkMode]}
+          labelColor={colors.textBlack[global.darkMode]}
+          accentColor={colors.musicAccent[global.darkMode]}
         />
       </>
     )

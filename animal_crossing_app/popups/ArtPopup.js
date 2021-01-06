@@ -21,9 +21,9 @@ class ArtPopup extends Component {
         uri: this.props.item["Image"],
       }}
     />
-    var paintingComparisonRealLabel = <TextFont style={{paddingBottom: 20, fontSize:20, color: colors.textBlack[colors.mode]}}>^ Real ^</TextFont>
+    var paintingComparisonRealLabel = <TextFont style={{paddingBottom: 20, fontSize:20, color: colors.textBlack[global.darkMode]}}>^ Real ^</TextFont>
     var paintingComparisonFake = <View/>
-    var paintingComparisonFakeLabel = <TextFont style={{paddingBottom: 20, fontSize:20, color: colors.textBlack[colors.mode]}}>There is no fake version</TextFont>
+    var paintingComparisonFakeLabel = <TextFont style={{paddingBottom: 20, fontSize:20, color: colors.textBlack[global.darkMode]}}>There is no fake version</TextFont>
     if(this.props.item["Name"].includes("painting")){
       var paintingReal = getPaintingPhoto(capitalize(this.props.item["Name"]));
       if(paintingReal!=="none"){
@@ -32,7 +32,7 @@ class ArtPopup extends Component {
       var paintingFake = getPaintingPhotoFake(capitalize(this.props.item["Name"]));
       if(paintingFake!=="none"){
         paintingComparisonFake = <Image style={styles.comparisonImage} source={paintingFake}/>
-        paintingComparisonFakeLabel = <TextFont style={{paddingBottom: 20, fontSize:20, color: colors.textBlack[colors.mode]}}>^ Fake ^</TextFont>
+        paintingComparisonFakeLabel = <TextFont style={{paddingBottom: 20, fontSize:20, color: colors.textBlack[global.darkMode]}}>^ Fake ^</TextFont>
       }
     } else {
       var sculptureFake = getSculpturePhotoFake(this.props.item["Name"]);
@@ -43,7 +43,7 @@ class ArtPopup extends Component {
             uri: sculptureFake,
           }}
         />
-        paintingComparisonFakeLabel = <TextFont style={{paddingBottom: 20, fontSize:20, color: colors.textBlack[colors.mode]}}>^ Fake ^</TextFont>
+        paintingComparisonFakeLabel = <TextFont style={{paddingBottom: 20, fontSize:20, color: colors.textBlack[global.darkMode]}}>^ Fake ^</TextFont>
       }
     }
     return <View style={{width: "100%", alignItems: "center"}}>

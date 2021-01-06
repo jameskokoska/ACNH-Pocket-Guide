@@ -9,11 +9,11 @@ class StoreHoursContainer extends Component {
     var backgroundColor;
     var currentHour = getCurrentDateObject().getHours();
     if(currentHour+1===this.props.closeHour){
-      backgroundColor = colors.closingSoonStore[colors.mode]
+      backgroundColor = colors.closingSoonStore[global.darkMode]
     } else if(currentHour >= this.props.openHour && currentHour < this.props.closeHour){
-      backgroundColor = colors.openStore[colors.mode];
+      backgroundColor = colors.openStore[global.darkMode];
     } else {
-      backgroundColor = colors.closedStore[colors.mode];
+      backgroundColor = colors.closedStore[global.darkMode];
     }
     if(this.props.backgroundColor!==undefined){
       backgroundColor=this.props.backgroundColor;
@@ -22,8 +22,8 @@ class StoreHoursContainer extends Component {
         <View style={[styles.storeContainer,{backgroundColor:backgroundColor}]}>
           <Image style={styles.storeImage} source={this.props.image}/>
           <View style={styles.textContainer}>
-            <TextFont bold={true} style={[styles.textContainerTop,{color:colors.textBlack[colors.mode]}]}>{this.props.text}</TextFont>
-            <TextFont style={[styles.textContainerBottom,{color:colors.textBlack[colors.mode]}]}>{this.props.textBottom}</TextFont>
+            <TextFont bold={true} style={[styles.textContainerTop,{color:colors.textBlack[global.darkMode]}]}>{this.props.text}</TextFont>
+            <TextFont style={[styles.textContainerBottom,{color:colors.textBlack[global.darkMode]}]}>{this.props.textBottom}</TextFont>
           </View>
         </View>
     )

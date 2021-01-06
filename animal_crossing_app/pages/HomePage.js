@@ -41,15 +41,15 @@ class HomePage extends Component {
     }
     var todayTitle=<View/>
     if(todayEvents.length>0){
-      todayTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[colors.mode]}]}>Today</TextFont>
+      todayTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>Today</TextFont>
     }
     var tomorrowTitle=<View/>
     if(tomorrowEvents.length>0){
-      tomorrowTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[colors.mode]}]}>Tomorrow</TextFont>
+      tomorrowTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>Tomorrow</TextFont>
     }
     var thisWeekTitle=<View/>
     if(thisWeekEvents.length>0){
-      thisWeekTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[colors.mode]}]}>This Week</TextFont>
+      thisWeekTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>This Week</TextFont>
     }
 
     var landscape = <LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, zIndex:1, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/home.json')}/>
@@ -61,13 +61,13 @@ class HomePage extends Component {
         <View style={{height:45}}/>
         <Clock/>
         <View style={{height:125}}/>
-        <HomeContentArea backgroundColor={colors.lightDarkAccent[colors.mode]} accentColor={colors.eventsColor[colors.mode]} title="Events" titleColor={colors.eventsColor[colors.modeReverse]}>
+        <HomeContentArea backgroundColor={colors.lightDarkAccent[global.darkMode]} accentColor={colors.eventsColor[global.darkMode]} title="Events" titleColor={colors.eventsColor[global.darkModeReverse]}>
           {todayTitle}
           {todayEvents.map( (event, index)=>
             <EventContainer 
               key={event["Name"]} 
-              backgroundColor={colors.eventBackground[colors.mode]}
-              textColor={colors.textBlack[colors.mode]}
+              backgroundColor={colors.eventBackground[global.darkMode]}
+              textColor={colors.textBlack[global.darkMode]}
               image={event["Image"]}
               text={event["Name"]}
               textBottom={capitalize(event["Time"])}
@@ -79,8 +79,8 @@ class HomePage extends Component {
           {tomorrowEvents.map( (event, index)=>
             <EventContainer 
               key={event["Name"]} 
-              backgroundColor={colors.eventBackground[colors.mode]}
-              textColor={colors.textBlack[colors.mode]}
+              backgroundColor={colors.eventBackground[global.darkMode]}
+              textColor={colors.textBlack[global.darkMode]}
               image={event["Image"]}
               text={event["Name"]}
               textBottom={capitalize(event["Time"])}
@@ -92,8 +92,8 @@ class HomePage extends Component {
           {thisWeekEvents.map( (event, index)=>
             <EventContainer 
               key={event["Name"]} 
-              backgroundColor={colors.eventBackground[colors.mode]}
-              textColor={colors.textBlack[colors.mode]}
+              backgroundColor={colors.eventBackground[global.darkMode]}
+              textColor={colors.textBlack[global.darkMode]}
               image={event["Image"]}
               text={event["Name"]}
               textBottom={capitalize(event["Time"])}
@@ -103,31 +103,31 @@ class HomePage extends Component {
           )}
           <View style={{height: 30}}/>
         </HomeContentArea>
-        <HomeContentArea backgroundColor={colors.sectionBackground1[colors.mode]} accentColor={colors.storeHoursColor[colors.mode]} title="Collection" titleColor={colors.collectionColor[colors.modeReverse]}>
+        <HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.storeHoursColor[global.darkMode]} title="Collection" titleColor={colors.collectionColor[global.darkModeReverse]}>
           <View style={{height: 15}}/>
-          <ProgressContainer color={colors.fishAppBar[0]} backgroundColor={colors.white[colors.mode]} textColor={colors.textBlack[colors.mode]} percentage={fishPercentage} image={require("../assets/icons/fish.png")} text={"Fish " + fishCount + "/80"}/>
-          <ProgressContainer color={colors.fishAppBar[0]} backgroundColor={colors.white[colors.mode]} textColor={colors.textBlack[colors.mode]} percentage={seaPercentage} image={require("../assets/icons/octopus.png")} text={"Sea Creatures " + seaCount + "/40"}/>
-          <ProgressContainer color={colors.bugAppBar[0]} backgroundColor={colors.white[colors.mode]} textColor={colors.textBlack[colors.mode]} percentage={bugsPercentage} image={require("../assets/icons/bugs.png")} text={"Bugs " + bugsCount + "/80"}/>
-          <ProgressContainer color={colors.fossilAppBar[0]} backgroundColor={colors.white[colors.mode]} textColor={colors.textBlack[colors.mode]} percentage={fossilPercentage} image={require("../assets/icons/bones.png")} text={"Fossils " + fossilCount + "/73"}/>
-          <ProgressContainer color={colors.artAppBar[0]} backgroundColor={colors.white[colors.mode]} textColor={colors.textBlack[colors.mode]} percentage={artPercentage} image={require("../assets/icons/colorPalette.png")} text={"Art " + artCount + "/43"}/>
-          <ProgressContainer color={colors.musicAppBar[0]} backgroundColor={colors.white[colors.mode]} textColor={colors.textBlack[colors.mode]} percentage={musicPercentage} image={require("../assets/icons/music.png")} text={"Songs " + musicCount + "/95"}/>
+          <ProgressContainer color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={fishPercentage} image={require("../assets/icons/fish.png")} text={"Fish " + fishCount + "/80"}/>
+          <ProgressContainer color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={seaPercentage} image={require("../assets/icons/octopus.png")} text={"Sea Creatures " + seaCount + "/40"}/>
+          <ProgressContainer color={colors.bugAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={bugsPercentage} image={require("../assets/icons/bugs.png")} text={"Bugs " + bugsCount + "/80"}/>
+          <ProgressContainer color={colors.fossilAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={fossilPercentage} image={require("../assets/icons/bones.png")} text={"Fossils " + fossilCount + "/73"}/>
+          <ProgressContainer color={colors.artAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={artPercentage} image={require("../assets/icons/colorPalette.png")} text={"Art " + artCount + "/43"}/>
+          <ProgressContainer color={colors.musicAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={musicPercentage} image={require("../assets/icons/music.png")} text={"Songs " + musicCount + "/95"}/>
           <View style={{height: 15}}/>
         </HomeContentArea>
-        <HomeContentArea backgroundColor={colors.sectionBackground2[colors.mode]} accentColor={colors.storeHoursColor[colors.mode]} title="Store Hours" titleColor={colors.storeHoursColor[colors.modeReverse]}>
+        <HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.storeHoursColor[global.darkMode]} title="Store Hours" titleColor={colors.storeHoursColor[global.darkModeReverse]}>
           <View style={{height: 15}}/>
           <StoreHoursContainer image={require("../assets/icons/nook.png")} text="Nook's Cranny" textBottom="8 AM - 10 PM" openHour={8} closeHour={22}/>
           <StoreHoursContainer image={require("../assets/icons/able.png")} text="Able Sisters" textBottom="9 AM - 9 PM" openHour={9} closeHour={21}/>
           <View style={{height: 15}}/>
         </HomeContentArea>
-        <HomeContentArea backgroundColor={colors.sectionBackground1[colors.mode]} accentColor={colors.activeCreaturesColor[colors.mode]} title="Active Creatures" titleColor={colors.activeCreaturesColor[colors.modeReverse]}>
+        <HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.activeCreaturesColor[global.darkMode]} title="Active Creatures" titleColor={colors.activeCreaturesColor[global.darkModeReverse]}>
           <ActiveCreatures/>
         </HomeContentArea>
       </ScrollView>
       <View style={{position:"absolute", width: "100%", height:"100%", zIndex:-5}}>
         {landscape}
-        <View style={[styles.homeScreenBackgroundTop,{backgroundColor:colors.skyColor[colors.mode]}]}>
+        <View style={[styles.homeScreenBackgroundTop,{backgroundColor:colors.skyColor[global.darkMode]}]}>
         </View>
-        <View style={[styles.homeScreenBackgroundBottom,{backgroundColor:colors.grassColor[colors.mode]}]}>
+        <View style={[styles.homeScreenBackgroundBottom,{backgroundColor:colors.grassColor[global.darkMode]}]}>
         </View>
       </View>
     </>

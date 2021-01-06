@@ -53,9 +53,9 @@ class PopupRating extends Component {
           statusBarTranslucent
         >
         <View style={styles.centeredView}>
-          <View style={[styles.modalView,{backgroundColor: colors.white[colors.mode]}]}>
-            <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[colors.mode]}}>Enjoying the app?</TextFont>
-            <TextFont bold={false} style={{fontSize: 18, textAlign:"center", color: colors.textBlack[colors.mode]}}>Consider leaving a rating</TextFont>
+          <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
+            <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Enjoying the app?</TextFont>
+            <TextFont bold={false} style={{fontSize: 18, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Consider leaving a rating</TextFont>
             <View style={{height:10}}/>
             <LottieView 
               autoPlay
@@ -67,14 +67,14 @@ class PopupRating extends Component {
             />
             <View style={{height:10}}/>
             <TouchableOpacity onPress={() => Linking.openURL('mailto:dapperappdeveloper@gmail.com') }>
-              <TextFont bold={false} style={{color: colors.fishText[colors.mode], fontSize: 14, textAlign:"center"}}>{"Suggestions, bugs, or concerns? \nSend me an email!"}</TextFont>
-              <TextFont bold={false} style={{color: colors.fishText[colors.mode], fontSize: 15, textAlign:"center"}}>dapperappdeveloper@gmail.com</TextFont>
+              <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"Suggestions, bugs, or concerns? \nSend me an email!"}</TextFont>
+              <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>dapperappdeveloper@gmail.com</TextFont>
             </TouchableOpacity>
             <View style={{height:10}}/>
             <View style={{flexDirection:"row"}}>
               <ButtonComponent
                 text={"No thanks"}
-                color={colors.cancelButton[colors.mode]}
+                color={colors.cancelButton[global.darkMode]}
                 vibrate={10}
                 onPress={() => {
                   this.setState({popupVisible:false})
@@ -82,7 +82,7 @@ class PopupRating extends Component {
               /> 
               <ButtonComponent
                 text={"Sure!"}
-                color={colors.okButton[colors.mode]}
+                color={colors.okButton[global.darkMode]}
                 vibrate={5}
                 onPress={() => {
                   this.setState({popupVisible:false, open2:true})

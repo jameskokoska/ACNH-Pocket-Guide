@@ -10,10 +10,10 @@ const width = { width: Dimensions.get('window').width };
 const renderTabBar = props => (
   <TabBar
     {...props}
-    indicatorStyle={{ backgroundColor: colors.lightDarkAccentHeavy[colors.mode], height:'100%', opacity: 0.6, borderRadius: 10 }}
-    style={{ backgroundColor: colors.white[colors.mode]}}
-    activeColor={colors.textBlack[colors.mode]}
-    inactiveColor={colors.textBlack[colors.mode]}
+    indicatorStyle={{ backgroundColor: colors.lightDarkAccentHeavy[global.darkMode], height:'100%', opacity: 0.6, borderRadius: 10 }}
+    style={{ backgroundColor: colors.white[global.darkMode]}}
+    activeColor={colors.textBlack[global.darkMode]}
+    inactiveColor={colors.textBlack[global.darkMode]}
     getLabelText={({ route }) => route.title}
   />
 );
@@ -30,14 +30,14 @@ const RecipesRoute = () => (
     searchKey={[["Name"]]}
     gridType="smallGrid" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedRecipes"}
-    appBarColor={colors.toolsAppBar[colors.mode]}
-    titleColor={colors.textWhiteOnly[colors.mode]}
-    searchBarColor={colors.searchbarBG[colors.mode]}
-    backgroundColor={colors.lightDarkAccent[colors.mode]}
-    boxColor={colors.white[colors.mode]}
-    labelColor={colors.textBlack[colors.mode]}
-    accentColor={colors.toolsAccent[colors.mode]}
-    specialLabelColor={colors.fishText[colors.mode]}
+    appBarColor={colors.toolsAppBar[global.darkMode]}
+    titleColor={colors.textWhiteOnly[global.darkMode]}
+    searchBarColor={colors.searchbarBG[global.darkMode]}
+    backgroundColor={colors.lightDarkAccent[global.darkMode]}
+    boxColor={colors.white[global.darkMode]}
+    labelColor={colors.textBlack[global.darkMode]}
+    accentColor={colors.toolsAccent[global.darkMode]}
+    specialLabelColor={colors.fishText[global.darkMode]}
     popUpCornerImageProperty={["Source"]}
     popUpCornerImageLabelProperty={["Source"]}
     popUpContainer={[["RecipesPopup",500]]}
@@ -54,14 +54,14 @@ const ToolsRoute = () => (
     searchKey={[["Name"]]}
     gridType="smallGrid" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedTools"}
-    appBarColor={colors.toolsAppBar[colors.mode]}
-    titleColor={colors.textWhiteOnly[colors.mode]}
-    searchBarColor={colors.searchbarBG[colors.mode]}
-    backgroundColor={colors.lightDarkAccent[colors.mode]}
-    boxColor={colors.white[colors.mode]}
-    labelColor={colors.textBlack[colors.mode]}
-    accentColor={colors.toolsAccent[colors.mode]}
-    specialLabelColor={colors.fishText[colors.mode]}
+    appBarColor={colors.toolsAppBar[global.darkMode]}
+    titleColor={colors.textWhiteOnly[global.darkMode]}
+    searchBarColor={colors.searchbarBG[global.darkMode]}
+    backgroundColor={colors.lightDarkAccent[global.darkMode]}
+    boxColor={colors.white[global.darkMode]}
+    labelColor={colors.textBlack[global.darkMode]}
+    accentColor={colors.toolsAccent[global.darkMode]}
+    specialLabelColor={colors.fishText[global.darkMode]}
     popUpCornerImageProperty={["Source"]}
     popUpCornerImageLabelProperty={["Source"]}
     popUpContainer={[["ToolsPopup",250]]}

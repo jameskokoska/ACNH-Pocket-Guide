@@ -45,7 +45,7 @@ class Onboard extends Component {
             subtitle: <TextFont style={{fontSize: 16, width: "90%", paddingTop: 20, color:colors.white[0]}} bold={true}>With a user friendly and modern interface and experience.</TextFont>,
           },
           {
-            backgroundColor: colors.background[colors.mode],
+            backgroundColor: colors.background[global.darkMode],
             image: <LottieView 
               autoPlay
               loop={true}
@@ -58,21 +58,21 @@ class Onboard extends Component {
               }} 
               source={require('../assets/balloon.json')}
             />,
-            title: <TextFont style={{fontSize: 30, paddingTop: 20, width: "70%", textAlign:'center', color:colors.textBlack[colors.mode]}} bold={true}>Let's go!</TextFont>,
+            title: <TextFont style={{fontSize: 30, paddingTop: 20, width: "70%", textAlign:'center', color:colors.textBlack[global.darkMode]}} bold={true}>Let's go!</TextFont>,
             subtitle: <>
-              <ButtonComponent vibrate={10} color={colors.okButton[colors.mode]} text="Northern Hemisphere" onPress={() => {
+              <ButtonComponent vibrate={10} color={colors.okButton[global.darkMode]} text="Northern Hemisphere" onPress={() => {
                 AsyncStorage.setItem("firstLogin", "false"); 
                 AsyncStorage.setItem("settingsNorthernHemisphere", "true");
                 global.settingsCurrent[0]["currentValue"] = "true";
                 this.props.setFirstLogin(false);
               }} />
-              <ButtonComponent vibrate={10} color={colors.okButton[colors.mode]} text="Southern Hemisphere" onPress={() => {
+              <ButtonComponent vibrate={10} color={colors.okButton[global.darkMode]} text="Southern Hemisphere" onPress={() => {
                 AsyncStorage.setItem("firstLogin", "false"); 
                 AsyncStorage.setItem("settingsNorthernHemisphere", "false");
                 global.settingsCurrent[0]["currentValue"] = "false";
                 this.props.setFirstLogin(false);
               }} />
-              <TextFont style={{fontSize: 12, paddingTop: 30, width: "70%", textAlign:'center', color:colors.textBlack[colors.mode]}} bold={true}>You can import your exported data from the last version of the app in settings.</TextFont>
+              <TextFont style={{fontSize: 12, paddingTop: 30, width: "70%", textAlign:'center', color:colors.textBlack[global.darkMode]}} bold={true}>You can import your exported data from the last version of the app in settings.</TextFont>
             </>,
           },
         ]}

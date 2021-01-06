@@ -65,7 +65,7 @@ class LoadFile extends Component {
         />
         <ButtonComponent
           text={"Import Data"}
-          color={colors.okButton[colors.mode]}
+          color={colors.okButton[global.darkMode]}
           vibrate={5}
           onPress={() => {
             this.setState({open:!this.state.open});
@@ -95,7 +95,7 @@ class ExportFile extends Component {
         />
         <ButtonComponent
         text={"Export Data"}
-        color={colors.okButton[colors.mode]}
+        color={colors.okButton[global.darkMode]}
         vibrate={5}
         onPress={async () => {
           var data = await getStorage("collectedString","");

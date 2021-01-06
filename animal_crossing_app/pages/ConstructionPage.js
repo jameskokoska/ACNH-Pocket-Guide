@@ -18,12 +18,12 @@ class ConstructionPage extends Component {
           searchKey={[["Name"],["Name"]]}
           gridType="largeGridSmaller" //smallGrid, largeGrid, row
           dataGlobalName={"dataLoadedConstruction"}
-          appBarColor={colors.constructionAppBar[colors.mode]}
-          titleColor={colors.textBlack[colors.mode]}
-          searchBarColor={colors.searchbarBG[colors.mode]}
-          backgroundColor={colors.lightDarkAccent[colors.mode]}
-          boxColor={colors.white[colors.mode]}
-          labelColor={colors.textBlack[colors.mode]}
+          appBarColor={colors.constructionAppBar[global.darkMode]}
+          titleColor={colors.textBlack[global.darkMode]}
+          searchBarColor={colors.searchbarBG[global.darkMode]}
+          backgroundColor={colors.lightDarkAccent[global.darkMode]}
+          boxColor={colors.white[global.darkMode]}
+          labelColor={colors.textBlack[global.darkMode]}
         />
     )
   }

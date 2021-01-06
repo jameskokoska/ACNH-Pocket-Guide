@@ -10,10 +10,10 @@ const width = { width: Dimensions.get('window').width };
 const renderTabBar = props => (
   <TabBar
     {...props}
-    indicatorStyle={{ backgroundColor: colors.lightDarkAccentHeavy[colors.mode], height:'100%', opacity: 0.6, borderRadius: 10 }}
-    style={{ backgroundColor: colors.white[colors.mode]}}
-    activeColor={colors.textBlack[colors.mode]}
-    inactiveColor={colors.textBlack[colors.mode]}
+    indicatorStyle={{ backgroundColor: colors.lightDarkAccentHeavy[global.darkMode], height:'100%', opacity: 0.6, borderRadius: 10 }}
+    style={{ backgroundColor: colors.white[global.darkMode]}}
+    activeColor={colors.textBlack[global.darkMode]}
+    inactiveColor={colors.textBlack[global.darkMode]}
     getLabelText={({ route }) => route.title}
   />
 );
@@ -61,14 +61,14 @@ const FurnitureRoute = () => (
     ]}
     gridType="smallGrid" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedFurniture"}
-    appBarColor={colors.furnitureAppBar[colors.mode]}
-    titleColor={colors.textWhiteOnly[colors.mode]}
-    searchBarColor={colors.searchbarBG[colors.mode]}
-    backgroundColor={colors.lightDarkAccent[colors.mode]}
-    boxColor={colors.white[colors.mode]}
-    labelColor={colors.textBlack[colors.mode]}
-    accentColor={colors.furnitureAccent[colors.mode]}
-    specialLabelColor={colors.fishText[colors.mode]}
+    appBarColor={colors.furnitureAppBar[global.darkMode]}
+    titleColor={colors.textWhiteOnly[global.darkMode]}
+    searchBarColor={colors.searchbarBG[global.darkMode]}
+    backgroundColor={colors.lightDarkAccent[global.darkMode]}
+    boxColor={colors.white[global.darkMode]}
+    labelColor={colors.textBlack[global.darkMode]}
+    accentColor={colors.furnitureAccent[global.darkMode]}
+    specialLabelColor={colors.fishText[global.darkMode]}
     popUpCornerImageProperty={[
       "Source",
       "Source",
@@ -160,14 +160,14 @@ const ClothingRoute = () => (
     ]}
     gridType="smallGrid" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedClothing"}
-    appBarColor={colors.clothingAppBar[colors.mode]}
-    titleColor={colors.textWhiteOnly[colors.mode]}
-    searchBarColor={colors.searchbarBG[colors.mode]}
-    backgroundColor={colors.lightDarkAccent[colors.mode]}
-    boxColor={colors.white[colors.mode]}
-    labelColor={colors.textBlack[colors.mode]}
-    accentColor={colors.clothingAccent[colors.mode]}
-    specialLabelColor={colors.fishText[colors.mode]}
+    appBarColor={colors.clothingAppBar[global.darkMode]}
+    titleColor={colors.textWhiteOnly[global.darkMode]}
+    searchBarColor={colors.searchbarBG[global.darkMode]}
+    backgroundColor={colors.lightDarkAccent[global.darkMode]}
+    boxColor={colors.white[global.darkMode]}
+    labelColor={colors.textBlack[global.darkMode]}
+    accentColor={colors.clothingAccent[global.darkMode]}
+    specialLabelColor={colors.fishText[global.darkMode]}
     popUpCornerImageProperty={[
       "Source",
       "Source",
@@ -239,14 +239,14 @@ const FloorWallsRoute = () => (
     ]}
     gridType="smallGrid" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedFloorWalls"}
-    appBarColor={colors.floorWallsAppBar[colors.mode]}
-    titleColor={colors.textWhiteOnly[colors.mode]}
-    searchBarColor={colors.searchbarBG[colors.mode]}
-    backgroundColor={colors.lightDarkAccent[colors.mode]}
-    boxColor={colors.white[colors.mode]}
-    labelColor={colors.textBlack[colors.mode]}
-    accentColor={colors.floorWallsAccent[colors.mode]}
-    specialLabelColor={colors.fishText[colors.mode]}
+    appBarColor={colors.floorWallsAppBar[global.darkMode]}
+    titleColor={colors.textWhiteOnly[global.darkMode]}
+    searchBarColor={colors.searchbarBG[global.darkMode]}
+    backgroundColor={colors.lightDarkAccent[global.darkMode]}
+    boxColor={colors.white[global.darkMode]}
+    labelColor={colors.textBlack[global.darkMode]}
+    accentColor={colors.floorWallsAccent[global.darkMode]}
+    specialLabelColor={colors.fishText[global.darkMode]}
     popUpCornerImageProperty={[
       "Source",
       "Source",

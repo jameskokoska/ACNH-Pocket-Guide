@@ -6,7 +6,7 @@ import colors from '../Colors'
 class HomeContentArea extends Component {
   render(){
     var date="May 23";
-    return <View style={[styles.contentBackground,{backgroundColor:this.props.backgroundColor, borderColor:colors.shadow[colors.mode]}]}>
+    return <View style={[styles.contentBackground,{backgroundColor:this.props.backgroundColor, borderColor:colors.shadow[global.darkMode]}]}>
       <View style={styles.topTitlePosition}> 
         <TextFont style={[styles.topTitle,{backgroundColor:this.props.accentColor, color:this.props.titleColor}]} bold={true}>{this.props.title}</TextFont>
       </View>

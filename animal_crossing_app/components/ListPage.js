@@ -25,6 +25,8 @@ import FloorWallsPopup from "../popups/FloorWallsPopup"
 import ToolsPopup from "../popups/ToolsPopup"
 import RecipesPopup from "../popups/RecipesPopup"
 import * as exports from "./FilterDefinitions"
+import PopupFilter from './PopupFilter'
+
 Object.entries(exports).forEach(([name, exported]) => window[name] = exported);
 
 const {diffClamp} = Animated;
@@ -106,6 +108,7 @@ export default (props) =>{
 
   const [data, setData] = useState("empty")
   const [possibleFiltersState, setPossibleFilters] = useState("empty")
+  const [filterPopupState, setFilterPopupState] = useState(false)
 
   useEffect(()=>{
     var dataUpdated = [];
@@ -262,6 +265,7 @@ export default (props) =>{
         }
       }
     }
+    
     setData(dataUpdated)
   }, [props, search])
   
@@ -314,9 +318,8 @@ export default (props) =>{
 
   var header = (<>
       <Animated.View style={[styles.header, {transform: [{translateY}]}]}>
-        <Header possibleFilters={possibleFiltersState} filterSearchable={props.filterSearchable} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
+        <Header openPopupFilter={() => {setFilterPopupState(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
       </Animated.View>
-      
     </>);
   var paddingTop = headerHeight*1.18;
   var paddingBottom = Dimensions.get('window').height;
@@ -334,6 +337,8 @@ export default (props) =>{
     return (
     <View style={{backgroundColor:props.backgroundColor}}>
       {header}
+      <PopupFilter popupVisible={filterPopupState} close={() => {setFilterPopupState(false)}} possibleFilters={possibleFiltersState} filterSearchable={props.filterSearchable} updateSearch={updateSearch}/> 
+      {/* setFilterPopupState(false) */}
       <Animated.FlatList
         nestedScrollEnabled
         initialNumToRender={8}
@@ -478,7 +483,7 @@ class BottomSheetRender extends Component{
         style={{
           borderTopLeftRadius: 50,
           borderTopRightRadius: 50,
-          backgroundColor: colors.white[colors.mode],
+          backgroundColor: colors.white[global.darkMode],
           padding: 16,
           height: global.settingsCurrent[10].currentValue==="false" ? popUpHeight+140 : popUpHeight+140,
         }}

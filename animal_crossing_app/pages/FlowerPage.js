@@ -10,10 +10,10 @@ import {capitalize} from "../LoadJsonData"
 const renderTabBar = props => (
   <TabBar
     {...props}
-    indicatorStyle={{ backgroundColor: colors.lightDarkAccentHeavy[colors.mode], height:'100%', opacity: 0.6, borderRadius: 10 }}
-    style={{ backgroundColor: colors.white[colors.mode]}}
-    activeColor={colors.textBlack[colors.mode]}
-    inactiveColor={colors.textBlack[colors.mode]}
+    indicatorStyle={{ backgroundColor: colors.lightDarkAccentHeavy[global.darkMode], height:'100%', opacity: 0.6, borderRadius: 10 }}
+    style={{ backgroundColor: colors.white[global.darkMode]}}
+    activeColor={colors.textBlack[global.darkMode]}
+    inactiveColor={colors.textBlack[global.darkMode]}
     getLabelText={({ route }) => route.title}
     scrollEnabled
     tabStyle={{width:120}}
@@ -26,7 +26,7 @@ class SpecificFlowerPage extends Component {
     
     return(<ScrollView>
       <View style={{marginTop: 100}}/>
-      <TextFont bold={true} style={{fontSize: 36, marginLeft: 30, color:colors.textBlack[colors.mode]}}>{"Hybrid " + capitalize(this.props.flowerGroup) }</TextFont>
+      <TextFont bold={true} style={{fontSize: 36, marginLeft: 30, color:colors.textBlack[global.darkMode]}}>{"Hybrid " + capitalize(this.props.flowerGroup) }</TextFont>
       <View style={{marginTop: 10}}/>
       {
         data[this.props.flowerGroup].map(flower=> (

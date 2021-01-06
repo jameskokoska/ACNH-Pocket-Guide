@@ -37,7 +37,7 @@ export class LeftCornerImage extends Component {
       <View style={[styles.cornerImageBackground,{backgroundColor:this.props.accentColor}]}>
         {getPhotoCorner(this.props.item[this.props.popUpCornerImageProperty[this.props.item.dataSet]])}
       </View>
-      <TextFont style={[styles.cornerImageLabel,{color:colors.textLight[colors.mode]}]}>{this.props.item[this.props.popUpCornerImageLabelProperty[this.props.item.dataSet]]}</TextFont>
+      <TextFont style={[styles.cornerImageLabel,{color:colors.textLight[global.darkMode]}]}>{this.props.item[this.props.popUpCornerImageLabelProperty[this.props.item.dataSet]]}</TextFont>
     </>
   }
 }
@@ -93,7 +93,7 @@ export class Title extends Component {
     }
     if(this.props.item[this.props.textProperty[this.props.item.dataSet]]!==undefined){
       return <View style={[styles.titleContainer,{paddingLeft: paddingLeft, paddingRight: paddingRight, paddingTop: paddingTop}]}>
-        <TextFont style={[styles.title,{color:colors.textBlack[colors.mode]}]} bold={true}>
+        <TextFont style={[styles.title,{color:colors.textBlack[global.darkMode]}]} bold={true}>
           {capitalize(this.props.item[this.props.textProperty[this.props.item.dataSet]])}
         </TextFont>
       </View>
@@ -148,7 +148,7 @@ export class InfoLine extends Component {
     }
     return <View style={[styles.infoLineBox]}>
             {imageSource}
-            <TextFont adjustsFontSizeToFit={true} numberOfLines={2} bold={true} style={[styles.infoLineTitle,{color:colors.textBlack[colors.mode]}]}>{starting + text + ending}</TextFont>
+            <TextFont adjustsFontSizeToFit={true} numberOfLines={2} bold={true} style={[styles.infoLineTitle,{color:colors.textBlack[global.darkMode]}]}>{starting + text + ending}</TextFont>
         </View>
   }
 }
@@ -158,8 +158,8 @@ export class InfoLineDouble extends Component {
     return <View style={[styles.infoLineBox,{marginLeft: 40, marginRight: 40,}]}>
             <Image style={styles.infoLineImage} source={this.props.image}/>
             <View>
-              <TextFont bold={true} style={[styles.infoLineTitleDouble,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty1])}</TextFont>
-              <TextFont bold={true} style={[styles.infoLineTitleDouble,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty2])}</TextFont>
+              <TextFont bold={true} style={[styles.infoLineTitleDouble,{color:colors.textBlack[global.darkMode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty1])}</TextFont>
+              <TextFont bold={true} style={[styles.infoLineTitleDouble,{color:colors.textBlack[global.darkMode]}]}>{capitalizeFirst(this.props.item[this.props.textProperty2])}</TextFont>
             </View>
         </View>
   }
@@ -183,23 +183,23 @@ export class InfoLineTriple extends Component {
       return <View style={[styles.infoLineBox]}>
             <Image style={styles.infoLineImage} source={this.props.image}/>
             <View>
-              <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(textLines[0])}</TextFont>
-              <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(textLines[1])}</TextFont>
-              <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(textLines[2])}</TextFont>
+              <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[global.darkMode]}]}>{capitalizeFirst(textLines[0])}</TextFont>
+              <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[global.darkMode]}]}>{capitalizeFirst(textLines[1])}</TextFont>
+              <TextFont bold={true} style={[styles.infoLineTitleTriple,{color:colors.textBlack[global.darkMode]}]}>{capitalizeFirst(textLines[2])}</TextFont>
             </View>
         </View>
     } else if (textLines.length===2){
       return <View style={[styles.infoLineBox]}>
             <Image style={styles.infoLineImage} source={this.props.image}/>
             <View>
-              <TextFont bold={true} style={[styles.infoLineTitleDouble,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(textLines[0])}</TextFont>
-              <TextFont bold={true} style={[styles.infoLineTitleDouble,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(textLines[1])}</TextFont>
+              <TextFont bold={true} style={[styles.infoLineTitleDouble,{color:colors.textBlack[global.darkMode]}]}>{capitalizeFirst(textLines[0])}</TextFont>
+              <TextFont bold={true} style={[styles.infoLineTitleDouble,{color:colors.textBlack[global.darkMode]}]}>{capitalizeFirst(textLines[1])}</TextFont>
             </View>
         </View>
     } else {
       return <View style={[styles.infoLineBox]}>
             <Image style={styles.infoLineImage} source={this.props.image}/>
-              <TextFont adjustsFontSizeToFit={true} numberOfLines={2} bold={true} style={[styles.infoLineTitle,{color:colors.textBlack[colors.mode]}]}>{capitalizeFirst(textLines[0])}</TextFont>
+              <TextFont adjustsFontSizeToFit={true} numberOfLines={2} bold={true} style={[styles.infoLineTitle,{color:colors.textBlack[global.darkMode]}]}>{capitalizeFirst(textLines[0])}</TextFont>
         </View>
 
     }

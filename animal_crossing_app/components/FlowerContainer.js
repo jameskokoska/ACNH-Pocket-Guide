@@ -37,19 +37,19 @@ class FlowerContainer extends Component {
       imagePathSpecial3 = <View/>
     }
     
-    return(<View style={styles.container}>
+    return(<View style={[styles.container,{backgroundColor:colors.white[global.darkMode]}]}>
           <View>
             <Image style={styles.flowerImage} source={{uri:getMaterialImage(this.props.flowerInfo.parent1)}}/>
             {imagePathSpecial1}
           </View>
-          <TextFont bold={true} style={{fontSize: 25, color:colors.textBlack[colors.mode]}}>+</TextFont>
+          <TextFont bold={true} style={{fontSize: 25, color:colors.textBlack[global.darkMode]}}>+</TextFont>
             <View>
             <Image style={styles.flowerImage} source={{uri:getMaterialImage(this.props.flowerInfo.parent2)}}/>
             {imagePathSpecial2}
             </View>
           <View>
-          <TextFont bold={true} style={{paddingTop: 20, textAlign:"center",fontSize: 25, color:colors.textBlack[colors.mode]}}>=</TextFont>
-          <TextFont bold={true} style={{textAlign:"center",fontSize: 16, color:colors.textBlack[colors.mode]}}>{this.props.flowerInfo.percentage+"%"}</TextFont>
+          <TextFont bold={true} style={{paddingTop: 20, textAlign:"center",fontSize: 25, color:colors.textBlack[global.darkMode]}}>=</TextFont>
+          <TextFont bold={true} style={{textAlign:"center",fontSize: 16, color:colors.textBlack[global.darkMode]}}>{this.props.flowerInfo.percentage+"%"}</TextFont>
           </View>
             <View>
             <Image style={styles.flowerImage} source={{uri:getMaterialImage(this.props.flowerInfo.child)}}/>
@@ -63,7 +63,6 @@ export default FlowerContainer;
 
 const styles = StyleSheet.create({
   container:{
-    backgroundColor: colors.white[colors.mode], 
     flexDirection:"row", 
     alignItems:"center", 
     justifyContent:"center", 

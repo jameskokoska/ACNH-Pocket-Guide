@@ -15,7 +15,7 @@ class FishPopup extends Component {
   }
   render(){
     return <View style={{width: "100%", alignItems: "center"}}>
-      <View style={{backgroundColor:colors.lightDarkAccent[colors.mode], padding: 10, paddingTop: 20, paddingBottom: 20, borderRadius: 15, margin: 20}}><Image style={{width:150,height:35,resizeMode:'contain'}} source={getPhotoShadow(this.props.item,true)}/></View>
+      <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 10, paddingTop: 20, paddingBottom: 20, borderRadius: 15, margin: 20}}><Image style={{width:150,height:35,resizeMode:'contain'}} source={getPhotoShadow(this.props.item,true)}/></View>
       <InfoLineBeside
         image1={require("../assets/icons/magnifyingGlass.png")} 
         item1={this.props.item}

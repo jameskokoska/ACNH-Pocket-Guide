@@ -53,7 +53,7 @@ class ListItem extends PureComponent{
       var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
       
       if(this.props.item[hemispherePre+nextMonthShort]==="NA" && this.props.item[hemispherePre+currentMonthShort]!=="NA"){
-        boxColor = colors.creaturesLeavingBG[colors.mode];
+        boxColor = colors.creaturesLeavingBG[global.darkMode];
       }
     }
 

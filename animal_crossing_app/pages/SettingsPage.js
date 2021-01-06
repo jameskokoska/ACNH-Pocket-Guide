@@ -37,25 +37,28 @@ class SettingsPage extends Component {
   }
   render(){
     return(<>
-      <View style={{backgroundColor:colors.lightDarkAccent[colors.mode], height:"100%"}}>
+      <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
         <ScrollView>
           <View style={{marginTop: 100}}/>
-          <TextFont bold={true} style={{fontSize: 40, marginLeft: 30, color:colors.textBlack[colors.mode]}}>Settings</TextFont>
+          <TextFont bold={true} style={{fontSize: 40, marginLeft: 30, color:colors.textBlack[global.darkMode]}}>Settings</TextFont>
+          <TextFont style={{fontSize: 13, marginLeft: 30, color:colors.textBlack[global.darkMode]}}>{"Note: some settings require you to change pages to update. \nTap each setting to learn more."}</TextFont>
           <View style={{marginTop: 20}}/>
           {global.settingsCurrent.map( (setting, index)=>
-            <SettingsContainer 
-              key={setting["keyName"]} 
-              currentValue={setting["currentValue"]} 
-              backgroundColor={colors.white[colors.mode]} 
-              textColor={colors.textBlack[colors.mode]} 
-              image={setting["picture"]} 
-              text={setting["displayName"]} 
-              description={setting["description"]}
-              index={index}
-              keyName={setting["keyName"]}
-            />
+            {
+              return <SettingsContainer 
+                key={setting["keyName"]} 
+                currentValue={setting["currentValue"]} 
+                backgroundColor={colors.white[global.darkMode]} 
+                textColor={colors.textBlack[global.darkMode]} 
+                image={setting["picture"]} 
+                text={setting["displayName"]} 
+                description={setting["description"]}
+                index={index}
+                keyName={setting["keyName"]}
+              />
+            }
           )}
-          <ButtonComponent vibrate={10} color={colors.dateButton[colors.mode]} onPress={()=>{this.setState({datePickerVisible:true})}} text={"Set Custom Date/Time"} />
+          <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.setState({datePickerVisible:true})}} text={"Set Custom Date/Time"} />
           <DateTimePickerModal
             mode={"date"}
             onConfirm={(date)=>{this.setState({datePickerVisible:false, date:date, openDateReminder:true}); this.setCustomTime()}}
@@ -72,13 +75,13 @@ class SettingsPage extends Component {
           <View style={{height: 50}}/>
           <ExportFile/><LoadFile/>
           <View style={{height: 50}}/>
-          <ButtonComponent text="Reset Data" onPress={() => {this.setState({open:true})}} vibrate={100} color={colors.cancelButton[colors.mode]}/>
+          <ButtonComponent text="Reset Data" onPress={() => {this.setState({open:true})}} vibrate={100} color={colors.cancelButton[global.darkMode]}/>
           <Popup text="Reset Data" textLower="Would you like to reset your collection? This action cannot be undone." button2={"Reset"} button1={"Cancel"} button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.setItem("collectedString", ""); AsyncStorage.setItem("firstLogin", "true"); this.setState({openRestart:true});}} popupVisible={this.state.open} close={() => this.setState({open:!this.state.open})}/>
           <Popup text="Restart Required" textLower="Please restart the application." button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.setItem("collectedString", "");}} popupVisible={this.state.openRestart} close={() => this.setState({open:!this.state.open})}/>
           <View style={{height:50}}/>
           <TouchableOpacity onPress={() => Linking.openURL('mailto:dapperappdeveloper@gmail.com') }>
-            <TextFont bold={false} style={{color: colors.fishText[colors.mode], fontSize: 14, textAlign:"center"}}>{"Suggestions, bugs, or concerns? \nSend me an email!"}</TextFont>
-            <TextFont bold={false} style={{color: colors.fishText[colors.mode], fontSize: 15, textAlign:"center"}}>dapperappdeveloper@gmail.com</TextFont>
+            <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"Suggestions, bugs, or concerns? \nSend me an email!"}</TextFont>
+            <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>dapperappdeveloper@gmail.com</TextFont>
           </TouchableOpacity>
           <View style={{height: 50}}/>
         </ScrollView>

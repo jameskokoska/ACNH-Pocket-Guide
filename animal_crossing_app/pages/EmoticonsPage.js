@@ -20,14 +20,14 @@ class EmoticonsPage extends Component {
           searchKey={[["Name"]]}
           gridType="smallGrid" //smallGrid, largeGrid, row
           dataGlobalName={"dataLoadedReactions"}
-          appBarColor={colors.emojipediaAppBar[colors.mode]}
-          titleColor={colors.textBlack[colors.mode]}
-          searchBarColor={colors.searchbarBG[colors.mode]}
-          backgroundColor={colors.lightDarkAccent[colors.mode]}
-          boxColor={colors.white[colors.mode]}
-          labelColor={colors.textBlack[colors.mode]}
-          accentColor={colors.emojipediaAccent[colors.mode]}
-          specialLabelColor={colors.fishText[colors.mode]}
+          appBarColor={colors.emojipediaAppBar[global.darkMode]}
+          titleColor={colors.textBlack[global.darkMode]}
+          searchBarColor={colors.searchbarBG[global.darkMode]}
+          backgroundColor={colors.lightDarkAccent[global.darkMode]}
+          boxColor={colors.white[global.darkMode]}
+          labelColor={colors.textBlack[global.darkMode]}
+          accentColor={colors.emojipediaAccent[global.darkMode]}
+          specialLabelColor={colors.fishText[global.darkMode]}
         />
     )
   }

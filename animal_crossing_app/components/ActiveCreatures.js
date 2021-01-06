@@ -18,14 +18,14 @@ class ActiveCreatures extends Component {
           leaveWarning = {global.settingsCurrent[4]["currentValue"]==="true" ? true : false}
           activeCreatures={true}
           gridType="smallGrid" //smallGrid, largeGrid, row
-          appBarColor={colors.emojipediaAppBar[colors.mode]}
-          titleColor={colors.textBlack[colors.mode]}
-          searchBarColor={colors.searchbarBG[colors.mode]}
-          backgroundColor={colors.lightDarkAccent[colors.mode]}
-          boxColor={colors.white[colors.mode]}
-          labelColor={colors.textBlack[colors.mode]}
-          accentColor={colors.artAccent[colors.mode]}
-          specialLabelColor={colors.fishText[colors.mode]}
+          appBarColor={colors.emojipediaAppBar[global.darkMode]}
+          titleColor={colors.textBlack[global.darkMode]}
+          searchBarColor={colors.searchbarBG[global.darkMode]}
+          backgroundColor={colors.lightDarkAccent[global.darkMode]}
+          boxColor={colors.white[global.darkMode]}
+          labelColor={colors.textBlack[global.darkMode]}
+          accentColor={colors.artAccent[global.darkMode]}
+          specialLabelColor={colors.fishText[global.darkMode]}
           disablePopup={[
             false,
             false,

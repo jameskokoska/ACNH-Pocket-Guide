@@ -38,7 +38,7 @@ class Popup extends Component {
     if(this.props.button1!==undefined){
       this.Button1 = <ButtonComponent
         text={this.props.button1}
-        color={colors.okButton[colors.mode]}
+        color={colors.okButton[global.darkMode]}
         vibrate={5}
         onPress={() => {
           this.setPopupVisible(!this.state.popupVisible);
@@ -50,7 +50,7 @@ class Popup extends Component {
     if(this.props.button2!==undefined){
       this.Button2 = <ButtonComponent
         text={this.props.button2}
-        color={colors.cancelButton[colors.mode]}
+        color={colors.cancelButton[global.darkMode]}
         vibrate={10}
         onPress={() => {
           this.setPopupVisible(!this.state.popupVisible);
@@ -78,9 +78,9 @@ class Popup extends Component {
           statusBarTranslucent
         >
         <View style={styles.centeredView}>
-          <View style={[styles.modalView,{backgroundColor: colors.white[colors.mode]}]}>
-            <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[colors.mode]}}>{this.props.text}</TextFont>
-            <TextFont bold={false} style={{fontSize: 18, textAlign:"center", color: colors.textBlack[colors.mode]}}>{this.props.textLower}</TextFont>
+          <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
+            <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.props.text}</TextFont>
+            <TextFont bold={false} style={{fontSize: 18, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.props.textLower}</TextFont>
             <View style={{flexDirection:"row"}}>
               {this.Button2}
               {this.Button1}

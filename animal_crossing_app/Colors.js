@@ -1,8 +1,7 @@
 import { Appearance } from 'react-native-appearance';
 
 const colors = {
-    mode: Appearance.getColorScheme()==="light" ? 0 : 1,
-    modeReverse: Appearance.getColorScheme()==="light" ? 1 : 0,
+    //Use global.darkMode or global.darkModeReverse
     background: ["#f5f5f5","#1a1a1a"], //"#34454f" original
     FAB: ["#49599a", "#455a64"],
     searchbarBG : ["#DFDFDF", "#A3A3A3"],
