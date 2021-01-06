@@ -318,7 +318,7 @@ export default (props) =>{
 
   var header = (<>
       <Animated.View style={[styles.header, {transform: [{translateY}]}]}>
-        <Header openPopupFilter={() => {setFilterPopupState(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
+        <Header search={search} openPopupFilter={() => {setFilterPopupState(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
       </Animated.View>
     </>);
   var paddingTop = headerHeight*1.18;
@@ -337,7 +337,7 @@ export default (props) =>{
     return (
     <View style={{backgroundColor:props.backgroundColor}}>
       {header}
-      <PopupFilter popupVisible={filterPopupState} close={() => {setFilterPopupState(false)}} possibleFilters={possibleFiltersState} filterSearchable={props.filterSearchable} updateSearch={updateSearch}/> 
+      <PopupFilter title={props.title} popupVisible={filterPopupState} close={() => {setFilterPopupState(false)}} possibleFilters={possibleFiltersState} filterSearchable={props.filterSearchable} updateSearch={updateSearch}/> 
       {/* setFilterPopupState(false) */}
       <Animated.FlatList
         nestedScrollEnabled
@@ -358,7 +358,7 @@ export default (props) =>{
       
       <BottomSheet
         ref={sheetRef}
-        snapPoints={[Dimensions.get('window').height, 0]}
+        snapPoints={[Dimensions.get('window').height+10, 0]}
         initialSnap={1}
         renderContent={renderContent}
         springConfig={springConfig}

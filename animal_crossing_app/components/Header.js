@@ -7,10 +7,28 @@ import DelayInput from "react-native-debounce-input";
 import colors from "../Colors"
 
 const Header = (props) => {
+  var filterImage;
+  if(props.search.constructor===Array && props.search.length>=1){
+    filterImage = <>
+      <LottieView 
+          autoPlay
+          loop={false}
+          style={{
+            position:"absolute",
+            top: -11,
+            left: -11,
+          }}
+          source={require("../assets/emphasis.json")}
+        />
+      <Image style={{width:25,height:25, margin: 10, marginTop: 12, opacity: 0.7, marginRight: 30, resizeMode:"contain"}} source={require("../assets/icons/filterApplied.png")}/>
+    </>
+  } else {
+    filterImage = <Image style={{width:25,height:25, margin: 10, marginTop: 12, opacity: 0.35, marginRight: 30, resizeMode:"contain"}} source={require("../assets/icons/filterSearch.png")}/>
+  }
   return (
     <>
       <ImageBackground source={props.appBarImage} style={{width:"100%", backgroundColor: props.appBarColor}}>
-        <View style={[styles.topSpace, {height: props.headerHeight / 1.5,}]}>
+        <View style={[styles.topSpace, {height: props.headerHeight / 1.5 + 10,}]}>
         </View>
         <View style={{height: props.headerHeight / 2}}>
           <View style={styles.subHeader}>
@@ -30,7 +48,7 @@ const Header = (props) => {
                 />
               </View>
               <TouchableOpacity onPress={()=>{props.openPopupFilter(); global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate(10) : "";}}>
-                <Image style={{width:25,height:25, margin: 10, marginTop: 12, opacity: 0.4, marginRight: 30, resizeMode:"contain"}} source={require("../assets/icons/filterSearch.png")}/>
+                {filterImage}
               </TouchableOpacity>
             </View>
           </View>
@@ -48,7 +66,7 @@ export const HeaderLoading = (props) => {
   return (
     <FadeInOut fadeIn={true}>
       <ImageBackground source={props.appBarImage} style={{width:"100%", backgroundColor: props.appBarColor}}>
-        <View style={[styles.topSpace, {height: props.headerHeight / 1.5,}]}>
+        <View style={[styles.topSpace, {height: props.headerHeight / 1.5 + 10,}]}>
         </View>
         <View style={{height: props.headerHeight / 2}}>
           <View style={styles.subHeader}>
