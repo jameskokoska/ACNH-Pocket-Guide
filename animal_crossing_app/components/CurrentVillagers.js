@@ -26,17 +26,17 @@ class CurrentVillagers extends Component {
           backgroundColor={colors.lightDarkAccent[global.darkMode]}
           boxColor={colors.white[global.darkMode]}
           labelColor={colors.textBlack[global.darkMode]}
-          accentColor={colors.artAccent[global.darkMode]}
+          accentColor={colors.villagerAccent[global.darkMode]}
           specialLabelColor={colors.fishText[global.darkMode]}
           disablePopup={[
             false,
           ]}
           popUpContainer={[["VillagerPopup",450]]}
           popUpCornerImageProperty={[
-            "Where/How",
+            "",
           ]}
           popUpCornerImageLabelProperty={[
-            "Where/How",
+            "",
           ]}
           imageProperty={[
             "Icon Image",

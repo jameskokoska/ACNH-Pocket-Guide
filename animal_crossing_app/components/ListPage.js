@@ -12,7 +12,7 @@ import {Dimensions } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
 import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from './BottomSheetComponents';
 import colors from "../Colors.js"
-import {getCurrentDateObject, getMonthShort, isActive} from "./DateFunctions"
+import {getCurrentDateObject, getMonthShort, isActive2} from "./DateFunctions"
 import FishPopup from "../popups/FishPopup"
 import SeaPopup from "../popups/SeaPopup"
 import FossilPopup from "../popups/FossilPopup"
@@ -248,7 +248,7 @@ export default (props) =>{
               if(props.activeCreatures){
                 var hemispherePre = global.settingsCurrent[0]["currentValue"] === "true" ? "NH " : "SH "
                 var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
-                if(!isActive(item[hemispherePre+currentMonthShort])){
+                if(!isActive2(item[hemispherePre+currentMonthShort],getCurrentDateObject().getHours())){
                   continue;
                 }
               }
