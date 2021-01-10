@@ -5,19 +5,20 @@ import ListPage from '../components/ListPage';
 import colors from '../Colors.js';
 
 
-class ActiveCreatures extends Component {
+class CurrentVillagers extends Component {
   constructor() {
     super();
     LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
   }
   render(){
     return(
-      <View style={{height: Dimensions.get('window').height}}>
       <ListPage 
+          setPage={this.props.setPage}
           title=""
-          leaveWarning = {global.settingsCurrent[4]["currentValue"]==="true" ? true : false}
-          activeCreatures={true}
-          scrollViewRef={this.props.scrollViewRef}
+          checkType={"heart"}
+          filterCollectedOnly={true}
+          currentVillagers={true}
+          openPopup={this.props.openPopup}
           gridType="smallGrid" //smallGrid, largeGrid, row
           appBarColor={colors.emojipediaAppBar[global.darkMode]}
           titleColor={colors.textBlack[global.darkMode]}
@@ -29,53 +30,30 @@ class ActiveCreatures extends Component {
           specialLabelColor={colors.fishText[global.darkMode]}
           disablePopup={[
             false,
-            false,
-            false,
           ]}
-          popUpContainer={[
-            ["FishPopup",500],
-            ["SeaPopup",500],
-            ["BugPopup",500],
-          ]}
+          popUpContainer={[["VillagerPopup",450]]}
           popUpCornerImageProperty={[
-            "Where/How",
-            "Where/How",
             "Where/How",
           ]}
           popUpCornerImageLabelProperty={[
             "Where/How",
-            "Where/How",
-            "Where/How",
           ]}
           imageProperty={[
-            "Icon Image",
-            "Icon Image",
             "Icon Image",
           ]}
           textProperty={[
             ["Name"],
-            ["Name"],
-            ["Name"],
           ]}
-          checkListKey={[
-            ["fishCheckList","Name"],
-            ["seaCheckList","Name"],
-            ["bugCheckList","Name"],
-          ]}
+          checkListKey={[["villagerCheckList","Name"]]}
           searchKey={[
-            ["Name"],
-            ["Name"],
             ["Name"],
           ]}
           showVariations={[
             false,
-            false,
-            false
           ]}
-          dataGlobalName={"dataLoadedCreatures"}
+          dataGlobalName={"dataLoadedVillagers"}
         />
-        </View>
     )
   }
 }
-export default ActiveCreatures;
+export default CurrentVillagers;

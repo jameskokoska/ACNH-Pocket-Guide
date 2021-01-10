@@ -81,7 +81,7 @@ class SettingsPage extends Component {
           }} vibrate={70} color={colors.filtersResetButton[global.darkMode]}/>
           <View style={{height: 50}}/>
           <ButtonComponent text="Reset Data" onPress={() => {this.setState({open:true})}} vibrate={100} color={colors.cancelButton[global.darkMode]}/>
-          <Popup text="Reset Data" textLower="Would you like to reset your collection? This action cannot be undone." button2={"Reset"} button1={"Cancel"} button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.setItem("collectedString", ""); AsyncStorage.setItem("firstLogin", "true"); this.setState({openRestart:true});}} popupVisible={this.state.open} close={() => this.setState({open:!this.state.open})}/>
+          <Popup text="Reset Data" textLower="Would you like to reset your collection? This action cannot be undone." button2={"Reset"} button1={"Cancel"} button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.setItem("collectedString", ""); AsyncStorage.setItem("firstLogin", "true"); AsyncStorage.setItem("name", "Name (tap to change)"); AsyncStorage.setItem("islandName", "Island Name (tap)");this.setState({openRestart:true});}} popupVisible={this.state.open} close={() => this.setState({open:!this.state.open})}/>
           <Popup text="Restart Required" textLower="Please restart the application." button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.setItem("collectedString", "");}} popupVisible={this.state.openRestart} close={() => this.setState({open:!this.state.open})}/>
           <View style={{height:50}}/>
           <TouchableOpacity onPress={() => Linking.openURL('mailto:dapperappdeveloper@gmail.com') }>

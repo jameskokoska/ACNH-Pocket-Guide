@@ -57,6 +57,7 @@ const colors = {
     eventsColor : ["#ffe366","#333333"],
     storeHoursColor : ["#8fc6f7","#333333"],
     collectionColor : ["#c7a4ff","#333333"],
+    profileColor : ["#81c784","#333333"],
     activeCreaturesColor : ["#ff8d7e","#333333"],
     sectionBackground1 : ["#f5f5f5", "#1A1A1A"],
     eventBackground : ["#FFFFFF", "#262626"],

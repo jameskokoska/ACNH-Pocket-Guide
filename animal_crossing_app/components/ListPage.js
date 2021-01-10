@@ -1,5 +1,5 @@
 import React, {Component, useState, useRef, useEffect} from 'react';
-import {TouchableWithoutFeedback, Text, View, Animated, SafeAreaView, StatusBar, StyleSheet, TextInput} from 'react-native';
+import {TouchableOpacity, TouchableWithoutFeedback, Text, View, Animated, SafeAreaView, StatusBar, StyleSheet, TextInput} from 'react-native';
 import Header, {HeaderLoading} from './Header';
 import ListItem from './ListItem';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -26,6 +26,7 @@ import ToolsPopup from "../popups/ToolsPopup"
 import RecipesPopup from "../popups/RecipesPopup"
 import * as exports from "./FilterDefinitions"
 import PopupFilter from './PopupFilter'
+import TextFont from "./TextFont"
 
 Object.entries(exports).forEach(([name, exported]) => window[name] = exported);
 
@@ -56,7 +57,14 @@ export default (props) =>{
       key={item.checkListKeyString}
       dataGlobalName={props.dataGlobalName}
       openBottomSheet={(updateCheckChild)=>{
-        sheetRef.current.snapTo(0); 
+        if(props.currentVillagers){
+          props.openPopup(item)
+        } else {
+          sheetRef.current.snapTo(0); 
+          if(props.activeCreatures){
+            props.scrollViewRef.current.scrollToEnd()
+          }
+        }
         //pass in the check mark update function of that current element
         bottomSheetRenderRef.current.update(item, updateCheckChild)}}
       boxColor={props.boxColor}
@@ -180,18 +188,23 @@ export default (props) =>{
         //Loop through the specific search criteria specified for this dataset
         for(var x = 0; x < props.searchKey[j].length; x++){
           var searchFound = false;
-          if(search.constructor===Array && search.length !== 0){
+          if((search.constructor===Array && search.length !== 0) || props.filterCollectedOnly){
             for(var z = 0; z < search.length; z++){
               //If the property is in search, not needed
               // if(props.searchKey[j].includes(search[z].split("-")[0])){
                 //If property is Collected
                 var searchCollected = true;
-                if(search.includes("Collected")){
+                if(search.includes("Collected") || props.filterCollectedOnly){
                   searchCollected = false;
                   if(global.collectionList.includes(item.["checkListKey"])){
                     searchCollected = true;
-                    if(search.length===1){
+                    if(search.length===1 || props.filterCollectedOnly){
                       searchFound = true;
+                      //Only check collected filter
+                      if(searchCollected && props.filterCollectedOnly){
+                        searchFound = true;
+                        break;
+                      }
                       break;
                     }
                   }
@@ -222,7 +235,7 @@ export default (props) =>{
               searchFound = item.[props.searchKey[j][x]].toLowerCase().includes(search.toLowerCase())
             }
           }
-          if(search==="Search" || search==="" || searchFound){
+          if((search==="Search" || search==="" || searchFound)&&(!props.filterCollectedOnly||searchFound)){
             //Search result found...
             if(props.showVariations[j]===false){
               //If recipes item page, and its not DIY, remove
@@ -333,6 +346,15 @@ export default (props) =>{
         <HeaderLoading title={props.title} headerHeight={headerHeight} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
       </>
     )
+  } else if (data.length===0 && props.filterCollectedOnly){
+    return(<>
+      <View style={{height:10}}/>
+      <TouchableOpacity onPress={() => props.setPage(7)}>
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"You have no villagers added"}</TextFont>
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>Tap here and go add some</TextFont>
+      </TouchableOpacity>
+      <View style={{height:30}}/>
+    </>)
   } else {
     return (
     <View style={{backgroundColor:props.backgroundColor}}>

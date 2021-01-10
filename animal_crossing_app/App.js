@@ -91,6 +91,9 @@ class App extends Component {
     console.log(numLogins)
     global.collectionList = (await getStorage("collectedString","")).split("\n");
     console.log(global.collectionList)
+
+    global.name = await getStorage("name","Name (tap to change)")
+    global.islandName = await getStorage("islandName","Island Name (tap)")
     
     //Load Global Data
     await loadGlobalData();
@@ -170,7 +173,7 @@ class App extends Component {
     
     var currentPageView;
     if (this.state.currentPage===0){
-      currentPageView = <FadeInOut fadeIn={true}><HomePage/></FadeInOut>
+      currentPageView = <FadeInOut fadeIn={true}><HomePage setPage={this.setPage}/></FadeInOut>
     } else if (this.state.currentPage===1){
       currentPageView = <AllItemsPage/>
     } else if(this.state.currentPage===2){
