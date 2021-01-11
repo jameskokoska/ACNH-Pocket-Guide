@@ -6,21 +6,27 @@ The goal of this rewrite is to make a more modular application that can be updat
 https://play.google.com/store/apps/details?id=com.acnh.pocket_guide
 
 ## Install Application Locally
-This application uses Expo. Install expo. Navigate into the ```animal_crossing_app``` folder (using ```cd .\animal_crossing|app\```) repositories root location. Then install dependencies using ```npm install```. After installing packages use ```npm start``` or ```expo start```. Open the Expo development application on android device and connect through the localhost.
+This application uses Expo. Install expo. Navigate into the ```animal_crossing_app``` folder (using ```cd .\animal_crossing_app\```) repositories root location. Then install dependencies using ```npm install```. After installing packages use ```npm start``` or ```expo start```. Open the Expo development application on android device and connect through the localhost on the local network.
 
 ## Technical Features
+- Components for modular programming 
 - Read and save information
 - Read information from JSON database efficiently
+- Easily change attributes of data to displayed due to modular component arguments
 - Optimization of lists views and database access
 - Classes and functions to allow for modular programming page design
 - UI planning done all in Adobe XD, see UI assets/ folder
-- Loads stored data before application run
+- Responsive design and layout for different screen zoom levels (set in the operating system's settings)
+- Loads databases before application run
 - Automatically pre-generate filter definitions with developer setting based on data
+- Read and store user information and data from app storage
+- Filter definitions and filter definition generation during run time or read from pregenerated data (for efficiency) 
 
 ## Features
 - Dark mode
 - Modern and polished interface and design
-- Upcoming events list + Villager birthdays and Store Hours
+- Unique animations
+- Upcoming events list + Villager birthdays and Store Hours + Profile
 - Real vs Fake art
 - Recipes and ingredients lists
 - DIY recipe sources
@@ -33,7 +39,9 @@ This application uses Expo. Install expo. Navigate into the ```animal_crossing_a
 - Emoticon collection
 - Construction tasks and costs
 - Flower hybrids guide
+- Everything page
 - Filters
+- Search
 - 24 hour time, haptics settings 
 
 ## Screenshots
