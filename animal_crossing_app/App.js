@@ -77,7 +77,7 @@ class App extends Component {
     }
   }
   async componentDidMount(){
-    //await AsyncStorage.setItem("firstLogin", "true");
+    // await AsyncStorage.setItem("firstLogin", "true");
 
     this.backHandler = BackHandler.addEventListener(
       "hardwareBackPress",
@@ -147,8 +147,10 @@ class App extends Component {
   }
 
   openDrawer() {
-    this.drawer.openDrawer();
-    global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate(8) : "";
+    if(this.state.loaded){
+      this.drawer.openDrawer();
+      global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate(8) : "";
+    }
     return true;
   }
 

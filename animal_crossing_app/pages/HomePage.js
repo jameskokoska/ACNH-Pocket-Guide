@@ -137,13 +137,13 @@ class HomePage extends Component {
           <View style={{alignItems:"center"}}>
             <TextInput
               style={{fontSize: 30, width:"100%", textAlign:"center", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
-              onChangeText={async (text) => AsyncStorage.setItem("name", text)}
+              onChangeText={async (text) => {AsyncStorage.setItem("name", text); global.name=text;}}
               defaultValue={global.name}
             />
             <TextFont bold={true} style={{marginTop: 0, marginBottom: -8, color:colors.fishText[global.darkMode]}}>of</TextFont>
             <TextInput
               style={{fontSize: 30, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
-              onChangeText={async (text) => AsyncStorage.setItem("islandName", text)}
+              onChangeText={async (text) => {AsyncStorage.setItem("islandName", text); global.islandName=text}}
               defaultValue={global.islandName}
             />
             <TextFont bold={true} style={{marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>Island</TextFont>

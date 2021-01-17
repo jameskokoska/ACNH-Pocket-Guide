@@ -47,7 +47,7 @@ export function getEventsDay(currentDate){
   var totalEvents = [];
   var northernHemisphere = global.settingsCurrent[0]["currentValue"]==="true";
   var eventDatum;
-  if(dayOfWeek===6){
+  if(dayOfWeek===0){
     eventDatum = {
         "Name": "Daisy Mae",
         "Month": getMonthName(currentMonth),
@@ -60,7 +60,7 @@ export function getEventsDay(currentDate){
         "Image" : "turnip.png"
     }
     totalEvents.push(eventDatum);
-  } else if (dayOfWeek===5){
+  } else if (dayOfWeek===6){
     eventDatum = {
         "Name": "K.K. Slider",
         "Month": getMonthName(currentMonth),

@@ -95,6 +95,50 @@ export const HeaderLoading = (props) => {
   );
 };
 
+export const HeaderActive = (props) => {
+  var filterImage;
+  if(props.search.constructor===Array && props.search.length>=1){
+    filterImage = <>
+      <LottieView 
+          autoPlay
+          loop={false}
+          style={{
+            position:"absolute",
+            top: -11,
+            left: -11,
+          }}
+          source={require("../assets/emphasis.json")}
+        />
+      <Image style={{width:25,height:25, margin: 10, marginTop: 12, opacity: 0.7, marginRight: 30, resizeMode:"contain"}} source={require("../assets/icons/filterApplied.png")}/>
+    </>
+  } else {
+    filterImage = <Image style={{width:25,height:25, margin: 10, marginTop: 12, opacity: 0.35, marginRight: 30, resizeMode:"contain"}} source={require("../assets/icons/filterSearch.png")}/>
+  }
+  return (
+    <>
+      <View style={{width:"100%",paddingHorizontal: 20, marginTop: 10}}>
+        <TextFont style={[styles.title, {fontSize: 15, color: props.titleColor}]} bold={true}>Creatures that can currently be caught</TextFont>
+        <View style={{flexDirection: 'row'}}>
+          <View style={[styles.searchBox, {backgroundColor:props.searchBarColor}]}>
+            <DelayInput
+              allowFontScaling={false}
+              placeholder={"Search"}
+              style={styles.searchText}
+              onChangeText={function(text){props.updateSearch(text);}} 
+              onFocus={() => {Vibration.vibrate(15);}}
+              minLength={2}
+              delayTimeout={400}
+            />
+          </View>
+          <TouchableOpacity onPress={()=>{props.openPopupFilter(); global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate(10) : "";}}>
+            {filterImage}
+          </TouchableOpacity>
+        </View>
+      </View>
+    </>
+  );
+};
+
 const styles = StyleSheet.create({
   topSpace: {
     width: '100%',

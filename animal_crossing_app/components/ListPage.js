@@ -1,6 +1,6 @@
 import React, {Component, useState, useRef, useEffect} from 'react';
 import {TouchableOpacity, TouchableWithoutFeedback, Text, View, Animated, SafeAreaView, StatusBar, StyleSheet, TextInput} from 'react-native';
-import Header, {HeaderLoading} from './Header';
+import Header, {HeaderLoading, HeaderActive} from './Header';
 import ListItem from './ListItem';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {determineDataGlobal, removeBrackets} from "../LoadJsonData"
@@ -336,10 +336,16 @@ export default (props) =>{
     </>);
   var paddingTop = headerHeight*1.18;
   var paddingBottom = Dimensions.get('window').height;
-  if (props.title===""){
+  if (props.title==="" && !props.activeCreatures){
     header = <View/>;
     paddingTop = 20;
     paddingBottom = 20;
+  } else if (props.activeCreatures){
+    paddingTop = 0;
+    paddingBottom = 0;
+    header = (<>
+        <HeaderActive search={search} openPopupFilter={() => {setFilterPopupState(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
+    </>);
   }
   if(data==="empty"){
     return(<>
@@ -365,14 +371,14 @@ export default (props) =>{
         nestedScrollEnabled
         initialNumToRender={8}
         scrollEventThrottle={16}
-        contentContainerStyle={{paddingTop: paddingTop+10, paddingLeft: 15, paddingRight: 15, paddingBottom: 120}}
+        contentContainerStyle={{paddingTop: paddingTop+10, paddingLeft: 15, paddingRight: 15, paddingBottom: 150}}
         onScroll={handleScroll}
         ref={ref}
         data={data}
         renderItem={renderItem}
         keyExtractor={(item, index) => `list-item-${index}-${item.checkListKeyString}`}
         numColumns={numColumns}
-        style={{paddingBottom: paddingBottom, marginTop: -10}}
+        style={{height: Dimensions.get('window').height, paddingBottom: paddingBottom,marginTop: -10}}
         removeClippedSubviews={true}
         updateCellsBatchingPeriod={500}
         windowSize={10}

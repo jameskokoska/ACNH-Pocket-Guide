@@ -20,7 +20,7 @@ class ActiveCreatures extends Component {
           scrollViewRef={this.props.scrollViewRef}
           gridType="smallGrid" //smallGrid, largeGrid, row
           appBarColor={colors.emojipediaAppBar[global.darkMode]}
-          titleColor={colors.textBlack[global.darkMode]}
+          titleColor={colors.lightDarkAccentHeavy[global.darkMode]}
           searchBarColor={colors.searchbarBG[global.darkMode]}
           backgroundColor={colors.lightDarkAccent[global.darkMode]}
           boxColor={colors.white[global.darkMode]}
@@ -33,9 +33,9 @@ class ActiveCreatures extends Component {
             false,
           ]}
           popUpContainer={[
-            ["FishPopup",500],
-            ["SeaPopup",500],
-            ["BugPopup",500],
+            ["FishPopup",600],
+            ["SeaPopup",600],
+            ["BugPopup",600],
           ]}
           popUpCornerImageProperty={[
             "Where/How",
