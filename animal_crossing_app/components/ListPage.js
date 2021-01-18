@@ -347,6 +347,12 @@ export default (props) =>{
         <HeaderActive search={search} openPopupFilter={() => {setFilterPopupState(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
     </>);
   }
+  var style= {height: Dimensions.get('window').height, paddingBottom: paddingBottom,marginTop: -10}
+  var paddingBottomContent = 150;
+  if(props.currentVillagers){
+    style={paddingBottom: paddingBottom,marginTop: -10}
+    paddingBottomContent = 10;
+  }
   if(data==="empty"){
     return(<>
         <HeaderLoading title={props.title} headerHeight={headerHeight} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
@@ -371,14 +377,14 @@ export default (props) =>{
         nestedScrollEnabled
         initialNumToRender={8}
         scrollEventThrottle={16}
-        contentContainerStyle={{paddingTop: paddingTop+10, paddingLeft: 15, paddingRight: 15, paddingBottom: 150}}
+        contentContainerStyle={{paddingTop: paddingTop+10, paddingLeft: 15, paddingRight: 15, paddingBottom: paddingBottomContent}}
         onScroll={handleScroll}
         ref={ref}
         data={data}
         renderItem={renderItem}
         keyExtractor={(item, index) => `list-item-${index}-${item.checkListKeyString}`}
         numColumns={numColumns}
-        style={{height: Dimensions.get('window').height, paddingBottom: paddingBottom,marginTop: -10}}
+        style={style}
         removeClippedSubviews={true}
         updateCellsBatchingPeriod={500}
         windowSize={10}

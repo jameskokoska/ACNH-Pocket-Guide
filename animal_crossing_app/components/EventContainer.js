@@ -32,7 +32,7 @@ export class EventContainer extends Component {
           <View style={{width: 30, alignItems:"center", marginLeft: -8}}>
             <Image style={styles.eventCalendar} source={require("../assets/icons/calendarIcon.png")}/>
             <TextFont bold={true} style={{position:"absolute", top:1, textAlign:"center",color:"black", fontSize: 12, opacity: 0.8}}>{this.props.month}</TextFont>
-            <TextFont bold={true} style={{position:"absolute", top:17, textAlign:"center",color:"black", fontSize: 25, opacity: 0.8}}>{this.props.day}</TextFont>
+            <TextFont bold={true} style={{position:"absolute", top:17, textAlign:"center",color:"black", fontSize: 24, opacity: 0.8}}>{this.props.day}</TextFont>
           </View>
         </View>
     )
