@@ -8,7 +8,7 @@ class FAB extends Component {
   }
   render(){
     return(
-        <TouchableOpacity onPress={() => {this.animation.play(); this.props.openDrawer(); global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate(10) : "";}} activeOpacity={0.7} style={[styles.FABShape,{backgroundColor: colors.FAB[global.darkMode]}]}>
+        <TouchableOpacity onPress={() => {this.animation.play(); this.props.openDrawer(); global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate(10) : "";}} activeOpacity={0.3} style={[styles.FABShape,{backgroundColor: colors.FAB[global.darkMode]}]}>
             <LottieView 
               ref={animation => {
                 this.animation = animation;
@@ -28,6 +28,7 @@ export default FAB;
 
 const styles = StyleSheet.create({
     FABShape: {
+        opacity: 0.7,
         height: 64,
         width: 64,
         borderRadius: 1000,
