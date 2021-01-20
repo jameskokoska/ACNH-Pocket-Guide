@@ -9,6 +9,7 @@ class VillagersPage extends Component {
   render(){
     return(
         <ListPage 
+          tabs={false}
           filters={["Personality","Species","Hobby","Style 1","Style 2","Color 1","Color 2"]}
           filterSearchable = {true}
           disablePopup={[false]}

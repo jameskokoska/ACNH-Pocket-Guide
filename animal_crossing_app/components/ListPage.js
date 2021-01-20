@@ -28,6 +28,9 @@ import * as exports from "./FilterDefinitions"
 import PopupFilter from './PopupFilter'
 import TextFont from "./TextFont"
 
+//Note: popup height is not needed anymore
+//use tabs={false} if the page doesn't have  the tab bar
+
 Object.entries(exports).forEach(([name, exported]) => window[name] = exported);
 
 const {diffClamp} = Animated;
@@ -310,6 +313,7 @@ export default (props) =>{
       popUpPhraseProperty={props.popUpPhraseProperty}
       popUpContainer={props.popUpContainer}
       checkType={props.checkType}
+      tabs={props.tabs}
     />;
   }
 
@@ -369,7 +373,7 @@ export default (props) =>{
     </>)
   } else {
     return (
-    <View style={{backgroundColor:props.backgroundColor}}>
+    <View style={{backgroundColor:props.backgroundColor}} >
       {header}
       <PopupFilter title={props.title} popupVisible={filterPopupState} close={() => {setFilterPopupState(false)}} possibleFilters={possibleFiltersState} filterSearchable={props.filterSearchable} updateSearch={updateSearch}/> 
       {/* setFilterPopupState(false) */}
@@ -410,6 +414,7 @@ class BottomSheetRender extends Component{
     this.update = this.update.bind(this);
     this.state = {
       item:"item",
+      heightOffset:0,
     }
     this.updateCheckChildFunction="";
   }
@@ -425,7 +430,6 @@ class BottomSheetRender extends Component{
     }
   }
   render(){
-    var offSetTop = 200;
     var leftCornerImage;
     if(this.props.popUpCornerImageProperty!==undefined && this.props.popUpCornerImageLabelProperty!==undefined && this.state.item.dataSet!==undefined && this.props.popUpCornerImageProperty[this.state.item.dataSet]!==""){
       leftCornerImage = <LeftCornerImage
@@ -475,17 +479,20 @@ class BottomSheetRender extends Component{
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="RecipesPopup"){
         popUpContainer = <RecipesPopup item={this.state.item}/>
       }
+    } else {
+      return <View/>
     }
     
-
-    var popUpHeight = 400;
-    if(this.props.popUpContainer!==undefined && this.state.item.dataSet!==undefined){
-      popUpHeight = this.props.popUpContainer[this.state.item.dataSet][1];
+    var paddingBottom = 0;
+    var tabCompensation = 0;
+    if(this.props.tabs===false){
+      tabCompensation = 10;
     }
-
-    var topPadding = Dimensions.get('window').height-popUpHeight-220;
-    if(topPadding < 0){
-      topPadding = 0;
+    if(global.settingsCurrent[10].currentValue==="true"){
+      tabCompensation = tabCompensation-50;
+      paddingBottom = 120;
+    } else {
+      paddingBottom = 100;
     }
 
     var rightCornerCheck = <View/>
@@ -508,19 +515,20 @@ class BottomSheetRender extends Component{
                 height: Dimensions.get('window').height,
                 width: Dimensions.get('window').width,}}
       />
-      <View
-        style={{
-          height: global.settingsCurrent[10].currentValue==="false" ? 80 + topPadding : 160 + topPadding,
-        }}
-      />
+      <View style={{height:Dimensions.get('window').height-this.state.heightOffset-paddingBottom+tabCompensation}}/>
       <View
         style={{
           borderTopLeftRadius: 50,
           borderTopRightRadius: 50,
           backgroundColor: colors.white[global.darkMode],
           padding: 16,
-          height: global.settingsCurrent[10].currentValue==="false" ? popUpHeight+140 : popUpHeight+140,
+          paddingBottom: paddingBottom,
+          marginTop: global.settingsCurrent[10].currentValue==="false" ? 80 : 160,
         }}
+        onLayout={(event) => {
+            var {x, y, width, height} = event.nativeEvent.layout;
+            this.setState({heightOffset:height});
+          }} 
       >
           <CircularImage 
             item={this.state.item}

@@ -31,7 +31,6 @@ class CurrentVillagers extends Component {
           disablePopup={[
             false,
           ]}
-          popUpContainer={[["VillagerPopup",450]]}
           popUpCornerImageProperty={[
             "",
           ]}
