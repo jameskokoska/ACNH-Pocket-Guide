@@ -123,7 +123,7 @@ class HomePage extends Component {
           )}
           <View style={{height: 30}}/>
         </HomeContentArea>
-        <HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.todoColor[global.darkMode]} title="To-Do" titleColor={colors.storeHoursColor[global.darkModeReverse]}>
+        <HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.todoColor[global.darkMode]} title="To-Do" titleColor={colors.todoColor[global.darkModeReverse]}>
           <View style={{height: 15}}/>
           <TodoList/>
           <View style={{height: 15}}/>
