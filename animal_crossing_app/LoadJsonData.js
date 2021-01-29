@@ -337,7 +337,7 @@ export async function loadGlobalData(){
 }
 
 export const settings = [
-  {
+  { //0
     "keyName" : "settingsNorthernHemisphere",
     "defaultValue" : "true",
     "currentValue" : "",
@@ -345,7 +345,7 @@ export const settings = [
     "displayName" : "Northern hemisphere",
     "description" : "Set your hemisphere, north or south. This will change the data displayed for creatures and events.",
   },
-  {
+  { //1
     "keyName" : "settingsSkipSplashScreen",
     "defaultValue" : "true",
     "currentValue" : "",
@@ -353,7 +353,7 @@ export const settings = [
     "displayName" : "Skip loading screen",
     "description" : "If enabled, the app will load more efficiently and therefore will skip most of the opening plane/balloon animation",
   },
-  {
+  { //2
     "keyName" : "settingsListOnlyActiveCreatures",
     "defaultValue" : "false",
     "currentValue" : "",
@@ -361,7 +361,7 @@ export const settings = [
     "displayName" : "List only active creatures",
     "description" : "Only creatures that can be caught in the current month will be displayed.",
   },
-  {
+  { //3
     "keyName" : "settingsShowVariation",
     "defaultValue" : "false",
     "currentValue" : "",
@@ -369,7 +369,7 @@ export const settings = [
     "displayName" : "Show variations in lists",
     "description" : "Show the different colours/patterns of furniture and clothing items in the list.",
   },
-  {
+  { //4
     "keyName" : "settingsCreaturesLeavingWarning",
     "defaultValue" : "true",
     "currentValue" : "",
@@ -377,7 +377,7 @@ export const settings = [
     "displayName" : "Creatures leaving warning",
     "description" : "Display a red warning background colour around creatures that won't be able to be caught in the next month.",
   },
-  {
+  { //5
     "keyName" : "settingsShowFAB",
     "defaultValue" : "true",
     "currentValue" : "",
@@ -385,8 +385,7 @@ export const settings = [
     "displayName" : "Show floating menu button",
     "description" : "Choose to display the menu button in the bottom right corner. The menu can be opened by dragging from the left of the screen.",
   },
-  
-  {
+  { //6
     "keyName" : "settingsTabBarPosition",
     "defaultValue" : "false",
     "currentValue" : "",
@@ -394,7 +393,7 @@ export const settings = [
     "displayName" : "Category labels on bottom",
     "description" : "Show the category tabs on the bottom, or top of the screen in list pages with multiple categories.",
   },
-  {
+  { //7
     "keyName" : "settingsShowStatusBar",
     "defaultValue" : "false",
     "currentValue" : "",
@@ -402,7 +401,7 @@ export const settings = [
     "displayName" : "Show notification status bar",
     "description" : "A restart may be required to see changes.",
   },
-  {
+  { //8
     "keyName" : "settingsUse24HourClock",
     "defaultValue" : "false",
     "currentValue" : "",
@@ -410,7 +409,7 @@ export const settings = [
     "displayName" : "Use 24 hour clock",
     "description" : "Enable a 24 hour clock instead of the standard 12 hour format.",
   },
-  {
+  { //9
     "keyName" : "settingsEnableVibrations",
     "defaultValue" : "true",
     "currentValue" : "",
@@ -418,7 +417,7 @@ export const settings = [
     "displayName" : "Enable haptic feedback",
     "description" : "Enable/Disable the vibrations with certain actions.",
   },
-  {
+  { //10
     "keyName" : "settingsLargerItemPreviews",
     "defaultValue" : "false",
     "currentValue" : "",
@@ -426,7 +425,7 @@ export const settings = [
     "displayName" : "Use larger images in popup",
     "description" : "Use a larger image when previewing items in their popup",
   },
-  {
+  { //11
     "keyName" : "settingsUseFilters",
     "defaultValue" : "true",
     "currentValue" : "",
@@ -434,8 +433,7 @@ export const settings = [
     "displayName" : "Enable filters in lists",
     "description" : "Turning this off can increase performance of loading, for basic needs",
   },
-  //12
-  {
+  { //12
     "keyName" : "settingsAutoDarkMode",
     "defaultValue" : "true",
     "currentValue" : "",
@@ -443,8 +441,7 @@ export const settings = [
     "displayName" : "Dark mode - follow system",
     "description" : "Dark mode will follow system default, if your Android version does not support system dark mode, disable this and use the setting below.",
   },
-  //13
-  {
+  { //13
     "keyName" : "settingsDarkMode",
     "defaultValue" : "false",
     "currentValue" : "",

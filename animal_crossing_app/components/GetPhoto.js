@@ -39,6 +39,38 @@ export function getPhoto(name){
       return require("../assets/icons/turnip.png");
     case "pumpkin.png":
       return require("../assets/icons/pumpkin.png");
+    case "cat.png":
+      return require("../assets/icons/cat.png");
+    case "digIcon.png":
+      return require("../assets/icons/digIcon.png");
+    case "miles.png":
+      return require("../assets/icons/miles.png");
+    case "able.png":
+      return require("../assets/icons/able.png");
+    case "nook.png":
+      return require("../assets/icons/nook.png");
+    case "crafting.png":
+      return require("../assets/icons/crafting.png");
+    case "oceanIcon.png":
+      return require("../assets/icons/oceanIcon.png");
+    case "saharah.png":
+      return require("../assets/icons/saharah.png");
+    case "balloon.png":
+      return require("../assets/icons/balloon.png");
+    case "sparkle.png":
+      return require("../assets/icons/sparkle.png");
+    case "ship.png":
+      return require("../assets/icons/ship.png");
+    case "beaver.png":
+      return require("../assets/icons/beaver.png");
+    case "flowerIcon.png":
+      return require("../assets/icons/flowerIcon.png");
+    case "rock.png":
+      return require("../assets/icons/rock.png");
+    case "bellBag.png":
+      return require("../assets/icons/bellBag.png");
+    case "bell.png":
+      return require("../assets/icons/bell.png");
     default:
       break;
   }

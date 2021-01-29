@@ -14,6 +14,7 @@ import CurrentVillagers from "../components/CurrentVillagers"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import VillagerPopupPopup from "../popups/VillagerPopupPopup"
 import {getCurrentDateObject} from '../components/DateFunctions';
+import TodoList from '../components/TodoList';
 
 function addDays(date, days) {
   var result = new Date(date);
@@ -80,7 +81,7 @@ class HomePage extends Component {
         <View style={{height:45}}/>
         <Clock/>
         <View style={{height:125}}/>
-        <HomeContentArea backgroundColor={colors.lightDarkAccent[global.darkMode]} accentColor={colors.eventsColor[global.darkMode]} title="Events" titleColor={colors.eventsColor[global.darkModeReverse]}>
+        <HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.eventsColor[global.darkMode]} title="Events" titleColor={colors.eventsColor[global.darkModeReverse]}>
           {todayTitle}
           {todayEvents.map( (event, index)=>
             <EventContainer 
@@ -122,6 +123,11 @@ class HomePage extends Component {
           )}
           <View style={{height: 30}}/>
         </HomeContentArea>
+        <HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.todoColor[global.darkMode]} title="To-Do" titleColor={colors.storeHoursColor[global.darkModeReverse]}>
+          <View style={{height: 15}}/>
+          <TodoList/>
+          <View style={{height: 15}}/>
+        </HomeContentArea>
         <HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.collectionColor[global.darkMode]} title="Collection" titleColor={colors.collectionColor[global.darkModeReverse]}>
           <View style={{height: 15}}/>
           <ProgressContainer color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={fishPercentage} image={require("../assets/icons/fish.png")} text={"Fish " + fishCount + "/80"}/>
@@ -132,19 +138,22 @@ class HomePage extends Component {
           <ProgressContainer color={colors.musicAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={musicPercentage} image={require("../assets/icons/music.png")} text={"Songs " + musicCount + "/95"}/>
           <View style={{height: 15}}/>
         </HomeContentArea>
-        <HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.profileColor[global.darkMode]} title="Profile" titleColor={colors.profileColor[global.darkModeReverse]}>
+        <HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.profileColor[global.darkMode]} title="Profile" titleColor={colors.profileColor[global.darkModeReverse]}>
           <View style={{height: 37}}/>
           <View style={{alignItems:"center"}}>
             <TextInput
               style={{fontSize: 30, width:"100%", textAlign:"center", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
               onChangeText={async (text) => {AsyncStorage.setItem("name", text); global.name=text;}}
-              defaultValue={global.name}
+              placeholder={"[Name]"}
+              placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+
             />
             <TextFont bold={true} style={{marginTop: 0, marginBottom: -8, color:colors.fishText[global.darkMode]}}>of</TextFont>
             <TextInput
               style={{fontSize: 30, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
               onChangeText={async (text) => {AsyncStorage.setItem("islandName", text); global.islandName=text}}
-              defaultValue={global.islandName}
+              placeholder={"[Island]"}
+              placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
             />
             <TextFont bold={true} style={{marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>Island</TextFont>
             <View style={{height: 5}}/>
@@ -155,13 +164,13 @@ class HomePage extends Component {
           <View style={{height: 30}}/>
           <CurrentVillagers openPopup={this.openPopup} setPage={this.props.setPage}/>
         </HomeContentArea>
-        <HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.storeHoursColor[global.darkMode]} title="Store Hours" titleColor={colors.storeHoursColor[global.darkModeReverse]}>
+        <HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.storeHoursColor[global.darkMode]} title="Store Hours" titleColor={colors.storeHoursColor[global.darkModeReverse]}>
           <View style={{height: 15}}/>
           <StoreHoursContainer image={require("../assets/icons/nook.png")} text="Nook's Cranny" textBottom="8 AM - 10 PM" openHour={8} closeHour={22}/>
           <StoreHoursContainer image={require("../assets/icons/able.png")} text="Able Sisters" textBottom="9 AM - 9 PM" openHour={9} closeHour={21}/>
           <View style={{height: 15}}/>
         </HomeContentArea>
-        <HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.activeCreaturesColor[global.darkMode]} title="Active Creatures" titleColor={colors.activeCreaturesColor[global.darkModeReverse]}>
+        <HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.activeCreaturesColor[global.darkMode]} title="Active Creatures" titleColor={colors.activeCreaturesColor[global.darkModeReverse]}>
           <ActiveCreatures scrollViewRef={this.scrollViewRef}/>
         </HomeContentArea>
       </ScrollView>

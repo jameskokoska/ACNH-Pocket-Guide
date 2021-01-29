@@ -485,6 +485,7 @@ class BottomSheetRender extends Component{
     
     var paddingBottom = 0;
     var tabCompensation = 0;
+    var statusBarHeight = 0;
     if(this.props.tabs===false){
       tabCompensation = 10;
     }
@@ -493,6 +494,10 @@ class BottomSheetRender extends Component{
       paddingBottom = 120;
     } else {
       paddingBottom = 100;
+    }
+    console.log(global.settingsCurrent[7].currentValue)
+    if(global.settingsCurrent[7].currentValue==="false"){
+      statusBarHeight = 20;
     }
 
     var rightCornerCheck = <View/>
@@ -515,7 +520,7 @@ class BottomSheetRender extends Component{
                 height: Dimensions.get('window').height,
                 width: Dimensions.get('window').width,}}
       />
-      <View style={{height:Dimensions.get('window').height-this.state.heightOffset-paddingBottom+tabCompensation}}/>
+      <View style={{height:Dimensions.get('window').height+statusBarHeight-this.state.heightOffset-paddingBottom+tabCompensation}}/>
       <View
         style={{
           borderTopLeftRadius: 50,
@@ -545,6 +550,7 @@ class BottomSheetRender extends Component{
             popUpPhraseProperty={this.props.popUpPhraseProperty}
           />
           {popUpContainer}
+          <View style={{height:10}}/>
       </View>
     </View>
   }

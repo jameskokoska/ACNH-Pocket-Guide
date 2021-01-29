@@ -111,7 +111,7 @@ class PopupFilter extends Component {
                 multiple
                 isVisible
                 searchablePlaceholderTextColor={colors.filterSearch[global.darkMode]}
-                labelStyle={{fontSize: 15, marginLeft:10, color:colors.textBlack[global.darkMode]}}
+                labelStyle={{fontFamily: "ArialRounded", fontSize: 15, marginLeft:10, color:colors.textBlack[global.darkMode]}}
                 customTickIcon={()=><View/>}
                 activeItemStyle={{borderRadius: 10, backgroundColor: colors.lightDarkAccent[global.darkMode]}}
                 dropDownStyle={{borderBottomLeftRadius: 10, borderBottomRightRadius: 10, borderWidth: 0, backgroundColor: colors.filterBG[global.darkMode], opacity: 0.98, }}

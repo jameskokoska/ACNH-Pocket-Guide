@@ -92,8 +92,8 @@ class App extends Component {
     global.collectionList = (await getStorage("collectedString","")).split("\n");
     console.log(global.collectionList)
 
-    global.name = await getStorage("name","Name (tap to change)")
-    global.islandName = await getStorage("islandName","Island Name (tap)")
+    global.name = await getStorage("name","")
+    global.islandName = await getStorage("islandName","")
     
     //Load Global Data
     await loadGlobalData();
