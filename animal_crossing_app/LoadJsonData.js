@@ -168,7 +168,7 @@ export function collectionListSave(){
 
 export function capitalize(name) {
   if(name!==undefined){
-    return name.replace(/\b(\w)/g, s => s.toUpperCase());
+    return name.replace(/(^\w{1})|(\s{1}\w{1})/g, match => match.toUpperCase());
   } else {
     return "null";
   }

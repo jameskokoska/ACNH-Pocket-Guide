@@ -143,10 +143,10 @@ class HomePage extends Component {
           <View style={{alignItems:"center"}}>
             <TextInput
               style={{fontSize: 30, width:"100%", textAlign:"center", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
-              onChangeText={async (text) => {AsyncStorage.setItem("name", text); global.name=text;}}
+              onChangeText={async (text) => {AsyncStorage.setItem("name", text); global.name=text; console.log(text)}}
               placeholder={"[Name]"}
               placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
-
+              defaultValue={global.name}
             />
             <TextFont bold={true} style={{marginTop: 0, marginBottom: -8, color:colors.fishText[global.darkMode]}}>of</TextFont>
             <TextInput
@@ -154,6 +154,7 @@ class HomePage extends Component {
               onChangeText={async (text) => {AsyncStorage.setItem("islandName", text); global.islandName=text}}
               placeholder={"[Island]"}
               placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+              defaultValue={global.islandName}
             />
             <TextFont bold={true} style={{marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>Island</TextFont>
             <View style={{height: 5}}/>

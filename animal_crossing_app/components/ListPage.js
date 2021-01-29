@@ -298,6 +298,7 @@ export default (props) =>{
   const bottomSheetRenderRef = React.useRef(null);
   function renderContent() {
     return <BottomSheetRender 
+      activeCreatures={props.activeCreatures}
       ref={bottomSheetRenderRef}
       imageProperty={props.imageProperty} 
       textProperty={props.textProperty}
@@ -486,8 +487,14 @@ class BottomSheetRender extends Component{
     var paddingBottom = 0;
     var tabCompensation = 0;
     var statusBarHeight = 0;
-    if(this.props.tabs===false){
+    var heightCompensation = 0;
+    if(this.props.activeCreatures){
+      heightCompensation = 50;
       tabCompensation = 10;
+    } else if(this.props.tabs===false){
+      tabCompensation = 10;
+    } else if(global.settingsCurrent[7].currentValue==="true"){
+      heightCompensation = 10;
     }
     if(global.settingsCurrent[10].currentValue==="true"){
       tabCompensation = tabCompensation-50;
@@ -496,7 +503,7 @@ class BottomSheetRender extends Component{
       paddingBottom = 100;
     }
     console.log(global.settingsCurrent[7].currentValue)
-    if(global.settingsCurrent[7].currentValue==="false"){
+    if(global.settingsCurrent[7].currentValue==="false"&&this.props.tabs===false){
       statusBarHeight = 20;
     }
 
@@ -550,7 +557,7 @@ class BottomSheetRender extends Component{
             popUpPhraseProperty={this.props.popUpPhraseProperty}
           />
           {popUpContainer}
-          <View style={{height:10}}/>
+          <View style={{height:10+heightCompensation}}/>
       </View>
     </View>
   }

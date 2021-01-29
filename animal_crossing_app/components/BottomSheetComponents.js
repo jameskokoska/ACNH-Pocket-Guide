@@ -168,13 +168,13 @@ export class InfoLineDouble extends Component {
 export class InfoLineTriple extends Component {
   render() {
     var textLines = [];
-    if(this.props.item[this.props.textProperty1]!=="None"){
+    if(this.props.item[this.props.textProperty1]!=="None" && this.props.item[this.props.textProperty2]!==undefined){
       textLines.push(this.props.item[this.props.textProperty1]);
     }
-    if (this.props.item[this.props.textProperty2]!=="None"){
+    if (this.props.item[this.props.textProperty2]!=="None" && this.props.item[this.props.textProperty2]!==undefined){
       textLines.push(this.props.item[this.props.textProperty2]);
     }
-    if (this.props.item[this.props.textProperty3]!=="None"){
+    if (this.props.item[this.props.textProperty3]!=="None" && this.props.item[this.props.textProperty2]!==undefined){
       textLines.push(this.props.item[this.props.textProperty3]);
     }
     if(textLines.length===0){

@@ -121,7 +121,7 @@ class TodoItem extends Component {
           onPress={()=>{
             this.props.deleteItem(this.props.index); 
         }}>
-          <Image source={require("../assets/icons/deleteIcon.png")} style={{width:15, height:15, borderRadius:100,}}/>
+          <Image source={require("../assets/icons/deleteIcon.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
         </TouchableOpacity>
           <TouchableNativeFeedback onLongPress={() => {  
             this.props.checkOffItem(this.props.index); 
