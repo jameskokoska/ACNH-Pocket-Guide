@@ -127,7 +127,7 @@ export default (props) =>{
     var previousVariation = "";
     var item;
     var dataLoaded2D = determineDataGlobal(props.dataGlobalName);
-    if(possibleFiltersState==="empty" && getSettingsString("settingsUseFilters")==="true"){
+    if(possibleFiltersState==="empty"){
       var possibleFilters = [];
       if(getSettingsString("settingsLogFilterDefinitions")==="true"){
         var currentFilter;
@@ -177,7 +177,9 @@ export default (props) =>{
           possibleFilters = [...possibleFilters, ...villagersFilter];
         } else if(props.title==="Everything"){
           possibleFilters = [...possibleFilters, ...everythingFilter];
-        } 
+        } else if(props.title==="Construction"){
+          possibleFilters = [...possibleFilters,{"label":"Bridge","value":"Category:Bridge"},{"label":"Incline","value":"Category:Incline"},{"label":"Doors","value":"Category:Door"},{"label":"Roofing","value":"Category:Roofing"},{"label":"Siding","value":"Category:Siding"},{"label":"Mailbox","value":"Category:Mailbox"}]
+        }
         setPossibleFilters(possibleFilters);
       }
     } else if (getSettingsString("settingsUseFilters")==="false") {
