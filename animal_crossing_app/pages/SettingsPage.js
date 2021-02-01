@@ -46,17 +46,25 @@ class SettingsPage extends Component {
           <View style={{marginTop: 20}}/>
           {global.settingsCurrent.map( (setting, index)=>
             {
-              return <SettingsContainer 
-                key={setting["keyName"]} 
-                currentValue={setting["currentValue"]} 
-                backgroundColor={colors.white[global.darkMode]} 
-                textColor={colors.textBlack[global.darkMode]} 
-                image={setting["picture"]} 
-                text={setting["displayName"]} 
-                description={setting["description"]}
-                index={index}
-                keyName={setting["keyName"]}
-              />
+              if(setting["keyName"]!="breaker"){
+                return <SettingsContainer 
+                  key={setting["keyName"]} 
+                  currentValue={setting["currentValue"]} 
+                  backgroundColor={colors.white[global.darkMode]} 
+                  textColor={colors.textBlack[global.darkMode]} 
+                  image={setting["picture"]} 
+                  text={setting["displayName"]} 
+                  description={setting["description"]}
+                  index={index}
+                  keyName={setting["keyName"]}
+                />
+              } else {
+                return <SettingsDivider
+                  text={setting["text"]}
+                  keyName={setting["keyName"]+index.toString()}
+                />
+              }
+              
             }
           )}
           <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.setState({datePickerVisible:true})}} text={"Set Custom Date/Time"} />
@@ -73,13 +81,18 @@ class SettingsPage extends Component {
             isVisible={this.state.datePickerVisible}
           />
           <Popup text="Custom Date" textLower="Ensure the 'Use a custom date' setting is enabled" button1={"OK"} button1Action={()=>{console.log("")}} popupVisible={this.state.openDateReminder} close={() => this.setState({openDateReminder:!this.state.openDateReminder})}/>
+          
           <View style={{height: 50}}/>
+          <SettingsDivider text="Data backup" margin="small"/>
           <ExportFile/><LoadFile/>
+
           <View style={{height: 50}}/>
+          <SettingsDivider text="Data reset" margin="small"/>
           <ButtonComponent text="Clear All Set Filters" onPress={() => {
             resetFilters();
           }} vibrate={70} color={colors.filtersResetButton[global.darkMode]}/>
-          <View style={{height: 50}}/>
+          
+          <View style={{height: 20}}/>
           <ButtonComponent text="Reset Data" onPress={() => {this.setState({open:true})}} vibrate={100} color={colors.cancelButton[global.darkMode]}/>
           <Popup text="Reset Data" textLower="Would you like to reset your collection? This action cannot be undone." button2={"Reset"} button1={"Cancel"} button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.setItem("collectedString", ""); AsyncStorage.setItem("firstLogin", "true"); AsyncStorage.setItem("name", ""); AsyncStorage.setItem("islandName", ""); AsyncStorage.setItem("ToDoList", ""); this.setState({openRestart:true});}} popupVisible={this.state.open} close={() => this.setState({open:!this.state.open})}/>
           <Popup text="Restart Required" textLower="Please restart the application." button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.setItem("collectedString", "");}} popupVisible={this.state.openRestart} close={() => this.setState({open:!this.state.open})}/>
@@ -96,3 +109,14 @@ class SettingsPage extends Component {
   }
 }
 export default SettingsPage;
+
+
+class SettingsDivider extends Component {
+  render(){
+    return <>
+      <View style={{marginLeft:this.props.margin==="small" ? 10:23, width:"100%", height: 20, marginTop:9, marginBottom: 3}}>
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15,}}>{this.props.text}</TextFont>
+      </View>
+    </>
+  }
+}

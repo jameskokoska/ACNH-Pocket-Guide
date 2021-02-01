@@ -67,6 +67,7 @@ class App extends Component {
     this.openDrawer = this.openDrawer.bind(this);
     this.setPage = this.setPage.bind(this);
     this.setFirstLogin = this.setFirstLogin.bind(this);
+    this.handleBackButton = this.handleBackButton.bind(this);
     this.random = Math.random();
     this.numLogins;
     this.state = {
@@ -75,13 +76,14 @@ class App extends Component {
       open:false,
       fadeInTitle:true,
     }
+    this.lastPage = 0;
   }
   async componentDidMount(){
     // await AsyncStorage.setItem("firstLogin", "true");
 
     this.backHandler = BackHandler.addEventListener(
       "hardwareBackPress",
-      this.openDrawer
+      this.handleBackButton,
     );
 
     const firstLogin = await getStorage("firstLogin","true");
@@ -101,7 +103,9 @@ class App extends Component {
     //Load Settings
     global.settingsCurrent = settings;
     for(var i = 0; i<settings.length; i++){
-      global.settingsCurrent[i]["currentValue"] = await getStorage(settings[i]["keyName"],settings[i]["defaultValue"]);
+      if(global.settingsCurrent[i]["keyName"]!="breaker"){
+        global.settingsCurrent[i]["currentValue"] = await getStorage(settings[i]["keyName"],settings[i]["defaultValue"]);
+      }
       //console.log(global.settingsCurrent[i]["keyName"])
     }
     global.customTime = new Date(await getStorage("customDate",new Date().toString()));
@@ -145,6 +149,15 @@ class App extends Component {
     }
   }
 
+  handleBackButton(){
+    if(getSettingsString("settingsBackButtonChangePages")==="true"){
+      this.setPage(this.lastPage);
+    }else{
+      this.openDrawer();
+    }
+    return true;
+  }
+
   openDrawer() {
     if(this.state.loaded){
       this.drawer.openDrawer();
@@ -154,9 +167,12 @@ class App extends Component {
   }
 
   setPage(pageNum) {
-    console.log(pageNum)
-    if(this.state.pageNum!==pageNum)
-      this.setState({currentPage: pageNum})
+    console.log(this.lastPage);
+    if(this.state.currentPage!==pageNum){
+      this.lastPage = this.state.currentPage;
+      console.log(this.lastPage);
+      this.setState({currentPage: pageNum});
+    }
     this.drawer.closeDrawer();
   }
 
