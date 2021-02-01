@@ -4,6 +4,7 @@ import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import ListPage from '../components/ListPage';
 import colors from '../Colors.js';
 import {getMonthShort} from "../components/DateFunctions"
+import {getSettingsString} from "../LoadJsonData"
 
 const width = { width: Dimensions.get('window').width };
 
@@ -26,7 +27,7 @@ const FishRoute = () => (
     showVariations={[false]}
     title="Fish"
     activeCreaturesMonth={true}
-    leaveWarning = {global.settingsCurrent[4]["currentValue"]==="true" ? true : false}
+    leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
     imageProperty={["Icon Image"]}
     textProperty={["Name"]}
     textProperty2={["creatureTime"]}
@@ -57,7 +58,7 @@ const BugsRoute = () => (
     showVariations={[false]}
     title="Bugs"
     activeCreaturesMonth={true}
-    leaveWarning = {global.settingsCurrent[4]["currentValue"]==="true" ? true : false}
+    leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
     imageProperty={["Icon Image"]}
     textProperty={["Name"]}
     textProperty2={["creatureTime"]}
@@ -88,7 +89,7 @@ const SeaRoute = () => (
     showVariations={[false]}
     title="Sea Creatures"
     activeCreaturesMonth={true}
-    leaveWarning = {global.settingsCurrent[4]["currentValue"]==="true" ? true : false}
+    leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
     imageProperty={["Icon Image"]}
     textProperty={["Name"]}
     textProperty2={["creatureTime"]}
@@ -194,7 +195,7 @@ class MuseumPage extends Component {
     return(
       <TabView
         lazy
-        tabBarPosition={global.settingsCurrent[6]["currentValue"] === "true" ? "bottom" : "top"}
+        tabBarPosition={getSettingsString("settingsTabBarPosition") === "true" ? "bottom" : "top"}
         gestureHandlerProps={{ failOffsetX: this.state.index === 0 ? 1 : 100}}
         navigationState={this.state}
         renderScene={this.renderScene}

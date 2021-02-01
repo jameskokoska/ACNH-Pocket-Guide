@@ -27,6 +27,7 @@ import RecipesPopup from "../popups/RecipesPopup"
 import * as exports from "./FilterDefinitions"
 import PopupFilter from './PopupFilter'
 import TextFont from "./TextFont"
+import {getSettingsString} from "../LoadJsonData"
 
 //Note: popup height is not needed anymore
 //use tabs={false} if the page doesn't have  the tab bar
@@ -126,9 +127,9 @@ export default (props) =>{
     var previousVariation = "";
     var item;
     var dataLoaded2D = determineDataGlobal(props.dataGlobalName);
-    if(possibleFiltersState==="empty" && global.settingsCurrent[11]["currentValue"]==="true"){
+    if(possibleFiltersState==="empty" && getSettingsString("settingsUseFilters")==="true"){
       var possibleFilters = [];
-      if(global.settingsCurrent[global.settingsCurrent.length-2]["keyName"]==="settingsLogFilterDefinitions" && global.settingsCurrent[global.settingsCurrent.length-2]["currentValue"]==="true"){
+      if(getSettingsString("settingsLogFilterDefinitions")==="true"){
         var currentFilter;
         if(props.filters!==undefined){
           for(var x = 0; x < props.filters.length; x++){
@@ -179,7 +180,7 @@ export default (props) =>{
         } 
         setPossibleFilters(possibleFilters);
       }
-    } else if (global.settingsCurrent[11]["currentValue"]==="false") {
+    } else if (getSettingsString("settingsUseFilters")==="false") {
       setPossibleFilters([{label:"Filters turned off - Enable them in the settings", value:""}]);
     }
     
@@ -249,15 +250,15 @@ export default (props) =>{
               }
               //If current active creatures, don't add it if not active
               if(props.activeCreatures){
-                var hemispherePre = global.settingsCurrent[0]["currentValue"] === "true" ? "NH " : "SH "
+                var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH "
                 var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
                 if(!isActive2(item[hemispherePre+currentMonthShort],getCurrentDateObject().getHours())){
                   continue;
                 }
               }
               //If list only active creatures for the month, don't add it if === NA
-              if(props.activeCreaturesMonth && global.settingsCurrent[2]["currentValue"] === "true"){
-                var hemispherePre = global.settingsCurrent[0]["currentValue"] === "true" ? "NH " : "SH "
+              if(props.activeCreaturesMonth && getSettingsString("settingsListOnlyActiveCreatures") === "true"){
+                var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH "
                 var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
                 if(item[hemispherePre+currentMonthShort]==="NA"){
                   continue;
@@ -321,7 +322,7 @@ export default (props) =>{
   // //if bottom sheet is really large, allow scrolling
   var bottomSheetTopPadding = 0;
   
-  // if(props.popUpContainer!=undefined && props.popUpContainer[0][1]>=1000 && global.settingsCurrent[6]["currentValue"]==="false"){
+  // if(props.popUpContainer!=undefined && props.popUpContainer[0][1]>=1000 && getSettingsValue("settingsTabBarPosition")==="false"){
   //   bottomSheetTopPadding = 70;
   // }
 
@@ -493,17 +494,16 @@ class BottomSheetRender extends Component{
       tabCompensation = 10;
     } else if(this.props.tabs===false){
       tabCompensation = 10;
-    } else if(global.settingsCurrent[7].currentValue==="true"){
+    } else if(getSettingsString("settingsShowStatusBar")==="true"){
       heightCompensation = 10;
     }
-    if(global.settingsCurrent[10].currentValue==="true"){
+    if(getSettingsString("settingsLargerItemPreviews")==="true"){
       tabCompensation = tabCompensation-50;
       paddingBottom = 120;
     } else {
       paddingBottom = 100;
     }
-    console.log(global.settingsCurrent[7].currentValue)
-    if(global.settingsCurrent[7].currentValue==="false"&&this.props.tabs===false){
+    if(getSettingsString("settingsShowStatusBar")==="false"&&this.props.tabs===false){
       statusBarHeight = 20;
     }
 
@@ -535,7 +535,7 @@ class BottomSheetRender extends Component{
           backgroundColor: colors.white[global.darkMode],
           padding: 16,
           paddingBottom: paddingBottom,
-          marginTop: global.settingsCurrent[10].currentValue==="false" ? 80 : 160,
+          marginTop: getSettingsString("settingsLargerItemPreviews")==="false" ? 80 : 160,
         }}
         onLayout={(event) => {
             var {x, y, width, height} = event.nativeEvent.layout;

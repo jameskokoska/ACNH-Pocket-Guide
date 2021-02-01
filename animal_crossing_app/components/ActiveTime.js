@@ -3,6 +3,7 @@ import {AppRegistry, StyleSheet, ScrollView , StatusBar, Text, View, Dimensions,
 import colors from '../Colors.js';
 import Svg, { Circle, Rect } from 'react-native-svg';
 import {parseActiveTime, isActive, isActive2, getCurrentDateObject, getMonthShort} from "./DateFunctions"
+import {getSettingsString} from "../LoadJsonData";
 
 function getImage(name){
   switch(name){
@@ -250,7 +251,7 @@ class ActiveTime extends Component {
     var activeTimeImages = [];
 
     // gets current time stuff
-    var hemispherePre = global.settingsCurrent[0]["currentValue"] === "true" ? "NH " : "SH ";
+    var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH ";
     var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
     var currentHour = getCurrentDateObject().getHours();
     var currentTimeRange = this.props.item[hemispherePre+currentMonthShort];

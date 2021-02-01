@@ -6,6 +6,7 @@ import colors from '../Colors.js';
 import FlowerContainer from '../components/FlowerContainer'
 import TextFont from '../components/TextFont'
 import {capitalize} from "../LoadJsonData"
+import {getSettingsString} from "../LoadJsonData";
 
 const renderTabBar = props => (
   <TabBar
@@ -106,7 +107,7 @@ class FlowerPage extends Component {
     return(
       <TabView
         lazy
-        tabBarPosition={global.settingsCurrent[6]["currentValue"] === "true" ? "bottom" : "top"}
+        tabBarPosition={getSettingsString("settingsTabBarPosition") === "true" ? "bottom" : "top"}
         gestureHandlerProps={{ failOffsetX: this.state.index === 0 ? 1 : 100}}
         navigationState={this.state}
         renderScene={this.renderScene}

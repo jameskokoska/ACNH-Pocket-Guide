@@ -3,7 +3,7 @@ import {View, Dimensions, Text} from 'react-native';
 import ListPage from '../components/ListPage';
 import LottieView from 'lottie-react-native';
 import colors from '../Colors.js';
-
+import {getSettingsString} from "../LoadJsonData"
 
 class AllItemsPage extends Component {
   render(){
@@ -311,27 +311,27 @@ class AllItemsPage extends Component {
             ["Name"],
           ]}
           showVariations={[
-            global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-            global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-            global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-            global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-            global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-            global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-            global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-            global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-            global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-            global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-            global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-            global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-            global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-            global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-            global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-            global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-            global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-            global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-            global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-            global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-            global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
+            getSettingsString("settingsShowVariation")==="true" ? true : false,
+            getSettingsString("settingsShowVariation")==="true" ? true : false,
+            getSettingsString("settingsShowVariation")==="true" ? true : false,
+            getSettingsString("settingsShowVariation")==="true" ? true : false,
+            getSettingsString("settingsShowVariation")==="true" ? true : false,
+            getSettingsString("settingsShowVariation")==="true" ? true : false,
+            getSettingsString("settingsShowVariation")==="true" ? true : false,
+            getSettingsString("settingsShowVariation")==="true" ? true : false,
+            getSettingsString("settingsShowVariation")==="true" ? true : false,
+            getSettingsString("settingsShowVariation")==="true" ? true : false,
+            getSettingsString("settingsShowVariation")==="true" ? true : false,
+            getSettingsString("settingsShowVariation")==="true" ? true : false,
+            getSettingsString("settingsShowVariation")==="true" ? true : false,
+            getSettingsString("settingsShowVariation")==="true" ? true : false,
+            getSettingsString("settingsShowVariation")==="true" ? true : false,
+            getSettingsString("settingsShowVariation")==="true" ? true : false,
+            getSettingsString("settingsShowVariation")==="true" ? true : false,
+            getSettingsString("settingsShowVariation")==="true" ? true : false,
+            getSettingsString("settingsShowVariation")==="true" ? true : false,
+            getSettingsString("settingsShowVariation")==="true" ? true : false,
+            getSettingsString("settingsShowVariation")==="true" ? true : false,
             false,
             false,
             false,

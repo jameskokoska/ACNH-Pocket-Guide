@@ -138,10 +138,10 @@ export function checkOff(item, collected, dataGlobalName){
   console.log(item.checkListKey);
   if(item!==undefined){
      if(collected==="false"){
-      global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate([0,10,220,20]) : "";
+      getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10,220,20]) : "";
       global.collectionList.push(item.checkListKey)
     } else {
-      global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate(10) : "";
+      getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
       collectionListRemove(item.checkListKey)
     }
     collectionListSave();
@@ -336,6 +336,16 @@ export async function loadGlobalData(){
   ],"false");
 }
 
+export function getSettingsString(key){
+  for(var i = 0; i<settings.length; i++){
+    if(global.settingsCurrent[i]["keyName"]===key){
+      return global.settingsCurrent[i]["currentValue"];
+    }
+  }
+  return 0;
+}
+// import {getSettingsString} from "../LoadJsonData"
+// getSettingsString("settingsEnableVibrations")
 export const settings = [
   { //0
     "keyName" : "settingsNorthernHemisphere",
@@ -345,14 +355,14 @@ export const settings = [
     "displayName" : "Northern hemisphere",
     "description" : "Set your hemisphere, north or south. This will change the data displayed for creatures and events.",
   },
-  { //1
-    "keyName" : "settingsSkipSplashScreen",
-    "defaultValue" : "true",
-    "currentValue" : "",
-    "picture" : require("./assets/icons/hourglass.png"),
-    "displayName" : "Skip loading screen",
-    "description" : "If enabled, the app will load more efficiently and therefore will skip most of the opening plane/balloon animation",
-  },
+  // { //1
+  //   "keyName" : "settingsSkipSplashScreen",
+  //   "defaultValue" : "true",
+  //   "currentValue" : "",
+  //   "picture" : require("./assets/icons/hourglass.png"),
+  //   "displayName" : "Skip loading screen",
+  //   "description" : "If enabled, the app will load more efficiently and therefore will skip most of the opening plane/balloon animation",
+  // },
   { //2
     "keyName" : "settingsListOnlyActiveCreatures",
     "defaultValue" : "false",

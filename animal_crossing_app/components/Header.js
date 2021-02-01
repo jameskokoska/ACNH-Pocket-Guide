@@ -5,6 +5,7 @@ import FadeInOut from "./FadeInOut"
 import LottieView from 'lottie-react-native';
 import DelayInput from "react-native-debounce-input";
 import colors from "../Colors"
+import {getSettingsString} from "../LoadJsonData"
 
 const Header = (props) => {
   var filterImage;
@@ -47,7 +48,7 @@ const Header = (props) => {
                   delayTimeout={400}
                 />
               </View>
-              <TouchableOpacity onPress={()=>{props.openPopupFilter(); global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate(10) : "";}}>
+              <TouchableOpacity onPress={()=>{props.openPopupFilter(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
                 {filterImage}
               </TouchableOpacity>
             </View>
@@ -130,7 +131,7 @@ export const HeaderActive = (props) => {
               delayTimeout={400}
             />
           </View>
-          <TouchableOpacity onPress={()=>{props.openPopupFilter(); global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate(10) : "";}}>
+          <TouchableOpacity onPress={()=>{props.openPopupFilter(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
             {filterImage}
           </TouchableOpacity>
         </View>

@@ -2,13 +2,13 @@ import React, {Component} from 'react';
 import {Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text, TouchableNativeFeedback} from 'react-native';
 import LottieView from 'lottie-react-native';
 import colors from '../Colors'
-
+import {getSettingsString} from "../LoadJsonData"
 class FAB extends Component {
   componentDidMount() {
   }
   render(){
     return(
-        <TouchableOpacity onPress={() => {this.animation.play(); this.props.openDrawer(); global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate(10) : "";}} activeOpacity={0.3} style={[styles.FABShape,{backgroundColor: colors.FAB[global.darkMode]}]}>
+        <TouchableOpacity onPress={() => {this.animation.play(); this.props.openDrawer(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} activeOpacity={0.3} style={[styles.FABShape,{backgroundColor: colors.FAB[global.darkMode]}]}>
             <LottieView 
               ref={animation => {
                 this.animation = animation;

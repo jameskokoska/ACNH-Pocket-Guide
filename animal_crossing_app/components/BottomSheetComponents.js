@@ -6,6 +6,7 @@ import Check from './Check';
 import TextFont from './TextFont'
 import {commas, capitalize, checkOff, capitalizeFirst} from '../LoadJsonData'
 import {getPhotoCorner, getMaterialImage} from "./GetPhoto"
+import {getSettingsString} from "../LoadJsonData"
 
 export class CircularImage extends Component {
   render() {
@@ -13,9 +14,9 @@ export class CircularImage extends Component {
       return <View/>
     }
     return <View style={{width:"100%", alignItems: 'center'}}>
-      <View style={[styles.rowImageBackground,{backgroundColor:this.props.accentColor, top: global.settingsCurrent[10].currentValue==="false" ? -130/2-20 : -210/2-60, height: global.settingsCurrent[10].currentValue==="false" ? 130 : 210, width: global.settingsCurrent[10].currentValue==="false" ? 130 : 210,}]}>
+      <View style={[styles.rowImageBackground,{backgroundColor:this.props.accentColor, top: getSettingsString("settingsLargerItemPreviews")==="false" ? -130/2-20 : -210/2-60, height: getSettingsString("settingsLargerItemPreviews")==="false" ? 130 : 210, width: getSettingsString("settingsLargerItemPreviews")==="false" ? 130 : 210,}]}>
         <CachedImage
-          style={[styles.rowImage, {height: global.settingsCurrent[10].currentValue==="false" ? 95 : 180, width: global.settingsCurrent[10].currentValue==="false" ? 95 : 180,}]}
+          style={[styles.rowImage, {height: getSettingsString("settingsLargerItemPreviews")==="false" ? 95 : 180, width: getSettingsString("settingsLargerItemPreviews")==="false" ? 95 : 180,}]}
           source={{
             uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
           }}

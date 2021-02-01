@@ -3,6 +3,7 @@ import {View, ScrollView, Dimensions, Text} from 'react-native';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import ListPage from '../components/ListPage';
 import colors from '../Colors.js';
+import {getSettingsString} from "../LoadJsonData"
 
 const width = { width: Dimensions.get('window').width };
 
@@ -23,11 +24,11 @@ const FurnitureRoute = () => (
     filters = {["Tag", "Catalog", "Color 1","Color 2","Variation","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category",]}
     filterSearchable = {true}
     showVariations={[
-      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
+      getSettingsString("settingsShowVariation")==="true" ? true : false,
+      getSettingsString("settingsShowVariation")==="true" ? true : false,
+      getSettingsString("settingsShowVariation")==="true" ? true : false,
+      getSettingsString("settingsShowVariation")==="true" ? true : false,
+      getSettingsString("settingsShowVariation")==="true" ? true : false,
     ]}
     title="Furniture"
     imageProperty={[
@@ -98,16 +99,16 @@ const ClothingRoute = () => (
     filters={["Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ]}
     filterSearchable = {true}
     showVariations={[
-      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
+      getSettingsString("settingsShowVariation")==="true" ? true : false,
+      getSettingsString("settingsShowVariation")==="true" ? true : false,
+      getSettingsString("settingsShowVariation")==="true" ? true : false,
+      getSettingsString("settingsShowVariation")==="true" ? true : false,
+      getSettingsString("settingsShowVariation")==="true" ? true : false,
+      getSettingsString("settingsShowVariation")==="true" ? true : false,
+      getSettingsString("settingsShowVariation")==="true" ? true : false,
+      getSettingsString("settingsShowVariation")==="true" ? true : false,
+      getSettingsString("settingsShowVariation")==="true" ? true : false,
+      getSettingsString("settingsShowVariation")==="true" ? true : false,
     ]}
     title="Clothing"
     imageProperty={[
@@ -212,9 +213,9 @@ const FloorWallsRoute = () => (
     filters = {["Tag","Color 1","Color 2","Source","DIY","Size","Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series",]}
     filterSearchable = {true}
     showVariations={[
-      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
-      global.settingsCurrent[3]["currentValue"]==="true" ? true : false,
+      getSettingsString("settingsShowVariation")==="true" ? true : false,
+      getSettingsString("settingsShowVariation")==="true" ? true : false,
+      getSettingsString("settingsShowVariation")==="true" ? true : false,
     ]}
     title="Floor & Walls"
     imageProperty={[
@@ -291,7 +292,7 @@ class ItemsPage extends Component {
     return(
       <TabView
         lazy
-        tabBarPosition={global.settingsCurrent[6]["currentValue"] === "true" ? "bottom" : "top"}
+        tabBarPosition={getSettingsString("settingsTabBarPosition") === "true" ? "bottom" : "top"}
         gestureHandlerProps={{ failOffsetX: this.state.index === 0 ? 1 : 100}}
         navigationState={this.state}
         renderScene={this.renderScene}

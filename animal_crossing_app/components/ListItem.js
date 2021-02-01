@@ -17,6 +17,7 @@ import {getPhotoShadow} from "./GetPhoto"
 import {getMonthShort} from "./DateFunctions"
 import colors from "../Colors"
 import {getCurrentDateObject, parseActiveTime} from "./DateFunctions"
+import {getSettingsString} from "../LoadJsonData"
 
 const {width} = Dimensions.get('window');
 
@@ -48,7 +49,7 @@ class ListItem extends PureComponent{
 
     var boxColor = this.props.boxColor;
     if(this.props.leaveWarning){
-      var hemispherePre = global.settingsCurrent[0]["currentValue"] === "true" ? "NH " : "SH "
+      var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH "
       var nextMonthShort = getMonthShort(getCurrentDateObject().getMonth()+1);
       var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
       
@@ -62,10 +63,10 @@ class ListItem extends PureComponent{
       textProperty2Text = this.props.textProperty2[this.props.item.dataSet];
     }
     if(this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]==="creatureTime"){
-      var hemispherePre = global.settingsCurrent[0]["currentValue"] === "true" ? "NH " : "SH "
+      var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH "
       var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
       textProperty2Text = this.props.item[hemispherePre+currentMonthShort];
-      if(global.settingsCurrent[8].currentValue==="true" && textProperty2Text!=="NA" && textProperty2Text!=="All day"){
+      if(getSettingsString("settingsUse24HourClock")==="true" && textProperty2Text!=="NA" && textProperty2Text!=="All day"){
         var splitString = textProperty2Text.replace(/[^\x00-\x7F]/g, "");
         splitString = splitString.replace("  ", " ");
         splitString = splitString.split(" ");

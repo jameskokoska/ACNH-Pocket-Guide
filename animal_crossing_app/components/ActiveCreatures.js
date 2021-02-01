@@ -3,7 +3,7 @@ import {View, ScrollView, Dimensions, Text, LogBox} from 'react-native';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import ListPage from '../components/ListPage';
 import colors from '../Colors.js';
-
+import {getSettingsString} from "../LoadJsonData"
 
 class ActiveCreatures extends Component {
   constructor() {
@@ -15,7 +15,7 @@ class ActiveCreatures extends Component {
       <View style={{height: Dimensions.get('window').height}}>
       <ListPage 
           title=""
-          leaveWarning = {global.settingsCurrent[4]["currentValue"]==="true" ? true : false}
+          leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
           activeCreatures={true}
           scrollViewRef={this.props.scrollViewRef}
           gridType="smallGrid" //smallGrid, largeGrid, row

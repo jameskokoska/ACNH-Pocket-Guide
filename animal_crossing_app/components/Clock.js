@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {StyleSheet, Text, View, Image} from 'react-native';
 import TextFont from './TextFont';
 import {getCurrentDateObject, getMonth, getWeekDayShort} from './DateFunctions';
+import {getSettingsString} from "../LoadJsonData"
 
 class Clock extends Component {
   constructor(props){
@@ -12,7 +13,7 @@ class Clock extends Component {
     var hours = getCurrentDateObject().getHours();
     var minutes = getCurrentDateObject().getMinutes();
     var afternoon = false;
-    if(hours>12 && global.settingsCurrent[8].currentValue==="false"){
+    if(hours>12 && getSettingsString("settingsUse24HourClock")==="false"){
       hours=hours-12;
       afternoon=true;
     }
@@ -23,7 +24,7 @@ class Clock extends Component {
       minutes = "0" + minutes;
     }
     var afternoonDisplay
-    if(global.settingsCurrent[8].currentValue==="false"){
+    if(getSettingsString("settingsUse24HourClock")==="false"){
       afternoonDisplay = afternoon ? "PM" : "AM";
     } else {
       afternoonDisplay = ""
@@ -44,7 +45,7 @@ class Clock extends Component {
       var hours = getCurrentDateObject().getHours();
       var minutes = getCurrentDateObject().getMinutes();
       var afternoon = false;
-      if(hours>12 && global.settingsCurrent[8].currentValue==="false"){
+      if(hours>12 && getSettingsString("settingsUse24HourClock")==="false"){
         hours=hours-12;
         afternoon=true;
       }
@@ -55,7 +56,7 @@ class Clock extends Component {
         minutes = "0" + minutes;
       }
       var afternoonDisplay
-      if(global.settingsCurrent[8].currentValue==="false"){
+      if(getSettingsString("settingsUse24HourClock")==="false"){
         afternoonDisplay = afternoon ? "PM" : "AM";
       } else {
         afternoonDisplay = ""

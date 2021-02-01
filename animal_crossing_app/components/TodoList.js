@@ -8,6 +8,7 @@ import Check from './Check';
 import colors from '../Colors'
 import PopupAddTask from "./PopupAddTask"
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {getSettingsString} from "../LoadJsonData"
 
 class TodoList extends Component {
   constructor(props){
@@ -40,9 +41,9 @@ class TodoList extends Component {
     newTaskList[index].finished = !this.state.data[index].finished;
     this.setState({data:newTaskList})
     if(newTaskList[index].finished!==false){
-      global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate([0,10,220,20]) : "";
+      getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10,220,20]) : "";
     } else {
-      global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate(10) : "";
+      getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
     }
     this.saveList(newTaskList);
   }
@@ -50,7 +51,7 @@ class TodoList extends Component {
   deleteItem = (index) => {
     const newTaskList = this.state.data.filter((item,i) => i!=index);
     this.setState({data:newTaskList});
-    global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate(10) : "";
+    getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
     this.saveList(newTaskList);
   }
 
@@ -58,7 +59,7 @@ class TodoList extends Component {
   }
 
   addItemPopup = (open) => {
-    global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate(10) : "";
+    getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
     this.setState({open:open})
   }
 
@@ -75,7 +76,7 @@ class TodoList extends Component {
       currentData[i].finished=false;
     }
     this.setState({data:currentData});
-    global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate([30,30,30,30,30,30]) : "";
+    getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([30,30,30,30,30,30]) : "";
     this.saveList(currentData);
   }
 

@@ -15,6 +15,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import VillagerPopupPopup from "../popups/VillagerPopupPopup"
 import {getCurrentDateObject} from '../components/DateFunctions';
 import TodoList from '../components/TodoList';
+import {getSettingsString} from "../LoadJsonData"
 
 function addDays(date, days) {
   var result = new Date(date);
@@ -159,7 +160,7 @@ class HomePage extends Component {
             <TextFont bold={true} style={{marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>Island</TextFont>
             <View style={{height: 5}}/>
             <TouchableOpacity onPress={() => this.props.setPage(10)}>
-              <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{global.settingsCurrent[0]["currentValue"]==="true" ? "Northern Hemisphere" : "Southern Hemisphere"}</TextFont>
+              <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{getSettingsString("settingsNorthernHemisphere")==="true" ? "Northern Hemisphere" : "Southern Hemisphere"}</TextFont>
             </TouchableOpacity>
           </View>
           <View style={{height: 30}}/>

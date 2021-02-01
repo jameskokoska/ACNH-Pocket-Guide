@@ -23,7 +23,7 @@ import LottieView from 'lottie-react-native';
 import Popup from './components/Popup';
 import CreditsPage from './pages/CreditsPage';
 import FlowerPage from './pages/FlowerPage';
-import {getStorage, getStorageData, settings, loadGlobalData} from './LoadJsonData';
+import {getStorage, getStorageData, getSettingsString, settings, loadGlobalData} from './LoadJsonData';
 import Onboard from './pages/Onboard';
 import colors from './Colors.js';
 import ActiveTime from './components/ActiveTime.js';
@@ -117,26 +117,25 @@ class App extends Component {
     });
 
     console.log("DONE Loading")
-    var splashScreenDelay = global.settingsCurrent[1].currentValue==="true" ? 0 : 500
     this.timeoutHandle = setTimeout(()=>{
       this.setState({
         fadeInTitle: false,
         firstLogin: firstLogin,
       });
-    }, 0+splashScreenDelay);
+    }, 0);
     this.timeoutHandle = setTimeout(()=>{
       this.setState({
         loaded:true,
       });
-    }, 10+splashScreenDelay);
+    }, 10);
   }
 
   updateDarkMode(){
-    if(global.settingsCurrent[12]["currentValue"]==="true"){
+    if(getSettingsString("settingsAutoDarkMode")==="true"){
       global.darkMode = Appearance.getColorScheme()==="light" ? 0 : 1;
       global.darkModeReverse = Appearance.getColorScheme()==="light" ? 1 : 0;
     } else {
-      if(global.settingsCurrent[13]["currentValue"]==="true"){
+      if(getSettingsString("settingsDarkMode")==="true"){
         global.darkMode = 1;
         global.darkModeReverse = 0;
       }else {
@@ -149,7 +148,7 @@ class App extends Component {
   openDrawer() {
     if(this.state.loaded){
       this.drawer.openDrawer();
-      global.settingsCurrent[9].currentValue==="true" ? Vibration.vibrate(8) : "";
+      getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(8) : "";
     }
     return true;
   }
@@ -167,7 +166,7 @@ class App extends Component {
   
   render(){
     var fab;
-    if(global.settingsCurrent!==undefined&&global.settingsCurrent[5]["currentValue"]==="true"){
+    if(global.settingsCurrent!==undefined&&getSettingsString("settingsShowFAB")==="true"){
       fab = <FAB openDrawer={this.openDrawer}/>;
     } else {
       fab = <View/>;
@@ -237,7 +236,7 @@ class App extends Component {
           ref={_drawer => (this.drawer = _drawer)} 
           drawerWidth={Dimensions.get('window').width} drawerPosition={"left"} 
           renderNavigationView={() => <NavigationView setPage={this.setPage} currentPage={this.state.currentPage}/>}>
-            <StatusBar hidden={global.settingsCurrent[7]["currentValue"]==="false"} backgroundColor="#1c1c1c" style="light" />
+            <StatusBar hidden={getSettingsString("settingsShowStatusBar")==="false"} backgroundColor="#1c1c1c" style="light" />
             {currentPageView}
           {fab}
         </DrawerLayoutAndroid>

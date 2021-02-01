@@ -3,6 +3,7 @@ import {Image, Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, Vie
 import TextFont from './TextFont'
 import {getPhoto} from './GetPhoto'
 import {getCurrentDateObject} from './DateFunctions';
+import {getSettingsString} from "../LoadJsonData"
 
 // <EventContainer 
 //  backgroundColor="black" 
@@ -45,7 +46,7 @@ export function getEventsDay(currentDate){
   var currentYear = currentDate.getFullYear();
   var dayOfWeek = currentDate.getDay()
   var totalEvents = [];
-  var northernHemisphere = global.settingsCurrent[0]["currentValue"]==="true";
+  var northernHemisphere = getSettingsString("settingsNorthernHemisphere")==="true";
   var eventDatum;
   if(dayOfWeek===0){
     eventDatum = {

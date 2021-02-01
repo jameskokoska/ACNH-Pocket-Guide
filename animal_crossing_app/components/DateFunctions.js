@@ -1,9 +1,10 @@
 import * as Font from 'expo-font';
 import React, {Component} from 'react';
 import {Text} from 'react-native';
+import {getSettingsString} from "../LoadJsonData"
 
 function getCurrentDateObject(){
-  if(global.settingsCurrent[global.settingsCurrent.length-1]["currentValue"]==="true"){
+  if(getSettingsString("settingsUseCustomDate")==="true"){
     return global.customTime;
   } else {
     return new Date();
