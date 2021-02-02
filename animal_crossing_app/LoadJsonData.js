@@ -464,7 +464,7 @@ export const settings = [
   // },
   {
     "keyName" : "breaker",
-    "text" : "Interface Layout",
+    "text" : "Interface layout",
   },
   {
     "keyName" : "settingsShowFAB",

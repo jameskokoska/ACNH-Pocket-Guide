@@ -48,7 +48,7 @@ class SettingsPage extends Component {
             {
               if(setting["keyName"]!="breaker"){
                 return <SettingsContainer 
-                  key={setting["keyName"]} 
+                  key={setting["keyName"]+index.toString()} 
                   currentValue={setting["currentValue"]} 
                   backgroundColor={colors.white[global.darkMode]} 
                   textColor={colors.textBlack[global.darkMode]} 
@@ -61,7 +61,8 @@ class SettingsPage extends Component {
               } else {
                 return <SettingsDivider
                   text={setting["text"]}
-                  keyName={setting["keyName"]+index.toString()}
+                  keyName={setting["keyName"]}
+                  key={setting["keyName"]+index.toString()}
                 />
               }
               
@@ -94,7 +95,7 @@ class SettingsPage extends Component {
           
           <View style={{height: 20}}/>
           <ButtonComponent text="Reset Data" onPress={() => {this.setState({open:true})}} vibrate={100} color={colors.cancelButton[global.darkMode]}/>
-          <Popup text="Reset Data" textLower="Would you like to reset your collection? This action cannot be undone." button2={"Reset"} button1={"Cancel"} button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.setItem("collectedString", ""); AsyncStorage.setItem("firstLogin", "true"); AsyncStorage.setItem("name", ""); AsyncStorage.setItem("islandName", ""); AsyncStorage.setItem("ToDoList", ""); this.setState({openRestart:true});}} popupVisible={this.state.open} close={() => this.setState({open:!this.state.open})}/>
+          <Popup text="Reset Data" textLower="Would you like to reset your collection? This action cannot be undone." button2={"Reset"} button1={"Cancel"} button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.clear(); this.setState({openRestart:true});}} popupVisible={this.state.open} close={() => this.setState({open:!this.state.open})}/>
           <Popup text="Restart Required" textLower="Please restart the application." button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.setItem("collectedString", "");}} popupVisible={this.state.openRestart} close={() => this.setState({open:!this.state.open})}/>
           <View style={{height:50}}/>
           <TouchableOpacity onPress={() => Linking.openURL('mailto:dapperappdeveloper@gmail.com') }>

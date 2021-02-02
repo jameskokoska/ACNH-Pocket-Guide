@@ -44,6 +44,17 @@
         "Image" : "bugs.png"
     },
     {
+        "Name": "Festivale",
+        "Month": "Feb",
+        "Day Start": "15",
+        "Day End": "NA",
+        "Special Day" : "NA",
+        "Special Occurrence": "NA",
+        "Hemisphere": "NA",
+        "Time" : "all day",
+        "Image" : "popper.png"
+    },
+    {
         "Name": "Valentine's Day",
         "Month": "Feb",
         "Day Start": "14",
@@ -52,7 +63,7 @@
         "Special Occurrence": "NA",
         "Hemisphere": "NA",
         "Time" : "all day",
-        "Image" : "leaf.png"
+        "Image" : "heart.png"
     },
     {
         "Name": "Bunny Day",

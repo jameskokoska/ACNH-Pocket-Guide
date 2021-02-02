@@ -78,7 +78,7 @@ class PopupAddTask extends Component {
               placeholder={"Select photo..."}
               dropDownMaxHeight={200}
               containerStyle={{height: 45}}
-              style={[{width: "100%", borderWidth: 0, backgroundColor: colors.lightDarkAccent[global.darkMode], borderTopLeftRadius: 8, borderTopRightRadius: 8,borderBottomLeftRadius: 8, borderBottomRightRadius: 8}]}
+              style={[{width: "100%", borderWidth: 0, backgroundColor: colors.lightDarkAccentHeavy[global.darkMode], borderTopLeftRadius: 8, borderTopRightRadius: 8,borderBottomLeftRadius: 8, borderBottomRightRadius: 8}]}
               itemStyle={{
                   justifyContent: 'flex-start'
               }}
