@@ -152,6 +152,12 @@ class ListItem extends PureComponent{
         priceComponent = <View style={{flexDirection:"row", alignItems:"center", justifyContent:"center", marginTop: 3}}><Image style={{width:15,height:15,resizeMode:'contain',  marginRight:3}} source={require("../assets/icons/bellBag.png")}/><TextFont bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{commas(this.props.item["Buy"])}</TextFont></View>
       } else if(this.props.textProperty2==="construction" && this.props.item["Sell"] !== undefined){
         priceComponent = <View style={{flexDirection:"row", alignItems:"center", justifyContent:"center", marginTop: 3}}><Image style={{width:15,height:15,resizeMode:'contain',  marginRight:3}} source={require("../assets/icons/coin.png")}/><TextFont bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{commas(this.props.item["Sell"])}</TextFont></View>
+      } else if(this.props.textProperty2==="cards"){
+        if(this.props.item[getSettingsString("settingsNorthernHemisphere") === "true" ? "NH Start Date":"SH Start Date"] !== (undefined || "NA")){
+          priceComponent = <View style={{flexDirection:"row", alignItems:"center", justifyContent:"center", marginTop: 3}}><Image style={{width:15,height:15,resizeMode:'contain',  marginRight:3}} source={require("../assets/icons/clockIcon.png")}/><TextFont bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{this.props.item[getSettingsString("settingsNorthernHemisphere") === "true" ? "NH Start Date":"SH Start Date"] + " - " + this.props.item[getSettingsString("settingsNorthernHemisphere") === "true" ? "NH End Date":"SH End Date"]}</TextFont></View>
+        } else if (this.props.item["Buy"]==="NFS") {
+          priceComponent = <TextFont bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{"NFS"}</TextFont>
+        }
       }
       return( 
         <View style={styles.gridWrapper}>

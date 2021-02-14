@@ -84,6 +84,8 @@ export function determineDataGlobal(datakeyName){
     return global.dataLoadedAll;
   else if(datakeyName==="dataLoadedCreatures")
     return global.dataLoadedCreatures;
+  else if(datakeyName==="dataLoadedCards")
+    return global.dataLoadedCards;
 
 }
 
@@ -125,6 +127,8 @@ export function updateDataGlobal(datakeyName, index, collected, dataSet){
     global.dataLoadedAll[dataSet][index].collected=collected;
   else if(datakeyName==="dataLoadedCreatures")
     global.dataLoadedCreatures[dataSet][index].collected=collected;
+  else if(datakeyName==="dataLoadedCards")
+    global.dataLoadedCards[dataSet][index].collected=collected;
 }
 
 export function resetFilters(){
@@ -269,6 +273,7 @@ export async function loadGlobalData(){
   ],"false");
   global.dataLoadedTools = await getStorageData([require("./assets/data/tools.json")],[["toolsCheckList","Name","Variation"]],"false");
   global.dataLoadedRecipes = await getStorageData([require("./assets/data/recipes.json")],[["recipesCheckList","Name"]],"false");
+  global.dataLoadedCards = await getStorageData([require("./assets/data/messagecards.json")],[["cardsCheckList","Name"]],"false");
   global.dataLoadedAll = await getStorageData(
   [
     require("./assets/data/housewares.json"),
@@ -337,9 +342,11 @@ export async function loadGlobalData(){
 }
 
 export function getSettingsString(key){
-  for(var i = 0; i<settings.length; i++){
-    if(global.settingsCurrent[i]["keyName"]===key){
-      return global.settingsCurrent[i]["currentValue"];
+  if(settings!==undefined||global.settingsCurrent!==undefined){
+    for(var i = 0; i<settings.length; i++){
+      if(global.settingsCurrent[i]["keyName"]===key){
+        return global.settingsCurrent[i]["currentValue"];
+      }
     }
   }
   return 0;

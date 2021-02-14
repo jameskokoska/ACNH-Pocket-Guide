@@ -23,6 +23,7 @@ import LottieView from 'lottie-react-native';
 import Popup from './components/Popup';
 import CreditsPage from './pages/CreditsPage';
 import FlowerPage from './pages/FlowerPage';
+import CardsPage from './pages/CardsPage';
 import {getStorage, getStorageData, getSettingsString, settings, loadGlobalData} from './LoadJsonData';
 import Onboard from './pages/Onboard';
 import colors from './Colors.js';
@@ -51,9 +52,10 @@ function NavigationView(props) {
         <SidebarElement image={require("./assets/icons/cat.png")} title="Villagers" pageNum={7} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectVillagers[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
         <SidebarElement image={require("./assets/icons/construction.png")} title="Construction" pageNum={8} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectConstruction[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
         <SidebarElement image={require("./assets/icons/flower.png")} title="Flowers" pageNum={9} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectMisc[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
+        <SidebarElement image={require("./assets/icons/envelope.png")} title="Letters" pageNum={10} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectCards[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
         <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:3, marginLeft:14, marginRight: 14, marginTop: 10, marginBottom: 10}}/>
-        <SidebarElement image={require("./assets/icons/settings.png")} title="Settings" pageNum={10} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectSettings[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-        <SidebarElement image={require("./assets/icons/magnifyingGlass.png")} title="About" pageNum={11} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectAbout[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
+        <SidebarElement image={require("./assets/icons/settings.png")} title="Settings" pageNum={11} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectSettings[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
+        <SidebarElement image={require("./assets/icons/magnifyingGlass.png")} title="About" pageNum={12} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectAbout[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
         <View style={{margin:15}}/>
       </ScrollView>
     </View>
@@ -150,7 +152,7 @@ class App extends Component {
   }
 
   handleBackButton(){
-    if(getSettingsString("settingsBackButtonChangePages")==="true"){
+    if(this.state.loaded && getSettingsString("settingsBackButtonChangePages")==="true"){
       this.setPage(this.lastPage);
     }else{
       this.openDrawer();
@@ -167,13 +169,16 @@ class App extends Component {
   }
 
   setPage(pageNum) {
-    console.log(this.lastPage);
-    if(this.state.currentPage!==pageNum){
-      this.lastPage = this.state.currentPage;
+    if(this.state.loaded){
       console.log(this.lastPage);
-      this.setState({currentPage: pageNum});
+      if(this.state.currentPage!==pageNum){
+        this.lastPage = this.state.currentPage;
+        console.log(this.lastPage);
+        this.setState({currentPage: pageNum});
+      }
+      this.drawer.closeDrawer();
     }
-    this.drawer.closeDrawer();
+    return true;
   }
 
   setFirstLogin(firstLogin){
@@ -181,12 +186,6 @@ class App extends Component {
   }
   
   render(){
-    var fab;
-    if(global.settingsCurrent!==undefined&&getSettingsString("settingsShowFAB")==="true"){
-      fab = <FAB openDrawer={this.openDrawer}/>;
-    } else {
-      fab = <View/>;
-    }
     
     var currentPageView;
     if (this.state.currentPage===0){
@@ -207,11 +206,13 @@ class App extends Component {
       currentPageView = <VillagersPage/>
     } else if (this.state.currentPage===8){
       currentPageView = <ConstructionPage/>
-    }else if (this.state.currentPage===9){
+    } else if (this.state.currentPage===9){
       currentPageView = <FlowerPage/>
     } else if (this.state.currentPage===10){
-      currentPageView = <SettingsPage/>
+      currentPageView = <CardsPage/>
     } else if (this.state.currentPage===11){
+      currentPageView = <SettingsPage/>
+    } else if (this.state.currentPage===12){
       currentPageView = <CreditsPage/>
     } else {
       currentPageView = <Text>Default</Text>
@@ -243,6 +244,12 @@ class App extends Component {
       return <Onboard setFirstLogin={this.setFirstLogin}/>
     } else {
       this.updateDarkMode();
+      var fab;
+      if(global.settingsCurrent!==undefined&&getSettingsString("settingsShowFAB")==="true"){
+        fab = <FAB openDrawer={this.openDrawer}/>;
+      } else {
+        fab = <View/>;
+      }
       return (
         <>
         <PopupRating numLogins={this.numLogins}/>
