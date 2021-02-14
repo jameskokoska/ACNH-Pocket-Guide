@@ -5,6 +5,7 @@ import CachedImage from 'react-native-expo-cached-image';
 import Accordion from 'react-native-collapsible/Accordion';
 import TextFont from './TextFont'
 import ButtonComponent from './ButtonComponent'
+import {getSettingsString} from '../LoadJsonData';
 
 class AccordionContainer extends Component {
   constructor(props){
@@ -39,18 +40,23 @@ class AccordionContainer extends Component {
     this.setState({ activeSections });
   };
   render(){
-    return <View style={{width: "100%", alignItems: "center"}}>
-      <View style={{height:20}}/>
-      <Accordion
-        sections={this.props.sections}
-        activeSections={this.state.activeSections}
-        renderHeader={this.renderHeader}
-        renderContent={this.renderContent}
-        onChange={this.updateSections}
-        sectionContainerStyle={{margin:3}}
-        underlayColor={"#0000000"}
-      />
-    </View>
+    if(getSettingsString("settingsShowImageAccordion")==="true"){
+      return <View style={{width: "100%", alignItems: "center"}}>
+        <View style={{height:20}}/>
+        <Accordion
+          sections={this.props.sections}
+          activeSections={this.state.activeSections}
+          renderHeader={this.renderHeader}
+          renderContent={this.renderContent}
+          onChange={this.updateSections}
+          sectionContainerStyle={{margin:3}}
+          underlayColor={"#0000000"}
+        />
+      </View>
+    } else {
+      return <View/>
+    }
+    
   }
 }
 export default AccordionContainer ;
