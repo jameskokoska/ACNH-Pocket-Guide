@@ -4,13 +4,29 @@ import {Dimensions, Image, View, Text} from 'react-native';
 import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
 import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"
+import AccordionContainer from "../components/AccordionContainer"
 
-
+const sections = [
+  {
+    title: 'View house',
+    image: "House Image",
+    height: 300,
+    widthSubtraction: 0.1,
+    marginTop: 0,
+    marginBottom: 20,
+  },
+  {
+    title: 'View photo',
+    image: "Photo Image",
+    height: 250,
+    widthSubtraction: 0.1,
+    marginTop: 20,
+    marginBottom: 20,
+  },
+];
 class VillagerPopup extends Component {
   constructor(props){
     super(props);
-    this.state={
-    }
   }
   render(){
     return <View style={{width: "100%", alignItems: "center"}}>
@@ -51,6 +67,11 @@ class VillagerPopup extends Component {
         image={require("../assets/icons/speechBubble.png")} 
         item={this.props.item}
         textProperty={["Favorite Saying"]}
+      />
+      <View style={{height:20}}/>
+      <AccordionContainer
+        sections={sections}
+        item={this.props.item}
       />
     </View>
   }

@@ -5,8 +5,25 @@ import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, Circul
 import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"
 import ActiveTime from "../components/ActiveTime";
+import AccordionContainer from "../components/AccordionContainer"
 
-
+const sections = [
+  {
+    title: 'View critterpedia',
+    image: "Critterpedia Image",
+    widthSubtraction: 0.4,
+    height: 200,
+    marginTop: 20,
+    marginBottom: 20,
+  },
+  {
+    title: 'View furniture',
+    image: "Furniture Image",
+    widthSubtraction: 0.1,
+    height: 150,
+    marginTop: 20,
+  },
+];
 class FishPopup extends Component {
   constructor(props){
     super(props);
@@ -26,6 +43,10 @@ class FishPopup extends Component {
         ending2={" bells"}
       />
       <ActiveTime item={this.props.item}/>
+      <AccordionContainer
+        sections={sections}
+        item={this.props.item}
+      />
     </View>
   }
 }
