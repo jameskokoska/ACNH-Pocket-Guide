@@ -59,6 +59,7 @@
     "react-native-safe-modules": "^1.0.0",
     "react-native-screens": "~2.10.1",
     "react-native-scrollable-tab-view": "^1.0.0",
+    "react-native-side-menu": "^1.1.3",
     "react-native-side-menu-updated": "^1.3.1",
     "react-native-spring-scrollview": "^2.0.23",
     "react-native-svg": "^12.1.0",

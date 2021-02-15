@@ -279,6 +279,7 @@ class TurnipItem extends Component {
             placeholder={"Sunday Price"}
             defaultValue={this.props.item.purchase}
             placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+            multiline={true}
           />
         </View>
       )
@@ -294,6 +295,7 @@ class TurnipItem extends Component {
             placeholder={"AM"}
             defaultValue={this.props.item.am}
             placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+            multiline={true}
           />
           <View style={{width:"5%"}}/>
           <TextInput
@@ -303,6 +305,7 @@ class TurnipItem extends Component {
             placeholder={"PM"}
             defaultValue={this.props.item.pm}
             placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+            multiline={true}
           />
         </View>
       )

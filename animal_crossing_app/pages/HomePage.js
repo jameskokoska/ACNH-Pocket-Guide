@@ -148,6 +148,7 @@ class HomePage extends Component {
               placeholder={"[Name]"}
               placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
               defaultValue={global.name}
+              multiline={true}
             />
             <TextFont bold={true} style={{marginTop: 0, marginBottom: -8, color:colors.fishText[global.darkMode]}}>of</TextFont>
             <TextInput
@@ -156,6 +157,7 @@ class HomePage extends Component {
               placeholder={"[Island]"}
               placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
               defaultValue={global.islandName}
+              multiline={true}
             />
             <TextFont bold={true} style={{marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>Island</TextFont>
             <View style={{height: 5}}/>

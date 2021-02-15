@@ -1,5 +1,5 @@
 import React, {useRef, Component} from 'react';
-import {Vibration, BackHandler, Button, Image, ScrollView, Dimensions, Text, View, DrawerLayoutAndroid, Animated, SafeAreaView, StatusBar, StyleSheet, ActivityIndicator} from 'react-native';
+import {Vibration, BackHandler, Button, Image, ScrollView, Dimensions, Text, View, Animated, SafeAreaView, StatusBar, StyleSheet, ActivityIndicator} from 'react-native';
 import ListPage from './components/ListPage';
 import SidebarElement from './components/SidebarElement';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
@@ -31,13 +31,14 @@ import ActiveTime from './components/ActiveTime.js';
 import * as Font from 'expo-font';
 import PopupRating from './components/PopupRating'
 import { Appearance } from 'react-native-appearance';
+import SideMenu from 'react-native-side-menu-updated'
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
 
 function NavigationView(props) {
   return (
-    <View style={{width: 290, height:"100%", backgroundColor:colors.textWhite[global.darkMode]}}>
+    <View style={{width: "100%", height:"100%", backgroundColor:colors.textWhite[global.darkMode]}}>
       <ScrollView>
         <View style={{backgroundColor: colors.topSidebar[global.darkMode], marginBottom: 10}}>
           <TextFont bold={true} style={{marginLeft: 15, marginTop: 130, marginBottom: 10, fontSize: 34, color: colors.textBlack[global.darkMode]}}>ACNH Pocket</TextFont>
@@ -162,7 +163,7 @@ class App extends Component {
 
   openDrawer() {
     if(this.state.loaded){
-      this.drawer.openDrawer();
+      this.sideMenu.openMenu(true);
       getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(8) : "";
     }
     return true;
@@ -176,7 +177,7 @@ class App extends Component {
         console.log(this.lastPage);
         this.setState({currentPage: pageNum});
       }
-      this.drawer.closeDrawer();
+      this.sideMenu.openMenu(false);
     }
     return true;
   }
@@ -186,38 +187,6 @@ class App extends Component {
   }
   
   render(){
-    
-    var currentPageView;
-    if (this.state.currentPage===0){
-      currentPageView = <FadeInOut fadeIn={true}><HomePage setPage={this.setPage}/></FadeInOut>
-    } else if (this.state.currentPage===1){
-      currentPageView = <AllItemsPage/>
-    } else if(this.state.currentPage===2){
-      currentPageView = <MuseumPage/>
-    } else if (this.state.currentPage===3){
-      currentPageView = <ItemsPage/>
-    } else if (this.state.currentPage===4){
-      currentPageView = <SongsPage/>
-    } else if (this.state.currentPage===5){
-      currentPageView = <EmoticonsPage/>
-    } else if (this.state.currentPage===6){
-      currentPageView = <CraftingPage/>
-    } else if (this.state.currentPage===7){
-      currentPageView = <VillagersPage/>
-    } else if (this.state.currentPage===8){
-      currentPageView = <ConstructionPage/>
-    } else if (this.state.currentPage===9){
-      currentPageView = <FlowerPage/>
-    } else if (this.state.currentPage===10){
-      currentPageView = <CardsPage/>
-    } else if (this.state.currentPage===11){
-      currentPageView = <SettingsPage/>
-    } else if (this.state.currentPage===12){
-      currentPageView = <CreditsPage/>
-    } else {
-      currentPageView = <Text>Default</Text>
-    }
-
     if(!this.state.loaded){
       var splashScreens = [require('./assets/airplane.json'),require('./assets/balloon.json')];
       var chosenSplashScreen = splashScreens[Math.floor(this.random * splashScreens.length)];
@@ -243,6 +212,37 @@ class App extends Component {
     } else if (this.state.firstLogin==="true"){
       return <Onboard setFirstLogin={this.setFirstLogin}/>
     } else {
+      
+      var currentPageView;
+      if (this.state.currentPage===0){
+        currentPageView = <FadeInOut fadeIn={true}><HomePage setPage={this.setPage}/></FadeInOut>
+      } else if (this.state.currentPage===1){
+        currentPageView = <AllItemsPage/>
+      } else if(this.state.currentPage===2){
+        currentPageView = <MuseumPage/>
+      } else if (this.state.currentPage===3){
+        currentPageView = <ItemsPage/>
+      } else if (this.state.currentPage===4){
+        currentPageView = <SongsPage/>
+      } else if (this.state.currentPage===5){
+        currentPageView = <EmoticonsPage/>
+      } else if (this.state.currentPage===6){
+        currentPageView = <CraftingPage/>
+      } else if (this.state.currentPage===7){
+        currentPageView = <VillagersPage/>
+      } else if (this.state.currentPage===8){
+        currentPageView = <ConstructionPage/>
+      } else if (this.state.currentPage===9){
+        currentPageView = <FlowerPage/>
+      } else if (this.state.currentPage===10){
+        currentPageView = <CardsPage/>
+      } else if (this.state.currentPage===11){
+        currentPageView = <SettingsPage/>
+      } else if (this.state.currentPage===12){
+        currentPageView = <CreditsPage/>
+      } else {
+        currentPageView = <Text>Default</Text>
+      }
       this.updateDarkMode();
       var fab;
       if(global.settingsCurrent!==undefined&&getSettingsString("settingsShowFAB")==="true"){
@@ -252,17 +252,19 @@ class App extends Component {
       }
       return (
         <>
-        <PopupRating numLogins={this.numLogins}/>
-        <View style={{position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
-        <DrawerLayoutAndroid style={{elevation: 0,}} 
-          drawerBackgroundColor="rgba(0,0,0,0.01)" 
-          ref={_drawer => (this.drawer = _drawer)} 
-          drawerWidth={Dimensions.get('window').width} drawerPosition={"left"} 
-          renderNavigationView={() => <NavigationView setPage={this.setPage} currentPage={this.state.currentPage}/>}>
+          <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
+          <SideMenu
+            ref={(ref) => this.sideMenu = ref}
+            edgeHitWidth={1000} 
+            toleranceY={500}
+            menu={<NavigationView setPage={this.setPage} currentPage={this.state.currentPage}/>}
+          >
+            <PopupRating numLogins={this.numLogins}/>
+            <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
             <StatusBar hidden={getSettingsString("settingsShowStatusBar")==="false"} backgroundColor="#1c1c1c" style="light" />
             {currentPageView}
+          </SideMenu>
           {fab}
-        </DrawerLayoutAndroid>
         </>
       );
     }
