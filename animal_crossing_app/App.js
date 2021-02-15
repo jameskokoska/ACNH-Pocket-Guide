@@ -1,7 +1,6 @@
 import React, {useRef, Component} from 'react';
 import {Vibration, BackHandler, Button, Image, ScrollView, Dimensions, Text, View, Animated, SafeAreaView, StatusBar, StyleSheet, ActivityIndicator} from 'react-native';
 import ListPage from './components/ListPage';
-import SidebarElement from './components/SidebarElement';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import FAB from './components/FAB';
 import SongsPage from './pages/SongsPage';
@@ -31,37 +30,12 @@ import ActiveTime from './components/ActiveTime.js';
 import * as Font from 'expo-font';
 import PopupRating from './components/PopupRating'
 import { Appearance } from 'react-native-appearance';
-import SideMenu from 'react-native-side-menu-updated'
+import SideMenu from './components/SideMenu'
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
 
-function NavigationView(props) {
-  return (
-    <View style={{width: "100%", height:"100%", backgroundColor:colors.textWhite[global.darkMode]}}>
-      <ScrollView>
-        <View style={{backgroundColor: colors.topSidebar[global.darkMode], marginBottom: 10}}>
-          <TextFont bold={true} style={{marginLeft: 15, marginTop: 130, marginBottom: 10, fontSize: 34, color: colors.textBlack[global.darkMode]}}>ACNH Pocket</TextFont>
-        </View>
-        <SidebarElement image={require("./assets/icons/house.png")} title="Home" pageNum={0} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectHome[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-        <SidebarElement image={require("./assets/icons/book.png")} title="Everything" pageNum={1} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectItems[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-        <SidebarElement image={require("./assets/icons/bugs.png")} title="Creatures + Museum" pageNum={2} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectCreatures[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-        <SidebarElement image={require("./assets/icons/leaf.png")} title="Items" pageNum={3} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectItems[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-        <SidebarElement image={require("./assets/icons/music.png")} title="Songs" pageNum={4} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectSongs[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-        <SidebarElement image={require("./assets/icons/emote.png")} title="Emoticons" pageNum={5} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectEmotes[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-        <SidebarElement image={require("./assets/icons/crafting.png")} title="Crafting + Tools" pageNum={6} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectCrafting[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-        <SidebarElement image={require("./assets/icons/cat.png")} title="Villagers" pageNum={7} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectVillagers[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-        <SidebarElement image={require("./assets/icons/construction.png")} title="Construction" pageNum={8} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectConstruction[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-        <SidebarElement image={require("./assets/icons/flower.png")} title="Flowers" pageNum={9} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectMisc[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-        <SidebarElement image={require("./assets/icons/envelope.png")} title="Letters" pageNum={10} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectCards[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-        <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:3, marginLeft:14, marginRight: 14, marginTop: 10, marginBottom: 10}}/>
-        <SidebarElement image={require("./assets/icons/settings.png")} title="Settings" pageNum={11} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectSettings[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-        <SidebarElement image={require("./assets/icons/magnifyingGlass.png")} title="About" pageNum={12} setPage={props.setPage} currentPage={props.currentPage} backgroundColor={colors.selectAbout[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-        <View style={{margin:15}}/>
-      </ScrollView>
-    </View>
-  )
-}
+
 
 
 class App extends Component {
@@ -163,7 +137,7 @@ class App extends Component {
 
   openDrawer() {
     if(this.state.loaded){
-      this.sideMenu.openMenu(true);
+      this.sideMenu.openDrawer();
       getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(8) : "";
     }
     return true;
@@ -177,7 +151,7 @@ class App extends Component {
         console.log(this.lastPage);
         this.setState({currentPage: pageNum});
       }
-      this.sideMenu.openMenu(false);
+      this.sideMenu.closeDrawer();
     }
     return true;
   }
@@ -185,7 +159,6 @@ class App extends Component {
   setFirstLogin(firstLogin){
     this.setState({firstLogin: firstLogin})
   }
-  
   render(){
     if(!this.state.loaded){
       var splashScreens = [require('./assets/airplane.json'),require('./assets/balloon.json')];
@@ -251,14 +224,9 @@ class App extends Component {
         fab = <View/>;
       }
       return (
-        <>
-          <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
-          <SideMenu
-            ref={(ref) => this.sideMenu = ref}
-            edgeHitWidth={1000} 
-            toleranceY={500}
-            menu={<NavigationView setPage={this.setPage} currentPage={this.state.currentPage}/>}
-          >
+        <>  
+          <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu } setPage={this.setPage} currentPage={this.state.currentPage}>
+            <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
             <PopupRating numLogins={this.numLogins}/>
             <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
             <StatusBar hidden={getSettingsString("settingsShowStatusBar")==="false"} backgroundColor="#1c1c1c" style="light" />

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {TouchableOpacity, TextInput, StyleSheet, Text, View, ScrollView} from 'react-native';
+import {Dimensions, TouchableOpacity, TextInput, StyleSheet, Text, View} from 'react-native';
 import Clock from '../components/Clock';
 import HomeContentArea from '../components/HomeContentArea';
 import {EventContainer,getEventsDay} from '../components/EventContainer';
@@ -16,6 +16,7 @@ import VillagerPopupPopup from "../popups/VillagerPopupPopup"
 import {getCurrentDateObject} from '../components/DateFunctions';
 import TodoList from '../components/TodoList';
 import {getSettingsString} from "../LoadJsonData"
+import { ScrollView } from 'react-native-gesture-handler';
 
 function addDays(date, days) {
   var result = new Date(date);
@@ -73,9 +74,11 @@ class HomePage extends Component {
       thisWeekTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>This Week</TextFont>
     }
 
-    var landscape = <LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, zIndex:1, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/home.json')}/>
+    var landscape = <View style={{width:Dimensions.get('window').width, height: "100%", zIndex:1, position:'absolute', overflow: "hidden" }}><LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/home.json')}/></View>
     if(getCurrentDateObject().getMonth()===11||getCurrentDateObject().getMonth()===0){
-      landscape = <LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, zIndex:1, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeSnow.json')}/>
+      landscape = <View style={{width:Dimensions.get('window').width, height: "100%", zIndex:1, position:'absolute', overflow: "hidden" }}><LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeSnow.json')}/></View>
+    } else if (todayEvents[0]!==undefined && (todayEvents[0]["Name"]==="Festivale" || todayEvents[0]["Name"].includes("Firework")) || todayEvents[1]!==undefined && (todayEvents[1]["Name"]==="Festivale" || todayEvents[1]["Name"].includes("Firework"))){
+      landscape = <View style={{width:Dimensions.get('window').width, height: "100%", zIndex:1, position:'absolute', overflow: "hidden" }}><LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeCelebration.json')}/></View>
     }
     return <>
       <ScrollView ref={this.scrollViewRef}>

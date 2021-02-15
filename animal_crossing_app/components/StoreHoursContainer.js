@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Image, Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text, TouchableNativeFeedback} from 'react-native';
+import {Image, Vibration, StyleSheet, DrawerLayoutAndroid, View, Text,} from 'react-native';
 import TextFont from './TextFont'
 import colors from "../Colors"
 import {getCurrentDateObject} from "./DateFunctions"

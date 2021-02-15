@@ -136,13 +136,14 @@ function getSpecialOccurrenceDate(currentYear, i, snapshot){
   var specialOccurrence = parseInt(snapshot[i]["Special Occurrence"]);
   for(var day = 1; day <= getDaysNumberMonth(snapshot[i]["Month"]); day++){
     if(day<10){
-      eventDate = currentYear+"-"+getMonthNumber(snapshot[i]["Month"])+1+"-0"+day;
+      eventDate = currentYear+"-"+getMonthStringNumber(snapshot[i]["Month"])+"-0"+day;
     } else {
-      eventDate = currentYear+"-"+getMonthNumber(snapshot[i]["Month"])+1+"-"+day;
+      eventDate = currentYear+"-"+getMonthStringNumber(snapshot[i]["Month"])+"-"+day;
     }
     // console.log(eventDate)
     if(new Date(eventDate).getDay()===parseInt(getDayOfWeekObject(snapshot[i]["Special Day"]))){
       occurrence++;
+      
     }
     if(occurrence==specialOccurrence){
       return [day, getMonthNumber(snapshot[i]["Month"])];
@@ -176,6 +177,33 @@ function getDaysNumberMonth(currentMonth){
     return 30;
   else
     return 31;
+}
+
+function getMonthStringNumber(currentMonth){
+  if(currentMonth==="Jan")
+    return "01";
+  else if(currentMonth==="Feb")
+    return "02";
+  else if(currentMonth==="Mar")
+    return "03";
+  else if(currentMonth==="Apr")
+    return "04";
+  else if(currentMonth==="May")
+    return "05";
+  else if(currentMonth==="June")
+    return "06";
+  else if(currentMonth==="July")
+    return "07";
+  else if(currentMonth==="Aug")
+    return "08";
+  else if(currentMonth==="Sept")
+    return "09";
+  else if(currentMonth==="Oct")
+    return "10";
+  else if(currentMonth==="Nov")
+    return "11";
+  else
+    return "12";
 }
 
 function getMonthNumber(currentMonth){
