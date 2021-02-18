@@ -10,7 +10,7 @@ class CardsPage extends Component {
         <ListPage 
           disablePopup={[true]}
           showVariations={[false]}
-          title="Cards"
+          title="Letters"
           imageProperty={["Image"]}
           textProperty={["Name"]}
           textProperty2={"cards"}
@@ -24,6 +24,7 @@ class CardsPage extends Component {
           backgroundColor={colors.lightDarkAccent[global.darkMode]}
           boxColor={colors.white[global.darkMode]}
           labelColor={colors.textBlack[global.darkMode]}
+          accentColor={colors.cardsAccent[global.darkMode]}
         />
     )
   }

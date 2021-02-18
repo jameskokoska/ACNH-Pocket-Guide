@@ -86,6 +86,8 @@ export function determineDataGlobal(datakeyName){
     return global.dataLoadedCreatures;
   else if(datakeyName==="dataLoadedCards")
     return global.dataLoadedCards;
+  else if(datakeyName==="dataLoadedMaterials")
+    return global.dataLoadedMaterials;
 
 }
 
@@ -129,6 +131,8 @@ export function updateDataGlobal(datakeyName, index, collected, dataSet){
     global.dataLoadedCreatures[dataSet][index].collected=collected;
   else if(datakeyName==="dataLoadedCards")
     global.dataLoadedCards[dataSet][index].collected=collected;
+  else if(datakeyName==="dataLoadedMaterials")
+    global.dataLoadedMaterials[dataSet][index].collected=collected;
 }
 
 export function resetFilters(){
@@ -274,6 +278,7 @@ export async function loadGlobalData(){
   global.dataLoadedTools = await getStorageData([require("./assets/data/tools.json")],[["toolsCheckList","Name","Variation"]],"false");
   global.dataLoadedRecipes = await getStorageData([require("./assets/data/recipes.json")],[["recipesCheckList","Name"]],"false");
   global.dataLoadedCards = await getStorageData([require("./assets/data/messagecards.json")],[["cardsCheckList","Name"]],"false");
+  global.dataLoadedMaterials = await getStorageData([require("./assets/data/other.json")],[["materialsCheckList","Name"]],"false");
   global.dataLoadedAll = await getStorageData(
   [
     require("./assets/data/housewares.json"),
@@ -306,6 +311,7 @@ export async function loadGlobalData(){
     require("./assets/data/reactions.json"),
     require("./assets/data/construction.json"),
     require("./assets/data/fencing.json"),
+    require("./assets/data/other.json")
   ],
   [
     ["furnitureCheckList","Name","Variation","Pattern"],
@@ -338,6 +344,7 @@ export async function loadGlobalData(){
     ["emojiCheckList","Name"],
     ["constructionCheckList","Name"],
     ["fenceCheckList","Name"],
+    ["materialsCheckList","Name"]
   ],"false");
 }
 

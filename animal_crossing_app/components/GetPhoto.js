@@ -82,7 +82,7 @@ export function getPhotoCorner(name){
   } else {
     name = name.toLowerCase();
   }
-  if(name.includes("sea") && !name.includes("seasonal") || name.includes("pier") || name.includes("shoreline"))
+  if(name.includes("sea") && !name.includes("seasonal") || name.includes("pier") || name.includes("shoreline") || name.includes("beach"))
     return <Image source={require("../assets/icons/oceanIcon.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>
   else if(name.includes("river"))
     return <Image source={require("../assets/icons/riverIcon.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>;
@@ -90,7 +90,7 @@ export function getPhotoCorner(name){
     return <Image source={require("../assets/icons/pondIcon.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>;
   else if(name.includes("flying"))
     return <Image source={require("../assets/icons/butterflies.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
-  else if(name.includes("flowers"))
+  else if(name.includes("flowers") || name.includes("breeding") || name.includes("seed"))
     return <Image source={require("../assets/icons/flowerIcon.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
   else if(name.includes("rock"))
     return <Image source={require("../assets/icons/rock.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
@@ -108,7 +108,7 @@ export function getPhotoCorner(name){
     return <Image source={require("../assets/icons/snow.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
   else if(name.includes("villagers"))
     return <Image source={require("../assets/icons/cat.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
-  else if(name.includes("fossil"))
+  else if(name.includes("fossil") || name.includes("dig") || name.includes("plant"))
     return <Image source={require("../assets/icons/digIcon.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
   else if(name.includes("able"))
     return <Image source={require("../assets/icons/able.png")} style={{height: 60, width: 60, resizeMode:'contain'}}/>;
@@ -126,7 +126,7 @@ export function getPhotoCorner(name){
     return <Image source={require("../assets/icons/saharah.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
   else if(name.includes("balloons"))
     return <Image source={require("../assets/icons/balloon.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
-  else if(name.includes("celeste"))
+  else if(name.includes("celeste") || name.includes("stars"))
     return <Image source={require("../assets/icons/sparkle.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
   else if(name.includes("recipe"))
     return <Image source={require("../assets/icons/crafting.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
@@ -140,6 +140,10 @@ export function getPhotoCorner(name){
     return <Image source={require("../assets/icons/ship.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>
   else if(name.includes("c.j."))
     return <Image source={require("../assets/icons/beaver.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
+  else if(name.includes("fish"))
+    return <Image source={require("../assets/icons/fish.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
+  else if(name.includes("net"))
+    return <Image source={require("../assets/icons/airIcon.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
   else
     return <Image source={require("../assets/icons/leaf.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
 }

@@ -12,6 +12,7 @@ import HomePage from './pages/HomePage';
 import SettingsPage from './pages/SettingsPage';
 import ItemsPage from './pages/ItemsPage';
 import AllItemsPage from './pages/AllItemsPage';
+import MaterialsPage from './pages/MaterialsPage';
 import TestPage from './pages/TestPage';
 import CraftingPage from './pages/CraftingPage';
 import FadeInOut from './components/FadeInOut';
@@ -34,9 +35,6 @@ import SideMenu from './components/SideMenu'
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
-
-
-
 
 class App extends Component {
   constructor() {
@@ -202,16 +200,18 @@ class App extends Component {
       } else if (this.state.currentPage===6){
         currentPageView = <CraftingPage/>
       } else if (this.state.currentPage===7){
-        currentPageView = <VillagersPage/>
+        currentPageView = <MaterialsPage/>
       } else if (this.state.currentPage===8){
-        currentPageView = <ConstructionPage/>
+        currentPageView = <VillagersPage/>
       } else if (this.state.currentPage===9){
-        currentPageView = <FlowerPage/>
+        currentPageView = <ConstructionPage/>
       } else if (this.state.currentPage===10){
-        currentPageView = <CardsPage/>
+        currentPageView = <FlowerPage/>
       } else if (this.state.currentPage===11){
-        currentPageView = <SettingsPage/>
+        currentPageView = <CardsPage/>
       } else if (this.state.currentPage===12){
+        currentPageView = <SettingsPage/>
+      } else if (this.state.currentPage===13){
         currentPageView = <CreditsPage/>
       } else {
         currentPageView = <Text>Default</Text>

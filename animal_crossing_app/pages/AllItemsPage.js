@@ -53,6 +53,7 @@ class AllItemsPage extends Component {
             true,
             true,
             true,
+            false,
           ]}
           popUpContainer={[
             ["FurniturePopup",440],
@@ -85,6 +86,7 @@ class AllItemsPage extends Component {
             ["EmojipediaPopup",500], //none
             ["ConstructionPopup",500], //none
             ["ConstructionPopup",500], //none
+            ["MaterialsPopup",500], //none
           ]}
           popUpCornerImageProperty={[
             "Source",
@@ -113,6 +115,7 @@ class AllItemsPage extends Component {
             "Source",
             "Source",
             "",
+            "Source",
             "Source",
             "Source",
             "Source",
@@ -149,6 +152,7 @@ class AllItemsPage extends Component {
             "Source",
             "Source",
             "Source",
+            "Source",
           ]}
           textProperty2={[
             "",
@@ -170,6 +174,7 @@ class AllItemsPage extends Component {
             "",
             "",
             "(DIY)",
+            "",
             "",
             "",
             "",
@@ -213,8 +218,10 @@ class AllItemsPage extends Component {
             "Image",
             "Image",
             "Image",
+            "Inventory Image"
           ]}
           textProperty={[
+            ["Name"],
             ["Name"],
             ["Name"],
             ["Name"],
@@ -277,8 +284,10 @@ class AllItemsPage extends Component {
             ["emojiCheckList","Name"],
             ["constructionCheckList","Name"],
             ["fenceCheckList","Name"],
+            ["materialsCheckList","Name"],
           ]}
           searchKey={[
+            ["Name"],
             ["Name"],
             ["Name"],
             ["Name"],
@@ -332,6 +341,7 @@ class AllItemsPage extends Component {
             getSettingsString("settingsShowVariation")==="true" ? true : false,
             getSettingsString("settingsShowVariation")==="true" ? true : false,
             getSettingsString("settingsShowVariation")==="true" ? true : false,
+            false,
             false,
             false,
             false,

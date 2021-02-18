@@ -77,6 +77,8 @@ export class Phrase extends Component {
     var end = "";
     if(this.props.popUpPhraseProperty[0]==="Uses"){
       end = " durability"
+    } else if(this.props.popUpPhraseProperty[0]==="Stack Size"){
+      end = " stack size"
     }
     return <Text style={[styles.phrase,{fontStyle: 'italic', fontFamily:'serif',color:this.props.specialLabelColor}]}>{'"'+ capitalizeFirst(this.props.item[this.props.popUpPhraseProperty[this.props.item.dataSet]]) + end +'"'}</Text>
   }
@@ -119,6 +121,9 @@ export class InfoLine extends Component {
       text+= ", " + capitalizeFirst(commas(this.props.item[this.props.textProperty2]))
     }
     if(text.toLowerCase()==="null" || text.toLowerCase()==="na"){
+      return <View/>
+    }
+    if(text==="None"){
       return <View/>
     }
     var imageSource = <Image style={styles.infoLineImage} source={this.props.image}/>;

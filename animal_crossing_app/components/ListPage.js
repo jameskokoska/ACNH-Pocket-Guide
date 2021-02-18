@@ -24,6 +24,7 @@ import FurniturePopup from "../popups/FurniturePopup"
 import FloorWallsPopup from "../popups/FloorWallsPopup"
 import ToolsPopup from "../popups/ToolsPopup"
 import RecipesPopup from "../popups/RecipesPopup"
+import MaterialsPopup from "../popups/MaterialsPopup"
 import * as exports from "./FilterDefinitions"
 import PopupFilter from './PopupFilter'
 import TextFont from "./TextFont"
@@ -482,6 +483,8 @@ class BottomSheetRender extends Component{
         popUpContainer = <ToolsPopup item={this.state.item}/>
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="RecipesPopup"){
         popUpContainer = <RecipesPopup item={this.state.item}/>
+      } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="MaterialsPopup"){
+        popUpContainer = <MaterialsPopup item={this.state.item}/>
       }
     } else {
       return <View/>
