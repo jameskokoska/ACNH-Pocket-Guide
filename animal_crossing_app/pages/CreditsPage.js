@@ -62,7 +62,10 @@ class CreditsPage extends Component {
           </TouchableOpacity>
           <PopupRating show={this.state.show} noShow={()=>{this.setState({show:false})}}/>
           <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.setState({show:true})}} text={"Leave a rating"} />
-          <View style={{height: 100}}/>
+          <View style={{height: 90}}/>
+          <TextFont bold={false} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 14,}}>{"v" + global.version + " - " + global.versionCode + "\n\nChangelog:"}</TextFont>
+          <TextFont bold={false} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 14,}}>{global.changelog}</TextFont>
+          <View style={{height: 20}}/>
         </ScrollView>
      </View>
     )

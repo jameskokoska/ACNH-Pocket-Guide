@@ -36,6 +36,15 @@ import SideMenu from './components/SideMenu'
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
+global.version = require("./app.json")["expo"]["version"];
+global.versionCode = require("./app.json")["expo"]["android"]["versionCode"];
+global.changelog = [`
+Added the ability to import your catalog
+(using an external tool)
+Access this with the Catalog Scanner page in the sidemenu
+
+Added this changelog
+`]
 
 class App extends Component {
   constructor() {
@@ -51,6 +60,7 @@ class App extends Component {
       currentPage: 0,
       open:false,
       fadeInTitle:true,
+      openChangeLog: false,
     }
     this.lastPage = 0;
   }
@@ -96,6 +106,13 @@ class App extends Component {
       "ArialRoundedBold": require('./assets/fonts/arialRoundBold.ttf'),
     });
 
+    var openChangeLog = await getStorage("changeLog","");
+    if(openChangeLog === "" || openChangeLog !== global.version){
+      openChangeLog = true;
+    } else {
+      openChangeLog = false;
+    }
+
     console.log("DONE Loading")
     this.timeoutHandle = setTimeout(()=>{
       this.setState({
@@ -106,6 +123,7 @@ class App extends Component {
     this.timeoutHandle = setTimeout(()=>{
       this.setState({
         loaded:true,
+        openChangeLog: openChangeLog,
       });
     }, 10);
   }
@@ -234,6 +252,14 @@ class App extends Component {
             <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
             <StatusBar hidden={getSettingsString("settingsShowStatusBar")==="false"} backgroundColor="#1c1c1c" style="light" />
             {currentPageView}
+            <Popup 
+              button1={"OK"}
+              button1Action={()=>{}}
+              popupVisible={this.state.openChangeLog} 
+              close={async () => {this.setState({openChangeLog:!this.state.openChangeLog}); await AsyncStorage.setItem("changeLog", global.version);}}
+              text={"What's new?"}
+              textLower={global.changelog}
+            />
           </SideMenu>
           {fab}
         </>

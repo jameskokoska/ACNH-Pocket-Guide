@@ -7,7 +7,7 @@ import StoreHoursContainer from '../components/StoreHoursContainer';
 import colors from '../Colors'
 import PopupRating from "../components/PopupRating"
 import ButtonComponent from "../components/ButtonComponent"
-import {checkOff, loadGlobalData} from "../LoadJsonData"
+import {collectionListSave, checkOff, loadGlobalData} from "../LoadJsonData"
 import Popup from '../components/Popup';
 
 const music = require("../assets/data/music.json");
@@ -53,6 +53,8 @@ class CatalogPage extends Component {
       }
     }
     await loadGlobalData();
+    global.collectionList = Array.from(new Set(collectionList));
+    collectionListSave();
     await this.setState({openDone: true});
   }
 
