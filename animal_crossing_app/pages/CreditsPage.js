@@ -42,10 +42,19 @@ class CreditsPage extends Component {
           <View style={{height: 50}}/>
           <TextFont bold={true} style={{fontSize: 20, marginLeft: 30, color:colors.textBlack[global.darkMode], marginBottom: 10}}>Additional Information</TextFont>
           <Text style={{fontSize: 16, marginLeft: 30, marginRight: 30, color:colors.textBlack[global.darkMode]}}>This application was created using React Native, with the original App programmed in Flutter. This application and contents are NOT affiliated with Nintendo. All local artwork recreated/licensed. This application is not made for commercial use, and is provided at a price of 0$ (free) on the Google Play Store with no advertisements. All application source code is of property to respective owners/contributors listed on the Credits page and/or licenses associated within specific packages/libraries within this application.</Text>
-          <Text style={{fontSize: 16, marginLeft: 30, marginRight: 30, color:colors.textBlack[global.darkMode]}}>Twemoji Icons Graphics licensed under CC-BY 4.0: https://creativecommons.org/licenses/by/4.0/.</Text>
-          <Text style={{fontSize: 16, marginLeft: 30, marginRight: 30, color:colors.textBlack[global.darkMode]}}>FlatIcons: from 'Freepik' and 'Pixel perfect'.</Text>
-          <Text style={{fontSize: 16, marginLeft: 30, marginRight: 30, color:colors.textBlack[global.darkMode]}}>All game data sourced from https://tinyurl.com/acnh-sheet. Thank you everyone for all the hard work and for making the spreadsheet!</Text>
-          <Text style={{fontSize: 16, marginLeft: 30, marginRight: 30, color:colors.textBlack[global.darkMode]}}>And thank YOU for downloading this application and showing your support.</Text>
+          <Text style={{marginTop: 10, fontSize: 16, marginLeft: 30, marginRight: 30, color:colors.textBlack[global.darkMode]}}>Twemoji Icons Graphics licensed under CC-BY 4.0:</Text>
+          <TouchableOpacity onPress={() => Linking.openURL('https://creativecommons.org/licenses/by/4.0/') }>
+            <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, marginLeft: 30, marginRight: 30, }}>{"https://creativecommons.org/licenses/by/4.0/"}</TextFont>
+          </TouchableOpacity>
+          <Text style={{marginTop: 10, fontSize: 16, marginLeft: 30, marginRight: 30, color:colors.textBlack[global.darkMode]}}>FlatIcons: from 'Freepik' and 'Pixel perfect'.</Text>
+          <TouchableOpacity onPress={() => Linking.openURL('https://www.flaticon.com/') }>
+            <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, marginLeft: 30, marginRight: 30, }}>{"https://www.flaticon.com/"}</TextFont>
+          </TouchableOpacity>
+          <Text style={{marginTop: 10, fontSize: 16, marginLeft: 30, marginRight: 30, color:colors.textBlack[global.darkMode]}}>All game data sourced from the community created spreadsheet. Thank you everyone for all the hard work and for making the spreadsheet!</Text>
+          <TouchableOpacity onPress={() => Linking.openURL('https://tinyurl.com/acnh-sheet') }>
+            <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, marginLeft: 30, marginRight: 30, }}>{"https://tinyurl.com/acnh-sheet"}</TextFont>
+          </TouchableOpacity>
+          <Text style={{marginTop: 10, fontSize: 16, marginLeft: 30, marginRight: 30, color:colors.textBlack[global.darkMode]}}>And thank YOU for downloading this application and showing your support.</Text>
           <View style={{height:30}}/>
           <TouchableOpacity onPress={() => Linking.openURL('mailto:dapperappdeveloper@gmail.com') }>
             <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"Suggestions, bugs, or concerns? \nSend me an email!"}</TextFont>

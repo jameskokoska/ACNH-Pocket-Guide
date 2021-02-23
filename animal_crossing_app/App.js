@@ -4,6 +4,7 @@ import ListPage from './components/ListPage';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import FAB from './components/FAB';
 import SongsPage from './pages/SongsPage';
+import CatalogPage from './pages/CatalogPage';
 import EmoticonsPage from './pages/EmoticonsPage';
 import ConstructionPage from './pages/ConstructionPage';
 import MuseumPage from './pages/MuseumPage';
@@ -210,8 +211,10 @@ class App extends Component {
       } else if (this.state.currentPage===11){
         currentPageView = <CardsPage/>
       } else if (this.state.currentPage===12){
-        currentPageView = <SettingsPage/>
+        currentPageView = <CatalogPage/>
       } else if (this.state.currentPage===13){
+        currentPageView = <SettingsPage/>
+      } else if (this.state.currentPage===14){
         currentPageView = <CreditsPage/>
       } else {
         currentPageView = <Text>Default</Text>

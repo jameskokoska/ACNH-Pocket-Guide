@@ -142,14 +142,14 @@ export function resetFilters(){
   }
 }
 
-export function checkOff(item, collected, dataGlobalName){
+export function checkOff(item, collected, dataGlobalName, vibrate=getSettingsString("settingsEnableVibrations")==="true"){
   console.log(item.checkListKey);
   if(item!==undefined){
      if(collected==="false"){
-      getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10,220,20]) : "";
+      vibrate ? Vibration.vibrate([0,10,220,20]) : "";
       global.collectionList.push(item.checkListKey)
     } else {
-      getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+      vibrate ? Vibration.vibrate(10) : "";
       collectionListRemove(item.checkListKey)
     }
     collectionListSave();
