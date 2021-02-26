@@ -4680,5 +4680,31 @@
             "Filename": "RoomTexFloorAnimal02",
             "Internal ID": "4962",
             "Unique Entry ID": "9Mdszd5EgwJ6omLPf"
+        },
+        {
+            "Name": "block flooring",
+            "Image": "https://acnhcdn.com/latest/FtrIcon/RoomTexFloorMario00.png",
+            "VFX": "No",
+            "DIY": "No",
+            "Buy": "3000",
+            "Sell": "750",
+            "Color 1": "Brown",
+            "Color 2": "Brown",
+            "Exchange Price": "NA",
+            "Exchange Currency": "NA",
+            "Source": "Nook Shopping Promotion",
+            "Season/Event": "Super Mario Bros.",
+            "Season/Event Exclusive": "Yes",
+            "HHA Base Points": "201",
+            "HHA Concept 1": "fancy",
+            "HHA Concept 2": "child's room",
+            "HHA Series": "Mario",
+            "Tag": "Mario",
+            "Catalog": "Not in catalog",
+            "Version Added": "1.8.0",
+            "Unlocked?": "No",
+            "Filename": "RoomTexFloorMario00",
+            "Internal ID": "13804",
+            "Unique Entry ID": "9eBvLr6aCPPym2LFP"
         }
 ]

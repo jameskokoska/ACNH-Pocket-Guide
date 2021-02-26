@@ -1030,6 +1030,7 @@
             "2021 Dates": "February 15",
             "Display Name": "Festivale",
             "Internal Label": "Carnival",
+            "Unlock Date": "2021-02-14",
             "Unlock Method": "BCAT (a)",
             "Unique Entry ID": "FvssW626ddQ3aLQFd"
         },
@@ -1044,6 +1045,7 @@
             "2021 Dates": "February 14",
             "Display Name": "Valentine's Day",
             "Internal Label": "Valentine",
+            "Unlock Date": "2021-02-14",
             "Unlock Method": "BCAT (a)",
             "Unique Entry ID": "wFQawZsWKLnDfSjjN"
         },
@@ -1166,6 +1168,81 @@
             "Unlock Date": "2021-02-10",
             "Unlock Method": "NTP",
             "Unique Entry ID": "i36Hq5eemLtYtg8x4"
+        },
+        {
+            "Name": "Hinamatsuri",
+            "Type": "Nook Shopping event",
+            "Version Added": "1.8.0",
+            "Availability": "Specific years",
+            "Northern Hemisphere Dates": "NA",
+            "Southern Hemisphere Dates": "NA",
+            "2020 Dates": "NA",
+            "2021 Dates": "February 25 – March 3",
+            "Display Name": "Hinamatsuri",
+            "Internal Label": "RegionHinamatsuri",
+            "Unlock Date": "2021-02-25",
+            "Unlock Method": "NTP",
+            "Unique Entry ID": "nca8hecauJyrMuTe6"
+        },
+        {
+            "Name": "Super Mario Bros.",
+            "Type": "Nook Shopping event",
+            "Version Added": "1.8.0",
+            "Availability": "Specific years",
+            "Northern Hemisphere Dates": "NA",
+            "Southern Hemisphere Dates": "NA",
+            "2020 Dates": "NA",
+            "2021 Dates": "March 1 – December 31",
+            "Display Name": "Super Mario Bros.",
+            "Internal Label": "MarioCollaboration",
+            "Unlock Date": "2021-03-01",
+            "Unlock Method": "BCAT (a)",
+            "Unique Entry ID": "2TaNitnLqDtXr9SQK"
+        },
+        {
+            "Name": "π Day",
+            "Type": "Nook Shopping event",
+            "Version Added": "1.8.0",
+            "Availability": "Specific years",
+            "Northern Hemisphere Dates": "NA",
+            "Southern Hemisphere Dates": "NA",
+            "2020 Dates": "NA",
+            "2021 Dates": "March 1 – March 14",
+            "Display Name": "π Day",
+            "Internal Label": "RegionPiDay",
+            "Unlock Date": "2021-03-01",
+            "Unlock Method": "NTP",
+            "Unique Entry ID": "atSCGTvcdHq2EKNfy"
+        },
+        {
+            "Name": "Shamrock Day",
+            "Type": "Nook Shopping event",
+            "Version Added": "1.8.0",
+            "Availability": "Specific years",
+            "Northern Hemisphere Dates": "NA",
+            "Southern Hemisphere Dates": "NA",
+            "2020 Dates": "NA",
+            "2021 Dates": "March 10 – March 17",
+            "Display Name": "Shamrock Day",
+            "Internal Label": "RegionShamrockDay",
+            "Unlock Date": "2021-03-10",
+            "Unlock Method": "NTP",
+            "Unique Entry ID": "zZcYX6kijYEszM3u8"
+        },
+        {
+            "Name": "Shamrock Day (Able Sisters)",
+            "Type": "Shopping season",
+            "Version Added": "1.8.0",
+            "Availability": "Every year",
+            "Northern Hemisphere Dates": "March 10 – March 17",
+            "Southern Hemisphere Dates": "March 10 – March 17",
+            "2020 Dates": "NA",
+            "2021 Dates": "NA",
+            "Display Name": "Shamrock Day",
+            "Internal Label": "NA",
+            "Unlock Date": "2021-01-28",
+            "Unlock Method": "No",
+            "Unique Entry ID": "CQeFs5yEfzL3kFdhp"
         }
 ]
 
