@@ -41,8 +41,12 @@ This application uses Expo. Install expo. Navigate into the ```animal_crossing_a
 - Flower hybrids guide
 - Everything page
 - Filters
-- Search
+- Searching
 - 24 hour time, haptics settings 
+- Materials page
+- Letters page
+- Catalog Scanning with ```nook.lol```
+- Profile home screen page
 
 ## Screenshots
 Can be seen here: https://play.google.com/store/apps/details?id=com.acnh.pocket_guide or below
