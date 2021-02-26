@@ -30,7 +30,7 @@ class CatalogPage extends Component {
 
   import = async () =>{
     var inputList = [];
-    var inputType = "catalog";
+    var inputType = "";
     if(this.linkInput!=="" || this.input==""){
       this.method = "Using nook.lol link to import data\n(First option)\n";
       var responseJSON = await (await fetch(this.linkInput+"/json?locale=en-us")).json();
@@ -58,6 +58,8 @@ class CatalogPage extends Component {
             } else if(inputType==="recipes" && !global.dataLoadedAll[i][a]["checkListKey"].includes("recipesCheckList")){
               this.totalSuccess--;
             } else if(inputType==="catalog" && global.dataLoadedAll[i][a]["checkListKey"].includes("recipesCheckList")){
+              this.totalSuccess--;
+            } else if(inputType==="critters" && global.dataLoadedAll[i][a]["checkListKey"].includes("villagerCheckList")){
               this.totalSuccess--;
             } else {
               checkOff(global.dataLoadedAll[i][a], "false", "dataLoadedAll", false);
