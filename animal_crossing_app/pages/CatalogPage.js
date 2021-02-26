@@ -18,8 +18,10 @@ class CatalogPage extends Component {
   constructor(props) {
     super(props);
     this.input = "";
+    this.linkInput = "";
     this.totalSuccess = 0;
     this.totalFail = 0;
+    this.method = ""
     this.state = {
       openDone: false,
       openWaiting: false,
@@ -27,7 +29,18 @@ class CatalogPage extends Component {
   }
 
   import = async () =>{
-    var inputList = this.input.split("\n");
+    var inputList = [];
+    var inputType = "catalog";
+    if(this.linkInput!=="" || this.input==""){
+      this.method = "Using nook.lol link to import data\n(First option)\n";
+      var responseJSON = await (await fetch(this.linkInput+"/json?locale=en-us")).json();
+      inputType = responseJSON["type"];
+      inputList = responseJSON["data"];
+      this.method = this.method + "\nImport type: " + inputType;
+    } else {
+      this.method = "Using list of results to import data\n(Second option)\n";
+      inputList = this.input.split("\n");
+    }
     if(inputList===undefined)
       inputList = [];
     var success = false;
@@ -40,7 +53,15 @@ class CatalogPage extends Component {
           if(global.dataLoadedAll[i][a]["Name"].toLowerCase() === inputList[z].toLowerCase()){
             success = true;
             this.totalSuccess++;
-            checkOff(global.dataLoadedAll[i][a], "false", "dataLoadedAll", false);
+            if(inputType==="recipes" && global.dataLoadedAll[i][a]["checkListKey"].includes("recipesCheckList")){
+              checkOff(global.dataLoadedAll[i][a], "false", "dataLoadedAll", false);
+            } else if(inputType==="recipes" && !global.dataLoadedAll[i][a]["checkListKey"].includes("recipesCheckList")){
+              this.totalSuccess--;
+            } else if(inputType==="catalog" && global.dataLoadedAll[i][a]["checkListKey"].includes("recipesCheckList")){
+              this.totalSuccess--;
+            } else {
+              checkOff(global.dataLoadedAll[i][a], "false", "dataLoadedAll", false);
+            }
             break;
           } else {
             continue;
@@ -49,7 +70,7 @@ class CatalogPage extends Component {
       }
       if(!success){
         console.log("Didn't find:" + inputList[z]);
-         this.totalFail++;
+        this.totalFail++;
       }
     }
     await loadGlobalData();
@@ -70,18 +91,32 @@ class CatalogPage extends Component {
             <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 17, marginLeft: 30, marginRight: 30, textAlign:"center"}}>{"Visit https://nook.lol/ for more information"}</TextFont>
           </TouchableOpacity>
           <View style={{height: 50}}/>
-          <TextFont bold={true} style={{fontSize: 20, marginLeft: 30, marginRight: 40, color:colors.textBlack[global.darkMode]}}>{"Copy results below and Import"}</TextFont>
+          <TextFont bold={true} style={{fontSize: 20, marginLeft: 30, marginRight: 40, color:colors.textBlack[global.darkMode]}}>{"Paste nook.lol link and Import"}</TextFont>
           <View style={{height: 15}}/>
           <TextInput
-            style={{borderRadius: 10, height: Dimensions.get('window').height*0.33, paddingVertical: 10, paddingHorizontal: 20, marginHorizontal: 20, fontSize: 20, backgroundColor:colors.white[global.darkMode], color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
+            style={{borderRadius: 10, paddingVertical: 10, paddingHorizontal: 20, marginHorizontal: 20, fontSize: 20, backgroundColor:colors.white[global.darkMode], color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
+            onChangeText={(text) => {this.linkInput = text}}
+            placeholder={"https://nook.lol/abc123"}
+            placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+            multiline={false}
+          />
+          <View style={{height: 30}}/>
+          <TextFont bold={true} style={{textAlign:"center",fontSize: 15, marginLeft: 30, marginRight: 40, color:colors.textBlack[global.darkMode]}}>{"or..."}</TextFont>
+          <View style={{height: 30}}/>
+          <TextFont bold={true} style={{fontSize: 20, marginLeft: 30, marginRight: 40, color:colors.textBlack[global.darkMode]}}>{"Paste results here and Import"}</TextFont>
+          <View style={{height: 15}}/>
+          <TextInput
+            style={{borderRadius: 10, maxHeight: 130, paddingVertical: 10, paddingHorizontal: 20, marginHorizontal: 20, fontSize: 20, backgroundColor:colors.white[global.darkMode], color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
             onChangeText={(text) => {this.input = text}}
-            placeholder={"Abstract wall\nAmber\nArched-brick flooring\nBackyard-fence wall\nGo K.K. Rider\n..."}
+            placeholder={"Abstract wall\nBackyard-fence wall\nGo K.K. Rider\n..."}
             placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
             multiline={true}
           />
+          <View style={{height: 35}}/>
           <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.import()}} text={"Import"} />
           <View style={{height: 10}}/>
           <TextFont bold={true} style={{fontSize: 13, marginLeft: 30, marginRight: 30, textAlign:"center",color:colors.textBlack[global.darkMode]}}>{"May take a few seconds to complete. \nPlease be patient."}</TextFont>
+          <View style={{height: 50}}/>
         </ScrollView>
         <Popup 
           button1={"OK"}
@@ -89,7 +124,7 @@ class CatalogPage extends Component {
           popupVisible={this.state.openDone} 
           close={() => this.setState({openDone:!this.state.openDone})}
           text={"Import Results"}
-          textLower={"Imported: " + this.totalSuccess + " items\n Errors: " + this.totalFail + " items"}
+          textLower={this.method + "\nImported: " + this.totalSuccess + " items\n Errors: " + this.totalFail + " items"}
         />
      </View>
     )

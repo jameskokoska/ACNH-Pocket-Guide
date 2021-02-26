@@ -75,6 +75,7 @@ class Popup extends Component {
           transparent={true}
           visible={this.state.popupVisible}
           statusBarTranslucent
+          onRequestClose={()=>{this.setPopupVisible(false); this.props.close();}}
         >
         <View style={styles.centeredView}>
           <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>

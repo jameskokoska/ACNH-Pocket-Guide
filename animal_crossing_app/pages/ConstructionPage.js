@@ -8,7 +8,7 @@ class ConstructionPage extends Component {
   render(){
     return(
         <ListPage 
-          disablePopup={[true]}
+          disablePopup={[true, true]}
           showVariations={[false]}
           title="Construction"
           imageProperty={["Image","Image"]}

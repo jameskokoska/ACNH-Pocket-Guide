@@ -370,7 +370,7 @@ export default (props) =>{
   } else if (data.length===0 && props.filterCollectedOnly){
     return(<>
       <View style={{height:10}}/>
-      <TouchableOpacity onPress={() => props.setPage(7)}>
+      <TouchableOpacity onPress={() => props.setPage(8)}>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"You have no villagers added"}</TextFont>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>Tap here and go add some</TextFont>
       </TouchableOpacity>

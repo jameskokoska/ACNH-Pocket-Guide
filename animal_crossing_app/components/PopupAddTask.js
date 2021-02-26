@@ -60,6 +60,7 @@ class PopupAddTask extends Component {
           transparent={true}
           visible={this.props.popupVisible}
           statusBarTranslucent
+          onRequestClose={()=>{this.props.addItemPopup(false);}}
         >
         <View style={styles.centeredView}>
           <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
