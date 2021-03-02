@@ -72,7 +72,7 @@ class Onboard extends Component {
                 global.settingsCurrent[0]["currentValue"] = "false";
                 this.props.setFirstLogin(false);
               }} />
-              <TextFont style={{fontSize: 12, paddingTop: 30, width: "70%", textAlign:'center', color:colors.textBlack[global.darkMode]}} bold={true}>You can import your exported data from the last version of the app in settings.</TextFont>
+              {/* <TextFont style={{fontSize: 12, paddingTop: 30, width: "70%", textAlign:'center', color:colors.textBlack[global.darkMode]}} bold={true}>You can import your exported data from the last version of the app in settings.</TextFont> */}
             </>,
           },
         ]}

@@ -5,7 +5,9 @@ import {
   StyleSheet,
   Text,
   View,
-  Vibration
+  Vibration,
+  ScrollView,
+  Dimensions
 } from "react-native";
 import TextFont from "./TextFont";
 import ButtonComponent from "./ButtonComponent";
@@ -80,8 +82,10 @@ class Popup extends Component {
         <View style={styles.centeredView}>
           <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
             <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.props.text}</TextFont>
-            <TextFont bold={false} style={{fontSize: 18, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.props.textLower}</TextFont>
-            <View style={{flexDirection:"row"}}>
+            <ScrollView style={{maxHeight:Dimensions.get('window').height*0.75}}>
+              <TextFont bold={false} style={{fontSize: 18, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.props.textLower}</TextFont>
+            </ScrollView>
+            <View style={{flexDirection:"row", justifyContent:"center"}}>
               {this.Button2}
               {this.Button1}
             </View>

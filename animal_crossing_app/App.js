@@ -39,11 +39,16 @@ import SideMenu from './components/SideMenu'
 global.version = require("./app.json")["expo"]["version"];
 global.versionCode = require("./app.json")["expo"]["android"]["versionCode"];
 global.changelog = [`
-Added the ability to import your catalog
-(using an external tool)
+Improved the catalog import 
 Access this with the Catalog Scanner page in the sidemenu
 
-Added this changelog
+Can use back button to exit out of popups
+
+Fixed app freezing
+
+Added new data from the update
+
+Small fixes with hemisphere selection
 `]
 
 class App extends Component {
@@ -64,6 +69,17 @@ class App extends Component {
     }
     this.lastPage = 0;
   }
+
+  async loadSettings(){
+    global.settingsCurrent = settings;
+    for(var i = 0; i<settings.length; i++){
+      if(global.settingsCurrent[i]["keyName"]!="breaker"){
+        global.settingsCurrent[i]["currentValue"] = await getStorage(settings[i]["keyName"],settings[i]["defaultValue"]);
+      }
+      //console.log(global.settingsCurrent[i]["keyName"])
+    }
+  }
+
   async componentDidMount(){
     // await AsyncStorage.setItem("firstLogin", "true");
 
@@ -87,13 +103,8 @@ class App extends Component {
     await loadGlobalData();
 
     //Load Settings
-    global.settingsCurrent = settings;
-    for(var i = 0; i<settings.length; i++){
-      if(global.settingsCurrent[i]["keyName"]!="breaker"){
-        global.settingsCurrent[i]["currentValue"] = await getStorage(settings[i]["keyName"],settings[i]["defaultValue"]);
-      }
-      //console.log(global.settingsCurrent[i]["keyName"])
-    }
+    await this.loadSettings();
+
     global.customTime = new Date(await getStorage("customDate",new Date().toString()));
 
     this.updateDarkMode();
@@ -174,7 +185,8 @@ class App extends Component {
   }
 
   setFirstLogin(firstLogin){
-    this.setState({firstLogin: firstLogin})
+    this.setState({firstLogin: firstLogin});
+    this.loadSettings();
   }
   render(){
     if(!this.state.loaded){

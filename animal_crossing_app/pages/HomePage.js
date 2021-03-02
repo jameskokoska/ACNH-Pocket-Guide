@@ -164,7 +164,7 @@ class HomePage extends Component {
             />
             <TextFont bold={true} style={{marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>Island</TextFont>
             <View style={{height: 5}}/>
-            <TouchableOpacity onPress={() => this.props.setPage(10)}>
+            <TouchableOpacity onPress={() => this.props.setPage(13)}>
               <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{getSettingsString("settingsNorthernHemisphere")==="true" ? "Northern Hemisphere" : "Southern Hemisphere"}</TextFont>
             </TouchableOpacity>
           </View>
