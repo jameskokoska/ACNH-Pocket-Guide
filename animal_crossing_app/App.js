@@ -130,7 +130,7 @@ class App extends Component {
         loaded:true,
       });
       console.log(this.openChangelog)
-      if(this.openChangelog){
+      if(this.openChangelog && firstLogin==="false"){
         this.setState({
           popupChangelogVisible:true,
         });
