@@ -121,7 +121,7 @@ export default (props) =>{
 
   const [data, setData] = useState("empty")
   const [possibleFiltersState, setPossibleFilters] = useState("empty")
-  const [filterPopupState, setFilterPopupState] = useState(false)
+  const popupFilter = React.useRef(null);
 
   useEffect(()=>{
     var dataUpdated = [];
@@ -340,7 +340,7 @@ export default (props) =>{
 
   var header = (<>
       <Animated.View style={[styles.header, {transform: [{translateY}]}]}>
-        <Header search={search} openPopupFilter={() => {setFilterPopupState(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
+        <Header search={search} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
       </Animated.View>
     </>);
   var paddingTop = headerHeight*1.18;
@@ -353,7 +353,7 @@ export default (props) =>{
     paddingTop = 0;
     paddingBottom = 0;
     header = (<>
-        <HeaderActive search={search} openPopupFilter={() => {setFilterPopupState(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
+        <HeaderActive search={search} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
     </>);
   }
   var style= {height: Dimensions.get('window').height, paddingBottom: paddingBottom,marginTop: -10}
@@ -380,7 +380,7 @@ export default (props) =>{
     return (
     <View style={{backgroundColor:props.backgroundColor}} >
       {header}
-      <PopupFilter title={props.title} popupVisible={filterPopupState} close={() => {setFilterPopupState(false)}} possibleFilters={possibleFiltersState} filterSearchable={props.filterSearchable} updateSearch={updateSearch}/> 
+      <PopupFilter title={props.title} ref={popupFilter} possibleFilters={possibleFiltersState} filterSearchable={props.filterSearchable} updateSearch={updateSearch}/> 
       {/* setFilterPopupState(false) */}
       <Animated.FlatList
         nestedScrollEnabled

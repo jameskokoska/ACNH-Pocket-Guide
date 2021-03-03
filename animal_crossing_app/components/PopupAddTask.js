@@ -16,6 +16,17 @@ import {getPhoto} from "./GetPhoto"
 
 
 class PopupAddTask extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      popupVisible: false
+    };
+  }
+
+  setPopupVisible = (visible) => {
+    this.setState({popupVisible:visible});
+  }
+
   render(){
     const icons = [
       {label: "Leaf", value: "leaf.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("leaf.png")}/>,},
@@ -58,9 +69,9 @@ class PopupAddTask extends Component {
         <Modal
           animationType="fade"
           transparent={true}
-          visible={this.props.popupVisible}
+          visible={this.state.popupVisible}
           statusBarTranslucent
-          onRequestClose={()=>{this.props.addItemPopup(false);}}
+          onRequestClose={()=>{this.setPopupVisible(false)}}
         >
         <View style={styles.centeredView}>
           <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
@@ -98,7 +109,7 @@ class PopupAddTask extends Component {
                 color={colors.cancelButton[global.darkMode]}
                 vibrate={8}
                 onPress={() => {
-                  this.props.addItemPopup(false);
+                  this.setPopupVisible(false);
                 }}
               /> 
               <ButtonComponent
@@ -107,7 +118,7 @@ class PopupAddTask extends Component {
                 vibrate={15}
                 onPress={() => {
                   this.props.addItem(task);
-                  this.props.addItemPopup(false);
+                  this.setPopupVisible(false);
                 }}
               /> 
             </View>

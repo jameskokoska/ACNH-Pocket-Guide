@@ -24,7 +24,7 @@ class PopupFilter extends Component {
     super(props);
     this.updateDefaultValues = this.updateDefaultValues.bind(this);
     this.state = {
-      popupVisible: props.popupVisible,
+      popupVisible: false,
     };   
     this.defaultValues = [];
   }
@@ -61,10 +61,6 @@ class PopupFilter extends Component {
     }
   }
 
-  componentDidUpdate(){
-    if(this.props.popupVisible===true&&this.state.popupVisible===false)
-      this.setPopupVisible(this.props.popupVisible);
-  }
 
   setPopupVisible = (visible) => {
     this.setState({popupVisible:visible});
@@ -90,10 +86,10 @@ class PopupFilter extends Component {
             statusBarTranslucent
             onRequestClose={()=>{
               this.setPopupVisible(!this.state.popupVisible);
-              this.props.close();}}
+            }}
           >
           <View style={styles.centeredView}>
-            <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible); this.props.close();}} style={{position:"absolute", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: "black", opacity: 0.1}}/>
+            <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} style={{position:"absolute", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: "black", opacity: 0.1}}/>
             <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode], height:Dimensions.get('window').height*0.75}]}>
               <TextFont bold={true} style={{fontSize: 22, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Set Filters</TextFont>
               <View style={{height:10}}/>
@@ -125,7 +121,6 @@ class PopupFilter extends Component {
                   vibrate={5}
                   onPress={() => {
                     this.setPopupVisible(!this.state.popupVisible);
-                    this.props.close();
                     this.defaultValues=[];
                     AsyncStorage.setItem(this.props.title+"Filters", "");
                     this.props.updateSearch(this.defaultValues);
@@ -137,7 +132,6 @@ class PopupFilter extends Component {
                   vibrate={5}
                   onPress={() => {
                     this.setPopupVisible(!this.state.popupVisible);
-                    this.props.close();
                   }}
                 />
               </View>

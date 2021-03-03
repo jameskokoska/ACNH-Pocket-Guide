@@ -15,8 +15,6 @@ class LoadFile extends Component {
   constructor() {
     super()
     this.state = {
-      open: false,
-      openResult: false,
       loadedNumber: 0,
     }
   }
@@ -24,6 +22,7 @@ class LoadFile extends Component {
     return(
       <View>
         <Popup 
+          ref={(loadPopup) => this.loadPopup = loadPopup}
           button1={"OK"}
           button1Action={async ()=>{
             var document = await DocumentPicker.getDocumentAsync();
@@ -48,18 +47,15 @@ class LoadFile extends Component {
               this.setState({loadedNumber:totalImport.length})
               console.log(global.collectionList)
             })
-            this.setState({openResult:!this.state.openResult});
+            this.loadPopupResults.setPopupVisible(true);
           }}
-          popupVisible={this.state.open} 
-          close={() => this.setState({open:!this.state.open})}
           text={"Import File"}
           textLower={"Please import \nACNHPocketGuideData.txt\n from the downloads folder."}
         />
         <Popup 
+          ref={(loadPopupResults) => this.loadPopupResults = loadPopupResults}
           button1={"OK"}
           button1Action={()=>{}}
-          popupVisible={this.state.openResult} 
-          close={() => this.setState({openResult:!this.state.openResult})}
           text={"Import Results"}
           textLower={"\nImported " + this.state.loadedNumber + " entires. \n\nNote: If this has imported 0 entires, please double check you have chosen the correct file."}
         />
@@ -68,7 +64,7 @@ class LoadFile extends Component {
           color={colors.okButton[global.darkMode]}
           vibrate={5}
           onPress={() => {
-            this.setState({open:!this.state.open});
+            this.loadPopup.setPopupVisible(true);
         }}/>
       </View>
     )
@@ -79,39 +75,40 @@ class ExportFile extends Component {
   constructor() {
     super()
     this.state = {
-      open: false,
+      message: "",
     }
   }
   render(){
     return(
       <View>
         <Popup 
+          ref={(exportPopup) => this.exportPopup = exportPopup}
           button1={"OK"}
           button1Action={()=>{}}
-          popupVisible={this.state.open} 
-          close={() => this.setState({open:!this.state.open})}
-          text={this.state.title}
+          text={"Export Results"}
           textLower={this.state.message}
         />
         <ButtonComponent
-        text={"Export Data"}
-        color={colors.okButton[global.darkMode]}
-        vibrate={5}
-        onPress={async () => {
-          var data = await getStorage("collectedString","");
-          console.log(data)
-          const { status } = await Permissions.askAsync(Permissions.CAMERA_ROLL);
-          if (status === "granted") {
-            var fileUri = FileSystem.documentDirectory + "ACNHPocketGuideData.txt";
-            await FileSystem.writeAsStringAsync(fileUri, data, { encoding: FileSystem.EncodingType.UTF8 });
-            const asset = await MediaLibrary.createAssetAsync(fileUri)
-            await MediaLibrary.createAlbumAsync("Download", asset, false)
-            this.setState({open:!this.state.open, message:"File exported to Downloads folder ACNHPocketGuideData.txt", title:"Backup Successful"});
-          } else {
-            this.setState({open:!this.state.open, message:"Error backing up. Please enable the permissions and try again. Unfortunately Camera Permission is required to write to local storage (using the Expo SDK). This permission can be disabled at any time. Sorry for the inconvenience.", title:"Backup Error"});
-          }
-
-        }}/>
+          text={"Export Data"}
+          color={colors.okButton[global.darkMode]}
+          vibrate={5}
+          onPress={async () => {
+            var data = await getStorage("collectedString","");
+            console.log(data)
+            const { status } = await Permissions.askAsync(Permissions.CAMERA_ROLL);
+            if (status === "granted") {
+              var fileUri = FileSystem.documentDirectory + "ACNHPocketGuideData.txt";
+              await FileSystem.writeAsStringAsync(fileUri, data, { encoding: FileSystem.EncodingType.UTF8 });
+              const asset = await MediaLibrary.createAssetAsync(fileUri)
+              await MediaLibrary.createAlbumAsync("Download", asset, false)
+              this.setState({message:"File exported to Downloads folder ACNHPocketGuideData.txt", title:"Backup Successful"});
+              this.exportPopup.setPopupVisible(true);
+            } else {
+              this.setState({message:"Error backing up. Please enable the permissions and try again. Unfortunately Camera Permission may be required to write to local storage (using the Expo SDK). This permission can be disabled at any time. Sorry for the inconvenience."});
+              this.exportPopup.setPopupVisible(true);
+            }
+          }}
+        />
       </View>
     )
   }

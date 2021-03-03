@@ -29,27 +29,19 @@ class VillagerPopupPopup extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      popupVisible: false
+      popupVisible: false,
+      item:""
     };   
-    
-  }
-  componentDidMount() {
-    this.setPopupVisible(this.props.popupVisible);
   }
 
-  componentDidUpdate(){
-    if(this.props.popupVisible===true&&this.state.popupVisible===false)
-      this.setPopupVisible(this.props.popupVisible);
-  }
-
-  setPopupVisible = (visible) => {
-    this.setState({popupVisible:visible});
+  setPopupVisible = (visible, item) => {
+    this.setState({popupVisible:visible, item:item});
   }
 
   render(){
     var villagerPopup = <View/>
-    if(this.props.item!==undefined){
-      villagerPopup = <VillagerPopup item={this.props.item}/>
+    if(this.state.item!==undefined && this.state.item!==""){
+      villagerPopup = <VillagerPopup item={this.state.item}/>
     }
     return (
         <Modal
@@ -57,19 +49,18 @@ class VillagerPopupPopup extends Component {
           transparent={true}
           visible={this.state.popupVisible}
           statusBarTranslucent
-          onRequestClose={()=>{this.setPopupVisible(false); this.props.close();}}
+          onRequestClose={()=>{this.setPopupVisible(false, this.state.item);}}
         >
         <View style={styles.centeredView}>
           <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
-            <TextFont bold={true} style={{fontSize: 30, marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{this.props.item.["Name"]}</TextFont>
+            <TextFont bold={true} style={{fontSize: 30, marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{this.state.item.["Name"]}</TextFont>
             {villagerPopup}
             <ButtonComponent
               text={"Close"}
               color={colors.okButton[global.darkMode]}
               vibrate={5}
               onPress={() => {
-                this.setPopupVisible(!this.state.popupVisible);
-                this.props.close();
+                this.setPopupVisible(false, this.state.item);
               }}
             />
           </View>

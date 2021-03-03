@@ -29,17 +29,9 @@ class HomePage extends Component {
     super(props);
     this.scrollViewRef = React.createRef();
     this.openPopup = this.openPopup.bind(this);
-    this.close = this.close.bind(this);
-    this.state = {
-      item:"",
-      popupVisible: false
-    }
   }
   openPopup(item){
-    this.setState({item:item, popupVisible:true})
-  }
-  close(){
-    this.setState({popupVisible:false})
+    this.villagerPopupPopup.setPopupVisible(true, item);
   }
   render(){
     var fishCount = countCollection("fishCheckList");
@@ -188,7 +180,7 @@ class HomePage extends Component {
         <View style={[styles.homeScreenBackgroundBottom,{backgroundColor:colors.grassColor[global.darkMode]}]}>
         </View>
       </View>
-      <VillagerPopupPopup item={this.state.item} close={this.close} popupVisible={this.state.popupVisible}/>
+      <VillagerPopupPopup ref={(villagerPopupPopup) => this.villagerPopupPopup = villagerPopupPopup}/>
     </>
   }
 }

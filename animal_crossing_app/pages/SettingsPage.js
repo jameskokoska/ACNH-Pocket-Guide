@@ -21,12 +21,9 @@ class SettingsPage extends Component {
     super(props);
     this.setCustomTime = this.setCustomTime.bind(this);
     this.state = {
-      open:false,
-      openRestart:false,
       date:new Date(),
       time:new Date(),
       datePickerVisible: false,
-      openDateReminder:false,
     }
   }
   setCustomTime(){
@@ -71,7 +68,7 @@ class SettingsPage extends Component {
           <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.setState({datePickerVisible:true})}} text={"Set Custom Date/Time"} />
           <DateTimePickerModal
             mode={"date"}
-            onConfirm={(date)=>{this.setState({datePickerVisible:false, date:date, openDateReminder:true}); this.setCustomTime()}}
+            onConfirm={(date)=>{this.setState({datePickerVisible:false, date:date,}); this.popupDateReminder.setPopupVisible(true); this.setCustomTime();}}
             onCancel={()=>{this.setState({datePickerVisible:false})}}
             isVisible={this.state.datePickerVisible}
           />
@@ -81,7 +78,7 @@ class SettingsPage extends Component {
             onCancel={()=>{this.setState({datePickerVisible:false})}}
             isVisible={this.state.datePickerVisible}
           />
-          <Popup text="Custom Date" textLower="Ensure the 'Use a custom date' setting is enabled" button1={"OK"} button1Action={()=>{console.log("")}} popupVisible={this.state.openDateReminder} close={() => this.setState({openDateReminder:!this.state.openDateReminder})}/>
+          <Popup ref={(popupDateReminder) => this.popupDateReminder = popupDateReminder} text="Custom Date" textLower="Ensure the 'Use a custom date' setting is enabled" button1={"OK"} button1Action={()=>{console.log("")}}/>
           
           <View style={{height: 50}}/>
           <SettingsDivider text="Data backup" margin="small"/>
@@ -91,12 +88,15 @@ class SettingsPage extends Component {
           <SettingsDivider text="Data reset" margin="small"/>
           <ButtonComponent text="Clear All Set Filters" onPress={() => {
             resetFilters();
+            this.popupClearFilters.setPopupVisible(true);
           }} vibrate={70} color={colors.filtersResetButton[global.darkMode]}/>
-          
+          <Popup ref={(popupClearFilters) => this.popupClearFilters = popupClearFilters} text="Cleared Set Filters" textLower="All the filters selected have been unset" button1={"OK"} button1Action={()=>{console.log("")}}/>
+
+
           <View style={{height: 20}}/>
-          <ButtonComponent text="Reset Data" onPress={() => {this.setState({open:true})}} vibrate={100} color={colors.cancelButton[global.darkMode]}/>
-          <Popup text="Reset Data" textLower="Would you like to reset your collection? This action cannot be undone." button2={"Reset"} button1={"Cancel"} button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.clear(); this.setState({openRestart:true});}} popupVisible={this.state.open} close={() => this.setState({open:!this.state.open})}/>
-          <Popup text="Restart Required" textLower="Please restart the application." button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.setItem("collectedString", "");}} popupVisible={this.state.openRestart} close={() => this.setState({open:!this.state.open})}/>
+          <ButtonComponent text="Reset Data" onPress={() => {this.popupWarning.setPopupVisible(true)}} vibrate={100} color={colors.cancelButton[global.darkMode]}/>
+          <Popup ref={(popupWarning) => this.popupWarning = popupWarning} text="Reset Data" textLower="Would you like to reset your collection? This action cannot be undone." button2={"Reset"} button1={"Cancel"} button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.clear(); this.popupRestart.setPopupVisible(true)}}/>
+          <Popup ref={(popupRestart) => this.popupRestart = popupRestart} text="Restart Required" textLower="Please restart the application." button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.setItem("collectedString", "");}} />
           <View style={{height:50}}/>
           <TouchableOpacity onPress={() => Linking.openURL('mailto:dapperappdeveloper@gmail.com') }>
             <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"Suggestions, bugs, or concerns? \nSend me an email!"}</TextFont>

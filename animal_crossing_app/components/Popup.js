@@ -33,9 +33,7 @@ class Popup extends Component {
     };   
     
   }
-  componentDidMount() {
-    this.setPopupVisible(this.props.popupVisible);
-    
+  componentDidMount() {    
     if(this.props.button1!==undefined){
       this.Button1 = <ButtonComponent
         text={this.props.button1}
@@ -43,7 +41,6 @@ class Popup extends Component {
         vibrate={5}
         onPress={() => {
           this.setPopupVisible(!this.state.popupVisible);
-          this.props.close();
           this.props.button1Action();
         }}
       />
@@ -55,16 +52,15 @@ class Popup extends Component {
         vibrate={10}
         onPress={() => {
           this.setPopupVisible(!this.state.popupVisible);
-          this.props.close();
           this.props.button2Action();
         }}
       /> 
     }
   }
-  componentDidUpdate(){
-    if(this.props.popupVisible===true&&this.state.popupVisible===false)
-      this.setPopupVisible(this.props.popupVisible);
-  }
+  // componentDidUpdate(){
+  //   if(this.props.popupVisible===true&&this.state.popupVisible===false)
+  //     this.setPopupVisible(this.props.popupVisible);
+  // }
 
   setPopupVisible = (visible) => {
     this.setState({popupVisible:visible});
@@ -77,7 +73,7 @@ class Popup extends Component {
           transparent={true}
           visible={this.state.popupVisible}
           statusBarTranslucent
-          onRequestClose={()=>{this.setPopupVisible(false); this.props.close();}}
+          onRequestClose={()=>{this.setPopupVisible(false);}}
         >
         <View style={styles.centeredView}>
           <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>

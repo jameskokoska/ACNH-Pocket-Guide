@@ -16,7 +16,6 @@ class TodoList extends Component {
     super(props);
     this.state = {
       data: [],
-      open: false,
       showTurnipLog: false,
     }
     this.loadList();
@@ -63,7 +62,7 @@ class TodoList extends Component {
 
   addItemPopup = (open) => {
     getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
-    this.setState({open:open})
+    this.popupAddTask.setPopupVisible(true);
   }
 
   addItem = (item) => {
@@ -130,7 +129,7 @@ class TodoList extends Component {
       }}>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{this.state.showTurnipLog ? "Hide Turnip Log" : "Show Turnip Log"}</TextFont>
       </TouchableOpacity>
-      <PopupAddTask addItem={this.addItem} addItemPopup={this.addItemPopup} popupVisible={this.state.open}/>
+      <PopupAddTask ref={(popupAddTask) => this.popupAddTask = popupAddTask} addItem={this.addItem}/>
     </>
   }
 }

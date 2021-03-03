@@ -11,13 +11,12 @@ class SettingsContainer extends Component {
   constructor(props){
     super(props);
     this.state = {
-      open:false,
       toggle:this.props.currentValue === "true" ? true : false,
     }
   }
   render(){
     return(
-      <TouchableOpacity activeOpacity={0.7} onPress={() => {this.setState({open:!this.state.open}); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
+      <TouchableOpacity activeOpacity={0.7} onPress={() => {this.popupSettings.setPopupVisible(true); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
         <View style={[styles.settingsContainer,{backgroundColor:this.props.backgroundColor}]}>
           <Image style={styles.settingsImage} source={this.props.image}/>
           <View style={styles.textContainer}>
@@ -38,7 +37,7 @@ class SettingsContainer extends Component {
             />
           </View>
         </View>
-        <Popup text={this.props.text} textLower={this.props.description} button1={"OK"} button1Action={()=>{console.log("OK")}} popupVisible={this.state.open} close={() => this.setState({open:!this.state.open})}/>
+        <Popup ref={(popupSettings) => this.popupSettings = popupSettings} text={this.props.text} textLower={this.props.description} button1={"OK"} button1Action={()=>{console.log("OK")}}/>
       </TouchableOpacity>
     )
   }

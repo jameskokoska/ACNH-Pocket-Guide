@@ -21,7 +21,7 @@ import Check from './components/Check';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import TextFont from './components/TextFont';
 import LottieView from 'lottie-react-native';
-import Popup from './components/Popup';
+import PopupChangelog from './components/PopupChangelog';
 import CreditsPage from './pages/CreditsPage';
 import FlowerPage from './pages/FlowerPage';
 import CardsPage from './pages/CardsPage';
@@ -38,18 +38,11 @@ import SideMenu from './components/SideMenu'
 //expo build:android -t apk
 global.version = require("./app.json")["expo"]["version"];
 global.versionCode = require("./app.json")["expo"]["android"]["versionCode"];
-global.changelog = [`
-Improved the catalog import 
-Access this with the Catalog Scanner page in the sidemenu
-
-Can use back button to exit out of popups
-
-Fixed app freezing
-
-Added new data from the update
-
-Small fixes with hemisphere selection
-`]
+global.changelog = `
+-Performance improvements
+-Popups now open faster
+-Improved catalog importing and error messages
+`
 
 class App extends Component {
   constructor() {
@@ -65,7 +58,6 @@ class App extends Component {
       currentPage: 0,
       open:false,
       fadeInTitle:true,
-      openChangeLog: false,
     }
     this.lastPage = 0;
   }
@@ -117,12 +109,13 @@ class App extends Component {
       "ArialRoundedBold": require('./assets/fonts/arialRoundBold.ttf'),
     });
 
-    var openChangeLog = await getStorage("changeLog","");
-    if(openChangeLog === "" || openChangeLog !== global.version){
-      openChangeLog = true;
+    this.openChangelog = await getStorage("changelog","");
+    if(this.openChangelog === "" || this.openChangelog !== global.version){
+      this.openChangelog = true;
     } else {
-      openChangeLog = false;
+      this.openChangelog = false;
     }
+    
 
     console.log("DONE Loading")
     this.timeoutHandle = setTimeout(()=>{
@@ -134,8 +127,10 @@ class App extends Component {
     this.timeoutHandle = setTimeout(()=>{
       this.setState({
         loaded:true,
-        openChangeLog: openChangeLog,
       });
+      console.log(this.openChangelog)
+      if(this.openChangelog)
+        this.popupChangelog.setPopupVisible(true)
     }, 10);
   }
 
@@ -189,6 +184,12 @@ class App extends Component {
     this.loadSettings();
   }
   render(){
+    const popupChangelogComp = <PopupChangelog
+      ref={(popupChangelog) => this.popupChangelog = popupChangelog}
+      text={"What's new?"}
+      textLower={global.changelog}
+      onClose={async ()=>{await AsyncStorage.setItem("changelog", global.version)}}
+    />
     if(!this.state.loaded){
       var splashScreens = [require('./assets/airplane.json'),require('./assets/balloon.json')];
       var chosenSplashScreen = splashScreens[Math.floor(this.random * splashScreens.length)];
@@ -214,7 +215,6 @@ class App extends Component {
     } else if (this.state.firstLogin==="true"){
       return <Onboard setFirstLogin={this.setFirstLogin}/>
     } else {
-      
       var currentPageView;
       if (this.state.currentPage===0){
         currentPageView = <FadeInOut fadeIn={true}><HomePage setPage={this.setPage}/></FadeInOut>
@@ -264,14 +264,7 @@ class App extends Component {
             <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
             <StatusBar hidden={getSettingsString("settingsShowStatusBar")==="false"} backgroundColor="#1c1c1c" style="light" />
             {currentPageView}
-            <Popup 
-              button1={"OK"}
-              button1Action={()=>{}}
-              popupVisible={this.state.openChangeLog} 
-              close={async () => {this.setState({openChangeLog:!this.state.openChangeLog}); await AsyncStorage.setItem("changeLog", global.version);}}
-              text={"What's new?"}
-              textLower={global.changelog}
-            />
+            {popupChangelogComp}
           </SideMenu>
           {fab}
         </>
