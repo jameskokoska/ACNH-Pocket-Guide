@@ -25,6 +25,11 @@ class PopupChangelog extends Component {
     };
   }
 
+  componentDidUpdate(){
+    if(this.props.popupVisible===true&&this.state.popupVisible===false)
+      this.setPopupVisible(this.props.popupVisible);
+  }
+
   setPopupVisible = (visible) => {
     this.setState({popupVisible:visible});
   }
@@ -32,7 +37,6 @@ class PopupChangelog extends Component {
   render(){
     var changelogText = this.props.textLower.toString();
     changelogText = changelogText.split("\n-");
-    console.log(changelogText)
     return (
       <>
         <Modal
@@ -40,7 +44,7 @@ class PopupChangelog extends Component {
             transparent={true}
             visible={this.state.popupVisible}
             statusBarTranslucent
-            onRequestClose={()=>{this.setPopupVisible(false);}}
+            onRequestClose={()=>{this.setPopupVisible(false);this.props.onClose();}}
           >
           <View style={styles.centeredView}>
             <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>

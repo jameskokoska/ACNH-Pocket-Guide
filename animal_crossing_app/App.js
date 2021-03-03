@@ -58,6 +58,7 @@ class App extends Component {
       currentPage: 0,
       open:false,
       fadeInTitle:true,
+      popupChangelogVisible:false
     }
     this.lastPage = 0;
   }
@@ -129,8 +130,11 @@ class App extends Component {
         loaded:true,
       });
       console.log(this.openChangelog)
-      if(this.openChangelog)
-        this.popupChangelog.setPopupVisible(true)
+      if(this.openChangelog){
+        this.setState({
+          popupChangelogVisible:true,
+        });
+      }
     }, 10);
   }
 
@@ -185,10 +189,10 @@ class App extends Component {
   }
   render(){
     const popupChangelogComp = <PopupChangelog
-      ref={(popupChangelog) => this.popupChangelog = popupChangelog}
+      popupVisible={this.state.popupChangelogVisible}
       text={"What's new?"}
       textLower={global.changelog}
-      onClose={async ()=>{await AsyncStorage.setItem("changelog", global.version)}}
+      onClose={async ()=>{this.setState({popupChangelogVisible:false}); await AsyncStorage.setItem("changelog", global.version)}}
     />
     if(!this.state.loaded){
       var splashScreens = [require('./assets/airplane.json'),require('./assets/balloon.json')];
