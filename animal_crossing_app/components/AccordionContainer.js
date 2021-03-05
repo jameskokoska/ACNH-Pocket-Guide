@@ -60,3 +60,47 @@ class AccordionContainer extends Component {
   }
 }
 export default AccordionContainer ;
+
+export class AccordionContainerCustom extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      activeSections: [],
+    };
+    this.children = this.props.children
+    this.marginHorizontal = this.props.marginHorizontal
+  }
+
+  renderHeader = section => {
+    return (
+      <View style={{marginHorizontal:this.marginHorizontal, paddingLeft: 10, paddingRight: 10, paddingTop: 6, paddingBottom: 6, borderRadius: 7, backgroundColor: colors.okButtonFaint[global.darkMode],  justifyContent: 'center', alignItems: 'center'}}>
+        <TextFont style={{fontSize:17, color: colors.textBlack[global.darkMode]}}>{section.title}</TextFont>
+      </View>
+    );
+  };
+
+  renderContent = () => {
+    return (
+      <>
+        {this.children}
+      </>
+    );
+  };
+
+  updateSections = activeSections => {
+    this.setState({ activeSections });
+  };
+  render(){
+    return <>
+      <Accordion
+        sections={this.props.sections}
+        activeSections={this.state.activeSections}
+        renderHeader={this.renderHeader}
+        renderContent={this.renderContent}
+        onChange={this.updateSections}
+        sectionContainerStyle={{marginTop:3}}
+        underlayColor={"#0000000"}
+      />
+    </>
+  }
+}

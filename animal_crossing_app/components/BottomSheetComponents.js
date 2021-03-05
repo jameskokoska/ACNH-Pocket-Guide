@@ -154,7 +154,7 @@ export class InfoLine extends Component {
     }
     return <View style={[styles.infoLineBox]}>
             {imageSource}
-            <TextFont adjustsFontSizeToFit={true} numberOfLines={2} bold={true} style={[styles.infoLineTitle,{color:colors.textBlack[global.darkMode]}]}>{starting + text + ending}</TextFont>
+            <TextFont adjustsFontSizeToFit={true} bold={true} style={[styles.infoLineTitle,{color:colors.textBlack[global.darkMode]}]}>{starting + text + ending}</TextFont>
         </View>
   }
 }

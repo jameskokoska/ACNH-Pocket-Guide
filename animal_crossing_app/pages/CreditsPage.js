@@ -64,6 +64,11 @@ class CreditsPage extends Component {
           <Paragraph>Nook.lol - Catalog Scanner:</Paragraph>
           <ExternalLink link="https://nook.lol/"/>
 
+          <View style={{height:35}}/>
+          <SubHeader>Sources</SubHeader>
+          <Paragraph>Mystery Islands - by Ninji:</Paragraph>
+          <ExternalLink link="https://wuffs.org/acnh/mysterytour.html"/>
+
           <View style={{height: 35}}/>
           <SubHeader>App Information</SubHeader>
           <TextFont bold={false} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 14,}}>{"v" + global.version + " - " + global.versionCode + "\n\nChangelog:"}</TextFont>
