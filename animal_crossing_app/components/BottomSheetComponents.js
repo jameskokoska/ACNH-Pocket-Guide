@@ -7,6 +7,7 @@ import TextFont from './TextFont'
 import {commas, capitalize, checkOff, capitalizeFirst} from '../LoadJsonData'
 import {getPhotoCorner, getMaterialImage} from "./GetPhoto"
 import {getSettingsString} from "../LoadJsonData"
+import PopupImage from "./PopupImage"
 
 export class CircularImage extends Component {
   render() {
@@ -222,8 +223,8 @@ export class Variations extends Component {
       return(
         <View style={{marginHorizontal: 20, flexDirection: 'row', justifyContent:'center',flexWrap:"wrap"}}>
           {variations.map( (item, index)=>
-            <View key={item[this.props.imageProperty[item.dataSet]]} style={[{marginHorizontal:7, marginVertical: 3, width: 60,height: 60,borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.eventBackground[global.darkMode]}]}>
-              <TouchableOpacity onPress={()=>{this.props.openBottomSheet(item); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : ""}}>
+            <View key={item[this.props.imageProperty[dataSet]]} style={[{marginHorizontal:7, marginVertical: 3, width: 60,height: 60,borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.eventBackground[global.darkMode]}]}>
+              <TouchableOpacity onPress={()=>{this.popup.setPopupVisible(true, item[this.props.imageProperty[dataSet]]); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : ""}}>
                 <CachedImage
                   style={{height: 47, width: 47, resizeMode:'contain',}}
                   source={{
@@ -233,6 +234,7 @@ export class Variations extends Component {
               </TouchableOpacity>
             </View>
           )}
+          <PopupImage ref={(popup) => this.popup = popup}/>
         </View>
       )
     } else {

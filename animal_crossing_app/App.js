@@ -265,7 +265,7 @@ class App extends Component {
       }
       return (
         <>  
-          <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu } setPage={this.setPage} currentPage={this.state.currentPage}>
+          <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage}>
             <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
             <PopupRating numLogins={this.numLogins}/>
             <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>

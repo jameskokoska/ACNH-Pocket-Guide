@@ -304,7 +304,6 @@ export default (props) =>{
     return <BottomSheetRender 
       activeCreatures={props.activeCreatures}
       ref={bottomSheetRenderRef}
-      sheetRef={sheetRef}
       imageProperty={props.imageProperty} 
       textProperty={props.textProperty}
       textProperty2={props.textProperty2}
@@ -567,7 +566,6 @@ class BottomSheetRender extends Component{
             item={this.state.item}
             imageProperty={this.props.imageProperty} 
             globalDatabase={dataLoadedAll} 
-            openBottomSheet={(item)=>{this.setState({item:item})}}
           />
           {popUpContainer}
           <View style={{height:10+heightCompensation}}/>
