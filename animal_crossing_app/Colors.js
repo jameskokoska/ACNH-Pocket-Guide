@@ -74,6 +74,7 @@ const colors = {
     selectHome : ["#d6d6d6", "#828282"],
     selectCreatures : ["#cbdae4", "#738696"],
     selectItems : ["#c1d8d0", "#57694e"],
+    selectIsland : ["#c1d8d0", "#57694e"],
     selectSongs : ["#dde4eb", "#6d8da6"],
     selectEverything : ["#f0efd5", "#918f76"],
     selectEmotes : ["#f0efd5", "#918f76"],

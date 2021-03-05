@@ -11,13 +11,44 @@ const width = { width: Dimensions.get('window').width };
 const renderTabBar = props => (
   <TabBar
     {...props}
-    indicatorStyle={{ backgroundColor: colors.lightDarkAccentHeavy[global.darkMode], height:'100%', opacity: 0.6, borderRadius: 10 }}
-    style={{ backgroundColor: colors.white[global.darkMode]}}
+    indicatorStyle={{backgroundColor: colors.lightDarkAccentHeavy[global.darkMode], height:'100%', opacity: 0.6, borderRadius: 10 }}
+    style={{backgroundColor: colors.white[global.darkMode]}}
     activeColor={colors.textBlack[global.darkMode]}
     inactiveColor={colors.textBlack[global.darkMode]}
     getLabelText={({ route }) => route.title}
+    renderLabel={({ route, focused, color }) => (
+      <Text style={{ color, margin: 2, textAlign:"center" }}>
+        {route.title}
+      </Text>
+    )}
   />
 );
+
+const MaterialsRoute = () => (
+  <ListPage 
+    tabs={false}
+    showVariations={[false]}
+    title="Materials"
+    imageProperty={["Inventory Image"]}
+    textProperty={["Name"]}
+    checkListKey={[["materialsCheckList","Name"]]}
+    searchKey={[["Name"]]}
+    gridType="smallGrid" //smallGrid, largeGrid, row
+    dataGlobalName={"dataLoadedMaterials"}
+    appBarColor={colors.materialsAppBar[global.darkMode]}
+    titleColor={colors.textBlack[global.darkMode]}
+    searchBarColor={colors.searchbarBG[global.darkMode]}
+    backgroundColor={colors.lightDarkAccent[global.darkMode]}
+    boxColor={colors.white[global.darkMode]}
+    labelColor={colors.textBlack[global.darkMode]}
+    accentColor={colors.materialsAccent[global.darkMode]}
+    popUpCornerImageProperty={["Source"]}
+    popUpCornerImageLabelProperty={["Source"]}
+    popUpContainer={[["MaterialsPopup",500]]}
+    specialLabelColor={colors.fishText[global.darkMode]}
+    popUpPhraseProperty={["Stack Size"]}
+  />
+)
 
 const FurnitureRoute = () => (
   <ListPage 
@@ -276,6 +307,7 @@ class ItemsPage extends Component {
         { key: 'Furniture', title: 'Furniture' },
         { key: 'Clothing', title: 'Clothing' },
         { key: 'FloorWalls', title: 'Floor & Walls' },
+        { key: 'Materials', title: 'Misc. Materials' },
       ],
     }
   }
@@ -284,6 +316,7 @@ class ItemsPage extends Component {
     Furniture: FurnitureRoute,
     Clothing: ClothingRoute,
     FloorWalls: FloorWallsRoute,
+    Materials: MaterialsRoute
   });
 
   handleIndexChange = index => this.setState({index});

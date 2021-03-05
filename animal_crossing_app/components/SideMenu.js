@@ -4,6 +4,7 @@ import  {DrawerLayout, ScrollView} from 'react-native-gesture-handler'
 import SidebarElement from './SidebarElement';
 import colors from '../Colors.js';
 import TextFont from './TextFont';
+import {getSettingsString} from '../LoadJsonData';
 
 export default class SideMenu extends Component {
   openDrawer = () => {
@@ -27,11 +28,11 @@ export default class SideMenu extends Component {
           <SidebarElement image={require("../assets/icons/music.png")} title="Songs" pageNum={4} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectSongs[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
           <SidebarElement image={require("../assets/icons/emote.png")} title="Emoticons" pageNum={5} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectEmotes[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
           <SidebarElement image={require("../assets/icons/crafting.png")} title="Recipes + Tools" pageNum={6} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectCrafting[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-          <SidebarElement image={require("../assets/icons/wood.png")} title="Materials" pageNum={7} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectMaterials[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
           <SidebarElement image={require("../assets/icons/cat.png")} title="Villagers" pageNum={8} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectVillagers[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
           <SidebarElement image={require("../assets/icons/construction.png")} title="Construction" pageNum={9} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectConstruction[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
           <SidebarElement image={require("../assets/icons/flower.png")} title="Flowers" pageNum={10} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectMisc[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
           <SidebarElement image={require("../assets/icons/envelope.png")} title="Letters" pageNum={11} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectCards[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
+          <SidebarElement image={require("../assets/icons/palmTree.png")} title="Mystery Islands" pageNum={7} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectIsland[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
           <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:3, marginLeft:14, marginRight: 14, marginTop: 10, marginBottom: 10}}/>
           <SidebarElement image={require("../assets/icons/scroll.png")} title="Catalog Scanning" pageNum={12} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectAbout[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
           <SidebarElement image={require("../assets/icons/settings.png")} title="Settings" pageNum={13} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectSettings[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
@@ -46,7 +47,7 @@ export default class SideMenu extends Component {
       <View style={{ flex: 1 }}>
         <DrawerLayout
           ref={(drawer) => this.drawer = drawer }
-          edgeWidth={this.tabbedPages.includes(this.props.currentPage) ? Dimensions.get('window').width*0.25 : Dimensions.get('window').width}
+          edgeWidth={getSettingsString("settingsOpenMenuEdge")==="true" ? Dimensions.get('window').width*0.17 : this.tabbedPages.includes(this.props.currentPage) ? Dimensions.get('window').width*0.25 : Dimensions.get('window').width}
           drawerWidth={Dimensions.get('window').width*0.66}
           drawerPosition={DrawerLayout.positions.Left}
           drawerType="slide"

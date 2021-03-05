@@ -17,7 +17,12 @@ const renderTabBar = props => (
     inactiveColor={colors.textBlack[global.darkMode]}
     getLabelText={({ route }) => route.title}
     scrollEnabled
-    tabStyle={{width:120}}
+    tabStyle={{width:110}}
+    renderLabel={({ route, focused, color }) => (
+      <Text style={{ color, margin: 2, textAlign:"center" }}>
+        {route.title}
+      </Text>
+    )}
   />
 );
 

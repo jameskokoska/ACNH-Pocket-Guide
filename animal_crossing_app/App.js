@@ -9,11 +9,11 @@ import EmoticonsPage from './pages/EmoticonsPage';
 import ConstructionPage from './pages/ConstructionPage';
 import MuseumPage from './pages/MuseumPage';
 import VillagersPage from './pages/VillagersPage';
+import MysteryIslandsPage from './pages/MysteryIslandsPage';
 import HomePage from './pages/HomePage';
 import SettingsPage from './pages/SettingsPage';
 import ItemsPage from './pages/ItemsPage';
 import AllItemsPage from './pages/AllItemsPage';
-import MaterialsPage from './pages/MaterialsPage';
 import TestPage from './pages/TestPage';
 import CraftingPage from './pages/CraftingPage';
 import FadeInOut from './components/FadeInOut';
@@ -39,9 +39,9 @@ import SideMenu from './components/SideMenu'
 global.version = require("./app.json")["expo"]["version"];
 global.versionCode = require("./app.json")["expo"]["android"]["versionCode"];
 global.changelog = `
--Performance improvements
--Popups now open faster
--Improved catalog importing and error messages
+-Moved materials page to tab within Items page
+-Added <Open side menu from left edge only> setting
+Can be used to help avoid accidental menu opens when scrolling
 `
 
 class App extends Component {
@@ -235,7 +235,7 @@ class App extends Component {
       } else if (this.state.currentPage===6){
         currentPageView = <CraftingPage/>
       } else if (this.state.currentPage===7){
-        currentPageView = <MaterialsPage/>
+        currentPageView = <MysteryIslandsPage/>
       } else if (this.state.currentPage===8){
         currentPageView = <VillagersPage/>
       } else if (this.state.currentPage===9){

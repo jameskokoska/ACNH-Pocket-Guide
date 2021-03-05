@@ -17,6 +17,11 @@ const renderTabBar = props => (
     inactiveColor={colors.textBlack[global.darkMode]}
     getLabelText={({ route }) => route.title}
     labelStyle={{padding:0, margin:0}}
+    renderLabel={({ route, focused, color }) => (
+      <Text style={{ color, margin: 2, textAlign:"center" }}>
+        {route.title}
+      </Text>
+    )}
   />
 );
 
