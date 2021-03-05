@@ -8,6 +8,7 @@ import {commas, capitalize, checkOff, capitalizeFirst} from '../LoadJsonData'
 import {getPhotoCorner, getMaterialImage} from "./GetPhoto"
 import {getSettingsString} from "../LoadJsonData"
 import PopupImage from "./PopupImage"
+import {ScrollView} from 'react-native-gesture-handler'
 
 export class CircularImage extends Component {
   render() {
@@ -224,9 +225,10 @@ export class Variations extends Component {
       var imageProperty = this.props.imageProperty;
       var dataSet = this.props.item.dataSet;
       return(
-        <View style={{marginHorizontal: 20, flexDirection: 'row', justifyContent:'center',flexWrap:"wrap"}}>
+        <ScrollView horizontal={true} style={{marginHorizontal:10}} contentContainerStyle={{ flexGrow: 1, justifyContent: 'center'}}>
+        <View style={{marginHorizontal: 4, flexDirection: 'row', justifyContent:'center'}}>
           {variations.map( (item, index)=>
-            <View key={item[this.props.imageProperty[dataSet]]} style={[{marginHorizontal:7, marginVertical: 3, width: 60,height: 60,borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.eventBackground[global.darkMode]}]}>
+            <View key={item[this.props.imageProperty[dataSet]]} style={[{marginHorizontal:4, marginVertical: 3, width: 60,height: 60,borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.eventBackground[global.darkMode]}]}>
               <TouchableOpacity onPress={()=>{this.popup.setPopupVisible(true, item[this.props.imageProperty[dataSet]]); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : ""}}>
                 <CachedImage
                   style={{height: 47, width: 47, resizeMode:'contain',}}
@@ -239,6 +241,7 @@ export class Variations extends Component {
           )}
           <PopupImage ref={(popup) => this.popup = popup}/>
         </View>
+        </ScrollView>
       )
     } else {
       return <View/>

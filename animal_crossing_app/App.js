@@ -39,13 +39,14 @@ import SideMenu from './components/SideMenu'
 global.version = require("./app.json")["expo"]["version"];
 global.versionCode = require("./app.json")["expo"]["android"]["versionCode"];
 global.changelog = `
+-Thanks everyone for the support recently! It really helps motivate me :)
+-
 -Moved materials page to tab within Items page
--Added <Open side menu from left edge only> setting
-Can be used to help avoid accidental menu opens when scrolling
--Added Mystery Islands page
+-Made <Open side menu from left edge only> setting the default
+-Improved Mystery Islands page
 -Added Emotes to Collection in Home Page
 -Can now close popups by tapping the background
--Added variations to popups
+-Added variations to popups, horizontal scrolling list
 Tap them to see a larger preview
 `
 
@@ -228,7 +229,7 @@ class App extends Component {
       if (this.state.currentPage===0){
         currentPageView = <FadeInOut fadeIn={true}><HomePage setPage={this.setPage}/></FadeInOut>
       } else if (this.state.currentPage===1){
-        currentPageView = <AllItemsPage/>
+        currentPageView = <AllItemsPage search="hi"/>
       } else if(this.state.currentPage===2){
         currentPageView = <MuseumPage/>
       } else if (this.state.currentPage===3){

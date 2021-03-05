@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Image, ScrollView, View, Dimensions, Text} from 'react-native';
+import {Vibration, TouchableOpacity, Image, ScrollView, View, Dimensions, Text} from 'react-native';
 import ListPage from '../components/ListPage';
 import LottieView from 'lottie-react-native';
 import colors from '../Colors.js';
@@ -7,21 +7,87 @@ import TextFont from '../components/TextFont'
 import {MailLink, ExternalLink, SubHeader, Header, Paragraph} from "../components/Formattings"
 import {AccordionContainerCustom} from "../components/AccordionContainer"
 import {InfoLineBeside, InfoLine} from "../components/BottomSheetComponents"
+import {PopupBottomCustom} from "../components/Popup"
+import {getStorage, getSettingsString} from "../LoadJsonData"
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 class MysteryIslandsPage extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      selectedIsland:"",
+      data: [],
+    }
+    this.loadList();
+  }
+  loadList = async() => {
+    var storageData = JSON.parse(await getStorage("IslandsVisited",JSON.stringify("[]")));
+  }
+  checkOffItem = (id) => {
+    var oldList = this.state.data;
+    if(oldList.includes(id)){
+      oldList = oldList.filter(item => item !== id)
+      this.saveList(oldList);
+      this.setState({data: oldList})
+      getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+    } else {
+      oldList.push(id);
+      this.setState({data: oldList})
+      getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10,220,20]) : "";
+    }
+        console.log(this.state.data)
+
+  }
+
+  saveList = async(data) => {
+    await AsyncStorage.setItem("IslandsVisited", JSON.stringify(data));
+  }
+
+  openPopup = (island) =>{
+    this.setState({selectedIsland:island})
+    this.popup.setPopupVisible(true);
+  }
   render(){
     return(
-      <ScrollView style={{backgroundColor:colors.background[global.darkMode]}}>
-        <View style={{marginTop: 100}}/>
-        <Header>Mystery Islands</Header>
-        <View style={{marginTop: 10}}/>
-        {
-          mysteryIslandsData.map((island, index) => (
-            <MysteryIslandsComponent key={island.name} island={island}/>
-          ))
-        }
-        <View style={{marginTop: 30}}/>
-      </ScrollView>
+      <>
+        <ScrollView style={{backgroundColor:colors.background[global.darkMode]}}>
+          <View style={{height: 100}}/>
+          <Header>Mystery Islands</Header>
+          <TextFont style={{fontSize: 13, marginHorizontal: 30, color:colors.textBlack[global.darkMode]}}>{"Note: long press to check off the island as visited\nTap each for more details"}</TextFont>
+          <View style={{height: 10}}/>
+          <View style={{marginHorizontal: 20, flex: 1, flexDirection: 'row', justifyContent:'space-evenly',flexWrap:"wrap"}}>
+          {
+            mysteryIslandsData.map((island, index) => (
+              <MysteryIslandsComponent data={this.state.data} checkOffItem={this.checkOffItem} key={island.name} island={island} openPopup={this.openPopup}/>
+            ))
+          }
+          </View>
+          <View style={{height: 70}}/>
+        </ScrollView>
+        <PopupBottomCustom ref={(popup) => this.popup = popup} title={this.state.selectedIsland.name} buttonText={"Close"}>
+          <View style={{height:10}}/>
+          <Image style={{resizeMode:'contain', width:"100%", borderRadius:2}} source={this.state.selectedIsland.picture}/>
+          <View style={{height:5}}/>
+          <TextFont bold={true} style={{textAlign:"center",marginTop:10, fontSize: 25, color: colors.textBlack[global.darkMode]}}>{this.state.selectedIsland.name}</TextFont>
+          <View style={{height:5}}/>
+          <InfoLineBeside
+            image1={require("../assets/icons/dice.png")} 
+            item1={this.state.selectedIsland}
+            textProperty1={["chance"]}
+            image2={require("../assets/icons/clockIcon.png")} 
+            item2={this.state.selectedIsland}
+            textProperty2={["maxDailyVisit"]}
+          />
+          <InfoLine
+            image={require("../assets/icons/lock.png")} 
+            item={this.state.selectedIsland}
+            textProperty={["requires"]}
+          />
+          <TextFont bold={false} style={{marginTop:10, fontSize: 17, color: colors.textBlack[global.darkMode]}}>{this.state.selectedIsland.description}</TextFont>
+          <View style={{height:100}}/>
+        </PopupBottomCustom>
+      </>
     )
   }
 }
@@ -29,32 +95,19 @@ export default MysteryIslandsPage;
 
 class MysteryIslandsComponent extends Component {
   render(){
-    var sections = [
-      {
-        title: 'View info',
-      }
-    ]
+    var checked = false;
+    if(this.props.data.includes(this.props.island.id)){
+      checked=true;
+    }
     return(
-      <View style={{borderRadius:9, backgroundColor:colors.white[global.darkMode], padding:30, marginVertical: 6, marginHorizontal:"4%", justifyContent:"center", alignItems:"center",}}>
-        <Image style={{resizeMode:'contain', width:"100%", borderRadius:2}} source={this.props.island.picture}/>
-        <View style={{height:5}}/>
-        <TextFont bold={true} style={{marginTop:10, fontSize: 25, color: colors.textBlack[global.darkMode]}}>{this.props.island.name}</TextFont>
-        <View style={{height:5}}/>
-        <InfoLineBeside
-          image1={require("../assets/icons/dice.png")} 
-          item1={this.props.island}
-          textProperty1={["chance"]}
-          image2={require("../assets/icons/clockIcon.png")} 
-          item2={this.props.island}
-          textProperty2={["maxDailyVisit"]}
-        />
-        <InfoLine
-          image={require("../assets/icons/lock.png")} 
-          item={this.props.island}
-          textProperty={["requires"]}
-        />
-        <TextFont bold={false} style={{marginTop:4, fontSize: 20, color: colors.textBlack[global.darkMode]}}>{this.props.island.description}</TextFont>
-      </View>
+      <>
+        <TouchableOpacity activeOpacity={0.7} onLongPress={()=>this.props.checkOffItem(this.props.island.id)} onPress={()=>this.props.openPopup(this.props.island)}>
+        <View style={{width:Dimensions.get('window').width*0.42, borderRadius:9, backgroundColor:checked ? colors.checkedColor[global.darkMode] : colors.white[global.darkMode], padding:10, marginVertical: 6, justifyContent:"center", alignItems:"center",}}>
+          <Image style={{resizeMode:'contain', width:"100%", height: 140, borderRadius:2}} source={this.props.island.picture}/>
+          <TextFont bold={true} style={{textAlign:"center",marginHorizontal:5, fontSize: 17, color: colors.textBlack[global.darkMode]}}>{this.props.island.name}</TextFont>
+        </View>
+        </TouchableOpacity>
+      </>
     )
   }
 }
@@ -93,7 +146,7 @@ const mysteryIslandsData = [
     "picture" : require("../assets/icons/islands/6.png"),
     "chance" : "9%",
     "name" : "Mountain Island",
-    "description" : "Multiple levels, no river. The base level has regular trees, the middle level has your native fruit, and the top level has five rocks with materials. \nInsects: pill bug, centipede.",
+    "description" : "Multiple levels, no river. The base level has regular trees, the middle level has your native fruit, and the top level has five rocks with materials. \n\nInsects: pill bug, centipede.",
     "requires" : "Ladder",
   },
   {
@@ -101,7 +154,7 @@ const mysteryIslandsData = [
     "picture" : require("../assets/icons/islands/7.png"),
     "chance" : "5%",
     "name" : "Bells Island",
-    "description" : "Breaking the rock at the far north will let you vault over into the island with five money rocks on it. \nInsects: pill bug, centipede.",
+    "description" : "Breaking the rock at the far north will let you vault over into the island with five money rocks on it. \n\nInsects: pill bug, centipede.",
     "requires" : "Town Hall, Vaulting Pole",
   },
   {
@@ -130,7 +183,7 @@ const mysteryIslandsData = [
     "picture" : require("../assets/icons/islands/12.png"),
     "chance" : "2%",
     "name" : "Money Rock Island 2",
-    "description" : "There are four small triangular cliffs, one in each corner, and the ground level is full of flowers and 7 money rocks. \nInsects: scorpion.",
+    "description" : "There are four small triangular cliffs, one in each corner, and the ground level is full of flowers and 7 money rocks. \n\nInsects: scorpion.",
     "requires" : "Town Hall",
     "maxDailyVisit" : "1 visit/day",
   },
@@ -147,7 +200,7 @@ const mysteryIslandsData = [
     "picture" : require("../assets/icons/islands/14.png"),
     "chance" : "2%",
     "name" : "Tree Island",
-    "description" : "This island has no river or pond and has tons of hardwood and coconut trees, and the only insects that spawn are those that are associated with trees. \nInsects: Atlas moth, walking stick, earth-boring dung beetle, scarab beetle, miyama stag, saw stag, giant stag, rainbow stag, cyclommatus stag, golden stag, horned dynastid, horned atlas, horned elephant, horned hercules, goliath beetle, drone beetle, giraffe stag, blue weevil beetle.",
+    "description" : "This island has no river or pond and has tons of hardwood and coconut trees, and the only insects that spawn are those that are associated with trees. \n\nInsects: Atlas moth, walking stick, earth-boring dung beetle, scarab beetle, miyama stag, saw stag, giant stag, rainbow stag, cyclommatus stag, golden stag, horned dynastid, horned atlas, horned elephant, horned hercules, goliath beetle, drone beetle, giraffe stag, blue weevil beetle.",
     "requires" : "Town Hall, Ladder",
     "maxDailyVisit" : "1 visit/day",
   },
@@ -164,7 +217,7 @@ const mysteryIslandsData = [
     "picture" : require("../assets/icons/islands/17.png"),
     "chance" : "1%",
     "name" : "Tree Island 2",
-    "description" : "This island is exactly the same as Bamboo Island but the trees are all just regular hardwood trees. \nInsects: Atlas moth, walking stick, earth-boring dung beetle, scarab beetle, miyama stag, saw stag, giant stag, rainbow stag, cyclommatus stag, golden stag, horned dynastid, horned atlas, horned elephant, horned hercules, goliath beetle, drone beetle, giraffe stag, blue weevil beetle.",
+    "description" : "This island is exactly the same as Bamboo Island but the trees are all just regular hardwood trees. \n\nInsects: Atlas moth, walking stick, earth-boring dung beetle, scarab beetle, miyama stag, saw stag, giant stag, rainbow stag, cyclommatus stag, golden stag, horned dynastid, horned atlas, horned elephant, horned hercules, goliath beetle, drone beetle, giraffe stag, blue weevil beetle.",
     "maxDailyVisit" : "1 visit/day",
   },
   {
@@ -172,14 +225,14 @@ const mysteryIslandsData = [
     "picture" : require("../assets/icons/islands/18.png"),
     "chance" : "5%",
     "name" : "Curly River Island",
-    "description" : "There is one square cliff at the north east, a few flowers and rocks and a small amount of fruit trees. Only insects associated with water spawn here. \nInsects: red dragonfly, darner dragonfly, banded dragonfly, pondskater, diving beetle, giant water bug, damselfly",
+    "description" : "There is one square cliff at the north east, a few flowers and rocks and a small amount of fruit trees. Only insects associated with water spawn here. \n\nInsects: red dragonfly, darner dragonfly, banded dragonfly, pondskater, diving beetle, giant water bug, damselfly",
   },
   {
     "id" : "19",
     "picture" : require("../assets/icons/islands/19.png"),
     "chance" : "2%",
     "name" : "Big Fish Island 2",
-    "description" : "This rare island only spawns big fish. Otherwise it is quite normal, with less flowers and a lower chance of appearing than the other big fish island. \nFish: L (arowana, saddled bichir, snapping turtle, soft-shelled turtle, black bass, carp, catfish, koi, giant snakehead, salmon, red snapper, football fish), LL (dorado, pike, stringfish, gar, king salmon, ray, mahi-mahi, sea bass, olive flounder, giant trevally), LLL (arapaima, sturgeon, blue marlin, coelacanth, Napoleonfish, tuna, oarfish).",
+    "description" : "This rare island only spawns big fish. Otherwise it is quite normal, with less flowers and a lower chance of appearing than the other big fish island. \n\nFish: L (arowana, saddled bichir, snapping turtle, soft-shelled turtle, black bass, carp, catfish, koi, giant snakehead, salmon, red snapper, football fish), LL (dorado, pike, stringfish, gar, king salmon, ray, mahi-mahi, sea bass, olive flounder, giant trevally), LLL (arapaima, sturgeon, blue marlin, coelacanth, Napoleonfish, tuna, oarfish).",
     "requires" : "Vaulting Pole",
     "maxDailyVisit" : "1 visit/day",
   },
@@ -188,7 +241,7 @@ const mysteryIslandsData = [
     "picture" : require("../assets/icons/islands/20.png"),
     "chance" : "5%",
     "name" : "Trash Island",
-    "description" : "Everything you can fish here is trash. Only water-related insects spawn. \nInsects: red dragonfly, darner dragonfly, banded dragonfly, pondskater, diving beetle, giant water bug, damselfly. \nFish: Trash.",
+    "description" : "Everything you can fish here is trash. Only water-related insects spawn. \n\nInsects: red dragonfly, darner dragonfly, banded dragonfly, pondskater, diving beetle, giant water bug, damselfly. \n\nFish: Trash.",
     "requires" : "Ladder",
   },
   {
@@ -196,7 +249,7 @@ const mysteryIslandsData = [
     "picture" : require("../assets/icons/islands/21.png"),
     "chance" : "1%",
     "name" : "Fins Island",
-    "description" : "EA rectangular pond with rectangular cliffs inside, the tallest one being too tall to climb up to. The only fish that spawn here are the largest finned fish. \nFish: J (great white shark, hammerhead shark, whale shark, saw shark, ocean sunfish), K (suckerfish).",
+    "description" : "A rectangular pond with rectangular cliffs inside, the tallest one being too tall to climb up to. The only fish that spawn here are the largest finned fish. \n\nFish: J (great white shark, hammerhead shark, whale shark, saw shark, ocean sunfish), K (suckerfish).",
     "requires" : "Town Hall, Vaulting Pole, Ladder",
     "maxDailyVisit" : "1 visit/day",
   },
@@ -213,7 +266,7 @@ const mysteryIslandsData = [
     "picture" : require("../assets/icons/islands/24.png"),
     "chance" : "1%",
     "name" : "Gold Island",
-    "description" : "A very rare island with flowers, scorpions and a rectangular pond. If you climb up onto the cliff and climb down from the back, you can vault over to a tiny island in the middle and get 8 gold nuggets from a single rock. \nInsects: scorpion.",
+    "description" : "A very rare island with flowers, scorpions and a rectangular pond. If you climb up onto the cliff and climb down from the back, you can vault over to a tiny island in the middle and get 8 gold nuggets from a single rock. \n\nInsects: scorpion.",
     "requires" : "Town Hall, Vaulting Pole, Ladder",
     "maxDailyVisit" : "1 visit/day",
   },

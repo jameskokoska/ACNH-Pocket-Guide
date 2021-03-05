@@ -60,6 +60,7 @@ const colors = {
     materialsAccent : ["#e8feff","#434C53"],
     skyColor : ["#aad5f0","#1a1a1a"],
     grassColor : ["#b6d996","#4c6337"],
+    checkedColor : ["#dcebce","#34402a"],
     eventsColor : ["#ffe366","#333333"],
     todoColor : ["#ffcc80","#333333"],
     todoColorAccent : ["#ffeccf","#333333"],

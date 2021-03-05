@@ -439,14 +439,6 @@ export const settings = [
     "displayName" : "Show view more images in popups",
     "description" : "In creature and villager popups have the option to view Critterpedia, Furniture, Villager houses etc. images as a drop down",
   },
-  {
-    "keyName" : "settingsOpenMenuEdge",
-    "defaultValue" : "false",
-    "currentValue" : "",
-    "picture" : require("./assets/icons/book.png"),
-    "displayName" : "Open side menu from left edge only",
-    "description" : "Only open the side menu from the left edge instead of anywhere on single non tabbed pages. Turn this on to avoid accidental menu opens when scrolling. Change app pages to apply.",
-  },
 
   {
     "keyName" : "breaker",

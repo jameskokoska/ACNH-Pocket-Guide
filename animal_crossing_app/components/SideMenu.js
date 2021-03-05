@@ -13,7 +13,7 @@ export default class SideMenu extends Component {
   closeDrawer = () => {
     this.drawer.closeDrawer()
   }
-  tabbedPages = [2,3,6,10];
+  nonTabbedPages = [0];
   renderDrawer = () => {
     return (
       <View style={{width: "100%", height:"100%", backgroundColor:colors.textWhite[global.darkMode]}}>
@@ -47,7 +47,7 @@ export default class SideMenu extends Component {
       <View style={{ flex: 1 }}>
         <DrawerLayout
           ref={(drawer) => this.drawer = drawer }
-          edgeWidth={getSettingsString("settingsOpenMenuEdge")==="true" ? Dimensions.get('window').width*0.17 : this.tabbedPages.includes(this.props.currentPage) ? Dimensions.get('window').width*0.25 : Dimensions.get('window').width}
+          edgeWidth={this.nonTabbedPages.includes(this.props.currentPage) ? Dimensions.get('window').width : Dimensions.get('window').width*0.17}
           drawerWidth={Dimensions.get('window').width*0.66}
           drawerPosition={DrawerLayout.positions.Left}
           drawerType="slide"

@@ -8,11 +8,14 @@ import {
   Vibration,
   ScrollView,
   Dimensions,
-  TouchableOpacity
+  TouchableOpacity,
 } from "react-native";
 import TextFont from "./TextFont";
 import ButtonComponent from "./ButtonComponent";
 import colors from "../Colors";
+import BottomSheet from 'reanimated-bottom-sheet';
+import { LinearGradient } from 'expo-linear-gradient';
+import Animated from 'react-native-reanimated';
 
 // <Popup 
 //  button1={"OK"} 
@@ -94,6 +97,123 @@ class Popup extends Component {
   }
 }
 export default Popup;
+
+
+/* 
+this.popup.setPopupVisible(true);
+<PopupInfoCustom ref={(popup) => this.popup = popup} buttonText={"Close"}>
+</PopupInfoCustom> 
+*/
+
+export class PopupInfoCustom extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      popupVisible: false
+    };   
+    
+  }
+
+  setPopupVisible = (visible) => {
+    this.setState({popupVisible:visible});
+  }
+
+  render(){
+    return (
+        <Modal
+          animationType="fade"
+          transparent={true}
+          visible={this.state.popupVisible}
+          statusBarTranslucent
+          onRequestClose={()=>{this.setPopupVisible(false);}}
+        >
+        <View style={styles.centeredView}>
+          <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} style={{position:"absolute", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: "black", opacity: 0.1}}/>
+          <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
+            <ScrollView style={{maxHeight:Dimensions.get('window').height*0.75}}>
+              {this.props.children}
+            </ScrollView>
+            <View style={{flexDirection:"row", justifyContent:"center"}}>
+              <ButtonComponent
+                text={this.props.buttonText}
+                color={colors.okButton[global.darkMode]}
+                vibrate={5}
+                onPress={() => {
+                  this.setPopupVisible(!this.state.popupVisible);
+                }}
+              />
+            </View>
+          </View>
+        </View>
+      </Modal>
+    )
+  }
+}
+
+
+export class PopupBottomCustom extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      heightOffset:0
+    }
+  }
+
+  setPopupVisible = (visible) => {
+    this.sheetRef.snapTo(0); 
+  }
+  
+  renderContent = () => {
+    return(
+      <>
+      <View style={{height:Dimensions.get('window').height-this.state.heightOffset}}/>
+      <View
+        style={{
+          borderTopLeftRadius: 20,
+          borderTopRightRadius: 20,
+          backgroundColor: colors.white[global.darkMode],
+          padding: 16,
+          paddingBottom: 0,
+          marginTop: 10,
+        }}
+        onLayout={(event) => {
+            var {x, y, width, height} = event.nativeEvent.layout;
+            this.setState({heightOffset:height});
+          }} 
+      >
+        {this.props.children}
+      </View>
+      </>
+
+    )
+  }
+
+  bottomSheetCallback = new Animated.Value(1);
+
+  render(){
+    const springConfig = {
+        damping: 20,
+        mass: 1,
+        stiffness: 135,
+        overshootClamping: true,
+        restSpeedThreshold: 0.01,
+        restDisplacementThreshold: 0.001
+    };
+    return (
+      <>
+      <BottomSheet
+        callbackNode={this.bottomSheetCallback}
+        ref={(sheetRef) => this.sheetRef = sheetRef}
+        snapPoints={[Dimensions.get('window').height+10, 0]}
+        initialSnap={1}
+        renderContent={this.renderContent}
+        springConfig={springConfig}
+      />
+      <Animated.View style={{backgroundColor: "black", opacity: Animated.multiply(-0.8,Animated.add(-0.7,Animated.multiply(this.bottomSheetCallback,1))), width: Dimensions.get('window').width, height: Dimensions.get('window').height, position:"absolute"}} pointerEvents="none"/>
+      </>
+    )
+  }
+}
 
 const styles = StyleSheet.create({
   centeredView: {

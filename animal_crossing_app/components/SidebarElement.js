@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     borderRadius:14,
     margin: 4,
     marginLeft: "7%",
-    marginRight: "7%",
+    marginRight: "9%",
     paddingRight: 50,
   },
 });

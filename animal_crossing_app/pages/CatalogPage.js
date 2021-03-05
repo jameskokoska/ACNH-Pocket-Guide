@@ -131,7 +131,7 @@ class CatalogPage extends Component {
           <View style={{height: 35}}/>
           <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={async ()=>{await this.import(); this.popupWait.setPopupVisible(false); this.popup.setPopupVisible(true);}} text={"Import"} />
           <View style={{height: 10}}/>
-          <TextFont bold={true} style={{fontSize: 13, marginLeft: 30, marginRight: 30, textAlign:"center",color:colors.textBlack[global.darkMode]}}>{"May take a few seconds to complete. \nPlease be patient."}</TextFont>
+          <TextFont bold={false} style={{fontSize: 13, marginLeft: 30, marginRight: 30, textAlign:"center",color:colors.textBlack[global.darkMode]}}>{"May take a few seconds to complete. \nPlease be patient."}</TextFont>
           <View style={{height: 50}}/>
         </ScrollView>
         <Popup 
