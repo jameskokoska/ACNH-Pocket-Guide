@@ -216,61 +216,61 @@ export function getSculpturePhotoFake(name){
 export function getPaintingPhoto(name){
   switch(name){
     case "Academic Painting":
-      return require("../assets/icons/art/AcademicPainting.png");
+      return require("../assets/icons/art/AcademicPainting.jpg");
     case "Amazing Painting":
-      return require("../assets/icons/art/AmazingPainting.png");
+      return require("../assets/icons/art/AmazingPainting.jpg");
     case "Basic Painting":
-      return require("../assets/icons/art/BasicPainting.png");
+      return require("../assets/icons/art/BasicPainting.jpg");
     case "Calm Painting":
-      return require("../assets/icons/art/CalmPainting.png");
+      return require("../assets/icons/art/CalmPainting.jpg");
     case "Common Painting":
-      return require("../assets/icons/art/CommonPainting.png");
+      return require("../assets/icons/art/CommonPainting.jpg");
     case "Detailed Painting":
-      return require("../assets/icons/art/DetailedPainting.png");
+      return require("../assets/icons/art/DetailedPainting.jpg");
     case "Dynamic Painting":
-      return require("../assets/icons/art/DynamicPainting.png");
+      return require("../assets/icons/art/DynamicPainting.jpg");
     case "Famous Painting":
-      return require("../assets/icons/art/FamousPainting.png");
+      return require("../assets/icons/art/FamousPainting.jpg");
     case "Flowery Painting":
-      return require("../assets/icons/art/FloweryPainting.png");
+      return require("../assets/icons/art/FloweryPainting.jpg");
     case "Glowing Painting":
-      return require("../assets/icons/art/GlowingPainting.png");
+      return require("../assets/icons/art/GlowingPainting.jpg");
     case "Graceful Painting":
-      return require("../assets/icons/art/GracefulPainting.png");
+      return require("../assets/icons/art/GracefulPainting.jpg");
     case "Jolly Painting":
-      return require("../assets/icons/art/JollyPainting.png");
+      return require("../assets/icons/art/JollyPainting.jpg");
     case "Moody Painting":
-      return require("../assets/icons/art/MoodyPainting.png");
+      return require("../assets/icons/art/MoodyPainting.jpg");
     case "Moving Painting":
-      return require("../assets/icons/art/MovingPainting.png");
+      return require("../assets/icons/art/MovingPainting.jpg");
     case "Mysterious Painting":
-      return require("../assets/icons/art/MysteriousPainting.png");
+      return require("../assets/icons/art/MysteriousPainting.jpg");
     case "Nice Painting":
-      return require("../assets/icons/art/NicePainting.png");
+      return require("../assets/icons/art/NicePainting.jpg");
     case "Perfect Painting":
-      return require("../assets/icons/art/PerfectPainting.png");
+      return require("../assets/icons/art/PerfectPainting.jpg");
     case "Quaint Painting":
-      return require("../assets/icons/art/QuaintPainting.png");
+      return require("../assets/icons/art/QuaintPainting.jpg");
     case "Scary Painting":
-      return require("../assets/icons/art/ScaryPainting.png");
+      return require("../assets/icons/art/ScaryPainting.jpg");
     case "Scenic Painting":
-      return require("../assets/icons/art/ScenicPainting.png");
+      return require("../assets/icons/art/ScenicPainting.jpg");
     case "Serene Painting":
-      return require("../assets/icons/art/SerenePainting.png");
+      return require("../assets/icons/art/SerenePainting.jpg");
     case "Sinking Painting":
-      return require("../assets/icons/art/SinkingPainting.png");
+      return require("../assets/icons/art/SinkingPainting.jpg");
     case "Solemn Painting":
-      return require("../assets/icons/art/SolemnPainting.png");
+      return require("../assets/icons/art/SolemnPainting.jpg");
     case "Twinkling Painting":
-      return require("../assets/icons/art/TwinklingPainting.png");
+      return require("../assets/icons/art/TwinklingPainting.jpg");
     case "Warm Painting":
-      return require("../assets/icons/art/WarmPainting.png");
+      return require("../assets/icons/art/WarmPainting.jpg");
     case "Wild Painting Left Half":
-      return require("../assets/icons/art/WildPaintingLeftHalf.png");
+      return require("../assets/icons/art/WildPaintingLeftHalf.jpg");
     case "Wild Painting Right Half":
-      return require("../assets/icons/art/WildPaintingRightHalf.png");
+      return require("../assets/icons/art/WildPaintingRightHalf.jpg");
     case "Wistful Painting":
-      return require("../assets/icons/art/WistfulPainting.png");
+      return require("../assets/icons/art/WistfulPainting.jpg");
     default:
       return "none";
   }
@@ -279,37 +279,37 @@ export function getPaintingPhoto(name){
 export function getPaintingPhotoFake(name){
   switch(name){
     case "Academic Painting":
-      return require("../assets/icons/art/AcademicPaintingFake.png");
+      return require("../assets/icons/art/AcademicPaintingFake.jpg");
     case "Amazing Painting":
-      return require("../assets/icons/art/AmazingPaintingFake.png");
+      return require("../assets/icons/art/AmazingPaintingFake.jpg");
     case "Basic Painting":
-      return require("../assets/icons/art/BasicPaintingFake.png");
+      return require("../assets/icons/art/BasicPaintingFake.jpg");
     case "Detailed Painting":
-      return require("../assets/icons/art/DetailedPaintingFake.png");
+      return require("../assets/icons/art/DetailedPaintingFake.jpg");
     case "Famous Painting":
-      return require("../assets/icons/art/FamousPaintingFake.png");
+      return require("../assets/icons/art/FamousPaintingFake.jpg");
     case "Graceful Painting":
-      return require("../assets/icons/art/GracefulPaintingFake.png");
+      return require("../assets/icons/art/GracefulPaintingFake.jpg");
     case "Jolly Painting":
-      return require("../assets/icons/art/JollyPaintingFake.png");
+      return require("../assets/icons/art/JollyPaintingFake.jpg");
     case "Moving Painting":
-      return require("../assets/icons/art/MovingPaintingFake.png");
+      return require("../assets/icons/art/MovingPaintingFake.jpg");
     case "Quaint Painting":
-      return require("../assets/icons/art/QuaintPaintingFake.png");
+      return require("../assets/icons/art/QuaintPaintingFake.jpg");
     case "Scary Painting":
-      return require("../assets/icons/art/ScaryPaintingFake.png");
+      return require("../assets/icons/art/ScaryPaintingFake.jpg");
     case "Scenic Painting":
-      return require("../assets/icons/art/ScenicPaintingFake.png");
+      return require("../assets/icons/art/ScenicPaintingFake.jpg");
     case "Serene Painting":
-      return require("../assets/icons/art/SerenePaintingFake.png");
+      return require("../assets/icons/art/SerenePaintingFake.jpg");
     case "Solemn Painting":
-      return require("../assets/icons/art/SolemnPaintingFake.png");
+      return require("../assets/icons/art/SolemnPaintingFake.jpg");
     case "Wild Painting Left Half":
-      return require("../assets/icons/art/WildPaintingLeftHalfFake.png");
+      return require("../assets/icons/art/WildPaintingLeftHalfFake.jpg");
     case "Wild Painting Right Half":
-      return require("../assets/icons/art/WildPaintingRightHalfFake.png");
+      return require("../assets/icons/art/WildPaintingRightHalfFake.jpg");
     case "Wistful Painting":
-      return require("../assets/icons/art/WistfulPaintingFake.png");
+      return require("../assets/icons/art/WistfulPaintingFake.jpg");
     default:
       return "none"
   }

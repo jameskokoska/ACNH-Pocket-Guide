@@ -50,7 +50,7 @@ This application uses Expo. Install expo. Navigate into the ```animal_crossing_a
 
 ## Screenshots
 Can be seen here: https://play.google.com/store/apps/details?id=com.acnh.pocket_guide or below
-| ![Screenshot 1](animal_crossing_app/assets/promotional/1.jpg)  | ![Screenshot 2](animal_crossing_app/assets/promotional/2.jpg) | ![Screenshot 3](animal_crossing_app/assets/promotional/3.jpg) |
+| ![Screenshot 1](Promotional/1.jpg)  | ![Screenshot 2](Promotional/2.jpg) | ![Screenshot 3](Promotional/3.jpg) |
 | ------------- | ------------- | ------------- |
-| ![Screenshot 4](animal_crossing_app/assets/promotional/4.jpg)  | ![Screenshot 5](animal_crossing_app/assets/promotional/5.jpg) | ![Screenshot 6](animal_crossing_app/assets/promotional/6.jpg) |
-| ![Screenshot 7](animal_crossing_app/assets/promotional/7.jpg)  | ![Screenshot 8](animal_crossing_app/assets/promotional/8.jpg) | ![Screenshot 9](animal_crossing_app/assets/promotional/9.jpg) |
+| ![Screenshot 4](Promotional/4.jpg)  | ![Screenshot 5](Promotional/5.jpg) | ![Screenshot 6](Promotional/6.jpg) |
+| ![Screenshot 7](Promotional/7.jpg)  | ![Screenshot 8](Promotional/8.jpg) | ![Screenshot 9](Promotional/9.jpg) |
