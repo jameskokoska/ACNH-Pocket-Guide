@@ -15,6 +15,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import VillagerPopupPopup from "../popups/VillagerPopupPopup"
 import {getCurrentDateObject} from '../components/DateFunctions';
 import TodoList from '../components/TodoList';
+import VisitorsList from '../components/VisitorsList';
 import {getSettingsString} from "../LoadJsonData"
 import { ScrollView } from 'react-native-gesture-handler';
 
@@ -46,6 +47,8 @@ class HomePage extends Component {
     var artPercentage = artCount/43 * 100;
     var musicCount = countCollection("songCheckList");
     var musicPercentage = musicCount/95 * 100;
+    var emojipediaCount = countCollection("emojiCheckList");
+    var emojipediaPercentage = emojipediaCount/global.dataLoadedReactions[0].length * 100;
 
     var todayEvents = getEventsDay(getCurrentDateObject());
     var tomorrowEvents = getEventsDay(addDays(getCurrentDateObject(), 1));
@@ -124,6 +127,11 @@ class HomePage extends Component {
           <TodoList/>
           <View style={{height: 15}}/>
         </HomeContentArea>
+        <HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.todoColor[global.darkMode]} title="Visitors" titleColor={colors.visitorsColor[global.darkModeReverse]}>
+          <View style={{height: 15}}/>
+          <VisitorsList/>
+          <View style={{height: 15}}/>
+        </HomeContentArea>
         <HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.collectionColor[global.darkMode]} title="Collection" titleColor={colors.collectionColor[global.darkModeReverse]}>
           <View style={{height: 15}}/>
           <ProgressContainer color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={fishPercentage} image={require("../assets/icons/fish.png")} text={"Fish " + fishCount + "/80"}/>
@@ -132,6 +140,7 @@ class HomePage extends Component {
           <ProgressContainer color={colors.fossilAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={fossilPercentage} image={require("../assets/icons/bones.png")} text={"Fossils " + fossilCount + "/73"}/>
           <ProgressContainer color={colors.artAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={artPercentage} image={require("../assets/icons/colorPalette.png")} text={"Art " + artCount + "/43"}/>
           <ProgressContainer color={colors.musicAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={musicPercentage} image={require("../assets/icons/music.png")} text={"Songs " + musicCount + "/95"}/>
+          <ProgressContainer color={colors.emojipediaAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={emojipediaPercentage} image={require("../assets/icons/emote.png")} text={"Emotes " + emojipediaCount + "/" + global.dataLoadedReactions[0].length.toString()}/>
           <View style={{height: 15}}/>
         </HomeContentArea>
         <HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.profileColor[global.darkMode]} title="Profile" titleColor={colors.profileColor[global.darkModeReverse]}>

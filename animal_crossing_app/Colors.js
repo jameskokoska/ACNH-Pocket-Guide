@@ -63,6 +63,7 @@ const colors = {
     eventsColor : ["#ffe366","#333333"],
     todoColor : ["#ffcc80","#333333"],
     todoColorAccent : ["#ffeccf","#333333"],
+    visitorsColor : ["#82b5b4","#333333"],
     storeHoursColor : ["#8fc6f7","#333333"],
     collectionColor : ["#c7a4ff","#333333"],
     profileColor : ["#81c784","#333333"],

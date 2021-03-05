@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Image, TouchableOpacity, Text, View, StyleSheet} from "react-native";
+import {Vibration, Image, TouchableOpacity, Text, View, StyleSheet} from "react-native";
 import colors from '../Colors.js';
 import CachedImage from 'react-native-expo-cached-image';
 import Check from './Check';
@@ -211,6 +211,50 @@ export class InfoLineTriple extends Component {
     }
     
   }
+}
+
+export class Variations extends Component {
+  render(){
+    if(this.props.item!=""||this.props.item!=undefined){
+      var variations = getVariations(this.props.item["Name"],this.props.globalDatabase,this.props.item["checkListKey"]);
+      var imageProperty = this.props.imageProperty;
+      var dataSet = this.props.item.dataSet;
+      return(
+        <View style={{marginHorizontal: 20, flexDirection: 'row', justifyContent:'center',flexWrap:"wrap"}}>
+          {variations.map( (item, index)=>
+            <View key={item[this.props.imageProperty[item.dataSet]]} style={[{marginHorizontal:7, marginVertical: 3, width: 60,height: 60,borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.eventBackground[global.darkMode]}]}>
+              <TouchableOpacity onPress={()=>{this.props.openBottomSheet(item); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : ""}}>
+                <CachedImage
+                  style={{height: 47, width: 47, resizeMode:'contain',}}
+                  source={{
+                    uri: item[this.props.imageProperty[dataSet]],
+                  }}
+                />
+              </TouchableOpacity>
+            </View>
+          )}
+        </View>
+      )
+    } else {
+      return <View/>
+    }
+    
+  }
+}
+
+export function getVariations(name, globalDatabase, checkListKey){
+  var totalVariations = [];
+  for(var i=0; i<globalDatabase.length; i++){
+    for(var j=0; j<globalDatabase[i].length; j++){
+      if(globalDatabase[i][j]["checkListKey"].split("CheckList")[0]!==checkListKey.split("CheckList")[0]){
+        break;
+      }
+      if(globalDatabase[i][j]["Name"].toLowerCase()===name.toLowerCase()){
+        totalVariations.push(globalDatabase[i][j]);
+      }
+    }
+  }
+  return totalVariations;
 }
 
 export class InfoLineBeside extends Component {

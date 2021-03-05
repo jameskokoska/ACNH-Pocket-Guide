@@ -6,7 +6,8 @@ import {
   Text,
   TouchableOpacity,
   View,
-  Vibration
+  Vibration,
+  Dimensions
 } from "react-native";
 import TextFont from "../components/TextFont";
 import ButtonComponent from "../components/ButtonComponent";
@@ -52,6 +53,7 @@ class VillagerPopupPopup extends Component {
           onRequestClose={()=>{this.setPopupVisible(false, this.state.item);}}
         >
         <View style={styles.centeredView}>
+          <TouchableOpacity onPress={()=>{this.setPopupVisible(false, this.state.item);}} style={{position:"absolute", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: "black", opacity: 0.1}}/>
           <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
             <TextFont bold={true} style={{fontSize: 30, marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{this.state.item.["Name"]}</TextFont>
             {villagerPopup}

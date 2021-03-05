@@ -7,7 +7,8 @@ import {
   View,
   Vibration,
   ScrollView,
-  Dimensions
+  Dimensions,
+  TouchableOpacity
 } from "react-native";
 import TextFont from "./TextFont";
 import ButtonComponent from "./ButtonComponent";
@@ -76,6 +77,7 @@ class Popup extends Component {
           onRequestClose={()=>{this.setPopupVisible(false);}}
         >
         <View style={styles.centeredView}>
+          <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} style={{position:"absolute", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: "black", opacity: 0.1}}/>
           <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
             <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.props.text}</TextFont>
             <ScrollView style={{maxHeight:Dimensions.get('window').height*0.75}}>

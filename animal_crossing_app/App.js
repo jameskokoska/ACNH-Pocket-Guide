@@ -42,6 +42,9 @@ global.changelog = `
 -Moved materials page to tab within Items page
 -Added <Open side menu from left edge only> setting
 Can be used to help avoid accidental menu opens when scrolling
+-Added Mystery Islands page
+-Added Emotes to Collection in Home Page
+-Can now close popups by tapping the background
 `
 
 class App extends Component {
@@ -55,7 +58,7 @@ class App extends Component {
     this.numLogins;
     this.state = {
       loaded: false,
-      currentPage: 7,
+      currentPage: 3,
       open:false,
       fadeInTitle:true,
       popupChangelogVisible:false

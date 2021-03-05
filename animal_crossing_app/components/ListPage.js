@@ -10,7 +10,7 @@ import * as FileSystem from 'expo-file-system';
 import * as Permissions from 'expo-permissions';
 import {Dimensions } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
-import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from './BottomSheetComponents';
+import {Variations, InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from './BottomSheetComponents';
 import colors from "../Colors.js"
 import {getCurrentDateObject, getMonthShort, isActive2} from "./DateFunctions"
 import FishPopup from "../popups/FishPopup"
@@ -304,6 +304,7 @@ export default (props) =>{
     return <BottomSheetRender 
       activeCreatures={props.activeCreatures}
       ref={bottomSheetRenderRef}
+      sheetRef={sheetRef}
       imageProperty={props.imageProperty} 
       textProperty={props.textProperty}
       textProperty2={props.textProperty2}
@@ -457,6 +458,7 @@ class BottomSheetRender extends Component{
     } else {
       phrase = <View/>
     }
+
     
     //Add popup classes here
     var popUpContainer = <View/>
@@ -560,6 +562,12 @@ class BottomSheetRender extends Component{
             item={this.state.item}
             textProperty={this.props.textProperty}
             popUpPhraseProperty={this.props.popUpPhraseProperty}
+          />
+          <Variations 
+            item={this.state.item}
+            imageProperty={this.props.imageProperty} 
+            globalDatabase={dataLoadedAll} 
+            openBottomSheet={(item)=>{this.setState({item:item})}}
           />
           {popUpContainer}
           <View style={{height:10+heightCompensation}}/>

@@ -6,7 +6,9 @@ import {
   View,
   Vibration,
   TextInput,
-  Image
+  Image,
+  TouchableOpacity,
+  Dimensions
 } from "react-native";
 import TextFont from "./TextFont";
 import ButtonComponent from "./ButtonComponent";
@@ -74,6 +76,7 @@ class PopupAddTask extends Component {
           onRequestClose={()=>{this.setPopupVisible(false)}}
         >
         <View style={styles.centeredView}>
+          <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} style={{position:"absolute", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: "black", opacity: 0.1}}/>
           <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
             <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Add Task</TextFont>
             <View style={{height:10}}/>
