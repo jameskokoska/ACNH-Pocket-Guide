@@ -218,6 +218,9 @@ export class Variations extends Component {
   render(){
     if(this.props.item!=""||this.props.item!=undefined){
       var variations = getVariations(this.props.item["Name"],this.props.globalDatabase,this.props.item["checkListKey"]);
+      if(variations.length<=1){
+        return <View/>
+      }
       var imageProperty = this.props.imageProperty;
       var dataSet = this.props.item.dataSet;
       return(

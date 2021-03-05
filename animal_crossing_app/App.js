@@ -45,6 +45,8 @@ Can be used to help avoid accidental menu opens when scrolling
 -Added Mystery Islands page
 -Added Emotes to Collection in Home Page
 -Can now close popups by tapping the background
+-Added variations to popups
+Tap them to see a larger preview
 `
 
 class App extends Component {
@@ -58,7 +60,7 @@ class App extends Component {
     this.numLogins;
     this.state = {
       loaded: false,
-      currentPage: 3,
+      currentPage: 0,
       open:false,
       fadeInTitle:true,
       popupChangelogVisible:false
