@@ -33,6 +33,8 @@ import * as Font from 'expo-font';
 import PopupRating from './components/PopupRating'
 import { Appearance } from 'react-native-appearance';
 import SideMenu from './components/SideMenu'
+import GuidePage from './pages/GuidePage';
+
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -91,7 +93,7 @@ class App extends Component {
     const numLogins = parseInt(await getStorage("numLogins","0")) + 1;
     await AsyncStorage.setItem("numLogins", numLogins.toString());
     this.numLogins = numLogins;
-    console.log(numLogins)
+    // console.log(numLogins)
     global.collectionList = (await getStorage("collectedString","")).split("\n");
     console.log(global.collectionList)
 
@@ -144,6 +146,10 @@ class App extends Component {
     }, 10);
   }
 
+  componentWillUnmount() {
+    BackHandler.removeEventListener("hardwareBackPress", this.handleBackButton);
+  }
+
   updateDarkMode(){
     if(getSettingsString("settingsAutoDarkMode")==="true"){
       global.darkMode = Appearance.getColorScheme()==="light" ? 0 : 1;
@@ -160,28 +166,29 @@ class App extends Component {
   }
 
   handleBackButton(){
-    if(this.state.loaded && getSettingsString("settingsBackButtonChangePages")==="true"){
+    //For Guide page
+    if(this.state.currentPage===15){
+      return true;
+    }else if(this.state.loaded && getSettingsString("settingsBackButtonChangePages")==="true"){
       this.setPage(this.lastPage);
     }else{
-      this.openDrawer();
+      this.openDrawer(false);
     }
     return true;
   }
 
-  openDrawer() {
+  openDrawer(vibrate=true) {
     if(this.state.loaded){
       this.sideMenu.openDrawer();
-      getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(8) : "";
+      getSettingsString("settingsEnableVibrations")==="true"&&vibrate ? Vibration.vibrate(8) : "";
     }
     return true;
   }
 
   setPage(pageNum) {
     if(this.state.loaded){
-      console.log(this.lastPage);
       if(this.state.currentPage!==pageNum){
         this.lastPage = this.state.currentPage;
-        console.log(this.lastPage);
         this.setState({currentPage: pageNum});
       }
       this.sideMenu.closeDrawer();
@@ -229,7 +236,7 @@ class App extends Component {
       if (this.state.currentPage===0){
         currentPageView = <FadeInOut fadeIn={true}><HomePage setPage={this.setPage}/></FadeInOut>
       } else if (this.state.currentPage===1){
-        currentPageView = <AllItemsPage search="hi"/>
+        currentPageView = <AllItemsPage/>
       } else if(this.state.currentPage===2){
         currentPageView = <MuseumPage/>
       } else if (this.state.currentPage===3){
@@ -256,12 +263,14 @@ class App extends Component {
         currentPageView = <SettingsPage/>
       } else if (this.state.currentPage===14){
         currentPageView = <CreditsPage/>
+      } else if (this.state.currentPage===15){
+        currentPageView = <GuidePage openMenu={this.openDrawer}/>
       } else {
         currentPageView = <Text>Default</Text>
       }
       this.updateDarkMode();
       var fab;
-      if(global.settingsCurrent!==undefined&&getSettingsString("settingsShowFAB")==="true"){
+      if(this.state.currentPage!==15&&global.settingsCurrent!==undefined&&getSettingsString("settingsShowFAB")==="true"){
         fab = <FAB openDrawer={this.openDrawer}/>;
       } else {
         fab = <View/>;

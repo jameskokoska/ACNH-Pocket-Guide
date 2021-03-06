@@ -63,13 +63,13 @@ class Onboard extends Component {
               <ButtonComponent vibrate={10} color={colors.okButton[global.darkMode]} text="Northern Hemisphere" onPress={() => {
                 AsyncStorage.setItem("firstLogin", "false"); 
                 AsyncStorage.setItem("settingsNorthernHemisphere", "true");
-                global.settingsCurrent[0]["currentValue"] = "true";
+                global.settingsCurrent[1]["currentValue"] = "true";
                 this.props.setFirstLogin(false);
               }} />
               <ButtonComponent vibrate={10} color={colors.okButton[global.darkMode]} text="Southern Hemisphere" onPress={() => {
                 AsyncStorage.setItem("firstLogin", "false"); 
                 AsyncStorage.setItem("settingsNorthernHemisphere", "false");
-                global.settingsCurrent[0]["currentValue"] = "false";
+                global.settingsCurrent[1]["currentValue"] = "false";
                 this.props.setFirstLogin(false);
               }} />
               {/* <TextFont style={{fontSize: 12, paddingTop: 30, width: "70%", textAlign:'center', color:colors.textBlack[global.darkMode]}} bold={true}>You can import your exported data from the last version of the app in settings.</TextFont> */}

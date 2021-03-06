@@ -50,12 +50,15 @@ class CreditsPage extends Component {
           <SubHeader>Additional Information</SubHeader>
           <Paragraph>This application was created using React Native, with the original App programmed in Flutter. This application and contents are NOT affiliated with Nintendo. All local artwork recreated/licensed. This application is not made for commercial use, and is provided at a price of 0$ (free) on the Google Play Store with no advertisements. All application source code is of property to respective owners/contributors listed on the Credits page and/or licenses associated within specific packages/libraries within this application.</Paragraph>
           <Paragraph>Twemoji Icons Graphics licensed under CC-BY 4.0:</Paragraph>
-          <ExternalLink link="https://creativecommons.org/licenses/by/4.0/"/>
+          <ExternalLink link="https://twemoji.twitter.com/"/>
+          <Paragraph>Font Awesome icons:</Paragraph>
+          <ExternalLink link="https://fontawesome.com/license"/>
           <Paragraph>FlatIcons: from 'Freepik' and 'Pixel perfect':</Paragraph>
           <ExternalLink link="https://www.flaticon.com/"/>
           <Paragraph>All game data sourced from the community created spreadsheet. Thank you everyone for all the hard work and for making the spreadsheet!</Paragraph>
           <ExternalLink link="https://tinyurl.com/acnh-sheet"/>
           <Paragraph>And thank YOU for downloading this application and showing your support.</Paragraph>
+          
           
           <View style={{height:35}}/>
           <SubHeader>Integrations</SubHeader>
@@ -63,6 +66,8 @@ class CreditsPage extends Component {
           <ExternalLink link="https://turnipprophet.io/"/>
           <Paragraph>Nook.lol - Catalog Scanner:</Paragraph>
           <ExternalLink link="https://nook.lol/"/>
+          <Paragraph>{"Guide + FAQ:\nAuthor: littlesnorlax, Co-author: cestislife"}</Paragraph>
+          <ExternalLink link="https://chibisnorlax.github.io/acnhfaq/"/>
 
           <View style={{height:35}}/>
           <SubHeader>Sources</SubHeader>
