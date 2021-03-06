@@ -17,19 +17,17 @@ import colors from "../Colors";
 import DropDownPicker from 'react-native-dropdown-picker'
 import {getPhoto} from "./GetPhoto"
 import {PopupBottomCustom} from "./Popup"
-
+import {getStorage} from "../LoadJsonData"
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 class PopupChangelog extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      popupVisible: false
-    };
-  }
-
-  componentDidUpdate(){
-    if(this.props.popupVisible===true&&this.state.popupVisible===false)
-      this.setPopupVisible(this.props.popupVisible);
+  async componentDidMount(){
+    this.openChangelog = await getStorage("changelog","");
+    if(this.openChangelog === "" || this.openChangelog !== global.version){
+      this.timeoutHandle = setTimeout(()=>{
+        this.setPopupVisible(true);
+      }, 50);
+    }
   }
 
   setPopupVisible = (visible) => {
@@ -37,12 +35,12 @@ class PopupChangelog extends Component {
   }
 
   render(){
-    var changelogText = this.props.textLower.toString();
+    var changelogText = global.changelog.toString();
     changelogText = changelogText.split("\n-");
-    return (
+    return(
       <>
-        <PopupBottomCustom ref={(popup) => this.popup = popup} onClose={()=>this.props.onClose()}>
-          <TextFont bold={true} style={{fontSize: 28, textAlign:"center",color: colors.textBlack[global.darkMode],}}>{this.props.text}</TextFont>
+        <PopupBottomCustom ref={(popup) => this.popup = popup} onClose={async () => {await AsyncStorage.setItem("changelog", global.version)}}>
+          <TextFont bold={true} style={{fontSize: 28, textAlign:"center",color: colors.textBlack[global.darkMode],}}>{"What's New?"}</TextFont>
           {
             changelogText.map((point, index) => (
                 <TextFont key={index} bold={false} style={{marginBottom:4, fontSize: 18, color: colors.textBlack[global.darkMode]}}>{point}</TextFont>

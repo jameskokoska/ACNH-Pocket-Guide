@@ -41,7 +41,7 @@ import GuidePage from './pages/GuidePage';
 global.version = require("./app.json")["expo"]["version"];
 global.versionCode = require("./app.json")["expo"]["android"]["versionCode"];
 global.changelog = `
--Thanks everyone for the support recently! It really helps motivate!
+-Thanks everyone for the support recently! It really helps motivate me!
 -
 -Smoother and improved popups
 -Color fixes
@@ -62,7 +62,6 @@ class App extends Component {
       currentPage: 0,
       open:false,
       fadeInTitle:true,
-      popupChangelogVisible:false
     }
     this.lastPage = 0;
   }
@@ -113,15 +112,7 @@ class App extends Component {
     await Font.loadAsync({
       "ArialRoundedBold": require('./assets/fonts/arialRoundBold.ttf'),
     });
-
-    this.openChangelog = await getStorage("changelog","");
-    if(this.openChangelog === "" || this.openChangelog !== global.version){
-      this.openChangelog = true;
-    } else {
-      this.openChangelog = false;
-    }
     
-
     console.log("DONE Loading")
     this.timeoutHandle = setTimeout(()=>{
       this.setState({
@@ -134,11 +125,6 @@ class App extends Component {
         loaded:true,
       });
       // console.log(this.openChangelog)
-      if(this.openChangelog && firstLogin==="false"){
-        this.setState({
-          popupChangelogVisible:true,
-        });
-      }
     }, 10);
   }
 
@@ -197,12 +183,6 @@ class App extends Component {
     this.loadSettings();
   }
   render(){
-    const popupChangelogComp = <PopupChangelog
-      popupVisible={this.state.popupChangelogVisible}
-      text={"What's new?"}
-      textLower={global.changelog}
-      onClose={async ()=>{this.setState({popupChangelogVisible:false}); await AsyncStorage.setItem("changelog", global.version)}}
-    />
     if(!this.state.loaded){
       var splashScreens = [require('./assets/airplane.json'),require('./assets/balloon.json')];
       var chosenSplashScreen = splashScreens[Math.floor(this.random * splashScreens.length)];
@@ -279,7 +259,7 @@ class App extends Component {
             <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
             <StatusBar hidden={getSettingsString("settingsShowStatusBar")==="false"} backgroundColor="#1c1c1c" style="light" />
             {currentPageView}
-            {popupChangelogComp}
+            <PopupChangelog/>
           </SideMenu>
           {fab}
         </>

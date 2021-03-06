@@ -44,7 +44,7 @@ class GuidePage extends Component {
           }}
           incognito
           renderLoading={() => (
-            <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
+            <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:1000, width:1000}}>
               <ActivityIndicator
                 color='green'
                 size='large'
