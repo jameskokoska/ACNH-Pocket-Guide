@@ -65,8 +65,7 @@ class MysteryIslandsPage extends Component {
           </View>
           <View style={{height: 70}}/>
         </ScrollView>
-        <PopupBottomCustom ref={(popup) => this.popup = popup} title={this.state.selectedIsland.name} buttonText={"Close"}>
-          <View style={{height:10}}/>
+        <PopupBottomCustom ref={(popup) => this.popup = popup}>
           <Image style={{resizeMode:'contain', width:"100%", borderRadius:2}} source={this.state.selectedIsland.picture}/>
           <View style={{height:5}}/>
           <TextFont bold={true} style={{textAlign:"center",marginTop:10, fontSize: 25, color: colors.textBlack[global.darkMode]}}>{this.state.selectedIsland.name}</TextFont>
@@ -85,7 +84,6 @@ class MysteryIslandsPage extends Component {
             textProperty={["requires"]}
           />
           <TextFont bold={false} style={{marginTop:10, fontSize: 17, color: colors.textBlack[global.darkMode]}}>{this.state.selectedIsland.description}</TextFont>
-          <View style={{height:100}}/>
         </PopupBottomCustom>
       </>
     )

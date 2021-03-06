@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Vibration, Image, TouchableOpacity, Text, View, StyleSheet} from "react-native";
+import {Dimensions, Vibration, Image, TouchableOpacity, Text, View, StyleSheet} from "react-native";
 import colors from '../Colors.js';
 import CachedImage from 'react-native-expo-cached-image';
 import Check from './Check';
@@ -7,8 +7,8 @@ import TextFont from './TextFont'
 import {commas, capitalize, checkOff, capitalizeFirst} from '../LoadJsonData'
 import {getPhotoCorner, getMaterialImage} from "./GetPhoto"
 import {getSettingsString} from "../LoadJsonData"
-import PopupImage from "./PopupImage"
 import {ScrollView} from 'react-native-gesture-handler'
+import {PopupInfoCustom} from "./Popup"
 
 export class CircularImage extends Component {
   render() {
@@ -225,10 +225,11 @@ export class Variations extends Component {
       var imageProperty = this.props.imageProperty;
       var dataSet = this.props.item.dataSet;
       return(
+        <>
         <ScrollView horizontal={true} style={{marginHorizontal:10}} contentContainerStyle={{ flexGrow: 1, justifyContent: 'center'}}>
         <View style={{marginHorizontal: 4, flexDirection: 'row', justifyContent:'center'}}>
           {variations.map( (item, index)=>
-            <View key={item[this.props.imageProperty[dataSet]]} style={[{marginHorizontal:4, marginVertical: 3, width: 60,height: 60,borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.eventBackground[global.darkMode]}]}>
+            <View key={item[this.props.imageProperty[dataSet]]} style={[{marginHorizontal:4, marginVertical: 3, width: 60,height: 60,borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
               <TouchableOpacity onPress={()=>{this.popup.setPopupVisible(true, item[this.props.imageProperty[dataSet]]); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : ""}}>
                 <CachedImage
                   style={{height: 47, width: 47, resizeMode:'contain',}}
@@ -239,14 +240,44 @@ export class Variations extends Component {
               </TouchableOpacity>
             </View>
           )}
-          <PopupImage ref={(popup) => this.popup = popup}/>
         </View>
         </ScrollView>
+        <PopupImage ref={(popup) => this.popup = popup}/>
+        </>
       )
     } else {
       return <View/>
     }
     
+  }
+}
+
+class PopupImage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      item:""
+    }; 
+  }
+
+  setPopupVisible = (visible, image) => {
+    this.setState({image:image});
+    this.popup.setPopupVisible(true);
+  }
+
+  render(){
+    return(
+      <PopupInfoCustom ref={(popup) => this.popup = popup} buttonText={"Close"}>
+        <View style={{alignItems:"center"}}>
+          <CachedImage
+            style={{width:Dimensions.get('window').width*0.5,height:Dimensions.get('window').width*0.5,resizeMode:'contain',}}
+            source={{
+              uri: this.state.image,
+            }}
+          />
+        </View>
+      </PopupInfoCustom>
+    )
   }
 }
 

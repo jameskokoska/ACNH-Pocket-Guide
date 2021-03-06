@@ -41,15 +41,11 @@ import GuidePage from './pages/GuidePage';
 global.version = require("./app.json")["expo"]["version"];
 global.versionCode = require("./app.json")["expo"]["android"]["versionCode"];
 global.changelog = `
--Thanks everyone for the support recently! It really helps motivate me :)
+-Thanks everyone for the support recently! It really helps motivate!
 -
--Moved materials page to tab within Items page
--Made <Open side menu from left edge only> setting the default
--Improved Mystery Islands page
--Added Emotes to Collection in Home Page
--Can now close popups by tapping the background
--Added variations to popups, horizontal scrolling list
-Tap them to see a larger preview
+-Smoother and improved popups
+-Color fixes
+-Guide and FAQ integration 
 `
 
 class App extends Component {

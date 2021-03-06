@@ -15,7 +15,7 @@ import ButtonComponent from "./ButtonComponent";
 import colors from "../Colors";
 import DropDownPicker from 'react-native-dropdown-picker'
 import {getPhoto} from "./GetPhoto"
-
+import {PopupInfoCustom} from "./Popup"
 
 class PopupAddTask extends Component {
   constructor(props) {
@@ -26,7 +26,7 @@ class PopupAddTask extends Component {
   }
 
   setPopupVisible = (visible) => {
-    this.setState({popupVisible:visible});
+    this.popup.setPopupVisible(true)
   }
 
   render(){
@@ -68,66 +68,55 @@ class PopupAddTask extends Component {
     var task = {title: "", picture:"", finished: false};
     return (
       <>
-        <Modal
-          animationType="fade"
-          transparent={true}
-          visible={this.state.popupVisible}
-          statusBarTranslucent
-          onRequestClose={()=>{this.setPopupVisible(false)}}
-        >
-        <View style={styles.centeredView}>
-          <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} style={{position:"absolute", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: "black", opacity: 0.1}}/>
-          <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
-            <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Add Task</TextFont>
-            <View style={{height:10}}/>
-            <TextInput
-              style={{fontSize: 20, width:"100%", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 10, borderRadius: 5}}
-              onChangeText={(text) => {task.title=text}}
-              placeholder={"Task Name"}
-              placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
-            />
-            <View style={{height:10}}/>
-            <DropDownPicker
-              items={icons}
-              placeholder={"Select photo..."}
-              dropDownMaxHeight={200}
-              containerStyle={{height: 45}}
-              style={[{width: "100%", borderWidth: 0, backgroundColor: colors.lightDarkAccentHeavy[global.darkMode], borderTopLeftRadius: 8, borderTopRightRadius: 8,borderBottomLeftRadius: 8, borderBottomRightRadius: 8}]}
-              itemStyle={{
-                  justifyContent: 'flex-start'
+        <PopupInfoCustom ref={(popup) => this.popup = popup} buttonDisabled={true}>
+          <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Add Task</TextFont>
+          <View style={{height:10}}/>
+          <TextInput
+            style={{fontSize: 20, width:"100%", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 10, borderRadius: 5}}
+            onChangeText={(text) => {task.title=text}}
+            placeholder={"Task Name"}
+            placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+          />
+          <View style={{height:10}}/>
+          <DropDownPicker
+            items={icons}
+            placeholder={"Select photo..."}
+            dropDownMaxHeight={200}
+            containerStyle={{height: 45}}
+            style={[{width: "100%", borderWidth: 0, backgroundColor: colors.lightDarkAccentHeavy[global.darkMode], borderTopLeftRadius: 8, borderTopRightRadius: 8,borderBottomLeftRadius: 8, borderBottomRightRadius: 8}]}
+            itemStyle={{
+                justifyContent: 'flex-start'
+            }}
+            isVisible
+            searchablePlaceholderTextColor={colors.filterSearch[global.darkMode]}
+            labelStyle={{fontFamily: "ArialRoundedBold", fontSize: 15, marginLeft:10, color:colors.textBlack[global.darkMode]}}
+            customTickIcon={()=><View/>}
+            activeItemStyle={{borderRadius: 10, backgroundColor: colors.lightDarkAccent[global.darkMode]}}
+            dropDownStyle={{borderBottomLeftRadius: 10, borderBottomRightRadius: 10, borderWidth: 0, backgroundColor: colors.lightDarkAccent[global.darkMode], opacity: 0.98, }}
+            onChangeItem={item => {task.picture=item.value}}
+          />
+          <View style={{height:10}}/>
+          <View style={{height:200}}/>
+          <View style={{flexDirection:"row", justifyContent:"center"}}>
+            <ButtonComponent
+              text={"Cancel"}
+              color={colors.cancelButton[global.darkMode]}
+              vibrate={8}
+              onPress={() => {
+                this.popup.setPopupVisible(false);
               }}
-              isVisible
-              searchablePlaceholderTextColor={colors.filterSearch[global.darkMode]}
-              labelStyle={{fontFamily: "ArialRoundedBold", fontSize: 15, marginLeft:10, color:colors.textBlack[global.darkMode]}}
-              customTickIcon={()=><View/>}
-              activeItemStyle={{borderRadius: 10, backgroundColor: colors.lightDarkAccent[global.darkMode]}}
-              dropDownStyle={{borderBottomLeftRadius: 10, borderBottomRightRadius: 10, borderWidth: 0, backgroundColor: colors.lightDarkAccent[global.darkMode], opacity: 0.98, }}
-              onChangeItem={item => {task.picture=item.value}}
-            />
-            <View style={{height:10}}/>
-            <View style={{height:200}}/>
-            <View style={{flexDirection:"row"}}>
-              <ButtonComponent
-                text={"Cancel"}
-                color={colors.cancelButton[global.darkMode]}
-                vibrate={8}
-                onPress={() => {
-                  this.setPopupVisible(false);
-                }}
-              /> 
-              <ButtonComponent
-                text={"Done"}
-                color={colors.okButton[global.darkMode]}
-                vibrate={15}
-                onPress={() => {
-                  this.props.addItem(task);
-                  this.setPopupVisible(false);
-                }}
-              /> 
-            </View>
+            /> 
+            <ButtonComponent
+              text={"Done"}
+              color={colors.okButton[global.darkMode]}
+              vibrate={15}
+              onPress={() => {
+                this.props.addItem(task);
+                this.popup.setPopupVisible(false);
+              }}
+            /> 
           </View>
-        </View>
-      </Modal>
+        </PopupInfoCustom>
       </>
     )
   }

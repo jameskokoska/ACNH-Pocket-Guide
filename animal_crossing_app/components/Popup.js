@@ -16,6 +16,7 @@ import colors from "../Colors";
 import BottomSheet from 'reanimated-bottom-sheet';
 import { LinearGradient } from 'expo-linear-gradient';
 import Animated from 'react-native-reanimated';
+import FadeInOut from "./FadeInOut"
 
 // <Popup 
 //  button1={"OK"} 
@@ -77,10 +78,10 @@ class Popup extends Component {
           transparent={true}
           visible={this.state.popupVisible}
           statusBarTranslucent
-          onRequestClose={()=>{this.setPopupVisible(false);}}
+          onRequestClose={()=>{this.props.button1===undefined && this.props.button2===undefined ? 0 : this.setPopupVisible(false);}}
         >
         <View style={styles.centeredView}>
-          <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} style={{position:"absolute", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: "black", opacity: 0.1}}/>
+          {this.props.button1===undefined && this.props.button2===undefined ? <View/> : <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} style={{position:"absolute", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: "black", opacity: 0.1}}/>}
           <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
             <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.props.text}</TextFont>
             <ScrollView style={{maxHeight:Dimensions.get('window').height*0.75}}>
@@ -134,14 +135,14 @@ export class PopupInfoCustom extends Component {
               {this.props.children}
             </ScrollView>
             <View style={{flexDirection:"row", justifyContent:"center"}}>
-              <ButtonComponent
+              {!this.props.buttonDisabled ? <ButtonComponent
                 text={this.props.buttonText}
                 color={colors.okButton[global.darkMode]}
                 vibrate={5}
                 onPress={() => {
                   this.setPopupVisible(!this.state.popupVisible);
                 }}
-              />
+              /> : <View/>}
             </View>
           </View>
         </View>
@@ -151,37 +152,46 @@ export class PopupInfoCustom extends Component {
 }
 
 
+// <PopupBottomCustom ref={(popup) => this.popup = popup} onClose={()=>this.props.onClose()}>
+// </Popup>
 export class PopupBottomCustom extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      heightOffset:0
+      heightOffset:0,
+      openStart:false,
     }
   }
 
   setPopupVisible = (visible) => {
-    this.sheetRef.snapTo(0); 
+    visible ? this.sheetRef.snapTo(0) : this.sheetRef.snapTo(1)
   }
   
   renderContent = () => {
     return(
       <>
-      <View style={{height:Dimensions.get('window').height-this.state.heightOffset}}/>
+      <View style={{width:Dimensions.get('window').width,height:Dimensions.get('window').height-this.state.heightOffset}}/>
       <View
         style={{
           borderTopLeftRadius: 20,
           borderTopRightRadius: 20,
           backgroundColor: colors.white[global.darkMode],
-          padding: 16,
-          paddingBottom: 0,
-          marginTop: 10,
+          padding:16,
+          paddingTop: 12,
         }}
         onLayout={(event) => {
             var {x, y, width, height} = event.nativeEvent.layout;
             this.setState({heightOffset:height});
           }} 
       >
+        <FadeInOut fadeIn={this.state.openStart} scaleInOut={true} duration={200} maxFade={0.4} minScale={0.7}>
+          <View style={{width:"100%", alignItems:"center"}}>
+            <View style={{backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode], height:5, width: 45, borderRadius:50}}/>
+          </View>
+        </FadeInOut>
+        <View style={{height:20}}/>
         {this.props.children}
+        <View style={{height:85}}/>
       </View>
       </>
 
@@ -204,12 +214,17 @@ export class PopupBottomCustom extends Component {
       <BottomSheet
         callbackNode={this.bottomSheetCallback}
         ref={(sheetRef) => this.sheetRef = sheetRef}
-        snapPoints={[Dimensions.get('window').height+10, 0]}
+        snapPoints={[Dimensions.get('window').height, 0]}
         initialSnap={1}
         renderContent={this.renderContent}
         springConfig={springConfig}
+        enabledContentTapInteraction={false}
+        onCloseStart={()=>{this.setState({openStart:false})}}
+        onCloseEnd={()=>{this.setState({openStart:false}); this.props.onClose===undefined ? 0 : this.props.onClose();}}
+        onOpenStart={()=>{this.setState({openStart:true})}}
+        onOpenEnd={()=>{this.setState({openStart:true})}}
       />
-      <Animated.View style={{backgroundColor: "black", opacity: Animated.multiply(-0.8,Animated.add(-0.7,Animated.multiply(this.bottomSheetCallback,1))), width: Dimensions.get('window').width, height: Dimensions.get('window').height, position:"absolute"}} pointerEvents="none"/>
+      <Animated.View style={{zIndex:99, backgroundColor: "black", opacity: Animated.multiply(-0.8,Animated.add(-0.7,Animated.multiply(this.bottomSheetCallback,1))), width: Dimensions.get('window').width, height: Dimensions.get('window').height, position:"absolute"}} pointerEvents="none"/>
       </>
     )
   }
@@ -227,7 +242,6 @@ const styles = StyleSheet.create({
     margin: 10,
     borderRadius: 10,
     padding: 20,
-    alignItems: "center",
     elevation: 5
   },
 });

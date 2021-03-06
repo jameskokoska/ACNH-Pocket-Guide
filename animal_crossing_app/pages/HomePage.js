@@ -12,12 +12,14 @@ import TextFont from "../components/TextFont"
 import ActiveCreatures from "../components/ActiveCreatures"
 import CurrentVillagers from "../components/CurrentVillagers"
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import VillagerPopupPopup from "../popups/VillagerPopupPopup"
 import {getCurrentDateObject} from '../components/DateFunctions';
 import TodoList from '../components/TodoList';
 import VisitorsList from '../components/VisitorsList';
 import {getSettingsString} from "../LoadJsonData"
 import { ScrollView } from 'react-native-gesture-handler';
+import {PopupBottomCustom} from "../components/Popup"
+import VillagerPopup from "../popups/VillagerPopup"
+
 
 function addDays(date, days) {
   var result = new Date(date);
@@ -194,6 +196,33 @@ class HomePage extends Component {
   }
 }
 export default HomePage;
+
+class VillagerPopupPopup extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      item:""
+    };   
+  }
+
+  setPopupVisible = (visible, item) => {
+    this.setState({item:item});
+    this.popup.setPopupVisible(true);
+  }
+
+  render(){
+    var villagerPopup = <View/>
+    if(this.state.item!==undefined && this.state.item!==""){
+      villagerPopup = <VillagerPopup item={this.state.item}/>
+    }
+    return(
+      <PopupBottomCustom ref={(popup) => this.popup = popup}>
+        <TextFont bold={true} style={{textAlign:"center",fontSize: 30, marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{this.state.item.["Name"]}</TextFont>
+        {villagerPopup}
+      </PopupBottomCustom>
+    )
+  }
+}
 
 const styles = StyleSheet.create({
   dayHeader:{

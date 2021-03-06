@@ -1,43 +1,78 @@
 import React, { Component } from "react";
 import { Animated, Text, View, Easing } from "react-native";
-//<FadeInOut fadeIn={true} fadeInOut={true} scaleInOut={true}>
+//<FadeInOut duration={2} fadeIn={true} fadeInOut={true} scaleInOut={true} maxFade={0.8} minScale={0.5}>
 //   <Text>Hi</Text>
 //</FadeInOut>
 class FadeInOut extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      animationValue: new Animated.Value(0),
+      fadeAnimationValue: new Animated.Value(0),
+      scaleAnimationValue: new Animated.Value(0),
     };
-    this.fadeInOut = true;
-    this.scaleInOut = true;
+    this.scaleInOut = false;
+    if(this.props.scaleInOut!==undefined && this.props.scaleInOut===true){
+      this.scaleInOut = true;
+    }
+    this.maxFade = 1;
+    if(this.props.maxFade!==undefined){
+      this.maxFade = this.props.maxFade;
+    }
+    this.minScale = 1;
+    if(this.props.minScale!==undefined){
+      this.minScale = this.props.minScale;
+    }
+    this.duration = 400;
+    if(this.props.duration!==undefined){
+      this.duration = this.props.duration;
+    }
   }
   componentDidMount(){
     if(this.props.fadeIn===true){
-      this.animateIn();
+      this.fadeIn();
+      this.scaleIn();
     } else if(this.props.fadeIn===false){
-      this.animateOut();
+      this.fadeOut();
+      this.scaleOut();
     }
   }
   componentDidUpdate(prevProps) {
     if(this.props.fadeIn===true){
-      this.animateIn();
+      this.fadeIn();
+      this.scaleIn();
     } else if(this.props.fadeIn===false){
-      this.animateOut();
+      this.fadeOut();
+      this.scaleOut();
     }
   }
-  animateIn = () => {
-    Animated.timing(this.state.animationValue, {
+  fadeIn = () => {
+    Animated.timing(this.state.fadeAnimationValue, {
       toValue: 1,
-      duration: 400,
+      duration: this.duration,
       useNativeDriver: true,
     }).start();
   };
 
-  animateOut = () => {
-    Animated.timing(this.state.animationValue, {
-      toValue: 0,
-      duration: 300,
+  fadeOut = () => {
+    Animated.timing(this.state.fadeAnimationValue, {
+      toValue: 1-this.maxFade,
+      duration: this.duration,
+      useNativeDriver: true,
+    }).start();
+  };
+
+  scaleIn = () => {
+    Animated.timing(this.state.scaleAnimationValue, {
+      toValue: 1,
+      duration: this.duration,
+      useNativeDriver: true,
+    }).start();
+  };
+
+  scaleOut = () => {
+    Animated.timing(this.state.scaleAnimationValue, {
+      toValue: this.minScale,
+      duration: this.duration,
       useNativeDriver: true,
     }).start();
   };
@@ -47,8 +82,8 @@ class FadeInOut extends Component {
       <Animated.View
         style={[this.props.style,[
           {
-            opacity: this.state.animationValue,
-            transform: [{ scale: 1}]
+            opacity: this.state.fadeAnimationValue,
+            transform: [{ scale: this.scaleInOut ? this.state.scaleAnimationValue : 1}]
           }
         ]]}
       >

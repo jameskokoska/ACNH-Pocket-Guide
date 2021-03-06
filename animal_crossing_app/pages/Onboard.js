@@ -36,7 +36,6 @@ class Onboard extends Component {
             backgroundColor: colors.white[0],
             image: <Image style={{height: 250, width: 250, resizeMode:'contain', margin:0}} source={require('../assets/icons/palmIcon.png')} />,
             title: <TextFont style={{fontSize: 30, width: "70%", textAlign:'center'}} bold={true}>Welcome to ACNH Pocket Guide</TextFont>,
-            subtitle: <TextFont style={{fontSize: 16, textAlign:"center", paddingTop: 20,}} bold={true}>This is version 2.0 of this application. Enjoy!</TextFont>,
           },
           {
             backgroundColor: colors.FAB[0],
