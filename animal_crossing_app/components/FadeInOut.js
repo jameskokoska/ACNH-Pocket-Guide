@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Animated, Text, View, Easing } from "react-native";
-//<FadeInOut duration={2} fadeIn={true} fadeInOut={true} scaleInOut={true} maxFade={0.8} minScale={0.5}>
+//<FadeInOut duration={200} fadeIn={true} fadeInOut={true} scaleInOut={true} maxFade={0.8} minScale={0.5}>
 //   <Text>Hi</Text>
 //</FadeInOut>
 class FadeInOut extends Component {
