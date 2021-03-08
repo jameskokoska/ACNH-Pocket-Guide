@@ -41,11 +41,23 @@ import GuidePage from './pages/GuidePage';
 global.version = require("./app.json")["expo"]["version"];
 global.versionCode = require("./app.json")["expo"]["android"]["versionCode"];
 global.changelog = `
--Thanks everyone for the support recently! It really helps motivate me!
+-Thanks everyone for all the support recently!
 -
 -Smoother and improved popups
 -Color fixes
--Guide and FAQ integration 
+-Guide and FAQ integration
+View the [Guide + FAQ] page from the side menu
+-Added smaller todo items, improved editing of todo list
+Hit (+) and switch [Small Task]
+-Can view changelog in [About] page
+-
+-Planned Features:
+- Month filter for creatures
+- Agenda with all in game events
+- Visitors tracking
+- Custom home screen sections
+- Improved furniture/item colors
+- More todo list icons
 `
 
 class App extends Component {

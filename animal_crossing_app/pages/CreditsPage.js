@@ -21,6 +21,8 @@ class CreditsPage extends Component {
     }
   }
   render(){
+    var changelogText = global.changelog.toString();
+    changelogText = changelogText.split("\n-");
     return(
       <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
         <ScrollView>
@@ -77,8 +79,11 @@ class CreditsPage extends Component {
           <View style={{height: 35}}/>
           <SubHeader>App Information</SubHeader>
           <TextFont bold={false} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 14,}}>{"v" + global.version + " - " + global.versionCode + "\n\nChangelog:"}</TextFont>
-          <TextFont bold={false} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 14,}}>{global.changelog}</TextFont>
-          
+          {
+            changelogText.map((point, index) => (
+              <TextFont key={point+index} bold={false} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 14,}}>{point}</TextFont>
+            ))
+          }
           <View style={{height: 25}}/>
         </ScrollView>
      </View>
