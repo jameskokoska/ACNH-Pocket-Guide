@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {ActivityIndicator, BackHandler, Image, TouchableNativeFeedback, Vibration, View, Dimensions, Text} from 'react-native';
+import {Share, ActivityIndicator, BackHandler, Image, TouchableNativeFeedback, Vibration, View, Dimensions, Text} from 'react-native';
 import TextFont from '../components/TextFont'
 import colors from '../Colors'
 import { WebView } from 'react-native-webview';
@@ -16,6 +16,7 @@ class GuidePage extends Component {
     this.state = {
       canGoBack: false,
       canGoForward: false,
+      currentUrl: "https://chibisnorlax.github.io/acnhfaq/"
     }
   }
 
@@ -75,7 +76,8 @@ class GuidePage extends Component {
           onNavigationStateChange={navState => {
             this.setState({
               canGoBack: navState.canGoBack,
-              canGoForward: navState.canGoForward
+              canGoForward: navState.canGoForward,
+              currentURL: navState.url
             })
           }}
         />
@@ -87,6 +89,7 @@ class GuidePage extends Component {
           goForward={()=>this.webView.goForward()}
           canGoForward = {this.state.canGoForward}
           openMenu = {()=>this.props.openMenu()}
+          currentURL = {this.state.currentURL}
         />
         <Popup ref={(popup) => this.popup = popup} button1={"OK"} button1Action={()=>{return}} text={"Error"} textLower={"There was an error loading. Note that this feature needs an internet connection."}/>
      </View>
@@ -108,41 +111,55 @@ class BottomBar extends Component {
   render(){
     return <View style={{flexDirection: "row", elevation:5, backgroundColor:colors.lightDarkAccent[global.darkMode], width:Dimensions.get('window').width, height:45}}>
       <TouchableNativeFeedback onPress={()=>{this.goBack(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} background={TouchableNativeFeedback.Ripple(colors.lightDarkAccentHeavy[global.darkMode], false)}>
-        <View style={{ width:Dimensions.get('window').width/4, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
+        <View style={{ width:Dimensions.get('window').width/5, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
           <FadeInOut duration={200} fadeIn={this.props.canGoBack ? true : false}>
             <Image
-              style={{width:25,height:25,resizeMode:'contain',}}
+              style={{width:18,height:18,resizeMode:'contain',}}
               source={global.darkMode ? require("../assets/icons/leftArrowWhite.png") : require("../assets/icons/leftArrow.png")}
             />
           </FadeInOut>
         </View>
       </TouchableNativeFeedback>
       <TouchableNativeFeedback onPress={()=>{this.goForward(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} background={TouchableNativeFeedback.Ripple(colors.lightDarkAccentHeavy[global.darkMode], false)}>
-        <View style={{width:Dimensions.get('window').width/4, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
+        <View style={{width:Dimensions.get('window').width/5, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
           <FadeInOut duration={200} fadeIn={this.props.canGoForward ? true : false}>
             <Image
-              style={{width:25,height:25,resizeMode:'contain',}}
+              style={{width:18,height:18,resizeMode:'contain',}}
               source={global.darkMode ? require("../assets/icons/rightArrowWhite.png") : require("../assets/icons/rightArrow.png")}
             />
           </FadeInOut>
         </View>
       </TouchableNativeFeedback>
       <TouchableNativeFeedback onPress={()=>{this.openMenu(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} background={TouchableNativeFeedback.Ripple(colors.lightDarkAccentHeavy[global.darkMode], false)}>
-        <View style={{ width:Dimensions.get('window').width/4, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
+        <View style={{ width:Dimensions.get('window').width/5, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
           <Image
-            style={{width:25,height:25,resizeMode:'contain',}}
+            style={{width:18,height:18,resizeMode:'contain',}}
             source={global.darkMode ? require("../assets/icons/homeWhite.png") : require("../assets/icons/home.png")}
           />
         </View>
       </TouchableNativeFeedback>
-      <TouchableNativeFeedback onPress={()=>{this.openWebMenu(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} background={TouchableNativeFeedback.Ripple(colors.lightDarkAccentHeavy[global.darkMode], false)}>
-        <View style={{width:Dimensions.get('window').width/4, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
+      <TouchableNativeFeedback onPress={()=>{shareMessage(this.props.currentURL); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} background={TouchableNativeFeedback.Ripple(colors.lightDarkAccentHeavy[global.darkMode], false)}>
+        <View style={{width:Dimensions.get('window').width/5, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
           <Image
-            style={{width:22,height:22,resizeMode:'contain',}}
+            style={{width:18,height:18,resizeMode:'contain',}}
+            source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")}
+          />
+        </View>
+      </TouchableNativeFeedback>
+      <TouchableNativeFeedback onPress={()=>{this.openWebMenu(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} background={TouchableNativeFeedback.Ripple(colors.lightDarkAccentHeavy[global.darkMode], false)}>
+        <View style={{width:Dimensions.get('window').width/5, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
+          <Image
+            style={{width:18,height:18,resizeMode:'contain',}}
             source={global.darkMode ? require("../assets/icons/menuIconWhite.png") : require("../assets/icons/menuIcon.png")}
           />
         </View>
       </TouchableNativeFeedback>
     </View>
   }
+}
+
+async function shareMessage(message) {
+  const result = await Share.share({
+    message: message,
+  });
 }

@@ -43,13 +43,7 @@ global.versionCode = require("./app.json")["expo"]["android"]["versionCode"];
 global.changelog = `
 -Thanks everyone for all the support recently!
 -
--Smoother and improved popups
--Color fixes
--Guide and FAQ integration
-View the [Guide + FAQ] page from the side menu
--Added smaller todo items, improved editing of todo list
-Hit (+) and switch [Small Task]
--Can view changelog in [About] page
+-Improved ACNH Guide page
 -
 -Planned Features:
 - Month filter for creatures
