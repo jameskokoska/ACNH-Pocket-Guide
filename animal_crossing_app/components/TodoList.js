@@ -17,13 +17,19 @@ class TodoList extends Component {
     this.state = {
       data: [],
       showTurnipLog: false,
+      showEdit: false,
     }
     this.loadList();
   }
 
   loadList = async() => {
     var defaultList = [
-      {title: 'Smash rocks', finished: false, picture:"rock.png"},
+      {title: 'Rock 1', finished: false, picture:"rock.png",small:true},
+      {title: 'Rock 2', finished: false, picture:"rock.png",small:true},
+      {title: 'Rock 3', finished: false, picture:"rock.png",small:true},
+      {title: 'Rock 4', finished: false, picture:"rock.png",small:true},
+      {title: 'Rock 5', finished: false, picture:"rock.png",small:true},
+      {title: 'Rock 6', finished: false, picture:"rock.png",small:true},
       {title: 'Check turnip prices', finished: false, picture:"turnip.png"},
       {title: 'Water flowers', finished: false, picture:"flowerIcon.png"},
       {title: 'Talk to villagers', finished: false, picture:"cat.png"},
@@ -36,6 +42,7 @@ class TodoList extends Component {
 
   saveList = async(data) => {
     await AsyncStorage.setItem("ToDoList", JSON.stringify(data));
+    console.log(data)
   }
 
   checkOffItem = (index) => {
@@ -105,6 +112,13 @@ class TodoList extends Component {
         </TouchableOpacity>
         <TouchableOpacity style={{padding:10}} 
           onPress={()=>{
+            this.setState({showEdit:!this.state.showEdit});
+            getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+        }}>
+          <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{this.state.showEdit ? "Disable Edit List" : "Edit List"}</TextFont>
+        </TouchableOpacity>
+        <TouchableOpacity style={{padding:10}} 
+          onPress={()=>{
             this.addItemPopup(true); 
         }}>
           <Image source={require("../assets/icons/addIcon.png")} style={{width:25, height:25, borderRadius:100,}}/>
@@ -112,15 +126,36 @@ class TodoList extends Component {
       </View>
       <View style={{height:10}}/>
       <View style={{alignItems: 'center'}}>
-        {this.state.data.map( (item, index)=>
-          <TodoItem
-            key={item+index.toString()}
-            item={item}
-            index={index}
-            checkOffItem={this.checkOffItem}
-            deleteItem={this.deleteItem}
-          />
-        )}
+        {this.state.data.map( (item, index)=>{
+          if(!item.small){
+            return(
+              <TodoItem
+                key={item+index.toString()}
+                item={item}
+                index={index}
+                checkOffItem={this.checkOffItem}
+                deleteItem={this.deleteItem}
+                showEdit={this.state.showEdit}
+              />
+            )
+          }
+        })}
+        <View style={{paddingTop:10, marginHorizontal: 20, flex: 1, flexDirection: 'row', justifyContent:'center',flexWrap:"wrap"}}>
+          {this.state.data.map( (item, index)=>{
+            if(item.small){
+              return(
+                <TodoItemSmall
+                  key={item+index.toString()}
+                  item={item}
+                  index={index}
+                  checkOffItem={this.checkOffItem}
+                  deleteItem={this.deleteItem}
+                  showEdit={this.state.showEdit}
+                />
+              )
+            }
+          })}
+        </View>
         {turnipLog}
       </View>
       <TouchableOpacity style={{padding:10}} 
@@ -313,15 +348,26 @@ class TurnipItem extends Component {
 }
 
 class TodoItem extends Component {
-  render(){
-    return (
-      <View style={{width: "90%"}}>
+  removeButton = (props)=>{
+    if(props.showEdit)
+      return(
         <TouchableOpacity style={{left:-10, top:-5,position:'absolute',zIndex:10, padding:10}} 
           onPress={()=>{
-            this.props.deleteItem(this.props.index); 
+            props.deleteItem(props.index); 
         }}>
           <Image source={require("../assets/icons/deleteIcon.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
         </TouchableOpacity>
+      )
+    else
+      return(
+        <View/>
+      )
+  }
+  render(){
+    return (
+      <View style={{width: "90%"}}>
+      
+          {this.removeButton(this.props)}
           <TouchableNativeFeedback onLongPress={() => {  
             this.props.checkOffItem(this.props.index); 
           }}
@@ -350,6 +396,45 @@ class TodoItem extends Component {
             </View>
           </TouchableNativeFeedback>
         </View>
+    )
+  }
+}
+
+class TodoItemSmall extends Component {
+  removeButton = (props)=>{
+    if(props.showEdit)
+      return(
+        <TouchableOpacity style={{left:-10, top:-5,position:'absolute',zIndex:10, padding:10}} 
+          onPress={()=>{
+            props.deleteItem(props.index); 
+        }}>
+          <Image source={require("../assets/icons/deleteIcon.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
+        </TouchableOpacity>
+      )
+    else
+      return(
+        <View/>
+      )
+  }
+  render(){
+    return (
+      <View style={{margin:5}}>
+        {this.removeButton(this.props)}
+        <TouchableOpacity 
+          background={TouchableNativeFeedback.Ripple(colors.todoColorAccent[global.darkMode], false)}
+          onPress={()=>{
+            this.props.checkOffItem(this.props.index); 
+          }}
+        >
+          <View style={[styles.rowImageBackground,{borderWidth: 2, borderColor: this.props.item.finished ? colors.checkGreen[global.darkMode] : colors.eventBackground[global.darkMode], backgroundColor:colors.eventBackground[global.darkMode]}]}>
+            <Image
+              style={styles.rowImage}
+              source={getPhoto(this.props.item.picture)}
+            />
+          </View>
+        </TouchableOpacity>
+        {this.props.item.title==="" ? <View/> : <TextFont numberOfLines={2} bold={false} style={{width: 60, marginTop: 3, color: colors.textBlack[global.darkMode], fontSize: 12, textAlign:"center"}}>{this.props.item.title}</TextFont>}
+      </View>
     )
   }
 }
