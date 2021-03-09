@@ -155,45 +155,77 @@ export class PopupInfoCustom extends Component {
 // <PopupBottomCustom ref={(popup) => this.popup = popup} onClose={()=>this.props.onClose()}>
 // </Popup>
 export class PopupBottomCustom extends Component {
+  
   constructor(props) {
     super(props);
     this.state = {
-      heightOffset:0,
       openStart:false,
+      otherSnap:0,
+      firstSnap:0
     }
   }
 
   setPopupVisible = (visible) => {
-    visible ? this.sheetRef.snapTo(0) : this.sheetRef.snapTo(1)
+    visible ? this.sheetRef.snapTo(0) : this.sheetRef.snapTo(2)
   }
-  
-  renderContent = () => {
-    return(
-      <>
-      <View style={{width:Dimensions.get('window').width,height:Dimensions.get('window').height-this.state.heightOffset}}/>
+
+  //so it can be draggable from anywhere
+  headerSpacing = Dimensions.get('window').height;
+
+  renderHeader = () => {
+    return(<>
+      <View style={{height: this.headerSpacing,}}/>
       <View
         style={{
           borderTopLeftRadius: 20,
           borderTopRightRadius: 20,
           backgroundColor: colors.white[global.darkMode],
           padding:16,
-          paddingTop: 12,
+          marginBottom:-1
+        }}
+      >
+      <FadeInOut fadeIn={this.state.openStart} scaleInOut={true} duration={200} maxFade={0.4} minScale={0.7}>
+        <View style={{width:"100%", alignItems:"center"}}>
+          <View style={{backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode], height:5, width: 45, borderRadius:50}}/>
+        </View>
+      </FadeInOut>
+      </View>
+      </>
+    )
+  }
+  
+  renderContent = () => {
+    return(
+      <>
+      <View
+        style={{
+          backgroundColor: colors.white[global.darkMode],
+          padding:this.props.padding===undefined ? 16 : this.props.padding,
+          paddingTop:0
         }}
         onLayout={(event) => {
             var {x, y, width, height} = event.nativeEvent.layout;
-            this.setState({heightOffset:height});
+            var otherSnap = Dimensions.get('window').height-40;
+            var firstSnap = Dimensions.get('window').height*0.7
+            if(height>firstSnap){
+              if(otherSnap>height){
+                otherSnap=height+37;
+              }
+            } else if (firstSnap > height){
+              otherSnap = 0-this.headerSpacing;
+              firstSnap=height+37;
+            } else {
+              
+              otherSnap = 0-this.headerSpacing;
+            }
+            this.setState({otherSnap:otherSnap, firstSnap:firstSnap});
           }} 
       >
-        <FadeInOut fadeIn={this.state.openStart} scaleInOut={true} duration={200} maxFade={0.4} minScale={0.7}>
-          <View style={{width:"100%", alignItems:"center"}}>
-            <View style={{backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode], height:5, width: 45, borderRadius:50}}/>
-          </View>
-        </FadeInOut>
-        <View style={{height:20}}/>
         {this.props.children}
         <View style={{height:85}}/>
       </View>
       </>
+      
 
     )
   }
@@ -209,14 +241,16 @@ export class PopupBottomCustom extends Component {
         restSpeedThreshold: 0.01,
         restDisplacementThreshold: 0.001
     };
+
     return (
       <>
       <BottomSheet
         callbackNode={this.bottomSheetCallback}
         ref={(sheetRef) => this.sheetRef = sheetRef}
-        snapPoints={[Dimensions.get('window').height, 0]}
-        initialSnap={1}
+        snapPoints={[this.state.firstSnap+this.headerSpacing, this.state.otherSnap+this.headerSpacing, 0]}
+        initialSnap={2}
         renderContent={this.renderContent}
+        renderHeader={this.renderHeader}
         springConfig={springConfig}
         enabledContentTapInteraction={false}
         onCloseStart={()=>{this.setState({openStart:false})}}
@@ -224,7 +258,7 @@ export class PopupBottomCustom extends Component {
         onOpenStart={()=>{this.setState({openStart:true})}}
         onOpenEnd={()=>{this.setState({openStart:true})}}
       />
-      <Animated.View style={{zIndex:99, backgroundColor: "black", opacity: Animated.multiply(-0.8,Animated.add(-0.7,Animated.multiply(this.bottomSheetCallback,1))), width: Dimensions.get('window').width, height: Dimensions.get('window').height, position:"absolute"}} pointerEvents="none"/>
+      <Animated.View pointerEvents="none" style={{zIndex:99, backgroundColor: "black", opacity: Animated.multiply(-0.8,Animated.add(-0.7,Animated.multiply(this.bottomSheetCallback,1))), width: Dimensions.get('window').width, height: Dimensions.get('window').height, position:"absolute"}}/>
       </>
     )
   }

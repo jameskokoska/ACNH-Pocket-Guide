@@ -5,31 +5,14 @@ import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, Circul
 import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"
 import ActiveTime from "../components/ActiveTime";
-import AccordionContainer from "../components/AccordionContainer"
+import CachedImage from 'react-native-expo-cached-image';
 
-const sections = [
-  {
-    title: 'View critterpedia',
-    image: "Critterpedia Image",
-    widthSubtraction: 0.4,
-    height: 200,
-    marginTop: 20,
-    marginBottom: 20,
-  },
-  {
-    title: 'View furniture',
-    image: "Furniture Image",
-    widthSubtraction: 0.1,
-    height: 150,
-    marginTop: 20,
-  },
-];
+//   200
+//     image: "Critterpedia Image",
+// 150
+//     image: "Furniture Image",
+
 class FishPopup extends Component {
-  constructor(props){
-    super(props);
-    this.state={
-    }
-  }
   render(){
     return <View style={{width: "100%", alignItems: "center"}}>
       <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 10, paddingTop: 20, paddingBottom: 20, borderRadius: 15, margin: 20}}><Image style={{width:150,height:35,resizeMode:'contain'}} source={getPhotoShadow(this.props.item,true)}/></View>
@@ -43,10 +26,20 @@ class FishPopup extends Component {
         ending2={" bells"}
       />
       <ActiveTime item={this.props.item}/>
-      <AccordionContainer
-        sections={sections}
-        item={this.props.item}
-      />
+      <View style={{marginTop: 30, flexDirection:"row"}}>
+        <CachedImage
+          style={{width: Dimensions.get('window').width*0.4,height:Dimensions.get('window').width*0.4, resizeMode: "contain", borderRadius: 2}}
+          source={{
+            uri: this.props.item["Critterpedia Image"],
+          }}
+        />
+        <CachedImage
+          style={{width: Dimensions.get('window').width*0.4,height:Dimensions.get('window').width*0.4, resizeMode: "contain", borderRadius: 2}}
+          source={{
+            uri: this.props.item["Furniture Image"],
+          }}
+        />
+      </View>
     </View>
   }
 }

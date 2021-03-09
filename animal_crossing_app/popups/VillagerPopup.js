@@ -4,26 +4,8 @@ import {Dimensions, Image, View, Text} from 'react-native';
 import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
 import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"
-import AccordionContainer from "../components/AccordionContainer"
+import CachedImage from 'react-native-expo-cached-image';
 
-const sections = [
-  {
-    title: 'View house',
-    image: "House Image",
-    height: 300,
-    widthSubtraction: 0.1,
-    marginTop: 0,
-    marginBottom: 20,
-  },
-  {
-    title: 'View photo',
-    image: "Photo Image",
-    height: 250,
-    widthSubtraction: 0.1,
-    marginTop: 20,
-    marginBottom: 20,
-  },
-];
 class VillagerPopup extends Component {
   constructor(props){
     super(props);
@@ -68,11 +50,24 @@ class VillagerPopup extends Component {
         item={this.props.item}
         textProperty={["Favorite Saying"]}
       />
+      <View style={{height:10}}/>
+      <View style={{alignItems: 'center', width: Dimensions.get('window').width, justifyContent:"center"}}>
+        <CachedImage
+          style={{width: Dimensions.get('window').width*0.8,height:Dimensions.get('window').width*0.8, resizeMode: "contain", borderRadius: 2}}
+          source={{
+            uri: this.props.item["House Image"],
+          }}
+        />
+      </View>
       <View style={{height:20}}/>
-      <AccordionContainer
-        sections={sections}
-        item={this.props.item}
-      />
+      <View style={{alignItems: 'center', width: Dimensions.get('window').width, justifyContent:"center"}}>
+        <CachedImage
+          style={{width: Dimensions.get('window').width*0.6,height:Dimensions.get('window').width*0.6, resizeMode: "contain", borderRadius: 2}}
+          source={{
+            uri: this.props.item["Photo Image"],
+          }}
+        />
+      </View>
     </View>
   }
 }

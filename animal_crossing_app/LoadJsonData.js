@@ -431,14 +431,6 @@ export const settings = [
     "displayName" : "Use larger images in popup",
     "description" : "Use a larger image when previewing items in their popup",
   },
-  {
-    "keyName" : "settingsShowImageAccordion",
-    "defaultValue" : "true",
-    "currentValue" : "",
-    "picture" : require("./assets/icons/photo.png"),
-    "displayName" : "Show view more images in popups",
-    "description" : "In creature and villager popups have the option to view Critterpedia, Furniture, Villager houses etc. images as a drop down",
-  },
 
   {
     "keyName" : "breaker",

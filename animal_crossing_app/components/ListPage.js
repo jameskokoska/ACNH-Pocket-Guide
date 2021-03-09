@@ -29,7 +29,7 @@ import * as exports from "./FilterDefinitions"
 import PopupFilter from './PopupFilter'
 import TextFont from "./TextFont"
 import {getSettingsString} from "../LoadJsonData"
-
+import {PopupBottomCustom} from "./Popup"
 //Note: popup height is not needed anymore
 //use tabs={false} if the page doesn't have  the tab bar
 
@@ -65,7 +65,7 @@ export default (props) =>{
         if(props.currentVillagers){
           props.openPopup(item)
         } else {
-          sheetRef.current.snapTo(0); 
+          sheetRef.current.setPopupVisible(true); 
           if(props.activeCreatures){
             props.scrollViewRef.current.scrollToEnd()
           }
@@ -300,27 +300,6 @@ export default (props) =>{
   
   const sheetRef = React.useRef(null);
   const bottomSheetRenderRef = React.useRef(null);
-  function renderContent() {
-    return <BottomSheetRender 
-      activeCreatures={props.activeCreatures}
-      ref={bottomSheetRenderRef}
-      imageProperty={props.imageProperty} 
-      textProperty={props.textProperty}
-      textProperty2={props.textProperty2}
-      textProperty3={props.textProperty3}
-      dataGlobalName={props.dataGlobalName}
-      boxColor={props.boxColor}
-      labelColor={props.labelColor}
-      accentColor={props.accentColor}
-      specialLabelColor={props.specialLabelColor}
-      popUpCornerImageProperty={props.popUpCornerImageProperty}
-      popUpCornerImageLabelProperty={props.popUpCornerImageLabelProperty}
-      popUpPhraseProperty={props.popUpPhraseProperty}
-      popUpContainer={props.popUpContainer}
-      checkType={props.checkType}
-      tabs={props.tabs}
-    />;
-  }
 
   // //if bottom sheet is really large, allow scrolling
   var bottomSheetTopPadding = 0;
@@ -399,14 +378,30 @@ export default (props) =>{
         windowSize={10}
       />
       
-      <BottomSheet
+      <PopupBottomCustom
         ref={sheetRef}
-        snapPoints={[Dimensions.get('window').height+10, 0]}
-        initialSnap={1}
-        renderContent={renderContent}
-        springConfig={springConfig}
-        enabledContentTapInteraction={false}
+        padding={0}
+      >
+      <BottomSheetRender 
+        activeCreatures={props.activeCreatures}
+        ref={bottomSheetRenderRef}
+        imageProperty={props.imageProperty} 
+        textProperty={props.textProperty}
+        textProperty2={props.textProperty2}
+        textProperty3={props.textProperty3}
+        dataGlobalName={props.dataGlobalName}
+        boxColor={props.boxColor}
+        labelColor={props.labelColor}
+        accentColor={props.accentColor}
+        specialLabelColor={props.specialLabelColor}
+        popUpCornerImageProperty={props.popUpCornerImageProperty}
+        popUpCornerImageLabelProperty={props.popUpCornerImageLabelProperty}
+        popUpPhraseProperty={props.popUpPhraseProperty}
+        popUpContainer={props.popUpContainer}
+        checkType={props.checkType}
+        tabs={props.tabs}
       />
+      </PopupBottomCustom>
     </View>
   );
   }
@@ -491,28 +486,6 @@ class BottomSheetRender extends Component{
       return <View/>
     }
     
-    var paddingBottom = 0;
-    var tabCompensation = 0;
-    var statusBarHeight = 0;
-    var heightCompensation = 0;
-    if(this.props.activeCreatures){
-      heightCompensation = 50;
-      tabCompensation = 10;
-    } else if(this.props.tabs===false){
-      tabCompensation = 10;
-    } else if(getSettingsString("settingsShowStatusBar")==="true"){
-      heightCompensation = 10;
-    }
-    if(getSettingsString("settingsLargerItemPreviews")==="true"){
-      tabCompensation = tabCompensation-50;
-      paddingBottom = 120;
-    } else {
-      paddingBottom = 100;
-    }
-    if(getSettingsString("settingsShowStatusBar")==="false"&&this.props.tabs===false){
-      statusBarHeight = 20;
-    }
-
     var rightCornerCheck = <View/>
     if(this.state.item!==undefined && this.updateCheckChildFunction!==""){
       rightCornerCheck = <RightCornerCheck
@@ -524,24 +497,14 @@ class BottomSheetRender extends Component{
       />
     }
     return <View>
-      <LinearGradient
-        colors={['transparent','rgba(0,0,0,0.3)','rgba(0,0,0,0.3)' ]}
-        style={{position: 'absolute',
-                left: 0,
-                right: 0,
-                top: 0,
-                height: Dimensions.get('window').height,
-                width: Dimensions.get('window').width,}}
-      />
-      <View style={{height:Dimensions.get('window').height+statusBarHeight-this.state.heightOffset-paddingBottom+tabCompensation}}/>
       <View
         style={{
           borderTopLeftRadius: 50,
           borderTopRightRadius: 50,
           backgroundColor: colors.white[global.darkMode],
           padding: 16,
-          paddingBottom: paddingBottom,
           marginTop: getSettingsString("settingsLargerItemPreviews")==="false" ? 80 : 160,
+          marginBottom: this.props.activeCreatures ? 0 : 10
         }}
         onLayout={(event) => {
             var {x, y, width, height} = event.nativeEvent.layout;
@@ -568,7 +531,6 @@ class BottomSheetRender extends Component{
             globalDatabase={dataLoadedAll} 
           />
           {popUpContainer}
-          <View style={{height:10+heightCompensation}}/>
       </View>
     </View>
   }
