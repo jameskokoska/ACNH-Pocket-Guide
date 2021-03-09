@@ -422,6 +422,9 @@ class TodoItemSmall extends Component {
         {this.removeButton(this.props)}
         <TouchableOpacity 
           background={TouchableNativeFeedback.Ripple(colors.todoColorAccent[global.darkMode], false)}
+          onLongPress={() => {  
+            this.props.checkOffItem(this.props.index); 
+          }}
           onPress={()=>{
             this.props.checkOffItem(this.props.index); 
           }}

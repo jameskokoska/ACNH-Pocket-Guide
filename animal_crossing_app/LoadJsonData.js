@@ -2,6 +2,7 @@ import * as Font from 'expo-font';
 import React, {Component} from 'react';
 import {Vibration, Text} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {isActive2} from "./components/DateFunctions";
 
 export async function getStorage(storageKey, defaultValue){
   const valueReturned = await AsyncStorage.getItem(storageKey);
@@ -33,6 +34,16 @@ export async function getStorageData(data, checkListKey, defaultValue){
       }
       dataLoading[i].collected=value;
       dataLoading[i].checkListKey=checkListKeyString;
+
+      if(checkListKey[dataSet][0] === "fishCheckList" || checkListKey[dataSet][0] === "seaCheckList" || checkListKey[dataSet][0] === "bugCheckList"){
+        var hemispherePre = ["NH ", "SH "];
+        var monthShort = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+        for(var hemispherePreIndex=0; hemispherePreIndex<hemispherePre.length; hemispherePreIndex++){
+          for(var monthShortIndex=0; monthShortIndex<monthShort.length; monthShortIndex++){
+            dataLoading[i][hemispherePre[hemispherePreIndex]+[monthShort[monthShortIndex]+" Active"]] = isActive2(dataLoading[i][hemispherePre[hemispherePreIndex]+[monthShort[monthShortIndex]]],monthShort[monthShortIndex])?"true":"false";
+          }
+        }
+      }
     }
     dataLoadingTotal.push(dataLoading);
   }

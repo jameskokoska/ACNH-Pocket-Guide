@@ -157,13 +157,29 @@ export default (props) =>{
         setPossibleFilters(possibleFilters)
         exportFilters(possibleFilters, props.title)
       } else {
+        var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH ";
+
         var possibleFilters = [{label:"Collected", value:"Collected"},{label:"Not Collected", value:"Not Collected"}];
+        var activeFilters = [
+          {label:"January can catch",value:hemispherePre+"Jan Active:true"},
+          {label:"February can catch",value:hemispherePre+"Feb Active:true"},
+          {label:"March can catch",value:hemispherePre+"Mar Active:true"},
+          {label:"April can catch",value:hemispherePre+"Apr Active:true"},
+          {label:"May can catch",value:hemispherePre+"May Active:true"},
+          {label:"June can catch",value:hemispherePre+"Jun Active:true"},
+          {label:"July can catch",value:hemispherePre+"Jul Active:true"},
+          {label:"August can catch",value:hemispherePre+"Aug Active:true"},
+          {label:"September can catch",value:hemispherePre+"Sep Active:true"},
+          {label:"October can catch",value:hemispherePre+"Oct Active:true"},
+          {label:"November can catch",value:hemispherePre+"Nov Active:true"},
+          {label:"December can catch",value:hemispherePre+"Dec Active:true"},
+        ]
         if(props.title==="Fish"){
-          possibleFilters = [...possibleFilters, ...fishFilter];
+          possibleFilters = [...possibleFilters, ...activeFilters, ...fishFilter];
         } else if(props.title==="Bugs"){
-          possibleFilters = [...possibleFilters, ...bugsFilter];
+          possibleFilters = [...possibleFilters, ...activeFilters, ...bugsFilter];
         } else if(props.title==="Sea Creatures"){
-          possibleFilters = [...possibleFilters, ...seaCreaturesFilter];
+          possibleFilters = [...possibleFilters, ...activeFilters, ...seaCreaturesFilter];
         } else if(props.title==="Furniture"){
           possibleFilters = [...possibleFilters, ...furnitureFilter];
         } else if(props.title==="Clothing"){
@@ -177,7 +193,7 @@ export default (props) =>{
         } else if(props.title==="Villagers"){
           possibleFilters = [...possibleFilters, ...villagersFilter];
         } else if(props.title==="Everything"){
-          possibleFilters = [...possibleFilters, ...everythingFilter];
+          possibleFilters = [...possibleFilters, ...activeFilters, ...everythingFilter];
         } else if(props.title==="Construction"){
           possibleFilters = [...possibleFilters,{"label":"Bridge","value":"Category:Bridge"},{"label":"Incline","value":"Category:Incline"},{"label":"Doors","value":"Category:Door"},{"label":"Roofing","value":"Category:Roofing"},{"label":"Siding","value":"Category:Siding"},{"label":"Mailbox","value":"Category:Mailbox"}]
         }
@@ -381,26 +397,28 @@ export default (props) =>{
       <PopupBottomCustom
         ref={sheetRef}
         padding={0}
+        invisible={true}
+        restrictSize={false}
       >
-      <BottomSheetRender 
-        activeCreatures={props.activeCreatures}
-        ref={bottomSheetRenderRef}
-        imageProperty={props.imageProperty} 
-        textProperty={props.textProperty}
-        textProperty2={props.textProperty2}
-        textProperty3={props.textProperty3}
-        dataGlobalName={props.dataGlobalName}
-        boxColor={props.boxColor}
-        labelColor={props.labelColor}
-        accentColor={props.accentColor}
-        specialLabelColor={props.specialLabelColor}
-        popUpCornerImageProperty={props.popUpCornerImageProperty}
-        popUpCornerImageLabelProperty={props.popUpCornerImageLabelProperty}
-        popUpPhraseProperty={props.popUpPhraseProperty}
-        popUpContainer={props.popUpContainer}
-        checkType={props.checkType}
-        tabs={props.tabs}
-      />
+        <BottomSheetRender 
+          activeCreatures={props.activeCreatures}
+          ref={bottomSheetRenderRef}
+          imageProperty={props.imageProperty} 
+          textProperty={props.textProperty}
+          textProperty2={props.textProperty2}
+          textProperty3={props.textProperty3}
+          dataGlobalName={props.dataGlobalName}
+          boxColor={props.boxColor}
+          labelColor={props.labelColor}
+          accentColor={props.accentColor}
+          specialLabelColor={props.specialLabelColor}
+          popUpCornerImageProperty={props.popUpCornerImageProperty}
+          popUpCornerImageLabelProperty={props.popUpCornerImageLabelProperty}
+          popUpPhraseProperty={props.popUpPhraseProperty}
+          popUpContainer={props.popUpContainer}
+          checkType={props.checkType}
+          tabs={props.tabs}
+        />
       </PopupBottomCustom>
     </View>
   );
@@ -414,7 +432,6 @@ class BottomSheetRender extends Component{
     this.update = this.update.bind(this);
     this.state = {
       item:"item",
-      heightOffset:0,
     }
     this.updateCheckChildFunction="";
   }
@@ -503,13 +520,8 @@ class BottomSheetRender extends Component{
           borderTopRightRadius: 50,
           backgroundColor: colors.white[global.darkMode],
           padding: 16,
-          marginTop: getSettingsString("settingsLargerItemPreviews")==="false" ? 80 : 160,
-          marginBottom: this.props.activeCreatures ? 0 : 10
+          marginTop: getSettingsString("settingsLargerItemPreviews")==="false" ? 100 : 200,
         }}
-        onLayout={(event) => {
-            var {x, y, width, height} = event.nativeEvent.layout;
-            this.setState({heightOffset:height});
-          }} 
       >
           <CircularImage 
             item={this.state.item}
@@ -531,6 +543,8 @@ class BottomSheetRender extends Component{
             globalDatabase={dataLoadedAll} 
           />
           {popUpContainer}
+          {this.props.activeCreatures===true ? <View style={{height:50}}/> : <View/>}
+          {this.props.tabs===false ? <View style={{height:50}}/> : <View style={{height:100}}/>}
       </View>
     </View>
   }

@@ -44,9 +44,12 @@ global.changelog = `
 -Thanks everyone for all the support recently!
 -
 -Improved ACNH Guide page
+-Improved popups
+-Added catchphrase to active creatures
+-Settings now update immediately
+-Month filter for creatures
 -
 -Planned Features:
-- Month filter for creatures
 - Agenda with all in game events
 - Visitors tracking
 - Custom home screen sections
@@ -109,7 +112,7 @@ class App extends Component {
 
     global.customTime = new Date(await getStorage("customDate",new Date().toString()));
 
-    this.updateDarkMode();
+    this.updateSettings();
 
     //Load Fonts
     await Font.loadAsync({
@@ -151,6 +154,17 @@ class App extends Component {
         global.darkModeReverse = 1;
       }
     }
+  }
+
+  updateSettings = () =>{
+    this.updateDarkMode();
+    var fab;
+    if(this.state.currentPage!==15&&global.settingsCurrent!==undefined&&getSettingsString("settingsShowFAB")==="true"){
+      fab = <FAB openDrawer={this.openDrawer}/>;
+    } else {
+      fab = <View/>;
+    }
+    this.setState({fab:fab})
   }
 
   handleBackButton(){
@@ -242,7 +256,7 @@ class App extends Component {
       } else if (this.state.currentPage===12){
         currentPageView = <CatalogPage/>
       } else if (this.state.currentPage===13){
-        currentPageView = <SettingsPage/>
+        currentPageView = <SettingsPage updateSettings={this.updateSettings}/>
       } else if (this.state.currentPage===14){
         currentPageView = <CreditsPage/>
       } else if (this.state.currentPage===15){
@@ -250,13 +264,7 @@ class App extends Component {
       } else {
         currentPageView = <Text>Default</Text>
       }
-      this.updateDarkMode();
-      var fab;
-      if(this.state.currentPage!==15&&global.settingsCurrent!==undefined&&getSettingsString("settingsShowFAB")==="true"){
-        fab = <FAB openDrawer={this.openDrawer}/>;
-      } else {
-        fab = <View/>;
-      }
+      
       return (
         <>  
           <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage}>
@@ -267,7 +275,7 @@ class App extends Component {
             {currentPageView}
             <PopupChangelog/>
           </SideMenu>
-          {fab}
+          {this.state.fab}
         </>
       );
     }

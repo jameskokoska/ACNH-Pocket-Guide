@@ -33,6 +33,7 @@ class SettingsContainer extends Component {
                 global.settingsCurrent[this.props.index]["currentValue"] = !this.state.toggle === true ? "true" : "false";
                 this.setState({toggle:!this.state.toggle});
                 getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+                this.props.updateSettings();
               }}
             />
           </View>

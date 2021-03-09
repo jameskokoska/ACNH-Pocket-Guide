@@ -27,6 +27,7 @@ class ActiveCreatures extends Component {
           labelColor={colors.textBlack[global.darkMode]}
           accentColor={colors.artAccent[global.darkMode]}
           specialLabelColor={colors.fishText[global.darkMode]}
+          popUpPhraseProperty={["Catch phrase"]}
           disablePopup={[
             false,
             false,

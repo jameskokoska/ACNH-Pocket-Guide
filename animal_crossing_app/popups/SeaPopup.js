@@ -28,15 +28,15 @@ class SeaPopup extends Component {
         textProperty={["Movement Speed"]}
       />
       <ActiveTime item={this.props.item}/>
-      <View style={{marginTop: 30, flexDirection:"row"}}>
+      <View style={{marginTop: 30, flexDirection:"row", justifyContent:"space-around",width: Dimensions.get('window').width}}>
         <CachedImage
-          style={{width: Dimensions.get('window').width*0.4,height:Dimensions.get('window').width*0.4, resizeMode: "contain", borderRadius: 2}}
+          style={{width: Dimensions.get('window').width*0.35,height:Dimensions.get('window').width*0.35, resizeMode: "contain", borderRadius: 2}}
           source={{
             uri: this.props.item["Critterpedia Image"],
           }}
         />
         <CachedImage
-          style={{width: Dimensions.get('window').width*0.4,height:Dimensions.get('window').width*0.4, resizeMode: "contain", borderRadius: 2}}
+          style={{width: Dimensions.get('window').width*0.35,height:Dimensions.get('window').width*0.35, resizeMode: "contain", borderRadius: 2}}
           source={{
             uri: this.props.item["Furniture Image"],
           }}
