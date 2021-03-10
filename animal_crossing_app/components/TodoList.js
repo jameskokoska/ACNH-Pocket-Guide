@@ -19,7 +19,15 @@ class TodoList extends Component {
       showTurnipLog: false,
       showEdit: false,
     }
+  }
+
+  componentDidMount(){
+    this.mounted=true;
     this.loadList();
+  }
+
+  componentWillUnmount(){
+    this.mounted=false;
   }
 
   loadList = async() => {
@@ -37,7 +45,10 @@ class TodoList extends Component {
     ]
     var storageData = JSON.parse(await getStorage("ToDoList",JSON.stringify(defaultList)));
     var storageShowTurnipLog = await getStorage("TurnipListShow","true") === "true";
-    this.setState({data:storageData, showTurnipLog: storageShowTurnipLog});
+    if(this.mounted){
+      console.log("set")
+      this.setState({data:storageData, showTurnipLog: storageShowTurnipLog});
+    }
   }
 
   saveList = async(data) => {

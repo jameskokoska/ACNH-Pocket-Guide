@@ -66,7 +66,7 @@ class SongsPage extends Component {
           titleColor={colors.textWhite[0]}
           searchBarColor={colors.searchbarBG[global.darkMode]}
           backgroundColor={colors.lightDarkAccent[global.darkMode]}
-          boxColor={colors.white[global.darkMode]}
+          boxColor={false}
           labelColor={colors.textBlack[global.darkMode]}
           accentColor={colors.musicAccent[global.darkMode]}
         />

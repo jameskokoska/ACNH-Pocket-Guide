@@ -48,12 +48,14 @@ global.changelog = `
 -Added catchphrase to active creatures
 -Settings now update immediately
 -Month filter for creatures
+-Improved image loading and offline usage
+-Added colored backgrounds for list items
+-Added colors to item popups
 -
 -Planned Features:
 - Agenda with all in game events
 - Visitors tracking
-- Custom home screen sections
-- Improved furniture/item colors
+- Edit home screen sections
 - More todo list icons
 `
 
@@ -86,6 +88,7 @@ class App extends Component {
   }
 
   async componentDidMount(){
+    this.mounted = true;
     // await AsyncStorage.setItem("firstLogin", "true");
 
     this.backHandler = BackHandler.addEventListener(
@@ -122,22 +125,17 @@ class App extends Component {
       "ArialRoundedBold": require('./assets/fonts/arialRoundBold.ttf'),
     });
     
-    console.log("DONE Loading")
-    this.timeoutHandle = setTimeout(()=>{
+    if(this.mounted){
       this.setState({
         fadeInTitle: false,
         firstLogin: firstLogin,
-      });
-    }, 0);
-    this.timeoutHandle = setTimeout(()=>{
-      this.setState({
         loaded:true,
       });
-      // console.log(this.openChangelog)
-    }, 10);
+    }
   }
 
   componentWillUnmount() {
+    this.mounted=false;
     BackHandler.removeEventListener("hardwareBackPress", this.handleBackButton);
   }
 
@@ -203,6 +201,11 @@ class App extends Component {
     this.loadSettings();
   }
   render(){
+    var fab = this.state.fab;
+    if(this.state.currentPage===15){
+      fab = <View/>;
+    }
+
     if(!this.state.loaded){
       var splashScreens = [require('./assets/airplane.json'),require('./assets/balloon.json')];
       var chosenSplashScreen = splashScreens[Math.floor(this.random * splashScreens.length)];
@@ -275,7 +278,7 @@ class App extends Component {
             {currentPageView}
             <PopupChangelog/>
           </SideMenu>
-          {this.state.fab}
+          {fab}
         </>
       );
     }

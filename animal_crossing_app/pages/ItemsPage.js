@@ -39,7 +39,7 @@ const MaterialsRoute = () => (
     titleColor={colors.textBlack[global.darkMode]}
     searchBarColor={colors.searchbarBG[global.darkMode]}
     backgroundColor={colors.lightDarkAccent[global.darkMode]}
-    boxColor={colors.white[global.darkMode]}
+    boxColor={true}
     labelColor={colors.textBlack[global.darkMode]}
     accentColor={colors.materialsAccent[global.darkMode]}
     popUpCornerImageProperty={["Source"]}
@@ -97,7 +97,7 @@ const FurnitureRoute = () => (
     titleColor={colors.textWhiteOnly[global.darkMode]}
     searchBarColor={colors.searchbarBG[global.darkMode]}
     backgroundColor={colors.lightDarkAccent[global.darkMode]}
-    boxColor={colors.white[global.darkMode]}
+    boxColor={true}
     labelColor={colors.textBlack[global.darkMode]}
     accentColor={colors.furnitureAccent[global.darkMode]}
     specialLabelColor={colors.fishText[global.darkMode]}
@@ -196,7 +196,7 @@ const ClothingRoute = () => (
     titleColor={colors.textWhiteOnly[global.darkMode]}
     searchBarColor={colors.searchbarBG[global.darkMode]}
     backgroundColor={colors.lightDarkAccent[global.darkMode]}
-    boxColor={colors.white[global.darkMode]}
+    boxColor={true}
     labelColor={colors.textBlack[global.darkMode]}
     accentColor={colors.clothingAccent[global.darkMode]}
     specialLabelColor={colors.fishText[global.darkMode]}
@@ -275,7 +275,7 @@ const FloorWallsRoute = () => (
     titleColor={colors.textWhiteOnly[global.darkMode]}
     searchBarColor={colors.searchbarBG[global.darkMode]}
     backgroundColor={colors.lightDarkAccent[global.darkMode]}
-    boxColor={colors.white[global.darkMode]}
+    boxColor={true}
     labelColor={colors.textBlack[global.darkMode]}
     accentColor={colors.floorWallsAccent[global.darkMode]}
     specialLabelColor={colors.fishText[global.darkMode]}

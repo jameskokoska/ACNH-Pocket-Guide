@@ -435,6 +435,14 @@ export const settings = [
     "description" : "Toggle dark mode, ensure auto dark mode is off to use this",
   },
   {
+    "keyName" : "settingsColorLists",
+    "defaultValue" : "true",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/colorPalette.png"),
+    "displayName" : "Colored lists",
+    "description" : "Change the background of the list based on the color of the item",
+  },
+  {
     "keyName" : "settingsLargerItemPreviews",
     "defaultValue" : "false",
     "currentValue" : "",

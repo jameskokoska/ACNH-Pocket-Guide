@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import TextFont from './TextFont';
 import Check from './Check';
-import CachedImage from 'react-native-expo-cached-image';
+import FastImage from './FastImage';
 import {checkOff, capitalize, commas, removeBrackets} from "../LoadJsonData"
 import {getPhotoShadow} from "./GetPhoto"
 import {getMonthShort} from "./DateFunctions"
@@ -47,7 +47,31 @@ class ListItem extends PureComponent{
       disablePopup=this.props.disablePopup[this.props.item.dataSet];
     }
 
-    var boxColor = this.props.boxColor;
+    var boxColor = colors.white[global.darkMode];
+    if(this.props.boxColor===true && getSettingsString("settingsColorLists")==="true"){
+      if(this.props.item.["Color 1"]!==undefined){
+        var opacity = "0A"
+        if(global.darkMode){
+          opacity = "0C"
+        }
+        if(this.props.item.["Color 2"]!==undefined && global.darkMode===0 && ( this.props.item.["Color 1"]==='Yellow' || this.props.item.["Color 1"]==='White')){
+          boxColor = colors["itemBox"+this.props.item.["Color 2"]][global.darkMode]+opacity
+          if(this.props.item.["Color 2"]==='Colorful'){
+            boxColor = colors["itemBox"+this.props.item.["Color 1"]][global.darkMode]+opacity
+          }
+        } else if(this.props.item.["Color 2"]!==undefined && global.darkMode===1 && (this.props.item.["Color 1"]==='Black' || this.props.item.["Color 1"]==='Gray')){
+          boxColor = colors["itemBox"+this.props.item.["Color 2"]][global.darkMode]+opacity
+          
+        } else if (this.props.item.["Color 2"]!==undefined && (this.props.item.["Color 1"]==='Colorful')){
+          boxColor = colors["itemBox"+this.props.item.["Color 2"]][global.darkMode]+opacity
+          if(this.props.item.["Color 2"]==='Colorful'){
+            boxColor = colors["itemBox"+this.props.item.["Color 1"]][global.darkMode]+opacity
+          }
+        } else {
+          boxColor = colors["itemBox"+this.props.item.["Color 1"]][global.darkMode]+opacity
+        }
+      }
+    }
     if(this.props.leaveWarning){
       var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH "
       var nextMonthShort = getMonthShort(getCurrentDateObject().getMonth()+1);
@@ -100,14 +124,15 @@ class ListItem extends PureComponent{
           >
             <View style={[styles.gridBox, {backgroundColor:boxColor}]}>
               <Check checkType={this.props.checkType} style={{position:'absolute', right: -9, top: -9, zIndex:10}} play={this.state.collected==="true"} width={53} height={53} disablePopup={disablePopup}/>
-              <CachedImage
+              <FastImage
                 style={styles.gridBoxImage}
                 source={{
                   uri: this.props.item.[this.props.imageProperty[this.props.item.dataSet]],
                 }}
+                cacheKey={this.props.item.[this.props.imageProperty[this.props.item.dataSet]]}
               />
               <View style={styles.gridBoxText}>
-                <TextFont bold={true} style={{textAlign:'center', color:this.props.labelColor, fontSize:13}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
+                <TextFont numberOfLines={2} bold={true} style={{textAlign:'center', color:this.props.labelColor, fontSize:13}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
                 {textProperty2Component}
               </View>
             </View>
@@ -133,11 +158,12 @@ class ListItem extends PureComponent{
           >
             <View style={[styles.gridBoxLarge, {backgroundColor:boxColor}]}>
               <Check checkType={this.props.checkType} style={{position:'absolute', right: -8, top: -10, zIndex:10}} play={this.state.collected==="true"} width={53} height={53} disablePopup={disablePopup}/>
-              <CachedImage
+              <FastImage
                 style={styles.gridBoxImageLarge}
                 source={{
                   uri: this.props.item.[this.props.imageProperty[this.props.item.dataSet]],
                 }}
+                cacheKey={this.props.item.[this.props.imageProperty[this.props.item.dataSet]]}
               />
               <View style={styles.gridBoxTextLarge}>
                 <TextFont bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
@@ -177,11 +203,12 @@ class ListItem extends PureComponent{
           >
             <View style={[styles.gridBoxLarge, {backgroundColor:boxColor}]}>
               <Check checkType={this.props.checkType} style={{position:'absolute', right: -8, top: -10, zIndex:10}} play={this.state.collected==="true"} width={53} height={53} disablePopup={disablePopup}/>
-              <CachedImage
+              <FastImage
                 style={styles.gridBoxImageLargeSmaller}
                 source={{
                   uri: this.props.item.[this.props.imageProperty[this.props.item.dataSet]],
                 }}
+                cacheKey={this.props.item.[this.props.imageProperty[this.props.item.dataSet]]}
               />
               <View style={styles.gridBoxTextLargeSmaller}>
                 <TextFont bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
@@ -214,11 +241,12 @@ class ListItem extends PureComponent{
           >
             <View style={[styles.row,{backgroundColor:boxColor}]}>
               <View style={[styles.rowImageBackground,{backgroundColor:this.props.accentColor}]}>
-                <CachedImage
+                <FastImage
                   style={styles.rowImage}
                   source={{
                     uri: this.props.item.[this.props.imageProperty[this.props.item.dataSet]],
                   }}
+                  cacheKey={this.props.item.[this.props.imageProperty[this.props.item.dataSet]]}
                 />
               </View>
               <View style={styles.rowTextContainer}>

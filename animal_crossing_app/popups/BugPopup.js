@@ -5,7 +5,7 @@ import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, Circul
 import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"
 import ActiveTime from "../components/ActiveTime";
-import CachedImage from 'react-native-expo-cached-image';
+import FastImage from '../components/FastImage';
 
 
 class BugPopup extends Component {
@@ -24,17 +24,19 @@ class BugPopup extends Component {
       />
       <ActiveTime item={this.props.item}/>
       <View style={{marginTop: 30, flexDirection:"row", justifyContent:"space-around",width: Dimensions.get('window').width}}>
-        <CachedImage
+        <FastImage
           style={{width: Dimensions.get('window').width*0.35,height:Dimensions.get('window').width*0.35, resizeMode: "contain", borderRadius: 2}}
           source={{
             uri: this.props.item["Critterpedia Image"],
           }}
+          cacheKey={this.props.item["Critterpedia Image"]}
         />
-        <CachedImage
+        <FastImage
           style={{width: Dimensions.get('window').width*0.35,height:Dimensions.get('window').width*0.35, resizeMode: "contain", borderRadius: 2}}
           source={{
             uri: this.props.item["Furniture Image"],
           }}
+          cacheKey={this.props.item["Furniture Image"]}
         />
       </View>
     </View>

@@ -24,7 +24,7 @@ class EmoticonsPage extends Component {
           titleColor={colors.textBlack[global.darkMode]}
           searchBarColor={colors.searchbarBG[global.darkMode]}
           backgroundColor={colors.lightDarkAccent[global.darkMode]}
-          boxColor={colors.white[global.darkMode]}
+          boxColor={false}
           labelColor={colors.textBlack[global.darkMode]}
           accentColor={colors.emojipediaAccent[global.darkMode]}
           specialLabelColor={colors.fishText[global.darkMode]}

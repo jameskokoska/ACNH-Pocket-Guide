@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {Dimensions, Vibration, Image, TouchableOpacity, Text, View, StyleSheet} from "react-native";
 import colors from '../Colors.js';
-import CachedImage from 'react-native-expo-cached-image';
+import FastImage from './FastImage';
 import Check from './Check';
 import TextFont from './TextFont'
 import {commas, capitalize, checkOff, capitalizeFirst} from '../LoadJsonData'
@@ -17,11 +17,12 @@ export class CircularImage extends Component {
     }
     return <View style={{width:"100%", alignItems: 'center'}}>
       <View style={[styles.rowImageBackground,{backgroundColor:this.props.accentColor, top: getSettingsString("settingsLargerItemPreviews")==="false" ? -130/2-20 : -210/2-60, height: getSettingsString("settingsLargerItemPreviews")==="false" ? 130 : 210, width: getSettingsString("settingsLargerItemPreviews")==="false" ? 130 : 210,}]}>
-        <CachedImage
+        <Image
           style={[styles.rowImage, {height: getSettingsString("settingsLargerItemPreviews")==="false" ? 95 : 180, width: getSettingsString("settingsLargerItemPreviews")==="false" ? 95 : 180,}]}
           source={{
             uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
           }}
+          cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
         />
       </View>
     </View>
@@ -146,18 +147,45 @@ export class InfoLine extends Component {
       if(imageSource === ""){
         imageSource = <Image style={styles.infoLineImage} source={require("../assets/icons/leaf.png")}/>;
       } else {
-        imageSource = <CachedImage
+        imageSource = <FastImage
           style={styles.infoLineImageItem}
           source={{
             uri: getMaterialImage(this.props.item[this.props.textProperty]),
           }}
+          cacheKey={getMaterialImage(this.props.item[this.props.textProperty])}
         />
       }      
+    }
+    var colors1 = <View/>
+    var colors2 = <View/>
+    if(this.props.textProperty[0]==="Color 1"&&this.props.textProperty2[0]==="Color 2"){
+      var color1 = this.props.item[this.props.textProperty[0]];
+      var color2 = this.props.item[this.props.textProperty2[0]];
+      if(color1!==color2){
+        colors2 = <ColorContainer color={color2}/>
+      }
+      colors1 = <ColorContainer color={color1}/>
+      
     }
     return <View style={[styles.infoLineBox]}>
             {imageSource}
             <TextFont adjustsFontSizeToFit={true} bold={true} style={[styles.infoLineTitle,{color:colors.textBlack[global.darkMode]}]}>{starting + text + ending}</TextFont>
+            {colors1}{colors2}
         </View>
+  }
+}
+
+class ColorContainer extends Component {
+  render() {
+    if(this.props.color!==undefined && this.props.color!=="None" && this.props.color!=="Colorful"){
+      var opacity = "AA"
+      return(
+        <View style={{borderWidth: 1.5, borderColor: colors.lightDarkAccentHeavy[global.darkMode], marginLeft: 8, backgroundColor: colors["itemBox"+this.props.color+"Display"][global.darkMode]+opacity, height:30, width:30, borderRadius:40, }}>
+        </View>
+      )
+    } else {
+      return (<View/>)
+    }
   }
 }
 
@@ -231,11 +259,12 @@ export class Variations extends Component {
           {variations.map( (item, index)=>
             <View key={item[this.props.imageProperty[dataSet]]} style={[{marginHorizontal:4, marginVertical: 3, width: 60,height: 60,borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
               <TouchableOpacity onPress={()=>{this.popup.setPopupVisible(true, item[this.props.imageProperty[dataSet]]); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : ""}}>
-                <CachedImage
+                <FastImage
                   style={{height: 47, width: 47, resizeMode:'contain',}}
                   source={{
                     uri: item[this.props.imageProperty[dataSet]],
                   }}
+                  cacheKey={item[this.props.imageProperty[dataSet]]}
                 />
               </TouchableOpacity>
             </View>
@@ -269,11 +298,12 @@ class PopupImage extends Component {
     return(
       <PopupInfoCustom ref={(popup) => this.popup = popup} buttonText={"Close"}>
         <View style={{alignItems:"center"}}>
-          <CachedImage
+          <FastImage
             style={{width:Dimensions.get('window').width*0.5,height:Dimensions.get('window').width*0.5,resizeMode:'contain',}}
             source={{
               uri: this.state.image,
             }}
+            cacheKey={this.state.image}
           />
         </View>
       </PopupInfoCustom>

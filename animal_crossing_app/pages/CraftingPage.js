@@ -35,7 +35,7 @@ const RecipesRoute = () => (
     titleColor={colors.textWhiteOnly[global.darkMode]}
     searchBarColor={colors.searchbarBG[global.darkMode]}
     backgroundColor={colors.lightDarkAccent[global.darkMode]}
-    boxColor={colors.white[global.darkMode]}
+    boxColor={false}
     labelColor={colors.textBlack[global.darkMode]}
     accentColor={colors.toolsAccent[global.darkMode]}
     specialLabelColor={colors.fishText[global.darkMode]}
@@ -59,7 +59,7 @@ const ToolsRoute = () => (
     titleColor={colors.textWhiteOnly[global.darkMode]}
     searchBarColor={colors.searchbarBG[global.darkMode]}
     backgroundColor={colors.lightDarkAccent[global.darkMode]}
-    boxColor={colors.white[global.darkMode]}
+    boxColor={false}
     labelColor={colors.textBlack[global.darkMode]}
     accentColor={colors.toolsAccent[global.darkMode]}
     specialLabelColor={colors.fishText[global.darkMode]}

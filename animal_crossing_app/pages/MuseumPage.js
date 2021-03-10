@@ -46,7 +46,7 @@ const FishRoute = () => (
     titleColor={colors.textWhiteOnly[global.darkMode]}
     searchBarColor={colors.searchbarBG[global.darkMode]}
     backgroundColor={colors.lightDarkAccent[global.darkMode]}
-    boxColor={colors.white[global.darkMode]}
+    boxColor={false}
     labelColor={colors.textBlack[global.darkMode]}
     accentColor={colors.fishAccent[global.darkMode]}
     specialLabelColor={colors.fishText[global.darkMode]}
@@ -77,7 +77,7 @@ const BugsRoute = () => (
     titleColor={colors.textWhiteOnly[global.darkMode]}
     searchBarColor={colors.searchbarBG[global.darkMode]}
     backgroundColor={colors.lightDarkAccent[global.darkMode]}
-    boxColor={colors.white[global.darkMode]}
+    boxColor={false}
     labelColor={colors.textBlack[global.darkMode]}
     accentColor={colors.bugAccent[global.darkMode]}
     specialLabelColor={colors.bugText[global.darkMode]}
@@ -108,7 +108,7 @@ const SeaRoute = () => (
     titleColor={colors.textWhiteOnly[global.darkMode]}
     searchBarColor={colors.searchbarBG[global.darkMode]}
     backgroundColor={colors.lightDarkAccent[global.darkMode]}
-    boxColor={colors.white[global.darkMode]}
+    boxColor={false}
     labelColor={colors.textBlack[global.darkMode]}
     accentColor={colors.fishAccent[global.darkMode]}
     specialLabelColor={colors.fishText[global.darkMode]}
@@ -132,7 +132,7 @@ const FossilsRoute = () => (
     titleColor={colors.textWhiteOnly[global.darkMode]}
     searchBarColor={colors.searchbarBG[global.darkMode]}
     backgroundColor={colors.lightDarkAccent[global.darkMode]}
-    boxColor={colors.white[global.darkMode]}
+    boxColor={false}
     labelColor={colors.textBlack[global.darkMode]}
     accentColor={colors.fossilAccent[global.darkMode]}
     specialLabelColor={colors.fishText[global.darkMode]}
@@ -158,7 +158,7 @@ const ArtRoute = () => (
     titleColor={colors.textWhiteOnly[global.darkMode]}
     searchBarColor={colors.searchbarBG[global.darkMode]}
     backgroundColor={colors.lightDarkAccent[global.darkMode]}
-    boxColor={colors.white[global.darkMode]}
+    boxColor={false}
     labelColor={colors.textBlack[global.darkMode]}
     accentColor={colors.artAccent[global.darkMode]}
     specialLabelColor={colors.fishText[global.darkMode]}

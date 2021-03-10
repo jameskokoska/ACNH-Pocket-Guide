@@ -23,11 +23,11 @@ class ActiveCreatures extends Component {
           titleColor={colors.lightDarkAccentHeavy[global.darkMode]}
           searchBarColor={colors.searchbarBG[global.darkMode]}
           backgroundColor={colors.lightDarkAccent[global.darkMode]}
-          boxColor={colors.white[global.darkMode]}
+          boxColor={false}
           labelColor={colors.textBlack[global.darkMode]}
           accentColor={colors.artAccent[global.darkMode]}
           specialLabelColor={colors.fishText[global.darkMode]}
-          popUpPhraseProperty={["Catch phrase"]}
+          popUpPhraseProperty={["Catch phrase","Catch phrase","Catch phrase"]}
           disablePopup={[
             false,
             false,

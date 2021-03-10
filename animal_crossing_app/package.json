@@ -51,6 +51,7 @@
     "react-native-largelist-v3": "^3.0.15",
     "react-native-material-tabs": "^4.1.2",
     "react-native-modal-datetime-picker": "^9.1.0",
+    "react-native-modalize": "^2.0.8",
     "react-native-neomorph-shadows": "^1.1.2",
     "react-native-onboarding-swiper": "^1.1.4",
     "react-native-pie-chart": "^1.0.13",

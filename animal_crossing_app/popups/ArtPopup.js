@@ -5,7 +5,7 @@ import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, Circul
 import colors from "../Colors"
 import {getSculpturePhotoFake, getPaintingPhoto,getPaintingPhotoFake} from "../components/GetPhoto"
 import {commas, capitalize} from '../LoadJsonData'
-import CachedImage from 'react-native-expo-cached-image';
+import FastImage from '../components/FastImage';
 import TextFont from '../components/TextFont'
 
 class ArtPopup extends Component {
@@ -15,11 +15,12 @@ class ArtPopup extends Component {
     }
   }
   render(){
-    var paintingComparisonReal = <CachedImage
+    var paintingComparisonReal = <FastImage
       style={styles.comparisonImage}
       source={{
         uri: this.props.item["Image"],
       }}
+      cacheKey={this.props.item["Image"]}
     />
     var paintingComparisonRealLabel = <TextFont style={{paddingBottom: 20, fontSize:20, color: colors.textBlack[global.darkMode]}}>^ Real ^</TextFont>
     var paintingComparisonFake = <View/>
@@ -37,11 +38,12 @@ class ArtPopup extends Component {
     } else {
       var sculptureFake = getSculpturePhotoFake(this.props.item["Name"]);
       if(sculptureFake!=="none" ){
-        paintingComparisonFake = <CachedImage
+        paintingComparisonFake = <FastImage
           style={styles.comparisonImage}
           source={{
             uri: sculptureFake,
           }}
+          cacheKey={sculptureFake}
         />
         paintingComparisonFakeLabel = <TextFont style={{paddingBottom: 20, fontSize:20, color: colors.textBlack[global.darkMode]}}>^ Fake ^</TextFont>
       }

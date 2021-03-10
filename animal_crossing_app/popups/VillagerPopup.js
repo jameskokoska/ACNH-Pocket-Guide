@@ -4,7 +4,7 @@ import {Dimensions, Image, View, Text} from 'react-native';
 import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
 import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"
-import CachedImage from 'react-native-expo-cached-image';
+import FastImage from '../components/FastImage';
 
 class VillagerPopup extends Component {
   constructor(props){
@@ -52,20 +52,22 @@ class VillagerPopup extends Component {
       />
       <View style={{height:10}}/>
       <View style={{alignItems: 'center', width: Dimensions.get('window').width, justifyContent:"center"}}>
-        <CachedImage
+        <FastImage
           style={{width: Dimensions.get('window').width*0.8,height:Dimensions.get('window').width*0.8, resizeMode: "contain", borderRadius: 2}}
           source={{
             uri: this.props.item["House Image"],
           }}
+          cacheKey={this.props.item["House Image"]}
         />
       </View>
       <View style={{height:20}}/>
       <View style={{alignItems: 'center', width: Dimensions.get('window').width, justifyContent:"center"}}>
-        <CachedImage
+        <FastImage
           style={{width: Dimensions.get('window').width*0.6,height:Dimensions.get('window').width*0.6, resizeMode: "contain", borderRadius: 2}}
           source={{
             uri: this.props.item["Photo Image"],
           }}
+          cacheKey={this.props.item["Photo Image"]}
         />
       </View>
     </View>

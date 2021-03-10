@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Dimensions, Image, View, Text} from 'react-native';
 import colors from "../Colors"
-import CachedImage from 'react-native-expo-cached-image';
+import FastImage from './FastImage';
 import Accordion from 'react-native-collapsible/Accordion';
 import TextFont from './TextFont'
 import ButtonComponent from './ButtonComponent'
@@ -26,11 +26,13 @@ class AccordionContainer extends Component {
   renderContent = section => {
     return (
       <View style={{borderRadius:10, backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode], marginVertical: 5, alignItems: 'center', width: Dimensions.get('window').width, justifyContent:"center"}}>
-        <CachedImage
+        <FastImage
           style={{width: Dimensions.get('window').width-Dimensions.get('window').width*section.widthSubtraction, height:section.height, marginTop: section.marginTop, marginBottom: section.marginBottom, resizeMode: "contain", borderRadius: 2}}
           source={{
             uri: this.props.item[section.image],
           }}
+          cacheKey={this.props.item[section.image]}
+
         />
       </View>
     );
