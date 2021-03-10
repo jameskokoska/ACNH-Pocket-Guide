@@ -1,10 +1,7 @@
 import React, {Component } from 'react'
-
-import {View, Image } from 'react-native'
-
+import {View, Image} from 'react-native'
 import * as FileSystem from 'expo-file-system'
-
-import PropTypes from 'prop-types'
+//Remade from: https://dev.to/dmitryame/implementing-fast-image-for-react-native-expo-apps-1dn3
 
 class FastImage extends Component{
   constructor(props){
@@ -12,7 +9,6 @@ class FastImage extends Component{
     this.state = {
       imgURI:""
     }
-    // const { source: { uri }, cacheKey } = props
   }
   componentDidUpdate(prevProps){
     if(prevProps.source.uri!==this.props.source.uri)
