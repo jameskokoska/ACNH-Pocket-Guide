@@ -149,6 +149,7 @@ class HomePage extends Component {
           <View style={{height: 37}}/>
           <View style={{alignItems:"center"}}>
             <TextInput
+              allowFontScaling={false}
               style={{fontSize: 30, width:"100%", textAlign:"center", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
               onChangeText={async (text) => {AsyncStorage.setItem("name", text); global.name=text; console.log(text)}}
               placeholder={"[Name]"}
@@ -158,6 +159,7 @@ class HomePage extends Component {
             />
             <TextFont bold={true} style={{marginTop: 0, marginBottom: -8, color:colors.fishText[global.darkMode]}}>of</TextFont>
             <TextInput
+              allowFontScaling={false}
               style={{fontSize: 30, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
               onChangeText={async (text) => {AsyncStorage.setItem("islandName", text); global.islandName=text}}
               placeholder={"[Island]"}

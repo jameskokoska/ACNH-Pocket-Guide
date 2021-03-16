@@ -110,6 +110,7 @@ class CatalogPage extends Component {
           <TextFont bold={true} style={{fontSize: 20, marginLeft: 30, marginRight: 40, color:colors.textBlack[global.darkMode]}}>{"Paste nook.lol link and Import"}</TextFont>
           <View style={{height: 15}}/>
           <TextInput
+            allowFontScaling={false}
             style={{borderRadius: 10, paddingVertical: 10, paddingHorizontal: 20, marginHorizontal: 20, fontSize: 20, backgroundColor:colors.white[global.darkMode], color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
             onChangeText={(text) => {this.linkInput = text}}
             placeholder={"https://nook.lol/abc123"}
@@ -122,6 +123,7 @@ class CatalogPage extends Component {
           <TextFont bold={true} style={{fontSize: 20, marginLeft: 30, marginRight: 40, color:colors.textBlack[global.darkMode]}}>{"Paste results here and Import"}</TextFont>
           <View style={{height: 15}}/>
           <TextInput
+            allowFontScaling={false}
             style={{borderRadius: 10, maxHeight: 130, paddingVertical: 10, paddingHorizontal: 20, marginHorizontal: 20, fontSize: 20, backgroundColor:colors.white[global.darkMode], color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
             onChangeText={(text) => {this.input = text}}
             placeholder={"Abstract wall\nBackyard-fence wall\nGo K.K. Rider\n..."}

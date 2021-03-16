@@ -318,6 +318,7 @@ class TurnipItem extends Component {
         <View style={[styles.row,{paddingLeft: 20, height: 70, backgroundColor:colors.eventBackground[global.darkMode]}]}>
           <TextFont bold={true} numberOfLines={2} style={{width:"45%", fontSize:17, color:colors.textBlack[global.darkMode]}}>{capitalize(this.props.item.title)}</TextFont>
           <TextInput
+            allowFontScaling={false}
             keyboardType={"numeric"}
             style={{textAlign:"center", fontSize: 17, width:"55%", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 6, borderRadius: 5}}
             onChangeText={(text) => {item.purchase = text; this.props.updateItem(item,this.props.index)}}
@@ -334,6 +335,7 @@ class TurnipItem extends Component {
         <View style={[styles.row,{paddingLeft: 20, height: 70, backgroundColor:colors.eventBackground[global.darkMode]}]}>
           <TextFont bold={true} numberOfLines={2} style={{width:"45%", fontSize:17, color:colors.textBlack[global.darkMode]}}>{capitalize(this.props.item.title)}</TextFont>
           <TextInput
+            allowFontScaling={false}
             keyboardType={"numeric"}
             style={{textAlign:"center", fontSize: 17, width:"25%", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 6, borderRadius: 5}}
             onChangeText={(text) => {item.am = text; this.props.updateItem(item,this.props.index)}}
@@ -344,6 +346,7 @@ class TurnipItem extends Component {
           />
           <View style={{width:"5%"}}/>
           <TextInput
+            allowFontScaling={false}
             keyboardType={"numeric"}
             style={{textAlign:"center", fontSize: 17, width:"25%", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 6, borderRadius: 5}}
             onChangeText={(text) => {item.pm = text; this.props.updateItem(item,this.props.index)}}

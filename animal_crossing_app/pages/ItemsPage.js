@@ -26,7 +26,7 @@ const renderTabBar = props => (
 
 const MaterialsRoute = () => (
   <ListPage 
-    tabs={false}
+    tabs={true}
     showVariations={[false]}
     title="Materials"
     imageProperty={["Inventory Image"]}

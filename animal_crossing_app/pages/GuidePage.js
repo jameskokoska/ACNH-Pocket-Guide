@@ -26,7 +26,6 @@ class GuidePage extends Component {
 
   componentDidMount() {
     BackHandler.addEventListener("hardwareBackPress", this.handleBackButton);
-    this.openWebMenu();
   }
 
   componentWillUnmount() {
@@ -74,6 +73,7 @@ class GuidePage extends Component {
             </View>
           )}
           onNavigationStateChange={navState => {
+            this.openWebMenu();
             this.setState({
               canGoBack: navState.canGoBack,
               canGoForward: navState.canGoForward,

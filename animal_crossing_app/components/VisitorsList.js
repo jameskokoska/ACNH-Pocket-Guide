@@ -22,16 +22,17 @@ class TodoList extends Component {
 
   loadList = async() => {
     var defaultList = [
-      {title: 'Smash rocks', finished: false, picture:"rock.png"},
-      {title: 'Check turnip prices', finished: false, picture:"turnip.png"},
-      {title: 'Water flowers', finished: false, picture:"flowerIcon.png"},
-      {title: 'Talk to villagers', finished: false, picture:"cat.png"},
-      {title: 'Dig fossils', finished: false, picture:"digIcon.png"},
-      {title: 'Smash rocks', finished: false, picture:"rock.png"},
-      {title: 'Check turnip prices', finished: false, picture:"turnip.png"},
-      {title: 'Water flowers', finished: false, picture:"flowerIcon.png"},
-      {title: 'Talk to villagers', finished: false, picture:"cat.png"},
-      {title: 'Dig fossils', finished: false, picture:"digIcon.png"},
+      {day: '', title: "Saharah", finished: false, picture:"https://acnhcdn.com/latest/NpcIcon/cml.png"},
+      {day: '', title: "Leif", finished: false, picture:"https://acnhcdn.com/latest/NpcIcon/slo.png"},
+      {day: '', title: "Kicks", finished: false, picture:"https://acnhcdn.com/latest/NpcIcon/skk.png"},
+      {day: '', title: "Whisp", finished: false, picture:"https://acnhcdn.com/latest/NpcIcon/skk.png"},
+      {day: '', title: "Celeste", finished: false, picture:"https://acnhcdn.com/latest/NpcIcon/ows.png"},
+      {day: '', title: "Redd", finished: false, picture:"https://acnhcdn.com/latest/NpcIcon/fox.png"},
+      {day: '', title: "Label", finished: false, picture:"https://acnhcdn.com/latest/NpcIcon/hgc.png"},
+      {day: '', title: "C.J.", finished: false, picture:"https://acnhcdn.com/latest/NpcIcon/fox.png"},
+      {day: '', title: "Flick", finished: false, picture:"https://acnhcdn.com/latest/NpcIcon/fox.png"},
+      {day: '', title: "Gulliver", finished: false, picture:"https://acnhcdn.com/latest/NpcIcon/gul.png"},
+      {day: '', title: "Gullivarrr", finished: false, picture:"https://acnhcdn.com/latest/NpcIcon/gul.png"},
     ]
     var storageData = JSON.parse(await getStorage("ToDoList",JSON.stringify(defaultList)));
     storageData = defaultList;
@@ -117,10 +118,11 @@ class TodoItem extends Component {
           <View style={[styles.rowImageBackground,{backgroundColor:colors.eventBackground[global.darkMode]}]}>
             <Image
               style={styles.rowImage}
-              source={getPhoto(this.props.item.picture)}
+              source={{uri: this.props.item.picture}}
             />
           </View>
         </TouchableNativeFeedback>
+        {this.props.item.day==="" ? <View/> : <TextFont numberOfLines={2} bold={false} style={{width: 60, marginTop: 3, color: colors.textBlack[global.darkMode], fontSize: 12, textAlign:"center"}}>{this.props.item.day}</TextFont>}
       </View>
     )
   }

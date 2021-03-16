@@ -3,6 +3,7 @@ import {Vibration, BackHandler, Button, Image, ScrollView, Dimensions, Text, Vie
 import ListPage from './components/ListPage';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import FAB from './components/FAB';
+import CalendarPage from './pages/CalendarPage';
 import SongsPage from './pages/SongsPage';
 import CatalogPage from './pages/CatalogPage';
 import EmoticonsPage from './pages/EmoticonsPage';
@@ -70,7 +71,7 @@ class App extends Component {
     this.numLogins;
     this.state = {
       loaded: false,
-      currentPage: 0,
+      currentPage: 16,
       open:false,
       fadeInTitle:true,
     }
@@ -264,6 +265,8 @@ class App extends Component {
         currentPageView = <CreditsPage/>
       } else if (this.state.currentPage===15){
         currentPageView = <GuidePage openMenu={this.openDrawer}/>
+      } else if (this.state.currentPage===16){
+        currentPageView = <CalendarPage/>
       } else {
         currentPageView = <Text>Default</Text>
       }
