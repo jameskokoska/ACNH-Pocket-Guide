@@ -114,12 +114,18 @@ export function getPhoto(name, fallback=""){
     return require("../assets/icons/fall.png");
   } else if(name.includes("snow")){
     return require("../assets/icons/snow.png");
+  } else if(name.includes("toy")&&name.includes("ready")){
+    return require("../assets/icons/present.png");
   } else if(name.includes("toy")){
     return require("../assets/icons/santa.png");
   } else if(name.includes("winter")){
     return require("../assets/icons/snow.png");
+  } else if(name.includes("turkey")){
+    return require("../assets/icons/corn.png");
+  } else if(name.includes("lunar")){
+    return require("../assets/icons/fullmoon.png");
   } else if(name.includes("new year")){
-    return require("../assets/icons/popper.png");
+    return require("../assets/icons/applejuice.png");
   } else if(name.includes("big game")){
     return require("../assets/icons/football.png");
   } else if(name.includes("festivale")){
@@ -142,6 +148,16 @@ export function getPhoto(name, fallback=""){
     return require("../assets/icons/pumpkin.png");
   } else if(name.includes("valentine")){
     return require("../assets/icons/heart.png");
+  } else if(name.includes("countdown")){
+    return require("../assets/icons/popper.png");
+  } else if(name.includes("nature")){
+    return require("../assets/icons/butterflies.png");
+  } else if(name.includes("birthday")){
+    return require("../assets/icons/birthdayCake.png");
+  } else if(name.includes("wedding")){
+    return require("../assets/icons/birthdayCake.png");
+  } else if(name.includes("museum")){
+    return require("../assets/icons/fancyClock.png");
   }
   if(fallback.includes("season")){
     return require("../assets/icons/season.png");

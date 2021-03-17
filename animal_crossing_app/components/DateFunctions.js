@@ -17,10 +17,13 @@ function getMonth(currentMonth){
   return months[currentMonth];
 }
 
-function getMonthFromString(currentMonthString){
+function getMonthFromString(currentMonthString, integer=false){
   var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   for(var i=0; i<months.length; i++){
     if(months[i].toLowerCase()===currentMonthString.toLowerCase()){
+      if(integer){
+        return i
+      }
       if(i<10){
         return "0"+i;
       } else {

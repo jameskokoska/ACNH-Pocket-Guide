@@ -64,7 +64,6 @@ export default class CalendarPage extends Component {
   }
 
   loadItems(day) {
-    console.log(this.isDateInRange("February 25 – May 21", "2022", new Date()))
 
     const styleRepeatEvent = {customStyles: {
       container: { borderWidth:1, borderColor: colors.lightDarkAccentHeavy2[global.darkMode]},
@@ -253,7 +252,7 @@ export default class CalendarPage extends Component {
       dateStart.setYear(rangeYear);
       var dateEnd= new Date('January 10, 2000 12:00:00');
       dateEnd.setMonth(getMonthFromString(rangeSplit[2]));
-      dateEnd.setDate(rangeSplit[3]);
+      dateEnd.setDate(parseInt(rangeSplit[3])+1);
       dateEnd.setYear(rangeYear);
       if(parseInt(getMonthFromString(rangeSplit[2]))<parseInt(getMonthFromString(rangeSplit[0]))){
         dateEnd.setYear(parseInt(rangeYear)+1);
@@ -263,7 +262,13 @@ export default class CalendarPage extends Component {
       } else {
         return false;
       }
-    } else {
+    } else if(rangeSplit.length===2){
+      if(date.getMonth()===parseInt(getMonthFromString(rangeSplit[0], true)) && date.getDate() === parseInt(rangeSplit[1])){
+        return true;
+      } else {
+        return false;
+      }
+    } else{
       return false;
     }
   }
