@@ -4,6 +4,7 @@ import TextFont from './TextFont'
 import {getPhoto} from './GetPhoto'
 import {getCurrentDateObject} from './DateFunctions';
 import {getSettingsString} from "../LoadJsonData"
+import FastImage from './FastImage';
 
 // <EventContainer 
 //  backgroundColor="black" 
@@ -19,7 +20,7 @@ export class EventContainer extends Component {
   render(){
     var image = <View/>
     if(this.props.image.startsWith("http")){
-      image = <Image style={[styles.eventImage]} source={{uri:this.props.image}}/>
+      image = <FastImage style={[styles.eventImage]} source={{uri:this.props.image}} cacheKey={this.props.image}/>
     } else {
       image = <Image style={styles.eventImage} source={getPhoto(this.props.image)}/>
     }
@@ -116,10 +117,8 @@ export function getEventsDay(currentDate){
       }
       //Filter out birthdays so only villagers you hearted show up
       if(snapshot[i]["Name"].includes("Birthday")){
-        for(var x = 0; x<global.collectionList.length; x++){
-          if(global.collectionList[x].includes(snapshot[i]["Name"].replace("'s Birthday","")) && global.collectionList[x].includes("villagerCheckList")){
-            totalEvents.push(eventDatum);
-          }
+        if(global.collectionList.includes("villagerCheckList"+snapshot[i]["Name"].replace("'s Birthday",""))){
+          totalEvents.push(eventDatum);
         }
       } else {
         totalEvents.push(eventDatum);
@@ -130,7 +129,7 @@ export function getEventsDay(currentDate){
   return totalEvents;
 }
 
-function getSpecialOccurrenceDate(currentYear, i, snapshot){
+export function getSpecialOccurrenceDate(currentYear, i, snapshot){
   var occurrence = 0;
   var eventDate;
   var specialOccurrence = parseInt(snapshot[i]["Special Occurrence"]);

@@ -88,6 +88,7 @@ const colors = {
     selectSettings : ["#cdd8df","#72818b"],
     selectAbout : ["#d5ddd6","#7d8986"],
     selectMaterials : ["#e1f0f0","#536b6e"],
+    selectCalendar : ["#f2e2d8", "#907373"],
     okButton : ["#2196f3","#006db3"],
     okButtonFaint : ["#99cbf2","#125580"],
     dateButton : ["#81c784","#519657"],

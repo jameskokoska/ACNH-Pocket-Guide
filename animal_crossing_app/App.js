@@ -42,22 +42,18 @@ import GuidePage from './pages/GuidePage';
 global.version = require("./app.json")["expo"]["version"];
 global.versionCode = require("./app.json")["expo"]["android"]["versionCode"];
 global.changelog = `
--Thanks everyone for all the support recently!
--
+-Added calendar and events page
+-Fixed (favorite villagers) birthdays not showing up on home screen
 -Improved ACNH Guide page
--Improved popups
--Added catchphrase to active creatures
--Settings now update immediately
--Month filter for creatures
--Improved image loading and offline usage
--Added colored backgrounds for list items
--Added colors to item popups
+-Small formatting fixes
 -
 -Planned Features:
-- Agenda with all in game events
 - Visitors tracking
 - Edit home screen sections
 - More todo list icons
+-
+-Any feedback feel free to send me an email! dapperappdeveloper@gmail.com
+-You can reread this changelog in the [About] page
 `
 
 class App extends Component {
@@ -71,7 +67,7 @@ class App extends Component {
     this.numLogins;
     this.state = {
       loaded: false,
-      currentPage: 16,
+      currentPage: 0,
       open:false,
       fadeInTitle:true,
     }

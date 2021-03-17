@@ -1,7 +1,7 @@
 import {Image, View} from "react-native";
 import React, { Component } from "react";
 
-export function getPhoto(name){
+export function getPhoto(name, fallback=""){
   switch(name){
     case "leaf.png":
       return require("../assets/icons/leaf.png");
@@ -71,8 +71,78 @@ export function getPhoto(name){
       return require("../assets/icons/bellBag.png");
     case "bell.png":
       return require("../assets/icons/bell.png");
-    default:
-      break;
+  }
+  if(name.includes("bamboo")){
+    return require("../assets/icons/bamboo.png");
+  } else if(name.includes("shamrock")){
+    return require("../assets/icons/shamrock.png");
+  } else if(name.includes("ophiuchus")){
+    return require("../assets/icons/ophiuchus.png");
+  } else if(name.includes("scorpio")){
+    return require("../assets/icons/scorpio.png");
+  } else if(name.includes("virgo")){
+    return require("../assets/icons/virgo.png");
+  } else if(name.includes("aries")){
+    return require("../assets/icons/aries.png");
+  } else if(name.includes("aquarius")){
+    return require("../assets/icons/aquarius.png");
+  } else if(name.includes("cancer")){
+    return require("../assets/icons/cancer.png");
+  } else if(name.includes("libra")){
+    return require("../assets/icons/libra.png");
+  } else if(name.includes("leo")){
+    return require("../assets/icons/leo.png");
+  } else if(name.includes("sagittarius")){
+    return require("../assets/icons/sagittarius.png");
+  } else if(name.includes("taurus")){
+    return require("../assets/icons/taurus.png");
+  } else if(name.includes("capricorn")){
+    return require("../assets/icons/capricorn.png");
+  } else if(name.includes("gemini")){
+    return require("../assets/icons/gemini.png");
+  } else if(name.includes("pisces")){
+    return require("../assets/icons/pisces.png");
+  } else if(name.includes("able")){
+    return require("../assets/icons/able.png");
+  } else if(name.includes("shells")){
+    return require("../assets/icons/shells.png");
+  } else if(name.includes("blossom")){
+    return require("../assets/icons/blossom.png");
+  } else if(name.includes("mario")){
+    return require("../assets/icons/mushroom.png");
+  } else if(name.includes("acorns")){
+    return require("../assets/icons/fall.png");
+  } else if(name.includes("snow")){
+    return require("../assets/icons/snow.png");
+  } else if(name.includes("toy")){
+    return require("../assets/icons/santa.png");
+  } else if(name.includes("winter")){
+    return require("../assets/icons/snow.png");
+  } else if(name.includes("new year")){
+    return require("../assets/icons/popper.png");
+  } else if(name.includes("big game")){
+    return require("../assets/icons/football.png");
+  } else if(name.includes("festivale")){
+    return require("../assets/icons/popper.png");
+  } else if(name.includes("maple leaves")){
+    return require("../assets/icons/mapleleaves.png");
+  } else if(name.includes("mushroom")){
+    return require("../assets/icons/mushroommush.png");
+  } else if(name.includes("fireworks")){
+    return require("../assets/icons/fireworks.png");
+  } else if(name.includes("bug")){
+    return require("../assets/icons/bugs.png");
+  } else if(name.includes("fish")){
+    return require("../assets/icons/fish.png");
+  } else if(name.includes("summer")){
+    return require("../assets/icons/sun.png");
+  }
+  if(fallback.includes("season")){
+    return require("../assets/icons/season.png");
+  } else if(fallback.includes("shopping")){
+    return require("../assets/icons/nook.png");
+  } else {
+    return require("../assets/icons/leaf.png");
   }
 }
 

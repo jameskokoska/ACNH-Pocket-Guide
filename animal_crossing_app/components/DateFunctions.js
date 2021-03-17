@@ -17,6 +17,19 @@ function getMonth(currentMonth){
   return months[currentMonth];
 }
 
+function getMonthFromString(currentMonthString){
+  var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  for(var i=0; i<months.length; i++){
+    if(months[i].toLowerCase()===currentMonthString.toLowerCase()){
+      if(i<10){
+        return "0"+i;
+      } else {
+        return i+"";
+      }
+    }
+  }
+}
+
 function getMonthShort(currentMonth){
   var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan',];
   return months[currentMonth];
@@ -107,4 +120,4 @@ function isActive2(activeTime, currentHour){
   }
 }
 
-export {getCurrentDateObject, getMonthShort, getMonth, getWeekDay, getWeekDayShort, isActive, isActive2, parseActiveTime};
+export {getMonthFromString, getCurrentDateObject, getMonthShort, getMonth, getWeekDay, getWeekDayShort, isActive, isActive2, parseActiveTime};
