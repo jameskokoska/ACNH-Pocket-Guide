@@ -13,6 +13,7 @@ class GuidePage extends Component {
   constructor(props) {
     super(props);
     this.handleBackButton = this.handleBackButton.bind(this);
+    this.firstOpen = 0;
     this.state = {
       canGoBack: false,
       canGoForward: false,
@@ -73,7 +74,11 @@ class GuidePage extends Component {
             </View>
           )}
           onNavigationStateChange={navState => {
-            this.openWebMenu();
+            console.log(this.firstOpen)
+            if(this.firstOpen===0){
+              this.openWebMenu();
+              this.firstOpen++;
+            }
             this.setState({
               canGoBack: navState.canGoBack,
               canGoForward: navState.canGoForward,
