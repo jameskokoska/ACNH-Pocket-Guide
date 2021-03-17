@@ -136,6 +136,12 @@ export function getPhoto(name, fallback=""){
     return require("../assets/icons/fish.png");
   } else if(name.includes("summer")){
     return require("../assets/icons/sun.png");
+  } else if(name.includes("bunny")){
+    return require("../assets/icons/bunny.png");
+  } else if(name.includes("halloween")){
+    return require("../assets/icons/pumpkin.png");
+  } else if(name.includes("valentine")){
+    return require("../assets/icons/heart.png");
   }
   if(fallback.includes("season")){
     return require("../assets/icons/season.png");

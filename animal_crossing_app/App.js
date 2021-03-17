@@ -43,6 +43,8 @@ global.version = require("./app.json")["expo"]["version"];
 global.versionCode = require("./app.json")["expo"]["android"]["versionCode"];
 global.changelog = `
 -Added calendar and events page
+-Can search for events
+-Other improvements to the calendar events page
 -Fixed (favorite villagers) birthdays not showing up on home screen
 -Improved ACNH Guide page
 -Small formatting fixes
@@ -67,7 +69,7 @@ class App extends Component {
     this.numLogins;
     this.state = {
       loaded: false,
-      currentPage: 16,
+      currentPage: 0,
       open:false,
       fadeInTitle:true,
     }
@@ -201,6 +203,8 @@ class App extends Component {
     var fab = this.state.fab;
     if(this.state.currentPage===15){
       fab = <View/>;
+    } else if(this.state.currentPage===16){
+      fab = <FAB openDrawer={this.openDrawer} offset={30}/>;
     }
 
     if(!this.state.loaded){

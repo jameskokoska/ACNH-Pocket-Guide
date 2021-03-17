@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Image, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {FlatList, TouchableNativeFeedback, Dimensions, Vibration, Image, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import {Agenda} from 'react-native-calendars';
 import TextFont from '../components/TextFont';
 import colors from '../Colors'
@@ -8,6 +8,8 @@ import {getMonthFromString, getCurrentDateObject} from "../components/DateFuncti
 import {capitalize, getSettingsString} from "../LoadJsonData"
 import {getSpecialOccurrenceDate} from "../components/EventContainer"
 import FastImage from '../components/FastImage';
+import DelayInput from "react-native-debounce-input";
+import {MailLink, ExternalLink, SubHeader, Header, Paragraph} from "../components/Formattings"
 
 
 export default class CalendarPage extends Component {
@@ -16,13 +18,20 @@ export default class CalendarPage extends Component {
 
     this.state = {
       items: {},
-      itemsColor: {}
+      itemsColor: {},
+      viewList: false
     };
   }
 
   render() {
-    return (
+    var viewAll = <View/>
+    if(this.state.viewList){
+      viewAll = <AllEventsList/>
+    }
+    return (<>
+      {viewAll}
       <Agenda
+        ref={(agenda) => this.agenda = agenda} 
         items={this.state.items}
         loadItemsForMonth={this.loadItems.bind(this)}
         selected={getCurrentDateObject()}
@@ -47,7 +56,11 @@ export default class CalendarPage extends Component {
         //renderDay={(day, item) => (<Text>{day ? day.day: 'item'}</Text>)}
         // hideExtraDays={false}
       />
+      <BottomBar viewList={()=>{this.setState({viewList:!this.state.viewList})}} viewToday={()=>{this.setState({viewList:false}); this.agenda.chooseDay(getCurrentDateObject())}} openAgenda={()=>{if(this.state.viewList){this.setState({viewList:false});}else{this.agenda.setScrollPadPosition(0, true); this.agenda.enableCalendarScrolling();}}}/>
+    </>
     );
+    
+    
   }
 
   loadItems(day) {
@@ -151,7 +164,7 @@ export default class CalendarPage extends Component {
           specialEvents.map( (event, index)=>{
             var eventDay = getSpecialOccurrenceDate(date.getFullYear(), index, specialEvents);
             if(eventDay[0]===date.getDate() && eventDay[1]===date.getMonth()){
-              if(!event["Name"].includes("fireworks")){
+              if(!event["Name"].includes("ireworks")){
                 this.state.items[strTime].push({
                   name: capitalize(event["Name"]),
                   time: event["Time"],
@@ -200,16 +213,15 @@ export default class CalendarPage extends Component {
       image = <Image style={{width: 50, height: 50, resizeMode:'contain',}} source={getPhoto(item.image.toLowerCase(), item.time.toLowerCase())}/>
     }
     return(
-        <View style={{padding: 20, paddingRight: 60, marginHorizontal: 10, marginVertical: 5,  flexDirection:"row", flex:1, alignItems: 'center', borderRadius: 10, backgroundColor:item.color[global.darkMode]}}>
+        <View style={{padding: 20, marginHorizontal: 10, marginVertical: 5,  flexDirection:"row", flex:1, alignItems: 'center', borderRadius: 10, backgroundColor:item.color[global.darkMode]}}>
           {image}
-          <View style={{marginLeft: 18}}>
+          <View style={{flex: 1, marginLeft: 18,}}>
             <TextFont bold={true} style={{fontSize: 20,color: colors.textBlack[global.darkMode]}}>{item.name}</TextFont>
             <TextFont style={{marginTop: 3,fontSize: 18,color: colors.textBlack[global.darkMode]}}>{item.time}</TextFont>
           </View>
         </View>
     )
   }
-  
 
   renderEmptyDate() {
     return (
@@ -255,6 +267,137 @@ export default class CalendarPage extends Component {
       return false;
     }
   }
+}
+
+class BottomBar extends Component {  
+  render(){
+    return <View style={{position:"absolute", zIndex:5, bottom:0, borderTopRightRadius: 20, borderTopLeftRadius: 20, flexDirection: "row", justifyContent:"space-evenly",elevation:5, backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode], width:Dimensions.get('window').width, height:45}}>
+      <TouchableNativeFeedback onPress={()=>{this.props.viewToday(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} background={TouchableNativeFeedback.Ripple(colors.lightDarkAccentHeavy[global.darkMode], false)}>
+        <View style={{borderRadius: 10, borderWidth:3,borderColor:colors.lightDarkAccentHeavy2[global.darkMode],width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
+          <TextFont bold={true} style={{fontSize: 12,color: colors.textBlack[global.darkMode]}}>View Today</TextFont>
+        </View>
+      </TouchableNativeFeedback>
+      <TouchableNativeFeedback onPress={()=>{this.props.openAgenda(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} background={TouchableNativeFeedback.Ripple(colors.lightDarkAccentHeavy[global.darkMode], false)}>
+        <View style={{borderRadius: 10, borderWidth:3,borderColor:colors.lightDarkAccentHeavy2[global.darkMode],width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
+          <TextFont bold={true} style={{fontSize: 12,color: colors.textBlack[global.darkMode]}}>Open Calendar</TextFont>
+        </View>
+      </TouchableNativeFeedback>
+      <TouchableNativeFeedback onPress={()=>{this.props.viewList(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} background={TouchableNativeFeedback.Ripple(colors.lightDarkAccentHeavy[global.darkMode], false)}>
+        <View style={{borderRadius: 10, borderWidth:3,borderColor:colors.lightDarkAccentHeavy2[global.darkMode],width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
+          <TextFont bold={true} style={{fontSize: 12,color: colors.textBlack[global.darkMode]}}>View All</TextFont>
+        </View>
+      </TouchableNativeFeedback>
+    </View>
+  }
+}
+
+class AllEventsList extends Component{
+  constructor(item) {
+    super(item);
+    this.data = require("../assets/data/seasonsandevents.json");
+    this.state = {
+      searchData: this.data,
+    };
+  }
+
+  handleSearch = (text) => {
+    if(text===""){
+      this.setState({searchData: this.data})
+    } else {
+      var outputData = [];
+      this.data.map( (event, index)=>{
+        if(event["Name"].toLowerCase().includes(text.toLowerCase())){
+          outputData.push(event);
+        } else if (event["Type"].toLowerCase().includes(text.toLowerCase())){
+          outputData.push(event);
+        }
+      })
+      this.setState({searchData:outputData});
+    }
+  }
+
+  render(){
+    return(<>
+      <View style={{height:40}}/>
+      <Header>All Events</Header>
+      <View style={{height:10}}/>
+      <View style={{paddingVertical: 8,
+        paddingHorizontal: 10,
+        marginHorizontal: 20,
+        borderRadius: 10,
+        alignItems: 'center',
+        flexDirection: 'row',
+        marginBottom: 10,
+        opacity: 0.7,
+        backgroundColor:colors.searchbarBG[global.darkMode]}}
+      >
+      <DelayInput
+        allowFontScaling={false}
+        placeholder={"Search"}
+        style={{color: '#515151',
+          fontSize: 17,
+          lineHeight: 22,
+          marginLeft: 8,
+          width:'100%',
+          paddingRight: 25,
+          height: 30,
+        }}
+        onChangeText={(text)=>{this.handleSearch(text)}} 
+        onFocus={() => {Vibration.vibrate(15);}}
+        minLength={2}
+        delayTimeout={400}
+      />
+      </View>
+      <View style={{ height: Dimensions.get('window').height}}>
+        <FlatList
+          data={this.state.searchData}
+          renderItem={renderItemFlatList}
+          keyExtractor={(item, index) => `list-item-${index}-${item.["Unique Entry ID"]}`}
+          contentContainerStyle={{paddingBottom:Dimensions.get('window').height/2}}
+        />
+      </View>
+      </>
+    )
+  }
+}
+
+const renderItemFlatList = ({item}) => {
+  var image = <View/>
+  image = <Image style={{width: 50, height: 50, resizeMode:'contain',}} source={getPhoto(item.["Name"].toLowerCase(), item.["Type"].toLowerCase())}/>
+  var date = "";
+  if(item["Northern Hemisphere Dates"]!=="NA" && getSettingsString("settingsNorthernHemisphere")==="true"){
+    date = item.["Northern Hemisphere Dates"];
+  } else if (item["Southern Hemisphere Dates"]!=="NA" && getSettingsString("settingsNorthernHemisphere")!=="true"){
+    date = item.["Southern Hemisphere Dates"];
+  } else if (item[getCurrentDateObject().getFullYear()+" Dates"]!=="NA"){
+    date = item.[getCurrentDateObject().getFullYear()+" Dates"];
+  } else if (item[getCurrentDateObject().getFullYear()-1+" Dates"]!=="NA"){
+    date = item.[getCurrentDateObject().getFullYear()-1+" Dates"];
+    date = date+" ("+(getCurrentDateObject().getFullYear()-1).toString()+")"
+  } else if (item[getCurrentDateObject().getFullYear()-2+" Dates"]!=="NA"){
+    date = item.[getCurrentDateObject().getFullYear()-2+" Dates"];
+    date = date+" ("+(getCurrentDateObject().getFullYear()-2).toString()+")"
+  } else if (item[getCurrentDateObject().getFullYear()-3+" Dates"]!=="NA"){
+    date = item.[getCurrentDateObject().getFullYear()-3+" Dates"];
+    date = date+" ("+(getCurrentDateObject().getFullYear()-3).toString()+")"
+  }
+  date = date.replace(/[^\x00-\x7F]/g, "-");
+  date = date.replace("--", "- ");
+  var dateComp;
+  if(date!=="")
+    dateComp = <TextFont style={{marginTop: 3,fontSize: 18,color: colors.textBlack[global.darkMode]}}>{capitalize(date)}</TextFont>
+  else 
+    dateComp = <View/>
+  return(
+    <View style={{width:Dimensions.get('window').width-20, flex: 1, backgroundColor: colors.white[global.darkMode], padding: 20, marginHorizontal: 10, marginVertical: 5,  flexDirection:"row", alignItems: 'center', borderRadius: 10}}>
+      {image}
+      <View style={{flex: 1, marginLeft:15}}>
+        <TextFont bold={true} style={{fontSize: 20,color: colors.textBlack[global.darkMode]}}>{capitalize(item.["Name"])}</TextFont>
+        <TextFont style={{marginTop: 3,fontSize: 18,color: colors.textBlack[global.darkMode]}}>{capitalize(item.["Type"])}</TextFont>
+        {dateComp}
+      </View>
+    </View>
+  )
 }
 
 const specialEvents = [

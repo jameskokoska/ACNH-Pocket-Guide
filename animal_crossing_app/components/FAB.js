@@ -7,8 +7,12 @@ class FAB extends Component {
   componentDidMount() {
   }
   render(){
+    var offset = 0;
+    if(this.props.offset!==undefined){
+      offset = this.props.offset
+    }
     return(
-        <TouchableOpacity onPress={() => {this.animation.play(); this.props.openDrawer(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} activeOpacity={0.3} style={[styles.FABShape,{backgroundColor: colors.FAB[global.darkMode]}]}>
+        <TouchableOpacity onPress={() => {this.animation.play(); this.props.openDrawer(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} activeOpacity={0.3} style={[styles.FABShape,{backgroundColor: colors.FAB[global.darkMode], bottom:20+offset}]}>
             <LottieView 
               ref={animation => {
                 this.animation = animation;
