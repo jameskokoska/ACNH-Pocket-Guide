@@ -228,6 +228,9 @@ export default class CalendarPage extends Component {
   //range >> February 25 – May 21
   //date >> Date object
   isDateInRange(range,rangeYear, date){
+    if(range===undefined){
+      return false;
+    }
     var rangeSplit = range.replace(/[^\x00-\x7F]/g, "");
     rangeSplit = rangeSplit.replace("  ", " ");
     rangeSplit = rangeSplit.split(" ");
