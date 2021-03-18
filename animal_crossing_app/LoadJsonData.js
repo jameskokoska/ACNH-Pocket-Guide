@@ -218,30 +218,31 @@ export function removeBrackets(string){
 }
 
 export async function loadGlobalData(){
-  global.dataLoadedReactions = await getStorageData([require("./assets/data/reactions.json")],[["emojiCheckList","Name"]],"false");
-  global.dataLoadedMusic = await getStorageData([require("./assets/data/music.json")],[["songCheckList","Name"]],"false");
-  global.dataLoadedConstruction = await getStorageData([require("./assets/data/construction.json"),require("./assets/data/fencing.json")],[["constructionCheckList","Name"],["fenceCheckList","Name"]],"false");
-  global.dataLoadedFish = await getStorageData([require("./assets/data/fish.json")],[["fishCheckList","Name"]],"false");
-  global.dataLoadedBugs = await getStorageData([require("./assets/data/insects.json")],[["bugCheckList","Name"]],"false");
-  global.dataLoadedSea = await getStorageData([require("./assets/data/seacreatures.json")],[["seaCheckList","Name"]],"false");
+  const data = require("./assets/data/data.json");
+  global.dataLoadedReactions = await getStorageData([data["Reactions"]],[["emojiCheckList","Name"]],"false");
+  global.dataLoadedMusic = await getStorageData([data["Music"]],[["songCheckList","Name"]],"false");
+  global.dataLoadedConstruction = await getStorageData([data["Construction"],data["Fencing"]],[["constructionCheckList","Name"],["fenceCheckList","Name"]],"false");
+  global.dataLoadedFish = await getStorageData([data["Fish"]],[["fishCheckList","Name"]],"false");
+  global.dataLoadedBugs = await getStorageData([data["Insects"]],[["bugCheckList","Name"]],"false");
+  global.dataLoadedSea = await getStorageData([data["Sea Creatures"]],[["seaCheckList","Name"]],"false");
   global.dataLoadedCreatures = await getStorageData([
-    require("./assets/data/fish.json"),
-    require("./assets/data/seacreatures.json"),
-    require("./assets/data/insects.json"),
+    data["Fish"],
+    data["Sea Creatures"],
+    data["Insects"],
   ],[
     ["fishCheckList","Name"],
     ["seaCheckList","Name"],
     ["bugCheckList","Name"]
   ],"false");
-  global.dataLoadedFossils = await getStorageData([require("./assets/data/fossils.json")],[["fossilCheckList","Name"]],"false");
-  global.dataLoadedArt = await getStorageData([require("./assets/data/art.json")],[["artCheckList","Name","Genuine"]],"false");
-  global.dataLoadedVillagers = await getStorageData([require("./assets/data/villagers.json")],[["villagerCheckList","Name"]],"false");
+  global.dataLoadedFossils = await getStorageData([data["Fossils"]],[["fossilCheckList","Name"]],"false");
+  global.dataLoadedArt = await getStorageData([data["Art"]],[["artCheckList","Name","Genuine"]],"false");
+  global.dataLoadedVillagers = await getStorageData([data["Villagers"]],[["villagerCheckList","Name"]],"false");
   global.dataLoadedFurniture = await getStorageData([
-    require("./assets/data/housewares.json"),
-    require("./assets/data/miscellaneous.json"),
-    require("./assets/data/wall-mounted.json"),
-    require("./assets/data/photos.json"),
-    require("./assets/data/posters.json")
+    data["Housewares"],
+    data["Miscellaneous"],
+    data["Wall-mounted"],
+    data["Photos"],
+    data["Posters"],
   ],
   [
     ["furnitureCheckList","Name","Variation","Pattern"],
@@ -252,16 +253,16 @@ export async function loadGlobalData(){
     ["furnitureCheckList","Name"],
   ],"false");
   global.dataLoadedClothing = await getStorageData([
-    require("./assets/data/headwear.json"),
-    require("./assets/data/accessories.json"),
-    require("./assets/data/tops.json"),
-    require("./assets/data/dress-up.json"),
-    require("./assets/data/clothingother.json"),
-    require("./assets/data/bottoms.json"),
-    require("./assets/data/socks.json"),
-    require("./assets/data/shoes.json"),
-    require("./assets/data/bags.json"),
-    require("./assets/data/umbrellas.json")
+    data["Headwear"],
+    data["Accessories"],
+    data["Tops"],
+    data["Dress-Up"],
+    data["Clothing Other"],
+    data["Bottoms"],
+    data["Socks"],
+    data["Shoes"],
+    data["Bags"],
+    data["Umbrellas"],
   ],
   [
     ["clothingCheckList","Name","Variation"],
@@ -277,52 +278,52 @@ export async function loadGlobalData(){
   ],"false");
   global.dataLoadedFloorWalls = await getStorageData(
   [
-    require("./assets/data/floors.json"),
-    require("./assets/data/rugs.json"),
-    require("./assets/data/wallpaper.json")
+    data["Floors"],
+    data["Rugs"],
+    data["Wallpaper"]
   ],
   [
     ["floorWallsCheckList","Name"],
     ["floorWallsCheckList","Name"],
     ["floorWallsCheckList","Name"],
   ],"false");
-  global.dataLoadedTools = await getStorageData([require("./assets/data/tools.json")],[["toolsCheckList","Name","Variation"]],"false");
-  global.dataLoadedRecipes = await getStorageData([require("./assets/data/recipes.json")],[["recipesCheckList","Name"]],"false");
-  global.dataLoadedCards = await getStorageData([require("./assets/data/messagecards.json")],[["cardsCheckList","Name"]],"false");
-  global.dataLoadedMaterials = await getStorageData([require("./assets/data/other.json")],[["materialsCheckList","Name"]],"false");
+  global.dataLoadedTools = await getStorageData([data["Tools"]],[["toolsCheckList","Name","Variation"]],"false");
+  global.dataLoadedRecipes = await getStorageData([data["Recipes"]],[["recipesCheckList","Name"]],"false");
+  global.dataLoadedCards = await getStorageData([data["Message Cards"]],[["cardsCheckList","Name"]],"false");
+  global.dataLoadedMaterials = await getStorageData([data["Other"]],[["materialsCheckList","Name"]],"false");
   global.dataLoadedAll = await getStorageData(
   [
-    require("./assets/data/housewares.json"),
-    require("./assets/data/miscellaneous.json"),
-    require("./assets/data/wall-mounted.json"),
-    require("./assets/data/photos.json"),
-    require("./assets/data/posters.json"),
-    require("./assets/data/headwear.json"),
-    require("./assets/data/accessories.json"),
-    require("./assets/data/tops.json"),
-    require("./assets/data/dress-up.json"),
-    require("./assets/data/clothingother.json"),
-    require("./assets/data/bottoms.json"),
-    require("./assets/data/socks.json"),
-    require("./assets/data/shoes.json"),
-    require("./assets/data/bags.json"),
-    require("./assets/data/umbrellas.json"),
-    require("./assets/data/floors.json"),
-    require("./assets/data/rugs.json"),
-    require("./assets/data/wallpaper.json"),
-    require("./assets/data/recipes.json"),
-    require("./assets/data/tools.json"),
-    require("./assets/data/fish.json"),
-    require("./assets/data/insects.json"),
-    require("./assets/data/seacreatures.json"),
-    require("./assets/data/fossils.json"),
-    require("./assets/data/art.json"),
-    require("./assets/data/villagers.json"),
-    require("./assets/data/music.json"),
-    require("./assets/data/reactions.json"),
-    require("./assets/data/construction.json"),
-    require("./assets/data/fencing.json"),
-    require("./assets/data/other.json")
+    data["Housewares"],
+    data["Miscellaneous"],
+    data["Wall-mounted"],
+    data["Photos"],
+    data["Posters"],
+    data["Headwear"],
+    data["Accessories"],
+    data["Tops"],
+    data["Dress-Up"],
+    data["Clothing Other"],
+    data["Bottoms"],
+    data["Socks"],
+    data["Shoes"],
+    data["Bags"],
+    data["Umbrellas"],
+    data["Floors"],
+    data["Rugs"],
+    data["Wallpaper"],
+    data["Recipes"],
+    data["Tools"],
+    data["Fish"],
+    data["Insects"],
+    data["Sea Creatures"],
+    data["Fossils"],
+    data["Art"],
+    data["Villagers"],
+    data["Music"],
+    data["Reactions"],
+    data["Construction"],
+    data["Fencing"],
+    data["Other"],
   ],
   [
     ["furnitureCheckList","Name","Variation","Pattern"],

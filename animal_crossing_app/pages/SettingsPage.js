@@ -13,10 +13,6 @@ import DateTimePickerModal from "react-native-modal-datetime-picker";
 import {resetFilters} from '../LoadJsonData';
 import {HeaderNote, MailLink, Header} from "../components/Formattings"
 
-const music = require("../assets/data/music.json");
-const {width} = Dimensions.get('window');
-
-
 class SettingsPage extends Component {
   constructor(props){
     super(props);

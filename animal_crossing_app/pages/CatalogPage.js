@@ -9,9 +9,6 @@ import ButtonComponent from "../components/ButtonComponent"
 import {collectionListSave, checkOff, loadGlobalData} from "../LoadJsonData"
 import Popup from '../components/Popup';
 
-const music = require("../assets/data/music.json");
-const {width} = Dimensions.get('window');
-
 
 class CatalogPage extends Component {
   constructor(props) {

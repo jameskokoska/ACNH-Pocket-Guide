@@ -284,7 +284,7 @@ export function getMaterialImage(material, reduceComplexity=false, flowerSingle=
     materialStripped = materialStripped.replace("mums", "mum");
     materialStripped = materialStripped.replace("tulips", "tulip");
   }
-  var data = require("../assets/data/other.json");
+  var data = require("../assets/data/data.json")["Other"];
   if(reduceComplexity){
     materialStripped = materialStripped.replace("-","").toLowerCase();
     materialStripped = materialStripped.replace(" ","");
@@ -310,7 +310,7 @@ export function getMaterialImage(material, reduceComplexity=false, flowerSingle=
 
 export function getSculpturePhotoFake(name){
   console.log(name)
-  var data = require("../assets/data/art.json");
+  var data = require("../assets/data/data.json")["Art"];;
   for(var index = 0; index < data.length; index++){
     if(data[index]["Name"]===name && data[index]["Genuine"]==="No"){
       return data[index]["Image"]

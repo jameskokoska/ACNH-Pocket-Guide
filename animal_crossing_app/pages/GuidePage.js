@@ -6,8 +6,6 @@ import { WebView } from 'react-native-webview';
 import {getSettingsString} from "../LoadJsonData"
 import Popup from "../components/Popup"
 import FadeInOut from "../components/FadeInOut"
-const music = require("../assets/data/music.json");
-const {width} = Dimensions.get('window');
 
 class GuidePage extends Component {
   constructor(props) {

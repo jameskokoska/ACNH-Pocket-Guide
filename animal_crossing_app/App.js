@@ -46,6 +46,8 @@ global.changelog = `
 -Improved todo list
 -Item variation information now shows up in popup
 -Color fixes
+-Updated game data
+-Made it easier (for developer) to add new game data
 -
 -Added calendar and events page
 -Can search for events
@@ -54,6 +56,7 @@ global.changelog = `
 -Fixed event ranges off by one day
 -
 -Planned Features:
+- Translations
 - Visitors tracking
 - Edit home screen sections
 -

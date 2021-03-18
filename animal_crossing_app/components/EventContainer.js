@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Image, Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text, TouchableNativeFeedback} from 'react-native';
 import TextFont from './TextFont'
 import {getPhoto} from './GetPhoto'
-import {getCurrentDateObject} from './DateFunctions';
+import {getMonthShort, getCurrentDateObject} from './DateFunctions';
 import {getSettingsString} from "../LoadJsonData"
 import FastImage from './FastImage';
 
@@ -76,8 +76,26 @@ export function getEventsDay(currentDate){
     }
     totalEvents.push(eventDatum);
   }
-
-  var snapshot = require("../assets/data/events.json")
+  const villagerData = require("../assets/data/data.json")["Villagers"];
+  villagerData.map( (villager, index)=>{
+    if((currentMonth+1).toString()===(villager["Birthday"].split("/"))[0]&& currentDay.toString()===(villager["Birthday"].split("/"))[1]){
+      if(global.collectionList.includes("villagerCheckList"+villager["Name"])){
+        eventDatum = {
+          "Name": villager["Name"]+"'s Birthday",
+          "Month": getMonthShort(currentMonth),
+          "Day Start": villager["Birthday"].split("/")[1],
+          "Day End": villager["Birthday"].split("/")[1],
+          "Special Day" : "",
+          "Special Occurrence": "",
+          "Hemisphere": "NA",
+          "Time" : "All day",
+          "Image" : villager["Icon Image"],
+        }
+        totalEvents.push(eventDatum);
+      }
+    }
+  })
+  const snapshot = require("../assets/data/events.json")
   for(var i = 1; i < snapshot.length; i++){
     if(northernHemisphere && snapshot[i]["Hemisphere"]==="Southern"){
       continue;
@@ -115,15 +133,6 @@ export function getEventsDay(currentDate){
         "Time" : snapshot[i]["Time"],
         "Image" : snapshot[i]["Image"]
       }
-      //Filter out birthdays so only villagers you hearted show up
-      if(snapshot[i]["Name"].includes("Birthday")){
-        if(global.collectionList.includes("villagerCheckList"+snapshot[i]["Name"].replace("'s Birthday",""))){
-          totalEvents.push(eventDatum);
-        }
-      } else {
-        totalEvents.push(eventDatum);
-      }
-      
     }
   }
   return totalEvents;

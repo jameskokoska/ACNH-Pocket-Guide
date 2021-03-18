@@ -84,8 +84,8 @@ export default class CalendarPage extends Component {
       for (let i = -15; i < 85; i++) {
         const date = new Date(day.timestamp + i * 24 * 60 * 60 * 1000 - 10);
         const strTime = this.dateToString(date);
-        const seasonData = require("../assets/data/seasonsandevents.json");
-        const villagerData = require("../assets/data/villagers.json");
+        const seasonData = require("../assets/data/data.json")["Seasons and Events"];
+        const villagerData = require("../assets/data/data.json")["Villagers"];
         
         if (!this.state.items[strTime]) {
           this.state.items[strTime] = [];
@@ -299,7 +299,7 @@ class BottomBar extends Component {
 class AllEventsList extends Component{
   constructor(item) {
     super(item);
-    this.data = require("../assets/data/seasonsandevents.json");
+    this.data = require("../assets/data/data.json")["Seasons and Events"];
     this.state = {
       searchData: this.data,
     };

@@ -9,10 +9,6 @@ import PopupRating from "../components/PopupRating"
 import ButtonComponent from "../components/ButtonComponent"
 import {MailLink, ExternalLink, SubHeader, Header, Paragraph} from "../components/Formattings"
 
-const music = require("../assets/data/music.json");
-const {width} = Dimensions.get('window');
-
-
 class CreditsPage extends Component {
   constructor(props) {
     super(props);
