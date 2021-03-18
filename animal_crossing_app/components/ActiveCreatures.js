@@ -14,7 +14,7 @@ class ActiveCreatures extends Component {
     return(
       <View style={{height: Dimensions.get('window').height}}>
       <ListPage 
-          title=""
+          title="Active Creatures"
           leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
           activeCreatures={true}
           scrollViewRef={this.props.scrollViewRef}

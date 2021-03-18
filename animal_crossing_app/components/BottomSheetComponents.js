@@ -258,7 +258,7 @@ export class Variations extends Component {
         <View style={{marginHorizontal: 4, flexDirection: 'row', justifyContent:'center'}}>
           {variations.map( (item, index)=>
             <View key={item[this.props.imageProperty[dataSet]]} style={[{marginHorizontal:4, marginVertical: 3, width: 60,height: 60,borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
-              <TouchableOpacity onPress={()=>{this.popup.setPopupVisible(true, item[this.props.imageProperty[dataSet]]); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : ""}}>
+              <TouchableOpacity onPress={()=>{this.popup.setPopupVisible(true, item[this.props.imageProperty[dataSet]], item); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : ""}}>
                 <FastImage
                   style={{height: 47, width: 47, resizeMode:'contain',}}
                   source={{
@@ -285,12 +285,12 @@ class PopupImage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      item:""
+      item:"",
     }; 
   }
 
-  setPopupVisible = (visible, image) => {
-    this.setState({image:image});
+  setPopupVisible = (visible, image, item) => {
+    this.setState({image:image, item:item});
     this.popup.setPopupVisible(true);
   }
 
@@ -304,6 +304,21 @@ class PopupImage extends Component {
               uri: this.state.image,
             }}
             cacheKey={this.state.image}
+          />
+          <InfoLine
+            image={require("../assets/icons/colorPalette.png")} 
+            item={this.state.item}
+            textProperty={["Color 1"]}
+            textProperty2={["Color 2"]}
+          />
+          <InfoLineBeside
+            image1={require("../assets/icons/pattern.png")} 
+            item1={this.state.item}
+            textProperty1={["Variation"]}
+            image2={require("../assets/icons/diyKit.png")} 
+            item2={this.state.item}
+            textProperty2={["Kit Cost"]}
+            ending2={"x"}
           />
         </View>
       </PopupInfoCustom>

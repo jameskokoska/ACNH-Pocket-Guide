@@ -8,139 +8,154 @@ import {
   TextInput,
   Image,
   TouchableOpacity,
-  Dimensions
+  Dimensions,
+  TouchableNativeFeedback,
+  ScrollView
 } from "react-native";
 import TextFont from "./TextFont";
 import ButtonComponent from "./ButtonComponent";
 import colors from "../Colors";
 import DropDownPicker from 'react-native-dropdown-picker'
-import {getPhoto} from "./GetPhoto"
+import {getPhoto, getMaterialImage} from "./GetPhoto"
 import {PopupInfoCustom} from "./Popup"
 import ToggleSwitch from 'toggle-switch-react-native'
 import {getSettingsString} from "../LoadJsonData"
+import FastImage from "./FastImage"
 
 class PopupAddTask extends Component {
   constructor(props) {
     super(props);
     this.state = {
       popupVisible: false,
-      smallToggle:false
+      smallToggle:false,
+      selectedImage: "leaf.png"
     };
     this.task = {title: "", picture:"", finished: false, small:this.state.smallToggle};
+    this.images = ["leaf.png","fish.png","bugs.png","music.png","turnip.png","cat.png","digIcon.png","able.png","nook.png","crafting.png","rock.png","miles.png","bellBag.png","coin.png","mario",
+    "flower.png",
+    "diyKit.png",
+    "saharah.png",
+    getMaterialImage("apple",true),
+    getMaterialImage("apple tree",true),
+    getMaterialImage("money tree",true),
+    getMaterialImage("tree branch",true),
+    getMaterialImage("sapling",true),
+    getMaterialImage("wood",true),
+    getMaterialImage("clay",true),
+    getMaterialImage("acorn",true),
+    getMaterialImage("stone", true),
+    getMaterialImage("aquarius fragment", true),
+    getMaterialImage("bamboo piece",true),
+    getMaterialImage("wasp nest",true),
+    getMaterialImage("hardwood tree",true),
+    getMaterialImage("nook miles ticket",true),
+    getMaterialImage("birthday cupcake",true),
+    getMaterialImage("candy",true),
+    getMaterialImage("customization kit",true),
+    getMaterialImage("fossil",true),
+    getMaterialImage("gold nugget",true),
+    getMaterialImage("message bottle",true),
+    getMaterialImage("rusted part",true),
+    getMaterialImage("pitfall seed",true),
+    getMaterialImage("present",true),
+    getMaterialImage("rainbow feather",true),
+    "balloon.png","sparkle.png","heart.png", "snow.png", "fireworks.png","fullmoon.png","pumpkin.png","corn.png","present.png","popper.png","bunny.png","blossom.png","bell.png","bamboo","shamrock","shells","acorns","toy","big game","maple leaves","nature","wedding","museum","beaver.png","bulb.png","octopus.png","hourglass.png","weather.png"];
   }
 
   setPopupVisible = (visible) => {
     this.popup.setPopupVisible(true);
-    this.task = {title: "", picture:"", finished: false, small:this.state.smallToggle};
+    this.task = {title: "", picture:this.state.selectedImage, finished: false, small:this.state.smallToggle};
   }
 
   render(){
-    const icons = [
-      {label: "Leaf", value: "leaf.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("leaf.png")}/>,},
-      {label: "Fish", value: "fish.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("fish.png")}/>,},
-      {label: "Bugs", value: "bugs.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("bugs.png")}/>,},
-      {label: "Music", value: "music.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("music.png")}/>,},
-      {label: "Turnip", value: "turnip.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("turnip.png")}/>,},
-      {label: "Cat", value: "cat.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("cat.png")}/>,},
-      {label: "Dig Icon", value: "digIcon.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("digIcon.png")}/>,},
-      {label: "Nook Miles", value: "miles.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("miles.png")}/>,},
-      {label: "Able Sisters", value: "able.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("able.png")}/>,},
-      {label: "Nook", value: "nook.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("nook.png")}/>,},
-      {label: "Crafting", value: "crafting.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("crafting.png")}/>,},
-      {label: "Balloon", value: "balloon.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("balloon.png")}/>,},
-      {label: "Bell Bag", value: "bellBag.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("bellBag.png")}/>,},
-      {label: "Ocean Icon", value: "oceanIcon.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("oceanIcon.png")}/>,},
-      {label: "Bell", value: "bell.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("bell.png")}/>,},
-      {label: "Saharah", value: "saharah.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("saharah.png")}/>,},
-      {label: "Sparkle", value: "sparkle.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("sparkle.png")}/>,},
-      {label: "Ship", value: "ship.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("ship.png")}/>,},
-      {label: "Beaver", value: "beaver.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("beaver.png")}/>,},
-      {label: "Flower", value: "flowerIcon.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("flowerIcon.png")}/>,},
-      {label: "Rock", value: "rock.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("rock.png")}/>,},
-      {label: "Popper", value: "popper.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("popper.png")}/>,},
-      {label: "Heart", value: "heart.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("heart.png")}/>,},
-      {label: "Snow", value: "snow.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("snow.png")}/>,},
-      {label: "Fireworks", value: "fireworks.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("fireworks.png")}/>,},
-      {label: "Full Moon", value: "fullmoon.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("fullmoon.png")}/>,},
-      {label: "Pumpkin", value: "pumpkin.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("pumpkin.png")}/>,},
-      {label: "Corn", value: "corn.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("corn.png")}/>,},
-      {label: "Present", value: "present.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("present.png")}/>,},
-      {label: "Popper", value: "popper.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("popper.png")}/>,},
-      {label: "Bunny", value: "bunny.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("bunny.png")}/>,},
-      {label: "Blossom", value: "blossom.png", icon: () => <Image style={{width:20, height:20, resizeMode:"contain"}} source={getPhoto("blossom.png")}/>,},
-    ]
-    
+    var buttons = <>
+      <View style={{flexDirection:"row", justifyContent:"center"}}>
+        <ButtonComponent
+          text={"Cancel"}
+          color={colors.cancelButton[global.darkMode]}
+          vibrate={8}
+          onPress={() => {
+            this.popup.setPopupVisible(false);
+          }}
+        /> 
+        <ButtonComponent
+          text={"Done"}
+          color={colors.okButton[global.darkMode]}
+          vibrate={15}
+          onPress={() => {
+            this.props.addItem(this.task);
+            this.popup.setPopupVisible(false);
+          }}
+        /> 
+      </View>
+    </>
+    var header = <>
+      <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Add Task</TextFont>
+      <View style={{height:10}}/>
+      <View style={{flexDirection: 'row'}}>
+        <View style={{flex:1, justifyContent:"center", marginHorizontal:5,}}>
+          <TextInput
+            allowFontScaling={false}
+            style={{fontSize: 20, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 10, borderRadius: 5}}
+            onChangeText={(text) => {this.task.title=text}}
+            placeholder={"Task Name"}
+            placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+          />
+        </View>
+        <View style={{justifyContent:"center", alignItems:"center", marginHorizontal:5}}>
+          <TextFont bold={false} style={{fontSize: 15, textAlign:"center", color: colors.fishText[global.darkMode]}}>Small Task</TextFont>
+          <View style={{transform: [{ scale: 0.7 }]}}>
+            <ToggleSwitch
+              isOn={this.state.smallToggle}
+              onColor="#57b849"
+              offColor="#DFDFDF"
+              size="large"
+              onToggle={() => {
+                console.log(!this.state.smallToggle)
+                this.task.small=!this.state.smallToggle;
+                this.setState({smallToggle:!this.state.smallToggle});
+                getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+              }}
+            />
+          </View>
+        </View>
+      </View>
+      <View style={{height:10}}/>
+    </>
     return (
       <>
-        <PopupInfoCustom ref={(popup) => this.popup = popup} buttonDisabled={true}>
-          <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Add Task</TextFont>
-          <View style={{height:10}}/>
-          <View style={{flexDirection: 'row'}}>
-            <View style={{flex:1, justifyContent:"center", marginHorizontal:5,}}>
-              <TextInput
-                allowFontScaling={false}
-                style={{fontSize: 20, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 10, borderRadius: 5}}
-                onChangeText={(text) => {this.task.title=text}}
-                placeholder={"Task Name"}
-                placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+        <PopupInfoCustom ref={(popup) => this.popup = popup} buttonDisabled={true} buttons={buttons} header={header}>
+          <View style={{flex: 1, flexWrap: 'wrap', flexDirection:"row",justifyContent:"center"}}>
+          {this.images.map( (image, index)=>{
+            var imageComp = <View/>
+            if(image.startsWith("http")){
+              imageComp = <FastImage
+                style={{height: 45,width: 45,resizeMode:'contain',}}
+                source={{uri:image}}
+                cacheKey={image}
               />
-            </View>
-            <View style={{justifyContent:"center", alignItems:"center", marginHorizontal:5}}>
-              <TextFont bold={false} style={{fontSize: 15, textAlign:"center", color: colors.fishText[global.darkMode]}}>Small Task</TextFont>
-              <View style={{transform: [{ scale: 0.7 }]}}>
-                <ToggleSwitch
-                  isOn={this.state.smallToggle}
-                  onColor="#57b849"
-                  offColor="#DFDFDF"
-                  size="large"
-                  onToggle={() => {
-                    console.log(!this.state.smallToggle)
-                    this.task.small=!this.state.smallToggle;
-                    this.setState({smallToggle:!this.state.smallToggle});
-                    getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+            } else {
+              imageComp = <Image
+                style={{height: 35,width: 35,resizeMode:'contain',}}
+                source={getPhoto(image)}
+              />
+            }
+            return(
+              <View style={{width: 60,height: 60, margin:5}}>
+                <TouchableOpacity 
+                  background={TouchableNativeFeedback.Ripple(colors.todoColorAccent[global.darkMode]+"2A", false)}
+                  onPress={()=>{
+                    this.setState({selectedImage:image});
+                    this.task.picture=image;
+                    getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10]) : "";
                   }}
-                />
+                >
+                  <View style={{width: 60,height: 60,borderRadius: 100,justifyContent: "center",alignItems: "center",borderWidth: 2, borderColor: image===this.state.selectedImage ? colors.checkGreen[global.darkMode] : colors.eventBackground[global.darkMode], backgroundColor:colors.eventBackground[global.darkMode]}}>
+                    {imageComp}
+                  </View>
+                </TouchableOpacity>
               </View>
-            </View>
-          </View>
-          <View style={{height:10}}/>
-          <DropDownPicker
-            items={icons}
-            placeholder={"Select photo..."}
-            dropDownMaxHeight={200}
-            containerStyle={{height: 45}}
-            style={[{width: "100%", borderWidth: 0, backgroundColor: colors.lightDarkAccent[global.darkMode], borderTopLeftRadius: 8, borderTopRightRadius: 8,borderBottomLeftRadius: 8, borderBottomRightRadius: 8}]}
-            itemStyle={{
-                justifyContent: 'flex-start'
-            }}
-            isVisible
-            searchablePlaceholderTextColor={colors.filterSearch[global.darkMode]}
-            labelStyle={{fontFamily: "ArialRoundedBold", fontSize: 15, marginLeft:10, color:colors.textBlack[global.darkMode]}}
-            customTickIcon={()=><View/>}
-            activeItemStyle={{borderRadius: 10, backgroundColor: colors.lightDarkAccent[global.darkMode]}}
-            dropDownStyle={{borderBottomLeftRadius: 10, borderBottomRightRadius: 10, borderWidth: 0, backgroundColor: colors.lightDarkAccent[global.darkMode], opacity: 0.98, }}
-            onChangeItem={item => {this.task.picture=item.value}}
-          />
-          <View style={{height:10}}/>
-          <View style={{height:200}}/>
-          <View style={{flexDirection:"row", justifyContent:"center"}}>
-            <ButtonComponent
-              text={"Cancel"}
-              color={colors.cancelButton[global.darkMode]}
-              vibrate={8}
-              onPress={() => {
-                this.popup.setPopupVisible(false);
-              }}
-            /> 
-            <ButtonComponent
-              text={"Done"}
-              color={colors.okButton[global.darkMode]}
-              vibrate={15}
-              onPress={() => {
-                this.props.addItem(this.task);
-                this.popup.setPopupVisible(false);
-              }}
-            /> 
+          )})}
           </View>
         </PopupInfoCustom>
       </>

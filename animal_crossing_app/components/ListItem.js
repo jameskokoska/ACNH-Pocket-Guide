@@ -52,7 +52,7 @@ class ListItem extends PureComponent{
       if(this.props.item.["Color 1"]!==undefined){
         var opacity = "0A"
         if(global.darkMode){
-          opacity = "0C"
+          opacity = "10"
         }
         if(this.props.item.["Color 2"]!==undefined && global.darkMode===0 && ( this.props.item.["Color 1"]==='Yellow' || this.props.item.["Color 1"]==='White')){
           boxColor = colors["itemBox"+this.props.item.["Color 2"]][global.darkMode]+opacity
@@ -112,7 +112,7 @@ class ListItem extends PureComponent{
             checkOff(this.props.item, this.state.collected, this.props.dataGlobalName); 
             this.setCollected(this.state.collected==="true" ? "false":"true");
           }}
-            background={TouchableNativeFeedback.Ripple(this.props.accentColor, false)}
+            background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
             onPress={()=>{
               if(disablePopup){
                 checkOff(this.props.item, this.state.collected, this.props.dataGlobalName); 
@@ -146,7 +146,7 @@ class ListItem extends PureComponent{
             checkOff(this.props.item, this.state.collected, this.props.dataGlobalName); 
             this.setCollected(this.state.collected==="true" ? "false":"true");
           }}
-          background={TouchableNativeFeedback.Ripple(this.props.accentColor, false)}
+          background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
           onPress={()=>{
               if(disablePopup){
                 checkOff(this.props.item, this.state.collected, this.props.dataGlobalName); 
@@ -191,7 +191,7 @@ class ListItem extends PureComponent{
             checkOff(this.props.item, this.state.collected, this.props.dataGlobalName); 
             this.setCollected(this.state.collected==="true" ? "false":"true");
           }}
-          background={TouchableNativeFeedback.Ripple(this.props.accentColor, false)}
+          background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
           onPress={()=>{
               if(disablePopup){
                 checkOff(this.props.item, this.state.collected, this.props.dataGlobalName); 
@@ -229,7 +229,7 @@ class ListItem extends PureComponent{
             checkOff(this.props.item, this.state.collected, this.props.dataGlobalName); 
             this.setCollected(this.state.collected==="true" ? "false":"true");
           }}
-          background={TouchableNativeFeedback.Ripple(this.props.accentColor, false)}
+          background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
           onPress={()=>{
               if(disablePopup){
                 checkOff(this.props.item, this.state.collected, this.props.dataGlobalName); 

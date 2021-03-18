@@ -4,7 +4,7 @@ import ListPage from '../components/ListPage';
 import LottieView from 'lottie-react-native';
 import colors from '../Colors.js';
 import TextFont from '../components/TextFont'
-import {MailLink, ExternalLink, SubHeader, Header, Paragraph} from "../components/Formattings"
+import {HeaderNote, MailLink, ExternalLink, SubHeader, Header, Paragraph} from "../components/Formattings"
 import {AccordionContainerCustom} from "../components/AccordionContainer"
 import {InfoLineBeside, InfoLine} from "../components/BottomSheetComponents"
 import {PopupBottomCustom} from "../components/Popup"
@@ -54,7 +54,7 @@ class MysteryIslandsPage extends Component {
         <ScrollView style={{backgroundColor:colors.background[global.darkMode]}}>
           <View style={{height: 100}}/>
           <Header>Mystery Islands</Header>
-          <TextFont style={{fontSize: 13, marginHorizontal: 30, color:colors.textBlack[global.darkMode]}}>{"Note: long press to check off the island as visited\nTap each for more details"}</TextFont>
+          <HeaderNote>{"Note: long press to check off the island as visited\nTap each for more details"}</HeaderNote>
           <View style={{height: 10}}/>
           <View style={{marginHorizontal: 20, flex: 1, flexDirection: 'row', justifyContent:'space-evenly',flexWrap:"wrap"}}>
           {

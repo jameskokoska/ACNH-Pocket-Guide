@@ -23,7 +23,7 @@ class CurrentVillagers extends Component {
           appBarColor={colors.emojipediaAppBar[global.darkMode]}
           titleColor={colors.textBlack[global.darkMode]}
           searchBarColor={colors.searchbarBG[global.darkMode]}
-          backgroundColor={colors.lightDarkAccent[global.darkMode]}
+          backgroundColor={colors.sectionBackground2[global.darkMode]}
           boxColor={false}
           labelColor={colors.textBlack[global.darkMode]}
           accentColor={colors.villagerAccent[global.darkMode]}

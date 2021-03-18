@@ -252,7 +252,7 @@ export default class CalendarPage extends Component {
       dateStart.setYear(rangeYear);
       var dateEnd= new Date('January 10, 2000 12:00:00');
       dateEnd.setMonth(getMonthFromString(rangeSplit[2]));
-      dateEnd.setDate(parseInt(rangeSplit[3])+1);
+      dateEnd.setDate(parseInt(rangeSplit[3])+1); //ensures the end date is larger so current date is within range
       dateEnd.setYear(rangeYear);
       if(parseInt(getMonthFromString(rangeSplit[2]))<parseInt(getMonthFromString(rangeSplit[0]))){
         dateEnd.setYear(parseInt(rangeYear)+1);
@@ -277,17 +277,17 @@ export default class CalendarPage extends Component {
 class BottomBar extends Component {  
   render(){
     return <View style={{position:"absolute", zIndex:5, bottom:0, borderTopRightRadius: 20, borderTopLeftRadius: 20, flexDirection: "row", justifyContent:"space-evenly",elevation:5, backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode], width:Dimensions.get('window').width, height:45}}>
-      <TouchableNativeFeedback onPress={()=>{this.props.viewToday(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} background={TouchableNativeFeedback.Ripple(colors.lightDarkAccentHeavy[global.darkMode], false)}>
+      <TouchableNativeFeedback onPress={()=>{this.props.viewToday(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode], false)}>
         <View style={{borderRadius: 10, borderWidth:3,borderColor:colors.lightDarkAccentHeavy2[global.darkMode],width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
           <TextFont bold={true} style={{fontSize: 12,color: colors.textBlack[global.darkMode]}}>View Today</TextFont>
         </View>
       </TouchableNativeFeedback>
-      <TouchableNativeFeedback onPress={()=>{this.props.openAgenda(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} background={TouchableNativeFeedback.Ripple(colors.lightDarkAccentHeavy[global.darkMode], false)}>
+      <TouchableNativeFeedback onPress={()=>{this.props.openAgenda(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode], false)}>
         <View style={{borderRadius: 10, borderWidth:3,borderColor:colors.lightDarkAccentHeavy2[global.darkMode],width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
           <TextFont bold={true} style={{fontSize: 12,color: colors.textBlack[global.darkMode]}}>Open Calendar</TextFont>
         </View>
       </TouchableNativeFeedback>
-      <TouchableNativeFeedback onPress={()=>{this.props.viewList(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} background={TouchableNativeFeedback.Ripple(colors.lightDarkAccentHeavy[global.darkMode], false)}>
+      <TouchableNativeFeedback onPress={()=>{this.props.viewList(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode], false)}>
         <View style={{borderRadius: 10, borderWidth:3,borderColor:colors.lightDarkAccentHeavy2[global.darkMode],width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
           <TextFont bold={true} style={{fontSize: 12,color: colors.textBlack[global.darkMode]}}>View All</TextFont>
         </View>

@@ -71,6 +71,20 @@ export function getPhoto(name, fallback=""){
       return require("../assets/icons/bellBag.png");
     case "bell.png":
       return require("../assets/icons/bell.png");
+    case "coin.png":
+      return require("../assets/icons/coin.png");
+    case "flower.png":
+      return require("../assets/icons/flower.png");
+    case "diyKit.png":
+      return require("../assets/icons/diyKit.png");
+    case "bulb.png":
+      return require("../assets/icons/bulb.png");
+    case "octopus.png":
+      return require("../assets/icons/octopus.png");
+    case "hourglass.png":
+      return require("../assets/icons/hourglass.png");
+    case "weather.png":
+      return require("../assets/icons/weather.png");
   }
   if(name.includes("bamboo")){
     return require("../assets/icons/bamboo.png");
@@ -272,12 +286,12 @@ export function getMaterialImage(material, reduceComplexity=false, flowerSingle=
   }
   var data = require("../assets/data/other.json");
   if(reduceComplexity){
-    materialStripped = materialStripped.replace("-","");
+    materialStripped = materialStripped.replace("-","").toLowerCase();
     materialStripped = materialStripped.replace(" ","");
     for(var index = 0; index < data.length; index++){
       var dataStripped = data[index]["Name"];
       dataStripped = dataStripped.replace("-","");
-      dataStripped = dataStripped.replace(" ","");
+      dataStripped = dataStripped.replace(" ","").toLowerCase();
       if(dataStripped===materialStripped){
         return data[index]["Inventory Image"]
       }

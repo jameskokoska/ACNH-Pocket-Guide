@@ -11,7 +11,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {ExportFile, LoadFile} from '../components/LoadFile';
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 import {resetFilters} from '../LoadJsonData';
-import {MailLink} from "../components/Formattings"
+import {HeaderNote, MailLink, Header} from "../components/Formattings"
 
 const music = require("../assets/data/music.json");
 const {width} = Dimensions.get('window');
@@ -39,7 +39,8 @@ class SettingsPage extends Component {
       <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
         <ScrollView>
           <View style={{marginTop: 100}}/>
-          <TextFont bold={true} style={{fontSize: 40, marginLeft: 30, color:colors.textBlack[global.darkMode]}}>Settings</TextFont>
+          <Header>Settings</Header>
+          <HeaderNote>Tap each setting to learn more</HeaderNote>
           <View style={{marginTop: 20}}/>
           {global.settingsCurrent.map( (setting, index)=>
             {

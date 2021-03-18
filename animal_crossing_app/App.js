@@ -42,17 +42,20 @@ import GuidePage from './pages/GuidePage';
 global.version = require("./app.json")["expo"]["version"];
 global.versionCode = require("./app.json")["expo"]["android"]["versionCode"];
 global.changelog = `
+-Added more icons for the todo list
+-Improved todo list
+-Item variation information now shows up in popup
+-Color fixes
+-
 -Added calendar and events page
 -Can search for events
--Other improvements to the calendar events page
--Fixed (favorite villagers) birthdays not showing up on home screen
 -Improved ACNH Guide page
--Small formatting fixes
+-Fixed (favorite villagers) birthdays not showing up on home screen
+-Fixed event ranges off by one day
 -
 -Planned Features:
 - Visitors tracking
 - Edit home screen sections
-- More todo list icons
 -
 -Any feedback feel free to send me an email! dapperappdeveloper@gmail.com
 -You can reread this changelog in the [About] page

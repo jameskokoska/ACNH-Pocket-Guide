@@ -110,7 +110,9 @@ export class PopupInfoCustom extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      popupVisible: false
+      popupVisible: false,
+      headerHeight: 0,
+      buttonHeight:0,
     };   
     
   }
@@ -120,6 +122,8 @@ export class PopupInfoCustom extends Component {
   }
 
   render(){
+    var header = <View onLayout={(event) => {var {x, y, width, height} = event.nativeEvent.layout;this.setState({headerHeight:height});}}>{this.props.header}</View>
+    var buttons = <View onLayout={(event) => {var {x, y, width, height} = event.nativeEvent.layout;this.setState({buttonHeight:height});}}>{this.props.buttons}</View>
     return (
         <Modal
           animationType="fade"
@@ -131,7 +135,8 @@ export class PopupInfoCustom extends Component {
         <View style={styles.centeredView}>
           <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} style={{position:"absolute", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: "black", opacity: 0.1}}/>
           <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
-            <ScrollView style={{maxHeight:Dimensions.get('window').height*0.75}}>
+            {this.props.header===undefined ? <View/> : header}
+            <ScrollView style={{maxHeight:Dimensions.get('window').height*0.75-this.state.headerHeight-this.state.buttonHeight}}>
               {this.props.children}
             </ScrollView>
             <View style={{flexDirection:"row", justifyContent:"center"}}>
@@ -142,7 +147,7 @@ export class PopupInfoCustom extends Component {
                 onPress={() => {
                   this.setPopupVisible(!this.state.popupVisible);
                 }}
-              /> : <View/>}
+              /> : this.props.buttons===undefined ? <View/> : buttons}
             </View>
           </View>
         </View>

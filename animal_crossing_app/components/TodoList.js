@@ -10,6 +10,7 @@ import PopupAddTask from "./PopupAddTask"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {getSettingsString} from "../LoadJsonData"
 import DropDownPicker from 'react-native-dropdown-picker'
+import FastImage from "./FastImage"
 
 class TodoList extends Component {
   constructor(props){
@@ -39,7 +40,7 @@ class TodoList extends Component {
       {title: 'Rock 5', finished: false, picture:"rock.png",small:true},
       {title: 'Rock 6', finished: false, picture:"rock.png",small:true},
       {title: 'Check turnip prices', finished: false, picture:"turnip.png"},
-      {title: 'Water flowers', finished: false, picture:"flowerIcon.png"},
+      {title: 'Water flowers', finished: false, picture:"flower.png"},
       {title: 'Talk to villagers', finished: false, picture:"cat.png"},
       {title: 'Dig fossils', finished: false, picture:"digIcon.png"},
     ]
@@ -378,6 +379,19 @@ class TodoItem extends Component {
       )
   }
   render(){
+    var imageComp = <View/>
+    if(this.props.item.picture.startsWith("http")){
+      imageComp = <FastImage
+        style={{height: 45,width: 45,resizeMode:'contain',}}
+        source={{uri:this.props.item.picture}}
+        cacheKey={this.props.item.picture}
+      />
+    } else {
+      imageComp = <Image
+        style={{height: 35,width: 35,resizeMode:'contain',}}
+        source={getPhoto(this.props.item.picture)}
+      />
+    }
     return (
       <View style={{width: "90%"}}>
       
@@ -392,10 +406,7 @@ class TodoItem extends Component {
           >
             <View style={[styles.row,{backgroundColor:colors.eventBackground[global.darkMode]}]}>
               <View style={[styles.rowImageBackground,{backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
-                <Image
-                  style={styles.rowImage}
-                  source={getPhoto(this.props.item.picture)}
-                />
+                {imageComp}
               </View>
               <View style={styles.rowTextTop}>
                 <TextFont bold={true} numberOfLines={2} style={{fontSize:20, color:colors.textBlack[global.darkMode]}}>{capitalize(this.props.item.title)}</TextFont>

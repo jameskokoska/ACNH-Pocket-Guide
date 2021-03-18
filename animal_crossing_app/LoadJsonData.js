@@ -147,7 +147,7 @@ export function updateDataGlobal(datakeyName, index, collected, dataSet){
 }
 
 export function resetFilters(){
-  var filterKeys = ["FishFilters","BugsFilters","Sea CreaturesFilters","FossilsFilters","ArtFilters","FurnitureFilters","ClothingFilters","Floor & WallsFilters","MusicFilters","EmoticonsFilters","RecipesFilters","ToolsFilters","VillagersFilters","ConstructionFilters","EverythingFilters"]
+  var filterKeys = ["Active CreaturesFilters","FishFilters","BugsFilters","Sea CreaturesFilters","FossilsFilters","ArtFilters","FurnitureFilters","ClothingFilters","Floor & WallsFilters","MusicFilters","EmoticonsFilters","RecipesFilters","ToolsFilters","VillagersFilters","ConstructionFilters","EverythingFilters"]
   for(var i =0; i < filterKeys.length; i++){
     AsyncStorage.setItem(filterKeys[i], "");
   }
