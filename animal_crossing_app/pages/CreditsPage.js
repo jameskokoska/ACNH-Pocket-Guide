@@ -55,9 +55,11 @@ class CreditsPage extends Component {
           <ExternalLink link="https://www.flaticon.com/"/>
           <Paragraph>All game data sourced from the community created spreadsheet. Thank you everyone for all the hard work and for making the spreadsheet!</Paragraph>
           <ExternalLink link="https://tinyurl.com/acnh-sheet"/>
+          <Paragraph>Translations sourced from the community spreadsheet. Thank you everyone for translating!</Paragraph>
+          <ExternalLink link="https://github.com/alexislours/translation-sheet-data"/>
           <Paragraph>And thank YOU for downloading this application and showing your support.</Paragraph>
           
-          
+
           <View style={{height:35}}/>
           <SubHeader>Integrations</SubHeader>
           <Paragraph>Turnip Prophet - Turnip Tracker:</Paragraph>

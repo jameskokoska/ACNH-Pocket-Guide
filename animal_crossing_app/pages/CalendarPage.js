@@ -115,7 +115,7 @@ export default class CalendarPage extends Component {
             if((date.getMonth()+1).toString()===(villager["Birthday"].split("/"))[0]&& date.getDate().toString()===(villager["Birthday"].split("/"))[1]){
               if(global.collectionList.includes("villagerCheckList"+villager["Name"])){
                 this.state.items[strTime].push({
-                  name: capitalize(villager["Name"]+ "'s Birthday"),
+                  name: capitalize(villager[global.language]+ "'s Birthday"),
                   time: "All day",
                   image: villager["Icon Image"],
                   color: ["#2195F33F","#006EB34D"],
@@ -123,7 +123,7 @@ export default class CalendarPage extends Component {
                 this.state.itemsColor[strTime] = styleBirthdayEvent;
               } else {
                 this.state.items[strTime].push({
-                  name: capitalize(villager["Name"]+ "'s Birthday"),
+                  name: capitalize(villager[global.language]+ "'s Birthday"),
                   time: "All day",
                   image: villager["Icon Image"],
                   color: colors.white,
@@ -134,10 +134,14 @@ export default class CalendarPage extends Component {
           })
 
           seasonData.map( (event, index)=>{
+            var eventName = event[global.language]
+            if(event[global.language]===null || event[global.language]===undefined){
+              eventName = event["Name"]
+            }
             if(event["Northern Hemisphere Dates"]!=="NA" && getSettingsString("settingsNorthernHemisphere")==="true"){
               if(this.isDateInRange(event["Northern Hemisphere Dates"], date.getFullYear(), date)){
                 this.state.items[strTime].push({
-                  name: capitalize(event["Name"]),
+                  name: capitalize(eventName),
                   time: event["Type"],
                   image: event["Name"],
                   color: colors.white,
@@ -146,7 +150,7 @@ export default class CalendarPage extends Component {
             } else if (event["Southern Hemisphere Dates"]!=="NA" && getSettingsString("settingsNorthernHemisphere")!=="true"){
               if(this.isDateInRange(event["Southern Hemisphere Dates"], date.getFullYear(), date)){
                 this.state.items[strTime].push({
-                  name: capitalize(event["Name"]),
+                  name: capitalize(eventName),
                   time: event["Type"],
                   image: event["Name"],
                   color: colors.white,
@@ -315,7 +319,11 @@ class AllEventsList extends Component{
     } else {
       var outputData = [];
       this.data.map( (event, index)=>{
-        if(event["Name"].toLowerCase().includes(text.toLowerCase())){
+        var eventName = event[global.language]
+        if(event[global.language]===null || event[global.language]===undefined){
+          eventName = event["Name"]
+        }
+        if(eventName.toLowerCase().includes(text.toLowerCase())){
           outputData.push(event);
         } else if (event["Type"].toLowerCase().includes(text.toLowerCase())){
           outputData.push(event);
@@ -397,11 +405,16 @@ const renderItemFlatList = ({item}) => {
     dateComp = <TextFont style={{marginTop: 3,fontSize: 18,color: colors.textBlack[global.darkMode]}}>{capitalize(date)}</TextFont>
   else 
     dateComp = <View/>
+  
+  var eventName = item[global.language]
+  if(item[global.language]===null || item[global.language]===undefined){
+    eventName = item["Name"]
+  }
   return(
     <View style={{width:Dimensions.get('window').width-20, flex: 1, backgroundColor: colors.white[global.darkMode], padding: 20, marginHorizontal: 10, marginVertical: 5,  flexDirection:"row", alignItems: 'center', borderRadius: 10}}>
       {image}
       <View style={{flex: 1, marginLeft:15}}>
-        <TextFont bold={true} style={{fontSize: 20,color: colors.textBlack[global.darkMode]}}>{capitalize(item.["Name"])}</TextFont>
+        <TextFont bold={true} style={{fontSize: 20,color: colors.textBlack[global.darkMode]}}>{capitalize(eventName)}</TextFont>
         <TextFont style={{marginTop: 3,fontSize: 18,color: colors.textBlack[global.darkMode]}}>{capitalize(item.["Type"])}</TextFont>
         {dateComp}
       </View>

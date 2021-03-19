@@ -15,7 +15,6 @@ import {
 import TextFont from "./TextFont";
 import ButtonComponent from "./ButtonComponent";
 import colors from "../Colors";
-import DropDownPicker from 'react-native-dropdown-picker'
 import {getPhoto, getMaterialImage} from "./GetPhoto"
 import {PopupInfoCustom} from "./Popup"
 import ToggleSwitch from 'toggle-switch-react-native'

@@ -545,3 +545,37 @@ export const settings = [
     "description" : "Use the custom date selected when loading time-specific data.",
   },
 ]
+
+export function attemptToTranslateVariants(text){
+  if(global.language==="English"){
+    return text;
+  }
+  var variantsTranslated = require("./assets/data/variantsTranslated");
+  for(var i=0; i<variantsTranslated.length; i++){
+    if(variantsTranslated[i]["English"]===text){
+      var translatedText = variantsTranslated[i][global.language];
+      if(translatedText===undefined||translatedText===null){
+        return text;
+      } else {
+        return translatedText;
+      }
+    }
+  }
+  return text;
+}
+
+export function attemptToTranslate(text){
+  if(global.language==="English"){
+    return text;
+  }
+  const translations = require("./assets/data/translations");
+  for(var i=0; i<translations.length; i++){
+    var translatedText = translations[i][global.language];
+    if(translatedText===undefined||translatedText===null){
+      return text;
+    } else {
+      return translatedText;
+    }
+  }
+  return text;
+}

@@ -98,6 +98,11 @@ class ListItem extends PureComponent{
       }
     }
 
+    var label = this.props.item.[this.props.textProperty[this.props.item.dataSet]];
+    if(label==null || label==undefined){
+      label = this.props.item["Name"]
+    }
+
     if(this.props.gridType==="smallGrid"){
       var textProperty2Component = <View/>;
       if(this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]!==""){
@@ -132,7 +137,7 @@ class ListItem extends PureComponent{
                 cacheKey={this.props.item.[this.props.imageProperty[this.props.item.dataSet]]}
               />
               <View style={styles.gridBoxText}>
-                <TextFont numberOfLines={2} bold={true} style={{textAlign:'center', color:this.props.labelColor, fontSize:13}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
+                <TextFont numberOfLines={2} bold={true} style={{textAlign:'center', color:this.props.labelColor, fontSize:13}}>{capitalize(label)}</TextFont>
                 {textProperty2Component}
               </View>
             </View>
@@ -166,7 +171,7 @@ class ListItem extends PureComponent{
                 cacheKey={this.props.item.[this.props.imageProperty[this.props.item.dataSet]]}
               />
               <View style={styles.gridBoxTextLarge}>
-                <TextFont bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
+                <TextFont bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{capitalize(label)}</TextFont>
               </View>
             </View>
           </TouchableNativeFeedback>
@@ -211,7 +216,7 @@ class ListItem extends PureComponent{
                 cacheKey={this.props.item.[this.props.imageProperty[this.props.item.dataSet]]}
               />
               <View style={styles.gridBoxTextLargeSmaller}>
-                <TextFont bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
+                <TextFont bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{capitalize(label)}</TextFont>
                 {priceComponent}
               </View>
             </View>
@@ -251,7 +256,7 @@ class ListItem extends PureComponent{
               </View>
               <View style={styles.rowTextContainer}>
                 <View style={styles.rowTextTop}>
-                  <TextFont bold={true} numberOfLines={2} style={{fontSize:20, color:this.props.labelColor}}>{capitalize(this.props.item.[this.props.textProperty[this.props.item.dataSet]])}</TextFont>
+                  <TextFont bold={true} numberOfLines={2} style={{fontSize:20, color:this.props.labelColor}}>{capitalize(label)}</TextFont>
                 </View>
                 <View style={styles.rowTextBottom}>
                   <TextFont bold={true} numberOfLines={2} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(removeBrackets(textProperty2Text))}</TextFont>

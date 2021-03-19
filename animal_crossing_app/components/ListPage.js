@@ -283,13 +283,16 @@ export default (props) =>{
                   continue;
                 }
               }
-              if(item.[props.textProperty[j]]===previousVariation){
-                previousVariation = item.[props.textProperty[j]];
+              // if(item.[props.textProperty[j]]===previousVariation){
+              //   previousVariation = item.[props.textProperty[j]];
+              if(item["Name"]===previousVariation){
+                previousVariation = item["Name"];
               } else {
                 item.dataSet = j;
                 item.index = i;
                 dataUpdated = [...dataUpdated, item];
-                previousVariation = item.[props.textProperty[j]];
+                // previousVariation = item.[props.textProperty[j]];
+                previousVariation = item["Name"];
               }
             } else {
               item.dataSet = j;

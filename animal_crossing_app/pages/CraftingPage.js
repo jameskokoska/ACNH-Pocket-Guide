@@ -26,9 +26,9 @@ const RecipesRoute = () => (
     showVariations={[false]}
     title="Recipes"
     imageProperty={["Image"]}
-    textProperty={["Name"]}
+    textProperty={[global.language]}
     checkListKey={[["recipesCheckList","Name","Variation"]]}
-    searchKey={[["Name"]]}
+    searchKey={[[global.language]]}
     gridType="smallGrid" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedRecipes"}
     appBarColor={colors.toolsAppBar[global.darkMode]}
@@ -50,9 +50,9 @@ const ToolsRoute = () => (
     showVariations={[false]}
     title="Tools"
     imageProperty={["Image"]}
-    textProperty={["Name"]}
+    textProperty={[global.language]}
     checkListKey={[["toolsCheckList","Name","Variation"]]}
-    searchKey={[["Name"]]}
+    searchKey={[[global.language]]}
     gridType="smallGrid" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedTools"}
     appBarColor={colors.toolsAppBar[global.darkMode]}

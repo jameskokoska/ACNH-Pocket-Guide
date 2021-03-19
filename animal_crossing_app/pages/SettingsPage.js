@@ -12,6 +12,7 @@ import {ExportFile, LoadFile} from '../components/LoadFile';
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 import {resetFilters} from '../LoadJsonData';
 import {HeaderNote, MailLink, Header} from "../components/Formattings"
+import DropDownPicker from 'react-native-dropdown-picker'
 
 class SettingsPage extends Component {
   constructor(props){
@@ -37,7 +38,10 @@ class SettingsPage extends Component {
           <View style={{marginTop: 100}}/>
           <Header>Settings</Header>
           <HeaderNote>Tap each setting to learn more</HeaderNote>
-          <View style={{marginTop: 20}}/>
+          <View style={{marginTop: 15}}/>
+          <SettingsDivider text={"Game language"}/>
+          <LanguagePicker/>
+          <View style={{height:10}}/>
           {global.settingsCurrent.map( (setting, index)=>
             {
               if(setting["keyName"]!="breaker"){
@@ -106,6 +110,49 @@ class SettingsPage extends Component {
 }
 export default SettingsPage;
 
+
+export class LanguagePicker extends Component{
+  render(){
+    return(<>
+      <View style={{marginTop:10, marginBottom:8, marginHorizontal:20, justifyContent:"center"}}>
+        <DropDownPicker
+          items={[
+            {label: "English", value: "English",},
+            {label: "English (Europe)", value: "English (Europe)",},
+            {label: "German", value: "German",},
+            {label: "Spanish", value: "Spanish",},
+            {label: "Spanish (US)", value: "Spanish (US)",},
+            {label: "French", value: "French",},
+            {label: "French (US)", value: "French (US)",},
+            {label: "Italian", value: "Italian",},
+            {label: "Dutch", value: "Dutch",},
+            {label: "Chinese", value: "Chinese",},
+            {label: "Chinese (Traditional)", value: "Chinese (Traditional)",},
+            {label: "Japanese", value: "Japanese",},
+            {label: "Korean", value: "Korean",},
+            {label: "Russian", value: "Russian",},
+          ]}
+          defaultValue={global.language}
+          placeholder={"Last week's pattern"}
+          dropDownMaxHeight={300}
+          containerStyle={{height: 45}}
+          style={[{width:"100%", borderWidth: 0, backgroundColor: colors.lightDarkAccentHeavyBackground[global.darkMode], borderTopLeftRadius: 8, borderTopRightRadius: 8,borderBottomLeftRadius: 8, borderBottomRightRadius: 8}]}
+          itemStyle={{
+              justifyContent: 'flex-start'
+          }}
+          searchablePlaceholderTextColor={colors.filterSearch[global.darkMode]}
+          labelStyle={{fontFamily: "ArialRoundedBold", fontSize: 15, marginLeft:10, color:colors.textBlack[global.darkMode]}}
+          customTickIcon={()=><View/>}
+          activeItemStyle={{borderRadius: 10, backgroundColor: colors.lightDarkAccentHeavy[global.darkMode]}}
+          dropDownStyle={{borderBottomLeftRadius: 10, borderBottomRightRadius: 10, borderWidth: 0, backgroundColor: colors.lightDarkAccentHeavyBackground[global.darkMode], opacity: 0.98, }}
+          onChangeItem={async (item)=>{global.language=item.value, await AsyncStorage.setItem("Language", item.value);}}
+        />
+      </View>
+      <HeaderNote>Translations only apply to game item names only, all other app content is in English. Some items may be missing translations. If you would like to help translate this app, feel free to reach out via email. </HeaderNote>
+    </>
+    )
+  }
+}
 
 class SettingsDivider extends Component {
   render(){

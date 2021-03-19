@@ -41,11 +41,11 @@ class CurrentVillagers extends Component {
             "Icon Image",
           ]}
           textProperty={[
-            ["Name"],
+            [global.language],
           ]}
           checkListKey={[["villagerCheckList","Name"]]}
           searchKey={[
-            ["Name"],
+            [global.language],
           ]}
           showVariations={[
             false,

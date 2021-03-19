@@ -6,6 +6,7 @@ import TextFont from '../components/TextFont';
 import Onboarding from 'react-native-onboarding-swiper';
 import ButtonComponent from '../components/ButtonComponent'
 import colors from '../Colors'
+import {LanguagePicker} from "./SettingsPage"
 
 class Onboard extends Component {
   render(){
@@ -42,7 +43,13 @@ class Onboard extends Component {
             backgroundColor: colors.FAB[0],
             image: <Image style={{height: 250, width: 250, resizeMode:'contain'}} source={require('../assets/icons/emote.png')} />,
             title: <TextFont style={{fontSize: 24, width: "90%", color:colors.white[0]}} bold={true}>Track your creatures, collection, and game events</TextFont>,
-            subtitle: <TextFont style={{fontSize: 16, width: "90%", paddingTop: 20, color:colors.white[0]}} bold={true}>With a user friendly and modern interface and experience.</TextFont>,
+            subtitle: <TextFont style={{fontSize: 16, width: "90%", paddingTop: 20, color:colors.white[0]}} bold={true}>Designed with a user friendly and modern interface and experience.</TextFont>,
+          },
+          {
+            backgroundColor: colors.FAB[1],
+            image: <TextFont style={{fontSize: 24, marginHorizontal:30, color:colors.white[0]}} bold={true}>Select Language</TextFont>,
+            title: <View style={{marginHorizontal:10}}><LanguagePicker/></View>,
+            subtitle: <View/>
           },
           {
             backgroundColor: colors.background[global.darkMode],
@@ -72,6 +79,7 @@ class Onboard extends Component {
                 global.settingsCurrent[1]["currentValue"] = "false";
                 this.props.setFirstLogin(false);
               }} />
+              
               {/* <TextFont style={{fontSize: 12, paddingTop: 30, width: "70%", textAlign:'center', color:colors.textBlack[global.darkMode]}} bold={true}>You can import your exported data from the last version of the app in settings.</TextFont> */}
             </>,
           },

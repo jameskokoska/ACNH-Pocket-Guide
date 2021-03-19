@@ -57,9 +57,9 @@ class SongsPage extends Component {
           showVariations={[false]}
           title="Music"
           imageProperty={["Album Image"]}
-          textProperty={["Name"]}
+          textProperty={[global.language]}
           checkListKey={[["songCheckList","Name"]]}
-          searchKey={[["Name"]]}
+          searchKey={[[global.language]]}
           gridType="largeGrid" //smallGrid, largeGrid, row
           dataGlobalName={"dataLoadedMusic"}
           appBarColor={colors.musicAppBar[global.darkMode]}

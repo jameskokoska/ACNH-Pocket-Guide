@@ -42,21 +42,12 @@ import GuidePage from './pages/GuidePage';
 global.version = require("./app.json")["expo"]["version"];
 global.versionCode = require("./app.json")["expo"]["android"]["versionCode"];
 global.changelog = `
+-Can set language in settings
+-Note: translations only apply to items
 -Added more icons for the todo list
--Improved todo list
--Item variation information now shows up in popup
--Color fixes
--Updated game data
--Made it easier (for developer) to add new game data
 -
--Added calendar and events page
--Can search for events
--Improved ACNH Guide page
--Fixed (favorite villagers) birthdays not showing up on home screen
--Fixed event ranges off by one day
 -
 -Planned Features:
-- Translations
 - Visitors tracking
 - Edit home screen sections
 -
@@ -111,7 +102,8 @@ class App extends Component {
 
     global.name = await getStorage("name","")
     global.islandName = await getStorage("islandName","")
-    
+    languages = ["English", "English (Europe)","German","Spanish","Spanish (US)","French","French (US)","Italian","Dutch","Chinese","Chinese (Traditional)","Japanese","Korean","Russian"]
+    global.language = await getStorage("Language","English")
     //Load Global Data
     await loadGlobalData();
 
