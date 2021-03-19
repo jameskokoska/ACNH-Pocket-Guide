@@ -27,7 +27,7 @@ class CreditsPage extends Component {
             autoPlay
             loop
             style={{
-              width: width,
+              width: Dimensions.get('window').width,
             }} 
             source={require('../assets/credits.json')}
           />

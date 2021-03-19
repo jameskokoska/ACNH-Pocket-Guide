@@ -11,6 +11,10 @@ import FastImage from '../components/FastImage';
 import DelayInput from "react-native-debounce-input";
 import {MailLink, ExternalLink, SubHeader, Header, Paragraph} from "../components/Formattings"
 
+//Note: these have changes
+// Northern Hemisphere Dates -> Dates (Northern Hemisphere)
+// Southern Hemisphere Dates -> Dates (Southern Hemisphere)
+// and use the Year column
 
 export default class CalendarPage extends Component {
   constructor(item) {

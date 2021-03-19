@@ -442,6 +442,19 @@ class TodoItemSmall extends Component {
       )
   }
   render(){
+    var imageComp = <View/>
+    if(this.props.item.picture.startsWith("http")){
+      imageComp = <FastImage
+        style={{height: 45,width: 45,resizeMode:'contain',}}
+        source={{uri:this.props.item.picture}}
+        cacheKey={this.props.item.picture}
+      />
+    } else {
+      imageComp = <Image
+        style={{height: 35,width: 35,resizeMode:'contain',}}
+        source={getPhoto(this.props.item.picture)}
+      />
+    }
     return (
       <View style={{margin:5}}>
         {this.removeButton(this.props)}
@@ -455,10 +468,7 @@ class TodoItemSmall extends Component {
           }}
         >
           <View style={[styles.rowImageBackground,{borderWidth: 2, borderColor: this.props.item.finished ? colors.checkGreen[global.darkMode] : colors.eventBackground[global.darkMode], backgroundColor:colors.eventBackground[global.darkMode]}]}>
-            <Image
-              style={styles.rowImage}
-              source={getPhoto(this.props.item.picture)}
-            />
+            {imageComp}
           </View>
         </TouchableOpacity>
         {this.props.item.title==="" ? <View/> : <TextFont numberOfLines={2} bold={false} style={{width: 60, marginTop: 3, color: colors.textBlack[global.darkMode], fontSize: 12, textAlign:"center"}}>{this.props.item.title}</TextFont>}
