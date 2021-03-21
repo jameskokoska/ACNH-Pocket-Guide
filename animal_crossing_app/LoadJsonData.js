@@ -555,31 +555,35 @@ export const settings = [
   },
 ]
 
-const variantTranslations = require("./assets/data/variantsTranslated.json");
-const catchphraseTranslations = require("./assets/data/villagerCatchPhrasesTranslated.json");
-const npcTranslations = require("./assets/data/specialNPCs.json");
-const appTranslations = require("./assets/data/appTranslations.json")["Main"];
+const variantTranslations = require("./assets/data/translatedVariants.json");
+const catchphraseTranslations = require("./assets/data/translatedVillagerCatchPhrases.json");
+const npcTranslations = require("./assets/data/translatedSpecialNPCs.json");
+const appTranslations = require("./assets/data/translationsApp.json")["Main"];
+const itemTranslations = require("./assets/data/translations.json")
+
+export function attemptToTranslateItem(text){
+  if(global.language!=="English"){
+    if(itemTranslations.hasOwnProperty(text)){
+      return(itemTranslations[text][global.language])
+    }
+  }
+  return text;
+}
 
 export function attemptToTranslateSpecial(text, type){
-  if(global.language==="English"){
-    return text;
-  }
-  var translated = "";
-  if(type==="variants"){
-    translated = variantTranslations;
-  } else if (type==="catchphrase"){
-    translated = catchphraseTranslations;
-  } else if (type==="npc"){
-    translated = npcTranslations;
-  }
-  for(var i=0; i<translated.length; i++){
-    if(translated[i]["English"]===text){
-      var translatedText = translated[i][global.language];
-      if(translatedText===undefined||translatedText===null){
-        return text;
-      } else {
-        return translatedText;
-      }
+  if(global.language!=="English"){
+    var translated;
+    if(type==="variants"){
+      translated = variantTranslations;
+    } else if (type==="catchphrase"){
+      translated = catchphraseTranslations;
+    } else if (type==="npc"){
+      translated = npcTranslations;
+    } else {
+      return text
+    }
+    if(translated.hasOwnProperty(text)){
+      return(translated[text][global.language])
     }
   }
   return text;

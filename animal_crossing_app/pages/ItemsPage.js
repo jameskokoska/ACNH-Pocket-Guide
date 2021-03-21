@@ -30,9 +30,9 @@ const MaterialsRoute = () => (
     showVariations={[false]}
     title="Materials"
     imageProperty={["Inventory Image"]}
-    textProperty={[global.language]}
+    textProperty={["Name",]}
     checkListKey={[["materialsCheckList","Name"]]}
-    searchKey={[[global.language]]}
+    searchKey={[["Name",]]}
     gridType="smallGrid" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedMaterials"}
     appBarColor={colors.materialsAppBar[global.darkMode]}
@@ -70,11 +70,11 @@ const FurnitureRoute = () => (
       "Image",
     ]}
     textProperty={[
-      global.language,
-      global.language,
-      global.language,
-      global.language,
-      global.language,
+      "Name",
+      "Name",
+      "Name",
+      "Name",
+      "Name",
     ]}
     checkListKey={[
       ["furnitureCheckList","Name","Variation","Pattern"],
@@ -85,11 +85,11 @@ const FurnitureRoute = () => (
       ["furnitureCheckList","Name"],
     ]}
     searchKey={[
-      [global.language,],
-      [global.language,],
-      [global.language,],
-      [global.language,],
-      [global.language,],
+      ["Name",],
+      ["Name",],
+      ["Name",],
+      ["Name",],
+      ["Name",],
     ]}
     gridType="smallGrid" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedFurniture"}
@@ -155,16 +155,16 @@ const ClothingRoute = () => (
       "Storage Image",
     ]}
     textProperty={[
-      global.language,
-      global.language,
-      global.language,
-      global.language,
-      global.language,
-      global.language,
-      global.language,
-      global.language,
-      global.language,
-      global.language,
+      "Name",
+      "Name",
+      "Name",
+      "Name",
+      "Name",
+      "Name",
+      "Name",
+      "Name",
+      "Name",
+      "Name",
     ]}
     checkListKey={[
       ["clothingCheckList","Name","Variation"],
@@ -179,16 +179,16 @@ const ClothingRoute = () => (
       ["clothingCheckList","Name"],
     ]}
     searchKey={[
-      [global.language,],
-      [global.language,],
-      [global.language,],
-      [global.language,],
-      [global.language,],
-      [global.language,],
-      [global.language,],
-      [global.language,],
-      [global.language,],
-      [global.language,],
+      ["Name",],
+      ["Name",],
+      ["Name",],
+      ["Name",],
+      ["Name",],
+      ["Name",],
+      ["Name",],
+      ["Name",],
+      ["Name",],
+      ["Name",],
     ]}
     gridType="smallGrid" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedClothing"}
@@ -255,9 +255,9 @@ const FloorWallsRoute = () => (
       "Image",
     ]}
     textProperty={[
-      global.language,
-      global.language,
-      global.language,
+      "Name",
+      "Name",
+      "Name",
     ]}
     checkListKey={[
       ["floorWallsCheckList","Name"],
@@ -265,9 +265,9 @@ const FloorWallsRoute = () => (
       ["floorWallsCheckList","Name"],
     ]}
     searchKey={[
-      [global.language],
-      [global.language],
-      [global.language],
+      ["Name",],
+      ["Name",],
+      ["Name",],
     ]}
     gridType="smallGrid" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedFloorWalls"}

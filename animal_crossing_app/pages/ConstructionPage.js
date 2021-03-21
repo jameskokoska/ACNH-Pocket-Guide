@@ -12,10 +12,10 @@ class ConstructionPage extends Component {
           showVariations={[false]}
           title="Construction"
           imageProperty={["Image","Image"]}
-          textProperty={[global.language,global.language]}
+          textProperty={["Name","Name"]}
           textProperty2={"construction"}
           checkListKey={[["constructionCheckList","Name"],["fenceCheckList","Name"]]}
-          searchKey={[[global.language],[global.language]]}
+          searchKey={[["Name"],["Name"]]}
           gridType="largeGridSmaller" //smallGrid, largeGrid, row
           dataGlobalName={"dataLoadedConstruction"}
           appBarColor={colors.constructionAppBar[global.darkMode]}

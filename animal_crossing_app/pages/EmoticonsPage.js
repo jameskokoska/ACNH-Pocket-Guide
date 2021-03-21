@@ -14,10 +14,10 @@ class EmoticonsPage extends Component {
           showVariations={[false]}
           title="Emoticons"
           imageProperty={["Image"]}
-          textProperty={[global.language]}
+          textProperty={["Name",]}
           textProperty2={["Source"]}
           checkListKey={[["emojiCheckList","Name"]]}
-          searchKey={[[global.language]]}
+          searchKey={[["Name",]]}
           gridType="smallGrid" //smallGrid, largeGrid, row
           dataGlobalName={"dataLoadedReactions"}
           appBarColor={colors.emojipediaAppBar[global.darkMode]}

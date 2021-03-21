@@ -54,9 +54,9 @@ class ActiveCreatures extends Component {
             "Icon Image",
           ]}
           textProperty={[
-            [global.language],
-            [global.language],
-            [global.language],
+            ["Name",],
+            ["Name",],
+            ["Name",],
           ]}
           checkListKey={[
             ["fishCheckList","Name"],
@@ -64,9 +64,9 @@ class ActiveCreatures extends Component {
             ["bugCheckList","Name"],
           ]}
           searchKey={[
-            [global.language],
-            [global.language],
-            [global.language],
+            ["Name",],
+            ["Name",],
+            ["Name",],
           ]}
           showVariations={[
             false,

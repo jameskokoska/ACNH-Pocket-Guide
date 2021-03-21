@@ -28,7 +28,7 @@ import MaterialsPopup from "../popups/MaterialsPopup"
 import * as exports from "./FilterDefinitions"
 import PopupFilter from './PopupFilter'
 import TextFont from "./TextFont"
-import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
+import {attemptToTranslateItem, getSettingsString, attemptToTranslate} from "../LoadJsonData"
 import {PopupBottomCustom} from "./Popup"
 //Note: popup height is not needed anymore
 //use tabs={false} if the page doesn't have  the tab bar
@@ -255,7 +255,8 @@ export default (props) =>{
             searchFound = true;
           } else {
             if(item.[props.searchKey[j][x]]!==undefined){
-              searchFound = item.[props.searchKey[j][x]].toLowerCase().includes(search.toLowerCase())
+              //Translate search attribute from database
+              searchFound = attemptToTranslateItem(item.[props.searchKey[j][x]]).toLowerCase().includes(search.toLowerCase())
             }
           }
           if((search==="" || searchFound)&&(!props.filterCollectedOnly||searchFound)){

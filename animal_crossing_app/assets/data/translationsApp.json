@@ -1,0 +1,1828 @@
+﻿{
+    "Main": [
+        {
+            "English": "Home",
+            "English (Europe)": "Home",
+            "French": "Accueil",
+            "French (US)": "Accueil"
+        },
+        {
+            "English": "Everything",
+            "English (Europe)": "Everything",
+            "French": "Objets",
+            "French (US)": "Objets"
+        },
+        {
+            "English": "Creatures + Museum",
+            "English (Europe)": "Creatures + Museum",
+            "French": "Bébêtopédie + Musée",
+            "French (US)": "Bébêtopédie + Musée"
+        },
+        {
+            "English": "Items",
+            "English (Europe)": "Items",
+            "French": "Objets",
+            "French (US)": "Objets"
+        },
+        {
+            "English": "Songs",
+            "English (Europe)": "Songs",
+            "French": "Chansons",
+            "French (US)": "Chansons"
+        },
+        {
+            "English": "Emoticons",
+            "English (Europe)": "Emoticons",
+            "French": "Mimiques",
+            "French (US)": "Mimiques"
+        },
+        {
+            "English": "Recipes + Tools",
+            "English (Europe)": "Recipes + Tools",
+            "French": "Plans + Outils",
+            "French (US)": "Plans + Outils"
+        },
+        {
+            "English": "Villagers",
+            "English (Europe)": "Villagers",
+            "French": "Villageois",
+            "French (US)": "Villageois"
+        },
+        {
+            "English": "Construction",
+            "English (Europe)": "Construction",
+            "French": "Constructions",
+            "French (US)": "Constructions"
+        },
+        {
+            "English": "Flowers",
+            "English (Europe)": "Flowers",
+            "French": "Fleurs",
+            "French (US)": "Fleurs"
+        },
+        {
+            "English": "Letters",
+            "English (Europe)": "Letters",
+            "French": "Courrier",
+            "French (US)": "Courrier"
+        },
+        {
+            "English": "Mystery Islands",
+            "English (Europe)": "Mystery Islands",
+            "French": "Iles Mystéres",
+            "French (US)": "Iles Mystéres"
+        },
+        {
+            "English": "Guide + FAQ",
+            "English (Europe)": "Guide + FAQ",
+            "French": "Guide + FAQ",
+            "French (US)": "Guide + FAQ"
+        },
+        {
+            "English": "Calendar + Events",
+            "English (Europe)": "Calendar + Events",
+            "French": "Calendrier + Evenements",
+            "French (US)": "Calendrier + Evenements"
+        },
+        {
+            "English": "Catalog Scanning",
+            "English (Europe)": "Catalog Scanning",
+            "French": "Scan du Catalogue",
+            "French (US)": "Scan du Catalogue"
+        },
+        {
+            "English": "Settings",
+            "English (Europe)": "Settings",
+            "French": "Réglages",
+            "French (US)": "Réglages"
+        },
+        {
+            "English": "About",
+            "English (Europe)": "About",
+            "French": "A propos",
+            "French (US)": "A propos"
+        },
+        {
+            "English": "Events",
+            "English (Europe)": "Events",
+            "French": "Evènements",
+            "French (US)": "Evènements"
+        },
+        {
+            "English": "Tomorrow",
+            "English (Europe)": "Tomorrow",
+            "French": "Demain",
+            "French (US)": "Demain"
+        },
+        {
+            "English": "This Week",
+            "English (Europe)": "This Week",
+            "French": "Cette semaine",
+            "French (US)": "Cette semaine"
+        },
+        {
+            "English": "K.K. Slider",
+            "English (Europe)": "K.K. Slider",
+            "French": "Kéké Laglisse",
+            "French (US)": "Kéké Laglisse"
+        },
+        {
+            "English": "Daisy Mae",
+            "English (Europe)": "Daisy Mae",
+            "French": "Porcelette",
+            "French (US)": "Porcelette"
+        },
+        {
+            "English": "January",
+            "English (Europe)": "January",
+            "French": "Janvier",
+            "French (US)": "Janvier"
+        },
+        {
+            "English": "February",
+            "English (Europe)": "February",
+            "French": "Février",
+            "French (US)": "Février"
+        },
+        {
+            "English": "March",
+            "English (Europe)": "March",
+            "French": "Mars",
+            "French (US)": "Mars"
+        },
+        {
+            "English": "April",
+            "English (Europe)": "April",
+            "French": "Avril",
+            "French (US)": "Avril"
+        },
+        {
+            "English": "May",
+            "English (Europe)": "May",
+            "French": "Mai",
+            "French (US)": "Mai"
+        },
+        {
+            "English": "June",
+            "English (Europe)": "June",
+            "French": "Juin",
+            "French (US)": "Juin"
+        },
+        {
+            "English": "July",
+            "English (Europe)": "July",
+            "French": "Juillet",
+            "French (US)": "Juillet"
+        },
+        {
+            "English": "August",
+            "English (Europe)": "August",
+            "French": "Août",
+            "French (US)": "Août"
+        },
+        {
+            "English": "September",
+            "English (Europe)": "September",
+            "French": "Septembre",
+            "French (US)": "Septembre"
+        },
+        {
+            "English": "October",
+            "English (Europe)": "October",
+            "French": "Octobre",
+            "French (US)": "Octobre"
+        },
+        {
+            "English": "November",
+            "English (Europe)": "November",
+            "French": "Novembre",
+            "French (US)": "Novembre"
+        },
+        {
+            "English": "December",
+            "English (Europe)": "December",
+            "French": "Décembre",
+            "French (US)": "Décembre"
+        },
+        {
+            "English": "Jan",
+            "English (Europe)": "Jan",
+            "French": "Jan",
+            "French (US)": "Jan"
+        },
+        {
+            "English": "Feb",
+            "English (Europe)": "Feb",
+            "French": "Fev",
+            "French (US)": "Fev"
+        },
+        {
+            "English": "Mar",
+            "English (Europe)": "Mar",
+            "French": "Mar",
+            "French (US)": "Mar"
+        },
+        {
+            "English": "Apr",
+            "English (Europe)": "Apr",
+            "French": "Avr",
+            "French (US)": "Avr"
+        },
+        {
+            "English": "May",
+            "English (Europe)": "May",
+            "French": "Mai",
+            "French (US)": "Mai"
+        },
+        {
+            "English": "Jun",
+            "English (Europe)": "Jun",
+            "French": "Jui",
+            "French (US)": "Jui"
+        },
+        {
+            "English": "Jul",
+            "English (Europe)": "Jul",
+            "French": "Juil",
+            "French (US)": "Juil"
+        },
+        {
+            "English": "Aug",
+            "English (Europe)": "Aug",
+            "French": "Aoû",
+            "French (US)": "Aoû"
+        },
+        {
+            "English": "Sep",
+            "English (Europe)": "Sep",
+            "French": "Sep",
+            "French (US)": "Sep"
+        },
+        {
+            "English": "Oct",
+            "English (Europe)": "Oct",
+            "French": "Oct",
+            "French (US)": "Oct"
+        },
+        {
+            "English": "Nov",
+            "English (Europe)": "Nov",
+            "French": "Nov",
+            "French (US)": "Nov"
+        },
+        {
+            "English": "Dec",
+            "English (Europe)": "Dec",
+            "French": "Dec",
+            "French (US)": "Dec"
+        },
+        {
+            "English": "Mon",
+            "English (Europe)": "Mon",
+            "French": "Lun",
+            "French (US)": "Lun"
+        },
+        {
+            "English": "Tues",
+            "English (Europe)": "Tues",
+            "French": "Mar",
+            "French (US)": "Mar"
+        },
+        {
+            "English": "Wed",
+            "English (Europe)": "Wed",
+            "French": "Mer",
+            "French (US)": "Mer"
+        },
+        {
+            "English": "Thurs",
+            "English (Europe)": "Thurs",
+            "French": "Jeu",
+            "French (US)": "Jeu"
+        },
+        {
+            "English": "Fri",
+            "English (Europe)": "Fri",
+            "French": "Ven",
+            "French (US)": "Ven"
+        },
+        {
+            "English": "Sat",
+            "English (Europe)": "Sat",
+            "French": "Sam",
+            "French (US)": "Sam"
+        },
+        {
+            "English": "Sun",
+            "English (Europe)": "Sun",
+            "French": "Dim",
+            "French (US)": "Dim"
+        },
+        {
+            "English": "AM",
+            "English (Europe)": "AM",
+            "French": "AM",
+            "French (US)": "AM"
+        },
+        {
+            "English": "PM",
+            "English (Europe)": "PM",
+            "French": "PM",
+            "French (US)": "PM"
+        },
+        {
+            "English": "To-Do",
+            "English (Europe)": "To-Do",
+            "French": "A faire",
+            "French (US)": "A faire"
+        },
+        {
+            "English": "Uncheck All",
+            "English (Europe)": "Uncheck All",
+            "French": "Déselectionner tout",
+            "French (US)": "Déselectionner tout"
+        },
+        {
+            "English": "Edit List",
+            "English (Europe)": "Edit List",
+            "French": "Editer la liste",
+            "French (US)": "Editer la liste"
+        },
+        {
+            "English": "Disable Edit List",
+            "English (Europe)": "Disable Edit List",
+            "French": "Arrêter l'édition",
+            "French (US)": "Arrêter l'édition"
+        },
+        {
+            "English": "Show Turnip Log",
+            "English (Europe)": "Show Turnip Log",
+            "French": "Afficher le Journal des Navets",
+            "French (US)": "Afficher le Journal des Navets"
+        },
+        {
+            "English": "Add Task",
+            "English (Europe)": "Add Task",
+            "French": "Ajouter une tâche",
+            "French (US)": "Ajouter une tâche"
+        },
+        {
+            "English": "Task Name",
+            "English (Europe)": "Task Name",
+            "French": "Nom de la tâche",
+            "French (US)": "Nom de la tâche"
+        },
+        {
+            "English": "Small Task",
+            "English (Europe)": "Small Task",
+            "French": "Petit format",
+            "French (US)": "Petit format"
+        },
+        {
+            "English": "Cancel",
+            "English (Europe)": "Cancel",
+            "French": "Annuler",
+            "French (US)": "Annuler"
+        },
+        {
+            "English": "Done",
+            "English (Europe)": "Done",
+            "French": "Fait",
+            "French (US)": "Fait"
+        },
+        {
+            "English": "Turnip Log",
+            "English (Europe)": "Turnip Log",
+            "French": "Journal des Navets",
+            "French (US)": "Journal des Navets"
+        },
+        {
+            "English": "Last week's pattern",
+            "English (Europe)": "Last week's pattern",
+            "French": "Modèle de la semaine dernière",
+            "French (US)": "Modèle de la semaine dernière"
+        },
+        {
+            "English": "Unknown",
+            "English (Europe)": "Unknown",
+            "French": "Inconnu",
+            "French (US)": "Inconnu"
+        },
+        {
+            "English": "Fluctuating",
+            "English (Europe)": "Fluctuating",
+            "French": "Fluctuant",
+            "French (US)": "Fluctuant"
+        },
+        {
+            "English": "Small spike",
+            "English (Europe)": "Small spike",
+            "French": "Petit pic",
+            "French (US)": "Petit pic"
+        },
+        {
+            "English": "Large spike",
+            "English (Europe)": "Large spike",
+            "French": "Grand pic",
+            "French (US)": "Grand pic"
+        },
+        {
+            "English": "Decreasing",
+            "English (Europe)": "Decreasing",
+            "French": "Décroissant",
+            "French (US)": "Décroissant"
+        },
+        {
+            "English": "First time buyer?",
+            "English (Europe)": "First time buyer?",
+            "French": "Premier achat?",
+            "French (US)": "Premier achat?"
+        },
+        {
+            "English": "Yes",
+            "English (Europe)": "Yes",
+            "French": "Oui",
+            "French (US)": "Oui"
+        },
+        {
+            "English": "No",
+            "English (Europe)": "No",
+            "French": "Non",
+            "French (US)": "Non"
+        },
+        {
+            "English": "Purchase",
+            "English (Europe)": "Purchase",
+            "French": "Achat",
+            "French (US)": "Achat"
+        },
+        {
+            "English": "Sunday Price",
+            "English (Europe)": "Sunday Price",
+            "French": "Prix d'achat",
+            "French (US)": "Prix d'achat"
+        },
+        {
+            "English": "Monday",
+            "English (Europe)": "Monday",
+            "French": "Lundi",
+            "French (US)": "Lundi"
+        },
+        {
+            "English": "Tuesday",
+            "English (Europe)": "Tuesday",
+            "French": "Mardi",
+            "French (US)": "Mardi"
+        },
+        {
+            "English": "Wednesday",
+            "English (Europe)": "Wednesday",
+            "French": "Mercredi",
+            "French (US)": "Mercredi"
+        },
+        {
+            "English": "Thursday",
+            "English (Europe)": "Thursday",
+            "French": "Jeudi",
+            "French (US)": "Jeudi"
+        },
+        {
+            "English": "Friday",
+            "English (Europe)": "Friday",
+            "French": "Vendredi",
+            "French (US)": "Vendredi"
+        },
+        {
+            "English": "Saturday",
+            "English (Europe)": "Saturday",
+            "French": "Samedi",
+            "French (US)": "Samedi"
+        },
+        {
+            "English": "View on turnipprophet.io",
+            "English (Europe)": "View on turnipprophet.io",
+            "French": "Voir sur turnipprophet.io",
+            "French (US)": "Voir sur turnipprophet.io"
+        },
+        {
+            "English": "Hide Turnip Log",
+            "English (Europe)": "Hide Turnip Log",
+            "French": "Masquer le Journal des Navets",
+            "French (US)": "Masquer le Journal des Navets"
+        },
+        {
+            "English": "Collection",
+            "English (Europe)": "Collection",
+            "French": "Collection",
+            "French (US)": "Collection"
+        },
+        {
+            "English": "Fish",
+            "English (Europe)": "Fish",
+            "French": "Poissons",
+            "French (US)": "Poissons"
+        },
+        {
+            "English": "Sea Creatures",
+            "English (Europe)": "Sea Creatures",
+            "French": "Créatures Marines",
+            "French (US)": "Créatures Marines"
+        },
+        {
+            "English": "Bugs",
+            "English (Europe)": "Bugs",
+            "French": "Insectes",
+            "French (US)": "Insectes"
+        },
+        {
+            "English": "Fossils",
+            "English (Europe)": "Fossils",
+            "French": "Fossiles",
+            "French (US)": "Fossiles"
+        },
+        {
+            "English": "Art",
+            "English (Europe)": "Art",
+            "French": "Art",
+            "French (US)": "Art"
+        },
+        {
+            "English": "Songs",
+            "English (Europe)": "Songs",
+            "French": "Chansons",
+            "French (US)": "Chansons"
+        },
+        {
+            "English": "Emotes",
+            "English (Europe)": "Emotes",
+            "French": "Mimiques",
+            "French (US)": "Mimiques"
+        },
+        {
+            "English": "Profile",
+            "English (Europe)": "Profile",
+            "French": "Profil",
+            "French (US)": "Profil"
+        },
+        {
+            "English": "Name",
+            "English (Europe)": "Name",
+            "French": "Nom",
+            "French (US)": "Nom"
+        },
+        {
+            "English": "of",
+            "English (Europe)": "of",
+            "French": "de",
+            "French (US)": "de"
+        },
+        {
+            "English": "Island",
+            "English (Europe)": "Island",
+            "French": "l'île",
+            "French (US)": "l'île"
+        },
+        {
+            "English": "Northern Hemisphere",
+            "English (Europe)": "Northern Hemisphere",
+            "French": "Hémisphère Nord",
+            "French (US)": "Hémisphère Nord"
+        },
+        {
+            "English": "Southern Hemisphere",
+            "English (Europe)": "Southern Hemisphere",
+            "French": "Hémisphère Sud",
+            "French (US)": "Hémisphère Sud"
+        },
+        {
+            "English": "You have no villagers added",
+            "English (Europe)": "You have no villagers added",
+            "French": "Vous n'avez aucun villageois ajoutés",
+            "French (US)": "Vous n'avez aucun villageois ajoutés"
+        },
+        {
+            "English": "Tap here and go add some",
+            "English (Europe)": "Tap here and go add some",
+            "French": "Appuie ici et ajoutes-en",
+            "French (US)": "Appuie ici et ajoutes-en"
+        },
+        {
+            "English": "Store Hours",
+            "English (Europe)": "Store Hours",
+            "French": "Horaires des Boutiques",
+            "French (US)": "Horaires des Boutiques"
+        },
+        {
+            "English": "Nook's Cranny",
+            "English (Europe)": "Nook's Cranny",
+            "French": "Boutique Nook",
+            "French (US)": "Boutique Nook"
+        },
+        {
+            "English": "Able Sisters",
+            "English (Europe)": "Able Sisters",
+            "French": "Soeurs Doigts de Fée",
+            "French (US)": "Soeurs Doigts de Fée"
+        },
+        {
+            "English": "Active Creatures",
+            "English (Europe)": "Active Creatures",
+            "French": "Créatures Actives",
+            "French (US)": "Créatures Actives"
+        },
+        {
+            "English": "Creatures that can currently be caught",
+            "English (Europe)": "Creatures that can currently be caught",
+            "French": "Créatures actuellement capturables",
+            "French (US)": "Créatures actuellement capturables"
+        },
+        {
+            "English": "Set Filters",
+            "English (Europe)": "Set Filters",
+            "French": "Définir un filtre",
+            "French (US)": "Définir un filtre"
+        },
+        {
+            "English": "Search",
+            "English (Europe)": "Search",
+            "French": "Rechercher",
+            "French (US)": "Rechercher"
+        },
+        {
+            "English": "Clear Filters",
+            "English (Europe)": "Clear Filters",
+            "French": "Supprimer tous les filtres",
+            "French (US)": "Supprimer tous les filtres"
+        },
+        {
+            "English": "Select filter...",
+            "English (Europe)": "Select filter...",
+            "French": "Sélectionner un filtre",
+            "French (US)": "Sélectionner un filtre"
+        },
+        {
+            "English": "Collected",
+            "English (Europe)": "Collected",
+            "French": "Collecté",
+            "French (US)": "Collecté"
+        },
+        {
+            "English": "Not Collected",
+            "English (Europe)": "Not Collected",
+            "French": "Non Collecté",
+            "French (US)": "Non Collecté"
+        },
+        {
+            "English": "Fish",
+            "English (Europe)": "Fish",
+            "French": "Poissons",
+            "French (US)": "Poissons"
+        },
+        {
+            "English": "Bugs",
+            "English (Europe)": "Bugs",
+            "French": "Insectes",
+            "French (US)": "Insectes"
+        },
+        {
+            "English": "Sea",
+            "English (Europe)": "Sea",
+            "French": "Mer",
+            "French (US)": "Mer"
+        },
+        {
+            "English": "Sea Creatures",
+            "English (Europe)": "Sea Creatures",
+            "French": "Créatures Marines",
+            "French (US)": "Créatures Marines"
+        },
+        {
+            "English": "Fossils",
+            "English (Europe)": "Fossils",
+            "French": "Fossiles",
+            "French (US)": "Fossiles"
+        },
+        {
+            "English": "Art",
+            "English (Europe)": "Art",
+            "French": "Art",
+            "French (US)": "Art"
+        },
+        {
+            "English": "Songs",
+            "English (Europe)": "Songs",
+            "French": "Chansons",
+            "French (US)": "Chansons"
+        },
+        {
+            "English": "Music",
+            "English (Europe)": "Music",
+            "French": "Musiques",
+            "French (US)": "Musiques"
+        },
+        {
+            "English": "Recipes",
+            "English (Europe)": "Recipes",
+            "French": "Plans",
+            "French (US)": "Plans"
+        },
+        {
+            "English": "Tools",
+            "English (Europe)": "Tools",
+            "French": "Outils",
+            "French (US)": "Outils"
+        },
+        {
+            "English": "Furniture",
+            "English (Europe)": "Furniture",
+            "French": "Meubles",
+            "French (US)": "Meubles"
+        },
+        {
+            "English": "Clothing",
+            "English (Europe)": "Clothing",
+            "French": "Vêtements",
+            "French (US)": "Vêtements"
+        },
+        {
+            "English": "Floor & Walls",
+            "English (Europe)": "Floor & Walls",
+            "French": "Sol & Murs",
+            "French (US)": "Sol & Murs"
+        },
+        {
+            "English": "Misc. Materials",
+            "English (Europe)": "Misc. Materials",
+            "French": "Matériaux",
+            "French (US)": "Matériaux"
+        },
+        {
+            "English": "Hybrid",
+            "English (Europe)": "Hybrid",
+            "French": "Hybrides",
+            "French (US)": "Hybrides"
+        },
+        {
+            "English": "Roses",
+            "English (Europe)": "Roses",
+            "French": "Roses",
+            "French (US)": "Roses"
+        },
+        {
+            "English": "Pansies",
+            "English (Europe)": "Pansies",
+            "French": "Pensées",
+            "French (US)": "Pensées"
+        },
+        {
+            "English": "Windflowers",
+            "English (Europe)": "Windflowers",
+            "French": "Anémones",
+            "French (US)": "Anémones"
+        },
+        {
+            "English": "Hyacinths",
+            "English (Europe)": "Hyacinths",
+            "French": "Jacinthes",
+            "French (US)": "Jacinthes"
+        },
+        {
+            "English": "Lillies",
+            "English (Europe)": "Lillies",
+            "French": "Lys",
+            "French (US)": "Lys"
+        },
+        {
+            "English": "Cosmos",
+            "English (Europe)": "Cosmos",
+            "French": "Cosmos",
+            "French (US)": "Cosmos"
+        },
+        {
+            "English": "Mums",
+            "English (Europe)": "Mums",
+            "French": "Chrysanthèmes",
+            "French (US)": "Chrysanthèmes"
+        },
+        {
+            "English": "Tulips",
+            "English (Europe)": "Tulips",
+            "French": "Tulipes",
+            "French (US)": "Tulipes"
+        },
+        {
+            "English": "Note: long press to check off the island as visited",
+            "English (Europe)": "Note: long press to check off the island as visited",
+            "French": "Note : Appui long pour cocher l'île comme visitée",
+            "French (US)": "Note : Appui long pour cocher l'île comme visitée"
+        },
+        {
+            "English": "Tap each for more details",
+            "English (Europe)": "Tap each for more details",
+            "French": "Appuyer sur chacun pour plus de détails",
+            "French (US)": "Appuyer sur chacun pour plus de détails"
+        },
+        {
+            "English": "s Birthday",
+            "English (Europe)": "s Birthday",
+            "French": "Anniversaire de (villager's name)",
+            "French (US)": "Anniversaire de (villager's name)"
+        },
+        {
+            "English": "View Today",
+            "English (Europe)": "View Today",
+            "French": "Aujourd'hui",
+            "French (US)": "Aujourd'hui"
+        },
+        {
+            "English": "Open Calendar",
+            "English (Europe)": "Open Calendar",
+            "French": "Ouvrir le Calendrier",
+            "French (US)": "Ouvrir le Calendrier"
+        },
+        {
+            "English": "View All",
+            "English (Europe)": "View All",
+            "French": "Voir Tout",
+            "French (US)": "Voir Tout"
+        },
+        {
+            "English": "Catalog Import",
+            "English (Europe)": "Catalog Import",
+            "French": "Importation du Catalogue",
+            "French (US)": "Importation du Catalogue"
+        },
+        {
+            "English": "Visit",
+            "English (Europe)": "Visit",
+            "French": "Visite",
+            "French (US)": "Visite"
+        },
+        {
+            "English": "for more information",
+            "English (Europe)": "for more information",
+            "French": "pour plus d'informations",
+            "French (US)": "pour plus d'informations"
+        },
+        {
+            "English": "Paste nook.lol link and Import",
+            "English (Europe)": "Paste nook.lol link and Import",
+            "French": "Coller le lien nook.lol et importer",
+            "French (US)": "Coller le lien nook.lol et importer"
+        },
+        {
+            "English": "or...",
+            "English (Europe)": "or...",
+            "French": "ou...",
+            "French (US)": "ou..."
+        },
+        {
+            "English": "Paste results here and Import",
+            "English (Europe)": "Paste results here and Import",
+            "French": "Coller les résultats ici et importer",
+            "French (US)": "Coller les résultats ici et importer"
+        },
+        {
+            "English": "May take a few seconds to complete.",
+            "English (Europe)": "May take a few seconds to complete.",
+            "French": "Cela peut prendre quelques secondes.",
+            "French (US)": "Cela peut prendre quelques secondes."
+        },
+        {
+            "English": "Please be patient.",
+            "English (Europe)": "Please be patient.",
+            "French": "Merci de patienter.",
+            "French (US)": "Merci de patienter."
+        },
+        {
+            "English": "Import Results",
+            "English (Europe)": "Import Results",
+            "French": "Importer les Résultats",
+            "French (US)": "Importer les Résultats"
+        },
+        {
+            "English": "Attempted:",
+            "English (Europe)": "Attempted:",
+            "French": "Tenté(s):",
+            "French (US)": "Tenté(s):"
+        },
+        {
+            "English": "Using nook.lol link to import data",
+            "English (Europe)": "Using nook.lol link to import data",
+            "French": "Utilisation du lien nook.lol pour importer des données",
+            "French (US)": "Utilisation du lien nook.lol pour importer des données"
+        },
+        {
+            "English": "(First option)",
+            "English (Europe)": "(First option)",
+            "French": "(Première option)",
+            "French (US)": "(Première option)"
+        },
+        {
+            "English": "There was an error, please check the link and try again...",
+            "English (Europe)": "There was an error, please check the link and try again...",
+            "French": "Il y a eu une erreur, merci de vérifier le lien et de réessayer...",
+            "French (US)": "Il y a eu une erreur, merci de vérifier le lien et de réessayer..."
+        },
+        {
+            "English": "Imported:",
+            "English (Europe)": "Imported:",
+            "French": "Importé(s):",
+            "French (US)": "Importé(s):"
+        },
+        {
+            "English": "Errors:",
+            "English (Europe)": "Errors:",
+            "French": "Erreurs:",
+            "French (US)": "Erreurs:"
+        },
+        {
+            "English": "items",
+            "English (Europe)": "items",
+            "French": "objets",
+            "French (US)": "objets"
+        },
+        {
+            "English": "Using list of results to import data",
+            "English (Europe)": "Using list of results to import data",
+            "French": "Utilisation de la liste des résultats pour importer les données.",
+            "French (US)": "Utilisation de la liste des résultats pour importer les données."
+        },
+        {
+            "English": "(Second option)",
+            "English (Europe)": "(Second option)",
+            "French": "(Deuxième option)",
+            "French (US)": "(Deuxième option)"
+        },
+        {
+            "English": "Export Results",
+            "English (Europe)": "Export Results",
+            "French": "Exporter les Résultats",
+            "French (US)": "Exporter les Résultats"
+        },
+        {
+            "English": "File exported to Downloads folder",
+            "English (Europe)": "File exported to Downloads folder",
+            "French": "Fichier exporté vers le dossier des Téléchargements",
+            "French (US)": "Fichier exporté vers le dossier des Téléchargements"
+        },
+        {
+            "English": "Import File",
+            "English (Europe)": "Import File",
+            "French": "Importer le Fichier",
+            "French (US)": "Importer le Fichier"
+        },
+        {
+            "English": "Please import ACNHPocketGuideData.txt from the downloads folder.",
+            "English (Europe)": "Please import ACNHPocketGuideData.txt from the downloads folder.",
+            "French": "Merci d'importer ACNHPocketGuideData.txt depuis le dossier des téléchargements",
+            "French (US)": "Merci d'importer ACNHPocketGuideData.txt depuis le dossier des téléchargements"
+        },
+        {
+            "English": "Import Results",
+            "English (Europe)": "Import Results",
+            "French": "Importer les Résultats",
+            "French (US)": "Importer les Résultats"
+        },
+        {
+            "English": "Import",
+            "English (Europe)": "Import",
+            "French": "Importer",
+            "French (US)": "Importer"
+        },
+        {
+            "English": "entries.",
+            "English (Europe)": "entries.",
+            "French": "entrées.",
+            "French (US)": "entrées."
+        },
+        {
+            "English": "Note: If this has imported 0 entries, please double check you have chosen the correct file.",
+            "English (Europe)": "Note: If this has imported 0 entries, please double check you have chosen the correct file.",
+            "French": "Note: Si cela n'a importé aucune entrée, merci de reverifier que vous avez bien choisi le bon fichier.",
+            "French (US)": "Note: Si cela n'a importé aucune entrée, merci de reverifier que vous avez bien choisi le bon fichier."
+        },
+        {
+            "English": "Cleared Set Filters",
+            "English (Europe)": "Cleared Set Filters",
+            "French": "Filtres supprimés",
+            "French (US)": "Filtres supprimés"
+        },
+        {
+            "English": "All the filters selected have been unset",
+            "English (Europe)": "All the filters selected have been unset",
+            "French": "Tous les filtres sélectionnés ont été supprimés",
+            "French (US)": "Tous les filtres sélectionnés ont été supprimés"
+        },
+        {
+            "English": "Would you like to reset your collection? This action cannot be undone.",
+            "English (Europe)": "Would you like to reset your collection? This action cannot be undone.",
+            "French": "Voulez-vous réinitialiser votre collection ? Cette action ne peut pas être annulée",
+            "French (US)": "Voulez-vous réinitialiser votre collection ? Cette action ne peut pas être annulée"
+        },
+        {
+            "English": "Reset",
+            "English (Europe)": "Reset",
+            "French": "Réinitialiser",
+            "French (US)": "Réinitialiser"
+        },
+        {
+            "English": "Cancel",
+            "English (Europe)": "Cancel",
+            "French": "Annuler",
+            "French (US)": "Annuler"
+        },
+        {
+            "English": "Restart Required",
+            "English (Europe)": "Restart Required",
+            "French": "Redémarrage requis",
+            "French (US)": "Redémarrage requis"
+        },
+        {
+            "English": "Please restart the application.",
+            "English (Europe)": "Please restart the application.",
+            "French": "Merci de redémarrer l'application",
+            "French (US)": "Merci de redémarrer l'application"
+        },
+        {
+            "English": "Custom Date",
+            "English (Europe)": "Custom Date",
+            "French": "Date personnalisée",
+            "French (US)": "Date personnalisée"
+        },
+        {
+            "English": "Ensure 'Use a custom date' setting is enabled",
+            "English (Europe)": "Ensure 'Use a custom date' setting is enabled",
+            "French": "Assurez-vous que le paramètre \"Utiliser une date personnalisée\" est activé",
+            "French (US)": "Assurez-vous que le paramètre \"Utiliser une date personnalisée\" est activé"
+        },
+        {
+            "English": "Tap each setting to learn more",
+            "English (Europe)": "Tap each setting to learn more",
+            "French": "Appuyer sur chacun pour en savoir plus",
+            "French (US)": "Appuyer sur chacun pour en savoir plus"
+        },
+        {
+            "English": "General",
+            "English (Europe)": "General",
+            "French": "Général",
+            "French (US)": "Général"
+        },
+        {
+            "English": "Creatures",
+            "English (Europe)": "Creatures",
+            "French": "Créatures",
+            "French (US)": "Créatures"
+        },
+        {
+            "English": "User interface",
+            "English (Europe)": "User interface",
+            "French": "Interface utilisateur",
+            "French (US)": "Interface utilisateur"
+        },
+        {
+            "English": "System",
+            "English (Europe)": "System",
+            "French": "Système",
+            "French (US)": "Système"
+        },
+        {
+            "English": "Interface layout",
+            "English (Europe)": "Interface layout",
+            "French": "Disposition de l'interface",
+            "French (US)": "Disposition de l'interface"
+        },
+        {
+            "English": "Custom dates",
+            "English (Europe)": "Custom dates",
+            "French": "Dates personnalisées",
+            "French (US)": "Dates personnalisées"
+        },
+        {
+            "English": "Set your hemisphere, north or south. This will change the data displayed for creatures and events.",
+            "English (Europe)": "Set your hemisphere, north or south. This will change the data displayed for creatures and events.",
+            "French": "Sélectionnez votre hémisphère, nord ou sud. Cela changera les données affichées pour les créatures et les événements.",
+            "French (US)": "Sélectionnez votre hémisphère, nord ou sud. Cela changera les données affichées pour les créatures et les événements."
+        },
+        {
+            "English": "Show variations in lists",
+            "English (Europe)": "Show variations in lists",
+            "French": "Afficher les variations dans les listes",
+            "French (US)": "Afficher les variations dans les listes"
+        },
+        {
+            "English": "Show the different colours/patterns of furniture and clothing items in the list.",
+            "English (Europe)": "Show the different colours/patterns of furniture and clothing items in the list.",
+            "French": "Montrez les différent(e)s couleurs/motifs des meubles et des vêtements dans la liste.",
+            "French (US)": "Montrez les différent(e)s couleurs/motifs des meubles et des vêtements dans la liste."
+        },
+        {
+            "English": "List only active creatures",
+            "English (Europe)": "List only active creatures",
+            "French": "Liste uniquement les créatures actives",
+            "French (US)": "Liste uniquement les créatures actives"
+        },
+        {
+            "English": "Only creatures that can be caught in the current month will be displayed.",
+            "English (Europe)": "Only creatures that can be caught in the current month will be displayed.",
+            "French": "Seules les créatures qui peuvent être capturées ce mois-ci seront affichées.",
+            "French (US)": "Seules les créatures qui peuvent être capturées ce mois-ci seront affichées."
+        },
+        {
+            "English": "Creatures leaving warning",
+            "English (Europe)": "Creatures leaving warning",
+            "French": "Creatures leaving warning",
+            "French (US)": "Creatures leaving warning"
+        },
+        {
+            "English": "Display a red warning background colour around creatures that won't be able to be caught in the next month.",
+            "English (Europe)": "Display a red warning background colour around creatures that won't be able to be caught in the next month.",
+            "French": "Affichez une couleur de fond d'avertissement rouge autour des créatures qui ne pourront pas être capturées le mois prochain.",
+            "French (US)": "Affichez une couleur de fond d'avertissement rouge autour des créatures qui ne pourront pas être capturées le mois prochain."
+        },
+        {
+            "English": "Dark mode - follow system",
+            "English (Europe)": "Dark mode - follow system",
+            "French": "Mode sombre - suivre le système",
+            "French (US)": "Mode sombre - suivre le système"
+        },
+        {
+            "English": "Dark mode will follow system default, if your Android version does not support system dark mode, disable this and use the setting below.",
+            "English (Europe)": "Dark mode will follow system default, if your Android version does not support system dark mode, disable this and use the setting below.",
+            "French": "Le mode sombre suivra les paramètres par défaut du système. Si votre version d'Android ne prend pas en charge le mode sombre du système, désactivez-le et utilisez le paramètre ci-dessous.",
+            "French (US)": "Le mode sombre suivra les paramètres par défaut du système. Si votre version d'Android ne prend pas en charge le mode sombre du système, désactivez-le et utilisez le paramètre ci-dessous."
+        },
+        {
+            "English": "Dark mode",
+            "English (Europe)": "Dark mode",
+            "French": "Mode sombre",
+            "French (US)": "Mode sombre"
+        },
+        {
+            "English": "Toggle dark mode, ensure auto dark mode is off to use this",
+            "English (Europe)": "Toggle dark mode, ensure auto dark mode is off to use this",
+            "French": "Basculez en mode sombre, assurez-vous que le mode sombre automatique est désactivé pour l'utiliser",
+            "French (US)": "Basculez en mode sombre, assurez-vous que le mode sombre automatique est désactivé pour l'utiliser"
+        },
+        {
+            "English": "Colored lists",
+            "English (Europe)": "Colored lists",
+            "French": "Listes colorées",
+            "French (US)": "Listes colorées"
+        },
+        {
+            "English": "Change the background of the list based on the color of the item",
+            "English (Europe)": "Change the background of the list based on the color of the item",
+            "French": "Changer l'arrière-plan de la liste en fonction de la couleur de l'élément",
+            "French (US)": "Changer l'arrière-plan de la liste en fonction de la couleur de l'élément"
+        },
+        {
+            "English": "Use larger images in popup",
+            "English (Europe)": "Use larger images in popup",
+            "French": "Utilisez des images plus grandes dans la fenêtre contextuelle",
+            "French (US)": "Utilisez des images plus grandes dans la fenêtre contextuelle"
+        },
+        {
+            "English": "Use a larger image when previewing items in their popup",
+            "English (Europe)": "Use a larger image when previewing items in their popup",
+            "French": "Utilisez une image plus grande lors de la prévisualisation des éléments dans leur fenêtre contextuelle",
+            "French (US)": "Utilisez une image plus grande lors de la prévisualisation des éléments dans leur fenêtre contextuelle"
+        },
+        {
+            "English": "Back button to previous page",
+            "English (Europe)": "Back button to previous page",
+            "French": "Bouton retour vers la page précédente",
+            "French (US)": "Bouton retour vers la page précédente"
+        },
+        {
+            "English": "Use the back button to switch pages quickly. If this is off, the back button will just open the side panel.",
+            "English (Europe)": "Use the back button to switch pages quickly. If this is off, the back button will just open the side panel.",
+            "French": "Utilisez le bouton de retour pour changer de page rapidement. Si cette option est désactivée, le bouton de retour ouvrira simplement le panneau latéral.",
+            "French (US)": "Utilisez le bouton de retour pour changer de page rapidement. Si cette option est désactivée, le bouton de retour ouvrira simplement le panneau latéral."
+        },
+        {
+            "English": "Show notification status bar",
+            "English (Europe)": "Show notification status bar",
+            "French": "Afficher la barre d'état des notifications",
+            "French (US)": "Afficher la barre d'état des notifications"
+        },
+        {
+            "English": "A restart may be required to see changes.",
+            "English (Europe)": "A restart may be required to see changes.",
+            "French": "Un redemarrage peut être nécessaire afin de voir les changements.",
+            "French (US)": "Un redemarrage peut être nécessaire afin de voir les changements."
+        },
+        {
+            "English": "Use 24 hour clock",
+            "English (Europe)": "Use 24 hour clock",
+            "French": "Format 24 heures",
+            "French (US)": "Format 24 heures"
+        },
+        {
+            "English": "Enable a 24 hour clock instead of the standard 12 hour format.",
+            "English (Europe)": "Enable a 24 hour clock instead of the standard 12 hour format.",
+            "French": "Définir le format 24h à la place du format 12h",
+            "French (US)": "Définir le format 24h à la place du format 12h"
+        },
+        {
+            "English": "Enable haptic feedback",
+            "English (Europe)": "Enable haptic feedback",
+            "French": "Activer le retour haptique",
+            "French (US)": "Activer le retour haptique"
+        },
+        {
+            "English": "Enable/Disable the vibrations with certain actions.",
+            "English (Europe)": "Enable/Disable the vibrations with certain actions.",
+            "French": "Activer/Désactiver les vibrations pour certaines actions",
+            "French (US)": "Activer/Désactiver les vibrations pour certaines actions"
+        },
+        {
+            "English": "Show floating menu button",
+            "English (Europe)": "Show floating menu button",
+            "French": "Afficher le bouton du menu flottant",
+            "French (US)": "Afficher le bouton du menu flottant"
+        },
+        {
+            "English": "Choose to display the menu button in the bottom right corner. The menu can be opened by dragging from the left of the screen.",
+            "English (Europe)": "Choose to display the menu button in the bottom right corner. The menu can be opened by dragging from the left of the screen.",
+            "French": "Choisissez d'afficher le bouton de menu dans le coin inférieur droit. Le menu peut être ouvert en faisant glisser depuis la gauche de l'écran.",
+            "French (US)": "Choisissez d'afficher le bouton de menu dans le coin inférieur droit. Le menu peut être ouvert en faisant glisser depuis la gauche de l'écran."
+        },
+        {
+            "English": "Category labels on bottom",
+            "English (Europe)": "Category labels on bottom",
+            "French": "Catégories en bas",
+            "French (US)": "Catégories en bas"
+        },
+        {
+            "English": "Show the category tabs on the bottom, or top of the screen in list pages with multiple categories.",
+            "English (Europe)": "Show the category tabs on the bottom, or top of the screen in list pages with multiple categories.",
+            "French": "Affichez les onglets de catégorie en bas ou en haut de l'écran dans les pages de liste avec plusieurs catégories.",
+            "French (US)": "Affichez les onglets de catégorie en bas ou en haut de l'écran dans les pages de liste avec plusieurs catégories."
+        },
+        {
+            "English": "Use a custom date",
+            "English (Europe)": "Use a custom date",
+            "French": "Utiliser une date personnalisée",
+            "French (US)": "Utiliser une date personnalisée"
+        },
+        {
+            "English": "Use the custom date selected when loading time-specific data.",
+            "English (Europe)": "Use the custom date selected when loading time-specific data.",
+            "French": "Utilisez la date personnalisée choisie lors du chargement de données spécifiques à l'heure.",
+            "French (US)": "Utilisez la date personnalisée choisie lors du chargement de données spécifiques à l'heure."
+        },
+        {
+            "English": "Set Custom Date/Time",
+            "English (Europe)": "Set Custom Date/Time",
+            "French": "Définir une Date/Heure personnalisée",
+            "French (US)": "Définir une Date/Heure personnalisée"
+        },
+        {
+            "English": "Data backip",
+            "English (Europe)": "Data backip",
+            "French": "Sauvegarde des données",
+            "French (US)": "Sauvegarde des données"
+        },
+        {
+            "English": "Export Data",
+            "English (Europe)": "Export Data",
+            "French": "Exporter les données",
+            "French (US)": "Exporter les données"
+        },
+        {
+            "English": "Import Data",
+            "English (Europe)": "Import Data",
+            "French": "Importer les données",
+            "French (US)": "Importer les données"
+        },
+        {
+            "English": "Data reset",
+            "English (Europe)": "Data reset",
+            "French": "Réinitialisation des données",
+            "French (US)": "Réinitialisation des données"
+        },
+        {
+            "English": "Clear All Set Filters",
+            "English (Europe)": "Clear All Set Filters",
+            "French": "Supprimer tous les filtres",
+            "French (US)": "Supprimer tous les filtres"
+        },
+        {
+            "English": "Reset Data",
+            "English (Europe)": "Reset Data",
+            "French": "Réinitialiser les données",
+            "French (US)": "Réinitialiser les données"
+        },
+        {
+            "English": "Suggestions, bugs or concerns?",
+            "English (Europe)": "Suggestions, bugs or concerns?",
+            "French": "Des suggestions, des bugs ou des difficultés ?",
+            "French (US)": "Des suggestions, des bugs ou des difficultés ?"
+        },
+        {
+            "English": "Send me an email!",
+            "English (Europe)": "Send me an email!",
+            "French": "Envoyez-moi un e-mail!",
+            "French (US)": "Envoyez-moi un e-mail!"
+        },
+        {
+            "English": "Credits",
+            "English (Europe)": "Credits",
+            "French": "Crédits",
+            "French (US)": "Crédits"
+        },
+        {
+            "English": "Lead Programmer",
+            "English (Europe)": "Lead Programmer",
+            "French": "Programmeur principal",
+            "French (US)": "Programmeur principal"
+        },
+        {
+            "English": "Lead Graphics",
+            "English (Europe)": "Lead Graphics",
+            "French": "Graphiste principal",
+            "French (US)": "Graphiste principal"
+        },
+        {
+            "English": "Leave a rating",
+            "English (Europe)": "Leave a rating",
+            "French": "Laissez une note",
+            "French (US)": "Laissez une note"
+        },
+        {
+            "English": "Enjoying the app?",
+            "English (Europe)": "Enjoying the app?",
+            "French": "Aimez-vous l'application ?",
+            "French (US)": "Aimez-vous l'application ?"
+        },
+        {
+            "English": "Consider leaving a rating",
+            "English (Europe)": "Consider leaving a rating",
+            "French": "Pensez à nous noter",
+            "French (US)": "Pensez à nous noter"
+        },
+        {
+            "English": "No thanks",
+            "English (Europe)": "No thanks",
+            "French": "Non merci",
+            "French (US)": "Non merci"
+        },
+        {
+            "English": "Sure!",
+            "English (Europe)": "Sure!",
+            "French": "Bien sur!",
+            "French (US)": "Bien sur!"
+        },
+        {
+            "English": "Welcome to ACNH Pocket Guide",
+            "English (Europe)": "Welcome to ACNH Pocket Guide",
+            "French": "Bienvenue sur ACNH Pocket Guide",
+            "French (US)": "Bienvenue sur ACNH Pocket Guide"
+        },
+        {
+            "English": "Track your creatures, collection, and game events",
+            "English (Europe)": "Track your creatures, collection, and game events",
+            "French": "Suivez vos créatures, vos collections et vos évènements du jeu",
+            "French (US)": "Suivez vos créatures, vos collections et vos évènements du jeu"
+        },
+        {
+            "English": "Designed with a user friendly and modern interface and experience.",
+            "English (Europe)": "Designed with a user friendly and modern interface and experience.",
+            "French": "Conçu avec une interface moderne et ergonomique",
+            "French (US)": "Conçu avec une interface moderne et ergonomique"
+        },
+        {
+            "English": "Select Language",
+            "English (Europe)": "Select Language",
+            "French": "Choisir la Langue",
+            "French (US)": "Choisir la Langue"
+        },
+        {
+            "English": "Game language",
+            "English (Europe)": "Game language",
+            "French": "Langue du jeu",
+            "French (US)": "Langue du jeu"
+        },
+        {
+            "English": "Translations only apply to game item names only, all other app content is in English. Some items may be missing translations. If you would like to help translate this app, feel free to reach out via email. ",
+            "English (Europe)": "Translations only apply to game item names only, all other app content is in English. Some items may be missing translations. If you would like to help translate this app, feel free to reach out via email. ",
+            "French": "Les traductions ne s'appliquent qu'aux noms d'éléments du jeu, tous les autres contenus de l'application sont en anglais. Certains éléments peuvent manquer de traductions. Si vous souhaitez aider à traduire cette application, n'hésitez pas à nous contacter par e-mail.",
+            "French (US)": "Les traductions ne s'appliquent qu'aux noms d'éléments du jeu, tous les autres contenus de l'application sont en anglais. Certains éléments peuvent manquer de traductions. Si vous souhaitez aider à traduire cette application, n'hésitez pas à nous contacter par e-mail."
+        },
+        {
+            "English": "Check Turnip Prices",
+            "English (Europe)": "Check Turnip Prices",
+            "French": "Vérifier les prix du navet",
+            "French (US)": "Vérifier les prix du navet"
+        },
+        {
+            "English": "Water Flowers",
+            "English (Europe)": "Water Flowers",
+            "French": "Arroser les Fleurs",
+            "French (US)": "Arroser les Fleurs"
+        },
+        {
+            "English": "Talk To Villagers",
+            "English (Europe)": "Talk To Villagers",
+            "French": "Parler aux Villageois",
+            "French (US)": "Parler aux Villageois"
+        },
+        {
+            "English": "Dig Fossils",
+            "English (Europe)": "Dig Fossils",
+            "French": "Détérrer les fossiles",
+            "French (US)": "Détérrer les fossiles"
+        },
+        {
+            "English": "Rock",
+            "English (Europe)": "Rock",
+            "French": "Rocher",
+            "French (US)": "Rocher"
+        },
+        {
+            "English": "bells",
+            "English (Europe)": "bells",
+            "French": "clochettes",
+            "French (US)": "clochettes"
+        },
+        {
+            "English": "miles",
+            "English (Europe)": "miles",
+            "French": "miles",
+            "French (US)": "miles"
+        },
+        {
+            "English": "DIY",
+            "English (Europe)": "DIY",
+            "French": "Bricolage",
+            "French (US)": "Bricolage"
+        },
+        {
+            "English": "Island #0",
+            "English (Europe)": "Island #0",
+            "French": "Île #0",
+            "French (US)": "Île #0"
+        },
+        {
+            "English": "A fairly normal island which you can get on your first tour, with one cliff, native fruit, coconuts, a river and a pond.",
+            "English (Europe)": "A fairly normal island which you can get on your first tour, with one cliff, native fruit, coconuts, a river and a pond.",
+            "French": "Une île assez normale que vous pouvez obtenir lors de votre premier tour, avec une falaise, des fruits identiques à ceux de votre île, des cocotiers, une rivière et un étang.",
+            "French (US)": "Une île assez normale que vous pouvez obtenir lors de votre premier tour, avec une falaise, des fruits identiques à ceux de votre île, des cocotiers, une rivière et un étang."
+        },
+        {
+            "English": "Island #1",
+            "English (Europe)": "Island #1",
+            "French": "Île #1",
+            "French (US)": "Île #1"
+        },
+        {
+            "English": "Practically the same as Island #0, but without the pond, and with a slightly bigger cliff.",
+            "English (Europe)": "Practically the same as Island #0, but without the pond, and with a slightly bigger cliff.",
+            "French": "Pratiquement la même chose que l'île #0, mais sans l'étang et avec une falaise légèrement plus grande.",
+            "French (US)": "Pratiquement la même chose que l'île #0, mais sans l'étang et avec une falaise légèrement plus grande."
+        },
+        {
+            "English": "Spiral Island",
+            "English (Europe)": "Spiral Island",
+            "French": "Île Spirale",
+            "French (US)": "Île Spirale"
+        },
+        {
+            "English": "Somewhat more interesting in layout but it has nothing special about the resources you can get.",
+            "English (Europe)": "Somewhat more interesting in layout but it has nothing special about the resources you can get.",
+            "French": "Un peu plus intéressant dans la disposition mais cela n'a rien de spécial sur les ressources que vous pouvez obtenir.",
+            "French (US)": "Un peu plus intéressant dans la disposition mais cela n'a rien de spécial sur les ressources que vous pouvez obtenir."
+        },
+        {
+            "English": "Fidget Spinner Island",
+            "English (Europe)": "Fidget Spinner Island",
+            "French": "Île Hand Spinner",
+            "French (US)": "Île Hand Spinner"
+        },
+        {
+            "English": "The last of the four starter islands. No river, just a pond and the sea.",
+            "English (Europe)": "The last of the four starter islands. No river, just a pond and the sea.",
+            "French": "Le dernier des quatre îlots de départ. Pas de rivière, juste un étang et la mer.",
+            "French (US)": "Le dernier des quatre îlots de départ. Pas de rivière, juste un étang et la mer."
+        },
+        {
+            "English": "Mountain Island",
+            "English (Europe)": "Mountain Island",
+            "French": "Île aux Falaises",
+            "French (US)": "Île aux Falaises"
+        },
+        {
+            "English": "Multiple levels, no river. The base level has regular trees, the middle level has your native fruit, and the top level has five rocks with materials.",
+            "English (Europe)": "Multiple levels, no river. The base level has regular trees, the middle level has your native fruit, and the top level has five rocks with materials.",
+            "French": "Plusieurs niveaux, pas de rivière. Le niveau de base a des arbres normaux, le niveau intermédiaire a vos fruits d'origine et le niveau supérieur a cinq rochers avec des matériaux.",
+            "French (US)": "Plusieurs niveaux, pas de rivière. Le niveau de base a des arbres normaux, le niveau intermédiaire a vos fruits d'origine et le niveau supérieur a cinq rochers avec des matériaux."
+        },
+        {
+            "English": "Bells Island",
+            "English (Europe)": "Bells Island",
+            "French": "Île aux Clochettes",
+            "French (US)": "Île aux Clochettes"
+        },
+        {
+            "English": "Breaking the rock at the far north will let you vault over into the island with five money rocks on it.",
+            "English (Europe)": "Breaking the rock at the far north will let you vault over into the island with five money rocks on it.",
+            "French": "Briser le rocher à l'extrême nord vous permettra de sauter dans l'île avec cinq pierres à clochettes dessus.",
+            "French (US)": "Briser le rocher à l'extrême nord vous permettra de sauter dans l'île avec cinq pierres à clochettes dessus."
+        },
+        {
+            "English": "Bamboo Island",
+            "English (Europe)": "Bamboo Island",
+            "French": "Île aux Bambous",
+            "French (US)": "Île aux Bambous"
+        },
+        {
+            "English": "Every tree on this island is bamboo and you can get to it at any time of year. The most common island you can get out of the 20, statistically.",
+            "English (Europe)": "Every tree on this island is bamboo and you can get to it at any time of year. The most common island you can get out of the 20, statistically.",
+            "French": "Chaque arbre de cette île est en bambou et vous pouvez y accéder à tout moment de l'année. C'est l'île la plus commune sur laquelle vous tomberez parmi les 20, statistiquement.",
+            "French (US)": "Chaque arbre de cette île est en bambou et vous pouvez y accéder à tout moment de l'année. C'est l'île la plus commune sur laquelle vous tomberez parmi les 20, statistiquement."
+        },
+        {
+            "English": "Fruit Island",
+            "English (Europe)": "Fruit Island",
+            "French": "Île aux Fruits",
+            "French (US)": "Île aux Fruits"
+        },
+        {
+            "English": "There are 19 fruit trees on this island and all will be your 'sister fruit'. This will be different from your native fruit - but every time you come here, it will be the same one.",
+            "English (Europe)": "There are 19 fruit trees on this island and all will be your 'sister fruit'. This will be different from your native fruit - but every time you come here, it will be the same one.",
+            "French": "Il y a 19 arbres fruitiers sur cette île et tous seront votre «fruit sœur». Ce sera différent de votre fruit natif - mais chaque fois que vous viendrez ici, ce sera le même.",
+            "French (US)": "Il y a 19 arbres fruitiers sur cette île et tous seront votre «fruit sœur». Ce sera différent de votre fruit natif - mais chaque fois que vous viendrez ici, ce sera le même."
+        },
+        {
+            "English": "Money Rock Island 2",
+            "English (Europe)": "Money Rock Island 2",
+            "French": "Île aux Scorpions",
+            "French (US)": "Île aux Scorpions"
+        },
+        {
+            "English": "There are four small triangular cliffs, one in each corner, and the ground level is full of flowers and 7 money rocks.",
+            "English (Europe)": "There are four small triangular cliffs, one in each corner, and the ground level is full of flowers and 7 money rocks.",
+            "French": "Il y a quatre petites falaises triangulaires, une dans chaque coin. Le niveau du sol est plein de fleurs et de sept rochers à clochettes.",
+            "French (US)": "Il y a quatre petites falaises triangulaires, une dans chaque coin. Le niveau du sol est plein de fleurs et de sept rochers à clochettes."
+        },
+        {
+            "English": "Tarantula Island",
+            "English (Europe)": "Tarantula Island",
+            "French": "Île aux Tarentules",
+            "French (US)": "Île aux Tarentules"
+        },
+        {
+            "English": "Yes, the infamous one. The only insects that spawn here are tarantulas (as long as it is night time in a Tarantula month), and the 7 rocks have crafting materials if you can get to them. The river is thin enough that you can jump over it without a vaulting pole.",
+            "English (Europe)": "Yes, the infamous one. The only insects that spawn here are tarantulas (as long as it is night time in a Tarantula month), and the 7 rocks have crafting materials if you can get to them. The river is thin enough that you can jump over it without a vaulting pole.",
+            "French": "Oui, l'infâme. Les seuls insectes qui apparaissent ici sont des tarentules (tant qu'il fait nuit dans un mois de tarentule), et les 7 rochers ont des matériaux d'artisanat si vous pouvez les atteindre. La rivière est suffisamment fine pour que vous puissiez sauter par-dessus sans perche.",
+            "French (US)": "Oui, l'infâme. Les seuls insectes qui apparaissent ici sont des tarentules (tant qu'il fait nuit dans un mois de tarentule), et les 7 rochers ont des matériaux d'artisanat si vous pouvez les atteindre. La rivière est suffisamment fine pour que vous puissiez sauter par-dessus sans perche."
+        },
+        {
+            "English": "Tree Island",
+            "English (Europe)": "Tree Island",
+            "French": "Île aux Feuillus",
+            "French (US)": "Île aux Feuillus"
+        },
+        {
+            "English": "This island has no river or pond and has tons of hardwood and coconut trees, and the only insects that spawn are those that are associated with trees.",
+            "English (Europe)": "This island has no river or pond and has tons of hardwood and coconut trees, and the only insects that spawn are those that are associated with trees.",
+            "French": "Cette île n'a ni rivière ni étang et possède des tonnes de feuillus et de cocotiers, et les seuls insectes qui apparaissent sont ceux qui se trouvent sur les arbres.",
+            "French (US)": "Cette île n'a ni rivière ni étang et possède des tonnes de feuillus et de cocotiers, et les seuls insectes qui apparaissent sont ceux qui se trouvent sur les arbres."
+        },
+        {
+            "English": "Tree Island 2",
+            "English (Europe)": "Tree Island 2",
+            "French": "Île aux Feuillus 2",
+            "French (US)": "Île aux Feuillus 2"
+        },
+        {
+            "English": "This island is exactly the same as Bamboo Island but the trees are all just regular hardwood trees.",
+            "English (Europe)": "This island is exactly the same as Bamboo Island but the trees are all just regular hardwood trees.",
+            "French": "Cette île est exactement la même que l'île Bamboo, mais les arbres ne sont que des arbres feuillus ordinaires.",
+            "French (US)": "Cette île est exactement la même que l'île Bamboo, mais les arbres ne sont que des arbres feuillus ordinaires."
+        },
+        {
+            "English": "Curly River Island",
+            "English (Europe)": "Curly River Island",
+            "French": "Île à Rivière Courbée",
+            "French (US)": "Île à Rivière Courbée"
+        },
+        {
+            "English": "There is one square cliff at the north east, a few flowers and rocks and a small amount of fruit trees. Only insects associated with water spawn here.",
+            "English (Europe)": "There is one square cliff at the north east, a few flowers and rocks and a small amount of fruit trees. Only insects associated with water spawn here.",
+            "French": "Il y a une falaise carrée au nord-est, quelques fleurs et rochers et une petite quantité d'arbres fruitiers. Seuls les insectes associés à l'eau apparaissent ici.",
+            "French (US)": "Il y a une falaise carrée au nord-est, quelques fleurs et rochers et une petite quantité d'arbres fruitiers. Seuls les insectes associés à l'eau apparaissent ici."
+        },
+        {
+            "English": "Big Fish Island 2",
+            "English (Europe)": "Big Fish Island 2",
+            "French": "Île aux Gros Poissons 2",
+            "French (US)": "Île aux Gros Poissons 2"
+        },
+        {
+            "English": "This rare island only spawns big fish. Otherwise it is quite normal, with less flowers and a lower chance of appearing than the other big fish island.",
+            "English (Europe)": "This rare island only spawns big fish. Otherwise it is quite normal, with less flowers and a lower chance of appearing than the other big fish island.",
+            "French": "Sur cette île rare n'apparaissent que de gros poissons. Sinon, c'est une île tout à fait normale, avec moins de fleurs et moins de chances d'apparaître que l'autre île aux gros poissons.",
+            "French (US)": "Sur cette île rare n'apparaissent que de gros poissons. Sinon, c'est une île tout à fait normale, avec moins de fleurs et moins de chances d'apparaître que l'autre île aux gros poissons."
+        },
+        {
+            "English": "Trash Island",
+            "English (Europe)": "Trash Island",
+            "French": "Île aux Déchets",
+            "French (US)": "Île aux Déchets"
+        },
+        {
+            "English": "Everything you can fish here is trash. Only water-related insects spawn.",
+            "English (Europe)": "Everything you can fish here is trash. Only water-related insects spawn.",
+            "French": "Tout ce que vous pouvez pêcher ici ce sont des ordures. Seuls les insectes d'eau apparaîssent.",
+            "French (US)": "Tout ce que vous pouvez pêcher ici ce sont des ordures. Seuls les insectes d'eau apparaîssent."
+        },
+        {
+            "English": "Fins Island",
+            "English (Europe)": "Fins Island",
+            "French": "Île aux Requins",
+            "French (US)": "Île aux Requins"
+        },
+        {
+            "English": "A rectangular pond with rectangular cliffs inside, the tallest one being too tall to climb up to. The only fish that spawn here are the largest finned fish.",
+            "English (Europe)": "A rectangular pond with rectangular cliffs inside, the tallest one being too tall to climb up to. The only fish that spawn here are the largest finned fish.",
+            "French": "Un étang rectangulaire avec des falaises rectangulaires à l'intérieur, la plus haute étant trop haute pour y grimper. Les seuls poissons qui apparaîssent ici sont les plus gros poissons à nageoires.",
+            "French (US)": "Un étang rectangulaire avec des falaises rectangulaires à l'intérieur, la plus haute étant trop haute pour y grimper. Les seuls poissons qui apparaîssent ici sont les plus gros poissons à nageoires."
+        },
+        {
+            "English": "Falls Island",
+            "English (Europe)": "Falls Island",
+            "French": "Île aux Cascades",
+            "French (US)": "Île aux Cascades"
+        },
+        {
+            "English": "Lots of cliffs, waterfalls and river forks. Normal resource spawns.",
+            "English (Europe)": "Lots of cliffs, waterfalls and river forks. Normal resource spawns.",
+            "French": "Beaucoup de falaises, cascades et fourches de rivière. Les ressources normales apparaîssent.",
+            "French (US)": "Beaucoup de falaises, cascades et fourches de rivière. Les ressources normales apparaîssent."
+        },
+        {
+            "English": "Gold Island",
+            "English (Europe)": "Gold Island",
+            "French": "Île aux Pépites d'or",
+            "French (US)": "Île aux Pépites d'or"
+        },
+        {
+            "English": "A very rare island with flowers, scorpions and a rectangular pond. If you climb up onto the cliff and climb down from the back, you can vault over to a tiny island in the middle and get 8 gold nuggets from a single rock.",
+            "English (Europe)": "A very rare island with flowers, scorpions and a rectangular pond. If you climb up onto the cliff and climb down from the back, you can vault over to a tiny island in the middle and get 8 gold nuggets from a single rock.",
+            "French": "Une île très rare avec des fleurs, des scorpions et un étang rectangulaire. Si vous montez sur la falaise et descendez à l'arrière, vous pouvez sauter sur une petite île au milieu et obtenir 8 pépites d'or d'un seul rocher.",
+            "French (US)": "Une île très rare avec des fleurs, des scorpions et un étang rectangulaire. Si vous montez sur la falaise et descendez à l'arrière, vous pouvez sauter sur une petite île au milieu et obtenir 8 pépites d'or d'un seul rocher."
+        },
+        {
+            "English": "1 visit/day",
+            "English (Europe)": "1 visit/day",
+            "French": "1 visite/jour",
+            "French (US)": "1 visite/jour"
+        },
+        {
+            "English": "Town Hall, Vaulting Pole, Ladder",
+            "English (Europe)": "Town Hall, Vaulting Pole, Ladder",
+            "French": "Mairie, Perche, Echelle",
+            "French (US)": "Mairie, Perche, Echelle"
+        },
+        {
+            "English": "Ladder",
+            "English (Europe)": "Ladder",
+            "French": "Echelle",
+            "French (US)": "Echelle"
+        },
+        {
+            "English": "Vaulting Pole",
+            "English (Europe)": "Vaulting Pole",
+            "French": "Perche",
+            "French (US)": "Perche"
+        },
+        {
+            "English": "Town Hall, Ladder",
+            "English (Europe)": "Town Hall, Ladder",
+            "French": "Mairie, Echelle",
+            "French (US)": "Mairie, Echelle"
+        },
+        {
+            "English": "Town Hall, Vaulting Pole",
+            "English (Europe)": "Town Hall, Vaulting Pole",
+            "French": "Mairie, Perche",
+            "French (US)": "Mairie, Perche"
+        },
+        {
+            "English": "durability",
+            "English (Europe)": "durability",
+            "French": "durabilité",
+            "French (US)": "durabilité"
+        },
+        {
+            "English": "stack size",
+            "English (Europe)": "stack size",
+            "French": "taille de la pile",
+            "French (US)": "taille de la pile"
+        },
+        {
+            "English": "Fireworks Show",
+            "English (Europe)": "Fireworks Show",
+            "French": "Feux d'artifice",
+            "French (US)": "Feux d'artifice"
+        },
+        {
+            "English": "Bug-Off",
+            "English (Europe)": "Bug-Off",
+            "French": "Insectosafari",
+            "French (US)": "Insectosafari"
+        },
+        {
+            "English": "Fishing Tourney",
+            "English (Europe)": "Fishing Tourney",
+            "French": "Tournoi de Pêche",
+            "French (US)": "Tournoi de Pêche"
+        },
+        {
+            "English": "All day",
+            "English (Europe)": "All day",
+            "French": "Toute la journée",
+            "French (US)": "Toute la journée"
+        },
+        {
+            "English": "Today",
+            "English (Europe)": "Today",
+            "French": "Aujourd'hui",
+            "French (US)": "Aujourd'hui"
+        },
+        {
+            "English": "Crafting Season",
+            "English (Europe)": "Crafting Season",
+            "French": "Saison de Fabrication",
+            "French (US)": "Saison de Fabrication"
+        },
+        {
+            "English": "Zodiac Season",
+            "English (Europe)": "Zodiac Season",
+            "French": "Saison du Zodiaque",
+            "French (US)": "Saison du Zodiaque"
+        },
+        {
+            "English": "Shopping Season",
+            "English (Europe)": "Shopping Season",
+            "French": "Saison d'Achats",
+            "French (US)": "Saison d'Achats"
+        },
+        {
+            "English": "Special Event",
+            "English (Europe)": "Special Event",
+            "French": "Evènement Spécial",
+            "French (US)": "Evènement Spécial"
+        },
+        {
+            "English": "Nook Shopping Event",
+            "English (Europe)": "Nook Shopping Event",
+            "French": "Evènement du Nook Shopping",
+            "French (US)": "Evènement du Nook Shopping"
+        },
+        {
+            "English": "Visit https://nook.lol/ for more information",
+            "English (Europe)": "Visit https://nook.lol/ for more information",
+            "French": "Visitez https://nook.lol/ pour plus d'informations",
+            "French (US)": "Visitez https://nook.lol/ pour plus d'informations"
+        },
+        {
+            "English": "What's New?",
+            "English (Europe)": "What's New?",
+            "French": "Quoi de neuf?",
+            "French (US)": "Quoi de neuf?"
+        },
+        {
+            "English": "Let's go!",
+            "English (Europe)": "Let's go!",
+            "French": "C'est parti!",
+            "French (US)": "C'est parti!"
+        },
+        {
+            "English": "Volunteer Translators",
+            "English (Europe)": "Volunteer Translators",
+            "French": "Traducteurs Bénévoles",
+            "French (US)": "Traducteurs Bénévoles"
+        },
+        {
+            "English": "Thanks for your help!",
+            "English (Europe)": "Thanks for your help!",
+            "French": "Merci pour votre aide!",
+            "French (US)": "Merci pour votre aide!"
+        },
+        {
+            "English": "All Events",
+            "English (Europe)": "All Events",
+            "French": "Tous les Evènements",
+            "French (US)": "Tous les Evènements"
+        },
+        {
+            "English": "Skip",
+            "English (Europe)": "Skip",
+            "French": "Passer",
+            "French (US)": "Passer"
+        }
+    ]
+}

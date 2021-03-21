@@ -148,7 +148,6 @@ export class LanguagePicker extends Component{
           onChangeItem={async (item)=>{global.language=item.value, await AsyncStorage.setItem("Language", item.value);}}
         />
       </View>
-      <HeaderNote>A restart may be required to see changes.</HeaderNote>
       <HeaderNote>Translations only apply to game item names only, all other app content is in English. Some items may be missing translations. If you would like to help translate this app, feel free to reach out via email. </HeaderNote>
     </>
     )

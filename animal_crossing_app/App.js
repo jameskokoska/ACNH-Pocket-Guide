@@ -38,8 +38,9 @@ import GuidePage from './pages/GuidePage';
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
-global.version = require("./app.json")["expo"]["version"];
-global.versionCode = require("./app.json")["expo"]["android"]["versionCode"];
+const appInfo = require("./app.json")
+global.version = appInfo["expo"]["version"];
+global.versionCode = appInfo["expo"]["android"]["versionCode"];
 global.changelog = `
 -Can set language in settings
 -French language translation supported, thanks Christophe!

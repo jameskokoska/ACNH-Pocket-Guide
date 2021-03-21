@@ -17,7 +17,7 @@ import {getPhotoShadow} from "./GetPhoto"
 import {getMonthShort} from "./DateFunctions"
 import colors from "../Colors"
 import {getCurrentDateObject, parseActiveTime} from "./DateFunctions"
-import {getSettingsString} from "../LoadJsonData"
+import {attemptToTranslateItem, getSettingsString} from "../LoadJsonData"
 
 const {width} = Dimensions.get('window');
 
@@ -98,10 +98,7 @@ class ListItem extends PureComponent{
       }
     }
 
-    var label = this.props.item.[this.props.textProperty[this.props.item.dataSet]];
-    if(label==null || label==undefined){
-      label = this.props.item["Name"]
-    }
+    var label = attemptToTranslateItem(this.props.item.[this.props.textProperty[this.props.item.dataSet]])    
 
     if(this.props.gridType==="smallGrid"){
       var textProperty2Component = <View/>;

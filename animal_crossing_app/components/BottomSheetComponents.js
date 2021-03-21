@@ -4,7 +4,7 @@ import colors from '../Colors.js';
 import FastImage from './FastImage';
 import Check from './Check';
 import TextFont from './TextFont'
-import {commas, capitalize, checkOff, capitalizeFirst} from '../LoadJsonData'
+import {attemptToTranslateItem, commas, capitalize, checkOff, capitalizeFirst} from '../LoadJsonData'
 import {getPhotoCorner, getMaterialImage} from "./GetPhoto"
 import {getSettingsString, attemptToTranslate, attemptToTranslateSpecial} from "../LoadJsonData"
 import {ScrollView} from 'react-native-gesture-handler'
@@ -112,9 +112,10 @@ export class Title extends Component {
       paddingTop = 10;
     }
     if(this.props.item[this.props.textProperty[this.props.item.dataSet]]!==undefined){
+      var label = attemptToTranslateItem(this.props.item[this.props.textProperty[this.props.item.dataSet]])
       return <View style={[styles.titleContainer,{paddingLeft: paddingLeft, paddingRight: paddingRight, paddingTop: paddingTop}]}>
         <TextFont style={[styles.title,{color:colors.textBlack[global.darkMode]}]} bold={true}>
-          {capitalize(this.props.item[this.props.textProperty[this.props.item.dataSet]])}
+          {capitalize(label)}
         </TextFont>
       </View>
     } else {
@@ -221,13 +222,13 @@ export class InfoLineTriple extends Component {
   render() {
     var textLines = [];
     if(this.props.item[this.props.textProperty1]!=="None" && this.props.item[this.props.textProperty2]!==undefined){
-      textLines.push(attemptToTranslateSpecial(this.props.item[this.props.textProperty1]), "variants");
+      textLines.push(attemptToTranslateSpecial(this.props.item[this.props.textProperty1], "variants"));
     }
     if (this.props.item[this.props.textProperty2]!=="None" && this.props.item[this.props.textProperty2]!==undefined){
-      textLines.push(attemptToTranslateSpecial(this.props.item[this.props.textProperty2]), "variants");
+      textLines.push(attemptToTranslateSpecial(this.props.item[this.props.textProperty2], "variants"));
     }
     if (this.props.item[this.props.textProperty3]!=="None" && this.props.item[this.props.textProperty2]!==undefined){
-      textLines.push(attemptToTranslateSpecial(this.props.item[this.props.textProperty3]), "variants");
+      textLines.push(attemptToTranslateSpecial(this.props.item[this.props.textProperty3], "variants"));
     }
     if(textLines.length===0){
       return <View/>

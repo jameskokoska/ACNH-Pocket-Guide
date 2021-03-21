@@ -34,11 +34,11 @@ const FishRoute = () => (
     activeCreaturesMonth={true}
     leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
     imageProperty={["Icon Image"]}
-    textProperty={[global.language]}
+    textProperty={["Name",]}
     textProperty2={["creatureTime"]}
     textProperty3={["Where/How"]}
     checkListKey={[["fishCheckList","Name"]]}
-    searchKey={[[global.language]]}
+    searchKey={[["Name",]]}
     gridType="row" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedFish"}
     appBarColor={colors.fishAppBar[global.darkMode]}
@@ -65,11 +65,11 @@ const BugsRoute = () => (
     activeCreaturesMonth={true}
     leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
     imageProperty={["Icon Image"]}
-    textProperty={[global.language]}
+    textProperty={["Name",]}
     textProperty2={["creatureTime"]}
     textProperty3={["Where/How"]}
     checkListKey={[["bugCheckList","Name"]]}
-    searchKey={[[global.language]]}
+    searchKey={[["Name",]]}
     gridType="row" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedBugs"}
     appBarColor={colors.bugAppBar[global.darkMode]}
@@ -96,11 +96,11 @@ const SeaRoute = () => (
     activeCreaturesMonth={true}
     leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
     imageProperty={["Icon Image"]}
-    textProperty={[global.language]}
+    textProperty={["Name",]}
     textProperty2={["creatureTime"]}
     textProperty3={["Shadow"]}
     checkListKey={[["seaCheckList","Name"]]}
-    searchKey={[[global.language]]}
+    searchKey={[["Name",]]}
     gridType="row" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedSea"}
     appBarColor={colors.fishAppBar[global.darkMode]}
@@ -122,9 +122,9 @@ const FossilsRoute = () => (
     showVariations={[false]}
     title="Fossils"
     imageProperty={["Image"]}
-    textProperty={[global.language]}
+    textProperty={["Name",]}
     checkListKey={[["fossilCheckList","Name"]]}
-    searchKey={[[global.language]]}
+    searchKey={[["Name",]]}
     gridType="smallGrid" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedFossils"}
     appBarColor={colors.fossilAppBar[global.darkMode]}
@@ -147,11 +147,11 @@ const ArtRoute = () => (
     showVariations={[false]}
     title="Art"
     imageProperty={["Image"]}
-    textProperty={[global.language]}
+    textProperty={["Name",]}
     textProperty2={[""]}
     textProperty3={[""]}
     checkListKey={[["artCheckList","Name","Genuine"]]}
-    searchKey={[[global.language]]}
+    searchKey={[["Name",]]}
     gridType="largeGridSmaller" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedArt"}
     appBarColor={colors.artAppBar[global.darkMode]}
