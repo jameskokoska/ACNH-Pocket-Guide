@@ -8,7 +8,7 @@ import Check from './Check';
 import colors from '../Colors'
 import PopupAddTask from "./PopupAddTask"
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {getSettingsString} from "../LoadJsonData"
+import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
 import DropDownPicker from 'react-native-dropdown-picker'
 import FastImage from "./FastImage"
 
@@ -33,16 +33,16 @@ class TodoList extends Component {
 
   loadList = async() => {
     var defaultList = [
-      {title: 'Rock 1', finished: false, picture:"rock.png",small:true},
-      {title: 'Rock 2', finished: false, picture:"rock.png",small:true},
-      {title: 'Rock 3', finished: false, picture:"rock.png",small:true},
-      {title: 'Rock 4', finished: false, picture:"rock.png",small:true},
-      {title: 'Rock 5', finished: false, picture:"rock.png",small:true},
-      {title: 'Rock 6', finished: false, picture:"rock.png",small:true},
-      {title: 'Check turnip prices', finished: false, picture:"turnip.png"},
-      {title: 'Water flowers', finished: false, picture:"flower.png"},
-      {title: 'Talk to villagers', finished: false, picture:"cat.png"},
-      {title: 'Dig fossils', finished: false, picture:"digIcon.png"},
+      {title: attemptToTranslate('Rock') + " 1", finished: false, picture:"rock.png",small:true},
+      {title: attemptToTranslate('Rock') + " 2", finished: false, picture:"rock.png",small:true},
+      {title: attemptToTranslate('Rock') + " 3", finished: false, picture:"rock.png",small:true},
+      {title: attemptToTranslate('Rock') + " 4", finished: false, picture:"rock.png",small:true},
+      {title: attemptToTranslate('Rock') + " 5", finished: false, picture:"rock.png",small:true},
+      {title: attemptToTranslate('Rock') + " 6", finished: false, picture:"rock.png",small:true},
+      {title: attemptToTranslate('Check Turnip Prices'), finished: false, picture:"turnip.png"},
+      {title: attemptToTranslate('Water Flowers'), finished: false, picture:"flower.png"},
+      {title: attemptToTranslate('Talk To Villagers'), finished: false, picture:"cat.png"},
+      {title: attemptToTranslate('Dig Fossils'), finished: false, picture:"digIcon.png"},
     ]
     var storageData = JSON.parse(await getStorage("ToDoList",JSON.stringify(defaultList)));
     var storageShowTurnipLog = await getStorage("TurnipListShow","true") === "true";
@@ -247,14 +247,14 @@ class TurnipLog extends Component {
         <TextFont bold={true} numberOfLines={2} style={{marginBottom: 10, fontSize:23, color:colors.textBlack[global.darkMode]}}>{capitalize("Turnip Log")}</TextFont>
         <DropDownPicker
           items={[
-            {label: "Last week's pattern: Unknown", value: "-1",},
-            {label: "Last week's pattern: Fluctuating", value: "0",},
-            {label: "Last week's pattern: Small spike", value: "3",},
-            {label: "Last week's pattern: Large spike", value: "1",},
-            {label: "Last week's pattern: Decreasing", value: "2",},
+            {label: attemptToTranslate("Last week's pattern") + ": " + attemptToTranslate("Unknown"), value: "-1",},
+            {label: attemptToTranslate("Last week's pattern") + ": " + attemptToTranslate("Fluctuating"), value: "0",},
+            {label: attemptToTranslate("Last week's pattern") + ": " + attemptToTranslate("Small spike"), value: "3",},
+            {label: attemptToTranslate("Last week's pattern") + ": " + attemptToTranslate("Large spike"), value: "1",},
+            {label: attemptToTranslate("Last week's pattern") + ": " + attemptToTranslate("Decreasing"), value: "2",},
           ]}
           defaultValue={this.state.lastPattern}
-          placeholder={"Last week's pattern"}
+          placeholder={attemptToTranslate("Last week's pattern")}
           dropDownMaxHeight={300}
           containerStyle={{height: 45}}
           style={[{width: "100%", borderWidth: 0, backgroundColor: colors.lightDarkAccentHeavyBackground[global.darkMode], borderTopLeftRadius: 8, borderTopRightRadius: 8,borderBottomLeftRadius: 8, borderBottomRightRadius: 8}]}
@@ -265,17 +265,17 @@ class TurnipLog extends Component {
           labelStyle={{fontFamily: "ArialRoundedBold", fontSize: 15, marginLeft:10, color:colors.textBlack[global.darkMode]}}
           customTickIcon={()=><View/>}
           activeItemStyle={{borderRadius: 10, backgroundColor: colors.lightDarkAccentHeavy[global.darkMode]}}
-          dropDownStyle={{borderBottomLeftRadius: 10, borderBottomRightRadius: 10, borderWidth: 0, backgroundColor: colors.lightDarkAccent[global.darkMode], opacity: 0.98, }}
+          dropDownStyle={{borderBottomLeftRadius: 10, borderBottomRightRadius: 10, borderWidth: 0, backgroundColor: colors.lightDarkAccent2[global.darkMode], opacity: 0.98, }}
           onChangeItem={async (item) => {this.setState({lastPattern:item.value}); await AsyncStorage.setItem("TurnipListLastPattern", item.value);}}
         />
         <View style={{height:5}}/>
         <DropDownPicker
           items={[
-            {label: "First time buyer? Yes", value: "true",},
-            {label: "First time buyer? No", value: "false",},
+            {label: attemptToTranslate("First time buyer?") + ": " + attemptToTranslate("Yes"), value: "true",},
+            {label: attemptToTranslate("First time buyer?") + ": " + attemptToTranslate("No"), value: "false",},
           ]}
           defaultValue={this.state.firstTime}
-          placeholder={"First time buyer?"}
+          placeholder={attemptToTranslate("First time buyer?")}
           dropDownMaxHeight={300}
           containerStyle={{height: 45}}
           style={[{width: "100%", borderWidth: 0, backgroundColor: colors.lightDarkAccentHeavyBackground[global.darkMode], borderTopLeftRadius: 8, borderTopRightRadius: 8,borderBottomLeftRadius: 8, borderBottomRightRadius: 8}]}
@@ -286,7 +286,7 @@ class TurnipLog extends Component {
           labelStyle={{fontFamily: "ArialRoundedBold", fontSize: 15, marginLeft:10, color:colors.textBlack[global.darkMode]}}
           customTickIcon={()=><View/>}
           activeItemStyle={{borderRadius: 10, backgroundColor: colors.lightDarkAccentHeavy[global.darkMode]}}
-          dropDownStyle={{borderBottomLeftRadius: 10, borderBottomRightRadius: 10, borderWidth: 0, backgroundColor: colors.lightDarkAccent[global.darkMode], opacity: 0.98, }}
+          dropDownStyle={{borderBottomLeftRadius: 10, borderBottomRightRadius: 10, borderWidth: 0, backgroundColor: colors.lightDarkAccent2[global.darkMode], opacity: 0.98, }}
           onChangeItem={async (item) => {this.setState({firstTime:item.value}); await AsyncStorage.setItem("TurnipListFirstTime", item.value);}}
         />
 
@@ -323,7 +323,7 @@ class TurnipItem extends Component {
             keyboardType={"numeric"}
             style={{textAlign:"center", fontSize: 17, width:"55%", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 6, borderRadius: 5}}
             onChangeText={(text) => {item.purchase = text; this.props.updateItem(item,this.props.index)}}
-            placeholder={"Sunday Price"}
+            placeholder={attemptToTranslate("Sunday Price")}
             defaultValue={this.props.item.purchase}
             placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
             multiline={true}
@@ -340,7 +340,7 @@ class TurnipItem extends Component {
             keyboardType={"numeric"}
             style={{textAlign:"center", fontSize: 17, width:"25%", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 6, borderRadius: 5}}
             onChangeText={(text) => {item.am = text; this.props.updateItem(item,this.props.index)}}
-            placeholder={"AM"}
+            placeholder={attemptToTranslate("AM")}
             defaultValue={this.props.item.am}
             placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
             multiline={true}
@@ -351,7 +351,7 @@ class TurnipItem extends Component {
             keyboardType={"numeric"}
             style={{textAlign:"center", fontSize: 17, width:"25%", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 6, borderRadius: 5}}
             onChangeText={(text) => {item.pm = text; this.props.updateItem(item,this.props.index)}}
-            placeholder={"PM"}
+            placeholder={attemptToTranslate("PM")}
             defaultValue={this.props.item.pm}
             placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
             multiline={true}
@@ -409,7 +409,7 @@ class TodoItem extends Component {
                 {imageComp}
               </View>
               <View style={styles.rowTextTop}>
-                <TextFont bold={true} numberOfLines={2} style={{fontSize:20, color:colors.textBlack[global.darkMode]}}>{capitalize(this.props.item.title)}</TextFont>
+                <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:20, color:colors.textBlack[global.darkMode]}}>{capitalize(this.props.item.title)}</TextFont>
               </View>
               <TouchableOpacity style={{position:"absolute", right: -5}} 
                 activeOpacity={0.6}
@@ -471,7 +471,7 @@ class TodoItemSmall extends Component {
             {imageComp}
           </View>
         </TouchableOpacity>
-        {this.props.item.title==="" ? <View/> : <TextFont numberOfLines={2} bold={false} style={{width: 60, marginTop: 3, color: colors.textBlack[global.darkMode], fontSize: 12, textAlign:"center"}}>{this.props.item.title}</TextFont>}
+        {this.props.item.title==="" ? <View/> : <TextFont translate={false} numberOfLines={2} bold={false} style={{width: 60, marginTop: 3, color: colors.textBlack[global.darkMode], fontSize: 12, textAlign:"center"}}>{this.props.item.title}</TextFont>}
       </View>
     )
   }

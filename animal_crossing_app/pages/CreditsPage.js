@@ -8,6 +8,7 @@ import colors from '../Colors'
 import PopupRating from "../components/PopupRating"
 import ButtonComponent from "../components/ButtonComponent"
 import {MailLink, ExternalLink, SubHeader, Header, Paragraph} from "../components/Formattings"
+import {attemptToTranslate} from "../LoadJsonData"
 
 class CreditsPage extends Component {
   constructor(props) {
@@ -38,12 +39,17 @@ class CreditsPage extends Component {
             <StoreHoursContainer backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} image={require("../assets/icons/James.png")} text="James" textBottom="Lead Programmer"/>
             <StoreHoursContainer backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} image={require("../assets/icons/Ryan.png")} text="Ryan" textBottom="Lead Graphics"/>
           </View>
-
-          <View style={{height: 50}}/>
+          <View style={{height: 20}}/>
+          <SubHeader>Volunteer Translators</SubHeader>
+          <Paragraph>{attemptToTranslate("Thanks for your help!")}</Paragraph>
+          <View style={{height: 10}}/>
+          <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
+            <SubHeader>French: Christophe Laffitte</SubHeader>
+          </View>
+          <View style={{height: 30}}/>
           <MailLink/>
           <PopupRating show={this.state.show} noShow={()=>{this.setState({show:false})}}/>
           <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.setState({show:true})}} text={"Leave a rating"} />
-          
           <View style={{height:60}}/>
           <SubHeader>Additional Information</SubHeader>
           <Paragraph>This application was created using React Native, with the original App programmed in Flutter. This application and contents are NOT affiliated with Nintendo. All local artwork recreated/licensed. This application is not made for commercial use, and is provided at a price of 0$ (free) on the Google Play Store with no advertisements. All application source code is of property to respective owners/contributors listed on the Credits page and/or licenses associated within specific packages/libraries within this application.</Paragraph>

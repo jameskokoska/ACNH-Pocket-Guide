@@ -107,9 +107,9 @@ class ListItem extends PureComponent{
       var textProperty2Component = <View/>;
       if(this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]!==""){
         if(this.props.textProperty2[this.props.item.dataSet]==="(DIY)")
-          textProperty2Component = <TextFont bold={false} style={{textAlign:'center', color:this.props.labelColor, fontSize:12}}>(DIY)</TextFont>
+          textProperty2Component = <TextFont translate={false} bold={false} style={{textAlign:'center', color:this.props.labelColor, fontSize:12}}>(DIY)</TextFont>
         else 
-          textProperty2Component = <TextFont bold={false} style={{textAlign:'center', color:this.props.labelColor, fontSize:12}}>{capitalize(this.props.item[textProperty2Text])}</TextFont>
+          textProperty2Component = <TextFont translate={false} bold={false} style={{textAlign:'center', color:this.props.labelColor, fontSize:12,}}>{capitalize(this.props.item[textProperty2Text])}</TextFont>
       }
       return (
         <View style={styles.gridWrapper}>
@@ -137,7 +137,7 @@ class ListItem extends PureComponent{
                 cacheKey={this.props.item.[this.props.imageProperty[this.props.item.dataSet]]}
               />
               <View style={styles.gridBoxText}>
-                <TextFont numberOfLines={2} bold={true} style={{textAlign:'center', color:this.props.labelColor, fontSize:13}}>{capitalize(label)}</TextFont>
+                <TextFont translate={false} numberOfLines={2} bold={true} style={{textAlign:'center', color:this.props.labelColor, fontSize:13}}>{capitalize(label)}</TextFont>
                 {textProperty2Component}
               </View>
             </View>
@@ -171,7 +171,7 @@ class ListItem extends PureComponent{
                 cacheKey={this.props.item.[this.props.imageProperty[this.props.item.dataSet]]}
               />
               <View style={styles.gridBoxTextLarge}>
-                <TextFont bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{capitalize(label)}</TextFont>
+                <TextFont translate={false} bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{capitalize(label)}</TextFont>
               </View>
             </View>
           </TouchableNativeFeedback>
@@ -180,14 +180,14 @@ class ListItem extends PureComponent{
     } else if (this.props.gridType==="largeGridSmaller"){
       var priceComponent = <View/>
       if(this.props.textProperty2==="construction" && this.props.item["Buy"] !== undefined && this.props.item["Buy"] !== "5000" && this.props.item["Buy"] !== "NFS"){
-        priceComponent = <View style={{flexDirection:"row", alignItems:"center", justifyContent:"center", marginTop: 3}}><Image style={{width:15,height:15,resizeMode:'contain',  marginRight:3}} source={require("../assets/icons/bellBag.png")}/><TextFont bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{commas(this.props.item["Buy"])}</TextFont></View>
+        priceComponent = <View style={{flexDirection:"row", alignItems:"center", justifyContent:"center", marginTop: 3}}><Image style={{width:15,height:15,resizeMode:'contain',  marginRight:3}} source={require("../assets/icons/bellBag.png")}/><TextFont translate={false} bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{commas(this.props.item["Buy"])}</TextFont></View>
       } else if(this.props.textProperty2==="construction" && this.props.item["Sell"] !== undefined){
-        priceComponent = <View style={{flexDirection:"row", alignItems:"center", justifyContent:"center", marginTop: 3}}><Image style={{width:15,height:15,resizeMode:'contain',  marginRight:3}} source={require("../assets/icons/coin.png")}/><TextFont bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{commas(this.props.item["Sell"])}</TextFont></View>
+        priceComponent = <View style={{flexDirection:"row", alignItems:"center", justifyContent:"center", marginTop: 3}}><Image style={{width:15,height:15,resizeMode:'contain',  marginRight:3}} source={require("../assets/icons/coin.png")}/><TextFont translate={false} bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{commas(this.props.item["Sell"])}</TextFont></View>
       } else if(this.props.textProperty2==="cards"){
         if(this.props.item[getSettingsString("settingsNorthernHemisphere") === "true" ? "NH Start Date":"SH Start Date"] !== (undefined || "NA")){
-          priceComponent = <View style={{flexDirection:"row", alignItems:"center", justifyContent:"center", marginTop: 3}}><Image style={{width:15,height:15,resizeMode:'contain',  marginRight:3}} source={require("../assets/icons/clockIcon.png")}/><TextFont bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{this.props.item[getSettingsString("settingsNorthernHemisphere") === "true" ? "NH Start Date":"SH Start Date"] + " - " + this.props.item[getSettingsString("settingsNorthernHemisphere") === "true" ? "NH End Date":"SH End Date"]}</TextFont></View>
+          priceComponent = <View style={{flexDirection:"row", alignItems:"center", justifyContent:"center", marginTop: 3}}><Image style={{width:15,height:15,resizeMode:'contain',  marginRight:3}} source={require("../assets/icons/clockIcon.png")}/><TextFont translate={false} bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{this.props.item[getSettingsString("settingsNorthernHemisphere") === "true" ? "NH Start Date":"SH Start Date"] + " - " + this.props.item[getSettingsString("settingsNorthernHemisphere") === "true" ? "NH End Date":"SH End Date"]}</TextFont></View>
         } else if (this.props.item["Buy"]==="NFS") {
-          priceComponent = <TextFont bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{"NFS"}</TextFont>
+          priceComponent = <TextFont translate={false} bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{"NFS"}</TextFont>
         }
       }
       return( 
@@ -216,7 +216,7 @@ class ListItem extends PureComponent{
                 cacheKey={this.props.item.[this.props.imageProperty[this.props.item.dataSet]]}
               />
               <View style={styles.gridBoxTextLargeSmaller}>
-                <TextFont bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{capitalize(label)}</TextFont>
+                <TextFont translate={false} bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{capitalize(label)}</TextFont>
                 {priceComponent}
               </View>
             </View>
@@ -256,13 +256,13 @@ class ListItem extends PureComponent{
               </View>
               <View style={styles.rowTextContainer}>
                 <View style={styles.rowTextTop}>
-                  <TextFont bold={true} numberOfLines={2} style={{fontSize:20, color:this.props.labelColor}}>{capitalize(label)}</TextFont>
+                  <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:20, color:this.props.labelColor}}>{capitalize(label)}</TextFont>
                 </View>
                 <View style={styles.rowTextBottom}>
-                  <TextFont bold={true} numberOfLines={2} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(removeBrackets(textProperty2Text))}</TextFont>
+                  <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(removeBrackets(textProperty2Text))}</TextFont>
                 </View>
                 <View style={styles.rowTextBottom}>
-                  <TextFont bold={true} numberOfLines={2} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(removeBrackets(this.props.item.[this.props.textProperty3[this.props.item.dataSet]]))}</TextFont>
+                  <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(removeBrackets(this.props.item.[this.props.textProperty3[this.props.item.dataSet]]))}</TextFont>
                 </View>
               </View>
               {fishShadow}

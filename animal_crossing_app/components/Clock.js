@@ -9,7 +9,7 @@ class Clock extends Component {
     super(props);
     var month = getMonth(getCurrentDateObject().getMonth());
     var dayNum = getCurrentDateObject().getDate().toString();
-    var weekDay = getWeekDayShort(getCurrentDateObject().getDay()) + ".";
+    var weekDay = getWeekDayShort(getCurrentDateObject().getDay());
     var hours = getCurrentDateObject().getHours();
     var minutes = getCurrentDateObject().getMinutes();
     var afternoon = false;
@@ -30,7 +30,8 @@ class Clock extends Component {
       afternoonDisplay = ""
     }
     this.state = {
-      date: month + " " + dayNum,
+      month: month,
+      dayNum: dayNum,
       time: hours + ":" + minutes,
       afternoonDisplay: afternoonDisplay,
       weekDay: weekDay
@@ -41,7 +42,7 @@ class Clock extends Component {
 
       var month = getMonth(getCurrentDateObject().getMonth());
       var dayNum = getCurrentDateObject().getDate().toString();
-      var weekDay = getWeekDayShort(getCurrentDateObject().getDay()) + ".";
+      var weekDay = getWeekDayShort(getCurrentDateObject().getDay());
       var hours = getCurrentDateObject().getHours();
       var minutes = getCurrentDateObject().getMinutes();
       var afternoon = false;
@@ -62,7 +63,8 @@ class Clock extends Component {
         afternoonDisplay = ""
       }
       this.setState({
-        date: month + " " + dayNum,
+        month: month,
+        dayNum: dayNum,
         time: hours + ":" + minutes,
         afternoonDisplay: afternoonDisplay,
         weekDay: weekDay
@@ -86,10 +88,10 @@ class Clock extends Component {
         <TextFont style={styles.clockTime} bold={true}>{this.state.time}</TextFont>
         <TextFont style={styles.meridian} bold={true}>{this.state.afternoonDisplay}</TextFont>
       </View>
-      <View style={[styles.line,{width:this.state.date.length*21+120}]}/> 
+      <View style={[styles.line,{width:(this.state.dayNum.length+" ".length+this.state.month.length)*21+120}]}/> 
       <View style={{flexDirection: 'row', alignItems: 'center'}}> 
-        <TextFont style={styles.monthDay} bold={true}>{this.state.date}</TextFont>
-        <TextFont style={styles.weekDay} bold={true}>{this.state.weekDay}</TextFont>
+        <TextFont suffix={" "+this.state.dayNum} style={styles.monthDay} bold={true}>{this.state.month}</TextFont>
+        <TextFont suffix="." style={styles.weekDay} bold={true}>{this.state.weekDay}</TextFont>
       </View>
     </View>
   }

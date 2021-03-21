@@ -123,7 +123,7 @@ export class LanguagePicker extends Component{
             {label: "Spanish", value: "Spanish",},
             {label: "Spanish (US)", value: "Spanish (US)",},
             {label: "French", value: "French",},
-            {label: "French (US)", value: "French (US)",},
+            {label: "French (Quebec)", value: "French (US)",},
             {label: "Italian", value: "Italian",},
             {label: "Dutch", value: "Dutch",},
             {label: "Chinese", value: "Chinese",},
@@ -133,7 +133,7 @@ export class LanguagePicker extends Component{
             {label: "Russian", value: "Russian",},
           ]}
           defaultValue={global.language}
-          placeholder={"Last week's pattern"}
+          placeholder={"Select Language..."}
           dropDownMaxHeight={300}
           containerStyle={{height: 45}}
           style={[{width:"100%", borderWidth: 0, backgroundColor: colors.lightDarkAccentHeavyBackground[global.darkMode], borderTopLeftRadius: 8, borderTopRightRadius: 8,borderBottomLeftRadius: 8, borderBottomRightRadius: 8}]}
@@ -144,10 +144,11 @@ export class LanguagePicker extends Component{
           labelStyle={{fontFamily: "ArialRoundedBold", fontSize: 15, marginLeft:10, color:colors.textBlack[global.darkMode]}}
           customTickIcon={()=><View/>}
           activeItemStyle={{borderRadius: 10, backgroundColor: colors.lightDarkAccentHeavy[global.darkMode]}}
-          dropDownStyle={{borderBottomLeftRadius: 10, borderBottomRightRadius: 10, borderWidth: 0, backgroundColor: colors.lightDarkAccentHeavyBackground[global.darkMode], opacity: 0.98, }}
+          dropDownStyle={{borderBottomLeftRadius: 10, borderBottomRightRadius: 10, borderWidth: 0, backgroundColor: colors.lightDarkAccent2[global.darkMode], opacity: 0.98, }}
           onChangeItem={async (item)=>{global.language=item.value, await AsyncStorage.setItem("Language", item.value);}}
         />
       </View>
+      <HeaderNote>A restart may be required to see changes.</HeaderNote>
       <HeaderNote>Translations only apply to game item names only, all other app content is in English. Some items may be missing translations. If you would like to help translate this app, feel free to reach out via email. </HeaderNote>
     </>
     )

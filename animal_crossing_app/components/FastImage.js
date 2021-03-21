@@ -2,6 +2,7 @@ import React, {Component } from 'react'
 import {View, Image} from 'react-native'
 import * as FileSystem from 'expo-file-system'
 //Remade from: https://dev.to/dmitryame/implementing-fast-image-for-react-native-expo-apps-1dn3
+import {getSettingsString} from "../LoadJsonData"
 
 class FastImage extends Component{
   constructor(props){
@@ -28,13 +29,13 @@ class FastImage extends Component{
 
     try {
       var fileURI = `${FileSystem.cacheDirectory}${cacheKey}`;
+      if(getSettingsString("settingsDownloadImages")==="true"){
+        fileURI = `${FileSystem.documentDirectory}${cacheKey}`;
+      }
+      
       // Use the cached image if it exists
       const metadata = await FileSystem.getInfoAsync(fileURI)
       
-      await FileSystem.downloadAsync(
-        this.props.source.uri,
-        fileURI
-      )
       if (!metadata.exists) {
         // download to cache
         if (this.mounted) {

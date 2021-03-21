@@ -6,7 +6,7 @@ import colors from '../Colors.js';
 import FlowerContainer from '../components/FlowerContainer'
 import TextFont from '../components/TextFont'
 import {capitalize} from "../LoadJsonData"
-import {getSettingsString} from "../LoadJsonData";
+import {getSettingsString, attemptToTranslate} from "../LoadJsonData";
 
 const renderTabBar = props => (
   <TabBar
@@ -32,7 +32,7 @@ class SpecificFlowerPage extends Component {
     
     return(<ScrollView>
       <View style={{marginTop: 100}}/>
-      <TextFont bold={true} style={{fontSize: 36, marginLeft: 30, color:colors.textBlack[global.darkMode]}}>{"Hybrid " + capitalize(this.props.flowerGroup) }</TextFont>
+      <TextFont suffix={" "+attemptToTranslate(capitalize(this.props.flowerGroup))} bold={true} style={{fontSize: 36, marginLeft: 30, color:colors.textBlack[global.darkMode]}}>{"Hybrid"}</TextFont>
       <View style={{marginTop: 10}}/>
       {
         data[this.props.flowerGroup].map(flower=> (
@@ -82,14 +82,14 @@ class FlowerPage extends Component {
     this.state = {
       index: 0,
       routes: [
-        { key: 'Roses', title: 'Roses' },
-        { key: 'Pansies', title: 'Pansies' },
-        { key: 'Windflowers', title: 'Windflowers' },
-        { key: 'Hyacinths', title: 'Hyacinths' },
-        { key: 'Lilies', title: 'Lilies' },
-        { key: 'Cosmos', title: 'Cosmos' },
-        { key: 'Mums', title: 'Mums' },
-        { key: 'Tulips', title: 'Tulips' },
+        { key: 'Roses', title: attemptToTranslate('Roses') },
+        { key: 'Pansies', title: attemptToTranslate('Pansies') },
+        { key: 'Windflowers', title: attemptToTranslate('Windflowers') },
+        { key: 'Hyacinths', title: attemptToTranslate('Hyacinths') },
+        { key: 'Lilies', title: attemptToTranslate('Lilies') },
+        { key: 'Cosmos', title: attemptToTranslate('Cosmos') },
+        { key: 'Mums', title: attemptToTranslate('Mums') },
+        { key: 'Tulips', title: attemptToTranslate('Tulips') },
       ],
     }
   }

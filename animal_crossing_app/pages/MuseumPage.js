@@ -4,7 +4,7 @@ import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import ListPage from '../components/ListPage';
 import colors from '../Colors.js';
 import {getMonthShort} from "../components/DateFunctions"
-import {getSettingsString} from "../LoadJsonData"
+import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
 
 const width = { width: Dimensions.get('window').width };
 
@@ -176,11 +176,11 @@ class MuseumPage extends Component {
     this.state = {
       index: 0,
       routes: [
-        { key: 'Fish', title: 'Fish' },
-        { key: 'Bugs', title: 'Bugs' },
-        { key: 'Sea', title: 'Sea' },
-        { key: 'Fossils', title: 'Fossils' },
-        { key: 'Art', title: 'Art' },
+        { key: 'Fish', title: attemptToTranslate('Fish') },
+        { key: 'Bugs', title: attemptToTranslate('Bugs') },
+        { key: 'Sea', title: attemptToTranslate('Sea') },
+        { key: 'Fossils', title: attemptToTranslate('Fossils') },
+        { key: 'Art', title: attemptToTranslate('Art') },
       ],
     }
   }

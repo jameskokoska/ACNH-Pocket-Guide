@@ -18,7 +18,7 @@ import colors from "../Colors";
 import {getPhoto, getMaterialImage} from "./GetPhoto"
 import {PopupInfoCustom} from "./Popup"
 import ToggleSwitch from 'toggle-switch-react-native'
-import {getSettingsString} from "../LoadJsonData"
+import {getSettingsString,attemptToTranslate} from "../LoadJsonData"
 import FastImage from "./FastImage"
 
 class PopupAddTask extends Component {
@@ -97,7 +97,7 @@ class PopupAddTask extends Component {
             allowFontScaling={false}
             style={{fontSize: 20, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 10, borderRadius: 5}}
             onChangeText={(text) => {this.task.title=text}}
-            placeholder={"Task Name"}
+            placeholder={attemptToTranslate("Task Name")}
             placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
           />
         </View>

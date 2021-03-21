@@ -6,7 +6,7 @@ import Check from './Check';
 import TextFont from './TextFont'
 import {commas, capitalize, checkOff, capitalizeFirst} from '../LoadJsonData'
 import {getPhotoCorner, getMaterialImage} from "./GetPhoto"
-import {getSettingsString, attemptToTranslateVariants} from "../LoadJsonData"
+import {getSettingsString, attemptToTranslate, attemptToTranslateSpecial} from "../LoadJsonData"
 import {ScrollView} from 'react-native-gesture-handler'
 import {PopupInfoCustom} from "./Popup"
 
@@ -77,13 +77,27 @@ export class RightCornerCheck extends Component {
 
 export class Phrase extends Component {
   render() {
-    var end = "";
-    if(this.props.popUpPhraseProperty[0]==="Uses"){
-      end = " durability"
-    } else if(this.props.popUpPhraseProperty[0]==="Stack Size"){
-      end = " stack size"
+    if(this.props.popUpPhraseProperty[this.props.item.dataSet]===""){
+      return <View/>
     }
-    return <Text style={[styles.phrase,{fontStyle: 'italic', fontFamily:'serif',color:this.props.specialLabelColor}]}>{'"'+ capitalizeFirst(this.props.item[this.props.popUpPhraseProperty[this.props.item.dataSet]]) + end +'"'}</Text>
+    var text = this.props.item[this.props.popUpPhraseProperty[this.props.item.dataSet]];
+    if(this.props.popUpPhraseProperty[this.props.item.dataSet]==="Catchphrase"){
+      text = capitalizeFirst(attemptToTranslateSpecial(text, "catchphrase"));
+    } else {
+      text = capitalizeFirst(text);
+    }
+
+    var end = "";
+    if(this.props.popUpPhraseProperty[this.props.item.dataSet]==="Uses"){
+      end = " " + attemptToTranslate("durability");
+      if(text==="NA"){
+        text= "No ";
+      }
+    } else if(this.props.popUpPhraseProperty[this.props.item.dataSet]==="Stack Size"){
+      end = " " + attemptToTranslate("stack size")
+    }
+    
+    return <Text style={[styles.phrase,{fontStyle: 'italic', fontFamily:'serif',color:this.props.specialLabelColor}]}>{'"'+ text + end +'"'}</Text>
   }
 }
 
@@ -119,8 +133,8 @@ export class InfoLine extends Component {
     if(this.props.starting!==undefined){
       starting=this.props.starting;
     }
-    var text1 = attemptToTranslateVariants(this.props.item[this.props.textProperty]);
-    var text2 = attemptToTranslateVariants(this.props.item[this.props.textProperty2]);
+    var text1 = attemptToTranslateSpecial(this.props.item[this.props.textProperty], "variants");
+    var text2 = attemptToTranslateSpecial(this.props.item[this.props.textProperty2], "variants");
     var text=capitalizeFirst(commas(text1));
     if(this.props.textProperty2 !== undefined && this.props.item[this.props.textProperty] !== this.props.item[this.props.textProperty2]){
       text+= ", " + capitalizeFirst(commas(text2))
@@ -207,13 +221,13 @@ export class InfoLineTriple extends Component {
   render() {
     var textLines = [];
     if(this.props.item[this.props.textProperty1]!=="None" && this.props.item[this.props.textProperty2]!==undefined){
-      textLines.push(attemptToTranslateVariants(this.props.item[this.props.textProperty1]));
+      textLines.push(attemptToTranslateSpecial(this.props.item[this.props.textProperty1]), "variants");
     }
     if (this.props.item[this.props.textProperty2]!=="None" && this.props.item[this.props.textProperty2]!==undefined){
-      textLines.push(attemptToTranslateVariants(this.props.item[this.props.textProperty2]));
+      textLines.push(attemptToTranslateSpecial(this.props.item[this.props.textProperty2]), "variants");
     }
     if (this.props.item[this.props.textProperty3]!=="None" && this.props.item[this.props.textProperty2]!==undefined){
-      textLines.push(attemptToTranslateVariants(this.props.item[this.props.textProperty3]));
+      textLines.push(attemptToTranslateSpecial(this.props.item[this.props.textProperty3]), "variants");
     }
     if(textLines.length===0){
       return <View/>

@@ -200,6 +200,8 @@ export function getPhotoCorner(name){
     return <Image source={require("../assets/icons/flowerIcon.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
   else if(name.includes("rock"))
     return <Image source={require("../assets/icons/rock.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
+  else if(name.includes("friendship"))
+    return <Image source={require("../assets/icons/heart.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
   else if(name.includes("turnip"))
     return <Image source={require("../assets/icons/turnip.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
   else if(name.includes("stump"))

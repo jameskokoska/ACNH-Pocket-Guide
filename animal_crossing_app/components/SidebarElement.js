@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
   sidebarTitle:{
     fontSize: 14,
     marginLeft: 20,
+    marginRight: 20,
   },
   sidebarBox: {
     alignItems: 'center',

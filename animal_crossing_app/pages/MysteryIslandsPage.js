@@ -54,7 +54,8 @@ class MysteryIslandsPage extends Component {
         <ScrollView style={{backgroundColor:colors.background[global.darkMode]}}>
           <View style={{height: 100}}/>
           <Header>Mystery Islands</Header>
-          <HeaderNote>{"Note: long press to check off the island as visited\nTap each for more details"}</HeaderNote>
+          <HeaderNote>{"Note: long press to check off the island as visited"}</HeaderNote>
+          <HeaderNote>{"Tap each for more details"}</HeaderNote>
           <View style={{height: 10}}/>
           <View style={{marginHorizontal: 20, flex: 1, flexDirection: 'row', justifyContent:'space-evenly',flexWrap:"wrap"}}>
           {
@@ -144,7 +145,7 @@ const mysteryIslandsData = [
     "picture" : require("../assets/icons/islands/6.png"),
     "chance" : "9%",
     "name" : "Mountain Island",
-    "description" : "Multiple levels, no river. The base level has regular trees, the middle level has your native fruit, and the top level has five rocks with materials. \n\nInsects: pill bug, centipede.",
+    "description" : "Multiple levels, no river. The base level has regular trees, the middle level has your native fruit, and the top level has five rocks with materials.",
     "requires" : "Ladder",
   },
   {
@@ -152,7 +153,7 @@ const mysteryIslandsData = [
     "picture" : require("../assets/icons/islands/7.png"),
     "chance" : "5%",
     "name" : "Bells Island",
-    "description" : "Breaking the rock at the far north will let you vault over into the island with five money rocks on it. \n\nInsects: pill bug, centipede.",
+    "description" : "Breaking the rock at the far north will let you vault over into the island with five money rocks on it.",
     "requires" : "Town Hall, Vaulting Pole",
   },
   {
@@ -181,7 +182,7 @@ const mysteryIslandsData = [
     "picture" : require("../assets/icons/islands/12.png"),
     "chance" : "2%",
     "name" : "Money Rock Island 2",
-    "description" : "There are four small triangular cliffs, one in each corner, and the ground level is full of flowers and 7 money rocks. \n\nInsects: scorpion.",
+    "description" : "There are four small triangular cliffs, one in each corner, and the ground level is full of flowers and 7 money rocks.",
     "requires" : "Town Hall",
     "maxDailyVisit" : "1 visit/day",
   },
@@ -198,7 +199,7 @@ const mysteryIslandsData = [
     "picture" : require("../assets/icons/islands/14.png"),
     "chance" : "2%",
     "name" : "Tree Island",
-    "description" : "This island has no river or pond and has tons of hardwood and coconut trees, and the only insects that spawn are those that are associated with trees. \n\nInsects: Atlas moth, walking stick, earth-boring dung beetle, scarab beetle, miyama stag, saw stag, giant stag, rainbow stag, cyclommatus stag, golden stag, horned dynastid, horned atlas, horned elephant, horned hercules, goliath beetle, drone beetle, giraffe stag, blue weevil beetle.",
+    "description" : "This island has no river or pond and has tons of hardwood and coconut trees, and the only insects that spawn are those that are associated with trees.",
     "requires" : "Town Hall, Ladder",
     "maxDailyVisit" : "1 visit/day",
   },
@@ -215,7 +216,7 @@ const mysteryIslandsData = [
     "picture" : require("../assets/icons/islands/17.png"),
     "chance" : "1%",
     "name" : "Tree Island 2",
-    "description" : "This island is exactly the same as Bamboo Island but the trees are all just regular hardwood trees. \n\nInsects: Atlas moth, walking stick, earth-boring dung beetle, scarab beetle, miyama stag, saw stag, giant stag, rainbow stag, cyclommatus stag, golden stag, horned dynastid, horned atlas, horned elephant, horned hercules, goliath beetle, drone beetle, giraffe stag, blue weevil beetle.",
+    "description" : "This island is exactly the same as Bamboo Island but the trees are all just regular hardwood trees.",
     "maxDailyVisit" : "1 visit/day",
   },
   {
@@ -223,14 +224,14 @@ const mysteryIslandsData = [
     "picture" : require("../assets/icons/islands/18.png"),
     "chance" : "5%",
     "name" : "Curly River Island",
-    "description" : "There is one square cliff at the north east, a few flowers and rocks and a small amount of fruit trees. Only insects associated with water spawn here. \n\nInsects: red dragonfly, darner dragonfly, banded dragonfly, pondskater, diving beetle, giant water bug, damselfly",
+    "description" : "There is one square cliff at the north east, a few flowers and rocks and a small amount of fruit trees. Only insects associated with water spawn here.",
   },
   {
     "id" : "19",
     "picture" : require("../assets/icons/islands/19.png"),
     "chance" : "2%",
     "name" : "Big Fish Island 2",
-    "description" : "This rare island only spawns big fish. Otherwise it is quite normal, with less flowers and a lower chance of appearing than the other big fish island. \n\nFish: L (arowana, saddled bichir, snapping turtle, soft-shelled turtle, black bass, carp, catfish, koi, giant snakehead, salmon, red snapper, football fish), LL (dorado, pike, stringfish, gar, king salmon, ray, mahi-mahi, sea bass, olive flounder, giant trevally), LLL (arapaima, sturgeon, blue marlin, coelacanth, Napoleonfish, tuna, oarfish).",
+    "description" : "This rare island only spawns big fish. Otherwise it is quite normal, with less flowers and a lower chance of appearing than the other big fish island.",
     "requires" : "Vaulting Pole",
     "maxDailyVisit" : "1 visit/day",
   },
@@ -239,7 +240,7 @@ const mysteryIslandsData = [
     "picture" : require("../assets/icons/islands/20.png"),
     "chance" : "5%",
     "name" : "Trash Island",
-    "description" : "Everything you can fish here is trash. Only water-related insects spawn. \n\nInsects: red dragonfly, darner dragonfly, banded dragonfly, pondskater, diving beetle, giant water bug, damselfly. \n\nFish: Trash.",
+    "description" : "Everything you can fish here is trash. Only water-related insects spawn.",
     "requires" : "Ladder",
   },
   {
@@ -247,7 +248,7 @@ const mysteryIslandsData = [
     "picture" : require("../assets/icons/islands/21.png"),
     "chance" : "1%",
     "name" : "Fins Island",
-    "description" : "A rectangular pond with rectangular cliffs inside, the tallest one being too tall to climb up to. The only fish that spawn here are the largest finned fish. \n\nFish: J (great white shark, hammerhead shark, whale shark, saw shark, ocean sunfish), K (suckerfish).",
+    "description" : "A rectangular pond with rectangular cliffs inside, the tallest one being too tall to climb up to. The only fish that spawn here are the largest finned fish.",
     "requires" : "Town Hall, Vaulting Pole, Ladder",
     "maxDailyVisit" : "1 visit/day",
   },
@@ -264,7 +265,7 @@ const mysteryIslandsData = [
     "picture" : require("../assets/icons/islands/24.png"),
     "chance" : "1%",
     "name" : "Gold Island",
-    "description" : "A very rare island with flowers, scorpions and a rectangular pond. If you climb up onto the cliff and climb down from the back, you can vault over to a tiny island in the middle and get 8 gold nuggets from a single rock. \n\nInsects: scorpion.",
+    "description" : "A very rare island with flowers, scorpions and a rectangular pond. If you climb up onto the cliff and climb down from the back, you can vault over to a tiny island in the middle and get 8 gold nuggets from a single rock.",
     "requires" : "Town Hall, Vaulting Pole, Ladder",
     "maxDailyVisit" : "1 visit/day",
   },

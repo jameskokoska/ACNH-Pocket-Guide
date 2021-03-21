@@ -3,7 +3,7 @@ import {ScrollView, Dimensions, Text} from 'react-native';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import ListPage from '../components/ListPage';
 import colors from '../Colors.js';
-import {getSettingsString} from "../LoadJsonData";
+import {getSettingsString,attemptToTranslate} from "../LoadJsonData";
 
 const width = { width: Dimensions.get('window').width };
 
@@ -77,8 +77,8 @@ class CraftingPage extends Component {
     this.state = {
       index: 0,
       routes: [
-        { key: 'Recipes', title: 'Recipes' },
-        { key: 'Tools', title: 'Tools' },
+        { key: 'Recipes', title: attemptToTranslate('Recipes') },
+        { key: 'Tools', title: attemptToTranslate('Tools') },
       ],
     }
   }

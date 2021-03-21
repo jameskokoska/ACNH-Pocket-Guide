@@ -50,7 +50,7 @@ export default class SideMenu extends Component {
         <DrawerLayout
           ref={(drawer) => this.drawer = drawer }
           edgeWidth={this.nonTabbedPages.includes(this.props.currentPage) ? Dimensions.get('window').width : Dimensions.get('window').width*0.17}
-          drawerWidth={Dimensions.get('window').width*0.66}
+          drawerWidth={Dimensions.get('window').width*0.7}
           drawerPosition={DrawerLayout.positions.Left}
           drawerType="slide"
           drawerBackgroundColor="#ddd"

@@ -5,11 +5,21 @@ import TextFont from '../components/TextFont';
 import colors from '../Colors'
 import {getPhoto} from "../components/GetPhoto"
 import {getMonthFromString, getCurrentDateObject} from "../components/DateFunctions"
-import {capitalize, getSettingsString} from "../LoadJsonData"
+import {capitalize, getSettingsString, checkTranslationEntry, attemptToTranslate, translateBirthday} from "../LoadJsonData"
 import {getSpecialOccurrenceDate} from "../components/EventContainer"
 import FastImage from '../components/FastImage';
 import DelayInput from "react-native-debounce-input";
 import {MailLink, ExternalLink, SubHeader, Header, Paragraph} from "../components/Formattings"
+import {LocaleConfig} from 'react-native-calendars';
+
+LocaleConfig.locales['language'] = {
+  monthNames: [attemptToTranslate('January'),attemptToTranslate('February'),attemptToTranslate('March'),attemptToTranslate('April'),attemptToTranslate('May'),attemptToTranslate('June'),attemptToTranslate('July'),attemptToTranslate('August'),attemptToTranslate('September'),attemptToTranslate('October'),attemptToTranslate('November'),attemptToTranslate('December')],
+  monthNamesShort: [attemptToTranslate('Jan'),attemptToTranslate('Feb'),attemptToTranslate('Mar'),attemptToTranslate('Apr'),attemptToTranslate('May'),attemptToTranslate('Jun'),attemptToTranslate('Jul'),attemptToTranslate('Aug'),attemptToTranslate('Sep'),attemptToTranslate('Oct'),attemptToTranslate('Nov'),attemptToTranslate('Dec')],
+  dayNames: [attemptToTranslate('Sunday'),attemptToTranslate('Monday'),attemptToTranslate('Tuesday'),attemptToTranslate('Wednesday'),attemptToTranslate('Thursday'),attemptToTranslate('Friday'),attemptToTranslate('Saturday')],
+  dayNamesShort: [attemptToTranslate('Sun'),attemptToTranslate('Mon'),attemptToTranslate('Tues'),attemptToTranslate('Wed'),attemptToTranslate('Thurs'),attemptToTranslate('Fri'),attemptToTranslate('Sat')],
+  today: attemptToTranslate('Today')
+};
+LocaleConfig.defaultLocale = 'language';
 
 //Note: these have changes
 // Northern Hemisphere Dates -> Dates (Northern Hemisphere)
@@ -115,7 +125,7 @@ export default class CalendarPage extends Component {
             if((date.getMonth()+1).toString()===(villager["Birthday"].split("/"))[0]&& date.getDate().toString()===(villager["Birthday"].split("/"))[1]){
               if(global.collectionList.includes("villagerCheckList"+villager["Name"])){
                 this.state.items[strTime].push({
-                  name: capitalize(villager[global.language]+ "'s Birthday"),
+                  name: capitalize(translateBirthday(checkTranslationEntry(villager[global.language], villager["Name"]))),
                   time: "All day",
                   image: villager["Icon Image"],
                   color: ["#2195F33F","#006EB34D"],
@@ -123,7 +133,7 @@ export default class CalendarPage extends Component {
                 this.state.itemsColor[strTime] = styleBirthdayEvent;
               } else {
                 this.state.items[strTime].push({
-                  name: capitalize(villager[global.language]+ "'s Birthday"),
+                  name: capitalize(translateBirthday(checkTranslationEntry(villager[global.language], villager["Name"]))),
                   time: "All day",
                   image: villager["Icon Image"],
                   color: colors.white,
@@ -134,10 +144,7 @@ export default class CalendarPage extends Component {
           })
 
           seasonData.map( (event, index)=>{
-            var eventName = event[global.language]
-            if(event[global.language]===null || event[global.language]===undefined){
-              eventName = event["Name"]
-            }
+            var eventName = checkTranslationEntry(event[global.language], event["Name"])
             if(event["Northern Hemisphere Dates"]!=="NA" && getSettingsString("settingsNorthernHemisphere")==="true"){
               if(this.isDateInRange(event["Northern Hemisphere Dates"], date.getFullYear(), date)){
                 this.state.items[strTime].push({
@@ -287,17 +294,17 @@ class BottomBar extends Component {
     return <View style={{position:"absolute", zIndex:5, bottom:0, borderTopRightRadius: 20, borderTopLeftRadius: 20, flexDirection: "row", justifyContent:"space-evenly",elevation:5, backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode], width:Dimensions.get('window').width, height:45}}>
       <TouchableNativeFeedback onPress={()=>{this.props.viewToday(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode], false)}>
         <View style={{borderRadius: 10, borderWidth:3,borderColor:colors.lightDarkAccentHeavy2[global.darkMode],width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
-          <TextFont bold={true} style={{fontSize: 12,color: colors.textBlack[global.darkMode]}}>View Today</TextFont>
+          <TextFont bold={true} style={{textAlign:"center", fontSize: 12,color: colors.textBlack[global.darkMode]}}>View Today</TextFont>
         </View>
       </TouchableNativeFeedback>
       <TouchableNativeFeedback onPress={()=>{this.props.openAgenda(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode], false)}>
         <View style={{borderRadius: 10, borderWidth:3,borderColor:colors.lightDarkAccentHeavy2[global.darkMode],width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
-          <TextFont bold={true} style={{fontSize: 12,color: colors.textBlack[global.darkMode]}}>Open Calendar</TextFont>
+          <TextFont bold={true} style={{textAlign:"center", fontSize: 12,color: colors.textBlack[global.darkMode]}}>Open Calendar</TextFont>
         </View>
       </TouchableNativeFeedback>
       <TouchableNativeFeedback onPress={()=>{this.props.viewList(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode], false)}>
         <View style={{borderRadius: 10, borderWidth:3,borderColor:colors.lightDarkAccentHeavy2[global.darkMode],width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
-          <TextFont bold={true} style={{fontSize: 12,color: colors.textBlack[global.darkMode]}}>View All</TextFont>
+          <TextFont bold={true} style={{textAlign:"center", fontSize: 12,color: colors.textBlack[global.darkMode]}}>View All</TextFont>
         </View>
       </TouchableNativeFeedback>
     </View>
@@ -319,11 +326,8 @@ class AllEventsList extends Component{
     } else {
       var outputData = [];
       this.data.map( (event, index)=>{
-        var eventName = event[global.language]
-        if(event[global.language]===null || event[global.language]===undefined){
-          eventName = event["Name"]
-        }
-        if(eventName.toLowerCase().includes(text.toLowerCase())){
+        var eventName = checkTranslationEntry(event[global.language], event["Name"]);
+        if(event["Name"].toLowerCase().includes(text.toLowerCase())){
           outputData.push(event);
         } else if (event["Type"].toLowerCase().includes(text.toLowerCase())){
           outputData.push(event);
@@ -350,7 +354,7 @@ class AllEventsList extends Component{
       >
       <DelayInput
         allowFontScaling={false}
-        placeholder={"Search"}
+        placeholder={attemptToTranslate("Search")}
         style={{color: '#515151',
           fontSize: 17,
           lineHeight: 22,
@@ -406,16 +410,13 @@ const renderItemFlatList = ({item}) => {
   else 
     dateComp = <View/>
   
-  var eventName = item[global.language]
-  if(item[global.language]===null || item[global.language]===undefined){
-    eventName = item["Name"]
-  }
+  var eventName = checkTranslationEntry(item[global.language], item["Name"]);
   return(
     <View style={{width:Dimensions.get('window').width-20, flex: 1, backgroundColor: colors.white[global.darkMode], padding: 20, marginHorizontal: 10, marginVertical: 5,  flexDirection:"row", alignItems: 'center', borderRadius: 10}}>
       {image}
       <View style={{flex: 1, marginLeft:15}}>
         <TextFont bold={true} style={{fontSize: 20,color: colors.textBlack[global.darkMode]}}>{capitalize(eventName)}</TextFont>
-        <TextFont style={{marginTop: 3,fontSize: 18,color: colors.textBlack[global.darkMode]}}>{capitalize(item.["Type"])}</TextFont>
+        <TextFont style={{marginTop: 3,fontSize: 18,color: colors.textBlack[global.darkMode]}}>{capitalize(item["Type"])}</TextFont>
         {dateComp}
       </View>
     </View>
@@ -424,7 +425,7 @@ const renderItemFlatList = ({item}) => {
 
 const specialEvents = [
   {
-        "Name": "Fireworks Show",
+        "Name" : "Fireworks Show",
         "Month": "Aug",
         "Day Start": "NA",
         "Day End": "NA",
@@ -435,7 +436,7 @@ const specialEvents = [
         "Image" : "fireworks.png"
     },
     {
-        "Name": "Fireworks Show",
+        "Name" : "Fireworks Show",
         "Month": "Aug",
         "Day Start": "NA",
         "Day End": "NA",
@@ -446,7 +447,7 @@ const specialEvents = [
         "Image" : "fireworks.png"
     },
     {
-        "Name": "Fireworks Show",
+        "Name" : "Fireworks Show",
         "Month": "Aug",
         "Day Start": "NA",
         "Day End": "NA",
@@ -457,7 +458,7 @@ const specialEvents = [
         "Image" : "fireworks.png"
     },
     {
-        "Name": "Fireworks Show",
+        "Name" : "Fireworks Show",
         "Month": "Aug",
         "Day Start": "NA",
         "Day End": "NA",
@@ -468,7 +469,7 @@ const specialEvents = [
         "Image" : "fireworks.png"
     },
     {
-        "Name": "Fireworks Show",
+        "Name" : "Fireworks Show",
         "Month": "Aug",
         "Day Start": "NA",
         "Day End": "NA",
@@ -479,7 +480,7 @@ const specialEvents = [
         "Image" : "fireworks.png"
     },
    {
-        "Name": "Bug-Off",
+        "Name" : "Bug-Off",
         "Month": "Jan",
         "Day Start": "NA",
         "Day End": "NA",
@@ -490,7 +491,7 @@ const specialEvents = [
         "Image" : "bugs.png"
     },
     {
-        "Name": "Bug-Off",
+        "Name" : "Bug-Off",
         "Month": "Feb",
         "Day Start": "NA",
         "Day End": "NA",
@@ -501,7 +502,7 @@ const specialEvents = [
         "Image" : "bugs.png"
     },
     {
-        "Name": "Bug-Off",
+        "Name" : "Bug-Off",
         "Month": "Nov",
         "Day Start": "NA",
         "Day End": "NA",
@@ -512,7 +513,7 @@ const specialEvents = [
         "Image" : "bugs.png"
     },
     {
-        "Name": "Bug-Off",
+        "Name" : "Bug-Off",
         "Month": "Dec",
         "Day Start": "NA",
         "Day End": "NA",
@@ -523,7 +524,7 @@ const specialEvents = [
         "Image" : "bugs.png"
     },
     {
-        "Name": "Bug-Off",
+        "Name" : "Bug-Off",
         "Month": "June",
         "Day Start": "NA",
         "Day End": "NA",
@@ -534,7 +535,7 @@ const specialEvents = [
         "Image" : "bugs.png"
     },
     {
-        "Name": "Bug-Off",
+        "Name" : "Bug-Off",
         "Month": "July",
         "Day Start": "NA",
         "Day End": "NA",
@@ -545,7 +546,7 @@ const specialEvents = [
         "Image" : "bugs.png"
     },
     {
-        "Name": "Bug-Off",
+        "Name" : "Bug-Off",
         "Month": "Aug",
         "Day Start": "NA",
         "Day End": "NA",
@@ -556,7 +557,7 @@ const specialEvents = [
         "Image" : "bugs.png"
     },
     {
-        "Name": "Bug-Off",
+        "Name" : "Bug-Off",
         "Month": "Sept",
         "Day Start": "NA",
         "Day End": "NA",
@@ -567,7 +568,7 @@ const specialEvents = [
         "Image" : "bugs.png"
     },
     {
-        "Name": "Fishing Tourney",
+        "Name" : "Fishing Tourney",
         "Month": "Jan",
         "Day Start": "NA",
         "Day End": "NA",
@@ -578,7 +579,7 @@ const specialEvents = [
         "Image" : "fish.png"
     },
     {
-        "Name": "Fishing Tourney",
+        "Name" : "Fishing Tourney",
         "Month": "Apr",
         "Day Start": "NA",
         "Day End": "NA",
@@ -589,7 +590,7 @@ const specialEvents = [
         "Image" : "fish.png"
     },
     {
-        "Name": "Fishing Tourney",
+        "Name" : "Fishing Tourney",
         "Month": "July",
         "Day Start": "NA",
         "Day End": "NA",
@@ -600,7 +601,7 @@ const specialEvents = [
         "Image" : "fish.png"
     },
     {
-        "Name": "Fishing Tourney",
+        "Name" : "Fishing Tourney",
         "Month": "Oct",
         "Day Start": "NA",
         "Day End": "NA",

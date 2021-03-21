@@ -28,7 +28,7 @@ import MaterialsPopup from "../popups/MaterialsPopup"
 import * as exports from "./FilterDefinitions"
 import PopupFilter from './PopupFilter'
 import TextFont from "./TextFont"
-import {getSettingsString} from "../LoadJsonData"
+import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
 import {PopupBottomCustom} from "./Popup"
 //Note: popup height is not needed anymore
 //use tabs={false} if the page doesn't have  the tab bar
@@ -113,7 +113,7 @@ export default (props) =>{
     },
   );
 
-  const [search, setSearch] = useState("Search");
+  const [search, setSearch] = useState("");
   function updateSearch(search){
     // console.log(search)
     setSearch(search);
@@ -159,7 +159,7 @@ export default (props) =>{
       } else {
         var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH ";
 
-        var possibleFilters = [{label:"Collected", value:"Collected"},{label:"Not Collected", value:"Not Collected"}];
+        var possibleFilters = [{label:attemptToTranslate("Collected"), value:"Collected"},{label:attemptToTranslate("Not Collected"), value:"Not Collected"}];
         var activeFilters = [
           {label:"January can catch",value:hemispherePre+"Jan Active:true"},
           {label:"February can catch",value:hemispherePre+"Feb Active:true"},
@@ -258,7 +258,7 @@ export default (props) =>{
               searchFound = item.[props.searchKey[j][x]].toLowerCase().includes(search.toLowerCase())
             }
           }
-          if((search==="Search" || search==="" || searchFound)&&(!props.filterCollectedOnly||searchFound)){
+          if((search==="" || searchFound)&&(!props.filterCollectedOnly||searchFound)){
             //Search result found...
             if(props.showVariations[j]===false){
               //If recipes item page, and its not DIY, remove

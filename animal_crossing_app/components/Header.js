@@ -5,7 +5,7 @@ import FadeInOut from "./FadeInOut"
 import LottieView from 'lottie-react-native';
 import DelayInput from "react-native-debounce-input";
 import colors from "../Colors"
-import {getSettingsString} from "../LoadJsonData"
+import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
 
 const Header = (props) => {
   var filterImage;
@@ -40,7 +40,7 @@ const Header = (props) => {
               <View style={[styles.searchBox, {backgroundColor:props.searchBarColor}]}>
                 <DelayInput
                   allowFontScaling={false}
-                  placeholder={"Search"}
+                  placeholder={attemptToTranslate("Search")}
                   style={styles.searchText}
                   onChangeText={function(text){props.updateSearch(text);}} 
                   onFocus={() => {Vibration.vibrate(15);}}
@@ -123,7 +123,7 @@ export const HeaderActive = (props) => {
           <View style={[styles.searchBox, {backgroundColor:props.searchBarColor}]}>
             <DelayInput
               allowFontScaling={false}
-              placeholder={"Search"}
+              placeholder={attemptToTranslate("Search")}
               style={styles.searchText}
               onChangeText={function(text){props.updateSearch(text);}} 
               onFocus={() => {Vibration.vibrate(15);}}

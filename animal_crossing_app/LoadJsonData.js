@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import {Vibration, Text} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {isActive2} from "./components/DateFunctions";
+import * as Localization from 'expo-localization';
 
 export async function getStorage(storageKey, defaultValue){
   const valueReturned = await AsyncStorage.getItem(storageKey);
@@ -382,7 +383,7 @@ export const settings = [
     "defaultValue" : "true",
     "currentValue" : "",
     "picture" : require("./assets/icons/earth.png"),
-    "displayName" : "Northern hemisphere",
+    "displayName" : "Northern Hemisphere",
     "description" : "Set your hemisphere, north or south. This will change the data displayed for creatures and events.",
   },
   {
@@ -488,6 +489,14 @@ export const settings = [
     "displayName" : "Enable haptic feedback",
     "description" : "Enable/Disable the vibrations with certain actions.",
   },
+  {
+    "keyName" : "settingsDownloadImages",
+    "defaultValue" : "true",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/photo.png"),
+    "displayName" : "Download images",
+    "description" : "Save images locally for offline use once viewed. If disabled, can save storage space, but always requires an internet connection to view images.",
+  },
   // { //1
   //   "keyName" : "settingsSkipSplashScreen",
   //   "defaultValue" : "true",
@@ -542,18 +551,30 @@ export const settings = [
     "currentValue" : "",
     "picture" : require("./assets/icons/customTime.png"),
     "displayName" : "Use a custom date",
-    "description" : "Use the custom date selected when loading time-specific data.",
+    "description" : "",
   },
 ]
 
-export function attemptToTranslateVariants(text){
+const variantTranslations = require("./assets/data/variantsTranslated.json");
+const catchphraseTranslations = require("./assets/data/villagerCatchPhrasesTranslated.json");
+const npcTranslations = require("./assets/data/specialNPCs.json");
+const appTranslations = require("./assets/data/appTranslations.json")["Main"];
+
+export function attemptToTranslateSpecial(text, type){
   if(global.language==="English"){
     return text;
   }
-  var variantsTranslated = require("./assets/data/variantsTranslated");
-  for(var i=0; i<variantsTranslated.length; i++){
-    if(variantsTranslated[i]["English"]===text){
-      var translatedText = variantsTranslated[i][global.language];
+  var translated = "";
+  if(type==="variants"){
+    translated = variantTranslations;
+  } else if (type==="catchphrase"){
+    translated = catchphraseTranslations;
+  } else if (type==="npc"){
+    translated = npcTranslations;
+  }
+  for(var i=0; i<translated.length; i++){
+    if(translated[i]["English"]===text){
+      var translatedText = translated[i][global.language];
       if(translatedText===undefined||translatedText===null){
         return text;
       } else {
@@ -564,18 +585,64 @@ export function attemptToTranslateVariants(text){
   return text;
 }
 
-export function attemptToTranslate(text){
+export function attemptToTranslate(text, lowerCase = false){
   if(global.language==="English"){
     return text;
   }
-  const translations = require("./assets/data/translations");
-  for(var i=0; i<translations.length; i++){
-    var translatedText = translations[i][global.language];
-    if(translatedText===undefined||translatedText===null){
+  for(var i=0; i<appTranslations.length; i++){
+    if(text===undefined){
       return text;
     } else {
-      return translatedText;
+      if(appTranslations[i]["English"].toLowerCase()===text.toString().toLowerCase()){
+        var translatedText = appTranslations[i][global.language];
+        if(translatedText===undefined||translatedText===null||translatedText===""){
+          return text;
+        } else {
+          return translatedText;
+        }
+      }
     }
+    
   }
   return text;
+}
+
+export function checkTranslationEntry(textCheck, fallback){
+  if(textCheck===null||textCheck===undefined){
+    return fallback;
+  } else {
+    return textCheck;
+  }
+}
+
+export function translateBirthday(villager){
+  if(global.language==="English" || global.language==="English (Europe)"){
+    return (villager + "'s Birthday")
+  } else if(global.language==="French" || global.language==="French (US)"){
+    return ("Anniversaire de " + villager)
+  }
+}
+
+export function getDefaultLanguage(){
+  //var languages = ["English", "English (Europe)","German","Spanish","Spanish (US)","French","French (US)","Italian","Dutch","Chinese","Chinese (Traditional)","Japanese","Korean","Russian"]
+
+  var defaultLanguage = "English";
+  if(Localization.locale.includes("en")){
+    defaultLanguage = "English";
+  } else if(Localization.locale.includes("fr")){
+    defaultLanguage = "French";
+  } else if(Localization.locale.includes("es")){
+    defaultLanguage = "Spanish";
+  } else if(Localization.locale.includes("it")){
+    defaultLanguage = "Italian";
+  } else if(Localization.locale.includes("zh")){
+    defaultLanguage = "Chinese";
+  } else if(Localization.locale.includes("ja")){
+    defaultLanguage = "Japanese";
+  } else if(Localization.locale.includes("ko")){
+    defaultLanguage = "Korean";
+  } else if(Localization.locale.includes("ru")){
+    defaultLanguage = "Russian";
+  }
+  return defaultLanguage;
 }

@@ -3,7 +3,7 @@ import {Image, Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, Vie
 import TextFont from './TextFont'
 import {getPhoto} from './GetPhoto'
 import {getMonthShort, getCurrentDateObject} from './DateFunctions';
-import {getSettingsString} from "../LoadJsonData"
+import {getSettingsString, translateBirthday, checkTranslationEntry} from "../LoadJsonData"
 import FastImage from './FastImage';
 
 // <EventContainer 
@@ -81,7 +81,7 @@ export function getEventsDay(currentDate){
     if((currentMonth+1).toString()===(villager["Birthday"].split("/"))[0]&& currentDay.toString()===(villager["Birthday"].split("/"))[1]){
       if(global.collectionList.includes("villagerCheckList"+villager["Name"])){
         eventDatum = {
-          "Name": villager["Name"]+"'s Birthday",
+          "Name": translateBirthday(checkTranslationEntry(villager[global.language], villager["Name"])),
           "Month": getMonthShort(currentMonth),
           "Day Start": villager["Birthday"].split("/")[1],
           "Day End": villager["Birthday"].split("/")[1],

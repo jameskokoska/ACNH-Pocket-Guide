@@ -6,7 +6,7 @@ import TextFont from '../components/TextFont'
 import StoreHoursContainer from '../components/StoreHoursContainer';
 import colors from '../Colors'
 import ButtonComponent from "../components/ButtonComponent"
-import {collectionListSave, checkOff, loadGlobalData} from "../LoadJsonData"
+import {attemptToTranslate, collectionListSave, checkOff, loadGlobalData} from "../LoadJsonData"
 import Popup from '../components/Popup';
 
 
@@ -31,13 +31,13 @@ class CatalogPage extends Component {
       var inputList = [];
       var inputType = "";
       if(this.linkInput!=="" || this.input==""){
-        this.method = "Using nook.lol link to import data\n(First option)\n";
+        this.method = attemptToTranslate("Using nook.lol link to import data")+"\n"+ attemptToTranslate("(First option)")+"\n";
         var responseJSON = await (await fetch(this.linkInput+"/json?locale=en-us")).json();
         inputType = responseJSON["type"];
         inputList = responseJSON["data"];
         this.method = this.method + "\nImport type: " + inputType;
       } else {
-        this.method = "Using list of results to import data\n(Second option)\n";
+        this.method = attemptToTranslate("Using list of results to import data")+"\n"+attemptToTranslate("(Second option)")+"\n";
         inputList = this.input.split("\n");
       }
       if(inputList===undefined)
@@ -84,7 +84,7 @@ class CatalogPage extends Component {
       })
     } catch(err){
       this.setState({
-        method: "Attempted: \n"+ this.method + "\nThere was an error, please check the link and try again...\n\n" + err + "\n",
+        method: attemptToTranslate("Attempted:") + "\n"+ this.method + "\n"+attemptToTranslate("There was an error, please check the link and try again...") +"\n\n" + err + "\n",
         totalFail: 0,
         totalSuccess: 0
       })
@@ -138,7 +138,7 @@ class CatalogPage extends Component {
           button1={"OK"}
           button1Action={()=>{}}
           text={"Import Results"}
-          textLower={this.state.method + "\nImported: " + this.state.totalSuccess + " items\n Errors: " + this.state.totalFail + " items"}
+          textLower={this.state.method + "\n"+attemptToTranslate("Imported:") + " " + this.state.totalSuccess + " " + attemptToTranslate("items") +"\n" + attemptToTranslate("Errors:") + " " + this.state.totalFail + " " + attemptToTranslate("items")}
         />
         <Popup 
           ref={(popupWait) => this.popupWait = popupWait}

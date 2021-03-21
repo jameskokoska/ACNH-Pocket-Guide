@@ -77,7 +77,8 @@
     "react-native-webview": "11.0.0",
     "react-navigation-collapsible": "^5.8.1",
     "reanimated-bottom-sheet": "^1.0.0-alpha.22",
-    "toggle-switch-react-native": "^2.3.0"
+    "toggle-switch-react-native": "^2.3.0",
+    "expo-localization": "~9.1.0"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0"

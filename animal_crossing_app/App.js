@@ -26,7 +26,7 @@ import PopupChangelog from './components/PopupChangelog';
 import CreditsPage from './pages/CreditsPage';
 import FlowerPage from './pages/FlowerPage';
 import CardsPage from './pages/CardsPage';
-import {getStorage, getStorageData, getSettingsString, settings, loadGlobalData} from './LoadJsonData';
+import {getDefaultLanguage, getStorage, getStorageData, getSettingsString, settings, loadGlobalData} from './LoadJsonData';
 import Onboard from './pages/Onboard';
 import colors from './Colors.js';
 import ActiveTime from './components/ActiveTime.js';
@@ -36,14 +36,15 @@ import { Appearance } from 'react-native-appearance';
 import SideMenu from './components/SideMenu'
 import GuidePage from './pages/GuidePage';
 
-
 //expo build:android -t app-bundle
 //expo build:android -t apk
 global.version = require("./app.json")["expo"]["version"];
 global.versionCode = require("./app.json")["expo"]["android"]["versionCode"];
 global.changelog = `
 -Can set language in settings
--Note: translations only apply to items
+-French language translation supported, thanks Christophe!
+-Note: translations only apply to items, apart from supported translated languages
+-Images are now downloaded, can be used offline (can be disabled in settings)
 -Added more icons for the todo list
 -
 -
@@ -102,8 +103,9 @@ class App extends Component {
 
     global.name = await getStorage("name","")
     global.islandName = await getStorage("islandName","")
-    languages = ["English", "English (Europe)","German","Spanish","Spanish (US)","French","French (US)","Italian","Dutch","Chinese","Chinese (Traditional)","Japanese","Korean","Russian"]
-    global.language = await getStorage("Language","English")
+    var defaultLanguage = getDefaultLanguage();
+    global.language = await getStorage("Language",defaultLanguage);
+    
     //Load Global Data
     await loadGlobalData();
 

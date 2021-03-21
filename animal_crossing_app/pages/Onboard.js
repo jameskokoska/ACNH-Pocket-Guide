@@ -45,12 +45,12 @@ class Onboard extends Component {
             title: <TextFont style={{fontSize: 24, width: "90%", color:colors.white[0]}} bold={true}>Track your creatures, collection, and game events</TextFont>,
             subtitle: <TextFont style={{fontSize: 16, width: "90%", paddingTop: 20, color:colors.white[0]}} bold={true}>Designed with a user friendly and modern interface and experience.</TextFont>,
           },
-          {
-            backgroundColor: colors.FAB[1],
-            image: <TextFont style={{fontSize: 24, marginHorizontal:30, color:colors.white[0]}} bold={true}>Select Language</TextFont>,
-            title: <View style={{marginHorizontal:10}}><LanguagePicker/></View>,
-            subtitle: <View/>
-          },
+          // {
+          //   backgroundColor: colors.FAB[1],
+          //   image: <TextFont style={{fontSize: 24, marginHorizontal:30, color:colors.white[0]}} bold={true}>Select Language</TextFont>,
+          //   title: <View style={{marginHorizontal:10}}><LanguagePicker/></View>,
+          //   subtitle: <View/>
+          // },
           {
             backgroundColor: colors.background[global.darkMode],
             image: <LottieView 
