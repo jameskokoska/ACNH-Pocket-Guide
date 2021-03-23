@@ -2,7 +2,7 @@ import * as Font from 'expo-font';
 import React, {Component} from 'react';
 import {Vibration, Text} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {isActive2} from "./components/DateFunctions";
+import {doWeSwapDate, isActive2} from "./components/DateFunctions";
 import * as Localization from 'expo-localization';
 
 export async function getStorage(storageKey, defaultValue){
@@ -188,7 +188,8 @@ export function collectionListSave(){
 
 export function capitalize(name) {
   if(name!==undefined){
-    return name.replace(/(^\w{1})|(\s{1}\w{1})/g, match => match.toUpperCase());
+    var name = name.replace(/(^\w{1})|(\s{1}\w{1})/g, match => match.toUpperCase());
+    return name.charAt(0).toUpperCase() + name.slice(1);
   } else {
     return "null";
   }
@@ -394,6 +395,14 @@ export const settings = [
     "displayName" : "Show variations in lists",
     "description" : "Show the different colours/patterns of furniture and clothing items in the list.",
   },
+  {
+    "keyName" : "settingsRemoveCraftVariations",
+    "defaultValue" : "false",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/diyKit.png"),
+    "displayName" : "Remove customizable variations in lists",
+    "description" : "Remove variations that you can obtain through customization. Useful to keep track of furniture types that has not been purchased.",
+  },
 
   {
     "keyName" : "breaker",
@@ -412,7 +421,7 @@ export const settings = [
     "defaultValue" : "true",
     "currentValue" : "",
     "picture" : require("./assets/icons/alarmClock.png"),
-    "displayName" : "Creatures leaving warning",
+    "displayName" : "Last month to catch warning",
     "description" : "Display a red warning background colour around creatures that won't be able to be caught in the next month.",
   },
 
@@ -650,3 +659,49 @@ export function getDefaultLanguage(){
   }
   return defaultLanguage;
 }
+
+export function translateFilters(filters){
+  var label = [];
+  if(filters===undefined){
+    return filters;
+  }
+  for(var i = 0; i<filters.length; i++){
+    if(filters[i].label.includes("can catch")){
+      label = filters[i].label.split(" can catch");
+      if(label.length>0){
+        label[0] = attemptToTranslate(label[0]);
+        filters[i].label = label[0] + " " + attemptToTranslate("can catch");
+      }
+    } else {
+      label = filters[i].label.split(" - ");
+      if(label.length>1){
+        label[0] = attemptToTranslate(label[0]);
+        label[1] = attemptToTranslate(label[1]);
+        filters[i].label = label[0] + " - " + label[1];
+      }
+    }
+  }
+  return filters;
+}
+
+export function translateDateRange(dateRange){
+  if(dateRange.includes("-")){
+    var dateRanges = dateRange.split(";");
+    var dateOut = "";
+    for(var i = 0; i<dateRanges.length; i++){
+      var dateRangeSplit = dateRanges[i].split(" ")
+      
+      dateOut += doWeSwapDate()===true ? dateRangeSplit[1] + " " + attemptToTranslate(dateRangeSplit[0]) : attemptToTranslate(dateRangeSplit[0]) + " " + dateRangeSplit[1]
+      dateOut += " - ";
+      dateOut += doWeSwapDate()===true ? dateRangeSplit[4] + " " + attemptToTranslate(dateRangeSplit[3]) : attemptToTranslate(dateRangeSplit[3]) + " " + dateRangeSplit[4]
+    }
+    return dateOut;
+  } else {
+    var dateRanges = dateRange.split(/;| /);
+    var dateOut = "";
+    for(var i = 0; i<dateRanges.length; i++){
+      dateOut += attemptToTranslate(dateRanges[i]) + " "
+    }
+    return dateOut;
+  }
+} 

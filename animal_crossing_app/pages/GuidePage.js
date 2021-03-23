@@ -24,10 +24,15 @@ class GuidePage extends Component {
   };
 
   componentDidMount() {
+    this.mounted = true;
+    if(!global.language.includes("English")){
+      this.popupLanguage.setPopupVisible(true);
+    }
     BackHandler.addEventListener("hardwareBackPress", this.handleBackButton);
   }
 
   componentWillUnmount() {
+    this.mounted = false;
     BackHandler.removeEventListener("hardwareBackPress", this.handleBackButton);
   }
 
@@ -77,11 +82,13 @@ class GuidePage extends Component {
               this.openWebMenu();
               this.firstOpen++;
             }
-            this.setState({
-              canGoBack: navState.canGoBack,
-              canGoForward: navState.canGoForward,
-              currentURL: navState.url
-            })
+            if(this.mounted){
+              this.setState({
+                canGoBack: navState.canGoBack,
+                canGoForward: navState.canGoForward,
+                currentURL: navState.url
+              })
+            }
           }}
         />
         {/* openMenu={()=>this.props.openMenu()}  */}
@@ -95,6 +102,7 @@ class GuidePage extends Component {
           currentURL = {this.state.currentURL}
         />
         <Popup ref={(popup) => this.popup = popup} button1={"OK"} button1Action={()=>{return}} text={"Error"} textLower={"There was an error loading. Note that this feature needs an internet connection."}/>
+        <Popup ref={(popupLanguage) => this.popupLanguage = popupLanguage} button1={"OK"} button1Action={()=>{return}} text={"Selected language not supported"} textLower={"This online guide is only available in English."}/>
      </View>
      </>
     )

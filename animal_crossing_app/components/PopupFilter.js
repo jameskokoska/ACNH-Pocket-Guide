@@ -15,7 +15,7 @@ import TextFont from "./TextFont";
 import ButtonComponent from "./ButtonComponent";
 import colors from "../Colors";
 import DropDownPicker from 'react-native-dropdown-picker'
-import {getStorage} from '../LoadJsonData';
+import {translateFilters, getStorage, attemptToTranslate} from '../LoadJsonData';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
@@ -77,6 +77,7 @@ class PopupFilter extends Component {
     if(this.props.possibleFilters!== undefined && this.props.possibleFilters.length!==0){
       dropDownPickerOpacity = 0.7
     }
+    const filters = translateFilters(this.props.possibleFilters)
     return (
         <View style={{width:10, height:10, opacity: 0.2}}>
           <Modal
@@ -95,7 +96,7 @@ class PopupFilter extends Component {
               <View style={{height:10}}/>
               <DropDownPicker
                 items={this.props.possibleFilters}
-                placeholder={"Select filter..."}
+                placeholder={attemptToTranslate("Select filter...")}
                 multipleText="%d filters(s) applied"
                 dropDownMaxHeight={Dimensions.get('window').height*0.55}
                 containerStyle={{height: 45, marginLeft: 15, marginRight: 15}}

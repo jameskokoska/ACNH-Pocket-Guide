@@ -12,7 +12,7 @@ import TextFont from "../components/TextFont"
 import ActiveCreatures from "../components/ActiveCreatures"
 import CurrentVillagers from "../components/CurrentVillagers"
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {getCurrentDateObject} from '../components/DateFunctions';
+import {getCurrentDateObject, doWeSwapDate} from '../components/DateFunctions';
 import TodoList from '../components/TodoList';
 import VisitorsList from '../components/VisitorsList';
 import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
@@ -80,7 +80,7 @@ class HomePage extends Component {
     return <>
       <ScrollView ref={this.scrollViewRef}>
         <View style={{height:45}}/>
-        <Clock/>
+        <Clock swapDate={doWeSwapDate()}/>
         <View style={{height:125}}/>
         <HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.eventsColor[global.darkMode]} title="Events" titleColor={colors.eventsColor[global.darkModeReverse]}>
           {todayTitle}
@@ -178,8 +178,8 @@ class HomePage extends Component {
         </HomeContentArea>
         <HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.storeHoursColor[global.darkMode]} title="Store Hours" titleColor={colors.storeHoursColor[global.darkModeReverse]}>
           <View style={{height: 15}}/>
-          <StoreHoursContainer image={require("../assets/icons/nook.png")} text="Nook's Cranny" textBottom="8 AM - 10 PM" openHour={8} closeHour={22}/>
-          <StoreHoursContainer image={require("../assets/icons/able.png")} text="Able Sisters" textBottom="9 AM - 9 PM" openHour={9} closeHour={21}/>
+          <StoreHoursContainer image={require("../assets/icons/nook.png")} text="Nook's Cranny" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "8:00 - 22:00" : "8 AM - 10 PM"} openHour={8} closeHour={22}/>
+          <StoreHoursContainer image={require("../assets/icons/able.png")} text="Able Sisters" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "9:00 - 21:00" : "9 AM - 9 PM"} openHour={9} closeHour={21}/>
           <View style={{height: 15}}/>
         </HomeContentArea>
         <HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.activeCreaturesColor[global.darkMode]} title="Active Creatures" titleColor={colors.activeCreaturesColor[global.darkModeReverse]}>

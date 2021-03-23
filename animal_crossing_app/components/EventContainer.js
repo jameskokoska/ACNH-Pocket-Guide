@@ -3,7 +3,7 @@ import {Image, Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, Vie
 import TextFont from './TextFont'
 import {getPhoto} from './GetPhoto'
 import {getMonthShort, getCurrentDateObject} from './DateFunctions';
-import {getSettingsString, translateBirthday, checkTranslationEntry} from "../LoadJsonData"
+import {getSettingsString, translateBirthday, attemptToTranslateItem} from "../LoadJsonData"
 import FastImage from './FastImage';
 
 // <EventContainer 
@@ -28,7 +28,7 @@ export class EventContainer extends Component {
         <View style={[styles.eventContainer,{backgroundColor:this.props.backgroundColor}]}>
           {image}
           <View style={styles.textContainer}>
-            <TextFont bold={true} style={[styles.textContainerTop,{color:this.props.textColor}]}>{this.props.text}</TextFont>
+            <TextFont numberOfLines={2} bold={true} style={[styles.textContainerTop,{color:this.props.textColor}]}>{this.props.text}</TextFont>
             <TextFont style={[styles.textContainerBottom,{color:this.props.textColor}]}>{this.props.textBottom}</TextFont>
           </View>
           <View style={{width: 30, alignItems:"center", marginLeft: -8}}>
@@ -58,7 +58,7 @@ export function getEventsDay(currentDate){
         "Special Day" : "NA",
         "Special Occurrence": "NA",
         "Hemisphere": "NA",
-        "Time" : "5 AM - 12 PM",
+        "Time" : getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 12:00" : "5 AM - 12 PM",
         "Image" : "turnip.png"
     }
     totalEvents.push(eventDatum);
@@ -71,7 +71,7 @@ export function getEventsDay(currentDate){
         "Special Day" : "NA",
         "Special Occurrence": "NA",
         "Hemisphere": "NA",
-        "Time" : "8 PM - 12 AM",
+        "Time" : getSettingsString("settingsUse24HourClock") === "true" ? "20:00 - 24:00" : "8 PM - 12 AM",
         "Image" : "music.png"
     }
     totalEvents.push(eventDatum);
@@ -81,7 +81,7 @@ export function getEventsDay(currentDate){
     if((currentMonth+1).toString()===(villager["Birthday"].split("/"))[0]&& currentDay.toString()===(villager["Birthday"].split("/"))[1]){
       if(global.collectionList.includes("villagerCheckList"+villager["Name"])){
         eventDatum = {
-          "Name": translateBirthday(checkTranslationEntry(villager[global.language], villager["Name"])),
+          "Name": translateBirthday(attemptToTranslateItem(villager["Name"])),
           "Month": getMonthShort(currentMonth),
           "Day Start": villager["Birthday"].split("/")[1],
           "Day End": villager["Birthday"].split("/")[1],
@@ -125,6 +125,7 @@ export function getEventsDay(currentDate){
       eventDatum = {
         "Name": snapshot[i]["Name"],
         "Month": snapshot[i]["Month"],
+        "Weekday": "",
         "Day Start": snapshot[i]["Day Start"],
         "Day End": snapshot[i]["Day End"],
         "Special Day" : snapshot[i]["Special Day"],
@@ -290,6 +291,7 @@ const styles = StyleSheet.create({
   textContainerTop:{
     textAlign:"center",
     fontSize: 20,
+    marginHorizontal: 20, 
   },
   textContainerBottom:{
     textAlign:"center",

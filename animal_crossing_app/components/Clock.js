@@ -79,6 +79,16 @@ class Clock extends Component {
   }
 
   render(){
+    var dateComp = <>
+      <TextFont suffix={" "+this.state.dayNum} style={styles.monthDay} bold={true}>{this.state.month}</TextFont>
+      <TextFont suffix="." style={styles.weekDay} bold={true}>{this.state.weekDay}</TextFont>
+    </>
+    if(this.props.swapDate){
+      dateComp = <>
+        <TextFont suffix="." style={[styles.weekDay,{marginRight:10,marginLeft:0}]} bold={true}>{this.state.weekDay}</TextFont>
+        <TextFont prefix={this.state.dayNum+" "} style={[styles.monthDay,{paddingRight:0}]} bold={true}>{this.state.month}</TextFont>
+      </>
+    }
     return <View style={{alignItems: 'center'}}>
       {/* <Image
         style={{position:"absolute", top: -10, width:300, height: 200, resizeMode:'contain',}}
@@ -90,8 +100,7 @@ class Clock extends Component {
       </View>
       <View style={[styles.line,{width:(this.state.dayNum.length+" ".length+this.state.month.length)*21+120}]}/> 
       <View style={{flexDirection: 'row', alignItems: 'center'}}> 
-        <TextFont suffix={" "+this.state.dayNum} style={styles.monthDay} bold={true}>{this.state.month}</TextFont>
-        <TextFont suffix="." style={styles.weekDay} bold={true}>{this.state.weekDay}</TextFont>
+        {dateComp}
       </View>
     </View>
   }

@@ -35,18 +35,28 @@ import PopupRating from './components/PopupRating'
 import { Appearance } from 'react-native-appearance';
 import SideMenu from './components/SideMenu'
 import GuidePage from './pages/GuidePage';
+import NewItemsPage from "./pages/NewItemsPage"
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
-const appInfo = require("./app.json")
+const appInfo = require("./app.json");
 global.version = appInfo["expo"]["version"];
 global.versionCode = appInfo["expo"]["android"]["versionCode"];
+
+global.gameVersion = "1.9.0";
 global.changelog = `
+-Added [New Items] page. Go here to see all the new items that were recently added in the new update
+-Added and fixed more translations
+-Fixed crafting materials translations
+-Fixed current villagers on home screen
+-Fixed 24 hour times not displayed correctly
+-Filter translation support
+-
+-Added setting to hide item variations that can be obtained easily through customization (Useful to see what needs to be purchased from Nooks!)
 -Can set language in settings
 -French language translation supported, thanks Christophe!
 -Note: translations only apply to items, apart from supported translated languages
 -Images are now downloaded, can be used offline (can be disabled in settings)
--Added more icons for the todo list
 -
 -
 -Planned Features:
@@ -268,6 +278,8 @@ class App extends Component {
         currentPageView = <GuidePage openMenu={this.openDrawer}/>
       } else if (this.state.currentPage===16){
         currentPageView = <CalendarPage/>
+      } else if (this.state.currentPage===17){
+        currentPageView = <NewItemsPage/>
       } else {
         currentPageView = <Text>Default</Text>
       }

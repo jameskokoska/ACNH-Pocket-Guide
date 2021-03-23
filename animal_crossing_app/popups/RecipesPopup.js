@@ -30,60 +30,70 @@ class RecipesPopup extends Component {
         textProperty={["Season/Event"]}
       />
       <InfoLine
+        translateItem={true}
         image={require("../assets/icons/leaf.png")} 
         item={this.props.item}
         textProperty={"Material 1"}
         starting={this.props.item["#1"]+ "x "}
       />
       <InfoLine
+        translateItem={true}
         image={require("../assets/icons/leaf.png")} 
         item={this.props.item}
         textProperty={"Material 2"}
         starting={this.props.item["#2"]+ "x "}
       />
       <InfoLine
+        translateItem={true}
         image={require("../assets/icons/leaf.png")} 
         item={this.props.item}
         textProperty={"Material 3"}
         starting={this.props.item["#3"]+ "x "}
       />
       <InfoLine
+        translateItem={true}
         image={require("../assets/icons/leaf.png")} 
         item={this.props.item}
         textProperty={"Material 4"}
         starting={this.props.item["#4"]+ "x "}
       />
       <InfoLine
+        translateItem={true}
         image={require("../assets/icons/leaf.png")} 
         item={this.props.item}
         textProperty={"Material 5"}
         starting={this.props.item["#5"]+ "x "}
       />
       <InfoLine
+        translateItem={true}
         image={require("../assets/icons/leaf.png")} 
         item={this.props.item}
         textProperty={"Material 6"}
         starting={this.props.item["#6"]+ "x "}
       />
       <InfoLine
+        translateItem={true}
         image={require("../assets/icons/leaf.png")} 
         item={this.props.item}
         textProperty={"Material 7"}
         starting={this.props.item["#7"]+ "x "}
       />
       <InfoLine
+        translateItem={true}
         image={require("../assets/icons/leaf.png")} 
         item={this.props.item}
         textProperty={"Material 8"}
         starting={this.props.item["#8"]+ "x "}
       />
       <InfoLine
+        translateItem={true}
         image={require("../assets/icons/leaf.png")} 
         item={this.props.item}
         textProperty={"Material 9"}
         starting={this.props.item["#9"]+ "x "}
       />
       <InfoLine
+        translateItem={true}
         image={require("../assets/icons/leaf.png")} 
         item={this.props.item}
         textProperty={"Material 10"}

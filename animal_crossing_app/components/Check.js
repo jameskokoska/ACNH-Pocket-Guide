@@ -18,21 +18,27 @@ class Check extends Component {
     }
   }
   componentDidMount(){
+    this.mounted=true;
     if(this.props.play===true){
       this.animateIn();
     } else if(this.props.play===false){
       this.animateOut();
     }
   }
+  componentWillUnmount() {
+    this.mounted=false
+  }
   componentDidUpdate(prevProps) {
-    if(prevProps.play!==this.props.play){
-      this.animateIn();
-      if(this.props.play===true){
-        this.state.progress.setValue(0);
+    if(this.mounted){
+      if(prevProps.play!==this.props.play){
         this.animateIn();
-      } else if(this.props.play===false){
-        this.state.progress.setValue(0.13);
-        this.animateOut();
+        if(this.props.play===true){
+          this.state.progress.setValue(0);
+          this.animateIn();
+        } else if(this.props.play===false){
+          this.state.progress.setValue(0.13);
+          this.animateOut();
+        }
       }
     }
   }

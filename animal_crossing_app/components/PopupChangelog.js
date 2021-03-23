@@ -22,6 +22,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 class PopupChangelog extends Component {
   async componentDidMount(){
+    this.mounted = true;
     this.openChangelog = await getStorage("changelog","");
     if(this.openChangelog === "" || this.openChangelog !== global.version){
       this.timeoutHandle = setTimeout(()=>{
@@ -30,8 +31,14 @@ class PopupChangelog extends Component {
     }
   }
 
+  componentWillUnmount() {
+    this.mounted=false;
+  }
+
   setPopupVisible = (visible) => {
-    this.popup.setPopupVisible(visible)
+    if(this.mounted){
+      this.popup.setPopupVisible(visible)
+    }
   }
 
   render(){

@@ -29,8 +29,16 @@ class ListItem extends PureComponent{
       collected: props.item.collected,
     }
   }
+  componentDidMount() {
+    this.mounted = true;
+  }
+  componentWillUnmount() {
+    this.mounted = false;
+  }
   setCollected(collected){
-    this.setState({collected: collected})
+    if(this.mounted){
+      this.setState({collected: collected})
+    }
   }
   // componentWillUnmount(){
   //   console.log("unmount")
@@ -98,15 +106,15 @@ class ListItem extends PureComponent{
       }
     }
 
-    var label = attemptToTranslateItem(this.props.item.[this.props.textProperty[this.props.item.dataSet]])    
+    var label = attemptToTranslateItem(this.props.item.[this.props.textProperty[this.props.item.dataSet]])
 
     if(this.props.gridType==="smallGrid"){
       var textProperty2Component = <View/>;
       if(this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]!==""){
         if(this.props.textProperty2[this.props.item.dataSet]==="(DIY)")
-          textProperty2Component = <TextFont translate={false} bold={false} style={{textAlign:'center', color:this.props.labelColor, fontSize:12}}>(DIY)</TextFont>
+          textProperty2Component = <TextFont suffix={")"} prefix={"("} bold={false} style={{textAlign:'center', color:this.props.labelColor, fontSize:12}}>DIY</TextFont>
         else 
-          textProperty2Component = <TextFont translate={false} bold={false} style={{textAlign:'center', color:this.props.labelColor, fontSize:12,}}>{capitalize(this.props.item[textProperty2Text])}</TextFont>
+          textProperty2Component = <TextFont bold={false} style={{textAlign:'center', color:this.props.labelColor, fontSize:12,}}>{capitalize(this.props.item[textProperty2Text])}</TextFont>
       }
       return (
         <View style={styles.gridWrapper}>
@@ -256,10 +264,10 @@ class ListItem extends PureComponent{
                   <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:20, color:this.props.labelColor}}>{capitalize(label)}</TextFont>
                 </View>
                 <View style={styles.rowTextBottom}>
-                  <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(removeBrackets(textProperty2Text))}</TextFont>
+                  <TextFont bold={true} numberOfLines={2} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(removeBrackets(textProperty2Text))}</TextFont>
                 </View>
                 <View style={styles.rowTextBottom}>
-                  <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(removeBrackets(this.props.item.[this.props.textProperty3[this.props.item.dataSet]]))}</TextFont>
+                  <TextFont bold={true} numberOfLines={2} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(removeBrackets(this.props.item.[this.props.textProperty3[this.props.item.dataSet]]))}</TextFont>
                 </View>
               </View>
               {fishShadow}

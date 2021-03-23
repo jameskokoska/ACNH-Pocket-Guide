@@ -38,7 +38,8 @@ class Popup extends Component {
     };   
     
   }
-  componentDidMount() {    
+  componentDidMount() { 
+    this.mounted=true;   
     if(this.props.button1!==undefined){
       this.Button1 = <ButtonComponent
         text={this.props.button1}
@@ -62,13 +63,20 @@ class Popup extends Component {
       /> 
     }
   }
+
+  componentWillUnmount() {
+    this.mounted=false
+  }
   // componentDidUpdate(){
   //   if(this.props.popupVisible===true&&this.state.popupVisible===false)
   //     this.setPopupVisible(this.props.popupVisible);
   // }
 
   setPopupVisible = (visible) => {
-    this.setState({popupVisible:visible});
+    if(this.mounted){
+      this.setState({popupVisible:visible});
+
+    }
   }
 
   render(){
@@ -117,13 +125,23 @@ export class PopupInfoCustom extends Component {
     
   }
 
+  componentDidMount() {
+    this.mounted=true;
+  }
+
+  componentWillUnmount() {
+    this.mounted=false
+  }
+
   setPopupVisible = (visible) => {
-    this.setState({popupVisible:visible});
+    if(this.mounted){
+      this.setState({popupVisible:visible});
+    }
   }
 
   render(){
-    var header = <View onLayout={(event) => {var {x, y, width, height} = event.nativeEvent.layout;this.setState({headerHeight:height});}}>{this.props.header}</View>
-    var buttons = <View onLayout={(event) => {var {x, y, width, height} = event.nativeEvent.layout;this.setState({buttonHeight:height});}}>{this.props.buttons}</View>
+    var header = <View onLayout={(event) => {var {x, y, width, height} = event.nativeEvent.layout;if(this.mounted){this.setState({headerHeight:height});}}}>{this.props.header}</View>
+    var buttons = <View onLayout={(event) => {var {x, y, width, height} = event.nativeEvent.layout;if(this.mounted){this.setState({buttonHeight:height});}}}>{this.props.buttons}</View>
     return (
         <Modal
           animationType="fade"
@@ -168,8 +186,18 @@ export class PopupBottomCustom extends Component {
     }
   }
 
+  componentDidMount() {
+    this.mounted=true;
+  }
+
+  componentWillUnmount() {
+    this.mounted=false
+  }
+
   setPopupVisible = (visible) => {
-    visible ? this.sheetRef.snapTo(0) : this.sheetRef.snapTo(1)
+    if(this.mounted){
+      visible ? this.sheetRef.snapTo(0) : this.sheetRef.snapTo(1)
+    }
   }
   
   renderContent = () => {
@@ -187,7 +215,9 @@ export class PopupBottomCustom extends Component {
         }}
         onLayout={(event) => {
             var {x, y, width, height} = event.nativeEvent.layout;
-            this.setState({heightOffset:height});
+            if(this.mounted){
+              this.setState({heightOffset:height});
+            }
           }} 
       >
         <FadeInOut fadeIn={this.state.openStart} scaleInOut={true} duration={200} maxFade={0.4} minScale={0.7}>
@@ -225,10 +255,10 @@ export class PopupBottomCustom extends Component {
         renderContent={this.renderContent}
         springConfig={springConfig}
         enabledContentTapInteraction={false}
-        onCloseStart={()=>{this.setState({openStart:false})}}
-        onCloseEnd={()=>{this.setState({openStart:false}); this.props.onClose===undefined ? 0 : this.props.onClose();}}
-        onOpenStart={()=>{this.setState({openStart:true})}}
-        onOpenEnd={()=>{this.setState({openStart:true})}}
+        onCloseStart={()=>{if(this.mounted){this.setState({openStart:false})}}}
+        onCloseEnd={()=>{if(this.mounted){this.setState({openStart:false});} this.props.onClose===undefined ? 0 : this.props.onClose();}}
+        onOpenStart={()=>{if(this.mounted){this.setState({openStart:true})}}}
+        onOpenEnd={()=>{if(this.mounted){this.setState({openStart:true})}}}
       />
       <Animated.View style={{zIndex:99, backgroundColor: "black", opacity: Animated.multiply(-0.8,Animated.add(-0.7,Animated.multiply(this.bottomSheetCallback,1))), width: Dimensions.get('window').width, height: Dimensions.get('window').height, position:"absolute"}} pointerEvents="none"/>
       </>

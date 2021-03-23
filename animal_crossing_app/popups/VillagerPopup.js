@@ -13,6 +13,7 @@ class VillagerPopup extends Component {
   render(){
     return <View style={{width: "100%", alignItems: "center"}}>
       <InfoLine
+        birthday={true}
         image={require("../assets/icons/birthdayCake.png")} 
         item={this.props.item}
         textProperty={["Birthday"]}

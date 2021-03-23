@@ -50,7 +50,7 @@ class LoadFile extends Component {
             this.loadPopupResults.setPopupVisible(true);
           }}
           text={"Import File"}
-          textLower={"Please import \nACNHPocketGuideData.txt\n from the downloads folder."}
+          textLower={"Please import ACNHPocketGuideData.txt from the downloads folder."}
         />
         <Popup 
           ref={(loadPopupResults) => this.loadPopupResults = loadPopupResults}

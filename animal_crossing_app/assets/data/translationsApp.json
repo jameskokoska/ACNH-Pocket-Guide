@@ -379,18 +379,6 @@
             "French (US)": "Petit format"
         },
         {
-            "English": "Cancel",
-            "English (Europe)": "Cancel",
-            "French": "Annuler",
-            "French (US)": "Annuler"
-        },
-        {
-            "English": "Done",
-            "English (Europe)": "Done",
-            "French": "Fait",
-            "French (US)": "Fait"
-        },
-        {
             "English": "Turnip Log",
             "English (Europe)": "Turnip Log",
             "French": "Journal des Navets",
@@ -853,6 +841,18 @@
             "French (US)": "Importation du Catalogue"
         },
         {
+            "English": "Importing...",
+            "English (Europe)": "Importing...",
+            "French": "Importation en cours...",
+            "French (US)": "Importation en cours..."
+        },
+        {
+            "English": "Please wait",
+            "English (Europe)": "Please wait",
+            "French": "Veuillez patienter",
+            "French (US)": "Veuillez patienter"
+        },
+        {
             "English": "Visit",
             "English (Europe)": "Visit",
             "French": "Visite",
@@ -961,10 +961,10 @@
             "French (US)": "Exporter les Résultats"
         },
         {
-            "English": "File exported to Downloads folder",
-            "English (Europe)": "File exported to Downloads folder",
-            "French": "Fichier exporté vers le dossier des Téléchargements",
-            "French (US)": "Fichier exporté vers le dossier des Téléchargements"
+            "English": "File exported to Downloads folder ACNHPocketGuideData.txt",
+            "English (Europe)": "File exported to Downloads folder ACNHPocketGuideData.txt",
+            "French": "Fichier exporté vers le dossier des Téléchargements ACNHPocketGuideData.txt",
+            "French (US)": "Fichier exporté vers le dossier des Téléchargements ACNHPocketGuideData.txt"
         },
         {
             "English": "Import File",
@@ -1025,12 +1025,6 @@
             "English (Europe)": "Reset",
             "French": "Réinitialiser",
             "French (US)": "Réinitialiser"
-        },
-        {
-            "English": "Cancel",
-            "English (Europe)": "Cancel",
-            "French": "Annuler",
-            "French (US)": "Annuler"
         },
         {
             "English": "Restart Required",
@@ -1129,10 +1123,10 @@
             "French (US)": "Seules les créatures qui peuvent être capturées ce mois-ci seront affichées."
         },
         {
-            "English": "Creatures leaving warning",
-            "English (Europe)": "Creatures leaving warning",
-            "French": "Creatures leaving warning",
-            "French (US)": "Creatures leaving warning"
+            "English": "Last month to catch warning",
+            "English (Europe)": "Last month to catch warning",
+            "French": "Dernier mois pour attraper les créatures",
+            "French (US)": "Dernier mois pour attraper les créatures"
         },
         {
             "English": "Display a red warning background colour around creatures that won't be able to be caught in the next month.",
@@ -1279,8 +1273,8 @@
             "French (US)": "Définir une Date/Heure personnalisée"
         },
         {
-            "English": "Data backip",
-            "English (Europe)": "Data backip",
+            "English": "Data backup",
+            "English (Europe)": "Data backup",
             "French": "Sauvegarde des données",
             "French (US)": "Sauvegarde des données"
         },
@@ -1823,6 +1817,396 @@
             "English (Europe)": "Skip",
             "French": "Passer",
             "French (US)": "Passer"
+        },
+        {
+            "English": "Download images",
+            "English (Europe)": "Download images",
+            "French": "Télécharger les images",
+            "French (US)": "Télécharger les images"
+        },
+        {
+            "English": "Save images locally for offline use once viewed. If disabled, can save storage space, but always requires an internet connection to view images.",
+            "English (Europe)": "Save images locally for offline use once viewed. If disabled, can save storage space, but always requires an internet connection to view images.",
+            "French": "Enregistrez les images localement pour une utilisation hors ligne une fois vues. Si désactivé, peut économiser de l'espace de stockage, mais nécessite toujours une connexion Internet pour afficher les images.",
+            "French (US)": "Enregistrez les images localement pour une utilisation hors ligne une fois vues. Si désactivé, peut économiser de l'espace de stockage, mais nécessite toujours une connexion Internet pour afficher les images."
+        },
+        {
+            "English": "Error backing up. Please enable the permissions and try again. Unfortunately Camera Permission may be required to write to local storage (using the Expo SDK). This permission can be disabled at any time. Sorry for the inconvenience.",
+            "English (Europe)": "Error backing up. Please enable the permissions and try again. Unfortunately Camera Permission may be required to write to local storage (using the Expo SDK). This permission can be disabled at any time. Sorry for the inconvenience.",
+            "French": "Erreur lors de la sauvegarde. Veuillez activer les autorisations et réessayer. Malheureusement, une autorisation de la caméra peut être nécessaire pour écrire sur le stockage local (à l'aide du SDK Expo). Cette autorisation peut être désactivée à tout moment. Désolé pour le dérangement.",
+            "French (US)": "Erreur lors de la sauvegarde. Veuillez activer les autorisations et réessayer. Malheureusement, une autorisation de la caméra peut être nécessaire pour écrire sur le stockage local (à l'aide du SDK Expo). Cette autorisation peut être désactivée à tout moment. Désolé pour le dérangement."
+        },
+        {
+            "English": "Cancel",
+            "English (Europe)": "Cancel",
+            "French": "Annuler",
+            "French (US)": "Annuler"
+        },
+        {
+            "English": "Done",
+            "English (Europe)": "Done",
+            "French": "Fait",
+            "French (US)": "Fait"
+        },
+        {
+            "English": "OK",
+            "English (Europe)": "OK",
+            "French": "OK",
+            "French (US)": "OK"
+        },
+        {
+            "English": "Flying Near Flowers",
+            "English (Europe)": "Flying Near Flowers",
+            "French": "Vole près des Fleurs",
+            "French (US)": "Vole près des fleurs"
+        },
+        {
+            "English": "On Rotten Turnips Or Candy",
+            "English (Europe)": "On Rotten Turnips Or Candy",
+            "French": "Sur les Navets ou les Bonbons Pourris",
+            "French (US)": "Sur les navets ou les bonbons pourris"
+        },
+        {
+            "English": "On Trees",
+            "English (Europe)": "On Trees",
+            "French": "Sur les Arbres",
+            "French (US)": "Sur les arbres"
+        },
+        {
+            "English": "Shaking Trees",
+            "English (Europe)": "Shaking Trees",
+            "French": "En secouant les Arbres",
+            "French (US)": "En secouant les arbres"
+        },
+        {
+            "English": "Flying Near Water",
+            "English (Europe)": "Flying Near Water",
+            "French": "Vole près de l'Eau",
+            "French (US)": "Vole près de l'eau"
+        },
+        {
+            "English": "On The Ground",
+            "English (Europe)": "On The Ground",
+            "French": "Sur le Sol",
+            "French (US)": "Sur le sol"
+        },
+        {
+            "English": "On Palm Trees",
+            "English (Europe)": "On Palm Trees",
+            "French": "Sur les Palmiers",
+            "French (US)": "Sur les palmiers"
+        },
+        {
+            "English": "On Hardwood/cedar Trees",
+            "English (Europe)": "On Hardwood/cedar Trees",
+            "French": "Sur les Arbres Feuillus/Cèdres",
+            "French (US)": "Sur les arbres feuillus/cèdres"
+        },
+        {
+            "English": "On Tree Stumps",
+            "English (Europe)": "On Tree Stumps",
+            "French": "Sur les Souches d'Arbres",
+            "French (US)": "Sur les souches d'arbres"
+        },
+        {
+            "English": "Flying",
+            "English (Europe)": "Flying",
+            "French": "Vole",
+            "French (US)": "Vole"
+        },
+        {
+            "English": "On Rivers/ponds",
+            "English (Europe)": "On Rivers/ponds",
+            "French": "Sur les Rivières/Etangs",
+            "French (US)": "Sur les rivières/étangs"
+        },
+        {
+            "English": "On Villagers",
+            "English (Europe)": "On Villagers",
+            "French": "Sur les Villageois",
+            "French (US)": "Sur les villageois"
+        },
+        {
+            "English": "Flying Near Trashor Rotten Turnips",
+            "English (Europe)": "Flying Near Trashor Rotten Turnips",
+            "French": "Vole près des ordures et des navets pourris",
+            "French (US)": "Vole près des ordures et des navets pourris"
+        },
+        {
+            "English": "Disguised On Shoreline",
+            "English (Europe)": "Disguised On Shoreline",
+            "French": "Déguisé sur le Rivage",
+            "French (US)": "Déguisé sur le rivage"
+        },
+        {
+            "English": "On Flowers",
+            "English (Europe)": "On Flowers",
+            "French": "Sur les Fleurs",
+            "French (US)": "Sur les fleurs"
+        },
+        {
+            "English": "Underground",
+            "English (Europe)": "Underground",
+            "French": "Sous la terre",
+            "French (US)": "Sous la terre"
+        },
+        {
+            "English": "Flying Near Light Sources",
+            "English (Europe)": "Flying Near Light Sources",
+            "French": "Vol près de Sources Lumineuses",
+            "French (US)": "Vol près de sources lumineuses"
+        },
+        {
+            "English": "On White Flowers",
+            "English (Europe)": "On White Flowers",
+            "French": "Sur les Fleurs Blanches",
+            "French (US)": "Sur les fleurs blanches"
+        },
+        {
+            "English": "Flying Near Blue/purple/black Flowers",
+            "English (Europe)": "Flying Near Blue/purple/black Flowers",
+            "French": "Vole près des fleurs bleues/mauves/noires",
+            "French (US)": "Vole près des fleurs bleues/mauves/noires"
+        },
+        {
+            "English": "From Hitting Rocks",
+            "English (Europe)": "From Hitting Rocks",
+            "French": "En frappant les rochers",
+            "French (US)": "En frappant les rochers"
+        },
+        {
+            "English": "On Rocks/bushes",
+            "English (Europe)": "On Rocks/bushes",
+            "French": "Sur les rochers/buissons",
+            "French (US)": "Sur les rochers/buissons"
+        },
+        {
+            "English": "Disguised Under Trees",
+            "English (Europe)": "Disguised Under Trees",
+            "French": "Déguisé sur les arbres",
+            "French (US)": "Déguisé sur les arbres"
+        },
+        {
+            "English": "On Beach Rocks",
+            "English (Europe)": "On Beach Rocks",
+            "French": "Sur les rochers de la plage",
+            "French (US)": "Sur les rochers de la plage"
+        },
+        {
+            "English": "Sea",
+            "English (Europe)": "Sea",
+            "French": "Mer",
+            "French (US)": "Mer"
+        },
+        {
+            "English": "River",
+            "English (Europe)": "River",
+            "French": "Rivière",
+            "French (US)": "Rivière"
+        },
+        {
+            "English": "Pier",
+            "English (Europe)": "Pier",
+            "French": "Ponton",
+            "French (US)": "Ponton"
+        },
+        {
+            "English": "Pond",
+            "English (Europe)": "Pond",
+            "French": "Etang",
+            "French (US)": "Etang"
+        },
+        {
+            "English": "Selected language not supported",
+            "English (Europe)": "Selected language not supported",
+            "French": "Langue non prise en charge",
+            "French (US)": "Langue non prise en charge"
+        },
+        {
+            "English": "This online guide is only available in English.",
+            "English (Europe)": "This online guide is only available in English.",
+            "French": "Ce guide n'est disponible qu'en Anglais",
+            "French (US)": "Ce guide n'est disponible qu'en Anglais"
+        },
+        {
+            "English": "Remove customizable variations in lists",
+            "English (Europe)": "Remove customizable variations in lists",
+            "French": "Supprimer les variantes personnalisables dans les listes",
+            "French (US)": "Supprimer les variantes personnalisables dans les listes"
+        },
+        {
+            "English": "Remove variations that you can obtain through customization. Useful to keep track of furniture types that has not been purchased.",
+            "English (Europe)": "Remove variations that you can obtain through customization. Useful to keep track of furniture types that has not been purchased.",
+            "French": "Supprimer les variantes que vous obtenez grâce à la personnalisation. Utile pour garder une trace des types de meubles qui n'ont pas été achetés.",
+            "French (US)": "Supprimer les variantes que vous obtenez grâce à la personnalisation. Utile pour garder une trace des types de meubles qui n'ont pas été achetés."
+        },
+        {
+            "English": "New Items",
+            "English (Europe)": "New Items",
+            "French": "Nouveaux objets",
+            "French (US)": "Nouveaux objets"
+        },
+        {
+            "English": "Peppy",
+            "English (Europe)": "Peppy",
+            "French": "Vif",
+            "French (US)": "Vif"
+        },
+        {
+            "English": "Peppy villagers",
+            "English (Europe)": "Peppy villagers",
+            "French": "Villageois vifs",
+            "French (US)": "Villageois vifs"
+        },
+        {
+            "English": "Cranky",
+            "English (Europe)": "Cranky",
+            "French": "Versatile",
+            "French (US)": "Versatile"
+        },
+        {
+            "English": "Cranky villagers",
+            "English (Europe)": "Cranky villagers",
+            "French": "Villageois versatiles",
+            "French (US)": "Villageois versatiles"
+        },
+        {
+            "English": "Snooty",
+            "English (Europe)": "Snooty",
+            "French": "Arrogant",
+            "French (US)": "Arrogant"
+        },
+        {
+            "English": "Snooty villagers",
+            "English (Europe)": "Snooty villagers",
+            "French": "Villageois arrogants",
+            "French (US)": "Villageois arrogants"
+        },
+        {
+            "English": "Big Sister ",
+            "English (Europe)": "Big Sister ",
+            "French": "Grande Soeur",
+            "French (US)": "Grande Soeur"
+        },
+        {
+            "English": "Big Sister villagers",
+            "English (Europe)": "Big Sister villagers",
+            "French": "Villageois Grandes Soeurs",
+            "French (US)": "Villageois Grandes Soeurs"
+        },
+        {
+            "English": "Lazy",
+            "English (Europe)": "Lazy",
+            "French": "Paresseux",
+            "French (US)": "Paresseux"
+        },
+        {
+            "English": "Lazy villagers",
+            "English (Europe)": "Lazy villagers",
+            "French": "Villageois paresseux",
+            "French (US)": "Villageois paresseux"
+        },
+        {
+            "English": "Normal",
+            "English (Europe)": "Normal",
+            "French": "Normal",
+            "French (US)": "Normal"
+        },
+        {
+            "English": "Normal villagers",
+            "English (Europe)": "Normal villagers",
+            "French": "Villageois normaux",
+            "French (US)": "Villageois normaux"
+        },
+        {
+            "English": "All villagers",
+            "English (Europe)": "All villagers",
+            "French": "Tous les villageois",
+            "French (US)": "Tous les villageois"
+        },
+        {
+            "English": "Jock",
+            "English (Europe)": "Jock",
+            "French": "Sportif",
+            "French (US)": "Sportif"
+        },
+        {
+            "English": "Jock villagers",
+            "English (Europe)": "Jock villagers",
+            "French": "Villageois sportifs",
+            "French (US)": "Villageois sportifs"
+        },
+        {
+            "English": "Smug",
+            "English (Europe)": "Smug",
+            "French": "Chic",
+            "French (US)": "Chic"
+        },
+        {
+            "English": "Smug villagers",
+            "English (Europe)": "Smug villagers",
+            "French": "Villageois chics",
+            "French (US)": "Villageois chics"
+        },
+        {
+            "English": "can catch",
+            "English (Europe)": "can catch",
+            "French": "peut capturer",
+            "French (US)": "peut capturer"
+        },
+        {
+            "English": "Any except rain",
+            "English (Europe)": "Any except rain",
+            "French": "Tout le temps sauf quand il pleut",
+            "French (US)": "Tout le temps sauf quand il pleut"
+        },
+        {
+            "English": "Jolly Redd's Treasure Trawler",
+            "English (Europe)": "Jolly Redd's Treasure Trawler",
+            "French": "Le Rounarama",
+            "French (US)": "Le Rounarama"
+        },
+        {
+            "English": "Available in Nook's Cranny (either upgrade tier) in the unique furniture slot",
+            "English (Europe)": "Available in Nook's Cranny (either upgrade tier) in the unique furniture slot",
+            "French": "Disponible dans la Boutique Nook (dans n'importe quelle mise à niveau) au présentoir de grand objet",
+            "French (US)": "Disponible dans la Boutique Nook (dans n'importe quelle mise à niveau) au présentoir de grand objet"
+        },
+        {
+            "English": "Available in Nook's Cranny (upgraded only), in the third unique furniture slot",
+            "English (Europe)": "Available in Nook's Cranny (upgraded only), in the third unique furniture slot",
+            "French": "Disponible dans la Boutique Nook (version améliorée) au présentoir d'objet de luxe",
+            "French (US)": "Disponible dans la Boutique Nook (version améliorée) au présentoir d'objet de luxe"
+        },
+        {
+            "English": "Link Nintendo Account to Pocket Camp, then redeem a 16-digit code on your Nintendo Switch",
+            "English (Europe)": "Link Nintendo Account to Pocket Camp, then redeem a 16-digit code on your Nintendo Switch",
+            "French": "Associez le compte Nintendo à Pocket Camp, puis utilisez un code à 16 chiffres sur votre Nintendo Switch",
+            "French (US)": "Associez le compte Nintendo à Pocket Camp, puis utilisez un code à 16 chiffres sur votre Nintendo Switch"
+        },
+        {
+            "English": "Scan the associated Sanrio amiibo card",
+            "English (Europe)": "Scan the associated Sanrio amiibo card",
+            "French": "Scannez la carte amiibo Sanrio associée",
+            "French (US)": "Scannez la carte amiibo Sanrio associée"
+        },
+        {
+            "English": "Seasonal decor",
+            "English (Europe)": "Seasonal decor",
+            "French": "Décor saisonnier",
+            "French (US)": "Décor saisonnier"
+        },
+        {
+            "English": "Nook Miles Redemption",
+            "English (Europe)": "Nook Miles Redemption",
+            "French": "Echange de Nook Miles",
+            "French (US)": "Echange de Nook Miles"
+        },
+        {
+            "English": "Balloons",
+            "English (Europe)": "Balloons",
+            "French": "Ballons",
+            "French (US)": "Ballons"
         }
     ]
 }

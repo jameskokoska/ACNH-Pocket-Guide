@@ -7,20 +7,37 @@ import {getSettingsString} from "../LoadJsonData"
 
 class AllItemsPage extends Component {
   render(){
+    var title = "Everything";
+    if(this.props.title!==undefined){
+      title = this.props.title;
+    }
+    var newItems = false;
+    if(this.props.newItems!==undefined){
+      newItems = this.props.newItems
+    }
+    var appBarColor = colors.emojipediaAppBar[global.darkMode];
+    if(this.props.appBarColor !==undefined){
+      appBarColor = this.props.appBarColor;
+    }
+    var accentColor = colors.emojipediaAccent[global.darkMode];
+    if(this.props.accentColor !==undefined){
+      accentColor = this.props.accentColor;
+    }
     return(
         <ListPage 
           tabs={false}
           filters={["Source","Tag", "DIY", "Catalog", "Where/How","Weather","Shadow","Movement Speed", "Season/Event","Category", "Season/Event Exclusive", "Seasonality", "Personality","Species","Hobby","Style 1","Style 2","Color 1","Color 2","Variation","Style 1","Style 2","Size", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category"]}
           filterSearchable = {true}
-          title="Everything"
+          title={title}
+          newItems={newItems}
           gridType="smallGrid" //smallGrid, largeGrid, row
-          appBarColor={colors.emojipediaAppBar[global.darkMode]}
+          appBarColor={appBarColor}
           titleColor={colors.textBlack[global.darkMode]}
           searchBarColor={colors.searchbarBG[global.darkMode]}
           backgroundColor={colors.lightDarkAccent[global.darkMode]}
           boxColor={true}
           labelColor={colors.textBlack[global.darkMode]}
-          accentColor={colors.emojipediaAccent[global.darkMode]}
+          accentColor={accentColor}
           specialLabelColor={colors.fishText[global.darkMode]}
           disablePopup={[
             false,

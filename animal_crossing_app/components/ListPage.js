@@ -123,6 +123,13 @@ export default (props) =>{
   const [possibleFiltersState, setPossibleFilters] = useState("empty")
   const popupFilter = React.useRef(null);
 
+  const componentIsMounted = useRef(true)
+  useEffect(() => {
+      return () => {
+          componentIsMounted.current = false
+      }
+  }, [])
+
   useEffect(()=>{
     var dataUpdated = [];
     var previousVariation = "";
@@ -154,7 +161,9 @@ export default (props) =>{
             }
           }
         }
-        setPossibleFilters(possibleFilters)
+        if (componentIsMounted.current) {
+          setPossibleFilters(possibleFilters)
+        }
         exportFilters(possibleFilters, props.title)
       } else {
         var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH ";
@@ -211,17 +220,30 @@ export default (props) =>{
         //Loop through the specific search criteria specified for this dataset
         for(var x = 0; x < props.searchKey[j].length; x++){
           var searchFound = false;
-          if((search.constructor===Array && search.length !== 0) || props.filterCollectedOnly){
-            for(var z = 0; z < search.length; z++){
+          if((search.constructor===Array && search.length !== 0) || props.filterCollectedOnly || props.newItems){
+            var searchActual = search;
+            if(props.filterCollectedOnly){
+              searchActual = "Collected";
+            } else if (props.newItems){
+              searchActual = "New version"
+            }
+            for(var z = 0; z < searchActual.length; z++){
               //If the property is in search, not needed
+              if(searchActual===("New version") && props.newItems && item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===global.gameVersion){
+                searchFound = true;
+                break;
+              } else if (searchActual===("New version") && props.newItems){
+                searchFound = false;
+                break;
+              }
               // if(props.searchKey[j].includes(search[z].split("-")[0])){
                 //If property is Collected
                 var searchCollected = true;
-                if(search.includes("Collected") || props.filterCollectedOnly){
+                if(searchActual.includes("Collected") || props.filterCollectedOnly){
                   searchCollected = false;
                   if(global.collectionList.includes(item.["checkListKey"])){
                     searchCollected = true;
-                    if(search.length===1 || props.filterCollectedOnly){
+                    if(searchActual.length===1 || props.filterCollectedOnly){
                       searchFound = true;
                       //Only check collected filter
                       if(searchCollected && props.filterCollectedOnly){
@@ -231,21 +253,21 @@ export default (props) =>{
                       break;
                     }
                   }
-                } else if(search.includes("Not Collected")){
+                } else if(searchActual.includes("Not Collected")){
                   searchCollected = false;
                   if(!global.collectionList.includes(item.["checkListKey"])){
                     searchCollected = true;
-                    if(search.length===1){
+                    if(searchActual.length===1){
                       searchFound = true;
                       break;
                     }
                   }
                 }
-                if(search.includes("Collected")&&search.includes("Not Collected")){
+                if(searchActual.includes("Collected")&&searchActual.includes("Not Collected")){
                   searchCollected=true;
                 }
                 //Only check the property selected
-                if(searchCollected && item.[search[z].split(":")[0]]!==undefined && item.[search[z].split(":")[0]].toLowerCase().includes(search[z].split(":")[1].toLowerCase())){
+                if(searchCollected && item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toLowerCase().includes(searchActual[z].split(":")[1].toLowerCase())){
                   searchFound = true;
                   break;
                 }
@@ -259,9 +281,21 @@ export default (props) =>{
               searchFound = attemptToTranslateItem(item.[props.searchKey[j][x]]).toLowerCase().includes(search.toLowerCase())
             }
           }
-          if((search==="" || searchFound)&&(!props.filterCollectedOnly||searchFound)){
+          if((search==="" || searchFound)&&((!props.filterCollectedOnly&&!props.newItems)||searchFound)){
             //Search result found...
-            if(props.showVariations[j]===false){
+            if (getSettingsString("settingsRemoveCraftVariations")==="true"){
+              if(item["Kit Cost"] !==undefined && item["Kit Cost"] !=="NA" ){
+                if(item["Name"]===previousVariation){
+                  previousVariation = item["Name"];
+                  break;
+                }
+              }
+              item.dataSet = j;
+              item.index = i;
+              dataUpdated = [...dataUpdated, item];
+              previousVariation = item["Name"];
+              break;
+            } else if(props.showVariations[j]===false){
               //If recipes item page, and its not DIY, remove
               if(props.recipes){
                 if(item["DIY"]!=="Yes"){
@@ -305,8 +339,9 @@ export default (props) =>{
         }
       }
     }
-    
-    setData(dataUpdated)
+    if (componentIsMounted.current) {
+      setData(dataUpdated)
+    }
   }, [props, search])
   
   var numColumns=3;
@@ -366,7 +401,7 @@ export default (props) =>{
         <HeaderLoading title={props.title} headerHeight={headerHeight} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
       </>
     )
-  } else if (data.length===0 && props.filterCollectedOnly){
+  } else if (data.length===0 && props.filterCollectedOnly && props.currentVillagers){
     return(<>
       <View style={{height:10}}/>
       <TouchableOpacity onPress={() => props.setPage(8)}>
@@ -439,15 +474,23 @@ class BottomSheetRender extends Component{
     }
     this.updateCheckChildFunction="";
   }
+  componentDidMount() {
+    this.mounted = true;
+  }
+  componentWillUnmount() {
+    this.mounted = false;
+  }
   update(item, updateCheckChildFunction){
-    this.forceUpdate();
-    this.setState({
-      item:item,
-    })
-    console.log("item available to popup:")
-    console.log(item)
-    if(item!==undefined){
-      this.updateCheckChildFunction=updateCheckChildFunction;
+    if(this.mounted){
+      this.forceUpdate();
+      this.setState({
+        item:item,
+      })
+      console.log("item available to popup:")
+      console.log(item)
+      if(item!==undefined){
+        this.updateCheckChildFunction=updateCheckChildFunction;
+      }
     }
   }
   render(){

@@ -9,6 +9,7 @@ import {getPhotoCorner, getMaterialImage} from "./GetPhoto"
 import {getSettingsString, attemptToTranslate, attemptToTranslateSpecial} from "../LoadJsonData"
 import {ScrollView} from 'react-native-gesture-handler'
 import {PopupInfoCustom} from "./Popup"
+import {getMonth, doWeSwapDate} from './DateFunctions'
 
 export class CircularImage extends Component {
   render() {
@@ -17,7 +18,7 @@ export class CircularImage extends Component {
     }
     return <View style={{width:"100%", alignItems: 'center'}}>
       <View style={[styles.rowImageBackground,{backgroundColor:this.props.accentColor, top: getSettingsString("settingsLargerItemPreviews")==="false" ? -130/2-20 : -210/2-60, height: getSettingsString("settingsLargerItemPreviews")==="false" ? 130 : 210, width: getSettingsString("settingsLargerItemPreviews")==="false" ? 130 : 210,}]}>
-        <Image
+        <FastImage
           style={[styles.rowImage, {height: getSettingsString("settingsLargerItemPreviews")==="false" ? 95 : 180, width: getSettingsString("settingsLargerItemPreviews")==="false" ? 95 : 180,}]}
           source={{
             uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
@@ -136,7 +137,7 @@ export class InfoLine extends Component {
     }
     var text1 = attemptToTranslateSpecial(this.props.item[this.props.textProperty], "variants");
     var text2 = attemptToTranslateSpecial(this.props.item[this.props.textProperty2], "variants");
-    var text=capitalizeFirst(commas(text1));
+    var text = capitalizeFirst(commas(text1));
     if(this.props.textProperty2 !== undefined && this.props.item[this.props.textProperty] !== this.props.item[this.props.textProperty2]){
       text+= ", " + capitalizeFirst(commas(text2))
     }
@@ -173,6 +174,11 @@ export class InfoLine extends Component {
         />
       }      
     }
+    if(this.props.birthday){
+      
+      var textSplit = this.props.item[this.props.textProperty].split("/")
+      text = doWeSwapDate()===true ? textSplit[1] + " " + attemptToTranslate(getMonth(textSplit[0]-1)) : attemptToTranslate(getMonth(textSplit[0]-1)) + " " + textSplit[1]
+    }
     var colors1 = <View/>
     var colors2 = <View/>
     if(this.props.textProperty[0]==="Color 1"&&this.props.textProperty2[0]==="Color 2"){
@@ -183,6 +189,10 @@ export class InfoLine extends Component {
       }
       colors1 = <ColorContainer color={color1}/>
       
+    }
+    if(this.props.translateItem){
+      text = attemptToTranslateItem(text.toLowerCase())
+      text=capitalize(text)
     }
     return <View style={[styles.infoLineBox]}>
             {imageSource}

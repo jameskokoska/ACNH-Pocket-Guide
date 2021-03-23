@@ -3,6 +3,14 @@ import React, {Component} from 'react';
 import {Text} from 'react-native';
 import {getSettingsString} from "../LoadJsonData"
 
+export function doWeSwapDate(){
+  if(global.language.includes("French")){
+    return true;
+  } else {
+    return false;
+  }
+}
+
 function getCurrentDateObject(){
   if(getSettingsString("settingsUseCustomDate")==="true"){
     return global.customTime;

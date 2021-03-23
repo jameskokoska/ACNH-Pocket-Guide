@@ -4,22 +4,15 @@ import {Agenda} from 'react-native-calendars';
 import TextFont from '../components/TextFont';
 import colors from '../Colors'
 import {getPhoto} from "../components/GetPhoto"
-import {getMonthFromString, getCurrentDateObject} from "../components/DateFunctions"
-import {capitalize, getSettingsString, checkTranslationEntry, attemptToTranslate, translateBirthday} from "../LoadJsonData"
+import {doWeSwapDate, getMonthFromString, getCurrentDateObject} from "../components/DateFunctions"
+import {translateDateRange, attemptToTranslateItem, capitalize, getSettingsString, attemptToTranslate, translateBirthday} from "../LoadJsonData"
 import {getSpecialOccurrenceDate} from "../components/EventContainer"
 import FastImage from '../components/FastImage';
 import DelayInput from "react-native-debounce-input";
 import {MailLink, ExternalLink, SubHeader, Header, Paragraph} from "../components/Formattings"
 import {LocaleConfig} from 'react-native-calendars';
 
-LocaleConfig.locales['language'] = {
-  monthNames: [attemptToTranslate('January'),attemptToTranslate('February'),attemptToTranslate('March'),attemptToTranslate('April'),attemptToTranslate('May'),attemptToTranslate('June'),attemptToTranslate('July'),attemptToTranslate('August'),attemptToTranslate('September'),attemptToTranslate('October'),attemptToTranslate('November'),attemptToTranslate('December')],
-  monthNamesShort: [attemptToTranslate('Jan'),attemptToTranslate('Feb'),attemptToTranslate('Mar'),attemptToTranslate('Apr'),attemptToTranslate('May'),attemptToTranslate('Jun'),attemptToTranslate('Jul'),attemptToTranslate('Aug'),attemptToTranslate('Sep'),attemptToTranslate('Oct'),attemptToTranslate('Nov'),attemptToTranslate('Dec')],
-  dayNames: [attemptToTranslate('Sunday'),attemptToTranslate('Monday'),attemptToTranslate('Tuesday'),attemptToTranslate('Wednesday'),attemptToTranslate('Thursday'),attemptToTranslate('Friday'),attemptToTranslate('Saturday')],
-  dayNamesShort: [attemptToTranslate('Sun'),attemptToTranslate('Mon'),attemptToTranslate('Tues'),attemptToTranslate('Wed'),attemptToTranslate('Thurs'),attemptToTranslate('Fri'),attemptToTranslate('Sat')],
-  today: attemptToTranslate('Today')
-};
-LocaleConfig.defaultLocale = 'language';
+
 
 //Note: these have changes
 // Northern Hemisphere Dates -> Dates (Northern Hemisphere)
@@ -36,8 +29,22 @@ export default class CalendarPage extends Component {
       viewList: false
     };
   }
-
+  componentDidMount() {
+    this.mounted = true;
+  }
+  componentWillUnmount() {
+    this.mounted = false;
+  }
   render() {
+    LocaleConfig.locales['language'] = {
+      monthNames: [attemptToTranslate('January'),attemptToTranslate('February'),attemptToTranslate('March'),attemptToTranslate('April'),attemptToTranslate('May'),attemptToTranslate('June'),attemptToTranslate('July'),attemptToTranslate('August'),attemptToTranslate('September'),attemptToTranslate('October'),attemptToTranslate('November'),attemptToTranslate('December')],
+      monthNamesShort: [attemptToTranslate('Jan'),attemptToTranslate('Feb'),attemptToTranslate('Mar'),attemptToTranslate('Apr'),attemptToTranslate('May'),attemptToTranslate('Jun'),attemptToTranslate('Jul'),attemptToTranslate('Aug'),attemptToTranslate('Sep'),attemptToTranslate('Oct'),attemptToTranslate('Nov'),attemptToTranslate('Dec')],
+      dayNames: [attemptToTranslate('Sunday'),attemptToTranslate('Monday'),attemptToTranslate('Tuesday'),attemptToTranslate('Wednesday'),attemptToTranslate('Thursday'),attemptToTranslate('Friday'),attemptToTranslate('Saturday')],
+      dayNamesShort: [attemptToTranslate('Sun'),attemptToTranslate('Mon'),attemptToTranslate('Tues'),attemptToTranslate('Wed'),attemptToTranslate('Thurs'),attemptToTranslate('Fri'),attemptToTranslate('Sat')],
+      today: attemptToTranslate('Today')
+    };
+    LocaleConfig.defaultLocale = 'language';
+
     var viewAll = <View/>
     if(this.state.viewList){
       viewAll = <AllEventsList/>
@@ -70,7 +77,7 @@ export default class CalendarPage extends Component {
         //renderDay={(day, item) => (<Text>{day ? day.day: 'item'}</Text>)}
         // hideExtraDays={false}
       />
-      <BottomBar viewList={()=>{this.setState({viewList:!this.state.viewList})}} viewToday={()=>{this.setState({viewList:false}); this.agenda.chooseDay(getCurrentDateObject())}} openAgenda={()=>{if(this.state.viewList){this.setState({viewList:false});}else{this.agenda.setScrollPadPosition(0, true); this.agenda.enableCalendarScrolling();}}}/>
+      <BottomBar viewList={()=>{if(this.mounted){this.setState({viewList:!this.state.viewList})}}} viewToday={()=>{if(this.mounted){this.setState({viewList:false});} this.agenda.chooseDay(getCurrentDateObject())}} openAgenda={()=>{if(this.state.viewList && this.mounted){this.setState({viewList:false});}else{this.agenda.setScrollPadPosition(0, true); this.agenda.enableCalendarScrolling();}}}/>
     </>
     );
     
@@ -107,7 +114,7 @@ export default class CalendarPage extends Component {
           if(date.getDay()===0){
             this.state.items[strTime].push({
               name: 'Daisy Mae',
-              time: '5 AM - 12 PM',
+              time: getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 12:00" : "5 AM - 12 PM",
               image:"turnip.png",
               color: colors.white,
             });
@@ -115,7 +122,7 @@ export default class CalendarPage extends Component {
           } else if (date.getDay()===6){
             this.state.items[strTime].push({
               name: 'K.K. Slider',
-              time: '8 PM - 12 AM',
+              time: getSettingsString("settingsUse24HourClock") === "true" ? "20:00 - 24:00" : "8 PM - 12 AM",
               image:"music.png",
               color: colors.white,
             });
@@ -125,7 +132,7 @@ export default class CalendarPage extends Component {
             if((date.getMonth()+1).toString()===(villager["Birthday"].split("/"))[0]&& date.getDate().toString()===(villager["Birthday"].split("/"))[1]){
               if(global.collectionList.includes("villagerCheckList"+villager["Name"])){
                 this.state.items[strTime].push({
-                  name: capitalize(translateBirthday(checkTranslationEntry(villager[global.language], villager["Name"]))),
+                  name: capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),
                   time: "All day",
                   image: villager["Icon Image"],
                   color: ["#2195F33F","#006EB34D"],
@@ -133,7 +140,7 @@ export default class CalendarPage extends Component {
                 this.state.itemsColor[strTime] = styleBirthdayEvent;
               } else {
                 this.state.items[strTime].push({
-                  name: capitalize(translateBirthday(checkTranslationEntry(villager[global.language], villager["Name"]))),
+                  name: capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),
                   time: "All day",
                   image: villager["Icon Image"],
                   color: colors.white,
@@ -144,7 +151,7 @@ export default class CalendarPage extends Component {
           })
 
           seasonData.map( (event, index)=>{
-            var eventName = checkTranslationEntry(event[global.language], event["Name"])
+            var eventName = attemptToTranslateItem(event["Name"])
             if(event["Northern Hemisphere Dates"]!=="NA" && getSettingsString("settingsNorthernHemisphere")==="true"){
               if(this.isDateInRange(event["Northern Hemisphere Dates"], date.getFullYear(), date)){
                 this.state.items[strTime].push({
@@ -213,9 +220,11 @@ export default class CalendarPage extends Component {
       Object.keys(this.state.items).forEach(key => {
         newItems[key] = this.state.items[key];
       });
-      this.setState({
-        items: newItems
-      });
+      if(this.mounted){
+        this.setState({
+          items: newItems
+        });
+      }
     }, 10);
   }
 
@@ -320,20 +329,31 @@ class AllEventsList extends Component{
     };
   }
 
+  componentDidMount() {
+    this.mounted = true;
+  }
+  componentWillUnmount() {
+    this.mounted = false;
+  }
+
   handleSearch = (text) => {
     if(text===""){
-      this.setState({searchData: this.data})
+      if(this.mounted){
+        this.setState({searchData: this.data})
+      }
     } else {
       var outputData = [];
       this.data.map( (event, index)=>{
-        var eventName = checkTranslationEntry(event[global.language], event["Name"]);
-        if(event["Name"].toLowerCase().includes(text.toLowerCase())){
+        var eventName = attemptToTranslateItem(event["Name"]);
+        if(eventName.toLowerCase().includes(text.toLowerCase())){
           outputData.push(event);
-        } else if (event["Type"].toLowerCase().includes(text.toLowerCase())){
+        } else if (attemptToTranslate(event["Type"]).toLowerCase().includes(text.toLowerCase())){
           outputData.push(event);
         }
       })
-      this.setState({searchData:outputData});
+      if(this.mounted){
+        this.setState({searchData:outputData});
+      }
     }
   }
 
@@ -390,15 +410,15 @@ const renderItemFlatList = ({item}) => {
     date = item.["Northern Hemisphere Dates"];
   } else if (item["Southern Hemisphere Dates"]!=="NA" && getSettingsString("settingsNorthernHemisphere")!=="true"){
     date = item.["Southern Hemisphere Dates"];
-  } else if (item[getCurrentDateObject().getFullYear()+" Dates"]!=="NA"){
+  } else if (item[getCurrentDateObject().getFullYear()+" Dates"]!=="NA" && item[getCurrentDateObject().getFullYear()+" Dates"]!== undefined){
     date = item.[getCurrentDateObject().getFullYear()+" Dates"];
-  } else if (item[getCurrentDateObject().getFullYear()-1+" Dates"]!=="NA"){
+  } else if (item[getCurrentDateObject().getFullYear()-1+" Dates"]!=="NA" && item[getCurrentDateObject().getFullYear()-1+" Dates"]!== undefined){
     date = item.[getCurrentDateObject().getFullYear()-1+" Dates"];
     date = date+" ("+(getCurrentDateObject().getFullYear()-1).toString()+")"
-  } else if (item[getCurrentDateObject().getFullYear()-2+" Dates"]!=="NA"){
+  } else if (item[getCurrentDateObject().getFullYear()-2+" Dates"]!=="NA" && item[getCurrentDateObject().getFullYear()-2+" Dates"]!== undefined){
     date = item.[getCurrentDateObject().getFullYear()-2+" Dates"];
     date = date+" ("+(getCurrentDateObject().getFullYear()-2).toString()+")"
-  } else if (item[getCurrentDateObject().getFullYear()-3+" Dates"]!=="NA"){
+  } else if (item[getCurrentDateObject().getFullYear()-3+" Dates"]!=="NA" && item[getCurrentDateObject().getFullYear()-3+" Dates"] !== undefined){
     date = item.[getCurrentDateObject().getFullYear()-3+" Dates"];
     date = date+" ("+(getCurrentDateObject().getFullYear()-3).toString()+")"
   }
@@ -406,11 +426,11 @@ const renderItemFlatList = ({item}) => {
   date = date.replace("--", "- ");
   var dateComp;
   if(date!=="")
-    dateComp = <TextFont style={{marginTop: 3,fontSize: 18,color: colors.textBlack[global.darkMode]}}>{capitalize(date)}</TextFont>
+    dateComp = <TextFont style={{marginTop: 3,fontSize: 18,color: colors.textBlack[global.darkMode]}}>{capitalize(translateDateRange(date))}</TextFont>
   else 
     dateComp = <View/>
   
-  var eventName = checkTranslationEntry(item[global.language], item["Name"]);
+  var eventName = attemptToTranslateItem(item["Name"]);
   return(
     <View style={{width:Dimensions.get('window').width-20, flex: 1, backgroundColor: colors.white[global.darkMode], padding: 20, marginHorizontal: 10, marginVertical: 5,  flexDirection:"row", alignItems: 'center', borderRadius: 10}}>
       {image}
@@ -612,3 +632,4 @@ const specialEvents = [
         "Image" : "fish.png"
     },
 ]
+
