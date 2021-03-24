@@ -673,6 +673,22 @@ export function translateBirthday(villager){
   }
 }
 
+export function translateIslandNameInputLabel1(){
+  if (global.language==="French" || global.language==="French (US)"){
+    return "of island";
+  } else {
+    return "of";
+  }
+}
+
+export function translateIslandNameInputLabel2(){
+  if (global.language==="French" || global.language==="French (US)"){
+    return "";
+  } else {
+    return "Island";
+  }
+}
+
 export function getDefaultLanguage(){
   //var languages = ["English", "English (Europe)","German","Spanish","Spanish (US)","French","French (US)","Italian","Dutch","Chinese","Chinese (Traditional)","Japanese","Korean","Russian"]
 

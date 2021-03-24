@@ -15,7 +15,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {getCurrentDateObject, doWeSwapDate} from '../components/DateFunctions';
 import TodoList from '../components/TodoList';
 import VisitorsList from '../components/VisitorsList';
-import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
+import {translateIslandNameInputLabel2, translateIslandNameInputLabel1, getSettingsString, attemptToTranslate} from "../LoadJsonData"
 import { ScrollView } from 'react-native-gesture-handler';
 import {PopupBottomCustom} from "../components/Popup"
 import VillagerPopup from "../popups/VillagerPopup"
@@ -157,7 +157,7 @@ class HomePage extends Component {
               defaultValue={global.name}
               multiline={true}
             />
-            <TextFont bold={true} style={{marginTop: 0, marginBottom: -8, color:colors.fishText[global.darkMode]}}>of</TextFont>
+            <TextFont bold={true} style={{marginTop: 0, marginBottom: -2, color:colors.fishText[global.darkMode]}}>{translateIslandNameInputLabel1()}</TextFont>
             <TextInput
               allowFontScaling={false}
               style={{fontSize: 30, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
@@ -167,7 +167,7 @@ class HomePage extends Component {
               defaultValue={global.islandName}
               multiline={true}
             />
-            <TextFont bold={true} style={{marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>Island</TextFont>
+            <TextFont bold={true} style={{marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{translateIslandNameInputLabel2()}</TextFont>
             <View style={{height: 5}}/>
             <TouchableOpacity onPress={() => this.props.setPage(13)}>
               <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{getSettingsString("settingsNorthernHemisphere")==="true" ? "Northern Hemisphere" : "Southern Hemisphere"}</TextFont>

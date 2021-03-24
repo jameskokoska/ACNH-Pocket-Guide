@@ -9,8 +9,8 @@
         {
             "English": "Everything",
             "English (Europe)": "Everything",
-            "French": "Objets",
-            "French (US)": "Objets"
+            "French": "Tous les éléments",
+            "French (US)": "Tous les éléments"
         },
         {
             "English": "Creatures + Museum",
@@ -559,16 +559,10 @@
             "French (US)": "Nom"
         },
         {
-            "English": "of",
-            "English (Europe)": "of",
-            "French": "de",
-            "French (US)": "de"
-        },
-        {
-            "English": "Island",
-            "English (Europe)": "Island",
-            "French": "l'île",
-            "French (US)": "l'île"
+            "English": "of Island",
+            "English (Europe)": "of Island",
+            "French": "de l'île",
+            "French (US)": "de l'île"
         },
         {
             "English": "Northern Hemisphere",
@@ -4055,312 +4049,380 @@
         {
             "English": "Chair",
             "English (Europe)": "Chair",
-            "French": "Chaise"
+            "French": "Chaise",
+            "French (US)": "Chaise"
         },
         {
             "English": "Clock",
             "English (Europe)": "Clock",
-            "French": "Horloge"
+            "French": "Horloge",
+            "French (US)": "Horloge"
         },
         {
             "English": "Table",
             "English (Europe)": "Table",
-            "French": "Table"
+            "French": "Table",
+            "French (US)": "Table"
         },
         {
             "English": "Dresser",
             "English (Europe)": "Dresser",
-            "French": "Armoire"
+            "French": "Armoire",
+            "French (US)": "Armoire"
         },
         {
             "English": "Chest",
             "English (Europe)": "Chest",
-            "French": "Coffre"
+            "French": "Coffre",
+            "French (US)": "Coffre"
         },
         {
             "English": "Bathroom Things",
             "English (Europe)": "Bathroom Things",
-            "French": "Objets de salle de bain"
+            "French": "Objets de salle de bain",
+            "French (US)": "Objets de salle de bain"
         },
         {
             "English": "Toy",
             "English (Europe)": "Toy",
-            "French": "Jouet"
+            "French": "Jouet",
+            "French (US)": "Jouet"
         },
         {
             "English": "Ranch",
             "English (Europe)": "Ranch",
-            "French": "Ranch"
+            "French": "Ranch",
+            "French (US)": "Ranch"
         },
         {
             "English": "Space",
             "English (Europe)": "Space",
-            "French": "Spatial"
+            "French": "Spatial",
+            "French (US)": "Spatial"
         },
         {
             "English": "Home Appliances",
             "English (Europe)": "Home Appliances",
-            "French": "Electroménager"
+            "French": "Electroménager",
+            "French (US)": "Electroménager"
         },
         {
             "English": "Japanese Style",
             "English (Europe)": "Japanese Style",
-            "French": "Style japonais"
+            "French": "Style japonais",
+            "French (US)": "Style japonais"
         },
         {
             "English": "Sofa",
             "English (Europe)": "Sofa",
-            "French": "Canapé"
+            "French": "Canapé",
+            "French (US)": "Canapé"
         },
         {
             "English": "Lamp",
             "English (Europe)": "Lamp",
-            "French": "Lampe"
+            "French": "Lampe",
+            "French (US)": "Lampe"
         },
         {
             "English": "Screen",
             "English (Europe)": "Screen",
-            "French": "Ecran"
+            "French": "Ecran",
+            "French (US)": "Ecran"
         },
         {
             "English": "Shelf",
             "English (Europe)": "Shelf",
-            "French": "Etagère"
+            "French": "Etagère",
+            "French (US)": "Etagère"
         },
         {
             "English": "Audio",
             "English (Europe)": "Audio",
-            "French": "Audio"
+            "French": "Audio",
+            "French (US)": "Audio"
         },
         {
             "English": "Outdoors Decor",
             "English (Europe)": "Outdoors Decor",
-            "French": "Décoration extérieure"
+            "French": "Décoration extérieure",
+            "French (US)": "Décoration extérieure"
         },
         {
             "English": "Sports",
             "English (Europe)": "Sports",
-            "French": "Sports"
+            "French": "Sports",
+            "French (US)": "Sports"
         },
         {
             "English": "Garden",
             "English (Europe)": "Garden",
-            "French": "Jardin"
+            "French": "Jardin",
+            "French (US)": "Jardin"
         },
         {
             "English": "Animal",
             "English (Europe)": "Animal",
-            "French": "Animal"
+            "French": "Animal",
+            "French (US)": "Animal"
         },
         {
             "English": "Fireplace",
             "English (Europe)": "Fireplace",
-            "French": "Cheminée"
+            "French": "Cheminée",
+            "French (US)": "Cheminée"
         },
         {
             "English": "Plants",
             "English (Europe)": "Plants",
-            "French": "Plantes"
+            "French": "Plantes",
+            "French (US)": "Plantes"
         },
         {
             "English": "Compass",
             "English (Europe)": "Compass",
-            "French": "Boussole"
+            "French": "Boussole",
+            "French (US)": "Boussole"
         },
         {
             "English": "Kitchen",
             "English (Europe)": "Kitchen",
-            "French": "Cuisine"
+            "French": "Cuisine",
+            "French (US)": "Cuisine"
         },
         {
             "English": "Easter",
             "English (Europe)": "Easter",
-            "French": "Pâques"
+            "French": "Pâques",
+            "French (US)": "Pâques"
         },
         {
             "English": "Kitchen Things",
             "English (Europe)": "Kitchen Things",
-            "French": "Objets de la cuisine"
+            "French": "Objets de la cuisine",
+            "French (US)": "Objets de la cuisine"
         },
         {
             "English": "Shop",
             "English (Europe)": "Shop",
-            "French": "Boutique"
+            "French": "Boutique",
+            "French (US)": "Boutique"
         },
         {
             "English": "School",
             "English (Europe)": "School",
-            "French": "Scolaire"
+            "French": "Scolaire",
+            "French (US)": "Scolaire"
         },
         {
             "English": "Bathtub",
             "English (Europe)": "Bathtub",
-            "French": "Baignoire"
+            "French": "Baignoire",
+            "French (US)": "Baignoire"
         },
         {
             "English": "Supplies",
             "English (Europe)": "Supplies",
-            "French": "Fournitures"
+            "French": "Fournitures",
+            "French (US)": "Fournitures"
         },
         {
             "English": "Work Bench",
             "English (Europe)": "Work Bench",
-            "French": "Banc"
+            "French": "Banc",
+            "French (US)": "Banc"
         },
         {
             "English": "Facility Decor",
             "English (Europe)": "Facility Decor",
-            "French": "Décoration de maison"
+            "French": "Décoration de maison",
+            "French (US)": "Décoration de maison"
         },
         {
             "English": "Playground",
             "English (Europe)": "Playground",
-            "French": "Terrain de jeux"
+            "French": "Terrain de jeux",
+            "French (US)": "Terrain de jeux"
         },
         {
             "English": "Toilet",
             "English (Europe)": "Toilet",
-            "French": "Toilettes"
+            "French": "Toilettes",
+            "French (US)": "Toilettes"
         },
         {
             "English": "Insect",
             "English (Europe)": "Insect",
-            "French": "Insecte"
+            "French": "Insecte",
+            "French (US)": "Insecte"
         },
         {
             "English": "TV",
             "English (Europe)": "TV",
-            "French": "TV"
+            "French": "TV",
+            "French (US)": "TV"
         },
         {
             "English": "Zen-style",
             "English (Europe)": "Zen-style",
-            "French": "Style zen"
+            "French": "Style zen",
+            "French (US)": "Style zen"
         },
         {
             "English": "Folk Craft Decor",
             "English (Europe)": "Folk Craft Decor",
-            "French": "Décoration folklorique"
+            "French": "Décoration folklorique",
+            "French (US)": "Décoration folklorique"
         },
         {
             "English": "Sewing Table",
             "English (Europe)": "Sewing Table",
-            "French": "Machine à coudre"
+            "French": "Machine à coudre",
+            "French (US)": "Machine à coudre"
         },
         {
             "English": "Heating",
             "English (Europe)": "Heating",
-            "French": "Chauffage"
+            "French": "Chauffage",
+            "French (US)": "Chauffage"
         },
         {
             "English": "Study",
             "English (Europe)": "Study",
-            "French": "Etude"
+            "French": "Etude",
+            "French (US)": "Etude"
         },
         {
             "English": "Office",
             "English (Europe)": "Office",
-            "French": "Bureau"
+            "French": "Bureau",
+            "French (US)": "Bureau"
         },
         {
             "English": "Museum",
             "English (Europe)": "Museum",
-            "French": "Musée"
+            "French": "Musée",
+            "French (US)": "Musée"
         },
         {
             "English": "Beauty",
             "English (Europe)": "Beauty",
-            "French": "Beauté"
+            "French": "Beauté",
+            "French (US)": "Beauté"
         },
         {
             "English": "Game Console",
             "English (Europe)": "Game Console",
-            "French": "Console de jeux"
+            "French": "Console de jeux",
+            "French (US)": "Console de jeux"
         },
         {
             "English": "Special Insect",
             "English (Europe)": "Special Insect",
-            "French": "Insecte spécial"
+            "French": "Insecte spécial",
+            "French (US)": "Insecte spécial"
         },
         {
             "English": "Dining",
             "English (Europe)": "Dining",
-            "French": "Alimentaire"
+            "French": "Alimentaire",
+            "French (US)": "Alimentaire"
         },
         {
             "English": "Special Fish",
             "English (Europe)": "Special Fish",
-            "French": "Poisson spécial"
+            "French": "Poisson spécial",
+            "French (US)": "Poisson spécial"
         },
         {
             "English": "Air Conditioning",
             "English (Europe)": "Air Conditioning",
-            "French": "Air conditionné"
+            "French": "Air conditionné",
+            "French (US)": "Air conditionné"
         },
         {
             "English": "House Door Decor",
             "English (Europe)": "House Door Decor",
-            "French": "Décoration de porte"
+            "French": "Décoration de porte",
+            "French (US)": "Décoration de porte"
         },
         {
             "English": "Not in catalog",
             "English (Europe)": "Not in catalog",
-            "French": "Non catalogué"
+            "French": "Non catalogué",
+            "French (US)": "Non catalogué"
         },
         {
             "English": "Not for sale",
             "English (Europe)": "Not for sale",
-            "French": "Pas à vendre"
+            "French": "Pas à vendre",
+            "French (US)": "Pas à vendre"
         },
         {
             "English": "Catalog",
             "English (Europe)": "Catalog",
-            "French": "Catalogue"
+            "French": "Catalogue",
+            "French (US)": "Catalogue"
         },
         {
             "English": "For sale",
             "English (Europe)": "For sale",
-            "French": "A vendre"
+            "French": "A vendre",
+            "French (US)": "A vendre"
         },
         {
             "English": "None",
             "English (Europe)": "None",
-            "French": "Aucune"
+            "French": "Aucune",
+            "French (US)": "Aucune"
         },
         {
             "English": "Color 1",
             "English (Europe)": "Color 1",
-            "French": "Couleur 1"
+            "French": "Couleur 1",
+            "French (US)": "Couleur 1"
+        },
+        {
+            "English": "Island",
+            "English (Europe)": "Island",
+            "French": "l'île",
+            "French (US)": "l'île"
         },
         {
             "English": "Color 2",
             "English (Europe)": "Color 2",
-            "French": "Couleur 2"
+            "French": "Couleur 2",
+            "French (US)": "Couleur 2"
         },
         {
             "English": "Natural",
             "English (Europe)": "Natural",
-            "French": "Naturel"
+            "French": "Naturel",
+            "French (US)": "Naturel"
         },
         {
             "English": "Cherry",
             "English (Europe)": "Cherry",
-            "French": "Cerise"
+            "French": "Cerise",
+            "French (US)": "Cerise"
         },
         {
             "English": "Silver",
             "English (Europe)": "Silver",
-            "French": "Argent"
+            "French": "Argent",
+            "French (US)": "Argent"
         },
         {
             "English": "Gold",
             "English (Europe)": "Gold",
-            "French": "Or"
+            "French": "Or",
+            "French (US)": "Or"
         },
         {
             "English": "Forest",
             "English (Europe)": "Forest",
-            "French": "Forêt"
+            "French": "Forêt",
+            "French (US)": "Forêt"
         },
         {
             "English": "Fishing Spot",
@@ -4377,14 +4439,254 @@
         {
             "English": "Sort lists in alphabetical order",
             "English (Europe)": "Sort lists in alphabetical order",
-            "French" : "Trier les listes par ordre alphabétique",
-            "French (US)" : "Trier les listes par ordre alphabétique"
+            "French": "Trier les listes par ordre alphabétique",
+            "French (US)": "Trier les listes par ordre alphabétique"
         },
         {
             "English": "Sort any list into alphabetical order. However, items may not be grouped by category anymore.",
             "English (Europe)": "Sort any list into alphabetical order. However, items may not be grouped by category anymore.",
-            "French" : "Triez n'importe quelle liste par ordre alphabétique. Cependant, les objets ne pourront plus être regroupés par catégorie.",
-            "French (US)" : "Triez n'importe quelle liste par ordre alphabétique. Cependant, les objets ne pourront plus être regroupés par catégorie."
+            "French": "Triez n'importe quelle liste par ordre alphabétique. Cependant, les objets ne pourront plus être regroupés par catégorie.",
+            "French (US)": "Triez n'importe quelle liste par ordre alphabétique. Cependant, les objets ne pourront plus être regroupés par catégorie."
+        }
+    ],
+    "Not in Use": [
+        {
+            "Airport": "Shop",
+            "Aéroport": "Boutique"
+        },
+        {
+            "Airport": "Tailors",
+            "Aéroport": "Atelier de couture"
+        },
+        {
+            "Airport": "Red apple",
+            "Aéroport": "Pomme rouge"
+        },
+        {
+            "Airport": "Green apple",
+            "Aéroport": "Pomme verte"
+        },
+        {
+            "Airport": "Green bamboo",
+            "Aéroport": "Bambou vert"
+        },
+        {
+            "Airport": "Dried bamboo",
+            "Aéroport": "Bambou sec"
+        },
+        {
+            "Airport": "Smoke-cured bamboo",
+            "Aéroport": "Bambou fumé"
+        },
+        {
+            "Airport": "Wooden",
+            "Aéroport": "Boisé"
+        },
+        {
+            "Airport": "Monotone",
+            "Aéroport": "Inox"
+        },
+        {
+            "Airport": "Dark brown"
+        },
+        {
+            "Airport": "Natural & white"
+        },
+        {
+            "Airport": "Red & white"
+        },
+        {
+            "Airport": "Gorgeous"
+        },
+        {
+            "Airport": "Dark wood"
+        },
+        {
+            "Airport": "Light wood"
+        },
+        {
+            "Airport": "Navy blue"
+        },
+        {
+            "Airport": "Natural wood"
+        },
+        {
+            "Airport": "Snow camouflage"
+        },
+        {
+            "Airport": "Simple pattern"
+        },
+        {
+            "Airport": "Pop pattern"
+        },
+        {
+            "Airport": "Plain"
+        },
+        {
+            "Airport": "Labeled"
+        },
+        {
+            "Airport": "Blank"
+        },
+        {
+            "Airport": "After school"
+        },
+        {
+            "Airport": "Foreign language"
+        },
+        {
+            "Airport": "Math"
+        },
+        {
+            "Airport": "Club activities"
+        },
+        {
+            "Airport": "Cute"
+        },
+        {
+            "Airport": "Light blue"
+        },
+        {
+            "Airport": "Colorful numbers"
+        },
+        {
+            "Airport": "Two-toned numbers"
+        },
+        {
+            "Airport": "Win or lose"
+        },
+        {
+            "Airport": "Black & red"
+        },
+        {
+            "Airport": "Red stripes"
+        },
+        {
+            "Airport": "Green stripes"
+        },
+        {
+            "Airport": "Reflective stripes"
+        },
+        {
+            "Airport": "Caution stripes"
+        },
+        {
+            "Airport": "Ongoing work"
+        },
+        {
+            "Airport": "Construction ahead"
+        },
+        {
+            "Airport": "Construction warning"
+        },
+        {
+            "Airport": "Sky blue",
+            "Aéroport": "Bleu ciel"
+        },
+        {
+            "Airport": "Camel"
+        },
+        {
+            "Airport": "Brown wood"
+        },
+        {
+            "Airport": "Red wood"
+        },
+        {
+            "Airport": "Old"
+        },
+        {
+            "Airport": "Aquamarine"
+        },
+        {
+            "Airport": "Cream"
+        },
+        {
+            "Airport": "Light brown"
+        },
+        {
+            "Airport": "Ash brown"
+        },
+        {
+            "Airport": "Marine blue"
+        },
+        {
+            "Airport": "Ivory"
+        },
+        {
+            "Airport": "Golden yellow"
+        },
+        {
+            "Airport": "Cosmo black"
+        },
+        {
+            "Airport": "Pearl white"
+        },
+        {
+            "Airport": "Rose pink"
+        },
+        {
+            "Airport": "Evergreen"
+        },
+        {
+            "Airport": "Black & white"
+        },
+        {
+            "Airport": "Cranes"
+        },
+        {
+            "Airport": "Tree peonies"
+        },
+        {
+            "Airport": "Wisteria"
+        },
+        {
+            "Airport": "Yellow",
+            "Aéroport": "Jaune"
+        },
+        {
+            "Airport": "Red",
+            "Aéroport": "Rouge"
+        },
+        {
+            "Airport": "Brown",
+            "Aéroport": "Marron"
+        },
+        {
+            "Airport": "Blue",
+            "Aéroport": "Bleu"
+        },
+        {
+            "Airport": "White",
+            "Aéroport": "Blanc"
+        },
+        {
+            "Airport": "Black",
+            "Aéroport": "Noir"
+        },
+        {
+            "Airport": "Pink",
+            "Aéroport": "Rose"
+        },
+        {
+            "Airport": "Green",
+            "Aéroport": "Vert"
+        },
+        {
+            "Airport": "Colorful",
+            "Aéroport": "Coloré"
+        },
+        {
+            "Airport": "Gray",
+            "Aéroport": "Gris"
+        },
+        {
+            "Airport": "Aqua",
+            "Aéroport": "Bleu clair"
+        },
+        {
+            "Airport": "Purple",
+            "Aéroport": "Violet"
         }
     ]
 }
