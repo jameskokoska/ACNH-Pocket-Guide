@@ -17,7 +17,7 @@ import {getPhotoShadow} from "./GetPhoto"
 import {getMonthShort} from "./DateFunctions"
 import colors from "../Colors"
 import {getCurrentDateObject, parseActiveTime} from "./DateFunctions"
-import {attemptToTranslateItem, getSettingsString} from "../LoadJsonData"
+import {inWishlist, inChecklist, attemptToTranslateItem, getSettingsString} from "../LoadJsonData"
 
 const {width} = Dimensions.get('window');
 
@@ -27,8 +27,8 @@ class ListItem extends PureComponent{
     this.setCollected = this.setCollected.bind(this);
     this.setWishlist = this.setWishlist.bind(this);
     this.state = {
-      collected: props.item.collected,
-      wishlist: props.item.wishlist
+      collected: inChecklist(this.props.item.checkListKey),
+      wishlist: inWishlist(this.props.item.checkListKey)
     }
   }
   componentDidMount() {
@@ -36,9 +36,6 @@ class ListItem extends PureComponent{
   }
   componentWillUnmount() {
     this.mounted = false;
-  }
-  componentDidUpdate(){
-    
   }
   setCollected(collected){
     if(this.mounted){
@@ -55,11 +52,11 @@ class ListItem extends PureComponent{
   //   this.setState({unMounting:true})
   // }
   render(){
-    if(this.state.collected!==this.props.item.collected){
-      this.setCollected(this.props.item.collected)
+    if(this.state.collected!==inChecklist(this.props.item.checkListKey)){
+      this.setCollected(!this.state.collected)
     }
-    if(this.state.wishlist!==this.props.item.wishlist){
-      this.setWishlist(this.props.item.wishlist)
+    if(this.state.wishlist!==inWishlist(this.props.item.checkListKey)){
+      this.setWishlist(!this.state.wishlist)
     }
     var disablePopup;
     if(this.props.disablePopup===undefined){
@@ -119,7 +116,7 @@ class ListItem extends PureComponent{
       }
     }
 
-    var label = attemptToTranslateItem(this.props.item.[this.props.textProperty[this.props.item.dataSet]])
+    var label = this.props.item.[this.props.textProperty[this.props.item.dataSet]]
 
     if(this.props.gridType==="smallGrid"){
       var textProperty2Component = <View/>;
@@ -132,22 +129,22 @@ class ListItem extends PureComponent{
       return (
         <View style={styles.gridWrapper}>
           <TouchableNativeFeedback onLongPress={() => {
-            checkOff(this.props.item, this.state.wishlist, this.props.dataGlobalName, true, true); //true to vibrate and wishlist
-            this.setWishlist(this.state.wishlist==="true" ? "false":"true");
+            checkOff(this.props.item.checkListKey, this.state.wishlist, true, true); //true to vibrate and wishlist
+            this.setWishlist(this.state.wishlist===true ? false:true);
           }}
             background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
             onPress={()=>{
               if(disablePopup){
-                checkOff(this.props.item, this.state.collected, this.props.dataGlobalName); 
-                this.setCollected(this.state.collected==="true" ? "false":"true");
+                checkOff(this.props.item.checkListKey, this.state.collected); 
+                this.setCollected(this.state.collected===true ? false:true);
               } else {
                 this.props.openBottomSheet(this.setCollected);
               }
             }}
           >
             <View style={[styles.gridBox, {backgroundColor:boxColor}]}>
-              <Check checkType={this.props.checkType} style={{position:'absolute', right: -9, top: -9, zIndex:10}} play={this.state.collected==="true"} width={53} height={53} disablePopup={disablePopup}/>
-              {this.state.wishlist==="true" ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
+              <Check checkType={this.props.checkType} style={{position:'absolute', right: -9, top: -9, zIndex:10}} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
+              {this.state.wishlist? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
               <FastImage
                 style={styles.gridBoxImage}
                 source={{
@@ -167,22 +164,22 @@ class ListItem extends PureComponent{
       return( 
         <View style={styles.gridWrapper}>
           <TouchableNativeFeedback onLongPress={() => {  
-            checkOff(this.props.item, this.state.wishlist, this.props.dataGlobalName, getSettingsString("settingsEnableVibrations")==="true", true); //true to vibrate and wishlist
-            this.setWishlist(this.state.wishlist==="true" ? "false":"true");
+            checkOff(this.props.item.checkListKey, this.state.wishlist, getSettingsString("settingsEnableVibrations")==="true", true); //true to vibrate and wishlist
+            this.setWishlist(this.state.wishlist===true ? false:true);
           }}
           background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
           onPress={()=>{
               if(disablePopup){
-                checkOff(this.props.item, this.state.collected, this.props.dataGlobalName); 
-                this.setCollected(this.state.collected==="true" ? "false":"true");
+                checkOff(this.props.item.checkListKey, this.state.collected); 
+                this.setCollected(this.state.collected===true ? false:true);
               } else {
                 this.props.openBottomSheet(this.setCollected);
               }
             }}
           >
             <View style={[styles.gridBoxLarge, {backgroundColor:boxColor}]}>
-              <Check checkType={this.props.checkType} style={{position:'absolute', right: -8, top: -10, zIndex:10}} play={this.state.collected==="true"} width={53} height={53} disablePopup={disablePopup}/>
-              {this.state.wishlist==="true" ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
+              <Check checkType={this.props.checkType} style={{position:'absolute', right: -8, top: -10, zIndex:10}} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
+              {this.state.wishlist ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
               <FastImage
                 style={styles.gridBoxImageLarge}
                 source={{
@@ -213,22 +210,22 @@ class ListItem extends PureComponent{
       return( 
         <View style={styles.gridWrapper}>
           <TouchableNativeFeedback onLongPress={() => {  
-            checkOff(this.props.item, this.state.wishlist, this.props.dataGlobalName, getSettingsString("settingsEnableVibrations")==="true", true); //true to vibrate and wishlist
-            this.setWishlist(this.state.wishlist==="true" ? "false":"true");
+            checkOff(this.props.item.checkListKey, this.state.wishlist, getSettingsString("settingsEnableVibrations")==="true", true); //true to vibrate and wishlist
+            this.setWishlist(this.state.wishlist===true ? false:true);
           }}
           background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
           onPress={()=>{
               if(disablePopup){
-                checkOff(this.props.item, this.state.collected, this.props.dataGlobalName); 
-                this.setCollected(this.state.collected==="true" ? "false":"true");
+                checkOff(this.props.item.checkListKey, this.state.collected); 
+                this.setCollected(this.state.collected===true ? false:true);
               } else {
                 this.props.openBottomSheet(this.setCollected);
               }
             }}
           >
             <View style={[styles.gridBoxLarge, {backgroundColor:boxColor}]}>
-              <Check checkType={this.props.checkType} style={{position:'absolute', right: -8, top: -10, zIndex:10}} play={this.state.collected==="true"} width={53} height={53} disablePopup={disablePopup}/>
-              {this.state.wishlist==="true" ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
+              <Check checkType={this.props.checkType} style={{position:'absolute', right: -8, top: -10, zIndex:10}} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
+              {this.state.wishlist===true ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
               <FastImage
                 style={styles.gridBoxImageLargeSmaller}
                 source={{
@@ -252,21 +249,21 @@ class ListItem extends PureComponent{
       return( 
         <View>
           <TouchableNativeFeedback onLongPress={() => {  
-            checkOff(this.props.item, this.state.wishlist, this.props.dataGlobalName, getSettingsString("settingsEnableVibrations")==="true", true); //true to vibrate and wishlist
-            this.setWishlist(this.state.wishlist==="true" ? "false":"true");
+            checkOff(this.props.item.checkListKey, this.state.wishlist, getSettingsString("settingsEnableVibrations")==="true", true); //true to vibrate and wishlist
+            this.setWishlist(this.state.wishlist===true ? false:true);
           }}
           background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
           onPress={()=>{
               if(disablePopup){
-                checkOff(this.props.item, this.state.collected, this.props.dataGlobalName); 
-                this.setCollected(this.state.collected==="true" ? "false":"true");
+                checkOff(this.props.item.checkListKey, this.state.collected); 
+                this.setCollected(this.state.collected===true ? false:true);
               } else {
                 this.props.openBottomSheet(this.setCollected);
               }
             }}
           >
             <View style={[styles.row,{backgroundColor:boxColor}]}>
-              {this.state.wishlist==="true" ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
+              {this.state.wishlist ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
               <View style={[styles.rowImageBackground,{backgroundColor:this.props.accentColor}]}>
                 <FastImage
                   style={styles.rowImage}
@@ -291,10 +288,10 @@ class ListItem extends PureComponent{
               <TouchableOpacity style={{position:"absolute", right: -5}} 
                 activeOpacity={0.6}
                 onPress={() => {  
-                checkOff(this.props.item, this.state.collected, this.props.dataGlobalName); 
-                this.setCollected(this.state.collected==="true" ? "false":"true");
+                checkOff(this.props.item.checkListKey, this.state.collected); 
+                this.setCollected(this.state.collected===true ? false:true);
               }}>
-                <Check checkType={this.props.checkType} fadeOut={false} play={this.state.collected==="true"} width={90} height={90} disablePopup={disablePopup}/>
+                <Check checkType={this.props.checkType} fadeOut={false} play={this.state.collected} width={90} height={90} disablePopup={disablePopup}/>
               </TouchableOpacity>
             </View>
           </TouchableNativeFeedback>

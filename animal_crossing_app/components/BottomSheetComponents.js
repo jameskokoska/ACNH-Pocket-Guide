@@ -4,7 +4,7 @@ import colors from '../Colors.js';
 import FastImage from './FastImage';
 import Check from './Check';
 import TextFont from './TextFont'
-import {attemptToTranslateItem, commas, capitalize, checkOff, capitalizeFirst} from '../LoadJsonData'
+import {inChecklist, attemptToTranslateItem, commas, capitalize, checkOff, capitalizeFirst} from '../LoadJsonData'
 import {getPhotoCorner, getMaterialImage} from "./GetPhoto"
 import {getSettingsString, attemptToTranslate, attemptToTranslateSpecial} from "../LoadJsonData"
 import {ScrollView} from 'react-native-gesture-handler'
@@ -52,26 +52,26 @@ export class RightCornerCheck extends Component {
     super(props);
     this.setCollected = this.setCollected.bind(this);
     this.state = {
-      collected:props.collected
+      collected:inChecklist(this.props.item.checkListKey)
     };
   }
   //update component when new data is passed into the class, or when the check mark local value changes
   componentDidUpdate(prevProps) {
-    if(this.state.collected!==this.props.collected && this.state.collected===prevProps.collected || this.props.item !== prevProps.item || this.state.collected!==prevProps.item.collected)
-      this.setState({collected:this.props.collected});
+    if(this.props!==prevProps)
+      this.setState({collected:inChecklist(this.props.item.checkListKey)});
   }
   setCollected(collected){
     this.setState({collected: collected});
-    this.props.updateCheckChildFunction(this.state.collected==="true" ? "false":"true");
+    this.props.updateCheckChildFunction(this.state.collected===true ? false:true);
   }
   render() {
     return <TouchableOpacity style={[styles.checkMark]} 
               activeOpacity={0.6}
               onPress={() => {  
-                checkOff(this.props.item, this.state.collected, this.props.dataGlobalName);
-                this.setCollected(this.state.collected==="true" ? "false":"true");
+                checkOff(this.props.item.checkListKey, this.state.collected);
+                this.setCollected(this.state.collected===true ? false:true);
             }}>
-      <Check checkType={this.props.checkType} fadeOut={false} play={this.state.collected==="true"} width={135} height={135}/>
+      <Check checkType={this.props.checkType} fadeOut={false} play={this.state.collected} width={135} height={135}/>
     </TouchableOpacity>
   }
 }
@@ -113,10 +113,9 @@ export class Title extends Component {
       paddingTop = 10;
     }
     if(this.props.item[this.props.textProperty[this.props.item.dataSet]]!==undefined){
-      var label = attemptToTranslateItem(this.props.item[this.props.textProperty[this.props.item.dataSet]])
       return <View style={[styles.titleContainer,{paddingLeft: paddingLeft, paddingRight: paddingRight, paddingTop: paddingTop}]}>
         <TextFont style={[styles.title,{color:colors.textBlack[global.darkMode]}]} bold={true}>
-          {capitalize(label)}
+          {capitalize(this.props.item[this.props.textProperty[this.props.item.dataSet]])}
         </TextFont>
       </View>
     } else {
@@ -135,8 +134,12 @@ export class InfoLine extends Component {
     if(this.props.starting!==undefined){
       starting=this.props.starting;
     }
+    
     var text1 = attemptToTranslateSpecial(this.props.item[this.props.textProperty], "variants");
     var text2 = attemptToTranslateSpecial(this.props.item[this.props.textProperty2], "variants");
+    if(this.props.textProperty[0]==="Favorite Song"){
+      text1 = attemptToTranslateItem(this.props.item[this.props.textProperty])
+    }
     var text = capitalizeFirst(commas(text1));
     if(this.props.textProperty2 !== undefined && this.props.item[this.props.textProperty] !== this.props.item[this.props.textProperty2]){
       text+= ", " + capitalizeFirst(commas(text2))
@@ -150,15 +153,15 @@ export class InfoLine extends Component {
     var imageSource = <Image style={styles.infoLineImage} source={this.props.image}/>;
     if(this.props.item[this.props.ending]!== undefined && this.props.ending==="Exchange Currency" && text.toLowerCase()!=="nfs"){
       if(this.props.item[this.props.ending].toLowerCase().includes("miles")){
-        ending= " miles"
+        ending= " " + attemptToTranslate("miles")
         imageSource = <Image style={styles.infoLineImage} source={require("../assets/icons/miles.png")}/>;
       } else {
-        ending = " bells";
+        ending = " " + attemptToTranslate("bells")
       }
     } else if(text.toLowerCase()==="nfs"){
       ending="";
     } else if (this.props.ending==="Exchange Currency"){
-      ending = " bells"
+      ending = " " + attemptToTranslate("bells")
     }
     if(this.props.textProperty.includes("Material")){
       imageSource =  getMaterialImage(this.props.item[this.props.textProperty]);
@@ -172,7 +175,7 @@ export class InfoLine extends Component {
           }}
           cacheKey={getMaterialImage(this.props.item[this.props.textProperty])}
         />
-      }      
+      }
     }
     if(this.props.birthday){
       
@@ -314,7 +317,7 @@ class VariationItem extends Component{
     return(
       <TouchableOpacity 
         onLongPress={()=>{this.props.setPopupVisible(true, item[this.props.imageProperty[dataSet]], item); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : ""}}
-        onPress={()=>{checkOff(item, this.state.checked, this.props.globalDatabase, getSettingsString("settingsEnableVibrations")==="true", false, this.extraIndex); this.setState({checked: !this.state.checked})}}
+        onPress={()=>{checkOff(item.checkListKey, this.state.checked, getSettingsString("settingsEnableVibrations")==="true", false, this.extraIndex); this.setState({checked: !this.state.checked})}}
       >
         <View style={[{borderWidth: 2, borderColor: this.state.checked ? colors.checkGreen[global.darkMode] : colors.eventBackground[global.darkMode], marginHorizontal:4, marginVertical: 3, width: 60,height: 60,borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
           <FastImage
@@ -440,6 +443,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection:"row",
+    flexWrap:"wrap"
   },
   infoLineBox: {
     alignItems: 'center',

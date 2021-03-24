@@ -6,6 +6,7 @@ import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"
 import ActiveTime from "../components/ActiveTime";
 import FastImage from '../components/FastImage';
+import {attemptToTranslate} from "../LoadJsonData"
 
 
 class SeaPopup extends Component {
@@ -15,7 +16,7 @@ class SeaPopup extends Component {
         image={require("../assets/icons/coin.png")} 
         item={this.props.item}
         textProperty={["Sell"]}
-        ending={" bells"}
+        ending={" " + attemptToTranslate("bells")}
       />
       <InfoLine
         image={require("../assets/icons/magnifyingGlass.png")} 

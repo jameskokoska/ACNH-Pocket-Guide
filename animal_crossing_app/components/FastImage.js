@@ -21,6 +21,12 @@ class FastImage extends Component{
   }
 
   getImage = async () => {
+    if(this.props.cacheKey===undefined){
+      this.setState({
+        imgURI:"undefined"
+      })
+      return;
+    }
     var cacheKey = this.props.cacheKey.replace("https://","");
     cacheKey = cacheKey.replace(/\\|\//g,"");
     cacheKey = cacheKey.replace(".png","");
@@ -32,32 +38,24 @@ class FastImage extends Component{
       if(getSettingsString("settingsDownloadImages")==="true"){
         fileURI = `${FileSystem.documentDirectory}${cacheKey}`;
       }
-      if(cacheKey===undefined){
-        this.state = {
-          imgURI:"undefined"
-        }
-      } else {
-        // Use the cached image if it exists
-        const metadata = await FileSystem.getInfoAsync(fileURI)
-        
-        if (!metadata.exists) {
-          // download to cache
-          if (this.mounted) {
-            await FileSystem.downloadAsync(
-              this.props.source.uri,
-              fileURI
-            )
-          }
-        }
+      // Use the cached image if it exists
+      const metadata = await FileSystem.getInfoAsync(fileURI)
+      
+      if (!metadata.exists) {
+        // download to cache
         if (this.mounted) {
-          this.setState({imgURI:fileURI})
+          await FileSystem.downloadAsync(
+            this.props.source.uri,
+            fileURI
+          )
         }
+      }
+      if (this.mounted) {
+        this.setState({imgURI:fileURI})
       }
     } catch (err) {
       this.setState({imgURI:this.props.source.uri})
     }
-      
-      
   }
 
   componentWillUnmount(){
@@ -74,7 +72,7 @@ class FastImage extends Component{
           }}
         />
       )
-    } else if (this.state.imgURI===undefined){
+    } else if (this.state.imgURI==="undefined"){
       return(
         <View/>
       )

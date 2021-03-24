@@ -53,7 +53,7 @@ class CatalogPage extends Component {
               success = true;
               this.totalSuccess++;
               if(inputType==="recipes" && global.dataLoadedAll[i][a]["checkListKey"].includes("recipesCheckList")){
-                checkOff(global.dataLoadedAll[i][a], "false", "dataLoadedAll", false);
+                checkOff(global.dataLoadedAll[i][a]["checkListKey"], false, false);
               } else if(inputType==="recipes" && !global.dataLoadedAll[i][a]["checkListKey"].includes("recipesCheckList")){
                 this.totalSuccess--;
               } else if(inputType==="catalog" && global.dataLoadedAll[i][a]["checkListKey"].includes("recipesCheckList")){
@@ -61,7 +61,7 @@ class CatalogPage extends Component {
               } else if(inputType==="critters" && global.dataLoadedAll[i][a]["checkListKey"].includes("villagerCheckList")){
                 this.totalSuccess--;
               } else {
-                checkOff(global.dataLoadedAll[i][a], "false", "dataLoadedAll", false);
+                checkOff(global.dataLoadedAll[i][a]["checkListKey"], false, false);
               }
               break;
             } else {

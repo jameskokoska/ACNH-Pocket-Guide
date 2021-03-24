@@ -12,10 +12,10 @@ class CardsPage extends Component {
           showVariations={[false]}
           title="Letters"
           imageProperty={["Image"]}
-          textProperty={["Name"]}
+          textProperty={["NameLanguage"]}
           textProperty2={"cards"}
           checkListKey={[["cardsCheckList","Name"]]}
-          searchKey={[["Name"]]}
+          searchKey={[["NameLanguage"]]}
           gridType="largeGridSmaller" //smallGrid, largeGrid, row
           dataGlobalName={"dataLoadedCards"}
           appBarColor={colors.cardsAppBar[global.darkMode]}

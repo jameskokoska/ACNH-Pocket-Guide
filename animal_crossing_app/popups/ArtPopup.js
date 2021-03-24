@@ -7,6 +7,7 @@ import {getSculpturePhotoFake, getPaintingPhoto,getPaintingPhotoFake} from "../c
 import {commas, capitalize} from '../LoadJsonData'
 import FastImage from '../components/FastImage';
 import TextFont from '../components/TextFont'
+import {attemptToTranslate} from "../LoadJsonData"
 
 class ArtPopup extends Component {
   constructor(props){
@@ -53,13 +54,13 @@ class ArtPopup extends Component {
           image={require("../assets/icons/coin.png")} 
           item={this.props.item}
           textProperty={["Sell"]}
-          ending={" bells"}
+          ending={" " + attemptToTranslate("bells")}
         />
         <InfoLine
           image={require("../assets/icons/bellBag.png")} 
           item={this.props.item}
           textProperty={["Buy"]}
-          ending={" bells"}
+          ending={" " + attemptToTranslate("bells")}
         />
         <View style={{marginTop: 20}}/>
         {paintingComparisonReal}

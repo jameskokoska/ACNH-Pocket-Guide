@@ -6,6 +6,7 @@ import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"
 import ActiveTime from "../components/ActiveTime";
 import FastImage from '../components/FastImage';
+import {attemptToTranslate} from "../LoadJsonData"
 
 //   200
 //     image: "Critterpedia Image",
@@ -23,7 +24,7 @@ class FishPopup extends Component {
         image2={require("../assets/icons/coin.png")} 
         item2={this.props.item}
         textProperty2={["Sell"]}
-        ending2={" bells"}
+        ending2={" " + attemptToTranslate("bells")}
       />
       <ActiveTime item={this.props.item}/>
       <View style={{marginTop: 30, flexDirection:"row", justifyContent:"space-around",width: Dimensions.get('window').width}}>

@@ -46,11 +46,17 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
+-You can sort things alphabetically, option in settings
+-Reworked how items are checked off/saved to wishlist
+-Loading should now be faster
+-Added more translations
+-Fixes to progress bar and wishlist
+-Formatting fixes
+-
 -Added wishlist. Long press any item to add it to the wishlist!
 -Variations are now checked off within an item
 -Long press a variation for a larger image view
 -Removed confusing variation settings
--Fixed and added translations
 -Added NPC translations
 -Fixed wishlist bugs
 -
@@ -60,7 +66,6 @@ global.changelog = `
 -Fixed 24 hour times not displayed correctly
 -Filter translation support
 -
--Added setting to hide item variations that can be obtained easily through customization (Useful to see what needs to be purchased from Nooks!)
 -Can set language in settings
 -French language translation supported, thanks Christophe!
 -Note: translations only apply to items, apart from supported translated languages

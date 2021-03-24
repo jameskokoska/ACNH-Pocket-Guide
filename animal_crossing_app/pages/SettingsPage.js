@@ -40,7 +40,7 @@ class SettingsPage extends Component {
           <HeaderNote>Tap each setting to learn more</HeaderNote>
           <View style={{marginTop: 15}}/>
           <SettingsDivider text={"Game language"}/>
-          <LanguagePicker/>
+          <LanguagePicker restartPopup={(show)=>this.popupRestart.setPopupVisible(show)}/>
           <View style={{height:10}}/>
           {global.settingsCurrent.map( (setting, index)=>
             {
@@ -145,7 +145,7 @@ export class LanguagePicker extends Component{
           customTickIcon={()=><View/>}
           activeItemStyle={{borderRadius: 10, backgroundColor: colors.lightDarkAccentHeavy[global.darkMode]}}
           dropDownStyle={{borderBottomLeftRadius: 10, borderBottomRightRadius: 10, borderWidth: 0, backgroundColor: colors.lightDarkAccent2[global.darkMode], opacity: 0.98, }}
-          onChangeItem={async (item)=>{global.language=item.value, await AsyncStorage.setItem("Language", item.value);}}
+          onChangeItem={async (item)=>{global.language=item.value, await AsyncStorage.setItem("Language", item.value); this.props.restartPopup(true)}}
         />
       </View>
       <HeaderNote>Translations only apply to game item names only, all other app content is in English. Some items may be missing translations. If you would like to help translate this app, feel free to reach out via email. </HeaderNote>

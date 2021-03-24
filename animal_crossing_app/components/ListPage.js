@@ -28,7 +28,7 @@ import MaterialsPopup from "../popups/MaterialsPopup"
 import * as exports from "./FilterDefinitions"
 import PopupFilter from './PopupFilter'
 import TextFont from "./TextFont"
-import {attemptToTranslateItem, getSettingsString, attemptToTranslate} from "../LoadJsonData"
+import {inChecklist, attemptToTranslateItem, getSettingsString, attemptToTranslate} from "../LoadJsonData"
 import {PopupBottomCustom} from "./Popup"
 //Note: popup height is not needed anymore
 //use tabs={false} if the page doesn't have  the tab bar
@@ -217,8 +217,20 @@ export default (props) =>{
     }
     
     
+    console.log(search)
     for(var j = 0; j < dataLoaded2D.length; j++){
       var dataLoaded = dataLoaded2D[j];
+      
+      if(getSettingsString("settingsSortAlphabetically")==="true"){
+        var dataLoadedCopy = dataLoaded.slice(0);
+        dataLoadedCopy.sort(function(a, b) {
+          var textA = a.NameLanguage.toUpperCase();
+          var textB = b.NameLanguage.toUpperCase();
+          return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+        });
+        dataLoaded = dataLoadedCopy
+      }
+
       for(var i = 0; i < dataLoaded.length; i++){
         item = dataLoaded[i];
         //Loop through the specific search criteria specified for this dataset
@@ -227,23 +239,23 @@ export default (props) =>{
           if((search.constructor===Array && search.length !== 0) || props.filterCollectedOnly || props.newItems || props.wishlistItems){
             var searchActual = search;
             if(props.filterCollectedOnly){
-              searchActual = "Collected";
+              searchActual = ["Collected"];
             } else if (props.newItems){
-              searchActual = "New version"
+              searchActual = ["New version"];
             } else if (props.wishlistItems){
-              searchActual = "Wishlist"
+              searchActual = ["Wishlist"];
             }
             for(var z = 0; z < searchActual.length; z++){
-              if(searchActual===("New version") && props.newItems && item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===global.gameVersion){
+              if(searchActual.includes("New version") && props.newItems && item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===global.gameVersion){
                 searchFound = true;
                 break;
-              } else if (searchActual===("New version") && props.newItems){
+              } else if (searchActual.includes("New version") && props.newItems){
                 searchFound = false;
                 break;
-              } else if(searchActual===("Wishlist") && props.wishlistItems && global.collectionList.includes("wishlist"+item.["checkListKey"])){
+              } else if(searchActual.includes("Wishlist") && props.wishlistItems && global.collectionList.includes("wishlist"+item.["checkListKey"])){
                 searchFound = true;
                 break;
-              } else if (searchActual===("Wishlist") && props.wishlistItems){
+              } else if (searchActual.includes("Wishlist") && props.wishlistItems){
                 searchFound = false;
                 break;
               }
@@ -290,7 +302,9 @@ export default (props) =>{
           } else {
             if(item.[props.searchKey[j][x]]!==undefined){
               //Translate search attribute from database
-              searchFound = attemptToTranslateItem(item.[props.searchKey[j][x]]).toLowerCase().includes(search.toLowerCase())
+              //Search translations done here
+              // searchFound = attemptToTranslateItem(item.[props.searchKey[j][x]]).toLowerCase().includes(search.toLowerCase())
+              searchFound = item.[props.searchKey[j][x]].toLowerCase().includes(search.toLowerCase())
             }
           }
           if((search==="" || searchFound)&&((!props.wishlistItems&&!props.filterCollectedOnly&&!props.newItems)||searchFound)){
@@ -579,7 +593,6 @@ class BottomSheetRender extends Component{
     if(this.state.item!==undefined && this.updateCheckChildFunction!==""){
       rightCornerCheck = <RightCornerCheck
         item={this.state.item}
-        collected={this.state.item.collected}
         dataGlobalName={this.props.dataGlobalName}
         updateCheckChildFunction={this.updateCheckChildFunction}
         checkType={this.props.checkType}

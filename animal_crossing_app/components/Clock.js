@@ -95,7 +95,7 @@ class Clock extends Component {
         source={require("../assets/icons/TestClock.png")}
       /> */}
       <View style={{flexDirection: 'row'}}> 
-        <TextFont style={styles.clockTime} bold={true}>{this.state.time}</TextFont>
+        <TextFont translate={false} style={styles.clockTime} bold={true}>{this.state.time}</TextFont>
         <TextFont style={styles.meridian} bold={true}>{this.state.afternoonDisplay}</TextFont>
       </View>
       <View style={[styles.line,{width:(this.state.dayNum.length+" ".length+this.state.month.length)*21+112}]}/> 

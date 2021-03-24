@@ -4,7 +4,7 @@ import {Dimensions, Image, View, Text} from 'react-native';
 import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
 import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"
-
+import {attemptToTranslate} from "../LoadJsonData"
 
 class FossilPopup extends Component {
   constructor(props){
@@ -18,7 +18,7 @@ class FossilPopup extends Component {
         image={require("../assets/icons/coin.png")} 
         item={this.props.item}
         textProperty={["Sell"]}
-        ending={" bells"}
+        ending={" " + attemptToTranslate("bells")}
       />
     </View>
   }

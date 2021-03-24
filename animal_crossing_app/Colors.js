@@ -63,7 +63,7 @@ const colors = {
     materialsAppBar : ["#80d4d9","#107c82"],
     materialsAccent : ["#e8feff","#434C53"],
     wishlistAppBar: ["#E0A8AA", "#9B4B53"],
-    wishlistAccent: ["#FCE1E3", "#614749"],
+    wishlistAccent: ["#FCE1E3", "#4E3B3C"],
     skyColor : ["#aad5f0","#1a1a1a"],
     grassColor : ["#b6d996","#4c6337"],
     checkedColor : ["#dcebce","#34402a"],

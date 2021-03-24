@@ -14,6 +14,22 @@ export async function getStorage(storageKey, defaultValue){
   return valueReturned;
 }
 
+export function inWishlist(checkListKeyString){
+  if(global.collectionList.includes("wishlist"+checkListKeyString)){
+    return true;
+  } else {
+    return false
+  }
+}
+
+export function inChecklist(checkListKeyString){
+  if(global.collectionList.includes(checkListKeyString)){
+    return true;
+  } else {
+    return false
+  }
+}
+
 export async function getStorageData(data, checkListKey, defaultValue){
   var dataLoadingTotal = [];
   //Loop through all datasets
@@ -22,6 +38,11 @@ export async function getStorageData(data, checkListKey, defaultValue){
     var totalIndex = -1;
     //Loop through that specific dataset
     for(var i = 0; i < dataLoading.length; i++){
+      //Remove no name K.K. songs
+      if(dataLoading[i]["Name"].includes("Hazure")){
+        dataLoading.splice(i,1);
+        continue;
+      }
       totalIndex++;
       var checkListKeyString = checkListKey[dataSet][0];
       //Loop through specific checklistKey property for that dataset
@@ -29,16 +50,16 @@ export async function getStorageData(data, checkListKey, defaultValue){
         checkListKeyString += dataLoading[i].[checkListKey[dataSet][x]];
       }
       //Get value from storage
-      var value=defaultValue;
-      var wishlist = "false";
-      if(global.collectionList.includes("wishlist"+checkListKeyString)){
-        wishlist="true";
-      } 
-      if(global.collectionList.includes(checkListKeyString)){
-        value="true";
-      }
-      dataLoading[i].collected=value;
-      dataLoading[i].wishlist=wishlist;
+      // var value=defaultValue;
+      // var wishlist = "false";
+      // if(global.collectionList.includes("wishlist"+checkListKeyString)){
+      //   wishlist="true";
+      // } 
+      // if(global.collectionList.includes(checkListKeyString)){
+      //   value="true";
+      // }
+      // dataLoading[i].collected=value;
+      // dataLoading[i].wishlist=wishlist;
       dataLoading[i].checkListKey=checkListKeyString;
 
       if(checkListKey[dataSet][0] === "fishCheckList" || checkListKey[dataSet][0] === "seaCheckList" || checkListKey[dataSet][0] === "bugCheckList"){
@@ -50,6 +71,11 @@ export async function getStorageData(data, checkListKey, defaultValue){
           }
         }
       }
+      if(global.language!=="English"){
+        dataLoading[i]["NameLanguage"]=attemptToTranslateItem(dataLoading[i]["Name"]);
+      } else {
+        dataLoading[i]["NameLanguage"]=dataLoading[i]["Name"];
+      }
     }
     dataLoadingTotal.push(dataLoading);
   }
@@ -59,7 +85,7 @@ export async function getStorageData(data, checkListKey, defaultValue){
 export function countCollection(checkListKeyStart){
   var count = 0;
   for(var i = 0; i<global.collectionList.length; i++){
-    if(global.collectionList[i].includes(checkListKeyStart)){
+    if(global.collectionList[i].includes(checkListKeyStart) && !global.collectionList[i].includes("wishlist")){
       count++
     }
   }
@@ -105,51 +131,6 @@ export function determineDataGlobal(datakeyName){
     return global.dataLoadedCards;
   else if(datakeyName==="dataLoadedMaterials")
     return global.dataLoadedMaterials;
-
-}
-
-export function updateDataGlobal(datakeyName, index, collected, dataSet, property="collected"){
-  if(index===undefined||collected===undefined||dataSet===undefined){
-    return;
-  }
-  if(datakeyName==="dataLoadedReactions")
-    global.dataLoadedReactions[dataSet][index][property]=collected;
-  else if(datakeyName==="dataLoadedArt")
-    global.dataLoadedArt[dataSet][index][property]=collected;
-  else if(datakeyName==="dataLoadedMusic")
-    global.dataLoadedMusic[dataSet][index][property]=collected;
-  else if(datakeyName==="dataLoadedConstruction")
-    global.dataLoadedConstruction[dataSet][index][property]=collected;
-  else if(datakeyName==="dataLoadedFish")
-    global.dataLoadedFish[dataSet][index][property]=collected;
-  else if(datakeyName==="dataLoadedBugs")
-    global.dataLoadedBugs[dataSet][index][property]=collected;
-  else if(datakeyName==="dataLoadedSea")
-    global.dataLoadedSea[dataSet][index][property]=collected;
-  else if(datakeyName==="dataLoadedFossils")
-    global.dataLoadedFossils[dataSet][index][property]=collected;
-  else if(datakeyName==="dataLoadedArt")
-    global.dataLoadedArt[dataSet][index][property]=collected;
-  else if(datakeyName==="dataLoadedVillagers")
-    global.dataLoadedVillagers[dataSet][index][property]=collected;
-  else if(datakeyName==="dataLoadedFurniture")
-    global.dataLoadedFurniture[dataSet][index][property]=collected;
-  else if(datakeyName==="dataLoadedClothing")
-    global.dataLoadedClothing[dataSet][index][property]=collected;
-  else if(datakeyName==="dataLoadedFloorWalls")
-    global.dataLoadedFloorWalls[dataSet][index][property]=collected;
-  else if(datakeyName==="dataLoadedRecipes")
-    global.dataLoadedRecipes[dataSet][index][property]=collected;
-  else if(datakeyName==="dataLoadedTools")
-    global.dataLoadedTools[dataSet][index][property]=collected;
-  else if(datakeyName==="dataLoadedAll")
-    global.dataLoadedAll[dataSet][index][property]=collected;
-  else if(datakeyName==="dataLoadedCreatures")
-    global.dataLoadedCreatures[dataSet][index][property]=collected;
-  else if(datakeyName==="dataLoadedCards")
-    global.dataLoadedCards[dataSet][index][property]=collected;
-  else if(datakeyName==="dataLoadedMaterials")
-    global.dataLoadedMaterials[dataSet][index][property]=collected;
 }
 
 export function resetFilters(){
@@ -159,30 +140,28 @@ export function resetFilters(){
   }
 }
 
-export function checkOff(item, collected, dataGlobalName, vibrate=getSettingsString("settingsEnableVibrations")==="true", wishlist=false, indexSpecial=""){
-  if(wishlist && item!==undefined){
-    console.log("wishlist"+item.checkListKey);
-    if(collected==="false"){
+export function checkOff(checkListKey, collected, vibrate=getSettingsString("settingsEnableVibrations")==="true", wishlist=false, indexSpecial=""){
+  if(wishlist){
+    console.log("wishlist"+checkListKey);
+    if(collected===false){
       vibrate ? Vibration.vibrate([0,10,100,20]) : "";
-      global.collectionList.push("wishlist"+item.checkListKey)
+      global.collectionList.push("wishlist"+checkListKey+indexSpecial)
     } else {
       vibrate ? Vibration.vibrate(10) : "";
-      collectionListRemove("wishlist"+item.checkListKey)
+      collectionListRemove("wishlist"+checkListKey+indexSpecial)
     }
     collectionListSave();
-    updateDataGlobal(dataGlobalName, item.index, collected==="false" ? "true":"false", item.dataSet, property="wishlist")
     //console.log(global.collectionList)
-  } else if(item!==undefined){
-    console.log(item.checkListKey+indexSpecial);
+  } else {
+    console.log(checkListKey+indexSpecial);
     if(collected==="false" || collected===false){
       vibrate ? Vibration.vibrate([0,10,220,20]) : "";
-      global.collectionList.push(item.checkListKey+indexSpecial)
+      global.collectionList.push(checkListKey+indexSpecial)
     } else {
       vibrate ? Vibration.vibrate(10) : "";
-      collectionListRemove(item.checkListKey+indexSpecial)
+      collectionListRemove(checkListKey+indexSpecial)
     }
     collectionListSave();
-    updateDataGlobal(dataGlobalName, item.index, collected==="false" ? "true":"false", item.dataSet)
     //console.log(global.collectionList)
   }
 }
@@ -404,6 +383,14 @@ export const settings = [
     "displayName" : "Northern Hemisphere",
     "description" : "Set your hemisphere, north or south. This will change the data displayed for creatures and events.",
   },
+  {
+    "keyName" : "settingsSortAlphabetically",
+    "defaultValue" : "false",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/alphabet.png"),
+    "displayName" : "Sort lists in alphabetical order",
+    "description" : "Sort any list into alphabetical order. However, items may not be grouped by category anymore.",
+  },
   // {
   //   "keyName" : "settingsShowVariation",
   //   "defaultValue" : "false",
@@ -612,12 +599,13 @@ export function attemptToTranslateSpecial(text, type){
   return text;
 }
 
-export function attemptToTranslate(text){
+export function attemptToTranslate(text, forcedTranslation=false){
   if(text===undefined){
     return "";
   } else if(global.language==="English"){
     return text;
   }
+  
   var textArray = [];
   if(text.toString().includes("; ")){
     textArray = text.toString().split("; ");
@@ -628,6 +616,20 @@ export function attemptToTranslate(text){
   var success = false;
   for(var j=0; j<textArray.length; j++){
     success = false;
+
+    if(forcedTranslation){
+      var forcedTranslationText = attemptToTranslateSpecial(text, "variants");
+      if(forcedTranslationText !== text){
+        if(j>0){
+          translatedTextOut+="; " + forcedTranslationText;
+        } else {
+          translatedTextOut+=forcedTranslationText;
+        }
+        success = true;
+        continue;
+      }
+    }
+
     for(var i=0; i<appTranslations.length; i++){
       if(appTranslations[i]["English"].toLowerCase()===textArray[j].toString().toLowerCase()){
         var translatedText = appTranslations[i][global.language];
@@ -705,14 +707,14 @@ export function translateFilters(filters){
       label = filters[i].label.split(" can catch");
       if(label.length>0){
         label[0] = attemptToTranslate(label[0]);
-        filters[i].label = label[0] + " " + attemptToTranslate("can catch");
+        filters[i].label = capitalizeFirst(label[0]) + " " + attemptToTranslate("can catch");
       }
     } else {
       label = filters[i].label.split(" - ");
       if(label.length>1){
         label[0] = attemptToTranslate(label[0]);
-        label[1] = attemptToTranslate(label[1]);
-        filters[i].label = label[0] + " - " + label[1];
+        label[1] = attemptToTranslate(label[1], true);
+        filters[i].label = capitalizeFirst(label[0]) + " - " + capitalizeFirst(label[1]);
       }
     }
   }
