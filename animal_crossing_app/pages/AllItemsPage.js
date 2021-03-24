@@ -15,6 +15,10 @@ class AllItemsPage extends Component {
     if(this.props.newItems!==undefined){
       newItems = this.props.newItems
     }
+    var wishlistItems = false;
+    if(this.props.wishlistItems!==undefined){
+      wishlistItems = this.props.wishlistItems
+    }
     var appBarColor = colors.emojipediaAppBar[global.darkMode];
     if(this.props.appBarColor !==undefined){
       appBarColor = this.props.appBarColor;
@@ -23,13 +27,25 @@ class AllItemsPage extends Component {
     if(this.props.accentColor !==undefined){
       accentColor = this.props.accentColor;
     }
+    var subHeader = "";
+    if(this.props.subHeader !==undefined){
+      subHeader = this.props.subHeader;
+    }
+    var disableSearch = false;
+    if(this.props.disableSearch !==undefined){
+      disableSearch = this.props.disableSearch;
+    }
     return(
         <ListPage 
+          disableSearch={disableSearch}
+          setPage={this.props.setPage}
           tabs={false}
           filters={["Source","Tag", "DIY", "Catalog", "Where/How","Weather","Shadow","Movement Speed", "Season/Event","Category", "Season/Event Exclusive", "Seasonality", "Personality","Species","Hobby","Style 1","Style 2","Color 1","Color 2","Variation","Style 1","Style 2","Size", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category"]}
           filterSearchable = {true}
           title={title}
+          subHeader={subHeader}
           newItems={newItems}
+          wishlistItems={wishlistItems}
           gridType="smallGrid" //smallGrid, largeGrid, row
           appBarColor={appBarColor}
           titleColor={colors.textBlack[global.darkMode]}

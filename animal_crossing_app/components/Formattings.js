@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Vibration, Linking, TouchableOpacity, StyleSheet, View, Text, TouchableNativeFeedback} from 'react-native';
 import colors from '../Colors'
 import TextFont from './TextFont'
+import {attemptToTranslate} from "../LoadJsonData"
 
 export class ExternalLink extends Component {
   render(){
@@ -52,7 +53,7 @@ export class Header extends Component {
 export class Paragraph extends Component {
   render(){
     return(
-      <Text style={{marginTop: 6, fontSize: 16, marginLeft: 30, marginRight: 30, color:colors.textBlack[global.darkMode]}}>{this.props.children}</Text>
+      <Text style={{marginTop: 6, fontSize: 16, marginLeft: 30, marginRight: 30, color:colors.textBlack[global.darkMode]}}>{attemptToTranslate(this.props.children)}</Text>
     )
   }
 }

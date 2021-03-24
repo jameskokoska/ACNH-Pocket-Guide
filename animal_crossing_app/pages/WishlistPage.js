@@ -6,7 +6,7 @@ import colors from '../Colors.js';
 import {getSettingsString} from "../LoadJsonData"
 import AllItemsPage from "./AllItemsPage"
 
-export default class NewItemsPage extends Component {
+export default class Wishlist extends Component {
   constructor() {
     super();
     LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
@@ -15,11 +15,12 @@ export default class NewItemsPage extends Component {
     return(
       <AllItemsPage 
         disableSearch={true}
-        title="New Items"
-        subHeader="Items that have been added from the most recent update"
-        newItems={true}
-        appBarColor = {colors.newItemsAppBar[global.darkMode]}
-        accentColor = {colors.newItemsAccent[global.darkMode]}
+        title="Wishlist"
+        wishlistItems={true}
+        setPage={this.props.setPage}
+        subHeader="Long press items to add/remove from your wishlist"
+        appBarColor = {colors.wishlistAppBar[global.darkMode]}
+        accentColor = {colors.wishlistAccent[global.darkMode]}
       />
     )
   }

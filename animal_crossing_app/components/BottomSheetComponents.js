@@ -271,6 +271,7 @@ export class InfoLineTriple extends Component {
 }
 
 export class Variations extends Component {
+  
   render(){
     if(this.props.item!=""||this.props.item!=undefined){
       var variations = getVariations(this.props.item["Name"],this.props.globalDatabase,this.props.item["checkListKey"]);
@@ -284,17 +285,7 @@ export class Variations extends Component {
         <ScrollView horizontal={true} style={{marginHorizontal:10}} contentContainerStyle={{ flexGrow: 1, justifyContent: 'center'}}>
         <View style={{marginHorizontal: 4, flexDirection: 'row', justifyContent:'center'}}>
           {variations.map( (item, index)=>
-            <View key={item[this.props.imageProperty[dataSet]]} style={[{marginHorizontal:4, marginVertical: 3, width: 60,height: 60,borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
-              <TouchableOpacity onPress={()=>{this.popup.setPopupVisible(true, item[this.props.imageProperty[dataSet]], item); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : ""}}>
-                <FastImage
-                  style={{height: 47, width: 47, resizeMode:'contain',}}
-                  source={{
-                    uri: item[this.props.imageProperty[dataSet]],
-                  }}
-                  cacheKey={item[this.props.imageProperty[dataSet]]}
-                />
-              </TouchableOpacity>
-            </View>
+            <VariationItem index={index} key={item[this.props.imageProperty[dataSet]]} globalDatabase={this.props.globalDatabase} item={item} setPopupVisible={(state, image, item)=>this.popup.setPopupVisible(state, image, item)} dataSet={dataSet} imageProperty={imageProperty}/>
           )}
         </View>
         </ScrollView>
@@ -305,6 +296,37 @@ export class Variations extends Component {
       return <View/>
     }
     
+  }
+}
+
+class VariationItem extends Component{
+  constructor(props) {
+    super(props);
+    this.extraIndex = this.props.index===0 ? "0":"";
+    this.state = {
+      checked: global.collectionList.includes(this.props.item["checkListKey"]+this.extraIndex),
+    }
+  }
+  render(){
+    
+    var item=this.props.item;
+    var dataSet=this.props.dataSet;
+    return(
+      <TouchableOpacity 
+        onLongPress={()=>{this.props.setPopupVisible(true, item[this.props.imageProperty[dataSet]], item); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : ""}}
+        onPress={()=>{checkOff(item, this.state.checked, this.props.globalDatabase, getSettingsString("settingsEnableVibrations")==="true", false, this.extraIndex); this.setState({checked: !this.state.checked})}}
+      >
+        <View style={[{borderWidth: 2, borderColor: this.state.checked ? colors.checkGreen[global.darkMode] : colors.eventBackground[global.darkMode], marginHorizontal:4, marginVertical: 3, width: 60,height: 60,borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
+          <FastImage
+            style={{height: 47, width: 47, resizeMode:'contain',}}
+            source={{
+              uri: item[this.props.imageProperty[dataSet]],
+            }}
+            cacheKey={item[this.props.imageProperty[dataSet]]}
+          />
+        </View>
+      </TouchableOpacity>
+    )
   }
 }
 

@@ -1045,8 +1045,8 @@
             "French (US)": "Date personnalisée"
         },
         {
-            "English": "Ensure 'Use a custom date' setting is enabled",
-            "English (Europe)": "Ensure 'Use a custom date' setting is enabled",
+            "English": "Ensure the 'Use a custom date' setting is enabled",
+            "English (Europe)": "Ensure the 'Use a custom date' setting is enabled",
             "French": "Assurez-vous que le paramètre \"Utiliser une date personnalisée\" est activé",
             "French (US)": "Assurez-vous que le paramètre \"Utiliser une date personnalisée\" est activé"
         },
@@ -1407,20 +1407,20 @@
         {
             "English": "Check Turnip Prices",
             "English (Europe)": "Check Turnip Prices",
-            "French": "Vérifier les prix du navet",
-            "French (US)": "Vérifier les prix du navet"
+            "French": "Vérifier le prix des navets",
+            "French (US)": "Vérifier le prix des navets"
         },
         {
             "English": "Water Flowers",
             "English (Europe)": "Water Flowers",
-            "French": "Arroser les Fleurs",
-            "French (US)": "Arroser les Fleurs"
+            "French": "Arroser les fleurs",
+            "French (US)": "Arroser les fleurs"
         },
         {
             "English": "Talk To Villagers",
             "English (Europe)": "Talk To Villagers",
-            "French": "Parler aux Villageois",
-            "French (US)": "Parler aux Villageois"
+            "French": "Parler aux villageois",
+            "French (US)": "Parler aux villageois"
         },
         {
             "English": "Dig Fossils",
@@ -2083,8 +2083,8 @@
             "French (US)": "Villageois arrogants"
         },
         {
-            "English": "Big Sister ",
-            "English (Europe)": "Big Sister ",
+            "English": "Big Sister",
+            "English (Europe)": "Big Sister",
             "French": "Grande Soeur",
             "French (US)": "Grande Soeur"
         },
@@ -2179,6 +2179,12 @@
             "French (US)": "Disponible dans la Boutique Nook (version améliorée) au présentoir d'objet de luxe"
         },
         {
+            "English": "Available in Nook's Cranny (upgraded only), in the unique furniture slot",
+            "English (Europe)": "Available in Nook's Cranny (upgraded only), in the unique furniture slot",
+            "French": "Disponible dans la Boutique Nook (version améliorée) au présentoir de grand objet",
+            "French (US)": "Disponible dans la Boutique Nook (version améliorée) au présentoir de grand objet"
+        },
+        {
             "English": "Link Nintendo Account to Pocket Camp, then redeem a 16-digit code on your Nintendo Switch",
             "English (Europe)": "Link Nintendo Account to Pocket Camp, then redeem a 16-digit code on your Nintendo Switch",
             "French": "Associez le compte Nintendo à Pocket Camp, puis utilisez un code à 16 chiffres sur votre Nintendo Switch",
@@ -2207,6 +2213,1466 @@
             "English (Europe)": "Balloons",
             "French": "Ballons",
             "French (US)": "Ballons"
+        },
+        {
+            "English": "Nook Shopping Seasonal",
+            "English (Europe)": "Nook Shopping Seasonal",
+            "French": "Nook Shopping Saisonnier",
+            "French (US)": "Nook Shopping Saisonnier"
+        },
+        {
+            "English": "Nook Shopping Promotion",
+            "English (Europe)": "Nook Shopping Promotion",
+            "French": "Nook Shopping Promotion",
+            "French (US)": "Nook Shopping Promotion"
+        },
+        {
+            "English": "Birthday",
+            "English (Europe)": "Birthday",
+            "French": "Anniversaire",
+            "French (US)": "Anniversaire"
+        },
+        {
+            "English": "Wishlist",
+            "English (Europe)": "Wishlist",
+            "French": "Liste d'envies",
+            "French (US)": "Liste d'envies"
+        },
+        {
+            "English": "Long press items to add/remove from your wishlist",
+            "English (Europe)": "Long press items to add/remove from your wishlist",
+            "French": "Appuyez longuement sur les objets pour les ajouter/supprimer de votre liste d'envies",
+            "French (US)": "Appuyez longuement sur les objets pour les ajouter/supprimer de votre liste d'envies"
+        },
+        {
+            "English": "You have no wishlist items.",
+            "English (Europe)": "You have no wishlist items.",
+            "French": "Vous n'avez aucun article dans votre liste d'envies.",
+            "French (US)": "Vous n'avez aucun article dans votre liste d'envies."
+        },
+        {
+            "English": "Long press items to add them to your wishlist.",
+            "English (Europe)": "Long press items to add them to your wishlist.",
+            "French": "Appuyez longuement sur les objets pour les ajouter à votre liste d'envies.",
+            "French (US)": "Appuyez longuement sur les objets pour les ajouter à votre liste d'envies."
+        },
+        {
+            "English": "Items that have been added from the most recent update",
+            "English (Europe)": "Items that have been added from the most recent update",
+            "French": "Objets qui ont été ajoutés depuis la dernière mise à jour",
+            "French (US)": "Objets qui ont été ajoutés depuis la dernière mise à jour"
+        },
+        {
+            "English": "Mailed to players after the 1.9.0 update in a letter from Nook Inc.",
+            "English (Europe)": "Mailed to players after the 1.9.0 update in a letter from Nook Inc.",
+            "French": "Envoyé aux joueurs après la mise à jour 1.9.0 dans une lettre de Nook Inc.",
+            "French (US)": "Envoyé aux joueurs après la mise à jour 1.9.0 dans une lettre de Nook Inc."
+        },
+        {
+            "English": "High Friendship",
+            "English (Europe)": "High Friendship",
+            "French": "Amitiée élevée",
+            "French (US)": "Amitiée élevée"
+        },
+        {
+            "English": "Available from Able Sisters shop only",
+            "English (Europe)": "Available from Able Sisters shop only",
+            "French": "Disponible uniquement chez les Soeurs Doigts de Fée",
+            "French (US)": "Disponible uniquement chez les Soeurs Doigts de Fée"
+        },
+        {
+            "English": "All Year",
+            "English (Europe)": "All Year",
+            "French": "Toute l'année",
+            "French (US)": "Toute l'année"
+        },
+        {
+            "English": "Additional Information",
+            "English (Europe)": "Additional Information",
+            "French": "Information Additionnelle",
+            "French (US)": "Information Additionnelle"
+        },
+        {
+            "English": "This application was created using React Native, with the original App programmed in Flutter. This application and contents are NOT affiliated with Nintendo. All local artwork recreated/licensed. This application is not made for commercial use, and is provided at a price of 0$ (free) on the Google Play Store with no advertisements. All application source code is of property to respective owners/contributors listed on the Credits page and/or licenses associated within specific packages/libraries within this application.",
+            "English (Europe)": "This application was created using React Native, with the original App programmed in Flutter. This application and contents are NOT affiliated with Nintendo. All local artwork recreated/licensed. This application is not made for commercial use, and is provided at a price of 0$ (free) on the Google Play Store with no advertisements. All application source code is of property to respective owners/contributors listed on the Credits page and/or licenses associated within specific packages/libraries within this application.",
+            "French": "Cette application a été créée en utilisant React Native, avec l'application d'origine programmée dans Flutter. Cette application et son contenu ne sont PAS affiliés à Nintendo. Toutes les œuvres d'art locales sont recréées/sous licence. Cette application n'est pas faite pour un usage commercial et est proposée au prix de 0€ (gratuit) sur le Google Play Store sans publicité. Tout le code source de l'application est la propriété des concepteurs/contributeurs respectifs répertoriés sur la page Crédits et/ou des licences associées dans les packages/bibliothèques spécifiques au sein de cette application.",
+            "French (US)": "Cette application a été créée en utilisant React Native, avec l'application d'origine programmée dans Flutter. Cette application et son contenu ne sont PAS affiliés à Nintendo. Toutes les œuvres d'art locales sont recréées/sous licence. Cette application n'est pas faite pour un usage commercial et est proposée au prix de 0€ (gratuit) sur le Google Play Store sans publicité. Tout le code source de l'application est la propriété des concepteurs/contributeurs respectifs répertoriés sur la page Crédits et/ou des licences associées dans les packages/bibliothèques spécifiques au sein de cette application."
+        },
+        {
+            "English": "All game data sourced from the community created spreadsheet. Thank you everyone for all the hard work and for making the spreadsheet!",
+            "English (Europe)": "All game data sourced from the community created spreadsheet. Thank you everyone for all the hard work and for making the spreadsheet!",
+            "French": "Toutes les données de jeu proviennent du tableur créée par la communauté. Merci à tous pour tout le travail acharné et pour la création de ce tableur!",
+            "French (US)": "Toutes les données de jeu proviennent de la feuille de calcul créée par la communauté. Merci à tous pour tout le travail acharné et pour la création de cette feuille!"
+        },
+        {
+            "English": "Translations sourced from the community spreadsheet. Thank you everyone for translating!",
+            "English (Europe)": "Translations sourced from the community spreadsheet. Thank you everyone for translating!",
+            "French": "Traductions provenant du tableur de la communauté. Merci à tous pour la traduction!",
+            "French (US)": "Traductions provenant du tableur de la communauté. Merci à tous pour la traduction!"
+        },
+        {
+            "English": "And thank YOU for downloading this application and showing your support.",
+            "English (Europe)": "And thank YOU for downloading this application and showing your support.",
+            "French": "Et merci d'avoir téléchargé cette application et de montrer votre soutien.",
+            "French (US)": "Et merci d'avoir téléchargé cette application et de montrer votre soutien."
+        },
+        {
+            "English": "Squirrel",
+            "English (Europe)": "Squirrel",
+            "French": "Écureuil",
+            "French (US)": "Écureuil"
+        },
+        {
+            "English": "Pig",
+            "English (Europe)": "Pig",
+            "French": "Cochon",
+            "French (US)": "Cochon"
+        },
+        {
+            "English": "Gorilla",
+            "English (Europe)": "Gorilla",
+            "French": "Gorille",
+            "French (US)": "Gorille"
+        },
+        {
+            "English": "Alligator",
+            "English (Europe)": "Alligator",
+            "French": "Crocodile",
+            "French (US)": "Crocodile"
+        },
+        {
+            "English": "Eagle",
+            "English (Europe)": "Eagle",
+            "French": "Aigle",
+            "French (US)": "Aigle"
+        },
+        {
+            "English": "Anteater",
+            "English (Europe)": "Anteater",
+            "French": "Fourmilier",
+            "French (US)": "Fourmilier"
+        },
+        {
+            "English": "Bull",
+            "English (Europe)": "Bull",
+            "French": "Taureau",
+            "French (US)": "Taureau"
+        },
+        {
+            "English": "Mouse",
+            "English (Europe)": "Mouse",
+            "French": "Souris",
+            "French (US)": "Souris"
+        },
+        {
+            "English": "Horse",
+            "English (Europe)": "Horse",
+            "French": "Cheval",
+            "French (US)": "Cheval"
+        },
+        {
+            "English": "Cub",
+            "English (Europe)": "Cub",
+            "French": "Ourson",
+            "French (US)": "Ourson"
+        },
+        {
+            "English": "Deer",
+            "English (Europe)": "Deer",
+            "French": "Cerf",
+            "French (US)": "Cerf"
+        },
+        {
+            "English": "Rabbit",
+            "English (Europe)": "Rabbit",
+            "French": "Lapin",
+            "French (US)": "Lapin"
+        },
+        {
+            "English": "Kangaroo",
+            "English (Europe)": "Kangaroo",
+            "French": "Kangourou",
+            "French (US)": "Kangourou"
+        },
+        {
+            "English": "Wolf",
+            "English (Europe)": "Wolf",
+            "French": "Loup",
+            "French (US)": "Loup"
+        },
+        {
+            "English": "Penguin",
+            "English (Europe)": "Penguin",
+            "French": "Pingouin",
+            "French (US)": "Pingouin"
+        },
+        {
+            "English": "Chicken",
+            "English (Europe)": "Chicken",
+            "French": "Coq (male), Poule (female)",
+            "French (US)": "Coq (male), Poule (female)"
+        },
+        {
+            "English": "Elephant",
+            "English (Europe)": "Elephant",
+            "French": "Eléphant",
+            "French (US)": "Eléphant"
+        },
+        {
+            "English": "Dog",
+            "English (Europe)": "Dog",
+            "French": "Chien",
+            "French (US)": "Chien"
+        },
+        {
+            "English": "Bear",
+            "English (Europe)": "Bear",
+            "French": "Ours",
+            "French (US)": "Ours"
+        },
+        {
+            "English": "Hippo",
+            "English (Europe)": "Hippo",
+            "French": "Hippopotame",
+            "French (US)": "Hippopotame"
+        },
+        {
+            "English": "Duck",
+            "English (Europe)": "Duck",
+            "French": "Canard",
+            "French (US)": "Canard"
+        },
+        {
+            "English": "Goat",
+            "English (Europe)": "Goat",
+            "French": "Chèvre",
+            "French (US)": "Chèvre"
+        },
+        {
+            "English": "Ostrich",
+            "English (Europe)": "Ostrich",
+            "French": "Autruche",
+            "French (US)": "Autruche"
+        },
+        {
+            "English": "Sheep",
+            "English (Europe)": "Sheep",
+            "French": "Mouton",
+            "French (US)": "Mouton"
+        },
+        {
+            "English": "Monkey",
+            "English (Europe)": "Monkey",
+            "French": "Singe",
+            "French (US)": "Singe"
+        },
+        {
+            "English": "Rhino",
+            "English (Europe)": "Rhino",
+            "French": "Rhinocéros",
+            "French (US)": "Rhinocéros"
+        },
+        {
+            "English": "Cow",
+            "English (Europe)": "Cow",
+            "French": "Vache",
+            "French (US)": "Vache"
+        },
+        {
+            "English": "Bird",
+            "English (Europe)": "Bird",
+            "French": "Oiseau",
+            "French (US)": "Oiseau"
+        },
+        {
+            "English": "Koala",
+            "English (Europe)": "Koala",
+            "French": "Koala",
+            "French (US)": "Koala"
+        },
+        {
+            "English": "Cat",
+            "English (Europe)": "Cat",
+            "French": "Chat",
+            "French (US)": "Chat"
+        },
+        {
+            "English": "Lion",
+            "English (Europe)": "Lion",
+            "French": "Lion",
+            "French (US)": "Lion"
+        },
+        {
+            "English": "Frog",
+            "English (Europe)": "Frog",
+            "French": "Grenouille",
+            "French (US)": "Grenouille"
+        },
+        {
+            "English": "Octopus",
+            "English (Europe)": "Octopus",
+            "French": "Pieuvre",
+            "French (US)": "Pieuvre"
+        },
+        {
+            "English": "Mom",
+            "English (Europe)": "Mom",
+            "French": "Maman",
+            "French (US)": "Maman"
+        },
+        {
+            "English": "Starting items",
+            "English (Europe)": "Starting items",
+            "French": "Objets de départ",
+            "French (US)": "Objets de départ"
+        },
+        {
+            "English": "Crafting",
+            "English (Europe)": "Crafting",
+            "French": "Crafting",
+            "French (US)": "Crafting"
+        },
+        {
+            "English": "Nook Shopping Daily Selection",
+            "English (Europe)": "Nook Shopping Daily Selection",
+            "French": "Sélection quotidienne du Nook Shopping",
+            "French (US)": "Sélection quotidienne du Nook Shopping"
+        },
+        {
+            "English": "HHA",
+            "English (Europe)": "HHA",
+            "French": "AJD",
+            "French (US)": "AJD"
+        },
+        {
+            "English": "Recycle box",
+            "English (Europe)": "Recycle box",
+            "French": "Boîte de recyclage",
+            "French (US)": "Boîte de recyclage"
+        },
+        {
+            "English": "Snowboy",
+            "English (Europe)": "Snowboy",
+            "French": "Yétiti",
+            "French (US)": "Yétiti"
+        },
+        {
+            "English": "Gold balloon",
+            "English (Europe)": "Gold balloon",
+            "French": "Ballon doré",
+            "French (US)": "Ballon doré"
+        },
+        {
+            "English": "Hitting a rock",
+            "English (Europe)": "Hitting a rock",
+            "French": "En frappant un rocher",
+            "French (US)": "En frappant un rocher"
+        },
+        {
+            "English": "Collecting leaf eggs",
+            "English (Europe)": "Collecting leaf eggs",
+            "French": "En collectant les oeufs feuillus",
+            "French (US)": "En collectant les oeufs feuillus"
+        },
+        {
+            "English": "Collecting sky eggs",
+            "English (Europe)": "Collecting sky eggs",
+            "French": "En collectant les oeufs aériens",
+            "French (US)": "En collectant les oeufs aériens"
+        },
+        {
+            "English": "Collecting stone eggs",
+            "English (Europe)": "Collecting stone eggs",
+            "French": "En collectant les oeufs minéraux",
+            "French (US)": "En collectant les oeufs minéraux"
+        },
+        {
+            "English": "Collecting water eggs",
+            "English (Europe)": "Collecting water eggs",
+            "French": "En collectant les oeufs aquatiques",
+            "French (US)": "En collectant les oeufs aquatiques"
+        },
+        {
+            "English": "Collecting wood eggs",
+            "English (Europe)": "Collecting wood eggs",
+            "French": "En collectant les oeufs boisés",
+            "French (US)": "En collectant les oeufs boisés"
+        },
+        {
+            "English": "Redd's Raffle",
+            "English (Europe)": "Redd's Raffle",
+            "French": "Tombola de Redd",
+            "French (US)": "Tombola de Redd"
+        },
+        {
+            "English": "K.K. concert",
+            "English (Europe)": "K.K. concert",
+            "French": "Concert de K.K.",
+            "French (US)": "Concert de K.K."
+        },
+        {
+            "English": "Apple Tree",
+            "English (Europe)": "Apple Tree",
+            "French": "Pommier",
+            "French (US)": "Pommier"
+        },
+        {
+            "English": "Planting an apple",
+            "English (Europe)": "Planting an apple",
+            "French": "En plantant une pomme",
+            "French (US)": "En plantant une pomme"
+        },
+        {
+            "English": "Cherry Tree",
+            "English (Europe)": "Cherry Tree",
+            "French": "Cerisier",
+            "French (US)": "Cerisier"
+        },
+        {
+            "English": "Planting a cherry",
+            "English (Europe)": "Planting a cherry",
+            "French": "En plantant une cerise",
+            "French (US)": "En plantant une cerise"
+        },
+        {
+            "English": "Coconut Tree",
+            "English (Europe)": "Coconut Tree",
+            "French": "Cocotier",
+            "French (US)": "Cocotier"
+        },
+        {
+            "English": "Planting a coconut",
+            "English (Europe)": "Planting a coconut",
+            "French": "En plantant une noix de coco",
+            "French (US)": "En plantant une noix de coco"
+        },
+        {
+            "English": "Orange Tree",
+            "English (Europe)": "Orange Tree",
+            "French": "Oranger",
+            "French (US)": "Oranger"
+        },
+        {
+            "English": "Planting an orange",
+            "English (Europe)": "Planting an orange",
+            "French": "En plantant une orange",
+            "French (US)": "En plantant une orange"
+        },
+        {
+            "English": "Peach Tree",
+            "English (Europe)": "Peach Tree",
+            "French": "Pêcher",
+            "French (US)": "Pêcher"
+        },
+        {
+            "English": "Planting a peach",
+            "English (Europe)": "Planting a peach",
+            "French": "En plantant une pêche",
+            "French (US)": "En plantant une pêche"
+        },
+        {
+            "English": "Pear Tree",
+            "English (Europe)": "Pear Tree",
+            "French": "Poirier",
+            "French (US)": "Poirier"
+        },
+        {
+            "English": "Planting a pear",
+            "English (Europe)": "Planting a pear",
+            "French": "En plantant une poire",
+            "French (US)": "En plantant une poire"
+        },
+        {
+            "English": "Cyrus",
+            "English (Europe)": "Cyrus",
+            "French": "Serge",
+            "French (US)": "Serge",
+            "German": "Björn",
+            "Spanish": "Al",
+            "Spanish (US)": "Al",
+            "Italian": "Merino",
+            "Dutch": "Cyrus",
+            "Chinese": "健兆",
+            "Chinese (Traditional)": "健兆",
+            "Japanese": "カイゾー",
+            "Korean": "리포",
+            "Russian": "Сайрус"
+        },
+        {
+            "English": "Reese",
+            "English (Europe)": "Reese",
+            "French": "Risette",
+            "French (US)": "Risette",
+            "German": "Rosina",
+            "Spanish": "Paca",
+            "Spanish (US)": "Paca",
+            "Italian": "Alpaca",
+            "Dutch": "Reese",
+            "Chinese": "莉咏",
+            "Chinese (Traditional)": "莉詠",
+            "Japanese": "リサ",
+            "Korean": "리사",
+            "Russian": "Риз"
+        },
+        {
+            "English": "Chip",
+            "English (Europe)": "Chip",
+            "French": "Castor",
+            "French (US)": "Castor",
+            "German": "Bartholo",
+            "Spanish": "Martín",
+            "Spanish (US)": "Martín",
+            "Italian": "Castore",
+            "Dutch": "Chip",
+            "Chinese": "俞正",
+            "Chinese (Traditional)": "俞正",
+            "Japanese": "うおまさ",
+            "Korean": "뚱달",
+            "Russian": "Чип"
+        },
+        {
+            "English": "C.J.",
+            "English (Europe)": "C.J.",
+            "French": "Pollux",
+            "French (US)": "Pollux",
+            "German": "Lomeus",
+            "Spanish": "CJ",
+            "Spanish (US)": "CJ",
+            "Italian": "Castorino",
+            "Dutch": "C.J.",
+            "Chinese": "俞司廷",
+            "Chinese (Traditional)": "俞司廷",
+            "Japanese": "ジャスティン",
+            "Korean": "저스틴",
+            "Russian": "Си-Джей"
+        },
+        {
+            "English": "Joan",
+            "English (Europe)": "Joan",
+            "French": "Porcella",
+            "French (US)": "Porcella",
+            "German": "Sigrid",
+            "Spanish": "Juana",
+            "Spanish (US)": "Juana",
+            "Italian": "Nella",
+            "Dutch": "Joan",
+            "Chinese": "曹谷",
+            "Chinese (Traditional)": "曹谷",
+            "Japanese": "カブリバ",
+            "Korean": "무파라",
+            "Russian": "Джоан"
+        },
+        {
+            "English": "Daisy Mae",
+            "English (Europe)": "Daisy Mae",
+            "French": "Porcelette",
+            "French (US)": "Porcelette",
+            "German": "Jorna",
+            "Spanish": "Juliana",
+            "Spanish (US)": "Juliana",
+            "Italian": "Brunella",
+            "Dutch": "Daisy Mae",
+            "Chinese": "曹卖",
+            "Chinese (Traditional)": "曹賣",
+            "Japanese": "ウリ",
+            "Korean": "무파니",
+            "Russian": "Дейзи-Мей"
+        },
+        {
+            "English": "Katrina",
+            "English (Europe)": "Katrina",
+            "French": "Astrid",
+            "French (US)": "Astrid",
+            "German": "Smeralda",
+            "Spanish": "Katrina",
+            "Spanish (US)": "Katrina",
+            "Italian": "Vanda",
+            "Dutch": "Katrina",
+            "Chinese": "星薇",
+            "Chinese (Traditional)": "星薇",
+            "Japanese": "ハッケミィ",
+            "Korean": "마추릴라",
+            "Russian": "Катрина"
+        },
+        {
+            "English": "Nat",
+            "English (Europe)": "Nat",
+            "French": "Djarod",
+            "French (US)": "Djarod",
+            "German": "Carleon",
+            "Spanish": "Papilo",
+            "Spanish (US)": "Papilo",
+            "Italian": "Gustavo",
+            "Dutch": "Nat",
+            "Chinese": "龙山先生",
+            "Chinese (Traditional)": "龍山先生",
+            "Japanese": "カメヤマさん",
+            "Korean": "멜레옹",
+            "Russian": "Нат"
+        },
+        {
+            "English": "Flick",
+            "English (Europe)": "Flick",
+            "French": "Djason",
+            "French (US)": "Djason",
+            "German": "Carlson",
+            "Spanish": "Kamilo",
+            "Spanish (US)": "Kamilo",
+            "Italian": "Ivano",
+            "Dutch": "Flick",
+            "Chinese": "龙克斯",
+            "Chinese (Traditional)": "龍克斯",
+            "Japanese": "レックス",
+            "Korean": "레온",
+            "Russian": "Флик"
+        },
+        {
+            "English": "Saharah",
+            "English (Europe)": "Saharah",
+            "French": "Sarah",
+            "French (US)": "Sarah",
+            "German": "Aziza",
+            "Spanish": "Alcatifa",
+            "Spanish (US)": "Alcatifa",
+            "Italian": "Sahara",
+            "Dutch": "Saharah",
+            "Chinese": "骆岚",
+            "Chinese (Traditional)": "駱嵐",
+            "Japanese": "ローラン",
+            "Korean": "사하라",
+            "Russian": "Сахара"
+        },
+        {
+            "English": "Copper",
+            "English (Europe)": "Copper",
+            "French": "Maret",
+            "French (US)": "Maret",
+            "German": "Harry",
+            "Spanish": "Vigilio",
+            "Spanish (US)": "Vigilio",
+            "Italian": "Birro",
+            "Dutch": "Copper",
+            "Chinese": "警察叔叔",
+            "Chinese (Traditional)": "警察叔叔",
+            "Japanese": "おまわりさん",
+            "Korean": "경찰관",
+            "Russian": "Коппер"
+        },
+        {
+            "English": "Booker",
+            "English (Europe)": "Booker",
+            "French": "Chausset",
+            "French (US)": "Chausset",
+            "German": "Wuff",
+            "Spanish": "Nocencio",
+            "Spanish (US)": "Nocencio",
+            "Italian": "Fido",
+            "Dutch": "Booker",
+            "Chinese": "警察叔叔",
+            "Chinese (Traditional)": "警察叔叔",
+            "Japanese": "おまわりさん",
+            "Korean": "경찰관",
+            "Russian": "Букер"
+        },
+        {
+            "English": "Wilbur",
+            "English (Europe)": "Wilbur",
+            "French": "Rodrigue",
+            "French (US)": "Rodrigue",
+            "German": "Udo",
+            "Spanish": "Rodri",
+            "Spanish (US)": "Rodri",
+            "Italian": "Dodoardo",
+            "Dutch": "Wilbur",
+            "Chinese": "陆德里",
+            "Chinese (Traditional)": "陸德里",
+            "Japanese": "ロドリー",
+            "Korean": "로드리",
+            "Russian": "Уилбур"
+        },
+        {
+            "English": "Orville",
+            "English (Europe)": "Orville",
+            "French": "Morris",
+            "French (US)": "Morris",
+            "German": "Bodo",
+            "Spanish": "Rafa",
+            "Spanish (US)": "Rafa",
+            "Italian": "Dodobaldo",
+            "Dutch": "Orville",
+            "Chinese": "莫里",
+            "Chinese (Traditional)": "莫里",
+            "Japanese": "モーリー",
+            "Korean": "모리",
+            "Russian": "Орвилл"
+        },
+        {
+            "English": "Redd",
+            "English (Europe)": "Redd",
+            "French": "Rounard",
+            "French (US)": "Redd's raffle",
+            "German": "Reiner",
+            "Spanish": "Ladino",
+            "Spanish (US)": "Ladino",
+            "Italian": "Volpolo",
+            "Dutch": "Redd",
+            "Chinese": "狐利",
+            "Chinese (Traditional)": "狐利",
+            "Japanese": "つねきち",
+            "Korean": "여욱",
+            "Russian": "Рэдд"
+        },
+        {
+            "English": "Phineas",
+            "English (Europe)": "Phineas",
+            "French": "Hélium",
+            "French (US)": "Hélium",
+            "German": "Helios",
+            "Spanish": "Elio",
+            "Spanish (US)": "Elio",
+            "Italian": "Elio",
+            "Dutch": "Phineas",
+            "Chinese": "博陆恩",
+            "Chinese (Traditional)": "博陸恩",
+            "Japanese": "パロンチーノ",
+            "Korean": "파론티노",
+            "Russian": "Финеас"
+        },
+        {
+            "English": "Gracie",
+            "English (Europe)": "Gracie",
+            "French": "Carla",
+            "French (US)": "Carla",
+            "German": "Grazia",
+            "Spanish": "Graciela",
+            "Spanish (US)": "Graciela",
+            "Italian": "Griffa",
+            "Dutch": "Gracie",
+            "Chinese": "葛瑞斯",
+            "Chinese (Traditional)": "葛瑞斯",
+            "Japanese": "グレース",
+            "Korean": "그레이스",
+            "Russian": "Грейси"
+        },
+        {
+            "English": "Wisp",
+            "English (Europe)": "Wisp",
+            "French": "Follet",
+            "French (US)": "Follet",
+            "German": "Buhu",
+            "Spanish": "Buh",
+            "Spanish (US)": "Buh",
+            "Italian": "Spirideo",
+            "Dutch": "Wisp",
+            "Chinese": "幽幽",
+            "Chinese (Traditional)": "幽幽",
+            "Japanese": "ゆうたろう",
+            "Korean": "깨빈",
+            "Russian": "Уисп"
+        },
+        {
+            "English": "Gulliver",
+            "English (Europe)": "Gulliver",
+            "French": "Gulliver",
+            "French (US)": "Gulliver",
+            "German": "Gulliver",
+            "Spanish": "Gulliver",
+            "Spanish (US)": "Gulliver",
+            "Italian": "Gulliver",
+            "Dutch": "Gulliver",
+            "Chinese": "吕游",
+            "Chinese (Traditional)": "呂遊",
+            "Japanese": "ジョニー",
+            "Korean": "죠니",
+            "Russian": "Гулливер"
+        },
+        {
+            "English": "Gullivarrr",
+            "English (Europe)": "Gullivarrr",
+            "French": "Gullivarrr",
+            "French (US)": "Gullivarrr",
+            "German": "Gullivarrr",
+            "Spanish": "Gullivarrr",
+            "Spanish (US)": "Gullivarrr",
+            "Italian": "Gullivarrr",
+            "Dutch": "Gullivarrr",
+            "Chinese": "海盗",
+            "Chinese (Traditional)": "海盜",
+            "Japanese": "かいぞく",
+            "Korean": "해적",
+            "Russian": "Гулливарр"
+        },
+        {
+            "English": "Label",
+            "English (Europe)": "Label",
+            "French": "Tiquette",
+            "French (US)": "Tiquette",
+            "German": "Minna",
+            "Spanish": "Tili",
+            "Spanish (US)": "Tili",
+            "Italian": "Beatrice",
+            "Dutch": "Label",
+            "Chinese": "绵儿",
+            "Chinese (Traditional)": "綿兒",
+            "Japanese": "ことの",
+            "Korean": "고숙이",
+            "Russian": "Лэйбл"
+        },
+        {
+            "English": "Mabel",
+            "English (Europe)": "Mabel",
+            "French": "Layette",
+            "French (US)": "Layette",
+            "German": "Tina",
+            "Spanish": "Pili",
+            "Spanish (US)": "Pili",
+            "Italian": "Agostina",
+            "Dutch": "Mabel",
+            "Chinese": "绢儿",
+            "Chinese (Traditional)": "絹兒",
+            "Japanese": "きぬよ",
+            "Korean": "고순이",
+            "Russian": "Мэйбл"
+        },
+        {
+            "English": "Sable",
+            "English (Europe)": "Sable",
+            "French": "Cousette",
+            "French (US)": "Cousette",
+            "German": "Sina",
+            "Spanish": "Mili",
+            "Spanish (US)": "Mili",
+            "Italian": "Filomena",
+            "Dutch": "Sable",
+            "Chinese": "麻儿",
+            "Chinese (Traditional)": "麻兒",
+            "Japanese": "あさみ",
+            "Korean": "고옥이",
+            "Russian": "Сэйбл"
+        },
+        {
+            "English": "Grams",
+            "English (Europe)": "Grams",
+            "French": "Mamiral",
+            "French (US)": "Mamiral",
+            "German": "Bonnie",
+            "Spanish": "Rosauria",
+            "Spanish (US)": "Rosauria",
+            "Italian": "Remigia",
+            "Dutch": "Grams",
+            "Chinese": "阿玉婆婆",
+            "Chinese (Traditional)": "阿玉婆婆",
+            "Japanese": "ゲコ",
+            "Korean": "귀녀",
+            "Russian": "Грэмс"
+        },
+        {
+            "English": "Leilani",
+            "English (Europe)": "Leilani",
+            "French": "Liliane",
+            "French (US)": "Liliane",
+            "German": "Lore",
+            "Spanish": "Marimar",
+            "Spanish (US)": "Marimar",
+            "Italian": "Ramona",
+            "Dutch": "Leilani",
+            "Chinese": "沽玉",
+            "Chinese (Traditional)": "沽玉",
+            "Japanese": "クーコ",
+            "Korean": "갑순",
+            "Russian": "Лейлани"
+        },
+        {
+            "English": "Kapp'n",
+            "English (Europe)": "Kapp'n",
+            "French": "Amiral",
+            "French (US)": "Amiral",
+            "German": "Käpten",
+            "Spanish": "Capitán",
+            "Spanish (US)": "Capitán",
+            "Italian": "Remo",
+            "Dutch": "Kapp'n",
+            "Chinese": "航平",
+            "Chinese (Traditional)": "航平",
+            "Japanese": "かっぺい",
+            "Korean": "갑돌",
+            "Russian": "Кэпн"
+        },
+        {
+            "English": "Leila",
+            "English (Europe)": "Leila",
+            "French": "Lila",
+            "French (US)": "Lila",
+            "German": "Lotte",
+            "Spanish": "Conchita",
+            "Spanish (US)": "Conchita",
+            "Italian": "Romina",
+            "Dutch": "Leila",
+            "Chinese": "沽沽",
+            "Chinese (Traditional)": "沽沽",
+            "Japanese": "クク",
+            "Korean": "꼬미",
+            "Russian": "Лейла"
+        },
+        {
+            "English": "Katie",
+            "English (Europe)": "Katie",
+            "French": "Cathie",
+            "French (US)": "Cathie",
+            "German": "Katja",
+            "Spanish": "Cati",
+            "Spanish (US)": "Cati",
+            "Italian": "Micetta",
+            "Dutch": "Katie",
+            "Chinese": "咪露",
+            "Chinese (Traditional)": "咪露",
+            "Japanese": "まいこちゃん",
+            "Korean": "미야",
+            "Russian": "Кейти"
+        },
+        {
+            "English": "Blanca",
+            "English (Europe)": "Blanca",
+            "French": "Blanca",
+            "French (US)": "Blanca",
+            "German": "Blanka",
+            "Spanish": "Blanca",
+            "Spanish (US)": "Blanca",
+            "Italian": "Blanca",
+            "Dutch": "Blanca",
+            "Chinese": "无脸猫",
+            "Chinese (Traditional)": "無臉貓",
+            "Japanese": "あやしいネコ",
+            "Korean": "아트고양이",
+            "Russian": "Бланка"
+        },
+        {
+            "English": "Porter",
+            "English (Europe)": "Porter",
+            "French": "Lazare",
+            "French (US)": "Lazare",
+            "German": "Flip",
+            "Spanish": "Estasio",
+            "Spanish (US)": "Estasio",
+            "Italian": "Ciufciuf",
+            "Dutch": "Porter",
+            "Chinese": "车长叔叔",
+            "Chinese (Traditional)": "車長叔叔",
+            "Japanese": "えきいんさん",
+            "Korean": "역무원",
+            "Russian": "Портер"
+        },
+        {
+            "English": "Don",
+            "English (Europe)": "Don",
+            "French": "Don",
+            "French (US)": "Don",
+            "German": "Don",
+            "Spanish": "Forma T.",
+            "Spanish (US)": "Forma T.",
+            "Italian": "Don",
+            "Dutch": "Don",
+            "Chinese": "开关叔叔",
+            "Chinese (Traditional)": "開關叔叔",
+            "Japanese": "ラケットさん",
+            "Korean": "오루묵씨",
+            "Russian": "Дон"
+        },
+        {
+            "English": "Resetti",
+            "English (Europe)": "Resetti",
+            "French": "Resetti",
+            "French (US)": "Resetti",
+            "German": "Resetti",
+            "Spanish": "Rese T.",
+            "Spanish (US)": "Rese T.",
+            "Italian": "Resetti",
+            "Dutch": "Resetti",
+            "Chinese": "电源叔叔",
+            "Chinese (Traditional)": "電源叔叔",
+            "Japanese": "リセットさん",
+            "Korean": "도루묵씨",
+            "Russian": "Ресетти"
+        },
+        {
+            "English": "Lottie",
+            "English (Europe)": "Lottie",
+            "French": "Lou",
+            "French (US)": "Lou",
+            "German": "Karlotta",
+            "Spanish": "Nuria",
+            "Spanish (US)": "Nuria",
+            "Italian": "Casimira",
+            "Dutch": "Lottie",
+            "Chinese": "巧美",
+            "Chinese (Traditional)": "巧美",
+            "Japanese": "タクミ",
+            "Korean": "솜이",
+            "Russian": "Лотти"
+        },
+        {
+            "English": "Lyle",
+            "English (Europe)": "Lyle",
+            "French": "Lionel",
+            "French (US)": "Lionel",
+            "German": "Fred",
+            "Spanish": "Sisebuto",
+            "Spanish (US)": "Sisebuto",
+            "Italian": "Frodolo",
+            "Dutch": "Lyle",
+            "Chinese": "阿本先生",
+            "Chinese (Traditional)": "阿本先生",
+            "Japanese": "ホンマさん",
+            "Korean": "안심해씨",
+            "Russian": "Лайл"
+        },
+        {
+            "English": "Blathers",
+            "English (Europe)": "Blathers",
+            "French": "Thibou",
+            "French (US)": "Thibou",
+            "German": "Eugen",
+            "Spanish": "Sócrates",
+            "Spanish (US)": "Sócrates",
+            "Italian": "Blatero",
+            "Dutch": "Blathers",
+            "Chinese": "傅达",
+            "Chinese (Traditional)": "傅達",
+            "Japanese": "フータ",
+            "Korean": "부엉",
+            "Russian": "Блезерс"
+        },
+        {
+            "English": "Celeste",
+            "English (Europe)": "Celeste",
+            "French": "Céleste",
+            "French (US)": "Céleste",
+            "German": "Eufemia",
+            "Spanish": "Estela",
+            "Spanish (US)": "Estela",
+            "Italian": "Celeste",
+            "Dutch": "Celeste",
+            "Chinese": "傅珂",
+            "Chinese (Traditional)": "傅珂",
+            "Japanese": "フーコ",
+            "Korean": "부옥",
+            "Russian": "Селеста"
+        },
+        {
+            "English": "Pavé",
+            "English (Europe)": "Pavé",
+            "French": "Roberto",
+            "French (US)": "Roberto",
+            "German": "Pavo",
+            "Spanish": "Conga",
+            "Spanish (US)": "Conga",
+            "Italian": "Pavão",
+            "Dutch": "Pavé",
+            "Chinese": "阿欢",
+            "Chinese (Traditional)": "阿歡",
+            "Japanese": "ベルリーナ",
+            "Korean": "베르리나",
+            "Russian": "Паве"
+        },
+        {
+            "English": "Brewster",
+            "English (Europe)": "Brewster",
+            "French": "Robusto",
+            "French (US)": "Robusto",
+            "German": "Kofi",
+            "Spanish": "Fígaro",
+            "Spanish (US)": "Fígaro",
+            "Italian": "Bartolo",
+            "Dutch": "Brewster",
+            "Chinese": "老板",
+            "Chinese (Traditional)": "老闆",
+            "Japanese": "マスター",
+            "Korean": "마스터",
+            "Russian": "Брюстер"
+        },
+        {
+            "English": "Jack",
+            "English (Europe)": "Jack",
+            "French": "Jacqu'O",
+            "French (US)": "Jacqu'O",
+            "German": "Jakob",
+            "Spanish": "Soponcio",
+            "Spanish (US)": "Soponcio",
+            "Italian": "Fifonio",
+            "Dutch": "Jack",
+            "Chinese": "南瓜王",
+            "Chinese (Traditional)": "南瓜王",
+            "Japanese": "パンプキング",
+            "Korean": "펌킹",
+            "Russian": "Джек"
+        },
+        {
+            "English": "Pelly",
+            "English (Europe)": "Pelly",
+            "French": "Opélie",
+            "French (US)": "Opélie",
+            "German": "Pelly",
+            "Spanish": "Sol",
+            "Spanish (US)": "Sol",
+            "Italian": "Pelly",
+            "Dutch": "Pelly",
+            "Chinese": "宋信子",
+            "Chinese (Traditional)": "宋信子",
+            "Japanese": "ぺりこ",
+            "Korean": "펠리",
+            "Russian": "Пелли"
+        },
+        {
+            "English": "Phyllis",
+            "English (Europe)": "Phyllis",
+            "French": "Élisabec",
+            "French (US)": "Élisabec",
+            "German": "Peggy",
+            "Spanish": "Estrella",
+            "Spanish (US)": "Estrella",
+            "Italian": "Polly",
+            "Dutch": "Phyllis",
+            "Chinese": "宋信美",
+            "Chinese (Traditional)": "宋信美",
+            "Japanese": "ぺりみ",
+            "Korean": "펠리미",
+            "Russian": "Филлис"
+        },
+        {
+            "English": "Pete",
+            "English (Europe)": "Pete",
+            "French": "Antoine",
+            "French (US)": "Antoine",
+            "German": "Peter",
+            "Spanish": "Carturo",
+            "Spanish (US)": "Carturo",
+            "Italian": "Tino",
+            "Dutch": "Pete",
+            "Chinese": "程信雄",
+            "Chinese (Traditional)": "程信雄",
+            "Japanese": "ぺりお",
+            "Korean": "펠리오",
+            "Russian": "Пит"
+        },
+        {
+            "English": "Harriet",
+            "English (Europe)": "Harriet",
+            "French": "Ginette",
+            "French (US)": "Ginette",
+            "German": "Trude",
+            "Spanish": "Marilín",
+            "Spanish (US)": "Marilín",
+            "Italian": "Bigodina",
+            "Dutch": "Harriet",
+            "Chinese": "刀丽茹",
+            "Chinese (Traditional)": "刀麗茹",
+            "Japanese": "カットリーヌ",
+            "Korean": "카트리나",
+            "Russian": "Харриет"
+        },
+        {
+            "English": "Zipper",
+            "English (Europe)": "Zipper",
+            "French": "Albin",
+            "French (US)": "Albin",
+            "German": "Ohs",
+            "Spanish": "Coti",
+            "Spanish (US)": "Coti",
+            "Italian": "Ovidio",
+            "Dutch": "Zipper",
+            "Chinese": "蹦蹦",
+            "Chinese (Traditional)": "蹦蹦",
+            "Japanese": "ぴょんたろう",
+            "Korean": "토빗",
+            "Russian": "Зиппер"
+        },
+        {
+            "English": "Timmy",
+            "English (Europe)": "Timmy",
+            "French": "Méli",
+            "French (US)": "Méli",
+            "German": "Nepp",
+            "Spanish": "Tendo",
+            "Spanish (US)": "Tendo",
+            "Italian": "Mirco",
+            "Dutch": "Timmy",
+            "Chinese": "豆狸",
+            "Chinese (Traditional)": "豆狸",
+            "Japanese": "まめきち",
+            "Korean": "콩돌이",
+            "Russian": "Тимми"
+        },
+        {
+            "English": "Tom Nook",
+            "English (Europe)": "Tom Nook",
+            "French": "Tom Nook",
+            "French (US)": "Tom Nook",
+            "German": "Tom Nook",
+            "Spanish": "Tom Nook",
+            "Spanish (US)": "Tom Nook",
+            "Italian": "Tom Nook",
+            "Dutch": "Tom Nook",
+            "Chinese": "狸克",
+            "Chinese (Traditional)": "狸克",
+            "Japanese": "たぬきち",
+            "Korean": "너굴",
+            "Russian": "Том Нук"
+        },
+        {
+            "English": "Tommy",
+            "English (Europe)": "Tommy",
+            "French": "Mélo",
+            "French (US)": "Mélo",
+            "German": "Schlepp",
+            "Spanish": "Nendo",
+            "Spanish (US)": "Nendo",
+            "Italian": "Marco",
+            "Dutch": "Tommy",
+            "Chinese": "粒狸",
+            "Chinese (Traditional)": "粒狸",
+            "Japanese": "つぶきち",
+            "Korean": "밤돌이",
+            "Russian": "Томми"
+        },
+        {
+            "English": "Jingle",
+            "English (Europe)": "Jingle",
+            "French": "Rodolphe",
+            "French (US)": "Rodolphe",
+            "German": "Chris",
+            "Spanish": "Renato",
+            "Spanish (US)": "Renato",
+            "Italian": "Jingle",
+            "Dutch": "Jingle",
+            "Chinese": "铃铃鹿",
+            "Chinese (Traditional)": "鈴鈴鹿",
+            "Japanese": "ジングル",
+            "Korean": "루돌",
+            "Russian": "Джингл"
+        },
+        {
+            "English": "Pascal",
+            "English (Europe)": "Pascal",
+            "French": "Pascal",
+            "French (US)": "Pascal",
+            "German": "Johannes",
+            "Spanish": "Pascal",
+            "Spanish (US)": "Pascal",
+            "Italian": "Pasqualo",
+            "Dutch": "Pascal",
+            "Chinese": "阿獭",
+            "Chinese (Traditional)": "阿獺",
+            "Japanese": "ラコスケ",
+            "Korean": "해탈한",
+            "Russian": "Паскаль"
+        },
+        {
+            "English": "Kicks",
+            "English (Europe)": "Kicks",
+            "French": "Blaise",
+            "French (US)": "Blaise",
+            "German": "Schubert",
+            "Spanish": "Betunio",
+            "Spanish (US)": "Betunio",
+            "Italian": "Sciuscià",
+            "Dutch": "Kicks",
+            "Chinese": "薛革",
+            "Chinese (Traditional)": "薛革",
+            "Japanese": "シャンク",
+            "Korean": "패트릭",
+            "Russian": "Кикс"
+        },
+        {
+            "English": "Leif",
+            "English (Europe)": "Leif",
+            "French": "Racine",
+            "French (US)": "Racine",
+            "German": "Gerd",
+            "Spanish": "Gandulio",
+            "Spanish (US)": "Gandulio",
+            "Italian": "Florindo",
+            "Dutch": "Leif",
+            "Chinese": "然然",
+            "Chinese (Traditional)": "然然",
+            "Japanese": "レイジ",
+            "Korean": "늘봉",
+            "Russian": "Лейф"
+        },
+        {
+            "English": "Harvey",
+            "English (Europe)": "Harvey",
+            "French": "Joe",
+            "French (US)": "Joe",
+            "German": "Harvey",
+            "Spanish": "Fauno",
+            "Spanish (US)": "Fauno",
+            "Italian": "Fiorilio",
+            "Dutch": "Harvey",
+            "Chinese": "巴猎",
+            "Chinese (Traditional)": "巴獵",
+            "Japanese": "パニエル",
+            "Korean": "파니엘",
+            "Russian": "Харви"
+        },
+        {
+            "English": "Isabelle",
+            "English (Europe)": "Isabelle",
+            "French": "Marie",
+            "French (US)": "Marie",
+            "German": "Melinda",
+            "Spanish": "Canela",
+            "Spanish (US)": "Canela",
+            "Italian": "Fuffi",
+            "Dutch": "Isabelle",
+            "Chinese": "西施惠",
+            "Chinese (Traditional)": "西施惠",
+            "Japanese": "しずえ",
+            "Korean": "여울",
+            "Russian": "Изабель"
+        },
+        {
+            "English": "Digby",
+            "English (Europe)": "Digby",
+            "French": "Max",
+            "French (US)": "Max",
+            "German": "Moritz",
+            "Spanish": "Candrés",
+            "Spanish (US)": "Candrés",
+            "Italian": "Fofò",
+            "Dutch": "Digby",
+            "Chinese": "西施德",
+            "Chinese (Traditional)": "西施德",
+            "Japanese": "ケント",
+            "Korean": "켄트",
+            "Russian": "Дигби"
+        },
+        {
+            "English": "Luna",
+            "English (Europe)": "Luna",
+            "French": "Serena",
+            "French (US)": "Serena",
+            "German": "Serenada",
+            "Spanish": "Alakama",
+            "Spanish (US)": "Alakama",
+            "Italian": "Sonia",
+            "Dutch": "Luna",
+            "Chinese": "梦美",
+            "Chinese (Traditional)": "夢美",
+            "Japanese": "ゆめみ",
+            "Korean": "몽셰르",
+            "Russian": "Луна"
+        },
+        {
+            "English": "K.K.",
+            "English (Europe)": "K.K.",
+            "French": "Kéké",
+            "French (US)": "Kéké",
+            "German": "K.K.",
+            "Spanish": "Totakeke",
+            "Spanish (US)": "Totakeke",
+            "Italian": "K.K.",
+            "Dutch": "K.K.",
+            "Chinese": "K.K.",
+            "Chinese (Traditional)": "K.K.",
+            "Japanese": "とたけけ",
+            "Korean": "K.K.",
+            "Russian": "К. К."
+        },
+        {
+            "English": "DJ KK",
+            "English (Europe)": "DJ KK",
+            "French": "DJ Kéké",
+            "French (US)": "DJ Kéké",
+            "German": "DJ K.K.",
+            "Spanish": "DJ KeKe",
+            "Spanish (US)": "DJ KeKe",
+            "Italian": "DJ K.K.",
+            "Dutch": "DJ K.K.",
+            "Chinese": "DJ KK",
+            "Chinese (Traditional)": "DJ KK",
+            "Japanese": "DJ K.K",
+            "Korean": "DJ K.K.",
+            "Russian": "DJ KK"
+        },
+        {
+            "English": "Tortimer",
+            "English (Europe)": "Tortimer",
+            "French": "Tortimer",
+            "French (US)": "Tortimer",
+            "German": "Törtel",
+            "Spanish": "Tórtimer",
+            "Spanish (US)": "Tórtimer",
+            "Italian": "Tortimer",
+            "Dutch": "Tortimer",
+            "Chinese": "寿伯",
+            "Chinese (Traditional)": "壽伯",
+            "Japanese": "コトブキ",
+            "Korean": "고북",
+            "Russian": "Тортимер"
+        },
+        {
+            "English": "Franklin",
+            "English (Europe)": "Franklin",
+            "French": "Dindou",
+            "French (US)": "Dindou",
+            "German": "Gernod",
+            "Spanish": "Guindo",
+            "Spanish (US)": "Guindo",
+            "Italian": "Cedrone",
+            "Dutch": "Franklin",
+            "Chinese": "富蓝",
+            "Chinese (Traditional)": "富藍",
+            "Japanese": "フランクリン",
+            "Korean": "프랭클린",
+            "Russian": "Франклин"
+        },
+        {
+            "English": "Shrunk",
+            "English (Europe)": "Shrunk",
+            "French": "Ciboulot",
+            "French (US)": "Ciboulot",
+            "German": "Samselt",
+            "Spanish": "Dr. Sito",
+            "Spanish (US)": "Dr. Sito",
+            "Italian": "Strizzo",
+            "Dutch": "Shrunk",
+            "Chinese": "笑匠",
+            "Chinese (Traditional)": "笑匠",
+            "Japanese": "ししょー",
+            "Korean": "스승",
+            "Russian": "Шранк"
+        },
+        {
+            "English": "Wendell",
+            "English (Europe)": "Wendell",
+            "French": "Morsicus",
+            "French (US)": "Morsicus",
+            "German": "Winci",
+            "Spanish": "Da Morsi",
+            "Spanish (US)": "Da Morsi",
+            "Italian": "Van Trik",
+            "Dutch": "Wendell",
+            "Chinese": "海项",
+            "Chinese (Traditional)": "海項",
+            "Japanese": "セイイチ",
+            "Korean": "고파유",
+            "Russian": "Уэнделл"
+        },
+        {
+            "English": "Rover",
+            "English (Europe)": "Rover",
+            "French": "Charly",
+            "French (US)": "Charly",
+            "German": "Olli",
+            "Spanish": "Fran",
+            "Spanish (US)": "Fran",
+            "Italian": "Girolamo",
+            "Dutch": "Rover",
+            "Chinese": "陌陌",
+            "Chinese (Traditional)": "陌陌",
+            "Japanese": "みしらぬネコ",
+            "Korean": "낯선고양이",
+            "Russian": "Ровер"
         }
     ]
 }

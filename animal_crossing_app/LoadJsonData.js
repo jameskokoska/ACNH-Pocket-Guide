@@ -30,10 +30,15 @@ export async function getStorageData(data, checkListKey, defaultValue){
       }
       //Get value from storage
       var value=defaultValue;
+      var wishlist = "false";
+      if(global.collectionList.includes("wishlist"+checkListKeyString)){
+        wishlist="true";
+      } 
       if(global.collectionList.includes(checkListKeyString)){
         value="true";
       }
       dataLoading[i].collected=value;
+      dataLoading[i].wishlist=wishlist;
       dataLoading[i].checkListKey=checkListKeyString;
 
       if(checkListKey[dataSet][0] === "fishCheckList" || checkListKey[dataSet][0] === "seaCheckList" || checkListKey[dataSet][0] === "bugCheckList"){
@@ -103,48 +108,48 @@ export function determineDataGlobal(datakeyName){
 
 }
 
-export function updateDataGlobal(datakeyName, index, collected, dataSet){
+export function updateDataGlobal(datakeyName, index, collected, dataSet, property="collected"){
   if(index===undefined||collected===undefined||dataSet===undefined){
     return;
   }
   if(datakeyName==="dataLoadedReactions")
-    global.dataLoadedReactions[dataSet][index].collected=collected;
+    global.dataLoadedReactions[dataSet][index][property]=collected;
   else if(datakeyName==="dataLoadedArt")
-    global.dataLoadedArt[dataSet][index].collected=collected;
+    global.dataLoadedArt[dataSet][index][property]=collected;
   else if(datakeyName==="dataLoadedMusic")
-    global.dataLoadedMusic[dataSet][index].collected=collected;
+    global.dataLoadedMusic[dataSet][index][property]=collected;
   else if(datakeyName==="dataLoadedConstruction")
-    global.dataLoadedConstruction[dataSet][index].collected=collected;
+    global.dataLoadedConstruction[dataSet][index][property]=collected;
   else if(datakeyName==="dataLoadedFish")
-    global.dataLoadedFish[dataSet][index].collected=collected;
+    global.dataLoadedFish[dataSet][index][property]=collected;
   else if(datakeyName==="dataLoadedBugs")
-    global.dataLoadedBugs[dataSet][index].collected=collected;
+    global.dataLoadedBugs[dataSet][index][property]=collected;
   else if(datakeyName==="dataLoadedSea")
-    global.dataLoadedSea[dataSet][index].collected=collected;
+    global.dataLoadedSea[dataSet][index][property]=collected;
   else if(datakeyName==="dataLoadedFossils")
-    global.dataLoadedFossils[dataSet][index].collected=collected;
+    global.dataLoadedFossils[dataSet][index][property]=collected;
   else if(datakeyName==="dataLoadedArt")
-    global.dataLoadedArt[dataSet][index].collected=collected;
+    global.dataLoadedArt[dataSet][index][property]=collected;
   else if(datakeyName==="dataLoadedVillagers")
-    global.dataLoadedVillagers[dataSet][index].collected=collected;
+    global.dataLoadedVillagers[dataSet][index][property]=collected;
   else if(datakeyName==="dataLoadedFurniture")
-    global.dataLoadedFurniture[dataSet][index].collected=collected;
+    global.dataLoadedFurniture[dataSet][index][property]=collected;
   else if(datakeyName==="dataLoadedClothing")
-    global.dataLoadedClothing[dataSet][index].collected=collected;
+    global.dataLoadedClothing[dataSet][index][property]=collected;
   else if(datakeyName==="dataLoadedFloorWalls")
-    global.dataLoadedFloorWalls[dataSet][index].collected=collected;
+    global.dataLoadedFloorWalls[dataSet][index][property]=collected;
   else if(datakeyName==="dataLoadedRecipes")
-    global.dataLoadedRecipes[dataSet][index].collected=collected;
+    global.dataLoadedRecipes[dataSet][index][property]=collected;
   else if(datakeyName==="dataLoadedTools")
-    global.dataLoadedTools[dataSet][index].collected=collected;
+    global.dataLoadedTools[dataSet][index][property]=collected;
   else if(datakeyName==="dataLoadedAll")
-    global.dataLoadedAll[dataSet][index].collected=collected;
+    global.dataLoadedAll[dataSet][index][property]=collected;
   else if(datakeyName==="dataLoadedCreatures")
-    global.dataLoadedCreatures[dataSet][index].collected=collected;
+    global.dataLoadedCreatures[dataSet][index][property]=collected;
   else if(datakeyName==="dataLoadedCards")
-    global.dataLoadedCards[dataSet][index].collected=collected;
+    global.dataLoadedCards[dataSet][index][property]=collected;
   else if(datakeyName==="dataLoadedMaterials")
-    global.dataLoadedMaterials[dataSet][index].collected=collected;
+    global.dataLoadedMaterials[dataSet][index][property]=collected;
 }
 
 export function resetFilters(){
@@ -154,15 +159,27 @@ export function resetFilters(){
   }
 }
 
-export function checkOff(item, collected, dataGlobalName, vibrate=getSettingsString("settingsEnableVibrations")==="true"){
-  console.log(item.checkListKey);
-  if(item!==undefined){
-     if(collected==="false"){
-      vibrate ? Vibration.vibrate([0,10,220,20]) : "";
-      global.collectionList.push(item.checkListKey)
+export function checkOff(item, collected, dataGlobalName, vibrate=getSettingsString("settingsEnableVibrations")==="true", wishlist=false, indexSpecial=""){
+  if(wishlist && item!==undefined){
+    console.log("wishlist"+item.checkListKey);
+    if(collected==="false"){
+      vibrate ? Vibration.vibrate([0,10,100,20]) : "";
+      global.collectionList.push("wishlist"+item.checkListKey)
     } else {
       vibrate ? Vibration.vibrate(10) : "";
-      collectionListRemove(item.checkListKey)
+      collectionListRemove("wishlist"+item.checkListKey)
+    }
+    collectionListSave();
+    updateDataGlobal(dataGlobalName, item.index, collected==="false" ? "true":"false", item.dataSet, property="wishlist")
+    //console.log(global.collectionList)
+  } else if(item!==undefined){
+    console.log(item.checkListKey+indexSpecial);
+    if(collected==="false" || collected===false){
+      vibrate ? Vibration.vibrate([0,10,220,20]) : "";
+      global.collectionList.push(item.checkListKey+indexSpecial)
+    } else {
+      vibrate ? Vibration.vibrate(10) : "";
+      collectionListRemove(item.checkListKey+indexSpecial)
     }
     collectionListSave();
     updateDataGlobal(dataGlobalName, item.index, collected==="false" ? "true":"false", item.dataSet)
@@ -387,22 +404,22 @@ export const settings = [
     "displayName" : "Northern Hemisphere",
     "description" : "Set your hemisphere, north or south. This will change the data displayed for creatures and events.",
   },
-  {
-    "keyName" : "settingsShowVariation",
-    "defaultValue" : "false",
-    "currentValue" : "",
-    "picture" : require("./assets/icons/dice.png"),
-    "displayName" : "Show variations in lists",
-    "description" : "Show the different colours/patterns of furniture and clothing items in the list.",
-  },
-  {
-    "keyName" : "settingsRemoveCraftVariations",
-    "defaultValue" : "false",
-    "currentValue" : "",
-    "picture" : require("./assets/icons/diyKit.png"),
-    "displayName" : "Remove customizable variations in lists",
-    "description" : "Remove variations that you can obtain through customization. Useful to keep track of furniture types that has not been purchased.",
-  },
+  // {
+  //   "keyName" : "settingsShowVariation",
+  //   "defaultValue" : "false",
+  //   "currentValue" : "",
+  //   "picture" : require("./assets/icons/dice.png"),
+  //   "displayName" : "Show variations in lists",
+  //   "description" : "Show the different colours/patterns of furniture and clothing items in the list.",
+  // },
+  // {
+  //   "keyName" : "settingsRemoveCraftVariations",
+  //   "defaultValue" : "false",
+  //   "currentValue" : "",
+  //   "picture" : require("./assets/icons/diyKit.png"),
+  //   "displayName" : "Remove customizable variations in lists",
+  //   "description" : "Remove variations that you can obtain through customization. Useful to keep track of furniture types that has not been purchased.",
+  // },
 
   {
     "keyName" : "breaker",
@@ -566,7 +583,6 @@ export const settings = [
 
 const variantTranslations = require("./assets/data/translatedVariants.json");
 const catchphraseTranslations = require("./assets/data/translatedVillagerCatchPhrases.json");
-const npcTranslations = require("./assets/data/translatedSpecialNPCs.json");
 const appTranslations = require("./assets/data/translationsApp.json")["Main"];
 const itemTranslations = require("./assets/data/translations.json")
 
@@ -586,8 +602,6 @@ export function attemptToTranslateSpecial(text, type){
       translated = variantTranslations;
     } else if (type==="catchphrase"){
       translated = catchphraseTranslations;
-    } else if (type==="npc"){
-      translated = npcTranslations;
     } else {
       return text
     }
@@ -598,26 +612,47 @@ export function attemptToTranslateSpecial(text, type){
   return text;
 }
 
-export function attemptToTranslate(text, lowerCase = false){
-  if(global.language==="English"){
+export function attemptToTranslate(text){
+  if(text===undefined){
+    return "";
+  } else if(global.language==="English"){
     return text;
   }
-  for(var i=0; i<appTranslations.length; i++){
-    if(text===undefined){
-      return text;
-    } else {
-      if(appTranslations[i]["English"].toLowerCase()===text.toString().toLowerCase()){
+  var textArray = [];
+  if(text.toString().includes("; ")){
+    textArray = text.toString().split("; ");
+  } else {
+    textArray.push(text);
+  }
+  var translatedTextOut = "";
+  var success = false;
+  for(var j=0; j<textArray.length; j++){
+    success = false;
+    for(var i=0; i<appTranslations.length; i++){
+      if(appTranslations[i]["English"].toLowerCase()===textArray[j].toString().toLowerCase()){
         var translatedText = appTranslations[i][global.language];
         if(translatedText===undefined||translatedText===null||translatedText===""){
-          return text;
+          translatedTextOut+=textArray[j];
         } else {
-          return translatedText;
+          if(j>0){
+            translatedTextOut+="; " + translatedText;
+          } else {
+            translatedTextOut+=translatedText;
+          }
+          success = true;
+          break;
         }
       }
     }
-    
+    if(success===false){
+      if(j>0){
+        translatedTextOut+="; " + textArray[j];
+      } else {
+        translatedTextOut+=textArray[j];
+      }
+    }
   }
-  return text;
+  return translatedTextOut;
 }
 
 export function checkTranslationEntry(textCheck, fallback){

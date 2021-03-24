@@ -36,7 +36,8 @@ const Header = (props) => {
             <FadeInOut fadeIn={true}>
               <TextFont style={[styles.title, {color: props.titleColor}]} bold={true}>{props.title}</TextFont>
             </FadeInOut>
-            <View style={{flexDirection: 'row'}}>
+            {props.subHeader!==undefined&&props.subHeader!=="" ? <TextFont style={[styles.title, {paddingBottom:5, fontSize: 13, color: props.titleColor}]} bold={true}>{props.subHeader}</TextFont> : <View/>}
+            {!props.disableSearch ? <View style={{flexDirection: 'row'}}>
               <View style={[styles.searchBox, {backgroundColor:props.searchBarColor}]}>
                 <DelayInput
                   allowFontScaling={false}
@@ -51,7 +52,7 @@ const Header = (props) => {
               <TouchableOpacity onPress={()=>{props.openPopupFilter(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
                 {filterImage}
               </TouchableOpacity>
-            </View>
+            </View> : <View style={{height:15}}/>}
           </View>
         </View>
       </ImageBackground>
@@ -70,12 +71,12 @@ export const HeaderLoading = (props) => {
         <View style={[styles.topSpace, {height: props.headerHeight / 1.5 + 10,}]}>
         </View>
         <View style={{height: props.headerHeight / 2}}>
-          <View style={styles.subHeader}>
+          {!props.disableSearch ? <View style={styles.subHeader}>
             <View style={[styles.searchBox, {backgroundColor:props.searchBarColor}]}>
               <TextInput allowFontScaling={false} style={styles.searchText} value={""}/>
             </View>
-          </View>
-        </View>
+          </View> : <View/>}
+        </View> 
       </ImageBackground>
       <View style={{alignItems:"center", justifyContent:"center", width:"100%", height:"50%"}}>
       <LottieView 

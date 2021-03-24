@@ -98,7 +98,7 @@ class Clock extends Component {
         <TextFont style={styles.clockTime} bold={true}>{this.state.time}</TextFont>
         <TextFont style={styles.meridian} bold={true}>{this.state.afternoonDisplay}</TextFont>
       </View>
-      <View style={[styles.line,{width:(this.state.dayNum.length+" ".length+this.state.month.length)*21+120}]}/> 
+      <View style={[styles.line,{width:(this.state.dayNum.length+" ".length+this.state.month.length)*21+112}]}/> 
       <View style={{flexDirection: 'row', alignItems: 'center'}}> 
         {dateComp}
       </View>

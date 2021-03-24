@@ -36,6 +36,7 @@ import { Appearance } from 'react-native-appearance';
 import SideMenu from './components/SideMenu'
 import GuidePage from './pages/GuidePage';
 import NewItemsPage from "./pages/NewItemsPage"
+import WishlistPage from "./pages/WishlistPage"
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -45,8 +46,15 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
+-Added wishlist. Long press any item to add it to the wishlist!
+-Variations are now checked off within an item
+-Long press a variation for a larger image view
+-Removed confusing variation settings
+-Fixed and added translations
+-Added NPC translations
+-Fixed wishlist bugs
+-
 -Added [New Items] page. Go here to see all the new items that were recently added in the new update
--Added and fixed more translations
 -Fixed crafting materials translations
 -Fixed current villagers on home screen
 -Fixed 24 hour times not displayed correctly
@@ -280,6 +288,8 @@ class App extends Component {
         currentPageView = <CalendarPage/>
       } else if (this.state.currentPage===17){
         currentPageView = <NewItemsPage/>
+      } else if (this.state.currentPage===18){
+        currentPageView = <WishlistPage setPage={this.setPage}/>
       } else {
         currentPageView = <Text>Default</Text>
       }

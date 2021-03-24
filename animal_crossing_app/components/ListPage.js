@@ -123,11 +123,11 @@ export default (props) =>{
   const [possibleFiltersState, setPossibleFilters] = useState("empty")
   const popupFilter = React.useRef(null);
 
-  const componentIsMounted = useRef(true)
+  const componentIsMounted = useRef(true);
   useEffect(() => {
-      return () => {
-          componentIsMounted.current = false
-      }
+    return () => {
+      componentIsMounted.current = false
+    }
   }, [])
 
   useEffect(()=>{
@@ -206,10 +206,14 @@ export default (props) =>{
         } else if(props.title==="Construction"){
           possibleFilters = [...possibleFilters,{"label":"Bridge","value":"Category:Bridge"},{"label":"Incline","value":"Category:Incline"},{"label":"Doors","value":"Category:Door"},{"label":"Roofing","value":"Category:Roofing"},{"label":"Siding","value":"Category:Siding"},{"label":"Mailbox","value":"Category:Mailbox"}]
         }
-        setPossibleFilters(possibleFilters);
+        if (componentIsMounted.current) {
+          setPossibleFilters(possibleFilters);
+        }
       }
     } else if (getSettingsString("settingsUseFilters")==="false") {
-      setPossibleFilters([{label:"Filters turned off - Enable them in the settings", value:""}]);
+      if (componentIsMounted.current) {
+        setPossibleFilters([{label:"Filters turned off - Enable them in the settings", value:""}]);
+      }
     }
     
     
@@ -220,22 +224,30 @@ export default (props) =>{
         //Loop through the specific search criteria specified for this dataset
         for(var x = 0; x < props.searchKey[j].length; x++){
           var searchFound = false;
-          if((search.constructor===Array && search.length !== 0) || props.filterCollectedOnly || props.newItems){
+          if((search.constructor===Array && search.length !== 0) || props.filterCollectedOnly || props.newItems || props.wishlistItems){
             var searchActual = search;
             if(props.filterCollectedOnly){
               searchActual = "Collected";
             } else if (props.newItems){
               searchActual = "New version"
+            } else if (props.wishlistItems){
+              searchActual = "Wishlist"
             }
             for(var z = 0; z < searchActual.length; z++){
-              //If the property is in search, not needed
               if(searchActual===("New version") && props.newItems && item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===global.gameVersion){
                 searchFound = true;
                 break;
               } else if (searchActual===("New version") && props.newItems){
                 searchFound = false;
                 break;
+              } else if(searchActual===("Wishlist") && props.wishlistItems && global.collectionList.includes("wishlist"+item.["checkListKey"])){
+                searchFound = true;
+                break;
+              } else if (searchActual===("Wishlist") && props.wishlistItems){
+                searchFound = false;
+                break;
               }
+              //If the property is in search, not needed
               // if(props.searchKey[j].includes(search[z].split("-")[0])){
                 //If property is Collected
                 var searchCollected = true;
@@ -281,21 +293,22 @@ export default (props) =>{
               searchFound = attemptToTranslateItem(item.[props.searchKey[j][x]]).toLowerCase().includes(search.toLowerCase())
             }
           }
-          if((search==="" || searchFound)&&((!props.filterCollectedOnly&&!props.newItems)||searchFound)){
+          if((search==="" || searchFound)&&((!props.wishlistItems&&!props.filterCollectedOnly&&!props.newItems)||searchFound)){
             //Search result found...
-            if (getSettingsString("settingsRemoveCraftVariations")==="true"){
-              if(item["Kit Cost"] !==undefined && item["Kit Cost"] !=="NA" ){
-                if(item["Name"]===previousVariation){
-                  previousVariation = item["Name"];
-                  break;
-                }
-              }
-              item.dataSet = j;
-              item.index = i;
-              dataUpdated = [...dataUpdated, item];
-              previousVariation = item["Name"];
-              break;
-            } else if(props.showVariations[j]===false){
+            //Removed variation code
+            // if (getSettingsString("settingsRemoveCraftVariations")==="true"){
+            //   if(item["Kit Cost"] !==undefined && item["Kit Cost"] !=="NA" ){
+            //     if(item["Name"]===previousVariation){
+            //       previousVariation = item["Name"];
+            //       break;
+            //     }
+            //   }
+            //   item.dataSet = j;
+            //   item.index = i;
+            //   dataUpdated = [...dataUpdated, item];
+            //   previousVariation = item["Name"];
+            //   break;
+            // } else if(props.showVariations[j]===false){
               //If recipes item page, and its not DIY, remove
               if(props.recipes){
                 if(item["DIY"]!=="Yes"){
@@ -329,12 +342,12 @@ export default (props) =>{
                 // previousVariation = item.[props.textProperty[j]];
                 previousVariation = item["Name"];
               }
-            } else {
-              item.dataSet = j;
-              item.index = i;
-              dataUpdated = [...dataUpdated, item];
-              break;
-            }
+            // } else {
+            //   item.dataSet = j;
+            //   item.index = i;
+            //   dataUpdated = [...dataUpdated, item];
+            //   break;
+            // }
           }
         }
       }
@@ -374,7 +387,7 @@ export default (props) =>{
 
   var header = (<>
       <Animated.View style={[styles.header, {transform: [{translateY}]}]}>
-        <Header search={search} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
+        <Header disableSearch={props.disableSearch} subHeader={props.subHeader} search={search} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
       </Animated.View>
     </>);
   var paddingTop = headerHeight*1.18;
@@ -398,7 +411,7 @@ export default (props) =>{
   }
   if(data==="empty"){
     return(<>
-        <HeaderLoading title={props.title} headerHeight={headerHeight} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
+        <HeaderLoading disableSearch={props.disableSearch} title={props.title} headerHeight={headerHeight} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
       </>
     )
   } else if (data.length===0 && props.filterCollectedOnly && props.currentVillagers){
@@ -406,6 +419,18 @@ export default (props) =>{
       <View style={{height:10}}/>
       <TouchableOpacity onPress={() => props.setPage(8)}>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"You have no villagers added"}</TextFont>
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>Tap here and go add some</TextFont>
+      </TouchableOpacity>
+      <View style={{height:30}}/>
+    </>)
+  } else if (data.length===0 && props.wishlistItems){
+    return(<>
+      <View style={{height:10}}/>
+      {header}
+      <View style={{height:Dimensions.get('window').height/2}}/>
+      <TouchableOpacity onPress={() => props.setPage(1)}>
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"You have no wishlist items."}</TextFont>
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"Long press items to add them to your wishlist."}</TextFont>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>Tap here and go add some</TextFont>
       </TouchableOpacity>
       <View style={{height:30}}/>
