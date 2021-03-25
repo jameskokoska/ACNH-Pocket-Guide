@@ -396,7 +396,7 @@ export const settings = [
     "currentValue" : "",
     "picture" : require("./assets/icons/dice.png"),
     "displayName" : "Highlight furniture with non-craftable variations",
-    "description" : "Highlight furniture that with variations that can't be crafted by the player in blue. This will help complete your catalog with all the furniture variations!",
+    "description" : "Highlight furniture with variations that can't be crafted by the player in blue. This will help complete your catalog with all the furniture variations!",
   },
   // {
   //   "keyName" : "settingsShowVariation",
@@ -571,7 +571,7 @@ export const settings = [
     "currentValue" : "",
     "picture" : require("./assets/icons/customTime.png"),
     "displayName" : "Use a custom date",
-    "description" : "",
+    "description" : "Use any date you want, in case you are one of those time travellers",
   },
 ]
 

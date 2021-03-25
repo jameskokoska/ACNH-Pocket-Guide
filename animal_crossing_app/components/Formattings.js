@@ -37,7 +37,7 @@ export class MailLink extends Component {
 export class SubHeader extends Component {
   render(){
     return(
-      <TextFont bold={true} style={{fontSize: 22, marginLeft: this.props.marginLeft===false? 0 : 30, color:colors.textBlack[global.darkMode],}}>{this.props.children}</TextFont>
+      <TextFont bold={true} style={{fontSize: 22, marginHorizontal: this.props.margin!==false?30:0, color:colors.textBlack[global.darkMode],}}>{this.props.children}</TextFont>
     )
   }
 }
@@ -50,10 +50,18 @@ export class Header extends Component {
   }
 }
 
+
+{/* <Paragraph styled={true} margin={false}> */}
 export class Paragraph extends Component {
   render(){
-    return(
-      <Text style={{marginTop: 6, fontSize: 16, marginLeft: 30, marginRight: 30, color:colors.textBlack[global.darkMode]}}>{attemptToTranslate(this.props.children)}</Text>
-    )
+    if(!this.props.styled){
+      return(
+        <Text style={{marginTop: 6, fontSize: 16, marginHorizontal: this.props.margin!==false?30:0, color:colors.textBlack[global.darkMode]}}>{attemptToTranslate(this.props.children)}</Text>
+      )
+    } else {
+      return(
+        <TextFont bold={false} style={{marginTop:10, fontSize: 17, marginHorizontal: this.props.margin!==false?30:0, color: colors.textBlack[global.darkMode]}}>{this.props.children}</TextFont>
+      )
+    }
   }
 }

@@ -9,7 +9,6 @@ import colors from '../Colors'
 import PopupAddTask from "./PopupAddTask"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {getSettingsString} from "../LoadJsonData"
-import DropDownPicker from 'react-native-dropdown-picker'
 
 class TodoList extends Component {
   constructor(props){

@@ -95,10 +95,12 @@ class PopupFilter extends Component {
               <TextFont bold={true} style={{fontSize: 22, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Set Filters</TextFont>
               <View style={{height:10}}/>
               <DropDownPicker
+                searchablePlaceholder={attemptToTranslate("Search for item")}
+                searchableError={() => <Text>{attemptToTranslate("Not found")}</Text>}
                 items={this.props.possibleFilters}
                 placeholder={attemptToTranslate("Select filter...")}
                 multipleText="%d filters(s) applied"
-                dropDownMaxHeight={Dimensions.get('window').height*0.55}
+                dropDownMaxHeight={Dimensions.get('window').height*0.75-175}
                 containerStyle={{height: 45, marginLeft: 15, marginRight: 15}}
                 style={[{width: "100%", borderWidth: 0, backgroundColor: colors.searchbarBG[global.darkMode], opacity: dropDownPickerOpacity,borderTopLeftRadius: 8, borderTopRightRadius: 8,borderBottomLeftRadius: 8, borderBottomRightRadius: 8}]}
                 searchable={this.props.filterSearchable}
@@ -150,8 +152,7 @@ const styles = StyleSheet.create({
   centeredView: {
     flex: 1,
     justifyContent: "center",
-    padding: 20,
-    paddingTop: "10%",
+    paddingHorizontal: 20,
     backgroundColor:"rgba(0,0,0,0.5)",
   },
   modalView: {

@@ -50,12 +50,14 @@ class FadeInOut extends Component {
     }
   }
   componentDidUpdate(prevProps) {
-    if(this.props.fadeIn===true){
-      this.fadeIn();
-      this.scaleIn();
-    } else if(this.props.fadeIn===false){
-      this.fadeOut();
-      this.scaleOut();
+    if(prevProps!==this.props){
+      if(this.props.fadeIn===true){
+        this.fadeIn();
+        this.scaleIn();
+      } else if(this.props.fadeIn===false){
+        this.fadeOut();
+        this.scaleOut();
+      }
     }
   }
   fadeIn = () => {
@@ -80,6 +82,14 @@ class FadeInOut extends Component {
     Animated.timing(this.state.scaleAnimationValue, {
       toValue: 1,
       duration: this.duration,
+      useNativeDriver: true,
+    }).start();
+  };
+
+  scaleInOver = () => {
+    Animated.timing(this.state.scaleAnimationValue, {
+      toValue: 1.1,
+      duration: this.duration+100,
       useNativeDriver: true,
     }).start();
   };

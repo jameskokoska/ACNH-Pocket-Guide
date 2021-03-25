@@ -127,7 +127,7 @@ const FurnitureRoute = () => (
 
 const ClothingRoute = () => (
   <ListPage 
-    filters={["Catalog", "Style 1","Style 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ]}
+    filters={["Catalog", "Style 1","Style 2","Color 1","Color 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ]}
     filterSearchable = {true}
     showVariations={[
       getSettingsString("settingsShowVariation")==="true" ? true : false,

@@ -261,7 +261,6 @@ class TurnipLog extends Component {
           itemStyle={{
               justifyContent: 'flex-start'
           }}
-          searchablePlaceholderTextColor={colors.filterSearch[global.darkMode]}
           labelStyle={{fontFamily: "ArialRoundedBold", fontSize: 15, marginLeft:10, color:colors.textBlack[global.darkMode]}}
           customTickIcon={()=><View/>}
           activeItemStyle={{borderRadius: 10, backgroundColor: colors.lightDarkAccentHeavy[global.darkMode]}}
@@ -282,7 +281,6 @@ class TurnipLog extends Component {
           itemStyle={{
               justifyContent: 'flex-start'
           }}
-          searchablePlaceholderTextColor={colors.filterSearch[global.darkMode]}
           labelStyle={{fontFamily: "ArialRoundedBold", fontSize: 15, marginLeft:10, color:colors.textBlack[global.darkMode]}}
           customTickIcon={()=><View/>}
           activeItemStyle={{borderRadius: 10, backgroundColor: colors.lightDarkAccentHeavy[global.darkMode]}}

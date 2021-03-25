@@ -101,6 +101,7 @@ const colors = {
     selectWishlist: ["#FDE7E9", "#926367"],
     selectAchievements : ["#E8ECFD","#485068"],
     achievementsNoun : ["#5c6bc0","#3C56A3"],
+    achievementsModifier : ["#548BAA","#3C8BA3"],
     highlightNonCustomizableItems : ["#8DAFEE6B","#7688C04B"],
     okButton : ["#2196f3","#006db3"],
     okButtonFaint : ["#99cbf2","#125580"],

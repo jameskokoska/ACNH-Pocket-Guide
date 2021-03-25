@@ -11,16 +11,16 @@ class SettingsContainer extends Component {
   constructor(props){
     super(props);
     this.state = {
-      toggle:this.props.currentValue === "true" ? true : false,
+      toggle:this.props.setting.currentValue === "true" ? true : false,
     }
   }
   render(){
     return(
-      <TouchableOpacity activeOpacity={0.7} onPress={() => {this.popupSettings.setPopupVisible(true); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
+      <TouchableOpacity activeOpacity={0.7} onPress={() => {this.props.openPopup(this.props.setting);}}>
         <View style={[styles.settingsContainer,{backgroundColor:this.props.backgroundColor}]}>
-          <Image style={styles.settingsImage} source={this.props.image}/>
+          <Image style={styles.settingsImage} source={this.props.setting.picture}/>
           <View style={styles.textContainer}>
-            <TextFont bold={true} style={[styles.textContainerTop,{color:this.props.textColor}]}>{this.props.text}</TextFont>
+            <TextFont bold={true} style={[styles.textContainerTop,{color:this.props.textColor}]}>{this.props.setting.displayName}</TextFont>
           </View>
           <View style={{position:"absolute", right: 8, transform: [{ scale: 0.75 }]}}>
             <ToggleSwitch
@@ -38,7 +38,6 @@ class SettingsContainer extends Component {
             />
           </View>
         </View>
-        <Popup ref={(popupSettings) => this.popupSettings = popupSettings} text={this.props.text} textLower={this.props.description} button1={"OK"} button1Action={()=>{console.log("OK")}}/>
       </TouchableOpacity>
     )
   }

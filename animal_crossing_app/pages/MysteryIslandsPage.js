@@ -11,7 +11,6 @@ import {PopupBottomCustom} from "../components/Popup"
 import {getStorage, getSettingsString} from "../LoadJsonData"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-
 class MysteryIslandsPage extends Component {
   constructor(props){
     super(props);
@@ -22,6 +21,9 @@ class MysteryIslandsPage extends Component {
   }
   loadList = async() => {
     var storageData = JSON.parse(await getStorage("IslandsVisited",JSON.stringify([])));
+    if(storageData.constructor!==Array){
+      storageData=[];
+    }
     this.setState({data:storageData})
   }
   checkOffItem = (id) => {
@@ -88,7 +90,7 @@ class MysteryIslandsPage extends Component {
             item={this.state.selectedIsland}
             textProperty={["requires"]}
           />
-          <TextFont bold={false} style={{marginTop:10, fontSize: 17, color: colors.textBlack[global.darkMode]}}>{this.state.selectedIsland.description}</TextFont>
+          <Paragraph styled={true} margin={false}>{this.state.selectedIsland.description}</Paragraph>
         </PopupBottomCustom>
       </>
     )

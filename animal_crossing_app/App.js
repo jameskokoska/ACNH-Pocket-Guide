@@ -50,7 +50,7 @@ global.changelog = `
 -Added achievements page!
 -Fixed translations, critical text bug
 -Fixed mystery islands visited not properly saving
--Added [Highlight furniture with non-craftable variations] setting. Useful for completing your catalog!
+-Added [Highlight furniture with non-craftable variations] setting and filter. Useful for completing your catalog!
 -
 -You can sort things alphabetically, option in settings
 -Reworked how items are checked off/saved to wishlist

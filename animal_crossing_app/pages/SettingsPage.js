@@ -11,8 +11,9 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {ExportFile, LoadFile} from '../components/LoadFile';
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 import {resetFilters} from '../LoadJsonData';
-import {HeaderNote, MailLink, Header} from "../components/Formattings"
+import {SubHeader, Paragraph, HeaderNote, MailLink, Header} from "../components/Formattings"
 import DropDownPicker from 'react-native-dropdown-picker'
+import {PopupBottomCustom} from "../components/Popup"
 
 class SettingsPage extends Component {
   constructor(props){
@@ -34,6 +35,7 @@ class SettingsPage extends Component {
   render(){
     return(<>
       <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
+        <SettingsPopup ref={(popup) => this.popup = popup}/>
         <ScrollView>
           <View style={{marginTop: 100}}/>
           <Header>Settings</Header>
@@ -48,14 +50,12 @@ class SettingsPage extends Component {
                 return <SettingsContainer 
                   updateSettings={this.props.updateSettings}
                   key={setting["keyName"]+index.toString()} 
-                  currentValue={setting["currentValue"]} 
                   backgroundColor={colors.white[global.darkMode]} 
                   textColor={colors.textBlack[global.darkMode]} 
-                  image={setting["picture"]} 
-                  text={setting["displayName"]} 
-                  description={setting["description"]}
                   index={index}
                   keyName={setting["keyName"]}
+                  openPopup={(setting)=>this.popup.openPopup(setting)}
+                  setting={setting}
                 />
               } else {
                 return <SettingsDivider
@@ -109,6 +109,29 @@ class SettingsPage extends Component {
   }
 }
 export default SettingsPage;
+
+class SettingsPopup extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      selected:"",
+    }
+  }
+
+  openPopup = (selected) =>{
+    this.setState({selected:selected});
+    this.popup.setPopupVisible(true);
+  }
+  
+  render(){
+    return <>
+      <PopupBottomCustom ref={(popup) => this.popup = popup}>
+        <SubHeader margin={false}>{this.state.selected.displayName}</SubHeader>
+        <Paragraph styled={true} margin={false}>{this.state.selected.description}</Paragraph>
+      </PopupBottomCustom>
+    </>
+  }
+}
 
 
 export class LanguagePicker extends Component{

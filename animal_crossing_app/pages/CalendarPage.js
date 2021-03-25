@@ -40,7 +40,7 @@ export default class CalendarPage extends Component {
       monthNames: [attemptToTranslate('January'),attemptToTranslate('February'),attemptToTranslate('March'),attemptToTranslate('April'),attemptToTranslate('May'),attemptToTranslate('June'),attemptToTranslate('July'),attemptToTranslate('August'),attemptToTranslate('September'),attemptToTranslate('October'),attemptToTranslate('November'),attemptToTranslate('December')],
       monthNamesShort: [attemptToTranslate('Jan'),attemptToTranslate('Feb'),attemptToTranslate('Mar'),attemptToTranslate('Apr'),attemptToTranslate('May'),attemptToTranslate('Jun'),attemptToTranslate('Jul'),attemptToTranslate('Aug'),attemptToTranslate('Sep'),attemptToTranslate('Oct'),attemptToTranslate('Nov'),attemptToTranslate('Dec')],
       dayNames: [attemptToTranslate('Sunday'),attemptToTranslate('Monday'),attemptToTranslate('Tuesday'),attemptToTranslate('Wednesday'),attemptToTranslate('Thursday'),attemptToTranslate('Friday'),attemptToTranslate('Saturday')],
-      dayNamesShort: [attemptToTranslate('Sun'),attemptToTranslate('Mon'),attemptToTranslate('Tues'),attemptToTranslate('Wed'),attemptToTranslate('Thurs'),attemptToTranslate('Fri'),attemptToTranslate('Sat')],
+      dayNamesShort: [attemptToTranslate('Sun'),attemptToTranslate('Mon'),attemptToTranslate('Tue'),attemptToTranslate('Wed'),attemptToTranslate('Thu'),attemptToTranslate('Fri'),attemptToTranslate('Sat')],
       today: attemptToTranslate('Today')
     };
     LocaleConfig.defaultLocale = 'language';

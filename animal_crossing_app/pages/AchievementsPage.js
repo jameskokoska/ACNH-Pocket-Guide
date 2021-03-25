@@ -9,11 +9,11 @@ import colors from '../Colors'
 import PopupAddTask from "../components/PopupAddTask"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
-import DropDownPicker from 'react-native-dropdown-picker'
 import FastImage from "../components/FastImage"
 import {Header, SubHeader, Paragraph} from "../components/Formattings"
 import {PopupBottomCustom} from "../components/Popup"
 import DelayInput from "react-native-debounce-input";
+import FadeInOut from "../components/FadeInOut";
 
 export default class AchievementsPage extends Component {
   constructor(props){
@@ -114,6 +114,23 @@ class AchievementsPopup extends Component {
     this.achievementNouns = [];
     for(var i = 0; i < this.state.selectedAchievement["Num of Tiers"]; i++){
       this.achievementNouns.push(
+        <TextFont key={"Tier "+(i+1).toString()+" Modifier"} style={{fontSize:20,
+          color: colors.textWhite[0],
+          marginLeft: 13,
+          paddingLeft: 13,
+          paddingRight: 13,
+          paddingTop: 4,
+          paddingBottom: 4,
+          elevation: 3, 
+          marginVertical: 5,
+          alignSelf: 'flex-start', 
+          backgroundColor: colors.achievementsModifier[global.darkMode], 
+          borderRadius: 10}}
+        >
+          {this.state.selectedAchievement["Tier "+(i+1).toString()+" Modifier"]}
+        </TextFont>
+      )
+      this.achievementNouns.push(
         <TextFont key={"Tier "+(i+1).toString()+" Noun"} style={{fontSize:20,
           color: colors.textWhite[0],
           marginLeft: 13,
@@ -146,9 +163,9 @@ class AchievementsPopup extends Component {
     this.getNouns();
     return <>
       <PopupBottomCustom ref={(popup) => this.popup = popup}>
-        <SubHeader marginLeft={false}>{name}</SubHeader>
-        <TextFont bold={false} style={{marginTop:10, fontSize: 17, color: colors.textBlack[global.darkMode]}}>{this.state.selectedAchievement["Achievement Description"]}</TextFont>
-        <TextFont bold={false} style={{marginTop:10, fontSize: 17, color: colors.textBlack[global.darkMode]}}>{this.state.selectedAchievement["Achievement Criteria"]}</TextFont>
+        <SubHeader margin={false}>{name}</SubHeader>
+        <Paragraph styled={true} margin={false}>{this.state.selectedAchievement["Achievement Description"]}</Paragraph>
+        <Paragraph styled={true} margin={false}>{this.state.selectedAchievement["Achievement Criteria"]}</Paragraph>
         <View style={{paddingTop:30, justifyContent:"center", marginHorizontal: 5, flexDirection: 'row', flexWrap:"wrap"}}>
           {this.achievementNouns}
         </View>
@@ -161,8 +178,6 @@ class Achievement extends Component {
   constructor(props){
     super(props);
     this.achievementStamps = [];
-  }
-  componentDidMount(){
     for(var i = 0; i < this.props.achievement["Num of Tiers"]; i++){
       this.achievementStamps.push(<AchievementStamp
         key={this.props.achievement["Name"]+i.toString()}
@@ -183,11 +198,9 @@ class Achievement extends Component {
       <TouchableOpacity activeOpacity={0.7} onPress={()=>this.props.openPopup(this.props.achievement)}>
       <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
         <SubHeader>{name}</SubHeader>
-        <TextFont bold={false} style={{marginLeft:30, marginTop:10, fontSize: 17, color: colors.textBlack[global.darkMode]}}>{this.props.achievement["Achievement Criteria"]}</TextFont>
+        <Paragraph styled={true}>{this.props.achievement["Achievement Criteria"]}</Paragraph>
         <View style={{paddingTop:10, marginHorizontal: 5, flex: 1, flexDirection: 'row', justifyContent:'center',flexWrap:"wrap"}}>
-          {this.achievementStamps.map((stamp, index) => {
-            return(stamp)
-          })}
+          {this.achievementStamps}
         </View>
       </View>
       </TouchableOpacity>
@@ -206,13 +219,18 @@ class AchievementStamp extends Component {
   }
 
   componentDidMount(){
+    this.mounted = true;
     this.id = this.props.id;
     this.loadChecked();
   }
 
+  componentWillUnmount() {
+    this.mounted = false;
+  }
+
   loadChecked = async() => {
     var storageData = JSON.parse(await getStorage("Achievements",JSON.stringify([])));
-    if(storageData.includes(this.id)){
+    if(storageData.includes(this.id) && this.mounted){
       this.setState({checked:true})
     }
   }
@@ -224,18 +242,20 @@ class AchievementStamp extends Component {
       oldList = oldList.filter(item => item !== id);
       this.saveList(oldList);
       getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
-      this.setState({checked:false})
+      if(this.mounted)
+        this.setState({checked:false})
     } else {
       oldList.push(id);
       this.saveList(oldList);
       getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10,220,20]) : "";
-      this.setState({checked:true})
+      if(this.mounted)
+        this.setState({checked:true})
     }
-    console.log(oldList)
   }
 
   saveList = async(data) => {
-    await AsyncStorage.setItem("Achievements", JSON.stringify(data));
+    if(this.mounted)
+      await AsyncStorage.setItem("Achievements", JSON.stringify(data));
   }
   render(){
     return (
@@ -250,7 +270,7 @@ class AchievementStamp extends Component {
           }}
         >
           <View style={{width: 60,height: 60,borderRadius: 100,justifyContent: "center",alignItems: "center",borderWidth: 2, borderColor: this.state.checked ? colors.checkGreen[global.darkMode] : colors.lightDarkAccent[global.darkMode], backgroundColor:colors.lightDarkAccent[global.darkMode]}}>
-            {this.state.checked?<Image style={{transform: [{ rotate: (-20 + Math.floor(this.random * 40)).toString()+'deg' }], opacity: 0.7, resizeMode:'contain',width:45, height:45}} source={require("../assets/icons/seal.png")}/>:<View/>}
+            {this.state.checked?<FadeInOut duration={200} startValue={0} endValue={1} fadeIn={true} fadeInOut={true} scaleInOut={true} maxFade={0.8} minScale={0.2}><Image style={{transform: [{ rotate: (-20 + Math.floor(this.random * 40)).toString()+'deg' }], opacity: 0.7, resizeMode:'contain',width:45, height:45}} source={require("../assets/icons/seal.png")}/></FadeInOut>:<View/>}
           </View>
         </TouchableOpacity>
         <TextFont suffix={" "+attemptToTranslate("to get")} translate={false} numberOfLines={2} bold={false} style={{width: 60, marginTop: 3, color: colors.textBlack[global.darkMode], fontSize: 10, textAlign:"center"}}>{commas(this.props.number)}</TextFont>
