@@ -169,6 +169,7 @@ export default (props) =>{
         var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH ";
 
         var possibleFilters = [{label:attemptToTranslate("Collected"), value:"Collected"},{label:attemptToTranslate("Not Collected"), value:"Not Collected"}];
+        var notCraftVariationsFilters = [{label:attemptToTranslate("Show uncraftable item variations"), value:"Show uncraftable item variations"}]
         var activeFilters = [
           {label:"January can catch",value:hemispherePre+"Jan Active:true"},
           {label:"February can catch",value:hemispherePre+"Feb Active:true"},
@@ -190,9 +191,9 @@ export default (props) =>{
         } else if(props.title==="Sea Creatures"){
           possibleFilters = [...possibleFilters, ...activeFilters, ...seaCreaturesFilter];
         } else if(props.title==="Furniture"){
-          possibleFilters = [...possibleFilters, ...furnitureFilter];
+          possibleFilters = [...possibleFilters, ...notCraftVariationsFilters, ...furnitureFilter];
         } else if(props.title==="Clothing"){
-          possibleFilters = [...possibleFilters, ...clothingFilter];
+          possibleFilters = [...possibleFilters, ...notCraftVariationsFilters, ...clothingFilter];
         } else if(props.title==="Floor & Walls"){
           possibleFilters = [...possibleFilters, ...floorWallsFilter];
         } else if(props.title==="Emoticons"){
@@ -202,7 +203,7 @@ export default (props) =>{
         } else if(props.title==="Villagers"){
           possibleFilters = [...possibleFilters, ...villagersFilter];
         } else if(props.title==="Everything"){
-          possibleFilters = [...possibleFilters, ...activeFilters, ...everythingFilter];
+          possibleFilters = [...possibleFilters, ...notCraftVariationsFilters, ...activeFilters, ...everythingFilter];
         } else if(props.title==="Construction"){
           possibleFilters = [...possibleFilters,{"label":"Bridge","value":"Category:Bridge"},{"label":"Incline","value":"Category:Incline"},{"label":"Doors","value":"Category:Door"},{"label":"Roofing","value":"Category:Roofing"},{"label":"Siding","value":"Category:Siding"},{"label":"Mailbox","value":"Category:Mailbox"}]
         }
@@ -289,6 +290,9 @@ export default (props) =>{
                 }
                 if(searchActual.includes("Collected")&&searchActual.includes("Not Collected")){
                   searchCollected=true;
+                }
+                if(searchActual.includes("Show uncraftable item variations")&&item["Kit Cost"] !==undefined && item["Variation"] !==undefined && item["Variant ID"] !==undefined && item["Kit Cost"] ==="NA" && (item["Variation"]!=="NA"||item["Variant ID"] !== "NA")){
+                  searchFound=true;
                 }
                 //Only check the property selected
                 if(searchCollected && item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toLowerCase().includes(searchActual[z].split(":")[1].toLowerCase())){

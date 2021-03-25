@@ -675,10 +675,10 @@ export function checkTranslationEntry(textCheck, fallback){
 }
 
 export function translateBirthday(villager){
-  if(global.language==="English" || global.language==="English (Europe)"){
-    return (villager + "'s Birthday")
-  } else if(global.language==="French" || global.language==="French (US)"){
+  if(global.language==="French" || global.language==="French (US)"){
     return ("Anniversaire de " + villager)
+  } else {
+    return (villager + "'s Birthday")
   }
 }
 
