@@ -37,6 +37,7 @@ import SideMenu from './components/SideMenu'
 import GuidePage from './pages/GuidePage';
 import NewItemsPage from "./pages/NewItemsPage"
 import WishlistPage from "./pages/WishlistPage"
+import AchievementsPage from "./pages/AchievementsPage"
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -46,6 +47,10 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
+-Added achievements page!
+-Fixed translations, critical text bug
+-Fixed mystery islands visited not properly saving
+-
 -You can sort things alphabetically, option in settings
 -Reworked how items are checked off/saved to wishlist
 -Loading should now be faster
@@ -75,6 +80,7 @@ global.changelog = `
 -Planned Features:
 - Visitors tracking
 - Edit home screen sections
+- Notification reminders for events
 -
 -Any feedback feel free to send me an email! dapperappdeveloper@gmail.com
 -You can reread this changelog in the [About] page
@@ -295,6 +301,8 @@ class App extends Component {
         currentPageView = <NewItemsPage/>
       } else if (this.state.currentPage===18){
         currentPageView = <WishlistPage setPage={this.setPage}/>
+      } else if (this.state.currentPage===19){
+        currentPageView = <AchievementsPage/>
       } else {
         currentPageView = <Text>Default</Text>
       }

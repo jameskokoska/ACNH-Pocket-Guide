@@ -19,11 +19,11 @@ class AllItemsPage extends Component {
     if(this.props.wishlistItems!==undefined){
       wishlistItems = this.props.wishlistItems
     }
-    var appBarColor = colors.emojipediaAppBar[global.darkMode];
+    var appBarColor = colors.allItemsAppBar[global.darkMode];
     if(this.props.appBarColor !==undefined){
       appBarColor = this.props.appBarColor;
     }
-    var accentColor = colors.emojipediaAccent[global.darkMode];
+    var accentColor = colors.allItemsAccent[global.darkMode];
     if(this.props.accentColor !==undefined){
       accentColor = this.props.accentColor;
     }

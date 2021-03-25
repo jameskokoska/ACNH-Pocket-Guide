@@ -19,10 +19,10 @@ class MysteryIslandsPage extends Component {
       selectedIsland:"",
       data: [],
     }
-    this.loadList();
   }
   loadList = async() => {
-    var storageData = JSON.parse(await getStorage("IslandsVisited",JSON.stringify("[]")));
+    var storageData = JSON.parse(await getStorage("IslandsVisited",JSON.stringify([])));
+    this.setState({data:storageData})
   }
   checkOffItem = (id) => {
     var oldList = this.state.data;
@@ -33,10 +33,10 @@ class MysteryIslandsPage extends Component {
       getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
     } else {
       oldList.push(id);
+      this.saveList(oldList);
       this.setState({data: oldList})
       getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10,220,20]) : "";
     }
-        console.log(this.state.data)
 
   }
 
@@ -47,6 +47,10 @@ class MysteryIslandsPage extends Component {
   openPopup = (island) =>{
     this.setState({selectedIsland:island})
     this.popup.setPopupVisible(true);
+  }
+
+  componentDidMount(){
+    this.loadList();
   }
   render(){
     return(

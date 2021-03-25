@@ -635,6 +635,8 @@ export function attemptToTranslate(text, forcedTranslation=false){
         var translatedText = appTranslations[i][global.language];
         if(translatedText===undefined||translatedText===null||translatedText===""){
           translatedTextOut+=textArray[j];
+          success = true;
+          break;
         } else {
           if(j>0){
             translatedTextOut+="; " + translatedText;

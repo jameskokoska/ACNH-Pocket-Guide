@@ -37,7 +37,7 @@ export class MailLink extends Component {
 export class SubHeader extends Component {
   render(){
     return(
-      <TextFont bold={true} style={{fontSize: 22, marginLeft: 30, color:colors.textBlack[global.darkMode],}}>{this.props.children}</TextFont>
+      <TextFont bold={true} style={{fontSize: 22, marginLeft: this.props.marginLeft===false? 0 : 30, color:colors.textBlack[global.darkMode],}}>{this.props.children}</TextFont>
     )
   }
 }
