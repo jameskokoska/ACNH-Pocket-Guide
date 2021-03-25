@@ -66,7 +66,9 @@ class ListItem extends PureComponent{
     }
 
     var boxColor = colors.white[global.darkMode];
-    if(this.props.boxColor===true && getSettingsString("settingsColorLists")==="true"){
+    if(getSettingsString("settingsHighlightNotCraftableVariations") === "true" && this.props.item["Kit Cost"] !==undefined && this.props.item["Variation"] !==undefined && this.props.item["Variant ID"] !==undefined && this.props.item["Kit Cost"] ==="NA" && (this.props.item["Variation"]!=="NA"||this.props.item["Variant ID"] !== "NA")){
+      boxColor = colors.highlightNonCustomizableItems[global.darkMode];
+    } else if(this.props.boxColor===true && getSettingsString("settingsColorLists")==="true"){
       if(this.props.item.["Color 1"]!==undefined){
         var opacity = "0A"
         if(global.darkMode){

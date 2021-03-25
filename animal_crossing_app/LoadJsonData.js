@@ -390,6 +390,13 @@ export const settings = [
     "picture" : require("./assets/icons/alphabet.png"),
     "displayName" : "Sort lists in alphabetical order",
     "description" : "Sort any list into alphabetical order. However, items may not be grouped by category anymore.",
+  },{
+    "keyName" : "settingsHighlightNotCraftableVariations",
+    "defaultValue" : "false",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/dice.png"),
+    "displayName" : "Highlight furniture with non-craftable variations",
+    "description" : "Highlight furniture that with variations that can't be crafted by the player in blue. This will help complete your catalog with all the furniture variations!",
   },
   // {
   //   "keyName" : "settingsShowVariation",
