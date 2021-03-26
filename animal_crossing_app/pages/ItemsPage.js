@@ -131,7 +131,7 @@ export class ClothingRouteClass extends Component{
     if(title!==undefined){
       villagerGifts = true;
       villagerGiftsFilters = this.props.villagerGiftsFilters;
-      disableFilters = true;
+      // disableFilters = true;
       subHeader = this.props.subHeader;
       customHeader = this.props.customHeader;
     } else {

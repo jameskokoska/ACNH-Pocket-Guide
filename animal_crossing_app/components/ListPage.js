@@ -174,6 +174,8 @@ export default (props) =>{
         possibleFilters = [...possibleFilters,{"label":"Bridge","value":"Category:Bridge"},{"label":"Incline","value":"Category:Incline"},{"label":"Doors","value":"Category:Door"},{"label":"Roofing","value":"Category:Roofing"},{"label":"Siding","value":"Category:Siding"},{"label":"Mailbox","value":"Category:Mailbox"}]
       } else if(props.title==="Music"){
         possibleFilters = [...possibleFilters, ...filterDefinitions["Music"]]
+      } else if(props.villagerGifts===true){
+        possibleFilters = [{"label":"Villager can wear","value":"Villager Equippable:Yes"},{"label":"Villager cannot wear","value":"Villager Equippable:No"}]
       }
       if (componentIsMounted.current) {
         setPossibleFilters(possibleFilters);
@@ -213,22 +215,7 @@ export default (props) =>{
           } else if (props.wishlistItems){
             searchActual = ["Wishlist"];
           } else if (props.villagerGifts) {
-            searchActual = props.villagerGiftsFilters;
-            //villager gifts
-            if((props.villagerGifts===true && item.["Color 1"]!==undefined && item.["Color 2"]!==undefined && item.["Style 1"]!==undefined && item.["Style 2"]!==undefined) &&
-              (item.["Color 1"].includes(searchActual[0])  || 
-              item.["Color 2"].includes(searchActual[1])  || 
-              item.["Color 2"].includes(searchActual[0])  || 
-              item.["Color 1"].includes(searchActual[1])   ) && (
-              item.["Style 1"].includes(searchActual[2])  || 
-              item.["Style 2"].includes(searchActual[3])  || 
-              item.["Style 2"].includes(searchActual[2])  || 
-              item.["Style 1"].includes(searchActual[3])  ) && item.["Villager Equippable"]==="Yes"
-            ){
-              filterFound = true;
-            } else {
-              filterFound = false;
-            }
+            searchActual = [...props.villagerGiftsFilters,...searchActual];
           }
           for(var z = 0; z < searchActual.length; z++){
             if(searchActual.includes("New version") && props.newItems && item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===global.gameVersion){
@@ -240,6 +227,21 @@ export default (props) =>{
             } else if(searchActual.includes("Wishlist") && props.wishlistItems && global.collectionList.includes("wishlist"+item.["checkListKey"])){
               filterFound = true;
             } else if (searchActual.includes("Wishlist") && props.wishlistItems){
+              filterFound = false;
+              break;
+            } else if((props.villagerGifts===true && item.["Color 1"]!==undefined && item.["Color 2"]!==undefined && item.["Style 1"]!==undefined && item.["Style 2"]!==undefined) &&
+              (item.["Color 1"].includes(searchActual[0])  || 
+              item.["Color 2"].includes(searchActual[1])  || 
+              item.["Color 2"].includes(searchActual[0])  || 
+              item.["Color 1"].includes(searchActual[1])   ) && (
+              item.["Style 1"].includes(searchActual[2])  || 
+              item.["Style 2"].includes(searchActual[3])  || 
+              item.["Style 2"].includes(searchActual[2])  || 
+              item.["Style 1"].includes(searchActual[3])  ) && ((searchActual.length===4)||((item.["Villager Equippable"]==="Yes" && searchActual.includes("Villager Equippable:Yes")) || (item.["Villager Equippable"]==="No" && searchActual.includes("Villager Equippable:No"))))
+            ){
+              filterFound = true;
+              break;
+            } else if(props.villagerGifts===true){
               filterFound = false;
               break;
             }
@@ -504,6 +506,12 @@ class BottomSheetRender extends Component{
       }
     }
   }
+  updateVariations = (key,checked)=>{
+    this.variations.updateVariations(key,checked);
+  }
+  updateRightCornerCheck= (key,checked)=>{
+    this.rightCornerCheck.updateRightCornerCheck(key,checked);
+  }
   render(){
     var leftCornerImage;
     if(this.props.popUpCornerImageProperty!==undefined && this.props.popUpCornerImageLabelProperty!==undefined && this.state.item.dataSet!==undefined && this.props.popUpCornerImageProperty[this.state.item.dataSet]!==""){
@@ -565,9 +573,10 @@ class BottomSheetRender extends Component{
     if(this.state.item!==undefined && this.updateCheckChildFunction!==""){
       rightCornerCheck = <RightCornerCheck
         item={this.state.item}
-        dataGlobalName={this.props.dataGlobalName}
         updateCheckChildFunction={this.updateCheckChildFunction}
         checkType={this.props.checkType}
+        updateVariations={this.updateVariations}
+        ref={(rightCornerCheck) => this.rightCornerCheck = rightCornerCheck}
       />
     }
     return <View>
@@ -595,7 +604,10 @@ class BottomSheetRender extends Component{
             popUpPhraseProperty={this.props.popUpPhraseProperty}
           />
           <Variations 
+            updateRightCornerCheck={this.updateRightCornerCheck}
+            ref={(variations) => this.variations = variations}
             item={this.state.item}
+            updateCheckChildFunction={this.updateCheckChildFunction}
             imageProperty={this.props.imageProperty} 
             globalDatabase={dataLoadedAll} 
           />

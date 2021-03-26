@@ -64,12 +64,18 @@ export class RightCornerCheck extends Component {
     this.setState({collected: collected});
     this.props.updateCheckChildFunction(this.state.collected===true ? false:true);
   }
+  updateRightCornerCheck(key,checked){
+    if(this.props.item.checkListKey === key){
+      this.setState({collected:checked});
+    }
+  }
   render() {
     return <TouchableOpacity style={[styles.checkMark]} 
               activeOpacity={0.6}
               onPress={() => {  
                 checkOff(this.props.item.checkListKey, this.state.collected);
                 this.setCollected(this.state.collected===true ? false:true);
+                this.props.updateVariations(this.props.item.checkListKey,this.state.collected);
             }}>
       <Check checkType={this.props.checkType} fadeOut={false} play={this.state.collected} width={135} height={135}/>
     </TouchableOpacity>
@@ -274,7 +280,16 @@ export class InfoLineTriple extends Component {
 }
 
 export class Variations extends Component {
-  
+  constructor(props) {
+    super(props);
+    this.state = {
+      updateChecked:"",
+      updateKey:"",
+    }
+  }
+  updateVariations(key,checked){
+    this.setState({updateChecked:checked, updateKey:key})
+  }
   render(){
     if(this.props.item!=""||this.props.item!=undefined){
       var variations = getVariations(this.props.item["Name"],this.props.globalDatabase,this.props.item["checkListKey"]);
@@ -283,12 +298,13 @@ export class Variations extends Component {
       }
       var imageProperty = this.props.imageProperty;
       var dataSet = this.props.item.dataSet;
+      var originalCheckListKey = this.props.item.checkListKey
       return(
         <>
         <ScrollView horizontal={true} style={{marginHorizontal:10}} contentContainerStyle={{ flexGrow: 1, justifyContent: 'center'}}>
         <View style={{marginHorizontal: 4, flexDirection: 'row', justifyContent:'center'}}>
           {variations.map( (item, index)=>
-            <VariationItem index={index} key={item[this.props.imageProperty[dataSet]]} globalDatabase={this.props.globalDatabase} item={item} setPopupVisible={(state, image, item)=>this.popup.setPopupVisible(state, image, item)} dataSet={dataSet} imageProperty={imageProperty}/>
+            <VariationItem updateRightCornerCheck={this.props.updateRightCornerCheck} updateKey={this.state.updateKey} updateChecked={this.state.updateChecked} originalCheckListKey={originalCheckListKey} updateCheckChildFunction={this.props.updateCheckChildFunction} index={index} key={item[this.props.imageProperty[dataSet]]} globalDatabase={this.props.globalDatabase} item={item} setPopupVisible={(state, image, item)=>this.popup.setPopupVisible(state, image, item)} dataSet={dataSet} imageProperty={imageProperty}/>
           )}
         </View>
         </ScrollView>
@@ -310,15 +326,28 @@ class VariationItem extends Component{
       checked: global.collectionList.includes(this.props.item["checkListKey"]+this.extraIndex),
     }
   }
+  componentDidUpdate(prevProps){
+    if(prevProps!==this.props){
+      if(this.props.item.checkListKey+this.extraIndex === this.props.updateKey){
+        this.setState({
+          checked: !this.props.updateChecked,
+        })
+      }
+    }
+  }
   render(){
-    
     var item=this.props.item;
     var dataSet=this.props.dataSet;
     return(
       <TouchableOpacity 
         onLongPress={()=>{this.props.setPopupVisible(true, item[this.props.imageProperty[dataSet]], item); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : ""}}
-        onPress={()=>{checkOff(item.checkListKey, this.state.checked, getSettingsString("settingsEnableVibrations")==="true", false, this.extraIndex); this.setState({checked: !this.state.checked})}}
-      >
+        onPress={()=>{ 
+          if(item.checkListKey+this.extraIndex === this.props.originalCheckListKey)
+            this.props.updateCheckChildFunction(this.state.checked===true ? false:true);
+          checkOff(item.checkListKey, this.state.checked, getSettingsString("settingsEnableVibrations")==="true", false, this.extraIndex); 
+          this.props.updateRightCornerCheck(item.checkListKey+this.extraIndex,!this.state.checked)
+          this.setState({checked: !this.state.checked})}
+        }>
         <View style={[{borderWidth: 2, borderColor: this.state.checked ? colors.checkGreen[global.darkMode] : colors.eventBackground[global.darkMode], marginHorizontal:4, marginVertical: 3, width: 60,height: 60,borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
           <FastImage
             style={{height: 47, width: 47, resizeMode:'contain',}}
