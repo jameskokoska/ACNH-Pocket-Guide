@@ -9,12 +9,11 @@ import AllItemsPage from "./AllItemsPage"
 export default class Wishlist extends Component {
   constructor() {
     super();
-    LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
   }
   render(){
     return(
       <AllItemsPage 
-        disableSearch={true}
+        disableFilters={true}
         title="Wishlist"
         wishlistItems={true}
         setPage={this.props.setPage}

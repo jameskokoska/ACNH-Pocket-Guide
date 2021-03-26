@@ -193,7 +193,7 @@ class HomePage extends Component {
         <View style={[styles.homeScreenBackgroundBottom,{backgroundColor:colors.grassColor[global.darkMode]}]}>
         </View>
       </View>
-      <VillagerPopupPopup ref={(villagerPopupPopup) => this.villagerPopupPopup = villagerPopupPopup}/>
+      <VillagerPopupPopup ref={(villagerPopupPopup) => this.villagerPopupPopup = villagerPopupPopup} setVillagerGift={this.props.setVillagerGift}/>
     </>
   }
 }
@@ -215,7 +215,7 @@ class VillagerPopupPopup extends Component {
   render(){
     var villagerPopup = <View/>
     if(this.state.item!==undefined && this.state.item!==""){
-      villagerPopup = <VillagerPopup item={this.state.item}/>
+      villagerPopup = <VillagerPopup item={this.state.item} setVillagerGift={this.props.setVillagerGift}/>
     }
     return(
       <PopupBottomCustom ref={(popup) => this.popup = popup}>

@@ -197,7 +197,7 @@ export class InfoLine extends Component {
       text = attemptToTranslateItem(text.toLowerCase())
       text=capitalize(text)
     }
-    return <View style={[styles.infoLineBox]}>
+    return <View style={[styles.infoLineBox,{justifyContent:this.props.center===false?"flex-start":"center"}]}>
             {imageSource}
             <TextFont adjustsFontSizeToFit={true} bold={true} style={[styles.infoLineTitle,{color:colors.textBlack[global.darkMode]}]}>{starting + text + ending}</TextFont>
             {colors1}{colors2}

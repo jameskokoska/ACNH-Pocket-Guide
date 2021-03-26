@@ -38,6 +38,7 @@ import GuidePage from './pages/GuidePage';
 import NewItemsPage from "./pages/NewItemsPage"
 import WishlistPage from "./pages/WishlistPage"
 import AchievementsPage from "./pages/AchievementsPage"
+import VillagerPresentsPage from "./pages/VillagerPresentsPage"
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -47,6 +48,14 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
+-Added villager gift guide!
+-Open a villagers popup and click [View Gifts] to see a list
+-
+-Added subtle achievements stamp animation
+-Added modifiers in addition to nouns in achievements page
+-Added more translations
+-Settings popup descriptions are improved
+-
 -Added achievements page!
 -Fixed translations, critical text bug
 -Fixed mystery islands visited not properly saving
@@ -98,7 +107,7 @@ class App extends Component {
     this.numLogins;
     this.state = {
       loaded: false,
-      currentPage: 0,
+      currentPage: 9,
       open:false,
       fadeInTitle:true,
     }
@@ -226,6 +235,11 @@ class App extends Component {
     return true;
   }
 
+  setVillagerGift = (villager) => {
+    this.setState({villager: villager})
+    this.setPage(20);
+  }
+
   setFirstLogin(firstLogin){
     this.setState({firstLogin: firstLogin});
     this.loadSettings();
@@ -265,9 +279,9 @@ class App extends Component {
     } else {
       var currentPageView;
       if (this.state.currentPage===0){
-        currentPageView = <FadeInOut fadeIn={true}><HomePage setPage={this.setPage}/></FadeInOut>
+        currentPageView = <FadeInOut fadeIn={true}><HomePage setVillagerGift={this.setVillagerGift} setPage={this.setPage}/></FadeInOut>
       } else if (this.state.currentPage===1){
-        currentPageView = <AllItemsPage/>
+        currentPageView = <AllItemsPage setVillagerGift={this.setVillagerGift}/>
       } else if(this.state.currentPage===2){
         currentPageView = <MuseumPage/>
       } else if (this.state.currentPage===3){
@@ -281,7 +295,7 @@ class App extends Component {
       } else if (this.state.currentPage===7){
         currentPageView = <MysteryIslandsPage/>
       } else if (this.state.currentPage===8){
-        currentPageView = <VillagersPage/>
+        currentPageView = <VillagersPage setVillagerGift={this.setVillagerGift}/>
       } else if (this.state.currentPage===9){
         currentPageView = <ConstructionPage/>
       } else if (this.state.currentPage===10){
@@ -304,6 +318,8 @@ class App extends Component {
         currentPageView = <WishlistPage setPage={this.setPage}/>
       } else if (this.state.currentPage===19){
         currentPageView = <AchievementsPage/>
+      } else if (this.state.currentPage===20){
+        currentPageView = <VillagerPresentsPage villager={this.state.villager}/>
       } else {
         currentPageView = <Text>Default</Text>
       }

@@ -9,7 +9,9 @@ import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
 
 const Header = (props) => {
   var filterImage;
-  if(props.search.constructor===Array && props.search.length>=1){
+  if(props.disableFilters){
+    filterImage=<View/>
+  } else if(props.searchFilters.constructor===Array && props.searchFilters.length>=1){
     filterImage = <>
       <LottieView 
           autoPlay
@@ -26,6 +28,7 @@ const Header = (props) => {
   } else {
     filterImage = <Image style={{width:25,height:25, margin: 10, marginTop: 12, opacity: 0.35, marginRight: 30, resizeMode:"contain"}} source={require("../assets/icons/filterSearch.png")}/>
   }
+  
   return (
     <>
       <ImageBackground source={props.appBarImage} style={{width:"100%", backgroundColor: props.appBarColor}}>
@@ -36,6 +39,7 @@ const Header = (props) => {
             <FadeInOut fadeIn={true}>
               <TextFont style={[styles.title, {color: props.titleColor}]} bold={true}>{props.title}</TextFont>
             </FadeInOut>
+            {props.customHeader}
             {props.subHeader!==undefined&&props.subHeader!=="" ? <TextFont style={[styles.title, {paddingBottom:5, fontSize: 13, color: props.titleColor}]} bold={true}>{props.subHeader}</TextFont> : <View/>}
             {!props.disableSearch ? <View style={{flexDirection: 'row'}}>
               <View style={[styles.searchBox, {backgroundColor:props.searchBarColor}]}>
@@ -99,7 +103,7 @@ export const HeaderLoading = (props) => {
 
 export const HeaderActive = (props) => {
   var filterImage;
-  if(props.search.constructor===Array && props.search.length>=1){
+  if(props.searchFilters.constructor===Array && props.searchFilters.length>=1){
     filterImage = <>
       <LottieView 
           autoPlay

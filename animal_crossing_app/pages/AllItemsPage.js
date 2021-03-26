@@ -31,13 +31,13 @@ class AllItemsPage extends Component {
     if(this.props.subHeader !==undefined){
       subHeader = this.props.subHeader;
     }
-    var disableSearch = false;
-    if(this.props.disableSearch !==undefined){
-      disableSearch = this.props.disableSearch;
+    var disableFilters = false;
+    if(this.props.disableFilters !==undefined){
+      disableFilters = this.props.disableFilters;
     }
     return(
         <ListPage 
-          disableSearch={disableSearch}
+          disableFilters={disableFilters}
           setPage={this.props.setPage}
           tabs={false}
           filters={["Source","Tag", "DIY", "Catalog", "Where/How","Weather","Shadow","Movement Speed", "Season/Event","Category", "Season/Event Exclusive", "Seasonality", "Personality","Species","Hobby","Style 1","Style 2","Color 1","Color 2","Variation","Style 1","Style 2","Size", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category"]}

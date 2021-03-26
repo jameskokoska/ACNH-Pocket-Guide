@@ -29,7 +29,12 @@ class PopupFilter extends Component {
     this.defaultValues = [];
   }
 
+  componentWillUnmount() {
+    this.mounted=false
+  }
+
   async componentDidMount(){
+    this.mounted=true;
     var defaultValuesStored = (await getStorage(this.props.title+"Filters","")).split(",");
     console.log(this.props.title+"Filters")
     //Check for filters selected that don't exist, could cause errors, then reset them
@@ -55,21 +60,33 @@ class PopupFilter extends Component {
       }
 
       this.defaultValues = defaultValuesStored;
+      
       setTimeout(function() {
-        this.props.updateSearch(this.defaultValues);
+        if(this.mounted){
+          this.props.updateSearchFilters(this.defaultValues);
+        }
       }.bind(this), 500);
+      
     }
   }
 
 
-  setPopupVisible = (visible) => {
+  setPopupVisible = async (visible) => {
     this.setState({popupVisible:visible});
+    if(visible===false && this.mounted){
+      await AsyncStorage.setItem(this.props.title+"Filters", this.defaultValues.toString());
+      this.setFilters();
+    }
   }
 
-  async updateDefaultValues(item){
+  updateDefaultValues(item){
     this.defaultValues=item;
-    await AsyncStorage.setItem(this.props.title+"Filters", this.defaultValues.toString());
-    this.props.updateSearch(item); 
+  }
+
+  setFilters = () =>{
+    if(this.mounted){
+      this.props.updateSearchFilters(this.defaultValues); 
+    }
   }
 
   render(){
@@ -126,7 +143,9 @@ class PopupFilter extends Component {
                     this.setPopupVisible(!this.state.popupVisible);
                     this.defaultValues=[];
                     AsyncStorage.setItem(this.props.title+"Filters", "");
-                    this.props.updateSearch(this.defaultValues);
+                    if(this.mounted){
+                      this.props.updateSearchFilters(this.defaultValues);
+                    }
                   }}
                 />
                 <ButtonComponent

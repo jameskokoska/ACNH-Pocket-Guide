@@ -119,6 +119,12 @@ export default (props) =>{
     setSearch(search);
   }
 
+  const [searchFilters, setSearchFilters] = useState([]);
+  function updateSearchFilters(searchFilters){
+    // console.log(search)
+    setSearchFilters(searchFilters);
+  }
+
   const [data, setData] = useState("empty")
   const [possibleFiltersState, setPossibleFilters] = useState("empty")
   const popupFilter = React.useRef(null);
@@ -237,81 +243,95 @@ export default (props) =>{
         //Loop through the specific search criteria specified for this dataset
         for(var x = 0; x < props.searchKey[j].length; x++){
           var searchFound = false;
-          if((search.constructor===Array && search.length !== 0) || props.filterCollectedOnly || props.newItems || props.wishlistItems){
-            var searchActual = search;
-            if(props.filterCollectedOnly){
-              searchActual = ["Collected"];
-            } else if (props.newItems){
-              searchActual = ["New version"];
-            } else if (props.wishlistItems){
-              searchActual = ["Wishlist"];
-            }
-            for(var z = 0; z < searchActual.length; z++){
-              if(searchActual.includes("New version") && props.newItems && item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===global.gameVersion){
-                searchFound = true;
-                break;
-              } else if (searchActual.includes("New version") && props.newItems){
-                searchFound = false;
-                break;
-              } else if(searchActual.includes("Wishlist") && props.wishlistItems && global.collectionList.includes("wishlist"+item.["checkListKey"])){
-                searchFound = true;
-                break;
-              } else if (searchActual.includes("Wishlist") && props.wishlistItems){
-                searchFound = false;
-                break;
-              }
-              //If the property is in search, not needed
-              // if(props.searchKey[j].includes(search[z].split("-")[0])){
-                //If property is Collected
-                var searchCollected = true;
-                if(searchActual.includes("Collected") || props.filterCollectedOnly){
-                  searchCollected = false;
-                  if(global.collectionList.includes(item.["checkListKey"])){
-                    searchCollected = true;
-                    if(searchActual.length===1 || props.filterCollectedOnly){
-                      searchFound = true;
-                      //Only check collected filter
-                      if(searchCollected && props.filterCollectedOnly){
-                        searchFound = true;
-                        break;
-                      }
-                      break;
-                    }
-                  }
-                } else if(searchActual.includes("Not Collected")){
-                  searchCollected = false;
-                  if(!global.collectionList.includes(item.["checkListKey"])){
-                    searchCollected = true;
-                    if(searchActual.length===1){
-                      searchFound = true;
-                      break;
-                    }
-                  }
-                }
-                if(searchActual.includes("Collected")&&searchActual.includes("Not Collected")){
-                  searchCollected=true;
-                }
-                if(searchCollected && searchActual.includes("Show uncraftable item variations")&&item["Kit Cost"] !==undefined && item["Variation"] !==undefined && item["Variant ID"] !==undefined && item["Kit Cost"] ==="NA" && (item["Variation"]!=="NA"||item["Variant ID"] !== "NA")){
-                  searchFound=true;
-                }
-                //Only check the property selected
-                if(searchCollected && item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toLowerCase().includes(searchActual[z].split(":")[1].toLowerCase())){
-                  searchFound = true;
-                  break;
-                }
-              // }
-            }
-          } else if (search.constructor===Array && search.length === 0){
-            searchFound = true;
-          } else {
-            if(item.[props.searchKey[j][x]]!==undefined){
-              //Translate search attribute from database
-              //Search translations done here
-              // searchFound = attemptToTranslateItem(item.[props.searchKey[j][x]]).toLowerCase().includes(search.toLowerCase())
-              searchFound = item.[props.searchKey[j][x]].toLowerCase().includes(search.toLowerCase())
+          var filterFound = false;
+          var searchActual = searchFilters;
+          if(props.filterCollectedOnly){
+            searchActual = ["Collected"];
+          } else if (props.newItems){
+            searchActual = ["New version"];
+          } else if (props.wishlistItems){
+            searchActual = ["Wishlist"];
+          } else if (props.villagerGifts) {
+            searchActual = props.villagerGiftsFilters;
+            //villager gifts
+            if((props.villagerGifts===true && item.["Color 1"]!==undefined && item.["Color 2"]!==undefined && item.["Style 1"]!==undefined && item.["Style 2"]!==undefined) &&
+              (item.["Color 1"].includes(searchActual[0])  || 
+              item.["Color 2"].includes(searchActual[1])  || 
+              item.["Color 2"].includes(searchActual[0])  || 
+              item.["Color 1"].includes(searchActual[1])   ) && (
+              item.["Style 1"].includes(searchActual[2])  || 
+              item.["Style 2"].includes(searchActual[3])  || 
+              item.["Style 2"].includes(searchActual[2])  || 
+              item.["Style 1"].includes(searchActual[3])  ) && item.["Villager Equippable"]==="Yes"
+            ){
+              filterFound = true;
+            } else {
+              filterFound = false;
             }
           }
-          if((search==="" || searchFound)&&((!props.wishlistItems&&!props.filterCollectedOnly&&!props.newItems)||searchFound)){
+          for(var z = 0; z < searchActual.length; z++){
+            if(searchActual.includes("New version") && props.newItems && item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===global.gameVersion){
+              filterFound = true;
+              break;
+            } else if (searchActual.includes("New version") && props.newItems){
+              filterFound = false;
+              break;
+            } else if(searchActual.includes("Wishlist") && props.wishlistItems && global.collectionList.includes("wishlist"+item.["checkListKey"])){
+              filterFound = true;
+            } else if (searchActual.includes("Wishlist") && props.wishlistItems){
+              filterFound = false;
+              break;
+            }
+            //If the property is in search, not needed
+            // if(props.searchKey[j].includes(search[z].split("-")[0])){
+            //If property is Collected
+            var searchCollected = true;
+            if(searchActual.includes("Collected") || props.filterCollectedOnly){
+              searchCollected = false;
+              if(global.collectionList.includes(item.["checkListKey"])){
+                searchCollected = true;
+                if(searchActual.length===1 || props.filterCollectedOnly){
+                  filterFound = true;
+                  //Only check collected filter
+                  if(searchCollected && props.filterCollectedOnly){
+                    filterFound = true;
+                    break;
+                  }
+                  break;
+                }
+              }
+            } else if(searchActual.includes("Not Collected")){
+              searchCollected = false;
+              if(!global.collectionList.includes(item.["checkListKey"])){
+                searchCollected = true;
+                if(searchActual.length===1){
+                  filterFound = true;
+                  break;
+                }
+              }
+            }
+            if(searchActual.includes("Collected")&&searchActual.includes("Not Collected")){
+              searchCollected=true;
+            }
+            if(searchCollected && searchActual.includes("Show uncraftable item variations")&&item["Kit Cost"] !==undefined && item["Variation"] !==undefined && item["Variant ID"] !==undefined && item["Kit Cost"] ==="NA" && (item["Variation"]!=="NA"||item["Variant ID"] !== "NA")){
+              filterFound = true;
+            }
+            //Only check the property selected
+            if((searchCollected) && item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toLowerCase().includes(searchActual[z].split(":")[1].toLowerCase())){
+              filterFound = true;
+              break;
+            }
+            // }
+          }
+
+          if(item.[props.searchKey[j][x]]!==undefined){
+            //Translate search attribute from database
+            //Search translations done here
+            // searchFound = attemptToTranslateItem(item.[props.searchKey[j][x]]).toLowerCase().includes(search.toLowerCase())
+            searchFound = item.[props.searchKey[j][x]].toLowerCase().includes(search.toLowerCase())
+          }
+          //&&((!props.wishlistItems&&!props.filterCollectedOnly&&!props.newItems)||searchFound)
+          if((search==="" || searchFound) && (filterFound || searchActual.length === 0)){
             //Search result found...
             //Removed variation code
             // if (getSettingsString("settingsRemoveCraftVariations")==="true"){
@@ -373,7 +393,7 @@ export default (props) =>{
     if (componentIsMounted.current) {
       setData(dataUpdated)
     }
-  }, [props, search])
+  }, [props, search, searchFilters])
   
   var numColumns=3;
   if(props.gridType==="smallGrid"){
@@ -405,7 +425,7 @@ export default (props) =>{
 
   var header = (<>
       <Animated.View style={[styles.header, {transform: [{translateY}]}]}>
-        <Header disableSearch={props.disableSearch} subHeader={props.subHeader} search={search} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
+        <Header disableFilters={props.disableFilters} customHeader={props.customHeader} disableSearch={props.disableSearch} subHeader={props.subHeader} searchFilters={searchFilters} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
       </Animated.View>
     </>);
   var paddingTop = headerHeight*1.18;
@@ -418,7 +438,7 @@ export default (props) =>{
     paddingTop = 0;
     paddingBottom = 0;
     header = (<>
-        <HeaderActive search={search} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
+        <HeaderActive searchFilters={searchFilters} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
     </>);
   }
   var style= {height: Dimensions.get('window').height, paddingBottom: paddingBottom,marginTop: -10}
@@ -441,7 +461,7 @@ export default (props) =>{
       </TouchableOpacity>
       <View style={{height:30}}/>
     </>)
-  } else if (data.length===0 && props.wishlistItems){
+  } else if (data.length===0 && props.wishlistItems && search===""){
     return(<>
       <View style={{height:10}}/>
       {header}
@@ -457,7 +477,7 @@ export default (props) =>{
     return (
     <View style={{backgroundColor:props.backgroundColor}} >
       {header}
-      <PopupFilter title={props.title} ref={popupFilter} possibleFilters={possibleFiltersState} filterSearchable={props.filterSearchable} updateSearch={updateSearch}/> 
+      <PopupFilter title={props.title} ref={popupFilter} possibleFilters={possibleFiltersState} filterSearchable={props.filterSearchable} updateSearchFilters={updateSearchFilters}/> 
       {/* setFilterPopupState(false) */}
       <Animated.FlatList
         nestedScrollEnabled
@@ -483,6 +503,7 @@ export default (props) =>{
         restrictSize={false}
       >
         <BottomSheetRender 
+          setVillagerGift={props.setVillagerGift}
           activeCreatures={props.activeCreatures}
           ref={bottomSheetRenderRef}
           imageProperty={props.imageProperty} 
@@ -575,7 +596,7 @@ class BottomSheetRender extends Component{
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="ArtPopup"){
         popUpContainer = <ArtPopup item={this.state.item}/>
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="VillagerPopup"){
-        popUpContainer = <VillagerPopup item={this.state.item}/>
+        popUpContainer = <VillagerPopup item={this.state.item} setVillagerGift={this.props.setVillagerGift}/>
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="ClothingPopup"){
         popUpContainer = <ClothingPopup item={this.state.item}/>
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="FurniturePopup"){

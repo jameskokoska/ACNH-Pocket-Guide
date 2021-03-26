@@ -126,118 +126,147 @@ const FurnitureRoute = () => (
 )
 
 const ClothingRoute = () => (
-  <ListPage 
-    filters={["Catalog", "Style 1","Style 2","Color 1","Color 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ]}
-    filterSearchable = {true}
-    showVariations={[
-      getSettingsString("settingsShowVariation")==="true" ? true : false,
-      getSettingsString("settingsShowVariation")==="true" ? true : false,
-      getSettingsString("settingsShowVariation")==="true" ? true : false,
-      getSettingsString("settingsShowVariation")==="true" ? true : false,
-      getSettingsString("settingsShowVariation")==="true" ? true : false,
-      getSettingsString("settingsShowVariation")==="true" ? true : false,
-      getSettingsString("settingsShowVariation")==="true" ? true : false,
-      getSettingsString("settingsShowVariation")==="true" ? true : false,
-      getSettingsString("settingsShowVariation")==="true" ? true : false,
-      getSettingsString("settingsShowVariation")==="true" ? true : false,
-    ]}
-    title="Clothing"
-    imageProperty={[
-      "Closet Image",
-      "Closet Image",
-      "Closet Image",
-      "Closet Image",
-      "Closet Image",
-      "Closet Image",
-      "Closet Image",
-      "Closet Image",
-      "Closet Image",
-      "Storage Image",
-    ]}
-    textProperty={[
-      "NameLanguage",
-      "NameLanguage",
-      "NameLanguage",
-      "NameLanguage",
-      "NameLanguage",
-      "NameLanguage",
-      "NameLanguage",
-      "NameLanguage",
-      "NameLanguage",
-      "NameLanguage",
-    ]}
-    checkListKey={[
-      ["clothingCheckList","Name","Variation"],
-      ["clothingCheckList","Name","Variation"],
-      ["clothingCheckList","Name","Variation"],
-      ["clothingCheckList","Name","Variation"],
-      ["clothingCheckList","Name","Variation"],
-      ["clothingCheckList","Name","Variation"],
-      ["clothingCheckList","Name","Variation"],
-      ["clothingCheckList","Name","Variation"],
-      ["clothingCheckList","Name","Variation"],
-      ["clothingCheckList","Name"],
-    ]}
-    searchKey={[
-      ["NameLanguage",],
-      ["NameLanguage",],
-      ["NameLanguage",],
-      ["NameLanguage",],
-      ["NameLanguage",],
-      ["NameLanguage",],
-      ["NameLanguage",],
-      ["NameLanguage",],
-      ["NameLanguage",],
-      ["NameLanguage",],
-    ]}
-    gridType="smallGrid" //smallGrid, largeGrid, row
-    dataGlobalName={"dataLoadedClothing"}
-    appBarColor={colors.clothingAppBar[global.darkMode]}
-    titleColor={colors.textWhiteOnly[global.darkMode]}
-    searchBarColor={colors.searchbarBG[global.darkMode]}
-    backgroundColor={colors.lightDarkAccent[global.darkMode]}
-    boxColor={true}
-    labelColor={colors.textBlack[global.darkMode]}
-    accentColor={colors.clothingAccent[global.darkMode]}
-    specialLabelColor={colors.fishText[global.darkMode]}
-    popUpCornerImageProperty={[
-      "Source",
-      "Source",
-      "Source",
-      "Source",
-      "Source",
-      "Source",
-      "Source",
-      "Source",
-      "Source",
-      "Source",
-    ]}
-    popUpCornerImageLabelProperty={[
-      "Source",
-      "Source",
-      "Source",
-      "Source",
-      "Source",
-      "Source",
-      "Source",
-      "Source",
-      "Source",
-      "Source",
-    ]}
-    popUpContainer={[
-      ["ClothingPopup",450],
-      ["ClothingPopup",450],
-      ["ClothingPopup",450],
-      ["ClothingPopup",450],
-      ["ClothingPopup",450],
-      ["ClothingPopup",450],
-      ["ClothingPopup",450],
-      ["ClothingPopup",450],
-      ["ClothingPopup",450],
-      ["ClothingPopup",450],
-    ]}
-  />
+  <ClothingRouteClass/>
 )
+
+export class ClothingRouteClass extends Component{
+  render(){
+    var title = this.props.title;
+    var villagerGifts = false;
+    var villagerGiftsFilters = [];
+    var disableFilters = false;
+    var subHeader = "";
+    var customHeader;
+    if(title!==undefined){
+      villagerGifts = true;
+      villagerGiftsFilters = this.props.villagerGiftsFilters;
+      disableFilters = true;
+      subHeader = this.props.subHeader;
+      customHeader = this.props.customHeader;
+    } else {
+      title="Clothing";
+      villagerGifts = false;
+    }
+    return (
+      <ListPage 
+        customHeader={customHeader}
+        disableFilters={disableFilters}
+        subHeader={subHeader}
+        villagerGifts={villagerGifts}
+        villagerGiftsFilters={villagerGiftsFilters}
+        filters={["Catalog", "Style 1","Style 2","Color 1","Color 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ]}
+        filterSearchable = {true}
+        showVariations={[
+          getSettingsString("settingsShowVariation")==="true" ? true : false,
+          getSettingsString("settingsShowVariation")==="true" ? true : false,
+          getSettingsString("settingsShowVariation")==="true" ? true : false,
+          getSettingsString("settingsShowVariation")==="true" ? true : false,
+          getSettingsString("settingsShowVariation")==="true" ? true : false,
+          getSettingsString("settingsShowVariation")==="true" ? true : false,
+          getSettingsString("settingsShowVariation")==="true" ? true : false,
+          getSettingsString("settingsShowVariation")==="true" ? true : false,
+          getSettingsString("settingsShowVariation")==="true" ? true : false,
+          getSettingsString("settingsShowVariation")==="true" ? true : false,
+        ]}
+        title={title}
+        imageProperty={[
+          "Closet Image",
+          "Closet Image",
+          "Closet Image",
+          "Closet Image",
+          "Closet Image",
+          "Closet Image",
+          "Closet Image",
+          "Closet Image",
+          "Closet Image",
+          "Storage Image",
+        ]}
+        textProperty={[
+          "NameLanguage",
+          "NameLanguage",
+          "NameLanguage",
+          "NameLanguage",
+          "NameLanguage",
+          "NameLanguage",
+          "NameLanguage",
+          "NameLanguage",
+          "NameLanguage",
+          "NameLanguage",
+        ]}
+        checkListKey={[
+          ["clothingCheckList","Name","Variation"],
+          ["clothingCheckList","Name","Variation"],
+          ["clothingCheckList","Name","Variation"],
+          ["clothingCheckList","Name","Variation"],
+          ["clothingCheckList","Name","Variation"],
+          ["clothingCheckList","Name","Variation"],
+          ["clothingCheckList","Name","Variation"],
+          ["clothingCheckList","Name","Variation"],
+          ["clothingCheckList","Name","Variation"],
+          ["clothingCheckList","Name"],
+        ]}
+        searchKey={[
+          ["NameLanguage",],
+          ["NameLanguage",],
+          ["NameLanguage",],
+          ["NameLanguage",],
+          ["NameLanguage",],
+          ["NameLanguage",],
+          ["NameLanguage",],
+          ["NameLanguage",],
+          ["NameLanguage",],
+          ["NameLanguage",],
+        ]}
+        gridType="smallGrid" //smallGrid, largeGrid, row
+        dataGlobalName={"dataLoadedClothing"}
+        appBarColor={colors.clothingAppBar[global.darkMode]}
+        titleColor={colors.textWhiteOnly[global.darkMode]}
+        searchBarColor={colors.searchbarBG[global.darkMode]}
+        backgroundColor={colors.lightDarkAccent[global.darkMode]}
+        boxColor={true}
+        labelColor={colors.textBlack[global.darkMode]}
+        accentColor={colors.clothingAccent[global.darkMode]}
+        specialLabelColor={colors.fishText[global.darkMode]}
+        popUpCornerImageProperty={[
+          "Source",
+          "Source",
+          "Source",
+          "Source",
+          "Source",
+          "Source",
+          "Source",
+          "Source",
+          "Source",
+          "Source",
+        ]}
+        popUpCornerImageLabelProperty={[
+          "Source",
+          "Source",
+          "Source",
+          "Source",
+          "Source",
+          "Source",
+          "Source",
+          "Source",
+          "Source",
+          "Source",
+        ]}
+        popUpContainer={[
+          ["ClothingPopup",450],
+          ["ClothingPopup",450],
+          ["ClothingPopup",450],
+          ["ClothingPopup",450],
+          ["ClothingPopup",450],
+          ["ClothingPopup",450],
+          ["ClothingPopup",450],
+          ["ClothingPopup",450],
+          ["ClothingPopup",450],
+          ["ClothingPopup",450],
+        ]}
+      />
+    )
+  }
+}
 
 const FloorWallsRoute = () => (
   <ListPage 

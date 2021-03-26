@@ -9,12 +9,11 @@ import AllItemsPage from "./AllItemsPage"
 export default class NewItemsPage extends Component {
   constructor() {
     super();
-    LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
   }
   render(){
     return(
       <AllItemsPage 
-        disableSearch={true}
+        disableFilters={true}
         title="New Items"
         subHeader="Items that have been added from the most recent update"
         newItems={true}

@@ -1,10 +1,14 @@
 import * as Font from 'expo-font';
 import React, {Component} from 'react';
-import {Dimensions, Image, View, Text} from 'react-native';
+import {TouchableOpacity, Dimensions, Image, View, Text} from 'react-native';
 import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
 import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"
 import FastImage from '../components/FastImage';
+import ButtonComponent from "../components/ButtonComponent"
+import TextFont from "../components/TextFont"
+import {PopupInfoCustom} from "../components/Popup"
+import {SubHeader, Paragraph} from "../components/Formattings"
 
 class VillagerPopup extends Component {
   constructor(props){
@@ -51,7 +55,16 @@ class VillagerPopup extends Component {
         item={this.props.item}
         textProperty={["Favorite Saying"]}
       />
-      <View style={{height:10}}/>
+      <ButtonComponent
+        text={"View Gifts"}
+        color={colors.okButton[global.darkMode]}
+        vibrate={5}
+        onPress={() => {
+          this.props.setVillagerGift(this.props.item)
+      }}/>
+      <TouchableOpacity style={{paddingTop:5}}onPress={()=>{this.popup.setPopupVisible(true);}}>
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, marginLeft: 30, marginRight: 30, }}>{"What are villager gifts?"}</TextFont>
+      </TouchableOpacity>
       <View style={{alignItems: 'center', width: Dimensions.get('window').width, justifyContent:"center"}}>
         <FastImage
           style={{width: Dimensions.get('window').width*0.8,height:Dimensions.get('window').width*0.8, resizeMode: "contain", borderRadius: 2}}
@@ -71,6 +84,10 @@ class VillagerPopup extends Component {
           cacheKey={this.props.item["Photo Image"]}
         />
       </View>
+      <PopupInfoCustom ref={(popup) => this.popup = popup} buttonText={"Close"}>
+        <SubHeader>What are ideal gifts for villagers?</SubHeader>
+        <Paragraph styled={true}>Ideal gifts match the color or style of the villager. The villager is able to wear any of the gifts that are listed.</Paragraph>
+      </PopupInfoCustom> 
     </View>
   }
 }
