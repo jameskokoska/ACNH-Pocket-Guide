@@ -62,10 +62,10 @@ class PopupFilter extends Component {
       this.defaultValues = defaultValuesStored;
       
       setTimeout(function() {
-        if(this.mounted){
+        if(this.mounted && this.defaultValues!=[""]){
           this.props.updateSearchFilters(this.defaultValues);
         }
-      }.bind(this), 500);
+      }.bind(this), 0);
       
     }
   }

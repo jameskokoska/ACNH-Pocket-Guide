@@ -31,6 +31,16 @@ class ListItem extends PureComponent{
       wishlist: inWishlist(this.props.item.checkListKey)
     }
   }
+  componentDidUpdate(prevProps){
+    if(prevProps!==this.props){
+      if(this.state.collected!==inChecklist(this.props.item.checkListKey)){
+        this.setCollected(!this.state.collected)
+      }
+      if(this.state.wishlist!==inWishlist(this.props.item.checkListKey)){
+        this.setWishlist(!this.state.wishlist)
+      }
+    }
+  }
   componentDidMount() {
     this.mounted = true;
   }
@@ -47,17 +57,8 @@ class ListItem extends PureComponent{
       this.setState({wishlist: wishlist})
     }
   }
-  // componentWillUnmount(){
-  //   console.log("unmount")
-  //   this.setState({unMounting:true})
-  // }
+
   render(){
-    if(this.state.collected!==inChecklist(this.props.item.checkListKey)){
-      this.setCollected(!this.state.collected)
-    }
-    if(this.state.wishlist!==inWishlist(this.props.item.checkListKey)){
-      this.setWishlist(!this.state.wishlist)
-    }
     var disablePopup;
     if(this.props.disablePopup===undefined){
       disablePopup=false;
