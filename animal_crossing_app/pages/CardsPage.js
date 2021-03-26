@@ -9,7 +9,6 @@ class CardsPage extends Component {
     return(
         <ListPage 
           disablePopup={[true]}
-          showVariations={[false]}
           title="Letters"
           imageProperty={["Image"]}
           textProperty={["NameLanguage"]}

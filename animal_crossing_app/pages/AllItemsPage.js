@@ -40,7 +40,6 @@ class AllItemsPage extends Component {
           disableFilters={disableFilters}
           setPage={this.props.setPage}
           tabs={false}
-          filters={["Source","Tag", "DIY", "Catalog", "Where/How","Weather","Shadow","Movement Speed", "Season/Event","Category", "Season/Event Exclusive", "Seasonality", "Personality","Species","Hobby","Style 1","Style 2","Color 1","Color 2","Variation","Style 1","Style 2","Size", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category"]}
           filterSearchable = {true}
           title={title}
           subHeader={subHeader}
@@ -384,39 +383,6 @@ class AllItemsPage extends Component {
             ["NameLanguage"],
             ["NameLanguage"],
             ["NameLanguage"],
-          ]}
-          showVariations={[
-            getSettingsString("settingsShowVariation")==="true" ? true : false,
-            getSettingsString("settingsShowVariation")==="true" ? true : false,
-            getSettingsString("settingsShowVariation")==="true" ? true : false,
-            getSettingsString("settingsShowVariation")==="true" ? true : false,
-            getSettingsString("settingsShowVariation")==="true" ? true : false,
-            getSettingsString("settingsShowVariation")==="true" ? true : false,
-            getSettingsString("settingsShowVariation")==="true" ? true : false,
-            getSettingsString("settingsShowVariation")==="true" ? true : false,
-            getSettingsString("settingsShowVariation")==="true" ? true : false,
-            getSettingsString("settingsShowVariation")==="true" ? true : false,
-            getSettingsString("settingsShowVariation")==="true" ? true : false,
-            getSettingsString("settingsShowVariation")==="true" ? true : false,
-            getSettingsString("settingsShowVariation")==="true" ? true : false,
-            getSettingsString("settingsShowVariation")==="true" ? true : false,
-            getSettingsString("settingsShowVariation")==="true" ? true : false,
-            getSettingsString("settingsShowVariation")==="true" ? true : false,
-            getSettingsString("settingsShowVariation")==="true" ? true : false,
-            getSettingsString("settingsShowVariation")==="true" ? true : false,
-            getSettingsString("settingsShowVariation")==="true" ? true : false,
-            getSettingsString("settingsShowVariation")==="true" ? true : false,
-            getSettingsString("settingsShowVariation")==="true" ? true : false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
-            false,
           ]}
           dataGlobalName={"dataLoadedAll"}
         />

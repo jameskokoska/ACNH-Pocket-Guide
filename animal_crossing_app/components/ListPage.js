@@ -25,12 +25,12 @@ import FloorWallsPopup from "../popups/FloorWallsPopup"
 import ToolsPopup from "../popups/ToolsPopup"
 import RecipesPopup from "../popups/RecipesPopup"
 import MaterialsPopup from "../popups/MaterialsPopup"
-import * as exports from "./FilterDefinitions"
 import PopupFilter from './PopupFilter'
 import TextFont from "./TextFont"
 import {inChecklist, attemptToTranslateItem, getSettingsString, attemptToTranslate} from "../LoadJsonData"
 import {PopupBottomCustom} from "./Popup"
-//Note: popup height is not needed anymore
+const filterDefinitions = require("../assets/data/Generated/filterDefinitions.json");
+
 //use tabs={false} if the page doesn't have  the tab bar
 
 Object.entries(exports).forEach(([name, exported]) => window[name] = exported);
@@ -38,22 +38,12 @@ Object.entries(exports).forEach(([name, exported]) => window[name] = exported);
 const {diffClamp} = Animated;
 const headerHeight = Dimensions.get('window').height*0.3;
 
-async function exportFilters(data, title){
-  const { status } = await Permissions.askAsync(Permissions.CAMERA_ROLL);
-  if (status === "granted") {
-    var fileUri = FileSystem.documentDirectory + "ACNHPocketGuideDataFilterDefinition"+title+".txt";
-    await FileSystem.writeAsStringAsync(fileUri, JSON.stringify(data), { encoding: FileSystem.EncodingType.UTF8 });
-    const asset = await MediaLibrary.createAssetAsync(fileUri)
-    await MediaLibrary.createAlbumAsync("Download", asset, false)
-  }
-}
 
 export default (props) =>{
   const renderItem = (({ item }) =>
     <ListItem
       item={item}
       disablePopup={props.disablePopup}
-      showVariations={props.showVariations}
       imageProperty={props.imageProperty} 
       textProperty={props.textProperty}
       textProperty2={props.textProperty2}
@@ -142,80 +132,51 @@ export default (props) =>{
     var item;
     var dataLoaded2D = determineDataGlobal(props.dataGlobalName);
     if(possibleFiltersState==="empty"){
-      var possibleFilters = [];
-      if(getSettingsString("settingsLogFilterDefinitions")==="true"){
-        var currentFilter;
-        if(props.filters!==undefined){
-          for(var x = 0; x < props.filters.length; x++){
-            for(var j = 0; j < dataLoaded2D.length; j++){
-              var dataLoaded = dataLoaded2D[j];
-              for(var i = 0; i < dataLoaded.length; i++){
-                item = dataLoaded[i];
-                currentFilter = {label:"", value:""};
-                var found = false;
-                for(var y = 0; y < possibleFilters.length; y++){
-                  if(possibleFilters[y].value===props.filters[x] + ":" +removeBrackets(item[props.filters[x]])){
-                    found = true;
-                  }
-                }
-                if(!found && item[props.filters[x]]!==undefined){
-                  currentFilter.label = props.filters[x] + " - " +removeBrackets(item[props.filters[x]]);
-                  currentFilter.value = props.filters[x] + ":" +removeBrackets(item[props.filters[x]]);
-                  possibleFilters.push(currentFilter)
-                }
-              }
-            }
-          }
-        }
-        if (componentIsMounted.current) {
-          setPossibleFilters(possibleFilters)
-        }
-        exportFilters(possibleFilters, props.title)
-      } else {
-        var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH ";
+      var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH ";
 
-        var possibleFilters = [{label:attemptToTranslate("Collected"), value:"Collected"},{label:attemptToTranslate("Not Collected"), value:"Not Collected"}];
-        var notCraftVariationsFilters = [{label:attemptToTranslate("Show uncraftable item variations"), value:"Show uncraftable item variations"}]
-        var activeFilters = [
-          {label:"January can catch",value:hemispherePre+"Jan Active:true"},
-          {label:"February can catch",value:hemispherePre+"Feb Active:true"},
-          {label:"March can catch",value:hemispherePre+"Mar Active:true"},
-          {label:"April can catch",value:hemispherePre+"Apr Active:true"},
-          {label:"May can catch",value:hemispherePre+"May Active:true"},
-          {label:"June can catch",value:hemispherePre+"Jun Active:true"},
-          {label:"July can catch",value:hemispherePre+"Jul Active:true"},
-          {label:"August can catch",value:hemispherePre+"Aug Active:true"},
-          {label:"September can catch",value:hemispherePre+"Sep Active:true"},
-          {label:"October can catch",value:hemispherePre+"Oct Active:true"},
-          {label:"November can catch",value:hemispherePre+"Nov Active:true"},
-          {label:"December can catch",value:hemispherePre+"Dec Active:true"},
-        ]
-        if(props.title==="Fish"){
-          possibleFilters = [...possibleFilters, ...activeFilters, ...fishFilter];
-        } else if(props.title==="Bugs"){
-          possibleFilters = [...possibleFilters, ...activeFilters, ...bugsFilter];
-        } else if(props.title==="Sea Creatures"){
-          possibleFilters = [...possibleFilters, ...activeFilters, ...seaCreaturesFilter];
-        } else if(props.title==="Furniture"){
-          possibleFilters = [...possibleFilters, ...notCraftVariationsFilters, ...furnitureFilter];
-        } else if(props.title==="Clothing"){
-          possibleFilters = [...possibleFilters, ...notCraftVariationsFilters, ...clothingFilter];
-        } else if(props.title==="Floor & Walls"){
-          possibleFilters = [...possibleFilters, ...floorWallsFilter];
-        } else if(props.title==="Emoticons"){
-          possibleFilters = [...possibleFilters, ...emoticonsFilter];
-        } else if(props.title==="Recipes"){
-          possibleFilters = [...possibleFilters, ...recipesFilter];
-        } else if(props.title==="Villagers"){
-          possibleFilters = [...possibleFilters, ...villagersFilter];
-        } else if(props.title==="Everything"){
-          possibleFilters = [...possibleFilters, ...notCraftVariationsFilters, ...activeFilters, ...everythingFilter];
-        } else if(props.title==="Construction"){
-          possibleFilters = [...possibleFilters,{"label":"Bridge","value":"Category:Bridge"},{"label":"Incline","value":"Category:Incline"},{"label":"Doors","value":"Category:Door"},{"label":"Roofing","value":"Category:Roofing"},{"label":"Siding","value":"Category:Siding"},{"label":"Mailbox","value":"Category:Mailbox"}]
-        }
-        if (componentIsMounted.current) {
-          setPossibleFilters(possibleFilters);
-        }
+      var possibleFilters = [{label:attemptToTranslate("Collected"), value:"Collected"},{label:attemptToTranslate("Not Collected"), value:"Not Collected"}];
+      var notCraftVariationsFilters = [{label:attemptToTranslate("Show uncraftable item variations"), value:"Show uncraftable item variations"}]
+      var activeFilters = [
+        {label:"January can catch",value:hemispherePre+"Jan Active:true"},
+        {label:"February can catch",value:hemispherePre+"Feb Active:true"},
+        {label:"March can catch",value:hemispherePre+"Mar Active:true"},
+        {label:"April can catch",value:hemispherePre+"Apr Active:true"},
+        {label:"May can catch",value:hemispherePre+"May Active:true"},
+        {label:"June can catch",value:hemispherePre+"Jun Active:true"},
+        {label:"July can catch",value:hemispherePre+"Jul Active:true"},
+        {label:"August can catch",value:hemispherePre+"Aug Active:true"},
+        {label:"September can catch",value:hemispherePre+"Sep Active:true"},
+        {label:"October can catch",value:hemispherePre+"Oct Active:true"},
+        {label:"November can catch",value:hemispherePre+"Nov Active:true"},
+        {label:"December can catch",value:hemispherePre+"Dec Active:true"},
+      ]
+      if(props.title==="Fish"){
+        possibleFilters = [...possibleFilters, ...activeFilters, ...filterDefinitions["Fish"]];
+      } else if(props.title==="Bugs"){
+        possibleFilters = [...possibleFilters, ...activeFilters, ...filterDefinitions["Bugs"]];
+      } else if(props.title==="Sea Creatures"){
+        possibleFilters = [...possibleFilters, ...activeFilters, ...filterDefinitions["Sea Creatures"]];
+      } else if(props.title==="Furniture"){
+        possibleFilters = [...possibleFilters, ...notCraftVariationsFilters, ...filterDefinitions["Furniture"]];
+      } else if(props.title==="Clothing"){
+        possibleFilters = [...possibleFilters, ...notCraftVariationsFilters, ...filterDefinitions["Clothing"]];
+      } else if(props.title==="Floor & Walls"){
+        possibleFilters = [...possibleFilters, ...filterDefinitions["Floor & Walls"]];
+      } else if(props.title==="Emoticons"){
+        possibleFilters = [...possibleFilters, ...filterDefinitions["Reactions"]];
+      } else if(props.title==="Recipes"){
+        possibleFilters = [...possibleFilters, ...filterDefinitions["Recipes"]];
+      } else if(props.title==="Villagers"){
+        possibleFilters = [...possibleFilters, ...filterDefinitions["Villagers"]];
+      } else if(props.title==="Everything"){
+        possibleFilters = [...possibleFilters, ...notCraftVariationsFilters, ...activeFilters, ...filterDefinitions["All Items"]];
+      } else if(props.title==="Construction"){
+        possibleFilters = [...possibleFilters,{"label":"Bridge","value":"Category:Bridge"},{"label":"Incline","value":"Category:Incline"},{"label":"Doors","value":"Category:Door"},{"label":"Roofing","value":"Category:Roofing"},{"label":"Siding","value":"Category:Siding"},{"label":"Mailbox","value":"Category:Mailbox"}]
+      } else if(props.title==="Music"){
+        possibleFilters = [...possibleFilters, ...filterDefinitions["Music"]]
+      }
+      if (componentIsMounted.current) {
+        setPossibleFilters(possibleFilters);
       }
     } else if (getSettingsString("settingsUseFilters")==="false") {
       if (componentIsMounted.current) {
@@ -317,7 +278,7 @@ export default (props) =>{
               filterFound = true;
             }
             //Only check the property selected
-            if((searchCollected) && item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toLowerCase().includes(searchActual[z].split(":")[1].toLowerCase())){
+            if((searchCollected) && item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
               filterFound = true;
               break;
             }
@@ -333,20 +294,6 @@ export default (props) =>{
           //&&((!props.wishlistItems&&!props.filterCollectedOnly&&!props.newItems)||searchFound)
           if((search==="" || searchFound) && (filterFound || searchActual.length === 0)){
             //Search result found...
-            //Removed variation code
-            // if (getSettingsString("settingsRemoveCraftVariations")==="true"){
-            //   if(item["Kit Cost"] !==undefined && item["Kit Cost"] !=="NA" ){
-            //     if(item["Name"]===previousVariation){
-            //       previousVariation = item["Name"];
-            //       break;
-            //     }
-            //   }
-            //   item.dataSet = j;
-            //   item.index = i;
-            //   dataUpdated = [...dataUpdated, item];
-            //   previousVariation = item["Name"];
-            //   break;
-            // } else if(props.showVariations[j]===false){
               //If recipes item page, and its not DIY, remove
               if(props.recipes){
                 if(item["DIY"]!=="Yes"){

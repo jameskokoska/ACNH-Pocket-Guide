@@ -27,7 +27,6 @@ const renderTabBar = props => (
 const MaterialsRoute = () => (
   <ListPage 
     tabs={true}
-    showVariations={[false]}
     title="Materials"
     imageProperty={["Inventory Image"]}
     textProperty={["NameLanguage",]}
@@ -52,15 +51,7 @@ const MaterialsRoute = () => (
 
 const FurnitureRoute = () => (
   <ListPage 
-    filters = {["Tag", "Catalog", "Color 1","Color 2","Variation","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category",]}
     filterSearchable = {true}
-    showVariations={[
-      getSettingsString("settingsShowVariation")==="true" ? true : false,
-      getSettingsString("settingsShowVariation")==="true" ? true : false,
-      getSettingsString("settingsShowVariation")==="true" ? true : false,
-      getSettingsString("settingsShowVariation")==="true" ? true : false,
-      getSettingsString("settingsShowVariation")==="true" ? true : false,
-    ]}
     title="Furniture"
     imageProperty={[
       "Image",
@@ -154,20 +145,7 @@ export class ClothingRouteClass extends Component{
         subHeader={subHeader}
         villagerGifts={villagerGifts}
         villagerGiftsFilters={villagerGiftsFilters}
-        filters={["Catalog", "Style 1","Style 2","Color 1","Color 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ]}
         filterSearchable = {true}
-        showVariations={[
-          getSettingsString("settingsShowVariation")==="true" ? true : false,
-          getSettingsString("settingsShowVariation")==="true" ? true : false,
-          getSettingsString("settingsShowVariation")==="true" ? true : false,
-          getSettingsString("settingsShowVariation")==="true" ? true : false,
-          getSettingsString("settingsShowVariation")==="true" ? true : false,
-          getSettingsString("settingsShowVariation")==="true" ? true : false,
-          getSettingsString("settingsShowVariation")==="true" ? true : false,
-          getSettingsString("settingsShowVariation")==="true" ? true : false,
-          getSettingsString("settingsShowVariation")==="true" ? true : false,
-          getSettingsString("settingsShowVariation")==="true" ? true : false,
-        ]}
         title={title}
         imageProperty={[
           "Closet Image",
@@ -270,13 +248,7 @@ export class ClothingRouteClass extends Component{
 
 const FloorWallsRoute = () => (
   <ListPage 
-    filters = {["Tag","Color 1","Color 2","Source","DIY","Size","Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series",]}
     filterSearchable = {true}
-    showVariations={[
-      getSettingsString("settingsShowVariation")==="true" ? true : false,
-      getSettingsString("settingsShowVariation")==="true" ? true : false,
-      getSettingsString("settingsShowVariation")==="true" ? true : false,
-    ]}
     title="Floor & Walls"
     imageProperty={[
       "Image",

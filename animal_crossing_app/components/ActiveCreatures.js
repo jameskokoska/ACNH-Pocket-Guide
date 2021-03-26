@@ -68,11 +68,6 @@ class ActiveCreatures extends Component {
             ["NameLanguage",],
             ["NameLanguage",],
           ]}
-          showVariations={[
-            false,
-            false,
-            false
-          ]}
           dataGlobalName={"dataLoadedCreatures"}
         />
         </View>

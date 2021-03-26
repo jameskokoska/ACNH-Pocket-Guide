@@ -54,7 +54,6 @@ class SongsPage extends Component {
       </View>
         <ListPage 
           disablePopup={[true]}
-          showVariations={[false]}
           title="Music"
           imageProperty={["Album Image"]}
           textProperty={["NameLanguage",]}

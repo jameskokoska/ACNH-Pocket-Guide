@@ -9,9 +9,7 @@ class EmoticonsPage extends Component {
   render(){
     return(
         <ListPage 
-          filters={["Source"]}
           disablePopup={[true]}
-          showVariations={[false]}
           title="Emoticons"
           imageProperty={["Image"]}
           textProperty={["NameLanguage",]}

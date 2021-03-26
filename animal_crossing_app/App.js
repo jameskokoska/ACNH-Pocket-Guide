@@ -50,11 +50,19 @@ global.gameVersion = "1.9.0";
 global.changelog = `
 -Added villager gift guide!
 -Open a villagers popup and click [View Gifts] to see a list
--
+-Can now search wishlist
+-Can now search new items page
+-Updated filters
+-Filters and searching now apply together
+-Performance improvements for filters
+-Filters should not overlap buttons anymore
+-Updated translations
+-Made it easier for me to keep the app updated with new data and new filters
 -Added subtle achievements stamp animation
--Added modifiers in addition to nouns in achievements page
--Added more translations
+-Fixed achievements stamp loading
+-Added missing modifiers in addition to nouns in achievements page
 -Settings popup descriptions are improved
+-A restart is required when you change languages, rewrote the way translations are applied - for efficiency
 -
 -Added achievements page!
 -Fixed translations, critical text bug
@@ -107,7 +115,7 @@ class App extends Component {
     this.numLogins;
     this.state = {
       loaded: false,
-      currentPage: 9,
+      currentPage: 0,
       open:false,
       fadeInTitle:true,
     }

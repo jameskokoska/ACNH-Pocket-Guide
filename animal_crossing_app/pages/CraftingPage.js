@@ -21,9 +21,7 @@ const renderTabBar = props => (
 
 const RecipesRoute = () => (
   <ListPage 
-    filters={["Category", "Source","Season/Event","Season/Event Exclusive",]}
     filterSearchable = {true}
-    showVariations={[false]}
     title="Recipes"
     imageProperty={["Image"]}
     textProperty={["NameLanguage"]}
@@ -47,7 +45,6 @@ const RecipesRoute = () => (
 
 const ToolsRoute = () => (
   <ListPage 
-    showVariations={[false]}
     title="Tools"
     imageProperty={["Image"]}
     textProperty={["NameLanguage"]}

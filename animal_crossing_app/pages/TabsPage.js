@@ -26,7 +26,6 @@ const renderTabBar = props => (
 
 const FirstRoute = () => (
   <ListPage 
-    showVariations={[false]}
     title="Reactions"
     imageProperty={["Image"]}
     textProperty={["Name"]}
@@ -53,7 +52,6 @@ const FirstRoute = () => (
 
 const SecondRoute = () => (
   <ListPage 
-    showVariations={[true,false,false]}
     title="Art"
     imageProperty={["Image","Image","Image"]}
     textProperty={["Name","Name","Name"]}

@@ -1,0 +1,8 @@
+Translations: - translations.json
+https://docs.google.com/spreadsheets/d/1GwUuCKgJC61qWEjWyeG3nVjkHesszRL6XbPA_dHfLoI/edit#gid=226688273
+
+Spreadsheet Data: - data.json
+https://docs.google.com/spreadsheets/d/13d_LAJPlxMa_DubPTuirkIV4DERBMXbrWQsmSh8ReK4/edit
+
+Replace =@IMAGE(" with nothing
+and Replace png") with png

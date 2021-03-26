@@ -23,7 +23,7 @@ class CreditsPage extends Component {
     return(
       <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
         <ScrollView>
-          <View style={{marginTop: 100}}/>
+          {/* <View style={{marginTop: 100}}/>
           <LottieView 
             autoPlay
             loop
@@ -31,8 +31,8 @@ class CreditsPage extends Component {
               width: Dimensions.get('window').width,
             }} 
             source={require('../assets/credits.json')}
-          />
-          <View style={{marginTop: 40}}/>
+          /> */}
+          <View style={{marginTop: 100}}/>
           <Header>Credits</Header>
           <View style={{marginTop: 20}}/>
           <View style={{height: 300}}>

@@ -517,14 +517,6 @@ export const settings = [
     "displayName" : "Download images",
     "description" : "Save images locally for offline use once viewed. If disabled, can save storage space, but always requires an internet connection to view images.",
   },
-  // { //1
-  //   "keyName" : "settingsSkipSplashScreen",
-  //   "defaultValue" : "true",
-  //   "currentValue" : "",
-  //   "picture" : require("./assets/icons/hourglass.png"),
-  //   "displayName" : "Skip loading screen",
-  //   "description" : "If enabled, the app will load more efficiently and therefore will skip most of the opening plane/balloon animation",
-  // },
   {
     "keyName" : "breaker",
     "text" : "Interface layout",
@@ -553,14 +545,6 @@ export const settings = [
   //   "displayName" : "Enable filters in lists",
   //   "description" : "Turning this off can increase performance of loading, for basic needs",
   // },
-  // {
-  //   "keyName" : "settingsLogFilterDefinitions",
-  //   "defaultValue" : "false",
-  //   "currentValue" : "",
-  //   "picture" : require("./assets/icons/filter.png"),
-  //   "displayName" : "DEBUG: LOG FILTER DEFINITIONS AFTER DATABASE UPDATE",
-  //   "description" : "Will output a file of the filter definitions after accessing each page",
-  // },
   {
     "keyName" : "breaker",
     "text" : "Custom dates",
@@ -575,10 +559,11 @@ export const settings = [
   },
 ]
 
-const variantTranslations = require("./assets/data/translatedVariants.json");
-const catchphraseTranslations = require("./assets/data/translatedVillagerCatchPhrases.json");
+const variantTranslations = require("./assets/data/Generated/translatedVariants.json");
+const catchphraseTranslations = require("./assets/data/Generated/translatedVillagerCatchPhrases.json");
 const appTranslations = require("./assets/data/translationsApp.json")["Main"];
-const itemTranslations = require("./assets/data/translations.json")
+const achievementTranslations = require("./assets/data/translationsApp.json")["Achievements"];
+const itemTranslations = require("./assets/data/Generated/translatedItems.json")
 
 export function attemptToTranslateItem(text){
   if(global.language!=="English"){
@@ -601,6 +586,22 @@ export function attemptToTranslateSpecial(text, type){
     }
     if(translated.hasOwnProperty(text)){
       return(translated[text][global.language])
+    }
+  }
+  return text;
+}
+export function attemptToTranslateAchievement(text){
+  if(text===undefined){
+    return "";
+  } else if(global.language==="English"){
+    return text;
+  }
+  for(var i=0; i<achievementTranslations.length; i++){
+    if(achievementTranslations[i]["English"].toLowerCase()===text.toString().toLowerCase()){
+      var translatedText = achievementTranslations[i][global.language];
+      if(translatedText!==undefined&&translatedText!==null&&translatedText!==""){
+        return translatedText;
+      }
     }
   }
   return text;

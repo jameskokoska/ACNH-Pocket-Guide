@@ -60,7 +60,7 @@ export class Paragraph extends Component {
       )
     } else {
       return(
-        <TextFont bold={false} style={{marginTop:10, fontSize: 17, marginHorizontal: this.props.margin!==false?30:0, color: colors.textBlack[global.darkMode]}}>{this.props.children}</TextFont>
+        <TextFont translate={this.props.translate===false?false:true} bold={false} style={{marginTop:10, fontSize: 17, marginHorizontal: this.props.margin!==false?30:0, color: colors.textBlack[global.darkMode]}}>{this.props.children}</TextFont>
       )
     }
   }

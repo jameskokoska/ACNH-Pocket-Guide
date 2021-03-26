@@ -47,9 +47,6 @@ class CurrentVillagers extends Component {
           searchKey={[
             ["NameLanguage",],
           ]}
-          showVariations={[
-            false,
-          ]}
           dataGlobalName={"dataLoadedVillagers"}
         />
     )

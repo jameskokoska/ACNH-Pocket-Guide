@@ -9,7 +9,6 @@ class ConstructionPage extends Component {
     return(
         <ListPage 
           disablePopup={[true, true]}
-          showVariations={[false]}
           title="Construction"
           imageProperty={["Image","Image"]}
           textProperty={["NameLanguage","NameLanguage"]}

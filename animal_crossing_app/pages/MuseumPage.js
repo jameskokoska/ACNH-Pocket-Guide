@@ -27,9 +27,7 @@ const renderTabBar = props => (
 
 const FishRoute = () => (
   <ListPage 
-    filters = {["Where/How","Shadow"]}
     // filterSearchable = {true}
-    showVariations={[false]}
     title="Fish"
     activeCreaturesMonth={true}
     leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
@@ -59,8 +57,6 @@ const FishRoute = () => (
 
 const BugsRoute = () => (
   <ListPage 
-    filters = {["Weather","Where/How"]}
-    showVariations={[false]}
     title="Bugs"
     activeCreaturesMonth={true}
     leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
@@ -90,8 +86,6 @@ const BugsRoute = () => (
 
 const SeaRoute = () => (
   <ListPage 
-    filters = {["Shadow","Movement Speed"]}
-    showVariations={[false]}
     title="Sea Creatures"
     activeCreaturesMonth={true}
     leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
@@ -119,7 +113,6 @@ const SeaRoute = () => (
 
 const FossilsRoute = () => (
   <ListPage 
-    showVariations={[false]}
     title="Fossils"
     imageProperty={["Image"]}
     textProperty={["NameLanguage",]}
@@ -144,7 +137,6 @@ const FossilsRoute = () => (
 
 const ArtRoute = () => (
   <ListPage 
-    showVariations={[false]}
     title="Art"
     imageProperty={["Image"]}
     textProperty={["NameLanguage",]}

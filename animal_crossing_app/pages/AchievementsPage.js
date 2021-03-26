@@ -8,7 +8,7 @@ import Check from '../components/Check';
 import colors from '../Colors'
 import PopupAddTask from "../components/PopupAddTask"
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
+import {getSettingsString, attemptToTranslate, attemptToTranslateAchievement} from "../LoadJsonData"
 import FastImage from "../components/FastImage"
 import {Header, SubHeader, Paragraph} from "../components/Formattings"
 import {PopupBottomCustom} from "../components/Popup"
@@ -44,10 +44,10 @@ export default class AchievementsPage extends Component {
     } else {
       var outputData = [];
       this.data.map( (achievement, index)=>{
-        var achievementName = attemptToTranslate(achievement["Name"]);
+        var achievementName = attemptToTranslateAchievement(achievement["Name"]);
         if(achievementName.toLowerCase().includes(text.toLowerCase())){
           outputData.push(achievement);
-        } else if (attemptToTranslate(achievement["Internal Category"]).toLowerCase().includes(text.toLowerCase())){
+        } else if (achievement["Internal Category"].toLowerCase().includes(text.toLowerCase())){
           outputData.push(achievement);
         }
       })
@@ -156,16 +156,18 @@ class AchievementsPopup extends Component {
   }
   
   render(){
-    var name = this.state.selectedAchievement["Name"];
+    var name = attemptToTranslateAchievement(this.state.selectedAchievement["Name"]);
     if(this.state.selectedAchievement!="" && this.state.selectedAchievement["Name"].includes("(island name)")){
-      name = this.state.selectedAchievement["Name"].replace("(island name)", global.islandName)
+      name = this.state.selectedAchievement["Name"].replace("(island name) ", "")
+      name = attemptToTranslateAchievement(name);
+      name = global.islandName + " " + name;
     }
     this.getNouns();
     return <>
       <PopupBottomCustom ref={(popup) => this.popup = popup}>
         <SubHeader margin={false}>{name}</SubHeader>
-        <Paragraph styled={true} margin={false}>{this.state.selectedAchievement["Achievement Description"]}</Paragraph>
-        <Paragraph styled={true} margin={false}>{this.state.selectedAchievement["Achievement Criteria"]}</Paragraph>
+        <Paragraph translate={false} styled={true} margin={false}>{attemptToTranslateAchievement(this.state.selectedAchievement["Achievement Description"])}</Paragraph>
+        <Paragraph translate={false} styled={true} margin={false}>{attemptToTranslateAchievement(this.state.selectedAchievement["Achievement Criteria"])}</Paragraph>
         <View style={{paddingTop:30, justifyContent:"center", marginHorizontal: 5, flexDirection: 'row', flexWrap:"wrap"}}>
           {this.achievementNouns}
         </View>
@@ -190,15 +192,17 @@ class Achievement extends Component {
     }
   }
   render(){
-    var name = this.props.achievement["Name"];
+    var name = attemptToTranslateAchievement(this.props.achievement["Name"]);
     if(this.props.achievement!="" && this.props.achievement["Name"].includes("(island name)")){
-      name = this.props.achievement["Name"].replace("(island name)", global.islandName)
+      name = this.props.achievement["Name"].replace("(island name) ", "")
+      name = attemptToTranslateAchievement(name);
+      name = global.islandName + " " + name;
     }
     return <>
       <TouchableOpacity activeOpacity={0.7} onPress={()=>this.props.openPopup(this.props.achievement)}>
       <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
         <SubHeader>{name}</SubHeader>
-        <Paragraph styled={true}>{this.props.achievement["Achievement Criteria"]}</Paragraph>
+        <Paragraph translate={false} styled={true}>{attemptToTranslateAchievement(this.props.achievement["Achievement Criteria"])}</Paragraph>
         <View style={{paddingTop:10, marginHorizontal: 5, flex: 1, flexDirection: 'row', justifyContent:'center',flexWrap:"wrap"}}>
           {this.achievementStamps}
         </View>
