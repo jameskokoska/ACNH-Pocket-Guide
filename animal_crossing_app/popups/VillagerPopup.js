@@ -15,7 +15,6 @@ class VillagerPopup extends Component {
     super(props);
   }
   render(){
-    console.log(this.props.item["House Image"])
     return <View style={{width: "100%", alignItems: "center"}}>
       <InfoLine
         birthday={true}

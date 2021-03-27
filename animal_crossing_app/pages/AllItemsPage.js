@@ -35,13 +35,26 @@ class AllItemsPage extends Component {
     if(this.props.disableFilters !==undefined){
       disableFilters = this.props.disableFilters;
     }
+    var tabs = false;
+    if(this.props.tabs !==undefined){
+      tabs = this.props.tabs;
+    }
+    var filterSearchable = false;
+    if(this.props.filterSearchable !==undefined){
+      filterSearchable = this.props.filterSearchable;
+    }
+    var smallerHeader = false;
+    if(this.props.smallerHeader !==undefined){
+      smallerHeader = this.props.smallerHeader;
+    }
     return(
         <ListPage 
+          smallerHeader={smallerHeader}
           setVillagerGift={this.props.setVillagerGift}
           disableFilters={disableFilters}
           setPage={this.props.setPage}
-          tabs={false}
-          filterSearchable = {true}
+          tabs={tabs}
+          filterSearchable = {filterSearchable}
           title={title}
           subHeader={subHeader}
           newItems={newItems}

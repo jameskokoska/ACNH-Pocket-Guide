@@ -39,6 +39,7 @@ import NewItemsPage from "./pages/NewItemsPage"
 import WishlistPage from "./pages/WishlistPage"
 import AchievementsPage from "./pages/AchievementsPage"
 import VillagerPresentsPage from "./pages/VillagerPresentsPage"
+import ObtainableItemsPage from "./pages/ObtainableItemsPage"
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -130,7 +131,7 @@ class App extends Component {
     this.numLogins;
     this.state = {
       loaded: false,
-      currentPage: 0,
+      currentPage: 21,
       open:false,
       fadeInTitle:true,
     }
@@ -359,6 +360,8 @@ class App extends Component {
         currentPageView = <AchievementsPage/>
       } else if (this.state.currentPage===20){
         currentPageView = <VillagerPresentsPage villager={this.state.villager}/>
+      } else if (this.state.currentPage===21){
+        currentPageView = <ObtainableItemsPage/>
       } else {
         currentPageView = <Text>Default</Text>
       }

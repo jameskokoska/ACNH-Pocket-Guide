@@ -3,7 +3,7 @@ import {TouchableOpacity, TouchableWithoutFeedback, Text, View, Animated, SafeAr
 import Header, {HeaderLoading, HeaderActive} from './Header';
 import ListItem from './ListItem';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {determineDataGlobal, removeBrackets} from "../LoadJsonData"
+import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, removeBrackets} from "../LoadJsonData"
 import BottomSheet from 'reanimated-bottom-sheet';
 import * as MediaLibrary from 'expo-media-library';
 import * as FileSystem from 'expo-file-system';
@@ -131,6 +131,14 @@ export default (props) =>{
     var previousVariation = "";
     var item;
     var dataLoaded2D = determineDataGlobal(props.dataGlobalName);
+
+    var currentVillagerFilters;
+    var currentVillagerFiltersInverse;
+    if(props.title==="Obtainable DIYs" || props.title==="Obtainable Reactions" || props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions"){
+      currentVillagerFilters = getCurrentVillagerFilters();
+      currentVillagerFiltersInverse = getInverseVillagerFilters();
+    }
+
     if(possibleFiltersState==="empty"){
       var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH ";
 
@@ -216,7 +224,11 @@ export default (props) =>{
             searchActual = ["Wishlist"];
           } else if (props.villagerGifts) {
             searchActual = [...props.villagerGiftsFilters,...searchActual];
-          }
+          } else if (props.title==="Obtainable DIYs" || props.title==="Obtainable Reactions") {
+            searchActual = [...currentVillagerFilters,...searchActual];
+          } else if (props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions") {
+            searchActual = [...currentVillagerFiltersInverse,...searchActual];
+          } 
           for(var z = 0; z < searchActual.length; z++){
             if(searchActual.includes("New version") && props.newItems && item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===global.gameVersion){
               filterFound = true;
@@ -279,8 +291,26 @@ export default (props) =>{
             if(searchCollected && searchActual.includes("Show uncraftable item variations")&&item["Kit Cost"] !==undefined && item["Variation"] !==undefined && item["Variant ID"] !==undefined && item["Kit Cost"] ==="NA" && (item["Variation"]!=="NA"||item["Variant ID"] !== "NA")){
               filterFound = true;
             }
+            //special case for categories
+            if(props.title==="Obtainable DIYs" || props.title==="Obtainable Reactions" || props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions"){
+              if(searchCollected && item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
+                if((props.title==="Obtainable DIYs" || props.title==="Unobtainable DIYs") && item.checkListKey.includes("recipesCheckList")){
+                  filterFound = true;
+                  break;
+                } else if((props.title==="Obtainable Reactions" || props.title==="Unobtainable Reactions") && item.checkListKey.includes("emojiCheckList")){
+                  filterFound = true;
+                  break;
+                } else {
+                  filterFound = false;
+                  continue;
+                }
+              } else {
+                filterFound = false;
+                continue;
+              }
+            }
             //Only check the property selected
-            if((searchCollected) && item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
+            else if((searchCollected) && item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
               filterFound = true;
               break;
             }
@@ -382,7 +412,7 @@ export default (props) =>{
           width: Dimensions.get('window').width, 
           height: Dimensions.get('window').height, position:"absolute"}} 
         pointerEvents="none"> */}
-        <Header disableFilters={props.disableFilters} customHeader={props.customHeader} disableSearch={props.disableSearch} subHeader={props.subHeader} searchFilters={searchFilters} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
+        <Header smallerHeader={props.smallerHeader} disableFilters={props.disableFilters} customHeader={props.customHeader} disableSearch={props.disableSearch} subHeader={props.subHeader} searchFilters={searchFilters} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
         {/* </Animated.View> */}
       </Animated.View>
 

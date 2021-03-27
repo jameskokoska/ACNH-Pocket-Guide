@@ -26,7 +26,6 @@ const renderTabBar = props => (
 
 const MaterialsRoute = () => (
   <ListPage 
-    tabs={true}
     title="Materials"
     imageProperty={["Inventory Image"]}
     textProperty={["NameLanguage",]}
@@ -135,7 +134,7 @@ export class ClothingRouteClass extends Component{
       villagerGiftsFilters = this.props.villagerGiftsFilters;
       subHeader = this.props.subHeader;
       customHeader = this.props.customHeader;
-      filterSearchable = true;
+      filterSearchable = false;
       appBarColor = colors.giftsAppBar[global.darkMode];
       titleColor = colors.textBlack[global.darkMode]
     } else {

@@ -768,3 +768,77 @@ export function translateDateRange(dateRange){
     return dateOut;
   }
 } 
+
+function getCurrentVillagerObjects(){
+  const data = require("./assets/data/data.json");
+  var currentVillagers = [];
+  for(var i=0; i<global.collectionList.length; i++){
+    if(global.collectionList[i].includes("villagerCheckList")){
+      var villagerName = global.collectionList[i].replace("villagerCheckList","");
+      for(var z=0; z<data["Villagers"].length; z++){
+        if(data["Villagers"][z]["Name"]===villagerName){
+          currentVillagers.push(data["Villagers"][z]);
+        }
+      }
+    }
+  }
+  return currentVillagers;
+}
+
+function getAllVillagerPersonalities(){
+  const data = require("./assets/data/data.json");
+  var villagerPersonalities = [];
+  var currentPersonality = "";
+  for(var z=0; z<data["Villagers"].length; z++){
+    currentPersonality = data["Villagers"][z]["Personality"];
+    if(!villagerPersonalities.includes(currentPersonality)){
+      villagerPersonalities.push(currentPersonality);
+    }
+  }
+  return villagerPersonalities;
+}
+
+function getCurrentVillagerPersonalities(){
+  var currentVillagers = getCurrentVillagerObjects();
+  var villagerPersonalities = [];
+  for(var z=0; z<currentVillagers.length; z++){
+    villagerPersonalities.push(currentVillagers[z]["Personality"])
+  }
+  return villagerPersonalities;
+}
+
+export function getCurrentVillagerNamesString(){
+  var currentVillagers = getCurrentVillagerObjects();
+  var villagerNames = "";
+  for(var z=0; z<currentVillagers.length; z++){
+    villagerNames+=(currentVillagers[z]["NameLanguage"]) + ", ";
+  }
+  if(villagerNames===""){
+    return "You have no favorite villagers."
+  }
+  return villagerNames.slice(0, -2);
+}
+
+export function getCurrentVillagerFilters(){
+  var currentVillagers = getCurrentVillagerObjects();
+  var allFilters = [];
+  for(var i=0; i<currentVillagers.length; i++){
+    allFilters.push("Source:" + currentVillagers[i]["Personality"] + " villagers");
+    allFilters.push("Source:" + currentVillagers[i]["Personality"] + " villagers" + "; Tom Nook");
+  }
+  allFilters.push("Source:All villagers (while stung)");
+  allFilters.push("Source:All villagers; Balloons");
+  allFilters.push("Source:All villagers");
+  allFilters = Array.from(new Set(allFilters));
+  return allFilters;
+}
+
+export function getInverseVillagerFilters(){
+  var inversePersonalities = getAllVillagerPersonalities().filter(n => !getCurrentVillagerPersonalities().includes(n))
+  var allFilters = [];
+  for(var i=0; i<inversePersonalities.length; i++){
+    allFilters.push("Source:" + inversePersonalities[i] + " villagers");
+    allFilters.push("Source:" + inversePersonalities[i] + " villagers" + "; Tom Nook");
+  }
+  return allFilters
+}

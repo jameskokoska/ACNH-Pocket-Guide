@@ -37,10 +37,10 @@ const Header = (props) => {
         <View style={{height: props.headerHeight / 2}}>
           <View style={styles.subHeader}>
             <FadeInOut fadeIn={true}>
-              <TextFont style={[styles.title, {color: props.titleColor}]} bold={true}>{props.title}</TextFont>
+              <TextFont style={[styles.title, {fontSize: props.smallerHeader?30:41, color: props.titleColor}]} bold={true}>{props.title}</TextFont>
             </FadeInOut>
             {props.customHeader}
-            {props.subHeader!==undefined&&props.subHeader!=="" ? <TextFont style={[styles.title, {paddingBottom:5, fontSize: 13, color: props.titleColor}]} bold={true}>{props.subHeader}</TextFont> : <View/>}
+            {props.subHeader!==undefined&&props.subHeader!=="" ? <TextFont numberOfLines={3} style={[styles.title, {paddingBottom:5, fontSize: 13, color: props.titleColor}]} bold={true}>{props.subHeader}</TextFont> : <View/>}
             {!props.disableSearch ? <View style={{flexDirection: 'row'}}>
               <View style={[styles.searchBox, {backgroundColor:props.searchBarColor}]}>
                 <DelayInput
@@ -159,7 +159,6 @@ const styles = StyleSheet.create({
     bottom:0,
   },
   title: {
-    fontSize: 41, 
     marginBottom: 5,
   },
   searchText: {
