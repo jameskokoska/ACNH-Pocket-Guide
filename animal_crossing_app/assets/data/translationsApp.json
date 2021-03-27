@@ -757,6 +757,12 @@
             "French (US)": "Matériaux"
         },
         {
+            "English": "Materials",
+            "English (Europe)": "Materials",
+            "French": "Matériaux",
+            "French (US)": "Matériaux"
+        },
+        {
             "English": "Hybrid",
             "English (Europe)": "Hybrid",
             "French": "Hybrides",
@@ -1417,8 +1423,8 @@
             "French (US)": "Les traductions ne s'appliquent qu'aux noms d'éléments du jeu, tous les autres contenus de l'application sont en anglais. Certains éléments peuvent manquer de traductions. Si vous souhaitez aider à traduire cette application, n'hésitez pas à nous contacter par e-mail."
         },
         {
-            "English": "Check Turnip Prices",
-            "English (Europe)": "Check Turnip Prices",
+            "English": "Turnip Prices",
+            "English (Europe)": "Turnip Prices",
             "French": "Vérifier le prix des navets",
             "French (US)": "Vérifier le prix des navets"
         },
@@ -2692,13 +2698,7 @@
             "English": "Planting a pear",
             "English (Europe)": "Planting a pear",
             "French": "Planter une poire",
-            "French (US)": "Planter une poire"
-        },
-        {
-            "English": "Cyrus",
-            "English (Europe)": "Cyrus",
-            "French": "Serge",
-            "French (US)": "Serge",
+            "French (US)": "Planter une poire",
             "German": "Björn",
             "Spanish": "Al",
             "Spanish (US)": "Al",
@@ -2711,10 +2711,10 @@
             "Russian": "Сайрус"
         },
         {
-            "English": "Reese",
-            "English (Europe)": "Reese",
-            "French": "Risette",
-            "French (US)": "Risette",
+            "English": "Cyrus",
+            "English (Europe)": "Cyrus",
+            "French": "Serge",
+            "French (US)": "Serge",
             "German": "Rosina",
             "Spanish": "Paca",
             "Spanish (US)": "Paca",
@@ -2727,10 +2727,10 @@
             "Russian": "Риз"
         },
         {
-            "English": "Chip",
-            "English (Europe)": "Chip",
-            "French": "Castor",
-            "French (US)": "Castor",
+            "English": "Reese",
+            "English (Europe)": "Reese",
+            "French": "Risette",
+            "French (US)": "Risette",
             "German": "Bartholo",
             "Spanish": "Martín",
             "Spanish (US)": "Martín",
@@ -2743,10 +2743,10 @@
             "Russian": "Чип"
         },
         {
-            "English": "C.J.",
-            "English (Europe)": "C.J.",
-            "French": "Pollux",
-            "French (US)": "Pollux",
+            "English": "Chip",
+            "English (Europe)": "Chip",
+            "French": "Castor",
+            "French (US)": "Castor",
             "German": "Lomeus",
             "Spanish": "CJ",
             "Spanish (US)": "CJ",
@@ -2759,10 +2759,10 @@
             "Russian": "Си-Джей"
         },
         {
-            "English": "Joan",
-            "English (Europe)": "Joan",
-            "French": "Porcella",
-            "French (US)": "Porcella",
+            "English": "C.J.",
+            "English (Europe)": "C.J.",
+            "French": "Pollux",
+            "French (US)": "Pollux",
             "German": "Sigrid",
             "Spanish": "Juana",
             "Spanish (US)": "Juana",
@@ -2775,10 +2775,10 @@
             "Russian": "Джоан"
         },
         {
-            "English": "Daisy Mae",
-            "English (Europe)": "Daisy Mae",
-            "French": "Porcelette",
-            "French (US)": "Porcelette",
+            "English": "Joan",
+            "English (Europe)": "Joan",
+            "French": "Porcella",
+            "French (US)": "Porcella",
             "German": "Jorna",
             "Spanish": "Juliana",
             "Spanish (US)": "Juliana",
@@ -2791,10 +2791,10 @@
             "Russian": "Дейзи-Мей"
         },
         {
-            "English": "Katrina",
-            "English (Europe)": "Katrina",
-            "French": "Astrid",
-            "French (US)": "Astrid",
+            "English": "Daisy Mae",
+            "English (Europe)": "Daisy Mae",
+            "French": "Porcelette",
+            "French (US)": "Porcelette",
             "German": "Smeralda",
             "Spanish": "Katrina",
             "Spanish (US)": "Katrina",
@@ -2807,10 +2807,10 @@
             "Russian": "Катрина"
         },
         {
-            "English": "Nat",
-            "English (Europe)": "Nat",
-            "French": "Djarod",
-            "French (US)": "Djarod",
+            "English": "Katrina",
+            "English (Europe)": "Katrina",
+            "French": "Astrid",
+            "French (US)": "Astrid",
             "German": "Carleon",
             "Spanish": "Papilo",
             "Spanish (US)": "Papilo",
@@ -2823,10 +2823,10 @@
             "Russian": "Нат"
         },
         {
-            "English": "Flick",
-            "English (Europe)": "Flick",
-            "French": "Djason",
-            "French (US)": "Djason",
+            "English": "Nat",
+            "English (Europe)": "Nat",
+            "French": "Djarod",
+            "French (US)": "Djarod",
             "German": "Carlson",
             "Spanish": "Kamilo",
             "Spanish (US)": "Kamilo",
@@ -2839,10 +2839,10 @@
             "Russian": "Флик"
         },
         {
-            "English": "Saharah",
-            "English (Europe)": "Saharah",
-            "French": "Sarah",
-            "French (US)": "Sarah",
+            "English": "Flick",
+            "English (Europe)": "Flick",
+            "French": "Djason",
+            "French (US)": "Djason",
             "German": "Aziza",
             "Spanish": "Alcatifa",
             "Spanish (US)": "Alcatifa",
@@ -2855,10 +2855,10 @@
             "Russian": "Сахара"
         },
         {
-            "English": "Copper",
-            "English (Europe)": "Copper",
-            "French": "Maret",
-            "French (US)": "Maret",
+            "English": "Saharah",
+            "English (Europe)": "Saharah",
+            "French": "Sarah",
+            "French (US)": "Sarah",
             "German": "Harry",
             "Spanish": "Vigilio",
             "Spanish (US)": "Vigilio",
@@ -2871,10 +2871,10 @@
             "Russian": "Коппер"
         },
         {
-            "English": "Booker",
-            "English (Europe)": "Booker",
-            "French": "Chausset",
-            "French (US)": "Chausset",
+            "English": "Copper",
+            "English (Europe)": "Copper",
+            "French": "Maret",
+            "French (US)": "Maret",
             "German": "Wuff",
             "Spanish": "Nocencio",
             "Spanish (US)": "Nocencio",
@@ -2887,10 +2887,10 @@
             "Russian": "Букер"
         },
         {
-            "English": "Wilbur",
-            "English (Europe)": "Wilbur",
-            "French": "Rodrigue",
-            "French (US)": "Rodrigue",
+            "English": "Booker",
+            "English (Europe)": "Booker",
+            "French": "Chausset",
+            "French (US)": "Chausset",
             "German": "Udo",
             "Spanish": "Rodri",
             "Spanish (US)": "Rodri",
@@ -2903,10 +2903,10 @@
             "Russian": "Уилбур"
         },
         {
-            "English": "Orville",
-            "English (Europe)": "Orville",
-            "French": "Morris",
-            "French (US)": "Morris",
+            "English": "Wilbur",
+            "English (Europe)": "Wilbur",
+            "French": "Rodrigue",
+            "French (US)": "Rodrigue",
             "German": "Bodo",
             "Spanish": "Rafa",
             "Spanish (US)": "Rafa",
@@ -2919,10 +2919,10 @@
             "Russian": "Орвилл"
         },
         {
-            "English": "Redd",
-            "English (Europe)": "Redd",
-            "French": "Rounard",
-            "French (US)": "Redd's raffle",
+            "English": "Orville",
+            "English (Europe)": "Orville",
+            "French": "Morris",
+            "French (US)": "Morris",
             "German": "Reiner",
             "Spanish": "Ladino",
             "Spanish (US)": "Ladino",
@@ -2935,10 +2935,10 @@
             "Russian": "Рэдд"
         },
         {
-            "English": "Phineas",
-            "English (Europe)": "Phineas",
-            "French": "Hélium",
-            "French (US)": "Hélium",
+            "English": "Redd",
+            "English (Europe)": "Redd",
+            "French": "Rounard",
+            "French (US)": "Redd's raffle",
             "German": "Helios",
             "Spanish": "Elio",
             "Spanish (US)": "Elio",
@@ -2951,10 +2951,10 @@
             "Russian": "Финеас"
         },
         {
-            "English": "Gracie",
-            "English (Europe)": "Gracie",
-            "French": "Carla",
-            "French (US)": "Carla",
+            "English": "Phineas",
+            "English (Europe)": "Phineas",
+            "French": "Hélium",
+            "French (US)": "Hélium",
             "German": "Grazia",
             "Spanish": "Graciela",
             "Spanish (US)": "Graciela",
@@ -2967,10 +2967,10 @@
             "Russian": "Грейси"
         },
         {
-            "English": "Wisp",
-            "English (Europe)": "Wisp",
-            "French": "Follet",
-            "French (US)": "Follet",
+            "English": "Gracie",
+            "English (Europe)": "Gracie",
+            "French": "Carla",
+            "French (US)": "Carla",
             "German": "Buhu",
             "Spanish": "Buh",
             "Spanish (US)": "Buh",
@@ -2983,10 +2983,10 @@
             "Russian": "Уисп"
         },
         {
-            "English": "Gulliver",
-            "English (Europe)": "Gulliver",
-            "French": "Gulliver",
-            "French (US)": "Gulliver",
+            "English": "Wisp",
+            "English (Europe)": "Wisp",
+            "French": "Follet",
+            "French (US)": "Follet",
             "German": "Gulliver",
             "Spanish": "Gulliver",
             "Spanish (US)": "Gulliver",
@@ -2999,10 +2999,10 @@
             "Russian": "Гулливер"
         },
         {
-            "English": "Gullivarrr",
-            "English (Europe)": "Gullivarrr",
-            "French": "Gullivarrr",
-            "French (US)": "Gullivarrr",
+            "English": "Gulliver",
+            "English (Europe)": "Gulliver",
+            "French": "Gulliver",
+            "French (US)": "Gulliver",
             "German": "Gullivarrr",
             "Spanish": "Gullivarrr",
             "Spanish (US)": "Gullivarrr",
@@ -3015,10 +3015,10 @@
             "Russian": "Гулливарр"
         },
         {
-            "English": "Label",
-            "English (Europe)": "Label",
-            "French": "Tiquette",
-            "French (US)": "Tiquette",
+            "English": "Gullivarrr",
+            "English (Europe)": "Gullivarrr",
+            "French": "Gullivarrr",
+            "French (US)": "Gullivarrr",
             "German": "Minna",
             "Spanish": "Tili",
             "Spanish (US)": "Tili",
@@ -3031,10 +3031,10 @@
             "Russian": "Лэйбл"
         },
         {
-            "English": "Mabel",
-            "English (Europe)": "Mabel",
-            "French": "Layette",
-            "French (US)": "Layette",
+            "English": "Label",
+            "English (Europe)": "Label",
+            "French": "Tiquette",
+            "French (US)": "Tiquette",
             "German": "Tina",
             "Spanish": "Pili",
             "Spanish (US)": "Pili",
@@ -3047,10 +3047,10 @@
             "Russian": "Мэйбл"
         },
         {
-            "English": "Sable",
-            "English (Europe)": "Sable",
-            "French": "Cousette",
-            "French (US)": "Cousette",
+            "English": "Mabel",
+            "English (Europe)": "Mabel",
+            "French": "Layette",
+            "French (US)": "Layette",
             "German": "Sina",
             "Spanish": "Mili",
             "Spanish (US)": "Mili",
@@ -3063,10 +3063,10 @@
             "Russian": "Сэйбл"
         },
         {
-            "English": "Grams",
-            "English (Europe)": "Grams",
-            "French": "Mamiral",
-            "French (US)": "Mamiral",
+            "English": "Sable",
+            "English (Europe)": "Sable",
+            "French": "Cousette",
+            "French (US)": "Cousette",
             "German": "Bonnie",
             "Spanish": "Rosauria",
             "Spanish (US)": "Rosauria",
@@ -3079,10 +3079,10 @@
             "Russian": "Грэмс"
         },
         {
-            "English": "Leilani",
-            "English (Europe)": "Leilani",
-            "French": "Liliane",
-            "French (US)": "Liliane",
+            "English": "Grams",
+            "English (Europe)": "Grams",
+            "French": "Mamiral",
+            "French (US)": "Mamiral",
             "German": "Lore",
             "Spanish": "Marimar",
             "Spanish (US)": "Marimar",
@@ -3095,10 +3095,10 @@
             "Russian": "Лейлани"
         },
         {
-            "English": "Kapp'n",
-            "English (Europe)": "Kapp'n",
-            "French": "Amiral",
-            "French (US)": "Amiral",
+            "English": "Leilani",
+            "English (Europe)": "Leilani",
+            "French": "Liliane",
+            "French (US)": "Liliane",
             "German": "Käpten",
             "Spanish": "Capitán",
             "Spanish (US)": "Capitán",
@@ -3111,10 +3111,10 @@
             "Russian": "Кэпн"
         },
         {
-            "English": "Leila",
-            "English (Europe)": "Leila",
-            "French": "Lila",
-            "French (US)": "Lila",
+            "English": "Kapp'n",
+            "English (Europe)": "Kapp'n",
+            "French": "Amiral",
+            "French (US)": "Amiral",
             "German": "Lotte",
             "Spanish": "Conchita",
             "Spanish (US)": "Conchita",
@@ -3127,10 +3127,10 @@
             "Russian": "Лейла"
         },
         {
-            "English": "Katie",
-            "English (Europe)": "Katie",
-            "French": "Cathie",
-            "French (US)": "Cathie",
+            "English": "Leila",
+            "English (Europe)": "Leila",
+            "French": "Lila",
+            "French (US)": "Lila",
             "German": "Katja",
             "Spanish": "Cati",
             "Spanish (US)": "Cati",
@@ -3143,10 +3143,10 @@
             "Russian": "Кейти"
         },
         {
-            "English": "Blanca",
-            "English (Europe)": "Blanca",
-            "French": "Blanca",
-            "French (US)": "Blanca",
+            "English": "Katie",
+            "English (Europe)": "Katie",
+            "French": "Cathie",
+            "French (US)": "Cathie",
             "German": "Blanka",
             "Spanish": "Blanca",
             "Spanish (US)": "Blanca",
@@ -3159,10 +3159,10 @@
             "Russian": "Бланка"
         },
         {
-            "English": "Porter",
-            "English (Europe)": "Porter",
-            "French": "Lazare",
-            "French (US)": "Lazare",
+            "English": "Blanca",
+            "English (Europe)": "Blanca",
+            "French": "Blanca",
+            "French (US)": "Blanca",
             "German": "Flip",
             "Spanish": "Estasio",
             "Spanish (US)": "Estasio",
@@ -3175,10 +3175,10 @@
             "Russian": "Портер"
         },
         {
-            "English": "Don",
-            "English (Europe)": "Don",
-            "French": "Don",
-            "French (US)": "Don",
+            "English": "Porter",
+            "English (Europe)": "Porter",
+            "French": "Lazare",
+            "French (US)": "Lazare",
             "German": "Don",
             "Spanish": "Forma T.",
             "Spanish (US)": "Forma T.",
@@ -3191,10 +3191,10 @@
             "Russian": "Дон"
         },
         {
-            "English": "Resetti",
-            "English (Europe)": "Resetti",
-            "French": "Resetti",
-            "French (US)": "Resetti",
+            "English": "Don",
+            "English (Europe)": "Don",
+            "French": "Don",
+            "French (US)": "Don",
             "German": "Resetti",
             "Spanish": "Rese T.",
             "Spanish (US)": "Rese T.",
@@ -3207,10 +3207,10 @@
             "Russian": "Ресетти"
         },
         {
-            "English": "Lottie",
-            "English (Europe)": "Lottie",
-            "French": "Lou",
-            "French (US)": "Lou",
+            "English": "Resetti",
+            "English (Europe)": "Resetti",
+            "French": "Resetti",
+            "French (US)": "Resetti",
             "German": "Karlotta",
             "Spanish": "Nuria",
             "Spanish (US)": "Nuria",
@@ -3223,10 +3223,10 @@
             "Russian": "Лотти"
         },
         {
-            "English": "Lyle",
-            "English (Europe)": "Lyle",
-            "French": "Lionel",
-            "French (US)": "Lionel",
+            "English": "Lottie",
+            "English (Europe)": "Lottie",
+            "French": "Lou",
+            "French (US)": "Lou",
             "German": "Fred",
             "Spanish": "Sisebuto",
             "Spanish (US)": "Sisebuto",
@@ -3239,10 +3239,10 @@
             "Russian": "Лайл"
         },
         {
-            "English": "Blathers",
-            "English (Europe)": "Blathers",
-            "French": "Thibou",
-            "French (US)": "Thibou",
+            "English": "Lyle",
+            "English (Europe)": "Lyle",
+            "French": "Lionel",
+            "French (US)": "Lionel",
             "German": "Eugen",
             "Spanish": "Sócrates",
             "Spanish (US)": "Sócrates",
@@ -3255,10 +3255,10 @@
             "Russian": "Блезерс"
         },
         {
-            "English": "Celeste",
-            "English (Europe)": "Celeste",
-            "French": "Céleste",
-            "French (US)": "Céleste",
+            "English": "Blathers",
+            "English (Europe)": "Blathers",
+            "French": "Thibou",
+            "French (US)": "Thibou",
             "German": "Eufemia",
             "Spanish": "Estela",
             "Spanish (US)": "Estela",
@@ -3271,10 +3271,10 @@
             "Russian": "Селеста"
         },
         {
-            "English": "Pavé",
-            "English (Europe)": "Pavé",
-            "French": "Roberto",
-            "French (US)": "Roberto",
+            "English": "Celeste",
+            "English (Europe)": "Celeste",
+            "French": "Céleste",
+            "French (US)": "Céleste",
             "German": "Pavo",
             "Spanish": "Conga",
             "Spanish (US)": "Conga",
@@ -3287,10 +3287,10 @@
             "Russian": "Паве"
         },
         {
-            "English": "Brewster",
-            "English (Europe)": "Brewster",
-            "French": "Robusto",
-            "French (US)": "Robusto",
+            "English": "Pavé",
+            "English (Europe)": "Pavé",
+            "French": "Roberto",
+            "French (US)": "Roberto",
             "German": "Kofi",
             "Spanish": "Fígaro",
             "Spanish (US)": "Fígaro",
@@ -3303,10 +3303,10 @@
             "Russian": "Брюстер"
         },
         {
-            "English": "Jack",
-            "English (Europe)": "Jack",
-            "French": "Jacqu'O",
-            "French (US)": "Jacqu'O",
+            "English": "Brewster",
+            "English (Europe)": "Brewster",
+            "French": "Robusto",
+            "French (US)": "Robusto",
             "German": "Jakob",
             "Spanish": "Soponcio",
             "Spanish (US)": "Soponcio",
@@ -3319,10 +3319,10 @@
             "Russian": "Джек"
         },
         {
-            "English": "Pelly",
-            "English (Europe)": "Pelly",
-            "French": "Opélie",
-            "French (US)": "Opélie",
+            "English": "Jack",
+            "English (Europe)": "Jack",
+            "French": "Jacqu'O",
+            "French (US)": "Jacqu'O",
             "German": "Pelly",
             "Spanish": "Sol",
             "Spanish (US)": "Sol",
@@ -3335,10 +3335,10 @@
             "Russian": "Пелли"
         },
         {
-            "English": "Phyllis",
-            "English (Europe)": "Phyllis",
-            "French": "Élisabec",
-            "French (US)": "Élisabec",
+            "English": "Pelly",
+            "English (Europe)": "Pelly",
+            "French": "Opélie",
+            "French (US)": "Opélie",
             "German": "Peggy",
             "Spanish": "Estrella",
             "Spanish (US)": "Estrella",
@@ -3351,10 +3351,10 @@
             "Russian": "Филлис"
         },
         {
-            "English": "Pete",
-            "English (Europe)": "Pete",
-            "French": "Antoine",
-            "French (US)": "Antoine",
+            "English": "Phyllis",
+            "English (Europe)": "Phyllis",
+            "French": "Élisabec",
+            "French (US)": "Élisabec",
             "German": "Peter",
             "Spanish": "Carturo",
             "Spanish (US)": "Carturo",
@@ -3367,10 +3367,10 @@
             "Russian": "Пит"
         },
         {
-            "English": "Harriet",
-            "English (Europe)": "Harriet",
-            "French": "Ginette",
-            "French (US)": "Ginette",
+            "English": "Pete",
+            "English (Europe)": "Pete",
+            "French": "Antoine",
+            "French (US)": "Antoine",
             "German": "Trude",
             "Spanish": "Marilín",
             "Spanish (US)": "Marilín",
@@ -3383,10 +3383,10 @@
             "Russian": "Харриет"
         },
         {
-            "English": "Zipper",
-            "English (Europe)": "Zipper",
-            "French": "Albin",
-            "French (US)": "Albin",
+            "English": "Harriet",
+            "English (Europe)": "Harriet",
+            "French": "Ginette",
+            "French (US)": "Ginette",
             "German": "Ohs",
             "Spanish": "Coti",
             "Spanish (US)": "Coti",
@@ -3399,10 +3399,10 @@
             "Russian": "Зиппер"
         },
         {
-            "English": "Timmy",
-            "English (Europe)": "Timmy",
-            "French": "Méli",
-            "French (US)": "Méli",
+            "English": "Zipper",
+            "English (Europe)": "Zipper",
+            "French": "Albin",
+            "French (US)": "Albin",
             "German": "Nepp",
             "Spanish": "Tendo",
             "Spanish (US)": "Tendo",
@@ -3415,10 +3415,10 @@
             "Russian": "Тимми"
         },
         {
-            "English": "Tom Nook",
-            "English (Europe)": "Tom Nook",
-            "French": "Tom Nook",
-            "French (US)": "Tom Nook",
+            "English": "Timmy",
+            "English (Europe)": "Timmy",
+            "French": "Méli",
+            "French (US)": "Méli",
             "German": "Tom Nook",
             "Spanish": "Tom Nook",
             "Spanish (US)": "Tom Nook",
@@ -3431,10 +3431,10 @@
             "Russian": "Том Нук"
         },
         {
-            "English": "Tommy",
-            "English (Europe)": "Tommy",
-            "French": "Mélo",
-            "French (US)": "Mélo",
+            "English": "Tom Nook",
+            "English (Europe)": "Tom Nook",
+            "French": "Tom Nook",
+            "French (US)": "Tom Nook",
             "German": "Schlepp",
             "Spanish": "Nendo",
             "Spanish (US)": "Nendo",
@@ -3447,10 +3447,10 @@
             "Russian": "Томми"
         },
         {
-            "English": "Jingle",
-            "English (Europe)": "Jingle",
-            "French": "Rodolphe",
-            "French (US)": "Rodolphe",
+            "English": "Tommy",
+            "English (Europe)": "Tommy",
+            "French": "Mélo",
+            "French (US)": "Mélo",
             "German": "Chris",
             "Spanish": "Renato",
             "Spanish (US)": "Renato",
@@ -3463,10 +3463,10 @@
             "Russian": "Джингл"
         },
         {
-            "English": "Pascal",
-            "English (Europe)": "Pascal",
-            "French": "Pascal",
-            "French (US)": "Pascal",
+            "English": "Jingle",
+            "English (Europe)": "Jingle",
+            "French": "Rodolphe",
+            "French (US)": "Rodolphe",
             "German": "Johannes",
             "Spanish": "Pascal",
             "Spanish (US)": "Pascal",
@@ -3479,10 +3479,10 @@
             "Russian": "Паскаль"
         },
         {
-            "English": "Kicks",
-            "English (Europe)": "Kicks",
-            "French": "Blaise",
-            "French (US)": "Blaise",
+            "English": "Pascal",
+            "English (Europe)": "Pascal",
+            "French": "Pascal",
+            "French (US)": "Pascal",
             "German": "Schubert",
             "Spanish": "Betunio",
             "Spanish (US)": "Betunio",
@@ -3495,10 +3495,10 @@
             "Russian": "Кикс"
         },
         {
-            "English": "Leif",
-            "English (Europe)": "Leif",
-            "French": "Racine",
-            "French (US)": "Racine",
+            "English": "Kicks",
+            "English (Europe)": "Kicks",
+            "French": "Blaise",
+            "French (US)": "Blaise",
             "German": "Gerd",
             "Spanish": "Gandulio",
             "Spanish (US)": "Gandulio",
@@ -3511,10 +3511,10 @@
             "Russian": "Лейф"
         },
         {
-            "English": "Harvey",
-            "English (Europe)": "Harvey",
-            "French": "Joe",
-            "French (US)": "Joe",
+            "English": "Leif",
+            "English (Europe)": "Leif",
+            "French": "Racine",
+            "French (US)": "Racine",
             "German": "Harvey",
             "Spanish": "Fauno",
             "Spanish (US)": "Fauno",
@@ -3527,10 +3527,10 @@
             "Russian": "Харви"
         },
         {
-            "English": "Isabelle",
-            "English (Europe)": "Isabelle",
-            "French": "Marie",
-            "French (US)": "Marie",
+            "English": "Harvey",
+            "English (Europe)": "Harvey",
+            "French": "Joe",
+            "French (US)": "Joe",
             "German": "Melinda",
             "Spanish": "Canela",
             "Spanish (US)": "Canela",
@@ -3543,10 +3543,10 @@
             "Russian": "Изабель"
         },
         {
-            "English": "Digby",
-            "English (Europe)": "Digby",
-            "French": "Max",
-            "French (US)": "Max",
+            "English": "Isabelle",
+            "English (Europe)": "Isabelle",
+            "French": "Marie",
+            "French (US)": "Marie",
             "German": "Moritz",
             "Spanish": "Candrés",
             "Spanish (US)": "Candrés",
@@ -3559,10 +3559,10 @@
             "Russian": "Дигби"
         },
         {
-            "English": "Luna",
-            "English (Europe)": "Luna",
-            "French": "Serena",
-            "French (US)": "Serena",
+            "English": "Digby",
+            "English (Europe)": "Digby",
+            "French": "Max",
+            "French (US)": "Max",
             "German": "Serenada",
             "Spanish": "Alakama",
             "Spanish (US)": "Alakama",
@@ -3575,10 +3575,10 @@
             "Russian": "Луна"
         },
         {
-            "English": "K.K.",
-            "English (Europe)": "K.K.",
-            "French": "Kéké",
-            "French (US)": "Kéké",
+            "English": "Luna",
+            "English (Europe)": "Luna",
+            "French": "Serena",
+            "French (US)": "Serena",
             "German": "K.K.",
             "Spanish": "Totakeke",
             "Spanish (US)": "Totakeke",
@@ -3591,10 +3591,10 @@
             "Russian": "К. К."
         },
         {
-            "English": "DJ KK",
-            "English (Europe)": "DJ KK",
-            "French": "DJ Kéké",
-            "French (US)": "DJ Kéké",
+            "English": "K.K.",
+            "English (Europe)": "K.K.",
+            "French": "Kéké",
+            "French (US)": "Kéké",
             "German": "DJ K.K.",
             "Spanish": "DJ KeKe",
             "Spanish (US)": "DJ KeKe",
@@ -3607,10 +3607,10 @@
             "Russian": "DJ KK"
         },
         {
-            "English": "Tortimer",
-            "English (Europe)": "Tortimer",
-            "French": "Tortimer",
-            "French (US)": "Tortimer",
+            "English": "DJ KK",
+            "English (Europe)": "DJ KK",
+            "French": "DJ Kéké",
+            "French (US)": "DJ Kéké",
             "German": "Törtel",
             "Spanish": "Tórtimer",
             "Spanish (US)": "Tórtimer",
@@ -3623,10 +3623,10 @@
             "Russian": "Тортимер"
         },
         {
-            "English": "Franklin",
-            "English (Europe)": "Franklin",
-            "French": "Dindou",
-            "French (US)": "Dindou",
+            "English": "Tortimer",
+            "English (Europe)": "Tortimer",
+            "French": "Tortimer",
+            "French (US)": "Tortimer",
             "German": "Gernod",
             "Spanish": "Guindo",
             "Spanish (US)": "Guindo",
@@ -3639,10 +3639,10 @@
             "Russian": "Франклин"
         },
         {
-            "English": "Shrunk",
-            "English (Europe)": "Shrunk",
-            "French": "Ciboulot",
-            "French (US)": "Ciboulot",
+            "English": "Franklin",
+            "English (Europe)": "Franklin",
+            "French": "Dindou",
+            "French (US)": "Dindou",
             "German": "Samselt",
             "Spanish": "Dr. Sito",
             "Spanish (US)": "Dr. Sito",
@@ -3655,10 +3655,10 @@
             "Russian": "Шранк"
         },
         {
-            "English": "Wendell",
-            "English (Europe)": "Wendell",
-            "French": "Morsicus",
-            "French (US)": "Morsicus",
+            "English": "Shrunk",
+            "English (Europe)": "Shrunk",
+            "French": "Ciboulot",
+            "French (US)": "Ciboulot",
             "German": "Winci",
             "Spanish": "Da Morsi",
             "Spanish (US)": "Da Morsi",
@@ -3671,10 +3671,10 @@
             "Russian": "Уэнделл"
         },
         {
-            "English": "Rover",
-            "English (Europe)": "Rover",
-            "French": "Charly",
-            "French (US)": "Charly",
+            "English": "Wendell",
+            "English (Europe)": "Wendell",
+            "French": "Morsicus",
+            "French (US)": "Morsicus",
             "German": "Olli",
             "Spanish": "Fran",
             "Spanish (US)": "Fran",
@@ -3685,6 +3685,12 @@
             "Japanese": "みしらぬネコ",
             "Korean": "낯선고양이",
             "Russian": "Ровер"
+        },
+        {
+            "English": "Rover",
+            "English (Europe)": "Rover",
+            "French": "Charly",
+            "French (US)": "Charly"
         },
         {
             "English": "Check Toy Day stockings the day after Toy Day",
@@ -4503,10 +4509,172 @@
             "French (US)": "Saison/Évènement"
         },
         {
-            "English": "What are ideal gifts for villagers?"
+            "English": "What are ideal gifts for villagers?",
+            "English (Europe)": "What are ideal gifts for villagers?",
+            "French": "Quels sont les cadeaux ideaux pour les villageois ?",
+            "French (US)": "Quels sont les cadeaux ideaux pour les villageois ?"
         },
         {
-            "English": "Ideal gifts match the color or style of the villager. The villager is able to wear any of the gifts that are listed."
+            "English": "View Gifts",
+            "English (Europe)": "View Gifts",
+            "French": "Afficher les cadeaux",
+            "French (US)": "Afficher les cadeaux"
+        },
+        {
+            "English": "What are villager gifts?",
+            "English (Europe)": "What are villager gifts?",
+            "French": "Qu'est-ce que les cadeaux des villageois ?",
+            "French (US)": "Qu'est-ce que les cadeaux des villageois ?"
+        },
+        {
+            "English": "Villagers prefer flowers, favorite music, umbrellas (for non-frog villagers), or clothing of their preferred color or style.",
+            "English (Europe)": "Villagers prefer flowers, favorite music, umbrellas (for non-frog villagers), or clothing of their preferred color or style.",
+            "French": "Les villageois préfèrent les fleurs, leur musique préférée, les parapluies (hors villageois de type grenouille), ou encore les vêtements de leur couleur ou style préféré.",
+            "French (US)": "Les villageois préfèrent les fleurs, leur musique préférée, les parapluies (hors villageois de type grenouille), ou encore les vêtements de leur couleur ou style préféré."
+        },
+        {
+            "English": "[View Gifts] will show you all clothes of their preferred style.",
+            "English (Europe)": "[View Gifts] will show you all clothes of their preferred style.",
+            "French": "[Afficher les cadeaux] vous montrera tous les vêtements de leur style préféré.",
+            "French (US)": "[Afficher les cadeaux] vous montrera tous les vêtements de leur style préféré."
+        },
+        {
+            "English": "Additionally, you can choose to filter out if the villager will wear this item or not when gifted.",
+            "English (Europe)": "Additionally, you can choose to filter out if the villager will wear this item or not when gifted.",
+            "French": "De plus, vous pouvez choisir de filtrer si le villageois portera cet objet ou non lorsqu'il sera offert.",
+            "French (US)": "De plus, vous pouvez choisir de filtrer si le villageois portera cet objet ou non lorsqu'il sera offert."
+        },
+        {
+            "English": "Available from either Mabel's temporary shop or Able Sisters shop",
+            "English (Europe)": "Available from either Mabel's temporary shop or Able Sisters shop",
+            "French": "Disponible dans la boutique temporaire de Layette ou chez les Soeurs Doigts de Fée",
+            "French (US)": "Disponible dans la boutique temporaire de Layette ou chez les Soeurs Doigts de Fée"
+        },
+        {
+            "English": "Available at Able Sisters only during Fireworks Shows",
+            "English (Europe)": "Available at Able Sisters only during Fireworks Shows",
+            "French": "Disponible uniquement chez les Soeurs Doigts de Fée durant les spectacles de feux d'artifice",
+            "French (US)": "Disponible uniquement chez les Soeurs Doigts de Fée durant les spectacles de feux d'artifice"
+        },
+        {
+            "English": "Villager can wear",
+            "English (Europe)": "Villager can wear",
+            "French": "Ce que le villageois peut porter",
+            "French (US)": "Ce que le villageois peut porter"
+        },
+        {
+            "English": "Villager cannot wear",
+            "English (Europe)": "Villager cannot wear",
+            "French": "Ce que le villageois ne peut pas porter",
+            "French (US)": "Ce que le villageois ne peut pas porter"
+        },
+        {
+            "English": "Season",
+            "English (Europe)": "Season",
+            "French": "Saison",
+            "French (US)": "Saison"
+        },
+        {
+            "English": "Event Exclusive",
+            "English (Europe)": "Event Exclusive",
+            "French": "Exclusif à l'évènement",
+            "French (US)": "Exclusif à l'évènement"
+        },
+        {
+            "English": "Wedding Season",
+            "English (Europe)": "Wedding Season",
+            "French": "Saison des mariages",
+            "French (US)": "Saison des mariages"
+        },
+        {
+            "English": "Winter Solstice (southern hemisphere)",
+            "English (Europe)": "Winter Solstice (southern hemisphere)",
+            "French": "Solstice d'hiver (hémisphère sud)",
+            "French (US)": "Solstice d'hiver (hémisphère sud)"
+        },
+        {
+            "English": "Winter Solstice (northern hemisphere)",
+            "English (Europe)": "Winter Solstice (northern hemisphere)",
+            "French": "Solstice d'hiver (hémisphère nord)",
+            "French (US)": "Solstice d'hiver (hémisphère nord)"
+        },
+        {
+            "English": "Summer Solstice (northern hemisphere)",
+            "English (Europe)": "Summer Solstice (northern hemisphere)",
+            "French": "Solstice d'été (hémisphère nord)",
+            "French (US)": "Solstice d'été (hémisphère nord)"
+        },
+        {
+            "English": "Summer Solstice (southern hemisphere)",
+            "English (Europe)": "Summer Solstice (southern hemisphere)",
+            "French": "Solstice d'été (hémisphère sud)",
+            "French (US)": "Solstice d'été (hémisphère sud)"
+        },
+        {
+            "English": "Received in June in the Northern Hemisphere and received in December in the Southern Hemisphere",
+            "English (Europe)": "Received in June in the Northern Hemisphere and received in December in the Southern Hemisphere",
+            "French": "Reçu en juin dans l'hémisphère nord et en décembre dans l'hémisphère sud",
+            "French (US)": "Reçu en juin dans l'hémisphère nord et en décembre dans l'hémisphère sud"
+        },
+        {
+            "English": "Received in mail from DAL after 100 flights",
+            "English (Europe)": "Received in mail from DAL after 100 flights",
+            "French": "Reçu par courrier de la DAL après 100 vols",
+            "French (US)": "Reçu par courrier de la DAL après 100 vols"
+        },
+        {
+            "English": "Received in mail from DAL after 130 flights",
+            "English (Europe)": "Received in mail from DAL after 130 flights",
+            "French": "Reçu par courrier de la DAL après 130 vols",
+            "French (US)": "Reçu par courrier de la DAL après 130 vols"
+        },
+        {
+            "English": "Give Jack candy or a lollipop",
+            "English (Europe)": "Give Jack candy or a lollipop",
+            "French": "Donner des bonbons ou des sucettes à Jacqu'O",
+            "French (US)": "Donner des bonbons ou des sucettes à Jacqu'O"
+        },
+        {
+            "English": "Mailed to players after the 1.3.0 update in a letter from Nintendo",
+            "English (Europe)": "Mailed to players after the 1.3.0 update in a letter from Nintendo",
+            "French": "Envoyé aux joueurs après la mise à jour 1.3.0 dans une lettre de Nintendo\r\n",
+            "French (US)": "Envoyé aux joueurs après la mise à jour 1.3.0 dans une lettre de Nintendo"
+        },
+        {
+            "English": "Received in mail from DAL after 15 flights",
+            "English (Europe)": "Received in mail from DAL after 15 flights",
+            "French": "Reçu par courrier de la DAL après 15 vols",
+            "French (US)": "Reçu par courrier de la DAL après 15 vols"
+        },
+        {
+            "English": "Received in mail from DAL after 75 flights",
+            "English (Europe)": "Received in mail from DAL after 75 flights",
+            "French": "Reçu par courrier de la DAL après 75 vols",
+            "French (US)": "Reçu par courrier de la DAL après 75 vols"
+        },
+        {
+            "English": "Received in mail from DAL after 30 flights",
+            "English (Europe)": "Received in mail from DAL after 30 flights",
+            "French": "Reçu par courrier de la DAL après 30 vols",
+            "French (US)": "Reçu par courrier de la DAL après 30 vols"
+        },
+        {
+            "English": "Received in mail from DAL after 200 flights",
+            "English (Europe)": "Received in mail from DAL after 200 flights",
+            "French": "Reçu par courrier de la DAL après 200 vols",
+            "French (US)": "Reçu par courrier de la DAL après 200 vols"
+        },
+        {
+            "English": "Available in Nook's Cranny (upgraded only)",
+            "English (Europe)": "Available in Nook's Cranny (upgraded only)",
+            "French": "Disponible dans la Boutique Nook (version améliorée uniquement)",
+            "French (US)": "Disponible dans la Boutique Nook (version améliorée uniquement)"
+        },
+        {
+            "English": "Received in mail from DAL after 160 flights",
+            "English (Europe)": "Received in mail from DAL after 160 flights",
+            "French": "Reçu par courrier de la DAL après 160 vols",
+            "French (US)": "Reçu par courrier de la DAL après 160 vols"
         }
     ],
     "Achievements": [
@@ -9349,22 +9517,6 @@
             "English (Europe)": "Mega Star"
         },
         {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
             "English": "Bigwig",
             "English (Europe)": "Bigwig"
         },
@@ -9377,164 +9529,16 @@
             "English (Europe)": "Dynamo"
         },
         {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "VIP",
-            "English (Europe)": "VIP"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "Fixer",
-            "English (Europe)": "Fixer"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
             "English": "Writer",
             "English (Europe)": "Writer"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
         },
         {
             "English": "Vagabond",
             "English (Europe)": "Vagabond"
         },
         {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
             "English": "Follower",
             "English (Europe)": "Follower"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
         },
         {
             "English": "Statement",
@@ -9545,712 +9549,20 @@
             "English (Europe)": "Emperor;Empress"
         },
         {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "MVP",
-            "English (Europe)": "MVP"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
             "English": "Tropically Grown",
             "English (Europe)": "Tropically Grown"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
         },
         {
             "English": "Radiant",
             "English (Europe)": "Radiant"
         },
         {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
             "English": "Coconut",
             "English (Europe)": "Coconut"
         },
         {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
             "English": "Supreme Being",
             "English (Europe)": "Supreme Being"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
         }
     ]
 }

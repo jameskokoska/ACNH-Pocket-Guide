@@ -39,7 +39,8 @@ class TodoList extends Component {
       {title: attemptToTranslate('Rock') + " 4", finished: false, picture:"rock.png",small:true},
       {title: attemptToTranslate('Rock') + " 5", finished: false, picture:"rock.png",small:true},
       {title: attemptToTranslate('Rock') + " 6", finished: false, picture:"rock.png",small:true},
-      {title: attemptToTranslate('Check Turnip Prices'), finished: false, picture:"turnip.png"},
+      {title: attemptToTranslate('Turnip Prices'), finished: false, picture:"turnip.png", small:true},
+      {title: attemptToTranslate('Turnip Prices'), finished: false, picture:"turnip.png", small:true},
       {title: attemptToTranslate('Water Flowers'), finished: false, picture:"flower.png"},
       {title: attemptToTranslate('Talk To Villagers'), finished: false, picture:"cat.png"},
       {title: attemptToTranslate('Dig Fossils'), finished: false, picture:"digIcon.png"},
@@ -47,9 +48,9 @@ class TodoList extends Component {
     var storageData = JSON.parse(await getStorage("ToDoList",JSON.stringify(defaultList)));
     var storageShowTurnipLog = await getStorage("TurnipListShow","true") === "true";
     if(this.mounted){
-      console.log("set")
       this.setState({data:storageData, showTurnipLog: storageShowTurnipLog});
     }
+    this.props.setLoadedToDo(true);
   }
 
   saveList = async(data) => {

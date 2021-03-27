@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   textContainer:{
-    marginLeft: 13,
+    marginLeft: 15,
   },
   settingsImage: {
     width: 30,
@@ -64,6 +64,7 @@ const styles = StyleSheet.create({
   settingsContainer: {
     padding: 10,
     paddingLeft: 18,
+    paddingVertical: 22,
     margin: 8,
     flexDirection:"row",
     flex:1,
@@ -71,6 +72,5 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     marginRight: 20,
     borderRadius: 10,
-    height: 70
   },
 });

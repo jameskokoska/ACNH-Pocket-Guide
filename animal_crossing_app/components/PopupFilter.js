@@ -34,7 +34,6 @@ class PopupFilter extends Component {
   }
 
   async componentDidMount(){
-    this.mounted=true;
     var defaultValuesStored = (await getStorage(this.props.title+"Filters","")).split(",");
     console.log(this.props.title+"Filters")
     //Check for filters selected that don't exist, could cause errors, then reset them
@@ -66,8 +65,8 @@ class PopupFilter extends Component {
           this.props.updateSearchFilters(this.defaultValues);
         }
       }.bind(this), 0);
-      
     }
+    this.mounted=true;
   }
 
 
@@ -90,6 +89,18 @@ class PopupFilter extends Component {
   }
 
   render(){
+    if(this.state.loaded===false){
+      console.log("asdsda")
+      return <View style={{width:10, height:10, opacity: 0.2}}>
+          <Modal
+            animationType="fade"
+            transparent={true}
+            visible={true}
+            statusBarTranslucent
+          ><View style={styles.centeredView}></View>
+          </Modal>
+        </View>
+    }
     var dropDownPickerOpacity = 0
     if(this.props.possibleFilters!== undefined && this.props.possibleFilters.length!==0){
       dropDownPickerOpacity = 0.7
@@ -112,7 +123,7 @@ class PopupFilter extends Component {
               <TextFont bold={true} style={{fontSize: 22, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Set Filters</TextFont>
               <View style={{height:10}}/>
               <DropDownPicker
-                searchablePlaceholder={attemptToTranslate("Search for item")}
+                searchablePlaceholder={attemptToTranslate("Search for an item")}
                 searchableError={() => <Text>{attemptToTranslate("Not found")}</Text>}
                 items={this.props.possibleFilters}
                 placeholder={attemptToTranslate("Select filter...")}

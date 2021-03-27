@@ -125,15 +125,19 @@ export class ClothingRouteClass extends Component{
     var title = this.props.title;
     var villagerGifts = false;
     var villagerGiftsFilters = [];
-    var disableFilters = false;
     var subHeader = "";
     var customHeader;
+    var filterSearchable = true;
+    var appBarColor = colors.clothingAppBar[global.darkMode];
+    var titleColor = colors.textWhiteOnly[global.darkMode];
     if(title!==undefined){
       villagerGifts = true;
       villagerGiftsFilters = this.props.villagerGiftsFilters;
-      // disableFilters = true;
       subHeader = this.props.subHeader;
       customHeader = this.props.customHeader;
+      filterSearchable = true;
+      appBarColor = colors.giftsAppBar[global.darkMode];
+      titleColor = colors.textBlack[global.darkMode]
     } else {
       title="Clothing";
       villagerGifts = false;
@@ -141,7 +145,7 @@ export class ClothingRouteClass extends Component{
     return (
       <ListPage 
         customHeader={customHeader}
-        disableFilters={disableFilters}
+        filterSearchable={filterSearchable}
         subHeader={subHeader}
         villagerGifts={villagerGifts}
         villagerGiftsFilters={villagerGiftsFilters}
@@ -197,8 +201,8 @@ export class ClothingRouteClass extends Component{
         ]}
         gridType="smallGrid" //smallGrid, largeGrid, row
         dataGlobalName={"dataLoadedClothing"}
-        appBarColor={colors.clothingAppBar[global.darkMode]}
-        titleColor={colors.textWhiteOnly[global.darkMode]}
+        appBarColor={appBarColor}
+        titleColor={titleColor}
         searchBarColor={colors.searchbarBG[global.darkMode]}
         backgroundColor={colors.lightDarkAccent[global.darkMode]}
         boxColor={true}

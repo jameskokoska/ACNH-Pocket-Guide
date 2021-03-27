@@ -67,7 +67,7 @@ export async function getStorageData(data, checkListKey, defaultValue){
         var monthShort = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
         for(var hemispherePreIndex=0; hemispherePreIndex<hemispherePre.length; hemispherePreIndex++){
           for(var monthShortIndex=0; monthShortIndex<monthShort.length; monthShortIndex++){
-            dataLoading[i][hemispherePre[hemispherePreIndex]+[monthShort[monthShortIndex]+" Active"]] = isActive2(dataLoading[i][hemispherePre[hemispherePreIndex]+[monthShort[monthShortIndex]]],monthShort[monthShortIndex])?"true":"false";
+            dataLoading[i][hemispherePre[hemispherePreIndex]+[monthShort[monthShortIndex]+" Active"]] = dataLoading[i][hemispherePre[hemispherePreIndex]+[monthShort[monthShortIndex]]]!=="NA"?"true":"false";
           }
         }
       }
@@ -419,14 +419,14 @@ export const settings = [
     "keyName" : "breaker",
     "text" : "Creatures",
   },
-  {
-    "keyName" : "settingsListOnlyActiveCreatures",
-    "defaultValue" : "false",
-    "currentValue" : "",
-    "picture" : require("./assets/icons/clockIcon.png"),
-    "displayName" : "List only active creatures",
-    "description" : "Only creatures that can be caught in the current month will be displayed.",
-  },
+  // {
+  //   "keyName" : "settingsListOnlyActiveCreatures",
+  //   "defaultValue" : "false",
+  //   "currentValue" : "",
+  //   "picture" : require("./assets/icons/clockIcon.png"),
+  //   "displayName" : "List only active creatures",
+  //   "description" : "Only creatures that can be caught in the current month will be displayed.",
+  // },
   {
     "keyName" : "settingsCreaturesLeavingWarning",
     "defaultValue" : "true",

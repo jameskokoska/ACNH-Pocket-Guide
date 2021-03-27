@@ -48,6 +48,13 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
+-Color fixes
+-Better headers for Achievements and Events page
+-Customizable home screen sections
+-Added more translations
+-Updated calendar data to align with new data parameters
+-Removed list only active creatures setting, this can now be done through filters
+-
 -Added villager gift guide!
 -Open a villagers popup and click [View Gifts] to see a list
 -Can now search wishlist
@@ -62,6 +69,9 @@ global.changelog = `
 -Fixed achievements stamp loading
 -Added missing modifiers in addition to nouns in achievements page
 -Settings popup descriptions are improved
+-Check marks now properly sync with variations
+-Added ability to filter what villagers can wear in gift guide
+-Fixed crashes associated to villager gift guide
 -A restart is required when you change languages, rewrote the way translations are applied - for efficiency
 -
 -Added achievements page!
@@ -171,6 +181,7 @@ class App extends Component {
     await Font.loadAsync({
       "ArialRoundedBold": require('./assets/fonts/arialRoundBold.ttf'),
     });
+    
     
     if(this.mounted){
       this.setState({
@@ -321,9 +332,9 @@ class App extends Component {
       } else if (this.state.currentPage===16){
         currentPageView = <CalendarPage/>
       } else if (this.state.currentPage===17){
-        currentPageView = <NewItemsPage/>
+        currentPageView = <NewItemsPage setVillagerGift={this.setVillagerGift}/>
       } else if (this.state.currentPage===18){
-        currentPageView = <WishlistPage setPage={this.setPage}/>
+        currentPageView = <WishlistPage setVillagerGift={this.setVillagerGift} setPage={this.setPage}/>
       } else if (this.state.currentPage===19){
         currentPageView = <AchievementsPage/>
       } else if (this.state.currentPage===20){

@@ -311,13 +311,14 @@ export default (props) =>{
                 }
               }
               //If list only active creatures for the month, don't add it if === NA
-              if(props.activeCreaturesMonth && getSettingsString("settingsListOnlyActiveCreatures") === "true"){
-                var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH "
-                var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
-                if(item[hemispherePre+currentMonthShort]==="NA"){
-                  continue;
-                }
-              }
+              //This is now done through filtering
+              // if(props.activeCreaturesMonth && getSettingsString("settingsListOnlyActiveCreatures") === "true"){
+              //   var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH "
+              //   var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
+              //   if(item[hemispherePre+currentMonthShort]==="NA"){
+              //     continue;
+              //   }
+              // }
               // if(item.[props.textProperty[j]]===previousVariation){
               //   previousVariation = item.[props.textProperty[j]];
               if(item["Name"]===previousVariation){
@@ -371,11 +372,20 @@ export default (props) =>{
       restSpeedThreshold: 0.01,
       restDisplacementThreshold: 0.001
   };
-
   var header = (<>
       <Animated.View style={[styles.header, {transform: [{translateY}]}]}>
+        {/* <Animated.View style={{zIndex:99, 
+          transform: [
+              { scale: Animated.multiply(1/headerHeight,scrollY.current) },
+              { rotate: '0deg'},
+            ],
+          width: Dimensions.get('window').width, 
+          height: Dimensions.get('window').height, position:"absolute"}} 
+        pointerEvents="none"> */}
         <Header disableFilters={props.disableFilters} customHeader={props.customHeader} disableSearch={props.disableSearch} subHeader={props.subHeader} searchFilters={searchFilters} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
+        {/* </Animated.View> */}
       </Animated.View>
+
     </>);
   var paddingTop = headerHeight*1.18;
   var paddingBottom = Dimensions.get('window').height;
@@ -396,7 +406,11 @@ export default (props) =>{
     style={paddingBottom: paddingBottom,marginTop: -10}
     paddingBottomContent = 10;
   }
-  if(data==="empty"){
+  if(data==="empty" && props.title==="Active Creatures"){
+    return(
+      <View/>
+    )
+  }else if(data==="empty"){
     return(<>
         <HeaderLoading disableSearch={props.disableSearch} title={props.title} headerHeight={headerHeight} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
       </>

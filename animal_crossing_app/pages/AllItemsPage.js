@@ -37,6 +37,7 @@ class AllItemsPage extends Component {
     }
     return(
         <ListPage 
+          setVillagerGift={this.props.setVillagerGift}
           disableFilters={disableFilters}
           setPage={this.props.setPage}
           tabs={false}

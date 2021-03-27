@@ -13,6 +13,7 @@ export default class NewItemsPage extends Component {
   render(){
     return(
       <AllItemsPage 
+        setVillagerGift={this.props.setVillagerGift}
         disableFilters={true}
         title="New Items"
         subHeader="Items that have been added from the most recent update"

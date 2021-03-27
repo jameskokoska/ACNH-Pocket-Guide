@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {FlatList, TouchableNativeFeedback, Dimensions, Vibration, Image, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {Animated, FlatList, TouchableNativeFeedback, Dimensions, Vibration, Image, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import {Agenda} from 'react-native-calendars';
 import TextFont from '../components/TextFont';
 import colors from '../Colors'
@@ -9,8 +9,9 @@ import {translateDateRange, attemptToTranslateItem, capitalize, getSettingsStrin
 import {getSpecialOccurrenceDate} from "../components/EventContainer"
 import FastImage from '../components/FastImage';
 import DelayInput from "react-native-debounce-input";
-import {MailLink, ExternalLink, SubHeader, Header, Paragraph} from "../components/Formattings"
+import {MailLink, ExternalLink, SubHeader, Paragraph} from "../components/Formattings"
 import {LocaleConfig} from 'react-native-calendars';
+import Header from "../components/Header"
 
 
 
@@ -111,23 +112,6 @@ export default class CalendarPage extends Component {
         if (!this.state.items[strTime]) {
           this.state.items[strTime] = [];
 
-          if(date.getDay()===0){
-            this.state.items[strTime].push({
-              name: 'Daisy Mae',
-              time: getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 12:00" : "5 AM - 12 PM",
-              image:"turnip.png",
-              color: colors.white,
-            });
-            this.state.itemsColor[strTime] = styleRepeatEvent;
-          } else if (date.getDay()===6){
-            this.state.items[strTime].push({
-              name: 'K.K. Slider',
-              time: getSettingsString("settingsUse24HourClock") === "true" ? "20:00 - 24:00" : "8 PM - 12 AM",
-              image:"music.png",
-              color: colors.white,
-            });
-            this.state.itemsColor[strTime] = styleRepeatEvent;
-          }
           villagerData.map( (villager, index)=>{
             if((date.getMonth()+1).toString()===(villager["Birthday"].split("/"))[0]&& date.getDate().toString()===(villager["Birthday"].split("/"))[1]){
               if(global.collectionList.includes("villagerCheckList"+villager["Name"])){
@@ -150,10 +134,28 @@ export default class CalendarPage extends Component {
             }
           })
 
+          if(date.getDay()===0){
+            this.state.items[strTime].push({
+              name: 'Daisy Mae',
+              time: getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 12:00" : "5 AM - 12 PM",
+              image:"turnip.png",
+              color: colors.white,
+            });
+            this.state.itemsColor[strTime] = styleRepeatEvent;
+          } else if (date.getDay()===6){
+            this.state.items[strTime].push({
+              name: 'K.K. Slider',
+              time: getSettingsString("settingsUse24HourClock") === "true" ? "20:00 - 24:00" : "8 PM - 12 AM",
+              image:"music.png",
+              color: colors.white,
+            });
+            this.state.itemsColor[strTime] = styleRepeatEvent;
+          }
+
           seasonData.map( (event, index)=>{
             var eventName = attemptToTranslateItem(event["Name"])
-            if(event["Northern Hemisphere Dates"]!=="NA" && getSettingsString("settingsNorthernHemisphere")==="true"){
-              if(this.isDateInRange(event["Northern Hemisphere Dates"], date.getFullYear(), date)){
+            if(event["Dates (Northern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")==="true"){
+              if(this.isDateInRange(event["Dates (Northern Hemisphere)"], date.getFullYear(), date)){
                 this.state.items[strTime].push({
                   name: capitalize(eventName),
                   time: event["Type"],
@@ -161,8 +163,8 @@ export default class CalendarPage extends Component {
                   color: colors.white,
                 });
               }
-            } else if (event["Southern Hemisphere Dates"]!=="NA" && getSettingsString("settingsNorthernHemisphere")!=="true"){
-              if(this.isDateInRange(event["Southern Hemisphere Dates"], date.getFullYear(), date)){
+            } else if (event["Dates (Southern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")!=="true"){
+              if(this.isDateInRange(event["Dates (Southern Hemisphere)"], date.getFullYear(), date)){
                 this.state.items[strTime].push({
                   name: capitalize(eventName),
                   time: event["Type"],
@@ -170,16 +172,7 @@ export default class CalendarPage extends Component {
                   color: colors.white,
                 });
               }
-            } else if (event[date.getFullYear()+" Dates"]!=="NA"){
-              if(this.isDateInRange(event[date.getFullYear()+" Dates"], date.getFullYear(), date)){
-                this.state.items[strTime].push({
-                  name: capitalize(event["Name"]),
-                  time: event["Type"],
-                  image: event["Name"],
-                  color: colors.white,
-                });
-              }
-            }
+            } 
           })
 
           specialEvents.map( (event, index)=>{
@@ -357,47 +350,32 @@ class AllEventsList extends Component{
     }
   }
 
+  headerHeight = Dimensions.get('window').height*0.3;
+  scrollY = new Animated.Value(0);
+  scrollYClamped = Animated.diffClamp(this.scrollY, 0, this.headerHeight/0.8); //or 1.5
+  translateY = this.scrollYClamped.interpolate({
+    inputRange: [0, this.headerHeight],
+    outputRange: [0, -(this.headerHeight)],
+  });
+
   render(){
     return(<>
-      <View style={{height:40}}/>
-      <Header>All Events</Header>
-      <View style={{height:10}}/>
-      <View style={{paddingVertical: 8,
-        paddingHorizontal: 10,
-        marginHorizontal: 20,
-        borderRadius: 10,
-        alignItems: 'center',
-        flexDirection: 'row',
-        marginBottom: 10,
-        opacity: 0.7,
-        backgroundColor:colors.searchbarBG[global.darkMode]}}
-      >
-      <DelayInput
-        allowFontScaling={false}
-        placeholder={attemptToTranslate("Search")}
-        style={{color: '#515151',
-          fontSize: 17,
-          lineHeight: 22,
-          marginLeft: 8,
-          width:'100%',
-          paddingRight: 25,
-          height: 30,
-        }}
-        onChangeText={(text)=>{this.handleSearch(text)}} 
-        onFocus={() => {Vibration.vibrate(15);}}
-        minLength={2}
-        delayTimeout={400}
-      />
-      </View>
-      <View style={{ height: Dimensions.get('window').height}}>
-        <FlatList
+      <View style={{backgroundColor:colors.background[global.darkMode], height:Dimensions.get('window').height, width:Dimensions.get('window').width}}>
+        <Animated.View style={{width:Dimensions.get('window').width,position:"absolute", zIndex:1, transform: [{ translateY: this.translateY }]}}>
+          <View style={{backgroundColor: colors.background[global.darkMode], flex: 1,justifyContent: 'flex-end',height:this.headerHeight,}}>
+            <Header disableFilters={true} disableSearch={false} title={"Events"} headerHeight={this.headerHeight} updateSearch={this.handleSearch} appBarColor={colors.background[global.darkMode]} searchBarColor={colors.searchbarBG[global.darkMode]} titleColor={colors.textBlack[global.darkMode]}/>
+          </View>
+        </Animated.View>
+        <Animated.FlatList
+          onScroll={Animated.event([{ nativeEvent: {contentOffset: {y: this.scrollY}}}],{useNativeDriver: true,},)}
           data={this.state.searchData}
           renderItem={renderItemFlatList}
           keyExtractor={(item, index) => `list-item-${index}-${item.["Unique Entry ID"]}`}
-          contentContainerStyle={{paddingBottom:Dimensions.get('window').height/2}}
+          contentContainerStyle={{paddingBottom:Dimensions.get('window').height}}
+          style={{paddingTop:this.headerHeight}}
         />
       </View>
-      </>
+    </>
     )
   }
 }
@@ -406,22 +384,11 @@ const renderItemFlatList = ({item}) => {
   var image = <View/>
   image = <Image style={{width: 50, height: 50, resizeMode:'contain',}} source={getPhoto(item.["Name"].toLowerCase(), item.["Type"].toLowerCase())}/>
   var date = "";
-  if(item["Northern Hemisphere Dates"]!=="NA" && getSettingsString("settingsNorthernHemisphere")==="true"){
-    date = item.["Northern Hemisphere Dates"];
-  } else if (item["Southern Hemisphere Dates"]!=="NA" && getSettingsString("settingsNorthernHemisphere")!=="true"){
-    date = item.["Southern Hemisphere Dates"];
-  } else if (item[getCurrentDateObject().getFullYear()+" Dates"]!=="NA" && item[getCurrentDateObject().getFullYear()+" Dates"]!== undefined){
-    date = item.[getCurrentDateObject().getFullYear()+" Dates"];
-  } else if (item[getCurrentDateObject().getFullYear()-1+" Dates"]!=="NA" && item[getCurrentDateObject().getFullYear()-1+" Dates"]!== undefined){
-    date = item.[getCurrentDateObject().getFullYear()-1+" Dates"];
-    date = date+" ("+(getCurrentDateObject().getFullYear()-1).toString()+")"
-  } else if (item[getCurrentDateObject().getFullYear()-2+" Dates"]!=="NA" && item[getCurrentDateObject().getFullYear()-2+" Dates"]!== undefined){
-    date = item.[getCurrentDateObject().getFullYear()-2+" Dates"];
-    date = date+" ("+(getCurrentDateObject().getFullYear()-2).toString()+")"
-  } else if (item[getCurrentDateObject().getFullYear()-3+" Dates"]!=="NA" && item[getCurrentDateObject().getFullYear()-3+" Dates"] !== undefined){
-    date = item.[getCurrentDateObject().getFullYear()-3+" Dates"];
-    date = date+" ("+(getCurrentDateObject().getFullYear()-3).toString()+")"
-  }
+  if(item["Dates (Northern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")==="true"){
+    date = item.["Dates (Northern Hemisphere)"];
+  } else if (item["Dates (Southern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")!=="true"){
+    date = item.["Dates (Southern Hemisphere)"];
+  } 
   date = date.replace(/[^\x00-\x7F]/g, "-");
   date = date.replace("--", "- ");
   var dateComp;

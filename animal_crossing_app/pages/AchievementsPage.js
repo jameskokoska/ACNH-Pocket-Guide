@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {FlatList, Dimensions, Linking, TextInput, Vibration,TouchableNativeFeedback,TouchableOpacity,StyleSheet, Text, View, Image} from 'react-native';
+import {Animated,FlatList, Dimensions, Linking, TextInput, Vibration,TouchableNativeFeedback,TouchableOpacity,StyleSheet, Text, View, Image} from 'react-native';
 import TextFont from '../components/TextFont';
 import {getCurrentDateObject, getMonth, getWeekDayShort} from '../components/DateFunctions';
 import {getStorage, checkOff, capitalize, commas, removeBrackets} from "../LoadJsonData"
@@ -10,7 +10,8 @@ import PopupAddTask from "../components/PopupAddTask"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {getSettingsString, attemptToTranslate, attemptToTranslateAchievement} from "../LoadJsonData"
 import FastImage from "../components/FastImage"
-import {Header, SubHeader, Paragraph} from "../components/Formattings"
+import {SubHeader, Paragraph} from "../components/Formattings"
+import Header from "../components/Header"
 import {PopupBottomCustom} from "../components/Popup"
 import DelayInput from "react-native-debounce-input";
 import FadeInOut from "../components/FadeInOut";
@@ -56,40 +57,25 @@ export default class AchievementsPage extends Component {
       }
     }
   }
+
+  headerHeight = Dimensions.get('window').height*0.3;
+  scrollY = new Animated.Value(0);
+  scrollYClamped = Animated.diffClamp(this.scrollY, 0, this.headerHeight/0.8); //or 1.5
+  translateY = this.scrollYClamped.interpolate({
+    inputRange: [0, this.headerHeight],
+    outputRange: [0, -(this.headerHeight)],
+  });
   
   render(){
     return <>
-      <View style={{height:40}}/>
-      <Header>Achievements</Header>
-      <View style={{height:10}}/>
-      <View style={{paddingVertical: 8,
-        paddingHorizontal: 10,
-        marginHorizontal: 20,
-        borderRadius: 10,
-        alignItems: 'center',
-        flexDirection: 'row',
-        marginBottom: 10,
-        opacity: 0.7,
-        backgroundColor:colors.searchbarBG[global.darkMode]}}
-      >
-      <DelayInput
-        allowFontScaling={false}
-        placeholder={attemptToTranslate("Search")}
-        style={{color: '#515151',
-          fontSize: 17,
-          lineHeight: 22,
-          marginLeft: 8,
-          width:'100%',
-          paddingRight: 25,
-          height: 30,
-        }}
-        onChangeText={(text)=>{this.handleSearch(text)}} 
-        onFocus={() => {Vibration.vibrate(15);}}
-        minLength={2}
-        delayTimeout={400}
-      />
-      </View>
-      <FlatList
+      <Animated.View style={{width:Dimensions.get('window').width,position:"absolute", zIndex:1, transform: [{ translateY: this.translateY }]}}>
+        <View style={{backgroundColor: colors.background[global.darkMode], flex: 1,justifyContent: 'flex-end',height:this.headerHeight,}}>
+          <Header disableFilters={true} disableSearch={false} title={"Achievements"} headerHeight={this.headerHeight} updateSearch={this.handleSearch} appBarColor={colors.achievementsAppBar[global.darkMode]} searchBarColor={colors.searchbarBG[global.darkMode]} titleColor={colors.textBlack[global.darkMode]}/>
+        </View>
+      </Animated.View>
+      <Animated.FlatList
+        style={{paddingTop:this.headerHeight+5}}
+        onScroll={Animated.event([{ nativeEvent: {contentOffset: {y: this.scrollY}}}],{useNativeDriver: true,},)}
         data={this.state.data}
         renderItem={({item}) => {
           return(<Achievement achievement={item} storageData={this.storageData} openPopup={this.openPopup}/>)

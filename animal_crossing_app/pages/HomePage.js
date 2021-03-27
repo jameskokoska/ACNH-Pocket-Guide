@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Dimensions, TouchableOpacity, TextInput, StyleSheet, Text, View} from 'react-native';
+import {Image, Dimensions, TouchableOpacity, TextInput, StyleSheet, Text, View} from 'react-native';
 import Clock from '../components/Clock';
 import HomeContentArea from '../components/HomeContentArea';
 import {EventContainer,getEventsDay} from '../components/EventContainer';
@@ -7,7 +7,7 @@ import StoreHoursContainer from '../components/StoreHoursContainer';
 import ProgressContainer from '../components/ProgressContainer';
 import LottieView from 'lottie-react-native';
 import colors from '../Colors'
-import {capitalize,countCollection} from "../LoadJsonData"
+import {capitalize,countCollection,getStorage} from "../LoadJsonData"
 import TextFont from "../components/TextFont"
 import ActiveCreatures from "../components/ActiveCreatures"
 import CurrentVillagers from "../components/CurrentVillagers"
@@ -19,7 +19,9 @@ import {translateIslandNameInputLabel2, translateIslandNameInputLabel1, getSetti
 import { ScrollView } from 'react-native-gesture-handler';
 import {PopupBottomCustom} from "../components/Popup"
 import VillagerPopup from "../popups/VillagerPopup"
-
+import ToggleSwitch from 'toggle-switch-react-native'
+import {SubHeader} from "../components/Formattings"
+import FadeInOut from "../components/FadeInOut"
 
 function addDays(date, days) {
   var result = new Date(date);
@@ -32,10 +34,40 @@ class HomePage extends Component {
     super(props);
     this.scrollViewRef = React.createRef();
     this.openPopup = this.openPopup.bind(this);
+    this.loadSections();
+    this.state = {sections:""}
   }
   openPopup(item){
     this.villagerPopupPopup.setPopupVisible(true, item);
   }
+  setPages = (checked,name) =>{
+    var sections = this.state.sections;
+    sections[name] = checked;
+    this.setState({sections:sections});
+    this.saveSections(sections);
+  }
+
+  saveSections = async(data) => {
+    await AsyncStorage.setItem("Sections", JSON.stringify(data));
+  }
+
+  loadSections = async() => {
+    const defaultSections = {
+      "Events" : true,
+      "To-Do" : true,
+      "Collection" : true,
+      "Profile" : true,
+      "Store Hours" : true,
+      "Active Creatures" : true,
+    }
+    var storageData = JSON.parse(await getStorage("Sections",JSON.stringify(defaultSections)));
+    this.setState({sections:storageData});
+  }
+
+  setLoadedToDo = (status) => {
+    this.setState({loadedToDo: status})
+  }
+
   render(){
     var fishCount = countCollection("fishCheckList");
     var fishPercentage = fishCount/80 * 100;
@@ -77,127 +109,186 @@ class HomePage extends Component {
     } else if (todayEvents[0]!==undefined && (todayEvents[0]["Name"]==="Festivale" || todayEvents[0]["Name"].includes("Firework")) || todayEvents[1]!==undefined && (todayEvents[1]["Name"]==="Festivale" || todayEvents[1]["Name"].includes("Firework"))){
       landscape = <View style={{width:Dimensions.get('window').width, height: "100%", zIndex:1, position:'absolute', overflow: "hidden" }}><LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeCelebration.json')}/></View>
     }
-    return <>
-      <ScrollView ref={this.scrollViewRef}>
-        <View style={{height:45}}/>
-        <Clock swapDate={doWeSwapDate()}/>
-        <View style={{height:125}}/>
-        <HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.eventsColor[global.darkMode]} title="Events" titleColor={colors.eventsColor[global.darkModeReverse]}>
-          {todayTitle}
-          {todayEvents.map( (event, index)=>
-            <EventContainer 
-              key={event["Name"]} 
-              backgroundColor={colors.eventBackground[global.darkMode]}
-              textColor={colors.textBlack[global.darkMode]}
-              image={event["Image"]}
-              text={event["Name"]}
-              textBottom={capitalize(event["Time"])}
-              month={event["Month"]} 
-              day={event["Day Start"]}
-            />
-          )}
-          {tomorrowTitle}
-          {tomorrowEvents.map( (event, index)=>
-            <EventContainer 
-              key={event["Name"]} 
-              backgroundColor={colors.eventBackground[global.darkMode]}
-              textColor={colors.textBlack[global.darkMode]}
-              image={event["Image"]}
-              text={event["Name"]}
-              textBottom={capitalize(event["Time"])}
-              month={event["Month"]} 
-              day={event["Day Start"]}
-            />
-          )}
-          {thisWeekTitle}
-          {thisWeekEvents.map( (event, index)=>
-            <EventContainer 
-              key={event["Name"]} 
-              backgroundColor={colors.eventBackground[global.darkMode]}
-              textColor={colors.textBlack[global.darkMode]}
-              image={event["Image"]}
-              text={event["Name"]}
-              textBottom={capitalize(event["Time"])}
-              month={event["Month"]} 
-              day={event["Day Start"]}
-            />
-          )}
-          <View style={{height: 30}}/>
-        </HomeContentArea>
-        <HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.todoColor[global.darkMode]} title="To-Do" titleColor={colors.todoColor[global.darkModeReverse]}>
-          <View style={{height: 15}}/>
-          <TodoList/>
-          <View style={{height: 15}}/>
-        </HomeContentArea>
-        {/* <HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.todoColor[global.darkMode]} title="Visitors" titleColor={colors.visitorsColor[global.darkModeReverse]}>
-          <View style={{height: 15}}/>
-          <VisitorsList/>
-          <View style={{height: 15}}/>
-        </HomeContentArea> */}
-        <HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.collectionColor[global.darkMode]} title="Collection" titleColor={colors.collectionColor[global.darkModeReverse]}>
-          <View style={{height: 15}}/>
-          <ProgressContainer color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={fishPercentage} image={require("../assets/icons/fish.png")} text={attemptToTranslate("Fish") + " " + fishCount + "/80"}/>
-          <ProgressContainer color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={seaPercentage} image={require("../assets/icons/octopus.png")} text={attemptToTranslate("Sea Creatures") + " " + seaCount + "/40"}/>
-          <ProgressContainer color={colors.bugAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={bugsPercentage} image={require("../assets/icons/bugs.png")} text={attemptToTranslate("Bugs") + " " + bugsCount + "/80"}/>
-          <ProgressContainer color={colors.fossilAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={fossilPercentage} image={require("../assets/icons/bones.png")} text={attemptToTranslate("Fossils") + " " + fossilCount + "/73"}/>
-          <ProgressContainer color={colors.artAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={artPercentage} image={require("../assets/icons/colorPalette.png")} text={attemptToTranslate("Art") + " " + artCount + "/43"}/>
-          <ProgressContainer color={colors.musicAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={musicPercentage} image={require("../assets/icons/music.png")} text={attemptToTranslate("Songs") + " " + musicCount + "/95"}/>
-          <ProgressContainer color={colors.emojipediaAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={emojipediaPercentage} image={require("../assets/icons/emote.png")} text={attemptToTranslate("Emotes") + " " + emojipediaCount + "/" + global.dataLoadedReactions[0].length.toString()}/>
-          <View style={{height: 15}}/>
-        </HomeContentArea>
-        <HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.profileColor[global.darkMode]} title="Profile" titleColor={colors.profileColor[global.darkModeReverse]}>
-          <View style={{height: 37}}/>
-          <View style={{alignItems:"center"}}>
-            <TextInput
-              allowFontScaling={false}
-              style={{fontSize: 30, width:"100%", textAlign:"center", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
-              onChangeText={async (text) => {AsyncStorage.setItem("name", text); global.name=text; console.log(text)}}
-              placeholder={"["+attemptToTranslate("Name")+"]"}
-              placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
-              defaultValue={global.name}
-              multiline={true}
-            />
-            <TextFont bold={true} style={{marginTop: 0, marginBottom: -2, color:colors.fishText[global.darkMode]}}>{translateIslandNameInputLabel1()}</TextFont>
-            <TextInput
-              allowFontScaling={false}
-              style={{fontSize: 30, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
-              onChangeText={async (text) => {AsyncStorage.setItem("islandName", text); global.islandName=text}}
-              placeholder={"["+attemptToTranslate("Island")+"]"}
-              placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
-              defaultValue={global.islandName}
-              multiline={true}
-            />
-            <TextFont bold={true} style={{marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{translateIslandNameInputLabel2()}</TextFont>
-            <View style={{height: 5}}/>
-            <TouchableOpacity onPress={() => this.props.setPage(13)}>
-              <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{getSettingsString("settingsNorthernHemisphere")==="true" ? "Northern Hemisphere" : "Southern Hemisphere"}</TextFont>
-            </TouchableOpacity>
-          </View>
-          <View style={{height: 30}}/>
-          <CurrentVillagers openPopup={this.openPopup} setPage={this.props.setPage}/>
-        </HomeContentArea>
-        <HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.storeHoursColor[global.darkMode]} title="Store Hours" titleColor={colors.storeHoursColor[global.darkModeReverse]}>
-          <View style={{height: 15}}/>
-          <StoreHoursContainer image={require("../assets/icons/nook.png")} text="Nook's Cranny" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "8:00 - 22:00" : "8 AM - 10 PM"} openHour={8} closeHour={22}/>
-          <StoreHoursContainer image={require("../assets/icons/able.png")} text="Able Sisters" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "9:00 - 21:00" : "9 AM - 9 PM"} openHour={9} closeHour={21}/>
-          <View style={{height: 15}}/>
-        </HomeContentArea>
-        <HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.activeCreaturesColor[global.darkMode]} title="Active Creatures" titleColor={colors.activeCreaturesColor[global.darkModeReverse]}>
-          <ActiveCreatures scrollViewRef={this.scrollViewRef}/>
-        </HomeContentArea>
+    const sections = this.state.sections;
+    return <View style={{height:"100%",width:"100%"}}>
+      <PopupBottomCustom ref={(popupSettings) => this.popupSettings = popupSettings} onClose={()=>{}}>
+        <ConfigureHomePages setPages={(checked,name)=>this.setPages(checked,name)} sections={this.state.sections}/>
+      </PopupBottomCustom>
+        <ScrollView ref={this.scrollViewRef}>
+          <View style={{height:45}}/>
+          <Clock swapDate={doWeSwapDate()}/>
+          <View style={{height:125}}/>
+          <TouchableOpacity style={{padding:10}} 
+            onPress={()=>this.popupSettings.setPopupVisible(true)
+          }>
+            <TextFont bold={false} style={{marginRight:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"right"}}>{"Edit Sections"}</TextFont>
+          </TouchableOpacity>
+          <View style={{height:50}}/>
+          {/* If todo is the first page to be loaded, wait to fade in */}
+          <FadeInOut fadeIn={this.state.sections!==""&&(this.state.sections["Events"] || this.state.loadedToDo===true || this.state.sections["To-Do"]===false)?true:false} duration={200} startValue={0} endValue={1} maxFade={1} minScale={0.9} >
+            {sections["Events"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.eventsColor[global.darkMode]} title="Events" titleColor={colors.eventsColor[global.darkModeReverse]}>
+              {todayTitle}
+              {todayEvents.map( (event, index)=>
+                <EventContainer 
+                  key={event["Name"]} 
+                  backgroundColor={colors.eventBackground[global.darkMode]}
+                  textColor={colors.textBlack[global.darkMode]}
+                  image={event["Image"]}
+                  text={event["Name"]}
+                  textBottom={capitalize(event["Time"])}
+                  month={event["Month"]} 
+                  day={event["Day Start"]}
+                />
+              )}
+              {tomorrowTitle}
+              {tomorrowEvents.map( (event, index)=>
+                <EventContainer 
+                  key={event["Name"]} 
+                  backgroundColor={colors.eventBackground[global.darkMode]}
+                  textColor={colors.textBlack[global.darkMode]}
+                  image={event["Image"]}
+                  text={event["Name"]}
+                  textBottom={capitalize(event["Time"])}
+                  month={event["Month"]} 
+                  day={event["Day Start"]}
+                />
+              )}
+              {thisWeekTitle}
+              {thisWeekEvents.map( (event, index)=>
+                <EventContainer 
+                  key={event["Name"]} 
+                  backgroundColor={colors.eventBackground[global.darkMode]}
+                  textColor={colors.textBlack[global.darkMode]}
+                  image={event["Image"]}
+                  text={event["Name"]}
+                  textBottom={capitalize(event["Time"])}
+                  month={event["Month"]} 
+                  day={event["Day Start"]}
+                />
+              )}
+              <View style={{height: 30}}/>
+            </HomeContentArea>:<View/>}
+            {sections["To-Do"]===true?<HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.todoColor[global.darkMode]} title="To-Do" titleColor={colors.todoColor[global.darkModeReverse]}>
+              <View style={{height: 15}}/>
+              <TodoList setLoadedToDo={this.setLoadedToDo}/>
+              <View style={{height: 15}}/>
+            </HomeContentArea>:<View/>}
+            {/* <HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.todoColor[global.darkMode]} title="Visitors" titleColor={colors.visitorsColor[global.darkModeReverse]}>
+              <View style={{height: 15}}/>
+              <VisitorsList/>
+              <View style={{height: 15}}/>
+            </HomeContentArea> */}
+            {sections["Collection"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.collectionColor[global.darkMode]} title="Collection" titleColor={colors.collectionColor[global.darkModeReverse]}>
+              <View style={{height: 15}}/>
+              <ProgressContainer color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={fishPercentage} image={require("../assets/icons/fish.png")} text={attemptToTranslate("Fish") + " " + fishCount + "/80"}/>
+              <ProgressContainer color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={seaPercentage} image={require("../assets/icons/octopus.png")} text={attemptToTranslate("Sea Creatures") + " " + seaCount + "/40"}/>
+              <ProgressContainer color={colors.bugAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={bugsPercentage} image={require("../assets/icons/bugs.png")} text={attemptToTranslate("Bugs") + " " + bugsCount + "/80"}/>
+              <ProgressContainer color={colors.fossilAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={fossilPercentage} image={require("../assets/icons/bones.png")} text={attemptToTranslate("Fossils") + " " + fossilCount + "/73"}/>
+              <ProgressContainer color={colors.artAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={artPercentage} image={require("../assets/icons/colorPalette.png")} text={attemptToTranslate("Art") + " " + artCount + "/43"}/>
+              <ProgressContainer color={colors.musicAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={musicPercentage} image={require("../assets/icons/music.png")} text={attemptToTranslate("Songs") + " " + musicCount + "/95"}/>
+              <ProgressContainer color={colors.emojipediaAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={emojipediaPercentage} image={require("../assets/icons/emote.png")} text={attemptToTranslate("Emotes") + " " + emojipediaCount + "/" + global.dataLoadedReactions[0].length.toString()}/>
+              <View style={{height: 15}}/>
+            </HomeContentArea>:<View/>}
+            {sections["Profile"]===true?<HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.profileColor[global.darkMode]} title="Profile" titleColor={colors.profileColor[global.darkModeReverse]}>
+              <View style={{height: 37}}/>
+              <View style={{alignItems:"center"}}>
+                <TextInput
+                  allowFontScaling={false}
+                  style={{fontSize: 30, width:"100%", textAlign:"center", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
+                  onChangeText={async (text) => {AsyncStorage.setItem("name", text); global.name=text;}}
+                  placeholder={"["+attemptToTranslate("Name")+"]"}
+                  placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+                  defaultValue={global.name}
+                  multiline={true}
+                />
+                <TextFont bold={true} style={{marginTop: 0, marginBottom: -2, color:colors.fishText[global.darkMode]}}>{translateIslandNameInputLabel1()}</TextFont>
+                <TextInput
+                  allowFontScaling={false}
+                  style={{fontSize: 30, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
+                  onChangeText={async (text) => {AsyncStorage.setItem("islandName", text); global.islandName=text}}
+                  placeholder={"["+attemptToTranslate("Island")+"]"}
+                  placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+                  defaultValue={global.islandName}
+                  multiline={true}
+                />
+                <TextFont bold={true} style={{marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{translateIslandNameInputLabel2()}</TextFont>
+                <View style={{height: 5}}/>
+                <TouchableOpacity onPress={() => this.props.setPage(13)}>
+                  <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{getSettingsString("settingsNorthernHemisphere")==="true" ? "Northern Hemisphere" : "Southern Hemisphere"}</TextFont>
+                </TouchableOpacity>
+              </View>
+              <View style={{height: 30}}/>
+              <CurrentVillagers openPopup={this.openPopup} setPage={this.props.setPage}/>
+            </HomeContentArea>:<View/>}
+            {sections["Store Hours"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.storeHoursColor[global.darkMode]} title="Store Hours" titleColor={colors.storeHoursColor[global.darkModeReverse]}>
+              <View style={{height: 15}}/>
+              <StoreHoursContainer image={require("../assets/icons/nook.png")} text="Nook's Cranny" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "8:00 - 22:00" : "8 AM - 10 PM"} openHour={8} closeHour={22}/>
+              <StoreHoursContainer image={require("../assets/icons/able.png")} text="Able Sisters" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "9:00 - 21:00" : "9 AM - 9 PM"} openHour={9} closeHour={21}/>
+              <View style={{height: 15}}/>
+            </HomeContentArea>:<View/>}
+            {sections["Active Creatures"]===true?<HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.activeCreaturesColor[global.darkMode]} title="Active Creatures" titleColor={colors.activeCreaturesColor[global.darkModeReverse]}>
+              <ActiveCreatures scrollViewRef={this.scrollViewRef}/>
+            </HomeContentArea>:<View/>}
+            {sections["Active Creatures"]===true?<View/>:<View style={{height:50}}/>}
+        </FadeInOut>
       </ScrollView>
+      
       <View style={{position:"absolute", width: "100%", height:"100%", zIndex:-5}}>
         {landscape}
-        <View style={[styles.homeScreenBackgroundTop,{backgroundColor:colors.skyColor[global.darkMode]}]}>
-        </View>
-        <View style={[styles.homeScreenBackgroundBottom,{backgroundColor:colors.grassColor[global.darkMode]}]}>
-        </View>
+
+        <View style={[styles.homeScreenBackgroundTop,{backgroundColor:colors.skyColor[global.darkMode]}]}/>
+        <Image style={{width:Dimensions.get('window').width, height:Dimensions.get('window').height-295, resizeMode:"stretch",zIndex:10, backgroundColor:colors.grassColor[global.darkMode]}} source={global.darkMode===1 ? require("../assets/icons/cliffDark.png") : require("../assets/icons/cliff.png")} />
       </View>
       <VillagerPopupPopup ref={(villagerPopupPopup) => this.villagerPopupPopup = villagerPopupPopup} setVillagerGift={this.props.setVillagerGift}/>
-    </>
+    </View>
   }
 }
 export default HomePage;
+
+class ConfigureHomePages extends Component {
+  render(){
+    const sectionNames = Object.keys(this.props.sections);
+    return(<>
+      <SubHeader>Select Homepage Sections</SubHeader>
+      <View style={{height:10}}/>
+        {sectionNames.map( (name, index)=>{
+          return <ConfigureHomePageSettingContainer key={name+index.toString()} title={name} defaultValue={this.props.sections[name]} onCheck={(check)=>{this.props.setPages(check,name)}}/>
+        })}
+      </>
+    )
+  }
+}
+
+class ConfigureHomePageSettingContainer extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      toggle:this.props.defaultValue,
+    }
+  }
+  render(){
+    return(
+      <View style={[styles.settingsContainer,{backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
+        <View style={styles.textContainer}>
+          <TextFont bold={true} style={[styles.textContainerTop,{color:colors.textBlack[global.darkMode]}]}>{this.props.title}</TextFont>
+        </View>
+        <View style={{position:"absolute", right: 8, transform: [{ scale: 0.75 }]}}>
+          <ToggleSwitch
+            isOn={this.state.toggle}
+            onColor="#57b849"
+            offColor="#DFDFDF"
+            size="large"
+            onToggle={() => {
+              this.props.onCheck(!this.state.toggle);
+              this.setState({toggle:!this.state.toggle});
+            }}
+          />
+        </View>
+      </View>
+    )
+  }
+}
+
 
 class VillagerPopupPopup extends Component {
   constructor(props) {
@@ -242,9 +333,20 @@ const styles = StyleSheet.create({
     width: "100%",
     backgroundColor: "#4298f5",
   },
-  homeScreenBackgroundBottom: {
-    height: "70%",
-    width: "100%",
-    zIndex: 6,
+  textContainerTop:{
+    fontSize: 17,
+    marginRight: 100,
+  },
+  textContainer:{
+    marginLeft: 30,
+  },
+  settingsContainer: {
+    margin: 3,
+    paddingVertical: 20,
+    flexDirection:"row",
+    alignItems: 'center',
+    marginLeft: 20,
+    marginRight: 20,
+    borderRadius: 10,
   },
 });
