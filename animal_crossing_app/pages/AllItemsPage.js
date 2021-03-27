@@ -39,7 +39,7 @@ class AllItemsPage extends Component {
     if(this.props.tabs !==undefined){
       tabs = this.props.tabs;
     }
-    var filterSearchable = false;
+    var filterSearchable = true;
     if(this.props.filterSearchable !==undefined){
       filterSearchable = this.props.filterSearchable;
     }

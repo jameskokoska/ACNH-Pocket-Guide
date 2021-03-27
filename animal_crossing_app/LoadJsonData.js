@@ -833,12 +833,20 @@ export function getCurrentVillagerFilters(){
   return allFilters;
 }
 
-export function getInverseVillagerFilters(){
+export function getInverseVillagerFilters(string=false){
   var inversePersonalities = getAllVillagerPersonalities().filter(n => !getCurrentVillagerPersonalities().includes(n))
   var allFilters = [];
+  var allFiltersString = "";
   for(var i=0; i<inversePersonalities.length; i++){
     allFilters.push("Source:" + inversePersonalities[i] + " villagers");
     allFilters.push("Source:" + inversePersonalities[i] + " villagers" + "; Tom Nook");
+    if(string){
+      allFiltersString+=attemptToTranslate(inversePersonalities[i])+", "
+    }
   }
-  return allFilters
+  if(string){
+    return allFiltersString.slice(0, -2);
+  } else {
+    return allFilters
+  }
 }

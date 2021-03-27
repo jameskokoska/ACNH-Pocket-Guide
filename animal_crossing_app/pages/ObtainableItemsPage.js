@@ -1,12 +1,15 @@
 import React, {Component} from 'react';
-import {View, ScrollView, Dimensions, Text, LogBox} from 'react-native';
+import {TouchableOpacity, View, ScrollView, Dimensions, Text, LogBox} from 'react-native';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import ListPage from '../components/ListPage';
 import colors from '../Colors.js';
-import {getCurrentVillagerNamesString, getSettingsString, attemptToTranslate} from "../LoadJsonData"
+import {getInverseVillagerFilters, getCurrentVillagerNamesString, getSettingsString, attemptToTranslate} from "../LoadJsonData"
 import {ClothingRouteClass} from "./ItemsPage"
 import {InfoLineBeside, InfoLine} from '../components/BottomSheetComponents';
-import AllItemsPage from "./AllItemsPage"
+import EmoticonsPage from "./EmoticonsPage";
+import {RecipesRouteClass} from "./CraftingPage"
+import {PopupInfoCustom} from "../components/Popup"
+import TextFont from "../components/TextFont"
 
 const width = { width: Dimensions.get('window').width };
 
@@ -28,50 +31,54 @@ const renderTabBar = props => (
 );
 
 const ObtainableDIYs = () => (
-  <AllItemsPage
+  <RecipesRouteClass
     tabs={true}
     smallerHeader={true}
     filterSearchable={false}
     title={"Obtainable DIYs"}
-    subHeader={"You WILL get these from your favorite villagers." + " (" + getCurrentVillagerNamesString() + ")"}
+    subHeader={attemptToTranslate("You WILL get these from your favorite villagers.") + "\n(" + getCurrentVillagerNamesString() + ")" + (getInverseVillagerFilters(true)===""? "" : "\n" + attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true))}
     appBarColor = {colors.obtainableItemsAppBar[global.darkMode]}
     accentColor = {colors.obtainableItemsAccent[global.darkMode]}
+    titleColor={colors.textBlack[global.darkMode]}
   />
 )
 
 const UnobtainableDIYs = () => (
-  <AllItemsPage
+  <RecipesRouteClass
     tabs={true}
     smallerHeader={true}
     filterSearchable={false}
     title={"Unobtainable DIYs"}
-    subHeader={"You will NOT get these from your favorite villagers." + "\n(" + getCurrentVillagerNamesString() + ")"}
+    subHeader={attemptToTranslate("You will NOT get these from your favorite villagers.") + "\n(" + getCurrentVillagerNamesString() + ")" + (getInverseVillagerFilters(true)===""? "" : "\n" + attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true))}
     appBarColor = {colors.obtainableItemsAppBar[global.darkMode]}
     accentColor = {colors.obtainableItemsAccent[global.darkMode]}
+    titleColor={colors.textBlack[global.darkMode]}
   />
 )
 
 const ObtainableReactions = () => (
-  <AllItemsPage
+  <EmoticonsPage
     tabs={true}
     smallerHeader={true}
     filterSearchable={false}
     title={"Obtainable Reactions"}
-    subHeader={"You WILL get these from your favorite villagers." + "\n(" + getCurrentVillagerNamesString() + ")"}
+    subHeader={attemptToTranslate("You WILL get these from your favorite villagers.") + "\n(" + getCurrentVillagerNamesString() + ")" + (getInverseVillagerFilters(true)===""? "" : "\n" + attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true))}
     appBarColor = {colors.obtainableItemsAppBar[global.darkMode]}
     accentColor = {colors.obtainableItemsAccent[global.darkMode]}
+    titleColor={colors.textBlack[global.darkMode]}
   />
 )
 
 const UnobtainableReactions = () => (
-  <AllItemsPage
+  <EmoticonsPage
     tabs={true}
     smallerHeader={true}
     filterSearchable={false}
     title={"Unobtainable Reactions"}
-    subHeader={"You will NOT get these from your favorite villagers." + "\n(" + getCurrentVillagerNamesString() + ")"}
+    subHeader={attemptToTranslate("You wil NOT get these from your favorite villagers.") + "\n(" + getCurrentVillagerNamesString() + ")" + (getInverseVillagerFilters(true)===""? "" : "\n" + attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true))}
     appBarColor = {colors.obtainableItemsAppBar[global.darkMode]}
     accentColor = {colors.obtainableItemsAccent[global.darkMode]}
+    titleColor={colors.textBlack[global.darkMode]}
   />
 )
 
@@ -82,10 +89,10 @@ class ObtainableItemsPage extends Component {
     this.state = {
       index: 0,
       routes: [
-        { key: 'UnobtainableDIYs', title: attemptToTranslate('Unobtainable DIYs') },
         { key: 'ObtainableDIYs', title: attemptToTranslate('Obtainable DIYs') },
-        { key: 'UnobtainableReactions', title: attemptToTranslate('Unobtainable Reactions') },
+        { key: 'UnobtainableDIYs', title: attemptToTranslate('Unobtainable DIYs') },
         { key: 'ObtainableReactions', title: attemptToTranslate('Obtainable Reactions') },
+        { key: 'UnobtainableReactions', title: attemptToTranslate('Unobtainable Reactions') },
       ],
     }
   }
@@ -99,18 +106,31 @@ class ObtainableItemsPage extends Component {
 
   handleIndexChange = index => this.setState({index});
 
+  componentDidMount(){
+    if(getCurrentVillagerNamesString()==="You have no favorite villagers."){
+      this.popup.setPopupVisible(true);
+    }
+  }
+
   render(){
     return(
-      <TabView
-        lazy
-        tabBarPosition={getSettingsString("settingsTabBarPosition") === "true" ? "bottom" : "top"}
-        gestureHandlerProps={{ failOffsetX: this.state.index === 0 ? 1 : 100}}
-        navigationState={this.state}
-        renderScene={this.renderScene}
-        onIndexChange={(this.handleIndexChange)}
-        initialLayout={width}
-        renderTabBar={renderTabBar}
-      />
+      <>
+        <PopupInfoCustom header={<TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>You do not have any villagers added!</TextFont>} ref={(popup) => this.popup = popup} buttonText={"Dismiss"}>
+          <TouchableOpacity style={{paddingVertical:20,}} onPress={() => this.props.setPage(8)}>
+            <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, textAlign:"center"}}>{"Tap here and go add some!"}</TextFont>
+          </TouchableOpacity>
+        </PopupInfoCustom> 
+        <TabView
+          lazy
+          tabBarPosition={getSettingsString("settingsTabBarPosition") === "true" ? "bottom" : "top"}
+          gestureHandlerProps={{ failOffsetX: this.state.index === 0 ? 1 : 100}}
+          navigationState={this.state}
+          renderScene={this.renderScene}
+          onIndexChange={(this.handleIndexChange)}
+          initialLayout={width}
+          renderTabBar={renderTabBar}
+        />
+      </>
     )
   }
 }

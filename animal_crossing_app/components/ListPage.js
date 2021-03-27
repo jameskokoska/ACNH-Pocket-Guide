@@ -228,6 +228,9 @@ export default (props) =>{
             searchActual = [...currentVillagerFilters,...searchActual];
           } else if (props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions") {
             searchActual = [...currentVillagerFiltersInverse,...searchActual];
+            if(currentVillagerFiltersInverse.length===0){
+              searchActual = [":"];
+            }
           } 
           for(var z = 0; z < searchActual.length; z++){
             if(searchActual.includes("New version") && props.newItems && item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===global.gameVersion){

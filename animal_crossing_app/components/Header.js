@@ -40,7 +40,7 @@ const Header = (props) => {
               <TextFont style={[styles.title, {fontSize: props.smallerHeader?30:41, color: props.titleColor}]} bold={true}>{props.title}</TextFont>
             </FadeInOut>
             {props.customHeader}
-            {props.subHeader!==undefined&&props.subHeader!=="" ? <TextFont numberOfLines={3} style={[styles.title, {paddingBottom:5, fontSize: 13, color: props.titleColor}]} bold={true}>{props.subHeader}</TextFont> : <View/>}
+            {props.subHeader!==undefined&&props.subHeader!=="" ? <TextFont numberOfLines={4} style={[styles.title, {paddingBottom:5, marginTop: -5, fontSize: 13, color: props.titleColor}]}>{props.subHeader}</TextFont> : <View/>}
             {!props.disableSearch ? <View style={{flexDirection: 'row'}}>
               <View style={[styles.searchBox, {backgroundColor:props.searchBarColor}]}>
                 <DelayInput

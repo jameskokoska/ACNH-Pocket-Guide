@@ -20,28 +20,39 @@ const renderTabBar = props => (
 );
 
 const RecipesRoute = () => (
-  <ListPage 
-    filterSearchable = {true}
-    title="Recipes"
-    imageProperty={["Image"]}
-    textProperty={["NameLanguage"]}
-    checkListKey={[["recipesCheckList","Name","Variation"]]}
-    searchKey={[["NameLanguage"]]}
-    gridType="smallGrid" //smallGrid, largeGrid, row
-    dataGlobalName={"dataLoadedRecipes"}
-    appBarColor={colors.toolsAppBar[global.darkMode]}
-    titleColor={colors.textWhiteOnly[global.darkMode]}
-    searchBarColor={colors.searchbarBG[global.darkMode]}
-    backgroundColor={colors.lightDarkAccent[global.darkMode]}
-    boxColor={false}
-    labelColor={colors.textBlack[global.darkMode]}
-    accentColor={colors.toolsAccent[global.darkMode]}
-    specialLabelColor={colors.fishText[global.darkMode]}
-    popUpCornerImageProperty={["Source"]}
-    popUpCornerImageLabelProperty={["Source"]}
-    popUpContainer={[["RecipesPopup",500]]}
-  />
+  <RecipesRouteClass/>
 )
+
+export class RecipesRouteClass extends Component{
+  render(){
+    return(
+      <ListPage 
+        title={this.props.title===undefined?"Recipes":this.props.title}
+        appBarColor={this.props.appBarColor===undefined?colors.toolsAppBar[global.darkMode]:this.props.appBarColor}
+        accentColor={this.props.accentColor===undefined?colors.toolsAccent[global.darkMode]:this.props.accentColor}
+        subHeader={this.props.subHeader===undefined?"":this.props.subHeader}
+        tabs={this.props.tabs===undefined?false:this.props.tabs}
+        smallerHeader={this.props.smallerHeader===undefined?false:this.props.smallerHeader}
+        filterSearchable={this.props.filterSearchable===undefined?true:this.props.filterSearchable}
+        titleColor={this.props.titleColor===undefined?colors.textWhite[global.darkMode]:this.props.titleColor}
+        imageProperty={["Image"]}
+        textProperty={["NameLanguage"]}
+        checkListKey={[["recipesCheckList","Name","Variation"]]}
+        searchKey={[["NameLanguage"]]}
+        gridType="smallGrid" //smallGrid, largeGrid, row
+        dataGlobalName={"dataLoadedRecipes"}
+        searchBarColor={colors.searchbarBG[global.darkMode]}
+        backgroundColor={colors.lightDarkAccent[global.darkMode]}
+        boxColor={false}
+        labelColor={colors.textBlack[global.darkMode]}
+        specialLabelColor={colors.fishText[global.darkMode]}
+        popUpCornerImageProperty={["Source"]}
+        popUpCornerImageLabelProperty={["Source"]}
+        popUpContainer={[["RecipesPopup",500]]}
+      />
+    )
+  }
+} 
 
 const ToolsRoute = () => (
   <ListPage 

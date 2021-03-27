@@ -49,6 +49,12 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
+-Added way to see what DIYs and Reactions you can get from your current villagers
+-Added way to see what DIYs and Reactions you cannot get from your villagers
+-Added new [Obtainable Items] page
+-Added information about this under the profile section on the home screen
+-Improved loading times of lists
+-Added more translations
 -Fix back button crash on launch
 -Added haptic feedback to [Edit Sections]
 -Fixes to [Edit Sections]
@@ -131,7 +137,7 @@ class App extends Component {
     this.numLogins;
     this.state = {
       loaded: false,
-      currentPage: 21,
+      currentPage: 0,
       open:false,
       fadeInTitle:true,
     }
@@ -361,7 +367,7 @@ class App extends Component {
       } else if (this.state.currentPage===20){
         currentPageView = <VillagerPresentsPage villager={this.state.villager}/>
       } else if (this.state.currentPage===21){
-        currentPageView = <ObtainableItemsPage/>
+        currentPageView = <ObtainableItemsPage setPage={this.setPage}/>
       } else {
         currentPageView = <Text>Default</Text>
       }
