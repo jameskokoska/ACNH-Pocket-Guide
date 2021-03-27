@@ -398,7 +398,7 @@ class TodoItem extends Component {
           <TouchableNativeFeedback onLongPress={() => {  
             this.props.checkOffItem(this.props.index); 
           }}
-          background={TouchableNativeFeedback.Ripple(colors.todoColorAccent[global.darkMode], false)}
+          background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"1A", false)}
           onPress={()=>{
                 this.props.checkOffItem(this.props.index); 
           }}

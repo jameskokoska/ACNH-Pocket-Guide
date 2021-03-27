@@ -406,7 +406,7 @@ export default (props) =>{
     style={paddingBottom: paddingBottom,marginTop: -10}
     paddingBottomContent = 10;
   }
-  if(data==="empty" && props.title==="Active Creatures"){
+  if(data==="empty" && (props.title==="Active Creatures"||props.title==="")){
     return(
       <View/>
     )

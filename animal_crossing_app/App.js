@@ -48,12 +48,18 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
+-Fix back button crash on launch
+-Added haptic feedback to [Edit Sections]
+-Fixes to [Edit Sections]
+-More color fixes
+-
 -Color fixes
 -Better headers for Achievements and Events page
 -Customizable home screen sections
 -Added more translations
 -Updated calendar data to align with new data parameters
 -Removed list only active creatures setting, this can now be done through filters
+-Homepage has a better fade transition
 -
 -Added villager gift guide!
 -Open a villagers popup and click [View Gifts] to see a list
@@ -107,7 +113,6 @@ global.changelog = `
 -
 -Planned Features:
 - Visitors tracking
-- Edit home screen sections
 - Notification reminders for events
 -
 -Any feedback feel free to send me an email! dapperappdeveloper@gmail.com
@@ -236,11 +241,15 @@ class App extends Component {
 
   handleBackButton(){
     //For Guide page
-    if(this.state.currentPage===15){
+    if(!this.state.loaded){
+      return true
+    }else if(this.state.firstLogin==="true"){
       return true;
-    }else if(this.state.loaded && getSettingsString("settingsBackButtonChangePages")==="true"){
+    } else if(this.state.currentPage===15){
+      return true;
+    } else if(getSettingsString("settingsBackButtonChangePages")==="true"){
       this.setPage(this.lastPage);
-    }else{
+    } else {
       this.openDrawer(false);
     }
     return true;

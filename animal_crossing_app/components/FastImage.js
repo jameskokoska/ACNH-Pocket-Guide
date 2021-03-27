@@ -21,7 +21,7 @@ class FastImage extends Component{
   }
 
   getImage = async () => {
-    if(this.props.cacheKey===undefined){
+    if(this.props.cacheKey===undefined || this.props.source.uri===undefined){
       this.setState({
         imgURI:"undefined"
       })
@@ -63,7 +63,7 @@ class FastImage extends Component{
   }
 
   render(){
-    if(this.state.imgURI!==""&&this.mounted&&this.state.image!=="undefined"){
+    if(this.state.imgURI!==""&&this.mounted&&this.state.imgURI!=="undefined"){
       return (
         <Image
           {...this.props}

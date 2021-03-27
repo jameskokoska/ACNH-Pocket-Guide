@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Image, Dimensions, TouchableOpacity, TextInput, StyleSheet, Text, View} from 'react-native';
+import {Vibration, Image, Dimensions, TouchableOpacity, TextInput, StyleSheet, Text, View} from 'react-native';
 import Clock from '../components/Clock';
 import HomeContentArea from '../components/HomeContentArea';
 import {EventContainer,getEventsDay} from '../components/EventContainer';
@@ -105,7 +105,7 @@ class HomePage extends Component {
           <Clock swapDate={doWeSwapDate()}/>
           <View style={{height:125}}/>
           <TouchableOpacity style={{padding:10}} 
-            onPress={()=>this.popupSettings.setPopupVisible(true)
+            onPress={()=>{this.popupSettings.setPopupVisible(true); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}
           }>
             <TextFont bold={false} style={{marginRight:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"right"}}>{"Edit Sections"}</TextFont>
           </TouchableOpacity>
@@ -179,6 +179,7 @@ class HomePage extends Component {
               <View style={{height: 37}}/>
               <View style={{alignItems:"center"}}>
                 <TextInput
+                  maxLength = {15}
                   allowFontScaling={false}
                   style={{fontSize: 30, width:"100%", textAlign:"center", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
                   onChangeText={async (text) => {AsyncStorage.setItem("name", text); global.name=text;}}
@@ -189,6 +190,7 @@ class HomePage extends Component {
                 />
                 <TextFont bold={true} style={{marginTop: 0, marginBottom: -2, color:colors.fishText[global.darkMode]}}>{translateIslandNameInputLabel1()}</TextFont>
                 <TextInput
+                  maxLength = {15}
                   allowFontScaling={false}
                   style={{fontSize: 30, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
                   onChangeText={async (text) => {AsyncStorage.setItem("islandName", text); global.islandName=text}}
@@ -252,25 +254,29 @@ class ConfigureHomePageSettingContainer extends Component {
       toggle:this.props.defaultValue,
     }
   }
+  toggle = () => {
+    this.props.onCheck(!this.state.toggle);
+    getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+    this.setState({toggle:!this.state.toggle});
+  }
   render(){
     return(
-      <View style={[styles.settingsContainer,{backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
-        <View style={styles.textContainer}>
-          <TextFont bold={true} style={[styles.textContainerTop,{color:colors.textBlack[global.darkMode]}]}>{this.props.title}</TextFont>
+      <TouchableOpacity activeOpacity={0.65} onPress={()=>this.toggle()}>
+        <View style={[styles.settingsContainer,{backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
+            <View style={styles.textContainer}>
+              <TextFont bold={true} style={[styles.textContainerTop,{color:colors.textBlack[global.darkMode]}]}>{this.props.title}</TextFont>
+            </View>
+          <View style={{position:"absolute", right: 8, transform: [{ scale: 0.75 }]}}>
+            <ToggleSwitch
+              isOn={this.state.toggle}
+              onColor="#57b849"
+              offColor="#DFDFDF"
+              size="large"
+              onToggle={() => {this.toggle();}}
+            />
+          </View>
         </View>
-        <View style={{position:"absolute", right: 8, transform: [{ scale: 0.75 }]}}>
-          <ToggleSwitch
-            isOn={this.state.toggle}
-            onColor="#57b849"
-            offColor="#DFDFDF"
-            size="large"
-            onToggle={() => {
-              this.props.onCheck(!this.state.toggle);
-              this.setState({toggle:!this.state.toggle});
-            }}
-          />
-        </View>
-      </View>
+      </TouchableOpacity>
     )
   }
 }
