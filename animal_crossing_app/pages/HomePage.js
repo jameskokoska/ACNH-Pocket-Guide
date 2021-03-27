@@ -34,8 +34,7 @@ class HomePage extends Component {
     super(props);
     this.scrollViewRef = React.createRef();
     this.openPopup = this.openPopup.bind(this);
-    this.loadSections();
-    this.state = {sections:""}
+    this.state = {sections:this.props.sections}
   }
   openPopup(item){
     this.villagerPopupPopup.setPopupVisible(true, item);
@@ -49,19 +48,6 @@ class HomePage extends Component {
 
   saveSections = async(data) => {
     await AsyncStorage.setItem("Sections", JSON.stringify(data));
-  }
-
-  loadSections = async() => {
-    const defaultSections = {
-      "Events" : true,
-      "To-Do" : true,
-      "Collection" : true,
-      "Profile" : true,
-      "Store Hours" : true,
-      "Active Creatures" : true,
-    }
-    var storageData = JSON.parse(await getStorage("Sections",JSON.stringify(defaultSections)));
-    this.setState({sections:storageData});
   }
 
   setLoadedToDo = (status) => {

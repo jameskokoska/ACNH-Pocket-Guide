@@ -181,7 +181,18 @@ class App extends Component {
     await Font.loadAsync({
       "ArialRoundedBold": require('./assets/fonts/arialRoundBold.ttf'),
     });
-    
+
+    //load home screen sections
+    const defaultSections = {
+      "Events" : true,
+      "To-Do" : true,
+      "Collection" : true,
+      "Profile" : true,
+      "Store Hours" : true,
+      "Active Creatures" : true,
+    }
+    this.sections = JSON.parse(await getStorage("Sections",JSON.stringify(defaultSections)));
+
     
     if(this.mounted){
       this.setState({
@@ -298,7 +309,7 @@ class App extends Component {
     } else {
       var currentPageView;
       if (this.state.currentPage===0){
-        currentPageView = <FadeInOut fadeIn={true}><HomePage setVillagerGift={this.setVillagerGift} setPage={this.setPage}/></FadeInOut>
+        currentPageView = <FadeInOut fadeIn={true}><HomePage sections={this.sections} setVillagerGift={this.setVillagerGift} setPage={this.setPage}/></FadeInOut>
       } else if (this.state.currentPage===1){
         currentPageView = <AllItemsPage setVillagerGift={this.setVillagerGift}/>
       } else if(this.state.currentPage===2){
