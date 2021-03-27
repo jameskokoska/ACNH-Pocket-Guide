@@ -109,7 +109,6 @@ class HomePage extends Component {
           }>
             <TextFont bold={false} style={{marginRight:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"right"}}>{"Edit Sections"}</TextFont>
           </TouchableOpacity>
-          <View style={{height:50}}/>
           {/* If todo is the first page to be loaded, wait to fade in */}
           <FadeInOut fadeIn={this.state.sections!==""&&(this.state.sections["Events"] || this.state.loadedToDo===true || this.state.sections["To-Do"]===false)?true:false} duration={200} startValue={0} endValue={1} maxFade={1} minScale={0.9} >
             {sections["Events"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.eventsColor[global.darkMode]} title="Events" titleColor={colors.eventsColor[global.darkModeReverse]}>
@@ -223,13 +222,12 @@ class HomePage extends Component {
             {sections["Active Creatures"]===true?<HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.activeCreaturesColor[global.darkMode]} title="Active Creatures" titleColor={colors.activeCreaturesColor[global.darkModeReverse]}>
               <ActiveCreatures scrollViewRef={this.scrollViewRef}/>
             </HomeContentArea>:<View/>}
-            {sections["Active Creatures"]===true?<View/>:<View style={{height:50}}/>}
+            {sections["Active Creatures"]===true?<View/>:<View style={{height:130}}/>}
         </FadeInOut>
       </ScrollView>
       
       <View style={{position:"absolute", width: "100%", height:"100%", zIndex:-5}}>
         {landscape}
-
         <View style={[styles.homeScreenBackgroundTop,{backgroundColor:colors.skyColor[global.darkMode]}]}/>
         <Image style={{width:Dimensions.get('window').width, height:Dimensions.get('window').height-295, resizeMode:"stretch",zIndex:10, backgroundColor:colors.grassColor[global.darkMode]}} source={global.darkMode===1 ? require("../assets/icons/cliffDark.png") : require("../assets/icons/cliff.png")} />
       </View>

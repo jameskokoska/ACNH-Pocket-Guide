@@ -20,8 +20,7 @@ const styles = StyleSheet.create({
   contentBackground:{
     borderRadius: 25,
     paddingTop: 20,
-    marginTop: 30,
-    marginTop: -50,
+    marginBottom: -40,
     paddingBottom: 60,
     elevation: 6,
     borderWidth: 1.1,

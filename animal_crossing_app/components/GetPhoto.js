@@ -176,7 +176,7 @@ export function getPhoto(name, fallback=""){
   if(fallback.includes("season")){
     return require("../assets/icons/season.png");
   } else if(fallback.includes("shopping")){
-    return require("../assets/icons/nook.png");
+    return require("../assets/icons/nookShopping.png");
   } else {
     return require("../assets/icons/leaf.png");
   }
@@ -222,6 +222,8 @@ export function getPhotoCorner(name){
     return <Image source={require("../assets/icons/able.png")} style={{height: 60, width: 60, resizeMode:'contain'}}/>;
   else if(name.includes("nook miles"))
     return <Image source={require("../assets/icons/miles.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
+  else if(name.includes("nook shopping"))
+    return <Image source={require("../assets/icons/nookShopping.png")} style={{height: 56, width: 56, resizeMode:'contain'}}/>;
   else if(name.includes("nook"))
     return <Image source={require("../assets/icons/nook.png")} style={{height: 55, width: 55, resizeMode:'contain'}}/>;
   else if(name.includes("crafting"))
