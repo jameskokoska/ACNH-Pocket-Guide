@@ -36,7 +36,7 @@ const ObtainableDIYs = () => (
     smallerHeader={true}
     filterSearchable={false}
     title={"Obtainable DIYs"}
-    subHeader={attemptToTranslate("You WILL get these from your favorite villagers.") + "\n(" + getCurrentVillagerNamesString() + ")" + (getInverseVillagerFilters(true)===""? "" : "\n" + attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true))}
+    subHeader={attemptToTranslate("You WILL get these from your favorite villagers.") + "\n(" + attemptToTranslate(getCurrentVillagerNamesString()) + ")" + (getInverseVillagerFilters(true)===""? "" : "\n" + attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true))}
     appBarColor = {colors.obtainableItemsAppBar[global.darkMode]}
     accentColor = {colors.obtainableItemsAccent[global.darkMode]}
     titleColor={colors.textBlack[global.darkMode]}
@@ -49,7 +49,7 @@ const UnobtainableDIYs = () => (
     smallerHeader={true}
     filterSearchable={false}
     title={"Unobtainable DIYs"}
-    subHeader={attemptToTranslate("You will NOT get these from your favorite villagers.") + "\n(" + getCurrentVillagerNamesString() + ")" + (getInverseVillagerFilters(true)===""? "" : "\n" + attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true))}
+    subHeader={attemptToTranslate("You will NOT get these from your favorite villagers.") + "\n(" + attemptToTranslate(getCurrentVillagerNamesString()) + ")" + (getInverseVillagerFilters(true)===""? "" : "\n" + attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true))}
     appBarColor = {colors.obtainableItemsAppBar[global.darkMode]}
     accentColor = {colors.obtainableItemsAccent[global.darkMode]}
     titleColor={colors.textBlack[global.darkMode]}
@@ -62,7 +62,7 @@ const ObtainableReactions = () => (
     smallerHeader={true}
     filterSearchable={false}
     title={"Obtainable Reactions"}
-    subHeader={attemptToTranslate("You WILL get these from your favorite villagers.") + "\n(" + getCurrentVillagerNamesString() + ")" + (getInverseVillagerFilters(true)===""? "" : "\n" + attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true))}
+    subHeader={attemptToTranslate("You WILL get these from your favorite villagers.") + "\n(" + attemptToTranslate(getCurrentVillagerNamesString()) + ")" + (getInverseVillagerFilters(true)===""? "" : "\n" + attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true))}
     appBarColor = {colors.obtainableItemsAppBar[global.darkMode]}
     accentColor = {colors.obtainableItemsAccent[global.darkMode]}
     titleColor={colors.textBlack[global.darkMode]}
@@ -75,7 +75,7 @@ const UnobtainableReactions = () => (
     smallerHeader={true}
     filterSearchable={false}
     title={"Unobtainable Reactions"}
-    subHeader={attemptToTranslate("You wil NOT get these from your favorite villagers.") + "\n(" + getCurrentVillagerNamesString() + ")" + (getInverseVillagerFilters(true)===""? "" : "\n" + attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true))}
+    subHeader={attemptToTranslate("You wil NOT get these from your favorite villagers.") + "\n(" + attemptToTranslate(getCurrentVillagerNamesString()) + ")" + (getInverseVillagerFilters(true)===""? "" : "\n" + attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true))}
     appBarColor = {colors.obtainableItemsAppBar[global.darkMode]}
     accentColor = {colors.obtainableItemsAccent[global.darkMode]}
     titleColor={colors.textBlack[global.darkMode]}

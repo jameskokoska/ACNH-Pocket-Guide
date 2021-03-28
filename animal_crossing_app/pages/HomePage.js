@@ -206,7 +206,7 @@ class HomePage extends Component {
               </View>
               <View style={{height: 30}}/>
               <CurrentVillagers openPopup={this.openPopup} setPage={this.props.setPage}/>
-              {getCurrentVillagerNamesString()==="You have no favorite villagers."?<View/>:<TouchableOpacity onPress={() => this.props.setPage(21)}>
+              {getCurrentVillagerNamesString()==="You have no favorite villagers"?<View/>:<TouchableOpacity onPress={() => this.props.setPage(21)}>
                 {getInverseVillagerFilters(true)===""?<TextFont suffix={"\n"+attemptToTranslate("Note: you can get all items since you have all personality types!")} style={{marginHorizontal: 30, color: colors.fishText[global.darkMode], fontSize: 11, textAlign:"center"}}>{"See what you can get from your villagers."}</TextFont>:<>
                 <TextFont style={{marginHorizontal: 30, color: colors.fishText[global.darkMode], fontSize: 11, textAlign:"center"}}>{"It is recommended you get all villager personalities to get DIYs and Reactions. Tap here to see what you might be missing out on."}</TextFont>
                 <TextFont suffix={"\n "+getInverseVillagerFilters(true)} style={{marginHorizontal: 30, color: colors.fishText[global.darkMode], fontSize: 13, textAlign:"center"}}>{"Missing personalities:"}</TextFont></>}

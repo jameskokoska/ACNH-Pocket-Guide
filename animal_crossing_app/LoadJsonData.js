@@ -814,7 +814,7 @@ export function getCurrentVillagerNamesString(){
     villagerNames+=(currentVillagers[z]["NameLanguage"]) + ", ";
   }
   if(villagerNames===""){
-    return "You have no favorite villagers."
+    return "You have no favorite villagers"
   }
   return villagerNames.slice(0, -2);
 }

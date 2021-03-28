@@ -9,7 +9,6 @@ import * as MediaLibrary from 'expo-media-library';
 import * as FileSystem from 'expo-file-system';
 import * as Permissions from 'expo-permissions';
 import {Dimensions } from "react-native";
-import { LinearGradient } from 'expo-linear-gradient';
 import {Variations, InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from './BottomSheetComponents';
 import colors from "../Colors.js"
 import {getCurrentDateObject, getMonthShort, isActive2} from "./DateFunctions"

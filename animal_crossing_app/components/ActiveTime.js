@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import {AppRegistry, StyleSheet, ScrollView , StatusBar, Text, View, Dimensions, Image, ImageBackground} from "react-native";
 import colors from '../Colors.js';
-import Svg, { Circle, Rect } from 'react-native-svg';
 import {parseActiveTime, isActive, isActive2, getCurrentDateObject, getMonthShort} from "./DateFunctions"
 import {getSettingsString} from "../LoadJsonData";
 

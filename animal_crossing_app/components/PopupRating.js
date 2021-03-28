@@ -14,7 +14,6 @@ import {
 import TextFont from "./TextFont";
 import ButtonComponent from "./ButtonComponent";
 import colors from "../Colors";
-import * as StoreReview from 'expo-store-review';
 import LottieView from 'lottie-react-native';
 import Popup from "./Popup";
 import {MailLink} from "./Formattings";

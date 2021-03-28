@@ -8,7 +8,7 @@ import Check from '../components/Check';
 import colors from '../Colors'
 import PopupAddTask from "../components/PopupAddTask"
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {getSettingsString, attemptToTranslate, attemptToTranslateAchievement} from "../LoadJsonData"
+import {capitalizeFirst, getSettingsString, attemptToTranslate, attemptToTranslateAchievement} from "../LoadJsonData"
 import FastImage from "../components/FastImage"
 import {SubHeader, Paragraph} from "../components/Formattings"
 import Header from "../components/Header"
@@ -112,8 +112,9 @@ class AchievementsPopup extends Component {
           alignSelf: 'flex-start', 
           backgroundColor: colors.achievementsModifier[global.darkMode], 
           borderRadius: 10}}
+          translate={false}
         >
-          {this.state.selectedAchievement["Tier "+(i+1).toString()+" Modifier"]}
+          {capitalizeFirst(attemptToTranslateAchievement(this.state.selectedAchievement["Tier "+(i+1).toString()+" Modifier"]))}
         </TextFont>
       )
       this.achievementNouns.push(
@@ -129,8 +130,9 @@ class AchievementsPopup extends Component {
           alignSelf: 'flex-start', 
           backgroundColor: colors.achievementsNoun[global.darkMode], 
           borderRadius: 10}}
+          translate={false}
         >
-          {this.state.selectedAchievement["Tier "+(i+1).toString()+" Noun"]}
+          {capitalizeFirst(attemptToTranslateAchievement(this.state.selectedAchievement["Tier "+(i+1).toString()+" Noun"]))}
         </TextFont>
       )
     }

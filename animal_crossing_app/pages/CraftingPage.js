@@ -34,7 +34,7 @@ export class RecipesRouteClass extends Component{
         tabs={this.props.tabs===undefined?false:this.props.tabs}
         smallerHeader={this.props.smallerHeader===undefined?false:this.props.smallerHeader}
         filterSearchable={this.props.filterSearchable===undefined?true:this.props.filterSearchable}
-        titleColor={this.props.titleColor===undefined?colors.textWhite[global.darkMode]:this.props.titleColor}
+        titleColor={this.props.titleColor===undefined?colors.textWhite[0]:this.props.titleColor}
         imageProperty={["Image"]}
         textProperty={["NameLanguage"]}
         checkListKey={[["recipesCheckList","Name","Variation"]]}

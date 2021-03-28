@@ -1,7 +1,6 @@
 import React, {useRef, Component} from 'react';
 import {Vibration, BackHandler, Button, Image, ScrollView, Dimensions, Text, View, Animated, SafeAreaView, StatusBar, StyleSheet, ActivityIndicator} from 'react-native';
 import ListPage from './components/ListPage';
-import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import FAB from './components/FAB';
 import CalendarPage from './pages/CalendarPage';
 import SongsPage from './pages/SongsPage';
@@ -59,6 +58,8 @@ global.changelog = `
 -Added haptic feedback to [Edit Sections]
 -Fixes to [Edit Sections]
 -More color fixes
+-Removed useless code to reduce file size
+-Bug fixes to home screen
 -
 -Color fixes
 -Better headers for Achievements and Events page

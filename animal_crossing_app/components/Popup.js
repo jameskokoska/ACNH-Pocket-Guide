@@ -14,7 +14,6 @@ import TextFont from "./TextFont";
 import ButtonComponent from "./ButtonComponent";
 import colors from "../Colors";
 import BottomSheet from 'reanimated-bottom-sheet';
-import { LinearGradient } from 'expo-linear-gradient';
 import Animated from 'react-native-reanimated';
 import FadeInOut from "./FadeInOut"
 

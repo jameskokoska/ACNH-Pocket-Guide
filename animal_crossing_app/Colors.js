@@ -8,7 +8,7 @@ const colors = {
     searchbarBG : ["#DFDFDF", "#A3A3A3"],
     searchbarIcon : ["#000000","#FFFFFF"],
     shadow : ["#ebebeb", "#313131"],
-    inkWell : ["#bcbfc2","#737592"],
+    inkWell : ["#CDD0D3","#737592"],
     shadowPopUp : ["#000000", "#000000"],
     lightDarkAccent : ["#F5F5F5","#1A1A1A"],
     lightDarkAccent2 : ["#DADADA","#383838"],

@@ -4675,6 +4675,106 @@
             "English (Europe)": "Received in mail from DAL after 160 flights",
             "French": "Reçu par courrier de la DAL après 160 vols",
             "French (US)": "Reçu par courrier de la DAL après 160 vols"
+        },
+        {
+            "English": "Edit Sections",
+            "English (Europe)": "Edit Sections",
+            "French": "Modifier les sections",
+            "French (US)": "Modifier les sections"
+        },
+        {
+            "English": "Select Homepage Sections",
+            "English (Europe)": "Select Homepage Sections",
+            "French": "Choisir les sections de la page d'accueil",
+            "French (US)": "Choisir les sections de la page d'accueil"
+        },
+        {
+            "English": "It is recommended you get all villager personalities to get DIYs and Reactions. Tap here to see what you might be missing out on.",
+            "English (Europe)": "It is recommended you get all villager personalities to get DIYs and Reactions. Tap here to see what you might be missing out on.",
+            "French": "Il est recommandé que vous ayez toutes les personnalités de villageois pour obtenir des plans et des mimiques. Appuyez ici pour voir ce que vous pourriez manquer.",
+            "French (US)": "Il est recommandé que vous ayez toutes les personnalités de villageois pour obtenir des plans et des mimiques. Appuyez ici pour voir ce que vous pourriez manquer."
+        },
+        {
+            "English": "Missing personalities:",
+            "English (Europe)": "Missing personalities:",
+            "French": "Personnalités manquantes :",
+            "French (US)": "Personnalités manquantes :"
+        },
+        {
+            "English": "Obtainable DIYs",
+            "English (Europe)": "Obtainable DIYs",
+            "French": "Plans pouvant être obtenus",
+            "French (US)": "Plans pouvant être obtenus"
+        },
+        {
+            "English": "Unobtainable DIYs",
+            "English (Europe)": "Unobtainable DIYs",
+            "French": "Plans ne pouvant pas être obtenus",
+            "French (US)": "Plans ne pouvant pas être obtenus"
+        },
+        {
+            "English": "Obtainable Reactions",
+            "English (Europe)": "Obtainable Reactions",
+            "French": "Mimiques pouvant être obtenues",
+            "French (US)": "Mimiques pouvant être obtenues"
+        },
+        {
+            "English": "Unobtainable Reactions",
+            "English (Europe)": "Unobtainable Reactions",
+            "French": "Mimiques ne pouvant pas être obtenues",
+            "French (US)": "Mimiques ne pouvant pas être obtenues"
+        },
+        {
+            "English": "You will NOT get these from your favorite villagers.",
+            "English (Europe)": "You will NOT get these from your favorite villagers.",
+            "French": "Vous ne les obtiendrez pas de vos villageois préférés.",
+            "French (US)": "Vous ne les obtiendrez pas de vos villageois préférés."
+        },
+        {
+            "English": "You WILL get these from your favorite villagers.",
+            "English (Europe)": "You WILL get these from your favorite villagers.",
+            "French": "Vous les obtiendrez de vos villageois préférés.",
+            "French (US)": "Vous les obtiendrez de vos villageois préférés."
+        },
+        {
+            "English": "Note: you can get all items since you have all personality types!",
+            "English (Europe)": "Note: you can get all items since you have all personality types!",
+            "French": "Remarque: vous pouvez obtenir tous les objets puisque vous avez tous les types de personnalité !",
+            "French (US)": "Remarque: vous pouvez obtenir tous les objets puisque vous avez tous les types de personnalité !"
+        },
+        {
+            "English": "See what you can get from your villagers.",
+            "English (Europe)": "See what you can get from your villagers.",
+            "French": "Voir ce que vous pouvez obtenir de vos villageois.",
+            "French (US)": "Voir ce que vous pouvez obtenir de vos villageois."
+        },
+        {
+            "English": "Dismiss",
+            "English (Europe)": "Dismiss"
+        },
+        {
+            "English": "Tap here and go add some!",
+            "English (Europe)": "Tap here and go add some!",
+            "French": "Appuyez ici et allez en ajouter !",
+            "French (US)": "Appuyez ici et allez en ajouter !"
+        },
+        {
+            "English": "You do not have any villagers added!",
+            "English (Europe)": "You do not have any villagers added!",
+            "French": "Vous n'avez ajouté aucun villageois !",
+            "French (US)": "Vous n'avez ajouté aucun villageois !"
+        },
+        {
+            "English": "Obtainable Items",
+            "English (Europe)": "Obtainable Items",
+            "French": "Objets pouvant être obtenus",
+            "French (US)": "Objets pouvant être obtenus"
+        },
+        {
+            "English": "Added to Able Sisters stock rotation the day after receiving this item from Label",
+            "English (Europe)": "Added to Able Sisters stock rotation the day after receiving this item from Label",
+            "French": "Ajouté chez les Soeurs Doigts de Fée le lendemain du jour où vous recevez cet objet de Tiquette",
+            "French (US)": "Ajouté chez les Soeurs Doigts de Fée le lendemain du jour où vous recevez cet objet de Tiquette"
         }
     ],
     "Achievements": [
@@ -6246,199 +6346,297 @@
         },
         {
             "English": "Nook Inc.'s",
-            "English (Europe)": "Nook Inc.'s"
+            "English (Europe)": "Nook Inc.'s",
+            "French": "de Nook Inc.",
+            "French (US)": "de Nook Inc."
         },
         {
             "English": "Accomplished",
-            "English (Europe)": "Accomplished"
+            "English (Europe)": "Accomplished",
+            "French": "reconnu.e",
+            "French (US)": "reconnu.e"
         },
         {
             "English": "Small-Fry",
-            "English (Europe)": "Small-Fry"
+            "English (Europe)": "Small-Fry",
+            "French": "du menu fretin",
+            "French (US)": "du menu fretin"
         },
         {
             "English": "Unhindered",
-            "English (Europe)": "Unhindered"
+            "English (Europe)": "Unhindered",
+            "French": "invétéré.e",
+            "French (US)": "invétéré.e"
         },
         {
             "English": "Freshly Delivered",
-            "English (Europe)": "Freshly Delivered"
+            "English (Europe)": "Freshly Delivered",
+            "French": "frais.aîche",
+            "French (US)": "frais.aîche"
         },
         {
             "English": "Hobby-Level",
-            "English (Europe)": "Hobby-Level"
+            "English (Europe)": "Hobby-Level",
+            "French": "dilettante",
+            "French (US)": "dilettante"
         },
         {
             "English": "Trivia",
-            "English (Europe)": "Trivia"
+            "English (Europe)": "Trivia",
+            "French": "plein d’anecdotes",
+            "French (US)": "plein d’anecdotes"
         },
         {
             "English": "Midsummer",
-            "English (Europe)": "Midsummer"
+            "English (Europe)": "Midsummer",
+            "French": "d’été",
+            "French (US)": "d’été"
         },
         {
             "English": "Cerulean",
-            "English (Europe)": "Cerulean"
+            "English (Europe)": "Cerulean",
+            "French": "céruléen.ne",
+            "French (US)": "céruléen.ne"
         },
         {
             "English": "Creative",
-            "English (Europe)": "Creative"
+            "English (Europe)": "Creative",
+            "French": "créatif.ve",
+            "French (US)": "créatif.ve"
         },
         {
             "English": "Handmade",
-            "English (Europe)": "Handmade"
+            "English (Europe)": "Handmade",
+            "French": "manuel.le",
+            "French (US)": "manuel.le"
         },
         {
             "English": "Unique",
-            "English (Europe)": "Unique"
+            "English (Europe)": "Unique",
+            "French": "inimitable",
+            "French (US)": "inimitable"
         },
         {
             "English": "Specific",
-            "English (Europe)": "Specific"
+            "English (Europe)": "Specific",
+            "French": "spécifique",
+            "French (US)": "spécifique"
         },
         {
             "English": "Rascally",
-            "English (Europe)": "Rascally"
+            "English (Europe)": "Rascally",
+            "French": "espiègle",
+            "French (US)": "espiègle"
         },
         {
             "English": "Sports-Minded",
-            "English (Europe)": "Sports-Minded"
+            "English (Europe)": "Sports-Minded",
+            "French": "athlétique",
+            "French (US)": "athlétique"
         },
         {
             "English": "Discovered",
-            "English (Europe)": "Discovered"
+            "English (Europe)": "Discovered",
+            "French": "déterré.e",
+            "French (US)": "déterré.e"
         },
         {
             "English": "Anonymous",
-            "English (Europe)": "Anonymous"
+            "English (Europe)": "Anonymous",
+            "French": "anonyme",
+            "French (US)": "anonyme"
         },
         {
             "English": "Messy",
-            "English (Europe)": "Messy"
+            "English (Europe)": "Messy",
+            "French": "désordonné.e",
+            "French (US)": "désordonné.e"
         },
         {
             "English": "Greenhouse",
-            "English (Europe)": "Greenhouse"
+            "English (Europe)": "Greenhouse",
+            "French": "de serre",
+            "French (US)": "de serre"
         },
         {
             "English": "Refined",
-            "English (Europe)": "Refined"
+            "English (Europe)": "Refined",
+            "French": "raffiné.e",
+            "French (US)": "raffiné.e"
         },
         {
             "English": "Outdoorsy",
-            "English (Europe)": "Outdoorsy"
+            "English (Europe)": "Outdoorsy",
+            "French": "bucolique",
+            "French (US)": "bucolique"
         },
         {
             "English": "Inexperienced",
-            "English (Europe)": "Inexperienced"
+            "English (Europe)": "Inexperienced",
+            "French": "pas mûr.e",
+            "French (US)": "pas mûr.e"
         },
         {
             "English": "Twin's",
-            "English (Europe)": "Twin's"
+            "English (Europe)": "Twin's",
+            "French": "jumeau.elle",
+            "French (US)": "jumeau.elle"
         },
         {
             "English": "Verdant",
-            "English (Europe)": "Verdant"
+            "English (Europe)": "Verdant",
+            "French": "verdoyant.e",
+            "French (US)": "verdoyant.e"
         },
         {
             "English": "Shell-Grabbing",
-            "English (Europe)": "Shell-Grabbing"
+            "English (Europe)": "Shell-Grabbing",
+            "French": "des fonds marins",
+            "French (US)": "des fonds marins"
         },
         {
             "English": "Tidal",
-            "English (Europe)": "Tidal"
+            "English (Europe)": "Tidal",
+            "French": "des grandes marées",
+            "French (US)": "des grandes marées"
         },
         {
             "English": "Untossable",
-            "English (Europe)": "Untossable"
+            "English (Europe)": "Untossable",
+            "French": "fait.e pour durer",
+            "French (US)": "fait.e pour durer"
         },
         {
             "English": "Mistakenly Caught",
-            "English (Europe)": "Mistakenly Caught"
+            "English (Europe)": "Mistakenly Caught",
+            "French": "attrapé.e par erreur",
+            "French (US)": "attrapé.e par erreur"
         },
         {
             "English": "One-Room",
-            "English (Europe)": "One-Room"
+            "English (Europe)": "One-Room",
+            "French": "à une pièce",
+            "French (US)": "à une pièce"
         },
         {
             "English": "Happy",
-            "English (Europe)": "Happy"
+            "English (Europe)": "Happy",
+            "French": "heureux.euse",
+            "French (US)": "heureux.euse"
         },
         {
             "English": "Interior",
-            "English (Europe)": "Interior"
+            "English (Europe)": "Interior",
+            "French": "d’intérieur",
+            "French (US)": "d’intérieur"
         },
         {
             "English": "Overstuffed",
-            "English (Europe)": "Overstuffed"
+            "English (Europe)": "Overstuffed",
+            "French": "surchargé.e",
+            "French (US)": "surchargé.e"
         },
         {
             "English": "Home",
-            "English (Europe)": "Home"
+            "English (Europe)": "Home",
+            "French": "de maison",
+            "French (US)": "de maison"
         },
         {
             "English": "Kindly",
-            "English (Europe)": "Kindly"
+            "English (Europe)": "Kindly",
+            "French": "aimable",
+            "French (US)": "aimable"
         },
         {
             "English": "Overacting",
-            "English (Europe)": "Overacting"
+            "English (Europe)": "Overacting",
+            "French": "cabotineur.euse",
+            "French (US)": "cabotineur.euse"
         },
         {
             "English": "Photogenic",
-            "English (Europe)": "Photogenic"
+            "English (Europe)": "Photogenic",
+            "French": "photogénique",
+            "French (US)": "photogénique"
         },
         {
             "English": "Future",
-            "English (Europe)": "Future"
+            "English (Europe)": "Future",
+            "French": "du futur",
+            "French (US)": "du futur"
         },
         {
             "English": "Smartphone",
-            "English (Europe)": "Smartphone"
+            "English (Europe)": "Smartphone",
+            "French": "du Nookphone",
+            "French (US)": "du Nookphone"
         },
         {
             "English": "Digital-Age",
-            "English (Europe)": "Digital-Age"
+            "English (Europe)": "Digital-Age",
+            "French": "de la génération Z",
+            "French (US)": "de la génération Z"
         },
         {
             "English": "Internet",
-            "English (Europe)": "Internet"
+            "English (Europe)": "Internet",
+            "French": "sur Internet",
+            "French (US)": "sur Internet"
         },
         {
             "English": "Casual",
-            "English (Europe)": "Casual"
+            "English (Europe)": "Casual",
+            "French": "du dimanche",
+            "French (US)": "du dimanche"
         },
         {
             "English": "So-Called",
-            "English (Europe)": "So-Called"
+            "English (Europe)": "So-Called",
+            "French": "autoproclamé.e",
+            "French (US)": "autoproclamé.e"
         },
         {
             "English": "Full-Fledged",
-            "English (Europe)": "Full-Fledged"
+            "English (Europe)": "Full-Fledged",
+            "French": "accompli.e",
+            "French (US)": "accompli.e"
         },
         {
             "English": "Down-And-Out",
-            "English (Europe)": "Down-And-Out"
+            "English (Europe)": "Down-And-Out",
+            "French": "potentiel.le",
+            "French (US)": "potentiel.le"
         },
         {
             "English": "Autonomous",
-            "English (Europe)": "Autonomous"
+            "English (Europe)": "Autonomous",
+            "French": "libre",
+            "French (US)": "libre"
         },
         {
             "English": "Invested",
-            "English (Europe)": "Invested"
+            "English (Europe)": "Invested",
+            "French": "volontaire",
+            "French (US)": "volontaire"
         },
         {
             "English": "Weekend",
-            "English (Europe)": "Weekend"
+            "English (Europe)": "Weekend",
+            "French": "du week-end",
+            "French (US)": "du week-end"
         },
         {
             "English": "Status-Minded",
-            "English (Europe)": "Status-Minded"
+            "English (Europe)": "Status-Minded",
+            "French": "terre-à-terre",
+            "French (US)": "terre-à-terre"
         },
         {
             "English": "Responsible",
-            "English (Europe)": "Responsible"
+            "English (Europe)": "Responsible",
+            "French": "informé.e",
+            "French (US)": "informé.e"
         },
         {
             "English": "Rumermongering",
@@ -6446,783 +6644,1029 @@
         },
         {
             "English": "Art-School",
-            "English (Europe)": "Art-School"
+            "English (Europe)": "Art-School",
+            "French": "versé dans les arts",
+            "French (US)": "versé dans les arts"
         },
         {
             "English": "Tidy",
-            "English (Europe)": "Tidy"
+            "English (Europe)": "Tidy",
+            "French": "ordonné.e",
+            "French (US)": "ordonné.e"
         },
         {
             "English": "Shell-Less",
-            "English (Europe)": "Shell-Less"
+            "English (Europe)": "Shell-Less",
+            "French": "sorti.e de sa coquille",
+            "French (US)": "sorti.e de sa coquille"
         },
         {
             "English": "Accurate",
-            "English (Europe)": "Accurate"
+            "English (Europe)": "Accurate",
+            "French": "infaillible",
+            "French (US)": "infaillible"
         },
         {
             "English": "Wild-Child",
-            "English (Europe)": "Wild-Child"
+            "English (Europe)": "Wild-Child",
+            "French": "farouche",
+            "French (US)": "farouche"
         },
         {
             "English": "Teary-Eyed",
-            "English (Europe)": "Teary-Eyed"
+            "English (Europe)": "Teary-Eyed",
+            "French": "fleur bleue",
+            "French (US)": "fleur bleue"
         },
         {
             "English": "Risen",
-            "English (Europe)": "Risen"
+            "English (Europe)": "Risen",
+            "French": "recrudescent.e",
+            "French (US)": "recrudescent.e"
         },
         {
             "English": "Trapped",
-            "English (Europe)": "Trapped"
+            "English (Europe)": "Trapped",
+            "French": "piégé.e",
+            "French (US)": "piégé.e"
         },
         {
             "English": "Plausible",
-            "English (Europe)": "Plausible"
+            "English (Europe)": "Plausible",
+            "French": "plausible",
+            "French (US)": "plausible"
         },
         {
             "English": "Catchable",
-            "English (Europe)": "Catchable"
+            "English (Europe)": "Catchable",
+            "French": "tombé.e à l’eau",
+            "French (US)": "tombé.e à l’eau"
         },
         {
             "English": "Easy-Breezy",
-            "English (Europe)": "Easy-Breezy"
+            "English (Europe)": "Easy-Breezy",
+            "French": "décontracté.e",
+            "French (US)": "décontracté.e"
         },
         {
             "English": "Efficient",
-            "English (Europe)": "Efficient"
+            "English (Europe)": "Efficient",
+            "French": "efficace",
+            "French (US)": "efficace"
         },
         {
             "English": "Cold-Sensitive",
-            "English (Europe)": "Cold-Sensitive"
+            "English (Europe)": "Cold-Sensitive",
+            "French": "sensible au froid",
+            "French (US)": "sensible au froid"
         },
         {
             "English": "Late-Night",
-            "English (Europe)": "Late-Night"
+            "English (Europe)": "Late-Night",
+            "French": "de minuit",
+            "French (US)": "de minuit"
         },
         {
             "English": "Outdoor-Loving",
-            "English (Europe)": "Outdoor-Loving"
+            "English (Europe)": "Outdoor-Loving",
+            "French": "d’extérieur",
+            "French (US)": "d’extérieur"
         },
         {
             "English": "Flapping",
-            "English (Europe)": "Flapping"
+            "English (Europe)": "Flapping",
+            "French": "claquant.e",
+            "French (US)": "claquant.e"
         },
         {
             "English": "Trailblazing",
-            "English (Europe)": "Trailblazing"
+            "English (Europe)": "Trailblazing",
+            "French": "tout-terrain",
+            "French (US)": "tout-terrain"
         },
         {
             "English": "Cowardly",
-            "English (Europe)": "Cowardly"
+            "English (Europe)": "Cowardly",
+            "French": "froussard.e",
+            "French (US)": "froussard.e"
         },
         {
             "English": "Flightless",
-            "English (Europe)": "Flightless"
+            "English (Europe)": "Flightless",
+            "French": "incapable de voler",
+            "French (US)": "incapable de voler"
         },
         {
             "English": "Fickle",
-            "English (Europe)": "Fickle"
+            "English (Europe)": "Fickle",
+            "French": "changeant.e",
+            "French (US)": "changeant.e"
         },
         {
             "English": "Shady",
-            "English (Europe)": "Shady"
+            "English (Europe)": "Shady",
+            "French": "louche",
+            "French (US)": "louche"
         },
         {
             "English": "Kind",
-            "English (Europe)": "Kind"
+            "English (Europe)": "Kind",
+            "French": "Variété",
+            "French (US)": "Variété"
         },
         {
             "English": "Soothing",
-            "English (Europe)": "Soothing"
+            "English (Europe)": "Soothing",
+            "French": "réconfortant.e",
+            "French (US)": "réconfortant.e"
         },
         {
             "English": "Untamed",
-            "English (Europe)": "Untamed"
+            "English (Europe)": "Untamed",
+            "French": "indomptable",
+            "French (US)": "indomptable"
         },
         {
             "English": "Celebratory",
-            "English (Europe)": "Celebratory"
+            "English (Europe)": "Celebratory",
+            "French": "prêt.e pour la fête",
+            "French (US)": "prêt.e pour la fête"
         },
         {
             "English": "Spring-Born",
-            "English (Europe)": "Spring-Born"
+            "English (Europe)": "Spring-Born",
+            "French": "printanier.ère",
+            "French (US)": "printanier.ère"
         },
         {
             "English": "Adolescent",
-            "English (Europe)": "Adolescent"
+            "English (Europe)": "Adolescent",
+            "French": "adolescent.e",
+            "French (US)": "adolescent.e"
         },
         {
             "English": "Countdown",
-            "English (Europe)": "Countdown"
+            "English (Europe)": "Countdown",
+            "French": "du compte à rebours",
+            "French (US)": "du compte à rebours"
         },
         {
             "English": "Trendy",
-            "English (Europe)": "Trendy"
+            "English (Europe)": "Trendy",
+            "French": "branché.e",
+            "French (US)": "branché.e"
         },
         {
             "English": "Aspiring",
-            "English (Europe)": "Aspiring"
+            "English (Europe)": "Aspiring",
+            "French": "ambitieux.euse",
+            "French (US)": "ambitieux.euse"
         },
         {
             "English": "Pro",
-            "English (Europe)": "Pro"
+            "English (Europe)": "Pro",
+            "French": "pro",
+            "French (US)": "pro"
         },
         {
             "English": "Lucky",
-            "English (Europe)": "Lucky"
+            "English (Europe)": "Lucky",
+            "French": "chanceux.euse",
+            "French (US)": "chanceux.euse"
         },
         {
             "English": "Carefree",
-            "English (Europe)": "Carefree"
+            "English (Europe)": "Carefree",
+            "French": "insouciant.e",
+            "French (US)": "insouciant.e"
         },
         {
             "English": "Shining",
-            "English (Europe)": "Shining"
+            "English (Europe)": "Shining",
+            "French": "éblouissant.e",
+            "French (US)": "éblouissant.e"
         },
         {
             "English": "Traveling",
-            "English (Europe)": "Traveling"
+            "English (Europe)": "Traveling",
+            "French": "itinérant.e",
+            "French (US)": "itinérant.e"
         },
         {
             "English": "Hospitable",
-            "English (Europe)": "Hospitable"
+            "English (Europe)": "Hospitable",
+            "French": "accueillant.e",
+            "French (US)": "accueillant.e"
         },
         {
             "English": "Self-Paced",
-            "English (Europe)": "Self-Paced"
+            "English (Europe)": "Self-Paced",
+            "French": "serein.e",
+            "French (US)": "serein.e"
         },
         {
             "English": "Patron",
-            "English (Europe)": "Patron"
+            "English (Europe)": "Patron",
+            "French": "Chaland.e",
+            "French (US)": "Chaland.e"
         },
         {
             "English": "Lad;Lass",
-            "English (Europe)": "Lad;Lass"
+            "English (Europe)": "Lad;Lass",
+            "French": "Marin d’eau douce",
+            "French (US)": "Marin d’eau douce"
         },
         {
             "English": "Pesca Pro",
-            "English (Europe)": "Pesca Pro"
+            "English (Europe)": "Pesca Pro",
+            "French": "Ichtyophile",
+            "French (US)": "Ichtyophile"
         },
         {
             "English": "Wallflower",
-            "English (Europe)": "Wallflower"
+            "English (Europe)": "Wallflower",
+            "French": "Grand.e timide",
+            "French (US)": "Grand.e timide"
         },
         {
             "English": "Egg",
-            "English (Europe)": "Egg"
+            "English (Europe)": "Egg",
+            "French": "Œuf",
+            "French (US)": "Œuf"
         },
         {
             "English": "Bug Fan",
-            "English (Europe)": "Bug Fan"
+            "English (Europe)": "Bug Fan",
+            "French": "Entomologiste",
+            "French (US)": "Entomologiste"
         },
         {
             "English": "Representative",
-            "English (Europe)": "Representative"
+            "English (Europe)": "Representative",
+            "French": "Représentant.e",
+            "French (US)": "Représentant.e"
         },
         {
             "English": "Swimmer",
-            "English (Europe)": "Swimmer"
+            "English (Europe)": "Swimmer",
+            "French": "Nageur.se",
+            "French (US)": "Nageur.se"
         },
         {
             "English": "Diver",
-            "English (Europe)": "Diver"
+            "English (Europe)": "Diver",
+            "French": "Plongeur.euse",
+            "French (US)": "Plongeur.euse"
         },
         {
             "English": "Enthusiast",
-            "English (Europe)": "Enthusiast"
+            "English (Europe)": "Enthusiast",
+            "French": "Enthousiaste",
+            "French (US)": "Enthousiaste"
         },
         {
             "English": "Resident",
-            "English (Europe)": "Resident"
+            "English (Europe)": "Resident",
+            "French": "Résident.e",
+            "French (US)": "Résident.e"
         },
         {
             "English": "Eccentric",
-            "English (Europe)": "Eccentric"
+            "English (Europe)": "Eccentric",
+            "French": "Excentrique",
+            "French (US)": "Excentrique"
         },
         {
             "English": "Producer",
-            "English (Europe)": "Producer"
+            "English (Europe)": "Producer",
+            "French": "Producteur.rise",
+            "French (US)": "Producteur.rise"
         },
         {
             "English": "Clown",
-            "English (Europe)": "Clown"
+            "English (Europe)": "Clown",
+            "French": "Clown",
+            "French (US)": "Clown"
         },
         {
             "English": "Muscle",
-            "English (Europe)": "Muscle"
+            "English (Europe)": "Muscle",
+            "French": "Muscle",
+            "French (US)": "Muscle"
         },
         {
             "English": "Fossil",
-            "English (Europe)": "Fossil"
+            "English (Europe)": "Fossil",
+            "French": "Fossile",
+            "French (US)": "Fossile"
         },
         {
             "English": "Something Or Other",
-            "English (Europe)": "Something Or Other"
+            "English (Europe)": "Something Or Other",
+            "French": "Je-ne-sais-quoi",
+            "French (US)": "Je-ne-sais-quoi"
         },
         {
             "English": "Lawn Clippings",
-            "English (Europe)": "Lawn Clippings"
+            "English (Europe)": "Lawn Clippings",
+            "French": "Faucheur.euse de gazon",
+            "French (US)": "Faucheur.euse de gazon"
         },
         {
             "English": "Flower",
-            "English (Europe)": "Flower"
+            "English (Europe)": "Flower",
+            "French": "Fleur",
+            "French (US)": "Fleur"
         },
         {
             "English": "Caretaker",
-            "English (Europe)": "Caretaker"
+            "English (Europe)": "Caretaker",
+            "French": "Concierge",
+            "French (US)": "Concierge"
         },
         {
             "English": "Defender",
-            "English (Europe)": "Defender"
+            "English (Europe)": "Defender",
+            "French": "Jardinier.ère",
+            "French (US)": "Jardinier.ère"
         },
         {
             "English": "Observationist",
-            "English (Europe)": "Observationist"
+            "English (Europe)": "Observationist",
+            "French": "Relation",
+            "French (US)": "Relation"
         },
         {
             "English": "Other Half",
-            "English (Europe)": "Other Half"
+            "English (Europe)": "Other Half",
+            "French": "Cerise",
+            "French (US)": "Cerise"
         },
         {
             "English": "Wonder",
-            "English (Europe)": "Wonder"
+            "English (Europe)": "Wonder",
+            "French": "Efflorescence",
+            "French (US)": "Efflorescence"
         },
         {
             "English": "Shell Fan",
-            "English (Europe)": "Shell Fan"
+            "English (Europe)": "Shell Fan",
+            "French": "Bigorneau",
+            "French (US)": "Bigorneau"
         },
         {
             "English": "Season",
-            "English (Europe)": "Season"
+            "English (Europe)": "Season",
+            "French": "Saison",
+            "French (US)": "Saison"
         },
         {
             "English": "Trash",
-            "English (Europe)": "Trash"
+            "English (Europe)": "Trash",
+            "French": "Balayeur",
+            "French (US)": "Balayeur"
         },
         {
             "English": "Fish",
-            "English (Europe)": "Fish"
+            "English (Europe)": "Fish",
+            "French": "Poisson",
+            "French (US)": "Poisson"
         },
         {
             "English": "Loner",
-            "English (Europe)": "Loner"
+            "English (Europe)": "Loner",
+            "French": "Solitaire",
+            "French (US)": "Solitaire"
         },
         {
             "English": "Overachiever",
-            "English (Europe)": "Overachiever"
+            "English (Europe)": "Overachiever",
+            "French": "Surdoué.e",
+            "French (US)": "Surdoué.e"
         },
         {
             "English": "Sort",
-            "English (Europe)": "Sort"
+            "English (Europe)": "Sort",
+            "French": "Type/Nana",
+            "French (US)": "Type/Nana"
         },
         {
             "English": "Stylist",
-            "English (Europe)": "Stylist"
+            "English (Europe)": "Stylist",
+            "French": "Styliste",
+            "French (US)": "Styliste"
         },
         {
             "English": "Transformer",
-            "English (Europe)": "Transformer"
+            "English (Europe)": "Transformer",
+            "French": "Transformiste",
+            "French (US)": "Transformiste"
         },
         {
             "English": "Standard",
-            "English (Europe)": "Standard"
+            "English (Europe)": "Standard",
+            "French": "M./Mme Tout-le-monde",
+            "French (US)": "M./Mme Tout-le-monde"
         },
         {
             "English": "Neophyte",
-            "English (Europe)": "Neophyte"
+            "English (Europe)": "Neophyte",
+            "French": "Novice",
+            "French (US)": "Novice"
         },
         {
             "English": "Photographer",
-            "English (Europe)": "Photographer"
+            "English (Europe)": "Photographer",
+            "French": "Photographe",
+            "French (US)": "Photographe"
         },
         {
             "English": "Traveler",
-            "English (Europe)": "Traveler"
+            "English (Europe)": "Traveler",
+            "French": "Voyageur.euse",
+            "French (US)": "Voyageur.euse"
         },
         {
             "English": "Savant",
-            "English (Europe)": "Savant"
+            "English (Europe)": "Savant",
+            "French": "Utilisateur.trise",
+            "French (US)": "Utilisateur.trise"
         },
         {
             "English": "Child",
-            "English (Europe)": "Child"
+            "English (Europe)": "Child",
+            "French": "Galopin/Fillette",
+            "French (US)": "Galopin/Fillette"
         },
         {
             "English": "Surfer",
-            "English (Europe)": "Surfer"
+            "English (Europe)": "Surfer",
+            "French": "Surfeur.euse",
+            "French (US)": "Surfeur.euse"
         },
         {
             "English": "Materialist",
-            "English (Europe)": "Materialist"
+            "English (Europe)": "Materialist",
+            "French": "Avare",
+            "French (US)": "Avare"
         },
         {
             "English": "Ground Traveler",
-            "English (Europe)": "Ground Traveler"
+            "English (Europe)": "Ground Traveler",
+            "French": "Baroudeur.euse",
+            "French (US)": "Baroudeur.euse"
         },
         {
             "English": "Consumer",
-            "English (Europe)": "Consumer"
+            "English (Europe)": "Consumer",
+            "French": "Consommateur.trice",
+            "French (US)": "Consommateur.trice"
         },
         {
             "English": "Eventuality",
-            "English (Europe)": "Eventuality"
+            "English (Europe)": "Eventuality",
+            "French": "Fauché.e",
+            "French (US)": "Fauché.e"
         },
         {
             "English": "Life",
-            "English (Europe)": "Life"
+            "English (Europe)": "Life",
+            "French": "Avant-gardiste",
+            "French (US)": "Avant-gardiste"
         },
         {
             "English": "Shopaholic",
-            "English (Europe)": "Shopaholic"
+            "English (Europe)": "Shopaholic",
+            "French": "Client.e compulsif.ve",
+            "French (US)": "Client.e compulsif.ve"
         },
         {
             "English": "Stalkholder",
-            "English (Europe)": "Stalkholder"
+            "English (Europe)": "Stalkholder",
+            "French": "Boursicoteur.trice",
+            "French (US)": "Boursicoteur.trice"
         },
         {
             "English": "Speculator",
-            "English (Europe)": "Speculator"
+            "English (Europe)": "Speculator",
+            "French": "Spéculateur.trice",
+            "French (US)": "Spéculateur.trice"
         },
         {
             "English": "Bill Payer",
-            "English (Europe)": "Bill Payer"
+            "English (Europe)": "Bill Payer",
+            "French": "Contribuable",
+            "French (US)": "Contribuable"
         },
         {
             "English": "Influencer",
-            "English (Europe)": "Influencer"
+            "English (Europe)": "Influencer",
+            "French": "Influenceur.se",
+            "French (US)": "Influenceur.se"
         },
         {
             "English": "Boy;Girl",
-            "English (Europe)": "Boy;Girl"
+            "English (Europe)": "Boy;Girl",
+            "French": "Gamin.e",
+            "French (US)": "Gamin.e"
         },
         {
             "English": "Wild Child",
-            "English (Europe)": "Wild Child"
+            "English (Europe)": "Wild Child",
+            "French": "Sauvageon.ne",
+            "French (US)": "Sauvageon.ne"
         },
         {
             "English": "Being",
-            "English (Europe)": "Being"
+            "English (Europe)": "Being",
+            "French": "Altesse",
+            "French (US)": "Altesse"
         },
         {
             "English": "Deadeye",
-            "English (Europe)": "Deadeye"
+            "English (Europe)": "Deadeye",
+            "French": "Tireur.euse d’élite",
+            "French (US)": "Tireur.euse d’élite"
         },
         {
             "English": "Troublemaker",
-            "English (Europe)": "Troublemaker"
+            "English (Europe)": "Troublemaker",
+            "French": "Perturbateur.rice",
+            "French (US)": "Perturbateur.rice"
         },
         {
             "English": "Crybaby",
-            "English (Europe)": "Crybaby"
+            "English (Europe)": "Crybaby",
+            "French": "Pleurnicheur.rice",
+            "French (US)": "Pleurnicheur.rice"
         },
         {
             "English": "Phoenix",
-            "English (Europe)": "Phoenix"
+            "English (Europe)": "Phoenix",
+            "French": "Phénomène",
+            "French (US)": "Phénomène"
         },
         {
             "English": "Reckless One",
-            "English (Europe)": "Reckless One"
+            "English (Europe)": "Reckless One",
+            "French": "Téméraire",
+            "French (US)": "Téméraire"
         },
         {
             "English": "Fake",
-            "English (Europe)": "Fake"
+            "English (Europe)": "Fake",
+            "French": "Faussaire",
+            "French (US)": "Faussaire"
         },
         {
             "English": "Klutz",
-            "English (Europe)": "Klutz"
+            "English (Europe)": "Klutz",
+            "French": "Empoté.e",
+            "French (US)": "Empoté.e"
         },
         {
             "English": "Slingshot Ace",
-            "English (Europe)": "Slingshot Ace"
+            "English (Europe)": "Slingshot Ace",
+            "French": "Pro du lance-pierre",
+            "French (US)": "Pro du lance-pierre"
         },
         {
             "English": "Partitioner",
-            "English (Europe)": "Partitioner"
+            "English (Europe)": "Partitioner",
+            "French": "Séparateur.rice",
+            "French (US)": "Séparateur.rice"
         },
         {
             "English": "Sprite",
-            "English (Europe)": "Sprite"
+            "English (Europe)": "Sprite",
+            "French": "Elfe",
+            "French (US)": "Elfe"
         },
         {
             "English": "Meteorite",
-            "English (Europe)": "Meteorite"
+            "English (Europe)": "Meteorite",
+            "French": "Étoile",
+            "French (US)": "Étoile"
         },
         {
             "English": "Decorating Fiend",
-            "English (Europe)": "Decorating Fiend"
+            "English (Europe)": "Decorating Fiend",
+            "French": "Décorateur.trice",
+            "French (US)": "Décorateur.trice"
         },
         {
             "English": "Flag Waver",
-            "English (Europe)": "Flag Waver"
+            "English (Europe)": "Flag Waver",
+            "French": "Porte-drapeau",
+            "French (US)": "Porte-drapeau"
         },
         {
             "English": "Runner",
-            "English (Europe)": "Runner"
+            "English (Europe)": "Runner",
+            "French": "Coureur.euse",
+            "French (US)": "Coureur.euse"
         },
         {
             "English": "Ghost",
-            "English (Europe)": "Ghost"
+            "English (Europe)": "Ghost",
+            "French": "Fantôme",
+            "French (US)": "Fantôme"
         },
         {
             "English": "Fowl",
-            "English (Europe)": "Fowl"
+            "English (Europe)": "Fowl",
+            "French": "Oiseau sauvage",
+            "French (US)": "Oiseau sauvage"
         },
         {
             "English": "Music-Lover",
-            "English (Europe)": "Music-Lover"
+            "English (Europe)": "Music-Lover",
+            "French": "Mélomane",
+            "French (US)": "Mélomane"
         },
         {
             "English": "Seller",
-            "English (Europe)": "Seller"
+            "English (Europe)": "Seller",
+            "French": "Vendeur.euse",
+            "French (US)": "Vendeur.euse"
         },
         {
             "English": "Cynic",
-            "English (Europe)": "Cynic"
+            "English (Europe)": "Cynic",
+            "French": "Cynique",
+            "French (US)": "Cynique"
         },
         {
             "English": "Pal",
-            "English (Europe)": "Pal"
+            "English (Europe)": "Pal",
+            "French": "Ami.e",
+            "French (US)": "Ami.e"
         },
         {
             "English": "Party Animal",
-            "English (Europe)": "Party Animal"
+            "English (Europe)": "Party Animal",
+            "French": "Fêtard.e",
+            "French (US)": "Fêtard.e"
         },
         {
             "English": "Birthday Boy;Birthday Girl",
-            "English (Europe)": "Birthday Boy;Birthday Girl"
+            "English (Europe)": "Birthday Boy;Birthday Girl",
+            "French": "Star du jour",
+            "French (US)": "Star du jour"
         },
         {
             "English": "Free Spirit",
-            "English (Europe)": "Free Spirit"
+            "English (Europe)": "Free Spirit",
+            "French": "Esprit libre",
+            "French (US)": "Esprit libre"
         },
         {
             "English": "Youngster",
-            "English (Europe)": "Youngster"
+            "English (Europe)": "Youngster",
+            "French": "Jeunesse",
+            "French (US)": "Jeunesse"
         },
         {
             "English": "Merrymaker",
-            "English (Europe)": "Merrymaker"
+            "English (Europe)": "Merrymaker",
+            "French": "Animateur.trice",
+            "French (US)": "Animateur.trice"
         },
         {
             "English": "Model",
-            "English (Europe)": "Model"
+            "English (Europe)": "Model",
+            "French": "Mannequin",
+            "French (US)": "Mannequin"
         },
         {
             "English": "Artist",
-            "English (Europe)": "Artist"
+            "English (Europe)": "Artist",
+            "French": "Artiste",
+            "French (US)": "Artiste"
         },
         {
             "English": "Designer",
-            "English (Europe)": "Designer"
+            "English (Europe)": "Designer",
+            "French": "Designeur.euse",
+            "French (US)": "Designeur.euse"
         },
         {
             "English": "Type",
-            "English (Europe)": "Type"
+            "English (Europe)": "Type",
+            "French": "Du genre",
+            "French (US)": "Du genre"
         },
         {
             "English": "Figure",
-            "English (Europe)": "Figure"
+            "English (Europe)": "Figure",
+            "French": "Être",
+            "French (US)": "Être"
         },
         {
             "English": "Jewel",
-            "English (Europe)": "Jewel"
+            "English (Europe)": "Jewel",
+            "French": "Joyau",
+            "French (US)": "Joyau"
         },
         {
             "English": "Person",
-            "English (Europe)": "Person"
+            "English (Europe)": "Person",
+            "French": "Individu",
+            "French (US)": "Individu"
         },
         {
             "English": "Friend",
-            "English (Europe)": "Friend"
+            "English (Europe)": "Friend",
+            "French": "Camarade",
+            "French (US)": "Camarade"
         },
         {
             "English": "Chill Soul",
-            "English (Europe)": "Chill Soul"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Chill Soul",
+            "French": "Convive",
+            "French (US)": "Convive"
         },
         {
             "English": "Competent",
-            "English (Europe)": "Competent"
+            "English (Europe)": "Competent",
+            "French": "compétent.e",
+            "French (US)": "compétent.e"
         },
         {
             "English": "Energetic",
-            "English (Europe)": "Energetic"
+            "English (Europe)": "Energetic",
+            "French": "énergique",
+            "French (US)": "énergique"
         },
         {
             "English": "Unabashedly",
-            "English (Europe)": "Unabashedly"
+            "English (Europe)": "Unabashedly",
+            "French": "et fier de l’être",
+            "French (US)": "et fier de l’être"
         },
         {
             "English": "Weak",
-            "English (Europe)": "Weak"
+            "English (Europe)": "Weak",
+            "French": "encore faible",
+            "French (US)": "encore faible"
         },
         {
             "English": "Night-Owl",
-            "English (Europe)": "Night-Owl"
+            "English (Europe)": "Night-Owl",
+            "French": "noctambule",
+            "French (US)": "noctambule"
         },
         {
             "English": "Savvy",
-            "English (Europe)": "Savvy"
+            "English (Europe)": "Savvy",
+            "French": "drôlement calé.e",
+            "French (US)": "drôlement calé.e"
         },
         {
             "English": "Bodyboardin'",
-            "English (Europe)": "Bodyboardin'"
+            "English (Europe)": "Bodyboardin'",
+            "French": "fan de baignade",
+            "French (US)": "fan de baignade"
         },
         {
             "English": "Fresh",
-            "English (Europe)": "Fresh"
+            "English (Europe)": "Fresh",
+            "French": "iodé.e",
+            "French (US)": "iodé.e"
         },
         {
             "English": "Crafty",
-            "English (Europe)": "Crafty"
+            "English (Europe)": "Crafty",
+            "French": "doué.e de ses mains",
+            "French (US)": "doué.e de ses mains"
         },
         {
             "English": "Emergent",
-            "English (Europe)": "Emergent"
+            "English (Europe)": "Emergent",
+            "French": "prometteur.euse",
+            "French (US)": "prometteur.euse"
         },
         {
             "English": "Change-It-Up",
-            "English (Europe)": "Change-It-Up"
+            "English (Europe)": "Change-It-Up",
+            "French": "impatient.e",
+            "French (US)": "impatient.e"
         },
         {
             "English": "Aggressive",
-            "English (Europe)": "Aggressive"
+            "English (Europe)": "Aggressive",
+            "French": "agressif.ve",
+            "French (US)": "agressif.ve"
         },
         {
             "English": "Overboard",
-            "English (Europe)": "Overboard"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Overboard",
+            "French": "impétueux.euse",
+            "French (US)": "impétueux.euse"
         },
         {
             "English": "Ancient",
-            "English (Europe)": "Ancient"
+            "English (Europe)": "Ancient",
+            "French": "ancien.ne",
+            "French (US)": "ancien.ne"
         },
         {
             "English": "Omnivorous",
-            "English (Europe)": "Omnivorous"
+            "English (Europe)": "Omnivorous",
+            "French": "omnivore",
+            "French (US)": "omnivore"
         },
         {
             "English": "Thorny",
-            "English (Europe)": "Thorny"
+            "English (Europe)": "Thorny",
+            "French": "à épines",
+            "French (US)": "à épines"
         },
         {
             "English": "Detailed",
-            "English (Europe)": "Detailed"
+            "English (Europe)": "Detailed",
+            "French": "appliqué.e",
+            "French (US)": "appliqué.e"
         },
         {
             "English": "Organic",
-            "English (Europe)": "Organic"
+            "English (Europe)": "Organic",
+            "French": "naturel.le",
+            "French (US)": "naturel.le"
         },
         {
             "English": "Precocious",
-            "English (Europe)": "Precocious"
+            "English (Europe)": "Precocious",
+            "French": "précoce",
+            "French (US)": "précoce"
         },
         {
             "English": "Total",
-            "English (Europe)": "Total"
+            "English (Europe)": "Total",
+            "French": "gorgé.e de soleil",
+            "French (US)": "gorgé.e de soleil"
         },
         {
             "English": "Unrestrained",
-            "English (Europe)": "Unrestrained"
+            "English (Europe)": "Unrestrained",
+            "French": "en liberté",
+            "French (US)": "en liberté"
         },
         {
             "English": "Seashore",
-            "English (Europe)": "Seashore"
+            "English (Europe)": "Seashore",
+            "French": "vide",
+            "French (US)": "vide"
         },
         {
             "English": "Ready",
-            "English (Europe)": "Ready"
+            "English (Europe)": "Ready",
+            "French": "pas lourd.e",
+            "French (US)": "pas lourd.e"
         },
         {
             "English": "Eco-Friendly",
-            "English (Europe)": "Eco-Friendly"
+            "English (Europe)": "Eco-Friendly",
+            "French": "responsable",
+            "French (US)": "responsable"
         },
         {
             "English": "Bait-Snatching",
-            "English (Europe)": "Bait-Snatching"
+            "English (Europe)": "Bait-Snatching",
+            "French": "mordeur.euse",
+            "French (US)": "mordeur.euse"
         },
         {
             "English": "Single-Occupant",
-            "English (Europe)": "Single-Occupant"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Single-Occupant",
+            "French": "qui vit seul.e",
+            "French (US)": "qui vit seul.e"
         },
         {
             "English": "Tentative",
-            "English (Europe)": "Tentative"
+            "English (Europe)": "Tentative",
+            "French": "à ses heures",
+            "French (US)": "à ses heures"
         },
         {
             "English": "Partially Obscured",
-            "English (Europe)": "Partially Obscured"
+            "English (Europe)": "Partially Obscured",
+            "French": "dissimulé.e",
+            "French (US)": "dissimulé.e"
         },
         {
             "English": "Dreamy",
-            "English (Europe)": "Dreamy"
+            "English (Europe)": "Dreamy",
+            "French": "onirique",
+            "French (US)": "onirique"
         },
         {
             "English": "Reliable",
-            "English (Europe)": "Reliable"
+            "English (Europe)": "Reliable",
+            "French": "fiable",
+            "French (US)": "fiable"
         },
         {
             "English": "Apprentice",
-            "English (Europe)": "Apprentice"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Apprentice",
+            "French": "apprenti.e",
+            "French (US)": "apprenti.e"
         },
         {
             "English": "Connected",
-            "English (Europe)": "Connected"
+            "English (Europe)": "Connected",
+            "French": "connecté.e",
+            "French (US)": "connecté.e"
         },
         {
             "English": "Curious",
-            "English (Europe)": "Curious"
+            "English (Europe)": "Curious",
+            "French": "fouineuse",
+            "French (US)": "fouineuse"
         },
         {
             "English": "Novice",
-            "English (Europe)": "Novice"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Novice",
+            "French": "débutant.e",
+            "French (US)": "débutant.e"
         },
         {
             "English": "Thrifty",
-            "English (Europe)": "Thrifty"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Thrifty",
+            "French": "économe",
+            "French (US)": "économe"
         },
         {
             "English": "Avaricious",
-            "English (Europe)": "Avaricious"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Avaricious",
+            "French": "près de ses sous",
+            "French (US)": "près de ses sous"
         },
         {
             "English": "Science-y",
-            "English (Europe)": "Science-y"
+            "English (Europe)": "Science-y",
+            "French": "scientifique",
+            "French (US)": "scientifique"
         },
         {
             "English": "Highly Aware",
-            "English (Europe)": "Highly Aware"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Highly Aware",
+            "French": "impliqué.e",
+            "French (US)": "impliqué.e"
         },
         {
             "English": "Atmospheric",
-            "English (Europe)": "Atmospheric"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Atmospheric",
+            "French": "atmosphèrique",
+            "French (US)": "atmosphèrique"
         },
         {
             "English": "Snow",
-            "English (Europe)": "Snow"
+            "English (Europe)": "Snow",
+            "French": "de neige",
+            "French (US)": "de neige"
         },
         {
             "English": "Wishful",
-            "English (Europe)": "Wishful"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Wishful",
+            "French": "plein.e d’espoir",
+            "French (US)": "plein.e d’espoir"
         },
         {
             "English": "Humming",
-            "English (Europe)": "Humming"
+            "English (Europe)": "Humming",
+            "French": "fredonnant",
+            "French (US)": "fredonnant"
         },
         {
             "English": "Swept-Away",
-            "English (Europe)": "Swept-Away"
+            "English (Europe)": "Swept-Away",
+            "French": "à la dérive",
+            "French (US)": "à la dérive"
         },
         {
             "English": "Supernatural",
-            "English (Europe)": "Supernatural"
+            "English (Europe)": "Supernatural",
+            "French": "surnaturel.le",
+            "French (US)": "surnaturel.le"
         },
         {
             "English": "Perennial",
-            "English (Europe)": "Perennial"
+            "English (Europe)": "Perennial",
+            "French": "perpétuel.le",
+            "French (US)": "perpétuel.le"
         },
         {
             "English": "Covert",
-            "English (Europe)": "Covert"
+            "English (Europe)": "Covert",
+            "French": "secret.ête",
+            "French (US)": "secret.ête"
         },
         {
             "English": "Discerning",
-            "English (Europe)": "Discerning"
+            "English (Europe)": "Discerning",
+            "French": "averti.e",
+            "French (US)": "averti.e"
         },
         {
             "English": "Hungry",
@@ -7230,2339 +7674,1911 @@
         },
         {
             "English": "Friendly",
-            "English (Europe)": "Friendly"
+            "English (Europe)": "Friendly",
+            "French": "au grand cœur",
+            "French (US)": "au grand cœur"
         },
         {
             "English": "Growing",
-            "English (Europe)": "Growing"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Growing",
+            "French": "en pleine croissance",
+            "French (US)": "en pleine croissance"
         },
         {
             "English": "Summer-Born",
-            "English (Europe)": "Summer-Born"
+            "English (Europe)": "Summer-Born",
+            "French": "estival.e",
+            "French (US)": "estival.e"
         },
         {
             "English": "Rebellious",
-            "English (Europe)": "Rebellious"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Rebellious",
+            "French": "vachement rebelle",
+            "French (US)": "vachement rebelle"
         },
         {
             "English": "Jovial",
-            "English (Europe)": "Jovial"
+            "English (Europe)": "Jovial",
+            "French": "jovial.e",
+            "French (US)": "jovial.e"
         },
         {
             "English": "Top-Notch",
-            "English (Europe)": "Top-Notch"
+            "English (Europe)": "Top-Notch",
+            "French": "au pinacle",
+            "French (US)": "au pinacle"
         },
         {
             "English": "Occasional",
-            "English (Europe)": "Occasional"
+            "English (Europe)": "Occasional",
+            "French": "occasionnel.le",
+            "French (US)": "occasionnel.le"
         },
         {
             "English": "Lonely",
-            "English (Europe)": "Lonely"
+            "English (Europe)": "Lonely",
+            "French": "solitaire",
+            "French (US)": "solitaire"
         },
         {
             "English": "Active",
-            "English (Europe)": "Active"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Active",
+            "French": "actif",
+            "French (US)": "actif"
         },
         {
             "English": "Fishing Fan",
-            "English (Europe)": "Fishing Fan"
+            "English (Europe)": "Fishing Fan",
+            "French": "Pêcheur.euse à la mouche",
+            "French (US)": "Pêcheur.euse à la mouche"
         },
         {
             "English": "Angler",
-            "English (Europe)": "Angler"
+            "English (Europe)": "Angler",
+            "French": "Pêcheur.euse à la ligne",
+            "French (US)": "Pêcheur.euse à la ligne"
         },
         {
             "English": "Shy Kid",
-            "English (Europe)": "Shy Kid"
+            "English (Europe)": "Shy Kid",
+            "French": "Peureux.euse",
+            "French (US)": "Peureux.euse"
         },
         {
             "English": "Grub",
-            "English (Europe)": "Grub"
+            "English (Europe)": "Grub",
+            "French": "Larve",
+            "French (US)": "Larve"
         },
         {
             "English": "Insect",
-            "English (Europe)": "Insect"
+            "English (Europe)": "Insect",
+            "French": "Insecte",
+            "French (US)": "Insecte"
         },
         {
             "English": "Intellectual",
-            "English (Europe)": "Intellectual"
+            "English (Europe)": "Intellectual",
+            "French": "Intellectuel.le",
+            "French (US)": "Intellectuel.le"
         },
         {
             "English": "Beachcomber",
-            "English (Europe)": "Beachcomber"
+            "English (Europe)": "Beachcomber",
+            "French": "Prospecteur.trice",
+            "French (US)": "Prospecteur.trice"
         },
         {
             "English": "Ingredient",
-            "English (Europe)": "Ingredient"
+            "English (Europe)": "Ingredient",
+            "French": "Diversité",
+            "French (US)": "Diversité"
         },
         {
             "English": "Club Member",
-            "English (Europe)": "Club Member"
+            "English (Europe)": "Club Member",
+            "French": "Adhérent.e",
+            "French (US)": "Adhérent.e"
         },
         {
             "English": "Artisan",
-            "English (Europe)": "Artisan"
+            "English (Europe)": "Artisan",
+            "French": "Artisan.e",
+            "French (US)": "Artisan.e"
         },
         {
             "English": "Challenger",
-            "English (Europe)": "Challenger"
+            "English (Europe)": "Challenger",
+            "French": "Challenger",
+            "French (US)": "Challenger"
         },
         {
             "English": "Problem Solver",
-            "English (Europe)": "Problem Solver"
+            "English (Europe)": "Problem Solver",
+            "French": "Médiateur.rice",
+            "French (US)": "Médiateur.rice"
         },
         {
             "English": "Crusher",
-            "English (Europe)": "Crusher"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Crusher",
+            "French": "Briseur.euse",
+            "French (US)": "Briseur.euse"
         },
         {
             "English": "Truth",
-            "English (Europe)": "Truth"
+            "English (Europe)": "Truth",
+            "French": "Vérité",
+            "French (US)": "Vérité"
         },
         {
             "English": "Custodian",
-            "English (Europe)": "Custodian"
+            "English (Europe)": "Custodian",
+            "French": "Gardien.ne",
+            "French (US)": "Gardien.ne"
         },
         {
             "English": "Rose",
-            "English (Europe)": "Rose"
+            "English (Europe)": "Rose",
+            "French": "Rose",
+            "French (US)": "Rose"
         },
         {
             "English": "Keeper",
-            "English (Europe)": "Keeper"
+            "English (Europe)": "Keeper",
+            "French": "Philanthrope",
+            "French (US)": "Philanthrope"
         },
         {
             "English": "Dietitian",
-            "English (Europe)": "Dietitian"
+            "English (Europe)": "Dietitian",
+            "French": "Paysagiste",
+            "French (US)": "Paysagiste"
         },
         {
             "English": "Bounty",
-            "English (Europe)": "Bounty"
+            "English (Europe)": "Bounty",
+            "French": "Récolte",
+            "French (US)": "Récolte"
         },
         {
             "English": "Freshman",
-            "English (Europe)": "Freshman"
+            "English (Europe)": "Freshman",
+            "French": "Orange",
+            "French (US)": "Orange"
         },
         {
             "English": "Sentinel",
-            "English (Europe)": "Sentinel"
+            "English (Europe)": "Sentinel",
+            "French": "Tuteur.trice",
+            "French (US)": "Tuteur.trice"
         },
         {
             "English": "Seashell Seller",
-            "English (Europe)": "Seashell Seller"
+            "English (Europe)": "Seashell Seller",
+            "French": "Palourde",
+            "French (US)": "Palourde"
         },
         {
             "English": "Coast Dweller",
-            "English (Europe)": "Coast Dweller"
+            "English (Europe)": "Coast Dweller",
+            "French": "Plagiste",
+            "French (US)": "Plagiste"
         },
         {
             "English": "Ecologist",
-            "English (Europe)": "Ecologist"
+            "English (Europe)": "Ecologist",
+            "French": "Écolo",
+            "French (US)": "Écolo"
         },
         {
             "English": "Frenzy",
-            "English (Europe)": "Frenzy"
+            "English (Europe)": "Frenzy",
+            "French": "Frénésie",
+            "French (US)": "Frénésie"
         },
         {
             "English": "Beginner",
-            "English (Europe)": "Beginner"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Beginner",
+            "French": "Jeune premier",
+            "French (US)": "Jeune premier"
         },
         {
             "English": "Remodeler",
-            "English (Europe)": "Remodeler"
+            "English (Europe)": "Remodeler",
+            "French": "Redécorateur.trice",
+            "French (US)": "Redécorateur.trice"
         },
         {
             "English": "Talent",
-            "English (Europe)": "Talent"
+            "English (Europe)": "Talent",
+            "French": "Talent",
+            "French (US)": "Talent"
         },
         {
             "English": "Dreamer",
-            "English (Europe)": "Dreamer"
+            "English (Europe)": "Dreamer",
+            "French": "Rêveur.euse",
+            "French (US)": "Rêveur.euse"
         },
         {
             "English": "Ally",
-            "English (Europe)": "Ally"
+            "English (Europe)": "Ally",
+            "French": "Allié",
+            "French (US)": "Allié"
         },
         {
             "English": "Dancer",
-            "English (Europe)": "Dancer"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Dancer",
+            "French": "Danseur",
+            "French (US)": "Danseur"
         },
         {
             "English": "Reviewer",
-            "English (Europe)": "Reviewer"
+            "English (Europe)": "Reviewer",
+            "French": "Éditeur",
+            "French (US)": "Éditeur"
         },
         {
             "English": "Force",
-            "English (Europe)": "Force"
+            "English (Europe)": "Force",
+            "French": "Force",
+            "French (US)": "Force"
         },
         {
             "English": "Rookie",
-            "English (Europe)": "Rookie"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Rookie",
+            "French": "Néophyte",
+            "French (US)": "Néophyte"
         },
         {
             "English": "Family Member",
-            "English (Europe)": "Family Member"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Family Member",
+            "French": "Connaissance",
+            "French (US)": "Connaissance"
         },
         {
             "English": "Moneybags",
-            "English (Europe)": "Moneybags"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Moneybags",
+            "French": "Affairiste",
+            "French (US)": "Affairiste"
         },
         {
             "English": "Student",
-            "English (Europe)": "Student"
+            "English (Europe)": "Student",
+            "French": "Étudiant.e",
+            "French (US)": "Étudiant.e"
         },
         {
             "English": "Neatnik",
-            "English (Europe)": "Neatnik"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Neatnik",
+            "French": "Fée du logis",
+            "French (US)": "Fée du logis"
         },
         {
             "English": "Floaty Thing",
-            "English (Europe)": "Floaty Thing"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Floaty Thing",
+            "French": "Voltigeur.euse",
+            "French (US)": "Voltigeur.euse"
         },
         {
             "English": "Angel",
-            "English (Europe)": "Angel"
+            "English (Europe)": "Angel",
+            "French": "Ange",
+            "French (US)": "Ange"
         },
         {
             "English": "Legend",
-            "English (Europe)": "Legend"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Legend",
+            "French": "Légende",
+            "French (US)": "Légende"
         },
         {
             "English": "Musician",
-            "English (Europe)": "Musician"
+            "English (Europe)": "Musician",
+            "French": "Musicien.ne",
+            "French (US)": "Musicien.ne"
         },
         {
             "English": "Pioneer",
-            "English (Europe)": "Pioneer"
+            "English (Europe)": "Pioneer",
+            "French": "Bâtisseur.euse",
+            "French (US)": "Bâtisseur.euse"
         },
         {
             "English": "Soul",
-            "English (Europe)": "Soul"
+            "English (Europe)": "Soul",
+            "French": "Âme",
+            "French (US)": "Âme"
         },
         {
             "English": "Lost One",
-            "English (Europe)": "Lost One"
+            "English (Europe)": "Lost One",
+            "French": "Naufragé.e",
+            "French (US)": "Naufragé.e"
         },
         {
             "English": "Supporter",
-            "English (Europe)": "Supporter"
+            "English (Europe)": "Supporter",
+            "French": "Supporter.trice",
+            "French (US)": "Supporter.trice"
         },
         {
             "English": "Aficionado",
-            "English (Europe)": "Aficionado"
+            "English (Europe)": "Aficionado",
+            "French": "Amateur.trice d'art",
+            "French (US)": "Amateur.trice d'art"
         },
         {
             "English": "Philosopher",
-            "English (Europe)": "Philosopher"
+            "English (Europe)": "Philosopher",
+            "French": "Philosophe",
+            "French (US)": "Philosophe"
         },
         {
             "English": "Buddy",
-            "English (Europe)": "Buddy"
+            "English (Europe)": "Buddy",
+            "French": "Pote",
+            "French (US)": "Pote"
         },
         {
             "English": "Youth",
-            "English (Europe)": "Youth"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Youth",
+            "French": "Jouvenceau.elle",
+            "French (US)": "Jouvenceau.elle"
         },
         {
             "English": "Chiller",
-            "English (Europe)": "Chiller"
+            "English (Europe)": "Chiller",
+            "French": "Frileux.euse",
+            "French (US)": "Frileux.euse"
         },
         {
             "English": "Rebel",
-            "English (Europe)": "Rebel"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Rebel",
+            "French": "Rebelle",
+            "French (US)": "Rebelle"
         },
         {
             "English": "Brute",
-            "English (Europe)": "Brute"
+            "English (Europe)": "Brute",
+            "French": "Brute",
+            "French (US)": "Brute"
         },
         {
             "English": "Luminary",
-            "English (Europe)": "Luminary"
+            "English (Europe)": "Luminary",
+            "French": "Sommité",
+            "French (US)": "Sommité"
         },
         {
             "English": "Tourist",
-            "English (Europe)": "Tourist"
+            "English (Europe)": "Tourist",
+            "French": "Touriste",
+            "French (US)": "Touriste"
         },
         {
             "English": "Chum",
-            "English (Europe)": "Chum"
+            "English (Europe)": "Chum",
+            "French": "Copain.ine",
+            "French (US)": "Copain.ine"
         },
         {
             "English": "Specialist",
-            "English (Europe)": "Specialist"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Specialist",
+            "French": "serein.e",
+            "French (US)": "serein.e"
         },
         {
             "English": "Moderate",
-            "English (Europe)": "Moderate"
+            "English (Europe)": "Moderate",
+            "French": "modéré.e",
+            "French (US)": "modéré.e"
         },
         {
             "English": "Pond-Raised",
-            "English (Europe)": "Pond-Raised"
+            "English (Europe)": "Pond-Raised",
+            "French": "d’étang",
+            "French (US)": "d’étang"
         },
         {
             "English": "Respected",
-            "English (Europe)": "Respected"
+            "English (Europe)": "Respected",
+            "French": "respecté.e",
+            "French (US)": "respecté.e"
         },
         {
             "English": "Emerging",
-            "English (Europe)": "Emerging"
+            "English (Europe)": "Emerging",
+            "French": "en devenir",
+            "French (US)": "en devenir"
         },
         {
             "English": "Defiant",
-            "English (Europe)": "Defiant"
+            "English (Europe)": "Defiant",
+            "French": "réfractaire",
+            "French (US)": "réfractaire"
         },
         {
             "English": "Understated",
-            "English (Europe)": "Understated"
+            "English (Europe)": "Understated",
+            "French": "discret.ète",
+            "French (US)": "discret.ète"
         },
         {
             "English": "Aquatic",
-            "English (Europe)": "Aquatic"
+            "English (Europe)": "Aquatic",
+            "French": "maritime",
+            "French (US)": "maritime"
         },
         {
             "English": "Surfing",
-            "English (Europe)": "Surfing"
+            "English (Europe)": "Surfing",
+            "French": "planchiste",
+            "French (US)": "planchiste"
         },
         {
             "English": "Hip",
-            "English (Europe)": "Hip"
+            "English (Europe)": "Hip",
+            "French": "dans le vent",
+            "French (US)": "dans le vent"
         },
         {
             "English": "Picky",
-            "English (Europe)": "Picky"
+            "English (Europe)": "Picky",
+            "French": "tatillon.ne",
+            "French (US)": "tatillon.ne"
         },
         {
             "English": "Detail-Oriented",
-            "English (Europe)": "Detail-Oriented"
+            "English (Europe)": "Detail-Oriented",
+            "French": "minutieux.euse",
+            "French (US)": "minutieux.euse"
         },
         {
             "English": "Sharp",
-            "English (Europe)": "Sharp"
+            "English (Europe)": "Sharp",
+            "French": "tranchant.e",
+            "French (US)": "tranchant.e"
         },
         {
             "English": "Rowdy",
-            "English (Europe)": "Rowdy"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Rowdy",
+            "French": "chahuteur.euse",
+            "French (US)": "chahuteur.euse"
         },
         {
             "English": "History-Loving",
-            "English (Europe)": "History-Loving"
+            "English (Europe)": "History-Loving",
+            "French": "passionné.e d’Histoire",
+            "French (US)": "passionné.e d’Histoire"
         },
         {
             "English": "Herbivorous",
-            "English (Europe)": "Herbivorous"
+            "English (Europe)": "Herbivorous",
+            "French": "herbivore",
+            "French (US)": "herbivore"
         },
         {
             "English": "Heavenly",
-            "English (Europe)": "Heavenly"
+            "English (Europe)": "Heavenly",
+            "French": "salvateur.trice",
+            "French (US)": "salvateur.trice"
         },
         {
             "English": "Careful",
-            "English (Europe)": "Careful"
+            "English (Europe)": "Careful",
+            "French": "soigneur.euse",
+            "French (US)": "soigneur.euse"
         },
         {
             "English": "Hay-Feverish",
-            "English (Europe)": "Hay-Feverish"
+            "English (Europe)": "Hay-Feverish",
+            "French": "allergique au pollen",
+            "French (US)": "allergique au pollen"
         },
         {
             "English": "Seasonal",
-            "English (Europe)": "Seasonal"
+            "English (Europe)": "Seasonal",
+            "French": "de saison",
+            "French (US)": "de saison"
         },
         {
             "English": "Unpearable",
-            "English (Europe)": "Unpearable"
+            "English (Europe)": "Unpearable",
+            "French": "de verger",
+            "French (US)": "de verger"
         },
         {
             "English": "Surprising",
-            "English (Europe)": "Surprising"
+            "English (Europe)": "Surprising",
+            "French": "surprenant.e",
+            "French (US)": "surprenant.e"
         },
         {
             "English": "Shifty",
-            "English (Europe)": "Shifty"
+            "English (Europe)": "Shifty",
+            "French": "nacré.e",
+            "French (US)": "nacré.e"
         },
         {
             "English": "Buried",
-            "English (Europe)": "Buried"
+            "English (Europe)": "Buried",
+            "French": "ensablé.e",
+            "French (US)": "ensablé.e"
         },
         {
             "English": "Waterway",
-            "English (Europe)": "Waterway"
+            "English (Europe)": "Waterway",
+            "French": "des cours d’eau",
+            "French (US)": "des cours d’eau"
         },
         {
             "English": "Wave-Tossed",
-            "English (Europe)": "Wave-Tossed"
+            "English (Europe)": "Wave-Tossed",
+            "French": "aquatique",
+            "French (US)": "aquatique"
         },
         {
             "English": "Homey",
-            "English (Europe)": "Homey"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Homey",
+            "French": "douillet.te",
+            "French (US)": "douillet.te"
         },
         {
             "English": "Comparative",
-            "English (Europe)": "Comparative"
+            "English (Europe)": "Comparative",
+            "French": "relatif.ve",
+            "French (US)": "relatif.ve"
         },
         {
             "English": "At-Capacity",
-            "English (Europe)": "At-Capacity"
+            "English (Europe)": "At-Capacity",
+            "French": "à la limite",
+            "French (US)": "à la limite"
         },
         {
             "English": "Quintessential",
-            "English (Europe)": "Quintessential"
+            "English (Europe)": "Quintessential",
+            "French": "quintessentiel.le",
+            "French (US)": "quintessentiel.le"
         },
         {
             "English": "Generous",
-            "English (Europe)": "Generous"
+            "English (Europe)": "Generous",
+            "French": "généreux.euse",
+            "French (US)": "généreux.euse"
         },
         {
             "English": "Dad-Joking",
-            "English (Europe)": "Dad-Joking"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Dad-Joking",
+            "French": "à l’humour douteux",
+            "French (US)": "à l’humour douteux"
         },
         {
             "English": "Widely Accepted",
-            "English (Europe)": "Widely Accepted"
+            "English (Europe)": "Widely Accepted",
+            "French": "renommé.e",
+            "French (US)": "renommé.e"
         },
         {
             "English": "Greedy",
-            "English (Europe)": "Greedy"
+            "English (Europe)": "Greedy",
+            "French": "mercantile",
+            "French (US)": "mercantile"
         },
         {
             "English": "Wide-Ranging",
-            "English (Europe)": "Wide-Ranging"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Wide-Ranging",
+            "French": "touche-à-tout",
+            "French (US)": "touche-à-tout"
         },
         {
             "English": "Covetous",
-            "English (Europe)": "Covetous"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Covetous",
+            "French": "cupide",
+            "French (US)": "cupide"
         },
         {
             "English": "Upstart",
-            "English (Europe)": "Upstart"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "Liberal-Arts",
-            "English (Europe)": "Liberal-Arts"
-        },
-        {
-            "English": "Fastidious",
-            "English (Europe)": "Fastidious"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Upstart",
+            "French": "arriviste",
+            "French (US)": "arriviste"
         },
         {
             "English": "Restless",
-            "English (Europe)": "Restless"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Restless",
+            "French": "sans relâche",
+            "French (US)": "sans relâche"
         },
         {
             "English": "Cool",
-            "English (Europe)": "Cool"
-        },
-        {
-            "English": "Overnight",
-            "English (Europe)": "Overnight"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "Cliffhanging",
-            "English (Europe)": "Cliffhanging"
-        },
-        {
-            "English": "Soulful",
-            "English (Europe)": "Soulful"
-        },
-        {
-            "English": "Off-Season",
-            "English (Europe)": "Off-Season"
-        },
-        {
-            "English": "Regular",
-            "English (Europe)": "Regular"
-        },
-        {
-            "English": "Bold",
-            "English (Europe)": "Bold"
-        },
-        {
-            "English": "Oceanic",
-            "English (Europe)": "Oceanic"
-        },
-        {
-            "English": "Friendship",
-            "English (Europe)": "Friendship"
+            "English (Europe)": "Cool",
+            "French": "givré.e",
+            "French (US)": "givré.e"
         },
         {
             "English": "Grown",
-            "English (Europe)": "Grown"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "Fall-Born",
-            "English (Europe)": "Fall-Born"
+            "English (Europe)": "Grown",
+            "French": "raisonnable",
+            "French (US)": "raisonnable"
         },
         {
             "English": "Solitary",
-            "English (Europe)": "Solitary"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Solitary",
+            "French": "revendiqué.e",
+            "French (US)": "revendiqué.e"
         },
         {
             "English": "Spirited",
-            "English (Europe)": "Spirited"
-        },
-        {
-            "English": "Ultimate",
-            "English (Europe)": "Ultimate"
-        },
-        {
-            "English": "Global",
-            "English (Europe)": "Global"
+            "English (Europe)": "Spirited",
+            "French": "fougueux.euse",
+            "French (US)": "fougueux.euse"
         },
         {
             "English": "Well-Known",
-            "English (Europe)": "Well-Known"
+            "English (Europe)": "Well-Known",
+            "French": "notoire",
+            "French (US)": "notoire"
         },
         {
             "English": "Sleepless",
-            "English (Europe)": "Sleepless"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Sleepless",
+            "French": "insomniaque",
+            "French (US)": "insomniaque"
         },
         {
             "English": "Beach Bum",
-            "English (Europe)": "Beach Bum"
+            "English (Europe)": "Beach Bum",
+            "French": "Pro du bronzage",
+            "French (US)": "Pro du bronzage"
         },
         {
             "English": "Tropical Fish",
-            "English (Europe)": "Tropical Fish"
+            "English (Europe)": "Tropical Fish",
+            "French": "Poisson tropical",
+            "French (US)": "Poisson tropical"
         },
         {
             "English": "One",
-            "English (Europe)": "One"
+            "English (Europe)": "One",
+            "French": "Personne",
+            "French (US)": "Personne"
         },
         {
             "English": "Pupa",
-            "English (Europe)": "Pupa"
+            "English (Europe)": "Pupa",
+            "French": "Nymphe",
+            "French (US)": "Nymphe"
         },
         {
             "English": "Ant",
-            "English (Europe)": "Ant"
+            "English (Europe)": "Ant",
+            "French": "Fourmi",
+            "French (US)": "Fourmi"
         },
         {
             "English": "Authority",
-            "English (Europe)": "Authority"
+            "English (Europe)": "Authority",
+            "French": "Autorité",
+            "French (US)": "Autorité"
         },
         {
             "English": "Jetsam",
-            "English (Europe)": "Jetsam"
+            "English (Europe)": "Jetsam",
+            "French": "Bois flotté",
+            "French (US)": "Bois flotté"
         },
         {
             "English": "Pa;Ma",
-            "English (Europe)": "Pa;Ma"
+            "English (Europe)": "Pa;Ma",
+            "French": "Pôpa/Môman",
+            "French (US)": "Pôpa/Môman"
         },
         {
             "English": "Virtuoso",
-            "English (Europe)": "Virtuoso"
+            "English (Europe)": "Virtuoso",
+            "French": "Virtuose",
+            "French (US)": "Virtuose"
         },
         {
             "English": "Crafter",
-            "English (Europe)": "Crafter"
+            "English (Europe)": "Crafter",
+            "French": "Bricoleur.euse",
+            "French (US)": "Bricoleur.euse"
         },
         {
             "English": "Engineer",
-            "English (Europe)": "Engineer"
+            "English (Europe)": "Engineer",
+            "French": "Ingénieur",
+            "French (US)": "Ingénieur"
         },
         {
             "English": "Guard",
-            "English (Europe)": "Guard"
+            "English (Europe)": "Guard",
+            "French": "Garde",
+            "French (US)": "Garde"
         },
         {
             "English": "Punk",
-            "English (Europe)": "Punk"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Punk",
+            "French": "Punk.ette",
+            "French (US)": "Punk.ette"
         },
         {
             "English": "Researcher",
-            "English (Europe)": "Researcher"
+            "English (Europe)": "Researcher",
+            "French": "Chercheur",
+            "French (US)": "Chercheur"
         },
         {
             "English": "Sorter",
-            "English (Europe)": "Sorter"
+            "English (Europe)": "Sorter",
+            "French": "Trieur.euse",
+            "French (US)": "Trieur.euse"
         },
         {
             "English": "Rejuvenator",
-            "English (Europe)": "Rejuvenator"
+            "English (Europe)": "Rejuvenator",
+            "French": "Bouffée d’oxygène",
+            "French (US)": "Bouffée d’oxygène"
         },
         {
             "English": "Gardener",
-            "English (Europe)": "Gardener"
+            "English (Europe)": "Gardener",
+            "French": "Main verte",
+            "French (US)": "Main verte"
         },
         {
             "English": "Sneezer",
-            "English (Europe)": "Sneezer"
+            "English (Europe)": "Sneezer",
+            "French": "Horticulteur.trice",
+            "French (US)": "Horticulteur.trice"
         },
         {
             "English": "Tree",
-            "English (Europe)": "Tree"
+            "English (Europe)": "Tree",
+            "French": "Fruit",
+            "French (US)": "Fruit"
         },
         {
             "English": "Pear",
-            "English (Europe)": "Pear"
+            "English (Europe)": "Pear",
+            "French": "Poire",
+            "French (US)": "Poire"
         },
         {
             "English": "Snake",
-            "English (Europe)": "Snake"
+            "English (Europe)": "Snake",
+            "French": "Serpent",
+            "French (US)": "Serpent"
         },
         {
             "English": "Shellector",
-            "English (Europe)": "Shellector"
+            "English (Europe)": "Shellector",
+            "French": "Praire",
+            "French (US)": "Praire"
         },
         {
             "English": "Genius",
-            "English (Europe)": "Genius"
+            "English (Europe)": "Genius",
+            "French": "Génie",
+            "French (US)": "Génie"
         },
         {
             "English": "Cleaner",
-            "English (Europe)": "Cleaner"
+            "English (Europe)": "Cleaner",
+            "French": "Nettoyeur.euse",
+            "French (US)": "Nettoyeur.euse"
         },
         {
             "English": "Life-Form",
-            "English (Europe)": "Life-Form"
+            "English (Europe)": "Life-Form",
+            "French": "Forme de vie",
+            "French (US)": "Forme de vie"
         },
         {
             "English": "Sentiment",
-            "English (Europe)": "Sentiment"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Sentiment",
+            "French": "Sensation",
+            "French (US)": "Sensation"
         },
         {
             "English": "Sundries Fan",
-            "English (Europe)": "Sundries Fan"
+            "English (Europe)": "Sundries Fan",
+            "French": "Fan de bibelots",
+            "French (US)": "Fan de bibelots"
         },
         {
             "English": "Manager",
-            "English (Europe)": "Manager"
+            "English (Europe)": "Manager",
+            "French": "Gérant.e",
+            "French (US)": "Gérant.e"
         },
         {
             "English": "Space",
-            "English (Europe)": "Space"
+            "English (Europe)": "Space",
+            "French": "Espace",
+            "French (US)": "Espace"
         },
         {
             "English": "Supervisor",
-            "English (Europe)": "Supervisor"
+            "English (Europe)": "Supervisor",
+            "French": "Superviseur.euse",
+            "French (US)": "Superviseur.euse"
         },
         {
             "English": "Semiprofessional",
-            "English (Europe)": "Semiprofessional"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Semiprofessional",
+            "French": "Semi-pro",
+            "French (US)": "Semi-pro"
         },
         {
             "English": "Connector",
-            "English (Europe)": "Connector"
+            "English (Europe)": "Connector",
+            "French": "Intermédiaire",
+            "French (US)": "Intermédiaire"
         },
         {
             "English": "Collector",
-            "English (Europe)": "Collector"
+            "English (Europe)": "Collector",
+            "French": "Collectionneur.euse",
+            "French (US)": "Collectionneur.euse"
         },
         {
             "English": "Hobbyist",
-            "English (Europe)": "Hobbyist"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Hobbyist",
+            "French": "Amateur.trice",
+            "French (US)": "Amateur.trice"
         },
         {
             "English": "Personality",
-            "English (Europe)": "Personality"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Personality",
+            "French": "Personnalité",
+            "French (US)": "Personnalité"
         },
         {
             "English": "Trader",
-            "English (Europe)": "Trader"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Trader",
+            "French": "Trader",
+            "French (US)": "Trader"
         },
         {
             "English": "Poet",
-            "English (Europe)": "Poet"
+            "English (Europe)": "Poet",
+            "French": "Poète.esse",
+            "French (US)": "Poète.esse"
         },
         {
             "English": "Character",
-            "English (Europe)": "Character"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Character",
+            "French": "Personnage",
+            "French (US)": "Personnage"
         },
         {
             "English": "Hunter",
-            "English (Europe)": "Hunter"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Hunter",
+            "French": "Pisteur.euse",
+            "French (US)": "Pisteur.euse"
         },
         {
             "English": "Imp",
-            "English (Europe)": "Imp"
+            "English (Europe)": "Imp",
+            "French": "Démon.e",
+            "French (US)": "Démon.e"
         },
         {
             "English": "Superstar",
-            "English (Europe)": "Superstar"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Superstar",
+            "French": "Superstar",
+            "French (US)": "Superstar"
         },
         {
             "English": "Creator",
-            "English (Europe)": "Creator"
+            "English (Europe)": "Creator",
+            "French": "Fabricant.e",
+            "French (US)": "Fabricant.e"
         },
         {
             "English": "Soul Mate",
-            "English (Europe)": "Soul Mate"
+            "English (Europe)": "Soul Mate",
+            "French": "Âme soeur",
+            "French (US)": "Âme soeur"
         },
         {
             "English": "Migratory Bird",
-            "English (Europe)": "Migratory Bird"
+            "English (Europe)": "Migratory Bird",
+            "French": "Oiseau migrateur",
+            "French (US)": "Oiseau migrateur"
         },
         {
             "English": "Fan",
-            "English (Europe)": "Fan"
+            "English (Europe)": "Fan",
+            "French": "Fan",
+            "French (US)": "Fan"
         },
         {
             "English": "Artistic Statement",
-            "English (Europe)": "Artistic Statement"
+            "English (Europe)": "Artistic Statement",
+            "French": "Œil de lynx",
+            "French (US)": "Œil de lynx"
         },
         {
             "English": "Existentialist",
-            "English (Europe)": "Existentialist"
+            "English (Europe)": "Existentialist",
+            "French": "Existentialiste",
+            "French (US)": "Existentialiste"
         },
         {
             "English": "Seeker",
-            "English (Europe)": "Seeker"
+            "English (Europe)": "Seeker",
+            "French": "Coqueluche",
+            "French (US)": "Coqueluche"
         },
         {
             "English": "Adult",
-            "English (Europe)": "Adult"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Adult",
+            "French": "Adulte",
+            "French (US)": "Adulte"
         },
         {
             "English": "Free-Wheeler",
-            "English (Europe)": "Free-Wheeler"
+            "English (Europe)": "Free-Wheeler",
+            "French": "Roue libre",
+            "French (US)": "Roue libre"
         },
         {
             "English": "Lone Wolf",
-            "English (Europe)": "Lone Wolf"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Lone Wolf",
+            "French": "Individualiste",
+            "French (US)": "Individualiste"
         },
         {
             "English": "Gifted One",
-            "English (Europe)": "Gifted One"
+            "English (Europe)": "Gifted One",
+            "French": "Élu.e",
+            "French (US)": "Élu.e"
         },
         {
             "English": "Miracle",
-            "English (Europe)": "Miracle"
+            "English (Europe)": "Miracle",
+            "French": "Miracle",
+            "French (US)": "Miracle"
         },
         {
             "English": "Wanderer",
-            "English (Europe)": "Wanderer"
+            "English (Europe)": "Wanderer",
+            "French": "Promeneur.euse",
+            "French (US)": "Promeneur.euse"
         },
         {
             "English": "Partier",
-            "English (Europe)": "Partier"
+            "English (Europe)": "Partier",
+            "French": "Festoyeur.euse",
+            "French (US)": "Festoyeur.euse"
         },
         {
             "English": "Adventurer",
-            "English (Europe)": "Adventurer"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Adventurer",
+            "French": "Aventurier.ère",
+            "French (US)": "Aventurier.ère"
         },
         {
             "English": "Fierce",
-            "English (Europe)": "Fierce"
+            "English (Europe)": "Fierce",
+            "French": "féroce",
+            "French (US)": "féroce"
         },
         {
             "English": "Hooked",
-            "English (Europe)": "Hooked"
+            "English (Europe)": "Hooked",
+            "French": "hameçonné.e",
+            "French (US)": "hameçonné.e"
         },
         {
             "English": "Ludicrously Popular",
-            "English (Europe)": "Ludicrously Popular"
+            "English (Europe)": "Ludicrously Popular",
+            "French": "ultra-populaire",
+            "French (US)": "ultra-populaire"
         },
         {
             "English": "Soaring",
-            "English (Europe)": "Soaring"
+            "English (Europe)": "Soaring",
+            "French": "parfait.e",
+            "French (US)": "parfait.e"
         },
         {
             "English": "Polymorphing",
-            "English (Europe)": "Polymorphing"
+            "English (Europe)": "Polymorphing",
+            "French": "polymorphe",
+            "French (US)": "polymorphe"
         },
         {
             "English": "Knowledge-Thirsty",
-            "English (Europe)": "Knowledge-Thirsty"
+            "English (Europe)": "Knowledge-Thirsty",
+            "French": "assoiffé.e de savoir",
+            "French (US)": "assoiffé.e de savoir"
         },
         {
             "English": "Splashy",
-            "English (Europe)": "Splashy"
+            "English (Europe)": "Splashy",
+            "French": "flottant.e",
+            "French (US)": "flottant.e"
         },
         {
             "English": "Waterlogged",
-            "English (Europe)": "Waterlogged"
+            "English (Europe)": "Waterlogged",
+            "French": "marin.e",
+            "French (US)": "marin.e"
         },
         {
             "English": "Bona Fide",
-            "English (Europe)": "Bona Fide"
+            "English (Europe)": "Bona Fide",
+            "French": "qualifié.e",
+            "French (US)": "qualifié.e"
         },
         {
             "English": "Humbly Begun",
-            "English (Europe)": "Humbly Begun"
+            "English (Europe)": "Humbly Begun",
+            "French": "parti.e de rien",
+            "French (US)": "parti.e de rien"
         },
         {
             "English": "Mold-Breaking",
-            "English (Europe)": "Mold-Breaking"
+            "English (Europe)": "Mold-Breaking",
+            "French": "novateur.trice",
+            "French (US)": "novateur.trice"
         },
         {
             "English": "Pointy",
-            "English (Europe)": "Pointy"
+            "English (Europe)": "Pointy",
+            "French": "affûté.e",
+            "French (US)": "affûté.e"
         },
         {
             "English": "Rough-And-Tumble",
-            "English (Europe)": "Rough-And-Tumble"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Rough-And-Tumble",
+            "French": "tumultueux.euse",
+            "French (US)": "tumultueux.euse"
         },
         {
             "English": "Evolving",
-            "English (Europe)": "Evolving"
+            "English (Europe)": "Evolving",
+            "French": "en évolution",
+            "French (US)": "en évolution"
         },
         {
             "English": "Vigorous",
-            "English (Europe)": "Vigorous"
+            "English (Europe)": "Vigorous",
+            "French": "vigoureux.euse",
+            "French (US)": "vigoureux.euse"
         },
         {
             "English": "Sweet-Smelling",
-            "English (Europe)": "Sweet-Smelling"
+            "English (Europe)": "Sweet-Smelling",
+            "French": "parfumé.e",
+            "French (US)": "parfumé.e"
         },
         {
             "English": "Caretaking",
-            "English (Europe)": "Caretaking"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Caretaking",
+            "French": "attentionné.e",
+            "French (US)": "attentionné.e"
         },
         {
             "English": "Mature",
-            "English (Europe)": "Mature"
+            "English (Europe)": "Mature",
+            "French": "bien mûr.e",
+            "French (US)": "bien mûr.e"
         },
         {
             "English": "Plucky",
-            "English (Europe)": "Plucky"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Plucky",
+            "French": "charnu.e",
+            "French (US)": "charnu.e"
         },
         {
             "English": "Over-Shelled",
-            "English (Europe)": "Over-Shelled"
+            "English (Europe)": "Over-Shelled",
+            "French": "perlière",
+            "French (US)": "perlière"
         },
         {
             "English": "Rare",
-            "English (Europe)": "Rare"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Rare",
+            "French": "rare",
+            "French (US)": "rare"
         },
         {
             "English": "Second-Floor",
-            "English (Europe)": "Second-Floor"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Second-Floor",
+            "French": "du premier étage",
+            "French (US)": "du premier étage"
         },
         {
             "English": "Assumed",
-            "English (Europe)": "Assumed"
+            "English (Europe)": "Assumed",
+            "French": "assumé.e",
+            "French (US)": "assumé.e"
         },
         {
             "English": "Self-Possessed",
-            "English (Europe)": "Self-Possessed"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Self-Possessed",
+            "French": "maître.sse de lui/ellle même",
+            "French (US)": "maître.sse de lui/ellle même"
         },
         {
             "English": "Exalted",
-            "English (Europe)": "Exalted"
+            "English (Europe)": "Exalted",
+            "French": "exalté.e",
+            "French (US)": "exalté.e"
         },
         {
             "English": "Solo",
-            "English (Europe)": "Solo"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Solo",
+            "French": "solo",
+            "French (US)": "solo"
         },
         {
             "English": "Disconnected",
-            "English (Europe)": "Disconnected"
+            "English (Europe)": "Disconnected",
+            "French": "hors ligne",
+            "French (US)": "hors ligne"
         },
         {
             "English": "Materialistic",
-            "English (Europe)": "Materialistic"
+            "English (Europe)": "Materialistic",
+            "French": "matérialiste",
+            "French (US)": "matérialiste"
         },
         {
             "English": "Perfectionist",
-            "English (Europe)": "Perfectionist"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Perfectionist",
+            "French": "perfectionniste",
+            "French (US)": "perfectionniste"
         },
         {
             "English": "Wasteful",
-            "English (Europe)": "Wasteful"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Wasteful",
+            "French": "dépensier.ère",
+            "French (US)": "dépensier.ère"
         },
         {
             "English": "Worldwide",
-            "English (Europe)": "Worldwide"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Worldwide",
+            "French": "incontesté.e",
+            "French (US)": "incontesté.e"
         },
         {
             "English": "Subculture",
-            "English (Europe)": "Subculture"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Subculture",
+            "French": "de la sous-culture",
+            "French (US)": "de la sous-culture"
         },
         {
             "English": "Flying",
-            "English (Europe)": "Flying"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Flying",
+            "French": "volant.e",
+            "French (US)": "volant.e"
         },
         {
             "English": "The Definition of",
-            "English (Europe)": "The Definition of"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "The Definition of",
+            "French": "au sens propre",
+            "French (US)": "au sens propre"
         },
         {
             "English": "Winter-Born",
-            "English (Europe)": "Winter-Born"
+            "English (Europe)": "Winter-Born",
+            "French": "hivernal.e",
+            "French (US)": "hivernal.e"
         },
         {
             "English": "Standoffish",
-            "English (Europe)": "Standoffish"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Standoffish",
+            "French": "réservé.e",
+            "French (US)": "réservé.e"
         },
         {
             "English": "Factual",
-            "English (Europe)": "Factual"
+            "English (Europe)": "Factual",
+            "French": "indéniable",
+            "French (US)": "indéniable"
         },
         {
             "English": "Royal",
-            "English (Europe)": "Royal"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Royal",
+            "French": "majestueux.se",
+            "French (US)": "majestueux.se"
         },
         {
             "English": "Nicknamed",
-            "English (Europe)": "Nicknamed"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Nicknamed",
+            "French": "au surnom connu",
+            "French (US)": "au surnom connu"
         },
         {
             "English": "Fisher",
-            "English (Europe)": "Fisher"
+            "English (Europe)": "Fisher",
+            "French": "Pêcheur.euse",
+            "French (US)": "Pêcheur.euse"
         },
         {
             "English": "Reaction",
-            "English (Europe)": "Reaction"
+            "English (Europe)": "Reaction",
+            "French": "Réaction",
+            "French (US)": "Réaction"
         },
         {
-            "English": "It Guy;\"It\" Girl",
-            "English (Europe)": "It Guy;\"It\" Girl"
+            "English": "\"It\" Guy;\"It\" Girl",
+            "English (Europe)": "\"It\" Guy;\"It\" Girl",
+            "French": "Chouchou.te",
+            "French (US)": "Chouchou.te"
         },
         {
             "English": "Butterfly",
-            "English (Europe)": "Butterfly"
+            "English (Europe)": "Butterfly",
+            "French": "Papillon",
+            "French (US)": "Papillon"
         },
         {
             "English": "Creature",
-            "English (Europe)": "Creature"
+            "English (Europe)": "Creature",
+            "French": "Créature",
+            "French (US)": "Créature"
         },
         {
             "English": "Sidekick",
-            "English (Europe)": "Sidekick"
+            "English (Europe)": "Sidekick",
+            "French": "Acolyte",
+            "French (US)": "Acolyte"
         },
         {
             "English": "Winner",
-            "English (Europe)": "Winner"
+            "English (Europe)": "Winner",
+            "French": "Géant.e",
+            "French (US)": "Géant.e"
         },
         {
             "English": "Seaweed",
-            "English (Europe)": "Seaweed"
+            "English (Europe)": "Seaweed",
+            "French": "Algue",
+            "French (US)": "Algue"
         },
         {
             "English": "Technician",
-            "English (Europe)": "Technician"
+            "English (Europe)": "Technician",
+            "French": "Technicien.ne",
+            "French (US)": "Technicien.ne"
         },
         {
             "English": "Master;Matriarch",
-            "English (Europe)": "Master;Matriarch"
+            "English (Europe)": "Master;Matriarch",
+            "French": "Maître.sse",
+            "French (US)": "Maître.sse"
         },
         {
             "English": "Modder",
-            "English (Europe)": "Modder"
+            "English (Europe)": "Modder",
+            "French": "Bidouilleur.euse",
+            "French (US)": "Bidouilleur.euse"
         },
         {
             "English": "Tack",
-            "English (Europe)": "Tack"
+            "English (Europe)": "Tack",
+            "French": "Stratège",
+            "French (US)": "Stratège"
         },
         {
             "English": "Meanie",
-            "English (Europe)": "Meanie"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Meanie",
+            "French": "Sbire",
+            "French (US)": "Sbire"
         },
         {
             "English": "Scatterbrain",
-            "English (Europe)": "Scatterbrain"
+            "English (Europe)": "Scatterbrain",
+            "French": "Tête de linotte",
+            "French (US)": "Tête de linotte"
         },
         {
             "English": "Sprout",
-            "English (Europe)": "Sprout"
+            "English (Europe)": "Sprout",
+            "French": "Jeune pousse",
+            "French (US)": "Jeune pousse"
         },
         {
             "English": "Blossom",
-            "English (Europe)": "Blossom"
+            "English (Europe)": "Blossom",
+            "French": "Buisson",
+            "French (US)": "Buisson"
         },
         {
             "English": "Ringleader",
-            "English (Europe)": "Ringleader"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Ringleader",
+            "French": "Meneur.euse",
+            "French (US)": "Meneur.euse"
         },
         {
             "English": "Kind",
-            "English (Europe)": "Kind"
+            "English (Europe)": "Kind",
+            "French": "Variété",
+            "French (US)": "Variété"
         },
         {
             "English": "Star",
-            "English (Europe)": "Star"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Star",
+            "French": "Pêche",
+            "French (US)": "Pêche"
         },
         {
             "English": "Shell Master",
-            "English (Europe)": "Shell Master"
+            "English (Europe)": "Shell Master",
+            "French": "Huître",
+            "French (US)": "Huître"
         },
         {
             "English": "Prodigy",
-            "English (Europe)": "Prodigy"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Prodigy",
+            "French": "Prodige",
+            "French (US)": "Prodige"
         },
         {
             "English": "Landlord",
-            "English (Europe)": "Landlord"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Landlord",
+            "French": "Propriétaire",
+            "French (US)": "Propriétaire"
         },
         {
             "English": "Appliance Fan",
-            "English (Europe)": "Appliance Fan"
+            "English (Europe)": "Appliance Fan",
+            "French": "Fan d’électroménager",
+            "French (US)": "Fan d’électroménager"
         },
         {
             "English": "Coordinator",
-            "English (Europe)": "Coordinator"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Coordinator",
+            "French": "Coordinateur",
+            "French (US)": "Coordinateur"
         },
         {
             "English": "Savior",
-            "English (Europe)": "Savior"
+            "English (Europe)": "Savior",
+            "French": "Sauveur.euse",
+            "French (US)": "Sauveur.euse"
         },
         {
             "English": "Comedian",
-            "English (Europe)": "Comedian"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Comedian",
+            "French": "Humoriste",
+            "French (US)": "Humoriste"
         },
         {
             "English": "Worrywart",
-            "English (Europe)": "Worrywart"
+            "English (Europe)": "Worrywart",
+            "French": "Éternel.le angoissé.e",
+            "French (US)": "Éternel.le angoissé.e"
         },
         {
             "English": "Avatar",
-            "English (Europe)": "Avatar"
+            "English (Europe)": "Avatar",
+            "French": "Avatar",
+            "French (US)": "Avatar"
         },
         {
             "English": "Go-Getter",
-            "English (Europe)": "Go-Getter"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Go-Getter",
+            "French": "Fonceur.euse",
+            "French (US)": "Fonceur.euse"
         },
         {
             "English": "Celebrity",
-            "English (Europe)": "Celebrity"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Celebrity",
+            "French": "Célébrité",
+            "French (US)": "Célébrité"
         },
         {
             "English": "Bellionaire",
-            "English (Europe)": "Bellionaire"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Bellionaire",
+            "French": "Roi/Reine de la bourse",
+            "French (US)": "Roi/Reine de la bourse"
         },
         {
             "English": "Denizen",
-            "English (Europe)": "Denizen"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Denizen",
+            "French": "Autochtone",
+            "French (US)": "Autochtone"
         },
         {
             "English": "Paradise",
-            "English (Europe)": "Paradise"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Paradise",
+            "French": "Paradis",
+            "French (US)": "Paradis"
         },
         {
             "English": "Pop Star",
-            "English (Europe)": "Pop Star"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Pop Star",
+            "French": "Groupie",
+            "French (US)": "Groupie"
         },
         {
             "English": "Overheater",
-            "English (Europe)": "Overheater"
+            "English (Europe)": "Overheater",
+            "French": "Fiévreux.euse",
+            "French (US)": "Fiévreux.euse"
         },
         {
             "English": "Individual",
-            "English (Europe)": "Individual"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Individual",
+            "French": "Quidam",
+            "French (US)": "Quidam"
         },
         {
             "English": "Outlaw",
-            "English (Europe)": "Outlaw"
+            "English (Europe)": "Outlaw",
+            "French": "Hors-la-loi",
+            "French (US)": "Hors-la-loi"
         },
         {
             "English": "Prince;Princess",
-            "English (Europe)": "Prince;Princess"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Prince;Princess",
+            "French": "Prince.sse",
+            "French (US)": "Prince.sse"
         },
         {
             "English": "Gamer",
-            "English (Europe)": "Gamer"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Gamer",
+            "French": "Gamer.euse",
+            "French (US)": "Gamer.euse"
         },
         {
             "English": "Battle-Tested",
-            "English (Europe)": "Battle-Tested"
+            "English (Europe)": "Battle-Tested",
+            "French": "chevronné.e",
+            "French (US)": "chevronné.e"
         },
         {
             "English": "Pole-Fishing",
-            "English (Europe)": "Pole-Fishing"
+            "English (Europe)": "Pole-Fishing",
+            "French": "du moulinet",
+            "French (US)": "du moulinet"
         },
         {
             "English": "Natural",
-            "English (Europe)": "Natural"
+            "English (Europe)": "Natural",
+            "French": "né.e",
+            "French (US)": "né.e"
         },
         {
             "English": "Complete",
-            "English (Europe)": "Complete"
+            "English (Europe)": "Complete",
+            "French": "terminé.e",
+            "French (US)": "terminé.e"
         },
         {
             "English": "Scarce",
-            "English (Europe)": "Scarce"
+            "English (Europe)": "Scarce",
+            "French": "peu commun.e",
+            "French (US)": "peu commun.e"
         },
         {
             "English": "Clever",
-            "English (Europe)": "Clever"
+            "English (Europe)": "Clever",
+            "French": "brillant.e",
+            "French (US)": "brillant.e"
         },
         {
             "English": "Deep-Sea",
-            "English (Europe)": "Deep-Sea"
+            "English (Europe)": "Deep-Sea",
+            "French": "des abysses",
+            "French (US)": "des abysses"
         },
         {
             "English": "Seaside",
-            "English (Europe)": "Seaside"
+            "English (Europe)": "Seaside",
+            "French": "côtier.ère",
+            "French (US)": "côtier.ère"
         },
         {
             "English": "Relentless",
-            "English (Europe)": "Relentless"
+            "English (Europe)": "Relentless",
+            "French": "acharné.e",
+            "French (US)": "acharné.e"
         },
         {
             "English": "Destructive-Creative",
-            "English (Europe)": "Destructive-Creative"
+            "English (Europe)": "Destructive-Creative",
+            "French": "révolutionnaire",
+            "French (US)": "révolutionnaire"
         },
         {
             "English": "Remodeling",
-            "English (Europe)": "Remodeling"
+            "English (Europe)": "Remodeling",
+            "French": "de la personnalisation",
+            "French (US)": "de la personnalisation"
         },
         {
             "English": "Productive",
-            "English (Europe)": "Productive"
+            "English (Europe)": "Productive",
+            "French": "productif.ve",
+            "French (US)": "productif.ve"
         },
         {
             "English": "Chaotic",
-            "English (Europe)": "Chaotic"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Chaotic",
+            "French": "chaotique",
+            "French (US)": "chaotique"
         },
         {
             "English": "Historic",
-            "English (Europe)": "Historic"
+            "English (Europe)": "Historic",
+            "French": "historique",
+            "French (US)": "historique"
         },
         {
             "English": "Wild",
-            "English (Europe)": "Wild"
+            "English (Europe)": "Wild",
+            "French": "de la vie sauvage",
+            "French (US)": "de la vie sauvage"
         },
         {
             "English": "Gorgeous",
-            "English (Europe)": "Gorgeous"
+            "English (Europe)": "Gorgeous",
+            "French": "magnifique",
+            "French (US)": "magnifique"
         },
         {
             "English": "Flower-Loving",
-            "English (Europe)": "Flower-Loving"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Flower-Loving",
+            "French": "fan de fleurs",
+            "French (US)": "fan de fleurs"
         },
         {
             "English": "Rotten",
-            "English (Europe)": "Rotten"
+            "English (Europe)": "Rotten",
+            "French": "putride",
+            "French (US)": "putride"
         },
         {
             "English": "Crisp",
-            "English (Europe)": "Crisp"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Crisp",
+            "French": "croquant.e",
+            "French (US)": "croquant.e"
         },
         {
             "English": "Shellfish",
-            "English (Europe)": "Shellfish"
+            "English (Europe)": "Shellfish",
+            "French": "en porcelaine",
+            "French (US)": "en porcelaine"
         },
         {
             "English": "Water's Edge",
-            "English (Europe)": "Water's Edge"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Water's Edge",
+            "French": "du littoral",
+            "French (US)": "du littoral"
         },
         {
             "English": "Basement",
-            "English (Europe)": "Basement"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Basement",
+            "French": "du sous-sol",
+            "French (US)": "du sous-sol"
         },
         {
             "English": "Abounding",
-            "English (Europe)": "Abounding"
+            "English (Europe)": "Abounding",
+            "French": "nanti.e",
+            "French (US)": "nanti.e"
         },
         {
             "English": "Invulnerable",
-            "English (Europe)": "Invulnerable"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Invulnerable",
+            "French": "invulnérable",
+            "French (US)": "invulnérable"
         },
         {
             "English": "Foolhardy",
-            "English (Europe)": "Foolhardy"
+            "English (Europe)": "Foolhardy",
+            "French": "intrépide",
+            "French (US)": "intrépide"
         },
         {
             "English": "Super-Popular",
-            "English (Europe)": "Super-Popular"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Super-Popular",
+            "French": "en haut de l’affiche",
+            "French (US)": "en haut de l’affiche"
         },
         {
             "English": "Always-On",
-            "English (Europe)": "Always-On"
+            "English (Europe)": "Always-On",
+            "French": "toujours en ligne",
+            "French (US)": "toujours en ligne"
         },
         {
             "English": "Legendary",
-            "English (Europe)": "Legendary"
+            "English (Europe)": "Legendary",
+            "French": "de légende",
+            "French (US)": "de légende"
         },
         {
             "English": "Year-Round",
-            "English (Europe)": "Year-Round"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Year-Round",
+            "French": "infatigable",
+            "French (US)": "infatigable"
         },
         {
             "English": "Name-Dropping",
-            "English (Europe)": "Name-Dropping"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Name-Dropping",
+            "French": "prétentieux.euse",
+            "French (US)": "prétentieux.euse"
         },
         {
             "English": "Shadowy",
-            "English (Europe)": "Shadowy"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Shadowy",
+            "French": "de l’ombre",
+            "French (US)": "de l’ombre"
         },
         {
             "English": "Deadline",
-            "English (Europe)": "Deadline"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Deadline",
+            "French": "de dernière minute",
+            "French (US)": "de dernière minute"
         },
         {
             "English": "Elusive",
-            "English (Europe)": "Elusive"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Elusive",
+            "French": "insaisissable",
+            "French (US)": "insaisissable"
         },
         {
             "English": "Longtime",
-            "English (Europe)": "Longtime"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Longtime",
+            "French": "depuis longtemps",
+            "French (US)": "depuis longtemps"
         },
         {
             "English": "Inspirational",
-            "English (Europe)": "Inspirational"
+            "English (Europe)": "Inspirational",
+            "French": "encourageant.e",
+            "French (US)": "encourageant.e"
         },
         {
             "English": "Glittering",
-            "English (Europe)": "Glittering"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Glittering",
+            "French": "étincelant.e",
+            "French (US)": "étincelant.e"
         },
         {
             "English": "Ready-Made",
-            "English (Europe)": "Ready-Made"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Ready-Made",
+            "French": "instantané.e",
+            "French (US)": "instantané.e"
         },
         {
             "English": "Catch of the Day",
-            "English (Europe)": "Catch of the Day"
+            "English (Europe)": "Catch of the Day",
+            "French": "Grosse prise",
+            "French (US)": "Grosse prise"
         },
         {
             "English": "Expert",
-            "English (Europe)": "Expert"
+            "English (Europe)": "Expert",
+            "French": "Expert.e",
+            "French (US)": "Expert.e"
         },
         {
             "English": "Heart Stealer",
-            "English (Europe)": "Heart Stealer"
+            "English (Europe)": "Heart Stealer",
+            "French": "Charmeur.euse",
+            "French (US)": "Charmeur.euse"
         },
         {
             "English": "Metamorphosis",
-            "English (Europe)": "Metamorphosis"
+            "English (Europe)": "Metamorphosis",
+            "French": "Métamorphose",
+            "French (US)": "Métamorphose"
         },
         {
             "English": "Critter",
-            "English (Europe)": "Critter"
+            "English (Europe)": "Critter",
+            "French": "Bestiole",
+            "French (US)": "Bestiole"
         },
         {
             "English": "Father;Mother",
-            "English (Europe)": "Father;Mother"
+            "English (Europe)": "Father;Mother",
+            "French": "Père/Mère",
+            "French (US)": "Père/Mère"
         },
         {
             "English": "Monster",
-            "English (Europe)": "Monster"
+            "English (Europe)": "Monster",
+            "French": "Monstre",
+            "French (US)": "Monstre"
         },
         {
             "English": "Darling;Honey",
-            "English (Europe)": "Darling;Honey"
+            "English (Europe)": "Darling;Honey",
+            "French": "Chéri.e",
+            "French (US)": "Chéri.e"
         },
         {
             "English": "Meister",
-            "English (Europe)": "Meister"
+            "English (Europe)": "Meister",
+            "French": "Formateur.trice",
+            "French (US)": "Formateur.trice"
         },
         {
             "English": "King;Queen",
-            "English (Europe)": "King;Queen"
+            "English (Europe)": "King;Queen",
+            "French": "Roi/Reine",
+            "French (US)": "Roi/Reine"
         },
         {
             "English": "Inspiration",
-            "English (Europe)": "Inspiration"
+            "English (Europe)": "Inspiration",
+            "French": "Muse",
+            "French (US)": "Muse"
         },
         {
             "English": "Superhero",
-            "English (Europe)": "Superhero"
+            "English (Europe)": "Superhero",
+            "French": "Super-héros.ine",
+            "French (US)": "Super-héros.ine"
         },
         {
             "English": "Ruiner",
-            "English (Europe)": "Ruiner"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Ruiner",
+            "French": "Démolisseur.euse",
+            "French (US)": "Démolisseur.euse"
         },
         {
             "English": "Discovery",
-            "English (Europe)": "Discovery"
+            "English (Europe)": "Discovery",
+            "French": "Découverte",
+            "French (US)": "Découverte"
         },
         {
             "English": "Beast",
-            "English (Europe)": "Beast"
+            "English (Europe)": "Beast",
+            "French": "Bête",
+            "French (US)": "Bête"
         },
         {
             "English": "Groom;Bride",
-            "English (Europe)": "Groom;Bride"
+            "English (Europe)": "Groom;Bride",
+            "French": "Bosquet",
+            "French (US)": "Bosquet"
         },
         {
             "English": "Boss",
-            "English (Europe)": "Boss"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Boss",
+            "French": "Boss",
+            "French (US)": "Boss"
         },
         {
             "English": "Scent",
-            "English (Europe)": "Scent"
+            "English (Europe)": "Scent",
+            "French": "Parfum",
+            "French (US)": "Parfum"
         },
         {
             "English": "Mr. Popular;Ms. Popular\n",
-            "English (Europe)": "Mr. Popular;Ms. Popular\n"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Mr. Popular;Ms. Popular\n",
+            "French": "Pomme",
+            "French (US)": "Pomme"
         },
         {
             "English": "Shellaborator;Shellarina",
-            "English (Europe)": "Shellaborator;Shellarina"
+            "English (Europe)": "Shellaborator;Shellarina",
+            "French": "Conque",
+            "French (US)": "Conque"
         },
         {
             "English": "Mermaid",
-            "English (Europe)": "Mermaid"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Mermaid",
+            "French": "Sirène",
+            "French (US)": "Sirène"
         },
         {
             "English": "Backbone",
-            "English (Europe)": "Backbone"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Backbone",
+            "French": "Pilier",
+            "French (US)": "Pilier"
         },
         {
             "English": "Interior-Design Fan",
-            "English (Europe)": "Interior-Design Fan"
+            "English (Europe)": "Interior-Design Fan",
+            "French": "Fan de déco",
+            "French (US)": "Fan de déco"
         },
         {
             "English": "Life Hacker",
-            "English (Europe)": "Life Hacker"
-        },
-        {
-            "English": "NA",
-            "English (Europe)": "NA"
+            "English (Europe)": "Life Hacker",
+            "French": "Débrouillard.e",
+            "French (US)": "Débrouillard.e"
         },
         {
             "English": "Hero;Heroine",
-            "English (Europe)": "Hero;Heroine"
+            "English (Europe)": "Hero;Heroine",
+            "French": "Héros.ine",
+            "French (US)": "Héros.ine"
         },
         {
             "English": "Mega Star",
-            "English (Europe)": "Mega Star"
+            "English (Europe)": "Mega Star",
+            "French": "Méga star",
+            "French (US)": "Méga star"
         },
         {
             "English": "Bigwig",
-            "English (Europe)": "Bigwig"
+            "English (Europe)": "Bigwig",
+            "French": "Gros bonnet",
+            "French (US)": "Gros bonnet"
         },
         {
             "English": "Walking Dictionary",
-            "English (Europe)": "Walking Dictionary"
+            "English (Europe)": "Walking Dictionary",
+            "French": "Dico ambulant",
+            "French (US)": "Dico ambulant"
         },
         {
             "English": "Dynamo",
-            "English (Europe)": "Dynamo"
+            "English (Europe)": "Dynamo",
+            "French": "Bosseur.euse",
+            "French (US)": "Bosseur.euse"
         },
         {
             "English": "Writer",
-            "English (Europe)": "Writer"
+            "English (Europe)": "Writer",
+            "French": "Écrivain.e",
+            "French (US)": "Écrivain.e"
         },
         {
             "English": "Vagabond",
-            "English (Europe)": "Vagabond"
+            "English (Europe)": "Vagabond",
+            "French": "Flâneur.euse",
+            "French (US)": "Flâneur.euse"
         },
         {
             "English": "Follower",
-            "English (Europe)": "Follower"
+            "English (Europe)": "Follower",
+            "French": "Admirateur.trice",
+            "French (US)": "Admirateur.trice"
         },
         {
             "English": "Statement",
-            "English (Europe)": "Statement"
+            "English (Europe)": "Statement",
+            "French": "Déclaration",
+            "French (US)": "Déclaration"
         },
         {
             "English": "Emperor;Empress",
-            "English (Europe)": "Emperor;Empress"
+            "English (Europe)": "Emperor;Empress",
+            "French": "Empereur.Impératrice",
+            "French (US)": "Empereur.Impératrice"
         },
         {
             "English": "Tropically Grown",
-            "English (Europe)": "Tropically Grown"
+            "English (Europe)": "Tropically Grown",
+            "French": "des tropiques",
+            "French (US)": "des tropiques"
         },
         {
             "English": "Radiant",
-            "English (Europe)": "Radiant"
+            "English (Europe)": "Radiant",
+            "French": "rayonnant.e",
+            "French (US)": "rayonnant.e"
         },
         {
             "English": "Coconut",
-            "English (Europe)": "Coconut"
+            "English (Europe)": "Coconut",
+            "French": "Noix de coco",
+            "French (US)": "Noix de coco"
         },
         {
             "English": "Supreme Being",
-            "English (Europe)": "Supreme Being"
+            "English (Europe)": "Supreme Being",
+            "French": "Divinité",
+            "French (US)": "Divinité"
         }
     ]
 }
