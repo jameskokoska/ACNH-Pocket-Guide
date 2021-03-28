@@ -53,6 +53,7 @@ global.changelog = `
 -Added new [Obtainable Items] page
 -Added information about this under the profile section on the home screen
 -Improved loading times of lists
+-Delete saved/downloaded images button in settings (to reclaim storage space)
 -Added more translations
 -Fix back button crash on launch
 -Added haptic feedback to [Edit Sections]

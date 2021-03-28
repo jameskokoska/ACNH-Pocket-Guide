@@ -34,7 +34,7 @@ const MaterialsRoute = () => (
     gridType="smallGrid" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedMaterials"}
     appBarColor={colors.materialsAppBar[global.darkMode]}
-    titleColor={colors.textBlack[global.darkMode]}
+    titleColor={colors.textWhite[0]}
     searchBarColor={colors.searchbarBG[global.darkMode]}
     backgroundColor={colors.lightDarkAccent[global.darkMode]}
     boxColor={true}

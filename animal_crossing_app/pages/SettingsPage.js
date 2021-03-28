@@ -10,7 +10,7 @@ import Popup from '../components/Popup'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {ExportFile, LoadFile} from '../components/LoadFile';
 import DateTimePickerModal from "react-native-modal-datetime-picker";
-import {resetFilters} from '../LoadJsonData';
+import {attemptToTranslate, deleteSavedPhotos, resetFilters} from '../LoadJsonData';
 import {SubHeader, Paragraph, HeaderNote, MailLink, Header} from "../components/Formattings"
 import DropDownPicker from 'react-native-dropdown-picker'
 import {PopupBottomCustom} from "../components/Popup"
@@ -23,6 +23,7 @@ class SettingsPage extends Component {
       date:new Date(),
       time:new Date(),
       datePickerVisible: false,
+      deletedInfo: ["0","0"]
     }
   }
   setCustomTime(){
@@ -31,6 +32,13 @@ class SettingsPage extends Component {
     date.setHours(this.state.time.getHours()); 
     global.customTime = date;
     AsyncStorage.setItem("customDate", date.toString());
+  }
+  deleteSavedPhotos = async () =>{
+    this.popupDeleteSavedPhotosWait.setPopupVisible(true);
+    const deletedInfo = await deleteSavedPhotos();
+    this.setState({deletedInfo:deletedInfo});
+    this.popupDeleteSavedPhotosWait.setPopupVisible(false);
+    this.popupDeleteSavedPhotos.setPopupVisible(true);
   }
   render(){
     return(<>
@@ -56,6 +64,7 @@ class SettingsPage extends Component {
                   keyName={setting["keyName"]}
                   openPopup={(setting)=>this.popup.openPopup(setting)}
                   setting={setting}
+                  deleteSavedPhotos={this.deleteSavedPhotos}
                 />
               } else {
                 return <SettingsDivider
@@ -93,12 +102,15 @@ class SettingsPage extends Component {
             this.popupClearFilters.setPopupVisible(true);
           }} vibrate={70} color={colors.filtersResetButton[global.darkMode]}/>
           <Popup ref={(popupClearFilters) => this.popupClearFilters = popupClearFilters} text="Cleared Set Filters" textLower="All the filters selected have been unset" button1={"OK"} button1Action={()=>{console.log("")}}/>
-
+          
+          <ButtonComponent text="Delete Downloaded Images" onPress={async () => {this.deleteSavedPhotos()}} vibrate={70} color={colors.filtersResetButton[global.darkMode]}/>
+          <Popup ref={(popupDeleteSavedPhotos) => this.popupDeleteSavedPhotos = popupDeleteSavedPhotos} text={"Deleted Downloaded Images"} textLower={attemptToTranslate("All downloaded photos have been removed") + "\n" + attemptToTranslate("Deleted:") + " " +this.state.deletedInfo[0] + "\n" + attemptToTranslate("Storage cleared:") + " " +parseInt(this.state.deletedInfo[1]) + " MB"} button1={"OK"} button1Action={()=>{console.log("")}}/>
+          <Popup ref={(popupDeleteSavedPhotosWait) => this.popupDeleteSavedPhotosWait = popupDeleteSavedPhotosWait} text="Deleting..." textLower="Please wait"/>
 
           <View style={{height: 20}}/>
           <ButtonComponent text="Reset Data" onPress={() => {this.popupWarning.setPopupVisible(true)}} vibrate={100} color={colors.cancelButton[global.darkMode]}/>
           <Popup ref={(popupWarning) => this.popupWarning = popupWarning} text="Reset Data" textLower="Would you like to reset your collection? This action cannot be undone." button2={"Reset"} button1={"Cancel"} button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.clear(); this.popupRestart.setPopupVisible(true)}}/>
-          <Popup ref={(popupRestart) => this.popupRestart = popupRestart} text="Restart Required" textLower="Please restart the application." button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.setItem("collectedString", "");}} />
+          <Popup ref={(popupRestart) => this.popupRestart = popupRestart} text="Restart Required" textLower="Please restart the application."/>
           <View style={{height:50}}/>
           <MailLink/>
           <View style={{height: 50}}/>

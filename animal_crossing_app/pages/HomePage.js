@@ -104,11 +104,13 @@ class HomePage extends Component {
           <View style={{height:45}}/>
           <Clock swapDate={doWeSwapDate()}/>
           <View style={{height:125}}/>
-          <TouchableOpacity style={{padding:10}} 
-            onPress={()=>{this.popupSettings.setPopupVisible(true); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}
-          }>
-            <TextFont bold={false} style={{marginRight:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"right"}}>{"Edit Sections"}</TextFont>
-          </TouchableOpacity>
+          <View style={{height:38}}>
+            <TouchableOpacity style={{padding:10, paddingVertical:12, position:"absolute",right:0}} 
+              onPress={()=>{this.popupSettings.setPopupVisible(true); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}
+            }>
+              <TextFont bold={false} style={{marginRight:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"right"}}>{"Edit Sections"}</TextFont>
+            </TouchableOpacity>
+          </View>
           {/* If todo is the first page to be loaded, wait to fade in */}
           <FadeInOut fadeIn={this.state.sections!==""&&(this.state.sections["Events"] || this.state.loadedToDo===true || this.state.sections["To-Do"]===false)?true:false} duration={200} startValue={0} endValue={1} maxFade={1} minScale={0.9} >
             {sections["Events"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.eventsColor[global.darkMode]} title="Events" titleColor={colors.eventsColor[global.darkModeReverse]}>

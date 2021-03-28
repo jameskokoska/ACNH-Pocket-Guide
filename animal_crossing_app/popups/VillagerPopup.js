@@ -87,7 +87,7 @@ class VillagerPopup extends Component {
       <PopupInfoCustom ref={(popup) => this.popup = popup} buttonText={"Close"}>
         <SubHeader>What are ideal gifts for villagers?</SubHeader>
         <Paragraph styled={true}>Villagers prefer flowers, favorite music, umbrellas (for non-frog villagers), or clothing of their preferred color or style.</Paragraph>
-        <Paragraph styled={true}>[View Gifts] will show you all clothes of their preferred style.</Paragraph>
+        <Paragraph styled={true}>[View Gifts] will show you all clothing of their preferred color and style.</Paragraph>
         <Paragraph styled={true}>Additionally, you can choose to filter out if the villager will wear this item or not when gifted.</Paragraph>
       </PopupInfoCustom> 
     </View>

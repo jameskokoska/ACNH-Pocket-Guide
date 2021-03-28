@@ -4,6 +4,7 @@ import {Vibration, Text} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {doWeSwapDate, isActive2} from "./components/DateFunctions";
 import * as Localization from 'expo-localization';
+import * as FileSystem from 'expo-file-system'
 
 export async function getStorage(storageKey, defaultValue){
   const valueReturned = await AsyncStorage.getItem(storageKey);
@@ -138,6 +139,15 @@ export function resetFilters(){
   for(var i =0; i < filterKeys.length; i++){
     AsyncStorage.setItem(filterKeys[i], "");
   }
+}
+
+export async function deleteSavedPhotos(){
+  const files = await FileSystem.readDirectoryAsync(FileSystem.documentDirectory);
+  const sizeMB = ((await FileSystem.getInfoAsync(FileSystem.documentDirectory)).size)/1000000;
+  for(var i=0; i<files.length; i++){
+    await FileSystem.deleteAsync(FileSystem.documentDirectory+files[i]);
+  }
+  return [files.length, sizeMB];
 }
 
 export function checkOff(checkListKey, collected, vibrate=getSettingsString("settingsEnableVibrations")==="true", wishlist=false, indexSpecial=""){
