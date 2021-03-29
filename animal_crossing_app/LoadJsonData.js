@@ -192,6 +192,10 @@ export function collectionListSave(){
   AsyncStorage.setItem("collectedString", outputString);
 }
 
+export function removeAccents(text){
+  return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+}
+
 export function capitalize(name) {
   if(name!==undefined){
     var name = name.replace(/(^\w{1})|(\s{1}\w{1})/g, match => match.toUpperCase());

@@ -142,7 +142,6 @@ class PopupAddTask extends Component {
             return(
               <View key={image+index} style={{width: 60,height: 60, margin:5}}>
                 <TouchableOpacity 
-                  background={TouchableNativeFeedback.Ripple(colors.todoColorAccent[global.darkMode]+"2A", false)}
                   onPress={()=>{
                     this.setState({selectedImage:image});
                     this.task.picture=image;

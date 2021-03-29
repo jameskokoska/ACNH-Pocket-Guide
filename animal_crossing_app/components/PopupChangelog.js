@@ -18,6 +18,7 @@ import {getPhoto} from "./GetPhoto"
 import {PopupBottomCustom} from "./Popup"
 import {getStorage} from "../LoadJsonData"
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {MailLink,MailSupport} from "./Formattings";
 
 class PopupChangelog extends Component {
   async componentDidMount(){
@@ -52,6 +53,12 @@ class PopupChangelog extends Component {
                 <TextFont key={index} bold={false} style={{marginBottom:4, fontSize: 18, color: colors.textBlack[global.darkMode]}}>{point}</TextFont>
             ))
           }
+          <TextFont bold={false} style={{marginBottom:4, fontSize: 18, color: colors.textBlack[global.darkMode]}}>You can reread the changelog in the [About] page</TextFont>
+          <View style={{height:25}}/>
+          <MailLink/>
+          <View style={{height:15}}/>
+          <MailSupport/>
+          <View style={{height:10}}/>
         </PopupBottomCustom>
       </>
     )

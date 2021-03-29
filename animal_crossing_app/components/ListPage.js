@@ -26,7 +26,7 @@ import RecipesPopup from "../popups/RecipesPopup"
 import MaterialsPopup from "../popups/MaterialsPopup"
 import PopupFilter from './PopupFilter'
 import TextFont from "./TextFont"
-import {inChecklist, attemptToTranslateItem, getSettingsString, attemptToTranslate} from "../LoadJsonData"
+import {removeAccents, inChecklist, attemptToTranslateItem, getSettingsString, attemptToTranslate} from "../LoadJsonData"
 import {PopupBottomCustom} from "./Popup"
 const filterDefinitions = require("../assets/data/Generated/filterDefinitions.json");
 
@@ -323,7 +323,7 @@ export default (props) =>{
             //Translate search attribute from database
             //Search translations done here
             // searchFound = attemptToTranslateItem(item.[props.searchKey[j][x]]).toLowerCase().includes(search.toLowerCase())
-            searchFound = item.[props.searchKey[j][x]].toLowerCase().includes(search.toLowerCase())
+            searchFound = removeAccents(item.[props.searchKey[j][x]].toLowerCase()).includes(removeAccents(search.toLowerCase()))
           }
           //&&((!props.wishlistItems&&!props.filterCollectedOnly&&!props.newItems)||searchFound)
           if((search==="" || searchFound) && (filterFound || searchActual.length === 0)){

@@ -22,6 +22,8 @@ import VillagerPopup from "../popups/VillagerPopup"
 import ToggleSwitch from 'toggle-switch-react-native'
 import {SubHeader} from "../components/Formattings"
 import FadeInOut from "../components/FadeInOut"
+import {getMaterialImage} from "../components/GetPhoto"
+import FastImage from "../components/FastImage"
 
 function addDays(date, days) {
   var result = new Date(date);
@@ -157,7 +159,7 @@ class HomePage extends Component {
             </HomeContentArea>:<View/>}
             {sections["To-Do"]===true?<HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.todoColor[global.darkMode]} title="To-Do" titleColor={colors.todoColor[global.darkModeReverse]}>
               <View style={{height: 15}}/>
-              <TodoList setLoadedToDo={this.setLoadedToDo}/>
+              <TodoList sections={sections} setLoadedToDo={this.setLoadedToDo}/>
               <View style={{height: 15}}/>
             </HomeContentArea>:<View/>}
             {/* <HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.todoColor[global.darkMode]} title="Visitors" titleColor={colors.visitorsColor[global.darkModeReverse]}>
@@ -178,7 +180,7 @@ class HomePage extends Component {
             </HomeContentArea>:<View/>}
             {sections["Profile"]===true?<HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.profileColor[global.darkMode]} title="Profile" titleColor={colors.profileColor[global.darkModeReverse]}>
               <View style={{height: 37}}/>
-              <View style={{alignItems:"center"}}>
+              <View style={{alignItems:"center", marginHorizontal:50}}>
                 <TextInput
                   maxLength = {15}
                   allowFontScaling={false}
@@ -187,7 +189,7 @@ class HomePage extends Component {
                   placeholder={"["+attemptToTranslate("Name")+"]"}
                   placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
                   defaultValue={global.name}
-                  multiline={true}
+                  multiline={false}
                 />
                 <TextFont bold={true} style={{marginTop: 0, marginBottom: -2, color:colors.fishText[global.darkMode]}}>{translateIslandNameInputLabel1()}</TextFont>
                 <TextInput
@@ -198,15 +200,18 @@ class HomePage extends Component {
                   placeholder={"["+attemptToTranslate("Island")+"]"}
                   placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
                   defaultValue={global.islandName}
-                  multiline={true}
+                  multiline={false}
                 />
                 <TextFont bold={true} style={{marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{translateIslandNameInputLabel2()}</TextFont>
-                <View style={{height: 5}}/>
                 <TouchableOpacity onPress={() => this.props.setPage(13)}>
-                  <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{getSettingsString("settingsNorthernHemisphere")==="true" ? "Northern Hemisphere" : "Southern Hemisphere"}</TextFont>
+                  <TextFont bold={false} style={{padding:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{getSettingsString("settingsNorthernHemisphere")==="true" ? "Northern Hemisphere" : "Southern Hemisphere"}</TextFont>
                 </TouchableOpacity>
+                <View style={{height: 5}}/>
+                {sections["Profile - Dream Address"]===true?<DreamAddress/>:<View/>}
+                {sections["Profile - Friend Code"]===true?<FriendCode/>:<View/>}
+                <View style={{height: 18}}/>
+                <ChosenFruit/>
               </View>
-              <View style={{height: 30}}/>
               <CurrentVillagers openPopup={this.openPopup} setPage={this.props.setPage}/>
               {getCurrentVillagerNamesString()==="You have no favorite villagers"?<View/>:<TouchableOpacity onPress={() => this.props.setPage(21)}>
                 {getInverseVillagerFilters(true)===""?<TextFont suffix={"\n"+attemptToTranslate("Note: you can get all items since you have all personality types!")} style={{marginHorizontal: 30, color: colors.fishText[global.darkMode], fontSize: 11, textAlign:"center"}}>{"See what you can get from your villagers."}</TextFont>:<>
@@ -239,14 +244,182 @@ class HomePage extends Component {
 }
 export default HomePage;
 
-class ConfigureHomePages extends Component {
+class DreamAddress extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      dreamAddress:global.dreamAddress,
+    }
+  }
+  onChangeText = (text) =>{
+    var newValue = "";
+    if(text==="DW"){
+      this.setState({dreamAddress:""});
+    } else if (text==="D"){
+      this.setState({dreamAddress:"DW-"});
+    } else {
+      const afterIndices = [4,9,14]; 
+      var value = text.replace("DW-","");
+      for(let i=0; i<value.length; i++){
+        if(afterIndices.includes(i)){
+          newValue+="-";
+        } 
+        if (value[i] !== "-") {
+          newValue+=value[i];
+        }
+      }
+      newValue = "DW-"+newValue;
+      this.setState({dreamAddress:newValue});
+    }
+    global.dreamAddress=newValue;
+    AsyncStorage.setItem("dreamAddress", newValue);
+  }
   render(){
-    const sectionNames = Object.keys(this.props.sections);
+    return(
+      <>
+        <TextInput
+          maxLength = {17}
+          allowFontScaling={false}
+          style={{fontSize: 18, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
+          onChangeText={async (text) => {this.onChangeText(text)}}
+          placeholder={"["+attemptToTranslate("Dream Address")+"]"}
+          placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+          value={this.state.dreamAddress}
+          defaultValue={global.dreamAddress}
+          multiline={false}
+        />
+        <TextFont bold={false} style={{marginTop: -5, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{"Dream Address"}</TextFont>
+      </>
+    )
+  }
+}
+
+class FriendCode extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      friendCode:global.friendCode,
+    }
+  }
+  onChangeText = (text) =>{
+    var newValue = "";
+    if(text==="SW"){
+      this.setState({friendCode:""});
+    } else if (text==="S"){
+      this.setState({friendCode:"SW-"});
+    } else {
+      const afterIndices = [4,9,14]; 
+      var value = text.replace("SW-","");
+      for(let i=0; i<value.length; i++){
+        if(afterIndices.includes(i)){
+          newValue+="-";
+        } 
+        if (value[i] !== "-") {
+          newValue+=value[i];
+        }
+      }
+      newValue = "SW-"+newValue;
+      this.setState({friendCode:newValue});
+    }
+    global.friendCode=newValue;
+    AsyncStorage.setItem("friendCode", newValue);
+  }
+  render(){
+    return(
+      <>
+        <TextInput
+          maxLength = {17}
+          allowFontScaling={false}
+          style={{fontSize: 18, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
+          onChangeText={async (text) => {this.onChangeText(text)}}
+          placeholder={"["+attemptToTranslate("Friend Code")+"]"}
+          placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+          value={this.state.friendCode}
+          defaultValue={global.friendCode}
+          multiline={false}
+        />
+        <TextFont bold={false} style={{marginTop: -5, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{"Friend Code"}</TextFont>
+      </>
+    )
+  }
+}
+
+class ChosenFruit extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      popupVisible: false,
+      smallToggle:false,
+      selectedImage: global.selectedFruit
+    };
+    this.images = [getMaterialImage("apple",true),getMaterialImage("cherry",true),getMaterialImage("orange",true),getMaterialImage("peach",true),getMaterialImage("pear",true)]
+  }
+  render(){
+    
+    return(<>
+      <View style={{flex: 1, flexWrap: 'wrap', flexDirection:"row",justifyContent:"center"}}>
+      {this.images.map( (image, index)=>{
+        return(
+          <View key={image+index} style={{width: 45,height: 45, margin:3}}>
+            <TouchableOpacity 
+              onPress={()=>{
+                if(this.state.selectedImage===image){
+                  this.setState({selectedImage:""});
+                  global.selectedFruit="";
+                  AsyncStorage.setItem("selectedFruit", "");
+                } else {
+                  this.setState({selectedImage:image});
+                  global.selectedFruit=image;
+                  AsyncStorage.setItem("selectedFruit", image);
+                  getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10]) : "";
+                }
+              }}
+            >
+              <View style={{width: 45,height: 45,borderRadius: 100,justifyContent: "center",alignItems: "center",borderWidth: 2, borderColor: image===this.state.selectedImage ? colors.checkGreen[global.darkMode] : colors.eventBackground[global.darkMode], backgroundColor:colors.eventBackground[global.darkMode]}}>
+                <FastImage
+                  style={{height: 35,width: 35,resizeMode:'contain',}}
+                  source={{uri:image}}
+                  cacheKey={image}
+                />
+              </View>
+            </TouchableOpacity>
+          </View>
+      )})}
+    </View></>)
+  }
+    
+}
+
+
+class ConfigureHomePages extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      sections:this.props.sections,
+    }
+  }
+  setPages = (check,name) => {
+    this.props.setPages(check,name);
+    if(name==="To-Do - Turnip Log" && check){
+      this.props.setPages(true,"To-Do");
+    } else if(name==="To-Do" && !check){
+      this.props.setPages(false,"To-Do - Turnip Log");
+    } else if(name==="Profile - Dream Address" && check){
+      this.props.setPages(true,"Profile");
+    } else if(name==="Profile - Friend Code" && check){
+      this.props.setPages(true,"Profile");
+    } else if(name==="Profile" && !check){
+      this.props.setPages(false,"Profile - Dream Address");
+      this.props.setPages(false,"Profile - Friend Code");
+    }
+  }
+  render(){
+    const sectionNames = Object.keys(this.state.sections);
     return(<>
       <SubHeader>Select Homepage Sections</SubHeader>
       <View style={{height:10}}/>
         {sectionNames.map( (name, index)=>{
-          return <ConfigureHomePageSettingContainer key={name+index.toString()} title={name} defaultValue={this.props.sections[name]} onCheck={(check)=>{this.props.setPages(check,name)}}/>
+          return <ConfigureHomePageSettingContainer key={name+index.toString()} title={name} defaultValue={this.state.sections[name]} onCheck={(check)=>{this.setPages(check,name)}}/>
         })}
       </>
     )
@@ -258,6 +431,11 @@ class ConfigureHomePageSettingContainer extends Component {
     super(props);
     this.state = {
       toggle:this.props.defaultValue,
+    }
+  }
+  componentDidUpdate(prevProps){
+    if(this.props.defaultValue!==prevProps.defaultValue){
+      this.setState({toggle:this.props.defaultValue})
     }
   }
   toggle = () => {

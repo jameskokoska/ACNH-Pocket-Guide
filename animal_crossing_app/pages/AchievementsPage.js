@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Animated,FlatList, Dimensions, Linking, TextInput, Vibration,TouchableNativeFeedback,TouchableOpacity,StyleSheet, Text, View, Image} from 'react-native';
 import TextFont from '../components/TextFont';
 import {getCurrentDateObject, getMonth, getWeekDayShort} from '../components/DateFunctions';
-import {getStorage, checkOff, capitalize, commas, removeBrackets} from "../LoadJsonData"
+import {removeAccents,getStorage, checkOff, capitalize, commas, removeBrackets} from "../LoadJsonData"
 import {getPhoto} from "../components/GetPhoto"
 import Check from '../components/Check';
 import colors from '../Colors'
@@ -46,7 +46,7 @@ export default class AchievementsPage extends Component {
       var outputData = [];
       this.data.map( (achievement, index)=>{
         var achievementName = attemptToTranslateAchievement(achievement["Name"]);
-        if(achievementName.toLowerCase().includes(text.toLowerCase())){
+        if(removeAccents(achievementName.toLowerCase()).includes(removeAccents(text.toLowerCase()))){
           outputData.push(achievement);
         } else if (achievement["Internal Category"].toLowerCase().includes(text.toLowerCase())){
           outputData.push(achievement);

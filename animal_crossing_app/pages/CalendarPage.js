@@ -5,7 +5,7 @@ import TextFont from '../components/TextFont';
 import colors from '../Colors'
 import {getPhoto} from "../components/GetPhoto"
 import {doWeSwapDate, getMonthFromString, getCurrentDateObject} from "../components/DateFunctions"
-import {translateDateRange, attemptToTranslateItem, capitalize, getSettingsString, attemptToTranslate, translateBirthday} from "../LoadJsonData"
+import {removeAccents, translateDateRange, attemptToTranslateItem, capitalize, getSettingsString, attemptToTranslate, translateBirthday} from "../LoadJsonData"
 import {getSpecialOccurrenceDate} from "../components/EventContainer"
 import FastImage from '../components/FastImage';
 import DelayInput from "react-native-debounce-input";
@@ -338,7 +338,7 @@ class AllEventsList extends Component{
       var outputData = [];
       this.data.map( (event, index)=>{
         var eventName = attemptToTranslateItem(event["Name"]);
-        if(eventName.toLowerCase().includes(text.toLowerCase())){
+        if(removeAccents(eventName.toLowerCase()).includes(removeAccents(text.toLowerCase()))){
           outputData.push(event);
         } else if (attemptToTranslate(event["Type"]).toLowerCase().includes(text.toLowerCase())){
           outputData.push(event);

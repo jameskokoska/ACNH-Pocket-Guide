@@ -48,11 +48,18 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
+-Thanks for 5K downloads... thats incredible!
+-Big update this time!
 -Added way to see what DIYs and Reactions you can get from your current villagers
 -Added way to see what DIYs and Reactions you cannot get from your villagers
 -Added new [Obtainable Items] page
 -Added information about this under the profile section on the home screen
 -Improved loading times of lists
+-Accented characters are ignored in search
+-Show/Hide turnip log moved to [Edit sections]
+-Can set Dream Address and Friend Code in profile
+-These sections can be hidden in [Edit Sections]
+-Can set your island fruit in profile
 -Delete saved/downloaded images button in settings (to reclaim storage space)
 -Added more translations
 -Fix back button crash on launch
@@ -61,7 +68,8 @@ global.changelog = `
 -More color fixes
 -Removed useless code to reduce file size
 -Bug fixes to home screen
--
+`
+global.changelogOld = `
 -Color fixes
 -Better headers for Achievements and Events page
 -Customizable home screen sections
@@ -124,8 +132,6 @@ global.changelog = `
 - Visitors tracking
 - Notification reminders for events
 -
--Any feedback feel free to send me an email! dapperappdeveloper@gmail.com
--You can reread this changelog in the [About] page
 `
 
 class App extends Component {
@@ -173,8 +179,11 @@ class App extends Component {
     global.collectionList = (await getStorage("collectedString","")).split("\n");
     console.log(global.collectionList)
 
-    global.name = await getStorage("name","")
-    global.islandName = await getStorage("islandName","")
+    global.name = await getStorage("name","");
+    global.islandName = await getStorage("islandName","");
+    global.dreamAddress = await getStorage("dreamAddress","");
+    global.friendCode = await getStorage("friendCode","");
+    global.selectedFruit = await getStorage("selectedFruit","");
     var defaultLanguage = getDefaultLanguage();
     global.language = await getStorage("Language",defaultLanguage);
     
@@ -200,13 +209,22 @@ class App extends Component {
     const defaultSections = {
       "Events" : true,
       "To-Do" : true,
+      "To-Do - Turnip Log" : true,
       "Collection" : true,
       "Profile" : true,
+      "Profile - Dream Address" : true,
+      "Profile - Friend Code" : true,
       "Store Hours" : true,
       "Active Creatures" : true,
     }
     this.sections = JSON.parse(await getStorage("Sections",JSON.stringify(defaultSections)));
-
+    const aKeys = Object.keys(this.sections);
+    const bKeys = Object.keys(defaultSections);
+    //Update sections if any new ones added
+    if(JSON.stringify(aKeys) !== JSON.stringify(bKeys)){
+      await AsyncStorage.setItem("Sections", JSON.stringify(defaultSections));
+      this.sections = defaultSections;
+    }
     
     if(this.mounted){
       this.setState({

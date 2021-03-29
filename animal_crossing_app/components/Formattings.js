@@ -34,6 +34,16 @@ export class MailLink extends Component {
   }
 }
 
+export class MailSupport extends Component {
+  render(){
+    return(
+      <TouchableOpacity style={{marginHorizontal:15, padding: 15}} onPress={() => Linking.openURL('mailto:dapperappdeveloper@gmail.com?subject=I would like to support you!')}>
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>If you enjoy my app and would like to support me, send me an email! (Tap here)</TextFont>
+      </TouchableOpacity>
+    )
+  }
+}
+
 export class SubHeader extends Component {
   render(){
     return(

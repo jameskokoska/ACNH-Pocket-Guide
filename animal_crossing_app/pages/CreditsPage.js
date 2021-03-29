@@ -7,7 +7,7 @@ import StoreHoursContainer from '../components/StoreHoursContainer';
 import colors from '../Colors'
 import PopupRating from "../components/PopupRating"
 import ButtonComponent from "../components/ButtonComponent"
-import {MailLink, ExternalLink, SubHeader, Header, Paragraph} from "../components/Formattings"
+import {MailSupport, MailLink, ExternalLink, SubHeader, Header, Paragraph} from "../components/Formattings"
 import {attemptToTranslate} from "../LoadJsonData"
 
 class CreditsPage extends Component {
@@ -20,6 +20,8 @@ class CreditsPage extends Component {
   render(){
     var changelogText = global.changelog.toString();
     changelogText = changelogText.split("\n-");
+    var changelogTextOld = global.changelogOld.toString();
+    changelogTextOld = changelogTextOld.split("\n-");
     return(
       <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
         <ScrollView>
@@ -46,8 +48,9 @@ class CreditsPage extends Component {
           <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
             <SubHeader>French: Christophe Laffitte</SubHeader>
           </View>
-          <View style={{height: 30}}/>
+          <View style={{height: 20}}/>
           <MailLink/>
+          <MailSupport/>
           <PopupRating show={this.state.show} noShow={()=>{this.setState({show:false})}}/>
           <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.setState({show:true})}} text={"Leave a rating"} />
           <View style={{height:60}}/>
@@ -82,9 +85,15 @@ class CreditsPage extends Component {
 
           <View style={{height: 35}}/>
           <SubHeader>App Information</SubHeader>
-          <TextFont bold={false} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 14,}}>{"v" + global.version + " - " + global.versionCode + "\n\nChangelog:"}</TextFont>
+          <TextFont bold={true} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 15,}}>{"\nv" + global.version + " - " + global.versionCode + "\n\nChangelog:"}</TextFont>
           {
             changelogText.map((point, index) => (
+              <TextFont key={point+index} bold={false} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 14,}}>{point}</TextFont>
+            ))
+          }
+          <TextFont bold={true} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 15,}}>{"Past changes:"}</TextFont>
+          {
+            changelogTextOld.map((point, index) => (
               <TextFont key={point+index} bold={false} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 14,}}>{point}</TextFont>
             ))
           }

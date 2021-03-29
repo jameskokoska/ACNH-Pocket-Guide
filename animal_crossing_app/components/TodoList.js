@@ -102,19 +102,19 @@ class TodoList extends Component {
     this.saveList(currentData);
   }
 
-  toggleTurnipLog = async () => {
-    var currentTurnipLog = this.state.showTurnipLog;
-    this.setState({showTurnipLog:!currentTurnipLog});
-    var currentTurnipLogString = !currentTurnipLog ? "true" : "false"
-    await AsyncStorage.setItem("TurnipListShow", currentTurnipLogString);
-    getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(20) : "";
-  }
+  // toggleTurnipLog = async () => {
+  //   var currentTurnipLog = this.state.showTurnipLog;
+  //   this.setState({showTurnipLog:!currentTurnipLog});
+  //   var currentTurnipLogString = !currentTurnipLog ? "true" : "false"
+  //   await AsyncStorage.setItem("TurnipListShow", currentTurnipLogString);
+  //   getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(20) : "";
+  // }
 
   render(){
-    var turnipLog = <View/>;
-    if(this.state.showTurnipLog===true){
-      turnipLog = <TurnipLog/>;
-    }
+    // var turnipLog = <View/>;
+    // if(this.state.showTurnipLog===true){
+    //   turnipLog = <TurnipLog/>;
+    // }
     return <>
       <View style={{alignItems:"center",flexDirection:"row", right:0, top:0,position:'absolute',zIndex:10}}>
         <TouchableOpacity style={{padding:10}} 
@@ -169,14 +169,14 @@ class TodoList extends Component {
             }
           })}
         </View>
-        {turnipLog}
+        {this.props.sections["To-Do - Turnip Log"]===true?<TurnipLog/>:<View/>}
       </View>
-      <TouchableOpacity style={{padding:10}} 
+      {/* <TouchableOpacity style={{padding:10}} 
         onPress={()=>{
           this.toggleTurnipLog(); 
       }}>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{this.state.showTurnipLog ? "Hide Turnip Log" : "Show Turnip Log"}</TextFont>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
       <PopupAddTask ref={(popupAddTask) => this.popupAddTask = popupAddTask} addItem={this.addItem}/>
     </>
   }
