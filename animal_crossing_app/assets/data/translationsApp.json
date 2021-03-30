@@ -1359,8 +1359,8 @@
         {
             "English": "Leave a rating",
             "English (Europe)": "Leave a rating",
-            "French": "Laissez une note",
-            "French (US)": "Laissez une note"
+            "French": "Laisser une note",
+            "French (US)": "Laisser une note"
         },
         {
             "English": "Enjoying the app?",
@@ -1425,8 +1425,8 @@
         {
             "English": "Turnip Prices",
             "English (Europe)": "Turnip Prices",
-            "French": "Vérifier le prix des navets",
-            "French (US)": "Vérifier le prix des navets"
+            "French": "Cours du navet",
+            "French (US)": "Cours du navet"
         },
         {
             "English": "Water Flowers",
@@ -4533,10 +4533,10 @@
             "French (US)": "Les villageois préfèrent les fleurs, leur musique préférée, les parapluies (hors villageois de type grenouille), ou encore les vêtements de leur couleur ou style préféré."
         },
         {
-            "English": "[View Gifts] will show you all clothes of their preferred style.",
-            "English (Europe)": "[View Gifts] will show you all clothes of their preferred style.",
-            "French": "[Afficher les cadeaux] vous montrera tous les vêtements de leur style préféré.",
-            "French (US)": "[Afficher les cadeaux] vous montrera tous les vêtements de leur style préféré."
+            "English": "[View Gifts] will show you all clothing of their preferred color and style.",
+            "English (Europe)": "[View Gifts] will show you all clothing of their preferred color and style.",
+            "French": "[Afficher les cadeaux] vous montrera tous les vêtements de leur couleur et de leur style préféré.",
+            "French (US)": "[Afficher les cadeaux] vous montrera tous les vêtements de leur couleur et de leur style préféré."
         },
         {
             "English": "Additionally, you can choose to filter out if the villager will wear this item or not when gifted.",
@@ -4691,8 +4691,8 @@
         {
             "English": "It is recommended you get all villager personalities to get DIYs and Reactions. Tap here to see what you might be missing out on.",
             "English (Europe)": "It is recommended you get all villager personalities to get DIYs and Reactions. Tap here to see what you might be missing out on.",
-            "French": "Il est recommandé que vous ayez toutes les personnalités de villageois pour obtenir des plans et des mimiques. Appuyez ici pour voir ce que vous pourriez manquer.",
-            "French (US)": "Il est recommandé que vous ayez toutes les personnalités de villageois pour obtenir des plans et des mimiques. Appuyez ici pour voir ce que vous pourriez manquer."
+            "French": "Il est recommandé d'avoir toutes les personnalités de villageois pour obtenir des plans et des mimiques. Appuyez ici pour voir ce que vous pourriez manquer.",
+            "French (US)": "Il est recommandé d'avoir toutes les personnalités de villageois pour obtenir des plans et des mimiques. Appuyez ici pour voir ce que vous pourriez manquer."
         },
         {
             "English": "Missing personalities:",
@@ -4750,7 +4750,9 @@
         },
         {
             "English": "Dismiss",
-            "English (Europe)": "Dismiss"
+            "English (Europe)": "Dismiss",
+            "French": "Rejeter",
+            "French (US)": "Rejeter"
         },
         {
             "English": "Tap here and go add some!",
@@ -4775,6 +4777,102 @@
             "English (Europe)": "Added to Able Sisters stock rotation the day after receiving this item from Label",
             "French": "Ajouté chez les Soeurs Doigts de Fée le lendemain du jour où vous recevez cet objet de Tiquette",
             "French (US)": "Ajouté chez les Soeurs Doigts de Fée le lendemain du jour où vous recevez cet objet de Tiquette"
+        },
+        {
+            "English": "You have no favorite villagers",
+            "English (Europe)": "You have no favorite villagers",
+            "French": "Vous n'avez pas de villageois préférés",
+            "French (US)": "Vous n'avez pas de villageois préférés"
+        },
+        {
+            "English": "All downloaded photos have been removed",
+            "English (Europe)": "All downloaded photos have been removed",
+            "French": "Toutes les photos téléchargées ont été supprimées",
+            "French (US)": "Toutes les photos téléchargées ont été supprimées"
+        },
+        {
+            "English": "Delete Downloaded Images",
+            "English (Europe)": "Delete Downloaded Images",
+            "French": "Supprimer les images téléchargées",
+            "French (US)": "Supprimer les images téléchargées"
+        },
+        {
+            "English": "Deleted Downloaded Images",
+            "English (Europe)": "Deleted Downloaded Images",
+            "French": "Images téléchargées supprimées",
+            "French (US)": "Images téléchargées supprimées"
+        },
+        {
+            "English": "Storage cleared:",
+            "English (Europe)": "Storage cleared:",
+            "French": "Stockage effacé :",
+            "French (US)": "Stockage effacé :"
+        },
+        {
+            "English": "Deleting...",
+            "English (Europe)": "Deleting...",
+            "French": "Suppression...",
+            "French (US)": "Suppression..."
+        },
+        {
+            "English": "Deleted:",
+            "English (Europe)": "Deleted:",
+            "French": "Supprimé :",
+            "French (US)": "Supprimé :"
+        },
+        {
+            "English": "Dream Address",
+            "English (Europe)": "Dream Address",
+            "French": "Code onirique",
+            "French (US)": "Code onirique"
+        },
+        {
+            "English": "Friend Code",
+            "English (Europe)": "Friend Code",
+            "French": "Code ami",
+            "French (US)": "Code ami"
+        },
+        {
+            "English": "To-Do - Turnip Log",
+            "English (Europe)": "To-Do - Turnip Log",
+            "French": "À faire - Journal des Navets",
+            "French (US)": "À faire - Journal des Navets"
+        },
+        {
+            "English": "Profile - Dream Address",
+            "English (Europe)": "Profile - Dream Address",
+            "French": "Profil - Code onirique",
+            "French (US)": "Profil - Code onirique"
+        },
+        {
+            "English": "Profile - Friend Code",
+            "English (Europe)": "Profile - Friend Code",
+            "French": "Profil - Code ami",
+            "French (US)": "Profil - Code ami"
+        },
+        {
+            "English": "Real",
+            "English (Europe)": "Real",
+            "French": "Le Vrai",
+            "French (US)": "Le Vrai"
+        },
+        {
+            "English": "Fake",
+            "English (Europe)": "Fake",
+            "French": "Le Faux",
+            "French (US)": "Le Faux"
+        },
+        {
+            "English": "If you enjoy my app and would like to support me, send me an email! (Tap here)",
+            "English (Europe)": "If you enjoy my app and would like to support me, send me an email! (Tap here)",
+            "French": "Si vous appréciez mon application et souhaitez me soutenir, envoyez-moi un e-mail ! (Appuyez ici)",
+            "French (US)": "Si vous appréciez mon application et souhaitez me soutenir, envoyez-moi un e-mail ! (Appuyez ici)"
+        },
+        {
+            "English": "Received in mail from DAL after 250 flights",
+            "English (Europe)": "Received in mail from DAL after 250 flights",
+            "French": "Reçu par courrier de la DAL après 250 vols",
+            "French (US)": "Reçu par courrier de la DAL après 250 vols"
         }
     ],
     "Achievements": [
@@ -6640,7 +6738,9 @@
         },
         {
             "English": "Rumermongering",
-            "English (Europe)": "Rumermongering"
+            "English (Europe)": "Rumermongering",
+            "French": "ragoteur.se",
+            "French (US)": "ragoteur.se"
         },
         {
             "English": "Art-School",
@@ -7670,7 +7770,9 @@
         },
         {
             "English": "Hungry",
-            "English (Europe)": "Hungry"
+            "English (Europe)": "Hungry",
+            "French": "affamé.e",
+            "French (US)": "affamé.e"
         },
         {
             "English": "Friendly",
@@ -9461,8 +9563,8 @@
             "French (US)": "Parfum"
         },
         {
-            "English": "Mr. Popular;Ms. Popular\n",
-            "English (Europe)": "Mr. Popular;Ms. Popular\n",
+            "English": "Mr. Popular;Ms. Popular",
+            "English (Europe)": "Mr. Popular;Ms. Popular",
             "French": "Pomme",
             "French (US)": "Pomme"
         },

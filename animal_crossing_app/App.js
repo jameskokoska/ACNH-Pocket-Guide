@@ -56,6 +56,7 @@ global.changelog = `
 -Added information about this under the profile section on the home screen
 -Added museum descriptions to museum items popup
 -Added furniture size icons to items popup
+-Updated game data
 -Improved loading times of lists
 -Accented characters are ignored in search
 -Show/Hide turnip log moved to [Edit sections]
@@ -64,15 +65,20 @@ global.changelog = `
 -Can set your island fruit in profile
 -Delete saved/downloaded images button in settings (to reclaim storage space)
 -Added more translations
+-Changed design of buttons
 -Fix back button crash on launch
 -Added haptic feedback to [Edit Sections]
 -Fixes to [Edit Sections]
 -More color fixes
 -Removed useless code to reduce file size
 -Bug fixes to home screen
+-Fixed searching DIYs in Everything page
+-Added NookLink exchange prices and icons
+-Fixed purchasing and selling prices mixup in popups
 -Main changelog is shorter, moved longer one to About page 
-`
-global.changelogOld = `
+-
+-Past changes:
+-
 -Color fixes
 -Better headers for Achievements and Events page
 -Customizable home screen sections
@@ -225,8 +231,14 @@ class App extends Component {
     const bKeys = Object.keys(defaultSections);
     //Update sections if any new ones added
     if(JSON.stringify(aKeys) !== JSON.stringify(bKeys)){
-      await AsyncStorage.setItem("Sections", JSON.stringify(defaultSections));
-      this.sections = defaultSections;
+      var newSections = defaultSections;
+      for(var i=0; i<bKeys.length; i++){
+        if(this.sections[bKeys[i]]!==undefined){
+          newSections[bKeys[i]]=this.sections[bKeys[i]];
+        }
+      }
+      await AsyncStorage.setItem("Sections", JSON.stringify(newSections));
+      this.sections = newSections;
     }
     
     if(this.mounted){

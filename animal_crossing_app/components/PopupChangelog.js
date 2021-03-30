@@ -43,15 +43,19 @@ class PopupChangelog extends Component {
 
   render(){
     var changelogText = global.changelog.toString();
+    const index = changelogText.indexOf("Past changes:");
+    if(index>0)
+      changelogText = changelogText.substring(0, index);
     changelogText = changelogText.split("\n-");
+   
     return(
       <>
         <PopupBottomCustom ref={(popup) => this.popup = popup} onClose={async () => {await AsyncStorage.setItem("changelog", global.version)}}>
           <TextFont bold={true} style={{fontSize: 28, textAlign:"center",color: colors.textBlack[global.darkMode],}}>{"What's New?"}</TextFont>
           {
-            changelogText.map((point, index) => (
-                <TextFont key={index} bold={false} style={{marginBottom:4, fontSize: 18, color: colors.textBlack[global.darkMode]}}>{point}</TextFont>
-            ))
+            changelogText.map((point, index) => {
+              return(<TextFont key={index} bold={false} style={{marginBottom:4, fontSize: 18, color: colors.textBlack[global.darkMode]}}>{point}</TextFont>)
+            })
           }
           <TextFont bold={false} style={{marginBottom:4, fontSize: 18, color: colors.textBlack[global.darkMode]}}>You can reread the changelog in the [About] page</TextFont>
           <View style={{height:25}}/>

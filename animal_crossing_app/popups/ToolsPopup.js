@@ -23,6 +23,7 @@ class ToolsPopup extends Component {
         textProperty2={["Sell"]}
         ending1={"Exchange Currency"}
         ending2={"Exchange Currency"}
+        translateItem={false}
       />
     </View>
   }

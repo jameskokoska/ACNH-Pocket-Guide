@@ -148,19 +148,29 @@ export class InfoLine extends Component {
     if(text==="None"){
       return <View/>
     }
+    
     var imageSource = <Image style={styles.infoLineImage} source={this.props.image}/>;
-    if(this.props.item[this.props.ending]!== undefined && this.props.ending==="Exchange Currency" && text.toLowerCase()!=="nfs"){
+    if(this.props.item[this.props.ending]!== undefined && this.props.ending==="Exchange Currency" && this.props.textProperty[0]=== "Buy"){
+      if(text==="NFS" && this.props.item["Exchange Price"] !==undefined && this.props.item["Exchange Price"] !=="NA"){
+        text = commas(this.props.item["Exchange Price"]);
+      }
       if(this.props.item[this.props.ending].toLowerCase().includes("miles")){
-        ending= " " + attemptToTranslate("miles")
+        ending= " " + attemptToTranslate("miles");
         imageSource = <Image style={styles.infoLineImage} source={require("../assets/icons/miles.png")}/>;
+      } else if(this.props.item[this.props.ending].toLowerCase().includes("nook points")){
+        ending= " " + attemptToTranslate("Nook Points");
+        imageSource = <Image style={styles.infoLineImage} source={require("../assets/icons/nookLinkCoin.png")}/>;
+      } else if( text!=="NFS" ){
+        ending = " " + attemptToTranslate("bells");
       } else {
-        ending = " " + attemptToTranslate("bells")
+        ending = "";
       }
     } else if(text.toLowerCase()==="nfs"){
       ending="";
     } else if (this.props.ending==="Exchange Currency"){
-      ending = " " + attemptToTranslate("bells")
+      ending = " " + attemptToTranslate("bells");
     }
+
     if(this.props.textProperty.includes("Material")){
       imageSource =  getMaterialImage(this.props.item[this.props.textProperty]);
       if(imageSource === ""){
@@ -448,6 +458,7 @@ export class InfoLineBeside extends Component {
                 textProperty={this.props.textProperty1}
                 textProperty2={this.props.textProperty12}
                 ending={this.props.ending1}
+                translateItem={this.props.translateItem}
               />
               <InfoLine
                 image={this.props.image2} 
@@ -455,6 +466,7 @@ export class InfoLineBeside extends Component {
                 textProperty={this.props.textProperty2}
                 textProperty2={this.props.textProperty22}
                 ending={this.props.ending2}
+                translateItem={this.props.translateItem}
               />
         </View>
   }

@@ -31,7 +31,7 @@ export class RecipesRouteClass extends Component{
         appBarColor={this.props.appBarColor===undefined?colors.toolsAppBar[global.darkMode]:this.props.appBarColor}
         accentColor={this.props.accentColor===undefined?colors.toolsAccent[global.darkMode]:this.props.accentColor}
         subHeader={this.props.subHeader===undefined?"":this.props.subHeader}
-        tabs={this.props.tabs===undefined?false:this.props.tabs}
+        tabs={this.props.tabs===undefined?true:this.props.tabs}
         smallerHeader={this.props.smallerHeader===undefined?false:this.props.smallerHeader}
         filterSearchable={this.props.filterSearchable===undefined?true:this.props.filterSearchable}
         titleColor={this.props.titleColor===undefined?colors.textWhite[0]:this.props.titleColor}

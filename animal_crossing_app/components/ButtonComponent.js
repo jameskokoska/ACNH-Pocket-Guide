@@ -17,7 +17,7 @@ class ButtonComponent extends Component {
   render(){
     return(
         <TouchableOpacity
-          style={[this.props.style,{marginLeft: 10, marginRight: 10, marginTop: 20, paddingLeft: 20, paddingRight: 20, paddingTop: 10, paddingBottom: 10, borderRadius: 7, backgroundColor: this.props.color,  justifyContent: 'center', alignItems: 'center'}]}
+          style={[this.props.style,{marginLeft: 10, marginRight: 10, marginTop: 15, paddingLeft: 30, paddingRight: 30, paddingTop: 12, paddingBottom: 12, elevation:2, borderRadius: 19, backgroundColor: this.props.color,  justifyContent: 'center', alignItems: 'center'}]}
           activeOpacity={0.5}
           onPress={()=> {this.props.onPress(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(this.props.vibrate) : "";}}
         >

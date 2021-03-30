@@ -353,7 +353,7 @@ export default (props) =>{
               // }
               // if(item.[props.textProperty[j]]===previousVariation){
               //   previousVariation = item.[props.textProperty[j]];
-              if(item["Name"]===previousVariation){
+              if(item["Name"]===previousVariation && !item["checkListKey"].includes("recipesCheckList")){
                 previousVariation = item["Name"];
               } else {
                 item.dataSet = j;

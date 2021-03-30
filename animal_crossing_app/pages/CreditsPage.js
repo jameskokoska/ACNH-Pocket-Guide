@@ -20,8 +20,6 @@ class CreditsPage extends Component {
   render(){
     var changelogText = global.changelog.toString();
     changelogText = changelogText.split("\n-");
-    var changelogTextOld = global.changelogOld.toString();
-    changelogTextOld = changelogTextOld.split("\n-");
     return(
       <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
         <ScrollView>
@@ -88,12 +86,6 @@ class CreditsPage extends Component {
           <TextFont bold={true} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 15,}}>{"\nv" + global.version + " - " + global.versionCode + "\n\nChangelog:"}</TextFont>
           {
             changelogText.map((point, index) => (
-              <TextFont key={point+index} bold={false} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 14,}}>{point}</TextFont>
-            ))
-          }
-          <TextFont bold={true} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 15,}}>{"Past changes:"}</TextFont>
-          {
-            changelogTextOld.map((point, index) => (
               <TextFont key={point+index} bold={false} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 14,}}>{point}</TextFont>
             ))
           }

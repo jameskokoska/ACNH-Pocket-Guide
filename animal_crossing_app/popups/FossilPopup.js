@@ -20,6 +20,7 @@ class FossilPopup extends Component {
           item={this.props.item}
           textProperty={["Sell"]}
           ending={" " + attemptToTranslate("bells")}
+          translateItem={false}
         />
       </View>
       <View style={{height:15}}/>

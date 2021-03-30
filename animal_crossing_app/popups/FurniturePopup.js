@@ -23,6 +23,7 @@ class FurniturePopup extends Component {
         textProperty2={["Sell"]}
         ending1={"Exchange Currency"}
         ending2={"Exchange Currency"}
+        translateItem={false}
       />
       <InfoLine
         image={require("../assets/icons/colorPalette.png")} 

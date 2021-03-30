@@ -255,6 +255,8 @@ export function getPhotoCorner(name){
     return <Image source={require("../assets/icons/able.png")} style={{height: 60, width: 60, resizeMode:'contain'}}/>;
   else if(name.includes("nook miles"))
     return <Image source={require("../assets/icons/miles.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
+  else if(name.includes("nooklink"))
+    return <Image source={require("../assets/icons/nookLink.png")} style={{height: 56, width: 56, resizeMode:'contain'}}/>;
   else if(name.includes("nook shopping"))
     return <Image source={require("../assets/icons/nookShopping.png")} style={{height: 56, width: 56, resizeMode:'contain'}}/>;
   else if(name.includes("nook"))
