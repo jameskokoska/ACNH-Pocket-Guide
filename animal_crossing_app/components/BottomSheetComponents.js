@@ -5,7 +5,7 @@ import FastImage from './FastImage';
 import Check from './Check';
 import TextFont from './TextFont'
 import {inChecklist, attemptToTranslateItem, commas, capitalize, checkOff, capitalizeFirst} from '../LoadJsonData'
-import {getPhotoCorner, getMaterialImage} from "./GetPhoto"
+import {getSizeImage, getPhotoCorner, getMaterialImage} from "./GetPhoto"
 import {getSettingsString, attemptToTranslate, attemptToTranslateSpecial} from "../LoadJsonData"
 import {ScrollView} from 'react-native-gesture-handler'
 import {PopupInfoCustom} from "./Popup"
@@ -110,17 +110,9 @@ export class Phrase extends Component {
 
 export class Title extends Component {
   render() {
-    var paddingLeft = 70;
-    var paddingRight = 70;
-    var paddingTop = 25;
-    if(this.props.popUpPhraseProperty!==undefined){
-      paddingLeft = 10;
-      paddingRight = 10;
-      paddingTop = 10;
-    }
     if(this.props.item[this.props.textProperty[this.props.item.dataSet]]!==undefined){
-      return <View style={[styles.titleContainer,{paddingLeft: paddingLeft, paddingRight: paddingRight, paddingTop: paddingTop}]}>
-        <TextFont style={[styles.title,{color:colors.textBlack[global.darkMode]}]} bold={true}>
+      return <View style={[styles.titleContainer,{marginHorizontal: this.props.marginHorizontal!==undefined?this.props.marginHorizontal:50}]}>
+        <TextFont style={[styles.title,{color: colors.textBlack[global.darkMode]}]} bold={true}>
           {capitalize(this.props.item[this.props.textProperty[this.props.item.dataSet]])}
         </TextFont>
       </View>
@@ -237,6 +229,31 @@ export class InfoLineDouble extends Component {
   }
 }
 
+export class InfoDescription extends Component {
+  render(){
+    return(
+      <View style={{backgroundColor: colors.lightDarkAccentTextBG[global.darkMode], padding:15, paddingHorizontal: 25, marginHorizontal: 10, marginVertical: 5, borderRadius: 8}}>
+        <TextFont style={{lineHeight: 20, fontSize: 17, textAlign:"left", color:colors.textBlack[global.darkMode]}}>{this.props.text}</TextFont>
+      </View>
+    )
+  }
+}
+
+export class SizeInfo extends Component {
+  render(){
+    if(this.props.size===undefined || this.props.size===""){
+      return <View/>
+    } else {
+      return(<View style={[styles.infoLineBox,{justifyContent:this.props.center===false?"flex-start":"center"}]}>
+        <Image style={styles.infoLineImage} source={getSizeImage(this.props.size)}/>
+        <TextFont adjustsFontSizeToFit={true} bold={true} style={[styles.infoLineTitle,{color:colors.textBlack[global.darkMode]}]}>{this.props.size}</TextFont>
+        </View>
+      )
+    }
+    
+  }
+}
+
 export class InfoLineTriple extends Component {
   render() {
     var textLines = [];
@@ -288,7 +305,7 @@ export class Variations extends Component {
     }
   }
   updateVariations(key,checked){
-    this.setState({updateChecked:checked, updateKey:key})
+    this.setState({updateChecked:checked, updateKey:key});
   }
   render(){
     if(this.props.item!=""||this.props.item!=undefined){
@@ -491,8 +508,6 @@ const styles = StyleSheet.create({
     padding: 5,
   },
   titleContainer:{
-    width:"100%",
-    padding: 5,
     paddingBottom: 10,
     alignItems: "center",
   },

@@ -1,13 +1,13 @@
 import * as Font from 'expo-font';
 import React, {Component} from 'react';
 import {StyleSheet, ScrollView, Dimensions, Image, View, Text} from 'react-native';
-import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
+import {InfoDescription, InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
 import colors from "../Colors"
 import {getSculpturePhotoFake, getPaintingPhoto,getPaintingPhotoFake} from "../components/GetPhoto"
 import {commas, capitalize} from '../LoadJsonData'
 import FastImage from '../components/FastImage';
 import TextFont from '../components/TextFont'
-import {attemptToTranslate} from "../LoadJsonData"
+import {attemptToTranslate, getArtIdentification} from "../LoadJsonData"
 
 class ArtPopup extends Component {
   constructor(props){
@@ -62,11 +62,14 @@ class ArtPopup extends Component {
           textProperty={["Buy"]}
           ending={" " + attemptToTranslate("bells")}
         />
-        <View style={{marginTop: 20}}/>
+        <View style={{height: 20}}/>
         {paintingComparisonReal}
         {paintingComparisonRealLabel}
         {paintingComparisonFake}
         {paintingComparisonFakeLabel}
+        <TextFont style={{fontSize: 18, textAlign:"center", marginHorizontal: 20, color:colors.textBlack[global.darkMode]}}>{getArtIdentification(this.props.item["Name"])}</TextFont>
+        <View style={{height: 20}}/>
+        <InfoDescription text={this.props.item["Description"]}/>
       </View>
   }
 }

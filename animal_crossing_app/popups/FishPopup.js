@@ -1,7 +1,7 @@
 import * as Font from 'expo-font';
 import React, {Component} from 'react';
 import {Dimensions, Image, View, Text} from 'react-native';
-import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
+import {InfoDescription, InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
 import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"
 import ActiveTime from "../components/ActiveTime";
@@ -43,6 +43,8 @@ class FishPopup extends Component {
           cacheKey={this.props.item["Furniture Image"]}
         />
       </View>
+      <View style={{height:15}}/>
+      <InfoDescription text={this.props.item["Description"]}/>
     </View>
   }
 }

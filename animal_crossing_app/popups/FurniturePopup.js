@@ -1,7 +1,7 @@
 import * as Font from 'expo-font';
 import React, {Component} from 'react';
 import {Dimensions, Image, View, Text} from 'react-native';
-import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
+import {SizeInfo, InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
 import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"
 
@@ -44,13 +44,16 @@ class FurniturePopup extends Component {
         item={this.props.item}
         textProperty={["Tag"]}
       />
-      <InfoLineTriple
-        image={require("../assets/icons/house.png")} 
-        item={this.props.item}
-        textProperty1={"HHA Series"}
-        textProperty2={"HHA Concept 1"}
-        textProperty3={"HHA Concept 2"}
-      />
+      <View style={{alignItems: 'center',justifyContent: 'center',flexDirection:"row",flexWrap:"wrap"}}>
+        <InfoLineTriple
+          image={require("../assets/icons/house.png")} 
+          item={this.props.item}
+          textProperty1={"HHA Series"}
+          textProperty2={"HHA Concept 1"}
+          textProperty3={"HHA Concept 2"}
+        />
+        <SizeInfo size={this.props.item["Size"]}/>
+      </View>
       <InfoLine
         image={require("../assets/icons/magnifyingGlass.png")} 
         item={this.props.item}

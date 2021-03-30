@@ -249,7 +249,7 @@ export class PopupBottomCustom extends Component {
       <BottomSheet
         callbackNode={this.bottomSheetCallback}
         ref={(sheetRef) => this.sheetRef = sheetRef}
-        snapPoints={[Dimensions.get('window').height, 0]}
+        snapPoints={[Dimensions.get('window').height, 0, ]}
         initialSnap={1}
         renderContent={this.renderContent}
         springConfig={springConfig}

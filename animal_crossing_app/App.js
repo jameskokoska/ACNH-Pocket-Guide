@@ -54,6 +54,8 @@ global.changelog = `
 -Added way to see what DIYs and Reactions you cannot get from your villagers
 -Added new [Obtainable Items] page
 -Added information about this under the profile section on the home screen
+-Added museum descriptions to museum items popup
+-Added furniture size icons to items popup
 -Improved loading times of lists
 -Accented characters are ignored in search
 -Show/Hide turnip log moved to [Edit sections]
@@ -68,6 +70,7 @@ global.changelog = `
 -More color fixes
 -Removed useless code to reduce file size
 -Bug fixes to home screen
+-Main changelog is shorter, moved longer one to About page 
 `
 global.changelogOld = `
 -Color fixes

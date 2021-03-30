@@ -372,6 +372,20 @@ export async function loadGlobalData(){
   ],"false");
 }
 
+const artIdentification = require("./assets/data/artIdentification.json")
+export function getArtIdentification(name){
+  for(var i = 0; i<artIdentification.length; i++){
+    if(artIdentification[i]["Name"]===name){
+      if(artIdentification[i]["Identification"]==="This is always real"){
+        return "";
+      } else {
+        return artIdentification[i]["Identification"];
+      }
+    }
+  }
+  return "";
+}
+
 export function getSettingsString(key){
   if(settings!==undefined||global.settingsCurrent!==undefined){
     for(var i = 0; i<settings.length; i++){

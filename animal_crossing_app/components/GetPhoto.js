@@ -1,6 +1,39 @@
 import {Image, View} from "react-native";
 import React, { Component } from "react";
 
+export function getSizeImage(size){
+  switch(size){
+    case "0.5x1":
+      return require("../assets/icons/sizes/0.5x1.png");
+    case "1.5x1.5":
+      return require("../assets/icons/sizes/1.5x1.5.png");
+    case "1x0.5":
+      return require("../assets/icons/sizes/1x0.5.png");
+    case "1x1.5":
+      return require("../assets/icons/sizes/1x1.5.png");
+    case "1x1":
+      return require("../assets/icons/sizes/1x1.png");
+    case "1x2":
+      return require("../assets/icons/sizes/1x2.png");
+    case "2x0.5":
+      return require("../assets/icons/sizes/2x0.5.png");
+    case "2x1.5":
+      return require("../assets/icons/sizes/2x1.5.png");
+    case "2x1":
+      return require("../assets/icons/sizes/2x1.png");
+    case "2x2":
+      return require("../assets/icons/sizes/2x2.png");
+    case "3x1":
+      return require("../assets/icons/sizes/3x1.png");
+    case "3x2":
+      return require("../assets/icons/sizes/3x2.png");
+    case "3x3":
+      return require("../assets/icons/sizes/3x3.png");
+    default:
+      return require("../assets/icons/sizes/size.png");
+  }
+}
+
 export function getPhoto(name, fallback=""){
   switch(name){
     case "leaf.png":

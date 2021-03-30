@@ -585,6 +585,7 @@ class BottomSheetRender extends Component{
     
     //Add popup classes here
     var popUpContainer = <View/>
+    var marginHorizontal = 0;
     if(this.props.popUpContainer!==undefined && this.state.item.dataSet!==undefined){
       if(this.props.popUpContainer[this.state.item.dataSet][0]==="FishPopup"){
         popUpContainer = <FishPopup item={this.state.item}/>
@@ -600,14 +601,18 @@ class BottomSheetRender extends Component{
         popUpContainer = <VillagerPopup item={this.state.item} setVillagerGift={this.props.setVillagerGift}/>
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="ClothingPopup"){
         popUpContainer = <ClothingPopup item={this.state.item}/>
+        marginHorizontal = 60;
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="FurniturePopup"){
         popUpContainer = <FurniturePopup item={this.state.item}/>
+        marginHorizontal = 60;
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="FloorWallsPopup"){
         popUpContainer = <FloorWallsPopup item={this.state.item}/>
+        marginHorizontal = 60;
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="ToolsPopup"){
         popUpContainer = <ToolsPopup item={this.state.item}/>
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="RecipesPopup"){
         popUpContainer = <RecipesPopup item={this.state.item}/>
+        marginHorizontal = 60;
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="MaterialsPopup"){
         popUpContainer = <MaterialsPopup item={this.state.item}/>
       }
@@ -648,6 +653,7 @@ class BottomSheetRender extends Component{
             item={this.state.item}
             textProperty={this.props.textProperty}
             popUpPhraseProperty={this.props.popUpPhraseProperty}
+            marginHorizontal={marginHorizontal}
           />
           <Variations 
             updateRightCornerCheck={this.updateRightCornerCheck}
