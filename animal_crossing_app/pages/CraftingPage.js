@@ -28,6 +28,7 @@ export class RecipesRouteClass extends Component{
     return(
       <ListPage 
         title={this.props.title===undefined?"Recipes":this.props.title}
+        extraInfo={this.props.extraInfo===undefined?"":this.props.extraInfo}
         appBarColor={this.props.appBarColor===undefined?colors.toolsAppBar[global.darkMode]:this.props.appBarColor}
         accentColor={this.props.accentColor===undefined?colors.toolsAccent[global.darkMode]:this.props.accentColor}
         subHeader={this.props.subHeader===undefined?"":this.props.subHeader}

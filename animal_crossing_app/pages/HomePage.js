@@ -35,10 +35,9 @@ class HomePage extends Component {
   constructor(props){
     super(props);
     this.scrollViewRef = React.createRef();
-    this.openPopup = this.openPopup.bind(this);
     this.state = {sections:this.props.sections}
   }
-  openPopup(item){
+  openVillagerPopup = (item) => {
     this.villagerPopupPopup.setPopupVisible(true, item);
   }
   setPages = (checked,name) =>{
@@ -212,12 +211,12 @@ class HomePage extends Component {
                 <View style={{height: 18}}/>
                 <ChosenFruit/>
               </View>
-              <CurrentVillagers openPopup={this.openPopup} setPage={this.props.setPage}/>
-              {getCurrentVillagerNamesString()==="You have no favorite villagers"?<View/>:<TouchableOpacity onPress={() => this.props.setPage(21)}>
+              <CurrentVillagers openVillagerPopup={this.openVillagerPopup} setPage={this.props.setPage}/>
+              {/* {getCurrentVillagerNamesString()==="You have no favorite villagers"?<View/>:<TouchableOpacity onPress={() => this.props.setPage(21)}>
                 {getInverseVillagerFilters(true)===""?<TextFont suffix={"\n"+attemptToTranslate("Note: you can get all items since you have all personality types!")} style={{marginHorizontal: 30, color: colors.fishText[global.darkMode], fontSize: 11, textAlign:"center"}}>{"See what you can get from your villagers."}</TextFont>:<>
                 <TextFont style={{marginHorizontal: 30, color: colors.fishText[global.darkMode], fontSize: 11, textAlign:"center"}}>{"It is recommended you get all villager personalities to get DIYs and Reactions. Tap here to see what you might be missing out on."}</TextFont>
                 <TextFont suffix={"\n "+getInverseVillagerFilters(true)} style={{marginHorizontal: 30, color: colors.fishText[global.darkMode], fontSize: 13, textAlign:"center"}}>{"Missing personalities:"}</TextFont></>}
-              </TouchableOpacity>}
+              </TouchableOpacity>} */}
               <View style={{height: 30}}/>
             </HomeContentArea>:<View/>}
             {sections["Store Hours"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.storeHoursColor[global.darkMode]} title="Store Hours" titleColor={colors.storeHoursColor[global.darkModeReverse]}>

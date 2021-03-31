@@ -51,13 +51,9 @@ export default (props) =>{
       key={item.checkListKeyString}
       dataGlobalName={props.dataGlobalName}
       openBottomSheet={(updateCheckChild)=>{
-        if(props.currentVillagers){
-          props.openPopup(item)
-        } else {
-          sheetRef.current.setPopupVisible(true); 
-          if(props.activeCreatures){
-            props.scrollViewRef.current.scrollToEnd()
-          }
+        sheetRef.current.setPopupVisible(true); 
+        if(props.activeCreatures){
+          props.scrollViewRef.current.scrollToEnd()
         }
         //pass in the check mark update function of that current element
         bottomSheetRenderRef.current.update(item, updateCheckChild)}}
@@ -414,7 +410,7 @@ export default (props) =>{
           width: Dimensions.get('window').width, 
           height: Dimensions.get('window').height, position:"absolute"}} 
         pointerEvents="none"> */}
-        <Header smallerHeader={props.smallerHeader} disableFilters={props.disableFilters} customHeader={props.customHeader} disableSearch={props.disableSearch} subHeader={props.subHeader} searchFilters={searchFilters} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
+        <Header extraInfo={props.extraInfo} smallerHeader={props.smallerHeader} disableFilters={props.disableFilters} customHeader={props.customHeader} disableSearch={props.disableSearch} subHeader={props.subHeader} searchFilters={searchFilters} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
         {/* </Animated.View> */}
       </Animated.View>
 
@@ -434,10 +430,6 @@ export default (props) =>{
   }
   var style= {height: Dimensions.get('window').height, paddingBottom: paddingBottom,marginTop: -10}
   var paddingBottomContent = 150;
-  if(props.currentVillagers){
-    style={paddingBottom: paddingBottom,marginTop: -10}
-    paddingBottomContent = 10;
-  }
   if(data==="empty" && (props.title==="Active Creatures"||props.title==="")){
     return(
       <View/>
@@ -447,15 +439,6 @@ export default (props) =>{
         <HeaderLoading disableSearch={props.disableSearch} title={props.title} headerHeight={headerHeight} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
       </>
     )
-  } else if (data.length===0 && props.filterCollectedOnly && props.currentVillagers){
-    return(<>
-      <View style={{height:10}}/>
-      <TouchableOpacity onPress={() => props.setPage(8)}>
-        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"You have no villagers added"}</TextFont>
-        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>Tap here and go add some</TextFont>
-      </TouchableOpacity>
-      <View style={{height:30}}/>
-    </>)
   } else if (data.length===0 && props.wishlistItems && search===""){
     return(<>
       <View style={{height:10}}/>
@@ -466,6 +449,14 @@ export default (props) =>{
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"Long press items to add them to your wishlist."}</TextFont>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>Tap here and go add some</TextFont>
       </TouchableOpacity>
+      <View style={{height:30}}/>
+    </>)
+  } else if (data.length===0 && (props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions") && search===""){
+    return(<>
+      <View style={{height:10}}/>
+      {header}
+      <View style={{height:Dimensions.get('window').height/2}}/>
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"You can get everything since you have all personality types!"}</TextFont>
       <View style={{height:30}}/>
     </>)
   } else {

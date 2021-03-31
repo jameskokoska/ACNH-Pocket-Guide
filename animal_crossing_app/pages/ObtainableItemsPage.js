@@ -36,10 +36,20 @@ const ObtainableDIYs = () => (
     smallerHeader={true}
     filterSearchable={false}
     title={"Obtainable DIYs"}
-    subHeader={attemptToTranslate("You WILL get these from your favorite villagers.") + "\n(" + attemptToTranslate(getCurrentVillagerNamesString()) + ")" + (getInverseVillagerFilters(true)===""? "" : "\n" + attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true))}
+    subHeader={attemptToTranslate("You WILL get these from your favorite villagers.") + "\n" + attemptToTranslate("Tap the [?] in the top right corner for more information.")}
     appBarColor = {colors.obtainableItemsAppBar[global.darkMode]}
     accentColor = {colors.obtainableItemsAccent[global.darkMode]}
     titleColor={colors.textBlack[global.darkMode]}
+    extraInfo={
+      [
+        attemptToTranslate("Obtainable DIYs"),
+        attemptToTranslate("Specific villager personalities will give you different items."),
+        attemptToTranslate("It is recommended that you have all personality types to be able to get all DIYs and Reactions."),
+        attemptToTranslate("These DIYs WILL be given to you by your villagers:"),
+        getCurrentVillagerNamesString(),
+        getInverseVillagerFilters(true)===""? attemptToTranslate("You can get everything since you have all personality types!") : attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true),        
+      ]
+    }
   />
 )
 
@@ -49,10 +59,20 @@ const UnobtainableDIYs = () => (
     smallerHeader={true}
     filterSearchable={false}
     title={"Unobtainable DIYs"}
-    subHeader={attemptToTranslate("You will NOT get these from your favorite villagers.") + "\n(" + attemptToTranslate(getCurrentVillagerNamesString()) + ")" + (getInverseVillagerFilters(true)===""? "" : "\n" + attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true))}
+    subHeader={attemptToTranslate("You will NOT get these from your favorite villagers.") + "\n" + attemptToTranslate("Tap the [?] in the top right corner for more information.")}
     appBarColor = {colors.obtainableItemsAppBar[global.darkMode]}
     accentColor = {colors.obtainableItemsAccent[global.darkMode]}
     titleColor={colors.textBlack[global.darkMode]}
+    extraInfo={
+      [
+        attemptToTranslate("Unobtainable DIYs"),
+        attemptToTranslate("Specific villager personalities will give you different items."),
+        attemptToTranslate("It is recommended that you have all personality types to be able to get all DIYs and Reactions."),
+        attemptToTranslate("These DIYs will NOT be given to you by your villagers:"),
+        getCurrentVillagerNamesString(),
+        getInverseVillagerFilters(true)===""? attemptToTranslate("You can get everything since you have all personality types!") : attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true),        
+      ]
+    }
   />
 )
 
@@ -62,10 +82,20 @@ const ObtainableReactions = () => (
     smallerHeader={true}
     filterSearchable={false}
     title={"Obtainable Reactions"}
-    subHeader={attemptToTranslate("You WILL get these from your favorite villagers.") + "\n(" + attemptToTranslate(getCurrentVillagerNamesString()) + ")" + (getInverseVillagerFilters(true)===""? "" : "\n" + attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true))}
+    subHeader={attemptToTranslate("You WILL get these from your favorite villagers.") + "\n" + attemptToTranslate("Tap the [?] in the top right corner for more information.")}
     appBarColor = {colors.obtainableItemsAppBar[global.darkMode]}
     accentColor = {colors.obtainableItemsAccent[global.darkMode]}
     titleColor={colors.textBlack[global.darkMode]}
+    extraInfo={
+      [
+        attemptToTranslate("Obtainable Reactions"),
+        attemptToTranslate("Specific villager personalities will give you different items."),
+        attemptToTranslate("It is recommended that you have all personality types to be able to get all DIYs and Reactions."),
+        attemptToTranslate("These Reactions WILL be given to you by your villagers:"),
+        getCurrentVillagerNamesString(),
+        getInverseVillagerFilters(true)===""? attemptToTranslate("You can get everything since you have all personality types!") : attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true),        
+      ]
+    }
   />
 )
 
@@ -75,10 +105,20 @@ const UnobtainableReactions = () => (
     smallerHeader={true}
     filterSearchable={false}
     title={"Unobtainable Reactions"}
-    subHeader={attemptToTranslate("You wil NOT get these from your favorite villagers.") + "\n(" + attemptToTranslate(getCurrentVillagerNamesString()) + ")" + (getInverseVillagerFilters(true)===""? "" : "\n" + attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true))}
+    subHeader={attemptToTranslate("You will NOT get these from your favorite villagers.") + "\n" + attemptToTranslate("Tap the [?] in the top right corner for more information.")}
     appBarColor = {colors.obtainableItemsAppBar[global.darkMode]}
     accentColor = {colors.obtainableItemsAccent[global.darkMode]}
     titleColor={colors.textBlack[global.darkMode]}
+    extraInfo={
+      [
+        attemptToTranslate("Unobtainable Reactions"),
+        attemptToTranslate("Specific villager personalities will give you different items."),
+        attemptToTranslate("It is recommended that you have all personality types to be able to get all DIYs and Reactions."),
+        attemptToTranslate("These Reactions will NOT be given to you by your villagers:"),
+        getCurrentVillagerNamesString(),
+        getInverseVillagerFilters(true)===""? attemptToTranslate("You can get everything since you have all personality types!") : attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true),        
+      ]
+    }
   />
 )
 

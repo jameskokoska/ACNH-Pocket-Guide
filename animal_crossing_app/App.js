@@ -48,7 +48,12 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
--Thanks for 5K downloads... thats incredible!
+-Cleaner villagers section in profile
+-Pushed all information in a popup in obtainable items page
+-Color fixes
+-Long press a to-do item to remove it
+-
+-Thanks for 5K downloads... that's incredible!
 -Big update this time!
 -Added way to see what DIYs and Reactions you can get from your current villagers
 -Added way to see what DIYs and Reactions you cannot get from your villagers

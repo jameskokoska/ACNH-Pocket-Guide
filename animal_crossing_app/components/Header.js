@@ -6,6 +6,8 @@ import LottieView from 'lottie-react-native';
 import DelayInput from "react-native-debounce-input";
 import colors from "../Colors"
 import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
+import {PopupInfoCustom} from "./Popup"
+import {SubHeader, Paragraph} from "./Formattings"
 
 const Header = (props) => {
   var filterImage;
@@ -28,13 +30,24 @@ const Header = (props) => {
   } else {
     filterImage = <Image style={{width:25,height:25, margin: 10, marginTop: 12, opacity: 0.35, marginRight: 30, resizeMode:"contain"}} source={require("../assets/icons/filterSearch.png")}/>
   }
-  
+  const popupExtraInfo = React.useRef(null);
   return (
     <>
+      {props.extraInfo!==undefined&&props.extraInfo!==""?<PopupInfoCustom ref={popupExtraInfo} buttonText={"Close"}>
+        <View style={{height:6}}/>
+        <SubHeader>{props.extraInfo[0]}</SubHeader>
+        {props.extraInfo.slice(1,props.extraInfo.length).map( (info, index)=>{
+          return(
+            <Paragraph key={info} styled={true}>{info}</Paragraph>
+          )
+        })}
+      </PopupInfoCustom>:<View/>}
       <ImageBackground source={props.appBarImage} style={{width:"100%", backgroundColor: props.appBarColor}}>
         <View style={[styles.topSpace, {height: props.headerHeight / 1.5 + 10,}]}>
         </View>
+        {props.extraInfo!==undefined&&props.extraInfo!==""?<TouchableOpacity style={{position:"absolute", padding:15, right:0}} onPress={()=>{popupExtraInfo.current.setPopupVisible(true)}}><Image style={{width:25,height:25,opacity: 0.35, resizeMode:"contain"}} source={require("../assets/icons/info.png")}/></TouchableOpacity>:<View/>}
         <View style={{height: props.headerHeight / 2}}>
+
           <View style={styles.subHeader}>
             <FadeInOut fadeIn={true}>
               <TextFont style={[styles.title, {fontSize: props.smallerHeader?30:41, color: props.titleColor}]} bold={true}>{props.title}</TextFont>

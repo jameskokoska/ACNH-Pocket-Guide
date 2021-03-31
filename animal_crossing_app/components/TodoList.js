@@ -362,12 +362,24 @@ class TurnipItem extends Component {
 }
 
 class TodoItem extends Component {
+  constructor() {
+    super();
+    this.state = {
+      showRemove:false
+    }
+  }
+  componentDidUpdate(prevProps){
+    if(prevProps!==this.props){
+      this.setState({showRemove:false})
+    }
+  }
   removeButton = (props)=>{
-    if(props.showEdit)
+    if(props.showEdit || this.state.showRemove)
       return(
         <TouchableOpacity style={{left:-10, top:-5,position:'absolute',zIndex:10, padding:10}} 
           onPress={()=>{
             props.deleteItem(props.index); 
+            this.setState({showRemove:false})
         }}>
           <Image source={require("../assets/icons/deleteIcon.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
         </TouchableOpacity>
@@ -396,7 +408,8 @@ class TodoItem extends Component {
       
           {this.removeButton(this.props)}
           <TouchableNativeFeedback onLongPress={() => {  
-            this.props.checkOffItem(this.props.index); 
+            this.setState({showRemove:!this.state.showRemove})
+            getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(8) : "";
           }}
           background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"1A", false)}
           onPress={()=>{
@@ -425,8 +438,19 @@ class TodoItem extends Component {
 }
 
 class TodoItemSmall extends Component {
+  constructor() {
+    super();
+    this.state = {
+      showRemove:false
+    }
+  }
+  componentDidUpdate(prevProps){
+    if(prevProps!==this.props){
+      this.setState({showRemove:false})
+    }
+  }
   removeButton = (props)=>{
-    if(props.showEdit)
+    if(props.showEdit || this.state.showRemove)
       return(
         <TouchableOpacity style={{left:-10, top:-5,position:'absolute',zIndex:10, padding:10}} 
           onPress={()=>{
@@ -460,7 +484,8 @@ class TodoItemSmall extends Component {
         <TouchableOpacity 
           background={TouchableNativeFeedback.Ripple(colors.todoColorAccent[global.darkMode], false)}
           onLongPress={() => {  
-            this.props.checkOffItem(this.props.index); 
+            this.setState({showRemove:!this.state.showRemove})
+            getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(8) : "";
           }}
           onPress={()=>{
             this.props.checkOffItem(this.props.index); 

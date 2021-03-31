@@ -62,8 +62,8 @@ class VillagerPopup extends Component {
         onPress={() => {
           this.props.setVillagerGift(this.props.item)
       }}/>
-      <TouchableOpacity style={{paddingTop:5}}onPress={()=>{this.popup.setPopupVisible(true);}}>
-        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, marginLeft: 30, marginRight: 30, }}>{"What are villager gifts?"}</TextFont>
+      <TouchableOpacity style={{paddingTop:5}} onPress={()=>{this.popup.setPopupVisible(true);}}>
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, padding:8}}>{"What are villager gifts?"}</TextFont>
       </TouchableOpacity>
       <View style={{alignItems: 'center', width: Dimensions.get('window').width, justifyContent:"center"}}>
         <FastImage
@@ -85,6 +85,7 @@ class VillagerPopup extends Component {
         />
       </View>
       <PopupInfoCustom ref={(popup) => this.popup = popup} buttonText={"Close"}>
+        <View style={{height:6}}/>
         <SubHeader>What are ideal gifts for villagers?</SubHeader>
         <Paragraph styled={true}>Villagers prefer flowers, favorite music, umbrellas (for non-frog villagers), or clothing of their preferred color or style.</Paragraph>
         <Paragraph styled={true}>[View Gifts] will show you all clothing of their preferred color and style.</Paragraph>

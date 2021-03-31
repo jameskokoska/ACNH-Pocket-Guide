@@ -30,7 +30,7 @@ class PopupAddTask extends Component {
       selectedImage: "leaf.png"
     };
     this.task = {title: "", picture:"", finished: false, small:this.state.smallToggle};
-    this.images = ["leaf.png","fish.png","bugs.png","music.png","turnip.png","cat.png","digIcon.png","able.png","nook.png","crafting.png","rock.png","miles.png","bellBag.png","coin.png","mario",
+    this.images = ["leaf.png","fish.png","bugs.png","music.png","turnip.png","cat.png","digIcon.png","able.png","nook.png","crafting.png","rock.png","miles.png","bellBag.png","coin.png","nookLinkCoin","mario",
     "flower.png",
     "diyKit.png",
     "saharah.png",

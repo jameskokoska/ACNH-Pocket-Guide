@@ -417,7 +417,7 @@ export const settings = [
     "currentValue" : "",
     "picture" : require("./assets/icons/alphabet.png"),
     "displayName" : "Sort lists in alphabetical order",
-    "description" : "Sort any list into alphabetical order. However, items may not be grouped by category anymore.",
+    "description" : "Sort any list into alphabetical order.",
   },{
     "keyName" : "settingsHighlightNotCraftableVariations",
     "defaultValue" : "false",
@@ -797,7 +797,7 @@ export function translateDateRange(dateRange){
   }
 } 
 
-function getCurrentVillagerObjects(){
+export function getCurrentVillagerObjects(){
   const data = require("./assets/data/data.json");
   var currentVillagers = [];
   for(var i=0; i<global.collectionList.length; i++){
@@ -842,7 +842,7 @@ export function getCurrentVillagerNamesString(){
     villagerNames+=(currentVillagers[z]["NameLanguage"]) + ", ";
   }
   if(villagerNames===""){
-    return "You have no favorite villagers"
+    return "You have no favorite villagers."
   }
   return villagerNames.slice(0, -2);
 }

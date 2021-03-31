@@ -157,7 +157,9 @@ export function getPhoto(name, fallback=""){
     return require("../assets/icons/blossom.png");
   } else if(name.includes("mario")){
     return require("../assets/icons/mushroom.png");
-  } else if(name.includes("acorns")){
+  } else if(name.includes("nookLinkCoin"))
+    return require("../assets/icons/nookLinkCoin.png")
+  else if(name.includes("acorns")){
     return require("../assets/icons/fall.png");
   } else if(name.includes("snow")){
     return require("../assets/icons/snow.png");

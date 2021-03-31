@@ -1,55 +1,52 @@
 import React, {Component} from 'react';
-import {View, ScrollView, Dimensions, Text, LogBox} from 'react-native';
+import {TouchableOpacity, View, ScrollView, Dimensions, Text, LogBox} from 'react-native';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
-import ListPage from '../components/ListPage';
 import colors from '../Colors.js';
+import TextFont from "./TextFont"
+import {getCurrentVillagerObjects} from "../LoadJsonData"
+import FastImage from "./FastImage"
 
-
-class CurrentVillagers extends Component {
-  constructor() {
-    super();
-    LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
+export default class CurrentVillagers extends Component {
+  constructor(props) {
+    super(props);
   }
   render(){
-    return(
-      <ListPage 
-          setPage={this.props.setPage}
-          title=""
-          checkType={"heart"}
-          filterCollectedOnly={true}
-          currentVillagers={true}
-          openPopup={this.props.openPopup}
-          gridType="smallGrid" //smallGrid, largeGrid, row
-          appBarColor={colors.emojipediaAppBar[global.darkMode]}
-          titleColor={colors.textBlack[global.darkMode]}
-          searchBarColor={colors.searchbarBG[global.darkMode]}
-          backgroundColor={colors.sectionBackground2[global.darkMode]}
-          boxColor={false}
-          labelColor={colors.textBlack[global.darkMode]}
-          accentColor={colors.villagerAccent[global.darkMode]}
-          specialLabelColor={colors.fishText[global.darkMode]}
-          disablePopup={[
-            false,
-          ]}
-          popUpCornerImageProperty={[
-            "",
-          ]}
-          popUpCornerImageLabelProperty={[
-            "",
-          ]}
-          imageProperty={[
-            "Icon Image",
-          ]}
-          textProperty={[
-            ["NameLanguage",],
-          ]}
-          checkListKey={[["villagerCheckList","Name"]]}
-          searchKey={[
-            ["NameLanguage",],
-          ]}
-          dataGlobalName={"dataLoadedVillagers"}
-        />
-    )
+    var currentVillagers = getCurrentVillagerObjects();
+    if(currentVillagers.length===0){
+      return(<>
+        <View style={{height:10}}/>
+          <TouchableOpacity onPress={() => this.props.setPage(8)}>
+            <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"You have no villagers added"}</TextFont>
+            <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>Tap here and go add some</TextFont>
+          </TouchableOpacity>
+          <View style={{height:30}}/>
+        </>
+      )
+    } else {
+      return(<>
+      <View style={{height:15}}/>
+      <View style={{flex: 1, flexWrap: 'wrap', flexDirection:"row",justifyContent:"center"}}>
+        {currentVillagers.map( (villager, index)=>{
+          return(
+            <View key={villager["Name"]+index} style={{margin:5}}>
+              <TouchableOpacity 
+                onPress={()=>{
+                  this.props.openVillagerPopup(villager)
+                }}
+              >
+                <View style={{width: 60,height: 60,borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.eventBackground[global.darkMode]}}>
+                  <FastImage
+                    style={{height: 50,width: 50,resizeMode:'contain',}}
+                    source={{uri:villager["Icon Image"]}}
+                    cacheKey={villager["Icon Image"]}
+                  />
+                </View>
+              </TouchableOpacity>
+            </View>
+        )})}
+      </View><View style={{height:15}}/></>)
+    }
+    
   }
+    
 }
-export default CurrentVillagers;
