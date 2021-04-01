@@ -7,6 +7,7 @@ import Onboarding from 'react-native-onboarding-swiper';
 import ButtonComponent from '../components/ButtonComponent'
 import colors from '../Colors'
 import {LanguagePicker} from "./SettingsPage"
+import {setSettingsString} from "../LoadJsonData"
 
 class Onboard extends Component {
   render(){
@@ -69,14 +70,12 @@ class Onboard extends Component {
             subtitle: <>
               <ButtonComponent vibrate={10} color={colors.okButton[global.darkMode]} text="Northern Hemisphere" onPress={() => {
                 AsyncStorage.setItem("firstLogin", "false"); 
-                AsyncStorage.setItem("settingsNorthernHemisphere", "true");
-                global.settingsCurrent[1]["currentValue"] = "true";
+                setSettingsString("settingsNorthernHemisphere","true");
                 this.props.setFirstLogin(false);
               }} />
               <ButtonComponent vibrate={10} color={colors.okButton[global.darkMode]} text="Southern Hemisphere" onPress={() => {
                 AsyncStorage.setItem("firstLogin", "false"); 
-                AsyncStorage.setItem("settingsNorthernHemisphere", "false");
-                global.settingsCurrent[1]["currentValue"] = "false";
+                setSettingsString("settingsNorthernHemisphere","false");
                 this.props.setFirstLogin(false);
               }} />
               

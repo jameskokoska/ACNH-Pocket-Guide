@@ -2,9 +2,12 @@ import React, {Component} from 'react';
 import {Image, Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text, TouchableNativeFeedback} from 'react-native';
 import TextFont from './TextFont'
 import {getPhoto} from './GetPhoto'
-import {getMonthShort, getCurrentDateObject} from './DateFunctions';
-import {getSettingsString, translateBirthday, attemptToTranslateItem} from "../LoadJsonData"
+import {getWeekDayShort, getMonthShort, getCurrentDateObject} from './DateFunctions';
+import {attemptToTranslate, capitalize, getSettingsString, translateBirthday, attemptToTranslateItem} from "../LoadJsonData"
 import FastImage from './FastImage';
+import {schedulePushNotification} from "../Notifications"
+import {specialEvents, isDateInRange} from "../pages/CalendarPage"
+import colors from '../Colors'
 
 // <EventContainer 
 //  backgroundColor="black" 
@@ -19,123 +22,181 @@ import FastImage from './FastImage';
 export class EventContainer extends Component {
   render(){
     var image = <View/>
-    if(this.props.image.startsWith("http")){
-      image = <FastImage style={[styles.eventImage]} source={{uri:this.props.image}} cacheKey={this.props.image}/>
+    if(this.props.event.image.startsWith("http")){
+      image = <FastImage style={[styles.eventImage]} source={{uri:this.props.event.image}} cacheKey={this.props.event.image}/>
     } else {
-      image = <Image style={styles.eventImage} source={getPhoto(this.props.image)}/>
+      image = <Image style={styles.eventImage} source={getPhoto(this.props.event.image.toLowerCase(), this.props.event.time.toLowerCase())}/>
     }
     return(
-        <View style={[styles.eventContainer,{backgroundColor:this.props.backgroundColor}]}>
-          {image}
-          <View style={styles.textContainer}>
-            <TextFont numberOfLines={2} bold={true} style={[styles.textContainerTop,{color:this.props.textColor}]}>{this.props.text}</TextFont>
-            <TextFont style={[styles.textContainerBottom,{color:this.props.textColor}]}>{this.props.textBottom}</TextFont>
-          </View>
-          <View style={{width: 30, alignItems:"center", marginLeft: -8}}>
-            <Image style={styles.eventCalendar} source={require("../assets/icons/calendarIcon.png")}/>
-            <TextFont bold={true} style={{position:"absolute", top:1, textAlign:"center",color:"black", fontSize: 12, opacity: 0.8}}>{this.props.month}</TextFont>
-            <TextFont bold={true} style={{position:"absolute", top:17, textAlign:"center",color:"black", fontSize: 24, opacity: 0.8}}>{this.props.day}</TextFont>
-          </View>
+      <View style={[styles.eventContainer,{backgroundColor:this.props.event.color!==undefined?this.props.event.color:this.props.backgroundColor}]}>
+        {image}
+        <View style={styles.textContainer}>
+          <TextFont translate={false} numberOfLines={2} bold={true} style={[styles.textContainerTop,{color:this.props.textColor}]}>{this.props.event.name}</TextFont>
+          <TextFont translate={false} style={[styles.textContainerBottom,{color:this.props.textColor}]}>{this.props.event.time}</TextFont>
         </View>
+        <View style={{width: 33, alignItems:"center", marginLeft: -8}}>
+          <Image style={styles.eventCalendar} source={require("../assets/icons/calendarIcon.png")}/>
+          <TextFont bold={true} style={{position:"absolute", top:3, textAlign:"center",color:"black", fontSize: 10, opacity: 0.8}}>{getWeekDayShort(this.props.event.weekday)}</TextFont>
+          <TextFont bold={true} style={{position:"absolute", top:17, textAlign:"center",color:"black", fontSize: 24, opacity: 0.8}}>{this.props.event.day}</TextFont>
+        </View>
+      </View>
     )
   }
 }
 
-export function getEventsDay(currentDate){
-  var currentMonth = currentDate.getMonth();
-  var currentDay = currentDate.getDate();
-  var currentYear = currentDate.getFullYear();
-  var dayOfWeek = currentDate.getDay()
-  var totalEvents = [];
-  var northernHemisphere = getSettingsString("settingsNorthernHemisphere")==="true";
-  var eventDatum;
-  if(dayOfWeek===0){
-    eventDatum = {
-        "Name": "Daisy Mae",
-        "Month": getMonthName(currentMonth),
-        "Day Start": currentDay,
-        "Day End": "NA",
-        "Special Day" : "NA",
-        "Special Occurrence": "NA",
-        "Hemisphere": "NA",
-        "Time" : getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 12:00" : "5 AM - 12 PM",
-        "Image" : "turnip.png"
-    }
-    totalEvents.push(eventDatum);
-  } else if (dayOfWeek===6){
-    eventDatum = {
-        "Name": "K.K. Slider",
-        "Month": getMonthName(currentMonth),
-        "Day Start": currentDay,
-        "Day End": "NA",
-        "Special Day" : "NA",
-        "Special Occurrence": "NA",
-        "Hemisphere": "NA",
-        "Time" : getSettingsString("settingsUse24HourClock") === "true" ? "20:00 - 24:00" : "8 PM - 12 AM",
-        "Image" : "music.png"
-    }
-    totalEvents.push(eventDatum);
-  }
+export function getEventsDay(date, eventSections){
+  const seasonData = require("../assets/data/data.json")["Seasons and Events"];
   const villagerData = require("../assets/data/data.json")["Villagers"];
+  var totalEvents = [];
+
   villagerData.map( (villager, index)=>{
-    if((currentMonth+1).toString()===(villager["Birthday"].split("/"))[0]&& currentDay.toString()===(villager["Birthday"].split("/"))[1]){
-      if(global.collectionList.includes("villagerCheckList"+villager["Name"])){
-        eventDatum = {
-          "Name": translateBirthday(attemptToTranslateItem(villager["Name"])),
-          "Month": getMonthShort(currentMonth),
-          "Day Start": villager["Birthday"].split("/")[1],
-          "Day End": villager["Birthday"].split("/")[1],
-          "Special Day" : "",
-          "Special Occurrence": "",
-          "Hemisphere": "NA",
-          "Time" : "All day",
-          "Image" : villager["Icon Image"],
+    if((date.getMonth()+1).toString()===(villager["Birthday"].split("/"))[0]&& date.getDate().toString()===(villager["Birthday"].split("/"))[1]){
+      if(eventSections["Favorite Villager's Birthdays"] && global.collectionList.includes("villagerCheckList"+villager["Name"])){
+        totalEvents.push({
+          name: capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),
+          time: "All day",
+          image: villager["Icon Image"],
+          day:date.getDate(),
+          weekday:date.getDay(),
+        });
+        if(getSettingsString("settingsNotifications")){
+          schedulePushNotification(date,eventSections["Set Notification Time"],"🎂 " + capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),"All day");
         }
-        totalEvents.push(eventDatum);
+      } else if (eventSections["All Villager's Birthdays"]){
+        totalEvents.push({
+          name: capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),
+          time: attemptToTranslate("All day"),
+          image: villager["Icon Image"],
+          day:date.getDate(),
+          weekday:date.getDay(),
+        });
+        if(getSettingsString("settingsNotifications")){
+          schedulePushNotification(date,eventSections["Set Notification Time"],"🎂 " + capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),attemptToTranslate("All day"));
+        }
       }
     }
   })
-  const snapshot = require("../assets/data/events.json")
-  for(var i = 1; i < snapshot.length; i++){
-    if(northernHemisphere && snapshot[i]["Hemisphere"]==="Southern"){
-      continue;
-    } else if (!northernHemisphere && snapshot[i]["Hemisphere"]==="Northern"){
-      continue;
-    } else if(snapshot[i]["Day Start"]==="NA"){
-      // console.log(snapshot[i])
-      var eventDay = getSpecialOccurrenceDate(currentYear, i, snapshot);
-      // console.log(eventDay)
-      // console.log(currentMonth)
-      if(eventDay[0]===currentDay && eventDay[1]===currentMonth){
-        eventDatum = {
-          "Name": snapshot[i]["Name"],
-          "Month": snapshot[i]["Month"],
-          "Day Start": eventDay[0],
-          "Day End": snapshot[i]["Day End"],
-          "Special Day" : snapshot[i]["Special Day"],
-          "Special Occurrence": snapshot[i]["Special Occurrence"],
-          "Hemisphere": snapshot[i]["Hemisphere"],
-          "Time" : snapshot[i]["Time"],
-          "Image" : snapshot[i]["Image"]
-        }
-        totalEvents.push(eventDatum);
-      }
-      // ||currentDay<=parseInt(snapshot[i]["Day End"])
-    } else if((currentDay===parseInt(snapshot[i]["Day Start"]))&& currentMonth===getMonthNumber(snapshot[i]["Month"])){
-      eventDatum = {
-        "Name": snapshot[i]["Name"],
-        "Month": snapshot[i]["Month"],
-        "Weekday": "",
-        "Day Start": snapshot[i]["Day Start"],
-        "Day End": snapshot[i]["Day End"],
-        "Special Day" : snapshot[i]["Special Day"],
-        "Special Occurrence": snapshot[i]["Special Occurrence"],
-        "Hemisphere": snapshot[i]["Hemisphere"],
-        "Time" : snapshot[i]["Time"],
-        "Image" : snapshot[i]["Image"]
-      }
+
+  if(eventSections["Daisy Mae"] && date.getDay()===0){
+    totalEvents.push({
+      name: attemptToTranslate("Daisy Mae"),
+      time: getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 12:00" : "5 AM - 12 PM",
+      image:"turnip.png",
+      day:date.getDate(),
+      weekday:date.getDay(),
+    });
+    if(getSettingsString("settingsNotifications")){
+      schedulePushNotification(date,eventSections["Set Notification Time"],"🥬 " + attemptToTranslate('Daisy Mae'),getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 12:00" : "5 AM - 12 PM");
+    }
+  } else if (eventSections["K.K. Slider"] && date.getDay()===6){
+    totalEvents.push({
+      name: attemptToTranslate("K.K. Slider"),
+      time: getSettingsString("settingsUse24HourClock") === "true" ? "20:00 - 24:00" : "8 PM - 12 AM",
+      image:"music.png",
+      day:date.getDate(),
+      weekday:date.getDay(),
+    });
+    if(getSettingsString("settingsNotifications")){
+      schedulePushNotification(date,eventSections["Set Notification Time"],"🎵 " + attemptToTranslate('K.K. Slider'),getSettingsString("settingsUse24HourClock") === "true" ? "20:00 - 24:00" : "8 PM - 12 AM");
     }
   }
+
+  seasonData.map( (event, index)=>{
+    var eventName = attemptToTranslateItem(event["Name"]).replace("ready days", "Ready Days")
+    //Only include special events, not ready days
+    if((event["Type"].toLowerCase()==="special event" || event["Type"].toLowerCase()==="basegame event") && !event["Name"].toLowerCase().includes("ready days") || 
+      eventSections["Crafting Seasons"] && event["Type"].toLowerCase()==="crafting season" ||
+      eventSections["Event Ready Days"] && event["Name"].toLowerCase().includes("ready days") || 
+      eventSections["Nook Shopping Events"] && event["Type"].toLowerCase()===("nook shopping event") || 
+      eventSections["Zodiac Seasons"] && event["Type"].toLowerCase()===("zodiac season") || 
+      eventSections["Shopping Seasons"] && event["Type"].toLowerCase()===("shopping season")
+    ){
+      if(event["Dates (Northern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")==="true"){
+        if(isDateInRange(event["Dates (Northern Hemisphere)"], date.getFullYear(), date, "startOnly")){
+          totalEvents.push({
+            name: capitalize(eventName),
+            time: attemptToTranslate(event["Type"]),
+            image: event["Name"],
+            day:date.getDate(),
+            weekday:date.getDay(),
+            color:colors.startEventBackground[global.darkMode]
+          });
+          if(getSettingsString("settingsNotifications")){
+            schedulePushNotification(date,eventSections["Set Notification Time"],capitalize(event["Name"]),event["Type"]);
+          }
+        } else if(eventSections["Show End Day of Events"] && isDateInRange(event["Dates (Northern Hemisphere)"], date.getFullYear(), date, "endOnly")){
+          totalEvents.push({
+            name: capitalize(eventName) + " " + attemptToTranslate("End"),
+            time: attemptToTranslate(capitalize(event["Type"])),
+            image: event["Name"],
+            day:date.getDate(),
+            weekday:date.getDay(),
+            color:colors.warningEventBackground[global.darkMode]
+          });
+          if(getSettingsString("settingsNotifications")){
+            schedulePushNotification(date,eventSections["Set Notification Time"],"Last day! " + capitalize(event["Name"]),attemptToTranslate(capitalize(event["Type"])));
+          }
+        }
+      } else if (event["Dates (Southern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")!=="true"){
+        if(isDateInRange(event["Dates (Southern Hemisphere)"], date.getFullYear(), date, "startOnly")){
+          totalEvents.push({
+            name: capitalize(eventName),
+            time: attemptToTranslate(capitalize(event["Type"])),
+            image: event["Name"],
+            day:date.getDate(),
+            weekday:date.getDay(),
+            color:colors.startEventBackground[global.darkMode]
+          });
+          if(getSettingsString("settingsNotifications")){
+            schedulePushNotification(date,eventSections["Set Notification Time"],capitalize(event["Name"]),event["Type"]);
+          }
+        } else if(eventSections["Show End Day of Events"] && isDateInRange(event["Dates (Southern Hemisphere)"], date.getFullYear(), date, "endOnly")){
+          totalEvents.push({
+            name: capitalize(eventName) + " " + attemptToTranslate("End"),
+            time: attemptToTranslate(capitalize(event["Type"])),
+            image: event["Name"],
+            day:date.getDate(),
+            weekday:date.getDay(),
+            color:colors.warningEventBackground[global.darkMode]
+          });
+          if(getSettingsString("settingsNotifications")){
+            schedulePushNotification(date,eventSections["Set Notification Time"],attemptToTranslate("Last day!") + " " + eventName, attemptToTranslate(capitalize(event["Type"])));
+          }
+        }
+      } 
+    }
+  })
+
+  specialEvents.map( (event, index)=>{
+    var eventDay = getSpecialOccurrenceDate(date.getFullYear(), index, specialEvents);
+    if(eventDay[0]===date.getDate() && eventDay[1]===date.getMonth()){
+      if(!event["Name"].includes("ireworks")){
+        totalEvents.push({
+          name: attemptToTranslate(capitalize(event["Name"])),
+          time: event["Time"],
+          image: event["Name"],
+          day:date.getDate(),
+          weekday:date.getDay(),
+          color:colors.specialEventBackground[global.darkMode]
+        });
+        if(getSettingsString("settingsNotifications")){
+          schedulePushNotification(date,eventSections["Set Notification Time"],"🏅" + attemptToTranslate(capitalize(event["Name"])),event["Time"]);
+        }
+      } else {
+        totalEvents.push({
+          name: attemptToTranslate(capitalize(event["Name"])),
+          time: event["Time"],
+          image: event["Name"],
+          day:date.getDate(),
+          weekday:date.getDay(),
+          color:colors.startEventBackground[global.darkMode]
+        });
+        if(getSettingsString("settingsNotifications")){
+          schedulePushNotification(date,eventSections["Set Notification Time"],attemptToTranslate(capitalize(event["Name"])),event["Time"]);
+        }
+      }
+    }
+  })
   return totalEvents;
 }
 
@@ -291,12 +352,13 @@ const styles = StyleSheet.create({
   textContainerTop:{
     textAlign:"center",
     fontSize: 20,
-    marginHorizontal: 20, 
+    marginHorizontal: 25, 
   },
   textContainerBottom:{
     textAlign:"center",
     marginTop: 3,
     fontSize: 18,
+    marginHorizontal: 20, 
   },
   textContainer:{
     width: "80%",
@@ -322,6 +384,5 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     marginRight: 20,
     borderRadius: 10,
-    height: 90
   },
 });

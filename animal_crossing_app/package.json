@@ -41,7 +41,8 @@
     "react-native-tab-view": "^2.15.2",
     "react-native-webview": "11.0.0",
     "reanimated-bottom-sheet": "^1.0.0-alpha.22",
-    "toggle-switch-react-native": "^2.3.0"
+    "toggle-switch-react-native": "^2.3.0",
+    "expo-notifications": "~0.8.2"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0"

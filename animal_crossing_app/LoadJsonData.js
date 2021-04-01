@@ -396,6 +396,19 @@ export function getSettingsString(key){
   }
   return 0;
 }
+
+export function setSettingsString(key, value){
+  if(settings!==undefined||global.settingsCurrent!==undefined){
+    for(var i = 0; i<settings.length; i++){
+      if(global.settingsCurrent[i]["keyName"]===key){
+        global.settingsCurrent[i]["currentValue"]=value;
+        AsyncStorage.setItem(key, value);
+        break;
+      }
+    }
+  }
+  return 0;
+}
 // import {getSettingsString} from "../LoadJsonData"
 // getSettingsString("settingsEnableVibrations")
 export const settings = [
@@ -425,6 +438,18 @@ export const settings = [
     "picture" : require("./assets/icons/dice.png"),
     "displayName" : "Highlight furniture with non-craftable variations",
     "description" : "Highlight furniture with variations that can't be crafted by the player in blue. This will help complete your catalog with all the furniture variations!",
+  },
+  {
+    "keyName" : "breaker",
+    "text" : "Notifications",
+  },
+  {
+    "keyName" : "settingsNotifications",
+    "defaultValue" : "true",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/bell.png"),
+    "displayName" : "Allow app notifications",
+    "description" : "This will enable/disable notifications. You can select event notifications under the [Edit Events] of the [Events] section on the homepage.",
   },
   // {
   //   "keyName" : "settingsShowVariation",

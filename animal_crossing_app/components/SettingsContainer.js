@@ -5,7 +5,8 @@ import Popup from './Popup';
 import ToggleSwitch from 'toggle-switch-react-native'
 import colors from "../Colors"
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {getSettingsString} from "../LoadJsonData"
+import {getSettingsString,getStorage} from "../LoadJsonData"
+import {cancelAllPushNotifications} from "../Notifications"
 
 class SettingsContainer extends Component {
   constructor(props){
@@ -28,16 +29,20 @@ class SettingsContainer extends Component {
               onColor="#57b849"
               offColor="#DFDFDF"
               size="large"
-              onToggle={() => {
-                AsyncStorage.setItem(this.props.keyName, !this.state.toggle === true ? "true" : "false");
+              onToggle={async () => {
+                await AsyncStorage.setItem(this.props.keyName, !this.state.toggle === true ? "true" : "false");
                 global.settingsCurrent[this.props.index]["currentValue"] = !this.state.toggle === true ? "true" : "false";
                 this.setState({toggle:!this.state.toggle});
                 getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
                 this.props.updateSettings();
                 //Delete saved photos if photo downloading disabled
                 console.log(this.props.keyName)
-                if(this.props.keyName==="settingsDownloadImages" && !this.state.toggle === false){
+                if(this.props.keyName==="settingsDownloadImages" && this.state.toggle === false){
                   this.props.deleteSavedPhotos();
+                }
+                if(this.props.keyName==="settingsNotifications" && this.state.toggle === true){
+                  this.props.popupLoadNotifications();
+                  cancelAllPushNotifications();
                 }
               }}
             />

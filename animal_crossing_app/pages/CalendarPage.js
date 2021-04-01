@@ -155,7 +155,7 @@ export default class CalendarPage extends Component {
           seasonData.map( (event, index)=>{
             var eventName = attemptToTranslateItem(event["Name"])
             if(event["Dates (Northern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")==="true"){
-              if(this.isDateInRange(event["Dates (Northern Hemisphere)"], date.getFullYear(), date)){
+              if(isDateInRange(event["Dates (Northern Hemisphere)"], date.getFullYear(), date)){
                 this.state.items[strTime].push({
                   name: capitalize(eventName),
                   time: event["Type"],
@@ -164,7 +164,7 @@ export default class CalendarPage extends Component {
                 });
               }
             } else if (event["Dates (Southern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")!=="true"){
-              if(this.isDateInRange(event["Dates (Southern Hemisphere)"], date.getFullYear(), date)){
+              if(isDateInRange(event["Dates (Southern Hemisphere)"], date.getFullYear(), date)){
                 this.state.items[strTime].push({
                   name: capitalize(eventName),
                   time: event["Type"],
@@ -253,41 +253,61 @@ export default class CalendarPage extends Component {
     return date.toISOString().split('T')[0];
   }
 
-  //range >> February 25 – May 21
+  
+  
+}
+
+//range >> February 25 – May 21
   //date >> Date object
-  isDateInRange(range,rangeYear, date){
-    if(range===undefined){
-      return false;
-    }
-    var rangeSplit = range.replace(/[^\x00-\x7F]/g, "");
-    rangeSplit = rangeSplit.replace("  ", " ");
-    rangeSplit = rangeSplit.split(" ");
-    if(rangeSplit.length===4){
-      var dateStart = new Date('January 10, 2000 12:00:00');
-      dateStart.setMonth(getMonthFromString(rangeSplit[0]));
-      dateStart.setDate(rangeSplit[1]);
-      dateStart.setYear(rangeYear);
-      var dateEnd= new Date('January 10, 2000 12:00:00');
-      dateEnd.setMonth(getMonthFromString(rangeSplit[2]));
-      dateEnd.setDate(parseInt(rangeSplit[3])+1); //ensures the end date is larger so current date is within range
-      dateEnd.setYear(rangeYear);
-      if(parseInt(getMonthFromString(rangeSplit[2]))<parseInt(getMonthFromString(rangeSplit[0]))){
-        dateEnd.setYear(parseInt(rangeYear)+1);
-      }
-      if(date>dateStart && date<dateEnd){
-        return true;
-      } else {
-        return false;
-      }
-    } else if(rangeSplit.length===2){
+export function isDateInRange(range,rangeYear, date, specialCheck=""){ //startOnly, endOnly
+  if(range===undefined){
+    return false;
+  }
+  var rangeSplit = range.replace(/[^\x00-\x7F]/g, "");
+  rangeSplit = rangeSplit.replace("  ", " ");
+  rangeSplit = rangeSplit.split(" ");
+  if(specialCheck!==""){
+    if(specialCheck==="startOnly"){
       if(date.getMonth()===parseInt(getMonthFromString(rangeSplit[0], true)) && date.getDate() === parseInt(rangeSplit[1])){
         return true;
       } else {
         return false;
       }
-    } else{
+    }else if(rangeSplit.length===4 && specialCheck==="endOnly"){
+      if(date.getMonth()===parseInt(getMonthFromString(rangeSplit[2], true)) && date.getDate() === parseInt(rangeSplit[3])){
+        return true;
+      } else {
+        return false;
+      }
+    } else {
+      return;
+    }
+  }
+  if(rangeSplit.length===4){
+    var dateStart = new Date('January 10, 2000 12:00:00');
+    dateStart.setMonth(getMonthFromString(rangeSplit[0]));
+    dateStart.setDate(rangeSplit[1]);
+    dateStart.setYear(rangeYear);
+    var dateEnd= new Date('January 10, 2000 12:00:00');
+    dateEnd.setMonth(getMonthFromString(rangeSplit[2]));
+    dateEnd.setDate(parseInt(rangeSplit[3])+1); //ensures the end date is larger so current date is within range
+    dateEnd.setYear(rangeYear);
+    if(parseInt(getMonthFromString(rangeSplit[2]))<parseInt(getMonthFromString(rangeSplit[0]))){
+      dateEnd.setYear(parseInt(rangeYear)+1);
+    }
+    if(date>dateStart && date<dateEnd){
+      return true;
+    } else {
       return false;
     }
+  } else if(rangeSplit.length===2){
+    if(date.getMonth()===parseInt(getMonthFromString(rangeSplit[0], true)) && date.getDate() === parseInt(rangeSplit[1])){
+      return true;
+    } else {
+      return false;
+    }
+  } else{
+    return false;
   }
 }
 
@@ -410,7 +430,7 @@ const renderItemFlatList = ({item}) => {
   )
 }
 
-const specialEvents = [
+export const specialEvents = [
   {
         "Name" : "Fireworks Show",
         "Month": "Aug",

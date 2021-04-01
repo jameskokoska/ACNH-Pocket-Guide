@@ -7,7 +7,7 @@ import StoreHoursContainer from '../components/StoreHoursContainer';
 import ProgressContainer from '../components/ProgressContainer';
 import LottieView from 'lottie-react-native';
 import colors from '../Colors'
-import {getCurrentVillagerNamesString, getInverseVillagerFilters, capitalize,countCollection,getStorage} from "../LoadJsonData"
+import {setSettingsString, getCurrentVillagerNamesString, getInverseVillagerFilters, capitalize,countCollection,getStorage} from "../LoadJsonData"
 import TextFont from "../components/TextFont"
 import ActiveCreatures from "../components/ActiveCreatures"
 import CurrentVillagers from "../components/CurrentVillagers"
@@ -17,13 +17,17 @@ import TodoList from '../components/TodoList';
 import VisitorsList from '../components/VisitorsList';
 import {translateIslandNameInputLabel2, translateIslandNameInputLabel1, getSettingsString, attemptToTranslate} from "../LoadJsonData"
 import { ScrollView } from 'react-native-gesture-handler';
-import {PopupBottomCustom} from "../components/Popup"
+import Popup, {PopupBottomCustom} from "../components/Popup"
 import VillagerPopup from "../popups/VillagerPopup"
 import ToggleSwitch from 'toggle-switch-react-native'
-import {SubHeader} from "../components/Formattings"
+import {SubHeader, Paragraph} from "../components/Formattings"
 import FadeInOut from "../components/FadeInOut"
 import {getMaterialImage} from "../components/GetPhoto"
 import FastImage from "../components/FastImage"
+import {cancelAllPushNotifications} from "../Notifications"
+import DateTimePickerModal from "react-native-modal-datetime-picker";
+import ButtonComponent from "../components/ButtonComponent"
+
 
 function addDays(date, days) {
   var result = new Date(date);
@@ -35,20 +39,34 @@ class HomePage extends Component {
   constructor(props){
     super(props);
     this.scrollViewRef = React.createRef();
-    this.state = {sections:this.props.sections}
+    var eventSections = this.props.eventSections;
+    this.state = {sections:this.props.sections, eventSections:eventSections}
+    this.refreshEvents();
+  }
+  refreshEvents = () => {
+    cancelAllPushNotifications();
+    this.todayEvents = getEventsDay(getCurrentDateObject(), this.state.eventSections);
+    this.tomorrowEvents = getEventsDay(addDays(getCurrentDateObject(), 1), this.state.eventSections);
+    this.thisWeekEvents = [];
+    for(var i=2; i<7; i++){
+      this.thisWeekEvents = this.thisWeekEvents.concat(getEventsDay(addDays(getCurrentDateObject(), i), this.state.eventSections));
+    }
   }
   openVillagerPopup = (item) => {
     this.villagerPopupPopup.setPopupVisible(true, item);
   }
-  setPages = (checked,name) =>{
+  setPages = async (checked,name) =>{
     var sections = this.state.sections;
     sections[name] = checked;
     this.setState({sections:sections});
-    this.saveSections(sections);
+    await AsyncStorage.setItem("Sections", JSON.stringify(sections));
   }
 
-  saveSections = async(data) => {
-    await AsyncStorage.setItem("Sections", JSON.stringify(data));
+  setEventPages = async (checked,name) =>{
+    var eventSections = this.state.eventSections;
+    eventSections[name] = checked;
+    this.setState({eventSections:eventSections});
+    await AsyncStorage.setItem("EventSections", JSON.stringify(eventSections));
   }
 
   setLoadedToDo = (status) => {
@@ -73,35 +91,32 @@ class HomePage extends Component {
     var recipeCount = countCollection("recipesCheckList");
     var recipePercentage = recipeCount/global.dataLoadedRecipes[0].length * 100;
 
-    var todayEvents = getEventsDay(getCurrentDateObject());
-    var tomorrowEvents = getEventsDay(addDays(getCurrentDateObject(), 1));
-    var thisWeekEvents = [];
-    for(var i=2; i<7; i++){
-      thisWeekEvents = thisWeekEvents.concat(getEventsDay(addDays(getCurrentDateObject(), i)));
-    }
     var todayTitle=<View/>
-    if(todayEvents.length>0){
+    if(this.todayEvents.length>0){
       todayTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>Today</TextFont>
     }
     var tomorrowTitle=<View/>
-    if(tomorrowEvents.length>0){
+    if(this.tomorrowEvents.length>0){
       tomorrowTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>Tomorrow</TextFont>
     }
     var thisWeekTitle=<View/>
-    if(thisWeekEvents.length>0){
+    if(this.thisWeekEvents.length>0){
       thisWeekTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>This Week</TextFont>
     }
 
     var landscape = <View style={{width:Dimensions.get('window').width, height: "100%", zIndex:1, position:'absolute', overflow: "hidden" }}><LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/home.json')}/></View>
     if(getCurrentDateObject().getMonth()===11||getCurrentDateObject().getMonth()===0){
       landscape = <View style={{width:Dimensions.get('window').width, height: "100%", zIndex:1, position:'absolute', overflow: "hidden" }}><LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeSnow.json')}/></View>
-    } else if (todayEvents[0]!==undefined && (todayEvents[0]["Name"]==="Festivale" || todayEvents[0]["Name"].includes("Firework")) || todayEvents[1]!==undefined && (todayEvents[1]["Name"]==="Festivale" || todayEvents[1]["Name"].includes("Firework"))){
+    } else if (this.todayEvents[0]!==undefined && (this.todayEvents[0].name==="Festivale" || this.todayEvents[0].name.includes("Firework")) || this.todayEvents[1]!==undefined && (this.todayEvents[1].name==="Festivale" || this.todayEvents[1].name.includes("Firework"))){
       landscape = <View style={{width:Dimensions.get('window').width, height: "100%", zIndex:1, position:'absolute', overflow: "hidden" }}><LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeCelebration.json')}/></View>
     }
     const sections = this.state.sections;
     return <View style={{height:"100%",width:"100%"}}>
       <PopupBottomCustom ref={(popupSettings) => this.popupSettings = popupSettings} onClose={()=>{}}>
-        <ConfigureHomePages setPages={(checked,name)=>this.setPages(checked,name)} sections={this.state.sections}/>
+        <ConfigureHomePages header={"Select Homepage Sections"} refreshEvents={()=>{this.refreshEvents()}} setPages={(checked,name)=>this.setPages(checked,name)} sections={this.state.sections}/>
+      </PopupBottomCustom>
+      <PopupBottomCustom ref={(popupEventsSettings) => this.popupEventsSettings = popupEventsSettings} onClose={()=>{}}>
+        <ConfigureHomePages setPage={(page)=>this.props.setPage(page)} header={"Select Events"} refreshEvents={()=>{this.refreshEvents()}} setPages={(checked,name)=>this.setEventPages(checked,name)} sections={this.state.eventSections}/>
       </PopupBottomCustom>
         <ScrollView ref={this.scrollViewRef}>
           <View style={{height:45}}/>
@@ -117,43 +132,39 @@ class HomePage extends Component {
           {/* If todo is the first page to be loaded, wait to fade in */}
           <FadeInOut fadeIn={this.state.sections!==""&&(this.state.sections["Events"] || this.state.loadedToDo===true || this.state.sections["To-Do"]===false)?true:false} duration={200} startValue={0} endValue={1} maxFade={1} minScale={0.9} >
             {sections["Events"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.eventsColor[global.darkMode]} title="Events" titleColor={colors.eventsColor[global.darkModeReverse]}>
+              <TouchableOpacity style={{padding:10, paddingVertical:12, position:"absolute",right:0}} 
+                onPress={()=>{this.popupEventsSettings.setPopupVisible(true); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}
+              }>
+                <TextFont bold={false} style={{marginRight:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"right"}}>{"Edit Events"}</TextFont>
+              </TouchableOpacity>
               {todayTitle}
-              {todayEvents.map( (event, index)=>
+              {this.todayEvents.map( (event, index)=>
                 <EventContainer 
-                  key={event["Name"]} 
+                  key={event.name+index} 
                   backgroundColor={colors.eventBackground[global.darkMode]}
                   textColor={colors.textBlack[global.darkMode]}
-                  image={event["Image"]}
-                  text={event["Name"]}
-                  textBottom={capitalize(event["Time"])}
-                  month={event["Month"]} 
-                  day={event["Day Start"]}
+                  event={event}
+                  eventSections={this.state.eventSections}
                 />
               )}
               {tomorrowTitle}
-              {tomorrowEvents.map( (event, index)=>
+              {this.tomorrowEvents.map( (event, index)=>
                 <EventContainer 
-                  key={event["Name"]} 
+                  key={event.name+index} 
                   backgroundColor={colors.eventBackground[global.darkMode]}
                   textColor={colors.textBlack[global.darkMode]}
-                  image={event["Image"]}
-                  text={event["Name"]}
-                  textBottom={capitalize(event["Time"])}
-                  month={event["Month"]} 
-                  day={event["Day Start"]}
+                  event={event}
+                  eventSections={this.state.eventSections}
                 />
               )}
               {thisWeekTitle}
-              {thisWeekEvents.map( (event, index)=>
+              {this.thisWeekEvents.map( (event, index)=>
                 <EventContainer 
-                  key={event["Name"]} 
+                  key={event.name+index} 
                   backgroundColor={colors.eventBackground[global.darkMode]}
                   textColor={colors.textBlack[global.darkMode]}
-                  image={event["Image"]}
-                  text={event["Name"]}
-                  textBottom={capitalize(event["Time"])}
-                  month={event["Month"]} 
-                  day={event["Day Start"]}
+                  event={event}
+                  eventSections={this.state.eventSections}
                 />
               )}
               <View style={{height: 30}}/>
@@ -396,12 +407,15 @@ class ChosenFruit extends Component {
 class ConfigureHomePages extends Component {
   constructor(props) {
     super(props);
+    var sections = this.props.sections
     this.state = {
-      sections:this.props.sections,
+      sections:sections,
     }
+    
   }
   setPages = (check,name) => {
     this.props.setPages(check,name);
+    console.log(check)
     if(name==="To-Do - Turnip Log" && check){
       this.props.setPages(true,"To-Do");
     } else if(name==="To-Do" && !check){
@@ -414,15 +428,55 @@ class ConfigureHomePages extends Component {
       this.props.setPages(false,"Profile - Dream Address");
       this.props.setPages(false,"Profile - Friend Code");
     }
+    if(this.props.header==="Select Events"){
+      this.props.refreshEvents();
+    }
   }
   render(){
     const sectionNames = Object.keys(this.state.sections);
     return(<>
-      <SubHeader>Select Homepage Sections</SubHeader>
+      <SubHeader>{this.props.header}</SubHeader>
       <View style={{height:10}}/>
         {sectionNames.map( (name, index)=>{
-          return <ConfigureHomePageSettingContainer key={name+index.toString()} title={name} defaultValue={this.state.sections[name]} onCheck={(check)=>{this.setPages(check,name)}}/>
+          if(name.includes("Break")){
+            return <View style={{height:30}} key={name+index.toString()}/>
+          } else if(name.includes("Info")){
+            return <Paragraph styled={true} key={name+index.toString()}>{this.props.sections[name]}</Paragraph>
+          } else if(name==="Notification Setting"){
+            return <TouchableOpacity style={{paddingVertical:10,}} key={name+index.toString()} onPress={()=>{this.props.setPage(13)}}>
+              <Paragraph styled={true} style={{color: colors.fishText[global.darkMode], margin:0, fontSize: 16}}>{getSettingsString("settingsNotifications")==="true"?"Notifications are enabled.":"Notifications are disabled."}</Paragraph>
+            </TouchableOpacity>
+          } else if(name==="Set Notification Time"){
+            return <SetNotificationTime key={name+index.toString()} title={name} setPages={this.setPages}/>
+          } else {
+            return <ConfigureHomePageSettingContainer key={name+index.toString()} title={name} defaultValue={this.state.sections[name]} onCheck={(check)=>{this.setPages(check,name)}}/>
+          }
         })}
+      </>
+    )
+  }
+}
+
+class SetNotificationTime extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      datePickerVisible:false,
+    }
+  }
+  toggle = () =>{
+    this.setState({datePickerVisible:true})
+  }
+  render(){
+    return (<>
+      <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.toggle()}} text={this.props.title} />
+      <View style={{height:20}}/>
+      <DateTimePickerModal
+        mode={"time"}
+        onConfirm={(date)=>{this.props.setPages(date, this.props.title); this.setState({datePickerVisible:false})}}
+        onCancel={()=>{this.setState({datePickerVisible:false})}}
+        isVisible={this.state.datePickerVisible}
+      />
       </>
     )
   }

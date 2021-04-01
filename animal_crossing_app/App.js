@@ -179,6 +179,24 @@ class App extends Component {
     }
   }
 
+  loadSections = async(key, defaultSections) => {
+    var sections = JSON.parse(await getStorage(key,JSON.stringify(defaultSections)));
+    const aKeys = Object.keys(sections);
+    const bKeys = Object.keys(defaultSections);
+    //Update sections if any new ones added
+    if(JSON.stringify(aKeys) !== JSON.stringify(bKeys)){
+      var newSections = defaultSections;
+      for(var i=0; i<bKeys.length; i++){
+        if(sections[bKeys[i]]!==undefined){
+          newSections[bKeys[i]]=sections[bKeys[i]];
+        }
+      }
+      await AsyncStorage.setItem(key, JSON.stringify(newSections));
+      sections = newSections;
+    }
+    return sections;
+  }
+
   async componentDidMount(){
     this.mounted = true;
     // await AsyncStorage.setItem("firstLogin", "true");
@@ -224,7 +242,7 @@ class App extends Component {
 
     //load home screen sections
     const defaultSections = {
-      "Events" : true,
+      "Events" : true,   
       "To-Do" : true,
       "To-Do - Turnip Log" : true,
       "Collection" : true,
@@ -234,20 +252,26 @@ class App extends Component {
       "Store Hours" : true,
       "Active Creatures" : true,
     }
-    this.sections = JSON.parse(await getStorage("Sections",JSON.stringify(defaultSections)));
-    const aKeys = Object.keys(this.sections);
-    const bKeys = Object.keys(defaultSections);
-    //Update sections if any new ones added
-    if(JSON.stringify(aKeys) !== JSON.stringify(bKeys)){
-      var newSections = defaultSections;
-      for(var i=0; i<bKeys.length; i++){
-        if(this.sections[bKeys[i]]!==undefined){
-          newSections[bKeys[i]]=this.sections[bKeys[i]];
-        }
-      }
-      await AsyncStorage.setItem("Sections", JSON.stringify(newSections));
-      this.sections = newSections;
+    this.sections = await this.loadSections("Sections", defaultSections);
+
+    //load home screen events
+    const defaultEventSections = {
+      "Info1" : "You can enable/disable notifications in the settings. Notifications are created based on the categories you select. They are only loaded one week into the future and are set according to your phone time.",
+      "Notification Setting" : false,
+      "Set Notification Time" : "",
+      "Favorite Villager's Birthdays" : true,
+      "All Villager's Birthdays" : false,
+      "K.K. Slider" : true,
+      "Daisy Mae" : true,
+      "Crafting Seasons" : true,
+      "Nook Shopping Events" : false,
+      "Shopping Seasons" : false,
+      "Event Ready Days" : false,
+      "Zodiac Seasons" : false,
+      "Break2" : true,
+      "Show End Day of Events" : true,
     }
+    this.eventSections = await this.loadSections("EventSections", defaultEventSections);
     
     if(this.mounted){
       this.setState({
@@ -368,7 +392,7 @@ class App extends Component {
     } else {
       var currentPageView;
       if (this.state.currentPage===0){
-        currentPageView = <FadeInOut fadeIn={true}><HomePage sections={this.sections} setVillagerGift={this.setVillagerGift} setPage={this.setPage}/></FadeInOut>
+        currentPageView = <FadeInOut fadeIn={true}><HomePage sections={this.sections} eventSections={this.eventSections} setVillagerGift={this.setVillagerGift} setPage={this.setPage}/></FadeInOut>
       } else if (this.state.currentPage===1){
         currentPageView = <AllItemsPage setVillagerGift={this.setVillagerGift}/>
       } else if(this.state.currentPage===2){
@@ -394,7 +418,7 @@ class App extends Component {
       } else if (this.state.currentPage===12){
         currentPageView = <CatalogPage/>
       } else if (this.state.currentPage===13){
-        currentPageView = <SettingsPage updateSettings={this.updateSettings}/>
+        currentPageView = <SettingsPage updateSettings={this.updateSettings} setPage={this.setPage}/>
       } else if (this.state.currentPage===14){
         currentPageView = <CreditsPage/>
       } else if (this.state.currentPage===15){

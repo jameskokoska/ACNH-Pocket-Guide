@@ -67,11 +67,11 @@ export class Paragraph extends Component {
   render(){
     if(!this.props.styled){
       return(
-        <Text style={{marginTop: 6, fontSize: 16, marginHorizontal: this.props.margin!==false?30:0, color:colors.textBlack[global.darkMode]}}>{attemptToTranslate(this.props.children)}</Text>
+        <Text style={[{marginTop: 6, fontSize: 16, marginHorizontal: this.props.margin!==false?30:0, color:colors.textBlack[global.darkMode]}, this.props.style]}>{attemptToTranslate(this.props.children)}</Text>
       )
     } else {
       return(
-        <TextFont translate={this.props.translate===false?false:true} bold={false} style={{marginTop:10, fontSize: 17, marginHorizontal: this.props.margin!==false?30:0, color: colors.textBlack[global.darkMode]}}>{this.props.children}</TextFont>
+        <TextFont translate={this.props.translate===false?false:true} bold={false} style={[{marginTop:10, fontSize: 17, marginHorizontal: this.props.margin!==false?30:0, color: colors.textBlack[global.darkMode]}, this.props.style]}>{this.props.children}</TextFont>
       )
     }
   }
