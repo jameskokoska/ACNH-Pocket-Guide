@@ -19,7 +19,7 @@ export default class SideMenu extends Component {
       <View style={{width: "100%", height:"100%", backgroundColor:colors.textWhite[global.darkMode]}}>
         <ScrollView>
           <View style={{backgroundColor: colors.topSidebar[global.darkMode], marginBottom: 10}}>
-            <TextFont bold={true} style={{marginLeft: 15, marginTop: 130, marginBottom: 10, fontSize: 34, color: colors.textBlack[global.darkMode]}}>ACNH Pocket</TextFont>
+            <TextFont bold={true} style={{marginHorizontal: 15, marginTop: 130, marginBottom: 10, fontSize: 34, color: colors.textBlack[global.darkMode]}}>ACNH Pocket</TextFont>
           </View>
           <SidebarElement image={require("../assets/icons/homeIcon.png")} title="Home" pageNum={0} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectHome[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
           <SidebarElement image={require("../assets/icons/book.png")} title="Everything" pageNum={1} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectEverything[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>

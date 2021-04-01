@@ -48,6 +48,9 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
+-Added recipes collection progress
+-Can zoom in on artwork - tap the artwork in the popup and pinch to zoom
+-
 -Cleaner villagers section in profile
 -Pushed all information in a popup in obtainable items page
 -Color fixes

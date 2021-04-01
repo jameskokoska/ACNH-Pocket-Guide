@@ -87,7 +87,7 @@ class Popup extends Component {
           statusBarTranslucent
           onRequestClose={()=>{this.props.button1===undefined && this.props.button2===undefined ? 0 : this.setPopupVisible(false);}}
         >
-        <View style={styles.centeredView}>
+        <View style={[styles.centeredView,{padding:this.props.centerPadding}]}>
           {this.props.button1===undefined && this.props.button2===undefined ? <View/> : <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} style={{position:"absolute", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: "black", opacity: 0.1}}/>}
           <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
             <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.props.text}</TextFont>
@@ -151,7 +151,7 @@ export class PopupInfoCustom extends Component {
         >
         <View style={styles.centeredView}>
           <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} style={{position:"absolute", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: "black", opacity: 0.1}}/>
-          <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
+          <View style={[styles.modalView,this.props.style,{backgroundColor: colors.white[global.darkMode]}]}>
             {this.props.header===undefined ? <View/> : header}
             <ScrollView style={{maxHeight:Dimensions.get('window').height*0.75-this.state.headerHeight-this.state.buttonHeight}}>
               {this.props.children}
@@ -269,12 +269,11 @@ const styles = StyleSheet.create({
   centeredView: {
     flex: 1,
     justifyContent: "center",
-    padding: 20,
     paddingTop: "10%",
     backgroundColor:"rgba(0,0,0,0.5)",
   },
   modalView: {
-    margin: 10,
+    margin: 30,
     borderRadius: 10,
     padding: 20,
     elevation: 5

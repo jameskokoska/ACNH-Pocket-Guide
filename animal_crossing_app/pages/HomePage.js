@@ -70,6 +70,8 @@ class HomePage extends Component {
     var musicPercentage = musicCount/95 * 100;
     var emojipediaCount = countCollection("emojiCheckList");
     var emojipediaPercentage = emojipediaCount/global.dataLoadedReactions[0].length * 100;
+    var recipeCount = countCollection("recipesCheckList");
+    var recipePercentage = recipeCount/global.dataLoadedRecipes[0].length * 100;
 
     var todayEvents = getEventsDay(getCurrentDateObject());
     var tomorrowEvents = getEventsDay(addDays(getCurrentDateObject(), 1));
@@ -175,6 +177,7 @@ class HomePage extends Component {
               <ProgressContainer color={colors.artAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={artPercentage} image={require("../assets/icons/colorPalette.png")} text={attemptToTranslate("Art") + " " + artCount + "/43"}/>
               <ProgressContainer color={colors.musicAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={musicPercentage} image={require("../assets/icons/music.png")} text={attemptToTranslate("Songs") + " " + musicCount + "/95"}/>
               <ProgressContainer color={colors.emojipediaAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={emojipediaPercentage} image={require("../assets/icons/emote.png")} text={attemptToTranslate("Emotes") + " " + emojipediaCount + "/" + global.dataLoadedReactions[0].length.toString()}/>
+              <ProgressContainer color={colors.toolsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={recipePercentage} image={require("../assets/icons/crafting.png")} text={attemptToTranslate("Recipes") + " " + recipeCount + "/" + global.dataLoadedRecipes[0].length.toString()}/>
               <View style={{height: 15}}/>
             </HomeContentArea>:<View/>}
             {sections["Profile"]===true?<HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.profileColor[global.darkMode]} title="Profile" titleColor={colors.profileColor[global.darkModeReverse]}>
