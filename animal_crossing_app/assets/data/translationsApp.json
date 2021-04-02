@@ -4461,10 +4461,10 @@
             "French (US)": "Trier les listes par ordre alphabétique"
         },
         {
-            "English": "Sort any list into alphabetical order. However, items may not be grouped by category anymore.",
-            "English (Europe)": "Sort any list into alphabetical order. However, items may not be grouped by category anymore.",
-            "French": "Triez n'importe quelle liste par ordre alphabétique. Cependant, les objets ne pourront plus être regroupés par catégorie.",
-            "French (US)": "Triez n'importe quelle liste par ordre alphabétique. Cependant, les objets ne pourront plus être regroupés par catégorie."
+            "English": "Sort any list into alphabetical order.",
+            "English (Europe)": "Sort any list into alphabetical order.",
+            "French": "Triez n'importe quelle liste par ordre alphabétique.",
+            "French (US)": "Triez n'importe quelle liste par ordre alphabétique."
         },
         {
             "English": "Highlight furniture with non-craftable variations",
@@ -4689,10 +4689,10 @@
             "French (US)": "Choisir les sections de la page d'accueil"
         },
         {
-            "English": "It is recommended you get all villager personalities to get DIYs and Reactions. Tap here to see what you might be missing out on.",
-            "English (Europe)": "It is recommended you get all villager personalities to get DIYs and Reactions. Tap here to see what you might be missing out on.",
-            "French": "Il est recommandé d'avoir toutes les personnalités de villageois pour obtenir des plans et des mimiques. Appuyez ici pour voir ce que vous pourriez manquer.",
-            "French (US)": "Il est recommandé d'avoir toutes les personnalités de villageois pour obtenir des plans et des mimiques. Appuyez ici pour voir ce que vous pourriez manquer."
+            "English": "It is recommended that you have all personality types to be able to get all DIYs and Reactions.",
+            "English (Europe)": "It is recommended that you have all personality types to be able to get all DIYs and Reactions.",
+            "French": "Il est recommandé d'avoir tous les types de personnalité pour obtenir tous les plans et les mimiques.",
+            "French (US)": "Il est recommandé d'avoir tous les types de personnalité pour obtenir tous les plans et les mimiques."
         },
         {
             "English": "Missing personalities:",
@@ -4737,16 +4737,40 @@
             "French (US)": "Vous les obtiendrez de vos villageois préférés."
         },
         {
-            "English": "Note: you can get all items since you have all personality types!",
-            "English (Europe)": "Note: you can get all items since you have all personality types!",
-            "French": "Remarque: vous pouvez obtenir tous les objets puisque vous avez tous les types de personnalité !",
-            "French (US)": "Remarque: vous pouvez obtenir tous les objets puisque vous avez tous les types de personnalité !"
+            "English": "You can get everything since you have all personality types!",
+            "English (Europe)": "You can get everything since you have all personality types!",
+            "French": "Vous pouvez tout obtenir puisque vous avez tous les types de personnalité !",
+            "French (US)": "Vous pouvez tout obtenir puisque vous avez tous les types de personnalité !"
         },
         {
-            "English": "See what you can get from your villagers.",
-            "English (Europe)": "See what you can get from your villagers.",
-            "French": "Voir ce que vous pouvez obtenir de vos villageois.",
-            "French (US)": "Voir ce que vous pouvez obtenir de vos villageois."
+            "English": "Specific villager personalities will give you different items.",
+            "English (Europe)": "Specific villager personalities will give you different items.",
+            "French": "Des personnalités spécifiques de villageois vous donneront différents objets.",
+            "French (US)": "Des personnalités spécifiques de villageois vous donneront différents objets."
+        },
+        {
+            "English": "These DIYs WILL be given to you by your villagers:",
+            "English (Europe)": "These DIYs WILL be given to you by your villagers:",
+            "French": "Ces plans vous seront offerts par vos villageois :",
+            "French (US)": "Ces plans vous seront offerts par vos villageois :"
+        },
+        {
+            "English": "These DIYs will NOT be given to you by your villagers:",
+            "English (Europe)": "These DIYs will NOT be given to you by your villagers:",
+            "French": "Ces plans ne vous seront pas offerts par vos villageois :",
+            "French (US)": "Ces plans ne vous seront pas offerts par vos villageois :"
+        },
+        {
+            "English": "These Reactions WILL be given to you by your villagers:",
+            "English (Europe)": "These Reactions WILL be given to you by your villagers:",
+            "French": "Ces mimiques vous seront offertes par vos villageois :",
+            "French (US)": "Ces mimiques vous seront offertes par vos villageois :"
+        },
+        {
+            "English": "These Reactions will NOT be given to you by your villagers:",
+            "English (Europe)": "These Reactions will NOT be given to you by your villagers:",
+            "French": "Ces mimiques ne vous seront pas offertes par vos villageois :",
+            "French (US)": "Ces mimiques ne vous seront pas offertes par vos villageois :"
         },
         {
             "English": "Dismiss",
@@ -4779,16 +4803,16 @@
             "French (US)": "Ajouté chez les Soeurs Doigts de Fée le lendemain du jour où vous recevez cet objet de Tiquette"
         },
         {
-            "English": "You have no favorite villagers",
-            "English (Europe)": "You have no favorite villagers",
-            "French": "Vous n'avez pas de villageois préférés",
-            "French (US)": "Vous n'avez pas de villageois préférés"
+            "English": "You have no favorite villagers.",
+            "English (Europe)": "You have no favorite villagers.",
+            "French": "Vous n'avez pas de villageois préférés.",
+            "French (US)": "Vous n'avez pas de villageois préférés."
         },
         {
-            "English": "All downloaded photos have been removed",
-            "English (Europe)": "All downloaded photos have been removed",
-            "French": "Toutes les photos téléchargées ont été supprimées",
-            "French (US)": "Toutes les photos téléchargées ont été supprimées"
+            "English": "All downloaded photos have been removed. A restart may be required to load back images.",
+            "English (Europe)": "All downloaded photos have been removed. A restart may be required to load back images.",
+            "French": "Toutes les photos téléchargées ont été supprimées. Un redémarrage peut être nécessaire pour charger les images.",
+            "French (US)": "Toutes les photos téléchargées ont été supprimées. Un redémarrage peut être nécessaire pour charger les images."
         },
         {
             "English": "Delete Downloaded Images",
@@ -4823,14 +4847,14 @@
         {
             "English": "Dream Address",
             "English (Europe)": "Dream Address",
-            "French": "Code onirique",
-            "French (US)": "Code onirique"
+            "French": "Code Onirique",
+            "French (US)": "Code Onirique"
         },
         {
             "English": "Friend Code",
             "English (Europe)": "Friend Code",
-            "French": "Code ami",
-            "French (US)": "Code ami"
+            "French": "Code Ami",
+            "French (US)": "Code Ami"
         },
         {
             "English": "To-Do - Turnip Log",
@@ -4873,6 +4897,178 @@
             "English (Europe)": "Received in mail from DAL after 250 flights",
             "French": "Reçu par courrier de la DAL après 250 vols",
             "French (US)": "Reçu par courrier de la DAL après 250 vols"
+        },
+        {
+            "English": "Select Events",
+            "English (Europe)": "Select Events",
+            "French": "Sélectionner des évènements",
+            "French (US)": "Sélectionner des évènements"
+        },
+        {
+            "English": "Event Notifications",
+            "English (Europe)": "Event Notifications",
+            "French": "Notifications d'évènements",
+            "French (US)": "Notifications d'évènements"
+        },
+        {
+            "English": "Favorite Villager's Birthdays",
+            "English (Europe)": "Favorite Villager's Birthdays",
+            "French": "Anniversaires de villageois favoris",
+            "French (US)": "Anniversaires de villageois favoris"
+        },
+        {
+            "English": "All Villager's Birthdays",
+            "English (Europe)": "All Villager's Birthdays",
+            "French": "Tous les anniversaires de villageois",
+            "French (US)": "Tous les anniversaires de villageois"
+        },
+        {
+            "English": "Crafting Seasons",
+            "English (Europe)": "Crafting Seasons",
+            "French": "Saisons de fabrication",
+            "French (US)": "Saisons de fabrication"
+        },
+        {
+            "English": "Nook Shopping Events",
+            "English (Europe)": "Nook Shopping Events",
+            "French": "Articles temporaires du Nook Shopping",
+            "French (US)": "Articles temporaires du Nook Shopping"
+        },
+        {
+            "English": "Shopping Seasons",
+            "English (Europe)": "Shopping Seasons",
+            "French": "Shopping Saisonnier",
+            "French (US)": "Shopping Saisonnier"
+        },
+        {
+            "English": "Event Ready Days",
+            "English (Europe)": "Event Ready Days",
+            "French": "Jours précédant l'évènement",
+            "French (US)": "Jours précédant l'évènement"
+        },
+        {
+            "English": "Zodiac Seasons",
+            "English (Europe)": "Zodiac Seasons",
+            "French": "Saisons du Zodiaque",
+            "French (US)": "Saisons du Zodiaque"
+        },
+        {
+            "English": "Show End Day of Events",
+            "English (Europe)": "Show End Day of Events",
+            "French": "Afficher le jour de fin des évènements",
+            "French (US)": "Afficher le jour de fin des évènements"
+        },
+        {
+            "English": "Last day!",
+            "English (Europe)": "Last day!",
+            "French": "Dernier jour !",
+            "French (US)": "Dernier jour !"
+        },
+        {
+            "English": "End",
+            "English (Europe)": "End",
+            "French": "Fin",
+            "French (US)": "Fin"
+        },
+        {
+            "English": "Notifications are created based on the categories you select. They are only loaded one week into the future and are set according to your phone time.",
+            "English (Europe)": "Notifications are created based on the categories you select. They are only loaded one week into the future and are set according to your phone time.",
+            "French": "Les notifications sont créées en fonction des catégories que vous sélectionnez. Ils ne sont chargés qu'une semaine dans le futur et sont définis en fonction de l'heure de votre téléphone.",
+            "French (US)": "Les notifications sont créées en fonction des catégories que vous sélectionnez. Ils ne sont chargés qu'une semaine dans le futur et sont définis en fonction de l'heure de votre téléphone."
+        },
+        {
+            "English": "Edit Events",
+            "English (Europe)": "Edit Events",
+            "French": "Modifier les évènements",
+            "French (US)": "Modifier les évènements"
+        },
+        {
+            "English": "Notifications",
+            "English (Europe)": "Notifications",
+            "French": "Notifications",
+            "French (US)": "Notifications"
+        },
+        {
+            "English": "This will enable/disable notifications. You can select event notifications under the [Edit Events] of the [Events] section on the homepage.",
+            "English (Europe)": "This will enable/disable notifications. You can select event notifications under the [Edit Events] of the [Events] section on the homepage.",
+            "French": "Cela activera / désactivera les notifications. Vous pouvez sélectionner les notifications d'événement sous [Modifier les événements] de la section [Événements] de la page d'accueil.",
+            "French (US)": "Cela activera / désactivera les notifications. Vous pouvez sélectionner les notifications d'événement sous [Modifier les événements] de la section [Événements] de la page d'accueil."
+        },
+        {
+            "English": "App notifications",
+            "English (Europe)": "App notifications",
+            "French": "Notifications de l'application",
+            "French (US)": "Notifications de l'application"
+        },
+        {
+            "English": "You can select event notifications under the [Edit Events] of the [Events] section on the homepage.",
+            "English (Europe)": "You can select event notifications under the [Edit Events] of the [Events] section on the homepage.",
+            "French": "Vous pouvez sélectionner les notifications d'événement sous [Modifier les événements] de la section [Événements] de la page d'accueil.",
+            "French (US)": "Vous pouvez sélectionner les notifications d'événement sous [Modifier les événements] de la section [Événements] de la page d'accueil."
+        },
+        {
+            "English": "Received in mail from DAL after 300 flights",
+            "English (Europe)": "Received in mail from DAL after 300 flights",
+            "French": "Reçu par courrier de la DAL après 300 vols",
+            "French (US)": "Reçu par courrier de la DAL après 300 vols"
+        },
+        {
+            "English": "View History",
+            "English (Europe)": "View History",
+            "French": "Voir l'historique",
+            "French (US)": "Voir l'historique"
+        },
+        {
+            "English": "Visitor History",
+            "English (Europe)": "Visitor History",
+            "French": "Historique des visiteurs",
+            "French (US)": "Historique des visiteurs"
+        },
+        {
+            "English": "Visitors",
+            "English (Europe)": "Visitors",
+            "French": "Visiteurs",
+            "French (US)": "Visiteurs"
+        },
+        {
+            "English": "Clear History",
+            "English (Europe)": "Clear History",
+            "French": "Supprimer l'historique",
+            "French (US)": "Supprimer l'historique"
+        },
+        {
+            "English": "Week of",
+            "English (Europe)": "Week of",
+            "French": "Semaine de",
+            "French (US)": "Semaine de"
+        },
+        {
+            "English": "Sunday",
+            "English (Europe)": "Sunday",
+            "French": "Dimanche",
+            "French (US)": "Dimanche"
+        },
+        {
+            "English": "Select Date",
+            "English (Europe)": "Select Date",
+            "French": "Sélectionner la date",
+            "French (US)": "Sélectionner la date"
+        },
+        {
+            "English": "No history yet, waiting for the week to end.",
+            "English (Europe)": "No history yet, waiting for the week to end.",
+            "French": "Pas d'historique, en attente de la fin de la semaine",
+            "French (US)": "Pas d'historique, en attente de la fin de la semaine"
+        },
+        {
+            "English": "Bunny Day",
+            "English (Europe)": "Bunny Day",
+            "French": "Fête des Œufs",
+            "French (US)": "Fête des Œufs"
+        },
+        {
+            "English": "To see changes, switch pages to refresh",
+            "English (Europe)": "To see changes, switch pages to refresh"
         }
     ],
     "Achievements": [
