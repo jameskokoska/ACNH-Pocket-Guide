@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Button, Image, ScrollView, Dimensions, Text} from 'react-native';
+import {BackHandler, View, Button, Image, ScrollView, Dimensions, Text} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import LottieView from 'lottie-react-native';
 import TextFont from '../components/TextFont';
@@ -8,8 +8,24 @@ import ButtonComponent from '../components/ButtonComponent'
 import colors from '../Colors'
 import {LanguagePicker} from "./SettingsPage"
 import {setSettingsString} from "../LoadJsonData"
+import { StackActions, NavigationActions } from '@react-navigation/native';
 
 class Onboard extends Component {
+  handleBackButton = () => {
+    return true;
+  };
+  componentDidMount() {
+    BackHandler.addEventListener("hardwareBackPress", this.handleBackButton);
+  }
+  componentWillUnmount() {
+    BackHandler.removeEventListener("hardwareBackPress", this.handleBackButton);
+  }
+  setHomeScreen = () => {
+    this.props.navigation.reset({
+      index: 0,
+      routes: [{ name: 'HomePage' }],
+    });
+  }
   render(){
     return(
       <Onboarding
@@ -31,8 +47,8 @@ class Onboard extends Component {
             />
           </View>
         }
-        onDone={() => {AsyncStorage.setItem("firstLogin", "false"); this.props.setFirstLogin(false);}}
-        onSkip={() => {AsyncStorage.setItem("firstLogin", "false"); this.props.setFirstLogin(false);}}
+        onDone={() => {AsyncStorage.setItem("firstLogin", "false"); this.setHomeScreen();}}
+        onSkip={() => {AsyncStorage.setItem("firstLogin", "false"); this.setHomeScreen();}}
         pages={[
           {
             backgroundColor: colors.white[0],
@@ -71,12 +87,12 @@ class Onboard extends Component {
               <ButtonComponent vibrate={10} color={colors.okButton[global.darkMode]} text="Northern Hemisphere" onPress={() => {
                 AsyncStorage.setItem("firstLogin", "false"); 
                 setSettingsString("settingsNorthernHemisphere","true");
-                this.props.setFirstLogin(false);
+                this.setHomeScreen();
               }} />
               <ButtonComponent vibrate={10} color={colors.okButton[global.darkMode]} text="Southern Hemisphere" onPress={() => {
                 AsyncStorage.setItem("firstLogin", "false"); 
                 setSettingsString("settingsNorthernHemisphere","false");
-                this.props.setFirstLogin(false);
+                this.setHomeScreen();
               }} />
               
               {/* <TextFont style={{fontSize: 12, paddingTop: 30, width: "70%", textAlign:'center', color:colors.textBlack[global.darkMode]}} bold={true}>You can import your exported data from the last version of the app in settings.</TextFont> */}

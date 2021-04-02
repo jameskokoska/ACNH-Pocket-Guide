@@ -20,10 +20,29 @@ class GuidePage extends Component {
   }
 
   handleBackButton = () => {
-    this.webView.goBack();
+    if(this.state.canGoBack){
+      this.webView.goBack();
+      return true;
+    } else {
+      return false;
+    }
   };
 
   componentDidMount() {
+    this.props.navigation.addListener(
+      'blur',
+      payload => {
+        BackHandler.removeEventListener("hardwareBackPress", this.handleBackButton);
+      }
+    );
+
+     this.props.navigation.addListener(
+      'focus',
+      payload => {
+        BackHandler.addEventListener("hardwareBackPress", this.handleBackButton);
+      }
+    );
+
     this.mounted = true;
     if(!global.language.includes("English")){
       this.popupLanguage.setPopupVisible(true);
@@ -33,6 +52,7 @@ class GuidePage extends Component {
 
   componentWillUnmount() {
     this.mounted = false;
+    this.props.navigation.removeListener();
     BackHandler.removeEventListener("hardwareBackPress", this.handleBackButton);
   }
 

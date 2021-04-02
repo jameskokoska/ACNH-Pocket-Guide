@@ -35,6 +35,7 @@ class SettingsContainer extends Component {
                 this.setState({toggle:!this.state.toggle});
                 getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
                 this.props.updateSettings();
+                global.settingsUpdated = true;
                 //Delete saved photos if photo downloading disabled
                 console.log(this.props.keyName)
                 if(this.props.keyName==="settingsDownloadImages" && this.state.toggle === false){

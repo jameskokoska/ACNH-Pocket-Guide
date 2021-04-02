@@ -156,7 +156,7 @@ class ObtainableItemsPage extends Component {
     return(
       <>
         <PopupInfoCustom header={<TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>You do not have any villagers added!</TextFont>} ref={(popup) => this.popup = popup} buttonText={"Dismiss"}>
-          <TouchableOpacity style={{paddingVertical:20,}} onPress={() => this.props.setPage(8)}>
+          <TouchableOpacity style={{paddingVertical:20,}} onPress={() => this.props.setPage("VillagersPage")}>
             <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, textAlign:"center"}}>{"Tap here and go add some!"}</TextFont>
           </TouchableOpacity>
         </PopupInfoCustom> 

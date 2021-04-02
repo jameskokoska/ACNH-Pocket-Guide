@@ -49,6 +49,7 @@ class SettingsPage extends Component {
           <View style={{marginTop: 100}}/>
           <Header>Settings</Header>
           <HeaderNote>Tap each setting to learn more</HeaderNote>
+          <HeaderNote>To see changes, switch pages to refresh</HeaderNote>
           <View style={{marginTop: 15}}/>
           <SettingsDivider text={"Game language"}/>
           <LanguagePicker restartPopup={(show)=>this.popupRestart.setPopupVisible(show)}/>
@@ -58,6 +59,7 @@ class SettingsPage extends Component {
               if(setting["keyName"]!="breaker"){
                 return <SettingsContainer 
                   updateSettings={this.props.updateSettings}
+                  refreshPages={setting["refreshPages"]===true?true:false}
                   key={setting["keyName"]+index.toString()} 
                   backgroundColor={colors.white[global.darkMode]} 
                   textColor={colors.textBlack[global.darkMode]} 
@@ -78,7 +80,7 @@ class SettingsPage extends Component {
               
             }
           )}
-          <Popup ref={(popupLoadNotifications) => this.popupLoadNotifications = popupLoadNotifications} text="Notifications" textLower="You can select event notifications under the [Edit Events] of the [Events] section on the homepage." button1={"OK"} button1Action={()=>{this.props.setPage(0)}}/>
+          <Popup ref={(popupLoadNotifications) => this.popupLoadNotifications = popupLoadNotifications} text="Notifications" textLower="You can select event notifications under the [Edit Events] of the [Events] section on the homepage." button1={"OK"} button1Action={()=>{this.props.setPage("HomePage")}}/>
           <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.setState({datePickerVisible:true})}} text={"Set Custom Date/Time"} />
           <DateTimePickerModal
             mode={"date"}

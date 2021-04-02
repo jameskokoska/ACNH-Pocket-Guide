@@ -530,14 +530,14 @@ export const settings = [
     "keyName" : "breaker",
     "text" : "System",
   },
-  {
-    "keyName" : "settingsBackButtonChangePages",
-    "defaultValue" : "false",
-    "currentValue" : "",
-    "picture" : require("./assets/icons/backButton.png"),
-    "displayName" : "Back button to previous page",
-    "description" : "Use the back button to switch pages quickly. If this is off, the back button will just open the side panel.",
-  },
+  // {
+  //   "keyName" : "settingsBackButtonChangePages",
+  //   "defaultValue" : "false",
+  //   "currentValue" : "",
+  //   "picture" : require("./assets/icons/backButton.png"),
+  //   "displayName" : "Back button to previous page",
+  //   "description" : "Use the back button to switch pages quickly. If this is off, the back button will just open the side panel.",
+  // },
   {
     "keyName" : "settingsShowStatusBar",
     "defaultValue" : "false",

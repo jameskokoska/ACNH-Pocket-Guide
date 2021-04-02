@@ -444,7 +444,7 @@ export default (props) =>{
       <View style={{height:10}}/>
       {header}
       <View style={{height:Dimensions.get('window').height/2}}/>
-      <TouchableOpacity onPress={() => props.setPage(1)}>
+      <TouchableOpacity onPress={() => props.setPage("AllItemsPage")}>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"You have no wishlist items."}</TextFont>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"Long press items to add them to your wishlist."}</TextFont>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>Tap here and go add some</TextFont>

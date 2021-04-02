@@ -39,13 +39,96 @@ class HomePage extends Component {
   constructor(props){
     super(props);
     this.scrollViewRef = React.createRef();
-    var eventSections = this.props.eventSections;
+    this.state = {
+      loaded: false,
+    }
+    this.landscape = <View style={{width:Dimensions.get('window').width, height: "100%", zIndex:1, position:'absolute', overflow: "hidden" }}>
+      <LottieView ref={animation => {this.animation = animation}}
+        autoPlay 
+        loop 
+        style={{width: 425, height: 232, position:'absolute', top:30, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} 
+        source={require('../assets/home.json')}/>
+      </View>
+  }
+
+  componentWillUnmount(){
+    this.props.navigation.removeListener();
+  }
+
+  async componentDidMount(){
+    this.props.navigation.addListener('focus', () => {
+      if(this.animation){
+        this.animation.play();
+      }
+    });
+
+    //load home screen sections
+    const defaultSections = {
+      "Events" : true,   
+      "To-Do" : true,
+      "To-Do - Turnip Log" : true,
+      "Visitors" : true,
+      "Collection" : true,
+      "Profile" : true,
+      "Profile - Dream Address" : true,
+      "Profile - Friend Code" : true,
+      "Store Hours" : true,
+      "Active Creatures" : true,
+    }
+    var sections = await this.loadSections("Sections", defaultSections);
+
+    //load home screen events
+    const defaultEventSections = {
+      "Info1" : "Notifications are created based on the categories you select. They are only loaded one week into the future and are set according to your phone time.",
+      "App notifications" : false,
+      "Set Notification Time" : "",
+      "Favorite Villager's Birthdays" : true,
+      "All Villager's Birthdays" : false,
+      "K.K. Slider" : true,
+      "Daisy Mae" : true,
+      "Crafting Seasons" : true,
+      "Nook Shopping Events" : false,
+      "Shopping Seasons" : false,
+      "Event Ready Days" : false,
+      "Zodiac Seasons" : false,
+      "Break2" : true,
+      "Show End Day of Events" : true,
+    }
+    var eventSections = await this.loadSections("EventSections", defaultEventSections);
     if(eventSections["App notifications"]!==undefined){
       getSettingsString("settingsNotifications")==="true" ? eventSections["App notifications"]=true : eventSections["App notifications"]=false;
     }
-    this.state = {sections:this.props.sections, eventSections:eventSections}
+
+    this.setState({sections:sections, eventSections});
     this.refreshEvents();
+
+    if(getCurrentDateObject().getMonth()===11||getCurrentDateObject().getMonth()===0){
+      this.landscape = <View style={{width:Dimensions.get('window').width, height: "100%", zIndex:1, position:'absolute', overflow: "hidden" }}><LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeSnow.json')}/></View>
+    } else if (this.todayEvents[0]!==undefined && (this.todayEvents[0].name==="Festivale" || this.todayEvents[0].name.includes("Firework")) || this.todayEvents[1]!==undefined && (this.todayEvents[1].name==="Festivale" || this.todayEvents[1].name.includes("Firework"))){
+      this.landscape = <View style={{width:Dimensions.get('window').width, height: "100%", zIndex:1, position:'absolute', overflow: "hidden" }}><LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeCelebration.json')}/></View>
+    }
+
+    this.setState({loaded:true})
   }
+
+  loadSections = async(key, defaultSections) => {
+    var sections = JSON.parse(await getStorage(key,JSON.stringify(defaultSections)));
+    const aKeys = Object.keys(sections);
+    const bKeys = Object.keys(defaultSections);
+    //Update sections if any new ones added
+    if(JSON.stringify(aKeys) !== JSON.stringify(bKeys)){
+      var newSections = defaultSections;
+      for(var i=0; i<bKeys.length; i++){
+        if(sections[bKeys[i]]!==undefined){
+          newSections[bKeys[i]]=sections[bKeys[i]];
+        }
+      }
+      await AsyncStorage.setItem(key, JSON.stringify(newSections));
+      sections = newSections;
+    }
+    return sections;
+  }
+
   refreshEvents = () => {
     cancelAllPushNotifications();
     this.todayEvents = getEventsDay(getCurrentDateObject(), this.state.eventSections);
@@ -77,50 +160,29 @@ class HomePage extends Component {
   }
 
   render(){
-    var fishCount = countCollection("fishCheckList");
-    var fishPercentage = fishCount/80 * 100;
-    var seaCount = countCollection("seaCheckList");
-    var seaPercentage = seaCount/40 * 100;
-    var bugsCount = countCollection("bugCheckList");
-    var bugsPercentage = bugsCount/80 * 100;
-    var fossilCount = countCollection("fossilCheckList");
-    var fossilPercentage = fossilCount/73 * 100;
-    var artCount = countCollection("artCheckList");
-    var artPercentage = artCount/43 * 100;
-    var musicCount = countCollection("songCheckList");
-    var musicPercentage = musicCount/95 * 100;
-    var emojipediaCount = countCollection("emojiCheckList");
-    var emojipediaPercentage = emojipediaCount/global.dataLoadedReactions[0].length * 100;
-    var recipeCount = countCollection("recipesCheckList");
-    var recipePercentage = recipeCount/global.dataLoadedRecipes[0].length * 100;
-
     var todayTitle=<View/>
-    if(this.todayEvents.length>0){
+    if(this.todayEvents && this.todayEvents.length>0){
       todayTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>Today</TextFont>
     }
     var tomorrowTitle=<View/>
-    if(this.tomorrowEvents.length>0){
+    if(this.tomorrowEvents && this.tomorrowEvents.length>0){
       tomorrowTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>Tomorrow</TextFont>
     }
     var thisWeekTitle=<View/>
-    if(this.thisWeekEvents.length>0){
+    if(this.thisWeekEvents && this.thisWeekEvents.length>0){
       thisWeekTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>This Week</TextFont>
     }
-
-    var landscape = <View style={{width:Dimensions.get('window').width, height: "100%", zIndex:1, position:'absolute', overflow: "hidden" }}><LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/home.json')}/></View>
-    if(getCurrentDateObject().getMonth()===11||getCurrentDateObject().getMonth()===0){
-      landscape = <View style={{width:Dimensions.get('window').width, height: "100%", zIndex:1, position:'absolute', overflow: "hidden" }}><LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeSnow.json')}/></View>
-    } else if (this.todayEvents[0]!==undefined && (this.todayEvents[0].name==="Festivale" || this.todayEvents[0].name.includes("Firework")) || this.todayEvents[1]!==undefined && (this.todayEvents[1].name==="Festivale" || this.todayEvents[1].name.includes("Firework"))){
-      landscape = <View style={{width:Dimensions.get('window').width, height: "100%", zIndex:1, position:'absolute', overflow: "hidden" }}><LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeCelebration.json')}/></View>
-    }
+    
     const sections = this.state.sections;
     return <View style={{height:"100%",width:"100%"}}>
+      {this.state.loaded===true?<>
       <PopupBottomCustom ref={(popupSettings) => this.popupSettings = popupSettings} onClose={()=>{}}>
         <ConfigureHomePages header={"Select Homepage Sections"} refreshEvents={()=>{this.refreshEvents()}} setPages={(checked,name)=>this.setPages(checked,name)} sections={this.state.sections}/>
       </PopupBottomCustom>
       <PopupBottomCustom ref={(popupEventsSettings) => this.popupEventsSettings = popupEventsSettings} onClose={()=>{}}>
-        <ConfigureHomePages setPage={(page)=>this.props.setPage(page)} header={"Select Events"} refreshEvents={()=>{this.refreshEvents()}} setPages={(checked,name)=>this.setEventPages(checked,name)} sections={this.state.eventSections}/>
+        <ConfigureHomePages header={"Select Events"} refreshEvents={()=>{this.refreshEvents()}} setPages={(checked,name)=>this.setEventPages(checked,name)} sections={this.state.eventSections}/>
       </PopupBottomCustom>
+      </>:<View/>}
         <ScrollView ref={this.scrollViewRef}>
           <View style={{height:45}}/>
           <Clock swapDate={doWeSwapDate()}/>
@@ -133,7 +195,7 @@ class HomePage extends Component {
             </TouchableOpacity>
           </View>
           {/* If todo is the first page to be loaded, wait to fade in */}
-          <FadeInOut fadeIn={this.state.sections!==""&&(this.state.sections["Events"] || this.state.loadedToDo===true || this.state.sections["To-Do"]===false)?true:false} duration={200} startValue={0} endValue={1} maxFade={1} minScale={0.9} >
+          {this.state.loaded===true?<FadeInOut fadeIn={this.state.sections!==""&&(this.state.sections["Events"] || this.state.loadedToDo===true || this.state.sections["To-Do"]===false)?true:false} duration={200} startValue={0} endValue={1} maxFade={1} minScale={0.9} >
             {sections["Events"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.eventsColor[global.darkMode]} title="Events" titleColor={colors.eventsColor[global.darkModeReverse]}>
               <TouchableOpacity style={{padding:10, paddingVertical:12, position:"absolute",right:0}} 
                 onPress={()=>{this.popupEventsSettings.setPopupVisible(true); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}
@@ -183,16 +245,7 @@ class HomePage extends Component {
               <View style={{height: 25}}/>
             </HomeContentArea>:<View/>}
             {sections["Collection"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.collectionColor[global.darkMode]} title="Collection" titleColor={colors.collectionColor[global.darkModeReverse]}>
-              <View style={{height: 15}}/>
-              <ProgressContainer color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={fishPercentage} image={require("../assets/icons/fish.png")} text={attemptToTranslate("Fish") + " " + fishCount + "/80"}/>
-              <ProgressContainer color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={seaPercentage} image={require("../assets/icons/octopus.png")} text={attemptToTranslate("Sea Creatures") + " " + seaCount + "/40"}/>
-              <ProgressContainer color={colors.bugAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={bugsPercentage} image={require("../assets/icons/bugs.png")} text={attemptToTranslate("Bugs") + " " + bugsCount + "/80"}/>
-              <ProgressContainer color={colors.fossilAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={fossilPercentage} image={require("../assets/icons/bones.png")} text={attemptToTranslate("Fossils") + " " + fossilCount + "/73"}/>
-              <ProgressContainer color={colors.artAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={artPercentage} image={require("../assets/icons/colorPalette.png")} text={attemptToTranslate("Art") + " " + artCount + "/43"}/>
-              <ProgressContainer color={colors.musicAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={musicPercentage} image={require("../assets/icons/music.png")} text={attemptToTranslate("Songs") + " " + musicCount + "/95"}/>
-              <ProgressContainer color={colors.emojipediaAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={emojipediaPercentage} image={require("../assets/icons/emote.png")} text={attemptToTranslate("Emotes") + " " + emojipediaCount + "/" + global.dataLoadedReactions[0].length.toString()}/>
-              <ProgressContainer color={colors.toolsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={recipePercentage} image={require("../assets/icons/crafting.png")} text={attemptToTranslate("Recipes") + " " + recipeCount + "/" + global.dataLoadedRecipes[0].length.toString()}/>
-              <View style={{height: 15}}/>
+              <CollectionProgress navigation={this.props.navigation}/>
             </HomeContentArea>:<View/>}
             {sections["Profile"]===true?<HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.profileColor[global.darkMode]} title="Profile" titleColor={colors.profileColor[global.darkModeReverse]}>
               <View style={{height: 37}}/>
@@ -219,7 +272,7 @@ class HomePage extends Component {
                   multiline={false}
                 />
                 <TextFont bold={true} style={{marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{translateIslandNameInputLabel2()}</TextFont>
-                <TouchableOpacity onPress={() => this.props.setPage(13)}>
+                <TouchableOpacity onPress={() => this.props.setPage("SettingsPage")}>
                   <TextFont bold={false} style={{padding:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{getSettingsString("settingsNorthernHemisphere")==="true" ? "Northern Hemisphere" : "Southern Hemisphere"}</TextFont>
                 </TouchableOpacity>
                 <View style={{height: 5}}/>
@@ -235,8 +288,8 @@ class HomePage extends Component {
                   sizeContainer={[45,45]}
                 />
               </View>
-              <CurrentVillagers openVillagerPopup={this.openVillagerPopup} setPage={this.props.setPage}/>
-              {/* {getCurrentVillagerNamesString()==="You have no favorite villagers"?<View/>:<TouchableOpacity onPress={() => this.props.setPage(21)}>
+              <CurrentVillagers navigation={this.props.navigation} openVillagerPopup={this.openVillagerPopup} setPage={this.props.setPage}/>
+              {/* {getCurrentVillagerNamesString()==="You have no favorite villagers"?<View/>:<TouchableOpacity onPress={() => this.props.setPage("VillagersPage")}>
                 {getInverseVillagerFilters(true)===""?<TextFont suffix={"\n"+attemptToTranslate("Note: you can get all items since you have all personality types!")} style={{marginHorizontal: 30, color: colors.fishText[global.darkMode], fontSize: 11, textAlign:"center"}}>{"See what you can get from your villagers."}</TextFont>:<>
                 <TextFont style={{marginHorizontal: 30, color: colors.fishText[global.darkMode], fontSize: 11, textAlign:"center"}}>{"It is recommended you get all villager personalities to get DIYs and Reactions. Tap here to see what you might be missing out on."}</TextFont>
                 <TextFont suffix={"\n "+getInverseVillagerFilters(true)} style={{marginHorizontal: 30, color: colors.fishText[global.darkMode], fontSize: 13, textAlign:"center"}}>{"Missing personalities:"}</TextFont></>}
@@ -250,14 +303,14 @@ class HomePage extends Component {
               <View style={{height: 15}}/>
             </HomeContentArea>:<View/>}
             {sections["Active Creatures"]===true?<HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.activeCreaturesColor[global.darkMode]} title="Active Creatures" titleColor={colors.activeCreaturesColor[global.darkModeReverse]}>
-              <ActiveCreatures scrollViewRef={this.scrollViewRef}/>
+              <ActiveCreatures navigation={this.props.navigation} scrollViewRef={this.scrollViewRef}/>
             </HomeContentArea>:<View/>}
             {sections["Active Creatures"]===true?<View/>:<View style={{height:130}}/>}
-        </FadeInOut>
+        </FadeInOut>:<View/>}
       </ScrollView>
       
       <View style={{position:"absolute", width: "100%", height:"100%", zIndex:-5}}>
-        {landscape}
+        {this.landscape}
         <View style={[styles.homeScreenBackgroundTop,{backgroundColor:colors.skyColor[global.darkMode]}]}/>
         <Image style={{width:Dimensions.get('window').width, height:Dimensions.get('window').height-295, resizeMode:"stretch",zIndex:10, backgroundColor:colors.grassColor[global.darkMode]}} source={global.darkMode===1 ? require("../assets/icons/cliffDark.png") : require("../assets/icons/cliff.png")} />
       </View>
@@ -508,6 +561,59 @@ class VillagerPopupPopup extends Component {
         <TextFont bold={true} style={{textAlign:"center",fontSize: 30, marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{this.state.item.["Name"]}</TextFont>
         {villagerPopup}
       </PopupBottomCustom>
+    )
+  }
+}
+
+class CollectionProgress extends Component {
+  componentWillUnmount(){
+    this.props.navigation.removeListener();
+  }
+  componentDidMount(){
+    this.props.navigation.addListener(
+      'focus',
+      payload => {
+        this.forceUpdate();
+      }
+    );
+  }
+  render(){
+    var fishCount = countCollection("fishCheckList");
+    var fishCountTotal = 80;
+    var fishPercentage = fishCount/fishCountTotal * 100;
+    var seaCount = countCollection("seaCheckList");
+    var seaCountTotal = 40;
+    var seaPercentage = seaCount/seaCountTotal * 100;
+    var bugsCount = countCollection("bugCheckList");
+    var bugsCountTotal = 80;
+    var bugsPercentage = bugsCount/bugsCountTotal * 100;
+    var fossilCount = countCollection("fossilCheckList");
+    var fossilCountTotal = 73
+    var fossilPercentage = fossilCount/fossilCountTotal * 100;
+    var artCount = countCollection("artCheckList");
+    var artCountTotal = 43;
+    var artPercentage = artCount/artCountTotal * 100;
+    var musicCount = countCollection("songCheckList");
+    var musicCountTotal = 95;
+    var musicPercentage = musicCount/musicCountTotal * 100;
+    var emojipediaCount = countCollection("emojiCheckList");
+    var emojipediaCountTotal = global.dataLoadedReactions[0].length;
+    var emojipediaPercentage = emojipediaCount/emojipediaCountTotal * 100;
+    var recipeCount = countCollection("recipesCheckList");
+    var recipeCountTotal = global.dataLoadedRecipes[0].length;
+    var recipePercentage = recipeCount/recipeCountTotal * 100;
+    return(<>
+      <View style={{height: 15}}/>
+      <ProgressContainer color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={fishPercentage} image={require("../assets/icons/fish.png")} text={attemptToTranslate("Fish") + " " + fishCount + "/" + fishCountTotal.toString()}/>
+      <ProgressContainer color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={seaPercentage} image={require("../assets/icons/octopus.png")} text={attemptToTranslate("Sea Creatures") + " " + seaCount + "/" + seaCountTotal.toString()}/>
+      <ProgressContainer color={colors.bugAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={bugsPercentage} image={require("../assets/icons/bugs.png")} text={attemptToTranslate("Bugs") + " " + bugsCount + "/" + bugsCountTotal.toString()}/>
+      <ProgressContainer color={colors.fossilAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={fossilPercentage} image={require("../assets/icons/bones.png")} text={attemptToTranslate("Fossils") + " " + fossilCount + "/" + fossilCountTotal.toString()}/>
+      <ProgressContainer color={colors.artAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={artPercentage} image={require("../assets/icons/colorPalette.png")} text={attemptToTranslate("Art") + " " + artCount + "/" + artCountTotal.toString()}/>
+      <ProgressContainer color={colors.musicAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={musicPercentage} image={require("../assets/icons/music.png")} text={attemptToTranslate("Songs") + " " + musicCount + "/" + musicCountTotal.toString()}/>
+      <ProgressContainer color={colors.emojipediaAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={emojipediaPercentage} image={require("../assets/icons/emote.png")} text={attemptToTranslate("Emotes") + " " + emojipediaCount + "/" + emojipediaCountTotal.toString()}/>
+      <ProgressContainer color={colors.toolsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={recipePercentage} image={require("../assets/icons/crafting.png")} text={attemptToTranslate("Recipes") + " " + recipeCount + "/" + recipeCountTotal.toString()}/>
+      <View style={{height: 15}}/>
+      </>
     )
   }
 }

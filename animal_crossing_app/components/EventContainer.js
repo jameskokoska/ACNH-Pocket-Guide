@@ -60,7 +60,7 @@ export function getEventsDay(date, eventSections){
           weekday:date.getDay(),
         });
         if(eventSections["App notifications"]){
-          schedulePushNotification(date,eventSections["Set Notification Time"],"🎂 " + capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),"All day");
+          schedulePushNotification(date,eventSections["Set Notification Time"],"🎂 " + capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),attemptToTranslate("All day"));
         }
       } else if (eventSections["All Villager's Birthdays"]){
         totalEvents.push({
@@ -91,18 +91,18 @@ export function getEventsDay(date, eventSections){
   } else if (eventSections["K.K. Slider"] && date.getDay()===6){
     totalEvents.push({
       name: attemptToTranslate("K.K. Slider"),
-      time: getSettingsString("settingsUse24HourClock") === "true" ? "20:00 - 24:00" : "8 PM - 12 AM",
+      time: getSettingsString("settingsUse24HourClock") === "true" ? "20:00 - 00:00" : "8 PM - 12 AM",
       image:"music.png",
       day:date.getDate(),
       weekday:date.getDay(),
     });
     if(eventSections["App notifications"]){
-      schedulePushNotification(date,eventSections["Set Notification Time"],"🎵 " + attemptToTranslate('K.K. Slider'),getSettingsString("settingsUse24HourClock") === "true" ? "20:00 - 24:00" : "8 PM - 12 AM");
+      schedulePushNotification(date,eventSections["Set Notification Time"],"🎵 " + attemptToTranslate('K.K. Slider'),getSettingsString("settingsUse24HourClock") === "true" ? "20:00 - 00:00" : "8 PM - 12 AM");
     }
   }
 
   seasonData.map( (event, index)=>{
-    var eventName = attemptToTranslateItem(event["Name"]).replace("ready days", "Ready Days")
+    var eventName = attemptToTranslate(attemptToTranslateItem(event["Name"]).replace("ready days", "Ready Days"))
     //Only include special events, not ready days
     if((event["Type"].toLowerCase()==="special event" || event["Type"].toLowerCase()==="basegame event") && !event["Name"].toLowerCase().includes("ready days") || 
       eventSections["Crafting Seasons"] && event["Type"].toLowerCase()==="crafting season" ||
@@ -122,7 +122,7 @@ export function getEventsDay(date, eventSections){
             color:colors.startEventBackground[global.darkMode]
           });
           if(eventSections["App notifications"]){
-            schedulePushNotification(date,eventSections["Set Notification Time"],capitalize(event["Name"]),event["Type"]);
+            schedulePushNotification(date,eventSections["Set Notification Time"],capitalize(eventName),event["Type"]);
           }
         } else if(eventSections["Show End Day of Events"] && isDateInRange(event["Dates (Northern Hemisphere)"], date.getFullYear(), date, "endOnly")){
           totalEvents.push({
@@ -134,7 +134,7 @@ export function getEventsDay(date, eventSections){
             color:colors.warningEventBackground[global.darkMode]
           });
           if(eventSections["App notifications"]){
-            schedulePushNotification(date,eventSections["Set Notification Time"],"Last day! " + capitalize(event["Name"]),attemptToTranslate(capitalize(event["Type"])));
+            schedulePushNotification(date,eventSections["Set Notification Time"],attemptToTranslate("Last day!") + " " + eventName, attemptToTranslate(capitalize(event["Type"])));
           }
         }
       } else if (event["Dates (Southern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")!=="true"){
@@ -148,7 +148,7 @@ export function getEventsDay(date, eventSections){
             color:colors.startEventBackground[global.darkMode]
           });
           if(eventSections["App notifications"]){
-            schedulePushNotification(date,eventSections["Set Notification Time"],capitalize(event["Name"]),event["Type"]);
+            schedulePushNotification(date,eventSections["Set Notification Time"],capitalize(eventName),event["Type"]);
           }
         } else if(eventSections["Show End Day of Events"] && isDateInRange(event["Dates (Southern Hemisphere)"], date.getFullYear(), date, "endOnly")){
           totalEvents.push({
