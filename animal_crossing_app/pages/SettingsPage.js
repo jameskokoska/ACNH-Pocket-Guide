@@ -11,7 +11,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {ExportFile, LoadFile} from '../components/LoadFile';
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 import {attemptToTranslate, deleteSavedPhotos, resetFilters} from '../LoadJsonData';
-import {cancelAllPushNotifications, schedulePushNotification} from '../Notifications'
+import {cancelAllPushNotifications, pushNotification} from '../Notifications'
 import {SubHeader, Paragraph, HeaderNote, MailLink, Header} from "../components/Formattings"
 import DropDownPicker from 'react-native-dropdown-picker'
 import {PopupBottomCustom} from "../components/Popup"
@@ -46,10 +46,6 @@ class SettingsPage extends Component {
       <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
         <SettingsPopup ref={(popup) => this.popup = popup}/>
         <ScrollView>
-          <TouchableOpacity onPress={()=>{schedulePushNotification(new Date(), 12, "hello","hello")}} style={{backgroundColor:"green", width:50, height:50}}>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={()=>{cancelAllPushNotifications()}} style={{backgroundColor:"green", width:50, height:50}}>
-          </TouchableOpacity>
           <View style={{marginTop: 100}}/>
           <Header>Settings</Header>
           <HeaderNote>Tap each setting to learn more</HeaderNote>

@@ -48,6 +48,15 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
+-Big update: 
+-Added event notifications!
+-Added Visitors section - this will help you predict and keep track of who will visit next
+-Added Visitors history
+-Re-created the Events section
+-Day of the week is now used instead of month
+-More events displayed!
+-Customize which events are shown and which notifications to get, go to [Edit Events] in the [Events] section of the home page
+-
 -Added recipes collection progress
 -Can zoom in on artwork - tap the artwork in the popup and pinch to zoom
 -
@@ -143,12 +152,6 @@ global.changelog = `
 -French language translation supported, thanks Christophe!
 -Note: translations only apply to items, apart from supported translated languages
 -Images are now downloaded, can be used offline (can be disabled in settings)
--
--
--Planned Features:
-- Visitors tracking
-- Notification reminders for events
--
 `
 
 class App extends Component {
@@ -245,6 +248,7 @@ class App extends Component {
       "Events" : true,   
       "To-Do" : true,
       "To-Do - Turnip Log" : true,
+      "Visitors" : true,
       "Collection" : true,
       "Profile" : true,
       "Profile - Dream Address" : true,
@@ -256,8 +260,8 @@ class App extends Component {
 
     //load home screen events
     const defaultEventSections = {
-      "Info1" : "You can enable/disable notifications in the settings. Notifications are created based on the categories you select. They are only loaded one week into the future and are set according to your phone time.",
-      "Notification Setting" : false,
+      "Info1" : "Notifications are created based on the categories you select. They are only loaded one week into the future and are set according to your phone time.",
+      "App notifications" : false,
       "Set Notification Time" : "",
       "Favorite Villager's Birthdays" : true,
       "All Villager's Birthdays" : false,

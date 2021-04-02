@@ -448,7 +448,7 @@ export const settings = [
     "defaultValue" : "true",
     "currentValue" : "",
     "picture" : require("./assets/icons/bell.png"),
-    "displayName" : "Allow app notifications",
+    "displayName" : "App notifications",
     "description" : "This will enable/disable notifications. You can select event notifications under the [Edit Events] of the [Events] section on the homepage.",
   },
   // {

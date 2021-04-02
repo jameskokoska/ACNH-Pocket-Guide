@@ -1,7 +1,7 @@
 import * as Font from 'expo-font';
 import React, {Component} from 'react';
 import {Text} from 'react-native';
-import {getSettingsString} from "../LoadJsonData"
+import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
 
 export function doWeSwapDate(){
   if(global.language.includes("French")){
@@ -9,6 +9,13 @@ export function doWeSwapDate(){
   } else {
     return false;
   }
+}
+
+//in the form 2021-04-11
+export function getDateStringMonthDay(date){
+  var day = parseInt(date.slice(8,10))
+  var month =attemptToTranslate(getMonth(parseInt(date.slice(5,7))-1))
+  return attemptToTranslate("Week of") + " " + (doWeSwapDate()===false ? month + " " + day.toString() : day.toString() + " " + month);
 }
 
 function getCurrentDateObject(){
@@ -23,6 +30,18 @@ function getCurrentDateObject(){
 function getMonth(currentMonth){
   var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   return months[currentMonth];
+}
+
+export function getMonday(){
+  var date = new Date(getCurrentDateObject());
+  var day = date.getDay();
+  var prevMonday = new Date(getCurrentDateObject());
+  if(date.getDay() == 0){
+    prevMonday.setDate(date.getDate() - 7);
+  }else{
+    prevMonday.setDate(date.getDate() - (day));
+  }
+  return prevMonday;
 }
 
 function getMonthFromString(currentMonthString, integer=false){
@@ -48,7 +67,7 @@ function getMonthShort(currentMonth){
 
 function getWeekDay(currentWeekDay){
   var weekDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-  return days[currentWeekDay];
+  return weekDays[currentWeekDay];
 }
 
 function getWeekDayShort(currentWeekDay){

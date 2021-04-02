@@ -107,6 +107,8 @@ const colors = {
     selectWishlist: ["#FDE7E9", "#886769"],
     selectAchievements : ["#E8ECFD","#566181"],
     selectObtainable : ["#F0EBD5", "#777459"],
+    selectText : ["#7792A8","#3C7477"],
+    selectedText : ["#5B82AF","#2D82A3"],
     achievementsAppBar : ["#C1CBF7","#485068"],
     achievementsNoun : ["#5c6bc0","#3C56A3"],
     achievementsModifier : ["#548BAA","#3C8BA3"],

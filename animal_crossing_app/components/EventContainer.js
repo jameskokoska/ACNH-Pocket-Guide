@@ -59,7 +59,7 @@ export function getEventsDay(date, eventSections){
           day:date.getDate(),
           weekday:date.getDay(),
         });
-        if(getSettingsString("settingsNotifications")){
+        if(eventSections["App notifications"]){
           schedulePushNotification(date,eventSections["Set Notification Time"],"🎂 " + capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),"All day");
         }
       } else if (eventSections["All Villager's Birthdays"]){
@@ -70,7 +70,7 @@ export function getEventsDay(date, eventSections){
           day:date.getDate(),
           weekday:date.getDay(),
         });
-        if(getSettingsString("settingsNotifications")){
+        if(eventSections["App notifications"]){
           schedulePushNotification(date,eventSections["Set Notification Time"],"🎂 " + capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),attemptToTranslate("All day"));
         }
       }
@@ -85,7 +85,7 @@ export function getEventsDay(date, eventSections){
       day:date.getDate(),
       weekday:date.getDay(),
     });
-    if(getSettingsString("settingsNotifications")){
+    if(eventSections["App notifications"]){
       schedulePushNotification(date,eventSections["Set Notification Time"],"🥬 " + attemptToTranslate('Daisy Mae'),getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 12:00" : "5 AM - 12 PM");
     }
   } else if (eventSections["K.K. Slider"] && date.getDay()===6){
@@ -96,7 +96,7 @@ export function getEventsDay(date, eventSections){
       day:date.getDate(),
       weekday:date.getDay(),
     });
-    if(getSettingsString("settingsNotifications")){
+    if(eventSections["App notifications"]){
       schedulePushNotification(date,eventSections["Set Notification Time"],"🎵 " + attemptToTranslate('K.K. Slider'),getSettingsString("settingsUse24HourClock") === "true" ? "20:00 - 24:00" : "8 PM - 12 AM");
     }
   }
@@ -121,7 +121,7 @@ export function getEventsDay(date, eventSections){
             weekday:date.getDay(),
             color:colors.startEventBackground[global.darkMode]
           });
-          if(getSettingsString("settingsNotifications")){
+          if(eventSections["App notifications"]){
             schedulePushNotification(date,eventSections["Set Notification Time"],capitalize(event["Name"]),event["Type"]);
           }
         } else if(eventSections["Show End Day of Events"] && isDateInRange(event["Dates (Northern Hemisphere)"], date.getFullYear(), date, "endOnly")){
@@ -133,7 +133,7 @@ export function getEventsDay(date, eventSections){
             weekday:date.getDay(),
             color:colors.warningEventBackground[global.darkMode]
           });
-          if(getSettingsString("settingsNotifications")){
+          if(eventSections["App notifications"]){
             schedulePushNotification(date,eventSections["Set Notification Time"],"Last day! " + capitalize(event["Name"]),attemptToTranslate(capitalize(event["Type"])));
           }
         }
@@ -147,7 +147,7 @@ export function getEventsDay(date, eventSections){
             weekday:date.getDay(),
             color:colors.startEventBackground[global.darkMode]
           });
-          if(getSettingsString("settingsNotifications")){
+          if(eventSections["App notifications"]){
             schedulePushNotification(date,eventSections["Set Notification Time"],capitalize(event["Name"]),event["Type"]);
           }
         } else if(eventSections["Show End Day of Events"] && isDateInRange(event["Dates (Southern Hemisphere)"], date.getFullYear(), date, "endOnly")){
@@ -159,7 +159,7 @@ export function getEventsDay(date, eventSections){
             weekday:date.getDay(),
             color:colors.warningEventBackground[global.darkMode]
           });
-          if(getSettingsString("settingsNotifications")){
+          if(eventSections["App notifications"]){
             schedulePushNotification(date,eventSections["Set Notification Time"],attemptToTranslate("Last day!") + " " + eventName, attemptToTranslate(capitalize(event["Type"])));
           }
         }

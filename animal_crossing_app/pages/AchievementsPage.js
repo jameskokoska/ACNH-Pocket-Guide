@@ -110,6 +110,7 @@ class AchievementsPopup extends Component {
           elevation: 3, 
           marginVertical: 5,
           alignSelf: 'flex-start', 
+          textAlign: 'center', 
           backgroundColor: colors.achievementsModifier[global.darkMode], 
           borderRadius: 10}}
           translate={false}
@@ -128,6 +129,7 @@ class AchievementsPopup extends Component {
           elevation: 3, 
           marginVertical: 5,
           alignSelf: 'flex-start', 
+          textAlign: 'center', 
           backgroundColor: colors.achievementsNoun[global.darkMode], 
           borderRadius: 10}}
           translate={false}

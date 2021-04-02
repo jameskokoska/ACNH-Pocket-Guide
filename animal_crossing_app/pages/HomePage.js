@@ -27,7 +27,7 @@ import FastImage from "../components/FastImage"
 import {cancelAllPushNotifications} from "../Notifications"
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 import ButtonComponent from "../components/ButtonComponent"
-
+import {SelectionImage} from "../components/Selections"
 
 function addDays(date, days) {
   var result = new Date(date);
@@ -40,6 +40,9 @@ class HomePage extends Component {
     super(props);
     this.scrollViewRef = React.createRef();
     var eventSections = this.props.eventSections;
+    if(eventSections["App notifications"]!==undefined){
+      getSettingsString("settingsNotifications")==="true" ? eventSections["App notifications"]=true : eventSections["App notifications"]=false;
+    }
     this.state = {sections:this.props.sections, eventSections:eventSections}
     this.refreshEvents();
   }
@@ -174,11 +177,11 @@ class HomePage extends Component {
               <TodoList sections={sections} setLoadedToDo={this.setLoadedToDo}/>
               <View style={{height: 15}}/>
             </HomeContentArea>:<View/>}
-            {/* <HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.todoColor[global.darkMode]} title="Visitors" titleColor={colors.visitorsColor[global.darkModeReverse]}>
+            {sections["Visitors"]===true?<HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.visitorsColor[global.darkMode]} title="Visitors" titleColor={colors.visitorsColor[global.darkModeReverse]}>
               <View style={{height: 15}}/>
               <VisitorsList/>
-              <View style={{height: 15}}/>
-            </HomeContentArea> */}
+              <View style={{height: 25}}/>
+            </HomeContentArea>:<View/>}
             {sections["Collection"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.collectionColor[global.darkMode]} title="Collection" titleColor={colors.collectionColor[global.darkModeReverse]}>
               <View style={{height: 15}}/>
               <ProgressContainer color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={fishPercentage} image={require("../assets/icons/fish.png")} text={attemptToTranslate("Fish") + " " + fishCount + "/80"}/>
@@ -223,7 +226,14 @@ class HomePage extends Component {
                 {sections["Profile - Dream Address"]===true?<DreamAddress/>:<View/>}
                 {sections["Profile - Friend Code"]===true?<FriendCode/>:<View/>}
                 <View style={{height: 18}}/>
-                <ChosenFruit/>
+                <SelectionImage 
+                  selectedImage={global.selectedFruit} 
+                  images={[getMaterialImage("apple",true),getMaterialImage("cherry",true),getMaterialImage("orange",true),getMaterialImage("peach",true),getMaterialImage("pear",true)]}
+                  onSelected={(image)=>{AsyncStorage.setItem("selectedFruit", image); global.selectedFruit=image;}}
+                  canDeselect={true}
+                  sizeImageOnline={[35,35]}
+                  sizeContainer={[45,45]}
+                />
               </View>
               <CurrentVillagers openVillagerPopup={this.openVillagerPopup} setPage={this.props.setPage}/>
               {/* {getCurrentVillagerNamesString()==="You have no favorite villagers"?<View/>:<TouchableOpacity onPress={() => this.props.setPage(21)}>
@@ -357,52 +367,6 @@ class FriendCode extends Component {
   }
 }
 
-class ChosenFruit extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      popupVisible: false,
-      smallToggle:false,
-      selectedImage: global.selectedFruit
-    };
-    this.images = [getMaterialImage("apple",true),getMaterialImage("cherry",true),getMaterialImage("orange",true),getMaterialImage("peach",true),getMaterialImage("pear",true)]
-  }
-  render(){
-    
-    return(<>
-      <View style={{flex: 1, flexWrap: 'wrap', flexDirection:"row",justifyContent:"center"}}>
-      {this.images.map( (image, index)=>{
-        return(
-          <View key={image+index} style={{width: 45,height: 45, margin:3}}>
-            <TouchableOpacity 
-              onPress={()=>{
-                if(this.state.selectedImage===image){
-                  this.setState({selectedImage:""});
-                  global.selectedFruit="";
-                  AsyncStorage.setItem("selectedFruit", "");
-                } else {
-                  this.setState({selectedImage:image});
-                  global.selectedFruit=image;
-                  AsyncStorage.setItem("selectedFruit", image);
-                  getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10]) : "";
-                }
-              }}
-            >
-              <View style={{width: 45,height: 45,borderRadius: 100,justifyContent: "center",alignItems: "center",borderWidth: 2, borderColor: image===this.state.selectedImage ? colors.checkGreen[global.darkMode] : colors.eventBackground[global.darkMode], backgroundColor:colors.eventBackground[global.darkMode]}}>
-                <FastImage
-                  style={{height: 35,width: 35,resizeMode:'contain',}}
-                  source={{uri:image}}
-                  cacheKey={image}
-                />
-              </View>
-            </TouchableOpacity>
-          </View>
-      )})}
-    </View></>)
-  }
-    
-}
-
 
 class ConfigureHomePages extends Component {
   constructor(props) {
@@ -431,6 +395,9 @@ class ConfigureHomePages extends Component {
     if(this.props.header==="Select Events"){
       this.props.refreshEvents();
     }
+    if(name==="App notifications"){
+      setSettingsString("settingsNotifications", check?"true":"false")
+    }
   }
   render(){
     const sectionNames = Object.keys(this.state.sections);
@@ -441,11 +408,7 @@ class ConfigureHomePages extends Component {
           if(name.includes("Break")){
             return <View style={{height:30}} key={name+index.toString()}/>
           } else if(name.includes("Info")){
-            return <Paragraph styled={true} key={name+index.toString()}>{this.props.sections[name]}</Paragraph>
-          } else if(name==="Notification Setting"){
-            return <TouchableOpacity style={{paddingVertical:10,}} key={name+index.toString()} onPress={()=>{this.props.setPage(13)}}>
-              <Paragraph styled={true} style={{color: colors.fishText[global.darkMode], margin:0, fontSize: 16}}>{getSettingsString("settingsNotifications")==="true"?"Notifications are enabled.":"Notifications are disabled."}</Paragraph>
-            </TouchableOpacity>
+            return <Paragraph styled={true} style={{marginBottom:10}} key={name+index.toString()}>{this.props.sections[name]}</Paragraph>
           } else if(name==="Set Notification Time"){
             return <SetNotificationTime key={name+index.toString()} title={name} setPages={this.setPages}/>
           } else {

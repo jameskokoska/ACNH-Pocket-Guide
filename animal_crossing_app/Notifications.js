@@ -3,36 +3,28 @@ import React, {Component} from 'react';
 import {getSettingsString} from "./LoadJsonData"
 
 export async function schedulePushNotification(date,time,name,body) {
-  if(getSettingsString("settingsNotifications")==="true"){
-    const dateTrigger = new Date(date);
-    const timeChosen = new Date(time)
-    if(time!==""){
-      dateTrigger.setHours(timeChosen.getHours());
-      dateTrigger.setMinutes(timeChosen.getMinutes());
-    } else {
-      dateTrigger.setHours(8);
-      dateTrigger.setMinutes(0);
-    }
-    
-    const trigger = dateTrigger;
-    console.log("Schedule notification " + name + " " + body)
-    console.log("For: " + dateTrigger.getHours() + ":"+dateTrigger.getMinutes() + " " + dateTrigger)
-    await Notifications.scheduleNotificationAsync({
-      content: {
-        title: name,
-        body: body,
-      },
-      trigger,
-    });
+  const dateTrigger = new Date(date);
+  const timeChosen = new Date(time)
+  if(time!==""){
+    dateTrigger.setHours(timeChosen.getHours());
+    dateTrigger.setMinutes(timeChosen.getMinutes());
+  } else {
+    dateTrigger.setHours(8);
+    dateTrigger.setMinutes(0);
   }
+  
+  const trigger = dateTrigger;
+  // console.log("Schedule notification " + name + " " + body)
+  // console.log("For: " + dateTrigger.getHours() + ":"+dateTrigger.getMinutes() + " " + dateTrigger)
   await Notifications.scheduleNotificationAsync({
     content: {
-      title: "You've got mail! 📬",
-      body: 'Here is the notification body',
-      data: { data: 'goes here' },
+      title: name,
+      body: body,
+      color : "#5EB950",
     },
-    trigger: { seconds: 2 },
+    trigger,
   });
+  
 }
 
 export async function logNextTriggerDate() {
@@ -47,6 +39,6 @@ export async function logNextTriggerDate() {
 }
 
 export function cancelAllPushNotifications() {
-  console.log("cancelled all subscriptions")
+  // console.log("cancelled all subscriptions")
   Notifications.cancelAllScheduledNotificationsAsync();
 }

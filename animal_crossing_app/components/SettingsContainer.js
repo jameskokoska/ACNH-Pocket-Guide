@@ -41,7 +41,10 @@ class SettingsContainer extends Component {
                   this.props.deleteSavedPhotos();
                 }
                 if(this.props.keyName==="settingsNotifications" && this.state.toggle === true){
+                  cancelAllPushNotifications();
                   this.props.popupLoadNotifications();
+                }
+                if(this.props.keyName==="settingsNotifications" && this.state.toggle === false){
                   cancelAllPushNotifications();
                 }
               }}

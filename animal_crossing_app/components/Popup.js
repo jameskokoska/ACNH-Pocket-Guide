@@ -136,6 +136,9 @@ export class PopupInfoCustom extends Component {
     if(this.mounted){
       this.setState({popupVisible:visible});
     }
+    if(this.props.onClose!==undefined && !visible){
+      this.props.onClose();
+    }
   }
 
   render(){
