@@ -577,7 +577,7 @@ class BottomSheetRender extends Component{
     //Add popup classes here
     var popUpContainer = <View/>
     var marginHorizontal = 0;
-    if(this.props.popUpContainer!==undefined && this.state.item.dataSet!==undefined){
+    if(this.props.popUpContainer!==undefined && this.props.popUpContainer.hasOwnProperty(this.state.item.dataSet) && this.state.item.dataSet!==undefined){
       if(this.props.popUpContainer[this.state.item.dataSet][0]==="FishPopup"){
         popUpContainer = <FishPopup item={this.state.item}/>
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="SeaPopup"){

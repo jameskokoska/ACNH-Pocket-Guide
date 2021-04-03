@@ -246,7 +246,7 @@ class ListItem extends PureComponent{
       )
     } else { //Row component
       var fishShadow = <View/>
-      if(this.props.popUpContainer!==undefined && this.props.popUpContainer[this.props.item.dataSet][0]==="FishPopup"){
+      if(this.props.popUpContainer!==undefined && this.props.popUpContainer.hasOwnProperty(this.props.item.dataSet) && this.props.popUpContainer[this.props.item.dataSet][0]==="FishPopup"){
         fishShadow = <View style={{position:"absolute", right: 75, bottom: 20,}}><Image style={{width:80,height:22,resizeMode:'contain',  marginRight:3}} source={getPhotoShadow(this.props.item,false)}/></View>
       }
       return( 

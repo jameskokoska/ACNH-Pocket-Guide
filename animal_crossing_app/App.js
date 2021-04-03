@@ -41,6 +41,7 @@ import VillagerPresentsPage from "./pages/VillagerPresentsPage"
 import ObtainableItemsPage from "./pages/ObtainableItemsPage"
 import { NavigationContainer, DrawerActions, CommonActions, DefaultTheme} from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { enableScreens } from 'react-native-screens';
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -159,6 +160,7 @@ global.changelog = `
 -Images are now downloaded, can be used offline (can be disabled in settings)
 `
 
+enableScreens();
 const Drawer = createDrawerNavigator();
 global.settingsUpdated = false;
 
@@ -185,7 +187,7 @@ class App extends Component {
   }
 
   handleBackButton = ()=>{
-    this.openDrawer();
+    this.openDrawer(false);
     return true;
   }
 
@@ -319,7 +321,6 @@ class App extends Component {
 
   openDrawer = (vibrate=true)=>{
     if(this.state.loaded){
-      // this.navigationRef.openDrawer();
       this.navigationRef.dispatch(DrawerActions.openDrawer());
       getSettingsString("settingsEnableVibrations")==="true"&&vibrate ? Vibration.vibrate(8) : "";
     }
@@ -327,8 +328,12 @@ class App extends Component {
   }
 
   setPage = (pageName) => {
+    console.log(pageName)
     if(this.state.loaded){
-      this.navigationRef.navigate(pageName);
+      this.navigationRef?.resetRoot({
+        index: 0,
+        routes: [{ name: pageName }],
+      });
     }
     return true;
   }
@@ -392,12 +397,12 @@ function PageLoading(){
   var splashScreens = [require('./assets/airplane.json'),require('./assets/balloon.json')];
   var chosenSplashScreen = splashScreens[Math.floor(Math.random() * splashScreens.length)];
   return (
-    <>
-      <View style={{position: "absolute", backgroundColor: colors.background[Appearance.getColorScheme()==="light" ? 0 : 1], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
-      <FadeInOut fadeIn={true}>
-        <LottieView autoPlay loop style={{top: Dimensions.get('window').height/8, width: "100%",zIndex:1,transform: [{ scale: 1.25 },],}} source={chosenSplashScreen}/>
-      </FadeInOut>
-      </>
+    
+      <View style={{alignItems:"center", justifyContent:"center",backgroundColor: "#00000000", width:Dimensions.get('window').width, height:Dimensions.get('window').height*0.9}}>
+        <FadeInOut fadeIn={true}>
+          <LottieView autoPlay loop style={{width: "95%",zIndex:1,transform: [{ scale: 1.25 },],}} source={chosenSplashScreen}/>
+        </FadeInOut>
+      </View>
   )
 }
 

@@ -14,7 +14,7 @@ class RecipesPopup extends Component {
   }
   render(){
     return <View style={{width: "100%", alignItems: "center"}}>
-      <InfoLineBeside
+      {/* <InfoLineBeside
         image1={require("../assets/icons/bellBag.png")} 
         image2={require("../assets/icons/coin.png")} 
         item1={this.props.item}
@@ -23,7 +23,7 @@ class RecipesPopup extends Component {
         textProperty2={["Sell"]}
         ending1={"Exchange Currency"}
         ending2={"Exchange Currency"}
-      />
+      /> */}
       <InfoLine
         image={require("../assets/icons/popper.png")} 
         item={this.props.item}
