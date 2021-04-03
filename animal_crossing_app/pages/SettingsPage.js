@@ -24,8 +24,22 @@ class SettingsPage extends Component {
       date:new Date(),
       time:new Date(),
       datePickerVisible: false,
-      deletedInfo: ["0","0"]
+      deletedInfo: ["0","0"],
+      settings: global.settingsCurrent,
     }
+  }
+  
+  //If any settings changed elsewhere in the app, update them
+  componentWillUnmount(){
+    this.props.navigation.removeListener();
+  }
+  componentDidMount(){
+    this.props.navigation.addListener(
+      'focus',
+      payload => {
+        this.setState({settings:global.settingsCurrent})
+      }
+    );
   }
   setCustomTime(){
     var date = this.state.date;
@@ -54,7 +68,7 @@ class SettingsPage extends Component {
           <SettingsDivider text={"Game language"}/>
           <LanguagePicker restartPopup={(show)=>this.popupRestart.setPopupVisible(show)}/>
           <View style={{height:10}}/>
-          {global.settingsCurrent.map( (setting, index)=>
+          {this.state.settings.map( (setting, index)=>
             {
               if(setting["keyName"]!="breaker"){
                 return <SettingsContainer 

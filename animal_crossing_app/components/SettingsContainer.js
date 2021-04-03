@@ -15,6 +15,13 @@ class SettingsContainer extends Component {
       toggle:this.props.setting.currentValue === "true" ? true : false,
     }
   }
+  componentDidUpdate(prevProps){
+    if(prevProps!==this.props){
+      this.setState({
+        toggle:this.props.setting.currentValue === "true" ? true : false,
+      })
+    }
+  }
   render(){
     return(
       <TouchableOpacity activeOpacity={0.7} onPress={() => {this.props.openPopup(this.props.setting);}}>

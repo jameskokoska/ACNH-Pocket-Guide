@@ -227,7 +227,7 @@ class App extends Component {
     );
 
     this.mounted = true;
-    await AsyncStorage.setItem("firstLogin", "true");
+    // await AsyncStorage.setItem("firstLogin", "true");
 
     const firstLogin = await getStorage("firstLogin","true");
     const numLogins = parseInt(await getStorage("numLogins","0")) + 1;
@@ -343,31 +343,31 @@ class App extends Component {
       <> 
         <View style={{position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
         <NavigationContainer theme={theme} ref={(navigationRef) => this.navigationRef = navigationRef}>
-          <Drawer.Navigator drawerContent={(props)=>this.state.loaded?<SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.navigationRef?this.navigationRef.getCurrentRoute().name:"HomePage"}/>:<View/> } initialRouteName="Loading" edgeWidth={this.state.drawerEdgeWidth} drawerType={'slide'}>
-            <Drawer.Screen name="Loading" component={PageLoading} options={{headerShown:false}}/>
-            <Drawer.Screen name="Onboard" component={PageOnboard} options={{headerShown:false}}/>
-            <Drawer.Screen name="HomePage" component={PageHomePage} options={{headerShown:false}}/>
-            <Drawer.Screen name="AllItemsPage" component={PageAllItemsPage} options={{headerShown:false}}/>
-            <Drawer.Screen name="MuseumPage" component={PageMuseumPage} options={{headerShown:false}}/>
-            <Drawer.Screen name="ItemsPage" component={PageItemsPage} options={{headerShown:false}}/>
-            <Drawer.Screen name="SongsPage" component={PageSongsPage} options={{headerShown:false}}/>
-            <Drawer.Screen name="EmoticonsPage" component={PageEmoticonsPage} options={{headerShown:false}}/>
-            <Drawer.Screen name="CraftingPage" component={PageCraftingPage} options={{headerShown:false}}/>
-            <Drawer.Screen name="MysteryIslandsPage" component={PageMysteryIslandsPage} options={{headerShown:false}}/>
-            <Drawer.Screen name="VillagersPage" component={PageVillagersPage} options={{headerShown:false}}/>
-            <Drawer.Screen name="ConstructionPage" component={PageConstructionPage} options={{headerShown:false}}/>
-            <Drawer.Screen name="FlowersPage" component={PageFlowersPage} options={{headerShown:false}}/>
-            <Drawer.Screen name="CardsPage" component={PageCardsPage} options={{headerShown:false}}/>
-            <Drawer.Screen name="CatalogPage" component={PageCatalogPage} options={{headerShown:false}}/>
-            <Drawer.Screen name="SettingsPage" component={this.PageSettingsPage} options={{headerShown:false}}/>
-            <Drawer.Screen name="CreditsPage" component={PageCreditsPage} options={{headerShown:false}}/>
-            <Drawer.Screen name="GuidePage" component={PageGuidePage} options={{headerShown:false}}/>
-            <Drawer.Screen name="CalendarPage" component={PageCalendarPage} options={{headerShown:false}}/>
-            <Drawer.Screen name="NewItemsPage" component={PageNewItemsPage} options={{headerShown:false}}/>
-            <Drawer.Screen name="WishlistPage" component={PageWishlistPage} options={{headerShown:false}}/>
-            <Drawer.Screen name="AchievementsPage" component={PageAchievementsPage} options={{headerShown:false}}/>
-            <Drawer.Screen name="VillagerPresentsPage" component={PageVillagerPresentsPage} options={{headerShown:false}}/>
-            <Drawer.Screen name="ObtainableItemsPage" component={PageObtainableItemsPage} options={{headerShown:false}}/>
+          <Drawer.Navigator options={{headerShown:false}} drawerContent={(props)=>this.state.loaded?<SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.navigationRef?this.navigationRef.getCurrentRoute().name:"HomePage"}/>:<View/> } initialRouteName="Loading" edgeWidth={this.state.drawerEdgeWidth} drawerType={'slide'}>
+            <Drawer.Screen name="Loading" component={PageLoading} />
+            <Drawer.Screen name="Onboard" component={PageOnboard} />
+            <Drawer.Screen name="HomePage" component={PageHomePage} />
+            <Drawer.Screen name="AllItemsPage" component={PageAllItemsPage} />
+            <Drawer.Screen name="MuseumPage" component={PageMuseumPage} />
+            <Drawer.Screen name="ItemsPage" component={PageItemsPage} />
+            <Drawer.Screen name="SongsPage" component={PageSongsPage} />
+            <Drawer.Screen name="EmoticonsPage" component={PageEmoticonsPage} />
+            <Drawer.Screen name="CraftingPage" component={PageCraftingPage} />
+            <Drawer.Screen name="MysteryIslandsPage" component={PageMysteryIslandsPage} />
+            <Drawer.Screen name="VillagersPage" component={PageVillagersPage} />
+            <Drawer.Screen name="ConstructionPage" component={PageConstructionPage} />
+            <Drawer.Screen name="FlowersPage" component={PageFlowersPage} />
+            <Drawer.Screen name="CardsPage" component={PageCardsPage} />
+            <Drawer.Screen name="CatalogPage" component={PageCatalogPage} />
+            <Drawer.Screen name="SettingsPage" component={this.PageSettingsPage} />
+            <Drawer.Screen name="CreditsPage" component={PageCreditsPage} />
+            <Drawer.Screen name="GuidePage" component={PageGuidePage} />
+            <Drawer.Screen name="CalendarPage" component={PageCalendarPage} />
+            <Drawer.Screen name="NewItemsPage" component={PageNewItemsPage} />
+            <Drawer.Screen name="WishlistPage" component={PageWishlistPage} />
+            <Drawer.Screen name="AchievementsPage" component={PageAchievementsPage} />
+            <Drawer.Screen name="VillagerPresentsPage" component={PageVillagerPresentsPage} />
+            <Drawer.Screen name="ObtainableItemsPage" component={PageObtainableItemsPage} />
           </Drawer.Navigator>
         </NavigationContainer>
         {this.state.loaded?<StatusBar hidden={getSettingsString("settingsShowStatusBar")==="false"} backgroundColor="#1c1c1c" style="light" />:<View/>}
@@ -382,7 +382,7 @@ class App extends Component {
 
   PageSettingsPage = ({route, navigation}) => {
     return(
-      <SettingsPage saveSettingsPosition={this.saveSettingsPosition} updateSettings={this.updateSettings} setPage={(pageName)=>navigation.navigate(pageName)}/>
+      <SettingsPage navigation={navigation} saveSettingsPosition={this.saveSettingsPosition} updateSettings={this.updateSettings} setPage={(pageName)=>navigation.navigate(pageName)}/>
     )
   }
 }
