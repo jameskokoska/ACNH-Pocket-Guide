@@ -114,7 +114,7 @@ export default class VisitorList extends Component {
             key={character.name+index.toString()}
             character={character}
             setVisited={this.setVisited}
-            onTap={()=>{this.setState({selectedCharacter:character.name, selectedDay:getWeekDay(new Date().getDay())}); this.popup.setPopupVisible(true);}}
+            onTap={()=>{this.setState({selectedCharacter:character.name, selectedDay:getWeekDay(getCurrentDateObject().getDay())}); this.popup?.setPopupVisible(true);}}
             day={this.state.data[this.currentMondayIndex]!==undefined?this.state.data[this.currentMondayIndex][character.name]:""}
           />
         )}
@@ -139,7 +139,7 @@ export default class VisitorList extends Component {
                       key={character.name+index.toString()}
                       character={character}
                       setVisited={this.setVisited}
-                      onTap={()=>{this.setState({selectedCharacter:character.name, selectedDay:getWeekDay(getCurrentDateObject().getDay())}); this.popup.setPopupVisible(true);}}
+                      onTap={()=>{this.setState({selectedCharacter:character.name, selectedDay:getWeekDay(getCurrentDateObject().getDay())}); this.popup?.setPopupVisible(true);}}
                       day={this.state.data[date]!==undefined?this.state.data[date][character.name]:""}
                       onlyShowVisited={true}
                     />

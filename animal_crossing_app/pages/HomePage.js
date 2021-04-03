@@ -25,7 +25,7 @@ import FadeInOut from "../components/FadeInOut"
 import {getMaterialImage} from "../components/GetPhoto"
 import FastImage from "../components/FastImage"
 import {cancelAllPushNotifications} from "../Notifications"
-import DateTimePickerModal from "react-native-modal-datetime-picker";
+import DateTimePicker from '@react-native-community/datetimepicker';
 import ButtonComponent from "../components/ButtonComponent"
 import {SelectionImage} from "../components/Selections"
 
@@ -56,7 +56,7 @@ class HomePage extends Component {
     }
   }
   openVillagerPopup = (item) => {
-    this.villagerPopupPopup.setPopupVisible(true, item);
+    this.villagerPopupPopup?.setPopupVisible(true, item);
   }
   setPages = async (checked,name) =>{
     var sections = this.state.sections;
@@ -77,23 +77,6 @@ class HomePage extends Component {
   }
 
   render(){
-    var fishCount = countCollection("fishCheckList");
-    var fishPercentage = fishCount/80 * 100;
-    var seaCount = countCollection("seaCheckList");
-    var seaPercentage = seaCount/40 * 100;
-    var bugsCount = countCollection("bugCheckList");
-    var bugsPercentage = bugsCount/80 * 100;
-    var fossilCount = countCollection("fossilCheckList");
-    var fossilPercentage = fossilCount/73 * 100;
-    var artCount = countCollection("artCheckList");
-    var artPercentage = artCount/43 * 100;
-    var musicCount = countCollection("songCheckList");
-    var musicPercentage = musicCount/95 * 100;
-    var emojipediaCount = countCollection("emojiCheckList");
-    var emojipediaPercentage = emojipediaCount/global.dataLoadedReactions[0].length * 100;
-    var recipeCount = countCollection("recipesCheckList");
-    var recipePercentage = recipeCount/global.dataLoadedRecipes[0].length * 100;
-
     var todayTitle=<View/>
     if(this.todayEvents.length>0){
       todayTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>Today</TextFont>
@@ -183,16 +166,7 @@ class HomePage extends Component {
               <View style={{height: 25}}/>
             </HomeContentArea>:<View/>}
             {sections["Collection"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.collectionColor[global.darkMode]} title="Collection" titleColor={colors.collectionColor[global.darkModeReverse]}>
-              <View style={{height: 15}}/>
-              <ProgressContainer color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={fishPercentage} image={require("../assets/icons/fish.png")} text={attemptToTranslate("Fish") + " " + fishCount + "/80"}/>
-              <ProgressContainer color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={seaPercentage} image={require("../assets/icons/octopus.png")} text={attemptToTranslate("Sea Creatures") + " " + seaCount + "/40"}/>
-              <ProgressContainer color={colors.bugAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={bugsPercentage} image={require("../assets/icons/bugs.png")} text={attemptToTranslate("Bugs") + " " + bugsCount + "/80"}/>
-              <ProgressContainer color={colors.fossilAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={fossilPercentage} image={require("../assets/icons/bones.png")} text={attemptToTranslate("Fossils") + " " + fossilCount + "/73"}/>
-              <ProgressContainer color={colors.artAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={artPercentage} image={require("../assets/icons/colorPalette.png")} text={attemptToTranslate("Art") + " " + artCount + "/43"}/>
-              <ProgressContainer color={colors.musicAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={musicPercentage} image={require("../assets/icons/music.png")} text={attemptToTranslate("Songs") + " " + musicCount + "/95"}/>
-              <ProgressContainer color={colors.emojipediaAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={emojipediaPercentage} image={require("../assets/icons/emote.png")} text={attemptToTranslate("Emotes") + " " + emojipediaCount + "/" + global.dataLoadedReactions[0].length.toString()}/>
-              <ProgressContainer color={colors.toolsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={recipePercentage} image={require("../assets/icons/crafting.png")} text={attemptToTranslate("Recipes") + " " + recipeCount + "/" + global.dataLoadedRecipes[0].length.toString()}/>
-              <View style={{height: 15}}/>
+              <CollectionProgress/>
             </HomeContentArea>:<View/>}
             {sections["Profile"]===true?<HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.profileColor[global.darkMode]} title="Profile" titleColor={colors.profileColor[global.darkModeReverse]}>
               <View style={{height: 37}}/>
@@ -424,22 +398,36 @@ class SetNotificationTime extends Component {
   constructor(props){
     super(props);
     this.state = {
-      datePickerVisible:false,
+      timePickerVisible: false,
+      time:new Date(),
     }
   }
   toggle = () =>{
-    this.setState({datePickerVisible:true})
+    this.setState({timePickerVisible:true})
+  }
+  setTime = (event, selectedTime) => {
+    if(selectedTime!==undefined){
+      this.setState({time:selectedTime,timePickerVisible:false})
+      this.props.setPages(selectedTime, this.props.title);
+    } else {
+      this.setState({timePickerVisible:false})
+    }
+    return true;
   }
   render(){
     return (<>
       <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.toggle()}} text={this.props.title} />
       <View style={{height:20}}/>
-      <DateTimePickerModal
-        mode={"time"}
-        onConfirm={(date)=>{this.props.setPages(date, this.props.title); this.setState({datePickerVisible:false})}}
-        onCancel={()=>{this.setState({datePickerVisible:false})}}
-        isVisible={this.state.datePickerVisible}
-      />
+      {this.state.timePickerVisible&& (
+        <DateTimePicker
+          testID="dateTimePicker"
+          value={this.state.time}
+          mode={"time"}
+          is24Hour={getSettingsString("settingsUse24HourClock")==="true"}
+          display="spinner"
+          onChange={this.setTime}
+        />
+      )}
       </>
     )
   }
@@ -495,7 +483,7 @@ class VillagerPopupPopup extends Component {
 
   setPopupVisible = (visible, item) => {
     this.setState({item:item});
-    this.popup.setPopupVisible(true);
+    this.popup?.setPopupVisible(true);
   }
 
   render(){
@@ -511,6 +499,49 @@ class VillagerPopupPopup extends Component {
     )
   }
 }
+
+class CollectionProgress extends Component {
+  render(){
+    var fishCount = countCollection("fishCheckList");
+    var fishCountTotal = 80;
+    var fishPercentage = fishCount/fishCountTotal * 100;
+    var seaCount = countCollection("seaCheckList");
+    var seaCountTotal = 40;
+    var seaPercentage = seaCount/seaCountTotal * 100;
+    var bugsCount = countCollection("bugCheckList");
+    var bugsCountTotal = 80;
+    var bugsPercentage = bugsCount/bugsCountTotal * 100;
+    var fossilCount = countCollection("fossilCheckList");
+    var fossilCountTotal = 73
+    var fossilPercentage = fossilCount/fossilCountTotal * 100;
+    var artCount = countCollection("artCheckList");
+    var artCountTotal = 43;
+    var artPercentage = artCount/artCountTotal * 100;
+    var musicCount = countCollection("songCheckList");
+    var musicCountTotal = 95;
+    var musicPercentage = musicCount/musicCountTotal * 100;
+    var emojipediaCount = countCollection("emojiCheckList");
+    var emojipediaCountTotal = global.dataLoadedReactions[0].length;
+    var emojipediaPercentage = emojipediaCount/emojipediaCountTotal * 100;
+    var recipeCount = countCollection("recipesCheckList");
+    var recipeCountTotal = global.dataLoadedRecipes[0].length;
+    var recipePercentage = recipeCount/recipeCountTotal * 100;
+    return(<>
+      <View style={{height: 15}}/>
+      <ProgressContainer color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={fishPercentage} image={require("../assets/icons/fish.png")} text={attemptToTranslate("Fish") + " " + fishCount + "/" + fishCountTotal.toString()}/>
+      <ProgressContainer color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={seaPercentage} image={require("../assets/icons/octopus.png")} text={attemptToTranslate("Sea Creatures") + " " + seaCount + "/" + seaCountTotal.toString()}/>
+      <ProgressContainer color={colors.bugAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={bugsPercentage} image={require("../assets/icons/bugs.png")} text={attemptToTranslate("Bugs") + " " + bugsCount + "/" + bugsCountTotal.toString()}/>
+      <ProgressContainer color={colors.fossilAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={fossilPercentage} image={require("../assets/icons/bones.png")} text={attemptToTranslate("Fossils") + " " + fossilCount + "/" + fossilCountTotal.toString()}/>
+      <ProgressContainer color={colors.artAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={artPercentage} image={require("../assets/icons/colorPalette.png")} text={attemptToTranslate("Art") + " " + artCount + "/" + artCountTotal.toString()}/>
+      <ProgressContainer color={colors.musicAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={musicPercentage} image={require("../assets/icons/music.png")} text={attemptToTranslate("Songs") + " " + musicCount + "/" + musicCountTotal.toString()}/>
+      <ProgressContainer color={colors.emojipediaAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={emojipediaPercentage} image={require("../assets/icons/emote.png")} text={attemptToTranslate("Emotes") + " " + emojipediaCount + "/" + emojipediaCountTotal.toString()}/>
+      <ProgressContainer color={colors.toolsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={recipePercentage} image={require("../assets/icons/crafting.png")} text={attemptToTranslate("Recipes") + " " + recipeCount + "/" + recipeCountTotal.toString()}/>
+      <View style={{height: 15}}/>
+      </>
+    )
+  }
+}
+
 
 const styles = StyleSheet.create({
   dayHeader:{

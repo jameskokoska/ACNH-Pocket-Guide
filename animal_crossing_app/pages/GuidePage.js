@@ -61,10 +61,10 @@ class GuidePage extends Component {
           style={{width:Dimensions.get('window').width,height:Dimensions.get('window').height }}
           injectedJavaScript={"document.body.style.userSelect = 'none';"}
           onError={() => {
-            this.popup.setPopupVisible(true);
+            this.popup?.setPopupVisible(true);
           }}
           onHttpError={() => {
-            this.popup.setPopupVisible(true);
+            this.popup?.setPopupVisible(true);
           }}
           startInLoadingState
           incognito

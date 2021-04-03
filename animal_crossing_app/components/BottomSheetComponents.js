@@ -331,7 +331,7 @@ export class Variations extends Component {
         <ScrollView horizontal={true} style={{marginHorizontal:10}} contentContainerStyle={{ flexGrow: 1, justifyContent: 'center'}}>
         <View style={{marginHorizontal: 4, flexDirection: 'row', justifyContent:'center'}}>
           {variations.map( (item, index)=>
-            <VariationItem updateRightCornerCheck={this.props.updateRightCornerCheck} updateKey={this.state.updateKey} updateChecked={this.state.updateChecked} originalCheckListKey={originalCheckListKey} updateCheckChildFunction={this.props.updateCheckChildFunction} index={index} key={item[this.props.imageProperty[dataSet]]} globalDatabase={this.props.globalDatabase} item={item} setPopupVisible={(state, image, item)=>this.popup.setPopupVisible(state, image, item)} dataSet={dataSet} imageProperty={imageProperty}/>
+            <VariationItem updateRightCornerCheck={this.props.updateRightCornerCheck} updateKey={this.state.updateKey} updateChecked={this.state.updateChecked} originalCheckListKey={originalCheckListKey} updateCheckChildFunction={this.props.updateCheckChildFunction} index={index} key={item[this.props.imageProperty[dataSet]]} globalDatabase={this.props.globalDatabase} item={item} setPopupVisible={(state, image, item)=>this.popup?.setPopupVisible(state, image, item)} dataSet={dataSet} imageProperty={imageProperty}/>
           )}
         </View>
         </ScrollView>
@@ -399,7 +399,7 @@ class PopupImage extends Component {
 
   setPopupVisible = (visible, image, item) => {
     this.setState({image:image, item:item});
-    this.popup.setPopupVisible(true);
+    this.popup?.setPopupVisible(true);
   }
 
   render(){

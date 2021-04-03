@@ -9,8 +9,8 @@ import ButtonComponent from "../components/ButtonComponent"
 import Popup from '../components/Popup'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {ExportFile, LoadFile} from '../components/LoadFile';
-import DateTimePickerModal from "react-native-modal-datetime-picker";
-import {attemptToTranslate, deleteSavedPhotos, resetFilters} from '../LoadJsonData';
+import DateTimePicker from '@react-native-community/datetimepicker';
+import {attemptToTranslate, deleteSavedPhotos, resetFilters, getSettingsString} from '../LoadJsonData';
 import {cancelAllPushNotifications, pushNotification} from '../Notifications'
 import {SubHeader, Paragraph, HeaderNote, MailLink, Header} from "../components/Formattings"
 import DropDownPicker from 'react-native-dropdown-picker'
@@ -19,20 +19,24 @@ import {PopupBottomCustom} from "../components/Popup"
 class SettingsPage extends Component {
   constructor(props){
     super(props);
-    this.setCustomTime = this.setCustomTime.bind(this);
     this.state = {
       date:new Date(),
       time:new Date(),
       datePickerVisible: false,
+      timePickerVisible: false,
       deletedInfo: ["0","0"]
     }
   }
-  setCustomTime(){
+  setCustomTime = () => {
     var date = this.state.date;
     date.setMinutes(this.state.time.getMinutes());
     date.setHours(this.state.time.getHours()); 
-    global.customTime = date;
-    AsyncStorage.setItem("customDate", date.toString());
+    if(date!==undefined){
+      var timeOffset = date.getTime() - new Date().getTime();
+      global.customTimeOffset = timeOffset;
+      console.log(global.customTimeOffset)
+      AsyncStorage.setItem("customDateOffset", timeOffset.toString());
+    }
   }
   deleteSavedPhotos = async () =>{
     this.popupDeleteSavedPhotosWait.setPopupVisible(true);
@@ -40,6 +44,27 @@ class SettingsPage extends Component {
     this.setState({deletedInfo:deletedInfo});
     this.popupDeleteSavedPhotosWait.setPopupVisible(false);
     this.popupDeleteSavedPhotos.setPopupVisible(true);
+  }
+  setDate = (event, selectedDate) => {
+    if(selectedDate!==undefined){
+      this.setState({date:selectedDate,datePickerVisible:false})
+      this.setCustomTime();
+    } else {
+      this.setState({datePickerVisible:false})
+    }
+    if(getSettingsString("settingsUseCustomDate")!=="true"){
+      this.popupDateReminder?.setPopupVisible(true);
+    }
+    return true;
+  }
+  setTime = (event, selectedTime) => {
+    if(selectedTime!==undefined){
+      this.setState({time:selectedTime,timePickerVisible:false})
+      this.setCustomTime();
+    } else {
+      this.setState({timePickerVisible:false})
+    }
+    return true;
   }
   render(){
     return(<>
@@ -79,19 +104,27 @@ class SettingsPage extends Component {
             }
           )}
           <Popup ref={(popupLoadNotifications) => this.popupLoadNotifications = popupLoadNotifications} text="Notifications" textLower="You can select event notifications under the [Edit Events] of the [Events] section on the homepage." button1={"OK"} button1Action={()=>{this.props.setPage(0)}}/>
-          <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.setState({datePickerVisible:true})}} text={"Set Custom Date/Time"} />
-          <DateTimePickerModal
-            mode={"date"}
-            onConfirm={(date)=>{this.setState({datePickerVisible:false, date:date,}); this.popupDateReminder.setPopupVisible(true); this.setCustomTime();}}
-            onCancel={()=>{this.setState({datePickerVisible:false})}}
-            isVisible={this.state.datePickerVisible}
-          />
-          <DateTimePickerModal
-            mode={"time"}
-            onConfirm={(date)=>{this.setState({datePickerVisible:false, time:date});}}
-            onCancel={()=>{this.setState({datePickerVisible:false})}}
-            isVisible={this.state.datePickerVisible}
-          />
+          <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.setState({datePickerVisible:true, timePickerVisible:true})}} text={"Set Custom Date/Time"} />
+          {this.state.datePickerVisible && (
+            <DateTimePicker
+              testID="dateTimePicker"
+              value={this.state.time}
+              mode={"date"}
+              is24Hour={getSettingsString("settingsUse24HourClock")==="true"}
+              display="default"
+              onChange={this.setDate}
+            />
+          )}
+          {this.state.timePickerVisible && (
+            <DateTimePicker
+              testID="dateTimePicker"
+              value={this.state.time}
+              mode={"time"}
+              is24Hour={getSettingsString("settingsUse24HourClock")==="true"}
+              display="default"
+              onChange={this.setTime}
+            />
+          )}
           <Popup ref={(popupDateReminder) => this.popupDateReminder = popupDateReminder} text="Custom Date" textLower="Ensure the 'Use a custom date' setting is enabled" button1={"OK"} button1Action={()=>{console.log("")}}/>
           
           <View style={{height: 50}}/>
@@ -136,7 +169,7 @@ class SettingsPopup extends Component {
 
   openPopup = (selected) =>{
     this.setState({selected:selected});
-    this.popup.setPopupVisible(true);
+    this.popup?.setPopupVisible(true);
   }
   
   render(){

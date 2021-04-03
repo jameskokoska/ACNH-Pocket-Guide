@@ -13,7 +13,6 @@ class CardsPage extends Component {
           imageProperty={["Image"]}
           textProperty={["NameLanguage"]}
           textProperty2={"cards"}
-          checkListKey={[["cardsCheckList","Name"]]}
           searchKey={[["NameLanguage"]]}
           gridType="largeGridSmaller" //smallGrid, largeGrid, row
           dataGlobalName={"dataLoadedCards"}

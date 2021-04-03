@@ -29,7 +29,6 @@ const MaterialsRoute = () => (
     title="Materials"
     imageProperty={["Inventory Image"]}
     textProperty={["NameLanguage",]}
-    checkListKey={[["materialsCheckList","Name"]]}
     searchKey={[["NameLanguage",]]}
     gridType="smallGrid" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedMaterials"}
@@ -65,14 +64,6 @@ const FurnitureRoute = () => (
       "NameLanguage",
       "NameLanguage",
       "NameLanguage",
-    ]}
-    checkListKey={[
-      ["furnitureCheckList","Name","Variation","Pattern"],
-      ["furnitureCheckList","Name","Variation","Pattern"],
-      ["furnitureCheckList","Name","Variation","Pattern"],
-      ["furnitureCheckList","Name","Variation","Pattern"],
-      ["furnitureCheckList","Name","Variation","Pattern"],
-      ["furnitureCheckList","Name"],
     ]}
     searchKey={[
       ["NameLanguage",],
@@ -174,18 +165,6 @@ export class ClothingRouteClass extends Component{
           "NameLanguage",
           "NameLanguage",
         ]}
-        checkListKey={[
-          ["clothingCheckList","Name","Variation"],
-          ["clothingCheckList","Name","Variation"],
-          ["clothingCheckList","Name","Variation"],
-          ["clothingCheckList","Name","Variation"],
-          ["clothingCheckList","Name","Variation"],
-          ["clothingCheckList","Name","Variation"],
-          ["clothingCheckList","Name","Variation"],
-          ["clothingCheckList","Name","Variation"],
-          ["clothingCheckList","Name","Variation"],
-          ["clothingCheckList","Name"],
-        ]}
         searchKey={[
           ["NameLanguage",],
           ["NameLanguage",],
@@ -262,11 +241,6 @@ const FloorWallsRoute = () => (
       "NameLanguage",
       "NameLanguage",
       "NameLanguage",
-    ]}
-    checkListKey={[
-      ["floorWallsCheckList","Name"],
-      ["floorWallsCheckList","Name"],
-      ["floorWallsCheckList","Name"],
     ]}
     searchKey={[
       ["NameLanguage",],

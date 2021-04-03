@@ -107,7 +107,7 @@ class PopupAddTask extends Component {
   }
 
   setPopupVisible = (visible) => {
-    this.popup.setPopupVisible(true);
+    this.popup?.setPopupVisible(true);
     this.task = {title: "", picture:this.state.selectedImage, finished: false, small:this.state.smallToggle};
   }
 
@@ -119,7 +119,7 @@ class PopupAddTask extends Component {
           color={colors.cancelButton[global.darkMode]}
           vibrate={8}
           onPress={() => {
-            this.popup.setPopupVisible(false);
+            this.popup?.setPopupVisible(false);
           }}
         /> 
         <ButtonComponent
@@ -128,7 +128,7 @@ class PopupAddTask extends Component {
           vibrate={15}
           onPress={() => {
             this.props.addItem(this.task);
-            this.popup.setPopupVisible(false);
+            this.popup?.setPopupVisible(false);
           }}
         /> 
       </View>

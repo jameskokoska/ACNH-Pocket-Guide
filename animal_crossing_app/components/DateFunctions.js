@@ -19,8 +19,9 @@ export function getDateStringMonthDay(date){
 }
 
 function getCurrentDateObject(){
-  if(getSettingsString("settingsUseCustomDate")==="true"){
-    return global.customTime;
+  if(getSettingsString("settingsUseCustomDate")==="true" && global.customTimeOffset!==undefined){
+    var newDate = new Date(new Date().getTime() + parseInt(global.customTimeOffset));
+    return newDate;
   } else {
     return new Date();
   }

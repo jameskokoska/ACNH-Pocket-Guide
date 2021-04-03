@@ -108,7 +108,7 @@ export default Popup;
 
 
 /* 
-this.popup.setPopupVisible(true);
+this.popup?.setPopupVisible(true);
 <PopupInfoCustom ref={(popup) => this.popup = popup} buttonText={"Close"}>
 </PopupInfoCustom> 
 */

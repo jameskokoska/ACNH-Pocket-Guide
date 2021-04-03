@@ -57,7 +57,6 @@ class SongsPage extends Component {
           title="Music"
           imageProperty={["Album Image"]}
           textProperty={["NameLanguage",]}
-          checkListKey={[["songCheckList","Name"]]}
           searchKey={[["NameLanguage",]]}
           gridType="largeGrid" //smallGrid, largeGrid, row
           dataGlobalName={"dataLoadedMusic"}

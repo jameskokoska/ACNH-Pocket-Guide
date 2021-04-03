@@ -48,7 +48,7 @@ class MysteryIslandsPage extends Component {
 
   openPopup = (island) =>{
     this.setState({selectedIsland:island})
-    this.popup.setPopupVisible(true);
+    this.popup?.setPopupVisible(true);
   }
 
   componentDidMount(){

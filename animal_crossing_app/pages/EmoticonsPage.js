@@ -22,7 +22,6 @@ class EmoticonsPage extends Component {
           imageProperty={["Image"]}
           textProperty={["NameLanguage",]}
           textProperty2={["Source"]}
-          checkListKey={[["emojiCheckList","Name"]]}
           searchKey={[["NameLanguage",]]}
           gridType="smallGrid" //smallGrid, largeGrid, row
           dataGlobalName={"dataLoadedReactions"}

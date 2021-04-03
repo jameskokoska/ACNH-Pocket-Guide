@@ -64,7 +64,7 @@ class LoadFile extends Component {
           color={colors.okButton[global.darkMode]}
           vibrate={5}
           onPress={() => {
-            this.loadPopup.setPopupVisible(true);
+            this.loadPopup?.setPopupVisible(true);
         }}/>
       </View>
     )
@@ -102,10 +102,10 @@ class ExportFile extends Component {
               const asset = await MediaLibrary.createAssetAsync(fileUri)
               await MediaLibrary.createAlbumAsync("Download", asset, false)
               this.setState({message:"File exported to Downloads folder ACNHPocketGuideData.txt", title:"Backup Successful"});
-              this.exportPopup.setPopupVisible(true);
+              this.exportPopup?.setPopupVisible(true);
             } else {
               this.setState({message:"Error backing up. Please enable the permissions and try again. Unfortunately Camera Permission may be required to write to local storage (using the Expo SDK). This permission can be disabled at any time. Sorry for the inconvenience."});
-              this.exportPopup.setPopupVisible(true);
+              this.exportPopup?.setPopupVisible(true);
             }
           }}
         />

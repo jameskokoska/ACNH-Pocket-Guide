@@ -38,7 +38,6 @@ export class RecipesRouteClass extends Component{
         titleColor={this.props.titleColor===undefined?colors.textWhite[0]:this.props.titleColor}
         imageProperty={["Image"]}
         textProperty={["NameLanguage"]}
-        checkListKey={[["recipesCheckList","Name","Variation"]]}
         searchKey={[["NameLanguage"]]}
         gridType="smallGrid" //smallGrid, largeGrid, row
         dataGlobalName={"dataLoadedRecipes"}
@@ -60,7 +59,6 @@ const ToolsRoute = () => (
     title="Tools"
     imageProperty={["Image"]}
     textProperty={["NameLanguage"]}
-    checkListKey={[["toolsCheckList","Name","Variation"]]}
     searchKey={[["NameLanguage"]]}
     gridType="smallGrid" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedTools"}

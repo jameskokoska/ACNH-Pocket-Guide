@@ -60,6 +60,9 @@ global.changelog = `
 -Customize which events are shown and which notifications to get, go to [Edit Events] in the [Events] section of the home page
 -Changed item price instead of DIY price to DIY popup
 -Notification bar now colours to theme (when enabled in settings)
+-Fixed obtainable items crash
+-Possibly fixed custom time setting?
+-Custom time is now an offset, it will progress relative to real time but be offset by the selected date
 -
 -Added recipes collection progress
 -Can zoom in on artwork - tap the artwork in the popup and pinch to zoom
@@ -70,7 +73,6 @@ global.changelog = `
 -Long press a to-do item to remove it
 -
 -Thanks for 5K downloads... that's incredible!
--Big update this time!
 -Added way to see what DIYs and Reactions you can get from your current villagers
 -Added way to see what DIYs and Reactions you cannot get from your villagers
 -Added new [Obtainable Items] page
@@ -235,8 +237,7 @@ class App extends Component {
     //Load Settings
     await this.loadSettings();
 
-    global.customTime = new Date(await getStorage("customDate",new Date().toString()));
-
+    global.customTimeOffset = await getStorage("customDateOffset","0");
     this.updateSettings();
 
     //Load Fonts

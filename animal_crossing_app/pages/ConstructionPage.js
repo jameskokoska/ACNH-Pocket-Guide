@@ -13,7 +13,6 @@ class ConstructionPage extends Component {
           imageProperty={["Image","Image"]}
           textProperty={["NameLanguage","NameLanguage"]}
           textProperty2={"construction"}
-          checkListKey={[["constructionCheckList","Name"],["fenceCheckList","Name"]]}
           searchKey={[["NameLanguage"],["NameLanguage"]]}
           gridType="largeGridSmaller" //smallGrid, largeGrid, row
           dataGlobalName={"dataLoadedConstruction"}

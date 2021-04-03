@@ -62,7 +62,7 @@ class VillagerPopup extends Component {
         onPress={() => {
           this.props.setVillagerGift(this.props.item, "gift")
       }}/>
-      <TouchableOpacity style={{paddingTop:5}} onPress={()=>{this.popup.setPopupVisible(true);}}>
+      <TouchableOpacity style={{paddingTop:5}} onPress={()=>{this.popup?.setPopupVisible(true);}}>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, padding:8}}>{"What are villager gifts?"}</TextFont>
       </TouchableOpacity>
       <ButtonComponent

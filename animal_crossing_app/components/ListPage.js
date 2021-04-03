@@ -122,7 +122,6 @@ export default (props) =>{
   }, [])
 
   useEffect(()=>{
-    console.log(props.itemIDs)
     var dataUpdated = [];
     var previousVariation = "";
     var item;
@@ -243,7 +242,7 @@ export default (props) =>{
             } else if (searchActual.includes("Wishlist") && props.wishlistItems){
               filterFound = false;
               break;
-            } else if (searchActual.includes("SearchIDs") && (item.hasOwnProperty("Internal ID") && props.itemIDs.includes(item.["Internal ID"])) || (item.hasOwnProperty("Name") && props.itemIDs.includes(item.["Name"]))) {
+            } else if (searchActual.includes("SearchIDs") && ((item.hasOwnProperty("Internal ID") && props.itemIDs.includes(item.["Internal ID"])) || (item.hasOwnProperty("Name") && props.itemIDs.includes(item.["Name"])))) {
               filterFound = true;
               break;
             } else if (searchActual.includes("SearchIDs")) {

@@ -148,7 +148,7 @@ class ObtainableItemsPage extends Component {
 
   componentDidMount(){
     if(getCurrentVillagerNamesString()==="You have no favorite villagers."){
-      this.popup.setPopupVisible(true);
+      this.popup?.setPopupVisible(true);
     }
   }
 

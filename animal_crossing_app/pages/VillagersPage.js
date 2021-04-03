@@ -16,7 +16,6 @@ class VillagersPage extends Component {
           title="Villagers"
           imageProperty={["Icon Image"]}
           textProperty={["NameLanguage",]}
-          checkListKey={[["villagerCheckList","Name"]]}
           searchKey={[["NameLanguage",]]}
           gridType="smallGrid" //smallGrid, largeGrid, row
           dataGlobalName={"dataLoadedVillagers"}

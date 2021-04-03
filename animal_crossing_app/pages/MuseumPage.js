@@ -35,7 +35,6 @@ const FishRoute = () => (
     textProperty={["NameLanguage",]}
     textProperty2={["creatureTime"]}
     textProperty3={["Where/How"]}
-    checkListKey={[["fishCheckList","Name"]]}
     searchKey={[["NameLanguage",]]}
     gridType="row" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedFish"}
@@ -64,7 +63,6 @@ const BugsRoute = () => (
     textProperty={["NameLanguage",]}
     textProperty2={["creatureTime"]}
     textProperty3={["Where/How"]}
-    checkListKey={[["bugCheckList","Name"]]}
     searchKey={[["NameLanguage",]]}
     gridType="row" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedBugs"}
@@ -93,7 +91,6 @@ const SeaRoute = () => (
     textProperty={["NameLanguage",]}
     textProperty2={["creatureTime"]}
     textProperty3={["Shadow"]}
-    checkListKey={[["seaCheckList","Name"]]}
     searchKey={[["NameLanguage",]]}
     gridType="row" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedSea"}
@@ -116,7 +113,6 @@ const FossilsRoute = () => (
     title="Fossils"
     imageProperty={["Image"]}
     textProperty={["NameLanguage",]}
-    checkListKey={[["fossilCheckList","Name"]]}
     searchKey={[["NameLanguage",]]}
     gridType="smallGrid" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedFossils"}
@@ -142,7 +138,6 @@ const ArtRoute = () => (
     textProperty={["NameLanguage",]}
     textProperty2={[""]}
     textProperty3={[""]}
-    checkListKey={[["artCheckList","Name","Genuine"]]}
     searchKey={[["NameLanguage",]]}
     gridType="largeGridSmaller" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedArt"}

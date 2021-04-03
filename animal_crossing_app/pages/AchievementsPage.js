@@ -142,7 +142,7 @@ class AchievementsPopup extends Component {
   
   openPopup = (achievement) =>{
     this.setState({selectedAchievement:achievement});
-    this.popup.setPopupVisible(true);
+    this.popup?.setPopupVisible(true);
   }
   
   render(){

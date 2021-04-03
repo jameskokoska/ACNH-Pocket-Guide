@@ -31,7 +31,6 @@ const FirstRoute = () => (
     textProperty={["Name"]}
     textProperty2={["Icon Filename"]}
     textProperty3={["Source"]}
-    checkListKey={[["emojiCheckList","Name"]]}
     searchKey={[["Name"]]}
     gridType="row" //smallGrid, largeGrid, row
     dataGlobalName={"dataLoadedReactions"}
@@ -55,7 +54,6 @@ const SecondRoute = () => (
     title="Art"
     imageProperty={["Image","Image","Image"]}
     textProperty={["Name","Name","Name"]}
-    checkListKey={[["artCheckList","Name","Genuine"],["fenceCheckList","Name"],["fenceCheckList","Name"]]}
     searchKey={[["Name","Genuine"],["Name"],["Name"]]}
     gridType="smallGrid"
     dataGlobalName={"dataLoadedArt"}

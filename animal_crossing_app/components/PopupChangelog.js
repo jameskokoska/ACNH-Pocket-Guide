@@ -37,7 +37,7 @@ class PopupChangelog extends Component {
 
   setPopupVisible = (visible) => {
     if(this.mounted){
-      this.popup.setPopupVisible(visible)
+      this.popup?.setPopupVisible(visible)
     }
   }
 
