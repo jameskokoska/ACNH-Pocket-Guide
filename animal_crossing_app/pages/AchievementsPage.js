@@ -67,8 +67,8 @@ export default class AchievementsPage extends Component {
   });
   
   render(){
-    return <>
-      <Animated.View style={{width:Dimensions.get('window').width,position:"absolute", zIndex:1, transform: [{ translateY: this.translateY }]}}>
+    return <View style={{backgroundColor:colors.background[global.darkMode], height:Dimensions.get('window').height, width:Dimensions.get('window').width}}>
+      <Animated.View style={{width:Dimensions.get('window').width,position:"absolute", zIndex:5, transform: [{ translateY: this.translateY }]}}>
         <View style={{backgroundColor: colors.background[global.darkMode], flex: 1,justifyContent: 'flex-end',height:this.headerHeight,}}>
           <Header disableFilters={true} disableSearch={false} title={"Achievements"} headerHeight={this.headerHeight} updateSearch={this.handleSearch} appBarColor={colors.achievementsAppBar[global.darkMode]} searchBarColor={colors.searchbarBG[global.darkMode]} titleColor={colors.textBlack[global.darkMode]}/>
         </View>
@@ -84,7 +84,7 @@ export default class AchievementsPage extends Component {
         contentContainerStyle={{paddingBottom:Dimensions.get('window').height/3}}
       />
       <AchievementsPopup ref={(popup) => this.popup = popup}/>
-    </>
+    </View>
   }
 }
 
