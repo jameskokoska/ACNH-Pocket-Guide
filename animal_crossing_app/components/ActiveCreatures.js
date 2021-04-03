@@ -10,17 +10,6 @@ class ActiveCreatures extends Component {
     super();
     LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
   }
-  componentWillUnmount(){
-    this.props.navigation.removeListener();
-  }
-  componentDidMount(){
-    this.props.navigation.addListener(
-      'focus',
-      payload => {
-        this.forceUpdate();
-      }
-    );
-  }
   render(){
     return(
       <View style={{height: Dimensions.get('window').height}}>

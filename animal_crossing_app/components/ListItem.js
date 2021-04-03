@@ -70,11 +70,13 @@ class ListItem extends PureComponent{
     if(getSettingsString("settingsHighlightNotCraftableVariations") === "true" && this.props.item["Kit Cost"] !==undefined && this.props.item["Variation"] !==undefined && this.props.item["Variant ID"] !==undefined && this.props.item["Kit Cost"] ==="NA" && (this.props.item["Variation"]!=="NA"||this.props.item["Variant ID"] !== "NA")){
       boxColor = colors.highlightNonCustomizableItems[global.darkMode];
     } else if(this.props.boxColor===true && getSettingsString("settingsColorLists")==="true"){
-      if(this.props.item.["Color 1"]!==undefined){
-        var opacity = "0A"
-        if(global.darkMode){
-          opacity = "10"
-        }
+      var opacity = "0A"
+      if(global.darkMode){
+        opacity = "10"
+      }
+      if(this.props.item["Bubble Color"]!==undefined){
+        boxColor =this.props.item["Bubble Color"]+opacity;
+      }else if(this.props.item.["Color 1"]!==undefined){
         if(this.props.item.["Color 2"]!==undefined && global.darkMode===0 && ( this.props.item.["Color 1"]==='Yellow' || this.props.item.["Color 1"]==='White')){
           boxColor = colors["itemBox"+this.props.item.["Color 2"]][global.darkMode]+opacity
           if(this.props.item.["Color 2"]==='Colorful'){
@@ -246,8 +248,7 @@ class ListItem extends PureComponent{
       )
     } else { //Row component
       var fishShadow = <View/>
-      if(this.props.popUpContainer!==undefined && this.props.popUpContainer.hasOwnProperty(this.props.item.dataSet) && this.props.popUpContainer[this.props.item.dataSet][0]==="FishPopup"){
-        fishShadow = <View style={{position:"absolute", right: 75, bottom: 20,}}><Image style={{width:80,height:22,resizeMode:'contain',  marginRight:3}} source={getPhotoShadow(this.props.item,false)}/></View>
+    if(this.props.popUpContainer!==undefined && this.props.popUpContainer.hasOwnProperty(this.props.item.dataSet) && this.props.popUpContainer[this.props.item.dataSet][0]==="FishPopup"){        fishShadow = <View style={{position:"absolute", right: 75, bottom: 20,}}><Image style={{width:80,height:22,resizeMode:'contain',  marginRight:3}} source={getPhotoShadow(this.props.item,false)}/></View>
       }
       return( 
         <View>

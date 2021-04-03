@@ -10,23 +10,12 @@ export default class CurrentVillagers extends Component {
   constructor(props) {
     super(props);
   }
-  componentWillUnmount(){
-    this.props.navigation.removeListener();
-  }
-  componentDidMount(){
-    this.props.navigation.addListener(
-      'focus',
-      payload => {
-        this.forceUpdate();
-      }
-    );
-  }
   render(){
     var currentVillagers = getCurrentVillagerObjects();
     if(currentVillagers.length===0){
       return(<>
         <View style={{height:10}}/>
-          <TouchableOpacity onPress={() => this.props.setPage("VillagersPage")}>
+          <TouchableOpacity onPress={() => this.props.setPage(8)}>
             <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"You have no villagers added"}</TextFont>
             <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>Tap here and go add some</TextFont>
           </TouchableOpacity>

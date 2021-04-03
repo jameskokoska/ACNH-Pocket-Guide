@@ -47,9 +47,14 @@ class AllItemsPage extends Component {
     if(this.props.smallerHeader !==undefined){
       smallerHeader = this.props.smallerHeader;
     }
+    var itemIDs = "";
+    if(this.props.itemIDs !==undefined){
+      itemIDs = this.props.itemIDs;
+    }
     return(
         <ListPage 
           smallerHeader={smallerHeader}
+          itemIDs={itemIDs}
           setVillagerGift={this.props.setVillagerGift}
           disableFilters={disableFilters}
           setPage={this.props.setPage}

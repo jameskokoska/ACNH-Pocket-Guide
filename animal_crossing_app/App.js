@@ -38,10 +38,8 @@ import NewItemsPage from "./pages/NewItemsPage"
 import WishlistPage from "./pages/WishlistPage"
 import AchievementsPage from "./pages/AchievementsPage"
 import VillagerPresentsPage from "./pages/VillagerPresentsPage"
+import VillagerFurniture from "./pages/VillagerFurniture"
 import ObtainableItemsPage from "./pages/ObtainableItemsPage"
-import { NavigationContainer, DrawerActions, CommonActions, DefaultTheme} from '@react-navigation/native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { enableScreens } from 'react-native-screens';
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -51,17 +49,17 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
--Big update this time!
+-Big update: 
 -Added event notifications!
 -Added Visitors section - this will help you predict and keep track of who will visit next
 -Added Visitors history
 -Re-created the Events section
 -Day of the week is now used instead of month
 -More events displayed!
+-Villager furniture - view what furniture is the default for a villagers house
 -Customize which events are shown and which notifications to get, go to [Edit Events] in the [Events] section of the home page
--Navigating between pages is considerably faster!
--Back button navigation is better
--Increased loading times significantly!
+-Changed item price instead of DIY price to DIY popup
+-Notification bar now colours to theme (when enabled in settings)
 -
 -Added recipes collection progress
 -Can zoom in on artwork - tap the artwork in the popup and pinch to zoom
@@ -160,20 +158,22 @@ global.changelog = `
 -Images are now downloaded, can be used offline (can be disabled in settings)
 `
 
-enableScreens();
-const Drawer = createDrawerNavigator();
-global.settingsUpdated = false;
-
 class App extends Component {
   constructor() {
     super();
+    this.openDrawer = this.openDrawer.bind(this);
+    this.setPage = this.setPage.bind(this);
+    this.setFirstLogin = this.setFirstLogin.bind(this);
+    this.handleBackButton = this.handleBackButton.bind(this);
+    this.random = Math.random();
     this.numLogins;
     this.state = {
       loaded: false,
-      drawerEdgeWidth:0
+      currentPage: 0,
+      open:false,
+      fadeInTitle:true,
     }
-    this.previousPage = "";
-    this.edgeWidth = 100;
+    this.lastPage = 0;
   }
 
   async loadSettings(){
@@ -186,50 +186,32 @@ class App extends Component {
     }
   }
 
-  handleBackButton = ()=>{
-    this.openDrawer(false);
-    return true;
+  loadSections = async(key, defaultSections) => {
+    var sections = JSON.parse(await getStorage(key,JSON.stringify(defaultSections)));
+    const aKeys = Object.keys(sections);
+    const bKeys = Object.keys(defaultSections);
+    //Update sections if any new ones added
+    if(JSON.stringify(aKeys) !== JSON.stringify(bKeys)){
+      var newSections = defaultSections;
+      for(var i=0; i<bKeys.length; i++){
+        if(sections[bKeys[i]]!==undefined){
+          newSections[bKeys[i]]=sections[bKeys[i]];
+        }
+      }
+      await AsyncStorage.setItem(key, JSON.stringify(newSections));
+      sections = newSections;
+    }
+    return sections;
   }
 
   async componentDidMount(){
-    BackHandler.addEventListener("hardwareBackPress", this.handleBackButton);
-
-    this.navigationRef.addListener(
-      'state',
-      payload => {
-        if(this.getCurrentPage()!==this.previousPage && global.settingsUpdated){
-          if(this.navigationRef){
-            this.navigationRef?.resetRoot({
-              index: 0,
-              routes: [{ name: this.getCurrentPage() }],
-            });
-          }
-          global.settingsUpdated=false;
-        } 
-
-        if(this.getCurrentPage()!==this.previousPage){
-          if(this.getCurrentPage()==="GuidePage"){
-            this.setState({fab:<View/>})
-          } else if(this.getCurrentPage()==="CalendarPage"){
-            this.setState({fab:<FAB openDrawer={this.openDrawer} offset={30}/>})
-          } else {
-            this.setState({fab:<FAB openDrawer={this.openDrawer}/>})
-          }
-        }
-
-        if(this.previousPage==="Onboard"){
-          this.setState({
-            drawerEdgeWidth:this.edgeWidth,
-            firstLogin:"false"
-          });
-        }
-
-        this.previousPage = this.getCurrentPage();
-      }
-    );
-
     this.mounted = true;
     // await AsyncStorage.setItem("firstLogin", "true");
+
+    this.backHandler = BackHandler.addEventListener(
+      "hardwareBackPress",
+      this.handleBackButton,
+    );
 
     const firstLogin = await getStorage("firstLogin","true");
     const numLogins = parseInt(await getStorage("numLogins","0")) + 1;
@@ -264,23 +246,47 @@ class App extends Component {
     await Font.loadAsync({
       "ArialRoundedBold": require('./assets/fonts/arialRoundBold.ttf'),
     });
+
+    //load home screen sections
+    const defaultSections = {
+      "Events" : true,   
+      "To-Do" : true,
+      "To-Do - Turnip Log" : true,
+      "Visitors" : true,
+      "Collection" : true,
+      "Profile" : true,
+      "Profile - Dream Address" : true,
+      "Profile - Friend Code" : true,
+      "Store Hours" : true,
+      "Active Creatures" : true,
+    }
+    this.sections = await this.loadSections("Sections", defaultSections);
+
+    //load home screen events
+    const defaultEventSections = {
+      "Info1" : "Notifications are created based on the categories you select. They are only loaded one week into the future and are set according to your phone time.",
+      "App notifications" : false,
+      "Set Notification Time" : "",
+      "Favorite Villager's Birthdays" : true,
+      "All Villager's Birthdays" : false,
+      "K.K. Slider" : true,
+      "Daisy Mae" : true,
+      "Crafting Seasons" : true,
+      "Nook Shopping Events" : false,
+      "Shopping Seasons" : false,
+      "Event Ready Days" : false,
+      "Zodiac Seasons" : false,
+      "Break2" : true,
+      "Show End Day of Events" : true,
+    }
+    this.eventSections = await this.loadSections("EventSections", defaultEventSections);
     
     if(this.mounted){
       this.setState({
+        fadeInTitle: false,
+        firstLogin: firstLogin,
         loaded:true,
-        drawerEdgeWidth:firstLogin==="true"?0:this.edgeWidth,
-        firstLogin:firstLogin,
       });
-    }
-    if(firstLogin==="true"){
-      this.setPage("Onboard")
-    } else {
-      if(this.navigationRef){
-        this.navigationRef?.resetRoot({
-          index: 0,
-          routes: [{ name: "HomePage" }],
-        });
-      }
     }
   }
 
@@ -304,14 +310,10 @@ class App extends Component {
     }
   }
 
-  getCurrentPage = () => {
-    return this.navigationRef?this.navigationRef.getCurrentRoute().name:"HomePage";
-  }
-
   updateSettings = () =>{
     this.updateDarkMode();
     var fab;
-    if(global.settingsCurrent!==undefined&&getSettingsString("settingsShowFAB")==="true"){
+    if(this.state.currentPage!==15&&global.settingsCurrent!==undefined&&getSettingsString("settingsShowFAB")==="true"){
       fab = <FAB openDrawer={this.openDrawer}/>;
     } else {
       fab = <View/>;
@@ -319,223 +321,141 @@ class App extends Component {
     this.setState({fab:fab})
   }
 
-  openDrawer = (vibrate=true)=>{
+  handleBackButton(){
+    //For Guide page
+    if(!this.state.loaded){
+      return true
+    }else if(this.state.firstLogin==="true"){
+      return true;
+    } else if(this.state.currentPage===15){
+      return true;
+    } else if(getSettingsString("settingsBackButtonChangePages")==="true"){
+      this.setPage(this.lastPage);
+    } else {
+      this.openDrawer(false);
+    }
+    return true;
+  }
+
+  openDrawer(vibrate=true) {
     if(this.state.loaded){
-      this.navigationRef.dispatch(DrawerActions.openDrawer());
+      this.sideMenu.openDrawer();
       getSettingsString("settingsEnableVibrations")==="true"&&vibrate ? Vibration.vibrate(8) : "";
     }
     return true;
   }
 
-  setPage = (pageName) => {
-    console.log(pageName)
+  setPage(pageNum) {
     if(this.state.loaded){
-      this.navigationRef?.resetRoot({
-        index: 0,
-        routes: [{ name: pageName }],
-      });
+      if(this.state.currentPage!==pageNum){
+        this.lastPage = this.state.currentPage;
+        this.setState({currentPage: pageNum});
+      }
+      this.sideMenu.closeDrawer();
     }
     return true;
   }
 
+  setVillagerGift = (villager, type) => {
+    this.setState({villager: villager})
+    if(type==="gift"){
+      this.setPage(20);
+    } else if (type==="furniture"){
+      this.setPage(22);
+    }
+  }
+
+  setFirstLogin(firstLogin){
+    this.setState({firstLogin: firstLogin});
+    this.loadSettings();
+  }
   render(){
-    const theme = {
-      colors: {
-        background: colors.background[global.darkMode],
-      },
-    };
-    return (
-      <> 
-        <View style={{position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
-        <NavigationContainer theme={theme} ref={(navigationRef) => this.navigationRef = navigationRef}>
-          <Drawer.Navigator options={{headerShown:false}} drawerContent={(props)=>this.state.loaded?<SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.navigationRef?this.navigationRef.getCurrentRoute().name:"HomePage"}/>:<View/> } initialRouteName="Loading" edgeWidth={this.state.drawerEdgeWidth} drawerType={'slide'}>
-            <Drawer.Screen name="Loading" component={PageLoading} />
-            <Drawer.Screen name="Onboard" component={PageOnboard} />
-            <Drawer.Screen name="HomePage" component={PageHomePage} />
-            <Drawer.Screen name="AllItemsPage" component={PageAllItemsPage} />
-            <Drawer.Screen name="MuseumPage" component={PageMuseumPage} />
-            <Drawer.Screen name="ItemsPage" component={PageItemsPage} />
-            <Drawer.Screen name="SongsPage" component={PageSongsPage} />
-            <Drawer.Screen name="EmoticonsPage" component={PageEmoticonsPage} />
-            <Drawer.Screen name="CraftingPage" component={PageCraftingPage} />
-            <Drawer.Screen name="MysteryIslandsPage" component={PageMysteryIslandsPage} />
-            <Drawer.Screen name="VillagersPage" component={PageVillagersPage} />
-            <Drawer.Screen name="ConstructionPage" component={PageConstructionPage} />
-            <Drawer.Screen name="FlowersPage" component={PageFlowersPage} />
-            <Drawer.Screen name="CardsPage" component={PageCardsPage} />
-            <Drawer.Screen name="CatalogPage" component={PageCatalogPage} />
-            <Drawer.Screen name="SettingsPage" component={this.PageSettingsPage} />
-            <Drawer.Screen name="CreditsPage" component={PageCreditsPage} />
-            <Drawer.Screen name="GuidePage" component={PageGuidePage} />
-            <Drawer.Screen name="CalendarPage" component={PageCalendarPage} />
-            <Drawer.Screen name="NewItemsPage" component={PageNewItemsPage} />
-            <Drawer.Screen name="WishlistPage" component={PageWishlistPage} />
-            <Drawer.Screen name="AchievementsPage" component={PageAchievementsPage} />
-            <Drawer.Screen name="VillagerPresentsPage" component={PageVillagerPresentsPage} />
-            <Drawer.Screen name="ObtainableItemsPage" component={PageObtainableItemsPage} />
-          </Drawer.Navigator>
-        </NavigationContainer>
-        {this.state.loaded?<StatusBar hidden={getSettingsString("settingsShowStatusBar")==="false"} backgroundColor="#1c1c1c" style="light" />:<View/>}
-        {this.state.loaded&&this.state.firstLogin!=="true"?<>
-          <PopupChangelog/>
-          <PopupRating numLogins={this.numLogins}/>
-          {this.state.fab}
-        </>:<View/>}
-      </>
-    );
-  }
+    var fab = this.state.fab;
+    if(this.state.currentPage===15){
+      fab = <View/>;
+    } else if(this.state.currentPage===16){
+      fab = <FAB openDrawer={this.openDrawer} offset={30}/>;
+    }
 
-  PageSettingsPage = ({route, navigation}) => {
-    return(
-      <SettingsPage navigation={navigation} saveSettingsPosition={this.saveSettingsPosition} updateSettings={this.updateSettings} setPage={(pageName)=>navigation.navigate(pageName)}/>
-    )
-  }
-}
-export default App;
-
-function PageLoading(){
-  var splashScreens = [require('./assets/airplane.json'),require('./assets/balloon.json')];
-  var chosenSplashScreen = splashScreens[Math.floor(Math.random() * splashScreens.length)];
-  return (
-    
-      <View style={{alignItems:"center", justifyContent:"center",backgroundColor: "#00000000", width:Dimensions.get('window').width, height:Dimensions.get('window').height*0.9}}>
+    if(!this.state.loaded){
+      var splashScreens = [require('./assets/airplane.json'),require('./assets/balloon.json')];
+      var chosenSplashScreen = splashScreens[Math.floor(this.random * splashScreens.length)];
+      return <>
+      <View style={{position: "absolute", backgroundColor: colors.background[Appearance.getColorScheme()==="light" ? 0 : 1], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
+      <View style={{alignItems:"center", justifyContent:"center",backgroundColor: colors.background[Appearance.getColorScheme()==="light" ? 0 : 1], width:Dimensions.get('window').width, height:Dimensions.get('window').height*0.85}}>
         <FadeInOut fadeIn={true}>
           <LottieView autoPlay loop style={{width: "95%",zIndex:1,transform: [{ scale: 1.25 },],}} source={chosenSplashScreen}/>
         </FadeInOut>
       </View>
-  )
+      </>
+    } else if (this.state.firstLogin==="true"){
+      return <Onboard setFirstLogin={this.setFirstLogin}/>
+    } else {
+      var currentPageView;
+      if (this.state.currentPage===0){
+        currentPageView = <FadeInOut fadeIn={true}><HomePage sections={this.sections} eventSections={this.eventSections} setVillagerGift={this.setVillagerGift} setPage={this.setPage}/></FadeInOut>
+      } else if (this.state.currentPage===1){
+        currentPageView = <AllItemsPage setVillagerGift={this.setVillagerGift}/>
+      } else if(this.state.currentPage===2){
+        currentPageView = <MuseumPage/>
+      } else if (this.state.currentPage===3){
+        currentPageView = <ItemsPage/>
+      } else if (this.state.currentPage===4){
+        currentPageView = <SongsPage/>
+      } else if (this.state.currentPage===5){
+        currentPageView = <EmoticonsPage/>
+      } else if (this.state.currentPage===6){
+        currentPageView = <CraftingPage/>
+      } else if (this.state.currentPage===7){
+        currentPageView = <MysteryIslandsPage/>
+      } else if (this.state.currentPage===8){
+        currentPageView = <VillagersPage setVillagerGift={this.setVillagerGift}/>
+      } else if (this.state.currentPage===9){
+        currentPageView = <ConstructionPage/>
+      } else if (this.state.currentPage===10){
+        currentPageView = <FlowerPage/>
+      } else if (this.state.currentPage===11){
+        currentPageView = <CardsPage/>
+      } else if (this.state.currentPage===12){
+        currentPageView = <CatalogPage/>
+      } else if (this.state.currentPage===13){
+        currentPageView = <SettingsPage updateSettings={this.updateSettings} setPage={this.setPage}/>
+      } else if (this.state.currentPage===14){
+        currentPageView = <CreditsPage/>
+      } else if (this.state.currentPage===15){
+        currentPageView = <GuidePage openMenu={this.openDrawer}/>
+      } else if (this.state.currentPage===16){
+        currentPageView = <CalendarPage/>
+      } else if (this.state.currentPage===17){
+        currentPageView = <NewItemsPage setVillagerGift={this.setVillagerGift}/>
+      } else if (this.state.currentPage===18){
+        currentPageView = <WishlistPage setVillagerGift={this.setVillagerGift} setPage={this.setPage}/>
+      } else if (this.state.currentPage===19){
+        currentPageView = <AchievementsPage/>
+      } else if (this.state.currentPage===20){
+        currentPageView = <VillagerPresentsPage villager={this.state.villager}/>
+      } else if (this.state.currentPage===21){
+        currentPageView = <ObtainableItemsPage setPage={this.setPage}/>
+      } else if (this.state.currentPage===22){
+        currentPageView = <VillagerFurniture villager={this.state.villager}/>
+      } else {
+        currentPageView = <Text>Default</Text>
+      }
+      
+      return (
+        <>  
+          <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage}>
+            <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
+            <PopupRating numLogins={this.numLogins}/>
+            <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
+            <StatusBar hidden={getSettingsString("settingsShowStatusBar")==="false"} backgroundColor={colors.background[global.darkMode]} barStyle={global.darkMode===1?"light-content":"dark-content"}/>
+            {currentPageView}
+            <PopupChangelog/>
+          </SideMenu>
+          {fab}
+        </>
+      );
+    }
+  }
 }
-
-function PageOnboard({route, navigation}){
-  return (
-    <>
-      <Onboard navigation={navigation} setPage={(pageName)=>navigation.navigate(pageName)}/>
-    </>
-  )
-}
-
-function PageHomePage({route, navigation}) {
-  return(
-    <FadeInOut fadeIn={true}><HomePage navigation={navigation} setVillagerGift={(villager)=>navigation.navigate("VillagerPresentsPage",{villager:villager})} setPage={(pageName)=>navigation.navigate(pageName)}/></FadeInOut>
-  )
-}
-
-function PageAllItemsPage({route, navigation}) {
-  return(
-    <AllItemsPage setVillagerGift={(villager)=>navigation.navigate("VillagerPresentsPage",{villager:villager})}/>
-  )
-}
-
-function PageMuseumPage() {
-  return(
-    <MuseumPage/>
-  )
-}
-
-function PageItemsPage() {
-  return(
-    <ItemsPage/>
-  )
-}
-
-function PageSongsPage() {
-  return(
-    <SongsPage/>
-  )
-}
-
-function PageEmoticonsPage() {
-  return(
-    <EmoticonsPage/>
-  )
-}
-
-function PageCraftingPage() {
-  return(
-    <CraftingPage/>
-  )
-}
-
-function PageMysteryIslandsPage() {
-  return(
-    <MysteryIslandsPage/>
-  )
-}
-
-function PageVillagersPage({route, navigation}) {
-  return(
-    <VillagersPage setVillagerGift={(villager)=>navigation.navigate("VillagerPresentsPage",{villager:villager})}/>
-  )
-}
-
-function PageConstructionPage() {
-  return(
-    <ConstructionPage/>
-  )
-}
-
-function PageFlowersPage() {
-  return(
-    <FlowerPage/>
-  )
-}
-
-function PageCardsPage() {
-  return(
-    <CardsPage/>
-  )
-}
-
-function PageCatalogPage() {
-  return(
-    <CatalogPage/>
-  )
-}
-
-function PageCreditsPage() {
-  return(
-    <CreditsPage/>
-  )
-}
-
-function PageGuidePage({route, navigation}) {
-  return(
-    <GuidePage navigation={navigation} openMenu={()=>{navigation.openDrawer()}}/>
-  )
-}
-
-function PageCalendarPage() {
-  return(
-    <CalendarPage/>
-  )
-}
-
-function PageNewItemsPage({route, navigation}) {
-  return(
-    <NewItemsPage setVillagerGift={(villager)=>navigation.navigate("VillagerPresentsPage",{villager:villager})}/>
-  )
-}
-
-function PageWishlistPage({route, navigation}) {
-  return(
-    <WishlistPage setVillagerGift={(villager)=>navigation.navigate("VillagerPresentsPage",{villager:villager})} setPage={(pageName)=>navigation.navigate(pageName)}/>
-  )
-}
-
-function PageAchievementsPage() {
-  return(
-    <AchievementsPage/>
-  )
-}
-
-function PageVillagerPresentsPage({ route, navigation }) {
-  return(
-    <VillagerPresentsPage villager={route.params.villager}/>
-  )
-}
-
-function PageObtainableItemsPage({route, navigation}) {
-  return(
-    <ObtainableItemsPage setPage={(pageName)=>navigation.navigate(pageName)}/>
-  )
-}
+export default App;

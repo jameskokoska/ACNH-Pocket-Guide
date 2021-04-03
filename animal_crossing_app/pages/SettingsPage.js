@@ -24,22 +24,8 @@ class SettingsPage extends Component {
       date:new Date(),
       time:new Date(),
       datePickerVisible: false,
-      deletedInfo: ["0","0"],
-      settings: global.settingsCurrent,
+      deletedInfo: ["0","0"]
     }
-  }
-  
-  //If any settings changed elsewhere in the app, update them
-  componentWillUnmount(){
-    this.props.navigation.removeListener();
-  }
-  componentDidMount(){
-    this.props.navigation.addListener(
-      'focus',
-      payload => {
-        this.setState({settings:global.settingsCurrent})
-      }
-    );
   }
   setCustomTime(){
     var date = this.state.date;
@@ -63,17 +49,15 @@ class SettingsPage extends Component {
           <View style={{marginTop: 100}}/>
           <Header>Settings</Header>
           <HeaderNote>Tap each setting to learn more</HeaderNote>
-          <HeaderNote>To see changes, switch pages to refresh</HeaderNote>
           <View style={{marginTop: 15}}/>
           <SettingsDivider text={"Game language"}/>
           <LanguagePicker restartPopup={(show)=>this.popupRestart.setPopupVisible(show)}/>
           <View style={{height:10}}/>
-          {this.state.settings.map( (setting, index)=>
+          {global.settingsCurrent.map( (setting, index)=>
             {
               if(setting["keyName"]!="breaker"){
                 return <SettingsContainer 
                   updateSettings={this.props.updateSettings}
-                  refreshPages={setting["refreshPages"]===true?true:false}
                   key={setting["keyName"]+index.toString()} 
                   backgroundColor={colors.white[global.darkMode]} 
                   textColor={colors.textBlack[global.darkMode]} 
@@ -94,7 +78,7 @@ class SettingsPage extends Component {
               
             }
           )}
-          <Popup ref={(popupLoadNotifications) => this.popupLoadNotifications = popupLoadNotifications} text="Notifications" textLower="You can select event notifications under the [Edit Events] of the [Events] section on the homepage." button1={"OK"} button1Action={()=>{this.props.setPage("HomePage")}}/>
+          <Popup ref={(popupLoadNotifications) => this.popupLoadNotifications = popupLoadNotifications} text="Notifications" textLower="You can select event notifications under the [Edit Events] of the [Events] section on the homepage." button1={"OK"} button1Action={()=>{this.props.setPage(0)}}/>
           <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.setState({datePickerVisible:true})}} text={"Set Custom Date/Time"} />
           <DateTimePickerModal
             mode={"date"}

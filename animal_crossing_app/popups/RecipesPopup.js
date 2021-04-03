@@ -4,7 +4,7 @@ import {Dimensions, Image, View, Text} from 'react-native';
 import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
 import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"
-
+import {findItem} from "../LoadJsonData"
 
 class RecipesPopup extends Component {
   constructor(props){
@@ -14,16 +14,16 @@ class RecipesPopup extends Component {
   }
   render(){
     return <View style={{width: "100%", alignItems: "center"}}>
-      {/* <InfoLineBeside
+      <InfoLineBeside
         image1={require("../assets/icons/bellBag.png")} 
         image2={require("../assets/icons/coin.png")} 
-        item1={this.props.item}
-        item2={this.props.item}
+        item1={findItem(this.props.item["Crafted Item Internal ID"])}
+        item2={findItem(this.props.item["Crafted Item Internal ID"])}
         textProperty1={["Buy"]}
         textProperty2={["Sell"]}
         ending1={"Exchange Currency"}
         ending2={"Exchange Currency"}
-      /> */}
+      />
       <InfoLine
         image={require("../assets/icons/popper.png")} 
         item={this.props.item}

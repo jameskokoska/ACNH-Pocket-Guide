@@ -60,11 +60,18 @@ class VillagerPopup extends Component {
         color={colors.okButton[global.darkMode]}
         vibrate={5}
         onPress={() => {
-          this.props.setVillagerGift(this.props.item)
+          this.props.setVillagerGift(this.props.item, "gift")
       }}/>
       <TouchableOpacity style={{paddingTop:5}} onPress={()=>{this.popup.setPopupVisible(true);}}>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, padding:8}}>{"What are villager gifts?"}</TextFont>
       </TouchableOpacity>
+      <ButtonComponent
+        text={"View Furniture"}
+        color={colors.okButton[global.darkMode]}
+        vibrate={5}
+        onPress={() => {
+          this.props.setVillagerGift(this.props.item, "furniture")
+      }}/>
       <View style={{alignItems: 'center', width: Dimensions.get('window').width, justifyContent:"center"}}>
         <FastImage
           style={{width: Dimensions.get('window').width*0.8,height:Dimensions.get('window').width*0.8, resizeMode: "contain", borderRadius: 2}}

@@ -25,7 +25,7 @@ class VillagersPage extends Component {
           titleColor={colors.textBlack[global.darkMode]}
           searchBarColor={colors.searchbarBG[global.darkMode]}
           backgroundColor={colors.lightDarkAccent[global.darkMode]}
-          boxColor={false}
+          boxColor={true}
           labelColor={colors.textBlack[global.darkMode]}
           accentColor={colors.villagerAccent[global.darkMode]}
           specialLabelColor={colors.fishText[global.darkMode]}

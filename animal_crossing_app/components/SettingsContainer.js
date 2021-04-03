@@ -15,13 +15,6 @@ class SettingsContainer extends Component {
       toggle:this.props.setting.currentValue === "true" ? true : false,
     }
   }
-  componentDidUpdate(prevProps){
-    if(prevProps!==this.props){
-      this.setState({
-        toggle:this.props.setting.currentValue === "true" ? true : false,
-      })
-    }
-  }
   render(){
     return(
       <TouchableOpacity activeOpacity={0.7} onPress={() => {this.props.openPopup(this.props.setting);}}>
@@ -42,7 +35,6 @@ class SettingsContainer extends Component {
                 this.setState({toggle:!this.state.toggle});
                 getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
                 this.props.updateSettings();
-                global.settingsUpdated = true;
                 //Delete saved photos if photo downloading disabled
                 console.log(this.props.keyName)
                 if(this.props.keyName==="settingsDownloadImages" && this.state.toggle === false){

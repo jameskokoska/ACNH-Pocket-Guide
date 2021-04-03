@@ -249,7 +249,6 @@ export class PopupBottomCustom extends Component {
     };
     return (
       <>
-      <Animated.View style={{zIndex:99, backgroundColor: "black", opacity: Animated.multiply(-0.8,Animated.add(-0.7,Animated.multiply(this.bottomSheetCallback,1))), width: Dimensions.get('window').width, height: Dimensions.get('window').height, position:"absolute"}} pointerEvents="none"/>
       <BottomSheet
         callbackNode={this.bottomSheetCallback}
         ref={(sheetRef) => this.sheetRef = sheetRef}
@@ -263,6 +262,7 @@ export class PopupBottomCustom extends Component {
         onOpenStart={()=>{if(this.mounted){this.setState({openStart:true})}}}
         onOpenEnd={()=>{if(this.mounted){this.setState({openStart:true})}}}
       />
+      <Animated.View style={{zIndex:99, backgroundColor: "black", opacity: Animated.multiply(-0.8,Animated.add(-0.7,Animated.multiply(this.bottomSheetCallback,1))), width: Dimensions.get('window').width, height: Dimensions.get('window').height, position:"absolute"}} pointerEvents="none"/>
       </>
     )
   }

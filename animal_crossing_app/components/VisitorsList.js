@@ -182,7 +182,7 @@ class CharacterItem extends Component {
     }
     return (
       <View style={{margin:7, alignItems:"center", justifyContent:"center"}}>
-        <TouchableOpacity onLongPress={() => {this.props.onTap()}} onPress={()=>{this.props.onTap(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10]) : "";}}>
+        <TouchableOpacity onLongPress={() => {this.props.onTap()}} onPress={()=>{this.props.onTap()}}>
           <View style={[styles.rowImageBackground,{backgroundColor:colors.eventBackground[global.darkMode]}]}>
             {imageComponent}
           </View>

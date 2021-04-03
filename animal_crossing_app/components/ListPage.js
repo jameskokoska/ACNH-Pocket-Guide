@@ -122,6 +122,7 @@ export default (props) =>{
   }, [])
 
   useEffect(()=>{
+    console.log(props.itemIDs)
     var dataUpdated = [];
     var previousVariation = "";
     var item;
@@ -219,6 +220,8 @@ export default (props) =>{
             searchActual = ["Wishlist"];
           } else if (props.villagerGifts) {
             searchActual = [...props.villagerGiftsFilters,...searchActual];
+          } else if (props.itemIDs!==undefined && props.itemIDs!=="") {
+            searchActual = ["SearchIDs"]
           } else if (props.title==="Obtainable DIYs" || props.title==="Obtainable Reactions") {
             searchActual = [...currentVillagerFilters,...searchActual];
           } else if (props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions") {
@@ -236,8 +239,16 @@ export default (props) =>{
               break;
             } else if(searchActual.includes("Wishlist") && props.wishlistItems && global.collectionList.includes("wishlist"+item.["checkListKey"])){
               filterFound = true;
+              break;
             } else if (searchActual.includes("Wishlist") && props.wishlistItems){
               filterFound = false;
+              break;
+            } else if (searchActual.includes("SearchIDs") && (item.hasOwnProperty("Internal ID") && props.itemIDs.includes(item.["Internal ID"])) || (item.hasOwnProperty("Name") && props.itemIDs.includes(item.["Name"]))) {
+              filterFound = true;
+              break;
+            } else if (searchActual.includes("SearchIDs")) {
+              filterFound = false;
+              searchFound= false;
               break;
             } else if((props.villagerGifts===true && item.["Color 1"]!==undefined && item.["Color 2"]!==undefined && item.["Style 1"]!==undefined && item.["Style 2"]!==undefined) &&
               (item.["Color 1"].includes(searchActual[0])  || 
@@ -444,7 +455,7 @@ export default (props) =>{
       <View style={{height:10}}/>
       {header}
       <View style={{height:Dimensions.get('window').height/2}}/>
-      <TouchableOpacity onPress={() => props.setPage("AllItemsPage")}>
+      <TouchableOpacity onPress={() => props.setPage(1)}>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"You have no wishlist items."}</TextFont>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"Long press items to add them to your wishlist."}</TextFont>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>Tap here and go add some</TextFont>
