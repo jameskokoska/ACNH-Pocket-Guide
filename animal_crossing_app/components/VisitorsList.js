@@ -114,7 +114,7 @@ export default class VisitorList extends Component {
             key={character.name+index.toString()}
             character={character}
             setVisited={this.setVisited}
-            onTap={()=>{this.setState({selectedCharacter:character.name, selectedDay:getWeekDay(getCurrentDateObject().getDay())}); this.popup?.setPopupVisible(true);}}
+            onTap={()=>{this.setState({selectedCharacter:character.name, selectedDay:getWeekDay(getCurrentDateObject().getDay())}); this.popup?.setPopupVisible(true); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10]) : "";}}
             day={this.state.data[this.currentMondayIndex]!==undefined?this.state.data[this.currentMondayIndex][character.name]:""}
           />
         )}

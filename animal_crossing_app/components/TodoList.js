@@ -19,6 +19,7 @@ class TodoList extends Component {
       data: [],
       showTurnipLog: false,
       showEdit: false,
+      todoSorted:true,
     }
   }
 
@@ -33,22 +34,22 @@ class TodoList extends Component {
 
   loadList = async() => {
     var defaultList = [
+      {title: attemptToTranslate('Water Flowers'), finished: false, picture:"flower.png"},
+      {title: attemptToTranslate('Turnip Prices'), finished: false, picture:"turnip.png", small:true},
+      {title: attemptToTranslate('Turnip Prices'), finished: false, picture:"turnip.png", small:true},
+      {title: attemptToTranslate('Talk To Villagers'), finished: false, picture:"cat.png"},
+      {title: attemptToTranslate('Dig Fossils'), finished: false, picture:"digIcon.png"},
       {title: attemptToTranslate('Rock') + " 1", finished: false, picture:"rock.png",small:true},
       {title: attemptToTranslate('Rock') + " 2", finished: false, picture:"rock.png",small:true},
       {title: attemptToTranslate('Rock') + " 3", finished: false, picture:"rock.png",small:true},
       {title: attemptToTranslate('Rock') + " 4", finished: false, picture:"rock.png",small:true},
       {title: attemptToTranslate('Rock') + " 5", finished: false, picture:"rock.png",small:true},
       {title: attemptToTranslate('Rock') + " 6", finished: false, picture:"rock.png",small:true},
-      {title: attemptToTranslate('Turnip Prices'), finished: false, picture:"turnip.png", small:true},
-      {title: attemptToTranslate('Turnip Prices'), finished: false, picture:"turnip.png", small:true},
-      {title: attemptToTranslate('Water Flowers'), finished: false, picture:"flower.png"},
-      {title: attemptToTranslate('Talk To Villagers'), finished: false, picture:"cat.png"},
-      {title: attemptToTranslate('Dig Fossils'), finished: false, picture:"digIcon.png"},
     ]
     var storageData = JSON.parse(await getStorage("ToDoList",JSON.stringify(defaultList)));
-    var storageShowTurnipLog = await getStorage("TurnipListShow","true") === "true";
+    var todoSorted = await getStorage("ToDoListSorted","true") === "true";
     if(this.mounted){
-      this.setState({data:storageData, showTurnipLog: storageShowTurnipLog});
+      this.setState({data:storageData, todoSorted:todoSorted});
     }
     this.props.setLoadedToDo(true);
   }
@@ -118,6 +119,14 @@ class TodoList extends Component {
     return <>
       <View style={{alignItems:"center",flexDirection:"row", right:0, top:0,position:'absolute',zIndex:10}}>
         <TouchableOpacity style={{padding:10}} 
+          onPress={async()=>{
+            this.setState({todoSorted:!this.state.todoSorted}); 
+            await AsyncStorage.setItem("ToDoListSorted", !this.state.todoSorted?"true":"false");
+            getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+        }}>
+          <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{this.state.todoSorted?"Unsort":"Sort"}</TextFont>
+        </TouchableOpacity>
+        <TouchableOpacity style={{padding:10}} 
           onPress={()=>{
             this.uncheckAll(); 
         }}>
@@ -139,21 +148,40 @@ class TodoList extends Component {
       </View>
       <View style={{height:10}}/>
       <View style={{alignItems: 'center'}}>
-        {this.state.data.map( (item, index)=>{
-          if(!item.small){
-            return(
-              <TodoItem
-                key={item+index.toString()}
-                item={item}
-                index={index}
-                checkOffItem={this.checkOffItem}
-                deleteItem={this.deleteItem}
-                showEdit={this.state.showEdit}
-              />
-            )
-          }
-        })}
-        <View style={{paddingTop:10, marginHorizontal: 20, flex: 1, flexDirection: 'row', justifyContent:'center',flexWrap:"wrap"}}>
+        {this.state.todoSorted?<>
+          {this.state.data.map( (item, index)=>{
+            if(!item.small){
+              return(
+                <TodoItem
+                  key={item+index.toString()}
+                  item={item}
+                  index={index}
+                  checkOffItem={this.checkOffItem}
+                  deleteItem={this.deleteItem}
+                  showEdit={this.state.showEdit}
+                />
+              )
+            }
+          })}
+          <View style={{paddingTop:0, marginHorizontal: 20, flex: 1, flexDirection: 'row', justifyContent:'center',flexWrap:"wrap"}}>
+            {this.state.data.map( (item, index)=>{
+              if(item.small){
+                return(
+                  <TodoItemSmall
+                    key={item+index.toString()}
+                    item={item}
+                    index={index}
+                    checkOffItem={this.checkOffItem}
+                    deleteItem={this.deleteItem}
+                    showEdit={this.state.showEdit}
+                  />
+                )
+              }
+            })}
+          </View>
+        </>:<View/>}
+
+        {!this.state.todoSorted?<View style={{paddingTop:0, marginHorizontal: 0, flex: 1, flexDirection: 'row', justifyContent:'center',flexWrap:"wrap"}}>
           {this.state.data.map( (item, index)=>{
             if(item.small){
               return(
@@ -166,9 +194,21 @@ class TodoList extends Component {
                   showEdit={this.state.showEdit}
                 />
               )
+            } else {
+              return(
+                <TodoItem
+                  key={item+index.toString()}
+                  item={item}
+                  index={index}
+                  checkOffItem={this.checkOffItem}
+                  deleteItem={this.deleteItem}
+                  showEdit={this.state.showEdit}
+                />
+              )
             }
           })}
-        </View>
+        </View>:<View/>}
+
         {this.props.sections["To-Do - Turnip Log"]===true?<TurnipLog/>:<View/>}
       </View>
       {/* <TouchableOpacity style={{padding:10}} 
@@ -421,7 +461,7 @@ class TodoItem extends Component {
                 {imageComp}
               </View>
               <View style={styles.rowTextTop}>
-                <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:20, color:colors.textBlack[global.darkMode]}}>{capitalize(this.props.item.title)}</TextFont>
+                <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:20, color:colors.textBlack[global.darkMode]}}>{this.props.item.title}</TextFont>
               </View>
               <TouchableOpacity style={{position:"absolute", right: -5}} 
                 activeOpacity={0.6}
@@ -479,7 +519,7 @@ class TodoItemSmall extends Component {
       />
     }
     return (
-      <View style={{margin:5}}>
+      <View style={{margin:5, marginTop:8}}>
         {this.removeButton(this.props)}
         <TouchableOpacity 
           background={TouchableNativeFeedback.Ripple(colors.todoColorAccent[global.darkMode], false)}

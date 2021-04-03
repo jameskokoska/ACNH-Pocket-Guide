@@ -49,7 +49,6 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
--Big update: 
 -Added event notifications!
 -Added Visitors section - this will help you predict and keep track of who will visit next
 -Added Visitors history
@@ -58,11 +57,16 @@ global.changelog = `
 -More events displayed!
 -Villager furniture - view what furniture is the default for a villagers house
 -Customize which events are shown and which notifications to get, go to [Edit Events] in the [Events] section of the home page
--Changed item price instead of DIY price to DIY popup
+-Changed DIY price to item price in DIY popup
 -Notification bar now colours to theme (when enabled in settings)
 -Fixed obtainable items crash
 -Possibly fixed custom time setting?
 -Custom time is now an offset, it will progress relative to real time but be offset by the selected date
+-Can sort/unsort tasks
+-Haptic feedback for visitor page fix
+-Sorry for the bugs recently, I didn't notice I was pushing updates over the air
+-
+-Past changes:
 -
 -Added recipes collection progress
 -Can zoom in on artwork - tap the artwork in the popup and pinch to zoom
@@ -99,8 +103,6 @@ global.changelog = `
 -Added NookLink exchange prices and icons
 -Fixed purchasing and selling prices mixup in popups
 -Main changelog is shorter, moved longer one to About page 
--
--Past changes:
 -
 -Color fixes
 -Better headers for Achievements and Events page

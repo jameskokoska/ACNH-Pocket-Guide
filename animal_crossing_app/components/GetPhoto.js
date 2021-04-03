@@ -38,6 +38,8 @@ export function getPhoto(name, fallback=""){
   switch(name){
     case "leaf.png":
       return require("../assets/icons/leaf.png");
+    case "dice.png":
+      return require("../assets/icons/dice.png");
     case "applejuice.png":
       return require("../assets/icons/applejuice.png");
     case "fish.png":
@@ -88,6 +90,18 @@ export function getPhoto(name, fallback=""){
       return require("../assets/icons/oceanIcon.png");
     case "saharah.png":
       return require("../assets/icons/saharah.png");
+    case "whisp.png":
+      return require("../assets/icons/whisp.png");
+    case "gulivarrr.png":
+      return require("../assets/icons/gulivarrr.png");
+    case "flick.png":
+      return require("../assets/icons/flick.png");
+    case "cj.png":
+      return require("../assets/icons/cj.png");
+    case "nookShopping.png":
+      return require("../assets/icons/nookShopping.png");
+    case "recycle.png":
+      return require("../assets/icons/recycle.png");
     case "balloon.png":
       return require("../assets/icons/balloon.png");
     case "sparkle.png":
@@ -261,6 +275,8 @@ export function getPhotoCorner(name){
     return <Image source={require("../assets/icons/nookLink.png")} style={{height: 56, width: 56, resizeMode:'contain'}}/>;
   else if(name.includes("nook shopping"))
     return <Image source={require("../assets/icons/nookShopping.png")} style={{height: 56, width: 56, resizeMode:'contain'}}/>;
+  else if(name.includes("airline"))
+    return <Image source={require("../assets/icons/airplane.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
   else if(name.includes("nook"))
     return <Image source={require("../assets/icons/nook.png")} style={{height: 55, width: 55, resizeMode:'contain'}}/>;
   else if(name.includes("crafting"))

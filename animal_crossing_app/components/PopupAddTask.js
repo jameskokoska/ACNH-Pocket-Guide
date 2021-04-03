@@ -51,6 +51,11 @@ class PopupAddTask extends Component {
       "flower.png",
       "diyKit.png",
       "saharah.png",
+      "whisp.png",
+      "gulivarrr.png",
+      "flick.png",
+      "cj.png",
+      "nookShopping.png",
       getMaterialImage("apple",true),
       getMaterialImage("apple tree",true),
       getMaterialImage("money tree",true),
@@ -102,7 +107,9 @@ class PopupAddTask extends Component {
       "bulb.png",
       "octopus.png",
       "hourglass.png",
-      "weather.png"
+      "weather.png",
+      "recycle.png",
+      "dice.png",
     ];
   }
 
@@ -171,7 +178,7 @@ class PopupAddTask extends Component {
         <PopupInfoCustom ref={(popup) => this.popup = popup} buttonDisabled={true} buttons={buttons} header={header}>
           <View style={{flex: 1, flexWrap: 'wrap', flexDirection:"row",justifyContent:"center"}}>
             <SelectionImage 
-              selectedImage={"leaf.png"} 
+              selectedImage={this.state.selectedImage} 
               images={this.images}
               onSelected={(image)=>{this.setState({selectedImage:image}); this.task.picture=image;}}
               canDeselect={false}
