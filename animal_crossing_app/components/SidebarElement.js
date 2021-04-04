@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import TextFont from './TextFont'
 import {getSettingsString} from "../LoadJsonData"
+import FadeInOut from "./FadeInOut"
 
 class SidebarElement extends Component {
  
@@ -19,18 +20,24 @@ class SidebarElement extends Component {
     var elevation;
     if(this.props.currentPage===this.props.pageNum){
       backgroundColor=this.props.backgroundColor;
-      elevation = 4;
+      elevation = 0;
     } else {
       backgroundColor=this.props.unselectedColor;
       elevation = 0;
     }
     return (
-      <TouchableNativeFeedback onPress={() => {getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(15) : ""; this.props.setPage(this.props.pageNum);}}>
-        <View style={[styles.sidebarBox, {backgroundColor: backgroundColor,elevation: elevation}]}>
-          <Image style={styles.sidebarImage} source={this.props.image}/>
-          <TextFont bold={true} style={[styles.sidebarTitle,{color:this.props.textColor}]}>{this.props.title}</TextFont>
-        </View>
-      </TouchableNativeFeedback>
+        <TouchableNativeFeedback onPress={() => {getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(15) : ""; this.props.setPage(this.props.pageNum);}}>
+          <View style={[styles.sidebarBox]}>
+            <FadeInOut style={{position:"absolute",}} fadeIn={this.props.currentPage===this.props.pageNum}>
+              <View style={[styles.sidebarBox, {width:Dimensions.get('window').width*0.7-40-4, backgroundColor: backgroundColor,elevation: elevation}]}>
+                <Image style={styles.sidebarImage} source={this.props.image}/>
+                <TextFont bold={true} style={[styles.sidebarTitle,{color:this.props.textColor}]}>{this.props.title}</TextFont>
+              </View>
+            </FadeInOut>
+            <Image style={styles.sidebarImage} source={this.props.image}/>
+            <TextFont bold={true} style={[styles.sidebarTitle,{color:this.props.textColor}]}>{this.props.title}</TextFont>
+          </View>
+        </TouchableNativeFeedback>
     );
   }
 };
