@@ -6,13 +6,14 @@ import colors from '../Colors.js';
 import {getSettingsString} from "../LoadJsonData"
 import {ClothingRouteClass} from "./ItemsPage"
 import {InfoLineBeside, InfoLine} from '../components/BottomSheetComponents';
+import ErrorPage from "../pages/ErrorPage"
 
 export default class VillagerPresentsPage extends Component {
   constructor() {
     super();
   }
   render(){
-    if(this.props.villager!==undefined){
+    if(this.props.villager!==undefined && this.props.villager!==""){
       return(
         <ClothingRouteClass 
           title={this.props.villager["NameLanguage"]}
@@ -36,7 +37,7 @@ export default class VillagerPresentsPage extends Component {
         />
       )
     } else {
-      return(<View/>)
+      return(<ErrorPage/>)
     }
     
   }

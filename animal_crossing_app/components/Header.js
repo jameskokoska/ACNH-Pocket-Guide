@@ -33,7 +33,15 @@ const Header = (props) => {
   const popupExtraInfo = React.useRef(null);
   return (
     <>
-      {props.extraInfo!==undefined&&props.extraInfo!==""?<PopupInfoCustom ref={popupExtraInfo} buttonText={"Close"}>
+      {props.extraInfo==="events"&&props.extraInfo!==undefined&&props.extraInfo!==""?<PopupInfoCustom ref={popupExtraInfo} buttonText={"Close"}>
+        <View style={{height:6}}/>
+        <SubHeader>{"Guide + FAQ"}</SubHeader>
+        <Paragraph styled={true}>{"You can read more about specific events and details by visiting the events and guide page"}</Paragraph>
+        <TouchableOpacity onPress={() => props.setPage(15, true, "eventsRedirect")}>
+          <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", padding:10, marginTop:10}}>{"Tap here to read about events"}</TextFont>
+        </TouchableOpacity>
+      </PopupInfoCustom>:<View/>}
+      {props.extraInfo!=="events"&&props.extraInfo!==undefined&&props.extraInfo!==""?<PopupInfoCustom ref={popupExtraInfo} buttonText={"Close"}>
         <View style={{height:6}}/>
         <SubHeader>{props.extraInfo[0]}</SubHeader>
         {props.extraInfo.slice(1,props.extraInfo.length).map( (info, index)=>{

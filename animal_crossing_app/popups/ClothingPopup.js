@@ -53,6 +53,11 @@ class ClothingPopup extends Component {
         textProperty={["Seasonal Availability"]}
       />
       <InfoLine
+        image={require("../assets/icons/popper.png")} 
+        item={this.props.item}
+        textProperty={["Season/Event"]}
+      />
+      <InfoLine
         image={require("../assets/icons/magnifyingGlass.png")} 
         item={this.props.item}
         textProperty={["Source Notes"]}

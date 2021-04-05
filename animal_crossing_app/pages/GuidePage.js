@@ -15,7 +15,7 @@ class GuidePage extends Component {
     this.state = {
       canGoBack: false,
       canGoForward: false,
-      currentUrl: "https://chibisnorlax.github.io/acnhfaq/"
+      currentURL: props.propsPassed==="eventsRedirect"?"https://chibisnorlax.github.io/acnhfaq/events/":"https://chibisnorlax.github.io/acnhfaq/"
     }
   }
 
@@ -40,7 +40,9 @@ class GuidePage extends Component {
     var run = `
         document.getElementById('site-nav').classList.add('nav-open');
       `;
-    this.webView.injectJavaScript(run);
+    if(this.props.propsPassed!=="eventsRedirect"){
+      this.webView.injectJavaScript(run);
+    }
   }
  
   render(){
@@ -57,7 +59,7 @@ class GuidePage extends Component {
       <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
         <WebView
           ref={(webView) => this.webView = webView}
-          source={{ uri: "https://chibisnorlax.github.io/acnhfaq/" }}
+          source={{ uri: this.state.currentURL }}
           style={{width:Dimensions.get('window').width,height:Dimensions.get('window').height }}
           injectedJavaScript={"document.body.style.userSelect = 'none';"}
           onError={() => {

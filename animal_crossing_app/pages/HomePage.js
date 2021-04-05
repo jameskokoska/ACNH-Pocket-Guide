@@ -126,6 +126,7 @@ class HomePage extends Component {
               {todayTitle}
               {this.todayEvents.map( (event, index)=>
                 <EventContainer 
+                  setPage={this.props.setPage}
                   key={event.name+index} 
                   backgroundColor={colors.eventBackground[global.darkMode]}
                   textColor={colors.textBlack[global.darkMode]}
@@ -136,6 +137,7 @@ class HomePage extends Component {
               {tomorrowTitle}
               {this.tomorrowEvents.map( (event, index)=>
                 <EventContainer 
+                  setPage={this.props.setPage}
                   key={event.name+index} 
                   backgroundColor={colors.eventBackground[global.darkMode]}
                   textColor={colors.textBlack[global.darkMode]}
@@ -146,6 +148,7 @@ class HomePage extends Component {
               {thisWeekTitle}
               {this.thisWeekEvents.map( (event, index)=>
                 <EventContainer 
+                  setPage={this.props.setPage}
                   key={event.name+index} 
                   backgroundColor={colors.eventBackground[global.darkMode]}
                   textColor={colors.textBlack[global.darkMode]}
@@ -235,7 +238,7 @@ class HomePage extends Component {
         <View style={[styles.homeScreenBackgroundTop,{backgroundColor:colors.skyColor[global.darkMode]}]}/>
         <Image style={{width:Dimensions.get('window').width, height:Dimensions.get('window').height-295, resizeMode:"stretch",zIndex:10, backgroundColor:colors.grassColor[global.darkMode]}} source={global.darkMode===1 ? require("../assets/icons/cliffDark.png") : require("../assets/icons/cliff.png")} />
       </View>
-      <VillagerPopupPopup ref={(villagerPopupPopup) => this.villagerPopupPopup = villagerPopupPopup} setVillagerGift={this.props.setVillagerGift}/>
+      <VillagerPopupPopup ref={(villagerPopupPopup) => this.villagerPopupPopup = villagerPopupPopup} setPage={this.props.setPage}/>
     </View>
   }
 }
@@ -489,7 +492,7 @@ class VillagerPopupPopup extends Component {
   render(){
     var villagerPopup = <View/>
     if(this.state.item!==undefined && this.state.item!==""){
-      villagerPopup = <VillagerPopup item={this.state.item} setVillagerGift={this.props.setVillagerGift}/>
+      villagerPopup = <VillagerPopup item={this.state.item} setPage={this.props.setPage}/>
     }
     return(
       <PopupBottomCustom ref={(popup) => this.popup = popup}>

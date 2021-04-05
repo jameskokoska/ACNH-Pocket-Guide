@@ -228,7 +228,9 @@ export default (props) =>{
             if(currentVillagerFiltersInverse.length===0){
               searchActual = [":"];
             }
-          } 
+          } else if (props.currentSetFilters!==undefined && props.currentSetFilters!="") {
+            searchActual = [...props.currentSetFilters,...searchActual];
+          }
           for(var z = 0; z < searchActual.length; z++){
             if(searchActual.includes("New version") && props.newItems && item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===global.gameVersion){
               filterFound = true;
@@ -420,7 +422,7 @@ export default (props) =>{
           width: Dimensions.get('window').width, 
           height: Dimensions.get('window').height, position:"absolute"}} 
         pointerEvents="none"> */}
-        <Header extraInfo={props.extraInfo} smallerHeader={props.smallerHeader} disableFilters={props.disableFilters} customHeader={props.customHeader} disableSearch={props.disableSearch} subHeader={props.subHeader} searchFilters={searchFilters} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
+        <Header setPage={props.setPage} extraInfo={props.extraInfo} smallerHeader={props.smallerHeader} disableFilters={props.disableFilters} customHeader={props.customHeader} disableSearch={props.disableSearch} subHeader={props.subHeader} searchFilters={searchFilters} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
         {/* </Animated.View> */}
       </Animated.View>
 
@@ -499,7 +501,7 @@ export default (props) =>{
         restrictSize={false}
       >
         <BottomSheetRender 
-          setVillagerGift={props.setVillagerGift}
+          setPage={props.setPage}
           activeCreatures={props.activeCreatures}
           ref={bottomSheetRenderRef}
           imageProperty={props.imageProperty} 
@@ -599,7 +601,7 @@ class BottomSheetRender extends Component{
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="ArtPopup"){
         popUpContainer = <ArtPopup item={this.state.item}/>
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="VillagerPopup"){
-        popUpContainer = <VillagerPopup item={this.state.item} setVillagerGift={this.props.setVillagerGift}/>
+        popUpContainer = <VillagerPopup item={this.state.item} setPage={this.props.setPage}/>
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="ClothingPopup"){
         popUpContainer = <ClothingPopup item={this.state.item}/>
         marginHorizontal = 60;

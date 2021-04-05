@@ -9,7 +9,7 @@ class VillagersPage extends Component {
   render(){
     return(
         <ListPage 
-          setVillagerGift={this.props.setVillagerGift}
+          setPage={this.props.setPage}
           tabs={false}
           filterSearchable = {true}
           disablePopup={[false]}

@@ -4,13 +4,14 @@ import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import colors from '../Colors.js';
 import {getSettingsString, pSBC} from "../LoadJsonData"
 import AllItemsPage from "./AllItemsPage"
+import ErrorPage from "../pages/ErrorPage"
 
 export default class VillagerFurniture extends Component {
   constructor() {
     super();
   }
   render(){
-    if(this.props.villager!==undefined){
+    if(this.props.villager!==undefined  && this.props.villager!=="" && this.props.villager["Furniture List"]!==undefined){
       return(
         <AllItemsPage 
           disableFilters={true}
@@ -22,7 +23,7 @@ export default class VillagerFurniture extends Component {
         />
       )
     } else {
-      return(<View/>)
+      return(<ErrorPage/>)
     }
     
   }

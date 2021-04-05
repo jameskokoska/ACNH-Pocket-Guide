@@ -48,7 +48,7 @@ export class MailSupport extends Component {
 export class SubHeader extends Component {
   render(){
     return(
-      <TextFont bold={true} style={{fontSize: 22, marginHorizontal: this.props.margin!==false?30:0, color:colors.textBlack[global.darkMode],}}>{this.props.children}</TextFont>
+      <TextFont bold={true} style={[{fontSize: 22, marginHorizontal: this.props.margin!==false?30:0, color:colors.textBlack[global.darkMode],},this.props.style]}>{this.props.children}</TextFont>
     )
   }
 }

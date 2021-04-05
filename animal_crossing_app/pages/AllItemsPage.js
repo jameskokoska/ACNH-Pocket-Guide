@@ -51,11 +51,20 @@ class AllItemsPage extends Component {
     if(this.props.itemIDs !==undefined){
       itemIDs = this.props.itemIDs;
     }
+    var currentSetFilters = "";
+    if(this.props.currentSetFilters !==undefined){
+      currentSetFilters = this.props.currentSetFilters;
+    }
+    var extraInfo = "";
+    if(this.props.extraInfo !==undefined){
+      extraInfo = this.props.extraInfo;
+    }
     return(
         <ListPage 
+          extraInfo={extraInfo}
+          currentSetFilters={currentSetFilters}
           smallerHeader={smallerHeader}
           itemIDs={itemIDs}
-          setVillagerGift={this.props.setVillagerGift}
           disableFilters={disableFilters}
           setPage={this.props.setPage}
           tabs={tabs}

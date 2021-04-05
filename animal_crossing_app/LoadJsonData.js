@@ -141,6 +141,20 @@ export function resetFilters(){
   }
 }
 
+export function getSpecificFilters(searchFor){
+  if(searchFor===undefined){
+    return [];
+  }
+  const filterDefinitionsAll = require("./assets/data/Generated/filterDefinitions.json")["All Items"];
+  var foundFilters = [];
+  for(var i=0; i<filterDefinitionsAll.length; i++){
+    if(filterDefinitionsAll[i]["label"].toLowerCase().includes(searchFor.toLowerCase())){
+      foundFilters.push(filterDefinitionsAll[i]["value"])
+    }
+  }
+  return foundFilters;
+}
+
 export async function deleteSavedPhotos(){
   const files = await FileSystem.readDirectoryAsync(FileSystem.documentDirectory);
   const sizeMB = ((await FileSystem.getInfoAsync(FileSystem.documentDirectory)).size)/1000000;

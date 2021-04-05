@@ -60,7 +60,7 @@ class VillagerPopup extends Component {
         color={colors.okButton[global.darkMode]}
         vibrate={5}
         onPress={() => {
-          this.props.setVillagerGift(this.props.item, "gift")
+          this.props.setPage(20, true, this.props.item)
       }}/>
       <TouchableOpacity style={{paddingTop:5}} onPress={()=>{this.popup?.setPopupVisible(true);}}>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, padding:8}}>{"What are villager gifts?"}</TextFont>
@@ -70,7 +70,7 @@ class VillagerPopup extends Component {
         color={colors.okButton[global.darkMode]}
         vibrate={5}
         onPress={() => {
-          this.props.setVillagerGift(this.props.item, "furniture")
+          this.props.setPage(22, true, this.props.item)
       }}/>
       <View style={{alignItems: 'center', width: Dimensions.get('window').width, justifyContent:"center"}}>
         <FastImage

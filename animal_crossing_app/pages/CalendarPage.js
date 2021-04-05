@@ -48,7 +48,7 @@ export default class CalendarPage extends Component {
 
     var viewAll = <View/>
     if(this.state.viewList){
-      viewAll = <AllEventsList/>
+      viewAll = <AllEventsList setPage={this.props.setPage}/>
     }
     return (<>
       {viewAll}
@@ -143,6 +143,7 @@ export default class CalendarPage extends Component {
                   time: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
                   image: event["Name"],
                   color: colors.specialEventBackground,
+                  filter:event["Name"]
                 });
                 this.state.itemsColor[strTime] = styleImportantEvent;
               } else {
@@ -151,6 +152,7 @@ export default class CalendarPage extends Component {
                   time: event["Time"],
                   image: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
                   color: colors.white,
+                  filter:event["Name"]
                 });
               }
 
@@ -163,6 +165,7 @@ export default class CalendarPage extends Component {
               time: getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 12:00" : "5 AM - 12 PM",
               image:"turnip.png",
               color: colors.white,
+              filter:"Daisy Mae"
             });
             this.state.itemsColor[strTime] = styleRepeatEvent;
           } else if (date.getDay()===6){
@@ -171,6 +174,7 @@ export default class CalendarPage extends Component {
               time: getSettingsString("settingsUse24HourClock") === "true" ? "20:00 - 24:00" : "8 PM - 12 AM",
               image:"music.png",
               color: colors.white,
+              filter:"K.K. concert"
             });
             this.state.itemsColor[strTime] = styleRepeatEvent;
           }
@@ -184,6 +188,7 @@ export default class CalendarPage extends Component {
                   time: event["Type"],
                   image: event["Name"],
                   color: colors.white,
+                  filter:event["Name"]
                 });
               }
             } else if (event["Dates (Southern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")!=="true"){
@@ -193,6 +198,7 @@ export default class CalendarPage extends Component {
                   time: event["Type"],
                   image: event["Name"],
                   color: colors.white,
+                  filter:event["Name"]
                 });
               }
             } 
@@ -228,6 +234,14 @@ export default class CalendarPage extends Component {
       image = <Image style={{width: 50, height: 50, resizeMode:'contain',}} source={getPhoto(item.image.toLowerCase(), item.time.toLowerCase())}/>
     }
     return(
+      <TouchableNativeFeedback 
+        background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+(item.filter===undefined?"00":"AF"), false)}
+        onPress={()=>{
+          if(item.filter!==undefined){
+            this.props.setPage(23, true, item.filter)
+          }
+        }}
+      >
         <View style={{padding: 20, marginHorizontal: 10, marginVertical: 5,  flexDirection:"row", flex:1, alignItems: 'center', borderRadius: 10, backgroundColor:item.color[global.darkMode]}}>
           {image}
           <View style={{flex: 1, marginLeft: 18,}}>
@@ -235,6 +249,7 @@ export default class CalendarPage extends Component {
             <TextFont style={{marginTop: 3,fontSize: 18,color: colors.textBlack[global.darkMode]}}>{item.time}</TextFont>
           </View>
         </View>
+      </TouchableNativeFeedback>
     )
   }
 
@@ -388,7 +403,7 @@ class AllEventsList extends Component{
         <Animated.FlatList
           onScroll={Animated.event([{ nativeEvent: {contentOffset: {y: this.scrollY}}}],{useNativeDriver: true,},)}
           data={this.state.searchData}
-          renderItem={renderItemFlatList}
+          renderItem={({ item }) => <RenderItemFlatList item={item} setPage={this.props.setPage}/>}
           keyExtractor={(item, index) => `list-item-${index}-${item.["Unique Entry ID"]}`}
           contentContainerStyle={{paddingBottom:Dimensions.get('window').height}}
           style={{paddingTop:this.headerHeight}}
@@ -399,34 +414,47 @@ class AllEventsList extends Component{
   }
 }
 
-const renderItemFlatList = ({item}) => {
-  var image = <View/>
-  image = <Image style={{width: 50, height: 50, resizeMode:'contain',}} source={getPhoto(item.["Name"].toLowerCase(), item.["Type"].toLowerCase())}/>
-  var date = "";
-  if(item["Dates (Northern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")==="true"){
-    date = item.["Dates (Northern Hemisphere)"];
-  } else if (item["Dates (Southern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")!=="true"){
-    date = item.["Dates (Southern Hemisphere)"];
-  } 
-  date = date.replace(/[^\x00-\x7F]/g, "-");
-  date = date.replace("--", "- ");
-  var dateComp;
-  if(date!=="")
-    dateComp = <TextFont style={{marginTop: 3,fontSize: 18,color: colors.textBlack[global.darkMode]}}>{capitalize(translateDateRange(date))}</TextFont>
-  else 
-    dateComp = <View/>
+class RenderItemFlatList extends Component{
+  render(){
+    var item = this.props.item;
+    var image = <View/>
+    image = <Image style={{width: 50, height: 50, resizeMode:'contain',}} source={getPhoto(item.["Name"].toLowerCase(), item.["Type"].toLowerCase())}/>
+    var date = "";
+    if(item["Dates (Northern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")==="true"){
+      date = item.["Dates (Northern Hemisphere)"];
+    } else if (item["Dates (Southern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")!=="true"){
+      date = item.["Dates (Southern Hemisphere)"];
+    } 
+    date = date.replace(/[^\x00-\x7F]/g, "-");
+    date = date.replace("--", "- ");
+    var dateComp;
+    if(date!=="")
+      dateComp = <TextFont style={{marginTop: 3,fontSize: 18,color: colors.textBlack[global.darkMode]}}>{capitalize(translateDateRange(date))}</TextFont>
+    else 
+      dateComp = <View/>
+    
+    var eventName = getEventName(item["Name"]);
+    return(
+      <TouchableNativeFeedback 
+        background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+(item["Name"]===undefined?"00":"AF"), false)}
+        onPress={()=>{
+          if(item["Name"]!==undefined){
+            this.props.setPage(23, true, item["Name"])
+          }
+        }}
+      >
+        <View style={{width:Dimensions.get('window').width-20, flex: 1, backgroundColor: colors.white[global.darkMode], padding: 20, marginHorizontal: 10, marginVertical: 5,  flexDirection:"row", alignItems: 'center', borderRadius: 10}}>
+          {image}
+          <View style={{flex: 1, marginLeft:15}}>
+            <TextFont bold={true} style={{fontSize: 20,color: colors.textBlack[global.darkMode]}}>{capitalize(eventName)}</TextFont>
+            <TextFont style={{marginTop: 3,fontSize: 18,color: colors.textBlack[global.darkMode]}}>{capitalize(item["Type"])}</TextFont>
+            {dateComp}
+          </View>
+        </View>
+      </TouchableNativeFeedback>
+    )
+  }
   
-  var eventName = getEventName(item["Name"]);
-  return(
-    <View style={{width:Dimensions.get('window').width-20, flex: 1, backgroundColor: colors.white[global.darkMode], padding: 20, marginHorizontal: 10, marginVertical: 5,  flexDirection:"row", alignItems: 'center', borderRadius: 10}}>
-      {image}
-      <View style={{flex: 1, marginLeft:15}}>
-        <TextFont bold={true} style={{fontSize: 20,color: colors.textBlack[global.darkMode]}}>{capitalize(eventName)}</TextFont>
-        <TextFont style={{marginTop: 3,fontSize: 18,color: colors.textBlack[global.darkMode]}}>{capitalize(item["Type"])}</TextFont>
-        {dateComp}
-      </View>
-    </View>
-  )
 }
 
 export const specialEvents = [

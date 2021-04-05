@@ -28,18 +28,27 @@ export class EventContainer extends Component {
       image = <Image style={styles.eventImage} source={getPhoto(this.props.event.image.toLowerCase(), this.props.event.time.toLowerCase())}/>
     }
     return(
-      <View style={[styles.eventContainer,{backgroundColor:this.props.event.color!==undefined?this.props.event.color:this.props.backgroundColor}]}>
-        {image}
-        <View style={styles.textContainer}>
-          <TextFont translate={false} numberOfLines={2} bold={true} style={[styles.textContainerTop,{color:this.props.textColor}]}>{this.props.event.name}</TextFont>
-          <TextFont translate={false} style={[styles.textContainerBottom,{color:this.props.textColor}]}>{this.props.event.time}</TextFont>
+      <TouchableNativeFeedback 
+        background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+(this.props.event.filter===undefined?"00":"AF"), false)}
+        onPress={()=>{
+          if(this.props.event.filter!==undefined){
+            this.props.setPage(23, true, this.props.event.filter)
+          }
+        }}
+      >
+        <View style={[styles.eventContainer,{backgroundColor:this.props.event.color!==undefined?this.props.event.color:this.props.backgroundColor}]}>
+          {image}
+          <View style={styles.textContainer}>
+            <TextFont translate={false} numberOfLines={2} bold={true} style={[styles.textContainerTop,{color:this.props.textColor}]}>{this.props.event.name}</TextFont>
+            <TextFont translate={false} style={[styles.textContainerBottom,{color:this.props.textColor}]}>{this.props.event.time}</TextFont>
+          </View>
+          <View style={{width: 33, alignItems:"center", marginLeft: -8}}>
+            <Image style={styles.eventCalendar} source={require("../assets/icons/calendarIcon.png")}/>
+            <TextFont bold={true} style={{position:"absolute", top:3, textAlign:"center",color:"black", fontSize: 10, opacity: 0.8}}>{getWeekDayShort(this.props.event.weekday)}</TextFont>
+            <TextFont bold={true} style={{position:"absolute", top:17, textAlign:"center",color:"black", fontSize: 24, opacity: 0.8}}>{this.props.event.day}</TextFont>
+          </View>
         </View>
-        <View style={{width: 33, alignItems:"center", marginLeft: -8}}>
-          <Image style={styles.eventCalendar} source={require("../assets/icons/calendarIcon.png")}/>
-          <TextFont bold={true} style={{position:"absolute", top:3, textAlign:"center",color:"black", fontSize: 10, opacity: 0.8}}>{getWeekDayShort(this.props.event.weekday)}</TextFont>
-          <TextFont bold={true} style={{position:"absolute", top:17, textAlign:"center",color:"black", fontSize: 24, opacity: 0.8}}>{this.props.event.day}</TextFont>
-        </View>
-      </View>
+      </TouchableNativeFeedback>
     )
   }
 }
@@ -88,7 +97,8 @@ export function getEventsDay(date, eventSections){
           image: event["Name"],
           day:date.getDate(),
           weekday:date.getDay(),
-          color:colors.specialEventBackground[global.darkMode]
+          color:colors.specialEventBackground[global.darkMode],
+          filter:event["Name"]
         });
         if(getSettingsString("settingsNotifications")){
           schedulePushNotification(date,eventSections["Set Notification Time"],"🏅" + attemptToTranslate(capitalize(event["Name"])),event["Time"]);
@@ -100,7 +110,8 @@ export function getEventsDay(date, eventSections){
           image: event["Name"],
           day:date.getDate(),
           weekday:date.getDay(),
-          color:colors.startEventBackground[global.darkMode]
+          color:colors.startEventBackground[global.darkMode],
+          filter:event["Name"]
         });
         if(getSettingsString("settingsNotifications")){
           schedulePushNotification(date,eventSections["Set Notification Time"],attemptToTranslate(capitalize(event["Name"])),event["Time"]);
@@ -127,7 +138,8 @@ export function getEventsDay(date, eventSections){
             image: event["Name"],
             day:date.getDate(),
             weekday:date.getDay(),
-            color:colors.startEventBackground[global.darkMode]
+            color:colors.startEventBackground[global.darkMode],
+            filter:event["Name"]
           });
           if(eventSections["App notifications"]){
             schedulePushNotification(date,eventSections["Set Notification Time"],capitalize(eventName),event["Type"]);
@@ -139,7 +151,8 @@ export function getEventsDay(date, eventSections){
             image: event["Name"],
             day:date.getDate(),
             weekday:date.getDay(),
-            color:colors.warningEventBackground[global.darkMode]
+            color:colors.warningEventBackground[global.darkMode],
+            filter:event["Name"]
           });
           if(eventSections["App notifications"]){
             schedulePushNotification(date,eventSections["Set Notification Time"],"Last day! " + capitalize(eventName),attemptToTranslate(capitalize(event["Type"])));
@@ -153,7 +166,8 @@ export function getEventsDay(date, eventSections){
             image: event["Name"],
             day:date.getDate(),
             weekday:date.getDay(),
-            color:colors.startEventBackground[global.darkMode]
+            color:colors.startEventBackground[global.darkMode],
+            filter:event["Name"]
           });
           if(eventSections["App notifications"]){
             schedulePushNotification(date,eventSections["Set Notification Time"],capitalize(eventName),event["Type"]);
@@ -165,7 +179,8 @@ export function getEventsDay(date, eventSections){
             image: event["Name"],
             day:date.getDate(),
             weekday:date.getDay(),
-            color:colors.warningEventBackground[global.darkMode]
+            color:colors.warningEventBackground[global.darkMode],
+            filter:event["Name"]
           });
           if(eventSections["App notifications"]){
             schedulePushNotification(date,eventSections["Set Notification Time"],attemptToTranslate("Last day!") + " " + eventName, attemptToTranslate(capitalize(event["Type"])));
@@ -182,6 +197,7 @@ export function getEventsDay(date, eventSections){
       image:"turnip.png",
       day:date.getDate(),
       weekday:date.getDay(),
+      filter:"Daisy Mae"
     });
     if(eventSections["App notifications"]){
       schedulePushNotification(date,eventSections["Set Notification Time"],"🥬 " + attemptToTranslate("Daisy Mae"),getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 12:00" : "5 AM - 12 PM");
@@ -193,6 +209,7 @@ export function getEventsDay(date, eventSections){
       image:"music.png",
       day:date.getDate(),
       weekday:date.getDay(),
+      filter:"K.K. concert"
     });
     if(eventSections["App notifications"]){
       schedulePushNotification(date,eventSections["Set Notification Time"],"🎵 " + attemptToTranslate("K.K. Slider"),getSettingsString("settingsUse24HourClock") === "true" ? "00:00 - 24:00" : "8 PM - 12 AM");

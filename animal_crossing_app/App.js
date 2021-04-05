@@ -40,6 +40,7 @@ import AchievementsPage from "./pages/AchievementsPage"
 import VillagerPresentsPage from "./pages/VillagerPresentsPage"
 import VillagerFurniture from "./pages/VillagerFurniture"
 import ObtainableItemsPage from "./pages/ObtainableItemsPage"
+import CustomFiltersPage from "./pages/CustomFiltersPage"
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -49,6 +50,11 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
+-You can now view what items you can get from events by tapping them!
+-Reworked how back button works - enable Back button to previous page
+-Fixed crash to see villagers furniture that doesn't yet exist in the database
+-Added not found error screen
+-
 -Color fixes for events
 -Your villagers birthdays are now highlighted in the Events section
 -24 hour time fixes
@@ -179,10 +185,12 @@ class App extends Component {
     this.numLogins;
     this.state = {
       loaded: false,
-      currentPage: 0,
+      currentPage: 23,
       open:false,
+      propsPassed:""
     }
     this.lastPage = [0];
+    this.lastPropsPassed = [];
   }
 
   async loadSettings(){
@@ -337,9 +345,10 @@ class App extends Component {
     } else if(this.state.currentPage===15){
       return true;
     } else if(getSettingsString("settingsBackButtonChangePages")==="true"){
-      this.setPage(this.lastPage[this.lastPage.length-1], false);
+      this.setPage(this.lastPage[this.lastPage.length-1], false, this.lastPropsPassed[this.lastPropsPassed.length-1]);
       if(this.lastPage.length>1){
         this.lastPage.pop();
+        this.lastPropsPassed.pop();
       }
     } else {
       this.openDrawer(false);
@@ -355,14 +364,16 @@ class App extends Component {
     return true;
   }
 
-  setPage(pageNum, previousAdd=true) {
+  setPage(pageNum, previousAdd=true, propsPassed="") {
+    console.log(this.lastPropsPassed)
     if(this.state.loaded){
       if(this.state.currentPage!==pageNum){
         if(previousAdd){
           this.lastPage.push(this.state.currentPage);
+          this.lastPropsPassed.push(this.state.propsPassed);
         }
         if(this.lastPage.length>1){
-          this.setState({currentPage: pageNum});
+          this.setState({currentPage: pageNum, propsPassed: propsPassed});
         }
       }
       this.sideMenu.closeDrawer();
@@ -370,14 +381,7 @@ class App extends Component {
     return true;
   }
 
-  setVillagerGift = (villager, type) => {
-    this.setState({villager: villager})
-    if(type==="gift"){
-      this.setPage(20);
-    } else if (type==="furniture"){
-      this.setPage(22);
-    }
-  }
+
 
   setFirstLogin(firstLogin){
     this.setState({firstLogin: firstLogin});
@@ -407,9 +411,9 @@ class App extends Component {
     } else {
       var currentPageView;
       if (this.state.currentPage===0){
-        currentPageView = <FadeInOut fadeIn={true}><HomePage sections={this.sections} eventSections={this.eventSections} setVillagerGift={this.setVillagerGift} setPage={this.setPage}/></FadeInOut>
+        currentPageView = <FadeInOut fadeIn={true}><HomePage sections={this.sections} eventSections={this.eventSections} setPage={this.setPage}/></FadeInOut>
       } else if (this.state.currentPage===1){
-        currentPageView = <AllItemsPage setVillagerGift={this.setVillagerGift}/>
+        currentPageView = <AllItemsPage setPage={this.setPage}/>
       } else if(this.state.currentPage===2){
         currentPageView = <MuseumPage/>
       } else if (this.state.currentPage===3){
@@ -423,7 +427,7 @@ class App extends Component {
       } else if (this.state.currentPage===7){
         currentPageView = <MysteryIslandsPage/>
       } else if (this.state.currentPage===8){
-        currentPageView = <VillagersPage setVillagerGift={this.setVillagerGift}/>
+        currentPageView = <VillagersPage setPage={this.setPage}/>
       } else if (this.state.currentPage===9){
         currentPageView = <ConstructionPage/>
       } else if (this.state.currentPage===10){
@@ -437,21 +441,23 @@ class App extends Component {
       } else if (this.state.currentPage===14){
         currentPageView = <CreditsPage/>
       } else if (this.state.currentPage===15){
-        currentPageView = <GuidePage openMenu={this.openDrawer}/>
+        currentPageView = <GuidePage openMenu={this.openDrawer} propsPassed={this.state.propsPassed}/>
       } else if (this.state.currentPage===16){
-        currentPageView = <CalendarPage/>
+        currentPageView = <CalendarPage setPage={this.setPage}/>
       } else if (this.state.currentPage===17){
-        currentPageView = <NewItemsPage setVillagerGift={this.setVillagerGift}/>
+        currentPageView = <NewItemsPage setPage={this.setPage}/>
       } else if (this.state.currentPage===18){
-        currentPageView = <WishlistPage setVillagerGift={this.setVillagerGift} setPage={this.setPage}/>
+        currentPageView = <WishlistPage setPage={this.setPage}/>
       } else if (this.state.currentPage===19){
         currentPageView = <AchievementsPage/>
       } else if (this.state.currentPage===20){
-        currentPageView = <VillagerPresentsPage villager={this.state.villager}/>
+        currentPageView = <VillagerPresentsPage villager={this.state.propsPassed}/>
       } else if (this.state.currentPage===21){
         currentPageView = <ObtainableItemsPage setPage={this.setPage}/>
       } else if (this.state.currentPage===22){
-        currentPageView = <VillagerFurniture villager={this.state.villager}/>
+        currentPageView = <VillagerFurniture villager={this.state.propsPassed}/>
+      } else if (this.state.currentPage===23){
+        currentPageView = <CustomFiltersPage currentFiltersSearchFor={this.state.propsPassed} titlePassed={this.state.propsPassed} setPage={this.setPage}/>
       } else {
         currentPageView = <Text>Default</Text>
       }
