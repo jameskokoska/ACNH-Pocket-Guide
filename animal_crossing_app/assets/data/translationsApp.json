@@ -375,8 +375,8 @@
         {
             "English": "Add Task",
             "English (Europe)": "Add Task",
-            "French": "Ajouter une tâche",
-            "French (US)": "Ajouter une tâche"
+            "French": "Ajouter une Tâche",
+            "French (US)": "Ajouter une Tâche"
         },
         {
             "English": "Task Name",
@@ -5021,8 +5021,8 @@
         {
             "English": "Visitor History",
             "English (Europe)": "Visitor History",
-            "French": "Historique des visiteurs",
-            "French (US)": "Historique des visiteurs"
+            "French": "Historique des Visiteurs",
+            "French (US)": "Historique des Visiteurs"
         },
         {
             "English": "Visitors",
@@ -5067,8 +5067,40 @@
             "French (US)": "Fête des Œufs"
         },
         {
-            "English": "To see changes, switch pages to refresh",
-            "English (Europe)": "To see changes, switch pages to refresh"
+            "English": "Set Notification Time",
+            "English (Europe)": "Set Notification Time",
+            "French": "Définir l'heure de notification",
+            "French (US)": "Définir l'heure de notification"
+        },
+        {
+            "English": "Villager's default house furniture and clothing",
+            "English (Europe)": "Villager's default house furniture and clothing",
+            "French": "Mobilier et vêtements par défaut du villageois",
+            "French (US)": "Mobilier et vêtements par défaut du villageois"
+        },
+        {
+            "English": "View Furniture",
+            "English (Europe)": "View Furniture",
+            "French": "Voir les meubles",
+            "French (US)": "Voir les meubles"
+        },
+        {
+            "English": "Sort",
+            "English (Europe)": "Sort",
+            "French": "Trier",
+            "French (US)": "Trier"
+        },
+        {
+            "English": "Unsort",
+            "English (Europe)": "Unsort",
+            "French": "Annuler le tri",
+            "French (US)": "Annuler le tri"
+        },
+        {
+            "English": "Ready Days",
+            "English (Europe)": "Ready Days",
+            "French": "Jours de préparation",
+            "French (US)": "Jours de préparation"
         }
     ],
     "Achievements": [

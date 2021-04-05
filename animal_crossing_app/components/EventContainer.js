@@ -3,7 +3,7 @@ import {Image, Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, Vie
 import TextFont from './TextFont'
 import {getPhoto} from './GetPhoto'
 import {getWeekDayShort, getMonthShort, getCurrentDateObject} from './DateFunctions';
-import {attemptToTranslate, capitalize, getSettingsString, translateBirthday, attemptToTranslateItem} from "../LoadJsonData"
+import {getEventName, attemptToTranslate, capitalize, getSettingsString, translateBirthday, attemptToTranslateItem} from "../LoadJsonData"
 import FastImage from './FastImage';
 import {schedulePushNotification} from "../Notifications"
 import {specialEvents, isDateInRange} from "../pages/CalendarPage"
@@ -54,10 +54,11 @@ export function getEventsDay(date, eventSections){
       if(eventSections["Favorite Villager's Birthdays"] && global.collectionList.includes("villagerCheckList"+villager["Name"])){
         totalEvents.push({
           name: capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),
-          time: "All day",
+          time: attemptToTranslate("All day"),
           image: villager["Icon Image"],
           day:date.getDate(),
           weekday:date.getDay(),
+          color:colors.specialEventBirthdayBackground[global.darkMode]
         });
         if(eventSections["App notifications"]){
           schedulePushNotification(date,eventSections["Set Notification Time"],"🎂 " + capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),attemptToTranslateItem("All day"));
@@ -77,32 +78,40 @@ export function getEventsDay(date, eventSections){
     }
   })
 
-  if(eventSections["Daisy Mae"] && date.getDay()===0){
-    totalEvents.push({
-      name: attemptToTranslate("Daisy Mae"),
-      time: getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 12:00" : "5 AM - 12 PM",
-      image:"turnip.png",
-      day:date.getDate(),
-      weekday:date.getDay(),
-    });
-    if(eventSections["App notifications"]){
-      schedulePushNotification(date,eventSections["Set Notification Time"],"🥬 " + attemptToTranslate("Daisy Mae"),getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 12:00" : "5 AM - 12 PM");
+  specialEvents.map( (event, index)=>{
+    var eventDay = getSpecialOccurrenceDate(date.getFullYear(), index, specialEvents);
+    if(eventDay[0]===date.getDate() && eventDay[1]===date.getMonth()){
+      if(!event["Name"].includes("ireworks")){
+        totalEvents.push({
+          name: attemptToTranslate(capitalize(event["Name"])),
+          time: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
+          image: event["Name"],
+          day:date.getDate(),
+          weekday:date.getDay(),
+          color:colors.specialEventBackground[global.darkMode]
+        });
+        if(getSettingsString("settingsNotifications")){
+          schedulePushNotification(date,eventSections["Set Notification Time"],"🏅" + attemptToTranslate(capitalize(event["Name"])),event["Time"]);
+        }
+      } else {
+        totalEvents.push({
+          name: attemptToTranslate(capitalize(event["Name"])),
+          time: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
+          image: event["Name"],
+          day:date.getDate(),
+          weekday:date.getDay(),
+          color:colors.startEventBackground[global.darkMode]
+        });
+        if(getSettingsString("settingsNotifications")){
+          schedulePushNotification(date,eventSections["Set Notification Time"],attemptToTranslate(capitalize(event["Name"])),event["Time"]);
+        }
+      }
     }
-  } else if (eventSections["K.K. Slider"] && date.getDay()===6){
-    totalEvents.push({
-      name: attemptToTranslate("K.K. Slider"),
-      time: getSettingsString("settingsUse24HourClock") === "true" ? "20:00 - 00:00" : "8 PM - 12 AM",
-      image:"music.png",
-      day:date.getDate(),
-      weekday:date.getDay(),
-    });
-    if(eventSections["App notifications"]){
-      schedulePushNotification(date,eventSections["Set Notification Time"],"🎵 " + attemptToTranslate("K.K. Slider"),getSettingsString("settingsUse24HourClock") === "true" ? "00:00 - 24:00" : "8 PM - 12 AM");
-    }
-  }
+  })
 
   seasonData.map( (event, index)=>{
-    var eventName = attemptToTranslateItem(event["Name"]).replace("ready days", attemptToTranslate("Ready Days"))
+    var eventName = getEventName(event["Name"])
+
     if((event["Type"].toLowerCase()==="special event" || event["Type"].toLowerCase()==="basegame event") && !event["Name"].toLowerCase().includes("ready days") || 
       eventSections["Crafting Seasons"] && event["Type"].toLowerCase()==="crafting season" ||
       eventSections["Event Ready Days"] && event["Name"].toLowerCase().includes("ready days") || 
@@ -166,36 +175,30 @@ export function getEventsDay(date, eventSections){
     }
   })
 
-  specialEvents.map( (event, index)=>{
-    var eventDay = getSpecialOccurrenceDate(date.getFullYear(), index, specialEvents);
-    if(eventDay[0]===date.getDate() && eventDay[1]===date.getMonth()){
-      if(!event["Name"].includes("ireworks")){
-        totalEvents.push({
-          name: attemptToTranslate(capitalize(event["Name"])),
-          time: event["Time"],
-          image: event["Name"],
-          day:date.getDate(),
-          weekday:date.getDay(),
-          color:colors.specialEventBackground[global.darkMode]
-        });
-        if(getSettingsString("settingsNotifications")){
-          schedulePushNotification(date,eventSections["Set Notification Time"],"🏅" + attemptToTranslate(capitalize(event["Name"])),event["Time"]);
-        }
-      } else {
-        totalEvents.push({
-          name: attemptToTranslate(capitalize(event["Name"])),
-          time: event["Time"],
-          image: event["Name"],
-          day:date.getDate(),
-          weekday:date.getDay(),
-          color:colors.startEventBackground[global.darkMode]
-        });
-        if(getSettingsString("settingsNotifications")){
-          schedulePushNotification(date,eventSections["Set Notification Time"],attemptToTranslate(capitalize(event["Name"])),event["Time"]);
-        }
-      }
+  if(eventSections["Daisy Mae"] && date.getDay()===0){
+    totalEvents.push({
+      name: attemptToTranslate("Daisy Mae"),
+      time: getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 12:00" : "5 AM - 12 PM",
+      image:"turnip.png",
+      day:date.getDate(),
+      weekday:date.getDay(),
+    });
+    if(eventSections["App notifications"]){
+      schedulePushNotification(date,eventSections["Set Notification Time"],"🥬 " + attemptToTranslate("Daisy Mae"),getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 12:00" : "5 AM - 12 PM");
     }
-  })
+  } else if (eventSections["K.K. Slider"] && date.getDay()===6){
+    totalEvents.push({
+      name: attemptToTranslate("K.K. Slider"),
+      time: getSettingsString("settingsUse24HourClock") === "true" ? "20:00 - 00:00" : "8 PM - 12 AM",
+      image:"music.png",
+      day:date.getDate(),
+      weekday:date.getDay(),
+    });
+    if(eventSections["App notifications"]){
+      schedulePushNotification(date,eventSections["Set Notification Time"],"🎵 " + attemptToTranslate("K.K. Slider"),getSettingsString("settingsUse24HourClock") === "true" ? "00:00 - 24:00" : "8 PM - 12 AM");
+    }
+  }
+
   return totalEvents;
 }
 

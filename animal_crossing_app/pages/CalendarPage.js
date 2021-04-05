@@ -5,7 +5,7 @@ import TextFont from '../components/TextFont';
 import colors from '../Colors'
 import {getPhoto} from "../components/GetPhoto"
 import {doWeSwapDate, getMonthFromString, getCurrentDateObject} from "../components/DateFunctions"
-import {removeAccents, translateDateRange, attemptToTranslateItem, capitalize, getSettingsString, attemptToTranslate, translateBirthday} from "../LoadJsonData"
+import {getEventName, removeAccents, translateDateRange, attemptToTranslateItem, capitalize, getSettingsString, attemptToTranslate, translateBirthday} from "../LoadJsonData"
 import {getSpecialOccurrenceDate} from "../components/EventContainer"
 import FastImage from '../components/FastImage';
 import DelayInput from "react-native-debounce-input";
@@ -93,12 +93,12 @@ export default class CalendarPage extends Component {
     }}
 
     const styleImportantEvent = {customStyles: {
-      container: { borderWidth:2, borderColor: colors.cancelButton[global.darkMode]},
+      container: { borderWidth:2, borderColor: colors.specialEventBackgroundHighlight[global.darkMode]},
       text: {fontWeight: 'bold'}
     }}
 
     const styleBirthdayEvent = {customStyles: {
-      container: { borderWidth:2, borderColor: colors.okButton[global.darkMode]},
+      container: { borderWidth:2, borderColor: colors.specialEventBirthdayBackgroundHighlight[global.darkMode]},
       text: {fontWeight: 'bold'}
     }}
 
@@ -134,6 +134,29 @@ export default class CalendarPage extends Component {
             }
           })
 
+          specialEvents.map( (event, index)=>{
+            var eventDay = getSpecialOccurrenceDate(date.getFullYear(), index, specialEvents);
+            if(eventDay[0]===date.getDate() && eventDay[1]===date.getMonth()){
+              if(!event["Name"].includes("ireworks")){
+                this.state.items[strTime].push({
+                  name: capitalize(event["Name"]),
+                  time: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
+                  image: event["Name"],
+                  color: colors.specialEventBackground,
+                });
+                this.state.itemsColor[strTime] = styleImportantEvent;
+              } else {
+                this.state.items[strTime].push({
+                  name: capitalize(event["Name"]),
+                  time: event["Time"],
+                  image: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
+                  color: colors.white,
+                });
+              }
+
+            }
+          })
+
           if(date.getDay()===0){
             this.state.items[strTime].push({
               name: 'Daisy Mae',
@@ -153,7 +176,7 @@ export default class CalendarPage extends Component {
           }
 
           seasonData.map( (event, index)=>{
-            var eventName = attemptToTranslateItem(event["Name"])
+            var eventName = getEventName(event["Name"])
             if(event["Dates (Northern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")==="true"){
               if(isDateInRange(event["Dates (Northern Hemisphere)"], date.getFullYear(), date)){
                 this.state.items[strTime].push({
@@ -174,30 +197,6 @@ export default class CalendarPage extends Component {
               }
             } 
           })
-
-          specialEvents.map( (event, index)=>{
-            var eventDay = getSpecialOccurrenceDate(date.getFullYear(), index, specialEvents);
-            if(eventDay[0]===date.getDate() && eventDay[1]===date.getMonth()){
-              if(!event["Name"].includes("ireworks")){
-                this.state.items[strTime].push({
-                  name: capitalize(event["Name"]),
-                  time: event["Time"],
-                  image: event["Name"],
-                  color: ["#D32F2F3F","#AB000E3A"],
-                });
-                this.state.itemsColor[strTime] = styleImportantEvent;
-              } else {
-                this.state.items[strTime].push({
-                  name: capitalize(event["Name"]),
-                  time: event["Time"],
-                  image: event["Name"],
-                  color: colors.white,
-                });
-              }
-
-            }
-          })
-
           
 
           // const numItems = Math.floor(Math.random() * 3);
@@ -357,7 +356,7 @@ class AllEventsList extends Component{
     } else {
       var outputData = [];
       this.data.map( (event, index)=>{
-        var eventName = attemptToTranslateItem(event["Name"]);
+        var eventName = getEventName(event["Name"])
         if(removeAccents(eventName.toLowerCase()).includes(removeAccents(text.toLowerCase()))){
           outputData.push(event);
         } else if (attemptToTranslate(event["Type"]).toLowerCase().includes(text.toLowerCase())){
@@ -417,7 +416,7 @@ const renderItemFlatList = ({item}) => {
   else 
     dateComp = <View/>
   
-  var eventName = attemptToTranslateItem(item["Name"]);
+  var eventName = getEventName(item["Name"]);
   return(
     <View style={{width:Dimensions.get('window').width-20, flex: 1, backgroundColor: colors.white[global.darkMode], padding: 20, marginHorizontal: 10, marginVertical: 5,  flexDirection:"row", alignItems: 'center', borderRadius: 10}}>
       {image}
@@ -440,6 +439,7 @@ export const specialEvents = [
         "Special Occurrence": "1",
         "Hemisphere": "NA",
         "Time" : "7 PM - 12 AM",
+        "Time24" : "19:00 - 00:00",
         "Image" : "fireworks.png"
     },
     {
@@ -451,6 +451,7 @@ export const specialEvents = [
         "Special Occurrence": "2",
         "Hemisphere": "NA",
         "Time" : "7 PM - 12 AM",
+        "Time24" : "19:00 - 00:00",
         "Image" : "fireworks.png"
     },
     {
@@ -462,6 +463,7 @@ export const specialEvents = [
         "Special Occurrence": "3",
         "Hemisphere": "NA",
         "Time" : "7 PM - 12 AM",
+        "Time24" : "19:00 - 00:00",
         "Image" : "fireworks.png"
     },
     {
@@ -473,6 +475,7 @@ export const specialEvents = [
         "Special Occurrence": "4",
         "Hemisphere": "NA",
         "Time" : "7 PM - 12 AM",
+        "Time24" : "19:00 - 00:00",
         "Image" : "fireworks.png"
     },
     {
@@ -484,6 +487,7 @@ export const specialEvents = [
         "Special Occurrence": "5",
         "Hemisphere": "NA",
         "Time" : "7 PM - 12 AM",
+        "Time24" : "19:00 - 00:00",
         "Image" : "fireworks.png"
     },
    {
@@ -495,6 +499,7 @@ export const specialEvents = [
         "Special Occurrence": "3",
         "Hemisphere": "Southern",
         "Time" : "9 AM - 6 PM",
+        "Time24" : "9:00 - 18:00",
         "Image" : "bugs.png"
     },
     {
@@ -506,6 +511,7 @@ export const specialEvents = [
         "Special Occurrence": "3",
         "Hemisphere": "Southern",
         "Time" : "9 AM - 6 PM",
+        "Time24" : "9:00 - 18:00",
         "Image" : "bugs.png"
     },
     {
@@ -517,6 +523,7 @@ export const specialEvents = [
         "Special Occurrence": "3",
         "Hemisphere": "Southern",
         "Time" : "9 AM - 6 PM",
+        "Time24" : "9:00 - 18:00",
         "Image" : "bugs.png"
     },
     {
@@ -528,6 +535,7 @@ export const specialEvents = [
         "Special Occurrence": "3",
         "Hemisphere": "Southern",
         "Time" : "9 AM - 6 PM",
+        "Time24" : "9:00 - 18:00",
         "Image" : "bugs.png"
     },
     {
@@ -539,6 +547,7 @@ export const specialEvents = [
         "Special Occurrence": "4",
         "Hemisphere": "Northern",
         "Time" : "9 AM - 6 PM",
+        "Time24" : "9:00 - 18:00",
         "Image" : "bugs.png"
     },
     {
@@ -550,6 +559,7 @@ export const specialEvents = [
         "Special Occurrence": "4",
         "Hemisphere": "Northern",
         "Time" : "9 AM - 6 PM",
+        "Time24" : "9:00 - 18:00",
         "Image" : "bugs.png"
     },
     {
@@ -561,6 +571,7 @@ export const specialEvents = [
         "Special Occurrence": "4",
         "Hemisphere": "Northern",
         "Time" : "9 AM - 6 PM",
+        "Time24" : "9:00 - 18:00",
         "Image" : "bugs.png"
     },
     {
@@ -572,6 +583,7 @@ export const specialEvents = [
         "Special Occurrence": "4",
         "Hemisphere": "Northern",
         "Time" : "9 AM - 6 PM",
+        "Time24" : "9:00 - 18:00",
         "Image" : "bugs.png"
     },
     {
@@ -583,6 +595,7 @@ export const specialEvents = [
         "Special Occurrence": "2",
         "Hemisphere": "Northern",
         "Time" : "9 AM - 6 PM",
+        "Time24" : "9:00 - 18:00",
         "Image" : "fish.png"
     },
     {
@@ -594,6 +607,7 @@ export const specialEvents = [
         "Special Occurrence": "2",
         "Hemisphere": "NA",
         "Time" : "9 AM - 6 PM",
+        "Time24" : "9:00 - 18:00",
         "Image" : "fish.png"
     },
     {
@@ -605,6 +619,7 @@ export const specialEvents = [
         "Special Occurrence": "2",
         "Hemisphere": "NA",
         "Time" : "9 AM - 6 PM",
+        "Time24" : "9:00 - 18:00",
         "Image" : "fish.png"
     },
     {
@@ -616,6 +631,7 @@ export const specialEvents = [
         "Special Occurrence": "2",
         "Hemisphere": "NA",
         "Time" : "9 AM - 6 PM",
+        "Time24" : "9:00 - 18:00",
         "Image" : "fish.png"
     },
 ]

@@ -913,3 +913,16 @@ export function findItem(id){
     }
   }
 }
+
+export function getEventName(eventNameInput){
+  var eventName = "";
+  if(eventNameInput.includes("(ready days)")){
+    eventName = attemptToTranslate(attemptToTranslateItem(eventNameInput.replace(" (ready days)",""))) + " " + attemptToTranslate("Ready Days")
+  } else if (eventNameInput.includes("(") && eventNameInput.includes(")")){
+    var withinBrackets = eventNameInput.match(/\((.*?)\)/);
+    eventName = attemptToTranslate(attemptToTranslateItem(eventNameInput.replace(" "+withinBrackets[0],""))) + " (" + attemptToTranslate(withinBrackets[1]) + ")"
+  } else {
+    eventName = attemptToTranslate(attemptToTranslateItem(eventNameInput))
+  }
+  return eventName;
+}

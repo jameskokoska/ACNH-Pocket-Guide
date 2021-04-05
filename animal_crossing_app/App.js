@@ -49,7 +49,11 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
--Improved switching pages sidebar animation
+-Color fixes for events
+-Your villagers birthdays are now highlighted in the Events section
+-24 hour time fixes
+-Updated translations and changed how translations are handles for events
+-Reordered which events are shown first of each day (in this order: Birthdays, Special events (special), Game events, Repeat events)
 -
 -Added event notifications!
 -Added Visitors section - this will help you predict and keep track of who will visit next
