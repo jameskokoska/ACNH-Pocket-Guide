@@ -12,10 +12,18 @@ class GuidePage extends Component {
     super(props);
     this.handleBackButton = this.handleBackButton.bind(this);
     this.firstOpen = 0;
+    var currentURL = "https://chibisnorlax.github.io/acnhfaq/"
+    if(props.propsPassed==="eventsRedirect"){
+      currentURL = "https://chibisnorlax.github.io/acnhfaq/events/"
+    } else if (props.propsPassed==="flowersRedirect"){
+      currentURL = "https://chibisnorlax.github.io/acnhfaq/island-life/gardening/flowers/"
+    } else if (props.propsPassed==="updateRedirect"){
+      currentURL = "https://chibisnorlax.github.io/acnhfaq/new/"
+    }
     this.state = {
       canGoBack: false,
       canGoForward: false,
-      currentURL: props.propsPassed==="eventsRedirect"?"https://chibisnorlax.github.io/acnhfaq/events/":"https://chibisnorlax.github.io/acnhfaq/"
+      currentURL: currentURL
     }
   }
 
@@ -40,7 +48,7 @@ class GuidePage extends Component {
     var run = `
         document.getElementById('site-nav').classList.add('nav-open');
       `;
-    if(this.props.propsPassed!=="eventsRedirect"){
+    if(!this.props.propsPassed.includes("Redirect")){
       this.webView.injectJavaScript(run);
     }
   }

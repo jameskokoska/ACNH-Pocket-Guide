@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, ScrollView, Dimensions, Text} from 'react-native';
+import {Image, TouchableOpacity, View, ScrollView, Dimensions, Text} from 'react-native';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import ListPage from '../components/ListPage';
 import colors from '../Colors.js';
@@ -7,6 +7,8 @@ import FlowerContainer from '../components/FlowerContainer'
 import TextFont from '../components/TextFont'
 import {capitalize} from "../LoadJsonData"
 import {getSettingsString, attemptToTranslate} from "../LoadJsonData";
+import {PopupInfoCustom} from "../components/Popup"
+import {SubHeader, Paragraph} from "../components/Formattings"
 
 const renderTabBar = props => (
   <TabBar
@@ -31,7 +33,18 @@ class SpecificFlowerPage extends Component {
     var data = require("../assets/data/flowers.json");
     
     return(<ScrollView>
+      <PopupInfoCustom ref={(popupExtraInfo) => this.popupExtraInfo = popupExtraInfo} buttonText={"Close"}>
+        <View style={{height:6}}/>
+        <SubHeader>{"Guide + FAQ"}</SubHeader>
+        <Paragraph styled={true}>{"You can read more details about flowers and breeding by visiting the events and guide page"}</Paragraph>
+        <TouchableOpacity onPress={() => this.props.setPage(15, true, "flowersRedirect")}>
+          <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", padding:10, marginTop:10}}>{"Tap here to read more about flowers and breeding"}</TextFont>
+        </TouchableOpacity>
+      </PopupInfoCustom>
+      <TouchableOpacity style={{position:"absolute", padding:15, right:0}} onPress={()=>{this.popupExtraInfo.setPopupVisible(true)}}><Image style={{width:25,height:25,opacity: 0.35, resizeMode:"contain"}} source={global.darkMode?require("../assets/icons/infoWhite.png"):require("../assets/icons/info.png")}/></TouchableOpacity>
+
       <View style={{marginTop: 100}}/>
+      
       <TextFont suffix={" "+attemptToTranslate(capitalize(this.props.flowerGroup))} bold={true} style={{fontSize: 36, marginLeft: 30, color:colors.textBlack[global.darkMode]}}>{"Hybrid"}</TextFont>
       <View style={{marginTop: 10}}/>
       {
@@ -45,36 +58,6 @@ class SpecificFlowerPage extends Component {
   }
 }
 
-const RosesRoute = () => (
-  <SpecificFlowerPage flowerGroup={"roses"}/>
-)
-
-const PansiesRoute = () => (
-  <SpecificFlowerPage flowerGroup={"pansies"}/>
-)
-
-const WindflowersRoute = () => (
-  <SpecificFlowerPage flowerGroup={"windflowers"}/>
-)
-
-const HyacinthsRoute = () => (
-  <SpecificFlowerPage flowerGroup={"hyacinths"}/>
-)
-
-const LiliesRoute = () => (
-  <SpecificFlowerPage flowerGroup={"lilies"}/>
-)
-
-const CosmosRoute = () => (
-  <SpecificFlowerPage flowerGroup={"cosmos"}/>
-)
-
-const MumsRoute = () => (
-  <SpecificFlowerPage flowerGroup={"mums"}/>
-)
-const TulipsRoute = () => (
-  <SpecificFlowerPage flowerGroup={"tulips"}/>
-)
 
 class FlowerPage extends Component {
   constructor() {
@@ -94,15 +77,47 @@ class FlowerPage extends Component {
     }
   }
 
+  
+  RosesRoute = () => (
+    <SpecificFlowerPage flowerGroup={"roses"} setPage={this.props.setPage}/>
+  )
+
+  PansiesRoute = () => (
+    <SpecificFlowerPage flowerGroup={"pansies"} setPage={this.props.setPage}/>
+  )
+
+  WindflowersRoute = () => (
+    <SpecificFlowerPage flowerGroup={"windflowers"} setPage={this.props.setPage}/>
+  )
+
+  HyacinthsRoute = () => (
+    <SpecificFlowerPage flowerGroup={"hyacinths"} setPage={this.props.setPage}/>
+  )
+
+  LiliesRoute = () => (
+    <SpecificFlowerPage flowerGroup={"lilies"} setPage={this.props.setPage}/>
+  )
+
+  CosmosRoute = () => (
+    <SpecificFlowerPage flowerGroup={"cosmos"} setPage={this.props.setPage}/>
+  )
+
+  MumsRoute = () => (
+    <SpecificFlowerPage flowerGroup={"mums"} setPage={this.props.setPage}/>
+  )
+  TulipsRoute = () => (
+    <SpecificFlowerPage flowerGroup={"tulips"} setPage={this.props.setPage}/>
+  )
+
   renderScene = SceneMap({
-    Roses: RosesRoute,
-    Pansies: PansiesRoute,
-    Hyacinths: HyacinthsRoute,
-    Windflowers: WindflowersRoute,
-    Lilies: LiliesRoute,
-    Cosmos: CosmosRoute,
-    Mums: MumsRoute,
-    Tulips: TulipsRoute,
+    Roses: this.RosesRoute,
+    Pansies: this.PansiesRoute,
+    Hyacinths: this.HyacinthsRoute,
+    Windflowers: this.WindflowersRoute,
+    Lilies: this.LiliesRoute,
+    Cosmos: this.CosmosRoute,
+    Mums: this.MumsRoute,
+    Tulips: this.TulipsRoute,
   });
 
   handleIndexChange = index => this.setState({index});

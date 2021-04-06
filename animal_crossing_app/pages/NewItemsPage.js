@@ -20,6 +20,7 @@ export default class NewItemsPage extends Component {
         newItems={true}
         appBarColor = {colors.newItemsAppBar[global.darkMode]}
         accentColor = {colors.newItemsAccent[global.darkMode]}
+        extraInfo = {"newItems"}
       />
     )
   }

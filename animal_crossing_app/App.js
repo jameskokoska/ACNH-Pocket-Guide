@@ -54,6 +54,8 @@ global.changelog = `
 -Reworked how back button works - enable Back button to previous page
 -Fixed crash to see villagers furniture that doesn't yet exist in the database
 -Added not found error screen
+-Added more redirects and info to ACNH Guide + FAQ page
+-Fixed event highlighting on calendar page
 -
 -Color fixes for events
 -Your villagers birthdays are now highlighted in the Events section
@@ -185,7 +187,7 @@ class App extends Component {
     this.numLogins;
     this.state = {
       loaded: false,
-      currentPage: 23,
+      currentPage: 0,
       open:false,
       propsPassed:""
     }
@@ -431,7 +433,7 @@ class App extends Component {
       } else if (this.state.currentPage===9){
         currentPageView = <ConstructionPage/>
       } else if (this.state.currentPage===10){
-        currentPageView = <FlowerPage/>
+        currentPageView = <FlowerPage setPage={this.setPage}/>
       } else if (this.state.currentPage===11){
         currentPageView = <CardsPage/>
       } else if (this.state.currentPage===12){

@@ -21,30 +21,27 @@ export default class SideMenu extends Component {
           <View style={{backgroundColor: colors.topSidebar[global.darkMode], marginBottom: 10}}>
             <TextFont bold={true} style={{marginHorizontal: 15, marginTop: 130, marginBottom: 10, fontSize: 34, color: colors.textBlack[global.darkMode]}}>ACNH Pocket</TextFont>
           </View>
-          <SidebarElement image={require("../assets/icons/homeIcon.png")} title="Home" pageNum={0} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectHome[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-          <SidebarElement image={require("../assets/icons/book.png")} title="Everything" pageNum={1} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectEverything[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-          <SidebarElement image={require("../assets/icons/wishlist.png")} title="Wishlist" pageNum={18} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectWishlist[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-          <SidebarElement image={require("../assets/icons/package.png")} title="New Items" pageNum={17} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectNewItems[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-          <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:3, marginHorizontal: 17, marginVertical:8}}/>
-          <SidebarElement image={require("../assets/icons/bugs.png")} title="Creatures + Museum" pageNum={2} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectCreatures[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-          <SidebarElement image={require("../assets/icons/leaf.png")} title="Items" pageNum={3} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectItems[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-          <SidebarElement image={require("../assets/icons/music.png")} title="Songs" pageNum={4} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectSongs[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-          <SidebarElement image={require("../assets/icons/emote.png")} title="Emoticons" pageNum={5} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectEmotes[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-          <SidebarElement image={require("../assets/icons/crafting.png")} title="Recipes + Tools" pageNum={6} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectCrafting[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-          <SidebarElement image={require("../assets/icons/cat.png")} title="Villagers" pageNum={8} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectVillagers[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-          <SidebarElement image={require("../assets/icons/construction.png")} title="Construction" pageNum={9} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectConstruction[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-          <SidebarElement image={require("../assets/icons/flower.png")} title="Flowers" pageNum={10} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectItems[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-          <SidebarElement image={require("../assets/icons/envelope.png")} title="Letters" pageNum={11} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectCards[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-          <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:3, marginHorizontal: 17, marginVertical:8}}/>
-          <SidebarElement image={require("../assets/icons/obtainable.png")} title="Obtainable Items" pageNum={21} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectObtainable[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-          <SidebarElement image={require("../assets/icons/achievementIcon.png")} title="Achievements" pageNum={19} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectAchievements[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-          <SidebarElement image={require("../assets/icons/calendar.png")} title="Calendar + Events" pageNum={16} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectCalendar[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-          <SidebarElement image={require("../assets/icons/palmTree.png")} title="Mystery Islands" pageNum={7} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectIsland[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-          <SidebarElement image={require("../assets/icons/acnhFAQIcon.png")} title="Guide + FAQ" pageNum={15} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectAbout[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-          <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:3, marginHorizontal: 17, marginVertical:8}}/>
-          <SidebarElement image={require("../assets/icons/scroll.png")} title="Catalog Scanning" pageNum={12} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectAbout[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-          <SidebarElement image={require("../assets/icons/settings.png")} title="Settings" pageNum={13} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectSettings[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
-          <SidebarElement image={require("../assets/icons/magnifyingGlass.png")} title="About" pageNum={14} setPage={this.props.setPage} currentPage={this.props.currentPage} backgroundColor={colors.selectAbout[global.darkMode]} textColor={colors.textBlack[global.darkMode]} unselectedColor={colors.textWhite[global.darkMode]}/>
+          {sideSections.map( (section, index)=>
+            {
+              if(section["pageNum"]!="breaker"){
+                return <SidebarElement 
+                  image={section.picture} 
+                  title={section.displayName}
+                  pageNum={section.pageNum} 
+                  setPage={this.props.setPage} 
+                  currentPage={this.props.currentPage} 
+                  backgroundColor={colors[section.color][global.darkMode]}
+                  textColor={colors.textBlack[global.darkMode]} 
+                  unselectedColor={colors.textWhite[global.darkMode]}
+                />
+              } else {
+                return <View 
+                  key={section["pageNum"].toString()+index.toString()}
+                  style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:3, marginHorizontal: 17, marginVertical:8}}
+                />
+              }
+            }
+          )}
           <View style={{margin:15}}/>
         </ScrollView>
       </View>
@@ -68,3 +65,142 @@ export default class SideMenu extends Component {
     )
   }
 }
+
+export const sideSections = [
+  {
+    "pageNum" : 0,
+    "picture" : require("../assets/icons/homeIcon.png"),
+    "displayName" : "Home",
+    "color": "selectHome"
+  },
+  {
+    "pageNum" : 1,
+    "picture" : require("../assets/icons/book.png"),
+    "displayName" : "Everything",
+    "color": "selectEverything"
+  },
+  {
+    "pageNum" : 18,
+    "picture" : require("../assets/icons/wishlist.png"),
+    "displayName" : "Wishlist",
+    "color": "selectWishlist"
+  },
+  {
+    "pageNum" : 17,
+    "picture" : require("../assets/icons/package.png"),
+    "displayName" : "New Items",
+    "color": "selectNewItems"
+  },
+  {
+    "pageNum" : "breaker",
+  },
+  {
+    "pageNum" : 2,
+    "picture" : require("../assets/icons/bugs.png"),
+    "displayName" : "Creatures + Museum",
+    "color": "selectCreatures"
+  },
+  {
+    "pageNum" : 3,
+    "picture" : require("../assets/icons/leaf.png"),
+    "displayName" : "Items",
+    "color": "selectItems"
+  },
+  {
+    "pageNum" : 4,
+    "picture" : require("../assets/icons/music.png"),
+    "displayName" : "Songs",
+    "color": "selectSongs"
+  },
+  {
+    "pageNum" : 5,
+    "picture" : require("../assets/icons/emote.png"),
+    "displayName" : "Emoticons",
+    "color": "selectEmotes"
+  },
+  {
+    "pageNum" : 6,
+    "picture" : require("../assets/icons/crafting.png"),
+    "displayName" : "Recipes + Tools",
+    "color": "selectCrafting"
+  },
+  {
+    "pageNum" : 8,
+    "picture" : require("../assets/icons/cat.png"),
+    "displayName" : "Villagers",
+    "color": "selectVillagers"
+  },
+  {
+    "pageNum" : 9,
+    "picture" : require("../assets/icons/construction.png"),
+    "displayName" : "Construction",
+    "color": "selectConstruction"
+  },
+  {
+    "pageNum" : 10,
+    "picture" : require("../assets/icons/flower.png"),
+    "displayName" : "Flowers",
+    "color": "selectItems"
+  },
+  {
+    "pageNum" : 11,
+    "picture" : require("../assets/icons/envelope.png"),
+    "displayName" : "Letters",
+    "color": "selectCards"
+  },
+  {
+    "pageNum" : "breaker",
+  },
+  {
+    "pageNum" : 21,
+    "picture" : require("../assets/icons/obtainable.png"),
+    "displayName" : "Obtainable Items",
+    "color": "selectObtainable"
+  },
+  {
+    "pageNum" : 19,
+    "picture" : require("../assets/icons/achievementIcon.png"),
+    "displayName" : "Achievements",
+    "color": "selectAchievements"
+  },
+  {
+    "pageNum" : 16,
+    "picture" : require("../assets/icons/calendar.png"),
+    "displayName" : "Calendar + Events",
+    "color": "selectCalendar"
+  },
+  {
+    "pageNum" : 7,
+    "picture" : require("../assets/icons/palmTree.png"),
+    "displayName" : "Mystery Islands",
+    "color": "selectIsland"
+  },
+  {
+    "pageNum" : 15,
+    "picture" : require("../assets/icons/acnhFAQIcon.png"),
+    "displayName" : "Guide + FAQ",
+    "color": "selectAbout"
+  },
+  {
+    "pageNum" : "breaker",
+  },
+  {
+    "pageNum" : 12,
+    "picture" : require("../assets/icons/scroll.png"),
+    "displayName" : "Catalog Scanner",
+    "color": "selectAbout"
+  },
+  {
+    "pageNum" : 13,
+    "picture" : require("../assets/icons/settings.png"),
+    "displayName" : "Settings",
+    "color": "selectSettings"
+  },
+  {
+    "pageNum" : 14,
+    "picture" : require("../assets/icons/magnifyingGlass.png"),
+    "displayName" : "About",
+    "color": "selectAbout"
+  },
+]
+

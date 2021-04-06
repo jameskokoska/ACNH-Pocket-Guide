@@ -41,7 +41,15 @@ const Header = (props) => {
           <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", padding:10, marginTop:10}}>{"Tap here to read about events"}</TextFont>
         </TouchableOpacity>
       </PopupInfoCustom>:<View/>}
-      {props.extraInfo!=="events"&&props.extraInfo!==undefined&&props.extraInfo!==""?<PopupInfoCustom ref={popupExtraInfo} buttonText={"Close"}>
+      {props.extraInfo==="newItems"&&props.extraInfo!==undefined&&props.extraInfo!==""?<PopupInfoCustom ref={popupExtraInfo} buttonText={"Close"}>
+        <View style={{height:6}}/>
+        <SubHeader>{"Guide + FAQ"}</SubHeader>
+        <Paragraph styled={true}>{"You can read more about the new game update by visiting the events and guide page"}</Paragraph>
+        <TouchableOpacity onPress={() => props.setPage(15, true, "updateRedirect")}>
+          <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", padding:10, marginTop:10}}>{"Tap here to read about the new update"}</TextFont>
+        </TouchableOpacity>
+      </PopupInfoCustom>:<View/>}
+      {props.extraInfo!==undefined&&props.extraInfo!==""&&props.extraInfo.constructor!==String?<PopupInfoCustom ref={popupExtraInfo} buttonText={"Close"}>
         <View style={{height:6}}/>
         <SubHeader>{props.extraInfo[0]}</SubHeader>
         {props.extraInfo.slice(1,props.extraInfo.length).map( (info, index)=>{
@@ -53,7 +61,7 @@ const Header = (props) => {
       <ImageBackground source={props.appBarImage} style={{width:"100%", backgroundColor: props.appBarColor}}>
         <View style={[styles.topSpace, {height: props.headerHeight / 1.5 + 10,}]}>
         </View>
-        {props.extraInfo!==undefined&&props.extraInfo!==""?<TouchableOpacity style={{position:"absolute", padding:15, right:0}} onPress={()=>{popupExtraInfo.current.setPopupVisible(true)}}><Image style={{width:25,height:25,opacity: 0.35, resizeMode:"contain"}} source={require("../assets/icons/info.png")}/></TouchableOpacity>:<View/>}
+        {props.extraInfo!==undefined&&props.extraInfo!==""?<TouchableOpacity style={{position:"absolute", padding:15, right:0}} onPress={()=>{popupExtraInfo.current.setPopupVisible(true)}}><Image style={{width:25,height:25,opacity: 0.35, resizeMode:"contain"}} source={global.darkMode?require("../assets/icons/aboutWhite.png"):require("../assets/icons/about.png")}/></TouchableOpacity>:<View/>}
         <View style={{height: props.headerHeight / 2}}>
 
           <View style={styles.subHeader}>

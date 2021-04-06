@@ -176,7 +176,9 @@ export default class CalendarPage extends Component {
               color: colors.white,
               filter:"K.K. concert"
             });
-            this.state.itemsColor[strTime] = styleRepeatEvent;
+            if(this.state.itemsColor[strTime]===undefined){
+              this.state.itemsColor[strTime] = styleRepeatEvent;
+            }
           }
 
           seasonData.map( (event, index)=>{
