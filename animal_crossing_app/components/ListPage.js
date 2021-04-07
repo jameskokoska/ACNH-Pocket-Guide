@@ -26,7 +26,7 @@ import RecipesPopup from "../popups/RecipesPopup"
 import MaterialsPopup from "../popups/MaterialsPopup"
 import PopupFilter from './PopupFilter'
 import TextFont from "./TextFont"
-import {removeAccents, inChecklist, attemptToTranslateItem, getSettingsString, attemptToTranslate} from "../LoadJsonData"
+import {compareItemID, removeAccents, inChecklist, attemptToTranslateItem, getSettingsString, attemptToTranslate} from "../LoadJsonData"
 import {PopupBottomCustom} from "./Popup"
 const filterDefinitions = require("../assets/data/Generated/filterDefinitions.json");
 
@@ -244,12 +244,13 @@ export default (props) =>{
             } else if (searchActual.includes("Wishlist") && props.wishlistItems){
               filterFound = false;
               break;
-            } else if (searchActual.includes("SearchIDs") && ((item.hasOwnProperty("Internal ID") && props.itemIDs.includes(item.["Internal ID"])) || (item.hasOwnProperty("Name") && props.itemIDs.includes(item.["Name"])))) {
-              filterFound = true;
-              break;
             } else if (searchActual.includes("SearchIDs")) {
-              filterFound = false;
-              searchFound= false;
+              if(compareItemID(props.itemIDs, item)){
+                filterFound = true;
+              } else {
+                filterFound = false;
+                searchFound= false;
+              }
               break;
             } else if((props.villagerGifts===true && item.["Color 1"]!==undefined && item.["Color 2"]!==undefined && item.["Style 1"]!==undefined && item.["Style 2"]!==undefined) &&
               (item.["Color 1"].includes(searchActual[0])  || 

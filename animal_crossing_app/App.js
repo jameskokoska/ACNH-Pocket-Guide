@@ -52,11 +52,16 @@ global.gameVersion = "1.9.0";
 global.changelog = `
 -You can now view what items you can get from events by tapping them!
 -Reworked how back button works - enable Back button to previous page
+-Added Season/Event info in item popups
 -Fixed crash to see villagers furniture that doesn't yet exist in the database
 -Added not found error screen
 -Added more redirects and info to ACNH Guide + FAQ page
 -Fixed event highlighting on calendar page
+-Reworked how the sidebar is loaded internally
+-Fixed villagers furniture sometimes having wrong entries
+-Fixed DIYs sometime displaying wrong selling price for the crafted item
 -
+-Past changes:
 -Color fixes for events
 -Your villagers birthdays are now highlighted in the Events section
 -24 hour time fixes
@@ -79,8 +84,6 @@ global.changelog = `
 -Can sort/unsort tasks
 -Haptic feedback for visitor page fix
 -Sorry for the bugs recently, I didn't notice I was pushing updates over the air
--
--Past changes:
 -
 -Added recipes collection progress
 -Can zoom in on artwork - tap the artwork in the popup and pinch to zoom

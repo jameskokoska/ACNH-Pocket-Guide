@@ -4,7 +4,7 @@ import {Dimensions, Image, View, Text} from 'react-native';
 import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
 import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"
-import {findItem} from "../LoadJsonData"
+import {findItemIDName} from "../LoadJsonData"
 
 class RecipesPopup extends Component {
   constructor(props){
@@ -17,8 +17,8 @@ class RecipesPopup extends Component {
       <InfoLineBeside
         image1={require("../assets/icons/bellBag.png")} 
         image2={require("../assets/icons/coin.png")} 
-        item1={findItem(this.props.item["Crafted Item Internal ID"])}
-        item2={findItem(this.props.item["Crafted Item Internal ID"])}
+        item1={findItemIDName(this.props.item["Crafted Item Internal ID"],this.props.item["Name"])}
+        item2={findItemIDName(this.props.item["Crafted Item Internal ID"],this.props.item["Name"])}
         textProperty1={["Buy"]}
         textProperty2={["Sell"]}
         ending1={"Exchange Currency"}

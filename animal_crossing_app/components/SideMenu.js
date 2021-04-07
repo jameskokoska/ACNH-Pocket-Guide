@@ -25,6 +25,7 @@ export default class SideMenu extends Component {
             {
               if(section["pageNum"]!="breaker"){
                 return <SidebarElement 
+                  key={section["pageNum"].toString()+index.toString()}
                   image={section.picture} 
                   title={section.displayName}
                   pageNum={section.pageNum} 

@@ -48,9 +48,7 @@ class GuidePage extends Component {
     var run = `
         document.getElementById('site-nav').classList.add('nav-open');
       `;
-    if(!this.props.propsPassed.includes("Redirect")){
-      this.webView.injectJavaScript(run);
-    }
+    this.webView.injectJavaScript(run);
   }
  
   render(){
@@ -87,9 +85,10 @@ class GuidePage extends Component {
             </View>
           )}
           onNavigationStateChange={navState => {
-            console.log(this.firstOpen)
             if(this.firstOpen===0){
-              this.openWebMenu();
+              if(!this.props.propsPassed.includes("Redirect")){
+                this.openWebMenu();
+              }
               this.firstOpen++;
             }
             if(this.mounted){

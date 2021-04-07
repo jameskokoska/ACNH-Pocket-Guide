@@ -58,6 +58,7 @@ class PopupChangelog extends Component {
             })
           }
           <TextFont bold={false} style={{marginBottom:4, fontSize: 18, color: colors.textBlack[global.darkMode]}}>You can reread the changelog in the [About] page</TextFont>
+          <TextFont bold={false} style={{marginBottom:4, fontSize: 18, color: colors.textBlack[global.darkMode]}}>If you would like to help translate this app, feel free to reach out on email!</TextFont>
           <View style={{height:25}}/>
           <MailLink/>
           <View style={{height:15}}/>

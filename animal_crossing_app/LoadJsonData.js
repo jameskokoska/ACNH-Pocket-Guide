@@ -918,14 +918,34 @@ export function getInverseVillagerFilters(string=false){
   }
 }
 
-export function findItem(id){
+export function findItemIDName(id, name){
   for(var dataSet = 0; dataSet < global.dataLoadedAll.length; dataSet++){
     for(var i = 0; i < global.dataLoadedAll[dataSet].length; i++){
-      if(global.dataLoadedAll[dataSet][i].hasOwnProperty("Internal ID") && global.dataLoadedAll[dataSet][i]["Internal ID"]===id){
+      if(global.dataLoadedAll[dataSet][i].hasOwnProperty("Internal ID") && global.dataLoadedAll[dataSet][i]["Internal ID"]===id  && global.dataLoadedAll[dataSet][i]["Name"]===name){
         return global.dataLoadedAll[dataSet][i];
       }
     }
   }
+}
+
+// itemIDs={[
+//   {
+//     list:[...this.props.villager["Furniture List"].split(";"), ...this.props.villager["Kitchen Equipment"].split(',')[0], ...this.props.villager["DIY Workbench"].split(',')[0],],
+//     key:"furnitureCheckList"
+//   },
+// ]}
+export function compareItemID(itemIDs, currentItem){
+  if(!currentItem.hasOwnProperty("Internal ID") || !currentItem.hasOwnProperty("checkListKey")){
+    return false;
+  }
+  for(var i=0; i<itemIDs.length; i++){
+    for(var x=0; x<itemIDs[i]["list"].length; x++){
+      if((itemIDs[i]["list"][x]===currentItem["Name"]||itemIDs[i]["list"][x]===currentItem["Internal ID"]) && currentItem["checkListKey"].includes(itemIDs[i]["key"])){
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 export function getEventName(eventNameInput){
