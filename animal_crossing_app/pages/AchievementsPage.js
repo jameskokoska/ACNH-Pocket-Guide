@@ -230,17 +230,17 @@ class AchievementStamp extends Component {
   }
 
   checkOffItem = async(id) => {
-    var oldList = JSON.parse(await getStorage("Achievements",JSON.stringify([])));
+    var oldList = await JSON.parse(await getStorage("Achievements",JSON.stringify([])));
     
     if(oldList.includes(id)){
       oldList = oldList.filter(item => item !== id);
-      this.saveList(oldList);
+      await this.saveList(oldList);
       getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
       if(this.mounted)
         this.setState({checked:false})
     } else {
       oldList.push(id);
-      this.saveList(oldList);
+      await this.saveList(oldList);
       getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10,220,20]) : "";
       if(this.mounted)
         this.setState({checked:true})

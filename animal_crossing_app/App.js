@@ -55,6 +55,7 @@ global.changelog = `
 -Fixed checkmark sync on variations
 -Filters don't attempt to load if the page does not have any filters
 -Added redirect/info popup to read more about gifts from gifts page and What are villager gifts popup
+-Backup data now backups achievements and profile information too
 -
 -You can now view what items you can get from events by tapping them!
 -Reworked how back button works - enable Back button to previous page
