@@ -12,6 +12,7 @@ import DelayInput from "react-native-debounce-input";
 import {MailLink, ExternalLink, SubHeader, Paragraph} from "../components/Formattings"
 import {LocaleConfig} from 'react-native-calendars';
 import Header from "../components/Header"
+import {VillagerPopupPopup} from "./HomePage"
 
 
 
@@ -36,6 +37,9 @@ export default class CalendarPage extends Component {
   componentWillUnmount() {
     this.mounted = false;
   }
+  openVillagerPopup = (item) => {
+    this.villagerPopupPopup?.setPopupVisible(true, item);
+  }
   render() {
     LocaleConfig.locales['language'] = {
       monthNames: [attemptToTranslate('January'),attemptToTranslate('February'),attemptToTranslate('March'),attemptToTranslate('April'),attemptToTranslate('May'),attemptToTranslate('June'),attemptToTranslate('July'),attemptToTranslate('August'),attemptToTranslate('September'),attemptToTranslate('October'),attemptToTranslate('November'),attemptToTranslate('December')],
@@ -51,6 +55,7 @@ export default class CalendarPage extends Component {
       viewAll = <AllEventsList setPage={this.props.setPage}/>
     }
     return (<>
+      <VillagerPopupPopup ref={(villagerPopupPopup) => this.villagerPopupPopup = villagerPopupPopup} setPage={this.props.setPage}/>
       {viewAll}
       <Agenda
         ref={(agenda) => this.agenda = agenda} 
@@ -120,6 +125,8 @@ export default class CalendarPage extends Component {
                   time: "All day",
                   image: villager["Icon Image"],
                   color: ["#2195F33F","#006EB34D"],
+                  type:"villager",
+                  filter: villager,
                 });
                 this.state.itemsColor[strTime] = styleBirthdayEvent;
               } else {
@@ -128,6 +135,8 @@ export default class CalendarPage extends Component {
                   time: "All day",
                   image: villager["Icon Image"],
                   color: colors.white,
+                  type:"villager",
+                  filter: villager,
                 });
               }
               
@@ -143,6 +152,7 @@ export default class CalendarPage extends Component {
                   time: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
                   image: event["Name"],
                   color: colors.specialEventBackground,
+                  type:"filter",
                   filter:event["Name"]
                 });
                 this.state.itemsColor[strTime] = styleImportantEvent;
@@ -152,6 +162,7 @@ export default class CalendarPage extends Component {
                   time: event["Time"],
                   image: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
                   color: colors.white,
+                  type:"filter",
                   filter:event["Name"]
                 });
               }
@@ -165,6 +176,7 @@ export default class CalendarPage extends Component {
               time: getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 12:00" : "5 AM - 12 PM",
               image:"turnip.png",
               color: colors.white,
+              type:"filter",
               filter:"Daisy Mae"
             });
             this.state.itemsColor[strTime] = styleRepeatEvent;
@@ -174,6 +186,7 @@ export default class CalendarPage extends Component {
               time: getSettingsString("settingsUse24HourClock") === "true" ? "20:00 - 24:00" : "8 PM - 12 AM",
               image:"music.png",
               color: colors.white,
+              type:"filter",
               filter:"K.K. concert"
             });
             if(this.state.itemsColor[strTime]===undefined){
@@ -190,6 +203,7 @@ export default class CalendarPage extends Component {
                   time: event["Type"],
                   image: event["Name"],
                   color: colors.white,
+                  type:"filter",
                   filter:event["Name"]
                 });
               }
@@ -200,6 +214,7 @@ export default class CalendarPage extends Component {
                   time: event["Type"],
                   image: event["Name"],
                   color: colors.white,
+                  type:"filter",
                   filter:event["Name"]
                 });
               }
@@ -240,7 +255,11 @@ export default class CalendarPage extends Component {
         background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+(item.filter===undefined?"00":"AF"), false)}
         onPress={()=>{
           if(item.filter!==undefined){
-            this.props.setPage(23, true, item.filter)
+            if(item.hasOwnProperty("type") && item.type==="villager"){
+              this.openVillagerPopup(item.filter)
+            } else {
+              this.props.setPage(23, true, item.filter)
+            }
           }
         }}
       >

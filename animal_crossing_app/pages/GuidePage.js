@@ -19,6 +19,8 @@ class GuidePage extends Component {
       currentURL = "https://chibisnorlax.github.io/acnhfaq/island-life/gardening/flowers/"
     } else if (props.propsPassed==="updateRedirect"){
       currentURL = "https://chibisnorlax.github.io/acnhfaq/new/"
+    } else if (props.propsPassed==="giftsRedirect"){
+      currentURL = "https://chibisnorlax.github.io/acnhfaq/villagers/gifting/"
     }
     this.state = {
       canGoBack: false,

@@ -126,6 +126,7 @@ class HomePage extends Component {
               {todayTitle}
               {this.todayEvents.map( (event, index)=>
                 <EventContainer 
+                  openVillagerPopup={this.openVillagerPopup}
                   setPage={this.props.setPage}
                   key={event.name+index} 
                   backgroundColor={colors.eventBackground[global.darkMode]}
@@ -137,6 +138,7 @@ class HomePage extends Component {
               {tomorrowTitle}
               {this.tomorrowEvents.map( (event, index)=>
                 <EventContainer 
+                  openVillagerPopup={this.openVillagerPopup}
                   setPage={this.props.setPage}
                   key={event.name+index} 
                   backgroundColor={colors.eventBackground[global.darkMode]}
@@ -148,6 +150,7 @@ class HomePage extends Component {
               {thisWeekTitle}
               {this.thisWeekEvents.map( (event, index)=>
                 <EventContainer 
+                  openVillagerPopup={this.openVillagerPopup}
                   setPage={this.props.setPage}
                   key={event.name+index} 
                   backgroundColor={colors.eventBackground[global.darkMode]}
@@ -476,7 +479,7 @@ class ConfigureHomePageSettingContainer extends Component {
 }
 
 
-class VillagerPopupPopup extends Component {
+export class VillagerPopupPopup extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -496,7 +499,7 @@ class VillagerPopupPopup extends Component {
     }
     return(
       <PopupBottomCustom ref={(popup) => this.popup = popup}>
-        <TextFont bold={true} style={{textAlign:"center",fontSize: 30, marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{this.state.item.["Name"]}</TextFont>
+        <TextFont bold={true} style={{textAlign:"center",fontSize: 30, marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{this.state.item.["NameLanguage"]}</TextFont>
         {villagerPopup}
       </PopupBottomCustom>
     )

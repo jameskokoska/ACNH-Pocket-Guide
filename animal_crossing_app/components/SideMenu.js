@@ -188,7 +188,7 @@ export const sideSections = [
   {
     "pageNum" : 12,
     "picture" : require("../assets/icons/scroll.png"),
-    "displayName" : "Catalog Scanner",
+    "displayName" : "Catalog Scanning",
     "color": "selectAbout"
   },
   {

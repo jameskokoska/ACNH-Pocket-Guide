@@ -50,6 +50,12 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
+-Fixed color displaying even though there is 'None' in different languages
+-You can tap a villagers birthday event to see details about that villager
+-Fixed checkmark sync on variations
+-Filters don't attempt to load if the page does not have any filters
+-Added redirect/info popup to read more about gifts from gifts page and What are villager gifts popup
+-
 -You can now view what items you can get from events by tapping them!
 -Reworked how back button works - enable Back button to previous page
 -Added Season/Event info in item popups
@@ -60,6 +66,8 @@ global.changelog = `
 -Reworked how the sidebar is loaded internally
 -Fixed villagers furniture sometimes having wrong entries
 -Fixed DIYs sometime displaying wrong selling price for the crafted item
+-Updated translations
+-Fixed villager name translation on home page
 -
 -Past changes:
 -Color fixes for events
@@ -370,7 +378,7 @@ class App extends Component {
   }
 
   setPage(pageNum, previousAdd=true, propsPassed="") {
-    console.log(this.lastPropsPassed)
+    // console.log(this.lastPropsPassed)
     if(this.state.loaded){
       if(this.state.currentPage!==pageNum){
         if(previousAdd){
@@ -456,7 +464,7 @@ class App extends Component {
       } else if (this.state.currentPage===19){
         currentPageView = <AchievementsPage/>
       } else if (this.state.currentPage===20){
-        currentPageView = <VillagerPresentsPage villager={this.state.propsPassed}/>
+        currentPageView = <VillagerPresentsPage setPage={this.setPage} villager={this.state.propsPassed}/>
       } else if (this.state.currentPage===21){
         currentPageView = <ObtainableItemsPage setPage={this.setPage}/>
       } else if (this.state.currentPage===22){

@@ -18,6 +18,16 @@ export default class VillagerPresentsPage extends Component {
         <ClothingRouteClass 
           title={this.props.villager["NameLanguage"]}
           villagerGiftsFilters={[this.props.villager["Color 1"],this.props.villager["Color 2"],this.props.villager["Style 1"],this.props.villager["Style 2"]]}
+          extraInfo={
+            {
+              type:"guideRedirect",
+              title:"Guide + FAQ",
+              content:"You can read more details about gifts by visiting the events and guide page",
+              linkText: "Tap here to read more about gifting",
+              redirectPassBack: "giftsRedirect"
+            }
+          }
+          setPage={this.props.setPage}
           customHeader={<>
             <InfoLine
               center={false}

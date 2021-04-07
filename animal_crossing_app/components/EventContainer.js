@@ -32,7 +32,11 @@ export class EventContainer extends Component {
         background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+(this.props.event.filter===undefined?"00":"AF"), false)}
         onPress={()=>{
           if(this.props.event.filter!==undefined){
-            this.props.setPage(23, true, this.props.event.filter)
+            if(this.props.event.hasOwnProperty("type") && this.props.event.type==="villager"){
+              this.props.openVillagerPopup(this.props.event.filter)
+            } else {
+              this.props.setPage(23, true, this.props.event.filter)
+            }
           }
         }}
       >
@@ -67,6 +71,8 @@ export function getEventsDay(date, eventSections){
           image: villager["Icon Image"],
           day:date.getDate(),
           weekday:date.getDay(),
+          type:"villager",
+          filter: villager,
           color:colors.specialEventBirthdayBackground[global.darkMode]
         });
         if(eventSections["App notifications"]){
@@ -79,6 +85,8 @@ export function getEventsDay(date, eventSections){
           image: villager["Icon Image"],
           day:date.getDate(),
           weekday:date.getDay(),
+          type:"villager",
+          filter: villager,
         });
         if(eventSections["App notifications"]){
           schedulePushNotification(date,eventSections["Set Notification Time"],"🎂 " + capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),attemptToTranslate("All day"));
@@ -98,7 +106,8 @@ export function getEventsDay(date, eventSections){
           day:date.getDate(),
           weekday:date.getDay(),
           color:colors.specialEventBackground[global.darkMode],
-          filter:event["Name"]
+          type:"filter",
+          filter:event["Name"],
         });
         if(getSettingsString("settingsNotifications")){
           schedulePushNotification(date,eventSections["Set Notification Time"],"🏅" + attemptToTranslate(capitalize(event["Name"])),event["Time"]);
@@ -111,6 +120,7 @@ export function getEventsDay(date, eventSections){
           day:date.getDate(),
           weekday:date.getDay(),
           color:colors.startEventBackground[global.darkMode],
+          type:"filter",
           filter:event["Name"]
         });
         if(getSettingsString("settingsNotifications")){
@@ -139,6 +149,7 @@ export function getEventsDay(date, eventSections){
             day:date.getDate(),
             weekday:date.getDay(),
             color:colors.startEventBackground[global.darkMode],
+            type:"filter",
             filter:event["Name"]
           });
           if(eventSections["App notifications"]){
@@ -152,6 +163,7 @@ export function getEventsDay(date, eventSections){
             day:date.getDate(),
             weekday:date.getDay(),
             color:colors.warningEventBackground[global.darkMode],
+            type:"filter",
             filter:event["Name"]
           });
           if(eventSections["App notifications"]){
@@ -167,6 +179,7 @@ export function getEventsDay(date, eventSections){
             day:date.getDate(),
             weekday:date.getDay(),
             color:colors.startEventBackground[global.darkMode],
+            type:"filter",
             filter:event["Name"]
           });
           if(eventSections["App notifications"]){
@@ -180,6 +193,7 @@ export function getEventsDay(date, eventSections){
             day:date.getDate(),
             weekday:date.getDay(),
             color:colors.warningEventBackground[global.darkMode],
+            type:"filter",
             filter:event["Name"]
           });
           if(eventSections["App notifications"]){
@@ -197,6 +211,7 @@ export function getEventsDay(date, eventSections){
       image:"turnip.png",
       day:date.getDate(),
       weekday:date.getDay(),
+      type:"filter",
       filter:"Daisy Mae"
     });
     if(eventSections["App notifications"]){
@@ -209,6 +224,7 @@ export function getEventsDay(date, eventSections){
       image:"music.png",
       day:date.getDate(),
       weekday:date.getDay(),
+      type:"filter",
       filter:"K.K. concert"
     });
     if(eventSections["App notifications"]){

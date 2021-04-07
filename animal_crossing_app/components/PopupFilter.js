@@ -34,6 +34,9 @@ class PopupFilter extends Component {
   }
 
   async componentDidMount(){
+    if(this.props.disableFilters){
+      return;
+    }
     var defaultValuesStored = (await getStorage(this.props.title+"Filters","")).split(",");
     console.log(this.props.title+"Filters")
     //Check for filters selected that don't exist, could cause errors, then reset them
@@ -89,17 +92,18 @@ class PopupFilter extends Component {
   }
 
   render(){
-    if(this.state.loaded===false){
-      console.log("asdsda")
+    if(this.props.disableFilters){
+      return <View style={{width:10, height:10, opacity: 0.2}}/>
+    } else if(this.state.loaded===false){
       return <View style={{width:10, height:10, opacity: 0.2}}>
-          <Modal
-            animationType="fade"
-            transparent={true}
-            visible={true}
-            statusBarTranslucent
-          ><View style={styles.centeredView}></View>
-          </Modal>
-        </View>
+        <Modal
+          animationType="fade"
+          transparent={true}
+          visible={true}
+          statusBarTranslucent
+        ><View style={styles.centeredView}></View>
+        </Modal>
+      </View>
     }
     var dropDownPickerOpacity = 0
     if(this.props.possibleFilters!== undefined && this.props.possibleFilters.length!==0){
@@ -107,16 +111,16 @@ class PopupFilter extends Component {
     }
     const filters = translateFilters(this.props.possibleFilters)
     return (
-        <View style={{width:10, height:10, opacity: 0.2}}>
-          <Modal
-            animationType="fade"
-            transparent={true}
-            visible={this.state.popupVisible}
-            statusBarTranslucent
-            onRequestClose={()=>{
-              this.setPopupVisible(!this.state.popupVisible);
-            }}
-          >
+      <View style={{width:10, height:10, opacity: 0.2}}>
+        <Modal
+          animationType="fade"
+          transparent={true}
+          visible={this.state.popupVisible}
+          statusBarTranslucent
+          onRequestClose={()=>{
+            this.setPopupVisible(!this.state.popupVisible);
+          }}
+        >
           <View style={styles.centeredView}>
             <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} style={{position:"absolute", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: "black", opacity: 0.1}}/>
             <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode], height:Dimensions.get('window').height*0.75}]}>
@@ -172,7 +176,6 @@ class PopupFilter extends Component {
           </View>
         </Modal>
       </View>
-      
     )
   }
 }

@@ -44,7 +44,8 @@ class CreditsPage extends Component {
           <Paragraph>{attemptToTranslate("Thanks for your help!")}</Paragraph>
           <View style={{height: 10}}/>
           <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
-            <SubHeader>French: Christophe Laffitte</SubHeader>
+            <SubHeader style={{marginBottom:5}}>{attemptToTranslate("French") + ":"}</SubHeader>
+            <SubHeader>Christophe Laffitte</SubHeader>
           </View>
           <View style={{height: 20}}/>
           <MailLink/>

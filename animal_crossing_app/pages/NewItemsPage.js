@@ -20,7 +20,15 @@ export default class NewItemsPage extends Component {
         newItems={true}
         appBarColor = {colors.newItemsAppBar[global.darkMode]}
         accentColor = {colors.newItemsAccent[global.darkMode]}
-        extraInfo = {"newItems"}
+        extraInfo={
+          {
+            type:"guideRedirect",
+            title:"Guide + FAQ",
+            content:"You can read more about the new game update by visiting the events and guide page",
+            linkText: "Tap here to read about the new update",
+            redirectPassBack: "updateRedirect"
+          }
+        }
       />
     )
   }

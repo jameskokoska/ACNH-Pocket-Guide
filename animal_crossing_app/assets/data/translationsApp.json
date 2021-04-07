@@ -5419,6 +5419,12 @@
             "English (Europe)": "Tap here to read about the new update",
             "French": "Appuyez ici pour en savoir plus sur la nouvelle mise à jour",
             "French (US)": "Appuyez ici pour en savoir plus sur la nouvelle mise à jour"
+        },
+        {
+            "English": "French",
+            "English (Europe)": "French",
+            "French": "Français",
+            "French (US)": "Français"
         }
     ],
     "Achievements": [

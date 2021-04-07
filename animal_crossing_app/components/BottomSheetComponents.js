@@ -57,8 +57,9 @@ export class RightCornerCheck extends Component {
   }
   //update component when new data is passed into the class, or when the check mark local value changes
   componentDidUpdate(prevProps) {
-    if(this.props!==prevProps)
+    if(this.props!==prevProps){
       this.setState({collected:inChecklist(this.props.item.checkListKey)});
+    }
   }
   setCollected(collected){
     this.setState({collected: collected});
@@ -132,7 +133,13 @@ export class InfoLine extends Component {
     if(this.props.starting!==undefined){
       starting=this.props.starting;
     }
-    
+    if(this.props.item.hasOwnProperty(this.props.textProperty)){
+      if(this.props.item[this.props.textProperty]==="None"){
+        return <View/>
+      } else if(this.props.item[this.props.textProperty].toLowerCase()==="null" || this.props.item[this.props.textProperty].toLowerCase()==="na"){
+        return <View/>
+      }
+    }
     var text1 = attemptToTranslateSpecial(this.props.item[this.props.textProperty], "variants");
     var text2 = attemptToTranslateSpecial(this.props.item[this.props.textProperty2], "variants");
     if(this.props.textProperty[0]==="Favorite Song"){
@@ -142,10 +149,7 @@ export class InfoLine extends Component {
     if(this.props.textProperty2 !== undefined && this.props.item[this.props.textProperty] !== this.props.item[this.props.textProperty2]){
       text+= ", " + capitalizeFirst(commas(text2))
     }
-    if(text.toLowerCase()==="null" || text.toLowerCase()==="na"){
-      return <View/>
-    }
-    if(text==="None"){
+    if(text1===undefined || text1.toLowerCase()==="null" || text1.toLowerCase()==="na"){
       return <View/>
     }
     
@@ -316,6 +320,11 @@ export class Variations extends Component {
   }
   updateVariations(key,checked){
     this.setState({updateChecked:checked, updateKey:key});
+  }
+  componentDidUpdate(prevProps) {
+    if(this.props!==prevProps){
+      this.setState({updateChecked:!inChecklist(this.props.item.checkListKey), updateKey:this.props.item.checkListKey});
+    }
   }
   render(){
     if(this.props.item!=""||this.props.item!=undefined){

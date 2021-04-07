@@ -120,6 +120,7 @@ export class ClothingRouteClass extends Component{
     var filterSearchable = true;
     var appBarColor = colors.clothingAppBar[global.darkMode];
     var titleColor = colors.textWhiteOnly[global.darkMode];
+    var extraInfo = this.props.extraInfo===undefined?"":this.props.extraInfo;
     if(title!==undefined){
       villagerGifts = true;
       villagerGiftsFilters = this.props.villagerGiftsFilters;
@@ -134,6 +135,8 @@ export class ClothingRouteClass extends Component{
     }
     return (
       <ListPage 
+        extraInfo={extraInfo}
+        setPage={this.props.setPage}
         customHeader={customHeader}
         filterSearchable={filterSearchable}
         subHeader={subHeader}

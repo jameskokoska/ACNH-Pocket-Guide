@@ -476,7 +476,7 @@ export default (props) =>{
     return (
     <View style={{backgroundColor:props.backgroundColor}} >
       {header}
-      <PopupFilter title={props.title} ref={popupFilter} possibleFilters={possibleFiltersState} filterSearchable={props.filterSearchable} updateSearchFilters={updateSearchFilters}/> 
+      <PopupFilter disableFilters={props.disableFilters} title={props.title} ref={popupFilter} possibleFilters={possibleFiltersState} filterSearchable={props.filterSearchable} updateSearchFilters={updateSearchFilters}/> 
       {/* setFilterPopupState(false) */}
       <Animated.FlatList
         nestedScrollEnabled
