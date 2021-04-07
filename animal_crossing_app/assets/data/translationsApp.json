@@ -5101,6 +5101,324 @@
             "English (Europe)": "Ready Days",
             "French": "Jours de préparation",
             "French (US)": "Jours de préparation"
+        },
+        {
+            "English": "All villagers (while stung)",
+            "English (Europe)": "Tous les villageois (quand on est piqué)",
+            "French": "Tous les villageois (quand on est piqué)",
+            "French (US)": "Tous les villageois (quand on est piqué)"
+        },
+        {
+            "English": "4th House Upgrade (Right Room)",
+            "English (Europe)": "4ème amélioration de la maison (Pièce de droite)",
+            "French": "4ème amélioration de la maison (Pièce de droite)",
+            "French (US)": "4ème amélioration de la maison (Pièce de droite)"
+        },
+        {
+            "English": "3rd House Upgrade (Left Room)",
+            "English (Europe)": "3ème amélioration de la maison (Pièce de gauche)",
+            "French": "3ème amélioration de la maison (Pièce de gauche)",
+            "French (US)": "3ème amélioration de la maison (Pièce de gauche)"
+        },
+        {
+            "English": "5th House Upgrade (2nd Floor)",
+            "English (Europe)": "5ème amélioration de la maison (2ème étage)",
+            "French": "5ème amélioration de la maison (2ème étage)",
+            "French (US)": "5ème amélioration de la maison (2ème étage)"
+        },
+        {
+            "English": "Shaking a hardwood or cedar tree",
+            "English (Europe)": "En secouant un arbre ou un cèdre",
+            "French": "En secouant un arbre ou un cèdre",
+            "French (US)": "En secouant un arbre ou un cèdre"
+        },
+        {
+            "English": "River (clifftop)",
+            "English (Europe)": "River (clifftop)",
+            "French": "Rivière (au sommet d'une falaise)",
+            "French (US)": "Rivière (au sommet d'une falaise)"
+        },
+        {
+            "English": "Sea (rainy days)",
+            "English (Europe)": "Sea (rainy days)",
+            "French": "Mer (jours de pluie)",
+            "French (US)": "Mer (jours de pluie)"
+        },
+        {
+            "English": "River (mouth)",
+            "English (Europe)": "River (mouth)",
+            "French": "Rivière (à l'embouchure)",
+            "French (US)": "Rivière (à l'embouchure)"
+        },
+        {
+            "English": "On trees (any kind)",
+            "English (Europe)": "On trees (any kind)",
+            "French": "Sur les arbres (n'importe quel type)",
+            "French (US)": "Sur les arbres (n'importe quel type)"
+        },
+        {
+            "English": "Shaking trees (hardwood or cedar only)",
+            "English (Europe)": "Shaking trees (hardwood or cedar only)",
+            "French": "Secoue les arbres (feuillus ou cèdre uniquement)",
+            "French (US)": "Secoue les arbres (feuillus ou cèdre uniquement)"
+        },
+        {
+            "English": "Pushing snowballs",
+            "English (Europe)": "Pushing snowballs",
+            "French": "Pousse des boules de neige",
+            "French (US)": "Pousse des boules de neige"
+        },
+        {
+            "English": "Flying near trash (boots, tires, cans, used fountain fireworks) or rotten turnips",
+            "English (Europe)": "Flying near trash (boots, tires, cans, used fountain fireworks) or rotten turnips",
+            "French": "Vole près des déchets (bottes, pneus, bidons, fontaine de feux d'artifice usagée) ou navets pourris",
+            "French (US)": "Vole près des déchets (bottes, pneus, bidons, fontaine de feux d'artifice usagée) ou navets pourris"
+        },
+        {
+            "English": "Underground (dig where noise is loudest)",
+            "English (Europe)": "Underground (dig where noise is loudest)",
+            "French": "Sous-terre (creuser là où le bruit est le plus fort)",
+            "French (US)": "Sous-terre (creuser là où le bruit est le plus fort)"
+        },
+        {
+            "English": "Any weather",
+            "English (Europe)": "Any weather",
+            "French": "Tout temps",
+            "French (US)": "Tout temps"
+        },
+        {
+            "English": "Rain only",
+            "English (Europe)": "Rain only",
+            "French": "Pluie uniquement",
+            "French (US)": "Pluie uniquement"
+        },
+        {
+            "English": "Small",
+            "English (Europe)": "Small",
+            "French": "Petite",
+            "French (US)": "Petite"
+        },
+        {
+            "English": "XX-Large",
+            "English (Europe)": "XX-Large",
+            "French": "Enorme",
+            "French (US)": "Enorme"
+        },
+        {
+            "English": "Large",
+            "English (Europe)": "Large",
+            "French": "Grande",
+            "French (US)": "Grande"
+        },
+        {
+            "English": "Medium",
+            "English (Europe)": "Medium",
+            "French": "Moyenne",
+            "French (US)": "Moyenne"
+        },
+        {
+            "English": "X-Small",
+            "English (Europe)": "X-Small",
+            "French": "Minuscule",
+            "French (US)": "Minuscule"
+        },
+        {
+            "English": "X-Large",
+            "English (Europe)": "X-Large",
+            "French": "Très Grande",
+            "French (US)": "Très Grande"
+        },
+        {
+            "English": "X-Large w/Fin",
+            "English (Europe)": "X-Large w/Fin",
+            "French": "Enorme (avec aileron)",
+            "French (US)": "Enorme (avec aileron)"
+        },
+        {
+            "English": "Long",
+            "English (Europe)": "Long",
+            "French": "Fine",
+            "French (US)": "Fine"
+        },
+        {
+            "English": "Shadow",
+            "English (Europe)": "Shadow",
+            "French": "Ombre",
+            "French (US)": "Ombre"
+        },
+        {
+            "English": "Movement Speed",
+            "English (Europe)": "Movement Speed",
+            "French": "Mouvement",
+            "French (US)": "Mouvement"
+        },
+        {
+            "English": "Medium",
+            "English (Europe)": "Medium",
+            "French": "Moyen",
+            "French (US)": "Moyen"
+        },
+        {
+            "English": "Stationary",
+            "English (Europe)": "Stationary",
+            "French": "Stationnaire",
+            "French (US)": "Stationnaire"
+        },
+        {
+            "English": "Slow",
+            "English (Europe)": "Slow",
+            "French": "Lent",
+            "French (US)": "Lent"
+        },
+        {
+            "English": "Very slow",
+            "English (Europe)": "Very slow",
+            "French": "Très lent",
+            "French (US)": "Très lent"
+        },
+        {
+            "English": "Very fast",
+            "English (Europe)": "Very fast",
+            "French": "Très rapide",
+            "French (US)": "Très rapide"
+        },
+        {
+            "English": "Fast",
+            "English (Europe)": "Fast",
+            "French": "Rapide",
+            "French (US)": "Rapide"
+        },
+        {
+            "English": "New Year's Day",
+            "English (Europe)": "New Year's Day",
+            "French": "Jour de l'An",
+            "French (US)": "Jour de l'An"
+        },
+        {
+            "English": "Aquarius",
+            "English (Europe)": "Aquarius",
+            "French": "Verseau",
+            "French (US)": "Verseau"
+        },
+        {
+            "English": "Aries",
+            "English (Europe)": "Aries",
+            "French": "Bélier",
+            "French (US)": "Bélier"
+        },
+        {
+            "English": "Cancer",
+            "English (Europe)": "Cancer",
+            "French": "Cancer",
+            "French (US)": "Cancer"
+        },
+        {
+            "English": "Capricorn",
+            "English (Europe)": "Capricorn",
+            "French": "Capricorne",
+            "French (US)": "Capricorne"
+        },
+        {
+            "English": "Gemini",
+            "English (Europe)": "Gemini",
+            "French": "Gémeaux",
+            "French (US)": "Gémeaux"
+        },
+        {
+            "English": "Pisces",
+            "English (Europe)": "Pisces",
+            "French": "Poisson",
+            "French (US)": "Poisson"
+        },
+        {
+            "English": "Taurus",
+            "English (Europe)": "Taurus",
+            "French": "Taureau",
+            "French (US)": "Taureau"
+        },
+        {
+            "English": "Virgo",
+            "English (Europe)": "Virgo",
+            "French": "Vierge",
+            "French (US)": "Vierge"
+        },
+        {
+            "English": "Libra",
+            "English (Europe)": "Libra",
+            "French": "Balance",
+            "French (US)": "Balance"
+        },
+        {
+            "English": "Scorpio",
+            "English (Europe)": "Scorpio",
+            "French": "Scorpion",
+            "French (US)": "Scorpion"
+        },
+        {
+            "English": "Leo",
+            "English (Europe)": "Leo",
+            "French": "Lion",
+            "French (US)": "Lion"
+        },
+        {
+            "English": "Sagittarius",
+            "English (Europe)": "Sagittarius",
+            "French": "Sagittaire",
+            "French (US)": "Sagittaire"
+        },
+        {
+            "English": "Personality",
+            "English (Europe)": "Personality",
+            "French": "Personnalité",
+            "French (US)": "Personnalité"
+        },
+        {
+            "English": "Species",
+            "English (Europe)": "Species",
+            "French": "Espèce",
+            "French (US)": "Espèce"
+        },
+        {
+            "English": "You can get these items from this event",
+            "English (Europe)": "You can get these items from this event",
+            "French": "Vous pouvez obtenir ces objets à cet événement",
+            "French (US)": "Vous pouvez obtenir ces objets à cet événement"
+        },
+        {
+            "English": "You can read more about specific events and details by visiting the events and guide page",
+            "English (Europe)": "You can read more about specific events and details by visiting the events and guide page",
+            "French": "Vous pouvez en savoir plus sur les événements et les détails en visitant la page du guide et des événements",
+            "French (US)": "Vous pouvez en savoir plus sur les événements et les détails en visitant la page du guide et des événements"
+        },
+        {
+            "English": "Tap here to read about events",
+            "English (Europe)": "Tap here to read about events",
+            "French": "Appuyez ici pour en savoir plus sur les événements",
+            "French (US)": "Appuyez ici pour en savoir plus sur les événements"
+        },
+        {
+            "English": "You can read more details about flowers and breeding by visiting the events and guide page",
+            "English (Europe)": "You can read more details about flowers and breeding by visiting the events and guide page",
+            "French": "Vous pouvez en savoir plus sur les fleurs et leur croisement en visitant la page des événements et du guide",
+            "French (US)": "Vous pouvez en savoir plus sur les fleurs et leur croisement en visitant la page des événements et du guide"
+        },
+        {
+            "English": "Tap here to read more about flowers and breeding",
+            "English (Europe)": "Tap here to read more about flowers and breeding",
+            "French": "Appuyez ici pour en savoir plus sur les fleurs et les croisements",
+            "French (US)": "Appuyez ici pour en savoir plus sur les fleurs et les croisements"
+        },
+        {
+            "English": "You can read more about the new game update by visiting the events and guide page",
+            "English (Europe)": "You can read more about the new game update by visiting the events and guide page",
+            "French": "Vous pouvez en savoir plus sur la nouvelle mise à jour du jeu en visitant la page des événements et du guide",
+            "French (US)": "Vous pouvez en savoir plus sur la nouvelle mise à jour du jeu en visitant la page des événements et du guide"
+        },
+        {
+            "English": "Tap here to read about the new update",
+            "English (Europe)": "Tap here to read about the new update",
+            "French": "Appuyez ici pour en savoir plus sur la nouvelle mise à jour",
+            "French (US)": "Appuyez ici pour en savoir plus sur la nouvelle mise à jour"
         }
     ],
     "Achievements": [
