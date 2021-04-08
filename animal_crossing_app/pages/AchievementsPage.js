@@ -147,16 +147,14 @@ class AchievementsPopup extends Component {
   
   render(){
     var name = attemptToTranslateAchievement(this.state.selectedAchievement["Name"]);
-    if(this.state.selectedAchievement!="" && this.state.selectedAchievement["Name"].includes("(island name)")){
-      name = this.state.selectedAchievement["Name"].replace("(island name) ", "")
-      name = attemptToTranslateAchievement(name);
-      name = global.islandName + " " + name;
-    }
+    name = name.replace("(island name)", global.islandName)
+    var description = attemptToTranslateAchievement(this.state.selectedAchievement["Achievement Description"])
+    name = description.replace("(island name)", global.islandName)
     this.getNouns();
     return <>
       <PopupBottomCustom ref={(popup) => this.popup = popup}>
         <SubHeader margin={false}>{name}</SubHeader>
-        <Paragraph translate={false} styled={true} margin={false}>{attemptToTranslateAchievement(this.state.selectedAchievement["Achievement Description"])}</Paragraph>
+        <Paragraph translate={false} styled={true} margin={false}>{description}</Paragraph>
         <Paragraph translate={false} styled={true} margin={false}>{attemptToTranslateAchievement(this.state.selectedAchievement["Achievement Criteria"])}</Paragraph>
         <View style={{paddingTop:30, justifyContent:"center", marginHorizontal: 5, flexDirection: 'row', flexWrap:"wrap"}}>
           {this.achievementNouns}
@@ -183,11 +181,7 @@ class Achievement extends Component {
   }
   render(){
     var name = attemptToTranslateAchievement(this.props.achievement["Name"]);
-    if(this.props.achievement!="" && this.props.achievement["Name"].includes("(island name)")){
-      name = this.props.achievement["Name"].replace("(island name) ", "")
-      name = attemptToTranslateAchievement(name);
-      name = global.islandName + " " + name;
-    }
+    name = name.replace("(island name)", global.islandName)
     return <>
       <TouchableOpacity activeOpacity={0.7} onPress={()=>this.props.openPopup(this.props.achievement)}>
       <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>

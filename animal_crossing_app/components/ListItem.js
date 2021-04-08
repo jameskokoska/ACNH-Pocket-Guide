@@ -148,7 +148,9 @@ class ListItem extends PureComponent{
             }}
           >
             <View style={[styles.gridBox, {backgroundColor:boxColor}]}>
-              <Check checkType={this.props.checkType} style={{position:'absolute', right: -9, top: -9, zIndex:10}} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
+              <TouchableOpacity onPress={()=>{if(getSettingsString("settingsShowBlankCheckMarks")==="true"){checkOff(this.props.item.checkListKey, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}} style={{position:'absolute', right: -18, top: -18, zIndex:10}} >
+                <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
+              </TouchableOpacity>
               {this.state.wishlist? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
               <FastImage
                 style={styles.gridBoxImage}
@@ -183,7 +185,9 @@ class ListItem extends PureComponent{
             }}
           >
             <View style={[styles.gridBoxLarge, {backgroundColor:boxColor}]}>
-              <Check checkType={this.props.checkType} style={{position:'absolute', right: -8, top: -10, zIndex:10}} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
+              <TouchableOpacity onPress={()=>{if(getSettingsString("settingsShowBlankCheckMarks")==="true"){checkOff(this.props.item.checkListKey, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}} style={{position:'absolute', right: -18, top: -18, zIndex:10}} >
+                <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
+              </TouchableOpacity>
               {this.state.wishlist ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
               <FastImage
                 style={styles.gridBoxImageLarge}
@@ -229,7 +233,9 @@ class ListItem extends PureComponent{
             }}
           >
             <View style={[styles.gridBoxLarge, {backgroundColor:boxColor}]}>
-              <Check checkType={this.props.checkType} style={{position:'absolute', right: -8, top: -10, zIndex:10}} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
+              <TouchableOpacity onPress={()=>{if(getSettingsString("settingsShowBlankCheckMarks")==="true"){checkOff(this.props.item.checkListKey, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}} style={{position:'absolute', right: -18, top: -18, zIndex:10}} >
+                <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
+              </TouchableOpacity>
               {this.state.wishlist===true ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
               <FastImage
                 style={styles.gridBoxImageLargeSmaller}

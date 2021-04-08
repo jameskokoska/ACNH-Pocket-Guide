@@ -220,7 +220,7 @@ export function getEventsDay(date, eventSections){
   } else if (eventSections["K.K. Slider"] && date.getDay()===6){
     totalEvents.push({
       name: attemptToTranslate("K.K. Slider"),
-      time: getSettingsString("settingsUse24HourClock") === "true" ? "20:00 - 00:00" : "8 PM - 12 AM",
+      time: getSettingsString("settingsUse24HourClock") === "true" ? "18:00 - 00:00" : "6 PM - 12 AM",
       image:"music.png",
       day:date.getDate(),
       weekday:date.getDay(),

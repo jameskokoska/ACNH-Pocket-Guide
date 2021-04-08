@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Animated, Text, View, Easing } from "react-native";
 import LottieView from 'lottie-react-native';
+import {getSettingsString} from "../LoadJsonData"
 
 class Check extends Component {
   constructor(props) {
@@ -10,8 +11,7 @@ class Check extends Component {
     };
     if(props.checkType==="heart") {
       this.checkMarkAnimationJSON = require('../assets/heartAnimationNoFade.json');
-    }
-    else if(props.fadeOut===false){
+    } else if(props.fadeOut===false || getSettingsString("settingsShowBlankCheckMarks")==="true"){
       this.checkMarkAnimationJSON = require('../assets/checkAnimationNoFade.json');
     } else {
       this.checkMarkAnimationJSON = require('../assets/checkAnimationFade.json');
@@ -60,18 +60,18 @@ class Check extends Component {
   };
 
   render() {
-    if((this.props.fadeOut===true || this.props.fadeOut===undefined) && !this.props.play && !this.props.disablePopup){
+    if(getSettingsString("settingsShowBlankCheckMarks")==="false"&&((this.props.fadeOut===true || this.props.fadeOut===undefined) && !this.props.play)){
       return <View/>
     } else {
       return (
       <LottieView 
+        autoPlay={false}
         loop={false}
         progress={this.state.progress}
         resizeMode="cover" 
-        ref={animation => {
-          this.animation = animation;
-        }}
+       
         style={[this.props.style,{
+          opacity: this.props.play? (global.darkMode?0.9:1) : (global.darkMode?0.7:1),
           width: this.props.width,
           height: this.props.height,
         }]} source={this.checkMarkAnimationJSON}

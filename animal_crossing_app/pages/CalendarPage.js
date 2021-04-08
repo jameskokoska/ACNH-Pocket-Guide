@@ -183,7 +183,7 @@ export default class CalendarPage extends Component {
           } else if (date.getDay()===6){
             this.state.items[strTime].push({
               name: 'K.K. Slider',
-              time: getSettingsString("settingsUse24HourClock") === "true" ? "20:00 - 24:00" : "8 PM - 12 AM",
+              time: getSettingsString("settingsUse24HourClock") === "true" ? "18:00 - 24:00" : "6 PM - 12 AM",
               image:"music.png",
               color: colors.white,
               type:"filter",

@@ -532,6 +532,14 @@ export const settings = [
     "description" : "Change the background of the list based on the color of the item",
   },
   {
+    "keyName" : "settingsShowBlankCheckMarks",
+    "defaultValue" : "true",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/checkEmpty.png"),
+    "displayName" : "Show empty check marks",
+    "description" : "Show an empty check mark in lists. Can be tapped to quickly check off the item. Disabling this can increase performance as less animations need to be rendered.",
+  },
+  {
     "keyName" : "settingsLargerItemPreviews",
     "defaultValue" : "false",
     "currentValue" : "",
@@ -752,7 +760,7 @@ export function translateBirthday(villager){
 
 export function translateIslandNameInputLabel1(){
   if (global.language==="French" || global.language==="French (US)"){
-    return "of island";
+    return "de l'île";
   } else {
     return "of";
   }
