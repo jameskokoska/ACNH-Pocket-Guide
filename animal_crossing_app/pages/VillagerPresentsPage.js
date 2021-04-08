@@ -17,6 +17,7 @@ export default class VillagerPresentsPage extends Component {
       return(
         <ClothingRouteClass 
           title={this.props.villager["NameLanguage"]}
+          tabs={false}
           villagerGiftsFilters={[this.props.villager["Color 1"],this.props.villager["Color 2"],this.props.villager["Style 1"],this.props.villager["Style 2"]]}
           extraInfo={
             {
