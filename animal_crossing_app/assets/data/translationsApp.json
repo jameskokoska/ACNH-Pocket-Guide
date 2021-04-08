@@ -4,1219 +4,1422 @@
             "English": "Home",
             "English (Europe)": "Home",
             "French": "Accueil",
-            "French (US)": "Accueil"
+            "French (US)": "Accueil",
+            "Spanish": "Inicio"
         },
         {
             "English": "Everything",
             "English (Europe)": "Everything",
             "French": "Tous les éléments",
-            "French (US)": "Tous les éléments"
+            "French (US)": "Tous les éléments",
+            "Spanish": "Todo"
         },
         {
             "English": "Creatures + Museum",
             "English (Europe)": "Creatures + Museum",
             "French": "Bébêtopédie + Musée",
-            "French (US)": "Bébêtopédie + Musée"
+            "French (US)": "Bébêtopédie + Musée",
+            "Spanish": "Criaturas + Museo"
         },
         {
             "English": "Items",
             "English (Europe)": "Items",
             "French": "Objets",
-            "French (US)": "Objets"
+            "French (US)": "Objets",
+            "Spanish": "Artículos"
         },
         {
             "English": "Songs",
             "English (Europe)": "Songs",
             "French": "Chansons",
-            "French (US)": "Chansons"
+            "French (US)": "Chansons",
+            "Spanish": "Canciones"
         },
         {
             "English": "Emoticons",
             "English (Europe)": "Emoticons",
             "French": "Mimiques",
-            "French (US)": "Mimiques"
+            "French (US)": "Mimiques",
+            "Spanish": "Emoticonos"
         },
         {
             "English": "Recipes + Tools",
             "English (Europe)": "Recipes + Tools",
             "French": "Plans + Outils",
-            "French (US)": "Plans + Outils"
+            "French (US)": "Plans + Outils",
+            "Spanish": "Recetas + Herramientas"
         },
         {
             "English": "Villagers",
             "English (Europe)": "Villagers",
             "French": "Villageois",
-            "French (US)": "Villageois"
+            "French (US)": "Villageois",
+            "Spanish": "Aldeanos"
         },
         {
             "English": "Construction",
             "English (Europe)": "Construction",
             "French": "Constructions",
-            "French (US)": "Constructions"
+            "French (US)": "Constructions",
+            "Spanish": "Construcción"
         },
         {
             "English": "Flowers",
             "English (Europe)": "Flowers",
             "French": "Fleurs",
-            "French (US)": "Fleurs"
+            "French (US)": "Fleurs",
+            "Spanish": "Flores"
         },
         {
             "English": "Letters",
             "English (Europe)": "Letters",
             "French": "Courrier",
-            "French (US)": "Courrier"
+            "French (US)": "Courrier",
+            "Spanish": "Cartas"
         },
         {
             "English": "Mystery Islands",
             "English (Europe)": "Mystery Islands",
             "French": "Iles Mystéres",
-            "French (US)": "Iles Mystéres"
+            "French (US)": "Iles Mystéres",
+            "Spanish": "Islas Misteriosas"
         },
         {
             "English": "Guide + FAQ",
             "English (Europe)": "Guide + FAQ",
             "French": "Guide + FAQ",
-            "French (US)": "Guide + FAQ"
+            "French (US)": "Guide + FAQ",
+            "Spanish": "Guía + Preguntas más frecuentes"
         },
         {
             "English": "Calendar + Events",
             "English (Europe)": "Calendar + Events",
             "French": "Calendrier + Évènements",
-            "French (US)": "Calendrier + Évènements"
+            "French (US)": "Calendrier + Évènements",
+            "Spanish": "Calendario + Eventos"
         },
         {
             "English": "Catalog Scanning",
             "English (Europe)": "Catalog Scanning",
             "French": "Scan du Catalogue",
-            "French (US)": "Scan du Catalogue"
+            "French (US)": "Scan du Catalogue",
+            "Spanish": "Escaneo de catálogos"
         },
         {
             "English": "Settings",
             "English (Europe)": "Settings",
             "French": "Réglages",
-            "French (US)": "Réglages"
+            "French (US)": "Réglages",
+            "Spanish": "Ajustes"
         },
         {
             "English": "About",
             "English (Europe)": "About",
             "French": "A propos",
-            "French (US)": "A propos"
+            "French (US)": "A propos",
+            "Spanish": "Acerca de"
         },
         {
             "English": "Events",
             "English (Europe)": "Events",
             "French": "Évènements",
-            "French (US)": "Évènements"
+            "French (US)": "Évènements",
+            "Spanish": "Eventos"
         },
         {
             "English": "Tomorrow",
             "English (Europe)": "Tomorrow",
             "French": "Demain",
-            "French (US)": "Demain"
+            "French (US)": "Demain",
+            "Spanish": "Mañana"
         },
         {
             "English": "This Week",
             "English (Europe)": "This Week",
             "French": "Cette semaine",
-            "French (US)": "Cette semaine"
+            "French (US)": "Cette semaine",
+            "Spanish": "Esta Semana"
         },
         {
             "English": "K.K. Slider",
             "English (Europe)": "K.K. Slider",
             "French": "Kéké Laglisse",
-            "French (US)": "Kéké Laglisse"
+            "French (US)": "Kéké Laglisse",
+            "Spanish": "K.K. Deslizador"
         },
         {
             "English": "Daisy Mae",
             "English (Europe)": "Daisy Mae",
             "French": "Porcelette",
-            "French (US)": "Porcelette"
+            "French (US)": "Porcelette",
+            "Spanish": "Margarita Mae"
         },
         {
             "English": "January",
             "English (Europe)": "January",
             "French": "Janvier",
-            "French (US)": "Janvier"
+            "French (US)": "Janvier",
+            "Spanish": "Enero"
         },
         {
             "English": "February",
             "English (Europe)": "February",
             "French": "Février",
-            "French (US)": "Février"
+            "French (US)": "Février",
+            "Spanish": "Febrero"
         },
         {
             "English": "March",
             "English (Europe)": "March",
             "French": "Mars",
-            "French (US)": "Mars"
+            "French (US)": "Mars",
+            "Spanish": "Marzo"
         },
         {
             "English": "April",
             "English (Europe)": "April",
             "French": "Avril",
-            "French (US)": "Avril"
+            "French (US)": "Avril",
+            "Spanish": "Abril"
         },
         {
             "English": "May",
             "English (Europe)": "May",
             "French": "Mai",
-            "French (US)": "Mai"
+            "French (US)": "Mai",
+            "Spanish": "Mayo"
         },
         {
             "English": "June",
             "English (Europe)": "June",
             "French": "Juin",
-            "French (US)": "Juin"
+            "French (US)": "Juin",
+            "Spanish": "Junio"
         },
         {
             "English": "July",
             "English (Europe)": "July",
             "French": "Juillet",
-            "French (US)": "Juillet"
+            "French (US)": "Juillet",
+            "Spanish": "Julio"
         },
         {
             "English": "August",
             "English (Europe)": "August",
             "French": "Août",
-            "French (US)": "Août"
+            "French (US)": "Août",
+            "Spanish": "Agosto"
         },
         {
             "English": "September",
             "English (Europe)": "September",
             "French": "Septembre",
-            "French (US)": "Septembre"
+            "French (US)": "Septembre",
+            "Spanish": "Septiembre"
         },
         {
             "English": "October",
             "English (Europe)": "October",
             "French": "Octobre",
-            "French (US)": "Octobre"
+            "French (US)": "Octobre",
+            "Spanish": "Octubre"
         },
         {
             "English": "November",
             "English (Europe)": "November",
             "French": "Novembre",
-            "French (US)": "Novembre"
+            "French (US)": "Novembre",
+            "Spanish": "Noviembre"
         },
         {
             "English": "December",
             "English (Europe)": "December",
             "French": "Décembre",
-            "French (US)": "Décembre"
+            "French (US)": "Décembre",
+            "Spanish": "Diciembre"
         },
         {
             "English": "Jan",
             "English (Europe)": "Jan",
             "French": "Jan",
-            "French (US)": "Jan"
+            "French (US)": "Jan",
+            "Spanish": "Ene"
         },
         {
             "English": "Feb",
             "English (Europe)": "Feb",
             "French": "Fev",
-            "French (US)": "Fev"
+            "French (US)": "Fev",
+            "Spanish": "Feb"
         },
         {
             "English": "Mar",
             "English (Europe)": "Mar",
             "French": "Mar",
-            "French (US)": "Mar"
+            "French (US)": "Mar",
+            "Spanish": "Mar"
         },
         {
             "English": "Apr",
             "English (Europe)": "Apr",
             "French": "Avr",
-            "French (US)": "Avr"
+            "French (US)": "Avr",
+            "Spanish": "Abr"
         },
         {
             "English": "May",
             "English (Europe)": "May",
             "French": "Mai",
-            "French (US)": "Mai"
+            "French (US)": "Mai",
+            "Spanish": "May"
         },
         {
             "English": "Jun",
             "English (Europe)": "Jun",
             "French": "Jui",
-            "French (US)": "Jui"
+            "French (US)": "Jui",
+            "Spanish": "Jun"
         },
         {
             "English": "Jul",
             "English (Europe)": "Jul",
             "French": "Juil",
-            "French (US)": "Juil"
+            "French (US)": "Juil",
+            "Spanish": "Jul"
         },
         {
             "English": "Aug",
             "English (Europe)": "Aug",
             "French": "Aoû",
-            "French (US)": "Aoû"
+            "French (US)": "Aoû",
+            "Spanish": "Ago"
         },
         {
             "English": "Sep",
             "English (Europe)": "Sep",
             "French": "Sep",
-            "French (US)": "Sep"
+            "French (US)": "Sep",
+            "Spanish": "Sep"
         },
         {
             "English": "Oct",
             "English (Europe)": "Oct",
             "French": "Oct",
-            "French (US)": "Oct"
+            "French (US)": "Oct",
+            "Spanish": "Oct"
         },
         {
             "English": "Nov",
             "English (Europe)": "Nov",
             "French": "Nov",
-            "French (US)": "Nov"
+            "French (US)": "Nov",
+            "Spanish": "Nov"
         },
         {
             "English": "Dec",
             "English (Europe)": "Dec",
             "French": "Dec",
-            "French (US)": "Dec"
+            "French (US)": "Dec",
+            "Spanish": "Dic"
         },
         {
             "English": "Mon",
             "English (Europe)": "Mon",
             "French": "Lun",
-            "French (US)": "Lun"
+            "French (US)": "Lun",
+            "Spanish": "Lun"
         },
         {
             "English": "Tues",
             "English (Europe)": "Tues",
             "French": "Mar",
-            "French (US)": "Mar"
+            "French (US)": "Mar",
+            "Spanish": "Mart"
         },
         {
             "English": "Tue",
             "English (Europe)": "Tue",
             "French": "Mar",
-            "French (US)": "Mar"
+            "French (US)": "Mar",
+            "Spanish": "Mar"
         },
         {
             "English": "Wed",
             "English (Europe)": "Wed",
             "French": "Mer",
-            "French (US)": "Mer"
+            "French (US)": "Mer",
+            "Spanish": "Mie"
         },
         {
             "English": "Thurs",
             "English (Europe)": "Thurs",
             "French": "Jeu",
-            "French (US)": "Jeu"
+            "French (US)": "Jeu",
+            "Spanish": "Juev"
         },
         {
             "English": "Thu",
             "English (Europe)": "Thu",
             "French": "Jeu",
-            "French (US)": "Jeu"
+            "French (US)": "Jeu",
+            "Spanish": "Jue"
         },
         {
             "English": "Fri",
             "English (Europe)": "Fri",
             "French": "Ven",
-            "French (US)": "Ven"
+            "French (US)": "Ven",
+            "Spanish": "Vier"
         },
         {
             "English": "Sat",
             "English (Europe)": "Sat",
             "French": "Sam",
-            "French (US)": "Sam"
+            "French (US)": "Sam",
+            "Spanish": "Sáb"
         },
         {
             "English": "Sun",
             "English (Europe)": "Sun",
             "French": "Dim",
-            "French (US)": "Dim"
+            "French (US)": "Dim",
+            "Spanish": "Dom"
         },
         {
             "English": "AM",
             "English (Europe)": "AM",
             "French": "AM",
-            "French (US)": "AM"
+            "French (US)": "AM",
+            "Spanish": "AM"
         },
         {
             "English": "PM",
             "English (Europe)": "PM",
             "French": "PM",
-            "French (US)": "PM"
+            "French (US)": "PM",
+            "Spanish": "PM"
         },
         {
             "English": "To-Do",
             "English (Europe)": "To-Do",
             "French": "A faire",
-            "French (US)": "A faire"
+            "French (US)": "A faire",
+            "Spanish": "Que Hacer"
         },
         {
             "English": "Uncheck All",
             "English (Europe)": "Uncheck All",
             "French": "Déselectionner tout",
-            "French (US)": "Déselectionner tout"
+            "French (US)": "Déselectionner tout",
+            "Spanish": "Desmarcar Todo"
         },
         {
             "English": "Edit List",
             "English (Europe)": "Edit List",
             "French": "Editer la liste",
-            "French (US)": "Editer la liste"
+            "French (US)": "Editer la liste",
+            "Spanish": "Editar lista"
         },
         {
             "English": "Disable Edit List",
             "English (Europe)": "Disable Edit List",
             "French": "Arrêter l'édition",
-            "French (US)": "Arrêter l'édition"
+            "French (US)": "Arrêter l'édition",
+            "Spanish": "Deshabilitar la lista de edición"
         },
         {
             "English": "Show Turnip Log",
             "English (Europe)": "Show Turnip Log",
             "French": "Afficher le Journal des Navets",
-            "French (US)": "Afficher le Journal des Navets"
+            "French (US)": "Afficher le Journal des Navets",
+            "Spanish": "Mostrar Registro de Nabo"
         },
         {
             "English": "Add Task",
             "English (Europe)": "Add Task",
             "French": "Ajouter une Tâche",
-            "French (US)": "Ajouter une Tâche"
+            "French (US)": "Ajouter une Tâche",
+            "Spanish": "Agregar Tarea"
         },
         {
             "English": "Task Name",
             "English (Europe)": "Task Name",
             "French": "Nom de la tâche",
-            "French (US)": "Nom de la tâche"
+            "French (US)": "Nom de la tâche",
+            "Spanish": "Nombre de la tarea"
         },
         {
             "English": "Small Task",
             "English (Europe)": "Small Task",
             "French": "Petit format",
-            "French (US)": "Petit format"
+            "French (US)": "Petit format",
+            "Spanish": "Pequeña tarea"
         },
         {
             "English": "Turnip Log",
             "English (Europe)": "Turnip Log",
             "French": "Journal des Navets",
-            "French (US)": "Journal des Navets"
+            "French (US)": "Journal des Navets",
+            "Spanish": "Registro de nabo"
         },
         {
             "English": "Last week's pattern",
             "English (Europe)": "Last week's pattern",
             "French": "Modèle de la semaine dernière",
-            "French (US)": "Modèle de la semaine dernière"
+            "French (US)": "Modèle de la semaine dernière",
+            "Spanish": "Modelo de la Semana Pasada"
         },
         {
             "English": "Unknown",
             "English (Europe)": "Unknown",
             "French": "Inconnu",
-            "French (US)": "Inconnu"
+            "French (US)": "Inconnu",
+            "Spanish": "Desconocido"
         },
         {
             "English": "Fluctuating",
             "English (Europe)": "Fluctuating",
             "French": "Fluctuant",
-            "French (US)": "Fluctuant"
+            "French (US)": "Fluctuant",
+            "Spanish": "Fluctuante"
         },
         {
             "English": "Small spike",
             "English (Europe)": "Small spike",
             "French": "Petit pic",
-            "French (US)": "Petit pic"
+            "French (US)": "Petit pic",
+            "Spanish": "Punta Pequeña"
         },
         {
             "English": "Large spike",
             "English (Europe)": "Large spike",
             "French": "Grand pic",
-            "French (US)": "Grand pic"
+            "French (US)": "Grand pic",
+            "Spanish": "Punta Larga"
         },
         {
             "English": "Decreasing",
             "English (Europe)": "Decreasing",
             "French": "Décroissant",
-            "French (US)": "Décroissant"
+            "French (US)": "Décroissant",
+            "Spanish": "Decreciente"
         },
         {
             "English": "First time buyer?",
             "English (Europe)": "First time buyer?",
             "French": "Premier achat?",
-            "French (US)": "Premier achat?"
+            "French (US)": "Premier achat?",
+            "Spanish": "Comprador de Primera Vez?"
         },
         {
             "English": "Yes",
             "English (Europe)": "Yes",
             "French": "Oui",
-            "French (US)": "Oui"
+            "French (US)": "Oui",
+            "Spanish": "Si"
         },
         {
             "English": "No",
             "English (Europe)": "No",
             "French": "Non",
-            "French (US)": "Non"
+            "French (US)": "Non",
+            "Spanish": "No"
         },
         {
             "English": "Purchase",
             "English (Europe)": "Purchase",
             "French": "Achat",
-            "French (US)": "Achat"
+            "French (US)": "Achat",
+            "Spanish": "Compra"
         },
         {
             "English": "Sunday Price",
             "English (Europe)": "Sunday Price",
             "French": "Prix d'achat",
-            "French (US)": "Prix d'achat"
+            "French (US)": "Prix d'achat",
+            "Spanish": "Precio del domingo"
         },
         {
             "English": "Monday",
             "English (Europe)": "Monday",
             "French": "Lundi",
-            "French (US)": "Lundi"
+            "French (US)": "Lundi",
+            "Spanish": "Lunes"
         },
         {
             "English": "Tuesday",
             "English (Europe)": "Tuesday",
             "French": "Mardi",
-            "French (US)": "Mardi"
+            "French (US)": "Mardi",
+            "Spanish": "Martes"
         },
         {
             "English": "Wednesday",
             "English (Europe)": "Wednesday",
             "French": "Mercredi",
-            "French (US)": "Mercredi"
+            "French (US)": "Mercredi",
+            "Spanish": "Miércoles"
         },
         {
             "English": "Thursday",
             "English (Europe)": "Thursday",
             "French": "Jeudi",
-            "French (US)": "Jeudi"
+            "French (US)": "Jeudi",
+            "Spanish": "Jueves"
         },
         {
             "English": "Friday",
             "English (Europe)": "Friday",
             "French": "Vendredi",
-            "French (US)": "Vendredi"
+            "French (US)": "Vendredi",
+            "Spanish": "Viernes"
         },
         {
             "English": "Saturday",
             "English (Europe)": "Saturday",
             "French": "Samedi",
-            "French (US)": "Samedi"
+            "French (US)": "Samedi",
+            "Spanish": "Sábado"
         },
         {
             "English": "View on turnipprophet.io",
             "English (Europe)": "View on turnipprophet.io",
             "French": "Voir sur turnipprophet.io",
-            "French (US)": "Voir sur turnipprophet.io"
+            "French (US)": "Voir sur turnipprophet.io",
+            "Spanish": "Ver en turnipprophet.io"
         },
         {
             "English": "Hide Turnip Log",
             "English (Europe)": "Hide Turnip Log",
             "French": "Masquer le Journal des Navets",
-            "French (US)": "Masquer le Journal des Navets"
+            "French (US)": "Masquer le Journal des Navets",
+            "Spanish": "Esconder registro de nabo"
         },
         {
             "English": "Collection",
             "English (Europe)": "Collection",
             "French": "Collection",
-            "French (US)": "Collection"
+            "French (US)": "Collection",
+            "Spanish": "Colección"
         },
         {
             "English": "Fish",
             "English (Europe)": "Fish",
             "French": "Poissons",
-            "French (US)": "Poissons"
+            "French (US)": "Poissons",
+            "Spanish": "Pez"
         },
         {
             "English": "Sea Creatures",
             "English (Europe)": "Sea Creatures",
             "French": "Créatures Marines",
-            "French (US)": "Créatures Marines"
+            "French (US)": "Créatures Marines",
+            "Spanish": "Ciaturas Marinas"
         },
         {
             "English": "Bugs",
             "English (Europe)": "Bugs",
             "French": "Insectes",
-            "French (US)": "Insectes"
+            "French (US)": "Insectes",
+            "Spanish": "Insectos e Bichos"
         },
         {
             "English": "Fossils",
             "English (Europe)": "Fossils",
             "French": "Fossiles",
-            "French (US)": "Fossiles"
+            "French (US)": "Fossiles",
+            "Spanish": "Fósiles"
         },
         {
             "English": "Art",
             "English (Europe)": "Art",
             "French": "Art",
-            "French (US)": "Art"
+            "French (US)": "Art",
+            "Spanish": "Arte"
         },
         {
             "English": "Songs",
             "English (Europe)": "Songs",
             "French": "Chansons",
-            "French (US)": "Chansons"
+            "French (US)": "Chansons",
+            "Spanish": "Canciones"
         },
         {
             "English": "Emotes",
             "English (Europe)": "Emotes",
             "French": "Mimiques",
-            "French (US)": "Mimiques"
+            "French (US)": "Mimiques",
+            "Spanish": "Emote"
         },
         {
             "English": "Profile",
             "English (Europe)": "Profile",
             "French": "Profil",
-            "French (US)": "Profil"
+            "French (US)": "Profil",
+            "Spanish": "Perfil"
         },
         {
             "English": "Name",
             "English (Europe)": "Name",
             "French": "Nom",
-            "French (US)": "Nom"
+            "French (US)": "Nom",
+            "Spanish": "Nombre"
         },
         {
             "English": "of Island",
             "English (Europe)": "of Island",
             "French": "de l'île",
-            "French (US)": "de l'île"
+            "French (US)": "de l'île",
+            "Spanish": "de la isla"
         },
         {
             "English": "Island",
             "English (Europe)": "Island",
             "French": "l'île",
-            "French (US)": "l'île"
+            "French (US)": "l'île",
+            "Spanish": "Isla"
         },
         {
             "English": "Northern Hemisphere",
             "English (Europe)": "Northern Hemisphere",
             "French": "Hémisphère Nord",
-            "French (US)": "Hémisphère Nord"
+            "French (US)": "Hémisphère Nord",
+            "Spanish": "Hemisferio norte"
         },
         {
             "English": "Southern Hemisphere",
             "English (Europe)": "Southern Hemisphere",
             "French": "Hémisphère Sud",
-            "French (US)": "Hémisphère Sud"
+            "French (US)": "Hémisphère Sud",
+            "Spanish": "Hemisferio sur"
         },
         {
             "English": "You have no villagers added",
             "English (Europe)": "You have no villagers added",
             "French": "Vous n'avez aucun villageois ajoutés",
-            "French (US)": "Vous n'avez aucun villageois ajoutés"
+            "French (US)": "Vous n'avez aucun villageois ajoutés",
+            "Spanish": "No has añadido aldeanos"
         },
         {
             "English": "Tap here and go add some",
             "English (Europe)": "Tap here and go add some",
             "French": "Appuie ici et ajoutes-en",
-            "French (US)": "Appuie ici et ajoutes-en"
+            "French (US)": "Appuie ici et ajoutes-en",
+            "Spanish": "Pulsa Aqui y Agrega Algunos"
         },
         {
             "English": "Store Hours",
             "English (Europe)": "Store Hours",
             "French": "Horaires des Boutiques",
-            "French (US)": "Horaires des Boutiques"
+            "French (US)": "Horaires des Boutiques",
+            "Spanish": "Horario de la tienda"
         },
         {
             "English": "Nook's Cranny",
             "English (Europe)": "Nook's Cranny",
             "French": "Boutique Nook",
-            "French (US)": "Boutique Nook"
+            "French (US)": "Boutique Nook",
+            "Spanish": "MiniNook"
         },
         {
             "English": "Able Sisters",
             "English (Europe)": "Able Sisters",
             "French": "Soeurs Doigts de Fée",
-            "French (US)": "Soeurs Doigts de Fée"
+            "French (US)": "Soeurs Doigts de Fée",
+            "Spanish": "Hermanitas Manitas"
         },
         {
             "English": "Active Creatures",
             "English (Europe)": "Active Creatures",
             "French": "Créatures Actives",
-            "French (US)": "Créatures Actives"
+            "French (US)": "Créatures Actives",
+            "Spanish": "Criaturas Activas"
         },
         {
             "English": "Creatures that can currently be caught",
             "English (Europe)": "Creatures that can currently be caught",
             "French": "Créatures actuellement capturables",
-            "French (US)": "Créatures actuellement capturables"
+            "French (US)": "Créatures actuellement capturables",
+            "Spanish": "Criaturas que actualmente se pueden capturar"
         },
         {
             "English": "Set Filters",
             "English (Europe)": "Set Filters",
             "French": "Définir un filtre",
-            "French (US)": "Définir un filtre"
+            "French (US)": "Définir un filtre",
+            "Spanish": "Definir Filtros"
         },
         {
             "English": "Search",
             "English (Europe)": "Search",
             "French": "Rechercher",
-            "French (US)": "Rechercher"
+            "French (US)": "Rechercher",
+            "Spanish": "Buscar"
         },
         {
             "English": "Clear Filters",
             "English (Europe)": "Clear Filters",
             "French": "Supprimer tous les filtres",
-            "French (US)": "Supprimer tous les filtres"
+            "French (US)": "Supprimer tous les filtres",
+            "Spanish": "Despejar Filtros"
         },
         {
             "English": "Select filter...",
             "English (Europe)": "Select filter...",
             "French": "Sélectionner un filtre",
-            "French (US)": "Sélectionner un filtre"
+            "French (US)": "Sélectionner un filtre",
+            "Spanish": "Seleccionar Filtros"
         },
         {
             "English": "Collected",
             "English (Europe)": "Collected",
             "French": "Collecté",
-            "French (US)": "Collecté"
+            "French (US)": "Collecté",
+            "Spanish": "Coleccionado"
         },
         {
             "English": "Not Collected",
             "English (Europe)": "Not Collected",
             "French": "Non Collecté",
-            "French (US)": "Non Collecté"
+            "French (US)": "Non Collecté",
+            "Spanish": "No Coleccionado"
         },
         {
             "English": "Fish",
             "English (Europe)": "Fish",
             "French": "Poissons",
-            "French (US)": "Poissons"
+            "French (US)": "Poissons",
+            "Spanish": "Pez"
         },
         {
             "English": "Bugs",
             "English (Europe)": "Bugs",
             "French": "Insectes",
-            "French (US)": "Insectes"
+            "French (US)": "Insectes",
+            "Spanish": "Insectos e Bichos"
         },
         {
             "English": "Sea",
             "English (Europe)": "Sea",
             "French": "Mer",
-            "French (US)": "Mer"
+            "French (US)": "Mer",
+            "Spanish": "Mar"
         },
         {
             "English": "Sea Creatures",
             "English (Europe)": "Sea Creatures",
             "French": "Créatures Marines",
-            "French (US)": "Créatures Marines"
+            "French (US)": "Créatures Marines",
+            "Spanish": "Criaturas Marinas"
         },
         {
             "English": "Fossils",
             "English (Europe)": "Fossils",
             "French": "Fossiles",
-            "French (US)": "Fossiles"
+            "French (US)": "Fossiles",
+            "Spanish": "Fósiles"
         },
         {
             "English": "Art",
             "English (Europe)": "Art",
             "French": "Art",
-            "French (US)": "Art"
+            "French (US)": "Art",
+            "Spanish": "Arte"
         },
         {
             "English": "Songs",
             "English (Europe)": "Songs",
             "French": "Chansons",
-            "French (US)": "Chansons"
+            "French (US)": "Chansons",
+            "Spanish": "Canciones"
         },
         {
             "English": "Music",
             "English (Europe)": "Music",
             "French": "Musiques",
-            "French (US)": "Musiques"
+            "French (US)": "Musiques",
+            "Spanish": "Música"
         },
         {
             "English": "Recipes",
             "English (Europe)": "Recipes",
             "French": "Plans",
-            "French (US)": "Plans"
+            "French (US)": "Plans",
+            "Spanish": "Recetas"
         },
         {
             "English": "Tools",
             "English (Europe)": "Tools",
             "French": "Outils",
-            "French (US)": "Outils"
+            "French (US)": "Outils",
+            "Spanish": "Herramientas"
         },
         {
             "English": "Furniture",
             "English (Europe)": "Furniture",
             "French": "Meubles",
-            "French (US)": "Meubles"
+            "French (US)": "Meubles",
+            "Spanish": "Muebles"
         },
         {
             "English": "Clothing",
             "English (Europe)": "Clothing",
             "French": "Vêtements",
-            "French (US)": "Vêtements"
+            "French (US)": "Vêtements",
+            "Spanish": "Ropa"
         },
         {
             "English": "Floor & Walls",
             "English (Europe)": "Floor & Walls",
             "French": "Sol & Murs",
-            "French (US)": "Sol & Murs"
+            "French (US)": "Sol & Murs",
+            "Spanish": "Pisos & Paredes"
         },
         {
             "English": "Misc. Materials",
             "English (Europe)": "Misc. Materials",
             "French": "Matériaux",
-            "French (US)": "Matériaux"
+            "French (US)": "Matériaux",
+            "Spanish": "Materiales Misceláneos"
         },
         {
             "English": "Materials",
             "English (Europe)": "Materials",
             "French": "Matériaux",
-            "French (US)": "Matériaux"
+            "French (US)": "Matériaux",
+            "Spanish": "Materiales"
         },
         {
             "English": "Hybrid",
             "English (Europe)": "Hybrid",
             "French": "Hybrides",
-            "French (US)": "Hybrides"
+            "French (US)": "Hybrides",
+            "Spanish": "Hibrido"
         },
         {
             "English": "Roses",
             "English (Europe)": "Roses",
             "French": "Roses",
-            "French (US)": "Roses"
+            "French (US)": "Roses",
+            "Spanish": "Rosas"
         },
         {
             "English": "Pansies",
             "English (Europe)": "Pansies",
             "French": "Pensées",
-            "French (US)": "Pensées"
+            "French (US)": "Pensées",
+            "Spanish": "Flores de Pensamiento"
         },
         {
             "English": "Windflowers",
             "English (Europe)": "Windflowers",
             "French": "Anémones",
-            "French (US)": "Anémones"
+            "French (US)": "Anémones",
+            "Spanish": "Flores del Viento"
         },
         {
             "English": "Hyacinths",
             "English (Europe)": "Hyacinths",
             "French": "Jacinthes",
-            "French (US)": "Jacinthes"
+            "French (US)": "Jacinthes",
+            "Spanish": "Jacintos"
         },
         {
             "English": "Lillies",
             "English (Europe)": "Lillies",
             "French": "Lys",
-            "French (US)": "Lys"
+            "French (US)": "Lys",
+            "Spanish": "Azucenas"
         },
         {
             "English": "Cosmos",
             "English (Europe)": "Cosmos",
             "French": "Cosmos",
-            "French (US)": "Cosmos"
+            "French (US)": "Cosmos",
+            "Spanish": "Cosmos"
         },
         {
             "English": "Mums",
             "English (Europe)": "Mums",
             "French": "Chrysanthèmes",
-            "French (US)": "Chrysanthèmes"
+            "French (US)": "Chrysanthèmes",
+            "Spanish": "Crisantemos"
         },
         {
             "English": "Tulips",
             "English (Europe)": "Tulips",
             "French": "Tulipes",
-            "French (US)": "Tulipes"
+            "French (US)": "Tulipes",
+            "Spanish": "Tullipanes"
         },
         {
             "English": "Note: long press to check off the island as visited",
             "English (Europe)": "Note: long press to check off the island as visited",
             "French": "Note : Appui long pour cocher l'île comme visitée",
-            "French (US)": "Note : Appui long pour cocher l'île comme visitée"
+            "French (US)": "Note : Appui long pour cocher l'île comme visitée",
+            "Spanish": "Nota: Mantenga Pulsado Para Marcar La Isla Como Visitada"
         },
         {
             "English": "Tap each for more details",
             "English (Europe)": "Tap each for more details",
             "French": "Appuyer sur chacun pour plus de détails",
-            "French (US)": "Appuyer sur chacun pour plus de détails"
+            "French (US)": "Appuyer sur chacun pour plus de détails",
+            "Spanish": "Pulsa Cada Uno Para Más Detalles"
         },
         {
             "English": "s Birthday",
             "English (Europe)": "s Birthday",
             "French": "Anniversaire de (villager's name)",
-            "French (US)": "Anniversaire de (villager's name)"
+            "French (US)": "Anniversaire de (villager's name)",
+            "Spanish": "Cumpleaños de (Villager's Name)"
         },
         {
             "English": "View Today",
             "English (Europe)": "View Today",
             "French": "Aujourd'hui",
-            "French (US)": "Aujourd'hui"
+            "French (US)": "Aujourd'hui",
+            "Spanish": "Ver Hoy"
         },
         {
             "English": "Open Calendar",
             "English (Europe)": "Open Calendar",
             "French": "Ouvrir le Calendrier",
-            "French (US)": "Ouvrir le Calendrier"
+            "French (US)": "Ouvrir le Calendrier",
+            "Spanish": "Abrir el Calendario"
         },
         {
             "English": "View All",
             "English (Europe)": "View All",
             "French": "Voir Tout",
-            "French (US)": "Voir Tout"
+            "French (US)": "Voir Tout",
+            "Spanish": "Ver Todo"
         },
         {
             "English": "Catalog Import",
             "English (Europe)": "Catalog Import",
             "French": "Importation du Catalogue",
-            "French (US)": "Importation du Catalogue"
+            "French (US)": "Importation du Catalogue",
+            "Spanish": "Importar Catalogo"
         },
         {
             "English": "Importing...",
             "English (Europe)": "Importing...",
             "French": "Importation en cours...",
-            "French (US)": "Importation en cours..."
+            "French (US)": "Importation en cours...",
+            "Spanish": "Importando..."
         },
         {
             "English": "Please wait",
             "English (Europe)": "Please wait",
             "French": "Veuillez patienter",
-            "French (US)": "Veuillez patienter"
+            "French (US)": "Veuillez patienter",
+            "Spanish": "Porfavor Espere"
         },
         {
             "English": "Visit",
             "English (Europe)": "Visit",
             "French": "Visite",
-            "French (US)": "Visite"
+            "French (US)": "Visite",
+            "Spanish": "Visitar"
         },
         {
             "English": "for more information",
             "English (Europe)": "for more information",
             "French": "pour plus d'informations",
-            "French (US)": "pour plus d'informations"
+            "French (US)": "pour plus d'informations",
+            "Spanish": "Para Más Informacion"
         },
         {
             "English": "Paste nook.lol link and Import",
             "English (Europe)": "Paste nook.lol link and Import",
             "French": "Coller le lien nook.lol et importer",
-            "French (US)": "Coller le lien nook.lol et importer"
+            "French (US)": "Coller le lien nook.lol et importer",
+            "Spanish": "Pegue el Enlace de nook.lol e Importar"
         },
         {
             "English": "or...",
             "English (Europe)": "or...",
             "French": "ou...",
-            "French (US)": "ou..."
+            "French (US)": "ou...",
+            "Spanish": "o..."
         },
         {
             "English": "Paste results here and Import",
             "English (Europe)": "Paste results here and Import",
             "French": "Coller les résultats ici et importer",
-            "French (US)": "Coller les résultats ici et importer"
+            "French (US)": "Coller les résultats ici et importer",
+            "Spanish": "Pegue los Resultados Aquí e Importar"
         },
         {
             "English": "May take a few seconds to complete.",
             "English (Europe)": "May take a few seconds to complete.",
             "French": "Cela peut prendre quelques secondes.",
-            "French (US)": "Cela peut prendre quelques secondes."
+            "French (US)": "Cela peut prendre quelques secondes.",
+            "Spanish": "Puede Tomar Unos Segundos Para Terminar"
         },
         {
             "English": "Please be patient.",
             "English (Europe)": "Please be patient.",
             "French": "Merci de patienter.",
-            "French (US)": "Merci de patienter."
+            "French (US)": "Merci de patienter.",
+            "Spanish": "Por favor sea paciente."
         },
         {
             "English": "Import Results",
             "English (Europe)": "Import Results",
             "French": "Importer les Résultats",
-            "French (US)": "Importer les Résultats"
+            "French (US)": "Importer les Résultats",
+            "Spanish": "Importar Resultados"
         },
         {
             "English": "Attempted:",
             "English (Europe)": "Attempted:",
             "French": "Tenté(s):",
-            "French (US)": "Tenté(s):"
+            "French (US)": "Tenté(s):",
+            "Spanish": "Intentó:"
         },
         {
             "English": "Using nook.lol link to import data",
             "English (Europe)": "Using nook.lol link to import data",
             "French": "Utilisation du lien nook.lol pour importer des données",
-            "French (US)": "Utilisation du lien nook.lol pour importer des données"
+            "French (US)": "Utilisation du lien nook.lol pour importer des données",
+            "Spanish": "Usando el enlace nook.lol para importar datos"
         },
         {
             "English": "(First option)",
             "English (Europe)": "(First option)",
             "French": "(Première option)",
-            "French (US)": "(Première option)"
+            "French (US)": "(Première option)",
+            "Spanish": "(Primera opción)"
         },
         {
             "English": "There was an error, please check the link and try again...",
             "English (Europe)": "There was an error, please check the link and try again...",
             "French": "Il y a eu une erreur, merci de vérifier le lien et de réessayer...",
-            "French (US)": "Il y a eu une erreur, merci de vérifier le lien et de réessayer..."
+            "French (US)": "Il y a eu une erreur, merci de vérifier le lien et de réessayer...",
+            "Spanish": "Hubo un error, verifique el enlace y vuelva a intentarlo..."
         },
         {
             "English": "Imported:",
             "English (Europe)": "Imported:",
             "French": "Importé(s):",
-            "French (US)": "Importé(s):"
+            "French (US)": "Importé(s):",
+            "Spanish": "Importado:"
         },
         {
             "English": "Errors:",
             "English (Europe)": "Errors:",
             "French": "Erreurs:",
-            "French (US)": "Erreurs:"
+            "French (US)": "Erreurs:",
+            "Spanish": "Errores:"
         },
         {
             "English": "items",
             "English (Europe)": "items",
             "French": "objets",
-            "French (US)": "objets"
+            "French (US)": "objets",
+            "Spanish": "Objetos"
         },
         {
             "English": "Using list of results to import data",
             "English (Europe)": "Using list of results to import data",
             "French": "Utilisation de la liste des résultats pour importer les données.",
-            "French (US)": "Utilisation de la liste des résultats pour importer les données."
+            "French (US)": "Utilisation de la liste des résultats pour importer les données.",
+            "Spanish": "Usando la lista de resultados para importar datos"
         },
         {
             "English": "(Second option)",
             "English (Europe)": "(Second option)",
             "French": "(Deuxième option)",
-            "French (US)": "(Deuxième option)"
+            "French (US)": "(Deuxième option)",
+            "Spanish": "(Segunda opción)"
         },
         {
             "English": "Export Results",
             "English (Europe)": "Export Results",
             "French": "Exporter les Résultats",
-            "French (US)": "Exporter les Résultats"
+            "French (US)": "Exporter les Résultats",
+            "Spanish": "Exportar Resultados"
         },
         {
             "English": "File exported to Downloads folder ACNHPocketGuideData.txt",
             "English (Europe)": "File exported to Downloads folder ACNHPocketGuideData.txt",
             "French": "Fichier exporté vers le dossier des Téléchargements ACNHPocketGuideData.txt",
-            "French (US)": "Fichier exporté vers le dossier des Téléchargements ACNHPocketGuideData.txt"
+            "French (US)": "Fichier exporté vers le dossier des Téléchargements ACNHPocketGuideData.txt",
+            "Spanish": "Archivo exportado a la carpeta de descargas ACNHPocketGuideData.txt "
         },
         {
             "English": "Import File",
             "English (Europe)": "Import File",
             "French": "Importer le Fichier",
-            "French (US)": "Importer le Fichier"
+            "French (US)": "Importer le Fichier",
+            "Spanish": "Importar Archivo"
         },
         {
             "English": "Please import ACNHPocketGuideData.txt from the downloads folder.",
             "English (Europe)": "Please import ACNHPocketGuideData.txt from the downloads folder.",
             "French": "Merci d'importer ACNHPocketGuideData.txt depuis le dossier des téléchargements",
-            "French (US)": "Merci d'importer ACNHPocketGuideData.txt depuis le dossier des téléchargements"
+            "French (US)": "Merci d'importer ACNHPocketGuideData.txt depuis le dossier des téléchargements",
+            "Spanish": "Por favor importe ACNHPocketGuideData.txt desde la carpeta de descargas."
         },
         {
             "English": "Import Results",
             "English (Europe)": "Import Results",
             "French": "Importer les Résultats",
-            "French (US)": "Importer les Résultats"
+            "French (US)": "Importer les Résultats",
+            "Spanish": "Importar resultados"
         },
         {
             "English": "Import",
             "English (Europe)": "Import",
             "French": "Importer",
-            "French (US)": "Importer"
+            "French (US)": "Importer",
+            "Spanish": "Importar"
         },
         {
             "English": "entries.",
             "English (Europe)": "entries.",
             "French": "entrées.",
-            "French (US)": "entrées."
+            "French (US)": "entrées.",
+            "Spanish": "Entradas."
         },
         {
             "English": "Note: If this has imported 0 entries, please double check you have chosen the correct file.",
             "English (Europe)": "Note: If this has imported 0 entries, please double check you have chosen the correct file.",
             "French": "Note: Si cela n'a importé aucune entrée, merci de reverifier que vous avez bien choisi le bon fichier.",
-            "French (US)": "Note: Si cela n'a importé aucune entrée, merci de reverifier que vous avez bien choisi le bon fichier."
+            "French (US)": "Note: Si cela n'a importé aucune entrée, merci de reverifier que vous avez bien choisi le bon fichier.",
+            "Spanish": "Nota: Si se importo 0 entradas, por favor debe verificar que haya elegido el archivo correcto."
         },
         {
             "English": "Cleared Set Filters",
             "English (Europe)": "Cleared Set Filters",
             "French": "Filtres supprimés",
-            "French (US)": "Filtres supprimés"
+            "French (US)": "Filtres supprimés",
+            "Spanish": "Despejar filtros seleccionados"
         },
         {
             "English": "All the filters selected have been unset",
             "English (Europe)": "All the filters selected have been unset",
             "French": "Tous les filtres sélectionnés ont été supprimés",
-            "French (US)": "Tous les filtres sélectionnés ont été supprimés"
+            "French (US)": "Tous les filtres sélectionnés ont été supprimés",
+            "Spanish": "Todos los filtros seleccionados han sido desarmados"
         },
         {
             "English": "Would you like to reset your collection? This action cannot be undone.",
             "English (Europe)": "Would you like to reset your collection? This action cannot be undone.",
             "French": "Voulez-vous réinitialiser votre collection ? Cette action ne peut pas être annulée",
-            "French (US)": "Voulez-vous réinitialiser votre collection ? Cette action ne peut pas être annulée"
+            "French (US)": "Voulez-vous réinitialiser votre collection ? Cette action ne peut pas être annulée",
+            "Spanish": "¿Quieres restablecer tu colección? Esta acción no se puede deshacer."
         },
         {
             "English": "Reset",
             "English (Europe)": "Reset",
             "French": "Réinitialiser",
-            "French (US)": "Réinitialiser"
+            "French (US)": "Réinitialiser",
+            "Spanish": "Reinicializar"
         },
         {
             "English": "Restart Required",
             "English (Europe)": "Restart Required",
             "French": "Redémarrage requis",
-            "French (US)": "Redémarrage requis"
+            "French (US)": "Redémarrage requis",
+            "Spanish": "Reinicio requerido"
         },
         {
             "English": "Please restart the application.",
             "English (Europe)": "Please restart the application.",
             "French": "Merci de redémarrer l'application",
-            "French (US)": "Merci de redémarrer l'application"
+            "French (US)": "Merci de redémarrer l'application",
+            "Spanish": "Por favor reinicie la aplicación."
         },
         {
             "English": "Custom Date",
             "English (Europe)": "Custom Date",
             "French": "Date personnalisée",
-            "French (US)": "Date personnalisée"
+            "French (US)": "Date personnalisée",
+            "Spanish": "Fecha personalizada"
         },
         {
             "English": "Ensure the 'Use a custom date' setting is enabled",
             "English (Europe)": "Ensure the 'Use a custom date' setting is enabled",
             "French": "Assurez-vous que le paramètre \"Utiliser une date personnalisée\" est activé",
-            "French (US)": "Assurez-vous que le paramètre \"Utiliser une date personnalisée\" est activé"
+            "French (US)": "Assurez-vous que le paramètre \"Utiliser une date personnalisée\" est activé",
+            "Spanish": "Asegúrese de que la configuración 'Usar una fecha personalizada' esté habilitada.\n"
         },
         {
             "English": "Tap each setting to learn more",
             "English (Europe)": "Tap each setting to learn more",
             "French": "Appuyer sur chacun pour en savoir plus",
-            "French (US)": "Appuyer sur chacun pour en savoir plus"
+            "French (US)": "Appuyer sur chacun pour en savoir plus",
+            "Spanish": "Pulsa cada configuración para aprender más"
         },
         {
             "English": "General",
             "English (Europe)": "General",
             "French": "Général",
-            "French (US)": "Général"
+            "French (US)": "Général",
+            "Spanish": "General"
         },
         {
             "English": "Creatures",
             "English (Europe)": "Creatures",
             "French": "Créatures",
-            "French (US)": "Créatures"
+            "French (US)": "Créatures",
+            "Spanish": "Criaturas"
         },
         {
             "English": "User interface",
             "English (Europe)": "User interface",
             "French": "Interface utilisateur",
-            "French (US)": "Interface utilisateur"
+            "French (US)": "Interface utilisateur",
+            "Spanish": "Interfaz del usuario"
         },
         {
             "English": "System",
             "English (Europe)": "System",
             "French": "Système",
-            "French (US)": "Système"
+            "French (US)": "Système",
+            "Spanish": "Sistema"
         },
         {
             "English": "Interface layout",
             "English (Europe)": "Interface layout",
             "French": "Disposition de l'interface",
-            "French (US)": "Disposition de l'interface"
+            "French (US)": "Disposition de l'interface",
+            "Spanish": "Diseño del interfaz"
         },
         {
             "English": "Custom dates",
             "English (Europe)": "Custom dates",
             "French": "Dates personnalisées",
-            "French (US)": "Dates personnalisées"
+            "French (US)": "Dates personnalisées",
+            "Spanish": "Fechas personalizadas"
         },
         {
             "English": "Set your hemisphere, north or south. This will change the data displayed for creatures and events.",
             "English (Europe)": "Set your hemisphere, north or south. This will change the data displayed for creatures and events.",
             "French": "Sélectionnez votre hémisphère, nord ou sud. Cela changera les données affichées pour les créatures et les événements.",
-            "French (US)": "Sélectionnez votre hémisphère, nord ou sud. Cela changera les données affichées pour les créatures et les événements."
+            "French (US)": "Sélectionnez votre hémisphère, nord ou sud. Cela changera les données affichées pour les créatures et les événements.",
+            "Spanish": "Configure su hemisferio, norte o sur. Esto cambiará los datos mostrados para criaturas y eventos."
         },
         {
             "English": "Show variations in lists",
             "English (Europe)": "Show variations in lists",
             "French": "Afficher les variations dans les listes",
-            "French (US)": "Afficher les variations dans les listes"
+            "French (US)": "Afficher les variations dans les listes",
+            "Spanish": "Mostrar variaciones en listas"
         },
         {
             "English": "Show the different colours/patterns of furniture and clothing items in the list.",
             "English (Europe)": "Show the different colours/patterns of furniture and clothing items in the list.",
             "French": "Montrez les différent(e)s couleurs/motifs des meubles et des vêtements dans la liste.",
-            "French (US)": "Montrez les différent(e)s couleurs/motifs des meubles et des vêtements dans la liste."
+            "French (US)": "Montrez les différent(e)s couleurs/motifs des meubles et des vêtements dans la liste.",
+            "Spanish": "Muestre los diferentes colores/diseños de muebles y articulos de vestir en la lista."
         },
         {
             "English": "List only active creatures",
             "English (Europe)": "List only active creatures",
             "French": "Liste uniquement les créatures actives",
-            "French (US)": "Liste uniquement les créatures actives"
+            "French (US)": "Liste uniquement les créatures actives",
+            "Spanish": "Listar solo criaturas activas"
         },
         {
             "English": "Only creatures that can be caught in the current month will be displayed.",
             "English (Europe)": "Only creatures that can be caught in the current month will be displayed.",
             "French": "Seules les créatures qui peuvent être capturées ce mois-ci seront affichées.",
-            "French (US)": "Seules les créatures qui peuvent être capturées ce mois-ci seront affichées."
+            "French (US)": "Seules les créatures qui peuvent être capturées ce mois-ci seront affichées.",
+            "Spanish": "Solo se mostrarán las criaturas que se pueden atrapar este mes."
         },
         {
             "English": "Last month to catch warning",
             "English (Europe)": "Last month to catch warning",
             "French": "Dernier mois pour attraper les créatures",
-            "French (US)": "Dernier mois pour attraper les créatures"
+            "French (US)": "Dernier mois pour attraper les créatures",
+            "Spanish": "Adverencia de ultimo mes para atrapar"
         },
         {
             "English": "Display a red warning background colour around creatures that won't be able to be caught in the next month.",
             "English (Europe)": "Display a red warning background colour around creatures that won't be able to be caught in the next month.",
             "French": "Affichez une couleur de fond d'avertissement rouge autour des créatures qui ne pourront pas être capturées le mois prochain.",
-            "French (US)": "Affichez une couleur de fond d'avertissement rouge autour des créatures qui ne pourront pas être capturées le mois prochain."
+            "French (US)": "Affichez une couleur de fond d'avertissement rouge autour des créatures qui ne pourront pas être capturées le mois prochain.",
+            "Spanish": "Muestre un color de fondo rojo de advertencia alrededor de las criaturas que no podrán ser atrapadas durante el próximo mes."
         },
         {
             "English": "Dark mode - follow system",
             "English (Europe)": "Dark mode - follow system",
             "French": "Mode sombre - suivre le système",
-            "French (US)": "Mode sombre - suivre le système"
+            "French (US)": "Mode sombre - suivre le système",
+            "Spanish": "Modo oscuro - seguir el sistema"
         },
         {
             "English": "Dark mode will follow system default, if your Android version does not support system dark mode, disable this and use the setting below.",
             "English (Europe)": "Dark mode will follow system default, if your Android version does not support system dark mode, disable this and use the setting below.",
             "French": "Le mode sombre suivra les paramètres par défaut du système. Si votre version d'Android ne prend pas en charge le mode sombre du système, désactivez-le et utilisez le paramètre ci-dessous.",
-            "French (US)": "Le mode sombre suivra les paramètres par défaut du système. Si votre version d'Android ne prend pas en charge le mode sombre du système, désactivez-le et utilisez le paramètre ci-dessous."
+            "French (US)": "Le mode sombre suivra les paramètres par défaut du système. Si votre version d'Android ne prend pas en charge le mode sombre du système, désactivez-le et utilisez le paramètre ci-dessous.",
+            "Spanish": "El modo oscuro seguirá el valor defecto del sistema, si su versión de android no es compatible con el modo oscuro del sistema, deshabilítelo y use la configuración a continuación.\n"
         },
         {
             "English": "Dark mode",
             "English (Europe)": "Dark mode",
             "French": "Mode sombre",
-            "French (US)": "Mode sombre"
+            "French (US)": "Mode sombre",
+            "Spanish": "Modo oscuro"
         },
         {
             "English": "Toggle dark mode, ensure auto dark mode is off to use this",
             "English (Europe)": "Toggle dark mode, ensure auto dark mode is off to use this",
             "French": "Basculez en mode sombre, assurez-vous que le mode sombre automatique est désactivé pour l'utiliser",
-            "French (US)": "Basculez en mode sombre, assurez-vous que le mode sombre automatique est désactivé pour l'utiliser"
+            "French (US)": "Basculez en mode sombre, assurez-vous que le mode sombre automatique est désactivé pour l'utiliser",
+            "Spanish": "Alternar el modo oscuro, asegúrese de que el modo oscuro automático esté desactivado para usarlo.\r\n"
         },
         {
             "English": "Colored lists",
             "English (Europe)": "Colored lists",
             "French": "Listes colorées",
-            "French (US)": "Listes colorées"
+            "French (US)": "Listes colorées",
+            "Spanish": "Listas de colores"
         },
         {
             "English": "Change the background of the list based on the color of the item",
             "English (Europe)": "Change the background of the list based on the color of the item",
             "French": "Changer l'arrière-plan de la liste en fonction de la couleur de l'élément",
-            "French (US)": "Changer l'arrière-plan de la liste en fonction de la couleur de l'élément"
+            "French (US)": "Changer l'arrière-plan de la liste en fonction de la couleur de l'élément",
+            "Spanish": "Cambie el fondo de la lista basado en el color del articulo"
         },
         {
             "English": "Use larger images in popup",
             "English (Europe)": "Use larger images in popup",
             "French": "Utilisez des images plus grandes dans la fenêtre contextuelle",
-            "French (US)": "Utilisez des images plus grandes dans la fenêtre contextuelle"
+            "French (US)": "Utilisez des images plus grandes dans la fenêtre contextuelle",
+            "Spanish": "Use imágines más grandes en la ventana emergente"
         },
         {
             "English": "Use a larger image when previewing items in their popup",
             "English (Europe)": "Use a larger image when previewing items in their popup",
             "French": "Utilisez une image plus grande lors de la prévisualisation des éléments dans leur fenêtre contextuelle",
-            "French (US)": "Utilisez une image plus grande lors de la prévisualisation des éléments dans leur fenêtre contextuelle"
+            "French (US)": "Utilisez une image plus grande lors de la prévisualisation des éléments dans leur fenêtre contextuelle",
+            "Spanish": "Use una imagen más grande al ver articulos en su ventana emergente"
         },
         {
             "English": "Back button to previous page",
             "English (Europe)": "Back button to previous page",
             "French": "Bouton retour vers la page précédente",
-            "French (US)": "Bouton retour vers la page précédente"
+            "French (US)": "Bouton retour vers la page précédente",
+            "Spanish": "Botón de retroceso a la página anterior"
         },
         {
             "English": "Use the back button to switch pages quickly. If this is off, the back button will just open the side panel.",
             "English (Europe)": "Use the back button to switch pages quickly. If this is off, the back button will just open the side panel.",
             "French": "Utilisez le bouton de retour pour changer de page rapidement. Si cette option est désactivée, le bouton de retour ouvrira simplement le panneau latéral.",
-            "French (US)": "Utilisez le bouton de retour pour changer de page rapidement. Si cette option est désactivée, le bouton de retour ouvrira simplement le panneau latéral."
+            "French (US)": "Utilisez le bouton de retour pour changer de page rapidement. Si cette option est désactivée, le bouton de retour ouvrira simplement le panneau latéral.",
+            "Spanish": "Utilice el botón de retroceso para cambiar páginas rápidamente. Si está desactivado, el botón de retroceso simplemente abrirá el panel lateral."
         },
         {
             "English": "Show notification status bar",
             "English (Europe)": "Show notification status bar",
             "French": "Afficher la barre d'état des notifications",
-            "French (US)": "Afficher la barre d'état des notifications"
+            "French (US)": "Afficher la barre d'état des notifications",
+            "Spanish": "Mostrar barra de estado de notificación"
         },
         {
             "English": "A restart may be required to see changes.",
@@ -1228,7 +1431,8 @@
             "English": "Use 24 hour clock",
             "English (Europe)": "Use 24 hour clock",
             "French": "Format 24 heures",
-            "French (US)": "Format 24 heures"
+            "French (US)": "Format 24 heures",
+            "Spanish": "Usar reloj de 24 horas"
         },
         {
             "English": "Enable a 24 hour clock instead of the standard 12 hour format.",
@@ -1288,31 +1492,36 @@
             "English": "Set Custom Date/Time",
             "English (Europe)": "Set Custom Date/Time",
             "French": "Définir une Date/Heure personnalisée",
-            "French (US)": "Définir une Date/Heure personnalisée"
+            "French (US)": "Définir une Date/Heure personnalisée",
+            "Spanish": "Establecer fecha/Hora personalizada"
         },
         {
             "English": "Data backup",
             "English (Europe)": "Data backup",
             "French": "Sauvegarde des données",
-            "French (US)": "Sauvegarde des données"
+            "French (US)": "Sauvegarde des données",
+            "Spanish": "Copias de seguridad"
         },
         {
             "English": "Export Data",
             "English (Europe)": "Export Data",
             "French": "Exporter les données",
-            "French (US)": "Exporter les données"
+            "French (US)": "Exporter les données",
+            "Spanish": "Exportar datos"
         },
         {
             "English": "Import Data",
             "English (Europe)": "Import Data",
             "French": "Importer les données",
-            "French (US)": "Importer les données"
+            "French (US)": "Importer les données",
+            "Spanish": "Importar datos"
         },
         {
             "English": "Data reset",
             "English (Europe)": "Data reset",
             "French": "Réinitialisation des données",
-            "French (US)": "Réinitialisation des données"
+            "French (US)": "Réinitialisation des données",
+            "Spanish": "Resetear datos"
         },
         {
             "English": "Clear All Set Filters",
@@ -1324,7 +1533,8 @@
             "English": "Reset Data",
             "English (Europe)": "Reset Data",
             "French": "Réinitialiser les données",
-            "French (US)": "Réinitialiser les données"
+            "French (US)": "Réinitialiser les données",
+            "Spanish": "Reiniciar datos"
         },
         {
             "English": "Suggestions, bugs or concerns?",
@@ -1336,61 +1546,71 @@
             "English": "Send me an email!",
             "English (Europe)": "Send me an email!",
             "French": "Envoyez-moi un e-mail!",
-            "French (US)": "Envoyez-moi un e-mail!"
+            "French (US)": "Envoyez-moi un e-mail!",
+            "Spanish": "¡Envíame un correo electrónico!"
         },
         {
             "English": "Credits",
             "English (Europe)": "Credits",
             "French": "Crédits",
-            "French (US)": "Crédits"
+            "French (US)": "Crédits",
+            "Spanish": "Créditos"
         },
         {
             "English": "Lead Programmer",
             "English (Europe)": "Lead Programmer",
             "French": "Programmeur principal",
-            "French (US)": "Programmeur principal"
+            "French (US)": "Programmeur principal",
+            "Spanish": "Programador principal"
         },
         {
             "English": "Lead Graphics",
             "English (Europe)": "Lead Graphics",
             "French": "Graphiste principal",
-            "French (US)": "Graphiste principal"
+            "French (US)": "Graphiste principal",
+            "Spanish": "Gráficos de plomo"
         },
         {
             "English": "Leave a rating",
             "English (Europe)": "Leave a rating",
             "French": "Laisser une note",
-            "French (US)": "Laisser une note"
+            "French (US)": "Laisser une note",
+            "Spanish": "Deja una calificación"
         },
         {
             "English": "Enjoying the app?",
             "English (Europe)": "Enjoying the app?",
             "French": "Aimez-vous l'application ?",
-            "French (US)": "Aimez-vous l'application ?"
+            "French (US)": "Aimez-vous l'application ?",
+            "Spanish": "¿Disfrutas de la aplicación?"
         },
         {
             "English": "Consider leaving a rating",
             "English (Europe)": "Consider leaving a rating",
             "French": "Pensez à nous noter",
-            "French (US)": "Pensez à nous noter"
+            "French (US)": "Pensez à nous noter",
+            "Spanish": "Considera dejar una calificación"
         },
         {
             "English": "No thanks",
             "English (Europe)": "No thanks",
             "French": "Non merci",
-            "French (US)": "Non merci"
+            "French (US)": "Non merci",
+            "Spanish": "No gracias"
         },
         {
             "English": "Sure!",
             "English (Europe)": "Sure!",
             "French": "Bien sur!",
-            "French (US)": "Bien sur!"
+            "French (US)": "Bien sur!",
+            "Spanish": "¡Por supuesto!"
         },
         {
             "English": "Welcome to ACNH Pocket Guide",
             "English (Europe)": "Welcome to ACNH Pocket Guide",
             "French": "Bienvenue sur ACNH Pocket Guide",
-            "French (US)": "Bienvenue sur ACNH Pocket Guide"
+            "French (US)": "Bienvenue sur ACNH Pocket Guide",
+            "Spanish": "Bienvenido a ACNH Pocket Guide"
         },
         {
             "English": "Track your creatures, collection, and game events",
@@ -1408,13 +1628,15 @@
             "English": "Select Language",
             "English (Europe)": "Select Language",
             "French": "Choisir la Langue",
-            "French (US)": "Choisir la Langue"
+            "French (US)": "Choisir la Langue",
+            "Spanish": "Seleccionar idioma"
         },
         {
             "English": "Game language",
             "English (Europe)": "Game language",
             "French": "Langue du jeu",
-            "French (US)": "Langue du jeu"
+            "French (US)": "Langue du jeu",
+            "Spanish": "Idioma del juego"
         },
         {
             "English": "Translations only apply to game item names only, all other app content is in English. Some items may be missing translations. If you would like to help translate this app, feel free to reach out via email. ",
@@ -1426,13 +1648,15 @@
             "English": "Turnip Prices",
             "English (Europe)": "Turnip Prices",
             "French": "Cours du navet",
-            "French (US)": "Cours du navet"
+            "French (US)": "Cours du navet",
+            "Spanish": "Precios del nabo"
         },
         {
             "English": "Water Flowers",
             "English (Europe)": "Water Flowers",
             "French": "Arroser les fleurs",
-            "French (US)": "Arroser les fleurs"
+            "French (US)": "Arroser les fleurs",
+            "Spanish": "Flores de agua"
         },
         {
             "English": "Talk To Villagers",
@@ -1450,31 +1674,36 @@
             "English": "Rock",
             "English (Europe)": "Rock",
             "French": "Rocher",
-            "French (US)": "Rocher"
+            "French (US)": "Rocher",
+            "Spanish": "Roca"
         },
         {
             "English": "bells",
             "English (Europe)": "bells",
             "French": "clochettes",
-            "French (US)": "clochettes"
+            "French (US)": "clochettes",
+            "Spanish": "Bayas"
         },
         {
             "English": "miles",
             "English (Europe)": "miles",
             "French": "miles",
-            "French (US)": "miles"
+            "French (US)": "miles",
+            "Spanish": "Millas"
         },
         {
             "English": "DIY",
             "English (Europe)": "DIY",
             "French": "Bricolage",
-            "French (US)": "Bricolage"
+            "French (US)": "Bricolage",
+            "Spanish": "DIY"
         },
         {
             "English": "Island #0",
             "English (Europe)": "Island #0",
             "French": "Île #0",
-            "French (US)": "Île #0"
+            "French (US)": "Île #0",
+            "Spanish": "Isla #0"
         },
         {
             "English": "A fairly normal island which you can get on your first tour, with one cliff, native fruit, coconuts, a river and a pond.",
@@ -1486,7 +1715,8 @@
             "English": "Island #1",
             "English (Europe)": "Island #1",
             "French": "Île #1",
-            "French (US)": "Île #1"
+            "French (US)": "Île #1",
+            "Spanish": "Isla #1"
         },
         {
             "English": "Practically the same as Island #0, but without the pond, and with a slightly bigger cliff.",
@@ -1498,7 +1728,8 @@
             "English": "Spiral Island",
             "English (Europe)": "Spiral Island",
             "French": "Île Spirale",
-            "French (US)": "Île Spirale"
+            "French (US)": "Île Spirale",
+            "Spanish": "Isla espiral"
         },
         {
             "English": "Somewhat more interesting in layout but it has nothing special about the resources you can get.",
@@ -1522,7 +1753,8 @@
             "English": "Mountain Island",
             "English (Europe)": "Mountain Island",
             "French": "Île aux Falaises",
-            "French (US)": "Île aux Falaises"
+            "French (US)": "Île aux Falaises",
+            "Spanish": "Isla montañosa"
         },
         {
             "English": "Multiple levels, no river. The base level has regular trees, the middle level has your native fruit, and the top level has five rocks with materials.",
@@ -1534,7 +1766,8 @@
             "English": "Bells Island",
             "English (Europe)": "Bells Island",
             "French": "Île aux Clochettes",
-            "French (US)": "Île aux Clochettes"
+            "French (US)": "Île aux Clochettes",
+            "Spanish": "Isla de bayas"
         },
         {
             "English": "Breaking the rock at the far north will let you vault over into the island with five money rocks on it.",
@@ -1546,7 +1779,8 @@
             "English": "Bamboo Island",
             "English (Europe)": "Bamboo Island",
             "French": "Île aux Bambous",
-            "French (US)": "Île aux Bambous"
+            "French (US)": "Île aux Bambous",
+            "Spanish": "Isla de bambú"
         },
         {
             "English": "Every tree on this island is bamboo and you can get to it at any time of year. The most common island you can get out of the 20, statistically.",
@@ -1558,7 +1792,8 @@
             "English": "Fruit Island",
             "English (Europe)": "Fruit Island",
             "French": "Île aux Fruits",
-            "French (US)": "Île aux Fruits"
+            "French (US)": "Île aux Fruits",
+            "Spanish": "Isla frutal"
         },
         {
             "English": "There are 19 fruit trees on this island and all will be your 'sister fruit'. This will be different from your native fruit - but every time you come here, it will be the same one.",
@@ -1582,7 +1817,8 @@
             "English": "Tarantula Island",
             "English (Europe)": "Tarantula Island",
             "French": "Île aux Tarentules",
-            "French (US)": "Île aux Tarentules"
+            "French (US)": "Île aux Tarentules",
+            "Spanish": "Isla de la tarántula"
         },
         {
             "English": "Yes, the infamous one. The only insects that spawn here are tarantulas (as long as it is night time in a Tarantula month), and the 7 rocks have crafting materials if you can get to them. The river is thin enough that you can jump over it without a vaulting pole.",
@@ -1594,7 +1830,8 @@
             "English": "Tree Island",
             "English (Europe)": "Tree Island",
             "French": "Île aux Feuillus",
-            "French (US)": "Île aux Feuillus"
+            "French (US)": "Île aux Feuillus",
+            "Spanish": "Isla de árboles"
         },
         {
             "English": "This island has no river or pond and has tons of hardwood and coconut trees, and the only insects that spawn are those that are associated with trees.",
@@ -1606,7 +1843,8 @@
             "English": "Tree Island 2",
             "English (Europe)": "Tree Island 2",
             "French": "Île aux Feuillus 2",
-            "French (US)": "Île aux Feuillus 2"
+            "French (US)": "Île aux Feuillus 2",
+            "Spanish": "Isla de árboles 2"
         },
         {
             "English": "This island is exactly the same as Bamboo Island but the trees are all just regular hardwood trees.",
@@ -1630,7 +1868,8 @@
             "English": "Big Fish Island 2",
             "English (Europe)": "Big Fish Island 2",
             "French": "Île aux Gros Poissons 2",
-            "French (US)": "Île aux Gros Poissons 2"
+            "French (US)": "Île aux Gros Poissons 2",
+            "Spanish": "Isla de peces grandes 2"
         },
         {
             "English": "This rare island only spawns big fish. Otherwise it is quite normal, with less flowers and a lower chance of appearing than the other big fish island.",
@@ -1678,7 +1917,8 @@
             "English": "Gold Island",
             "English (Europe)": "Gold Island",
             "French": "Île aux Pépites d'or",
-            "French (US)": "Île aux Pépites d'or"
+            "French (US)": "Île aux Pépites d'or",
+            "Spanish": "Isla de oro"
         },
         {
             "English": "A very rare island with flowers, scorpions and a rectangular pond. If you climb up onto the cliff and climb down from the back, you can vault over to a tiny island in the middle and get 8 gold nuggets from a single rock.",
@@ -1750,19 +1990,22 @@
             "English": "Fishing Tourney",
             "English (Europe)": "Fishing Tourney",
             "French": "Tournoi de Pêche",
-            "French (US)": "Tournoi de Pêche"
+            "French (US)": "Tournoi de Pêche",
+            "Spanish": "Torneo de pesca"
         },
         {
             "English": "All day",
             "English (Europe)": "All day",
             "French": "Toute la journée",
-            "French (US)": "Toute la journée"
+            "French (US)": "Toute la journée",
+            "Spanish": "Todo el día"
         },
         {
             "English": "Today",
             "English (Europe)": "Today",
             "French": "Aujourd'hui",
-            "French (US)": "Aujourd'hui"
+            "French (US)": "Aujourd'hui",
+            "Spanish": "Hoy"
         },
         {
             "English": "Crafting Season",
@@ -1786,7 +2029,8 @@
             "English": "Special Event",
             "English (Europe)": "Special Event",
             "French": "Évènement Spécial",
-            "French (US)": "Évènement Spécial"
+            "French (US)": "Évènement Spécial",
+            "Spanish": "Evento especial"
         },
         {
             "English": "Nook Shopping Event",
@@ -1804,13 +2048,15 @@
             "English": "What's New?",
             "English (Europe)": "What's New?",
             "French": "Quoi de neuf?",
-            "French (US)": "Quoi de neuf?"
+            "French (US)": "Quoi de neuf?",
+            "Spanish": "¿Que hay nuevo?"
         },
         {
             "English": "Let's go!",
             "English (Europe)": "Let's go!",
             "French": "C'est parti!",
-            "French (US)": "C'est parti!"
+            "French (US)": "C'est parti!",
+            "Spanish": "¡Vamos!"
         },
         {
             "English": "Volunteer Translators",
@@ -1828,19 +2074,22 @@
             "English": "All Events",
             "English (Europe)": "All Events",
             "French": "Tous les Évènements",
-            "French (US)": "Tous les Évènements"
+            "French (US)": "Tous les Évènements",
+            "Spanish": "Todos los eventos"
         },
         {
             "English": "Skip",
             "English (Europe)": "Skip",
             "French": "Passer",
-            "French (US)": "Passer"
+            "French (US)": "Passer",
+            "Spanish": "Saltar"
         },
         {
             "English": "Download images",
             "English (Europe)": "Download images",
             "French": "Télécharger les images",
-            "French (US)": "Télécharger les images"
+            "French (US)": "Télécharger les images",
+            "Spanish": "Descargar imágenes"
         },
         {
             "English": "Save images locally for offline use once viewed. If disabled, can save storage space, but always requires an internet connection to view images.",
@@ -1858,7 +2107,8 @@
             "English": "Cancel",
             "English (Europe)": "Cancel",
             "French": "Annuler",
-            "French (US)": "Annuler"
+            "French (US)": "Annuler",
+            "Spanish": "Cancelar"
         },
         {
             "English": "Done",
@@ -1930,7 +2180,8 @@
             "English": "Flying",
             "English (Europe)": "Flying",
             "French": "Vole",
-            "French (US)": "Vole"
+            "French (US)": "Vole",
+            "Spanish": "Volador"
         },
         {
             "English": "On Rivers/ponds",
@@ -1942,7 +2193,8 @@
             "English": "On Villagers",
             "English (Europe)": "On Villagers",
             "French": "Sur les villageois",
-            "French (US)": "Sur les villageois"
+            "French (US)": "Sur les villageois",
+            "Spanish": "Sobre los vecinos"
         },
         {
             "English": "Flying Near Trashor Rotten Turnips",
@@ -1960,13 +2212,15 @@
             "English": "On Flowers",
             "English (Europe)": "On Flowers",
             "French": "Sur les Fleurs",
-            "French (US)": "Sur les fleurs"
+            "French (US)": "Sur les fleurs",
+            "Spanish": "En flores"
         },
         {
             "English": "Underground",
             "English (Europe)": "Underground",
             "French": "Sous la terre",
-            "French (US)": "Sous la terre"
+            "French (US)": "Sous la terre",
+            "Spanish": "Bajo tierra"
         },
         {
             "English": "Flying Near Light Sources",
@@ -2014,37 +2268,43 @@
             "English": "Sea",
             "English (Europe)": "Sea",
             "French": "Mer",
-            "French (US)": "Mer"
+            "French (US)": "Mer",
+            "Spanish": "Mar"
         },
         {
             "English": "River",
             "English (Europe)": "River",
             "French": "Rivière",
-            "French (US)": "Rivière"
+            "French (US)": "Rivière",
+            "Spanish": "Río"
         },
         {
             "English": "Pier",
             "English (Europe)": "Pier",
             "French": "Ponton",
-            "French (US)": "Ponton"
+            "French (US)": "Ponton",
+            "Spanish": "Muelle"
         },
         {
             "English": "Pond",
             "English (Europe)": "Pond",
             "French": "Etang",
-            "French (US)": "Etang"
+            "French (US)": "Etang",
+            "Spanish": "Estanque"
         },
         {
             "English": "Selected language not supported",
             "English (Europe)": "Selected language not supported",
             "French": "Langue non prise en charge",
-            "French (US)": "Langue non prise en charge"
+            "French (US)": "Langue non prise en charge",
+            "Spanish": "El idioma seleccionado no es compatible"
         },
         {
             "English": "This online guide is only available in English.",
             "English (Europe)": "This online guide is only available in English.",
             "French": "Ce guide n'est disponible qu'en Anglais",
-            "French (US)": "Ce guide n'est disponible qu'en Anglais"
+            "French (US)": "Ce guide n'est disponible qu'en Anglais",
+            "Spanish": "Esta guía online sólo está disponible en inglés."
         },
         {
             "English": "Remove customizable variations in lists",
@@ -2062,121 +2322,141 @@
             "English": "New Items",
             "English (Europe)": "New Items",
             "French": "Nouveaux objets",
-            "French (US)": "Nouveaux objets"
+            "French (US)": "Nouveaux objets",
+            "Spanish": "Artículos nuevos"
         },
         {
             "English": "Peppy",
             "English (Europe)": "Peppy",
             "French": "Vif",
-            "French (US)": "Vif"
+            "French (US)": "Vif",
+            "Spanish": "Lleno de vida"
         },
         {
             "English": "Peppy villagers",
             "English (Europe)": "Peppy villagers",
             "French": "Villageois vifs",
-            "French (US)": "Villageois vifs"
+            "French (US)": "Villageois vifs",
+            "Spanish": "Vecinos animados"
         },
         {
             "English": "Cranky",
             "English (Europe)": "Cranky",
             "French": "Versatile",
-            "French (US)": "Versatile"
+            "French (US)": "Versatile",
+            "Spanish": "Malhumorado"
         },
         {
             "English": "Cranky villagers",
             "English (Europe)": "Cranky villagers",
             "French": "Villageois versatiles",
-            "French (US)": "Villageois versatiles"
+            "French (US)": "Villageois versatiles",
+            "Spanish": "Vecinos malhumorados"
         },
         {
             "English": "Snooty",
             "English (Europe)": "Snooty",
             "French": "Arrogant",
-            "French (US)": "Arrogant"
+            "French (US)": "Arrogant",
+            "Spanish": "Presumido"
         },
         {
             "English": "Snooty villagers",
             "English (Europe)": "Snooty villagers",
             "French": "Villageois arrogants",
-            "French (US)": "Villageois arrogants"
+            "French (US)": "Villageois arrogants",
+            "Spanish": "Vecinos presumidos"
         },
         {
             "English": "Big Sister",
             "English (Europe)": "Big Sister",
             "French": "Grande Soeur",
-            "French (US)": "Grande Soeur"
+            "French (US)": "Grande Soeur",
+            "Spanish": "Hermana mayor"
         },
         {
             "English": "Big Sister villagers",
             "English (Europe)": "Big Sister villagers",
             "French": "Villageois Grandes Soeurs",
-            "French (US)": "Villageois Grandes Soeurs"
+            "French (US)": "Villageois Grandes Soeurs",
+            "Spanish": "Vecinos hermana mayor"
         },
         {
             "English": "Lazy",
             "English (Europe)": "Lazy",
             "French": "Paresseux",
-            "French (US)": "Paresseux"
+            "French (US)": "Paresseux",
+            "Spanish": "Perezoso"
         },
         {
             "English": "Lazy villagers",
             "English (Europe)": "Lazy villagers",
             "French": "Villageois paresseux",
-            "French (US)": "Villageois paresseux"
+            "French (US)": "Villageois paresseux",
+            "Spanish": "Vecinos perezosos"
         },
         {
             "English": "Normal",
             "English (Europe)": "Normal",
             "French": "Normal",
-            "French (US)": "Normal"
+            "French (US)": "Normal",
+            "Spanish": "Normal"
         },
         {
             "English": "Normal villagers",
             "English (Europe)": "Normal villagers",
             "French": "Villageois normaux",
-            "French (US)": "Villageois normaux"
+            "French (US)": "Villageois normaux",
+            "Spanish": "Vecinos normales"
         },
         {
             "English": "All villagers",
             "English (Europe)": "All villagers",
             "French": "Tous les villageois",
-            "French (US)": "Tous les villageois"
+            "French (US)": "Tous les villageois",
+            "Spanish": "Todos los vecinos"
         },
         {
             "English": "Jock",
             "English (Europe)": "Jock",
             "French": "Sportif",
-            "French (US)": "Sportif"
+            "French (US)": "Sportif",
+            "Spanish": "Deportistas"
         },
         {
             "English": "Jock villagers",
             "English (Europe)": "Jock villagers",
             "French": "Villageois sportifs",
-            "French (US)": "Villageois sportifs"
+            "French (US)": "Villageois sportifs",
+            "Spanish": "Vecinos deportistas"
         },
         {
             "English": "Smug",
             "English (Europe)": "Smug",
             "French": "Chic",
-            "French (US)": "Chic"
+            "French (US)": "Chic",
+            "Spanish": "Presumido"
         },
         {
             "English": "Smug villagers",
             "English (Europe)": "Smug villagers",
             "French": "Villageois chics",
-            "French (US)": "Villageois chics"
+            "French (US)": "Villageois chics",
+            "Spanish": "Vecinos presumidos"
         },
         {
             "English": "can catch",
             "English (Europe)": "can catch",
             "French": "peut capturer",
-            "French (US)": "peut capturer"
+            "French (US)": "peut capturer",
+            "Spanish": "puede atrapar"
         },
         {
             "English": "Any except rain",
             "English (Europe)": "Any except rain",
             "French": "Tout le temps sauf quand il pleut",
-            "French (US)": "Tout le temps sauf quand il pleut"
+            "French (US)": "Tout le temps sauf quand il pleut",
+            "Spanish": "Cualquiera excepto lluvia"
         },
         {
             "English": "Jolly Redd's Treasure Trawler",
@@ -2230,7 +2510,8 @@
             "English": "Balloons",
             "English (Europe)": "Balloons",
             "French": "Ballons",
-            "French (US)": "Ballons"
+            "French (US)": "Ballons",
+            "Spanish": "Globos"
         },
         {
             "English": "Nook Shopping Seasonal",
@@ -2254,7 +2535,8 @@
             "English": "Wishlist",
             "English (Europe)": "Wishlist",
             "French": "Liste d'envies",
-            "French (US)": "Liste d'envies"
+            "French (US)": "Liste d'envies",
+            "Spanish": "Lista de deseos"
         },
         {
             "English": "Long press items to add/remove from your wishlist",
@@ -2296,13 +2578,15 @@
             "English": "Available from Able Sisters shop only",
             "English (Europe)": "Available from Able Sisters shop only",
             "French": "Disponible uniquement chez les Soeurs Doigts de Fée",
-            "French (US)": "Disponible uniquement chez les Soeurs Doigts de Fée"
+            "French (US)": "Disponible uniquement chez les Soeurs Doigts de Fée",
+            "Spanish": "Solo disponible en Hermanitas Manitas"
         },
         {
             "English": "All Year",
             "English (Europe)": "All Year",
             "French": "Toute l'année",
-            "French (US)": "Toute l'année"
+            "French (US)": "Toute l'année",
+            "Spanish": "Todo el año"
         },
         {
             "English": "Additional Information",
@@ -2338,19 +2622,22 @@
             "English": "Squirrel",
             "English (Europe)": "Squirrel",
             "French": "Écureuil",
-            "French (US)": "Écureuil"
+            "French (US)": "Écureuil",
+            "Spanish": "Ardilla"
         },
         {
             "English": "Pig",
             "English (Europe)": "Pig",
             "French": "Cochon",
-            "French (US)": "Cochon"
+            "French (US)": "Cochon",
+            "Spanish": "Cerdo"
         },
         {
             "English": "Gorilla",
             "English (Europe)": "Gorilla",
             "French": "Gorille",
-            "French (US)": "Gorille"
+            "French (US)": "Gorille",
+            "Spanish": "Gorila"
         },
         {
             "English": "Alligator",
@@ -2386,7 +2673,8 @@
             "English": "Horse",
             "English (Europe)": "Horse",
             "French": "Cheval",
-            "French (US)": "Cheval"
+            "French (US)": "Cheval",
+            "Spanish": "Caballo"
         },
         {
             "English": "Cub",
@@ -2416,49 +2704,57 @@
             "English": "Wolf",
             "English (Europe)": "Wolf",
             "French": "Loup",
-            "French (US)": "Loup"
+            "French (US)": "Loup",
+            "Spanish": "Lobo"
         },
         {
             "English": "Penguin",
             "English (Europe)": "Penguin",
             "French": "Pingouin",
-            "French (US)": "Pingouin"
+            "French (US)": "Pingouin",
+            "Spanish": "Pingüino"
         },
         {
             "English": "Chicken",
             "English (Europe)": "Chicken",
             "French": "Coq (male), Poule (femelle)",
-            "French (US)": "Coq (male), Poule (femelle)"
+            "French (US)": "Coq (male), Poule (femelle)",
+            "Spanish": "Pollo"
         },
         {
             "English": "Elephant",
             "English (Europe)": "Elephant",
             "French": "Eléphant",
-            "French (US)": "Eléphant"
+            "French (US)": "Eléphant",
+            "Spanish": "Elefante"
         },
         {
             "English": "Dog",
             "English (Europe)": "Dog",
             "French": "Chien",
-            "French (US)": "Chien"
+            "French (US)": "Chien",
+            "Spanish": "Perro"
         },
         {
             "English": "Bear",
             "English (Europe)": "Bear",
             "French": "Ours",
-            "French (US)": "Ours"
+            "French (US)": "Ours",
+            "Spanish": "Oso"
         },
         {
             "English": "Hippo",
             "English (Europe)": "Hippo",
             "French": "Hippopotame",
-            "French (US)": "Hippopotame"
+            "French (US)": "Hippopotame",
+            "Spanish": "Hipopótamo"
         },
         {
             "English": "Duck",
             "English (Europe)": "Duck",
             "French": "Canard",
-            "French (US)": "Canard"
+            "French (US)": "Canard",
+            "Spanish": "Pato"
         },
         {
             "English": "Goat",
@@ -2476,19 +2772,22 @@
             "English": "Sheep",
             "English (Europe)": "Sheep",
             "French": "Mouton",
-            "French (US)": "Mouton"
+            "French (US)": "Mouton",
+            "Spanish": "Oveja"
         },
         {
             "English": "Monkey",
             "English (Europe)": "Monkey",
             "French": "Singe",
-            "French (US)": "Singe"
+            "French (US)": "Singe",
+            "Spanish": "Mono"
         },
         {
             "English": "Rhino",
             "English (Europe)": "Rhino",
             "French": "Rhinocéros",
-            "French (US)": "Rhinocéros"
+            "French (US)": "Rhinocéros",
+            "Spanish": "Rinoceronte"
         },
         {
             "English": "Cow",
@@ -2506,49 +2805,57 @@
             "English": "Koala",
             "English (Europe)": "Koala",
             "French": "Koala",
-            "French (US)": "Koala"
+            "French (US)": "Koala",
+            "Spanish": "Coala"
         },
         {
             "English": "Cat",
             "English (Europe)": "Cat",
             "French": "Chat",
-            "French (US)": "Chat"
+            "French (US)": "Chat",
+            "Spanish": "Gato"
         },
         {
             "English": "Lion",
             "English (Europe)": "Lion",
             "French": "Lion",
-            "French (US)": "Lion"
+            "French (US)": "Lion",
+            "Spanish": "León"
         },
         {
             "English": "Frog",
             "English (Europe)": "Frog",
             "French": "Grenouille",
-            "French (US)": "Grenouille"
+            "French (US)": "Grenouille",
+            "Spanish": "Rana"
         },
         {
             "English": "Octopus",
             "English (Europe)": "Octopus",
             "French": "Pieuvre",
-            "French (US)": "Pieuvre"
+            "French (US)": "Pieuvre",
+            "Spanish": "Pulpo"
         },
         {
             "English": "Mom",
             "English (Europe)": "Mom",
             "French": "Maman",
-            "French (US)": "Maman"
+            "French (US)": "Maman",
+            "Spanish": "Mamá"
         },
         {
             "English": "Starting items",
             "English (Europe)": "Starting items",
             "French": "Objets de départ",
-            "French (US)": "Objets de départ"
+            "French (US)": "Objets de départ",
+            "Spanish": "Objetos iniciales"
         },
         {
             "English": "Crafting",
             "English (Europe)": "Crafting",
             "French": "Crafting",
-            "French (US)": "Crafting"
+            "French (US)": "Crafting",
+            "Spanish": "Elaboración"
         },
         {
             "English": "Nook Shopping Daily Selection",
@@ -2560,25 +2867,29 @@
             "English": "HHA",
             "English (Europe)": "HHA",
             "French": "AJD",
-            "French (US)": "AJD"
+            "French (US)": "AJD",
+            "Spanish": "HHA"
         },
         {
             "English": "Recycle box",
             "English (Europe)": "Recycle box",
             "French": "Boîte de recyclage",
-            "French (US)": "Boîte de recyclage"
+            "French (US)": "Boîte de recyclage",
+            "Spanish": "Reciclar caja"
         },
         {
             "English": "Snowboy",
             "English (Europe)": "Snowboy",
             "French": "Yétiti",
-            "French (US)": "Yétiti"
+            "French (US)": "Yétiti",
+            "Spanish": "Muñeco de nieve"
         },
         {
             "English": "Gold balloon",
             "English (Europe)": "Gold balloon",
             "French": "Ballon doré",
-            "French (US)": "Ballon doré"
+            "French (US)": "Ballon doré",
+            "Spanish": "Globo de oro"
         },
         {
             "English": "Hitting a rock",
@@ -2698,7 +3009,13 @@
             "English": "Planting a pear",
             "English (Europe)": "Planting a pear",
             "French": "Planter une poire",
-            "French (US)": "Planter une poire",
+            "French (US)": "Planter une poire"
+        },
+        {
+            "English": "Cyrus",
+            "English (Europe)": "Cyrus",
+            "French": "Serge",
+            "French (US)": "Serge",
             "German": "Björn",
             "Spanish": "Al",
             "Spanish (US)": "Al",
@@ -2711,10 +3028,10 @@
             "Russian": "Сайрус"
         },
         {
-            "English": "Cyrus",
-            "English (Europe)": "Cyrus",
-            "French": "Serge",
-            "French (US)": "Serge",
+            "English": "Reese",
+            "English (Europe)": "Reese",
+            "French": "Risette",
+            "French (US)": "Risette",
             "German": "Rosina",
             "Spanish": "Paca",
             "Spanish (US)": "Paca",
@@ -2727,10 +3044,10 @@
             "Russian": "Риз"
         },
         {
-            "English": "Reese",
-            "English (Europe)": "Reese",
-            "French": "Risette",
-            "French (US)": "Risette",
+            "English": "Chip",
+            "English (Europe)": "Chip",
+            "French": "Castor",
+            "French (US)": "Castor",
             "German": "Bartholo",
             "Spanish": "Martín",
             "Spanish (US)": "Martín",
@@ -2743,10 +3060,10 @@
             "Russian": "Чип"
         },
         {
-            "English": "Chip",
-            "English (Europe)": "Chip",
-            "French": "Castor",
-            "French (US)": "Castor",
+            "English": "C.J.",
+            "English (Europe)": "C.J.",
+            "French": "Pollux",
+            "French (US)": "Pollux",
             "German": "Lomeus",
             "Spanish": "CJ",
             "Spanish (US)": "CJ",
@@ -2759,10 +3076,10 @@
             "Russian": "Си-Джей"
         },
         {
-            "English": "C.J.",
-            "English (Europe)": "C.J.",
-            "French": "Pollux",
-            "French (US)": "Pollux",
+            "English": "Joan",
+            "English (Europe)": "Joan",
+            "French": "Porcella",
+            "French (US)": "Porcella",
             "German": "Sigrid",
             "Spanish": "Juana",
             "Spanish (US)": "Juana",
@@ -2775,10 +3092,10 @@
             "Russian": "Джоан"
         },
         {
-            "English": "Joan",
-            "English (Europe)": "Joan",
-            "French": "Porcella",
-            "French (US)": "Porcella",
+            "English": "Daisy Mae",
+            "English (Europe)": "Daisy Mae",
+            "French": "Porcelette",
+            "French (US)": "Porcelette",
             "German": "Jorna",
             "Spanish": "Juliana",
             "Spanish (US)": "Juliana",
@@ -2791,10 +3108,10 @@
             "Russian": "Дейзи-Мей"
         },
         {
-            "English": "Daisy Mae",
-            "English (Europe)": "Daisy Mae",
-            "French": "Porcelette",
-            "French (US)": "Porcelette",
+            "English": "Katrina",
+            "English (Europe)": "Katrina",
+            "French": "Astrid",
+            "French (US)": "Astrid",
             "German": "Smeralda",
             "Spanish": "Katrina",
             "Spanish (US)": "Katrina",
@@ -2807,10 +3124,10 @@
             "Russian": "Катрина"
         },
         {
-            "English": "Katrina",
-            "English (Europe)": "Katrina",
-            "French": "Astrid",
-            "French (US)": "Astrid",
+            "English": "Nat",
+            "English (Europe)": "Nat",
+            "French": "Djarod",
+            "French (US)": "Djarod",
             "German": "Carleon",
             "Spanish": "Papilo",
             "Spanish (US)": "Papilo",
@@ -2823,10 +3140,10 @@
             "Russian": "Нат"
         },
         {
-            "English": "Nat",
-            "English (Europe)": "Nat",
-            "French": "Djarod",
-            "French (US)": "Djarod",
+            "English": "Flick",
+            "English (Europe)": "Flick",
+            "French": "Djason",
+            "French (US)": "Djason",
             "German": "Carlson",
             "Spanish": "Kamilo",
             "Spanish (US)": "Kamilo",
@@ -2839,10 +3156,10 @@
             "Russian": "Флик"
         },
         {
-            "English": "Flick",
-            "English (Europe)": "Flick",
-            "French": "Djason",
-            "French (US)": "Djason",
+            "English": "Saharah",
+            "English (Europe)": "Saharah",
+            "French": "Sarah",
+            "French (US)": "Sarah",
             "German": "Aziza",
             "Spanish": "Alcatifa",
             "Spanish (US)": "Alcatifa",
@@ -2855,10 +3172,10 @@
             "Russian": "Сахара"
         },
         {
-            "English": "Saharah",
-            "English (Europe)": "Saharah",
-            "French": "Sarah",
-            "French (US)": "Sarah",
+            "English": "Copper",
+            "English (Europe)": "Copper",
+            "French": "Maret",
+            "French (US)": "Maret",
             "German": "Harry",
             "Spanish": "Vigilio",
             "Spanish (US)": "Vigilio",
@@ -2871,10 +3188,10 @@
             "Russian": "Коппер"
         },
         {
-            "English": "Copper",
-            "English (Europe)": "Copper",
-            "French": "Maret",
-            "French (US)": "Maret",
+            "English": "Booker",
+            "English (Europe)": "Booker",
+            "French": "Chausset",
+            "French (US)": "Chausset",
             "German": "Wuff",
             "Spanish": "Nocencio",
             "Spanish (US)": "Nocencio",
@@ -2887,10 +3204,10 @@
             "Russian": "Букер"
         },
         {
-            "English": "Booker",
-            "English (Europe)": "Booker",
-            "French": "Chausset",
-            "French (US)": "Chausset",
+            "English": "Wilbur",
+            "English (Europe)": "Wilbur",
+            "French": "Rodrigue",
+            "French (US)": "Rodrigue",
             "German": "Udo",
             "Spanish": "Rodri",
             "Spanish (US)": "Rodri",
@@ -2903,10 +3220,10 @@
             "Russian": "Уилбур"
         },
         {
-            "English": "Wilbur",
-            "English (Europe)": "Wilbur",
-            "French": "Rodrigue",
-            "French (US)": "Rodrigue",
+            "English": "Orville",
+            "English (Europe)": "Orville",
+            "French": "Morris",
+            "French (US)": "Morris",
             "German": "Bodo",
             "Spanish": "Rafa",
             "Spanish (US)": "Rafa",
@@ -2919,10 +3236,10 @@
             "Russian": "Орвилл"
         },
         {
-            "English": "Orville",
-            "English (Europe)": "Orville",
-            "French": "Morris",
-            "French (US)": "Morris",
+            "English": "Redd",
+            "English (Europe)": "Redd",
+            "French": "Rounard",
+            "French (US)": "Redd's raffle",
             "German": "Reiner",
             "Spanish": "Ladino",
             "Spanish (US)": "Ladino",
@@ -2935,10 +3252,10 @@
             "Russian": "Рэдд"
         },
         {
-            "English": "Redd",
-            "English (Europe)": "Redd",
-            "French": "Rounard",
-            "French (US)": "Redd's raffle",
+            "English": "Phineas",
+            "English (Europe)": "Phineas",
+            "French": "Hélium",
+            "French (US)": "Hélium",
             "German": "Helios",
             "Spanish": "Elio",
             "Spanish (US)": "Elio",
@@ -2951,10 +3268,10 @@
             "Russian": "Финеас"
         },
         {
-            "English": "Phineas",
-            "English (Europe)": "Phineas",
-            "French": "Hélium",
-            "French (US)": "Hélium",
+            "English": "Gracie",
+            "English (Europe)": "Gracie",
+            "French": "Carla",
+            "French (US)": "Carla",
             "German": "Grazia",
             "Spanish": "Graciela",
             "Spanish (US)": "Graciela",
@@ -2967,10 +3284,10 @@
             "Russian": "Грейси"
         },
         {
-            "English": "Gracie",
-            "English (Europe)": "Gracie",
-            "French": "Carla",
-            "French (US)": "Carla",
+            "English": "Wisp",
+            "English (Europe)": "Wisp",
+            "French": "Follet",
+            "French (US)": "Follet",
             "German": "Buhu",
             "Spanish": "Buh",
             "Spanish (US)": "Buh",
@@ -2983,10 +3300,10 @@
             "Russian": "Уисп"
         },
         {
-            "English": "Wisp",
-            "English (Europe)": "Wisp",
-            "French": "Follet",
-            "French (US)": "Follet",
+            "English": "Gulliver",
+            "English (Europe)": "Gulliver",
+            "French": "Gulliver",
+            "French (US)": "Gulliver",
             "German": "Gulliver",
             "Spanish": "Gulliver",
             "Spanish (US)": "Gulliver",
@@ -2999,10 +3316,10 @@
             "Russian": "Гулливер"
         },
         {
-            "English": "Gulliver",
-            "English (Europe)": "Gulliver",
-            "French": "Gulliver",
-            "French (US)": "Gulliver",
+            "English": "Gullivarrr",
+            "English (Europe)": "Gullivarrr",
+            "French": "Gullivarrr",
+            "French (US)": "Gullivarrr",
             "German": "Gullivarrr",
             "Spanish": "Gullivarrr",
             "Spanish (US)": "Gullivarrr",
@@ -3015,10 +3332,10 @@
             "Russian": "Гулливарр"
         },
         {
-            "English": "Gullivarrr",
-            "English (Europe)": "Gullivarrr",
-            "French": "Gullivarrr",
-            "French (US)": "Gullivarrr",
+            "English": "Label",
+            "English (Europe)": "Label",
+            "French": "Tiquette",
+            "French (US)": "Tiquette",
             "German": "Minna",
             "Spanish": "Tili",
             "Spanish (US)": "Tili",
@@ -3031,10 +3348,10 @@
             "Russian": "Лэйбл"
         },
         {
-            "English": "Label",
-            "English (Europe)": "Label",
-            "French": "Tiquette",
-            "French (US)": "Tiquette",
+            "English": "Mabel",
+            "English (Europe)": "Mabel",
+            "French": "Layette",
+            "French (US)": "Layette",
             "German": "Tina",
             "Spanish": "Pili",
             "Spanish (US)": "Pili",
@@ -3047,10 +3364,10 @@
             "Russian": "Мэйбл"
         },
         {
-            "English": "Mabel",
-            "English (Europe)": "Mabel",
-            "French": "Layette",
-            "French (US)": "Layette",
+            "English": "Sable",
+            "English (Europe)": "Sable",
+            "French": "Cousette",
+            "French (US)": "Cousette",
             "German": "Sina",
             "Spanish": "Mili",
             "Spanish (US)": "Mili",
@@ -3063,10 +3380,10 @@
             "Russian": "Сэйбл"
         },
         {
-            "English": "Sable",
-            "English (Europe)": "Sable",
-            "French": "Cousette",
-            "French (US)": "Cousette",
+            "English": "Grams",
+            "English (Europe)": "Grams",
+            "French": "Mamiral",
+            "French (US)": "Mamiral",
             "German": "Bonnie",
             "Spanish": "Rosauria",
             "Spanish (US)": "Rosauria",
@@ -3079,10 +3396,10 @@
             "Russian": "Грэмс"
         },
         {
-            "English": "Grams",
-            "English (Europe)": "Grams",
-            "French": "Mamiral",
-            "French (US)": "Mamiral",
+            "English": "Leilani",
+            "English (Europe)": "Leilani",
+            "French": "Liliane",
+            "French (US)": "Liliane",
             "German": "Lore",
             "Spanish": "Marimar",
             "Spanish (US)": "Marimar",
@@ -3095,10 +3412,10 @@
             "Russian": "Лейлани"
         },
         {
-            "English": "Leilani",
-            "English (Europe)": "Leilani",
-            "French": "Liliane",
-            "French (US)": "Liliane",
+            "English": "Kapp'n",
+            "English (Europe)": "Kapp'n",
+            "French": "Amiral",
+            "French (US)": "Amiral",
             "German": "Käpten",
             "Spanish": "Capitán",
             "Spanish (US)": "Capitán",
@@ -3111,10 +3428,10 @@
             "Russian": "Кэпн"
         },
         {
-            "English": "Kapp'n",
-            "English (Europe)": "Kapp'n",
-            "French": "Amiral",
-            "French (US)": "Amiral",
+            "English": "Leila",
+            "English (Europe)": "Leila",
+            "French": "Lila",
+            "French (US)": "Lila",
             "German": "Lotte",
             "Spanish": "Conchita",
             "Spanish (US)": "Conchita",
@@ -3127,10 +3444,10 @@
             "Russian": "Лейла"
         },
         {
-            "English": "Leila",
-            "English (Europe)": "Leila",
-            "French": "Lila",
-            "French (US)": "Lila",
+            "English": "Katie",
+            "English (Europe)": "Katie",
+            "French": "Cathie",
+            "French (US)": "Cathie",
             "German": "Katja",
             "Spanish": "Cati",
             "Spanish (US)": "Cati",
@@ -3143,10 +3460,10 @@
             "Russian": "Кейти"
         },
         {
-            "English": "Katie",
-            "English (Europe)": "Katie",
-            "French": "Cathie",
-            "French (US)": "Cathie",
+            "English": "Blanca",
+            "English (Europe)": "Blanca",
+            "French": "Blanca",
+            "French (US)": "Blanca",
             "German": "Blanka",
             "Spanish": "Blanca",
             "Spanish (US)": "Blanca",
@@ -3159,10 +3476,10 @@
             "Russian": "Бланка"
         },
         {
-            "English": "Blanca",
-            "English (Europe)": "Blanca",
-            "French": "Blanca",
-            "French (US)": "Blanca",
+            "English": "Porter",
+            "English (Europe)": "Porter",
+            "French": "Lazare",
+            "French (US)": "Lazare",
             "German": "Flip",
             "Spanish": "Estasio",
             "Spanish (US)": "Estasio",
@@ -3175,10 +3492,10 @@
             "Russian": "Портер"
         },
         {
-            "English": "Porter",
-            "English (Europe)": "Porter",
-            "French": "Lazare",
-            "French (US)": "Lazare",
+            "English": "Don",
+            "English (Europe)": "Don",
+            "French": "Don",
+            "French (US)": "Don",
             "German": "Don",
             "Spanish": "Forma T.",
             "Spanish (US)": "Forma T.",
@@ -3191,10 +3508,10 @@
             "Russian": "Дон"
         },
         {
-            "English": "Don",
-            "English (Europe)": "Don",
-            "French": "Don",
-            "French (US)": "Don",
+            "English": "Resetti",
+            "English (Europe)": "Resetti",
+            "French": "Resetti",
+            "French (US)": "Resetti",
             "German": "Resetti",
             "Spanish": "Rese T.",
             "Spanish (US)": "Rese T.",
@@ -3207,10 +3524,10 @@
             "Russian": "Ресетти"
         },
         {
-            "English": "Resetti",
-            "English (Europe)": "Resetti",
-            "French": "Resetti",
-            "French (US)": "Resetti",
+            "English": "Lottie",
+            "English (Europe)": "Lottie",
+            "French": "Lou",
+            "French (US)": "Lou",
             "German": "Karlotta",
             "Spanish": "Nuria",
             "Spanish (US)": "Nuria",
@@ -3223,10 +3540,10 @@
             "Russian": "Лотти"
         },
         {
-            "English": "Lottie",
-            "English (Europe)": "Lottie",
-            "French": "Lou",
-            "French (US)": "Lou",
+            "English": "Lyle",
+            "English (Europe)": "Lyle",
+            "French": "Lionel",
+            "French (US)": "Lionel",
             "German": "Fred",
             "Spanish": "Sisebuto",
             "Spanish (US)": "Sisebuto",
@@ -3239,10 +3556,10 @@
             "Russian": "Лайл"
         },
         {
-            "English": "Lyle",
-            "English (Europe)": "Lyle",
-            "French": "Lionel",
-            "French (US)": "Lionel",
+            "English": "Blathers",
+            "English (Europe)": "Blathers",
+            "French": "Thibou",
+            "French (US)": "Thibou",
             "German": "Eugen",
             "Spanish": "Sócrates",
             "Spanish (US)": "Sócrates",
@@ -3255,10 +3572,10 @@
             "Russian": "Блезерс"
         },
         {
-            "English": "Blathers",
-            "English (Europe)": "Blathers",
-            "French": "Thibou",
-            "French (US)": "Thibou",
+            "English": "Celeste",
+            "English (Europe)": "Celeste",
+            "French": "Céleste",
+            "French (US)": "Céleste",
             "German": "Eufemia",
             "Spanish": "Estela",
             "Spanish (US)": "Estela",
@@ -3271,10 +3588,10 @@
             "Russian": "Селеста"
         },
         {
-            "English": "Celeste",
-            "English (Europe)": "Celeste",
-            "French": "Céleste",
-            "French (US)": "Céleste",
+            "English": "Pavé",
+            "English (Europe)": "Pavé",
+            "French": "Roberto",
+            "French (US)": "Roberto",
             "German": "Pavo",
             "Spanish": "Conga",
             "Spanish (US)": "Conga",
@@ -3287,10 +3604,10 @@
             "Russian": "Паве"
         },
         {
-            "English": "Pavé",
-            "English (Europe)": "Pavé",
-            "French": "Roberto",
-            "French (US)": "Roberto",
+            "English": "Brewster",
+            "English (Europe)": "Brewster",
+            "French": "Robusto",
+            "French (US)": "Robusto",
             "German": "Kofi",
             "Spanish": "Fígaro",
             "Spanish (US)": "Fígaro",
@@ -3303,10 +3620,10 @@
             "Russian": "Брюстер"
         },
         {
-            "English": "Brewster",
-            "English (Europe)": "Brewster",
-            "French": "Robusto",
-            "French (US)": "Robusto",
+            "English": "Jack",
+            "English (Europe)": "Jack",
+            "French": "Jacqu'O",
+            "French (US)": "Jacqu'O",
             "German": "Jakob",
             "Spanish": "Soponcio",
             "Spanish (US)": "Soponcio",
@@ -3319,10 +3636,10 @@
             "Russian": "Джек"
         },
         {
-            "English": "Jack",
-            "English (Europe)": "Jack",
-            "French": "Jacqu'O",
-            "French (US)": "Jacqu'O",
+            "English": "Pelly",
+            "English (Europe)": "Pelly",
+            "French": "Opélie",
+            "French (US)": "Opélie",
             "German": "Pelly",
             "Spanish": "Sol",
             "Spanish (US)": "Sol",
@@ -3335,10 +3652,10 @@
             "Russian": "Пелли"
         },
         {
-            "English": "Pelly",
-            "English (Europe)": "Pelly",
-            "French": "Opélie",
-            "French (US)": "Opélie",
+            "English": "Phyllis",
+            "English (Europe)": "Phyllis",
+            "French": "Élisabec",
+            "French (US)": "Élisabec",
             "German": "Peggy",
             "Spanish": "Estrella",
             "Spanish (US)": "Estrella",
@@ -3351,10 +3668,10 @@
             "Russian": "Филлис"
         },
         {
-            "English": "Phyllis",
-            "English (Europe)": "Phyllis",
-            "French": "Élisabec",
-            "French (US)": "Élisabec",
+            "English": "Pete",
+            "English (Europe)": "Pete",
+            "French": "Antoine",
+            "French (US)": "Antoine",
             "German": "Peter",
             "Spanish": "Carturo",
             "Spanish (US)": "Carturo",
@@ -3367,10 +3684,10 @@
             "Russian": "Пит"
         },
         {
-            "English": "Pete",
-            "English (Europe)": "Pete",
-            "French": "Antoine",
-            "French (US)": "Antoine",
+            "English": "Harriet",
+            "English (Europe)": "Harriet",
+            "French": "Ginette",
+            "French (US)": "Ginette",
             "German": "Trude",
             "Spanish": "Marilín",
             "Spanish (US)": "Marilín",
@@ -3383,10 +3700,10 @@
             "Russian": "Харриет"
         },
         {
-            "English": "Harriet",
-            "English (Europe)": "Harriet",
-            "French": "Ginette",
-            "French (US)": "Ginette",
+            "English": "Zipper",
+            "English (Europe)": "Zipper",
+            "French": "Albin",
+            "French (US)": "Albin",
             "German": "Ohs",
             "Spanish": "Coti",
             "Spanish (US)": "Coti",
@@ -3399,10 +3716,10 @@
             "Russian": "Зиппер"
         },
         {
-            "English": "Zipper",
-            "English (Europe)": "Zipper",
-            "French": "Albin",
-            "French (US)": "Albin",
+            "English": "Timmy",
+            "English (Europe)": "Timmy",
+            "French": "Méli",
+            "French (US)": "Méli",
             "German": "Nepp",
             "Spanish": "Tendo",
             "Spanish (US)": "Tendo",
@@ -3415,10 +3732,10 @@
             "Russian": "Тимми"
         },
         {
-            "English": "Timmy",
-            "English (Europe)": "Timmy",
-            "French": "Méli",
-            "French (US)": "Méli",
+            "English": "Tom Nook",
+            "English (Europe)": "Tom Nook",
+            "French": "Tom Nook",
+            "French (US)": "Tom Nook",
             "German": "Tom Nook",
             "Spanish": "Tom Nook",
             "Spanish (US)": "Tom Nook",
@@ -3431,10 +3748,10 @@
             "Russian": "Том Нук"
         },
         {
-            "English": "Tom Nook",
-            "English (Europe)": "Tom Nook",
-            "French": "Tom Nook",
-            "French (US)": "Tom Nook",
+            "English": "Tommy",
+            "English (Europe)": "Tommy",
+            "French": "Mélo",
+            "French (US)": "Mélo",
             "German": "Schlepp",
             "Spanish": "Nendo",
             "Spanish (US)": "Nendo",
@@ -3447,10 +3764,10 @@
             "Russian": "Томми"
         },
         {
-            "English": "Tommy",
-            "English (Europe)": "Tommy",
-            "French": "Mélo",
-            "French (US)": "Mélo",
+            "English": "Jingle",
+            "English (Europe)": "Jingle",
+            "French": "Rodolphe",
+            "French (US)": "Rodolphe",
             "German": "Chris",
             "Spanish": "Renato",
             "Spanish (US)": "Renato",
@@ -3463,10 +3780,10 @@
             "Russian": "Джингл"
         },
         {
-            "English": "Jingle",
-            "English (Europe)": "Jingle",
-            "French": "Rodolphe",
-            "French (US)": "Rodolphe",
+            "English": "Pascal",
+            "English (Europe)": "Pascal",
+            "French": "Pascal",
+            "French (US)": "Pascal",
             "German": "Johannes",
             "Spanish": "Pascal",
             "Spanish (US)": "Pascal",
@@ -3479,10 +3796,10 @@
             "Russian": "Паскаль"
         },
         {
-            "English": "Pascal",
-            "English (Europe)": "Pascal",
-            "French": "Pascal",
-            "French (US)": "Pascal",
+            "English": "Kicks",
+            "English (Europe)": "Kicks",
+            "French": "Blaise",
+            "French (US)": "Blaise",
             "German": "Schubert",
             "Spanish": "Betunio",
             "Spanish (US)": "Betunio",
@@ -3495,10 +3812,10 @@
             "Russian": "Кикс"
         },
         {
-            "English": "Kicks",
-            "English (Europe)": "Kicks",
-            "French": "Blaise",
-            "French (US)": "Blaise",
+            "English": "Leif",
+            "English (Europe)": "Leif",
+            "French": "Racine",
+            "French (US)": "Racine",
             "German": "Gerd",
             "Spanish": "Gandulio",
             "Spanish (US)": "Gandulio",
@@ -3511,10 +3828,10 @@
             "Russian": "Лейф"
         },
         {
-            "English": "Leif",
-            "English (Europe)": "Leif",
-            "French": "Racine",
-            "French (US)": "Racine",
+            "English": "Harvey",
+            "English (Europe)": "Harvey",
+            "French": "Joe",
+            "French (US)": "Joe",
             "German": "Harvey",
             "Spanish": "Fauno",
             "Spanish (US)": "Fauno",
@@ -3527,10 +3844,10 @@
             "Russian": "Харви"
         },
         {
-            "English": "Harvey",
-            "English (Europe)": "Harvey",
-            "French": "Joe",
-            "French (US)": "Joe",
+            "English": "Isabelle",
+            "English (Europe)": "Isabelle",
+            "French": "Marie",
+            "French (US)": "Marie",
             "German": "Melinda",
             "Spanish": "Canela",
             "Spanish (US)": "Canela",
@@ -3543,10 +3860,10 @@
             "Russian": "Изабель"
         },
         {
-            "English": "Isabelle",
-            "English (Europe)": "Isabelle",
-            "French": "Marie",
-            "French (US)": "Marie",
+            "English": "Digby",
+            "English (Europe)": "Digby",
+            "French": "Max",
+            "French (US)": "Max",
             "German": "Moritz",
             "Spanish": "Candrés",
             "Spanish (US)": "Candrés",
@@ -3559,10 +3876,10 @@
             "Russian": "Дигби"
         },
         {
-            "English": "Digby",
-            "English (Europe)": "Digby",
-            "French": "Max",
-            "French (US)": "Max",
+            "English": "Luna",
+            "English (Europe)": "Luna",
+            "French": "Serena",
+            "French (US)": "Serena",
             "German": "Serenada",
             "Spanish": "Alakama",
             "Spanish (US)": "Alakama",
@@ -3575,10 +3892,10 @@
             "Russian": "Луна"
         },
         {
-            "English": "Luna",
-            "English (Europe)": "Luna",
-            "French": "Serena",
-            "French (US)": "Serena",
+            "English": "K.K.",
+            "English (Europe)": "K.K.",
+            "French": "Kéké",
+            "French (US)": "Kéké",
             "German": "K.K.",
             "Spanish": "Totakeke",
             "Spanish (US)": "Totakeke",
@@ -3591,10 +3908,10 @@
             "Russian": "К. К."
         },
         {
-            "English": "K.K.",
-            "English (Europe)": "K.K.",
-            "French": "Kéké",
-            "French (US)": "Kéké",
+            "English": "DJ KK",
+            "English (Europe)": "DJ KK",
+            "French": "DJ Kéké",
+            "French (US)": "DJ Kéké",
             "German": "DJ K.K.",
             "Spanish": "DJ KeKe",
             "Spanish (US)": "DJ KeKe",
@@ -3607,10 +3924,10 @@
             "Russian": "DJ KK"
         },
         {
-            "English": "DJ KK",
-            "English (Europe)": "DJ KK",
-            "French": "DJ Kéké",
-            "French (US)": "DJ Kéké",
+            "English": "Tortimer",
+            "English (Europe)": "Tortimer",
+            "French": "Tortimer",
+            "French (US)": "Tortimer",
             "German": "Törtel",
             "Spanish": "Tórtimer",
             "Spanish (US)": "Tórtimer",
@@ -3623,10 +3940,10 @@
             "Russian": "Тортимер"
         },
         {
-            "English": "Tortimer",
-            "English (Europe)": "Tortimer",
-            "French": "Tortimer",
-            "French (US)": "Tortimer",
+            "English": "Franklin",
+            "English (Europe)": "Franklin",
+            "French": "Dindou",
+            "French (US)": "Dindou",
             "German": "Gernod",
             "Spanish": "Guindo",
             "Spanish (US)": "Guindo",
@@ -3639,10 +3956,10 @@
             "Russian": "Франклин"
         },
         {
-            "English": "Franklin",
-            "English (Europe)": "Franklin",
-            "French": "Dindou",
-            "French (US)": "Dindou",
+            "English": "Shrunk",
+            "English (Europe)": "Shrunk",
+            "French": "Ciboulot",
+            "French (US)": "Ciboulot",
             "German": "Samselt",
             "Spanish": "Dr. Sito",
             "Spanish (US)": "Dr. Sito",
@@ -3655,10 +3972,10 @@
             "Russian": "Шранк"
         },
         {
-            "English": "Shrunk",
-            "English (Europe)": "Shrunk",
-            "French": "Ciboulot",
-            "French (US)": "Ciboulot",
+            "English": "Wendell",
+            "English (Europe)": "Wendell",
+            "French": "Morsicus",
+            "French (US)": "Morsicus",
             "German": "Winci",
             "Spanish": "Da Morsi",
             "Spanish (US)": "Da Morsi",
@@ -3671,10 +3988,10 @@
             "Russian": "Уэнделл"
         },
         {
-            "English": "Wendell",
-            "English (Europe)": "Wendell",
-            "French": "Morsicus",
-            "French (US)": "Morsicus",
+            "English": "Rover",
+            "English (Europe)": "Rover",
+            "French": "Charly",
+            "French (US)": "Charly",
             "German": "Olli",
             "Spanish": "Fran",
             "Spanish (US)": "Fran",
@@ -3685,12 +4002,6 @@
             "Japanese": "みしらぬネコ",
             "Korean": "낯선고양이",
             "Russian": "Ровер"
-        },
-        {
-            "English": "Rover",
-            "English (Europe)": "Rover",
-            "French": "Charly",
-            "French (US)": "Charly"
         },
         {
             "English": "Check Toy Day stockings the day after Toy Day",
@@ -3744,7 +4055,8 @@
             "English": "Fishing",
             "English (Europe)": "Fishing",
             "French": "Pêcher",
-            "French (US)": "Pêcher"
+            "French (US)": "Pêcher",
+            "Spanish": "Pesca"
         },
         {
             "English": "Breaking 100 axes",
@@ -3828,13 +4140,15 @@
             "English": "Tent",
             "English (Europe)": "Tent",
             "French": "Tente",
-            "French (US)": "Tente"
+            "French (US)": "Tente",
+            "Spanish": "Tienda"
         },
         {
             "English": "Initial House",
             "English (Europe)": "Initial House",
             "French": "Maison initiale",
-            "French (US)": "Maison initiale"
+            "French (US)": "Maison initiale",
+            "Spanish": "Casa inicial"
         },
         {
             "English": "5th House Upgrade",
@@ -3864,7 +4178,8 @@
             "English": "Dig Spot",
             "English (Europe)": "Dig Spot",
             "French": "Creuser un trou",
-            "French (US)": "Creuser un trou"
+            "French (US)": "Creuser un trou",
+            "Spanish": "Lugar de excavación"
         },
         {
             "English": "Planting a bamboo shoot",
@@ -3942,7 +4257,8 @@
             "English": "Beach",
             "English (Europe)": "Beach",
             "French": "Plage",
-            "French (US)": "Plage"
+            "French (US)": "Plage",
+            "Spanish": "Playa"
         },
         {
             "English": "Delivering item for a villager",
@@ -4032,7 +4348,8 @@
             "English": "Musical Instrument",
             "English (Europe)": "Musical Instrument",
             "French": "Instrument de musique",
-            "French (US)": "Instrument de musique"
+            "French (US)": "Instrument de musique",
+            "Spanish": "Instrumento musical"
         },
         {
             "English": "Fan",
@@ -4044,7 +4361,8 @@
             "English": "Hospital",
             "English (Europe)": "Hospital",
             "French": "Hôpital",
-            "French (US)": "Hôpital"
+            "French (US)": "Hôpital",
+            "Spanish": "Hospital"
         },
         {
             "English": "Seaside",
@@ -4056,13 +4374,15 @@
             "English": "Vehicle",
             "English (Europe)": "Vehicle",
             "French": "Véhicule",
-            "French (US)": "Véhicule"
+            "French (US)": "Véhicule",
+            "Spanish": "Vehículo"
         },
         {
             "English": "Bed",
             "English (Europe)": "Bed",
             "French": "Lit",
-            "French (US)": "Lit"
+            "French (US)": "Lit",
+            "Spanish": "Cama"
         },
         {
             "English": "Desk",
@@ -4140,19 +4460,22 @@
             "English": "Sofa",
             "English (Europe)": "Sofa",
             "French": "Canapé",
-            "French (US)": "Canapé"
+            "French (US)": "Canapé",
+            "Spanish": "Sofá"
         },
         {
             "English": "Lamp",
             "English (Europe)": "Lamp",
             "French": "Lampe",
-            "French (US)": "Lampe"
+            "French (US)": "Lampe",
+            "Spanish": "Lámpara"
         },
         {
             "English": "Screen",
             "English (Europe)": "Screen",
             "French": "Ecran",
-            "French (US)": "Ecran"
+            "French (US)": "Ecran",
+            "Spanish": "Pantalla"
         },
         {
             "English": "Shelf",
@@ -4164,7 +4487,8 @@
             "English": "Audio",
             "English (Europe)": "Audio",
             "French": "Audio",
-            "French (US)": "Audio"
+            "French (US)": "Audio",
+            "Spanish": "Audio"
         },
         {
             "English": "Outdoors Decor",
@@ -4182,7 +4506,8 @@
             "English": "Garden",
             "English (Europe)": "Garden",
             "French": "Jardin",
-            "French (US)": "Jardin"
+            "French (US)": "Jardin",
+            "Spanish": "Jardín"
         },
         {
             "English": "Animal",
@@ -4200,7 +4525,8 @@
             "English": "Plants",
             "English (Europe)": "Plants",
             "French": "Plantes",
-            "French (US)": "Plantes"
+            "French (US)": "Plantes",
+            "Spanish": "Plantas"
         },
         {
             "English": "Compass",
@@ -4212,7 +4538,8 @@
             "English": "Kitchen",
             "English (Europe)": "Kitchen",
             "French": "Cuisine",
-            "French (US)": "Cuisine"
+            "French (US)": "Cuisine",
+            "Spanish": "Cocina"
         },
         {
             "English": "Easter",
@@ -4284,7 +4611,8 @@
             "English": "TV",
             "English (Europe)": "TV",
             "French": "TV",
-            "French (US)": "TV"
+            "French (US)": "TV",
+            "Spanish": "TV"
         },
         {
             "English": "Zen-style",
@@ -4386,37 +4714,43 @@
             "English": "Catalog",
             "English (Europe)": "Catalog",
             "French": "Catalogue",
-            "French (US)": "Catalogue"
+            "French (US)": "Catalogue",
+            "Spanish": "Catálogo"
         },
         {
             "English": "For sale",
             "English (Europe)": "For sale",
             "French": "A vendre",
-            "French (US)": "A vendre"
+            "French (US)": "A vendre",
+            "Spanish": "En venta"
         },
         {
             "English": "None",
             "English (Europe)": "None",
             "French": "Aucune",
-            "French (US)": "Aucune"
+            "French (US)": "Aucune",
+            "Spanish": "None"
         },
         {
             "English": "Color 1",
             "English (Europe)": "Color 1",
             "French": "Couleur 1",
-            "French (US)": "Couleur 1"
+            "French (US)": "Couleur 1",
+            "Spanish": "Color 1"
         },
         {
             "English": "Color 2",
             "English (Europe)": "Color 2",
             "French": "Couleur 2",
-            "French (US)": "Couleur 2"
+            "French (US)": "Couleur 2",
+            "Spanish": "Color 2"
         },
         {
             "English": "Natural",
             "English (Europe)": "Natural",
             "French": "Naturel",
-            "French (US)": "Naturel"
+            "French (US)": "Naturel",
+            "Spanish": "Natural"
         },
         {
             "English": "Cherry",
@@ -4434,13 +4768,15 @@
             "English": "Gold",
             "English (Europe)": "Gold",
             "French": "Or",
-            "French (US)": "Or"
+            "French (US)": "Or",
+            "Spanish": "Oro"
         },
         {
             "English": "Forest",
             "English (Europe)": "Forest",
             "French": "Forêt",
-            "French (US)": "Forêt"
+            "French (US)": "Forêt",
+            "Spanish": "Bosque"
         },
         {
             "English": "Fishing Spot",
@@ -4488,7 +4824,8 @@
             "English": "Achievements",
             "English (Europe)": "Achievements",
             "French": "Miles Nook",
-            "French (US)": "Miles Nook"
+            "French (US)": "Miles Nook",
+            "Spanish": "Logros"
         },
         {
             "English": "Search for an item",
@@ -4500,7 +4837,8 @@
             "English": "Not found",
             "English (Europe)": "Not found",
             "French": "Introuvable",
-            "French (US)": "Introuvable"
+            "French (US)": "Introuvable",
+            "Spanish": "Extraviado"
         },
         {
             "English": "Season/Event",
@@ -4572,13 +4910,15 @@
             "English": "Season",
             "English (Europe)": "Season",
             "French": "Saison",
-            "French (US)": "Saison"
+            "French (US)": "Saison",
+            "Spanish": "Temporada"
         },
         {
             "English": "Event Exclusive",
             "English (Europe)": "Event Exclusive",
             "French": "Exclusif à l'évènement",
-            "French (US)": "Exclusif à l'évènement"
+            "French (US)": "Exclusif à l'évènement",
+            "Spanish": "Evento exclusivo"
         },
         {
             "English": "Wedding Season",
@@ -4878,13 +5218,15 @@
             "English": "Real",
             "English (Europe)": "Real",
             "French": "Le Vrai",
-            "French (US)": "Le Vrai"
+            "French (US)": "Le Vrai",
+            "Spanish": "Verdadero"
         },
         {
             "English": "Fake",
             "English (Europe)": "Fake",
             "French": "Le Faux",
-            "French (US)": "Le Faux"
+            "French (US)": "Le Faux",
+            "Spanish": "Falso"
         },
         {
             "English": "If you enjoy my app and would like to support me, send me an email! (Tap here)",
@@ -4962,13 +5304,15 @@
             "English": "Last day!",
             "English (Europe)": "Last day!",
             "French": "Dernier jour !",
-            "French (US)": "Dernier jour !"
+            "French (US)": "Dernier jour !",
+            "Spanish": "¡Último día!"
         },
         {
             "English": "End",
             "English (Europe)": "End",
             "French": "Fin",
-            "French (US)": "Fin"
+            "French (US)": "Fin",
+            "Spanish": "Final"
         },
         {
             "English": "Notifications are created based on the categories you select. They are only loaded one week into the future and are set according to your phone time.",
@@ -4998,7 +5342,8 @@
             "English": "App notifications",
             "English (Europe)": "App notifications",
             "French": "Notifications de l'application",
-            "French (US)": "Notifications de l'application"
+            "French (US)": "Notifications de l'application",
+            "Spanish": "Notificaciones de la aplicación"
         },
         {
             "English": "You can select event notifications under the [Edit Events] of the [Events] section on the homepage.",
@@ -5028,7 +5373,8 @@
             "English": "Visitors",
             "English (Europe)": "Visitors",
             "French": "Visiteurs",
-            "French (US)": "Visiteurs"
+            "French (US)": "Visiteurs",
+            "Spanish": "Visitantes"
         },
         {
             "English": "Clear History",
@@ -5100,7 +5446,8 @@
             "English": "Ready Days",
             "English (Europe)": "Ready Days",
             "French": "Jours de préparation",
-            "French (US)": "Jours de préparation"
+            "French (US)": "Jours de préparation",
+            "Spanish": "Días listos"
         },
         {
             "English": "All villagers (while stung)",
@@ -5425,14 +5772,34 @@
             "English (Europe)": "French",
             "French": "Français",
             "French (US)": "Français"
+        },
+        {
+            "English": "Spanish",
+            "English (Europe)": "Spanish"
+        },
+        {
+            "English": "You can read more details about gifts by visiting the events and guide page",
+            "English (Europe)": "You can read more details about gifts by visiting the events and guide page"
+        },
+        {
+            "English": "Tap here to read more about gifting",
+            "English (Europe)": "Tap here to read more about gifting"
+        },
+        {
+            "English": "Show empty check marks",
+            "English (Europe)": "Show empty check marks"
+        },
+        {
+            "English": "Show an empty check mark in lists. Can be tapped to quickly check off the item. Disabling this can increase performance as less animations need to be rendered.",
+            "English (Europe)": "Show an empty check mark in lists. Can be tapped to quickly check off the item. Disabling this can increase performance as less animations need to be rendered."
         }
     ],
     "Achievements": [
         {
-            "English": "Miles!",
-            "English (Europe)": "Miles!",
-            "French": "Miles de bienvenue !",
-            "French (US)": "Miles de bienvenue !"
+            "English": "(island name) Miles!",
+            "English (Europe)": "(island name) Miles!",
+            "French": "(island name) Miles de bienvenue !",
+            "French (US)": "(island name) Miles de bienvenue !"
         },
         {
             "English": "Angling for Perfection!",
@@ -5821,8 +6188,8 @@
         {
             "English": "(island name) Icons",
             "English (Europe)": "(island name) Icons",
-            "French": "Hightown dans l'âme",
-            "French (US)": "Hightown dans l'âme"
+            "French": "(island name) Hightown dans l'âme",
+            "French (US)": "(island name) Hightown dans l'âme"
         },
         {
             "English": "Island Designer",
@@ -6085,8 +6452,8 @@
         {
             "English": "(island name)'s local fruit delicacy is a wonder, to be sure. But if you plant new varieties, guess what'll happen? Correct! You'll \"grow\" some Nook Miles! What you do with the fruit after that is up to you.",
             "English (Europe)": "(island name)'s local fruit delicacy is a wonder, to be sure. But if you plant new varieties, guess what'll happen? Correct! You'll \"grow\" some Nook Miles! What you do with the fruit after that is up to you.",
-            "French": "Les fruits cultivés à (nom de l'île) sont un régal, mais il existe d'autres variétés dans ce vaste monde. À chaque nouvelle variété que tu plantes sur cette île, tu empoches des miles Nook !",
-            "French (US)": "Les fruits cultivés à (nom de l'île) sont un régal, mais il existe d'autres variétés dans ce vaste monde. À chaque nouvelle variété que tu plantes sur cette île, tu empoches des miles Nook !"
+            "French": "Les fruits cultivés à (island name) sont un régal, mais il existe d'autres variétés dans ce vaste monde. À chaque nouvelle variété que tu plantes sur cette île, tu empoches des miles Nook !",
+            "French (US)": "Les fruits cultivés à (island name) sont un régal, mais il existe d'autres variétés dans ce vaste monde. À chaque nouvelle variété que tu plantes sur cette île, tu empoches des miles Nook !"
         },
         {
             "English": "Different kinds of shrubs usher in the different seasons with their flowers, yes, yes! Folks who plant many shrubs will receive beauty and miles as a reward.",
@@ -6373,8 +6740,8 @@
         {
             "English": "Collecting artwork contributes to the cultural quality of (island name) and Nook Inc. will give miles to folks who prove themselves discerning connoisseurs.",
             "English (Europe)": "Collecting artwork contributes to the cultural quality of (island name) and Nook Inc. will give miles to folks who prove themselves discerning connoisseurs.",
-            "French": "Plus (Nom de l'île) accueillera d'œuvres d'art, plus son prestige culturel s'accroîtra. C'est pourquoi Nook Inc. récompense les fins connaisseurs en leur distribuant des miles !",
-            "French (US)": "Plus (Nom de l'île) accueillera d'œuvres d'art, plus son prestige culturel s'accroîtra. C'est pourquoi Nook Inc. récompense les fins connaisseurs en leur distribuant des miles !"
+            "French": "Plus (island name) accueillera d'œuvres d'art, plus son prestige culturel s'accroîtra. C'est pourquoi Nook Inc. récompense les fins connaisseurs en leur distribuant des miles !",
+            "French (US)": "Plus (island name) accueillera d'œuvres d'art, plus son prestige culturel s'accroîtra. C'est pourquoi Nook Inc. récompense les fins connaisseurs en leur distribuant des miles !"
         },
         {
             "English": "If you meet a laid-back fellow floating in the sea, consider sharing some of your scallops with him. You never know what you might learn in return...and a little gift never hurts either!",
@@ -10233,6 +10600,20 @@
             "English (Europe)": "Supreme Being",
             "French": "Divinité",
             "French (US)": "Divinité"
+        }
+    ],
+    "Special Translations": [
+        {
+            "Special translations that need to be implemented at the code level, no special foramtting needed, just used for reference": "English",
+            "undefined": "Russian"
+        },
+        {
+            "Special translations that need to be implemented at the code level, no special foramtting needed, just used for reference": "[Villager]'s Birthday",
+            "undefined": "Anniversaire de [Villager]"
+        },
+        {
+            "Special translations that need to be implemented at the code level, no special foramtting needed, just used for reference": "[Name] of [Island Name] island",
+            "undefined": "[Name] de l'île [Island Name]"
         }
     ]
 }

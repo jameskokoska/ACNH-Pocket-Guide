@@ -149,7 +149,7 @@ class AchievementsPopup extends Component {
     var name = attemptToTranslateAchievement(this.state.selectedAchievement["Name"]);
     name = name.replace("(island name)", global.islandName)
     var description = attemptToTranslateAchievement(this.state.selectedAchievement["Achievement Description"])
-    name = description.replace("(island name)", global.islandName)
+    description = description.replace("(island name)", global.islandName)
     this.getNouns();
     return <>
       <PopupBottomCustom ref={(popup) => this.popup = popup}>

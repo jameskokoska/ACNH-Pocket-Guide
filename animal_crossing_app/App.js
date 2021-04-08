@@ -50,13 +50,18 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
--Fixed color displaying even though there is 'None' in different languages
+-Empty check marks are now shown so you can check off items faster, disable this to slightly improve loading times
 -You can tap a villagers birthday event to see details about that villager
--Fixed checkmark sync on variations
--Filters don't attempt to load if the page does not have any filters
 -Added redirect/info popup to read more about gifts from gifts page and What are villager gifts popup
 -Backup data now backups achievements and profile information too
--Empty check marks are now shown so you can check off items faster, disable this to slightly improve loading times
+-Fixed color displaying even though there is 'None' in different languages
+-Fixed check mark sync on variations
+-Filters don't attempt to load if the page does not have any filters
+-Fixed K.K. slider event time
+-Added Spanish translations, more coming soon
+- Thanks Vicente and adrisniper7!
+-Updated French translations
+- Thanks Christophe!
 -
 -You can now view what items you can get from events by tapping them!
 -Reworked how back button works - enable Back button to previous page

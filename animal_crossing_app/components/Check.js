@@ -21,8 +21,6 @@ class Check extends Component {
     this.mounted=true;
     if(this.props.play===true){
       this.animateIn();
-    } else if(this.props.play===false){
-      this.animateOut();
     }
   }
   componentWillUnmount() {
@@ -69,9 +67,8 @@ class Check extends Component {
         loop={false}
         progress={this.state.progress}
         resizeMode="cover" 
-       
         style={[this.props.style,{
-          opacity: this.props.play? (global.darkMode?0.9:1) : (global.darkMode?0.7:1),
+          opacity: this.props.play? (global.darkMode?0.95:1) : (global.darkMode?0.7:1),
           width: this.props.width,
           height: this.props.height,
         }]} source={this.checkMarkAnimationJSON}
