@@ -13,8 +13,7 @@ import {MailLink, ExternalLink, SubHeader, Paragraph} from "../components/Format
 import {LocaleConfig} from 'react-native-calendars';
 import Header from "../components/Header"
 import {VillagerPopupPopup} from "./HomePage"
-
-
+import {specialEvents, isDateInRange} from "../components/DateFunctions"
 
 //Note: these have changes
 // Northern Hemisphere Dates -> Dates (Northern Hemisphere)
@@ -108,12 +107,11 @@ export default class CalendarPage extends Component {
     }}
 
     setTimeout(() => {
-      for (let i = -5; i < 30; i++) {
+      for (let i = -5; i < 50; i++) {
         const date = new Date();
         date.setDate(day.day + i);
         date.setMonth(day.month);
         date.setFullYear(day.year);
-        console.log(day)
         const strTime = this.dateToString(date);
         const seasonData = require("../assets/data/data.json")["Seasons and Events"];
         const villagerData = require("../assets/data/data.json")["Villagers"];
@@ -296,59 +294,6 @@ export default class CalendarPage extends Component {
   
 }
 
-//range >> February 25 – May 21
-  //date >> Date object
-export function isDateInRange(range,rangeYear, date, specialCheck=""){ //startOnly, endOnly
-  if(range===undefined){
-    return false;
-  }
-  var rangeSplit = range.replace(/[^\x00-\x7F]/g, "");
-  rangeSplit = rangeSplit.replace("  ", " ");
-  rangeSplit = rangeSplit.split(" ");
-  if(specialCheck!==""){
-    if(specialCheck==="startOnly"){
-      if(date.getMonth()===parseInt(getMonthFromString(rangeSplit[0], true)) && date.getDate() === parseInt(rangeSplit[1])){
-        return true;
-      } else {
-        return false;
-      }
-    }else if(rangeSplit.length===4 && specialCheck==="endOnly"){
-      if(date.getMonth()===parseInt(getMonthFromString(rangeSplit[2], true)) && date.getDate() === parseInt(rangeSplit[3])){
-        return true;
-      } else {
-        return false;
-      }
-    } else {
-      return;
-    }
-  }
-  if(rangeSplit.length===4){
-    var dateStart = new Date('January 10, 2000 12:00:00');
-    dateStart.setMonth(getMonthFromString(rangeSplit[0]));
-    dateStart.setDate(rangeSplit[1]);
-    dateStart.setYear(rangeYear);
-    var dateEnd= new Date('January 10, 2000 12:00:00');
-    dateEnd.setMonth(getMonthFromString(rangeSplit[2]));
-    dateEnd.setDate(parseInt(rangeSplit[3])+1); //ensures the end date is larger so current date is within range
-    dateEnd.setYear(rangeYear);
-    if(parseInt(getMonthFromString(rangeSplit[2]))<parseInt(getMonthFromString(rangeSplit[0]))){
-      dateEnd.setYear(parseInt(rangeYear)+1);
-    }
-    if(date>dateStart && date<dateEnd){
-      return true;
-    } else {
-      return false;
-    }
-  } else if(rangeSplit.length===2){
-    if(date.getMonth()===parseInt(getMonthFromString(rangeSplit[0], true)) && date.getDate() === parseInt(rangeSplit[1])){
-      return true;
-    } else {
-      return false;
-    }
-  } else{
-    return false;
-  }
-}
 
 class BottomBar extends Component {  
   render(){
@@ -481,211 +426,3 @@ class RenderItemFlatList extends Component{
   }
   
 }
-
-export const specialEvents = [
-  {
-        "Name" : "Fireworks Show",
-        "Month": "Aug",
-        "Day Start": "NA",
-        "Day End": "NA",
-        "Special Day" : "Sunday",
-        "Special Occurrence": "1",
-        "Hemisphere": "NA",
-        "Time" : "7 PM - 12 AM",
-        "Time24" : "19:00 - 00:00",
-        "Image" : "fireworks.png"
-    },
-    {
-        "Name" : "Fireworks Show",
-        "Month": "Aug",
-        "Day Start": "NA",
-        "Day End": "NA",
-        "Special Day" : "Sunday",
-        "Special Occurrence": "2",
-        "Hemisphere": "NA",
-        "Time" : "7 PM - 12 AM",
-        "Time24" : "19:00 - 00:00",
-        "Image" : "fireworks.png"
-    },
-    {
-        "Name" : "Fireworks Show",
-        "Month": "Aug",
-        "Day Start": "NA",
-        "Day End": "NA",
-        "Special Day" : "Sunday",
-        "Special Occurrence": "3",
-        "Hemisphere": "NA",
-        "Time" : "7 PM - 12 AM",
-        "Time24" : "19:00 - 00:00",
-        "Image" : "fireworks.png"
-    },
-    {
-        "Name" : "Fireworks Show",
-        "Month": "Aug",
-        "Day Start": "NA",
-        "Day End": "NA",
-        "Special Day" : "Sunday",
-        "Special Occurrence": "4",
-        "Hemisphere": "NA",
-        "Time" : "7 PM - 12 AM",
-        "Time24" : "19:00 - 00:00",
-        "Image" : "fireworks.png"
-    },
-    {
-        "Name" : "Fireworks Show",
-        "Month": "Aug",
-        "Day Start": "NA",
-        "Day End": "NA",
-        "Special Day" : "Sunday",
-        "Special Occurrence": "5",
-        "Hemisphere": "NA",
-        "Time" : "7 PM - 12 AM",
-        "Time24" : "19:00 - 00:00",
-        "Image" : "fireworks.png"
-    },
-   {
-        "Name" : "Bug-Off",
-        "Month": "Jan",
-        "Day Start": "NA",
-        "Day End": "NA",
-        "Special Day" : "Saturday",
-        "Special Occurrence": "3",
-        "Hemisphere": "Southern",
-        "Time" : "9 AM - 6 PM",
-        "Time24" : "9:00 - 18:00",
-        "Image" : "bugs.png"
-    },
-    {
-        "Name" : "Bug-Off",
-        "Month": "Feb",
-        "Day Start": "NA",
-        "Day End": "NA",
-        "Special Day" : "Saturday",
-        "Special Occurrence": "3",
-        "Hemisphere": "Southern",
-        "Time" : "9 AM - 6 PM",
-        "Time24" : "9:00 - 18:00",
-        "Image" : "bugs.png"
-    },
-    {
-        "Name" : "Bug-Off",
-        "Month": "Nov",
-        "Day Start": "NA",
-        "Day End": "NA",
-        "Special Day" : "Saturday",
-        "Special Occurrence": "3",
-        "Hemisphere": "Southern",
-        "Time" : "9 AM - 6 PM",
-        "Time24" : "9:00 - 18:00",
-        "Image" : "bugs.png"
-    },
-    {
-        "Name" : "Bug-Off",
-        "Month": "Dec",
-        "Day Start": "NA",
-        "Day End": "NA",
-        "Special Day" : "Saturday",
-        "Special Occurrence": "3",
-        "Hemisphere": "Southern",
-        "Time" : "9 AM - 6 PM",
-        "Time24" : "9:00 - 18:00",
-        "Image" : "bugs.png"
-    },
-    {
-        "Name" : "Bug-Off",
-        "Month": "June",
-        "Day Start": "NA",
-        "Day End": "NA",
-        "Special Day" : "Saturday",
-        "Special Occurrence": "4",
-        "Hemisphere": "Northern",
-        "Time" : "9 AM - 6 PM",
-        "Time24" : "9:00 - 18:00",
-        "Image" : "bugs.png"
-    },
-    {
-        "Name" : "Bug-Off",
-        "Month": "July",
-        "Day Start": "NA",
-        "Day End": "NA",
-        "Special Day" : "Saturday",
-        "Special Occurrence": "4",
-        "Hemisphere": "Northern",
-        "Time" : "9 AM - 6 PM",
-        "Time24" : "9:00 - 18:00",
-        "Image" : "bugs.png"
-    },
-    {
-        "Name" : "Bug-Off",
-        "Month": "Aug",
-        "Day Start": "NA",
-        "Day End": "NA",
-        "Special Day" : "Saturday",
-        "Special Occurrence": "4",
-        "Hemisphere": "Northern",
-        "Time" : "9 AM - 6 PM",
-        "Time24" : "9:00 - 18:00",
-        "Image" : "bugs.png"
-    },
-    {
-        "Name" : "Bug-Off",
-        "Month": "Sept",
-        "Day Start": "NA",
-        "Day End": "NA",
-        "Special Day" : "Saturday",
-        "Special Occurrence": "4",
-        "Hemisphere": "Northern",
-        "Time" : "9 AM - 6 PM",
-        "Time24" : "9:00 - 18:00",
-        "Image" : "bugs.png"
-    },
-    {
-        "Name" : "Fishing Tourney",
-        "Month": "Jan",
-        "Day Start": "NA",
-        "Day End": "NA",
-        "Special Day" : "Saturday",
-        "Special Occurrence": "2",
-        "Hemisphere": "NA",
-        "Time" : "9 AM - 6 PM",
-        "Time24" : "9:00 - 18:00",
-        "Image" : "fish.png"
-    },
-    {
-        "Name" : "Fishing Tourney",
-        "Month": "Apr",
-        "Day Start": "NA",
-        "Day End": "NA",
-        "Special Day" : "Saturday",
-        "Special Occurrence": "2",
-        "Hemisphere": "NA",
-        "Time" : "9 AM - 6 PM",
-        "Time24" : "9:00 - 18:00",
-        "Image" : "fish.png"
-    },
-    {
-        "Name" : "Fishing Tourney",
-        "Month": "July",
-        "Day Start": "NA",
-        "Day End": "NA",
-        "Special Day" : "Saturday",
-        "Special Occurrence": "2",
-        "Hemisphere": "NA",
-        "Time" : "9 AM - 6 PM",
-        "Time24" : "9:00 - 18:00",
-        "Image" : "fish.png"
-    },
-    {
-        "Name" : "Fishing Tourney",
-        "Month": "Oct",
-        "Day Start": "NA",
-        "Day End": "NA",
-        "Special Day" : "Saturday",
-        "Special Occurrence": "2",
-        "Hemisphere": "NA",
-        "Time" : "9 AM - 6 PM",
-        "Time24" : "9:00 - 18:00",
-        "Image" : "fish.png"
-    },
-]
-

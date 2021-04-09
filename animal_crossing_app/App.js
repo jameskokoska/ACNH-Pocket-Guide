@@ -54,6 +54,7 @@ global.changelog = `
 -Fixed issue with special events and hemisphere (specifically the Bug-off)
 -Fixed crashes
 -Added more info redirect under Visitors section
+-Added translations to Season/Events in popups
 -
 -Added more Spanish translations
 -Fixed dream address in French
@@ -251,6 +252,7 @@ class App extends Component {
   }
 
   async componentDidMount(){
+    setTimeout(async () => {
     this.mounted = true;
     // await AsyncStorage.setItem("firstLogin", "true");
 
@@ -332,6 +334,7 @@ class App extends Component {
         loaded:true,
       });
     }
+    }, 10);
   }
 
   componentWillUnmount() {
