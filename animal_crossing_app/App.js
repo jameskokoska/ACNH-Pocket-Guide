@@ -50,6 +50,10 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
+-Added more Spanish translations
+-Fixed dream address in French
+-Fixed alphabetical sorting for accented words
+-
 -Empty check marks are now shown so you can check off items faster, disable this to slightly improve loading times
 -You can tap a villagers birthday event to see details about that villager
 -Added redirect/info popup to read more about gifts from gifts page and What are villager gifts popup

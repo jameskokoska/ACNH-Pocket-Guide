@@ -15,7 +15,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {getCurrentDateObject, doWeSwapDate} from '../components/DateFunctions';
 import TodoList from '../components/TodoList';
 import VisitorsList from '../components/VisitorsList';
-import {translateIslandNameInputLabel2, translateIslandNameInputLabel1, getSettingsString, attemptToTranslate} from "../LoadJsonData"
+import {translateDreamAddressBeginning, translateIslandNameInputLabel2, translateIslandNameInputLabel1, getSettingsString, attemptToTranslate} from "../LoadJsonData"
 import { ScrollView } from 'react-native-gesture-handler';
 import Popup, {PopupBottomCustom} from "../components/Popup"
 import VillagerPopup from "../popups/VillagerPopup"
@@ -256,13 +256,13 @@ class DreamAddress extends Component {
   }
   onChangeText = (text) =>{
     var newValue = "";
-    if(text==="DW"){
+    if(text===translateDreamAddressBeginning()){
       this.setState({dreamAddress:""});
-    } else if (text==="D"){
-      this.setState({dreamAddress:"DW-"});
+    } else if (text===translateDreamAddressBeginning()[0]){
+      this.setState({dreamAddress:translateDreamAddressBeginning()+"-"});
     } else {
       const afterIndices = [4,9,14]; 
-      var value = text.replace("DW-","");
+      var value = text.replace(translateDreamAddressBeginning()+"-","");
       for(let i=0; i<value.length; i++){
         if(afterIndices.includes(i)){
           newValue+="-";
@@ -271,7 +271,7 @@ class DreamAddress extends Component {
           newValue+=value[i];
         }
       }
-      newValue = "DW-"+newValue;
+      newValue = translateDreamAddressBeginning()+"-"+newValue;
       this.setState({dreamAddress:newValue});
     }
     global.dreamAddress=newValue;

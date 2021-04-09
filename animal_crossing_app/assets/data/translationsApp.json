@@ -145,14 +145,7 @@
             "English (Europe)": "K.K. Slider",
             "French": "Kéké Laglisse",
             "French (US)": "Kéké Laglisse",
-            "Spanish": "K.K. Deslizador"
-        },
-        {
-            "English": "Daisy Mae",
-            "English (Europe)": "Daisy Mae",
-            "French": "Porcelette",
-            "French (US)": "Porcelette",
-            "Spanish": "Margarita Mae"
+            "Spanish": "Totakeke Deslizador"
         },
         {
             "English": "January",
@@ -428,13 +421,6 @@
             "Spanish": "Deshabilitar la lista de edición"
         },
         {
-            "English": "Show Turnip Log",
-            "English (Europe)": "Show Turnip Log",
-            "French": "Afficher le Journal des Navets",
-            "French (US)": "Afficher le Journal des Navets",
-            "Spanish": "Mostrar Registro de Nabo"
-        },
-        {
             "English": "Add Task",
             "English (Europe)": "Add Task",
             "French": "Ajouter une Tâche",
@@ -467,7 +453,7 @@
             "English (Europe)": "Last week's pattern",
             "French": "Modèle de la semaine dernière",
             "French (US)": "Modèle de la semaine dernière",
-            "Spanish": "Modelo de la Semana Pasada"
+            "Spanish": "Modelo de la semana pasada"
         },
         {
             "English": "Unknown",
@@ -488,14 +474,14 @@
             "English (Europe)": "Small spike",
             "French": "Petit pic",
             "French (US)": "Petit pic",
-            "Spanish": "Punta Pequeña"
+            "Spanish": "Punta pequeña"
         },
         {
             "English": "Large spike",
             "English (Europe)": "Large spike",
             "French": "Grand pic",
             "French (US)": "Grand pic",
-            "Spanish": "Punta Larga"
+            "Spanish": "Punta larga"
         },
         {
             "English": "Decreasing",
@@ -509,7 +495,7 @@
             "English (Europe)": "First time buyer?",
             "French": "Premier achat?",
             "French (US)": "Premier achat?",
-            "Spanish": "Comprador de Primera Vez?"
+            "Spanish": "¿Comprador por primera vez?"
         },
         {
             "English": "Yes",
@@ -621,7 +607,7 @@
             "English (Europe)": "Bugs",
             "French": "Insectes",
             "French (US)": "Insectes",
-            "Spanish": "Insectos e Bichos"
+            "Spanish": "Insectos"
         },
         {
             "English": "Fossils",
@@ -666,13 +652,6 @@
             "Spanish": "Nombre"
         },
         {
-            "English": "of Island",
-            "English (Europe)": "of Island",
-            "French": "de l'île",
-            "French (US)": "de l'île",
-            "Spanish": "de la isla"
-        },
-        {
             "English": "Island",
             "English (Europe)": "Island",
             "French": "l'île",
@@ -705,7 +684,7 @@
             "English (Europe)": "Tap here and go add some",
             "French": "Appuie ici et ajoutes-en",
             "French (US)": "Appuie ici et ajoutes-en",
-            "Spanish": "Pulsa Aqui y Agrega Algunos"
+            "Spanish": "Pulsa aqui y agrega algunos"
         },
         {
             "English": "Store Hours",
@@ -880,7 +859,7 @@
             "English (Europe)": "Misc. Materials",
             "French": "Matériaux",
             "French (US)": "Matériaux",
-            "Spanish": "Materiales Misceláneos"
+            "Spanish": "Materiales"
         },
         {
             "English": "Materials",
@@ -1856,7 +1835,8 @@
             "English": "Curly River Island",
             "English (Europe)": "Curly River Island",
             "French": "Île à Rivière Courbée",
-            "French (US)": "Île à Rivière Courbée"
+            "French (US)": "Île à Rivière Courbée",
+            "Spanish": "Isla del río rizado"
         },
         {
             "English": "There is one square cliff at the north east, a few flowers and rocks and a small amount of fruit trees. Only insects associated with water spawn here.",
@@ -1881,7 +1861,8 @@
             "English": "Trash Island",
             "English (Europe)": "Trash Island",
             "French": "Île aux Déchets",
-            "French (US)": "Île aux Déchets"
+            "French (US)": "Île aux Déchets",
+            "Spanish": "Isla de basura"
         },
         {
             "English": "Everything you can fish here is trash. Only water-related insects spawn.",
@@ -1893,7 +1874,8 @@
             "English": "Fins Island",
             "English (Europe)": "Fins Island",
             "French": "Île aux Requins",
-            "French (US)": "Île aux Requins"
+            "French (US)": "Île aux Requins",
+            "Spanish": "Isla de aletas"
         },
         {
             "English": "A rectangular pond with rectangular cliffs inside, the tallest one being too tall to climb up to. The only fish that spawn here are the largest finned fish.",
@@ -1905,7 +1887,8 @@
             "English": "Falls Island",
             "English (Europe)": "Falls Island",
             "French": "Île aux Cascades",
-            "French (US)": "Île aux Cascades"
+            "French (US)": "Île aux Cascades",
+            "Spanish": "Isla de las cataratas"
         },
         {
             "English": "Lots of cliffs, waterfalls and river forks. Normal resource spawns.",
@@ -1942,7 +1925,8 @@
             "English": "Ladder",
             "English (Europe)": "Ladder",
             "French": "Echelle",
-            "French (US)": "Echelle"
+            "French (US)": "Echelle",
+            "Spanish": "Escalera"
         },
         {
             "English": "Vaulting Pole",
@@ -2030,7 +2014,7 @@
             "English (Europe)": "Special Event",
             "French": "Évènement Spécial",
             "French (US)": "Évènement Spécial",
-            "Spanish": "Evento especial"
+            "Spanish": "Evento Especial"
         },
         {
             "English": "Nook Shopping Event",
@@ -2114,13 +2098,15 @@
             "English": "Done",
             "English (Europe)": "Done",
             "French": "Fait",
-            "French (US)": "Fait"
+            "French (US)": "Fait",
+            "Spanish": "Hecho"
         },
         {
             "English": "OK",
             "English (Europe)": "OK",
             "French": "OK",
-            "French (US)": "OK"
+            "French (US)": "OK",
+            "Spanish": "Vale"
         },
         {
             "English": "Flying Near Flowers",
@@ -2138,13 +2124,15 @@
             "English": "On Trees",
             "English (Europe)": "On Trees",
             "French": "Sur les arbres",
-            "French (US)": "Sur les arbres"
+            "French (US)": "Sur les arbres",
+            "Spanish": "En los árboles"
         },
         {
             "English": "Shaking Trees",
             "English (Europe)": "Shaking Trees",
             "French": "En secouant les arbres",
-            "French (US)": "En secouant les arbres"
+            "French (US)": "En secouant les arbres",
+            "Spanish": "Sacudiendo Árboles"
         },
         {
             "English": "Flying Near Water",
@@ -2156,7 +2144,8 @@
             "English": "On The Ground",
             "English (Europe)": "On The Ground",
             "French": "Sur le sol",
-            "French (US)": "Sur le sol"
+            "French (US)": "Sur le sol",
+            "Spanish": "En el piso"
         },
         {
             "English": "On Palm Trees",
@@ -2498,13 +2487,15 @@
             "English": "Seasonal decor",
             "English (Europe)": "Seasonal decor",
             "French": "Décor saisonnier",
-            "French (US)": "Décor saisonnier"
+            "French (US)": "Décor saisonnier",
+            "Spanish": "Decoración de temporada"
         },
         {
             "English": "Nook Miles Redemption",
             "English (Europe)": "Nook Miles Redemption",
             "French": "Echange de Nook Miles",
-            "French (US)": "Echange de Nook Miles"
+            "French (US)": "Echange de Nook Miles",
+            "Spanish": "Canje de millas nook"
         },
         {
             "English": "Balloons",
@@ -2529,7 +2520,8 @@
             "English": "Birthday",
             "English (Europe)": "Birthday",
             "French": "Anniversaire",
-            "French (US)": "Anniversaire"
+            "French (US)": "Anniversaire",
+            "Spanish": "Cumpleaños"
         },
         {
             "English": "Wishlist",
@@ -2643,31 +2635,36 @@
             "English": "Alligator",
             "English (Europe)": "Alligator",
             "French": "Crocodile",
-            "French (US)": "Crocodile"
+            "French (US)": "Crocodile",
+            "Spanish": "Caimán"
         },
         {
             "English": "Eagle",
             "English (Europe)": "Eagle",
             "French": "Aigle",
-            "French (US)": "Aigle"
+            "French (US)": "Aigle",
+            "Spanish": "Águila"
         },
         {
             "English": "Anteater",
             "English (Europe)": "Anteater",
             "French": "Fourmilier",
-            "French (US)": "Fourmilier"
+            "French (US)": "Fourmilier",
+            "Spanish": "Oso hormiguero"
         },
         {
             "English": "Bull",
             "English (Europe)": "Bull",
             "French": "Taureau",
-            "French (US)": "Taureau"
+            "French (US)": "Taureau",
+            "Spanish": "Toro"
         },
         {
             "English": "Mouse",
             "English (Europe)": "Mouse",
             "French": "Souris",
-            "French (US)": "Souris"
+            "French (US)": "Souris",
+            "Spanish": "Ratón"
         },
         {
             "English": "Horse",
@@ -2680,25 +2677,29 @@
             "English": "Cub",
             "English (Europe)": "Cub",
             "French": "Ourson",
-            "French (US)": "Ourson"
+            "French (US)": "Ourson",
+            "Spanish": "Cachorro"
         },
         {
             "English": "Deer",
             "English (Europe)": "Deer",
             "French": "Cerf",
-            "French (US)": "Cerf"
+            "French (US)": "Cerf",
+            "Spanish": "Ciervo"
         },
         {
             "English": "Rabbit",
             "English (Europe)": "Rabbit",
             "French": "Lapin",
-            "French (US)": "Lapin"
+            "French (US)": "Lapin",
+            "Spanish": "Conejo"
         },
         {
             "English": "Kangaroo",
             "English (Europe)": "Kangaroo",
             "French": "Kangourou",
-            "French (US)": "Kangourou"
+            "French (US)": "Kangourou",
+            "Spanish": "Canguro"
         },
         {
             "English": "Wolf",
@@ -2760,13 +2761,15 @@
             "English": "Goat",
             "English (Europe)": "Goat",
             "French": "Chèvre",
-            "French (US)": "Chèvre"
+            "French (US)": "Chèvre",
+            "Spanish": "Cabra"
         },
         {
             "English": "Ostrich",
             "English (Europe)": "Ostrich",
             "French": "Autruche",
-            "French (US)": "Autruche"
+            "French (US)": "Autruche",
+            "Spanish": "Avestruz"
         },
         {
             "English": "Sheep",
@@ -2793,13 +2796,15 @@
             "English": "Cow",
             "English (Europe)": "Cow",
             "French": "Vache",
-            "French (US)": "Vache"
+            "French (US)": "Vache",
+            "Spanish": "Vaca"
         },
         {
             "English": "Bird",
             "English (Europe)": "Bird",
             "French": "Oiseau",
-            "French (US)": "Oiseau"
+            "French (US)": "Oiseau",
+            "Spanish": "Pájaro"
         },
         {
             "English": "Koala",
@@ -2861,7 +2866,8 @@
             "English": "Nook Shopping Daily Selection",
             "English (Europe)": "Nook Shopping Daily Selection",
             "French": "Sélection quotidienne du Nook Shopping",
-            "French (US)": "Sélection quotidienne du Nook Shopping"
+            "French (US)": "Sélection quotidienne du Nook Shopping",
+            "Spanish": "Selección diaria de compras nook"
         },
         {
             "English": "HHA",
@@ -2895,121 +2901,141 @@
             "English": "Hitting a rock",
             "English (Europe)": "Hitting a rock",
             "French": "Frapper un rocher",
-            "French (US)": "Frapper un rocher"
+            "French (US)": "Frapper un rocher",
+            "Spanish": "Golpeando una roca"
         },
         {
             "English": "Collecting leaf eggs",
             "English (Europe)": "Collecting leaf eggs",
             "French": "Collecter les oeufs feuillus",
-            "French (US)": "Collecter les oeufs feuillus"
+            "French (US)": "Collecter les oeufs feuillus",
+            "Spanish": "Recolectando huevos de hojas"
         },
         {
             "English": "Collecting sky eggs",
             "English (Europe)": "Collecting sky eggs",
             "French": "Collecter les oeufs aériens",
-            "French (US)": "Collecter les oeufs aériens"
+            "French (US)": "Collecter les oeufs aériens",
+            "Spanish": "Recolectando huevos del cielo"
         },
         {
             "English": "Collecting stone eggs",
             "English (Europe)": "Collecting stone eggs",
             "French": "Collecter les oeufs minéraux",
-            "French (US)": "Collecter les oeufs minéraux"
+            "French (US)": "Collecter les oeufs minéraux",
+            "Spanish": "Recolectando huevos de piedra"
         },
         {
             "English": "Collecting water eggs",
             "English (Europe)": "Collecting water eggs",
             "French": "Collecter les oeufs aquatiques",
-            "French (US)": "Collecter les oeufs aquatiques"
+            "French (US)": "Collecter les oeufs aquatiques",
+            "Spanish": "Recolectando huevos de agua"
         },
         {
             "English": "Collecting wood eggs",
             "English (Europe)": "Collecting wood eggs",
             "French": "Collecter les oeufs boisés",
-            "French (US)": "Collecter les oeufs boisés"
+            "French (US)": "Collecter les oeufs boisés",
+            "Spanish": "Recolectando huevos de madera"
         },
         {
             "English": "Redd's Raffle",
             "English (Europe)": "Redd's Raffle",
             "French": "Tombola de Redd",
-            "French (US)": "Tombola de Redd"
+            "French (US)": "Tombola de Redd",
+            "Spanish": "Rifa de Redd"
         },
         {
             "English": "K.K. concert",
             "English (Europe)": "K.K. concert",
             "French": "Concert de Kéké",
-            "French (US)": "Concert de Kéké"
+            "French (US)": "Concert de Kéké",
+            "Spanish": "K.K. Concierto"
         },
         {
             "English": "Apple Tree",
             "English (Europe)": "Apple Tree",
             "French": "Pommier",
-            "French (US)": "Pommier"
+            "French (US)": "Pommier",
+            "Spanish": "Árbol de manzana"
         },
         {
             "English": "Planting an apple",
             "English (Europe)": "Planting an apple",
             "French": "Planter une pomme",
-            "French (US)": "Planter une pomme"
+            "French (US)": "Planter une pomme",
+            "Spanish": "Plantar una manzana"
         },
         {
             "English": "Cherry Tree",
             "English (Europe)": "Cherry Tree",
             "French": "Cerisier",
-            "French (US)": "Cerisier"
+            "French (US)": "Cerisier",
+            "Spanish": "Árbol de cereza"
         },
         {
             "English": "Planting a cherry",
             "English (Europe)": "Planting a cherry",
             "French": "Planter une cerise",
-            "French (US)": "Planter une cerise"
+            "French (US)": "Planter une cerise",
+            "Spanish": "Plantar una cereza"
         },
         {
             "English": "Coconut Tree",
             "English (Europe)": "Coconut Tree",
             "French": "Cocotier",
-            "French (US)": "Cocotier"
+            "French (US)": "Cocotier",
+            "Spanish": "Árbol de coco"
         },
         {
             "English": "Planting a coconut",
             "English (Europe)": "Planting a coconut",
             "French": "Planter une noix de coco",
-            "French (US)": "Planter une noix de coco"
+            "French (US)": "Planter une noix de coco",
+            "Spanish": "Plantar un coco"
         },
         {
             "English": "Orange Tree",
             "English (Europe)": "Orange Tree",
             "French": "Oranger",
-            "French (US)": "Oranger"
+            "French (US)": "Oranger",
+            "Spanish": "Árbol de naranja"
         },
         {
             "English": "Planting an orange",
             "English (Europe)": "Planting an orange",
             "French": "Planter une orange",
-            "French (US)": "Planter une orange"
+            "French (US)": "Planter une orange",
+            "Spanish": "Plantar una naranja"
         },
         {
             "English": "Peach Tree",
             "English (Europe)": "Peach Tree",
             "French": "Pêcher",
-            "French (US)": "Pêcher"
+            "French (US)": "Pêcher",
+            "Spanish": "Árbol de melocotón"
         },
         {
             "English": "Planting a peach",
             "English (Europe)": "Planting a peach",
             "French": "Planter une pêche",
-            "French (US)": "Planter une pêche"
+            "French (US)": "Planter une pêche",
+            "Spanish": "Plantar un melocotón"
         },
         {
             "English": "Pear Tree",
             "English (Europe)": "Pear Tree",
             "French": "Poirier",
-            "French (US)": "Poirier"
+            "French (US)": "Poirier",
+            "Spanish": "Árbol de pera"
         },
         {
             "English": "Planting a pear",
             "English (Europe)": "Planting a pear",
             "French": "Planter une poire",
-            "French (US)": "Planter une poire"
+            "French (US)": "Planter une poire",
+            "Spanish": "Plantar una pera"
         },
         {
             "English": "Cyrus",
@@ -5775,23 +5801,39 @@
         },
         {
             "English": "Spanish",
-            "English (Europe)": "Spanish"
+            "English (Europe)": "Spanish",
+            "French": "Espagnol",
+            "French (US)": "Espagnol"
         },
         {
             "English": "You can read more details about gifts by visiting the events and guide page",
-            "English (Europe)": "You can read more details about gifts by visiting the events and guide page"
+            "English (Europe)": "You can read more details about gifts by visiting the events and guide page",
+            "French": "Vous pouvez en savoir plus sur les cadeaux en visitant la page des événements et du guide",
+            "French (US)": "Vous pouvez en savoir plus sur les cadeaux en visitant la page des événements et du guide"
         },
         {
             "English": "Tap here to read more about gifting",
-            "English (Europe)": "Tap here to read more about gifting"
+            "English (Europe)": "Tap here to read more about gifting",
+            "French": "Appuyez ici pour en savoir plus sur les cadeaux",
+            "French (US)": "Appuyez ici pour en savoir plus sur les cadeaux"
         },
         {
             "English": "Show empty check marks",
-            "English (Europe)": "Show empty check marks"
+            "English (Europe)": "Show empty check marks",
+            "French": "Afficher les coches vides",
+            "French (US)": "Afficher les coches vides"
         },
         {
             "English": "Show an empty check mark in lists. Can be tapped to quickly check off the item. Disabling this can increase performance as less animations need to be rendered.",
-            "English (Europe)": "Show an empty check mark in lists. Can be tapped to quickly check off the item. Disabling this can increase performance as less animations need to be rendered."
+            "English (Europe)": "Show an empty check mark in lists. Can be tapped to quickly check off the item. Disabling this can increase performance as less animations need to be rendered.",
+            "French": "Afficher une coche vide dans les listes. Peut être tapé pour cocher rapidement l'élément. La désactivation de cette option peut augmenter les performances car moins d'animations doivent être rendues.",
+            "French (US)": "Afficher une coche vide dans les listes. Peut être tapé pour cocher rapidement l'élément. La désactivation de cette option peut augmenter les performances car moins d'animations doivent être rendues."
+        },
+        {
+            "English": "Received in mail from DAL after 5 flights",
+            "English (Europe)": "Received in mail from DAL after 5 flights",
+            "French": "Reçu par courrier de la DAL après 5 vols",
+            "French (US)": "Reçu par courrier de la DAL après 5 vols"
         }
     ],
     "Achievements": [
@@ -10614,6 +10656,10 @@
         {
             "Special translations that need to be implemented at the code level, no special foramtting needed, just used for reference": "[Name] of [Island Name] island",
             "undefined": "[Name] de l'île [Island Name]"
+        },
+        {
+            "Special translations that need to be implemented at the code level, no special foramtting needed, just used for reference": "Dream address starts with [DW]",
+            "undefined": "Dream address starts with [DA]"
         }
     ]
 }

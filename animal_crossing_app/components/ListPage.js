@@ -197,8 +197,8 @@ export default (props) =>{
       if(getSettingsString("settingsSortAlphabetically")==="true"){
         var dataLoadedCopy = dataLoaded.slice(0);
         dataLoadedCopy.sort(function(a, b) {
-          var textA = a.NameLanguage.toUpperCase();
-          var textB = b.NameLanguage.toUpperCase();
+          var textA = removeAccents(a.NameLanguage.toUpperCase());
+          var textB = removeAccents(b.NameLanguage.toUpperCase());
           return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
         });
         dataLoaded = dataLoadedCopy

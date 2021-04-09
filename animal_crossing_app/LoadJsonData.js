@@ -750,6 +750,14 @@ export function checkTranslationEntry(textCheck, fallback){
   }
 }
 
+export function translateDreamAddressBeginning(villager){
+  if(global.language==="French" || global.language==="French (US)"){
+    return ("DA")
+  } else {
+    return ("DW")
+  }
+}
+
 export function translateBirthday(villager){
   if(global.language==="French" || global.language==="French (US)"){
     return ("Anniversaire de " + villager)
