@@ -4,7 +4,7 @@ import colors from '../Colors.js';
 import FastImage from './FastImage';
 import Check from './Check';
 import TextFont from './TextFont'
-import {inChecklist, attemptToTranslateItem, commas, capitalize, checkOff, capitalizeFirst} from '../LoadJsonData'
+import {getEventName, inChecklist, attemptToTranslateItem, commas, capitalize, checkOff, capitalizeFirst} from '../LoadJsonData'
 import {getSizeImage, getPhotoCorner, getMaterialImage} from "./GetPhoto"
 import {getSettingsString, attemptToTranslate, attemptToTranslateSpecial} from "../LoadJsonData"
 import {ScrollView} from 'react-native-gesture-handler'
@@ -142,6 +142,9 @@ export class InfoLine extends Component {
     }
     var text1 = attemptToTranslateSpecial(this.props.item[this.props.textProperty], "variants");
     var text2 = attemptToTranslateSpecial(this.props.item[this.props.textProperty2], "variants");
+    if(this.props.textProperty[0]==="Season/Event"){
+      text1 = getEventName(text1);
+    }
     if(this.props.textProperty[0]==="Favorite Song"){
       text1 = attemptToTranslateItem(this.props.item[this.props.textProperty])
     }

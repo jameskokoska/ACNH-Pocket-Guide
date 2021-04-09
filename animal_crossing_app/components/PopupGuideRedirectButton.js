@@ -43,6 +43,9 @@ import {SubHeader, Paragraph} from "./Formattings"
 
 export default class GuideRedirectButton extends Component {
   render(){
+    if(this.props.extraInfo===undefined || this.props.setPage===undefined){
+      return <View/>
+    }
     var icon;
     if(this.props.icon==="i"){
       icon = global.darkMode?require("../assets/icons/infoWhite.png"):require("../assets/icons/info.png");
