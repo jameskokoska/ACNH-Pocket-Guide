@@ -35,24 +35,25 @@ function addDays(date, days) {
   return result;
 }
 
-class HomePage extends Component{
+class HomePage extends Component {
   constructor(props){
     super(props);
     var eventSections = props.eventSections;
     if(eventSections.hasOwnProperty("App notifications")){
       getSettingsString("settingsNotifications")==="true" ? eventSections["App notifications"]=true : eventSections["App notifications"]=false;
     }
-    var landscape = <View style={{width:Dimensions.get('window').width, height: "100%", zIndex:1, position:'absolute', overflow: "hidden" }}><LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/home.json')}/></View>
-    if(getCurrentDateObject().getMonth()===11||getCurrentDateObject().getMonth()===0){
-      landscape = <View style={{width:Dimensions.get('window').width, height: "100%", zIndex:1, position:'absolute', overflow: "hidden" }}><LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeSnow.json')}/></View>
-    } 
-    this.state = {sections:props.sections, eventSections:eventSections, landscape:landscape}
+    this.state = {sections:props.sections, eventSections:eventSections}
+    this.refreshEvents();
   }
-
-  setLandscapeSpecial = ()=>{
-    this.setState({landscape:<View style={{width:Dimensions.get('window').width, height: "100%", zIndex:1, position:'absolute', overflow: "hidden" }}><LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeCelebration.json')}/></View>})
+  refreshEvents = () => {
+    cancelAllPushNotifications();
+    this.todayEvents = getEventsDay(getCurrentDateObject(), this.state.eventSections);
+    this.tomorrowEvents = getEventsDay(addDays(getCurrentDateObject(), 1), this.state.eventSections);
+    this.thisWeekEvents = [];
+    for(var i=2; i<7; i++){
+      this.thisWeekEvents = this.thisWeekEvents.concat(getEventsDay(addDays(getCurrentDateObject(), i), this.state.eventSections));
+    }
   }
- 
   openVillagerPopup = (item) => {
     this.villagerPopupPopup?.setPopupVisible(true, item);
   }
@@ -70,20 +71,30 @@ class HomePage extends Component{
     await AsyncStorage.setItem("EventSections", JSON.stringify(eventSections));
   }
 
-  refreshEvents = () => {
-    this.eventsList.refreshEvents();
-  }
-
-
   setLoadedToDo = (status) => {
     this.setState({loadedToDo: status})
   }
 
-  setLoadedEvents = (status) => {
-    this.setState({loadedEvents: status})
-  }
-
   render(){
+    var todayTitle=<View/>
+    if(this.todayEvents.length>0){
+      todayTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>Today</TextFont>
+    }
+    var tomorrowTitle=<View/>
+    if(this.tomorrowEvents.length>0){
+      tomorrowTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>Tomorrow</TextFont>
+    }
+    var thisWeekTitle=<View/>
+    if(this.thisWeekEvents.length>0){
+      thisWeekTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>This Week</TextFont>
+    }
+
+    var landscape = <View style={{width:Dimensions.get('window').width, height: "100%", zIndex:1, position:'absolute', overflow: "hidden" }}><LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/home.json')}/></View>
+    if(getCurrentDateObject().getMonth()===11||getCurrentDateObject().getMonth()===0){
+      landscape = <View style={{width:Dimensions.get('window').width, height: "100%", zIndex:1, position:'absolute', overflow: "hidden" }}><LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeSnow.json')}/></View>
+    } else if (this.todayEvents[0]!==undefined && (this.todayEvents[0].name==="Festivale" || this.todayEvents[0].name.includes("Firework")) || this.todayEvents[1]!==undefined && (this.todayEvents[1].name==="Festivale" || this.todayEvents[1].name.includes("Firework"))){
+      landscape = <View style={{width:Dimensions.get('window').width, height: "100%", zIndex:1, position:'absolute', overflow: "hidden" }}><LottieView autoPlay loop style={{width: 425, height: 232, position:'absolute', top:30, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeCelebration.json')}/></View>
+    }
     const sections = this.state.sections;
     return <View style={{height:"100%",width:"100%"}}>
       <PopupBottomCustom ref={(popupSettings) => this.popupSettings = popupSettings} onClose={()=>{}}>
@@ -104,9 +115,50 @@ class HomePage extends Component{
             </TouchableOpacity>
           </View>
           {/* If todo is the first page to be loaded, wait to fade in */}
-          <FadeInOut fadeIn={this.state.sections!==""&&(((this.state.loadedEvents===true && sections["Events"]===true)||(sections["Events"]===false)) && ((this.state.loadedToDo===true && sections["To-Do"]===true)||(sections["To-Do"]===false)))?true:false} duration={200} startValue={0} endValue={1} maxFade={1} minScale={0.9} >
+          <FadeInOut fadeIn={this.state.sections!==""&&(this.state.sections["Events"] || this.state.loadedToDo===true || this.state.sections["To-Do"]===false)?true:false} duration={200} startValue={0} endValue={1} maxFade={1} minScale={0.9} >
             {sections["Events"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.eventsColor[global.darkMode]} title="Events" titleColor={colors.eventsColor[global.darkModeReverse]}>
-              <EventsList setLandscapeSpecial={this.setLandscapeSpecial} setLoadedEvents={this.setLoadedEvents} ref={(eventsList) => this.eventsList = eventsList} eventSections={this.state.eventSections} popupEventsSettings={this.popupEventsSettings}/>
+              <TouchableOpacity style={{padding:10, paddingVertical:12, position:"absolute",right:0}} 
+                onPress={()=>{this.popupEventsSettings.setPopupVisible(true); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}
+              }>
+                <TextFont bold={false} style={{marginRight:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"right"}}>{"Edit Events"}</TextFont>
+              </TouchableOpacity>
+              {todayTitle}
+              {this.todayEvents.map( (event, index)=>
+                <EventContainer 
+                  openVillagerPopup={this.openVillagerPopup}
+                  setPage={this.props.setPage}
+                  key={event.name+index} 
+                  backgroundColor={colors.eventBackground[global.darkMode]}
+                  textColor={colors.textBlack[global.darkMode]}
+                  event={event}
+                  eventSections={this.state.eventSections}
+                />
+              )}
+              {tomorrowTitle}
+              {this.tomorrowEvents.map( (event, index)=>
+                <EventContainer 
+                  openVillagerPopup={this.openVillagerPopup}
+                  setPage={this.props.setPage}
+                  key={event.name+index} 
+                  backgroundColor={colors.eventBackground[global.darkMode]}
+                  textColor={colors.textBlack[global.darkMode]}
+                  event={event}
+                  eventSections={this.state.eventSections}
+                />
+              )}
+              {thisWeekTitle}
+              {this.thisWeekEvents.map( (event, index)=>
+                <EventContainer 
+                  openVillagerPopup={this.openVillagerPopup}
+                  setPage={this.props.setPage}
+                  key={event.name+index} 
+                  backgroundColor={colors.eventBackground[global.darkMode]}
+                  textColor={colors.textBlack[global.darkMode]}
+                  event={event}
+                  eventSections={this.state.eventSections}
+                />
+              )}
+              <View style={{height: 30}}/>
             </HomeContentArea>:<View/>}
             {sections["To-Do"]===true?<HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.todoColor[global.darkMode]} title="To-Do" titleColor={colors.todoColor[global.darkModeReverse]}>
               <View style={{height: 15}}/>
@@ -184,7 +236,7 @@ class HomePage extends Component{
       </ScrollView>
       
       <View style={{position:"absolute", width: "100%", height:"100%", zIndex:-5}}>
-        {this.state.landscape}
+        {landscape}
         <View style={[styles.homeScreenBackgroundTop,{backgroundColor:colors.skyColor[global.darkMode]}]}/>
         <Image style={{width:Dimensions.get('window').width, height:Dimensions.get('window').height-295, resizeMode:"stretch",zIndex:10, backgroundColor:colors.grassColor[global.darkMode]}} source={global.darkMode===1 ? require("../assets/icons/cliffDark.png") : require("../assets/icons/cliff.png")} />
       </View>
@@ -241,104 +293,6 @@ class DreamAddress extends Component {
         <TextFont bold={false} style={{marginTop: -5, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{"Dream Address"}</TextFont>
       </>
     )
-  }
-}
-
-class EventsList extends Component {
-  constructor(){
-    super();
-    this.todayEvents = [];
-    this.tomorrowEvents = [];
-    this.thisWeekEvents = [];
-    this.state={loaded:false}
-    this.todayTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>Today</TextFont>
-
-  }
-
-  componentDidMount(){
-    setTimeout(() => {
-      this.refreshEvents();
-      this.setState({loaded:true})
-      this.props.setLoadedEvents(true)
-      if (this.todayEvents[0]!==undefined && (this.todayEvents[0].name==="Festivale" || this.todayEvents[0].name.includes("Firework")) || this.todayEvents[1]!==undefined && (this.todayEvents[1].name==="Festivale" || this.todayEvents[1].name.includes("Firework"))){
-        this.props.setLandscapeSpecial()
-      }
-    }, 1);
-  }
-
-  refreshEvents = () => {
-    cancelAllPushNotifications();
-    this.todayEvents = getEventsDay(getCurrentDateObject(), this.props.eventSections, true);
-    this.tomorrowEvents = getEventsDay(addDays(getCurrentDateObject(), 1),  this.props.eventSections, true);
-    this.thisWeekEvents = [];
-    for(var i=2; i<7; i++){
-      this.thisWeekEvents = this.thisWeekEvents.concat(getEventsDay(addDays(getCurrentDateObject(), i),  this.props.eventSections, true));
-    }
-  }
-
-  render(){
-    
-    if(!this.state.loaded){
-      return (<View/>)
-    } else {
-      this.todayTitle=<View/>
-      if(this.todayEvents.length>0){
-        this.todayTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>Today</TextFont>
-      }
-      this.tomorrowTitle=<View/>
-      if(this.tomorrowEvents.length>0){
-        this.tomorrowTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>Tomorrow</TextFont>
-      }
-      this.thisWeekTitle=<View/>
-      if(this.thisWeekEvents.length>0){
-        this.thisWeekTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>This Week</TextFont>
-      }
-      return(<>
-        <TouchableOpacity style={{padding:10, paddingVertical:12, position:"absolute",right:0}} 
-          onPress={()=>{this.props.popupEventsSettings.setPopupVisible(true); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}
-        }>
-          <TextFont bold={false} style={{marginRight:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"right"}}>{"Edit Events"}</TextFont>
-        </TouchableOpacity>
-        {this.todayTitle}
-        {this.todayEvents.map( (event, index)=>
-          <EventContainer 
-            openVillagerPopup={this.openVillagerPopup}
-            setPage={this.props.setPage}
-            key={event.name+index} 
-            backgroundColor={colors.eventBackground[global.darkMode]}
-            textColor={colors.textBlack[global.darkMode]}
-            event={event}
-            eventSections={this.props.eventSections}
-          />
-        )}
-        {this.tomorrowTitle}
-        {this.tomorrowEvents.map( (event, index)=>
-          <EventContainer 
-            openVillagerPopup={this.openVillagerPopup}
-            setPage={this.props.setPage}
-            key={event.name+index} 
-            backgroundColor={colors.eventBackground[global.darkMode]}
-            textColor={colors.textBlack[global.darkMode]}
-            event={event}
-            eventSections={this.props.eventSections}
-          />
-        )}
-        {this.thisWeekTitle}
-        {this.thisWeekEvents.map( (event, index)=>
-          <EventContainer 
-            openVillagerPopup={this.openVillagerPopup}
-            setPage={this.props.setPage}
-            key={event.name+index} 
-            backgroundColor={colors.eventBackground[global.darkMode]}
-            textColor={colors.textBlack[global.darkMode]}
-            event={event}
-            eventSections={this.props.eventSections}
-          />
-        )}
-        <View style={{height: 30}}/>
-        </>
-      )
-    }
   }
 }
 
