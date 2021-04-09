@@ -51,6 +51,7 @@ class CreditsPage extends Component {
             <SubHeader style={{marginBottom:5}}>{attemptToTranslate("Spanish") + ":"}</SubHeader>
             <SubHeader> adrisniper7</SubHeader>
             <SubHeader> Vicente Soldevilla</SubHeader>
+            <SubHeader> Robertin</SubHeader>
           </View>
           <View style={{height: 20}}/>
           <MailLink/>

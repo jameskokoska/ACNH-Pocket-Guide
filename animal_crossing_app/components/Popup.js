@@ -186,6 +186,7 @@ export class PopupBottomCustom extends Component {
       heightOffset:0,
       openStart:false,
     }
+    this.bottomSheetCallback = new Animated.Value(1);
   }
 
   componentDidMount() {
@@ -236,7 +237,6 @@ export class PopupBottomCustom extends Component {
     )
   }
 
-  bottomSheetCallback = new Animated.Value(1);
 
   render(){
     const springConfig = {

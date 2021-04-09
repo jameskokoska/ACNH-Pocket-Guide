@@ -14,8 +14,8 @@ export async function schedulePushNotification(date,time,name,body) {
   }
   
   const trigger = dateTrigger;
-  // console.log("Schedule notification " + name + " " + body)
-  // console.log("For: " + dateTrigger.getHours() + ":"+dateTrigger.getMinutes() + " " + dateTrigger)
+  console.log("Schedule notification " + name + " " + body)
+  console.log("For: " + dateTrigger.getHours() + ":"+dateTrigger.getMinutes() + " " + dateTrigger)
   await Notifications.scheduleNotificationAsync({
     content: {
       title: name,

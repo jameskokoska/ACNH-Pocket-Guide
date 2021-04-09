@@ -52,6 +52,7 @@ global.gameVersion = "1.9.0";
 global.changelog = `
 -Fixed timezone issue with events
 -Fixed issue with special events and hemisphere (specifically the Bug-off)
+-Fixed crashes
 -
 -Added more Spanish translations
 -Fixed dream address in French
@@ -66,7 +67,7 @@ global.changelog = `
 -Filters don't attempt to load if the page does not have any filters
 -Fixed K.K. slider event time
 -Added Spanish translations, more coming soon
-- Thanks Vicente and adrisniper7!
+- Thanks Vicente, adrisniper7, and Robertin!
 -Updated French translations
 - Thanks Christophe!
 -

@@ -8,6 +8,7 @@ import colors from "../Colors"
 import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
 import {PopupInfoCustom} from "./Popup"
 import {SubHeader, Paragraph} from "./Formattings"
+import GuideRedirectButton from "./PopupGuideRedirectButton"
 
 const Header = (props) => {
   var filterImage;
@@ -33,27 +34,10 @@ const Header = (props) => {
   const popupExtraInfo = React.useRef(null);
   return (
     <>
-      {props.extraInfo!==undefined && props.extraInfo.hasOwnProperty("type") && props.extraInfo!=="" && props.extraInfo.type==="guideRedirect"?<PopupInfoCustom ref={popupExtraInfo} buttonText={"Close"}>
-        <View style={{height:6}}/>
-        <SubHeader>{props.extraInfo.title}</SubHeader>
-        <Paragraph styled={true}>{props.extraInfo.content}</Paragraph>
-        <TouchableOpacity onPress={() => props.setPage(15, true, props.extraInfo.redirectPassBack)}>
-          <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", padding:10, marginTop:10}}>{props.extraInfo.linkText}</TextFont>
-        </TouchableOpacity>
-      </PopupInfoCustom>:<View/>}
-      {props.extraInfo!==undefined && !props.extraInfo.hasOwnProperty("type") && props.extraInfo!=="" && props.extraInfo.constructor!==String?<PopupInfoCustom ref={popupExtraInfo} buttonText={"Close"}>
-        <View style={{height:6}}/>
-        <SubHeader>{props.extraInfo[0]}</SubHeader>
-        {props.extraInfo.slice(1,props.extraInfo.length).map( (info, index)=>{
-          return(
-            <Paragraph key={info} styled={true}>{info}</Paragraph>
-          )
-        })}
-      </PopupInfoCustom>:<View/>}
+      <GuideRedirectButton style={{position:"absolute", padding:15, right:0}} extraInfo={props.extraInfo} setPage={props.setPage}/>
       <ImageBackground source={props.appBarImage} style={{width:"100%", backgroundColor: props.appBarColor}}>
         <View style={[styles.topSpace, {height: props.headerHeight / 1.5 + 10,}]}>
         </View>
-        {props.extraInfo!==undefined&&props.extraInfo!==""?<TouchableOpacity style={{position:"absolute", padding:15, right:0}} onPress={()=>{popupExtraInfo.current.setPopupVisible(true)}}><Image style={{width:25,height:25,opacity: 0.35, resizeMode:"contain"}} source={global.darkMode?require("../assets/icons/aboutWhite.png"):require("../assets/icons/about.png")}/></TouchableOpacity>:<View/>}
         <View style={{height: props.headerHeight / 2}}>
 
           <View style={styles.subHeader}>

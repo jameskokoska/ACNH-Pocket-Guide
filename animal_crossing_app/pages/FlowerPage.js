@@ -7,8 +7,8 @@ import FlowerContainer from '../components/FlowerContainer'
 import TextFont from '../components/TextFont'
 import {capitalize} from "../LoadJsonData"
 import {getSettingsString, attemptToTranslate} from "../LoadJsonData";
-import {PopupInfoCustom} from "../components/Popup"
 import {SubHeader, Paragraph} from "../components/Formattings"
+import GuideRedirectButton from "../components/PopupGuideRedirectButton"
 
 const renderTabBar = props => (
   <TabBar
@@ -31,17 +31,16 @@ const renderTabBar = props => (
 class SpecificFlowerPage extends Component {
   render(){
     var data = require("../assets/data/flowers.json");
+    const extraInfo= {
+      type:"guideRedirect",
+      title:"Guide + FAQ",
+      content:"You can read more details about flowers and breeding by visiting the events and guide page",
+      linkText: "Tap here to read more about flowers and breeding",
+      redirectPassBack: "flowersRedirect"
+    }
     
     return(<ScrollView>
-      <PopupInfoCustom ref={(popupExtraInfo) => this.popupExtraInfo = popupExtraInfo} buttonText={"Close"}>
-        <View style={{height:6}}/>
-        <SubHeader>{"Guide + FAQ"}</SubHeader>
-        <Paragraph styled={true}>{"You can read more details about flowers and breeding by visiting the events and guide page"}</Paragraph>
-        <TouchableOpacity onPress={() => this.props.setPage(15, true, "flowersRedirect")}>
-          <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", padding:10, marginTop:10}}>{"Tap here to read more about flowers and breeding"}</TextFont>
-        </TouchableOpacity>
-      </PopupInfoCustom>
-      <TouchableOpacity style={{position:"absolute", padding:15, right:0}} onPress={()=>{this.popupExtraInfo.setPopupVisible(true)}}><Image style={{width:25,height:25,opacity: 0.35, resizeMode:"contain"}} source={global.darkMode?require("../assets/icons/infoWhite.png"):require("../assets/icons/info.png")}/></TouchableOpacity>
+      <GuideRedirectButton icon={"i"} style={{position:"absolute", padding:15, right:0}} extraInfo={extraInfo} setPage={this.props.setPage}/>
 
       <View style={{marginTop: 100}}/>
       

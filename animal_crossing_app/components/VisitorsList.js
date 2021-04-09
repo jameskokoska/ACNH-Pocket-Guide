@@ -15,6 +15,7 @@ import {getWeekDay, getMonday, getDateStringMonthDay} from "./DateFunctions"
 import FastImage from "./FastImage"
 import {SubHeader} from "./Formattings"
 import ButtonComponent from "./ButtonComponent";
+import GuideRedirectButton from "./PopupGuideRedirectButton"
 
 export default class VisitorList extends Component {
   constructor(props){
@@ -76,6 +77,14 @@ export default class VisitorList extends Component {
   }
 
   render(){
+    const extraInfo= {
+      type:"guideRedirect",
+      title:"Guide + FAQ",
+      content:"You can read more details about NPC Visitors by visiting the events and guide page",
+      linkText: "Tap here to read more about NPC Visitors",
+      redirectPassBack: "npcVisitorsRedirect"
+    }
+
     var buttonsHistory = <>
       <View style={{flexDirection:"row", justifyContent:"center"}}>
         <ButtonComponent
@@ -99,13 +108,14 @@ export default class VisitorList extends Component {
     </>
     return <>
       <View style={{alignItems:"center",flexDirection:"row", right:0, top:0,position:'absolute',zIndex:10}}>
-        <TouchableOpacity style={{padding:12, marginRight: 10}} 
+        <TouchableOpacity style={{padding:5, marginRight: 0}} 
           onPress={()=>{
             this.popupHistory.setPopupVisible(true);
             getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10]) : "";
         }}>
           <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"View History"}</TextFont>
         </TouchableOpacity>
+        <GuideRedirectButton icon={"i"} style={{padding:12}} extraInfo={extraInfo} setPage={this.props.setPage}/>
       </View>
       <View style={{height:10}}/>
       <View style={{marginHorizontal: 20, flex: 1, flexDirection: 'row', justifyContent:'space-evenly',flexWrap:"wrap"}}>

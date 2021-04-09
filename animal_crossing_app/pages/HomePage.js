@@ -38,12 +38,11 @@ function addDays(date, days) {
 class HomePage extends Component {
   constructor(props){
     super(props);
-    this.scrollViewRef = React.createRef();
-    var eventSections = this.props.eventSections;
-    if(eventSections["App notifications"]!==undefined){
+    var eventSections = props.eventSections;
+    if(eventSections.hasOwnProperty("App notifications")){
       getSettingsString("settingsNotifications")==="true" ? eventSections["App notifications"]=true : eventSections["App notifications"]=false;
     }
-    this.state = {sections:this.props.sections, eventSections:eventSections}
+    this.state = {sections:props.sections, eventSections:eventSections}
     this.refreshEvents();
   }
   refreshEvents = () => {
@@ -104,7 +103,7 @@ class HomePage extends Component {
       <PopupBottomCustom ref={(popupEventsSettings) => this.popupEventsSettings = popupEventsSettings} onClose={()=>{}}>
         <ConfigureHomePages setPage={(page)=>this.props.setPage(page)} header={"Select Events"} refreshEvents={()=>{this.refreshEvents()}} setPages={(checked,name)=>this.setEventPages(checked,name)} sections={this.state.eventSections}/>
       </PopupBottomCustom>
-        <ScrollView ref={this.scrollViewRef}>
+        <ScrollView ref={(scrollViewRef) => this.scrollViewRef = scrollViewRef}>
           <View style={{height:45}}/>
           <Clock swapDate={doWeSwapDate()}/>
           <View style={{height:125}}/>
@@ -168,7 +167,7 @@ class HomePage extends Component {
             </HomeContentArea>:<View/>}
             {sections["Visitors"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.visitorsColor[global.darkMode]} title="Visitors" titleColor={colors.visitorsColor[global.darkModeReverse]}>
               <View style={{height: 15}}/>
-              <VisitorsList/>
+              <VisitorsList setPage={this.props.setPage}/>
               <View style={{height: 25}}/>
             </HomeContentArea>:<View/>}
             {sections["Collection"]===true?<HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.collectionColor[global.darkMode]} title="Collection" titleColor={colors.collectionColor[global.darkModeReverse]}>
