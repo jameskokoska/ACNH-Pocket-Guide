@@ -108,8 +108,12 @@ export default class CalendarPage extends Component {
     }}
 
     setTimeout(() => {
-      for (let i = -15; i < 85; i++) {
-        const date = new Date(day.timestamp + i * 24 * 60 * 60 * 1000 - 10);
+      for (let i = -5; i < 30; i++) {
+        const date = new Date();
+        date.setDate(day.day + i);
+        date.setMonth(day.month);
+        date.setFullYear(day.year);
+        console.log(day)
         const strTime = this.dateToString(date);
         const seasonData = require("../assets/data/data.json")["Seasons and Events"];
         const villagerData = require("../assets/data/data.json")["Villagers"];
@@ -642,7 +646,7 @@ export const specialEvents = [
         "Day End": "NA",
         "Special Day" : "Saturday",
         "Special Occurrence": "2",
-        "Hemisphere": "Northern",
+        "Hemisphere": "NA",
         "Time" : "9 AM - 6 PM",
         "Time24" : "9:00 - 18:00",
         "Image" : "fish.png"

@@ -237,20 +237,28 @@ export function getEventsDay(date, eventSections){
 
 export function getSpecialOccurrenceDate(currentYear, i, snapshot){
   var occurrence = 0;
-  var eventDate;
+  var eventDate = new Date();
   var specialOccurrence = parseInt(snapshot[i]["Special Occurrence"]);
   for(var day = 1; day <= getDaysNumberMonth(snapshot[i]["Month"]); day++){
-    if(day<10){
-      eventDate = currentYear+"-"+getMonthStringNumber(snapshot[i]["Month"])+"-0"+day;
-    } else {
-      eventDate = currentYear+"-"+getMonthStringNumber(snapshot[i]["Month"])+"-"+day;
+    if(snapshot[i]["Hemisphere"]==="Northern" && getSettingsString("settingsNorthernHemisphere")==="false"){
+      return [-1,-1]
+    } else if(snapshot[i]["Hemisphere"]==="Southern" && getSettingsString("settingsNorthernHemisphere")==="true"){
+      return [-1,-1]
     }
+    eventDate.setFullYear(currentYear);
+    eventDate.setMonth(getMonthStringNumber(snapshot[i]["Month"]));
+    eventDate.setDate(day)
     // console.log(eventDate)
+    
     if(new Date(eventDate).getDay()===parseInt(getDayOfWeekObject(snapshot[i]["Special Day"]))){
       occurrence++;
-      
     }
     if(occurrence==specialOccurrence){
+      // console.log(snapshot[i]["Name"])
+      // console.log(new Date(eventDate))
+      // console.log(new Date(eventDate).getDate())
+      // console.log(parseInt(getDayOfWeekObject(snapshot[i]["Special Day"])))
+      // console.log([day, getMonthNumber(snapshot[i]["Month"])])
       return [day, getMonthNumber(snapshot[i]["Month"])];
     }
   }
@@ -286,29 +294,29 @@ function getDaysNumberMonth(currentMonth){
 
 function getMonthStringNumber(currentMonth){
   if(currentMonth==="Jan")
-    return "01";
+    return "00";
   else if(currentMonth==="Feb")
-    return "02";
+    return "01";
   else if(currentMonth==="Mar")
-    return "03";
+    return "02";
   else if(currentMonth==="Apr")
-    return "04";
+    return "03";
   else if(currentMonth==="May")
-    return "05";
+    return "04";
   else if(currentMonth==="June")
-    return "06";
+    return "05";
   else if(currentMonth==="July")
-    return "07";
+    return "06";
   else if(currentMonth==="Aug")
-    return "08";
+    return "07";
   else if(currentMonth==="Sept")
-    return "09";
+    return "08";
   else if(currentMonth==="Oct")
-    return "10";
+    return "09";
   else if(currentMonth==="Nov")
-    return "11";
+    return "10";
   else
-    return "12";
+    return "11";
 }
 
 function getMonthNumber(currentMonth){
@@ -367,19 +375,19 @@ function getMonthName(currentMonth){
 
 function getDayOfWeekObject(dayOfWeek){
   if(dayOfWeek==="Monday"){
-    return 0;
-  } else if(dayOfWeek==="Tuesday"){
     return 1;
-  }else if(dayOfWeek==="Wednesday"){
+  } else if(dayOfWeek==="Tuesday"){
     return 2;
-  }else if(dayOfWeek==="Thursday"){
+  }else if(dayOfWeek==="Wednesday"){
     return 3;
-  }else if(dayOfWeek==="Friday"){
+  }else if(dayOfWeek==="Thursday"){
     return 4;
-  }else if(dayOfWeek==="Saturday"){
+  }else if(dayOfWeek==="Friday"){
     return 5;
-  }else if(dayOfWeek==="Sunday"){
+  }else if(dayOfWeek==="Saturday"){
     return 6;
+  }else if(dayOfWeek==="Sunday"){
+    return 0;
   }
 }
 

@@ -50,6 +50,9 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
+-Fixed timezone issue with events
+-Fixed issue with special events and hemisphere (specifically the Bug-off)
+-
 -Added more Spanish translations
 -Fixed dream address in French
 -Fixed alphabetical sorting for accented words
