@@ -55,6 +55,8 @@ global.changelog = `
 -Fixed crashes
 -Added more info redirect under Visitors section
 -Added translations to Season/Events in popups
+-Fixed issue with villagers gift being the wrong guide redirect
+-Fixed issue with Changelog, should now close when changing pages/back button
 -
 -Added more Spanish translations
 -Fixed dream address in French
@@ -390,7 +392,7 @@ class App extends Component {
 
   openDrawer(vibrate=true) {
     if(this.state.loaded){
-      this.sideMenu.openDrawer();
+      this.sideMenu?.openDrawer();
       getSettingsString("settingsEnableVibrations")==="true"&&vibrate ? Vibration.vibrate(8) : "";
     }
     return true;
@@ -408,7 +410,8 @@ class App extends Component {
           this.setState({currentPage: pageNum, propsPassed: propsPassed});
         }
       }
-      this.sideMenu.closeDrawer();
+      this.sideMenu?.closeDrawer();
+      this.popupChangelog?.setPopupVisible(false);
     }
     return true;
   }
@@ -502,7 +505,7 @@ class App extends Component {
             <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
             <StatusBar hidden={getSettingsString("settingsShowStatusBar")==="false"} backgroundColor={colors.background[global.darkMode]} barStyle={global.darkMode===1?"light-content":"dark-content"}/>
             {currentPageView}
-            <PopupChangelog/>
+            <PopupChangelog ref={(popupChangelog) => this.popupChangelog = popupChangelog}/>
           </SideMenu>
           {fab}
         </>

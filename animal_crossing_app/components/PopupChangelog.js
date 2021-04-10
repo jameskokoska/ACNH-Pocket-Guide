@@ -1,43 +1,51 @@
 import React, { Component } from "react";
 import {
   Modal,
-  StyleSheet,
   Text,
   View,
-  Vibration,
-  TextInput,
   Image,
   ScrollView,
   Dimensions,
-  TouchableOpacity
+  TouchableOpacity,
+  BackHandler
 } from "react-native";
 import TextFont from "./TextFont";
-import ButtonComponent from "./ButtonComponent";
 import colors from "../Colors";
-import {getPhoto} from "./GetPhoto"
 import {PopupBottomCustom} from "./Popup"
 import {getStorage} from "../LoadJsonData"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {MailLink,MailSupport} from "./Formattings";
 
-class PopupChangelog extends Component {
+export default class PopupChangelog extends Component {
   async componentDidMount(){
     this.mounted = true;
     this.openChangelog = await getStorage("changelog","");
+    this.popupVisible = false;
     if(this.openChangelog === "" || this.openChangelog !== global.version){
       this.timeoutHandle = setTimeout(()=>{
+        this.popupVisible = true;
         this.setPopupVisible(true);
       }, 50);
     }
+    BackHandler.addEventListener("hardwareBackPress", this.handleBackButton);
   }
 
   componentWillUnmount() {
     this.mounted=false;
+    BackHandler.removeEventListener("hardwareBackPress", this.handleBackButton);
   }
 
-  setPopupVisible = (visible) => {
-    if(this.mounted){
-      this.popup?.setPopupVisible(visible)
+  handleBackButton = () => {
+    if(this.popupVisible){
+      this.setPopupVisible(false);
+      this.popupVisible = false;
+    }
+  };
+
+  setPopupVisible = async (visible) => {
+    if(this.mounted && this.popupVisible){
+      this.popup?.setPopupVisible(visible);
+      await AsyncStorage.setItem("changelog", global.version);
     }
   }
 
@@ -69,20 +77,3 @@ class PopupChangelog extends Component {
     )
   }
 }
-export default PopupChangelog;
-
-const styles = StyleSheet.create({
-  centeredView: {
-    flex: 1,
-    justifyContent: "center",
-    padding: 20,
-    paddingTop: "10%",
-    backgroundColor:"rgba(0,0,0,0.5)",
-  },
-  modalView: {
-    margin: 10,
-    borderRadius: 10,
-    padding: 20,
-    elevation: 5
-  },
-});
