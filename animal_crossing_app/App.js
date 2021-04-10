@@ -50,6 +50,13 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
+-Reworked how translations are handled internally
+-Fixed 24 hour clock display 12 for midnight instead of 0:00
+-Added more Spanish translations, more coming soon
+- Thanks Vicente, adrisniper7, and Robertin!
+-Updated French translations
+- Thanks Christophe!
+-
 -Fixed timezone issue with events
 -Fixed issue with special events and hemisphere (specifically the Bug-off)
 -Fixed crashes
@@ -58,10 +65,6 @@ global.changelog = `
 -Fixed issue with villagers gift being the wrong guide redirect
 -Fixed issue with Changelog, should now close when changing pages/back button
 -Fixed translation crash issues with missing translation
--Added more Spanish translations, more coming soon
-- Thanks Vicente, adrisniper7, and Robertin!
--Updated French translations
-- Thanks Christophe!
 -
 -Fixed dream address in French
 -Fixed alphabetical sorting for accented words

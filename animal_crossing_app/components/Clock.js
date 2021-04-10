@@ -17,7 +17,7 @@ class Clock extends Component {
       hours=hours-12;
       afternoon=true;
     }
-    if(hours===0){
+    if(hours===0 && getSettingsString("settingsUse24HourClock")==="false"){
       hours=12;
     }
     if(minutes.toString().length<2){
@@ -50,7 +50,7 @@ class Clock extends Component {
         hours=hours-12;
         afternoon=true;
       }
-      if(hours===0){
+      if(hours===0 && getSettingsString("settingsUse24HourClock")==="false"){
         hours=12;
       }
       if(minutes.toString().length<2){

@@ -211,6 +211,11 @@ export function removeAccents(text){
 }
 
 export function capitalize(name) {
+  if(name.includes("(") && name.includes(")")){
+    var withinBrackets = name.match(/\((.*?)\)/);
+    name = name.replace(withinBrackets[0], "("+capitalize(withinBrackets[1])+")")
+    return name;
+  }
   if(name!==undefined){
     var name = name.replace(/(^\w{1})|(\s{1}\w{1})/g, match => match.toUpperCase());
     return name.charAt(0).toUpperCase() + name.slice(1);
@@ -639,6 +644,28 @@ const catchphraseTranslations = require("./assets/data/Generated/translatedVilla
 const appTranslations = require("./assets/data/translationsApp.json")["Main"];
 const achievementTranslations = require("./assets/data/translationsApp.json")["Achievements"];
 const itemTranslations = require("./assets/data/Generated/translatedItems.json")
+const itemTranslationsMissing = require("./assets/data/translationsApp.json")["Missing Items"];
+const eventTranslationsMissing = require("./assets/data/translationsApp.json")["Event Names"];
+const cardsTranslations = require("./assets/data/translationsApp.json")["Cards"];
+const NPCTranslations = require("./assets/data/translationsApp.json")["NPCs"];
+const mysteryIslandsTranslations = require("./assets/data/translationsApp.json")["Mystery Islands"];
+
+export function attemptToTranslateFromDatabase(text, database){
+  if(text===undefined){
+    return "";
+  } else if(global.language==="English"){
+    return text;
+  }
+  for(var i=0; i<database.length; i++){
+    if(database[i].hasOwnProperty("English") && database[i]["English"].toLowerCase()===text.toString().toLowerCase()){
+      var translatedText = database[i][global.language];
+      if(translatedText!==undefined&&translatedText!==null&&translatedText!==""){
+        return translatedText;
+      }
+    }
+  }
+  return text;
+}
 
 export function attemptToTranslateItem(text){
   if(global.language!=="English"){
@@ -646,7 +673,11 @@ export function attemptToTranslateItem(text){
       return(itemTranslations[text][global.language])
     }
   }
-  return text;
+  var newText = attemptToTranslateFromDatabase(text,itemTranslationsMissing);
+  if(text === newText){
+    newText = attemptToTranslateFromDatabase(text,cardsTranslations);
+  }
+  return newText;
 }
 
 export function attemptToTranslateSpecial(text, type){
@@ -666,20 +697,11 @@ export function attemptToTranslateSpecial(text, type){
   return text;
 }
 export function attemptToTranslateAchievement(text){
-  if(text===undefined){
-    return "";
-  } else if(global.language==="English"){
-    return text;
-  }
-  for(var i=0; i<achievementTranslations.length; i++){
-    if(achievementTranslations[i].hasOwnProperty("English") && achievementTranslations[i]["English"].toLowerCase()===text.toString().toLowerCase()){
-      var translatedText = achievementTranslations[i][global.language];
-      if(translatedText!==undefined&&translatedText!==null&&translatedText!==""){
-        return translatedText;
-      }
-    }
-  }
-  return text;
+  return attemptToTranslateFromDatabase(text, achievementTranslations)
+}
+
+export function attemptToTranslateMysteryIslands(text){
+  return attemptToTranslateFromDatabase(text, mysteryIslandsTranslations)
 }
 
 export function attemptToTranslate(text, forcedTranslation=false){
@@ -688,10 +710,18 @@ export function attemptToTranslate(text, forcedTranslation=false){
   } else if(global.language==="English"){
     return text;
   }
-  
+
+  var NPCTranslation = attemptToTranslateFromDatabase(text, NPCTranslations)
+  if(NPCTranslation!==text){
+    return NPCTranslation;
+  }
+
   var textArray = [];
-  if(text.toString().includes("; ")){
-    textArray = text.toString().split("; ");
+  if(text.toString().includes(";")){
+    textArray = text.toString().split(";");
+    for(var x=0; x<textArray.length; x++){
+      textArray[x] = textArray[x].trim();
+    }
   } else {
     textArray.push(text);
   }
@@ -701,8 +731,15 @@ export function attemptToTranslate(text, forcedTranslation=false){
     success = false;
 
     if(forcedTranslation){
-      var forcedTranslationText = attemptToTranslateSpecial(text, "variants");
-      if(forcedTranslationText !== text){
+      var forcedTranslationText = attemptToTranslateSpecial(textArray[j], "variants");
+      if(forcedTranslationText===textArray[j]){
+        forcedTranslationText = attemptToTranslateItem(textArray[j])
+      }
+      if(forcedTranslationText===textArray[j]){
+        forcedTranslationText = attemptToTranslateFromDatabase(textArray[j],eventTranslationsMissing);
+      }
+
+      if(forcedTranslationText !== textArray[j]){
         if(j>0){
           translatedTextOut+="; " + forcedTranslationText;
         } else {
@@ -761,6 +798,8 @@ export function translateDreamAddressBeginning(villager){
 export function translateBirthday(villager){
   if(global.language==="French" || global.language==="French (US)"){
     return ("Anniversaire de " + villager)
+  } else if(global.language==="Spanish" || global.language==="Spanish (US)"){
+    return ("Cumpleaños de " + villager)
   } else {
     return (villager + "'s Birthday")
   }
@@ -965,14 +1004,15 @@ export function compareItemID(itemIDs, currentItem){
 }
 
 export function getEventName(eventNameInput){
-  var eventName = "";
-  if(eventNameInput.includes("(ready days)")){
-    eventName = attemptToTranslate(attemptToTranslateItem(eventNameInput.replace(" (ready days)",""))) + " " + attemptToTranslate("Ready Days")
-  } else if (eventNameInput.includes("(") && eventNameInput.includes(")")){
-    var withinBrackets = eventNameInput.match(/\((.*?)\)/);
-    eventName = attemptToTranslate(attemptToTranslateItem(eventNameInput.replace(" "+withinBrackets[0],""))) + " (" + attemptToTranslate(withinBrackets[1]) + ")"
-  } else {
-    eventName = attemptToTranslate(attemptToTranslateItem(eventNameInput))
-  }
-  return eventName;
+  // var eventName = "";
+  // if(eventNameInput.includes("(ready days)")){
+    // eventName = attemptToTranslate(attemptToTranslateItem(eventNameInput.replace(" (ready days)",""))) + " " + attemptToTranslate("Ready Days")
+  // } else if (eventNameInput.includes("(") && eventNameInput.includes(")")){
+  //   var withinBrackets = eventNameInput.match(/\((.*?)\)/);
+  //   eventName = attemptToTranslate(attemptToTranslateItem(eventNameInput.replace(" "+withinBrackets[0],""))) + " (" + attemptToTranslate(withinBrackets[1]) + ")"
+  // } else {
+  //   eventName = attemptToTranslate(attemptToTranslateItem(eventNameInput))
+  // }
+  var eventName = attemptToTranslate(eventNameInput, true);
+  return eventName
 }

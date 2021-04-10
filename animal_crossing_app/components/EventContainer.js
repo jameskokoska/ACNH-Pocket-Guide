@@ -167,7 +167,7 @@ export function getEventsDay(date, eventSections){
             filter:event["Name"]
           });
           if(eventSections["App notifications"]){
-            schedulePushNotification(date,eventSections["Set Notification Time"],"Last day! " + capitalize(eventName),attemptToTranslate(capitalize(event["Type"])));
+            schedulePushNotification(date,eventSections["Set Notification Time"],attemptToTranslate("Last day!") + " " + capitalize(eventName),attemptToTranslate(capitalize(event["Type"])));
           }
         }
       } else if (event["Dates (Southern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")!=="true"){

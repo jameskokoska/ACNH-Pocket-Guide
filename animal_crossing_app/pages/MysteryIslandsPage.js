@@ -8,7 +8,7 @@ import {HeaderNote, MailLink, ExternalLink, SubHeader, Header, Paragraph} from "
 import {AccordionContainerCustom} from "../components/AccordionContainer"
 import {InfoLineBeside, InfoLine} from "../components/BottomSheetComponents"
 import {PopupBottomCustom} from "../components/Popup"
-import {getStorage, getSettingsString} from "../LoadJsonData"
+import {attemptToTranslateMysteryIslands, getStorage, getSettingsString} from "../LoadJsonData"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 class MysteryIslandsPage extends Component {
@@ -75,7 +75,7 @@ class MysteryIslandsPage extends Component {
         <PopupBottomCustom ref={(popup) => this.popup = popup}>
           <Image style={{resizeMode:'contain', width:"100%", borderRadius:2}} source={this.state.selectedIsland.picture}/>
           <View style={{height:5}}/>
-          <TextFont bold={true} style={{textAlign:"center",marginTop:10, fontSize: 25, color: colors.textBlack[global.darkMode]}}>{this.state.selectedIsland.name}</TextFont>
+          <TextFont translate={false} bold={true} style={{textAlign:"center",marginTop:10, fontSize: 25, color: colors.textBlack[global.darkMode]}}>{attemptToTranslateMysteryIslands(this.state.selectedIsland.name)}</TextFont>
           <View style={{height:5}}/>
           <InfoLineBeside
             image1={require("../assets/icons/dice.png")} 
@@ -90,7 +90,7 @@ class MysteryIslandsPage extends Component {
             item={this.state.selectedIsland}
             textProperty={["requires"]}
           />
-          <Paragraph styled={true} margin={false}>{this.state.selectedIsland.description}</Paragraph>
+          <Paragraph styled={true} translate={false} margin={false}>{attemptToTranslateMysteryIslands(this.state.selectedIsland.description)}</Paragraph>
         </PopupBottomCustom>
       </>
     )
@@ -109,7 +109,7 @@ class MysteryIslandsComponent extends Component {
         <TouchableOpacity activeOpacity={0.7} onLongPress={()=>this.props.checkOffItem(this.props.island.id)} onPress={()=>this.props.openPopup(this.props.island)}>
         <View style={{width:Dimensions.get('window').width*0.42, borderRadius:9, backgroundColor:checked ? colors.checkedColor[global.darkMode] : colors.white[global.darkMode], padding:10, marginVertical: 6, justifyContent:"center", alignItems:"center",}}>
           <Image style={{resizeMode:'contain', width:"100%", height: 140, borderRadius:2}} source={this.props.island.picture}/>
-          <TextFont bold={true} style={{textAlign:"center",marginHorizontal:5, fontSize: 17, color: colors.textBlack[global.darkMode]}}>{this.props.island.name}</TextFont>
+          <TextFont translate={false} bold={true} style={{textAlign:"center",marginHorizontal:5, fontSize: 17, color: colors.textBlack[global.darkMode]}}>{attemptToTranslateMysteryIslands(this.props.island.name)}</TextFont>
         </View>
         </TouchableOpacity>
       </>

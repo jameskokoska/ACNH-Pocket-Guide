@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
   },
   textContainerBottom:{
     marginTop: 2,
+    marginRight: 10,
     fontSize: 20,
   },
   textContainer:{
