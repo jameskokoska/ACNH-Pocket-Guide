@@ -672,7 +672,7 @@ export function attemptToTranslateAchievement(text){
     return text;
   }
   for(var i=0; i<achievementTranslations.length; i++){
-    if(achievementTranslations[i]["English"].toLowerCase()===text.toString().toLowerCase()){
+    if(achievementTranslations[i].hasOwnProperty("English") && achievementTranslations[i]["English"].toLowerCase()===text.toString().toLowerCase()){
       var translatedText = achievementTranslations[i][global.language];
       if(translatedText!==undefined&&translatedText!==null&&translatedText!==""){
         return translatedText;
@@ -714,7 +714,7 @@ export function attemptToTranslate(text, forcedTranslation=false){
     }
 
     for(var i=0; i<appTranslations.length; i++){
-      if(appTranslations[i]["English"].toLowerCase()===textArray[j].toString().toLowerCase()){
+      if(appTranslations[i].hasOwnProperty("English") && appTranslations[i]["English"].toLowerCase()===textArray[j].toString().toLowerCase()){
         var translatedText = appTranslations[i][global.language];
         if(translatedText===undefined||translatedText===null||translatedText===""){
           translatedTextOut+=textArray[j];

@@ -57,8 +57,12 @@ global.changelog = `
 -Added translations to Season/Events in popups
 -Fixed issue with villagers gift being the wrong guide redirect
 -Fixed issue with Changelog, should now close when changing pages/back button
+-Fixed translation crash issues with missing translation
+-Added more Spanish translations, more coming soon
+- Thanks Vicente, adrisniper7, and Robertin!
+-Updated French translations
+- Thanks Christophe!
 -
--Added more Spanish translations
 -Fixed dream address in French
 -Fixed alphabetical sorting for accented words
 -
@@ -70,10 +74,6 @@ global.changelog = `
 -Fixed check mark sync on variations
 -Filters don't attempt to load if the page does not have any filters
 -Fixed K.K. slider event time
--Added Spanish translations, more coming soon
-- Thanks Vicente, adrisniper7, and Robertin!
--Updated French translations
-- Thanks Christophe!
 -
 -You can now view what items you can get from events by tapping them!
 -Reworked how back button works - enable Back button to previous page
