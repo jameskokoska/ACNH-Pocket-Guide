@@ -11,13 +11,14 @@ class ActiveCreatures extends Component {
     LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
   }
   render(){
+    
     return(
       <View style={{height: Dimensions.get('window').height}}>
-      <ListPage 
+        <ListPage 
           title="Active Creatures"
           leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
           activeCreatures={true}
-          scrollViewRef={this.props.scrollViewRef}
+          scrollToEnd={this.props.scrollToEnd}
           gridType="smallGrid" //smallGrid, largeGrid, row
           appBarColor={colors.emojipediaAppBar[global.darkMode]}
           titleColor={colors.lightDarkAccentHeavy[global.darkMode]}
@@ -70,7 +71,7 @@ class ActiveCreatures extends Component {
           ]}
           dataGlobalName={"dataLoadedCreatures"}
         />
-        </View>
+      </View>
     )
   }
 }

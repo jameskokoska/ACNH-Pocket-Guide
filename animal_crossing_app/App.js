@@ -52,6 +52,7 @@ global.gameVersion = "1.9.0";
 global.changelog = `
 -Reworked how translations are handled internally
 -Fixed 24 hour clock display 12 for midnight instead of 0:00
+-Fixed crash for active creatures
 -Added more Spanish translations, more coming soon
 - Thanks Vicente, adrisniper7, and Robertin!
 -Updated French translations

@@ -75,6 +75,10 @@ class HomePage extends Component {
     this.setState({loadedToDo: status})
   }
 
+  scrollToEnd = () => {
+    this.scrollViewRef?.scrollToEnd()
+  }
+
   render(){
     var todayTitle=<View/>
     if(this.todayEvents.length>0){
@@ -229,7 +233,7 @@ class HomePage extends Component {
               <View style={{height: 15}}/>
             </HomeContentArea>:<View/>}
             {sections["Active Creatures"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.activeCreaturesColor[global.darkMode]} title="Active Creatures" titleColor={colors.activeCreaturesColor[global.darkModeReverse]}>
-              <ActiveCreatures scrollViewRef={this.scrollViewRef}/>
+              <ActiveCreatures scrollToEnd={this.scrollToEnd}/>
             </HomeContentArea>:<View/>}
             {sections["Active Creatures"]===true?<View/>:<View style={{height:130}}/>}
         </FadeInOut>

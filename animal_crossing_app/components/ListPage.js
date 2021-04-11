@@ -53,7 +53,8 @@ export default (props) =>{
       openBottomSheet={(updateCheckChild)=>{
         sheetRef.current.setPopupVisible(true); 
         if(props.activeCreatures){
-          props.scrollViewRef.current.scrollToEnd()
+          // console.log(props.scrollViewRef)
+          props.scrollToEnd();
         }
         //pass in the check mark update function of that current element
         bottomSheetRenderRef.current.update(item, updateCheckChild)}}
