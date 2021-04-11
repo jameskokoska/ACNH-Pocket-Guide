@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   View,
   Vibration,
-  Animated,
   Easing,
   Dimensions
 } from "react-native";

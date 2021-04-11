@@ -8,7 +8,6 @@ import {
   TouchableOpacity,
   View,
   Vibration,
-  Animated,
   Easing
 } from "react-native";
 import TextFont from "./TextFont";

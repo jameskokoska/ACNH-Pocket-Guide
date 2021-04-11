@@ -507,7 +507,14 @@ export const settings = [
     "displayName" : "Last month to catch warning",
     "description" : "Display a red warning background colour around creatures that won't be able to be caught in the next month.",
   },
-
+  {
+    "keyName" : "settingsSortCritterpedia",
+    "defaultValue" : "true",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/filter.png"),
+    "displayName" : "Sort creatures based on Critterpedia",
+    "description" : "Sort creatures the same way they are sorted in the Critterpedia. This applies to the Creatures + Museum page.",
+  },
   {
     "keyName" : "breaker",
     "text" : "User interface",
