@@ -6,10 +6,35 @@ import { Animated, Text, View, Easing } from "react-native";
 class FadeInOut extends Component {
   constructor(props) {
     super(props);
-    this.scaleInOut = true;
+    
+    this.scaleInOut = false;
+    if(this.props.scaleInOut!==undefined && this.props.scaleInOut===true){
+      this.scaleInOut = true;
+    }
+    this.maxFade = 1;
+    if(this.props.maxFade!==undefined){
+      this.maxFade = this.props.maxFade;
+    }
+    this.minScale = 1;
+    if(this.props.minScale!==undefined){
+      this.minScale = this.props.minScale;
+    }
     this.duration = 400;
+    if(this.props.duration!==undefined){
+      this.duration = this.props.duration;
+    }
     this.startValue = 0;
+    if(this.props.startValue!==undefined){
+      this.startValue = this.props.startValue;
+    }
     this.endValue = 1;
+    if(this.props.endValue!==undefined){
+      this.endValue = this.props.endValue;
+    }
+    this.delay = 0;
+    if(this.props.delay!==undefined){
+      this.delay = this.props.delay;
+    }
     this.state = {
       fadeAnimationValue: new Animated.Value(this.startValue),
       scaleAnimationValue: new Animated.Value(this.startValue),
@@ -22,6 +47,17 @@ class FadeInOut extends Component {
     } else if(this.props.fadeIn===false){
       this.fadeOut();
       this.scaleOut();
+    }
+  }
+  componentDidUpdate(prevProps) {
+    if(prevProps!==this.props){
+      if(this.props.fadeIn===true){
+        this.fadeIn();
+        this.scaleIn();
+      } else if(this.props.fadeIn===false){
+        this.fadeOut();
+        this.scaleOut();
+      }
     }
   }
   fadeIn = () => {
