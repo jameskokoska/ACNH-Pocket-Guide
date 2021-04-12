@@ -45,7 +45,6 @@ class TodoList extends Component {
       {title: attemptToTranslate('Rock') + " 4", finished: false, picture:"rock.png",small:true},
       {title: attemptToTranslate('Rock') + " 5", finished: false, picture:"rock.png",small:true},
       {title: attemptToTranslate('Rock') + " 6", finished: false, picture:"rock.png",small:true},
-      {finished: false,picture: "https://acnhcdn.com/latest/MenuIcon/BottleRecipe.png",small: false,title: attemptToTranslate("Find DIY bottle"),},
     ]
     var storageData = JSON.parse(await getStorage("ToDoList",JSON.stringify(defaultList)));
     var todoSorted = await getStorage("ToDoListSorted","true") === "true";

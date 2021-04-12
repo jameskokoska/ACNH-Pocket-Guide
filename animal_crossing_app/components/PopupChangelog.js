@@ -25,7 +25,7 @@ export default class PopupChangelog extends Component {
       this.timeoutHandle = setTimeout(()=>{
         this.popupVisible = true;
         this.setPopupVisible(true);
-      }, 10);
+      }, 50);
     }
     BackHandler.addEventListener("hardwareBackPress", this.handleBackButton);
   }

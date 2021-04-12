@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Dimensions, Text, View,StyleSheet} from 'react-native'
+import {Dimensions, Text, View,StyleSheet ,Animated} from 'react-native'
 import  {DrawerLayout, ScrollView} from 'react-native-gesture-handler'
 import SidebarElement from './SidebarElement';
 import colors from '../Colors.js';

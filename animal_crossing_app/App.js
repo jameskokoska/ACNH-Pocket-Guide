@@ -50,8 +50,6 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
--Added sort by Critterpedia option for Museum pages
--
 -Reworked how translations are handled internally
 -Fixed 24 hour clock display 12 for midnight instead of 0:00
 -Fixed crash for active creatures
