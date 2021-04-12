@@ -159,6 +159,9 @@ const colors = {
     itemBoxPurpleDisplay : ["#c35bff","#c35bff"],
     itemBoxNoneDisplay : ["#3a3a3a","#3a3a3a"],
     itemBoxColorfulDisplay : ["#3a3a3a","#3a3a3a"],
-
+    "villagerOutlineGet Along" : ["#A3F09EAF","#A3F09EA2"],
+    "villagerOutlineNeutral" : ["#E6EC9083","#E6EC9083"],
+    "villagerOutlineOccasionally" : ["#FFC57AAD","#FFC57AAD"],
+    "villagerOutlineConflict" : ["#FF9090A6","#FF9090A6"],
 }
 module.exports = colors;

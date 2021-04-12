@@ -41,6 +41,7 @@ import VillagerPresentsPage from "./pages/VillagerPresentsPage"
 import VillagerFurniture from "./pages/VillagerFurniture"
 import ObtainableItemsPage from "./pages/ObtainableItemsPage"
 import CustomFiltersPage from "./pages/CustomFiltersPage"
+import VillagersCompatibilityPage from "./pages/VillagersCompatibilityPage"
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -50,13 +51,16 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
--Reworked how translations are handled internally
--Fixed 24 hour clock display 12 for midnight instead of 0:00
--Fixed crash for active creatures
+-Added sort by Critterpedia option for Museum pages
+-Added villager compatibility - See which villagers get along the best with others
 -Added more Spanish translations, more coming soon
 - Thanks Vicente, adrisniper7, and Robertin!
 -Updated French translations
 - Thanks Christophe!
+-
+-Reworked how translations are handled internally
+-Fixed 24 hour clock display 12 for midnight instead of 0:00
+-Fixed crash for active creatures
 -
 -Fixed timezone issue with events
 -Fixed issue with special events and hemisphere (specifically the Bug-off)
@@ -497,6 +501,8 @@ class App extends Component {
         currentPageView = <VillagerFurniture villager={this.state.propsPassed}/>
       } else if (this.state.currentPage===23){
         currentPageView = <CustomFiltersPage currentFiltersSearchFor={this.state.propsPassed} titlePassed={this.state.propsPassed} setPage={this.setPage}/>
+      }  else if (this.state.currentPage===24){
+        currentPageView = <VillagersCompatibilityPage setPage={this.setPage}/>
       } else {
         currentPageView = <Text>Default</Text>
       }

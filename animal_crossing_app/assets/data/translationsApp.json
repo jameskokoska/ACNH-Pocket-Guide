@@ -1116,7 +1116,8 @@
             "English": "1 visit/day",
             "English (Europe)": "1 visit/day",
             "French": "1 visite/jour",
-            "French (US)": "1 visite/jour"
+            "French (US)": "1 visite/jour",
+            "Spanish": "1 visita/dia"
         },
         {
             "English": "Town Hall, Vaulting Pole, Ladder",
@@ -1142,7 +1143,8 @@
             "English": "Town Hall, Ladder",
             "English (Europe)": "Town Hall, Ladder",
             "French": "Mairie, Echelle",
-            "French (US)": "Mairie, Echelle"
+            "French (US)": "Mairie, Echelle",
+            "Spanish": "Ayuntamiento, escalera"
         },
         {
             "English": "Town Hall, Vaulting Pole",
@@ -4434,49 +4436,57 @@
             "English": "If you enjoy my app and would like to support me, send me an email! (Tap here)",
             "English (Europe)": "If you enjoy my app and would like to support me, send me an email! (Tap here)",
             "French": "Si vous appréciez mon application et souhaitez me soutenir, envoyez-moi un e-mail ! (Appuyez ici)",
-            "French (US)": "Si vous appréciez mon application et souhaitez me soutenir, envoyez-moi un e-mail ! (Appuyez ici)"
+            "French (US)": "Si vous appréciez mon application et souhaitez me soutenir, envoyez-moi un e-mail ! (Appuyez ici)",
+            "Spanish": "¡Si disfrutas o te gusta la app y quieres apoyarme, enviame un e-mail! (Toca aquí)"
         },
         {
             "English": "Received in mail from DAL after 250 flights",
             "English (Europe)": "Received in mail from DAL after 250 flights",
             "French": "Reçu par courrier de la DAL après 250 vols",
-            "French (US)": "Reçu par courrier de la DAL après 250 vols"
+            "French (US)": "Reçu par courrier de la DAL après 250 vols",
+            "Spanish": "Recibido por correo de DAL después de 250 vuelos"
         },
         {
             "English": "Select Events",
             "English (Europe)": "Select Events",
             "French": "Sélectionner des évènements",
-            "French (US)": "Sélectionner des évènements"
+            "French (US)": "Sélectionner des évènements",
+            "Spanish": "Seleccionar eventos"
         },
         {
             "English": "Event Notifications",
             "English (Europe)": "Event Notifications",
             "French": "Notifications d'évènements",
-            "French (US)": "Notifications d'évènements"
+            "French (US)": "Notifications d'évènements",
+            "Spanish": "Notificaciones de Eventos"
         },
         {
             "English": "Favorite Villager's Birthdays",
             "English (Europe)": "Favorite Villager's Birthdays",
             "French": "Anniversaires de villageois favoris",
-            "French (US)": "Anniversaires de villageois favoris"
+            "French (US)": "Anniversaires de villageois favoris",
+            "Spanish": "Cumpleaños de tus vecinos favoritos"
         },
         {
             "English": "All Villager's Birthdays",
             "English (Europe)": "All Villager's Birthdays",
             "French": "Tous les anniversaires de villageois",
-            "French (US)": "Tous les anniversaires de villageois"
+            "French (US)": "Tous les anniversaires de villageois",
+            "Spanish": "Cumpleaños de todos los vecinos"
         },
         {
             "English": "Crafting Seasons",
             "English (Europe)": "Crafting Seasons",
             "French": "Saisons de fabrication",
-            "French (US)": "Saisons de fabrication"
+            "French (US)": "Saisons de fabrication",
+            "Spanish": "Objetos DIY de temporada"
         },
         {
             "English": "Nook Shopping Events",
             "English (Europe)": "Nook Shopping Events",
             "French": "Articles temporaires du Nook Shopping",
-            "French (US)": "Articles temporaires du Nook Shopping"
+            "French (US)": "Articles temporaires du Nook Shopping",
+            "Spanish": "Eventos de Telenook"
         },
         {
             "English": "Shopping Seasons",
@@ -4502,7 +4512,8 @@
             "English": "Show End Day of Events",
             "English (Europe)": "Show End Day of Events",
             "French": "Afficher le jour de fin des évènements",
-            "French (US)": "Afficher le jour de fin des évènements"
+            "French (US)": "Afficher le jour de fin des évènements",
+            "Spanish": "Mostrar el dia final de los eventos"
         },
         {
             "English": "Last day!",
@@ -4524,13 +4535,15 @@
             "English": "Notifications are created based on the categories you select. They are only loaded one week into the future and are set according to your phone time.",
             "English (Europe)": "Notifications are created based on the categories you select. They are only loaded one week into the future and are set according to your phone time.",
             "French": "Les notifications sont créées en fonction des catégories que vous sélectionnez. Ils ne sont chargés qu'une semaine dans le futur et sont définis en fonction de l'heure de votre téléphone.",
-            "French (US)": "Les notifications sont créées en fonction des catégories que vous sélectionnez. Ils ne sont chargés qu'une semaine dans le futur et sont définis en fonction de l'heure de votre téléphone."
+            "French (US)": "Les notifications sont créées en fonction des catégories que vous sélectionnez. Ils ne sont chargés qu'une semaine dans le futur et sont définis en fonction de l'heure de votre téléphone.",
+            "Spanish": "Las notificaciones se crean en función de las categorías que seleccione. Solo se cargan una semana en el futuro y se configuran de acuerdo con la hora de su teléfono."
         },
         {
             "English": "Edit Events",
             "English (Europe)": "Edit Events",
             "French": "Modifier les évènements",
-            "French (US)": "Modifier les évènements"
+            "French (US)": "Modifier les évènements",
+            "Spanish": "Editar eventos"
         },
         {
             "English": "Notifications",
@@ -4544,7 +4557,8 @@
             "English": "This will enable/disable notifications. You can select event notifications under the [Edit Events] of the [Events] section on the homepage.",
             "English (Europe)": "This will enable/disable notifications. You can select event notifications under the [Edit Events] of the [Events] section on the homepage.",
             "French": "Cela activera / désactivera les notifications. Vous pouvez sélectionner les notifications d'événement sous [Modifier les événements] de la section [Événements] de la page d'accueil.",
-            "French (US)": "Cela activera / désactivera les notifications. Vous pouvez sélectionner les notifications d'événement sous [Modifier les événements] de la section [Événements] de la page d'accueil."
+            "French (US)": "Cela activera / désactivera les notifications. Vous pouvez sélectionner les notifications d'événement sous [Modifier les événements] de la section [Événements] de la page d'accueil.",
+            "Spanish": "Esto habilitará o deshabilitará las notificaciones. Puede seleccionar notificaciones de eventos en [Editar eventos] de la sección [Eventos] en la página de inicio."
         },
         {
             "English": "App notifications",
@@ -4558,7 +4572,8 @@
             "English": "You can select event notifications under the [Edit Events] of the [Events] section on the homepage.",
             "English (Europe)": "You can select event notifications under the [Edit Events] of the [Events] section on the homepage.",
             "French": "Vous pouvez sélectionner les notifications d'événement sous [Modifier les événements] de la section [Événements] de la page d'accueil.",
-            "French (US)": "Vous pouvez sélectionner les notifications d'événement sous [Modifier les événements] de la section [Événements] de la page d'accueil."
+            "French (US)": "Vous pouvez sélectionner les notifications d'événement sous [Modifier les événements] de la section [Événements] de la page d'accueil.",
+            "Spanish": "Puedes seleccionar notificaciones de eventos en [Editar eventos] de la sección [Eventos] en la página de inicio."
         },
         {
             "English": "Received in mail from DAL after 300 flights",
@@ -4608,7 +4623,8 @@
             "English": "Select Date",
             "English (Europe)": "Select Date",
             "French": "Sélectionner la date",
-            "French (US)": "Sélectionner la date"
+            "French (US)": "Sélectionner la date",
+            "Spanish": "Selecciona una fecha"
         },
         {
             "English": "No history yet, waiting for the week to end.",
@@ -4694,7 +4710,8 @@
             "English": "River (clifftop)",
             "English (Europe)": "River (clifftop)",
             "French": "Rivière (au sommet d'une falaise)",
-            "French (US)": "Rivière (au sommet d'une falaise)"
+            "French (US)": "Rivière (au sommet d'une falaise)",
+            "Spanish": "En el rio (cerca de un acantilado)"
         },
         {
             "English": "Sea (rainy days)",
@@ -4852,7 +4869,8 @@
             "English": "Stationary",
             "English (Europe)": "Stationary",
             "French": "Stationnaire",
-            "French (US)": "Stationnaire"
+            "French (US)": "Stationnaire",
+            "Spanish": "Estacionario"
         },
         {
             "English": "Slow",
@@ -5059,140 +5077,209 @@
             "English": "Reward from Pavé after receiving 9 furniture items and giving 3 rainbow feathers",
             "English (Europe)": "Reward from Pavé after receiving 9 furniture items and giving 3 rainbow feathers",
             "French": "Récompense de Roberto après avoir reçu 9 meubles et 3 plumes arc-en-ciel",
-            "French (US)": "Récompense de Roberto après avoir reçu 9 meubles et 3 plumes arc-en-ciel"
+            "French (US)": "Récompense de Roberto après avoir reçu 9 meubles et 3 plumes arc-en-ciel",
+            "Spanish": " Recompensa de Conga después de recibir 9 muebles y dar 3 plumas de arcoíris.\n"
         },
         {
             "English": "Snowflakes",
             "English (Europe)": "Snowflakes",
             "French": "Flocons de Neige",
-            "French (US)": "Flocons de Neige"
+            "French (US)": "Flocons de Neige",
+            "Spanish": "Copos de nieve"
         },
         {
-            "English": "Available in the re-buyable slot in Nook's Cranny",
+            "English": "Available in the re-buyable slot in Nook's Cranny\n",
             "English (Europe)": "Available in the re-buyable slot in Nook's Cranny",
             "French": "Disponible dans l'emplacement des objets achetables plusieurs fois de la Boutique Nook",
-            "French (US)": "Disponible dans l'emplacement des objets achetables plusieurs fois de la Boutique Nook"
+            "French (US)": "Disponible dans l'emplacement des objets achetables plusieurs fois de la Boutique Nook",
+            "Spanish": "Disponible en la ranura de recompra de Mininook"
         },
         {
             "English": "Valentine's Day (Nook Shopping)",
             "English (Europe)": "Valentine's Day (Nook Shopping)",
             "French": "Saint-Valentin (Nook Shopping)",
-            "French (US)": "Saint-Valentin (Nook Shopping)"
+            "French (US)": "Saint-Valentin (Nook Shopping)",
+            "Spanish": "Dia de San Valentín (Telenook)"
         },
         {
             "English": "Mailed to players after the 1.6.0 update in a letter from Nintendo",
             "English (Europe)": "Mailed to players after the 1.6.0 update in a letter from Nintendo",
             "French": "Envoyé aux joueurs après la mise à jour 1.6.0 dans une lettre de Nintendo",
-            "French (US)": "Envoyé aux joueurs après la mise à jour 1.6.0 dans une lettre de Nintendo"
+            "French (US)": "Envoyé aux joueurs après la mise à jour 1.6.0 dans une lettre de Nintendo",
+            "Spanish": "Enviado a jugadores después de la actualización 1.6.0 mediante una carta de Nintendo"
         },
         {
             "English": "Trade 3 fish to receive a model in the mail the next day",
             "English (Europe)": "Trade 3 fish to receive a model in the mail the next day",
             "French": "Échangez 3 poissons pour recevoir un modèle par courrier le lendemain",
-            "French (US)": "Échangez 3 poissons pour recevoir un modèle par courrier le lendemain"
+            "French (US)": "Échangez 3 poissons pour recevoir un modèle par courrier le lendemain",
+            "Spanish": "Dale 3 peces iguales para recibir un modelo por correo el siguiente dia"
         },
         {
             "English": "Trade 3 insects to receive a model in the mail the next day",
             "English (Europe)": "Trade 3 insects to receive a model in the mail the next day",
             "French": "Échangez 3 insectes pour recevoir un modèle par courrier le lendemain",
-            "French (US)": "Échangez 3 insectes pour recevoir un modèle par courrier le lendemain"
+            "French (US)": "Échangez 3 insectes pour recevoir un modèle par courrier le lendemain",
+            "Spanish": "Dale 3 insectos iguales para recibir un modelo por correo el siguiente dia"
         },
         {
             "English": "Received in August in the Northern Hemisphere and received in July in the Southern Hemisphere",
             "English (Europe)": "Received in August in the Northern Hemisphere and received in July in the Southern Hemisphere",
             "French": "Reçu en Août dans l'Hémisphère Nord et reçu en Juillet dans l'Hémisphère Sud",
-            "French (US)": "Reçu en Août dans l'Hémisphère Nord et reçu en Juillet dans l'Hémisphère Sud"
+            "French (US)": "Reçu en Août dans l'Hémisphère Nord et reçu en Juillet dans l'Hémisphère Sud",
+            "Spanish": "Recibido en agosto en el hemisferio norte y recibido en julio en el hemisferio sur"
         },
         {
             "English": "Received in September in the Northern Hemisphere and received in March in the Southern Hemisphere",
             "English (Europe)": "Received in September in the Northern Hemisphere and received in March in the Southern Hemisphere",
             "French": "Reçu en Septembre dans l'Hémisphère Nord et reçu en Mars dans l'Hémisphère Sud",
-            "French (US)": "Reçu en Septembre dans l'Hémisphère Nord et reçu en Mars dans l'Hémisphère Sud"
+            "French (US)": "Reçu en Septembre dans l'Hémisphère Nord et reçu en Mars dans l'Hémisphère Sud",
+            "Spanish": "Recibido en septiembre en el hemisferio norte y recibido en marzo en el hemisferio sur"
         },
         {
             "English": "Received in October in the Northern Hemisphere and received in April in the Southern Hemisphere",
             "English (Europe)": "Received in October in the Northern Hemisphere and received in April in the Southern Hemisphere",
             "French": "Reçu en Octobre dans l'Hémisphère Nord et reçu en Avril dans l'Hémisphère Sud",
-            "French (US)": "Reçu en Octobre dans l'Hémisphère Nord et reçu en Avril dans l'Hémisphère Sud"
+            "French (US)": "Reçu en Octobre dans l'Hémisphère Nord et reçu en Avril dans l'Hémisphère Sud",
+            "Spanish": "Recibido en octubre en el hemisferio norte y recibido en abril en el hemisferio sur"
         },
         {
             "English": "Received in November in the Northern Hemisphere and received in May in the Southern Hemisphere",
             "English (Europe)": "Received in November in the Northern Hemisphere and received in May in the Southern Hemisphere",
             "French": "Reçu en Novembre dans l'Hémisphère Nord et reçu en Mai dans l'Hémisphère Sud",
-            "French (US)": "Reçu en Novembre dans l'Hémisphère Nord et reçu en Mai dans l'Hémisphère Sud"
+            "French (US)": "Reçu en Novembre dans l'Hémisphère Nord et reçu en Mai dans l'Hémisphère Sud",
+            "Spanish": "Recibido en noviembre en el hemisferio norte y recibido en mayo en el hemisferio sur"
         },
         {
             "English": "Received in December in the Northern Hemisphere and received in June in the Southern Hemisphere",
             "English (Europe)": "Received in December in the Northern Hemisphere and received in June in the Southern Hemisphere",
             "French": "Reçu en Décembre dans l'Hémisphère Nord et reçu en Juin dans l'Hémisphère Sud",
-            "French (US)": "Reçu en Décembre dans l'Hémisphère Nord et reçu en Juin dans l'Hémisphère Sud"
+            "French (US)": "Reçu en Décembre dans l'Hémisphère Nord et reçu en Juin dans l'Hémisphère Sud",
+            "Spanish": "Recibido en diciembre en el hemisferio norte y recibido en junio en el hemisferio sur"
         },
         {
             "English": "Received in January in both Hemipsheres (Hemispheres no ?)",
             "English (Europe)": "Received in January in both Hemipsheres",
             "French": "Reçu en Janvier dans les deux Hémisphères",
-            "French (US)": "Reçu en Janvier dans les deux Hémisphères"
+            "French (US)": "Reçu en Janvier dans les deux Hémisphères",
+            "Spanish": "Recibido en enero en ambos hemisferios"
         },
         {
             "English": "Received in February in the Northern Hemisphere and received in August in the Southern Hemisphere",
             "English (Europe)": "Received in February in the Northern Hemisphere and received in August in the Southern Hemisphere",
             "French": "Reçu en Février dans l'Hémisphère Nord et reçu en Août dans l'Hémisphère Sud",
-            "French (US)": "Reçu en Février dans l'Hémisphère Nord et reçu en Août dans l'Hémisphère Sud"
+            "French (US)": "Reçu en Février dans l'Hémisphère Nord et reçu en Août dans l'Hémisphère Sud",
+            "Spanish": "Recibido en febrero en el hemisferio norte y recibido en agosto en el hemisferio sur"
         },
         {
             "English": "Received in March in the Northern Hemisphere and received in September in the Southern Hemisphere",
             "English (Europe)": "Received in March in the Northern Hemisphere and received in September in the Southern Hemisphere",
             "French": "Reçu en Mars dans l'Hémisphère Nord et reçu en Septembre dans l'Hémisphère Sud",
-            "French (US)": "Reçu en Mars dans l'Hémisphère Nord et reçu en Septembre dans l'Hémisphère Sud"
+            "French (US)": "Reçu en Mars dans l'Hémisphère Nord et reçu en Septembre dans l'Hémisphère Sud",
+            "Spanish": "Recibido en marzo en el hemisferio norte y recibido en septiembre en el hemisferio sur"
         },
         {
             "English": "Received in April in the Northern Hemisphere and received in October in the Southern Hemisphere",
             "English (Europe)": "Received in April in the Northern Hemisphere and received in October in the Southern Hemisphere",
             "French": "Reçu en Avril dans l'Hémisphère Nord et reçu en Octobre dans l'Hémisphère Sud",
-            "French (US)": "Reçu en Avril dans l'Hémisphère Nord et reçu en Octobre dans l'Hémisphère Sud"
+            "French (US)": "Reçu en Avril dans l'Hémisphère Nord et reçu en Octobre dans l'Hémisphère Sud",
+            "Spanish": "Recibido en abril en el hemisferio norte y recibido en octubre en el hemisferio sur"
         },
         {
             "English": "Received in May in the Northern Hemisphere and received in November in the Southern Hemisphere",
             "English (Europe)": "Received in May in the Northern Hemisphere and received in November in the Southern Hemisphere",
             "French": "Reçu en Mai dans l'Hémisphère Nord et reçu en Novembre dans l'Hémisphère Sud",
-            "French (US)": "Reçu en Mai dans l'Hémisphère Nord et reçu en Novembre dans l'Hémisphère Sud"
+            "French (US)": "Reçu en Mai dans l'Hémisphère Nord et reçu en Novembre dans l'Hémisphère Sud",
+            "Spanish": "Recibido en mayo en el hemisferio norte y recibido en noviembre en el hemisferio sur"
         },
         {
             "English": "Mother's Day",
             "English (Europe)": "Mother's Day",
             "French": "Fête des Mères",
-            "French (US)": "Fête des Mères"
+            "French (US)": "Fête des Mères",
+            "Spanish": "Dia de la Madre"
         },
         {
             "English": "Received in July in the Northern Hemisphere and received in February in the Southern Hemisphere",
             "English (Europe)": "Received in July in the Northern Hemisphere and received in February in the Southern Hemisphere",
             "French": "Reçu en Juillet dans l'Hémisphère Nord et reçu en Février dans l'Hémisphère Sud",
-            "French (US)": "Reçu en Juillet dans l'Hémisphère Nord et reçu en Février dans l'Hémisphère Sud"
+            "French (US)": "Reçu en Juillet dans l'Hémisphère Nord et reçu en Février dans l'Hémisphère Sud",
+            "Spanish": "Recibido en julio en el hemisferio norte y recibido en febrero en el hemisferio sur"
         },
         {
             "English": "Received on the player's birthday",
             "English (Europe)": "Received on the player's birthday",
             "French": "Reçu le jour de ton anniversaire",
-            "French (US)": "Reçu le jour de ton anniversaire"
+            "French (US)": "Reçu le jour de ton anniversaire",
+            "Spanish": "Recibido en el dia de tu cumpleaños"
         },
         {
             "English": "NFS",
             "English (Europe)": "NFS",
             "French": "Pas à vendre",
-            "French (US)": "Pas à vendre"
+            "French (US)": "Pas à vendre",
+            "Spanish": "NFS"
         },
         {
             "English": "Size",
             "English (Europe)": "Size",
             "French": "Taille",
-            "French (US)": "Taille"
+            "French (US)": "Taille",
+            "Spanish": "Talla"
+        },
+        {
+            "English": "Sort creatures based on Critterpedia",
+            "English (Europe)": "Sort creatures based on Critterpedia",
+            "French": "Trier les créatures en fonction de la Bébêtopédie",
+            "French (US)": "Trier les créatures en fonction de la Bébêtopédie"
+        },
+        {
+            "English": "Sort creatures the same way they are sorted in the Critterpedia. This applies to the Creatures + Museum page.",
+            "English (Europe)": "Sort creatures the same way they are sorted in the Critterpedia. This applies to the Creatures + Museum page.",
+            "French": "Trier les créatures de la même manière qu'elles sont triées dans la Bébêtopédie. Cela s'applique à la page Bébêtopédie + Musée.",
+            "French (US)": "Trier les créatures de la même manière qu'elles sont triées dans la Bébêtopédie. Cela s'applique à la page Bébêtopédie + Musée."
+        },
+        {
+            "English": "Find DIY bottle",
+            "English (Europe)": "Find DIY bottle",
+            "French": "Trouver la Lettre-bouteille",
+            "French (US)": "Trouver la Lettre-bouteille"
+        },
+        {
+            "English": "Villager Compatibility",
+            "English (Europe)": "Villager Compatibility"
+        },
+        {
+            "English": "Certain villager personalities vibe better with others. This does not mean that villagers cannot live with others. Only the first 15 favorite villagers are compared.",
+            "English (Europe)": "Certain villager personalities vibe better with others. This does not mean that villagers cannot live with others. Only the first 15 favorite villagers are compared."
+        },
+        {
+            "English": "Tap here to see how compatibility is calculated",
+            "English (Europe)": "Tap here to see how compatibility is calculated"
+        },
+        {
+            "English": "Get Along",
+            "English (Europe)": "Get Along"
+        },
+        {
+            "English": "Neutral",
+            "English (Europe)": "Neutral"
+        },
+        {
+            "English": "Occasionally",
+            "English (Europe)": "Occasionally"
+        },
+        {
+            "English": "Conflict",
+            "English (Europe)": "Conflict"
         }
     ],
     "Event Names": [
         {
             "English": "acorns and pine cones",
             "English (Europe)": "acorns and pine cones",
-            "French": "glands et pommes de pin"
+            "French": "glands et pommes de pin",
+            "French (US)": "glands et pommes de pin"
         },
         {
             "English": "mushrooms",
@@ -5202,27 +5289,39 @@
         },
         {
             "English": "ornaments",
-            "English (Europe)": "ornaments"
+            "English (Europe)": "ornaments",
+            "French": "ornements",
+            "French (US)": "ornements"
         },
         {
             "English": "Spring shopping",
-            "English (Europe)": "Spring shopping"
+            "English (Europe)": "Spring shopping",
+            "French": "Shopping de printemps",
+            "French (US)": "Shopping de printemps"
         },
         {
             "English": "Summer shopping",
-            "English (Europe)": "Summer shopping"
+            "English (Europe)": "Summer shopping",
+            "French": "Shopping d'été",
+            "French (US)": "Shopping d'été"
         },
         {
             "English": "Fall shopping",
-            "English (Europe)": "Fall shopping"
+            "English (Europe)": "Fall shopping",
+            "French": "Shopping d'automne",
+            "French (US)": "Shopping d'automne"
         },
         {
             "English": "Winter shopping",
-            "English (Europe)": "Winter shopping"
+            "English (Europe)": "Winter shopping",
+            "French": "Shopping d'hiver",
+            "French (US)": "Shopping d'hiver"
         },
         {
             "English": "Festive shopping",
-            "English (Europe)": "Festive shopping"
+            "English (Europe)": "Festive shopping",
+            "French": "Shopping festif",
+            "French (US)": "Shopping festif"
         },
         {
             "English": "Birthday",
@@ -5368,15 +5467,21 @@
         },
         {
             "English": "Shōgatsu (1)",
-            "English (Europe)": "Shōgatsu (1)"
+            "English (Europe)": "Shōgatsu (1)",
+            "French": "Shōgatsu (1)",
+            "French (US)": "Shōgatsu (1)"
         },
         {
             "English": "Shōgatsu (2)",
-            "English (Europe)": "Shōgatsu (2)"
+            "English (Europe)": "Shōgatsu (2)",
+            "French": "Shōgatsu (2)",
+            "French (US)": "Shōgatsu (2)"
         },
         {
             "English": "Shōgatsu (3)",
-            "English (Europe)": "Shōgatsu (3)"
+            "English (Europe)": "Shōgatsu (3)",
+            "French": "Shōgatsu (3)",
+            "French (US)": "Shōgatsu (3)"
         },
         {
             "English": "New Year's Day (Russia)",
@@ -5424,19 +5529,27 @@
         },
         {
             "English": "Setsubun (Able Sisters)",
-            "English (Europe)": "Setsubun (Able Sisters)"
+            "English (Europe)": "Setsubun (Able Sisters)",
+            "French": "Setsubun (Soeurs Doigts de Fée)",
+            "French (US)": "Setsubun (Soeurs Doigts de Fée)"
         },
         {
             "English": "Big Game Celebration (1)",
-            "English (Europe)": "Big Game Celebration (1)"
+            "English (Europe)": "Big Game Celebration (1)",
+            "French": "Match au sommet (1)",
+            "French (US)": "Match au sommet (1)"
         },
         {
             "English": "Big Game Celebration (2)",
-            "English (Europe)": "Big Game Celebration (2)"
+            "English (Europe)": "Big Game Celebration (2)",
+            "French": "Match au sommet (2)",
+            "French (US)": "Match au sommet (2)"
         },
         {
             "English": "Valentine's Day (Nook Shopping)",
-            "English (Europe)": "Valentine's Day (Nook Shopping)"
+            "English (Europe)": "Valentine's Day (Nook Shopping)",
+            "French": "Saint-Valentin (Nook Shopping)",
+            "French (US)": "Saint-Valentin (Nook Shopping)"
         },
         {
             "English": "Super Mario Bros.",
@@ -5452,15 +5565,21 @@
         },
         {
             "English": "Prom (1)",
-            "English (Europe)": "Prom (1)"
+            "English (Europe)": "Prom (1)",
+            "French": "Bal de promo (1)",
+            "French (US)": "Bal de promo (1)"
         },
         {
             "English": "Prom (2)",
-            "English (Europe)": "Prom (2)"
+            "English (Europe)": "Prom (2)",
+            "French": "Bal de promo (2)",
+            "French (US)": "Bal de promo (2)"
         },
         {
             "English": "Prom (Able Sisters)",
-            "English (Europe)": "Prom (Able Sisters)"
+            "English (Europe)": "Prom (Able Sisters)",
+            "French": "Bal de promo (Soeurs Doigts de Fée)",
+            "French (US)": "Bal de promo (Soeurs Doigts de Fée)"
         },
         {
             "English": "Nature Day (Nook Shopping)",
@@ -5516,75 +5635,111 @@
         },
         {
             "English": "present (black)",
-            "English (Europe)": "present (black)"
+            "English (Europe)": "present (black)",
+            "French": "cadeau (noir)",
+            "French (US)": "cadeau (noir)"
         },
         {
             "English": "present (blue)",
-            "English (Europe)": "present (blue)"
+            "English (Europe)": "present (blue)",
+            "French": "cadeau (bleu)",
+            "French (US)": "cadeau (bleu)"
         },
         {
             "English": "present (brown)",
-            "English (Europe)": "present (brown)"
+            "English (Europe)": "present (brown)",
+            "French": "cadeau (marron)",
+            "French (US)": "cadeau (marron)"
         },
         {
             "English": "present (chartreuse)",
-            "English (Europe)": "present (chartreuse)"
+            "English (Europe)": "present (chartreuse)",
+            "French": "cadeau (jaune-vert)",
+            "French (US)": "cadeau (jaune-vert)"
         },
         {
             "English": "present (gold)",
-            "English (Europe)": "present (gold)"
+            "English (Europe)": "present (gold)",
+            "French": "cadeau (doré)",
+            "French (US)": "cadeau (doré)"
         },
         {
             "English": "present (gray)",
-            "English (Europe)": "present (gray)"
+            "English (Europe)": "present (gray)",
+            "French": "cadeau (gris)",
+            "French (US)": "cadeau (gris)"
         },
         {
             "English": "present (green)",
-            "English (Europe)": "present (green)"
+            "English (Europe)": "present (green)",
+            "French": "cadeau (vert)",
+            "French (US)": "cadeau (vert)"
         },
         {
             "English": "present (light-blue)",
-            "English (Europe)": "present (light-blue)"
+            "English (Europe)": "present (light-blue)",
+            "French": "cadeau (bleu clair)",
+            "French (US)": "cadeau (bleu clair)"
         },
         {
             "English": "present (mint)",
-            "English (Europe)": "present (mint)"
+            "English (Europe)": "present (mint)",
+            "French": "cadeau (menthe)",
+            "French (US)": "cadeau (menthe)"
         },
         {
             "English": "present (navy)",
-            "English (Europe)": "present (navy)"
+            "English (Europe)": "present (navy)",
+            "French": "cadeau (bleu marine)",
+            "French (US)": "cadeau (bleu marine)"
         },
         {
             "English": "present (orange)",
-            "English (Europe)": "present (orange)"
+            "English (Europe)": "present (orange)",
+            "French": "cadeau (orange)",
+            "French (US)": "cadeau (orange)"
         },
         {
             "English": "present (pink)",
-            "English (Europe)": "present (pink)"
+            "English (Europe)": "present (pink)",
+            "French": "cadeau (rose)",
+            "French (US)": "cadeau (rose)"
         },
         {
             "English": "present (purple)",
-            "English (Europe)": "present (purple)"
+            "English (Europe)": "present (purple)",
+            "French": "cadeau (violet)",
+            "French (US)": "cadeau (violet)"
         },
         {
             "English": "present (red)",
-            "English (Europe)": "present (red)"
+            "English (Europe)": "present (red)",
+            "French": "cadeau (rouge)",
+            "French (US)": "cadeau (rouge)"
         },
         {
             "English": "present (white)",
-            "English (Europe)": "present (white)"
+            "English (Europe)": "present (white)",
+            "French": "cadeau (blanc)",
+            "French (US)": "cadeau (blanc)"
         },
         {
             "English": "present (yellow)",
-            "English (Europe)": "present (yellow)"
+            "English (Europe)": "present (yellow)",
+            "French": "cadeau (jaune)",
+            "French (US)": "cadeau (jaune)"
         },
         {
             "English": "spoiled turnips",
-            "English (Europe)": "spoiled turnips"
+            "English (Europe)": "spoiled turnips",
+            "French": "navets pourris",
+            "French (US)": "navets pourris"
         },
         {
             "English": "turnips",
-            "English (Europe)": "turnips"
+            "English (Europe)": "turnips",
+            "French": "navets",
+            "French (US)": "navets"
         }
     ],
     "Special Translations": [
@@ -10678,79 +10833,98 @@
         },
         {
             "English": "Airmail card",
-            "English (Europe)": "Airmail card"
+            "English (Europe)": "Airmail card",
+            "French": "Carte par avion"
         },
         {
             "English": "Baby-goods card",
-            "English (Europe)": "Baby-goods card"
+            "English (Europe)": "Baby-goods card",
+            "French": "Carte bébé"
         },
         {
             "English": "Balloons card",
-            "English (Europe)": "Balloons card"
+            "English (Europe)": "Balloons card",
+            "French": "Carte ballons"
         },
         {
             "English": "Bandage card",
-            "English (Europe)": "Bandage card"
+            "English (Europe)": "Bandage card",
+            "French": "Carte pansements"
         },
         {
             "English": "Beach card",
-            "English (Europe)": "Beach card"
+            "English (Europe)": "Beach card",
+            "French": "Carte plage"
         },
         {
             "English": "Birthday-cake card",
-            "English (Europe)": "Birthday-cake card"
+            "English (Europe)": "Birthday-cake card",
+            "French": "Carte d'anniversaire"
         },
         {
             "English": "Blue-sky card",
-            "English (Europe)": "Blue-sky card"
+            "English (Europe)": "Blue-sky card",
+            "French": "Carte ciel bleu"
         },
         {
             "English": "Bunny Day card",
-            "English (Europe)": "Bunny Day card"
+            "English (Europe)": "Bunny Day card",
+            "French": "Carte fête des oeufs"
         },
         {
             "English": "Camo card",
-            "English (Europe)": "Camo card"
+            "English (Europe)": "Camo card",
+            "French": "Carte camouflage"
         },
         {
             "English": "Card from",
-            "English (Europe)": "Card from"
+            "English (Europe)": "Card from",
+            "French": "Carte de"
         },
         {
             "English": "Card from Bank of Nook",
-            "English (Europe)": "Card from Bank of Nook"
+            "English (Europe)": "Card from Bank of Nook",
+            "French": "Carte de la Banque Nook"
         },
         {
             "English": "Card from C.J.",
-            "English (Europe)": "Card from C.J."
+            "English (Europe)": "Card from C.J.",
+            "French": "Carte de Pollux"
         },
         {
             "English": "Card from Flick",
-            "English (Europe)": "Card from Flick"
+            "English (Europe)": "Card from Flick",
+            "French": "Carte de Djason"
         },
         {
             "English": "Card from Happy Home Academy",
-            "English (Europe)": "Card from Happy Home Academy"
+            "English (Europe)": "Card from Happy Home Academy",
+            "French": "Carte de l'Académie des Joyeux Décorateurs"
         },
         {
             "English": "Card from Jolly Redd's",
-            "English (Europe)": "Card from Jolly Redd's"
+            "English (Europe)": "Card from Jolly Redd's",
+            "French": "Carte de Rounard"
         },
         {
             "English": "Card from K.K.",
-            "English (Europe)": "Card from K.K."
+            "English (Europe)": "Card from K.K.",
+            "French": "Carte de Kéké"
         },
         {
             "English": "Card from Nintendo",
-            "English (Europe)": "Card from Nintendo"
+            "English (Europe)": "Card from Nintendo",
+            "French": "Carte de Nintendo"
         },
         {
             "English": "Card from Nook Mileage Program",
-            "English (Europe)": "Card from Nook Mileage Program"
+            "English (Europe)": "Card from Nook Mileage Program",
+            "French": "Carte du Programme Miles Nook"
         },
         {
             "English": "Card from Your pals at Dodo Airlines",
-            "English (Europe)": "Card from Your pals at Dodo Airlines"
+            "English (Europe)": "Card from Your pals at Dodo Airlines",
+            "French": "Carte du personnel de Dodo Airlines"
         },
         {
             "English": "Carpet-of-leaves card",
@@ -10758,7 +10932,8 @@
         },
         {
             "English": "Cherry-blossoms card",
-            "English (Europe)": "Cherry-blossoms card"
+            "English (Europe)": "Cherry-blossoms card",
+            "French": "Carte pétales de cerisier"
         },
         {
             "English": "Chocolate card",
@@ -10770,31 +10945,38 @@
         },
         {
             "English": "Common card",
-            "English (Europe)": "Common card"
+            "English (Europe)": "Common card",
+            "French": "Carte ordinaire"
         },
         {
             "English": "Cool-cool card",
-            "English (Europe)": "Cool-cool card"
+            "English (Europe)": "Cool-cool card",
+            "French": "Carte moderne"
         },
         {
             "English": "Dandelion card",
-            "English (Europe)": "Dandelion card"
+            "English (Europe)": "Dandelion card",
+            "French": "Carte pissenlit"
         },
         {
             "English": "Decorative card",
-            "English (Europe)": "Decorative card"
+            "English (Europe)": "Decorative card",
+            "French": "Carte ornementale"
         },
         {
             "English": "Elegant-roses card",
-            "English (Europe)": "Elegant-roses card"
+            "English (Europe)": "Elegant-roses card",
+            "French": "Carte roses délicates"
         },
         {
             "English": "Fanciful card",
-            "English (Europe)": "Fanciful card"
+            "English (Europe)": "Fanciful card",
+            "French": "Carte fantaisie"
         },
         {
             "English": "Fantasy-stars card",
-            "English (Europe)": "Fantasy-stars card"
+            "English (Europe)": "Fantasy-stars card",
+            "French": "Carte étoiles fantaisie"
         },
         {
             "English": "Father's Day card",
@@ -10802,43 +10984,53 @@
         },
         {
             "English": "Festive-tree card",
-            "English (Europe)": "Festive-tree card"
+            "English (Europe)": "Festive-tree card",
+            "French": "Carte grand sapin"
         },
         {
             "English": "Flower-bouquet card",
-            "English (Europe)": "Flower-bouquet card"
+            "English (Europe)": "Flower-bouquet card",
+            "French": "Carte bouquet de fleurs"
         },
         {
             "English": "Fluffy-clouds card",
-            "English (Europe)": "Fluffy-clouds card"
+            "English (Europe)": "Fluffy-clouds card",
+            "French": "Carte nuages"
         },
         {
             "English": "Full-bloom card",
-            "English (Europe)": "Full-bloom card"
+            "English (Europe)": "Full-bloom card",
+            "French": "Carte floraison"
         },
         {
             "English": "Gears card",
-            "English (Europe)": "Gears card"
+            "English (Europe)": "Gears card",
+            "French": "Carte rouages"
         },
         {
             "English": "Gem card",
-            "English (Europe)": "Gem card"
+            "English (Europe)": "Gem card",
+            "French": "Carte gemmes"
         },
         {
             "English": "Gift card",
-            "English (Europe)": "Gift card"
+            "English (Europe)": "Gift card",
+            "French": "Carte cadeau"
         },
         {
             "English": "Goldfish card",
-            "English (Europe)": "Goldfish card"
+            "English (Europe)": "Goldfish card",
+            "French": "Carte poissons rouges"
         },
         {
             "English": "Graduation card",
-            "English (Europe)": "Graduation card"
+            "English (Europe)": "Graduation card",
+            "French": "Carte remise de diplôme"
         },
         {
             "English": "Graffiti card",
-            "English (Europe)": "Graffiti card"
+            "English (Europe)": "Graffiti card",
+            "French": "Carte graffitis"
         },
         {
             "English": "Halloween card",
@@ -10846,7 +11038,8 @@
         },
         {
             "English": "Happy-clovers card",
-            "English (Europe)": "Happy-clovers card"
+            "English (Europe)": "Happy-clovers card",
+            "French": "Carte trèfles porte-bonheur"
         },
         {
             "English": "Turkey Day card",
@@ -10854,15 +11047,18 @@
         },
         {
             "English": "Hibiscus card",
-            "English (Europe)": "Hibiscus card"
+            "English (Europe)": "Hibiscus card",
+            "French": "Carte hibiscus"
         },
         {
             "English": "Holiday card",
-            "English (Europe)": "Holiday card"
+            "English (Europe)": "Holiday card",
+            "French": "Carte festive"
         },
         {
             "English": "Lovely hearts card",
-            "English (Europe)": "Lovely hearts card"
+            "English (Europe)": "Lovely hearts card",
+            "French": "Carte jolis coeurs"
         },
         {
             "English": "Mother's Day card",
@@ -10878,19 +11074,23 @@
         },
         {
             "English": "Red-dragonflies card",
-            "English (Europe)": "Red-dragonflies card"
+            "English (Europe)": "Red-dragonflies card",
+            "French": "Carte libellules rouges"
         },
         {
             "English": "Ribbon card",
-            "English (Europe)": "Ribbon card"
+            "English (Europe)": "Ribbon card",
+            "French": "Carte ruban"
         },
         {
             "English": "Shapes card",
-            "English (Europe)": "Shapes card"
+            "English (Europe)": "Shapes card",
+            "French": "Carte géométrie"
         },
         {
             "English": "Shooting-stars card",
-            "English (Europe)": "Shooting-stars card"
+            "English (Europe)": "Shooting-stars card",
+            "French": "Carte étoiles filantes"
         },
         {
             "English": "Snowflake card",
@@ -10902,19 +11102,23 @@
         },
         {
             "English": "So-many-hearts card",
-            "English (Europe)": "So-many-hearts card"
+            "English (Europe)": "So-many-hearts card",
+            "French": "Carte coeur vibrant"
         },
         {
             "English": "Star card",
-            "English (Europe)": "Star card"
+            "English (Europe)": "Star card",
+            "French": "Carte étoile"
         },
         {
             "English": "Stationery-goods card",
-            "English (Europe)": "Stationery-goods card"
+            "English (Europe)": "Stationery-goods card",
+            "French": "Carte papeterie"
         },
         {
             "English": "Torn card",
-            "English (Europe)": "Torn card"
+            "English (Europe)": "Torn card",
+            "French": "Carte page arrachée"
         },
         {
             "English": "Town-view card",
@@ -10922,15 +11126,18 @@
         },
         {
             "English": "Velvety card",
-            "English (Europe)": "Velvety card"
+            "English (Europe)": "Velvety card",
+            "French": "Carte veloutée"
         },
         {
             "English": "Warm-sweater card",
-            "English (Europe)": "Warm-sweater card"
+            "English (Europe)": "Warm-sweater card",
+            "French": "Carte pull d'hiver"
         },
         {
             "English": "Wedding card",
-            "English (Europe)": "Wedding card"
+            "English (Europe)": "Wedding card",
+            "French": "Carte de mariage"
         },
         {
             "English": "Winter-camellia card",
@@ -10938,7 +11145,8 @@
         },
         {
             "English": "Zen card",
-            "English (Europe)": "Zen card"
+            "English (Europe)": "Zen card",
+            "French": "Carte zen"
         }
     ],
     "NPCs": [

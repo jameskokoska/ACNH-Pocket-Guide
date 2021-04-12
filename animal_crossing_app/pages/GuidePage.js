@@ -23,7 +23,7 @@ class GuidePage extends Component {
       currentURL = "https://chibisnorlax.github.io/acnhfaq/villagers/gifting/"
     } else if (props.propsPassed==="npcVisitorsRedirect"){
       currentURL = "https://chibisnorlax.github.io/acnhfaq/npc/visiting/"
-    } 
+    }
     this.state = {
       canGoBack: false,
       canGoForward: false,

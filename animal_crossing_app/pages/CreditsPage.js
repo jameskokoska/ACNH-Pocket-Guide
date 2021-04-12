@@ -32,13 +32,11 @@ class CreditsPage extends Component {
             }} 
             source={require('../assets/credits.json')}
           /> */}
-          <View style={{marginTop: 100}}/>
+          <View style={{height: 100}}/>
           <Header>Credits</Header>
-          <View style={{marginTop: 20}}/>
-          <View style={{height: 300}}>
-            <StoreHoursContainer backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} image={require("../assets/icons/James.png")} text="James" textBottom="Lead Programmer"/>
-            <StoreHoursContainer backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} image={require("../assets/icons/Ryan.png")} text="Ryan" textBottom="Lead Graphics"/>
-          </View>
+          <View style={{height: 20}}/>
+          <StoreHoursContainer backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} image={require("../assets/icons/James.png")} text="James" textBottom="Lead Programmer"/>
+          <StoreHoursContainer backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} image={require("../assets/icons/Ryan.png")} text="Ryan" textBottom="Lead Graphics"/>
           <View style={{height: 20}}/>
           <SubHeader>Volunteer Translators</SubHeader>
           <Paragraph>{attemptToTranslate("Thanks for your help!")}</Paragraph>
@@ -82,6 +80,8 @@ class CreditsPage extends Component {
           <ExternalLink link="https://nook.lol/"/>
           <Paragraph>{"Guide + FAQ:\nAuthor: littlesnorlax, Co-author: cestislife"}</Paragraph>
           <ExternalLink link="https://chibisnorlax.github.io/acnhfaq/"/>
+          <Paragraph>Villager Compatibility:</Paragraph>
+          <ExternalLink link="https://docs.google.com/spreadsheets/d/1Sc2HJRcgg-Q_CsFnewIB3n2f4Tgj-QT33qUCrItj0MU/"/>
 
           <View style={{height:35}}/>
           <SubHeader>Sources</SubHeader>

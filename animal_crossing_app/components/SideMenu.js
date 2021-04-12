@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Dimensions, Text, View,StyleSheet ,Animated} from 'react-native'
+import {Dimensions, Text, View,StyleSheet} from 'react-native'
 import  {DrawerLayout, ScrollView} from 'react-native-gesture-handler'
 import SidebarElement from './SidebarElement';
 import colors from '../Colors.js';
@@ -153,12 +153,6 @@ export const sideSections = [
     "pageNum" : "breaker",
   },
   {
-    "pageNum" : 21,
-    "picture" : require("../assets/icons/obtainable.png"),
-    "displayName" : "Obtainable Items",
-    "color": "selectObtainable"
-  },
-  {
     "pageNum" : 19,
     "picture" : require("../assets/icons/achievementIcon.png"),
     "displayName" : "Achievements",
@@ -169,6 +163,18 @@ export const sideSections = [
     "picture" : require("../assets/icons/calendar.png"),
     "displayName" : "Calendar + Events",
     "color": "selectCalendar"
+  },
+  {
+    "pageNum" : 21,
+    "picture" : require("../assets/icons/obtainable.png"),
+    "displayName" : "Obtainable Items",
+    "color": "selectObtainable"
+  },
+  {
+    "pageNum" : 24,
+    "picture" : require("../assets/icons/personalityEmoji.png"),
+    "displayName" : "Villager Compatibility",
+    "color": "selectAchievements"
   },
   {
     "pageNum" : 7,
