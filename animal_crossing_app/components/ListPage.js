@@ -194,17 +194,6 @@ export default (props) =>{
     console.log(search)
     for(var j = 0; j < dataLoaded2D.length; j++){
       var dataLoaded = dataLoaded2D[j];
-      
-      //Sort based on critterpedia entry number
-      if(getSettingsString("settingsSortCritterpedia")==="true" && (props.title==="Fish" || props.title==="Bugs" || props.title==="Sea Creatures")){
-        var dataLoadedCopy = dataLoaded.slice(0);
-        dataLoadedCopy.sort(function(a, b) {
-          var textA = a["#"];
-          var textB = b["#"];
-          return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-        });
-        dataLoaded = dataLoadedCopy
-      }
 
       //Sort alphabetically
       if(getSettingsString("settingsSortAlphabetically")==="true"){
@@ -212,6 +201,17 @@ export default (props) =>{
         dataLoadedCopy.sort(function(a, b) {
           var textA = removeAccents(a.NameLanguage.toUpperCase());
           var textB = removeAccents(b.NameLanguage.toUpperCase());
+          return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+        });
+        dataLoaded = dataLoadedCopy
+      }
+
+      //Sort based on critterpedia entry number
+      if(getSettingsString("settingsSortCritterpedia")==="true" && (props.title==="Fish" || props.title==="Bugs" || props.title==="Sea Creatures")){
+        var dataLoadedCopy = dataLoaded.slice(0);
+        dataLoadedCopy.sort(function(a, b) {
+          var textA = a["#"];
+          var textB = b["#"];
           return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
         });
         dataLoaded = dataLoadedCopy
