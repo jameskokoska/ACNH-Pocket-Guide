@@ -678,7 +678,7 @@ class BottomSheetRender extends Component{
             item={this.state.item}
             updateCheckChildFunction={this.updateCheckChildFunction}
             imageProperty={this.props.imageProperty} 
-            globalDatabase={dataLoadedAll} 
+            globalDatabase={global.dataLoadedAll} 
           />
           {popUpContainer}
           {this.props.activeCreatures===true ? <View style={{height:50}}/> : <View/>}

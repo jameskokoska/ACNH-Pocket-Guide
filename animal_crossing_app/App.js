@@ -57,6 +57,7 @@ global.changelog = `
 -Added actual checkmark to mystery islands page
 -Current price highlighted in turnip log
 -Added a way to easily clear all entered turnip prices
+-Fixed variations crash
 -Significant performance improvements for finding item variations
 -Updated French translations
 - Thanks Christophe!

@@ -331,7 +331,7 @@ export class Variations extends Component {
   }
   render(){
     if(this.props.item!=""||this.props.item!=undefined){
-      var variations = getVariations(this.props.item["Name"],this.props.globalDatabase,this.props.item["checkListKey"], this.props.item.index);
+      var variations = getVariations(this.props.item["Name"],this.props.globalDatabase,this.props.item["checkListKey"], this.props.item.index-10<0?0:this.props.item.index-10);
       if(variations.length<=1){
         return <View/>
       }
@@ -344,7 +344,7 @@ export class Variations extends Component {
           <ScrollView horizontal={true} style={{marginHorizontal:10}} contentContainerStyle={{ flexGrow: 1, justifyContent: 'center'}}>
           <View style={{marginHorizontal: 4, flexDirection: 'row', justifyContent:'center'}}>
             {variations.map( (item, index)=>
-              <VariationItem updateRightCornerCheck={this.props.updateRightCornerCheck} updateKey={this.state.updateKey} updateChecked={this.state.updateChecked} originalCheckListKey={originalCheckListKey} updateCheckChildFunction={this.props.updateCheckChildFunction} index={index} key={item[this.props.imageProperty[dataSet]]} globalDatabase={this.props.globalDatabase} item={item} setPopupVisible={(state, image, item)=>this.popup?.setPopupVisible(state, image, item)} dataSet={dataSet} imageProperty={imageProperty}/>
+              <VariationItem variations={variations} updateRightCornerCheck={this.props.updateRightCornerCheck} updateKey={this.state.updateKey} updateChecked={this.state.updateChecked} originalCheckListKey={originalCheckListKey} updateCheckChildFunction={this.props.updateCheckChildFunction} index={index} key={item[this.props.imageProperty[dataSet]]} globalDatabase={this.props.globalDatabase} item={item} setPopupVisible={(state, image, item)=>this.popup?.setPopupVisible(state, image, item)} dataSet={dataSet} imageProperty={imageProperty}/>
             )}
           </View>
           </ScrollView>
@@ -412,6 +412,7 @@ class VariationItem extends Component{
           this.props.updateRightCornerCheck(item.checkListKey+this.extraIndex,!this.state.checked)
           this.setState({checked: !this.state.checked})
           this.props.updateCheckChildFunction(false, true);
+          
           if(howManyVariationsChecked(this.props.variations) === this.props.variations.length){
             this.props.updateCheckChildFunction(true);
             this.props.updateRightCornerCheck(this.props.originalCheckListKey,true)

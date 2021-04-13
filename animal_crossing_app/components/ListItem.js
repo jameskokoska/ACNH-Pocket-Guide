@@ -43,7 +43,7 @@ class ListItem extends React.Component{
       }
       let checkVariations = this.allVariationsChecked();
       if(this.state.variationsPercent!==checkVariations){
-        this.setState({variationsPercent: checkVariations})
+        this.setState({variationsPercent: this.allVariationsChecked()})
       }
     }
   }
@@ -55,7 +55,7 @@ class ListItem extends React.Component{
   }
   allVariationsChecked = () => {
     if(this.props.item.hasOwnProperty("Variation") && this.props.item["Variation"]!=="NA"){
-      const variations = getVariations(this.props.item["Name"],determineDataGlobal(this.props.dataGlobalName),this.props.item["checkListKey"], this.props.item.index);
+      const variations = getVariations(this.props.item["Name"],global.dataLoadedAll,this.props.item["checkListKey"], this.props.item.index-10<0?0:this.props.item.index-10);
       const howManyVariations = howManyVariationsChecked(variations)
       return howManyVariations/variations.length===1 || howManyVariations<1 ? true: false;
     }
@@ -77,7 +77,7 @@ class ListItem extends React.Component{
   }
 
   render(){
-    var missingVariationsIndicator = !this.state.variationsPercent?<View pointerEvents={"none"} style={{position:'absolute', right: 0, top: -3, backgroundColor:colors.missingVariations[global.darkMode], height:27, width:27, borderRadius:20}}></View>:<View/>
+    var missingVariationsIndicator = !this.state.variationsPercent?<View pointerEvents={"none"} style={{position:'absolute', right: -5, top: -5, backgroundColor:colors.missingVariations[global.darkMode], height:27, width:27, borderRadius:20}}></View>:<View/>
 
     var showBlankCheckMarks = getSettingsString("settingsShowBlankCheckMarks")==="true";
 
@@ -155,7 +155,7 @@ class ListItem extends React.Component{
       }
       return (
         <View style={styles.gridWrapper}>
-          {missingVariationsIndicator}
+          
           <TouchableNativeFeedback onLongPress={() => {
             checkOff(this.props.item.checkListKey, this.state.wishlist, true, true); //true to vibrate and wishlist
             this.setWishlist(this.state.wishlist===true ? false:true);
@@ -171,6 +171,7 @@ class ListItem extends React.Component{
             }}
           >
             <View style={[styles.gridBox, {backgroundColor:boxColor}]}>
+              {missingVariationsIndicator}
               <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -18, top: -18, zIndex:10}}>
                 <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKey, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
                   <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
