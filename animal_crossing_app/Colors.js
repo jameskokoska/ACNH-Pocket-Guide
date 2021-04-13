@@ -119,6 +119,7 @@ const colors = {
     achievementsNoun : ["#5c6bc0","#3C56A3"],
     achievementsModifier : ["#548BAA","#3C8BA3"],
     highlightNonCustomizableItems : ["#8DAFEE6B","#7688C04B"],
+    highlightTurnipDay : ["#A1B9E66B","#1942647C"],
     okButton : ["#4A9EE2","#146EA5"],
     okButtonFaint : ["#99cbf2","#125580"],
     dateButton : ["#81c784","#519657"],

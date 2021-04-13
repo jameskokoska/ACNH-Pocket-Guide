@@ -11,6 +11,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
 import DropDownPicker from 'react-native-dropdown-picker'
 import FastImage from "./FastImage"
+import {PopupInfoCustom} from "./Popup"
+import ButtonComponent from "./ButtonComponent";
 
 class TodoList extends Component {
   constructor(props){
@@ -232,12 +234,8 @@ class TurnipLog extends Component {
       lastPattern:"-1",
       firstTime: "false",
     }
-    this.loadList();
     this.turnipLink = "https://turnipprophet.io/";
-  }
-
-  loadList = async() => {
-    var defaultList = [
+    this.defaultList = [
       {title: 'Purchase', purchase: ""},
       {title: 'Monday', am: "", pm:""},
       {title: 'Tuesday', am: "", pm:""},
@@ -246,10 +244,19 @@ class TurnipLog extends Component {
       {title: 'Friday', am: "", pm:""},
       {title: 'Saturday', am: "", pm:""},
     ]
-    var storageData = JSON.parse(await getStorage("TurnipList",JSON.stringify(defaultList)));
+    this.loadList();
+  }
+
+  loadList = async() => {
+    var storageData = JSON.parse(await getStorage("TurnipList",JSON.stringify(this.defaultList)));
     var storageLastPattern = await getStorage("TurnipListLastPattern","-1");
     var storageFirstTime = await getStorage("TurnipListFirstTime","false");
     this.setState({data:storageData, lastPattern: storageLastPattern, firstTime: storageFirstTime});
+  }
+
+  clearHistory = async() => {
+    this.setState({data:this.defaultList});
+    this.saveList(this.defaultList);
   }
 
   saveList = async(data) => {
@@ -284,9 +291,41 @@ class TurnipLog extends Component {
 
   render(){
     var turnipLink = this.getTurnipLink();
+    var buttonsHistory = <>
+      <View style={{flexDirection:"row", justifyContent:"center"}}>
+        <ButtonComponent
+          text={"Clear Prices"}
+          color={colors.cancelButton[global.darkMode]}
+          vibrate={20}
+          onPress={() => {
+            this.clearHistory();
+            this.popupHistory.setPopupVisible(false);
+          }}
+        /> 
+        <ButtonComponent
+          text={"Cancel"}
+          color={colors.okButton[global.darkMode]}
+          vibrate={10}
+          onPress={() => {
+            this.popupHistory?.setPopupVisible(false);
+          }}
+        /> 
+      </View>
+    </>
     return (
-      <View style={{width: "90%", marginTop: 20}}>
-        <TextFont bold={true} numberOfLines={2} style={{marginBottom: 10, fontSize:23, color:colors.textBlack[global.darkMode]}}>{capitalize("Turnip Log")}</TextFont>
+      <>
+      <PopupInfoCustom buttons={buttonsHistory} ref={(popupHistory) => this.popupHistory = popupHistory} buttonDisabled={true} buttonText={"OK"} header={<TextFont bold={true} style={{fontSize: 22, marginBottom:11, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Are you sure you want to clear your turnip prices?</TextFont>}>
+        <View/>
+      </PopupInfoCustom>
+      <View style={{width: "88%", marginTop: 20}}>
+        <TextFont bold={true} numberOfLines={2} style={{marginLeft:2, marginBottom: 10, fontSize:23, color:colors.textBlack[global.darkMode]}}>{capitalize("Turnip Log")}</TextFont>
+        <TouchableOpacity style={{padding:5, right:0, top:0,position:'absolute'}} 
+          onPress={async()=>{
+            this.popupHistory?.setPopupVisible(true);
+            getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+        }}>
+          <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"Clear Prices"}</TextFont>
+        </TouchableOpacity>
         <DropDownPicker
           items={[
             {label: attemptToTranslate("Last week's pattern") + ": " + attemptToTranslate("Unknown"), value: "-1",},
@@ -347,12 +386,14 @@ class TurnipLog extends Component {
           <TextFont bold={true} style={{color: colors.fishText[global.darkMode], fontSize: 18, textAlign:"center"}}>{"View on turnipprophet.io"}</TextFont>
         </TouchableOpacity>
       </View>
+      </>
     )
   }
 }
 
 class TurnipItem extends Component {
   render(){
+    console.log(this.props.item.title + this.props.index)
     if(this.props.item.purchase!==undefined){
       var item = {title: this.props.item.title, purchase: this.props.item.purchase,};
       return(
@@ -361,7 +402,7 @@ class TurnipItem extends Component {
           <TextInput
             allowFontScaling={false}
             keyboardType={"numeric"}
-            style={{textAlign:"center", fontSize: 17, width:"55%", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 6, borderRadius: 5}}
+            style={{textAlign:"center", fontSize: 17, width:"55%", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:(getCurrentDateObject().getDay() === this.props.index && getCurrentDateObject().getHours() < 12) ?colors.highlightTurnipDay[global.darkMode]:colors.lightDarkAccent[global.darkMode], padding: 6, borderRadius: 5}}
             onChangeText={(text) => {item.purchase = text; this.props.updateItem(item,this.props.index)}}
             placeholder={attemptToTranslate("Sunday Price")}
             defaultValue={this.props.item.purchase}
@@ -378,7 +419,7 @@ class TurnipItem extends Component {
           <TextInput
             allowFontScaling={false}
             keyboardType={"numeric"}
-            style={{textAlign:"center", fontSize: 17, width:"25%", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 6, borderRadius: 5}}
+            style={{textAlign:"center", fontSize: 17, width:"25%", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:(getCurrentDateObject().getDay() === this.props.index && getCurrentDateObject().getHours() < 12) ?colors.highlightTurnipDay[global.darkMode]:colors.lightDarkAccent[global.darkMode], padding: 6, borderRadius: 5}}
             onChangeText={(text) => {item.am = text; this.props.updateItem(item,this.props.index)}}
             placeholder={attemptToTranslate("AM")}
             defaultValue={this.props.item.am}
@@ -389,7 +430,7 @@ class TurnipItem extends Component {
           <TextInput
             allowFontScaling={false}
             keyboardType={"numeric"}
-            style={{textAlign:"center", fontSize: 17, width:"25%", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 6, borderRadius: 5}}
+            style={{textAlign:"center", fontSize: 17, width:"25%", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:(getCurrentDateObject().getDay() === this.props.index && getCurrentDateObject().getHours() >= 12) ?colors.highlightTurnipDay[global.darkMode]:colors.lightDarkAccent[global.darkMode], padding: 6, borderRadius: 5}}
             onChangeText={(text) => {item.pm = text; this.props.updateItem(item,this.props.index)}}
             placeholder={attemptToTranslate("PM")}
             defaultValue={this.props.item.pm}

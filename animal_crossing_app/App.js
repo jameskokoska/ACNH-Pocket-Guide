@@ -53,6 +53,10 @@ global.gameVersion = "1.9.0";
 global.changelog = `
 -Added sort by Critterpedia option for Museum pages
 -Added villager compatibility - See which villagers get along the best with others
+-Added warning to villager compatibility page - This is not yet confirmed to be accurate and should only be used as a reference
+-Added more information about villagers redirect
+-Added a way to easily clear all entered turnip prices
+-Current price highlighted in turnip log
 -Added more Spanish translations, more coming soon
 - Thanks Vicente, adrisniper7, and Robertin!
 -Updated French translations

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {TouchableOpacity, ScrollView, View, Dimensions, Text} from 'react-native';
 import TextFont from '../components/TextFont'
 import colors from '../Colors'
-import {SubHeader, Header, Paragraph} from "../components/Formattings"
+import {HeaderNote, SubHeader, Header, Paragraph} from "../components/Formattings"
 import {attemptToTranslate, getCurrentVillagerObjects} from "../LoadJsonData"
 import {PopupInfoCustom} from "../components/Popup"
 import FastImage from "../components/FastImage"
@@ -61,7 +61,7 @@ export default class VillagersCompatibilityPage extends Component {
     const extraInfo= {
       type:"externalRedirect",
       title:"Villager Compatibility",
-      content:"Certain villager personalities vibe better with others. This does not mean that villagers cannot live with others. Only the first 15 favorite villagers are compared.",
+      content:"This has not yet been proven to be accurate in ACNH, and is a feature from older games. Use as a reference only, as it may not impact gameplay. Villager's types of conversations may be based on their personalities. Only the first 15 favorite villagers are compared.",
       linkText: "Tap here to see how compatibility is calculated",
       redirectPassBack: "https://docs.google.com/spreadsheets/d/1Sc2HJRcgg-Q_CsFnewIB3n2f4Tgj-QT33qUCrItj0MU/edit#gid=0"
     }
@@ -78,6 +78,8 @@ export default class VillagersCompatibilityPage extends Component {
             <GuideRedirectButton icon={"i"} style={{position:"absolute", padding:15, right:0}} extraInfo={extraInfo} setPage={this.props.setPage}/>
             <View style={{height: 100}}/>
             <Header>Villager Compatibility</Header>
+            <HeaderNote>This has NOT yet been proven to be accurate in ACNH, and is a feature from older games. Reference with caution.</HeaderNote>
+            <HeaderNote>Tap the [!] in the top right corner for more information.</HeaderNote>
             <View style={{height: 20}}/>
             {this.currentVillagers.map((villager, index) => {
               return(

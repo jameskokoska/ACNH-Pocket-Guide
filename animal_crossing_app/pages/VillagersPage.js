@@ -11,6 +11,15 @@ class VillagersPage extends Component {
         <ListPage 
           setPage={this.props.setPage}
           tabs={false}
+          extraInfo={
+            {
+              type:"guideRedirect",
+              title:"Guide + FAQ",
+              content:"You can read more details about villagers by visiting villagers guide page",
+              linkText: "Tap here to read more about villagers",
+              redirectPassBack: "villagersRedirect"
+            }
+          }
           filterSearchable = {true}
           disablePopup={[false]}
           title="Villagers"

@@ -93,7 +93,7 @@ export default class VisitorList extends Component {
           vibrate={8}
           onPress={() => {
             this.clearHistory();
-            this.popupHistory.setPopupVisible(false);
+            this.popupHistory?.setPopupVisible(false);
           }}
         /> 
         <ButtonComponent
@@ -101,7 +101,7 @@ export default class VisitorList extends Component {
           color={colors.okButton[global.darkMode]}
           vibrate={15}
           onPress={() => {
-            this.popupHistory.setPopupVisible(false);
+            this.popupHistory?.setPopupVisible(false);
           }}
         /> 
       </View>
@@ -110,7 +110,7 @@ export default class VisitorList extends Component {
       <View style={{alignItems:"center",flexDirection:"row", right:0, top:0,position:'absolute',zIndex:10}}>
         <TouchableOpacity style={{padding:5, marginRight: 0}} 
           onPress={()=>{
-            this.popupHistory.setPopupVisible(true);
+            this.popupHistory?.setPopupVisible(true);
             getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10]) : "";
         }}>
           <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"View History"}</TextFont>
