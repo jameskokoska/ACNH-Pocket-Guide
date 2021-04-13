@@ -59,7 +59,6 @@ class TodoList extends Component {
 
   saveList = async(data) => {
     await AsyncStorage.setItem("ToDoList", JSON.stringify(data));
-    console.log(data)
   }
 
   checkOffItem = (index) => {
@@ -266,7 +265,6 @@ class TurnipLog extends Component {
   updateItem = (item, index) => {
     var currentData = this.state.data;
     currentData[index] = item;
-    console.log(item);
     this.setState({data: currentData});
     this.saveList(currentData);
   }
@@ -393,7 +391,6 @@ class TurnipLog extends Component {
 
 class TurnipItem extends Component {
   render(){
-    console.log(this.props.item.title + this.props.index)
     if(this.props.item.purchase!==undefined){
       var item = {title: this.props.item.title, purchase: this.props.item.purchase,};
       return(

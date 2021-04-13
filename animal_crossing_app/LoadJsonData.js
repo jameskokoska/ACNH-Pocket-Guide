@@ -552,6 +552,14 @@ export const settings = [
     "description" : "Show an empty check mark in lists. Can be tapped to quickly check off the item. Disabling this can increase performance as less animations need to be rendered.",
   },
   {
+    "keyName" : "settingsCompressVariations",
+    "defaultValue" : "false",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/magnifyingGlass.png"),
+    "displayName" : "Compress variations into a scrollable list",
+    "description" : "The way gestures work, it may not allow scrolling inside a popup container. Disable this to be able to see all variations without the need for a nested scroll.",
+  },
+  {
     "keyName" : "settingsLargerItemPreviews",
     "defaultValue" : "false",
     "currentValue" : "",

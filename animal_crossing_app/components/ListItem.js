@@ -17,7 +17,8 @@ import {getPhotoShadow} from "./GetPhoto"
 import {getMonthShort} from "./DateFunctions"
 import colors from "../Colors"
 import {getCurrentDateObject, parseActiveTime} from "./DateFunctions"
-import {inWishlist, inChecklist, attemptToTranslateItem, getSettingsString} from "../LoadJsonData"
+import {determineDataGlobal, inWishlist, inChecklist, attemptToTranslateItem, getSettingsString} from "../LoadJsonData"
+import {howManyVariationsChecked, getVariations} from "./BottomSheetComponents"
 
 const {width} = Dimensions.get('window');
 
@@ -28,7 +29,8 @@ class ListItem extends PureComponent{
     this.setWishlist = this.setWishlist.bind(this);
     this.state = {
       collected: inChecklist(this.props.item.checkListKey),
-      wishlist: inWishlist(this.props.item.checkListKey)
+      wishlist: inWishlist(this.props.item.checkListKey),
+      // variationsPercent: this.allVariationsChecked()
     }
   }
   componentDidUpdate(prevProps){
@@ -47,6 +49,10 @@ class ListItem extends PureComponent{
   componentWillUnmount() {
     this.mounted = false;
   }
+  // allVariationsChecked = () => {
+  //   const variations = getVariations(this.props.item["Name"],determineDataGlobal(this.props.dataGlobalName),this.props.item["checkListKey"]);
+  //   return howManyVariationsChecked(variations)/variations.length===1 ? true: false
+  // }
   setCollected(collected){
     if(this.mounted){
       this.setState({collected: collected})
@@ -97,6 +103,9 @@ class ListItem extends PureComponent{
         }
       }
     }
+    // if(this.state.variationsPercent){
+    //   boxColor = "green";
+    // }
     if(this.props.leaveWarning){
       var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH "
       var nextMonthShort = getMonthShort(getCurrentDateObject().getMonth()+1);

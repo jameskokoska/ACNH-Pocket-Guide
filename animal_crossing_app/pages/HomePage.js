@@ -530,10 +530,10 @@ class CollectionProgress extends Component {
     var musicCountTotal = 95;
     var musicPercentage = musicCount/musicCountTotal * 100;
     var emojipediaCount = countCollection("emojiCheckList");
-    var emojipediaCountTotal = global.dataLoadedReactions[0].length;
+    var emojipediaCountTotal = global.dataLoadedReactions.length;
     var emojipediaPercentage = emojipediaCount/emojipediaCountTotal * 100;
     var recipeCount = countCollection("recipesCheckList");
-    var recipeCountTotal = global.dataLoadedRecipes[0].length;
+    var recipeCountTotal = global.dataLoadedRecipes.length;
     var recipePercentage = recipeCount/recipeCountTotal * 100;
     return(<>
       <View style={{height: 15}}/>
