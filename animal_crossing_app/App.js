@@ -51,16 +51,24 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
+-Fixed alphabetical ordering - now applies to all sections
+-Added indicator is not all variations checked off
+-Added setting to remove the variations scroll - this is to avoid a bug with gestures on some devices
+-Added actual checkmark to mystery islands page
+-Current price highlighted in turnip log
+-Added a way to easily clear all entered turnip prices
+-Significant performance improvements for finding item variations
+-Updated French translations
+- Thanks Christophe!
+-
 -Added sort by Critterpedia option for Museum pages
 -Added villager compatibility - See which villagers get along the best with others
 -Added warning to villager compatibility page - This is not yet confirmed to be accurate and should only be used as a reference
 -Added more information about villagers redirect
--Added a way to easily clear all entered turnip prices
--Current price highlighted in turnip log
 -Added more Spanish translations, more coming soon
 - Thanks Vicente, adrisniper7, and Robertin!
--Updated French translations
-- Thanks Christophe!
+-
+-Past changes:
 -
 -Reworked how translations are handled internally
 -Fixed 24 hour clock display 12 for midnight instead of 0:00
@@ -100,7 +108,6 @@ global.changelog = `
 -Updated translations
 -Fixed villager name translation on home page
 -
--Past changes:
 -Color fixes for events
 -Your villagers birthdays are now highlighted in the Events section
 -24 hour time fixes

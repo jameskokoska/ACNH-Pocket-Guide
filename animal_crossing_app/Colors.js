@@ -164,5 +164,7 @@ const colors = {
     "villagerOutlineNeutral" : ["#E6EC9083","#E6EC9083"],
     "villagerOutlineOccasionally" : ["#FFC57AAD","#FFC57AAD"],
     "villagerOutlineConflict" : ["#FF9090A6","#FF9090A6"],
+    missingVariations : ["#E4DD1ADE","#D8D22BB6"],
+
 }
 module.exports = colors;

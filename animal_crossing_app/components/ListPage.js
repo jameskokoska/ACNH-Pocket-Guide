@@ -195,28 +195,6 @@ export default (props) =>{
     for(var j = 0; j < dataLoaded2D.length; j++){
       var dataLoaded = dataLoaded2D[j];
 
-      //Sort alphabetically
-      if(getSettingsString("settingsSortAlphabetically")==="true"){
-        var dataLoadedCopy = dataLoaded.slice(0);
-        dataLoadedCopy.sort(function(a, b) {
-          var textA = removeAccents(a.NameLanguage.toUpperCase());
-          var textB = removeAccents(b.NameLanguage.toUpperCase());
-          return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-        });
-        dataLoaded = dataLoadedCopy
-      }
-
-      //Sort based on critterpedia entry number
-      if(getSettingsString("settingsSortCritterpedia")==="true" && (props.title==="Fish" || props.title==="Bugs" || props.title==="Sea Creatures")){
-        var dataLoadedCopy = dataLoaded.slice(0);
-        dataLoadedCopy.sort(function(a, b) {
-          var textA = a["#"];
-          var textB = b["#"];
-          return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-        });
-        dataLoaded = dataLoadedCopy
-      }
-
       for(var i = 0; i < dataLoaded.length; i++){
         item = dataLoaded[i];
         //Loop through the specific search criteria specified for this dataset
@@ -395,6 +373,28 @@ export default (props) =>{
       }
     }
     if (componentIsMounted.current) {
+      //Sort alphabetically
+      if(getSettingsString("settingsSortAlphabetically")==="true"){
+        var dataLoadedCopy = dataUpdated.slice(0);
+        dataLoadedCopy.sort(function(a, b) {
+          var textA = removeAccents(a.NameLanguage.toUpperCase());
+          var textB = removeAccents(b.NameLanguage.toUpperCase());
+          return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+        });
+        dataUpdated = dataLoadedCopy
+      }
+
+      //Sort based on critterpedia entry number
+      if(getSettingsString("settingsSortCritterpedia")==="true" && (props.title==="Fish" || props.title==="Bugs" || props.title==="Sea Creatures")){
+        var dataLoadedCopy = dataUpdated.slice(0);
+        dataLoadedCopy.sort(function(a, b) {
+          var textA = a["#"];
+          var textB = b["#"];
+          return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+        });
+        dataUpdated = dataLoadedCopy
+      }
+
       setData(dataUpdated)
     }
   }, [props, search, searchFilters])

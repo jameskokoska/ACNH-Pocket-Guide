@@ -331,7 +331,7 @@ export class Variations extends Component {
   }
   render(){
     if(this.props.item!=""||this.props.item!=undefined){
-      var variations = getVariations(this.props.item["Name"],this.props.globalDatabase,this.props.item["checkListKey"]);
+      var variations = getVariations(this.props.item["Name"],this.props.globalDatabase,this.props.item["checkListKey"], this.props.item.index);
       if(variations.length<=1){
         return <View/>
       }
@@ -406,12 +406,12 @@ class VariationItem extends Component{
       <TouchableOpacity 
         onLongPress={()=>{this.props.setPopupVisible(true, item[this.props.imageProperty[dataSet]], item); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : ""}}
         onPress={()=>{ 
-          if(item.checkListKey+this.extraIndex === this.props.originalCheckListKey){
+          if(item.checkListKey+this.extraIndex === this.props.originalCheckListKey)
             this.props.updateCheckChildFunction(this.state.checked===true ? false:true);
-          }
           checkOff(item.checkListKey, this.state.checked, getSettingsString("settingsEnableVibrations")==="true", false, this.extraIndex); 
           this.props.updateRightCornerCheck(item.checkListKey+this.extraIndex,!this.state.checked)
           this.setState({checked: !this.state.checked})
+          this.props.updateCheckChildFunction(false, true);
           if(howManyVariationsChecked(this.props.variations) === this.props.variations.length){
             this.props.updateCheckChildFunction(true);
             this.props.updateRightCornerCheck(this.props.originalCheckListKey,true)
@@ -477,17 +477,27 @@ class PopupImage extends Component {
   }
 }
 
-export function getVariations(name, globalDatabase, checkListKey){
+export function getVariations(name, globalDatabase, checkListKey, startingIndex = 0){
   var totalVariations = [];
+  var failCount = 0;
+  var foundAlready = false;
   for(var i=0; i<globalDatabase.length; i++){
-    for(var j=0; j<globalDatabase[i].length; j++){
-      if(globalDatabase[i][j]["checkListKey"].split("CheckList")[0]!==checkListKey.split("CheckList")[0]){
-        break;
+    if(globalDatabase[i].length > startingIndex){
+      for(var j=startingIndex; j<globalDatabase[i].length; j++){
+        if(globalDatabase[i][j]["checkListKey"].split("CheckList")[0]!==checkListKey.split("CheckList")[0]){
+          break;
+        }
+        if(globalDatabase[i][j]["Name"].toLowerCase()===name.toLowerCase()){
+          totalVariations.push(globalDatabase[i][j]);
+          foundAlready = true;
+        } else if(foundAlready) {
+          failCount++
+        }
+        if(failCount>2){
+          break;
+        }
       }
-      if(globalDatabase[i][j]["Name"].toLowerCase()===name.toLowerCase()){
-        totalVariations.push(globalDatabase[i][j]);
-      }
-    }
+    } 
   }
   return totalVariations;
 }

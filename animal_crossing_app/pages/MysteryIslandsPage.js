@@ -10,6 +10,7 @@ import {InfoLineBeside, InfoLine} from "../components/BottomSheetComponents"
 import {PopupBottomCustom} from "../components/Popup"
 import {attemptToTranslateMysteryIslands, getStorage, getSettingsString} from "../LoadJsonData"
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Check from '../components/Check';
 
 class MysteryIslandsPage extends Component {
   constructor(props){
@@ -104,10 +105,16 @@ class MysteryIslandsComponent extends Component {
     if(this.props.data.includes(this.props.island.id)){
       checked=true;
     }
+    var showBlankCheckMarks = getSettingsString("settingsShowBlankCheckMarks")==="true";
     return(
       <>
         <TouchableOpacity activeOpacity={0.7} onLongPress={()=>this.props.checkOffItem(this.props.island.id)} onPress={()=>this.props.openPopup(this.props.island)}>
-        <View style={{width:Dimensions.get('window').width*0.42, borderRadius:9, backgroundColor:checked ? colors.checkedColor[global.darkMode] : colors.white[global.darkMode], padding:10, marginVertical: 6, justifyContent:"center", alignItems:"center",}}>
+        <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -15, top: -10, zIndex:10}}>
+          <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){this.props.checkOffItem(this.props.island.id)}}}>
+            <Check play={checked} width={53} height={53} disablePopup={true}/>
+          </TouchableOpacity>
+        </View>
+        <View style={{width:Dimensions.get('window').width*0.42, borderRadius:9, backgroundColor:colors.white[global.darkMode], padding:10, marginVertical: 6, justifyContent:"center", alignItems:"center",}}>
           <Image style={{resizeMode:'contain', width:"100%", height: 140, borderRadius:2}} source={this.props.island.picture}/>
           <TextFont translate={false} bold={true} style={{textAlign:"center",marginHorizontal:5, fontSize: 17, color: colors.textBlack[global.darkMode]}}>{attemptToTranslateMysteryIslands(this.props.island.name)}</TextFont>
         </View>

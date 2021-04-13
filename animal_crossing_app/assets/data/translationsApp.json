@@ -5247,31 +5247,131 @@
         },
         {
             "English": "Villager Compatibility",
-            "English (Europe)": "Villager Compatibility"
+            "English (Europe)": "Villager Compatibility",
+            "French": "Compatibilité Villageois",
+            "French (US)": "Compatibilité Villageois"
         },
         {
-            "English": "Certain villager personalities vibe better with others. This does not mean that villagers cannot live with others. Only the first 15 favorite villagers are compared.",
-            "English (Europe)": "Certain villager personalities vibe better with others. This does not mean that villagers cannot live with others. Only the first 15 favorite villagers are compared."
+            "English": "This has not yet been proven to be accurate in ACNH, and is a feature from older games. Use as a reference only, as it may not impact gameplay. Villager's types of conversations may be based on their personalities. Only the first 15 favorite villagers are compared.",
+            "English (Europe)": "This has not yet been proven to be accurate in ACNH, and is a feature from older games. Use as a reference only, as it may not impact gameplay. Villager's types of conversations may be based on their personalities. Only the first 15 favorite villagers are compared.",
+            "French": "Cela n'a pas encore été prouvé pour être précis dans ACNH et c'est une fonctionnalité d'anciens jeux. À n'utiliser qu'à titre de référence car cela n'affecte pas le gameplay. Les types de conversations des villageois peuvent être basés sur leurs personnalités. Seuls les 15 premiers villageois préférés sont comparés.",
+            "French (US)": "Cela n'a pas encore été prouvé pour être précis dans ACNH et c'est une fonctionnalité d'anciens jeux. À n'utiliser qu'à titre de référence car cela n'affecte pas le gameplay. Les types de conversations des villageois peuvent être basés sur leurs personnalités. Seuls les 15 premiers villageois préférés sont comparés."
         },
         {
             "English": "Tap here to see how compatibility is calculated",
-            "English (Europe)": "Tap here to see how compatibility is calculated"
+            "English (Europe)": "Tap here to see how compatibility is calculated",
+            "French": "Appuyez ici pour voir comment la compatibilité est calculée",
+            "French (US)": "Appuyez ici pour voir comment la compatibilité est calculée"
         },
         {
             "English": "Get Along",
-            "English (Europe)": "Get Along"
+            "English (Europe)": "Get Along",
+            "French": "S'entend",
+            "French (US)": "S'entend"
         },
         {
             "English": "Neutral",
-            "English (Europe)": "Neutral"
+            "English (Europe)": "Neutral",
+            "French": "Neutre",
+            "French (US)": "Neutre"
         },
         {
             "English": "Occasionally",
-            "English (Europe)": "Occasionally"
+            "English (Europe)": "Occasionally",
+            "French": "Parfois",
+            "French (US)": "Parfois"
         },
         {
             "English": "Conflict",
-            "English (Europe)": "Conflict"
+            "English (Europe)": "Conflict",
+            "French": "Conflit",
+            "French (US)": "Conflit"
+        },
+        {
+            "English": "This has NOT yet been proven to be accurate in ACNH, and is a feature from older games. Reference with caution.",
+            "English (Europe)": "This has NOT yet been proven to be accurate in ACNH, and is a feature from older games. Reference with caution.",
+            "French": "Cela n'a PAS encore été prouvé pour être précis dans ACNH et c'est une fonctionnalité d'anciens jeux. Référence avec prudence.",
+            "French (US)": "Cela n'a PAS encore été prouvé pour être précis dans ACNH et c'est une fonctionnalité d'anciens jeux. Référence avec prudence."
+        },
+        {
+            "English": "You can read more details about villagers by visiting villagers guide page",
+            "English (Europe)": "You can read more details about villagers by visiting villagers guide page",
+            "French": "Vous pouvez lire plus de détails sur les villageois en visitant la page du guide sur les villageois",
+            "French (US)": "Vous pouvez lire plus de détails sur les villageois en visitant la page du guide sur les villageois"
+        },
+        {
+            "English": "Tap here to read more about villagers",
+            "English (Europe)": "Tap here to read more about villagers",
+            "French": "Appuyez ici pour en savoir plus sur les villageois",
+            "French (US)": "Appuyez ici pour en savoir plus sur les villageois"
+        },
+        {
+            "English": "Tap the [?] in the top right corner for more information.",
+            "English (Europe)": "Tap the [?] in the top right corner for more information.",
+            "French": "Appuyez sur le [?] dans le coin supérieur droit pour plus d'informations.",
+            "French (US)": "Appuyez sur le [?] dans le coin supérieur droit pour plus d'informations."
+        },
+        {
+            "English": "Tap the [!] in the top right corner for more information.",
+            "English (Europe)": "Tap the [!] in the top right corner for more information.",
+            "French": "Appuyez sur le [!] dans le coin supérieur droit pour plus d'informations.",
+            "French (US)": "Appuyez sur le [!] dans le coin supérieur droit pour plus d'informations."
+        },
+        {
+            "English": "Clear Prices",
+            "English (Europe)": "Clear Prices",
+            "French": "Effacer les prix",
+            "French (US)": "Effacer les prix"
+        },
+        {
+            "English": "Are you sure you want to clear your turnip prices?",
+            "English (Europe)": "Are you sure you want to clear your turnip prices?",
+            "French": "Êtes-vous sûr(e) de vouloir effacer vos prix de navet ?",
+            "French (US)": "Êtes-vous sûr(e) de vouloir effacer vos prix de navet ?"
+        },
+        {
+            "English": "Mailed to players using the limited edition ACNH Nintendo Switch after the 1.1.0 update in a letter from Nintendo",
+            "English (Europe)": "Mailed to players using the limited edition ACNH Nintendo Switch after the 1.1.0 update in a letter from Nintendo",
+            "French": "Envoyé aux joueurs utilisant l'édition limitée ACNH Nintendo Switch après la mise à jour 1.1.0 dans une lettre de Nintendo",
+            "French (US)": "Envoyé aux joueurs utilisant l'édition limitée ACNH Nintendo Switch après la mise à jour 1.1.0 dans une lettre de Nintendo"
+        },
+        {
+            "English": "Mailed to players after the 1.5.0 update in a letter from Nintendo",
+            "English (Europe)": "Mailed to players after the 1.5.0 update in a letter from Nintendo",
+            "French": "Envoyé aux joueurs après la mise à jour 1.5.0 dans une lettre de Nintendo",
+            "French (US)": "Envoyé aux joueurs après la mise à jour 1.5.0 dans une lettre de Nintendo"
+        },
+        {
+            "English": "Reward for completing the Stamp Rally in the fossil gallery during International Museum Day",
+            "English (Europe)": "Reward for completing the Stamp Rally in the fossil gallery during International Museum Day",
+            "French": "Récompense pour avoir terminé le Rallye Tampons dans la galerie des fossiles lors de la Journée Internationale des Musées",
+            "French (US)": "Récompense pour avoir terminé le Rallye Tampons dans la galerie des fossiles lors de la Journée Internationale des Musées"
+        },
+        {
+            "English": "Reward for completing the Stamp Rally in the bug exhibit during International Museum Day",
+            "English (Europe)": "Reward for completing the Stamp Rally in the bug exhibit during International Museum Day",
+            "French": "Récompense pour avoir terminé le Rallye Tampons dans l'exposition d'insectes lors de la Journée Internationale des Musées",
+            "French (US)": "Récompense pour avoir terminé le Rallye Tampons dans l'exposition d'insectes lors de la Journée Internationale des Musées"
+        },
+        {
+            "English": "Reward for completing the Stamp Rally in the fish gallery during International Museum Day",
+            "English (Europe)": "Reward for completing the Stamp Rally in the fish gallery during International Museum Day",
+            "French": "Récompense pour avoir terminé le Rallye Tampons dans la galerie de poissons lors de la Journée Internationale des Musées",
+            "French (US)": "Récompense pour avoir terminé le Rallye Tampons dans la galerie de poissons lors de la Journée Internationale des Musées"
+        },
+        {
+            "English": "Received in the mail",
+            "English (Europe)": "Received in the mail",
+            "French": "Reçu par courrier",
+            "French (US)": "Reçu par courrier"
+        },
+        {
+            "English": "Compress variations into a scrollable list",
+            "English (Europe)": "Compress variations into a scrollable list"
+        },
+        {
+            "English": "The way gestures work, it may not allow scrolling inside a popup container. Disable this to be able to see all variations without the need for a nested scroll.",
+            "English (Europe)": "The way gestures work, it may not allow scrolling inside a popup container. Disable this to be able to see all variations without the need for a nested scroll."
         }
     ],
     "Event Names": [

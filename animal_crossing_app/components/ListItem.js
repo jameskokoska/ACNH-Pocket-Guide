@@ -22,7 +22,7 @@ import {howManyVariationsChecked, getVariations} from "./BottomSheetComponents"
 
 const {width} = Dimensions.get('window');
 
-class ListItem extends PureComponent{
+class ListItem extends React.Component{
   constructor(props) {
     super(props);
     this.setCollected = this.setCollected.bind(this);
@@ -30,7 +30,7 @@ class ListItem extends PureComponent{
     this.state = {
       collected: inChecklist(this.props.item.checkListKey),
       wishlist: inWishlist(this.props.item.checkListKey),
-      // variationsPercent: this.allVariationsChecked()
+      variationsPercent: this.allVariationsChecked()
     }
   }
   componentDidUpdate(prevProps){
@@ -41,6 +41,10 @@ class ListItem extends PureComponent{
       if(this.state.wishlist!==inWishlist(this.props.item.checkListKey)){
         this.setWishlist(!this.state.wishlist)
       }
+      let checkVariations = this.allVariationsChecked();
+      if(this.state.variationsPercent!==checkVariations){
+        this.setState({variationsPercent: checkVariations})
+      }
     }
   }
   componentDidMount() {
@@ -49,13 +53,21 @@ class ListItem extends PureComponent{
   componentWillUnmount() {
     this.mounted = false;
   }
-  // allVariationsChecked = () => {
-  //   const variations = getVariations(this.props.item["Name"],determineDataGlobal(this.props.dataGlobalName),this.props.item["checkListKey"]);
-  //   return howManyVariationsChecked(variations)/variations.length===1 ? true: false
-  // }
-  setCollected(collected){
+  allVariationsChecked = () => {
+    if(this.props.item.hasOwnProperty("Variation") && this.props.item["Variation"]!=="NA"){
+      const variations = getVariations(this.props.item["Name"],determineDataGlobal(this.props.dataGlobalName),this.props.item["checkListKey"], this.props.item.index);
+      const howManyVariations = howManyVariationsChecked(variations)
+      return howManyVariations/variations.length===1 || howManyVariations<1 ? true: false;
+    }
+    return true;
+  }
+  setCollected(collected, updateVariations=false){
     if(this.mounted){
-      this.setState({collected: collected})
+      if(updateVariations){
+        this.setState({variationsPercent: this.allVariationsChecked()})
+      } else {
+        this.setState({collected: collected})
+      }
     }
   }
   setWishlist(wishlist){
@@ -65,6 +77,8 @@ class ListItem extends PureComponent{
   }
 
   render(){
+    var missingVariationsIndicator = !this.state.variationsPercent?<View pointerEvents={"none"} style={{position:'absolute', right: 0, top: -3, backgroundColor:colors.missingVariations[global.darkMode], height:27, width:27, borderRadius:20}}></View>:<View/>
+
     var showBlankCheckMarks = getSettingsString("settingsShowBlankCheckMarks")==="true";
 
     var disablePopup;
@@ -103,9 +117,6 @@ class ListItem extends PureComponent{
         }
       }
     }
-    // if(this.state.variationsPercent){
-    //   boxColor = "green";
-    // }
     if(this.props.leaveWarning){
       var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH "
       var nextMonthShort = getMonthShort(getCurrentDateObject().getMonth()+1);
@@ -144,6 +155,7 @@ class ListItem extends PureComponent{
       }
       return (
         <View style={styles.gridWrapper}>
+          {missingVariationsIndicator}
           <TouchableNativeFeedback onLongPress={() => {
             checkOff(this.props.item.checkListKey, this.state.wishlist, true, true); //true to vibrate and wishlist
             this.setWishlist(this.state.wishlist===true ? false:true);

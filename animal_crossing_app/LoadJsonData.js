@@ -553,9 +553,9 @@ export const settings = [
   },
   {
     "keyName" : "settingsCompressVariations",
-    "defaultValue" : "false",
+    "defaultValue" : "true",
     "currentValue" : "",
-    "picture" : require("./assets/icons/magnifyingGlass.png"),
+    "picture" : require("./assets/icons/variations.png"),
     "displayName" : "Compress variations into a scrollable list",
     "description" : "The way gestures work, it may not allow scrolling inside a popup container. Disable this to be able to see all variations without the need for a nested scroll.",
   },
