@@ -54,6 +54,7 @@ global.changelog = `
 -Fixed translations
 -Rewrote how translations are handled again, hopefully it's faster now!
 -Updated translations
+-Significantly improved load times of lists
 -
 -Fixed alphabetical ordering - now applies to all sections
 -Added indicator is not all variations checked off

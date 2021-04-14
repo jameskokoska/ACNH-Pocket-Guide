@@ -494,23 +494,20 @@ export function getVariations(name, globalDatabase, checkListKey, startingIndex 
   var totalVariations1 = [];
   var totalVariations2 = [];
   var failCount = 0;
-  var foundAlready = false;
   //Check backwards and forwards from given index to find all variations (for e.g. what if a furniture is passed that is a variation in the middle?)
   for(var i=0; i<globalDatabase.length; i++){
     if(globalDatabase[i].length > startingIndex-1){
       failCount = 0;
-      foundAlready = false;
       for(var j=startingIndex-1; j>0; j--){
         if(globalDatabase[i][j]["checkListKey"].split("CheckList")[0]!==checkListKey.split("CheckList")[0]){
           break;
         }
         if(globalDatabase[i][j]["Name"].toLowerCase()===name.toLowerCase()){
           totalVariations1.push(globalDatabase[i][j]);
-          foundAlready = true;
-        } else if(foundAlready) {
+        } else {
           failCount++
         }
-        if(failCount>2){
+        if(failCount>1){
           break;
         }
       }
@@ -518,18 +515,16 @@ export function getVariations(name, globalDatabase, checkListKey, startingIndex 
     }
     if(globalDatabase[i].length > startingIndex){
       failCount = 0;
-      foundAlready = false;
       for(var j=startingIndex; j<globalDatabase[i].length; j++){
         if(globalDatabase[i][j]["checkListKey"].split("CheckList")[0]!==checkListKey.split("CheckList")[0]){
           break;
         }
         if(globalDatabase[i][j]["Name"].toLowerCase()===name.toLowerCase()){
           totalVariations2.push(globalDatabase[i][j]);
-          foundAlready = true;
-        } else if(foundAlready) {
+        } else {
           failCount++
         }
-        if(failCount>2){
+        if(failCount>1){
           break;
         }
       }
