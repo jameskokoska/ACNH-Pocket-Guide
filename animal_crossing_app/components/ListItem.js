@@ -374,10 +374,10 @@ const styles = StyleSheet.create({
     resizeMode:'contain',
   },
   row: {
-    padding: 13,
+    paddingHorizontal: 13,
+    paddingVertical: 8,
     alignItems: 'center',
     flexDirection:"row",
-    height: 88,
     width: "100%",
     borderRadius:10,
     elevation: 0,

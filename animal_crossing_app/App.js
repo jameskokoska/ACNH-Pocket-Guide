@@ -58,7 +58,10 @@ global.changelog = `
 -Current price highlighted in turnip log
 -Added a way to easily clear all entered turnip prices
 -Fixed variations crash
+-Fixed variation missing indicator position
 -Significant performance improvements for finding item variations
+-Fixed critterpedia sorting
+-Fixed row component heights
 -Updated French translations
 - Thanks Christophe!
 -

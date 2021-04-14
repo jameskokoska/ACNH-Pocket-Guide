@@ -388,8 +388,8 @@ export default (props) =>{
       if(getSettingsString("settingsSortCritterpedia")==="true" && (props.title==="Fish" || props.title==="Bugs" || props.title==="Sea Creatures")){
         var dataLoadedCopy = dataUpdated.slice(0);
         dataLoadedCopy.sort(function(a, b) {
-          var textA = a["#"];
-          var textB = b["#"];
+          var textA = parseInt(a["#"]);
+          var textB = parseInt(b["#"]);
           return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
         });
         dataUpdated = dataLoadedCopy
