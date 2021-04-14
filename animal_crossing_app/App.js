@@ -64,6 +64,7 @@ global.changelog = `
 -Fixed row component heights
 -Fixed progress bars
 -Fixed the way variations converge - lists should load significantly faster
+-Fixed information button on Obtainable Items page
 -Added pattern name to variation popup (long press a variation)
 -Updated French translations
 - Thanks Christophe!

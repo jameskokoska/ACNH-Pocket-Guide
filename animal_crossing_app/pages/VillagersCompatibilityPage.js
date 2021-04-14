@@ -79,7 +79,7 @@ export default class VillagersCompatibilityPage extends Component {
             <View style={{height: 100}}/>
             <Header>Villager Compatibility</Header>
             <HeaderNote>This has NOT yet been proven to be accurate in ACNH, and is a feature from older games. Reference with caution.</HeaderNote>
-            <HeaderNote>Tap the [!] in the top right corner for more information.</HeaderNote>
+            <HeaderNote>Tap the [i] in the top right corner for more information.</HeaderNote>
             <View style={{height: 20}}/>
             {this.currentVillagers.map((villager, index) => {
               return(
