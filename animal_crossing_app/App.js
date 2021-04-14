@@ -51,6 +51,10 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
+-Fixed translations
+-Rewrote how translations are handled again, hopefully it's faster now!
+-Updated translations
+-
 -Fixed alphabetical ordering - now applies to all sections
 -Added indicator is not all variations checked off
 -Added setting to remove the variations scroll - this is to avoid a bug with gestures on some devices

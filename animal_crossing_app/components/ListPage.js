@@ -141,18 +141,18 @@ export default (props) =>{
       var possibleFilters = [{label:attemptToTranslate("Collected"), value:"Collected"},{label:attemptToTranslate("Not Collected"), value:"Not Collected"}];
       var notCraftVariationsFilters = [{label:attemptToTranslate("Show uncraftable item variations"), value:"Show uncraftable item variations"}]
       var activeFilters = [
-        {label:"January can catch",value:hemispherePre+"Jan Active:true"},
-        {label:"February can catch",value:hemispherePre+"Feb Active:true"},
-        {label:"March can catch",value:hemispherePre+"Mar Active:true"},
-        {label:"April can catch",value:hemispherePre+"Apr Active:true"},
-        {label:"May can catch",value:hemispherePre+"May Active:true"},
-        {label:"June can catch",value:hemispherePre+"Jun Active:true"},
-        {label:"July can catch",value:hemispherePre+"Jul Active:true"},
-        {label:"August can catch",value:hemispherePre+"Aug Active:true"},
-        {label:"September can catch",value:hemispherePre+"Sep Active:true"},
-        {label:"October can catch",value:hemispherePre+"Oct Active:true"},
-        {label:"November can catch",value:hemispherePre+"Nov Active:true"},
-        {label:"December can catch",value:hemispherePre+"Dec Active:true"},
+        {label:attemptToTranslate("Can catch in January"),value:hemispherePre+"Jan Active:true"},
+        {label:attemptToTranslate("Can catch in February"),value:hemispherePre+"Feb Active:true"},
+        {label:attemptToTranslate("Can catch in March"),value:hemispherePre+"Mar Active:true"},
+        {label:attemptToTranslate("Can catch in April"),value:hemispherePre+"Apr Active:true"},
+        {label:attemptToTranslate("Can catch in May"),value:hemispherePre+"May Active:true"},
+        {label:attemptToTranslate("Can catch in June"),value:hemispherePre+"Jun Active:true"},
+        {label:attemptToTranslate("Can catch in July"),value:hemispherePre+"Jul Active:true"},
+        {label:attemptToTranslate("Can catch in August"),value:hemispherePre+"Aug Active:true"},
+        {label:attemptToTranslate("Can catch in September"),value:hemispherePre+"Sep Active:true"},
+        {label:attemptToTranslate("Can catch in October"),value:hemispherePre+"Oct Active:true"},
+        {label:attemptToTranslate("Can catch in November"),value:hemispherePre+"Nov Active:true"},
+        {label:attemptToTranslate("Can catch in December"),value:hemispherePre+"Dec Active:true"},
       ]
       if(props.title==="Fish"){
         possibleFilters = [...possibleFilters, ...activeFilters, ...filterDefinitions["Fish"]];

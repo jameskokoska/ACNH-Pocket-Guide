@@ -40,6 +40,11 @@ class MaterialsPopup extends Component {
         item={this.props.item}
         textProperty={["Season/Event"]}
       />
+      <InfoLine
+        image={require("../assets/icons/magnifyingGlass.png")} 
+        item={this.props.item}
+        textProperty={["Source Notes"]}
+      />
     </View>
   }
 }

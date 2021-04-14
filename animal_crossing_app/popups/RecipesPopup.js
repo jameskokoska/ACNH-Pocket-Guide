@@ -99,6 +99,11 @@ class RecipesPopup extends Component {
         textProperty={"Material 10"}
         starting={this.props.item["#10"]+ "x "}
       />
+      <InfoLine
+        image={require("../assets/icons/magnifyingGlass.png")} 
+        item={this.props.item}
+        textProperty={["Source Notes"]}
+      />
     </View>
   }
 }

@@ -654,6 +654,37 @@ export const settings = [
   },
 ]
 
+//How translations are handled
+
+
+//attemptToTranslate()
+//Original entry is split by ';' and each part is translated
+//translates from Main, NPCs, Sources
+
+//attemptToTranslate(force=true)
+//Original entry is split by ';' and each part is translated
+//also tries attemptToTranslateItem() (because this may have event names) and attemptToTranslateSpecial(type="variants")
+//translates from (Main, NPCs, Sources) + Event Names
+
+//attemptToTranslateItem()
+//gets translation from original item translation spreadsheet json converted Items
+//then tried to get translations from Missing Items, Cards
+
+//attemptToTranslateSpecial(type="variants")
+//gets translation from original item translation spreadsheet json converted Variants
+
+//attemptToTranslateSpecial(type="catchphrase")
+//gets translation from original item translation spreadsheet json converted Catchphrases
+
+//attemptToTranslateAchievement()
+//translates from Achievements only
+
+//attemptToTranslateSourceNotes()
+//translated from Source Notes only
+
+//attemptToTranslateMysteryIslands()
+//translates from Mystery Islands only
+
 const variantTranslations = require("./assets/data/Generated/translatedVariants.json");
 const catchphraseTranslations = require("./assets/data/Generated/translatedVillagerCatchPhrases.json");
 const appTranslations = require("./assets/data/translationsApp.json")["Main"];
@@ -661,6 +692,8 @@ const achievementTranslations = require("./assets/data/translationsApp.json")["A
 const itemTranslations = require("./assets/data/Generated/translatedItems.json")
 const itemTranslationsMissing = require("./assets/data/translationsApp.json")["Missing Items"];
 const eventTranslationsMissing = require("./assets/data/translationsApp.json")["Event Names"];
+const sourcesTranslations = require("./assets/data/translationsApp.json")["Sources"];
+const sourceNotesTranslations = require("./assets/data/translationsApp.json")["Source Notes"];
 const cardsTranslations = require("./assets/data/translationsApp.json")["Cards"];
 const NPCTranslations = require("./assets/data/translationsApp.json")["NPCs"];
 const mysteryIslandsTranslations = require("./assets/data/translationsApp.json")["Mystery Islands"];
@@ -719,11 +752,20 @@ export function attemptToTranslateMysteryIslands(text){
   return attemptToTranslateFromDatabase(text, mysteryIslandsTranslations)
 }
 
+export function attemptToTranslateSourceNotes(text){
+  return attemptToTranslateFromDatabase(text, sourceNotesTranslations)
+}
+
 export function attemptToTranslate(text, forcedTranslation=false){
   if(text===undefined){
     return "";
   } else if(global.language==="English"){
     return text;
+  }
+
+  var sourcesTranslation = attemptToTranslateFromDatabase(text, sourcesTranslations)
+  if(sourcesTranslation!==text){
+    return sourcesTranslation;
   }
 
   var NPCTranslation = attemptToTranslateFromDatabase(text, NPCTranslations)
@@ -866,19 +908,11 @@ export function translateFilters(filters){
     return filters;
   }
   for(var i = 0; i<filters.length; i++){
-    if(filters[i].label.includes("can catch")){
-      label = filters[i].label.split(" can catch");
-      if(label.length>0){
-        label[0] = attemptToTranslate(label[0]);
-        filters[i].label = capitalizeFirst(label[0]) + " " + attemptToTranslate("can catch");
-      }
-    } else {
-      label = filters[i].label.split(" - ");
-      if(label.length>1){
-        label[0] = attemptToTranslate(label[0]);
-        label[1] = attemptToTranslate(label[1], true);
-        filters[i].label = capitalizeFirst(label[0]) + " - " + capitalizeFirst(label[1]);
-      }
+    label = filters[i].label.split(" - ");
+    if(label.length>1){
+      label[0] = attemptToTranslate(label[0]);
+      label[1] = attemptToTranslate(label[1], true);
+      filters[i].label = capitalizeFirst(label[0]) + " - " + capitalizeFirst(label[1]);
     }
   }
   return filters;

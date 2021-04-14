@@ -6,7 +6,7 @@ import Check from './Check';
 import TextFont from './TextFont'
 import {getEventName, inChecklist, attemptToTranslateItem, commas, capitalize, checkOff, capitalizeFirst} from '../LoadJsonData'
 import {getSizeImage, getPhotoCorner, getMaterialImage} from "./GetPhoto"
-import {getSettingsString, attemptToTranslate, attemptToTranslateSpecial} from "../LoadJsonData"
+import {attemptToTranslateSourceNotes, getSettingsString, attemptToTranslate, attemptToTranslateSpecial} from "../LoadJsonData"
 import {ScrollView} from 'react-native-gesture-handler'
 import {PopupInfoCustom} from "./Popup"
 import {getMonth, doWeSwapDate} from './DateFunctions'
@@ -133,7 +133,7 @@ export class InfoLine extends Component {
     if(this.props.starting!==undefined){
       starting=this.props.starting;
     }
-    if(this.props.item.hasOwnProperty(this.props.textProperty)){
+    if(this.props.item.hasOwnProperty(this.props.textProperty[0])){
       if(this.props.item[this.props.textProperty]==="None"){
         return <View/>
       } else if(this.props.item[this.props.textProperty].toLowerCase()==="null" || this.props.item[this.props.textProperty].toLowerCase()==="na"){
@@ -144,6 +144,12 @@ export class InfoLine extends Component {
     var text2 = attemptToTranslateSpecial(this.props.item[this.props.textProperty2], "variants");
     if(this.props.textProperty[0]==="Season/Event"){
       text1 = getEventName(text1);
+    }
+    if(this.props.textProperty[0]==="Source Notes"){
+      text1 = attemptToTranslateSourceNotes(text1);
+      if(text1===""){
+        return <View/>
+      }
     }
     if(this.props.textProperty[0]==="Favorite Song"){
       text1 = attemptToTranslateItem(this.props.item[this.props.textProperty])
