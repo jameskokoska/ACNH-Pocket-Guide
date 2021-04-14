@@ -62,6 +62,9 @@ global.changelog = `
 -Significant performance improvements for finding item variations
 -Fixed critterpedia sorting
 -Fixed row component heights
+-Fixed progress bars
+-Fixed the way variations converge - lists should load significantly faster
+-Added pattern name to variation popup (long press a variation)
 -Updated French translations
 - Thanks Christophe!
 -

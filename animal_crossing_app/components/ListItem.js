@@ -55,7 +55,7 @@ class ListItem extends React.Component{
   }
   allVariationsChecked = () => {
     if(this.props.item.hasOwnProperty("Variation") && this.props.item["Variation"]!=="NA"){
-      const variations = getVariations(this.props.item["Name"],global.dataLoadedAll,this.props.item["checkListKey"], this.props.item.index-10<0?0:this.props.item.index-10);
+      const variations = getVariations(this.props.item["Name"],global.dataLoadedAll,this.props.item["checkListKey"], this.props.item.index);
       const howManyVariations = howManyVariationsChecked(variations)
       return howManyVariations/variations.length===1 || howManyVariations<1 ? true: false;
     }

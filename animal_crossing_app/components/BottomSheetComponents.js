@@ -331,7 +331,7 @@ export class Variations extends Component {
   }
   render(){
     if(this.props.item!=""||this.props.item!=undefined){
-      var variations = getVariations(this.props.item["Name"],this.props.globalDatabase,this.props.item["checkListKey"], this.props.item.index-10<0?0:this.props.item.index-10);
+      var variations = getVariations(this.props.item["Name"],this.props.globalDatabase,this.props.item["checkListKey"], this.props.item.index);
       if(variations.length<=1){
         return <View/>
       }
@@ -463,6 +463,12 @@ class PopupImage extends Component {
             textProperty={["Color 1"]}
             textProperty2={["Color 2"]}
           />
+          <InfoLine
+            image={require("../assets/icons/pattern2.png")} 
+            item={this.state.item}
+            textProperty={["Pattern"]}
+            textProperty2={["Pattern Title"]}
+          />
           <InfoLineBeside
             image1={require("../assets/icons/pattern.png")} 
             item1={this.state.item}
@@ -479,17 +485,21 @@ class PopupImage extends Component {
 }
 
 export function getVariations(name, globalDatabase, checkListKey, startingIndex = 0){
-  var totalVariations = [];
+  var totalVariations1 = [];
+  var totalVariations2 = [];
   var failCount = 0;
   var foundAlready = false;
+  //Check backwards and forwards from given index to find all variations (for e.g. what if a furniture is passed that is a variation in the middle?)
   for(var i=0; i<globalDatabase.length; i++){
-    if(globalDatabase[i].length > startingIndex){
-      for(var j=startingIndex; j<globalDatabase[i].length; j++){
+    if(globalDatabase[i].length > startingIndex-1){
+      failCount = 0;
+      foundAlready = false;
+      for(var j=startingIndex-1; j>0; j--){
         if(globalDatabase[i][j]["checkListKey"].split("CheckList")[0]!==checkListKey.split("CheckList")[0]){
           break;
         }
         if(globalDatabase[i][j]["Name"].toLowerCase()===name.toLowerCase()){
-          totalVariations.push(globalDatabase[i][j]);
+          totalVariations1.push(globalDatabase[i][j]);
           foundAlready = true;
         } else if(foundAlready) {
           failCount++
@@ -498,9 +508,29 @@ export function getVariations(name, globalDatabase, checkListKey, startingIndex 
           break;
         }
       }
-    } 
+      totalVariations1.reverse()
+    }
+    if(globalDatabase[i].length > startingIndex){
+      failCount = 0;
+      foundAlready = false;
+      for(var j=startingIndex; j<globalDatabase[i].length; j++){
+        if(globalDatabase[i][j]["checkListKey"].split("CheckList")[0]!==checkListKey.split("CheckList")[0]){
+          break;
+        }
+        if(globalDatabase[i][j]["Name"].toLowerCase()===name.toLowerCase()){
+          totalVariations2.push(globalDatabase[i][j]);
+          foundAlready = true;
+        } else if(foundAlready) {
+          failCount++
+        }
+        if(failCount>2){
+          break;
+        }
+      }
+    }
+    
   }
-  return totalVariations;
+  return [...totalVariations1, ...totalVariations2];
 }
 
 export class InfoLineBeside extends Component {
