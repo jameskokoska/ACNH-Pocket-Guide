@@ -8,7 +8,7 @@ import colors from '../Colors';
 import ButtonComponent from "../components/ButtonComponent"
 import Popup from '../components/Popup'
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {ExportFile, LoadFile} from '../components/LoadFile';
+import {ExportFile, LoadFile, ExportClipboard, LoadClipboard} from '../components/LoadFile';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import {attemptToTranslate, deleteSavedPhotos, resetFilters, getSettingsString} from '../LoadJsonData';
 import {cancelAllPushNotifications, pushNotification} from '../Notifications'
@@ -59,7 +59,7 @@ class SettingsPage extends Component {
   }
   setTime = (event, selectedTime) => {
     if(selectedTime!==undefined){
-      this.setState({time:selectedTime,timePickerVisible:false})
+      this.setState({time:selectedTime,timePickerVisible:false, datePickerVisible:true})
       this.setCustomTime();
     } else {
       this.setState({timePickerVisible:false})
@@ -104,7 +104,7 @@ class SettingsPage extends Component {
             }
           )}
           <Popup ref={(popupLoadNotifications) => this.popupLoadNotifications = popupLoadNotifications} text="Notifications" textLower="You can select event notifications under the [Edit Events] of the [Events] section on the homepage." button1={"OK"} button1Action={()=>{this.props.setPage(0)}}/>
-          <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.setState({datePickerVisible:true, timePickerVisible:true})}} text={"Set Custom Date/Time"} />
+          <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.setState({timePickerVisible:true})}} text={"Set Custom Date/Time"} />
           {this.state.datePickerVisible && (
             <DateTimePicker
               testID="dateTimePicker"
@@ -130,6 +130,8 @@ class SettingsPage extends Component {
           <View style={{height: 50}}/>
           <SettingsDivider text="Data backup" margin="small"/>
           <ExportFile/><LoadFile/>
+          <View style={{height: 10}}/>
+          <ExportClipboard/><LoadClipboard/>
 
           <View style={{height: 50}}/>
           <SettingsDivider text="Data reset" margin="small"/>

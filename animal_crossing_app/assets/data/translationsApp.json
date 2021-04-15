@@ -1321,12 +1321,12 @@
             "Spanish (US)": "Exportar Resultados"
         },
         {
-            "English": "File exported to Downloads folder ACNHPocketGuideData.txt",
-            "English (Europe)": "File exported to Downloads folder ACNHPocketGuideData.txt",
-            "French": "Fichier exporté vers le dossier des Téléchargements ACNHPocketGuideData.txt",
-            "French (US)": "Fichier exporté vers le dossier des Téléchargements ACNHPocketGuideData.txt",
-            "Spanish": "Archivo exportado a la carpeta de descargas ACNHPocketGuideData.txt ",
-            "Spanish (US)": "Archivo exportado a la carpeta de descargas ACNHPocketGuideData.txt "
+            "English": "File exported to",
+            "English (Europe)": "File exported to",
+            "French": "Fichier exporté vers le dossier",
+            "French (US)": "Fichier exporté vers le dossier",
+            "Spanish": "Archivo exportado a la carpeta",
+            "Spanish (US)": "Archivo exportado a la carpeta"
         },
         {
             "English": "Import File",
@@ -1337,12 +1337,18 @@
             "Spanish (US)": "Importar Archivo"
         },
         {
-            "English": "Please import ACNHPocketGuideData.txt from the downloads folder.",
-            "English (Europe)": "Please import ACNHPocketGuideData.txt from the downloads folder.",
-            "French": "Merci d'importer ACNHPocketGuideData.txt depuis le dossier des téléchargements",
-            "French (US)": "Merci d'importer ACNHPocketGuideData.txt depuis le dossier des téléchargements",
-            "Spanish": "Por favor importe ACNHPocketGuideData.txt desde la carpeta de descargas.",
-            "Spanish (US)": "Por favor importe ACNHPocketGuideData.txt desde la carpeta de descargas."
+            "English": "Please import ACNHPocketGuideData.txt.",
+            "English (Europe)": "Please import ACNHPocketGuideData.txt.",
+            "French": "Merci d'importer ACNHPocketGuideData.txt.",
+            "French (US)": "Merci d'importer ACNHPocketGuideData.txt.",
+            "Spanish": "Por favor importe ACNHPocketGuideData.txt.",
+            "Spanish (US)": "Por favor importe ACNHPocketGuideData.txt."
+        },
+        {
+            "English": "The default location is:",
+            "English (Europe)": "The default location is:",
+            "French": "L'emplacement par défaut est :",
+            "French (US)": "L'emplacement par défaut est :"
         },
         {
             "English": "Import Results",
@@ -2109,10 +2115,10 @@
             "Spanish (US)": "Guarde las imágenes localmente para usarlas sin conexión una vez que las vea. Si está desactivado, puede ahorrar espacio de almacenamiento, pero siempre requiere una conexión a internet para ver imágenes."
         },
         {
-            "English": "Error backing up. Please enable the permissions and try again. Unfortunately Camera Permission may be required to write to local storage (using the Expo SDK). This permission can be disabled at any time. Sorry for the inconvenience.",
-            "English (Europe)": "Error backing up. Please enable the permissions and try again. Unfortunately Camera Permission may be required to write to local storage (using the Expo SDK). This permission can be disabled at any time. Sorry for the inconvenience.",
-            "French": "Erreur lors de la sauvegarde. Veuillez activer les autorisations et réessayer. Malheureusement, une autorisation de la caméra peut être nécessaire pour écrire sur le stockage local (à l'aide du SDK Expo). Cette autorisation peut être désactivée à tout moment. Désolé pour le dérangement.",
-            "French (US)": "Erreur lors de la sauvegarde. Veuillez activer les autorisations et réessayer. Malheureusement, une autorisation de la caméra peut être nécessaire pour écrire sur le stockage local (à l'aide du SDK Expo). Cette autorisation peut être désactivée à tout moment. Désolé pour le dérangement."
+            "English": "Error backing up. Please enable the permissions and try again.",
+            "English (Europe)": "Error backing up. Please enable the permissions and try again.",
+            "French": "Erreur lors de la sauvegarde. Veuillez activer les autorisations et réessayer.",
+            "French (US)": "Erreur lors de la sauvegarde. Veuillez activer les autorisations et réessayer."
         },
         {
             "English": "Cancel",
@@ -3763,10 +3769,6 @@
             "Spanish": "Puedes seleccionar notificaciones de eventos en [Editar eventos] de la sección [Eventos] en la página de inicio."
         },
         {
-            "Spanish": "Recibido por correo de DAL después de 300 vuelos",
-            "Spanish (US)": "Recibido por correo de DAL después de 300 vuelos"
-        },
-        {
             "English": "View History",
             "English (Europe)": "View History",
             "French": "Voir l'historique",
@@ -4392,831 +4394,135 @@
         },
         {
             "English": "Can catch in January",
-            "English (Europe)": "Can catch in January"
+            "English (Europe)": "Can catch in January",
+            "French": "Capturable en Janvier",
+            "French (US)": "Capturable en Janvier"
         },
         {
             "English": "Can catch in February",
-            "English (Europe)": "Can catch in February"
+            "English (Europe)": "Can catch in February",
+            "French": "Capturable en Février",
+            "French (US)": "Capturable en Février"
         },
         {
             "English": "Can catch in March",
-            "English (Europe)": "Can catch in March"
+            "English (Europe)": "Can catch in March",
+            "French": "Capturable en Mars",
+            "French (US)": "Capturable en Mars"
         },
         {
             "English": "Can catch in April",
-            "English (Europe)": "Can catch in April"
+            "English (Europe)": "Can catch in April",
+            "French": "Capturable en Avril",
+            "French (US)": "Capturable en Avril"
         },
         {
             "English": "Can catch in May",
-            "English (Europe)": "Can catch in May"
+            "English (Europe)": "Can catch in May",
+            "French": "Capturable en Mai",
+            "French (US)": "Capturable en Mai"
         },
         {
             "English": "Can catch in June",
-            "English (Europe)": "Can catch in June"
+            "English (Europe)": "Can catch in June",
+            "French": "Capturable en Juin",
+            "French (US)": "Capturable en Juin"
         },
         {
             "English": "Can catch in July",
-            "English (Europe)": "Can catch in July"
+            "English (Europe)": "Can catch in July",
+            "French": "Capturable en Juillet",
+            "French (US)": "Capturable en Juillet"
         },
         {
             "English": "Can catch in August",
-            "English (Europe)": "Can catch in August"
+            "English (Europe)": "Can catch in August",
+            "French": "Capturable en Août",
+            "French (US)": "Capturable en Août"
         },
         {
             "English": "Can catch in September",
-            "English (Europe)": "Can catch in September"
+            "English (Europe)": "Can catch in September",
+            "French": "Capturable en Septembre",
+            "French (US)": "Capturable en Septembre"
         },
         {
             "English": "Can catch in October",
-            "English (Europe)": "Can catch in October"
+            "English (Europe)": "Can catch in October",
+            "French": "Capturable en Octobre",
+            "French (US)": "Capturable en Octobre"
         },
         {
             "English": "Can catch in November",
-            "English (Europe)": "Can catch in November"
+            "English (Europe)": "Can catch in November",
+            "French": "Capturable en Novembre",
+            "French (US)": "Capturable en Novembre"
         },
         {
             "English": "Can catch in December",
-            "English (Europe)": "Can catch in December"
-        }
-    ],
-    "Source Notes": [
-        {
-            "English": "Available in Nook's Cranny (either upgrade tier) in the unique furniture slot",
-            "English (Europe)": "Available in Nook's Cranny (either upgrade tier) in the unique furniture slot",
-            "French": "Disponible en Mininook (siempre y cuando esté mejorado) en la  ranura de muebles única.",
-            "French (US)": "Disponible en Mininook (siempre y cuando esté mejorado) en la  ranura de muebles única.",
-            "Spanish": "Disponible en Mininook (siempre y cuando esté mejorado) en la ranura de muebles única.",
-            "Spanish (US)": "Disponible en Mininook (siempre y cuando esté mejorado) en la ranura de muebles única."
-        },
-        {
-            "English": "Available in Nook's Cranny (upgraded only), in the unique furniture slot",
-            "English (Europe)": "Available in Nook's Cranny (upgraded only), in the unique furniture slot",
-            "French": "Disponible en Mininook (siempre y cuando esté mejorado) en la ranura de muebles única.",
-            "French (US)": "Disponible en Mininook (siempre y cuando esté mejorado) en la ranura de muebles única.",
-            "Spanish": "Disponible en Mininook (siempre y cuando esté mejorado) en la ranura de muebles única.",
-            "Spanish (US)": "Disponible en Mininook (siempre y cuando esté mejorado) en la ranura de muebles única."
-        },
-        {
-            "English": "Available in Nook's Cranny (upgraded only), in the third unique furniture slot",
-            "English (Europe)": "Available in Nook's Cranny (upgraded only), in the third unique furniture slot",
-            "French": "Disponible en Mininook (siempre y cuando esté mejorado) en la tercera ranura de muebles única.",
-            "French (US)": "Disponible en Mininook (siempre y cuando esté mejorado) en la tercera ranura de muebles única.",
-            "Spanish": "Disponible en Mininook (siempre y cuando esté mejorado) en la tercera ranura de muebles única.",
-            "Spanish (US)": "Disponible en Mininook (siempre y cuando esté mejorado) en la tercera ranura de muebles única."
-        },
-        {
-            "English": "Available in all tiers of shops, including Timmy & Tommy before the shop is opened",
-            "English (Europe)": "Available in all tiers of shops, including Timmy & Tommy before the shop is opened"
-        },
-        {
-            "English": "Link Nintendo Account to Pocket Camp, then redeem a 16-digit code on your Nintendo Switch",
-            "English (Europe)": "Link Nintendo Account to Pocket Camp, then redeem a 16-digit code on your Nintendo Switch",
-            "French": "Associez le compte Nintendo à Pocket Camp, puis utilisez un code à 16 chiffres sur votre Nintendo Switch",
-            "French (US)": "Associez le compte Nintendo à Pocket Camp, puis utilisez un code à 16 chiffres sur votre Nintendo Switch"
-        },
-        {
-            "English": "Scan the associated Sanrio amiibo card",
-            "English (Europe)": "Scan the associated Sanrio amiibo card",
-            "French": "Scannez la carte amiibo Sanrio associée",
-            "French (US)": "Scannez la carte amiibo Sanrio associée",
-            "Spanish": "Escanea la carta amiibo de Sanrio correspondiente",
-            "Spanish (US)": "Escanea la carta amiibo de Sanrio correspondiente"
-        },
-        {
-            "English": "Reward from Pavé after receiving 9 furniture items and giving 3 rainbow feathers",
-            "English (Europe)": "Reward from Pavé after receiving 9 furniture items and giving 3 rainbow feathers",
-            "French": "Récompense de Roberto après avoir reçu 9 meubles et 3 plumes arc-en-ciel",
-            "French (US)": "Récompense de Roberto après avoir reçu 9 meubles et 3 plumes arc-en-ciel",
-            "Spanish": " Recompensa de Conga después de recibir 9 muebles y dar 3 plumas de arcoíris.\n",
-            "Spanish (US)": " Recompensa de Conga después de recibir 9 muebles y dar 3 plumas de arcoíris.\n"
-        },
-        {
-            "English": "Trade 3 insects to receive a model in the mail the next day",
-            "English (Europe)": "Trade 3 insects to receive a model in the mail the next day",
-            "French": "Échangez 3 insectes pour recevoir un modèle par courrier le lendemain",
-            "French (US)": "Échangez 3 insectes pour recevoir un modèle par courrier le lendemain",
-            "Spanish": "Dale 3 insectos iguales para recibir un modelo por correo el siguiente dia",
-            "Spanish (US)": "Dale 3 insectos iguales para recibir un modelo por correo el siguiente dia"
-        },
-        {
-            "English": "Available in Nook's Cranny (upgraded only), in the seasonal slot",
-            "English (Europe)": "Available in Nook's Cranny (upgraded only), in the seasonal slot",
-            "French": "Disponible dans la Boutique Nook (version améliorée uniquement), à l'emplacement des objets saisonniers",
-            "French (US)": "Disponible dans la Boutique Nook (version améliorée uniquement), à l'emplacement des objets saisonniers",
-            "Spanish": "Disponible en Mininook (solo si está mejorado) en la parte de temporada",
-            "Spanish (US)": "Disponible en Mininook (solo si está mejorado) en la parte de temporada"
-        },
-        {
-            "English": "Mailed to the player from Luna",
-            "English (Europe)": "Mailed to the player from Luna"
-        },
-        {
-            "English": "Trade 3 fish to receive a model in the mail the next day",
-            "English (Europe)": "Trade 3 fish to receive a model in the mail the next day",
-            "French": "Échangez 3 poissons pour recevoir un modèle par courrier le lendemain",
-            "French (US)": "Échangez 3 poissons pour recevoir un modèle par courrier le lendemain",
-            "Spanish": "Dale 3 peces iguales para recibir un modelo por correo el siguiente dia",
-            "Spanish (US)": "Dale 3 peces iguales para recibir un modelo por correo el siguiente dia"
-        },
-        {
-            "English": "Available in the re-buyable slot in Nook's Cranny",
-            "English (Europe)": "Available in the re-buyable slot in Nook's Cranny",
-            "French": "Disponible dans l'emplacement des objets achetables plusieurs fois de la Boutique Nook",
-            "French (US)": "Disponible dans l'emplacement des objets achetables plusieurs fois de la Boutique Nook",
-            "Spanish": "Disponible en la ranura de recompra de Mininook",
-            "Spanish (US)": "Disponible en la ranura de recompra de Mininook"
-        },
-        {
-            "English": "Mailed to players using the limited edition ACNH Nintendo Switch after the 1.1.0 update in a letter from Nintendo",
-            "English (Europe)": "Mailed to players using the limited edition ACNH Nintendo Switch after the 1.1.0 update in a letter from Nintendo",
-            "French": "Envoyé aux joueurs utilisant l'édition limitée ACNH Nintendo Switch après la mise à jour 1.1.0 dans une lettre de Nintendo",
-            "French (US)": "Envoyé aux joueurs utilisant l'édition limitée ACNH Nintendo Switch après la mise à jour 1.1.0 dans une lettre de Nintendo"
-        },
-        {
-            "English": "Mailed to players once ordered from NookLink within the Nintendo Switch Online app",
-            "English (Europe)": "Mailed to players once ordered from NookLink within the Nintendo Switch Online app",
-            "French": "Envoyé aux joueurs une fois commandé sur le NookLink dans l'application Nintendo Switch Online",
-            "French (US)": "Envoyé aux joueurs une fois commandé sur le NookLink dans l'application Nintendo Switch Online"
-        },
-        {
-            "English": "From Zipper after trading one of every egg (all 6 types)",
-            "English (Europe)": "From Zipper after trading one of every egg (all 6 types)",
-            "French": "De Albin après avoir échangé un œuf de chaque (les 6 types)",
-            "French (US)": "De Albin après avoir échangé un œuf de chaque (les 6 types)"
-        },
-        {
-            "English": "Reward for finishing all recipes",
-            "English (Europe)": "Reward for finishing all recipes",
-            "French": "Récompense pour avoir terminé tous les plans",
-            "French (US)": "Récompense pour avoir terminé tous les plans"
-        },
-        {
-            "English": "Received in mail from DAL after 300 flights",
-            "English (Europe)": "Received in mail from DAL after 300 flights",
-            "French": "Reçu par courrier de la DAL après 300 vols",
-            "French (US)": "Reçu par courrier de la DAL après 300 vols"
-        },
-        {
-            "English": "Received in mail from DAL after 50 flights",
-            "English (Europe)": "Received in mail from DAL after 50 flights",
-            "French": "Reçu par courrier de la DAL après 50 vols",
-            "French (US)": "Reçu par courrier de la DAL après 50 vols"
-        },
-        {
-            "English": "Mailed to players after the 1.9.0 update in a letter from Nook Inc.",
-            "English (Europe)": "Mailed to players after the 1.9.0 update in a letter from Nook Inc.",
-            "French": "Envoyé aux joueurs après la mise à jour 1.9.0 dans une lettre de Nook Inc.",
-            "French (US)": "Envoyé aux joueurs après la mise à jour 1.9.0 dans une lettre de Nook Inc.",
-            "Spanish": "Enviado por correo a jugadores después de la actualización 1.9.0 por Nook Inc.",
-            "Spanish (US)": "Enviado por correo a jugadores después de la actualización 1.9.0 por Nook Inc."
-        },
-        {
-            "English": "Received in March in the Northern Hemisphere and received in September in the Southern Hemisphere",
-            "English (Europe)": "Received in March in the Northern Hemisphere and received in September in the Southern Hemisphere",
-            "French": "Reçu en Mars dans l'Hémisphère Nord et reçu en Septembre dans l'Hémisphère Sud",
-            "French (US)": "Reçu en Mars dans l'Hémisphère Nord et reçu en Septembre dans l'Hémisphère Sud",
-            "Spanish": "Recibido en marzo en el hemisferio norte y recibido en septiembre en el hemisferio sur",
-            "Spanish (US)": "Recibido en marzo en el hemisferio norte y recibido en septiembre en el hemisferio sur"
-        },
-        {
-            "English": "Received in September in the Northern Hemisphere and received in March in the Southern Hemisphere",
-            "English (Europe)": "Received in September in the Northern Hemisphere and received in March in the Southern Hemisphere",
-            "French": "Reçu en Septembre dans l'Hémisphère Nord et reçu en Mars dans l'Hémisphère Sud",
-            "French (US)": "Reçu en Septembre dans l'Hémisphère Nord et reçu en Mars dans l'Hémisphère Sud",
-            "Spanish": "Recibido en septiembre en el hemisferio norte y recibido en marzo en el hemisferio sur",
-            "Spanish (US)": "Recibido en septiembre en el hemisferio norte y recibido en marzo en el hemisferio sur"
-        },
-        {
-            "English": "Received on the player's birthday",
-            "English (Europe)": "Received on the player's birthday",
-            "French": "Reçu le jour de ton anniversaire",
-            "French (US)": "Reçu le jour de ton anniversaire",
-            "Spanish": "Recibido en el dia de tu cumpleaños",
-            "Spanish (US)": "Recibido en el dia de tu cumpleaños"
-        },
-        {
-            "English": "Received in August in the Northern Hemisphere and received in July in the Southern Hemisphere",
-            "English (Europe)": "Received in August in the Northern Hemisphere and received in July in the Southern Hemisphere",
-            "French": "Reçu en Août dans l'Hémisphère Nord et reçu en Juillet dans l'Hémisphère Sud",
-            "French (US)": "Reçu en Août dans l'Hémisphère Nord et reçu en Juillet dans l'Hémisphère Sud",
-            "Spanish": "Recibido en agosto en el hemisferio norte y recibido en julio en el hemisferio sur",
-            "Spanish (US)": "Recibido en agosto en el hemisferio norte y recibido en julio en el hemisferio sur"
-        },
-        {
-            "English": "Received in July in the Northern Hemisphere and received in February in the Southern Hemisphere",
-            "English (Europe)": "Received in July in the Northern Hemisphere and received in February in the Southern Hemisphere",
-            "French": "Reçu en Juillet dans l'Hémisphère Nord et reçu en Février dans l'Hémisphère Sud",
-            "French (US)": "Reçu en Juillet dans l'Hémisphère Nord et reçu en Février dans l'Hémisphère Sud",
-            "Spanish": "Recibido en julio en el hemisferio norte y recibido en febrero en el hemisferio sur",
-            "Spanish (US)": "Recibido en julio en el hemisferio norte y recibido en febrero en el hemisferio sur"
-        },
-        {
-            "English": "Received in October in the Northern Hemisphere and received in April in the Southern Hemisphere",
-            "English (Europe)": "Received in October in the Northern Hemisphere and received in April in the Southern Hemisphere",
-            "French": "Reçu en Octobre dans l'Hémisphère Nord et reçu en Avril dans l'Hémisphère Sud",
-            "French (US)": "Reçu en Octobre dans l'Hémisphère Nord et reçu en Avril dans l'Hémisphère Sud",
-            "Spanish": "Recibido en octubre en el hemisferio norte y recibido en abril en el hemisferio sur",
-            "Spanish (US)": "Recibido en octubre en el hemisferio norte y recibido en abril en el hemisferio sur"
-        },
-        {
-            "English": "Received in April in the Northern Hemisphere and received in October in the Southern Hemisphere",
-            "English (Europe)": "Received in April in the Northern Hemisphere and received in October in the Southern Hemisphere",
-            "French": "Reçu en Avril dans l'Hémisphère Nord et reçu en Octobre dans l'Hémisphère Sud",
-            "French (US)": "Reçu en Avril dans l'Hémisphère Nord et reçu en Octobre dans l'Hémisphère Sud",
-            "Spanish": "Recibido en abril en el hemisferio norte y recibido en octubre en el hemisferio sur",
-            "Spanish (US)": "Recibido en abril en el hemisferio norte y recibido en octubre en el hemisferio sur"
-        },
-        {
-            "English": "Mailed to players after the 1.1.0 update in a letter from Nintendo",
-            "English (Europe)": "Mailed to players after the 1.1.0 update in a letter from Nintendo",
-            "French": "Envoyé aux joueurs après la mise à jour 1.1.0 dans une lettre de Nintendo",
-            "French (US)": "Envoyé aux joueurs après la mise à jour 1.1.0 dans une lettre de Nintendo"
-        },
-        {
-            "English": "Mailed to players after the 1.5.0 update in a letter from Nintendo",
-            "English (Europe)": "Mailed to players after the 1.5.0 update in a letter from Nintendo",
-            "French": "Envoyé aux joueurs après la mise à jour 1.5.0 dans une lettre de Nintendo",
-            "French (US)": "Envoyé aux joueurs après la mise à jour 1.5.0 dans une lettre de Nintendo"
-        },
-        {
-            "English": "Reward for solving May Day maze",
-            "English (Europe)": "Reward for solving May Day maze",
-            "French": "Récompense pour avoir résolu le Labyrinthe du 1er Mai",
-            "French (US)": "Récompense pour avoir résolu le Labyrinthe du 1er Mai"
-        },
-        {
-            "English": "Reward for gifting candy on Halloween",
-            "English (Europe)": "Reward for gifting candy on Halloween",
-            "French": "Récompense pour avoir offert des bonbons à Halloween",
-            "French (US)": "Récompense pour avoir offert des bonbons à Halloween"
-        },
-        {
-            "English": "Mailed to players after the 1.6.0 update in a letter from Nintendo",
-            "English (Europe)": "Mailed to players after the 1.6.0 update in a letter from Nintendo",
-            "French": "Envoyé aux joueurs après la mise à jour 1.6.0 dans une lettre de Nintendo",
-            "French (US)": "Envoyé aux joueurs après la mise à jour 1.6.0 dans une lettre de Nintendo",
-            "Spanish": "Enviado a jugadores después de la actualización 1.6.0 mediante una carta de Nintendo",
-            "Spanish (US)": "Enviado a jugadores después de la actualización 1.6.0 mediante una carta de Nintendo"
-        },
-        {
-            "English": "Reward for completing the Stamp Rally in the bug exhibit during International Museum Day",
-            "English (Europe)": "Reward for completing the Stamp Rally in the bug exhibit during International Museum Day",
-            "French": "Récompense pour avoir terminé le Rallye Tampons dans la galerie des fossiles lors de la Journée Internationale des Musées",
-            "French (US)": "Récompense pour avoir terminé le Rallye Tampons dans la galerie des fossiles lors de la Journée Internationale des Musées"
-        },
-        {
-            "English": "Reward for completing the Stamp Rally in the fish gallery during International Museum Day",
-            "English (Europe)": "Reward for completing the Stamp Rally in the fish gallery during International Museum Day",
-            "French": "Récompense pour avoir terminé le Rallye Tampons dans l'exposition d'insectes lors de la Journée Internationale des Musées",
-            "French (US)": "Récompense pour avoir terminé le Rallye Tampons dans l'exposition d'insectes lors de la Journée Internationale des Musées"
-        },
-        {
-            "English": "Reward for completing the Stamp Rally in the fossil gallery during International Museum Day",
-            "English (Europe)": "Reward for completing the Stamp Rally in the fossil gallery during International Museum Day",
-            "French": "Récompense pour avoir terminé le Rallye Tampons dans la galerie de poissons lors de la Journée Internationale des Musées",
-            "French (US)": "Récompense pour avoir terminé le Rallye Tampons dans la galerie de poissons lors de la Journée Internationale des Musées"
-        },
-        {
-            "English": "Received in the mail",
-            "English (Europe)": "Received in the mail",
-            "French": "Reçu par courrier",
-            "French (US)": "Reçu par courrier"
-        },
-        {
-            "English": "Received in January in both Hemipsheres",
-            "English (Europe)": "Received in January in both Hemipsheres",
-            "French": "Reçu en Janvier dans les deux Hémisphères",
-            "French (US)": "Reçu en Janvier dans les deux Hémisphères",
-            "Spanish": "Recibido en enero en ambos hemisferios",
-            "Spanish (US)": "Recibido en enero en ambos hemisferios"
-        },
-        {
-            "English": "Received in February in the Northern Hemisphere and received in August in the Southern Hemisphere",
-            "English (Europe)": "Received in February in the Northern Hemisphere and received in August in the Southern Hemisphere",
-            "French": "Reçu en Février dans l'Hémisphère Nord et reçu en Août dans l'Hémisphère Sud",
-            "French (US)": "Reçu en Février dans l'Hémisphère Nord et reçu en Août dans l'Hémisphère Sud",
-            "Spanish": "Recibido en febrero en el hemisferio norte y recibido en agosto en el hemisferio sur",
-            "Spanish (US)": "Recibido en febrero en el hemisferio norte y recibido en agosto en el hemisferio sur"
-        },
-        {
-            "English": "Trade candy or a lollipop with a villager",
-            "English (Europe)": "Trade candy or a lollipop with a villager",
-            "French": "Échanger des bonbons ou une sucette avec un villageois"
-        },
-        {
-            "English": "Mailed to players after the 1.2.0 update in a letter from Nintendo",
-            "English (Europe)": "Mailed to players after the 1.2.0 update in a letter from Nintendo",
-            "French": "Envoyé aux joueurs après la mise à jour 1.2.0 dans une lettre de Nintendo"
-        },
-        {
-            "English": "Mailed to players after the 1.4.0 update in a letter from Nintendo",
-            "English (Europe)": "Mailed to players after the 1.4.0 update in a letter from Nintendo",
-            "French": "Envoyé aux joueurs après la mise à jour 1.4.0 dans une lettre de Nintendo"
-        },
-        {
-            "English": "Mailed to players after the 1.8.0 update in a letter from Nintendo",
-            "English (Europe)": "Mailed to players after the 1.8.0 update in a letter from Nintendo",
-            "French": "Envoyé aux joueurs après la mise à jour 1.8.0 dans une lettre de Nintendo"
-        },
-        {
-            "English": "Reward for giving Franklin the requested ingredients",
-            "English (Europe)": "Reward for giving Franklin the requested ingredients"
-        },
-        {
-            "English": "Received in November in the Northern Hemisphere and received in May in the Southern Hemisphere",
-            "English (Europe)": "Received in November in the Northern Hemisphere and received in May in the Southern Hemisphere",
-            "French": "Reçu en Novembre dans l'Hémisphère Nord et reçu en Mai dans l'Hémisphère Sud",
-            "French (US)": "Reçu en Novembre dans l'Hémisphère Nord et reçu en Mai dans l'Hémisphère Sud",
-            "Spanish": "Recibido en noviembre en el hemisferio norte y recibido en mayo en el hemisferio sur",
-            "Spanish (US)": "Recibido en noviembre en el hemisferio norte y recibido en mayo en el hemisferio sur"
-        },
-        {
-            "English": "In the Special Items section in Nook Shopping, after inviting the villager to Photopia (either through amiibo, or if the villager lives in your town)",
-            "English (Europe)": "In the Special Items section in Nook Shopping, after inviting the villager to Photopia (either through amiibo, or if the villager lives in your town)"
-        },
-        {
-            "English": "In the Special Items section in Nook Shopping, after inviting to Photopia with an amiibo",
-            "English (Europe)": "In the Special Items section in Nook Shopping, after inviting to Photopia with an amiibo"
-        },
-        {
-            "English": "Available from Redd's Raffle during Fireworks Shows; Available from Nook's Cranny rotating cabinet stock outside of August",
-            "English (Europe)": "Available from Redd's Raffle during Fireworks Shows; Available from Nook's Cranny rotating cabinet stock outside of August"
-        },
-        {
-            "English": "Available in Nook's Cranny (upgraded only)",
-            "English (Europe)": "Available in Nook's Cranny (upgraded only)",
-            "French": "Disponible dans la Boutique Nook (version améliorée uniquement)",
-            "French (US)": "Disponible dans la Boutique Nook (version améliorée uniquement)",
-            "Spanish": "Disponible en Mininook (después de la ampliación)",
-            "Spanish (US)": "Disponible en Mininook (después de la ampliación)"
-        },
-        {
-            "English": "Available after unlocking the axe in the story",
-            "English (Europe)": "Available after unlocking the axe in the story"
-        },
-        {
-            "English": "Available after unlocking the shovel in the story",
-            "English (Europe)": "Available after unlocking the shovel in the story"
-        },
-        {
-            "English": "Obtained by speaking to Isabelle on New Year's Eve",
-            "English (Europe)": "Obtained by speaking to Isabelle on New Year's Eve"
-        },
-        {
-            "English": "Mailed to players after the 1.7.0 update in a letter from Nintendo",
-            "English (Europe)": "Mailed to players after the 1.7.0 update in a letter from Nintendo"
-        },
-        {
-            "English": "Available from Nook's Cranny;",
-            "English (Europe)": "Available from Nook's Cranny;"
-        },
-        {
-            "English": "Available from Tom Nook during Countdown",
-            "English (Europe)": "Available from Tom Nook during Countdown"
-        },
-        {
-            "English": "50 fences are given by Tom Nook after completing the three house plots during the main storyline",
-            "English (Europe)": "50 fences are given by Tom Nook after completing the three house plots during the main storyline"
-        },
-        {
-            "English": "Available from Able Sisters shop only",
-            "English (Europe)": "Available from Able Sisters shop only",
-            "French": "Disponible uniquement chez les Soeurs Doigts de Fée",
-            "French (US)": "Disponible uniquement chez les Soeurs Doigts de Fée",
-            "Spanish": "Solo disponible en Hermanitas Manitas",
-            "Spanish (US)": "Solo disponible en Hermanitas Manitas"
-        },
-        {
-            "English": "Available from either Mabel's temporary shop or Able Sisters shop",
-            "English (Europe)": "Available from either Mabel's temporary shop or Able Sisters shop",
-            "French": "Disponible dans la boutique temporaire de Layette ou chez les Soeurs Doigts de Fée",
-            "French (US)": "Disponible dans la boutique temporaire de Layette ou chez les Soeurs Doigts de Fée"
-        },
-        {
-            "English": "Received in mail from DAL after 100 flights",
-            "English (Europe)": "Received in mail from DAL after 100 flights",
-            "French": "Reçu par courrier de la DAL après 100 vols",
-            "French (US)": "Reçu par courrier de la DAL après 100 vols",
-            "Spanish": "Recibido por correo de DAL después de 100 vuelos",
-            "Spanish (US)": "Recibido por correo de DAL después de 100 vuelos"
-        },
-        {
-            "English": "Received in mail from DAL after 250 flights",
-            "English (Europe)": "Received in mail from DAL after 250 flights",
-            "French": "Reçu par courrier de la DAL après 250 vols",
-            "French (US)": "Reçu par courrier de la DAL après 250 vols",
-            "Spanish": "Recibido por correo de DAL después de 250 vuelos",
-            "Spanish (US)": "Recibido por correo de DAL después de 250 vuelos"
-        },
-        {
-            "English": "Received in mail from DAL after 5 flights",
-            "English (Europe)": "Received in mail from DAL after 5 flights",
-            "French": "Recibido por correo de DAL después de 5 vuelos",
-            "French (US)": "Recibido por correo de DAL después de 5 vuelos",
-            "Spanish": "Recibido por correo de DAL después de 5 vuelos",
-            "Spanish (US)": "Recibido por correo de DAL después de 5 vuelos"
-        },
-        {
-            "English": "Added to Able Sisters stock rotation the day after receiving this item from Label",
-            "English (Europe)": "Added to Able Sisters stock rotation the day after receiving this item from Label",
-            "French": "Ajouté chez les Soeurs Doigts de Fée le lendemain du jour où vous recevez cet objet de Tiquette",
-            "French (US)": "Ajouté chez les Soeurs Doigts de Fée le lendemain du jour où vous recevez cet objet de Tiquette"
-        },
-        {
-            "English": "Received in December in the Northern Hemisphere and received in June in the Southern Hemisphere",
-            "English (Europe)": "Received in December in the Northern Hemisphere and received in June in the Southern Hemisphere",
-            "French": "Reçu en Décembre dans l'Hémisphère Nord et reçu en Juin dans l'Hémisphère Sud",
-            "French (US)": "Reçu en Décembre dans l'Hémisphère Nord et reçu en Juin dans l'Hémisphère Sud",
-            "Spanish": "Recibido en diciembre en el hemisferio norte y recibido en junio en el hemisferio sur",
-            "Spanish (US)": "Recibido en diciembre en el hemisferio norte y recibido en junio en el hemisferio sur"
-        },
-        {
-            "English": "Received in June in the Northern Hemisphere and received in December in the Southern Hemisphere",
-            "English (Europe)": "Received in June in the Northern Hemisphere and received in December in the Southern Hemisphere",
-            "French": "Reçu en juin dans l'hémisphère nord et en décembre dans l'hémisphère sud",
-            "French (US)": "Reçu en juin dans l'hémisphère nord et en décembre dans l'hémisphère sud"
-        },
-        {
-            "English": "Give Jack candy or a lollipop",
-            "English (Europe)": "Give Jack candy or a lollipop",
-            "French": "Donner des bonbons ou des sucettes à Jacqu'O",
-            "French (US)": "Donner des bonbons ou des sucettes à Jacqu'O"
-        },
-        {
-            "English": "Received in mail from DAL after 130 flights",
-            "English (Europe)": "Received in mail from DAL after 130 flights",
-            "French": "Reçu par courrier de la DAL après 130 vols",
-            "French (US)": "Reçu par courrier de la DAL après 130 vols",
-            "Spanish": "Recibido por correo de DAL después de 130 vuelos",
-            "Spanish (US)": "Recibido por correo de DAL después de 130 vuelos"
-        },
-        {
-            "English": "Received in mail from DAL after 15 flights",
-            "English (Europe)": "Received in mail from DAL after 15 flights",
-            "French": "Reçu par courrier de la DAL après 15 vols",
-            "French (US)": "Reçu par courrier de la DAL après 15 vols",
-            "Spanish": "Recibido por correo de DAL después de 15 vuelos",
-            "Spanish (US)": "Recibido por correo de DAL después de 15 vuelos"
-        },
-        {
-            "English": "Received in mail from DAL after 75 flights",
-            "English (Europe)": "Received in mail from DAL after 75 flights",
-            "French": "Reçu par courrier de la DAL après 75 vols",
-            "French (US)": "Reçu par courrier de la DAL après 75 vols",
-            "Spanish": "Recibido por correo de DAL después de 75 vuelos",
-            "Spanish (US)": "Recibido por correo de DAL después de 75 vuelos"
-        },
-        {
-            "English": "Mailed to players after the 1.3.0 update in a letter from Nintendo; Available from either Mabel's temporary shop or Able Sisters shop",
-            "English (Europe)": "Mailed to players after the 1.3.0 update in a letter from Nintendo; Available from either Mabel's temporary shop or Able Sisters shop",
-            "French": "Envoyé aux joueurs après la mise à jour 1.3.0 dans une lettre de Nintendo",
-            "French (US)": "Envoyé aux joueurs après la mise à jour 1.3.0 dans une lettre de Nintendo",
-            "Spanish": "Enviado a jugadores después de la actualización 1.3.0 en una carta de Nintendo",
-            "Spanish (US)": "Enviado a jugadores después de la actualización 1.3.0 en una carta de Nintendo"
-        },
-        {
-            "English": "Received in mail from DAL after 30 flights",
-            "English (Europe)": "Received in mail from DAL after 30 flights",
-            "French": "Reçu par courrier de la DAL après 30 vols",
-            "French (US)": "Reçu par courrier de la DAL après 30 vols"
-        },
-        {
-            "English": "Available at Able Sisters only during Fireworks Shows",
-            "English (Europe)": "Available at Able Sisters only during Fireworks Shows",
-            "French": "Disponible uniquement chez les Soeurs Doigts de Fée durant les spectacles de feux d'artifice",
-            "French (US)": "Disponible uniquement chez les Soeurs Doigts de Fée durant les spectacles de feux d'artifice"
-        },
-        {
-            "English": "Received in mail from DAL after 200 flights",
-            "English (Europe)": "Received in mail from DAL after 200 flights",
-            "French": "Reçu par courrier de la DAL après 200 vols",
-            "French (US)": "Reçu par courrier de la DAL après 200 vols",
-            "Spanish": "Recibido por correo de DAL después de 200 vuelos",
-            "Spanish (US)": "Recibido por correo de DAL después de 200 vuelos"
-        },
-        {
-            "English": "Received in May in the Northern Hemisphere and received in November in the Southern Hemisphere",
-            "English (Europe)": "Received in May in the Northern Hemisphere and received in November in the Southern Hemisphere",
-            "French": "Reçu en Mai dans l'Hémisphère Nord et reçu en Novembre dans l'Hémisphère Sud",
-            "French (US)": "Reçu en Mai dans l'Hémisphère Nord et reçu en Novembre dans l'Hémisphère Sud",
-            "Spanish": "Recibido en mayo en el hemisferio norte y recibido en noviembre en el hemisferio sur",
-            "Spanish (US)": "Recibido en mayo en el hemisferio norte y recibido en noviembre en el hemisferio sur"
-        },
-        {
-            "English": "Received in mail from DAL after 160 flights",
-            "English (Europe)": "Received in mail from DAL after 160 flights",
-            "French": "Reçu par courrier de la DAL après 160 vols",
-            "French (US)": "Reçu par courrier de la DAL après 160 vols",
-            "Spanish": "Recibido por correo de DAL después de 160 vuelos",
-            "Spanish (US)": "Recibido por correo de DAL después de 160 vuelos"
-        },
-        {
-            "English": "Possible song K.K. will play when choosing \"It's hard to say.\" as your mood",
-            "English (Europe)": "Possible song K.K. will play when choosing \"It's hard to say.\" as your mood"
-        },
-        {
-            "English": "Possible song K.K. will play when choosing \"Laid-back.\" as your mood",
-            "English (Europe)": "Possible song K.K. will play when choosing \"Laid-back.\" as your mood"
-        },
-        {
-            "English": "Hidden song - only by request",
-            "English (Europe)": "Hidden song - only by request"
-        },
-        {
-            "English": "Possible song K.K. will play when choosing \"I feel good!\" as your mood",
-            "English (Europe)": "Possible song K.K. will play when choosing \"I feel good!\" as your mood"
-        },
-        {
-            "English": "Possible song K.K. will play when choosing \"A little blue...\" as your mood",
-            "English (Europe)": "Possible song K.K. will play when choosing \"A little blue...\" as your mood"
-        },
-        {
-            "English": "Possible song K.K. will play when choosing \"A little grumpy...\" as your mood",
-            "English (Europe)": "Possible song K.K. will play when choosing \"A little grumpy...\" as your mood"
-        },
-        {
-            "English": "Received on your first time seeing K.K. perform during your birthday",
-            "English (Europe)": "Received on your first time seeing K.K. perform during your birthday"
-        },
-        {
-            "English": "Received on your first time seeing K.K. perform",
-            "English (Europe)": "Received on your first time seeing K.K. perform"
-        },
-        {
-            "English": "Played by K.K. if you request something he doesn't have (does not give take-home track)",
-            "English (Europe)": "Played by K.K. if you request something he doesn't have (does not give take-home track)"
-        },
-        {
-            "English": "Shaking",
-            "English (Europe)": "Shaking"
-        },
-        {
-            "English": "Found under the Special tab of the Nook Miles Redemption service.",
-            "English (Europe)": "Found under the Special tab of the Nook Miles Redemption service."
-        },
-        {
-            "English": "Near a bamboo tree",
-            "English (Europe)": "Near a bamboo tree"
-        },
-        {
-            "English": "Shaking decorated trees",
-            "English (Europe)": "Shaking decorated trees"
-        },
-        {
-            "English": "Medium shadow",
-            "English (Europe)": "Medium shadow"
-        },
-        {
-            "English": "Sold in Nook's Cranny during the month of October; gifted by talking to villagers during Halloween",
-            "English (Europe)": "Sold in Nook's Cranny during the month of October; gifted by talking to villagers during Halloween"
-        },
-        {
-            "English": "Only available while on a quest for Gullivarrr",
-            "English (Europe)": "Only available while on a quest for Gullivarrr"
-        },
-        {
-            "English": "Only available while on a quest for Gulliver",
-            "English (Europe)": "Only available while on a quest for Gulliver"
-        },
-        {
-            "English": "Obtained from Franklin after completing 4 recipes with secret ingredient; sold in Nook's Cranny after Turkey Day until the end of November",
-            "English (Europe)": "Obtained from Franklin after completing 4 recipes with secret ingredient; sold in Nook's Cranny after Turkey Day until the end of November"
-        },
-        {
-            "English": "Received in the mail the day after uploading your island to Luna's Dream Library",
-            "English (Europe)": "Received in the mail the day after uploading your island to Luna's Dream Library"
-        },
-        {
-            "English": "Small shadow",
-            "English (Europe)": "Small shadow"
-        },
-        {
-            "English": "Black roses watered with gold watering can",
-            "English (Europe)": "Black roses watered with gold watering can"
-        },
-        {
-            "English": "Reward for helping Cyrus & Reese during Wedding Season",
-            "English (Europe)": "Reward for helping Cyrus & Reese during Wedding Season"
-        },
-        {
-            "English": "Reward for making a perfect Snowboy",
-            "English (Europe)": "Reward for making a perfect Snowboy"
-        },
-        {
-            "English": "Large shadow",
-            "English (Europe)": "Large shadow"
-        },
-        {
-            "English": "Obtained from crafting villagers during October if player already knows the recipe or as a reward for gifting candy on Halloween",
-            "English (Europe)": "Obtained from crafting villagers during October if player already knows the recipe or as a reward for gifting candy on Halloween"
-        },
-        {
-            "English": "Since 1.6.0, Leif sells pumpkin starts year-round.",
-            "English (Europe)": "Since 1.6.0, Leif sells pumpkin starts year-round."
-        },
-        {
-            "English": "Near cedar and hardwood trees",
-            "English (Europe)": "Near cedar and hardwood trees"
-        },
-        {
-            "English": "X-Small shadow when fishing",
-            "English (Europe)": "X-Small shadow when fishing"
-        },
-        {
-            "English": "Placed randomly on island for a villager's treasure hunt quest",
-            "English (Europe)": "Placed randomly on island for a villager's treasure hunt quest"
-        },
-        {
-            "English": "Only available on Sundays; buy value ranges from 90-110 per turnip but can only be bought in stacks of 10 or more; sell value ranges from 9-660 depending on the current market price",
-            "English (Europe)": "Only available on Sundays; buy value ranges from 90-110 per turnip but can only be bought in stacks of 10 or more; sell value ranges from 9-660 depending on the current market price"
-        },
-        {
-            "English": "Only available while on a quest for Wisp",
-            "English (Europe)": "Only available while on a quest for Wisp"
-        },
-        {
-            "English": "Obtained during the main storyline during the villager house development quest if the native fruit is apples",
-            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native fruit is apples"
-        },
-        {
-            "English": "Purchase Pretty Good Tools Recipes via Nook Miles Redemption",
-            "English (Europe)": "Purchase Pretty Good Tools Recipes via Nook Miles Redemption"
-        },
-        {
-            "English": "50% chance of being obtained during the main storyline during the villager house development quest",
-            "English (Europe)": "50% chance of being obtained during the main storyline during the villager house development quest"
-        },
-        {
-            "English": "Purchase Wildest Dreams DIY from Nook's Cranny",
-            "English (Europe)": "Purchase Wildest Dreams DIY from Nook's Cranny"
-        },
-        {
-            "English": "Obtained during the main storyline",
-            "English (Europe)": "Obtained during the main storyline"
-        },
-        {
-            "English": "Reward from Zipper after collecting all 6 egg types",
-            "English (Europe)": "Reward from Zipper after collecting all 6 egg types"
-        },
-        {
-            "English": "Reward from Zipper after crafting wobbling Zipper toy",
-            "English (Europe)": "Reward from Zipper after crafting wobbling Zipper toy"
-        },
-        {
-            "English": "Obtained from Tom Nook after completing his DIY Workshop at the beginning of the game",
-            "English (Europe)": "Obtained from Tom Nook after completing his DIY Workshop at the beginning of the game"
-        },
-        {
-            "English": "Obtained during the main storyline during the villager house development quest if the native fruit is cherries",
-            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native fruit is cherries"
-        },
-        {
-            "English": "Obtained during the main storyline during the villager house development quest",
-            "English (Europe)": "Obtained during the main storyline during the villager house development quest"
-        },
-        {
-            "English": "Obtained during the main storyline during the villager house development quest if the native flower is cosmos",
-            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native flower is cosmos"
-        },
-        {
-            "English": "Obtained through Tom Nook's DIY Workshop at the beginning of the game and can also be purchased at Nook's Cranny",
-            "English (Europe)": "Obtained through Tom Nook's DIY Workshop at the beginning of the game and can also be purchased at Nook's Cranny"
-        },
-        {
-            "English": "Obtained through Tom Nook's DIY Workshop at the beginning of the game",
-            "English (Europe)": "Obtained through Tom Nook's DIY Workshop at the beginning of the game"
-        },
-        {
-            "English": "Purchase DIY for Beginners at Nook's Cranny",
-            "English (Europe)": "Purchase DIY for Beginners at Nook's Cranny"
-        },
-        {
-            "English": "Fish up 15 trash",
-            "English (Europe)": "Fish up 15 trash"
-        },
-        {
-            "English": "Reward from Jingle after delivering more than half the gifts on Toy Day",
-            "English (Europe)": "Reward from Jingle after delivering more than half the gifts on Toy Day"
-        },
-        {
-            "English": "Balloon appears after shooting 300 balloons",
-            "English (Europe)": "Balloon appears after shooting 300 balloons"
-        },
-        {
-            "English": "Obtained after the 5-star island evaluation",
-            "English (Europe)": "Obtained after the 5-star island evaluation"
-        },
-        {
-            "English": "Obtained from Tom Nook after completing one Nature Day Nook Miles+ task; Obtained from Leif after buying anything from him on three different days",
-            "English (Europe)": "Obtained from Tom Nook after completing one Nature Day Nook Miles+ task; Obtained from Leif after buying anything from him on three different days"
-        },
-        {
-            "English": "Obtained during the main storyline during the villager house development quest if the native flower is hyacinths",
-            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native flower is hyacinths"
-        },
-        {
-            "English": "Picking up gold nuggets knocked out of rocks",
-            "English (Europe)": "Picking up gold nuggets knocked out of rocks"
-        },
-        {
-            "English": "Obtained during the main storyline during the villager house development quest if the native flower is lilies",
-            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native flower is lilies"
-        },
-        {
-            "English": "Purchase Test Your DIY Skills from Nook's Cranny",
-            "English (Europe)": "Purchase Test Your DIY Skills from Nook's Cranny"
-        },
-        {
-            "English": "Obtained during the main storyline during the villager house development quest if the native flower is mums",
-            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native flower is mums"
-        },
-        {
-            "English": "Obtained during the main storyline during the villager house development quest if the native fruit is oranges",
-            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native fruit is oranges"
-        },
-        {
-            "English": "Obtained during the main storyline during the villager house development quest if the native flower is pansies",
-            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native flower is pansies"
-        },
-        {
-            "English": "Obtained during the main storyline during the villager house development quest if the native fruit is peaches",
-            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native fruit is peaches"
-        },
-        {
-            "English": "Obtained during the main storyline during the villager house development quest if the native fruit is pears",
-            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native fruit is pears"
-        },
-        {
-            "English": "Also obtained from digging up an existing pitfall",
-            "English (Europe)": "Also obtained from digging up an existing pitfall"
-        },
-        {
-            "English": "Talk to Pavé during the Festivale event",
-            "English (Europe)": "Talk to Pavé during the Festivale event"
-        },
-        {
-            "English": "Fish up 1 boot",
-            "English (Europe)": "Fish up 1 boot"
-        },
-        {
-            "English": "Fish up 3 empty cans",
-            "English (Europe)": "Fish up 3 empty cans"
-        },
-        {
-            "English": "Obtained during the main storyline during the villager house development quest if the native flower is roses",
-            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native flower is roses"
-        },
-        {
-            "English": "Obtained from crafting villagers during October or as a reward for gifting candy on Halloween",
-            "English (Europe)": "Obtained from crafting villagers during October or as a reward for gifting candy on Halloween"
-        },
-        {
-            "English": "Reward for gifting lollipop on Halloween",
-            "English (Europe)": "Reward for gifting lollipop on Halloween"
-        },
-        {
-            "English": "Fish up 1 empty can",
-            "English (Europe)": "Fish up 1 empty can"
+            "English (Europe)": "Can catch in December",
+            "French": "Capturable en Décembre",
+            "French (US)": "Capturable en Décembre"
         },
         {
-            "English": "Purchase Test Your DIY Skills from Nook's Cranny; 50% chance of being obtained during the main storyline during the villager house development quest",
-            "English (Europe)": "Purchase Test Your DIY Skills from Nook's Cranny; 50% chance of being obtained during the main storyline during the villager house development quest"
+            "English": "Where/How",
+            "English (Europe)": "Where/How",
+            "French": "Où/Comment",
+            "French (US)": "Où/Comment"
         },
         {
-            "English": "Fish up 3 old tires",
-            "English (Europe)": "Fish up 3 old tires"
+            "English": "Source",
+            "English (Europe)": "Source",
+            "French": "Source",
+            "French (US)": "Source"
         },
         {
-            "English": "Fish up 1 old tire",
-            "English (Europe)": "Fish up 1 old tire"
+            "English": "Tag",
+            "English (Europe)": "Tag",
+            "French": "Tag",
+            "French (US)": "Tag"
         },
         {
-            "English": "Obtained during the main storyline during the villager house development quest if the native flower is tulips",
-            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native flower is tulips"
+            "English": "Category",
+            "English (Europe)": "Category",
+            "French": "Catégorie",
+            "French (US)": "Catégorie"
         },
         {
-            "English": "Obtain Cozy Turkey Day DIY from Franklin or buy it from Nook's Cranny",
-            "English (Europe)": "Obtain Cozy Turkey Day DIY from Franklin or buy it from Nook's Cranny"
+            "English": "Season/Event Exclusive",
+            "English (Europe)": "Season/Event Exclusive",
+            "French": "Saison/Evènement exclusif",
+            "French (US)": "Saison/Evènement exclusif"
         },
         {
-            "English": "Obtained during the main storyline during the villager house development quest if the native flower is windflowers",
-            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native flower is windflowers"
+            "English": "Variation",
+            "English (Europe)": "Variation",
+            "French": "Variation",
+            "French (US)": "Variation"
         },
         {
-            "English": "Reward from Zipper after crafting all Bunny Day recipes",
-            "English (Europe)": "Reward from Zipper after crafting all Bunny Day recipes"
+            "English": "HHA Concept 1",
+            "English (Europe)": "HHA Concept 1",
+            "French": "Concept AJD 1",
+            "French (US)": "Concept AJD 1"
         },
         {
-            "English": "Obtained during the main storyline during the customization workshop",
-            "English (Europe)": "Obtained during the main storyline during the customization workshop"
+            "English": "HHA Concept 2",
+            "English (Europe)": "HHA Concept 2",
+            "French": "Concept AJD 2",
+            "French (US)": "Concept AJD 2"
         },
         {
-            "English": "Purchase Test Your DIY Skills from Nook's Cranny; Obtained during the main storyline during the villager house development quest",
-            "English (Europe)": "Purchase Test Your DIY Skills from Nook's Cranny; Obtained during the main storyline during the villager house development quest"
+            "English": "HHA Series",
+            "English (Europe)": "HHA Series",
+            "French": "Collection AJD",
+            "French (US)": "Collection AJD"
         },
         {
-            "English": "Requires a high level of friendship",
-            "English (Europe)": "Requires a high level of friendship"
+            "English": "HHA Category",
+            "English (Europe)": "HHA Category",
+            "French": "Catégorie AJD",
+            "French (US)": "Catégorie AJD"
         }
     ],
     "Sources": [
@@ -5236,7 +4542,9 @@
         },
         {
             "English": "Birthday",
-            "English (Europe)": "Birthday"
+            "English (Europe)": "Birthday",
+            "French": "Anniversaire",
+            "French (US)": "Anniversaire"
         },
         {
             "English": "Starting items",
@@ -5262,15 +4570,19 @@
         },
         {
             "English": "Starting items",
-            "English (Europe)": "Starting items"
+            "English (Europe)": "Starting items",
+            "French": "Same as above no ?"
         },
         {
             "English": "Nook Miles Redemption",
-            "English (Europe)": "Nook Miles Redemption"
+            "English (Europe)": "Nook Miles Redemption",
+            "French": "Same as above no ?"
         },
         {
             "English": "Nintendo",
-            "English (Europe)": "Nintendo"
+            "English (Europe)": "Nintendo",
+            "French": "Nintendo",
+            "French (US)": "Nintendo"
         },
         {
             "English": "Nook Shopping Daily Selection",
@@ -5282,7 +4594,9 @@
         },
         {
             "English": "NookLink",
-            "English (Europe)": "NookLink"
+            "English (Europe)": "NookLink",
+            "French": "NookLink",
+            "French (US)": "NookLink"
         },
         {
             "English": "HHA",
@@ -5294,7 +4608,9 @@
         },
         {
             "English": "Dodo Airlines",
-            "English (Europe)": "Dodo Airlines"
+            "English (Europe)": "Dodo Airlines",
+            "French": "Dodo Airlines",
+            "French (US)": "Dodo Airlines"
         },
         {
             "English": "Mom",
@@ -5319,7 +4635,9 @@
         },
         {
             "English": "Nook Shopping Posters",
-            "English (Europe)": "Nook Shopping Posters"
+            "English (Europe)": "Nook Shopping Posters",
+            "French": "Posters Nook Shopping",
+            "French (US)": "Posters Nook Shopping"
         },
         {
             "English": "Recycle box",
@@ -5337,11 +4655,15 @@
         },
         {
             "English": "Villagers",
-            "English (Europe)": "Villagers"
+            "English (Europe)": "Villagers",
+            "French": "Villageois",
+            "French (US)": "Villageois"
         },
         {
             "English": "Nook Shopping",
-            "English (Europe)": "Nook Shopping"
+            "English (Europe)": "Nook Shopping",
+            "French": "Nook Shopping",
+            "French (US)": "Nook Shopping"
         },
         {
             "English": "Snowboy",
@@ -5353,7 +4675,9 @@
         },
         {
             "English": "Mail",
-            "English (Europe)": "Mail"
+            "English (Europe)": "Mail",
+            "French": "Courrier",
+            "French (US)": "Courrier"
         },
         {
             "English": "4th House Upgrade (Right Room)",
@@ -5387,7 +4711,9 @@
         },
         {
             "English": "Wildest Dreams DIY",
-            "English (Europe)": "Wildest Dreams DIY"
+            "English (Europe)": "Wildest Dreams DIY",
+            "French": "Plan Brico Foldingo",
+            "French (US)": "Plan Brico Foldingo"
         },
         {
             "English": "Resident Services Upgrade",
@@ -5411,7 +4737,9 @@
         },
         {
             "English": "All villagers (while stung)",
-            "English (Europe)": "All villagers (while stung)"
+            "English (Europe)": "All villagers (while stung)",
+            "French": "Tous les villageois (quand ils sont piqués)",
+            "French (US)": "Tous les villageois (quand ils sont piqués)"
         },
         {
             "English": "Viva Festivale Reaction Set",
@@ -5895,6 +5223,816 @@
             "Spanish (US)": "No devuelvas el objeto de la búsqueda del tesoro"
         }
     ],
+    "Source Notes": [
+        {
+            "English": "Available in Nook's Cranny (either upgrade tier) in the unique furniture slot",
+            "English (Europe)": "Available in Nook's Cranny (either upgrade tier) in the unique furniture slot",
+            "French": "Disponible en Mininook (siempre y cuando esté mejorado) en la  ranura de muebles única.",
+            "French (US)": "Disponible en Mininook (siempre y cuando esté mejorado) en la  ranura de muebles única.",
+            "Spanish": "Disponible en Mininook (siempre y cuando esté mejorado) en la ranura de muebles única.",
+            "Spanish (US)": "Disponible en Mininook (siempre y cuando esté mejorado) en la ranura de muebles única."
+        },
+        {
+            "English": "Available in Nook's Cranny (upgraded only), in the unique furniture slot",
+            "English (Europe)": "Available in Nook's Cranny (upgraded only), in the unique furniture slot",
+            "French": "Disponible en Mininook (siempre y cuando esté mejorado) en la ranura de muebles única.",
+            "French (US)": "Disponible en Mininook (siempre y cuando esté mejorado) en la ranura de muebles única.",
+            "Spanish": "Disponible en Mininook (siempre y cuando esté mejorado) en la ranura de muebles única.",
+            "Spanish (US)": "Disponible en Mininook (siempre y cuando esté mejorado) en la ranura de muebles única."
+        },
+        {
+            "English": "Available in Nook's Cranny (upgraded only), in the third unique furniture slot",
+            "English (Europe)": "Available in Nook's Cranny (upgraded only), in the third unique furniture slot",
+            "French": "Disponible en Mininook (siempre y cuando esté mejorado) en la tercera ranura de muebles única.",
+            "French (US)": "Disponible en Mininook (siempre y cuando esté mejorado) en la tercera ranura de muebles única.",
+            "Spanish": "Disponible en Mininook (siempre y cuando esté mejorado) en la tercera ranura de muebles única.",
+            "Spanish (US)": "Disponible en Mininook (siempre y cuando esté mejorado) en la tercera ranura de muebles única."
+        },
+        {
+            "English": "Available in all tiers of shops, including Timmy & Tommy before the shop is opened",
+            "English (Europe)": "Available in all tiers of shops, including Timmy & Tommy before the shop is opened",
+            "French": "Disponible dans tous les niveaux de magasins, y compris Méli & Mélo avant l'ouverture de la boutique",
+            "French (US)": "Disponible dans tous les niveaux de magasins, y compris Méli & Mélo avant l'ouverture de la boutique"
+        },
+        {
+            "English": "Link Nintendo Account to Pocket Camp, then redeem a 16-digit code on your Nintendo Switch",
+            "English (Europe)": "Link Nintendo Account to Pocket Camp, then redeem a 16-digit code on your Nintendo Switch",
+            "French": "Associez le compte Nintendo à Pocket Camp, puis utilisez un code à 16 chiffres sur votre Nintendo Switch",
+            "French (US)": "Associez le compte Nintendo à Pocket Camp, puis utilisez un code à 16 chiffres sur votre Nintendo Switch"
+        },
+        {
+            "English": "Scan the associated Sanrio amiibo card",
+            "English (Europe)": "Scan the associated Sanrio amiibo card",
+            "French": "Scannez la carte amiibo Sanrio associée",
+            "French (US)": "Scannez la carte amiibo Sanrio associée",
+            "Spanish": "Escanea la carta amiibo de Sanrio correspondiente",
+            "Spanish (US)": "Escanea la carta amiibo de Sanrio correspondiente"
+        },
+        {
+            "English": "Reward from Pavé after receiving 9 furniture items and giving 3 rainbow feathers",
+            "English (Europe)": "Reward from Pavé after receiving 9 furniture items and giving 3 rainbow feathers",
+            "French": "Récompense de Roberto après avoir reçu 9 meubles et 3 plumes arc-en-ciel",
+            "French (US)": "Récompense de Roberto après avoir reçu 9 meubles et 3 plumes arc-en-ciel",
+            "Spanish": " Recompensa de Conga después de recibir 9 muebles y dar 3 plumas de arcoíris.\n",
+            "Spanish (US)": " Recompensa de Conga después de recibir 9 muebles y dar 3 plumas de arcoíris.\n"
+        },
+        {
+            "English": "Trade 3 insects to receive a model in the mail the next day",
+            "English (Europe)": "Trade 3 insects to receive a model in the mail the next day",
+            "French": "Échangez 3 insectes pour recevoir un modèle par courrier le lendemain",
+            "French (US)": "Échangez 3 insectes pour recevoir un modèle par courrier le lendemain",
+            "Spanish": "Dale 3 insectos iguales para recibir un modelo por correo el siguiente dia",
+            "Spanish (US)": "Dale 3 insectos iguales para recibir un modelo por correo el siguiente dia"
+        },
+        {
+            "English": "Available in Nook's Cranny (upgraded only), in the seasonal slot",
+            "English (Europe)": "Available in Nook's Cranny (upgraded only), in the seasonal slot",
+            "French": "Disponible dans la Boutique Nook (version améliorée uniquement), à l'emplacement des objets saisonniers",
+            "French (US)": "Disponible dans la Boutique Nook (version améliorée uniquement), à l'emplacement des objets saisonniers",
+            "Spanish": "Disponible en Mininook (solo si está mejorado) en la parte de temporada",
+            "Spanish (US)": "Disponible en Mininook (solo si está mejorado) en la parte de temporada"
+        },
+        {
+            "English": "Mailed to the player from Luna",
+            "English (Europe)": "Mailed to the player from Luna",
+            "French": "Envoyé au joueur par Luna",
+            "French (US)": "Envoyé au joueur par Luna"
+        },
+        {
+            "English": "Trade 3 fish to receive a model in the mail the next day",
+            "English (Europe)": "Trade 3 fish to receive a model in the mail the next day",
+            "French": "Échangez 3 poissons pour recevoir un modèle par courrier le lendemain",
+            "French (US)": "Échangez 3 poissons pour recevoir un modèle par courrier le lendemain",
+            "Spanish": "Dale 3 peces iguales para recibir un modelo por correo el siguiente dia",
+            "Spanish (US)": "Dale 3 peces iguales para recibir un modelo por correo el siguiente dia"
+        },
+        {
+            "English": "Available in the re-buyable slot in Nook's Cranny",
+            "English (Europe)": "Available in the re-buyable slot in Nook's Cranny",
+            "French": "Disponible dans l'emplacement des objets achetables plusieurs fois de la Boutique Nook",
+            "French (US)": "Disponible dans l'emplacement des objets achetables plusieurs fois de la Boutique Nook",
+            "Spanish": "Disponible en la ranura de recompra de Mininook",
+            "Spanish (US)": "Disponible en la ranura de recompra de Mininook"
+        },
+        {
+            "English": "Mailed to players using the limited edition ACNH Nintendo Switch after the 1.1.0 update in a letter from Nintendo",
+            "English (Europe)": "Mailed to players using the limited edition ACNH Nintendo Switch after the 1.1.0 update in a letter from Nintendo",
+            "French": "Envoyé aux joueurs utilisant l'édition limitée ACNH Nintendo Switch après la mise à jour 1.1.0 dans une lettre de Nintendo",
+            "French (US)": "Envoyé aux joueurs utilisant l'édition limitée ACNH Nintendo Switch après la mise à jour 1.1.0 dans une lettre de Nintendo"
+        },
+        {
+            "English": "Mailed to players once ordered from NookLink within the Nintendo Switch Online app",
+            "English (Europe)": "Mailed to players once ordered from NookLink within the Nintendo Switch Online app",
+            "French": "Envoyé aux joueurs une fois commandé sur le NookLink dans l'application Nintendo Switch Online",
+            "French (US)": "Envoyé aux joueurs une fois commandé sur le NookLink dans l'application Nintendo Switch Online"
+        },
+        {
+            "English": "From Zipper after trading one of every egg (all 6 types)",
+            "English (Europe)": "From Zipper after trading one of every egg (all 6 types)",
+            "French": "De Albin après avoir échangé un œuf de chaque (les 6 types)",
+            "French (US)": "De Albin après avoir échangé un œuf de chaque (les 6 types)"
+        },
+        {
+            "English": "Reward for finishing all recipes",
+            "English (Europe)": "Reward for finishing all recipes",
+            "French": "Récompense pour avoir terminé tous les plans",
+            "French (US)": "Récompense pour avoir terminé tous les plans"
+        },
+        {
+            "English": "Received in mail from DAL after 300 flights",
+            "English (Europe)": "Received in mail from DAL after 300 flights",
+            "French": "Reçu par courrier de la DAL après 300 vols",
+            "French (US)": "Reçu par courrier de la DAL après 300 vols"
+        },
+        {
+            "English": "Received in mail from DAL after 50 flights",
+            "English (Europe)": "Received in mail from DAL after 50 flights",
+            "French": "Reçu par courrier de la DAL après 50 vols",
+            "French (US)": "Reçu par courrier de la DAL après 50 vols"
+        },
+        {
+            "English": "Mailed to players after the 1.9.0 update in a letter from Nook Inc.",
+            "English (Europe)": "Mailed to players after the 1.9.0 update in a letter from Nook Inc.",
+            "French": "Envoyé aux joueurs après la mise à jour 1.9.0 dans une lettre de Nook Inc.",
+            "French (US)": "Envoyé aux joueurs après la mise à jour 1.9.0 dans une lettre de Nook Inc.",
+            "Spanish": "Enviado por correo a jugadores después de la actualización 1.9.0 por Nook Inc.",
+            "Spanish (US)": "Enviado por correo a jugadores después de la actualización 1.9.0 por Nook Inc."
+        },
+        {
+            "English": "Received in March in the Northern Hemisphere and received in September in the Southern Hemisphere",
+            "English (Europe)": "Received in March in the Northern Hemisphere and received in September in the Southern Hemisphere",
+            "French": "Reçu en Mars dans l'Hémisphère Nord et reçu en Septembre dans l'Hémisphère Sud",
+            "French (US)": "Reçu en Mars dans l'Hémisphère Nord et reçu en Septembre dans l'Hémisphère Sud",
+            "Spanish": "Recibido en marzo en el hemisferio norte y recibido en septiembre en el hemisferio sur",
+            "Spanish (US)": "Recibido en marzo en el hemisferio norte y recibido en septiembre en el hemisferio sur"
+        },
+        {
+            "English": "Received in September in the Northern Hemisphere and received in March in the Southern Hemisphere",
+            "English (Europe)": "Received in September in the Northern Hemisphere and received in March in the Southern Hemisphere",
+            "French": "Reçu en Septembre dans l'Hémisphère Nord et reçu en Mars dans l'Hémisphère Sud",
+            "French (US)": "Reçu en Septembre dans l'Hémisphère Nord et reçu en Mars dans l'Hémisphère Sud",
+            "Spanish": "Recibido en septiembre en el hemisferio norte y recibido en marzo en el hemisferio sur",
+            "Spanish (US)": "Recibido en septiembre en el hemisferio norte y recibido en marzo en el hemisferio sur"
+        },
+        {
+            "English": "Received on the player's birthday",
+            "English (Europe)": "Received on the player's birthday",
+            "French": "Reçu le jour de ton anniversaire",
+            "French (US)": "Reçu le jour de ton anniversaire",
+            "Spanish": "Recibido en el dia de tu cumpleaños",
+            "Spanish (US)": "Recibido en el dia de tu cumpleaños"
+        },
+        {
+            "English": "Received in August in the Northern Hemisphere and received in July in the Southern Hemisphere",
+            "English (Europe)": "Received in August in the Northern Hemisphere and received in July in the Southern Hemisphere",
+            "French": "Reçu en Août dans l'Hémisphère Nord et reçu en Juillet dans l'Hémisphère Sud",
+            "French (US)": "Reçu en Août dans l'Hémisphère Nord et reçu en Juillet dans l'Hémisphère Sud",
+            "Spanish": "Recibido en agosto en el hemisferio norte y recibido en julio en el hemisferio sur",
+            "Spanish (US)": "Recibido en agosto en el hemisferio norte y recibido en julio en el hemisferio sur"
+        },
+        {
+            "English": "Received in July in the Northern Hemisphere and received in February in the Southern Hemisphere",
+            "English (Europe)": "Received in July in the Northern Hemisphere and received in February in the Southern Hemisphere",
+            "French": "Reçu en Juillet dans l'Hémisphère Nord et reçu en Février dans l'Hémisphère Sud",
+            "French (US)": "Reçu en Juillet dans l'Hémisphère Nord et reçu en Février dans l'Hémisphère Sud",
+            "Spanish": "Recibido en julio en el hemisferio norte y recibido en febrero en el hemisferio sur",
+            "Spanish (US)": "Recibido en julio en el hemisferio norte y recibido en febrero en el hemisferio sur"
+        },
+        {
+            "English": "Received in October in the Northern Hemisphere and received in April in the Southern Hemisphere",
+            "English (Europe)": "Received in October in the Northern Hemisphere and received in April in the Southern Hemisphere",
+            "French": "Reçu en Octobre dans l'Hémisphère Nord et reçu en Avril dans l'Hémisphère Sud",
+            "French (US)": "Reçu en Octobre dans l'Hémisphère Nord et reçu en Avril dans l'Hémisphère Sud",
+            "Spanish": "Recibido en octubre en el hemisferio norte y recibido en abril en el hemisferio sur",
+            "Spanish (US)": "Recibido en octubre en el hemisferio norte y recibido en abril en el hemisferio sur"
+        },
+        {
+            "English": "Received in April in the Northern Hemisphere and received in October in the Southern Hemisphere",
+            "English (Europe)": "Received in April in the Northern Hemisphere and received in October in the Southern Hemisphere",
+            "French": "Reçu en Avril dans l'Hémisphère Nord et reçu en Octobre dans l'Hémisphère Sud",
+            "French (US)": "Reçu en Avril dans l'Hémisphère Nord et reçu en Octobre dans l'Hémisphère Sud",
+            "Spanish": "Recibido en abril en el hemisferio norte y recibido en octubre en el hemisferio sur",
+            "Spanish (US)": "Recibido en abril en el hemisferio norte y recibido en octubre en el hemisferio sur"
+        },
+        {
+            "English": "Mailed to players after the 1.1.0 update in a letter from Nintendo",
+            "English (Europe)": "Mailed to players after the 1.1.0 update in a letter from Nintendo",
+            "French": "Envoyé aux joueurs après la mise à jour 1.1.0 dans une lettre de Nintendo",
+            "French (US)": "Envoyé aux joueurs après la mise à jour 1.1.0 dans une lettre de Nintendo"
+        },
+        {
+            "English": "Mailed to players after the 1.5.0 update in a letter from Nintendo",
+            "English (Europe)": "Mailed to players after the 1.5.0 update in a letter from Nintendo",
+            "French": "Envoyé aux joueurs après la mise à jour 1.5.0 dans une lettre de Nintendo",
+            "French (US)": "Envoyé aux joueurs après la mise à jour 1.5.0 dans une lettre de Nintendo"
+        },
+        {
+            "English": "Reward for solving May Day maze",
+            "English (Europe)": "Reward for solving May Day maze",
+            "French": "Récompense pour avoir résolu le Labyrinthe du 1er Mai",
+            "French (US)": "Récompense pour avoir résolu le Labyrinthe du 1er Mai"
+        },
+        {
+            "English": "Reward for gifting candy on Halloween",
+            "English (Europe)": "Reward for gifting candy on Halloween",
+            "French": "Récompense pour avoir offert des bonbons à Halloween",
+            "French (US)": "Récompense pour avoir offert des bonbons à Halloween"
+        },
+        {
+            "English": "Mailed to players after the 1.6.0 update in a letter from Nintendo",
+            "English (Europe)": "Mailed to players after the 1.6.0 update in a letter from Nintendo",
+            "French": "Envoyé aux joueurs après la mise à jour 1.6.0 dans une lettre de Nintendo",
+            "French (US)": "Envoyé aux joueurs après la mise à jour 1.6.0 dans une lettre de Nintendo",
+            "Spanish": "Enviado a jugadores después de la actualización 1.6.0 mediante una carta de Nintendo",
+            "Spanish (US)": "Enviado a jugadores después de la actualización 1.6.0 mediante una carta de Nintendo"
+        },
+        {
+            "English": "Reward for completing the Stamp Rally in the bug exhibit during International Museum Day",
+            "English (Europe)": "Reward for completing the Stamp Rally in the bug exhibit during International Museum Day",
+            "French": "Récompense pour avoir terminé le Rallye Tampons dans la galerie des fossiles lors de la Journée Internationale des Musées",
+            "French (US)": "Récompense pour avoir terminé le Rallye Tampons dans la galerie des fossiles lors de la Journée Internationale des Musées"
+        },
+        {
+            "English": "Reward for completing the Stamp Rally in the fish gallery during International Museum Day",
+            "English (Europe)": "Reward for completing the Stamp Rally in the fish gallery during International Museum Day",
+            "French": "Récompense pour avoir terminé le Rallye Tampons dans l'exposition d'insectes lors de la Journée Internationale des Musées",
+            "French (US)": "Récompense pour avoir terminé le Rallye Tampons dans l'exposition d'insectes lors de la Journée Internationale des Musées"
+        },
+        {
+            "English": "Reward for completing the Stamp Rally in the fossil gallery during International Museum Day",
+            "English (Europe)": "Reward for completing the Stamp Rally in the fossil gallery during International Museum Day",
+            "French": "Récompense pour avoir terminé le Rallye Tampons dans la galerie de poissons lors de la Journée Internationale des Musées",
+            "French (US)": "Récompense pour avoir terminé le Rallye Tampons dans la galerie de poissons lors de la Journée Internationale des Musées"
+        },
+        {
+            "English": "Received in the mail",
+            "English (Europe)": "Received in the mail",
+            "French": "Reçu par courrier",
+            "French (US)": "Reçu par courrier"
+        },
+        {
+            "English": "Received in January in both Hemipsheres",
+            "English (Europe)": "Received in January in both Hemipsheres",
+            "French": "Reçu en Janvier dans les deux Hémisphères",
+            "French (US)": "Reçu en Janvier dans les deux Hémisphères",
+            "Spanish": "Recibido en enero en ambos hemisferios",
+            "Spanish (US)": "Recibido en enero en ambos hemisferios"
+        },
+        {
+            "English": "Received in February in the Northern Hemisphere and received in August in the Southern Hemisphere",
+            "English (Europe)": "Received in February in the Northern Hemisphere and received in August in the Southern Hemisphere",
+            "French": "Reçu en Février dans l'Hémisphère Nord et reçu en Août dans l'Hémisphère Sud",
+            "French (US)": "Reçu en Février dans l'Hémisphère Nord et reçu en Août dans l'Hémisphère Sud",
+            "Spanish": "Recibido en febrero en el hemisferio norte y recibido en agosto en el hemisferio sur",
+            "Spanish (US)": "Recibido en febrero en el hemisferio norte y recibido en agosto en el hemisferio sur"
+        },
+        {
+            "English": "Trade candy or a lollipop with a villager",
+            "English (Europe)": "Trade candy or a lollipop with a villager",
+            "French": "Échanger des bonbons ou une sucette avec un villageois",
+            "French (US)": "Échanger des bonbons ou une sucette avec un villageois"
+        },
+        {
+            "English": "Mailed to players after the 1.2.0 update in a letter from Nintendo",
+            "English (Europe)": "Mailed to players after the 1.2.0 update in a letter from Nintendo",
+            "French": "Envoyé aux joueurs après la mise à jour 1.2.0 dans une lettre de Nintendo",
+            "French (US)": "Envoyé aux joueurs après la mise à jour 1.2.0 dans une lettre de Nintendo"
+        },
+        {
+            "English": "Mailed to players after the 1.4.0 update in a letter from Nintendo",
+            "English (Europe)": "Mailed to players after the 1.4.0 update in a letter from Nintendo",
+            "French": "Envoyé aux joueurs après la mise à jour 1.4.0 dans une lettre de Nintendo",
+            "French (US)": "Envoyé aux joueurs après la mise à jour 1.4.0 dans une lettre de Nintendo"
+        },
+        {
+            "English": "Mailed to players after the 1.8.0 update in a letter from Nintendo",
+            "English (Europe)": "Mailed to players after the 1.8.0 update in a letter from Nintendo",
+            "French": "Envoyé aux joueurs après la mise à jour 1.8.0 dans une lettre de Nintendo",
+            "French (US)": "Envoyé aux joueurs après la mise à jour 1.8.0 dans une lettre de Nintendo"
+        },
+        {
+            "English": "Reward for giving Franklin the requested ingredients",
+            "English (Europe)": "Reward for giving Franklin the requested ingredients",
+            "French": "Récompense pour avoir donné à Dindou les ingrédients demandés",
+            "French (US)": "Récompense pour avoir donné à Dindou les ingrédients demandés"
+        },
+        {
+            "English": "Received in November in the Northern Hemisphere and received in May in the Southern Hemisphere",
+            "English (Europe)": "Received in November in the Northern Hemisphere and received in May in the Southern Hemisphere",
+            "French": "Reçu en Novembre dans l'Hémisphère Nord et reçu en Mai dans l'Hémisphère Sud",
+            "French (US)": "Reçu en Novembre dans l'Hémisphère Nord et reçu en Mai dans l'Hémisphère Sud",
+            "Spanish": "Recibido en noviembre en el hemisferio norte y recibido en mayo en el hemisferio sur",
+            "Spanish (US)": "Recibido en noviembre en el hemisferio norte y recibido en mayo en el hemisferio sur"
+        },
+        {
+            "English": "In the Special Items section in Nook Shopping, after inviting the villager to Photopia (either through amiibo, or if the villager lives in your town)",
+            "English (Europe)": "In the Special Items section in Nook Shopping, after inviting the villager to Photopia (either through amiibo, or if the villager lives in your town)",
+            "French": "Dans la section Posters du Nook Shopping, après avoir invité le villageois à Photopia (soit via un amiibo, soit si le villageois vit dans votre ville)",
+            "French (US)": "Dans la section Posters du Nook Shopping, après avoir invité le villageois à Photopia (soit via un amiibo, soit si le villageois vit dans votre ville)"
+        },
+        {
+            "English": "In the Special Items section in Nook Shopping, after inviting to Photopia with an amiibo",
+            "English (Europe)": "In the Special Items section in Nook Shopping, after inviting to Photopia with an amiibo",
+            "French": "Dans la section Posters du Nook Shopping, après avoir invité à Photopia avec un amiibo",
+            "French (US)": "Dans la section Posters du Nook Shopping, après avoir invité à Photopia avec un amiibo"
+        },
+        {
+            "English": "Available from Redd's Raffle during Fireworks Shows; Available from Nook's Cranny rotating cabinet stock outside of August",
+            "English (Europe)": "Available from Redd's Raffle during Fireworks Shows; Available from Nook's Cranny rotating cabinet stock outside of August",
+            "French": "Disponible à la tombola de Rounard pendant les spectacles de feux d'artifice; Disponible dans l'armoires de la Boutique Nook en dehors du mois d'août",
+            "French (US)": "Disponible à la tombola de Rounard pendant les spectacles de feux d'artifice; Disponible dans l'armoires de la Boutique Nook en dehors du mois d'août"
+        },
+        {
+            "English": "Available in Nook's Cranny (upgraded only)",
+            "English (Europe)": "Available in Nook's Cranny (upgraded only)",
+            "French": "Disponible dans la Boutique Nook (version améliorée uniquement)",
+            "French (US)": "Disponible dans la Boutique Nook (version améliorée uniquement)",
+            "Spanish": "Disponible en Mininook (después de la ampliación)",
+            "Spanish (US)": "Disponible en Mininook (después de la ampliación)"
+        },
+        {
+            "English": "Available after unlocking the axe in the story",
+            "English (Europe)": "Available after unlocking the axe in the story",
+            "French": "Disponible après avoir déverrouillé la hache dans l'histoire",
+            "French (US)": "Disponible après avoir déverrouillé la hache dans l'histoire"
+        },
+        {
+            "English": "Available after unlocking the shovel in the story",
+            "English (Europe)": "Available after unlocking the shovel in the story",
+            "French": "Disponible après avoir déverrouillé la pelle dans l'histoire",
+            "French (US)": "Disponible après avoir déverrouillé la pelle dans l'histoire"
+        },
+        {
+            "English": "Obtained by speaking to Isabelle on New Year's Eve",
+            "English (Europe)": "Obtained by speaking to Isabelle on New Year's Eve",
+            "French": "Obtenu en parlant à Marie le soir du Nouvel An",
+            "French (US)": "Obtenu en parlant à Marie le soir du Nouvel An"
+        },
+        {
+            "English": "Mailed to players after the 1.7.0 update in a letter from Nintendo",
+            "English (Europe)": "Mailed to players after the 1.7.0 update in a letter from Nintendo",
+            "French": "Envoyé aux joueurs après la mise à jour 1.7.0 dans une lettre de Nintendo",
+            "French (US)": "Envoyé aux joueurs après la mise à jour 1.7.0 dans une lettre de Nintendo"
+        },
+        {
+            "English": "Available from Nook's Cranny;",
+            "English (Europe)": "Available from Nook's Cranny;",
+            "French": "Disponible dans la Boutique Nook;",
+            "French (US)": "Disponible dans la Boutique Nook;"
+        },
+        {
+            "English": "Available from Tom Nook during Countdown",
+            "English (Europe)": "Available from Tom Nook during Countdown",
+            "French": "Disponible auprès de Tom Nook pendant le compte à rebours",
+            "French (US)": "Disponible auprès de Tom Nook pendant le compte à rebours"
+        },
+        {
+            "English": "50 fences are given by Tom Nook after completing the three house plots during the main storyline",
+            "English (Europe)": "50 fences are given by Tom Nook after completing the three house plots during the main storyline",
+            "French": "50 clôtures sont données par Tom Nook après avoir terminé les trois parcelles de maison pendant le scénario principal",
+            "French (US)": "50 clôtures sont données par Tom Nook après avoir terminé les trois parcelles de maison pendant le scénario principal"
+        },
+        {
+            "English": "Available from Able Sisters shop only",
+            "English (Europe)": "Available from Able Sisters shop only",
+            "French": "Disponible uniquement chez les Soeurs Doigts de Fée",
+            "French (US)": "Disponible uniquement chez les Soeurs Doigts de Fée",
+            "Spanish": "Solo disponible en Hermanitas Manitas",
+            "Spanish (US)": "Solo disponible en Hermanitas Manitas"
+        },
+        {
+            "English": "Available from either Mabel's temporary shop or Able Sisters shop",
+            "English (Europe)": "Available from either Mabel's temporary shop or Able Sisters shop",
+            "French": "Disponible dans la boutique temporaire de Layette ou chez les Soeurs Doigts de Fée",
+            "French (US)": "Disponible dans la boutique temporaire de Layette ou chez les Soeurs Doigts de Fée"
+        },
+        {
+            "English": "Received in mail from DAL after 100 flights",
+            "English (Europe)": "Received in mail from DAL after 100 flights",
+            "French": "Reçu par courrier de la DAL après 100 vols",
+            "French (US)": "Reçu par courrier de la DAL après 100 vols",
+            "Spanish": "Recibido por correo de DAL después de 100 vuelos",
+            "Spanish (US)": "Recibido por correo de DAL después de 100 vuelos"
+        },
+        {
+            "English": "Received in mail from DAL after 250 flights",
+            "English (Europe)": "Received in mail from DAL after 250 flights",
+            "French": "Reçu par courrier de la DAL après 250 vols",
+            "French (US)": "Reçu par courrier de la DAL après 250 vols",
+            "Spanish": "Recibido por correo de DAL después de 250 vuelos",
+            "Spanish (US)": "Recibido por correo de DAL después de 250 vuelos"
+        },
+        {
+            "English": "Received in mail from DAL after 5 flights",
+            "English (Europe)": "Received in mail from DAL after 5 flights",
+            "French": "Recibido por correo de DAL después de 5 vuelos",
+            "French (US)": "Recibido por correo de DAL después de 5 vuelos",
+            "Spanish": "Recibido por correo de DAL después de 5 vuelos",
+            "Spanish (US)": "Recibido por correo de DAL después de 5 vuelos"
+        },
+        {
+            "English": "Added to Able Sisters stock rotation the day after receiving this item from Label",
+            "English (Europe)": "Added to Able Sisters stock rotation the day after receiving this item from Label",
+            "French": "Ajouté chez les Soeurs Doigts de Fée le lendemain du jour où vous recevez cet objet de Tiquette",
+            "French (US)": "Ajouté chez les Soeurs Doigts de Fée le lendemain du jour où vous recevez cet objet de Tiquette"
+        },
+        {
+            "English": "Received in December in the Northern Hemisphere and received in June in the Southern Hemisphere",
+            "English (Europe)": "Received in December in the Northern Hemisphere and received in June in the Southern Hemisphere",
+            "French": "Reçu en Décembre dans l'Hémisphère Nord et reçu en Juin dans l'Hémisphère Sud",
+            "French (US)": "Reçu en Décembre dans l'Hémisphère Nord et reçu en Juin dans l'Hémisphère Sud",
+            "Spanish": "Recibido en diciembre en el hemisferio norte y recibido en junio en el hemisferio sur",
+            "Spanish (US)": "Recibido en diciembre en el hemisferio norte y recibido en junio en el hemisferio sur"
+        },
+        {
+            "English": "Received in June in the Northern Hemisphere and received in December in the Southern Hemisphere",
+            "English (Europe)": "Received in June in the Northern Hemisphere and received in December in the Southern Hemisphere",
+            "French": "Reçu en juin dans l'hémisphère nord et en décembre dans l'hémisphère sud",
+            "French (US)": "Reçu en juin dans l'hémisphère nord et en décembre dans l'hémisphère sud"
+        },
+        {
+            "English": "Give Jack candy or a lollipop",
+            "English (Europe)": "Give Jack candy or a lollipop",
+            "French": "Donner des bonbons ou des sucettes à Jacqu'O",
+            "French (US)": "Donner des bonbons ou des sucettes à Jacqu'O"
+        },
+        {
+            "English": "Received in mail from DAL after 130 flights",
+            "English (Europe)": "Received in mail from DAL after 130 flights",
+            "French": "Reçu par courrier de la DAL après 130 vols",
+            "French (US)": "Reçu par courrier de la DAL après 130 vols",
+            "Spanish": "Recibido por correo de DAL después de 130 vuelos",
+            "Spanish (US)": "Recibido por correo de DAL después de 130 vuelos"
+        },
+        {
+            "English": "Received in mail from DAL after 15 flights",
+            "English (Europe)": "Received in mail from DAL after 15 flights",
+            "French": "Reçu par courrier de la DAL après 15 vols",
+            "French (US)": "Reçu par courrier de la DAL après 15 vols",
+            "Spanish": "Recibido por correo de DAL después de 15 vuelos",
+            "Spanish (US)": "Recibido por correo de DAL después de 15 vuelos"
+        },
+        {
+            "English": "Received in mail from DAL after 75 flights",
+            "English (Europe)": "Received in mail from DAL after 75 flights",
+            "French": "Reçu par courrier de la DAL après 75 vols",
+            "French (US)": "Reçu par courrier de la DAL après 75 vols",
+            "Spanish": "Recibido por correo de DAL después de 75 vuelos",
+            "Spanish (US)": "Recibido por correo de DAL después de 75 vuelos"
+        },
+        {
+            "English": "Mailed to players after the 1.3.0 update in a letter from Nintendo; Available from either Mabel's temporary shop or Able Sisters shop",
+            "English (Europe)": "Mailed to players after the 1.3.0 update in a letter from Nintendo; Available from either Mabel's temporary shop or Able Sisters shop",
+            "French": "Envoyé aux joueurs après la mise à jour 1.3.0 dans une lettre de Nintendo",
+            "French (US)": "Envoyé aux joueurs après la mise à jour 1.3.0 dans une lettre de Nintendo",
+            "Spanish": "Enviado a jugadores después de la actualización 1.3.0 en una carta de Nintendo",
+            "Spanish (US)": "Enviado a jugadores después de la actualización 1.3.0 en una carta de Nintendo"
+        },
+        {
+            "English": "Received in mail from DAL after 30 flights",
+            "English (Europe)": "Received in mail from DAL after 30 flights",
+            "French": "Reçu par courrier de la DAL après 30 vols",
+            "French (US)": "Reçu par courrier de la DAL après 30 vols"
+        },
+        {
+            "English": "Available at Able Sisters only during Fireworks Shows",
+            "English (Europe)": "Available at Able Sisters only during Fireworks Shows",
+            "French": "Disponible uniquement chez les Soeurs Doigts de Fée durant les spectacles de feux d'artifice",
+            "French (US)": "Disponible uniquement chez les Soeurs Doigts de Fée durant les spectacles de feux d'artifice"
+        },
+        {
+            "English": "Received in mail from DAL after 200 flights",
+            "English (Europe)": "Received in mail from DAL after 200 flights",
+            "French": "Reçu par courrier de la DAL après 200 vols",
+            "French (US)": "Reçu par courrier de la DAL après 200 vols",
+            "Spanish": "Recibido por correo de DAL después de 200 vuelos",
+            "Spanish (US)": "Recibido por correo de DAL después de 200 vuelos"
+        },
+        {
+            "English": "Received in May in the Northern Hemisphere and received in November in the Southern Hemisphere",
+            "English (Europe)": "Received in May in the Northern Hemisphere and received in November in the Southern Hemisphere",
+            "French": "Reçu en Mai dans l'Hémisphère Nord et reçu en Novembre dans l'Hémisphère Sud",
+            "French (US)": "Reçu en Mai dans l'Hémisphère Nord et reçu en Novembre dans l'Hémisphère Sud",
+            "Spanish": "Recibido en mayo en el hemisferio norte y recibido en noviembre en el hemisferio sur",
+            "Spanish (US)": "Recibido en mayo en el hemisferio norte y recibido en noviembre en el hemisferio sur"
+        },
+        {
+            "English": "Received in mail from DAL after 160 flights",
+            "English (Europe)": "Received in mail from DAL after 160 flights",
+            "French": "Reçu par courrier de la DAL après 160 vols",
+            "French (US)": "Reçu par courrier de la DAL après 160 vols",
+            "Spanish": "Recibido por correo de DAL después de 160 vuelos",
+            "Spanish (US)": "Recibido por correo de DAL después de 160 vuelos"
+        },
+        {
+            "English": "Possible song K.K. will play when choosing \"It's hard to say.\" as your mood",
+            "English (Europe)": "Possible song K.K. will play when choosing \"It's hard to say.\" as your mood"
+        },
+        {
+            "English": "Possible song K.K. will play when choosing \"Laid-back.\" as your mood",
+            "English (Europe)": "Possible song K.K. will play when choosing \"Laid-back.\" as your mood"
+        },
+        {
+            "English": "Hidden song - only by request",
+            "English (Europe)": "Hidden song - only by request"
+        },
+        {
+            "English": "Possible song K.K. will play when choosing \"I feel good!\" as your mood",
+            "English (Europe)": "Possible song K.K. will play when choosing \"I feel good!\" as your mood"
+        },
+        {
+            "English": "Possible song K.K. will play when choosing \"A little blue...\" as your mood",
+            "English (Europe)": "Possible song K.K. will play when choosing \"A little blue...\" as your mood"
+        },
+        {
+            "English": "Possible song K.K. will play when choosing \"A little grumpy...\" as your mood",
+            "English (Europe)": "Possible song K.K. will play when choosing \"A little grumpy...\" as your mood"
+        },
+        {
+            "English": "Received on your first time seeing K.K. perform during your birthday",
+            "English (Europe)": "Received on your first time seeing K.K. perform during your birthday"
+        },
+        {
+            "English": "Received on your first time seeing K.K. perform",
+            "English (Europe)": "Received on your first time seeing K.K. perform"
+        },
+        {
+            "English": "Played by K.K. if you request something he doesn't have (does not give take-home track)",
+            "English (Europe)": "Played by K.K. if you request something he doesn't have (does not give take-home track)"
+        },
+        {
+            "English": "Shaking",
+            "English (Europe)": "Shaking"
+        },
+        {
+            "English": "Found under the Special tab of the Nook Miles Redemption service.",
+            "English (Europe)": "Found under the Special tab of the Nook Miles Redemption service."
+        },
+        {
+            "English": "Near a bamboo tree",
+            "English (Europe)": "Near a bamboo tree"
+        },
+        {
+            "English": "Shaking decorated trees",
+            "English (Europe)": "Shaking decorated trees"
+        },
+        {
+            "English": "Medium shadow",
+            "English (Europe)": "Medium shadow"
+        },
+        {
+            "English": "Sold in Nook's Cranny during the month of October; gifted by talking to villagers during Halloween",
+            "English (Europe)": "Sold in Nook's Cranny during the month of October; gifted by talking to villagers during Halloween"
+        },
+        {
+            "English": "Only available while on a quest for Gullivarrr",
+            "English (Europe)": "Only available while on a quest for Gullivarrr"
+        },
+        {
+            "English": "Only available while on a quest for Gulliver",
+            "English (Europe)": "Only available while on a quest for Gulliver"
+        },
+        {
+            "English": "Obtained from Franklin after completing 4 recipes with secret ingredient; sold in Nook's Cranny after Turkey Day until the end of November",
+            "English (Europe)": "Obtained from Franklin after completing 4 recipes with secret ingredient; sold in Nook's Cranny after Turkey Day until the end of November"
+        },
+        {
+            "English": "Received in the mail the day after uploading your island to Luna's Dream Library",
+            "English (Europe)": "Received in the mail the day after uploading your island to Luna's Dream Library"
+        },
+        {
+            "English": "Small shadow",
+            "English (Europe)": "Small shadow"
+        },
+        {
+            "English": "Black roses watered with gold watering can",
+            "English (Europe)": "Black roses watered with gold watering can"
+        },
+        {
+            "English": "Reward for helping Cyrus & Reese during Wedding Season",
+            "English (Europe)": "Reward for helping Cyrus & Reese during Wedding Season"
+        },
+        {
+            "English": "Reward for making a perfect Snowboy",
+            "English (Europe)": "Reward for making a perfect Snowboy"
+        },
+        {
+            "English": "Large shadow",
+            "English (Europe)": "Large shadow"
+        },
+        {
+            "English": "Obtained from crafting villagers during October if player already knows the recipe or as a reward for gifting candy on Halloween",
+            "English (Europe)": "Obtained from crafting villagers during October if player already knows the recipe or as a reward for gifting candy on Halloween"
+        },
+        {
+            "English": "Since 1.6.0, Leif sells pumpkin starts year-round.",
+            "English (Europe)": "Since 1.6.0, Leif sells pumpkin starts year-round."
+        },
+        {
+            "English": "Near cedar and hardwood trees",
+            "English (Europe)": "Near cedar and hardwood trees"
+        },
+        {
+            "English": "X-Small shadow when fishing",
+            "English (Europe)": "X-Small shadow when fishing"
+        },
+        {
+            "English": "Placed randomly on island for a villager's treasure hunt quest",
+            "English (Europe)": "Placed randomly on island for a villager's treasure hunt quest"
+        },
+        {
+            "English": "Only available on Sundays; buy value ranges from 90-110 per turnip but can only be bought in stacks of 10 or more; sell value ranges from 9-660 depending on the current market price",
+            "English (Europe)": "Only available on Sundays; buy value ranges from 90-110 per turnip but can only be bought in stacks of 10 or more; sell value ranges from 9-660 depending on the current market price"
+        },
+        {
+            "English": "Only available while on a quest for Wisp",
+            "English (Europe)": "Only available while on a quest for Wisp"
+        },
+        {
+            "English": "Obtained during the main storyline during the villager house development quest if the native fruit is apples",
+            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native fruit is apples"
+        },
+        {
+            "English": "Purchase Pretty Good Tools Recipes via Nook Miles Redemption",
+            "English (Europe)": "Purchase Pretty Good Tools Recipes via Nook Miles Redemption"
+        },
+        {
+            "English": "50% chance of being obtained during the main storyline during the villager house development quest",
+            "English (Europe)": "50% chance of being obtained during the main storyline during the villager house development quest"
+        },
+        {
+            "English": "Purchase Wildest Dreams DIY from Nook's Cranny",
+            "English (Europe)": "Purchase Wildest Dreams DIY from Nook's Cranny"
+        },
+        {
+            "English": "Obtained during the main storyline",
+            "English (Europe)": "Obtained during the main storyline"
+        },
+        {
+            "English": "Reward from Zipper after collecting all 6 egg types",
+            "English (Europe)": "Reward from Zipper after collecting all 6 egg types"
+        },
+        {
+            "English": "Reward from Zipper after crafting wobbling Zipper toy",
+            "English (Europe)": "Reward from Zipper after crafting wobbling Zipper toy"
+        },
+        {
+            "English": "Obtained from Tom Nook after completing his DIY Workshop at the beginning of the game",
+            "English (Europe)": "Obtained from Tom Nook after completing his DIY Workshop at the beginning of the game"
+        },
+        {
+            "English": "Obtained during the main storyline during the villager house development quest if the native fruit is cherries",
+            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native fruit is cherries"
+        },
+        {
+            "English": "Obtained during the main storyline during the villager house development quest",
+            "English (Europe)": "Obtained during the main storyline during the villager house development quest"
+        },
+        {
+            "English": "Obtained during the main storyline during the villager house development quest if the native flower is cosmos",
+            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native flower is cosmos"
+        },
+        {
+            "English": "Obtained through Tom Nook's DIY Workshop at the beginning of the game and can also be purchased at Nook's Cranny",
+            "English (Europe)": "Obtained through Tom Nook's DIY Workshop at the beginning of the game and can also be purchased at Nook's Cranny"
+        },
+        {
+            "English": "Obtained through Tom Nook's DIY Workshop at the beginning of the game",
+            "English (Europe)": "Obtained through Tom Nook's DIY Workshop at the beginning of the game"
+        },
+        {
+            "English": "Purchase DIY for Beginners at Nook's Cranny",
+            "English (Europe)": "Purchase DIY for Beginners at Nook's Cranny"
+        },
+        {
+            "English": "Fish up 15 trash",
+            "English (Europe)": "Fish up 15 trash"
+        },
+        {
+            "English": "Reward from Jingle after delivering more than half the gifts on Toy Day",
+            "English (Europe)": "Reward from Jingle after delivering more than half the gifts on Toy Day"
+        },
+        {
+            "English": "Balloon appears after shooting 300 balloons",
+            "English (Europe)": "Balloon appears after shooting 300 balloons"
+        },
+        {
+            "English": "Obtained after the 5-star island evaluation",
+            "English (Europe)": "Obtained after the 5-star island evaluation"
+        },
+        {
+            "English": "Obtained from Tom Nook after completing one Nature Day Nook Miles+ task; Obtained from Leif after buying anything from him on three different days",
+            "English (Europe)": "Obtained from Tom Nook after completing one Nature Day Nook Miles+ task; Obtained from Leif after buying anything from him on three different days"
+        },
+        {
+            "English": "Obtained during the main storyline during the villager house development quest if the native flower is hyacinths",
+            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native flower is hyacinths"
+        },
+        {
+            "English": "Picking up gold nuggets knocked out of rocks",
+            "English (Europe)": "Picking up gold nuggets knocked out of rocks"
+        },
+        {
+            "English": "Obtained during the main storyline during the villager house development quest if the native flower is lilies",
+            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native flower is lilies"
+        },
+        {
+            "English": "Purchase Test Your DIY Skills from Nook's Cranny",
+            "English (Europe)": "Purchase Test Your DIY Skills from Nook's Cranny"
+        },
+        {
+            "English": "Obtained during the main storyline during the villager house development quest if the native flower is mums",
+            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native flower is mums"
+        },
+        {
+            "English": "Obtained during the main storyline during the villager house development quest if the native fruit is oranges",
+            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native fruit is oranges"
+        },
+        {
+            "English": "Obtained during the main storyline during the villager house development quest if the native flower is pansies",
+            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native flower is pansies"
+        },
+        {
+            "English": "Obtained during the main storyline during the villager house development quest if the native fruit is peaches",
+            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native fruit is peaches"
+        },
+        {
+            "English": "Obtained during the main storyline during the villager house development quest if the native fruit is pears",
+            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native fruit is pears"
+        },
+        {
+            "English": "Also obtained from digging up an existing pitfall",
+            "English (Europe)": "Also obtained from digging up an existing pitfall"
+        },
+        {
+            "English": "Talk to Pavé during the Festivale event",
+            "English (Europe)": "Talk to Pavé during the Festivale event"
+        },
+        {
+            "English": "Fish up 1 boot",
+            "English (Europe)": "Fish up 1 boot"
+        },
+        {
+            "English": "Fish up 3 empty cans",
+            "English (Europe)": "Fish up 3 empty cans"
+        },
+        {
+            "English": "Obtained during the main storyline during the villager house development quest if the native flower is roses",
+            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native flower is roses"
+        },
+        {
+            "English": "Obtained from crafting villagers during October or as a reward for gifting candy on Halloween",
+            "English (Europe)": "Obtained from crafting villagers during October or as a reward for gifting candy on Halloween"
+        },
+        {
+            "English": "Reward for gifting lollipop on Halloween",
+            "English (Europe)": "Reward for gifting lollipop on Halloween"
+        },
+        {
+            "English": "Fish up 1 empty can",
+            "English (Europe)": "Fish up 1 empty can"
+        },
+        {
+            "English": "Purchase Test Your DIY Skills from Nook's Cranny; 50% chance of being obtained during the main storyline during the villager house development quest",
+            "English (Europe)": "Purchase Test Your DIY Skills from Nook's Cranny; 50% chance of being obtained during the main storyline during the villager house development quest"
+        },
+        {
+            "English": "Fish up 3 old tires",
+            "English (Europe)": "Fish up 3 old tires"
+        },
+        {
+            "English": "Fish up 1 old tire",
+            "English (Europe)": "Fish up 1 old tire"
+        },
+        {
+            "English": "Obtained during the main storyline during the villager house development quest if the native flower is tulips",
+            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native flower is tulips"
+        },
+        {
+            "English": "Obtain Cozy Turkey Day DIY from Franklin or buy it from Nook's Cranny",
+            "English (Europe)": "Obtain Cozy Turkey Day DIY from Franklin or buy it from Nook's Cranny"
+        },
+        {
+            "English": "Obtained during the main storyline during the villager house development quest if the native flower is windflowers",
+            "English (Europe)": "Obtained during the main storyline during the villager house development quest if the native flower is windflowers"
+        },
+        {
+            "English": "Reward from Zipper after crafting all Bunny Day recipes",
+            "English (Europe)": "Reward from Zipper after crafting all Bunny Day recipes"
+        },
+        {
+            "English": "Obtained during the main storyline during the customization workshop",
+            "English (Europe)": "Obtained during the main storyline during the customization workshop"
+        },
+        {
+            "English": "Purchase Test Your DIY Skills from Nook's Cranny; Obtained during the main storyline during the villager house development quest",
+            "English (Europe)": "Purchase Test Your DIY Skills from Nook's Cranny; Obtained during the main storyline during the villager house development quest"
+        },
+        {
+            "English": "Requires a high level of friendship",
+            "English (Europe)": "Requires a high level of friendship"
+        }
+    ],
     "Event Names": [
         {
             "English": "acorns and pine cones",
@@ -6211,7 +6349,7 @@
     ],
     "Missing Items": [
         {
-            "English": "Coral Nook Inc. aloha shirt",
+            "English": "coral Nook Inc. aloha shirt",
             "English (Europe)": "coral Nook Inc. aloha shirt",
             "French": "chemis. Hawaï N. Inc. corail",
             "French (US)": "chemis. Hawaï N. Inc. corail",
@@ -6227,7 +6365,7 @@
             "Russian": "коралл. гавайка Nook Inc."
         },
         {
-            "English": "Green Nook Inc. aloha shirt",
+            "English": "green Nook Inc. aloha shirt",
             "English (Europe)": "green Nook Inc. aloha shirt",
             "French": "chemis. Hawaï N. Inc. verte",
             "French (US)": "chemis. Hawaï N. Inc. verte",

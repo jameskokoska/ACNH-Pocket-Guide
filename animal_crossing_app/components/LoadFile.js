@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Image, Vibration,StyleSheet, DrawerLayoutAndroid, View, Text,} from 'react-native';
+import {Image, Vibration,StyleSheet, DrawerLayoutAndroid, View, Text,Clipboard} from 'react-native';
 import TextFont from './TextFont';
 import ButtonComponent from './ButtonComponent';
 import Popup from './Popup';
@@ -28,49 +28,9 @@ class LoadFile extends Component {
             console.log(document.uri);
             fetch(document.uri)
             .then( file => file.text() )
-            .then( (text) => {
-              var totalImport = text.split("\n");
-              var totalAchievements = [];
-              for(var i = 0; i<totalImport.length; i++){
-                if(totalImport[i].includes("{") && totalImport[i].includes("}")){
-                  var key = totalImport[i].match(/\{(.*?)\}/);
-                  var importEntry = totalImport[i].replace(key[0],"")
-                  if(key[1]==="Achievements"){
-                    totalAchievements.push(importEntry);
-                  } else {
-                    AsyncStorage.setItem(key[1], importEntry);
-                    if(key[1]==="name"){
-                      global.name=importEntry
-                    } else if(key[1]==="islandName") {
-                      global.islandName=importEntry
-                    } else if (key[1]==="dreamAddress") {
-                      global.dreamAddress=importEntry
-                    } else if (key[1]==="friendCode") {
-                      global.friendCode=importEntry
-                    } else if (key[1]==="selectedFruit") {
-                      global.selectedFruit=importEntry
-                    } else if (key[1]==="settingsNorthernHemisphere") {
-                      setSettingsString("settingsNorthernHemisphere",importEntry);
-                    }
-                  }
-                } else {
-                  var exists = false;
-                  for(var j = 0; j<global.collectionList.length; j++){
-                    if(global.collectionList[j]===totalImport[i]){
-                      exists=true;
-                    }
-                  }
-                  if(exists===false){
-                    global.collectionList.push(totalImport[i]);
-                  }
-                }
-              }
-              collectionListSave();
-              loadGlobalData();
-              this.setState({loadedNumber:totalImport.length})
-              console.log(totalAchievements)
-              console.log(global.collectionList)
-              AsyncStorage.setItem("Achievements", JSON.stringify(totalAchievements));
+            .then( async (text) => {
+              var totalImported = await importAllData(text)
+              this.setState({loadedNumber:totalImported}) 
             })
             this.loadPopupResults.setPopupVisible(true);
           }}
@@ -90,8 +50,122 @@ class LoadFile extends Component {
           vibrate={5}
           onPress={() => {
             this.loadPopup?.setPopupVisible(true);
-        }}/>
+        }}/>        
       </View>
+    )
+  }
+}
+
+async function importAllData(text){
+  var totalImport = text.split("\n");
+  var totalAchievements = [];
+  for(var i = 0; i<totalImport.length; i++){
+    if(totalImport[i].includes("{") && totalImport[i].includes("}")){
+      var key = totalImport[i].match(/\{(.*?)\}/);
+      var importEntry = totalImport[i].replace(key[0],"")
+      if(key[1]==="Achievements"){
+        totalAchievements.push(importEntry);
+      } else {
+        AsyncStorage.setItem(key[1], importEntry);
+        if(key[1]==="name"){
+          global.name=importEntry
+        } else if(key[1]==="islandName") {
+          global.islandName=importEntry
+        } else if (key[1]==="dreamAddress") {
+          global.dreamAddress=importEntry
+        } else if (key[1]==="friendCode") {
+          global.friendCode=importEntry
+        } else if (key[1]==="selectedFruit") {
+          global.selectedFruit=importEntry
+        } else if (key[1]==="settingsNorthernHemisphere") {
+          setSettingsString("settingsNorthernHemisphere",importEntry);
+        }
+      }
+    } else {
+      var exists = false;
+      for(var j = 0; j<global.collectionList.length; j++){
+        if(global.collectionList[j]===totalImport[i]){
+          exists=true;
+        }
+      }
+      if(exists===false){
+        global.collectionList.push(totalImport[i]);
+      }
+    }
+  }
+  collectionListSave();
+  loadGlobalData();
+  AsyncStorage.setItem("Achievements", JSON.stringify(totalAchievements));
+  return totalImport.length
+}
+
+async function getAllData(){
+  var data = await getStorage("collectedString","");
+  var data2 = "\n{Achievements}" + JSON.parse(await getStorage("Achievements","[]")).join("\n{Achievements}");
+  var data3 = "\n{name}" + (await getStorage("name",""))
+  var data4 = "\n{islandName}" + (await getStorage("islandName",""))
+  var data5 = "\n{dreamAddress}" + (await getStorage("dreamAddress",""))
+  var data6 = "\n{friendCode}" + (await getStorage("friendCode",""))
+  var data7 = "\n{selectedFruit}" + (await getStorage("selectedFruit",""))
+  var data8 = "\n{settingsNorthernHemisphere}" + (await getStorage("settingsNorthernHemisphere",""))
+  return data + data2 + data3 + data4 + data5 + data6 + data7 + data8
+}
+
+class LoadClipboard extends Component {
+  constructor() {
+    super()
+    this.state = {
+      loadedNumber: 0,
+    }
+  }
+  render(){
+    return(
+      <>
+      <Popup 
+        ref={(loadPopupResults) => this.loadPopupResults = loadPopupResults}
+        button1={"OK"}
+        button1Action={()=>{}}
+        text={"Import Results"}
+        textLower={attemptToTranslate("Imported:") + " " + this.state.loadedNumber + " " + attemptToTranslate("entires.") + "\n\n" + attemptToTranslate("Note: If this has imported 0 entires, please double check you have copied the correct contents created from exporting to clipboard.")}
+      />
+      <ButtonComponent
+        text={"Import Data from Clipboard"}
+        color={colors.okButton[global.darkMode]}
+        vibrate={5}
+        onPress={async () => {
+          const text = await Clipboard.getString();
+          var totalImported = await importAllData(text);
+          this.setState({loadedNumber:totalImported}) 
+          this.loadPopupResults.setPopupVisible(true);
+        }}
+      />
+      </>
+    )
+  }
+}
+
+class ExportClipboard extends Component {
+  render(){
+    return(
+      <>
+        <Popup 
+          ref={(exportPopup) => this.exportPopup = exportPopup}
+          button1={"OK"}
+          button1Action={()=>{}}
+          text={"Data is copied to your clipboard"}
+          textLower={"Paste it somewhere safe"}
+        />
+        <ButtonComponent
+          text={"Export Data to Clipboard"}
+          color={colors.okButton[global.darkMode]}
+          vibrate={5}
+          onPress={async () => {
+            var dataTotal = await getAllData();
+            Clipboard.setString(dataTotal);
+            this.exportPopup?.setPopupVisible(true);
+          }}
+        />
+      </>
     )
   }
 }
@@ -111,22 +185,14 @@ class ExportFile extends Component {
           button1={"OK"}
           button1Action={()=>{}}
           text={"Export Results"}
-          textLower={this.state.message}
+          textLower={this.state.message + "\n\n" + attemptToTranslate("If you are using Android version 11 or above, this may not work. Please use the Clipboard backing up options below. Sorry for the inconvenience.")}
         />
         <ButtonComponent
           text={"Export Data"}
           color={colors.okButton[global.darkMode]}
           vibrate={5}
           onPress={async () => {
-            var data = await getStorage("collectedString","");
-            var data2 = "\n{Achievements}" + JSON.parse(await getStorage("Achievements","[]")).join("\n{Achievements}");
-            var data3 = "\n{name}" + (await getStorage("name",""))
-            var data4 = "\n{islandName}" + (await getStorage("islandName",""))
-            var data5 = "\n{dreamAddress}" + (await getStorage("dreamAddress",""))
-            var data6 = "\n{friendCode}" + (await getStorage("friendCode",""))
-            var data7 = "\n{selectedFruit}" + (await getStorage("selectedFruit",""))
-            var data8 = "\n{settingsNorthernHemisphere}" + (await getStorage("settingsNorthernHemisphere",""))
-            var dataTotal = data + data2 + data3 + data4 + data5 + data6 + data7 + data8
+            var dataTotal = await getAllData();
             console.log(dataTotal)
             const res = await MediaLibrary.requestPermissionsAsync();
             if (res.granted) {
@@ -146,4 +212,4 @@ class ExportFile extends Component {
     )
   }
 }
-export {LoadFile,ExportFile};
+export {LoadFile,ExportFile, ExportClipboard, LoadClipboard};
