@@ -8,7 +8,7 @@ import * as FileSystem from 'expo-file-system'
 
 export async function getStorage(storageKey, defaultValue){
   const valueReturned = await AsyncStorage.getItem(storageKey);
-  if(valueReturned === null) {
+  if(valueReturned === null || valueReturned === undefined) {
     await AsyncStorage.setItem(storageKey, defaultValue);
     return defaultValue;
   }

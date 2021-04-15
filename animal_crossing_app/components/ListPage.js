@@ -5,9 +5,6 @@ import ListItem from './ListItem';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, removeBrackets} from "../LoadJsonData"
 import BottomSheet from 'reanimated-bottom-sheet';
-import * as MediaLibrary from 'expo-media-library';
-import * as FileSystem from 'expo-file-system';
-import * as Permissions from 'expo-permissions';
 import {Dimensions } from "react-native";
 import {Variations, InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from './BottomSheetComponents';
 import colors from "../Colors.js"

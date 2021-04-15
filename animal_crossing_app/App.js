@@ -51,6 +51,11 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
+-Fixed bug with backup data
+-Updated backend SDK
+-Backing up data now no longer asks for camera permission on older Android versions
+-Backup folder changed to /Pictures/ACNHPocketGuide instead of downloads folder
+-
 -Fixed translations
 -Rewrote how translations are handled again, hopefully it's faster now!
 -Updated translations
