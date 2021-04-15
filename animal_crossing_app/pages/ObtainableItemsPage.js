@@ -11,7 +11,6 @@ import {RecipesRouteClass} from "./CraftingPage"
 import {PopupInfoCustom} from "../components/Popup"
 import TextFont from "../components/TextFont"
 
-const width = { width: Dimensions.get('window').width };
 
 const renderTabBar = props => (
   <TabBar
@@ -167,7 +166,7 @@ class ObtainableItemsPage extends Component {
           navigationState={this.state}
           renderScene={this.renderScene}
           onIndexChange={(this.handleIndexChange)}
-          initialLayout={width}
+          initialLayout={{width: Dimensions.get('window').width}}
           renderTabBar={renderTabBar}
         />
       </>

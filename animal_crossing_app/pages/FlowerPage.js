@@ -131,7 +131,7 @@ class FlowerPage extends Component {
         navigationState={this.state}
         renderScene={this.renderScene}
         onIndexChange={(this.handleIndexChange)}
-        initialLayout={Dimensions.get('window').width}
+        initialLayout={{width: Dimensions.get('window').width}}
         renderTabBar={renderTabBar}
       />
     )

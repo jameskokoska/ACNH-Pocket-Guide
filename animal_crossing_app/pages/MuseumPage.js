@@ -6,7 +6,6 @@ import colors from '../Colors.js';
 import {getMonthShort} from "../components/DateFunctions"
 import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
 
-const width = { width: Dimensions.get('window').width };
 
 const renderTabBar = props => (
   <TabBar
@@ -192,7 +191,7 @@ class MuseumPage extends Component {
         navigationState={this.state}
         renderScene={this.renderScene}
         onIndexChange={(this.handleIndexChange)}
-        initialLayout={width}
+        initialLayout={{width: Dimensions.get('window').width}}
         renderTabBar={renderTabBar}
       />
     )
