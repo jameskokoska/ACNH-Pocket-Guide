@@ -689,6 +689,13 @@ export const settings = [
 //attemptToTranslateMysteryIslands()
 //translates from Mystery Islands only
 
+//attemptToTranslateCreatureCatchPhrase()
+//translates creatures catch phrases from Catch Phrases
+
+//attemptToTranslateMuseumDescription()
+//translates museum descriptions from Museum Descriptions
+
+
 const variantTranslations = require("./assets/data/Generated/translatedVariants.json");
 const catchphraseTranslations = require("./assets/data/Generated/translatedVillagerCatchPhrases.json");
 const appTranslations = require("./assets/data/translationsApp.json")["Main"];
@@ -701,6 +708,8 @@ const sourceNotesTranslations = require("./assets/data/translationsApp.json")["S
 const cardsTranslations = require("./assets/data/translationsApp.json")["Cards"];
 const NPCTranslations = require("./assets/data/translationsApp.json")["NPCs"];
 const mysteryIslandsTranslations = require("./assets/data/translationsApp.json")["Mystery Islands"];
+const creatureCatchPhraseTranslations = require("./assets/data/translationsApp.json")["Catch Phrases"];
+const museumDescriptionTranslations = require("./assets/data/translationsApp.json")["Museum Descriptions"];
 
 export function attemptToTranslateFromDatabase(text, database){
   if(text===undefined){
@@ -758,6 +767,14 @@ export function attemptToTranslateMysteryIslands(text){
 
 export function attemptToTranslateSourceNotes(text){
   return attemptToTranslateFromDatabase(text, sourceNotesTranslations)
+}
+
+export function attemptToTranslateCreatureCatchPhrase(text){
+  return attemptToTranslateFromDatabase(text, creatureCatchPhraseTranslations)
+}
+
+export function attemptToTranslateMuseumDescription(text){
+  return attemptToTranslateFromDatabase(text, museumDescriptionTranslations)
 }
 
 export function attemptToTranslate(text, forcedTranslation=false){

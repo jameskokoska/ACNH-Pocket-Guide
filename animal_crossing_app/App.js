@@ -51,7 +51,10 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
+-Updated game data - small fixes
 -Fix: Changelog should not appear on other pages
+-Added more translations
+-
 -Creature time is now always shown
 -If the creature cannot be caught in the current month, time is in red
 -Fixed setting custom time

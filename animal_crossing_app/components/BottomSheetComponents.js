@@ -6,7 +6,7 @@ import Check from './Check';
 import TextFont from './TextFont'
 import {getEventName, inChecklist, attemptToTranslateItem, commas, capitalize, checkOff, capitalizeFirst} from '../LoadJsonData'
 import {getSizeImage, getPhotoCorner, getMaterialImage} from "./GetPhoto"
-import {attemptToTranslateSourceNotes, getSettingsString, attemptToTranslate, attemptToTranslateSpecial} from "../LoadJsonData"
+import {attemptToTranslateCreatureCatchPhrase, attemptToTranslateMuseumDescription, attemptToTranslateSourceNotes, getSettingsString, attemptToTranslate, attemptToTranslateSpecial} from "../LoadJsonData"
 import {ScrollView} from 'react-native-gesture-handler'
 import {PopupInfoCustom} from "./Popup"
 import {getMonth, doWeSwapDate} from './DateFunctions'
@@ -90,10 +90,14 @@ export class Phrase extends Component {
     }
     var text = this.props.item[this.props.popUpPhraseProperty[this.props.item.dataSet]];
     if(this.props.popUpPhraseProperty[this.props.item.dataSet]==="Catchphrase"){
-      text = capitalizeFirst(attemptToTranslateSpecial(text, "catchphrase"));
-    } else {
-      text = capitalizeFirst(text);
+      //villager catch phrase
+      text =attemptToTranslateSpecial(text, "catchphrase");
+    } else if(this.props.popUpPhraseProperty[this.props.item.dataSet]==="Catch phrase"){
+      //creature catch phrase
+      text = attemptToTranslateCreatureCatchPhrase(text)
     }
+
+    text = capitalizeFirst(text);
 
     var end = "";
     if(this.props.popUpPhraseProperty[this.props.item.dataSet]==="Uses"){
@@ -256,7 +260,7 @@ export class InfoDescription extends Component {
   render(){
     return(
       <View style={{backgroundColor: colors.lightDarkAccentTextBG[global.darkMode], padding:15, paddingHorizontal: 25, marginHorizontal: 10, marginVertical: 5, borderRadius: 8}}>
-        <TextFont style={{lineHeight: 20, fontSize: 17, textAlign:"left", color:colors.textBlack[global.darkMode]}}>{this.props.text}</TextFont>
+        <TextFont translate={false} style={{lineHeight: 20, fontSize: 17, textAlign:"left", color:colors.textBlack[global.darkMode]}}>{attemptToTranslateMuseumDescription(this.props.text)}</TextFont>
       </View>
     )
   }
