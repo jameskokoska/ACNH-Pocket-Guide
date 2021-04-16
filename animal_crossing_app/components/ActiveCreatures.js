@@ -16,7 +16,8 @@ class ActiveCreatures extends Component {
       <View style={{height: Dimensions.get('window').height}}>
         <ListPage 
           title="Active Creatures"
-          leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
+          // leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
+          leaveWarning = {true}
           activeCreatures={true}
           scrollToEnd={this.props.scrollToEnd}
           gridType="smallGrid" //smallGrid, largeGrid, row

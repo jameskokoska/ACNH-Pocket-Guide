@@ -51,9 +51,12 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
+-Creature time is now always shown
+-If the creature cannot be caught in the current month, time is in red
 -Fixed setting custom time
 -Can now backup to clipboard/import from clipboard
 -This is a fix for Android 11 or above devices as changes to the way files can be accessed has been restricted
+-
 -Fixed bug with backup data
 -Updated backend SDK
 -Backing up data now no longer asks for camera permission on older Android versions

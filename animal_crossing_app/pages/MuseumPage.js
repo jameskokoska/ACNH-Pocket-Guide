@@ -29,7 +29,8 @@ const FishRoute = () => (
     // filterSearchable = {true}
     title="Fish"
     activeCreaturesMonth={true}
-    leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
+    // leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
+    leaveWarning = {true}
     imageProperty={["Icon Image"]}
     textProperty={["NameLanguage",]}
     textProperty2={["creatureTime"]}
@@ -50,6 +51,13 @@ const FishRoute = () => (
     popUpCornerImageLabelProperty={["Where/How"]}
     popUpPhraseProperty={["Catch phrase"]}
     popUpContainer={[["FishPopup",550]]} //name of the popup class and height
+    extraInfo={
+      [
+        attemptToTranslate("Fish"),
+        attemptToTranslate("The time is displayed in red if the creature cannot be caught in the current month."),
+        attemptToTranslate("The background is red if this is the last month you are able to catch this creature before you need to wait again."),
+      ]
+    }
   />
 )
 
@@ -57,7 +65,8 @@ const BugsRoute = () => (
   <ListPage 
     title="Bugs"
     activeCreaturesMonth={true}
-    leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
+    // leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
+    leaveWarning = {true}
     imageProperty={["Icon Image"]}
     textProperty={["NameLanguage",]}
     textProperty2={["creatureTime"]}
@@ -78,6 +87,13 @@ const BugsRoute = () => (
     popUpCornerImageLabelProperty={["Where/How"]}
     popUpPhraseProperty={["Catch phrase"]}
     popUpContainer={[["BugPopup",520]]}
+    extraInfo={
+      [
+        attemptToTranslate("Bugs"),
+        attemptToTranslate("The time is displayed in red if the creature cannot be caught in the current month."),
+        attemptToTranslate("The background is red if this is the last month you are able to catch this creature before you need to wait again."),
+      ]
+    }
   />
 )
 
@@ -85,7 +101,8 @@ const SeaRoute = () => (
   <ListPage 
     title="Sea Creatures"
     activeCreaturesMonth={true}
-    leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
+    // leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
+    leaveWarning = {true}
     imageProperty={["Icon Image"]}
     textProperty={["NameLanguage",]}
     textProperty2={["creatureTime"]}
@@ -104,6 +121,13 @@ const SeaRoute = () => (
     specialLabelColor={colors.fishText[global.darkMode]}
     popUpPhraseProperty={["Catch phrase"]}
     popUpContainer={[["SeaPopup",550]]}
+    extraInfo={
+      [
+        attemptToTranslate("Sea Creatures"),
+        attemptToTranslate("The time is displayed in red if the creature cannot be caught in the current month."),
+        attemptToTranslate("The background is red if this is the last month you are able to catch this creature before you need to wait again."),
+      ]
+    }
   />
 )
 

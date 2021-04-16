@@ -254,6 +254,9 @@ class ActiveTime extends Component {
     var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
     var currentHour = getCurrentDateObject().getHours();
     var currentTimeRange = this.props.item[hemispherePre+currentMonthShort];
+    if(currentTimeRange==="NA"){
+      currentTimeRange = this.props.item[hemispherePre+"time"];
+    }
     var timeRangeList = [];
 
     // build current month indicator image list

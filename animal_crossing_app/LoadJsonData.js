@@ -69,7 +69,11 @@ export async function getStorageData(data, checkListKey, defaultValue){
         for(var hemispherePreIndex=0; hemispherePreIndex<hemispherePre.length; hemispherePreIndex++){
           for(var monthShortIndex=0; monthShortIndex<monthShort.length; monthShortIndex++){
             dataLoading[i][hemispherePre[hemispherePreIndex]+[monthShort[monthShortIndex]+" Active"]] = dataLoading[i][hemispherePre[hemispherePreIndex]+[monthShort[monthShortIndex]]]!=="NA"?"true":"false";
+            if(dataLoading[i][hemispherePre[hemispherePreIndex]+[monthShort[monthShortIndex]]]!=="NA" && dataLoading[i][hemispherePre[hemispherePreIndex]+[monthShort[monthShortIndex]]]!=="All day")
+              dataLoading[i][hemispherePre[hemispherePreIndex]+"time"] = dataLoading[i][hemispherePre[hemispherePreIndex]+[monthShort[monthShortIndex]]];
           }
+          if(!dataLoading[i].hasOwnProperty(hemispherePre[hemispherePreIndex]+"time"))
+            dataLoading[i][hemispherePre[hemispherePreIndex]+"time"] = "All day"
         }
       }
       if(global.language!=="English"){
@@ -499,14 +503,14 @@ export const settings = [
   //   "displayName" : "List only active creatures",
   //   "description" : "Only creatures that can be caught in the current month will be displayed.",
   // },
-  {
-    "keyName" : "settingsCreaturesLeavingWarning",
-    "defaultValue" : "true",
-    "currentValue" : "",
-    "picture" : require("./assets/icons/alarmClock.png"),
-    "displayName" : "Last month to catch warning",
-    "description" : "Display a red warning background colour around creatures that won't be able to be caught in the next month.",
-  },
+  // {
+  //   "keyName" : "settingsCreaturesLeavingWarning",
+  //   "defaultValue" : "true",
+  //   "currentValue" : "",
+  //   "picture" : require("./assets/icons/alarmClock.png"),
+  //   "displayName" : "Last month to catch warning",
+  //   "description" : "Display a red warning background colour around creatures that won't be able to be caught in the next month.",
+  // },
   {
     "keyName" : "settingsSortCritterpedia",
     "defaultValue" : "true",

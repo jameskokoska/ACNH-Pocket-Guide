@@ -77,6 +77,7 @@ class ListItem extends React.Component{
   }
 
   render(){
+    var settingsUse24HourClock = getSettingsString("settingsUse24HourClock")==="true";
     var missingVariationsIndicator = !this.state.variationsPercent?<View pointerEvents={"none"} style={{position:'absolute', right: -5, top: -5, backgroundColor:colors.missingVariations[global.darkMode], height:27, width:27, borderRadius:20}}></View>:<View/>
 
     var showBlankCheckMarks = getSettingsString("settingsShowBlankCheckMarks")==="true";
@@ -131,15 +132,24 @@ class ListItem extends React.Component{
     if(this.props.textProperty2!==undefined){
       textProperty2Text = this.props.textProperty2[this.props.item.dataSet];
     }
+    var redTextProperty2 = false;
     if(this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]==="creatureTime"){
       var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH "
       var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
       textProperty2Text = this.props.item[hemispherePre+currentMonthShort];
-      if(getSettingsString("settingsUse24HourClock")==="true" && textProperty2Text!=="NA" && textProperty2Text!=="All day"){
-        var splitString = textProperty2Text.replace(/[^\x00-\x7F]/g, "");
-        splitString = splitString.replace("  ", " ");
-        splitString = splitString.split(" ");
-        textProperty2Text = parseActiveTime(splitString, 0).toString()+":00" + " - " + parseActiveTime(splitString, 2).toString()+ ":00"
+      if(textProperty2Text==="NA"){
+        textProperty2Text = this.props.item[hemispherePre+"time"];
+        redTextProperty2 = true;
+      }
+      if(settingsUse24HourClock && textProperty2Text!=="NA" && textProperty2Text!=="All day"){
+        var splitText = textProperty2Text.split("; ")
+        textProperty2Text = "";
+        for(var z = 0; z<splitText.length; z++){
+          var splitString = splitText[z].replace(/[^\x00-\x7F]/g, "");
+          splitString = splitString.replace("  ", " ");
+          splitString = splitString.split(" ");
+          textProperty2Text = textProperty2Text + (z>0?"; ":"") + parseActiveTime(splitString, 0).toString()+":00" + " - " + parseActiveTime(splitString, 2).toString()+ ":00"
+        }
       }
     }
 
@@ -284,7 +294,8 @@ class ListItem extends React.Component{
       )
     } else { //Row component
       var fishShadow = <View/>
-    if(this.props.popUpContainer!==undefined && this.props.popUpContainer.hasOwnProperty(this.props.item.dataSet) && this.props.popUpContainer[this.props.item.dataSet][0]==="FishPopup"){        fishShadow = <View style={{position:"absolute", right: 75, bottom: 20,}}><Image style={{width:80,height:22,resizeMode:'contain',  marginRight:3}} source={getPhotoShadow(this.props.item,false)}/></View>
+      if(this.props.popUpContainer!==undefined && this.props.popUpContainer.hasOwnProperty(this.props.item.dataSet) && this.props.popUpContainer[this.props.item.dataSet][0]==="FishPopup"){
+        fishShadow = <View style={{position:"absolute", right: 75, bottom: 20,}}><Image style={{width:80,height:22,resizeMode:'contain',  marginRight:3}} source={getPhotoShadow(this.props.item,false)}/></View>
       }
       return( 
         <View>
@@ -318,7 +329,7 @@ class ListItem extends React.Component{
                   <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:20, color:this.props.labelColor}}>{capitalize(label)}</TextFont>
                 </View>
                 <View style={styles.rowTextBottom}>
-                  <TextFont bold={true} numberOfLines={2} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(removeBrackets(textProperty2Text))}</TextFont>
+                  <TextFont bold={true} numberOfLines={2} style={{fontSize:16, color:redTextProperty2?colors.redText[global.darkMode]:this.props.specialLabelColor}}>{capitalize(removeBrackets(textProperty2Text))}</TextFont>
                 </View>
                 <View style={styles.rowTextBottom}>
                   <TextFont bold={true} numberOfLines={2} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(removeBrackets(this.props.item.[this.props.textProperty3[this.props.item.dataSet]]))}</TextFont>
