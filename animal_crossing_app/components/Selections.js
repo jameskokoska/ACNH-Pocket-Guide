@@ -34,11 +34,13 @@ export class SelectionImage extends Component {
             source={{uri:image}}
             cacheKey={image}
           />
-        }else{
+        }else if (this.props.sizeImage){
           imageComponent = <Image
             style={{width: this.props.sizeImage[0],height: this.props.sizeImage[1],resizeMode:'contain',}}
             source={getPhoto(image)}
           />
+        } else {
+          imageComponent = <View/>
         }
         return(
           <View key={image+index.toString()} style={{width: this.props.sizeContainer[0],height: this.props.sizeContainer[1], margin:3}}>

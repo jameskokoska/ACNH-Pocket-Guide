@@ -3027,8 +3027,8 @@
       "value": "Source:Nintendo; Nook Shopping Daily Selection"
     },
     {
-      "label": "Source - Nook Link",
-      "value": "Source:Nook Link"
+      "label": "Source - NookLink",
+      "value": "Source:NookLink"
     },
     {
       "label": "Source - HHA",
@@ -5161,10 +5161,6 @@
       "value": "Season/Event:Summer Solstice (northern hemisphere); Summer Solstice (southern hemisphere)"
     },
     {
-      "label": "Season/Event - Available from either Mabel's temporary shop or Able Sisters shop",
-      "value": "Season/Event:Available from either Mabel's temporary shop or Able Sisters shop"
-    },
-    {
       "label": "Season/Event - Bug-Off",
       "value": "Season/Event:Bug-Off"
     },
@@ -5795,8 +5791,8 @@
       "value": "Source:Nook Shopping Seasonal"
     },
     {
-      "label": "Source - Villagers",
-      "value": "Source:Villagers"
+      "label": "Source - All villagers",
+      "value": "Source:All villagers"
     },
     {
       "label": "Source - Franklin",
@@ -5825,10 +5821,6 @@
     {
       "label": "Source - Nintendo; Nook Shopping Promotion",
       "value": "Source:Nintendo; Nook Shopping Promotion"
-    },
-    {
-      "label": "Source - All villagers",
-      "value": "Source:All villagers"
     },
     {
       "label": "DIY - No",
@@ -6913,8 +6905,8 @@
       "value": "Source:Nintendo; Nook Shopping Daily Selection"
     },
     {
-      "label": "Source - Nook Link",
-      "value": "Source:Nook Link"
+      "label": "Source - NookLink",
+      "value": "Source:NookLink"
     },
     {
       "label": "Source - HHA",
@@ -7019,10 +7011,6 @@
     {
       "label": "Source - Saharah",
       "value": "Source:Saharah"
-    },
-    {
-      "label": "Source - Villagers",
-      "value": "Source:Villagers"
     },
     {
       "label": "Source - Nintendo; Nook Miles Redemption",
@@ -8727,10 +8715,6 @@
     {
       "label": "Season/Event - Summer Solstice (northern hemisphere); Summer Solstice (southern hemisphere)",
       "value": "Season/Event:Summer Solstice (northern hemisphere); Summer Solstice (southern hemisphere)"
-    },
-    {
-      "label": "Season/Event - Available from either Mabel's temporary shop or Able Sisters shop",
-      "value": "Season/Event:Available from either Mabel's temporary shop or Able Sisters shop"
     },
     {
       "label": "Season/Event - Festive shopping",

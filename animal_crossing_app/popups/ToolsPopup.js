@@ -25,6 +25,11 @@ class ToolsPopup extends Component {
         ending2={"Exchange Currency"}
         translateItem={false}
       />
+      <InfoLine
+        image={require("../assets/icons/magnifyingGlass.png")} 
+        item={this.props.item}
+        textProperty={["Source Notes"]}
+      />
     </View>
   }
 }

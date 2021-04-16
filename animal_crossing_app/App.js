@@ -51,6 +51,7 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
+-Fix: Changelog should not appear on other pages
 -Creature time is now always shown
 -If the creature cannot be caught in the current month, time is in red
 -Fixed setting custom time
@@ -454,7 +455,6 @@ class App extends Component {
         }
       }
       this.sideMenu?.closeDrawer();
-      this.popupChangelog?.setPopupVisible(false);
     }
     return true;
   }
@@ -550,7 +550,7 @@ class App extends Component {
             <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
             <StatusBar hidden={getSettingsString("settingsShowStatusBar")==="false"} backgroundColor={colors.background[global.darkMode]} barStyle={global.darkMode===1?"light-content":"dark-content"}/>
             {currentPageView}
-            <PopupChangelog ref={(popupChangelog) => this.popupChangelog = popupChangelog}/>
+            {this.state.currentPage===0?<PopupChangelog ref={(popupChangelog) => this.popupChangelog = popupChangelog}/>:<View/>}
           </SideMenu>
           {fab}
         </>

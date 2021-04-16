@@ -28,7 +28,6 @@ const FishRoute = () => (
   <ListPage 
     // filterSearchable = {true}
     title="Fish"
-    activeCreaturesMonth={true}
     // leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
     leaveWarning = {true}
     imageProperty={["Icon Image"]}
@@ -64,7 +63,6 @@ const FishRoute = () => (
 const BugsRoute = () => (
   <ListPage 
     title="Bugs"
-    activeCreaturesMonth={true}
     // leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
     leaveWarning = {true}
     imageProperty={["Icon Image"]}
@@ -100,7 +98,6 @@ const BugsRoute = () => (
 const SeaRoute = () => (
   <ListPage 
     title="Sea Creatures"
-    activeCreaturesMonth={true}
     // leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
     leaveWarning = {true}
     imageProperty={["Icon Image"]}
