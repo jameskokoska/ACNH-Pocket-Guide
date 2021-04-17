@@ -28,6 +28,7 @@ import {cancelAllPushNotifications} from "../Notifications"
 import DateTimePicker from '@react-native-community/datetimepicker';
 import ButtonComponent from "../components/ButtonComponent"
 import {SelectionImage} from "../components/Selections"
+import PopupChangelog from '../components/PopupChangelog';
 
 function addDays(date, days) {
   var result = new Date(date);
@@ -101,6 +102,7 @@ class HomePage extends Component {
     }
     const sections = this.state.sections;
     return <View style={{height:"100%",width:"100%"}}>
+      <PopupChangelog/>
       <PopupBottomCustom ref={(popupSettings) => this.popupSettings = popupSettings} onClose={()=>{}}>
         <ConfigureHomePages header={"Select Homepage Sections"} refreshEvents={()=>{this.refreshEvents()}} setPages={(checked,name)=>this.setPages(checked,name)} sections={this.state.sections}/>
       </PopupBottomCustom>

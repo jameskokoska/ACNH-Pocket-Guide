@@ -31,11 +31,13 @@ export function inChecklist(checkListKeyString){
   }
 }
 
+const database = require("./assets/data/data.json");
+
 export async function getStorageData(data, checkListKey, defaultValue){
   var dataLoadingTotal = [];
   //Loop through all datasets
   for(var dataSet = 0; dataSet <data.length; dataSet++){
-    var dataLoading = data[dataSet];
+    var dataLoading = database[data[dataSet]];
     var totalIndex = -1;
     //Loop through that specific dataset
     for(var i = 0; i < dataLoading.length; i++){
@@ -81,6 +83,7 @@ export async function getStorageData(data, checkListKey, defaultValue){
       } else {
         dataLoading[i]["NameLanguage"]=dataLoading[i]["Name"];
       }
+      dataLoading[i]["Data Category"]=data[dataSet];
     }
     dataLoadingTotal.push(dataLoading);
   }
@@ -253,31 +256,30 @@ export function removeBrackets(string){
 }
 
 export async function loadGlobalData(){
-  const data = require("./assets/data/data.json");
-  global.dataLoadedReactions = await getStorageData([data["Reactions"]],[["emojiCheckList","Name"]],"false");
-  global.dataLoadedMusic = await getStorageData([data["Music"]],[["songCheckList","Name"]],"false");
-  global.dataLoadedConstruction = await getStorageData([data["Construction"],data["Fencing"]],[["constructionCheckList","Name"],["fenceCheckList","Name"]],"false");
-  global.dataLoadedFish = await getStorageData([data["Fish"]],[["fishCheckList","Name"]],"false");
-  global.dataLoadedBugs = await getStorageData([data["Insects"]],[["bugCheckList","Name"]],"false");
-  global.dataLoadedSea = await getStorageData([data["Sea Creatures"]],[["seaCheckList","Name"]],"false");
+  global.dataLoadedReactions = await getStorageData(["Reactions"],[["emojiCheckList","Name"]],"false");
+  global.dataLoadedMusic = await getStorageData(["Music"],[["songCheckList","Name"]],"false");
+  global.dataLoadedConstruction = await getStorageData(["Construction","Fencing"],[["constructionCheckList","Name"],["fenceCheckList","Name"]],"false");
+  global.dataLoadedFish = await getStorageData(["Fish"],[["fishCheckList","Name"]],"false");
+  global.dataLoadedBugs = await getStorageData(["Insects"],[["bugCheckList","Name"]],"false");
+  global.dataLoadedSea = await getStorageData(["Sea Creatures"],[["seaCheckList","Name"]],"false");
   global.dataLoadedCreatures = await getStorageData([
-    data["Fish"],
-    data["Sea Creatures"],
-    data["Insects"],
+    "Fish",
+    "Sea Creatures",
+    "Insects",
   ],[
     ["fishCheckList","Name"],
     ["seaCheckList","Name"],
     ["bugCheckList","Name"]
   ],"false");
-  global.dataLoadedFossils = await getStorageData([data["Fossils"]],[["fossilCheckList","Name"]],"false");
-  global.dataLoadedArt = await getStorageData([data["Art"]],[["artCheckList","Name","Genuine"]],"false");
-  global.dataLoadedVillagers = await getStorageData([data["Villagers"]],[["villagerCheckList","Name"]],"false");
+  global.dataLoadedFossils = await getStorageData(["Fossils"],[["fossilCheckList","Name"]],"false");
+  global.dataLoadedArt = await getStorageData(["Art"],[["artCheckList","Name","Genuine"]],"false");
+  global.dataLoadedVillagers = await getStorageData(["Villagers"],[["villagerCheckList","Name"]],"false");
   global.dataLoadedFurniture = await getStorageData([
-    data["Housewares"],
-    data["Miscellaneous"],
-    data["Wall-mounted"],
-    data["Photos"],
-    data["Posters"],
+    "Housewares",
+    "Miscellaneous",
+    "Wall-mounted",
+    "Photos",
+    "Posters",
   ],
   [
     ["furnitureCheckList","Name","Variation","Pattern"],
@@ -288,16 +290,16 @@ export async function loadGlobalData(){
     ["furnitureCheckList","Name"],
   ],"false");
   global.dataLoadedClothing = await getStorageData([
-    data["Headwear"],
-    data["Accessories"],
-    data["Tops"],
-    data["Dress-Up"],
-    data["Clothing Other"],
-    data["Bottoms"],
-    data["Socks"],
-    data["Shoes"],
-    data["Bags"],
-    data["Umbrellas"],
+    "Headwear",
+    "Accessories",
+    "Tops",
+    "Dress-Up",
+    "Clothing Other",
+    "Bottoms",
+    "Socks",
+    "Shoes",
+    "Bags",
+    "Umbrellas",
   ],
   [
     ["clothingCheckList","Name","Variation"],
@@ -313,52 +315,52 @@ export async function loadGlobalData(){
   ],"false");
   global.dataLoadedFloorWalls = await getStorageData(
   [
-    data["Floors"],
-    data["Rugs"],
-    data["Wallpaper"]
+    "Floors",
+    "Rugs",
+    "Wallpaper"
   ],
   [
     ["floorWallsCheckList","Name"],
     ["floorWallsCheckList","Name"],
     ["floorWallsCheckList","Name"],
   ],"false");
-  global.dataLoadedTools = await getStorageData([data["Tools"]],[["toolsCheckList","Name","Variation"]],"false");
-  global.dataLoadedRecipes = await getStorageData([data["Recipes"]],[["recipesCheckList","Name"]],"false");
-  global.dataLoadedCards = await getStorageData([data["Message Cards"]],[["cardsCheckList","Name"]],"false");
-  global.dataLoadedMaterials = await getStorageData([data["Other"]],[["materialsCheckList","Name"]],"false");
+  global.dataLoadedTools = await getStorageData(["Tools"],[["toolsCheckList","Name","Variation"]],"false");
+  global.dataLoadedRecipes = await getStorageData(["Recipes"],[["recipesCheckList","Name"]],"false");
+  global.dataLoadedCards = await getStorageData(["Message Cards"],[["cardsCheckList","Name"]],"false");
+  global.dataLoadedMaterials = await getStorageData(["Other"],[["materialsCheckList","Name"]],"false");
   global.dataLoadedAll = await getStorageData(
   [
-    data["Housewares"],
-    data["Miscellaneous"],
-    data["Wall-mounted"],
-    data["Photos"],
-    data["Posters"],
-    data["Headwear"],
-    data["Accessories"],
-    data["Tops"],
-    data["Dress-Up"],
-    data["Clothing Other"],
-    data["Bottoms"],
-    data["Socks"],
-    data["Shoes"],
-    data["Bags"],
-    data["Umbrellas"],
-    data["Floors"],
-    data["Rugs"],
-    data["Wallpaper"],
-    data["Recipes"],
-    data["Tools"],
-    data["Fish"],
-    data["Insects"],
-    data["Sea Creatures"],
-    data["Fossils"],
-    data["Art"],
-    data["Villagers"],
-    data["Music"],
-    data["Reactions"],
-    data["Construction"],
-    data["Fencing"],
-    data["Other"],
+    "Housewares",
+    "Miscellaneous",
+    "Wall-mounted",
+    "Photos",
+    "Posters",
+    "Headwear",
+    "Accessories",
+    "Tops",
+    "Dress-Up",
+    "Clothing Other",
+    "Bottoms",
+    "Socks",
+    "Shoes",
+    "Bags",
+    "Umbrellas",
+    "Floors",
+    "Rugs",
+    "Wallpaper",
+    "Recipes",
+    "Tools",
+    "Fish",
+    "Insects",
+    "Sea Creatures",
+    "Fossils",
+    "Art",
+    "Villagers",
+    "Music",
+    "Reactions",
+    "Construction",
+    "Fencing",
+    "Other",
   ],
   [
     ["furnitureCheckList","Name","Variation","Pattern"],
@@ -934,6 +936,8 @@ export function translateFilters(filters){
       label[0] = attemptToTranslate(label[0]);
       label[1] = attemptToTranslate(label[1], true);
       filters[i].label = capitalizeFirst(label[0]) + " - " + capitalizeFirst(label[1]);
+    } else {
+      filters[i].label = capitalizeFirst(attemptToTranslate(label[0]));
     }
   }
   return filters;

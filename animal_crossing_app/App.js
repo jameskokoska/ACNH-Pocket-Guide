@@ -21,7 +21,6 @@ import Check from './components/Check';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import TextFont from './components/TextFont';
 import LottieView from 'lottie-react-native';
-import PopupChangelog from './components/PopupChangelog';
 import CreditsPage from './pages/CreditsPage';
 import FlowerPage from './pages/FlowerPage';
 import CardsPage from './pages/CardsPage';
@@ -51,6 +50,9 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
+-Significantly improved load times for tabs
+-Improved loading times for filters
+-Added category filters
 -Updated game data - small fixes
 -Fix: Changelog should not appear on other pages
 -Added more translations
@@ -553,7 +555,6 @@ class App extends Component {
             <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
             <StatusBar hidden={getSettingsString("settingsShowStatusBar")==="false"} backgroundColor={colors.background[global.darkMode]} barStyle={global.darkMode===1?"light-content":"dark-content"}/>
             {currentPageView}
-            {this.state.currentPage===0?<PopupChangelog ref={(popupChangelog) => this.popupChangelog = popupChangelog}/>:<View/>}
           </SideMenu>
           {fab}
         </>

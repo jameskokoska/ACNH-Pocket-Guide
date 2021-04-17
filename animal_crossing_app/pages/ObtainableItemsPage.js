@@ -28,98 +28,113 @@ const renderTabBar = props => (
     )}
   />
 );
+class ObtainableDIYsRouteClass extends React.PureComponent {
+  render(){
+    return(
+      <RecipesRouteClass
+        tabs={true}
+        smallerHeader={true}
+        filterSearchable={false}
+        title={"Obtainable DIYs"}
+        subHeader={attemptToTranslate("You WILL get these from your favorite villagers.") + "\n" + attemptToTranslate("Tap the [?] in the top right corner for more information.")}
+        appBarColor = {colors.obtainableItemsAppBar[global.darkMode]}
+        accentColor = {colors.obtainableItemsAccent[global.darkMode]}
+        titleColor={colors.textBlack[global.darkMode]}
+        extraInfo={
+          [
+            attemptToTranslate("Obtainable DIYs"),
+            attemptToTranslate("Specific villager personalities will give you different items."),
+            attemptToTranslate("It is recommended that you have all personality types to be able to get all DIYs and Reactions."),
+            attemptToTranslate("These DIYs WILL be given to you by your villagers:"),
+            getCurrentVillagerNamesString(),
+            getInverseVillagerFilters(true)===""? attemptToTranslate("You can get everything since you have all personality types!") : attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true),        
+          ]
+        }
+      />
+    )
+  }
+}
 
-const ObtainableDIYs = () => (
-  <RecipesRouteClass
-    tabs={true}
-    smallerHeader={true}
-    filterSearchable={false}
-    title={"Obtainable DIYs"}
-    subHeader={attemptToTranslate("You WILL get these from your favorite villagers.") + "\n" + attemptToTranslate("Tap the [?] in the top right corner for more information.")}
-    appBarColor = {colors.obtainableItemsAppBar[global.darkMode]}
-    accentColor = {colors.obtainableItemsAccent[global.darkMode]}
-    titleColor={colors.textBlack[global.darkMode]}
-    extraInfo={
-      [
-        attemptToTranslate("Obtainable DIYs"),
-        attemptToTranslate("Specific villager personalities will give you different items."),
-        attemptToTranslate("It is recommended that you have all personality types to be able to get all DIYs and Reactions."),
-        attemptToTranslate("These DIYs WILL be given to you by your villagers:"),
-        getCurrentVillagerNamesString(),
-        getInverseVillagerFilters(true)===""? attemptToTranslate("You can get everything since you have all personality types!") : attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true),        
-      ]
-    }
-  />
-)
+class UnobtainableDIYsRouteClass extends React.PureComponent {
+  render(){
+    return(
+      <RecipesRouteClass
+        tabs={true}
+        smallerHeader={true}
+        filterSearchable={false}
+        title={"Unobtainable DIYs"}
+        subHeader={attemptToTranslate("You will NOT get these from your favorite villagers.") + "\n" + attemptToTranslate("Tap the [?] in the top right corner for more information.")}
+        appBarColor = {colors.obtainableItemsAppBar[global.darkMode]}
+        accentColor = {colors.obtainableItemsAccent[global.darkMode]}
+        titleColor={colors.textBlack[global.darkMode]}
+        extraInfo={
+          [
+            attemptToTranslate("Unobtainable DIYs"),
+            attemptToTranslate("Specific villager personalities will give you different items."),
+            attemptToTranslate("It is recommended that you have all personality types to be able to get all DIYs and Reactions."),
+            attemptToTranslate("These DIYs will NOT be given to you by your villagers:"),
+            getCurrentVillagerNamesString(),
+            getInverseVillagerFilters(true)===""? attemptToTranslate("You can get everything since you have all personality types!") : attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true),        
+          ]
+        }
+      />
+    )
+  }
+}
 
-const UnobtainableDIYs = () => (
-  <RecipesRouteClass
-    tabs={true}
-    smallerHeader={true}
-    filterSearchable={false}
-    title={"Unobtainable DIYs"}
-    subHeader={attemptToTranslate("You will NOT get these from your favorite villagers.") + "\n" + attemptToTranslate("Tap the [?] in the top right corner for more information.")}
-    appBarColor = {colors.obtainableItemsAppBar[global.darkMode]}
-    accentColor = {colors.obtainableItemsAccent[global.darkMode]}
-    titleColor={colors.textBlack[global.darkMode]}
-    extraInfo={
-      [
-        attemptToTranslate("Unobtainable DIYs"),
-        attemptToTranslate("Specific villager personalities will give you different items."),
-        attemptToTranslate("It is recommended that you have all personality types to be able to get all DIYs and Reactions."),
-        attemptToTranslate("These DIYs will NOT be given to you by your villagers:"),
-        getCurrentVillagerNamesString(),
-        getInverseVillagerFilters(true)===""? attemptToTranslate("You can get everything since you have all personality types!") : attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true),        
-      ]
-    }
-  />
-)
+class ObtainableReactionsRouteClass extends React.PureComponent {
+  render(){
+    return(
+      <EmoticonsPage
+        tabs={true}
+        smallerHeader={true}
+        filterSearchable={false}
+        title={"Obtainable Reactions"}
+        subHeader={attemptToTranslate("You WILL get these from your favorite villagers.") + "\n" + attemptToTranslate("Tap the [?] in the top right corner for more information.")}
+        appBarColor = {colors.obtainableItemsAppBar[global.darkMode]}
+        accentColor = {colors.obtainableItemsAccent[global.darkMode]}
+        titleColor={colors.textBlack[global.darkMode]}
+        extraInfo={
+          [
+            attemptToTranslate("Obtainable Reactions"),
+            attemptToTranslate("Specific villager personalities will give you different items."),
+            attemptToTranslate("It is recommended that you have all personality types to be able to get all DIYs and Reactions."),
+            attemptToTranslate("These Reactions WILL be given to you by your villagers:"),
+            getCurrentVillagerNamesString(),
+            getInverseVillagerFilters(true)===""? attemptToTranslate("You can get everything since you have all personality types!") : attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true),        
+          ]
+        }
+      />
+    )
+  }
+}
 
-const ObtainableReactions = () => (
-  <EmoticonsPage
-    tabs={true}
-    smallerHeader={true}
-    filterSearchable={false}
-    title={"Obtainable Reactions"}
-    subHeader={attemptToTranslate("You WILL get these from your favorite villagers.") + "\n" + attemptToTranslate("Tap the [?] in the top right corner for more information.")}
-    appBarColor = {colors.obtainableItemsAppBar[global.darkMode]}
-    accentColor = {colors.obtainableItemsAccent[global.darkMode]}
-    titleColor={colors.textBlack[global.darkMode]}
-    extraInfo={
-      [
-        attemptToTranslate("Obtainable Reactions"),
-        attemptToTranslate("Specific villager personalities will give you different items."),
-        attemptToTranslate("It is recommended that you have all personality types to be able to get all DIYs and Reactions."),
-        attemptToTranslate("These Reactions WILL be given to you by your villagers:"),
-        getCurrentVillagerNamesString(),
-        getInverseVillagerFilters(true)===""? attemptToTranslate("You can get everything since you have all personality types!") : attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true),        
-      ]
-    }
-  />
-)
-
-const UnobtainableReactions = () => (
-  <EmoticonsPage
-    tabs={true}
-    smallerHeader={true}
-    filterSearchable={false}
-    title={"Unobtainable Reactions"}
-    subHeader={attemptToTranslate("You will NOT get these from your favorite villagers.") + "\n" + attemptToTranslate("Tap the [?] in the top right corner for more information.")}
-    appBarColor = {colors.obtainableItemsAppBar[global.darkMode]}
-    accentColor = {colors.obtainableItemsAccent[global.darkMode]}
-    titleColor={colors.textBlack[global.darkMode]}
-    extraInfo={
-      [
-        attemptToTranslate("Unobtainable Reactions"),
-        attemptToTranslate("Specific villager personalities will give you different items."),
-        attemptToTranslate("It is recommended that you have all personality types to be able to get all DIYs and Reactions."),
-        attemptToTranslate("These Reactions will NOT be given to you by your villagers:"),
-        getCurrentVillagerNamesString(),
-        getInverseVillagerFilters(true)===""? attemptToTranslate("You can get everything since you have all personality types!") : attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true),        
-      ]
-    }
-  />
-)
+class UnobtainableReactionsRouteClass extends React.PureComponent {
+  render(){
+    return(
+      <EmoticonsPage
+        tabs={true}
+        smallerHeader={true}
+        filterSearchable={false}
+        title={"Unobtainable Reactions"}
+        subHeader={attemptToTranslate("You will NOT get these from your favorite villagers.") + "\n" + attemptToTranslate("Tap the [?] in the top right corner for more information.")}
+        appBarColor = {colors.obtainableItemsAppBar[global.darkMode]}
+        accentColor = {colors.obtainableItemsAccent[global.darkMode]}
+        titleColor={colors.textBlack[global.darkMode]}
+        extraInfo={
+          [
+            attemptToTranslate("Unobtainable Reactions"),
+            attemptToTranslate("Specific villager personalities will give you different items."),
+            attemptToTranslate("It is recommended that you have all personality types to be able to get all DIYs and Reactions."),
+            attemptToTranslate("These Reactions will NOT be given to you by your villagers:"),
+            getCurrentVillagerNamesString(),
+            getInverseVillagerFilters(true)===""? attemptToTranslate("You can get everything since you have all personality types!") : attemptToTranslate("Missing personalities:") + " " + getInverseVillagerFilters(true),        
+          ]
+        }
+      />
+    )
+  }
+}
 
 
 class ObtainableItemsPage extends Component {
@@ -136,12 +151,27 @@ class ObtainableItemsPage extends Component {
     }
   }
 
-  renderScene = SceneMap({
-    UnobtainableDIYs: UnobtainableDIYs,
-    ObtainableDIYs: ObtainableDIYs,
-    UnobtainableReactions: UnobtainableReactions,
-    ObtainableReactions: ObtainableReactions
-  });
+  // renderScene = SceneMap({
+  //   UnobtainableDIYs: UnobtainableDIYs,
+  //   ObtainableDIYs: ObtainableDIYs,
+  //   UnobtainableReactions: UnobtainableReactions,
+  //   ObtainableReactions: ObtainableReactions
+  // });
+
+  renderScene = ({ route }) => {
+    switch (route.key) {
+      case 'UnobtainableDIYs':
+        return <UnobtainableDIYsRouteClass/>;
+      case 'ObtainableDIYs':
+        return <ObtainableDIYsRouteClass/>;
+      case 'UnobtainableReactions':
+        return <UnobtainableReactionsRouteClass/>;
+      case 'ObtainableReactions':
+        return <ObtainableReactionsRouteClass/>;
+      default:
+        return <View/>;
+    }
+  };
 
   handleIndexChange = index => this.setState({index});
 

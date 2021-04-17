@@ -22,93 +22,97 @@ const renderTabBar = props => (
   />
 );
 
-const MaterialsRoute = () => (
-  <ListPage 
-    title="Materials"
-    imageProperty={["Inventory Image"]}
-    textProperty={["NameLanguage",]}
-    searchKey={[["NameLanguage",]]}
-    gridType="smallGrid" //smallGrid, largeGrid, row
-    dataGlobalName={"dataLoadedMaterials"}
-    appBarColor={colors.materialsAppBar[global.darkMode]}
-    titleColor={colors.textWhite[0]}
-    searchBarColor={colors.searchbarBG[global.darkMode]}
-    backgroundColor={colors.lightDarkAccent[global.darkMode]}
-    boxColor={true}
-    labelColor={colors.textBlack[global.darkMode]}
-    accentColor={colors.materialsAccent[global.darkMode]}
-    popUpCornerImageProperty={["Source"]}
-    popUpCornerImageLabelProperty={["Source"]}
-    popUpContainer={[["MaterialsPopup",500]]}
-    specialLabelColor={colors.fishText[global.darkMode]}
-    popUpPhraseProperty={["Stack Size"]}
-  />
-)
+class MaterialsRouteClass extends React.PureComponent {
+  render(){
+    return(
+      <ListPage 
+        title="Materials"
+        imageProperty={["Inventory Image"]}
+        textProperty={["NameLanguage",]}
+        searchKey={[["NameLanguage",]]}
+        gridType="smallGrid" //smallGrid, largeGrid, row
+        dataGlobalName={"dataLoadedMaterials"}
+        appBarColor={colors.materialsAppBar[global.darkMode]}
+        titleColor={colors.textWhite[0]}
+        searchBarColor={colors.searchbarBG[global.darkMode]}
+        backgroundColor={colors.lightDarkAccent[global.darkMode]}
+        boxColor={true}
+        labelColor={colors.textBlack[global.darkMode]}
+        accentColor={colors.materialsAccent[global.darkMode]}
+        popUpCornerImageProperty={["Source"]}
+        popUpCornerImageLabelProperty={["Source"]}
+        popUpContainer={[["MaterialsPopup",500]]}
+        specialLabelColor={colors.fishText[global.darkMode]}
+        popUpPhraseProperty={["Stack Size"]}
+      />
+    )
+  }
+}
 
-const FurnitureRoute = () => (
-  <ListPage 
-    filterSearchable = {true}
-    title="Furniture"
-    imageProperty={[
-      "Image",
-      "Image",
-      "Image",
-      "Image",
-      "Image",
-    ]}
-    textProperty={[
-      "NameLanguage",
-      "NameLanguage",
-      "NameLanguage",
-      "NameLanguage",
-      "NameLanguage",
-    ]}
-    searchKey={[
-      ["NameLanguage",],
-      ["NameLanguage",],
-      ["NameLanguage",],
-      ["NameLanguage",],
-      ["NameLanguage",],
-    ]}
-    gridType="smallGrid" //smallGrid, largeGrid, row
-    dataGlobalName={"dataLoadedFurniture"}
-    appBarColor={colors.furnitureAppBar[global.darkMode]}
-    titleColor={colors.textWhiteOnly[global.darkMode]}
-    searchBarColor={colors.searchbarBG[global.darkMode]}
-    backgroundColor={colors.lightDarkAccent[global.darkMode]}
-    boxColor={true}
-    labelColor={colors.textBlack[global.darkMode]}
-    accentColor={colors.furnitureAccent[global.darkMode]}
-    specialLabelColor={colors.fishText[global.darkMode]}
-    popUpCornerImageProperty={[
-      "Source",
-      "Source",
-      "Source",
-      "Source",
-      "Source",
-    ]}
-    popUpCornerImageLabelProperty={[
-      "Source",
-      "Source",
-      "Source",
-      "Source",
-      "Source",
-    ]}
-    popUpContainer={[
-      ["FurniturePopup",460],
-      ["FurniturePopup",460],
-      ["FurniturePopup",460],
-      ["FurniturePopup",460],
-      ["FurniturePopup",460],
-    ]}
-  />
-)
+class FurnitureRouteClass extends React.PureComponent {
+  render(){
+    return(
+      <ListPage 
+        filterSearchable = {true}
+        title="Furniture"
+        imageProperty={[
+          "Image",
+          "Image",
+          "Image",
+          "Image",
+          "Image",
+        ]}
+        textProperty={[
+          "NameLanguage",
+          "NameLanguage",
+          "NameLanguage",
+          "NameLanguage",
+          "NameLanguage",
+        ]}
+        searchKey={[
+          ["NameLanguage",],
+          ["NameLanguage",],
+          ["NameLanguage",],
+          ["NameLanguage",],
+          ["NameLanguage",],
+        ]}
+        gridType="smallGrid" //smallGrid, largeGrid, row
+        dataGlobalName={"dataLoadedFurniture"}
+        appBarColor={colors.furnitureAppBar[global.darkMode]}
+        titleColor={colors.textWhiteOnly[global.darkMode]}
+        searchBarColor={colors.searchbarBG[global.darkMode]}
+        backgroundColor={colors.lightDarkAccent[global.darkMode]}
+        boxColor={true}
+        labelColor={colors.textBlack[global.darkMode]}
+        accentColor={colors.furnitureAccent[global.darkMode]}
+        specialLabelColor={colors.fishText[global.darkMode]}
+        popUpCornerImageProperty={[
+          "Source",
+          "Source",
+          "Source",
+          "Source",
+          "Source",
+        ]}
+        popUpCornerImageLabelProperty={[
+          "Source",
+          "Source",
+          "Source",
+          "Source",
+          "Source",
+        ]}
+        popUpContainer={[
+          ["FurniturePopup",460],
+          ["FurniturePopup",460],
+          ["FurniturePopup",460],
+          ["FurniturePopup",460],
+          ["FurniturePopup",460],
+        ]}
+      />
+    )
+  }
+}
 
-const ClothingRoute = () => (
-  <ClothingRouteClass/>
-)
-
-export class ClothingRouteClass extends Component{
+export class ClothingRouteClass extends React.PureComponent{
   render(){
     var title = this.props.title;
     var villagerGifts = false;
@@ -231,52 +235,56 @@ export class ClothingRouteClass extends Component{
   }
 }
 
-const FloorWallsRoute = () => (
-  <ListPage 
-    filterSearchable = {true}
-    title="Floor & Walls"
-    imageProperty={[
-      "Image",
-      "Image",
-      "Image",
-    ]}
-    textProperty={[
-      "NameLanguage",
-      "NameLanguage",
-      "NameLanguage",
-    ]}
-    searchKey={[
-      ["NameLanguage",],
-      ["NameLanguage",],
-      ["NameLanguage",],
-    ]}
-    gridType="smallGrid" //smallGrid, largeGrid, row
-    dataGlobalName={"dataLoadedFloorWalls"}
-    appBarColor={colors.floorWallsAppBar[global.darkMode]}
-    titleColor={colors.textWhiteOnly[global.darkMode]}
-    searchBarColor={colors.searchbarBG[global.darkMode]}
-    backgroundColor={colors.lightDarkAccent[global.darkMode]}
-    boxColor={true}
-    labelColor={colors.textBlack[global.darkMode]}
-    accentColor={colors.floorWallsAccent[global.darkMode]}
-    specialLabelColor={colors.fishText[global.darkMode]}
-    popUpCornerImageProperty={[
-      "Source",
-      "Source",
-      "Source",
-    ]}
-    popUpCornerImageLabelProperty={[
-      "Source",
-      "Source",
-      "Source",
-    ]}
-    popUpContainer={[
-      ["FloorWallsPopup",400],
-      ["FloorWallsPopup",400],
-      ["FloorWallsPopup",400],
-    ]}
-  />
-)
+class FloorsWallsRouteClass extends React.PureComponent {
+  render(){
+    return(
+      <ListPage 
+        filterSearchable = {true}
+        title="Floor & Walls"
+        imageProperty={[
+          "Image",
+          "Image",
+          "Image",
+        ]}
+        textProperty={[
+          "NameLanguage",
+          "NameLanguage",
+          "NameLanguage",
+        ]}
+        searchKey={[
+          ["NameLanguage",],
+          ["NameLanguage",],
+          ["NameLanguage",],
+        ]}
+        gridType="smallGrid" //smallGrid, largeGrid, row
+        dataGlobalName={"dataLoadedFloorWalls"}
+        appBarColor={colors.floorWallsAppBar[global.darkMode]}
+        titleColor={colors.textWhiteOnly[global.darkMode]}
+        searchBarColor={colors.searchbarBG[global.darkMode]}
+        backgroundColor={colors.lightDarkAccent[global.darkMode]}
+        boxColor={true}
+        labelColor={colors.textBlack[global.darkMode]}
+        accentColor={colors.floorWallsAccent[global.darkMode]}
+        specialLabelColor={colors.fishText[global.darkMode]}
+        popUpCornerImageProperty={[
+          "Source",
+          "Source",
+          "Source",
+        ]}
+        popUpCornerImageLabelProperty={[
+          "Source",
+          "Source",
+          "Source",
+        ]}
+        popUpContainer={[
+          ["FloorWallsPopup",400],
+          ["FloorWallsPopup",400],
+          ["FloorWallsPopup",400],
+        ]}
+      />
+    )
+  }
+}
 
 
 class ItemsPage extends Component {
@@ -293,12 +301,20 @@ class ItemsPage extends Component {
     }
   }
 
-  renderScene = SceneMap({
-    Furniture: FurnitureRoute,
-    Clothing: ClothingRoute,
-    FloorWalls: FloorWallsRoute,
-    Materials: MaterialsRoute
-  });
+  renderScene = ({ route }) => {
+    switch (route.key) {
+      case 'Furniture':
+        return <FurnitureRouteClass/>;
+      case 'Clothing':
+        return <ClothingRouteClass/>;
+      case 'FloorWalls':
+        return <FloorsWallsRouteClass/>;
+      case 'Materials':
+        return <MaterialsRouteClass/>;
+      default:
+        return <View/>;
+    }
+  };
 
   handleIndexChange = index => this.setState({index});
 

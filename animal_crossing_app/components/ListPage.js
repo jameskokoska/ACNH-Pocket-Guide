@@ -25,7 +25,6 @@ import PopupFilter from './PopupFilter'
 import TextFont from "./TextFont"
 import {compareItemID, removeAccents, inChecklist, attemptToTranslateItem, getSettingsString, attemptToTranslate} from "../LoadJsonData"
 import {PopupBottomCustom} from "./Popup"
-const filterDefinitions = require("../assets/data/Generated/filterDefinitions.json");
 
 //use tabs={false} if the page doesn't have  the tab bar
 
@@ -35,7 +34,7 @@ const {diffClamp} = Animated;
 const headerHeight = Dimensions.get('window').height*0.3;
 
 
-export default (props) =>{
+function ListPage(props){
   const renderItem = (({ item }) =>
     <ListItem
       item={item}
@@ -131,64 +130,18 @@ export default (props) =>{
       currentVillagerFilters = getCurrentVillagerFilters();
       currentVillagerFiltersInverse = getInverseVillagerFilters();
     }
-
-    if(possibleFiltersState==="empty"){
-      var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH ";
-
-      var possibleFilters = [{label:attemptToTranslate("Collected"), value:"Collected"},{label:attemptToTranslate("Not Collected"), value:"Not Collected"}];
-      var notCraftVariationsFilters = [{label:attemptToTranslate("Show uncraftable item variations"), value:"Show uncraftable item variations"}]
-      var activeFilters = [
-        {label:attemptToTranslate("Can catch in January"),value:hemispherePre+"Jan Active:true"},
-        {label:attemptToTranslate("Can catch in February"),value:hemispherePre+"Feb Active:true"},
-        {label:attemptToTranslate("Can catch in March"),value:hemispherePre+"Mar Active:true"},
-        {label:attemptToTranslate("Can catch in April"),value:hemispherePre+"Apr Active:true"},
-        {label:attemptToTranslate("Can catch in May"),value:hemispherePre+"May Active:true"},
-        {label:attemptToTranslate("Can catch in June"),value:hemispherePre+"Jun Active:true"},
-        {label:attemptToTranslate("Can catch in July"),value:hemispherePre+"Jul Active:true"},
-        {label:attemptToTranslate("Can catch in August"),value:hemispherePre+"Aug Active:true"},
-        {label:attemptToTranslate("Can catch in September"),value:hemispherePre+"Sep Active:true"},
-        {label:attemptToTranslate("Can catch in October"),value:hemispherePre+"Oct Active:true"},
-        {label:attemptToTranslate("Can catch in November"),value:hemispherePre+"Nov Active:true"},
-        {label:attemptToTranslate("Can catch in December"),value:hemispherePre+"Dec Active:true"},
-      ]
-      if(props.title==="Fish"){
-        possibleFilters = [...possibleFilters, ...activeFilters, ...filterDefinitions["Fish"]];
-      } else if(props.title==="Bugs"){
-        possibleFilters = [...possibleFilters, ...activeFilters, ...filterDefinitions["Bugs"]];
-      } else if(props.title==="Sea Creatures"){
-        possibleFilters = [...possibleFilters, ...activeFilters, ...filterDefinitions["Sea Creatures"]];
-      } else if(props.title==="Furniture"){
-        possibleFilters = [...possibleFilters, ...notCraftVariationsFilters, ...filterDefinitions["Furniture"]];
-      } else if(props.title==="Clothing"){
-        possibleFilters = [...possibleFilters, ...notCraftVariationsFilters, ...filterDefinitions["Clothing"]];
-      } else if(props.title==="Floor & Walls"){
-        possibleFilters = [...possibleFilters, ...filterDefinitions["Floor & Walls"]];
-      } else if(props.title==="Emoticons"){
-        possibleFilters = [...possibleFilters, ...filterDefinitions["Reactions"]];
-      } else if(props.title==="Recipes"){
-        possibleFilters = [...possibleFilters, ...filterDefinitions["Recipes"]];
-      } else if(props.title==="Villagers"){
-        possibleFilters = [...possibleFilters, ...filterDefinitions["Villagers"]];
-      } else if(props.title==="Everything"){
-        possibleFilters = [...possibleFilters, ...notCraftVariationsFilters, ...activeFilters, ...filterDefinitions["All Items"]];
-      } else if(props.title==="Construction"){
-        possibleFilters = [...possibleFilters,{"label":"Bridge","value":"Category:Bridge"},{"label":"Incline","value":"Category:Incline"},{"label":"Doors","value":"Category:Door"},{"label":"Roofing","value":"Category:Roofing"},{"label":"Siding","value":"Category:Siding"},{"label":"Mailbox","value":"Category:Mailbox"}]
-      } else if(props.title==="Music"){
-        possibleFilters = [...possibleFilters, ...filterDefinitions["Music"]]
-      } else if(props.villagerGifts===true){
-        possibleFilters = [{"label":"Villager can wear","value":"Villager Equippable:Yes"},{"label":"Villager cannot wear","value":"Villager Equippable:No"}]
-      }
-      if (componentIsMounted.current) {
-        setPossibleFilters(possibleFilters);
-      }
-    } else if (getSettingsString("settingsUseFilters")==="false") {
-      if (componentIsMounted.current) {
-        setPossibleFilters([{label:"Filters turned off - Enable them in the settings", value:""}]);
+    
+    console.log(props.title)
+    var searchCategoryOnly = false;
+    for(var y = 0; y < searchFilters.length; y++){
+      if(searchFilters[y].includes("Data Category")){
+        searchCategoryOnly = true;
+      } else if (!searchFilters[y].includes("Collected")){
+        searchCategoryOnly = false;
+        break;
       }
     }
-    
-    
-    console.log(search)
+
     for(var j = 0; j < dataLoaded2D.length; j++){
       var dataLoaded = dataLoaded2D[j];
 
@@ -256,6 +209,20 @@ export default (props) =>{
               filterFound = false;
               break;
             }
+            //Check category
+            var searchCategory = true;
+            for(var y = 0; y < searchActual.length; y++){
+              if(searchActual[y].includes("Data Category")){
+                //Category selected
+                if(item.[searchActual[y].split(":")[0]]!==undefined && item.[searchActual[y].split(":")[0]].toLowerCase()===searchActual[y].split(":")[1].toLowerCase()){
+                  //Item in selected category
+                  searchCategory = true;
+                  break;
+                } else {
+                  searchCategory = false;
+                }
+              }
+            }
             //If the property is in search, not needed
             // if(props.searchKey[j].includes(search[z].split("-")[0])){
             //If property is Collected
@@ -309,7 +276,7 @@ export default (props) =>{
               }
             }
             //Only check the property selected
-            else if((searchCollected) && item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
+            else if((searchCollected) && (searchCategory || searchCategoryOnly) && (!searchActual[z].includes("Data Category") || searchCategoryOnly) && item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
               filterFound = true;
               break;
             }
@@ -486,7 +453,7 @@ export default (props) =>{
     return (
     <View style={{backgroundColor:props.backgroundColor}} >
       {header}
-      <PopupFilter disableFilters={props.disableFilters} title={props.title} ref={popupFilter} possibleFilters={possibleFiltersState} filterSearchable={props.filterSearchable} updateSearchFilters={updateSearchFilters}/> 
+      <PopupFilter villagerGifts={props.villagerGifts} disableFilters={props.disableFilters} title={props.title} ref={popupFilter} filterSearchable={props.filterSearchable} updateSearchFilters={updateSearchFilters}/> 
       {/* setFilterPopupState(false) */}
       <Animated.FlatList
         nestedScrollEnabled
@@ -537,6 +504,8 @@ export default (props) =>{
   }
   
 };
+
+export default React.memo(ListPage);
 
 class BottomSheetRender extends Component{
   constructor(props) {
