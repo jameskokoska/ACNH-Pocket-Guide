@@ -19,11 +19,8 @@ const renderTabBar = props => (
   />
 );
 
-const RecipesRoute = () => (
-  <RecipesRouteClass/>
-)
 
-export class RecipesRouteClass extends Component{
+export class RecipesRouteClass extends React.PureComponent {
   render(){
     return(
       <ListPage 
@@ -54,28 +51,32 @@ export class RecipesRouteClass extends Component{
   }
 } 
 
-const ToolsRoute = () => (
-  <ListPage 
-    title="Tools"
-    imageProperty={["Image"]}
-    textProperty={["NameLanguage"]}
-    searchKey={[["NameLanguage"]]}
-    gridType="smallGrid" //smallGrid, largeGrid, row
-    dataGlobalName={"dataLoadedTools"}
-    appBarColor={colors.toolsAppBar[global.darkMode]}
-    titleColor={colors.textWhiteOnly[global.darkMode]}
-    searchBarColor={colors.searchbarBG[global.darkMode]}
-    backgroundColor={colors.lightDarkAccent[global.darkMode]}
-    boxColor={false}
-    labelColor={colors.textBlack[global.darkMode]}
-    accentColor={colors.toolsAccent[global.darkMode]}
-    specialLabelColor={colors.fishText[global.darkMode]}
-    popUpCornerImageProperty={["Source"]}
-    popUpCornerImageLabelProperty={["Source"]}
-    popUpContainer={[["ToolsPopup",250]]}
-    popUpPhraseProperty={["Uses"]}
-  />
-)
+class ToolsRouteClass extends React.PureComponent {
+  render(){
+    return(
+      <ListPage 
+        title="Tools"
+        imageProperty={["Image"]}
+        textProperty={["NameLanguage"]}
+        searchKey={[["NameLanguage"]]}
+        gridType="smallGrid" //smallGrid, largeGrid, row
+        dataGlobalName={"dataLoadedTools"}
+        appBarColor={colors.toolsAppBar[global.darkMode]}
+        titleColor={colors.textWhiteOnly[global.darkMode]}
+        searchBarColor={colors.searchbarBG[global.darkMode]}
+        backgroundColor={colors.lightDarkAccent[global.darkMode]}
+        boxColor={false}
+        labelColor={colors.textBlack[global.darkMode]}
+        accentColor={colors.toolsAccent[global.darkMode]}
+        specialLabelColor={colors.fishText[global.darkMode]}
+        popUpCornerImageProperty={["Source"]}
+        popUpCornerImageLabelProperty={["Source"]}
+        popUpContainer={[["ToolsPopup",250]]}
+        popUpPhraseProperty={["Uses"]}
+      />
+    )
+  }
+}
 
 
 class CraftingPage extends Component {
@@ -90,10 +91,21 @@ class CraftingPage extends Component {
     }
   }
 
-  renderScene = SceneMap({
-    Recipes: RecipesRoute,
-    Tools: ToolsRoute,
-  });
+  // renderScene = SceneMap({
+  //   Recipes: RecipesRoute,
+  //   Tools: ToolsRoute,
+  // });
+
+  renderScene = ({ route }) => {
+    switch (route.key) {
+      case 'Recipes':
+        return <RecipesRouteClass/>;
+      case 'Tools':
+        return <ToolsRouteClass/>;
+      default:
+        return <View/>;
+    }
+  };
 
   handleIndexChange = index => this.setState({index});
 

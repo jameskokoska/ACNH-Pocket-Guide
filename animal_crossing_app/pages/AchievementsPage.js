@@ -164,7 +164,7 @@ class AchievementsPopup extends Component {
   }
 }
 
-class Achievement extends Component {
+class Achievement extends React.PureComponent{
   constructor(props){
     super(props);
     this.achievementStamps = [];
