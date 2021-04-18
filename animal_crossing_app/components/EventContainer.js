@@ -220,19 +220,33 @@ export function getEventsDay(date, eventSections){
   } 
   
   //Check if there was a bug-off/fishing tourney the day before, then push K.K. pack one day
-  var showKK = false
+  var moveKKTo0 = false; //Day of the week to move to
+  var moveKKTo1 = false; //Day of the week to move to
   var moveKK = false;
-  specialEvents.map( (event, index)=>{
-    var eventDay = getSpecialOccurrenceDate(date.getFullYear(), index, specialEvents);
-    if(eventDay[0]===addDays(date,-1).getDate() && eventDay[1]===addDays(date,-1).getMonth()){
-      showKK = true;
+  var moveKKTo = 6;
+  if(eventSections["K.K. Slider"]){
+    specialEvents.map( (event, index)=>{
+      var eventDay = getSpecialOccurrenceDate(date.getFullYear(), index, specialEvents);
+      if(eventDay[0]===addDays(date,-1).getDate() && eventDay[1]===addDays(date,-1).getMonth()){
+        moveKKTo0 = true;
+      }
+      if(eventDay[0]===addDays(date,-2).getDate() && eventDay[1]===addDays(date,-2).getMonth()){
+        moveKKTo1 = true;
+        console.log(event["Name"])
+      }
+      if(eventDay[0]===date.getDate() && eventDay[1]===date.getMonth()){
+        moveKK = true;
+      }
+    })
+    if(moveKKTo1 && moveKKTo0){
+      moveKKTo = 1
+    } else if (moveKKTo0){
+      moveKKTo = 0
     }
-    if(eventDay[0]===date.getDate() && eventDay[1]===date.getMonth()){
-      moveKK = true;
-    }
-  })
+  }
+  
 
-  if (eventSections["K.K. Slider"] && (date.getDay()===6 || showKK) && !moveKK){
+  if (eventSections["K.K. Slider"] && (date.getDay()===moveKKTo) && !moveKK){
     totalEvents.push({
       name: attemptToTranslate("K.K. Slider"),
       time: getSettingsString("settingsUse24HourClock") === "true" ? "18:00 - 00:00" : "6 PM - 12 AM",
