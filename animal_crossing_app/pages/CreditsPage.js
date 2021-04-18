@@ -50,6 +50,7 @@ class CreditsPage extends Component {
             <SubHeader> adrisniper7</SubHeader>
             <SubHeader> Vicente Soldevilla</SubHeader>
             <SubHeader> Robertin</SubHeader>
+            <SubHeader> miyo0i</SubHeader>
           </View>
           <View style={{height: 20}}/>
           <MailLink/>

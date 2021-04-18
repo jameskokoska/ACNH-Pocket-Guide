@@ -11,6 +11,12 @@ export function doWeSwapDate(){
   }
 }
 
+export function addDays(date, days) {
+  var result = new Date(date);
+  result.setDate(result.getDate() + days);
+  return result;
+}
+
 //in the form 2021-04-11
 export function getDateStringMonthDay(date){
   var day = parseInt(date.slice(8,10))

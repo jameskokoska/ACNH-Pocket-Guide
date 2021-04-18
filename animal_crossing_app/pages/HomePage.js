@@ -12,7 +12,7 @@ import TextFont from "../components/TextFont"
 import ActiveCreatures from "../components/ActiveCreatures"
 import CurrentVillagers from "../components/CurrentVillagers"
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {getCurrentDateObject, doWeSwapDate} from '../components/DateFunctions';
+import {getCurrentDateObject, doWeSwapDate, addDays} from '../components/DateFunctions';
 import TodoList from '../components/TodoList';
 import VisitorsList from '../components/VisitorsList';
 import {translateDreamAddressBeginning, translateIslandNameInputLabel2, translateIslandNameInputLabel1, getSettingsString, attemptToTranslate} from "../LoadJsonData"
@@ -30,11 +30,6 @@ import ButtonComponent from "../components/ButtonComponent"
 import {SelectionImage} from "../components/Selections"
 import PopupChangelog from '../components/PopupChangelog';
 
-function addDays(date, days) {
-  var result = new Date(date);
-  result.setDate(result.getDate() + days);
-  return result;
-}
 
 class HomePage extends Component {
   constructor(props){

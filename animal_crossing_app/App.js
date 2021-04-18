@@ -50,12 +50,14 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 
 global.gameVersion = "1.9.0";
 global.changelog = `
+-Fixed K.K. event - now pushed back if there is a bug-off/fishing tourney
+-Added more translations
+-
 -Significantly improved load times for tabs
 -Improved loading times for filters
 -Added category filters
 -Updated game data - small fixes
 -Fix: Changelog should not appear on other pages
--Added more translations
 -
 -Creature time is now always shown
 -If the creature cannot be caught in the current month, time is in red
@@ -96,7 +98,7 @@ global.changelog = `
 -Added warning to villager compatibility page - This is not yet confirmed to be accurate and should only be used as a reference
 -Added more information about villagers redirect
 -Added more Spanish translations, more coming soon
-- Thanks Vicente, adrisniper7, and Robertin!
+- Thanks Vicente, adrisniper7, Robertin, and miyo0i!
 -
 -Past changes:
 -

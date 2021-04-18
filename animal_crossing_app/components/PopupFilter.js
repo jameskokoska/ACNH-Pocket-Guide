@@ -43,7 +43,7 @@ class PopupFilter extends Component {
     var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH ";
 
     this.possibleFilters = [{label:"Collected", value:"Collected"},{label:"Not Collected", value:"Not Collected"}];
-    var notCraftVariationsFilters = [{label:"Show uncraftable item variations", value:"Show uncraftable item variations"}]
+    var notCraftVariationsFilters = [{label:"Uncraftable item variations", value:"Show uncraftable item variations"}]
     var activeFilters = [
       {label:"Can catch in January",value:hemispherePre+"Jan Active:true"},
       {label:"Can catch in February",value:hemispherePre+"Feb Active:true"},

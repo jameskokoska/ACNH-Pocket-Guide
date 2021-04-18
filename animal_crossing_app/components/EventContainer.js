@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Image, Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text, TouchableNativeFeedback} from 'react-native';
 import TextFont from './TextFont'
 import {getPhoto} from './GetPhoto'
-import {getWeekDayShort, getMonthShort, getCurrentDateObject} from './DateFunctions';
+import {getWeekDayShort, getMonthShort, getCurrentDateObject, addDays} from './DateFunctions';
 import {getEventName, attemptToTranslate, capitalize, getSettingsString, translateBirthday, attemptToTranslateItem} from "../LoadJsonData"
 import FastImage from './FastImage';
 import {schedulePushNotification} from "../Notifications"
@@ -217,7 +217,22 @@ export function getEventsDay(date, eventSections){
     if(eventSections["App notifications"]){
       schedulePushNotification(date,eventSections["Set Notification Time"],"🥬 " + attemptToTranslate("Daisy Mae"),getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 12:00" : "5 AM - 12 PM");
     }
-  } else if (eventSections["K.K. Slider"] && date.getDay()===6){
+  } 
+  
+  //Check if there was a bug-off/fishing tourney the day before, then push K.K. pack one day
+  var showKK = false
+  var moveKK = false;
+  specialEvents.map( (event, index)=>{
+    var eventDay = getSpecialOccurrenceDate(date.getFullYear(), index, specialEvents);
+    if(eventDay[0]===addDays(date,-1).getDate() && eventDay[1]===addDays(date,-1).getMonth()){
+      showKK = true;
+    }
+    if(eventDay[0]===date.getDate() && eventDay[1]===date.getMonth()){
+      moveKK = true;
+    }
+  })
+
+  if (eventSections["K.K. Slider"] && (date.getDay()===6 || showKK) && !moveKK){
     totalEvents.push({
       name: attemptToTranslate("K.K. Slider"),
       time: getSettingsString("settingsUse24HourClock") === "true" ? "18:00 - 00:00" : "6 PM - 12 AM",
@@ -228,7 +243,7 @@ export function getEventsDay(date, eventSections){
       filter:"K.K. concert"
     });
     if(eventSections["App notifications"]){
-      schedulePushNotification(date,eventSections["Set Notification Time"],"🎵 " + attemptToTranslate("K.K. Slider"),getSettingsString("settingsUse24HourClock") === "true" ? "00:00 - 24:00" : "8 PM - 12 AM");
+      schedulePushNotification(date,eventSections["Set Notification Time"],"🎵 " + attemptToTranslate("K.K. Slider"),getSettingsString("settingsUse24HourClock") === "true" ? "6:00 - 24:00" : "6 PM - 12 AM");
     }
   }
 
