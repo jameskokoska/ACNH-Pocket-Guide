@@ -232,7 +232,6 @@ export function getEventsDay(date, eventSections){
       }
       if(eventDay[0]===addDays(date,-2).getDate() && eventDay[1]===addDays(date,-2).getMonth()){
         moveKKTo1 = true;
-        console.log(event["Name"])
       }
       if(eventDay[0]===date.getDate() && eventDay[1]===date.getMonth()){
         moveKK = true;

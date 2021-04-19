@@ -14,7 +14,7 @@ import colors from "../Colors";
 import {PopupBottomCustom} from "./Popup"
 import {getStorage} from "../LoadJsonData"
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {MailLink,MailSupport} from "./Formattings";
+import {MailLink,GiveSupport} from "./Formattings";
 
 export default class PopupChangelog extends Component {
   async componentDidMount(){
@@ -70,7 +70,7 @@ export default class PopupChangelog extends Component {
           <View style={{height:25}}/>
           <MailLink/>
           <View style={{height:15}}/>
-          <MailSupport/>
+          <GiveSupport/>
           <View style={{height:10}}/>
         </PopupBottomCustom>
       </>

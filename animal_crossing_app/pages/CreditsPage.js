@@ -6,8 +6,9 @@ import TextFont from '../components/TextFont'
 import StoreHoursContainer from '../components/StoreHoursContainer';
 import colors from '../Colors'
 import PopupRating from "../components/PopupRating"
+import PopupTip from "../components/PopupTip"
 import ButtonComponent from "../components/ButtonComponent"
-import {MailSupport, MailLink, ExternalLink, SubHeader, Header, Paragraph} from "../components/Formattings"
+import {MailLink, ExternalLink, SubHeader, Header, Paragraph} from "../components/Formattings"
 import {attemptToTranslate} from "../LoadJsonData"
 
 class CreditsPage extends Component {
@@ -15,6 +16,7 @@ class CreditsPage extends Component {
     super(props);
     this.state = {
       show: false,
+      show2:false
     }
   }
   render(){
@@ -52,11 +54,17 @@ class CreditsPage extends Component {
             <SubHeader> Robertin</SubHeader>
             <SubHeader> miyo0i</SubHeader>
           </View>
+          <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
+            <SubHeader style={{marginBottom:5}}>{attemptToTranslate("German") + ":"}</SubHeader>
+            <SubHeader> Ännchen</SubHeader>
+          </View>
+          
           <View style={{height: 20}}/>
           <MailLink/>
-          <MailSupport/>
           <PopupRating show={this.state.show} noShow={()=>{this.setState({show:false})}}/>
           <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.setState({show:true})}} text={"Leave a rating"} />
+          {/* <PopupTip show={this.state.show2} noShow={()=>{this.setState({show2:false})}}/>
+          <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.setState({show2:true})}} text={"Give a tip"} /> */}
           <View style={{height:60}}/>
           <SubHeader>Additional Information</SubHeader>
           <Paragraph>This application was created using React Native, with the original App programmed in Flutter. This application and contents are NOT affiliated with Nintendo. All local artwork recreated/licensed. This application is not made for commercial use, and is provided at a price of 0$ (free) on the Google Play Store with no advertisements. All application source code is of property to respective owners/contributors listed on the Credits page and/or licenses associated within specific packages/libraries within this application.</Paragraph>

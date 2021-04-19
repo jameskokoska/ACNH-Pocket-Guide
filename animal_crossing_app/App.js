@@ -30,6 +30,7 @@ import colors from './Colors.js';
 import ActiveTime from './components/ActiveTime.js';
 import * as Font from 'expo-font';
 import PopupRating from './components/PopupRating'
+import PopupTip from './components/PopupTip';
 import { Appearance } from 'react-native-appearance';
 import SideMenu from './components/SideMenu'
 import GuidePage from './pages/GuidePage';
@@ -52,6 +53,8 @@ global.gameVersion = "1.9.0";
 global.changelog = `
 -Fixed K.K. event - now pushed back if there is a bug-off/fishing tourney
 -Added more translations
+-Started German translations
+- Thanks Ännchen!
 -
 -Significantly improved load times for tabs
 -Improved loading times for filters
@@ -316,11 +319,13 @@ class App extends Component {
 
     const firstLogin = await getStorage("firstLogin","true");
     const numLogins = parseInt(await getStorage("numLogins","0")) + 1;
+    // this.tipDismissed = await getStorage("tipDismissed","false");
+    console.log(numLogins)
     await AsyncStorage.setItem("numLogins", numLogins.toString());
     this.numLogins = numLogins;
     // console.log(numLogins)
     global.collectionList = (await getStorage("collectedString","")).split("\n");
-    console.log(global.collectionList)
+    // console.log(global.collectionList)
 
     global.name = await getStorage("name","");
     global.islandName = await getStorage("islandName","");
@@ -554,6 +559,7 @@ class App extends Component {
           <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage}>
             <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
             <PopupRating numLogins={this.numLogins}/>
+            {/* <PopupTip numLogins={this.numLogins} tipDismissed={this.tipDismissed}/> */}
             <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
             <StatusBar hidden={getSettingsString("settingsShowStatusBar")==="false"} backgroundColor={colors.background[global.darkMode]} barStyle={global.darkMode===1?"light-content":"dark-content"}/>
             {currentPageView}
