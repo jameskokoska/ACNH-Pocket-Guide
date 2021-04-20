@@ -130,7 +130,7 @@ function ListPage(props){
       currentVillagerFiltersInverse = getInverseVillagerFilters();
     }
     
-    // console.log(searchFilters)
+    // console.log(props.currentSetFilters)
     var searchCategoryOnly = false;
     for(var y = 0; y < searchFilters.length; y++){
       if(searchFilters[y].includes("Data Category")){
@@ -156,7 +156,7 @@ function ListPage(props){
           } else if (props.newItems){
             searchActual = ["New version"];
           } else if (props.wishlistItems){
-            searchActual = ["Wishlist"];
+            searchActual = ["Wishlist",...searchFilters];
           } else if (props.villagerGifts) {
             searchActual = [...props.villagerGiftsFilters,...searchActual];
           } else if (props.itemIDs!==undefined && props.itemIDs!=="") {
@@ -443,6 +443,7 @@ function ListPage(props){
     return(<>
       <View style={{height:10}}/>
       {header}
+      {/* <PopupFilter villagerGifts={props.villagerGifts} disableFilters={props.disableFilters} title={props.title} ref={popupFilter} filterSearchable={props.filterSearchable} updateSearchFilters={updateSearchFilters}/>  */}
       <View style={{height:Dimensions.get('window').height/2}}/>
       <TouchableOpacity onPress={() => props.setPage(1)}>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"You have no wishlist items."}</TextFont>

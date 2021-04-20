@@ -155,10 +155,13 @@ export function getSpecificFilters(searchFor){
   const filterDefinitionsAll = require("./assets/data/Generated/filterDefinitions.json")["All Items"];
   var foundFilters = [];
   for(var i=0; i<filterDefinitionsAll.length; i++){
-    if(filterDefinitionsAll[i]["label"].toLowerCase().includes(searchFor.toLowerCase())){
-      foundFilters.push(filterDefinitionsAll[i]["value"])
+    for(var j=0; j<filterDefinitionsAll[i]["children"].length; j++){
+      if(filterDefinitionsAll[i]["children"][j]["id"].split(":")[1].toLowerCase().includes(searchFor.toLowerCase())){
+        foundFilters.push(filterDefinitionsAll[i]["children"][j]["id"])
+      }
     }
   }
+  console.log(foundFilters)
   return foundFilters;
 }
 
