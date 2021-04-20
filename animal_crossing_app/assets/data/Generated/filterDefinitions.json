@@ -59,12 +59,12 @@
           "id": "Source:Lazy villagers"
         },
         {
-          "name": "Big Sister villagers; Tom Nook",
-          "id": "Source:Big Sister villagers; Tom Nook"
-        },
-        {
           "name": "Big Sister villagers",
           "id": "Source:Big Sister villagers"
+        },
+        {
+          "name": "Tom Nook",
+          "id": "Source:Tom Nook"
         },
         {
           "name": "Celeste",
@@ -99,20 +99,8 @@
           "id": "Source:Nook Miles Redemption"
         },
         {
-          "name": "Balloons; Isabelle",
-          "id": "Source:Balloons; Isabelle"
-        },
-        {
-          "name": "Cranky villagers; Tom Nook",
-          "id": "Source:Cranky villagers; Tom Nook"
-        },
-        {
-          "name": "Snooty villagers; Tom Nook",
-          "id": "Source:Snooty villagers; Tom Nook"
-        },
-        {
-          "name": "Peppy villagers; Tom Nook",
-          "id": "Source:Peppy villagers; Tom Nook"
+          "name": "Isabelle",
+          "id": "Source:Isabelle"
         },
         {
           "name": "All villagers",
@@ -123,20 +111,16 @@
           "id": "Source:Wildest Dreams DIY"
         },
         {
-          "name": "Tom Nook",
-          "id": "Source:Tom Nook"
-        },
-        {
           "name": "Zipper",
           "id": "Source:Zipper"
         },
         {
-          "name": "Egg bottle; Egg balloon",
-          "id": "Source:Egg bottle; Egg balloon"
+          "name": "Egg bottle",
+          "id": "Source:Egg bottle"
         },
         {
-          "name": "All villagers; Tom Nook",
-          "id": "Source:All villagers; Tom Nook"
+          "name": "Egg balloon",
+          "id": "Source:Egg balloon"
         },
         {
           "name": "Collecting earth eggs",
@@ -155,12 +139,12 @@
           "id": "Source:Digging up clams"
         },
         {
-          "name": "Tom Nook; Nook's Cranny",
-          "id": "Source:Tom Nook; Nook's Cranny"
+          "name": "Nook's Cranny",
+          "id": "Source:Nook's Cranny"
         },
         {
-          "name": "Blathers; Nook's Cranny",
-          "id": "Source:Blathers; Nook's Cranny"
+          "name": "Blathers",
+          "id": "Source:Blathers"
         },
         {
           "name": "Snowboy",
@@ -195,12 +179,8 @@
           "id": "Source:Gold balloon"
         },
         {
-          "name": "Isabelle",
-          "id": "Source:Isabelle"
-        },
-        {
-          "name": "Tom Nook; Leif",
-          "id": "Source:Tom Nook; Leif"
+          "name": "Leif",
+          "id": "Source:Leif"
         },
         {
           "name": "Hitting a rock",
@@ -209,14 +189,6 @@
         {
           "name": "Collecting leaf eggs",
           "id": "Source:Collecting leaf eggs"
-        },
-        {
-          "name": "Normal villagers; Tom Nook",
-          "id": "Source:Normal villagers; Tom Nook"
-        },
-        {
-          "name": "Smug villagers; Tom Nook",
-          "id": "Source:Smug villagers; Tom Nook"
         },
         {
           "name": "All villagers (while stung)",
@@ -231,14 +203,6 @@
           "id": "Source:Test Your DIY Skills"
         },
         {
-          "name": "Lazy villagers; Tom Nook",
-          "id": "Source:Lazy villagers; Tom Nook"
-        },
-        {
-          "name": "Jock villagers; Tom Nook",
-          "id": "Source:Jock villagers; Tom Nook"
-        },
-        {
           "name": "Pavé",
           "id": "Source:Pavé"
         },
@@ -247,24 +211,12 @@
           "id": "Source:Collecting sky eggs"
         },
         {
-          "name": "Nook's Cranny",
-          "id": "Source:Nook's Cranny"
-        },
-        {
-          "name": "All villagers; Balloons",
-          "id": "Source:All villagers; Balloons"
-        },
-        {
           "name": "Jack",
           "id": "Source:Jack"
         },
         {
           "name": "Collecting stone eggs",
           "id": "Source:Collecting stone eggs"
-        },
-        {
-          "name": "Test Your DIY Skills; Tom Nook",
-          "id": "Source:Test Your DIY Skills; Tom Nook"
         },
         {
           "name": "Cozy Turkey Day DIY",
@@ -329,8 +281,8 @@
           "id": "Season/Event:Bunny Day"
         },
         {
-          "name": "Bunny Day (ready days); Bunny Day",
-          "id": "Season/Event:Bunny Day (ready days); Bunny Day"
+          "name": "Bunny Day (ready days)",
+          "id": "Season/Event:Bunny Day (ready days)"
         },
         {
           "name": "Cancer",
@@ -393,8 +345,8 @@
           "id": "Season/Event:summer shells"
         },
         {
-          "name": "Halloween (ready days); Halloween",
-          "id": "Season/Event:Halloween (ready days); Halloween"
+          "name": "Halloween (ready days)",
+          "id": "Season/Event:Halloween (ready days)"
         },
         {
           "name": "Halloween",
@@ -405,8 +357,12 @@
           "id": "Season/Event:Taurus"
         },
         {
-          "name": "Turkey Day; Turkey Day (shopping days)",
-          "id": "Season/Event:Turkey Day; Turkey Day (shopping days)"
+          "name": "Turkey Day",
+          "id": "Season/Event:Turkey Day"
+        },
+        {
+          "name": "Turkey Day (shopping days)",
+          "id": "Season/Event:Turkey Day (shopping days)"
         },
         {
           "name": "Virgo",
@@ -499,12 +455,12 @@
       "id": "Source",
       "children": [
         {
-          "name": "K.K. concert; Nook Shopping Daily Selection",
-          "id": "Source:K.K. concert; Nook Shopping Daily Selection"
-        },
-        {
           "name": "K.K. concert",
           "id": "Source:K.K. concert"
+        },
+        {
+          "name": "Nook Shopping Daily Selection",
+          "id": "Source:Nook Shopping Daily Selection"
         }
       ]
     },
@@ -3065,10 +3021,6 @@
           "id": "Source:Nook Miles Redemption"
         },
         {
-          "name": "Nook's Cranny; Pavé",
-          "id": "Source:Nook's Cranny; Pavé"
-        },
-        {
           "name": "Pavé",
           "id": "Source:Pavé"
         },
@@ -3085,28 +3037,28 @@
           "id": "Source:Gullivarrr"
         },
         {
-          "name": "Crafting; Nook's Cranny",
-          "id": "Source:Crafting; Nook's Cranny"
-        },
-        {
-          "name": "Crafting; Jack",
-          "id": "Source:Crafting; Jack"
+          "name": "Jack",
+          "id": "Source:Jack"
         },
         {
           "name": "Jingle",
           "id": "Source:Jingle"
         },
         {
-          "name": "Crafting; Nook's Cranny; Franklin",
-          "id": "Source:Crafting; Nook's Cranny; Franklin"
+          "name": "Franklin",
+          "id": "Source:Franklin"
         },
         {
           "name": "Cyrus",
           "id": "Source:Cyrus"
         },
         {
-          "name": "Nintendo; Nook Shopping Daily Selection",
-          "id": "Source:Nintendo; Nook Shopping Daily Selection"
+          "name": "Nintendo",
+          "id": "Source:Nintendo"
+        },
+        {
+          "name": "Nook Shopping Daily Selection",
+          "id": "Source:Nook Shopping Daily Selection"
         },
         {
           "name": "NookLink",
@@ -3121,48 +3073,24 @@
           "id": "Source:Zipper"
         },
         {
-          "name": "Franklin",
-          "id": "Source:Franklin"
-        },
-        {
           "name": "Dodo Airlines",
           "id": "Source:Dodo Airlines"
-        },
-        {
-          "name": "Nook's Cranny; Crafting",
-          "id": "Source:Nook's Cranny; Crafting"
-        },
-        {
-          "name": "Nintendo",
-          "id": "Source:Nintendo"
         },
         {
           "name": "Mom",
           "id": "Source:Mom"
         },
         {
-          "name": "Nook Shopping Daily Selection",
-          "id": "Source:Nook Shopping Daily Selection"
-        },
-        {
           "name": "Rover",
           "id": "Source:Rover"
-        },
-        {
-          "name": "Crafting; All villagers",
-          "id": "Source:Crafting; All villagers"
-        },
-        {
-          "name": "Blathers",
-          "id": "Source:Blathers"
         },
         {
           "name": "All villagers",
           "id": "Source:All villagers"
         },
         {
-          "name": "Jack",
-          "id": "Source:Jack"
+          "name": "Blathers",
+          "id": "Source:Blathers"
         },
         {
           "name": "High Friendship",
@@ -3311,8 +3239,8 @@
           "id": "Season/Event:Bunny Day"
         },
         {
-          "name": "Bunny Day (ready days); Bunny Day",
-          "id": "Season/Event:Bunny Day (ready days); Bunny Day"
+          "name": "Bunny Day (ready days)",
+          "id": "Season/Event:Bunny Day (ready days)"
         },
         {
           "name": "Cancer",
@@ -3323,8 +3251,8 @@
           "id": "Season/Event:Capricorn"
         },
         {
-          "name": "Festivale (ready days); Festivale",
-          "id": "Season/Event:Festivale (ready days); Festivale"
+          "name": "Festivale (ready days)",
+          "id": "Season/Event:Festivale (ready days)"
         },
         {
           "name": "Festivale",
@@ -3359,8 +3287,16 @@
           "id": "Season/Event:Shōgatsu (1)"
         },
         {
-          "name": "Toy Day (ready days phase 1); Toy Day (ready days phase 2); Toy Day; Toy Day (day after)",
-          "id": "Season/Event:Toy Day (ready days phase 1); Toy Day (ready days phase 2); Toy Day; Toy Day (day after)"
+          "name": "Toy Day (ready days phase 1)",
+          "id": "Season/Event:Toy Day (ready days phase 1)"
+        },
+        {
+          "name": "Toy Day (ready days phase 2)",
+          "id": "Season/Event:Toy Day (ready days phase 2)"
+        },
+        {
+          "name": "Toy Day (day after)",
+          "id": "Season/Event:Toy Day (day after)"
         },
         {
           "name": "acorns and pine cones",
@@ -3383,8 +3319,8 @@
           "id": "Season/Event:Cowboy Festival"
         },
         {
-          "name": "Halloween (ready days); Halloween",
-          "id": "Season/Event:Halloween (ready days); Halloween"
+          "name": "Halloween (ready days)",
+          "id": "Season/Event:Halloween (ready days)"
         },
         {
           "name": "Halloween",
@@ -3395,8 +3331,12 @@
           "id": "Season/Event:Taurus"
         },
         {
-          "name": "Turkey Day; Turkey Day (shopping days)",
-          "id": "Season/Event:Turkey Day; Turkey Day (shopping days)"
+          "name": "Turkey Day",
+          "id": "Season/Event:Turkey Day"
+        },
+        {
+          "name": "Turkey Day (shopping days)",
+          "id": "Season/Event:Turkey Day (shopping days)"
         },
         {
           "name": "Virgo",
@@ -3417,10 +3357,6 @@
         {
           "name": "Nature Day (Nook Shopping)",
           "id": "Season/Event:Nature Day (Nook Shopping)"
-        },
-        {
-          "name": "Turkey Day",
-          "id": "Season/Event:Turkey Day"
         },
         {
           "name": "Shōgatsu (2)",
@@ -3483,14 +3419,6 @@
           "id": "Season/Event:International Museum Day"
         },
         {
-          "name": "Toy Day (ready days phase 2); Toy Day",
-          "id": "Season/Event:Toy Day (ready days phase 2); Toy Day"
-        },
-        {
-          "name": "Halloween (ready days)",
-          "id": "Season/Event:Halloween (ready days)"
-        },
-        {
           "name": "Leo",
           "id": "Season/Event:Leo"
         },
@@ -3513,10 +3441,6 @@
         {
           "name": "summer shells",
           "id": "Season/Event:summer shells"
-        },
-        {
-          "name": "Toy Day (day after)",
-          "id": "Season/Event:Toy Day (day after)"
         }
       ]
     },
@@ -5225,8 +5149,8 @@
           "id": "Source:Recycle box"
         },
         {
-          "name": "Nintendo; Able Sisters",
-          "id": "Source:Nintendo; Able Sisters"
+          "name": "Nintendo",
+          "id": "Source:Nintendo"
         },
         {
           "name": "Nook Shopping Daily Selection",
@@ -5251,10 +5175,6 @@
         {
           "name": "Kicks",
           "id": "Source:Kicks"
-        },
-        {
-          "name": "Kicks; Able Sisters",
-          "id": "Source:Kicks; Able Sisters"
         }
       ]
     },
@@ -5307,16 +5227,28 @@
           "id": "Season/Event:Fireworks Show"
         },
         {
-          "name": "Bunny Day (ready days); Bunny Day",
-          "id": "Season/Event:Bunny Day (ready days); Bunny Day"
+          "name": "Bunny Day (ready days)",
+          "id": "Season/Event:Bunny Day (ready days)"
         },
         {
-          "name": "Festivale (ready days); Festivale",
-          "id": "Season/Event:Festivale (ready days); Festivale"
+          "name": "Bunny Day",
+          "id": "Season/Event:Bunny Day"
         },
         {
-          "name": "Halloween (ready days); Halloween",
-          "id": "Season/Event:Halloween (ready days); Halloween"
+          "name": "Festivale (ready days)",
+          "id": "Season/Event:Festivale (ready days)"
+        },
+        {
+          "name": "Festivale",
+          "id": "Season/Event:Festivale"
+        },
+        {
+          "name": "Halloween (ready days)",
+          "id": "Season/Event:Halloween (ready days)"
+        },
+        {
+          "name": "Halloween",
+          "id": "Season/Event:Halloween"
         },
         {
           "name": "International Children's Day",
@@ -5331,10 +5263,6 @@
           "id": "Season/Event:Setsubun (Able Sisters)"
         },
         {
-          "name": "Halloween",
-          "id": "Season/Event:Halloween"
-        },
-        {
           "name": "Super Mario Bros.",
           "id": "Season/Event:Super Mario Bros."
         },
@@ -5347,8 +5275,16 @@
           "id": "Season/Event:Prom (Able Sisters)"
         },
         {
-          "name": "Toy Day (ready days phase 2); Toy Day; Toy Day (day after)",
-          "id": "Season/Event:Toy Day (ready days phase 2); Toy Day; Toy Day (day after)"
+          "name": "Toy Day (ready days phase 2)",
+          "id": "Season/Event:Toy Day (ready days phase 2)"
+        },
+        {
+          "name": "Toy Day",
+          "id": "Season/Event:Toy Day"
+        },
+        {
+          "name": "Toy Day (day after)",
+          "id": "Season/Event:Toy Day (day after)"
         },
         {
           "name": "Shamrock Day (Able Sisters)",
@@ -5359,8 +5295,12 @@
           "id": "Season/Event:snowflakes"
         },
         {
-          "name": "Summer Solstice (northern hemisphere); Summer Solstice (southern hemisphere)",
-          "id": "Season/Event:Summer Solstice (northern hemisphere); Summer Solstice (southern hemisphere)"
+          "name": "Summer Solstice (northern hemisphere)",
+          "id": "Season/Event:Summer Solstice (northern hemisphere)"
+        },
+        {
+          "name": "Summer Solstice (southern hemisphere)",
+          "id": "Season/Event:Summer Solstice (southern hemisphere)"
         },
         {
           "name": "Bug-Off",
@@ -5375,16 +5315,16 @@
           "id": "Season/Event:Festive shopping"
         },
         {
-          "name": "Winter Solstice (southern hemisphere); Winter Solstice (northern hemisphere)",
-          "id": "Season/Event:Winter Solstice (southern hemisphere); Winter Solstice (northern hemisphere)"
+          "name": "Winter Solstice (southern hemisphere)",
+          "id": "Season/Event:Winter Solstice (southern hemisphere)"
+        },
+        {
+          "name": "Winter Solstice (northern hemisphere)",
+          "id": "Season/Event:Winter Solstice (northern hemisphere)"
         },
         {
           "name": "Cowherd & Weaver Girl Day",
           "id": "Season/Event:Cowherd & Weaver Girl Day"
-        },
-        {
-          "name": "Summer shopping; Fireworks Show",
-          "id": "Season/Event:Summer shopping; Fireworks Show"
         },
         {
           "name": "Spring shopping",
@@ -6031,8 +5971,8 @@
           "id": "Source:Franklin"
         },
         {
-          "name": "Nintendo; Nook Miles Redemption",
-          "id": "Source:Nintendo; Nook Miles Redemption"
+          "name": "Nintendo",
+          "id": "Source:Nintendo"
         },
         {
           "name": "C.J.",
@@ -6045,14 +5985,6 @@
         {
           "name": "Mom",
           "id": "Source:Mom"
-        },
-        {
-          "name": "Saharah; Nintendo",
-          "id": "Source:Saharah; Nintendo"
-        },
-        {
-          "name": "Nintendo; Nook Shopping Promotion",
-          "id": "Source:Nintendo; Nook Shopping Promotion"
         }
       ]
     },
@@ -6121,8 +6053,12 @@
           "id": "Season/Event:Wedding Season"
         },
         {
-          "name": "Bunny Day (ready days); Bunny Day",
-          "id": "Season/Event:Bunny Day (ready days); Bunny Day"
+          "name": "Bunny Day (ready days)",
+          "id": "Season/Event:Bunny Day (ready days)"
+        },
+        {
+          "name": "Bunny Day",
+          "id": "Season/Event:Bunny Day"
         },
         {
           "name": "cherry-blossom petals",
@@ -6189,12 +6125,20 @@
           "id": "Season/Event:Shamrock Day"
         },
         {
-          "name": "Summer Solstice (northern hemisphere); Summer Solstice (southern hemisphere)",
-          "id": "Season/Event:Summer Solstice (northern hemisphere); Summer Solstice (southern hemisphere)"
+          "name": "Summer Solstice (northern hemisphere)",
+          "id": "Season/Event:Summer Solstice (northern hemisphere)"
         },
         {
-          "name": "Winter Solstice (northern hemisphere); Winter Solstice (southern hemisphere)",
-          "id": "Season/Event:Winter Solstice (northern hemisphere); Winter Solstice (southern hemisphere)"
+          "name": "Summer Solstice (southern hemisphere)",
+          "id": "Season/Event:Summer Solstice (southern hemisphere)"
+        },
+        {
+          "name": "Winter Solstice (northern hemisphere)",
+          "id": "Season/Event:Winter Solstice (northern hemisphere)"
+        },
+        {
+          "name": "Winter Solstice (southern hemisphere)",
+          "id": "Season/Event:Winter Solstice (southern hemisphere)"
         }
       ]
     },
@@ -7219,10 +7163,6 @@
           "id": "Source:Nook Miles Redemption"
         },
         {
-          "name": "Nook's Cranny; Pavé",
-          "id": "Source:Nook's Cranny; Pavé"
-        },
-        {
           "name": "Pavé",
           "id": "Source:Pavé"
         },
@@ -7239,28 +7179,28 @@
           "id": "Source:Gullivarrr"
         },
         {
-          "name": "Crafting; Nook's Cranny",
-          "id": "Source:Crafting; Nook's Cranny"
-        },
-        {
-          "name": "Crafting; Jack",
-          "id": "Source:Crafting; Jack"
+          "name": "Jack",
+          "id": "Source:Jack"
         },
         {
           "name": "Jingle",
           "id": "Source:Jingle"
         },
         {
-          "name": "Crafting; Nook's Cranny; Franklin",
-          "id": "Source:Crafting; Nook's Cranny; Franklin"
+          "name": "Franklin",
+          "id": "Source:Franklin"
         },
         {
           "name": "Cyrus",
           "id": "Source:Cyrus"
         },
         {
-          "name": "Nintendo; Nook Shopping Daily Selection",
-          "id": "Source:Nintendo; Nook Shopping Daily Selection"
+          "name": "Nintendo",
+          "id": "Source:Nintendo"
+        },
+        {
+          "name": "Nook Shopping Daily Selection",
+          "id": "Source:Nook Shopping Daily Selection"
         },
         {
           "name": "NookLink",
@@ -7275,48 +7215,24 @@
           "id": "Source:Zipper"
         },
         {
-          "name": "Franklin",
-          "id": "Source:Franklin"
-        },
-        {
           "name": "Dodo Airlines",
           "id": "Source:Dodo Airlines"
-        },
-        {
-          "name": "Nook's Cranny; Crafting",
-          "id": "Source:Nook's Cranny; Crafting"
-        },
-        {
-          "name": "Nintendo",
-          "id": "Source:Nintendo"
         },
         {
           "name": "Mom",
           "id": "Source:Mom"
         },
         {
-          "name": "Nook Shopping Daily Selection",
-          "id": "Source:Nook Shopping Daily Selection"
-        },
-        {
           "name": "Rover",
           "id": "Source:Rover"
-        },
-        {
-          "name": "Crafting; All villagers",
-          "id": "Source:Crafting; All villagers"
-        },
-        {
-          "name": "Blathers",
-          "id": "Source:Blathers"
         },
         {
           "name": "All villagers",
           "id": "Source:All villagers"
         },
         {
-          "name": "Jack",
-          "id": "Source:Jack"
+          "name": "Blathers",
+          "id": "Source:Blathers"
         },
         {
           "name": "High Friendship",
@@ -7355,32 +7271,12 @@
           "id": "Source:Recycle box"
         },
         {
-          "name": "Nintendo; Able Sisters",
-          "id": "Source:Nintendo; Able Sisters"
-        },
-        {
           "name": "Kicks",
           "id": "Source:Kicks"
         },
         {
-          "name": "Kicks; Able Sisters",
-          "id": "Source:Kicks; Able Sisters"
-        },
-        {
           "name": "Saharah",
           "id": "Source:Saharah"
-        },
-        {
-          "name": "Nintendo; Nook Miles Redemption",
-          "id": "Source:Nintendo; Nook Miles Redemption"
-        },
-        {
-          "name": "Saharah; Nintendo",
-          "id": "Source:Saharah; Nintendo"
-        },
-        {
-          "name": "Nintendo; Nook Shopping Promotion",
-          "id": "Source:Nintendo; Nook Shopping Promotion"
         },
         {
           "name": "Balloons",
@@ -7393,10 +7289,6 @@
         {
           "name": "Lazy villagers",
           "id": "Source:Lazy villagers"
-        },
-        {
-          "name": "Big Sister villagers; Tom Nook",
-          "id": "Source:Big Sister villagers; Tom Nook"
         },
         {
           "name": "Big Sister villagers",
@@ -7431,32 +7323,16 @@
           "id": "Source:Jock villagers"
         },
         {
-          "name": "Balloons; Isabelle",
-          "id": "Source:Balloons; Isabelle"
-        },
-        {
-          "name": "Cranky villagers; Tom Nook",
-          "id": "Source:Cranky villagers; Tom Nook"
-        },
-        {
-          "name": "Snooty villagers; Tom Nook",
-          "id": "Source:Snooty villagers; Tom Nook"
-        },
-        {
-          "name": "Peppy villagers; Tom Nook",
-          "id": "Source:Peppy villagers; Tom Nook"
-        },
-        {
           "name": "Wildest Dreams DIY",
           "id": "Source:Wildest Dreams DIY"
         },
         {
-          "name": "Egg bottle; Egg balloon",
-          "id": "Source:Egg bottle; Egg balloon"
+          "name": "Egg bottle",
+          "id": "Source:Egg bottle"
         },
         {
-          "name": "All villagers; Tom Nook",
-          "id": "Source:All villagers; Tom Nook"
+          "name": "Egg balloon",
+          "id": "Source:Egg balloon"
         },
         {
           "name": "Collecting earth eggs",
@@ -7469,14 +7345,6 @@
         {
           "name": "Digging up clams",
           "id": "Source:Digging up clams"
-        },
-        {
-          "name": "Tom Nook; Nook's Cranny",
-          "id": "Source:Tom Nook; Nook's Cranny"
-        },
-        {
-          "name": "Blathers; Nook's Cranny",
-          "id": "Source:Blathers; Nook's Cranny"
         },
         {
           "name": "Snowboy",
@@ -7511,8 +7379,8 @@
           "id": "Source:Gold balloon"
         },
         {
-          "name": "Tom Nook; Leif",
-          "id": "Source:Tom Nook; Leif"
+          "name": "Leif",
+          "id": "Source:Leif"
         },
         {
           "name": "Hitting a rock",
@@ -7523,14 +7391,6 @@
           "id": "Source:Collecting leaf eggs"
         },
         {
-          "name": "Normal villagers; Tom Nook",
-          "id": "Source:Normal villagers; Tom Nook"
-        },
-        {
-          "name": "Smug villagers; Tom Nook",
-          "id": "Source:Smug villagers; Tom Nook"
-        },
-        {
           "name": "All villagers (while stung)",
           "id": "Source:All villagers (while stung)"
         },
@@ -7539,28 +7399,12 @@
           "id": "Source:Test Your DIY Skills"
         },
         {
-          "name": "Lazy villagers; Tom Nook",
-          "id": "Source:Lazy villagers; Tom Nook"
-        },
-        {
-          "name": "Jock villagers; Tom Nook",
-          "id": "Source:Jock villagers; Tom Nook"
-        },
-        {
           "name": "Collecting sky eggs",
           "id": "Source:Collecting sky eggs"
         },
         {
-          "name": "All villagers; Balloons",
-          "id": "Source:All villagers; Balloons"
-        },
-        {
           "name": "Collecting stone eggs",
           "id": "Source:Collecting stone eggs"
-        },
-        {
-          "name": "Test Your DIY Skills; Tom Nook",
-          "id": "Source:Test Your DIY Skills; Tom Nook"
         },
         {
           "name": "Cozy Turkey Day DIY",
@@ -7579,16 +7423,12 @@
           "id": "Source:Collecting wood eggs"
         },
         {
-          "name": "Redd's Raffle; Nook's Cranny",
-          "id": "Source:Redd's Raffle; Nook's Cranny"
+          "name": "Redd's Raffle",
+          "id": "Source:Redd's Raffle"
         },
         {
-          "name": "Nook's Cranny; Crafting; Wilbur",
-          "id": "Source:Nook's Cranny; Crafting; Wilbur"
-        },
-        {
-          "name": "Nook's Cranny; Tom Nook",
-          "id": "Source:Nook's Cranny; Tom Nook"
+          "name": "Wilbur",
+          "id": "Source:Wilbur"
         },
         {
           "name": "May Day Tour",
@@ -7601,10 +7441,6 @@
         {
           "name": "Jolly Redd's Treasure Trawler",
           "id": "Source:Jolly Redd's Treasure Trawler"
-        },
-        {
-          "name": "K.K. concert; Nook Shopping Daily Selection",
-          "id": "Source:K.K. concert; Nook Shopping Daily Selection"
         },
         {
           "name": "K.K. concert",
@@ -7643,10 +7479,6 @@
           "id": "Source:5th House Upgrade (2nd Floor)"
         },
         {
-          "name": "Crafting; Tom Nook",
-          "id": "Source:Crafting; Tom Nook"
-        },
-        {
           "name": "Hardwood Tree",
           "id": "Source:Hardwood Tree"
         },
@@ -7667,8 +7499,12 @@
           "id": "Source:Chopping a bamboo tree"
         },
         {
-          "name": "Dig Spot; Daisy Mae",
-          "id": "Source:Dig Spot; Daisy Mae"
+          "name": "Dig Spot",
+          "id": "Source:Dig Spot"
+        },
+        {
+          "name": "Daisy Mae",
+          "id": "Source:Daisy Mae"
         },
         {
           "name": "Planting a bamboo shoot",
@@ -7681,10 +7517,6 @@
         {
           "name": "Shaking a hardwood or cedar tree",
           "id": "Source:Shaking a hardwood or cedar tree"
-        },
-        {
-          "name": "Nook Miles Redemption; May Day Tour",
-          "id": "Source:Nook Miles Redemption; May Day Tour"
         },
         {
           "name": "Picking flowers",
@@ -7707,12 +7539,8 @@
           "id": "Source:Digging up a fully grown bush"
         },
         {
-          "name": "Leif",
-          "id": "Source:Leif"
-        },
-        {
-          "name": "Nook's Cranny; Villagers",
-          "id": "Source:Nook's Cranny; Villagers"
+          "name": "Villagers",
+          "id": "Source:Villagers"
         },
         {
           "name": "Planting a cedar sapling",
@@ -7751,20 +7579,12 @@
           "id": "Source:Beach"
         },
         {
-          "name": "Franklin; Nook's Cranny",
-          "id": "Source:Franklin; Nook's Cranny"
-        },
-        {
           "name": "Nook Shopping",
           "id": "Source:Nook Shopping"
         },
         {
           "name": "Delivering item for a villager",
           "id": "Source:Delivering item for a villager"
-        },
-        {
-          "name": "Dig Spot",
-          "id": "Source:Dig Spot"
         },
         {
           "name": "Wrapping a present",
@@ -7799,16 +7619,8 @@
           "id": "Source:Orange Tree"
         },
         {
-          "name": "Picking pumpkins; All villagers",
-          "id": "Source:Picking pumpkins; All villagers"
-        },
-        {
           "name": "Planting an orange",
           "id": "Source:Planting an orange"
-        },
-        {
-          "name": "Nook's Cranny; Leif",
-          "id": "Source:Nook's Cranny; Leif"
         },
         {
           "name": "Seed bag",
@@ -7831,36 +7643,16 @@
           "id": "Source:Planting a pear"
         },
         {
-          "name": "Dive spot; Pascal",
-          "id": "Source:Dive spot; Pascal"
-        },
-        {
           "name": "Mail",
           "id": "Source:Mail"
-        },
-        {
-          "name": "Crafting; Catching with a net",
-          "id": "Source:Crafting; Catching with a net"
         },
         {
           "name": "Digging up a pumpkin plant",
           "id": "Source:Digging up a pumpkin plant"
         },
         {
-          "name": "Egg balloon",
-          "id": "Source:Egg balloon"
-        },
-        {
           "name": "Expired turnips",
           "id": "Source:Expired turnips"
-        },
-        {
-          "name": "Hitting a rock; Fishing",
-          "id": "Source:Hitting a rock; Fishing"
-        },
-        {
-          "name": "Daisy Mae",
-          "id": "Source:Daisy Mae"
         },
         {
           "name": "Use a fountain firework",
@@ -8883,8 +8675,8 @@
           "id": "Season/Event:Bunny Day"
         },
         {
-          "name": "Bunny Day (ready days); Bunny Day",
-          "id": "Season/Event:Bunny Day (ready days); Bunny Day"
+          "name": "Bunny Day (ready days)",
+          "id": "Season/Event:Bunny Day (ready days)"
         },
         {
           "name": "Cancer",
@@ -8895,8 +8687,8 @@
           "id": "Season/Event:Capricorn"
         },
         {
-          "name": "Festivale (ready days); Festivale",
-          "id": "Season/Event:Festivale (ready days); Festivale"
+          "name": "Festivale (ready days)",
+          "id": "Season/Event:Festivale (ready days)"
         },
         {
           "name": "Festivale",
@@ -8931,8 +8723,16 @@
           "id": "Season/Event:Shōgatsu (1)"
         },
         {
-          "name": "Toy Day (ready days phase 1); Toy Day (ready days phase 2); Toy Day; Toy Day (day after)",
-          "id": "Season/Event:Toy Day (ready days phase 1); Toy Day (ready days phase 2); Toy Day; Toy Day (day after)"
+          "name": "Toy Day (ready days phase 1)",
+          "id": "Season/Event:Toy Day (ready days phase 1)"
+        },
+        {
+          "name": "Toy Day (ready days phase 2)",
+          "id": "Season/Event:Toy Day (ready days phase 2)"
+        },
+        {
+          "name": "Toy Day (day after)",
+          "id": "Season/Event:Toy Day (day after)"
         },
         {
           "name": "acorns and pine cones",
@@ -8955,8 +8755,8 @@
           "id": "Season/Event:Cowboy Festival"
         },
         {
-          "name": "Halloween (ready days); Halloween",
-          "id": "Season/Event:Halloween (ready days); Halloween"
+          "name": "Halloween (ready days)",
+          "id": "Season/Event:Halloween (ready days)"
         },
         {
           "name": "Halloween",
@@ -8967,8 +8767,12 @@
           "id": "Season/Event:Taurus"
         },
         {
-          "name": "Turkey Day; Turkey Day (shopping days)",
-          "id": "Season/Event:Turkey Day; Turkey Day (shopping days)"
+          "name": "Turkey Day",
+          "id": "Season/Event:Turkey Day"
+        },
+        {
+          "name": "Turkey Day (shopping days)",
+          "id": "Season/Event:Turkey Day (shopping days)"
         },
         {
           "name": "Virgo",
@@ -8989,10 +8793,6 @@
         {
           "name": "Nature Day (Nook Shopping)",
           "id": "Season/Event:Nature Day (Nook Shopping)"
-        },
-        {
-          "name": "Turkey Day",
-          "id": "Season/Event:Turkey Day"
         },
         {
           "name": "Shōgatsu (2)",
@@ -9055,14 +8855,6 @@
           "id": "Season/Event:International Museum Day"
         },
         {
-          "name": "Toy Day (ready days phase 2); Toy Day",
-          "id": "Season/Event:Toy Day (ready days phase 2); Toy Day"
-        },
-        {
-          "name": "Halloween (ready days)",
-          "id": "Season/Event:Halloween (ready days)"
-        },
-        {
           "name": "Leo",
           "id": "Season/Event:Leo"
         },
@@ -9087,10 +8879,6 @@
           "id": "Season/Event:summer shells"
         },
         {
-          "name": "Toy Day (day after)",
-          "id": "Season/Event:Toy Day (day after)"
-        },
-        {
           "name": "Fireworks Show",
           "id": "Season/Event:Fireworks Show"
         },
@@ -9111,32 +8899,32 @@
           "id": "Season/Event:Prom (Able Sisters)"
         },
         {
-          "name": "Toy Day (ready days phase 2); Toy Day; Toy Day (day after)",
-          "id": "Season/Event:Toy Day (ready days phase 2); Toy Day; Toy Day (day after)"
-        },
-        {
           "name": "Shamrock Day (Able Sisters)",
           "id": "Season/Event:Shamrock Day (Able Sisters)"
         },
         {
-          "name": "Summer Solstice (northern hemisphere); Summer Solstice (southern hemisphere)",
-          "id": "Season/Event:Summer Solstice (northern hemisphere); Summer Solstice (southern hemisphere)"
+          "name": "Summer Solstice (northern hemisphere)",
+          "id": "Season/Event:Summer Solstice (northern hemisphere)"
+        },
+        {
+          "name": "Summer Solstice (southern hemisphere)",
+          "id": "Season/Event:Summer Solstice (southern hemisphere)"
         },
         {
           "name": "Festive shopping",
           "id": "Season/Event:Festive shopping"
         },
         {
-          "name": "Winter Solstice (southern hemisphere); Winter Solstice (northern hemisphere)",
-          "id": "Season/Event:Winter Solstice (southern hemisphere); Winter Solstice (northern hemisphere)"
+          "name": "Winter Solstice (southern hemisphere)",
+          "id": "Season/Event:Winter Solstice (southern hemisphere)"
+        },
+        {
+          "name": "Winter Solstice (northern hemisphere)",
+          "id": "Season/Event:Winter Solstice (northern hemisphere)"
         },
         {
           "name": "Cowherd & Weaver Girl Day",
           "id": "Season/Event:Cowherd & Weaver Girl Day"
-        },
-        {
-          "name": "Summer shopping; Fireworks Show",
-          "id": "Season/Event:Summer shopping; Fireworks Show"
         },
         {
           "name": "Spring shopping",
@@ -9165,10 +8953,6 @@
         {
           "name": "Moon-Viewing Day",
           "id": "Season/Event:Moon-Viewing Day"
-        },
-        {
-          "name": "Winter Solstice (northern hemisphere); Winter Solstice (southern hemisphere)",
-          "id": "Season/Event:Winter Solstice (northern hemisphere); Winter Solstice (southern hemisphere)"
         },
         {
           "name": "Nature Day",

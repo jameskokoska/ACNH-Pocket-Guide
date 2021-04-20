@@ -170,7 +170,17 @@ for filterSet in filters:
                 if(datum.get(filter)==None):
                     continue
                 currentFilter = {"name":"", "id":""}
-                if datum.get(filter) not in doneFilters:
+                if "; " in datum.get(filter):
+                    allFilters = datum.get(filter).split("; ")
+                    for singleFilter in allFilters:
+                        currentFilter = {"name":"", "id":""}
+                        if singleFilter not in doneFilters:
+                            doneFilters.append(singleFilter)
+                            currentFilter["name"] = singleFilter
+                            currentFilter["id"] = filter+ ":" + singleFilter
+                            possibleFilters.append(currentFilter)
+                            
+                elif datum.get(filter) not in doneFilters:
                     currentFilter["name"] = datum.get(filter)
                     currentFilter["id"] = filter+ ":" + datum.get(filter)
                     possibleFilters.append(currentFilter)

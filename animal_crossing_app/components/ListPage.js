@@ -275,9 +275,20 @@ function ListPage(props){
               }
             }
             //Only check the property selected
-            else if((searchCollected) && (searchCategory || searchCategoryOnly) && (!searchActual[z].includes("Data Category") || searchCategoryOnly) && item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
-              filterFound = true;
-              break;
+            else if((searchCollected) && (searchCategory || searchCategoryOnly) && (!searchActual[z].includes("Data Category") || searchCategoryOnly)){
+              if( item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
+                filterFound = true;
+              } else if (item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].includes("; ")){
+                var allEntries = item.[searchActual[z].split(":")[0]].split("; ")
+                for(var o = 0; o<allEntries.length; o++){
+                  if(allEntries[o]!==undefined && allEntries[o].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
+                    filterFound = true;
+                  } 
+                }
+              }
+              if(filterFound){
+                break;
+              }
             }
             // }
           }
@@ -335,31 +346,31 @@ function ListPage(props){
         }
       }
     }
-    if (componentIsMounted.current) {
-      //Sort alphabetically
-      if(getSettingsString("settingsSortAlphabetically")==="true"){
-        var dataLoadedCopy = dataUpdated.slice(0);
-        dataLoadedCopy.sort(function(a, b) {
-          var textA = removeAccents(a.NameLanguage.toUpperCase());
-          var textB = removeAccents(b.NameLanguage.toUpperCase());
-          return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-        });
-        dataUpdated = dataLoadedCopy
-      }
 
-      //Sort based on critterpedia entry number
-      if(getSettingsString("settingsSortCritterpedia")==="true" && (props.title==="Fish" || props.title==="Bugs" || props.title==="Sea Creatures")){
-        var dataLoadedCopy = dataUpdated.slice(0);
-        dataLoadedCopy.sort(function(a, b) {
-          var textA = parseInt(a["#"]);
-          var textB = parseInt(b["#"]);
-          return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-        });
-        dataUpdated = dataLoadedCopy
-      }
-
-      setData(dataUpdated)
+    //Sort alphabetically
+    if(getSettingsString("settingsSortAlphabetically")==="true"){
+      var dataLoadedCopy = dataUpdated.slice(0);
+      dataLoadedCopy.sort(function(a, b) {
+        var textA = removeAccents(a.NameLanguage.toUpperCase());
+        var textB = removeAccents(b.NameLanguage.toUpperCase());
+        return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+      });
+      dataUpdated = dataLoadedCopy
     }
+
+    //Sort based on critterpedia entry number
+    if(getSettingsString("settingsSortCritterpedia")==="true" && (props.title==="Fish" || props.title==="Bugs" || props.title==="Sea Creatures")){
+      var dataLoadedCopy = dataUpdated.slice(0);
+      dataLoadedCopy.sort(function(a, b) {
+        var textA = parseInt(a["#"]);
+        var textB = parseInt(b["#"]);
+        return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+      });
+      dataUpdated = dataLoadedCopy
+    }
+
+    setData(dataUpdated)
+    
   }, [props, search, searchFilters])
   
   var numColumns=3;

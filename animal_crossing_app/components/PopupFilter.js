@@ -27,6 +27,8 @@ class PopupFilter extends Component {
       popupVisible: false,
       selectedItems: []
     };
+    this.openFirst = true;
+
     var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH ";
 
     this.possibleFilters = [{
@@ -146,7 +148,6 @@ class PopupFilter extends Component {
     if(defaultValuesStored!==""){
       this.setState({selectedItems:defaultValuesStored.split(",")})
       this.setFilters();
-      console.log(defaultValuesStored)
     }
     
 
@@ -239,32 +240,8 @@ class PopupFilter extends Component {
             <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode], height:Dimensions.get('window').height*0.75}]}>
               <TextFont bold={true} style={{fontSize: 22, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Set Filters</TextFont>
               <View style={{height:10}}/>
-              {/* <DropDownPicker
-                searchablePlaceholder={attemptToTranslate("Search for an item")}
-                searchableError={() => <Text>{attemptToTranslate("Not found")}</Text>}
-                items={this.possibleFilters}
-                placeholder={attemptToTranslate("Select filter...")}
-                multipleText="%d filters(s) applied"
-                dropDownMaxHeight={Dimensions.get('window').height*0.75-175}
-                containerStyle={{height: 45, marginLeft: 15, marginRight: 15}}
-                style={[{width: "100%", borderWidth: 0, backgroundColor: colors.searchbarBG[global.darkMode], opacity: dropDownPickerOpacity,borderTopLeftRadius: 8, borderTopRightRadius: 8,borderBottomLeftRadius: 8, borderBottomRightRadius: 8}]}
-                searchable={this.props.filterSearchable}
-                itemStyle={{
-                    justifyContent: 'flex-start'
-                }}
-                multiple
-                isVisible
-                searchablePlaceholderTextColor={colors.filterSearch[global.darkMode]}
-                labelStyle={{fontFamily: "ArialRounded", fontSize: 15, marginLeft:10, color:colors.textBlack[global.darkMode]}}
-                customTickIcon={()=><View/>}
-                activeItemStyle={{borderRadius: 10, backgroundColor: colors.lightDarkAccent[global.darkMode]}}
-                dropDownStyle={{borderBottomLeftRadius: 10, borderBottomRightRadius: 10, borderWidth: 0, backgroundColor: colors.filterBG[global.darkMode], opacity: 0.98, }}
-                onChangeItem={item => {this.updateDefaultValues(item)}}
-                defaultValue = {this.defaultValues}
-              /> */}
-              <View style={{height:100}}>
               <SectionedMultiSelect
-                noResultsComponent={<TextFont style={{textAlign:"center", fontSize: 20, color:colors.textBlack[global.darkMode]}}>{attemptToTranslate("Not found")}</TextFont>}
+                noResultsComponent={<TextFont style={{padding:20, textAlign:"center", fontSize: 20, color:colors.textBlack[global.darkMode]}}>{attemptToTranslate("Not found")}</TextFont>}
                 searchPlaceholderText={attemptToTranslate("Search for an item")}
                 IconRenderer={MaterialIcons}
                 items={filters}
@@ -275,12 +252,17 @@ class PopupFilter extends Component {
                 readOnlyHeadings={true}
                 onSelectedItemsChange={this.onSelectedItemsChange}
                 selectedItems={this.state.selectedItems}
-                ref={SectionedMultiSelect => this.SectionedMultiSelect = SectionedMultiSelect}
+                ref={SectionedMultiSelect => {this.SectionedMultiSelect = SectionedMultiSelect; if(this.openFirst){SectionedMultiSelect._toggleSelector(true); this.openFirst=false}}}
                 colors={{primary:colors.okButton[global.darkMode], chipColor:colors.selectedText[global.darkMode], text:colors.textBlack[global.darkMode], subText:colors.textBlack[global.darkMode], itemBackground: colors.white[global.darkMode], subItemBackground: colors.white[global.darkMode]}}
                 hideSelect={true}
-                styles={{container:{backgroundColor:colors.white[global.darkMode], borderRadius:15}, selectedItem:{backgroundColor:colors.lightDarkAccent[global.darkMode], marginHorizontal:5, paddingHorizontal:10, borderRadius:5,}, subItem:{marginHorizontal:5, paddingHorizontal:10, paddingVertical:7}, item:{paddingVertical:12}, searchBar:{backgroundColor:colors.white[global.darkMode]}, searchTextInput:{color:colors.textBlack[global.darkMode]}}}
+                styles={{chipText:{fontFamily:"ArialRoundedBold", padding:10, fontSize:15, color:colors.textBlack[global.darkMode]},confirmText:{padding:7},container:{backgroundColor:colors.white[global.darkMode], borderRadius:15}, selectedItem:{backgroundColor:colors.lightDarkAccent[global.darkMode], marginHorizontal:5, paddingHorizontal:10, borderRadius:5,}, subItem:{marginHorizontal:5, paddingHorizontal:10, paddingVertical:7}, item:{paddingVertical:12}, searchBar:{backgroundColor:colors.lightDarkAccent2[global.darkMode]}, searchTextInput:{color:colors.textBlack[global.darkMode]}}}
+                modalWithTouchable={true}
+                itemFontFamily={{fontFamily:"ArialRoundedBold"}}
+                subItemFontFamily={{fontFamily:"ArialRounded"}}
+                searchTextFontFamily={{fontFamily:"ArialRounded"}}
+                confirmFontFamily={{fontFamily:"ArialRoundedBold"}}
+                confirmText={attemptToTranslate("Confirm")}
               />
-              </View>
               
               <View style={{position:"absolute", bottom: 20}}>
                 <ButtonComponent

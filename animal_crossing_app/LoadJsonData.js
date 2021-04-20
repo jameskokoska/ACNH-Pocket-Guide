@@ -931,9 +931,9 @@ export function translateFilters(filters){
     return filters;
   }
   for(var i = 0; i<filters.length; i++){
-    filters[i]["name"] = capitalizeFirst(attemptToTranslate(filters[i]["name"]));
+    filters[i]["name"] = capitalizeFirst(attemptToTranslate(filters[i]["name"], true));
     for(var x = 0; x<filters[i]["children"].length; x++){
-      filters[i]["children"][x]["name"] = capitalizeFirst(attemptToTranslate(filters[i]["children"][x]["name"]));
+      filters[i]["children"][x]["name"] = capitalizeFirst(attemptToTranslate(filters[i]["children"][x]["name"], true));
     }
   }
   return filters;
