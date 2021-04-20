@@ -32,6 +32,7 @@
     "react-native-onboarding-swiper": "^1.1.4",
     "react-native-pager-view": "5.0.12",
     "react-native-reanimated": "~2.1.0",
+    "react-native-sectioned-multi-select": "^0.8.1",
     "react-native-tab-view": "^3.0.1",
     "react-native-webview": "11.2.3",
     "reanimated-bottom-sheet": "^1.0.0-alpha.22",

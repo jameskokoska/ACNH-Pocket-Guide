@@ -931,13 +931,9 @@ export function translateFilters(filters){
     return filters;
   }
   for(var i = 0; i<filters.length; i++){
-    label = filters[i].label.split(" - ");
-    if(label.length>1){
-      label[0] = attemptToTranslate(label[0]);
-      label[1] = attemptToTranslate(label[1], true);
-      filters[i].label = capitalizeFirst(label[0]) + " - " + capitalizeFirst(label[1]);
-    } else {
-      filters[i].label = capitalizeFirst(attemptToTranslate(label[0]));
+    filters[i]["name"] = capitalizeFirst(attemptToTranslate(filters[i]["name"]));
+    for(var x = 0; x<filters[i]["children"].length; x++){
+      filters[i]["children"][x]["name"] = capitalizeFirst(attemptToTranslate(filters[i]["children"][x]["name"]));
     }
   }
   return filters;

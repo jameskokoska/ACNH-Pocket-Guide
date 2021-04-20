@@ -139,8 +139,6 @@ filters = [
             "Color 1",
             "Color 2",
             "Variation",
-            "Style 1",
-            "Style 2",
             "Size",
             "HHA Concept 1",
             "HHA Concept 2",
@@ -155,29 +153,36 @@ possibleFilters = []
 count = -1
 count2 = -1
 output = {}
+currentCategory = {}
+totalFilters = []
+doneFilters = []
 for filterSet in filters:
     count+=1
     count2 = -1
     print("Generating filter definitions: " + str(int(count/len(filters) * 100)) + "%")
     for filter in filterSet[2]:
+        currentCategory["name"] = filter
+        currentCategory["id"] = filter
         count2+=1
         print("Generating filter definitions:   " + str(int(count2/len(filterSet[2]) * 100)) + "%")
         for dataSet in filterSet[1]:
             for datum in dataSet:
                 if(datum.get(filter)==None):
                     continue
-                currentFilter = {"label":"", "value":""}
-                found = False
-                if len(possibleFilters)!=0:
-                    for possibleFilter in possibleFilters:
-                        if possibleFilter.get("value")==filter+ ":" +datum.get(filter):
-                            found = True
-                if found==False:
-                    currentFilter["label"] = filter+ " - " + datum.get(filter)
-                    currentFilter["value"] = filter+ ":" + datum.get(filter)
+                currentFilter = {"name":"", "id":""}
+                if datum.get(filter) not in doneFilters:
+                    currentFilter["name"] = datum.get(filter)
+                    currentFilter["id"] = filter+ ":" + datum.get(filter)
                     possibleFilters.append(currentFilter)
-    output[filterSet[0]] = possibleFilters
-    possibleFilters = []
+                    doneFilters.append(datum.get(filter))
+        currentCategory["children"]=possibleFilters
+        possibleFilters = []
+        totalFilters.append(currentCategory)
+        currentCategory = {}
+        doneFilters=[]
+    output[filterSet[0]] = totalFilters
+    totalFilters = []
+
 
 with open('Generated/filterDefinitions.json', 'w', encoding='utf8') as json_file:
     json.dump(output, json_file, ensure_ascii=False,indent=2)

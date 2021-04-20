@@ -103,7 +103,6 @@ function ListPage(props){
 
   const [searchFilters, setSearchFilters] = useState([]);
   function updateSearchFilters(searchFilters){
-    // console.log(search)
     setSearchFilters(searchFilters);
   }
 
@@ -131,7 +130,7 @@ function ListPage(props){
       currentVillagerFiltersInverse = getInverseVillagerFilters();
     }
     
-    console.log(props.title)
+    // console.log(searchFilters)
     var searchCategoryOnly = false;
     for(var y = 0; y < searchFilters.length; y++){
       if(searchFilters[y].includes("Data Category")){
