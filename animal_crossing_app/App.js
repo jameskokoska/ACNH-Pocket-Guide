@@ -320,7 +320,7 @@ class App extends Component {
     const firstLogin = await getStorage("firstLogin","true");
     const numLogins = parseInt(await getStorage("numLogins","0")) + 1;
     // this.tipDismissed = await getStorage("tipDismissed","false");
-    console.log(numLogins)
+    // console.log(numLogins)
     await AsyncStorage.setItem("numLogins", numLogins.toString());
     this.numLogins = numLogins;
     // console.log(numLogins)

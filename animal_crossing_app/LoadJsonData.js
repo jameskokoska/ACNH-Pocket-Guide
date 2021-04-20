@@ -791,11 +791,6 @@ export function attemptToTranslate(text, forcedTranslation=false){
     return sourcesTranslation;
   }
 
-  var NPCTranslation = attemptToTranslateFromDatabase(text, NPCTranslations)
-  if(NPCTranslation!==text){
-    return NPCTranslation;
-  }
-
   var textArray = [];
   if(text.toString().includes(";")){
     textArray = text.toString().split(";");
@@ -849,10 +844,20 @@ export function attemptToTranslate(text, forcedTranslation=false){
       }
     }
     if(success===false){
-      if(j>0){
-        translatedTextOut+="; " + textArray[j];
+      var npcTranslation = attemptToTranslateFromDatabase(textArray[j], NPCTranslations)
+      if(npcTranslation!==textArray[j]){
+        if(j>0){
+          translatedTextOut+="; " + npcTranslation;
+        } else {
+          translatedTextOut+=npcTranslation;
+        }
+        continue;
       } else {
-        translatedTextOut+=textArray[j];
+        if(j>0){
+          translatedTextOut+="; " + textArray[j];
+        } else {
+          translatedTextOut+=textArray[j];
+        }
       }
     }
   }
