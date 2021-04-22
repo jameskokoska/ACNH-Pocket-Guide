@@ -94,7 +94,12 @@ export function countCollection(checkListKeyStart){
   var count = 0;
   for(var i = 0; i<global.collectionList.length; i++){
     if(global.collectionList[i].includes(checkListKeyStart) && !global.collectionList[i].includes("wishlist")){
-      count++
+      if(checkListKeyStart.includes("artCheckList") && (global.collectionList[i].includes("No") || global.collectionList[i].includes("0"))){
+        continue;
+      } else {
+        count++
+      }
+      
     }
   }
   return count;

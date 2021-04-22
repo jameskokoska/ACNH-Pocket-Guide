@@ -155,8 +155,8 @@ function ListPage(props){
             searchActual = ["Collected"];
           } else if (props.newItems){
             searchActual = ["New version"];
-          } else if (props.wishlistItems){
-            searchActual = ["Wishlist",...searchFilters];
+          // } else if (props.wishlistItems){
+          //   searchActual = ["Wishlist",...searchFilters]; //todo add wishlist filtering eventually
           } else if (props.villagerGifts) {
             searchActual = [...props.villagerGiftsFilters,...searchActual];
           } else if (props.itemIDs!==undefined && props.itemIDs!=="") {
@@ -330,11 +330,22 @@ function ListPage(props){
               if(item["Name"]===previousVariation && !item["checkListKey"].includes("recipesCheckList")){
                 previousVariation = item["Name"];
               } else {
-                item.dataSet = j;
-                item.index = i;
-                dataUpdated = [...dataUpdated, item];
-                // previousVariation = item.[props.textProperty[j]];
-                previousVariation = item["Name"];
+                if(props.wishlistItems){
+                  if(global.collectionList.includes("wishlist"+item.["checkListKey"])){
+                    item.dataSet = j;
+                    item.index = i;
+                    dataUpdated = [...dataUpdated, item];
+                    // previousVariation = item.[props.textProperty[j]];
+                    previousVariation = item["Name"];
+                  } 
+                } else {
+                  item.dataSet = j;
+                  item.index = i;
+                  dataUpdated = [...dataUpdated, item];
+                  // previousVariation = item.[props.textProperty[j]];
+                  previousVariation = item["Name"];
+                }
+                
               }
             // } else {
             //   item.dataSet = j;
@@ -439,11 +450,11 @@ function ListPage(props){
         <HeaderLoading disableSearch={props.disableSearch} title={props.title} headerHeight={headerHeight} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
       </>
     )
-  } else if (data.length===0 && props.wishlistItems && search===""){
+  } else if (data.length===0 && props.wishlistItems && search==="" && global.collectionList.includes("wishlist")){
     return(<>
       <View style={{height:10}}/>
       {header}
-      {/* <PopupFilter villagerGifts={props.villagerGifts} disableFilters={props.disableFilters} title={props.title} ref={popupFilter} filterSearchable={props.filterSearchable} updateSearchFilters={updateSearchFilters}/>  */}
+      <PopupFilter villagerGifts={props.villagerGifts} disableFilters={props.disableFilters} title={props.title} ref={popupFilter} filterSearchable={props.filterSearchable} updateSearchFilters={updateSearchFilters}/> 
       <View style={{height:Dimensions.get('window').height/2}}/>
       <TouchableOpacity onPress={() => props.setPage(1)}>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"You have no wishlist items."}</TextFont>

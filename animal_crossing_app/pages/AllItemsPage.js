@@ -5,6 +5,24 @@ import LottieView from 'lottie-react-native';
 import colors from '../Colors.js';
 import {getSettingsString} from "../LoadJsonData"
 
+//Use this as template for all pages
+//preload checklist keys on load
+//pass in data structure
+//[
+//  {
+//   category:"Housewares"
+//   disablePopup: false,
+//   imageProperty: "Image",
+//   textProperty: "NameLanguage",
+//   textProperty2: "",
+//   textProperty3: "",
+//   popUpCornerImageLabelProperty: "Source",
+//   popUpCornerImageProperty: "Source",
+//   popUpPhraseProperty: "",
+//   searchKey: ["NameLanguage"],
+//  }
+// ]
+//always pull from same database
 class AllItemsPage extends Component {
   render(){
     var title = "Everything";

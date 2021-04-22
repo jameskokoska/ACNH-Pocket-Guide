@@ -4,7 +4,7 @@ import {Agenda} from 'react-native-calendars';
 import TextFont from '../components/TextFont';
 import colors from '../Colors'
 import {getPhoto} from "../components/GetPhoto"
-import {doWeSwapDate, getMonthFromString, getCurrentDateObject} from "../components/DateFunctions"
+import {doWeSwapDate, getMonthFromString, getCurrentDateObject, addDays} from "../components/DateFunctions"
 import {getEventName, removeAccents, translateDateRange, attemptToTranslateItem, capitalize, getSettingsString, attemptToTranslate, translateBirthday} from "../LoadJsonData"
 import {getSpecialOccurrenceDate} from "../components/EventContainer"
 import FastImage from '../components/FastImage';
@@ -14,11 +14,6 @@ import {LocaleConfig} from 'react-native-calendars';
 import Header from "../components/Header"
 import {VillagerPopupPopup} from "./HomePage"
 import {specialEvents, isDateInRange} from "../components/DateFunctions"
-
-//Note: these have changes
-// Northern Hemisphere Dates -> Dates (Northern Hemisphere)
-// Southern Hemisphere Dates -> Dates (Southern Hemisphere)
-// and use the Year column
 
 export default class CalendarPage extends Component {
   constructor(item) {
@@ -161,8 +156,8 @@ export default class CalendarPage extends Component {
               } else {
                 this.state.items[strTime].push({
                   name: capitalize(event["Name"]),
-                  time: event["Time"],
-                  image: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
+                  time: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
+                  image: event["Name"],
                   color: colors.white,
                   type:"filter",
                   filter:event["Name"]
@@ -182,7 +177,33 @@ export default class CalendarPage extends Component {
               filter:"Daisy Mae"
             });
             this.state.itemsColor[strTime] = styleRepeatEvent;
-          } else if (date.getDay()===6){
+          } 
+
+          //Check if there was a bug-off/fishing tourney the day before, then push K.K. pack one day
+          var moveKKTo0 = false; //Day of the week to move to
+          var moveKKTo1 = false; //Day of the week to move to
+          var moveKK = false;
+          var moveKKTo = 6;
+          
+          specialEvents.map( (event, index)=>{
+            var eventDay = getSpecialOccurrenceDate(date.getFullYear(), index, specialEvents);
+            if(eventDay[0]===addDays(date,-1).getDate() && eventDay[1]===addDays(date,-1).getMonth()){
+              moveKKTo0 = true;
+            }
+            if(eventDay[0]===addDays(date,-2).getDate() && eventDay[1]===addDays(date,-2).getMonth()){
+              moveKKTo1 = true;
+            }
+            if(eventDay[0]===date.getDate() && eventDay[1]===date.getMonth()){
+              moveKK = true;
+            }
+          })
+          if(moveKKTo1 && moveKKTo0){
+            moveKKTo = 1
+          } else if (moveKKTo0){
+            moveKKTo = 0
+          }
+
+          if ((date.getDay()===moveKKTo) && !moveKK){
             this.state.items[strTime].push({
               name: 'K.K. Slider',
               time: getSettingsString("settingsUse24HourClock") === "true" ? "18:00 - 24:00" : "6 PM - 12 AM",

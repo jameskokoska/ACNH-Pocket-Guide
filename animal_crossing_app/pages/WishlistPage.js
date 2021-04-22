@@ -13,7 +13,7 @@ export default class Wishlist extends Component {
   render(){
     return(
       <AllItemsPage 
-        disableFilters={true}
+        // disableFilters={true}
         title="Wishlist"
         wishlistItems={true}
         setPage={this.props.setPage}

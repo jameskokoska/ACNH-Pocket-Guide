@@ -52,6 +52,10 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 global.gameVersion = "1.9.0";
 global.changelog = `
 -Fixed K.K. event - now pushed back if there is a bug-off/fishing tourney
+-Fixed fireworks icon
+-Fixed painting collection counter
+-Added better filter support
+
 -Added more translations
 -Started German translations
 - Thanks Ännchen!

@@ -226,9 +226,8 @@ export function getPhoto(name, fallback=""){
     return require("../assets/icons/season.png");
   } else if(fallback.includes("shopping")){
     return require("../assets/icons/nookShopping.png");
-  } else {
-    return require("../assets/icons/leaf.png");
   }
+  return require("../assets/icons/leaf.png");
 }
 
 export function getPhotoCorner(name){
