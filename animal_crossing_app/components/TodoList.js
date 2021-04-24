@@ -21,7 +21,6 @@ class TodoList extends Component {
       data: [],
       showTurnipLog: false,
       showEdit: false,
-      todoSorted:true,
     }
   }
 
@@ -37,8 +36,6 @@ class TodoList extends Component {
   loadList = async() => {
     var defaultList = [
       {title: attemptToTranslate('Water Flowers'), finished: false, picture:"flower.png"},
-      {title: attemptToTranslate('Turnip Prices'), finished: false, picture:"turnip.png", small:true},
-      {title: attemptToTranslate('Turnip Prices'), finished: false, picture:"turnip.png", small:true},
       {title: attemptToTranslate('Talk To Villagers'), finished: false, picture:"cat.png"},
       {title: attemptToTranslate('Dig Fossils'), finished: false, picture:"digIcon.png"},
       {title: attemptToTranslate('Rock') + " 1", finished: false, picture:"rock.png",small:true},
@@ -48,11 +45,12 @@ class TodoList extends Component {
       {title: attemptToTranslate('Rock') + " 5", finished: false, picture:"rock.png",small:true},
       {title: attemptToTranslate('Rock') + " 6", finished: false, picture:"rock.png",small:true},
       {finished: false,picture: "https://acnhcdn.com/latest/MenuIcon/BottleRecipe.png",small: false,title: attemptToTranslate("Find DIY bottle"),},
+      {title: attemptToTranslate('Turnip Prices'), finished: false, picture:"turnip.png", small:true},
+      {title: attemptToTranslate('Turnip Prices'), finished: false, picture:"turnip.png", small:true},
     ]
     var storageData = JSON.parse(await getStorage("ToDoList",JSON.stringify(defaultList)));
-    var todoSorted = await getStorage("ToDoListSorted","true") === "true";
     if(this.mounted){
-      this.setState({data:storageData, todoSorted:todoSorted});
+      this.setState({data:storageData,});
     }
     this.props.setLoadedToDo(true);
   }
@@ -80,6 +78,26 @@ class TodoList extends Component {
     this.saveList(newTaskList);
   }
 
+  reorderItem = (index, direction) => {
+    //-1 moves the item down
+    //1 moves the item up
+    const items = this.state.data
+    const position = index
+    if (
+      (direction === -1 && position === 0) ||
+      (direction === 1 && position === items.length - 1)
+    ) {
+      return;
+    }
+
+    const item = items[position]; // save item for later
+    
+    items.splice(index, 1);
+    items.splice(position + direction, 0, item);
+
+    this.setState({data: items});
+  };
+
   componentWillUnmount(){
   }
 
@@ -105,29 +123,9 @@ class TodoList extends Component {
     this.saveList(currentData);
   }
 
-  // toggleTurnipLog = async () => {
-  //   var currentTurnipLog = this.state.showTurnipLog;
-  //   this.setState({showTurnipLog:!currentTurnipLog});
-  //   var currentTurnipLogString = !currentTurnipLog ? "true" : "false"
-  //   await AsyncStorage.setItem("TurnipListShow", currentTurnipLogString);
-  //   getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(20) : "";
-  // }
-
   render(){
-    // var turnipLog = <View/>;
-    // if(this.state.showTurnipLog===true){
-    //   turnipLog = <TurnipLog/>;
-    // }
     return <>
       <View style={{alignItems:"center",flexDirection:"row", right:0, top:0,position:'absolute',zIndex:10}}>
-        <TouchableOpacity style={{padding:10}} 
-          onPress={async()=>{
-            this.setState({todoSorted:!this.state.todoSorted}); 
-            await AsyncStorage.setItem("ToDoListSorted", !this.state.todoSorted?"true":"false");
-            getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
-        }}>
-          <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{this.state.todoSorted?"Unsort":"Sort"}</TextFont>
-        </TouchableOpacity>
         <TouchableOpacity style={{padding:10}} 
           onPress={()=>{
             this.uncheckAll(); 
@@ -150,40 +148,7 @@ class TodoList extends Component {
       </View>
       <View style={{height:10}}/>
       <View style={{alignItems: 'center'}}>
-        {this.state.todoSorted?<>
-          {this.state.data.map( (item, index)=>{
-            if(!item.small){
-              return(
-                <TodoItem
-                  key={item+index.toString()}
-                  item={item}
-                  index={index}
-                  checkOffItem={this.checkOffItem}
-                  deleteItem={this.deleteItem}
-                  showEdit={this.state.showEdit}
-                />
-              )
-            }
-          })}
-          <View style={{paddingTop:0, marginHorizontal: 20, flex: 1, flexDirection: 'row', justifyContent:'center',flexWrap:"wrap"}}>
-            {this.state.data.map( (item, index)=>{
-              if(item.small){
-                return(
-                  <TodoItemSmall
-                    key={item+index.toString()}
-                    item={item}
-                    index={index}
-                    checkOffItem={this.checkOffItem}
-                    deleteItem={this.deleteItem}
-                    showEdit={this.state.showEdit}
-                  />
-                )
-              }
-            })}
-          </View>
-        </>:<View/>}
-
-        {!this.state.todoSorted?<View style={{paddingTop:0, marginHorizontal: 0, flex: 1, flexDirection: 'row', justifyContent:'center',flexWrap:"wrap"}}>
+        <View style={{paddingTop:0, marginHorizontal: 0, flex: 1, flexDirection: 'row', justifyContent:'center',flexWrap:"wrap"}}>
           {this.state.data.map( (item, index)=>{
             if(item.small){
               return(
@@ -193,6 +158,7 @@ class TodoList extends Component {
                   index={index}
                   checkOffItem={this.checkOffItem}
                   deleteItem={this.deleteItem}
+                  reorderItem={this.reorderItem}
                   showEdit={this.state.showEdit}
                 />
               )
@@ -204,12 +170,13 @@ class TodoList extends Component {
                   index={index}
                   checkOffItem={this.checkOffItem}
                   deleteItem={this.deleteItem}
+                  reorderItem={this.reorderItem}
                   showEdit={this.state.showEdit}
                 />
               )
             }
           })}
-        </View>:<View/>}
+        </View>
 
         {this.props.sections["To-Do - Turnip Log"]===true?<TurnipLog/>:<View/>}
       </View>
@@ -454,15 +421,33 @@ class TodoItem extends Component {
   }
   removeButton = (props)=>{
     if(props.showEdit || this.state.showRemove)
-      return(
-        <TouchableOpacity style={{left:-10, top:-5,position:'absolute',zIndex:10, padding:10}} 
-          onPress={()=>{
-            props.deleteItem(props.index); 
-            this.setState({showRemove:false})
-        }}>
-          <Image source={require("../assets/icons/deleteIcon.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
-        </TouchableOpacity>
-      )
+      return(<>
+        <View style={{flexDirection:"row",left:-10, top:-5,position:'absolute',zIndex:10, }}>
+          <TouchableOpacity style={{padding:9}} 
+            onPress={()=>{
+              props.deleteItem(props.index); 
+              this.setState({showRemove:false})
+          }}>
+            <Image source={require("../assets/icons/deleteIcon.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
+          </TouchableOpacity>
+        </View>
+        <View style={{flexDirection:"row",right:5, top:-5,position:'absolute',zIndex:10, }}>
+          <TouchableOpacity style={{padding:9}} 
+            onPress={()=>{
+              props.reorderItem(props.index, -1); 
+              this.setState({showRemove:false})
+          }}>
+            <Image source={require("../assets/icons/upArrow.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
+          </TouchableOpacity>
+          <TouchableOpacity style={{padding:9}} 
+            onPress={()=>{
+              props.reorderItem(props.index, 1); 
+              this.setState({showRemove:false})
+          }}>
+            <Image source={require("../assets/icons/downArrow.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
+          </TouchableOpacity>
+        </View>
+      </>)
     else
       return(
         <View/>
@@ -530,14 +515,33 @@ class TodoItemSmall extends Component {
   }
   removeButton = (props)=>{
     if(props.showEdit || this.state.showRemove)
-      return(
-        <TouchableOpacity style={{left:-10, top:-5,position:'absolute',zIndex:10, padding:10}} 
-          onPress={()=>{
-            props.deleteItem(props.index); 
-        }}>
-          <Image source={require("../assets/icons/deleteIcon.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
-        </TouchableOpacity>
-      )
+      return(<>
+        <View style={{flexDirection:"row",left:-8, top:-5,position:'absolute',zIndex:10, }}>
+          <TouchableOpacity style={{padding:9}} 
+            onPress={()=>{
+              props.deleteItem(props.index); 
+              this.setState({showRemove:false})
+          }}>
+            <Image source={require("../assets/icons/deleteIcon.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
+          </TouchableOpacity>
+        </View>
+        <View style={{flexDirection:"row",right:1, top:-5,position:'absolute',zIndex:10, }}>
+          <TouchableOpacity style={{paddingVertical:9, padding:2}} 
+            onPress={()=>{
+              props.reorderItem(props.index, -1); 
+              this.setState({showRemove:false})
+          }}>
+            <Image source={require("../assets/icons/upArrow.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
+          </TouchableOpacity>
+          <TouchableOpacity style={{paddingVertical:9, padding:2}} 
+            onPress={()=>{
+              props.reorderItem(props.index, 1); 
+              this.setState({showRemove:false})
+          }}>
+            <Image source={require("../assets/icons/downArrow.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
+          </TouchableOpacity>
+        </View>
+      </>)
     else
       return(
         <View/>

@@ -2,7 +2,7 @@ export const gameVersion = "1.9.0"
 
 export const changelog = `
 -Added heart crystals exchange currency in popups
--
+-Added ability to reorder task list - Tap [Edit list] or long press a task
 -Added better filter support
 -Fixed K.K. event - now pushed back if there is a bug-off/fishing tourney
 -Fixed fireworks icon
