@@ -25,6 +25,7 @@ import PopupFilter from './PopupFilter'
 import TextFont from "./TextFont"
 import {compareItemID, removeAccents, inChecklist, attemptToTranslateItem, getSettingsString, attemptToTranslate} from "../LoadJsonData"
 import {PopupBottomCustom} from "./Popup"
+import {gameVersion} from "../Changelog"
 
 //use tabs={false} if the page doesn't have  the tab bar
 
@@ -172,7 +173,7 @@ function ListPage(props){
             searchActual = [...props.currentSetFilters,...searchActual];
           }
           for(var z = 0; z < searchActual.length; z++){
-            if(searchActual.includes("New version") && props.newItems && item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===global.gameVersion){
+            if(searchActual.includes("New version") && props.newItems && item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===gameVersion){
               filterFound = true;
               break;
             } else if (searchActual.includes("New version") && props.newItems){

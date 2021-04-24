@@ -175,8 +175,11 @@ export class InfoLine extends Component {
         ending= " " + attemptToTranslate("miles");
         imageSource = <Image style={styles.infoLineImage} source={require("../assets/icons/miles.png")}/>;
       } else if(this.props.item[this.props.ending].toLowerCase().includes("nook points")){
-        ending= " " + attemptToTranslate("Nook Points");
+        ending= " " + attemptToTranslate("Nook points");
         imageSource = <Image style={styles.infoLineImage} source={require("../assets/icons/nookLinkCoin.png")}/>;
+      } else if(this.props.item[this.props.ending].toLowerCase().includes("heart crystals")){
+        ending= " " + attemptToTranslate("heart crystals");
+        imageSource = <Image style={styles.infoLineImage} source={require("../assets/icons/crystal.png")}/>;
       } else if( text!=="NFS" ){
         ending = " " + attemptToTranslate("bells");
       } else {

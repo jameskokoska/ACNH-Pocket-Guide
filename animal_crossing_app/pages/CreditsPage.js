@@ -10,6 +10,7 @@ import PopupTip from "../components/PopupTip"
 import ButtonComponent from "../components/ButtonComponent"
 import {MailLink, ExternalLink, SubHeader, Header, Paragraph} from "../components/Formattings"
 import {attemptToTranslate} from "../LoadJsonData"
+import {changelog} from "../Changelog"
 
 class CreditsPage extends Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class CreditsPage extends Component {
     }
   }
   render(){
-    var changelogText = global.changelog.toString();
+    var changelogText = changelog.toString();
     changelogText = changelogText.split("\n-");
     return(
       <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>

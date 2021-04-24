@@ -15,6 +15,7 @@ import {PopupBottomCustom} from "./Popup"
 import {getStorage} from "../LoadJsonData"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {MailLink,GiveSupport} from "./Formattings";
+import {changelog} from "../Changelog"
 
 export default class PopupChangelog extends Component {
   async componentDidMount(){
@@ -50,7 +51,7 @@ export default class PopupChangelog extends Component {
   }
 
   render(){
-    var changelogText = global.changelog.toString();
+    var changelogText = changelog.toString();
     const index = changelogText.indexOf("Past changes:");
     if(index>0)
       changelogText = changelogText.substring(0, index);
