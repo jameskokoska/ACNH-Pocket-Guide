@@ -298,6 +298,8 @@ export class InfoLineTriple extends Component {
     }
     if(textLines.length===0){
       return <View/>
+    } else if(textLines.length===1 && textLines[0]===undefined){
+      return <View/>
     } else if(textLines.length===3){
       return <View style={[styles.infoLineBox]}>
             <Image style={styles.infoLineImage} source={this.props.image}/>

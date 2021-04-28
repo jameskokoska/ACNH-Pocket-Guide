@@ -254,7 +254,7 @@ function ListPage(props){
             if(searchActual.includes("Collected")&&searchActual.includes("Not Collected")){
               searchCollected=true;
             }
-            if(searchCollected && searchActual.includes("Show uncraftable item variations")&&item["Kit Cost"] !==undefined && item["Variation"] !==undefined && item["Variant ID"] !==undefined && item["Kit Cost"] ==="NA" && (item["Variation"]!=="NA"||item["Variant ID"] !== "NA")){
+            if(searchCollected && searchActual.includes("Show uncraftable item variations")&&item["Body Customize"] !==undefined && item["Body Customize"] ==="No" && item["Variation"] !==undefined && item["Variation"] !=="NA"){
               filterFound = true;
             }
             //special case for categories

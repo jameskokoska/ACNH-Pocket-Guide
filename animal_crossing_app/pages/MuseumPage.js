@@ -5,7 +5,7 @@ import ListPage from '../components/ListPage';
 import colors from '../Colors.js';
 import {getMonthShort} from "../components/DateFunctions"
 import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
-
+import TextFont from '../components/TextFont';
 
 const renderTabBar = props => (
   <TabBar
@@ -17,9 +17,9 @@ const renderTabBar = props => (
     getLabelText={({ route }) => route.title}
     labelStyle={{padding:0, margin:0}}
     renderLabel={({ route, focused, color }) => (
-      <Text style={{ color, margin: 2, textAlign:"center" }}>
+      <TextFont style={{ color, textAlign:"center", fontSize: 13}}>
         {route.title}
-      </Text>
+      </TextFont>
     )}
   />
 );

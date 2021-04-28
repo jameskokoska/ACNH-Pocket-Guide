@@ -90,7 +90,7 @@ class ListItem extends React.Component{
     }
 
     var boxColor = colors.white[global.darkMode];
-    if(getSettingsString("settingsHighlightNotCraftableVariations") === "true" && this.props.item["Kit Cost"] !==undefined && this.props.item["Variation"] !==undefined && this.props.item["Variant ID"] !==undefined && this.props.item["Kit Cost"] ==="NA" && (this.props.item["Variation"]!=="NA"||this.props.item["Variant ID"] !== "NA")){
+    if(getSettingsString("settingsHighlightNotCraftableVariations") === "true" && this.props.item["Body Customize"] !==undefined && this.props.item["Body Customize"] ==="No" && this.props.item["Variation"] !==undefined && this.props.item["Variation"] !=="NA"){
       boxColor = colors.highlightNonCustomizableItems[global.darkMode];
     } else if(this.props.boxColor===true && getSettingsString("settingsColorLists")==="true"){
       var opacity = "0A"

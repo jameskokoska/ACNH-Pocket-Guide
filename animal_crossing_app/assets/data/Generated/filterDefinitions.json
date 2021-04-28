@@ -707,14 +707,6 @@
           "id": "Tag:Playground"
         },
         {
-          "name": "Seasonal decor",
-          "id": "Tag:Seasonal decor"
-        },
-        {
-          "name": "Shopping",
-          "id": "Tag:Shopping"
-        },
-        {
           "name": "Toilet",
           "id": "Tag:Toilet"
         },
@@ -725,10 +717,6 @@
         {
           "name": "Hello Kitty",
           "id": "Tag:Hello Kitty"
-        },
-        {
-          "name": "Zen-style",
-          "id": "Tag:Zen-style"
         },
         {
           "name": "TV",
@@ -797,10 +785,6 @@
         {
           "name": "Special Fish",
           "id": "Tag:Special Fish"
-        },
-        {
-          "name": "Musical instruments",
-          "id": "Tag:Musical instruments"
         },
         {
           "name": "Air Conditioning",
@@ -3251,6 +3235,10 @@
           "id": "Season/Event:Capricorn"
         },
         {
+          "name": "Children's Day",
+          "id": "Season/Event:Children's Day"
+        },
+        {
           "name": "Festivale (ready days)",
           "id": "Season/Event:Festivale (ready days)"
         },
@@ -3311,6 +3299,10 @@
           "id": "Season/Event:mushrooms"
         },
         {
+          "name": "Wedding Season (Nook Shopping 2)",
+          "id": "Season/Event:Wedding Season (Nook Shopping 2)"
+        },
+        {
           "name": "Pisces",
           "id": "Season/Event:Pisces"
         },
@@ -3351,12 +3343,24 @@
           "id": "Season/Event:Silvester"
         },
         {
+          "name": "Mother's Day",
+          "id": "Season/Event:Mother's Day"
+        },
+        {
           "name": "Valentine's Day (Nook Shopping)",
           "id": "Season/Event:Valentine's Day (Nook Shopping)"
         },
         {
           "name": "Nature Day (Nook Shopping)",
           "id": "Season/Event:Nature Day (Nook Shopping)"
+        },
+        {
+          "name": "Cheese Rolling",
+          "id": "Season/Event:Cheese Rolling"
+        },
+        {
+          "name": "Dragon Boat Festival",
+          "id": "Season/Event:Dragon Boat Festival"
         },
         {
           "name": "Shōgatsu (2)",
@@ -3387,12 +3391,12 @@
           "id": "Season/Event:Scorpio"
         },
         {
-          "name": "Father's Day",
-          "id": "Season/Event:Father's Day"
+          "name": "Dano Festival",
+          "id": "Season/Event:Dano Festival"
         },
         {
-          "name": "Mother's Day",
-          "id": "Season/Event:Mother's Day"
+          "name": "Father's Day",
+          "id": "Season/Event:Father's Day"
         },
         {
           "name": "Nochevieja",
@@ -3441,6 +3445,10 @@
         {
           "name": "summer shells",
           "id": "Season/Event:summer shells"
+        },
+        {
+          "name": "Marine Day",
+          "id": "Season/Event:Marine Day"
         }
       ]
     },
@@ -3747,6 +3755,10 @@
           "id": "HHA Series:golden"
         },
         {
+          "name": "tree's bounty or leaves",
+          "id": "HHA Series:tree's bounty or leaves"
+        },
+        {
           "name": "Hello Kitty",
           "id": "HHA Series:Hello Kitty"
         },
@@ -3769,10 +3781,6 @@
         {
           "name": "Kiki & Lala",
           "id": "HHA Series:Kiki & Lala"
-        },
-        {
-          "name": "tree's bounty or leaves",
-          "id": "HHA Series:tree's bounty or leaves"
         },
         {
           "name": "log",
@@ -4061,6 +4069,10 @@
         {
           "name": "Simple",
           "id": "Style 2:Simple"
+        },
+        {
+          "name": "None",
+          "id": "Style 2:None"
         }
       ]
     },
@@ -5271,6 +5283,14 @@
           "id": "Season/Event:Countdown"
         },
         {
+          "name": "Children's Day",
+          "id": "Season/Event:Children's Day"
+        },
+        {
+          "name": "Le 14 juillet",
+          "id": "Season/Event:Le 14 juillet"
+        },
+        {
           "name": "Prom (Able Sisters)",
           "id": "Season/Event:Prom (Able Sisters)"
         },
@@ -5303,6 +5323,10 @@
           "id": "Season/Event:Summer Solstice (southern hemisphere)"
         },
         {
+          "name": "Wedding Season (Able Sisters)",
+          "id": "Season/Event:Wedding Season (Able Sisters)"
+        },
+        {
           "name": "Bug-Off",
           "id": "Season/Event:Bug-Off"
         },
@@ -5321,6 +5345,10 @@
         {
           "name": "Winter Solstice (northern hemisphere)",
           "id": "Season/Event:Winter Solstice (northern hemisphere)"
+        },
+        {
+          "name": "Father's Day (2)",
+          "id": "Season/Event:Father's Day (2)"
         },
         {
           "name": "Cowherd & Weaver Girl Day",
@@ -5441,8 +5469,8 @@
           "id": "Tag:Brick"
         },
         {
-          "name": "Mario",
-          "id": "Tag:Mario"
+          "name": "Special Inorganic Floors",
+          "id": "Tag:Special Inorganic Floors"
         },
         {
           "name": "Camouflage",
@@ -5529,12 +5557,8 @@
           "id": "Tag:Nature - Brown"
         },
         {
-          "name": "Japanese Style",
-          "id": "Tag:Japanese Style"
-        },
-        {
-          "name": "Special Inorganic Floors",
-          "id": "Tag:Special Inorganic Floors"
+          "name": "Japanese",
+          "id": "Tag:Japanese"
         },
         {
           "name": "Decadence",
@@ -5575,10 +5599,6 @@
         {
           "name": "Iron",
           "id": "Tag:Iron"
-        },
-        {
-          "name": "Wood Parquet",
-          "id": "Tag:Wood Parquet"
         },
         {
           "name": "Slender Rugs",
@@ -5657,16 +5677,12 @@
           "id": "Tag:Special Walls"
         },
         {
-          "name": "None",
-          "id": "Tag:None"
+          "name": "Special Cool Nature Walls",
+          "id": "Tag:Special Cool Nature Walls"
         },
         {
           "name": "Special Warm Nature Walls",
           "id": "Tag:Special Warm Nature Walls"
-        },
-        {
-          "name": "Special Cool Nature Walls",
-          "id": "Tag:Special Cool Nature Walls"
         },
         {
           "name": "Nature Walls",
@@ -5783,6 +5799,10 @@
         {
           "name": "Stone Walls",
           "id": "Tag:Stone Walls"
+        },
+        {
+          "name": "Japanese Style",
+          "id": "Tag:Japanese Style"
         },
         {
           "name": "Cute Walls",
@@ -6329,10 +6349,6 @@
         {
           "name": "kitchen",
           "id": "HHA Concept 2:kitchen"
-        },
-        {
-          "name": "none",
-          "id": "HHA Concept 2:none"
         },
         {
           "name": "ocean",
@@ -7539,10 +7555,6 @@
           "id": "Source:Digging up a fully grown bush"
         },
         {
-          "name": "Villagers",
-          "id": "Source:Villagers"
-        },
-        {
           "name": "Planting a cedar sapling",
           "id": "Source:Planting a cedar sapling"
         },
@@ -7849,14 +7861,6 @@
           "id": "Tag:Playground"
         },
         {
-          "name": "Seasonal decor",
-          "id": "Tag:Seasonal decor"
-        },
-        {
-          "name": "Shopping",
-          "id": "Tag:Shopping"
-        },
-        {
           "name": "Toilet",
           "id": "Tag:Toilet"
         },
@@ -7867,10 +7871,6 @@
         {
           "name": "Hello Kitty",
           "id": "Tag:Hello Kitty"
-        },
-        {
-          "name": "Zen-style",
-          "id": "Tag:Zen-style"
         },
         {
           "name": "TV",
@@ -7941,10 +7941,6 @@
           "id": "Tag:Special Fish"
         },
         {
-          "name": "Musical instruments",
-          "id": "Tag:Musical instruments"
-        },
-        {
           "name": "Air Conditioning",
           "id": "Tag:Air Conditioning"
         },
@@ -8003,6 +7999,10 @@
         {
           "name": "Brick",
           "id": "Tag:Brick"
+        },
+        {
+          "name": "Special Inorganic Floors",
+          "id": "Tag:Special Inorganic Floors"
         },
         {
           "name": "Camouflage",
@@ -8089,8 +8089,8 @@
           "id": "Tag:Nature - Brown"
         },
         {
-          "name": "Special Inorganic Floors",
-          "id": "Tag:Special Inorganic Floors"
+          "name": "Japanese",
+          "id": "Tag:Japanese"
         },
         {
           "name": "Decadence",
@@ -8131,10 +8131,6 @@
         {
           "name": "Iron",
           "id": "Tag:Iron"
-        },
-        {
-          "name": "Wood Parquet",
-          "id": "Tag:Wood Parquet"
         },
         {
           "name": "Slender Rugs",
@@ -8213,16 +8209,12 @@
           "id": "Tag:Special Walls"
         },
         {
-          "name": "None",
-          "id": "Tag:None"
+          "name": "Special Cool Nature Walls",
+          "id": "Tag:Special Cool Nature Walls"
         },
         {
           "name": "Special Warm Nature Walls",
           "id": "Tag:Special Warm Nature Walls"
-        },
-        {
-          "name": "Special Cool Nature Walls",
-          "id": "Tag:Special Cool Nature Walls"
         },
         {
           "name": "Nature Walls",
@@ -8357,8 +8349,16 @@
           "id": "Tag:Picture"
         },
         {
-          "name": "NA",
-          "id": "Tag:NA"
+          "name": "Etc",
+          "id": "Tag:Etc"
+        },
+        {
+          "name": "Unnecessary",
+          "id": "Tag:Unnecessary"
+        },
+        {
+          "name": "FossilUnknown",
+          "id": "Tag:FossilUnknown"
         }
       ]
     },
@@ -8687,6 +8687,10 @@
           "id": "Season/Event:Capricorn"
         },
         {
+          "name": "Children's Day",
+          "id": "Season/Event:Children's Day"
+        },
+        {
           "name": "Festivale (ready days)",
           "id": "Season/Event:Festivale (ready days)"
         },
@@ -8747,6 +8751,10 @@
           "id": "Season/Event:mushrooms"
         },
         {
+          "name": "Wedding Season (Nook Shopping 2)",
+          "id": "Season/Event:Wedding Season (Nook Shopping 2)"
+        },
+        {
           "name": "Pisces",
           "id": "Season/Event:Pisces"
         },
@@ -8787,12 +8795,24 @@
           "id": "Season/Event:Silvester"
         },
         {
+          "name": "Mother's Day",
+          "id": "Season/Event:Mother's Day"
+        },
+        {
           "name": "Valentine's Day (Nook Shopping)",
           "id": "Season/Event:Valentine's Day (Nook Shopping)"
         },
         {
           "name": "Nature Day (Nook Shopping)",
           "id": "Season/Event:Nature Day (Nook Shopping)"
+        },
+        {
+          "name": "Cheese Rolling",
+          "id": "Season/Event:Cheese Rolling"
+        },
+        {
+          "name": "Dragon Boat Festival",
+          "id": "Season/Event:Dragon Boat Festival"
         },
         {
           "name": "Shōgatsu (2)",
@@ -8823,12 +8843,12 @@
           "id": "Season/Event:Scorpio"
         },
         {
-          "name": "Father's Day",
-          "id": "Season/Event:Father's Day"
+          "name": "Dano Festival",
+          "id": "Season/Event:Dano Festival"
         },
         {
-          "name": "Mother's Day",
-          "id": "Season/Event:Mother's Day"
+          "name": "Father's Day",
+          "id": "Season/Event:Father's Day"
         },
         {
           "name": "Nochevieja",
@@ -8879,6 +8899,10 @@
           "id": "Season/Event:summer shells"
         },
         {
+          "name": "Marine Day",
+          "id": "Season/Event:Marine Day"
+        },
+        {
           "name": "Fireworks Show",
           "id": "Season/Event:Fireworks Show"
         },
@@ -8893,6 +8917,10 @@
         {
           "name": "Countdown",
           "id": "Season/Event:Countdown"
+        },
+        {
+          "name": "Le 14 juillet",
+          "id": "Season/Event:Le 14 juillet"
         },
         {
           "name": "Prom (Able Sisters)",
@@ -8911,6 +8939,10 @@
           "id": "Season/Event:Summer Solstice (southern hemisphere)"
         },
         {
+          "name": "Wedding Season (Able Sisters)",
+          "id": "Season/Event:Wedding Season (Able Sisters)"
+        },
+        {
           "name": "Festive shopping",
           "id": "Season/Event:Festive shopping"
         },
@@ -8921,6 +8953,10 @@
         {
           "name": "Winter Solstice (northern hemisphere)",
           "id": "Season/Event:Winter Solstice (northern hemisphere)"
+        },
+        {
+          "name": "Father's Day (2)",
+          "id": "Season/Event:Father's Day (2)"
         },
         {
           "name": "Cowherd & Weaver Girl Day",
@@ -8965,6 +9001,10 @@
         {
           "name": "Big Game Celebration (1)",
           "id": "Season/Event:Big Game Celebration (1)"
+        },
+        {
+          "name": "Wedding Season (Nook Shopping 1)",
+          "id": "Season/Event:Wedding Season (Nook Shopping 1)"
         },
         {
           "name": "New Year's Eve",
@@ -9357,6 +9397,10 @@
         {
           "name": "Simple",
           "id": "Style 2:Simple"
+        },
+        {
+          "name": "None",
+          "id": "Style 2:None"
         }
       ]
     },
@@ -12361,10 +12405,6 @@
         {
           "name": "freezing cold",
           "id": "HHA Concept 2:freezing cold"
-        },
-        {
-          "name": "none",
-          "id": "HHA Concept 2:none"
         }
       ]
     },
@@ -12441,6 +12481,10 @@
           "id": "HHA Series:golden"
         },
         {
+          "name": "tree's bounty or leaves",
+          "id": "HHA Series:tree's bounty or leaves"
+        },
+        {
           "name": "Hello Kitty",
           "id": "HHA Series:Hello Kitty"
         },
@@ -12463,10 +12507,6 @@
         {
           "name": "Kiki & Lala",
           "id": "HHA Series:Kiki & Lala"
-        },
-        {
-          "name": "tree's bounty or leaves",
-          "id": "HHA Series:tree's bounty or leaves"
         },
         {
           "name": "log",

@@ -94,12 +94,11 @@ export function countCollection(checkListKeyStart){
   var count = 0;
   for(var i = 0; i<global.collectionList.length; i++){
     if(global.collectionList[i].includes(checkListKeyStart) && !global.collectionList[i].includes("wishlist")){
-      if(checkListKeyStart.includes("artCheckList") && (global.collectionList[i].includes("No") || global.collectionList[i].includes("0"))){
+      if(checkListKeyStart.includes("artCheckList") && (global.collectionList[i].includes("No") || (global.collectionList[i].includes("0") && global.collectionList[i].includes("Yes")))){
         continue;
       } else {
         count++
       }
-      
     }
   }
   return count;
@@ -299,7 +298,7 @@ export async function loadGlobalData(){
   ],"false");
   global.dataLoadedClothing = await getStorageData([
     "Headwear",
-    "Accessories",
+    "Equipment",
     "Tops",
     "Dress-Up",
     "Clothing Other",
@@ -344,7 +343,7 @@ export async function loadGlobalData(){
     "Photos",
     "Posters",
     "Headwear",
-    "Accessories",
+    "Equipment",
     "Tops",
     "Dress-Up",
     "Clothing Other",
@@ -721,17 +720,19 @@ const mysteryIslandsTranslations = require("./assets/data/translationsApp.json")
 const creatureCatchPhraseTranslations = require("./assets/data/translationsApp.json")["Catch Phrases"];
 const museumDescriptionTranslations = require("./assets/data/translationsApp.json")["Museum Descriptions"];
 
-export function attemptToTranslateFromDatabase(text, database){
+export function attemptToTranslateFromDatabases(text, databases){
   if(text===undefined){
     return "";
   } else if(global.language==="English"){
     return text;
   }
-  for(var i=0; i<database.length; i++){
-    if(database[i].hasOwnProperty("English") && database[i]["English"].toLowerCase()===text.toString().toLowerCase()){
-      var translatedText = database[i][global.language];
-      if(translatedText!==undefined&&translatedText!==null&&translatedText!==""){
-        return translatedText;
+  for(var i=0; i<databases.length; i++){
+    for(var j=0; j<databases[i].length; j++){
+      if(databases[i][j].hasOwnProperty("English") && databases[i][j]["English"].toLowerCase()===text.toString().toLowerCase()){
+        var translatedText = databases[i][j][global.language];
+        if(translatedText!==undefined&&translatedText!==null&&translatedText!==""){
+          return translatedText;
+        }
       }
     }
   }
@@ -744,9 +745,9 @@ export function attemptToTranslateItem(text){
       return(itemTranslations[text][global.language])
     }
   }
-  var newText = attemptToTranslateFromDatabase(text,itemTranslationsMissing);
+  var newText = attemptToTranslateFromDatabases(text,[itemTranslationsMissing]);
   if(text === newText){
-    newText = attemptToTranslateFromDatabase(text,cardsTranslations);
+    newText = attemptToTranslateFromDatabases(text,[cardsTranslations]);
   }
   return newText;
 }
@@ -768,23 +769,23 @@ export function attemptToTranslateSpecial(text, type){
   return text;
 }
 export function attemptToTranslateAchievement(text){
-  return attemptToTranslateFromDatabase(text, achievementTranslations)
+  return attemptToTranslateFromDatabases(text, [achievementTranslations])
 }
 
 export function attemptToTranslateMysteryIslands(text){
-  return attemptToTranslateFromDatabase(text, mysteryIslandsTranslations)
+  return attemptToTranslateFromDatabases(text, [mysteryIslandsTranslations])
 }
 
 export function attemptToTranslateSourceNotes(text){
-  return attemptToTranslateFromDatabase(text, sourceNotesTranslations)
+  return attemptToTranslateFromDatabases(text, [sourceNotesTranslations])
 }
 
 export function attemptToTranslateCreatureCatchPhrase(text){
-  return attemptToTranslateFromDatabase(text, creatureCatchPhraseTranslations)
+  return attemptToTranslateFromDatabases(text, [creatureCatchPhraseTranslations])
 }
 
 export function attemptToTranslateMuseumDescription(text){
-  return attemptToTranslateFromDatabase(text, museumDescriptionTranslations)
+  return attemptToTranslateFromDatabases(text, [museumDescriptionTranslations])
 }
 
 export function attemptToTranslate(text, forcedTranslation=false){
@@ -794,10 +795,7 @@ export function attemptToTranslate(text, forcedTranslation=false){
     return text;
   }
 
-  var sourcesTranslation = attemptToTranslateFromDatabase(text, sourcesTranslations)
-  if(sourcesTranslation!==text){
-    return sourcesTranslation;
-  }
+  
 
   var textArray = [];
   if(text.toString().includes(";")){
@@ -819,7 +817,7 @@ export function attemptToTranslate(text, forcedTranslation=false){
         forcedTranslationText = attemptToTranslateItem(textArray[j])
       }
       if(forcedTranslationText===textArray[j]){
-        forcedTranslationText = attemptToTranslateFromDatabase(textArray[j],eventTranslationsMissing);
+        forcedTranslationText = attemptToTranslateFromDatabases(textArray[j],[eventTranslationsMissing]);
       }
 
       if(forcedTranslationText !== textArray[j]){
@@ -852,13 +850,14 @@ export function attemptToTranslate(text, forcedTranslation=false){
       }
     }
     if(success===false){
-      var npcTranslation = attemptToTranslateFromDatabase(textArray[j], NPCTranslations)
-      if(npcTranslation!==textArray[j]){
+      var extraTranslation = attemptToTranslateFromDatabases(textArray[j], [NPCTranslations, sourcesTranslations])
+      if(extraTranslation!==textArray[j]){
         if(j>0){
-          translatedTextOut+="; " + npcTranslation;
+          translatedTextOut+="; " + extraTranslation;
         } else {
-          translatedTextOut+=npcTranslation;
+          translatedTextOut+=extraTranslation;
         }
+        success = true;
         continue;
       } else {
         if(j>0){

@@ -1,6 +1,20 @@
-export const gameVersion = "1.9.0"
+export const gameVersion = "1.10.0"
 
 export const changelog = `
+-Added 1.10.0 items
+-Updated New Items page
+-Added and updated events
+-Added May Day icon
+-Added more translations
+-Fixed bug with source translations not getting translated for multiple sources
+-Fixed bug with wrong font used
+-Fixed bug with default to-do list out of order
+-Fixed bug with art collection counter
+-
+-Fixed title categories not fitting in some languages
+-Fixed show uncraftable variations broken for some items with customizable patterns but not main colours
+-Fixed button text not being centered on overflow
+-
 -Added heart crystals exchange currency in popups
 -Added ability to reorder task list - Tap [Edit list] or long press a task
 -Added better filter support

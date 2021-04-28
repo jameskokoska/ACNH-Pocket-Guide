@@ -4,6 +4,7 @@ import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import ListPage from '../components/ListPage';
 import colors from '../Colors.js';
 import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
+import TextFont from '../components/TextFont';
 
 
 const renderTabBar = props => (
@@ -15,9 +16,9 @@ const renderTabBar = props => (
     inactiveColor={colors.textBlack[global.darkMode]}
     getLabelText={({ route }) => route.title}
     renderLabel={({ route, focused, color }) => (
-      <Text style={{ color, margin: 2, textAlign:"center" }}>
+      <TextFont style={{ color, textAlign:"center", fontSize: 13}}>
         {route.title}
-      </Text>
+      </TextFont>
     )}
   />
 );
