@@ -20,24 +20,10 @@ class SettingsPage extends Component {
   constructor(props){
     super(props);
     this.state = {
-      date:new Date(),
-      time:new Date(),
-      datePickerVisible: false,
-      timePickerVisible: false,
       deletedInfo: ["0","0"]
     }
   }
-  setCustomTime = () => {
-    var date = this.state.date;
-    date.setMinutes(this.state.time.getMinutes());
-    date.setHours(this.state.time.getHours()); 
-    if(date!==undefined){
-      var timeOffset = date.getTime() - new Date().getTime();
-      global.customTimeOffset = timeOffset;
-      console.log(global.customTimeOffset)
-      AsyncStorage.setItem("customDateOffset", timeOffset.toString());
-    }
-  }
+  
   deleteSavedPhotos = async () =>{
     this.popupDeleteSavedPhotosWait.setPopupVisible(true);
     const deletedInfo = await deleteSavedPhotos();
@@ -45,27 +31,12 @@ class SettingsPage extends Component {
     this.popupDeleteSavedPhotosWait.setPopupVisible(false);
     this.popupDeleteSavedPhotos.setPopupVisible(true);
   }
-  setDate = (event, selectedDate) => {
-    if(selectedDate!==undefined){
-      this.setState({date:selectedDate,datePickerVisible:false})
-      this.setCustomTime();
-    } else {
-      this.setState({datePickerVisible:false})
-    }
-    if(getSettingsString("settingsUseCustomDate")!=="true"){
-      this.popupDateReminder?.setPopupVisible(true);
-    }
-    return true;
+
+  setDateOffset = (timeOffset) => {
+    global.customTimeOffset = timeOffset;
+    AsyncStorage.setItem("customDateOffset"+global.profile, timeOffset.toString());
   }
-  setTime = (event, selectedTime) => {
-    if(selectedTime!==undefined){
-      this.setState({time:selectedTime,timePickerVisible:false, datePickerVisible:true})
-      this.setCustomTime();
-    } else {
-      this.setState({timePickerVisible:false})
-    }
-    return true;
-  }
+  
   render(){
     return(<>
       <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
@@ -104,29 +75,7 @@ class SettingsPage extends Component {
             }
           )}
           <Popup ref={(popupLoadNotifications) => this.popupLoadNotifications = popupLoadNotifications} text="Notifications" textLower="You can select event notifications under the [Edit Events] of the [Events] section on the homepage." button1={"OK"} button1Action={()=>{this.props.setPage(0)}}/>
-          <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.setState({timePickerVisible:true})}} text={"Set Custom Date/Time"} />
-          {this.state.datePickerVisible && (
-            <DateTimePicker
-              testID="dateTimePicker"
-              value={this.state.time}
-              mode={"date"}
-              is24Hour={getSettingsString("settingsUse24HourClock")==="true"}
-              display="default"
-              onChange={this.setDate}
-            />
-          )}
-          {this.state.timePickerVisible && (
-            <DateTimePicker
-              testID="dateTimePicker"
-              value={this.state.time}
-              mode={"time"}
-              is24Hour={getSettingsString("settingsUse24HourClock")==="true"}
-              display="default"
-              onChange={this.setTime}
-            />
-          )}
-          <Popup ref={(popupDateReminder) => this.popupDateReminder = popupDateReminder} text="Custom Date" textLower="Ensure the 'Use a custom date' setting is enabled" button1={"OK"} button1Action={()=>{console.log("")}}/>
-          
+          <CustomDatePicker showPopup={true} setDateOffset={this.setDateOffset}/>
           <View style={{height: 50}}/>
           <SettingsDivider text="Data backup" margin="small"/>
           <ExportFile/><LoadFile/>
@@ -181,6 +130,76 @@ class SettingsPopup extends Component {
         <Paragraph styled={true} margin={false}>{this.state.selected.description}</Paragraph>
       </PopupBottomCustom>
     </>
+  }
+}
+
+export class CustomDatePicker extends Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      date:new Date(),
+      time:new Date(),
+      datePickerVisible: false,
+      timePickerVisible: false,
+    }
+  }
+  setCustomTime = () => {
+    var date = this.state.date;
+    date.setMinutes(this.state.time.getMinutes());
+    date.setHours(this.state.time.getHours()); 
+    if(date!==undefined){
+      var timeOffset = date.getTime() - new Date().getTime();
+      this.props.setDateOffset(timeOffset)
+    }
+  }
+  setDate = (event, selectedDate) => {
+    if(selectedDate!==undefined){
+      this.setState({date:selectedDate,datePickerVisible:false})
+      this.setCustomTime();
+    } else {
+      this.setState({datePickerVisible:false})
+    }
+    if(getSettingsString("settingsUseCustomDate")!=="true" && this.props.showPopup){
+      this.popupDateReminder?.setPopupVisible(true);
+    }
+    return true;
+  }
+  setTime = (event, selectedTime) => {
+    if(selectedTime!==undefined){
+      this.setState({time:selectedTime,timePickerVisible:false, datePickerVisible:true})
+      this.setCustomTime();
+    } else {
+      this.setState({timePickerVisible:false})
+    }
+    return true;
+  }
+  render(){
+    return(
+      <>
+        <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.setState({timePickerVisible:true})}} text={"Set Custom Date/Time"} />
+        {this.state.datePickerVisible && (
+          <DateTimePicker
+            testID="dateTimePicker"
+            value={this.state.time}
+            mode={"date"}
+            is24Hour={getSettingsString("settingsUse24HourClock")==="true"}
+            display="default"
+            onChange={this.setDate}
+          />
+        )}
+        {this.state.timePickerVisible && (
+          <DateTimePicker
+            testID="dateTimePicker"
+            value={this.state.time}
+            mode={"time"}
+            is24Hour={getSettingsString("settingsUse24HourClock")==="true"}
+            display="default"
+            onChange={this.setTime}
+          />
+        )}
+        <Popup ref={(popupDateReminder) => this.popupDateReminder = popupDateReminder} text="Custom Date" textLower="Ensure the 'Use a custom date' setting is enabled" button1={"OK"} button1Action={()=>{console.log("")}}/>
+      </>
+    )
   }
 }
 

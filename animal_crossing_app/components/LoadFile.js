@@ -9,6 +9,7 @@ import * as MediaLibrary from 'expo-media-library';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {attemptToTranslate, getStorage, collectionListSave, loadGlobalData, setSettingsString} from "../LoadJsonData"
 import colors from "../Colors"
+import {profileNames} from "../pages/ProfilesPage"
 
 class LoadFile extends Component {
   constructor() {
@@ -59,14 +60,22 @@ class LoadFile extends Component {
 async function importAllData(text){
   var totalImport = text.split("\n");
   var totalAchievements = [];
+  var currentProfile = ""
+  var currentCollectionList = (await getStorage("collectedString"+currentProfile,"")).split("\n");
+
   for(var i = 0; i<totalImport.length; i++){
     if(totalImport[i].includes("{") && totalImport[i].includes("}")){
       var key = totalImport[i].match(/\{(.*?)\}/);
       var importEntry = totalImport[i].replace(key[0],"")
-      if(key[1]==="Achievements"){
+      if(importEntry==="" || importEntry==="\n" || totalImport[i]==="\n"){
+        continue;
+      }else if(key[1]==="Profile"){
+        currentProfile = importEntry
+        currentCollectionList = (await getStorage("collectedString"+currentProfile,"")).split("\n");
+      } else if(key[1]==="Achievements"){
         totalAchievements.push(importEntry);
       } else {
-        AsyncStorage.setItem(key[1], importEntry);
+        await AsyncStorage.setItem(key[1]+currentProfile, importEntry);
         if(key[1]==="name"){
           global.name=importEntry
         } else if(key[1]==="islandName") {
@@ -81,34 +90,47 @@ async function importAllData(text){
           setSettingsString("settingsNorthernHemisphere",importEntry);
         }
       }
-    } else {
+    } else if (totalImport[i]!=="---END---"){
       var exists = false;
-      for(var j = 0; j<global.collectionList.length; j++){
-        if(global.collectionList[j]===totalImport[i]){
+      for(var j = 0; j<currentCollectionList.length; j++){
+        if(currentCollectionList[j]===totalImport[i]){
           exists=true;
         }
       }
       if(exists===false){
-        global.collectionList.push(totalImport[i]);
+        currentCollectionList.push(totalImport[i]);
       }
     }
+    if(totalImport[i]==="---END---" || i+1===totalImport.length){
+      await AsyncStorage.setItem("Achievements"+currentProfile, JSON.stringify(totalAchievements));
+      var outputString = "";
+      for(var x = 0; x<currentCollectionList.length; x++){
+        outputString += currentCollectionList[x];
+        outputString += "\n";
+      }
+      await AsyncStorage.setItem("collectedString"+currentProfile, outputString);
+    }
   }
-  collectionListSave();
-  loadGlobalData();
-  AsyncStorage.setItem("Achievements", JSON.stringify(totalAchievements));
+  global.collectionList = (await getStorage("collectedString"+global.profile,"")).split("\n");
   return totalImport.length
 }
 
 async function getAllData(){
-  var data = await getStorage("collectedString","");
-  var data2 = "\n{Achievements}" + JSON.parse(await getStorage("Achievements","[]")).join("\n{Achievements}");
-  var data3 = "\n{name}" + (await getStorage("name",""))
-  var data4 = "\n{islandName}" + (await getStorage("islandName",""))
-  var data5 = "\n{dreamAddress}" + (await getStorage("dreamAddress",""))
-  var data6 = "\n{friendCode}" + (await getStorage("friendCode",""))
-  var data7 = "\n{selectedFruit}" + (await getStorage("selectedFruit",""))
-  var data8 = "\n{settingsNorthernHemisphere}" + (await getStorage("settingsNorthernHemisphere",""))
-  return data + data2 + data3 + data4 + data5 + data6 + data7 + data8
+  var dataTotal = ""
+  for(var i = 0; i<profileNames.length; i++){
+    var profile = profileNames[i]
+    var data = await getStorage("collectedString"+profile,"");
+    var data2 = "\n{Achievements}" + JSON.parse(await getStorage("Achievements"+profile,"[]")).join("\n{Achievements}");
+    var data3 = "\n{name}" + (await getStorage("name"+profile,""))
+    var data4 = "\n{islandName}" + (await getStorage("islandName"+profile,""))
+    var data5 = "\n{dreamAddress}" + (await getStorage("dreamAddress"+profile,""))
+    var data6 = "\n{friendCode}" + (await getStorage("friendCode"+profile,""))
+    var data7 = "\n{selectedFruit}" + (await getStorage("selectedFruit"+profile,""))
+    var data8 = "\n{settingsNorthernHemisphere}" + (await getStorage("settingsNorthernHemisphere"+profile,""))
+    dataTotal = dataTotal + "{Profile}"+profile +"\n" + data + data2 + data3 + data4 + data5 + data6 + data7 + data8 + "\n" + "---END---" + "\n"
+  }
+  console.log(dataTotal.replace(/^\s*\n/gm, ""))
+  return dataTotal.replace(/^\s*\n/gm, "") 
 }
 
 class LoadClipboard extends Component {

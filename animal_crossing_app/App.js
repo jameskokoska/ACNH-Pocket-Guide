@@ -14,7 +14,7 @@ import HomePage from './pages/HomePage';
 import SettingsPage from './pages/SettingsPage';
 import ItemsPage from './pages/ItemsPage';
 import AllItemsPage from './pages/AllItemsPage';
-import TestPage from './pages/TestPage';
+import ProfilesPage from './pages/ProfilesPage';
 import CraftingPage from './pages/CraftingPage';
 import FadeInOut from './components/FadeInOut';
 import Check from './components/Check';
@@ -61,7 +61,7 @@ class App extends Component {
     this.numLogins;
     this.state = {
       loaded: false,
-      currentPage: 0,
+      currentPage: 25,
       open:false,
       propsPassed:""
     }
@@ -77,6 +77,19 @@ class App extends Component {
       }
       //console.log(global.settingsCurrent[i]["keyName"])
     }
+  }
+
+  loadProfileData = async(selectedProfile) => {
+    //empty string is default profile
+    global.profile = selectedProfile
+    global.collectionList = (await getStorage("collectedString"+global.profile,"")).split("\n");
+    global.name = await getStorage("name"+global.profile,"");
+    global.islandName = await getStorage("islandName"+global.profile,"");
+    global.dreamAddress = await getStorage("dreamAddress"+global.profile,"");
+    global.friendCode = await getStorage("friendCode"+global.profile,"");
+    global.selectedFruit = await getStorage("selectedFruit"+global.profile,"");
+    global.customTimeOffset = await getStorage("customDateOffset"+global.profile,"0");
+    console.log(global.collectionList)
   }
 
   loadSections = async(key, defaultSections) => {
@@ -113,15 +126,8 @@ class App extends Component {
     // console.log(numLogins)
     await AsyncStorage.setItem("numLogins", numLogins.toString());
     this.numLogins = numLogins;
-    // console.log(numLogins)
-    global.collectionList = (await getStorage("collectedString","")).split("\n");
-    // console.log(global.collectionList)
-
-    global.name = await getStorage("name","");
-    global.islandName = await getStorage("islandName","");
-    global.dreamAddress = await getStorage("dreamAddress","");
-    global.friendCode = await getStorage("friendCode","");
-    global.selectedFruit = await getStorage("selectedFruit","");
+    global.profile = await getStorage("selectedProfile","");
+    await this.loadProfileData(global.profile);
     var defaultLanguage = getDefaultLanguage();
     global.language = await getStorage("Language",defaultLanguage);
     
@@ -131,7 +137,6 @@ class App extends Component {
     //Load Settings
     await this.loadSettings();
 
-    global.customTimeOffset = await getStorage("customDateOffset","0");
     this.updateSettings();
 
     //Load Fonts
@@ -338,8 +343,10 @@ class App extends Component {
         currentPageView = <VillagerFurniture villager={this.state.propsPassed}/>
       } else if (this.state.currentPage===23){
         currentPageView = <CustomFiltersPage currentFiltersSearchFor={this.state.propsPassed} titlePassed={this.state.propsPassed} setPage={this.setPage}/>
-      }  else if (this.state.currentPage===24){
+      } else if (this.state.currentPage===24){
         currentPageView = <VillagersCompatibilityPage setPage={this.setPage}/>
+      } else if (this.state.currentPage===25){
+        currentPageView = <ProfilesPage setPage={this.setPage} loadProfileData={this.loadProfileData}/>
       } else {
         currentPageView = <Text>Default</Text>
       }

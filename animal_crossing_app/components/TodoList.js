@@ -48,7 +48,7 @@ class TodoList extends Component {
       {title: attemptToTranslate('Turnip Prices'), finished: false, picture:"turnip.png", small:true},
       {title: attemptToTranslate('Turnip Prices'), finished: false, picture:"turnip.png", small:true},
     ]
-    var storageData = JSON.parse(await getStorage("ToDoList",JSON.stringify(defaultList)));
+    var storageData = JSON.parse(await getStorage("ToDoList"+global.profile,JSON.stringify(defaultList)));
     if(this.mounted){
       this.setState({data:storageData,});
     }
@@ -56,7 +56,7 @@ class TodoList extends Component {
   }
 
   saveList = async(data) => {
-    await AsyncStorage.setItem("ToDoList", JSON.stringify(data));
+    await AsyncStorage.setItem("ToDoList"+global.profile, JSON.stringify(data));
   }
 
   checkOffItem = (index) => {
@@ -214,9 +214,9 @@ class TurnipLog extends Component {
   }
 
   loadList = async() => {
-    var storageData = JSON.parse(await getStorage("TurnipList",JSON.stringify(this.defaultList)));
-    var storageLastPattern = await getStorage("TurnipListLastPattern","-1");
-    var storageFirstTime = await getStorage("TurnipListFirstTime","false");
+    var storageData = JSON.parse(await getStorage("TurnipList"+global.profile,JSON.stringify(this.defaultList)));
+    var storageLastPattern = await getStorage("TurnipListLastPattern"+global.profile,"-1");
+    var storageFirstTime = await getStorage("TurnipListFirstTime"+global.profile,"false");
     this.setState({data:storageData, lastPattern: storageLastPattern, firstTime: storageFirstTime});
   }
 
@@ -226,7 +226,7 @@ class TurnipLog extends Component {
   }
 
   saveList = async(data) => {
-    await AsyncStorage.setItem("TurnipList", JSON.stringify(data));
+    await AsyncStorage.setItem("TurnipList"+global.profile, JSON.stringify(data));
   }
 
   updateItem = (item, index) => {
@@ -311,7 +311,7 @@ class TurnipLog extends Component {
           customTickIcon={()=><View/>}
           activeItemStyle={{borderRadius: 10, backgroundColor: colors.lightDarkAccentHeavy[global.darkMode]}}
           dropDownStyle={{borderBottomLeftRadius: 10, borderBottomRightRadius: 10, borderWidth: 0, backgroundColor: colors.lightDarkAccent2[global.darkMode], opacity: 0.98, }}
-          onChangeItem={async (item) => {this.setState({lastPattern:item.value}); await AsyncStorage.setItem("TurnipListLastPattern", item.value);}}
+          onChangeItem={async (item) => {this.setState({lastPattern:item.value}); await AsyncStorage.setItem("TurnipListLastPattern"+global.profile, item.value);}}
         />
         <View style={{height:5}}/>
         <DropDownPicker
@@ -331,7 +331,7 @@ class TurnipLog extends Component {
           customTickIcon={()=><View/>}
           activeItemStyle={{borderRadius: 10, backgroundColor: colors.lightDarkAccentHeavy[global.darkMode]}}
           dropDownStyle={{borderBottomLeftRadius: 10, borderBottomRightRadius: 10, borderWidth: 0, backgroundColor: colors.lightDarkAccent2[global.darkMode], opacity: 0.98, }}
-          onChangeItem={async (item) => {this.setState({firstTime:item.value}); await AsyncStorage.setItem("TurnipListFirstTime", item.value);}}
+          onChangeItem={async (item) => {this.setState({firstTime:item.value}); await AsyncStorage.setItem("TurnipListFirstTime"+global.profile, item.value);}}
         />
 
         {this.state.data.map( (item, index)=>

@@ -217,7 +217,8 @@ export function collectionListSave(){
     outputString += global.collectionList[i];
     outputString += "\n";
   }
-  AsyncStorage.setItem("collectedString", outputString);
+  console.log(outputString)
+  AsyncStorage.setItem("collectedString"+global.profile, outputString);
 }
 
 export function removeAccents(text){

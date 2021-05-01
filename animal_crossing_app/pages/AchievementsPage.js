@@ -217,14 +217,14 @@ class AchievementStamp extends Component {
   }
 
   loadChecked = async() => {
-    var storageData = JSON.parse(await getStorage("Achievements",JSON.stringify([])));
+    var storageData = JSON.parse(await getStorage("Achievements"+global.profile,JSON.stringify([])));
     if(storageData.includes(this.id) && this.mounted){
       this.setState({checked:true})
     }
   }
 
   checkOffItem = async(id) => {
-    var oldList = await JSON.parse(await getStorage("Achievements",JSON.stringify([])));
+    var oldList = await JSON.parse(await getStorage("Achievements"+global.profile,JSON.stringify([])));
     
     if(oldList.includes(id)){
       oldList = oldList.filter(item => item !== id);
@@ -243,7 +243,7 @@ class AchievementStamp extends Component {
 
   saveList = async(data) => {
     if(this.mounted)
-      await AsyncStorage.setItem("Achievements", JSON.stringify(data));
+      await AsyncStorage.setItem("Achievements"+global.profile, JSON.stringify(data));
   }
   render(){
     return (

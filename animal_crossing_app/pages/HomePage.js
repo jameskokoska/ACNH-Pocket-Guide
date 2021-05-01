@@ -348,7 +348,7 @@ class FriendCode extends Component {
 }
 
 
-class ConfigureHomePages extends Component {
+export class ConfigureHomePages extends Component {
   constructor(props) {
     super(props);
     var sections = this.props.sections
@@ -439,7 +439,7 @@ class SetNotificationTime extends Component {
   }
 }
 
-class ConfigureHomePageSettingContainer extends Component {
+export class ConfigureHomePageSettingContainer extends Component {
   constructor(props){
     super(props);
     this.state = {

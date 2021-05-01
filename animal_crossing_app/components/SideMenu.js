@@ -192,6 +192,12 @@ export const sideSections = [
     "pageNum" : "breaker",
   },
   {
+    "pageNum" : 25,
+    "picture" : require("../assets/icons/coconut-tree.png"),
+    "displayName" : "Profiles/Islands",
+    "color": "selectAbout"
+  },
+  {
     "pageNum" : 12,
     "picture" : require("../assets/icons/scroll.png"),
     "displayName" : "Catalog Scanning",

@@ -42,12 +42,12 @@ export default class VisitorList extends Component {
   }
 
   loadList = async() => {
-    var storageData = JSON.parse(await getStorage("VisitorsList",JSON.stringify({})));
+    var storageData = JSON.parse(await getStorage("VisitorsList"+global.profile,JSON.stringify({})));
     this.setState({data:storageData});
   }
 
   saveList = async(data) => {
-    await AsyncStorage.setItem("VisitorsList", JSON.stringify(data));
+    await AsyncStorage.setItem("VisitorsList"+global.profile, JSON.stringify(data));
   }
 
   clearHistory = () => {
