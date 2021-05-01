@@ -118,7 +118,7 @@ class ProfilesComponent extends Component{
       time = h + time.substr(hourEnd, 3) + ampm;
     }
     return(
-      <View style={{backgroundColor: this.selected?colors.openStore[global.darkMode]:colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
+      <View style={{backgroundColor: this.selected?colors.selectedProfile[global.darkMode]:colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
         <View style={{height:5}}/>
         <SubHeader style={{fontSize:26, marginHorizontal:22}} margin={false}>{this.displayProfile}</SubHeader>
         {doWeSwapDate()?<SubHeader style={{fontSize:22, marginHorizontal:22}} margin={false}>{attemptToTranslate(getWeekDayShort(this.state.date.getDay())) + ". " + this.state.date.getDate() + " " + attemptToTranslate(getMonthShort(this.state.date.getMonth())) + ", " + time}</SubHeader>:<SubHeader style={{fontSize:22, marginHorizontal:22}} margin={false}>{attemptToTranslate(getWeekDayShort(this.state.date.getDay())) + ". " + attemptToTranslate(getMonthShort(this.state.date.getMonth())) + " " + this.state.date.getDate() + ", " + time}</SubHeader>}

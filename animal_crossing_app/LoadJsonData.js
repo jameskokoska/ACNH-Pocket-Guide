@@ -1066,6 +1066,16 @@ export function findItemIDName(id, name){
   }
 }
 
+export function findItemCheckListKey(checkListKey){
+  for(var dataSet = 0; dataSet < global.dataLoadedAll.length; dataSet++){
+    for(var i = 0; i < global.dataLoadedAll[dataSet].length; i++){
+      if(global.dataLoadedAll[dataSet][i].hasOwnProperty("checkListKey") && global.dataLoadedAll[dataSet][i]["checkListKey"]===checkListKey){
+        return global.dataLoadedAll[dataSet][i];
+      }
+    }
+  }
+}
+
 // itemIDs={[
 //   {
 //     list:[...this.props.villager["Furniture List"].split(";"), ...this.props.villager["Kitchen Equipment"].split(',')[0], ...this.props.villager["DIY Workbench"].split(',')[0],],

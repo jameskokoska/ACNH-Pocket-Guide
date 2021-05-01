@@ -1,6 +1,13 @@
 export const gameVersion = "1.10.0"
 
 export const changelog = `
+-Added profiles! You can now have multiple islands/characters with different collections and data
+-Check this out in the [Profiles/Islands] page
+-Added share functionality to wishlist
+-Added Loan tracking to home screen
+-Improved backing up data
+-Added more translations
+-
 -Added 1.10.0 items
 -Updated New Items page
 -Added and updated events

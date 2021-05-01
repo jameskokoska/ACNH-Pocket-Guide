@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Image, Vibration,StyleSheet, DrawerLayoutAndroid, View, Text,Clipboard} from 'react-native';
+import {Share, Image, Vibration,StyleSheet, DrawerLayoutAndroid, View, Text,Clipboard} from 'react-native';
 import TextFont from './TextFont';
 import ButtonComponent from './ButtonComponent';
 import Popup from './Popup';
@@ -67,7 +67,7 @@ async function importAllData(text){
     if(totalImport[i].includes("{") && totalImport[i].includes("}")){
       var key = totalImport[i].match(/\{(.*?)\}/);
       var importEntry = totalImport[i].replace(key[0],"")
-      if(importEntry==="" || importEntry==="\n" || totalImport[i]==="\n"){
+      if(importEntry==="" || importEntry==="\n" || totalImport[i]==="\n" || totalImport[i]==="---ACNH Pocket Guide Backup---"){
         continue;
       }else if(key[1]==="Profile"){
         currentProfile = importEntry
@@ -116,7 +116,7 @@ async function importAllData(text){
 }
 
 async function getAllData(){
-  var dataTotal = ""
+  var dataTotal = "---ACNH Pocket Guide Backup---\n"
   for(var i = 0; i<profileNames.length; i++){
     var profile = profileNames[i]
     var data = await getStorage("collectedString"+profile,"");
@@ -183,8 +183,11 @@ class ExportClipboard extends Component {
           vibrate={5}
           onPress={async () => {
             var dataTotal = await getAllData();
-            Clipboard.setString(dataTotal);
-            this.exportPopup?.setPopupVisible(true);
+            // Clipboard.setString(dataTotal);
+            // this.exportPopup?.setPopupVisible(true);
+            await Share.share({
+              message: dataTotal,
+            });
           }}
         />
       </>

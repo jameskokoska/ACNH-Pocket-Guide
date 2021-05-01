@@ -61,7 +61,7 @@ class App extends Component {
     this.numLogins;
     this.state = {
       loaded: false,
-      currentPage: 25,
+      currentPage: 0,
       open:false,
       propsPassed:""
     }
@@ -157,6 +157,7 @@ class App extends Component {
       "Profile" : true,
       "Profile - Dream Address" : true,
       "Profile - Friend Code" : true,
+      "Loan Tracking" : true,
       "Store Hours" : true,
       "Active Creatures" : true,
     }

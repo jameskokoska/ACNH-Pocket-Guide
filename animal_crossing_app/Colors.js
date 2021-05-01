@@ -129,6 +129,7 @@ const colors = {
     closedStore : ["#ffd9d9","#654848"],
     openStore : ["#beebc0","#2c5730"],
     closingSoonStore : ["#f4fabe","#9e9855"],
+    selectedProfile : ["#C2E4C3","#1C3D1E"],
     template : ["#","#"],
     creaturesLeavingBG : ["#F0D1D1","#4B3030"],
     itemBoxYellow : ["#b1b400","#ece739"],
@@ -166,6 +167,6 @@ const colors = {
     "villagerOutlineOccasionally" : ["#FFC57AAD","#FFC57AAD"],
     "villagerOutlineConflict" : ["#FF9090A6","#FF9090A6"],
     missingVariations : ["#E4DD1ADE","#D8D22BB6"],
-
+    loanProgress : ["#D0EEFF","#253041"],
 }
 module.exports = colors;

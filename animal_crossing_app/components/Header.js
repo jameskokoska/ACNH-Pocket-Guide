@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
-import {Image, TouchableOpacity, ImageBackground, StyleSheet, View, TextInput, Text, Vibration} from 'react-native';
+import React, {useState, Component} from 'react';
+import {Share, Image, TouchableOpacity, ImageBackground, StyleSheet, View, TextInput, Text, Vibration} from 'react-native';
 import TextFont from './TextFont'
 import FadeInOut from "./FadeInOut"
 import LottieView from 'lottie-react-native';
 import DelayInput from "react-native-debounce-input";
 import colors from "../Colors"
-import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
+import {capitalize, getSettingsString, attemptToTranslate, findItemCheckListKey, commas} from "../LoadJsonData"
 import {PopupInfoCustom} from "./Popup"
 import {SubHeader, Paragraph} from "./Formattings"
 import GuideRedirectButton from "./PopupGuideRedirectButton"
@@ -35,6 +35,7 @@ const Header = (props) => {
   return (
     <>
       <GuideRedirectButton style={{position:"absolute", padding:15, right:0}} extraInfo={props.extraInfo} setPage={props.setPage}/>
+      {props.title==="Wishlist"?<WishListShareButton style={{position:"absolute", padding:15, right:0}}/>:<View/>}
       <ImageBackground source={props.appBarImage} style={{width:"100%", backgroundColor: props.appBarColor}}>
         <View style={[styles.topSpace, {height: props.headerHeight / 1.5 + 10,}]}>
         </View>
@@ -149,6 +150,41 @@ export const HeaderActive = (props) => {
     </>
   );
 };
+
+export class WishListShareButton extends Component{
+  shareWishlist = async () => {
+    var list = [];
+    for(var i = 0; i<global.collectionList.length; i++){
+      if(global.collectionList[i].includes("wishlist")){
+        list.push(findItemCheckListKey(global.collectionList[i].replace("wishlist","")))
+      }
+    }
+    var listString = "";
+    for(var i = 0; i<list.length; i++){
+      if(list[i].hasOwnProperty("NameLanguage")){
+        listString = listString+list[i]["NameLanguage"];
+        if(list[i].hasOwnProperty("Variation") && list[i]["Variation"]!=="NA"){
+          listString = listString + " - " + list[i]["Variation"];
+        }
+        if(list[i].hasOwnProperty("Buy") && list[i]["Buy"]!=="NA" && list[i]["Buy"]!=="NFS" && list[i].hasOwnProperty("Exchange Currency") && list[i]["Exchange Currency"]==="NA"){
+          listString = listString + " - " + commas(list[i]["Buy"]) + " " + attemptToTranslate("bells");
+        }
+        listString = listString + "\n"
+      }
+    }
+    listString = capitalize(listString)
+    await Share.share({
+      message: listString,
+    });
+  }
+  render(){
+    return <View>
+      <TouchableOpacity style={[this.props.style,{zIndex:5}]} onPress={()=>{this.shareWishlist()}}>
+        <Image style={{width:25,height:25,opacity: 0.35, resizeMode:"contain"}} source={global.darkMode?require("../assets/icons/shareIconWhite.png"):require("../assets/icons/shareIcon.png")}/>
+      </TouchableOpacity>
+    </View>
+  }
+}
 
 const styles = StyleSheet.create({
   topSpace: {

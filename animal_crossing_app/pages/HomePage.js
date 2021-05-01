@@ -29,7 +29,7 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 import ButtonComponent from "../components/ButtonComponent"
 import {SelectionImage} from "../components/Selections"
 import PopupChangelog from '../components/PopupChangelog';
-
+import LoanList from "../components/LoanList"
 
 class HomePage extends Component {
   constructor(props){
@@ -223,13 +223,18 @@ class HomePage extends Component {
               </TouchableOpacity>} */}
               <View style={{height: 30}}/>
             </HomeContentArea>:<View/>}
-            {sections["Store Hours"]===true?<HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.storeHoursColor[global.darkMode]} title="Store Hours" titleColor={colors.storeHoursColor[global.darkModeReverse]}>
+            {sections["Loan Tracking"]===true?<HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.todoColor[global.darkMode]} title="Loan Tracking" titleColor={colors.todoColor[global.darkModeReverse]}>
+              <View style={{height: 15}}/>
+              <LoanList/>
+              <View style={{height: 15}}/>
+            </HomeContentArea>:<View/>}
+            {sections["Store Hours"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.storeHoursColor[global.darkMode]} title="Store Hours" titleColor={colors.storeHoursColor[global.darkModeReverse]}>
               <View style={{height: 15}}/>
               <StoreHoursContainer image={require("../assets/icons/nook.png")} text="Nook's Cranny" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "8:00 - 22:00" : "8 AM - 10 PM"} openHour={8} closeHour={22}/>
               <StoreHoursContainer image={require("../assets/icons/able.png")} text="Able Sisters" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "9:00 - 21:00" : "9 AM - 9 PM"} openHour={9} closeHour={21}/>
               <View style={{height: 15}}/>
             </HomeContentArea>:<View/>}
-            {sections["Active Creatures"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.activeCreaturesColor[global.darkMode]} title="Active Creatures" titleColor={colors.activeCreaturesColor[global.darkModeReverse]}>
+            {sections["Active Creatures"]===true?<HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.activeCreaturesColor[global.darkMode]} title="Active Creatures" titleColor={colors.activeCreaturesColor[global.darkModeReverse]}>
               <ActiveCreatures scrollToEnd={this.scrollToEnd}/>
             </HomeContentArea>:<View/>}
             {sections["Active Creatures"]===true?<View/>:<View style={{height:130}}/>}
