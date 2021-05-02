@@ -8,6 +8,8 @@ import {getSettingsString} from "../LoadJsonData"
 //Use this as template for all pages
 //preload checklist keys on load
 //pass in data structure
+//Category constants.json in /assets/data/categoryConstants.json
+//Major obstacle: List Page loads data using a 2D representation, not lists indexed by categories
 //[
 //  {
 //   category:"Housewares"

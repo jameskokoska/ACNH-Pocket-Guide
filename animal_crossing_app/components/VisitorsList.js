@@ -23,7 +23,6 @@ export default class VisitorList extends Component {
     this.state = {
       data: {},
     }
-    this.loadList();
     this.characterList = [
       {name: "Saharah", picture:"https://acnhcdn.com/latest/NpcIcon/cml.png"},
       {name: "Leif", picture:"https://acnhcdn.com/latest/NpcIcon/slo.png"},
@@ -39,6 +38,10 @@ export default class VisitorList extends Component {
     ]
     this.days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday', 'Sunday', 'None'];
     this.currentMondayIndex = getMonday().toISOString().split('T')[0];
+  }
+
+  componentDidMount(){
+    this.loadList();
   }
 
   loadList = async() => {
