@@ -13,7 +13,7 @@ import ActiveCreatures from "../components/ActiveCreatures"
 import CurrentVillagers from "../components/CurrentVillagers"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {getCurrentDateObject, doWeSwapDate, addDays} from '../components/DateFunctions';
-import TodoList from '../components/TodoList';
+import {TodoList, TurnipLog} from '../components/TodoList';
 import VisitorsList from '../components/VisitorsList';
 import {translateDreamAddressBeginning, translateIslandNameInputLabel2, translateIslandNameInputLabel1, getSettingsString, attemptToTranslate} from "../LoadJsonData"
 import { ScrollView } from 'react-native-gesture-handler';
@@ -99,10 +99,21 @@ class HomePage extends Component {
     return <View style={{height:"100%",width:"100%"}}>
       <PopupChangelog/>
       <PopupBottomCustom ref={(popupSettings) => this.popupSettings = popupSettings} onClose={()=>{}}>
-        <ConfigureHomePages header={"Select Homepage Sections"} refreshEvents={()=>{this.refreshEvents()}} setPages={(checked,name)=>this.setPages(checked,name)} sections={this.state.sections}/>
+        <ConfigureHomePages 
+          header={"Select Homepage Sections"} 
+          refreshEvents={()=>{this.refreshEvents()}} 
+          setPages={(checked,name)=>this.setPages(checked,name)} 
+          sections={this.state.sections}
+        />
       </PopupBottomCustom>
       <PopupBottomCustom ref={(popupEventsSettings) => this.popupEventsSettings = popupEventsSettings} onClose={()=>{}}>
-        <ConfigureHomePages setPage={(page)=>this.props.setPage(page)} header={"Select Events"} refreshEvents={()=>{this.refreshEvents()}} setPages={(checked,name)=>this.setEventPages(checked,name)} sections={this.state.eventSections}/>
+        <ConfigureHomePages 
+          setPage={(page)=>this.props.setPage(page)} 
+          header={"Select Events"} 
+          refreshEvents={()=>{this.refreshEvents()}} 
+          setPages={(checked,name)=>this.setEventPages(checked,name)} 
+          sections={this.state.eventSections}
+        />
       </PopupBottomCustom>
         <ScrollView ref={(scrollViewRef) => this.scrollViewRef = scrollViewRef}>
           <View style={{height:45}}/>
@@ -166,6 +177,12 @@ class HomePage extends Component {
               <TodoList sections={sections} setLoadedToDo={this.setLoadedToDo}/>
               <View style={{height: 15}}/>
             </HomeContentArea>:<View/>}
+            {this.props.sections["Turnip Log"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.profileColor[global.darkMode]} title="Turnip Log" titleColor={colors.profileColor[global.darkModeReverse]}>
+              <View style={{height: 13}}/>
+              <TurnipLog/>
+              <View style={{height: 20}}/>
+            </HomeContentArea>
+            :<View/>}
             {sections["Visitors"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.visitorsColor[global.darkMode]} title="Visitors" titleColor={colors.visitorsColor[global.darkModeReverse]}>
               <View style={{height: 15}}/>
               <VisitorsList setPage={this.props.setPage}/>
@@ -203,8 +220,8 @@ class HomePage extends Component {
                   <TextFont bold={false} style={{padding:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{getSettingsString("settingsNorthernHemisphere")==="true" ? "Northern Hemisphere" : "Southern Hemisphere"}</TextFont>
                 </TouchableOpacity>
                 <View style={{height: 5}}/>
-                {sections["Profile - Dream Address"]===true?<DreamAddress/>:<View/>}
-                {sections["Profile - Friend Code"]===true?<FriendCode/>:<View/>}
+                <DreamAddress/>
+                <FriendCode/>
                 <View style={{height: 18}}/>
                 <SelectionImage 
                   selectedImage={global.selectedFruit} 
@@ -364,19 +381,6 @@ export class ConfigureHomePages extends Component {
   }
   setPages = (check,name) => {
     this.props.setPages(check,name);
-    console.log(check)
-    if(name==="To-Do - Turnip Log" && check){
-      this.props.setPages(true,"To-Do");
-    } else if(name==="To-Do" && !check){
-      this.props.setPages(false,"To-Do - Turnip Log");
-    } else if(name==="Profile - Dream Address" && check){
-      this.props.setPages(true,"Profile");
-    } else if(name==="Profile - Friend Code" && check){
-      this.props.setPages(true,"Profile");
-    } else if(name==="Profile" && !check){
-      this.props.setPages(false,"Profile - Dream Address");
-      this.props.setPages(false,"Profile - Friend Code");
-    }
     if(this.props.header==="Select Events"){
       this.props.refreshEvents();
     }

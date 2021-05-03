@@ -1,6 +1,16 @@
 export const gameVersion = "1.10.0"
 
 export const changelog = `
+-If you would like to help translate the app, feel free to get in touch via email!
+-
+-You can now show/hide pages on the sidebar
+-Scroll to the bottom and tap Edit Pages
+-Since not everyone needs a list of all the letters for example
+-Fixed bug with reordering not saving list
+-Fixed bug where changing name/island name in profile did not sync properly
+-Turnip Tracking is now separate
+-Dream address and friend code always enabled in profile now
+-
 -Added profiles! You can now have multiple islands/characters with different collections and data
 -Check this out in the [Profiles/Islands] page
 -Added share functionality to wishlist
@@ -17,6 +27,8 @@ export const changelog = `
 -Fixed bug with wrong font used
 -Fixed bug with default to-do list out of order
 -Fixed bug with art collection counter
+-
+-Past changes:
 -
 -Fixed title categories not fitting in some languages
 -Fixed show uncraftable variations broken for some items with customizable patterns but not main colours
@@ -79,8 +91,6 @@ export const changelog = `
 -Added more information about villagers redirect
 -Added more Spanish translations, more coming soon
 - Thanks Vicente, adrisniper7, Robertin, and miyo0i!
--
--Past changes:
 -
 -Reworked how translations are handled internally
 -Fixed 24 hour clock display 12 for midnight instead of 0:00

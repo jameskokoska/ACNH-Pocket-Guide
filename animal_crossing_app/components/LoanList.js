@@ -80,6 +80,7 @@ export default class LoanList extends Component {
     items.splice(position + direction, 0, item);
 
     this.setState({data: items});
+    this.saveList(items);
   };
 
   componentWillUnmount(){

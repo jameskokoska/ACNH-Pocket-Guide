@@ -1,29 +1,60 @@
 import React, { Component } from 'react'
-import {Dimensions, Text, View,StyleSheet} from 'react-native'
+import {Vibration, Dimensions, Text, View,StyleSheet, TouchableOpacity} from 'react-native'
 import  {DrawerLayout, ScrollView} from 'react-native-gesture-handler'
 import SidebarElement from './SidebarElement';
 import colors from '../Colors.js';
 import TextFont from './TextFont';
 import {getSettingsString} from '../LoadJsonData';
+import {PopupBottomCustom} from "./Popup"
+import {ConfigureHomePages} from "../pages/HomePage"
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default class SideMenu extends Component {
+  constructor(props){
+    super(props);
+    this.state = {sections:props.sideMenuSections, editMode: false}
+  }
+  disableEditMode = (progress) => {
+    if(this.state.editMode===true && progress>0.15){
+      this.setState({editMode:false})
+    }
+  }
   openDrawer = () => {
     this.drawer.openDrawer();
   }
   closeDrawer = () => {
     this.drawer.closeDrawer()
   }
+  editSections = async (name) => {
+    var oldList = this.state.sections
+
+    if(oldList.includes(name)){
+      oldList = oldList.filter(item => item !== name);
+      await this.saveSections(oldList);
+      getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+      this.setState({sections:oldList})
+    } else {
+      oldList.push(name);
+      await this.saveSections(oldList);
+      getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10,220,20]) : "";
+      this.setState({sections:oldList})
+    }
+  }
+  saveSections = async(data) => {
+    await AsyncStorage.setItem("sideMenuSections", JSON.stringify(data));
+  }
   nonTabbedPages = [0];
   renderDrawer = () => {
     return (
       <View style={{width: "100%", height:"100%", backgroundColor:colors.textWhite[global.darkMode]}}>
-        <ScrollView>
+        <ScrollView ref={(scrollView) => this.scrollView = scrollView}>
           <View style={{backgroundColor: colors.topSidebar[global.darkMode], marginBottom: 10}}>
             <TextFont bold={true} style={{marginHorizontal: 15, marginTop: 130, marginBottom: 10, fontSize: 34, color: colors.textBlack[global.darkMode]}}>ACNH Pocket</TextFont>
           </View>
           {sideSections.map( (section, index)=>
             {
               if(section["pageNum"]!="breaker"){
+                const disabled = this.state.sections.includes(section.displayName);
                 return <SidebarElement 
                   key={section["pageNum"].toString()+index.toString()}
                   image={section.picture} 
@@ -33,7 +64,11 @@ export default class SideMenu extends Component {
                   currentPage={this.props.currentPage} 
                   backgroundColor={colors[section.color][global.darkMode]}
                   textColor={colors.textBlack[global.darkMode]} 
-                  unselectedColor={colors.textWhite[global.darkMode]}
+                  unselectedColor={this.state.editMode&&!section.cannotDisable?colors.inkWell[global.darkMode]+(disabled?"1F":"8F"):colors.textWhite[global.darkMode]}
+                  editMode={this.state.editMode}
+                  editSections={this.editSections}
+                  disabled={disabled}
+                  cannotDisable={section.cannotDisable}
                 />
               } else {
                 return <View 
@@ -43,12 +78,24 @@ export default class SideMenu extends Component {
               }
             }
           )}
-          <View style={{margin:15}}/>
+          <View style={{margin:2}}/>
+          <TouchableOpacity style={{padding:8, alignItems:"center"}} 
+            onPress={()=>{
+              this.setState({editMode:!this.state.editMode});
+              getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+              setTimeout(()=>{
+                this.scrollView.scrollToEnd();
+              }, 150);
+          }}>
+            <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14,}}>{this.state.editMode ? "Disable Edit Pages" : "Edit Pages"}</TextFont>
+          </TouchableOpacity>
+          <View style={{margin:5}}/>
         </ScrollView>
       </View>
     );
   };
   render() {
+    console.log(this.state.sections)
     return (
       <View style={{ flex: 1 }}>
         <DrawerLayout
@@ -59,6 +106,7 @@ export default class SideMenu extends Component {
           drawerType="slide"
           drawerBackgroundColor="#ddd"
           renderNavigationView={this.renderDrawer}
+          onDrawerSlide={(progress)=>this.disableEditMode(progress)}
         >
             {this.props.children}
         </DrawerLayout>
@@ -72,7 +120,8 @@ export const sideSections = [
     "pageNum" : 0,
     "picture" : require("../assets/icons/homeIcon.png"),
     "displayName" : "Home",
-    "color": "selectHome"
+    "color": "selectHome",
+    "cannotDisable":true,
   },
   {
     "pageNum" : 1,
@@ -207,13 +256,15 @@ export const sideSections = [
     "pageNum" : 13,
     "picture" : require("../assets/icons/settings.png"),
     "displayName" : "Settings",
-    "color": "selectSettings"
+    "color": "selectSettings",
+    "cannotDisable":true,
   },
   {
     "pageNum" : 14,
     "picture" : require("../assets/icons/magnifyingGlass.png"),
     "displayName" : "About",
-    "color": "selectAbout"
+    "color": "selectAbout",
+    "cannotDisable":true,
   },
 ]
 

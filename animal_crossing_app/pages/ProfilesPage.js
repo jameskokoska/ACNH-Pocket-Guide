@@ -127,7 +127,7 @@ class ProfilesComponent extends Component{
           maxLength = {15}
           allowFontScaling={false}
           style={{marginHorizontal:20, fontSize: 23, color:colors.textBlack[global.darkMode], backgroundColor: colors.lightDarkAccent[global.darkMode], padding:8, paddingHorizontal:15, borderRadius:7, fontFamily: "ArialRounded"}}
-          onChangeText={async (text) => {AsyncStorage.setItem("name"+this.profile, text);}}
+          onChangeText={async (text) => {AsyncStorage.setItem("name"+this.profile, text); this.selected?global.name=text:"";}}
           placeholder={"["+attemptToTranslate("Name")+"]"}
           placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
           defaultValue={this.name}
@@ -138,7 +138,7 @@ class ProfilesComponent extends Component{
           maxLength = {15}
           allowFontScaling={false}
           style={{marginHorizontal:20, fontSize: 23, color:colors.textBlack[global.darkMode], backgroundColor: colors.lightDarkAccent[global.darkMode], padding:8, paddingHorizontal:15, borderRadius:7, fontFamily: "ArialRounded"}}
-          onChangeText={async (text) => {AsyncStorage.setItem("islandName"+this.profile, text);}}
+          onChangeText={async (text) => {AsyncStorage.setItem("islandName"+this.profile, text); this.selected?global.islandName=text:"";}}
           placeholder={"["+attemptToTranslate("Island")+"]"}
           placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
           defaultValue={this.islandName}

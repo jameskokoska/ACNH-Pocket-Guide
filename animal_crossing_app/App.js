@@ -42,6 +42,7 @@ import VillagerFurniture from "./pages/VillagerFurniture"
 import ObtainableItemsPage from "./pages/ObtainableItemsPage"
 import CustomFiltersPage from "./pages/CustomFiltersPage"
 import VillagersCompatibilityPage from "./pages/VillagersCompatibilityPage"
+import {sideSections} from "./components/SideMenu"
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -151,12 +152,10 @@ class App extends Component {
     const defaultSections = {
       "Events" : true,   
       "To-Do" : true,
-      "To-Do - Turnip Log" : true,
+      "Turnip Log" : true,
       "Visitors" : true,
       "Collection" : true,
       "Profile" : true,
-      "Profile - Dream Address" : true,
-      "Profile - Friend Code" : true,
       "Loan Tracking" : true,
       "Store Hours" : true,
       "Active Creatures" : true,
@@ -182,6 +181,8 @@ class App extends Component {
     }
     this.eventSections = await this.loadSections("EventSections", defaultEventSections);
     
+    this.sideMenuSections = JSON.parse(await getStorage("sideMenuSections","[]"));
+
     if(this.mounted){
       this.setState({
         firstLogin: firstLogin,
@@ -354,7 +355,7 @@ class App extends Component {
       
       return (
         <>  
-          <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage}>
+          <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage} sideMenuSections={this.sideMenuSections}>
             <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
             <PopupRating numLogins={this.numLogins}/>
             {/* <PopupTip numLogins={this.numLogins} tipDismissed={this.tipDismissed}/> */}

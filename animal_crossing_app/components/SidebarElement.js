@@ -24,14 +24,55 @@ class SidebarElement extends Component {
       backgroundColor=this.props.unselectedColor;
       elevation = 0;
     }
-    return (
-      <TouchableNativeFeedback onPress={() => {getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(15) : ""; this.props.setPage(this.props.pageNum);}}>
-        <View style={[styles.sidebarBox, {backgroundColor: backgroundColor,elevation: elevation}]}>
-          <Image style={styles.sidebarImage} source={this.props.image}/>
-          <TextFont bold={true} style={[styles.sidebarTitle,{color:this.props.textColor}]}>{this.props.title}</TextFont>
-        </View>
-      </TouchableNativeFeedback>
-    );
+    var removeButton = <View/>
+    if(this.props.editMode){
+      removeButton=<View style={{left:-10, top:-10,position:'absolute',zIndex:10, }}>
+        <TouchableOpacity style={{padding:9}} 
+          onPress={()=>{
+            this.props.editSections(this.props.title); 
+        }}>
+          <Image source={require("../assets/icons/deleteIcon.png")} style={{opacity:0.8,width:15, height:15, borderRadius:100,}}/>
+        </TouchableOpacity>
+      </View>
+    }
+    var addButton = <View/>
+    if(this.props.editMode){
+      addButton=<View style={{left:-10, top:-10,position:'absolute',zIndex:10, }}>
+        <TouchableOpacity style={{padding:9}} 
+          onPress={()=>{
+            this.props.editSections(this.props.title); 
+        }}>
+          <Image source={require("../assets/icons/addIcon.png")} style={{opacity:0.8,width:15, height:15, borderRadius:100,}}/>
+        </TouchableOpacity>
+      </View>
+    }
+    if(this.props.cannotDisable){
+      addButton = <View/>
+      removeButton = <View/>
+    }
+    if(this.props.editMode || !this.props.disabled){
+      return (
+        <>
+          <TouchableNativeFeedback onPress={() => {
+            if(this.props.editMode && !this.props.cannotDisable){
+              this.props.editSections(this.props.title); 
+            } else {
+              getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(15) : ""; this.props.setPage(this.props.pageNum);
+            }
+          }}>
+            <View style={[styles.sidebarBox, {opacity:this.props.disabled?0.7:1,backgroundColor: backgroundColor,elevation: elevation}]}>
+              {!this.props.disabled?removeButton:addButton}
+              <Image style={styles.sidebarImage} source={this.props.image}/>
+              <TextFont bold={true} style={[styles.sidebarTitle,{color:this.props.textColor}]}>{this.props.title}</TextFont>
+            </View>
+          </TouchableNativeFeedback>
+        </>
+      );
+    } else if (this.props.disabled){
+      return <View/>
+    } else {
+      return <View/>
+    }
   }
 };
 

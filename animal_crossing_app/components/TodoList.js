@@ -14,12 +14,11 @@ import FastImage from "./FastImage"
 import {PopupInfoCustom} from "./Popup"
 import ButtonComponent from "./ButtonComponent";
 
-class TodoList extends Component {
+export class TodoList extends Component {
   constructor(props){
     super(props);
     this.state = {
       data: [],
-      showTurnipLog: false,
       showEdit: false,
     }
   }
@@ -96,6 +95,7 @@ class TodoList extends Component {
     items.splice(position + direction, 0, item);
 
     this.setState({data: items});
+    this.saveList(items);
   };
 
   componentWillUnmount(){
@@ -177,8 +177,6 @@ class TodoList extends Component {
             }
           })}
         </View>
-
-        {this.props.sections["To-Do - Turnip Log"]===true?<TurnipLog/>:<View/>}
       </View>
       {/* <TouchableOpacity style={{padding:10}} 
         onPress={()=>{
@@ -190,9 +188,8 @@ class TodoList extends Component {
     </>
   }
 }
-export default TodoList;
 
-class TurnipLog extends Component {
+export class TurnipLog extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -282,8 +279,7 @@ class TurnipLog extends Component {
       <PopupInfoCustom buttons={buttonsHistory} ref={(popupHistory) => this.popupHistory = popupHistory} buttonDisabled={true} buttonText={"OK"} header={<TextFont bold={true} style={{fontSize: 22, marginBottom:11, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Are you sure you want to clear your turnip prices?</TextFont>}>
         <View/>
       </PopupInfoCustom>
-      <View style={{width: "88%", marginTop: 20}}>
-        <TextFont bold={true} numberOfLines={2} style={{marginLeft:2, marginBottom: 10, fontSize:23, color:colors.textBlack[global.darkMode]}}>{capitalize("Turnip Log")}</TextFont>
+      <View style={{marginHorizontal:25, marginTop: 20}}>
         <TouchableOpacity style={{padding:5, right:0, top:0,position:'absolute'}} 
           onPress={async()=>{
             this.popupHistory?.setPopupVisible(true);
@@ -342,13 +338,14 @@ class TurnipLog extends Component {
             index={index}
           />
         )}
-        <TouchableOpacity style={{margin:10, backgroundColor:colors.eventBackground[global.darkMode], padding: 10, borderRadius: 10}} 
+        <TouchableOpacity style={{marginVertical:10, backgroundColor:colors.eventBackground[global.darkMode], padding: 10, borderRadius: 10}} 
           onPress={()=>{
             Linking.openURL(
               this.turnipLink,
             );
         }}>
           <TextFont bold={true} style={{color: colors.fishText[global.darkMode], fontSize: 18, textAlign:"center"}}>{"View on turnipprophet.io"}</TextFont>
+          <TextFont style={{color: colors.fishText[global.darkMode], fontSize: 12, textAlign:"center"}}>{"(Price calculator and predictor)"}</TextFont>
         </TouchableOpacity>
       </View>
       </>
