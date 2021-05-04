@@ -193,45 +193,7 @@ class HomePage extends Component {
             </HomeContentArea>:<View/>}
             {sections["Profile"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.profileColor[global.darkMode]} title="Profile" titleColor={colors.profileColor[global.darkModeReverse]}>
               <View style={{height: 37}}/>
-              <View style={{alignItems:"center", marginHorizontal:50}}>
-                <TextInput
-                  maxLength = {15}
-                  allowFontScaling={false}
-                  style={{fontSize: 30, width:"100%", textAlign:"center", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
-                  onChangeText={async (text) => {AsyncStorage.setItem("name", text); global.name=text;}}
-                  placeholder={"["+attemptToTranslate("Name")+"]"}
-                  placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
-                  defaultValue={global.name}
-                  multiline={false}
-                />
-                <TextFont bold={true} style={{marginTop: 0, marginBottom: -2, color:colors.fishText[global.darkMode]}}>{translateIslandNameInputLabel1()}</TextFont>
-                <TextInput
-                  maxLength = {15}
-                  allowFontScaling={false}
-                  style={{fontSize: 30, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
-                  onChangeText={async (text) => {AsyncStorage.setItem("islandName", text); global.islandName=text}}
-                  placeholder={"["+attemptToTranslate("Island")+"]"}
-                  placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
-                  defaultValue={global.islandName}
-                  multiline={false}
-                />
-                <TextFont bold={true} style={{marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{translateIslandNameInputLabel2()}</TextFont>
-                <TouchableOpacity onPress={() => this.props.setPage(13)}>
-                  <TextFont bold={false} style={{padding:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{getSettingsString("settingsNorthernHemisphere")==="true" ? "Northern Hemisphere" : "Southern Hemisphere"}</TextFont>
-                </TouchableOpacity>
-                <View style={{height: 5}}/>
-                <DreamAddress/>
-                <FriendCode/>
-                <View style={{height: 18}}/>
-                <SelectionImage 
-                  selectedImage={global.selectedFruit} 
-                  images={[getMaterialImage("apple",true),getMaterialImage("cherry",true),getMaterialImage("orange",true),getMaterialImage("peach",true),getMaterialImage("pear",true)]}
-                  onSelected={(image)=>{AsyncStorage.setItem("selectedFruit", image); global.selectedFruit=image;}}
-                  canDeselect={true}
-                  sizeImageOnline={[35,35]}
-                  sizeContainer={[45,45]}
-                />
-              </View>
+              <Profile setPage={this.props.setPage}/>
               <CurrentVillagers openVillagerPopup={this.openVillagerPopup} setPage={this.props.setPage}/>
               {/* {getCurrentVillagerNamesString()==="You have no favorite villagers"?<View/>:<TouchableOpacity onPress={() => this.props.setPage(21)}>
                 {getInverseVillagerFilters(true)===""?<TextFont suffix={"\n"+attemptToTranslate("Note: you can get all items since you have all personality types!")} style={{marginHorizontal: 30, color: colors.fishText[global.darkMode], fontSize: 11, textAlign:"center"}}>{"See what you can get from your villagers."}</TextFont>:<>
@@ -269,7 +231,53 @@ class HomePage extends Component {
 }
 export default HomePage;
 
-class DreamAddress extends Component {
+export class Profile extends Component{
+  render(){
+    return(
+      <View style={{alignItems:"center", marginHorizontal:50}}>
+        <TextInput
+          maxLength = {15}
+          allowFontScaling={false}
+          style={{fontSize: 30, width:"100%", textAlign:"center", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
+          onChangeText={async (text) => {AsyncStorage.setItem("name"+global.profile, text); global.name=text;}}
+          placeholder={"["+attemptToTranslate("Name")+"]"}
+          placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+          defaultValue={global.name}
+          multiline={false}
+        />
+        <TextFont bold={true} style={{marginTop: 0, marginBottom: -2, color:colors.fishText[global.darkMode]}}>{translateIslandNameInputLabel1()}</TextFont>
+        <TextInput
+          maxLength = {15}
+          allowFontScaling={false}
+          style={{fontSize: 30, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
+          onChangeText={async (text) => {AsyncStorage.setItem("islandName"+global.profile, text); global.islandName=text}}
+          placeholder={"["+attemptToTranslate("Island")+"]"}
+          placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+          defaultValue={global.islandName}
+          multiline={false}
+        />
+        <TextFont bold={true} style={{marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{translateIslandNameInputLabel2()}</TextFont>
+        <TouchableOpacity onPress={() => this.props.setPage(13)}>
+          <TextFont bold={false} style={{padding:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{getSettingsString("settingsNorthernHemisphere")==="true" ? "Northern Hemisphere" : "Southern Hemisphere"}</TextFont>
+        </TouchableOpacity>
+        <View style={{height: 5}}/>
+        <DreamAddress/>
+        <FriendCode/>
+        <View style={{height: 18}}/>
+        <SelectionImage 
+          selectedImage={global.selectedFruit} 
+          images={[getMaterialImage("apple",true),getMaterialImage("cherry",true),getMaterialImage("orange",true),getMaterialImage("peach",true),getMaterialImage("pear",true)]}
+          onSelected={(image)=>{AsyncStorage.setItem("selectedFruit"+global.profile, image); global.selectedFruit=image;}}
+          canDeselect={true}
+          sizeImageOnline={[35,35]}
+          sizeContainer={[45,45]}
+        />
+      </View>
+    )
+  }
+}
+
+export class DreamAddress extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -319,7 +327,7 @@ class DreamAddress extends Component {
   }
 }
 
-class FriendCode extends Component {
+export class FriendCode extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -515,7 +523,7 @@ export class VillagerPopupPopup extends Component {
   }
 }
 
-class CollectionProgress extends Component {
+export class CollectionProgress extends Component {
   render(){
     var fishCount = countCollection("fishCheckList");
     var fishCountTotal = 80;

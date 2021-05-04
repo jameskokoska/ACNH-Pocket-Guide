@@ -120,7 +120,7 @@ class CraftingPage extends Component {
     return(
       <TabView
         lazy
-        tabBarPosition={getSettingsString("settingsTabBarPosition") === "true" ? "bottom" : "top"}
+        // tabBarPosition={getSettingsString("settingsTabBarPosition") === "true" ? "bottom" : "top"}
         gestureHandlerProps={{ failOffsetX: this.state.index === 0 ? 1 : 100}}
         navigationState={this.state}
         renderScene={this.renderScene}

@@ -581,6 +581,14 @@ export const settings = [
     "displayName" : "Use larger images in popup",
     "description" : "Use a larger image when previewing items in their popup",
   },
+  {
+    "keyName" : "settingsShowFAB",
+    "defaultValue" : "true",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/buttonIcon.png"),
+    "displayName" : "Show floating menu button",
+    "description" : "Choose to display the menu button in the bottom right corner. The menu can be opened by dragging from the left of the screen.",
+  },
 
   {
     "keyName" : "breaker",
@@ -626,26 +634,14 @@ export const settings = [
     "displayName" : "Download images",
     "description" : "Save images locally for offline use once viewed. If disabled, can save storage space, but always requires an internet connection to view images.",
   },
-  {
-    "keyName" : "breaker",
-    "text" : "Interface layout",
-  },
-  {
-    "keyName" : "settingsShowFAB",
-    "defaultValue" : "true",
-    "currentValue" : "",
-    "picture" : require("./assets/icons/buttonIcon.png"),
-    "displayName" : "Show floating menu button",
-    "description" : "Choose to display the menu button in the bottom right corner. The menu can be opened by dragging from the left of the screen.",
-  },
-  {
-    "keyName" : "settingsTabBarPosition",
-    "defaultValue" : "false",
-    "currentValue" : "",
-    "picture" : require("./assets/icons/scroll.png"),
-    "displayName" : "Category labels on bottom",
-    "description" : "Show the category tabs on the bottom, or top of the screen in list pages with multiple categories.",
-  },
+  // {
+  //   "keyName" : "settingsTabBarPosition",
+  //   "defaultValue" : "false",
+  //   "currentValue" : "",
+  //   "picture" : require("./assets/icons/scroll.png"),
+  //   "displayName" : "Category labels on bottom",
+  //   "description" : "Show the category tabs on the bottom, or top of the screen in list pages with multiple categories.",
+  // },
   // {
   //   "keyName" : "settingsUseFilters",
   //   "defaultValue" : "true",

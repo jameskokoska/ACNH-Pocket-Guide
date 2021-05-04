@@ -8,6 +8,7 @@ import {getSettingsString} from '../LoadJsonData';
 import {PopupBottomCustom} from "./Popup"
 import {ConfigureHomePages} from "../pages/HomePage"
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {ProfileIcon} from "../pages/ProfileCurrentPage"
 
 export default class SideMenu extends Component {
   constructor(props){
@@ -49,7 +50,9 @@ export default class SideMenu extends Component {
       <View style={{width: "100%", height:"100%", backgroundColor:colors.textWhite[global.darkMode]}}>
         <ScrollView ref={(scrollView) => this.scrollView = scrollView}>
           <View style={{backgroundColor: colors.topSidebar[global.darkMode], marginBottom: 10}}>
-            <TextFont bold={true} style={{marginHorizontal: 15, marginTop: 130, marginBottom: 10, fontSize: 34, color: colors.textBlack[global.darkMode]}}>ACNH Pocket</TextFont>
+            <View style={{height:75}}/>
+            <ProfileIcon name={global.name} onPress={()=>{this.props.setPage(26)}} profile={global.profile} style={{marginHorizontal:20}}/>
+            <View style={{height:35}}/>
           </View>
           {sideSections.map( (section, index)=>
             {
@@ -95,7 +98,6 @@ export default class SideMenu extends Component {
     );
   };
   render() {
-    console.log(this.state.sections)
     return (
       <View style={{ flex: 1 }}>
         <DrawerLayout

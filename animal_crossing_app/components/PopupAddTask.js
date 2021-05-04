@@ -22,16 +22,7 @@ import {getSettingsString,attemptToTranslate} from "../LoadJsonData"
 import FastImage from "./FastImage"
 import {SelectionImage} from "./Selections"
 
-class PopupAddTask extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      popupVisible: false,
-      smallToggle:false,
-      selectedImage: "leaf.png"
-    };
-    this.task = {title: "", picture:"", finished: false, small:this.state.smallToggle};
-    this.images = [
+export const taskImages = [
       "leaf.png",
       "fish.png",
       "bugs.png",
@@ -111,6 +102,17 @@ class PopupAddTask extends Component {
       "recycle.png",
       "dice.png",
     ];
+
+class PopupAddTask extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      popupVisible: false,
+      smallToggle:false,
+      selectedImage: "leaf.png"
+    };
+    this.task = {title: "", picture:"", finished: false, small:this.state.smallToggle};
+    this.images = taskImages;
   }
 
   setPopupVisible = (visible) => {

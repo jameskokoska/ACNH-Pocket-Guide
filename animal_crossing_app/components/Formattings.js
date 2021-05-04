@@ -7,9 +7,9 @@ import {attemptToTranslate} from "../LoadJsonData"
 export class ExternalLink extends Component {
   render(){
     return(
-        <TouchableOpacity onPress={() => Linking.openURL(this.props.link) }>
-          <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, marginLeft: 30, marginRight: 30, }}>{this.props.link}</TextFont>
-        </TouchableOpacity>
+      <TouchableOpacity onPress={() => Linking.openURL(this.props.link) }>
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, marginLeft: 30, marginRight: 30, }}>{this.props.link}</TextFont>
+      </TouchableOpacity>
     )
   }
 }

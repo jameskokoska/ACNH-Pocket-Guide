@@ -3,6 +3,12 @@ export const gameVersion = "1.10.0"
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
+-Added Museum icon
+-Fixed bug with changing name not syncing between profiles
+-Added profile icons
+-Added profile page, tap your profile icon to get an island summary!
+-Removed bottom tab bar setting
+-
 -You can now show/hide pages on the sidebar
 -Scroll to the bottom and tap Edit Pages
 -Since not everyone needs a list of all the letters for example

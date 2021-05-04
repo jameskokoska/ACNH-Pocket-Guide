@@ -43,6 +43,7 @@ import ObtainableItemsPage from "./pages/ObtainableItemsPage"
 import CustomFiltersPage from "./pages/CustomFiltersPage"
 import VillagersCompatibilityPage from "./pages/VillagersCompatibilityPage"
 import {sideSections} from "./components/SideMenu"
+import ProfileCurrentPage from "./pages/ProfileCurrentPage"
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -62,7 +63,7 @@ class App extends Component {
     this.numLogins;
     this.state = {
       loaded: false,
-      currentPage: 0,
+      currentPage: 26,
       open:false,
       propsPassed:""
     }
@@ -154,8 +155,8 @@ class App extends Component {
       "To-Do" : true,
       "Turnip Log" : true,
       "Visitors" : true,
-      "Collection" : true,
-      "Profile" : true,
+      "Collection" : false,
+      "Profile" : false,
       "Loan Tracking" : true,
       "Store Hours" : true,
       "Active Creatures" : true,
@@ -349,6 +350,8 @@ class App extends Component {
         currentPageView = <VillagersCompatibilityPage setPage={this.setPage}/>
       } else if (this.state.currentPage===25){
         currentPageView = <ProfilesPage setPage={this.setPage} loadProfileData={this.loadProfileData}/>
+      } else if (this.state.currentPage===26){
+        currentPageView = <ProfileCurrentPage setPage={this.setPage}/>
       } else {
         currentPageView = <Text>Default</Text>
       }

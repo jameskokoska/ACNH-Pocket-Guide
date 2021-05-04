@@ -38,6 +38,8 @@ export function getPhoto(name, fallback=""){
   switch(name){
     case "leaf.png":
       return require("../assets/icons/leaf.png");
+    case "villager.png":
+      return require("../assets/icons/villager.png");
     case "dice.png":
       return require("../assets/icons/dice.png");
     case "applejuice.png":
@@ -221,8 +223,8 @@ export function getPhoto(name, fallback=""){
     return require("../assets/icons/birthdayCake.png");
   } else if(name.includes("wedding")){
     return require("../assets/icons/birthdayCake.png");
-  } else if(name.includes("museum")){
-    return require("../assets/icons/fancyClock.png");
+  } else if(name.includes("museum") || name.includes("blathers")){
+    return require("../assets/icons/museum.png");
   }
   if(fallback.includes("season")){
     return require("../assets/icons/season.png");
@@ -284,6 +286,8 @@ export function getPhotoCorner(name){
     return <Image source={require("../assets/icons/crafting.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
   else if(name.includes("gulliver"))
     return <Image source={require("../assets/icons/oceanIcon.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>
+  else if(name.includes("blathers"))
+    return <Image source={require("../assets/icons/museum.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
   else if(name.includes("new year"))
     return <Image source={require("../assets/icons/popper.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>
   else if(name.includes("saharah"))

@@ -9,6 +9,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {ConfigureHomePageSettingContainer} from "./HomePage"
 import {CustomDatePicker} from "./SettingsPage"
 import {getWeekDayShort, getMonthShort, doWeSwapDate} from "../components/DateFunctions"
+import {ProfileIcon} from "./ProfileCurrentPage"
 
 export const profileNames = ["","Profile 1","Profile 2", "Profile 3"]
 
@@ -120,9 +121,14 @@ class ProfilesComponent extends Component{
     return(
       <View style={{backgroundColor: this.selected?colors.selectedProfile[global.darkMode]:colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
         <View style={{height:5}}/>
-        <SubHeader style={{fontSize:26, marginHorizontal:22}} margin={false}>{this.displayProfile}</SubHeader>
-        {doWeSwapDate()?<SubHeader style={{fontSize:22, marginHorizontal:22}} margin={false}>{attemptToTranslate(getWeekDayShort(this.state.date.getDay())) + ". " + this.state.date.getDate() + " " + attemptToTranslate(getMonthShort(this.state.date.getMonth())) + ", " + time}</SubHeader>:<SubHeader style={{fontSize:22, marginHorizontal:22}} margin={false}>{attemptToTranslate(getWeekDayShort(this.state.date.getDay())) + ". " + attemptToTranslate(getMonthShort(this.state.date.getMonth())) + " " + this.state.date.getDate() + ", " + time}</SubHeader>}
-        <View style={{height:10}}/>
+        <View style={{marginHorizontal:20, flexDirection:"row", alignItems:"center"}}>
+          <ProfileIcon profile={this.props.profile}/>
+          <View>
+            <SubHeader style={{fontSize:26, marginHorizontal:22}} margin={false}>{this.displayProfile}</SubHeader>
+            {doWeSwapDate()?<SubHeader style={{fontSize:22, marginHorizontal:22}} margin={false}>{attemptToTranslate(getWeekDayShort(this.state.date.getDay())) + ". " + this.state.date.getDate() + " " + attemptToTranslate(getMonthShort(this.state.date.getMonth())) + ", " + time}</SubHeader>:<SubHeader style={{fontSize:22, marginHorizontal:22}} margin={false}>{attemptToTranslate(getWeekDayShort(this.state.date.getDay())) + ". " + attemptToTranslate(getMonthShort(this.state.date.getMonth())) + " " + this.state.date.getDate() + ", " + time}</SubHeader>}
+          </View>
+        </View>
+        <View style={{height:20}}/>
         <TextInput
           maxLength = {15}
           allowFontScaling={false}
