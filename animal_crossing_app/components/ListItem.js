@@ -100,15 +100,7 @@ class ListItem extends React.Component{
       if(this.props.item["Bubble Color"]!==undefined){
         boxColor =this.props.item["Bubble Color"]+opacity;
       }else if(this.props.item.["Color 1"]!==undefined){
-        if(this.props.item.["Color 2"]!==undefined && global.darkMode===0 && ( this.props.item.["Color 1"]==='Yellow' || this.props.item.["Color 1"]==='White')){
-          boxColor = colors["itemBox"+this.props.item.["Color 2"]][global.darkMode]+opacity
-          if(this.props.item.["Color 2"]==='Colorful'){
-            boxColor = colors["itemBox"+this.props.item.["Color 1"]][global.darkMode]+opacity
-          }
-        } else if(this.props.item.["Color 2"]!==undefined && global.darkMode===1 && (this.props.item.["Color 1"]==='Black' || this.props.item.["Color 1"]==='Gray')){
-          boxColor = colors["itemBox"+this.props.item.["Color 2"]][global.darkMode]+opacity
-          
-        } else if (this.props.item.["Color 2"]!==undefined && (this.props.item.["Color 1"]==='Colorful')){
+        if (this.props.item.["Color 2"]!==undefined && (this.props.item.["Color 1"]==='Colorful')){
           boxColor = colors["itemBox"+this.props.item.["Color 2"]][global.darkMode]+opacity
           if(this.props.item.["Color 2"]==='Colorful'){
             boxColor = colors["itemBox"+this.props.item.["Color 1"]][global.darkMode]+opacity
