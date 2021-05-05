@@ -61,7 +61,7 @@ class PopupFilter extends Component {
         {name:"Can catch in December",id:hemispherePre+"Dec Active:true"},
       ]
     }]
-    if(this.props.title==="Amiibo"){
+    if(this.props.title==="Amiibo Cards"){
       const categories = [{
         "name": "Type Categories",
         "id": "Type Categories",
