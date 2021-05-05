@@ -51,8 +51,14 @@ export default class SideMenu extends Component {
         <ScrollView ref={(scrollView) => this.scrollView = scrollView}>
           <View style={{backgroundColor: colors.topSidebar[global.darkMode], marginBottom: 10}}>
             <View style={{height:45}}/>
-            <ProfileIcon onPress={()=>{this.props.setPage(26)}} profile={global.profile} style={{marginHorizontal:20}}/>
-            <TextFont bold={true} style={{marginHorizontal: 20, marginTop: 15, marginBottom: 10, fontSize: 32, color: colors.textBlack[global.darkMode]}}>ACNH Pocket</TextFont>
+            <View style={{flexDirection:"row"}}>
+              <ProfileIcon onPress={()=>{this.props.setPage(26)}} profile={global.profile} style={{marginLeft:20}}/>
+              <TouchableOpacity onPress={()=>{this.props.setPage(26)}} style={{justifyContent:"center"}}>
+                <TextFont translate={false} bold={true} style={{fontSize: 19, marginLeft:14, marginRight:6, color: colors.textBlack[global.darkMode]}}>{global.name}</TextFont>
+                <TextFont translate={false} bold={false} style={{fontSize: 18, marginLeft:14, marginRight:6, color: colors.textBlack[global.darkMode]}}>{global.islandName}</TextFont>
+              </TouchableOpacity>
+            </View>
+            <TextFont bold={true} style={{marginHorizontal: 20, marginTop: 16, marginBottom: 10, fontSize: 31, color: colors.textBlack[global.darkMode]}}>ACNH Pocket</TextFont>
           </View>
           {sideSections.map( (section, index)=>
             {
@@ -199,6 +205,12 @@ export const sideSections = [
     "picture" : require("../assets/icons/envelope.png"),
     "displayName" : "Letters",
     "color": "selectCards"
+  },
+  {
+    "pageNum" : 27,
+    "picture" : require("../assets/icons/amiiboIcon.png"),
+    "displayName" : "Amiibo Cards",
+    "color": "selectAmiibo"
   },
   {
     "pageNum" : "breaker",

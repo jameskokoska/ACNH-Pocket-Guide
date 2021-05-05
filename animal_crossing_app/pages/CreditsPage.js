@@ -69,6 +69,7 @@ class CreditsPage extends Component {
           <View style={{height:60}}/>
           <SubHeader>Additional Information</SubHeader>
           <Paragraph>This application was created using React Native, with the original App programmed in Flutter. This application and contents are NOT affiliated with Nintendo. All local artwork recreated/licensed. This application is not made for commercial use, and is provided at a price of 0$ (free) on the Google Play Store with no advertisements. All application source code is of property to respective owners/contributors listed on the Credits page and/or licenses associated within specific packages/libraries within this application.</Paragraph>
+          <Paragraph>The copyright of assets is likely to be held by the publisher where applicable. With limited number of low-resolution images for identification, critical commentary and information, the copyrighted content depicted in question qualifies as fair use under United States copyright law and therefore does not significantly impede the right of the copyright holder, since in this context the material is not being used to turn a profit and presents ideas that cannot be exhibited otherwise.</Paragraph>
           <Paragraph>Twemoji Icons Graphics licensed under CC-BY 4.0:</Paragraph>
           <ExternalLink link="https://twemoji.twitter.com/"/>
           <Paragraph>Font Awesome icons:</Paragraph>
@@ -80,8 +81,7 @@ class CreditsPage extends Component {
           <Paragraph>Translations sourced from the community spreadsheet. Thank you everyone for translating!</Paragraph>
           <ExternalLink link="https://github.com/alexislours/translation-sheet-data"/>
           <Paragraph>And thank YOU for downloading this application and showing your support.</Paragraph>
-          
-
+         
           <View style={{height:35}}/>
           <SubHeader>Integrations</SubHeader>
           <Paragraph>Turnip Prophet - Turnip Tracker:</Paragraph>

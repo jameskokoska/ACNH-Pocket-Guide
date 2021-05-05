@@ -32,7 +32,7 @@ export default class CreditsPage extends Component {
             <ProfileIcon profile={global.profile}/>
             <Header style={{marginHorizontal:15}}>Profile</Header>
           </View>
-          <View style={{height: 40}}/>
+          <View style={{height: 50}}/>
           <HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.profileColor[global.darkMode]} title="Islander Info" titleColor={colors.profileColor[global.darkModeReverse]}>
             <View style={{height: 37}}/>
             <Profile setPage={this.props.setPage}/>
@@ -42,6 +42,7 @@ export default class CreditsPage extends Component {
           <HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.collectionColor[global.darkMode]} title="Collection" titleColor={colors.collectionColor[global.darkModeReverse]}>
             <CollectionProgress/>
           </HomeContentArea>
+          <View style={{height: 50}}/>
         </ScrollView>
         <VillagerPopupPopup ref={(villagerPopupPopup) => this.villagerPopupPopup = villagerPopupPopup} setPage={this.props.setPage}/>
 
@@ -132,7 +133,7 @@ export class ProfileIcon extends Component{
     </>
     return (
       <>
-      <TouchableOpacity onPress={()=>{this.props.onPress!==undefined?this.props.onPress():this.popup?.setPopupVisible(true)}} style={[{elevation:2, height:65, width:65, borderRadius:100, backgroundColor:colors.white[global.darkMode], alignItems:"center", justifyContent:"center"},this.props.style]}>
+      <TouchableOpacity onPress={()=>{this.props.onPress!==undefined?this.props.onPress():this.popup?.setPopupVisible(true)}} style={[{elevation:2, height:65, width:65, borderRadius:100, backgroundColor:colors.white2[global.darkMode], alignItems:"center", justifyContent:"center"},this.props.style]}>
         {profileIcon}
       </TouchableOpacity>
       <PopupInfoCustom ref={(popup) => this.popup = popup} buttonDisabled={true} buttons={buttons} header={header}>

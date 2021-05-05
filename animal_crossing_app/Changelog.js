@@ -3,10 +3,11 @@ export const gameVersion = "1.10.0"
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
--Added Museum icon
--Fixed bug with changing name not syncing between profiles
+-Added Amiibo Cards page
 -Added profile icons
 -Added profile page, tap your profile icon to get an island summary!
+-Added Museum icon
+-Fixed bug with changing name not syncing between profiles
 -Removed bottom tab bar setting
 -
 -You can now show/hide pages on the sidebar

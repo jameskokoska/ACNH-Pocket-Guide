@@ -124,8 +124,8 @@ class ProfilesComponent extends Component{
         <View style={{marginHorizontal:20, flexDirection:"row", alignItems:"center"}}>
           <ProfileIcon profile={this.props.profile}/>
           <View>
-            <SubHeader style={{fontSize:26, marginHorizontal:22}} margin={false}>{this.displayProfile}</SubHeader>
-            {doWeSwapDate()?<SubHeader style={{fontSize:22, marginHorizontal:22}} margin={false}>{attemptToTranslate(getWeekDayShort(this.state.date.getDay())) + ". " + this.state.date.getDate() + " " + attemptToTranslate(getMonthShort(this.state.date.getMonth())) + ", " + time}</SubHeader>:<SubHeader style={{fontSize:22, marginHorizontal:22}} margin={false}>{attemptToTranslate(getWeekDayShort(this.state.date.getDay())) + ". " + attemptToTranslate(getMonthShort(this.state.date.getMonth())) + " " + this.state.date.getDate() + ", " + time}</SubHeader>}
+            <SubHeader style={{fontSize:26, marginHorizontal:14}} margin={false}>{this.displayProfile}</SubHeader>
+            {doWeSwapDate()?<SubHeader style={{fontSize:22, marginHorizontal:14}} margin={false}>{attemptToTranslate(getWeekDayShort(this.state.date.getDay())) + ". " + this.state.date.getDate() + " " + attemptToTranslate(getMonthShort(this.state.date.getMonth())) + ", " + time}</SubHeader>:<SubHeader style={{fontSize:22, marginHorizontal:14}} margin={false}>{attemptToTranslate(getWeekDayShort(this.state.date.getDay())) + ". " + attemptToTranslate(getMonthShort(this.state.date.getMonth())) + " " + this.state.date.getDate() + ", " + time}</SubHeader>}
           </View>
         </View>
         <View style={{height:20}}/>
