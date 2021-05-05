@@ -33,16 +33,21 @@ export function inChecklist(checkListKeyString){
 
 const database = require("./assets/data/data.json");
 
-export async function getStorageData(data, checkListKey, defaultValue){
+export async function getStorageData(data, checkListKey, defaultValue, customDatabase=false, databaseCategories="",forceTranslation=false){
   var dataLoadingTotal = [];
   //Loop through all datasets
   for(var dataSet = 0; dataSet <data.length; dataSet++){
-    var dataLoading = database[data[dataSet]];
+    var dataLoading
+    if(customDatabase === false){
+      dataLoading = database[data[dataSet]];
+    } else {
+      dataLoading = data[dataSet];
+    }
     var totalIndex = -1;
     //Loop through that specific dataset
     for(var i = 0; i < dataLoading.length; i++){
       //Remove no name K.K. songs
-      if(dataLoading[i]["Name"].includes("Hazure")){
+      if(dataLoading[i].hasOwnProperty("Name")&&dataLoading[i]["Name"].includes("Hazure")){
         dataLoading.splice(i,1);
         continue;
       }
@@ -80,10 +85,17 @@ export async function getStorageData(data, checkListKey, defaultValue){
       }
       if(global.language!=="English"){
         dataLoading[i]["NameLanguage"]=attemptToTranslateItem(dataLoading[i]["Name"]);
+        if(forceTranslation){
+          dataLoading[i]["NameLanguage"]=attemptToTranslate(dataLoading[i]["Name"], true);
+        }
       } else {
         dataLoading[i]["NameLanguage"]=dataLoading[i]["Name"];
       }
-      dataLoading[i]["Data Category"]=data[dataSet];
+      if(databaseCategories===""){
+        dataLoading[i]["Data Category"]=data[dataSet];
+      } else {
+        dataLoading[i]["Data Category"]=databaseCategories[dataSet];
+      }
     }
     dataLoadingTotal.push(dataLoading);
   }
@@ -105,7 +117,9 @@ export function countCollection(checkListKeyStart){
 }
 
 export function determineDataGlobal(datakeyName){
-  if(datakeyName==="dataLoadedReactions")
+  if(datakeyName==="dataLoadedAmiibo")
+    return global.dataLoadedAmiibo;
+  else if(datakeyName==="dataLoadedReactions")
     return global.dataLoadedReactions;
   else if(datakeyName==="dataLoadedArt")
     return global.dataLoadedArt;
@@ -264,6 +278,23 @@ export function removeBrackets(string){
 }
 
 export async function loadGlobalData(){
+  global.dataLoadedAmiibo = await getStorageData([
+    require("./assets/data/Amiibo Data/Series 1.json"),
+    require("./assets/data/Amiibo Data/Series 2.json"),
+    require("./assets/data/Amiibo Data/Series 3.json"),
+    require("./assets/data/Amiibo Data/Series 4.json"),
+    require("./assets/data/Amiibo Data/Promos.json"),
+    require("./assets/data/Amiibo Data/Welcome amiibo series.json"),
+    require("./assets/data/Amiibo Data/Sanrio series.json"),
+  ], [
+    ["amiiboCheckListSeries1","Name"],
+    ["amiiboCheckListSeries2","Name"],
+    ["amiiboCheckListSeries3","Name"],
+    ["amiiboCheckListSeries4","Name"],
+    ["amiiboCheckListPromos","Name"],
+    ["amiiboCheckListSeriesWelcomeamiiboseries","Name"],
+    ["amiiboCheckListSeriesSanrioseries","Name"],
+  ], "false", true, ["Series 1", "series 2", "Series 3", "Series 4", "Promos", "Welcome Amiibo Series", "Sanrio Series"],true)
   global.dataLoadedReactions = await getStorageData(["Reactions"],[["emojiCheckList","Name"]],"false");
   global.dataLoadedMusic = await getStorageData(["Music"],[["songCheckList","Name"]],"false");
   global.dataLoadedConstruction = await getStorageData(["Construction","Fencing"],[["constructionCheckList","Name"],["fenceCheckList","Name"]],"false");

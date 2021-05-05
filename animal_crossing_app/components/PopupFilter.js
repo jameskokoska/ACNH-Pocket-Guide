@@ -61,7 +61,31 @@ class PopupFilter extends Component {
         {name:"Can catch in December",id:hemispherePre+"Dec Active:true"},
       ]
     }]
-    if(this.props.title==="Fish"){
+    if(this.props.title==="Amiibo"){
+      const categories = [{
+        "name": "Type Categories",
+        "id": "Type Categories",
+        "children": [
+          {"name":"Series 1","id":"Data Category:Series 1"},
+          {"name":"Series 2","id":"Data Category:Series 2"},
+          {"name":"Series 3","id":"Data Category:Series 3"},
+          {"name":"Series 4","id":"Data Category:Series 4"},
+          {"name":"Promos","id":"Data Category:Promos"},
+          {"name":"Welcome Amiibo Series","id":"Data Category:Welcome Amiibo Series"} ,
+          {"name":"Sanrio Series","id":"Data Category:Sanrio Series"} 
+        ]
+      }]
+      const handSigns = [{
+        "name": "Hand Sign",
+        "id": "Hand Sign",
+        "children": [
+          {"name":"Rock","id":"handSign:Rock"},
+          {"name":"Paper","id":"handSign:Paper"},
+          {"name":"Scissors","id":"handSign:Scissors"},
+        ]
+      }]
+      this.possibleFilters = [...this.possibleFilters, ...categories, ...handSigns];
+    } else if(this.props.title==="Fish"){
       this.possibleFilters = [...this.possibleFilters, ...activeFilters, ...filterDefinitions["Fish"]];
     } else if(this.props.title==="Bugs"){
       this.possibleFilters = [...this.possibleFilters, ...activeFilters, ...filterDefinitions["Bugs"]];

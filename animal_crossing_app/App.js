@@ -44,6 +44,8 @@ import CustomFiltersPage from "./pages/CustomFiltersPage"
 import VillagersCompatibilityPage from "./pages/VillagersCompatibilityPage"
 import {sideSections} from "./components/SideMenu"
 import ProfileCurrentPage from "./pages/ProfileCurrentPage"
+import AmiiboPage from "./pages/AmiiboPage"
+
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -63,7 +65,7 @@ class App extends Component {
     this.numLogins;
     this.state = {
       loaded: false,
-      currentPage: 26,
+      currentPage: 27,
       open:false,
       propsPassed:""
     }
@@ -352,9 +354,12 @@ class App extends Component {
         currentPageView = <ProfilesPage setPage={this.setPage} loadProfileData={this.loadProfileData}/>
       } else if (this.state.currentPage===26){
         currentPageView = <ProfileCurrentPage setPage={this.setPage}/>
+      } else if (this.state.currentPage===27){
+        currentPageView = <AmiiboPage/>
       } else {
         currentPageView = <Text>Default</Text>
       }
+      
       
       return (
         <>  

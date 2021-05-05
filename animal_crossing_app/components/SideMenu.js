@@ -50,9 +50,9 @@ export default class SideMenu extends Component {
       <View style={{width: "100%", height:"100%", backgroundColor:colors.textWhite[global.darkMode]}}>
         <ScrollView ref={(scrollView) => this.scrollView = scrollView}>
           <View style={{backgroundColor: colors.topSidebar[global.darkMode], marginBottom: 10}}>
-            <View style={{height:75}}/>
-            <ProfileIcon name={global.name} onPress={()=>{this.props.setPage(26)}} profile={global.profile} style={{marginHorizontal:20}}/>
-            <View style={{height:35}}/>
+            <View style={{height:45}}/>
+            <ProfileIcon onPress={()=>{this.props.setPage(26)}} profile={global.profile} style={{marginHorizontal:20}}/>
+            <TextFont bold={true} style={{marginHorizontal: 20, marginTop: 15, marginBottom: 10, fontSize: 32, color: colors.textBlack[global.darkMode]}}>ACNH Pocket</TextFont>
           </View>
           {sideSections.map( (section, index)=>
             {

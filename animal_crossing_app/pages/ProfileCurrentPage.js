@@ -58,7 +58,7 @@ export class ProfileIcon extends Component{
     this.state={profileIcon:"villager.png"}
   }
   async componentDidMount(){
-    await this.loadProfileIcon
+    await this.loadProfileIcon()
   }
   loadProfileIcon = async () => {
     const profileIcon = await getStorage("profileIcon"+this.props.profile,"villager.png")

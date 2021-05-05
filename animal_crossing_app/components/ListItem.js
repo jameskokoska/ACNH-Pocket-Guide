@@ -428,7 +428,7 @@ const styles = StyleSheet.create({
   gridBoxImage: {
     height: 90,
     width: 90,
-    borderRadius:5,
+    borderRadius:2,
     marginTop: 10,
     resizeMode:'contain',
   },
