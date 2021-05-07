@@ -749,7 +749,7 @@
         },
         {
             "English": "(Price calculator and predictor)",
-            "French": "(Price calculator and predictor)"
+            "English (Europe)": "(Price calculator and predictor)"
         },
         {
             "English": "Collection",
@@ -11895,6 +11895,14 @@
             "German": "Neureiche(r)"
         },
         {
+            "English": "Liberal-Arts",
+            "English (Europe)": "Liberal-Arts"
+        },
+        {
+            "English": "Fastidious",
+            "English (Europe)": "Fastidious"
+        },
+        {
             "English": "Restless",
             "English (Europe)": "Restless",
             "French": "sans relâche",
@@ -11909,11 +11917,47 @@
             "German": "Coole(r)"
         },
         {
+            "English": "Overnight",
+            "English (Europe)": "Overnight"
+        },
+        {
+            "English": "Cliffhanging",
+            "English (Europe)": "Cliffhanging"
+        },
+        {
+            "English": "Soulful",
+            "English (Europe)": "Soulful"
+        },
+        {
+            "English": "Off-Season",
+            "English (Europe)": "Off-Season"
+        },
+        {
+            "English": "Regular",
+            "English (Europe)": "Regular"
+        },
+        {
+            "English": "Bold",
+            "English (Europe)": "Bold"
+        },
+        {
+            "English": "Oceanic",
+            "English (Europe)": "Oceanic"
+        },
+        {
+            "English": "Friendship",
+            "English (Europe)": "Friendship"
+        },
+        {
             "English": "Grown",
             "English (Europe)": "Grown",
             "French": "raisonnable",
             "French (US)": "raisonnable",
             "German": "Ausgewachsene(r)"
+        },
+        {
+            "English": "Fall-Born",
+            "English (Europe)": "Fall-Born"
         },
         {
             "English": "Solitary",
@@ -11928,6 +11972,14 @@
             "French": "fougueux.euse",
             "French (US)": "fougueux.euse",
             "German": "Unbeugsame(r)"
+        },
+        {
+            "English": "Ultimate",
+            "English (Europe)": "Ultimate"
+        },
+        {
+            "English": "Global",
+            "English (Europe)": "Global"
         },
         {
             "English": "Well-Known",
@@ -12562,8 +12614,8 @@
             "French (US)": "Réaction"
         },
         {
-            "English": "\"It\" Guy;\"It\" Girl",
-            "English (Europe)": "\"It\" Guy;\"It\" Girl",
+            "English": "It Guy;\"It\" Girl",
+            "English (Europe)": "It Guy;\"It\" Girl",
             "French": "Chouchou.te",
             "French (US)": "Chouchou.te"
         },
@@ -14963,8 +15015,8 @@
             "French (US)": "Ce dessin représente les proportions idéales du corps humain, telles que décrites dans « De architectura ». Il s'agit d'un traité rédigé par Vitrivius, un architecte du premier siècle avant J.-C."
         },
         {
-            "English": "This masterpiece, painted by 17th century Dutch artist Rembrandt, depicts a military gathering. At the time, portraits usually showed their subjects standing still. So this was a leap forward in technique. For many years, art scholars thought the painting was set at night, but a restoration revealed a dark varnish. We can now see the dynamic poses and lighting as they were meant to be seen—in the daytime!",
-            "English (Europe)": "This masterpiece, painted by 17th century Dutch artist Rembrandt, depicts a military gathering. At the time, portraits usually showed their subjects standing still. So this was a leap forward in technique. For many years, art scholars thought the painting was set at night, but a restoration revealed a dark varnish. We can now see the dynamic poses and lighting as they were meant to be seen—in the daytime!",
+            "English": "This masterpiece, painted by 17th century Dutch artist Rembrandt, depicts a military gathering. At the time, portraits usually showed their subjects standing still. So this was a leap forward in technique. For many years, art scholars thought the painting was set at night, but a restoration revealed a dark varnish. We can now see the dynamic poses and lighting as they were meant to be seen — in the daytime!",
+            "English (Europe)": "This masterpiece, painted by 17th century Dutch artist Rembrandt, depicts a military gathering. At the time, portraits usually showed their subjects standing still. So this was a leap forward in technique. For many years, art scholars thought the painting was set at night, but a restoration revealed a dark varnish. We can now see the dynamic poses and lighting as they were meant to be seen — in the daytime!",
             "French": "Ce chef-d'œuvre, peint au XVIIe siècle par le néerlandais Rembrandt, représente un attroupement militaire. À l'époque, les sujets des portraits étaient statiques. Il s'agit donc d'une œuvre de précurseur. On a longtemps cru que la scène se déroulait de nuit, mais une couche de vernis sombre avait été appliquée. Après restauration, nous pouvons enfin admirer ces poses expressives ainsi que l'artiste les avait voulues.",
             "French (US)": "Ce chef-d'œuvre, peint au XVIIe siècle par le néerlandais Rembrandt, représente un attroupement militaire. À l'époque, les sujets des portraits étaient statiques. Il s'agit donc d'une œuvre de précurseur. On a longtemps cru que la scène se déroulait de nuit, mais une couche de vernis sombre avait été appliquée. Après restauration, nous pouvons enfin admirer ces poses expressives ainsi que l'artiste les avait voulues."
         },
@@ -15029,8 +15081,8 @@
             "French (US)": "Van Gogh a réalisé cette œuvre alors qu'il arpentait le sud de la France à la recherche de nuances plus vives. Le jaune demeure la couleur favorite de l'artiste, qui peignit sept toiles de tournesols durant cette période."
         },
         {
-            "English": "Young David glares at his enemies, sling slung over his shoulder. It took Michelangelo more than three years to sculpt this piece. Close inspection shows heart- shaped eyes, but that's probably meant to depict light hitting them. Hearts didn't have the lovey-dovey symbolism back then that they do today.",
-            "English (Europe)": "Young David glares at his enemies, sling slung over his shoulder. It took Michelangelo more than three years to sculpt this piece. Close inspection shows heart- shaped eyes, but that's probably meant to depict light hitting them. Hearts didn't have the lovey-dovey symbolism back then that they do today.",
+            "English": "Young David glares at his enemies, sling slung over his shoulder. It took Michelangelo more than three years to sculpt this piece. Close inspection shows heart-shaped eyes, but that's probably meant to depict light hitting them. Hearts didn't have the lovey-dovey symbolism back then that they do today.",
+            "English (Europe)": "Young David glares at his enemies, sling slung over his shoulder. It took Michelangelo more than three years to sculpt this piece. Close inspection shows heart-shaped eyes, but that's probably meant to depict light hitting them. Hearts didn't have the lovey-dovey symbolism back then that they do today.",
             "French": "Le jeune David toise ses ennemis, sa fronde reposant sur son épaule. Trois années auront été nécessaires à Michel-Ange pour sculpter ce chef-d'œuvre. En regardant de près, on voit que les yeux sont en forme de cœur, afin de figurer la lumière dans son regard. Il est important de noter que le cœur n'avait pas la symbolique amoureuse qu'on lui prête de nos jours.",
             "French (US)": "Le jeune David toise ses ennemis, sa fronde reposant sur son épaule. Trois années auront été nécessaires à Michel-Ange pour sculpter ce chef-d'œuvre. En regardant de près, on voit que les yeux sont en forme de cœur, afin de figurer la lumière dans son regard. Il est important de noter que le cœur n'avait pas la symbolique amoureuse qu'on lui prête de nos jours."
         },
@@ -15095,8 +15147,8 @@
             "French (US)": "Il s'agit du buste de Néfertiti, dont le nom signifie « l'arrivée de la plus belle ». Cette « grande épouse royale » est considérée comme une des trois plus belles femmes de l'ancienne Égypte. On ignore si l'oeil gauche est tombé ou s'il n'a jamais été sculpté."
         },
         {
-            "English": "One of Manet's earlier works, this painting depicts a young flautist dressed in military uniform. Manet's works are notable for their lack of linear perspective and strong color contrast. These attributes led some to call him \"The Father of Impressionism\" and make comparisons to Vélazquez. Fun fact-flautists can determine what note the boy is playing just by studying the painting closely.",
-            "English (Europe)": "One of Manet's earlier works, this painting depicts a young flautist dressed in military uniform. Manet's works are notable for their lack of linear perspective and strong color contrast. These attributes led some to call him \"The Father of Impressionism\" and make comparisons to Vélazquez. Fun fact-flautists can determine what note the boy is playing just by studying the painting closely.",
+            "English": "One of Manet's earlier works, this painting depicts a young flautist dressed in military uniform. Manet's works are notable for their lack of linear perspective and strong color contrast. These attributes led some to call him \"The Father of Impressionism\" and make comparisons to Vélazquez. Fun fact — flautists can determine what note the boy is playing just by studying the painting closely.",
+            "English (Europe)": "One of Manet's earlier works, this painting depicts a young flautist dressed in military uniform. Manet's works are notable for their lack of linear perspective and strong color contrast. These attributes led some to call him \"The Father of Impressionism\" and make comparisons to Vélazquez. Fun fact — flautists can determine what note the boy is playing just by studying the painting closely.",
             "French": "Cette oeuvre de jeunesse de Manet représente un jeune joueur de flûte vêtu d'un uniforme militaire. Le travail de Manet est caractérisé par l'absence de perspective nette et les forts contrastes. Ces traits conduisent à le comparer à Velázquez et à en faire le père de l'impressionnisme. Quant aux musiciens, il leur suffit de bien regarder le tableau pour connaître la note que joue le fifre.",
             "French (US)": "Cette oeuvre de jeunesse de Manet représente un jeune joueur de flûte vêtu d'un uniforme militaire. Le travail de Manet est caractérisé par l'absence de perspective nette et les forts contrastes. Ces traits conduisent à le comparer à Velázquez et à en faire le père de l'impressionnisme. Quant aux musiciens, il leur suffit de bien regarder le tableau pour connaître la note que joue le fifre."
         },
@@ -15179,8 +15231,8 @@
             "French (US)": "Cette statue de Niké, déesse de la victoire, a été mise au jour à Samothrace. Elle représente la déesse ailée au moment où elle vient se poser sur la proue d'un navire. Elle a été reconstituée à partir de pièces éparses, mais la tête et les bras n'ont jamais été retrouvés."
         },
         {
-            "English": "It is said that this painting is a more discreet version of an earlier work known as \"The Nude Maja.\" It is also known that Francisco de Goya was quite popular in his own time. Could these facts be related? A third, unrelated fact-the word \"maja\" refers to a \"stylish young lady of Madrid.\"",
-            "English (Europe)": "It is said that this painting is a more discreet version of an earlier work known as \"The Nude Maja.\" It is also known that Francisco de Goya was quite popular in his own time. Could these facts be related? A third, unrelated fact-the word \"maja\" refers to a \"stylish young lady of Madrid.\"",
+            "English": "It is said that this painting is a more discreet version of an earlier work known as \"The Nude Maja.\" It is also known that Francisco de Goya was quite popular in his own time. Could these facts be related? A third, unrelated fact — the word \"maja\" refers to a \"stylish young lady of Madrid.",
+            "English (Europe)": "It is said that this painting is a more discreet version of an earlier work known as \"The Nude Maja.\" It is also known that Francisco de Goya was quite popular in his own time. Could these facts be related? A third, unrelated fact — the word \"maja\" refers to a \"stylish young lady of Madrid.",
             "French": "Cette toile serait une version chaste d'une œuvre antérieure intitulée la Maja nue. Le succès venu, il était peut-être devenu inconvenant pour Goya d'afficher des œuvres impudiques. Enfin, notons que la « maja » du titre désigne une jeune femme élégante de Madrid.",
             "French (US)": "Cette toile serait une version chaste d'une œuvre antérieure intitulée la Maja nue. Le succès venu, il était peut-être devenu inconvenant pour Goya d'afficher des œuvres impudiques. Enfin, notons que la « maja » du titre désigne une jeune femme élégante de Madrid."
         },
@@ -15191,8 +15243,8 @@
             "French (US)": "Ces guerriers en terre cuite furent entérrés avec le premier empeureur Qin pour le protéger dans l'au-delà. Plus de 2 000 ans plus tard, en 1974, 8 000 de ces statues furent retrouvées. Chacune aurait été sculptée à la main et présenterait une pose, une tenue et une expression distinctes."
         },
         {
-            "English": "This folding screen shows dynamic brushwork of Fūjin and Raijin on a gold-leaf background. It is thought to be the masterpiece of Tawaraya Sōtatsu, an early-Edo- period artist. The simplification of the subjects is a style that was carried on by Ogata Kōrin. It's a style still in use today in the Rinpa school of Japanese painting.",
-            "English (Europe)": "This folding screen shows dynamic brushwork of Fūjin and Raijin on a gold-leaf background. It is thought to be the masterpiece of Tawaraya Sōtatsu, an early-Edo- period artist. The simplification of the subjects is a style that was carried on by Ogata Kōrin. It's a style still in use today in the Rinpa school of Japanese painting.",
+            "English": "This folding screen shows dynamic brushwork of Fūjin and Raijin on a gold-leaf background. It is thought to be the masterpiece of Tawaraya Sōtatsu, an early-Edo-period artist. The simplification of the subjects is a style that was carried on by Ogata Kōrin. It's a style still in use today in the Rinpa school of Japanese painting.",
+            "English (Europe)": "This folding screen shows dynamic brushwork of Fūjin and Raijin on a gold-leaf background. It is thought to be the masterpiece of Tawaraya Sōtatsu, an early-Edo-period artist. The simplification of the subjects is a style that was carried on by Ogata Kōrin. It's a style still in use today in the Rinpa school of Japanese painting.",
             "French": "Il s'agit d'une représentation très dynamique de Fūjin et Raijin sur fond de feuille d'or. On considère que c'est le chef-d'œuvre de Tawaraya Sōtatsu, un artiste du début de l'époque d'Edo. La simplification des sujets constitue un style initié par Ogata Kōrin. Il est toujours en vogue de nos jours dans l'école de peinture japonaise Rinpa.",
             "French (US)": "Il s'agit d'une représentation très dynamique de Fūjin et Raijin sur fond de feuille d'or. On considère que c'est le chef-d'œuvre de Tawaraya Sōtatsu, un artiste du début de l'époque d'Edo. La simplification des sujets constitue un style initié par Ogata Kōrin. Il est toujours en vogue de nos jours dans l'école de peinture japonaise Rinpa."
         },

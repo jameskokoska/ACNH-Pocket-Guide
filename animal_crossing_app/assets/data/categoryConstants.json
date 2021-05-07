@@ -77,8 +77,8 @@
     "searchKey":["NameLanguage"],
     "checkListKey":["clothingCheckList","Name","Variation"]
   },
-  "Equipment": {
-    "data":"Equipment",
+  "Accessories": {
+    "data":"Accessories",
     "disablePopup":"false",
     "imageProperty":"Closet Image",
     "textProperty":"NameLanguage",

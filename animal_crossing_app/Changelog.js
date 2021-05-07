@@ -7,6 +7,7 @@ export const changelog = `
 -Improvements to NPC Visitors section
 -Updated translations
 -Updated game data
+-Added filters for active creatures
 -
 -Added Amiibo Cards page
 -Added profile icons

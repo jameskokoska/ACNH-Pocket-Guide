@@ -330,7 +330,7 @@ export async function loadGlobalData(){
   ],"false");
   global.dataLoadedClothing = await getStorageData([
     "Headwear",
-    "Equipment",
+    "Accessories",
     "Tops",
     "Dress-Up",
     "Clothing Other",
@@ -375,7 +375,7 @@ export async function loadGlobalData(){
     "Photos",
     "Posters",
     "Headwear",
-    "Equipment",
+    "Accessories",
     "Tops",
     "Dress-Up",
     "Clothing Other",

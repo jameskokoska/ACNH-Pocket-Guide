@@ -2,6 +2,7 @@ import json
 import codecs
 
 print("Matching [Name] and [English]... from data.json and translations.json")
+propertiesToCheck = ["Name","Description", "Achievement Description","Achievement Criteria","Tier 1 Modifier", "Tier 2 Modifier", "Tier 3 Modifier", "Tier 4 Modifier", "Tier 5 Modifier", "Tier 6 Modifier", "Tier 1 Noun", "Tier 2 Noun", "Tier 3 Noun", "Tier 4 Noun", "Tier 5 Noun", "Tier 6 Noun"]
 count=0
 length=0
 outputDictionary = {}
@@ -45,21 +46,22 @@ for dataSheet in data:
                 print("New Source")
                 sources.append(datum.get("Source"))
                 print(datum.get("Source"))
-        for translationSheet in translation:
-            if(translationSheet in ignore):
-                continue
-            for translate in translation[translationSheet]:
-                if(datum.get("Name")==None or translate.get("English")==None):
-                    break
-                elif(datum.get("Name")==translate.get("English")):
-                    #datum.update(translate)                            
-                    outputDictionary[translate.get("English")] = translate
-                    found = True
-        if(found == False):
-            if(alreadyTranslated(datum.get("Name"))==False and datum.get("Name") not in missingItems):
-                print("Missing Item")
-                print(datum.get("Name"))
-                missingItems.append(datum.get("Name"))
+        for propertyToCheck in propertiesToCheck:
+            for translationSheet in translation:
+                if(translationSheet in ignore):
+                    continue
+                for translate in translation[translationSheet]:
+                    if(datum.get(propertyToCheck)==None or translate.get("English")==None):
+                        break
+                    elif(datum.get(propertyToCheck)==translate.get("English")):
+                        #datum.update(translate)                            
+                        outputDictionary[translate.get("English")] = translate
+                        found = True
+            if(found == False):
+                if(alreadyTranslated(datum.get(propertyToCheck))==False and datum.get(propertyToCheck) not in missingItems):
+                    print("Missing "+propertyToCheck)
+                    print(datum.get(propertyToCheck))
+                    missingItems.append(datum.get(propertyToCheck))
 
     length+=1
     print(str(int(length/len(data)*100))+"%")

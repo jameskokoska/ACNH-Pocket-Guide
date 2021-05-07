@@ -34,7 +34,7 @@ filters = [
         "Clothing",
         [
             data["Headwear"],
-            data["Equipment"],
+            data["Accessories"],
             data["Tops"],
             data["Dress-Up"],
             data["Clothing Other"],
@@ -92,7 +92,7 @@ filters = [
             data["Photos"],
             data["Posters"],
             data["Headwear"],
-            data["Equipment"],
+            data["Accessories"],
             data["Tops"],
             data["Dress-Up"],
             data["Clothing Other"],
