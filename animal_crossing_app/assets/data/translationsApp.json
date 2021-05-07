@@ -95,7 +95,7 @@
             "English (Europe)": "Letters",
             "French": "Courrier",
             "French (US)": "Courrier",
-            "German": "Briefpapier",
+            "German": "Karten",
             "Spanish": "Cartas",
             "Spanish (US)": "Cartas"
         },
@@ -748,13 +748,8 @@
             "Spanish (US)": "Ver en turnipprophet.io"
         },
         {
-            "English": "Hide Turnip Log",
-            "English (Europe)": "Hide Turnip Log",
-            "French": "Masquer le Journal des Navets",
-            "French (US)": "Masquer le Journal des Navets",
-            "German": "Rübenprotokoll ausblenden",
-            "Spanish": "Esconder registro de precios",
-            "Spanish (US)": "Esconder registro de nabo"
+            "English": "(Price calculator and predictor)",
+            "French": "(Price calculator and predictor)"
         },
         {
             "English": "Collection",
@@ -1067,7 +1062,7 @@
             "English (Europe)": "Recipes",
             "French": "Plans",
             "French (US)": "Plans",
-            "German": "Bastelanleitungen",
+            "German": "Anleitungen",
             "Spanish": "Recetas",
             "Spanish (US)": "Recetas"
         },
@@ -1358,6 +1353,7 @@
             "English (Europe)": "or...",
             "French": "ou...",
             "French (US)": "ou...",
+            "German": "oder...",
             "Spanish": "o...",
             "Spanish (US)": "o..."
         },
@@ -1382,6 +1378,7 @@
             "English (Europe)": "Please be patient.",
             "French": "Merci de patienter.",
             "French (US)": "Merci de patienter.",
+            "German": "Bitte habe etwas Geduld.",
             "Spanish": "Por favor sea paciente.",
             "Spanish (US)": "Por favor sea paciente."
         },
@@ -1390,6 +1387,7 @@
             "English (Europe)": "Import Results",
             "French": "Importer les Résultats",
             "French (US)": "Importer les Résultats",
+            "German": "Importiere Ergebnisse",
             "Spanish": "Resultados de la importación",
             "Spanish (US)": "Importar Resultados"
         },
@@ -1422,6 +1420,7 @@
             "English (Europe)": "There was an error, please check the link and try again...",
             "French": "Il y a eu une erreur, merci de vérifier le lien et de réessayer...",
             "French (US)": "Il y a eu une erreur, merci de vérifier le lien et de réessayer...",
+            "German": "Ein Fehler ist aufgetaucht, bitte überprüfe den Link und versuche es erneut...",
             "Spanish": "Hubo un error. Verifique el enlace y vuelva a intentarlo...",
             "Spanish (US)": "Hubo un error, verifique el enlace y vuelva a intentarlo..."
         },
@@ -1430,6 +1429,7 @@
             "English (Europe)": "Imported:",
             "French": "Importé(s):",
             "French (US)": "Importé(s):",
+            "German": "Importiert:",
             "Spanish": "Importados:",
             "Spanish (US)": "Importado:"
         },
@@ -1438,6 +1438,7 @@
             "English (Europe)": "Errors:",
             "French": "Erreurs:",
             "French (US)": "Erreurs:",
+            "German": "Fehler:",
             "Spanish": "Errores:",
             "Spanish (US)": "Errores:"
         },
@@ -1446,6 +1447,7 @@
             "English (Europe)": "items",
             "French": "objets",
             "French (US)": "objets",
+            "German": "Objekt",
             "Spanish": "Objetos",
             "Spanish (US)": "Objetos"
         },
@@ -1462,6 +1464,7 @@
             "English (Europe)": "(Second option)",
             "French": "(Deuxième option)",
             "French (US)": "(Deuxième option)",
+            "German": "(Zweite Option)",
             "Spanish": "(Segunda opción)",
             "Spanish (US)": "(Segunda opción)"
         },
@@ -1470,6 +1473,7 @@
             "English (Europe)": "Export Results",
             "French": "Exporter les Résultats",
             "French (US)": "Exporter les Résultats",
+            "German": "Exportiere Ergebnisse",
             "Spanish": "Exportar Resultados",
             "Spanish (US)": "Exportar Resultados"
         },
@@ -1478,6 +1482,7 @@
             "English (Europe)": "File exported to",
             "French": "Fichier exporté vers le dossier",
             "French (US)": "Fichier exporté vers le dossier",
+            "German": "Datei exportieren zu",
             "Spanish": "Archivo exportado a",
             "Spanish (US)": "Archivo exportado a la carpeta"
         },
@@ -1486,6 +1491,7 @@
             "English (Europe)": "Import File",
             "French": "Importer le Fichier",
             "French (US)": "Importer le Fichier",
+            "German": "Datei importieren",
             "Spanish": "Importar Archivo",
             "Spanish (US)": "Importar Archivo"
         },
@@ -1494,6 +1500,7 @@
             "English (Europe)": "Please import ACNHPocketGuideData.txt.",
             "French": "Merci d'importer ACNHPocketGuideData.txt.",
             "French (US)": "Merci d'importer ACNHPocketGuideData.txt.",
+            "German": "Bitte importiere ACNHPocketGuideData.txt.",
             "Spanish": "Por favor importe ACNHPocketGuideData.txt.",
             "Spanish (US)": "Por favor importe ACNHPocketGuideData.txt."
         },
@@ -1509,6 +1516,7 @@
             "English (Europe)": "Import Results",
             "French": "Importer les Résultats",
             "French (US)": "Importer les Résultats",
+            "German": "Importiere Ergebnisse",
             "Spanish": "Importar resultados",
             "Spanish (US)": "Importar resultados"
         },
@@ -1517,6 +1525,7 @@
             "English (Europe)": "Import",
             "French": "Importer",
             "French (US)": "Importer",
+            "German": "Importieren",
             "Spanish": "Importar",
             "Spanish (US)": "Importar"
         },
@@ -1525,6 +1534,7 @@
             "English (Europe)": "entries.",
             "French": "entrées.",
             "French (US)": "entrées.",
+            "German": "Einträge.",
             "Spanish": "entradas.",
             "Spanish (US)": "Entradas."
         },
@@ -1541,6 +1551,7 @@
             "English (Europe)": "Cleared Set Filters",
             "French": "Filtres supprimés",
             "French (US)": "Filtres supprimés",
+            "German": "Setzte alle Filter zurück",
             "Spanish": "Eliminar todos los filtros",
             "Spanish (US)": "Despejar filtros seleccionados"
         },
@@ -1549,6 +1560,7 @@
             "English (Europe)": "All the filters selected have been unset",
             "French": "Tous les filtres sélectionnés ont été supprimés",
             "French (US)": "Tous les filtres sélectionnés ont été supprimés",
+            "German": "Alle ausgewählten Filter wurden zurückgesetzt.",
             "Spanish": "Se han deseleccionado todos los filtros.",
             "Spanish (US)": "Todos los filtros seleccionados han sido desarmados"
         },
@@ -1557,6 +1569,7 @@
             "English (Europe)": "Would you like to reset your collection? This action cannot be undone.",
             "French": "Voulez-vous réinitialiser votre collection ? Cette action ne peut pas être annulée",
             "French (US)": "Voulez-vous réinitialiser votre collection ? Cette action ne peut pas être annulée",
+            "German": "Möchtest du deine Sammlung zurücksetzten? Dies kann nicht rückgängig gemacht werden.",
             "Spanish": "¿Borrar toda la colección? Esta acción no se puede deshacer.",
             "Spanish (US)": "¿Quieres restablecer tu colección? Esta acción no se puede deshacer."
         },
@@ -1565,6 +1578,7 @@
             "English (Europe)": "Reset",
             "French": "Réinitialiser",
             "French (US)": "Réinitialiser",
+            "German": "Zurücksetzten",
             "Spanish": "Reiniciar",
             "Spanish (US)": "Reinicializar"
         },
@@ -1573,6 +1587,7 @@
             "English (Europe)": "Restart Required",
             "French": "Redémarrage requis",
             "French (US)": "Redémarrage requis",
+            "German": "Neustert erforderlich",
             "Spanish": "Se requiere reiniciar",
             "Spanish (US)": "Reinicio requerido"
         },
@@ -1581,6 +1596,7 @@
             "English (Europe)": "Please restart the application.",
             "French": "Merci de redémarrer l'application",
             "French (US)": "Merci de redémarrer l'application",
+            "German": "Bitte starte die App neu.",
             "Spanish": "Por favor reinicie la aplicación.",
             "Spanish (US)": "Por favor reinicie la aplicación."
         },
@@ -1605,6 +1621,7 @@
             "English (Europe)": "Tap each setting to learn more",
             "French": "Appuyer sur chacun pour en savoir plus",
             "French (US)": "Appuyer sur chacun pour en savoir plus",
+            "German": "Tippe jede Einstellung an um mehr zu erfahren",
             "Spanish": "Presione una configuración para más información",
             "Spanish (US)": "Pulsa cada configuración para aprender más"
         },
@@ -1629,6 +1646,7 @@
             "English (Europe)": "User interface",
             "French": "Interface utilisateur",
             "French (US)": "Interface utilisateur",
+            "German": "Benutzeroberfläche",
             "Spanish": "Interfaz de usuario",
             "Spanish (US)": "Interfaz del usuario"
         },
@@ -1637,6 +1655,7 @@
             "English (Europe)": "System",
             "French": "Système",
             "French (US)": "Système",
+            "German": "System",
             "Spanish": "Sistema",
             "Spanish (US)": "Sistema"
         },
@@ -1757,6 +1776,7 @@
             "English (Europe)": "A restart may be required to see changes.",
             "French": "Un redemarrage peut être nécessaire afin de voir les changements.",
             "French (US)": "Un redemarrage peut être nécessaire afin de voir les changements.",
+            "German": "Ein Neustart kann erforderlich sein um die Änderungen zu sehen",
             "Spanish": "Es posible que sea necesario reiniciar para ver los cambios.",
             "Spanish (US)": "Es posible que sea necesario reiniciar para ver los cambios."
         },
@@ -1765,6 +1785,7 @@
             "English (Europe)": "Use 24 hour clock",
             "French": "Format 24 heures",
             "French (US)": "Format 24 heures",
+            "German": "24 Stunden Format",
             "Spanish": "Usar reloj de 24 horas.",
             "Spanish (US)": "Usar reloj de 24 horas."
         },
@@ -1852,6 +1873,7 @@
             "English (Europe)": "Data backup",
             "French": "Sauvegarde des données",
             "French (US)": "Sauvegarde des données",
+            "German": "Daten sichern",
             "Spanish": "Copia de respaldo",
             "Spanish (US)": "Copias de seguridad"
         },
@@ -1860,6 +1882,7 @@
             "English (Europe)": "Export Data",
             "French": "Exporter les données",
             "French (US)": "Exporter les données",
+            "German": "Daten exportieren",
             "Spanish": "Exportar datos",
             "Spanish (US)": "Exportar datos"
         },
@@ -1868,6 +1891,7 @@
             "English (Europe)": "Import Data",
             "French": "Importer les données",
             "French (US)": "Importer les données",
+            "German": "Daten importieren",
             "Spanish": "Importar datos",
             "Spanish (US)": "Importar datos"
         },
@@ -1876,6 +1900,7 @@
             "English (Europe)": "Data reset",
             "French": "Réinitialisation des données",
             "French (US)": "Réinitialisation des données",
+            "German": "Daten zurücksetzten",
             "Spanish": "Borrar datos",
             "Spanish (US)": "Resetear datos"
         },
@@ -1884,6 +1909,7 @@
             "English (Europe)": "Clear All Set Filters",
             "French": "Supprimer tous les filtres",
             "French (US)": "Supprimer tous les filtres",
+            "German": "Lösche alle gesetzten Filter",
             "Spanish": "Eliminar todos los filtros.",
             "Spanish (US)": "Borrar todos los filtros establecidos"
         },
@@ -1900,6 +1926,7 @@
             "English (Europe)": "Suggestions, bugs or concerns?",
             "French": "Des suggestions, des bugs ou des difficultés ?",
             "French (US)": "Des suggestions, des bugs ou des difficultés ?",
+            "German": "Vorschläge,Fehler oder Anregungen?",
             "Spanish": "¿Tiene sugerencias, errores o inquietudes?",
             "Spanish (US)": "¿Sugerencias, errores o inquietudes?"
         },
@@ -1908,6 +1935,7 @@
             "English (Europe)": "Send me an email!",
             "French": "Envoyez-moi un e-mail!",
             "French (US)": "Envoyez-moi un e-mail!",
+            "German": "Schicke mir eine e-mail!",
             "Spanish": "¡Envíeme un correo electrónico!",
             "Spanish (US)": "¡Envíame un correo electrónico!"
         },
@@ -1924,6 +1952,7 @@
             "English (Europe)": "Lead Programmer",
             "French": "Programmeur principal",
             "French (US)": "Programmeur principal",
+            "German": "Hauptprogrammierer",
             "Spanish": "Programador principal",
             "Spanish (US)": "Programador principal"
         },
@@ -1932,6 +1961,7 @@
             "English (Europe)": "Lead Graphics",
             "French": "Graphiste principal",
             "French (US)": "Graphiste principal",
+            "German": "Hauptgrafiker",
             "Spanish (US)": "Gráficos de plomo"
         },
         {
@@ -1947,7 +1977,7 @@
             "English (Europe)": "Enjoying the app?",
             "French": "Aimez-vous l'application ?",
             "French (US)": "Aimez-vous l'application ?",
-            "Spanish": "¿Le agrada la aplicación?",
+            "Spanish": "¿Le está gustando la aplicación?",
             "Spanish (US)": "¿Disfrutas de la aplicación?"
         },
         {
@@ -1963,7 +1993,8 @@
             "English (Europe)": "No thanks",
             "French": "Non merci",
             "French (US)": "Non merci",
-            "Spanish": "Cerrar",
+            "German": "Nein Danke",
+            "Spanish": "No gracias",
             "Spanish (US)": "No gracias"
         },
         {
@@ -1971,7 +2002,8 @@
             "English (Europe)": "Sure!",
             "French": "Bien sur!",
             "French (US)": "Bien sur!",
-            "Spanish": "Calificar",
+            "German": "Sicher!",
+            "Spanish": "¡Por supuesto!",
             "Spanish (US)": "¡Por supuesto!"
         },
         {
@@ -1979,6 +2011,7 @@
             "English (Europe)": "Welcome to ACNH Pocket Guide",
             "French": "Bienvenue sur ACNH Pocket Guide",
             "French (US)": "Bienvenue sur ACNH Pocket Guide",
+            "German": "Willkommen im ACNH Pocket Guide",
             "Spanish": "Bienvenido a ACNH Pocket Guide",
             "Spanish (US)": "Bienvenido a ACNH Pocket Guide"
         },
@@ -2000,6 +2033,7 @@
             "English (Europe)": "Select Language",
             "French": "Choisir la Langue",
             "French (US)": "Choisir la Langue",
+            "German": "Sprache wählen",
             "Spanish": "Seleccionar idioma",
             "Spanish (US)": "Seleccionar idioma"
         },
@@ -2008,6 +2042,7 @@
             "English (Europe)": "Game language",
             "French": "Langue du jeu",
             "French (US)": "Langue du jeu",
+            "German": "Spielsprache",
             "Spanish": "Idioma del juego",
             "Spanish (US)": "Idioma del juego"
         },
@@ -2024,6 +2059,7 @@
             "English (Europe)": "Turnip Prices",
             "French": "Cours du navet",
             "French (US)": "Cours du navet",
+            "German": "Rübenpreise",
             "Spanish": "Precios de nabos",
             "Spanish (US)": "Precios del nabo"
         },
@@ -2032,6 +2068,7 @@
             "English (Europe)": "Water Flowers",
             "French": "Arroser les fleurs",
             "French (US)": "Arroser les fleurs",
+            "German": "Blumen gießen",
             "Spanish": "Regar flores",
             "Spanish (US)": "Flores de agua"
         },
@@ -2040,6 +2077,7 @@
             "English (Europe)": "Talk To Villagers",
             "French": "Parler aux villageois",
             "French (US)": "Parler aux villageois",
+            "German": "Spreche mit Nachbarn",
             "Spanish": "Hablar con los aldeanos",
             "Spanish (US)": "Habla con los vecinos"
         },
@@ -2064,6 +2102,7 @@
             "English (Europe)": "bells",
             "French": "clochettes",
             "French (US)": "clochettes",
+            "German": "Sternies",
             "Spanish": "Bayas",
             "Spanish (US)": "Bayas"
         },
@@ -2072,6 +2111,7 @@
             "English (Europe)": "miles",
             "French": "miles",
             "French (US)": "miles",
+            "German": "Meilen",
             "Spanish": "Millas",
             "Spanish (US)": "Millas"
         },
@@ -2079,7 +2119,8 @@
             "English": "nook points",
             "English (Europe)": "nook points",
             "French": "points nook",
-            "French (US)": "points nook"
+            "French (US)": "points nook",
+            "German": "Nook Meilen"
         },
         {
             "English": "heart crystals",
@@ -2087,7 +2128,7 @@
             "French": "cristaux d'amour",
             "French (US)": "cristaux d'amour",
             "German": "Liebeskristall",
-            "Spanish": "joya amorosa",
+            "Spanish": "Joya amorosa",
             "Spanish (US)": "joya amorosa"
         },
         {
@@ -2103,6 +2144,7 @@
             "English (Europe)": "durability",
             "French": "durabilité",
             "French (US)": "durabilité",
+            "German": "Haltbarkeit",
             "Spanish": "Durabilidad",
             "Spanish (US)": "Durabilidad"
         },
@@ -2118,6 +2160,7 @@
             "English (Europe)": "All day",
             "French": "Toute la journée",
             "French (US)": "Toute la journée",
+            "German": "Den ganzen Tag",
             "Spanish": "Todo el día",
             "Spanish (US)": "Todo el día"
         },
@@ -2126,6 +2169,7 @@
             "English (Europe)": "Today",
             "French": "Aujourd'hui",
             "French (US)": "Aujourd'hui",
+            "German": "Heute",
             "Spanish": "Hoy",
             "Spanish (US)": "Hoy"
         },
@@ -2155,6 +2199,7 @@
             "English (Europe)": "Special Event",
             "French": "Évènement Spécial",
             "French (US)": "Évènement Spécial",
+            "German": "Besonderes Event",
             "Spanish": "Evento especial",
             "Spanish (US)": "Evento especial"
         },
@@ -2169,6 +2214,7 @@
             "English (Europe)": "Visit https://nook.lol/ for more information",
             "French": "Visitez https://nook.lol/ pour plus d'informations",
             "French (US)": "Visitez https://nook.lol/ pour plus d'informations",
+            "German": "Besuche https://nook.lol/ für mehr Informationen",
             "Spanish": "Visita https://nook.lol/ para más información",
             "Spanish (US)": "Visita https://nook.lol/ para más información"
         },
@@ -2177,7 +2223,8 @@
             "English (Europe)": "What's New?",
             "French": "Quoi de neuf?",
             "French (US)": "Quoi de neuf?",
-            "Spanish": "Lo nuevo",
+            "German": "Was gibt's neues?",
+            "Spanish": "¿Que hay nuevo?",
             "Spanish (US)": "¿Que hay nuevo?"
         },
         {
@@ -2185,6 +2232,7 @@
             "English (Europe)": "Let's go!",
             "French": "C'est parti!",
             "French (US)": "C'est parti!",
+            "German": "Los gehts!",
             "Spanish": "¡Vamos!",
             "Spanish (US)": "¡Vamos!"
         },
@@ -2193,6 +2241,7 @@
             "English (Europe)": "Volunteer Translators",
             "French": "Traducteurs Bénévoles",
             "French (US)": "Traducteurs Bénévoles",
+            "German": "Freiwillige Übersetzer",
             "Spanish": "Traductores Voluntarios",
             "Spanish (US)": "Traductores Voluntarios"
         },
@@ -2201,6 +2250,7 @@
             "English (Europe)": "Thanks for your help!",
             "French": "Merci pour votre aide!",
             "French (US)": "Merci pour votre aide!",
+            "German": "Danke für deine Hilfe!",
             "Spanish": "¡Gracias por su ayuda!",
             "Spanish (US)": "¡Gracias por su ayuda!"
         },
@@ -2209,6 +2259,7 @@
             "English (Europe)": "All Events",
             "French": "Tous les Évènements",
             "French (US)": "Tous les Évènements",
+            "German": "Alle Events",
             "Spanish": "Todos los eventos",
             "Spanish (US)": "Todos los eventos"
         },
@@ -2217,6 +2268,7 @@
             "English (Europe)": "Skip",
             "French": "Passer",
             "French (US)": "Passer",
+            "German": "Überspringen",
             "Spanish": "Saltar",
             "Spanish (US)": "Saltar"
         },
@@ -2225,6 +2277,7 @@
             "English (Europe)": "Download images",
             "French": "Télécharger les images",
             "French (US)": "Télécharger les images",
+            "German": "Bilder herunterladen",
             "Spanish": "Descargar imágenes",
             "Spanish (US)": "Descargar imágenes"
         },
@@ -2264,7 +2317,7 @@
             "English (Europe)": "OK",
             "French": "OK",
             "French (US)": "OK",
-            "Spanish": "Entendido",
+            "Spanish": "Vale",
             "Spanish (US)": "Vale"
         },
         {
@@ -2369,6 +2422,7 @@
             "English (Europe)": "Disguised On Shoreline",
             "French": "Déguisé sur le rivage",
             "French (US)": "Déguisé sur le rivage",
+            "German": "Verborgen am Strand",
             "Spanish": "Escondido en la costa"
         },
         {
@@ -2376,6 +2430,7 @@
             "English (Europe)": "On Flowers",
             "French": "Sur les Fleurs",
             "French (US)": "Sur les fleurs",
+            "German": "Auf Blumen",
             "Spanish": "Sobre flores",
             "Spanish (US)": "En las flores"
         },
@@ -2384,6 +2439,7 @@
             "English (Europe)": "Underground",
             "French": "Sous la terre",
             "French (US)": "Sous la terre",
+            "German": "Unterirdisch",
             "Spanish": "Bajo tierra",
             "Spanish (US)": "Bajo tierra"
         },
@@ -2392,6 +2448,7 @@
             "English (Europe)": "Flying Near Light Sources",
             "French": "Vol près de sources lumineuses",
             "French (US)": "Vol près de sources lumineuses",
+            "German": "Fliegen in der Nähe von Lichtquellen",
             "Spanish": "Volando cerca de fuentes de luz"
         },
         {
@@ -2399,6 +2456,7 @@
             "English (Europe)": "On White Flowers",
             "French": "Sur les fleurs blanches",
             "French (US)": "Sur les fleurs blanches",
+            "German": "Auf weißen Blumen",
             "Spanish": "Sobre flores blancas",
             "Spanish (US)": "En las flores blancas"
         },
@@ -2407,6 +2465,7 @@
             "English (Europe)": "Flying Near Blue/purple/black Flowers",
             "French": "Vole près des fleurs bleues/mauves/noires",
             "French (US)": "Vole près des fleurs bleues/mauves/noires",
+            "German": "Fliegen in der Nähe von Blauen/lila/schwarzen Blumen",
             "Spanish": "Sobrevolando flores azules o violetas"
         },
         {
@@ -2444,6 +2503,7 @@
             "English (Europe)": "Sea",
             "French": "Mer",
             "French (US)": "Mer",
+            "German": "Meer",
             "Spanish": "Mar",
             "Spanish (US)": "Mar"
         },
@@ -2452,6 +2512,7 @@
             "English (Europe)": "River",
             "French": "Rivière",
             "French (US)": "Rivière",
+            "German": "Fluß",
             "Spanish": "Río",
             "Spanish (US)": "Río"
         },
@@ -2460,6 +2521,7 @@
             "English (Europe)": "Pier",
             "French": "Ponton",
             "French (US)": "Ponton",
+            "German": "Steg",
             "Spanish": "Muelle",
             "Spanish (US)": "Muelle"
         },
@@ -2468,6 +2530,7 @@
             "English (Europe)": "Pond",
             "French": "Etang",
             "French (US)": "Etang",
+            "German": "Teich",
             "Spanish": "Estanque",
             "Spanish (US)": "Estanque"
         },
@@ -2476,6 +2539,7 @@
             "English (Europe)": "Selected language not supported",
             "French": "Langue non prise en charge",
             "French (US)": "Langue non prise en charge",
+            "German": "Ausgewählte Sprache nicht unterstützt",
             "Spanish": "El idioma seleccionado no es compatible",
             "Spanish (US)": "El idioma seleccionado no es compatible"
         },
@@ -2484,6 +2548,7 @@
             "English (Europe)": "This online guide is only available in English.",
             "French": "Ce guide n'est disponible qu'en Anglais",
             "French (US)": "Ce guide n'est disponible qu'en Anglais",
+            "German": "Dieser Guide ist nur in Englisch verfügbar.",
             "Spanish": "Esta guía online sólo está disponible en inglés.",
             "Spanish (US)": "Esta guía online sólo está disponible en inglés."
         },
@@ -2505,6 +2570,7 @@
             "English (Europe)": "New Items",
             "French": "Nouveaux objets",
             "French (US)": "Nouveaux objets",
+            "German": "Neue Objekte",
             "Spanish": "Artículos Nuevos",
             "Spanish (US)": "Artículos Nuevos"
         },
@@ -2561,6 +2627,7 @@
             "English (Europe)": "Big Sister",
             "French": "Grande Soeur",
             "French (US)": "Grande Soeur",
+            "German": "Große Schwester",
             "Spanish": "Hermana mayor",
             "Spanish (US)": "Hermana mayor"
         },
@@ -2569,6 +2636,7 @@
             "English (Europe)": "Big Sister villagers",
             "French": "Villageois Grandes Soeurs",
             "French (US)": "Villageois Grandes Soeurs",
+            "German": "Große Schwester Nachbarn",
             "Spanish": "Vecinos hermana mayor",
             "Spanish (US)": "Vecinos hermana mayor"
         },
@@ -2577,6 +2645,7 @@
             "English (Europe)": "Lazy",
             "French": "Paresseux",
             "French (US)": "Paresseux",
+            "German": "Faul",
             "Spanish": "Perezoso",
             "Spanish (US)": "Perezoso"
         },
@@ -2585,6 +2654,7 @@
             "English (Europe)": "Lazy villagers",
             "French": "Villageois paresseux",
             "French (US)": "Villageois paresseux",
+            "German": "Faule Nachbarn",
             "Spanish": "Vecinos perezosos",
             "Spanish (US)": "Vecinos perezosos"
         },
@@ -2593,6 +2663,7 @@
             "English (Europe)": "Normal",
             "French": "Normal",
             "French (US)": "Normal",
+            "German": "Normal",
             "Spanish": "Normal",
             "Spanish (US)": "Normal"
         },
@@ -2601,6 +2672,7 @@
             "English (Europe)": "Normal villagers",
             "French": "Villageois normaux",
             "French (US)": "Villageois normaux",
+            "German": "Normale Nachbarn",
             "Spanish": "Vecinos normales",
             "Spanish (US)": "Vecinos normales"
         },
@@ -2609,6 +2681,7 @@
             "English (Europe)": "All villagers",
             "French": "Tous les villageois",
             "French (US)": "Tous les villageois",
+            "German": "Alle Nachbarn",
             "Spanish": "Todos los vecinos",
             "Spanish (US)": "Todos los vecinos"
         },
@@ -2649,6 +2722,7 @@
             "English (Europe)": "Any except rain",
             "French": "Tout le temps sauf quand il pleut",
             "French (US)": "Tout le temps sauf quand il pleut",
+            "German": "Alle außer Regen",
             "Spanish": "Cualquiera excepto lluvia",
             "Spanish (US)": "Cualquiera excepto lluvia"
         },
@@ -2665,6 +2739,7 @@
             "English (Europe)": "Wishlist",
             "French": "Liste d'envies",
             "French (US)": "Liste d'envies",
+            "German": "Wunschliste",
             "Spanish": "Lista de deseos",
             "Spanish (US)": "Lista de deseos"
         },
@@ -2719,6 +2794,10 @@
             "French (US)": "Cette application a été créée en utilisant React Native, avec l'application d'origine programmée dans Flutter. Cette application et son contenu ne sont PAS affiliés à Nintendo. Toutes les œuvres d'art locales sont recréées/sous licence. Cette application n'est pas faite pour un usage commercial et est proposée au prix de 0€ (gratuit) sur le Google Play Store sans publicité. Tout le code source de l'application est la propriété des concepteurs/contributeurs respectifs répertoriés sur la page Crédits et/ou des licences associées dans les packages/bibliothèques spécifiques au sein de cette application.",
             "Spanish": "Esta aplicación fue creada usando React Native, con la aplicación original programada en Flutter. Esta aplicación y su contenido NO están afiliados a Nintendo. Toda la obra de arte local recreada / autorizada. Esta aplicación no está hecha para uso comercial y se ofrece a un precio de 0 $ (gratis) en Google Play Store sin publicidad. Todo el código fuente de la aplicación es propiedad de los respectivos propietarios / contribuyentes enumerados en la página de Créditos y / o licencias asociadas dentro de paquetes / bibliotecas específicos dentro de esta aplicación.",
             "Spanish (US)": "Esta aplicación fue creada usando React Native, con la aplicación original programada en Flutter. Esta aplicación y su contenido NO están afiliados a Nintendo. Toda la obra de arte local recreada / autorizada. Esta aplicación no está hecha para uso comercial y se ofrece a un precio de 0 $ (gratis) en Google Play Store sin publicidad. Todo el código fuente de la aplicación es propiedad de los respectivos propietarios / contribuyentes enumerados en la página de Créditos y / o licencias asociadas dentro de paquetes / bibliotecas específicos dentro de esta aplicación."
+        },
+        {
+            "English": "The copyright of assets is likely to be held by the publisher where applicable. With limited number of low-resolution images for identification, critical commentary and information, the copyrighted content depicted in question qualifies as fair use under United States copyright law and therefore does not significantly impede the right of the copyright holder, since in this context the material is not being used to turn a profit and presents ideas that cannot be exhibited otherwise.",
+            "English (Europe)": "The copyright of assets is likely to be held by the publisher where applicable. With limited number of low-resolution images for identification, critical commentary and information, the copyrighted content depicted in question qualifies as fair use under United States copyright law and therefore does not significantly impede the right of the copyright holder, since in this context the material is not being used to turn a profit and presents ideas that cannot be exhibited otherwise."
         },
         {
             "English": "All game data sourced from the community created spreadsheet. Thank you everyone for all the hard work and for making the spreadsheet!",
@@ -3181,14 +3260,16 @@
             "English (Europe)": "Ranch",
             "French": "Ranch",
             "French (US)": "Ranch",
-            "German": "Farm"
+            "German": "Farm",
+            "Spanish": "Rancho"
         },
         {
             "English": "Home Appliances",
             "English (Europe)": "Home Appliances",
             "French": "Electroménager",
             "French (US)": "Electroménager",
-            "German": "Haushaltsgeräte"
+            "German": "Haushaltsgeräte",
+            "Spanish": "Ampliaciones de la casa"
         },
         {
             "English": "Japanese Style",
@@ -3302,7 +3383,7 @@
             "French": "Baignoire",
             "French (US)": "Baignoire",
             "German": "Badewanne",
-            "Spanish": "Bañadera"
+            "Spanish": "Bañera"
         },
         {
             "English": "Supplies",
@@ -3310,7 +3391,7 @@
             "French": "Fournitures",
             "French (US)": "Fournitures",
             "German": "Hauswirtschaft",
-            "Spanish": "Recursos"
+            "Spanish": "Suministros"
         },
         {
             "English": "Work Bench",
@@ -3325,14 +3406,16 @@
             "English (Europe)": "Facility Decor",
             "French": "Décoration de maison",
             "French (US)": "Décoration de maison",
-            "German": "Dienstgebäude"
+            "German": "Dienstgebäude",
+            "Spanish": "Decoración de instalaciones"
         },
         {
             "English": "Playground",
             "English (Europe)": "Playground",
             "French": "Terrain de jeux",
             "French (US)": "Terrain de jeux",
-            "German": "Spielplatz"
+            "German": "Spielplatz",
+            "Spanish": "Patio de recreo"
         },
         {
             "English": "Toilet",
@@ -3340,7 +3423,7 @@
             "French": "Toilettes",
             "French (US)": "Toilettes",
             "German": "WC",
-            "Spanish": "Baño"
+            "Spanish": "Inodoro"
         },
         {
             "English": "Insect",
@@ -3373,7 +3456,8 @@
             "English (Europe)": "Folk Craft Decor",
             "French": "Décoration folklorique",
             "French (US)": "Décoration folklorique",
-            "German": "Volkskunst"
+            "German": "Volkskunst",
+            "Spanish": "Decoración de artesanía popular"
         },
         {
             "English": "Sewing Table",
@@ -3381,14 +3465,15 @@
             "French": "Machine à coudre",
             "French (US)": "Machine à coudre",
             "German": "Nähen",
-            "Spanish": "Mesa de costura"
+            "Spanish": "Mesa de coser"
         },
         {
             "English": "Heating",
             "English (Europe)": "Heating",
             "French": "Chauffage",
             "French (US)": "Chauffage",
-            "German": "Heizung"
+            "German": "Heizung",
+            "Spanish": "Calefacción"
         },
         {
             "English": "Beauty",
@@ -3421,7 +3506,7 @@
             "French": "Alimentaire",
             "French (US)": "Alimentaire",
             "German": "Verzehr",
-            "Spanish": "Vajilla"
+            "Spanish": "Comida"
         },
         {
             "English": "Special Fish",
@@ -3525,77 +3610,88 @@
             "English (Europe)": "Can catch in February",
             "French": "Capturable en Février",
             "French (US)": "Capturable en Février",
-            "German": "Kann im Februar gefangen werden"
+            "German": "Kann im Februar gefangen werden",
+            "Spanish": "Capturable en febrero"
         },
         {
             "English": "Can catch in March",
             "English (Europe)": "Can catch in March",
             "French": "Capturable en Mars",
             "French (US)": "Capturable en Mars",
-            "German": "Kann im März gefangen werden"
+            "German": "Kann im März gefangen werden",
+            "Spanish": "Capturable en marzo"
         },
         {
             "English": "Can catch in April",
             "English (Europe)": "Can catch in April",
             "French": "Capturable en Avril",
             "French (US)": "Capturable en Avril",
-            "German": "Kann im April gefangen werden"
+            "German": "Kann im April gefangen werden",
+            "Spanish": "Capturable en abril"
         },
         {
             "English": "Can catch in May",
             "English (Europe)": "Can catch in May",
             "French": "Capturable en Mai",
             "French (US)": "Capturable en Mai",
-            "German": "Kann im Mai gefangen werden"
+            "German": "Kann im Mai gefangen werden",
+            "Spanish": "Capturable en mayo"
         },
         {
             "English": "Can catch in June",
             "English (Europe)": "Can catch in June",
             "French": "Capturable en Juin",
             "French (US)": "Capturable en Juin",
-            "German": "Kann im Juni gefangen werden"
+            "German": "Kann im Juni gefangen werden",
+            "Spanish": "Capturable en junio"
         },
         {
             "English": "Can catch in July",
             "English (Europe)": "Can catch in July",
             "French": "Capturable en Juillet",
             "French (US)": "Capturable en Juillet",
-            "German": "Kann im Juli gefangen werden"
+            "German": "Kann im Juli gefangen werden",
+            "Spanish": "Capturable en julio"
         },
         {
             "English": "Can catch in August",
             "English (Europe)": "Can catch in August",
             "French": "Capturable en Août",
             "French (US)": "Capturable en Août",
-            "German": "Kann im August gefangen werden"
+            "German": "Kann im August gefangen werden",
+            "Spanish": "Capturable en agosto"
         },
         {
             "English": "Can catch in September",
             "English (Europe)": "Can catch in September",
             "French": "Capturable en Septembre",
             "French (US)": "Capturable en Septembre",
-            "German": "Kann im September gefangen werden"
+            "German": "Kann im September gefangen werden",
+            "Spanish": "Capturable en septiembre"
         },
         {
             "English": "Can catch in October",
             "English (Europe)": "Can catch in October",
             "French": "Capturable en Octobre",
             "French (US)": "Capturable en Octobre",
-            "German": "Kann im Oktober gefangen werden"
+            "German": "Kann im Oktober gefangen werden",
+            "Spanish": "Capturable en octubre"
         },
         {
             "English": "Can catch in November",
             "English (Europe)": "Can catch in November",
             "French": "Capturable en Novembre",
             "French (US)": "Capturable en Novembre",
-            "German": "Kann im November gefangen werden"
+            "German": "Kann im November gefangen werden",
+            "Spanish": "Capturable en noviembre"
         },
         {
             "English": "Can catch in December",
             "English (Europe)": "Can catch in December",
             "French": "Capturable en Décembre",
             "French (US)": "Capturable en Décembre",
-            "German": "Kann im Dezember gefangen werden"
+            "German": "Kann im Dezember gefangen werden",
+            "Spanish": "Caoturable en diciembre"
         },
         {
             "English": "Where/How",
@@ -3763,6 +3859,7 @@
             "English (Europe)": "Not found",
             "French": "Introuvable",
             "French (US)": "Introuvable",
+            "German": "Nicht gefunden",
             "Spanish": "Extraviado",
             "Spanish (US)": "Extraviado"
         },
@@ -3771,6 +3868,7 @@
             "English (Europe)": "Season/Event",
             "French": "Saison/Évènement",
             "French (US)": "Saison/Évènement",
+            "German": "Saison/Event",
             "Spanish": "Temporada/Evento"
         },
         {
@@ -3786,6 +3884,7 @@
             "English (Europe)": "View Gifts",
             "French": "Afficher les cadeaux",
             "French (US)": "Afficher les cadeaux",
+            "German": "Zeige Geschenke",
             "Spanish": "Ver regalos",
             "Spanish (US)": "Ver regalos"
         },
@@ -3975,7 +4074,7 @@
             "English (Europe)": "You have no favorite villagers.",
             "French": "Vous n'avez pas de villageois préférés.",
             "French (US)": "Vous n'avez pas de villageois préférés.",
-            "Spanish": "No tienes vecinos favoritos",
+            "Spanish": "No tienes vecinos favoritos.",
             "Spanish (US)": "No tienes vecinos favoritos"
         },
         {
@@ -4024,6 +4123,7 @@
             "English (Europe)": "Dream Address",
             "French": "Code Onirique",
             "French (US)": "Code Onirique",
+            "German": "Schlummeranschrift",
             "Spanish": "Código de sueño",
             "Spanish (US)": "Código de sueño"
         },
@@ -4032,32 +4132,16 @@
             "English (Europe)": "Friend Code",
             "French": "Code Ami",
             "French (US)": "Code Ami",
+            "German": "Freundescode",
             "Spanish": "Clave de amigo",
             "Spanish (US)": "Clave de amigo"
-        },
-        {
-            "English": "To-Do - Turnip Log",
-            "English (Europe)": "To-Do - Turnip Log",
-            "French": "À faire - Journal des Navets",
-            "French (US)": "À faire - Journal des Navets"
-        },
-        {
-            "English": "Profile - Dream Address",
-            "English (Europe)": "Profile - Dream Address",
-            "French": "Profil - Code onirique",
-            "French (US)": "Profil - Code onirique"
-        },
-        {
-            "English": "Profile - Friend Code",
-            "English (Europe)": "Profile - Friend Code",
-            "French": "Profil - Code ami",
-            "French (US)": "Profil - Code ami"
         },
         {
             "English": "Real",
             "English (Europe)": "Real",
             "French": "Le Vrai",
             "French (US)": "Le Vrai",
+            "German": "Echt",
             "Spanish": "Original",
             "Spanish (US)": "Verdadero"
         },
@@ -4066,6 +4150,7 @@
             "English (Europe)": "Fake",
             "French": "Le Faux",
             "French (US)": "Le Faux",
+            "German": "Fälschung",
             "Spanish": "Imitación",
             "Spanish (US)": "Falso"
         },
@@ -4152,6 +4237,7 @@
             "English (Europe)": "Last day!",
             "French": "Dernier jour !",
             "French (US)": "Dernier jour !",
+            "German": "Letzter Tag!",
             "Spanish": "¡Último día!",
             "Spanish (US)": "¡Último día!"
         },
@@ -4160,6 +4246,7 @@
             "English (Europe)": "End",
             "French": "Fin",
             "French (US)": "Fin",
+            "German": "Ende",
             "Spanish": "Final",
             "Spanish (US)": "Final"
         },
@@ -4389,6 +4476,7 @@
             "English (Europe)": "Any weather",
             "French": "Tout temps",
             "French (US)": "Tout temps",
+            "German": "Jedes Wetter",
             "Spanish": "Cualquier tiempo",
             "Spanish (US)": "Cualquier tiempo"
         },
@@ -4397,6 +4485,7 @@
             "English (Europe)": "Rain only",
             "French": "Pluie uniquement",
             "French (US)": "Pluie uniquement",
+            "German": "Nur Regen",
             "Spanish": "Solo lluvia",
             "Spanish (US)": "Solo lluvia"
         },
@@ -4405,6 +4494,7 @@
             "English (Europe)": "Small",
             "French": "Petite",
             "French (US)": "Petite",
+            "German": "Klein",
             "Spanish": "Pequeño",
             "Spanish (US)": "Pequeño"
         },
@@ -4453,6 +4543,7 @@
             "English (Europe)": "Long",
             "French": "Fine",
             "French (US)": "Fine",
+            "German": "Lang",
             "Spanish": "Largo",
             "Spanish (US)": "Largo"
         },
@@ -4461,6 +4552,7 @@
             "English (Europe)": "Shadow",
             "French": "Ombre",
             "French (US)": "Ombre",
+            "German": "Schatten",
             "Spanish": "Sombra",
             "Spanish (US)": "Sombra"
         },
@@ -4492,6 +4584,7 @@
             "English (Europe)": "Slow",
             "French": "Lent",
             "French (US)": "Lent",
+            "German": "Langsam",
             "Spanish": "Lento",
             "Spanish (US)": "Lento"
         },
@@ -4500,6 +4593,7 @@
             "English (Europe)": "Very slow",
             "French": "Très lent",
             "French (US)": "Très lent",
+            "German": "Sehr Langsam",
             "Spanish": "Muy lento",
             "Spanish (US)": "Muy lento"
         },
@@ -4508,6 +4602,7 @@
             "English (Europe)": "Very fast",
             "French": "Très rapide",
             "French (US)": "Très rapide",
+            "German": "Sehr Schnell",
             "Spanish": "Muy rápido",
             "Spanish (US)": "Muy rápido"
         },
@@ -4516,6 +4611,7 @@
             "English (Europe)": "Fast",
             "French": "Rapide",
             "French (US)": "Rapide",
+            "German": "Schnell",
             "Spanish": "Rápido",
             "Spanish (US)": "Rápido"
         },
@@ -4524,6 +4620,7 @@
             "English (Europe)": "Kitchen",
             "French": "Cuisine",
             "French (US)": "Cuisine",
+            "German": "Küche",
             "Spanish": "Cocina",
             "Spanish (US)": "Cocina"
         },
@@ -4532,6 +4629,7 @@
             "English (Europe)": "School",
             "French": "Scolaire",
             "French (US)": "Scolaire",
+            "German": "Schule",
             "Spanish": "Escuela",
             "Spanish (US)": "Escuela"
         },
@@ -4548,6 +4646,7 @@
             "English (Europe)": "Personality",
             "French": "Personnalité",
             "French (US)": "Personnalité",
+            "German": "Persönlichkeit",
             "Spanish": "Personalidad",
             "Spanish (US)": "Personalidad"
         },
@@ -4666,8 +4765,8 @@
             "Spanish": "Muestra una marca de verificación vacía en las listas. Se puede tocar para marcar rápidamente el elemento. Deshabilitar esto puede aumentar el rendimiento, ya que se necesitan renderizar menos animaciones."
         },
         {
-            "English": "You can read more details about NPC Visitors by visiting the events and guide page",
-            "English (Europe)": "You can read more details about NPC Visitors by visiting the events and guide page",
+            "English": "You can read more details about NPC Visitors by visiting the events and guide page. The time icon shows that the NPC has visited last week.",
+            "English (Europe)": "You can read more details about NPC Visitors by visiting the events and guide page. The time icon shows that the NPC has visited last week.",
             "French": "Vous pouvez en savoir plus sur les PNJ en visitant la page des événements et du guide",
             "French (US)": "Vous pouvez en savoir plus sur les PNJ en visitant la page des événements et du guide",
             "Spanish": "Puede leer más detalles sobre los visitantes NPC visitando la página de eventos y guía"
@@ -4891,6 +4990,7 @@
             "English (Europe)": "Miscellaneous",
             "French": "Divers",
             "French (US)": "Divers",
+            "German": "Diverses",
             "Spanish": "Misceláneo"
         },
         {
@@ -4904,19 +5004,22 @@
             "English (Europe)": "Photos",
             "French": "Photos",
             "French (US)": "Photos",
+            "German": "Photos",
             "Spanish": "Fotos"
         },
         {
             "English": "Posters",
             "English (Europe)": "Posters",
             "French": "Posters",
-            "French (US)": "Posters"
+            "French (US)": "Posters",
+            "German": "Poster"
         },
         {
             "English": "Headwear",
             "English (Europe)": "Headwear",
             "French": "Couvre-chefs/masques",
             "French (US)": "Couvre-chefs/masques",
+            "German": "Kopfbedeckung",
             "Spanish": "Cabeza"
         },
         {
@@ -4924,6 +5027,7 @@
             "English (Europe)": "Accessories",
             "French": "Accessoires",
             "French (US)": "Accessoires",
+            "German": "Accessoires",
             "Spanish": "Accesorios"
         },
         {
@@ -4931,6 +5035,7 @@
             "English (Europe)": "Tops",
             "French": "Hauts",
             "French (US)": "Hauts",
+            "German": "Oberteile",
             "Spanish": "Mitad superior"
         },
         {
@@ -4938,6 +5043,7 @@
             "English (Europe)": "Dress-Up",
             "French": "Robes/tenues",
             "French (US)": "Robes/tenues",
+            "German": "Kleider",
             "Spanish": "Cuerpo completo"
         },
         {
@@ -4952,6 +5058,7 @@
             "English (Europe)": "Bottoms",
             "French": "Pantalons/jupes",
             "French (US)": "Pantalons/jupes",
+            "German": "Hosen",
             "Spanish": "Mitad inferior"
         },
         {
@@ -4959,6 +5066,7 @@
             "English (Europe)": "Socks",
             "French": "Chaussettes",
             "French (US)": "Chaussettes",
+            "German": "Socken",
             "Spanish": "Calcetines/zoquetes/medias"
         },
         {
@@ -4966,19 +5074,22 @@
             "English (Europe)": "Shoes",
             "French": "Chaussures",
             "French (US)": "Chaussures",
+            "German": "Schuhe",
             "Spanish": "Zapatos"
         },
         {
             "English": "Bags",
             "English (Europe)": "Bags",
             "French": "Sacs",
-            "French (US)": "Sacs"
+            "French (US)": "Sacs",
+            "German": "Taschen"
         },
         {
             "English": "Umbrellas",
             "English (Europe)": "Umbrellas",
             "French": "Parapluies",
             "French (US)": "Parapluies",
+            "German": "Schirme",
             "Spanish": "Paraguas"
         },
         {
@@ -4986,6 +5097,7 @@
             "English (Europe)": "Floors",
             "French": "Sols",
             "French (US)": "Sols",
+            "German": "Böden",
             "Spanish": "Pisos"
         },
         {
@@ -4993,6 +5105,7 @@
             "English (Europe)": "Rugs",
             "French": "Tapis",
             "French (US)": "Tapis",
+            "German": "Teppiche",
             "Spanish": "Alfombras"
         },
         {
@@ -5000,6 +5113,7 @@
             "English (Europe)": "Wallpaper",
             "French": "Papiers peints",
             "French (US)": "Papiers peints",
+            "German": "Tapeten",
             "Spanish": "Paredes"
         },
         {
@@ -5007,6 +5121,7 @@
             "English (Europe)": "Insects",
             "French": "Insectes",
             "French (US)": "Insectes",
+            "German": "Insekten",
             "Spanish": "Insectos"
         },
         {
@@ -5014,6 +5129,7 @@
             "English (Europe)": "Fencing",
             "French": "Clôtures",
             "French (US)": "Clôtures",
+            "German": "Zäune",
             "Spanish": "Vallas"
         },
         {
@@ -5021,13 +5137,15 @@
             "English (Europe)": "Other",
             "French": "Autres",
             "French (US)": "Autres",
+            "German": "Andere",
             "Spanish": "Otros"
         },
         {
             "English": "Close",
             "English (Europe)": "Close",
             "French": "Fermer",
-            "French (US)": "Fermer"
+            "French (US)": "Fermer",
+            "German": "Schließen"
         },
         {
             "English": "Leave a tip?",
@@ -5051,19 +5169,22 @@
             "English": "Select Filters",
             "English (Europe)": "Select Filters",
             "French": "Sélectionner les filtres",
-            "French (US)": "Sélectionner les filtres"
+            "French (US)": "Sélectionner les filtres",
+            "German": "Filter auswählen"
         },
         {
             "English": "Confirm",
             "English (Europe)": "Confirm",
             "French": "Confirmer",
-            "French (US)": "Confirmer"
+            "French (US)": "Confirmer",
+            "German": "Bestätigen"
         },
         {
             "English": "Collected/Not Collected",
             "English (Europe)": "Collected/Not Collected",
             "French": "Collecté / Non collecté",
-            "French (US)": "Collecté / Non collecté"
+            "French (US)": "Collecté / Non collecté",
+            "German": "Gesammelt/Nicht gesammelt"
         },
         {
             "English": "Type Categories",
@@ -5082,6 +5203,170 @@
             "English (Europe)": "Active Times Filters",
             "French": "Filtre des périodes de capture",
             "French (US)": "Filtre des périodes de capture"
+        },
+        {
+            "English": "Profiles/Islands",
+            "English (Europe)": "Profiles/Islands",
+            "German": "Profile/Inseln"
+        },
+        {
+            "English": "Profiles",
+            "English (Europe)": "Profiles",
+            "German": "Profile"
+        },
+        {
+            "English": "Profiles allow you to have multiple different islands/users to track different things. Load a profile to load the current saved settings and collection.",
+            "English (Europe)": "Profiles allow you to have multiple different islands/users to track different things. Load a profile to load the current saved settings and collection."
+        },
+        {
+            "English": "Load Profile",
+            "English (Europe)": "Load Profile"
+        },
+        {
+            "English": "Main",
+            "English (Europe)": "Main"
+        },
+        {
+            "English": "Profile 1",
+            "English (Europe)": "Profile 1",
+            "French": "Profil 1",
+            "French (US)": "Profil 1",
+            "German": "Profil 1"
+        },
+        {
+            "English": "Profile 2",
+            "English (Europe)": "Profile 2",
+            "French": "Profil 2",
+            "French (US)": "Profil 2",
+            "German": "Profil 2"
+        },
+        {
+            "English": "Profile 3",
+            "English (Europe)": "Profile 3",
+            "French": "Profil 3",
+            "French (US)": "Profil 3",
+            "German": "Profil 3"
+        },
+        {
+            "English": "Add Loan",
+            "English (Europe)": "Add Loan"
+        },
+        {
+            "English": "Loan Name",
+            "English (Europe)": "Loan Name"
+        },
+        {
+            "English": "Total Cost",
+            "English (Europe)": "Total Cost",
+            "French": "Coût total",
+            "French (US)": "Coût total"
+        },
+        {
+            "English": "bells remaining",
+            "English (Europe)": "bells remaining"
+        },
+        {
+            "English": "Pay",
+            "English (Europe)": "Pay",
+            "French": "Payer",
+            "French (US)": "Payer"
+        },
+        {
+            "English": "Edit",
+            "English (Europe)": "Edit"
+        },
+        {
+            "English": "Edit Pages",
+            "English (Europe)": "Edit Pages"
+        },
+        {
+            "English": "Disable Edit Pages",
+            "English (Europe)": "Disable Edit Pages"
+        },
+        {
+            "English": "Islander Info",
+            "English (Europe)": "Islander Info"
+        },
+        {
+            "English": "Select Icon",
+            "English (Europe)": "Select Icon"
+        },
+        {
+            "English": "Custom Image",
+            "English (Europe)": "Custom Image"
+        },
+        {
+            "English": "Amiibo Cards",
+            "English (Europe)": "Amiibo Cards",
+            "French": "Cartes Amiibo",
+            "French (US)": "Cartes Amiibo",
+            "German": "Amiibo Karten"
+        },
+        {
+            "English": "Hand Sign",
+            "English (Europe)": "Hand Sign",
+            "German": "Handzeichen"
+        },
+        {
+            "English": "Rock",
+            "English (Europe)": "Rock",
+            "French": "Pierre",
+            "French (US)": "Pierre",
+            "German": "Stein"
+        },
+        {
+            "English": "Paper",
+            "English (Europe)": "Paper",
+            "French": "Papier",
+            "French (US)": "Papier",
+            "German": "Papier"
+        },
+        {
+            "English": "Scissors",
+            "English (Europe)": "Scissors",
+            "French": "Ciseaux",
+            "French (US)": "Ciseaux",
+            "German": "Schere"
+        },
+        {
+            "English": "Series 1",
+            "English (Europe)": "Series 1",
+            "French": "Série 1",
+            "French (US)": "Série 1",
+            "German": "Serie 1"
+        },
+        {
+            "English": "Series 2",
+            "English (Europe)": "Series 2",
+            "French": "Série 2",
+            "French (US)": "Série 2",
+            "German": "Serie 2"
+        },
+        {
+            "English": "Series 3",
+            "English (Europe)": "Series 3",
+            "French": "Série 3",
+            "French (US)": "Série 3",
+            "German": "Serie 3"
+        },
+        {
+            "English": "Series 4",
+            "English (Europe)": "Series 4",
+            "French": "Série 4",
+            "French (US)": "Série 4",
+            "German": "Serie 4"
+        },
+        {
+            "English": "Welcome Amiibo Series",
+            "English (Europe)": "Welcome Amiibo Series",
+            "French": "Série Welcome Amiibo",
+            "French (US)": "Série Welcome Amiibo"
+        },
+        {
+            "English": "Sanrio Series",
+            "English (Europe)": "Sanrio Series",
+            "French": "Série Sanrio",
+            "French (US)": "Série Sanrio"
         }
     ],
     "Sources": [
@@ -5096,6 +5381,7 @@
             "English (Europe)": "Crafting",
             "French": "Crafting",
             "French (US)": "Crafting",
+            "German": "Crafting",
             "Spanish": "Elaboración",
             "Spanish (US)": "Elaboración"
         },
@@ -5103,7 +5389,8 @@
             "English": "Birthday",
             "English (Europe)": "Birthday",
             "French": "Anniversaire",
-            "French (US)": "Anniversaire"
+            "French (US)": "Anniversaire",
+            "German": "Geburtstag"
         },
         {
             "English": "Starting items",
@@ -5131,7 +5418,8 @@
             "English": "Nintendo",
             "English (Europe)": "Nintendo",
             "French": "Nintendo",
-            "French (US)": "Nintendo"
+            "French (US)": "Nintendo",
+            "German": "Nintendo"
         },
         {
             "English": "Nook Shopping Daily Selection",
@@ -5166,6 +5454,7 @@
             "English (Europe)": "Mom",
             "French": "Maman",
             "French (US)": "Maman",
+            "German": "Mama",
             "Spanish": "Mamá"
         },
         {
@@ -5206,7 +5495,8 @@
             "English": "Villagers",
             "English (Europe)": "Villagers",
             "French": "Villageois",
-            "French (US)": "Villageois"
+            "French (US)": "Villageois",
+            "German": "Nachbarn"
         },
         {
             "English": "Nook Shopping",
@@ -5226,7 +5516,8 @@
             "English": "Mail",
             "English (Europe)": "Mail",
             "French": "Courrier",
-            "French (US)": "Courrier"
+            "French (US)": "Courrier",
+            "German": "Post"
         },
         {
             "English": "4th House Upgrade (Right Room)",
@@ -5275,6 +5566,7 @@
             "English (Europe)": "Tent",
             "French": "Tente",
             "French (US)": "Tente",
+            "German": "Zelt",
             "Spanish": "Tienda"
         },
         {
@@ -5379,6 +5671,7 @@
             "English (Europe)": "Apple Tree",
             "French": "Pommier",
             "French (US)": "Pommier",
+            "German": "Apfelbaum",
             "Spanish": "Manzano",
             "Spanish (US)": "Manzano"
         },
@@ -5395,6 +5688,7 @@
             "English (Europe)": "Cherry Tree",
             "French": "Cerisier",
             "French (US)": "Cerisier",
+            "German": "Kirschbaum",
             "Spanish": "Cerezo",
             "Spanish (US)": "Cerezo"
         },
@@ -5411,6 +5705,7 @@
             "English (Europe)": "Coconut Tree",
             "French": "Cocotier",
             "French (US)": "Cocotier",
+            "German": "Palme",
             "Spanish": "Cocotero",
             "Spanish (US)": "Cocotero"
         },
@@ -5427,6 +5722,7 @@
             "English (Europe)": "Orange Tree",
             "French": "Oranger",
             "French (US)": "Oranger",
+            "German": "Orangenbaum",
             "Spanish": "Naranjo",
             "Spanish (US)": "Naranjo"
         },
@@ -5443,6 +5739,7 @@
             "English (Europe)": "Peach Tree",
             "French": "Pêcher",
             "French (US)": "Pêcher",
+            "German": "Pfirsichbaum",
             "Spanish": "Melocotonero",
             "Spanish (US)": "Melocotonero"
         },
@@ -5459,6 +5756,7 @@
             "English (Europe)": "Pear Tree",
             "French": "Poirier",
             "French (US)": "Poirier",
+            "German": "Birnenbaum",
             "Spanish": "Peral",
             "Spanish (US)": "Peral"
         },
@@ -5733,7 +6031,8 @@
             "English": "Seed bag",
             "English (Europe)": "Seed bag",
             "French": "Sac de graines",
-            "French (US)": "Sac de graines"
+            "French (US)": "Sac de graines",
+            "German": "Saatbeutel"
         },
         {
             "English": "Digging up a pumpkin plant",
@@ -5775,7 +6074,8 @@
             "English": "Fishing",
             "English (Europe)": "Fishing",
             "French": "Pêcher",
-            "French (US)": "Pêcher"
+            "French (US)": "Pêcher",
+            "German": "Angeln"
         }
     ],
     "Source Notes": [
@@ -6746,6 +7046,12 @@
             "English (Europe)": "Mailed to players after the 1.2.0 update in a letter from Bank of Nook",
             "French": "Envoyé aux joueurs après la mise à jour 1.2.0 dans un courrier de la Banque Nook",
             "French (US)": "Envoyé aux joueurs après la mise à jour 1.2.0 dans un courrier de la Banque Nook"
+        },
+        {
+            "English": "Reward for completing the Stamp Rally in the art gallery during International Museum Day",
+            "English (Europe)": "Reward for completing the Stamp Rally in the art gallery during International Museum Day",
+            "French": "Récompense pour avoir terminé le Rallye Tampons dans la galerie d'art lors de la Journée Internationale des Musées",
+            "French (US)": "Récompense pour avoir terminé le Rallye Tampons dans la galerie d'art lors de la Journée Internationale des Musées"
         }
     ],
     "Event Names": [
@@ -6822,6 +7128,7 @@
             "English (Europe)": "Bunny Day",
             "French": "Fête des Œufs",
             "French (US)": "Fête des Œufs",
+            "German": "Häschentag",
             "Spanish": "Caza del Huevo",
             "Spanish (US)": "Caza del Huevo"
         },
@@ -6835,13 +7142,15 @@
             "English": "International Museum Day",
             "English (Europe)": "International Museum Day",
             "French": "Journée Internationale des Musées",
-            "French (US)": "Journée Internationale des Musées"
+            "French (US)": "Journée Internationale des Musées",
+            "German": "Internationaler Museumstag"
         },
         {
             "English": "Wedding Season",
             "English (Europe)": "Wedding Season",
             "French": "Saison des mariages",
-            "French (US)": "Saison des mariages"
+            "French (US)": "Saison des mariages",
+            "German": "Heirats Saison"
         },
         {
             "English": "Summer Solstice (northern hemisphere)",
@@ -6915,7 +7224,8 @@
             "English": "Toy Day",
             "English (Europe)": "Toy Day",
             "French": "Jour des Cadeaux",
-            "French (US)": "Jour des Cadeaux"
+            "French (US)": "Jour des Cadeaux",
+            "German": "Spielzeugtag"
         },
         {
             "English": "Toy Day (day after)",
@@ -7023,13 +7333,15 @@
             "English": "Valentine's Day (Nook Shopping)",
             "English (Europe)": "Valentine's Day (Nook Shopping)",
             "French": "Saint-Valentin (Nook Shopping)",
-            "French (US)": "Saint-Valentin (Nook Shopping)"
+            "French (US)": "Saint-Valentin (Nook Shopping)",
+            "German": "Valentinstag"
         },
         {
             "English": "Super Mario Bros.",
             "English (Europe)": "Super Mario Bros.",
             "French": "Super Mario Bros.",
-            "French (US)": "Super Mario Bros."
+            "French (US)": "Super Mario Bros.",
+            "German": "Super Mario Bros."
         },
         {
             "English": "Shamrock Day (Able Sisters)",
@@ -7060,6 +7372,30 @@
             "English (Europe)": "Nature Day (Nook Shopping)",
             "French": "Jour de la Nature (Nook Shopping)",
             "French (US)": "Jour de la Nature (Nook Shopping)"
+        },
+        {
+            "English": "Wedding Season (Nook Shopping 1)",
+            "English (Europe)": "Wedding Season (Nook Shopping 1)",
+            "French": "Saison des Mariages (Nook Shopping 1)",
+            "French (US)": "Saison des Mariages (Nook Shopping 1)"
+        },
+        {
+            "English": "Wedding Season (Nook Shopping 2)",
+            "English (Europe)": "Wedding Season (Nook Shopping 2)",
+            "French": "Saison des Mariages (Nook Shopping 2)",
+            "French (US)": "Saison des Mariages (Nook Shopping 2)"
+        },
+        {
+            "English": "Wedding Season (Able Sisters)",
+            "English (Europe)": "Wedding Season (Able Sisters)",
+            "French": "Saison des Mariages (Soeurs Doigts de Fée)",
+            "French (US)": "Saison des Mariages (Soeurs Doigts de Fée)"
+        },
+        {
+            "English": "Father's Day (2)",
+            "English (Europe)": "Father's Day (2)",
+            "French": "Fête des Pères (2)",
+            "French (US)": "Fête des Pères (2)"
         }
     ],
     "Missing Items": [
@@ -7231,11 +7567,11 @@
         },
         {
             "Special translations that need to be implemented at the code level, no special foramtting needed, just used for reference": "Dream address starts with [DW]",
-            "undefined": "Dream address starts with [DA]"
+            "undefined": "Schlummeradresse beginnt mit [DW]"
         },
         {
             "Special translations that need to be implemented at the code level, no special foramtting needed, just used for reference": "[Month] [Day] [Day of Week]",
-            "undefined": "[Day of Week] [Day] [Month]"
+            "undefined": "[Day of Week] [Day] [Month]  "
         },
         {
             "Special translations that need to be implemented at the code level, no special foramtting needed, just used for reference": "Not in use translations"
@@ -8726,277 +9062,323 @@
             "English": "Unlock the Nook Mileage program",
             "English (Europe)": "Unlock the Nook Mileage program",
             "French": "Débloquer en emmenageant sur votre île au début du jeu",
-            "French (US)": "Débloquer en emmenageant sur votre île au début du jeu"
+            "French (US)": "Débloquer en emmenageant sur votre île au début du jeu",
+            "German": "Schalte das Nook-Meilen-Programm frei."
         },
         {
             "English": "Collect a specified number of fish",
             "English (Europe)": "Collect a specified number of fish",
             "French": "Pêcher un certain nombre de poissons",
-            "French (US)": "Pêcher un certain nombre de poissons"
+            "French (US)": "Pêcher un certain nombre de poissons",
+            "German": "Fange eine bestimmte Anzahl von Fischen."
         },
         {
             "English": "Collect a specified number of unique fish",
             "English (Europe)": "Collect a specified number of unique fish",
             "French": "Pêcher un certain nombre de poissons différents",
-            "French (US)": "Pêcher un certain nombre de poissons différents"
+            "French (US)": "Pêcher un certain nombre de poissons différents",
+            "German": "Fange eine bestimmte Anzahl von verschiedenen Fischen."
         },
         {
             "English": "Talk to each one of your villagers every day",
             "English (Europe)": "Talk to each one of your villagers every day",
             "French": "Dire bonjour à tous les villageois de l'île un certain nombre de fois",
-            "French (US)": "Dire bonjour à tous les villageois de l'île un certain nombre de fois"
+            "French (US)": "Dire bonjour à tous les villageois de l'île un certain nombre de fois",
+            "German": "Sprich täglich mit allen deinen Nachbarn."
         },
         {
             "English": "Collect a specified number of bugs",
             "English (Europe)": "Collect a specified number of bugs",
             "French": "Capturer un certain nombre d'insectes",
-            "French (US)": "Capturer un certain nombre d'insectes"
+            "French (US)": "Capturer un certain nombre d'insectes",
+            "German": "Fange eine bestimmte Anzahl von Insekten."
         },
         {
             "English": "Collect a specified number of unique bugs",
             "English (Europe)": "Collect a specified number of unique bugs",
             "French": "Capturer un certain nombre d'insectes différents",
-            "French (US)": "Capturer un certain nombre d'insectes différents"
+            "French (US)": "Capturer un certain nombre d'insectes différents",
+            "German": "Fange eine bestimmte Anzahl von verschiedenen Insekten."
         },
         {
             "English": "Collect a specified number of DIY recipes",
             "English (Europe)": "Collect a specified number of DIY recipes",
             "French": "Obtenir un certain nombre de plans de bricolage",
-            "French (US)": "Obtenir un certain nombre de plans de bricolage"
+            "French (US)": "Obtenir un certain nombre de plans de bricolage",
+            "German": "Lerne eine bestimmte Anzahl von Bastelanleitungen."
         },
         {
             "English": "Collect a specified number of sea creatures",
             "English (Europe)": "Collect a specified number of sea creatures",
             "French": "Capturer un certain nombre de créatures marines",
-            "French (US)": "Capturer un certain nombre de créatures marines"
+            "French (US)": "Capturer un certain nombre de créatures marines",
+            "German": "Fange eine bestimmte Anzahl von Meerestieren."
         },
         {
             "English": "Collect a specified number of unique sea creatures",
             "English (Europe)": "Collect a specified number of unique sea creatures",
             "French": "Capturer un certain nombre de créatures marines différentes",
-            "French (US)": "Capturer un certain nombre de créatures marines différentes"
+            "French (US)": "Capturer un certain nombre de créatures marines différentes",
+            "German": "Fange eine bestimmte Anzahl von verschiedenen Meerestieren."
         },
         {
             "English": "Craft a specified number of tools",
             "English (Europe)": "Craft a specified number of tools",
             "French": "Fabriquer un certain nombre d'outils",
-            "French (US)": "Fabriquer un certain nombre d'outils"
+            "French (US)": "Fabriquer un certain nombre d'outils",
+            "German": "Stelle eine bestimmte Anzahl von Werkzeugen her."
         },
         {
             "English": "Craft a specified number of DIY furniture",
             "English (Europe)": "Craft a specified number of DIY furniture",
             "French": "Fabriquer un certain nombre de meubles",
-            "French (US)": "Fabriquer un certain nombre de meubles"
+            "French (US)": "Fabriquer un certain nombre de meubles",
+            "German": "Stelle eine bestimmte Anzahl von Möbeln her."
         },
         {
             "English": "Customize a specified number of furniture or tools using the workbench",
             "English (Europe)": "Customize a specified number of furniture or tools using the workbench",
             "French": "Personnaliser un certain nombre d'objets ou d'outils en utilisant l'établi",
-            "French (US)": "Personnaliser un certain nombre d'objets ou d'outils en utilisant l'établi"
+            "French (US)": "Personnaliser un certain nombre d'objets ou d'outils en utilisant l'établi",
+            "German": "Gestalte eine bestimmte Anzahl von Möbeln oder Werkzeugen um."
         },
         {
             "English": "Chop a specified number of wood from trees",
             "English (Europe)": "Chop a specified number of wood from trees",
             "French": "Récupérer un certain nombre de bois",
-            "French (US)": "Récupérer un certain nombre de bois"
+            "French (US)": "Récupérer un certain nombre de bois",
+            "German": "Sammle eine bestimmte Anzahl an Holz von Bäumen."
         },
         {
             "English": "Break a specified number of tools",
             "English (Europe)": "Break a specified number of tools",
             "French": "Briser un certain nombre d'outils",
-            "French (US)": "Briser un certain nombre d'outils"
+            "French (US)": "Briser un certain nombre d'outils",
+            "German": "Zerbrich eine bestimmte Anzahl von Werkzeugen."
         },
         {
             "English": "Hit a rock with your shovel and obtain all 8 materials from that rock",
             "English (Europe)": "Hit a rock with your shovel and obtain all 8 materials from that rock",
             "French": "Frapper un rocher 8 fois de suite",
-            "French (US)": "Frapper un rocher 8 fois de suite"
+            "French (US)": "Frapper un rocher 8 fois de suite",
+            "German": "Schlage achtmal hintereinander den gleichen Stein und sammle alle 8 Materialien."
         },
         {
             "English": "Dig up your first fossil",
             "English (Europe)": "Dig up your first fossil",
             "French": "Déterrer un fossile",
-            "French (US)": "Déterrer un fossile"
+            "French (US)": "Déterrer un fossile",
+            "German": "Grabe dein erstes Fossil aus."
         },
         {
             "English": "Have Blathers assess a specified number of fossils",
             "English (Europe)": "Have Blathers assess a specified number of fossils",
             "French": "Faire expertiser un certain nombre de fossiles",
-            "French (US)": "Faire expertiser un certain nombre de fossiles"
+            "French (US)": "Faire expertiser un certain nombre de fossiles",
+            "German": "Lasse eine bestimmte Anzahl von Fossilien von Eugen bestimmen."
         },
         {
             "English": "Sell a specified number of weeds",
             "English (Europe)": "Sell a specified number of weeds",
             "French": "Vendre un certain nombre de mauvaises herbes",
-            "French (US)": "Vendre un certain nombre de mauvaises herbes"
+            "French (US)": "Vendre un certain nombre de mauvaises herbes",
+            "German": "Verkaufe eine bestimmte Anzahl von Unkraut."
         },
         {
             "English": "Plant a specified number of flower seeds (digging up and replanting existing flowers does not count)",
             "English (Europe)": "Plant a specified number of flower seeds (digging up and replanting existing flowers does not count)",
             "French": "Planter un certain nombre de fleurs (déterrer et replanter les fleurs existantes ne compte pas)\r\n",
-            "French (US)": "Planter un certain nombre de fleurs (déterrer et replanter les fleurs existantes ne compte pas)\r\n"
+            "French (US)": "Planter un certain nombre de fleurs (déterrer et replanter les fleurs existantes ne compte pas)\r\n",
+            "German": "Pflanze eine bestimmte Anzahl von Blumensamen (das Ausgraben und Umpflanzen existierender Blumen zählt nicht)."
         },
         {
             "English": "Water a specified number of flowers",
             "English (Europe)": "Water a specified number of flowers",
             "French": "Arroser un certain nombre de fleurs",
-            "French (US)": "Arroser un certain nombre de fleurs"
+            "French (US)": "Arroser un certain nombre de fleurs",
+            "German": "Gieße eine bestimmte Anzahl von Blumen."
         },
         {
             "English": "Plant a specified number of trees (planting fruits or replanting existing trees does not count)",
             "English (Europe)": "Plant a specified number of trees (planting fruits or replanting existing trees does not count)",
             "French": "Planter un certain nombre d'arbres (planter des fruits ou replanter les arbres existants ne compte pas)",
-            "French (US)": "Planter un certain nombre d'arbres (planter des fruits ou replanter les arbres existants ne compte pas)"
+            "French (US)": "Planter un certain nombre d'arbres (planter des fruits ou replanter les arbres existants ne compte pas)",
+            "German": "Pflanze eine bestimmte Anzahl von Bäumen (das Pflanzen von Obstbäumen oder das Umpflanzen existierender Bäume zählen nicht)."
         },
         {
             "English": "Sell a specified number of fruits",
             "English (Europe)": "Sell a specified number of fruits",
             "French": "Vendre un certain nombre de fruits",
-            "French (US)": "Vendre un certain nombre de fruits"
+            "French (US)": "Vendre un certain nombre de fruits",
+            "German": "Verkaufe eine bestimmte Anzahl von Früchten."
         },
         {
             "English": "Plant each type of fruit (cherry, orange, pear, peach, apple, and coconut)",
             "English (Europe)": "Plant each type of fruit (cherry, orange, pear, peach, apple, and coconut)",
             "French": "Planter chaque type de fruit (cerise, orange, poire, pêche, pomme et noix de coco)",
-            "French (US)": "Planter chaque type de fruit (cerise, orange, poire, pêche, pomme et noix de coco)"
+            "French (US)": "Planter chaque type de fruit (cerise, orange, poire, pêche, pomme et noix de coco)",
+            "German": "Pflanze jede Art von Obstbaum (Kirsche, Orange, Birne, Pfirsich, Apfel und Kokosnuss)."
         },
         {
             "English": "Plant a specified number of shrubs (replanting existing shrubs does not count)",
             "English (Europe)": "Plant a specified number of shrubs (replanting existing shrubs does not count)",
             "French": "Planter un certain nombre de buissons (replanter des buissons ne compte pas) ",
-            "French (US)": "Planter un certain nombre de buissons (replanter des buissons ne compte pas) "
+            "French (US)": "Planter un certain nombre de buissons (replanter des buissons ne compte pas) ",
+            "German": "Pflanze eine bestimmte Anzahl von Büschen (das Umpflanzen existierender Büsche zählt nicht)."
         },
         {
             "English": "Sell a specified number of seashells",
             "English (Europe)": "Sell a specified number of seashells",
             "French": "Vendre un certain nombre de coquillages",
-            "French (US)": "Vendre un certain nombre de coquillages"
+            "French (US)": "Vendre un certain nombre de coquillages",
+            "German": "Verkaufe eine bestimmte Anzahl von Muscheln."
         },
         {
             "English": "Dig up a specified number of clams",
             "English (Europe)": "Dig up a specified number of clams",
             "French": "Déterrer un certain nombre de palourdes",
-            "French (US)": "Déterrer un certain nombre de palourdes"
+            "French (US)": "Déterrer un certain nombre de palourdes",
+            "German": "Grabe eine bestimmte Anzahl von Teppichmuscheln aus."
         },
         {
             "English": "Fish a specified number of trash (cans, tires, or boots)",
             "English (Europe)": "Fish a specified number of trash (cans, tires, or boots)",
             "French": "Pêcher un certain nombre de détritus (boîte vide, vieux pneu ou godasse)",
-            "French (US)": "Pêcher un certain nombre de détritus (boîte vide, vieux pneu ou godasse)"
+            "French (US)": "Pêcher un certain nombre de détritus (boîte vide, vieux pneu ou godasse)",
+            "German": "Angle eine bestimmte Anzahl von Müllgegenständen (Dosen, Reifen oder Stiefel)."
         },
         {
             "English": "Fish a specified number of fish in a single streak without any getting away",
             "English (Europe)": "Fish a specified number of fish in a single streak without any getting away",
             "French": "Pêcher un certain nombre de poissons d'affilée",
-            "French (US)": "Pêcher un certain nombre de poissons d'affilée"
+            "French (US)": "Pêcher un certain nombre de poissons d'affilée",
+            "German": "Angle eine bestimmte Anzahl von Fischen in Folge, ohne dass einer entwischt."
         },
         {
             "English": "Expand your home a specified number of times",
             "English (Europe)": "Expand your home a specified number of times",
             "French": "Construire puis agrandir sa maison un certain nombre de fois",
-            "French (US)": "Construire puis agrandir sa maison un certain nombre de fois"
+            "French (US)": "Construire puis agrandir sa maison un certain nombre de fois",
+            "German": "Lasse dein Haus mehrere Male erweitern."
         },
         {
             "English": "Get an S ranking from the Happy Home Academy",
             "English (Europe)": "Get an S ranking from the Happy Home Academy",
             "French": "Obtenir la note S de l'Académie des Joyeux Décorateurs",
-            "French (US)": "Obtenir la note S de l'Académie des Joyeux Décorateurs"
+            "French (US)": "Obtenir la note S de l'Académie des Joyeux Décorateurs",
+            "German": "Erhalte den S-Rang von der Akademie des schönen Hauses."
         },
         {
             "English": "Place a specified number of furniture in your house",
             "English (Europe)": "Place a specified number of furniture in your house",
             "French": "Placer un certain nombre de meubles dans sa maison",
-            "French (US)": "Placer un certain nombre de meubles dans sa maison"
+            "French (US)": "Placer un certain nombre de meubles dans sa maison",
+            "German": "Stelle eine gewisse Anzahl von Möbeln in dein Haus."
         },
         {
             "English": "Store a specified number of items in your house storage",
             "English (Europe)": "Store a specified number of items in your house storage",
             "French": "Ranger un certain nombre de meubles dans son espace de rangement",
-            "French (US)": "Ranger un certain nombre de meubles dans son espace de rangement"
+            "French (US)": "Ranger un certain nombre de meubles dans son espace de rangement",
+            "German": "Lagere eine gewisse Anzahl von Gegenständen ein."
         },
         {
             "English": "Remodel your home's exterior a specified number of times",
             "English (Europe)": "Remodel your home's exterior a specified number of times",
             "French": "Modifer sa maison un certain nombre de fois",
-            "French (US)": "Modifer sa maison un certain nombre de fois"
+            "French (US)": "Modifer sa maison un certain nombre de fois",
+            "German": "Passe die Außengestaltung deines Hauses einige Male an."
         },
         {
             "English": "Fulfill a specified number of requests from residents (such as returning lost items)",
             "English (Europe)": "Fulfill a specified number of requests from residents (such as returning lost items)",
             "French": "Rendre service aux villageois un certain nombre de fois (comme retourner un objet perdu)",
-            "French (US)": "Rendre service aux villageois un certain nombre de fois (comme retourner un objet perdu)"
+            "French (US)": "Rendre service aux villageois un certain nombre de fois (comme retourner un objet perdu)",
+            "German": "Hilf deinen Nachbarn (zum Beispiel durch das Zurückgeben verlorener Gegenstände)."
         },
         {
             "English": "Learn a specified number of reactions",
             "English (Europe)": "Learn a specified number of reactions",
             "French": "Apprendre un certain nombre de mimiques",
-            "French (US)": "Apprendre un certain nombre de mimiques"
+            "French (US)": "Apprendre un certain nombre de mimiques",
+            "German": "Lerne eine bestimmte Anzahl von Emotionen."
         },
         {
             "English": "Awarded the first time you take a photo using the camera app on the NookPhone (screenshot button does not count, must use the app)",
             "English (Europe)": "Awarded the first time you take a photo using the camera app on the NookPhone (screenshot button does not count, must use the app)",
             "French": "Prendre une photo avec l'application Appareil photo du NookPhone (utiliser le bouton de capture d'écran ne compte pas)",
-            "French (US)": "Prendre une photo avec l'application Appareil photo du NookPhone (utiliser le bouton de capture d'écran ne compte pas)"
+            "French (US)": "Prendre une photo avec l'application Appareil photo du NookPhone (utiliser le bouton de capture d'écran ne compte pas)",
+            "German": "Mache zum ersten Mal ein Foto mit der Kamera-App (der Screenshot-Button zählt nicht, du musst die App verwenden)."
         },
         {
             "English": "Awarded the first time you edit your passport.",
             "English (Europe)": "Awarded the first time you edit your passport.",
             "French": "Modifier son passeport pour la première fois",
-            "French (US)": "Modifier son passeport pour la première fois"
+            "French (US)": "Modifier son passeport pour la première fois",
+            "German": "Aktualisiere zum ersten Mal einen Eintrag auf deinem Pass."
         },
         {
             "English": "Awarded after the 10th time you open your NookPhone",
             "English (Europe)": "Awarded after the 10th time you open your NookPhone",
             "French": "Utiliser son NookPhone 10 fois",
-            "French (US)": "Utiliser son NookPhone 10 fois"
+            "French (US)": "Utiliser son NookPhone 10 fois",
+            "German": "Benutze dein NookPhone 10-mal."
         },
         {
             "English": "Awarded after the 1000th time you open your NookPhone",
             "English (Europe)": "Awarded after the 1000th time you open your NookPhone",
             "French": "Utiliser son NookPhone 1 000 fois",
-            "French (US)": "Utiliser son NookPhone 1 000 fois"
+            "French (US)": "Utiliser son NookPhone 1 000 fois",
+            "German": "Benutze dein NookPhone 1000-mal."
         },
         {
             "English": "Number of times you've ordered from the Nook Shopping catalog",
             "English (Europe)": "Number of times you've ordered from the Nook Shopping catalog",
             "French": "Acheter des choses sur Nook Shopping un certain nombre de fois",
-            "French (US)": "Acheter des choses sur Nook Shopping un certain nombre de fois"
+            "French (US)": "Acheter des choses sur Nook Shopping un certain nombre de fois",
+            "German": "Bestelle Gegenstände über den Katalog von Nook Shopping."
         },
         {
             "English": "Number of unique furniture pieces you've added to your catalog",
             "English (Europe)": "Number of unique furniture pieces you've added to your catalog",
             "French": "Ajouter un certain nombre d'objets au catalogue",
-            "French (US)": "Ajouter un certain nombre d'objets au catalogue"
+            "French (US)": "Ajouter un certain nombre d'objets au catalogue",
+            "German": "Fülle den Katalog mit einer bestimmten Anzahl von Gegenständen."
         },
         {
             "English": "Number of Nook Miles+ goals you've completed",
             "English (Europe)": "Number of Nook Miles+ goals you've completed",
             "French": "Gagner des miles Nook en remplissant les objectifs Miles Nook +",
-            "French (US)": "Gagner des miles Nook en remplissant les objectifs Miles Nook +"
+            "French (US)": "Gagner des miles Nook en remplissant les objectifs Miles Nook +",
+            "German": "Schließe eine bestimmte Anzahl von Nook-Meilen+-Aufträgen ab."
         },
         {
             "English": "Awarded the first time you purchase an item from a shop",
             "English (Europe)": "Awarded the first time you purchase an item from a shop",
             "French": "Acheter un objet dans une boutique",
-            "French (US)": "Acheter un objet dans une boutique"
+            "French (US)": "Acheter un objet dans une boutique",
+            "German": "Kaufe zum ersten Mal etwas ein."
         },
         {
             "English": "Awarded the first time you sell an item to a shop",
             "English (Europe)": "Awarded the first time you sell an item to a shop",
             "French": "Vendre un objet dans une boutique",
-            "French (US)": "Vendre un objet dans une boutique"
+            "French (US)": "Vendre un objet dans une boutique",
+            "German": "Verkaufe zum ersten Mal etwas in Nook's Laden."
         },
         {
             "English": "Awarded when you pay off your initial loan using Nook Miles",
             "English (Europe)": "Awarded when you pay off your initial loan using Nook Miles",
             "French": "Rembourser ses frais d'installation",
-            "French (US)": "Rembourser ses frais d'installation"
+            "French (US)": "Rembourser ses frais d'installation",
+            "German": "Bezahle das Reif-für-die-Insel-Paket ab."
         },
         {
             "English": "Number of total bells you've spent in shops",
             "English (Europe)": "Number of total bells you've spent in shops",
             "French": "Dépenser un certain nombre de clochettes",
-            "French (US)": "Dépenser un certain nombre de clochettes"
+            "French (US)": "Dépenser un certain nombre de clochettes",
+            "German": "Gib eine bestimmte Anzahl von Sternis beim Einkauf aus."
         },
         {
             "English": "Awarded the first time you purchase turnips",

@@ -37,7 +37,7 @@ export default class SideMenu extends Component {
     } else {
       oldList.push(name);
       await this.saveSections(oldList);
-      getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10,220,20]) : "";
+      getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(5) : "";
       this.setState({sections:oldList})
     }
   }

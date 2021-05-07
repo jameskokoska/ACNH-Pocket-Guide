@@ -39,14 +39,14 @@ function getMonth(currentMonth){
   return months[currentMonth];
 }
 
-export function getMonday(){
+export function getMonday(weeksAgo = 1){
   var date = new Date(getCurrentDateObject());
   var day = date.getDay();
   var prevMonday = new Date(getCurrentDateObject());
   if(date.getDay() == 0){
-    prevMonday.setDate(date.getDate() - 7);
+    prevMonday.setDate(date.getDate() - 7*weeksAgo);
   }else{
-    prevMonday.setDate(date.getDate() - (day));
+    prevMonday.setDate(date.getDate() - (day+7*(weeksAgo-1)));
   }
   return prevMonday;
 }

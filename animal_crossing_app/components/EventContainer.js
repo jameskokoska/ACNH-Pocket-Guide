@@ -401,7 +401,7 @@ function getMonthName(currentMonth){
     return "Dec";
 }
 
-function getDayOfWeekObject(dayOfWeek){
+export function getDayOfWeekObject(dayOfWeek){
   if(dayOfWeek==="Monday"){
     return 1;
   } else if(dayOfWeek==="Tuesday"){

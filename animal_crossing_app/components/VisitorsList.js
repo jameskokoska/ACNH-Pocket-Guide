@@ -38,6 +38,7 @@ export default class VisitorList extends Component {
     ]
     this.days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday', 'Sunday', 'None'];
     this.currentMondayIndex = getMonday().toISOString().split('T')[0];
+    this.lastMondayIndex = getMonday(2).toISOString().split('T')[0];
   }
 
   componentDidMount(){
@@ -83,7 +84,7 @@ export default class VisitorList extends Component {
     const extraInfo= {
       type:"guideRedirect",
       title:"Guide + FAQ",
-      content:"You can read more details about NPC Visitors by visiting the events and guide page",
+      content:"You can read more details about NPC Visitors by visiting the events and guide page. The time icon shows that the NPC has visited last week.",
       linkText: "Tap here to read more about NPC Visitors",
       redirectPassBack: "npcVisitorsRedirect"
     }
@@ -127,8 +128,9 @@ export default class VisitorList extends Component {
             key={character.name+index.toString()}
             character={character}
             setVisited={this.setVisited}
-            onTap={()=>{this.setState({selectedCharacter:character.name, selectedDay:getWeekDay(getCurrentDateObject().getDay())}); this.popup?.setPopupVisible(true); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10]) : "";}}
+            onTap={(day)=>{this.setState({selectedCharacter:character.name, selectedDay:day}); this.popup?.setPopupVisible(true); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}
             day={this.state.data[this.currentMondayIndex]!==undefined?this.state.data[this.currentMondayIndex][character.name]:""}
+            lastWeek={this.state.data[this.lastMondayIndex]}
           />
         )}
       </View>
@@ -152,7 +154,7 @@ export default class VisitorList extends Component {
                       key={character.name+index.toString()}
                       character={character}
                       setVisited={this.setVisited}
-                      onTap={()=>{this.setState({selectedCharacter:character.name, selectedDay:getWeekDay(getCurrentDateObject().getDay())}); this.popup?.setPopupVisible(true);}}
+                      onTap={()=>{}}
                       day={this.state.data[date]!==undefined?this.state.data[date][character.name]:""}
                       onlyShowVisited={true}
                     />
@@ -193,10 +195,31 @@ class CharacterItem extends Component {
         source={this.props.character.picture}
       />
     }
+    var dayPassBack;
+    if(dayDisplay===""){
+      dayPassBack = getWeekDay(getCurrentDateObject().getDay())
+    } else {
+      dayPassBack = this.props.day
+    }
+    var lastWeek = false;
+    var imageLastWeek = <View/>
+    if(this.props.lastWeek!==undefined){
+      const lastWeekNPC = Object.keys(this.props.lastWeek);
+      console.log(this.props.lastWeek)
+      for(var i=0; i<lastWeekNPC.length; i++){
+        if(lastWeekNPC[i]===this.props.character.name){
+          lastWeek=true
+        }
+      }
+      if(lastWeek){
+        imageLastWeek = <Image style={{width:20, height:20, position:"absolute", left:0, top:0, zIndex:1}} source={require("../assets/icons/repeat.png")}/>
+      }
+    }
     return (
       <View style={{margin:7, alignItems:"center", justifyContent:"center"}}>
-        <TouchableOpacity onLongPress={() => {this.props.onTap()}} onPress={()=>{this.props.onTap()}}>
+        <TouchableOpacity onLongPress={() => {this.props.onTap(dayPassBack);}} onPress={()=>{this.props.onTap(dayPassBack)}}>
           <View style={[styles.rowImageBackground,{backgroundColor:colors.eventBackground[global.darkMode]}]}>
+            {imageLastWeek}
             {imageComponent}
           </View>
         </TouchableOpacity>

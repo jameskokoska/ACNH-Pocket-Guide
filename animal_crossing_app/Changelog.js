@@ -3,6 +3,11 @@ export const gameVersion = "1.10.0"
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
+-Time icon now shows in corner if NPC visitor visited last week in Visitors section
+-Improvements to NPC Visitors section
+-Updated translations
+-Updated game data
+-
 -Added Amiibo Cards page
 -Added profile icons
 -Added profile page, tap your profile icon to get an island summary!
