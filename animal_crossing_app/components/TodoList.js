@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Linking, TextInput, Vibration,TouchableNativeFeedback,TouchableOpacity,StyleSheet, Text, View, Image} from 'react-native';
+import {Dimensions, Linking, TextInput, Vibration,TouchableNativeFeedback,TouchableOpacity,StyleSheet, Text, View, Image} from 'react-native';
 import TextFont from './TextFont';
 import {getCurrentDateObject, getMonth, getWeekDayShort} from './DateFunctions';
 import {getStorage, checkOff, capitalize, commas, removeBrackets} from "../LoadJsonData"
@@ -465,35 +465,34 @@ class TodoItem extends Component {
       />
     }
     return (
-      <View style={{width: "90%"}}>
-      
-          {this.removeButton(this.props)}
-          <TouchableNativeFeedback onLongPress={() => {  
-            this.setState({showRemove:!this.state.showRemove})
-            getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(8) : "";
-          }}
-          background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"1A", false)}
-          onPress={()=>{
-                this.props.checkOffItem(this.props.index); 
-          }}
-          >
-            <View style={[styles.row,{backgroundColor:colors.eventBackground[global.darkMode]}]}>
-              <View style={[styles.rowImageBackground,{backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
-                {imageComp}
-              </View>
-              <View style={styles.rowTextTop}>
-                <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:20, color:colors.textBlack[global.darkMode]}}>{this.props.item.title}</TextFont>
-              </View>
-              <TouchableOpacity style={{position:"absolute", right: -5}} 
-                activeOpacity={0.6}
-                onPress={() => {  
-                this.props.checkOffItem(this.props.index); 
-              }}>
-                <Check checkType={this.props.checkType} fadeOut={false} play={this.props.item.finished} width={90} height={90} disablePopup={true}/>
-              </TouchableOpacity>
+      <View style={{width: Dimensions.get('window').width-20*2}}>
+        {this.removeButton(this.props)}
+        <TouchableNativeFeedback onLongPress={() => {  
+          this.setState({showRemove:!this.state.showRemove})
+          getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(8) : "";
+        }}
+        background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"1A", false)}
+        onPress={()=>{
+              this.props.checkOffItem(this.props.index); 
+        }}
+        >
+          <View style={[styles.row,{backgroundColor:colors.eventBackground[global.darkMode]}]}>
+            <View style={[styles.rowImageBackground,{backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
+              {imageComp}
             </View>
-          </TouchableNativeFeedback>
-        </View>
+            <View style={styles.rowTextTop}>
+              <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:20, color:colors.textBlack[global.darkMode]}}>{this.props.item.title}</TextFont>
+            </View>
+            <TouchableOpacity style={{position:"absolute", right: -5}} 
+              activeOpacity={0.6}
+              onPress={() => {  
+              this.props.checkOffItem(this.props.index); 
+            }}>
+              <Check checkType={this.props.checkType} fadeOut={false} play={this.props.item.finished} width={90} height={90} disablePopup={true}/>
+            </TouchableOpacity>
+          </View>
+        </TouchableNativeFeedback>
+      </View>
     )
   }
 }

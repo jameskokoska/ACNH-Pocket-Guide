@@ -205,7 +205,6 @@ class CharacterItem extends Component {
     var imageLastWeek = <View/>
     if(this.props.lastWeek!==undefined){
       const lastWeekNPC = Object.keys(this.props.lastWeek);
-      console.log(this.props.lastWeek)
       for(var i=0; i<lastWeekNPC.length; i++){
         if(lastWeekNPC[i]===this.props.character.name){
           lastWeek=true

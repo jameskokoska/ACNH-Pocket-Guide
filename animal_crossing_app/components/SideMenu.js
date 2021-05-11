@@ -104,12 +104,16 @@ export default class SideMenu extends Component {
     );
   };
   render() {
+    var maxWidth = 411*0.7;
+    if(Dimensions.get('window').width*0.7 < maxWidth){
+      maxWidth = Dimensions.get('window').width*0.7;
+    }
     return (
       <View style={{ flex: 1 }}>
         <DrawerLayout
           ref={(drawer) => this.drawer = drawer }
           edgeWidth={this.nonTabbedPages.includes(this.props.currentPage) ? Dimensions.get('window').width : Dimensions.get('window').width*0.17}
-          drawerWidth={Dimensions.get('window').width*0.7}
+          drawerWidth={maxWidth}
           drawerPosition={DrawerLayout.positions.Left}
           drawerType="slide"
           drawerBackgroundColor="#ddd"

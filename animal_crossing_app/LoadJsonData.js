@@ -159,8 +159,16 @@ export function determineDataGlobal(datakeyName){
     return global.dataLoadedMaterials;
 }
 
-export function resetFilters(){
-  var filterKeys = ["Active CreaturesFilters","FishFilters","BugsFilters","Sea CreaturesFilters","FossilsFilters","ArtFilters","FurnitureFilters","ClothingFilters","Floor & WallsFilters","MusicFilters","EmoticonsFilters","RecipesFilters","ToolsFilters","VillagersFilters","ConstructionFilters","EverythingFilters"]
+export async function resetFilters(){
+  console.log()
+  var allFilterKeys = await AsyncStorage.getAllKeys();
+  var filterKeys = []
+  for(var x =0; x < allFilterKeys.length; x++){
+    if(allFilterKeys[x].includes("Filters")){
+      filterKeys.push(allFilterKeys[x])
+    }
+  }
+  console.log(filterKeys)
   for(var i =0; i < filterKeys.length; i++){
     AsyncStorage.setItem(filterKeys[i], "");
   }
@@ -907,8 +915,25 @@ export function checkTranslationEntry(textCheck, fallback){
   }
 }
 
+//Special translations
+// {label: "English", value: "English",},
+// {label: "English (Europe)", value: "English (Europe)",},
+// {label: "Français", value: "French",},
+// {label: "Français (Québec)", value: "French (US)",},
+// {label: "Español (In progress - if you would like to help, feel free to email)", value: "Spanish",},
+// {label: "Español (US) (In progress - if you would like to help, feel free to email)", value: "Spanish (US)",},
+// {label: "German (In progress - if you would like to help, feel free to email)", value: "German",},
+// {label: "Italian (Not fully supported)", value: "Italian",},
+// {label: "Dutch (Not fully supported)", value: "Dutch",},
+// {label: "Chinese (Not fully supported)", value: "Chinese",},
+// {label: "Chinese (Traditional) (Not fully supported)", value: "Chinese (Traditional)",},
+// {label: "Japanese (Not fully supported)", value: "Japanese",},
+// {label: "Korean (Not fully supported)", value: "Korean",},
+// {label: "Russian (Not fully supported)", value: "Russian",},
 export function translateDreamAddressBeginning(villager){
   if(global.language==="French" || global.language==="French (US)"){
+    return ("DA")
+  } if(global.language==="German"){
     return ("DA")
   } else {
     return ("DW")
@@ -920,14 +945,18 @@ export function translateBirthday(villager){
     return ("Anniversaire de " + villager)
   } else if(global.language==="Spanish" || global.language==="Spanish (US)"){
     return ("Cumpleaños de " + villager)
+  } else if(global.language==="German"){
+    return ("Cumpleaños de " + villager)
   } else {
-    return (villager + "'s Birthday")
+    return (villager + "'s Geburtstag")
   }
 }
 
 export function translateIslandNameInputLabel1(){
   if (global.language==="French" || global.language==="French (US)"){
     return "de l'île";
+  } else if (global.language==="German"){
+    return "der";
   } else {
     return "of";
   }
@@ -936,6 +965,8 @@ export function translateIslandNameInputLabel1(){
 export function translateIslandNameInputLabel2(){
   if (global.language==="French" || global.language==="French (US)"){
     return "";
+  } else if (global.language==="German"){
+    return "Insel";
   } else {
     return "Island";
   }

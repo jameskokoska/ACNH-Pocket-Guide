@@ -216,7 +216,7 @@ export class LanguagePicker extends Component{
             {label: "Français (Québec)", value: "French (US)",},
             {label: "Español (In progress - if you would like to help, feel free to email)", value: "Spanish",},
             {label: "Español (US) (In progress - if you would like to help, feel free to email)", value: "Spanish (US)",},
-            {label: "German (In progress - if you would like to help, feel free to email)", value: "German",},
+            {label: "Deutsch (In progress - if you would like to help, feel free to email)", value: "German",},
             {label: "Italian (Not fully supported)", value: "Italian",},
             {label: "Dutch (Not fully supported)", value: "Dutch",},
             {label: "Chinese (Not fully supported)", value: "Chinese",},

@@ -32,8 +32,11 @@ import {gameVersion} from "../Changelog"
 Object.entries(exports).forEach(([name, exported]) => window[name] = exported);
 
 const {diffClamp} = Animated;
-const headerHeight = Dimensions.get('window').height*0.3;
-
+var headerHeight = Dimensions.get('window').height*0.3;
+var maxHeight = 845.7*0.3;
+if(headerHeight > maxHeight){
+  headerHeight = maxHeight;
+}
 
 function ListPage(props){
   const renderItem = (({ item }) =>
@@ -207,6 +210,9 @@ function ListPage(props){
               break;
             } else if(props.villagerGifts===true){
               filterFound = false;
+              break;
+            } else if(item["Data Category"]!==undefined && item["Data Category"]==="Art" && item["Genuine"]!==undefined && item["Genuine"]!=="Yes"){
+              //Fix art, remove fake art from list no matter what
               break;
             }
             //Check category

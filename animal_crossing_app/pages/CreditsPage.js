@@ -54,10 +54,13 @@ class CreditsPage extends Component {
             <SubHeader> Vicente Soldevilla</SubHeader>
             <SubHeader> Robertin</SubHeader>
             <SubHeader> miyo0i</SubHeader>
+            <SubHeader> Jorge Abraham</SubHeader>
           </View>
           <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
             <SubHeader style={{marginBottom:5}}>{attemptToTranslate("German") + ":"}</SubHeader>
             <SubHeader> Ännchen</SubHeader>
+            <SubHeader> Andy S.</SubHeader>
+            <SubHeader> .:MuschU:.</SubHeader>
           </View>
           
           <View style={{height: 20}}/>
@@ -81,7 +84,7 @@ class CreditsPage extends Component {
           <Paragraph>Translations sourced from the community spreadsheet. Thank you everyone for translating!</Paragraph>
           <ExternalLink link="https://github.com/alexislours/translation-sheet-data"/>
           <Paragraph>And thank YOU for downloading this application and showing your support.</Paragraph>
-         
+          
           <View style={{height:35}}/>
           <SubHeader>Integrations</SubHeader>
           <Paragraph>Turnip Prophet - Turnip Tracker:</Paragraph>

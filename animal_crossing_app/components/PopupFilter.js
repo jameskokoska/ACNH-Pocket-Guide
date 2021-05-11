@@ -161,7 +161,7 @@ class PopupFilter extends Component {
       return;
     }
     var defaultValuesStored = await getStorage(this.props.title+"Filters","");
-    
+
     this.mounted=true;
     if(defaultValuesStored!==""){
       this.setState({selectedItems:defaultValuesStored.split(",")})
@@ -207,6 +207,7 @@ class PopupFilter extends Component {
     this.setState({popupVisible:visible});
     if(visible===false && this.mounted){
       await AsyncStorage.setItem(this.props.title+"Filters", this.state.selectedItems.toString());
+      console.log(this.props.title+"Filters")
       this.setFilters();
     }
   }

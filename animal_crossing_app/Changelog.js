@@ -8,6 +8,15 @@ export const changelog = `
 -Updated translations
 -Updated game data
 -Added filters for active creatures
+-Fixed clear all set filters
+-Added special translations for German
+-Added more German translations and Spanish translations
+-Fixed todo list item width
+-Tablet changes are not guaranteed - I do not have a tablet to test :( 
+-Max size for sidebar menu on tablets
+-Added maxwidth for side menu
+-Added maxheight for list pages
+-Centered landscape view on home page
 -
 -Added Amiibo Cards page
 -Added profile icons
