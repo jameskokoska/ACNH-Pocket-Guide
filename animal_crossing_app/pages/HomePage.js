@@ -174,7 +174,7 @@ class HomePage extends Component {
             </HomeContentArea>:<View/>}
             {sections["To-Do"]===true?<HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.todoColor[global.darkMode]} title="To-Do" titleColor={colors.todoColor[global.darkModeReverse]}>
               <View style={{height: 15}}/>
-              <TodoList sections={sections} setLoadedToDo={this.setLoadedToDo}/>
+              <TodoList sections={sections} setLoadedToDo={this.setLoadedToDo} setPage={this.props.setPage}/>
               <View style={{height: 15}}/>
             </HomeContentArea>:<View/>}
             {this.props.sections["Turnip Log"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.profileColor[global.darkMode]} title="Turnip Log" titleColor={colors.profileColor[global.darkModeReverse]}>

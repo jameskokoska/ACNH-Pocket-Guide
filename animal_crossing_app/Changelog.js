@@ -17,6 +17,7 @@ export const changelog = `
 -Added maxwidth for side menu
 -Added maxheight for list pages
 -Centered landscape view on home page
+-You can now add talk to villagers in the checklist (Tap Show talk to villagers list)
 -
 -Added Amiibo Cards page
 -Added profile icons

@@ -8,7 +8,7 @@ import Check from './Check';
 import colors from '../Colors'
 import PopupAddTask from "./PopupAddTask"
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
+import {getSettingsString, attemptToTranslate, getCurrentVillagerObjects, getCurrentVillagerNamesString} from "../LoadJsonData"
 import DropDownPicker from 'react-native-dropdown-picker'
 import FastImage from "./FastImage"
 import {PopupInfoCustom} from "./Popup"
@@ -20,6 +20,7 @@ export class TodoList extends Component {
     this.state = {
       data: [],
       showEdit: false,
+      showVillagersTalkList: false,
     }
   }
 
@@ -47,11 +48,24 @@ export class TodoList extends Component {
       {title: attemptToTranslate('Turnip Prices'), finished: false, picture:"turnip.png", small:true},
       {title: attemptToTranslate('Turnip Prices'), finished: false, picture:"turnip.png", small:true},
     ]
+    var showVillagersTalkList = (await getStorage("showVillagersTalkList","false"))==="true";
     var storageData = JSON.parse(await getStorage("ToDoList"+global.profile,JSON.stringify(defaultList)));
+    
     if(this.mounted){
-      this.setState({data:storageData,});
+      this.setState({data:storageData,showVillagersTalkList:showVillagersTalkList});
     }
     this.props.setLoadedToDo(true);
+  }
+
+  populateDataWithVillagers = () => {
+    var currentVillagers = getCurrentVillagerObjects();
+    var data = [];
+    var currentVillager = {}
+    for(var i = 0; i<currentVillagers.length; i++){
+      currentVillager = {villagerChecklist: true, title: attemptToTranslate("Talk to") + " " + attemptToTranslate(currentVillagers[i]["Name"], true), finished: false, picture: currentVillagers[i]["Icon Image"], small:true}
+      data.push(currentVillager)
+    }
+    return data;
   }
 
   saveList = async(data) => {
@@ -123,6 +137,32 @@ export class TodoList extends Component {
     this.saveList(currentData);
   }
 
+  toggleVillagerTalk = async () => {
+    if(getCurrentVillagerNamesString()==="You have no favorite villagers."){
+      this.popup?.setPopupVisible(true);
+      return;
+    }
+    await AsyncStorage.setItem("showVillagersTalkList",!this.state.showVillagersTalkList?"true":"false");
+    var data = this.state.data
+    if(!this.state.showVillagersTalkList){
+      data = [...this.state.data, ...this.populateDataWithVillagers()];
+    } else {
+      //Remove all villager checklist entries
+      var removeIndexes = [];
+      for(var i = 0; i<data.length; i++){
+        if(data[i]["villagerChecklist"]){
+          removeIndexes.push(i)
+        }
+      }
+      while(removeIndexes.length) {
+        data.splice(removeIndexes.pop(), 1);
+      }
+      
+    }
+    this.setState({showVillagersTalkList:!this.state.showVillagersTalkList, data:data})
+    await this.saveList(data);
+  }
+
   render(){
     return <>
       <View style={{alignItems:"center",flexDirection:"row", right:0, top:0,position:'absolute',zIndex:10}}>
@@ -178,13 +218,18 @@ export class TodoList extends Component {
           })}
         </View>
       </View>
-      {/* <TouchableOpacity style={{padding:10}} 
+      <TouchableOpacity style={{marginTop:5, padding:12, alignSelf: 'center'}} 
         onPress={()=>{
-          this.toggleTurnipLog(); 
+          this.toggleVillagerTalk(); 
       }}>
-        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{this.state.showTurnipLog ? "Hide Turnip Log" : "Show Turnip Log"}</TextFont>
-      </TouchableOpacity> */}
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, }}>{this.state.showVillagersTalkList ? "Hide talk to villagers list" : "Show talk to villagers list"}</TextFont>
+      </TouchableOpacity>
       <PopupAddTask ref={(popupAddTask) => this.popupAddTask = popupAddTask} addItem={this.addItem}/>
+      <PopupInfoCustom header={<TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>You do not have any villagers added!</TextFont>} ref={(popup) => this.popup = popup} buttonText={"Dismiss"}>
+        <TouchableOpacity style={{paddingVertical:20,}} onPress={() => this.props.setPage(8)}>
+          <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, textAlign:"center"}}>{"Tap here and go add some!"}</TextFont>
+        </TouchableOpacity>
+      </PopupInfoCustom> 
     </>
   }
 }
