@@ -33,15 +33,18 @@ export function inChecklist(checkListKeyString){
 
 const database = require("./assets/data/data.json");
 
-export async function getStorageData(data, checkListKey, defaultValue, customDatabase=false, databaseCategories="",forceTranslation=false){
+export async function getStorageData(data, checkListKey, defaultValue){
   var dataLoadingTotal = [];
   //Loop through all datasets
   for(var dataSet = 0; dataSet <data.length; dataSet++){
     var dataLoading
-    if(customDatabase === false){
+    var customDatabase
+    if(data[dataSet].constructor === String){
+      customDatabase = false;
       dataLoading = database[data[dataSet]];
     } else {
-      dataLoading = data[dataSet];
+      customDatabase = true;
+      dataLoading = data[dataSet][0];
     }
     var totalIndex = -1;
     //Loop through that specific dataset
@@ -84,17 +87,18 @@ export async function getStorageData(data, checkListKey, defaultValue, customDat
         }
       }
       if(global.language!=="English"){
-        dataLoading[i]["NameLanguage"]=attemptToTranslateItem(dataLoading[i]["Name"]);
-        if(forceTranslation){
+        if(!customDatabase){
+          dataLoading[i]["NameLanguage"]=attemptToTranslateItem(dataLoading[i]["Name"]);
+        }else{
           dataLoading[i]["NameLanguage"]=attemptToTranslate(dataLoading[i]["Name"], true);
         }
       } else {
         dataLoading[i]["NameLanguage"]=dataLoading[i]["Name"];
       }
-      if(databaseCategories===""){
+      if(!customDatabase){
         dataLoading[i]["Data Category"]=data[dataSet];
       } else {
-        dataLoading[i]["Data Category"]=databaseCategories[dataSet];
+        dataLoading[i]["Data Category"]=data[dataSet][1];
       }
     }
     dataLoadingTotal.push(dataLoading);
@@ -160,7 +164,6 @@ export function determineDataGlobal(datakeyName){
 }
 
 export async function resetFilters(){
-  console.log()
   var allFilterKeys = await AsyncStorage.getAllKeys();
   var filterKeys = []
   for(var x =0; x < allFilterKeys.length; x++){
@@ -248,12 +251,12 @@ export function removeAccents(text){
 }
 
 export function capitalize(name) {
-  if(name.includes("(") && name.includes(")")){
-    var withinBrackets = name.match(/\((.*?)\)/);
-    name = name.replace(withinBrackets[0], "("+capitalize(withinBrackets[1])+")")
-    return name;
-  }
   if(name!==undefined){
+    if(name.includes("(") && name.includes(")")){
+      var withinBrackets = name.match(/\((.*?)\)/);
+      name = name.replace(withinBrackets[0], "("+capitalize(withinBrackets[1])+")")
+      return name;
+    }
     var name = name.replace(/(^\w{1})|(\s{1}\w{1})/g, match => match.toUpperCase());
     return name.charAt(0).toUpperCase() + name.slice(1);
   } else {
@@ -287,13 +290,13 @@ export function removeBrackets(string){
 
 export async function loadGlobalData(){
   global.dataLoadedAmiibo = await getStorageData([
-    require("./assets/data/Amiibo Data/Series 1.json"),
-    require("./assets/data/Amiibo Data/Series 2.json"),
-    require("./assets/data/Amiibo Data/Series 3.json"),
-    require("./assets/data/Amiibo Data/Series 4.json"),
-    require("./assets/data/Amiibo Data/Promos.json"),
-    require("./assets/data/Amiibo Data/Welcome amiibo series.json"),
-    require("./assets/data/Amiibo Data/Sanrio series.json"),
+    [require("./assets/data/Amiibo Data/Series 1.json"),"Series 1"],
+    [require("./assets/data/Amiibo Data/Series 2.json"),"Series 2"],
+    [require("./assets/data/Amiibo Data/Series 3.json"),"Series 3"],
+    [require("./assets/data/Amiibo Data/Series 4.json"),"Series 4"],
+    [require("./assets/data/Amiibo Data/Promos.json"),"Promos"],
+    [require("./assets/data/Amiibo Data/Welcome amiibo series.json"),"Welcome Amiibo Series"],
+    [require("./assets/data/Amiibo Data/Sanrio series.json"),"Sanrio Series"],
   ], [
     ["amiiboCheckListSeries1","Name"],
     ["amiiboCheckListSeries2","Name"],
@@ -302,7 +305,7 @@ export async function loadGlobalData(){
     ["amiiboCheckListPromos","Name"],
     ["amiiboCheckListSeriesWelcomeamiiboseries","Name"],
     ["amiiboCheckListSeriesSanrioseries","Name"],
-  ], "false", true, ["Series 1", "series 2", "Series 3", "Series 4", "Promos", "Welcome Amiibo Series", "Sanrio Series"],true)
+  ], "false")
   global.dataLoadedReactions = await getStorageData(["Reactions"],[["emojiCheckList","Name"]],"false");
   global.dataLoadedMusic = await getStorageData(["Music"],[["songCheckList","Name"]],"false");
   global.dataLoadedConstruction = await getStorageData(["Construction","Fencing"],[["constructionCheckList","Name"],["fenceCheckList","Name"]],"false");
@@ -408,6 +411,13 @@ export async function loadGlobalData(){
     "Construction",
     "Fencing",
     "Other",
+    [require("./assets/data/Amiibo Data/Series 1.json"),"Series 1"],
+    [require("./assets/data/Amiibo Data/Series 2.json"),"Series 2"],
+    [require("./assets/data/Amiibo Data/Series 3.json"),"Series 3"],
+    [require("./assets/data/Amiibo Data/Series 4.json"),"Series 4"],
+    [require("./assets/data/Amiibo Data/Promos.json"),"Promos"],
+    [require("./assets/data/Amiibo Data/Welcome amiibo series.json"),"Welcome Amiibo Series"],
+    [require("./assets/data/Amiibo Data/Sanrio series.json"),"Sanrio Series"],
   ],
   [
     ["furnitureCheckList","Name","Variation","Pattern"],
@@ -440,7 +450,14 @@ export async function loadGlobalData(){
     ["emojiCheckList","Name"],
     ["constructionCheckList","Name"],
     ["fenceCheckList","Name"],
-    ["materialsCheckList","Name"]
+    ["materialsCheckList","Name"],
+    ["amiiboCheckListSeries1","Name"],
+    ["amiiboCheckListSeries2","Name"],
+    ["amiiboCheckListSeries3","Name"],
+    ["amiiboCheckListSeries4","Name"],
+    ["amiiboCheckListPromos","Name"],
+    ["amiiboCheckListSeriesWelcomeamiiboseries","Name"],
+    ["amiiboCheckListSeriesSanrioseries","Name"],
   ],"false");
 }
 

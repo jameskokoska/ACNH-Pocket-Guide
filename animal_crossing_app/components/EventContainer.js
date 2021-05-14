@@ -43,7 +43,7 @@ export class EventContainer extends Component {
         <View style={[styles.eventContainer,{backgroundColor:this.props.event.color!==undefined?this.props.event.color:this.props.backgroundColor}]}>
           {image}
           <View style={styles.textContainer}>
-            <TextFont translate={false} numberOfLines={2} bold={true} style={[styles.textContainerTop,{color:this.props.textColor}]}>{this.props.event.name}</TextFont>
+            <TextFont translate={false} numberOfLines={3} bold={true} style={[styles.textContainerTop,{color:this.props.textColor}]}>{this.props.event.name}</TextFont>
             <TextFont translate={false} style={[styles.textContainerBottom,{color:this.props.textColor}]}>{this.props.event.time}</TextFont>
           </View>
           <View style={{width: 33, alignItems:"center", marginLeft: -8}}>

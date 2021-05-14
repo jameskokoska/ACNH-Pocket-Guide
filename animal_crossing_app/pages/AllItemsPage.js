@@ -134,6 +134,13 @@ class AllItemsPage extends Component {
             true,
             true,
             false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
           ]}
           popUpPhraseProperty={[
             "",
@@ -299,6 +306,13 @@ class AllItemsPage extends Component {
             "",
             "",
             "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
           ]}
           imageProperty={[
             "Image",
@@ -331,9 +345,23 @@ class AllItemsPage extends Component {
             "Image",
             "Image",
             "Image",
-            "Inventory Image"
+            "Inventory Image",
+            "image",
+            "image",
+            "image",
+            "image",
+            "image",
+            "image",
+            "image"
           ]}
           textProperty={[
+            ["NameLanguage"],
+            ["NameLanguage"],
+            ["NameLanguage"],
+            ["NameLanguage"],
+            ["NameLanguage"],
+            ["NameLanguage"],
+            ["NameLanguage"],
             ["NameLanguage"],
             ["NameLanguage"],
             ["NameLanguage"],
@@ -431,6 +459,13 @@ class AllItemsPage extends Component {
             ["NameLanguage"],
             ["NameLanguage"],
             ["NameLanguage"],
+            ["NameLanguage"],
+            ["NameLanguage"],
+            ["NameLanguage"],
+            ["NameLanguage"],
+            ["NameLanguage"],
+            ["NameLanguage"],
+            ["NameLanguage"]
           ]}
           dataGlobalName={"dataLoadedAll"}
         />
