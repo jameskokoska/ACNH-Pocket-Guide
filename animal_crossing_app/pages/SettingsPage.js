@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Linking,TouchableOpacity,ScrollView, View, Dimensions, Text} from 'react-native';
+import {Image, Linking,TouchableOpacity,ScrollView, View, Dimensions, Text} from 'react-native';
 import ListPage from '../components/ListPage';
 import LottieView from 'lottie-react-native';
 import TextFont from '../components/TextFont'
@@ -124,10 +124,20 @@ class SettingsPopup extends Component {
   }
   
   render(){
+    var images = <View/>
+    if(this.state.selected.displayPicture1!==undefined && this.state.selected.displayPicture2!==undefined){
+      images = <View style={{flexDirection:"row", marginTop: 24}}>
+        <Image style={{width: Dimensions.get('window').width/2-25, height:220, borderRadius:10, resizeMode:"contain"}} source={this.state.selected.displayPicture1}/>
+        <View style={{width:20, height:20}}/>
+        <Image style={{width: Dimensions.get('window').width/2-25, height:220, borderRadius:10, resizeMode:"contain"}} source={this.state.selected.displayPicture2}/>
+      </View>
+    }
+
     return <>
       <PopupBottomCustom ref={(popup) => this.popup = popup}>
         <SubHeader margin={false}>{this.state.selected.displayName}</SubHeader>
         <Paragraph styled={true} margin={false}>{this.state.selected.description}</Paragraph>
+        {images}
       </PopupBottomCustom>
     </>
   }

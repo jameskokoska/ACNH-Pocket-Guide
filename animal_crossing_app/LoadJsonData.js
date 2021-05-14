@@ -527,6 +527,8 @@ export const settings = [
     "picture" : require("./assets/icons/dice.png"),
     "displayName" : "Highlight furniture with non-craftable variations",
     "description" : "Highlight furniture with variations that can't be crafted by the player in blue. This will help complete your catalog with all the furniture variations!",
+    "displayPicture1" : require("./assets/icons/settingsScreenshots/screenshotNoChecks.jpg"),
+    "displayPicture2" : require("./assets/icons/settingsScreenshots/screenshotHighlightUncraftable.jpg"),
   },
   {
     "keyName" : "breaker",
@@ -612,6 +614,8 @@ export const settings = [
     "picture" : require("./assets/icons/colorPalette.png"),
     "displayName" : "Colored lists",
     "description" : "Change the background of the list based on the color of the item",
+    "displayPicture1" : require("./assets/icons/settingsScreenshots/screenshotChecks.jpg"),
+    "displayPicture2" : require("./assets/icons/settingsScreenshots/screenshotChecksColor.jpg"),
   },
   {
     "keyName" : "settingsShowBlankCheckMarks",
@@ -620,6 +624,8 @@ export const settings = [
     "picture" : require("./assets/icons/checkEmpty.png"),
     "displayName" : "Show empty check marks",
     "description" : "Show an empty check mark in lists. Can be tapped to quickly check off the item. Disabling this can increase performance as less animations need to be rendered.",
+    "displayPicture1" : require("./assets/icons/settingsScreenshots/screenshotChecks.jpg"),
+    "displayPicture2" : require("./assets/icons/settingsScreenshots/screenshotNoChecks.jpg"),
   },
   {
     "keyName" : "settingsCompressVariations",
@@ -628,6 +634,8 @@ export const settings = [
     "picture" : require("./assets/icons/variations.png"),
     "displayName" : "Compress variations into a scrollable list",
     "description" : "The way gestures work, it may not allow scrolling inside a popup container. Disable this to be able to see all variations without the need for a nested scroll.",
+    "displayPicture1" : require("./assets/icons/settingsScreenshots/screenshotCondenseVariations.jpg"),
+    "displayPicture2" : require("./assets/icons/settingsScreenshots/screenshotVariations.jpg"),
   },
   {
     "keyName" : "settingsLargerItemPreviews",
@@ -636,6 +644,8 @@ export const settings = [
     "picture" : require("./assets/icons/magnifyingGlass.png"),
     "displayName" : "Use larger images in popup",
     "description" : "Use a larger image when previewing items in their popup",
+    "displayPicture1" : require("./assets/icons/settingsScreenshots/screenshotCondenseVariations.jpg"),
+    "displayPicture2" : require("./assets/icons/settingsScreenshots/screenshotLargeImage.jpg"),
   },
   {
     "keyName" : "settingsShowFAB",

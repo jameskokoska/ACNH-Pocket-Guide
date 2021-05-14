@@ -5,6 +5,7 @@ export const changelog = `
 -
 -Added Amiibos to Wishlist
 -Added Amiibos to Everything page
+-Added setting images - tap some settings to see a preview of what it does
 -
 -Time icon now shows in corner if NPC visitor visited last week in Visitors section
 -Improvements to NPC Visitors section
@@ -29,6 +30,7 @@ export const changelog = `
 -Fixed bug with changing name not syncing between profiles
 -Removed bottom tab bar setting
 -
+-Past changes:
 -You can now show/hide pages on the sidebar
 -Scroll to the bottom and tap Edit Pages
 -Since not everyone needs a list of all the letters for example
@@ -53,8 +55,6 @@ export const changelog = `
 -Fixed bug with wrong font used
 -Fixed bug with default to-do list out of order
 -Fixed bug with art collection counter
--
--Past changes:
 -
 -Fixed title categories not fitting in some languages
 -Fixed show uncraftable variations broken for some items with customizable patterns but not main colours
