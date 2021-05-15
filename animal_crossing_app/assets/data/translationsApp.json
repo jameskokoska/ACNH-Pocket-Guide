@@ -1229,7 +1229,7 @@
             "English (Europe)": "View Today",
             "French": "Aujourd'hui",
             "French (US)": "Aujourd'hui",
-            "German": "Heute",
+            "German": "Heute anzeigen",
             "Spanish": "Ver Hoy",
             "Spanish (US)": "Ver Hoy"
         },
@@ -1305,7 +1305,7 @@
             "English (Europe)": "Catalog Import",
             "French": "Importation du Catalogue",
             "French (US)": "Importation du Catalogue",
-            "German": "Katalog-Import",
+            "German": "aus Katalog Importieren ",
             "Spanish": "Importar desde el juego",
             "Spanish (US)": "Importar Catalogo"
         },
@@ -5693,13 +5693,29 @@
             "German": "Sanrio Reihe"
         },
         {
-            "English": "Show talk to villagers list"
+            "English": "Show talk to villagers list",
+            "English (Europe)": "Show talk to villagers list",
+            "German": "Zeige Spreche mit Nachbarn Liste"
         },
         {
-            "English": "Hide talk to villagers list"
+            "English": "Hide talk to villagers list",
+            "English (Europe)": "Hide talk to villagers list",
+            "German": "Verstecke Spreche mit Nachbarn Liste"
         },
         {
-            "English": "Talk to"
+            "English": "Talk to",
+            "English (Europe)": "Talk to",
+            "German": "Spreche mit"
+        },
+        {
+            "English": "Loan Tracking",
+            "English (Europe)": "Loan Tracking"
+        },
+        {
+            "English": "Bridge"
+        },
+        {
+            "English": "House"
         }
     ],
     "Sources": [
@@ -8122,7 +8138,7 @@
             "English (Europe)": "Fidget Spinner Island",
             "French": "Île Hand Spinner",
             "French (US)": "Île Hand Spinner",
-            "German": "Findet Spinner Insel"
+            "German": "Fidget Spinner Insel"
         },
         {
             "English": "The last of the four starter islands. No river, just a pond and the sea.",

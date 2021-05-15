@@ -156,7 +156,7 @@ export class PopupInfoCustom extends Component {
           <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} style={{position:"absolute", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: "black", opacity: 0.1}}/>
           <View style={[styles.modalView,this.props.style,{backgroundColor: colors.white[global.darkMode]}]}>
             {this.props.header===undefined ? <View/> : header}
-            <ScrollView style={{maxHeight:Dimensions.get('window').height*0.75-this.state.headerHeight-this.state.buttonHeight}}>
+            <ScrollView style={{maxHeight:Dimensions.get('window').height*0.7-this.state.headerHeight-this.state.buttonHeight}}>
               {this.props.children}
             </ScrollView>
             <View style={{flexDirection:"row", justifyContent:"center"}}>

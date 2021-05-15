@@ -973,9 +973,9 @@ export function translateBirthday(villager){
   } else if(global.language==="Spanish" || global.language==="Spanish (US)"){
     return ("Cumpleaños de " + villager)
   } else if(global.language==="German"){
-    return ("Cumpleaños de " + villager)
-  } else {
     return (villager + "'s Geburtstag")
+  } else {
+    return (villager + "'s Birthday")
   }
 }
 

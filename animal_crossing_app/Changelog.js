@@ -6,6 +6,7 @@ export const changelog = `
 -Added Amiibos to Wishlist
 -Added Amiibos to Everything page
 -Added setting images - tap some settings to see a preview of what it does
+-Fixed some translations
 -
 -Time icon now shows in corner if NPC visitor visited last week in Visitors section
 -Improvements to NPC Visitors section
