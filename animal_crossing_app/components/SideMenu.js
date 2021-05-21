@@ -54,8 +54,8 @@ export default class SideMenu extends Component {
             <View style={{flexDirection:"row"}}>
               <ProfileIcon onPress={()=>{this.props.setPage(26)}} profile={global.profile} style={{marginLeft:20}}/>
               <TouchableOpacity onPress={()=>{this.props.setPage(26)}} style={{justifyContent:"center"}}>
-                <TextFont translate={false} bold={true} style={{fontSize: 19, marginLeft:14, marginRight:6, color: colors.textBlack[global.darkMode]}}>{global.name}</TextFont>
-                <TextFont translate={false} bold={false} style={{fontSize: 18, marginLeft:14, marginRight:6, color: colors.textBlack[global.darkMode]}}>{global.islandName}</TextFont>
+                <TextFont translate={false} bold={true} style={{fontSize: 19, marginLeft:14, marginRight:6, color: colors.textBlack[global.darkMode]}}>{global.name===""?"Tap to setup":global.name}</TextFont>
+                <TextFont translate={false} bold={global.name===""?true:false} style={{fontSize: 18, marginLeft:14, marginRight:6, color: colors.textBlack[global.darkMode]}}>{global.name===""?"your profile":global.islandName}</TextFont>
               </TouchableOpacity>
             </View>
             <TextFont bold={true} style={{marginHorizontal: 20, marginTop: 16, marginBottom: 10, fontSize: 31, color: colors.textBlack[global.darkMode]}}>ACNH Pocket</TextFont>

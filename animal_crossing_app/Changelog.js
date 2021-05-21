@@ -12,7 +12,7 @@ export const changelog = `
 -Reduced app download size
 -Added Real Artwork Title to art popup 
 -Lists are now sorted alphabetically by default (go to settings if it is disabled to enable this)
--
+-Added setup profile text to indicate where to setup profile info
 -
 -Added Amiibos to Wishlist
 -Added Amiibos to Everything page
