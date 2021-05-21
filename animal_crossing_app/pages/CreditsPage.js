@@ -61,6 +61,7 @@ class CreditsPage extends Component {
             <SubHeader> Ännchen</SubHeader>
             <SubHeader> Andy S.</SubHeader>
             <SubHeader> .:MuschU:.</SubHeader>
+            <SubHeader>Fataky</SubHeader>
           </View>
           
           <View style={{height: 20}}/>

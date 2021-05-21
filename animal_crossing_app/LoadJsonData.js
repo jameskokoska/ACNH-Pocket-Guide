@@ -515,7 +515,7 @@ export const settings = [
   },
   {
     "keyName" : "settingsSortAlphabetically",
-    "defaultValue" : "false",
+    "defaultValue" : "true",
     "currentValue" : "",
     "picture" : require("./assets/icons/alphabet.png"),
     "displayName" : "Sort lists in alphabetical order",
@@ -960,7 +960,9 @@ export function checkTranslationEntry(textCheck, fallback){
 export function translateDreamAddressBeginning(villager){
   if(global.language==="French" || global.language==="French (US)"){
     return ("DA")
-  } if(global.language==="German"){
+  } else if(global.language==="Spanish" || global.language==="Spanish (US)"){
+    return ("DA")
+  } else if(global.language==="German"){
     return ("DA")
   } else {
     return ("DW")
@@ -982,6 +984,8 @@ export function translateBirthday(villager){
 export function translateIslandNameInputLabel1(){
   if (global.language==="French" || global.language==="French (US)"){
     return "de l'île";
+  } else if(global.language==="Spanish" || global.language==="Spanish (US)"){
+    return "de isla";
   } else if (global.language==="German"){
     return "der";
   } else {

@@ -1,9 +1,9 @@
 import * as Font from 'expo-font';
 import React, {Component} from 'react';
 import {TouchableOpacity, StyleSheet, ScrollView, Dimensions, Image, View, Text} from 'react-native';
-import {InfoDescription, InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
+import {InfoLinePlain, InfoDescription, InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
 import colors from "../Colors"
-import {getSculpturePhotoFake, getPaintingPhoto,getPaintingPhotoFake} from "../components/GetPhoto"
+import {getPaintingPhotoFake} from "../components/GetPhoto"
 import {commas, capitalize} from '../LoadJsonData'
 import FastImage from '../components/FastImage';
 import TextFont from '../components/TextFont'
@@ -20,39 +20,36 @@ class ArtPopup extends Component {
   render(){
     var paintingComparisonReal = <FastImage
       style={styles.comparisonImage}
-      source={{
-        uri: this.props.item["Image"],
-      }}
+      source={{uri: this.props.item["Image"],}}
       cacheKey={this.props.item["Image"]}
     />
+    if(this.props.item["High-Res Texture"]!=="NA"){
+      paintingComparisonReal = <FastImage
+        style={styles.comparisonImage}
+        source={{uri: this.props.item["High-Res Texture"],}}
+        cacheKey={this.props.item["High-Res Texture"]}
+      />
+    }
     var paintingComparisonRealLabel = <TextFont style={{paddingBottom: 20, fontSize:20, color: colors.textBlack[global.darkMode]}}>^ Real ^</TextFont>
     var paintingComparisonFake = <View/>
     var paintingComparisonFakeLabel = <TextFont style={{paddingBottom: 20, fontSize:20, color: colors.textBlack[global.darkMode]}}>There is no fake version</TextFont>
-    if(this.props.item["Name"].includes("painting")){
-      var paintingReal = getPaintingPhoto(capitalize(this.props.item["Name"]));
-      if(paintingReal!=="none"){
-        paintingComparisonReal = <Image style={styles.comparisonImage} source={paintingReal}/>
-      }
-      var paintingFake = getPaintingPhotoFake(capitalize(this.props.item["Name"]));
-      if(paintingFake!=="none"){
-        paintingComparisonFake = <Image style={styles.comparisonImage} source={paintingFake}/>
-        paintingComparisonFakeLabel = <TextFont style={{paddingBottom: 20, fontSize:20, color: colors.textBlack[global.darkMode]}}>^ Fake ^</TextFont>
-      }
-    } else {
-      var sculptureFake = getSculpturePhotoFake(this.props.item["Name"]);
-      if(sculptureFake!=="none" ){
-        paintingComparisonFake = <FastImage
-          style={styles.comparisonImage}
-          source={{
-            uri: sculptureFake,
-          }}
-          cacheKey={sculptureFake}
-        />
-        paintingComparisonFakeLabel = <TextFont style={{paddingBottom: 20, fontSize:20, color: colors.textBlack[global.darkMode]}}>^ Fake ^</TextFont>
-      }
+    
+    var paintingFake = getPaintingPhotoFake(this.props.item["Name"]);
+    if(paintingFake!=="none" ){
+      paintingComparisonFake = <FastImage
+        style={styles.comparisonImage}
+        source={{uri: paintingFake}}
+        cacheKey={paintingFake}
+      />
+      paintingComparisonFakeLabel = <TextFont style={{paddingBottom: 20, fontSize:20, color: colors.textBlack[global.darkMode]}}>^ Fake ^</TextFont>
     }
+    
     return <>
       <View style={{width: "100%", alignItems: "center"}}>
+        <InfoLinePlain
+          item={this.props.item}
+          textProperty={["Real Artwork Title"]}
+        />
         <InfoLine
           image={require("../assets/icons/coin.png")} 
           item={this.props.item}

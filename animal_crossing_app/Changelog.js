@@ -3,10 +3,22 @@ export const gameVersion = "1.10.0"
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
+-Major translations added
+-German translation is no longer work in progress (about 95% of translations completed)
+-Spanish translation is no longer work in progress (about 85% of translations completed)
+-Thank you everyone for helping with the translations so far!
+-Updated game data and art/sculpture images
+-High resolution art pictures are pulled from an online server
+-Reduced app download size
+-Added Real Artwork Title to art popup 
+-Lists are now sorted alphabetically by default (go to settings if it is disabled to enable this)
+-
+-
 -Added Amiibos to Wishlist
 -Added Amiibos to Everything page
 -Added setting images - tap some settings to see a preview of what it does
--Fixed some translations
+-
+-Past changes:
 -
 -Time icon now shows in corner if NPC visitor visited last week in Visitors section
 -Improvements to NPC Visitors section
@@ -31,7 +43,6 @@ export const changelog = `
 -Fixed bug with changing name not syncing between profiles
 -Removed bottom tab bar setting
 -
--Past changes:
 -You can now show/hide pages on the sidebar
 -Scroll to the bottom and tap Edit Pages
 -Since not everyone needs a list of all the letters for example

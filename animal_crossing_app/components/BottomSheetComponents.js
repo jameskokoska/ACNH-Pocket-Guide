@@ -127,6 +127,14 @@ export class Title extends Component {
   }
 }
 
+export class InfoLinePlain extends Component{
+  render(){
+    return(
+      <TextFont adjustsFontSizeToFit={true} bold={true} style={[styles.infoLineTitle,{color:colors.textBlack[global.darkMode], textAlign:"center", marginVertical:9}]}>{this.props.item[this.props.textProperty]}</TextFont>
+    )
+  }
+}
+
 export class InfoLine extends Component {
   render() {
     var ending = "";
