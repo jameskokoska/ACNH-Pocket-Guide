@@ -153,7 +153,7 @@ export function getEventsDay(date, eventSections){
             filter:event["Name"]
           });
           if(eventSections["App notifications"]){
-            schedulePushNotification(date,eventSections["Set Notification Time"],capitalize(eventName),event["Type"]);
+            schedulePushNotification(date,eventSections["Set Notification Time"],capitalize(eventName),attemptToTranslate(event["Type"]));
           }
         } else if(eventSections["Show End Day of Events"] && isDateInRange(event["Dates (Northern Hemisphere)"], date.getFullYear(), date, "endOnly")){
           totalEvents.push({
@@ -183,7 +183,7 @@ export function getEventsDay(date, eventSections){
             filter:event["Name"]
           });
           if(eventSections["App notifications"]){
-            schedulePushNotification(date,eventSections["Set Notification Time"],capitalize(eventName),event["Type"]);
+            schedulePushNotification(date,eventSections["Set Notification Time"],capitalize(eventName),attemptToTranslate(event["Type"]));
           }
         } else if(eventSections["Show End Day of Events"] && isDateInRange(event["Dates (Southern Hemisphere)"], date.getFullYear(), date, "endOnly")){
           totalEvents.push({

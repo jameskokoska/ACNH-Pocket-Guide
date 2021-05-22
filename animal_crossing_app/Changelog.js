@@ -5,6 +5,7 @@ export const changelog = `
 -
 -Added creator code to profile section
 -Fixed friend code and dream address not saving for different profiles
+-Fixed notification translations
 -
 -Major translations added
 -German translation is no longer work in progress (about 95% of translations completed)
