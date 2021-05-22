@@ -3,6 +3,9 @@ export const gameVersion = "1.10.0"
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
+-Added creator code to profile section
+-Fixed friend code and dream address not saving for different profiles
+-
 -Major translations added
 -German translation is no longer work in progress (about 95% of translations completed)
 -Spanish translation is no longer work in progress (about 85% of translations completed)

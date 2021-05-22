@@ -91,6 +91,7 @@ class App extends Component {
     global.islandName = await getStorage("islandName"+global.profile,"");
     global.dreamAddress = await getStorage("dreamAddress"+global.profile,"");
     global.friendCode = await getStorage("friendCode"+global.profile,"");
+    global.creatorCode = await getStorage("creatorCode"+global.profile,"");
     global.selectedFruit = await getStorage("selectedFruit"+global.profile,"");
     global.customTimeOffset = await getStorage("customDateOffset"+global.profile,"0");
     console.log(global.collectionList)

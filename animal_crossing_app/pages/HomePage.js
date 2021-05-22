@@ -263,6 +263,7 @@ export class Profile extends Component{
         <View style={{height: 5}}/>
         <DreamAddress/>
         <FriendCode/>
+        <CreatorCode/>
         <View style={{height: 18}}/>
         <SelectionImage 
           selectedImage={global.selectedFruit} 
@@ -305,7 +306,7 @@ export class DreamAddress extends Component {
       this.setState({dreamAddress:newValue});
     }
     global.dreamAddress=newValue;
-    AsyncStorage.setItem("dreamAddress", newValue);
+    AsyncStorage.setItem("dreamAddress"+global.profile, newValue);
   }
   render(){
     return(
@@ -355,7 +356,7 @@ export class FriendCode extends Component {
       this.setState({friendCode:newValue});
     }
     global.friendCode=newValue;
-    AsyncStorage.setItem("friendCode", newValue);
+    AsyncStorage.setItem("friendCode"+global.profile, newValue);
   }
   render(){
     return(
@@ -372,6 +373,56 @@ export class FriendCode extends Component {
           multiline={false}
         />
         <TextFont bold={false} style={{marginTop: -5, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{"Friend Code"}</TextFont>
+      </>
+    )
+  }
+}
+
+export class CreatorCode extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      creatorCode:global.creatorCode,
+    }
+  }
+  onChangeText = (text) =>{
+    var newValue = "";
+    if(text==="MA"){
+      this.setState({creatorCode:""});
+    } else if (text==="M"){
+      this.setState({creatorCode:"MA-"});
+    } else {
+      const afterIndices = [4,9,14]; 
+      var value = text.replace("MA-","");
+      for(let i=0; i<value.length; i++){
+        if(afterIndices.includes(i)){
+          newValue+="-";
+        } 
+        if (value[i] !== "-") {
+          newValue+=value[i];
+        }
+      }
+      newValue = "MA-"+newValue;
+      this.setState({creatorCode:newValue});
+    }
+    global.creatorCode=newValue;
+    AsyncStorage.setItem("creatorCode"+global.profile, newValue);
+  }
+  render(){
+    return(
+      <>
+        <TextInput
+          maxLength = {17}
+          allowFontScaling={false}
+          style={{fontSize: 18, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
+          onChangeText={async (text) => {this.onChangeText(text)}}
+          placeholder={"["+attemptToTranslate("Creator Code")+"]"}
+          placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+          value={this.state.creatorCode}
+          defaultValue={global.creatorCode}
+          multiline={false}
+        />
+        <TextFont bold={false} style={{marginTop: -5, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{"Creator Code"}</TextFont>
       </>
     )
   }
