@@ -145,20 +145,42 @@ function ListPage(props){
       }
     }
 
-    // console.log(searchFilters)
+    var searchActual = searchFilters;
+    if(props.filterCollectedOnly){
+      searchActual = ["Collected"];
+    } else if (props.newItems){
+      searchActual = ["New version"];
+    // } else if (props.wishlistItems){
+    //   searchActual = ["Wishlist",...searchFilters]; //todo add wishlist filtering eventually
+    } else if (props.villagerGifts) {
+      searchActual = [...props.villagerGiftsFilters,...searchActual];
+    } else if (props.itemIDs!==undefined && props.itemIDs!=="") {
+      searchActual = ["SearchIDs"]
+    } else if (props.title==="Obtainable DIYs" || props.title==="Obtainable Reactions") {
+      searchActual = [...currentVillagerFilters,...searchActual];
+    } else if (props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions") {
+      searchActual = [...currentVillagerFiltersInverse,...searchActual];
+      if(currentVillagerFiltersInverse.length===0){
+        searchActual = [":"];
+      }
+    } else if (props.currentSetFilters!==undefined && props.currentSetFilters!="") {
+      searchActual = [...props.currentSetFilters,...searchActual];
+    }
+
+    // console.log(searchActual)
     //organize filters into categories
     var filters = {}
     var filterCategory = ""
     var filterCategoriesDone = []
-    for(var p = 0; p < searchFilters.length; p++){
-      if(searchFilters[p].includes(":")){
-        filterCategory = searchFilters[p].split(":")[0]
+    for(var p = 0; p < searchActual.length; p++){
+      if(searchActual[p].includes(":")){
+        filterCategory = searchActual[p].split(":")[0]
         var filtersWithin = []
-        if(!filterCategoriesDone.includes(searchFilters[p].split(":")[0])){
-          for(var w = 0; w < searchFilters.length; w++){
-            if(searchFilters[w].includes(":")){
-              if(searchFilters[w].split(":")[0]===filterCategory){
-                filtersWithin.push(searchFilters[w].split(":")[1])
+        if(!filterCategoriesDone.includes(searchActual[p].split(":")[0])){
+          for(var w = 0; w < searchActual.length; w++){
+            if(searchActual[w].includes(":")){
+              if(searchActual[w].split(":")[0]===filterCategory){
+                filtersWithin.push(searchActual[w].split(":")[1])
               }
             }
           }
@@ -179,27 +201,6 @@ function ListPage(props){
         for(var x = 0; x < props.searchKey[j].length; x++){
           var searchFound = false;
           var filterFound = false;
-          var searchActual = searchFilters;
-          if(props.filterCollectedOnly){
-            searchActual = ["Collected"];
-          } else if (props.newItems){
-            searchActual = ["New version"];
-          // } else if (props.wishlistItems){
-          //   searchActual = ["Wishlist",...searchFilters]; //todo add wishlist filtering eventually
-          } else if (props.villagerGifts) {
-            searchActual = [...props.villagerGiftsFilters,...searchActual];
-          } else if (props.itemIDs!==undefined && props.itemIDs!=="") {
-            searchActual = ["SearchIDs"]
-          } else if (props.title==="Obtainable DIYs" || props.title==="Obtainable Reactions") {
-            searchActual = [...currentVillagerFilters,...searchActual];
-          } else if (props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions") {
-            searchActual = [...currentVillagerFiltersInverse,...searchActual];
-            if(currentVillagerFiltersInverse.length===0){
-              searchActual = [":"];
-            }
-          } else if (props.currentSetFilters!==undefined && props.currentSetFilters!="") {
-            searchActual = [...props.currentSetFilters,...searchActual];
-          }
           for(var z = 0; z < searchActual.length; z++){
             if(searchActual.includes("New version") && props.newItems && item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===gameVersion){
               filterFound = true;

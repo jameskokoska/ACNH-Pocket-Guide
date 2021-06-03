@@ -5,10 +5,13 @@ export const changelog = `
 -
 -Filters now stack
 -Filters only stack within different categories of filters
+-Updated translations
 -
 -Added creator code to profile section
 -Fixed friend code and dream address not saving for different profiles
 -Fixed notification translations
+-
+-Past changes:
 -
 -Major translations added
 -German translation is no longer work in progress (about 95% of translations completed)
@@ -25,7 +28,6 @@ export const changelog = `
 -Added Amiibos to Everything page
 -Added setting images - tap some settings to see a preview of what it does
 -
--Past changes:
 -
 -Time icon now shows in corner if NPC visitor visited last week in Visitors section
 -Improvements to NPC Visitors section
