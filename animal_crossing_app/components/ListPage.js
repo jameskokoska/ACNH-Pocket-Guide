@@ -145,6 +145,31 @@ function ListPage(props){
       }
     }
 
+    // console.log(searchFilters)
+    //organize filters into categories
+    var filters = {}
+    var filterCategory = ""
+    var filterCategoriesDone = []
+    for(var p = 0; p < searchFilters.length; p++){
+      if(searchFilters[p].includes(":")){
+        filterCategory = searchFilters[p].split(":")[0]
+        var filtersWithin = []
+        if(!filterCategoriesDone.includes(searchFilters[p].split(":")[0])){
+          for(var w = 0; w < searchFilters.length; w++){
+            if(searchFilters[w].includes(":")){
+              if(searchFilters[w].split(":")[0]===filterCategory){
+                filtersWithin.push(searchFilters[w].split(":")[1])
+              }
+            }
+          }
+          filters[filterCategory]=filtersWithin
+          filterCategoriesDone.push(filterCategory)
+        }
+      }
+    }
+    console.log(filters)
+    
+
     for(var j = 0; j < dataLoaded2D.length; j++){
       var dataLoaded = dataLoaded2D[j];
 
@@ -283,19 +308,48 @@ function ListPage(props){
             }
             //Only check the property selected
             else if((searchCollected) && (searchCategory || searchCategoryOnly) && (!searchActual[z].includes("Data Category") || searchCategoryOnly)){
-              if( item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
-                filterFound = true;
-              } else if (item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].includes("; ")){
-                var allEntries = item.[searchActual[z].split(":")[0]].split("; ")
-                for(var o = 0; o<allEntries.length; o++){
-                  if(allEntries[o]!==undefined && allEntries[o].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
-                    filterFound = true;
-                  } 
+              filterFound = true;
+              for(var f = 0; f<Object.keys(filters).length; f++){
+                var filterCategory = Object.keys(filters)[f];
+                var filterCurrentFound = false;
+                for(var e = 0; e<filters[filterCategory].length; e++){
+                  //check if split by semicolon
+                  if(item[filterCategory]!==undefined){
+                    var allEntries = item[filterCategory].split("; ")
+                    for(var o = 0; o<allEntries.length; o++){
+                      if(allEntries[o]!==undefined && allEntries[o].toLowerCase()===filters[filterCategory][e].toLowerCase()){
+                        filterCurrentFound = true
+                        break;
+                      } 
+                    }
+                  }
+                  
+                  if(item[filterCategory]!==undefined && item[filterCategory].toLowerCase()===filters[filterCategory][e].toLowerCase()){
+                    filterCurrentFound = true
+                    break;
+                  }
+                }
+                if(filterCurrentFound===false){
+                  filterFound = false;
+                  break;
                 }
               }
-              if(filterFound){
-                break;
-              }
+              // if( item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
+              //   filterFound = true;
+              // } else if (item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].includes("; ")){
+              //   var allEntries = item.[searchActual[z].split(":")[0]].split("; ")
+              //   for(var o = 0; o<allEntries.length; o++){
+              //     if(allEntries[o]!==undefined && allEntries[o].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
+              //       filterFound = true;
+              //     } 
+              //   }
+              // } else if (searchActual[z].includes(":")){
+              //   filterFound = false;
+              //   break;
+              // }
+              // if(filterFound){
+              //   break;
+              // }
             }
             // }
           }

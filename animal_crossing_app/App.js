@@ -65,7 +65,7 @@ class App extends Component {
     this.numLogins;
     this.state = {
       loaded: false,
-      currentPage: 0,
+      currentPage: 1,
       open:false,
       propsPassed:""
     }
