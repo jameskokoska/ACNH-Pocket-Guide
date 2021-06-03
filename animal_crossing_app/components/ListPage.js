@@ -167,7 +167,7 @@ function ListPage(props){
         }
       }
     }
-    console.log(filters)
+    // console.log(filters)
     
 
     for(var j = 0; j < dataLoaded2D.length; j++){
