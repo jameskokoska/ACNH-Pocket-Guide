@@ -7,7 +7,7 @@ export const changelog = `
 -Filters only stack within different categories of filters
 -Updated translations
 -Fixed Uncraftable item variations filter
--German now loads if default language is german
+-German now loads if default language is German
 -
 -Added creator code to profile section
 -Fixed friend code and dream address not saving for different profiles
