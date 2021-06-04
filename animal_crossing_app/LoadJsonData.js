@@ -1013,6 +1013,8 @@ export function getDefaultLanguage(){
     defaultLanguage = "French";
   } else if(Localization.locale.includes("es")){
     defaultLanguage = "Spanish";
+  } else if(Localization.locale.includes("de")){
+    defaultLanguage = "German";
   } else if(Localization.locale.includes("it")){
     defaultLanguage = "Italian";
   } else if(Localization.locale.includes("zh")){
