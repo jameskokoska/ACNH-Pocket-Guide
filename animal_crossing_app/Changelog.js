@@ -3,9 +3,10 @@ export const gameVersion = "1.10.0"
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
--Filters now stack
+-Filters now stack with other filters
 -Filters only stack within different categories of filters
 -Updated translations
+-Fixed Uncraftable item variations filter
 -
 -Added creator code to profile section
 -Fixed friend code and dream address not saving for different profiles

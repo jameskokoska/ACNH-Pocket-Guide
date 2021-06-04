@@ -167,7 +167,7 @@ function ListPage(props){
       searchActual = [...props.currentSetFilters,...searchActual];
     }
 
-    // console.log(searchActual)
+    console.log(searchActual)
     //organize filters into categories
     var filters = {}
     var filterCategory = ""
@@ -201,6 +201,7 @@ function ListPage(props){
         for(var x = 0; x < props.searchKey[j].length; x++){
           var searchFound = false;
           var filterFound = false;
+          var showUncraftableVar = true;
           for(var z = 0; z < searchActual.length; z++){
             if(searchActual.includes("New version") && props.newItems && item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===gameVersion){
               filterFound = true;
@@ -286,9 +287,7 @@ function ListPage(props){
             if(searchActual.includes("Collected")&&searchActual.includes("Not Collected")){
               searchCollected=true;
             }
-            if(searchCollected && searchActual.includes("Show uncraftable item variations")&&item["Body Customize"] !==undefined && item["Body Customize"] ==="No" && item["Variation"] !==undefined && item["Variation"] !=="NA"){
-              filterFound = true;
-            }
+            
             //special case for categories
             if(props.title==="Obtainable DIYs" || props.title==="Obtainable Reactions" || props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions"){
               if(searchCollected && item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
@@ -335,6 +334,12 @@ function ListPage(props){
                   break;
                 }
               }
+              showUncraftableVar = true;
+              if(searchActual.includes("Show uncraftable item variations") && item["Body Customize"] !==undefined && item["Body Customize"] ==="No" && item["Variation"] !==undefined && item["Variation"] !=="NA"){
+                showUncraftableVar = true;
+              } else if (searchActual.includes("Show uncraftable item variations")){
+                showUncraftableVar = false;
+              }
               // if( item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
               //   filterFound = true;
               // } else if (item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].includes("; ")){
@@ -354,7 +359,7 @@ function ListPage(props){
             }
             // }
           }
-
+          
           if(item.[props.searchKey[j][x]]!==undefined){
             //Translate search attribute from database
             //Search translations done here
@@ -362,7 +367,7 @@ function ListPage(props){
             searchFound = removeAccents(item.[props.searchKey[j][x]].toLowerCase()).includes(removeAccents(search.toLowerCase()))
           }
           //&&((!props.wishlistItems&&!props.filterCollectedOnly&&!props.newItems)||searchFound)
-          if((search==="" || searchFound) && (filterFound || searchActual.length === 0)){
+          if(showUncraftableVar && (search==="" || searchFound) && (filterFound || searchActual.length === 0)){
             //Search result found...
               //If recipes item page, and its not DIY, remove
               if(props.recipes){
