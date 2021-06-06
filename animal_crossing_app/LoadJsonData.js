@@ -31,6 +31,14 @@ export function inChecklist(checkListKeyString){
   }
 }
 
+export function inMuseum(checkListKeyString){
+  if(global.collectionList.includes(checkListKeyString)){
+    return true;
+  } else {
+    return false
+  }
+}
+
 const database = require("./assets/data/data.json");
 
 export async function getStorageData(data, checkListKey, defaultValue){

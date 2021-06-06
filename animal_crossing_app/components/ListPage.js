@@ -68,6 +68,7 @@ function ListPage(props){
       popUpContainer={props.popUpContainer}
       checkType={props.checkType}
       leaveWarning={props.leaveWarning}
+      title={props.title}
     />
   )
   const ref = useRef(null);
@@ -445,6 +446,48 @@ function ListPage(props){
         return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
       });
       dataUpdated = dataLoadedCopy
+    }
+
+    //Sort based on filters
+    var shouldSortDirection = false;
+    for(var sort = 0; sort<searchActual.length; sort++){
+      var shouldSortDirection = searchActual[sort].includes("Reverse direction");
+      if(shouldSortDirection){
+        break;
+      }
+    }
+    for(var sort = 0; sort<searchActual.length; sort++){
+      if(searchActual[sort].includes("Sort-")){
+        var propertyToSort = searchActual[sort].replace("Sort-","")
+        var dataLoadedCopy = dataUpdated.slice(0);
+          dataLoadedCopy.sort(function(a, b) {
+            var textA = a[propertyToSort];
+            var textB = b[propertyToSort];
+            if(searchActual.includes)
+            if(!shouldSortDirection){
+              return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+            } else {
+              return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+            }
+          });
+        dataUpdated = dataLoadedCopy
+      } else if(searchActual[sort].includes("SortInt-")){
+        var propertyToSort = searchActual[sort].replace("SortInt-","")
+        var dataLoadedCopy = dataUpdated.slice(0);
+          dataLoadedCopy.sort(function(a, b) {
+            if(a[propertyToSort]!==undefined && b[propertyToSort]!==undefined && a[propertyToSort]!=="NFS" && b[propertyToSort]!=="NFS"){
+              var textA = parseInt(a[propertyToSort]);
+              var textB = parseInt(b[propertyToSort]);
+              if(searchActual.includes)
+              if(!shouldSortDirection){
+                return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+              } else {
+                return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+              }
+            }
+          });
+        dataUpdated = dataLoadedCopy
+      }
     }
 
     setData(dataUpdated)

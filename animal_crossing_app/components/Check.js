@@ -79,3 +79,7 @@ class Check extends Component {
 }
 
 export default Check ;
+
+class CheckMuseum extends Component {
+  
+}

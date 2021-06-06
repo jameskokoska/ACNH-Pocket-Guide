@@ -38,6 +38,22 @@ class PopupFilter extends Component {
         {name:"Collected", id:"Collected"},{name:"Not Collected", id:"Not Collected"}
       ]
     }]
+    this.sortByFilters = [
+      {
+        "name": "Sort by...",
+        "id": "Sort by...",
+        "children": [
+          {name:"Reverse sorting direction", id:"Reverse direction"},
+          {name:"", id:"break"},
+          {name:"Type category", id:"Sort-Data Category"},
+          {name:"Sell price", id:"SortInt-Sell"},
+          {name:"Buy price", id:"SortInt-Buy"},
+          {name:"Color 1", id:"Sort-Color 1"},
+          {name:"Color 2", id:"Sort-Color 2"},
+          {name:"Furniture tag", id:"Sort-Tag"},
+        ]
+      },
+    ]
     var notCraftVariationsFilters = [{
       "name": "Uncraftable Item Variations Filter",
       "id": "Uncraftable Item Variations Filter",
@@ -84,47 +100,47 @@ class PopupFilter extends Component {
           {"name":"Scissors","id":"handSign:Scissors"},
         ]
       }]
-      this.possibleFilters = [...this.possibleFilters, ...categories, ...handSigns];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...categories, ...handSigns];
     } else if(this.props.title==="Active Creatures"){
       const categories = [{
         "name": "Type Categories",
         "id": "Type Categories",
         "children": [{"name":"Fish","id":"Data Category:Fish"},{"name":"Bugs","id":"Data Category:Insects"},{"name":"Sea Creatures","id":"Data Category:Sea Creatures"}]
       }]
-      this.possibleFilters = [...this.possibleFilters, ...categories];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...categories];
     } else if(this.props.title==="Fish"){
-      this.possibleFilters = [...this.possibleFilters, ...activeFilters, ...filterDefinitions["Fish"]];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...activeFilters, ...filterDefinitions["Fish"]];
     } else if(this.props.title==="Bugs"){
-      this.possibleFilters = [...this.possibleFilters, ...activeFilters, ...filterDefinitions["Bugs"]];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...activeFilters, ...filterDefinitions["Bugs"]];
     } else if(this.props.title==="Sea Creatures"){
-      this.possibleFilters = [...this.possibleFilters, ...activeFilters, ...filterDefinitions["Sea Creatures"]];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...activeFilters, ...filterDefinitions["Sea Creatures"]];
     } else if(this.props.title==="Furniture"){
       const categories = [{
         "name": "Type Categories",
         "id": "Type Categories",
         "children": [{"name":"Housewares","id":"Data Category:Housewares"},{"name":"Miscellaneous","id":"Data Category:Miscellaneous"},{"name":"Wall-mounted","id":"Data Category:Wall-mounted"},{"name":"Photos","id":"Data Category:Photos"},{"name":"Posters","id":"Data Category:Posters"} ]
       }]
-      this.possibleFilters = [...this.possibleFilters, ...categories, ...notCraftVariationsFilters, ...filterDefinitions["Furniture"]];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...categories, ...notCraftVariationsFilters, ...filterDefinitions["Furniture"]];
     } else if(this.props.title==="Clothing"){
       const categories = [{
         "name": "Type Categories",
         "id": "Type Categories",
         "children": [{"name":"Headwear","id":"Data Category:Headwear"},{"name":"Accessories","id":"Data Category:Accessories"},{"name":"Tops","id":"Data Category:Tops"},{"name":"Dress-Up","id":"Data Category:Dress-Up"},{"name":"Clothing Other","id":"Data Category:Clothing Other"},{"name":"Bottoms","id":"Data Category:Bottoms"},{"name":"Socks","id":"Data Category:Socks"},{"name":"Shoes","id":"Data Category:Shoes"},{"name":"Bags","id":"Data Category:Bags"},{"name":"Umbrellas","id":"Data Category:Umbrellas"} ]
       }]
-      this.possibleFilters = [...this.possibleFilters, ...categories, ...notCraftVariationsFilters, ...filterDefinitions["Clothing"]];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...categories, ...notCraftVariationsFilters, ...filterDefinitions["Clothing"]];
     } else if(this.props.title==="Floor & Walls"){
       const categories = [{
         "name": "Type Categories",
         "id": "Type Categories",
         "children": [{"name":"Floors","id":"Data Category:Floors"},{"name":"Rugs","id":"Data Category:Rugs"},{"name":"Wallpaper","id":"Data Category:Wallpaper"}]
       }]
-      this.possibleFilters = [...this.possibleFilters, ...categories, ...filterDefinitions["Floor & Walls"]];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...categories, ...filterDefinitions["Floor & Walls"]];
     } else if(this.props.title==="Emoticons"){
-      this.possibleFilters = [...this.possibleFilters, ...filterDefinitions["Reactions"]];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...filterDefinitions["Reactions"]];
     } else if(this.props.title==="Recipes"){
-      this.possibleFilters = [...this.possibleFilters, ...filterDefinitions["Recipes"]];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...filterDefinitions["Recipes"]];
     } else if(this.props.title==="Villagers"){
-      this.possibleFilters = [...this.possibleFilters, ...filterDefinitions["Villagers"]];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...filterDefinitions["Villagers"]];
     } else if(this.props.title==="Everything" || this.props.title==="Wishlist"){
       const categories = [{
         "name": "Type Categories",
@@ -132,16 +148,16 @@ class PopupFilter extends Component {
         "children": [{"name":"Housewares","id":"Data Category:Housewares"},{"name":"Miscellaneous","id":"Data Category:Miscellaneous"},{"name":"Wall-mounted","id":"Data Category:Wall-mounted"},{"name":"Photos","id":"Data Category:Photos"},{"name":"Posters","id":"Data Category:Posters"},{"name":"Headwear","id":"Data Category:Headwear"},{"name":"Accessories","id":"Data Category:Accessories"},{"name":"Tops","id":"Data Category:Tops"},{"name":"Dress-Up","id":"Data Category:Dress-Up"},{"name":"Clothing Other","id":"Data Category:Clothing Other"},{"name":"Bottoms","id":"Data Category:Bottoms"},{"name":"Socks","id":"Data Category:Socks"},{"name":"Shoes","id":"Data Category:Shoes"},{"name":"Bags","id":"Data Category:Bags"},{"name":"Umbrellas","id":"Data Category:Umbrellas"},{"name":"Floors","id":"Data Category:Floors"},{"name":"Rugs","id":"Data Category:Rugs"},{"name":"Wallpaper","id":"Data Category:Wallpaper"},{"name":"Recipes","id":"Data Category:Recipes"},{"name":"Tools","id":"Data Category:Tools"},{"name":"Fish","id":"Data Category:Fish"},{"name":"Bugs","id":"Data Category:Insects"},{"name":"Sea Creatures","id":"Data Category:Sea Creatures"},{"name":"Fossils","id":"Data Category:Fossils"},{"name":"Art","id":"Data Category:Art"},{"name":"Villagers","id":"Data Category:Villagers"},{"name":"Music","id":"Data Category:Music"},{"name":"Reactions","id":"Data Category:Reactions"},{"name":"Construction","id":"Data Category:Construction"},{"name":"Fencing","id":"Data Category:Fencing"},{"name":"Other","id":"Data Category:Other"},
         ]
       }]
-      this.possibleFilters = [...this.possibleFilters, ...categories, ...notCraftVariationsFilters, ...activeFilters, ...filterDefinitions["All Items"]];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...categories, ...notCraftVariationsFilters, ...activeFilters, ...filterDefinitions["All Items"]];
     } else if(this.props.title==="Construction"){
       const categories = [{
         "name": "Type Categories",
         "id": "Type Categories",
         "children": [{"name":"Bridge","id":"Category:Bridge"},{"name":"Incline","id":"Category:Incline"},{"name":"Doors","id":"Category:Door"},{"name":"Roofing","id":"Category:Roofing"},{"name":"Siding","id":"Category:Siding"},{"name":"Mailbox","id":"Category:Mailbox"}]
       }]
-      this.possibleFilters = [...this.possibleFilters,...categories]
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters,...categories]
     } else if(this.props.title==="Music"){
-      this.possibleFilters = [...this.possibleFilters, ...filterDefinitions["Music"]]
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...filterDefinitions["Music"]]
     } else if(this.props.villagerGifts===true){
       const categories = [{
         "name": "Villager Wearable Filters",

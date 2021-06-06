@@ -17,10 +17,12 @@ import {getPhotoShadow} from "./GetPhoto"
 import {getMonthShort} from "./DateFunctions"
 import colors from "../Colors"
 import {getCurrentDateObject, parseActiveTime} from "./DateFunctions"
-import {determineDataGlobal, inWishlist, inChecklist, attemptToTranslateItem, getSettingsString} from "../LoadJsonData"
+import {determineDataGlobal, inMuseum, inWishlist, inChecklist, attemptToTranslateItem, getSettingsString} from "../LoadJsonData"
 import {howManyVariationsChecked, getVariations} from "./BottomSheetComponents"
+import FadeInOut from "../components/FadeInOut";
 
 const {width} = Dimensions.get('window');
+const museumCategories = ["Fish"]
 
 class ListItem extends React.Component{
   constructor(props) {
@@ -30,9 +32,19 @@ class ListItem extends React.Component{
     this.state = {
       collected: inChecklist(this.props.item.checkListKey),
       wishlist: inWishlist(this.props.item.checkListKey),
+      museum: this.checkMuseum(this.props.item.checkListKey),
       variationsPercent: this.allVariationsChecked()
     }
   }
+
+  checkMuseum = (checkListKey) => {
+    if(museumCategories.includes(this.props.title)){
+      return inMuseum(this.props.item.checkListKey)
+    } else {
+      return false;
+    }
+  }
+
   componentDidUpdate(prevProps){
     if(prevProps!==this.props){
       if(this.state.collected!==inChecklist(this.props.item.checkListKey)){
@@ -336,6 +348,20 @@ class ListItem extends React.Component{
               }}>
                 <Check checkType={this.props.checkType} fadeOut={false} play={this.state.collected} width={90} height={90} disablePopup={disablePopup}/>
               </TouchableOpacity>
+              {museumCategories.includes(this.props.title)?<TouchableOpacity style={{position:"absolute", right: 0, top: 0}} 
+                activeOpacity={0.6}
+                onPress={() => {  
+                checkOff(this.props.item.checkListKey, this.state.collected); 
+                this.setCollected(this.state.collected===true ? false:true);
+              }}>
+                {this.state.collected?
+                  <FadeInOut duration={200} startValue={0} endValue={1} fadeIn={true} fadeInOut={true} scaleInOut={true} maxFade={0.8} minScale={0.2}>
+                    <Image style={{transform: [{ rotate: (-20 + Math.floor(35)).toString()+'deg' }], opacity: 0.7, resizeMode:'contain',width:25, height:25}} source={require("../assets/icons/seal.png")}/>
+                  </FadeInOut>
+                  :
+                  <Image style={{transform: [{ rotate: (-20 + Math.floor(35)).toString()+'deg' }], opacity: 0.2, resizeMode:'contain',width:25, height:25}} source={require("../assets/icons/seal.png")}/>
+                }
+              </TouchableOpacity>:<View/>}
             </View>
           </TouchableNativeFeedback>
         </View>
@@ -345,6 +371,8 @@ class ListItem extends React.Component{
 };
 
 export default ListItem;
+
+
 
 const styles = StyleSheet.create({
   rowTextBottom:{
