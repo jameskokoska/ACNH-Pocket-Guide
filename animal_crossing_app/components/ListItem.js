@@ -30,15 +30,11 @@ class ListItem extends React.Component{
     this.setCollected = this.setCollected.bind(this);
     this.setWishlist = this.setWishlist.bind(this);
     this.setMuseum = this.setMuseum.bind(this);
-    this.museum = museumCategories.includes(this.props.item["Data Category"]) || this.props.title==="Active Creatures"
     this.showMuseumButton = getSettingsString("settingsShowMuseumButton")==="true"
-    if(!this.showMuseumButton){
-      this.museum=false
-    }
     this.state = {
       collected: inChecklist(this.props.item.checkListKey),
       wishlist: inWishlist(this.props.item.checkListKey),
-      museum: inMuseum(this.props.item.checkListKey, this.museum),
+      museum: inMuseum(this.props.item.checkListKey, this.checkMuseumButton()),
       variationsPercent: this.allVariationsChecked()
     }
   }
@@ -55,7 +51,7 @@ class ListItem extends React.Component{
       if(this.state.variationsPercent!==checkVariations){
         this.setState({variationsPercent: this.allVariationsChecked()})
       }
-      if(this.state.museum!==inMuseum(this.props.item.checkListKey, this.museum)){
+      if(this.state.museum!==inMuseum(this.props.item.checkListKey, this.checkMuseumButton())){
         this.setMuseum(!this.state.museum)
       }
     }
@@ -90,9 +86,13 @@ class ListItem extends React.Component{
   }
 
   setMuseum(museum){
-    if(this.mounted && this.museum){
+    if(this.mounted && this.checkMuseumButton()){
       this.setState({museum: museum})
     }
+  }
+
+  checkMuseumButton = () => {
+    return museumCategories.includes(this.props.item["Data Category"]) || this.props.title==="Active Creatures"
   }
 
   render(){
@@ -198,7 +198,7 @@ class ListItem extends React.Component{
                   <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
                 </TouchableOpacity>
               </View>
-              <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.museum}/>
+              <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               {this.state.wishlist? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
               <FastImage
                 style={styles.gridBoxImage}
@@ -238,7 +238,7 @@ class ListItem extends React.Component{
                   <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
                 </TouchableOpacity>
               </View>
-              <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.museum}/>
+              <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               {this.state.wishlist ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
               <FastImage
                 style={styles.gridBoxImageLarge}
@@ -289,7 +289,7 @@ class ListItem extends React.Component{
                   <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
                 </TouchableOpacity>
               </View>
-              <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.museum}/>
+              <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               {this.state.wishlist===true ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
               <FastImage
                 style={styles.gridBoxImageLargeSmaller}
@@ -358,7 +358,7 @@ class ListItem extends React.Component{
               }}>
                 <Check checkType={this.props.checkType} fadeOut={false} play={this.state.collected} width={90} height={90} disablePopup={disablePopup}/>
               </TouchableOpacity>
-              <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.museum}/>
+              <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
             </View>
           </TouchableNativeFeedback>
         </View>
