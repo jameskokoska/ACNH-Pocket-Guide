@@ -35,7 +35,7 @@ class PopupFilter extends Component {
       "name": "Collected/Not Collected",
       "id": "Collected/Not Collected",
       "children": [
-        {name:"Collected", id:"Collected"},{name:"Not Collected", id:"Not Collected"}
+        {name:"Collected", id:"Collected"},{name:"Not Collected", id:"Not Collected"},{name:"Wishlist", id:"Wishlist"},{name:"Donated to museum", id:"Museum"},{name:"Not donated to museum", id:"Not Museum"}
       ]
     }]
     this.sortByFilters = [

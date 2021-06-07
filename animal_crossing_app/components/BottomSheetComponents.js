@@ -431,7 +431,7 @@ class VariationItem extends Component{
         onPress={()=>{ 
           if(item.checkListKey+this.extraIndex === this.props.originalCheckListKey)
             this.props.updateCheckChildFunction(this.state.checked===true ? false:true);
-          checkOff(item.checkListKey, this.state.checked, getSettingsString("settingsEnableVibrations")==="true", false, this.extraIndex); 
+          checkOff(item.checkListKey, this.state.checked, "", this.extraIndex); 
           this.props.updateRightCornerCheck(item.checkListKey+this.extraIndex,!this.state.checked)
           this.setState({checked: !this.state.checked})
           this.props.updateCheckChildFunction(false, true);
@@ -439,7 +439,7 @@ class VariationItem extends Component{
           if(howManyVariationsChecked(this.props.variations) === this.props.variations.length){
             this.props.updateCheckChildFunction(true);
             this.props.updateRightCornerCheck(this.props.originalCheckListKey,true)
-            checkOff(this.props.originalCheckListKey, !true, getSettingsString("settingsEnableVibrations")==="true", false); 
+            checkOff(this.props.originalCheckListKey, !true); 
           }
         }}>
         <View style={[{borderWidth: 2, borderColor: this.state.checked ? colors.checkGreen[global.darkMode] : colors.eventBackground[global.darkMode], marginHorizontal:4, marginVertical: 3, width: 60,height: 60,borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>

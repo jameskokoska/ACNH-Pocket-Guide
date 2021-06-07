@@ -398,8 +398,24 @@ function ListPage(props){
               if(item["Name"]===previousVariation && !item["checkListKey"].includes("recipesCheckList")){
                 previousVariation = item["Name"];
               } else {
-                if(props.wishlistItems){
+                if(props.wishlistItems || searchActual.includes("Wishlist")){
                   if(global.collectionList.includes("wishlist"+item.["checkListKey"])){
+                    item.dataSet = j;
+                    item.index = i;
+                    dataUpdated = [...dataUpdated, item];
+                    // previousVariation = item.[props.textProperty[j]];
+                    previousVariation = item["Name"];
+                  } 
+                } else if(searchActual.includes("Museum")){
+                  if(global.collectionList.includes("museum"+item.["checkListKey"])){
+                    item.dataSet = j;
+                    item.index = i;
+                    dataUpdated = [...dataUpdated, item];
+                    // previousVariation = item.[props.textProperty[j]];
+                    previousVariation = item["Name"];
+                  } 
+                } else if(searchActual.includes("Not Museum")){
+                  if(!global.collectionList.includes("museum"+item.["checkListKey"])){
                     item.dataSet = j;
                     item.index = i;
                     dataUpdated = [...dataUpdated, item];
@@ -560,7 +576,7 @@ function ListPage(props){
         <HeaderLoading disableSearch={props.disableSearch} title={props.title} headerHeight={headerHeight} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
       </>
     )
-  } else if (data.length===0 && props.wishlistItems && search==="" && global.collectionList.includes("wishlist")){
+  } else if (searchFilters!=undefined && searchFilters.length===0 && data.length===0 && props.wishlistItems && search==="" && !global.collectionList.includes("wishlist")){
     return(<>
       <View style={{height:10}}/>
       {header}
@@ -579,6 +595,14 @@ function ListPage(props){
       {header}
       <View style={{height:Dimensions.get('window').height/2}}/>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"You can get everything since you have all personality types!"}</TextFont>
+      <View style={{height:30}}/>
+    </>)
+  } else if (data.length===0 && (props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions") && search===""){
+    return(<>
+      <View style={{height:10}}/>
+      {header}
+      <View style={{height:Dimensions.get('window').height/2}}/>
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"Your search results/selected filters produced no results"}</TextFont>
       <View style={{height:30}}/>
     </>)
   } else {

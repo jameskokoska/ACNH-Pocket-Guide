@@ -2855,7 +2855,7 @@
             "French": "En frappant les rochers",
             "French (US)": "En frappant les rochers",
             "German": "Beim Schlagen von Steinen",
-            "Spanish": "Pegándole a las piedras",
+            "Spanish": "Golpeando piedras",
             "Spanish (US)": "Golpeando rocas"
         },
         {
@@ -3899,7 +3899,7 @@
             "French": "Machine à coudre",
             "French (US)": "Machine à coudre",
             "German": "Nähen",
-            "Spanish": "Mesa de coser",
+            "Spanish": "Máquina de coser ",
             "Spanish (US)": "Mesa de coser"
         },
         {
@@ -4706,7 +4706,9 @@
             "English (Europe)": "Creator Code",
             "French": "Code Créateur",
             "French (US)": "Code Créateur",
-            "German": "Ersteller-ID"
+            "German": "Ersteller-ID",
+            "Spanish": "Código de creador",
+            "Spanish (US)": "Código de creador"
         },
         {
             "English": "Real",
@@ -4777,7 +4779,7 @@
             "French": "Saisons de fabrication",
             "French (US)": "Saisons de fabrication",
             "German": "Saisonbedingte Anleitungen",
-            "Spanish": "Objetos construíbles de temporada",
+            "Spanish": "Temporada de injertos",
             "Spanish (US)": "Objetos construíbles de temporada"
         },
         {
@@ -5225,7 +5227,8 @@
             "French": "Stationnaire",
             "French (US)": "Stationnaire",
             "German": "Unbeweglich",
-            "Spanish": "Inmóvil"
+            "Spanish": "Inmóvil",
+            "Spanish (US)": "Parado"
         },
         {
             "English": "Slow",
@@ -5583,7 +5586,7 @@
             "French": "Conflit",
             "French (US)": "Conflit",
             "German": "Konflikt",
-            "Spanish": "Conflicto",
+            "Spanish": "Dificultad ",
             "Spanish (US)": "Conflicto"
         },
         {
@@ -6236,7 +6239,7 @@
             "English": "Series 1",
             "English (Europe)": "Series 1",
             "French": "Série 1",
-            "French (US)": "Série 1",
+            "French (US)": "Ciseaux",
             "German": "Serie 1",
             "Spanish": "Serie 1",
             "Spanish (US)": "Serie 1"
@@ -6341,18 +6344,54 @@
             "Spanish (US)": "Casa"
         },
         {
-            "English": "Tap to setup",
-            "English (Europe)": "Tap to setup",
-            "French": "Appuyez pour configurer",
-            "French (US)": "Appuyez pour configurer",
-            "German": "Tippe zum Einrichten"
+            "English": "Tap to setup your profile",
+            "English (Europe)": "Tap to setup your profile",
+            "French": "Appuyez pour configurer votre profil",
+            "French (US)": "Appuyez pour configurer votre profil",
+            "German": "Tippe zum ",
+            "Spanish": "Toque para configurar tu perfil",
+            "Spanish (US)": "Toque para configurar tu perfil"
         },
         {
-            "English": "your profile",
-            "English (Europe)": "your profile",
-            "French": "votre profil",
-            "French (US)": "votre profil",
-            "German": "Dein Profil "
+            "English": "Sort by...",
+            "English (Europe)": "Sort by...",
+            "German": "Einrichten dein Profil "
+        },
+        {
+            "English": "Reverse sorting direction",
+            "English (Europe)": "Reverse sorting direction"
+        },
+        {
+            "English": "Type category",
+            "English (Europe)": "Type category"
+        },
+        {
+            "English": "Sell price",
+            "English (Europe)": "Sell price"
+        },
+        {
+            "English": "Buy price",
+            "English (Europe)": "Buy price"
+        },
+        {
+            "English": "Furniture tag",
+            "English (Europe)": "Furniture tag"
+        },
+        {
+            "English": "Donated to museum",
+            "English (Europe)": "Donated to museum"
+        },
+        {
+            "English": "Not donated to museum",
+            "English (Europe)": "Not donated to museum"
+        },
+        {
+            "English": "Show donated to museum button",
+            "English (Europe)": "Show donated to museum button"
+        },
+        {
+            "English": "Shows a donation button which can be used to track if you've donated it to the museum in addition to collecting it.",
+            "English (Europe)": "Shows a donation button which can be used to track if you've donated it to the museum in addition to collecting it."
         }
     ],
     "Sources": [

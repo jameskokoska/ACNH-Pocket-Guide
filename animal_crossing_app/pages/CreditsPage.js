@@ -55,13 +55,14 @@ class CreditsPage extends Component {
             <SubHeader> Robertin</SubHeader>
             <SubHeader> miyo0i</SubHeader>
             <SubHeader> Jorge Abraham</SubHeader>
+            <SubHeader> Lizbeth Salazar Zetina</SubHeader>
           </View>
           <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
             <SubHeader style={{marginBottom:5}}>{attemptToTranslate("German") + ":"}</SubHeader>
             <SubHeader> Ännchen</SubHeader>
             <SubHeader> Andy S.</SubHeader>
             <SubHeader> .:MuschU:.</SubHeader>
-            <SubHeader>Fataky</SubHeader>
+            <SubHeader> Fataky</SubHeader>
           </View>
           
           <View style={{height: 20}}/>

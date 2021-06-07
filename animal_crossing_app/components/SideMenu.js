@@ -14,6 +14,10 @@ export default class SideMenu extends Component {
   constructor(props){
     super(props);
     this.state = {sections:props.sideMenuSections, editMode: false}
+    this.maxWidth = 411*0.7;
+    if(Dimensions.get('window').width*0.7 < this.maxWidth){
+      this.maxWidth = Dimensions.get('window').width*0.7;
+    }
   }
   disableEditMode = (progress) => {
     if(this.state.editMode===true && progress>0.15){
@@ -51,11 +55,11 @@ export default class SideMenu extends Component {
         <ScrollView ref={(scrollView) => this.scrollView = scrollView}>
           <View style={{backgroundColor: colors.topSidebar[global.darkMode], marginBottom: 10}}>
             <View style={{height:45}}/>
-            <View style={{flexDirection:"row"}}>
+            <View style={{flexDirection:"row", width:this.maxWidth-10}}>
               <ProfileIcon onPress={()=>{this.props.setPage(26)}} profile={global.profile} style={{marginLeft:20}}/>
               <TouchableOpacity onPress={()=>{this.props.setPage(26)}} style={{justifyContent:"center"}}>
-                <TextFont translate={false} bold={true} style={{fontSize: 19, marginLeft:14, marginRight:6, color: colors.textBlack[global.darkMode]}}>{global.name===""?"Tap to setup":global.name}</TextFont>
-                <TextFont translate={false} bold={global.name===""?true:false} style={{fontSize: 18, marginLeft:14, marginRight:6, color: colors.textBlack[global.darkMode]}}>{global.name===""?"your profile":global.islandName}</TextFont>
+                <TextFont bold={true} style={{fontSize: 19, marginLeft:14, marginRight:100, color: colors.textBlack[global.darkMode]}}>{global.name===""?"Tap to setup your profile":global.name}</TextFont>
+                {global.name===""?<View/>:<TextFont bold={false} style={{fontSize: 18, marginLeft:14, marginRight:6, color: colors.textBlack[global.darkMode]}}>{global.islandName}</TextFont>}
               </TouchableOpacity>
             </View>
             <TextFont bold={true} style={{marginHorizontal: 20, marginTop: 16, marginBottom: 10, fontSize: 31, color: colors.textBlack[global.darkMode]}}>ACNH Pocket</TextFont>
@@ -104,16 +108,12 @@ export default class SideMenu extends Component {
     );
   };
   render() {
-    var maxWidth = 411*0.7;
-    if(Dimensions.get('window').width*0.7 < maxWidth){
-      maxWidth = Dimensions.get('window').width*0.7;
-    }
     return (
       <View style={{ flex: 1 }}>
         <DrawerLayout
           ref={(drawer) => this.drawer = drawer }
           edgeWidth={this.nonTabbedPages.includes(this.props.currentPage) ? Dimensions.get('window').width : Dimensions.get('window').width*0.17}
-          drawerWidth={maxWidth}
+          drawerWidth={this.maxWidth}
           drawerPosition={DrawerLayout.positions.Left}
           drawerType="slide"
           drawerBackgroundColor="#ddd"

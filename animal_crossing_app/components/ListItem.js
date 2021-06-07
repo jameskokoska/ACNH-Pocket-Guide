@@ -1,4 +1,4 @@
-import React, {PureComponent, useState, useEffect } from 'react';
+import React, {PureComponent, useState, useEffect, Component } from 'react';
 import {
   Dimensions,
   StyleSheet,
@@ -22,26 +22,24 @@ import {howManyVariationsChecked, getVariations} from "./BottomSheetComponents"
 import FadeInOut from "../components/FadeInOut";
 
 const {width} = Dimensions.get('window');
-const museumCategories = ["Fish"]
+const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 
 class ListItem extends React.Component{
   constructor(props) {
     super(props);
     this.setCollected = this.setCollected.bind(this);
     this.setWishlist = this.setWishlist.bind(this);
+    this.setMuseum = this.setMuseum.bind(this);
+    this.museum = museumCategories.includes(this.props.item["Data Category"]) || this.props.title==="Active Creatures"
+    this.showMuseumButton = getSettingsString("settingsShowMuseumButton")==="true"
+    if(!this.showMuseumButton){
+      this.museum=false
+    }
     this.state = {
       collected: inChecklist(this.props.item.checkListKey),
       wishlist: inWishlist(this.props.item.checkListKey),
-      museum: this.checkMuseum(this.props.item.checkListKey),
+      museum: inMuseum(this.props.item.checkListKey, this.museum),
       variationsPercent: this.allVariationsChecked()
-    }
-  }
-
-  checkMuseum = (checkListKey) => {
-    if(museumCategories.includes(this.props.title)){
-      return inMuseum(this.props.item.checkListKey)
-    } else {
-      return false;
     }
   }
 
@@ -56,6 +54,9 @@ class ListItem extends React.Component{
       let checkVariations = this.allVariationsChecked();
       if(this.state.variationsPercent!==checkVariations){
         this.setState({variationsPercent: this.allVariationsChecked()})
+      }
+      if(this.state.museum!==inMuseum(this.props.item.checkListKey, this.museum)){
+        this.setMuseum(!this.state.museum)
       }
     }
   }
@@ -85,6 +86,12 @@ class ListItem extends React.Component{
   setWishlist(wishlist){
     if(this.mounted){
       this.setState({wishlist: wishlist})
+    }
+  }
+
+  setMuseum(museum){
+    if(this.mounted && this.museum){
+      this.setState({museum: museum})
     }
   }
 
@@ -171,7 +178,7 @@ class ListItem extends React.Component{
         <View style={styles.gridWrapper}>
           
           <TouchableNativeFeedback onLongPress={() => {
-            checkOff(this.props.item.checkListKey, this.state.wishlist, true, true); //true to vibrate and wishlist
+            checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
             this.setWishlist(this.state.wishlist===true ? false:true);
           }}
             background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
@@ -191,6 +198,7 @@ class ListItem extends React.Component{
                   <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
                 </TouchableOpacity>
               </View>
+              <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.museum}/>
               {this.state.wishlist? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
               <FastImage
                 style={styles.gridBoxImage}
@@ -211,7 +219,7 @@ class ListItem extends React.Component{
       return( 
         <View style={styles.gridWrapper}>
           <TouchableNativeFeedback onLongPress={() => {  
-            checkOff(this.props.item.checkListKey, this.state.wishlist, getSettingsString("settingsEnableVibrations")==="true", true); //true to vibrate and wishlist
+            checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
             this.setWishlist(this.state.wishlist===true ? false:true);
           }}
           background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
@@ -230,6 +238,7 @@ class ListItem extends React.Component{
                   <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
                 </TouchableOpacity>
               </View>
+              <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.museum}/>
               {this.state.wishlist ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
               <FastImage
                 style={styles.gridBoxImageLarge}
@@ -261,7 +270,7 @@ class ListItem extends React.Component{
       return( 
         <View style={styles.gridWrapper}>
           <TouchableNativeFeedback onLongPress={() => {  
-            checkOff(this.props.item.checkListKey, this.state.wishlist, getSettingsString("settingsEnableVibrations")==="true", true); //true to vibrate and wishlist
+            checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
             this.setWishlist(this.state.wishlist===true ? false:true);
           }}
           background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
@@ -280,6 +289,7 @@ class ListItem extends React.Component{
                   <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
                 </TouchableOpacity>
               </View>
+              <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.museum}/>
               {this.state.wishlist===true ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
               <FastImage
                 style={styles.gridBoxImageLargeSmaller}
@@ -304,7 +314,7 @@ class ListItem extends React.Component{
       return( 
         <View>
           <TouchableNativeFeedback onLongPress={() => {  
-            checkOff(this.props.item.checkListKey, this.state.wishlist, getSettingsString("settingsEnableVibrations")==="true", true); //true to vibrate and wishlist
+            checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
             this.setWishlist(this.state.wishlist===true ? false:true);
           }}
           background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
@@ -318,7 +328,7 @@ class ListItem extends React.Component{
             }}
           >
             <View style={[styles.row,{backgroundColor:boxColor}]}>
-              {this.state.wishlist ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
+              {this.state.wishlist ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', right:7, top: 7, zIndex:10,}}/> : <View/>}
               <View style={[styles.rowImageBackground,{backgroundColor:this.props.accentColor}]}>
                 <FastImage
                   style={styles.rowImage}
@@ -340,7 +350,7 @@ class ListItem extends React.Component{
                 </View>
               </View>
               {fishShadow}
-              <TouchableOpacity style={{position:"absolute", right: -5}} 
+              <TouchableOpacity style={{position:"absolute", right: -5, bottom: 0}} 
                 activeOpacity={0.6}
                 onPress={() => {  
                 checkOff(this.props.item.checkListKey, this.state.collected); 
@@ -348,20 +358,7 @@ class ListItem extends React.Component{
               }}>
                 <Check checkType={this.props.checkType} fadeOut={false} play={this.state.collected} width={90} height={90} disablePopup={disablePopup}/>
               </TouchableOpacity>
-              {museumCategories.includes(this.props.title)?<TouchableOpacity style={{position:"absolute", right: 0, top: 0}} 
-                activeOpacity={0.6}
-                onPress={() => {  
-                checkOff(this.props.item.checkListKey, this.state.collected); 
-                this.setCollected(this.state.collected===true ? false:true);
-              }}>
-                {this.state.collected?
-                  <FadeInOut duration={200} startValue={0} endValue={1} fadeIn={true} fadeInOut={true} scaleInOut={true} maxFade={0.8} minScale={0.2}>
-                    <Image style={{transform: [{ rotate: (-20 + Math.floor(35)).toString()+'deg' }], opacity: 0.7, resizeMode:'contain',width:25, height:25}} source={require("../assets/icons/seal.png")}/>
-                  </FadeInOut>
-                  :
-                  <Image style={{transform: [{ rotate: (-20 + Math.floor(35)).toString()+'deg' }], opacity: 0.2, resizeMode:'contain',width:25, height:25}} source={require("../assets/icons/seal.png")}/>
-                }
-              </TouchableOpacity>:<View/>}
+              <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.museum}/>
             </View>
           </TouchableNativeFeedback>
         </View>
@@ -371,6 +368,41 @@ class ListItem extends React.Component{
 };
 
 export default ListItem;
+
+class CheckMuseum extends Component {
+  render(){
+    if(this.props.showMuseumButton!==true){
+      return <View/>
+    }
+    return(
+      <>
+      {this.props.museumPage?<TouchableOpacity style={{zIndex:10, position:"absolute", left: -10, top: -10, padding:15}} 
+        activeOpacity={0.6}
+        onPress={() => {  
+        checkOff(this.props.item.checkListKey, this.props.museum, "museum");
+        this.props.setMuseum(this.props.museum===true ? false:true);
+        //check off if donated to museum
+        if(!this.props.collected && !this.props.museum){
+          checkOff(this.props.item.checkListKey, this.props.collected); 
+          this.props.setCollected(this.props.collected===true ? false:true);
+        }
+      }}>
+        {this.props.museum?
+          <FadeInOut duration={200} startValue={0} endValue={1} fadeIn={true} fadeInOut={true} scaleInOut={true} maxFade={0.8} minScale={0.2}>
+            <View style={{width: 35,height: 35,borderRadius: 100,justifyContent: "center",alignItems: "center", opacity: 0.9, borderWidth: 1.3, borderColor: colors.checkGreen[global.darkMode], backgroundColor:colors.checkGreen2[global.darkMode]}}>
+              <Image style={{resizeMode:'contain',width:22, height:22}} source={require("../assets/icons/owl.png")}/>
+            </View>
+          </FadeInOut>
+          :
+          <View style={{width: 35,height: 35,borderRadius: 100,justifyContent: "center",alignItems: "center",  opacity: 0.4, borderWidth: 1.3, borderColor: colors.lightDarkAccentHeavy[global.darkMode], backgroundColor:colors.lightDarkAccent2[global.darkMode]}}>
+            <Image style={{resizeMode:'contain',width:22, height:22}} source={require("../assets/icons/owl.png")}/>
+          </View>
+        }
+      </TouchableOpacity>:<View/>}
+      </>
+    )
+  }
+}
 
 
 

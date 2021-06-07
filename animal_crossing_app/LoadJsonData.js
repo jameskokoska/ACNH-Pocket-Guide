@@ -31,8 +31,8 @@ export function inChecklist(checkListKeyString){
   }
 }
 
-export function inMuseum(checkListKeyString){
-  if(global.collectionList.includes(checkListKeyString)){
+export function inMuseum(checkListKeyString, shouldCheck){
+  if(shouldCheck && global.collectionList.includes("museum"+checkListKeyString)){
     return true;
   } else {
     return false
@@ -211,30 +211,18 @@ export async function deleteSavedPhotos(){
   return [files.length, sizeMB];
 }
 
-export function checkOff(checkListKey, collected, vibrate=getSettingsString("settingsEnableVibrations")==="true", wishlist=false, indexSpecial=""){
-  if(wishlist){
-    console.log("wishlist"+checkListKey);
-    if(collected===false){
-      vibrate ? Vibration.vibrate([0,10,100,20]) : "";
-      global.collectionList.push("wishlist"+checkListKey+indexSpecial)
-    } else {
-      vibrate ? Vibration.vibrate(10) : "";
-      collectionListRemove("wishlist"+checkListKey+indexSpecial)
-    }
-    collectionListSave();
-    //console.log(global.collectionList)
+export function checkOff(checkListKey, collected, type="", indexSpecial="", vibrate=getSettingsString("settingsEnableVibrations")==="true"){
+  console.log(type+checkListKey+indexSpecial);
+  console.log("TYPE"+type)
+  if(collected===false){
+    vibrate ? Vibration.vibrate([0,10,100,20]) : "";
+    global.collectionList.push(type+checkListKey+indexSpecial)
   } else {
-    console.log(checkListKey+indexSpecial);
-    if(collected==="false" || collected===false){
-      vibrate ? Vibration.vibrate([0,10,220,20]) : "";
-      global.collectionList.push(checkListKey+indexSpecial)
-    } else {
-      vibrate ? Vibration.vibrate(10) : "";
-      collectionListRemove(checkListKey+indexSpecial)
-    }
-    collectionListSave();
-    //console.log(global.collectionList)
+    vibrate ? Vibration.vibrate(10) : "";
+    collectionListRemove(type+checkListKey+indexSpecial)
   }
+  collectionListSave();
+  //console.log(global.collectionList)
 }
 
 function collectionListRemove(checkListKey){
@@ -634,6 +622,14 @@ export const settings = [
     "description" : "Show an empty check mark in lists. Can be tapped to quickly check off the item. Disabling this can increase performance as less animations need to be rendered.",
     "displayPicture1" : require("./assets/icons/settingsScreenshots/screenshotChecks.jpg"),
     "displayPicture2" : require("./assets/icons/settingsScreenshots/screenshotNoChecks.jpg"),
+  },
+  {
+    "keyName" : "settingsShowMuseumButton",
+    "defaultValue" : "true",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/owl.png"),
+    "displayName" : "Show donated to museum button",
+    "description" : "Shows a donation button which can be used to track if you've donated it to the museum in addition to collecting it.",
   },
   {
     "keyName" : "settingsCompressVariations",
