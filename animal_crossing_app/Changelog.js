@@ -3,6 +3,10 @@ export const gameVersion = "1.10.0"
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
+-Fixed collection count
+-Fixed sorting filters
+-Color fixes
+-
 -Added Sorting in filters menu
 -Can sort by category, sell price, buy price, color, and tag
 -Added museum collection buttons
@@ -10,6 +14,8 @@ export const changelog = `
 -You can disable this feature in the settings menu
 -Updated translations, fixed some text not translated
 -Formatting fixes
+-Fixed icon shapes
+-Fixes for some colors
 -
 -Filters now stack with other filters
 -Filters only stack within different categories of filters

@@ -117,7 +117,7 @@ export async function getStorageData(data, checkListKey, defaultValue){
 export function countCollection(checkListKeyStart){
   var count = 0;
   for(var i = 0; i<global.collectionList.length; i++){
-    if(global.collectionList[i].includes(checkListKeyStart) && !global.collectionList[i].includes("wishlist")){
+    if(global.collectionList[i].includes(checkListKeyStart) && !global.collectionList[i].includes("wishlist") && !global.collectionList[i].includes("museum")){
       if(checkListKeyStart.includes("artCheckList") && (global.collectionList[i].includes("No") || (global.collectionList[i].includes("0") && global.collectionList[i].includes("Yes")))){
         continue;
       } else {

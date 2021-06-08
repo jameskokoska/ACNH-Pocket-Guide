@@ -477,8 +477,21 @@ function ListPage(props){
         var propertyToSort = searchActual[sort].replace("Sort-","")
         var dataLoadedCopy = dataUpdated.slice(0);
           dataLoadedCopy.sort(function(a, b) {
-            var textA = a[propertyToSort];
-            var textB = b[propertyToSort];
+            var valueA = a[propertyToSort]
+            if(a[propertyToSort]===undefined && !shouldSortDirection){
+              valueA="zzzzzzzzzzz"
+            } else if(a[propertyToSort]===undefined){
+              valueA="aaaaaaaaaaa"
+            }
+            var valueB = b[propertyToSort]
+            if(b[propertyToSort]===undefined && !shouldSortDirection){
+              valueB="zzzzzzzzzzz"
+            } else if(b[propertyToSort]===undefined){
+              valueB="aaaaaaaaaaa"
+            }
+            
+            var textA = valueA;
+            var textB = valueB;
             if(searchActual.includes)
             if(!shouldSortDirection){
               return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
@@ -491,15 +504,26 @@ function ListPage(props){
         var propertyToSort = searchActual[sort].replace("SortInt-","")
         var dataLoadedCopy = dataUpdated.slice(0);
           dataLoadedCopy.sort(function(a, b) {
-            if(a[propertyToSort]!==undefined && b[propertyToSort]!==undefined && a[propertyToSort]!=="NFS" && b[propertyToSort]!=="NFS"){
-              var textA = parseInt(a[propertyToSort]);
-              var textB = parseInt(b[propertyToSort]);
-              if(searchActual.includes)
-              if(!shouldSortDirection){
-                return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-              } else {
-                return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
-              }
+            var valueA = a[propertyToSort]
+            if(a[propertyToSort]===undefined && shouldSortDirection){
+              valueA=10000000000000
+            } else if(a[propertyToSort]===undefined){
+              valueA=0
+            }
+            var valueB = b[propertyToSort]
+            if(b[propertyToSort]===undefined && shouldSortDirection){
+              valueB=10000000000000
+            } else if(b[propertyToSort]===undefined){
+              valueB=0
+            }
+            
+            var textA = parseInt(valueA);
+            var textB = parseInt(valueB);
+            if(searchActual.includes)
+            if(shouldSortDirection){
+              return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+            } else {
+              return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
             }
           });
         dataUpdated = dataLoadedCopy
