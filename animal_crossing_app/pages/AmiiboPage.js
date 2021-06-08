@@ -21,6 +21,16 @@ export default class AmiiboPage extends Component {
         backgroundColor={colors.lightDarkAccent[global.darkMode]}
         boxColor={false}
         labelColor={colors.textBlack[global.darkMode]}
+        extraInfo={
+          {
+            type:"guideRedirect",
+            title:"Guide + FAQ",
+            content:"You can read more about Amiibo cards by visiting the events and guide page",
+            linkText: "Tap here to read about the Amiibo cards",
+            redirectPassBack: "amiiboRedirect"
+          }
+        }
+        setPage={this.props.setPage}
       />
     )
   }

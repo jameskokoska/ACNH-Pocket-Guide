@@ -177,13 +177,42 @@ class PopupFilter extends Component {
       return;
     }
     var defaultValuesStored = await getStorage(this.props.title+"Filters","");
+    // console.log(this.possibleFilters)
+    
+    //Check for filters selected that don't exist, could cause errors, then reset them
+    if(defaultValuesStored!==""){
+      for(var i = 0; i<defaultValuesStored.split(",").length; i++){
+        var errors = true;
+        for(var x = 0; x<this.possibleFilters.length; x++){
+          for(var y = 0; y<this.possibleFilters[x]["children"].length; y++){
+            if(this.possibleFilters[x]["children"][y]["id"]===defaultValuesStored.split(",")[i]){
+              errors=false;
+              break;
+            }
+          }
+          if(errors===false){
+            break;
+          }
+        }
+        if(errors){
+          if(errors){
+            await AsyncStorage.setItem(this.props.title+"Filters", "");
+            this.setState({selectedItems:[""]})
+            this.setFilters();
+            return;
+          }
+        }
+      }
+    }
 
+    
     this.mounted=true;
     if(defaultValuesStored!==""){
       this.setState({selectedItems:defaultValuesStored.split(",")})
       this.setFilters();
     }
-    
+
+    // console.log(defaultValuesStored.split(","))
 
     // //Check for filters selected that don't exist, could cause errors, then reset them
     // if(defaultValuesStored[0]!==""){

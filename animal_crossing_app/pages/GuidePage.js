@@ -25,6 +25,8 @@ class GuidePage extends Component {
       currentURL = "https://chibisnorlax.github.io/acnhfaq/npc/visiting/"
     } else if (props.propsPassed==="villagersRedirect"){
       currentURL = "https://chibisnorlax.github.io/acnhfaq/villagers/"
+    } else if (props.propsPassed==="amiiboRedirect"){
+      currentURL = "https://chibisnorlax.github.io/acnhfaq/villagers/amiibo/"
     }
     this.state = {
       canGoBack: false,

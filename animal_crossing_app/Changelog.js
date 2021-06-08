@@ -3,6 +3,8 @@ export const gameVersion = "1.10.0"
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
+-Added Amiibo about popup - redirect to guide
+-Fixed filters crash if applied from memory and don't exist
 -Fixed collection count
 -Fixed sorting filters
 -Color fixes

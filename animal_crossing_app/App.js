@@ -356,7 +356,7 @@ class App extends Component {
       } else if (this.state.currentPage===26){
         currentPageView = <ProfileCurrentPage setPage={this.setPage}/>
       } else if (this.state.currentPage===27){
-        currentPageView = <AmiiboPage/>
+        currentPageView = <AmiiboPage setPage={this.setPage}/>
       } else {
         currentPageView = <Text>Default</Text>
       }
