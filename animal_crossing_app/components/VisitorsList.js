@@ -84,7 +84,7 @@ export default class VisitorList extends Component {
     const extraInfo= {
       type:"guideRedirect",
       title:"Guide + FAQ",
-      content:"You can read more details about NPC Visitors by visiting the events and guide page. The time icon shows that the NPC has visited last week.",
+      content:"You can read more details about NPC Visitors by visiting the guide page. The time icon shows that the NPC has visited last week.",
       linkText: "Tap here to read more about NPC Visitors",
       redirectPassBack: "npcVisitorsRedirect"
     }

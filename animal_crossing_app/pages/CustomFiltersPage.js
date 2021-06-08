@@ -28,7 +28,7 @@ export default class CustomFiltersPage extends Component {
             {
               type:"guideRedirect",
               title:"Guide + FAQ",
-              content:"You can read more about specific events and details by visiting the events and guide page",
+              content:"You can read more about specific events and details by visiting the guide page",
               linkText: "Tap here to read about events",
               redirectPassBack: "eventsRedirect"
             }

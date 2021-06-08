@@ -34,7 +34,7 @@ class SpecificFlowerPage extends Component {
     const extraInfo= {
       type:"guideRedirect",
       title:"Guide + FAQ",
-      content:"You can read more details about flowers and breeding by visiting the events and guide page",
+      content:"You can read more details about flowers and breeding by visiting the guide page",
       linkText: "Tap here to read more about flowers and breeding",
       redirectPassBack: "flowersRedirect"
     }

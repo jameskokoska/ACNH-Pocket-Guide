@@ -8,6 +8,7 @@ export const changelog = `
 -Fixed collection count
 -Fixed sorting filters
 -Color fixes
+-Text fixes
 -
 -Added Sorting in filters menu
 -Can sort by category, sell price, buy price, color, and tag
