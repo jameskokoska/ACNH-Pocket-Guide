@@ -26,7 +26,7 @@ export default class AmiiboPage extends Component {
             type:"guideRedirect",
             title:"Guide + FAQ",
             content:"You can read more about Amiibo cards by visiting the guide page",
-            linkText: "Tap here to read about the Amiibo cards",
+            linkText: "Tap here to read about Amiibo cards",
             redirectPassBack: "amiiboRedirect"
           }
         }
