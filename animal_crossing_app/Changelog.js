@@ -3,6 +3,10 @@ export const gameVersion = "1.10.0"
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
+-Updated translations
+-Fixed museum filters showing up in pages where it shouldn't be
+-Museum filters are in it's own category now
+-
 -Added Amiibo about popup - redirect to guide
 -Fixed filters crash if applied from memory and don't exist
 -Fixed collection count

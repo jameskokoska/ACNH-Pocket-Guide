@@ -35,7 +35,14 @@ class PopupFilter extends Component {
       "name": "Collected/Not Collected",
       "id": "Collected/Not Collected",
       "children": [
-        {name:"Collected", id:"Collected"},{name:"Not Collected", id:"Not Collected"},{name:"Wishlist", id:"Wishlist"},{name:"Donated to museum", id:"Museum"},{name:"Not donated to museum", id:"Not Museum"}
+        {name:"Collected", id:"Collected"},{name:"Not Collected", id:"Not Collected"},{name:"Wishlist", id:"Wishlist"},
+      ]
+    }]
+    this.museumFilters = [{
+      "name": "Museum",
+      "id": "MuseumFilters",
+      "children": [
+        {name:"Donated to museum", id:"Museum"},{name:"Not donated to museum", id:"Not Museum"}
       ]
     }]
     this.sortByFilters = [
@@ -109,11 +116,11 @@ class PopupFilter extends Component {
       }]
       this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...categories];
     } else if(this.props.title==="Fish"){
-      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...activeFilters, ...filterDefinitions["Fish"]];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.museumFilters, ...activeFilters, ...filterDefinitions["Fish"]];
     } else if(this.props.title==="Bugs"){
-      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...activeFilters, ...filterDefinitions["Bugs"]];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.museumFilters, ...activeFilters, ...filterDefinitions["Bugs"]];
     } else if(this.props.title==="Sea Creatures"){
-      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...activeFilters, ...filterDefinitions["Sea Creatures"]];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.museumFilters, ...activeFilters, ...filterDefinitions["Sea Creatures"]];
     } else if(this.props.title==="Furniture"){
       const categories = [{
         "name": "Type Categories",
@@ -148,7 +155,7 @@ class PopupFilter extends Component {
         "children": [{"name":"Housewares","id":"Data Category:Housewares"},{"name":"Miscellaneous","id":"Data Category:Miscellaneous"},{"name":"Wall-mounted","id":"Data Category:Wall-mounted"},{"name":"Photos","id":"Data Category:Photos"},{"name":"Posters","id":"Data Category:Posters"},{"name":"Headwear","id":"Data Category:Headwear"},{"name":"Accessories","id":"Data Category:Accessories"},{"name":"Tops","id":"Data Category:Tops"},{"name":"Dress-Up","id":"Data Category:Dress-Up"},{"name":"Clothing Other","id":"Data Category:Clothing Other"},{"name":"Bottoms","id":"Data Category:Bottoms"},{"name":"Socks","id":"Data Category:Socks"},{"name":"Shoes","id":"Data Category:Shoes"},{"name":"Bags","id":"Data Category:Bags"},{"name":"Umbrellas","id":"Data Category:Umbrellas"},{"name":"Floors","id":"Data Category:Floors"},{"name":"Rugs","id":"Data Category:Rugs"},{"name":"Wallpaper","id":"Data Category:Wallpaper"},{"name":"Recipes","id":"Data Category:Recipes"},{"name":"Tools","id":"Data Category:Tools"},{"name":"Fish","id":"Data Category:Fish"},{"name":"Bugs","id":"Data Category:Insects"},{"name":"Sea Creatures","id":"Data Category:Sea Creatures"},{"name":"Fossils","id":"Data Category:Fossils"},{"name":"Art","id":"Data Category:Art"},{"name":"Villagers","id":"Data Category:Villagers"},{"name":"Music","id":"Data Category:Music"},{"name":"Reactions","id":"Data Category:Reactions"},{"name":"Construction","id":"Data Category:Construction"},{"name":"Fencing","id":"Data Category:Fencing"},{"name":"Other","id":"Data Category:Other"},
         ]
       }]
-      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...categories, ...notCraftVariationsFilters, ...activeFilters, ...filterDefinitions["All Items"]];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.museumFilters, ...categories, ...notCraftVariationsFilters, ...activeFilters, ...filterDefinitions["All Items"]];
     } else if(this.props.title==="Construction"){
       const categories = [{
         "name": "Type Categories",
