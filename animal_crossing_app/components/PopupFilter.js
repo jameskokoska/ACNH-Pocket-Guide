@@ -114,7 +114,7 @@ class PopupFilter extends Component {
         "id": "Type Categories",
         "children": [{"name":"Fish","id":"Data Category:Fish"},{"name":"Bugs","id":"Data Category:Insects"},{"name":"Sea Creatures","id":"Data Category:Sea Creatures"}]
       }]
-      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...categories];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.museumFilters, ...categories];
     } else if(this.props.title==="Fish"){
       this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.museumFilters, ...activeFilters, ...filterDefinitions["Fish"]];
     } else if(this.props.title==="Bugs"){

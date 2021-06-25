@@ -220,20 +220,20 @@ export class LanguagePicker extends Component{
       <View style={{marginTop:10, marginBottom:8, marginHorizontal:20, justifyContent:"center"}}>
         <DropDownPicker
           items={[
-            {label: "English", value: "English",},
-            {label: "English (Europe)", value: "English (Europe)",},
-            {label: "Français", value: "French",},
-            {label: "Français (Québec)", value: "French (US)",},
-            {label: "Español", value: "Spanish",},
-            {label: "Español (US)", value: "Spanish (US)",},
-            {label: "Deutsche", value: "German",},
+            {label: attemptToTranslate("English"), value: "English",},
+            {label: attemptToTranslate("English (Europe)"), value: "English (Europe)",},
+            {label: attemptToTranslate("French"), value: "French",},
+            {label: attemptToTranslate("French (Québec)"), value: "French (US)",},
+            {label: attemptToTranslate("Spanish"), value: "Spanish",},
+            {label: attemptToTranslate("Spanish (US)"), value: "Spanish (US)",},
+            {label: attemptToTranslate("German"), value: "German",},
+            {label: attemptToTranslate("Russian") + " (In progress)", value: "Russian",},
             {label: "Italian (Not fully supported)", value: "Italian",},
             {label: "Dutch (Not fully supported)", value: "Dutch",},
             {label: "Chinese (Not fully supported)", value: "Chinese",},
             {label: "Chinese (Traditional) (Not fully supported)", value: "Chinese (Traditional)",},
             {label: "Japanese (Not fully supported)", value: "Japanese",},
             {label: "Korean (Not fully supported)", value: "Korean",},
-            {label: "Russian (Not fully supported)", value: "Russian",},
           ]}
           defaultValue={global.language}
           placeholder={"Select Language..."}

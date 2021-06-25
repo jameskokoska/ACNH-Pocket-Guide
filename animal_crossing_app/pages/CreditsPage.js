@@ -64,7 +64,10 @@ class CreditsPage extends Component {
             <SubHeader> .:MuschU:.</SubHeader>
             <SubHeader> Fataky</SubHeader>
           </View>
-          
+          <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
+            <SubHeader style={{marginBottom:5}}>{attemptToTranslate("Russian") + ":"}</SubHeader>
+            <SubHeader> Alex Karpsson</SubHeader>
+          </View>
           <View style={{height: 20}}/>
           <MailLink/>
           <PopupRating show={this.state.show} noShow={()=>{this.setState({show:false})}}/>
