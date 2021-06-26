@@ -224,21 +224,6 @@ function ListPage(props){
                 searchFound= false;
               }
               break;
-            } else if((props.villagerGifts===true && item.["Color 1"]!==undefined && item.["Color 2"]!==undefined && item.["Style 1"]!==undefined && item.["Style 2"]!==undefined) &&
-              (item.["Color 1"].includes(searchActual[0])  || 
-              item.["Color 2"].includes(searchActual[1])  || 
-              item.["Color 2"].includes(searchActual[0])  || 
-              item.["Color 1"].includes(searchActual[1])   ) && (
-              item.["Style 1"].includes(searchActual[2])  || 
-              item.["Style 2"].includes(searchActual[3])  || 
-              item.["Style 2"].includes(searchActual[2])  || 
-              item.["Style 1"].includes(searchActual[3])  ) && ((searchActual.length===4)||((item.["Villager Equippable"]==="Yes" && searchActual.includes("Villager Equippable:Yes")) || (item.["Villager Equippable"]==="No" && searchActual.includes("Villager Equippable:No"))))
-            ){
-              filterFound = true;
-              break;
-            } else if(props.villagerGifts===true){
-              filterFound = false;
-              break;
             } else if(item["Data Category"]!==undefined && item["Data Category"]==="Art" && item["Genuine"]!==undefined && item["Genuine"]!=="Yes"){
               //Fix art, remove fake art from list no matter what
               break;
@@ -307,6 +292,31 @@ function ListPage(props){
                 continue;
               }
             }
+            else if(searchCollected && (props.villagerGifts===true && item.["Color 1"]!==undefined && item.["Color 2"]!==undefined && item.["Style 1"]!==undefined && item.["Style 2"]!==undefined) &&
+              (item.["Color 1"].includes(searchActual[0])  || 
+              item.["Color 2"].includes(searchActual[1])  || 
+              item.["Color 2"].includes(searchActual[0])  || 
+              item.["Color 1"].includes(searchActual[1])   ) && (
+              item.["Style 1"].includes(searchActual[2])  || 
+              item.["Style 2"].includes(searchActual[3])  || 
+              item.["Style 2"].includes(searchActual[2])  || 
+              item.["Style 1"].includes(searchActual[3]) )
+            ){
+              if(searchActual.includes("Villager Equippable:Yes")||searchActual.includes("Villager Equippable:No")){
+                if((item.["Villager Equippable"]==="Yes" && searchActual.includes("Villager Equippable:Yes")) || (item.["Villager Equippable"]==="No" && searchActual.includes("Villager Equippable:No"))){
+                  filterFound = true;
+                } else {
+                  filterFound = false;
+                  break;
+                }
+              } else {
+                filterFound = true;
+                break;
+              }
+            } else if(props.villagerGifts===true){
+              filterFound = false;
+              break;
+            } 
             //Only check the property selected
             else if((searchCollected) && (searchCategory || searchCategoryOnly) && (!searchActual[z].includes("Data Category") || searchCategoryOnly)){
               filterFound = true;
@@ -324,7 +334,6 @@ function ListPage(props){
                       } 
                     }
                   }
-                  
                   if(item[filterCategory]!==undefined && item[filterCategory].toLowerCase()===filters[filterCategory][e].toLowerCase()){
                     filterCurrentFound = true
                     break;

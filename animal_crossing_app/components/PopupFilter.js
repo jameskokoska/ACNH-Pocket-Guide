@@ -171,7 +171,7 @@ class PopupFilter extends Component {
         "id": "Villager Wearable Filters",
         "children": [{"name":"Villager can wear","id":"Villager Equippable:Yes"},{"name":"Villager cannot wear","id":"Villager Equippable:No"}]
       }]
-      this.possibleFilters = categories
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...categories]
     }
   }
 
