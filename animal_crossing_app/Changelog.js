@@ -3,10 +3,11 @@ export const gameVersion = "1.10.0"
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
+-Updated translations
+-
 -Added filtering in vilager gift guide pages
 -Added Collected/Wishlist/Sorting filters
 -
--Updated translations
 -Added Russian translations, thanks Alex!
 -
 -Fixed museum filters showing up in pages where it shouldn't be
