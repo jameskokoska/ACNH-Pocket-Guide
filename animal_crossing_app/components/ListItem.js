@@ -453,19 +453,21 @@ const styles = StyleSheet.create({
     height: 40,
     paddingLeft: 3,
     paddingRight: 3,
-    marginBottom: 13
+    marginBottom: 13,
+    marginHorizontal: 8,
   },
   gridBoxTextLarge: {
     flex: 1,
     marginTop: 5,
     paddingLeft: 3,
-    paddingRight: 3
+    paddingRight: 3,
+    marginHorizontal: 15,
   },
   gridBoxTextLargeSmaller: {
     flex: 1,
     justifyContent: "center",
     height: 25,
-    marginHorizontal: 3,
+    marginHorizontal: 15,
   },
   gridWrapper: {
     marginVertical: 3, 
