@@ -450,7 +450,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    width: 100,
     height: 40,
     paddingLeft: 3,
     paddingRight: 3,
@@ -458,19 +457,15 @@ const styles = StyleSheet.create({
   },
   gridBoxTextLarge: {
     flex: 1,
-    width: 130,
     marginTop: 5,
     paddingLeft: 3,
     paddingRight: 3
   },
   gridBoxTextLargeSmaller: {
     flex: 1,
-    width: 130,
     justifyContent: "center",
     height: 25,
-    marginTop: 0,
-    paddingLeft: 3,
-    paddingRight: 3
+    marginHorizontal: 3,
   },
   gridWrapper: {
     marginVertical: 3, 

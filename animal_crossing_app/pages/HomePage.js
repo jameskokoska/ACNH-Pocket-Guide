@@ -30,6 +30,7 @@ import ButtonComponent from "../components/ButtonComponent"
 import {SelectionImage} from "../components/Selections"
 import PopupChangelog from '../components/PopupChangelog';
 import LoanList from "../components/LoanList"
+import { LinearGradient } from 'expo-linear-gradient';
 
 class HomePage extends Component {
   constructor(props){
@@ -89,11 +90,11 @@ class HomePage extends Component {
       thisWeekTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>This Week</TextFont>
     }
 
-    var landscape = <View style={{width:Dimensions.get('window').width, height: "100%", zIndex:1, position:'absolute', overflow: "hidden" }}><LottieView autoPlay loop style={{width: Dimensions.get('window').width, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/home.json')}/></View>
+    var landscape = <LottieView autoPlay loop style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/home.json')}/>
     if(getCurrentDateObject().getMonth()===11||getCurrentDateObject().getMonth()===0){
-      landscape = <View style={{width:Dimensions.get('window').width, height: "100%", zIndex:1, position:'absolute', overflow: "hidden" }}><LottieView autoPlay loop style={{width: Dimensions.get('window').width, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeSnow.json')}/></View>
+      landscape = <LottieView autoPlay loop style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeSnow.json')}/>
     } else if (this.todayEvents[0]!==undefined && (this.todayEvents[0].name==="Festivale" || this.todayEvents[0].name.includes("Firework")) || this.todayEvents[1]!==undefined && (this.todayEvents[1].name==="Festivale" || this.todayEvents[1].name.includes("Firework"))){
-      landscape = <View style={{width:Dimensions.get('window').width, height: "100%", zIndex:1, position:'absolute', overflow: "hidden" }}><LottieView autoPlay loop style={{width: Dimensions.get('window').width, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeCelebration.json')}/></View>
+      landscape = <LottieView autoPlay loop style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeCelebration.json')}/>
     }
     const sections = this.state.sections;
     return <View style={{height:"100%",width:"100%"}}>
@@ -220,8 +221,22 @@ class HomePage extends Component {
         </FadeInOut>
       </ScrollView>
       
-      <View style={{position:"absolute", width: "100%", height:"100%", zIndex:-5}}>
-        {landscape}
+      <View style={{position:"absolute", width: "100%", height:"100%", zIndex:-5, top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center',overflow: "hidden" }}>
+        <View style={{width:690, height: "100%", zIndex:1, position:'absolute', overflow: "hidden", }}>
+          {landscape}
+          <LinearGradient
+            colors={[colors.skyColor[global.darkMode], 'transparent']}
+            style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: "100%", zIndex: 50}}
+            start={{x:1.0, y:0}}
+            end={{x: 0.9, y: 0}}
+          />
+          <LinearGradient
+            colors={[colors.skyColor[global.darkMode], 'transparent']}
+            style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: "100%", zIndex: 50}}
+            start={{x: 0, y:0}}
+            end={{x: 0.1, y: 0}}
+          />
+        </View>
         <View style={[styles.homeScreenBackgroundTop,{backgroundColor:colors.skyColor[global.darkMode]}]}/>
         <Image style={{width:Dimensions.get('window').width, height:Dimensions.get('window').height-295, resizeMode:"stretch",zIndex:10, backgroundColor:colors.grassColor[global.darkMode]}} source={global.darkMode===1 ? require("../assets/icons/cliffDark.png") : require("../assets/icons/cliff.png")} />
       </View>

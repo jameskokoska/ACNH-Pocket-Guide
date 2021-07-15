@@ -32,13 +32,21 @@ import {gameVersion} from "../Changelog"
 Object.entries(exports).forEach(([name, exported]) => window[name] = exported);
 
 const {diffClamp} = Animated;
-var headerHeight = Dimensions.get('window').height*0.3;
-var maxHeight = 845.7*0.3;
-if(headerHeight > maxHeight){
-  headerHeight = maxHeight;
+function calculateHeaderHeight(){
+  var headerHeight = Dimensions.get('window').height*0.3;
+  var maxHeight = 845.7*0.3;
+  if(headerHeight > maxHeight){
+    headerHeight = maxHeight;
+  }
+  var minHeight = 451*0.3;
+  if(headerHeight < minHeight){
+    headerHeight = minHeight
+  }
+  return headerHeight
 }
 
 function ListPage(props){
+  var headerHeight = calculateHeaderHeight();
   const renderItem = (({ item }) =>
     <ListItem
       item={item}
@@ -546,10 +554,22 @@ function ListPage(props){
   var numColumns=3;
   if(props.gridType==="smallGrid"){
     numColumns=3;
+    var maxWidth = 511
+    if(Dimensions.get('window').width>maxWidth){
+      numColumns = parseInt(Dimensions.get('window').width / (maxWidth/3))
+    }
   } else if (props.gridType==="largeGrid" || props.gridType==="largeGridSmaller"){
     numColumns=2;
+    var maxWidth = 511
+    if(Dimensions.get('window').width>maxWidth){
+      numColumns = parseInt(Dimensions.get('window').width / (maxWidth/2))
+    }
   } else if (props.gridType==="row"||props.gridType===undefined){
     numColumns=1;
+    var maxWidth = 511
+    if(Dimensions.get('window').width>maxWidth){
+      numColumns = parseInt(Dimensions.get('window').width / (maxWidth/1))
+    }
   }
   
   const sheetRef = React.useRef(null);
@@ -646,7 +666,7 @@ function ListPage(props){
       {/* setFilterPopupState(false) */}
       <Animated.FlatList
         nestedScrollEnabled
-        initialNumToRender={8}
+        initialNumToRender={45}
         scrollEventThrottle={16}
         contentContainerStyle={{paddingTop: paddingTop+10, paddingLeft: 15, paddingRight: 15, paddingBottom: paddingBottomContent}}
         onScroll={handleScroll}
@@ -655,6 +675,7 @@ function ListPage(props){
         renderItem={renderItem}
         keyExtractor={(item, index) => `list-item-${index}-${item.checkListKeyString}`}
         numColumns={numColumns}
+        key={numColumns}
         style={style}
         removeClippedSubviews={true}
         updateCellsBatchingPeriod={500}
@@ -856,7 +877,7 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   subHeader: {
-    height: headerHeight / 2,
+    height: calculateHeaderHeight() / 2,
     width: '100%',
     paddingHorizontal: 10,
   },

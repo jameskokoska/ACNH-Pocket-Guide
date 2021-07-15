@@ -6,51 +6,59 @@ import colors from '../Colors.js';
 
 class SongsPage extends Component {
   render(){
+    var animationWidth = 380
+    console.log(-1/(animationWidth/Dimensions.get('window').width)*100+100)
     return(
       <>
-      <View pointerEvents="none"  
+      <View pointerEvents="none" 
         style={{
-          width: Dimensions.get('window').width,
-          position:'absolute',
-          top:-5,
+          overflow:"hidden",
           zIndex:5,
+          position:"absolute",
+          bottom:-1/(animationWidth/Dimensions.get('window').width)*50+50,
           transform: [
-            { scale: 1.1 },
-            { rotate: '0deg'},
+            { rotate: '180deg'},
           ],
           opacity: colors.musicWavesTransparency[global.darkMode],
-        }} 
+        }}
       >
         <LottieView 
           autoPlay
           loop
           style={{
             width: Dimensions.get('window').width,
+            zIndex:5,
+            transform: [
+              { scaleX: 1/(animationWidth/Dimensions.get('window').width)},
+            ],
           }} 
           source={require('../assets/waveAnimation.json')}
         />
       </View>
       <View pointerEvents="none" 
         style={{
-          width: Dimensions.get('window').width,
-          position:'absolute',
-          bottom:-20,
+          overflow:"hidden",
           zIndex:5,
+          position:"absolute",
+          top:-1/(animationWidth/Dimensions.get('window').width)*50+50,
           transform: [
-            { scale: 1.1 },
-            { rotate: '180deg'},
+            { rotate: '0deg'},
           ],
           opacity: colors.musicWavesTransparency[global.darkMode],
-        }} 
+        }}
       >
-      <LottieView 
-        autoPlay
-        loop
-        style={{
-          width: Dimensions.get('window').width,
-        }} 
-        source={require('../assets/waveAnimation.json')}
-      />
+        <LottieView 
+          autoPlay
+          loop
+          style={{
+            width: Dimensions.get('window').width,
+            zIndex:5,
+            transform: [
+              { scaleX: 1/(animationWidth/Dimensions.get('window').width)},
+            ],
+          }} 
+          source={require('../assets/waveAnimation.json')}
+        />
       </View>
         <ListPage 
           disablePopup={[true]}

@@ -71,6 +71,10 @@ class App extends Component {
     }
     this.lastPage = [0];
     this.lastPropsPassed = [];
+
+    Dimensions.addEventListener('change', () => {
+      this.forceUpdate()
+    });
   }
 
   async loadSettings(){
