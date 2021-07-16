@@ -6,6 +6,7 @@ export const changelog = `
 -Updated translations
 -Significantly improved tablet support
 -Fixed issue with ghost touches when loading - more items are initially loaded before rendered (unfortunately slight increase in load times)
+-Fixed dream address starting with DW instead of DA
 -
 -Added filtering in vilager gift guide pages
 -Added Collected/Wishlist/Sorting filters

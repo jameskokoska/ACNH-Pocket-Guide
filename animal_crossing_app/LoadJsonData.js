@@ -961,7 +961,7 @@ export function checkTranslationEntry(textCheck, fallback){
 // {label: "Japanese (Not fully supported)", value: "Japanese",},
 // {label: "Korean (Not fully supported)", value: "Korean",},
 // {label: "Russian (Not fully supported)", value: "Russian",},
-export function translateDreamAddressBeginning(villager){
+export function translateDreamAddressBeginning(){
   if(global.language==="French" || global.language==="French (US)"){
     return ("DA")
   } else if(global.language==="Spanish" || global.language==="Spanish (US)"){
@@ -969,7 +969,7 @@ export function translateDreamAddressBeginning(villager){
   } else if(global.language==="German"){
     return ("DA")
   } else {
-    return ("DW")
+    return ("DA")
   }
 }
 
