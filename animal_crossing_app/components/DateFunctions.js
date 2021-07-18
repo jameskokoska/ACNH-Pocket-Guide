@@ -117,44 +117,53 @@ function isActive(activeTime){
   }
 }
 
-function isActive2(activeTime, currentHour){
+function isActive2(activeTimeInput, currentHour){
   // active time format: "4 AM – 9 PM"
   // check if it is available
   //console.log(activeTime)
-  if(activeTime!=="NA"){
-    if(activeTime==="All day"){
-      return true;
-    }
-    var splitString = activeTime.replace(/[^\x00-\x7F]/g, "");
-    splitString = splitString.replace("  ", " ");
-    splitString = splitString.split(" ");
-    const activeStart = parseActiveTime(splitString, 0);
-    const activeEnd = parseActiveTime(splitString, 2);
-    currentHour = parseInt(currentHour);
-    // check if current time is between available hours
-    // console.log(splitString);
-    // console.log(activeStart);
-    // console.log(currentHour);
-    // console.log(activeEnd);
-    if(activeStart < activeEnd){
-      if(activeStart <= currentHour && currentHour <= activeEnd){
-        // console.log("trigger1")
-        return true;
-      }else{
-        return false;
+  var activeTimeList = activeTimeInput.split("; ")
+  var activeTimeOutput = false;
+  for(var i = 0; i < activeTimeList.length; i++){
+    var activeTime = activeTimeList[i]
+    if(activeTime!=="NA"){
+      if(activeTime==="All day"){
+        activeTimeOutput = true;
+        break;
       }
-    }
-    else if(activeStart > activeEnd){
-      if(activeStart <= currentHour || currentHour <= activeEnd){
-        // console.log("trigger2")
-        return true;
-      }else{
-        return false;
+      var splitString = activeTime.replace(/[^\x00-\x7F]/g, "");
+      splitString = splitString.replace("  ", " ");
+      splitString = splitString.split(" ");
+      const activeStart = parseActiveTime(splitString, 0);
+      const activeEnd = parseActiveTime(splitString, 2);
+      currentHour = parseInt(currentHour);
+      // check if current time is between available hours
+      // console.log(splitString);
+      // console.log(activeStart);
+      // console.log(currentHour);
+      // console.log(activeEnd);
+      if(activeStart < activeEnd){
+        if(activeStart <= currentHour && currentHour <= activeEnd){
+          // console.log("trigger1")
+          activeTimeOutput = true;
+          break;
+        }else{
+          activeTimeOutput = false;
+        }
       }
+      else if(activeStart > activeEnd){
+        if(activeStart <= currentHour || currentHour <= activeEnd){
+          // console.log("trigger2")
+          activeTimeOutput = true;
+          break;
+        }else{
+          activeTimeOutput = false;
+        }
+      }
+    }else{
+      activeTimeOutput = false;
     }
-  }else{
-    return false;
   }
+  return activeTimeOutput
 }
 
 export {getMonthFromString, getCurrentDateObject, getMonthShort, getMonth, getWeekDay, getWeekDayShort, isActive, isActive2, parseActiveTime};

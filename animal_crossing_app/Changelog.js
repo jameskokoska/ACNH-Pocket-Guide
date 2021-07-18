@@ -4,6 +4,8 @@ export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
 -Updated translations
+-Fixed bug where active creatures with 2 different times didn't show up under the active creature section
+-
 -Significantly improved tablet support
 -Fixed issue with ghost touches when loading - more items are initially loaded before rendered (unfortunately slight increase in load times)
 -Fixed dream address starting with DW instead of DA

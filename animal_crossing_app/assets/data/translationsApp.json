@@ -6682,7 +6682,8 @@
             "French (US)": "Si vous appréciez cette application, pensez à la soutenir en appuyant ici",
             "German": "Wenn dir diese App gefällt und du sie unterstützen möchtest, tippe hier.",
             "Spanish": "Si te gusta esta aplicación considera apoyarla haciendo clic aquí",
-            "Spanish (US)": "Si te gusta esta aplicación considera apoyarla haciendo clic aquí"
+            "Spanish (US)": "Si te gusta esta aplicación considera apoyarla haciendo clic aquí",
+            "Russian": "Понравилось приложение? Поддержи проект нажав здесь"
         },
         {
             "English": "Give a tip",
@@ -6691,7 +6692,8 @@
             "French (US)": "Donner un pourboire",
             "German": "Trinkgeld geben",
             "Spanish": "Deja una propina",
-            "Spanish (US)": "Deja una propina"
+            "Spanish (US)": "Deja una propina",
+            "Russian": "Оставить отзыв"
         },
         {
             "English": "Select Filters",
@@ -6720,14 +6722,16 @@
             "French (US)": "Collecté / Non collecté",
             "German": "Gesammelt/Nicht gesammelt",
             "Spanish": "Coleccionado/No coleccionado",
-            "Spanish (US)": "Coleccionado/No coleccionado"
+            "Spanish (US)": "Coleccionado/No coleccionado",
+            "Russian": "В коллекции/Не в коллекции"
         },
         {
             "English": "Type Categories",
             "English (Europe)": "Type Categories",
             "French": "Type d'objets",
             "French (US)": "Type d'objets",
-            "German": "Typ Kategorien "
+            "German": "Typ Kategorien ",
+            "Russian": "Категории"
         },
         {
             "English": "Uncraftable Item Variations Filter",
@@ -6736,7 +6740,8 @@
             "French (US)": "Filtre des variantes d'objets non fabriquables",
             "German": "Filter für nicht herstellbare Möbelumgestaltungen",
             "Spanish": "Filtro de variaciones de objetos no construíbles",
-            "Spanish (US)": "Filtro de variaciones de objetos no construíbles"
+            "Spanish (US)": "Filtro de variaciones de objetos no construíbles",
+            "Russian": "Фильтр неизгатавливаемых предметов"
         },
         {
             "English": "Active Times Filters",
@@ -6745,7 +6750,8 @@
             "French (US)": "Filtre des périodes de capture",
             "German": "Aktive Zeit",
             "Spanish": "Filtros de tiempo activos",
-            "Spanish (US)": "Filtros de tiempo activos"
+            "Spanish (US)": "Filtros de tiempo activos",
+            "Russian": "Фильтр активностей"
         },
         {
             "English": "Profiles/Islands",
@@ -7109,7 +7115,8 @@
             "French (US)": "Appuyez pour configurer votre profil",
             "German": "Tippe zum ",
             "Spanish": "Toque para configurar tu perfil",
-            "Spanish (US)": "Toque para configurar tu perfil"
+            "Spanish (US)": "Toque para configurar tu perfil",
+            "Russian": "Нажмите чтобы настроить свой профиль"
         },
         {
             "English": "Sort by...",
@@ -7124,14 +7131,16 @@
             "English (Europe)": "Reverse sorting direction",
             "French": "Sens de tri inversé",
             "French (US)": "Sens de tri inversé",
-            "German": "Sortierrichtung umkehren"
+            "German": "Sortierrichtung umkehren",
+            "Russian": "Изменить порядок сортировки"
         },
         {
             "English": "Type category",
             "English (Europe)": "Type category",
             "French": "Type de catégorie",
             "French (US)": "Type de catégorie",
-            "German": "Kategorientyp"
+            "German": "Kategorientyp",
+            "Russian": "Категории"
         },
         {
             "English": "Sell price",
@@ -7154,7 +7163,8 @@
             "English (Europe)": "Furniture tag",
             "French": "Tag de meuble",
             "French (US)": "Tag de meuble",
-            "German": "Möbelkategorie"
+            "German": "Möbelkategorie",
+            "Russian": "Мебельная бирка"
         },
         {
             "English": "Donated to museum",
@@ -7177,14 +7187,16 @@
             "English (Europe)": "Show donated to museum button",
             "French": "Afficher le bouton de don au musée",
             "French (US)": "Afficher le bouton de don au musée",
-            "German": "An das Museum gespendete Schaltfläche anzeigen"
+            "German": "An das Museum gespendete Schaltfläche anzeigen",
+            "Russian": "Показать кнопку пожертвований музею"
         },
         {
             "English": "Shows a donation button which can be used to track if you've donated it to the museum in addition to collecting it.",
             "English (Europe)": "Shows a donation button which can be used to track if you've donated it to the museum in addition to collecting it.",
             "French": "Affiche un bouton de don qui peut être utilisé pour savoir si vous l'avez fait don au musée en plus de le collecter.",
             "French (US)": "Affiche un bouton de don qui peut être utilisé pour savoir si vous l'avez fait don au musée en plus de le collecter.",
-            "German": "Zeigt eine Spendenschaltfläche an, mit der nachverfolgt werden kann, ob Du es zusätzlich zum Sammeln an das Museum gespendet hast."
+            "German": "Zeigt eine Spendenschaltfläche an, mit der nachverfolgt werden kann, ob Du es zusätzlich zum Sammeln an das Museum gespendet hast.",
+            "Russian": "Показывает кнопку пожертвования, которую можно использовать для отслеживания того, пожертвовали ли вы предмет музею и имеется ли он у вас в коллекции."
         },
         {
             "English": "You can reread the changelog in the [About] page",
@@ -7207,7 +7219,8 @@
             "English (Europe)": "You can read more about Amiibo cards by visiting the guide page",
             "French": "Vous pouvez en savoir plus sur les cartes Amiibo en visitant la page du guide",
             "French (US)": "Vous pouvez en savoir plus sur les cartes Amiibo en visitant la page du guide",
-            "German": "Du kannst mehr über Amiibo-Karten lesen, indem Du die Guide-Seite besuchst."
+            "German": "Du kannst mehr über Amiibo-Karten lesen, indem Du die Guide-Seite besuchst.",
+            "Russian": "Вы можете прочитать больше про карточки Amiibo перейдя на страницу гайда"
         },
         {
             "English": "Tap here to read about Amiibo cards",
@@ -9403,7 +9416,8 @@
             "French (US)": "Champignons",
             "German": "Pilze",
             "Spanish": "setas",
-            "Spanish (US)": "setas"
+            "Spanish (US)": "setas",
+            "Russian": "Грибы"
         },
         {
             "English": "ornaments",
@@ -9421,7 +9435,8 @@
             "French (US)": "Shopping de printemps",
             "German": "Frühlingssale",
             "Spanish": "Compra de primavera",
-            "Spanish (US)": "Compra de primavera"
+            "Spanish (US)": "Compra de primavera",
+            "Russian": "Весенний шоппинг"
         },
         {
             "English": "Summer shopping",
@@ -9430,7 +9445,8 @@
             "French (US)": "Shopping d'été",
             "German": "Sommersale",
             "Spanish": "Compra de verano",
-            "Spanish (US)": "Compra de verano"
+            "Spanish (US)": "Compra de verano",
+            "Russian": "Летний шоппинг"
         },
         {
             "English": "Fall shopping",
@@ -9439,7 +9455,8 @@
             "French (US)": "Shopping d'automne",
             "German": "Herbstsale",
             "Spanish": "Compra de otoño",
-            "Spanish (US)": "Compra de otoño"
+            "Spanish (US)": "Compra de otoño",
+            "Russian": "Осенний шоппинг"
         },
         {
             "English": "Winter shopping",
@@ -9448,7 +9465,8 @@
             "French (US)": "Shopping d'hiver",
             "German": "Wintersale",
             "Spanish": "Compra de invierno",
-            "Spanish (US)": "Compra de invierno"
+            "Spanish (US)": "Compra de invierno",
+            "Russian": "Зимний шоппинг"
         },
         {
             "English": "Festive shopping",
@@ -9466,7 +9484,8 @@
             "French (US)": "Anniversaire",
             "German": "Geburtstag ",
             "Spanish": "Cumpleaños",
-            "Spanish (US)": "Cumpleaños"
+            "Spanish (US)": "Cumpleaños",
+            "Russian": "День рождения"
         },
         {
             "English": "Fishing Tourney",
@@ -9475,7 +9494,8 @@
             "French (US)": "Tournoi de Pêche",
             "German": "Angelturnier",
             "Spanish": "Torneo de pesca",
-            "Spanish (US)": "Torneo de pesca"
+            "Spanish (US)": "Torneo de pesca",
+            "Russian": "Рыбный тур"
         },
         {
             "English": "Bunny Day (ready days)",
@@ -9518,7 +9538,8 @@
             "French (US)": "Saison des mariages",
             "German": "Heirats Saison",
             "Spanish": "Temporada de Bodas",
-            "Spanish (US)": "Temporada de Bodas"
+            "Spanish (US)": "Temporada de Bodas",
+            "Russian": "Свадебный сезон"
         },
         {
             "English": "Summer Solstice (northern hemisphere)",
@@ -9527,7 +9548,8 @@
             "French (US)": "Solstice d'été (hémisphère nord)",
             "German": "Sommersonnenwende (nördliche Hemisphäre)",
             "Spanish": "Solsticio de verano (hemisferio norte)",
-            "Spanish (US)": "Solsticio de verano (hemisferio norte)"
+            "Spanish (US)": "Solsticio de verano (hemisferio norte)",
+            "Russian": "Летнее солнцестояние (северное полушарие)"
         },
         {
             "English": "Winter Solstice (southern hemisphere)",
@@ -9536,7 +9558,8 @@
             "French (US)": "Solstice d'hiver (hémisphère sud)",
             "German": "Wintersonnenwende (südliche Hemisphäre)",
             "Spanish": "Solsticio de invierno (hemisferio sur)",
-            "Spanish (US)": "Solsticio de invierno (hemisferio sur)"
+            "Spanish (US)": "Solsticio de invierno (hemisferio sur)",
+            "Russian": "Зимнее солнцестояние (южное полушарие)"
         },
         {
             "English": "Tanabata",
@@ -9563,7 +9586,8 @@
             "French (US)": "Halloween (jours de préparation)",
             "German": "Halloween (Vorbereitung)",
             "Spanish": "Halloween",
-            "Spanish (US)": "Halloween"
+            "Spanish (US)": "Halloween",
+            "Russian": "Хээлоуин"
         },
         {
             "English": "Halloween",
@@ -9572,7 +9596,8 @@
             "French (US)": "Halloween",
             "German": "Halloween",
             "Spanish": "Halloween",
-            "Spanish (US)": "Halloween"
+            "Spanish (US)": "Halloween",
+            "Russian": "Хэллоуин"
         },
         {
             "English": "Turkey Day",
@@ -9581,14 +9606,16 @@
             "French (US)": "Jour du Partage",
             "German": "Schlemmerfest",
             "Spanish": "Dia del Pavo",
-            "Spanish (US)": "Dia del Pavo"
+            "Spanish (US)": "Dia del Pavo",
+            "Russian": "День благодарения"
         },
         {
             "English": "Turkey Day (shopping days)",
             "English (Europe)": "Turkey Day (shopping days)",
             "French": "Jour du Partage (jours de shopping)",
             "French (US)": "Jour du Partage (jours de shopping)",
-            "German": "Schlemmerfest (Shopping"
+            "German": "Schlemmerfest (Shopping",
+            "Russian": "День благодарения (день закупок)"
         },
         {
             "English": "Toy Day (ready days phase 1)",
@@ -9633,7 +9660,8 @@
             "French (US)": "Solstice d'hiver (hémisphère nord)",
             "German": "Wintersonnenwende (nördliche Hemisphäre)",
             "Spanish": "Solsticio de invierno (hemisferio norte)",
-            "Spanish (US)": "Solsticio de invierno (hemisferio norte)"
+            "Spanish (US)": "Solsticio de invierno (hemisferio norte)",
+            "Russian": "Зимнее солнцестояние (северное полушарие)"
         },
         {
             "English": "Summer Solstice (southern hemisphere)",
@@ -9642,7 +9670,8 @@
             "French (US)": "Solstice d'été (hémisphère sud)",
             "German": "Sommersonnenwende (südliche Hemisphäre)",
             "Spanish": "Solsticio de verano (hemisferio sur)",
-            "Spanish (US)": "Solsticio de verano (hemisferio sur)"
+            "Spanish (US)": "Solsticio de verano (hemisferio sur)",
+            "Russian": "Летнее солнцестояние (южное полушарие)"
         },
         {
             "English": "Shōgatsu (1)",
@@ -9672,7 +9701,8 @@
             "French (US)": "Jour de l'An (Russie)",
             "German": "Neujahr (Russland)",
             "Spanish": "Dia de Año Nuevo (Russia)",
-            "Spanish (US)": "Dia de Año Nuevo (Russia)"
+            "Spanish (US)": "Dia de Año Nuevo (Russia)",
+            "Russian": "Новый год (Россия)"
         },
         {
             "English": "New Year's Day (World)",
@@ -9681,7 +9711,8 @@
             "French (US)": "Jour de l'An (Monde)",
             "German": "Neujahr (Welt)",
             "Spanish": "Dia de Año Nuevo (Mundo)",
-            "Spanish (US)": "Dia de Año Nuevo (Mundo)"
+            "Spanish (US)": "Dia de Año Nuevo (Mundo)",
+            "Russian": "Новый год (Мир)"
         },
         {
             "English": "New Year's Day (Korea)",
@@ -9690,7 +9721,8 @@
             "French (US)": "Jour de l'An (Corée)",
             "German": "Neujahr (Korea)",
             "Spanish": "Dia de Año Nuevo (Corea)",
-            "Spanish (US)": "Dia de Año Nuevo (Corea)"
+            "Spanish (US)": "Dia de Año Nuevo (Corea)",
+            "Russian": "Новый год (Корея)"
         },
         {
             "English": "New Year's Day (Asia)",
@@ -9699,21 +9731,24 @@
             "French (US)": "Jour de l'An (Asie)",
             "German": "Neujahr (Asien)",
             "Spanish": "Dia de Año Nuevo (Asia)",
-            "Spanish (US)": "Dia de Año Nuevo (Asia)"
+            "Spanish (US)": "Dia de Año Nuevo (Asia)",
+            "Russian": "Новый год (Азия)"
         },
         {
             "English": "Festivale (ready days)",
             "English (Europe)": "Festivale (ready days)",
             "French": "Carnaval (jours de préparation)",
             "French (US)": "Carnaval (jours de préparation)",
-            "German": "Festival (Vorbereitung)"
+            "German": "Festival (Vorbereitung)",
+            "Russian": "Фестиваль"
         },
         {
             "English": "Festivale",
             "English (Europe)": "Festivale",
             "French": "Carnaval",
             "French (US)": "Carnaval",
-            "German": "Festival "
+            "German": "Festival ",
+            "Russian": "Фестиваль"
         },
         {
             "English": "Setsubun (Able Sisters)",
@@ -9743,7 +9778,8 @@
             "French (US)": "Saint-Valentin (Nook Shopping)",
             "German": "Valentinstag",
             "Spanish": "Día de San Valentín",
-            "Spanish (US)": "Día de San Valentín"
+            "Spanish (US)": "Día de San Valentín",
+            "Russian": "День святого Валентина"
         },
         {
             "English": "Super Mario Bros.",
@@ -9752,7 +9788,8 @@
             "French (US)": "Super Mario Bros.",
             "German": "Super Mario Bros.",
             "Spanish": "Super Mario Bros.",
-            "Spanish (US)": "Super Mario Bros."
+            "Spanish (US)": "Super Mario Bros.",
+            "Russian": "Супер Марио Броз."
         },
         {
             "English": "Shamrock Day (Able Sisters)",
@@ -9789,7 +9826,8 @@
             "French (US)": "Jour de la Nature (Nook Shopping)",
             "German": "Tag der Natur (Nook Shopping)",
             "Spanish": "Día de la Naturaleza",
-            "Spanish (US)": "Día de la Naturaleza"
+            "Spanish (US)": "Día de la Naturaleza",
+            "Russian": "День природы (Нук шоппинг)"
         },
         {
             "English": "Wedding Season (Nook Shopping 1)",
@@ -9798,7 +9836,8 @@
             "French (US)": "Saison des Mariages (Nook Shopping 1)",
             "German": "Heirats Saison (Nook Shopping 1)",
             "Spanish": "Temporada de Bodas (TeleNook 1)",
-            "Spanish (US)": "Temporada de Bodas (TeleNook 1)"
+            "Spanish (US)": "Temporada de Bodas (TeleNook 1)",
+            "Russian": "Свадебный сезон (Нук шоппинг 1)"
         },
         {
             "English": "Wedding Season (Nook Shopping 2)",
@@ -9807,7 +9846,8 @@
             "French (US)": "Saison des Mariages (Nook Shopping 2)",
             "German": "Heirats Saison (Nook Shopping 2)",
             "Spanish": "Temporada de Bodas (TeleNook 2)",
-            "Spanish (US)": "Temporada de Bodas (TeleNook 2)"
+            "Spanish (US)": "Temporada de Bodas (TeleNook 2)",
+            "Russian": "Свадебный сезон (Нук шоппинг 2)"
         },
         {
             "English": "Wedding Season (Able Sisters)",
@@ -9816,7 +9856,8 @@
             "French (US)": "Saison des Mariages (Soeurs Doigts de Fée)",
             "German": "Heirats Saison (Tina&Sina)",
             "Spanish": "Temporada de Bodas (Hermanas Manitas)",
-            "Spanish (US)": "Temporada de Bodas (Hermanas Manitas)"
+            "Spanish (US)": "Temporada de Bodas (Hermanas Manitas)",
+            "Russian": "Сведебный сезон (Сёстры Эйбл)"
         },
         {
             "English": "Father's Day (2)",
@@ -9825,7 +9866,8 @@
             "French (US)": "Fête des Pères (2)",
             "German": "Vatertag",
             "Spanish": "Día del Padre",
-            "Spanish (US)": "Día del Padre"
+            "Spanish (US)": "Día del Padre",
+            "Russian": "День отца (2)"
         }
     ],
     "Missing Items": [
@@ -9868,7 +9910,8 @@
             "French (US)": "Sac de clochettes",
             "German": "Sternisack",
             "Spanish": "Bolsa de bayas",
-            "Spanish (US)": "Bolsa de bayas"
+            "Spanish (US)": "Bolsa de bayas",
+            "Russian": "Рюкзак-колокольчик"
         },
         {
             "English": "Bell coin",
@@ -9877,7 +9920,8 @@
             "French (US)": "Pièce de clochettes",
             "German": "Sternitaler",
             "Spanish": "Bayas (Moneda)",
-            "Spanish (US)": "Bayas (Moneda)"
+            "Spanish (US)": "Bayas (Moneda)",
+            "Russian": "Монетка-колокольчик"
         },
         {
             "English": "present (black)",
@@ -9886,7 +9930,8 @@
             "French (US)": "cadeau (noir)",
             "German": "Geschenk (Schwarz)",
             "Spanish": "Regalo (negro)",
-            "Spanish (US)": "Regalo (negro)"
+            "Spanish (US)": "Regalo (negro)",
+            "Russian": "Подарок (черный)"
         },
         {
             "English": "present (blue)",
@@ -9895,7 +9940,8 @@
             "French (US)": "cadeau (bleu)",
             "German": "Geschenk (Blau)",
             "Spanish": "Regalo (azul)",
-            "Spanish (US)": "Regalo (azul)"
+            "Spanish (US)": "Regalo (azul)",
+            "Russian": "Подарок (синий)"
         },
         {
             "English": "present (brown)",
@@ -9904,14 +9950,16 @@
             "French (US)": "cadeau (marron)",
             "German": "Geschenk (Braun)",
             "Spanish": "Regalo (marrón)",
-            "Spanish (US)": "Regalo (marrón)"
+            "Spanish (US)": "Regalo (marrón)",
+            "Russian": "Подарок (коричневый)"
         },
         {
             "English": "present (chartreuse)",
             "English (Europe)": "present (chartreuse)",
             "French": "cadeau (jaune-vert)",
             "French (US)": "cadeau (jaune-vert)",
-            "German": "Geschenk (GrünGelb)"
+            "German": "Geschenk (GrünGelb)",
+            "Russian": "Подарок (зеленый)"
         },
         {
             "English": "present (gold)",
@@ -9920,7 +9968,8 @@
             "French (US)": "cadeau (doré)",
             "German": "Geschenk (Gold)",
             "Spanish": "Regalo (dorado)",
-            "Spanish (US)": "Regalo (dorado)"
+            "Spanish (US)": "Regalo (dorado)",
+            "Russian": "Подарок (золотой)"
         },
         {
             "English": "present (gray)",
@@ -9929,7 +9978,8 @@
             "French (US)": "cadeau (gris)",
             "German": "Geschenk (Grau)",
             "Spanish": "Regalo (gris)",
-            "Spanish (US)": "Regalo (gris)"
+            "Spanish (US)": "Regalo (gris)",
+            "Russian": "Подарок (серый)"
         },
         {
             "English": "present (green)",
@@ -9938,7 +9988,8 @@
             "French (US)": "cadeau (vert)",
             "German": "Geschenk (Grün)",
             "Spanish": "Regalo (verde)",
-            "Spanish (US)": "Regalo (verde)"
+            "Spanish (US)": "Regalo (verde)",
+            "Russian": "Подероа (зеленый)"
         },
         {
             "English": "present (light-blue)",
@@ -9947,7 +9998,8 @@
             "French (US)": "cadeau (bleu clair)",
             "German": "Geschenk (Hell-Blau)",
             "Spanish": "Regalo (azul claro)",
-            "Spanish (US)": "Regalo (azul claro)"
+            "Spanish (US)": "Regalo (azul claro)",
+            "Russian": "Подарок (голубой)"
         },
         {
             "English": "present (mint)",
@@ -9956,7 +10008,8 @@
             "French (US)": "cadeau (menthe)",
             "German": "Geschenk (Mint Grün)",
             "Spanish": "Regalo (menta)",
-            "Spanish (US)": "Regalo (menta)"
+            "Spanish (US)": "Regalo (menta)",
+            "Russian": "Подарок (мятный)"
         },
         {
             "English": "present (navy)",
@@ -9965,7 +10018,8 @@
             "French (US)": "cadeau (bleu marine)",
             "German": "Geschenk (Marine Blau)",
             "Spanish": "Regalo (azul marino)",
-            "Spanish (US)": "Regalo (azul marino)"
+            "Spanish (US)": "Regalo (azul marino)",
+            "Russian": "Подарок (камуфляжный)"
         },
         {
             "English": "present (orange)",
@@ -9974,7 +10028,8 @@
             "French (US)": "cadeau (orange)",
             "German": "Geschenk (Orange)",
             "Spanish": "Regalo (naranja)",
-            "Spanish (US)": "Regalo (naranja)"
+            "Spanish (US)": "Regalo (naranja)",
+            "Russian": "Подарок (оранжевый)"
         },
         {
             "English": "present (pink)",
@@ -9983,7 +10038,8 @@
             "French (US)": "cadeau (rose)",
             "German": "Geschenk (Pink)",
             "Spanish": "Regalo (rosa)",
-            "Spanish (US)": "Regalo (rosa)"
+            "Spanish (US)": "Regalo (rosa)",
+            "Russian": "Подарок (розовый)"
         },
         {
             "English": "present (purple)",
@@ -9992,7 +10048,8 @@
             "French (US)": "cadeau (violet)",
             "German": "Geschenk (Lila)",
             "Spanish": "Regalo (violeta)",
-            "Spanish (US)": "Regalo (violeta)"
+            "Spanish (US)": "Regalo (violeta)",
+            "Russian": "Подарок (фиолетовый)"
         },
         {
             "English": "present (red)",
@@ -10001,7 +10058,8 @@
             "French (US)": "cadeau (rouge)",
             "German": "Geschenk (Rot)",
             "Spanish": "Regalo (rojo)",
-            "Spanish (US)": "Regalo (rojo)"
+            "Spanish (US)": "Regalo (rojo)",
+            "Russian": "Подарок (красный)"
         },
         {
             "English": "present (white)",
@@ -10010,7 +10068,8 @@
             "French (US)": "cadeau (blanc)",
             "German": "Geschenk (Weiß)",
             "Spanish": "Regalo (blanco)",
-            "Spanish (US)": "Regalo (blanco)"
+            "Spanish (US)": "Regalo (blanco)",
+            "Russian": "Подарок (белый)"
         },
         {
             "English": "present (yellow)",
@@ -10019,7 +10078,8 @@
             "French (US)": "cadeau (jaune)",
             "German": "Geschenk (Gelb)",
             "Spanish": "Regalo (amarillo)",
-            "Spanish (US)": "Regalo (amarillo)"
+            "Spanish (US)": "Regalo (amarillo)",
+            "Russian": "Подарок (желтый)"
         },
         {
             "English": "spoiled turnips",
@@ -10028,7 +10088,8 @@
             "French (US)": "navets pourris",
             "German": "Verdorbene Rüben",
             "Spanish": "nabos podridos",
-            "Spanish (US)": "nabos podridos"
+            "Spanish (US)": "nabos podridos",
+            "Russian": "Испорченая репа"
         },
         {
             "English": "turnips",
@@ -10037,7 +10098,8 @@
             "French (US)": "navets",
             "German": "Rüben",
             "Spanish": "nabos",
-            "Spanish (US)": "nabos"
+            "Spanish (US)": "nabos",
+            "Russian": "Репа"
         }
     ],
     "Special Translations": [
@@ -10047,30 +10109,30 @@
         },
         {
             "Special translations that need to be implemented at the code level, no special foramtting needed, just used for reference": "[Villager]'s Birthday",
-            "undefined": "Cumpleaños de [Vecino]"
+            "undefined": "День рождения [Жителя]"
         },
         {
             "Special translations that need to be implemented at the code level, no special foramtting needed, just used for reference": "[Name] of [Island Name] island",
-            "undefined": "[Name] de isla [Island Name]"
+            "undefined": "[Имя][Острова]"
         },
         {
             "Special translations that need to be implemented at the code level, no special foramtting needed, just used for reference": "Dream address starts with [DW]",
-            "undefined": "Código de sueño empieza con [DA]"
+            "undefined": "Адрес мечты начинается с [DW]"
         },
         {
             "Special translations that need to be implemented at the code level, no special foramtting needed, just used for reference": "[Month] [Day] [Day of Week]",
-            "undefined": "[Day of Week] [Day] [Month]"
+            "undefined": "[Месяц][День][День недели]"
         },
         {
             "Special translations that need to be implemented at the code level, no special foramtting needed, just used for reference": "Not in use translations"
         },
         {
             "Special translations that need to be implemented at the code level, no special foramtting needed, just used for reference": "Sort",
-            "undefined": "Ordenar"
+            "undefined": "Сортировать"
         },
         {
             "Special translations that need to be implemented at the code level, no special foramtting needed, just used for reference": "Unsort",
-            "undefined": "Desordenar"
+            "undefined": "Рассортировать"
         }
     ],
     "Mystery Islands": [
@@ -10081,14 +10143,16 @@
             "French (US)": "Île #0",
             "German": "Insel #0",
             "Spanish": "Isla #0",
-            "Spanish (US)": "Isla #0"
+            "Spanish (US)": "Isla #0",
+            "Russian": "Остров #0"
         },
         {
             "English": "A fairly normal island which you can get on your first tour, with one cliff, native fruit, coconuts, a river and a pond.",
             "English (Europe)": "A fairly normal island which you can get on your first tour, with one cliff, native fruit, coconuts, a river and a pond.",
             "French": "Une île assez normale que vous pouvez obtenir lors de votre premier tour, avec une falaise, des fruits identiques à ceux de votre île, des cocotiers, une rivière et un étang.",
             "French (US)": "Une île assez normale que vous pouvez obtenir lors de votre premier tour, avec une falaise, des fruits identiques à ceux de votre île, des cocotiers, une rivière et un étang.",
-            "German": "Eine ziemlich normale Insel, mit einer Klippe, einheimischen Früchten, Kokosnüssen, einem Fluss und einem Teich."
+            "German": "Eine ziemlich normale Insel, mit einer Klippe, einheimischen Früchten, Kokosnüssen, einem Fluss und einem Teich.",
+            "Russian": "Обычный остров, на который вы можете попасть в свой первый тур, с одной возвышенностью, местными фруктами, кокосами, рекой и прудом."
         },
         {
             "English": "Island #1",
@@ -10097,14 +10161,16 @@
             "French (US)": "Île #1",
             "German": "Insel #1",
             "Spanish": "Isla #1",
-            "Spanish (US)": "Isla #1"
+            "Spanish (US)": "Isla #1",
+            "Russian": "Остров #1"
         },
         {
             "English": "Practically the same as Island #0, but without the pond, and with a slightly bigger cliff.",
             "English (Europe)": "Practically the same as Island #0, but without the pond, and with a slightly bigger cliff.",
             "French": "Pratiquement la même chose que l'île #0, mais sans l'étang et avec une falaise légèrement plus grande.",
             "French (US)": "Pratiquement la même chose que l'île #0, mais sans l'étang et avec une falaise légèrement plus grande.",
-            "German": "Praktisch die gleiche Insel wie Nr. 0, jedoch ohne Teich und mit einer etwas größeren Klippe."
+            "German": "Praktisch die gleiche Insel wie Nr. 0, jedoch ohne Teich und mit einer etwas größeren Klippe.",
+            "Russian": "Практически такой же как и остров #0, но без пруда и с большим количеством возвышенностей"
         },
         {
             "English": "Spiral Island",
@@ -10113,28 +10179,32 @@
             "French (US)": "Île Spirale",
             "German": "Spiralinsel",
             "Spanish": "Isla espiral",
-            "Spanish (US)": "Isla espiral"
+            "Spanish (US)": "Isla espiral",
+            "Russian": "Спиральный остров"
         },
         {
             "English": "Somewhat more interesting in layout but it has nothing special about the resources you can get.",
             "English (Europe)": "Somewhat more interesting in layout but it has nothing special about the resources you can get.",
             "French": "Un peu plus intéressant dans la disposition mais cela n'a rien de spécial sur les ressources que vous pouvez obtenir.",
             "French (US)": "Un peu plus intéressant dans la disposition mais cela n'a rien de spécial sur les ressources que vous pouvez obtenir.",
-            "German": "Etwas interessanter im Layout, aber sie hat keine besonderen Ressourcen."
+            "German": "Etwas interessanter im Layout, aber sie hat keine besonderen Ressourcen.",
+            "Russian": "Немного более интересный остров, но в котором нет никаких особых ресурсов, которые вы можете получить."
         },
         {
             "English": "Fidget Spinner Island",
             "English (Europe)": "Fidget Spinner Island",
             "French": "Île Hand Spinner",
             "French (US)": "Île Hand Spinner",
-            "German": "Fidget Spinner Insel"
+            "German": "Fidget Spinner Insel",
+            "Russian": "Остров непоседы"
         },
         {
             "English": "The last of the four starter islands. No river, just a pond and the sea.",
             "English (Europe)": "The last of the four starter islands. No river, just a pond and the sea.",
             "French": "Le dernier des quatre îlots de départ. Pas de rivière, juste un étang et la mer.",
             "French (US)": "Le dernier des quatre îlots de départ. Pas de rivière, juste un étang et la mer.",
-            "German": "Die letzte der vier Starterinseln.  Kein Fluss, nur ein Teich und das Meer."
+            "German": "Die letzte der vier Starterinseln.  Kein Fluss, nur ein Teich und das Meer.",
+            "Russian": "Последний из стартовых островов. На нём нет реки, но есть пруд, и море вокруг"
         },
         {
             "English": "Mountain Island",
@@ -10143,14 +10213,16 @@
             "French (US)": "Île aux Falaises",
             "German": "Berginsel",
             "Spanish": "Isla montañosa",
-            "Spanish (US)": "Isla montañosa"
+            "Spanish (US)": "Isla montañosa",
+            "Russian": "Горный остров"
         },
         {
             "English": "Multiple levels, no river. The base level has regular trees, the middle level has your native fruit, and the top level has five rocks with materials.",
             "English (Europe)": "Multiple levels, no river. The base level has regular trees, the middle level has your native fruit, and the top level has five rocks with materials.",
             "French": "Plusieurs niveaux, pas de rivière. Le niveau de base a des arbres normaux, le niveau intermédiaire a vos fruits d'origine et le niveau supérieur a cinq rochers avec des matériaux.",
             "French (US)": "Plusieurs niveaux, pas de rivière. Le niveau de base a des arbres normaux, le niveau intermédiaire a vos fruits d'origine et le niveau supérieur a cinq rochers avec des matériaux.",
-            "German": "Mehrere Ebenen, kein Fluss.  Die Basisebene hat normale Bäume, die mittlere Ebene hat Ihre einheimischen Früchte und die oberste Ebene hat fünf Felsen mit Materialien."
+            "German": "Mehrere Ebenen, kein Fluss.  Die Basisebene hat normale Bäume, die mittlere Ebene hat Ihre einheimischen Früchte und die oberste Ebene hat fünf Felsen mit Materialien.",
+            "Russian": "Трехуровневый остров, без рек. Нижний уровень засеян обычными деревьями, средний - плодоносными деревьями с фруктами, а на верхнем уровне лежат пять камней с материалами. "
         },
         {
             "English": "Bells Island",
@@ -10159,7 +10231,8 @@
             "French (US)": "Île aux Clochettes",
             "German": "Sterniinsel",
             "Spanish": "Isla de bayas",
-            "Spanish (US)": "Isla de bayas"
+            "Spanish (US)": "Isla de bayas",
+            "Russian": "Остров колоколов"
         },
         {
             "English": "Breaking the rock at the far north will let you vault over into the island with five money rocks on it.",
@@ -10168,7 +10241,8 @@
             "French (US)": "Briser le rocher à l'extrême nord vous permettra de sauter dans l'île avec cinq pierres à clochettes dessus.",
             "German": "Wenn du den Felsen im Norden der Insel zerschlägst, kannst du auf die kleine Insel, mit den fünf Geldsteinen springen.",
             "Spanish": "Romper la roca en el extremo norte te permitirá saltar a la isla con cinco rocas de dinero en ella.",
-            "Spanish (US)": "Romper la roca en el extremo norte te permitirá saltar a la isla con cinco rocas de dinero en ella."
+            "Spanish (US)": "Romper la roca en el extremo norte te permitirá saltar a la isla con cinco rocas de dinero en ella.",
+            "Russian": "Камни, находящиеся на северной части острова содержат внутри себя монеты"
         },
         {
             "English": "Bamboo Island",
@@ -10177,14 +10251,16 @@
             "French (US)": "Île aux Bambous",
             "German": "Bambusinsel",
             "Spanish": "Isla de bambú",
-            "Spanish (US)": "Isla de bambú"
+            "Spanish (US)": "Isla de bambú",
+            "Russian": "Бамбуковый остров"
         },
         {
             "English": "Every tree on this island is bamboo and you can get to it at any time of year. The most common island you can get out of the 20, statistically.",
             "English (Europe)": "Every tree on this island is bamboo and you can get to it at any time of year. The most common island you can get out of the 20, statistically.",
             "French": "Chaque arbre de cette île est en bambou et vous pouvez y accéder à tout moment de l'année. C'est l'île la plus commune sur laquelle vous tomberez parmi les 20, statistiquement.",
             "French (US)": "Chaque arbre de cette île est en bambou et vous pouvez y accéder à tout moment de l'année. C'est l'île la plus commune sur laquelle vous tomberez parmi les 20, statistiquement.",
-            "German": "Auf dieser Insel wachsen Bambuspflanzen und 5 im Boden vergrabene Bambussprossen. Sie ist eine der Inseln, die du statistisch gesehen von alles 20 Inseln, am meisten Besuchen kannst."
+            "German": "Auf dieser Insel wachsen Bambuspflanzen und 5 im Boden vergrabene Bambussprossen. Sie ist eine der Inseln, die du statistisch gesehen von alles 20 Inseln, am meisten Besuchen kannst.",
+            "Russian": "Все деревья на острове - это бамбук. Вы можете попасть на этот остров в любое время года. Самый распространенный остров из всех описанных"
         },
         {
             "English": "Fruit Island",
@@ -10193,28 +10269,32 @@
             "French (US)": "Île aux Fruits",
             "German": "Schwesternfruchtinsel",
             "Spanish": "Isla frutal",
-            "Spanish (US)": "Isla frutal"
+            "Spanish (US)": "Isla frutal",
+            "Russian": "Фруктовый остров"
         },
         {
             "English": "There are 19 fruit trees on this island and all will be your 'sister fruit'. This will be different from your native fruit - but every time you come here, it will be the same one.",
             "English (Europe)": "There are 19 fruit trees on this island and all will be your 'sister fruit'. This will be different from your native fruit - but every time you come here, it will be the same one.",
             "French": "Il y a 19 arbres fruitiers sur cette île et tous seront votre «fruit sœur». Ce sera différent de votre fruit natif - mais chaque fois que vous viendrez ici, ce sera le même.",
             "French (US)": "Il y a 19 arbres fruitiers sur cette île et tous seront votre «fruit sœur». Ce sera différent de votre fruit natif - mais chaque fois que vous viendrez ici, ce sera le même.",
-            "German": "Es gibt 19 Obstbäume auf dieser Insel und alle sind die 'Schwesterfrucht' deiner Insel.  Sie unterscheiden sich von deiner einheimischen Frucht - aber du wirst jedes Mal die gleiche Sorte vorfinden, wenn du diese Insel besuchst."
+            "German": "Es gibt 19 Obstbäume auf dieser Insel und alle sind die 'Schwesterfrucht' deiner Insel.  Sie unterscheiden sich von deiner einheimischen Frucht - aber du wirst jedes Mal die gleiche Sorte vorfinden, wenn du diese Insel besuchst.",
+            "Russian": "Остров, на котором находится 19 плодоносных деревьев. Плоды на этом острове отличаются от стандартных плодов на вашем острове, но тип плода не меняется не зависимо от вашего посещения или времени."
         },
         {
             "English": "Money Rock Island 2",
             "English (Europe)": "Money Rock Island 2",
             "French": "Île aux Scorpions",
             "French (US)": "Île aux Scorpions",
-            "German": "Skorpioninsel"
+            "German": "Skorpioninsel",
+            "Russian": "Денежный остров 2"
         },
         {
             "English": "There are four small triangular cliffs, one in each corner, and the ground level is full of flowers and 7 money rocks.",
             "English (Europe)": "There are four small triangular cliffs, one in each corner, and the ground level is full of flowers and 7 money rocks.",
             "French": "Il y a quatre petites falaises triangulaires, une dans chaque coin. Le niveau du sol est plein de fleurs et de sept rochers à clochettes.",
             "French (US)": "Il y a quatre petites falaises triangulaires, une dans chaque coin. Le niveau du sol est plein de fleurs et de sept rochers à clochettes.",
-            "German": "Auf dieser Insel findest du 7 Geldsteine umgeben von 4 schmalen Plateaus. Nachts findest du auf dieser Insel nur Skorpione, sofern sie im aktuellen Monat auftreten. "
+            "German": "Auf dieser Insel findest du 7 Geldsteine umgeben von 4 schmalen Plateaus. Nachts findest du auf dieser Insel nur Skorpione, sofern sie im aktuellen Monat auftreten. ",
+            "Russian": "На острове четыре небольших треугольных возвышенности, по одной в каждом углу острова, а нижний уровень усеян цветами и 7 камнями с деньгами."
         },
         {
             "English": "Tarantula Island",
@@ -10223,14 +10303,16 @@
             "French (US)": "Île aux Tarentules",
             "German": "Vogelspinneninsel",
             "Spanish": "Isla de la tarántula",
-            "Spanish (US)": "Isla de la tarántula"
+            "Spanish (US)": "Isla de la tarántula",
+            "Russian": "Остров с тарантулами"
         },
         {
             "English": "Yes, the infamous one. The only insects that spawn here are tarantulas (as long as it is night time in a Tarantula month), and the 7 rocks have crafting materials if you can get to them. The river is thin enough that you can jump over it without a vaulting pole.",
             "English (Europe)": "Yes, the infamous one. The only insects that spawn here are tarantulas (as long as it is night time in a Tarantula month), and the 7 rocks have crafting materials if you can get to them. The river is thin enough that you can jump over it without a vaulting pole.",
             "French": "Oui, l'infâme. Les seuls insectes qui apparaissent ici sont des tarentules (tant qu'il fait nuit dans un mois de tarentule), et les 7 rochers ont des matériaux d'artisanat si vous pouvez les atteindre. La rivière est suffisamment fine pour que vous puissiez sauter par-dessus sans perche.",
             "French (US)": "Oui, l'infâme. Les seuls insectes qui apparaissent ici sont des tarentules (tant qu'il fait nuit dans un mois de tarentule), et les 7 rochers ont des matériaux d'artisanat si vous pouvez les atteindre. La rivière est suffisamment fine pour que vous puissiez sauter par-dessus sans perche.",
-            "German": "Ja, der berüchtigte Vogelspinneninsel.  Die einzigen Insekten, die hier auftreten, sind Vogelspinnen (solange es Nacht in einem Vogelspinnenmonat ist), und die 7 Felsen haben Handwerksmaterialien, wenn du sie überhaut erst erreichen kannst. Der Fluss ist dünn genug, dass du einfach ohne den Sprungstab darüber springen kannst."
+            "German": "Ja, der berüchtigte Vogelspinneninsel.  Die einzigen Insekten, die hier auftreten, sind Vogelspinnen (solange es Nacht in einem Vogelspinnenmonat ist), und die 7 Felsen haben Handwerksmaterialien, wenn du sie überhaut erst erreichen kannst. Der Fluss ist dünn genug, dass du einfach ohne den Sprungstab darüber springen kannst.",
+            "Russian": "Самый знаменитый остров. Единственное появляющееся здесь насекомое - тарантул (если у тарантулов наступает ночь), а у 7 камней есть материалы для крафта, если вы сможете добраться до них. Река настолько тонкая, что через нее можно перепрыгнуть без шеста для прыжков."
         },
         {
             "English": "Tree Island",
@@ -10239,14 +10321,16 @@
             "French (US)": "Île aux Feuillus",
             "German": "Bauminsel #1",
             "Spanish": "Isla de árboles",
-            "Spanish (US)": "Isla de árboles"
+            "Spanish (US)": "Isla de árboles",
+            "Russian": "Остров с деревьями"
         },
         {
             "English": "This island has no river or pond and has tons of hardwood and coconut trees, and the only insects that spawn are those that are associated with trees.",
             "English (Europe)": "This island has no river or pond and has tons of hardwood and coconut trees, and the only insects that spawn are those that are associated with trees.",
             "French": "Cette île n'a ni rivière ni étang et possède des tonnes de feuillus et de cocotiers, et les seuls insectes qui apparaissent sont ceux qui se trouvent sur les arbres.",
             "French (US)": "Cette île n'a ni rivière ni étang et possède des tonnes de feuillus et de cocotiers, et les seuls insectes qui apparaissent sont ceux qui se trouvent sur les arbres.",
-            "German": "Diese Insel hat keinen Fluss oder Teich, sie hat Tonnen von Hartholz- und Kokospalmen, und die einzigen Insekten, die spawnen, sind diejenigen, die an Bäumen zu finden sind."
+            "German": "Diese Insel hat keinen Fluss oder Teich, sie hat Tonnen von Hartholz- und Kokospalmen, und die einzigen Insekten, die spawnen, sind diejenigen, die an Bäumen zu finden sind.",
+            "Russian": "Остров, на котором нет рек или пруда. Много лиственных деревьев и пальм. Спавнящиеся насекомые связаны с деревьями."
         },
         {
             "English": "Tree Island 2",
@@ -10255,14 +10339,16 @@
             "French (US)": "Île aux Feuillus 2",
             "German": "Bauminsel #2",
             "Spanish": "Isla de árboles 2",
-            "Spanish (US)": "Isla de árboles 2"
+            "Spanish (US)": "Isla de árboles 2",
+            "Russian": "Остров с деревьями 2"
         },
         {
             "English": "This island is exactly the same as Bamboo Island but the trees are all just regular hardwood trees.",
             "English (Europe)": "This island is exactly the same as Bamboo Island but the trees are all just regular hardwood trees.",
             "French": "Cette île est exactement la même que l'île Bamboo, mais les arbres ne sont que des arbres feuillus ordinaires.",
             "French (US)": "Cette île est exactement la même que l'île Bamboo, mais les arbres ne sont que des arbres feuillus ordinaires.",
-            "German": "Diese Insel ist genau die gleiche wie die Bambusinsel, aber die Bäume hier sind alle nur normale Hartholzbäume."
+            "German": "Diese Insel ist genau die gleiche wie die Bambusinsel, aber die Bäume hier sind alle nur normale Hartholzbäume.",
+            "Russian": "Остров, аналогичный бамбуковому острову, но все деревья на острове - лиственные."
         },
         {
             "English": "Curly River Island",
@@ -10271,14 +10357,16 @@
             "French (US)": "Île à Rivière Courbée",
             "German": "Wasserinsekteninsel",
             "Spanish": "Isla del río rizado",
-            "Spanish (US)": "Isla del río rizado"
+            "Spanish (US)": "Isla del río rizado",
+            "Russian": "Остров с вьющейся рекой"
         },
         {
             "English": "There is one square cliff at the north east, a few flowers and rocks and a small amount of fruit trees. Only insects associated with water spawn here.",
             "English (Europe)": "There is one square cliff at the north east, a few flowers and rocks and a small amount of fruit trees. Only insects associated with water spawn here.",
             "French": "Il y a une falaise carrée au nord-est, quelques fleurs et rochers et une petite quantité d'arbres fruitiers. Seuls les insectes associés à l'eau apparaissent ici.",
             "French (US)": "Il y a une falaise carrée au nord-est, quelques fleurs et rochers et une petite quantité d'arbres fruitiers. Seuls les insectes associés à l'eau apparaissent ici.",
-            "German": "Im Nordosten gibt es eine quadratische Klippe, ein paar Blumen und Felsen und eine kleine Menge Obstbäume.  Hier spawnen nur Insekten, die im Wasser zu finden sind."
+            "German": "Im Nordosten gibt es eine quadratische Klippe, ein paar Blumen und Felsen und eine kleine Menge Obstbäume.  Hier spawnen nur Insekten, die im Wasser zu finden sind.",
+            "Russian": "На севере острова есть одна квадратная возвышенность с небольшим количеством цветов, камней и плодовых деревьев. Насекомые спавнящиеся здесь связаны с водой."
         },
         {
             "English": "Big Fish Island 2",
@@ -10287,14 +10375,16 @@
             "French (US)": "Île aux Gros Poissons 2",
             "German": "Riesenfischinsel #2",
             "Spanish": "Isla de peces grandes 2",
-            "Spanish (US)": "Isla de peces grandes 2"
+            "Spanish (US)": "Isla de peces grandes 2",
+            "Russian": "Остров с большими рыбами 2"
         },
         {
             "English": "This rare island only spawns big fish. Otherwise it is quite normal, with less flowers and a lower chance of appearing than the other big fish island.",
             "English (Europe)": "This rare island only spawns big fish. Otherwise it is quite normal, with less flowers and a lower chance of appearing than the other big fish island.",
             "French": "Sur cette île rare n'apparaissent que de gros poissons. Sinon, c'est une île tout à fait normale, avec moins de fleurs et moins de chances d'apparaître que l'autre île aux gros poissons.",
             "French (US)": "Sur cette île rare n'apparaissent que de gros poissons. Sinon, c'est une île tout à fait normale, avec moins de fleurs et moins de chances d'apparaître que l'autre île aux gros poissons.",
-            "German": "Hiwr kannst du nur große Fische angeln. Ansonsten ist sie ganz normal, mit wenig Blumen und einer sehr geringen Wahrscheinlichkeit auf dieser Insel zu landen als auf der andere Riesenfischinsel."
+            "German": "Hiwr kannst du nur große Fische angeln. Ansonsten ist sie ganz normal, mit wenig Blumen und einer sehr geringen Wahrscheinlichkeit auf dieser Insel zu landen als auf der andere Riesenfischinsel.",
+            "Russian": "Редкий остров с одним спавном больших рыб. В целом это стандартный остров с немного меньшим количеством цветов и маленьким шансом на попадание на этот остров, по сравнению с Островом больших рыб"
         },
         {
             "English": "Trash Island",
@@ -10303,7 +10393,8 @@
             "French (US)": "Île aux Déchets",
             "German": "Müllinsel",
             "Spanish": "Isla de basura",
-            "Spanish (US)": "Isla de basura"
+            "Spanish (US)": "Isla de basura",
+            "Russian": "Мусорный остров"
         },
         {
             "English": "Everything you can fish here is trash. Only water-related insects spawn.",
@@ -10312,7 +10403,8 @@
             "French (US)": "Tout ce que vous pouvez pêcher ici ce sont des ordures. Seuls les insectes d'eau apparaîssent.",
             "German": "Alles, was du hier fischen kannst, ist Müll.  Nur auf wasserbezogene Insekten spawnen.",
             "Spanish": "Todo lo que puedes pescar aquí es basura. Solo aparecen insectos relacionados con el agua",
-            "Spanish (US)": "Todo lo que puedes pescar aquí es basura. Solo aparecen insectos relacionados con el agua"
+            "Spanish (US)": "Todo lo que puedes pescar aquí es basura. Solo aparecen insectos relacionados con el agua",
+            "Russian": "Всё что вы споймаете в воде - мусор. Нерестятся только насекомые, связанные с водой."
         },
         {
             "English": "Fins Island",
@@ -10321,14 +10413,16 @@
             "French (US)": "Île aux Requins",
             "German": "Haiinsel",
             "Spanish": "Isla de aletas",
-            "Spanish (US)": "Isla de aletas"
+            "Spanish (US)": "Isla de aletas",
+            "Russian": "Остров с плавниками"
         },
         {
             "English": "A rectangular pond with rectangular cliffs inside, the tallest one being too tall to climb up to. The only fish that spawn here are the largest finned fish.",
             "English (Europe)": "A rectangular pond with rectangular cliffs inside, the tallest one being too tall to climb up to. The only fish that spawn here are the largest finned fish.",
             "French": "Un étang rectangulaire avec des falaises rectangulaires à l'intérieur, la plus haute étant trop haute pour y grimper. Les seuls poissons qui apparaîssent ici sont les plus gros poissons à nageoires.",
             "French (US)": "Un étang rectangulaire avec des falaises rectangulaires à l'intérieur, la plus haute étant trop haute pour y grimper. Les seuls poissons qui apparaîssent ici sont les plus gros poissons à nageoires.",
-            "German": "Ein rechteckiger Teich mit rechteckigen Klippen, von denen der höchste zu hoch ist, um hinaufzuklettern.  Die einzigen Fische, die hier spawnen, sind die größten Flossenfische."
+            "German": "Ein rechteckiger Teich mit rechteckigen Klippen, von denen der höchste zu hoch ist, um hinaufzuklettern.  Die einzigen Fische, die hier spawnen, sind die größten Flossenfische.",
+            "Russian": "Прямоугольный пруд с прямоугольной возвышенностью по центру. Самая высокая гора слишком высока, чтобы подняться на неё. Единственная рыба, которая здесь нерестится, - это крупная рыба."
         },
         {
             "English": "Falls Island",
@@ -10337,14 +10431,16 @@
             "French (US)": "Île aux Cascades",
             "German": "Wasserfallinsel",
             "Spanish": "Isla de las cataratas",
-            "Spanish (US)": "Isla de las cataratas"
+            "Spanish (US)": "Isla de las cataratas",
+            "Russian": "Остров водопадов"
         },
         {
             "English": "Lots of cliffs, waterfalls and river forks. Normal resource spawns.",
             "English (Europe)": "Lots of cliffs, waterfalls and river forks. Normal resource spawns.",
             "French": "Beaucoup de falaises, cascades et fourches de rivière. Les ressources normales apparaîssent.",
             "French (US)": "Beaucoup de falaises, cascades et fourches de rivière. Les ressources normales apparaîssent.",
-            "German": "Viele Klippen, Wasserfälle und Flussgabeln. Du kannst hier Normale Materialien farmen."
+            "German": "Viele Klippen, Wasserfälle und Flussgabeln. Du kannst hier Normale Materialien farmen.",
+            "Russian": "Остров с множеством возвышенностей, водопадов и речными разветвлениями. Стандартные ресурсы на острове."
         },
         {
             "English": "Gold Island",
@@ -10353,14 +10449,16 @@
             "French (US)": "Île aux Pépites d'or",
             "German": "Goldinsel",
             "Spanish": "Isla de oro",
-            "Spanish (US)": "Isla de oro"
+            "Spanish (US)": "Isla de oro",
+            "Russian": "Золотой остров"
         },
         {
             "English": "A very rare island with flowers, scorpions and a rectangular pond. If you climb up onto the cliff and climb down from the back, you can vault over to a tiny island in the middle and get 8 gold nuggets from a single rock.",
             "English (Europe)": "A very rare island with flowers, scorpions and a rectangular pond. If you climb up onto the cliff and climb down from the back, you can vault over to a tiny island in the middle and get 8 gold nuggets from a single rock.",
             "French": "Une île très rare avec des fleurs, des scorpions et un étang rectangulaire. Si vous montez sur la falaise et descendez à l'arrière, vous pouvez sauter sur une petite île au milieu et obtenir 8 pépites d'or d'un seul rocher.",
             "French (US)": "Une île très rare avec des fleurs, des scorpions et un étang rectangulaire. Si vous montez sur la falaise et descendez à l'arrière, vous pouvez sauter sur une petite île au milieu et obtenir 8 pépites d'or d'un seul rocher.",
-            "German": "Eine sehr seltene Insel mit Blumen, Skorpionen und einem rechteckigen Teich.  Wenn du auf die Klippe hoch und von hinten nach unten kletterst , kannst du zu einer winzigen Insel in der Mitte springen und 8 Goldnuggets von einem einzelnen Felsen erhalten."
+            "German": "Eine sehr seltene Insel mit Blumen, Skorpionen und einem rechteckigen Teich.  Wenn du auf die Klippe hoch und von hinten nach unten kletterst , kannst du zu einer winzigen Insel in der Mitte springen und 8 Goldnuggets von einem einzelnen Felsen erhalten.",
+            "Russian": "Очерь редкий остров с цветами, скорпионами и прямоугольным прудом. Если вы заберетесь на возвышенность и спуститесь снова с обратной стороны, вы можете перепрыгнуть на крошечный остров в центре и получить 8 золотых самородков с одного камня."
         }
     ],
     "Achievements": [
