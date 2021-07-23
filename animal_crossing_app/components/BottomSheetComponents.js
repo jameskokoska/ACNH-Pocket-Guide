@@ -580,36 +580,44 @@ export class VillagersGifts extends Component {
     var currentVillagers = getCurrentVillagerObjects();
     if(currentVillagers.length===0)
       return <View/>
-    return <View>
-      <View style={{height:15}}/>
-      <View style={{flexWrap: 'wrap', flexDirection:"row",justifyContent:"center"}}>
-        {currentVillagers.map( (villager, index)=>{
-          var likedStyles = [villager["Color 1"],villager["Color 2"],villager["Style 1"],villager["Style 2"]]
-          if (( this.props.item["Color 1"].includes(likedStyles[0])  || 
-          this.props.item["Color 2"].includes(likedStyles[1])  || 
-          this.props.item["Color 2"].includes(likedStyles[0])  || 
-          this.props.item["Color 1"].includes(likedStyles[1])   ) && (
-          this.props.item["Style 1"].includes(likedStyles[2])  || 
-          this.props.item["Style 2"].includes(likedStyles[3])  || 
-          this.props.item["Style 2"].includes(likedStyles[2])  || 
-          this.props.item["Style 1"].includes(likedStyles[3]) )){
-            return(
-              <View key={villager["Name"]+index+this.props.item["Name"]} style={{margin:5}}>
-                <View style={{width: 60,height: 60,borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.lightDarkAccent[global.darkMode]}}>
-                  <FastImage
-                    style={{height: 45,width: 45,resizeMode:'contain',}}
-                    source={{uri:villager["Icon Image"]}}
-                    cacheKey={villager["Icon Image"]}
-                  />
+    var chosenVillagers = []
+    for(var i = 0; i < currentVillagers.length; i++){
+      var villager = currentVillagers[i]
+      var likedStyles = [villager["Color 1"],villager["Color 2"],villager["Style 1"],villager["Style 2"]]
+      if (( this.props.item["Color 1"].includes(likedStyles[0])  || 
+      this.props.item["Color 2"].includes(likedStyles[1])  || 
+      this.props.item["Color 2"].includes(likedStyles[0])  || 
+      this.props.item["Color 1"].includes(likedStyles[1])   ) && (
+      this.props.item["Style 1"].includes(likedStyles[2])  || 
+      this.props.item["Style 2"].includes(likedStyles[3])  || 
+      this.props.item["Style 2"].includes(likedStyles[2])  || 
+      this.props.item["Style 1"].includes(likedStyles[3]) )){
+        chosenVillagers.push(villager)
+      }
+    }
+    if(chosenVillagers.length===0)
+      return <View/>
+    else
+      return <View>
+        <View style={{height:15}}/>
+        <View style={{flexWrap: 'wrap', flexDirection:"row",justifyContent:"center"}}>
+          {chosenVillagers.map( (villager, index)=>{
+              return(
+                <View key={villager["Name"]+index+this.props.item["Name"]} style={{margin:5}}>
+                  <View style={{width: 60,height: 60,borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.lightDarkAccent[global.darkMode]}}>
+                    <FastImage
+                      style={{height: 45,width: 45,resizeMode:'contain',}}
+                      source={{uri:villager["Icon Image"]}}
+                      cacheKey={villager["Icon Image"]}
+                    />
+                  </View>
                 </View>
-              </View>
-            )
-          }
-          return <View/>
-        })}
+              )
+            }
+          )}
+        </View>
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"Favorite villagers who like this item as a gift"}</TextFont>
       </View>
-      <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"Favorite villagers who like this item as a gift"}</TextFont>
-    </View>
   }
 }
 
