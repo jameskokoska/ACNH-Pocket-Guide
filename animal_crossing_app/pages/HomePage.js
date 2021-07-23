@@ -582,7 +582,7 @@ export class VillagerPopupPopup extends Component {
     }
     return(
       <PopupBottomCustom ref={(popup) => this.popup = popup}>
-        <TextFont bold={true} style={{textAlign:"center",fontSize: 30, marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{this.state.item.["NameLanguage"]}</TextFont>
+        <TextFont bold={true} style={{textAlign:"center",fontSize: 30, marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{this.state.item["NameLanguage"]}</TextFont>
         {villagerPopup}
       </PopupBottomCustom>
     )

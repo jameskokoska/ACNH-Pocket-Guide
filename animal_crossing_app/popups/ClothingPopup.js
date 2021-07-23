@@ -1,7 +1,7 @@
 import * as Font from 'expo-font';
 import React, {Component} from 'react';
 import {Dimensions, Image, View, Text} from 'react-native';
-import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
+import {VillagersGifts, InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
 import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"
 
@@ -62,6 +62,7 @@ class ClothingPopup extends Component {
         item={this.props.item}
         textProperty={["Source Notes"]}
       />
+      <VillagersGifts item={this.props.item}/>
     </View>
   }
 }

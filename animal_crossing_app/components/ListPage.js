@@ -218,7 +218,7 @@ function ListPage(props){
             } else if (searchActual.includes("New version") && props.newItems){
               filterFound = false;
               break;
-            } else if(searchActual.includes("Wishlist") && props.wishlistItems && global.collectionList.includes("wishlist"+item.["checkListKey"])){
+            } else if(searchActual.includes("Wishlist") && props.wishlistItems && global.collectionList.includes("wishlist"+item["checkListKey"])){
               filterFound = true;
               break;
             } else if (searchActual.includes("Wishlist") && props.wishlistItems){
@@ -241,7 +241,7 @@ function ListPage(props){
             for(var y = 0; y < searchActual.length; y++){
               if(searchActual[y].includes("Data Category")){
                 //Category selected
-                if(item.[searchActual[y].split(":")[0]]!==undefined && item.[searchActual[y].split(":")[0]].toLowerCase()===searchActual[y].split(":")[1].toLowerCase()){
+                if(item[searchActual[y].split(":")[0]]!==undefined && item[searchActual[y].split(":")[0]].toLowerCase()===searchActual[y].split(":")[1].toLowerCase()){
                   //Item in selected category
                   searchCategory = true;
                   break;
@@ -256,7 +256,7 @@ function ListPage(props){
             var searchCollected = true;
             if(searchActual.includes("Collected") || props.filterCollectedOnly){
               searchCollected = false;
-              if(global.collectionList.includes(item.["checkListKey"])){
+              if(global.collectionList.includes(item["checkListKey"])){
                 searchCollected = true;
                 if(searchActual.length===1 || props.filterCollectedOnly){
                   filterFound = true;
@@ -270,7 +270,7 @@ function ListPage(props){
               }
             } else if(searchActual.includes("Not Collected")){
               searchCollected = false;
-              if(!global.collectionList.includes(item.["checkListKey"])){
+              if(!global.collectionList.includes(item["checkListKey"])){
                 searchCollected = true;
                 if(searchActual.length===1){
                   filterFound = true;
@@ -284,7 +284,7 @@ function ListPage(props){
             
             //special case for categories
             if(props.title==="Obtainable DIYs" || props.title==="Obtainable Reactions" || props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions"){
-              if(searchCollected && item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
+              if(searchCollected && item[searchActual[z].split(":")[0]]!==undefined && item[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
                 if((props.title==="Obtainable DIYs" || props.title==="Unobtainable DIYs") && item.checkListKey.includes("recipesCheckList")){
                   filterFound = true;
                   break;
@@ -300,18 +300,18 @@ function ListPage(props){
                 continue;
               }
             }
-            else if(searchCollected && (props.villagerGifts===true && item.["Color 1"]!==undefined && item.["Color 2"]!==undefined && item.["Style 1"]!==undefined && item.["Style 2"]!==undefined) &&
-              (item.["Color 1"].includes(searchActual[0])  || 
-              item.["Color 2"].includes(searchActual[1])  || 
-              item.["Color 2"].includes(searchActual[0])  || 
-              item.["Color 1"].includes(searchActual[1])   ) && (
-              item.["Style 1"].includes(searchActual[2])  || 
-              item.["Style 2"].includes(searchActual[3])  || 
-              item.["Style 2"].includes(searchActual[2])  || 
-              item.["Style 1"].includes(searchActual[3]) )
+            else if(searchCollected && (props.villagerGifts===true && item["Color 1"]!==undefined && item["Color 2"]!==undefined && item["Style 1"]!==undefined && item["Style 2"]!==undefined) &&
+              (item["Color 1"].includes(searchActual[0])  || 
+              item["Color 2"].includes(searchActual[1])  || 
+              item["Color 2"].includes(searchActual[0])  || 
+              item["Color 1"].includes(searchActual[1])   ) && (
+              item["Style 1"].includes(searchActual[2])  || 
+              item["Style 2"].includes(searchActual[3])  || 
+              item["Style 2"].includes(searchActual[2])  || 
+              item["Style 1"].includes(searchActual[3]) )
             ){
               if(searchActual.includes("Villager Equippable:Yes")||searchActual.includes("Villager Equippable:No")){
-                if((item.["Villager Equippable"]==="Yes" && searchActual.includes("Villager Equippable:Yes")) || (item.["Villager Equippable"]==="No" && searchActual.includes("Villager Equippable:No"))){
+                if((item["Villager Equippable"]==="Yes" && searchActual.includes("Villager Equippable:Yes")) || (item["Villager Equippable"]==="No" && searchActual.includes("Villager Equippable:No"))){
                   filterFound = true;
                 } else {
                   filterFound = false;
@@ -378,11 +378,11 @@ function ListPage(props){
             // }
           }
           
-          if(item.[props.searchKey[j][x]]!==undefined){
+          if(item[props.searchKey[j][x]]!==undefined){
             //Translate search attribute from database
             //Search translations done here
             // searchFound = attemptToTranslateItem(item.[props.searchKey[j][x]]).toLowerCase().includes(search.toLowerCase())
-            searchFound = removeAccents(item.[props.searchKey[j][x]].toLowerCase()).includes(removeAccents(search.toLowerCase()))
+            searchFound = removeAccents(item[props.searchKey[j][x]].toLowerCase()).includes(removeAccents(search.toLowerCase()))
           }
           //&&((!props.wishlistItems&&!props.filterCollectedOnly&&!props.newItems)||searchFound)
           if(showUncraftableVar && (search==="" || searchFound) && (filterFound || searchActual.length === 0)){
@@ -416,7 +416,7 @@ function ListPage(props){
                 previousVariation = item["Name"];
               } else {
                 if(props.wishlistItems || searchActual.includes("Wishlist")){
-                  if(global.collectionList.includes("wishlist"+item.["checkListKey"])){
+                  if(global.collectionList.includes("wishlist"+item["checkListKey"])){
                     item.dataSet = j;
                     item.index = i;
                     dataUpdated = [...dataUpdated, item];
@@ -424,7 +424,7 @@ function ListPage(props){
                     previousVariation = item["Name"];
                   } 
                 } else if(searchActual.includes("Museum")){
-                  if(global.collectionList.includes("museum"+item.["checkListKey"])){
+                  if(global.collectionList.includes("museum"+item["checkListKey"])){
                     item.dataSet = j;
                     item.index = i;
                     dataUpdated = [...dataUpdated, item];
@@ -432,7 +432,7 @@ function ListPage(props){
                     previousVariation = item["Name"];
                   } 
                 } else if(searchActual.includes("Not Museum")){
-                  if(!global.collectionList.includes("museum"+item.["checkListKey"])){
+                  if(!global.collectionList.includes("museum"+item["checkListKey"])){
                     item.dataSet = j;
                     item.index = i;
                     dataUpdated = [...dataUpdated, item];
@@ -793,7 +793,7 @@ class BottomSheetRender extends Component{
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="VillagerPopup"){
         popUpContainer = <VillagerPopup item={this.state.item} setPage={this.props.setPage}/>
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="ClothingPopup"){
-        popUpContainer = <ClothingPopup item={this.state.item}/>
+        popUpContainer = <ClothingPopup item={this.state.item} setPage={this.props.setPage}/>
         marginHorizontal = 60;
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="FurniturePopup"){
         popUpContainer = <FurniturePopup item={this.state.item}/>

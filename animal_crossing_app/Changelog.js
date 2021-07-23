@@ -4,6 +4,9 @@ export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
 -Updated translations
+-You can now see which of your favorite villagers like a clothing item as a gift
+-View this in clothing item popups at the bottom
+-
 -Fixed bug where active creatures with 2 different times didn't show up under the active creature section
 -
 -Significantly improved tablet support

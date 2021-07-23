@@ -66,7 +66,7 @@ export async function getStorageData(data, checkListKey, defaultValue){
       var checkListKeyString = checkListKey[dataSet][0];
       //Loop through specific checklistKey property for that dataset
       for(var x = 1; x < checkListKey[dataSet].length; x++){
-        checkListKeyString += dataLoading[i].[checkListKey[dataSet][x]];
+        checkListKeyString += dataLoading[i][checkListKey[dataSet][x]];
       }
       //Get value from storage
       // var value=defaultValue;

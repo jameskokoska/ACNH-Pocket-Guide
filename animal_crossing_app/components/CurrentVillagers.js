@@ -11,7 +11,12 @@ export default class CurrentVillagers extends Component {
     super(props);
   }
   render(){
-    var currentVillagers = getCurrentVillagerObjects();
+    var currentVillagers
+    if(this.props.villagersToShow===undefined)
+      currentVillagers = getCurrentVillagerObjects();
+    else
+      currentVillagers = this.props.villagersToShow
+    
     if(currentVillagers.length===0){
       return(<>
         <View style={{height:10}}/>

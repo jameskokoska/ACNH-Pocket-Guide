@@ -118,14 +118,14 @@ class ListItem extends React.Component{
       }
       if(this.props.item["Bubble Color"]!==undefined){
         boxColor =this.props.item["Bubble Color"]+opacity;
-      }else if(this.props.item.["Color 1"]!==undefined){
-        if (this.props.item.["Color 2"]!==undefined && (this.props.item.["Color 1"]==='Colorful')){
-          boxColor = colors["itemBox"+this.props.item.["Color 2"]][global.darkMode]+opacity
-          if(this.props.item.["Color 2"]==='Colorful'){
-            boxColor = colors["itemBox"+this.props.item.["Color 1"]][global.darkMode]+opacity
+      }else if(this.props.item["Color 1"]!==undefined){
+        if (this.props.item["Color 2"]!==undefined && (this.props.item["Color 1"]==='Colorful')){
+          boxColor = colors["itemBox"+this.props.item["Color 2"]][global.darkMode]+opacity
+          if(this.props.item["Color 2"]==='Colorful'){
+            boxColor = colors["itemBox"+this.props.item["Color 1"]][global.darkMode]+opacity
           }
         } else {
-          boxColor = colors["itemBox"+this.props.item.["Color 1"]][global.darkMode]+opacity
+          boxColor = colors["itemBox"+this.props.item["Color 1"]][global.darkMode]+opacity
         }
       }
     }
@@ -164,7 +164,7 @@ class ListItem extends React.Component{
       }
     }
 
-    var label = this.props.item.[this.props.textProperty[this.props.item.dataSet]]
+    var label = this.props.item[this.props.textProperty[this.props.item.dataSet]]
 
     if(this.props.gridType==="smallGrid"){
       var textProperty2Component = <View/>;
@@ -203,9 +203,9 @@ class ListItem extends React.Component{
               <FastImage
                 style={styles.gridBoxImage}
                 source={{
-                  uri: this.props.item.[this.props.imageProperty[this.props.item.dataSet]],
+                  uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
                 }}
-                cacheKey={this.props.item.[this.props.imageProperty[this.props.item.dataSet]]}
+                cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
               />
               <View style={styles.gridBoxText}>
                 <TextFont translate={false} numberOfLines={2} bold={true} style={{textAlign:'center', color:this.props.labelColor, fontSize:13}}>{capitalize(label)}</TextFont>
@@ -243,9 +243,9 @@ class ListItem extends React.Component{
               <FastImage
                 style={styles.gridBoxImageLarge}
                 source={{
-                  uri: this.props.item.[this.props.imageProperty[this.props.item.dataSet]],
+                  uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
                 }}
-                cacheKey={this.props.item.[this.props.imageProperty[this.props.item.dataSet]]}
+                cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
               />
               <View style={styles.gridBoxTextLarge}>
                 <TextFont translate={false} bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{capitalize(label)}</TextFont>
@@ -294,9 +294,9 @@ class ListItem extends React.Component{
               <FastImage
                 style={styles.gridBoxImageLargeSmaller}
                 source={{
-                  uri: this.props.item.[this.props.imageProperty[this.props.item.dataSet]],
+                  uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
                 }}
-                cacheKey={this.props.item.[this.props.imageProperty[this.props.item.dataSet]]}
+                cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
               />
               <View style={styles.gridBoxTextLargeSmaller}>
                 <TextFont translate={false} bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{capitalize(label)}</TextFont>
@@ -333,9 +333,9 @@ class ListItem extends React.Component{
                 <FastImage
                   style={styles.rowImage}
                   source={{
-                    uri: this.props.item.[this.props.imageProperty[this.props.item.dataSet]],
+                    uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
                   }}
-                  cacheKey={this.props.item.[this.props.imageProperty[this.props.item.dataSet]]}
+                  cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
                 />
               </View>
               <View style={styles.rowTextContainer}>
@@ -346,7 +346,7 @@ class ListItem extends React.Component{
                   <TextFont bold={true} numberOfLines={2} style={{fontSize:16, color:redTextProperty2?colors.redText[global.darkMode]:this.props.specialLabelColor}}>{capitalize(removeBrackets(textProperty2Text))}</TextFont>
                 </View>
                 <View style={styles.rowTextBottom}>
-                  <TextFont bold={true} numberOfLines={2} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(removeBrackets(this.props.item.[this.props.textProperty3[this.props.item.dataSet]]))}</TextFont>
+                  <TextFont bold={true} numberOfLines={2} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(removeBrackets(this.props.item[this.props.textProperty3[this.props.item.dataSet]]))}</TextFont>
                 </View>
               </View>
               {fishShadow}
