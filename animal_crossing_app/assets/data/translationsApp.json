@@ -7283,6 +7283,10 @@
             "French": "Russe",
             "French (US)": "Russe",
             "German": "Russisch"
+        },
+        {
+            "English": "Favorite villagers who like this item as a gift",
+            "English (Europe)": "Favorite villagers who like this item as a gift"
         }
     ],
     "Sources": [
