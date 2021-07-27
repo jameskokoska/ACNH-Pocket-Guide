@@ -171,7 +171,7 @@ export {getMonthFromString, getCurrentDateObject, getMonthShort, getMonth, getWe
 //range >> February 25 – May 21
   //date >> Date object
 export function isDateInRange(range,rangeYear, date, specialCheck=""){ //startOnly, endOnly
-  if(range===undefined){
+  if(range===undefined || range.includes(";")){
     return false;
   }
   var rangeSplit = range.replace(/[^\x00-\x7F]/g, "");
@@ -240,7 +240,7 @@ export const specialEvents = [
         "Month": "Aug",
         "Day Start": "NA",
         "Day End": "NA",
-        "Special Day" : "Sunday",
+        "Special Day" : "Monday",
         "Special Occurrence": "2",
         "Hemisphere": "NA",
         "Time" : "7 PM - 12 AM",
