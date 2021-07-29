@@ -1,7 +1,9 @@
-export const gameVersion = "1.10.0"
+export const gameVersion = "1.11.0"
 
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
+-
+-Added new items from the update
 -
 -Fixed fireworks show date
 -

@@ -3419,6 +3419,26 @@
           "id": "Season/Event:π Day"
         },
         {
+          "name": "Obon",
+          "id": "Season/Event:Obon"
+        },
+        {
+          "name": "Moon-Viewing Day (2)",
+          "id": "Season/Event:Moon-Viewing Day (2)"
+        },
+        {
+          "name": "Day of the Dead",
+          "id": "Season/Event:Day of the Dead"
+        },
+        {
+          "name": "Moon-Viewing Day (3)",
+          "id": "Season/Event:Moon-Viewing Day (3)"
+        },
+        {
+          "name": "Chuseok",
+          "id": "Season/Event:Chuseok"
+        },
+        {
           "name": "International Museum Day",
           "id": "Season/Event:International Museum Day"
         },
@@ -8871,6 +8891,26 @@
           "id": "Season/Event:π Day"
         },
         {
+          "name": "Obon",
+          "id": "Season/Event:Obon"
+        },
+        {
+          "name": "Moon-Viewing Day (2)",
+          "id": "Season/Event:Moon-Viewing Day (2)"
+        },
+        {
+          "name": "Day of the Dead",
+          "id": "Season/Event:Day of the Dead"
+        },
+        {
+          "name": "Moon-Viewing Day (3)",
+          "id": "Season/Event:Moon-Viewing Day (3)"
+        },
+        {
+          "name": "Chuseok",
+          "id": "Season/Event:Chuseok"
+        },
+        {
           "name": "International Museum Day",
           "id": "Season/Event:International Museum Day"
         },
@@ -9009,6 +9049,14 @@
         {
           "name": "New Year's Eve",
           "id": "Season/Event:New Year's Eve"
+        },
+        {
+          "name": "Shichi-Go-San",
+          "id": "Season/Event:Shichi-Go-San"
+        },
+        {
+          "name": "Lantern Festival",
+          "id": "Season/Event:Lantern Festival"
         },
         {
           "name": "Seollal",
@@ -12123,6 +12171,26 @@
         {
           "name": "Gray & green",
           "id": "Variation:Gray & green"
+        },
+        {
+          "name": "Moons",
+          "id": "Variation:Moons"
+        },
+        {
+          "name": "Stained glass",
+          "id": "Variation:Stained glass"
+        },
+        {
+          "name": "Suns",
+          "id": "Variation:Suns"
+        },
+        {
+          "name": "Geese",
+          "id": "Variation:Geese"
+        },
+        {
+          "name": "Leaves",
+          "id": "Variation:Leaves"
         }
       ]
     },
