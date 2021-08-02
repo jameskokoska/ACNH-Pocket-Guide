@@ -3,6 +3,12 @@ export const gameVersion = "1.11.0"
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 - 
+-Added ability to hide/show uncraftable item variations
+-Added information on what can be customized in the furniture popup (body/pattern)
+-Added filter for partially collected items
+-Russian app translations (~85% complete)
+-Thanks for helping!
+-
 -Total of 5 other profiles are now supported (Main, and 4 others)
 -
 -Added new items from the update

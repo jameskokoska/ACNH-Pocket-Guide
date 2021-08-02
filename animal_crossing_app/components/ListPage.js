@@ -3,7 +3,7 @@ import {TouchableOpacity, TouchableWithoutFeedback, Text, View, Animated, SafeAr
 import Header, {HeaderLoading, HeaderActive} from './Header';
 import ListItem from './ListItem';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, removeBrackets} from "../LoadJsonData"
+import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, removeBrackets, allVariationsChecked} from "../LoadJsonData"
 import BottomSheet from 'reanimated-bottom-sheet';
 import {Dimensions } from "react-native";
 import {Variations, InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from './BottomSheetComponents';
@@ -211,6 +211,7 @@ function ListPage(props){
           var searchFound = false;
           var filterFound = false;
           var showUncraftableVar = true;
+          var showPartiallyFoundOnly = true;
           for(var z = 0; z < searchActual.length; z++){
             if(searchActual.includes("New version") && props.newItems && item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===gameVersion){
               filterFound = true;
@@ -281,6 +282,21 @@ function ListPage(props){
             if(searchActual.includes("Collected")&&searchActual.includes("Not Collected")){
               searchCollected=true;
             }
+            if (searchActual.includes("Partially collected variations")){
+              if(allVariationsChecked(item, item.index)){
+                showPartiallyFoundOnly = false;
+              } else {
+                showPartiallyFoundOnly = true;
+                searchCollected = true;
+              }
+              if((searchActual.includes("Collected")||searchActual.includes("Not Collected")) && searchCollected){
+                showPartiallyFoundOnly = true;
+              }
+            }
+            // let checkVariations = this.allVariationsChecked();
+            // if(this.state.variationsPercent!==checkVariations){
+            //   this.setState({variationsPercent: this.allVariationsChecked()})
+            // }
             
             //special case for categories
             if(props.title==="Obtainable DIYs" || props.title==="Obtainable Reactions" || props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions"){
@@ -353,9 +369,15 @@ function ListPage(props){
                 }
               }
               showUncraftableVar = true;
-              if(searchActual.includes("Show uncraftable item variations") && item["Body Customize"] !==undefined && item["Body Customize"] ==="No" && item["Variation"] !==undefined && item["Variation"] !=="NA"){
+              if(searchActual.includes("Show uncraftable item variations") && item["Body Customize"] !==undefined && item["Body Customize"] ==="No" && item["Variant ID"] !==undefined && item["Variant ID"] !=="NA"){
                 showUncraftableVar = true;
               } else if (searchActual.includes("Show uncraftable item variations")){
+                showUncraftableVar = false;
+              }
+
+              if(searchActual.includes("Show craftable item variations") && item["Pattern Customize"] !==undefined && item["Pattern Customize"] ==="No" && item["Body Customize"] !==undefined && item["Body Customize"] ==="No" && item["Variant ID"] !==undefined && item["Variant ID"] !=="NA"){
+                showUncraftableVar = false;
+              } else if (searchActual.includes("Show craftable item variations") && item["Variant ID"] !==undefined && item["Variant ID"] ==="NA"){
                 showUncraftableVar = false;
               }
               // if( item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
@@ -385,7 +407,7 @@ function ListPage(props){
             searchFound = removeAccents(item[props.searchKey[j][x]].toLowerCase()).includes(removeAccents(search.toLowerCase()))
           }
           //&&((!props.wishlistItems&&!props.filterCollectedOnly&&!props.newItems)||searchFound)
-          if(showUncraftableVar && (search==="" || searchFound) && (filterFound || searchActual.length === 0)){
+          if(showPartiallyFoundOnly && showUncraftableVar && (search==="" || searchFound) && (filterFound || searchActual.length === 0)){
             //Search result found...
               //If recipes item page, and its not DIY, remove
               if(props.recipes){

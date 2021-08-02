@@ -35,7 +35,7 @@ class PopupFilter extends Component {
       "name": "Collected/Not Collected",
       "id": "Collected/Not Collected",
       "children": [
-        {name:"Collected", id:"Collected"},{name:"Not Collected", id:"Not Collected"},{name:"Wishlist", id:"Wishlist"},
+        {name:"Collected", id:"Collected"},{name:"Partially collected variations", id:"Partially collected variations"},{name:"Not Collected", id:"Not Collected"},{name:"Wishlist", id:"Wishlist"},
       ]
     }]
     this.museumFilters = [{
@@ -64,7 +64,7 @@ class PopupFilter extends Component {
     var notCraftVariationsFilters = [{
       "name": "Uncraftable Item Variations Filter",
       "id": "Uncraftable Item Variations Filter",
-      "children": [{name:"Uncraftable item variations", id:"Show uncraftable item variations"}]
+      "children": [{name:"Show uncraftable item variations", id:"Show uncraftable item variations"}, {name:"Show craftable item variations", id:"Show craftable item variations"}]
     }]
     var activeFilters = [{
       "name": "Active Times Filters",

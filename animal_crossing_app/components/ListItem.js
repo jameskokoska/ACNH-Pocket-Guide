@@ -17,8 +17,7 @@ import {getPhotoShadow} from "./GetPhoto"
 import {getMonthShort} from "./DateFunctions"
 import colors from "../Colors"
 import {getCurrentDateObject, parseActiveTime} from "./DateFunctions"
-import {determineDataGlobal, inMuseum, inWishlist, inChecklist, attemptToTranslateItem, getSettingsString} from "../LoadJsonData"
-import {howManyVariationsChecked, getVariations} from "./BottomSheetComponents"
+import {determineDataGlobal, inMuseum, inWishlist, inChecklist, attemptToTranslateItem, getSettingsString, allVariationsChecked} from "../LoadJsonData"
 import FadeInOut from "../components/FadeInOut";
 
 const {width} = Dimensions.get('window');
@@ -35,7 +34,7 @@ class ListItem extends React.Component{
       collected: inChecklist(this.props.item.checkListKey),
       wishlist: inWishlist(this.props.item.checkListKey),
       museum: inMuseum(this.props.item.checkListKey, this.checkMuseumButton()),
-      variationsPercent: this.allVariationsChecked()
+      variationsPercent: allVariationsChecked(this.props.item, this.props.item.index)
     }
   }
 
@@ -47,9 +46,9 @@ class ListItem extends React.Component{
       if(this.state.wishlist!==inWishlist(this.props.item.checkListKey)){
         this.setWishlist(!this.state.wishlist)
       }
-      let checkVariations = this.allVariationsChecked();
+      let checkVariations = allVariationsChecked(this.props.item, this.props.item.index);
       if(this.state.variationsPercent!==checkVariations){
-        this.setState({variationsPercent: this.allVariationsChecked()})
+        this.setState({variationsPercent: checkVariations})
       }
       if(this.state.museum!==inMuseum(this.props.item.checkListKey, this.checkMuseumButton())){
         this.setMuseum(!this.state.museum)
@@ -62,14 +61,7 @@ class ListItem extends React.Component{
   componentWillUnmount() {
     this.mounted = false;
   }
-  allVariationsChecked = () => {
-    if(this.props.item.hasOwnProperty("Variation") && this.props.item["Variation"]!=="NA"){
-      const variations = getVariations(this.props.item["Name"],global.dataLoadedAll,this.props.item["checkListKey"], this.props.item.index);
-      const howManyVariations = howManyVariationsChecked(variations)
-      return howManyVariations/variations.length===1 || howManyVariations<1 ? true: false;
-    }
-    return true;
-  }
+  
   setCollected(collected, updateVariations=false){
     if(this.mounted){
       if(updateVariations){

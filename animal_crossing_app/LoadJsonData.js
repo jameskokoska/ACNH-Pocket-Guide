@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import {Vibration, Text} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {doWeSwapDate, isActive2} from "./components/DateFunctions";
+import {howManyVariationsChecked, getVariations} from "./components/BottomSheetComponents"
 import * as Localization from 'expo-localization';
 import * as FileSystem from 'expo-file-system'
 
@@ -1203,4 +1204,34 @@ export function getEventName(eventNameInput){
   // }
   var eventName = attemptToTranslate(eventNameInput, true);
   return eventName
+}
+
+export function determineCustomizationString(item){
+  if(item["Variant ID"] !==undefined && item["Variant ID"] !=="NA"){
+    var canCustomize = []
+    if(item["Body Customize"] !==undefined && item["Body Customize"] ==="Yes"){
+      canCustomize.push("the body")
+    }
+    if(item["Pattern Customize"] !==undefined && item["Pattern Customize"] ==="Yes"){
+      canCustomize.push("the pattern")
+    }
+    if(canCustomize.length===0){
+      return capitalizeFirst(attemptToTranslate("cannot be customized, variations must be obtained"))
+    }else if(canCustomize.length>1){
+      return capitalizeFirst(attemptToTranslate(canCustomize[0]) + " " +  "and" + " " +  attemptToTranslate(canCustomize[1]) + " " +  attemptToTranslate("can be customized"))
+    }else{
+      return capitalizeFirst(attemptToTranslate(canCustomize[0]) + " " + attemptToTranslate("can be customized"))
+    }
+  } else {
+    return ""
+  }
+}
+
+export function allVariationsChecked(item, index){
+  if(item.hasOwnProperty("Variation") && item["Variation"]!=="NA"){
+    const variations = getVariations(item["Name"],global.dataLoadedAll,item["checkListKey"], index);
+    const howManyVariations = howManyVariationsChecked(variations)
+    return howManyVariations/variations.length===1 || howManyVariations<1 ? true: false;
+  }
+  return true;
 }
