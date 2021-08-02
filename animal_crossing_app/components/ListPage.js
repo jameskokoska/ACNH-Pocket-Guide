@@ -293,11 +293,7 @@ function ListPage(props){
                 showPartiallyFoundOnly = true;
               }
             }
-            // let checkVariations = this.allVariationsChecked();
-            // if(this.state.variationsPercent!==checkVariations){
-            //   this.setState({variationsPercent: this.allVariationsChecked()})
-            // }
-            
+
             //special case for categories
             if(props.title==="Obtainable DIYs" || props.title==="Obtainable Reactions" || props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions"){
               if(searchCollected && item[searchActual[z].split(":")[0]]!==undefined && item[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
@@ -375,9 +371,11 @@ function ListPage(props){
                 showUncraftableVar = false;
               }
 
-              if(searchActual.includes("Show craftable item variations") && item["Pattern Customize"] !==undefined && item["Pattern Customize"] ==="No" && item["Body Customize"] !==undefined && item["Body Customize"] ==="No" && item["Variant ID"] !==undefined && item["Variant ID"] !=="NA"){
+              if(searchActual.includes("Show craftable item variations") && ((item["Pattern Customize"] !==undefined && item["Pattern Customize"] ==="No") || (item["Pattern Customize"] ===undefined)) && ((item["Body Customize"] !==undefined && item["Body Customize"] ==="No") || (item["Body Customize"] ===undefined)) && item["Variant ID"] !==undefined && item["Variant ID"] !=="NA"){
                 showUncraftableVar = false;
               } else if (searchActual.includes("Show craftable item variations") && item["Variant ID"] !==undefined && item["Variant ID"] ==="NA"){
+                showUncraftableVar = false;
+              } else if (searchActual.includes("Show craftable item variations") && item["Kit Cost"]===undefined){
                 showUncraftableVar = false;
               }
               // if( item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){

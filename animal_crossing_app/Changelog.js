@@ -6,6 +6,7 @@ export const changelog = `
 -Added ability to hide/show uncraftable item variations
 -Added information on what can be customized in the furniture popup (body/pattern)
 -Added filter for partially collected items
+-Fixed [Show craftable item variations] filter
 -Russian app translations (~85% complete)
 -Thanks for helping!
 -
