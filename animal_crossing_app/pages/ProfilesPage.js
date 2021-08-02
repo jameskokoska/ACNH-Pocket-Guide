@@ -11,7 +11,7 @@ import {CustomDatePicker} from "./SettingsPage"
 import {getWeekDayShort, getMonthShort, doWeSwapDate} from "../components/DateFunctions"
 import {ProfileIcon} from "./ProfileCurrentPage"
 
-export const profileNames = ["","Profile 1","Profile 2", "Profile 3"]
+export const profileNames = ["","Profile 1","Profile 2", "Profile 3", "Profile 4"]
 
 export default class ProfilesPage extends Component {
   constructor(props) {
