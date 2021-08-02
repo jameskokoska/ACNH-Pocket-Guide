@@ -1228,6 +1228,8 @@ export function determineCustomizationString(item){
 }
 
 export function allVariationsChecked(item, index){
+  if(!item) return false;
+  
   if(item.hasOwnProperty("Variation") && item["Variation"]!=="NA"){
     const variations = getVariations(item["Name"],global.dataLoadedAll,item["checkListKey"], index);
     const howManyVariations = howManyVariationsChecked(variations)
