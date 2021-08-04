@@ -297,7 +297,7 @@ class ActiveTime extends Component {
     }
 
     // console.log(currentMonthImages);
-    console.log(activeMonthImages);
+    // console.log(activeMonthImages);
     // console.log(currentTimeImage);
     // console.log(activeTimeImages);
     // console.log(this.props.item["Name"]);

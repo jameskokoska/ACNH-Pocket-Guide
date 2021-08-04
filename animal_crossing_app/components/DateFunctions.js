@@ -141,8 +141,16 @@ function isActive2(activeTimeInput, currentHour){
       // console.log(activeStart);
       // console.log(currentHour);
       // console.log(activeEnd);
+      // console.log(currentHour)
+      // console.log(activeEnd)
+      if(currentHour===activeEnd){
+        activeTimeOutput = false;
+        break;
+      }
       if(activeStart < activeEnd){
-        if(activeStart <= currentHour && currentHour <= activeEnd){
+        //5 - 20  currentHour:5
+        // 21 - 5 currentHour: 22
+        if(activeStart <= currentHour && currentHour < activeEnd){
           // console.log("trigger1")
           activeTimeOutput = true;
           break;
@@ -151,7 +159,7 @@ function isActive2(activeTimeInput, currentHour){
         }
       }
       else if(activeStart > activeEnd){
-        if(activeStart <= currentHour || currentHour <= activeEnd){
+        if(activeStart <= currentHour || currentHour < activeEnd){
           // console.log("trigger2")
           activeTimeOutput = true;
           break;
