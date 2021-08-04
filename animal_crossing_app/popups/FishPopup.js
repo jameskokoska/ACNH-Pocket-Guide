@@ -7,6 +7,7 @@ import {getPhotoShadow} from "../components/GetPhoto"
 import ActiveTime from "../components/ActiveTime";
 import FastImage from '../components/FastImage';
 import {attemptToTranslate} from "../LoadJsonData"
+import {BlueText} from "../components/Formattings"
 
 //   200
 //     image: "Critterpedia Image",
@@ -15,6 +16,7 @@ import {attemptToTranslate} from "../LoadJsonData"
 
 class FishPopup extends Component {
   render(){
+    var dummyItem = {"Spawn Rates String":attemptToTranslate("Spawn rates:") + " " + this.props.item["Spawn Rates"]}
     return <View style={{width: "100%", alignItems: "center"}}>
       <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 10, paddingTop: 20, paddingBottom: 20, borderRadius: 15, margin: 20}}><Image style={{width:150,height:35,resizeMode:'contain'}} source={getPhotoShadow(this.props.item,true)}/></View>
       <InfoLineBeside
@@ -25,6 +27,11 @@ class FishPopup extends Component {
         item2={this.props.item}
         textProperty2={["Sell"]}
         ending2={" " + attemptToTranslate("bells")}
+      />
+      <InfoLine
+        image={require("../assets/icons/hatching.png")} 
+        item={dummyItem}
+        textProperty={["Spawn Rates String"]}
       />
       <ActiveTime item={this.props.item}/>
       <View style={{marginTop: 30, flexDirection:"row", justifyContent:"space-around",width: Dimensions.get('window').width}}>
@@ -45,6 +52,7 @@ class FishPopup extends Component {
       </View>
       <View style={{height:15}}/>
       <InfoDescription text={this.props.item["Description"]}/>
+      <BlueText>Common creatures have higher spawn rates</BlueText>
     </View>
   }
 }

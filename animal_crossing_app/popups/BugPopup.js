@@ -7,10 +7,12 @@ import {getPhotoShadow} from "../components/GetPhoto"
 import ActiveTime from "../components/ActiveTime";
 import FastImage from '../components/FastImage';
 import {attemptToTranslate} from "../LoadJsonData"
+import {BlueText} from "../components/Formattings"
 
 
 class BugPopup extends Component {
   render(){
+    var dummyItem = {"Spawn Rates String":attemptToTranslate("Spawn rates:") + " " + this.props.item["Spawn Rates"]}
     return <View style={{width: "100%", alignItems: "center"}}>
       <InfoLine
         image={require("../assets/icons/coin.png")} 
@@ -22,6 +24,11 @@ class BugPopup extends Component {
         image={require("../assets/icons/weather.png")} 
         item={this.props.item}
         textProperty={["Weather"]}
+      />
+      <InfoLine
+        image={require("../assets/icons/hatching.png")} 
+        item={dummyItem}
+        textProperty={["Spawn Rates String"]}
       />
       <ActiveTime item={this.props.item}/>
       <View style={{marginTop: 30, flexDirection:"row", justifyContent:"space-around",width: Dimensions.get('window').width}}>
@@ -42,6 +49,7 @@ class BugPopup extends Component {
       </View>
       <View style={{height:15}}/>
       <InfoDescription text={this.props.item["Description"]}/>
+      <BlueText>Common creatures have higher spawn rates</BlueText>
     </View>
   }
 }

@@ -7,10 +7,12 @@ import {getPhotoShadow} from "../components/GetPhoto"
 import ActiveTime from "../components/ActiveTime";
 import FastImage from '../components/FastImage';
 import {attemptToTranslate} from "../LoadJsonData"
+import {BlueText} from "../components/Formattings"
 
 
 class SeaPopup extends Component {
   render(){
+    var dummyItem = {"Spawn Rates String":attemptToTranslate("Spawn rates:") + " " + this.props.item["Spawn Rates"]}
     return <View style={{width: "100%", alignItems: "center"}}>
       <InfoLine
         image={require("../assets/icons/coin.png")} 
@@ -18,15 +20,18 @@ class SeaPopup extends Component {
         textProperty={["Sell"]}
         ending={" " + attemptToTranslate("bells")}
       />
-      <InfoLine
-        image={require("../assets/icons/magnifyingGlass.png")} 
-        item={this.props.item}
-        textProperty={["Shadow"]}
+      <InfoLineBeside
+        image1={require("../assets/icons/magnifyingGlass.png")} 
+        item1={this.props.item}
+        textProperty1={["Shadow"]}
+        image2={require("../assets/icons/speed.png")} 
+        item2={this.props.item}
+        textProperty2={["Movement Speed"]}
       />
       <InfoLine
-        image={require("../assets/icons/speed.png")} 
-        item={this.props.item}
-        textProperty={["Movement Speed"]}
+        image={require("../assets/icons/hatching.png")} 
+        item={dummyItem}
+        textProperty={["Spawn Rates String"]}
       />
       <ActiveTime item={this.props.item}/>
       <View style={{marginTop: 30, flexDirection:"row", justifyContent:"space-around",width: Dimensions.get('window').width}}>
@@ -47,6 +52,7 @@ class SeaPopup extends Component {
       </View>
       <View style={{height:15}}/>
       <InfoDescription text={this.props.item["Description"]}/>
+      <BlueText>Common creatures have higher spawn rates</BlueText>
     </View>
   }
 }

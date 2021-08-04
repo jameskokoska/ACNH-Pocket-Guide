@@ -76,3 +76,11 @@ export class Paragraph extends Component {
     }
   }
 }
+
+export class BlueText extends Component {
+  render(){
+    return(
+      <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", marginVertical: 10}}>{attemptToTranslate(this.props.children)}</TextFont>
+    )
+  }
+}

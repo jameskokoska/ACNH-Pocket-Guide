@@ -3,8 +3,12 @@ export const gameVersion = "1.11.0"
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 - 
+-Emergency crash fix when viewing info on some items (umbrellas)
+-Sorry for the bug :(
+-
 -Emergency crash fix when checking off variations
 -Sorry about the inconvenience and thank you to the people who pointed it out to me :)
+-Added spawn rates to creature popups
 -
 -Added ability to hide/show uncraftable item variations
 -Added information on what can be customized in the furniture popup (body/pattern)

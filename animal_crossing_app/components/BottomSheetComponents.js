@@ -11,6 +11,7 @@ import {ScrollView} from 'react-native-gesture-handler'
 import {PopupInfoCustom} from "./Popup"
 import {getMonth, doWeSwapDate} from './DateFunctions'
 import CurrentVillagers from "./CurrentVillagers"
+import { BlueText } from "./Formattings.js";
 
 export class CircularImage extends Component {
   render() {
@@ -584,14 +585,14 @@ export class VillagersGifts extends Component {
     for(var i = 0; i < currentVillagers.length; i++){
       var villager = currentVillagers[i]
       var likedStyles = [villager["Color 1"],villager["Color 2"],villager["Style 1"],villager["Style 2"]]
-      if (( this.props.item["Color 1"].includes(likedStyles[0])  || 
-      this.props.item["Color 2"].includes(likedStyles[1])  || 
-      this.props.item["Color 2"].includes(likedStyles[0])  || 
-      this.props.item["Color 1"].includes(likedStyles[1])   ) && (
-      this.props.item["Style 1"].includes(likedStyles[2])  || 
-      this.props.item["Style 2"].includes(likedStyles[3])  || 
-      this.props.item["Style 2"].includes(likedStyles[2])  || 
-      this.props.item["Style 1"].includes(likedStyles[3]) )){
+      if (( (this.props.item["Color 1"] !== undefined && this.props.item["Color 1"].includes(likedStyles[0]))  || 
+      (this.props.item["Color 2"] !== undefined && this.props.item["Color 2"].includes(likedStyles[1]))  || 
+      (this.props.item["Color 2"] !== undefined && this.props.item["Color 2"].includes(likedStyles[0]))  || 
+      (this.props.item["Color 1"] !== undefined && this.props.item["Color 1"].includes(likedStyles[1]))   ) && (
+      (this.props.item["Style 1"] !== undefined && this.props.item["Style 1"].includes(likedStyles[2]))  || 
+      (this.props.item["Style 2"] !== undefined && this.props.item["Style 2"].includes(likedStyles[3]))  || 
+      (this.props.item["Style 2"] !== undefined && this.props.item["Style 2"].includes(likedStyles[2]))  || 
+      (this.props.item["Style 1"] !== undefined && this.props.item["Style 1"].includes(likedStyles[3])) )){
         chosenVillagers.push(villager)
       }
     }
@@ -616,7 +617,7 @@ export class VillagersGifts extends Component {
             }
           )}
         </View>
-        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"Favorite villagers who like this item as a gift"}</TextFont>
+        <BlueText>Favorite villagers who like this item as a gift</BlueText>
       </View>
   }
 }
