@@ -206,7 +206,6 @@ export class PopupBottomCustom extends Component {
   }
   
   renderContent = () => {
-    console.log(this.state.heightOffset)
     if(this.state.closed && this.state.heightOffset!==0){
       this.setState({heightOffset:0});
     }

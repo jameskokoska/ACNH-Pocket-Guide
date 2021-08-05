@@ -25,7 +25,7 @@ import PopupFilter from './PopupFilter'
 import TextFont from "./TextFont"
 import {compareItemID, removeAccents, inChecklist, attemptToTranslateItem, getSettingsString, attemptToTranslate} from "../LoadJsonData"
 import {PopupBottomCustom} from "./Popup"
-import {gameVersion} from "../Changelog"
+import {gameVersion, museumCategories} from "../Changelog"
 
 //use tabs={false} if the page doesn't have  the tab bar
 
@@ -444,7 +444,7 @@ function ListPage(props){
                     previousVariation = item["Name"];
                   } 
                 } else if(searchActual.includes("Museum")){
-                  if(global.collectionList.includes("museum"+item["checkListKey"])){
+                  if(global.collectionList.includes("museum"+item["checkListKey"]) && item["Data Category"]!==undefined && museumCategories.includes(item["Data Category"])){
                     item.dataSet = j;
                     item.index = i;
                     dataUpdated = [...dataUpdated, item];
@@ -452,7 +452,7 @@ function ListPage(props){
                     previousVariation = item["Name"];
                   } 
                 } else if(searchActual.includes("Not Museum")){
-                  if(!global.collectionList.includes("museum"+item["checkListKey"])){
+                  if(!global.collectionList.includes("museum"+item["checkListKey"]) && item["Data Category"]!==undefined && museumCategories.includes(item["Data Category"])){
                     item.dataSet = j;
                     item.index = i;
                     dataUpdated = [...dataUpdated, item];

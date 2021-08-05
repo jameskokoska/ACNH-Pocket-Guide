@@ -1,10 +1,12 @@
 export const gameVersion = "1.11.0"
+export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 - 
 -Backing up to a text document now works on Android 11 and all versions
 -Fixed active time for creatures (the last hour got included by accident)
+-Donated to museum filters now only show museum items
 -
 -Emergency crash fix when viewing info on some items (umbrellas)
 -Sorry for the bug :(
