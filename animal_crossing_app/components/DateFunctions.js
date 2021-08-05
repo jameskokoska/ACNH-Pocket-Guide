@@ -248,7 +248,7 @@ export const specialEvents = [
         "Month": "Aug",
         "Day Start": "NA",
         "Day End": "NA",
-        "Special Day" : "Monday",
+        "Special Day" : "Sunday",
         "Special Occurrence": "2",
         "Hemisphere": "NA",
         "Time" : "7 PM - 12 AM",
