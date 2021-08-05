@@ -6,6 +6,7 @@ import Popup from './Popup';
 import * as DocumentPicker from 'expo-document-picker';
 import * as FileSystem from 'expo-file-system';
 import * as MediaLibrary from 'expo-media-library';
+import { StorageAccessFramework } from 'expo-file-system';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {attemptToTranslate, getStorage, collectionListSave, loadGlobalData, setSettingsString} from "../LoadJsonData"
 import colors from "../Colors"
@@ -33,10 +34,10 @@ class LoadFile extends Component {
               var totalImported = await importAllData(text)
               this.setState({loadedNumber:totalImported}) 
             })
-            this.loadPopupResults.setPopupVisible(true);
+            this.loadPopupResults?.setPopupVisible(true);
           }}
           text={"Import File"}
-          textLower={"\n" + attemptToTranslate("Please import ACNHPocketGuideData.txt.")+ "\n\n" + attemptToTranslate("The default location is:") + "\n\n" + "Pictures/ACNHPocketGuide/ACNHPocketGuideData.txt"}
+          textLower={"\n" + attemptToTranslate("Please import ACNHPocketGuideData.txt.")}
         />
         <Popup 
           ref={(loadPopupResults) => this.loadPopupResults = loadPopupResults}
@@ -51,7 +52,7 @@ class LoadFile extends Component {
           vibrate={5}
           onPress={() => {
             this.loadPopup?.setPopupVisible(true);
-        }}/>        
+        }}/>
       </View>
     )
   }
@@ -210,7 +211,7 @@ class ExportFile extends Component {
           button1={"OK"}
           button1Action={()=>{}}
           text={"Export Results"}
-          textLower={this.state.message + "\n\n" + attemptToTranslate("If you are using Android version 11 or above, this may not work. Please use the Clipboard backing up options below. Sorry for the inconvenience.")}
+          textLower={this.state.message}
         />
         <ButtonComponent
           text={"Export Data"}
@@ -219,14 +220,20 @@ class ExportFile extends Component {
           onPress={async () => {
             var dataTotal = await getAllData();
             console.log(dataTotal)
-            const res = await MediaLibrary.requestPermissionsAsync();
-            if (res.granted) {
-              var fileUri = FileSystem.documentDirectory + "ACNHPocketGuideData.txt";
-              await FileSystem.writeAsStringAsync(fileUri, dataTotal, { encoding: FileSystem.EncodingType.UTF8 });
-              const asset = await MediaLibrary.createAssetAsync(fileUri)
-              await MediaLibrary.createAlbumAsync("ACNHPocketGuide", asset, false)
-              this.setState({message:"\n"+attemptToTranslate("File exported to") + "\n\n" + "Pictures/ACNHPocketGuide/ACNHPocketGuideData.txt", title:"Backup Successful"});
-              this.exportPopup?.setPopupVisible(true);
+            const permissions = await StorageAccessFramework.requestDirectoryPermissionsAsync();
+            if (permissions.granted) {
+              try{
+                const uri = permissions.directoryUri;
+                this.setState({message:attemptToTranslate("Please wait")});
+                this.exportPopup?.setPopupVisible(false);
+                var filePath = await StorageAccessFramework.createFileAsync(uri, "ACNHPocketGuideData.txt", "txt")
+                await StorageAccessFramework.writeAsStringAsync(filePath, dataTotal, { encoding: FileSystem.EncodingType.UTF8 });
+                this.setState({message:"\n"+attemptToTranslate("File exported to") + "\n\n" + filePath, title:"Backup Successful"});
+                this.exportPopup?.setPopupVisible(true);
+              } catch {
+                this.setState({message:"An error occurred, please choose another folder and try again."});
+                this.exportPopup?.setPopupVisible(true);
+              }
             } else {
               this.setState({message:"Error backing up. Please enable the permissions and try again."});
               this.exportPopup?.setPopupVisible(true);

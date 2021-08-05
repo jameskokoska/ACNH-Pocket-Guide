@@ -185,6 +185,7 @@ export class PopupBottomCustom extends Component {
     this.state = {
       heightOffset:0,
       openStart:false,
+      closed:true,
     }
     this.bottomSheetCallback = new Animated.Value(1);
   }
@@ -199,11 +200,16 @@ export class PopupBottomCustom extends Component {
 
   setPopupVisible = (visible) => {
     if(this.mounted){
+      this.setState({closed:false})
       visible ? this.sheetRef?.snapTo(0) : this.sheetRef?.snapTo(1)
     }
   }
   
   renderContent = () => {
+    console.log(this.state.heightOffset)
+    if(this.state.closed && this.state.heightOffset!==0){
+      this.setState({heightOffset:0});
+    }
     return(
       <>
       <View style={{width:Dimensions.get('window').width,height:Dimensions.get('window').height-this.state.heightOffset}}/>
@@ -258,7 +264,7 @@ export class PopupBottomCustom extends Component {
         springConfig={springConfig}
         enabledContentTapInteraction={false}
         onCloseStart={()=>{if(this.mounted){this.setState({openStart:false})}}}
-        onCloseEnd={()=>{if(this.mounted){this.setState({openStart:false});} this.props.onClose===undefined ? 0 : this.props.onClose();}}
+        onCloseEnd={()=>{if(this.mounted){this.setState({openStart:false, closed:true, heightOffset:0});} this.props.onClose===undefined ? 0 : this.props.onClose();}}
         onOpenStart={()=>{if(this.mounted){this.setState({openStart:true})}}}
         onOpenEnd={()=>{if(this.mounted){this.setState({openStart:true})}}}
       />
