@@ -7,6 +7,7 @@ export const changelog = `
 -Backing up to a text document now works on Android 11 and all versions
 -Fixed active time for creatures (the last hour got included by accident)
 -Donated to museum filters now only show museum items
+-Updated translations
 -
 -Emergency crash fix when viewing info on some items (umbrellas)
 -Sorry for the bug :(
@@ -27,6 +28,8 @@ export const changelog = `
 -Added new items from the update
 -
 -Fixed fireworks show date
+-
+-Past changes:
 -
 -Updated translations
 -You can now see which of your favorite villagers like a clothing item as a gift
@@ -72,8 +75,6 @@ export const changelog = `
 -Added creator code to profile section
 -Fixed friend code and dream address not saving for different profiles
 -Fixed notification translations
--
--Past changes:
 -
 -Major translations added
 -German translation is no longer work in progress (about 95% of translations completed)

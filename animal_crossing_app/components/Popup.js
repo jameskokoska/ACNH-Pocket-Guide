@@ -185,7 +185,6 @@ export class PopupBottomCustom extends Component {
     this.state = {
       heightOffset:0,
       openStart:false,
-      closed:true,
     }
     this.bottomSheetCallback = new Animated.Value(1);
   }
@@ -200,15 +199,12 @@ export class PopupBottomCustom extends Component {
 
   setPopupVisible = (visible) => {
     if(this.mounted){
-      this.setState({closed:false})
+      this.setState({heightOffset:0})
       visible ? this.sheetRef?.snapTo(0) : this.sheetRef?.snapTo(1)
     }
   }
   
   renderContent = () => {
-    if(this.state.closed && this.state.heightOffset!==0){
-      this.setState({heightOffset:0});
-    }
     return(
       <>
       <View style={{width:Dimensions.get('window').width,height:Dimensions.get('window').height-this.state.heightOffset}}/>
@@ -224,7 +220,7 @@ export class PopupBottomCustom extends Component {
         onLayout={(event) => {
             var {x, y, width, height} = event.nativeEvent.layout;
             if(this.mounted){
-              this.setState({heightOffset:height});
+              this.setState({heightOffset:height, updateOffset:false});
             }
           }} 
       >
@@ -263,7 +259,7 @@ export class PopupBottomCustom extends Component {
         springConfig={springConfig}
         enabledContentTapInteraction={false}
         onCloseStart={()=>{if(this.mounted){this.setState({openStart:false})}}}
-        onCloseEnd={()=>{if(this.mounted){this.setState({openStart:false, closed:true, heightOffset:0});} this.props.onClose===undefined ? 0 : this.props.onClose();}}
+        onCloseEnd={()=>{if(this.mounted){this.setState({openStart:false}); this.state.heightOffset = 0} this.props.onClose===undefined ? 0 : this.props.onClose();}}
         onOpenStart={()=>{if(this.mounted){this.setState({openStart:true})}}}
         onOpenEnd={()=>{if(this.mounted){this.setState({openStart:true})}}}
       />
@@ -271,6 +267,10 @@ export class PopupBottomCustom extends Component {
       </>
     )
   }
+}
+
+class RenderContent extends Component{
+  
 }
 
 const styles = StyleSheet.create({

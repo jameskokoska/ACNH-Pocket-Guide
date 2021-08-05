@@ -65,7 +65,8 @@ function ListPage(props){
           props.scrollToEnd();
         }
         //pass in the check mark update function of that current element
-        bottomSheetRenderRef.current.update(item, updateCheckChild)}}
+        bottomSheetRenderRef.current.update(item, updateCheckChild)
+      }}
       boxColor={props.boxColor}
       labelColor={props.labelColor}
       accentColor={props.accentColor}
