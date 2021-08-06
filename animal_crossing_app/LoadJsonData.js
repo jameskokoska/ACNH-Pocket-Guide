@@ -691,7 +691,7 @@ export const settings = [
   },
   {
     "keyName" : "settingsEnableVibrations",
-    "defaultValue" : "true",
+    "defaultValue" : "false",
     "currentValue" : "",
     "picture" : require("./assets/icons/vibration.png"),
     "displayName" : "Enable haptic feedback",

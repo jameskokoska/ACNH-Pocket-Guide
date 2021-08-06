@@ -5,6 +5,7 @@ export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 - 
 -[Compress variations into a scrollable list] setting now defaults to off
+-[Enable haptic feedback] setting now defaults to off
 -
 -Fixed firework event day
 -
