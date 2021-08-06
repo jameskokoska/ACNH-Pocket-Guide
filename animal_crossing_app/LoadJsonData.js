@@ -634,7 +634,7 @@ export const settings = [
   },
   {
     "keyName" : "settingsCompressVariations",
-    "defaultValue" : "true",
+    "defaultValue" : "false",
     "currentValue" : "",
     "picture" : require("./assets/icons/variations.png"),
     "displayName" : "Compress variations into a scrollable list",
