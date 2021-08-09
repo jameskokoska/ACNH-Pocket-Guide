@@ -1028,6 +1028,8 @@ export function getDefaultLanguage(){
     defaultLanguage = "Korean";
   } else if(Localization.locale.includes("ru")){
     defaultLanguage = "Russian";
+  } else if(Localization.locale.includes("nl")){
+    defaultLanguage = "Dutch";
   }
   return defaultLanguage;
 }

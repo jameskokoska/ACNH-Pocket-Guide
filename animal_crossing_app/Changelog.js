@@ -5,6 +5,7 @@ export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 - 
 -Updated translations
+-Added new item translations
 -Fixed event translations
 -
 -[Compress variations into a scrollable list] setting now defaults to off
