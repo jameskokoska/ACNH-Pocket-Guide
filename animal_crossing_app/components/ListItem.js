@@ -1,12 +1,10 @@
-import React, {PureComponent, useState, useEffect, Component } from 'react';
+import React, { Component } from 'react';
 import {
   Dimensions,
   StyleSheet,
-  Text,
   TouchableOpacity,
   View,
   TouchableNativeFeedback,
-  Vibration,
   Image,
 } from 'react-native';
 import TextFont from './TextFont';
@@ -17,10 +15,9 @@ import {getPhotoShadow} from "./GetPhoto"
 import {getMonthShort} from "./DateFunctions"
 import colors from "../Colors"
 import {getCurrentDateObject, parseActiveTime} from "./DateFunctions"
-import {determineDataGlobal, inMuseum, inWishlist, inChecklist, attemptToTranslateItem, getSettingsString, allVariationsChecked} from "../LoadJsonData"
+import {inMuseum, inWishlist, inChecklist,getSettingsString, allVariationsChecked} from "../LoadJsonData"
 import FadeInOut from "../components/FadeInOut";
 
-const {width} = Dimensions.get('window');
 const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 
 class ListItem extends React.Component{

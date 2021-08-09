@@ -1508,7 +1508,11 @@
         {
             "English": "Partially collected variations",
             "English (Europe)": "Partially collected variations",
-            "German": "Teilweise gesammelt "
+            "French": "Variations partiellement collectées",
+            "French (US)": "Variations partiellement collectées",
+            "German": "Teilweise gesammelt ",
+            "Spanish": "Variaciones recopiladas parcialmente",
+            "Spanish (US)": "Variaciones recopiladas parcialmente"
         },
         {
             "English": "Fish",
@@ -4903,7 +4907,11 @@
         {
             "English": "Hide uncraftable item variations",
             "English (Europe)": "Hide uncraftable item variations",
-            "German": "Versteck nicht herstellbare Gegenstandsvarianten"
+            "French": "Masquer les variantes d'objets impossibles à fabriquer",
+            "French (US)": "Masquer les variantes d'objets impossibles à fabriquer",
+            "German": "Versteck nicht herstellbare Gegenstandsvarianten",
+            "Spanish": "Ocultar variaciones de artículos que no se pueden crear",
+            "Spanish (US)": "Ocultar variaciones de artículos que no se pueden crear"
         },
         {
             "English": "Achievements",
@@ -6432,7 +6440,12 @@
         },
         {
             "English": "An error occurred, please choose another folder and try again.",
-            "English (Europe)": "An error occurred, please choose another folder and try again."
+            "English (Europe)": "An error occurred, please choose another folder and try again.",
+            "French": "Une erreur s'est produite, veuillez choisir un autre dossier et réessayer.",
+            "French (US)": "Une erreur s'est produite, veuillez choisir un autre dossier et réessayer.",
+            "German": "Es ist ein Fehler aufgetreten. Bitte wählen Sie einen anderen Ordner und versuchen Sie es erneut.",
+            "Spanish": "Ocurrió un error, elija otra carpeta e intente nuevamente.",
+            "Spanish (US)": "Ocurrió un error, elija otra carpeta e intente nuevamente."
         },
         {
             "English": "The time is displayed in red if the creature cannot be caught in the current month.",
@@ -6739,6 +6752,7 @@
             "French (US)": "Type d'objets",
             "German": "Typ Kategorien ",
             "Spanish": "Tipos de categorías",
+            "Spanish (US)": "Tipos de categorías",
             "Russian": "Категории"
         },
         {
@@ -7147,6 +7161,7 @@
             "French (US)": "Trier par...",
             "German": "Einrichten dein Profil ",
             "Spanish": "Ordenar por...",
+            "Spanish (US)": "Ordenar por...",
             "Russian": "Сортировать..."
         },
         {
@@ -7156,6 +7171,7 @@
             "French (US)": "Sens de tri inversé",
             "German": "Sortierrichtung umkehren",
             "Spanish": "Ordenar de forma inversa",
+            "Spanish (US)": "Ordenar de forma inversa",
             "Russian": "Изменить порядок сортировки"
         },
         {
@@ -7165,6 +7181,7 @@
             "French (US)": "Type de catégorie",
             "German": "Kategorientyp",
             "Spanish": "Tipo de categoría",
+            "Spanish (US)": "Tipo de categoría",
             "Russian": "Категории"
         },
         {
@@ -7174,6 +7191,7 @@
             "French (US)": "Prix de vente",
             "German": "Verkaufspreis",
             "Spanish": "Precio de venta",
+            "Spanish (US)": "Precio de venta",
             "Russian": "Цена продажи"
         },
         {
@@ -7183,6 +7201,7 @@
             "French (US)": "Prix d'achat",
             "German": "Kaufpreis",
             "Spanish": "Precio de compra",
+            "Spanish (US)": "Precio de compra",
             "Russian": "Цена покупки"
         },
         {
@@ -7192,6 +7211,7 @@
             "French (US)": "Tag de meuble",
             "German": "Möbelkategorie",
             "Spanish": "Etiquetado del mueble",
+            "Spanish (US)": "Etiquetado del mueble",
             "Russian": "Мебельная бирка"
         },
         {
@@ -7201,6 +7221,7 @@
             "French (US)": "Donné au musée",
             "German": "dem Museum gespendet",
             "Spanish": "Donado al museo",
+            "Spanish (US)": "Donado al museo",
             "Russian": "Пожертвовано в музей"
         },
         {
@@ -7210,6 +7231,7 @@
             "French (US)": "Non donné au musée",
             "German": "Nicht an das Museum gespendet",
             "Spanish": "No donado al museo",
+            "Spanish (US)": "No donado al museo",
             "Russian": "Не пожертвовано в музей"
         },
         {
@@ -7219,6 +7241,7 @@
             "French (US)": "Afficher le bouton de don au musée",
             "German": "An das Museum gespendete Schaltfläche anzeigen",
             "Spanish": "Mostrar el botón Donado al museo",
+            "Spanish (US)": "Mostrar el botón Donado al museo",
             "Russian": "Показать кнопку пожертвований музею"
         },
         {
@@ -7228,6 +7251,7 @@
             "French (US)": "Affiche un bouton de don qui peut être utilisé pour savoir si vous l'avez fait don au musée en plus de le collecter.",
             "German": "Zeigt eine Spendenschaltfläche an, mit der nachverfolgt werden kann, ob Du es zusätzlich zum Sammeln an das Museum gespendet hast.",
             "Spanish": "Mostrar un botón de donación que puede ser usado para registrar si ha sido donado al museo después de haberlo obtenido",
+            "Spanish (US)": "Mostrar un botón de donación que puede ser usado para registrar si ha sido donado al museo después de haberlo obtenido",
             "Russian": "Показывает кнопку пожертвования, которую можно использовать для отслеживания того, пожертвовали ли вы предмет музею и имеется ли он у вас в коллекции."
         },
         {
@@ -7237,6 +7261,7 @@
             "French (US)": "Vous pouvez relire le changelog dans la page [À propos]",
             "German": "Du kannst das Änderungsprotokoll auf der Seite [Über] erneut lesen",
             "Spanish": "Puedes volver a leer el historial de cambios en la página [Acerca de]",
+            "Spanish (US)": "Puedes volver a leer el historial de cambios en la página [Acerca de]",
             "Russian": "Вы можете перечитать журнал изменений на странице [О программе]"
         },
         {
@@ -7246,6 +7271,7 @@
             "French (US)": "Si vous souhaitez aider à traduire cette application, n'hésitez pas à nous contacter par e-mail !",
             "German": "Wenn Du beim Übersetzen dieser App helfen möchtest, kannst Du dich gern per E-Mail bei uns melden!",
             "Spanish": "Si deseas ayudar a traducir esta app, ¡no dudes en contactarnos por email!",
+            "Spanish (US)": "Si deseas ayudar a traducir esta app, ¡no dudes en contactarnos por email!",
             "Russian": "Если тебе захотелось помочь с переводом приложения, напишите нам на электронную почту! "
         },
         {
@@ -7255,6 +7281,7 @@
             "French (US)": "Vous pouvez en savoir plus sur les cartes Amiibo en visitant la page du guide",
             "German": "Du kannst mehr über Amiibo-Karten lesen, indem Du die Guide-Seite besuchst.",
             "Spanish": "Puedes leer más sobre las cartas Amiibo visitando la página guía",
+            "Spanish (US)": "Puedes leer más sobre las cartas Amiibo visitando la página guía",
             "Russian": "Вы можете прочитать больше про карточки Amiibo перейдя на страницу гайда"
         },
         {
@@ -7264,6 +7291,7 @@
             "French (US)": "Appuyez ici pour en savoir plus sur les cartes Amiibo",
             "German": "Tippe hier, um mehr über Amiibo-Karten zu erfahren",
             "Spanish": "Haz click aquí para leer sobre las cartas Amiibo",
+            "Spanish (US)": "Haz click aquí para leer sobre las cartas Amiibo",
             "Russian": "Нажмите здесь чтобы почитать про карточки Amiibo"
         },
         {
@@ -7271,6 +7299,7 @@
             "English (Europe)": "English",
             "German": "Englisch ",
             "Spanish": "Inglés",
+            "Spanish (US)": "Inglés",
             "Russian": "Английский "
         },
         {
@@ -7278,6 +7307,7 @@
             "English (Europe)": "English (Europe)",
             "German": "Englisch (Europäisch)",
             "Spanish": "Inglés (Europa)",
+            "Spanish (US)": "Inglés (Europa)",
             "Russian": "Английский (Европа) "
         },
         {
@@ -7295,6 +7325,7 @@
             "English (Europe)": "French (Québec)",
             "German": "Französischen (Quebec)",
             "Spanish": "Francés (Quebec)",
+            "Spanish (US)": "Francés (Quebec)",
             "Russian": "Французский (Канада) "
         },
         {
@@ -7312,6 +7343,7 @@
             "English (Europe)": "Spanish (US)",
             "German": "Spanisch (Amerikanisch)",
             "Spanish": "Español (US)",
+            "Spanish (US)": "Español (US)",
             "Russian": "Испанский (США) "
         },
         {
@@ -7331,51 +7363,84 @@
             "French (US)": "Russe",
             "German": "Russisch",
             "Spanish": "Ruso",
+            "Spanish (US)": "Ruso",
             "Russian": "Русский"
         },
         {
             "English": "Favorite villagers who like this item as a gift",
             "English (Europe)": "Favorite villagers who like this item as a gift",
+            "French": "Les villageois préférés qui aiment cet article en cadeau",
+            "French (US)": "Les villageois préférés qui aiment cet article en cadeau",
+            "German": "Lieblingsdorfbewohner, die diesen Artikel als Geschenk mögen",
             "Spanish": "Vecinos favoritos a los que les gusta este objeto como regalo",
+            "Spanish (US)": "Vecinos favoritos a los que les gusta este objeto como regalo",
             "Russian": "Избранные жители, которым понравится эта вещь в качестве подарка"
         },
         {
             "English": "the body",
             "English (Europe)": "the body",
-            "Spanish": "el cuerpo"
+            "French": "la carrosserie",
+            "French (US)": "la carrosserie",
+            "German": "der Karosserie",
+            "Spanish": "el cuerpo",
+            "Spanish (US)": "el cuerpo"
         },
         {
             "English": "the pattern",
             "English (Europe)": "the pattern",
-            "Spanish": "el patrón"
+            "French": "la modèle",
+            "French (US)": "la modèle",
+            "German": "das Muster",
+            "Spanish": "el patrón",
+            "Spanish (US)": "el patrón"
         },
         {
             "English": "and",
             "English (Europe)": "and",
-            "Spanish": "y"
+            "French": "et",
+            "French (US)": "et",
+            "German": "und",
+            "Spanish": "y",
+            "Spanish (US)": "y"
         },
         {
             "English": "can be customized",
             "English (Europe)": "can be customized",
+            "French": "Peut être personnalisé",
+            "French (US)": "Peut être personnalisé",
+            "German": "kann angepasst werden",
             "Spanish": "puede ser personalizado",
+            "Spanish (US)": "puede ser personalizado",
             "Russian": "может быть изменено"
         },
         {
             "English": "cannot be customized, variations must be obtained",
             "English (Europe)": "cannot be customized, variations must be obtained",
+            "French": "ne peut pas être personnalisé, des variations doivent être obtenues",
+            "French (US)": "ne peut pas être personnalisé, des variations doivent être obtenues",
+            "German": "kann nicht angepasst werden, Variationen müssen bezogen werden",
             "Spanish": "no puede ser personalizado, las variaciones se deben obtener",
+            "Spanish (US)": "no puede ser personalizado, las variaciones se deben obtener",
             "Russian": "не может быть изменено, нужно получить модификаторы"
         },
         {
             "English": "Spawn rates:",
             "English (Europe)": "Spawn rates:",
+            "French": "Taux d'apparition :",
+            "French (US)": "Taux d'apparition :",
+            "German": "Spawn-Raten:",
             "Spanish": "Probabilidad de aparición:",
+            "Spanish (US)": "Probabilidad de aparición:",
             "Russian": "Частота появления:"
         },
         {
             "English": "Common creatures have higher spawn rates",
             "English (Europe)": "Common creatures have higher spawn rates",
+            "French": "Les créatures communes ont des taux d'apparition plus élevés",
+            "French (US)": "Les créatures communes ont des taux d'apparition plus élevés",
+            "German": "Gewöhnliche Kreaturen haben höhere Spawn-Raten",
             "Spanish": "Criaturas comunes tienen mayor probabilidad de aparición",
+            "Spanish (US)": "Criaturas comunes tienen mayor probabilidad de aparición",
             "Russian": "Обычные существа появляются чаще"
         }
     ],

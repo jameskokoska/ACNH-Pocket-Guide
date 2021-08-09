@@ -100,7 +100,7 @@ export function getEventsDay(date, eventSections){
     if(eventDay[0]===date.getDate() && eventDay[1]===date.getMonth()){
       if(!event["Name"].includes("ireworks")){
         totalEvents.push({
-          name: attemptToTranslate(capitalize(event["Name"])),
+          name: attemptToTranslate(capitalize(event["Name"]), true),
           time: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
           image: event["Name"],
           day:date.getDate(),
@@ -114,7 +114,7 @@ export function getEventsDay(date, eventSections){
         }
       } else {
         totalEvents.push({
-          name: attemptToTranslate(capitalize(event["Name"])),
+          name: attemptToTranslate(capitalize(event["Name"]), true),
           time: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
           image: event["Name"],
           day:date.getDate(),

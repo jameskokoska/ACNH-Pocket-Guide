@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
-import {Vibration, Dimensions, Text, View,StyleSheet, TouchableOpacity} from 'react-native'
+import {Vibration, Dimensions, View,TouchableOpacity} from 'react-native'
 import  {DrawerLayout, ScrollView} from 'react-native-gesture-handler'
 import SidebarElement from './SidebarElement';
 import colors from '../Colors.js';
 import TextFont from './TextFont';
 import {getSettingsString} from '../LoadJsonData';
-import {PopupBottomCustom} from "./Popup"
-import {ConfigureHomePages} from "../pages/HomePage"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {ProfileIcon} from "../pages/ProfileCurrentPage"
 

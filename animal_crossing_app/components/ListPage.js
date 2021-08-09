@@ -1,12 +1,10 @@
 import React, {Component, useState, useRef, useEffect} from 'react';
-import {TouchableOpacity, TouchableWithoutFeedback, Text, View, Animated, SafeAreaView, StatusBar, StyleSheet, TextInput} from 'react-native';
+import {TouchableOpacity, View, Animated,StyleSheet,} from 'react-native';
 import Header, {HeaderLoading, HeaderActive} from './Header';
 import ListItem from './ListItem';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, removeBrackets, allVariationsChecked} from "../LoadJsonData"
-import BottomSheet from 'reanimated-bottom-sheet';
+import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked} from "../LoadJsonData"
 import {Dimensions } from "react-native";
-import {Variations, InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from './BottomSheetComponents';
+import {Variations,Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from './BottomSheetComponents';
 import colors from "../Colors.js"
 import {getCurrentDateObject, getMonthShort, isActive2} from "./DateFunctions"
 import FishPopup from "../popups/FishPopup"
@@ -23,7 +21,7 @@ import RecipesPopup from "../popups/RecipesPopup"
 import MaterialsPopup from "../popups/MaterialsPopup"
 import PopupFilter from './PopupFilter'
 import TextFont from "./TextFont"
-import {compareItemID, removeAccents, inChecklist, attemptToTranslateItem, getSettingsString, attemptToTranslate} from "../LoadJsonData"
+import {compareItemID, removeAccents,getSettingsString} from "../LoadJsonData"
 import {PopupBottomCustom} from "./Popup"
 import {gameVersion, museumCategories} from "../Changelog"
 

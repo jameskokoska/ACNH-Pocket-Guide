@@ -1,12 +1,9 @@
 import React, {Component} from 'react';
-import {Linking, TouchableOpacity, ScrollView, View, Dimensions, Text} from 'react-native';
-import ListPage from '../components/ListPage';
-import LottieView from 'lottie-react-native';
+import {ScrollView, View,} from 'react-native';
 import TextFont from '../components/TextFont'
 import StoreHoursContainer from '../components/StoreHoursContainer';
 import colors from '../Colors'
 import PopupRating from "../components/PopupRating"
-import PopupTip from "../components/PopupTip"
 import ButtonComponent from "../components/ButtonComponent"
 import {MailLink, ExternalLink, SubHeader, Header, Paragraph} from "../components/Formattings"
 import {attemptToTranslate} from "../LoadJsonData"

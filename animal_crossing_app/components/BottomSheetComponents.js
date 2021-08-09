@@ -10,7 +10,6 @@ import {getCurrentVillagerObjects, attemptToTranslateCreatureCatchPhrase, attemp
 import {ScrollView} from 'react-native-gesture-handler'
 import {PopupInfoCustom} from "./Popup"
 import {getMonth, doWeSwapDate} from './DateFunctions'
-import CurrentVillagers from "./CurrentVillagers"
 import { BlueText } from "./Formattings.js";
 
 export class CircularImage extends Component {

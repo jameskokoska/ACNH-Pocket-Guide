@@ -1,8 +1,6 @@
-import * as Font from 'expo-font';
-import React, {Component} from 'react';
-import {Vibration, Text} from 'react-native';
+import {Vibration,} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {doWeSwapDate, isActive2} from "./components/DateFunctions";
+import {doWeSwapDate,} from "./components/DateFunctions";
 import {howManyVariationsChecked, getVariations} from "./components/BottomSheetComponents"
 import * as Localization from 'expo-localization';
 import * as FileSystem from 'expo-file-system'

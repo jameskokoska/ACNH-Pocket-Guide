@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import {Image, Linking,TouchableOpacity,ScrollView, View, Dimensions, Text} from 'react-native';
-import ListPage from '../components/ListPage';
-import LottieView from 'lottie-react-native';
+import {Image, ScrollView, View, Dimensions} from 'react-native';
 import TextFont from '../components/TextFont'
 import SettingsContainer from '../components/SettingsContainer';
 import colors from '../Colors';
@@ -11,7 +9,6 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {ExportFile, LoadFile, ExportClipboard, LoadClipboard} from '../components/LoadFile';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import {attemptToTranslate, deleteSavedPhotos, resetFilters, getSettingsString} from '../LoadJsonData';
-import {cancelAllPushNotifications, pushNotification} from '../Notifications'
 import {SubHeader, Paragraph, HeaderNote, MailLink, Header} from "../components/Formattings"
 import DropDownPicker from 'react-native-dropdown-picker'
 import {PopupBottomCustom} from "../components/Popup"

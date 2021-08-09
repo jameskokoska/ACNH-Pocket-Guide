@@ -145,7 +145,7 @@ export default class CalendarPage extends Component {
             if(eventDay[0]===date.getDate() && eventDay[1]===date.getMonth()){
               if(!event["Name"].includes("ireworks")){
                 this.state.items[strTime].push({
-                  name: capitalize(event["Name"]),
+                  name: attemptToTranslate(capitalize(event["Name"]), true),
                   time: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
                   image: event["Name"],
                   color: colors.specialEventBackground,
@@ -155,7 +155,7 @@ export default class CalendarPage extends Component {
                 this.state.itemsColor[strTime] = styleImportantEvent;
               } else {
                 this.state.items[strTime].push({
-                  name: capitalize(event["Name"]),
+                  name: attemptToTranslate(capitalize(event["Name"]), true),
                   time: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
                   image: event["Name"],
                   color: colors.white,
@@ -395,7 +395,7 @@ class AllEventsList extends Component{
           onScroll={Animated.event([{ nativeEvent: {contentOffset: {y: this.scrollY}}}],{useNativeDriver: true,},)}
           data={this.state.searchData}
           renderItem={({ item }) => <RenderItemFlatList item={item} setPage={this.props.setPage}/>}
-          keyExtractor={(item, index) => `list-item-${index}-${item.["Unique Entry ID"]}`}
+          keyExtractor={(item, index) => `list-item-${index}-${item["Unique Entry ID"]}`}
           contentContainerStyle={{paddingBottom:Dimensions.get('window').height}}
           style={{paddingTop:this.headerHeight}}
         />
@@ -409,12 +409,12 @@ class RenderItemFlatList extends Component{
   render(){
     var item = this.props.item;
     var image = <View/>
-    image = <Image style={{width: 50, height: 50, resizeMode:'contain',}} source={getPhoto(item.["Name"].toLowerCase(), item.["Type"].toLowerCase())}/>
+    image = <Image style={{width: 50, height: 50, resizeMode:'contain',}} source={getPhoto(item["Name"].toLowerCase(), item["Type"].toLowerCase())}/>
     var date = "";
     if(item["Dates (Northern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")==="true"){
-      date = item.["Dates (Northern Hemisphere)"];
+      date = item["Dates (Northern Hemisphere)"];
     } else if (item["Dates (Southern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")!=="true"){
-      date = item.["Dates (Southern Hemisphere)"];
+      date = item["Dates (Southern Hemisphere)"];
     } 
     date = date.replace(/[^\x00-\x7F]/g, "-");
     date = date.replace("--", "- ");

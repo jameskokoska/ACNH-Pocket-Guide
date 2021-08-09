@@ -1,6 +1,5 @@
-import React, {useRef, Component} from 'react';
-import {Vibration, BackHandler, Button, Image, ScrollView, Dimensions, Text, View, Animated, SafeAreaView, StatusBar, StyleSheet, ActivityIndicator} from 'react-native';
-import ListPage from './components/ListPage';
+import React, {Component} from 'react';
+import {Vibration, BackHandler, Dimensions, Text, View, StatusBar} from 'react-native';
 import FAB from './components/FAB';
 import CalendarPage from './pages/CalendarPage';
 import SongsPage from './pages/SongsPage';
@@ -17,20 +16,16 @@ import AllItemsPage from './pages/AllItemsPage';
 import ProfilesPage from './pages/ProfilesPage';
 import CraftingPage from './pages/CraftingPage';
 import FadeInOut from './components/FadeInOut';
-import Check from './components/Check';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import TextFont from './components/TextFont';
 import LottieView from 'lottie-react-native';
 import CreditsPage from './pages/CreditsPage';
 import FlowerPage from './pages/FlowerPage';
 import CardsPage from './pages/CardsPage';
-import {getDefaultLanguage, getStorage, getStorageData, getSettingsString, settings, loadGlobalData} from './LoadJsonData';
+import {getDefaultLanguage, getStorage,getSettingsString, settings, loadGlobalData} from './LoadJsonData';
 import Onboard from './pages/Onboard';
 import colors from './Colors.js';
-import ActiveTime from './components/ActiveTime.js';
 import * as Font from 'expo-font';
 import PopupRating from './components/PopupRating'
-import PopupTip from './components/PopupTip';
 import { Appearance } from 'react-native-appearance';
 import SideMenu from './components/SideMenu'
 import GuidePage from './pages/GuidePage';
@@ -42,7 +37,6 @@ import VillagerFurniture from "./pages/VillagerFurniture"
 import ObtainableItemsPage from "./pages/ObtainableItemsPage"
 import CustomFiltersPage from "./pages/CustomFiltersPage"
 import VillagersCompatibilityPage from "./pages/VillagersCompatibilityPage"
-import {sideSections} from "./components/SideMenu"
 import ProfileCurrentPage from "./pages/ProfileCurrentPage"
 import AmiiboPage from "./pages/AmiiboPage"
 
