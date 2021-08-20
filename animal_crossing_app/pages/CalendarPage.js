@@ -145,7 +145,7 @@ export default class CalendarPage extends Component {
             if(eventDay[0]===date.getDate() && eventDay[1]===date.getMonth()){
               if(!event["Name"].includes("ireworks")){
                 this.state.items[strTime].push({
-                  name: attemptToTranslate(capitalize(event["Name"]), true),
+                  name: capitalize(attemptToTranslate(event["Name"], true)),
                   time: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
                   image: event["Name"],
                   color: colors.specialEventBackground,
@@ -155,7 +155,7 @@ export default class CalendarPage extends Component {
                 this.state.itemsColor[strTime] = styleImportantEvent;
               } else {
                 this.state.items[strTime].push({
-                  name: attemptToTranslate(capitalize(event["Name"]), true),
+                  name: capitalize(attemptToTranslate(event["Name"], true)),
                   time: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
                   image: event["Name"],
                   color: colors.white,

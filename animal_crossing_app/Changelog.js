@@ -5,6 +5,13 @@ export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 - 
 -Updated translations
+-
+-Fixed last week indicator for visitors
+-Short form for week day names are used for visitors now
+-
+-Updated translations
+-Fixed capitalizations, notification translations
+-
 -Added new item translations
 -Fixed event translations
 -

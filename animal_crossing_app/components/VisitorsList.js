@@ -1,12 +1,9 @@
 import React, {Component} from 'react';
-import {Linking, TextInput, Vibration,TouchableNativeFeedback,TouchableOpacity,StyleSheet, Text, View, Image} from 'react-native';
+import {Vibration,TouchableOpacity,StyleSheet,View, Image} from 'react-native';
 import TextFont from './TextFont';
-import {getCurrentDateObject, getMonth, getWeekDayShort} from './DateFunctions';
-import {getStorage, checkOff, capitalize, commas, removeBrackets} from "../LoadJsonData"
-import {getPhoto} from "./GetPhoto"
-import Check from './Check';
+import {getCurrentDateObject, toShortWeekDay} from './DateFunctions';
+import {getStorage,} from "../LoadJsonData"
 import colors from '../Colors'
-import PopupAddTask from "./PopupAddTask"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {getSettingsString} from "../LoadJsonData"
 import {SelectionText} from "./Selections"
@@ -206,7 +203,7 @@ class CharacterItem extends Component {
     if(this.props.lastWeek!==undefined){
       const lastWeekNPC = Object.keys(this.props.lastWeek);
       for(var i=0; i<lastWeekNPC.length; i++){
-        if(lastWeekNPC[i]===this.props.character.name){
+        if(lastWeekNPC[i]===this.props.character.name && this.props.lastWeek[this.props.character.name] !== "None"){
           lastWeek=true
         }
       }
@@ -222,7 +219,7 @@ class CharacterItem extends Component {
             {imageComponent}
           </View>
         </TouchableOpacity>
-        {<TextFont numberOfLines={2} bold={false} style={{width: 60, marginTop: 3, color: colors.textBlack[global.darkMode], fontSize: 12, textAlign:"center"}}>{dayDisplay}</TextFont>}
+        {dayDisplay===""?<View/>:<TextFont suffix="." numberOfLines={2} bold={false} style={{width: 60, marginTop: 3, color: colors.textBlack[global.darkMode], fontSize: 12, textAlign:"center"}}>{toShortWeekDay(dayDisplay)}</TextFont>}
       </View>
     )
   }

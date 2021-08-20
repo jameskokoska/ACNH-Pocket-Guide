@@ -82,6 +82,11 @@ function getWeekDayShort(currentWeekDay){
   return weekDays[currentWeekDay];
 }
 
+export function toShortWeekDay(weekDayLong){
+  var weekDaysDictionary = {'Sunday':'Sun','Monday':'Mon','Tuesday':'Tues','Wednesday':'Wed','Thursday':'Thurs','Friday':'Fri','Saturday':'Sat'};
+  return weekDaysDictionary[weekDayLong];
+}
+
 function parseActiveTime(splitString, offset){
   // Format example: "4 AM"
   var hour = parseInt(splitString[offset]);
