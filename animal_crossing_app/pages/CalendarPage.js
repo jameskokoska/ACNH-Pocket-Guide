@@ -15,6 +15,8 @@ import Header from "../components/Header"
 import {VillagerPopupPopup} from "./HomePage"
 import {specialEvents, isDateInRange} from "../components/DateFunctions"
 
+//Note: to use Wix Agenda React Native - might to manually install package from repo as some resources may be missing from npm install
+
 export default class CalendarPage extends Component {
   constructor(item) {
     super(item);
@@ -104,7 +106,7 @@ export default class CalendarPage extends Component {
     }}
 
     setTimeout(() => {
-      for (let i = -5; i < 25; i++) {
+      for (let i = -5; i < 40; i++) {
         const date = new Date();
         
         date.setFullYear(day.year);
@@ -116,9 +118,9 @@ export default class CalendarPage extends Component {
         const villagerData = require("../assets/data/data.json")["Villagers"];
 
         // stupid fix for one day offset
-        var date2 = new Date(date)
-        date2.setDate( date2.getDate() - 1 )
-        strTime = this.dateToString(date2);
+        // var date2 = new Date(date)
+        // date2.setDate( date2.getDate() - 1 )
+        // strTime = this.dateToString(date2);
         
         if (!this.state.items[strTime]) {
           this.state.items[strTime] = [];
@@ -153,7 +155,7 @@ export default class CalendarPage extends Component {
             if(event["Month"] == getMonthShort(parseInt(date.getMonth())) && parseInt(event["Day Start"]) == date.getDate()){
               this.state.items[strTime].push({
                 name: capitalize(attemptToTranslate(event["Name"], true)),
-                time: getSettingsString("settingsUse24HourClock") === "true" ? attemptToTranslate(event["Time24"]) : attemptToTranslate(event["Time"]),
+                time: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
                 image: event["Name"],
                 color:colors.specialEventBackground,
                 type:"filter",

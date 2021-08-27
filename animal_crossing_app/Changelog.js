@@ -4,7 +4,7 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
--Fixed calendar page
+-Fixed calendar page again
 -Changed icons for events
 - 
 -Italian translation started
