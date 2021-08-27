@@ -7616,6 +7616,16 @@
             "Spanish": "Evento del juego base",
             "Spanish (US)": "Evento del juego base",
             "Russian": "Событие Basegame"
+        },
+        {
+            "English": "New Year's Day",
+            "English (Europe)": "New Year's Day",
+            "French": "Jour de l'An",
+            "French (US)": "Jour de l'An",
+            "German": "Neujahr",
+            "Spanish": "Dia de Año Nuevo",
+            "Spanish (US)": "Dia de Año Nuevo",
+            "Russian": "Новый год (Россия)"
         }
     ],
     "Sources": [
