@@ -42,8 +42,8 @@ export function getPhoto(name, fallback=""){
       return require("../assets/icons/villager.png");
     case "dice.png":
       return require("../assets/icons/dice.png");
-    case "applejuice.png":
-      return require("../assets/icons/applejuice.png");
+    case "confettiBall.png":
+      return require("../assets/icons/confettiBall.png");
     case "fish.png":
       return require("../assets/icons/fish.png");
     case "bugs.png":
@@ -192,7 +192,7 @@ export function getPhoto(name, fallback=""){
   } else if(name.includes("lunar")){
     return require("../assets/icons/fullmoon.png");
   } else if(name.includes("new year")){
-    return require("../assets/icons/applejuice.png");
+    return require("../assets/icons/confettiBall.png");
   } else if(name.includes("big game")){
     return require("../assets/icons/football.png");
   } else if(name.includes("festivale")){

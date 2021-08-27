@@ -424,7 +424,8 @@
             "German": "Lebewesen + Museum",
             "Spanish": "Criaturas + Museo",
             "Spanish (US)": "Criaturas + Museo",
-            "Russian": "Существа + Музей"
+            "Russian": "Существа + Музей",
+            "Italian": "Creature + Museo"
         },
         {
             "English": "Museum",
@@ -434,7 +435,8 @@
             "German": "Museum",
             "Spanish": "Museo",
             "Spanish (US)": "Museo",
-            "Russian": "Музей"
+            "Russian": "Музей",
+            "Italian": "Museo"
         },
         {
             "English": "Items",
@@ -444,7 +446,8 @@
             "German": "Items",
             "Spanish": "Objetos",
             "Spanish (US)": "Artículos",
-            "Russian": "Вещи"
+            "Russian": "Вещи",
+            "Italian": "Oggetti"
         },
         {
             "English": "Songs",
@@ -454,7 +457,8 @@
             "German": "Musik",
             "Spanish": "Canciones",
             "Spanish (US)": "Canciones",
-            "Russian": "Песни"
+            "Russian": "Песни",
+            "Italian": "Canzoni"
         },
         {
             "English": "Emoticons",
@@ -474,7 +478,8 @@
             "German": "Anleitungen + Werkzeuge",
             "Spanish": "Recetas + Herramientas",
             "Spanish (US)": "Recetas + Herramientas",
-            "Russian": "Рецепты + Инструменты"
+            "Russian": "Рецепты + Инструменты",
+            "Italian": "Ricette + Strumenti"
         },
         {
             "English": "Villagers",
@@ -494,7 +499,8 @@
             "German": "Bauprojekte",
             "Spanish": "Construcción",
             "Spanish (US)": "Construcción",
-            "Russian": "Строения"
+            "Russian": "Строения",
+            "Italian": "Costruzione"
         },
         {
             "English": "Flowers",
@@ -505,7 +511,7 @@
             "Spanish": "Flores",
             "Spanish (US)": "Flores",
             "Russian": "Цветы",
-            "Italian": "Fiori "
+            "Italian": "Fiori"
         },
         {
             "English": "Letters",
@@ -515,7 +521,8 @@
             "German": "Karten",
             "Spanish": "Cartas",
             "Spanish (US)": "Cartas",
-            "Russian": "Открытки"
+            "Russian": "Открытки",
+            "Italian": "Lettere"
         },
         {
             "English": "Mystery Islands",
@@ -525,7 +532,8 @@
             "German": "Meileninseln",
             "Spanish": "Islas Misteriosas",
             "Spanish (US)": "Islas Misteriosas",
-            "Russian": "Таинственные Острова"
+            "Russian": "Таинственные Острова",
+            "Italian": "Isola Misteriosa"
         },
         {
             "English": "Guide + FAQ",
@@ -545,7 +553,8 @@
             "German": "Kalender + Events",
             "Spanish": "Calendario + Eventos",
             "Spanish (US)": "Calendario + Eventos",
-            "Russian": "Календарь + События"
+            "Russian": "Календарь + События",
+            "Italian": "Calendario + Eventi"
         },
         {
             "English": "Catalog Scanning",
@@ -555,7 +564,8 @@
             "German": "Katalog-Scan",
             "Spanish": "Escanear catálogo",
             "Spanish (US)": "Escaneo de catálogos",
-            "Russian": "Сканирование Каталога"
+            "Russian": "Сканирование Каталога",
+            "Italian": "Scansione del Catalogo"
         },
         {
             "English": "Settings",
@@ -585,7 +595,8 @@
             "German": "Events",
             "Spanish": "Eventos",
             "Spanish (US)": "Eventos",
-            "Russian": "События"
+            "Russian": "События",
+            "Italian": "Eventi"
         },
         {
             "English": "Tomorrow",
@@ -595,7 +606,8 @@
             "German": "Morgen",
             "Spanish": "Mañana",
             "Spanish (US)": "Mañana",
-            "Russian": "Завтра"
+            "Russian": "Завтра",
+            "Italian": "Domani"
         },
         {
             "English": "This Week",
@@ -605,7 +617,8 @@
             "German": "Diese Woche",
             "Spanish": "Esta semana",
             "Spanish (US)": "Esta Semana",
-            "Russian": "На Этой Неделе"
+            "Russian": "На Этой Неделе",
+            "Italian": "Questa Settimana"
         },
         {
             "English": "K.K. Slider",
@@ -626,7 +639,7 @@
             "Spanish": "Enero",
             "Spanish (US)": "Enero",
             "Russian": "Январь",
-            "Italian": "Gennaio "
+            "Italian": "Gennaio"
         },
         {
             "English": "February",
@@ -648,7 +661,7 @@
             "Spanish": "Marzo",
             "Spanish (US)": "Marzo",
             "Russian": "Март",
-            "Italian": "Marzo"
+            "Italian": "Marz"
         },
         {
             "English": "April",
@@ -659,7 +672,7 @@
             "Spanish": "Abril",
             "Spanish (US)": "Abril",
             "Russian": "Апрель",
-            "Italian": "Aprile "
+            "Italian": "Aprile"
         },
         {
             "English": "May",
@@ -670,7 +683,7 @@
             "Spanish": "Mayo",
             "Spanish (US)": "Mayo",
             "Russian": "Май",
-            "Italian": "Maggio "
+            "Italian": "Maggio"
         },
         {
             "English": "June",
@@ -681,7 +694,7 @@
             "Spanish": "Junio",
             "Spanish (US)": "Junio",
             "Russian": "Июнь",
-            "Italian": "Giugno "
+            "Italian": "Giugno"
         },
         {
             "English": "July",
@@ -692,7 +705,7 @@
             "Spanish": "Julio",
             "Spanish (US)": "Julio",
             "Russian": "Июль",
-            "Italian": "Luglio "
+            "Italian": "Luglio"
         },
         {
             "English": "August",
@@ -703,7 +716,7 @@
             "Spanish": "Agosto",
             "Spanish (US)": "Agosto",
             "Russian": "Август",
-            "Italian": "Augusto "
+            "Italian": "Augusto"
         },
         {
             "English": "September",
@@ -714,7 +727,7 @@
             "Spanish": "Septiembre",
             "Spanish (US)": "Septiembre",
             "Russian": "Сентябрь",
-            "Italian": "Settembre "
+            "Italian": "Settembre"
         },
         {
             "English": "October",
@@ -725,7 +738,7 @@
             "Spanish": "Octubre",
             "Spanish (US)": "Octubre",
             "Russian": "Октябрь",
-            "Italian": "Ottobre "
+            "Italian": "Ottobre"
         },
         {
             "English": "November",
@@ -736,7 +749,7 @@
             "Spanish": "Noviembre",
             "Spanish (US)": "Noviembre",
             "Russian": "Ноябрь",
-            "Italian": "Novembre "
+            "Italian": "Novembre"
         },
         {
             "English": "December",
@@ -747,7 +760,7 @@
             "Spanish": "Diciembre",
             "Spanish (US)": "Diciembre",
             "Russian": "Декабрь",
-            "Italian": "Dicembre "
+            "Italian": "Dicembre"
         },
         {
             "English": "Jan",
@@ -757,7 +770,8 @@
             "German": "Jan.",
             "Spanish": "Ene",
             "Spanish (US)": "Ene",
-            "Russian": "Янв"
+            "Russian": "Янв",
+            "Italian": "Genn."
         },
         {
             "English": "Feb",
@@ -767,7 +781,8 @@
             "German": "Febr.",
             "Spanish": "Feb",
             "Spanish (US)": "Feb",
-            "Russian": "Фев"
+            "Russian": "Фев",
+            "Italian": "Febbr."
         },
         {
             "English": "Mar",
@@ -777,7 +792,8 @@
             "German": "März",
             "Spanish": "Mar",
             "Spanish (US)": "Mar",
-            "Russian": "Мар"
+            "Russian": "Мар",
+            "Italian": "Mar."
         },
         {
             "English": "Apr",
@@ -787,7 +803,8 @@
             "German": "Apr.",
             "Spanish": "Abr",
             "Spanish (US)": "Abr",
-            "Russian": "Апр"
+            "Russian": "Апр",
+            "Italian": "Apr."
         },
         {
             "English": "May",
@@ -797,7 +814,8 @@
             "German": "Mai",
             "Spanish": "May",
             "Spanish (US)": "May",
-            "Russian": "Май"
+            "Russian": "Май",
+            "Italian": "Magg."
         },
         {
             "English": "Jun",
@@ -807,7 +825,8 @@
             "German": "Juni",
             "Spanish": "Jun",
             "Spanish (US)": "Jun",
-            "Russian": "Июн"
+            "Russian": "Июн",
+            "Italian": "Giugno "
         },
         {
             "English": "Jul",
@@ -817,7 +836,8 @@
             "German": "Juli",
             "Spanish": "Jul",
             "Spanish (US)": "Jul",
-            "Russian": "Июл"
+            "Russian": "Июл",
+            "Italian": "Luglio "
         },
         {
             "English": "Aug",
@@ -827,7 +847,8 @@
             "German": "Aug.",
             "Spanish": "Ago",
             "Spanish (US)": "Ago",
-            "Russian": "Авг"
+            "Russian": "Авг",
+            "Italian": "Ag. "
         },
         {
             "English": "Sep",
@@ -837,7 +858,8 @@
             "German": "Sept.",
             "Spanish": "Sep",
             "Spanish (US)": "Sep",
-            "Russian": "Сен"
+            "Russian": "Сен",
+            "Italian": "Sett."
         },
         {
             "English": "Oct",
@@ -847,7 +869,8 @@
             "German": "Okt.",
             "Spanish": "Oct",
             "Spanish (US)": "Oct",
-            "Russian": "Окт"
+            "Russian": "Окт",
+            "Italian": "Ott."
         },
         {
             "English": "Nov",
@@ -857,7 +880,8 @@
             "German": "Nov.",
             "Spanish": "Nov",
             "Spanish (US)": "Nov",
-            "Russian": "Ноя"
+            "Russian": "Ноя",
+            "Italian": "Nov."
         },
         {
             "English": "Dec",
@@ -867,7 +891,8 @@
             "German": "Dez.",
             "Spanish": "Dic",
             "Spanish (US)": "Dic",
-            "Russian": "Дек"
+            "Russian": "Дек",
+            "Italian": "Dic."
         },
         {
             "English": "Mon",
@@ -877,7 +902,8 @@
             "German": "Mo",
             "Spanish": "Lun",
             "Spanish (US)": "Lun",
-            "Russian": "Пн"
+            "Russian": "Пн",
+            "Italian": "Lun"
         },
         {
             "English": "Tues",
@@ -887,7 +913,8 @@
             "German": "Di",
             "Spanish": "Mart",
             "Spanish (US)": "Mart",
-            "Russian": "Вт"
+            "Russian": "Вт",
+            "Italian": "Mart"
         },
         {
             "English": "Tue",
@@ -897,7 +924,8 @@
             "German": "Di",
             "Spanish": "Mar",
             "Spanish (US)": "Mar",
-            "Russian": "Вт"
+            "Russian": "Вт",
+            "Italian": "Mar"
         },
         {
             "English": "Wed",
@@ -907,7 +935,8 @@
             "German": "Mi",
             "Spanish": "Mie",
             "Spanish (US)": "Mie",
-            "Russian": "Ср"
+            "Russian": "Ср",
+            "Italian": "Mier"
         },
         {
             "English": "Thurs",
@@ -917,7 +946,8 @@
             "German": "Do",
             "Spanish": "Juev",
             "Spanish (US)": "Juev",
-            "Russian": "Чт"
+            "Russian": "Чт",
+            "Italian": "Giov"
         },
         {
             "English": "Thu",
@@ -927,7 +957,8 @@
             "German": "Do",
             "Spanish": "Jue",
             "Spanish (US)": "Jue",
-            "Russian": "Чт"
+            "Russian": "Чт",
+            "Italian": "Gio"
         },
         {
             "English": "Fri",
@@ -937,7 +968,8 @@
             "German": "Fr",
             "Spanish": "Vier",
             "Spanish (US)": "Vier",
-            "Russian": "Пт"
+            "Russian": "Пт",
+            "Italian": "Ven"
         },
         {
             "English": "Sat",
@@ -947,7 +979,8 @@
             "German": "Sa",
             "Spanish": "Sáb",
             "Spanish (US)": "Sáb",
-            "Russian": "Сб"
+            "Russian": "Сб",
+            "Italian": "Sab"
         },
         {
             "English": "Sun",
@@ -957,7 +990,8 @@
             "German": "So",
             "Spanish": "Dom",
             "Spanish (US)": "Dom",
-            "Russian": "Вс"
+            "Russian": "Вс",
+            "Italian": "Dom"
         },
         {
             "English": "AM",
@@ -967,7 +1001,8 @@
             "German": "AM",
             "Spanish": "AM",
             "Spanish (US)": "AM",
-            "Russian": "Утро"
+            "Russian": "Утро",
+            "Italian": "AM"
         },
         {
             "English": "PM",
@@ -977,7 +1012,8 @@
             "German": "PM",
             "Spanish": "PM",
             "Spanish (US)": "PM",
-            "Russian": "Вечер"
+            "Russian": "Вечер",
+            "Italian": "PM"
         },
         {
             "English": "To-Do",
@@ -987,7 +1023,8 @@
             "German": "Aufgaben",
             "Spanish": "Tareas Pendientes",
             "Spanish (US)": "Que Hacer",
-            "Russian": "Список дел"
+            "Russian": "Список дел",
+            "Italian": "Da Fare"
         },
         {
             "English": "Uncheck All",
@@ -997,7 +1034,8 @@
             "German": "Auswahl aufheben",
             "Spanish": "Desmarcar Todo",
             "Spanish (US)": "Desmarcar Todo",
-            "Russian": "Снять все выделения"
+            "Russian": "Снять все выделения",
+            "Italian": "Deseleziona tutto"
         },
         {
             "English": "Edit List",
@@ -1007,7 +1045,8 @@
             "German": "Liste ändern",
             "Spanish": "Editar lista",
             "Spanish (US)": "Editar lista",
-            "Russian": "Править список"
+            "Russian": "Править список",
+            "Italian": "modifica elenco"
         },
         {
             "English": "Disable Edit List",
@@ -1077,7 +1116,8 @@
             "German": "Ich weiß nicht",
             "Spanish": "Desconocido",
             "Spanish (US)": "Desconocido",
-            "Russian": "Неизвестно"
+            "Russian": "Неизвестно",
+            "Italian": "sconosciuto"
         },
         {
             "English": "Fluctuating",
@@ -1097,7 +1137,8 @@
             "German": "Leicht ansteigend",
             "Spanish": "Pico Bajo",
             "Spanish (US)": "Punta pequeña",
-            "Russian": "Малый рост"
+            "Russian": "Малый рост",
+            "Italian": "Piccola Punta"
         },
         {
             "English": "Large spike",
@@ -1107,7 +1148,8 @@
             "German": "Stark ansteigend",
             "Spanish": "Pico Alto",
             "Spanish (US)": "Punta larga",
-            "Russian": "Большой рост"
+            "Russian": "Большой рост",
+            "Italian": "Grande Punta"
         },
         {
             "English": "Decreasing",
@@ -1117,7 +1159,8 @@
             "German": "Absteigend",
             "Spanish": "Decreciente",
             "Spanish (US)": "Decreciente",
-            "Russian": "Падение"
+            "Russian": "Падение",
+            "Italian": "decrescente"
         },
         {
             "English": "First time buyer?",
@@ -1127,7 +1170,8 @@
             "German": "Erstmaliger Einkäufer?",
             "Spanish": "¿Primera compra?",
             "Spanish (US)": "¿Comprador por primera vez?",
-            "Russian": "Впервые купили?"
+            "Russian": "Впервые купили?",
+            "Italian": "Nuovo cliente"
         },
         {
             "English": "Yes",
@@ -1169,7 +1213,8 @@
             "German": "Kaufpreis",
             "Spanish": "Precio del domingo",
             "Spanish (US)": "Precio del domingo",
-            "Russian": "Воскресная цена"
+            "Russian": "Воскресная цена",
+            "Italian": "prezzo della domenica"
         },
         {
             "English": "Monday",
@@ -1256,7 +1301,8 @@
             "German": "Auf turnipprophet.io ansehen",
             "Spanish": "Ver en turnipprophet.io",
             "Spanish (US)": "Ver en turnipprophet.io",
-            "Russian": "Показать в turnipprophet.io"
+            "Russian": "Показать в turnipprophet.io",
+            "Italian": "Visualizza su turnipprophet.io"
         },
         {
             "English": "(Price calculator and predictor)",
@@ -1266,7 +1312,8 @@
             "German": "Preis- und Prognoserechner",
             "Spanish": "(Calculadora de precios y predictor)",
             "Spanish (US)": "(Calculadora de precios y predictor)",
-            "Russian": "(Калькулятор цен и предсказатель)"
+            "Russian": "(Калькулятор цен и предсказатель)",
+            "Italian": "(Calcolatore del prezzo e predittore)"
         },
         {
             "English": "Collection",
@@ -1276,7 +1323,8 @@
             "German": "Sammlung",
             "Spanish": "Colección",
             "Spanish (US)": "Colección",
-            "Russian": "Коллекция"
+            "Russian": "Коллекция",
+            "Italian": "Collezione"
         },
         {
             "English": "Fish",
@@ -1297,7 +1345,8 @@
             "German": "Meerestiere",
             "Spanish": "Criaturas Marinas",
             "Spanish (US)": "Criaturas Marinas",
-            "Russian": "Морские существа"
+            "Russian": "Морские существа",
+            "Italian": "creature del mare"
         },
         {
             "English": "Bugs",
@@ -1318,7 +1367,8 @@
             "German": "Fossilien",
             "Spanish": "Fósiles",
             "Spanish (US)": "Fósiles",
-            "Russian": "Ископаемые"
+            "Russian": "Ископаемые",
+            "Italian": "fossili"
         },
         {
             "English": "Art",
@@ -1328,7 +1378,8 @@
             "German": "Kunstwerke",
             "Spanish": "Arte",
             "Spanish (US)": "Arte",
-            "Russian": "Искусство"
+            "Russian": "Искусство",
+            "Italian": "Arte"
         },
         {
             "English": "Songs",
@@ -1338,7 +1389,8 @@
             "German": "Musik",
             "Spanish": "Canciones",
             "Spanish (US)": "Canciones",
-            "Russian": "Песни"
+            "Russian": "Песни",
+            "Italian": "Canzoni"
         },
         {
             "English": "Emotes",
@@ -1358,7 +1410,8 @@
             "German": "Profil",
             "Spanish": "Perfil",
             "Spanish (US)": "Perfil",
-            "Russian": "Профиль"
+            "Russian": "Профиль",
+            "Italian": "profilo"
         },
         {
             "English": "Name",
@@ -1379,7 +1432,8 @@
             "German": "Insel",
             "Spanish": "Isla",
             "Spanish (US)": "Isla",
-            "Russian": "Остров"
+            "Russian": "Остров",
+            "Italian": "Isla"
         },
         {
             "English": "Northern Hemisphere",
@@ -1389,7 +1443,8 @@
             "German": "Nordhalbkugel",
             "Spanish": "Hemisferio norte",
             "Spanish (US)": "Hemisferio norte",
-            "Russian": "Северное Полушарие"
+            "Russian": "Северное Полушарие",
+            "Italian": "Emisfero Nord"
         },
         {
             "English": "Southern Hemisphere",
@@ -1399,7 +1454,8 @@
             "German": "Südhalbkugel",
             "Spanish": "Hemisferio sur",
             "Spanish (US)": "Hemisferio sur",
-            "Russian": "Южное Полушарие"
+            "Russian": "Южное Полушарие",
+            "Italian": "Emisfero Sud"
         },
         {
             "English": "You have no villagers added",
@@ -1429,7 +1485,8 @@
             "German": "Ladenöffnungszeiten",
             "Spanish": "Horario de tiendas",
             "Spanish (US)": "Horario de la tienda",
-            "Russian": "Время работы Магазинов"
+            "Russian": "Время работы Магазинов",
+            "Italian": "Orari di apertura"
         },
         {
             "English": "Nook's Cranny",
@@ -1459,7 +1516,8 @@
             "German": "Aktive Lebewesen",
             "Spanish": "Criaturas Activas",
             "Spanish (US)": "Criaturas Activas",
-            "Russian": "Активные существа"
+            "Russian": "Активные существа",
+            "Italian": "Creature attive"
         },
         {
             "English": "Creatures that can currently be caught",
@@ -1489,7 +1547,8 @@
             "German": "Suche",
             "Spanish": "Buscar",
             "Spanish (US)": "Buscar",
-            "Russian": "Искать"
+            "Russian": "Искать",
+            "Italian": "ricerca"
         },
         {
             "English": "Clear Filters",
@@ -1519,7 +1578,8 @@
             "German": "Gesammelt",
             "Spanish": "Obtenido",
             "Spanish (US)": "Coleccionado",
-            "Russian": "Собрано"
+            "Russian": "Собрано",
+            "Italian": "Raccolti"
         },
         {
             "English": "Not Collected",
@@ -1529,7 +1589,8 @@
             "German": "Nicht gesammelt",
             "Spanish": "No obtenido",
             "Spanish (US)": "No Coleccionado",
-            "Russian": "Не собрано"
+            "Russian": "Не собрано",
+            "Italian": "non raccolti"
         },
         {
             "English": "Partially collected variations",
@@ -1539,7 +1600,8 @@
             "German": "Teilweise gesammelt ",
             "Spanish": "Variaciones recopiladas parcialmente",
             "Spanish (US)": "Variaciones recopiladas parcialmente",
-            "Russian": "Частично собранные вариации"
+            "Russian": "Частично собранные вариации",
+            "Italian": "Variazioni parzialmente raccolte"
         },
         {
             "English": "Fish",
@@ -1582,7 +1644,8 @@
             "German": "Meerestiere",
             "Spanish": "Criaturas Marinas",
             "Spanish (US)": "Criaturas Marinas",
-            "Russian": "Морские существа"
+            "Russian": "Морские существа",
+            "Italian": "creature del mare"
         },
         {
             "English": "Fossils",
@@ -1592,7 +1655,8 @@
             "German": "Fossilien",
             "Spanish": "Fósiles",
             "Spanish (US)": "Fósiles",
-            "Russian": "Ископаемые"
+            "Russian": "Ископаемые",
+            "Italian": "Fossili"
         },
         {
             "English": "Art",
@@ -1602,7 +1666,8 @@
             "German": "Kunstwerke",
             "Spanish": "Arte",
             "Spanish (US)": "Arte",
-            "Russian": "Искусство"
+            "Russian": "Искусство",
+            "Italian": "Arte"
         },
         {
             "English": "Songs",
@@ -1612,7 +1677,8 @@
             "German": "Lieder",
             "Spanish": "Canciones",
             "Spanish (US)": "Canciones",
-            "Russian": "Песни"
+            "Russian": "Песни",
+            "Italian": "Canzoni"
         },
         {
             "English": "Music",
@@ -1622,7 +1688,8 @@
             "German": "Musik",
             "Spanish": "Música",
             "Spanish (US)": "Música",
-            "Russian": "Музыка"
+            "Russian": "Музыка",
+            "Italian": "Musica"
         },
         {
             "English": "Recipes",
@@ -1632,7 +1699,8 @@
             "German": "Anleitungen",
             "Spanish": "Recetas",
             "Spanish (US)": "Recetas",
-            "Russian": "Рецепты"
+            "Russian": "Рецепты",
+            "Italian": "Ricette"
         },
         {
             "English": "Tools",
@@ -1642,7 +1710,8 @@
             "German": "Werkzeuge",
             "Spanish": "Herramientas",
             "Spanish (US)": "Herramientas",
-            "Russian": "Инструменты"
+            "Russian": "Инструменты",
+            "Italian": "Strumenti"
         },
         {
             "English": "Furniture",
@@ -1652,7 +1721,8 @@
             "German": "Möbel",
             "Spanish": "Muebles",
             "Spanish (US)": "Muebles",
-            "Russian": "Мебель"
+            "Russian": "Мебель",
+            "Italian": "Arredamento"
         },
         {
             "English": "Clothing",
@@ -1662,7 +1732,8 @@
             "German": "Mode",
             "Spanish": "Ropa",
             "Spanish (US)": "Ropa",
-            "Russian": "Одежда"
+            "Russian": "Одежда",
+            "Italian": "abbigliamento"
         },
         {
             "English": "Floor & Walls",
@@ -1672,7 +1743,8 @@
             "German": "Böden & Tapeten",
             "Spanish": "Suelos y Paredes",
             "Spanish (US)": "Pisos & Paredes",
-            "Russian": "Пол и Стены"
+            "Russian": "Пол и Стены",
+            "Italian": "pavimento e pareti"
         },
         {
             "English": "Misc. Materials",
@@ -1682,7 +1754,8 @@
             "German": "Diverse Materialien",
             "Spanish": "Materiales misceláneos",
             "Spanish (US)": "Materiales",
-            "Russian": "Разные материалы"
+            "Russian": "Разные материалы",
+            "Italian": "materiali vari"
         },
         {
             "English": "Materials",
@@ -1692,7 +1765,8 @@
             "German": "Materialien",
             "Spanish": "Materiales",
             "Spanish (US)": "Materiales",
-            "Russian": "Материалы"
+            "Russian": "Материалы",
+            "Italian": "materiali"
         },
         {
             "English": "Hybrid",
@@ -1702,7 +1776,8 @@
             "German": "Gezüchtete",
             "Spanish": "Flores híbridas",
             "Spanish (US)": "Hibrido",
-            "Russian": "Гибриды"
+            "Russian": "Гибриды",
+            "Italian": "Ibirdo"
         },
         {
             "English": "Roses",
@@ -1712,7 +1787,8 @@
             "German": "Rosen",
             "Spanish": "Rosas",
             "Spanish (US)": "Rosas",
-            "Russian": "Розы"
+            "Russian": "Розы",
+            "Italian": "rose"
         },
         {
             "English": "Pansies",
@@ -1812,7 +1888,8 @@
             "German": "Heute",
             "Spanish": "Ver Hoy",
             "Spanish (US)": "Ver Hoy",
-            "Russian": "Сегодня"
+            "Russian": "Сегодня",
+            "Italian": "guarda oggi"
         },
         {
             "English": "Open Calendar",
@@ -1822,7 +1899,8 @@
             "German": "Kalender öffnen",
             "Spanish": "Abrir el Calendario",
             "Spanish (US)": "Abrir el Calendario",
-            "Russian": "Открыть Календарь"
+            "Russian": "Открыть Календарь",
+            "Italian": "calendario aperto"
         },
         {
             "English": "View All",
@@ -1832,7 +1910,8 @@
             "German": "Alle ansehen",
             "Spanish": "Ver Todo",
             "Spanish (US)": "Ver Todo",
-            "Russian": "Показать все"
+            "Russian": "Показать все",
+            "Italian": "visualizza tutto"
         },
         {
             "English": "1 visit/day",
@@ -1852,7 +1931,8 @@
             "German": "Servicecenter, Sprungstab, Leiter",
             "Spanish": "Ayuntamiento, Pértiga, Escalera",
             "Spanish (US)": "Ayuntamiento, Pértiga, Escalera",
-            "Russian": "Ратуша, Шест, Лестница"
+            "Russian": "Ратуша, Шест, Лестница",
+            "Italian": "Municipio, Palo del volteggio, Scala"
         },
         {
             "English": "Ladder",
@@ -1862,7 +1942,8 @@
             "German": "Leiter",
             "Spanish": "Escalera",
             "Spanish (US)": "Escalera",
-            "Russian": "Лестница"
+            "Russian": "Лестница",
+            "Italian": "Scala"
         },
         {
             "English": "Vaulting Pole",
@@ -1872,7 +1953,8 @@
             "German": "Sprungstab",
             "Spanish": "Pértiga",
             "Spanish (US)": "Pértiga",
-            "Russian": "Шест"
+            "Russian": "Шест",
+            "Italian": "Palo da volteggio"
         },
         {
             "English": "Town Hall, Ladder",
@@ -1882,7 +1964,8 @@
             "German": "Servicecenter, Leiter",
             "Spanish": "Ayuntamiento, Escalera",
             "Spanish (US)": "Ayuntamiento, Escalera",
-            "Russian": "Ратуша, Лестница"
+            "Russian": "Ратуша, Лестница",
+            "Italian": "Municipo, Scala"
         },
         {
             "English": "Town Hall, Vaulting Pole",
@@ -1892,7 +1975,8 @@
             "German": "Servicecenter, Sprungstab",
             "Spanish": "Ayuntamiento, Pértiga",
             "Spanish (US)": "Ayuntamiento, Pértiga",
-            "Russian": "Ратуша, Шест"
+            "Russian": "Ратуша, Шест",
+            "Italian": "Municipo, Palo da volteggio"
         },
         {
             "English": "Catalog Import",
@@ -1902,7 +1986,8 @@
             "German": "aus Katalog Importieren ",
             "Spanish": "Importar catálogo",
             "Spanish (US)": "Importar Catalogo",
-            "Russian": "Импорт каталога"
+            "Russian": "Импорт каталога",
+            "Italian": "Importazione catalogo"
         },
         {
             "English": "Importing...",
@@ -1912,7 +1997,8 @@
             "German": "Wird importiert ...",
             "Spanish": "Importando...",
             "Spanish (US)": "Importando...",
-            "Russian": "Импортирование..."
+            "Russian": "Импортирование...",
+            "Italian": "importazione..."
         },
         {
             "English": "Please wait",
@@ -1922,7 +2008,8 @@
             "German": "Bitte warten",
             "Spanish": "Por favor, espera",
             "Spanish (US)": "Porfavor espere",
-            "Russian": "Пожалуйста подождите"
+            "Russian": "Пожалуйста подождите",
+            "Italian": "attendere prego"
         },
         {
             "English": "Visit",
@@ -1932,7 +2019,8 @@
             "German": "Besuche",
             "Spanish": "Visite",
             "Spanish (US)": "Visitar",
-            "Russian": "Посетите"
+            "Russian": "Посетите",
+            "Italian": "visitare"
         },
         {
             "English": "for more information",
@@ -1942,7 +2030,8 @@
             "German": "für mehr Informationen",
             "Spanish": "para más informacion",
             "Spanish (US)": "Para más informacion",
-            "Russian": "для дополнительной информации"
+            "Russian": "для дополнительной информации",
+            "Italian": "per maggiori informazioni"
         },
         {
             "English": "Paste nook.lol link and Import",
@@ -1962,7 +2051,8 @@
             "German": "oder ...",
             "Spanish": "o...",
             "Spanish (US)": "o...",
-            "Russian": "или..."
+            "Russian": "или...",
+            "Italian": "o..."
         },
         {
             "English": "Paste results here and Import",
@@ -1992,7 +2082,8 @@
             "German": "Bitte habe etwas Geduld.",
             "Spanish": "Por favor sé paciente.",
             "Spanish (US)": "Por favor sea paciente.",
-            "Russian": "Просим чуточку терпения."
+            "Russian": "Просим чуточку терпения.",
+            "Italian": "Per favore sii paziente."
         },
         {
             "English": "Import Results",
@@ -2012,7 +2103,8 @@
             "German": "Versucht:",
             "Spanish": "Intento:",
             "Spanish (US)": "Intentó:",
-            "Russian": "Попытка:"
+            "Russian": "Попытка:",
+            "Italian": "Tentata:"
         },
         {
             "English": "Using nook.lol link to import data",
@@ -2812,7 +2904,8 @@
             "German": "Blumen gießen",
             "Spanish": "Regar flores",
             "Spanish (US)": "Flores de agua",
-            "Russian": "Водяные цветы"
+            "Russian": "Водяные цветы",
+            "Italian": "Innaffiare i fiori"
         },
         {
             "English": "Talk To Villagers",
@@ -2832,7 +2925,8 @@
             "German": "Fossilien ausgraben",
             "Spanish": "Desenterrar fósiles",
             "Spanish (US)": "Excavar fósiles",
-            "Russian": "Выкопать ископаемые"
+            "Russian": "Выкопать ископаемые",
+            "Italian": "scavare fossili"
         },
         {
             "English": "Rock",
@@ -2842,7 +2936,8 @@
             "German": "Steine",
             "Spanish": "Piedra",
             "Spanish (US)": "Roca",
-            "Russian": "Камень"
+            "Russian": "Камень",
+            "Italian": "Roccia"
         },
         {
             "English": "bells",
@@ -2852,7 +2947,8 @@
             "German": "Sternies",
             "Spanish": "Bayas",
             "Spanish (US)": "Bayas",
-            "Russian": "диней"
+            "Russian": "диней",
+            "Italian": "campane"
         },
         {
             "English": "miles",
@@ -2862,7 +2958,8 @@
             "German": "Meilen",
             "Spanish": "Millas",
             "Spanish (US)": "Millas",
-            "Russian": "милей"
+            "Russian": "милей",
+            "Italian": "Miglia"
         },
         {
             "English": "nook points",
@@ -2872,7 +2969,8 @@
             "German": "Nook Meilen",
             "Spanish": "Puntos Nook",
             "Spanish (US)": "Puntos nook",
-            "Russian": "очков Нука"
+            "Russian": "очков Нука",
+            "Italian": "Punti Nook"
         },
         {
             "English": "heart crystals",
@@ -2882,7 +2980,8 @@
             "German": "Liebeskristall",
             "Spanish": "Joya amorosa",
             "Spanish (US)": "joya amorosa",
-            "Russian": "Кристаллов сердца"
+            "Russian": "Кристаллов сердца",
+            "Italian": "cristalli di cuore"
         },
         {
             "English": "DIY",
@@ -2902,7 +3001,8 @@
             "German": "Haltbarkeit",
             "Spanish": "Durabilidad",
             "Spanish (US)": "Durabilidad",
-            "Russian": "Износ"
+            "Russian": "Износ",
+            "Italian": "durabilità"
         },
         {
             "English": "stack size",
@@ -2912,7 +3012,8 @@
             "German": "Stapelgröße",
             "Spanish": "Cantidad de artículos en pila",
             "Spanish (US)": "Cantidad de artículos en la pila",
-            "Russian": "Размер стопки"
+            "Russian": "Размер стопки",
+            "Italian": "dimensione della pila"
         },
         {
             "English": "All day",
@@ -2922,7 +3023,8 @@
             "German": "Den ganzen Tag",
             "Spanish": "Todo el día",
             "Spanish (US)": "Todo el día",
-            "Russian": "Весь день"
+            "Russian": "Весь день",
+            "Italian": "tutto il giorno"
         },
         {
             "English": "Today",
@@ -2932,7 +3034,8 @@
             "German": "Heute",
             "Spanish": "Hoy",
             "Spanish (US)": "Hoy",
-            "Russian": "Сегодня"
+            "Russian": "Сегодня",
+            "Italian": "Domani"
         },
         {
             "English": "Crafting Season",
@@ -2942,7 +3045,8 @@
             "German": "Bastelsaison",
             "Spanish": "Temporada de bricolaje",
             "Spanish (US)": "Temporada de artesanía ",
-            "Russian": "Сезон создания предметов"
+            "Russian": "Сезон создания предметов",
+            "Italian": "stagione di lavorazione"
         },
         {
             "English": "Zodiac Season",
@@ -2952,7 +3056,8 @@
             "German": "Sternzeichen Zyklus ",
             "Spanish": "Temporada zodiacal",
             "Spanish (US)": "Temporada del zodiaco",
-            "Russian": "Сезон знака Зодиака"
+            "Russian": "Сезон знака Зодиака",
+            "Italian": "stagione dello zodiaco"
         },
         {
             "English": "Shopping Season",
@@ -2962,7 +3067,8 @@
             "German": "Einkaufssaison",
             "Spanish": "Temporada de compra",
             "Spanish (US)": "Temporada de compra",
-            "Russian": "Сезон закупок"
+            "Russian": "Сезон закупок",
+            "Italian": "stagione dello shopping"
         },
         {
             "English": "Special Event",
@@ -2972,7 +3078,8 @@
             "German": "Besonderes Event",
             "Spanish": "Evento especial",
             "Spanish (US)": "Evento especial",
-            "Russian": "Особое событие"
+            "Russian": "Особое событие",
+            "Italian": "evento speciale"
         },
         {
             "English": "Nook Shopping Event",
@@ -2982,7 +3089,8 @@
             "German": "Nook Shopping Event",
             "Spanish": "Eventos de TeleNook",
             "Spanish (US)": "Evento del MiniNook",
-            "Russian": "Событие закупок Нука"
+            "Russian": "Событие закупок Нука",
+            "Italian": "evento di shopping nell'Nook"
         },
         {
             "English": "Visit https://nook.lol/ for more information",
@@ -3002,7 +3110,8 @@
             "German": "Was gibt's Neues?",
             "Spanish": "¿Qué hay nuevo?",
             "Spanish (US)": "¿Que hay nuevo?",
-            "Russian": "Что нового?"
+            "Russian": "Что нового?",
+            "Italian": "Cosa c'è di nuovo?"
         },
         {
             "English": "Let's go!",
@@ -3012,7 +3121,8 @@
             "German": "Los gehts!",
             "Spanish": "¡Vamos!",
             "Spanish (US)": "¡Vamos!",
-            "Russian": "Поехали!"
+            "Russian": "Поехали!",
+            "Italian": "Andiamo!"
         },
         {
             "English": "Volunteer Translators",
@@ -3022,7 +3132,8 @@
             "German": "Freiwillige Übersetzer",
             "Spanish": "Traductores Voluntarios",
             "Spanish (US)": "Traductores Voluntarios",
-            "Russian": "Переводчики-волонтёры"
+            "Russian": "Переводчики-волонтёры",
+            "Italian": "traduttori volontari"
         },
         {
             "English": "Thanks for your help!",
@@ -3032,7 +3143,8 @@
             "German": "Danke für deine Hilfe!",
             "Spanish": "¡Gracias por su ayuda!",
             "Spanish (US)": "¡Gracias por su ayuda!",
-            "Russian": "Спасибо вам за помощь!"
+            "Russian": "Спасибо вам за помощь!",
+            "Italian": "Grazie per l'aiuto!"
         },
         {
             "English": "All Events",
@@ -3042,7 +3154,8 @@
             "German": "Alle Events",
             "Spanish": "Todos los eventos",
             "Spanish (US)": "Todos los eventos",
-            "Russian": "Все события"
+            "Russian": "Все события",
+            "Italian": "Tutti gli eventi"
         },
         {
             "English": "Skip",
@@ -3062,7 +3175,8 @@
             "German": "Bilder herunterladen",
             "Spanish": "Descargar imágenes",
             "Spanish (US)": "Descargar imágenes",
-            "Russian": "Скачать изображения"
+            "Russian": "Скачать изображения",
+            "Italian": "Scarica Immagini"
         },
         {
             "English": "Save images locally for offline use once viewed. If disabled, can save storage space, but always requires an internet connection to view images.",
@@ -3092,7 +3206,8 @@
             "German": "Abbrechen",
             "Spanish": "Cancelar",
             "Spanish (US)": "Cancelar",
-            "Russian": "Отменить"
+            "Russian": "Отменить",
+            "Italian": "Cancellare"
         },
         {
             "English": "Done",
@@ -3102,7 +3217,8 @@
             "German": "Fertig",
             "Spanish": "Hecho",
             "Spanish (US)": "Hecho",
-            "Russian": "Готово"
+            "Russian": "Готово",
+            "Italian": "Fatto"
         },
         {
             "English": "OK",
@@ -3112,7 +3228,8 @@
             "German": "Okay",
             "Spanish": "Vale",
             "Spanish (US)": "Vale",
-            "Russian": "ОК"
+            "Russian": "ОК",
+            "Italian": "OK"
         },
         {
             "English": "Flying Near Flowers",
@@ -3122,7 +3239,8 @@
             "German": "Fliegen in Blumennähe",
             "Spanish": "Sobrevolando las flores",
             "Spanish (US)": "Volando sobre las flores",
-            "Russian": "Летают около цветов"
+            "Russian": "Летают около цветов",
+            "Italian": "volare vicino ai fiori"
         },
         {
             "English": "On Rotten Turnips Or Candy",
@@ -3142,7 +3260,8 @@
             "German": "An Bäumen",
             "Spanish": "En los árboles",
             "Spanish (US)": "En los árboles",
-            "Russian": "На деревьях"
+            "Russian": "На деревьях",
+            "Italian": "sugli alberi"
         },
         {
             "English": "Shaking Trees",
@@ -3152,7 +3271,8 @@
             "German": "Bäume schütteln",
             "Spanish": "Sacudiendo Árboles",
             "Spanish (US)": "Sacudiendo Árboles",
-            "Russian": "При тряске деревьев"
+            "Russian": "При тряске деревьев",
+            "Italian": "scuotendo gli alberi"
         },
         {
             "English": "Flying Near Water",
@@ -3162,7 +3282,8 @@
             "German": "Fliegen in Wassernähe",
             "Spanish": "Volando cerca del agua",
             "Spanish (US)": "Volando cerca del agua",
-            "Russian": "Летают около воды"
+            "Russian": "Летают около воды",
+            "Italian": "volare vicino all'acqua"
         },
         {
             "English": "On The Ground",
@@ -3172,7 +3293,8 @@
             "German": "Auf dem Boden",
             "Spanish": "En el suelo",
             "Spanish (US)": "En el piso",
-            "Russian": "На земле"
+            "Russian": "На земле",
+            "Italian": "per terra"
         },
         {
             "English": "On Palm Trees",
@@ -3182,7 +3304,8 @@
             "German": "An Palmen",
             "Spanish": "En las palmeras",
             "Spanish (US)": "En las palmeras",
-            "Russian": "На пальмах"
+            "Russian": "На пальмах",
+            "Italian": "sulle palme"
         },
         {
             "English": "On Hardwood/cedar Trees",
@@ -3202,7 +3325,8 @@
             "German": "Auf Baumstüpfen",
             "Spanish": "En los tocones de los árboles",
             "Spanish (US)": "En tocones de árboles",
-            "Russian": "На пеньках"
+            "Russian": "На пеньках",
+            "Italian": "sui ceppi d'albero"
         },
         {
             "English": "Flying",
@@ -3212,7 +3336,8 @@
             "German": "Fliegend",
             "Spanish": "Volando",
             "Spanish (US)": "Volador",
-            "Russian": "Летают"
+            "Russian": "Летают",
+            "Italian": "volare"
         },
         {
             "English": "On Rivers/ponds",
@@ -7481,6 +7606,16 @@
             "Spanish": "Criaturas comunes tienen mayor probabilidad de aparición",
             "Spanish (US)": "Criaturas comunes tienen mayor probabilidad de aparición",
             "Russian": "Обычные существа появляются чаще"
+        },
+        {
+            "English": "Basegame event",
+            "English (Europe)": "Basegame event",
+            "French": "Événement de jeu de base",
+            "French (US)": "Événement de jeu de base",
+            "German": "Basisspiel-Event",
+            "Spanish": "Evento del juego base",
+            "Spanish (US)": "Evento del juego base",
+            "Russian": "Событие Basegame"
         }
     ],
     "Sources": [

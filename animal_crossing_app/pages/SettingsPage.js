@@ -225,7 +225,7 @@ export class LanguagePicker extends Component{
             {label: attemptToTranslate("Spanish (US)"), value: "Spanish (US)",},
             {label: attemptToTranslate("German"), value: "German",},
             {label: attemptToTranslate("Russian"), value: "Russian",},
-            {label: "Italian (Not fully supported)", value: "Italian",},
+            {label: "Italian (In progress - if you would like to help, feel free to email) ", value: "Italian",},
             {label: "Dutch (Not fully supported)", value: "Dutch",},
             {label: "Chinese (Not fully supported)", value: "Chinese",},
             {label: "Chinese (Traditional) (Not fully supported)", value: "Chinese (Traditional)",},

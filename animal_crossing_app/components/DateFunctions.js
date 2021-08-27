@@ -236,7 +236,19 @@ export function isDateInRange(range,rangeYear, date, specialCheck=""){ //startOn
 }
 
 export const specialEvents = [
-  {
+    {
+        "Name": "New Year's Day",
+        "Month": "Jan",
+        "Day Start": "1",
+        "Day End": "NA",
+        "Special Day" : "NA",
+        "Special Occurrence": "NA",
+        "Hemisphere": "NA",
+        "Time" : "All Day",
+        "Time24" : "All Day",
+        "Image" : "confettiBall.png"
+    },
+    {
         "Name" : "Fireworks Show",
         "Month": "Aug",
         "Day Start": "NA",

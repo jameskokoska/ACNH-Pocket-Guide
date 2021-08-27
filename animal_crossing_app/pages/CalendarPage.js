@@ -4,7 +4,7 @@ import {Agenda} from 'react-native-calendars';
 import TextFont from '../components/TextFont';
 import colors from '../Colors'
 import {getPhoto} from "../components/GetPhoto"
-import {doWeSwapDate, getMonthFromString, getCurrentDateObject, addDays} from "../components/DateFunctions"
+import {doWeSwapDate, getMonthFromString, getCurrentDateObject, addDays, getMonthShort} from "../components/DateFunctions"
 import {getEventName, removeAccents, translateDateRange, attemptToTranslateItem, capitalize, getSettingsString, attemptToTranslate, translateBirthday} from "../LoadJsonData"
 import {getSpecialOccurrenceDate} from "../components/EventContainer"
 import FastImage from '../components/FastImage';
@@ -73,6 +73,7 @@ export default class CalendarPage extends Component {
           backgroundColor: colors.background[global.darkMode],
           calendarBackground: colors.backgroundLight[global.darkMode],
         }}
+        firstDay={0}
           
         //renderDay={(day, item) => (<Text>{day ? day.day: 'item'}</Text>)}
         // hideExtraDays={false}
@@ -85,6 +86,7 @@ export default class CalendarPage extends Component {
   }
 
   loadItems(day) {
+    console.log(day)
 
     const styleRepeatEvent = {customStyles: {
       container: { borderWidth:1, borderColor: colors.lightDarkAccentHeavy2[global.darkMode]},
@@ -102,14 +104,21 @@ export default class CalendarPage extends Component {
     }}
 
     setTimeout(() => {
-      for (let i = -5; i < 50; i++) {
+      for (let i = -5; i < 25; i++) {
         const date = new Date();
-        date.setDate(day.day + i);
-        date.setMonth(day.month);
+        
         date.setFullYear(day.year);
+        date.setMonth(day.month);
+        date.setDate(day.day + i);
+        
         const strTime = this.dateToString(date);
         const seasonData = require("../assets/data/data.json")["Seasons and Events"];
         const villagerData = require("../assets/data/data.json")["Villagers"];
+
+        // stupid fix for one day offset
+        var date2 = new Date(date)
+        date2.setDate( date2.getDate() - 1 )
+        strTime = this.dateToString(date2);
         
         if (!this.state.items[strTime]) {
           this.state.items[strTime] = [];
@@ -141,29 +150,39 @@ export default class CalendarPage extends Component {
           })
 
           specialEvents.map( (event, index)=>{
-            var eventDay = getSpecialOccurrenceDate(date.getFullYear(), index, specialEvents);
-            if(eventDay[0]===date.getDate() && eventDay[1]===date.getMonth()){
-              if(!event["Name"].includes("ireworks")){
-                this.state.items[strTime].push({
-                  name: capitalize(attemptToTranslate(event["Name"], true)),
-                  time: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
-                  image: event["Name"],
-                  color: colors.specialEventBackground,
-                  type:"filter",
-                  filter:event["Name"]
-                });
-                this.state.itemsColor[strTime] = styleImportantEvent;
-              } else {
-                this.state.items[strTime].push({
-                  name: capitalize(attemptToTranslate(event["Name"], true)),
-                  time: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
-                  image: event["Name"],
-                  color: colors.white,
-                  type:"filter",
-                  filter:event["Name"]
-                });
+            if(event["Month"] == getMonthShort(parseInt(date.getMonth())) && parseInt(event["Day Start"]) == date.getDate()){
+              this.state.items[strTime].push({
+                name: capitalize(attemptToTranslate(event["Name"], true)),
+                time: getSettingsString("settingsUse24HourClock") === "true" ? attemptToTranslate(event["Time24"]) : attemptToTranslate(event["Time"]),
+                image: event["Name"],
+                color:colors.specialEventBackground,
+                type:"filter",
+                filter:event["Name"],
+              });
+            } else {
+              var eventDay = getSpecialOccurrenceDate(date.getFullYear(), index, specialEvents);
+              if(eventDay[0]===date.getDate() && eventDay[1]===date.getMonth()){
+                if(!event["Name"].includes("ireworks")){
+                  this.state.items[strTime].push({
+                    name: capitalize(attemptToTranslate(event["Name"], true)),
+                    time: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
+                    image: event["Name"],
+                    color: colors.specialEventBackground,
+                    type:"filter",
+                    filter:event["Name"]
+                  });
+                  this.state.itemsColor[strTime] = styleImportantEvent;
+                } else {
+                  this.state.items[strTime].push({
+                    name: capitalize(attemptToTranslate(event["Name"], true)),
+                    time: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
+                    image: event["Name"],
+                    color: colors.white,
+                    type:"filter",
+                    filter:event["Name"]
+                  });
+                }
               }
-
             }
           })
 
@@ -311,8 +330,6 @@ export default class CalendarPage extends Component {
     return date.toISOString().split('T')[0];
   }
 
-  
-  
 }
 
 

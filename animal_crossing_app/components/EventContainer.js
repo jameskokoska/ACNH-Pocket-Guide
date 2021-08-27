@@ -96,35 +96,48 @@ export function getEventsDay(date, eventSections){
   })
 
   specialEvents.map( (event, index)=>{
-    var eventDay = getSpecialOccurrenceDate(date.getFullYear(), index, specialEvents);
-    if(eventDay[0]===date.getDate() && eventDay[1]===date.getMonth()){
-      if(!event["Name"].includes("ireworks")){
-        totalEvents.push({
-          name: capitalize(attemptToTranslate(event["Name"], true)),
-          time: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
-          image: event["Name"],
-          day:date.getDate(),
-          weekday:date.getDay(),
-          color:colors.specialEventBackground[global.darkMode],
-          type:"filter",
-          filter:event["Name"],
-        });
-        if(getSettingsString("settingsNotifications")){
-          schedulePushNotification(date,eventSections["Set Notification Time"],"🏅" + capitalize(attemptToTranslate(event["Name"], true)),event["Time"]);
-        }
-      } else {
-        totalEvents.push({
-          name: capitalize(attemptToTranslate(event["Name"], true)),
-          time: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
-          image: event["Name"],
-          day:date.getDate(),
-          weekday:date.getDay(),
-          color:colors.startEventBackground[global.darkMode],
-          type:"filter",
-          filter:event["Name"]
-        });
-        if(getSettingsString("settingsNotifications")){
-          schedulePushNotification(date,eventSections["Set Notification Time"],capitalize(attemptToTranslate(event["Name"], true)),event["Time"]);
+    if(event["Month"] == getMonthShort(parseInt(date.getMonth())) && parseInt(event["Day Start"]) == date.getDate()){
+      totalEvents.push({
+        name: capitalize(attemptToTranslate(event["Name"], true)),
+        time: getSettingsString("settingsUse24HourClock") === "true" ? attemptToTranslate(event["Time24"]) : attemptToTranslate(event["Time"]),
+        image: event["Name"],
+        day:date.getDate(),
+        weekday:date.getDay(),
+        color:colors.specialEventBackground[global.darkMode],
+        type:"filter",
+        filter:event["Name"],
+      });
+    } else {
+      var eventDay = getSpecialOccurrenceDate(date.getFullYear(), index, specialEvents);
+      if(eventDay[0]===date.getDate() && eventDay[1]===date.getMonth()){
+        if(!event["Name"].includes("ireworks")){
+          totalEvents.push({
+            name: capitalize(attemptToTranslate(event["Name"], true)),
+            time: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
+            image: event["Name"],
+            day:date.getDate(),
+            weekday:date.getDay(),
+            color:colors.specialEventBackground[global.darkMode],
+            type:"filter",
+            filter:event["Name"],
+          });
+          if(getSettingsString("settingsNotifications")){
+            schedulePushNotification(date,eventSections["Set Notification Time"],"🏅" + capitalize(attemptToTranslate(event["Name"], true)),event["Time"]);
+          }
+        } else {
+          totalEvents.push({
+            name: capitalize(attemptToTranslate(event["Name"], true)),
+            time: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
+            image: event["Name"],
+            day:date.getDate(),
+            weekday:date.getDay(),
+            color:colors.startEventBackground[global.darkMode],
+            type:"filter",
+            filter:event["Name"]
+          });
+          if(getSettingsString("settingsNotifications")){
+            schedulePushNotification(date,eventSections["Set Notification Time"],capitalize(attemptToTranslate(event["Name"], true)),event["Time"]);
+          }
         }
       }
     }
