@@ -29,6 +29,7 @@ import PopupRating from './components/PopupRating'
 import { Appearance } from 'react-native-appearance';
 import SideMenu from './components/SideMenu'
 import GuidePage from './pages/GuidePage';
+import MeteoNookPage from './pages/MeteoNookPage';
 import NewItemsPage from "./pages/NewItemsPage"
 import WishlistPage from "./pages/WishlistPage"
 import AchievementsPage from "./pages/AchievementsPage"
@@ -355,6 +356,8 @@ class App extends Component {
         currentPageView = <ProfileCurrentPage setPage={this.setPage}/>
       } else if (this.state.currentPage===27){
         currentPageView = <AmiiboPage setPage={this.setPage}/>
+      } else if (this.state.currentPage===28){
+        currentPageView = <MeteoNookPage setPage={this.setPage}/>
       } else {
         currentPageView = <Text>Default</Text>
       }

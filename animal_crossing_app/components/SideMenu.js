@@ -254,6 +254,12 @@ export const sideSections = [
     "color": "selectAbout"
   },
   {
+    "pageNum" : 28,
+    "picture" : require("../assets/icons/meteonookIcon.png"),
+    "displayName" : "MeteoNook",
+    "color": "selectAbout"
+  },
+  {
     "pageNum" : "breaker",
   },
   {
