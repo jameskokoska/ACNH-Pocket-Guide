@@ -1,5 +1,5 @@
 import React, {Component, useState, useRef, useEffect} from 'react';
-import {TouchableOpacity, View, Animated,StyleSheet,} from 'react-native';
+import {TouchableOpacity, View, Animated,StyleSheet,RefreshControl} from 'react-native';
 import Header, {HeaderLoading, HeaderActive} from './Header';
 import ListItem from './ListItem';
 import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked} from "../LoadJsonData"
@@ -58,7 +58,7 @@ function ListPage(props){
       dataGlobalName={props.dataGlobalName}
       openBottomSheet={(updateCheckChild)=>{
         sheetRef.current.setPopupVisible(true); 
-        if(props.activeCreatures){
+        if(props.activeCreatures && props.activeCreaturesPage===false){
           // console.log(props.scrollViewRef)
           props.scrollToEnd();
         }
@@ -112,6 +112,17 @@ function ListPage(props){
     // console.log(search)
     setSearch(search);
   }
+
+  const [refresh, setRefresh] = useState(false);
+
+  const refreshFiltersArray = [
+    "Collected",
+    "Partially collected variations",
+    "Not Collected",
+    "Wishlist",
+    "Museum",
+    "Not Museum",
+  ]
 
   const [searchFilters, setSearchFilters] = useState([]);
   function updateSearchFilters(searchFilters){
@@ -567,8 +578,9 @@ function ListPage(props){
     }
 
     setData(dataUpdated)
+    setRefresh(false)
     
-  }, [props, search, searchFilters])
+  }, [props, search, searchFilters, refresh])
   
   var numColumns=3;
   if(props.gridType==="smallGrid"){
@@ -630,7 +642,7 @@ function ListPage(props){
     header = <View/>;
     paddingTop = 20;
     paddingBottom = 20;
-  } else if (props.activeCreatures){
+  } else if (props.activeCreatures && props.activeCreaturesPage===false){
     paddingTop = 0;
     paddingBottom = 0;
     header = (<>
@@ -639,7 +651,7 @@ function ListPage(props){
   }
   var style= {height: Dimensions.get('window').height, paddingBottom: paddingBottom,marginTop: -10}
   var paddingBottomContent = 150;
-  if(data==="empty" && (props.title==="Active Creatures"||props.title==="")){
+  if(data==="empty" && ((props.activeCreatures&&props.activeCreaturesPage===false)||props.title==="")){
     return(
       <View/>
     )
@@ -699,6 +711,14 @@ function ListPage(props){
         removeClippedSubviews={true}
         updateCellsBatchingPeriod={500}
         windowSize={10}
+        refreshControl={
+          <RefreshControl
+            onRefresh={()=>{if(searchFilters.some(item=>refreshFiltersArray.includes(item)))setRefresh(true)}} //only refresh if the order has the possibility of changing
+            refreshing={refresh}
+            progressViewOffset={headerHeight+50}
+            progressBackgroundColor={colors.lightDarkAccentHeavy2[global.darkMode]}
+          />
+        }
       />
       
       <PopupBottomCustom
@@ -710,6 +730,7 @@ function ListPage(props){
         <BottomSheetRender 
           setPage={props.setPage}
           activeCreatures={props.activeCreatures}
+          activeCreaturesPage={props.activeCreaturesPage}
           ref={bottomSheetRenderRef}
           imageProperty={props.imageProperty} 
           textProperty={props.textProperty}
@@ -876,7 +897,7 @@ class BottomSheetRender extends Component{
             globalDatabase={global.dataLoadedAll} 
           />
           {popUpContainer}
-          {this.props.activeCreatures===true ? <View style={{height:50}}/> : <View/>}
+          {this.props.activeCreatures===true && this.props.activeCreaturesPage===false ? <View style={{height:50}}/> : <View/>}
           {this.props.tabs===false ? <View style={{height:50}}/> : <View style={{height:100}}/>}
       </View>
     </View>

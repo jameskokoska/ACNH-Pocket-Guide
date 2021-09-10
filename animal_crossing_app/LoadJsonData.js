@@ -979,6 +979,8 @@ export function translateBirthday(villager){
     return ("Cumpleaños de " + villager)
   } else if(global.language==="German"){
     return (villager + "'s Geburtstag")
+  } else if(global.language==="Russian"){
+    return ("День рождения " + villager)
   } else {
     return (villager + "'s Birthday")
   }
@@ -991,6 +993,8 @@ export function translateIslandNameInputLabel1(){
     return "de isla";
   } else if (global.language==="German"){
     return "der";
+  } else if (global.language==="Russian"){
+    return " ";
   } else {
     return "of";
   }

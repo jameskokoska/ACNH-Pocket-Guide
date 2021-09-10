@@ -152,6 +152,12 @@ export const sideSections = [
     "color": "selectNewItems"
   },
   {
+    "pageNum" : 29,
+    "picture" : require("../assets/icons/fishingRod.png"),
+    "displayName" : "Active Creatures",
+    "color": "selectWishlist"
+  },
+  {
     "pageNum" : "breaker",
   },
   {

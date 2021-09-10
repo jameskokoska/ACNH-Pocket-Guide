@@ -43,7 +43,7 @@ class ClothingPopup extends Component {
         textProperty={["Variation"]}
       />
       <InfoLine
-        image={require("../assets/icons/tag.png")} 
+        image={require("../assets/icons/label.png")} 
         item={this.props.item}
         textProperty={["Label Themes"]}
       />

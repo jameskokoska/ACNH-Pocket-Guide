@@ -214,10 +214,16 @@ class HomePage extends Component {
               <StoreHoursContainer image={require("../assets/icons/able.png")} text="Able Sisters" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "9:00 - 21:00" : "9 AM - 9 PM"} openHour={9} closeHour={21}/>
               <View style={{height: 15}}/>
             </HomeContentArea>:<View/>}
-            {sections["Active Creatures"]===true?<HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.activeCreaturesColor[global.darkMode]} title="Active Creatures" titleColor={colors.activeCreaturesColor[global.darkModeReverse]}>
+            {/* {sections["Active Creatures"]===true?<HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.activeCreaturesColor[global.darkMode]} title="Active Creatures" titleColor={colors.activeCreaturesColor[global.darkModeReverse]}>
               <ActiveCreatures scrollToEnd={this.scrollToEnd}/>
             </HomeContentArea>:<View/>}
-            {sections["Active Creatures"]===true?<View/>:<View style={{height:130}}/>}
+            {sections["Active Creatures"]===true?<View/>:<View style={{height:130}}/>} */}
+            <View style={{height: 55}}/>
+            <TouchableOpacity activeOpacity={0.8} style={{backgroundColor:colors.lightDarkAccent[global.darkMode], borderRadius:15, margin: 20, padding:20}} onPress={() => this.props.setPage(29, true, "giftsRedirect")}>
+              <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center",}}>{"Active Creatures has been moved to a separate page."}</TextFont>
+              <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center",}}>{"You can tap here to go to that page, or open the sidebar."}</TextFont>
+            </TouchableOpacity>
+            <View style={{height: 75}}/>
         </FadeInOut>
       </ScrollView>
       

@@ -89,7 +89,7 @@ class GuidePage extends Component {
           currentURL = {this.state.currentURL}
         />
         <Popup ref={(popup) => this.popup = popup} button1={"OK"} button1Action={()=>{return}} text={"Error"} textLower={"There was an error loading. Note that this feature needs an internet connection."}/>
-        <Popup ref={(popupLanguage) => this.popupLanguage = popupLanguage} button1={"OK"} button1Action={()=>{return}} text={"Selected language not supported"} textLower={"This online guide is only available in English."}/>
+        <Popup ref={(popupLanguage) => this.popupLanguage = popupLanguage} button1={"OK"} button1Action={()=>{return}} text={"Language"} textLower={"You can change the language in the top right corner, by tapping Settings"}/>
      </View>
      </>
     )

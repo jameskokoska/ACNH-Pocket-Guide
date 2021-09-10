@@ -44,7 +44,7 @@ filters = [
             data["Bags"],
             data["Umbrellas"],
         ],
-        ["Catalog", "Style 1","Style 2","Color 1","Color 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", ]
+        ["Catalog", "Style 1","Style 2","Color 1","Color 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", "Label Themes"]
     ],
     [
         "Floor & Walls",
@@ -138,6 +138,7 @@ filters = [
             "Style 2",
             "Color 1",
             "Color 2",
+            "Label Themes",
             "Variation",
             "Size",
             "HHA Concept 1",

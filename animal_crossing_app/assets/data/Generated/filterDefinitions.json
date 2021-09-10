@@ -5433,6 +5433,56 @@
           "id": "Season/Event Exclusive:Yes"
         }
       ]
+    },
+    {
+      "name": "Label Themes",
+      "id": "Label Themes",
+      "children": [
+        {
+          "name": "everyday",
+          "id": "Label Themes:everyday"
+        },
+        {
+          "name": "comfy",
+          "id": "Label Themes:comfy"
+        },
+        {
+          "name": "formal",
+          "id": "Label Themes:formal"
+        },
+        {
+          "name": "work",
+          "id": "Label Themes:work"
+        },
+        {
+          "name": "fairy tale",
+          "id": "Label Themes:fairy tale"
+        },
+        {
+          "name": "party",
+          "id": "Label Themes:party"
+        },
+        {
+          "name": "theatrical",
+          "id": "Label Themes:theatrical"
+        },
+        {
+          "name": "outdoorsy",
+          "id": "Label Themes:outdoorsy"
+        },
+        {
+          "name": "sporty",
+          "id": "Label Themes:sporty"
+        },
+        {
+          "name": "vacation",
+          "id": "Label Themes:vacation"
+        },
+        {
+          "name": "goth",
+          "id": "Label Themes:goth"
+        }
+      ]
     }
   ],
   "Floor & Walls": [
@@ -9581,6 +9631,56 @@
         {
           "name": "None",
           "id": "Color 2:None"
+        }
+      ]
+    },
+    {
+      "name": "Label Themes",
+      "id": "Label Themes",
+      "children": [
+        {
+          "name": "everyday",
+          "id": "Label Themes:everyday"
+        },
+        {
+          "name": "comfy",
+          "id": "Label Themes:comfy"
+        },
+        {
+          "name": "formal",
+          "id": "Label Themes:formal"
+        },
+        {
+          "name": "work",
+          "id": "Label Themes:work"
+        },
+        {
+          "name": "fairy tale",
+          "id": "Label Themes:fairy tale"
+        },
+        {
+          "name": "party",
+          "id": "Label Themes:party"
+        },
+        {
+          "name": "theatrical",
+          "id": "Label Themes:theatrical"
+        },
+        {
+          "name": "outdoorsy",
+          "id": "Label Themes:outdoorsy"
+        },
+        {
+          "name": "sporty",
+          "id": "Label Themes:sporty"
+        },
+        {
+          "name": "vacation",
+          "id": "Label Themes:vacation"
+        },
+        {
+          "name": "goth",
+          "id": "Label Themes:goth"
         }
       ]
     },

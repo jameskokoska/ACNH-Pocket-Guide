@@ -30,6 +30,7 @@ import { Appearance } from 'react-native-appearance';
 import SideMenu from './components/SideMenu'
 import GuidePage from './pages/GuidePage';
 import MeteoNookPage from './pages/MeteoNookPage';
+import ActiveCreaturesPage from './pages/ActiveCreaturesPage';
 import NewItemsPage from "./pages/NewItemsPage"
 import WishlistPage from "./pages/WishlistPage"
 import AchievementsPage from "./pages/AchievementsPage"
@@ -161,7 +162,7 @@ class App extends Component {
       "Profile" : false,
       "Loan Tracking" : true,
       "Store Hours" : true,
-      "Active Creatures" : true,
+      // "Active Creatures" : true,
     }
     this.sections = await this.loadSections("Sections", defaultSections);
 
@@ -358,6 +359,8 @@ class App extends Component {
         currentPageView = <AmiiboPage setPage={this.setPage}/>
       } else if (this.state.currentPage===28){
         currentPageView = <MeteoNookPage setPage={this.setPage}/>
+      } else if (this.state.currentPage===29){
+        currentPageView = <ActiveCreaturesPage/>
       } else {
         currentPageView = <Text>Default</Text>
       }

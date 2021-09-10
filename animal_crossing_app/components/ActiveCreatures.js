@@ -19,6 +19,7 @@ class ActiveCreatures extends Component {
           // leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
           leaveWarning = {true}
           activeCreatures={true}
+          activeCreaturesPage={false}
           scrollToEnd={this.props.scrollToEnd}
           gridType="smallGrid" //smallGrid, largeGrid, row
           appBarColor={colors.emojipediaAppBar[global.darkMode]}
