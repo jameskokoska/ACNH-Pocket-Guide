@@ -717,6 +717,7 @@ function ListPage(props){
             refreshing={refresh}
             progressViewOffset={headerHeight+50}
             progressBackgroundColor={colors.lightDarkAccentHeavy2[global.darkMode]}
+            colors={[colors.textBlack[global.darkMode]]}
           />
         }
       />

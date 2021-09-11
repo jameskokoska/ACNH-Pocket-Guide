@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import {View, Dimensions, Text} from 'react-native';
+import {View,} from 'react-native';
 import ListPage from '../components/ListPage';
 import colors from '../Colors.js';
+import {attemptToTranslate} from "../LoadJsonData"
 
 export default class ActiveCreaturesPage extends Component {
   render(){
@@ -10,6 +11,12 @@ export default class ActiveCreaturesPage extends Component {
         title="Active Creatures"
         // leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
         subHeader = {"Creatures that can currently be caught"}
+        extraInfo={
+          [
+            attemptToTranslate("Active Creatures"),
+            attemptToTranslate("The background is red if this is the last month you are able to catch this creature before you need to wait again."),
+          ]
+        }
         leaveWarning = {true}
         activeCreatures={true}
         activeCreaturesPahe={true}

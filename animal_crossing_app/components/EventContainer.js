@@ -44,7 +44,7 @@ export class EventContainer extends Component {
           {image}
           <View style={styles.textContainer}>
             <TextFont translate={false} numberOfLines={3} bold={true} style={[styles.textContainerTop,{color:this.props.textColor}]}>{this.props.event.name}</TextFont>
-            <TextFont translate={false} style={[styles.textContainerBottom,{color:this.props.textColor}]}>{this.props.event.time}</TextFont>
+            <TextFont style={[styles.textContainerBottom,{color:this.props.textColor}]}>{this.props.event.time}</TextFont>
           </View>
           <View style={{width: 33, alignItems:"center", marginLeft: -8}}>
             <Image style={styles.eventCalendar} source={require("../assets/icons/calendarIcon.png")}/>
@@ -67,7 +67,7 @@ export function getEventsDay(date, eventSections){
       if(eventSections["Favorite Villager's Birthdays"] && global.collectionList.includes("villagerCheckList"+villager["Name"])){
         totalEvents.push({
           name: capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),
-          time: attemptToTranslate("All day"),
+          time: "All day",
           image: villager["Icon Image"],
           day:date.getDate(),
           weekday:date.getDay(),
@@ -81,7 +81,7 @@ export function getEventsDay(date, eventSections){
       } else if (eventSections["All Villager's Birthdays"]){
         totalEvents.push({
           name: capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),
-          time: attemptToTranslate("All day"),
+          time: "All day",
           image: villager["Icon Image"],
           day:date.getDate(),
           weekday:date.getDay(),
@@ -157,7 +157,7 @@ export function getEventsDay(date, eventSections){
         if(isDateInRange(event["Dates (Northern Hemisphere)"], date.getFullYear(), date, "startOnly")){
           totalEvents.push({
             name: capitalize(eventName),
-            time: attemptToTranslate(event["Type"]),
+            time: event["Type"],
             image: event["Name"],
             day:date.getDate(),
             weekday:date.getDay(),
@@ -171,7 +171,7 @@ export function getEventsDay(date, eventSections){
         } else if(eventSections["Show End Day of Events"] && isDateInRange(event["Dates (Northern Hemisphere)"], date.getFullYear(), date, "endOnly")){
           totalEvents.push({
             name: capitalize(eventName) + " " + attemptToTranslate("End"),
-            time: attemptToTranslate(capitalize(event["Type"])),
+            time: event["Type"],
             image: event["Name"],
             day:date.getDate(),
             weekday:date.getDay(),
@@ -187,7 +187,7 @@ export function getEventsDay(date, eventSections){
         if(isDateInRange(event["Dates (Southern Hemisphere)"], date.getFullYear(), date, "startOnly")){
           totalEvents.push({
             name: capitalize(eventName),
-            time: attemptToTranslate(capitalize(event["Type"])),
+            time: event["Type"],
             image: event["Name"],
             day:date.getDate(),
             weekday:date.getDay(),
@@ -201,7 +201,7 @@ export function getEventsDay(date, eventSections){
         } else if(eventSections["Show End Day of Events"] && isDateInRange(event["Dates (Southern Hemisphere)"], date.getFullYear(), date, "endOnly")){
           totalEvents.push({
             name: capitalize(eventName) + " " + attemptToTranslate("End"),
-            time: attemptToTranslate(capitalize(event["Type"])),
+            time: event["Type"],
             image: event["Name"],
             day:date.getDate(),
             weekday:date.getDay(),

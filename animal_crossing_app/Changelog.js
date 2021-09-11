@@ -4,15 +4,21 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
--Active Creatures is moved to a separate page
+-Active Creatures section moved to a separate page
 -Updated and fixed translations (specifically catchphrases)
 -Added Label Themes into filters
 -Added Label icon in clothes popup
 -Added the ability to pull down to refresh a list
 - This can be useful if you check something off and have a Collected filter applied, and you want to update the filters applied
 -
+-Fixed refresh icon colors
+-Fixed icons for events on home page
+-Added help text for Active Creatures page
+-
 -Updated translations
 -Added MeteoNook page (in sidebar)
+-
+-Past changes:
 -
 -Fixed calendar page again
 -Changed icons for events
@@ -58,8 +64,6 @@ export const changelog = `
 -Added new items from the update
 -
 -Fixed fireworks show date
--
--Past changes:
 -
 -Updated translations
 -You can now see which of your favorite villagers like a clothing item as a gift

@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-import {ScrollView, Dimensions, Text} from 'react-native';
+import {Dimensions,} from 'react-native';
 import {View, TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import ListPage from '../components/ListPage';
 import colors from '../Colors.js';
-import {getMonthShort} from "../components/DateFunctions"
-import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
+import {attemptToTranslate} from "../LoadJsonData"
 import TextFont from '../components/TextFont';
 
 const renderTabBar = props => (
