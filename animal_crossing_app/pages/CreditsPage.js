@@ -106,6 +106,8 @@ class CreditsPage extends Component {
           <ExternalLink link="https://chibisnorlax.github.io/acnhfaq/"/>
           <Paragraph>Villager Compatibility:</Paragraph>
           <ExternalLink link="https://docs.google.com/spreadsheets/d/1Sc2HJRcgg-Q_CsFnewIB3n2f4Tgj-QT33qUCrItj0MU/"/>
+          <Paragraph>{"MeteoNook:\nAuthor: Ash Wolf (Ninji)"}</Paragraph>
+          <ExternalLink link="https://wuffs.org/acnh/weather/"/>
 
           <View style={{height:35}}/>
           <SubHeader>Sources</SubHeader>
