@@ -4,6 +4,8 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
+-Can now change the order of the sidebar menu
+-
 -Active Creatures section moved to a separate page
 -Updated and fixed translations (specifically catchphrases)
 -Added Label Themes into filters

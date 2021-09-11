@@ -4,14 +4,14 @@ import  {DrawerLayout, ScrollView} from 'react-native-gesture-handler'
 import SidebarElement from './SidebarElement';
 import colors from '../Colors.js';
 import TextFont from './TextFont';
-import {getSettingsString} from '../LoadJsonData';
+import {getSettingsString, getStorage} from '../LoadJsonData';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {ProfileIcon} from "../pages/ProfileCurrentPage"
 
 export default class SideMenu extends Component {
   constructor(props){
     super(props);
-    this.state = {sections:props.sideMenuSections, editMode: false}
+    this.state = {editMode: false, sideSections:sideSections}
     this.maxWidth = 411*0.7;
     if(Dimensions.get('window').width*0.7 < this.maxWidth){
       this.maxWidth = Dimensions.get('window').width*0.7;
@@ -29,22 +29,41 @@ export default class SideMenu extends Component {
     this.drawer.closeDrawer()
   }
   editSections = async (name) => {
-    var oldList = this.state.sections
-
-    if(oldList.includes(name)){
-      oldList = oldList.filter(item => item !== name);
-      await this.saveSections(oldList);
-      getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
-      this.setState({sections:oldList})
-    } else {
-      oldList.push(name);
-      await this.saveSections(oldList);
-      getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(5) : "";
-      this.setState({sections:oldList})
+    var sideSections = this.state.sideSections
+    for(let index= 0; index<sideSections.length; index++){
+      if(sideSections[index]["displayName"]===name){
+        sideSections[index]["disabled"] = !sideSections[index]["disabled"]
+        break
+      }
     }
+    this.setState({sideSections:sideSections})
+    getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+    await this.saveSections(sideSections);
   }
+  reorderSections = async (index, direction) => {
+    //-1 moves the item down
+    //1 moves the item up
+    const items = this.state.sideSections
+    console.log(items)
+    const position = index
+    if (
+      (direction === -1 && position === 0) ||
+      (direction === 1 && position === items.length - 1)
+    ) {
+      return;
+    }
+
+    const item = items[position]; // save item for later
+    
+    items.splice(index, 1);
+    items.splice(position + direction, 0, item);
+
+    this.setState({sideSections: items});
+    await this.saveSections(items);
+  };
   saveSections = async(data) => {
-    await AsyncStorage.setItem("sideMenuSections", JSON.stringify(data));
+    await AsyncStorage.setItem("SideMenuSections", JSON.stringify(data));
+    console.log(JSON.parse(await getStorage("SideMenuSections","")))
   }
   nonTabbedPages = [0];
   renderDrawer = () => {
@@ -62,10 +81,10 @@ export default class SideMenu extends Component {
             </View>
             <TextFont bold={true} style={{marginHorizontal: 20, marginTop: 16, marginBottom: 10, fontSize: 31, color: colors.textBlack[global.darkMode]}}>ACNH Pocket</TextFont>
           </View>
-          {sideSections.map( (section, index)=>
+          {this.state.sideSections.map( (section, index)=>
             {
               if(section["pageNum"]!="breaker"){
-                const disabled = this.state.sections.includes(section.displayName);
+                let disabled = section.disabled===true
                 return <SidebarElement 
                   key={section["pageNum"].toString()+index.toString()}
                   image={section.picture} 
@@ -78,6 +97,8 @@ export default class SideMenu extends Component {
                   unselectedColor={this.state.editMode&&!section.cannotDisable?colors.inkWell[global.darkMode]+(disabled?"1F":"8F"):colors.textWhite[global.darkMode]}
                   editMode={this.state.editMode}
                   editSections={this.editSections}
+                  index={index}
+                  reorderSections={this.reorderSections}
                   disabled={disabled}
                   cannotDisable={section.cannotDisable}
                 />
@@ -132,30 +153,35 @@ export const sideSections = [
     "displayName" : "Home",
     "color": "selectHome",
     "cannotDisable":true,
+    "disabled":false
   },
   {
     "pageNum" : 1,
     "picture" : require("../assets/icons/book.png"),
     "displayName" : "Everything",
-    "color": "selectEverything"
+    "color": "selectEverything",
+    "disabled":false
   },
   {
     "pageNum" : 18,
     "picture" : require("../assets/icons/wishlist.png"),
     "displayName" : "Wishlist",
-    "color": "selectWishlist"
+    "color": "selectWishlist",
+    "disabled":false
   },
   {
     "pageNum" : 17,
     "picture" : require("../assets/icons/package.png"),
     "displayName" : "New Items",
-    "color": "selectNewItems"
+    "color": "selectNewItems",
+    "disabled":false
   },
   {
     "pageNum" : 29,
     "picture" : require("../assets/icons/fishingRod.png"),
     "displayName" : "Active Creatures",
-    "color": "selectWishlist"
+    "color": "selectWishlist",
+    "disabled":false
   },
   {
     "pageNum" : "breaker",
@@ -164,61 +190,71 @@ export const sideSections = [
     "pageNum" : 2,
     "picture" : require("../assets/icons/bugs.png"),
     "displayName" : "Creatures + Museum",
-    "color": "selectCreatures"
+    "color": "selectCreatures",
+    "disabled":false
   },
   {
     "pageNum" : 3,
     "picture" : require("../assets/icons/leaf.png"),
     "displayName" : "Items",
-    "color": "selectItems"
+    "color": "selectItems",
+    "disabled":false
   },
   {
     "pageNum" : 4,
     "picture" : require("../assets/icons/music.png"),
     "displayName" : "Songs",
-    "color": "selectSongs"
+    "color": "selectSongs",
+    "disabled":false
   },
   {
     "pageNum" : 5,
     "picture" : require("../assets/icons/emote.png"),
     "displayName" : "Emoticons",
-    "color": "selectEmotes"
+    "color": "selectEmotes",
+    "disabled":false
   },
   {
     "pageNum" : 6,
     "picture" : require("../assets/icons/crafting.png"),
     "displayName" : "Recipes + Tools",
-    "color": "selectCrafting"
+    "color": "selectCrafting",
+    "disabled":false
   },
   {
     "pageNum" : 8,
     "picture" : require("../assets/icons/cat.png"),
     "displayName" : "Villagers",
-    "color": "selectVillagers"
+    "color": "selectVillagers",
+    "disabled":false
   },
   {
     "pageNum" : 9,
     "picture" : require("../assets/icons/construction.png"),
     "displayName" : "Construction",
-    "color": "selectConstruction"
+    "color": "selectConstruction",
+    "disabled":false
   },
   {
     "pageNum" : 10,
     "picture" : require("../assets/icons/flower.png"),
     "displayName" : "Flowers",
-    "color": "selectItems"
+    "color": "selectItems",
+    "disabled":false
   },
   {
     "pageNum" : 11,
     "picture" : require("../assets/icons/envelope.png"),
     "displayName" : "Letters",
-    "color": "selectCards"
+    "color": "selectCards",
+    "disabled":false
   },
   {
     "pageNum" : 27,
     "picture" : require("../assets/icons/amiiboIcon.png"),
     "displayName" : "Amiibo Cards",
-    "color": "selectAmiibo"
+    "color": "selectAmiibo",
+    "disabled":false
   },
   {
     "pageNum" : "breaker",
@@ -227,43 +263,50 @@ export const sideSections = [
     "pageNum" : 19,
     "picture" : require("../assets/icons/achievementIcon.png"),
     "displayName" : "Achievements",
-    "color": "selectAchievements"
+    "color": "selectAchievements",
+    "disabled":false
   },
   {
     "pageNum" : 16,
     "picture" : require("../assets/icons/calendar.png"),
     "displayName" : "Calendar + Events",
-    "color": "selectCalendar"
+    "color": "selectCalendar",
+    "disabled":false
   },
   {
     "pageNum" : 21,
     "picture" : require("../assets/icons/obtainable.png"),
     "displayName" : "Obtainable Items",
-    "color": "selectObtainable"
+    "color": "selectObtainable",
+    "disabled":false
   },
   {
     "pageNum" : 24,
     "picture" : require("../assets/icons/personalityEmoji.png"),
     "displayName" : "Villager Compatibility",
-    "color": "selectAchievements"
+    "color": "selectAchievements",
+    "disabled":false
   },
   {
     "pageNum" : 7,
     "picture" : require("../assets/icons/palmTree.png"),
     "displayName" : "Mystery Islands",
-    "color": "selectIsland"
+    "color": "selectIsland",
+    "disabled":false
   },
   {
     "pageNum" : 15,
     "picture" : require("../assets/icons/acnhFAQIcon.png"),
     "displayName" : "Guide + FAQ",
-    "color": "selectAbout"
+    "color": "selectAbout",
+    "disabled":false
   },
   {
     "pageNum" : 28,
     "picture" : require("../assets/icons/meteonookIcon.png"),
     "displayName" : "MeteoNook",
-    "color": "selectAbout"
+    "color": "selectAbout",
+    "disabled":false
   },
   {
     "pageNum" : "breaker",
@@ -272,13 +315,15 @@ export const sideSections = [
     "pageNum" : 25,
     "picture" : require("../assets/icons/coconut-tree.png"),
     "displayName" : "Profiles/Islands",
-    "color": "selectAbout"
+    "color": "selectAbout",
+    "disabled":false
   },
   {
     "pageNum" : 12,
     "picture" : require("../assets/icons/scroll.png"),
     "displayName" : "Catalog Scanning",
-    "color": "selectAbout"
+    "color": "selectAbout",
+    "disabled":false
   },
   {
     "pageNum" : 13,

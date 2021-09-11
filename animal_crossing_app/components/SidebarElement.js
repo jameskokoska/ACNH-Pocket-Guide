@@ -46,6 +46,25 @@ class SidebarElement extends Component {
         </TouchableOpacity>
       </View>
     }
+    var changeOrderButtons = <View/>
+    if(this.props.editMode){
+      changeOrderButtons=<View style={{flexDirection:"row",right:-5, top:-10,position:'absolute',zIndex:10, }}>
+        <TouchableOpacity style={{paddingVertical:9, paddingHorizontal:5}} 
+          onPress={()=>{
+            this.props.reorderSections(this.props.index, -1); 
+            this.setState({showRemove:false})
+        }}>
+          <Image source={require("../assets/icons/upArrow.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
+        </TouchableOpacity>
+        <TouchableOpacity style={{paddingVertical:9, paddingHorizontal:5}} 
+          onPress={()=>{
+            this.props.reorderSections(this.props.index, 1); 
+            this.setState({showRemove:false})
+        }}>
+          <Image source={require("../assets/icons/downArrow.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
+        </TouchableOpacity>
+      </View>
+    }
     if(this.props.cannotDisable){
       addButton = <View/>
       removeButton = <View/>
@@ -62,6 +81,7 @@ class SidebarElement extends Component {
           }}>
             <View style={[styles.sidebarBox, {opacity:this.props.disabled?0.7:1,backgroundColor: backgroundColor,elevation: elevation}]}>
               {!this.props.disabled?removeButton:addButton}
+              {changeOrderButtons}
               <Image style={styles.sidebarImage} source={this.props.image}/>
               <TextFont bold={true} style={[styles.sidebarTitle,{color:this.props.textColor}]}>{this.props.title}</TextFont>
             </View>

@@ -27,7 +27,7 @@ import colors from './Colors.js';
 import * as Font from 'expo-font';
 import PopupRating from './components/PopupRating'
 import { Appearance } from 'react-native-appearance';
-import SideMenu from './components/SideMenu'
+import SideMenu, { sideSections } from './components/SideMenu'
 import GuidePage from './pages/GuidePage';
 import MeteoNookPage from './pages/MeteoNookPage';
 import ActiveCreaturesPage from './pages/ActiveCreaturesPage';
@@ -115,6 +115,27 @@ class App extends Component {
     return sections;
   }
 
+  //Compare a list of objects and an attribute, return the default if not comparable 
+  loadList = async(key, defaultList, attributeToCheck) => {
+    let list = JSON.parse(await getStorage(key,JSON.stringify(defaultList)));
+    let storedAttributes = []
+    for(let index=0; index<list.length; index++){
+      storedAttributes.push(list[index][attributeToCheck])
+    }
+
+    let defaultAttributes = []
+    for(let index=0; index<defaultList.length; index++){
+      defaultAttributes.push(defaultList[index][attributeToCheck])
+    }
+
+    if(storedAttributes.sort().join(',')===defaultAttributes.sort().join(',')){
+      return list
+    } else {
+      await AsyncStorage.setItem(key, JSON.stringify(defaultList));
+      return defaultList
+    }
+  }
+
   async componentDidMount(){
     setTimeout(async () => {
     this.mounted = true;
@@ -185,7 +206,7 @@ class App extends Component {
     }
     this.eventSections = await this.loadSections("EventSections", defaultEventSections);
     
-    this.sideMenuSections = JSON.parse(await getStorage("sideMenuSections","[]"));
+    this.sideMenuSections = await this.loadList("SideMenuSections", sideSections, "displayName")
 
     if(this.mounted){
       this.setState({

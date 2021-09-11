@@ -105,6 +105,7 @@ class HomePage extends Component {
           refreshEvents={()=>{this.refreshEvents()}} 
           setPages={(checked,name)=>this.setPages(checked,name)} 
           sections={this.state.sections}
+          canChangeOrder={true}
         />
       </PopupBottomCustom>
       <PopupBottomCustom ref={(popupEventsSettings) => this.popupEventsSettings = popupEventsSettings} onClose={()=>{}}>
@@ -456,6 +457,7 @@ export class ConfigureHomePages extends Component {
     var sections = this.props.sections
     this.state = {
       sections:sections,
+      editingOrder:false
     }
     
   }
@@ -472,6 +474,13 @@ export class ConfigureHomePages extends Component {
     const sectionNames = Object.keys(this.state.sections);
     return(<>
       <SubHeader>{this.props.header}</SubHeader>
+      {this.props.canChangeOrder?
+        <TouchableOpacity style={{padding:10, paddingVertical:12, position:"absolute",right:0}} 
+          onPress={()=>{this.setState({editingOrder:!this.state.editingOrder}); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}
+        }>
+          <TextFont bold={false} style={{marginRight:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"right"}}>{"Change Order"}</TextFont>
+        </TouchableOpacity>
+      :<View/>}
       <View style={{height:10}}/>
         {sectionNames.map( (name, index)=>{
           if(name.includes("Break")){
@@ -481,7 +490,7 @@ export class ConfigureHomePages extends Component {
           } else if(name==="Set Notification Time"){
             return <SetNotificationTime key={name+index.toString()} title={name} setPages={this.setPages}/>
           } else {
-            return <ConfigureHomePageSettingContainer key={name+index.toString()} title={name} defaultValue={this.state.sections[name]} onCheck={(check)=>{this.setPages(check,name)}}/>
+            return <ConfigureHomePageSettingContainer editingOrder={this.state.editingOrder} key={name+index.toString()} title={name} defaultValue={this.state.sections[name]} onCheck={(check)=>{this.setPages(check,name)}}/>
           }
         })}
       </>
@@ -548,6 +557,23 @@ export class ConfigureHomePageSettingContainer extends Component {
   render(){
     return(
       <TouchableOpacity activeOpacity={0.65} onPress={()=>this.toggle()}>
+        {this.props.editingOrder?
+        <View style={{flexDirection:"row",left:15, top:-5,position:'absolute',zIndex:10, }}>
+          <TouchableOpacity style={{paddingVertical:9, paddingHorizontal:5}} 
+            onPress={()=>{
+              props.reorderItem(props.index, -1); 
+              this.setState({showRemove:false})
+          }}>
+            <Image source={require("../assets/icons/upArrow.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
+          </TouchableOpacity>
+          <TouchableOpacity style={{paddingVertical:9, paddingHorizontal:5}} 
+            onPress={()=>{
+              props.reorderItem(props.index, 1); 
+              this.setState({showRemove:false})
+          }}>
+            <Image source={require("../assets/icons/downArrow.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
+          </TouchableOpacity>
+        </View>:<View/>}
         <View style={[styles.settingsContainer,{backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
             <View style={styles.textContainer}>
               <TextFont bold={true} style={[styles.textContainerTop,{color:colors.textBlack[global.darkMode]}]}>{this.props.title}</TextFont>
