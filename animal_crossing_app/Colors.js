@@ -88,6 +88,8 @@ const colors = {
     eventsColor : ["#ffe366","#333333"],
     todoColor : ["#FDC496","#333333"],
     todoColorAccent : ["#ffeccf","#333333"],
+    loanTrackingColor : ["#DD999E","#333333"],
+    turnipColor : ["#A0C988","#333333"],
     visitorsColor : ["#98C4C3","#333333"],
     storeHoursColor : ["#9ECDF7","#333333"],
     collectionColor : ["#c7a4ff","#333333"],

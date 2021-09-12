@@ -39,7 +39,7 @@ class HomePage extends Component {
     if(eventSections.hasOwnProperty("App notifications")){
       getSettingsString("settingsNotifications")==="true" ? eventSections["App notifications"]=true : eventSections["App notifications"]=false;
     }
-    this.state = {sections:props.sections, eventSections:eventSections}
+    this.state = {sections:props.sections, eventSections:eventSections, editOrder:false, sectionsOrder:this.props.sectionsOrder}
     this.refreshEvents();
   }
   refreshEvents = () => {
@@ -76,6 +76,27 @@ class HomePage extends Component {
     this.scrollViewRef?.scrollToEnd()
   }
 
+  reorderItem = async (index, direction) => {
+    //-1 moves the item down
+    //1 moves the item up
+    const items = this.state.sectionsOrder
+    const position = index
+    if (
+      (direction === -1 && position === 0) ||
+      (direction === 1 && position === items.length - 1)
+    ) {
+      return;
+    }
+
+    const item = items[position]; // save item for later
+    
+    items.splice(index, 1);
+    items.splice(position + direction, 0, item);
+
+    this.setState({sectionsOrder: items});
+    await AsyncStorage.setItem("SectionsOrder", JSON.stringify(items));
+  };
+
   render(){
     var todayTitle=<View/>
     if(this.todayEvents.length>0){
@@ -97,17 +118,17 @@ class HomePage extends Component {
       landscape = <LottieView autoPlay loop style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeCelebration.json')}/>
     }
     const sections = this.state.sections;
+
     return <View style={{height:"100%",width:"100%"}}>
       <PopupChangelog/>
-      <PopupBottomCustom ref={(popupSettings) => this.popupSettings = popupSettings} onClose={()=>{}}>
+      {/* <PopupBottomCustom ref={(popupSettings) => this.popupSettings = popupSettings} onClose={()=>{}}>
         <ConfigureHomePages 
           header={"Select Homepage Sections"} 
           refreshEvents={()=>{this.refreshEvents()}} 
           setPages={(checked,name)=>this.setPages(checked,name)} 
           sections={this.state.sections}
-          canChangeOrder={true}
         />
-      </PopupBottomCustom>
+      </PopupBottomCustom> */}
       <PopupBottomCustom ref={(popupEventsSettings) => this.popupEventsSettings = popupEventsSettings} onClose={()=>{}}>
         <ConfigureHomePages 
           setPage={(page)=>this.props.setPage(page)} 
@@ -117,20 +138,35 @@ class HomePage extends Component {
           sections={this.state.eventSections}
         />
       </PopupBottomCustom>
-        <ScrollView ref={(scrollViewRef) => this.scrollViewRef = scrollViewRef}>
-          <View style={{height:45}}/>
-          <Clock swapDate={doWeSwapDate()}/>
-          <View style={{height:125}}/>
-          <View style={{height:38}}>
-            <TouchableOpacity style={{padding:10, paddingVertical:12, position:"absolute",right:0}} 
-              onPress={()=>{this.popupSettings.setPopupVisible(true); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}
+      <ScrollView ref={(scrollViewRef) => this.scrollViewRef = scrollViewRef}>
+        <View style={{height:45}}/>
+        <Clock swapDate={doWeSwapDate()}/>
+        <View style={{height:125}}/>
+        <View style={{height:38}}>
+        <View style={{padding:10, paddingVertical:12, position:"absolute",right:0, top: -15}}>
+          <View style={{flexDirection:"row"}}>
+            <TouchableOpacity style={{padding:5, paddingVertical:12}} 
+              onPress={()=>{this.setState({editOrder:!this.state.editOrder}); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}
             }>
-              <TextFont bold={false} style={{marginRight:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"right"}}>{"Edit Sections"}</TextFont>
+              <TextFont bold={false} style={{marginRight:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"right"}}>{!this.state.editOrder?"Edit Sections":"Disable Edit Sections"}</TextFont>
             </TouchableOpacity>
           </View>
-          {/* If todo is the first page to be loaded, wait to fade in */}
-          <FadeInOut fadeIn={this.state.sections!==""&&(this.state.sections["Events"] || this.state.loadedToDo===true || this.state.sections["To-Do"]===false)?true:false} duration={200} startValue={0} endValue={1} maxFade={1} minScale={0.9} >
-            {sections["Events"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.eventsColor[global.darkMode]} title="Events" titleColor={colors.eventsColor[global.darkModeReverse]}>
+        </View>
+        </View>
+
+        {this.state.sectionsOrder.map( (section, index)=>{
+          let backgroundColor = colors.sectionBackground1[global.darkMode]
+          if(index%2!=0){
+            backgroundColor = colors.sectionBackground2[global.darkMode]
+          }
+          if(section["name"]==="Events"){
+            if(this.state.editOrder){
+              let name = "Events"
+              return <HomeContentArea index={index} key={name+"edit"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.eventsColor[global.darkMode]} title={name} titleColor={colors.eventsColor[global.darkModeReverse]}>
+                <View style={{height:10}}/><ConfigureHomePageSettingContainer key={name+index.toString()} title={name} defaultValue={this.state.sections[name]} onCheck={(check)=>{this.setPages(check,name)}}/><View style={{height:10}}/>
+              </HomeContentArea>
+            }
+            return sections["Events"]===true?<HomeContentArea index={index} key={"Events"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.eventsColor[global.darkMode]} title="Events" titleColor={colors.eventsColor[global.darkModeReverse]}>
               <TouchableOpacity style={{padding:10, paddingVertical:12, position:"absolute",right:0}} 
                 onPress={()=>{this.popupEventsSettings.setPopupVisible(true); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}
               }>
@@ -173,59 +209,101 @@ class HomePage extends Component {
                 />
               )}
               <View style={{height: 30}}/>
-            </HomeContentArea>:<View/>}
-            {sections["To-Do"]===true?<HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.todoColor[global.darkMode]} title="To-Do" titleColor={colors.todoColor[global.darkModeReverse]}>
+            </HomeContentArea>:<View/>
+          }else if(section["name"]==="To-Do"){
+            if(this.state.editOrder){
+              let name = "To-Do"
+              return <HomeContentArea index={index} key={name+"edit"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.todoColor[global.darkMode]} title={name} titleColor={colors.todoColor[global.darkModeReverse]}>
+                <View style={{height:10}}/><ConfigureHomePageSettingContainer key={name+index.toString()} title={name} defaultValue={this.state.sections[name]} onCheck={(check)=>{this.setPages(check,name)}}/><View style={{height:10}}/>
+              </HomeContentArea>
+            }
+            return sections["To-Do"]===true?<HomeContentArea index={index} key={"To-Do"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.todoColor[global.darkMode]} title="To-Do" titleColor={colors.todoColor[global.darkModeReverse]}>
               <View style={{height: 15}}/>
               <TodoList sections={sections} setLoadedToDo={this.setLoadedToDo} setPage={this.props.setPage}/>
               <View style={{height: 15}}/>
-            </HomeContentArea>:<View/>}
-            {this.props.sections["Turnip Log"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.profileColor[global.darkMode]} title="Turnip Log" titleColor={colors.profileColor[global.darkModeReverse]}>
+            </HomeContentArea>:<View/>
+          }else if(section["name"]==="Turnip Log"){
+            if(this.state.editOrder){
+              let name = "Turnip Log"
+              return <HomeContentArea index={index} key={name+"edit"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.turnipColor[global.darkMode]} title={name} titleColor={colors.turnipColor[global.darkModeReverse]}>
+                <View style={{height:10}}/><ConfigureHomePageSettingContainer key={name+index.toString()} title={name} defaultValue={this.state.sections[name]} onCheck={(check)=>{this.setPages(check,name)}}/><View style={{height:10}}/>
+              </HomeContentArea>
+            }
+            return this.props.sections["Turnip Log"]===true?<HomeContentArea index={index} key={"Turnip Log"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.turnipColor[global.darkMode]} title="Turnip Log" titleColor={colors.turnipColor[global.darkModeReverse]}>
               <View style={{height: 13}}/>
               <TurnipLog/>
               <View style={{height: 20}}/>
             </HomeContentArea>
-            :<View/>}
-            {sections["Visitors"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.visitorsColor[global.darkMode]} title="Visitors" titleColor={colors.visitorsColor[global.darkModeReverse]}>
+            :<View/>
+          }else if(section["name"]==="Visitors"){
+            if(this.state.editOrder){
+              let name = "Visitors"
+              return <HomeContentArea index={index} key={name+"edit"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.visitorsColor[global.darkMode]} title={name} titleColor={colors.visitorsColor[global.darkModeReverse]}>
+                <View style={{height:10}}/><ConfigureHomePageSettingContainer key={name+index.toString()} title={name} defaultValue={this.state.sections[name]} onCheck={(check)=>{this.setPages(check,name)}}/><View style={{height:10}}/>
+              </HomeContentArea>
+            }
+            return sections["Visitors"]===true?<HomeContentArea index={index} key={"Visitors"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.visitorsColor[global.darkMode]} title="Visitors" titleColor={colors.visitorsColor[global.darkModeReverse]}>
               <View style={{height: 15}}/>
               <VisitorsList setPage={this.props.setPage}/>
               <View style={{height: 25}}/>
-            </HomeContentArea>:<View/>}
-            {sections["Collection"]===true?<HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.collectionColor[global.darkMode]} title="Collection" titleColor={colors.collectionColor[global.darkModeReverse]}>
+            </HomeContentArea>:<View/>
+          }else if(section["name"]==="Collection"){
+            if(this.state.editOrder){
+              let name = "Collection"
+              return <HomeContentArea index={index} key={name+"edit"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.collectionColor[global.darkMode]} title={name} titleColor={colors.collectionColor[global.darkModeReverse]}>
+                <View style={{height:10}}/><ConfigureHomePageSettingContainer key={name+index.toString()} title={name} defaultValue={this.state.sections[name]} onCheck={(check)=>{this.setPages(check,name)}}/><View style={{height:10}}/>
+              </HomeContentArea>
+            }
+            return sections["Collection"]===true?<HomeContentArea index={index} key={"Collection"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.collectionColor[global.darkMode]} title="Collection" titleColor={colors.collectionColor[global.darkModeReverse]}>
               <CollectionProgress/>
-            </HomeContentArea>:<View/>}
-            {sections["Profile"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.profileColor[global.darkMode]} title="Profile" titleColor={colors.profileColor[global.darkModeReverse]}>
+            </HomeContentArea>:<View/>
+          }else if(section["name"]==="Profile"){
+            if(this.state.editOrder){
+              let name = "Profile"
+              return <HomeContentArea index={index} key={name+"edit"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.profileColor[global.darkMode]} title={name} titleColor={colors.profileColor[global.darkModeReverse]}>
+                <View style={{height:10}}/><ConfigureHomePageSettingContainer key={name+index.toString()} title={name} defaultValue={this.state.sections[name]} onCheck={(check)=>{this.setPages(check,name)}}/><View style={{height:10}}/>
+              </HomeContentArea>
+            }
+            return sections["Profile"]===true?<HomeContentArea index={index} key={"Profile"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.profileColor[global.darkMode]} title="Profile" titleColor={colors.profileColor[global.darkModeReverse]}>
               <View style={{height: 37}}/>
               <Profile setPage={this.props.setPage}/>
               <CurrentVillagers openVillagerPopup={this.openVillagerPopup} setPage={this.props.setPage}/>
-              {/* {getCurrentVillagerNamesString()==="You have no favorite villagers"?<View/>:<TouchableOpacity onPress={() => this.props.setPage(21)}>
-                {getInverseVillagerFilters(true)===""?<TextFont suffix={"\n"+attemptToTranslate("Note: you can get all items since you have all personality types!")} style={{marginHorizontal: 30, color: colors.fishText[global.darkMode], fontSize: 11, textAlign:"center"}}>{"See what you can get from your villagers."}</TextFont>:<>
-                <TextFont style={{marginHorizontal: 30, color: colors.fishText[global.darkMode], fontSize: 11, textAlign:"center"}}>{"It is recommended you get all villager personalities to get DIYs and Reactions. Tap here to see what you might be missing out on."}</TextFont>
-                <TextFont suffix={"\n "+getInverseVillagerFilters(true)} style={{marginHorizontal: 30, color: colors.fishText[global.darkMode], fontSize: 13, textAlign:"center"}}>{"Missing personalities:"}</TextFont></>}
-              </TouchableOpacity>} */}
               <View style={{height: 30}}/>
-            </HomeContentArea>:<View/>}
-            {sections["Loan Tracking"]===true?<HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.todoColor[global.darkMode]} title="Loan Tracking" titleColor={colors.todoColor[global.darkModeReverse]}>
+            </HomeContentArea>:<View/>
+          }else if(section["name"]==="Loan Tracking"){
+            if(this.state.editOrder){
+              let name = "Loan Tracking"
+              return <HomeContentArea index={index} key={name+"edit"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.loanTrackingColor[global.darkMode]} title={name} titleColor={colors.loanTrackingColor[global.darkModeReverse]}>
+                <View style={{height:10}}/><ConfigureHomePageSettingContainer key={name+index.toString()} title={name} defaultValue={this.state.sections[name]} onCheck={(check)=>{this.setPages(check,name)}}/><View style={{height:10}}/>
+              </HomeContentArea>
+            }
+            return sections["Loan Tracking"]===true?<HomeContentArea index={index} key={"Loan Tracking"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.loanTrackingColor[global.darkMode]} title="Loan Tracking" titleColor={colors.loanTrackingColor[global.darkModeReverse]}>
               <View style={{height: 15}}/>
               <LoanList/>
               <View style={{height: 15}}/>
-            </HomeContentArea>:<View/>}
-            {sections["Store Hours"]===true?<HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.storeHoursColor[global.darkMode]} title="Store Hours" titleColor={colors.storeHoursColor[global.darkModeReverse]}>
+            </HomeContentArea>:<View/>
+          }else if(section["name"]==="Store Hours"){
+            if(this.state.editOrder){
+              let name = "Store Hours"
+              return <HomeContentArea index={index} key={name+"edit"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.storeHoursColor[global.darkMode]} title={name} titleColor={colors.storeHoursColor[global.darkModeReverse]}>
+                <View style={{height:10}}/><ConfigureHomePageSettingContainer key={name+index.toString()} title={name} defaultValue={this.state.sections[name]} onCheck={(check)=>{this.setPages(check,name)}}/><View style={{height:10}}/>
+              </HomeContentArea>
+            }
+            return sections["Store Hours"]===true?<HomeContentArea index={index} key={"Store Hours"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.storeHoursColor[global.darkMode]} title="Store Hours" titleColor={colors.storeHoursColor[global.darkModeReverse]}>
               <View style={{height: 15}}/>
               <StoreHoursContainer image={require("../assets/icons/nook.png")} text="Nook's Cranny" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "8:00 - 22:00" : "8 AM - 10 PM"} openHour={8} closeHour={22}/>
               <StoreHoursContainer image={require("../assets/icons/able.png")} text="Able Sisters" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "9:00 - 21:00" : "9 AM - 9 PM"} openHour={9} closeHour={21}/>
               <View style={{height: 15}}/>
-            </HomeContentArea>:<View/>}
-            {/* {sections["Active Creatures"]===true?<HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.activeCreaturesColor[global.darkMode]} title="Active Creatures" titleColor={colors.activeCreaturesColor[global.darkModeReverse]}>
-              <ActiveCreatures scrollToEnd={this.scrollToEnd}/>
-            </HomeContentArea>:<View/>}
-            {sections["Active Creatures"]===true?<View/>:<View style={{height:130}}/>} */}
-            <View style={{height: 55}}/>
-            <TouchableOpacity activeOpacity={0.8} style={{backgroundColor:colors.lightDarkAccent[global.darkMode], borderRadius:15, margin: 20, padding:20}} onPress={() => this.props.setPage(29, true, "giftsRedirect")}>
-              <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center",}}>{"Active Creatures has been moved to a separate page."}</TextFont>
-              <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center",}}>{"You can tap here to go to that page, or open the sidebar."}</TextFont>
-            </TouchableOpacity>
-            <View style={{height: 75}}/>
-        </FadeInOut>
+            </HomeContentArea>:<View/>
+          }
+        })}
+        
+        <View style={{height: 55}}/>
+        <TouchableOpacity activeOpacity={0.8} style={{backgroundColor:colors.lightDarkAccent[global.darkMode], borderRadius:15, margin: 20, padding:20}} onPress={() => this.props.setPage(29, true, "giftsRedirect")}>
+          <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center",}}>{"Active Creatures has been moved to a separate page."}</TextFont>
+          <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center",}}>{"You can tap here to go to that page, or open the sidebar."}</TextFont>
+        </TouchableOpacity>
+        <View style={{height: 75}}/>
       </ScrollView>
       
       <View style={{position:"absolute", width: "100%", height:"100%", zIndex:-5, top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center',overflow: "hidden" }}>
@@ -457,7 +535,6 @@ export class ConfigureHomePages extends Component {
     var sections = this.props.sections
     this.state = {
       sections:sections,
-      editingOrder:false
     }
     
   }
@@ -474,13 +551,6 @@ export class ConfigureHomePages extends Component {
     const sectionNames = Object.keys(this.state.sections);
     return(<>
       <SubHeader>{this.props.header}</SubHeader>
-      {this.props.canChangeOrder?
-        <TouchableOpacity style={{padding:10, paddingVertical:12, position:"absolute",right:0}} 
-          onPress={()=>{this.setState({editingOrder:!this.state.editingOrder}); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}
-        }>
-          <TextFont bold={false} style={{marginRight:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"right"}}>{"Change Order"}</TextFont>
-        </TouchableOpacity>
-      :<View/>}
       <View style={{height:10}}/>
         {sectionNames.map( (name, index)=>{
           if(name.includes("Break")){
@@ -490,7 +560,7 @@ export class ConfigureHomePages extends Component {
           } else if(name==="Set Notification Time"){
             return <SetNotificationTime key={name+index.toString()} title={name} setPages={this.setPages}/>
           } else {
-            return <ConfigureHomePageSettingContainer editingOrder={this.state.editingOrder} key={name+index.toString()} title={name} defaultValue={this.state.sections[name]} onCheck={(check)=>{this.setPages(check,name)}}/>
+            return <ConfigureHomePageSettingContainer key={name+index.toString()} title={name} defaultValue={this.state.sections[name]} onCheck={(check)=>{this.setPages(check,name)}}/>
           }
         })}
       </>
@@ -557,23 +627,6 @@ export class ConfigureHomePageSettingContainer extends Component {
   render(){
     return(
       <TouchableOpacity activeOpacity={0.65} onPress={()=>this.toggle()}>
-        {this.props.editingOrder?
-        <View style={{flexDirection:"row",left:15, top:-5,position:'absolute',zIndex:10, }}>
-          <TouchableOpacity style={{paddingVertical:9, paddingHorizontal:5}} 
-            onPress={()=>{
-              props.reorderItem(props.index, -1); 
-              this.setState({showRemove:false})
-          }}>
-            <Image source={require("../assets/icons/upArrow.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
-          </TouchableOpacity>
-          <TouchableOpacity style={{paddingVertical:9, paddingHorizontal:5}} 
-            onPress={()=>{
-              props.reorderItem(props.index, 1); 
-              this.setState({showRemove:false})
-          }}>
-            <Image source={require("../assets/icons/downArrow.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
-          </TouchableOpacity>
-        </View>:<View/>}
         <View style={[styles.settingsContainer,{backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
             <View style={styles.textContainer}>
               <TextFont bold={true} style={[styles.textContainerTop,{color:colors.textBlack[global.darkMode]}]}>{this.props.title}</TextFont>

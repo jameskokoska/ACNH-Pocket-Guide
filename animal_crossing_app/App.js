@@ -186,6 +186,17 @@ class App extends Component {
       // "Active Creatures" : true,
     }
     this.sections = await this.loadSections("Sections", defaultSections);
+    const defaultSectionsOrder = [
+      {"name":"Events"},
+      {"name":"To-Do"},
+      {"name":"Turnip Log"},
+      {"name":"Visitors"},
+      {"name":"Collection"},
+      {"name":"Profile"},
+      {"name":"Loan Tracking"},
+      {"name":"Store Hours"},
+    ]
+    this.sectionsOrder = await this.loadList("SectionsOrder",defaultSectionsOrder,"name")
 
     //load home screen events
     const defaultEventSections = {
@@ -323,7 +334,7 @@ class App extends Component {
     } else {
       var currentPageView;
       if (this.state.currentPage===0){
-        currentPageView = <FadeInOut fadeIn={true}><HomePage sections={this.sections} eventSections={this.eventSections} setPage={this.setPage}/></FadeInOut>
+        currentPageView = <FadeInOut fadeIn={true}><HomePage sections={this.sections} sectionsOrder={this.sectionsOrder} eventSections={this.eventSections} setPage={this.setPage}/></FadeInOut>
       } else if (this.state.currentPage===1){
         currentPageView = <AllItemsPage setPage={this.setPage}/>
       } else if(this.state.currentPage===2){
