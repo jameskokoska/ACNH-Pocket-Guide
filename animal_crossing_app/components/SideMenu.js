@@ -11,7 +11,7 @@ import {ProfileIcon} from "../pages/ProfileCurrentPage"
 export default class SideMenu extends Component {
   constructor(props){
     super(props);
-    this.state = {editMode: false, sideSections:sideSections}
+    this.state = {editMode: false, sideSections:this.props.sideMenuSections}
     this.maxWidth = 411*0.7;
     if(Dimensions.get('window').width*0.7 < this.maxWidth){
       this.maxWidth = Dimensions.get('window').width*0.7;
@@ -44,7 +44,6 @@ export default class SideMenu extends Component {
     //-1 moves the item down
     //1 moves the item up
     const items = this.state.sideSections
-    console.log(items)
     const position = index
     if (
       (direction === -1 && position === 0) ||

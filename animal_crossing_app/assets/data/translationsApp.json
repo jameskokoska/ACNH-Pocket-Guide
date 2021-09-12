@@ -452,16 +452,16 @@
     ],
     "Main": [
         {
-            "English": "714 items",
-            "English (Europe)": "714 items",
-            "French": "710 items",
-            "French (US)": "710 items",
-            "German": "714 items",
-            "Spanish": "714 items",
-            "Spanish (US)": "710 items",
-            "Russian": "714 items",
+            "English": "715 items",
+            "English (Europe)": "715 items",
+            "French": "711 items",
+            "French (US)": "711 items",
+            "German": "715 items",
+            "Spanish": "715 items",
+            "Spanish (US)": "711 items",
+            "Russian": "715 items",
             "undefined": "0 items",
-            "Italian": "714 items",
+            "Italian": "715 items",
             "Dutch": "0 items",
             "Chinese": "0 items",
             "Chinese (Traditional)": "0 items",
@@ -5602,6 +5602,17 @@
             "Spanish (US)": "Editar secciones",
             "Russian": "Править разделы",
             "Italian": "Modifica sezioni"
+        },
+        {
+            "English": "Disable Edit Sections",
+            "English (Europe)": "Disable Edit Sections",
+            "French": "Désactiver les sections d'édition",
+            "French (US)": "Désactiver les sections d'édition",
+            "German": "Abschnitte bearbeiten deaktivieren",
+            "Spanish": "Deshabilitar Editar secciones",
+            "Spanish (US)": "Deshabilitar Editar secciones",
+            "Russian": "Отключить разделы редактирования",
+            "Italian": "Disabilita Modifica sezioni"
         },
         {
             "English": "Select Homepage Sections",
