@@ -4,6 +4,7 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
+-Added clear prices to Turnip Log
 -Can now change the order of the sidebar menu (Edit Pages - at bottom of sidebar)
 -Can now change the order of sections on home page (Edit Sections - at right of home page)
 -

@@ -243,7 +243,11 @@ export class TurnipLog extends Component {
       firstTime: "false",
     }
     this.turnipLink = "https://turnipprophet.io/";
-    this.defaultList = [
+    this.loadList();
+  }
+
+  defaultList = () => {
+    return [
       {title: 'Purchase', purchase: ""},
       {title: 'Monday', am: "", pm:""},
       {title: 'Tuesday', am: "", pm:""},
@@ -251,20 +255,21 @@ export class TurnipLog extends Component {
       {title: 'Thursday', am: "", pm:""},
       {title: 'Friday', am: "", pm:""},
       {title: 'Saturday', am: "", pm:""},
-    ]
-    this.loadList();
+    ];
   }
 
   loadList = async() => {
-    var storageData = JSON.parse(await getStorage("TurnipList"+global.profile,JSON.stringify(this.defaultList)));
+    var storageData = JSON.parse(await getStorage("TurnipList"+global.profile,JSON.stringify(this.defaultList())));
     var storageLastPattern = await getStorage("TurnipListLastPattern"+global.profile,"-1");
     var storageFirstTime = await getStorage("TurnipListFirstTime"+global.profile,"false");
     this.setState({data:storageData, lastPattern: storageLastPattern, firstTime: storageFirstTime});
   }
 
   clearHistory = async() => {
-    this.setState({data:this.defaultList});
-    this.saveList(this.defaultList);
+    this.setState({data:this.defaultList()});
+    // console.log(this.state.data);
+    console.log(this.defaultList())
+    await this.saveList(this.defaultList());
   }
 
   saveList = async(data) => {
@@ -324,14 +329,14 @@ export class TurnipLog extends Component {
       <PopupInfoCustom buttons={buttonsHistory} ref={(popupHistory) => this.popupHistory = popupHistory} buttonDisabled={true} buttonText={"OK"} header={<TextFont bold={true} style={{fontSize: 22, marginBottom:11, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Are you sure you want to clear your turnip prices?</TextFont>}>
         <View/>
       </PopupInfoCustom>
-      <View style={{marginHorizontal:25, marginTop: 20}}>
-        <TouchableOpacity style={{padding:5, right:0, top:0,position:'absolute'}} 
+        <TouchableOpacity style={{padding:5,position:"absolute",right:20,top:10}} 
           onPress={async()=>{
             this.popupHistory?.setPopupVisible(true);
             getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
         }}>
           <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"Clear Prices"}</TextFont>
         </TouchableOpacity>
+      <View style={{marginHorizontal:25, marginTop: 15}}>
         <DropDownPicker
           items={[
             {label: attemptToTranslate("Last week's pattern") + ": " + attemptToTranslate("Unknown"), value: "-1",},
