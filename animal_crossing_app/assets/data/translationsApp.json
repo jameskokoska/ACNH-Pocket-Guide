@@ -440,7 +440,7 @@
             "English (Europe)": "Making an application isn't easy, and this has taken a really long time. We hope to continue to develop, update and improve this app experience as much as possible. If you enjoy this application please consider leaving a rating, it'll be much appreciated.",
             "French": "Créer une application n'est pas facile et cela a pris beaucoup de temps. Nous espérons continuer à développer, mettre à jour et améliorer cette expérience d'application autant que possible. Si vous appréciez cette application, pensez à laisser une note, ce sera très apprécié.",
             "French (US)": "Créer une application n'est pas facile et cela a pris beaucoup de temps. Nous espérons continuer à développer, mettre à jour et améliorer cette expérience d'application autant que possible. Si vous appréciez cette application, pensez à laisser une note, ce sera très apprécié.",
-            "German": "Eine App zu stellen ist nicht einfach und hat sehr lange gedauert.  Wir hoffen, diese App-Erfahrung so weit wie möglich weiterzuentwickeln, zu aktualisieren und zu verbessern.  Wenn Dir diese App gefällt, ziehe bitte in Betracht, eine Bewertung abzugeben, das würden wir sehr zu schätzen wissen.",
+            "German": "Eine App zu erstellen ist nicht einfach und hat sehr lange gedauert.  Wir hoffen, diese App so weit wie möglich weiterzuentwickeln, zu aktualisieren und zu verbessern.  Wenn Dir diese App gefällt, ziehe bitte in Betracht, eine Bewertung abzugeben, das würden wir sehr zu schätzen wissen.",
             "Spanish": "Crear una aplicación no es sencillo y ha tomado mucho tiempo. Nos gustaría continuar desarrollándola, actualizándola y mejorando la experiencia tanto como sea posible. Si disfrutas con esta aplicación por favor considera dejar tu valoración, sería realmente apreciado.",
             "Spanish (US)": "Crear una aplicación no es sencillo y ha tomado mucho tiempo. Nos gustaría continuar desarrollándola, actualizándola y mejorando la experiencia tanto como sea posible. Si disfrutas con esta aplicación por favor considera dejar tu valoración, sería realmente apreciado.",
             "Italian": "Creare un’applicazione non è facile, e ció ha richiesto molto tempo. Speriamo di continuare a sviluppare, aggiornare e migliorare l'esperienza di quest'app il più possibile. Se ti piace questa applicazione, considerare di lasciare una valutazione, lo apprezzeremo molto.",
@@ -7134,7 +7134,7 @@
             "English (Europe)": "An error occurred, please choose another folder and try again.",
             "French": "Une erreur s'est produite, veuillez choisir un autre dossier et réessayer.",
             "French (US)": "Une erreur s'est produite, veuillez choisir un autre dossier et réessayer.",
-            "German": "Es ist ein Fehler aufgetreten. Bitte wählen Sie einen anderen Ordner und versuchen Sie es erneut.",
+            "German": "Es ist ein Fehler aufgetreten. Bitte wähle einen anderen Ordner und versuche es erneut.",
             "Spanish": "Ocurrió un error, elija otra carpeta e intente nuevamente.",
             "Spanish (US)": "Ocurrió un error, elija otra carpeta e intente nuevamente.",
             "Russian": "Произошла ошибка. Выберите другую папку и повторите ещё раз. ",
@@ -7456,7 +7456,7 @@
             "German": "Bestätigen",
             "Spanish": "Confirmar",
             "Spanish (US)": "Confirmar",
-            "Russian": ",2",
+            "Russian": "Подтвердить",
             "Italian": "Conferma"
         },
         {
@@ -8215,7 +8215,7 @@
             "English (Europe)": "cannot be customized, variations must be obtained",
             "French": "ne peut pas être personnalisé, des variations doivent être obtenues",
             "French (US)": "ne peut pas être personnalisé, des variations doivent être obtenues",
-            "German": "kann nicht angepasst werden, Variationen müssen bezogen werden",
+            "German": "kann nicht angepasst werden, Variationen müssen vorhanden sein",
             "Spanish": "no puede ser personalizado, las variaciones se deben obtener",
             "Spanish (US)": "no puede ser personalizado, las variaciones se deben obtener",
             "Russian": "не может быть изменено, нужно получить модификаторы",
@@ -8281,7 +8281,7 @@
             "English (Europe)": "You can tap here to go to that page, or open the sidebar.",
             "French": "Vous pouvez appuyer ici pour accéder à cette page ou ouvrir la barre latérale.",
             "French (US)": "Vous pouvez appuyer ici pour accéder à cette page ou ouvrir la barre latérale.",
-            "German": "Sie können hier tippen, um zu dieser Seite zu gelangen, oder die Seitenleiste öffnen.",
+            "German": "Du kannst hier tippen, um zu dieser Seite zu gelangen, oder die Seitenleiste zu öffnen.",
             "Spanish": "Puede tocar aquí para ir a esa página o abrir la barra lateral.",
             "Spanish (US)": "Puede tocar aquí para ir a esa página o abrir la barra lateral.",
             "Russian": "Вы можете нажать здесь, чтобы перейти на эту страницу, или открыть боковую панель.",
@@ -8314,7 +8314,7 @@
             "English (Europe)": "You can change the language in the top right corner, by tapping Settings",
             "French": "Vous pouvez changer la langue dans le coin supérieur droit en appuyant sur Paramètres",
             "French (US)": "Vous pouvez changer la langue dans le coin supérieur droit en appuyant sur Paramètres",
-            "German": "Sie können die Sprache in der oberen rechten Ecke ändern, indem Sie auf Einstellungen . tippen",
+            "German": "Du kannst die Sprache in der oberen rechten Ecke ändern, indem du auf Einstellungen tippst.",
             "Spanish": "Puede cambiar el idioma en la esquina superior derecha, tocando Configuración",
             "Spanish (US)": "Puede cambiar el idioma en la esquina superior derecha, tocando Configuración",
             "Russian": "Вы можете изменить язык в правом верхнем углу, нажав Настройки",
@@ -10663,7 +10663,7 @@
             "Chinese (Traditional)": "0 items",
             "Japanese": "0 items",
             "Korean": "0 items",
-            "Russian": "29 items"
+            "Russian": "52 items"
         },
         {
             "English": "acorns and pine cones",
@@ -10672,7 +10672,8 @@
             "French (US)": "glands et pommes de pin",
             "German": "Eicheln und Tannenzapfen",
             "Spanish": "bellotas y piñas",
-            "Spanish (US)": "bellotas y piñas"
+            "Spanish (US)": "bellotas y piñas",
+            "Russian": "жёлуди и шишки"
         },
         {
             "English": "mushrooms",
@@ -10682,7 +10683,7 @@
             "German": "Pilze",
             "Spanish": "setas",
             "Spanish (US)": "setas",
-            "Russian": "Грибы"
+            "Russian": "грибы"
         },
         {
             "English": "ornaments",
@@ -10691,7 +10692,8 @@
             "French (US)": "ornements",
             "German": "Baumschmuck",
             "Spanish": "adornos",
-            "Spanish (US)": "adornos"
+            "Spanish (US)": "adornos",
+            "Russian": "орнаменты"
         },
         {
             "English": "Spring shopping",
@@ -10740,7 +10742,8 @@
             "French (US)": "Shopping festif",
             "German": "Festivalangebote ",
             "Spanish": "Compra festiva",
-            "Spanish (US)": "Compra festiva"
+            "Spanish (US)": "Compra festiva",
+            "Russian": "Праздничный шоппинг"
         },
         {
             "English": "Birthday",
@@ -10767,7 +10770,8 @@
             "English (Europe)": "Bunny Day (ready days)",
             "French": "Fête des Œufs (jours de préparation)",
             "French (US)": "Fête des Œufs (jours de préparation)",
-            "German": "Häschentag (Vorbereitung)"
+            "German": "Häschentag (Vorbereitung)",
+            "Russian": "Пасха (подготовка)"
         },
         {
             "English": "Bunny Day",
@@ -10776,7 +10780,8 @@
             "French (US)": "Fête des Œufs",
             "German": "Häschentag",
             "Spanish": "Caza del Huevo",
-            "Spanish (US)": "Caza del Huevo"
+            "Spanish (US)": "Caza del Huevo",
+            "Russian": "Пасха"
         },
         {
             "English": "May Day",
@@ -10785,7 +10790,8 @@
             "French (US)": "1er Mai",
             "German": "Mai-Feierrei",
             "Spanish": "Primero de Mayo",
-            "Spanish (US)": "Primero de Mayo"
+            "Spanish (US)": "Primero de Mayo",
+            "Russian": "Первомай"
         },
         {
             "English": "International Museum Day",
@@ -10794,7 +10800,8 @@
             "French (US)": "Journée Internationale des Musées",
             "German": "Internationaler Museumstag",
             "Spanish": "Día Internacional de los Museos",
-            "Spanish (US)": "Día Internacional de los Museos"
+            "Spanish (US)": "Día Internacional de los Museos",
+            "Russian": "Международный день Музея"
         },
         {
             "English": "Wedding Season",
@@ -10833,7 +10840,8 @@
             "French (US)": "Tanabata",
             "German": "Tanabata",
             "Spanish": "Tanabata",
-            "Spanish (US)": "Tanabata"
+            "Spanish (US)": "Tanabata",
+            "Russian": "Танабата (фестиваль звёзд)"
         },
         {
             "English": "Fireworks Show",
@@ -10842,7 +10850,8 @@
             "French (US)": "Feux d'artifice",
             "German": "Feuerwerks Show",
             "Spanish": "Espectáculo de fuegos artificiales",
-            "Spanish (US)": "Espectáculo de fuegos artificiales"
+            "Spanish (US)": "Espectáculo de fuegos artificiales",
+            "Russian": "Шоу фейерверков"
         },
         {
             "English": "Halloween (ready days)",
@@ -10852,7 +10861,7 @@
             "German": "Halloween (Vorbereitung)",
             "Spanish": "Halloween",
             "Spanish (US)": "Halloween",
-            "Russian": "Хээлоуин"
+            "Russian": "Хэллоуин (подготовка)"
         },
         {
             "English": "Halloween",
@@ -10889,7 +10898,8 @@
             "French (US)": "Jour des Cadeaux (jours de préparation phase 1)",
             "German": "Spielzeugtag (Vorbereitung Phase1)",
             "Spanish": "Día de los Juguetes",
-            "Spanish (US)": "Día de los Juguetes"
+            "Spanish (US)": "Día de los Juguetes",
+            "Russian": "День игрушек (подготовка этап 1)"
         },
         {
             "English": "Toy Day (ready days phase 2)",
@@ -10898,7 +10908,8 @@
             "French (US)": "Jour des Cadeaux (jours de préparation phase 2)",
             "German": "Spielzeugtag (Vorbereitung Phase2)",
             "Spanish": "Día de los Juguetes",
-            "Spanish (US)": "Día de los Juguetes"
+            "Spanish (US)": "Día de los Juguetes",
+            "Russian": "День игрушек (подготовка этап 2)"
         },
         {
             "English": "Toy Day",
@@ -10907,7 +10918,8 @@
             "French (US)": "Jour des Cadeaux",
             "German": "Spielzeugtag",
             "Spanish": "Día de los Juguetes",
-            "Spanish (US)": "Día de los Juguetes"
+            "Spanish (US)": "Día de los Juguetes",
+            "Russian": "День игрушек"
         },
         {
             "English": "Toy Day (day after)",
@@ -10916,7 +10928,8 @@
             "French (US)": "Jour des Cadeaux (le lendemain)",
             "German": "Spielzeugtag (der Tag danach)",
             "Spanish": "Día de los Juguetes (día después)",
-            "Spanish (US)": "Día de los Juguetes (día después)"
+            "Spanish (US)": "Día de los Juguetes (día después)",
+            "Russian": "День игрушек (день после)"
         },
         {
             "English": "Winter Solstice (northern hemisphere)",
@@ -10943,21 +10956,24 @@
             "English (Europe)": "Shōgatsu (1)",
             "French": "Shōgatsu (1)",
             "French (US)": "Shōgatsu (1)",
-            "German": "Neujahrsfest (1)"
+            "German": "Neujahrsfest (1)",
+            "Russian": "Японский Новый Год (1)"
         },
         {
             "English": "Shōgatsu (2)",
             "English (Europe)": "Shōgatsu (2)",
             "French": "Shōgatsu (2)",
             "French (US)": "Shōgatsu (2)",
-            "German": "Neujahrsfest (2)"
+            "German": "Neujahrsfest (2)",
+            "Russian": "Японский Новый Год (2)"
         },
         {
             "English": "Shōgatsu (3)",
             "English (Europe)": "Shōgatsu (3)",
             "French": "Shōgatsu (3)",
             "French (US)": "Shōgatsu (3)",
-            "German": "Neujahrsfest (3)"
+            "German": "Neujahrsfest (3)",
+            "Russian": "Японский Новый Год (3)"
         },
         {
             "English": "New Year's Day (Russia)",
@@ -11005,7 +11021,7 @@
             "French": "Carnaval (jours de préparation)",
             "French (US)": "Carnaval (jours de préparation)",
             "German": "Festival (Vorbereitung)",
-            "Russian": "Фестиваль"
+            "Russian": "Фестиваль (подготовка)"
         },
         {
             "English": "Festivale",
@@ -11020,21 +11036,24 @@
             "English (Europe)": "Setsubun (Able Sisters)",
             "French": "Setsubun (Soeurs Doigts de Fée)",
             "French (US)": "Setsubun (Soeurs Doigts de Fée)",
-            "German": "Setsubun-Fest (Tina&Sina)"
+            "German": "Setsubun-Fest (Tina&Sina)",
+            "Russian": "Последний день зимы (Сёстры Эйбл)"
         },
         {
             "English": "Big Game Celebration (1)",
             "English (Europe)": "Big Game Celebration (1)",
             "French": "Match au sommet (1)",
             "French (US)": "Match au sommet (1)",
-            "German": "Football-Finale (1)"
+            "German": "Football-Finale (1)",
+            "Russian": "Празднование Большой Игры (1)"
         },
         {
             "English": "Big Game Celebration (2)",
             "English (Europe)": "Big Game Celebration (2)",
             "French": "Match au sommet (2)",
             "French (US)": "Match au sommet (2)",
-            "German": "Football-Finale (2)"
+            "German": "Football-Finale (2)",
+            "Russian": "Празднование Большой Игры (2)"
         },
         {
             "English": "Valentine's Day (Nook Shopping)",
@@ -11044,7 +11063,7 @@
             "German": "Valentinstag",
             "Spanish": "Día de San Valentín",
             "Spanish (US)": "Día de San Valentín",
-            "Russian": "День святого Валентина"
+            "Russian": "День святого Валентина (закупка у Нука)"
         },
         {
             "English": "Super Mario Bros.",
@@ -11054,35 +11073,39 @@
             "German": "Super Mario Bros.",
             "Spanish": "Super Mario Bros.",
             "Spanish (US)": "Super Mario Bros.",
-            "Russian": "Супер Марио Броз."
+            "Russian": "Братья Супер Марио"
         },
         {
             "English": "Shamrock Day (Able Sisters)",
             "English (Europe)": "Shamrock Day (Able Sisters)",
             "French": "Saint-Patrick (Soeurs Doigts de Fée)",
             "French (US)": "Saint-Patrick (Soeurs Doigts de Fée)",
-            "German": "St. Patricks Day (Tina&Sina)"
+            "German": "St. Patricks Day (Tina&Sina)",
+            "Russian": "День Святого Патрика (Сёстры Эйбл)"
         },
         {
             "English": "Prom (1)",
             "English (Europe)": "Prom (1)",
             "French": "Bal de promo (1)",
             "French (US)": "Bal de promo (1)",
-            "German": "Abschlussball (1)"
+            "German": "Abschlussball (1)",
+            "Russian": "Выпускной вечер (1)"
         },
         {
             "English": "Prom (2)",
             "English (Europe)": "Prom (2)",
             "French": "Bal de promo (2)",
             "French (US)": "Bal de promo (2)",
-            "German": "Abschlussball (2)"
+            "German": "Abschlussball (2)",
+            "Russian": "Выпускной вечер (2)"
         },
         {
             "English": "Prom (Able Sisters)",
             "English (Europe)": "Prom (Able Sisters)",
             "French": "Bal de promo (Soeurs Doigts de Fée)",
             "French (US)": "Bal de promo (Soeurs Doigts de Fée)",
-            "German": "Abschlussball (Tina&Sina)"
+            "German": "Abschlussball (Tina&Sina)",
+            "Russian": "Выпускной вечер (Сёстры Эйбл)"
         },
         {
             "English": "Nature Day (Nook Shopping)",
@@ -11102,7 +11125,7 @@
             "German": "Heirats Saison (Nook Shopping 1)",
             "Spanish": "Temporada de Bodas (TeleNook 1)",
             "Spanish (US)": "Temporada de Bodas (TeleNook 1)",
-            "Russian": "Свадебный сезон (Нук шоппинг 1)"
+            "Russian": "Свадебный сезон (закупка у Нука 1)"
         },
         {
             "English": "Wedding Season (Nook Shopping 2)",
@@ -11112,7 +11135,7 @@
             "German": "Heirats Saison (Nook Shopping 2)",
             "Spanish": "Temporada de Bodas (TeleNook 2)",
             "Spanish (US)": "Temporada de Bodas (TeleNook 2)",
-            "Russian": "Свадебный сезон (Нук шоппинг 2)"
+            "Russian": "Свадебный сезон (закупка у Нука 2)"
         },
         {
             "English": "Wedding Season (Able Sisters)",
@@ -11240,7 +11263,7 @@
             "French": "cadeau (jaune-vert)",
             "French (US)": "cadeau (jaune-vert)",
             "German": "Geschenk (GrünGelb)",
-            "Russian": "Подарок (зеленый)"
+            "Russian": "Подарок (салатовый)"
         },
         {
             "English": "present (gold)",
@@ -11270,7 +11293,7 @@
             "German": "Geschenk (Grün)",
             "Spanish": "Regalo (verde)",
             "Spanish (US)": "Regalo (verde)",
-            "Russian": "Подероа (зеленый)"
+            "Russian": "Подерок (зеленый)"
         },
         {
             "English": "present (light-blue)",
@@ -11762,11 +11785,11 @@
         },
         {
             "Special translations that need to be implemented at the code level, no special foramtting needed, just used for reference": "[Name] of [Island Name] island",
-            "undefined": "[Имя][Острова]"
+            "undefined": "[Имя игрока] с острова [Название острова]"
         },
         {
             "Special translations that need to be implemented at the code level, no special foramtting needed, just used for reference": "Dream address starts with [DW]",
-            "undefined": "Адрес мечты начинается с [DW]"
+            "undefined": "Адрес сна начинается с [DW]"
         },
         {
             "Special translations that need to be implemented at the code level, no special foramtting needed, just used for reference": "[Month] [Day] [Day of Week]",
@@ -11897,7 +11920,7 @@
             "German": "Sterniinsel",
             "Spanish": "Isla de bayas",
             "Spanish (US)": "Isla de bayas",
-            "Russian": "Остров колоколов"
+            "Russian": "Остров диней"
         },
         {
             "English": "Breaking the rock at the far north will let you vault over into the island with five money rocks on it.",
@@ -12069,7 +12092,7 @@
             "German": "Alles, was du hier fischen kannst, ist Müll.  Nur auf wasserbezogene Insekten spawnen.",
             "Spanish": "Todo lo que puedes pescar aquí es basura. Solo aparecen insectos relacionados con el agua",
             "Spanish (US)": "Todo lo que puedes pescar aquí es basura. Solo aparecen insectos relacionados con el agua",
-            "Russian": "Всё что вы споймаете в воде - мусор. Нерестятся только насекомые, связанные с водой."
+            "Russian": "Всё что вы поймаете в воде - мусор. В воде появляются только насекомые, связанные с водой."
         },
         {
             "English": "Fins Island",
@@ -21451,7 +21474,7 @@
             "French": "197 items",
             "French (US)": "197 items",
             "German": "205 items",
-            "Russian": "181 items",
+            "Russian": "182 items",
             "Spanish": "14 items",
             "Spanish (US)": "0 items",
             "Italian": "0 items",
@@ -21860,7 +21883,8 @@
             "English (Europe)": "I caught a monarch butterfly! Guess the butterflies are a democracy now!",
             "French": "Tu as attrapé un monarque ! Tu as plus d'une corde au tien !",
             "French (US)": "Tu as attrapé un monarque ! Tu as plus d'une corde au tien !",
-            "German": "Ein Monarchfalter! Na? Wer ist jetzt hier der Monarch, Alter?"
+            "German": "Ein Monarchfalter! Na? Wer ist jetzt hier der Monarch, Alter?",
+            "Russian": "В сачок попался монарх! Кто тут из нас монарх?"
         },
         {
             "English": "I caught a mosquito! It's itching for a fight!",
