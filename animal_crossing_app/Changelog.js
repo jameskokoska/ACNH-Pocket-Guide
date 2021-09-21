@@ -4,6 +4,9 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
+-Use larger images in popup setting now applies to variations
+-Fixed bug where it would sometimes indicate you have a variation, even though you unselected it
+-
 -Changed how dashes are sorted alphabetically
 -Updated translations
 -

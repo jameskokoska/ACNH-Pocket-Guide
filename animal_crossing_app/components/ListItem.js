@@ -62,7 +62,7 @@ class ListItem extends React.Component{
   setCollected(collected, updateVariations=false){
     if(this.mounted){
       if(updateVariations){
-        this.setState({variationsPercent: allVariationsChecked()})
+        this.setState({variationsPercent: allVariationsChecked(this.props.item, this.props.item.index)})
       } else {
         this.setState({collected: collected})
       }
