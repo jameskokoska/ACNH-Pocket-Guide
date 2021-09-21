@@ -15,7 +15,7 @@ import {getPhotoShadow} from "./GetPhoto"
 import {getMonthShort} from "./DateFunctions"
 import colors from "../Colors"
 import {getCurrentDateObject, parseActiveTime} from "./DateFunctions"
-import {inMuseum, inWishlist, inChecklist,getSettingsString, allVariationsChecked} from "../LoadJsonData"
+import {inMuseum, inWishlist, inChecklist,getSettingsString, variationsCheckedPercent} from "../LoadJsonData"
 import FadeInOut from "../components/FadeInOut";
 
 const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
@@ -31,7 +31,7 @@ class ListItem extends React.Component{
       collected: inChecklist(this.props.item.checkListKey),
       wishlist: inWishlist(this.props.item.checkListKey),
       museum: inMuseum(this.props.item.checkListKey, this.checkMuseumButton()),
-      variationsPercent: allVariationsChecked(this.props.item, this.props.item.index)
+      variationsPercent: variationsCheckedPercent(this.props.item, this.props.item.index)
     }
   }
 
@@ -43,7 +43,7 @@ class ListItem extends React.Component{
       if(this.state.wishlist!==inWishlist(this.props.item.checkListKey)){
         this.setWishlist(!this.state.wishlist)
       }
-      let checkVariations = allVariationsChecked(this.props.item, this.props.item.index);
+      let checkVariations = variationsCheckedPercent(this.props.item, this.props.item.index);
       if(this.state.variationsPercent!==checkVariations){
         this.setState({variationsPercent: checkVariations})
       }
@@ -61,11 +61,10 @@ class ListItem extends React.Component{
   
   setCollected(collected, updateVariations=false){
     if(this.mounted){
-      if(updateVariations){
-        this.setState({variationsPercent: allVariationsChecked(this.props.item, this.props.item.index)})
-      } else {
-        this.setState({collected: collected})
-      }
+      //always update variation
+      if(true){
+        this.setState({variationsPercent: variationsCheckedPercent(this.props.item, this.props.item.index),collected: collected})
+      } 
     }
   }
   setWishlist(wishlist){
@@ -86,7 +85,7 @@ class ListItem extends React.Component{
 
   render(){
     var settingsUse24HourClock = getSettingsString("settingsUse24HourClock")==="true";
-    var missingVariationsIndicator = !this.state.variationsPercent?<View pointerEvents={"none"} style={{position:'absolute', right: -5, top: -5, backgroundColor:colors.missingVariations[global.darkMode], height:27, width:27, borderRadius:20}}></View>:<View/>
+    var missingVariationsIndicator = this.state.variationsPercent>0?<View pointerEvents={"none"} style={{position:'absolute', right: -5, top: -5, backgroundColor:this.state.variationsPercent===1?colors.allVariations[global.darkMode]:colors.missingVariations[global.darkMode], height:27, width:27, borderRadius:20}}></View>:<View/>
 
     var showBlankCheckMarks = getSettingsString("settingsShowBlankCheckMarks")==="true";
 

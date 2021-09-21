@@ -6,6 +6,7 @@ export const changelog = `
 -
 -Use larger images in popup setting now applies to variations
 -Fixed bug where it would sometimes indicate you have a variation, even though you unselected it
+-Fixed variation indicator when whole set completed - now shows green dot
 -
 -Changed how dashes are sorted alphabetically
 -Updated translations

@@ -452,8 +452,8 @@
     ],
     "Main": [
         {
-            "English": "715 items",
-            "English (Europe)": "715 items",
+            "English": "725 items",
+            "English (Europe)": "725 items",
             "French": "711 items",
             "French (US)": "711 items",
             "German": "715 items",
@@ -5611,7 +5611,7 @@
             "German": "Abschnitte bearbeiten deaktivieren",
             "Spanish": "Deshabilitar Editar secciones",
             "Spanish (US)": "Deshabilitar Editar secciones",
-            "Russian": "Отключить разделы редактирования",
+            "Russian": "Завершить редактирование",
             "Italian": "Disabilita Modifica sezioni"
         },
         {
@@ -7687,7 +7687,7 @@
             "German": "Deaktiviere Editiere Seiten",
             "Spanish": "Desactivar editar páginas",
             "Spanish (US)": "Deshabilitar editar páginas",
-            "Russian": "Отключить редактирование страниц",
+            "Russian": "Завершить редактирование",
             "Italian": "Disabilita Modifica pagine"
         },
         {
@@ -8319,6 +8319,46 @@
             "Spanish (US)": "Puede cambiar el idioma en la esquina superior derecha, tocando Configuración",
             "Russian": "Вы можете изменить язык в правом верхнем углу, нажав Настройки",
             "Italian": "Puoi cambiare la lingua nell'angolo in alto a destra, toccando Impostazioni"
+        },
+        {
+            "English": "Label Themes",
+            "English (Europe)": "Label Themes"
+        },
+        {
+            "English": "Everyday",
+            "English (Europe)": "Everyday"
+        },
+        {
+            "English": "Comfy",
+            "English (Europe)": "Comfy"
+        },
+        {
+            "English": "Formal",
+            "English (Europe)": "Formal"
+        },
+        {
+            "English": "Work",
+            "English (Europe)": "Work"
+        },
+        {
+            "English": "Theatrical",
+            "English (Europe)": "Theatrical"
+        },
+        {
+            "English": "Outdoorsy",
+            "English (Europe)": "Outdoorsy"
+        },
+        {
+            "English": "Sporty",
+            "English (Europe)": "Sporty"
+        },
+        {
+            "English": "Vacation",
+            "English (Europe)": "Vacation"
+        },
+        {
+            "English": "Goth",
+            "English (Europe)": "Goth"
         }
     ],
     "Sources": [

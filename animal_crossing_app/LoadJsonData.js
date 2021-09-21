@@ -1231,6 +1231,20 @@ export function determineCustomizationString(item){
   }
 }
 
+export function variationsCheckedPercent(item, index){
+  if(!item) return false;
+  
+  if(item.hasOwnProperty("Variation") && item["Variation"]!=="NA"){
+    const variations = getVariations(item["Name"],global.dataLoadedAll,item["checkListKey"], index);
+    const howManyVariations = howManyVariationsChecked(variations)
+    if(howManyVariations<1){
+      return 0;
+    }
+    return howManyVariations/variations.length;
+  }
+  return 0;
+}
+
 export function allVariationsChecked(item, index){
   if(!item) return false;
   

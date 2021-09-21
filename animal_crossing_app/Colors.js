@@ -173,6 +173,7 @@ const colors = {
     "villagerOutlineOccasionally" : ["#FFC57AAD","#FFC57AAD"],
     "villagerOutlineConflict" : ["#FF9090A6","#FF9090A6"],
     missingVariations : ["#E4DD1ADE","#D8D22BB6"],
+    allVariations : ["#6BC055DE","#55B428B6"],
     loanProgress : ["#D0EEFF","#253041"],
 }
 module.exports = colors;
