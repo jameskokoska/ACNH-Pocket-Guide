@@ -451,7 +451,6 @@ class VariationItem extends Component{
           checkOff(item.checkListKey, this.state.checked, "", this.extraIndex); 
           this.props.updateRightCornerCheck(item.checkListKey+this.extraIndex,!this.state.checked)
           this.setState({checked: !this.state.checked})
-          this.props.updateCheckChildFunction(false, true);
           
           if(howManyVariationsChecked(this.props.variations) === this.props.variations.length){
             this.props.updateCheckChildFunction(true);
