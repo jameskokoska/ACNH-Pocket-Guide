@@ -175,7 +175,7 @@ class ListItem extends React.Component{
                 checkOff(this.props.item.checkListKey, this.state.collected); 
                 this.setCollected(this.state.collected===true ? false:true);
               } else {
-                this.props.openBottomSheet(this.setCollected);
+                this.props.openBottomSheet(this.setCollected, this.setWishlist);
               }
             }}
           >
@@ -216,7 +216,7 @@ class ListItem extends React.Component{
                 checkOff(this.props.item.checkListKey, this.state.collected); 
                 this.setCollected(this.state.collected===true ? false:true);
               } else {
-                this.props.openBottomSheet(this.setCollected);
+                this.props.openBottomSheet(this.setCollected, this.setWishlist);
               }
             }}
           >
@@ -267,7 +267,7 @@ class ListItem extends React.Component{
                 checkOff(this.props.item.checkListKey, this.state.collected); 
                 this.setCollected(this.state.collected===true ? false:true);
               } else {
-                this.props.openBottomSheet(this.setCollected);
+                this.props.openBottomSheet(this.setCollected, this.setWishlist);
               }
             }}
           >
@@ -311,7 +311,7 @@ class ListItem extends React.Component{
                 checkOff(this.props.item.checkListKey, this.state.collected); 
                 this.setCollected(this.state.collected===true ? false:true);
               } else {
-                this.props.openBottomSheet(this.setCollected);
+                this.props.openBottomSheet(this.setCollected, this.setWishlist);
               }
             }}
           >

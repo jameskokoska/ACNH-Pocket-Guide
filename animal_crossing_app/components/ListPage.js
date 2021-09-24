@@ -2,7 +2,7 @@ import React, {Component, useState, useRef, useEffect} from 'react';
 import {TouchableOpacity, View, Animated,StyleSheet,RefreshControl} from 'react-native';
 import Header, {HeaderLoading, HeaderActive} from './Header';
 import ListItem from './ListItem';
-import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked} from "../LoadJsonData"
+import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist} from "../LoadJsonData"
 import {Dimensions } from "react-native";
 import {Variations,Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from './BottomSheetComponents';
 import colors from "../Colors.js"
@@ -45,6 +45,9 @@ function calculateHeaderHeight(){
 
 function ListPage(props){
   var headerHeight = calculateHeaderHeight();
+  var selectedItem;
+  var updateCheckChildFunction;
+  var updateWishlistChildFunction;
   const renderItem = (({ item }) =>
     <ListItem
       item={item}
@@ -56,7 +59,7 @@ function ListPage(props){
       gridType={props.gridType}
       key={item.checkListKeyString}
       dataGlobalName={props.dataGlobalName}
-      openBottomSheet={(updateCheckChild)=>{
+      openBottomSheet={(updateCheckChild, updateWishlistChild)=>{
         sheetRef.current.setPopupVisible(true); 
         if(props.activeCreatures && props.activeCreaturesPage===false){
           // console.log(props.scrollViewRef)
@@ -64,6 +67,9 @@ function ListPage(props){
         }
         //pass in the check mark update function of that current element
         bottomSheetRenderRef.current.update(item, updateCheckChild)
+        selectedItem = item;
+        updateCheckChildFunction = updateCheckChild
+        updateWishlistChildFunction = updateWishlistChild
       }}
       boxColor={props.boxColor}
       labelColor={props.labelColor}
@@ -451,7 +457,7 @@ function ListPage(props){
                     item.index = i;
                     dataUpdated = [...dataUpdated, item];
                     // previousVariation = item.[props.textProperty[j]];
-                    previousVariation = item["Name"];
+                    // previousVariation = item["Name"];
                   } 
                 } else if(searchActual.includes("Museum")){
                   if(global.collectionList.includes("museum"+item["checkListKey"]) && item["Data Category"]!==undefined && museumCategories.includes(item["Data Category"])){
@@ -713,7 +719,7 @@ function ListPage(props){
         windowSize={10}
         refreshControl={
           <RefreshControl
-            onRefresh={()=>{if(searchFilters.some(item=>refreshFiltersArray.includes(item)))setRefresh(true)}} //only refresh if the order has the possibility of changing
+            onRefresh={()=>{if(props.wishlistItems||searchFilters.some(item=>refreshFiltersArray.includes(item)))setRefresh(true)}} //only refresh if the order has the possibility of changing
             refreshing={refresh}
             progressViewOffset={headerHeight+50}
             progressBackgroundColor={colors.lightDarkAccentHeavy2[global.darkMode]}
@@ -727,6 +733,13 @@ function ListPage(props){
         padding={0}
         invisible={true}
         restrictSize={false}
+        onClose={()=>{
+          console.log(selectedItem); 
+          if(selectedItem!=null && selectedItem!=undefined){
+            !updateCheckChildFunction(inChecklist(selectedItem.checkListKey));
+            !updateWishlistChildFunction(inWishlist(selectedItem.checkListKey));
+          }
+        }}
       >
         <BottomSheetRender 
           setPage={props.setPage}
@@ -779,8 +792,8 @@ class BottomSheetRender extends Component{
       this.setState({
         item:item,
       })
-      console.log("item available to popup:")
-      console.log(item)
+      // console.log("item available to popup:")
+      // console.log(item)
       if(item!==undefined){
         this.updateCheckChildFunction=updateCheckChildFunction;
       }

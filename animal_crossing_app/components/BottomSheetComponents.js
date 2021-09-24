@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import {Dimensions, Vibration, Image, TouchableOpacity, Text, View, StyleSheet} from "react-native";
+import {Dimensions, Vibration, Image, TouchableOpacity, Text, View, StyleSheet, Touchable} from "react-native";
 import colors from '../Colors.js';
 import FastImage from './FastImage';
 import Check from './Check';
 import TextFont from './TextFont'
-import {getEventName, inChecklist, attemptToTranslateItem, commas, capitalize, checkOff, capitalizeFirst} from '../LoadJsonData'
+import {inWishlist, getEventName, inChecklist, attemptToTranslateItem, commas, capitalize, checkOff, capitalizeFirst} from '../LoadJsonData'
 import {getSizeImage, getPhotoCorner, getMaterialImage} from "./GetPhoto"
 import {getCurrentVillagerObjects, attemptToTranslateCreatureCatchPhrase, attemptToTranslateMuseumDescription, attemptToTranslateSourceNotes, getSettingsString, attemptToTranslate, attemptToTranslateSpecial} from "../LoadJsonData"
 import {ScrollView} from 'react-native-gesture-handler'
@@ -343,6 +343,8 @@ export class Variations extends Component {
     this.state = {
       updateChecked:"",
       updateKey:"",
+      wishlistItems:this.getWishlistItems(getVariations(this.props.item["Name"],this.props.globalDatabase,this.props.item["checkListKey"], this.props.item.index)),
+      variations:getVariations(this.props.item["Name"],this.props.globalDatabase,this.props.item["checkListKey"], this.props.item.index)
     }
   }
   updateVariations(key,checked){
@@ -350,13 +352,24 @@ export class Variations extends Component {
   }
   componentDidUpdate(prevProps) {
     if(this.props!==prevProps){
-      this.setState({updateChecked:!inChecklist(this.props.item.checkListKey), updateKey:this.props.item.checkListKey});
+      this.setState({wishlistItems:this.getWishlistItems(getVariations(this.props.item["Name"],this.props.globalDatabase,this.props.item["checkListKey"], this.props.item.index)), updateChecked:!inChecklist(this.props.item.checkListKey), updateKey:this.props.item.checkListKey, variations:getVariations(this.props.item["Name"],this.props.globalDatabase,this.props.item["checkListKey"], this.props.item.index)});
     }
+  }
+  getWishlistItems = (variations) => {
+    let variationsTotal = []
+    for(let i = 0; i < variations.length; i++){
+      if(inWishlist(variations[i].checkListKey)){
+        variationsTotal.push(variations[i].checkListKey)
+      }
+    }
+    return variationsTotal
+  }
+  updateWishlist = () => {
+    this.setState({wishlistItems:this.getWishlistItems(this.state.variations)})
   }
   render(){
     if(this.props.item!=""||this.props.item!=undefined){
-      var variations = getVariations(this.props.item["Name"],this.props.globalDatabase,this.props.item["checkListKey"], this.props.item.index);
-      if(variations.length<=1){
+      if(this.state.variations.length<=1){
         return <View/>
       }
       var imageProperty = this.props.imageProperty;
@@ -367,27 +380,26 @@ export class Variations extends Component {
           <>
           <ScrollView horizontal={true} style={{marginHorizontal:10}} contentContainerStyle={{ flexGrow: 1, justifyContent: 'center'}}>
           <View style={{marginHorizontal: 4, flexDirection: 'row', justifyContent:'center'}}>
-            {variations.map( (item, index)=>
-              <VariationItem variations={variations} updateRightCornerCheck={this.props.updateRightCornerCheck} updateKey={this.state.updateKey} updateChecked={this.state.updateChecked} originalCheckListKey={originalCheckListKey} updateCheckChildFunction={this.props.updateCheckChildFunction} index={index} key={item[this.props.imageProperty[dataSet]]} globalDatabase={this.props.globalDatabase} item={item} setPopupVisible={(state, image, item)=>this.popup?.setPopupVisible(state, image, item)} dataSet={dataSet} imageProperty={imageProperty}/>
+            {this.state.variations.map( (item, index)=>
+              <VariationItem wishlist={this.state.wishlistItems.includes(item.checkListKey)} variations={this.state.variations} updateRightCornerCheck={this.props.updateRightCornerCheck} updateKey={this.state.updateKey} updateChecked={this.state.updateChecked} originalCheckListKey={originalCheckListKey} updateCheckChildFunction={this.props.updateCheckChildFunction} index={index} key={item[this.props.imageProperty[dataSet]]} globalDatabase={this.props.globalDatabase} item={item} setPopupVisible={(state, image, item)=>this.popup?.setPopupVisible(state, image, item)} dataSet={dataSet} imageProperty={imageProperty}/>
             )}
           </View>
           </ScrollView>
-          <PopupImage ref={(popup) => this.popup = popup}/>
+          <PopupImage ref={(popup) => this.popup = popup} updateWishlist={this.updateWishlist}/>
           </>
         )
       } else {
         return(
           <>
           <View style={{flexWrap: 'wrap', flexDirection:"row",justifyContent:"center"}}>
-            {variations.map( (item, index)=>
-              <VariationItem variations={variations} updateRightCornerCheck={this.props.updateRightCornerCheck} updateKey={this.state.updateKey} updateChecked={this.state.updateChecked} originalCheckListKey={originalCheckListKey} updateCheckChildFunction={this.props.updateCheckChildFunction} index={index} key={item[this.props.imageProperty[dataSet]]} globalDatabase={this.props.globalDatabase} item={item} setPopupVisible={(state, image, item)=>this.popup?.setPopupVisible(state, image, item)} dataSet={dataSet} imageProperty={imageProperty}/>
+            {this.state.variations.map( (item, index)=>
+              <VariationItem wishlist={this.state.wishlistItems.includes(item.checkListKey)} variations={this.state.variations} updateRightCornerCheck={this.props.updateRightCornerCheck} updateKey={this.state.updateKey} updateChecked={this.state.updateChecked} originalCheckListKey={originalCheckListKey} updateCheckChildFunction={this.props.updateCheckChildFunction} index={index} key={item[this.props.imageProperty[dataSet]]} globalDatabase={this.props.globalDatabase} item={item} setPopupVisible={(state, image, item)=>this.popup?.setPopupVisible(state, image, item)} dataSet={dataSet} imageProperty={imageProperty}/>
             )}
           </View>
-          <PopupImage ref={(popup) => this.popup = popup}/>
+          <PopupImage ref={(popup) => this.popup = popup} updateWishlist={this.updateWishlist}/>
           </>
         )
       }
-      
     } else {
       return <View/>
     }
@@ -412,6 +424,7 @@ class VariationItem extends Component{
     this.extraIndex = this.props.index===0 ? "0":"";
     this.state = {
       checked: global.collectionList.includes(this.props.item["checkListKey"]+this.extraIndex),
+      wishlist:this.props.wishlist
     }
   }
   componentDidUpdate(prevProps){
@@ -421,6 +434,9 @@ class VariationItem extends Component{
           checked: !this.props.updateChecked,
         })
       }
+      this.setState({
+        wishlist:this.props.wishlist
+      })
     }
   }
   render(){
@@ -443,6 +459,7 @@ class VariationItem extends Component{
             checkOff(this.props.originalCheckListKey, !true); 
           }
         }}>
+        {this.state.wishlist? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:13, height:13, resizeMode:"contain",position:'absolute', left:9, top: 9, zIndex:10,}}/> : <View/>}
         <View style={[{borderWidth: 2, borderColor: this.state.checked ? colors.checkGreen[global.darkMode] : colors.eventBackground[global.darkMode], marginHorizontal:3, marginVertical: 2, padding: 5, borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
           <FastImage
             style={{height: getSettingsString("settingsLargerItemPreviews")==="false"?53:70, width: getSettingsString("settingsLargerItemPreviews")==="false"?53:70, resizeMode:'contain',}}
@@ -466,21 +483,36 @@ class PopupImage extends Component {
   }
 
   setPopupVisible = (visible, image, item) => {
-    this.setState({image:image, item:item});
+    this.setState({image:image, item:item, wishlist: inWishlist(item.checkListKey),});
     this.popup?.setPopupVisible(true);
   }
 
+  addToWishlist = () => {
+    checkOff(this.state.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
+    this.setState({wishlist: this.state.wishlist===true ? false:true});
+    this.props.updateWishlist();
+  }
   render(){
     return(
       <PopupInfoCustom ref={(popup) => this.popup = popup} buttonText={"Close"}>
         <View style={{alignItems:"center"}}>
-          <FastImage
-            style={{width:Dimensions.get('window').width*0.5,height:Dimensions.get('window').width*0.5,resizeMode:'contain',}}
-            source={{
-              uri: this.state.image,
-            }}
-            cacheKey={this.state.image}
-          />
+          <TouchableOpacity 
+            style={{position:"absolute", right:10, top:10}} 
+            onPress={() => {this.addToWishlist()}}>
+            <View style={{width:50, height:50, opacity: this.state.wishlist?1:0.2,justifyContent:"center", alignItems:"center"}}>
+              <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{width:35, height:35, resizeMode:"contain",}}/>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity activeOpacity={0.9} onPress={() => {this.addToWishlist()}} onLongPress={() => {this.addToWishlist()}}>
+            <FastImage
+              style={{width:Dimensions.get('window').width*0.5,height:Dimensions.get('window').width*0.5,resizeMode:'contain',}}
+              source={{
+                uri: this.state.image,
+              }}
+              cacheKey={this.state.image}
+            />
+          </TouchableOpacity>
+          
           <InfoLine
             image={require("../assets/icons/colorPalette.png")} 
             item={this.state.item}

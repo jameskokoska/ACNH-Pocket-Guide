@@ -4,6 +4,11 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
+-Wishlist page can now be refreshed
+-Long press a variation and add it to your wishlist!
+-You can see if a variation is on your wishlist in the popup!
+-Fixed checkmarks and wishlist indicator not syncing correctly for list items
+-
 -Use larger images in popup setting now applies to variations
 -Fixed bug where it would sometimes indicate you have a variation, even though you unselected it
 -Fixed variation indicator when whole set completed - now shows green dot
