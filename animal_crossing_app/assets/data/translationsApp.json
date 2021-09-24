@@ -452,16 +452,16 @@
     ],
     "Main": [
         {
-            "English": "725 items",
-            "English (Europe)": "725 items",
-            "French": "711 items",
-            "French (US)": "711 items",
-            "German": "715 items",
-            "Spanish": "715 items",
-            "Spanish (US)": "711 items",
-            "Russian": "715 items",
+            "English": "728 items",
+            "English (Europe)": "728 items",
+            "French": "714 items",
+            "French (US)": "714 items",
+            "German": "718 items",
+            "Spanish": "718 items",
+            "Spanish (US)": "714 items",
+            "Russian": "718 items",
             "undefined": "0 items",
-            "Italian": "715 items",
+            "Italian": "718 items",
             "Dutch": "0 items",
             "Chinese": "0 items",
             "Chinese (Traditional)": "0 items",
@@ -8359,6 +8359,39 @@
         {
             "English": "Goth",
             "English (Europe)": "Goth"
+        },
+        {
+            "English": "Old villager resident",
+            "English (Europe)": "Old villager resident",
+            "French": "Vieux villageois résident",
+            "French (US)": "Vieux villageois résident",
+            "German": "Alte Dorfbewohnerin",
+            "Spanish": "Viejo aldeano residente",
+            "Spanish (US)": "Viejo aldeano residente",
+            "Russian": "Старый сельский житель",
+            "Italian": "Vecchio abitante del villaggio"
+        },
+        {
+            "English": "Not an old villager resident",
+            "English (Europe)": "Not an old villager resident",
+            "French": "Pas un vieux villageois",
+            "French (US)": "Pas un vieux villageois",
+            "German": "Kein alter Dorfbewohner",
+            "Spanish": "No es un viejo residente de aldeanos",
+            "Spanish (US)": "No es un viejo residente de aldeanos",
+            "Russian": "Не старый сельский житель",
+            "Italian": "Non un vecchio abitante del villaggio"
+        },
+        {
+            "English": "Old Resident Villager's Birthdays",
+            "English (Europe)": "Old Resident Villager's Birthdays",
+            "French": "Les anniversaires des anciens villageois résidents",
+            "French (US)": "Les anniversaires des anciens villageois résidents",
+            "German": "Geburtstage der alten Dorfbewohner",
+            "Spanish": "Cumpleaños de un antiguo aldeano residente",
+            "Spanish (US)": "Cumpleaños de un antiguo aldeano residente",
+            "Russian": "Дни рождения старожила",
+            "Italian": "Compleanni del vecchio abitante del villaggio"
         }
     ],
     "Sources": [

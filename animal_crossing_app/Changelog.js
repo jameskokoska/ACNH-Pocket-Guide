@@ -4,6 +4,12 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
+-Added past resident button to villagers
+-Added respective filters
+-Added event selection for past resident birthdays
+-Fixed default page as Everything
+-Fixed checkmark synchronization after checking variation
+-
 -Wishlist page can now be refreshed
 -Long press a variation and add it to your wishlist!
 -You can see if a variation is on your wishlist in the popup!

@@ -38,6 +38,14 @@ export function inMuseum(checkListKeyString, shouldCheck){
   }
 }
 
+export function inVillager(checkListKeyString, shouldCheck){
+  if(shouldCheck && global.collectionList.includes("oldResident"+checkListKeyString)){
+    return true;
+  } else {
+    return false
+  }
+}
+
 const database = require("./assets/data/data.json");
 
 export async function getStorageData(data, checkListKey, defaultValue){

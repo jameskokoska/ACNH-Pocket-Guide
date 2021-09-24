@@ -128,6 +128,8 @@ function ListPage(props){
     "Wishlist",
     "Museum",
     "Not Museum",
+    "Old Resident",
+    "Not Old Resident"
   ]
 
   const [searchFilters, setSearchFilters] = useState([]);
@@ -469,6 +471,22 @@ function ListPage(props){
                   } 
                 } else if(searchActual.includes("Not Museum")){
                   if(!global.collectionList.includes("museum"+item["checkListKey"]) && item["Data Category"]!==undefined && museumCategories.includes(item["Data Category"])){
+                    item.dataSet = j;
+                    item.index = i;
+                    dataUpdated = [...dataUpdated, item];
+                    // previousVariation = item.[props.textProperty[j]];
+                    previousVariation = item["Name"];
+                  } 
+                } else if(searchActual.includes("Old Resident")){
+                  if(global.collectionList.includes("oldResident"+item["checkListKey"]) && item["Data Category"]!==undefined && item["Data Category"]==="Villagers"){
+                    item.dataSet = j;
+                    item.index = i;
+                    dataUpdated = [...dataUpdated, item];
+                    // previousVariation = item.[props.textProperty[j]];
+                    previousVariation = item["Name"];
+                  } 
+                } else if(searchActual.includes("Not Old Resident")){
+                  if(!global.collectionList.includes("oldResident"+item["checkListKey"]) && item["Data Category"]!==undefined && item["Data Category"]==="Villagers"){
                     item.dataSet = j;
                     item.index = i;
                     dataUpdated = [...dataUpdated, item];

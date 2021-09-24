@@ -64,7 +64,21 @@ export function getEventsDay(date, eventSections){
 
   villagerData.map( (villager, index)=>{
     if((date.getMonth()+1).toString()===(villager["Birthday"].split("/"))[0]&& date.getDate().toString()===(villager["Birthday"].split("/"))[1]){
-      if(eventSections["Favorite Villager's Birthdays"] && global.collectionList.includes("villagerCheckList"+villager["Name"])){
+      if(eventSections["Old Resident Villager's Birthdays"] && global.collectionList.includes("oldResident"+"villagerCheckList"+villager["Name"])){
+        totalEvents.push({
+          name: capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),
+          time: "All day",
+          image: villager["Icon Image"],
+          day:date.getDate(),
+          weekday:date.getDay(),
+          type:"villager",
+          filter: villager,
+          color:colors.specialEventResidentBirthdayBackground[global.darkMode]
+        });
+        if(eventSections["App notifications"]){
+          schedulePushNotification(date,eventSections["Set Notification Time"],"🎂 " + capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),attemptToTranslateItem("All day"));
+        }
+      } else if(eventSections["Favorite Villager's Birthdays"] && global.collectionList.includes("villagerCheckList"+villager["Name"])){
         totalEvents.push({
           name: capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),
           time: "All day",

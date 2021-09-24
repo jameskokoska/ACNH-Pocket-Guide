@@ -61,7 +61,7 @@ class App extends Component {
     this.numLogins;
     this.state = {
       loaded: false,
-      currentPage: 1,
+      currentPage: 0,
       open:false,
       propsPassed:""
     }
@@ -204,6 +204,7 @@ class App extends Component {
       "App notifications" : false,
       "Set Notification Time" : "",
       "Favorite Villager's Birthdays" : true,
+      "Old Resident Villager's Birthdays" : true,
       "All Villager's Birthdays" : false,
       "K.K. Slider" : true,
       "Daisy Mae" : true,

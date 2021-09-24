@@ -15,10 +15,11 @@ import {getPhotoShadow} from "./GetPhoto"
 import {getMonthShort} from "./DateFunctions"
 import colors from "../Colors"
 import {getCurrentDateObject, parseActiveTime} from "./DateFunctions"
-import {inMuseum, inWishlist, inChecklist,getSettingsString, variationsCheckedPercent} from "../LoadJsonData"
+import {inMuseum, inVillager, inWishlist, inChecklist,getSettingsString, variationsCheckedPercent} from "../LoadJsonData"
 import FadeInOut from "../components/FadeInOut";
 
 const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
+const villagerCategories = ["Villagers"]
 
 class ListItem extends React.Component{
   constructor(props) {
@@ -26,11 +27,14 @@ class ListItem extends React.Component{
     this.setCollected = this.setCollected.bind(this);
     this.setWishlist = this.setWishlist.bind(this);
     this.setMuseum = this.setMuseum.bind(this);
+    this.setVillager = this.setVillager.bind(this);
     this.showMuseumButton = getSettingsString("settingsShowMuseumButton")==="true"
+    this.showVillagerButton = true
     this.state = {
       collected: inChecklist(this.props.item.checkListKey),
       wishlist: inWishlist(this.props.item.checkListKey),
       museum: inMuseum(this.props.item.checkListKey, this.checkMuseumButton()),
+      villager: inVillager(this.props.item.checkListKey, this.checkVillagerButton()),
       variationsPercent: variationsCheckedPercent(this.props.item, this.props.item.index)
     }
   }
@@ -49,6 +53,9 @@ class ListItem extends React.Component{
       }
       if(this.state.museum!==inMuseum(this.props.item.checkListKey, this.checkMuseumButton())){
         this.setMuseum(!this.state.museum)
+      }
+      if(this.state.villager!==inVillager(this.props.item.checkListKey, this.checkVillagerButton())){
+        this.setVillager(!this.state.villager)
       }
     }
   }
@@ -79,8 +86,18 @@ class ListItem extends React.Component{
     }
   }
 
+  setVillager(villager){
+    if(this.mounted && this.checkVillagerButton()){
+      this.setState({villager: villager})
+    }
+  }
+
   checkMuseumButton = () => {
-    return museumCategories.includes(this.props.item["Data Category"]) || this.props.title==="Active Creatures"
+    return museumCategories.includes(this.props.item["Data Category"])
+  }
+
+  checkVillagerButton = () => {
+    return villagerCategories.includes(this.props.item["Data Category"])
   }
 
   render(){
@@ -187,6 +204,7 @@ class ListItem extends React.Component{
                 </TouchableOpacity>
               </View>
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
+              <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
               {this.state.wishlist? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
               <FastImage
                 style={styles.gridBoxImage}
@@ -227,6 +245,7 @@ class ListItem extends React.Component{
                 </TouchableOpacity>
               </View>
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
+              <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
               {this.state.wishlist ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
               <FastImage
                 style={styles.gridBoxImageLarge}
@@ -278,6 +297,7 @@ class ListItem extends React.Component{
                 </TouchableOpacity>
               </View>
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
+              <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
               {this.state.wishlist===true ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
               <FastImage
                 style={styles.gridBoxImageLargeSmaller}
@@ -347,6 +367,7 @@ class ListItem extends React.Component{
                 <Check checkType={this.props.checkType} fadeOut={false} play={this.state.collected} width={90} height={90} disablePopup={disablePopup}/>
               </TouchableOpacity>
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
+              <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
             </View>
           </TouchableNativeFeedback>
         </View>
@@ -384,6 +405,37 @@ class CheckMuseum extends Component {
           :
           <View style={{width: 35,height: 35,borderRadius: 100,justifyContent: "center",alignItems: "center",  opacity: 0.4, borderWidth: 1.3, borderColor: colors.lightDarkAccentHeavy[global.darkMode], backgroundColor:colors.lightDarkAccent2[global.darkMode]}}>
             <Image style={{resizeMode:'contain',width:22, height:22}} source={require("../assets/icons/owl.png")}/>
+          </View>
+        }
+      </TouchableOpacity>:<View/>}
+      </>
+    )
+  }
+}
+
+
+class CheckVillager extends Component {
+  render(){
+    if(this.props.showVillagerButton!==true){
+      return <View/>
+    }
+    return(
+      <>
+      {this.props.villagerPage?<TouchableOpacity style={{zIndex:10, position:"absolute", left: -10, top: -10, padding:15}} 
+        activeOpacity={0.6}
+        onPress={() => {  
+        checkOff(this.props.item.checkListKey, this.props.villager, "oldResident");
+        this.props.setVillager(this.props.villager===true ? false:true);
+      }}>
+        {this.props.villager?
+          <FadeInOut duration={200} startValue={0} endValue={1} fadeIn={true} fadeInOut={true} scaleInOut={true} maxFade={0.8} minScale={0.2}>
+            <View style={{width: 35,height: 35,borderRadius: 100,justifyContent: "center",alignItems: "center", opacity: 0.9, borderWidth: 1.3, borderColor: colors.checkBlue[global.darkMode], backgroundColor:colors.checkBlue2[global.darkMode]}}>
+              <Image style={{resizeMode:'contain',width:23, height:23}} source={require("../assets/icons/trolley.png")}/>
+            </View>
+          </FadeInOut>
+          :
+          <View style={{width: 35,height: 35,borderRadius: 100,justifyContent: "center",alignItems: "center",  opacity: 0.4, borderWidth: 1.3, borderColor: colors.lightDarkAccentHeavy[global.darkMode], backgroundColor:colors.lightDarkAccent2[global.darkMode]}}>
+            <Image style={{resizeMode:'contain',width:23, height:23}} source={require("../assets/icons/trolley.png")}/>
           </View>
         }
       </TouchableOpacity>:<View/>}
