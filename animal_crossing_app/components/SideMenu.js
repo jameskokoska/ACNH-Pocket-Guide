@@ -332,6 +332,13 @@ export const sideSections = [
     "cannotDisable":true,
   },
   {
+    "pageNum" : 30,
+    "picture" : require("../assets/icons/fileBackup.png"),
+    "displayName" : "Backup + Restore",
+    "color": "selectSettings",
+    "cannotDisable":true,
+  },
+  {
     "pageNum" : 14,
     "picture" : require("../assets/icons/magnifyingGlass.png"),
     "displayName" : "About",

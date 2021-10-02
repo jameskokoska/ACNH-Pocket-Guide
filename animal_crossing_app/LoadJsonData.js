@@ -1019,7 +1019,7 @@ export function translateIslandNameInputLabel2(){
 }
 
 export function getDefaultLanguage(){
-  //var languages = ["English", "English (Europe)","German","Spanish","Spanish (US)","French","French (US)","Italian","Dutch","Chinese","Chinese (Traditional)","Japanese","Korean","Russian"]
+  //var languages = ["English", "English (Europe)","German","Spanish","Spanish (US)","French","French (US)","Italian","Dutch","Chinese","Chinese (Traditional)","Japanese","Korean","Russian","Portuguese"]
 
   var defaultLanguage = "English";
   if(Localization.locale.includes("en")){
@@ -1042,6 +1042,8 @@ export function getDefaultLanguage(){
     defaultLanguage = "Russian";
   } else if(Localization.locale.includes("nl")){
     defaultLanguage = "Dutch";
+  } else if(Localization.locale.includes("pt")){
+    defaultLanguage = "Portuguese";
   }
   return defaultLanguage;
 }

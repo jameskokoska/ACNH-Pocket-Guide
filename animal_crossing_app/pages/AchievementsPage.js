@@ -80,7 +80,7 @@ export default class AchievementsPage extends Component {
         renderItem={({item}) => {
           return(<Achievement achievement={item} storageData={this.storageData} openPopup={this.openPopup}/>)
         }}
-        keyExtractor={(item, index) => `list-item-${index}-${item.["Name"]}`}
+        keyExtractor={(item, index) => `list-item-${index}-${item["Name"]}`}
         contentContainerStyle={{paddingBottom:Dimensions.get('window').height/3}}
       />
       <AchievementsPopup ref={(popup) => this.popup = popup}/>

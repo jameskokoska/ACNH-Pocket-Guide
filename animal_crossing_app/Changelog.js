@@ -4,6 +4,10 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
+-Added Portuguese language translations (no items)
+-Added separate Backup and Import data page
+-Reset order of side menu drawer pages, sorry!
+-
 -Added past resident button to villagers
 -Added respective filters
 -Added event selection for past resident birthdays

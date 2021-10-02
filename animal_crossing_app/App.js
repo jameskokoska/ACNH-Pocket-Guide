@@ -41,6 +41,7 @@ import CustomFiltersPage from "./pages/CustomFiltersPage"
 import VillagersCompatibilityPage from "./pages/VillagersCompatibilityPage"
 import ProfileCurrentPage from "./pages/ProfileCurrentPage"
 import AmiiboPage from "./pages/AmiiboPage"
+import BackupPage from "./pages/BackupPage"
 
 
 //expo build:android -t app-bundle
@@ -394,6 +395,8 @@ class App extends Component {
         currentPageView = <MeteoNookPage setPage={this.setPage}/>
       } else if (this.state.currentPage===29){
         currentPageView = <ActiveCreaturesPage/>
+      } else if (this.state.currentPage===30){
+        currentPageView = <BackupPage/>
       } else {
         currentPageView = <Text>Default</Text>
       }

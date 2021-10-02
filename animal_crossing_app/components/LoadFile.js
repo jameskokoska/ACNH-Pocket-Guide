@@ -48,7 +48,7 @@ class LoadFile extends Component {
         />
         <ButtonComponent
           text={"Import Data"}
-          color={colors.okButton[global.darkMode]}
+          color={colors.okButton3[global.darkMode]}
           vibrate={5}
           onPress={() => {
             this.loadPopup?.setPopupVisible(true);
@@ -153,7 +153,7 @@ class LoadClipboard extends Component {
       />
       <ButtonComponent
         text={"Import Data from Clipboard"}
-        color={colors.okButton[global.darkMode]}
+        color={colors.okButton3[global.darkMode]}
         vibrate={5}
         onPress={async () => {
           const text = await Clipboard.getString();
@@ -180,7 +180,7 @@ class ExportClipboard extends Component {
         />
         <ButtonComponent
           text={"Export Data to Clipboard"}
-          color={colors.okButton[global.darkMode]}
+          color={colors.okButton2[global.darkMode]}
           vibrate={5}
           onPress={async () => {
             var dataTotal = await getAllData();
@@ -215,7 +215,7 @@ class ExportFile extends Component {
         />
         <ButtonComponent
           text={"Export Data"}
-          color={colors.okButton[global.darkMode]}
+          color={colors.okButton2[global.darkMode]}
           vibrate={5}
           onPress={async () => {
             var dataTotal = await getAllData();

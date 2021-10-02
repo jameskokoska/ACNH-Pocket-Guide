@@ -73,11 +73,11 @@ class SettingsPage extends Component {
           )}
           <Popup ref={(popupLoadNotifications) => this.popupLoadNotifications = popupLoadNotifications} text="Notifications" textLower="You can select event notifications under the [Edit Events] of the [Events] section on the homepage." button1={"OK"} button1Action={()=>{this.props.setPage(0)}}/>
           <CustomDatePicker showPopup={true} setDateOffset={this.setDateOffset}/>
-          <View style={{height: 50}}/>
+          {/* <View style={{height: 50}}/>
           <SettingsDivider text="Data backup" margin="small"/>
           <ExportFile/><LoadFile/>
           <View style={{height: 10}}/>
-          <ExportClipboard/><LoadClipboard/>
+          <ExportClipboard/><LoadClipboard/> */}
 
           <View style={{height: 50}}/>
           <SettingsDivider text="Data reset" margin="small"/>
@@ -226,6 +226,7 @@ export class LanguagePicker extends Component{
             {label: attemptToTranslate("German"), value: "Deutsch",},
             {label: attemptToTranslate("Русский"), value: "Russian",},
             {label: attemptToTranslate("Italiano"), value: "Italian",},
+            {label: attemptToTranslate("Portuguese (items not translated)"), value: "Portuguese",},
             {label: "Dutch (Not fully supported)", value: "Dutch",},
             {label: "Chinese (Not fully supported)", value: "Chinese",},
             {label: "Chinese (Traditional) (Not fully supported)", value: "Chinese (Traditional)",},

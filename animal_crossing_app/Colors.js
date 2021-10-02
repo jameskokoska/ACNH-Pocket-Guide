@@ -131,6 +131,8 @@ const colors = {
     highlightNonCustomizableItems : ["#8DAFEE6B","#7688C04B"],
     highlightTurnipDay : ["#A1B9E66B","#1942647C"],
     okButton : ["#4A9EE2","#146EA5"],
+    okButton2 : ["#4C9B5D","#337A32"],
+    okButton3 : ["#61A899","#338585"],
     okButtonFaint : ["#99cbf2","#125580"],
     dateButton : ["#81c784","#519657"],
     cancelButton : ["#E96D6D","#9B1A25"],
