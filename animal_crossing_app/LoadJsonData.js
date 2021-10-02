@@ -816,6 +816,13 @@ export function attemptToTranslateFromDatabases(text, databases){
 export function attemptToTranslateItem(text){
   if(global.language!=="English"){
     if(itemTranslations.hasOwnProperty(text)){
+      if(itemTranslations[text][global.language]===undefined){
+        if(itemTranslations[text]["English"]!=undefined){
+          return itemTranslations[text]["English"]
+        } else {
+          return ""
+        }
+      }
       return(itemTranslations[text][global.language])
     }
   }

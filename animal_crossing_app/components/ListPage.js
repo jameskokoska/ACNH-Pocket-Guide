@@ -517,8 +517,18 @@ function ListPage(props){
     if(getSettingsString("settingsSortAlphabetically")==="true"){
       var dataLoadedCopy = dataUpdated.slice(0);
       dataLoadedCopy.sort(function(a, b) {
-        var textA = removeAccents(a.NameLanguage.toUpperCase()).replace("-"," ");
-        var textB = removeAccents(b.NameLanguage.toUpperCase()).replace("-"," ");
+        var textA
+        var textB
+        if(a===undefined || a.NameLanguage===undefined){
+          textA = ""
+        } else {
+          textA = removeAccents(a.NameLanguage.toUpperCase()).replace("-"," ");
+        }
+        if(b===undefined || b.NameLanguage===undefined){
+          textB = ""
+        } else {
+          textB = removeAccents(b.NameLanguage.toUpperCase()).replace("-"," ");
+        }
         return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
       });
       dataUpdated = dataLoadedCopy

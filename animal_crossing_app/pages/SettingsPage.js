@@ -213,26 +213,37 @@ export class CustomDatePicker extends Component{
 
 export class LanguagePicker extends Component{
   render(){
+    let languages = [
+      {label: "English", value: "English",},
+      {label: "English (Europe)", value: "English (Europe)",},
+      {label: "Français", value: "French",},
+      {label: "Français (Québec)", value: "French (US)",},
+      {label: "Español", value: "Spanish",},
+      {label: "Español (US)", value: "Spanish (US)",},
+      {label: "Deutsch", value: "German",},
+      {label: "Русский", value: "Russian",},
+      {label: "Italiano", value: "Italian",},
+      {label: "Portuguêse" + " " + attemptToTranslate("(items not translated)"), value: "Portuguese",},
+      {label: "Dutch (Not fully supported)", value: "Dutch",},
+      {label: "Chinese (Not fully supported)", value: "Chinese",},
+      {label: "Chinese (Traditional) (Not fully supported)", value: "Chinese (Traditional)",},
+      {label: "Japanese (Not fully supported)", value: "Japanese",},
+      {label: "Korean (Not fully supported)", value: "Korean",},
+    ]
+    let pass = false
+    for(let i = 0; i < languages.length; i++){
+      if(global.language === languages[i]["value"]){
+        pass = true
+        break
+      }
+    }
+    if(!pass){
+      global.language = "English"
+    }
     return(<>
       <View style={{marginTop:10, marginBottom:8, marginHorizontal:20, justifyContent:"center"}}>
         <DropDownPicker
-          items={[
-            {label: attemptToTranslate("English"), value: "English",},
-            {label: attemptToTranslate("English (Europe)"), value: "English (Europe)",},
-            {label: attemptToTranslate("Français"), value: "French",},
-            {label: attemptToTranslate("Français (Québec)"), value: "French (US)",},
-            {label: attemptToTranslate("Español"), value: "Spanish",},
-            {label: attemptToTranslate("Español (US)"), value: "Spanish (US)",},
-            {label: attemptToTranslate("German"), value: "Deutsch",},
-            {label: attemptToTranslate("Русский"), value: "Russian",},
-            {label: attemptToTranslate("Italiano"), value: "Italian",},
-            {label: attemptToTranslate("Portuguese (items not translated)"), value: "Portuguese",},
-            {label: "Dutch (Not fully supported)", value: "Dutch",},
-            {label: "Chinese (Not fully supported)", value: "Chinese",},
-            {label: "Chinese (Traditional) (Not fully supported)", value: "Chinese (Traditional)",},
-            {label: "Japanese (Not fully supported)", value: "Japanese",},
-            {label: "Korean (Not fully supported)", value: "Korean",},
-          ]}
+          items={languages}
           defaultValue={global.language}
           placeholder={"Select Language..."}
           dropDownMaxHeight={300}

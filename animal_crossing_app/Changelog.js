@@ -7,6 +7,7 @@ export const changelog = `
 -Added Portuguese language translations (no items)
 -Added separate Backup and Import data page
 -Reset order of side menu drawer pages, sorry!
+-Fixed bug with German translation
 -
 -Added past resident button to villagers
 -Added respective filters
@@ -18,6 +19,8 @@ export const changelog = `
 -Long press a variation and add it to your wishlist!
 -You can see if a variation is on your wishlist in the popup!
 -Fixed checkmarks and wishlist indicator not syncing correctly for list items
+-
+-Past changes:
 -
 -Use larger images in popup setting now applies to variations
 -Fixed bug where it would sometimes indicate you have a variation, even though you unselected it
@@ -43,8 +46,6 @@ export const changelog = `
 -
 -Updated translations
 -Added MeteoNook page (in sidebar)
--
--Past changes:
 -
 -Fixed calendar page again
 -Changed icons for events

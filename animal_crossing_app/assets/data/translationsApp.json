@@ -8632,7 +8632,7 @@
             "English (Europe)": "Tap to setup your profile",
             "French": "Appuyez pour configurer votre profil",
             "French (US)": "Appuyez pour configurer votre profil",
-            "German": "Tippe zum ",
+            "German": "Tippen Sie hier, um Ihr Profil einzurichten",
             "Spanish": "Toque para configurar tu perfil",
             "Spanish (US)": "Toque para configurar tu perfil",
             "Russian": "Нажмите чтобы настроить свой профиль",
@@ -9162,15 +9162,15 @@
             "Portuguese": "Aniversário dos antigos moradores"
         },
         {
-            "English": "Portuguese (items not translated)",
-            "English (Europe)": "Portuguese (items not translated)",
-            "French": "Portugais (éléments non traduits)",
-            "French (US)": "Portugais (éléments non traduits)",
-            "German": "Portugiesisch (nicht übersetzte Elemente)",
-            "Spanish": "Portugués (artículos no traducidos)",
-            "Spanish (US)": "Portugués (artículos no traducidos)",
-            "Russian": "Португальский (элементы не переведены)",
-            "Italian": "Portoghese (articoli non tradotti)",
+            "English": "(items not translated)",
+            "English (Europe)": "(items not translated)",
+            "French": "(éléments non traduits)",
+            "French (US)": "(éléments non traduits)",
+            "German": "(nicht übersetzte Elemente)",
+            "Spanish": "(artículos no traducidos)",
+            "Spanish (US)": "(artículos no traducidos)",
+            "Russian": "(элементы не переведены)",
+            "Italian": "(articoli non tradotti)",
             "Portuguese": "Português (itens não traduzidos)"
         },
         {
