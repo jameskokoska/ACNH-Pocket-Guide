@@ -1284,7 +1284,7 @@
             "Spanish": "Registro de precios (nabos)",
             "Spanish (US)": "Registro de nabo",
             "Russian": "Лог репок",
-            "Italian": "- Tracciamento delle prezzo delle rape",
+            "Italian": "Tracciamento delle prezzo delle rape",
             "Portuguese": "Registro de Turnips"
         },
         {
@@ -1296,7 +1296,7 @@
             "Spanish": "Patrón de la semana pasada",
             "Spanish (US)": "Modelo de la semana pasada",
             "Russian": "Шаблон предыдущей недели",
-            "Italian": "- Comportamento della settimana scorsa",
+            "Italian": "Comportamento della settimana scorsa",
             "Portuguese": "Padrão da semana passada"
         },
         {
@@ -22399,7 +22399,7 @@
             "French": "197 items",
             "French (US)": "197 items",
             "German": "205 items",
-            "Russian": "182 items",
+            "Russian": "185 items",
             "Spanish": "14 items",
             "Spanish (US)": "0 items",
             "Italian": "0 items",
@@ -23221,7 +23221,8 @@
             "English (Europe)": "I caught a dab! Not bad!",
             "French": "Tu as pris une limande ! Tu as vu ses deux yeux globuleux ?",
             "French (US)": "Tu as pris une limande ! Tu as vu ses deux yeux globuleux ?",
-            "German": "Eine Kliesche!\nIch verzichte mal auf kliescheehafte Witze."
+            "German": "Eine Kliesche!\nIch verzichte mal auf kliescheehafte Witze.",
+            "Russian": "На удочку попалась камбала! Не косись на меня, голубушка! "
         },
         {
             "English": "I caught a dace! Hope I have some space!",
@@ -23673,7 +23674,8 @@
             "English (Europe)": "I caught a yellow perch! Those yellow birds have to sit somewhere!",
             "French": "Tu as pris une perche jaune ! L'opération perche jaune a été un succès !",
             "French (US)": "Tu as pris une perche jaune ! L'opération perche jaune a été un succès !",
-            "German": "Ein Flussbarsch!\nBist du leicht beeinflussbarsch?"
+            "German": "Ein Flussbarsch!\nBist du leicht beeinflussbarsch?",
+            "Russian": "На удочку попался желтый окунь! Эх ты, желторотик! "
         },
         {
             "English": "I caught a zebra turkeyfish! Land, air, water--make up your mind!",
@@ -23984,7 +23986,8 @@
             "English (Europe)": "I got a Venus' flower basket! Why was she picking flowers here?",
             "French": "Tu as remonté une corbeille de Vénus ! Elle a dû l'égarer pendant sa promenade.",
             "French (US)": "Tu as remonté une corbeille de Vénus ! Elle a dû l'égarer pendant sa promenade.",
-            "German": "Ein Gießkannenschwamm!\nWie praktisch, gleich zwei Funktionen auf einmal!"
+            "German": "Ein Gießkannenschwamm!\nWie praktisch, gleich zwei Funktionen auf einmal!",
+            "Russian": "Я поймал корзинку Венеры! Если встречу Венеру - верну. "
         },
         {
             "English": "I got a whelk! Happy snails to ya.",

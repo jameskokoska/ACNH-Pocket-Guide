@@ -93,6 +93,23 @@ export class ProfileIcon extends Component{
         source={{uri:this.state.profileIcon}}
         cacheKey={this.state.profileIcon}
       />
+    } else if (this.state.profileIcon.includes("villager")){
+      var width = 42;
+      if(this.state.profileIcon === "villager.png"){
+        width = 42;
+      } else if(this.state.profileIcon === "villager2.png"){
+        width = 47;
+      } else if(this.state.profileIcon === "villager4.png"){
+        width = 52;
+      } else if(this.state.profileIcon === "villager5.png"){
+        width = 48;
+      } else if(this.state.profileIcon === "villager8.png"){
+        width = 45;
+      }
+      profileIcon = <Image
+        style={{height: width,width: width,resizeMode:'contain',}}
+        source={getPhoto(this.state.profileIcon)}
+      />
     } else {
       profileIcon = <Image
         style={{height: 40,width: 40,resizeMode:'contain',}}
@@ -140,10 +157,10 @@ export class ProfileIcon extends Component{
           <View style={{flex: 1, flexWrap: 'wrap', flexDirection:"row",justifyContent:"center"}}>
             <SelectionImage 
               selectedImage={this.state.profileIcon} 
-              images={["villager.png", ...taskImages]}
+              images={["villager.png", "villager2.png", "villager3.png", "villager4.png", "villager5.png", "villager6.png", "villager7.png", "villager8.png",...taskImages]}
               onSelected={async (image)=>{this.setState({profileIcon:image, customProfileIcon:false}); await AsyncStorage.setItem("profileIcon"+this.props.profile, image); await AsyncStorage.setItem("customProfileIcon"+this.props.profile, "false");}}
               canDeselect={false}
-              sizeImage={[35,35]}
+              sizeImage={[38,38]}
               sizeImageOnline={[45,45]}
               sizeContainer={[60,60]}
             />

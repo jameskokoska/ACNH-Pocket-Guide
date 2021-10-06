@@ -40,6 +40,20 @@ export function getPhoto(name, fallback=""){
       return require("../assets/icons/leaf.png");
     case "villager.png":
       return require("../assets/icons/villager.png");
+    case "villager2.png":
+      return require("../assets/icons/villager2.png");
+    case "villager3.png":
+      return require("../assets/icons/villager3.png");
+    case "villager4.png":
+      return require("../assets/icons/villager4.png");
+    case "villager5.png":
+      return require("../assets/icons/villager5.png");
+    case "villager6.png":
+      return require("../assets/icons/villager6.png");
+    case "villager7.png":
+      return require("../assets/icons/villager7.png");
+    case "villager8.png":
+      return require("../assets/icons/villager8.png");
     case "dice.png":
       return require("../assets/icons/dice.png");
     case "confettiBall.png":
