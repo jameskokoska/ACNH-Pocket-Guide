@@ -293,6 +293,13 @@ export const sideSections = [
     "color": "selectIsland",
     "disabled":false
   },
+  // {
+  //   "pageNum" : 31,
+  //   "picture" : require("../assets/icons/palmTree.png"),
+  //   "displayName" : "TV Guide",
+  //   "color": "selectIsland",
+  //   "disabled":false
+  // },
   {
     "pageNum" : 15,
     "picture" : require("../assets/icons/acnhFAQIcon.png"),

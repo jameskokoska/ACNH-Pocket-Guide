@@ -42,6 +42,7 @@ import VillagersCompatibilityPage from "./pages/VillagersCompatibilityPage"
 import ProfileCurrentPage from "./pages/ProfileCurrentPage"
 import AmiiboPage from "./pages/AmiiboPage"
 import BackupPage from "./pages/BackupPage"
+import TVGuidePage from './pages/TVGuidePage';
 
 
 //expo build:android -t app-bundle
@@ -397,6 +398,8 @@ class App extends Component {
         currentPageView = <ActiveCreaturesPage/>
       } else if (this.state.currentPage===30){
         currentPageView = <BackupPage/>
+      } else if (this.state.currentPage===31){
+        currentPageView = <TVGuidePage/>
       } else {
         currentPageView = <Text>Default</Text>
       }
