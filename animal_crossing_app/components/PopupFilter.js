@@ -100,6 +100,7 @@ class PopupFilter extends Component {
           {"name":"Series 2","id":"Data Category:Series 2"},
           {"name":"Series 3","id":"Data Category:Series 3"},
           {"name":"Series 4","id":"Data Category:Series 4"},
+          {"name":"Series 5","id":"Data Category:Series 5"},
           {"name":"Promos","id":"Data Category:Promos"},
           {"name":"Welcome Amiibo Series","id":"Data Category:Welcome Amiibo Series"} ,
           {"name":"Sanrio Series","id":"Data Category:Sanrio Series"} 
