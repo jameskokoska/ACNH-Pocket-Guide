@@ -9,6 +9,7 @@ import {
   ScrollView,
   Dimensions,
   TouchableOpacity,
+  BackHandler
 } from "react-native";
 import TextFont from "./TextFont";
 import ButtonComponent from "./ButtonComponent";
@@ -191,10 +192,22 @@ export class PopupBottomCustom extends Component {
 
   componentDidMount() {
     this.mounted=true;
+    this.backHandler = BackHandler.addEventListener(
+      "hardwareBackPress",
+      this.handleBackButton,
+    );
   }
 
   componentWillUnmount() {
     this.mounted=false
+    BackHandler.removeEventListener("hardwareBackPress", this.handleBackButton);
+  }
+
+  handleBackButton = () => {
+    if(this.visible===true){
+      this.setPopupVisible(false)
+      return true
+    }
   }
 
   setPopupVisible = (visible) => {
@@ -202,6 +215,7 @@ export class PopupBottomCustom extends Component {
       this.setState({heightOffset:0})
       visible ? this.sheetRef?.snapTo(0) : this.sheetRef?.snapTo(1)
     }
+    this.visible = visible
   }
   
   renderContent = () => {
@@ -259,7 +273,7 @@ export class PopupBottomCustom extends Component {
         springConfig={springConfig}
         enabledContentTapInteraction={false}
         onCloseStart={()=>{if(this.mounted){this.setState({openStart:false})}}}
-        onCloseEnd={()=>{if(this.mounted){this.setState({openStart:false}); this.state.heightOffset = 0} this.props.onClose===undefined ? 0 : this.props.onClose();}}
+        onCloseEnd={()=>{if(this.mounted){this.visible=false; console.log(this.visible); this.setState({openStart:false}); this.state.heightOffset = 0} this.props.onClose===undefined ? 0 : this.props.onClose();}}
         onOpenStart={()=>{if(this.mounted){this.setState({openStart:true})}}}
         onOpenEnd={()=>{if(this.mounted){this.setState({openStart:true})}}}
       />

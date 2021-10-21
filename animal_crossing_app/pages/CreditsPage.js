@@ -73,6 +73,7 @@ class CreditsPage extends Component {
             <SubHeader style={{marginBottom:5}}>{attemptToTranslate("Italian") + ":"}</SubHeader>
             <SubHeader> Lyndsie</SubHeader>
             <SubHeader> Ilaria Caiazzo</SubHeader>
+            <SubHeader> Filip Gavran</SubHeader>
           </View>
           <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
             <SubHeader style={{marginBottom:5}}>{attemptToTranslate("Portuguese") + ":"}</SubHeader>
@@ -80,7 +81,7 @@ class CreditsPage extends Component {
           </View>
           <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
             <SubHeader style={{marginBottom:5}}>{attemptToTranslate("Dutch") + ":"}</SubHeader>
-            <SubHeader> </SubHeader>
+            <SubHeader> MarvelousBi</SubHeader>
           </View>
           
           <View style={{height: 20}}/>

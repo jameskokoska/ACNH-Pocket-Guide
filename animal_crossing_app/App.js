@@ -43,6 +43,8 @@ import ProfileCurrentPage from "./pages/ProfileCurrentPage"
 import AmiiboPage from "./pages/AmiiboPage"
 import BackupPage from "./pages/BackupPage"
 import TVGuidePage from './pages/TVGuidePage';
+import OrdinancePage from './pages/OrdinancePage';
+import GyroidsPage from './pages/GyroidsPage';
 
 
 //expo build:android -t app-bundle
@@ -221,6 +223,7 @@ class App extends Component {
     this.eventSections = await this.loadSections("EventSections", defaultEventSections);
     
     this.sideMenuSections = await this.loadList("SideMenuSections", sideSections, "displayName")
+    this.sideMenuSectionsDisabled = JSON.parse(await getStorage("SideMenuSectionsDisabled","[]"))
 
     if(this.mounted){
       this.setState({
@@ -400,6 +403,10 @@ class App extends Component {
         currentPageView = <BackupPage/>
       } else if (this.state.currentPage===31){
         currentPageView = <TVGuidePage/>
+      } else if (this.state.currentPage===32){
+        currentPageView = <OrdinancePage/>
+      } else if (this.state.currentPage===33){
+        currentPageView = <GyroidsPage/>
       } else {
         currentPageView = <Text>Default</Text>
       }
@@ -407,7 +414,7 @@ class App extends Component {
       
       return (
         <>  
-          <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage} sideMenuSections={this.sideMenuSections}>
+          <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage} sideMenuSections={this.sideMenuSections} sideMenuSectionsDisabled={this.sideMenuSectionsDisabled}>
             <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
             <PopupRating numLogins={this.numLogins}/>
             {/* <PopupTip numLogins={this.numLogins} tipDismissed={this.tipDismissed}/> */}

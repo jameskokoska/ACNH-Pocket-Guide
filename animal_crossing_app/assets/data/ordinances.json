@@ -1,0 +1,22 @@
+[
+  {
+    "title":"Beautiful Island",
+    "image":"flowerIcon.png",
+    "description":"Coming soon"
+  },
+  {
+    "title":"Early Bird",
+    "image":"alarmClock.png",
+    "description":"Coming soon"
+  },
+  {
+    "title":"Night Owl",
+    "image":"fullmoon.png",
+    "description":"Coming soon"
+  },
+  {
+    "title":"Bell Boom",
+    "image":"bellBag.png",
+    "description":"Coming soon"
+  }
+]

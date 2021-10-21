@@ -145,7 +145,8 @@ filters = [
             "HHA Concept 2",
             "HHA Series",
             "HHA Set",
-            "HHA Category"
+            "HHA Category",
+            "Version Added"
         ]
     ]
 ]

@@ -4,6 +4,18 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
+-Changed the way the sidebar preferences are saved
+-Sorry this update reset your preferences!
+
+-Added Game Version added filter for [Everything] page
+-Can use back button to close slide in popups
+-Updated game data
+-Can check off flowers from flower guide
+-Added revealed Amiibo cards (series 5)
+-Added Gyroids page and Ordinance page (In preparation for update)
+-Added more translations
+-Can search a '-' (dash) with a space in the search bar
+-
 -Added more player icons for profile
 -
 -Added Portuguese language translations (no items)

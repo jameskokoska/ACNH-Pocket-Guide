@@ -250,7 +250,7 @@ export function collectionListSave(){
 }
 
 export function removeAccents(text){
-  return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+  return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace("-"," ")
 }
 
 export function capitalize(name) {
@@ -297,6 +297,7 @@ export async function loadGlobalData(){
     [require("./assets/data/Amiibo Data/Series 2.json"),"Series 2"],
     [require("./assets/data/Amiibo Data/Series 3.json"),"Series 3"],
     [require("./assets/data/Amiibo Data/Series 4.json"),"Series 4"],
+    [require("./assets/data/Amiibo Data/Series 5.json"),"Series 5"],
     [require("./assets/data/Amiibo Data/Promos.json"),"Promos"],
     [require("./assets/data/Amiibo Data/Welcome amiibo series.json"),"Welcome Amiibo Series"],
     [require("./assets/data/Amiibo Data/Sanrio series.json"),"Sanrio Series"],
@@ -305,6 +306,7 @@ export async function loadGlobalData(){
     ["amiiboCheckListSeries2","Name"],
     ["amiiboCheckListSeries3","Name"],
     ["amiiboCheckListSeries4","Name"],
+    ["amiiboCheckListSeries5","Name"],
     ["amiiboCheckListPromos","Name"],
     ["amiiboCheckListSeriesWelcomeamiiboseries","Name"],
     ["amiiboCheckListSeriesSanrioseries","Name"],
@@ -1271,4 +1273,26 @@ export function allVariationsChecked(item, index){
     return howManyVariations/variations.length===1 || howManyVariations<1 ? true: false;
   }
   return true;
+}
+
+export function getFlowerChecklistKey(flowerName){
+  let flowerStripped = flowerName;
+  flowerStripped = flowerStripped.replace("roses", "rose");
+  flowerStripped = flowerStripped.replace("pansies", "pansy");
+  flowerStripped = flowerStripped.replace("windflowers", "windflower");
+  flowerStripped = flowerStripped.replace("hyacinths", "hyacinth");
+  flowerStripped = flowerStripped.replace("lilies", "lily");
+  flowerStripped = flowerStripped.replace("cosmos", "cosmos");
+  flowerStripped = flowerStripped.replace("mums", "mum");
+  flowerStripped = flowerStripped.replace("tulips", "tulip");
+  flowerStripped = flowerStripped.replace(" ","-")
+  flowerStripped = flowerStripped + " Plant"
+  for(let dataSet = 0; dataSet < global.dataLoadedMaterials.length; dataSet++){
+    for(let i = 0; i < global.dataLoadedMaterials[dataSet].length; i++){
+      if(global.dataLoadedMaterials[dataSet][i]["Name"].toLowerCase()===flowerStripped.toLowerCase()){
+        return global.dataLoadedMaterials[dataSet][i]["checkListKey"]
+      }
+    }
+  }
+  return "s";
 }

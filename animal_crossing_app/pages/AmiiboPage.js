@@ -5,14 +5,13 @@ import colors from '../Colors.js';
 
 export default class AmiiboPage extends Component {
   render(){
-    console.log(global.dataLoadedAmiibo)
     return(
       <ListPage 
         disablePopup={[true, true, true, true, true, true, true]}
         title="Amiibo Cards"
-        imageProperty={["image","image","image","image","image","image","image"]}
-        textProperty={["NameLanguage","NameLanguage","NameLanguage","NameLanguage","NameLanguage","NameLanguage","NameLanguage"]}
-        searchKey={[["NameLanguage"],["NameLanguage"],["NameLanguage"],["NameLanguage"],["NameLanguage"],["NameLanguage"],["NameLanguage"],]}
+        imageProperty={["image","image","image","image","image","image","image","image"]}
+        textProperty={["NameLanguage","NameLanguage","NameLanguage","NameLanguage","NameLanguage","NameLanguage","NameLanguage","NameLanguage"]}
+        searchKey={[["NameLanguage"],["NameLanguage"],["NameLanguage"],["NameLanguage"],["NameLanguage"],["NameLanguage"],["NameLanguage"],["NameLanguage"]]}
         gridType="smallGrid" //smallGrid, largeGrid, row
         dataGlobalName={"dataLoadedAmiibo"}
         appBarColor={colors.amiiboAppBar[global.darkMode]}

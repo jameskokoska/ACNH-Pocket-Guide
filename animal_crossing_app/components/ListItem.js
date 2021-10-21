@@ -11,7 +11,7 @@ import TextFont from './TextFont';
 import Check from './Check';
 import FastImage from './FastImage';
 import {checkOff, capitalize, commas, removeBrackets} from "../LoadJsonData"
-import {getPhotoShadow} from "./GetPhoto"
+import {getPhoto, getPhotoShadow} from "./GetPhoto"
 import {getMonthShort} from "./DateFunctions"
 import colors from "../Colors"
 import {getCurrentDateObject, parseActiveTime} from "./DateFunctions"
@@ -206,13 +206,16 @@ class ListItem extends React.Component{
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
               {this.state.wishlist? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
-              <FastImage
-                style={styles.gridBoxImage}
-                source={{
-                  uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
-                }}
-                cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
-              />
+              {this.props.item[this.props.imageProperty[this.props.item.dataSet]].startsWith("http") ? 
+                <FastImage
+                  style={styles.gridBoxImage}
+                  source={{
+                    uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
+                  }}
+                  cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
+                />:
+                <Image style={styles.gridBoxImage} source={getPhoto(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toLowerCase())}/>
+              }
               <View style={styles.gridBoxText}>
                 <TextFont translate={false} numberOfLines={2} bold={true} style={{textAlign:'center', color:this.props.labelColor, fontSize:13}}>{capitalize(label)}</TextFont>
                 {textProperty2Component}

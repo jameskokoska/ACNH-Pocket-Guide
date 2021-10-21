@@ -3,6 +3,8 @@ import {Image, Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, Vie
 import TextFont from './TextFont'
 import colors from "../Colors"
 import {getMaterialImage} from "./GetPhoto"
+import { checkOff, getFlowerChecklistKey, inChecklist } from '../LoadJsonData';
+import Check from './Check';
 
 class FlowerContainer extends Component {
   render(){
@@ -36,25 +38,33 @@ class FlowerContainer extends Component {
     } else {
       imagePathSpecial3 = <View/>
     }
-    
     return(<View style={[styles.container,{backgroundColor:colors.white[global.darkMode]}]}>
           <View>
+            <TouchableOpacity style={{position:"absolute", zIndex:5, top:-5, left:-5}} onPress={()=>{checkOff(this.props.parent1CheckListKey, inChecklist(this.props.parent1CheckListKey)); this.props.refresh();}}>
+              <Check play={this.props.currentCheckedFlowers.includes(this.props.parent1CheckListKey)} width={45} height={45}/>
+            </TouchableOpacity>
             <Image style={styles.flowerImage} source={{uri:getMaterialImage(this.props.flowerInfo.parent1)}}/>
             {imagePathSpecial1}
           </View>
           <TextFont bold={true} style={{fontSize: 25, color:colors.textBlack[global.darkMode]}}>+</TextFont>
             <View>
-            <Image style={styles.flowerImage} source={{uri:getMaterialImage(this.props.flowerInfo.parent2)}}/>
-            {imagePathSpecial2}
+              <TouchableOpacity style={{position:"absolute", zIndex:5, top:-5, left:-5}} onPress={()=>{checkOff(this.props.parent2CheckListKey, inChecklist(this.props.parent2CheckListKey)); this.props.refresh();}}>
+                <Check play={this.props.currentCheckedFlowers.includes(this.props.parent2CheckListKey)} width={45} height={45}/>
+              </TouchableOpacity>
+              <Image style={styles.flowerImage} source={{uri:getMaterialImage(this.props.flowerInfo.parent2)}}/>
+              {imagePathSpecial2}
             </View>
           <View>
           <TextFont bold={true} style={{paddingTop: 20, textAlign:"center",fontSize: 25, color:colors.textBlack[global.darkMode]}}>=</TextFont>
           <TextFont bold={true} style={{textAlign:"center",fontSize: 16, color:colors.textBlack[global.darkMode]}}>{this.props.flowerInfo.percentage+"%"}</TextFont>
           </View>
-            <View>
+          <View>
+            <TouchableOpacity style={{position:"absolute", zIndex:5, top:-5, left:-5}} onPress={()=>{checkOff(this.props.childCheckListKey, inChecklist(this.props.childCheckListKey)); this.props.refresh();}}>
+              <Check play={this.props.currentCheckedFlowers.includes(this.props.childCheckListKey)} width={45} height={45}/>
+            </TouchableOpacity>
             <Image style={styles.flowerImage} source={{uri:getMaterialImage(this.props.flowerInfo.child)}}/>
             {imagePathSpecial3}
-            </View>
+          </View>
         </View>
     )
   }

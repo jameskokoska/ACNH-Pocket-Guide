@@ -694,6 +694,17 @@ function ListPage(props){
         <HeaderLoading disableSearch={props.disableSearch} title={props.title} headerHeight={headerHeight} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
       </>
     )
+  } else if(props.comingSoon){
+    return(<>
+      <View style={{height:10}}/>
+      {header}
+      <PopupFilter villagerGifts={props.villagerGifts} disableFilters={props.disableFilters} title={props.title} ref={popupFilter} filterSearchable={props.filterSearchable} updateSearchFilters={updateSearchFilters}/> 
+      <View style={{height:Dimensions.get('window').height/2}}/>
+      <TextFont bold={false} style={{fontSize: 16, textAlign:"center"}}>Coming soon</TextFont>
+      <TextFont bold={false} style={{fontSize: 16, textAlign:"center"}}>Please be patient</TextFont>
+      <View style={{height:30}}/>
+      </>
+    )
   } else if (searchFilters!=undefined && searchFilters.length===0 && data.length===0 && props.wishlistItems && search==="" && !global.collectionList.includes("wishlist")){
     return(<>
       <View style={{height:10}}/>

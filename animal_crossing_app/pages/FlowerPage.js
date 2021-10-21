@@ -5,7 +5,7 @@ import ListPage from '../components/ListPage';
 import colors from '../Colors.js';
 import FlowerContainer from '../components/FlowerContainer'
 import TextFont from '../components/TextFont'
-import {capitalize} from "../LoadJsonData"
+import {capitalize, getFlowerChecklistKey, inChecklist} from "../LoadJsonData"
 import {getSettingsString, attemptToTranslate} from "../LoadJsonData";
 import {SubHeader, Paragraph} from "../components/Formattings"
 import GuideRedirectButton from "../components/PopupGuideRedirectButton"
@@ -29,6 +29,33 @@ const renderTabBar = props => (
 );
 
 class SpecificFlowerPage extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state={currentCheckedFlowers:[]}
+    
+  }
+
+  componentDidMount(){
+    this.setCurrentlyCheckedFlowers()
+  }
+
+  setCurrentlyCheckedFlowers = () => {
+    let currentCheck = []
+    for(let i = 0; i < this.props.loadedData[this.props.flowerGroup].length; i++){
+      if(inChecklist(this.props.loadedData[this.props.flowerGroup][i].parent1CheckListKey)){
+        currentCheck.push(this.props.loadedData[this.props.flowerGroup][i].parent1CheckListKey)
+      }
+      if(inChecklist(this.props.loadedData[this.props.flowerGroup][i].parent2CheckListKey)){
+        currentCheck.push(this.props.loadedData[this.props.flowerGroup][i].parent2CheckListKey)
+      }
+      if(inChecklist(this.props.loadedData[this.props.flowerGroup][i].childCheckListKey)){
+        currentCheck.push(this.props.loadedData[this.props.flowerGroup][i].childCheckListKey)
+      }
+    }
+    this.setState({currentCheckedFlowers: currentCheck})
+  }
+
   render(){
     var data = require("../assets/data/flowers.json");
     const extraInfo= {
@@ -38,7 +65,7 @@ class SpecificFlowerPage extends Component {
       linkText: "Tap here to read more about flowers and breeding",
       redirectPassBack: "flowersRedirect"
     }
-    
+
     return(<ScrollView>
       <GuideRedirectButton icon={"i"} style={{position:"absolute", padding:15, right:0}} extraInfo={extraInfo} setPage={this.props.setPage}/>
 
@@ -48,7 +75,11 @@ class SpecificFlowerPage extends Component {
       <View style={{marginTop: 10}}/>
       {
         data[this.props.flowerGroup].map(flower=> (
-          <FlowerContainer flowerInfo={flower} key={flower.parent1+flower.paren2+flower.child+flower.percentage+flower.parent1Special}/>
+          <FlowerContainer 
+            childCheckListKey = {getFlowerChecklistKey(flower.child)}
+            parent1CheckListKey = {getFlowerChecklistKey(flower.parent1)}
+            parent2CheckListKey = {getFlowerChecklistKey(flower.parent2)}
+            refresh={this.setCurrentlyCheckedFlowers} currentCheckedFlowers={this.state.currentCheckedFlowers} flowerInfo={flower} key={flower.parent1+flower.paren2+flower.child+flower.percentage+flower.parent1Special}/>
         ))
       }
       <View style={{marginTop: 100}}/>
@@ -61,6 +92,7 @@ class SpecificFlowerPage extends Component {
 class FlowerPage extends Component {
   constructor() {
     super();
+    this.loadedData = this.loadCheckListKey();
     this.state = {
       index: 0,
       routes: [
@@ -76,36 +108,55 @@ class FlowerPage extends Component {
     }
   }
 
+  loadCheckListKey = () => {
+    let data = require("../assets/data/flowers.json");
+    let currentData = {}
+    let dataKeys = Object.keys(data)
+    for(let i = 0; i < dataKeys.length; i++){
+      let currentDataAtKey = []
+      for(let j = 0; j < data[dataKeys[i]].length; j++){
+        let currentObject = data[dataKeys[i]][j]
+        currentObject["childCheckListKey"] = getFlowerChecklistKey(data[dataKeys[i]][j].child)
+        currentObject["parent1CheckListKey"] = getFlowerChecklistKey(data[dataKeys[i]][j].parent1)
+        currentObject["parent2CheckListKey"] = getFlowerChecklistKey(data[dataKeys[i]][j].parent2)
+        currentDataAtKey.push(currentObject)
+      }
+      currentData[dataKeys[i]] = currentDataAtKey
+    }
+    return currentData
+  }
+
   
   RosesRoute = () => (
-    <SpecificFlowerPage flowerGroup={"roses"} setPage={this.props.setPage}/>
+    <SpecificFlowerPage loadedData={this.loadedData} flowerGroup={"roses"} setPage={this.props.setPage}/>
   )
 
   PansiesRoute = () => (
-    <SpecificFlowerPage flowerGroup={"pansies"} setPage={this.props.setPage}/>
+    <SpecificFlowerPage loadedData={this.loadedData} flowerGroup={"pansies"} setPage={this.props.setPage}/>
   )
 
   WindflowersRoute = () => (
-    <SpecificFlowerPage flowerGroup={"windflowers"} setPage={this.props.setPage}/>
+    <SpecificFlowerPage loadedData={this.loadedData} flowerGroup={"windflowers"} setPage={this.props.setPage}/>
   )
 
   HyacinthsRoute = () => (
-    <SpecificFlowerPage flowerGroup={"hyacinths"} setPage={this.props.setPage}/>
+    <SpecificFlowerPage loadedData={this.loadedData} flowerGroup={"hyacinths"} setPage={this.props.setPage}/>
   )
 
   LiliesRoute = () => (
-    <SpecificFlowerPage flowerGroup={"lilies"} setPage={this.props.setPage}/>
+    <SpecificFlowerPage loadedData={this.loadedData} flowerGroup={"lilies"} setPage={this.props.setPage}/>
   )
 
   CosmosRoute = () => (
-    <SpecificFlowerPage flowerGroup={"cosmos"} setPage={this.props.setPage}/>
+    <SpecificFlowerPage loadedData={this.loadedData} flowerGroup={"cosmos"} setPage={this.props.setPage}/>
   )
 
   MumsRoute = () => (
-    <SpecificFlowerPage flowerGroup={"mums"} setPage={this.props.setPage}/>
+    <SpecificFlowerPage loadedData={this.loadedData} flowerGroup={"mums"} setPage={this.props.setPage}/>
   )
+
   TulipsRoute = () => (
-    <SpecificFlowerPage flowerGroup={"tulips"} setPage={this.props.setPage}/>
+    <SpecificFlowerPage loadedData={this.loadedData} flowerGroup={"tulips"} setPage={this.props.setPage}/>
   )
 
   renderScene = SceneMap({

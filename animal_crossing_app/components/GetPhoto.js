@@ -36,6 +36,74 @@ export function getSizeImage(size){
 
 export function getPhoto(name, fallback=""){
   switch(name){
+    case "series5(1).jpg":
+      return require("../assets/icons/amiibo/Series5(1).jpg")
+    case "series5(2).jpg":
+      return require("../assets/icons/amiibo/Series5(2).jpg")
+    case "series5(3).jpg":
+      return require("../assets/icons/amiibo/Series5(3).jpg")
+    case "series5(4).jpg":
+      return require("../assets/icons/amiibo/Series5(4).jpg")
+    case "series5(5).jpg":
+      return require("../assets/icons/amiibo/Series5(5).jpg")
+    case "series5(6).jpg":
+      return require("../assets/icons/amiibo/Series5(6).jpg")
+    case "series5(7).jpg":
+      return require("../assets/icons/amiibo/Series5(7).jpg")
+    case "series5(8).jpg":
+      return require("../assets/icons/amiibo/Series5(8).jpg")
+    case "series5(9).jpg":
+      return require("../assets/icons/amiibo/Series5(9).jpg")
+    case "series5(10).jpg":
+      return require("../assets/icons/amiibo/Series5(10).jpg")
+    case "series5(11).jpg":
+      return require("../assets/icons/amiibo/Series5(11).jpg")
+    case "series5(12).jpg":
+      return require("../assets/icons/amiibo/Series5(12).jpg")
+    case "series5(13).jpg":
+      return require("../assets/icons/amiibo/Series5(13).jpg")
+    case "series5(14).jpg":
+      return require("../assets/icons/amiibo/Series5(14).jpg")
+    case "series5(15).jpg":
+      return require("../assets/icons/amiibo/Series5(15).jpg")
+    case "series5(16).jpg":
+      return require("../assets/icons/amiibo/Series5(16).jpg")
+    case "series5(17).jpg":
+      return require("../assets/icons/amiibo/Series5(17).jpg")
+    case "series5(18).jpg":
+      return require("../assets/icons/amiibo/Series5(18).jpg")
+    case "series5(19).jpg":
+      return require("../assets/icons/amiibo/Series5(19).jpg")
+    case "series5(20).jpg":
+      return require("../assets/icons/amiibo/Series5(20).jpg")
+    case "series5(21).jpg":
+      return require("../assets/icons/amiibo/Series5(21).jpg")
+    case "series5(22).jpg":
+      return require("../assets/icons/amiibo/Series5(22).jpg")
+    case "series5(23).jpg":
+      return require("../assets/icons/amiibo/Series5(23).jpg")
+    case "series5(24).jpg":
+      return require("../assets/icons/amiibo/Series5(24).jpg")
+    case "series5(25).jpg":
+      return require("../assets/icons/amiibo/Series5(25).jpg")
+    case "series5(26).jpg":
+      return require("../assets/icons/amiibo/Series5(26).jpg")
+    case "series5(27).jpg":
+      return require("../assets/icons/amiibo/Series5(27).jpg")
+    case "series5(28).jpg":
+      return require("../assets/icons/amiibo/Series5(28).jpg")
+    case "series5(29).jpg":
+      return require("../assets/icons/amiibo/Series5(29).jpg")
+    case "series5(30).jpg":
+      return require("../assets/icons/amiibo/Series5(30).jpg")
+    case "series5(31).jpg":
+      return require("../assets/icons/amiibo/Series5(31).jpg")
+    case "series5(32).jpg":
+      return require("../assets/icons/amiibo/Series5(32).jpg")
+    case "series5(33).jpg":
+      return require("../assets/icons/amiibo/Series5(33).jpg")
+    case "series5(34).jpg":
+      return require("../assets/icons/amiibo/Series5(34).jpg")
     case "leaf.png":
       return require("../assets/icons/leaf.png");
     case "villager.png":
@@ -148,6 +216,8 @@ export function getPhoto(name, fallback=""){
       return require("../assets/icons/hourglass.png");
     case "weather.png":
       return require("../assets/icons/weather.png");
+    case "alarmClock.png":
+      return require("../assets/icons/alarmClock.png");
   }
   if(name.includes("bamboo")){
     return require("../assets/icons/bamboo.png");
