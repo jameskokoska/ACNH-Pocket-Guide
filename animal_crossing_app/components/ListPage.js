@@ -700,8 +700,8 @@ function ListPage(props){
       {header}
       <PopupFilter villagerGifts={props.villagerGifts} disableFilters={props.disableFilters} title={props.title} ref={popupFilter} filterSearchable={props.filterSearchable} updateSearchFilters={updateSearchFilters}/> 
       <View style={{height:Dimensions.get('window').height/2}}/>
-      <TextFont bold={false} style={{fontSize: 16, textAlign:"center"}}>Coming soon</TextFont>
-      <TextFont bold={false} style={{fontSize: 16, textAlign:"center"}}>Please be patient</TextFont>
+      <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Coming soon</TextFont>
+      <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Please be patient</TextFont>
       <View style={{height:30}}/>
       </>
     )
