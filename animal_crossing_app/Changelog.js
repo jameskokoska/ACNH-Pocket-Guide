@@ -9,6 +9,7 @@ export const changelog = `
 
 -Added Game Version added filter for [Everything] page
 -Can use back button to close slide in popups
+-Added crack and glowing hole To-Do icons
 -Updated game data
 -Can check off flowers from flower guide
 -Added revealed Amiibo cards (series 5)

@@ -30,6 +30,8 @@ export const taskImages = [
       "turnip.png",
       "cat.png",
       "digIcon.png",
+      "crack.png",
+      "glowingHole.png",
       "able.png",
       "nook.png",
       "crafting.png",

@@ -106,6 +106,10 @@ export function getPhoto(name, fallback=""){
       return require("../assets/icons/amiibo/Series5(34).jpg")
     case "leaf.png":
       return require("../assets/icons/leaf.png");
+    case "glowingHole.png":
+      return require("../assets/icons/glowingHole.png");
+    case "crack.png":
+      return require("../assets/icons/crack.png");
     case "villager.png":
       return require("../assets/icons/villager.png");
     case "villager2.png":
