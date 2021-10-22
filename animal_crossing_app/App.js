@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Vibration, BackHandler, Dimensions, Text, View, StatusBar} from 'react-native';
+import {Vibration, BackHandler, Dimensions, Text, View, StatusBar, ToastAndroid} from 'react-native';
 import FAB from './components/FAB';
 import CalendarPage from './pages/CalendarPage';
 import SongsPage from './pages/SongsPage';
@@ -45,7 +45,7 @@ import BackupPage from "./pages/BackupPage"
 import TVGuidePage from './pages/TVGuidePage';
 import OrdinancePage from './pages/OrdinancePage';
 import GyroidsPage from './pages/GyroidsPage';
-
+import { autoBackup } from './components/FirebaseBackup';
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -231,7 +231,12 @@ class App extends Component {
         loaded:true,
       });
     }
+    if(getSettingsString("settingsAutoBackup")==="true"){
+      this.startAutoBackup();
+    }
     }, 10);
+
+    
   }
 
   componentWillUnmount() {
@@ -283,6 +288,12 @@ class App extends Component {
       this.openDrawer(false);
     }
     return true;
+  }
+
+  startAutoBackup = async () => {
+    let result = await autoBackup();
+    console.log(result)
+    ToastAndroid.show(result, ToastAndroid.LONG);
   }
 
   openDrawer(vibrate=true) {
@@ -410,7 +421,6 @@ class App extends Component {
       } else {
         currentPageView = <Text>Default</Text>
       }
-      
       
       return (
         <>  

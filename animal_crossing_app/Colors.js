@@ -21,6 +21,7 @@ const colors = {
     filterSearch : ["#bcbfc2","#A3A3A3"],
     textBlack : ["#373737","#f2f2f2"],
     textWhite : ["#FFFFFF","#373737"],
+    textError : ["#D87474","#E2B8B8"],
     textWhiteOnly : ["#FFFFFF","#FFFFFF"],
     textLight : ["#a8a8a8","#8c8c8c"],
     white : ["#FFFFFF","#2B2B2B"],

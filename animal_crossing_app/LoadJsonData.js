@@ -519,6 +519,14 @@ export const settings = [
     "description" : "Set your hemisphere, north or south. This will change the data displayed for creatures and events.",
   },
   {
+    "keyName" : "settingsAutoBackup",
+    "defaultValue" : "false",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/fileBackup.png"),
+    "displayName" : "Auto Backups",
+    "description" : "Once your credentials are remembered on the backup page, automatic backups will occur every time you open the application and are connected to the internet.",
+  },
+  {
     "keyName" : "settingsSortAlphabetically",
     "defaultValue" : "true",
     "currentValue" : "",

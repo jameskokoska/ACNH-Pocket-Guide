@@ -58,7 +58,7 @@ class LoadFile extends Component {
   }
 }
 
-async function importAllData(text){
+export async function importAllData(text){
   var totalImport = text.split("\n");
   var totalAchievements = [];
   var currentProfile = ""
@@ -116,7 +116,7 @@ async function importAllData(text){
   return totalImport.length
 }
 
-async function getAllData(){
+export async function getAllData(){
   var dataTotal = "---ACNH Pocket Guide Backup---\n"
   for(var i = 0; i<profileNames.length; i++){
     var profile = profileNames[i]

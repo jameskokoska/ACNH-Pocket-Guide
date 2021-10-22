@@ -4,9 +4,12 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
+-Added cloud backups
+-Added auto backups (can be enabled in settings)
+-Auto backups will backup every time you open the app!
+-
 -Changed the way the sidebar preferences are saved
 -Sorry this update reset your preferences!
-
 -Added Game Version added filter for [Everything] page
 -Can use back button to close slide in popups
 -Added crack and glowing hole To-Do icons

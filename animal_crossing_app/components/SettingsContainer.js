@@ -44,6 +44,10 @@ class SettingsContainer extends Component {
                   cancelAllPushNotifications();
                   this.props.popupLoadNotifications();
                 }
+                if(this.props.keyName==="settingsAutoBackup" && this.state.toggle === true){
+                  cancelAllPushNotifications();
+                  this.props.popupAutoBackups();
+                }
                 if(this.props.keyName==="settingsNotifications" && this.state.toggle === false){
                   cancelAllPushNotifications();
                 }

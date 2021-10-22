@@ -19,6 +19,7 @@
     "expo-localization": "~10.1.0",
     "expo-media-library": "~12.0.2",
     "expo-notifications": "~0.11.5",
+    "firebase": "8.2.3",
     "lottie-react-native": "3.5.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",

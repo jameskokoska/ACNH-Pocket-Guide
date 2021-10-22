@@ -60,6 +60,7 @@ class SettingsPage extends Component {
                   setting={setting}
                   deleteSavedPhotos={this.deleteSavedPhotos}
                   popupLoadNotifications={()=>{this.popupLoadNotifications.setPopupVisible(true)}}
+                  popupAutoBackups={()=>{this.popupAutoBackups.setPopupVisible(true)}}
                 />
               } else {
                 return <SettingsDivider
@@ -71,7 +72,9 @@ class SettingsPage extends Component {
               
             }
           )}
-          <Popup ref={(popupLoadNotifications) => this.popupLoadNotifications = popupLoadNotifications} text="Notifications" textLower="You can select event notifications under the [Edit Events] of the [Events] section on the homepage." button1={"OK"} button1Action={()=>{this.props.setPage(0)}}/>
+          <Popup ref={(popupLoadNotifications) => this.popupLoadNotifications = popupLoadNotifications} text="Notifications" textLower="You can select event notifications under the [Edit Events] of the [Events] section on the homepage." button1={"Go to page"} button1Action={()=>{this.props.setPage(0)}} button2={"OK"} button2Action={()=>{}}/>
+          <Popup ref={(popupAutoBackups) => this.popupAutoBackups = popupAutoBackups} text="Auto Backups" textLower="Make sure your credentials and account is setup on the Backup and Restore page." button1={"Go to page"} button1Action={()=>{this.props.setPage(30)}} button2={"OK"} button2Action={()=>{}}/>
+
           <CustomDatePicker showPopup={true} setDateOffset={this.setDateOffset}/>
           {/* <View style={{height: 50}}/>
           <SettingsDivider text="Data backup" margin="small"/>

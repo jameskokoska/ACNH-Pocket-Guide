@@ -1,15 +1,14 @@
 import React, {Component} from 'react';
 import {ScrollView, View,} from 'react-native';
-import {SubHeader, Paragraph, HeaderNote, MailLink, Header, BlueText} from "../components/Formattings"
+import FirebaseBackup from '../components/firebaseBackup';
+import {SubHeader, HeaderNote, MailLink, Header} from "../components/Formattings"
 import {ExportFile, LoadFile, ExportClipboard, LoadClipboard} from '../components/LoadFile';
 
 class BackupPage extends Component {
   constructor(props) {
     super(props);
-   
   }
 
- 
   render(){
     return(
       <>
@@ -17,9 +16,14 @@ class BackupPage extends Component {
           <View style={{marginTop: 100}}/>
           <Header>Manage Data</Header>
           <HeaderNote>It is always good to keep periodic backups of your data!</HeaderNote>
-          <View style={{height: 75}}/>
-          <SubHeader>Files</SubHeader>
+          <View style={{height: 55}}/>
+          <SubHeader>Cloud Backup</SubHeader>
           <HeaderNote>(Recommended)</HeaderNote>
+          <HeaderNote>You can turn on auto data backup in the Settings.</HeaderNote>
+          <View style={{height: 15}}/>
+          <FirebaseBackup/>
+          <View style={{height: 35}}/>
+          <SubHeader>Files</SubHeader>
           <View style={{paddingHorizontal:40}}>
             <ExportFile/>
             <LoadFile/>
