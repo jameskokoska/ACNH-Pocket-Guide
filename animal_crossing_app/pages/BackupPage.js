@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {ScrollView, View,} from 'react-native';
-import FirebaseBackup from '../components/firebaseBackup';
+import FirebaseBackup from '../components/FirebaseBackup';
 import {SubHeader, HeaderNote, MailLink, Header} from "../components/Formattings"
 import {ExportFile, LoadFile, ExportClipboard, LoadClipboard} from '../components/LoadFile';
 

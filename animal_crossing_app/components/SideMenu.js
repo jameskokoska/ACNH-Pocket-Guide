@@ -70,6 +70,13 @@ export default class SideMenu extends Component {
   saveDisabledSections = async(data) => {
     await AsyncStorage.setItem("SideMenuSectionsDisabled", JSON.stringify(data));
   }
+  getSectionPictureFix(displayName){
+    for(let i = 0; i<sideSections.length; i++){
+      if(sideSections[i]["displayName"]===displayName){
+        return sideSections[i]["picture"]
+      }
+    }
+  }
   nonTabbedPages = [0];
   renderDrawer = () => {
     return (
@@ -92,7 +99,7 @@ export default class SideMenu extends Component {
                 let disabled = this.state.sideMenuSectionsDisabled.includes(section["displayName"])
                 return <SidebarElement 
                   key={section["pageNum"].toString()+index.toString()}
-                  image={section.picture} 
+                  image={this.getSectionPictureFix(section.displayName)} 
                   title={section.displayName}
                   pageNum={section.pageNum} 
                   setPage={this.props.setPage} 
