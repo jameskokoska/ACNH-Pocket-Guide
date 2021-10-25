@@ -63,6 +63,7 @@ export async function importAllData(text){
   var totalAchievements = [];
   var currentProfile = ""
   var currentCollectionList = (await getStorage("collectedString"+currentProfile,"")).split("\n");
+  var currentAchievementsList = JSON.parse(await getStorage("Achievements"+profile,"[]"));
 
   for(var i = 0; i<totalImport.length; i++){
     if(totalImport[i].includes("{") && totalImport[i].includes("}")){
@@ -73,6 +74,7 @@ export async function importAllData(text){
       }else if(key[1]==="Profile"){
         currentProfile = importEntry
         currentCollectionList = (await getStorage("collectedString"+currentProfile,"")).split("\n");
+        currentAchievementsList = JSON.parse(await getStorage("Achievements"+profile,"[]"));
       } else if(key[1]==="Achievements"){
         totalAchievements.push(importEntry);
       } else {
@@ -103,13 +105,14 @@ export async function importAllData(text){
       }
     }
     if(totalImport[i]==="---END---" || i+1===totalImport.length){
-      await AsyncStorage.setItem("Achievements"+currentProfile, JSON.stringify(totalAchievements));
+      await AsyncStorage.setItem("Achievements"+currentProfile, JSON.stringify([...new Set([...totalAchievements,...currentAchievementsList])]));
       var outputString = "";
       for(var x = 0; x<currentCollectionList.length; x++){
         outputString += currentCollectionList[x];
         outputString += "\n";
       }
       await AsyncStorage.setItem("collectedString"+currentProfile, outputString);
+      totalAchievements = []
     }
   }
   global.collectionList = (await getStorage("collectedString"+global.profile,"")).split("\n");
@@ -121,7 +124,10 @@ export async function getAllData(){
   for(var i = 0; i<profileNames.length; i++){
     var profile = profileNames[i]
     var data = await getStorage("collectedString"+profile,"");
-    var data2 = "\n{Achievements}" + JSON.parse(await getStorage("Achievements"+profile,"[]")).join("\n{Achievements}");
+    var data2 = "\n{Achievements}" + [...new Set(JSON.parse(await getStorage("Achievements"+profile,"[]")))].join("\n{Achievements}");
+    // data2 = uniq = [...new Set(data2)]
+    console.log("Achievements"+profile)
+    console.log(await getStorage("Achievements"+profile,"[]"))
     var data3 = "\n{name}" + (await getStorage("name"+profile,""))
     var data4 = "\n{islandName}" + (await getStorage("islandName"+profile,""))
     var data5 = "\n{dreamAddress}" + (await getStorage("dreamAddress"+profile,""))
@@ -131,7 +137,7 @@ export async function getAllData(){
     dataTotal = dataTotal + "{Profile}"+profile +"\n" + data + data2 + data3 + data4 + data5 + data6 + data7 + data8 + "\n" + "---END---" + "\n"
   }
   console.log(dataTotal.replace(/^\s*\n/gm, ""))
-  return dataTotal.replace(/^\s*\n/gm, "") 
+  return dataTotal.replace(/^\s*\n/gm, "")
 }
 
 class LoadClipboard extends Component {

@@ -17,6 +17,7 @@ import colors from "../Colors";
 import BottomSheet from 'reanimated-bottom-sheet';
 import Animated from 'react-native-reanimated';
 import FadeInOut from "./FadeInOut"
+import { MailLink } from "./Formattings";
 
 // <Popup 
 //  button1={"OK"} 
@@ -39,7 +40,10 @@ class Popup extends Component {
     
   }
   componentDidMount() { 
-    this.mounted=true;   
+    this.mounted=true;
+    if(this.props.popupVisible){
+      this.setPopupVisible(true)
+    }
     if(this.props.button1!==undefined){
       this.Button1 = <ButtonComponent
         text={this.props.button1}
@@ -75,7 +79,6 @@ class Popup extends Component {
   setPopupVisible = (visible) => {
     if(this.mounted){
       this.setState({popupVisible:visible});
-
     }
   }
 
@@ -95,6 +98,7 @@ class Popup extends Component {
             <ScrollView style={{maxHeight:Dimensions.get('window').height*0.75}}>
               <TextFont bold={false} style={{fontSize: 18, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.props.textLower}</TextFont>
             </ScrollView>
+            {this.props.mailLink?<View style={{marginVertical:10}}><MailLink/></View>:<View/>}
             <View style={{flexDirection:"row", justifyContent:"center"}}>
               {this.Button2}
               {this.Button1}

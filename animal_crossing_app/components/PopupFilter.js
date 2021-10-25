@@ -49,7 +49,7 @@ class PopupFilter extends Component {
       "name": "Villagers",
       "id": "VillagerFilters",
       "children": [
-        {name:"Old villager resident", id:"Old Resident"},{name:"Not an old villager resident", id:"Not Old Resident"}
+        {name:"Old villager resident", id:"Old Resident"},{name:"Not an old villager resident", id:"Not Old Resident"},{name:"Have villager photo", id:"Have villager photo"},{name:"Do not have villager photo", id:"Do not have villager photo"}
       ]
     }]
     this.sortByFilters = [

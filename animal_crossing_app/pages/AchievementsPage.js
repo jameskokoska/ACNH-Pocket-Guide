@@ -244,6 +244,7 @@ class AchievementStamp extends Component {
   saveList = async(data) => {
     if(this.mounted)
       await AsyncStorage.setItem("Achievements"+global.profile, JSON.stringify(data));
+    console.log("Achievements"+global.profile)
   }
   render(){
     return (

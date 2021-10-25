@@ -46,6 +46,7 @@ import TVGuidePage from './pages/TVGuidePage';
 import OrdinancePage from './pages/OrdinancePage';
 import GyroidsPage from './pages/GyroidsPage';
 import { autoBackup } from './components/FirebaseBackup';
+import Popup from './components/Popup';
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -153,7 +154,12 @@ class App extends Component {
     const firstLogin = await getStorage("firstLogin","true");
     const numLogins = parseInt(await getStorage("numLogins","0")) + 1;
     // this.tipDismissed = await getStorage("tipDismissed","false");
-    // console.log(numLogins)
+    let backupPopupDismissed = await getStorage("backupPopupDismissed","false");
+    if(backupPopupDismissed==="false" && numLogins >= 15){
+      AsyncStorage.setItem("backupPopupDismissed", "true");
+      this.popupBackupVisible = true
+    }
+    console.log("numlogins:"+numLogins)
     await AsyncStorage.setItem("numLogins", numLogins.toString());
     this.numLogins = numLogins;
     global.profile = await getStorage("selectedProfile","");
@@ -427,6 +433,7 @@ class App extends Component {
           <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage} sideMenuSections={this.sideMenuSections} sideMenuSectionsDisabled={this.sideMenuSectionsDisabled}>
             <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
             <PopupRating numLogins={this.numLogins}/>
+            <Popup mailLink={true} popupVisible={this.popupBackupVisible} text="Data Backup" textLower="You can now backup your data to the cloud and enable auto backups in the settings." button1={"Go to page"} button1Action={()=>{this.setPage(30)}} button2={"Cancel"} button2Action={()=>{}}/>
             {/* <PopupTip numLogins={this.numLogins} tipDismissed={this.tipDismissed}/> */}
             <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
             <StatusBar hidden={getSettingsString("settingsShowStatusBar")==="false"} backgroundColor={colors.background[global.darkMode]} barStyle={global.darkMode===1?"light-content":"dark-content"}/>

@@ -4,6 +4,17 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
+-Added hide spoilers setting
+-Added villager photo checklist tracking (When you've best friended a villager and get their photo)
+-Fixed bug with backups and achievements
+-Achievements are merged with existing when importing
+-Added cloud backup prompt
+-Added privacy policy to About page
+-Fixed colors
+-Fixed hit boxes of checkmarks
+-Removed the ability to enter a space in email
+-Added auto backup switch on manage data page
+-
 -Added cloud backups
 -Added auto backups (can be enabled in settings)
 -Auto backups will backup every time you open the app!

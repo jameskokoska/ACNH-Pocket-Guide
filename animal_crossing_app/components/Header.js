@@ -40,13 +40,13 @@ const Header = (props) => {
         <View style={[styles.topSpace, {height: props.headerHeight / 1.5 + 10,}]}>
         </View>
         <View style={{height: props.headerHeight / 2}}>
-
           <View style={styles.subHeader}>
             <FadeInOut fadeIn={true}>
               <TextFont style={[styles.title, {fontSize: props.smallerHeader?30:41, color: props.titleColor}]} bold={true}>{props.title}</TextFont>
             </FadeInOut>
             {props.customHeader}
             {props.subHeader!==undefined&&props.subHeader!=="" ? <TextFont numberOfLines={4} style={[styles.title, {paddingBottom:5, marginTop: -5, fontSize: 13, color: props.titleColor}]}>{props.subHeader}</TextFont> : <View/>}
+            {getSettingsString("settingsHideImages")==="true"?<TextFont numberOfLines={4} style={[styles.title, {paddingBottom:5, marginTop: -5, fontSize: 13, color: props.titleColor}]}>{"Note: You have images hidden to avoid spoilers. Disable this in the Settings page to view all images."}</TextFont>:<View/>}
             {!props.disableSearch ? <View style={{flexDirection: 'row'}}>
               <View style={[styles.searchBox, {backgroundColor:props.searchBarColor}]}>
                 <DelayInput

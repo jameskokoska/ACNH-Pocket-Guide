@@ -46,6 +46,14 @@ export function inVillager(checkListKeyString, shouldCheck){
   }
 }
 
+export function inVillagerPhoto(checkListKeyString, shouldCheck){
+  if(shouldCheck && global.collectionList.includes("havePhoto"+checkListKeyString)){
+    return true;
+  } else {
+    return false
+  }
+}
+
 const database = require("./assets/data/data.json");
 
 export async function getStorageData(data, checkListKey, defaultValue){
@@ -524,7 +532,7 @@ export const settings = [
     "currentValue" : "",
     "picture" : require("./assets/icons/fileBackup.png"),
     "displayName" : "Auto Backups",
-    "description" : "Once your credentials are remembered on the backup page, automatic backups will occur every time you open the application and are connected to the internet.",
+    "description" : "Once your credentials are remembered on the backup page, automatic backups will occur every time you open the application and are connected to the internet. Auto backups overwrite what is currently backed up in the cloud!",
   },
   {
     "keyName" : "settingsSortAlphabetically",
@@ -533,7 +541,16 @@ export const settings = [
     "picture" : require("./assets/icons/alphabet.png"),
     "displayName" : "Sort lists in alphabetical order",
     "description" : "Sort any list into alphabetical order.",
-  },{
+  },
+  {
+    "keyName" : "settingsHideImages",
+    "defaultValue" : "false",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/spoiler.png"),
+    "displayName" : "Avoid Spoilers: Hide Preview Images",
+    "description" : "Hide images to avoid any spoilers if the item is not yet collected.",
+  },
+  {
     "keyName" : "settingsHighlightNotCraftableVariations",
     "defaultValue" : "false",
     "currentValue" : "",

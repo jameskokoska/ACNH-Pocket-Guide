@@ -151,7 +151,7 @@ export default class FirebaseBackup extends Component {
     if(formattedError.includes("The user may have been deleted")){
       formattedError = formattedError + " Please try to create an account and Sign-up."
     }
-    return formattedError
+    return attemptToTranslate(formattedError)
   }
  
   render(){
@@ -173,8 +173,8 @@ export default class FirebaseBackup extends Component {
       <TextInput
         allowFontScaling={false}
         style={{fontSize: 20, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.white[global.darkMode], padding: 15, borderRadius: 5, marginHorizontal:30}}
-        onChangeText={(text) => {AsyncStorage.setItem("loginEmail", text); this.setState({email:text})}}
-        placeholder={"Email"}
+        onChangeText={(text) => {AsyncStorage.setItem("loginEmail", text.replace(" ","")); this.setState({email:text.replace(" ","")})}}
+        placeholder={attemptToTranslate("Email")}
         placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
         autoCorrect={false}
         value={this.state.email}
@@ -186,7 +186,7 @@ export default class FirebaseBackup extends Component {
         allowFontScaling={false}
         style={{fontSize: 20, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.white[global.darkMode], padding: 15, borderRadius: 5, marginHorizontal:30}}
         onChangeText={(text) => {AsyncStorage.setItem("loginPassword", text); this.setState({password:text})}}
-        placeholder={"Password"}
+        placeholder={attemptToTranslate("Password")}
         placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
         autoCorrect={false}
         value={this.state.password}
@@ -229,9 +229,10 @@ export default class FirebaseBackup extends Component {
         vibrate={10}
         onPress={() => {this.getData(this.state.uid)}}
       />:<View/>}
-      <View style={{height: 10}}/>
-      <TextFont style={{textAlign:"center", color:colors.fishText[global.darkMode], marginHorizontal:40}}>{this.state.uid!=="" ? "Note: Uploading data will replace what is currently backed up in the cloud!" : ""}</TextFont>
-      <TextFont style={{textAlign:"center", color:colors.textError[global.darkMode], marginHorizontal:40}}>{this.state.uid==="" ? this.formatError(this.state.error) : ""}</TextFont>
+      <View style={{height: 8}}/>
+      {this.state.uid!=="" ? <TextFont style={{marginVertical:10, textAlign:"center", color:colors.fishText[global.darkMode], marginHorizontal:40}}>{"Note: Uploading data will replace what is currently backed up in the cloud!"}</TextFont>:<View/>}
+      {(this.state.uid===""&&this.state.error!=="") ? <TextFont style={{marginVertical:10, textAlign:"center", color:colors.textError[global.darkMode], marginHorizontal:40}}>{this.formatError(this.state.error)}</TextFont>:<View/>}
+      <View style={{height: 8}}/>
     </>
   }
 }

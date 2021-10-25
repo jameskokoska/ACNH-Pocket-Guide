@@ -48,8 +48,10 @@ function ListPage(props){
   var selectedItem;
   var updateCheckChildFunction;
   var updateWishlistChildFunction;
+  let avoidSpoilers = getSettingsString("settingsHideImages")==="true"
   const renderItem = (({ item }) =>
     <ListItem
+      avoidSpoilers={avoidSpoilers}
       item={item}
       disablePopup={props.disablePopup}
       imageProperty={props.imageProperty} 
@@ -129,7 +131,9 @@ function ListPage(props){
     "Museum",
     "Not Museum",
     "Old Resident",
-    "Not Old Resident"
+    "Not Old Resident",
+    "Do not have villager photo",
+    "Have villager photo"
   ]
 
   const [searchFilters, setSearchFilters] = useState([]);
@@ -462,7 +466,7 @@ function ListPage(props){
                     // previousVariation = item["Name"];
                   } 
                 } else if(searchActual.includes("Museum")){
-                  if(global.collectionList.includes("museum"+item["checkListKey"]) && item["Data Category"]!==undefined && museumCategories.includes(item["Data Category"])){
+                  if(item["Data Category"]!==undefined && museumCategories.includes(item["Data Category"]) && global.collectionList.includes("museum"+item["checkListKey"])){
                     item.dataSet = j;
                     item.index = i;
                     dataUpdated = [...dataUpdated, item];
@@ -470,7 +474,7 @@ function ListPage(props){
                     previousVariation = item["Name"];
                   } 
                 } else if(searchActual.includes("Not Museum")){
-                  if(!global.collectionList.includes("museum"+item["checkListKey"]) && item["Data Category"]!==undefined && museumCategories.includes(item["Data Category"])){
+                  if(item["Data Category"]!==undefined && museumCategories.includes(item["Data Category"]) && !global.collectionList.includes("museum"+item["checkListKey"])){
                     item.dataSet = j;
                     item.index = i;
                     dataUpdated = [...dataUpdated, item];
@@ -478,7 +482,7 @@ function ListPage(props){
                     previousVariation = item["Name"];
                   } 
                 } else if(searchActual.includes("Old Resident")){
-                  if(global.collectionList.includes("oldResident"+item["checkListKey"]) && item["Data Category"]!==undefined && item["Data Category"]==="Villagers"){
+                  if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && global.collectionList.includes("oldResident"+item["checkListKey"])){
                     item.dataSet = j;
                     item.index = i;
                     dataUpdated = [...dataUpdated, item];
@@ -486,7 +490,23 @@ function ListPage(props){
                     previousVariation = item["Name"];
                   } 
                 } else if(searchActual.includes("Not Old Resident")){
-                  if(!global.collectionList.includes("oldResident"+item["checkListKey"]) && item["Data Category"]!==undefined && item["Data Category"]==="Villagers"){
+                  if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && !global.collectionList.includes("oldResident"+item["checkListKey"])){
+                    item.dataSet = j;
+                    item.index = i;
+                    dataUpdated = [...dataUpdated, item];
+                    // previousVariation = item.[props.textProperty[j]];
+                    previousVariation = item["Name"];
+                  } 
+                } else if(searchActual.includes("Have villager photo")){
+                  if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && global.collectionList.includes("havePhoto"+item["checkListKey"])){
+                    item.dataSet = j;
+                    item.index = i;
+                    dataUpdated = [...dataUpdated, item];
+                    // previousVariation = item.[props.textProperty[j]];
+                    previousVariation = item["Name"];
+                  } 
+                } else if(searchActual.includes("Do not have villager photo")){
+                  if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && !global.collectionList.includes("havePhoto"+item["checkListKey"])){
                     item.dataSet = j;
                     item.index = i;
                     dataUpdated = [...dataUpdated, item];
