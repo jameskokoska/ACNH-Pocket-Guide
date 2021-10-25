@@ -4,6 +4,10 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
+-Added more translations
+-Added villager genders in popup
+-Removed the ability to enter a space in email (again)
+-Fixed formatting of some text
 -Added hide spoilers setting
 -Added villager photo checklist tracking (When you've best friended a villager and get their photo)
 -Fixed bug with backups and achievements

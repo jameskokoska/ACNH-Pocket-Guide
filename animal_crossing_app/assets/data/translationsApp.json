@@ -531,16 +531,16 @@
     ],
     "Main": [
         {
-            "English": "778 items",
-            "English (Europe)": "778 items",
-            "French": "767 items",
-            "French (US)": "767 items",
-            "German": "767 items",
-            "Spanish": "767 items",
-            "Spanish (US)": "763 items",
-            "Russian": "767 items",
-            "Italian": "777 items",
-            "Dutch": "343 items",
+            "English": "780 items",
+            "English (Europe)": "780 items",
+            "French": "769 items",
+            "French (US)": "769 items",
+            "German": "769 items",
+            "Spanish": "769 items",
+            "Spanish (US)": "765 items",
+            "Russian": "769 items",
+            "Italian": "779 items",
+            "Dutch": "752 items",
             "Chinese": "0 items",
             "Chinese (Traditional)": "0 items",
             "Japanese": "0 items",
@@ -5352,6 +5352,7 @@
             "Spanish (US)": "Cama",
             "Russian": "Кровать",
             "Italian": "Letto",
+            "Dutch": "Bed",
             "Portuguese": "Cama"
         },
         {
@@ -5364,6 +5365,7 @@
             "Spanish (US)": "Escritorio",
             "Russian": "Стол",
             "Italian": "Scrivania",
+            "Dutch": "Bureau",
             "Portuguese": "Escrivaninha"
         },
         {
@@ -5376,6 +5378,7 @@
             "Spanish (US)": "Silla",
             "Russian": "Стул",
             "Italian": "Sedia",
+            "Dutch": "Stoel",
             "Portuguese": "Cadeira"
         },
         {
@@ -5388,6 +5391,7 @@
             "Spanish (US)": "Reloj",
             "Russian": "Часы",
             "Italian": "Orologio",
+            "Dutch": "Klok",
             "Portuguese": "Relógio "
         },
         {
@@ -5400,6 +5404,7 @@
             "Spanish (US)": "Mesa",
             "Russian": "Стол",
             "Italian": "Tavolo",
+            "Dutch": "Tafel",
             "Portuguese": "Mesa"
         },
         {
@@ -5412,6 +5417,7 @@
             "Spanish (US)": "Vestidor",
             "Russian": "Комод",
             "Italian": "Armadio",
+            "Dutch": "Dressoir",
             "Portuguese": "Cômoda"
         },
         {
@@ -5424,6 +5430,7 @@
             "Spanish (US)": "Cofre",
             "Russian": "Сундук",
             "Italian": "Cesta",
+            "Dutch": "Borst",
             "Portuguese": "Baú "
         },
         {
@@ -5436,6 +5443,7 @@
             "Spanish (US)": "Cosas del lavabo",
             "Russian": "Ванные принадлежности",
             "Italian": "Cose da bagno",
+            "Dutch": "Badkamer Dingen",
             "Portuguese": "Banheiro"
         },
         {
@@ -5448,6 +5456,7 @@
             "Spanish (US)": "Juguete",
             "Russian": "Игрушка",
             "Italian": "Giocattolo",
+            "Dutch": "Speelgoed",
             "Portuguese": "Brinquedo"
         },
         {
@@ -5460,6 +5469,7 @@
             "Spanish (US)": "Rancho",
             "Russian": "Ранчо",
             "Italian": "Ranch",
+            "Dutch": "Boerderij",
             "Portuguese": "Rancho"
         },
         {
@@ -5472,6 +5482,7 @@
             "Spanish (US)": "Ampliaciones de la casa",
             "Russian": "Бытовая техника",
             "Italian": "Elettrodomestici",
+            "Dutch": "Huishoudelijke apparaten",
             "Portuguese": "Eletrodomésticos"
         },
         {
@@ -5484,6 +5495,7 @@
             "Spanish (US)": "Estilo japonés",
             "Russian": "Японский стиль",
             "Italian": "Stile giapponese",
+            "Dutch": "Japanse stijl",
             "Portuguese": "Estilo japonês"
         },
         {
@@ -5496,6 +5508,7 @@
             "Spanish (US)": "Sofá",
             "Russian": "Софа",
             "Italian": "Divano",
+            "Dutch": "Bank",
             "Portuguese": "Sofá"
         },
         {
@@ -5508,6 +5521,7 @@
             "Spanish (US)": "Lámpara",
             "Russian": "Лампа",
             "Italian": "Lampada",
+            "Dutch": "Lamp",
             "Portuguese": "Luminária"
         },
         {
@@ -5520,6 +5534,7 @@
             "Spanish (US)": "Pantalla",
             "Russian": "Экран",
             "Italian": "Schermo",
+            "Dutch": "Scherm",
             "Portuguese": "Tela"
         },
         {
@@ -5532,6 +5547,7 @@
             "Spanish (US)": "Estante",
             "Russian": "Полка",
             "Italian": "Mensola",
+            "Dutch": "Plank",
             "Portuguese": "Prateleira"
         },
         {
@@ -5544,6 +5560,7 @@
             "Spanish (US)": "Audio",
             "Russian": "Аудио",
             "Italian": "Suono",
+            "Dutch": "Audio",
             "Portuguese": "Áudio"
         },
         {
@@ -5556,6 +5573,7 @@
             "Spanish (US)": "Decoración exterior",
             "Russian": "Внешнее украшение",
             "Italian": "Arredamento da esterni",
+            "Dutch": "Buitendecoratie",
             "Portuguese": "Decoração Ar livre"
         },
         {
@@ -5568,6 +5586,7 @@
             "Spanish (US)": "Chimenea",
             "Russian": "Камин",
             "Italian": "Camino",
+            "Dutch": "Haard",
             "Portuguese": "Lareira"
         },
         {
@@ -5580,6 +5599,7 @@
             "Spanish (US)": "Plantas",
             "Russian": "Растения",
             "Italian": "Piante",
+            "Dutch": "Planten",
             "Portuguese": "Plantas"
         },
         {
@@ -5592,6 +5612,7 @@
             "Spanish (US)": "Brújula",
             "Russian": "Компас",
             "Italian": "Compasso",
+            "Dutch": "Kompas",
             "Portuguese": "Bússola"
         },
         {
@@ -5604,6 +5625,7 @@
             "Spanish (US)": "Pascuas",
             "Russian": "Пасха",
             "Italian": "Pasqua",
+            "Dutch": "Pasen",
             "Portuguese": "Páscoa"
         },
         {
@@ -5616,6 +5638,7 @@
             "Spanish (US)": "Cosas de la cocina",
             "Russian": "Кухонные принадлежности",
             "Italian": "Cose da cucina",
+            "Dutch": "Keuken Dingen",
             "Portuguese": "Cozinha"
         },
         {
@@ -5628,6 +5651,7 @@
             "Spanish (US)": "Bañera",
             "Russian": "Ванна",
             "Italian": "Vasca da bagno",
+            "Dutch": "Bad",
             "Portuguese": "Banheira"
         },
         {
@@ -5640,6 +5664,7 @@
             "Spanish (US)": "Suministros",
             "Russian": "Припасы",
             "Italian": "Provviste",
+            "Dutch": "Benodigdheden",
             "Portuguese": "Suprimentos"
         },
         {
@@ -5652,6 +5677,7 @@
             "Spanish (US)": "Mesa de trabajo",
             "Russian": "Верстак",
             "Italian": "Banco da lavoro",
+            "Dutch": "Werkbank",
             "Portuguese": "Bancada de Trabalho"
         },
         {
@@ -5664,6 +5690,7 @@
             "Spanish (US)": "Decoración de instalaciones",
             "Russian": "Декор помещения",
             "Italian": "Arredamento della struttura",
+            "Dutch": "Faciliteit Inrichting",
             "Portuguese": "Decoração de Instalações"
         },
         {
@@ -5676,6 +5703,7 @@
             "Spanish (US)": "Patio de recreo",
             "Russian": "Игровая площадка",
             "Italian": "Parco giochi",
+            "Dutch": "Speelplaats",
             "Portuguese": "Parquinho"
         },
         {
@@ -5688,6 +5716,7 @@
             "Spanish (US)": "Inodoro",
             "Russian": "Туалет",
             "Italian": "Bagno",
+            "Dutch": "Wc",
             "Portuguese": "Toalete"
         },
         {
@@ -5700,6 +5729,7 @@
             "Spanish (US)": "Insecto",
             "Russian": "Насекомое",
             "Italian": "Insetto",
+            "Dutch": "Insect",
             "Portuguese": "Inseto"
         },
         {
@@ -5712,6 +5742,7 @@
             "Spanish (US)": "Televisión",
             "Russian": "Телевизор",
             "Italian": "TV",
+            "Dutch": "TV",
             "Portuguese": "Tv"
         },
         {
@@ -5724,6 +5755,7 @@
             "Spanish (US)": "Estilo zen",
             "Russian": "В стиле Дзен",
             "Italian": "Stile Zen",
+            "Dutch": "Zen-stijl",
             "Portuguese": "Estilo Zen"
         },
         {
@@ -5736,6 +5768,7 @@
             "Spanish (US)": "Decoración artesanal",
             "Russian": "Народный декор",
             "Italian": "Arredamento Artigianale",
+            "Dutch": "Folk Craft Decor",
             "Portuguese": "Decoração Folk Craft"
         },
         {
@@ -5748,6 +5781,7 @@
             "Spanish (US)": "Mesa de coser",
             "Russian": "Швейный стол",
             "Italian": "Tavolo da cucito",
+            "Dutch": "Naaitafel",
             "Portuguese": "Mesa de Costura"
         },
         {
@@ -5760,6 +5794,7 @@
             "Spanish (US)": "Calefacción",
             "Russian": "Нагрев",
             "Italian": "Riscaldamento",
+            "Dutch": "Verwarming",
             "Portuguese": "Aquecimento"
         },
         {
@@ -5772,6 +5807,7 @@
             "Spanish (US)": "Belleza",
             "Russian": "Красота",
             "Italian": "Bellezza",
+            "Dutch": "Schoonheid",
             "Portuguese": "Beleza"
         },
         {
@@ -5784,6 +5820,7 @@
             "Spanish (US)": "Consola de juegos",
             "Russian": "Игровая консоль",
             "Italian": "Console da gioco",
+            "Dutch": "Spelcomputer",
             "Portuguese": "Videogame"
         },
         {
@@ -5796,6 +5833,7 @@
             "Spanish (US)": "Insecto especial",
             "Russian": "Особое насекомое",
             "Italian": "Insetto speciale",
+            "Dutch": "Speciaal Insect",
             "Portuguese": "Inseto Especial"
         },
         {
@@ -5808,6 +5846,7 @@
             "Spanish (US)": "Comedor",
             "Russian": "Столовая",
             "Italian": "Pranzo",
+            "Dutch": "Dineren",
             "Portuguese": "Jantar"
         },
         {
@@ -5820,6 +5859,7 @@
             "Spanish (US)": "Pez especial",
             "Russian": "Особая рыба",
             "Italian": "Pesce speciale",
+            "Dutch": "Speciale vis",
             "Portuguese": "Peixe Especial"
         },
         {
@@ -5832,6 +5872,7 @@
             "Spanish (US)": "Aire acondicionado",
             "Russian": "Кондиционер воздуха ",
             "Italian": "Aria condizionata",
+            "Dutch": "Airconditioning",
             "Portuguese": "Ar condicionado"
         },
         {
@@ -5844,6 +5885,7 @@
             "Spanish (US)": "Decoración de puertas",
             "Russian": "Украшение на входную дверь",
             "Italian": "Decoro per porta d'ingresso",
+            "Dutch": "Huis Deur Decor",
             "Portuguese": "Decoração de portas de casa"
         },
         {
@@ -5856,6 +5898,7 @@
             "Spanish (US)": "No catalogado",
             "Russian": "Нет в каталоге",
             "Italian": "Non in catalogo",
+            "Dutch": "Niet in catalogus",
             "Portuguese": "Não está no catálogo"
         },
         {
@@ -5868,6 +5911,7 @@
             "Spanish (US)": "No a la venta",
             "Russian": "Не для продажи",
             "Italian": "Non in vendita",
+            "Dutch": "Niet te koop",
             "Portuguese": "Não está a venda"
         },
         {
@@ -5880,6 +5924,7 @@
             "Spanish (US)": "Catálogo",
             "Russian": "Каталог",
             "Italian": "Catalogo",
+            "Dutch": "Catalogus",
             "Portuguese": "Catálogo"
         },
         {
@@ -5892,6 +5937,7 @@
             "Spanish (US)": "En venta",
             "Russian": "Для продажи",
             "Italian": "In vendita",
+            "Dutch": "Te koop",
             "Portuguese": "À venda"
         },
         {
@@ -5904,6 +5950,7 @@
             "Spanish (US)": "None",
             "Russian": "Ничего",
             "Italian": "Nessuno",
+            "Dutch": "Geen",
             "Portuguese": "Nenhum"
         },
         {
@@ -5916,6 +5963,7 @@
             "Spanish (US)": "Color 1",
             "Russian": "Цвет 1",
             "Italian": "Colore 1",
+            "Dutch": "Kleur 1",
             "Portuguese": "Cor 1"
         },
         {
@@ -5928,6 +5976,7 @@
             "Spanish (US)": "Color 2",
             "Russian": "Цвет 2",
             "Italian": "Colore 2",
+            "Dutch": "Kleur 2",
             "Portuguese": "Cor 2"
         },
         {
@@ -5940,6 +5989,7 @@
             "Spanish (US)": "Capturable en enero",
             "Russian": "Можно поймать в январе",
             "Italian": "Può essere catturato a Gennaio",
+            "Dutch": "Kan vangen in januari",
             "Portuguese": "Pode pegar em Janeiro"
         },
         {
@@ -5952,6 +6002,7 @@
             "Spanish (US)": "Capturable en febrero",
             "Russian": "Можно поймать в феврале",
             "Italian": "Può essere catturato a Febbraio",
+            "Dutch": "Kan vangen in februari",
             "Portuguese": "Pode pegar em Fevereiro"
         },
         {
@@ -5964,6 +6015,7 @@
             "Spanish (US)": "Capturable en marzo",
             "Russian": "Можно поймать в марте",
             "Italian": "Può essere catturato a Marzo",
+            "Dutch": "Kan vangen in maart",
             "Portuguese": "Pode pegar em Março"
         },
         {
@@ -5976,6 +6028,7 @@
             "Spanish (US)": "Capturable en abril",
             "Russian": "Можно поймать в апреле",
             "Italian": "Può essere catturato ad Aprile",
+            "Dutch": "Kan vangen in april",
             "Portuguese": "Pode pegar em Abril"
         },
         {
@@ -5988,6 +6041,7 @@
             "Spanish (US)": "Capturable en mayo",
             "Russian": "Можно поймать в мае",
             "Italian": "Può essere catturato a Maggio",
+            "Dutch": "Kan vangen in mei",
             "Portuguese": "Pode pegar em Maio"
         },
         {
@@ -6000,6 +6054,7 @@
             "Spanish (US)": "Capturable en junio",
             "Russian": "Можно поймать в июне",
             "Italian": "Può essere catturato a Giugno",
+            "Dutch": "Kan vangen in juni",
             "Portuguese": "Pode pegar em Junho"
         },
         {
@@ -6012,6 +6067,7 @@
             "Spanish (US)": "Capturable en julio",
             "Russian": "Можно поймать в июле",
             "Italian": "Può essere catturato a Luglio",
+            "Dutch": "Kan vangen in juli",
             "Portuguese": "Pode pegar em Julho"
         },
         {
@@ -6024,6 +6080,7 @@
             "Spanish (US)": "Capturable en agosto",
             "Russian": "Можно поймать в августе",
             "Italian": "Può essere catturato ad Agosto",
+            "Dutch": "Kan vangen in augustus",
             "Portuguese": "Pode pegar em Agosto"
         },
         {
@@ -6036,6 +6093,7 @@
             "Spanish (US)": "Capturable en septiembre",
             "Russian": "Можно поймать в сентябре",
             "Italian": "Può essere catturato a Settembre",
+            "Dutch": "Kan vangen in september",
             "Portuguese": "Pode pegar em Setembro"
         },
         {
@@ -6048,6 +6106,7 @@
             "Spanish (US)": "Capturable en octubre",
             "Russian": "Можно поймать в октябре",
             "Italian": "Può essere catturato ad Ottobre",
+            "Dutch": "Kan vangen in oktober",
             "Portuguese": "Pode pegar em Outubro"
         },
         {
@@ -6060,6 +6119,7 @@
             "Spanish (US)": "Capturable en noviembre",
             "Russian": "Можно поймать в ноябре",
             "Italian": "Può essere catturato a Novembre",
+            "Dutch": "Kan vangen in november",
             "Portuguese": "Pode pegar em Novembro"
         },
         {
@@ -6072,6 +6132,7 @@
             "Spanish (US)": "Caoturable en diciembre",
             "Russian": "Можно поймать в декабре",
             "Italian": "Può essere catturato a Dicembre",
+            "Dutch": "Kan vangen in december",
             "Portuguese": "Pode pegar em Dezembro"
         },
         {
@@ -6084,6 +6145,7 @@
             "Spanish (US)": "Dónde/Cómo",
             "Russian": "Где/Как",
             "Italian": "Dove/Come",
+            "Dutch": "Waar hoe",
             "Portuguese": "Onde/Como"
         },
         {
@@ -6096,6 +6158,7 @@
             "Spanish (US)": "Fuente",
             "Russian": "Источник",
             "Italian": "Fonte",
+            "Dutch": "Bron",
             "Portuguese": "Fonte"
         },
         {
@@ -6108,6 +6171,7 @@
             "Spanish (US)": "Etiqueta",
             "Russian": "Тег",
             "Italian": "Tag",
+            "Dutch": "Label",
             "Portuguese": "Marcação"
         },
         {
@@ -6120,6 +6184,7 @@
             "Spanish (US)": "Categoria",
             "Russian": "Категория",
             "Italian": "Categoria",
+            "Dutch": "Categorie",
             "Portuguese": "Categoria"
         },
         {
@@ -6132,6 +6197,7 @@
             "Spanish (US)": "Limitado a Temporada/Evento",
             "Russian": "Время года/Исключительно для событий",
             "Italian": "Esclusiva stagionale/evento",
+            "Dutch": "Exclusief seizoen/evenement",
             "Portuguese": "Sazonal /Evento Exclusivo"
         },
         {
@@ -6144,6 +6210,7 @@
             "Spanish (US)": "Variación",
             "Russian": "Вариация",
             "Italian": "Variazioni",
+            "Dutch": "Variatie",
             "Portuguese": "Variação"
         },
         {
@@ -6156,6 +6223,7 @@
             "Spanish (US)": "AAD Concepto 1",
             "Russian": "АДУ - Концепт 1",
             "Italian": "Happy Home Academy Concept 1",
+            "Dutch": "HHA-concept 1",
             "Portuguese": "Conceito HHA 1"
         },
         {
@@ -6168,6 +6236,7 @@
             "Spanish (US)": "AAD Concepto 2",
             "Russian": "АДУ - Концепт 2",
             "Italian": "Happy Home Academy Concept 2",
+            "Dutch": "HHA-concept 2",
             "Portuguese": "Conceito HHA 2"
         },
         {
@@ -6180,6 +6249,7 @@
             "Spanish (US)": "Serie AAD",
             "Russian": "АДУ Серии",
             "Italian": "Serie Happy Home Academy",
+            "Dutch": "HHA-serie",
             "Portuguese": "HHA Series"
         },
         {
@@ -6192,6 +6262,7 @@
             "Spanish (US)": "Categoría AAD",
             "Russian": "АДУ Категории",
             "Italian": "Categoria Happy Home Academy",
+            "Dutch": "HHA-categorie",
             "Portuguese": "Categoria HHA"
         },
         {
@@ -6204,6 +6275,7 @@
             "Spanish (US)": "Set AAD",
             "Russian": "АДУ Набор",
             "Italian": "Set Happy Home Academy",
+            "Dutch": "HHA-set",
             "Portuguese": "Conjunto HHA"
         },
         {
@@ -6216,6 +6288,7 @@
             "Spanish (US)": "Pasatiempo",
             "Russian": "Хобби",
             "Italian": "Hobby",
+            "Dutch": "Hobby",
             "Portuguese": "Passatempo"
         },
         {
@@ -6228,6 +6301,7 @@
             "Spanish (US)": "Estilo 1",
             "Russian": "Стиль 1",
             "Italian": "Stile 1",
+            "Dutch": "Stijl 1",
             "Portuguese": "Estilo 1"
         },
         {
@@ -6240,6 +6314,7 @@
             "Spanish (US)": "Estilo 2",
             "Russian": "Стиль 2",
             "Italian": "Stile 2",
+            "Dutch": "Stijl 2",
             "Portuguese": "Estilo 2"
         },
         {
@@ -6252,6 +6327,7 @@
             "Spanish (US)": "Ordenar listas alfabéticamente",
             "Russian": "Упорядочить списки в алфавитном порядке",
             "Italian": "Ordina liste in ordine alfabetico",
+            "Dutch": "Sorteer lijsten in alfabetische volgorde",
             "Portuguese": "Classifique as listas em ordem alfabética"
         },
         {
@@ -6264,6 +6340,7 @@
             "Spanish (US)": "Ordenar todas las listas alfabéticamente.",
             "Russian": "Упорядочить любой список в алфавитном порядке",
             "Italian": "Ordina tutte le liste in ordine alfabetico",
+            "Dutch": "Sorteer elke lijst in alfabetische volgorde.",
             "Portuguese": "Classifique qualquer lista em ordem alfabética."
         },
         {
@@ -6276,6 +6353,7 @@
             "Spanish (US)": "Resaltar muebles con variaciones no personalizables",
             "Russian": "Пометить мебель с несоздаваемыми вариациями",
             "Italian": "Evidenzia mobili con le variazioni non costruibili",
+            "Dutch": "Markeer meubels met niet-bewerkbare variaties",
             "Portuguese": "Destaque móveis com variações não artesanais"
         },
         {
@@ -6288,6 +6366,7 @@
             "Spanish (US)": "Resaltar muebles con variaciones que no pueden ser creadas por el jugador.",
             "Russian": "Пометить мебель, у которой невозможно создать вариацию в синих тонах",
             "Italian": "Evidenzia mobili con variazioni che non possono essere costruite dal giocatore in blu. Ciò aiuterà a completare il tuo catalogo con tutte le variazioni del mobile!",
+            "Dutch": "Markeer meubels met variaties die niet door de speler in blauw kunnen worden gemaakt. Zo maakt u uw catalogus compleet met alle meubelvarianten!",
             "Portuguese": "Destaque em azul móveis com variações que não podem ser feitas pelo jogador. Isso ajudará a completar seu catálogo com todas as variações de móveis!"
         },
         {
@@ -6300,6 +6379,7 @@
             "Spanish (US)": "Variaciones de objetos no fabricables ",
             "Russian": "Показать несоздаваемые вариации предметов",
             "Italian": "Mostra variazioni degli oggetti non costruibili",
+            "Dutch": "Onverwerkbare itemvariaties weergeven",
             "Portuguese": "Mostrar variações de itens não construiveis"
         },
         {
@@ -6312,6 +6392,7 @@
             "Spanish (US)": "Ocultar variaciones de artículos que no se pueden crear",
             "Russian": "Скрыть несоздаваемые вариации предметов",
             "Italian": "Nascondi variazioni degli oggetti non costruibili",
+            "Dutch": "Onverwerkbare itemvariaties verbergen",
             "Portuguese": "Ocultar variações de itens não construiveis"
         },
         {
@@ -6324,6 +6405,7 @@
             "Spanish (US)": "Logros",
             "Russian": "Достижения",
             "Italian": "Risultati",
+            "Dutch": "Prestaties",
             "Portuguese": "Conquistas"
         },
         {
@@ -6336,6 +6418,7 @@
             "Spanish (US)": "Busca un objeto",
             "Russian": "Поиск предмета",
             "Italian": "Cerca un oggetto",
+            "Dutch": "Zoek een item",
             "Portuguese": "Procure um item"
         },
         {
@@ -6348,6 +6431,7 @@
             "Spanish (US)": "Extraviado",
             "Russian": "Не найдено",
             "Italian": "Non trovato",
+            "Dutch": "Niet gevonden",
             "Portuguese": "Não encontrado"
         },
         {
@@ -6359,6 +6443,7 @@
             "Spanish": "Temporada/Evento",
             "Russian": "Время года / Событие",
             "Italian": "Stagione/Evento",
+            "Dutch": "Seizoen/Evenement",
             "Portuguese": "Sazonal/Evento"
         },
         {
@@ -6371,6 +6456,7 @@
             "Spanish (US)": "¿Cuáles son los regalos ideales para los vecinos?",
             "Russian": "Какие подарки идеальны для жителей? ",
             "Italian": "Quali sono i regali ideali per gli abitanti?",
+            "Dutch": "Wat zijn ideale cadeaus voor dorpelingen?",
             "Portuguese": "Quais são os presentes ideais para os moradores?"
         },
         {
@@ -6383,6 +6469,7 @@
             "Spanish (US)": "Ver regalos",
             "Russian": "Показать подарки ",
             "Italian": "Vedi regali",
+            "Dutch": "Bekijk geschenken",
             "Portuguese": "Ver Presentes"
         },
         {
@@ -6395,6 +6482,7 @@
             "Spanish (US)": "¿Que son los regalos de vecinos?",
             "Russian": "Какие подарки у жителей? ",
             "Italian": "Cosa sono i regali per gli abitanti?",
+            "Dutch": "Wat zijn dorpsgeschenken?",
             "Portuguese": "O que são presentes de moradores?"
         },
         {
@@ -6407,6 +6495,7 @@
             "Spanish (US)": "Los vecinos prefieren flores, música favorita, paraguas (para los vecinos que no son ranas) o ropa de su color o estilo preferido",
             "Russian": "Жители предпочитают цветы, любимую музыку, зонты (если житель не лягушка), или одежду, совпадающую с их предпочтения и фасона и цвета. ",
             "Italian": "Gli abitanti preferiscono fiori, musica preferita, ombrelli (per gli abitanti non rane), o vestiti del loro colore o stile preferito.",
+            "Dutch": "Dorpelingen geven de voorkeur aan bloemen, favoriete muziek, paraplu's (voor niet-kikkerdorpelingen), of kleding van hun favoriete kleur of stijl.",
             "Portuguese": "Os moradores preferem flores, música favorita, guarda-chuvas (para aldeões que não sejam rãs) ou roupas de sua cor ou estilo preferido."
         },
         {
@@ -6419,6 +6508,7 @@
             "Spanish (US)": "[Ver regalos] te mostrará todas las prendas de su color y estilo preferido. ",
             "Russian": "[Показать подарки] Покажет всю одежду предпочитаемого цвета и стиля",
             "Italian": "[Mostra regali] ti mostrerà tutti i vestiti del loro colore e stile preferito.",
+            "Dutch": "[View Gifts] laat je alle kleding zien van hun favoriete kleur en stijl.",
             "Portuguese": "[Ver Presentes] mostrará a você todas as roupas de sua cor e estilo preferidos."
         },
         {
@@ -6431,6 +6521,7 @@
             "Spanish (US)": "Además, puedes elegir si el vecino usará o no el objeto al regalárselo. ",
             "Russian": "Вы также можете отфильтровать ту подаренную одежду, которую житель будет или не будет носить. ",
             "Italian": "In più, puoi scegliere di filtrare se un abitante indosserà quell'oggetto o no se regalato.",
+            "Dutch": "Bovendien kun je ervoor kiezen om uit te filteren of de dorpeling dit item wel of niet zal dragen wanneer het wordt begaafd.",
             "Portuguese": "Além disso, você pode escolher filtrar se o morador usará este item ou não quando for presenteado."
         },
         {
@@ -6443,6 +6534,7 @@
             "Spanish (US)": "El vecino puede usar ",
             "Russian": "Житель может нлсить",
             "Italian": "L'abitante può indossare",
+            "Dutch": "Dorpeling kan dragen",
             "Portuguese": "O morador pode usar"
         },
         {
@@ -6455,6 +6547,7 @@
             "Spanish (US)": "El vecino no puede usar ",
             "Russian": "Житель не может носить ",
             "Italian": "L'abitante non può indossare",
+            "Dutch": "Dorpeling kan niet dragen",
             "Portuguese": "O morador não pode usar"
         },
         {
@@ -6467,6 +6560,7 @@
             "Spanish (US)": "Temporada",
             "Russian": "Время года",
             "Italian": "Stagione",
+            "Dutch": "Seizoen",
             "Portuguese": "Sazonal"
         },
         {
@@ -6479,6 +6573,7 @@
             "Spanish (US)": "Evento exclusivo",
             "Russian": "Исключительно для событий",
             "Italian": "Esclusiva evento",
+            "Dutch": "Exclusief voor evenement",
             "Portuguese": "Exclusivo Evento"
         },
         {
@@ -6491,6 +6586,7 @@
             "Spanish (US)": "Editar secciones",
             "Russian": "Править разделы",
             "Italian": "Modifica sezioni",
+            "Dutch": "Bewerk secties",
             "Portuguese": "Editar Seções"
         },
         {
@@ -6503,6 +6599,7 @@
             "Spanish (US)": "Deshabilitar Editar secciones",
             "Russian": "Завершить редактирование",
             "Italian": "Disabilita Modifica sezioni",
+            "Dutch": "Secties bewerken uitschakelen",
             "Portuguese": "Desativar Editar Seções"
         },
         {
@@ -6515,6 +6612,7 @@
             "Spanish (US)": "Seleccionar las secciones de la página principal",
             "Russian": "Выбрать разделы для домашней странички",
             "Italian": "Seleziona sezioni Homepage",
+            "Dutch": "Selecteer Homepage-secties",
             "Portuguese": "Selecione as seções da página inicial"
         },
         {
@@ -6527,6 +6625,7 @@
             "Spanish (US)": "Es recomendable que tengas vecinos con todas las personalidades para poder conseguir todos los proyectos y reacciones.",
             "Russian": "Рекомендуется поселить жителей всех типов личности, чтобы получить от них всевозможные инструкции и реакции. ",
             "Italian": "È consigliabile avere tutti i tipi di personalità abitante per avere tutte le ricette ed emozioni.",
+            "Dutch": "Het wordt aanbevolen dat je alle persoonlijkheidstypes hebt om alle DIY's en reacties te kunnen krijgen.",
             "Portuguese": "Recomenda-se que você tenha todos os tipos de personalidade para poder obter todos os DIYs e Reações."
         },
         {
@@ -6539,6 +6638,7 @@
             "Spanish (US)": "Personalidades faltantes:",
             "Russian": "Не хватает типов личности жителей:",
             "Italian": "Peronalità mancanti:",
+            "Dutch": "Ontbrekende persoonlijkheden:",
             "Portuguese": "Personalidades ausentes:"
         },
         {
@@ -6551,6 +6651,7 @@
             "Spanish (US)": "Proyectos obtenibles",
             "Russian": "Можно получить инструкции",
             "Italian": "Ricette ottenibili:",
+            "Dutch": "Verkrijgbare doe-het-zelvers",
             "Portuguese": "DIYs Obtiveis"
         },
         {
@@ -6563,6 +6664,7 @@
             "Spanish (US)": "Proyectos no obtenibles",
             "Russian": "Нельзя получить инструкции",
             "Italian": "Ricette non ottenibili:",
+            "Dutch": "Onverkrijgbare doe-het-zelvers",
             "Portuguese": "DIYs Não Obtiveis"
         },
         {
@@ -6575,6 +6677,7 @@
             "Spanish (US)": "Emociones obtenibles",
             "Russian": "Можно получить реакции",
             "Italian": "Emozioni ottenibili:",
+            "Dutch": "Verkrijgbare reacties",
             "Portuguese": "Reações Obtíveis"
         },
         {
@@ -6587,6 +6690,7 @@
             "Spanish (US)": "Emociones no obtenibles",
             "Russian": "Нельзя получить реакции",
             "Italian": "Emozioni non ottenibili:",
+            "Dutch": "Onbereikbare reacties",
             "Portuguese": "Reações Não Obtiveis "
         },
         {
@@ -6599,6 +6703,7 @@
             "Spanish (US)": "NO los conseguirás de tus vecinos favoritos.",
             "Russian": "Вы НЕ ПОЛУЧИТЕ это от своих избранных жителей. ",
             "Italian": "NON li riceverai dai tuoi abitanti preferiti.",
+            "Dutch": "Je krijgt deze NIET van je favoriete dorpsbewoners.",
             "Portuguese": "Você NÃO os receberá de seus moradores favoritos."
         },
         {
@@ -6611,6 +6716,7 @@
             "Spanish (US)": "Lo conseguirás de tus vecinos favoritos.",
             "Russian": "Вы СМОЖЕТЕ получить это от своих избранных жителей.",
             "Italian": "Li riceverai dai tuoi villager preferiti.",
+            "Dutch": "Je ZULT deze krijgen van je favoriete dorpsbewoners.",
             "Portuguese": "Você VAI conseguir isso de seus moradores favoritos."
         },
         {
@@ -6623,6 +6729,7 @@
             "Spanish (US)": "¡Puedes conseguir todo ya que tienes todos los tipos de personalidad!\n\n",
             "Russian": "Вы сможете получить всё, так как у вас есть жители всех типов личности!",
             "Italian": "Puoi avere tutto poichè possiedi tutti i tipi di personalità!",
+            "Dutch": "Je kunt alles krijgen omdat je alle persoonlijkheidstypes hebt!",
             "Portuguese": "Você pode obter tudo desde que tenha todos os tipos de personalidade!"
         },
         {
@@ -6635,6 +6742,7 @@
             "Spanish (US)": "Los vecinos de personalidades específicas te darán diferentes objetos.",
             "Russian": "Жители определённого типа личности будут давать вам соответствующие предметы.",
             "Italian": "Abitanti con personalità specifiche ti daranno oggetti differenti.",
+            "Dutch": "Specifieke dorpspersoonlijkheden geven je verschillende items.",
             "Portuguese": "Personalidades específicas de moradores lhe darão itens diferentes."
         },
         {
@@ -6647,6 +6755,7 @@
             "Spanish (US)": "Estos proyectos te los darán tus vecinos:",
             "Russian": "Эти инструкции могут быть получены от этих жителей:",
             "Italian": "Queste ricette le riceverai dai tuoi abitanti.",
+            "Dutch": "Deze DIY's ZULLEN je worden gegeven door je dorpelingen:",
             "Portuguese": "Esses DIYs SERÃO dados a você por seus moradores:"
         },
         {
@@ -6659,6 +6768,7 @@
             "Spanish (US)": "Estos proyectos NO te los darán tus vecinos:",
             "Russian": "Эти инструкции НЕ МОГУТ быть получены от этих жителей:",
             "Italian": "Queste ricette NON le riceverai dai tuoi abitanti.",
+            "Dutch": "Deze DIY's worden NIET aan je gegeven door je dorpelingen:",
             "Portuguese": "Esses DIYs NÃO serão dados a você por seus moradores:"
         },
         {
@@ -6671,6 +6781,7 @@
             "Spanish (US)": "Estas reacciones te las enseñarán tus vecinos:",
             "Russian": "Эти реакции могут быть получены от ваших жителей:",
             "Italian": "Queste emozioni le riceverai dai tuoi abitanti:",
+            "Dutch": "Deze reacties ZULLEN je worden gegeven door je dorpelingen:",
             "Portuguese": "Estas reações SERÃO fornecidas a você por seus moradores:"
         },
         {
@@ -6683,6 +6794,7 @@
             "Spanish (US)": "Estas reacciones NO te las enseñarán tus vecinos:",
             "Russian": "Эти реакции НЕ МОГУТ быть получены от ваших жителей:",
             "Italian": "Queste emozioni NON le riceverai dai tuoi abitanti:",
+            "Dutch": "Deze reacties zullen NIET door je dorpelingen aan jou worden gegeven:",
             "Portuguese": "Estas reações NÃO serão fornecidas a você por seus moradores:"
         },
         {
@@ -6695,6 +6807,7 @@
             "Spanish (US)": "Cerrar",
             "Russian": "Убрать",
             "Italian": "Rimuovi",
+            "Dutch": "Afwijzen",
             "Portuguese": "Despedir"
         },
         {
@@ -6707,6 +6820,7 @@
             "Spanish (US)": "Haz click aquí y añade algunos",
             "Russian": "Нажмите сюда, чтобы добавить новых!",
             "Italian": "Premi qui e aggiungine qualcuno!",
+            "Dutch": "Tik hier en ga wat toevoegen!",
             "Portuguese": "Toque aqui e adicione alguns!"
         },
         {
@@ -6719,6 +6833,7 @@
             "Spanish (US)": "¡No tienes ningún vecino añadido!",
             "Russian": "У вас не добавлено никаких жителей!",
             "Italian": "Non hai abitanti aggiunti!",
+            "Dutch": "Je hebt geen dorpelingen toegevoegd!",
             "Portuguese": "Você não tem nenhum morador adicionado!"
         },
         {
@@ -6731,6 +6846,7 @@
             "Spanish (US)": "Objetos conseguibles",
             "Russian": "Приобретаемые предметы",
             "Italian": "Oggetti ottenbili",
+            "Dutch": "Verkrijgbare artikelen",
             "Portuguese": "Itens Obtiveis"
         },
         {
@@ -6743,6 +6859,7 @@
             "Spanish (US)": "No tienes vecinos favoritos",
             "Russian": "У вас нет избранных жителей.",
             "Italian": "Non hai abitanti preferiti",
+            "Dutch": "Je hebt geen favoriete dorpelingen.",
             "Portuguese": "Você não tem moradores favoritos."
         },
         {
@@ -6755,6 +6872,7 @@
             "Spanish (US)": "Se han eliminado todas las fotos descargadas. Es posible que sea necesario reiniciar para volver a cargar las imágenes.",
             "Russian": "Все скачанные изображения были удалены. Может потребоваться перезагрузка приложения, для восстановления изображений.",
             "Italian": "Tutte le foto scaricate sono state rimosse. Un riavvio potrebbe essere richiesto per caricare di nuovo le immagini.",
+            "Dutch": "Alle gedownloade foto's zijn verwijderd. Een herstart kan nodig zijn om afbeeldingen terug te laden.",
             "Portuguese": "Todas as fotos baixadas foram removidas. Pode ser necessário reiniciar para carregar de volta as imagens."
         },
         {
@@ -6767,6 +6885,7 @@
             "Spanish (US)": "Eliminar imágenes descargadas",
             "Russian": "Удалить скачанные изображения",
             "Italian": "Cancella le immagini scaricate",
+            "Dutch": "Gedownloade afbeeldingen verwijderen",
             "Portuguese": "Excluir imagens baixadas"
         },
         {
@@ -6779,6 +6898,7 @@
             "Spanish (US)": "Imágenes descargadas eliminadas",
             "Russian": "Удалённые скачанные изображения",
             "Italian": "Immagini scaricate cancellate",
+            "Dutch": "Gedownloade afbeeldingen verwijderd",
             "Portuguese": "Imagens baixadas excluídas"
         },
         {
@@ -6790,6 +6910,7 @@
             "Spanish": "Almacenamiento despejado",
             "Russian": "Хранилище очищено:",
             "Italian": "Memoria pulita:",
+            "Dutch": "Opslag gewist:",
             "Portuguese": "Armazenamento limpo:"
         },
         {
@@ -6802,6 +6923,7 @@
             "Spanish (US)": "Eliminando...",
             "Russian": "Удаляем...",
             "Italian": "Cancellando...",
+            "Dutch": "Verwijderen...",
             "Portuguese": "Excluindo ..."
         },
         {
@@ -6814,6 +6936,7 @@
             "Spanish (US)": "Eliminado:",
             "Russian": "Удалено:",
             "Italian": "Cancellato",
+            "Dutch": "verwijderd:",
             "Portuguese": "Excluído:"
         },
         {
@@ -6826,6 +6949,7 @@
             "Spanish (US)": "Código de sueño",
             "Russian": "Адрес снов",
             "Italian": "Codice Sogno",
+            "Dutch": "Droomadres",
             "Portuguese": "Dream Address"
         },
         {
@@ -6838,6 +6962,7 @@
             "Spanish (US)": "Clave de amigo",
             "Russian": "Код друга",
             "Italian": "Codice Amico",
+            "Dutch": "Vriendencode",
             "Portuguese": "Friend Code"
         },
         {
@@ -6850,6 +6975,7 @@
             "Spanish (US)": "Código de creador",
             "Russian": "Код создателя",
             "Italian": "Codice Creatore",
+            "Dutch": "Makercode",
             "Portuguese": "Creator Code"
         },
         {
@@ -6862,6 +6988,7 @@
             "Spanish (US)": "Verdadero",
             "Russian": "Оригинал",
             "Italian": "Reale",
+            "Dutch": "Echt",
             "Portuguese": "Real"
         },
         {
@@ -6874,6 +7001,7 @@
             "Spanish (US)": "Falso",
             "Russian": "Подделка",
             "Italian": "Falso",
+            "Dutch": "Nep",
             "Portuguese": "Falsa"
         },
         {
@@ -6886,6 +7014,7 @@
             "Spanish (US)": "¡Si disfrutas o te gusta la app y quieres apoyarme, enviame un e-mail! (Toca aquí)",
             "Russian": "Если вам нравится моё приложение и вы хотите меня поддержать, пришлите мне имэйл! (нажмите сюда)",
             "Italian": "Se ti piace la mia app e vuoi supportarmi, mandami un'email! (premi qui)",
+            "Dutch": "Als je mijn app leuk vindt en me wilt steunen, stuur me dan een e-mail! (Klik hier)",
             "Portuguese": "Se você gostou do meu aplicativo e gostaria de me apoiar, envie-me um e-mail! (Toque aqui)"
         },
         {
@@ -6898,6 +7027,7 @@
             "Spanish (US)": "Seleccionar eventos",
             "Russian": "Выбрать события",
             "Italian": "Eventi selezionati",
+            "Dutch": "Selecteer evenementen",
             "Portuguese": "Selecione Eventos"
         },
         {
@@ -6910,6 +7040,7 @@
             "Spanish (US)": "Notificaciones de Eventos",
             "Russian": "Уведомления о событиях",
             "Italian": "Notifiche eventi",
+            "Dutch": "Evenementmeldingen",
             "Portuguese": "Notificações de Eventos"
         },
         {
@@ -6922,6 +7053,7 @@
             "Spanish (US)": "Cumpleaños de tus vecinos favoritos",
             "Russian": "Дни Рождения избранных жителей",
             "Italian": "Compleanni degli abitanti preferiti",
+            "Dutch": "Verjaardagen van favoriete dorpelingen",
             "Portuguese": "Aniversários de Moradores Favoritos"
         },
         {
@@ -6934,6 +7066,7 @@
             "Spanish (US)": "Cumpleaños de todos los vecinos",
             "Russian": "Дни Рождения всех жителей",
             "Italian": "Compleanni di tutti gli abitanti",
+            "Dutch": "Alle verjaardagen van dorpelingen",
             "Portuguese": "Aniversário de Todos"
         },
         {
@@ -6946,6 +7079,7 @@
             "Spanish (US)": "Objetos construíbles de temporada",
             "Russian": "Времена года для создания вещей",
             "Italian": "Stagioni per la costruzione",
+            "Dutch": "Seizoenen maken",
             "Portuguese": "Construção Sazonais"
         },
         {
@@ -6958,6 +7092,7 @@
             "Spanish (US)": "Eventos de Telenook",
             "Russian": "События шоппинга Нука",
             "Italian": "Eventi shopping Nook",
+            "Dutch": "Nook Shopping-evenementen",
             "Portuguese": "Nook Shopping Eventos"
         },
         {
@@ -6970,6 +7105,7 @@
             "Spanish (US)": "Temporadas de compra",
             "Russian": "Времена года для шоппинга",
             "Italian": "Stagioni Shopping",
+            "Dutch": "Winkelseizoenen",
             "Portuguese": "Temporada de Compras"
         },
         {
@@ -6982,6 +7118,7 @@
             "Spanish (US)": "Comienzo de eventos",
             "Russian": "Дни для событий",
             "Italian": "Giorni Eventi Pronti",
+            "Dutch": "Event Ready dagen",
             "Portuguese": "Dias Prontos Para Eventos"
         },
         {
@@ -6994,6 +7131,7 @@
             "Spanish (US)": "Temporadas del Zodiaco",
             "Russian": "Сезоны Знаков Зодиака",
             "Italian": "Stagioni Zodiaco",
+            "Dutch": "Dierenriem seizoenen",
             "Portuguese": "Temporada do Zodíaco "
         },
         {
@@ -7006,6 +7144,7 @@
             "Spanish (US)": "Mostrar el dia final de los eventos",
             "Russian": "Показать Последние дни событий",
             "Italian": "Mostra giorno di fine degli eventi",
+            "Dutch": "Einde dag van evenementen weergeven",
             "Portuguese": "Mostrar Fim do Dia dos Eventos"
         },
         {
@@ -7018,6 +7157,7 @@
             "Spanish (US)": "¡Último día!",
             "Russian": "Последний день!",
             "Italian": "Ultimo giorno!",
+            "Dutch": "Laatste dag!",
             "Portuguese": "Último dia!"
         },
         {
@@ -7030,6 +7170,7 @@
             "Spanish (US)": "Final",
             "Russian": "Конец",
             "Italian": "Fine",
+            "Dutch": "Einde",
             "Portuguese": "Fim"
         },
         {
@@ -7042,6 +7183,7 @@
             "Spanish (US)": "Las notificaciones se crean en función de las categorías que seleccione. Sólo se cargan una semana en el futuro y se configuran de acuerdo con la hora de su teléfono.",
             "Russian": "Уведомления созданы на основе выбранных вами категорий",
             "Italian": "Le notifiche sono create basandosi sulle categorie selezionate. Sono caricate una settimana nel futuro e impostate in base all'ora del tuo telefono.",
+            "Dutch": "Meldingen worden gemaakt op basis van de categorieën die u selecteert. Ze worden pas een week in de toekomst geladen en zijn ingesteld op basis van uw telefoontijd.",
             "Portuguese": "As notificações são criadas com base nas categorias selecionadas. Eles são carregados apenas uma semana no futuro e são configurados de acordo com o horário do seu telefone."
         },
         {
@@ -7054,6 +7196,7 @@
             "Spanish (US)": "Editar eventos",
             "Russian": "Править События",
             "Italian": "Modifica eventi",
+            "Dutch": "Evenementen bewerken",
             "Portuguese": "Editar Eventos"
         },
         {
@@ -7066,6 +7209,7 @@
             "Spanish (US)": "Notificaciones",
             "Russian": "Уведомления",
             "Italian": "Notifiche",
+            "Dutch": "Meldingen",
             "Portuguese": "Notificações"
         },
         {
@@ -7078,6 +7222,7 @@
             "Spanish (US)": "Esto habilitará o deshabilitará las notificaciones. Puedes seleccionar notificaciones de eventos en [Editar eventos] de la sección [Eventos] en la página de inicio.",
             "Russian": "Включает/Отключает уведомления. Вы можете выбрать уведомления событий под [Править События] в разделе [События] на домашней страничке.",
             "Italian": "Questa impostazione attiva/disattiva le notifiche. Puoi selezionare le notifiche per gli eventi sotto [Modifica Eventi] della sezione [Eventi] nella homepage.",
+            "Dutch": "Hiermee worden meldingen in-/uitgeschakeld. U kunt gebeurtenismeldingen selecteren onder [Evenementen bewerken] van het gedeelte [Evenementen] op de startpagina.",
             "Portuguese": "Isso habilitará desabilitará notificações. Você pode selecionar notificações de eventos em [Editar Eventos] da seção [Eventos] na página inicial."
         },
         {
@@ -7090,6 +7235,7 @@
             "Spanish (US)": "Notificaciones de la aplicación",
             "Russian": "Уведомления приложения",
             "Italian": "Notifiche app",
+            "Dutch": "App notificaties",
             "Portuguese": "Notificações aplicativo"
         },
         {
@@ -7102,6 +7248,7 @@
             "Spanish (US)": "Puedes seleccionar notificaciones de eventos en [Editar eventos] de la sección [Eventos] en la página de inicio.",
             "Russian": "Вы можете выбрать уведомления событий под [Править События] в разделе [События] на домашней страничке.",
             "Italian": "Puoi selezionare le notifiche per gli eventi sotto [Modifica Eventi] della sezione [Eventi] nella homepage.",
+            "Dutch": "U kunt gebeurtenismeldingen selecteren onder [Evenementen bewerken] van het gedeelte [Evenementen] op de startpagina.",
             "Portuguese": "Você pode selecionar notificações de eventos em [Editar Eventos] da seção [Eventos] na página inicial."
         },
         {
@@ -7114,6 +7261,7 @@
             "Spanish (US)": "Ver historial",
             "Russian": "Показать историю",
             "Italian": "Vedi Cronologia",
+            "Dutch": "Bekijk geschiedenis",
             "Portuguese": "Ver Histórico"
         },
         {
@@ -7126,6 +7274,7 @@
             "Spanish (US)": "Historial de visitantes",
             "Russian": "История посетителя",
             "Italian": "Cronologia visitatori",
+            "Dutch": "Bezoekersgeschiedenis",
             "Portuguese": "Histórico dos Visitantes"
         },
         {
@@ -7138,6 +7287,7 @@
             "Spanish (US)": "Visitantes",
             "Russian": "Посетители",
             "Italian": "Visitatori",
+            "Dutch": "Bezoekers",
             "Portuguese": "Visitantes"
         },
         {
@@ -7150,6 +7300,7 @@
             "Spanish (US)": "Borrar historial",
             "Russian": "Очистить историю",
             "Italian": "Pulisci cronologia",
+            "Dutch": "Geschiedenis wissen",
             "Portuguese": "Apagar Histórico"
         },
         {
@@ -7162,6 +7313,7 @@
             "Spanish (US)": "Semana de",
             "Russian": "Неделя",
             "Italian": "Settimana di",
+            "Dutch": "Week van",
             "Portuguese": "Semana de"
         },
         {
@@ -7174,6 +7326,7 @@
             "Spanish (US)": "Selecciona una fecha",
             "Russian": "Выбрать дату",
             "Italian": "Seleziona data",
+            "Dutch": "Selecteer een datum",
             "Portuguese": "Selecionar Data"
         },
         {
@@ -7186,6 +7339,7 @@
             "Spanish (US)": "Historial no disponible hasta que termine la semana",
             "Russian": "Истории пока нет, ждём конца недели.",
             "Italian": "Nessuna cronologia, la settimana non è ancora finita.",
+            "Dutch": "Nog geen geschiedenis, wachtend op het einde van de week.",
             "Portuguese": "Sem histórico ainda, esperando o fim da semana."
         },
         {
@@ -7198,6 +7352,7 @@
             "Spanish (US)": "Establecer hora de notificación",
             "Russian": "Установить время уведомлений",
             "Italian": "Imposta orario notifiche",
+            "Dutch": "Stel meldingstijd in",
             "Portuguese": "Definir Hora Notificação"
         },
         {
@@ -7210,6 +7365,7 @@
             "Spanish (US)": "Mobiliario y ropa de casa por defecto del vecino",
             "Russian": "Одежда жителя и мебель в доме по умолчанию",
             "Italian": "Arredamento e vestiario di default degli abitanti",
+            "Dutch": "Villager's standaard huismeubilair en kleding",
             "Portuguese": "Móveis e roupas padrão da casa do morador"
         },
         {
@@ -7222,6 +7378,7 @@
             "Spanish (US)": "Ver muebles",
             "Russian": "Показать мебель",
             "Italian": "Vedi arredamento",
+            "Dutch": "Bekijk Meubels",
             "Portuguese": "Exibir móveis"
         },
         {
@@ -7233,6 +7390,7 @@
             "Spanish": "Todos los vecinos (mientras picado por abejas)",
             "Russian": "Все жители (пока ужалены)",
             "Italian": "Tutti gli abitanti (quando punti)",
+            "Dutch": "Alle dorpelingen (terwijl gestoken)",
             "Portuguese": "Todos moradores (enquanto picados)"
         },
         {
@@ -7245,6 +7403,7 @@
             "Spanish (US)": "Cuarta mejora de la casa (habitación derecha)",
             "Russian": "4-ое улучшение дома (правая комната)",
             "Italian": "Aggiornamento quarta casa (stanza destra)",
+            "Dutch": "4e Huis Upgrade (Rechter Kamer)",
             "Portuguese": "4 º Upgrade da Casa (Quarto Direito)"
         },
         {
@@ -7257,6 +7416,7 @@
             "Spanish (US)": "Tercera mejora de la casa (habitación izquierda)",
             "Russian": "3-ье улучшение дома (левая комната)",
             "Italian": "Aggiornamento terza casa (stanza sinistra)",
+            "Dutch": "3e Huis Upgrade (Linker Kamer)",
             "Portuguese": "3ª Upgrade da  Casa (Quarto Esquerdo)"
         },
         {
@@ -7269,6 +7429,7 @@
             "Spanish (US)": "Quinta mejora de la casa ( segunda planta)",
             "Russian": "5-ое улучшение дома (второй этаж)",
             "Italian": "Aggiornamento seconda casa (secondo piano)",
+            "Dutch": "5e huisupgrade (2e verdieping)",
             "Portuguese": "Reforma da 5ª Casa (2º Andar)"
         },
         {
@@ -7281,6 +7442,7 @@
             "Spanish (US)": "Sacudir un árbol simple o un cedro",
             "Russian": "При тряске обычных деревьев или кедров",
             "Italian": "Scuotere un pino o un cedro",
+            "Dutch": "Een hardhout- of cederboom schudden",
             "Portuguese": "Sacudindo uma árvore hardwood ou cedar"
         },
         {
@@ -7293,6 +7455,7 @@
             "Spanish (US)": "En el río (en la cima)",
             "Russian": "Река (водопад)",
             "Italian": "Fiume (altura)",
+            "Dutch": "Rivier (klip)",
             "Portuguese": "Rio (penhasco)"
         },
         {
@@ -7305,6 +7468,7 @@
             "Spanish (US)": "En el mar (días lluviosos)",
             "Russian": "Море (в дождь)",
             "Italian": "Mare (giorni di pioggia)",
+            "Dutch": "Zee (regenachtige dagen)",
             "Portuguese": "Mar (dias chuvosos)"
         },
         {
@@ -7317,6 +7481,7 @@
             "Spanish (US)": "Desembocadura del río",
             "Russian": "Река (устье)",
             "Italian": "Fiume (inizio)",
+            "Dutch": "Riviermonding)",
             "Portuguese": "Rio (começo)"
         },
         {
@@ -7329,6 +7494,7 @@
             "Spanish (US)": "En árboles (cualquiera)",
             "Russian": "На деревьях (любых)",
             "Italian": "Sugli alberi (di ogni tipo)",
+            "Dutch": "Op bomen (alle soorten)",
             "Portuguese": "Em árvores (qualquer tipo)"
         },
         {
@@ -7341,6 +7507,7 @@
             "Spanish (US)": "Sacudir árboles (solo árbol simple o cedro)",
             "Russian": "При тряске обычных деревьев или кедров",
             "Italian": "Svuotendo gli alberi (solo cedro e pino)",
+            "Dutch": "Schudden van bomen (alleen hardhout of ceder)",
             "Portuguese": "Balançando as árvores (apenas hardwood ou cedar)"
         },
         {
@@ -7353,6 +7520,7 @@
             "Spanish (US)": "Empujando bolas de nieve",
             "Russian": "Толкая снежки",
             "Italian": "Spingendo le palle di neve",
+            "Dutch": "Sneeuwballen duwen",
             "Portuguese": "Empurrando bolas de neve"
         },
         {
@@ -7365,6 +7533,7 @@
             "Spanish (US)": "Volando cerca de la basura (botas, neumáticos, latas, bengalas de tubo usadas) o nabos podridos",
             "Russian": "Летают около мусора (ботинки, покрышки, банки, использованные фейерверки) или около гнилых репок",
             "Italian": "Volano vicino alla spazzatura (stivali, copertoni, fuochi d'artificio usati) o rape marce",
+            "Dutch": "Vliegen in de buurt van afval (laarzen, banden, blikjes, gebruikt fonteinvuurwerk) of rotte rapen",
             "Portuguese": "Voando perto do lixo (botas, pneus, latas, fogos de artifício usados) ou nabos podres"
         },
         {
@@ -7377,6 +7546,7 @@
             "Spanish (US)": "Subterráneo (excava donde el ruido es más fuerte)",
             "Russian": "Под землёй (копать там, где громче всего шум)",
             "Italian": "Sotto terra (scava dove il rumore è più forte)",
+            "Dutch": "Ondergronds (graven waar het geluid het hardst is)",
             "Portuguese": "Subterrâneo (cave onde o ruído é mais alto)"
         },
         {
@@ -7389,6 +7559,7 @@
             "Spanish (US)": "Cualquier tiempo",
             "Russian": "Любая погода",
             "Italian": "Con ogni condizione metereologica",
+            "Dutch": "Elk weer",
             "Portuguese": "Qualquer tempo"
         },
         {
@@ -7401,6 +7572,7 @@
             "Spanish (US)": "Solo lluvia",
             "Russian": "Только дождь",
             "Italian": "Solo con la pioggia",
+            "Dutch": "Alleen regen",
             "Portuguese": "Só chuva"
         },
         {
@@ -7413,6 +7585,7 @@
             "Spanish (US)": "Pequeño",
             "Russian": "Мелкая",
             "Italian": "Piccolo",
+            "Dutch": "Klein",
             "Portuguese": "Pequeno"
         },
         {
@@ -7425,6 +7598,7 @@
             "Spanish (US)": "Enorme",
             "Russian": "Самая большая",
             "Italian": "XX-Largo",
+            "Dutch": "XX-Groot",
             "Portuguese": "XX-Grande"
         },
         {
@@ -7437,6 +7611,7 @@
             "Spanish (US)": "Grande",
             "Russian": "Большая",
             "Italian": "Largo",
+            "Dutch": "Groot",
             "Portuguese": "Grande"
         },
         {
@@ -7449,6 +7624,7 @@
             "Spanish (US)": "Medio",
             "Russian": "Средняя",
             "Italian": "Medio",
+            "Dutch": "Medium",
             "Portuguese": "Médio"
         },
         {
@@ -7461,6 +7637,7 @@
             "Spanish (US)": "Muy pequeño",
             "Russian": "Очень мелкая",
             "Italian": "X-Piccolo",
+            "Dutch": "X-Small",
             "Portuguese": "X-Pequeno"
         },
         {
@@ -7473,6 +7650,7 @@
             "Spanish (US)": "Muy grande",
             "Russian": "Очень большая",
             "Italian": "X-Largo",
+            "Dutch": "X-Large",
             "Portuguese": "X-Grande"
         },
         {
@@ -7484,6 +7662,7 @@
             "Spanish": "Muy grande con aleta",
             "Russian": "Очень большая с плавником",
             "Italian": "X-Largo con Fin",
+            "Dutch": "X-Large met Fin",
             "Portuguese": "X-Grande w/Fin"
         },
         {
@@ -7496,6 +7675,7 @@
             "Spanish (US)": "Largo",
             "Russian": "Длинная",
             "Italian": "Lungo",
+            "Dutch": "Lang",
             "Portuguese": "Longo"
         },
         {
@@ -7508,6 +7688,7 @@
             "Spanish (US)": "Sombra",
             "Russian": "Тень",
             "Italian": "Ombra",
+            "Dutch": "Schaduw",
             "Portuguese": "Sombra"
         },
         {
@@ -7520,6 +7701,7 @@
             "Spanish (US)": "Velocidad de movimiento",
             "Russian": "Скорость передвижения",
             "Italian": "Velocità di movimento",
+            "Dutch": "Bewegingssnelheid",
             "Portuguese": "Velocidade de Movimento"
         },
         {
@@ -7532,6 +7714,7 @@
             "Spanish (US)": "Medio",
             "Russian": "Средняя",
             "Italian": "Medio",
+            "Dutch": "Medium",
             "Portuguese": "Médio"
         },
         {
@@ -7544,6 +7727,7 @@
             "Spanish (US)": "Parado",
             "Russian": "На месте",
             "Italian": "Fermo",
+            "Dutch": "Stationair",
             "Portuguese": "Parado"
         },
         {
@@ -7556,6 +7740,7 @@
             "Spanish (US)": "Lento",
             "Russian": "Медленная",
             "Italian": "Lento",
+            "Dutch": "Traag",
             "Portuguese": "Devagar"
         },
         {
@@ -7568,6 +7753,7 @@
             "Spanish (US)": "Muy lento",
             "Russian": "Очень медленная",
             "Italian": "Molto lento",
+            "Dutch": "Zeer langzaam",
             "Portuguese": "Muito devagar"
         },
         {
@@ -7580,6 +7766,7 @@
             "Spanish (US)": "Muy rápido",
             "Russian": "Очень быстрая",
             "Italian": "Molto veloce",
+            "Dutch": "Erg snel",
             "Portuguese": "Muito rápido"
         },
         {
@@ -7592,6 +7779,7 @@
             "Spanish (US)": "Rápido",
             "Russian": "Быстрая",
             "Italian": "Veloce",
+            "Dutch": "Snel",
             "Portuguese": "Rápido"
         },
         {
@@ -7604,6 +7792,7 @@
             "Spanish (US)": "Cocina",
             "Russian": "Кухня",
             "Italian": "Cucina",
+            "Dutch": "Keuken",
             "Portuguese": "Cozinha"
         },
         {
@@ -7616,6 +7805,7 @@
             "Spanish (US)": "Escuela",
             "Russian": "Школа",
             "Italian": "Scuola",
+            "Dutch": "School",
             "Portuguese": "Escola"
         },
         {
@@ -7628,6 +7818,7 @@
             "Spanish (US)": "Estudio",
             "Russian": "Обучение",
             "Italian": "Studio",
+            "Dutch": "Studie",
             "Portuguese": "Estudo"
         },
         {
@@ -7640,6 +7831,7 @@
             "Spanish (US)": "Personalidad",
             "Russian": "Личность",
             "Italian": "Personalità",
+            "Dutch": "Persoonlijkheid",
             "Portuguese": "Personalidade"
         },
         {
@@ -7652,6 +7844,7 @@
             "Spanish (US)": "Especies",
             "Russian": "Виды",
             "Italian": "Specie",
+            "Dutch": "Soort",
             "Portuguese": "Espécies"
         },
         {
@@ -7664,6 +7857,7 @@
             "Spanish (US)": "Puedes obtener estos objetos de este evento",
             "Russian": "Вы можете получить следующие предметы во время этого события",
             "Italian": "Puoi ottenere questi oggetti da questo evento",
+            "Dutch": "Je kunt deze items van dit evenement krijgen",
             "Portuguese": "Você pode obter esses itens neste evento"
         },
         {
@@ -7676,6 +7870,7 @@
             "Spanish (US)": "Puedes leer más sobre eventos y detalles específicos visitando la página guía",
             "Russian": "На страничке гида можно найти больше детальной информации о событиях.",
             "Italian": "Per leggere di più su eventi specifici e dettagli puoi visitare la pagina guida",
+            "Dutch": "U kunt meer lezen over specifieke evenementen en details door de gidspagina te bezoeken",
             "Portuguese": "Você pode ler mais sobre eventos e detalhes específicos visitando a página do guia"
         },
         {
@@ -7688,6 +7883,7 @@
             "Spanish (US)": "Pulsa aquí para leer sobre los eventos",
             "Russian": "Нажмите сюда, чтобы получить больше информации о событиях",
             "Italian": "Premi qui per saperne di più sugli eventi",
+            "Dutch": "Tik hier om over evenementen te lezen",
             "Portuguese": "Toque aqui para ler sobre eventos"
         },
         {
@@ -7700,6 +7896,7 @@
             "Spanish (US)": "Puedes leer más detalles sobre las flores y la hibridación visitando la página guía.",
             "Russian": "На страничке гида можно разузнать о разведении и скрещивании цветов",
             "Italian": "Per leggere di più su fiori e ibridazione puoi visitare la pagina guida",
+            "Dutch": "U kunt meer details over bloemen en veredeling lezen door naar de gidspagina te gaan",
             "Portuguese": "Você pode ler mais detalhes sobre flores e reprodução visitando a página do guia"
         },
         {
@@ -7712,6 +7909,7 @@
             "Spanish (US)": "Toca aquí para leer más sobre las flores y su hibridación",
             "Russian": "Нажмите сюда, чтобы разузнать о разведении и скрещивании цветов",
             "Italian": "Premi qui per saperne di più su fiori e ibridazione",
+            "Dutch": "Tik hier om meer te lezen over bloemen en veredeling",
             "Portuguese": "Toque aqui para ler mais sobre flores e reprodução"
         },
         {
@@ -7724,6 +7922,7 @@
             "Spanish (US)": "Puedes leer más sobre la nueva actualización del juego visitando la página guía.",
             "Russian": "На страничке гида можно узнать о последних обновлениях игры",
             "Italian": "Per leggere di più sui nuovi aggiornamenti puoi visitare la pagina guida",
+            "Dutch": "Je kunt meer lezen over de nieuwe game-update door de gidspagina te bezoeken",
             "Portuguese": "Você pode ler mais sobre a nova atualização do jogo visitando a página do guia"
         },
         {
@@ -7736,6 +7935,7 @@
             "Spanish (US)": "Pulsa aquí para ver las novedades de la nueva actualización",
             "Russian": "Нажмите сюда, чтобы узнать о последних обновлениях игры",
             "Italian": "Premi qui per saperne di più sul nuovo aggiornamento",
+            "Dutch": "Tik hier om over de nieuwe update te lezen",
             "Portuguese": "Toque aqui para ler sobre a nova atualização"
         },
         {
@@ -7748,6 +7948,7 @@
             "Spanish (US)": "Puedes leer más detalles sobre los regalos visitando la página guía",
             "Russian": "На страничке гида можно прочесть о подарках",
             "Italian": "Per leggere di più sui regali puoi visitare la pagina guida",
+            "Dutch": "U kunt meer details over geschenken lezen door naar de gidspagina te gaan",
             "Portuguese": "Você pode ler mais detalhes sobre presentes visitando a página do guia"
         },
         {
@@ -7760,6 +7961,7 @@
             "Spanish (US)": "Toca aquí para leer más sobre los regalos",
             "Russian": "Нажмите сюда, чтобы узнать больше о подарках",
             "Italian": "Premi qui per saperne di più sui regali",
+            "Dutch": "Tik hier om meer te lezen over cadeaus geven",
             "Portuguese": "Toque aqui para ler mais sobre presentes"
         },
         {
@@ -7772,6 +7974,7 @@
             "Spanish (US)": "Mostrar marcas de verificación vacías",
             "Russian": "Показать пустые ячейки (без галочек)",
             "Italian": "Mostra le caselle vuote",
+            "Dutch": "Lege vinkjes weergeven",
             "Portuguese": "Mostrar caixas de verificação vazias"
         },
         {
@@ -7784,6 +7987,7 @@
             "Spanish (US)": "Muestra una marca de verificación vacía en las listas. Se puede tocar para marcar rápidamente el elemento. Deshabilitar esto puede aumentar el rendimiento, ya que se necesitan renderizar menos animaciones.",
             "Russian": "Показать пустые ячейки (без галочек) в списках. Включение функции позволит вам отмечать галочкой новые объекты в списке. Отключение этой функции ускорит работу приложения.",
             "Italian": "Mostra le caselle vuote in lista. Possono essere premute per selezionare l'oggetto. Disabilitare l'opzione può aumentare la performance app poichè meno animazioni devono essere renderizzate.",
+            "Dutch": "Toon een leeg vinkje in lijsten. Kan worden aangetikt om het item snel af te vinken. Als u dit uitschakelt, kunnen de prestaties verbeteren, omdat er minder animaties hoeven te worden weergegeven.",
             "Portuguese": "Mostra uma marca de verificação vazia nas listas. Pode ser tocado para marcar rapidamente o item. Desativar isso pode aumentar o desempenho, pois menos animações precisam ser renderizadas."
         },
         {
@@ -7796,6 +8000,7 @@
             "Spanish (US)": "Puedes leer más detalles sobre los visitantes NPC visitando la página guía",
             "Russian": "На страничке гида вы можете прочесть про NPC, посещающих остров. Иконка с часами показывается напротив тех NPC, которые уже посетили ваш остров на этой неделе.",
             "Italian": "Per leggere di più sui visitatori NPC visitando la pagina guida. L'icona dell'orologio mostra che l'NPC ha già visitato l'isola la scorsa settimana.",
+            "Dutch": "U kunt meer details over NPC-bezoekers lezen door naar de gidspagina te gaan. Het tijdpictogram geeft aan dat de NPC vorige week is langs geweest.",
             "Portuguese": "Você pode ler mais detalhes sobre os visitantes NPC visitando a página do guia. O ícone de tempo mostra que o NPC o visitou na semana passada."
         },
         {
@@ -7808,6 +8013,7 @@
             "Spanish (US)": "Toca aquí para leer más sobre los visitantes NPC",
             "Russian": "Нажмите сюда, чтобы узнать больше про NPC, посещающих остров.",
             "Italian": "Premi qui per saperne di più sui visitatori NPC.",
+            "Dutch": "Tik hier om meer te lezen over NPC-bezoekers",
             "Portuguese": "Toque aqui para ler mais sobre visitantes NPC"
         },
         {
@@ -7820,6 +8026,7 @@
             "Spanish (US)": "Copos de nieve",
             "Russian": "Снежные хлопья",
             "Italian": "Fiocchi di neve",
+            "Dutch": "Sneeuwvlokken",
             "Portuguese": "Flocos de neve"
         },
         {
@@ -7832,6 +8039,7 @@
             "Spanish (US)": "Dia de San Valentín (Telenook)",
             "Russian": "День Святого Валентина (Шоппинг Нука)",
             "Italian": "Giorno di San Valentino (Nook Shopping)",
+            "Dutch": "Valentijnsdag (Nook Shopping)",
             "Portuguese": "Dia dos Namorados (Nook Shopping)"
         },
         {
@@ -7844,6 +8052,7 @@
             "Spanish (US)": "Dia de la Madre",
             "Russian": "День Матери",
             "Italian": "Festa della mamma",
+            "Dutch": "Moederdag",
             "Portuguese": "Dia das Mães"
         },
         {
@@ -7856,6 +8065,7 @@
             "Spanish (US)": "No a la venta",
             "Russian": "NFS",
             "Italian": "NFS",
+            "Dutch": "NFS",
             "Portuguese": "NFS"
         },
         {
@@ -7868,6 +8078,7 @@
             "Spanish (US)": "Tamaño",
             "Russian": "Размер",
             "Italian": "Misura",
+            "Dutch": "Maat",
             "Portuguese": "Tamanho"
         },
         {
@@ -7880,6 +8091,7 @@
             "Spanish (US)": "Ordena las criaturas según la Critterpedia",
             "Russian": "Отсортировать существа на основании Critterpedia",
             "Italian": "Ordina creature dalla Critterpedia",
+            "Dutch": "Sorteer wezens op basis van Critterpedia",
             "Portuguese": "Classifique as criaturas com base na Critterpedia"
         },
         {
@@ -7892,6 +8104,7 @@
             "Spanish (US)": "Ordena las criaturas de la misma manera que se ordenan en la Critterpedia. Esto se aplica a la página Criaturas y Museo.",
             "Russian": "Отсортировать существа по принципу Critterpedia. Это касается как страницу Существа, так и страницу Музея",
             "Italian": "Ordina creature nello stesso modo in cui sono ordinate nella Critterpedia. Si applica alla pagina Creature + Museo.",
+            "Dutch": "Sorteer wezens op dezelfde manier als ze zijn gesorteerd in de Critterpedia. Dit geldt voor de pagina Creatures + Museum.",
             "Portuguese": "Classifique as criaturas da mesma maneira que são classificadas na Critterpedia. Isso se aplica à página Criaturas + Museu."
         },
         {
@@ -7904,6 +8117,7 @@
             "Spanish (US)": "Encontrar botella con proyecto.",
             "Russian": "Найти бутылку с инструкцией",
             "Italian": "Trova Ricetta in bottiglia",
+            "Dutch": "Vind doe-het-zelf-fles",
             "Portuguese": "Encontrar garrafa DIY"
         },
         {
@@ -7916,6 +8130,7 @@
             "Spanish (US)": "Compatibilidad entre vecinos",
             "Russian": "Совместимость жителей",
             "Italian": "Compatibilità Abitanti",
+            "Dutch": "Compatibiliteit met dorpelingen",
             "Portuguese": "Compatibilidade Morador"
         },
         {
@@ -7928,6 +8143,7 @@
             "Spanish (US)": "Todavía no se ha demostrado que esto sea cierto en ACNH, es una característica de los juegos más antiguos. Utilízalo sólo como referencia, ya que puede que no afecte a la jugabilidad. Los tipos de conversaciones de los vecinos pueden basarse en sus personalidades. Sólo se comparan los 15 primeros vecinos favoritos.",
             "Russian": "Точность этого функционала не была доказана в ACNH, этот функционал взят из старых игр. Используйте его только в качестве отсылки, так как это может не влиять на игровой процесс.Типы разговоров жителей могут основываться на их личностях. Всего сравнивается первые 15 избранных жителей.",
             "Italian": "Non è stato ancora confermato in ACNH, ed è una feature dei giochi precedenti. Usa questa impostazione come riferimento, potendo non impattare il gioco. I tipi di conversazione degli abitanti potrebbero essere basati sulle loro personalità. Solo i primi 15 abitanti preferiti sono paragonati.",
+            "Dutch": "Dit is nog niet bewezen juist in ACNH en is een functie van oudere games. Gebruik het alleen als referentie, omdat het geen invloed heeft op de gameplay. De soorten gesprekken van dorpelingen kunnen gebaseerd zijn op hun persoonlijkheden. Alleen de eerste 15 favoriete dorpsbewoners worden vergeleken.",
             "Portuguese": "Isso ainda não foi provado ser preciso no ACNH e é um recurso de jogos mais antigos. Use apenas como referência, pois não pode afetar a jogabilidade. Os tipos de conversa dos moradores podem ser baseados em suas personalidades. Apenas os primeiros 15 aldeões favoritos são comparados."
         },
         {
@@ -7940,6 +8156,7 @@
             "Spanish (US)": "Haz clic aquí para ver cómo se calcula la compatibilidad",
             "Russian": "Нажмите здесь, чтобы увидеть расчёт совместимости",
             "Italian": "Premi qui per saperne di più su come la compatibilità viene calcolata",
+            "Dutch": "Tik hier om te zien hoe de compatibiliteit wordt berekend",
             "Portuguese": "Toque aqui para ver como a compatibilidade é calculada"
         },
         {
@@ -7952,6 +8169,7 @@
             "Spanish (US)": "Amigable",
             "Russian": "Дружные",
             "Italian": "Vanno d'accordo",
+            "Dutch": "Kunnen opschieten",
             "Portuguese": "Se da bem"
         },
         {
@@ -7964,6 +8182,7 @@
             "Spanish (US)": "Neutro",
             "Russian": "Нейтральные",
             "Italian": "Neutrale",
+            "Dutch": "Neutrale",
             "Portuguese": "Neutro"
         },
         {
@@ -7976,6 +8195,7 @@
             "Spanish (US)": "Ocasionalmente",
             "Russian": "Изредка спорят",
             "Italian": "Occasionale",
+            "Dutch": "Zo nu en dan",
             "Portuguese": "Ocasionalmente"
         },
         {
@@ -7988,6 +8208,7 @@
             "Spanish (US)": "Conflicto",
             "Russian": "Ссорятся",
             "Italian": "Conflitto",
+            "Dutch": "Conflict",
             "Portuguese": "Conflito"
         },
         {
@@ -8000,6 +8221,7 @@
             "Spanish (US)": "No hay pruebas de que esto sea cierto en ACNH, es una característica de juegos anteriores. ",
             "Russian": "Точность этого функционала не была доказана в ACNH, этот функционал взят из старых игр. Постарайтесь не полагаться на эту информацию.",
             "Italian": "Non é stato ancora approvato come vero in ACNH, ed é un opzione dei giochi precedenti. Riferircisi con cautela.",
+            "Dutch": "Dit is nog NIET bewezen juist te zijn in ACNH, en is een functie van oudere games. Verwijs met de nodige voorzichtigheid.",
             "Portuguese": "Isso ainda NÃO foi provado ser preciso no ACNH e é um recurso de jogos mais antigos. Faça referência com cuidado."
         },
         {
@@ -8012,6 +8234,7 @@
             "Spanish (US)": "Puedes leer más sobre los vecinos leyendo la página de vecinos de la guia",
             "Russian": "Вы можете разузнать больше о гостящих жителях на страничке гида",
             "Italian": "Per leggere di pié sugli abitanti visitando la pagina guida degli abitanti",
+            "Dutch": "U kunt meer details over dorpelingen lezen door de dorpsgidspagina te bezoeken",
             "Portuguese": "Você pode ler mais detalhes sobre os moradores visitando a página do guia dos moradores"
         },
         {
@@ -8024,6 +8247,7 @@
             "Spanish (US)": "Haz clic aquí para leer más sobre los vecinos",
             "Russian": "Нажмите здесь, чтобы разузнать больше о жителях",
             "Italian": "Premi qui per saperne di piú sugli abitanti",
+            "Dutch": "Tik hier om meer te lezen over dorpelingen",
             "Portuguese": "Toque aqui para ler mais sobre os moradores"
         },
         {
@@ -8036,6 +8260,7 @@
             "Spanish (US)": "Haz clic en [?] en la esquina superior derecha para más información.",
             "Russian": "Нажмите на \"?\" в верхнем правом углу для дополнительной информации.",
             "Italian": "Premi [?] nell'angolo in alto a destra per maggiori informazioni",
+            "Dutch": "Tik op de [?] in de rechterbovenhoek voor meer informatie.",
             "Portuguese": "Toque em [?] no canto superior direito para obter mais informações."
         },
         {
@@ -8048,6 +8273,7 @@
             "Spanish (US)": "Haz clic en [i] en la esquina superior derecha para más información.",
             "Russian": "Нажмите на \"i\" в верхнем правом углу для дополнительной информации.",
             "Italian": "Premi [i] nell'angolo in alto a destra per maggiori informazioni",
+            "Dutch": "Tik op de [i] in de rechterbovenhoek voor meer informatie.",
             "Portuguese": "Toque no [i] no canto superior direito para obter mais informações."
         },
         {
@@ -8060,6 +8286,7 @@
             "Spanish (US)": "Limpiar precios",
             "Russian": "Очистить цены",
             "Italian": "Azzera prezzi",
+            "Dutch": "Prijzen wissen",
             "Portuguese": "Limpar Preços "
         },
         {
@@ -8072,6 +8299,7 @@
             "Spanish (US)": "¿Estás seguro de que quieres limpiar los precios de nabos?",
             "Russian": "Вы уверены, что хотите очистить ваши цены на репку?",
             "Italian": "Sei sicuro di voler azzerare i prezzi delle rape?",
+            "Dutch": "Weet u zeker dat u uw raapprijzen wilt wissen?",
             "Portuguese": "Tem certeza de que deseja limpar seus preços de turnips?"
         },
         {
@@ -8084,6 +8312,7 @@
             "Spanish (US)": "Comprimir las variaciones en una lista desplegable",
             "Russian": "Сжать вариации в прокручиваемый список",
             "Italian": "Comprimi le variazioni in una lista scorrevole",
+            "Dutch": "Comprimeer variaties in een schuifbare lijst",
             "Portuguese": "Compactar variações em uma lista rolável"
         },
         {
@@ -8096,6 +8325,7 @@
             "Spanish (US)": "La forma en que funcionan los gestos puede no permitir el desplazamiento dentro de una casilla emergente. Desactiva esto para poder ver todas las variaciones sin necesidad de un desplazamiento anidado.",
             "Russian": "Прокрутка текста внутри всплывающих окон может не работать. Отключение этой функции позволит увидеть содержимое всплывающих окон целиком. ",
             "Italian": "Le gestures potrebbero impedire il corretto funzionamento dello scorrimento allínterno di un popup. Disabilita questa opzione per vedere tutte le variazioni senza scorrimento.",
+            "Dutch": "De manier waarop gebaren werken, staat het scrollen in een pop-upcontainer mogelijk niet toe. Schakel dit uit om alle variaties te kunnen zien zonder dat een geneste scroll nodig is.",
             "Portuguese": "Da forma como os gestos funcionam, eles podem não permitir a rolagem dentro de um contêiner pop-up. Desative isso para ver todas as variações sem a necessidade de um pergaminho aninhado."
         },
         {
@@ -8108,6 +8338,7 @@
             "Spanish (US)": "Nota: Si esto ha importado 0 entradas, por favor, vuelva a comprobar que ha copiado el contenido correcto creado desde el portapapeles.",
             "Russian": "Примечание: если не было импортировано ни одной записи, пожалуйста, проверьте правильность входных данных, в том числе и скопированных. ",
             "Italian": "Nota: Se ha importato 0 dati, controlla di aver copiato il corretto contenuto creato dall'esportazione negli appunti.",
+            "Dutch": "Opmerking: als dit 0 gehelen heeft geïmporteerd, controleer dan nogmaals of u de juiste inhoud hebt gekopieerd die is gemaakt van het exporteren naar het klembord.",
             "Portuguese": "Nota: Se 0 entradas importadas, verifique se você copiou o conteúdo correto criado a partir da exportação para a área de transferência."
         },
         {
@@ -8120,6 +8351,7 @@
             "Spanish (US)": "Importar desde el portapapeles",
             "Russian": "Импортировать данные из хранилища",
             "Italian": "Importa dati da Appunti.",
+            "Dutch": "Gegevens importeren van klembord",
             "Portuguese": "Importar Dados da Área de Transferência"
         },
         {
@@ -8132,6 +8364,7 @@
             "Spanish (US)": "Exportar al portapapeles",
             "Russian": "Экспортировать данные в хранилище",
             "Italian": "Esporta dati su Appunti",
+            "Dutch": "Gegevens exporteren naar klembord",
             "Portuguese": "Exportar Dados da Área de Transferência"
         },
         {
@@ -8144,6 +8377,7 @@
             "Spanish (US)": "Se ha copiado a tu portapapeles",
             "Russian": "Скопировано в буфер обмена",
             "Italian": "I dati sono stati copiati su Appunti",
+            "Dutch": "Gegevens worden naar uw klembord gekopieerd",
             "Portuguese": "Os dados foram copiados para a sua área de transferência"
         },
         {
@@ -8156,6 +8390,7 @@
             "Spanish (US)": "Pégalo en un lugar seguro",
             "Russian": "Вставить в безопасное место",
             "Italian": "Incolla in un posto sicuro",
+            "Dutch": "Plak het ergens veilig",
             "Portuguese": "Cole em algum lugar seguro"
         },
         {
@@ -8168,6 +8403,7 @@
             "Spanish (US)": "Ocurrió un error, elija otra carpeta e intente nuevamente.",
             "Russian": "Произошла ошибка. Выберите другую папку и повторите ещё раз. ",
             "Italian": "Si è verificato un errore, scegli un'altra cartella e riprova.",
+            "Dutch": "Er is een fout opgetreden, kies een andere map en probeer het opnieuw.",
             "Portuguese": "Ocorreu um erro, escolha outra pasta e tente novamente."
         },
         {
@@ -8180,6 +8416,7 @@
             "Spanish (US)": "La hora se muestra en rojo si las criaturas no pueden ser atrapadas en el mes actual.",
             "Russian": "Время подсвечивается красным цветом, если существо не может быть поймано в текущем месяце",
             "Italian": "L'ora è mostrata in rosso se la creatura non può essere catturata nel mese corrente.",
+            "Dutch": "De tijd wordt in het rood weergegeven als het wezen in de huidige maand niet kan worden gevangen.",
             "Portuguese": "O tempo é exibido em vermelho se a criatura não puder ser capturada no mês atual."
         },
         {
@@ -8192,6 +8429,7 @@
             "Spanish (US)": "El fondo es rojo si este es el último mes en el que puedes atrapar a esta criatura antes de tener que esperar de nuevo.",
             "Russian": "Фон становится красным, если данное существо пропадёт в следующем месяце",
             "Italian": "Lo sfondo è rosso se questo è l'ultimo mese in cui potrai catturare questa creatura, prima di dover aspettare ancora.",
+            "Dutch": "De achtergrond is rood als dit de laatste maand is dat je dit wezen kunt vangen voordat je weer moet wachten.",
             "Portuguese": "O fundo é vermelho se este for o último mês em que você conseguiu capturar esta criatura antes de precisar esperar novamente."
         },
         {
@@ -8204,6 +8442,7 @@
             "Spanish (US)": "Artículos del hogar",
             "Russian": "Домашняя утварь",
             "Italian": "Articoli per la casa",
+            "Dutch": "Huishoudelijke artikelen",
             "Portuguese": "Utilidades domésticas"
         },
         {
@@ -8216,6 +8455,7 @@
             "Spanish (US)": "Misceláneo",
             "Russian": "Разное",
             "Italian": "Miscellanea",
+            "Dutch": "Diversen",
             "Portuguese": "Diversos"
         },
         {
@@ -8228,6 +8468,7 @@
             "Spanish (US)": "Colocar en la pared",
             "Russian": "Настенное",
             "Italian": "A muro",
+            "Dutch": "Op de muur gemonteerd",
             "Portuguese": "Montado na parede"
         },
         {
@@ -8240,6 +8481,7 @@
             "Spanish (US)": "Fotos",
             "Russian": "Фотографии",
             "Italian": "Foto",
+            "Dutch": "Foto's",
             "Portuguese": "Fotos"
         },
         {
@@ -8252,6 +8494,7 @@
             "Spanish (US)": "Pósters",
             "Russian": "Плакаты",
             "Italian": "Posters",
+            "Dutch": "Affiches",
             "Portuguese": "Pôsteres"
         },
         {
@@ -8264,6 +8507,7 @@
             "Spanish (US)": "Accesorios para la cabeza",
             "Russian": "Головные уборы",
             "Italian": "Cappelli",
+            "Dutch": "hoofddeksels",
             "Portuguese": "Chapéu"
         },
         {
@@ -8276,6 +8520,7 @@
             "Spanish (US)": "Accesorios",
             "Russian": "Аксессуары",
             "Italian": "Accessori",
+            "Dutch": "Accessoires",
             "Portuguese": "Acessórios"
         },
         {
@@ -8288,6 +8533,7 @@
             "Spanish (US)": "Mitad superior",
             "Russian": "Верхняя часть одежды",
             "Italian": "Top",
+            "Dutch": "Topjes",
             "Portuguese": "Tops"
         },
         {
@@ -8300,6 +8546,7 @@
             "Spanish (US)": "Cuerpo completo",
             "Russian": "Наряд",
             "Italian": "Travestimento",
+            "Dutch": "Aankleden",
             "Portuguese": "Vestir"
         },
         {
@@ -8312,6 +8559,7 @@
             "Spanish (US)": "Otras prendas",
             "Russian": "Прочая одежда",
             "Italian": "Altro abbigliamento",
+            "Dutch": "Kleding Overig",
             "Portuguese": "Outras roupas"
         },
         {
@@ -8324,6 +8572,7 @@
             "Spanish (US)": "Mitad inferior",
             "Russian": "Нижняя часть одежды",
             "Italian": "Parte inferiore",
+            "Dutch": "Bodems",
             "Portuguese": "Partes inferiores"
         },
         {
@@ -8336,6 +8585,7 @@
             "Spanish (US)": "Calcetines",
             "Russian": "Носки",
             "Italian": "Calzini",
+            "Dutch": "Sokken",
             "Portuguese": "Meias"
         },
         {
@@ -8348,6 +8598,7 @@
             "Spanish (US)": "Zapatos",
             "Russian": "Обувь",
             "Italian": "Scarpe",
+            "Dutch": "Schoenen",
             "Portuguese": "Sapato"
         },
         {
@@ -8360,6 +8611,7 @@
             "Spanish (US)": "Bolsos",
             "Russian": "Сумки",
             "Italian": "Borse",
+            "Dutch": "Tassen",
             "Portuguese": "Bolsas"
         },
         {
@@ -8372,6 +8624,7 @@
             "Spanish (US)": "Paraguas",
             "Russian": "Зонты",
             "Italian": "Ombrelli",
+            "Dutch": "Paraplu's",
             "Portuguese": "Guarda-chuva"
         },
         {
@@ -8384,6 +8637,7 @@
             "Spanish (US)": "Pisos",
             "Russian": "Полы",
             "Italian": "Pavimenti",
+            "Dutch": "vloeren",
             "Portuguese": "Piso"
         },
         {
@@ -8396,6 +8650,7 @@
             "Spanish (US)": "Alfombras",
             "Russian": "Коврики",
             "Italian": "Tappeti",
+            "Dutch": "Tapijten",
             "Portuguese": "Tapete"
         },
         {
@@ -8408,6 +8663,7 @@
             "Spanish (US)": "Paredes",
             "Russian": "Обои",
             "Italian": "Carta da parati",
+            "Dutch": "Behang",
             "Portuguese": "Papel de parede"
         },
         {
@@ -8420,6 +8676,7 @@
             "Spanish (US)": "Insectos",
             "Russian": "Насекомые",
             "Italian": "Insett",
+            "Dutch": "insecten",
             "Portuguese": "Insetos"
         },
         {
@@ -8432,6 +8689,7 @@
             "Spanish (US)": "Vallas",
             "Russian": "Ограждения",
             "Italian": "Recinzioni",
+            "Dutch": "schermen",
             "Portuguese": "Cercas"
         },
         {
@@ -8444,6 +8702,7 @@
             "Spanish (US)": "Otros",
             "Russian": "Другое",
             "Italian": "Altro ",
+            "Dutch": "Ander",
             "Portuguese": "Outros"
         },
         {
@@ -8456,6 +8715,7 @@
             "Spanish (US)": "Cerrar",
             "Russian": "Закрыть",
             "Italian": "Chiudere",
+            "Dutch": "Dichtbij",
             "Portuguese": "Fechar"
         },
         {
@@ -8468,6 +8728,7 @@
             "Spanish (US)": "Dejar una propina?",
             "Russian": "Оставить отзыв?",
             "Italian": "Lasceresti una donazione?",
+            "Dutch": "Laat een fooi achter?",
             "Portuguese": "Deixe uma dica?"
         },
         {
@@ -8480,6 +8741,7 @@
             "Spanish (US)": "Si te gusta esta aplicación considera apoyarla haciendo clic aquí",
             "Russian": "Понравилось приложение? Поддержи проект нажав здесь",
             "Italian": "Se ti piace l'app, considera di supportarci premendo qui",
+            "Dutch": "Als je deze app leuk vindt, overweeg dan om deze te ondersteunen door hier te tikken",
             "Portuguese": "Se você gosta deste aplicativo, considere apoiá-lo tocando aqui"
         },
         {
@@ -8492,6 +8754,7 @@
             "Spanish (US)": "Deja una propina",
             "Russian": "Оставить отзыв",
             "Italian": "Lascia una donazione",
+            "Dutch": "Geef een fooi",
             "Portuguese": "Dê uma dica"
         },
         {
@@ -8504,6 +8767,7 @@
             "Spanish (US)": "Seleccionar filtros",
             "Russian": "Выбрать фильтры",
             "Italian": "Seleziona filtri",
+            "Dutch": "Selecteer filters",
             "Portuguese": "Selecione Filtros"
         },
         {
@@ -8516,6 +8780,7 @@
             "Spanish (US)": "Confirmar",
             "Russian": "Подтвердить",
             "Italian": "Conferma",
+            "Dutch": "Bevestigen",
             "Portuguese": "Confirme"
         },
         {
@@ -8528,6 +8793,7 @@
             "Spanish (US)": "Coleccionado/No coleccionado",
             "Russian": "В коллекции/Не в коллекции",
             "Italian": "Collezionato/Non Collezionato",
+            "Dutch": "Verzameld/niet verzameld",
             "Portuguese": "Coletados/Não Coletados"
         },
         {
@@ -8540,6 +8806,7 @@
             "Spanish (US)": "Tipos de categorías",
             "Russian": "Категории",
             "Italian": "Tipo di categorie",
+            "Dutch": "Type categorieën",
             "Portuguese": "Tipo de Categorias"
         },
         {
@@ -8552,6 +8819,7 @@
             "Spanish (US)": "Filtro de variaciones de objetos no construíbles",
             "Russian": "Фильтр неизготавливаемых предметов",
             "Italian": "Filtro per le variazioni non costruibili",
+            "Dutch": "Filter voor niet-bewerkbare itemvariaties",
             "Portuguese": "Filtro de Variações de Itens Não Construtiveis"
         },
         {
@@ -8564,6 +8832,7 @@
             "Spanish (US)": "Filtros de tiempo activos",
             "Russian": "Фильтр активностей",
             "Italian": "Attiva filtri tempo",
+            "Dutch": "Actieve tijden-filters",
             "Portuguese": "Filtros de Tempos Ativos"
         },
         {
@@ -8576,6 +8845,7 @@
             "Spanish (US)": "Perfiles/Islas",
             "Russian": "Профили/Острова",
             "Italian": "Profili/Isole",
+            "Dutch": "Profielen/eilanden",
             "Portuguese": "Perfis/Ilhas"
         },
         {
@@ -8588,6 +8858,7 @@
             "Spanish (US)": "Perfiles",
             "Russian": "Профили",
             "Italian": "Profili",
+            "Dutch": "Profielen",
             "Portuguese": "Profiles"
         },
         {
@@ -8600,6 +8871,7 @@
             "Spanish (US)": "Los perfiles te permiten tener varias islas/usuarios diferentes para hacer un seguimiento de diferentes cosas. Carga un perfil para cargar los ajustes y la colección guardados actualmente.",
             "Russian": "Профили позволяют вам хранить несколько островов/пользователей для их отслеживания. Загрузите профиль чтобы внести текущие сохраненные настройки и коллекции",
             "Italian": "I profili ti permettono di avere più isole/utenti per tenere traccia di cose differenti. Carica un profilo per caricare le impostazioni correnti salvate e la corrispettiva collezione.",
+            "Dutch": "Met profielen kunt u meerdere verschillende eilanden/gebruikers hebben om verschillende dingen te volgen. Laad een profiel om de huidige opgeslagen instellingen en verzameling te laden.",
             "Portuguese": "Os perfis permitem que você tenha várias ilhas / usuários diferentes para marcar coisas diferentes. Carregue um perfil para carregar as configurações e coleção salvas no momento."
         },
         {
@@ -8612,6 +8884,7 @@
             "Spanish (US)": "Cargar perfil",
             "Russian": "Загрузить профиль",
             "Italian": "Carica profilo",
+            "Dutch": "Laad profiel",
             "Portuguese": "Carregar perfil"
         },
         {
@@ -8624,6 +8897,7 @@
             "Spanish (US)": "Principal",
             "Russian": "Главная",
             "Italian": "Principale",
+            "Dutch": "Hoofd",
             "Portuguese": "Principal"
         },
         {
@@ -8636,6 +8910,7 @@
             "Spanish (US)": "Perfil 1",
             "Russian": "Профиль 1",
             "Italian": "Profilo 1",
+            "Dutch": "Profiel 1",
             "Portuguese": "Perfil 1"
         },
         {
@@ -8648,6 +8923,7 @@
             "Spanish (US)": "Perfil 2",
             "Russian": "Профиль 2",
             "Italian": "Profilo 2",
+            "Dutch": "Profiel 2",
             "Portuguese": "Perfil 2"
         },
         {
@@ -8660,6 +8936,7 @@
             "Spanish (US)": "Perfil 3",
             "Russian": "Профиль 3",
             "Italian": "Profilo 3",
+            "Dutch": "Profiel 3",
             "Portuguese": "Perfil 3"
         },
         {
@@ -8672,6 +8949,7 @@
             "Spanish (US)": "Perfil 4",
             "Russian": "Профиль 4",
             "Italian": "Profilo 4",
+            "Dutch": "Profiel 4",
             "Portuguese": "Perfil 4"
         },
         {
@@ -8684,6 +8962,7 @@
             "Spanish (US)": "Añadir hipoteca",
             "Russian": "Добавить займ",
             "Italian": "Aggiungi mutuo",
+            "Dutch": "Lening toevoegen",
             "Portuguese": "Add Empréstimo a Pagar"
         },
         {
@@ -8696,6 +8975,7 @@
             "Spanish (US)": "Nombre de la hipoteca",
             "Russian": "Название займа",
             "Italian": "Nome mutuo",
+            "Dutch": "lening naam",
             "Portuguese": "Nome do Empréstimo"
         },
         {
@@ -8708,6 +8988,7 @@
             "Spanish (US)": "Coste total",
             "Russian": "Итоговая стоимость",
             "Italian": "Costo totale",
+            "Dutch": "Totale prijs",
             "Portuguese": "Custo total"
         },
         {
@@ -8720,6 +9001,7 @@
             "Spanish (US)": "Bayas restantes",
             "Russian": "диней осталось",
             "Italian": "Stelline rimanenti",
+            "Dutch": "klokken over",
             "Portuguese": "bells restantes"
         },
         {
@@ -8732,6 +9014,7 @@
             "Spanish (US)": "Pagar",
             "Russian": "Оплатить",
             "Italian": "Paga",
+            "Dutch": "Betalen",
             "Portuguese": "Pagar"
         },
         {
@@ -8744,6 +9027,7 @@
             "Spanish (US)": "Editar",
             "Russian": "Изменить",
             "Italian": "Modifica",
+            "Dutch": "Bewerking",
             "Portuguese": "Editar"
         },
         {
@@ -8756,6 +9040,7 @@
             "Spanish (US)": "Editar páginas",
             "Russian": "Редактировать страницу",
             "Italian": "Modifica Pagine",
+            "Dutch": "Pagina's bewerken",
             "Portuguese": "Editar Páginas "
         },
         {
@@ -8768,6 +9053,7 @@
             "Spanish (US)": "Deshabilitar editar páginas",
             "Russian": "Завершить редактирование",
             "Italian": "Disabilita Modifica pagine",
+            "Dutch": "Pagina's bewerken uitschakelen",
             "Portuguese": "Desabilitar Editar Páginas"
         },
         {
@@ -8780,6 +9066,7 @@
             "Spanish (US)": "Información del insulano",
             "Russian": "Информация о островитянине",
             "Italian": "Informazioni isolano",
+            "Dutch": "Informatie over eilandbewoners",
             "Portuguese": "Informações Habitante"
         },
         {
@@ -8792,6 +9079,7 @@
             "Spanish (US)": "Seleccionar icono",
             "Russian": "Выбрать иконку",
             "Italian": "Seleziona icona",
+            "Dutch": "Selecteer Icoon",
             "Portuguese": "Selecione Icone"
         },
         {
@@ -8804,6 +9092,7 @@
             "Spanish (US)": "Imagen personalizada",
             "Russian": "Пользовательская иконка",
             "Italian": "Immagine personalizzata",
+            "Dutch": "Aangepaste afbeelding",
             "Portuguese": "Imagem Personalizada"
         },
         {
@@ -8816,6 +9105,7 @@
             "Spanish (US)": "Tarjetas amiibo",
             "Russian": "Карточки Amiibo",
             "Italian": "Carte amiibo",
+            "Dutch": "Amiibo-kaarten",
             "Portuguese": "Cartas Amiibo"
         },
         {
@@ -8828,6 +9118,7 @@
             "Spanish (US)": "Bandera de mano",
             "Russian": "Жесты рукой",
             "Italian": "Segno con la mano",
+            "Dutch": "Handteken",
             "Portuguese": "Sinal de Mão"
         },
         {
@@ -8840,6 +9131,7 @@
             "Spanish (US)": "Piedra",
             "Russian": "Камень",
             "Italian": "Sasso",
+            "Dutch": "Steen",
             "Portuguese": "Pedra"
         },
         {
@@ -8852,6 +9144,7 @@
             "Spanish (US)": "Papel",
             "Russian": "Бумага",
             "Italian": "Carta ",
+            "Dutch": "Papier",
             "Portuguese": "Papel"
         },
         {
@@ -8864,6 +9157,7 @@
             "Spanish (US)": "Tijeras",
             "Russian": "Ножницы",
             "Italian": "Forbici",
+            "Dutch": "Schaar",
             "Portuguese": "Tesoura"
         },
         {
@@ -8876,6 +9170,7 @@
             "Spanish (US)": "Serie 1",
             "Russian": "Серия 1",
             "Italian": "Serie 1",
+            "Dutch": "Serie 1",
             "Portuguese": "Séries 1"
         },
         {
@@ -8888,6 +9183,7 @@
             "Spanish (US)": "Serie 2",
             "Russian": "Серия 2",
             "Italian": "Serie 2",
+            "Dutch": "Serie 2",
             "Portuguese": "Séries 2"
         },
         {
@@ -8900,6 +9196,7 @@
             "Spanish (US)": "Serie 3",
             "Russian": "Серия 3",
             "Italian": "Serie 3",
+            "Dutch": "Serie 3",
             "Portuguese": "Séries 3"
         },
         {
@@ -8912,6 +9209,7 @@
             "Spanish (US)": "Serie 4",
             "Russian": "Серия 4",
             "Italian": "Serie 4",
+            "Dutch": "Serie 4",
             "Portuguese": "Séries 4"
         },
         {
@@ -8924,6 +9222,7 @@
             "Spanish (US)": "Serie 5",
             "Russian": "Серия 5",
             "Italian": "Serie 5",
+            "Dutch": "Serie 5",
             "Portuguese": "Séries 5"
         },
         {
@@ -8936,6 +9235,7 @@
             "Spanish (US)": "Serie Welcome Amiibo",
             "Russian": "Добро пожаловать в серию Amiibo",
             "Italian": "Serie Welcome Amiibo",
+            "Dutch": "Welkom Amiibo-serie",
             "Portuguese": "Bem-vindo a Séries Amiibo "
         },
         {
@@ -8948,6 +9248,7 @@
             "Spanish (US)": "Serie Sanrio",
             "Russian": "Серия Санрио",
             "Italian": "Serie Sanrio",
+            "Dutch": "Sanrio-serie",
             "Portuguese": "Sanrio Séries "
         },
         {
@@ -8960,6 +9261,7 @@
             "Spanish (US)": "Mostrar la lista para hablar con los vecinos",
             "Russian": "Показать список жителей для разговора",
             "Italian": "Mostra la lista \"parla agli abitanti\"",
+            "Dutch": "Toon gesprek met dorpelingen lijst",
             "Portuguese": "Mostrar conversa com a lista de moradores"
         },
         {
@@ -8972,6 +9274,7 @@
             "Spanish (US)": "Ocultar la lista para hablar con los vecinos",
             "Russian": "Скрыть список жителей для разговора",
             "Italian": "Nascondi la lista \"parla agli abitanti\"",
+            "Dutch": "Lijst met dorpsbewoners verbergen",
             "Portuguese": "Esconder conversa com a lista de moradores"
         },
         {
@@ -8984,6 +9287,7 @@
             "Spanish (US)": "Hablar con",
             "Russian": "Поговорить с",
             "Italian": "Parla a",
+            "Dutch": "Praten met",
             "Portuguese": "Falar com"
         },
         {
@@ -8996,6 +9300,7 @@
             "Spanish (US)": "Seguimiento de la hipoteca",
             "Russian": "Отслеживание кредита",
             "Italian": "Carica tracciamento",
+            "Dutch": "Lening volgen",
             "Portuguese": "Marcador de Empréstimo"
         },
         {
@@ -9008,6 +9313,7 @@
             "Spanish (US)": "Puente",
             "Russian": "Мост",
             "Italian": "Ponte",
+            "Dutch": "Brug",
             "Portuguese": "Ponte"
         },
         {
@@ -9020,6 +9326,7 @@
             "Spanish (US)": "Casa",
             "Russian": "Дом",
             "Italian": "Casa",
+            "Dutch": "huis",
             "Portuguese": "Casa"
         },
         {
@@ -9032,6 +9339,7 @@
             "Spanish (US)": "Toque para configurar tu perfil",
             "Russian": "Нажмите чтобы настроить свой профиль",
             "Italian": "Premi per impostare il tuo profilo",
+            "Dutch": "Tik om je profiel in te stellen",
             "Portuguese": "Toque para configurar seu perfil"
         },
         {
@@ -9044,6 +9352,7 @@
             "Spanish (US)": "Ordenar por...",
             "Russian": "Сортировать...",
             "Italian": "Ordina per...",
+            "Dutch": "Sorteer op...",
             "Portuguese": "Ordenar por..."
         },
         {
@@ -9056,6 +9365,7 @@
             "Spanish (US)": "Ordenar de forma inversa",
             "Russian": "Изменить порядок сортировки",
             "Italian": "Inverti ordine",
+            "Dutch": "Omgekeerde sorteerrichting",
             "Portuguese": "Direção de ordem reversa"
         },
         {
@@ -9068,6 +9378,7 @@
             "Spanish (US)": "Tipo de categoría",
             "Russian": "Категории",
             "Italian": "Tipo di categorie",
+            "Dutch": "Type categorie",
             "Portuguese": "Categoria de tipo"
         },
         {
@@ -9080,6 +9391,7 @@
             "Spanish (US)": "Precio de venta",
             "Russian": "Цена продажи",
             "Italian": "Prezzo di vendita",
+            "Dutch": "Verkoop prijs",
             "Portuguese": "Preço de venda"
         },
         {
@@ -9092,6 +9404,7 @@
             "Spanish (US)": "Precio de compra",
             "Russian": "Цена покупки",
             "Italian": "Prezzo di acquisto",
+            "Dutch": "Koop prijs",
             "Portuguese": "Preço de compra"
         },
         {
@@ -9104,6 +9417,7 @@
             "Spanish (US)": "Etiquetado del mueble",
             "Russian": "Мебельная бирка",
             "Italian": "Tag mobile",
+            "Dutch": "Meubellabel",
             "Portuguese": "Etiqueta de móveis"
         },
         {
@@ -9116,6 +9430,7 @@
             "Spanish (US)": "Donado al museo",
             "Russian": "Пожертвовано в музей",
             "Italian": "Donato al museo",
+            "Dutch": "Gedoneerd aan museum",
             "Portuguese": "Doado ao museu"
         },
         {
@@ -9128,6 +9443,7 @@
             "Spanish (US)": "No donado al museo",
             "Russian": "Не пожертвовано в музей",
             "Italian": "Non donato al museo",
+            "Dutch": "Niet geschonken aan museum",
             "Portuguese": "Não doado ao museu"
         },
         {
@@ -9140,6 +9456,7 @@
             "Spanish (US)": "Mostrar el botón Donado al museo",
             "Russian": "Показать кнопку пожертвований музею",
             "Italian": "Mostra pulsante \"donato al museo\"",
+            "Dutch": "Toon gedoneerd aan museum knop",
             "Portuguese": "Mostrar botão doado ao museu"
         },
         {
@@ -9152,6 +9469,7 @@
             "Spanish (US)": "Mostrar un botón de donación que puede ser usado para registrar si ha sido donado al museo después de haberlo obtenido",
             "Russian": "Показывает кнопку пожертвования, которую можно использовать для отслеживания того, пожертвовали ли вы предмет музею и имеется ли он у вас в коллекции.",
             "Italian": "Mostra il pulsante per le donazioni che può essere usato per tracciare se un oggetto è stato donato al museo, oltre ad averlo collezionato.",
+            "Dutch": "Toont een donatieknop die kan worden gebruikt om bij te houden of je het naast het verzamelen ook aan het museum hebt gedoneerd.",
             "Portuguese": "Mostra um botão de doação que pode ser usado para marcar se você doou ao museu, além de coletá-lo."
         },
         {
@@ -9164,6 +9482,7 @@
             "Spanish (US)": "Puedes volver a leer el historial de cambios en la página [Acerca de]",
             "Russian": "Вы можете перечитать журнал изменений в разделе [О программе]",
             "Italian": "Puoi consultare il changelog nella pagina [Su di noi]",
+            "Dutch": "Je kunt de changelog herlezen op de [Over] pagina",
             "Portuguese": "Você pode reler o changelog na página [Sobre]"
         },
         {
@@ -9176,6 +9495,7 @@
             "Spanish (US)": "Si deseas ayudar a traducir esta app, ¡no dudes en contactarnos por email!",
             "Russian": "Если решили помочь с переводом нашего приложения, напишите нам на электронную почту! ",
             "Italian": "Se vuoi darci una mano a tradurre l'app, mandaci un'email!",
+            "Dutch": "Als je wilt helpen met het vertalen van deze app, neem dan gerust contact op via e-mail!",
             "Portuguese": "Se você gostaria de ajudar a traduzir este aplicativo, sinta-se à vontade para entrar em contato por e-mail!"
         },
         {
@@ -9188,6 +9508,7 @@
             "Spanish (US)": "Puedes leer más sobre las cartas Amiibo visitando la página guía",
             "Russian": "Вы можете прочитать больше про карточки Amiibo перейдя на страницу гайда",
             "Italian": "Per leggere di più sulle carte Amiibo, visita la pagina guida",
+            "Dutch": "Je kunt meer lezen over Amiibo-kaarten door de gidspagina te bezoeken",
             "Portuguese": "Você pode ler mais sobre os cartões Amiibo visitando a página do guia"
         },
         {
@@ -9200,6 +9521,7 @@
             "Spanish (US)": "Haz click aquí para leer sobre las cartas Amiibo",
             "Russian": "Нажмите здесь чтобы почитать про карточки Amiibo",
             "Italian": "Premi qui per saperne di più sulle carte Amiibo",
+            "Dutch": "Tik hier om meer te lezen over Amiibo-kaarten",
             "Portuguese": "Toque aqui para ler sobre os cartões Amiibo"
         },
         {
@@ -9212,6 +9534,7 @@
             "Spanish (US)": "Inglés",
             "Russian": "Английский ",
             "Italian": "Inglese",
+            "Dutch": "Engels",
             "Portuguese": "English"
         },
         {
@@ -9224,6 +9547,7 @@
             "Spanish (US)": "Inglés (Europa)",
             "Russian": "Английский (Европа) ",
             "Italian": "Inglese (Europa)",
+            "Dutch": "Engels (Europa)",
             "Portuguese": "English (Europe)"
         },
         {
@@ -9236,6 +9560,7 @@
             "Spanish (US)": "Francés",
             "Russian": "Французский",
             "Italian": "Francese",
+            "Dutch": "Frans",
             "Portuguese": "French"
         },
         {
@@ -9248,6 +9573,7 @@
             "Spanish (US)": "Francés (Quebec)",
             "Russian": "Французский (Канада) ",
             "Italian": "Francese (Québec)",
+            "Dutch": "Frans (Québec)",
             "Portuguese": "French (Québec)"
         },
         {
@@ -9260,6 +9586,7 @@
             "Spanish (US)": "Español",
             "Russian": "Испанский ",
             "Italian": "Spagnolo",
+            "Dutch": "Spaans",
             "Portuguese": "Spanish"
         },
         {
@@ -9272,6 +9599,7 @@
             "Spanish (US)": "Español (US)",
             "Russian": "Испанский (США) ",
             "Italian": "Spagnolo (US)",
+            "Dutch": "Spaans (VS)",
             "Portuguese": "Spanish (US)"
         },
         {
@@ -9284,6 +9612,7 @@
             "Spanish (US)": "Alemán",
             "Russian": "Немецкий",
             "Italian": "Tedesco",
+            "Dutch": "Duitse",
             "Portuguese": "German"
         },
         {
@@ -9296,6 +9625,7 @@
             "Spanish (US)": "Ruso",
             "Russian": "Русский",
             "Italian": "Russo",
+            "Dutch": "Russisch",
             "Portuguese": "Russian"
         },
         {
@@ -9307,7 +9637,8 @@
             "Spanish": "Holandés",
             "Spanish (US)": "Holandés",
             "Russian": "Голландский",
-            "Italian": "Olandese"
+            "Italian": "Olandese",
+            "Dutch": "Nederlands"
         },
         {
             "English": "Favorite villagers who like this item as a gift",
@@ -9319,6 +9650,7 @@
             "Spanish (US)": "Vecinos favoritos a los que les gusta este objeto como regalo",
             "Russian": "Избранные жители, которым понравится эта вещь в качестве подарка",
             "Italian": "Abitanti preferiti a cui piace questo oggetto come regalo",
+            "Dutch": "Favoriete dorpelingen die dit item leuk vinden als cadeau",
             "Portuguese": "Moradores favoritos que gostam deste item como um presente"
         },
         {
@@ -9331,6 +9663,7 @@
             "Spanish (US)": "el cuerpo",
             "Russian": "тело ",
             "Italian": "Il corpo",
+            "Dutch": "het lichaam",
             "Portuguese": "o corpo"
         },
         {
@@ -9343,6 +9676,7 @@
             "Spanish (US)": "el patrón",
             "Russian": "образец",
             "Italian": "Lo schema",
+            "Dutch": "het patroon",
             "Portuguese": "o modelo"
         },
         {
@@ -9355,6 +9689,7 @@
             "Spanish (US)": "y",
             "Russian": "и",
             "Italian": "e",
+            "Dutch": "en",
             "Portuguese": "e"
         },
         {
@@ -9367,6 +9702,7 @@
             "Spanish (US)": "puede ser personalizado",
             "Russian": "может быть изменено",
             "Italian": "può essere personalizzato",
+            "Dutch": "kan aangepast worden",
             "Portuguese": "Pode ser personalizado"
         },
         {
@@ -9379,6 +9715,7 @@
             "Spanish (US)": "no puede ser personalizado, las variaciones se deben obtener",
             "Russian": "не может быть изменено, нужно получить модификаторы",
             "Italian": "non può essere personalizzato, le variazioni devono essere ottenute",
+            "Dutch": "kan niet worden aangepast, variaties moeten worden verkregen",
             "Portuguese": "não pode ser personalizado, variações devem ser obtidas"
         },
         {
@@ -9391,6 +9728,7 @@
             "Spanish (US)": "Probabilidad de aparición:",
             "Russian": "Частота появления:",
             "Italian": "Tassi di spawn",
+            "Dutch": "Spawn tarieven:",
             "Portuguese": "Taxas de spawn:"
         },
         {
@@ -9403,6 +9741,7 @@
             "Spanish (US)": "Criaturas comunes tienen mayor probabilidad de aparición",
             "Russian": "Обычные существа появляются чаще",
             "Italian": "Creature comuni che hanno uno spawn più alto",
+            "Dutch": "Gewone wezens hebben hogere spawn-snelheden",
             "Portuguese": "Criaturas comuns têm taxas de spawn mais altas"
         },
         {
@@ -9415,6 +9754,7 @@
             "Spanish (US)": "Evento del juego base",
             "Russian": "Основные события в игре",
             "Italian": "Evento presente nel gioco base",
+            "Dutch": "Basisspel-evenementen",
             "Portuguese": "Eventos de jogo de base"
         },
         {
@@ -9427,6 +9767,7 @@
             "Spanish (US)": "Dia de Año Nuevo",
             "Russian": "Новый год",
             "Italian": "Capodanno",
+            "Dutch": "Nieuwjaarsdag",
             "Portuguese": "Dia de Ano Novo"
         },
         {
@@ -9439,6 +9780,7 @@
             "Spanish (US)": "Active Creatures se ha movido a una página separada.",
             "Russian": "Активные существа перенесены на отдельную страницу.",
             "Italian": "Le creature attive sono state spostate in una pagina dedicata.",
+            "Dutch": "Active Creatures is verplaatst naar een aparte pagina.",
             "Portuguese": "Criaturas Disponíveis foi movido para uma página separada."
         },
         {
@@ -9451,6 +9793,7 @@
             "Spanish (US)": "Puede tocar aquí para ir a esa página o abrir la barra lateral.",
             "Russian": "Вы можете нажать здесь, чтобы перейти на эту страницу, или открыть боковую панель.",
             "Italian": "Per andare a quella pagina puoi premere qui oppure aprire la barra laterale.",
+            "Dutch": "Je kunt hier tikken om naar die pagina te gaan of de zijbalk openen.",
             "Portuguese": "Você pode tocar aqui para ir para essa página ou abrir a barra lateral."
         },
         {
@@ -9463,6 +9806,7 @@
             "Spanish (US)": "MeteoNook",
             "Russian": "MeteoNook",
             "Italian": "MeteoNook",
+            "Dutch": "MeteoNook",
             "Portuguese": "MeteoNook"
         },
         {
@@ -9475,6 +9819,7 @@
             "Spanish (US)": "Idioma",
             "Russian": "Язык",
             "Italian": "Lingua",
+            "Dutch": "Taal",
             "Portuguese": "Língua"
         },
         {
@@ -9487,66 +9832,77 @@
             "Spanish (US)": "Puede cambiar el idioma en la esquina superior derecha, tocando Configuración",
             "Russian": "Вы можете изменить язык в правом верхнем углу, нажав Настройки",
             "Italian": "Puoi cambiare la lingua nell'angolo in alto a destra, premendo Impostazioni",
+            "Dutch": "U kunt de taal in de rechterbovenhoek wijzigen door op Instellingen . te tikken",
             "Portuguese": "Você pode alterar o idioma no canto superior direito, tocando em Configurações"
         },
         {
             "English": "Label Themes",
             "English (Europe)": "Label Themes",
             "Italian": "Stili di Beatrice",
+            "Dutch": "Labelthema's",
             "Portuguese": "Temas Label"
         },
         {
             "English": "Everyday",
             "English (Europe)": "Everyday",
             "Italian": "Da tutti i giorni",
+            "Dutch": "Elke dag",
             "Portuguese": "Todo dia"
         },
         {
             "English": "Comfy",
             "English (Europe)": "Comfy",
             "Italian": "Confortevole",
+            "Dutch": "Comfortabel",
             "Portuguese": "Confortável"
         },
         {
             "English": "Formal",
             "English (Europe)": "Formal",
             "Italian": "Formale",
+            "Dutch": "Formeel",
             "Portuguese": "Formal"
         },
         {
             "English": "Work",
             "English (Europe)": "Work",
             "Italian": "Da lavoro",
+            "Dutch": "Werk",
             "Portuguese": "Trabalho"
         },
         {
             "English": "Theatrical",
             "English (Europe)": "Theatrical",
             "Italian": "Da fiaba",
+            "Dutch": "theatraal",
             "Portuguese": "Teatral"
         },
         {
             "English": "Outdoorsy",
             "English (Europe)": "Outdoorsy",
             "Italian": "Da aria aperta",
+            "Dutch": "buiten",
             "Portuguese": "Ao ar livre"
         },
         {
             "English": "Sporty",
             "English (Europe)": "Sporty",
             "Italian": "Sportivo",
+            "Dutch": "Sportief",
             "Portuguese": "Desportivo"
         },
         {
             "English": "Vacation",
             "English (Europe)": "Vacation",
             "Italian": "Da vacanza",
+            "Dutch": "Vakantie",
             "Portuguese": "Férias "
         },
         {
             "English": "Goth",
             "English (Europe)": "Goth",
             "Italian": "Goth",
+            "Dutch": "gotisch",
             "Portuguese": "Gótico"
         },
         {
@@ -9559,6 +9915,7 @@
             "Spanish (US)": "Viejo aldeano residente",
             "Russian": "Старый сельский житель",
             "Italian": "Precente abitante dell'isola",
+            "Dutch": "Oude dorpsbewoner",
             "Portuguese": "Antigo morador da ilha"
         },
         {
@@ -9571,6 +9928,7 @@
             "Spanish (US)": "No es un viejo residente de aldeanos",
             "Russian": "Не старый сельский житель",
             "Italian": "Non un precedente abitante dell'isola",
+            "Dutch": "Geen oude inwoner van het dorp",
             "Portuguese": "Não é um antigo morador da ilha"
         },
         {
@@ -9583,6 +9941,7 @@
             "Spanish (US)": "Cumpleaños de un antiguo aldeano residente",
             "Russian": "Дни рождения старожила",
             "Italian": "Compleanni dei precedenti abitanti dell'isola",
+            "Dutch": "Verjaardagen van oude bewoners van dorpsbewoners",
             "Portuguese": "Aniversário dos antigos moradores"
         },
         {
@@ -9595,6 +9954,7 @@
             "Spanish (US)": "(artículos no traducidos)",
             "Russian": "(элементы не переведены)",
             "Italian": "(articoli non tradotti)",
+            "Dutch": "(items niet vertaald)",
             "Portuguese": "(itens não traduzidos)"
         },
         {
@@ -9607,6 +9967,7 @@
             "Spanish (US)": "Gestionar Datos",
             "Russian": "Управлять данными",
             "Italian": "Gestisci Dati",
+            "Dutch": "Gegevens beheren",
             "Portuguese": "Gerenciar dados"
         },
         {
@@ -9619,6 +9980,7 @@
             "Spanish (US)": "Copia de Seguridad + Restaurar",
             "Russian": "Резервное копирование + восстановление",
             "Italian": "Backup + Ripristino",
+            "Dutch": "Back-up + Herstellen",
             "Portuguese": "Backup + Restaurar"
         },
         {
@@ -9631,6 +9993,7 @@
             "Spanish (US)": "¡Siempre es bueno mantener copias de seguridad periódicas de sus datos!",
             "Russian": "Всегда полезно делать периодические резервные копии ваших данных!",
             "Italian": "È sempre bene mantenere backup periodici dei propri dati!",
+            "Dutch": "Het is altijd goed om periodieke back-ups van uw gegevens te maken!",
             "Portuguese": "É sempre bom manter backups periódicos de seus dados!"
         },
         {
@@ -9643,6 +10006,7 @@
             "Spanish (US)": "Archivos",
             "Russian": "Файлы",
             "Italian": "File",
+            "Dutch": "Bestanden",
             "Portuguese": "Arquivos"
         },
         {
@@ -9655,6 +10019,7 @@
             "Spanish (US)": "(Recomendado)",
             "Russian": "(Рекомендуемые)",
             "Italian": "(Consigliato)",
+            "Dutch": "(Aanbevolen)",
             "Portuguese": "(Recomendado)"
         },
         {
@@ -9667,11 +10032,13 @@
             "Spanish (US)": "Portapapeles",
             "Russian": "Буфер обмена",
             "Italian": "Appunti",
+            "Dutch": "Klembord",
             "Portuguese": "Prancheta"
         },
         {
             "English": "Gyroids",
-            "English (Europe)": "Gyroids"
+            "English (Europe)": "Gyroids",
+            "Dutch": "Gyroids"
         },
         {
             "English": "Coming soon",
@@ -9683,6 +10050,7 @@
             "Spanish (US)": "Próximamente, en breve, pronto",
             "Russian": "Скоро будет",
             "Italian": "Prossimamente",
+            "Dutch": "Komt binnenkort",
             "Portuguese": "Em breve"
         },
         {
@@ -9695,6 +10063,7 @@
             "Spanish (US)": "Por favor sea paciente",
             "Russian": "Пожалуйста, будьте терпеливы",
             "Italian": "Per favore sii paziente",
+            "Dutch": "Wees alstublieft geduldig",
             "Portuguese": "Por favor, seja paciente"
         },
         {
@@ -9707,6 +10076,7 @@
             "Spanish (US)": "Ordenanzas",
             "Russian": "Постановления",
             "Italian": "ordinanze",
+            "Dutch": "verordeningen",
             "Portuguese": "Ordenanças"
         },
         {
@@ -9719,6 +10089,7 @@
             "Spanish (US)": "Isla bonita",
             "Russian": "Красивый остров",
             "Italian": "Isola bellissima",
+            "Dutch": "Mooi eiland",
             "Portuguese": "Bela ilha"
         },
         {
@@ -9731,6 +10102,7 @@
             "Spanish (US)": "Madrugador",
             "Russian": "Ранняя пташка",
             "Italian": "Early Bird",
+            "Dutch": "Vroege vogel",
             "Portuguese": "Madrugador"
         },
         {
@@ -9743,6 +10115,7 @@
             "Spanish (US)": "Noctámbulo",
             "Russian": "Ночная Сова",
             "Italian": "Nottambulo",
+            "Dutch": "Nachtuil",
             "Portuguese": "Coruja da noite"
         },
         {
@@ -9755,6 +10128,7 @@
             "Spanish (US)": "Campana boom",
             "Russian": "Белл Бум",
             "Italian": "Campana boom",
+            "Dutch": "Bell Boom",
             "Portuguese": "Bell Boom"
         },
         {
@@ -9767,6 +10141,7 @@
             "Spanish (US)": "Versión agregada",
             "Russian": "Версия добавлена",
             "Italian": "Versione aggiunta",
+            "Dutch": "Versie toegevoegd",
             "Portuguese": "Versão adicionada"
         },
         {
@@ -9779,6 +10154,7 @@
             "Spanish (US)": "Respaldo en la nube",
             "Russian": "Облачное резервное копирование",
             "Italian": "Backup su cloud",
+            "Dutch": "Cloud backup",
             "Portuguese": "Backup na nuvem"
         },
         {
@@ -9791,6 +10167,7 @@
             "Spanish (US)": "Correo electrónico",
             "Russian": "Эл. адрес",
             "Italian": "E-mail",
+            "Dutch": "E-mail",
             "Portuguese": "O email"
         },
         {
@@ -9803,6 +10180,7 @@
             "Spanish (US)": "Contraseña",
             "Russian": "Пароль",
             "Italian": "Parola d'ordine",
+            "Dutch": "Wachtwoord",
             "Portuguese": "Senha"
         },
         {
@@ -9815,6 +10193,7 @@
             "Spanish (US)": "Registrarse",
             "Russian": "Войти",
             "Italian": "Registrazione",
+            "Dutch": "Inloggen",
             "Portuguese": "Entrar"
         },
         {
@@ -9827,6 +10206,7 @@
             "Spanish (US)": "Inscribirse",
             "Russian": "Подписаться",
             "Italian": "Iscrizione",
+            "Dutch": "Inschrijven",
             "Portuguese": "Inscrever-se"
         },
         {
@@ -9839,6 +10219,7 @@
             "Spanish (US)": "Desconectar",
             "Russian": "Выход",
             "Italian": "Disconnessione",
+            "Dutch": "Afmelden",
             "Portuguese": "Sair"
         },
         {
@@ -9851,6 +10232,7 @@
             "Spanish (US)": "Subir datos",
             "Russian": "Загрузить данные",
             "Italian": "Carica dati",
+            "Dutch": "Gegevens uploaden",
             "Portuguese": "Carregar Dados"
         },
         {
@@ -9863,6 +10245,7 @@
             "Spanish (US)": "Descargar e importar datos",
             "Russian": "Скачать и импортировать данные",
             "Italian": "Scarica e importa dati",
+            "Dutch": "Gegevens downloaden en importeren",
             "Portuguese": "Baixar e importar dados"
         },
         {
@@ -9875,6 +10258,7 @@
             "Spanish (US)": "Existen",
             "Russian": "Есть",
             "Italian": "Ci sono",
+            "Dutch": "Er zijn",
             "Portuguese": "Existem"
         },
         {
@@ -9887,6 +10271,7 @@
             "Spanish (US)": "entradas en el servidor",
             "Russian": "записи на сервере",
             "Italian": "voci sul server",
+            "Dutch": "vermeldingen op de server nu",
             "Portuguese": "entradas no servidor"
         },
         {
@@ -9899,6 +10284,7 @@
             "Spanish (US)": "Ocurrió un error. Comprueba tu conexión a Internet y vuelve a intentarlo más tarde.",
             "Russian": "Произошла ошибка. Проверьте подключение к Интернету и повторите попытку позже.",
             "Italian": "Si è verificato un errore. Controlla la tua connessione Internet e riprova più tardi.",
+            "Dutch": "Er is een fout opgetreden. Controleer uw internetverbinding en probeer het later opnieuw.",
             "Portuguese": "Um erro ocorreu. Verifique sua conexão com a Internet e tente novamente mais tarde."
         },
         {
@@ -9911,6 +10297,7 @@
             "Spanish (US)": "No hay copias de seguridad almacenadas. Sube uno.",
             "Russian": "Резервных копий нет. Пожалуйста, загрузите один.",
             "Italian": "Non ci sono backup archiviati. Caricane uno.",
+            "Dutch": "Er worden geen back-ups opgeslagen. Upload er een.",
             "Portuguese": "Não há backups armazenados. Faça upload de um."
         },
         {
@@ -9923,6 +10310,7 @@
             "Spanish (US)": "Ocurrió un error. Comprueba tu conexión a Internet y vuelve a intentarlo más tarde.",
             "Russian": "Произошла ошибка. Проверьте подключение к Интернету и повторите попытку позже.",
             "Italian": "Si è verificato un errore. Controlla la tua connessione Internet e riprova più tardi.",
+            "Dutch": "Er is een fout opgetreden. Controleer uw internetverbinding en probeer het later opnieuw.",
             "Portuguese": "Um erro ocorreu. Verifique sua conexão com a Internet e tente novamente mais tarde."
         },
         {
@@ -9935,6 +10323,7 @@
             "Spanish (US)": "Verificando datos ...",
             "Russian": "Проверка данных ...",
             "Italian": "Verifica dati in corso...",
+            "Dutch": "Gegevens verifiëren...",
             "Portuguese": "Verificando dados ..."
         },
         {
@@ -9947,6 +10336,7 @@
             "Spanish (US)": "Puede activar la copia de seguridad automática de datos en la Configuración.",
             "Russian": "Вы можете включить автоматическое резервное копирование данных в Настройках.",
             "Italian": "Puoi attivare il backup automatico dei dati nelle Impostazioni.",
+            "Dutch": "U kunt automatische gegevensback-up inschakelen in de Instellingen.",
             "Portuguese": "Você pode ativar o backup automático de dados nas configurações."
         },
         {
@@ -9959,6 +10349,7 @@
             "Spanish (US)": "Nota: ¡La carga de datos reemplazará lo que actualmente está respaldado en la nube!",
             "Russian": "Примечание. Выгрузка данных заменит то, что в настоящее время хранится в облаке!",
             "Italian": "Nota: il caricamento dei dati sostituirà ciò di cui è attualmente eseguito il backup nel cloud!",
+            "Dutch": "Opmerking: het uploaden van gegevens vervangt wat er momenteel in de cloud is geback-upt!",
             "Portuguese": "Nota: O upload de dados substituirá o que está atualmente em backup na nuvem!"
         },
         {
@@ -9971,6 +10362,7 @@
             "Spanish (US)": "Copias de seguridad automáticas",
             "Russian": "Автоматическое резервное копирование",
             "Italian": "Backup automatici",
+            "Dutch": "Automatische back-ups",
             "Portuguese": "Backups automáticos"
         },
         {
@@ -9983,6 +10375,7 @@
             "Spanish (US)": "Una vez que se recuerdan sus credenciales en la página de respaldo, se realizarán respaldos automáticos cada vez que abra la aplicación y se conecte a Internet. ¡Las copias de seguridad automáticas sobrescriben lo que está actualmente respaldado en la nube!",
             "Russian": "После того, как ваши учетные данные будут сохранены на странице резервного копирования, автоматическое резервное копирование будет происходить каждый раз, когда вы открываете приложение и подключаетесь к Интернету. Автоматическое резервное копирование перезаписывает то, что в настоящее время зарезервировано в облаке!",
             "Italian": "Una volta che le tue credenziali sono state ricordate nella pagina di backup, i backup automatici verranno eseguiti ogni volta che apri l'applicazione e sei connesso a Internet. I backup automatici sovrascrivono ciò che è attualmente sottoposto a backup nel cloud!",
+            "Dutch": "Zodra uw inloggegevens zijn onthouden op de back-uppagina, worden er automatisch back-ups gemaakt elke keer dat u de applicatie opent en bent verbonden met internet. Automatische back-ups overschrijven wat momenteel in de cloud is geback-upt!",
             "Portuguese": "Assim que suas credenciais forem lembradas na página de backup, backups automáticos ocorrerão sempre que você abrir o aplicativo e estiver conectado à Internet. Os backups automáticos sobrescrevem o que está atualmente em backup na nuvem!"
         },
         {
@@ -9995,6 +10388,7 @@
             "Spanish (US)": "Las credenciales de inicio de sesión no están configuradas para la copia de seguridad en la nube o son incorrectas. Configúrelos en la página Copia de seguridad + Restaurar.",
             "Russian": "Учетные данные для входа не настроены для облачного резервного копирования или неверны. Пожалуйста, установите их на странице \"Резервное копирование + восстановление\".",
             "Italian": "Le credenziali di accesso non sono impostate per il backup su cloud o sono errate. Impostali nella pagina Backup + Ripristino.",
+            "Dutch": "De inloggegevens zijn niet ingesteld voor cloudback-up of zijn onjuist. Stel ze in op de pagina Back-up + herstellen.",
             "Portuguese": "As credenciais de login não estão definidas para backup em nuvem ou estão incorretas. Defina-os na página Backup + Restore."
         },
         {
@@ -10007,6 +10401,7 @@
             "Spanish (US)": "Asegúrese de que sus credenciales y su cuenta estén configuradas en la página Copia de seguridad y restauración.",
             "Russian": "Убедитесь, что ваши учетные данные и учетная запись настроены на странице резервного копирования и восстановления.",
             "Italian": "Assicurati che le tue credenziali e il tuo account siano impostati nella pagina Backup e ripristino.",
+            "Dutch": "Zorg ervoor dat uw inloggegevens en account zijn ingesteld op de pagina Back-up en herstel.",
             "Portuguese": "Certifique-se de que suas credenciais e conta estejam configuradas na página Backup e Restauração."
         },
         {
@@ -10019,6 +10414,7 @@
             "Spanish (US)": "Ir a la pagina",
             "Russian": "Перейти на страницу",
             "Italian": "Vai alla pagina",
+            "Dutch": "Ga naar pagina",
             "Portuguese": "Vá para página"
         },
         {
@@ -10031,6 +10427,7 @@
             "Spanish (US)": "Ahora puede hacer una copia de seguridad de sus datos en la nube y habilitar copias de seguridad automáticas en la configuración.",
             "Russian": "Теперь вы можете сделать резервную копию своих данных в облаке и включить автоматическое резервное копирование в настройках.",
             "Italian": "Ora puoi eseguire il backup dei tuoi dati sul cloud e abilitare i backup automatici nelle impostazioni.",
+            "Dutch": "U kunt nu een back-up van uw gegevens naar de cloud maken en automatische back-ups inschakelen in de instellingen.",
             "Portuguese": "Agora você pode fazer backup de seus dados para a nuvem e habilitar backups automáticos nas configurações."
         },
         {
@@ -10043,6 +10440,7 @@
             "Spanish (US)": "La contraseña no es válida o el usuario no tiene contraseña.",
             "Russian": "Пароль недействителен или у пользователя нет пароля.",
             "Italian": "La password non è valida o l'utente non dispone di una password.",
+            "Dutch": "Het wachtwoord is ongeldig of de gebruiker heeft geen wachtwoord.",
             "Portuguese": "A senha é inválida ou o usuário não possui uma senha."
         },
         {
@@ -10055,6 +10453,7 @@
             "Spanish (US)": "La dirección de correo electrónico ya está siendo utilizada por otra cuenta.",
             "Russian": "Адрес электронной почты уже используется другой учетной записью.",
             "Italian": "L'indirizzo email è già utilizzato da un altro account.",
+            "Dutch": "Het e-mailadres is al in gebruik door een ander account.",
             "Portuguese": "O endereço de e-mail já está sendo usado por outra conta."
         },
         {
@@ -10067,6 +10466,7 @@
             "Spanish (US)": "Ingrese un correo electrónico y una contraseña",
             "Russian": "Пожалуйста, введите адрес электронной почты и пароль",
             "Italian": "Si prega di inserire un'e-mail e una password",
+            "Dutch": "Voer een e-mailadres en wachtwoord in",
             "Portuguese": "Por favor, insira um e-mail e senha"
         },
         {
@@ -10079,6 +10479,7 @@
             "Spanish (US)": "La dirección de correo electrónico está mal formateada.",
             "Russian": "Адрес электронной почты неправильно отформатирован.",
             "Italian": "L'indirizzo email è formattato male.",
+            "Dutch": "Het e-mailadres is slecht opgemaakt.",
             "Portuguese": "O endereço de e-mail está formatado incorretamente."
         },
         {
@@ -10091,6 +10492,7 @@
             "Spanish (US)": "No hay ningún registro de usuario que corresponda a este identificador. Es posible que se haya eliminado al usuario. Intente crear una cuenta y registrarse.",
             "Russian": "Нет записи пользователя, соответствующей этому идентификатору. Возможно, пользователь был удален. Пожалуйста, попробуйте создать учетную запись и зарегистрируйтесь.",
             "Italian": "Nessun record utente corrispondente a questo identificatore. L'utente potrebbe essere stato eliminato. Prova a creare un account e registrati.",
+            "Dutch": "Er is geen gebruikersrecord dat overeenkomt met deze identifier. De gebruiker is mogelijk verwijderd. Probeer a.u.b. een account aan te maken en u aan te melden.",
             "Portuguese": "Não há registro de usuário correspondente a este identificador. O usuário pode ter sido excluído. Por favor, tente criar uma conta e se inscrever."
         },
         {
@@ -10103,6 +10505,7 @@
             "Spanish (US)": "Tener foto de aldeano",
             "Russian": "Есть фото селянина",
             "Italian": "Avere una foto del paesano",
+            "Dutch": "Heb een foto van een dorpeling",
             "Portuguese": "Tem uma foto do aldeão"
         },
         {
@@ -10115,6 +10518,7 @@
             "Spanish (US)": "No tengo foto de aldeano",
             "Russian": "Нет фото селянина",
             "Italian": "Non avere la foto del paesano",
+            "Dutch": "Heb geen dorpsfoto",
             "Portuguese": "Não tem foto de aldeão"
         },
         {
@@ -10127,19 +10531,21 @@
             "Spanish (US)": "Nota: Tienes imágenes ocultas para evitar spoilers. Desactive esto en la página de Configuración para ver todas las imágenes.",
             "Russian": "Примечание. У вас есть скрытые изображения, чтобы избежать спойлеров. Отключите это на странице настроек, чтобы просмотреть все изображения.",
             "Italian": "Nota: hai immagini nascoste per evitare spoiler. Disabilitalo nella pagina Impostazioni per visualizzare tutte le immagini.",
+            "Dutch": "Opmerking: je hebt afbeeldingen verborgen om spoilers te voorkomen. Schakel dit uit op de pagina Instellingen om alle afbeeldingen te bekijken.",
             "Portuguese": "Nota: Você tem imagens ocultas para evitar spoilers. Desative isso na página Configurações para visualizar todas as imagens."
         },
         {
-            "English": "Avoid Spoilers: Hide Preview Images",
-            "English (Europe)": "Avoid Spoilers: Hide Preview Images",
-            "French": "Évitez les spoilers : masquez les images d'aperçu",
-            "French (US)": "Évitez les spoilers : masquez les images d'aperçu",
-            "German": "Spoiler vermeiden: Vorschaubilder ausblenden",
-            "Spanish": "Evite spoilers: ocultar imágenes de vista previa",
-            "Spanish (US)": "Evite spoilers: ocultar imágenes de vista previa",
-            "Russian": "Избегайте спойлеров: скрыть изображения для предварительного просмотра",
-            "Italian": "Evita spoiler: nascondi le immagini di anteprima",
-            "Portuguese": "Evite spoilers: ocultar imagens de visualização"
+            "English": "Avoid spoilers - Hide preview images",
+            "English (Europe)": "Avoid spoilers - Hide preview images",
+            "French": "Évitez les spoilers - masquez les images d'aperçu",
+            "French (US)": "Évitez les spoilers - masquez les images d'aperçu",
+            "German": "Spoiler vermeiden - Vorschaubilder ausblenden",
+            "Spanish": "Evite spoilers - ocultar imágenes de vista previa",
+            "Spanish (US)": "Evite spoilers - ocultar imágenes de vista previa",
+            "Russian": "Избегайте спойлеров - скрыть изображения для предварительного просмотра",
+            "Italian": "Evita spoiler - nascondi le immagini di anteprima",
+            "Dutch": "Vermijd spoilers - Verberg voorbeeldafbeeldingen",
+            "Portuguese": "Evite spoilers - ocultar imagens de visualização"
         },
         {
             "English": "Hide images to avoid any spoilers if the item is not yet collected.",
@@ -10151,7 +10557,32 @@
             "Spanish (US)": "Oculte las imágenes para evitar spoilers si el artículo aún no se ha recopilado.",
             "Russian": "Скройте изображения, чтобы избежать спойлеров, если предмет еще не собран.",
             "Italian": "Nascondi le immagini per evitare spoiler se l'oggetto non è ancora stato ritirato.",
+            "Dutch": "Verberg afbeeldingen om spoilers te voorkomen als het item nog niet is verzameld.",
             "Portuguese": "Oculte as imagens para evitar spoilers se o item ainda não tiver sido coletado."
+        },
+        {
+            "English": "Female",
+            "English (Europe)": "Female",
+            "French": "Femelle",
+            "French (US)": "Femelle",
+            "German": "Weiblich",
+            "Spanish": "Mujer",
+            "Spanish (US)": "Mujer",
+            "Russian": "женский",
+            "Italian": "Femmina",
+            "Dutch": "Vrouwelijk"
+        },
+        {
+            "English": "Male",
+            "English (Europe)": "Male",
+            "French": "Mâle",
+            "French (US)": "Mâle",
+            "German": "Männlich",
+            "Spanish": "Masculino",
+            "Spanish (US)": "Masculino",
+            "Russian": "Мужчина",
+            "Italian": "Maschio",
+            "Dutch": "Mannelijk"
         }
     ],
     "Sources": [

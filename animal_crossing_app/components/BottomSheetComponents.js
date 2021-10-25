@@ -32,12 +32,6 @@ export class CircularImage extends Component {
 }
 
 export class LeftCornerImage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-
-    };
-  }
   render() {
     return <>
       <View style={[styles.cornerImageBackground,{backgroundColor:this.props.accentColor}]}>

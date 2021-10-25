@@ -531,7 +531,7 @@ export const settings = [
     "defaultValue" : "false",
     "currentValue" : "",
     "picture" : require("./assets/icons/fileBackup.png"),
-    "displayName" : "Auto Backups",
+    "displayName" : "Auto backups",
     "description" : "Once your credentials are remembered on the backup page, automatic backups will occur every time you open the application and are connected to the internet. Auto backups overwrite what is currently backed up in the cloud!",
   },
   {
@@ -547,7 +547,7 @@ export const settings = [
     "defaultValue" : "false",
     "currentValue" : "",
     "picture" : require("./assets/icons/spoiler.png"),
-    "displayName" : "Avoid Spoilers: Hide Preview Images",
+    "displayName" : "Avoid spoilers - hide preview images",
     "description" : "Hide images to avoid any spoilers if the item is not yet collected.",
   },
   {

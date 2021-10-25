@@ -36,7 +36,6 @@ export class TodoList extends Component {
   loadList = async() => {
     var defaultList = [
       {title: attemptToTranslate('Water Flowers'), finished: false, picture:"flower.png"},
-      {title: attemptToTranslate('Talk To Villagers'), finished: false, picture:"cat.png"},
       {title: attemptToTranslate('Dig Fossils'), finished: false, picture:"digIcon.png"},
       {title: attemptToTranslate('Find DIY bottle'), finished: false, picture: "https://acnhcdn.com/latest/MenuIcon/BottleRecipe.png"},
       {title: attemptToTranslate('Rock') + " 1", finished: false, picture:"rock.png",small:true},
@@ -222,6 +221,10 @@ export class TodoList extends Component {
         onPress={()=>{
           this.toggleVillagerTalk(); 
       }}>
+        <TouchableOpacity onPress={() => this.props.setPage(8)}>
+          <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>You have no villagers added</TextFont>
+          <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>Tap here and go add some</TextFont>
+        </TouchableOpacity>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, }}>{this.state.showVillagersTalkList ? "Hide talk to villagers list" : "Show talk to villagers list"}</TextFont>
       </TouchableOpacity>
       <PopupAddTask ref={(popupAddTask) => this.popupAddTask = popupAddTask} addItem={this.addItem}/>

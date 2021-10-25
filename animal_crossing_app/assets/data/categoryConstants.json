@@ -332,7 +332,7 @@
     "textProperty2":"",
     "textProperty3":"",
     "popUpCornerImageLabelProperty":"",
-    "popUpCornerImageProperty":"",
+    "popUpCornerImageProperty":"Gender",
     "popUpPhraseProperty":"Catchphrase",
     "searchKey":["NameLanguage"],
     "checkListKey":["villagerCheckList","Name"]

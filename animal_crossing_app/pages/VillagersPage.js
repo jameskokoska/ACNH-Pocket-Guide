@@ -40,6 +40,8 @@ class VillagersPage extends Component {
           checkType={"heart"}
           popUpContainer={[["VillagerPopup",450]]}
           popUpPhraseProperty={["Catchphrase"]}
+          popUpCornerImageProperty={["Gender"]}
+          popUpCornerImageLabelProperty={["Gender"]}
         />
     )
   }
