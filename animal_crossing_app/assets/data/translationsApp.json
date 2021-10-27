@@ -531,21 +531,21 @@
     ],
     "Main": [
         {
-            "English": "780 items",
-            "English (Europe)": "780 items",
-            "French": "769 items",
-            "French (US)": "769 items",
-            "German": "769 items",
-            "Spanish": "769 items",
-            "Spanish (US)": "765 items",
-            "Russian": "769 items",
-            "Italian": "779 items",
-            "Dutch": "752 items",
+            "English": "796 items",
+            "English (Europe)": "796 items",
+            "French": "785 items",
+            "French (US)": "785 items",
+            "German": "785 items",
+            "Spanish": "785 items",
+            "Spanish (US)": "781 items",
+            "Russian": "785 items",
+            "Italian": "795 items",
+            "Dutch": "768 items",
             "Chinese": "0 items",
             "Chinese (Traditional)": "0 items",
             "Japanese": "0 items",
             "Korean": "0 items",
-            "Portuguese": "776 items"
+            "Portuguese": "794 items"
         },
         {
             "English": "Home",
@@ -3819,7 +3819,7 @@
             "Spanish": "Temporada de bricolaje",
             "Spanish (US)": "Temporada de artesanía ",
             "Russian": "Сезон создания предметов",
-            "Italian": "Stagione della lavorazione",
+            "Italian": "Stagione del Fai-da-te",
             "Dutch": "Knutsel seizoen",
             "Portuguese": "Temporada de Artesanato"
         },
@@ -10062,7 +10062,7 @@
             "Spanish": "Por favor sea paciente",
             "Spanish (US)": "Por favor sea paciente",
             "Russian": "Пожалуйста, будьте терпеливы",
-            "Italian": "Per favore sii paziente",
+            "Italian": "Per favore abbi pazienza",
             "Dutch": "Wees alstublieft geduldig",
             "Portuguese": "Por favor, seja paciente"
         },
@@ -10075,7 +10075,7 @@
             "Spanish": "Ordenanzas",
             "Spanish (US)": "Ordenanzas",
             "Russian": "Постановления",
-            "Italian": "ordinanze",
+            "Italian": "Ordinanze",
             "Dutch": "verordeningen",
             "Portuguese": "Ordenanças"
         },
@@ -10088,7 +10088,7 @@
             "Spanish": "Isla bonita",
             "Spanish (US)": "Isla bonita",
             "Russian": "Красивый остров",
-            "Italian": "Isola bellissima",
+            "Italian": "Abbelliamo l'Isola",
             "Dutch": "Mooi eiland",
             "Portuguese": "Bela ilha"
         },
@@ -10101,7 +10101,7 @@
             "Spanish": "Madrugador",
             "Spanish (US)": "Madrugador",
             "Russian": "Ранняя пташка",
-            "Italian": "Early Bird",
+            "Italian": "Isola Mattiniera",
             "Dutch": "Vroege vogel",
             "Portuguese": "Madrugador"
         },
@@ -10114,7 +10114,7 @@
             "Spanish": "Noctámbulo",
             "Spanish (US)": "Noctámbulo",
             "Russian": "Ночная Сова",
-            "Italian": "Nottambulo",
+            "Italian": "Isola Nottambula",
             "Dutch": "Nachtuil",
             "Portuguese": "Coruja da noite"
         },
@@ -10127,7 +10127,7 @@
             "Spanish": "Campana boom",
             "Spanish (US)": "Campana boom",
             "Russian": "Белл Бум",
-            "Italian": "Campana boom",
+            "Italian": "Pioggia di Stelline",
             "Dutch": "Bell Boom",
             "Portuguese": "Bell Boom"
         },
@@ -10140,7 +10140,7 @@
             "Spanish": "Versión agregada",
             "Spanish (US)": "Versión agregada",
             "Russian": "Версия добавлена",
-            "Italian": "Versione aggiunta",
+            "Italian": "Aggiunto nella versione",
             "Dutch": "Versie toegevoegd",
             "Portuguese": "Versão adicionada"
         },
@@ -10153,7 +10153,7 @@
             "Spanish": "Respaldo en la nube",
             "Spanish (US)": "Respaldo en la nube",
             "Russian": "Облачное резервное копирование",
-            "Italian": "Backup su cloud",
+            "Italian": "Backup in cloud",
             "Dutch": "Cloud backup",
             "Portuguese": "Backup na nuvem"
         },
@@ -10179,7 +10179,7 @@
             "Spanish": "Contraseña",
             "Spanish (US)": "Contraseña",
             "Russian": "Пароль",
-            "Italian": "Parola d'ordine",
+            "Italian": "Password",
             "Dutch": "Wachtwoord",
             "Portuguese": "Senha"
         },
@@ -10192,7 +10192,7 @@
             "Spanish": "Registrarse",
             "Spanish (US)": "Registrarse",
             "Russian": "Войти",
-            "Italian": "Registrazione",
+            "Italian": "Registrati",
             "Dutch": "Inloggen",
             "Portuguese": "Entrar"
         },
@@ -10205,7 +10205,7 @@
             "Spanish": "Inscribirse",
             "Spanish (US)": "Inscribirse",
             "Russian": "Подписаться",
-            "Italian": "Iscrizione",
+            "Italian": "Iscriviti",
             "Dutch": "Inschrijven",
             "Portuguese": "Inscrever-se"
         },
@@ -10218,7 +10218,7 @@
             "Spanish": "Desconectar",
             "Spanish (US)": "Desconectar",
             "Russian": "Выход",
-            "Italian": "Disconnessione",
+            "Italian": "Disconnetti",
             "Dutch": "Afmelden",
             "Portuguese": "Sair"
         },
@@ -10231,7 +10231,7 @@
             "Spanish": "Subir datos",
             "Spanish (US)": "Subir datos",
             "Russian": "Загрузить данные",
-            "Italian": "Carica dati",
+            "Italian": "Upload dei dati",
             "Dutch": "Gegevens uploaden",
             "Portuguese": "Carregar Dados"
         },
@@ -10257,7 +10257,7 @@
             "Spanish": "Existen",
             "Spanish (US)": "Existen",
             "Russian": "Есть",
-            "Italian": "Ci sono",
+            "Italian": "Ci sono già",
             "Dutch": "Er zijn",
             "Portuguese": "Existem"
         },
@@ -10322,7 +10322,7 @@
             "Spanish": "Verificando datos ...",
             "Spanish (US)": "Verificando datos ...",
             "Russian": "Проверка данных ...",
-            "Italian": "Verifica dati in corso...",
+            "Italian": "Verifica dei dati in corso...",
             "Dutch": "Gegevens verifiëren...",
             "Portuguese": "Verificando dados ..."
         },
@@ -10348,7 +10348,7 @@
             "Spanish": "Nota: ¡La carga de datos reemplazará lo que actualmente está respaldado en la nube!",
             "Spanish (US)": "Nota: ¡La carga de datos reemplazará lo que actualmente está respaldado en la nube!",
             "Russian": "Примечание. Выгрузка данных заменит то, что в настоящее время хранится в облаке!",
-            "Italian": "Nota: il caricamento dei dati sostituirà ciò di cui è attualmente eseguito il backup nel cloud!",
+            "Italian": "Nota: caricare altri dati sostituirà quelli già archiviati in cloud!",
             "Dutch": "Opmerking: het uploaden van gegevens vervangt wat er momenteel in de cloud is geback-upt!",
             "Portuguese": "Nota: O upload de dados substituirá o que está atualmente em backup na nuvem!"
         },
@@ -10374,7 +10374,7 @@
             "Spanish": "Una vez que se recuerdan sus credenciales en la página de respaldo, se realizarán respaldos automáticos cada vez que abra la aplicación y se conecte a Internet. ¡Las copias de seguridad automáticas sobrescriben lo que está actualmente respaldado en la nube!",
             "Spanish (US)": "Una vez que se recuerdan sus credenciales en la página de respaldo, se realizarán respaldos automáticos cada vez que abra la aplicación y se conecte a Internet. ¡Las copias de seguridad automáticas sobrescriben lo que está actualmente respaldado en la nube!",
             "Russian": "После того, как ваши учетные данные будут сохранены на странице резервного копирования, автоматическое резервное копирование будет происходить каждый раз, когда вы открываете приложение и подключаетесь к Интернету. Автоматическое резервное копирование перезаписывает то, что в настоящее время зарезервировано в облаке!",
-            "Italian": "Una volta che le tue credenziali sono state ricordate nella pagina di backup, i backup automatici verranno eseguiti ogni volta che apri l'applicazione e sei connesso a Internet. I backup automatici sovrascrivono ciò che è attualmente sottoposto a backup nel cloud!",
+            "Italian": "Una volta che le tue credenziali sono state registrate nella pagina di backup, i backup automatici verranno eseguiti ogni volta che apri l'app e sei connesso a Internet. I backup automatici sovrascrivono ciò che è già archiviato nel cloud!",
             "Dutch": "Zodra uw inloggegevens zijn onthouden op de back-uppagina, worden er automatisch back-ups gemaakt elke keer dat u de applicatie opent en bent verbonden met internet. Automatische back-ups overschrijven wat momenteel in de cloud is geback-upt!",
             "Portuguese": "Assim que suas credenciais forem lembradas na página de backup, backups automáticos ocorrerão sempre que você abrir o aplicativo e estiver conectado à Internet. Os backups automáticos sobrescrevem o que está atualmente em backup na nuvem!"
         },
@@ -10387,7 +10387,7 @@
             "Spanish": "Las credenciales de inicio de sesión no están configuradas para la copia de seguridad en la nube o son incorrectas. Configúrelos en la página Copia de seguridad + Restaurar.",
             "Spanish (US)": "Las credenciales de inicio de sesión no están configuradas para la copia de seguridad en la nube o son incorrectas. Configúrelos en la página Copia de seguridad + Restaurar.",
             "Russian": "Учетные данные для входа не настроены для облачного резервного копирования или неверны. Пожалуйста, установите их на странице \"Резервное копирование + восстановление\".",
-            "Italian": "Le credenziali di accesso non sono impostate per il backup su cloud o sono errate. Impostali nella pagina Backup + Ripristino.",
+            "Italian": "Le credenziali di accesso non sono impostate per il backup in cloud o sono errate. Impostale nella pagina Backup + Ripristino.",
             "Dutch": "De inloggegevens zijn niet ingesteld voor cloudback-up of zijn onjuist. Stel ze in op de pagina Back-up + herstellen.",
             "Portuguese": "As credenciais de login não estão definidas para backup em nuvem ou estão incorretas. Defina-os na página Backup + Restore."
         },
@@ -10400,7 +10400,7 @@
             "Spanish": "Asegúrese de que sus credenciales y su cuenta estén configuradas en la página Copia de seguridad y restauración.",
             "Spanish (US)": "Asegúrese de que sus credenciales y su cuenta estén configuradas en la página Copia de seguridad y restauración.",
             "Russian": "Убедитесь, что ваши учетные данные и учетная запись настроены на странице резервного копирования и восстановления.",
-            "Italian": "Assicurati che le tue credenziali e il tuo account siano impostati nella pagina Backup e ripristino.",
+            "Italian": "Assicurati che le tue credenziali e il tuo account siano impostati nella pagina Backup e Ripristino.",
             "Dutch": "Zorg ervoor dat uw inloggegevens en account zijn ingesteld op de pagina Back-up en herstel.",
             "Portuguese": "Certifique-se de que suas credenciais e conta estejam configuradas na página Backup e Restauração."
         },
@@ -10452,7 +10452,7 @@
             "Spanish": "La dirección de correo electrónico ya está siendo utilizada por otra cuenta.",
             "Spanish (US)": "La dirección de correo electrónico ya está siendo utilizada por otra cuenta.",
             "Russian": "Адрес электронной почты уже используется другой учетной записью.",
-            "Italian": "L'indirizzo email è già utilizzato da un altro account.",
+            "Italian": "L'indirizzo email è già in uso da un altro account.",
             "Dutch": "Het e-mailadres is al in gebruik door een ander account.",
             "Portuguese": "O endereço de e-mail já está sendo usado por outra conta."
         },
@@ -10465,7 +10465,7 @@
             "Spanish": "Ingrese un correo electrónico y una contraseña",
             "Spanish (US)": "Ingrese un correo electrónico y una contraseña",
             "Russian": "Пожалуйста, введите адрес электронной почты и пароль",
-            "Italian": "Si prega di inserire un'e-mail e una password",
+            "Italian": "Prego inserire e-mail e password",
             "Dutch": "Voer een e-mailadres en wachtwoord in",
             "Portuguese": "Por favor, insira um e-mail e senha"
         },
@@ -10478,7 +10478,7 @@
             "Spanish": "La dirección de correo electrónico está mal formateada.",
             "Spanish (US)": "La dirección de correo electrónico está mal formateada.",
             "Russian": "Адрес электронной почты неправильно отформатирован.",
-            "Italian": "L'indirizzo email è formattato male.",
+            "Italian": "L'indirizzo e-mail è formattato male.",
             "Dutch": "Het e-mailadres is slecht opgemaakt.",
             "Portuguese": "O endereço de e-mail está formatado incorretamente."
         },
@@ -10491,7 +10491,7 @@
             "Spanish": "No hay ningún registro de usuario que corresponda a este identificador. Es posible que se haya eliminado al usuario. Intente crear una cuenta y registrarse.",
             "Spanish (US)": "No hay ningún registro de usuario que corresponda a este identificador. Es posible que se haya eliminado al usuario. Intente crear una cuenta y registrarse.",
             "Russian": "Нет записи пользователя, соответствующей этому идентификатору. Возможно, пользователь был удален. Пожалуйста, попробуйте создать учетную запись и зарегистрируйтесь.",
-            "Italian": "Nessun record utente corrispondente a questo identificatore. L'utente potrebbe essere stato eliminato. Prova a creare un account e registrati.",
+            "Italian": "Nessuna registrazione utente corrispondente a questo identificativo. L'utente potrebbe essere stato cancellato. Prova a creare un account e registrati.",
             "Dutch": "Er is geen gebruikersrecord dat overeenkomt met deze identifier. De gebruiker is mogelijk verwijderd. Probeer a.u.b. een account aan te maken en u aan te melden.",
             "Portuguese": "Não há registro de usuário correspondente a este identificador. O usuário pode ter sido excluído. Por favor, tente criar uma conta e se inscrever."
         },
@@ -10504,7 +10504,7 @@
             "Spanish": "Tener foto de aldeano",
             "Spanish (US)": "Tener foto de aldeano",
             "Russian": "Есть фото селянина",
-            "Italian": "Avere una foto del paesano",
+            "Italian": "Ha una foto da abitante",
             "Dutch": "Heb een foto van een dorpeling",
             "Portuguese": "Tem uma foto do aldeão"
         },
@@ -10517,7 +10517,7 @@
             "Spanish": "No tengo foto de aldeano",
             "Spanish (US)": "No tengo foto de aldeano",
             "Russian": "Нет фото селянина",
-            "Italian": "Non avere la foto del paesano",
+            "Italian": "Non ha una foto da abitante",
             "Dutch": "Heb geen dorpsfoto",
             "Portuguese": "Não tem foto de aldeão"
         },
@@ -10530,7 +10530,7 @@
             "Spanish": "Nota: Tienes imágenes ocultas para evitar spoilers. Desactive esto en la página de Configuración para ver todas las imágenes.",
             "Spanish (US)": "Nota: Tienes imágenes ocultas para evitar spoilers. Desactive esto en la página de Configuración para ver todas las imágenes.",
             "Russian": "Примечание. У вас есть скрытые изображения, чтобы избежать спойлеров. Отключите это на странице настроек, чтобы просмотреть все изображения.",
-            "Italian": "Nota: hai immagini nascoste per evitare spoiler. Disabilitalo nella pagina Impostazioni per visualizzare tutte le immagini.",
+            "Italian": "Nota: alcune immagini nascoste per evitarti spoiler. Disabilitalo nella pagina Impostazioni per visualizzare tutte le immagini.",
             "Dutch": "Opmerking: je hebt afbeeldingen verborgen om spoilers te voorkomen. Schakel dit uit op de pagina Instellingen om alle afbeeldingen te bekijken.",
             "Portuguese": "Nota: Você tem imagens ocultas para evitar spoilers. Desative isso na página Configurações para visualizar todas as imagens."
         },
@@ -10556,7 +10556,7 @@
             "Spanish": "Oculte las imágenes para evitar spoilers si el artículo aún no se ha recopilado.",
             "Spanish (US)": "Oculte las imágenes para evitar spoilers si el artículo aún no se ha recopilado.",
             "Russian": "Скройте изображения, чтобы избежать спойлеров, если предмет еще не собран.",
-            "Italian": "Nascondi le immagini per evitare spoiler se l'oggetto non è ancora stato ritirato.",
+            "Italian": "Nascondi le immagini per evitare spoiler se l'oggetto non è ancora stato collezionato.",
             "Dutch": "Verberg afbeeldingen om spoilers te voorkomen als het item nog niet is verzameld.",
             "Portuguese": "Oculte as imagens para evitar spoilers se o item ainda não tiver sido coletado."
         },
@@ -10570,7 +10570,8 @@
             "Spanish (US)": "Mujer",
             "Russian": "женский",
             "Italian": "Femmina",
-            "Dutch": "Vrouwelijk"
+            "Dutch": "Vrouwelijk",
+            "Portuguese": "Masculino"
         },
         {
             "English": "Male",
@@ -10582,7 +10583,216 @@
             "Spanish (US)": "Masculino",
             "Russian": "Мужчина",
             "Italian": "Maschio",
-            "Dutch": "Mannelijk"
+            "Dutch": "Mannelijk",
+            "Portuguese": "Fêmea"
+        },
+        {
+            "English": "Speaker Type",
+            "English (Europe)": "Speaker Type",
+            "French": "Type de haut-parleur",
+            "French (US)": "Type de haut-parleur",
+            "German": "Lautsprechertyp",
+            "Spanish": "Tipo de altavoz",
+            "Spanish (US)": "Tipo de altavoz",
+            "Russian": "Тип динамика",
+            "Italian": "Tipo di altoparlante",
+            "Dutch": "Luidsprekertype:",
+            "Portuguese": "Tipo de alto-falante"
+        },
+        {
+            "English": "Does not play music",
+            "English (Europe)": "Does not play music",
+            "French": "Ne joue pas de musique",
+            "French (US)": "Ne joue pas de musique",
+            "German": "Spielt keine Musik",
+            "Spanish": "No reproduce musica",
+            "Spanish (US)": "No reproduce musica",
+            "Russian": "Не воспроизводит музыку",
+            "Italian": "Non riproduce musica",
+            "Dutch": "Speelt geen muziek af",
+            "Portuguese": "Não toca musica"
+        },
+        {
+            "English": "Retro",
+            "English (Europe)": "Retro",
+            "French": "Rétro",
+            "French (US)": "Rétro",
+            "German": "Retro",
+            "Spanish": "Retro",
+            "Spanish (US)": "Retro",
+            "Russian": "Ретро",
+            "Italian": "retrò",
+            "Dutch": "Retro",
+            "Portuguese": "Retro"
+        },
+        {
+            "English": "Hi-fi",
+            "English (Europe)": "Hi-fi",
+            "French": "La chaîne hi-fi",
+            "French (US)": "La chaîne hi-fi",
+            "German": "Hifi",
+            "Spanish": "De alta fidelidad",
+            "Spanish (US)": "De alta fidelidad",
+            "Russian": "Hi-Fi",
+            "Italian": "Hi-fi",
+            "Dutch": "Hifi",
+            "Portuguese": "Hi Fi"
+        },
+        {
+            "English": "Phono",
+            "English (Europe)": "Phono",
+            "French": "Phono",
+            "French (US)": "Phono",
+            "German": "Phono",
+            "Spanish": "Phono",
+            "Spanish (US)": "Phono",
+            "Russian": "Фонокорректор",
+            "Italian": "Phono",
+            "Dutch": "Phono",
+            "Portuguese": "Phono"
+        },
+        {
+            "English": "Cheap",
+            "English (Europe)": "Cheap",
+            "French": "Pas cher",
+            "French (US)": "Pas cher",
+            "German": "Billig",
+            "Spanish": "Barato",
+            "Spanish (US)": "Barato",
+            "Russian": "Дешевый",
+            "Italian": "A buon mercato",
+            "Dutch": "Goedkoop",
+            "Portuguese": "Barato"
+        },
+        {
+            "English": "Lighting Type",
+            "English (Europe)": "Lighting Type",
+            "French": "Type d'éclairage",
+            "French (US)": "Type d'éclairage",
+            "German": "Beleuchtungstyp",
+            "Spanish": "Tipo de iluminación",
+            "Spanish (US)": "Tipo de iluminación",
+            "Russian": "Тип освещения",
+            "Italian": "Tipo di illuminazione",
+            "Dutch": "Verlichtingstype:",
+            "Portuguese": "Tipo de Iluminação"
+        },
+        {
+            "English": "No lighting",
+            "English (Europe)": "No lighting",
+            "French": "Pas d'éclairage",
+            "French (US)": "Pas d'éclairage",
+            "German": "Keine Beleuchtung",
+            "Spanish": "Sin iluminación",
+            "Spanish (US)": "Sin iluminación",
+            "Russian": "Без освещения",
+            "Italian": "Nessuna illuminazione",
+            "Dutch": "Geen verlichting",
+            "Portuguese": "Sem iluminação"
+        },
+        {
+            "English": "Monitor",
+            "English (Europe)": "Monitor",
+            "French": "Surveiller",
+            "French (US)": "Surveiller",
+            "German": "Monitor",
+            "Spanish": "Monitor",
+            "Spanish (US)": "Monitor",
+            "Russian": "Монитор",
+            "Italian": "Tenere sotto controllo",
+            "Dutch": "Toezicht houden op",
+            "Portuguese": "Monitor"
+        },
+        {
+            "English": "Fluorescent",
+            "English (Europe)": "Fluorescent",
+            "French": "Fluorescent",
+            "French (US)": "Fluorescent",
+            "German": "Fluoreszierend",
+            "Spanish": "Fluorescente",
+            "Spanish (US)": "Fluorescente",
+            "Russian": "Флуоресцентный",
+            "Italian": "Fluorescente",
+            "Dutch": "fluorescerend",
+            "Portuguese": "Fluorescente"
+        },
+        {
+            "English": "Candle",
+            "English (Europe)": "Candle",
+            "French": "Bougie",
+            "French (US)": "Bougie",
+            "German": "Kerze",
+            "Spanish": "Vela",
+            "Spanish (US)": "Vela",
+            "Russian": "Свеча",
+            "Italian": "Candela",
+            "Dutch": "Kaars",
+            "Portuguese": "Vela"
+        },
+        {
+            "English": "Spotlight",
+            "English (Europe)": "Spotlight",
+            "French": "Projecteur",
+            "French (US)": "Projecteur",
+            "German": "Scheinwerfer",
+            "Spanish": "Destacar",
+            "Spanish (US)": "Destacar",
+            "Russian": "Прожектор",
+            "Italian": "Riflettore",
+            "Dutch": "schijnwerper",
+            "Portuguese": "Holofote"
+        },
+        {
+            "English": "Emission",
+            "English (Europe)": "Emission",
+            "French": "Émission",
+            "French (US)": "Émission",
+            "German": "Emission",
+            "Spanish": "Emisión",
+            "Spanish (US)": "Emisión",
+            "Russian": "Эмиссия",
+            "Italian": "Emissione",
+            "Dutch": "Uitstoot",
+            "Portuguese": "Emissão"
+        },
+        {
+            "English": "Swipe left/right to change months",
+            "English (Europe)": "Swipe left/right to change months",
+            "French": "Balayez vers la gauche/droite pour changer de mois",
+            "French (US)": "Balayez vers la gauche/droite pour changer de mois",
+            "German": "Wischen Sie nach links/rechts, um die Monate zu ändern",
+            "Spanish": "Desliza hacia la izquierda / derecha para cambiar los meses",
+            "Spanish (US)": "Desliza hacia la izquierda / derecha para cambiar los meses",
+            "Russian": "Проведите пальцем влево / вправо, чтобы изменить месяцы",
+            "Italian": "Scorri verso sinistra/destra per cambiare i mesi",
+            "Dutch": "Veeg naar links/rechts om maanden te wijzigen",
+            "Portuguese": "Deslize para a esquerda / direita para mudar os meses"
+        },
+        {
+            "English": "Event starts",
+            "English (Europe)": "Event starts",
+            "French": "L'événement commence",
+            "French (US)": "L'événement commence",
+            "German": "Veranstaltung beginnt",
+            "Spanish": "Empieza el evento",
+            "Spanish (US)": "Empieza el evento",
+            "Russian": "Событие начинается",
+            "Italian": "L'evento inizia",
+            "Dutch": "Evenement begint",
+            "Portuguese": "Início do evento"
+        },
+        {
+            "English": "Event ends",
+            "English (Europe)": "Event ends",
+            "French": "L'événement se termine",
+            "French (US)": "L'événement se termine",
+            "German": "Veranstaltung endet",
+            "Spanish": "El evento termina",
+            "Spanish (US)": "El evento termina",
+            "Russian": "Событие заканчивается",
+            "Italian": "L'evento finisce",
+            "Dutch": "Evenement eindigt",
+            "Portuguese": "Evento termina"
         }
     ],
     "Sources": [

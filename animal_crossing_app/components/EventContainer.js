@@ -8,6 +8,7 @@ import FastImage from './FastImage';
 import {schedulePushNotification} from "../Notifications"
 import {specialEvents, isDateInRange} from "./DateFunctions"
 import colors from '../Colors'
+import * as RootNavigation from '../RootNavigation.js';
 
 // <EventContainer 
 //  backgroundColor="black" 
@@ -35,29 +36,31 @@ export class EventContainer extends Component {
             if(this.props.event.hasOwnProperty("type") && this.props.event.type==="villager"){
               this.props.openVillagerPopup(this.props.event.filter)
             } else {
-              this.props.setPage(23, true, this.props.event.filter)
+              // this.props.setPage(23, true, this.props.event.filter)
+              RootNavigation.navigate('23', {propsPassed:this.props.event.filter});
             }
           }
         }}
       >
-        <View style={[styles.eventContainer,{backgroundColor:this.props.event.color!==undefined?this.props.event.color:this.props.backgroundColor}]}>
+        <View style={[styles.eventContainer,{backgroundColor:this.props.event.color!==undefined?this.props.event.color:this.props.backgroundColor, marginHorizontal:this.props.showDate===false?10:20, paddingHorizontal:this.props.showDate===false?10:20,}]}>
           {image}
           <View style={styles.textContainer}>
-            <TextFont translate={false} numberOfLines={3} bold={true} style={[styles.textContainerTop,{color:this.props.textColor}]}>{this.props.event.name}</TextFont>
-            <TextFont style={[styles.textContainerBottom,{color:this.props.textColor}]}>{this.props.event.time}</TextFont>
+            <TextFont translate={false} numberOfLines={3} bold={true} style={[styles.textContainerTop,{color:this.props.textColor, textAlign:this.props.showDate===false?"left":"center", marginLeft:this.props.showDate===false?30:10}]}>{this.props.event.name}</TextFont>
+            <TextFont style={[styles.textContainerBottom,{color:this.props.textColor, textAlign:this.props.showDate===false?"left":"center", marginLeft:this.props.showDate===false?30:10}]}>{this.props.event.time}</TextFont>
           </View>
+          {this.props.showDate===false?<></>:
           <View style={{width: 33, alignItems:"center", marginLeft: -8}}>
             <Image style={styles.eventCalendar} source={require("../assets/icons/calendarIcon.png")}/>
             <TextFont bold={true} style={{position:"absolute", top:3, textAlign:"center",color:"black", fontSize: 10, opacity: 0.8}}>{getWeekDayShort(this.props.event.weekday)}</TextFont>
             <TextFont bold={true} style={{position:"absolute", top:17, textAlign:"center",color:"black", fontSize: 24, opacity: 0.8}}>{this.props.event.day}</TextFont>
-          </View>
+          </View>}
         </View>
       </TouchableNativeFeedback>
     )
   }
 }
 
-export function getEventsDay(date, eventSections){
+export function getEventsDay(date, eventSections, showEventsIfInRange){
   const seasonData = require("../assets/data/data.json")["Seasons and Events"];
   const villagerData = require("../assets/data/data.json")["Villagers"];
   var totalEvents = [];
@@ -73,7 +76,8 @@ export function getEventsDay(date, eventSections){
           weekday:date.getDay(),
           type:"villager",
           filter: villager,
-          color:colors.specialEventResidentBirthdayBackground[global.darkMode]
+          color:colors.specialEventResidentBirthdayBackground[global.darkMode],
+          colorHeavy:colors.specialEventResidentBirthdayBackgroundHeavy[global.darkMode]
         });
         if(eventSections["App notifications"]){
           schedulePushNotification(date,eventSections["Set Notification Time"],"🎂 " + capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),attemptToTranslateItem("All day"));
@@ -87,7 +91,9 @@ export function getEventsDay(date, eventSections){
           weekday:date.getDay(),
           type:"villager",
           filter: villager,
-          color:colors.specialEventBirthdayBackground[global.darkMode]
+          color:colors.specialEventBirthdayBackground[global.darkMode],
+          colorHeavy:colors.specialEventBirthdayBackgroundHeavy[global.darkMode],
+          important:true
         });
         if(eventSections["App notifications"]){
           schedulePushNotification(date,eventSections["Set Notification Time"],"🎂 " + capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),attemptToTranslateItem("All day"));
@@ -118,6 +124,7 @@ export function getEventsDay(date, eventSections){
         day:date.getDate(),
         weekday:date.getDay(),
         color:colors.specialEventBackground[global.darkMode],
+        colorHeavy:colors.specialEventBackgroundHeavy[global.darkMode],
         type:"filter",
         filter:event["Name"],
       });
@@ -132,8 +139,10 @@ export function getEventsDay(date, eventSections){
             day:date.getDate(),
             weekday:date.getDay(),
             color:colors.specialEventBackground[global.darkMode],
+            colorHeavy:colors.specialEventBackgroundHeavy[global.darkMode],
             type:"filter",
             filter:event["Name"],
+            important:true
           });
           if(getSettingsString("settingsNotifications")){
             schedulePushNotification(date,eventSections["Set Notification Time"],"🏅" + capitalize(attemptToTranslate(event["Name"], true)),event["Time"]);
@@ -146,6 +155,7 @@ export function getEventsDay(date, eventSections){
             day:date.getDate(),
             weekday:date.getDay(),
             color:colors.startEventBackground[global.darkMode],
+            colorHeavy:colors.specialEventBackgroundHeavy[global.darkMode],
             type:"filter",
             filter:event["Name"]
           });
@@ -169,15 +179,18 @@ export function getEventsDay(date, eventSections){
     ){
       if(event["Dates (Northern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")==="true"){
         if(isDateInRange(event["Dates (Northern Hemisphere)"], date.getFullYear(), date, "startOnly")){
+          let isImportant = event["Type"].toLowerCase()==="special event" && !event["Name"].includes("days")
           totalEvents.push({
             name: capitalize(eventName),
             time: event["Type"],
             image: event["Name"],
             day:date.getDate(),
             weekday:date.getDay(),
-            color:colors.startEventBackground[global.darkMode],
+            color:isImportant ? colors.specialEventBackground[global.darkMode]:colors.startEventBackground[global.darkMode],
+            colorHeavy:isImportant ? colors.specialEventBackgroundHeavy[global.darkMode]:colors.startEventBackgroundHeavy[global.darkMode],
             type:"filter",
-            filter:event["Name"]
+            filter:event["Name"],
+            important: isImportant
           });
           if(eventSections["App notifications"]){
             schedulePushNotification(date,eventSections["Set Notification Time"],capitalize(eventName),attemptToTranslate(event["Type"]));
@@ -190,12 +203,23 @@ export function getEventsDay(date, eventSections){
             day:date.getDate(),
             weekday:date.getDay(),
             color:colors.warningEventBackground[global.darkMode],
+            colorHeavy:colors.warningEventBackgroundHeavy[global.darkMode],
             type:"filter",
             filter:event["Name"]
           });
           if(eventSections["App notifications"]){
             schedulePushNotification(date,eventSections["Set Notification Time"],attemptToTranslate("Last day!") + " " + capitalize(eventName),attemptToTranslate(capitalize(event["Type"])));
           }
+        } else if(showEventsIfInRange && isDateInRange(event["Dates (Northern Hemisphere)"], date.getFullYear(), date)){
+          totalEvents.push({
+            name: capitalize(eventName),
+            time: event["Type"],
+            image: event["Name"],
+            day:date.getDate(),
+            weekday:date.getDay(),
+            type:"filter",
+            filter:event["Name"]
+          });
         }
       } else if (event["Dates (Southern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")!=="true"){
         if(isDateInRange(event["Dates (Southern Hemisphere)"], date.getFullYear(), date, "startOnly")){
@@ -206,6 +230,7 @@ export function getEventsDay(date, eventSections){
             day:date.getDate(),
             weekday:date.getDay(),
             color:colors.startEventBackground[global.darkMode],
+            colorHeavy:colors.startEventBackgroundHeavy[global.darkMode],
             type:"filter",
             filter:event["Name"]
           });
@@ -220,12 +245,23 @@ export function getEventsDay(date, eventSections){
             day:date.getDate(),
             weekday:date.getDay(),
             color:colors.warningEventBackground[global.darkMode],
+            colorHeavy:colors.warningEventBackgroundHeavy[global.darkMode],
             type:"filter",
             filter:event["Name"]
           });
           if(eventSections["App notifications"]){
             schedulePushNotification(date,eventSections["Set Notification Time"],attemptToTranslate("Last day!") + " " + eventName, attemptToTranslate(capitalize(event["Type"])));
           }
+        } else if(showEventsIfInRange && isDateInRange(event["Dates (Northern Hemisphere)"], date.getFullYear(), date)){
+          totalEvents.push({
+            name: capitalize(eventName),
+            time: event["Type"],
+            image: event["Name"],
+            day:date.getDate(),
+            weekday:date.getDay(),
+            type:"filter",
+            filter:event["Name"]
+          });
         }
       } 
     }
@@ -479,8 +515,7 @@ const styles = StyleSheet.create({
     flexDirection:"row",
     flex:1,
     alignItems: 'center',
-    marginLeft: 20,
-    marginRight: 20,
+    marginHorizontal: 20,
     borderRadius: 10,
   },
 });

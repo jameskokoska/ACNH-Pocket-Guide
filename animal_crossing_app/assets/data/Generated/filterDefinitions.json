@@ -4011,6 +4011,62 @@
           "id": "HHA Category:SmallGoods"
         }
       ]
+    },
+    {
+      "name": "Speaker Type",
+      "id": "Speaker Type",
+      "children": [
+        {
+          "name": "Does not play music",
+          "id": "Speaker Type:Does not play music"
+        },
+        {
+          "name": "Retro",
+          "id": "Speaker Type:Retro"
+        },
+        {
+          "name": "Hi-fi",
+          "id": "Speaker Type:Hi-fi"
+        },
+        {
+          "name": "Phono",
+          "id": "Speaker Type:Phono"
+        },
+        {
+          "name": "Cheap",
+          "id": "Speaker Type:Cheap"
+        }
+      ]
+    },
+    {
+      "name": "Lighting Type",
+      "id": "Lighting Type",
+      "children": [
+        {
+          "name": "No lighting",
+          "id": "Lighting Type:No lighting"
+        },
+        {
+          "name": "Monitor",
+          "id": "Lighting Type:Monitor"
+        },
+        {
+          "name": "Fluorescent",
+          "id": "Lighting Type:Fluorescent"
+        },
+        {
+          "name": "Candle",
+          "id": "Lighting Type:Candle"
+        },
+        {
+          "name": "Spotlight",
+          "id": "Lighting Type:Spotlight"
+        },
+        {
+          "name": "Emission",
+          "id": "Lighting Type:Emission"
+        }
+      ]
     }
   ],
   "Clothing": [
@@ -12883,6 +12939,62 @@
         {
           "name": "SmallGoods",
           "id": "HHA Category:SmallGoods"
+        }
+      ]
+    },
+    {
+      "name": "Speaker Type",
+      "id": "Speaker Type",
+      "children": [
+        {
+          "name": "Does not play music",
+          "id": "Speaker Type:Does not play music"
+        },
+        {
+          "name": "Retro",
+          "id": "Speaker Type:Retro"
+        },
+        {
+          "name": "Hi-fi",
+          "id": "Speaker Type:Hi-fi"
+        },
+        {
+          "name": "Phono",
+          "id": "Speaker Type:Phono"
+        },
+        {
+          "name": "Cheap",
+          "id": "Speaker Type:Cheap"
+        }
+      ]
+    },
+    {
+      "name": "Lighting Type",
+      "id": "Lighting Type",
+      "children": [
+        {
+          "name": "No lighting",
+          "id": "Lighting Type:No lighting"
+        },
+        {
+          "name": "Monitor",
+          "id": "Lighting Type:Monitor"
+        },
+        {
+          "name": "Fluorescent",
+          "id": "Lighting Type:Fluorescent"
+        },
+        {
+          "name": "Candle",
+          "id": "Lighting Type:Candle"
+        },
+        {
+          "name": "Spotlight",
+          "id": "Lighting Type:Spotlight"
+        },
+        {
+          "name": "Emission",
+          "id": "Lighting Type:Emission"
         }
       ]
     },

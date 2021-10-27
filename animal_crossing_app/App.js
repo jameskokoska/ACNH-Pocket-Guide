@@ -47,13 +47,17 @@ import OrdinancePage from './pages/OrdinancePage';
 import GyroidsPage from './pages/GyroidsPage';
 import { autoBackup } from './components/FirebaseBackup';
 import Popup from './components/Popup';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { navigationRef } from './RootNavigation';
+import * as RootNavigation from './RootNavigation.js';
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
 const appInfo = require("./app.json");
 global.version = appInfo["expo"]["version"];
 global.versionCode = appInfo["expo"]["android"]["versionCode"];
-
+const Stack = createNativeStackNavigator();
 
 class App extends Component {
   constructor() {
@@ -241,8 +245,6 @@ class App extends Component {
       this.startAutoBackup();
     }
     }, 10);
-
-    
   }
 
   componentWillUnmount() {
@@ -324,6 +326,7 @@ class App extends Component {
       }
       this.sideMenu?.closeDrawer();
     }
+    RootNavigation.navigate("Home");
     return true;
   }
 
@@ -427,22 +430,38 @@ class App extends Component {
       } else {
         currentPageView = <Text>Default</Text>
       }
-      
+
+      let otherComponents = <>
+        <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
+        <PopupRating numLogins={this.numLogins}/>
+        <Popup mailLink={true} popupVisible={this.popupBackupVisible} text="Data Backup" textLower="You can now backup your data to the cloud and enable auto backups in the settings." button1={"Go to page"} button1Action={()=>{this.setPage(30)}} button2={"Cancel"} button2Action={()=>{}}/>
+        {/* <PopupTip numLogins={this.numLogins} tipDismissed={this.tipDismissed}/> */}
+        <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
+        <StatusBar hidden={getSettingsString("settingsShowStatusBar")==="false"} backgroundColor={colors.background[global.darkMode]} barStyle={global.darkMode===1?"light-content":"dark-content"}/>
+      </>
+
+      const NavigatorHomePage = ()=><>{otherComponents}{currentPageView}</>
+      const NavigatorVillagerPresentsPage = ({route, navigation})=>{return <VillagerPresentsPage setPage={this.setPage} villager={route.params.propsPassed}/>}
+      const NavigatorCustomFiltersPage = ({route, navigation})=>{return <CustomFiltersPage currentFiltersSearchFor={route.params.propsPassed} titlePassed={route.params.propsPassed} setPage={this.setPage}/>}
+      const NavigatorVillagerFurniture = ({route, navigation})=>{return <VillagerFurniture villager={route.params.propsPassed}/>}
+
       return (
-        <>  
-          <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage} sideMenuSections={this.sideMenuSections} sideMenuSectionsDisabled={this.sideMenuSectionsDisabled}>
-            <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
-            <PopupRating numLogins={this.numLogins}/>
-            <Popup mailLink={true} popupVisible={this.popupBackupVisible} text="Data Backup" textLower="You can now backup your data to the cloud and enable auto backups in the settings." button1={"Go to page"} button1Action={()=>{this.setPage(30)}} button2={"Cancel"} button2Action={()=>{}}/>
-            {/* <PopupTip numLogins={this.numLogins} tipDismissed={this.tipDismissed}/> */}
-            <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
-            <StatusBar hidden={getSettingsString("settingsShowStatusBar")==="false"} backgroundColor={colors.background[global.darkMode]} barStyle={global.darkMode===1?"light-content":"dark-content"}/>
-            {currentPageView}
-          </SideMenu>
-          {fab}
-        </>
+        <View style={{flex:1,backgroundColor: "#000000"}}>
+        <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage} sideMenuSections={this.sideMenuSections} sideMenuSectionsDisabled={this.sideMenuSectionsDisabled}>
+          <NavigationContainer ref={navigationRef} theme={{colors: {background: colors.background[global.darkMode],},}}>
+          <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
+            <Stack.Screen name="Home" component={NavigatorHomePage} />
+            <Stack.Screen name="20" component={NavigatorVillagerPresentsPage}/>
+            <Stack.Screen name="22" component={NavigatorVillagerFurniture}/>
+            <Stack.Screen name="23" component={NavigatorCustomFiltersPage}/>
+          </Stack.Navigator>
+          </NavigationContainer>
+        {fab}
+        </SideMenu>
+        </View>
       );
     }
   }
 }
+
 export default App;

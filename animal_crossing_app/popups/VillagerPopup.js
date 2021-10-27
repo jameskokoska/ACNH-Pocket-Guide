@@ -9,6 +9,7 @@ import ButtonComponent from "../components/ButtonComponent"
 import TextFont from "../components/TextFont"
 import {PopupInfoCustom} from "../components/Popup"
 import {SubHeader, Paragraph} from "../components/Formattings"
+import * as RootNavigation from '../RootNavigation.js';
 
 class VillagerPopup extends Component {
   constructor(props){
@@ -60,8 +61,9 @@ class VillagerPopup extends Component {
         color={colors.okButton[global.darkMode]}
         vibrate={5}
         onPress={() => {
-          this.props.setPage(20, true, this.props.item)
-      }}/>
+          // this.props.setPage(20, true, this.props.item);
+          RootNavigation.navigate('20', {propsPassed:this.props.item});
+        }}/>
       <TouchableOpacity style={{paddingTop:5}} onPress={()=>{this.popup?.setPopupVisible(true);}}>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, padding:8}}>{"What are villager gifts?"}</TextFont>
       </TouchableOpacity>
@@ -70,7 +72,8 @@ class VillagerPopup extends Component {
         color={colors.okButton[global.darkMode]}
         vibrate={5}
         onPress={() => {
-          this.props.setPage(22, true, this.props.item)
+          // this.props.setPage(22, true, this.props.item)
+          RootNavigation.navigate('22', {propsPassed:this.props.item});
       }}/>:<View/>}
       <View style={{alignItems: 'center', width: Dimensions.get('window').width, justifyContent:"center"}}>
         <FastImage

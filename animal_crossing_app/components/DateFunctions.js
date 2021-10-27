@@ -18,10 +18,16 @@ export function addDays(date, days) {
 }
 
 //in the form 2021-04-11
-export function getDateStringMonthDay(date){
+export function getDateStringMonthDay(date, prefix=""){
   var day = parseInt(date.slice(8,10))
   var month =attemptToTranslate(getMonth(parseInt(date.slice(5,7))-1))
-  return attemptToTranslate("Week of") + " " + (doWeSwapDate()===false ? month + " " + day.toString() : day.toString() + " " + month);
+  return attemptToTranslate(prefix) + " " + (doWeSwapDate()===false ? month + " " + day.toString() : day.toString() + " " + month);
+}
+
+export function getDateStringWeekMonthDay(dateObject){
+  let month = attemptToTranslate(getMonth(parseInt(dateObject.getMonth())))
+  let day = dateObject.getDate().toString()
+  return attemptToTranslate(getWeekDay(dateObject.getDay())) + ", " + (doWeSwapDate()===false ? month + " " + day : day + " " + month);
 }
 
 function getCurrentDateObject(){

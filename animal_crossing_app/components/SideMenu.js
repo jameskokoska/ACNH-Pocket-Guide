@@ -81,7 +81,7 @@ export default class SideMenu extends Component {
   renderDrawer = () => {
     return (
       <View style={{width: "100%", height:"100%", backgroundColor:colors.textWhite[global.darkMode]}}>
-        <ScrollView ref={(scrollView) => this.scrollView = scrollView}>
+        <ScrollView overScrollMode={"never"} ref={(scrollView) => this.scrollView = scrollView}>
           <View style={{backgroundColor: colors.topSidebar[global.darkMode], marginBottom: 10}}>
             <View style={{height:45}}/>
             <View style={{flexDirection:"row", width:this.maxWidth-10}}>

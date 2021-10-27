@@ -4,6 +4,11 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
+-Remade Calendar and Events page
+-Significantly improved navigation between pages
+-Added speaker type and lighting type filters
+-Fixed ToDo list add villagers information
+-
 -Added more translations
 -Added villager genders in popup
 -Removed the ability to enter a space in email (again)
@@ -22,6 +27,8 @@ export const changelog = `
 -Added cloud backups
 -Added auto backups (can be enabled in settings)
 -Auto backups will backup every time you open the app!
+-
+-Past changes:
 -
 -Changed the way the sidebar preferences are saved
 -Sorry this update reset your preferences!
@@ -52,8 +59,6 @@ export const changelog = `
 -Long press a variation and add it to your wishlist!
 -You can see if a variation is on your wishlist in the popup!
 -Fixed checkmarks and wishlist indicator not syncing correctly for list items
--
--Past changes:
 -
 -Use larger images in popup setting now applies to variations
 -Fixed bug where it would sometimes indicate you have a variation, even though you unselected it

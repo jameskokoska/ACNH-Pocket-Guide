@@ -217,15 +217,19 @@ export class TodoList extends Component {
           })}
         </View>
       </View>
+      {getCurrentVillagerNamesString()==="You have no favorite villagers."?<>
+      <View style={{height:10}}/>
+      <TouchableOpacity onPress={() => this.props.setPage(8)}>
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>You have no villagers added</TextFont>
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>Tap here and go add some</TextFont>
+      </TouchableOpacity>
+      <View style={{height:10}}/>
+      </>:<View/>}
       <TouchableOpacity style={{marginTop:5, padding:12, alignSelf: 'center'}} 
         onPress={()=>{
           this.toggleVillagerTalk(); 
       }}>
-        <TouchableOpacity onPress={() => this.props.setPage(8)}>
-          <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>You have no villagers added</TextFont>
-          <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>Tap here and go add some</TextFont>
-        </TouchableOpacity>
-        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, }}>{this.state.showVillagersTalkList ? "Hide talk to villagers list" : "Show talk to villagers list"}</TextFont>
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{this.state.showVillagersTalkList ? "Hide talk to villagers list" : "Show talk to villagers list"}</TextFont>
       </TouchableOpacity>
       <PopupAddTask ref={(popupAddTask) => this.popupAddTask = popupAddTask} addItem={this.addItem}/>
       <PopupInfoCustom header={<TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>You do not have any villagers added!</TextFont>} ref={(popup) => this.popup = popup} buttonText={"Dismiss"}>

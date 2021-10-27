@@ -208,7 +208,13 @@ class HomePage extends Component {
                   eventSections={this.state.eventSections}
                 />
               )}
-              <View style={{height: 30}}/>
+              <View style={{height: 2}}/>
+              <TouchableOpacity style={{marginHorizontal: 20, marginVertical:10, backgroundColor:colors.eventBackground[global.darkMode], padding: 10, borderRadius: 10}} 
+                onPress={()=>{this.props.setPage(16); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}
+              >
+                <TextFont bold={true} style={{color: colors.fishText[global.darkMode], fontSize: 18, textAlign:"center"}}>{"View All"}</TextFont>
+              </TouchableOpacity>
+              <View style={{height: 20}}/>
             </HomeContentArea>:<View/>
           }else if(section["name"]==="To-Do"){
             if(this.state.editOrder){

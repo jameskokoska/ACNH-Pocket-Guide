@@ -144,7 +144,7 @@ export default class VisitorList extends Component {
           if(date!==this.currentMondayIndex){
             return(
               <View key={date}>
-                <SubHeader margin={false}>{getDateStringMonthDay(date)}</SubHeader>
+                <SubHeader margin={false}>{getDateStringMonthDay(date,"Week of")}</SubHeader>
                 <View style={{marginBottom:10, flex: 1, flexDirection: 'row', flexWrap:"wrap"}}>
                   {this.characterList.map( (character, index)=>
                     <CharacterItem

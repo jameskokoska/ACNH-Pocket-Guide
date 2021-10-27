@@ -4,16 +4,19 @@ import {Agenda} from 'react-native-calendars';
 import TextFont from '../components/TextFont';
 import colors from '../Colors'
 import {getPhoto} from "../components/GetPhoto"
-import {doWeSwapDate, getMonthFromString, getCurrentDateObject, addDays, getMonthShort} from "../components/DateFunctions"
+import {doWeSwapDate, getMonthFromString, getCurrentDateObject, addDays, getMonthShort, getDateStringMonthDay, getDateStringWeekMonthDay, getMonth, getWeekDayShort} from "../components/DateFunctions"
 import {getEventName, removeAccents, translateDateRange, attemptToTranslateItem, capitalize, getSettingsString, attemptToTranslate, translateBirthday} from "../LoadJsonData"
-import {getSpecialOccurrenceDate} from "../components/EventContainer"
+import {EventContainer, getEventsDay, getSpecialOccurrenceDate} from "../components/EventContainer"
 import FastImage from '../components/FastImage';
 import DelayInput from "react-native-debounce-input";
-import {MailLink, ExternalLink, SubHeader, Paragraph} from "../components/Formattings"
+import {Header, MailLink, ExternalLink, SubHeader, Paragraph, HeaderNote} from "../components/Formattings"
 import {LocaleConfig} from 'react-native-calendars';
-import Header from "../components/Header"
+import HeaderFlatList from "../components/Header"
 import {VillagerPopupPopup} from "./HomePage"
 import {specialEvents, isDateInRange} from "../components/DateFunctions"
+import * as RootNavigation from '../RootNavigation.js';
+import  {PanGestureHandler,ScrollView} from 'react-native-gesture-handler'
+import LottieView from 'lottie-react-native';
 
 //Note: to use Wix Agenda React Native - might to manually install package from repo as some resources may be missing from npm install
 
@@ -22,13 +25,31 @@ export default class CalendarPage extends Component {
     super(item);
 
     this.state = {
-      items: {},
-      itemsColor: {},
-      viewList: false
+      viewList: false,
+      currentEvents: [{"topHeader":""}],
+      currentDay:getCurrentDateObject()
     };
+    this.currentDayOffset = 0;
+    this.eventSections = {
+      "App notifications" : false,
+      "Set Notification Time" : "",
+      "Favorite Villager's Birthdays" : true,
+      "Old Resident Villager's Birthdays" : true,
+      "All Villager's Birthdays" : true,
+      "K.K. Slider" : true,
+      "Daisy Mae" : true,
+      "Crafting Seasons" : true,
+      "Nook Shopping Events" : true,
+      "Shopping Seasons" : true,
+      "Event Ready Days" : true,
+      "Zodiac Seasons" : true,
+      "Break2" : true,
+      "Show End Day of Events" : true,
+    }
   }
   componentDidMount() {
     this.mounted = true;
+    this.appendEvents(getCurrentDateObject())
   }
   componentWillUnmount() {
     this.mounted = false;
@@ -36,286 +57,62 @@ export default class CalendarPage extends Component {
   openVillagerPopup = (item) => {
     this.villagerPopupPopup?.setPopupVisible(true, item);
   }
+  appendEvents = (date, reset=false) => {
+    let currentEventsStart = this.state.currentEvents
+    if(reset){
+      currentEventsStart = [{"topHeader":""}]
+    }
+    let newDate = addDays(date,this.currentDayOffset)
+    let currentEvents = [...currentEventsStart, {"dateBreak":getDateStringWeekMonthDay(newDate)},...getEventsDay(newDate, this.eventSections, true)]
+    this.currentDayOffset=this.currentDayOffset+1;
+    this.setState({currentEvents:currentEvents})
+  }
+  setCurrentDay = (date) => {
+    this.currentDayOffset = 0
+    this.setState({currentDay: new Date(date), currentEvents:[{"topHeader":""}], viewList:"today"})
+    this.appendEvents(new Date(date),true)
+  }
   render() {
-    LocaleConfig.locales['language'] = {
-      monthNames: [attemptToTranslate('January'),attemptToTranslate('February'),attemptToTranslate('March'),attemptToTranslate('April'),attemptToTranslate('May'),attemptToTranslate('June'),attemptToTranslate('July'),attemptToTranslate('August'),attemptToTranslate('September'),attemptToTranslate('October'),attemptToTranslate('November'),attemptToTranslate('December')],
-      monthNamesShort: [attemptToTranslate('Jan'),attemptToTranslate('Feb'),attemptToTranslate('Mar'),attemptToTranslate('Apr'),attemptToTranslate('May'),attemptToTranslate('Jun'),attemptToTranslate('Jul'),attemptToTranslate('Aug'),attemptToTranslate('Sep'),attemptToTranslate('Oct'),attemptToTranslate('Nov'),attemptToTranslate('Dec')],
-      dayNames: [attemptToTranslate('Sunday'),attemptToTranslate('Monday'),attemptToTranslate('Tuesday'),attemptToTranslate('Wednesday'),attemptToTranslate('Thursday'),attemptToTranslate('Friday'),attemptToTranslate('Saturday')],
-      dayNamesShort: [attemptToTranslate('Sun'),attemptToTranslate('Mon'),attemptToTranslate('Tue'),attemptToTranslate('Wed'),attemptToTranslate('Thu'),attemptToTranslate('Fri'),attemptToTranslate('Sat')],
-      today: attemptToTranslate('Today')
-    };
-    LocaleConfig.defaultLocale = 'language';
-
-    var viewAll = <View/>
-    if(this.state.viewList){
-      viewAll = <AllEventsList setPage={this.props.setPage}/>
+    var viewList = <View/>
+    if(this.state.viewList==="list"){
+      viewList = <AllEventsList setPage={this.props.setPage}/>
+    } else if (this.state.viewList==="calendar"){
+      viewList = <CalendarView eventSections={this.eventSections} currentDate={getCurrentDateObject()} setCurrentDay={this.setCurrentDay}/>
     }
     return (<>
       <VillagerPopupPopup ref={(villagerPopupPopup) => this.villagerPopupPopup = villagerPopupPopup} setPage={this.props.setPage}/>
-      {viewAll}
-      <Agenda
-        ref={(agenda) => this.agenda = agenda} 
-        items={this.state.items}
-        loadItemsForMonth={this.loadItems.bind(this)}
-        selected={getCurrentDateObject()}
-        renderItem={this.renderItem.bind(this)}
-        renderEmptyDate={this.renderEmptyDate.bind(this)}
-        rowHasChanged={this.rowHasChanged.bind(this)}
-        markingType={'custom'}
-        markedDates={this.state.itemsColor}
-        // monthFormat={'yyyy'}
-        theme={{ 
-          // agendaDayTextColor: 'black',
-          // agendaDayNumColor: 'black',
-          // agendaTodayColor: 'black', 
-          indicatorColor: colors.textBlack[global.darkMode],
-          todayTextColor: '#00adf5',
-          monthTextColor: colors.textBlack[global.darkMode],
-          dayTextColor: colors.textBlack[global.darkMode],
-          backgroundColor: colors.background[global.darkMode],
-          calendarBackground: colors.backgroundLight[global.darkMode],
+      {viewList}
+      <FlatList
+        data={this.state.currentEvents}
+        renderItem={({item}) => {
+          if(item["topHeader"]!==undefined){
+            return <Header style={{marginHorizontal:20, marginTop: 100}}>Events</Header>
+          }
+          if(item["dateBreak"]!==undefined){
+            return <SubHeader margin={false} style={{marginLeft:15, fontSize:25,marginTop:17,marginBottom:8}}>{item["dateBreak"]}</SubHeader>
+          }
+          return <EventContainer 
+            openVillagerPopup={this.openVillagerPopup}
+            setPage={this.props.setPage}
+            backgroundColor={colors.eventBackground[global.darkMode]}
+            textColor={colors.textBlack[global.darkMode]}
+            event={item}
+            showDate={false}
+          />
         }}
-        firstDay={0}
-          
-        //renderDay={(day, item) => (<Text>{day ? day.day: 'item'}</Text>)}
-        // hideExtraDays={false}
+        windowSize={5}
+        keyExtractor={(item, index) => `list-item2-${index}`}
+        contentContainerStyle={{paddingBottom:Dimensions.get('window').height}}
+        style={{}}
+        onEndReached={()=>{this.appendEvents(this.state.currentDay)}}
+        onEndReachedThreshold={0.9}
       />
-      <BottomBar viewList={()=>{if(this.mounted){this.setState({viewList:!this.state.viewList})}}} viewToday={()=>{if(this.mounted){this.setState({viewList:false});} this.agenda.chooseDay(getCurrentDateObject())}} openAgenda={()=>{if(this.state.viewList && this.mounted){this.setState({viewList:false});}else{this.agenda.setScrollPadPosition(0, true); this.agenda.enableCalendarScrolling();}}}/>
+      <BottomBar 
+        viewList={()=>{if(this.mounted){this.setState({viewList:"list"});}}}
+        viewToday={()=>{if(this.mounted){this.setState({viewList:"today"});}}}
+        openCalendar={()=>{if(this.mounted){this.setState({viewList:"calendar"});}}}/>
     </>
-    );
-    
-    
-  }
-
-  loadItems(day) {
-    console.log(day)
-
-    const styleRepeatEvent = {customStyles: {
-      container: { borderWidth:1, borderColor: colors.lightDarkAccentHeavy2[global.darkMode]},
-      text: {fontWeight: 'bold'}
-    }}
-
-    const styleImportantEvent = {customStyles: {
-      container: { borderWidth:2, borderColor: colors.specialEventBackgroundHighlight[global.darkMode]},
-      text: {fontWeight: 'bold'}
-    }}
-
-    const styleBirthdayEvent = {customStyles: {
-      container: { borderWidth:2, borderColor: colors.specialEventBirthdayBackgroundHighlight[global.darkMode]},
-      text: {fontWeight: 'bold'}
-    }}
-
-    setTimeout(() => {
-      for (let i = -5; i < 40; i++) {
-        const date = new Date();
-        
-        date.setFullYear(day.year);
-        date.setMonth(day.month);
-        date.setDate(day.day + i);
-        
-        const strTime = this.dateToString(date);
-        const seasonData = require("../assets/data/data.json")["Seasons and Events"];
-        const villagerData = require("../assets/data/data.json")["Villagers"];
-
-        // stupid fix for one day offset
-        // var date2 = new Date(date)
-        // date2.setDate( date2.getDate() - 1 )
-        // strTime = this.dateToString(date2);
-        
-        if (!this.state.items[strTime]) {
-          this.state.items[strTime] = [];
-
-          villagerData.map( (villager, index)=>{
-            if((date.getMonth()+1).toString()===(villager["Birthday"].split("/"))[0]&& date.getDate().toString()===(villager["Birthday"].split("/"))[1]){
-              if(global.collectionList.includes("villagerCheckList"+villager["Name"])){
-                this.state.items[strTime].push({
-                  name: capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),
-                  time: "All day",
-                  image: villager["Icon Image"],
-                  color: ["#2195F33F","#006EB34D"],
-                  type:"villager",
-                  filter: villager,
-                });
-                this.state.itemsColor[strTime] = styleBirthdayEvent;
-              } else {
-                this.state.items[strTime].push({
-                  name: capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),
-                  time: "All day",
-                  image: villager["Icon Image"],
-                  color: colors.white,
-                  type:"villager",
-                  filter: villager,
-                });
-              }
-              
-            }
-          })
-
-          specialEvents.map( (event, index)=>{
-            if(event["Month"] == getMonthShort(parseInt(date.getMonth())) && parseInt(event["Day Start"]) == date.getDate()){
-              this.state.items[strTime].push({
-                name: capitalize(attemptToTranslate(event["Name"], true)),
-                time: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
-                image: event["Name"],
-                color:colors.specialEventBackground,
-                type:"filter",
-                filter:event["Name"],
-              });
-            } else {
-              var eventDay = getSpecialOccurrenceDate(date.getFullYear(), index, specialEvents);
-              if(eventDay[0]===date.getDate() && eventDay[1]===date.getMonth()){
-                if(!event["Name"].includes("ireworks")){
-                  this.state.items[strTime].push({
-                    name: capitalize(attemptToTranslate(event["Name"], true)),
-                    time: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
-                    image: event["Name"],
-                    color: colors.specialEventBackground,
-                    type:"filter",
-                    filter:event["Name"]
-                  });
-                  this.state.itemsColor[strTime] = styleImportantEvent;
-                } else {
-                  this.state.items[strTime].push({
-                    name: capitalize(attemptToTranslate(event["Name"], true)),
-                    time: getSettingsString("settingsUse24HourClock") === "true" ? event["Time24"] : event["Time"],
-                    image: event["Name"],
-                    color: colors.white,
-                    type:"filter",
-                    filter:event["Name"]
-                  });
-                }
-              }
-            }
-          })
-
-          if(date.getDay()===0){
-            this.state.items[strTime].push({
-              name: 'Daisy Mae',
-              time: getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 12:00" : "5 AM - 12 PM",
-              image:"turnip.png",
-              color: colors.white,
-              type:"filter",
-              filter:"Daisy Mae"
-            });
-            this.state.itemsColor[strTime] = styleRepeatEvent;
-          } 
-
-          //Check if there was a bug-off/fishing tourney the day before, then push K.K. pack one day
-          var moveKKTo0 = false; //Day of the week to move to
-          var moveKKTo1 = false; //Day of the week to move to
-          var moveKK = false;
-          var moveKKTo = 6;
-          
-          specialEvents.map( (event, index)=>{
-            var eventDay = getSpecialOccurrenceDate(date.getFullYear(), index, specialEvents);
-            if(eventDay[0]===addDays(date,-1).getDate() && eventDay[1]===addDays(date,-1).getMonth()){
-              moveKKTo0 = true;
-            }
-            if(eventDay[0]===addDays(date,-2).getDate() && eventDay[1]===addDays(date,-2).getMonth()){
-              moveKKTo1 = true;
-            }
-            if(eventDay[0]===date.getDate() && eventDay[1]===date.getMonth()){
-              moveKK = true;
-            }
-          })
-          if(moveKKTo1 && moveKKTo0){
-            moveKKTo = 1
-          } else if (moveKKTo0){
-            moveKKTo = 0
-          }
-
-          if ((date.getDay()===moveKKTo) && !moveKK){
-            this.state.items[strTime].push({
-              name: 'K.K. Slider',
-              time: getSettingsString("settingsUse24HourClock") === "true" ? "18:00 - 24:00" : "6 PM - 12 AM",
-              image:"music.png",
-              color: colors.white,
-              type:"filter",
-              filter:"K.K. concert"
-            });
-            if(this.state.itemsColor[strTime]===undefined){
-              this.state.itemsColor[strTime] = styleRepeatEvent;
-            }
-          }
-
-          seasonData.map( (event, index)=>{
-            var eventName = getEventName(event["Name"])
-            if(event["Dates (Northern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")==="true"){
-              if(isDateInRange(event["Dates (Northern Hemisphere)"], date.getFullYear(), date)){
-                this.state.items[strTime].push({
-                  name: capitalize(eventName),
-                  time: event["Type"],
-                  image: event["Name"],
-                  color: colors.white,
-                  type:"filter",
-                  filter:event["Name"]
-                });
-              }
-            } else if (event["Dates (Southern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")!=="true"){
-              if(isDateInRange(event["Dates (Southern Hemisphere)"], date.getFullYear(), date)){
-                this.state.items[strTime].push({
-                  name: capitalize(eventName),
-                  time: event["Type"],
-                  image: event["Name"],
-                  color: colors.white,
-                  type:"filter",
-                  filter:event["Name"]
-                });
-              }
-            } 
-          })
-          
-
-          // const numItems = Math.floor(Math.random() * 3);
-          // for (let j = 0; j < numItems; j++) {
-          //   this.state.items[strTime].push({
-          //     name: 'Item for ' + strTime + ' #' + j,
-          //     height: Math.max(50, Math.floor(Math.random() * 150))
-          //   });
-          // }
-        }
-      }
-      const newItems = {};
-      Object.keys(this.state.items).forEach(key => {
-        newItems[key] = this.state.items[key];
-      });
-      if(this.mounted){
-        this.setState({
-          items: newItems
-        });
-      }
-    }, 10);
-  }
-
-  renderItem(item) {
-    var image = <View/>
-    if(item.image.startsWith("http")){
-      image = <FastImage style={{width: 50, height: 50, resizeMode:'contain',}} source={{uri:item.image}} cacheKey={item.image}/>
-    } else {
-      image = <Image style={{width: 50, height: 50, resizeMode:'contain',}} source={getPhoto(item.image.toLowerCase(), item.time.toLowerCase())}/>
-    }
-    return(
-      <TouchableNativeFeedback 
-        background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+(item.filter===undefined?"00":"AF"), false)}
-        onPress={()=>{
-          if(item.filter!==undefined){
-            if(item.hasOwnProperty("type") && item.type==="villager"){
-              this.openVillagerPopup(item.filter)
-            } else {
-              this.props.setPage(23, true, item.filter)
-            }
-          }
-        }}
-      >
-        <View style={{padding: 20, marginHorizontal: 10, marginVertical: 5,  flexDirection:"row", flex:1, alignItems: 'center', borderRadius: 10, backgroundColor:item.color[global.darkMode]}}>
-          {image}
-          <View style={{flex: 1, marginLeft: 18,}}>
-            <TextFont bold={true} style={{fontSize: 20,color: colors.textBlack[global.darkMode]}}>{item.name}</TextFont>
-            <TextFont style={{marginTop: 3,fontSize: 18,color: colors.textBlack[global.darkMode]}}>{item.time}</TextFont>
-          </View>
-        </View>
-      </TouchableNativeFeedback>
-    )
+    );    
   }
 
   renderEmptyDate() {
@@ -334,6 +131,173 @@ export default class CalendarPage extends Component {
 
 }
 
+function firstDayInMonth(date) {
+  let d = new Date(date);
+  d.setDate(1);
+  return d;
+}
+
+class CalendarView extends Component{
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      monthOffset:0,
+      allowedToSwipe:true,
+      currentDate:this.props.currentDate,
+      eventColors:[],
+      eventColorsHeavy:[],
+      importantEvents:[]
+    };
+  }
+
+  startTimeout = () => {
+    setTimeout(async () => {
+      this.setState({allowedToSwipe:true})
+    }, 300)
+    this.setState({eventColors:[], eventColorsHeavy:[], importantEvents:[]})
+    this.getCurrentMonthEventColors()
+  }
+
+  componentDidMount(){
+    this.getCurrentMonthEventColors()
+  }
+
+  getCurrentMonthEventColors = () => {
+    setTimeout(async () => {
+      let currentMonth = this.state.currentDate.getMonth()+1
+      let currentYear = this.state.currentDate.getFullYear()
+      let amountOfDays = new Date(currentYear, currentMonth, 0).getDate();
+      let eventColors = []
+      let eventColorsHeavy = []
+      let importantEvents = []
+      for(let day = 0; day<amountOfDays+1; day++){
+        let currentEventColors = []
+        let currentEventColorsHeavy = []
+        let eventsForDay = getEventsDay(addDays(firstDayInMonth(this.state.currentDate),day-1), this.props.eventSections, true)
+        let currentImportantEvents = false
+        for(let event = 0; event<eventsForDay.length; event++){
+          if(eventsForDay[event]["color"]===undefined){
+            continue
+          }
+          if(!currentEventColors.includes(eventsForDay[event]["color"])){
+            currentEventColors.push(eventsForDay[event]["color"])
+            currentEventColorsHeavy.push(eventsForDay[event]["colorHeavy"])
+          }
+          if(eventsForDay[event]["important"]===true){
+            currentImportantEvents = true
+          }
+        }
+        eventColors.push(currentEventColors)
+        eventColorsHeavy.push(currentEventColorsHeavy)
+        importantEvents.push(currentImportantEvents)
+      }
+      this.setState({eventColors:eventColors, eventColorsHeavy:eventColorsHeavy, importantEvents: importantEvents})
+    }, 10)
+  }
+
+  render(){
+    let marginHorizontal = 20
+    let currentMonth = this.state.currentDate.getMonth()+1
+    let currentYear = this.state.currentDate.getFullYear()
+    let monthDayStart = firstDayInMonth(this.state.currentDate).getDay();
+    let amountOfDays = new Date(currentYear, currentMonth, 0).getDate();
+    let daysList = [-1000,-1001,-1002,-1003,-1004,-1005,-1006] //-1000 indicates it is the day of week header
+    for(let day = 1-monthDayStart; day<amountOfDays+1; day++){
+      daysList.push(day)
+    }
+    let windowWidth = Dimensions.get('window').width;
+    if(windowWidth>Dimensions.get('window').height)
+      windowWidth = Dimensions.get('window').height;
+    return <View style={{backgroundColor:colors.background[global.darkMode], height:Dimensions.get('window').height, width:Dimensions.get('window').width}}>
+      <ScrollView>
+        <PanGestureHandler 
+        activeOffsetX={[-10, 10]}
+          onGestureEvent={({ nativeEvent: { translationX, velocityX } }) => {
+            if(this.state.allowedToSwipe){
+              if(velocityX<-1200){
+                this.setState({allowedToSwipe:false, currentDate:new Date(this.state.currentDate.setMonth(this.state.currentDate.getMonth()+1))})
+                this.startTimeout()
+              }
+              if(velocityX>1200){
+                this.setState({allowedToSwipe:false, currentDate:new Date(this.state.currentDate.setMonth(this.state.currentDate.getMonth()-1))})
+                this.startTimeout()
+              }
+            }
+          }}
+        >
+          <View>
+            <View style={{height:Dimensions.get('window').height/6-80}}/>
+            <View style={{justifyContent:"center", alignItems:'center'}}>
+              <View style={{flexDirection:"row"}}>
+                <Header style={{fontSize: 38, marginHorizontal:20, marginTop: 100, width:((windowWidth-marginHorizontal*2-2))}}>{attemptToTranslate(getMonth(this.state.currentDate.getMonth())) + " " + currentYear.toString()}</Header>
+              </View>
+              <Header bold={false} style={{marginBottom:10, marginHorizontal:20, fontSize:13, width:((windowWidth-marginHorizontal*2-10))}}>Swipe left/right to change months</Header>
+              <View style={{maxWidth:windowWidth,}}>
+                <View style={{display:"flex",flexDirection:"row", overflow:"visible", flexWrap:"wrap", marginHorizontal:marginHorizontal}}>
+                  {daysList.map((item)=>{
+                    if(item<=-1000){
+                      return <View key={item} style={{width:((windowWidth-marginHorizontal*2-70)/7), height: 20, alignItems:"center", justifyContent:"center", margin:5}}>
+                        <SubHeader margin={false} style={{fontSize:11}}>{getWeekDayShort((item+1000)*-1)}</SubHeader>
+                      </View>
+                    }
+                    if(item<1){
+                      return <View key={item} style={{width:((windowWidth-marginHorizontal*2-70)/7), height: 50, alignItems:"center", justifyContent:"center", margin:5}}>
+                      </View>
+                    }
+                    return <TouchableOpacity key={item} activeOpacity={0.6} onPress={()=>{this.props.setCurrentDay(new Date(this.state.currentDate).setDate(item))}}>
+                      <View style={{borderRadius:10,borderWidth: 1.3, borderColor: this.state.importantEvents[item]?(this.state.eventColorsHeavy[item]!==undefined?this.state.eventColorsHeavy[item][0]:"transparent"):"transparent",backgroundColor:this.state.eventColors[item]!==undefined?this.state.eventColors[item][0]:"transparent", width:((windowWidth-marginHorizontal*2-70)/7), height: 50, alignItems:"center", justifyContent:"center", margin:5}}>
+                        <SubHeader margin={false} style={{fontSize:15}}>{item.toString()}</SubHeader>
+                        <View style={{flexDirection:"row", position:"absolute", bottom:7}}>
+                          {this.state.eventColors[item]!==undefined?
+                          this.state.eventColorsHeavy[item].map((item)=>{
+                            return <View style={{borderRadius:10,backgroundColor:item, width:5, height: 5, marginHorizontal:2}}/>
+                          })
+                          :<View/>}
+                        </View>
+                      </View>
+                    </TouchableOpacity>
+                  })}
+                </View>
+              </View>
+              <View style={{height:10}}/>
+              {this.state.eventColors[0]===undefined?
+                <LottieView autoPlay loop
+                  style={{width: 100, zIndex:1,transform: [{ scale: 1 },{ rotate: '0deg'},],}}
+                  source={require('../assets/loading.json')}
+                />:<View/>
+              }
+              {this.state.eventColors[0]!==undefined?<>
+                <View style={{height:20}}/>
+                <LegendEntry name="Favorite Villager's Birthdays" color={colors.specialEventBirthdayBackgroundHeavy[global.darkMode]}/>
+                <LegendEntry name="Old Resident Villager's Birthdays" color={colors.specialEventResidentBirthdayBackgroundHeavy[global.darkMode]}/>
+                <LegendEntry name="Special Event" color={colors.specialEventBackgroundHeavy[global.darkMode]}/>
+                <LegendEntry name="Event Starts" color={colors.startEventBackgroundHeavy[global.darkMode]}/>
+                <LegendEntry name="Event Ends" color={colors.warningEventBackgroundHeavy[global.darkMode]}/>
+                <View style={{height:Dimensions.get('window').height/6-10}}/>
+                </>:<View/>
+              }
+            </View>
+          </View>
+        </PanGestureHandler>
+      </ScrollView>
+    </View>
+  }
+}
+
+class LegendEntry extends Component{
+  render(){
+    let marginHorizontal = 20
+    let windowWidth = Dimensions.get('window').width;
+    if(windowWidth>Dimensions.get('window').height)
+      windowWidth = Dimensions.get('window').height;
+    return <View style={{flexDirection:"row",width:(windowWidth-marginHorizontal*2-10), alignItems:'center', marginBottom:5}}>
+      <View style={{borderRadius:10,backgroundColor:this.props.color, width:17, height: 17}}/>
+      <Header bold={false} style={{marginHorizontal:5, fontSize:14, marginBottom:2}}>{this.props.name}</Header>
+    </View>
+  }
+}
+
 
 class BottomBar extends Component {  
   render(){
@@ -343,7 +307,7 @@ class BottomBar extends Component {
           <TextFont bold={true} style={{textAlign:"center", fontSize: 12,color: colors.textBlack[global.darkMode]}}>View Today</TextFont>
         </View>
       </TouchableNativeFeedback>
-      <TouchableNativeFeedback onPress={()=>{this.props.openAgenda(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode], false)}>
+      <TouchableNativeFeedback onPress={()=>{this.props.openCalendar(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode], false)}>
         <View style={{borderRadius: 10, borderWidth:3,borderColor:colors.lightDarkAccentHeavy2[global.darkMode],width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
           <TextFont bold={true} style={{textAlign:"center", fontSize: 12,color: colors.textBlack[global.darkMode]}}>Open Calendar</TextFont>
         </View>
@@ -407,7 +371,7 @@ class AllEventsList extends Component{
       <View style={{backgroundColor:colors.background[global.darkMode], height:Dimensions.get('window').height, width:Dimensions.get('window').width}}>
         <Animated.View style={{width:Dimensions.get('window').width,position:"absolute", zIndex:1, transform: [{ translateY: this.translateY }]}}>
           <View style={{backgroundColor: colors.background[global.darkMode], flex: 1,justifyContent: 'flex-end',height:this.headerHeight,}}>
-            <Header disableFilters={true} disableSearch={false} title={"Events"} headerHeight={this.headerHeight} updateSearch={this.handleSearch} appBarColor={colors.background[global.darkMode]} searchBarColor={colors.searchbarBG[global.darkMode]} titleColor={colors.textBlack[global.darkMode]}/>
+            <HeaderFlatList disableFilters={true} disableSearch={false} title={"Events"} headerHeight={this.headerHeight} updateSearch={this.handleSearch} appBarColor={colors.background[global.darkMode]} searchBarColor={colors.searchbarBG[global.darkMode]} titleColor={colors.textBlack[global.darkMode]}/>
           </View>
         </Animated.View>
         <Animated.FlatList
@@ -449,7 +413,8 @@ class RenderItemFlatList extends Component{
         background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+(item["Name"]===undefined?"00":"AF"), false)}
         onPress={()=>{
           if(item["Name"]!==undefined){
-            this.props.setPage(23, true, item["Name"])
+            // this.props.setPage(23, true, item["Name"])
+            RootNavigation.navigate('23', {propsPassed:item["Name"]});
           }
         }}
       >
