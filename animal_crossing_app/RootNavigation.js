@@ -8,3 +8,9 @@ export function navigate(name, params) {
     navigationRef.navigate(name, params);
   }
 }
+
+export function getCurrentRoute() {
+  if (navigationRef.isReady()) {
+    return(navigationRef.current.getState().routeNames[navigationRef.current.getState().index])
+  }
+}

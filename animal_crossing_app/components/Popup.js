@@ -18,6 +18,8 @@ import BottomSheet from 'reanimated-bottom-sheet';
 import Animated from 'react-native-reanimated';
 import FadeInOut from "./FadeInOut"
 import { MailLink } from "./Formattings";
+import * as RootNavigation from '../RootNavigation.js';
+
 
 // <Popup 
 //  button1={"OK"} 
@@ -210,7 +212,11 @@ export class PopupBottomCustom extends Component {
   handleBackButton = () => {
     if(this.visible===true){
       this.setPopupVisible(false)
-      return true
+      if(RootNavigation.getCurrentRoute()==="Home"){
+        return true
+      } else {
+        return false
+      }
     }
   }
 
