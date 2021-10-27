@@ -8,6 +8,7 @@ export const changelog = `
 -Significantly improved navigation between pages
 -Added speaker type and lighting type filters
 -Fixed ToDo list add villagers information
+-Fixed back button not going to previous screen
 -
 -Added more translations
 -Added villager genders in popup

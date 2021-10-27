@@ -15,7 +15,7 @@ import HeaderFlatList from "../components/Header"
 import {VillagerPopupPopup} from "./HomePage"
 import {specialEvents, isDateInRange} from "../components/DateFunctions"
 import * as RootNavigation from '../RootNavigation.js';
-import  {PanGestureHandler,ScrollView} from 'react-native-gesture-handler'
+import  {ScrollView} from 'react-native-gesture-handler'
 import LottieView from 'lottie-react-native';
 
 //Note: to use Wix Agenda React Native - might to manually install package from repo as some resources may be missing from npm install
@@ -68,6 +68,7 @@ export default class CalendarPage extends Component {
     this.setState({currentEvents:currentEvents})
   }
   setCurrentDay = (date) => {
+    getSettingsString("settingsEnableVibrations")==="true"? Vibration.vibrate(5) : "";
     this.currentDayOffset = 0
     this.setState({currentDay: new Date(date), currentEvents:[{"topHeader":""}], viewList:"today"})
     this.appendEvents(new Date(date),true)
@@ -152,9 +153,7 @@ class CalendarView extends Component{
   }
 
   startTimeout = () => {
-    setTimeout(async () => {
-      this.setState({allowedToSwipe:true})
-    }, 300)
+    getSettingsString("settingsEnableVibrations")==="true"? Vibration.vibrate(5) : "";
     this.setState({eventColors:[], eventColorsHeavy:[], importantEvents:[]})
     this.getCurrentMonthEventColors()
   }
@@ -211,75 +210,81 @@ class CalendarView extends Component{
       windowWidth = Dimensions.get('window').height;
     return <View style={{backgroundColor:colors.background[global.darkMode], height:Dimensions.get('window').height, width:Dimensions.get('window').width}}>
       <ScrollView>
-        <PanGestureHandler 
-        activeOffsetX={[-10, 10]}
-          onGestureEvent={({ nativeEvent: { translationX, velocityX } }) => {
-            if(this.state.allowedToSwipe){
-              if(velocityX<-1200){
-                this.setState({allowedToSwipe:false, currentDate:new Date(this.state.currentDate.setMonth(this.state.currentDate.getMonth()+1))})
-                this.startTimeout()
-              }
-              if(velocityX>1200){
-                this.setState({allowedToSwipe:false, currentDate:new Date(this.state.currentDate.setMonth(this.state.currentDate.getMonth()-1))})
-                this.startTimeout()
-              }
-            }
-          }}
-        >
-          <View>
-            <View style={{height:Dimensions.get('window').height/6-80}}/>
-            <View style={{justifyContent:"center", alignItems:'center'}}>
-              <View style={{flexDirection:"row"}}>
-                <Header style={{fontSize: 38, marginHorizontal:20, marginTop: 100, width:((windowWidth-marginHorizontal*2-2))}}>{attemptToTranslate(getMonth(this.state.currentDate.getMonth())) + " " + currentYear.toString()}</Header>
-              </View>
-              <Header bold={false} style={{marginBottom:10, marginHorizontal:20, fontSize:13, width:((windowWidth-marginHorizontal*2-10))}}>Swipe left/right to change months</Header>
-              <View style={{maxWidth:windowWidth,}}>
-                <View style={{display:"flex",flexDirection:"row", overflow:"visible", flexWrap:"wrap", marginHorizontal:marginHorizontal}}>
-                  {daysList.map((item)=>{
-                    if(item<=-1000){
-                      return <View key={item} style={{width:((windowWidth-marginHorizontal*2-70)/7), height: 20, alignItems:"center", justifyContent:"center", margin:5}}>
-                        <SubHeader margin={false} style={{fontSize:11}}>{getWeekDayShort((item+1000)*-1)}</SubHeader>
-                      </View>
-                    }
-                    if(item<1){
-                      return <View key={item} style={{width:((windowWidth-marginHorizontal*2-70)/7), height: 50, alignItems:"center", justifyContent:"center", margin:5}}>
-                      </View>
-                    }
-                    return <TouchableOpacity key={item} activeOpacity={0.6} onPress={()=>{this.props.setCurrentDay(new Date(this.state.currentDate).setDate(item))}}>
-                      <View style={{borderRadius:10,borderWidth: 1.3, borderColor: this.state.importantEvents[item]?(this.state.eventColorsHeavy[item]!==undefined?this.state.eventColorsHeavy[item][0]:"transparent"):"transparent",backgroundColor:this.state.eventColors[item]!==undefined?this.state.eventColors[item][0]:"transparent", width:((windowWidth-marginHorizontal*2-70)/7), height: 50, alignItems:"center", justifyContent:"center", margin:5}}>
-                        <SubHeader margin={false} style={{fontSize:15}}>{item.toString()}</SubHeader>
-                        <View style={{flexDirection:"row", position:"absolute", bottom:7}}>
-                          {this.state.eventColors[item]!==undefined?
-                          this.state.eventColorsHeavy[item].map((item)=>{
-                            return <View style={{borderRadius:10,backgroundColor:item, width:5, height: 5, marginHorizontal:2}}/>
-                          })
-                          :<View/>}
-                        </View>
-                      </View>
-                    </TouchableOpacity>
-                  })}
-                </View>
-              </View>
-              <View style={{height:10}}/>
-              {this.state.eventColors[0]===undefined?
-                <LottieView autoPlay loop
-                  style={{width: 100, zIndex:1,transform: [{ scale: 1 },{ rotate: '0deg'},],}}
-                  source={require('../assets/loading.json')}
-                />:<View/>
-              }
-              {this.state.eventColors[0]!==undefined?<>
-                <View style={{height:20}}/>
-                <LegendEntry name="Favorite Villager's Birthdays" color={colors.specialEventBirthdayBackgroundHeavy[global.darkMode]}/>
-                <LegendEntry name="Old Resident Villager's Birthdays" color={colors.specialEventResidentBirthdayBackgroundHeavy[global.darkMode]}/>
-                <LegendEntry name="Special Event" color={colors.specialEventBackgroundHeavy[global.darkMode]}/>
-                <LegendEntry name="Event Starts" color={colors.startEventBackgroundHeavy[global.darkMode]}/>
-                <LegendEntry name="Event Ends" color={colors.warningEventBackgroundHeavy[global.darkMode]}/>
-                <View style={{height:Dimensions.get('window').height/6-10}}/>
-                </>:<View/>
-              }
+        <View>
+          <View style={{height:Dimensions.get('window').height/6-80}}/>
+          <View style={{justifyContent:"center", alignItems:'center'}}>
+            <View style={{alignItems:"center", marginTop: 100, flexDirection:"row",justifyContent:"space-between", width:windowWidth-marginHorizontal*2}}>
+              <TouchableOpacity style={{justifyContent:"center", alignItems:"center",padding:10, borderRadius:8, backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode]}} activeOpacity={0.6} 
+                onPress={()=>{
+                  this.setState({allowedToSwipe:false, currentDate:new Date(this.state.currentDate.setMonth(this.state.currentDate.getMonth()+1))})
+                  this.startTimeout()
+                }}
+              >
+                <Image
+                  style={{width:20,height:20,resizeMode:'contain',}}
+                  source={global.darkMode ? require("../assets/icons/leftArrowWhite.png") : require("../assets/icons/leftArrow.png")}
+                />
+              </TouchableOpacity>
+              <Header style={{fontSize: 28,marginHorizontal:20}}>{attemptToTranslate(getMonth(this.state.currentDate.getMonth())) + " " + currentYear.toString()}</Header>
+              <TouchableOpacity style={{justifyContent:"center", alignItems:"center",padding:10, borderRadius:8, backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode]}} activeOpacity={0.6} 
+                onPress={()=>{
+                  this.setState({allowedToSwipe:false, currentDate:new Date(this.state.currentDate.setMonth(this.state.currentDate.getMonth()-1))})
+                  this.startTimeout()
+                }}
+              >
+                <Image
+                  style={{width:20,height:20,resizeMode:'contain',}}
+                  source={global.darkMode ? require("../assets/icons/rightArrowWhite.png") : require("../assets/icons/rightArrow.png")}
+                />
+              </TouchableOpacity>
             </View>
+            <View style={{height:10}}/>
+            <View style={{maxWidth:windowWidth,}}>
+              <View style={{display:"flex",flexDirection:"row", overflow:"visible", flexWrap:"wrap", marginHorizontal:marginHorizontal}}>
+                {daysList.map((item)=>{
+                  if(item<=-1000){
+                    return <View key={item} style={{width:((windowWidth-marginHorizontal*2-70)/7), height: 20, alignItems:"center", justifyContent:"center", margin:5}}>
+                      <SubHeader margin={false} style={{fontSize:11}}>{getWeekDayShort((item+1000)*-1)}</SubHeader>
+                    </View>
+                  }
+                  if(item<1){
+                    return <View key={item} style={{width:((windowWidth-marginHorizontal*2-70)/7), height: 50, alignItems:"center", justifyContent:"center", margin:5}}>
+                    </View>
+                  }
+                  return <TouchableOpacity key={item} activeOpacity={0.6} onPress={()=>{this.props.setCurrentDay(new Date(this.state.currentDate).setDate(item))}}>
+                    <View style={{borderRadius:10,borderWidth: 1.3, borderColor: this.state.importantEvents[item]?(this.state.eventColorsHeavy[item]!==undefined?this.state.eventColorsHeavy[item][0]:"transparent"):"transparent",backgroundColor:this.state.eventColors[item]!==undefined?this.state.eventColors[item][0]:"transparent", width:((windowWidth-marginHorizontal*2-70)/7), height: 50, alignItems:"center", justifyContent:"center", margin:5}}>
+                      <SubHeader margin={false} style={{fontSize:15}}>{item.toString()}</SubHeader>
+                      <View style={{flexDirection:"row", position:"absolute", bottom:7}}>
+                        {this.state.eventColors[item]!==undefined?
+                        this.state.eventColorsHeavy[item].map((item)=>{
+                          return <View style={{borderRadius:10,backgroundColor:item, width:5, height: 5, marginHorizontal:2}}/>
+                        })
+                        :<View/>}
+                      </View>
+                    </View>
+                  </TouchableOpacity>
+                })}
+              </View>
+            </View>
+            <View style={{height:10}}/>
+            {this.state.eventColors[0]===undefined?
+              <LottieView autoPlay loop
+                style={{width: 100, zIndex:1,transform: [{ scale: 1 },{ rotate: '0deg'},],}}
+                source={require('../assets/loading.json')}
+              />:<View/>
+            }
+            {this.state.eventColors[0]!==undefined?<>
+              <View style={{height:20}}/>
+              <LegendEntry name="Favorite Villager's Birthdays" color={colors.specialEventBirthdayBackgroundHeavy[global.darkMode]}/>
+              <LegendEntry name="Old Resident Villager's Birthdays" color={colors.specialEventResidentBirthdayBackgroundHeavy[global.darkMode]}/>
+              <LegendEntry name="Special Event" color={colors.specialEventBackgroundHeavy[global.darkMode]}/>
+              <LegendEntry name="Event Starts" color={colors.startEventBackgroundHeavy[global.darkMode]}/>
+              <LegendEntry name="Event Ends" color={colors.warningEventBackgroundHeavy[global.darkMode]}/>
+              <View style={{height:Dimensions.get('window').height/6-10}}/>
+              </>:<View/>
+            }
           </View>
-        </PanGestureHandler>
+        </View>
       </ScrollView>
     </View>
   }
