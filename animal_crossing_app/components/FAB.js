@@ -3,6 +3,32 @@ import {Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text
 import LottieView from 'lottie-react-native';
 import colors from '../Colors'
 import {getSettingsString} from "../LoadJsonData"
+
+export class FABWrapper extends Component {
+  constructor(props){
+    super(props)
+    this.state = {currentPage:0}
+  }
+
+  updateFAB = (currentPage) => {
+    this.setState({currentPage:currentPage})
+  }
+
+  render(){
+    let fab = <View/>;
+    if(global.settingsCurrent!==undefined&&getSettingsString("settingsShowFAB")==="true"){
+      if(this.state.currentPage===16){
+        fab = <FAB openDrawer={this.openDrawer} offset={30}/>;
+      }else if(this.state.currentPage===15){
+        fab = <View/>;
+      }else {
+        fab = <FAB openDrawer={this.props.openDrawer}/>;
+      } 
+    }
+    return <>{fab}</>
+  }
+}
+
 class FAB extends Component {
   componentDidMount() {
   }

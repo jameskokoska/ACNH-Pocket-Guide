@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Vibration, BackHandler, Dimensions, Text, View, StatusBar, ToastAndroid} from 'react-native';
-import FAB from './components/FAB';
+import FAB, { FABWrapper } from './components/FAB';
 import CalendarPage from './pages/CalendarPage';
 import SongsPage from './pages/SongsPage';
 import CatalogPage from './pages/CatalogPage';
@@ -156,16 +156,6 @@ class App extends Component {
     );
 
     const firstLogin = await getStorage("firstLogin","true");
-    const numLogins = parseInt(await getStorage("numLogins","0")) + 1;
-    // this.tipDismissed = await getStorage("tipDismissed","false");
-    let backupPopupDismissed = await getStorage("backupPopupDismissed","false");
-    if(backupPopupDismissed==="false" && numLogins >= 15){
-      AsyncStorage.setItem("backupPopupDismissed", "true");
-      this.popupBackupVisible = true
-    }
-    console.log("numlogins:"+numLogins)
-    await AsyncStorage.setItem("numLogins", numLogins.toString());
-    this.numLogins = numLogins;
     global.profile = await getStorage("selectedProfile","");
     await this.loadProfileData(global.profile);
     var defaultLanguage = getDefaultLanguage();
@@ -269,13 +259,7 @@ class App extends Component {
 
   updateSettings = () =>{
     this.updateDarkMode();
-    var fab;
-    if(this.state.currentPage!==15&&global.settingsCurrent!==undefined&&getSettingsString("settingsShowFAB")==="true"){
-      fab = <FAB openDrawer={this.openDrawer}/>;
-    } else {
-      fab = <View/>;
-    }
-    this.setState({fab:fab})
+    this.fab?.updateFAB(this.state.currentPage)
   }
 
   handleBackButton(){
@@ -325,6 +309,7 @@ class App extends Component {
         }
       }
       this.sideMenu?.closeDrawer();
+      this.fab?.updateFAB(this.state.currentPage)
     }
     RootNavigation.navigate("Home");
     return true;
@@ -337,13 +322,6 @@ class App extends Component {
     this.loadSettings();
   }
   render(){
-    var fab = this.state.fab;
-    if(this.state.currentPage===15){
-      fab = <View/>;
-    } else if(this.state.currentPage===16){
-      fab = <FAB openDrawer={this.openDrawer} offset={30}/>;
-    }
-
     if(!this.state.loaded){
       var splashScreens = [require('./assets/airplane.json'),require('./assets/balloon.json')];
       var chosenSplashScreen = splashScreens[Math.floor(this.random * splashScreens.length)];
@@ -433,9 +411,6 @@ class App extends Component {
 
       let otherComponents = <>
         <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
-        <PopupRating numLogins={this.numLogins}/>
-        <Popup mailLink={true} popupVisible={this.popupBackupVisible} text="Data Backup" textLower="You can now backup your data to the cloud and enable auto backups in the settings." button1={"Go to page"} button1Action={()=>{this.setPage(30)}} button2={"Cancel"} button2Action={()=>{}}/>
-        {/* <PopupTip numLogins={this.numLogins} tipDismissed={this.tipDismissed}/> */}
         <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
         <StatusBar hidden={getSettingsString("settingsShowStatusBar")==="false"} backgroundColor={colors.background[global.darkMode]} barStyle={global.darkMode===1?"light-content":"dark-content"}/>
       </>
@@ -456,11 +431,37 @@ class App extends Component {
             <Stack.Screen name="23" component={NavigatorCustomFiltersPage}/>
           </Stack.Navigator>
           </NavigationContainer>
-        {fab}
+        <PopupInfos/>
+        <FABWrapper ref={(fab) => this.fab = fab} openDrawer={this.openDrawer}/>
         </SideMenu>
         </View>
       );
     }
+  }
+}
+
+class PopupInfos extends Component {
+  async componentDidMount(){
+    const numLogins = parseInt(await getStorage("numLogins","0"))+1;
+    // this.tipDismissed = await getStorage("tipDismissed","false");
+    let backupPopupDismissed = await getStorage("backupPopupDismissed","false");
+    if(backupPopupDismissed==="false" && numLogins >= 12){
+      AsyncStorage.setItem("backupPopupDismissed", "true");
+      this.popupBackup?.setPopupVisible(true)
+    }
+    if(numLogins===5){
+      this.popupRating?.setPopupVisible(true)
+    }
+    console.log("numlogins:"+numLogins)
+    await AsyncStorage.setItem("numLogins", numLogins.toString());
+    this.numLogins = numLogins;
+  }
+  render(){
+    return <>
+      <PopupRating ref={(popupRating) => this.popupRating = popupRating}/>
+      <Popup mailLink={true} ref={(popupBackup) => this.popupBackup = popupBackup} text="Data Backup" textLower="You can now backup your data to the cloud and enable auto backups in the settings." button1={"Go to page"} button1Action={()=>{this.setPage(30)}} button2={"Cancel"} button2Action={()=>{}}/>
+      {/* <PopupTip numLogins={this.numLogins} tipDismissed={this.tipDismissed}/> */}
+    </>
   }
 }
 

@@ -16,33 +16,20 @@ import colors from "../Colors";
 import LottieView from 'lottie-react-native';
 import Popup from "./Popup";
 import {MailLink} from "./Formattings";
-// <Popup 
-//  button1={"OK"} 
-//  button1Action={()=>{console.log("OK")}}
-//  button2={"Cancel"} 
-//  text={"Title"}
-//  textLower={"Description"}
-//  button2Action={()=>{ }}
-//  popupVisible={this.state.open} 
-//  close={() => this.setState({open:!this.state.open})}
-// />
-
 
 class PopupRating extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      popupVisible: props.numLogins===5 ? true : false,
-      open2:false,
+      popupVisible: false,
     };   
   }
 
+  setPopupVisible = (visible) => {
+    this.setState({popupVisible:visible});
+  }
 
   render(){
-    if(this.props.show===true && this.state.popupVisible===false){
-      this.setState({popupVisible:true})
-      this.props.noShow();
-    }
     return (
       <>
         <Modal

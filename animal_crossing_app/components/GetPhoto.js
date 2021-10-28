@@ -360,6 +360,8 @@ export function getPhotoCorner(name){
     return <Image source={require("../assets/icons/digIcon.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
   else if(name.includes("able"))
     return <Image source={require("../assets/icons/able.png")} style={{height: 60, width: 60, resizeMode:'contain'}}/>;
+  else if(name.includes("pascal"))
+    return <Image source={require("../assets/icons/pascal.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
   else if(name.includes("nook miles"))
     return <Image source={require("../assets/icons/miles.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
   else if(name.includes("nooklink"))

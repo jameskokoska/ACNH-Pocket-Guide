@@ -79,17 +79,17 @@ export async function importAllData(text){
         totalAchievements.push(importEntry);
       } else {
         await AsyncStorage.setItem(key[1]+currentProfile, importEntry);
-        if(key[1]==="name"){
+        if(key[1]==="name"&&currentProfile===global.profile){
           global.name=importEntry
-        } else if(key[1]==="islandName") {
+        } else if(key[1]==="islandName"&&currentProfile===global.profile) {
           global.islandName=importEntry
-        } else if (key[1]==="dreamAddress") {
+        } else if (key[1]==="dreamAddress"&&currentProfile===global.profile) {
           global.dreamAddress=importEntry
-        } else if (key[1]==="friendCode") {
+        } else if (key[1]==="friendCode"&&currentProfile===global.profile) {
           global.friendCode=importEntry
-        } else if (key[1]==="selectedFruit") {
+        } else if (key[1]==="selectedFruit"&&currentProfile===global.profile) {
           global.selectedFruit=importEntry
-        } else if (key[1]==="settingsNorthernHemisphere") {
+        } else if (key[1]==="settingsNorthernHemisphere"&&currentProfile===global.profile) {
           setSettingsString("settingsNorthernHemisphere",importEntry);
         }
       }

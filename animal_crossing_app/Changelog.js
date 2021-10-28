@@ -9,6 +9,12 @@ export const changelog = `
 -Added speaker type and lighting type filters
 -Fixed ToDo list add villagers information
 -Fixed back button not going to previous screen
+-Events now scrolls to top of page when selected a date
+-Settings page doesn't reload every switch
+-Fixed rating and cloud backup popup info from popping up nonstop
+-Fixed importing of profile info not displaying properly when restoring a backup
+-Added Pascal icon
+-Backup now prompts if you want to replace current cloud backup
 -
 -Added more translations
 -Added villager genders in popup

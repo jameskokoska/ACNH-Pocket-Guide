@@ -170,6 +170,15 @@ export default class FirebaseBackup extends Component {
         text={"Import Results"}
         textLower={this.state.messageImport}
       />
+      <Popup
+        ref={(uploadPopup) => this.uploadPopup = uploadPopup}
+        button1={"OK"}
+        button1Action={()=>{this.storeData(this.state.uid)}}
+        button2={"Cancel"}
+        button2Action={()=>{}}
+        text={attemptToTranslate("Upload Data")+"?"}
+        textLower={"Note: Uploading data will replace what is currently backed up in the cloud!"}
+      />
       <TextInput
         allowFontScaling={false}
         style={{fontSize: 20, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.white[global.darkMode], padding: 15, borderRadius: 5, marginHorizontal:30}}
@@ -220,7 +229,7 @@ export default class FirebaseBackup extends Component {
         text={"Upload Data"}
         color={colors.okButton2[global.darkMode]}
         vibrate={10}
-        onPress={() => {this.storeData(this.state.uid)}}
+        onPress={() => {this.uploadPopup?.setPopupVisible(true)}}
       />:<View/>}
       {this.state.uid!==""?<ButtonComponent
         marginHorizontal={40}

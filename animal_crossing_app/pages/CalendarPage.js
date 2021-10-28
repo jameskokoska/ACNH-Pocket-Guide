@@ -73,17 +73,23 @@ export default class CalendarPage extends Component {
     this.setState({currentDay: new Date(date), currentEvents:[{"topHeader":""}], viewList:"today"})
     this.appendEvents(new Date(date),true)
   }
+  scrollToTop = () => {
+    setTimeout(async () => {
+    this.flatList?.scrollToOffset({ animated: true, offset: 0 });
+    },200)
+  }
   render() {
     var viewList = <View/>
     if(this.state.viewList==="list"){
       viewList = <AllEventsList setPage={this.props.setPage}/>
     } else if (this.state.viewList==="calendar"){
-      viewList = <CalendarView eventSections={this.eventSections} currentDate={getCurrentDateObject()} setCurrentDay={this.setCurrentDay}/>
+      viewList = <CalendarView scrollToTop={this.scrollToTop} eventSections={this.eventSections} currentDate={getCurrentDateObject()} setCurrentDay={this.setCurrentDay}/>
     }
     return (<>
       <VillagerPopupPopup ref={(villagerPopupPopup) => this.villagerPopupPopup = villagerPopupPopup} setPage={this.props.setPage}/>
       {viewList}
       <FlatList
+        ref={(flatList) => this.flatList = flatList}
         data={this.state.currentEvents}
         renderItem={({item}) => {
           if(item["topHeader"]!==undefined){
@@ -251,7 +257,7 @@ class CalendarView extends Component{
                     return <View key={item} style={{width:((windowWidth-marginHorizontal*2-70)/7), height: 50, alignItems:"center", justifyContent:"center", margin:5}}>
                     </View>
                   }
-                  return <TouchableOpacity key={item} activeOpacity={0.6} onPress={()=>{this.props.setCurrentDay(new Date(this.state.currentDate).setDate(item))}}>
+                  return <TouchableOpacity key={item} activeOpacity={0.6} onPress={()=>{this.props.setCurrentDay(new Date(this.state.currentDate).setDate(item)); this.props.scrollToTop()}}>
                     <View style={{borderRadius:10,borderWidth: 1.3, borderColor: this.state.importantEvents[item]?(this.state.eventColorsHeavy[item]!==undefined?this.state.eventColorsHeavy[item][0]:"transparent"):"transparent",backgroundColor:this.state.eventColors[item]!==undefined?this.state.eventColors[item][0]:"transparent", width:((windowWidth-marginHorizontal*2-70)/7), height: 50, alignItems:"center", justifyContent:"center", margin:5}}>
                       <SubHeader margin={false} style={{fontSize:15}}>{item.toString()}</SubHeader>
                       <View style={{flexDirection:"row", position:"absolute", bottom:7}}>

@@ -33,6 +33,10 @@ class SettingsPage extends Component {
     global.customTimeOffset = timeOffset;
     AsyncStorage.setItem("customDateOffset"+global.profile, timeOffset.toString());
   }
+
+  forceUpdatePage = () => {
+    this.forceUpdate()
+  }
   
   render(){
     return(<>
@@ -51,6 +55,7 @@ class SettingsPage extends Component {
               if(setting["keyName"]!="breaker"){
                 return <SettingsContainer 
                   updateSettings={this.props.updateSettings}
+                  updatePage={this.forceUpdatePage}
                   key={setting["keyName"]+index.toString()} 
                   backgroundColor={colors.white[global.darkMode]} 
                   textColor={colors.textBlack[global.darkMode]} 
