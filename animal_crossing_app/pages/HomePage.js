@@ -44,7 +44,7 @@ class HomePage extends Component {
   }
   refreshEvents = () => {
     cancelAllPushNotifications();
-    this.todayEvents = getEventsDay(getCurrentDateObject(), this.state.eventSections,this.props.eventSections["Show Events Happening Now"]);
+    this.todayEvents = getEventsDay(getCurrentDateObject(), this.state.eventSections,this.state.eventSections["Show All Events Happening Today"]);
     this.tomorrowEvents = getEventsDay(addDays(getCurrentDateObject(), 1), this.state.eventSections);
     this.thisWeekEvents = [];
     for(var i=2; i<7; i++){

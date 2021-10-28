@@ -8,8 +8,8 @@ export const changelog = `
 -Significantly improved navigation between pages
 -Added speaker type and lighting type filters
 -
--Added [Show Events Happening Now] option on the events section of the home page
--Can see all events that are happening currently, even if the first day passed
+-Added [Show All Events Happening Today] option on the events section of the home page
+-Can see all events that are happening currently, even if the beginning initial day passed
 -Fixed Southern Hemisphere events
 -Added Pascal icon
 -Backup now prompts if you want to replace current cloud backup

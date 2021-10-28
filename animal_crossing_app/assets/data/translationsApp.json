@@ -10795,17 +10795,17 @@
             "Portuguese": "Evento termina"
         },
         {
-            "English": "Show Events Happening Today",
-            "English (Europe)": "Show Events Happening Today",
-            "French": "Afficher les événements qui se déroulent aujourd'hui",
-            "French (US)": "Afficher les événements qui se déroulent aujourd'hui",
-            "German": "Heute stattfindende Events anzeigen",
-            "Spanish": "Mostrar eventos que suceden hoy",
-            "Spanish (US)": "Mostrar eventos que suceden hoy",
-            "Russian": "Показать события, происходящие сегодня",
-            "Italian": "Mostra gli eventi che accadono oggi",
-            "Dutch": "Toon evenementen die vandaag plaatsvinden",
-            "Portuguese": "Mostrar eventos que acontecem hoje"
+            "English": "Show All Events Happening Today",
+            "English (Europe)": "Show All Events Happening Today",
+            "French": "Afficher tous les événements qui se déroulent aujourd'hui",
+            "French (US)": "Afficher tous les événements qui se déroulent aujourd'hui",
+            "German": "Alle heute stattfindenden Events anzeigen",
+            "Spanish": "Mostrar todos los eventos que suceden hoy",
+            "Spanish (US)": "Mostrar todos los eventos que suceden hoy",
+            "Russian": "Показать все события, происходящие сегодня",
+            "Italian": "Mostra tutti gli eventi in corso oggi",
+            "Dutch": "Toon alle evenementen die vandaag plaatsvinden",
+            "Portuguese": "Mostrar todos os eventos que acontecem hoje"
         }
     ],
     "Sources": [

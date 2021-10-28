@@ -219,7 +219,7 @@ class App extends Component {
       "Zodiac Seasons" : false,
       "Break2" : true,
       "Show End Day of Events" : true,
-      "Show Events Happening Today" : true,
+      "Show All Events Happening Today" : false,
     }
     this.eventSections = await this.loadSections("EventSections", defaultEventSections);
     
