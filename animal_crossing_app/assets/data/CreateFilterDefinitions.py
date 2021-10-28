@@ -153,51 +153,68 @@ filters = [
     ]
 ]
 
-possibleFilters = []
-count = -1
-count2 = -1
-output = {}
-currentCategory = {}
-totalFilters = []
-doneFilters = []
-for filterSet in filters:
-    count+=1
+getLengthOfGroup = input("Would you like to get the length of a section for the collection list (with variations) + 1 for main checkmark?")
+if(getLengthOfGroup!=""):
+    previousVariation = ""
+    total = 0
+    for category in filters:
+        if(category[0]==getLengthOfGroup):
+            for dataSet in category[1]:
+                for item in dataSet:
+                    if(item["Name"]!=previousVariation):
+                        previousVariation = item["Name"]
+                        total+=1
+                        if("Variation" in item and item["Variation"] !="NA"):
+                            total+=1 #for the base item (add one for the large checkmark)
+                    else:
+                        total+=1
+    print(total)
+else:
+    possibleFilters = []
+    count = -1
     count2 = -1
-    print("Generating filter definitions: " + str(int(count/len(filters) * 100)) + "%")
-    for filter in filterSet[2]:
-        currentCategory["name"] = filter
-        currentCategory["id"] = filter
-        count2+=1
-        print("Generating filter definitions:   " + str(int(count2/len(filterSet[2]) * 100)) + "%")
-        for dataSet in filterSet[1]:
-            for datum in dataSet:
-                if(datum.get(filter)==None):
-                    continue
-                currentFilter = {"name":"", "id":""}
-                if "; " in datum.get(filter):
-                    allFilters = datum.get(filter).split("; ")
-                    for singleFilter in allFilters:
-                        currentFilter = {"name":"", "id":""}
-                        if singleFilter not in doneFilters:
-                            doneFilters.append(singleFilter)
-                            currentFilter["name"] = singleFilter
-                            currentFilter["id"] = filter+ ":" + singleFilter
-                            possibleFilters.append(currentFilter)
-                            
-                elif datum.get(filter) not in doneFilters:
-                    currentFilter["name"] = datum.get(filter)
-                    currentFilter["id"] = filter+ ":" + datum.get(filter)
-                    possibleFilters.append(currentFilter)
-                    doneFilters.append(datum.get(filter))
-        currentCategory["children"]=possibleFilters
-        possibleFilters = []
-        totalFilters.append(currentCategory)
-        currentCategory = {}
-        doneFilters=[]
-    output[filterSet[0]] = totalFilters
+    output = {}
+    currentCategory = {}
     totalFilters = []
+    doneFilters = []
+    for filterSet in filters:
+        count+=1
+        count2 = -1
+        print("Generating filter definitions: " + str(int(count/len(filters) * 100)) + "%")
+        for filter in filterSet[2]:
+            currentCategory["name"] = filter
+            currentCategory["id"] = filter
+            count2+=1
+            print("Generating filter definitions:   " + str(int(count2/len(filterSet[2]) * 100)) + "%")
+            for dataSet in filterSet[1]:
+                for datum in dataSet:
+                    if(datum.get(filter)==None):
+                        continue
+                    currentFilter = {"name":"", "id":""}
+                    if "; " in datum.get(filter):
+                        allFilters = datum.get(filter).split("; ")
+                        for singleFilter in allFilters:
+                            currentFilter = {"name":"", "id":""}
+                            if singleFilter not in doneFilters:
+                                doneFilters.append(singleFilter)
+                                currentFilter["name"] = singleFilter
+                                currentFilter["id"] = filter+ ":" + singleFilter
+                                possibleFilters.append(currentFilter)
+                                
+                    elif datum.get(filter) not in doneFilters:
+                        currentFilter["name"] = datum.get(filter)
+                        currentFilter["id"] = filter+ ":" + datum.get(filter)
+                        possibleFilters.append(currentFilter)
+                        doneFilters.append(datum.get(filter))
+            currentCategory["children"]=possibleFilters
+            possibleFilters = []
+            totalFilters.append(currentCategory)
+            currentCategory = {}
+            doneFilters=[]
+        output[filterSet[0]] = totalFilters
+        totalFilters = []
 
 
-with open('Generated/filterDefinitions.json', 'w', encoding='utf8') as json_file:
-    json.dump(output, json_file, ensure_ascii=False,indent=2)
+    with open('Generated/filterDefinitions.json', 'w', encoding='utf8') as json_file:
+        json.dump(output, json_file, ensure_ascii=False,indent=2)
 input("Done")

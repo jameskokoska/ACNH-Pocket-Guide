@@ -531,21 +531,21 @@
     ],
     "Main": [
         {
-            "English": "796 items",
-            "English (Europe)": "796 items",
-            "French": "785 items",
-            "French (US)": "785 items",
-            "German": "785 items",
-            "Spanish": "785 items",
-            "Spanish (US)": "781 items",
-            "Russian": "785 items",
-            "Italian": "795 items",
-            "Dutch": "768 items",
+            "English": "797 items",
+            "English (Europe)": "797 items",
+            "French": "786 items",
+            "French (US)": "786 items",
+            "German": "786 items",
+            "Spanish": "786 items",
+            "Spanish (US)": "782 items",
+            "Russian": "786 items",
+            "Italian": "796 items",
+            "Dutch": "769 items",
             "Chinese": "0 items",
             "Chinese (Traditional)": "0 items",
             "Japanese": "0 items",
             "Korean": "0 items",
-            "Portuguese": "794 items"
+            "Portuguese": "795 items"
         },
         {
             "English": "Home",
@@ -10793,6 +10793,19 @@
             "Italian": "L'evento finisce",
             "Dutch": "Evenement eindigt",
             "Portuguese": "Evento termina"
+        },
+        {
+            "English": "Show Events Happening Today",
+            "English (Europe)": "Show Events Happening Today",
+            "French": "Afficher les événements qui se déroulent aujourd'hui",
+            "French (US)": "Afficher les événements qui se déroulent aujourd'hui",
+            "German": "Heute stattfindende Events anzeigen",
+            "Spanish": "Mostrar eventos que suceden hoy",
+            "Spanish (US)": "Mostrar eventos que suceden hoy",
+            "Russian": "Показать события, происходящие сегодня",
+            "Italian": "Mostra gli eventi che accadono oggi",
+            "Dutch": "Toon evenementen die vandaag plaatsvinden",
+            "Portuguese": "Mostrar eventos que acontecem hoje"
         }
     ],
     "Sources": [
@@ -13406,8 +13419,8 @@
     ],
     "Event Names": [
         {
-            "English": "52 items",
-            "English (Europe)": "52 items",
+            "English": "54 items",
+            "English (Europe)": "54 items",
             "French": "52 items",
             "French (US)": "52 items",
             "German": "52 items",
@@ -13912,6 +13925,14 @@
             "Spanish": "Día del Padre",
             "Spanish (US)": "Día del Padre",
             "Russian": "День отца (2)"
+        },
+        {
+            "English": "Lantern Festival",
+            "English (Europe)": "Lantern Festival"
+        },
+        {
+            "English": "Day Of The Dead",
+            "English (Europe)": "Day Of The Dead"
         }
     ],
     "Missing Items": [

@@ -44,7 +44,7 @@ class HomePage extends Component {
   }
   refreshEvents = () => {
     cancelAllPushNotifications();
-    this.todayEvents = getEventsDay(getCurrentDateObject(), this.state.eventSections);
+    this.todayEvents = getEventsDay(getCurrentDateObject(), this.state.eventSections,this.props.eventSections["Show Events Happening Now"]);
     this.tomorrowEvents = getEventsDay(addDays(getCurrentDateObject(), 1), this.state.eventSections);
     this.thisWeekEvents = [];
     for(var i=2; i<7; i++){
@@ -706,6 +706,17 @@ export class CollectionProgress extends Component {
     var recipeCount = countCollection("recipesCheckList");
     var recipeCountTotal = global.dataLoadedRecipes[0].length;
     var recipePercentage = recipeCount/recipeCountTotal * 100;
+    var floorWallsCount = countCollection("floorWallsCheckList");
+    var floorWallsCountTotal = global.dataLoadedFloorWalls[0].length;
+    var floorWallsPercentage = floorWallsCount/floorWallsCountTotal * 100;
+    //To get totals: run CreateFilterDefinition.py
+    //"Furniture" and "Clothing"
+    var furnitureCount = countCollection("furnitureCheckList");
+    var furnitureCountTotal = 10129
+    var furniturePercentage = furnitureCount/furnitureCountTotal * 100;
+    var clothingCount = countCollection("clothingCheckList");
+    var clothingCountTotal = 5828;
+    var clothingPercentage = clothingCount/clothingCountTotal * 100;
     return(<>
       <View style={{height: 15}}/>
       <ProgressContainer color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={fishPercentage} image={require("../assets/icons/fish.png")} text={attemptToTranslate("Fish") + " " + fishCount + "/" + fishCountTotal.toString()}/>
@@ -716,6 +727,9 @@ export class CollectionProgress extends Component {
       <ProgressContainer color={colors.musicAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={musicPercentage} image={require("../assets/icons/music.png")} text={attemptToTranslate("Songs") + " " + musicCount + "/" + musicCountTotal.toString()}/>
       <ProgressContainer color={colors.emojipediaAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={emojipediaPercentage} image={require("../assets/icons/emote.png")} text={attemptToTranslate("Emotes") + " " + emojipediaCount + "/" + emojipediaCountTotal.toString()}/>
       <ProgressContainer color={colors.toolsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={recipePercentage} image={require("../assets/icons/crafting.png")} text={attemptToTranslate("Recipes") + " " + recipeCount + "/" + recipeCountTotal.toString()}/>
+      <ProgressContainer color={colors.furnitureAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={furniturePercentage} image={require("../assets/icons/leaf.png")} text={attemptToTranslate("Furniture") + " " + furnitureCount + "/" + furnitureCountTotal.toString()}/>
+      <ProgressContainer color={colors.floorWallsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={clothingPercentage} image={require("../assets/icons/carpet.png")} text={attemptToTranslate("Floor & Walls") + " " + floorWallsCount + "/" + floorWallsCountTotal.toString()}/>
+      <ProgressContainer color={colors.clothingAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={clothingPercentage} image={require("../assets/icons/top.png")} text={attemptToTranslate("Clothing") + " " + clothingCount + "/" + clothingCountTotal.toString()}/>
       <View style={{height: 15}}/>
       </>
     )

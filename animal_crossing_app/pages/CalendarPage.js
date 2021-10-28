@@ -222,7 +222,8 @@ class CalendarView extends Component{
             <View style={{alignItems:"center", marginTop: 100, flexDirection:"row",justifyContent:"space-between", width:windowWidth-marginHorizontal*2}}>
               <TouchableOpacity style={{justifyContent:"center", alignItems:"center",padding:10, borderRadius:8, backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode]}} activeOpacity={0.6} 
                 onPress={()=>{
-                  this.setState({allowedToSwipe:false, currentDate:new Date(this.state.currentDate.setMonth(this.state.currentDate.getMonth()+1))})
+                  
+                  this.setState({allowedToSwipe:false, currentDate:new Date(this.state.currentDate.setMonth(this.state.currentDate.getMonth()-1))})
                   this.startTimeout()
                 }}
               >
@@ -234,7 +235,7 @@ class CalendarView extends Component{
               <Header style={{fontSize: 28,marginHorizontal:20}}>{attemptToTranslate(getMonth(this.state.currentDate.getMonth())) + " " + currentYear.toString()}</Header>
               <TouchableOpacity style={{justifyContent:"center", alignItems:"center",padding:10, borderRadius:8, backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode]}} activeOpacity={0.6} 
                 onPress={()=>{
-                  this.setState({allowedToSwipe:false, currentDate:new Date(this.state.currentDate.setMonth(this.state.currentDate.getMonth()-1))})
+                  this.setState({allowedToSwipe:false, currentDate:new Date(this.state.currentDate.setMonth(this.state.currentDate.getMonth()+1))})
                   this.startTimeout()
                 }}
               >
@@ -263,7 +264,7 @@ class CalendarView extends Component{
                       <View style={{flexDirection:"row", position:"absolute", bottom:7}}>
                         {this.state.eventColors[item]!==undefined?
                         this.state.eventColorsHeavy[item].map((item)=>{
-                          return <View style={{borderRadius:10,backgroundColor:item, width:5, height: 5, marginHorizontal:2}}/>
+                          return <View key={item+10000} style={{borderRadius:10,backgroundColor:item, width:5, height: 5, marginHorizontal:2}}/>
                         })
                         :<View/>}
                       </View>

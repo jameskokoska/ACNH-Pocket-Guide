@@ -219,6 +219,7 @@ class App extends Component {
       "Zodiac Seasons" : false,
       "Break2" : true,
       "Show End Day of Events" : true,
+      "Show Events Happening Today" : true,
     }
     this.eventSections = await this.loadSections("EventSections", defaultEventSections);
     
@@ -309,7 +310,7 @@ class App extends Component {
         }
       }
       this.sideMenu?.closeDrawer();
-      this.fab?.updateFAB(this.state.currentPage)
+      this.fab?.updateFAB(pageNum)
     }
     RootNavigation.navigate("Home");
     return true;

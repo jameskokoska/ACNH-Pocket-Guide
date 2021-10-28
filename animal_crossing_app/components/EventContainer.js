@@ -252,7 +252,7 @@ export function getEventsDay(date, eventSections, showEventsIfInRange){
           if(eventSections["App notifications"]){
             schedulePushNotification(date,eventSections["Set Notification Time"],attemptToTranslate("Last day!") + " " + eventName, attemptToTranslate(capitalize(event["Type"])));
           }
-        } else if(showEventsIfInRange && isDateInRange(event["Dates (Northern Hemisphere)"], date.getFullYear(), date)){
+        } else if(showEventsIfInRange && isDateInRange(event["Dates (Southern Hemisphere)"], date.getFullYear(), date)){
           totalEvents.push({
             name: capitalize(eventName),
             time: event["Type"],

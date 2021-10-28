@@ -7,14 +7,23 @@ export const changelog = `
 -Remade Calendar and Events page
 -Significantly improved navigation between pages
 -Added speaker type and lighting type filters
+-
+-Added [Show Events Happening Now] option on the events section of the home page
+-Can see all events that are happening currently, even if the first day passed
+-Fixed Southern Hemisphere events
+-Added Pascal icon
+-Backup now prompts if you want to replace current cloud backup
+-Added collection progress for Furniture and Clothing
+-Switched what the arrows do in Calendar + Events Calendar view page
+-Added Furniture, Floor & Walls, and Clothing to Collection Progress
+-Fixed FAB position on some pages
+-
 -Fixed ToDo list add villagers information
 -Fixed back button not going to previous screen
 -Events now scrolls to top of page when selected a date
 -Settings page doesn't reload every switch
 -Fixed rating and cloud backup popup info from popping up nonstop
 -Fixed importing of profile info not displaying properly when restoring a backup
--Added Pascal icon
--Backup now prompts if you want to replace current cloud backup
 -
 -Added more translations
 -Added villager genders in popup
