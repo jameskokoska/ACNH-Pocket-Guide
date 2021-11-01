@@ -55,8 +55,9 @@ const Header = (props) => {
                   style={styles.searchText}
                   onChangeText={function(text){props.updateSearch(text);}} 
                   onFocus={() => {Vibration.vibrate(15);}}
-                  minLength={2}
+                  minLength={1}
                   delayTimeout={400}
+                  onSubmitEditing={function(event){props.updateSearch(event.nativeEvent.text)}}
                 />
               </View>
               <TouchableOpacity onPress={()=>{props.openPopupFilter(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
@@ -138,8 +139,9 @@ export const HeaderActive = (props) => {
               style={styles.searchText}
               onChangeText={function(text){props.updateSearch(text);}} 
               onFocus={() => {Vibration.vibrate(15);}}
-              minLength={2}
+              minLength={1}
               delayTimeout={400}
+              onSubmitEditing={function(event){props.updateSearch(event.nativeEvent.text)}}
             />
           </View>
           <TouchableOpacity onPress={()=>{props.openPopupFilter(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>

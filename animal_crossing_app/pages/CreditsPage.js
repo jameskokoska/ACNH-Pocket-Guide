@@ -10,13 +10,6 @@ import {attemptToTranslate} from "../LoadJsonData"
 import {changelog} from "../Changelog"
 
 class CreditsPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      show: false,
-      show2:false
-    }
-  }
   render(){
     var changelogText = changelog.toString();
     changelogText = changelogText.split("\n-");
@@ -87,8 +80,8 @@ class CreditsPage extends Component {
           
           <View style={{height: 20}}/>
           <MailLink/>
-          <PopupRating show={this.state.show} noShow={()=>{this.setState({show:false})}}/>
-          <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.setState({show:true})}} text={"Leave a rating"} />
+          <PopupRating ref={(popupRating) => this.popupRating = popupRating}/>
+          <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.popupRating?.setPopupVisible(true)}} text={"Leave a rating"} />
           {/* <PopupTip show={this.state.show2} noShow={()=>{this.setState({show2:false})}}/>
           <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.setState({show2:true})}} text={"Give a tip"} /> */}
           <View style={{height:60}}/>

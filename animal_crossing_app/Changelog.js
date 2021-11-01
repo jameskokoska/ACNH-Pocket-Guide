@@ -4,6 +4,15 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
+-Fixed collection totals in profile section
+-Added Pier icon
+-Fixed search - can now search with one letter/character
+-Search is faster
+-Added Underwater as Source for Sea Creatures in popup
+-Fixed hide spoilers for images in Songs page
+-Decreased left and right padding for lists
+-Added DIY Icon for DIYs (On everything page)
+-
 -Remade Calendar and Events page
 -Significantly improved navigation between pages
 -Added speaker type and lighting type filters

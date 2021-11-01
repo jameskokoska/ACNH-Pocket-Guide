@@ -706,16 +706,16 @@ export class CollectionProgress extends Component {
     var recipeCount = countCollection("recipesCheckList");
     var recipeCountTotal = global.dataLoadedRecipes[0].length;
     var recipePercentage = recipeCount/recipeCountTotal * 100;
-    var floorWallsCount = countCollection("floorWallsCheckList");
-    var floorWallsCountTotal = global.dataLoadedFloorWalls[0].length;
-    var floorWallsPercentage = floorWallsCount/floorWallsCountTotal * 100;
     //To get totals: run CreateFilterDefinition.py
-    //"Furniture" and "Clothing"
+    //"Furniture" and "Clothing" and "Floor & Walls"
+    var floorWallsCount = countCollection("floorWallsCheckList");
+    var floorWallsCountTotal = 600;
+    var floorWallsPercentage = floorWallsCount/floorWallsCountTotal * 100;
     var furnitureCount = countCollection("furnitureCheckList");
-    var furnitureCountTotal = 10129
+    var furnitureCountTotal = 17016
     var furniturePercentage = furnitureCount/furnitureCountTotal * 100;
     var clothingCount = countCollection("clothingCheckList");
-    var clothingCountTotal = 5828;
+    var clothingCountTotal = 9418;
     var clothingPercentage = clothingCount/clothingCountTotal * 100;
     return(<>
       <View style={{height: 15}}/>

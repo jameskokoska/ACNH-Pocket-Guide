@@ -125,6 +125,8 @@ class SeaRouteClass extends React.PureComponent {
         labelColor={colors.textBlack[global.darkMode]}
         accentColor={colors.fishAccent[global.darkMode]}
         specialLabelColor={colors.fishText[global.darkMode]}
+        popUpCornerImageProperty={["Where/How"]}
+        popUpCornerImageLabelProperty={["Where/How"]}
         popUpPhraseProperty={["Catch phrase"]}
         popUpContainer={[["SeaPopup",550]]}
         extraInfo={

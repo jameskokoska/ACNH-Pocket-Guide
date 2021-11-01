@@ -192,7 +192,7 @@ class ListItem extends React.Component{
       var textProperty2Component = <View/>;
       if(this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]!==""){
         if(this.props.textProperty2[this.props.item.dataSet]==="(DIY)")
-          textProperty2Component = <TextFont suffix={")"} prefix={"("} bold={false} style={{textAlign:'center', color:this.props.labelColor, fontSize:12}}>DIY</TextFont>
+          textProperty2Component = <View/> //added image instead
         else 
           textProperty2Component = <TextFont bold={false} style={{textAlign:'center', color:this.props.labelColor, fontSize:12,}}>{capitalize(this.props.item[textProperty2Text])}</TextFont>
       }
@@ -220,10 +220,14 @@ class ListItem extends React.Component{
                   <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
                 </TouchableOpacity>
               </View>
+              {(this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]!=="" && this.props.textProperty2[this.props.item.dataSet]==="(DIY)")?<View style={{zIndex:1, position:"absolute", left: -8, top: -6, padding:15, opacity: 0.5, }}>
+                <Image style={{resizeMode:'contain',width:25, height:25}} source={require("../assets/icons/recipe.png")}/>
+              </View>
+              :<View/>}
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
               <CheckVillagerPhoto showVillagerPhotoButton={this.showVillagerPhotoButton} setCollected={this.setCollected} collected={this.state.collected} setVillagerPhoto={this.setVillagerPhoto} item={this.props.item} villager={this.state.villagerPhoto} villagerPage={this.checkVillagerPhotoButton()}/>
-              {this.state.wishlist? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
+              {this.state.wishlist? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7 + ((this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]!=="" && this.props.textProperty2[this.props.item.dataSet]==="(DIY)")?2:0), top: 7 + ((this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]!=="" && this.props.textProperty2[this.props.item.dataSet]==="(DIY)")?33:0), zIndex:10,}}/> : <View/>}
               { (!this.props.avoidSpoilers||this.state.collected)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].startsWith("http") ? 
                 <FastImage
                   style={styles.gridBoxImage}
@@ -555,6 +559,8 @@ const styles = StyleSheet.create({
     paddingLeft: 3,
     paddingRight: 3,
     marginHorizontal: 15,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   gridBoxTextLargeSmaller: {
     flex: 1,

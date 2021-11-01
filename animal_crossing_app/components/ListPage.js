@@ -764,7 +764,7 @@ function ListPage(props){
         nestedScrollEnabled
         initialNumToRender={45}
         scrollEventThrottle={16}
-        contentContainerStyle={{paddingTop: paddingTop+10, paddingLeft: 15, paddingRight: 15, paddingBottom: paddingBottomContent}}
+        contentContainerStyle={{paddingTop: paddingTop+10, paddingLeft: 8, paddingRight: 8, paddingBottom: paddingBottomContent}}
         onScroll={handleScroll}
         ref={ref}
         data={data}

@@ -42,7 +42,7 @@ export default class ActiveCreaturesPage extends Component {
         ]}
         popUpCornerImageProperty={[
           "Where/How",
-          "",
+          "Where/How",
           "Where/How",
         ]}
         popUpCornerImageLabelProperty={[

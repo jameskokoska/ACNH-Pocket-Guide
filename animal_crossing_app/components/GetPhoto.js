@@ -328,8 +328,12 @@ export function getPhotoCorner(name){
   } else {
     name = name.toLowerCase();
   }
-  if(name.includes("sea") && !name.includes("seasonal") || name.includes("pier") || name.includes("shoreline") || name.includes("beach"))
+  if(name.includes("sea") && !name.includes("seasonal") || name.includes("shoreline") || name.includes("beach"))
     return <Image source={require("../assets/icons/oceanIcon.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>
+  else if(name.includes("pier"))
+    return <Image source={require("../assets/icons/pier.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>;
+  else if(name.includes("underwater"))
+    return <Image source={require("../assets/icons/underwater.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>;
   else if(name.includes("river"))
     return <Image source={require("../assets/icons/riverIcon.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>;
   else if(name.includes("pond") || name.includes("water"))

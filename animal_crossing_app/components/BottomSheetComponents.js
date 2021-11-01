@@ -33,11 +33,17 @@ export class CircularImage extends Component {
 
 export class LeftCornerImage extends Component {
   render() {
+    let label = this.props.item[this.props.popUpCornerImageLabelProperty[this.props.item.dataSet]]
+    let photo = getPhotoCorner(this.props.item[this.props.popUpCornerImageProperty[this.props.item.dataSet]])
+    if(this.props.item["Data Category"]==="Sea Creatures"){
+      label = "Underwater"
+      photo = getPhotoCorner("Underwater")
+    }
     return <>
       <View style={[styles.cornerImageBackground,{backgroundColor:this.props.accentColor}]}>
-        {getPhotoCorner(this.props.item[this.props.popUpCornerImageProperty[this.props.item.dataSet]])}
+        {photo}
       </View>
-      <TextFont style={[styles.cornerImageLabel,{color:colors.textLight[global.darkMode]}]}>{this.props.item[this.props.popUpCornerImageLabelProperty[this.props.item.dataSet]]}</TextFont>
+      <TextFont style={[styles.cornerImageLabel,{color:colors.textLight[global.darkMode]}]}>{label}</TextFont>
     </>
   }
 }

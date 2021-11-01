@@ -161,13 +161,12 @@ if(getLengthOfGroup!=""):
         if(category[0]==getLengthOfGroup):
             for dataSet in category[1]:
                 for item in dataSet:
+                    total+=1
                     if(item["Name"]!=previousVariation):
                         previousVariation = item["Name"]
-                        total+=1
-                        if("Variation" in item and item["Variation"] !="NA"):
-                            total+=1 #for the base item (add one for the large checkmark)
-                    else:
-                        total+=1
+                    if("Variation" in item and item["Variation"] !="NA"):
+                        total+=1 #for the base item (add one for the large checkmark)
+
     print(total)
 else:
     possibleFilters = []
