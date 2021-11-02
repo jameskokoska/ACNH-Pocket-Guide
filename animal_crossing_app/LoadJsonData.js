@@ -637,34 +637,34 @@ export const settings = [
     "displayName" : "Dark mode",
     "description" : "Toggle dark mode, ensure auto dark mode is off to use this",
   },
-  {
-    "keyName" : "settingsColorLists",
-    "defaultValue" : "true",
-    "currentValue" : "",
-    "picture" : require("./assets/icons/colorPalette.png"),
-    "displayName" : "Colored lists",
-    "description" : "Change the background of the list based on the color of the item",
-    "displayPicture1" : require("./assets/icons/settingsScreenshots/screenshotChecks.jpg"),
-    "displayPicture2" : require("./assets/icons/settingsScreenshots/screenshotChecksColor.jpg"),
-  },
-  {
-    "keyName" : "settingsShowBlankCheckMarks",
-    "defaultValue" : "true",
-    "currentValue" : "",
-    "picture" : require("./assets/icons/checkEmpty.png"),
-    "displayName" : "Show empty check marks",
-    "description" : "Show an empty check mark in lists. Can be tapped to quickly check off the item. Disabling this can increase performance as less animations need to be rendered.",
-    "displayPicture1" : require("./assets/icons/settingsScreenshots/screenshotChecks.jpg"),
-    "displayPicture2" : require("./assets/icons/settingsScreenshots/screenshotNoChecks.jpg"),
-  },
-  {
-    "keyName" : "settingsShowMuseumButton",
-    "defaultValue" : "true",
-    "currentValue" : "",
-    "picture" : require("./assets/icons/owl.png"),
-    "displayName" : "Show donated to museum button",
-    "description" : "Shows a donation button which can be used to track if you've donated it to the museum in addition to collecting it.",
-  },
+  // {
+  //   "keyName" : "settingsColorLists",
+  //   "defaultValue" : "true",
+  //   "currentValue" : "",
+  //   "picture" : require("./assets/icons/colorPalette.png"),
+  //   "displayName" : "Colored lists",
+  //   "description" : "Change the background of the list based on the color of the item",
+  //   "displayPicture1" : require("./assets/icons/settingsScreenshots/screenshotChecks.jpg"),
+  //   "displayPicture2" : require("./assets/icons/settingsScreenshots/screenshotChecksColor.jpg"),
+  // },
+  // {
+  //   "keyName" : "settingsShowBlankCheckMarks",
+  //   "defaultValue" : "true",
+  //   "currentValue" : "",
+  //   "picture" : require("./assets/icons/checkEmpty.png"),
+  //   "displayName" : "Show empty check marks",
+  //   "description" : "Show an empty check mark in lists. Can be tapped to quickly check off the item. Disabling this can increase performance as less animations need to be rendered.",
+  //   "displayPicture1" : require("./assets/icons/settingsScreenshots/screenshotChecks.jpg"),
+  //   "displayPicture2" : require("./assets/icons/settingsScreenshots/screenshotNoChecks.jpg"),
+  // },
+  // {
+  //   "keyName" : "settingsShowMuseumButton",
+  //   "defaultValue" : "true",
+  //   "currentValue" : "",
+  //   "picture" : require("./assets/icons/owl.png"),
+  //   "displayName" : "Show donated to museum button",
+  //   "description" : "Shows a donation button which can be used to track if you've donated it to the museum in addition to collecting it.",
+  // },
   {
     "keyName" : "settingsCompressVariations",
     "defaultValue" : "false",
@@ -1320,4 +1320,37 @@ export function getFlowerChecklistKey(flowerName){
     }
   }
   return "s";
+}
+
+export function generateMaterialsFilters(materialName){
+  let filtersOut = []
+  for(let i=1; i<10; i++){
+    filtersOut.push("Material " + i.toString() + ":" + materialName)
+    console.log("Material " + i.toString() + ":" + materialName)
+  }
+  return ["Material 1:elegant mushroom"]
+}
+
+export function allEventItemsCheck(eventName){
+  if(eventName===undefined || eventName.constructor !== String){
+    return false
+  }
+  let previousName = ""
+  let previousDataCategory = ""
+  for(let dataSet = 0; dataSet < global.dataLoadedAll.length; dataSet++){
+    for(let i = 0; i < global.dataLoadedAll[dataSet].length; i++){
+      if((global.dataLoadedAll[dataSet][i].hasOwnProperty("Source") && global.dataLoadedAll[dataSet][i]["Source"].toLowerCase().split("; ").includes(eventName.toLowerCase())) || (global.dataLoadedAll[dataSet][i].hasOwnProperty("Season/Event") && global.dataLoadedAll[dataSet][i]["Season/Event"].toLowerCase().split("; ").includes(eventName.toLowerCase()))){
+        if(previousName === global.dataLoadedAll[dataSet][i]["Name"] && previousDataCategory === global.dataLoadedAll[dataSet][i]["Data Category"]){
+          continue
+        } else {
+          if(inChecklist(global.dataLoadedAll[dataSet][i]["checkListKey"])===false){
+            return false
+          }
+          previousName = global.dataLoadedAll[dataSet][i]["Name"]
+          previousDataCategory = global.dataLoadedAll[dataSet][i]["Data Category"]
+        }
+      }
+    }
+  }
+  return true
 }

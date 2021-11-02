@@ -531,21 +531,21 @@
     ],
     "Main": [
         {
-            "English": "797 items",
-            "English (Europe)": "797 items",
-            "French": "786 items",
-            "French (US)": "786 items",
-            "German": "786 items",
-            "Spanish": "786 items",
-            "Spanish (US)": "782 items",
-            "Russian": "786 items",
-            "Italian": "796 items",
-            "Dutch": "769 items",
+            "English": "801 items",
+            "English (Europe)": "801 items",
+            "French": "790 items",
+            "French (US)": "790 items",
+            "German": "790 items",
+            "Spanish": "790 items",
+            "Spanish (US)": "786 items",
+            "Russian": "790 items",
+            "Italian": "800 items",
+            "Dutch": "775 items",
             "Chinese": "0 items",
             "Chinese (Traditional)": "0 items",
             "Japanese": "0 items",
             "Korean": "0 items",
-            "Portuguese": "795 items"
+            "Portuguese": "798 items"
         },
         {
             "English": "Home",
@@ -2004,6 +2004,19 @@
             "Portuguese": "Variações parcialmente coletadas"
         },
         {
+            "English": "Not Collected (Keep variations)",
+            "English (Europe)": "Not Collected (Keep variations)",
+            "French": "Non collecté (conserver les variantes)",
+            "French (US)": "Non collecté (conserver les variantes)",
+            "German": "Nicht gesammelt (Varianten behalten)",
+            "Spanish": "No recogido (Mantener variaciones)",
+            "Spanish (US)": "No recogido (Mantener variaciones)",
+            "Russian": "Не собрано (оставить варианты)",
+            "Italian": "Non raccolto (Mantieni variazioni)",
+            "Dutch": "Niet opgehaald (variaties behouden)",
+            "Portuguese": "Não coletado (manter variações)"
+        },
+        {
             "English": "Fish",
             "English (Europe)": "Fish",
             "French": "Poissons",
@@ -2119,6 +2132,18 @@
             "Italian": "Ricette",
             "Dutch": "DIY's",
             "Portuguese": "Receitas"
+        },
+        {
+            "English": "Recipes (DIYs)",
+            "English (Europe)": "Recipes (DIYs)",
+            "French": "Plans (DIYs)",
+            "French (US)": "Plans (DIYs)",
+            "German": "Anleitungen (DIYs)",
+            "Spanish": "Recetas (DIYs)",
+            "Spanish (US)": "Recetas (DIYs)",
+            "Russian": "Рецепты (DIYs)",
+            "Italian": "Ricette (DIYs)",
+            "Dutch": "DIY's"
         },
         {
             "English": "Tools",
@@ -5302,6 +5327,7 @@
             "Spanish (US)": "Ventilador",
             "Russian": "Фен",
             "Italian": "Ventilatore",
+            "Dutch": "ventilator",
             "Portuguese": "Ventilador"
         },
         {
@@ -5327,6 +5353,7 @@
             "Spanish (US)": "Playa",
             "Russian": "Побережье",
             "Italian": "Mare",
+            "Dutch": "Strand",
             "Portuguese": "Beira-mar"
         },
         {
@@ -6482,7 +6509,7 @@
             "Spanish (US)": "¿Que son los regalos de vecinos?",
             "Russian": "Какие подарки у жителей? ",
             "Italian": "Cosa sono i regali per gli abitanti?",
-            "Dutch": "Wat zijn dorpsgeschenken?",
+            "Dutch": "Wat zijn geschenken voor dorps bewoners?",
             "Portuguese": "O que são presentes de moradores?"
         },
         {
@@ -6521,7 +6548,7 @@
             "Spanish (US)": "Además, puedes elegir si el vecino usará o no el objeto al regalárselo. ",
             "Russian": "Вы также можете отфильтровать ту подаренную одежду, которую житель будет или не будет носить. ",
             "Italian": "In più, puoi scegliere di filtrare se un abitante indosserà quell'oggetto o no se regalato.",
-            "Dutch": "Bovendien kun je ervoor kiezen om uit te filteren of de dorpeling dit item wel of niet zal dragen wanneer het wordt begaafd.",
+            "Dutch": "Bovendien kun je ervoor kiezen om uit te filteren of de dorpeling dit item wel of niet zal dragen wanneer het wordt gegeven.",
             "Portuguese": "Além disso, você pode escolher filtrar se o morador usará este item ou não quando for presenteado."
         },
         {
@@ -6534,7 +6561,7 @@
             "Spanish (US)": "El vecino puede usar ",
             "Russian": "Житель может нлсить",
             "Italian": "L'abitante può indossare",
-            "Dutch": "Dorpeling kan dragen",
+            "Dutch": "Kan door dorpeling worden  gedragen",
             "Portuguese": "O morador pode usar"
         },
         {
@@ -6547,7 +6574,7 @@
             "Spanish (US)": "El vecino no puede usar ",
             "Russian": "Житель не может носить ",
             "Italian": "L'abitante non può indossare",
-            "Dutch": "Dorpeling kan niet dragen",
+            "Dutch": "Kan niet door dorpeling  worden dragen",
             "Portuguese": "O morador não pode usar"
         },
         {
@@ -6625,7 +6652,7 @@
             "Spanish (US)": "Es recomendable que tengas vecinos con todas las personalidades para poder conseguir todos los proyectos y reacciones.",
             "Russian": "Рекомендуется поселить жителей всех типов личности, чтобы получить от них всевозможные инструкции и реакции. ",
             "Italian": "È consigliabile avere tutti i tipi di personalità abitante per avere tutte le ricette ed emozioni.",
-            "Dutch": "Het wordt aanbevolen dat je alle persoonlijkheidstypes hebt om alle DIY's en reacties te kunnen krijgen.",
+            "Dutch": "Het wordt aanbevolen dat je alle persoonlijkheidstypes hebt om alle DIY's en emotie's te kunnen krijgen.",
             "Portuguese": "Recomenda-se que você tenha todos os tipos de personalidade para poder obter todos os DIYs e Reações."
         },
         {
@@ -6651,7 +6678,7 @@
             "Spanish (US)": "Proyectos obtenibles",
             "Russian": "Можно получить инструкции",
             "Italian": "Ricette ottenibili:",
-            "Dutch": "Verkrijgbare doe-het-zelvers",
+            "Dutch": "Verkrijgbare DIY's",
             "Portuguese": "DIYs Obtiveis"
         },
         {
@@ -6664,7 +6691,7 @@
             "Spanish (US)": "Proyectos no obtenibles",
             "Russian": "Нельзя получить инструкции",
             "Italian": "Ricette non ottenibili:",
-            "Dutch": "Onverkrijgbare doe-het-zelvers",
+            "Dutch": "Onverkrijgbare DIY's",
             "Portuguese": "DIYs Não Obtiveis"
         },
         {
@@ -6677,7 +6704,7 @@
             "Spanish (US)": "Emociones obtenibles",
             "Russian": "Можно получить реакции",
             "Italian": "Emozioni ottenibili:",
-            "Dutch": "Verkrijgbare reacties",
+            "Dutch": "Verkrijgbare emotie's",
             "Portuguese": "Reações Obtíveis"
         },
         {
@@ -6690,7 +6717,7 @@
             "Spanish (US)": "Emociones no obtenibles",
             "Russian": "Нельзя получить реакции",
             "Italian": "Emozioni non ottenibili:",
-            "Dutch": "Onbereikbare reacties",
+            "Dutch": "Niet verkrijgbare emotie's",
             "Portuguese": "Reações Não Obtiveis "
         },
         {
@@ -10806,6 +10833,32 @@
             "Italian": "Mostra tutti gli eventi in corso oggi",
             "Dutch": "Toon alle evenementen die vandaag plaatsvinden",
             "Portuguese": "Mostrar todos os eventos que acontecem hoje"
+        },
+        {
+            "English": "Underwater",
+            "English (Europe)": "Underwater",
+            "French": "Sous-marin",
+            "French (US)": "Sous-marin",
+            "German": "Unterwasser",
+            "Spanish": "Submarino",
+            "Spanish (US)": "Submarino",
+            "Russian": "Подводный",
+            "Italian": "sott'acqua",
+            "Dutch": "Onderwater",
+            "Portuguese": "Embaixo da agua"
+        },
+        {
+            "English": "Items you can craft with this",
+            "English (Europe)": "Items you can craft with this",
+            "French": "Objets que vous pouvez fabriquer avec ceci",
+            "French (US)": "Objets que vous pouvez fabriquer avec ceci",
+            "German": "Gegenstände, die du damit herstellen kannst",
+            "Spanish": "Elementos que puedes crear con esto",
+            "Spanish (US)": "Elementos que puedes crear con esto",
+            "Russian": "Предметы, которые вы можете создать из этого",
+            "Italian": "Oggetti che puoi creare con questo",
+            "Dutch": "Items die je hiermee kunt knutselen",
+            "Portuguese": "Itens que você pode criar com este"
         }
     ],
     "Sources": [
@@ -10818,7 +10871,7 @@
             "Spanish": "95 items",
             "Spanish (US)": "50 items",
             "Italian": "53 items",
-            "Dutch": "32 items",
+            "Dutch": "46 items",
             "Chinese": "0 items",
             "Chinese (Traditional)": "0 items",
             "Japanese": "0 items",
@@ -10833,6 +10886,7 @@
             "German": "Nook Saisonales Shopping ",
             "Spanish": "Artículos de temporada de TeleNook",
             "Italian": "Nook Shopping Stagionale",
+            "Dutch": "Seizoensgebonden Nook shop items",
             "Russian": "Сезонные покупки Нука",
             "Portuguese": "Nook Shopping Sazonal"
         },
@@ -10870,6 +10924,7 @@
             "Spanish": "Objetos iniciales",
             "Spanish (US)": "Objetos iniciales",
             "Italian": "Oggetti iniziali",
+            "Dutch": "Start items",
             "Russian": "Стартовый набор",
             "Portuguese": "Itens iniciais"
         },
@@ -10882,6 +10937,7 @@
             "Spanish": "Canje de millas nook",
             "Spanish (US)": "Canje de millas nook",
             "Italian": "Riscatto Miglia Nook",
+            "Dutch": "Nook miles inwisselen",
             "Russian": "Выкуп за мили Нука",
             "Portuguese": "Resgate de Nook Miles"
         },
@@ -10892,6 +10948,7 @@
             "French (US)": "Nook Shopping Promotion",
             "German": "Nook-Meilen-Programm ",
             "Italian": "Promozione Nook Shopping",
+            "Dutch": "Nook's promotie",
             "Russian": "Продвижение магазина Нука",
             "Portuguese": "Promoção Nook Shopping"
         },
@@ -10916,6 +10973,7 @@
             "Spanish": "Selección diaria de compras de nook",
             "Spanish (US)": "Selección diaria de compras de nook",
             "Italian": "Selezione giornaliera Nook Shopping",
+            "Dutch": "Nook's dagelijkse selectie",
             "Russian": "Ежедневный выбор покупок Нука",
             "Portuguese": "Seleção Diária do Nook Shopping"
         },
@@ -10940,6 +10998,7 @@
             "Spanish": "AAD",
             "Spanish (US)": "HHA",
             "Italian": "ABC",
+            "Dutch": "AWW",
             "Russian": "АДУ",
             "Portuguese": "HHA"
         },
@@ -10976,6 +11035,7 @@
             "Spanish": "Alta Amistad",
             "Spanish (US)": "Alta Amistad",
             "Italian": "Amicizia alta",
+            "Dutch": "Maximun vriendschaps level",
             "Russian": "Лучший друг",
             "Portuguese": "Alta amizade"
         },
@@ -10987,6 +11047,7 @@
             "German": "Überprüfe die Weihnschtssocken einen Tag nach dem Spielzeug Tag",
             "Spanish": "Comprobar los calcetines navideños después del Día de los Juguetes",
             "Italian": "Controlla la calza del Giorno dei giocattoli il giorno dopo il Giorno dei giocattoli",
+            "Dutch": "Check speelgoeddag kousen de dag na speelgoeddag",
             "Russian": "Проверьте склады Дня Игрушек на следующий после Дня Игрушек",
             "Portuguese": "Verifique as meias do Toy Day um dia após o Toy Day"
         },
@@ -11009,6 +11070,7 @@
             "Spanish": "Depósito de reciclaje",
             "Spanish (US)": "Reciclar caja",
             "Italian": "Cestino",
+            "Dutch": "Recycle kist",
             "Russian": "Ящик для переработки",
             "Portuguese": "Caixa de reciclagem"
         },
@@ -11020,6 +11082,7 @@
             "German": "Reiners Schatzkutter",
             "Spanish": "Navío de Ladino",
             "Italian": "Barca di Volpolo",
+            "Dutch": "Redd's schattenschuit",
             "Russian": "Траулер с сокровищами Весёлого Редда",
             "Portuguese": "Barco de tesouro de Jolly Redd"
         },
@@ -11031,6 +11094,7 @@
             "German": "Bewohner ",
             "Spanish": "Vecinos",
             "Italian": "Abitanti",
+            "Dutch": "Bewoners",
             "Russian": "Жители",
             "Portuguese": "Moradores"
         },
@@ -11055,7 +11119,7 @@
             "Spanish": "Muñeco de nieve",
             "Spanish (US)": "Muñeco de nieve",
             "Italian": "Pupazzo di neve",
-            "Dutch": "Sneeuwpop",
+            "Dutch": "Sneeuwknul",
             "Russian": "Снеговик",
             "Portuguese": "Boneco de neve"
         },
@@ -11080,6 +11144,7 @@
             "Spanish": "Cuarta mejora de la casa",
             "Spanish (US)": "Cuarta mejora de la casa",
             "Italian": "Quarto aggiornamento Casa (stanza destra)",
+            "Dutch": "4de huis uitbreiding ( kamer rechts)",
             "Russian": "4-ое улучшение дома",
             "Portuguese": "4º Upgrade da Casa (Quarto Direito)"
         },
@@ -11092,6 +11157,7 @@
             "Spanish": "Tercera mejora de la casa",
             "Spanish (US)": "Tercera mejora de la casa",
             "Italian": "Terzo aggiornamento Casa (stanza sinistra)",
+            "Dutch": "3de huisuitbreiding ( kamer links)",
             "Russian": "3-ье улучшение дома",
             "Portuguese": "3º Upgrade da Casa (Quarto Esquerdo)"
         },
@@ -11104,6 +11170,7 @@
             "Spanish": "Quinta mejora de la casa",
             "Spanish (US)": "Quinta mejora de la casa",
             "Italian": "Quinto aggiornamento Casa (secondo piano)",
+            "Dutch": "5de huisuitbreiding ( zolder/ extra verdieping)",
             "Russian": "5-ое улучшение дома",
             "Portuguese": "5º Upgrade da Casa (2º Andar)"
         },
@@ -13427,7 +13494,7 @@
             "Spanish": "38 items",
             "Spanish (US)": "38 items",
             "Italian": "0 items",
-            "Dutch": "0 items",
+            "Dutch": "3 items",
             "Chinese": "0 items",
             "Chinese (Traditional)": "0 items",
             "Japanese": "0 items",
@@ -13442,6 +13509,7 @@
             "German": "Eicheln und Tannenzapfen",
             "Spanish": "bellotas y piñas",
             "Spanish (US)": "bellotas y piñas",
+            "Dutch": "Eikeltjes en Dennenappels",
             "Russian": "жёлуди и шишки"
         },
         {
@@ -13452,6 +13520,7 @@
             "German": "Pilze",
             "Spanish": "setas",
             "Spanish (US)": "setas",
+            "Dutch": "Paddenstoelen",
             "Russian": "грибы"
         },
         {
@@ -13462,6 +13531,7 @@
             "German": "Baumschmuck",
             "Spanish": "adornos",
             "Spanish (US)": "adornos",
+            "Dutch": "Kerstversieringen",
             "Russian": "орнаменты"
         },
         {
@@ -15024,7 +15094,7 @@
             "Spanish": "105 items",
             "Spanish (US)": "0 items",
             "Italian": "0 items",
-            "Dutch": "0 items",
+            "Dutch": "86 items",
             "Chinese": "0 items",
             "Chinese (Traditional)": "0 items",
             "Japanese": "0 items",
@@ -15037,7 +15107,8 @@
             "French": "(island name) Miles de bienvenue !",
             "French (US)": "(island name) Miles de bienvenue !",
             "German": "(Inselname) in Sicht!",
-            "Spanish": "Millas Nook de Bienvenida"
+            "Spanish": "Millas Nook de Bienvenida",
+            "Dutch": "(Eilandnaam)miles"
         },
         {
             "English": "Angling for Perfection!",
@@ -15045,7 +15116,8 @@
             "French": "Pêcheur sachant pêcher",
             "French (US)": "Pêcheur sachant pêcher",
             "German": "Angelmeister",
-            "Spanish": "Toda la pesca"
+            "Spanish": "Toda la pesca",
+            "Dutch": "Vissen voor beginners"
         },
         {
             "English": "Island Ichthyologist",
@@ -15053,7 +15125,8 @@
             "French": "Ichtyologue insulaire",
             "French (US)": "Ichtyologue insulaire",
             "German": "Ichthyologe",
-            "Spanish": "Ictiología avanzada"
+            "Spanish": "Ictiología avanzada",
+            "Dutch": "Vis, ik heb je"
         },
         {
             "English": "Island Togetherness",
@@ -15061,7 +15134,8 @@
             "French": "Dis bonjour !",
             "French (US)": "Dis bonjour !",
             "German": "Soziales Tier",
-            "Spanish": "De flor en flor"
+            "Spanish": "De flor en flor",
+            "Dutch": "Sociaal dier"
         },
         {
             "English": "You've Got the Bug",
@@ -15069,7 +15143,8 @@
             "French": "Pas bébête !",
             "French (US)": "Pas bébête !",
             "German": "Insektenjäger",
-            "Spanish": "¿Y a ti qué te pica?"
+            "Spanish": "¿Y a ti qué te pica?",
+            "Dutch": "Beestjesboel"
         },
         {
             "English": "Bugs Don't Bug Me",
@@ -15077,7 +15152,8 @@
             "French": "Tout ce qui grouille",
             "French (US)": "Tout ce qui grouille",
             "German": "Entomologe",
-            "Spanish": "¡Bichos a mí!"
+            "Spanish": "¡Bichos a mí!",
+            "Dutch": "Twee vliegen in één klap"
         },
         {
             "English": "Have a Nice DIY!",
@@ -15085,7 +15161,8 @@
             "French": "Bricollection",
             "French (US)": "Bricollection",
             "German": "Selbst ist der Bewohner",
-            "Spanish": "El saber no ocupa lugar"
+            "Spanish": "El saber no ocupa lugar",
+            "Dutch": "Doe-het-zelf kennis"
         },
         {
             "English": "Deep Dive",
@@ -15093,7 +15170,8 @@
             "French": "Le fin du fin des fonds",
             "French (US)": "Le fin du fin des fonds",
             "German": "Tiefseetaucher",
-            "Spanish": "Millas submarinas"
+            "Spanish": "Millas submarinas",
+            "Dutch": "Duik in het diepe"
         },
         {
             "English": "Underwater Understudy",
@@ -15101,7 +15179,8 @@
             "French": "La bosse de l'abysse",
             "French (US)": "La bosse de l'abysse",
             "German": "Meeresfrüchtchen",
-            "Spanish": "Saber acuático"
+            "Spanish": "Saber acuático",
+            "Dutch": "Onderwater onderzoek"
         },
         {
             "English": "DIY Tools",
@@ -15109,7 +15188,8 @@
             "French": "Bricolage d'outillage",
             "French (US)": "Bricolage d'outillage",
             "German": "Marke Eigenbau",
-            "Spanish": "Herramientas caseras"
+            "Spanish": "Herramientas caseras",
+            "Dutch": "Zelfgemaakt gereedschap"
         },
         {
             "English": "DIY Furniture",
@@ -15117,7 +15197,8 @@
             "French": "Bricolage de meubles",
             "French (US)": "Bricolage de meubles",
             "German": "Möbelmacher",
-            "Spanish": "Mobiliario casero"
+            "Spanish": "Mobiliario casero",
+            "Dutch": "Zelfgemaakte meubels"
         },
         {
             "English": "Furniture Freshener",
@@ -15125,7 +15206,8 @@
             "French": "Déco perso",
             "French (US)": "Déco perso",
             "German": "Möbel-Umgestalter",
-            "Spanish": "Laca y pintura"
+            "Spanish": "Laca y pintura",
+            "Dutch": "Meubel-make-over"
         },
         {
             "English": "Rough-hewn",
@@ -15133,7 +15215,8 @@
             "French": "Bûcheron bûcheur",
             "French (US)": "Bûcheron bûcheur",
             "German": "Auf dem Holzweg",
-            "Spanish": "Tienes madera"
+            "Spanish": "Tienes madera",
+            "Dutch": "Ik hout van miles"
         },
         {
             "English": "Trashed Tools",
@@ -15141,7 +15224,8 @@
             "French": "La casse, ça paye",
             "French (US)": "La casse, ça paye",
             "German": "Der Verschleiß ist heiß",
-            "Spanish": "Revienta herramientas"
+            "Spanish": "Revienta herramientas",
+            "Dutch": "Arbeidskracht"
         },
         {
             "English": "Rock-Splitting Champ",
@@ -15149,7 +15233,8 @@
             "French": "Des cailloux à la pelle",
             "French (US)": "Des cailloux à la pelle",
             "German": "Steinreich",
-            "Spanish": "Para partirse"
+            "Spanish": "Para partirse",
+            "Dutch": "Rotsklaps rijk"
         },
         {
             "English": "Bona Fide Bone Finder!",
@@ -15157,7 +15242,8 @@
             "French": "Fossiles, vrais miles",
             "French (US)": "Fossiles, vrais miles",
             "German": "Fossilienfund",
-            "Spanish": "A otro perro con ese hueso"
+            "Spanish": "A otro perro con ese hueso",
+            "Dutch": "Paleontoloog in spe"
         },
         {
             "English": "Fossil Assessment",
@@ -15165,7 +15251,8 @@
             "French": "Expertise de fossiles",
             "French (US)": "Expertise de fossiles",
             "German": "Fossilienforschung",
-            "Spanish": "Fósiles inestimables"
+            "Spanish": "Fósiles inestimables",
+            "Dutch": "Steengoede Paleontoloog"
         },
         {
             "English": "Greedy Weeder",
@@ -15173,7 +15260,8 @@
             "French": "Adieu, la mauvaise herbe",
             "French (US)": "Adieu, la mauvaise herbe",
             "German": "Unkrautfeind",
-            "Spanish": "¡Abajo el hierbajo!"
+            "Spanish": "¡Abajo el hierbajo!",
+            "Dutch": "Het onkruid eruit"
         },
         {
             "English": "Flower Power",
@@ -15181,7 +15269,8 @@
             "French": "Flower Power",
             "French (US)": "Flower Power",
             "German": "Meistergärtner",
-            "Spanish": "Jardineria con florituras"
+            "Spanish": "Jardineria con florituras",
+            "Dutch": "Wie zaait, zal oogsten"
         },
         {
             "English": "Flower Tender",
@@ -15189,7 +15278,8 @@
             "French": "L'arroseur arrosé",
             "French (US)": "L'arroseur arrosé",
             "German": "Blumengießer",
-            "Spanish": "Que llueva"
+            "Spanish": "Que llueva",
+            "Dutch": "Gulle gieter"
         },
         {
             "English": "Tomorrow's Trees Today",
@@ -15197,7 +15287,8 @@
             "French": "Forestation",
             "French (US)": "Forestation",
             "German": "Baumpflanzer",
-            "Spanish": "Desarrollo sostenible"
+            "Spanish": "Desarrollo sostenible",
+            "Dutch": "Lof voor loof"
         },
         {
             "English": "Pick of the Bunch",
@@ -15205,7 +15296,8 @@
             "French": "Corne d'abondance",
             "French (US)": "Corne d'abondance",
             "German": "Profipflücker",
-            "Spanish": "Los frutos del trabajo"
+            "Spanish": "Los frutos del trabajo",
+            "Dutch": "Vruchtbare handel"
         },
         {
             "English": "Fruit Roots",
@@ -15213,7 +15305,8 @@
             "French": "Fruits pour tous les goûts",
             "French (US)": "Fruits pour tous les goûts",
             "German": "Obstbauer",
-            "Spanish": "Macedonia"
+            "Spanish": "Macedonia",
+            "Dutch": "Fruitbuit"
         },
         {
             "English": "Shrubbery Hububbery",
@@ -15221,7 +15314,8 @@
             "French": "La passion des pousses",
             "French (US)": "La passion des pousses",
             "German": "Da ist was im Busch...",
-            "Spanish": "Gusto por el arbusto"
+            "Spanish": "Gusto por el arbusto",
+            "Dutch": "Puike struiken"
         },
         {
             "English": "Go Ahead. Be Shellfish!",
@@ -15229,7 +15323,8 @@
             "French": "Les fruits de la mer",
             "French (US)": "Les fruits de la mer",
             "German": "Muschelsammler",
-            "Spanish": "Conchaventa"
+            "Spanish": "Conchaventa",
+            "Dutch": "Schelpenier"
         },
         {
             "English": "Clam and Collected",
@@ -15237,7 +15332,8 @@
             "French": "Pêche à la palourde",
             "French (US)": "Pêche à la palourde",
             "German": "Muschelgräber",
-            "Spanish": "El mar te da tesoros"
+            "Spanish": "El mar te da tesoros",
+            "Dutch": "Winstgevende wandeling"
         },
         {
             "English": "Trash Fishin'",
@@ -15245,7 +15341,8 @@
             "French": "Déchets pêchés",
             "French (US)": "Déchets pêchés",
             "German": "Saubermann",
-            "Spanish": "Reciclaje salvaje"
+            "Spanish": "Reciclaje salvaje",
+            "Dutch": "Vuilnis vissen"
         },
         {
             "English": "Cast Master",
@@ -15253,7 +15350,8 @@
             "French": "Maître-pêcheur",
             "French (US)": "Maître-pêcheur",
             "German": "Angellegende",
-            "Spanish": "Sedal como la seda"
+            "Spanish": "Sedal como la seda",
+            "Dutch": "Handige hengelaar"
         },
         {
             "English": "Dream House",
@@ -15261,7 +15359,8 @@
             "French": "Maison de rêve",
             "French (US)": "Maison de rêve",
             "German": "Der Traum vom Eigenheim",
-            "Spanish": "La casa de tus sueños"
+            "Spanish": "La casa de tus sueños",
+            "Dutch": "Het huis van je dromen"
         },
         {
             "English": "Decorated Decorator",
@@ -15269,7 +15368,8 @@
             "French": "Décorateur décoré",
             "French (US)": "Décorateur décoré",
             "German": "Innenausstatter",
-            "Spanish": "Con-decoracion"
+            "Spanish": "Con-decoracion",
+            "Dutch": "Inrichtingsgenie"
         },
         {
             "English": "Hoard Reward",
@@ -15277,7 +15377,8 @@
             "French": "De l'art de meubler",
             "French (US)": "De l'art de meubler",
             "German": "Vermöbelt",
-            "Spanish": "Interiorizando"
+            "Spanish": "Interiorizando",
+            "Dutch": "Meubelmania"
         },
         {
             "English": "Good Things in Store!",
@@ -15285,7 +15386,8 @@
             "French": "Un peu d'ordre",
             "French (US)": "Un peu d'ordre",
             "German": "Aufräumprofi",
-            "Spanish": "Trasteando con el trastero"
+            "Spanish": "Trasteando con el trastero",
+            "Dutch": "Wie wat bewaard, krijgt wat"
         },
         {
             "English": "Remarkable Remodeler",
@@ -15293,7 +15395,8 @@
             "French": "Déco à la chaîne",
             "French (US)": "Déco à la chaîne",
             "German": "Demolieren? Renovieren!",
-            "Spanish": "Reforma reformidable"
+            "Spanish": "Reforma reformidable",
+            "Dutch": "Voortreffelijke verbouwer"
         },
         {
             "English": "Smile Isle",
@@ -15301,7 +15404,8 @@
             "French": "Aider son prochain",
             "French (US)": "Aider son prochain",
             "German": "Hilfsbereit",
-            "Spanish": "Favor por favor"
+            "Spanish": "Favor por favor",
+            "Dutch": "Brave burger"
         },
         {
             "English": "Reaction Ruler",
@@ -15309,7 +15413,8 @@
             "French": "La tactique des mimiques",
             "French (US)": "La tactique des mimiques",
             "German": "Emotionsmeister",
-            "Spanish": "Tu emoción nos embarga"
+            "Spanish": "Tu emoción nos embarga",
+            "Dutch": "Een open boek"
         },
         {
             "English": "Island Shutterbug",
@@ -15317,7 +15422,8 @@
             "French": "Y a pas photo",
             "French (US)": "Y a pas photo",
             "German": "Fotofreund",
-            "Spanish": "¡Mira al pajarito!"
+            "Spanish": "¡Mira al pajarito!",
+            "Dutch": "Eerste eilandkiekje"
         },
         {
             "English": "Edit Credit",
@@ -15325,7 +15431,8 @@
             "French": "Passeport en ordre",
             "French (US)": "Passeport en ordre",
             "German": "Passt schon!",
-            "Spanish": "Pasaporte personalizado"
+            "Spanish": "Pasaporte personalizado",
+            "Dutch": "Paspoortplezier"
         },
         {
             "English": "NookPhone Life",
@@ -15333,7 +15440,8 @@
             "French": "Accro à l'écran",
             "French (US)": "Accro à l'écran",
             "German": "Dein NookPhone!",
-            "Spanish": "Contigo a todas partes"
+            "Spanish": "Contigo a todas partes",
+            "Dutch": "Mobiel en makkelijk"
         },
         {
             "English": "That's One Smart Phone",
@@ -15341,7 +15449,8 @@
             "French": "Profane du NookPhone",
             "French (US)": "Profane du NookPhone",
             "German": "Smartes Telefon",
-            "Spanish": "Usa tu teléfono, inteligente"
+            "Spanish": "Usa tu teléfono, inteligente",
+            "Dutch": "Een vernuftige phone"
         },
         {
             "English": "Shop to It",
@@ -15349,7 +15458,8 @@
             "French": "Amples emplettes",
             "French (US)": "Amples emplettes",
             "German": "Versand-Fan",
-            "Spanish": "Aquí hay quien te atienda"
+            "Spanish": "Aquí hay quien te atienda",
+            "Dutch": "De winkel die alles heeft"
         },
         {
             "English": "Growing Collection",
@@ -15357,7 +15467,8 @@
             "French": "Collectionnite",
             "French (US)": "Collectionnite",
             "German": "Katalogstöberer",
-            "Spanish": "Catalogía"
+            "Spanish": "Catalogía",
+            "Dutch": "Cataloguskampioen"
         },
         {
             "English": "Nook Miles for Miles!",
@@ -15365,7 +15476,8 @@
             "French": "Chaîne de miles",
             "French (US)": "Chaîne de miles",
             "German": "Meilenstein",
-            "Spanish": "Millas a millares"
+            "Spanish": "Millas a millares",
+            "Dutch": "Nook-miles-miles"
         },
         {
             "English": "First-Time Buyer",
@@ -15373,7 +15485,8 @@
             "French": "L'achat qui rapporte",
             "French (US)": "L'achat qui rapporte",
             "German": "Erster Einkauf",
-            "Spanish": "Rascarse el bolsillo"
+            "Spanish": "Rascarse el bolsillo",
+            "Dutch": "Winkeldebuut"
         },
         {
             "English": "Seller of Unwanted Stuff",
@@ -15381,7 +15494,8 @@
             "French": "Seconde main",
             "French (US)": "Seconde main",
             "German": "Verkaufen statt Horten",
-            "Spanish": "Vaciar el altillo"
+            "Spanish": "Vaciar el altillo",
+            "Dutch": "Vintage voor winst"
         },
         {
             "English": "Moving Fees Paid!",
@@ -15389,7 +15503,8 @@
             "French": "Prêt payé !",
             "French (US)": "Prêt payé !",
             "German": "Umzug abbezahlt",
-            "Spanish": "Has pagado el PAID"
+            "Spanish": "Has pagado el PAID",
+            "Dutch": "Verhuiskosten voldaan"
         },
         {
             "English": "Bell Ringer",
@@ -15397,7 +15512,8 @@
             "French": "Perce-oseille",
             "French (US)": "Perce-oseille",
             "German": "Griff nach den Sternis",
-            "Spanish": "La baya por la ventana"
+            "Spanish": "La baya por la ventana",
+            "Dutch": "Gat in de hand"
         },
         {
             "English": "Miles for Stalkholders",
@@ -15405,7 +15521,8 @@
             "French": "Capitalisme vert",
             "French (US)": "Capitalisme vert",
             "German": "Rübenspekulant",
-            "Spanish": "Economía de raíz"
+            "Spanish": "Economía de raíz",
+            "Dutch": "Voor de knol"
         },
         {
             "English": "Cornering the Stalk Market",
@@ -15413,7 +15530,8 @@
             "French": "Clochettisation des navets",
             "French (US)": "Clochettisation des navets",
             "German": "Rübenguru",
-            "Spanish": "Inversión de impresión"
+            "Spanish": "Inversión de impresión",
+            "Dutch": "Knollen winst"
         },
         {
             "English": "No More Loan Payments!",
@@ -15421,7 +15539,8 @@
             "French": "Crédit, c'est fini",
             "French (US)": "Crédit, c'est fini",
             "German": "Kredit abbezahlt",
-            "Spanish": "Adiós deudas"
+            "Spanish": "Adiós deudas",
+            "Dutch": "Uit de rode cijfers"
         },
         {
             "English": "Bulletin-Board Benefit",
@@ -15429,7 +15548,8 @@
             "French": "Avantages de l'affichage",
             "French (US)": "Avantages de l'affichage",
             "German": "Was für ein Brett!",
-            "Spanish": "¡Anúnciate!"
+            "Spanish": "¡Anúnciate!",
+            "Dutch": "Miles voor mededelingen"
         },
         {
             "English": "Popular Pen Pal",
@@ -15437,7 +15557,8 @@
             "French": "L'amitié n'attend pas",
             "French (US)": "L'amitié n'attend pas",
             "German": "Beliebter Brieffreund",
-            "Spanish": "Corresponsal responsable"
+            "Spanish": "Corresponsal responsable",
+            "Dutch": "Populaire penvriend"
         },
         {
             "English": "Flea Flicker",
@@ -15445,7 +15566,8 @@
             "French": "Attrape-puces",
             "French (US)": "Attrape-puces",
             "German": "Flohzirkus",
-            "Spanish": "Entre el índice y el pulgar"
+            "Spanish": "Entre el índice y el pulgar",
+            "Dutch": "Vlooiencircus"
         },
         {
             "English": "Cicada Memories",
@@ -15453,7 +15575,8 @@
             "French": "Souvenirs et mues",
             "French (US)": "Souvenirs et mues",
             "German": "Sommerandenken",
-            "Spanish": "Atesorar para el invierno"
+            "Spanish": "Atesorar para el invierno",
+            "Dutch": "Zoete zomerherinnering"
         },
         {
             "English": "Netting Better!",
@@ -15461,7 +15584,8 @@
             "French": "Les belles guêpes !",
             "French (US)": "Les belles guêpes !",
             "German": "Wespenbändiger",
-            "Spanish": "Red avispada"
+            "Spanish": "Red avispada",
+            "Dutch": "Geen steek laten vallen"
         },
         {
             "English": "Pit-y Party!",
@@ -15469,7 +15593,8 @@
             "French": "Je pense, donc je puits",
             "French (US)": "Je pense, donc je puits",
             "German": "Spatenstich",
-            "Spanish": "El agujero primero"
+            "Spanish": "El agujero primero",
+            "Dutch": "Je eerste valkuil"
         },
         {
             "English": "Taking the Sting Out",
@@ -15485,7 +15610,8 @@
             "French": "Évanoui ? Oui, oui !",
             "French (US)": "Évanoui ? Oui, oui !",
             "German": "Furchtloser Fänger",
-            "Spanish": "¿Estás bien?"
+            "Spanish": "¿Estás bien?",
+            "Dutch": "Van je stokje"
         },
         {
             "English": "Overcoming Pitfalls",
@@ -15493,7 +15619,8 @@
             "French": "Au fond du trou",
             "French (US)": "Au fond du trou",
             "German": "Unverhoffter Sturz",
-            "Spanish": "Los tropiezos del camino"
+            "Spanish": "Los tropiezos del camino",
+            "Dutch": "In de val gelopen"
         },
         {
             "English": "Faked Out!",
@@ -15501,7 +15628,8 @@
             "French": "Faussaire de famille",
             "French (US)": "Faussaire de famille",
             "German": "Falscher Fuffziger",
-            "Spanish": "¡Te han timado!"
+            "Spanish": "¡Te han timado!",
+            "Dutch": "Bedrogen en belogen"
         },
         {
             "English": "Lost Treasure",
@@ -15509,7 +15637,8 @@
             "French": "Trésor englouti",
             "French (US)": "Trésor englouti",
             "German": "Wie gewonnen, so...",
-            "Spanish": "Premio aguado"
+            "Spanish": "Premio aguado",
+            "Dutch": "Verloren schat"
         },
         {
             "English": "It's Raining Treasure!",
@@ -15517,7 +15646,8 @@
             "French": "Cadeaux du ciel",
             "French (US)": "Cadeaux du ciel",
             "German": "Ballonschütze",
-            "Spanish": "Regalos caídos del cielo"
+            "Spanish": "Regalos caídos del cielo",
+            "Dutch": "Een balonnetje neerhalen"
         },
         {
             "English": "Fun with Fences",
@@ -15525,7 +15655,8 @@
             "French": "L'allure de la clôture",
             "French (US)": "L'allure de la clôture",
             "German": "Zäune schaffen Räume",
-            "Spanish": "¡Vaya con las vallas!"
+            "Spanish": "¡Vaya con las vallas!",
+            "Dutch": "Hekken op plekken"
         },
         {
             "English": "Snowmaestro",
@@ -15533,7 +15664,8 @@
             "French": "Artiste en neige",
             "French (US)": "Artiste en neige",
             "German": "Schneekünstler",
-            "Spanish": "Arte efímero"
+            "Spanish": "Arte efímero",
+            "Dutch": "Koud kunstje"
         },
         {
             "English": "Wishes Come True",
@@ -15541,7 +15673,8 @@
             "French": "Vœux pas pieux",
             "French (US)": "Vœux pas pieux",
             "German": "Wünsch dir was",
-            "Spanish": "Haciendo deseos realidad"
+            "Spanish": "Haciendo deseos realidad",
+            "Dutch": "Wensen komen uit"
         },
         {
             "English": "Exterior Decorator",
@@ -15549,7 +15682,8 @@
             "French": "Terre meuble",
             "French (US)": "Terre meuble",
             "German": "Landschaftsgestaltung",
-            "Spanish": "Decoración de exteriores"
+            "Spanish": "Decoración de exteriores",
+            "Dutch": "Buitenhuisarchitect"
         },
         {
             "English": "(island name) Icons",
@@ -15557,7 +15691,8 @@
             "French": "(island name) dans l'âme",
             "French (US)": "(island name) dans l'âme",
             "German": "Kreative gesucht!",
-            "Spanish": "Símbolos de la isla"
+            "Spanish": "Símbolos de la isla",
+            "Dutch": "(eilandnaam) -iconen"
         },
         {
             "English": "Island Designer",
@@ -15565,7 +15700,8 @@
             "French": "Remod'île",
             "French (US)": "Remod'île",
             "German": "Gestalte deine Insel!",
-            "Spanish": "Obras públicas"
+            "Spanish": "Obras públicas",
+            "Dutch": "Eilandontwerper"
         },
         {
             "English": "Wispy Island Secrets",
@@ -15573,7 +15709,8 @@
             "French": "Follement secret",
             "French (US)": "Follement secret",
             "German": "Gruselige Geheimnisse",
-            "Spanish": "Secretos de la isla"
+            "Spanish": "Secretos de la isla",
+            "Dutch": "Eilandgeheimen"
         },
         {
             "English": "Gulliver's Travails",
@@ -15581,7 +15718,8 @@
             "French": "Au secours du naufragé",
             "French (US)": "Au secours du naufragé",
             "German": "Lebensretter",
-            "Spanish": "Los naufragios de Gulliver"
+            "Spanish": "Los naufragios de Gulliver",
+            "Dutch": "Gullivers reilen en zeilen"
         },
         {
             "English": "K.K. Mania",
@@ -15589,7 +15727,8 @@
             "French": "GG, Kéké !",
             "French (US)": "GG, Kéké !",
             "German": "K.K.-Konzertkartenkäufer",
-            "Spanish": "Todo quisqui con Totakeke"
+            "Spanish": "Todo quisqui con Totakeke",
+            "Dutch": "K.K.-koorts"
         },
         {
             "English": "True Patron of the Arts",
@@ -15597,7 +15736,8 @@
             "French": "L'art en partage",
             "French (US)": "L'art en partage",
             "German": "Mäzenatentum",
-            "Spanish": "Fomentar el arte"
+            "Spanish": "Fomentar el arte",
+            "Dutch": "Kijk op kunst"
         },
         {
             "English": "You Otter Know",
@@ -15605,7 +15745,8 @@
             "French": "Paie ton pétoncle",
             "French (US)": "Paie ton pétoncle",
             "German": "Otter wie, Otter was...?",
-            "Spanish": "La nutria se nutre"
+            "Spanish": "La nutria se nutre",
+            "Dutch": "Otteroverpeinzingen"
         },
         {
             "English": "True Friends",
@@ -15613,7 +15754,8 @@
             "French": "Amitié florissante",
             "French (US)": "Amitié florissante",
             "German": "Wahre Freunde",
-            "Spanish": "El valor de la amistad"
+            "Spanish": "El valor de la amistad",
+            "Dutch": "Echte vrienden"
         },
         {
             "English": "Birthday Celebration",
@@ -15621,7 +15763,8 @@
             "French": "Fête d'anniversaire",
             "French (US)": "Fête d'anniversaire",
             "German": "Gratulantenbonus",
-            "Spanish": "Feliz cumpleaños ajeno"
+            "Spanish": "Feliz cumpleaños ajeno",
+            "Dutch": "Feestbeest"
         },
         {
             "English": "Happy Birthday!",
@@ -15629,7 +15772,8 @@
             "French": "Joyeux anniversaire !",
             "French (US)": "Joyeux anniversaire !",
             "German": "Herzlichen Glückwunsch!",
-            "Spanish": "Regalo de cumpleaños"
+            "Spanish": "Regalo de cumpleaños",
+            "Dutch": "Verjaardagscadeautje"
         },
         {
             "English": "Fishing Tourney!",
@@ -15637,7 +15781,8 @@
             "French": "Tournoi de pêche !",
             "French (US)": "Tournoi de pêche !",
             "German": "Angelturnier",
-            "Spanish": "Torneo de Pesca"
+            "Spanish": "Torneo de Pesca",
+            "Dutch": "Vistournooi"
         },
         {
             "English": "Bug-Off!",
@@ -15645,7 +15790,8 @@
             "French": "Insectosafari !",
             "French (US)": "Insectosafari !",
             "German": "Insektikus-Turnier!",
-            "Spanish": "Caza de Bichos"
+            "Spanish": "Caza de Bichos",
+            "Dutch": "Beestjesbeker"
         },
         {
             "English": "Countdown Celebration",
@@ -15661,7 +15807,8 @@
             "French": "Armoire à mode",
             "French (US)": "Armoire à mode",
             "German": "Schrank-Modenschau",
-            "Spanish": "Fondo de armario"
+            "Spanish": "Fondo de armario",
+            "Dutch": "Modeshow"
         },
         {
             "English": "First Custom Design!",
@@ -15669,7 +15816,8 @@
             "French": "Changement de décor",
             "French (US)": "Changement de décor",
             "German": "Erstes eigenes Design",
-            "Spanish": "Primer diseño propio"
+            "Spanish": "Primer diseño propio",
+            "Dutch": "Eerste eigen ontwerp"
         },
         {
             "English": "Custom Design Pro!",
@@ -15677,7 +15825,8 @@
             "French": "Pro des motifs",
             "French (US)": "Pro des motifs",
             "German": "Design-Profi",
-            "Spanish": "Diseño de alto nivel"
+            "Spanish": "Diseño de alto nivel",
+            "Dutch": "Speciale ontwerpen"
         },
         {
             "English": "Paydirt!",
@@ -15685,7 +15834,8 @@
             "French": "Six pièces sous terre",
             "French (US)": "Six pièces sous terre",
             "German": "Geldgräberstimmung",
-            "Spanish": "Esta isla es una mina"
+            "Spanish": "Esta isla es una mina",
+            "Dutch": "Schatgraver"
         },
         {
             "English": "Shady Shakedown",
@@ -15693,7 +15843,8 @@
             "French": "Mobilier perché",
             "French (US)": "Mobilier perché",
             "German": "Abgeblättert",
-            "Spanish": "Sacudida mobiliaria"
+            "Spanish": "Sacudida mobiliaria",
+            "Dutch": "Bladgoud"
         },
         {
             "English": "Golden Milestone",
@@ -15701,7 +15852,8 @@
             "French": "Des outils en or",
             "French (US)": "Des outils en or",
             "German": "Goldwerkzeuge",
-            "Spanish": "La edad de oro"
+            "Spanish": "La edad de oro",
+            "Dutch": "Gouden mijlpaal"
         },
         {
             "English": "Island and Yourland",
@@ -15709,7 +15861,8 @@
             "French": "Le bonjour aux voisins",
             "French (US)": "Le bonjour aux voisins",
             "German": "Mein Eiland, dein Eiland",
-            "Spanish": "La isla no se aísla"
+            "Spanish": "La isla no se aísla",
+            "Dutch": "Eilandhopper"
         },
         {
             "English": "Host the Most",
@@ -15717,7 +15870,8 @@
             "French": "Promouvoir son île",
             "French (US)": "Promouvoir son île",
             "German": "Größter Gastgeber",
-            "Spanish": "La hospitalidad local"
+            "Spanish": "La hospitalidad local",
+            "Dutch": "Lokale gastvrijheid"
         },
         {
             "English": "Active Island Resident",
@@ -15725,7 +15879,8 @@
             "French": "Labeur quotidien",
             "French (US)": "Labeur quotidien",
             "German": "Jeden Tag auf der Insel",
-            "Spanish": "Actividad insular"
+            "Spanish": "Actividad insular",
+            "Dutch": "Bezige bewoner"
         },
         {
             "English": "You traveled a long way just to move to our little island, and you enrolled in the Nook Mileage Program. So you earned your first miles! There are lots of ways to earn miles by just enjoying island life!",
@@ -16107,7 +16262,8 @@
             "English (Europe)": "Itchy fleas are a real hassle. If you see an island buddy struggling with fleas, by all means, help them out. Not only is it a nice thing to do, but you'll also get some miles for doing a good deed.",
             "French": "Les puces sont une véritable plaie. Si tu vois un camarade insulaire aux prises avec ce fléau, n'hésite pas à l'aider. D'abord, une bonne action n'est jamais perdue, mais en plus, ça te rapportera des miles !",
             "French (US)": "Les puces sont une véritable plaie. Si tu vois un camarade insulaire aux prises avec ce fléau, n'hésite pas à l'aider. D'abord, une bonne action n'est jamais perdue, mais en plus, ça te rapportera des miles !",
-            "German": "Flöhe können eine echte Qual sein. Wenn du einen Nachbarn mit Flohproblem siehst, hilf ihm doch bitte! Solche guten Taten werden mit Meilen belohnt!"
+            "German": "Flöhe können eine echte Qual sein. Wenn du einen Nachbarn mit Flohproblem siehst, hilf ihm doch bitte! Solche guten Taten werden mit Meilen belohnt!",
+            "Dutch": "Vlooien zijn onuitstaanbaar. Als je ziet dat een van je medebewoners er last van heeft, help hem of haar dan een handje. Een goede daad is goud waard, Hm? Of miles in dit geval."
         },
         {
             "English": "Ah, cicada shells in the summer. They're not really all that useful, but collecting them does help create summer memories that will last a lifetime.",
@@ -20866,7 +21022,7 @@
             "Spanish": "0 items",
             "Spanish (US)": "0 items",
             "Italian": "0 items",
-            "Dutch": "0 items",
+            "Dutch": "64 items",
             "Chinese": "0 items",
             "Chinese (Traditional)": "0 items",
             "Japanese": "0 items",
@@ -20876,310 +21032,356 @@
         {
             "English": "Acorn card",
             "English (Europe)": "Acorn card",
-            "German": "Eichelkarte"
+            "German": "Eichelkarte",
+            "Dutch": "Eikel kaart"
         },
         {
             "English": "Airmail card",
             "English (Europe)": "Airmail card",
             "French": "Carte par avion",
             "French (US)": "Carte par avion",
-            "German": "Luftpostkarte"
+            "German": "Luftpostkarte",
+            "Dutch": "Luchtpost kaart"
         },
         {
             "English": "Baby-goods card",
             "English (Europe)": "Baby-goods card",
             "French": "Carte bébé",
             "French (US)": "Carte bébé",
-            "German": "Baby-Karte"
+            "German": "Baby-Karte",
+            "Dutch": "Baby kaart"
         },
         {
             "English": "Balloons card",
             "English (Europe)": "Balloons card",
             "French": "Carte ballons",
             "French (US)": "Carte ballons",
-            "German": "Ballonkarte"
+            "German": "Ballonkarte",
+            "Dutch": "Ballonnen kaart"
         },
         {
             "English": "Bandage card",
             "English (Europe)": "Bandage card",
             "French": "Carte pansements",
             "French (US)": "Carte pansements",
-            "German": "Pflasterkarte"
+            "German": "Pflasterkarte",
+            "Dutch": "Pleister kaart"
         },
         {
             "English": "Beach card",
             "English (Europe)": "Beach card",
             "French": "Carte plage",
             "French (US)": "Carte plage",
-            "German": "Strandkarte"
+            "German": "Strandkarte",
+            "Dutch": "Strand kaart"
         },
         {
             "English": "Birthday-cake card",
             "English (Europe)": "Birthday-cake card",
             "French": "Carte d'anniversaire",
             "French (US)": "Carte d'anniversaire",
-            "German": "Geburtstagstorten-Karte"
+            "German": "Geburtstagstorten-Karte",
+            "Dutch": "Verjaardagstaart kaart"
         },
         {
             "English": "Blue-sky card",
             "English (Europe)": "Blue-sky card",
             "French": "Carte ciel bleu",
             "French (US)": "Carte ciel bleu",
-            "German": "Himmelblau-Karte"
+            "German": "Himmelblau-Karte",
+            "Dutch": "Blauwelucht kaart"
         },
         {
             "English": "Bunny Day card",
             "English (Europe)": "Bunny Day card",
             "French": "Carte fête des oeufs",
             "French (US)": "Carte fête des oeufs",
-            "German": "Häschentag-Karte"
+            "German": "Häschentag-Karte",
+            "Dutch": "Paas kaart"
         },
         {
             "English": "Camo card",
             "English (Europe)": "Camo card",
             "French": "Carte camouflage",
             "French (US)": "Carte camouflage",
-            "German": "Dschungeltarn-Karte"
+            "German": "Dschungeltarn-Karte",
+            "Dutch": "camouflage kaart"
         },
         {
             "English": "Card from Bank of Nook",
             "English (Europe)": "Card from Bank of Nook",
             "French": "Carte de la Banque Nook",
             "French (US)": "Carte de la Banque Nook",
-            "German": "Karte von der NookDirekt Bank"
+            "German": "Karte von der NookDirekt Bank",
+            "Dutch": "Kaart van Nook bank"
         },
         {
             "English": "Card from C.J.",
             "English (Europe)": "Card from C.J.",
             "French": "Carte de Pollux",
             "French (US)": "Carte de Pollux",
-            "German": "Karte von Lomeus"
+            "German": "Karte von Lomeus",
+            "Dutch": "Kaart van C.J."
         },
         {
             "English": "Card from Flick",
             "English (Europe)": "Card from Flick",
             "French": "Carte de Djason",
             "French (US)": "Carte de Djason",
-            "German": "Karte von Carlson"
+            "German": "Karte von Carlson",
+            "Dutch": "Kaart van Flick"
         },
         {
             "English": "Card from Happy Home Academy",
             "English (Europe)": "Card from Happy Home Academy",
             "French": "Carte de l'Académie des Joyeux Décorateurs",
             "French (US)": "Carte de l'Académie des Joyeux Décorateurs",
-            "German": "Karte von der Akademie des schönen Hauses"
+            "German": "Karte von der Akademie des schönen Hauses",
+            "Dutch": "Kaart van de  AWW."
         },
         {
             "English": "Card from Jolly Redd's",
             "English (Europe)": "Card from Jolly Redd's",
             "French": "Carte de Rounard",
             "French (US)": "Carte de Rounard",
-            "German": "Karte von Reiners Schatzkutter"
+            "German": "Karte von Reiners Schatzkutter",
+            "Dutch": "Kaart van Redd"
         },
         {
             "English": "Card from K.K.",
             "English (Europe)": "Card from K.K.",
             "French": "Carte de Kéké",
             "French (US)": "Carte de Kéké",
-            "German": "Karte von K.K."
+            "German": "Karte von K.K.",
+            "Dutch": "Kaart van K.K."
         },
         {
             "English": "Card from Nintendo",
             "English (Europe)": "Card from Nintendo",
             "French": "Carte de Nintendo",
             "French (US)": "Carte de Nintendo",
-            "German": "Karte von Nintendo"
+            "German": "Karte von Nintendo",
+            "Dutch": "Kaart van Nintendo"
         },
         {
             "English": "Card from Nook Mileage Program",
             "English (Europe)": "Card from Nook Mileage Program",
             "French": "Carte du Programme Miles Nook",
             "French (US)": "Carte du Programme Miles Nook",
-            "German": "Karte von Nooks Milenprogramm "
+            "German": "Karte von Nooks Milenprogramm ",
+            "Dutch": "Kaart van nook miles spaarprorgama"
         },
         {
             "English": "Card from Your pals at Dodo Airlines",
             "English (Europe)": "Card from Your pals at Dodo Airlines",
             "French": "Carte du personnel de Dodo Airlines",
             "French (US)": "Carte du personnel de Dodo Airlines",
-            "German": "Karte von der Dodo Airlines "
+            "German": "Karte von der Dodo Airlines ",
+            "Dutch": "Kaart van je vrienden van DAL"
         },
         {
             "English": "Carpet-of-leaves card",
             "English (Europe)": "Carpet-of-leaves card",
-            "German": "Laupteppich-Karte"
+            "German": "Laupteppich-Karte",
+            "Dutch": "Herfst kaart"
         },
         {
             "English": "Cherry-blossoms card",
             "English (Europe)": "Cherry-blossoms card",
             "French": "Carte pétales de cerisier",
             "French (US)": "Carte pétales de cerisier",
-            "German": "Kirschblüten-Karte"
+            "German": "Kirschblüten-Karte",
+            "Dutch": "Kersenbloesem kaart"
         },
         {
             "English": "Chocolate card",
             "English (Europe)": "Chocolate card",
-            "German": "Pralinenkarte"
+            "German": "Pralinenkarte",
+            "Dutch": "Bon-bons kaart"
         },
         {
             "English": "Chocolate-heart card",
             "English (Europe)": "Chocolate-heart card",
-            "German": "Schokoherz-Karte"
+            "German": "Schokoherz-Karte",
+            "Dutch": "Chocolade hart kaart"
         },
         {
             "English": "Common card",
             "English (Europe)": "Common card",
             "French": "Carte ordinaire",
             "French (US)": "Carte ordinaire",
-            "German": "Normalkarte"
+            "German": "Normalkarte",
+            "Dutch": "Eenvoudige kaart"
         },
         {
             "English": "Cool-cool card",
             "English (Europe)": "Cool-cool card",
             "French": "Carte moderne",
             "French (US)": "Carte moderne",
-            "German": "Cool-Karte"
+            "German": "Cool-Karte",
+            "Dutch": "Geblokte kaart"
         },
         {
             "English": "Dandelion card",
             "English (Europe)": "Dandelion card",
             "French": "Carte pissenlit",
             "French (US)": "Carte pissenlit",
-            "German": "Löwenzahn-Karte"
+            "German": "Löwenzahn-Karte",
+            "Dutch": "Paardenbloem kaart"
         },
         {
             "English": "Decorative card",
             "English (Europe)": "Decorative card",
             "French": "Carte ornementale",
             "French (US)": "Carte ornementale",
-            "German": "Dekokarte"
+            "German": "Dekokarte",
+            "Dutch": "Klassieke kaart"
         },
         {
             "English": "Elegant-roses card",
             "English (Europe)": "Elegant-roses card",
             "French": "Carte roses délicates",
             "French (US)": "Carte roses délicates",
-            "German": "Edelrosen-Karte"
+            "German": "Edelrosen-Karte",
+            "Dutch": "Elegante rozen kaart"
         },
         {
             "English": "Fanciful card",
             "English (Europe)": "Fanciful card",
             "French": "Carte fantaisie",
             "French (US)": "Carte fantaisie",
-            "German": "Chic-Karte"
+            "German": "Chic-Karte",
+            "Dutch": "Sierlijke kaart"
         },
         {
             "English": "Fantasy-stars card",
             "English (Europe)": "Fantasy-stars card",
             "French": "Carte étoiles fantaisie",
             "French (US)": "Carte étoiles fantaisie",
-            "German": "Himmel-Pop-Karte"
+            "German": "Himmel-Pop-Karte",
+            "Dutch": "Fantasie sterren kaart"
         },
         {
             "English": "Father's Day card",
             "English (Europe)": "Father's Day card",
-            "German": "Vatertags-Karte"
+            "German": "Vatertags-Karte",
+            "Dutch": "Vaderdags kaart"
         },
         {
             "English": "Festive-tree card",
             "English (Europe)": "Festive-tree card",
             "French": "Carte grand sapin",
             "French (US)": "Carte grand sapin",
-            "German": "Tannenbaum-Karte"
+            "German": "Tannenbaum-Karte",
+            "Dutch": "Feestboom kaart"
         },
         {
             "English": "Flower-bouquet card",
             "English (Europe)": "Flower-bouquet card",
             "French": "Carte bouquet de fleurs",
             "French (US)": "Carte bouquet de fleurs",
-            "German": "Blumenstraußkarte"
+            "German": "Blumenstraußkarte",
+            "Dutch": "Bloemstuk kaart"
         },
         {
             "English": "Fluffy-clouds card",
             "English (Europe)": "Fluffy-clouds card",
             "French": "Carte nuages",
             "French (US)": "Carte nuages",
-            "German": "Flauschwolken-Karte"
+            "German": "Flauschwolken-Karte",
+            "Dutch": "Wolken kaart"
         },
         {
             "English": "Full-bloom card",
             "English (Europe)": "Full-bloom card",
             "French": "Carte floraison",
             "French (US)": "Carte floraison",
-            "German": "Frühjahrsblüten-Karte"
+            "German": "Frühjahrsblüten-Karte",
+            "Dutch": "Bloeiende bloemen kaart"
         },
         {
             "English": "Gears card",
             "English (Europe)": "Gears card",
             "French": "Carte rouages",
             "French (US)": "Carte rouages",
-            "German": "Zahnradkarte"
+            "German": "Zahnradkarte",
+            "Dutch": "Tandwielen kaart"
         },
         {
             "English": "Gem card",
             "English (Europe)": "Gem card",
             "French": "Carte gemmes",
             "French (US)": "Carte gemmes",
-            "German": "Juwelenkarte"
+            "German": "Juwelenkarte",
+            "Dutch": "Edelstenen kaart"
         },
         {
             "English": "Gift card",
             "English (Europe)": "Gift card",
             "French": "Carte cadeau",
             "French (US)": "Carte cadeau",
-            "German": "Gechenkkarte"
+            "German": "Gechenkkarte",
+            "Dutch": "Cadeau kaart ( "
         },
         {
             "English": "Goldfish card",
             "English (Europe)": "Goldfish card",
             "French": "Carte poissons rouges",
             "French (US)": "Carte poissons rouges",
-            "German": "Goldfischkarte"
+            "German": "Goldfischkarte",
+            "Dutch": "Goudvissen kaart"
         },
         {
             "English": "Graduation card",
             "English (Europe)": "Graduation card",
             "French": "Carte remise de diplôme",
             "French (US)": "Carte remise de diplôme",
-            "German": "Uni-Karte"
+            "German": "Uni-Karte",
+            "Dutch": "Afstudeer kaart"
         },
         {
             "English": "Graffiti card",
             "English (Europe)": "Graffiti card",
             "French": "Carte graffitis",
             "French (US)": "Carte graffitis",
-            "German": "Graffiti-Karte"
+            "German": "Graffiti-Karte",
+            "Dutch": "Gaffiti kaart"
         },
         {
             "English": "Halloween card",
             "English (Europe)": "Halloween card",
-            "German": "Halloween-Karte"
+            "German": "Halloween-Karte",
+            "Dutch": "Halloween kaart"
         },
         {
             "English": "Happy-clovers card",
             "English (Europe)": "Happy-clovers card",
             "French": "Carte trèfles porte-bonheur",
             "French (US)": "Carte trèfles porte-bonheur",
-            "German": "Glücksklee-Karte"
+            "German": "Glücksklee-Karte",
+            "Dutch": "Klavertjesvier kaart"
         },
         {
             "English": "Turkey Day card",
             "English (Europe)": "Turkey Day card",
-            "German": "Schlemmerfest-Karte"
+            "German": "Schlemmerfest-Karte",
+            "Dutch": "Smakenfestijn kaart"
         },
         {
             "English": "Hibiscus card",
             "English (Europe)": "Hibiscus card",
             "French": "Carte hibiscus",
             "French (US)": "Carte hibiscus",
-            "German": "Hibiskus-Karte"
+            "German": "Hibiskus-Karte",
+            "Dutch": "Hibiscus kaart"
         },
         {
             "English": "Holiday card",
             "English (Europe)": "Holiday card",
             "French": "Carte festive",
             "French (US)": "Carte festive",
-            "German": "Festtagskarte"
+            "German": "Festtagskarte",
+            "Dutch": "Feestdagen kaart"
         },
         {
             "English": "Lovely hearts card",
@@ -21191,83 +21393,96 @@
         {
             "English": "Mother's Day card",
             "English (Europe)": "Mother's Day card",
-            "German": "Muttertags-Karte"
+            "German": "Muttertags-Karte",
+            "Dutch": "Moededag kaart"
         },
         {
             "English": "Mushroom card",
             "English (Europe)": "Mushroom card",
-            "German": "Pilzkarte"
+            "German": "Pilzkarte",
+            "Dutch": "Paddenstoelen kaart"
         },
         {
             "English": "Pumpkin card",
             "English (Europe)": "Pumpkin card",
-            "German": "Kürbiskarte"
+            "German": "Kürbiskarte",
+            "Dutch": "Pompoen kaart"
         },
         {
             "English": "Red-dragonflies card",
             "English (Europe)": "Red-dragonflies card",
             "French": "Carte libellules rouges",
             "French (US)": "Carte libellules rouges",
-            "German": "Rotlibellen-Karte"
+            "German": "Rotlibellen-Karte",
+            "Dutch": "Rode libellen kaart"
         },
         {
             "English": "Ribbon card",
             "English (Europe)": "Ribbon card",
             "French": "Carte ruban",
             "French (US)": "Carte ruban",
-            "German": "Schleifchenkarte"
+            "German": "Schleifchenkarte",
+            "Dutch": "Cadeaulint kaart"
         },
         {
             "English": "Shapes card",
             "English (Europe)": "Shapes card",
             "French": "Carte géométrie",
             "French (US)": "Carte géométrie",
-            "German": "Formenkarte"
+            "German": "Formenkarte",
+            "Dutch": "Pastel kaart"
         },
         {
             "English": "Shooting-stars card",
             "English (Europe)": "Shooting-stars card",
             "French": "Carte étoiles filantes",
             "French (US)": "Carte étoiles filantes",
-            "German": "Sternschnuppenkarte"
+            "German": "Sternschnuppenkarte",
+            "Dutch": "Vallende sterren kaart"
         },
         {
             "English": "Snowflake card",
             "English (Europe)": "Snowflake card",
-            "German": "Schneeflocken-Karte"
+            "German": "Schneeflocken-Karte",
+            "Dutch": "Sneeuvlokken kaart"
         },
         {
             "English": "Snowperson card",
             "English (Europe)": "Snowperson card",
-            "German": "Schneemann-Karte"
+            "German": "Schneemann-Karte",
+            "Dutch": "Sneeuwknullen kaart"
         },
         {
             "English": "So-many-hearts card",
             "English (Europe)": "So-many-hearts card",
             "French": "Carte coeur vibrant",
             "French (US)": "Carte coeur vibrant",
-            "German": "Herzchenkarte"
+            "German": "Herzchenkarte",
+            "Dutch": "Harten kaart"
         },
         {
             "English": "Star card",
             "English (Europe)": "Star card",
             "French": "Carte étoile",
             "French (US)": "Carte étoile",
-            "German": "Sternenkarte"
+            "German": "Sternenkarte",
+            "Dutch": "Sterren kaart"
         },
         {
             "English": "Stationery-goods card",
             "English (Europe)": "Stationery-goods card",
             "French": "Carte papeterie",
             "French (US)": "Carte papeterie",
-            "German": "Schreibwaren-Karte"
+            "German": "Schreibwaren-Karte",
+            "Dutch": "Potlood en gum kaart"
         },
         {
             "English": "Torn card",
             "English (Europe)": "Torn card",
             "French": "Carte page arrachée",
             "French (US)": "Carte page arrachée",
-            "German": "Ringheft-Karte"
+            "German": "Ringheft-Karte",
+            "Dutch": "Notitieblok kaart"
         },
         {
             "English": "Town-view card",
@@ -21279,21 +21494,24 @@
             "English (Europe)": "Velvety card",
             "French": "Carte veloutée",
             "French (US)": "Carte veloutée",
-            "German": "Samtkarte"
+            "German": "Samtkarte",
+            "Dutch": "Flueelachtige kaart"
         },
         {
             "English": "Warm-sweater card",
             "English (Europe)": "Warm-sweater card",
             "French": "Carte pull d'hiver",
             "French (US)": "Carte pull d'hiver",
-            "German": "Pullover-Karte"
+            "German": "Pullover-Karte",
+            "Dutch": "Warme trui kaart"
         },
         {
             "English": "Wedding card",
             "English (Europe)": "Wedding card",
             "French": "Carte de mariage",
             "French (US)": "Carte de mariage",
-            "German": "Hochzeitskarte"
+            "German": "Hochzeitskarte",
+            "Dutch": "Trouw kaart"
         },
         {
             "English": "Winter-camellia card",
@@ -21305,14 +21523,16 @@
             "English (Europe)": "Zen card",
             "French": "Carte zen",
             "French (US)": "Carte zen",
-            "German": "Japan-Karte"
+            "German": "Japan-Karte",
+            "Dutch": "Zenkaart"
         },
         {
             "English": "Card from",
             "English (Europe)": "Card from",
             "French": "Carte de",
             "French (US)": "Carte de",
-            "German": "Karte von"
+            "German": "Karte von",
+            "Dutch": "kaart ontvangen van"
         }
     ],
     "Museum Descriptions": [

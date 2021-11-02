@@ -2,7 +2,7 @@ import React, {Component, useState, useRef, useEffect} from 'react';
 import {TouchableOpacity, View, Animated,StyleSheet,RefreshControl} from 'react-native';
 import Header, {HeaderLoading, HeaderActive} from './Header';
 import ListItem from './ListItem';
-import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist} from "../LoadJsonData"
+import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters} from "../LoadJsonData"
 import {Dimensions } from "react-native";
 import {Variations,Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from './BottomSheetComponents';
 import colors from "../Colors.js"
@@ -293,6 +293,26 @@ function ListPage(props){
               }
             } else if(searchActual.includes("Not Collected")){
               searchCollected = false;
+              //Not collected: remove variations (use only base item)
+              //Don't need to check data type because each type will be looped through and then move on to another data set type
+              if(!global.collectionList.includes(item["checkListKey"]) && i-1 >= 0 && dataLoaded[i-1]["Name"]!==item["Name"]){
+                searchCollected = true;
+                if(searchActual.length===1){
+                  filterFound = true;
+                  break;
+                }
+              } else if (i-1<0) {
+                if(!global.collectionList.includes(item["checkListKey"])){
+                  searchCollected = true;
+                  if(searchActual.length===1){
+                    filterFound = true;
+                    break;
+                  }
+                }
+              }
+            } else if(searchActual.includes("Not Collected (Keep variations)")){
+              searchCollected = false;
+              //Not collected: remove variations (use only base item)
               if(!global.collectionList.includes(item["checkListKey"])){
                 searchCollected = true;
                 if(searchActual.length===1){
@@ -301,7 +321,7 @@ function ListPage(props){
                 }
               }
             }
-            if(searchActual.includes("Collected")&&searchActual.includes("Not Collected")){
+            if(searchActual.includes("Collected")&&(searchActual.includes("Not Collected")||searchActual.includes("Not Collected (Keep variations)"))){
               searchCollected=true;
             }
             if (searchActual.includes("Partially collected variations")){
@@ -457,6 +477,21 @@ function ListPage(props){
               if(item["Name"]===previousVariation && !item["checkListKey"].includes("recipesCheckList")){
                 previousVariation = item["Name"];
               } else {
+                //the final filter to check
+
+                if(props.showCraftableFromMaterial){
+                  let materialIndex = ""
+                  for(let i=1; i<10; i++){
+                    materialIndex = "Material " + i.toString()
+                    if(item[materialIndex]!==undefined && item[materialIndex]===props.showCraftableFromMaterial["Name"]){
+                      item.dataSet = j;
+                      item.index = i;
+                      dataUpdated = [...dataUpdated, item];
+                      break;
+                    } 
+                  }
+                  break;
+                }
                 if(props.wishlistItems || searchActual.includes("Wishlist")){
                   if(global.collectionList.includes("wishlist"+item["checkListKey"])){
                     item.dataSet = j;

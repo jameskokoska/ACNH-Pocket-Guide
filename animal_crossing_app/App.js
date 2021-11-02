@@ -51,6 +51,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { navigationRef } from './RootNavigation';
 import * as RootNavigation from './RootNavigation.js';
+import CraftableItemsPage from './pages/CraftableItemsPage';
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -406,6 +407,8 @@ class App extends Component {
         currentPageView = <OrdinancePage/>
       } else if (this.state.currentPage===33){
         currentPageView = <GyroidsPage/>
+      } else if (this.state.currentPage===34){
+        currentPageView = <CraftableItemsPage material={this.state.propsPassed}/>
       } else {
         currentPageView = <Text>Default</Text>
       }
@@ -420,7 +423,7 @@ class App extends Component {
       const NavigatorVillagerPresentsPage = ({route, navigation})=>{return <VillagerPresentsPage setPage={this.setPage} villager={route.params.propsPassed}/>}
       const NavigatorCustomFiltersPage = ({route, navigation})=>{return <CustomFiltersPage currentFiltersSearchFor={route.params.propsPassed} titlePassed={route.params.propsPassed} setPage={this.setPage}/>}
       const NavigatorVillagerFurniture = ({route, navigation})=>{return <VillagerFurniture villager={route.params.propsPassed}/>}
-
+      const NavigatorCraftableItemsPage = ({route, navigation})=>{return <CraftableItemsPage material={route.params.propsPassed}/>}
       return (
         <View style={{flex:1,backgroundColor: "#000000"}}>
         <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage} sideMenuSections={this.sideMenuSections} sideMenuSectionsDisabled={this.sideMenuSectionsDisabled}>
@@ -430,6 +433,7 @@ class App extends Component {
             <Stack.Screen name="20" component={NavigatorVillagerPresentsPage}/>
             <Stack.Screen name="22" component={NavigatorVillagerFurniture}/>
             <Stack.Screen name="23" component={NavigatorCustomFiltersPage}/>
+            <Stack.Screen name="34" component={NavigatorCraftableItemsPage}/>
           </Stack.Navigator>
           </NavigationContainer>
         <PopupInfos/>

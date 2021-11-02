@@ -39,6 +39,7 @@ export class RecipesRouteClass extends React.PureComponent {
         smallerHeader={this.props.smallerHeader===undefined?false:this.props.smallerHeader}
         filterSearchable={this.props.filterSearchable===undefined?true:this.props.filterSearchable}
         titleColor={this.props.titleColor===undefined?colors.textWhite[0]:this.props.titleColor}
+        showCraftableFromMaterial={this.props.showCraftableFromMaterial===undefined?undefined:this.props.showCraftableFromMaterial}
         imageProperty={["Image"]}
         textProperty={["NameLanguage"]}
         searchKey={[["NameLanguage"]]}

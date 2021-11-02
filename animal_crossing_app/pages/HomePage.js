@@ -39,18 +39,14 @@ class HomePage extends Component {
     if(eventSections.hasOwnProperty("App notifications")){
       getSettingsString("settingsNotifications")==="true" ? eventSections["App notifications"]=true : eventSections["App notifications"]=false;
     }
-    this.state = {sections:props.sections, eventSections:eventSections, editOrder:false, sectionsOrder:this.props.sectionsOrder}
-    this.refreshEvents();
-  }
-  refreshEvents = () => {
-    cancelAllPushNotifications();
-    this.todayEvents = getEventsDay(getCurrentDateObject(), this.state.eventSections,this.state.eventSections["Show All Events Happening Today"]);
-    this.tomorrowEvents = getEventsDay(addDays(getCurrentDateObject(), 1), this.state.eventSections);
-    this.thisWeekEvents = [];
-    for(var i=2; i<7; i++){
-      this.thisWeekEvents = this.thisWeekEvents.concat(getEventsDay(addDays(getCurrentDateObject(), i), this.state.eventSections));
+    this.state = {
+      eventSections:props.eventSections,
+      sectionsOrder:this.props.sectionsOrder, 
+      sections:props.sections, 
+      editOrder:false,
     }
   }
+  
   openVillagerPopup = (item) => {
     this.villagerPopupPopup?.setPopupVisible(true, item);
   }
@@ -98,23 +94,11 @@ class HomePage extends Component {
   };
 
   render(){
-    var todayTitle=<View/>
-    if(this.todayEvents.length>0){
-      todayTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>Today</TextFont>
-    }
-    var tomorrowTitle=<View/>
-    if(this.tomorrowEvents.length>0){
-      tomorrowTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>Tomorrow</TextFont>
-    }
-    var thisWeekTitle=<View/>
-    if(this.thisWeekEvents.length>0){
-      thisWeekTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>This Week</TextFont>
-    }
 
     var landscape = <LottieView autoPlay loop style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/home.json')}/>
     if(getCurrentDateObject().getMonth()===11||getCurrentDateObject().getMonth()===0){
       landscape = <LottieView autoPlay loop style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeSnow.json')}/>
-    } else if (this.todayEvents[0]!==undefined && (this.todayEvents[0].name==="Festivale" || this.todayEvents[0].name.includes("Firework")) || this.todayEvents[1]!==undefined && (this.todayEvents[1].name==="Festivale" || this.todayEvents[1].name.includes("Firework"))){
+    } else if (getCurrentDateObject().getMonth()===7 && getCurrentDateObject().getDay()===0){
       landscape = <LottieView autoPlay loop style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeCelebration.json')}/>
     }
     const sections = this.state.sections;
@@ -133,7 +117,7 @@ class HomePage extends Component {
         <ConfigureHomePages 
           setPage={(page)=>this.props.setPage(page)} 
           header={"Select Events"} 
-          refreshEvents={()=>{this.refreshEvents()}} 
+          refreshEvents={()=>{this.eventSection?.refreshEvents()}} 
           setPages={(checked,name)=>this.setEventPages(checked,name)} 
           sections={this.state.eventSections}
         />
@@ -143,15 +127,15 @@ class HomePage extends Component {
         <Clock swapDate={doWeSwapDate()}/>
         <View style={{height:125}}/>
         <View style={{height:38}}>
-        <View style={{padding:10, paddingVertical:12, position:"absolute",right:0, top: -15}}>
-          <View style={{flexDirection:"row"}}>
-            <TouchableOpacity style={{padding:5, paddingVertical:12}} 
-              onPress={()=>{this.setState({editOrder:!this.state.editOrder}); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}
-            }>
-              <TextFont bold={false} style={{marginRight:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"right"}}>{!this.state.editOrder?"Edit Sections":"Disable Edit Sections"}</TextFont>
-            </TouchableOpacity>
+          <View style={{padding:10, paddingVertical:12, position:"absolute",right:0, top: -15}}>
+            <View style={{flexDirection:"row"}}>
+              <TouchableOpacity style={{padding:5, paddingVertical:12}} 
+                onPress={()=>{this.setState({editOrder:!this.state.editOrder}); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}
+              }>
+                <TextFont bold={false} style={{marginRight:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"right"}}>{!this.state.editOrder?"Edit Sections":"Disable Edit Sections"}</TextFont>
+              </TouchableOpacity>
+            </View>
           </View>
-        </View>
         </View>
 
         {this.state.sectionsOrder.map( (section, index)=>{
@@ -167,54 +151,7 @@ class HomePage extends Component {
               </HomeContentArea>
             }
             return sections["Events"]===true?<HomeContentArea index={index} key={"Events"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.eventsColor[global.darkMode]} title="Events" titleColor={colors.eventsColor[global.darkModeReverse]}>
-              <TouchableOpacity style={{padding:10, paddingVertical:12, position:"absolute",right:0}} 
-                onPress={()=>{this.popupEventsSettings.setPopupVisible(true); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}
-              }>
-                <TextFont bold={false} style={{marginRight:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"right"}}>{"Edit Events"}</TextFont>
-              </TouchableOpacity>
-              {todayTitle}
-              {this.todayEvents.map( (event, index)=>
-                <EventContainer 
-                  openVillagerPopup={this.openVillagerPopup}
-                  setPage={this.props.setPage}
-                  key={event.name+index} 
-                  backgroundColor={colors.eventBackground[global.darkMode]}
-                  textColor={colors.textBlack[global.darkMode]}
-                  event={event}
-                  eventSections={this.state.eventSections}
-                />
-              )}
-              {tomorrowTitle}
-              {this.tomorrowEvents.map( (event, index)=>
-                <EventContainer 
-                  openVillagerPopup={this.openVillagerPopup}
-                  setPage={this.props.setPage}
-                  key={event.name+index} 
-                  backgroundColor={colors.eventBackground[global.darkMode]}
-                  textColor={colors.textBlack[global.darkMode]}
-                  event={event}
-                  eventSections={this.state.eventSections}
-                />
-              )}
-              {thisWeekTitle}
-              {this.thisWeekEvents.map( (event, index)=>
-                <EventContainer 
-                  openVillagerPopup={this.openVillagerPopup}
-                  setPage={this.props.setPage}
-                  key={event.name+index} 
-                  backgroundColor={colors.eventBackground[global.darkMode]}
-                  textColor={colors.textBlack[global.darkMode]}
-                  event={event}
-                  eventSections={this.state.eventSections}
-                />
-              )}
-              <View style={{height: 2}}/>
-              <TouchableOpacity style={{marginHorizontal: 20, marginVertical:10, backgroundColor:colors.eventBackground[global.darkMode], padding: 10, borderRadius: 10}} 
-                onPress={()=>{this.props.setPage(16); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}
-              >
-                <TextFont bold={true} style={{color: colors.fishText[global.darkMode], fontSize: 18, textAlign:"center"}}>{"View All"}</TextFont>
-              </TouchableOpacity>
-              <View style={{height: 20}}/>
+              <EventSection openVillagerPopup={this.openVillagerPopup} ref={(eventSection) => this.eventSection = eventSection} setPage={this.props.setPage} eventSections={this.state.eventSections} setPopupVisible={(visible)=>{this.popupEventsSettings.setPopupVisible(visible)}}/>
             </HomeContentArea>:<View/>
           }else if(section["name"]==="To-Do"){
             if(this.state.editOrder){
@@ -336,6 +273,100 @@ class HomePage extends Component {
   }
 }
 export default HomePage;
+
+class EventSection extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      eventSections:props.eventSections, 
+      todayEvents: [],
+      tomorrowEvents: [],
+      thisWeekEvents: [],
+      loaded:false
+    }
+  }
+  
+  componentDidMount(){
+    setTimeout(async () => {
+      this.refreshEvents();
+    },10)
+  }
+
+  refreshEvents = () => {
+    cancelAllPushNotifications();
+    let todayEvents = getEventsDay(getCurrentDateObject(), this.state.eventSections,this.state.eventSections["Show All Events Happening Today"]);
+    let tomorrowEvents = getEventsDay(addDays(getCurrentDateObject(), 1), this.state.eventSections);
+    let thisWeekEvents = [];
+    for(var i=2; i<7; i++){
+      thisWeekEvents = thisWeekEvents.concat(getEventsDay(addDays(getCurrentDateObject(), i), this.state.eventSections));
+    }
+    this.setState({todayEvents: todayEvents, tomorrowEvents: tomorrowEvents, thisWeekEvents: thisWeekEvents, loaded:true})
+  }
+  render(){
+    var todayTitle=<View/>
+    if(this.state.todayEvents.length>0){
+      todayTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>Today</TextFont>
+    }
+    var tomorrowTitle=<View/>
+    if(this.state.tomorrowEvents.length>0){
+      tomorrowTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>Tomorrow</TextFont>
+    }
+    var thisWeekTitle=<View/>
+    if(this.state.thisWeekEvents.length>0){
+      thisWeekTitle=<TextFont bold={true} style={[styles.dayHeader,{color:colors.textBlack[global.darkMode]}]}>This Week</TextFont>
+    }
+    return <>
+      <TouchableOpacity style={{padding:10, paddingVertical:12, position:"absolute",right:0}} 
+        onPress={()=>{this.props.setPopupVisible(true); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}
+      }>
+        <TextFont bold={false} style={{marginRight:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"right"}}>{"Edit Events"}</TextFont>
+      </TouchableOpacity>
+      {todayTitle}
+      {this.state.todayEvents.map( (event, index)=>
+        <EventContainer 
+          openVillagerPopup={this.props.openVillagerPopup}
+          setPage={this.props.setPage}
+          key={event.name+index} 
+          backgroundColor={colors.eventBackground[global.darkMode]}
+          textColor={colors.textBlack[global.darkMode]}
+          event={event}
+          eventSections={this.state.eventSections}
+        />
+      )}
+      {tomorrowTitle}
+      {this.state.tomorrowEvents.map( (event, index)=>
+        <EventContainer 
+          openVillagerPopup={this.props.openVillagerPopup}
+          setPage={this.props.setPage}
+          key={event.name+index} 
+          backgroundColor={colors.eventBackground[global.darkMode]}
+          textColor={colors.textBlack[global.darkMode]}
+          event={event}
+          eventSections={this.state.eventSections}
+        />
+      )}
+      {thisWeekTitle}
+      {this.state.thisWeekEvents.map( (event, index)=>
+        <EventContainer 
+          openVillagerPopup={this.props.openVillagerPopup}
+          setPage={this.props.setPage}
+          key={event.name+index} 
+          backgroundColor={colors.eventBackground[global.darkMode]}
+          textColor={colors.textBlack[global.darkMode]}
+          event={event}
+          eventSections={this.state.eventSections}
+        />
+      )}
+      <View style={{height: 2}}/>
+      {this.state.loaded?<TouchableOpacity style={{marginHorizontal: 20, marginVertical:10, backgroundColor:colors.eventBackground[global.darkMode], padding: 10, borderRadius: 10}} 
+        onPress={()=>{this.props.setPage(16); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}
+      >
+        <TextFont bold={true} style={{color: colors.fishText[global.darkMode], fontSize: 18, textAlign:"center"}}>{"View All"}</TextFont>
+      </TouchableOpacity>:<View/>}
+      <View style={{height: 20}}/>
+    </>
+  }
+}
 
 export class Profile extends Component{
   render(){

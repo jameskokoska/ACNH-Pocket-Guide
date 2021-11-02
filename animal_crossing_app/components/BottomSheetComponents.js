@@ -72,15 +72,34 @@ export class RightCornerCheck extends Component {
     }
   }
   render() {
-    return <TouchableOpacity style={[styles.checkMark]} 
-              activeOpacity={0.6}
-              onPress={() => {  
-                checkOff(this.props.item.checkListKey, this.state.collected);
-                this.setCollected(this.state.collected===true ? false:true);
-                this.props.updateVariations(this.props.item.checkListKey,this.state.collected);
-            }}>
+    return <View style={{ zIndex:50, position: "absolute", top:-15, right:-15,}}>
+    <TouchableOpacity
+      activeOpacity={0.6}
+      onPress={() => {  
+        checkOff(this.props.item.checkListKey, this.state.collected);
+        this.setCollected(this.state.collected===true ? false:true);
+        this.props.updateVariations(this.props.item.checkListKey,this.state.collected);
+    }}>
       <Check checkType={this.props.checkType} fadeOut={false} play={this.state.collected} width={135} height={135}/>
     </TouchableOpacity>
+    {/* <View style={{flexDirection:"row", alignItems:"center", justifyContent:"center", marginTop: -19}}>
+      <TouchableOpacity style={{justifyContent:"center", alignItems:"center",padding:5, borderRadius:8, backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode]}} activeOpacity={0.6} 
+        onPress={()=>{
+          
+        }}
+      >
+        <Image style={{width:16,height:16,resizeMode:'contain',}} source={global.darkMode ? require("../assets/icons/leftArrowWhite.png") : require("../assets/icons/leftArrow.png")} />
+      </TouchableOpacity>
+      <TextFont bold={true} style={[{fontSize: 22, marginHorizontal: 5, color:colors.textBlack[global.darkMode],},this.props.style]}>50</TextFont>
+      <TouchableOpacity style={{justifyContent:"center", alignItems:"center",padding:5, borderRadius:8, backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode]}} activeOpacity={0.6} 
+        onPress={()=>{
+          
+        }}
+      >
+        <Image style={{width:16,height:16,resizeMode:'contain',}} source={global.darkMode ? require("../assets/icons/rightArrowWhite.png") : require("../assets/icons/rightArrow.png")}/>
+      </TouchableOpacity>
+    </View> */}
+  </View>
   }
 }
 
@@ -739,10 +758,4 @@ const styles = StyleSheet.create({
     top:-15,
     left:-15,
   },
-  checkMark:{
-    zIndex:50,
-    position: "absolute",
-    top:-15,
-    right:-15,
-  }
 })

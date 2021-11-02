@@ -4,6 +4,8 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -If you would like to help translate the app, feel free to get in touch via email!
 -
+-A checkmark will appear on the event if you collected all the items!
+-Events and Homepage load faster (background loading)
 -Fixed collection totals in profile section
 -Added Pier icon
 -Fixed search - can now search with one letter/character
@@ -12,6 +14,16 @@ export const changelog = `
 -Fixed hide spoilers for images in Songs page
 -Decreased left and right padding for lists
 -Added DIY Icon for DIYs (On everything page)
+-Added Pascal, star fragments, mushroom, pine cone, gyroid, and seashells to To-Do list icons
+-Added [View Craftable items] button to materials
+- View which items you can craft with that material!
+-Current day is highlighted in Calender View 
+-Enabled filters in Items of Event page
+-Removed Colored lists Setting, always on now
+-Removed Show empty check marks Setting, always on now
+-Removed Show donated to museum button Setting, always on now
+-Improved Not Collected filter
+-Added Not Collected (Keep variations) Filter (old behaviour)
 -
 -Remade Calendar and Events page
 -Significantly improved navigation between pages
@@ -26,6 +38,8 @@ export const changelog = `
 -Switched what the arrows do in Calendar + Events Calendar view page
 -Added Furniture, Floor & Walls, and Clothing to Collection Progress
 -Fixed FAB position on some pages
+-
+-Past changes:
 -
 -Fixed ToDo list add villagers information
 -Fixed back button not going to previous screen
@@ -52,8 +66,6 @@ export const changelog = `
 -Added cloud backups
 -Added auto backups (can be enabled in settings)
 -Auto backups will backup every time you open the app!
--
--Past changes:
 -
 -Changed the way the sidebar preferences are saved
 -Sorry this update reset your preferences!

@@ -75,7 +75,7 @@ export default class CalendarPage extends Component {
   }
   scrollToTop = () => {
     setTimeout(async () => {
-    this.flatList?.scrollToOffset({ animated: true, offset: 0 });
+      this.flatList?.scrollToOffset({ animated: true, offset: 0 });
     },200)
   }
   render() {
@@ -154,7 +154,8 @@ class CalendarView extends Component{
       currentDate:this.props.currentDate,
       eventColors:[],
       eventColorsHeavy:[],
-      importantEvents:[]
+      importantEvents:[],
+      todayDate:[]
     };
   }
 
@@ -176,11 +177,16 @@ class CalendarView extends Component{
       let eventColors = []
       let eventColorsHeavy = []
       let importantEvents = []
+      let todayDate = []
       for(let day = 0; day<amountOfDays+1; day++){
         let currentEventColors = []
         let currentEventColorsHeavy = []
         let eventsForDay = getEventsDay(addDays(firstDayInMonth(this.state.currentDate),day-1), this.props.eventSections, true)
         let currentImportantEvents = false
+        let currentTodayDate = false
+        if(currentMonth === this.props.currentDate.getMonth()+1 && currentYear === this.props.currentDate.getFullYear() && day === this.props.currentDate.getDate()){
+          currentTodayDate = true
+        }
         for(let event = 0; event<eventsForDay.length; event++){
           if(eventsForDay[event]["color"]===undefined){
             continue
@@ -196,8 +202,9 @@ class CalendarView extends Component{
         eventColors.push(currentEventColors)
         eventColorsHeavy.push(currentEventColorsHeavy)
         importantEvents.push(currentImportantEvents)
+        todayDate.push(currentTodayDate)
       }
-      this.setState({eventColors:eventColors, eventColorsHeavy:eventColorsHeavy, importantEvents: importantEvents})
+      this.setState({eventColors:eventColors, eventColorsHeavy:eventColorsHeavy, importantEvents: importantEvents, todayDate: todayDate})
     }, 10)
   }
 
@@ -222,7 +229,6 @@ class CalendarView extends Component{
             <View style={{alignItems:"center", marginTop: 100, flexDirection:"row",justifyContent:"space-between", width:windowWidth-marginHorizontal*2}}>
               <TouchableOpacity style={{justifyContent:"center", alignItems:"center",padding:10, borderRadius:8, backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode]}} activeOpacity={0.6} 
                 onPress={()=>{
-                  
                   this.setState({allowedToSwipe:false, currentDate:new Date(this.state.currentDate.setMonth(this.state.currentDate.getMonth()-1))})
                   this.startTimeout()
                 }}
@@ -259,7 +265,7 @@ class CalendarView extends Component{
                     </View>
                   }
                   return <TouchableOpacity key={item} activeOpacity={0.6} onPress={()=>{this.props.setCurrentDay(new Date(this.state.currentDate).setDate(item)); this.props.scrollToTop()}}>
-                    <View style={{borderRadius:10,borderWidth: 1.3, borderColor: this.state.importantEvents[item]?(this.state.eventColorsHeavy[item]!==undefined?this.state.eventColorsHeavy[item][0]:"transparent"):"transparent",backgroundColor:this.state.eventColors[item]!==undefined?this.state.eventColors[item][0]:"transparent", width:((windowWidth-marginHorizontal*2-70)/7), height: 50, alignItems:"center", justifyContent:"center", margin:5}}>
+                    <View style={{borderRadius:10,borderWidth: 1.3, borderColor: this.state.todayDate[item] ? colors.textBlack[global.darkMode] : (this.state.importantEvents[item]?(this.state.eventColorsHeavy[item]!==undefined?this.state.eventColorsHeavy[item][0]:"transparent"):"transparent"),backgroundColor:this.state.eventColors[item]!==undefined?this.state.eventColors[item][0]:"transparent", width:((windowWidth-marginHorizontal*2-70)/7), height: 50, alignItems:"center", justifyContent:"center", margin:5}}>
                       <SubHeader margin={false} style={{fontSize:15}}>{item.toString()}</SubHeader>
                       <View style={{flexDirection:"row", position:"absolute", bottom:7}}>
                         {this.state.eventColors[item]!==undefined?

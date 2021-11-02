@@ -30,7 +30,8 @@ class ListItem extends React.Component{
     this.setMuseum = this.setMuseum.bind(this);
     this.setVillager = this.setVillager.bind(this);
     this.setVillagerPhoto = this.setVillagerPhoto.bind(this);
-    this.showMuseumButton = getSettingsString("settingsShowMuseumButton")==="true"
+    // this.showMuseumButton = getSettingsString("settingsShowMuseumButton")==="true"
+    this.showMuseumButton = true
     this.showVillagerButton = true
     this.showVillagerPhotoButton = true
     this.state = {
@@ -121,7 +122,8 @@ class ListItem extends React.Component{
     var settingsUse24HourClock = getSettingsString("settingsUse24HourClock")==="true";
     var missingVariationsIndicator = this.state.variationsPercent>0?<View pointerEvents={"none"} style={{position:'absolute', right: -5, top: -5, backgroundColor:this.state.variationsPercent===1?colors.allVariations[global.darkMode]:colors.missingVariations[global.darkMode], height:27, width:27, borderRadius:20}}></View>:<View/>
 
-    var showBlankCheckMarks = getSettingsString("settingsShowBlankCheckMarks")==="true";
+    // var showBlankCheckMarks = getSettingsString("settingsShowBlankCheckMarks")==="true";
+    var showBlankCheckMarks = true;
 
     var disablePopup;
     if(this.props.disablePopup===undefined){
@@ -133,7 +135,8 @@ class ListItem extends React.Component{
     var boxColor = colors.white[global.darkMode];
     if(getSettingsString("settingsHighlightNotCraftableVariations") === "true" && this.props.item["Body Customize"] !==undefined && this.props.item["Body Customize"] ==="No" && this.props.item["Variation"] !==undefined && this.props.item["Variation"] !=="NA"){
       boxColor = colors.highlightNonCustomizableItems[global.darkMode];
-    } else if(this.props.boxColor===true && getSettingsString("settingsColorLists")==="true"){
+    // } else if(this.props.boxColor===true && getSettingsString("settingsColorLists")==="true"){
+    } else if(this.props.boxColor===true){
       var opacity = "0A"
       if(global.darkMode){
         opacity = "10"

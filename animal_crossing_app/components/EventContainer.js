@@ -1,14 +1,16 @@
-import React, {Component} from 'react';
+import React, {Component, useState, useRef, useEffect} from 'react';
 import {Image, Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text, TouchableNativeFeedback} from 'react-native';
 import TextFont from './TextFont'
 import {getPhoto} from './GetPhoto'
 import {getWeekDayShort, getMonthShort, getCurrentDateObject, addDays} from './DateFunctions';
-import {getEventName, attemptToTranslate, capitalize, getSettingsString, translateBirthday, attemptToTranslateItem} from "../LoadJsonData"
+import {getEventName, attemptToTranslate, capitalize, getSettingsString, translateBirthday, attemptToTranslateItem, allEventItemsCheck} from "../LoadJsonData"
 import FastImage from './FastImage';
 import {schedulePushNotification} from "../Notifications"
 import {specialEvents, isDateInRange} from "./DateFunctions"
 import colors from '../Colors'
 import * as RootNavigation from '../RootNavigation.js';
+import { useFocusEffect } from '@react-navigation/native';
+import Check from './Check';
 
 // <EventContainer 
 //  backgroundColor="black" 
@@ -20,44 +22,69 @@ import * as RootNavigation from '../RootNavigation.js';
 //  day="31"
 // />
 
-export class EventContainer extends Component {
-  render(){
+export function EventContainer(props){
+  const [allCollected, setAllCollected] = useState(false);
+  let onlyUpdateMe = false
+
+  useFocusEffect(
+    React.useCallback(() => {
+      if(onlyUpdateMe){
+        setTimeout(()=>{
+          let result = allEventItemsCheck(props.event.filter)
+          setAllCollected(result)
+        }, 10);
+        onlyUpdateMe = false
+      }
+    },)
+  );
+
+  useEffect(() => {
+    setTimeout(()=>{
+      let result = allEventItemsCheck(props.event.filter)
+      setAllCollected(result)
+    }, 10);
+    onlyUpdateMe = false
+  }, [])
+
     var image = <View/>
-    if(this.props.event.image.startsWith("http")){
-      image = <FastImage style={[styles.eventImage]} source={{uri:this.props.event.image}} cacheKey={this.props.event.image}/>
+    if(props.event.image.startsWith("http")){
+      image = <FastImage style={[styles.eventImage]} source={{uri:props.event.image}} cacheKey={props.event.image}/>
     } else {
-      image = <Image style={styles.eventImage} source={getPhoto(this.props.event.image.toLowerCase(), this.props.event.time.toLowerCase())}/>
+      image = <Image style={styles.eventImage} source={getPhoto(props.event.image.toLowerCase(), props.event.time.toLowerCase())}/>
     }
     return(
       <TouchableNativeFeedback 
-        background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+(this.props.event.filter===undefined?"00":"AF"), false)}
+        background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+(props.event.filter===undefined?"00":"AF"), false)}
         onPress={()=>{
-          if(this.props.event.filter!==undefined){
-            if(this.props.event.hasOwnProperty("type") && this.props.event.type==="villager"){
-              this.props.openVillagerPopup(this.props.event.filter)
+          if(props.event.filter!==undefined){
+            if(props.event.hasOwnProperty("type") && props.event.type==="villager"){
+              props.openVillagerPopup(props.event.filter)
             } else {
-              // this.props.setPage(23, true, this.props.event.filter)
-              RootNavigation.navigate('23', {propsPassed:this.props.event.filter});
+              // props.setPage(23, true, props.event.filter)
+              RootNavigation.navigate('23', {propsPassed:props.event.filter});
+              onlyUpdateMe = true
             }
           }
         }}
       >
-        <View style={[styles.eventContainer,{backgroundColor:this.props.event.color!==undefined?this.props.event.color:this.props.backgroundColor, marginHorizontal:this.props.showDate===false?10:20, paddingHorizontal:this.props.showDate===false?10:20,}]}>
+        <View style={[styles.eventContainer,{backgroundColor:props.event.color!==undefined?props.event.color:props.backgroundColor, marginHorizontal:props.showDate===false?10:20, paddingHorizontal:props.showDate===false?10:20,}]}>
           {image}
-          <View style={styles.textContainer}>
-            <TextFont translate={false} numberOfLines={3} bold={true} style={[styles.textContainerTop,{color:this.props.textColor, textAlign:this.props.showDate===false?"left":"center", marginLeft:this.props.showDate===false?30:10}]}>{this.props.event.name}</TextFont>
-            <TextFont style={[styles.textContainerBottom,{color:this.props.textColor, textAlign:this.props.showDate===false?"left":"center", marginLeft:this.props.showDate===false?30:10}]}>{this.props.event.time}</TextFont>
+          <View style={{position:'absolute', right: -18, top: -18, zIndex:10}}>
+            {allCollected?<Check play={allCollected} width={53} height={53}/>:<View/>}
           </View>
-          {this.props.showDate===false?<></>:
+          <View style={styles.textContainer}>
+            <TextFont translate={false} numberOfLines={3} bold={true} style={[styles.textContainerTop,{color:props.textColor, textAlign:props.showDate===false?"left":"center", marginLeft:props.showDate===false?30:10}]}>{props.event.name}</TextFont>
+            <TextFont style={[styles.textContainerBottom,{color:props.textColor, textAlign:props.showDate===false?"left":"center", marginLeft:props.showDate===false?30:10}]}>{props.event.time}</TextFont>
+          </View>
+          {props.showDate===false?<></>:
           <View style={{width: 33, alignItems:"center", marginLeft: -8}}>
             <Image style={styles.eventCalendar} source={require("../assets/icons/calendarIcon.png")}/>
-            <TextFont bold={true} style={{position:"absolute", top:3, textAlign:"center",color:"black", fontSize: 10, opacity: 0.8}}>{getWeekDayShort(this.props.event.weekday)}</TextFont>
-            <TextFont bold={true} style={{position:"absolute", top:17, textAlign:"center",color:"black", fontSize: 24, opacity: 0.8}}>{this.props.event.day}</TextFont>
+            <TextFont bold={true} style={{position:"absolute", top:3, textAlign:"center",color:"black", fontSize: 10, opacity: 0.8}}>{getWeekDayShort(props.event.weekday)}</TextFont>
+            <TextFont bold={true} style={{position:"absolute", top:17, textAlign:"center",color:"black", fontSize: 24, opacity: 0.8}}>{props.event.day}</TextFont>
           </View>}
         </View>
       </TouchableNativeFeedback>
     )
-  }
 }
 
 export function getEventsDay(date, eventSections, showEventsIfInRange){

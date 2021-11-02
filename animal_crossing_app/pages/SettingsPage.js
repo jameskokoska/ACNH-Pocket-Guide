@@ -233,7 +233,7 @@ export class LanguagePicker extends Component{
       {label: "Italiano", value: "Italian",},
       {label: "Portuguêse" + " " + attemptToTranslate("(items not translated)"), value: "Portuguese",},
       {label: "Dutch (Not fully supported)", value: "Dutch",},
-      {label: "Chinese (Not fully supported)", value: "Chinese",},
+      {label: "Chinese (Simplified) (Not fully supported)", value: "Chinese",},
       {label: "Chinese (Traditional) (Not fully supported)", value: "Chinese (Traditional)",},
       {label: "Japanese (Not fully supported)", value: "Japanese",},
       {label: "Korean (Not fully supported)", value: "Korean",},

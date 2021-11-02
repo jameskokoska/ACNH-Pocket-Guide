@@ -222,6 +222,10 @@ export function getPhoto(name, fallback=""){
       return require("../assets/icons/weather.png");
     case "alarmClock.png":
       return require("../assets/icons/alarmClock.png");
+    case "pascal.png":
+      return require("../assets/icons/pascal.png");
+    case "loid.png":
+      return require("../assets/icons/loid.png");
   }
   if(name.includes("bamboo")){
     return require("../assets/icons/bamboo.png");

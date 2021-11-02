@@ -4,7 +4,8 @@ import {Dimensions, Image, View, Text} from 'react-native';
 import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
 import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"
-
+import ButtonComponent from '../components/ButtonComponent';
+import * as RootNavigation from '../RootNavigation.js';
 
 class MaterialsPopup extends Component {
   constructor(props){
@@ -45,6 +46,14 @@ class MaterialsPopup extends Component {
         item={this.props.item}
         textProperty={["Source Notes"]}
       />
+      <ButtonComponent
+        text={"View Craftable Items"}
+        color={colors.okButton[global.darkMode]}
+        vibrate={5}
+        onPress={() => {
+          // this.props.setPage(22, true, this.props.item)
+          RootNavigation.navigate('34', {propsPassed:this.props.item});
+      }}/>
     </View>
   }
 }

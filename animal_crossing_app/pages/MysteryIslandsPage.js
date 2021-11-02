@@ -105,7 +105,8 @@ class MysteryIslandsComponent extends Component {
     if(this.props.data.includes(this.props.island.id)){
       checked=true;
     }
-    var showBlankCheckMarks = getSettingsString("settingsShowBlankCheckMarks")==="true";
+    // var showBlankCheckMarks = getSettingsString("settingsShowBlankCheckMarks")==="true";
+    var showBlankCheckMarks = true;
     return(
       <>
         <TouchableOpacity activeOpacity={0.7} onLongPress={()=>this.props.checkOffItem(this.props.island.id)} onPress={()=>this.props.openPopup(this.props.island)}>

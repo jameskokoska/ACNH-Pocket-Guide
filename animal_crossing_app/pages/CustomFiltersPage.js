@@ -17,7 +17,7 @@ export default class CustomFiltersPage extends Component {
       return(
         <AllItemsPage 
           smallerHeader={this.props.titlePassed!==undefined&&this.props.titlePassed.length>15?true:false}
-          disableFilters={true}
+          // disableFilters={true}
           title={capitalize(eventName)}
           currentSetFilters={getSpecificFilters(this.props.currentFiltersSearchFor)}
           subHeader="You can get these items from this event"

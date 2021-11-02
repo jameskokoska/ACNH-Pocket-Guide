@@ -35,7 +35,7 @@ class PopupFilter extends Component {
       "name": "Collected/Not Collected",
       "id": "Collected/Not Collected",
       "children": [
-        {name:"Collected", id:"Collected"},{name:"Partially collected variations", id:"Partially collected variations"},{name:"Not Collected", id:"Not Collected"},{name:"Wishlist", id:"Wishlist"},
+        {name:"Collected", id:"Collected"},{name:"Partially collected variations", id:"Partially collected variations"},{name:"Not Collected", id:"Not Collected"},{name:"Not Collected (Keep variations)", id:"Not Collected (Keep variations)"},{name:"Wishlist", id:"Wishlist"},
       ]
     }]
     this.museumFilters = [{
