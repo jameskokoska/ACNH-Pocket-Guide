@@ -67,12 +67,12 @@ export function EventContainer(props){
           }
         }}
       >
-        <View style={[styles.eventContainer,{backgroundColor:props.event.color!==undefined?props.event.color:props.backgroundColor, marginHorizontal:props.showDate===false?10:20, paddingHorizontal:props.showDate===false?10:20,}]}>
+        <View style={[styles.eventContainer,{backgroundColor:props.event.color!==undefined?props.event.color:props.backgroundColor, marginHorizontal:props.showDate===false?10:20, paddingHorizontal:props.showDate===false?20:25,}]}>
           {image}
           <View style={{position:'absolute', right: -18, top: -18, zIndex:10}}>
             {allCollected?<Check play={allCollected} width={53} height={53}/>:<View/>}
           </View>
-          <View style={styles.textContainer}>
+          <View style={[styles.textContainer,{paddingHorizontal: props.showDate===false?0:14}]}>
             <TextFont translate={false} numberOfLines={3} bold={true} style={[styles.textContainerTop,{color:props.textColor, textAlign:props.showDate===false?"left":"center", marginLeft:props.showDate===false?30:10}]}>{props.event.name}</TextFont>
             <TextFont style={[styles.textContainerBottom,{color:props.textColor, textAlign:props.showDate===false?"left":"center", marginLeft:props.showDate===false?30:10}]}>{props.event.time}</TextFont>
           </View>
@@ -523,7 +523,6 @@ const styles = StyleSheet.create({
   },
   textContainer:{
     width: "80%",
-    marginLeft: -20,
   },
   eventCalendar: {
     width: 50,
@@ -542,7 +541,6 @@ const styles = StyleSheet.create({
     flexDirection:"row",
     flex:1,
     alignItems: 'center',
-    marginHorizontal: 20,
     borderRadius: 10,
   },
 });
