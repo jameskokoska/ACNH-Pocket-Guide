@@ -401,7 +401,10 @@ function ListPage(props){
                     break;
                   }
                 }
-                if(filterCurrentFound===false){
+                if(filterCurrentFound && props.noStackFilters){
+                  filterFound = true;
+                  break;
+                } else if(filterCurrentFound===false){
                   filterFound = false;
                   break;
                 }

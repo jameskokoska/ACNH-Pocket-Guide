@@ -14,8 +14,10 @@ export default class CustomFiltersPage extends Component {
   render(){
     if(this.props.currentFiltersSearchFor!==undefined && this.props.currentFiltersSearchFor!==""){
       var eventName = getEventName(this.props.titlePassed)
+      console.log(this.props.currentFiltersSearchFor)
       return(
         <AllItemsPage 
+          noStackFilters={true} //dangerous because only collected filters will stack...
           smallerHeader={this.props.titlePassed!==undefined&&this.props.titlePassed.length>15?true:false}
           // disableFilters={true}
           title={capitalize(eventName)}

@@ -7,12 +7,15 @@ count=0
 length=0
 outputDictionary = {}
 ignore = ["Changelog","READ ME","Variants","Patterns","HHA Themes","HHA Set","HHA Situation","Special NPCs","Villagers Catch Phrase"]
+
+print("Loading files")
 with open('data.json', encoding='utf-8-sig') as d:
     data = json.load(d)
 with open('translations.json', encoding='utf-8-sig') as t:
     translation = json.load(t)
 with open('translationsApp.json', encoding='utf-8-sig') as f:
     translationsApp = json.load(f)
+print("Starting...")
 
 def alreadyTranslated(text):
     if(text==None):
@@ -28,9 +31,17 @@ def alreadyTranslated(text):
 sourceNotes = []
 sources=[]
 missingItems=[]
+found = True
+previousName = ""
 for dataSheet in data:
     for datum in data[dataSheet]:
+        if(found==False):
+            print("Warning: Could not find translation!")
+        if(datum.get("Name")==previousName):
+            continue
         found = False
+        print(datum.get("Name"))
+        previousName = datum.get("Name")
         if(alreadyTranslated(datum.get("Source Notes"))==False and datum.get("Source Notes") not in sourceNotes):
             sourceNotes.append(datum.get("Source Notes"))
             print("New Source Notes")

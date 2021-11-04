@@ -436,7 +436,7 @@ class App extends Component {
             <Stack.Screen name="34" component={NavigatorCraftableItemsPage}/>
           </Stack.Navigator>
           </NavigationContainer>
-        <PopupInfos/>
+        <PopupInfos setPage={this.setPage}/>
         <FABWrapper ref={(fab) => this.fab = fab} openDrawer={this.openDrawer}/>
         </SideMenu>
         </View>
@@ -464,7 +464,7 @@ class PopupInfos extends Component {
   render(){
     return <>
       <PopupRating ref={(popupRating) => this.popupRating = popupRating}/>
-      <Popup mailLink={true} ref={(popupBackup) => this.popupBackup = popupBackup} text="Data Backup" textLower="You can now backup your data to the cloud and enable auto backups in the settings." button1={"Go to page"} button1Action={()=>{this.setPage(30)}} button2={"Cancel"} button2Action={()=>{}}/>
+      <Popup mailLink={true} ref={(popupBackup) => this.popupBackup = popupBackup} text="Data Backup" textLower="You can now backup your data to the cloud and enable auto backups in the settings." button1={"Go to page"} button1Action={()=>{this.props.setPage(30)}} button2={"Cancel"} button2Action={()=>{}}/>
       {/* <PopupTip numLogins={this.numLogins} tipDismissed={this.tipDismissed}/> */}
     </>
   }

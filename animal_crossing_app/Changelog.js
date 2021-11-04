@@ -1,8 +1,15 @@
 export const gameVersion = "1.11.0"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
-
+//-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
--If you would like to help translate the app, feel free to get in touch via email!
+-I am updating the app with new content from the update....
+-Please by patient as this may take a few days :)
+-
+-Updated translations and descriptions
+-Fixed event items page not showing some items (e.g. Turkey Day)
+-Fixed backup popup crash
+-
+-Past changes:
 -
 -A checkmark will appear on the event if you collected all the items!
 -Events and Homepage load faster (background loading)
@@ -38,8 +45,6 @@ export const changelog = `
 -Switched what the arrows do in Calendar + Events Calendar view page
 -Added Furniture, Floor & Walls, and Clothing to Collection Progress
 -Fixed FAB position on some pages
--
--Past changes:
 -
 -Fixed ToDo list add villagers information
 -Fixed back button not going to previous screen

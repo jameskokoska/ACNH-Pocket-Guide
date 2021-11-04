@@ -79,8 +79,13 @@ class AllItemsPage extends Component {
     if(this.props.extraInfo !==undefined){
       extraInfo = this.props.extraInfo;
     }
+    var noStackFilters = false;
+    if(this.props.noStackFilters !==undefined){
+      noStackFilters = this.props.noStackFilters;
+    }
     return(
         <ListPage 
+        noStackFilters={noStackFilters}
           extraInfo={extraInfo}
           currentSetFilters={currentSetFilters}
           smallerHeader={smallerHeader}
