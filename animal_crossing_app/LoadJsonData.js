@@ -54,22 +54,12 @@ export function inVillagerPhoto(checkListKeyString, shouldCheck){
   }
 }
 
-const database = require("./assets/data/data.json");
-
-export async function getStorageData(data, checkListKey, defaultValue){
+export async function getStorageData(data, checkListKey, defaultValue, debug){
   var dataLoadingTotal = [];
   //Loop through all datasets
-  for(var dataSet = 0; dataSet <data.length; dataSet++){
-    var dataLoading
-    var customDatabase
-    if(data[dataSet].constructor === String){
-      customDatabase = false;
-      dataLoading = database[data[dataSet]];
-    } else {
-      customDatabase = true;
-      dataLoading = data[dataSet][0];
-    }
-    var totalIndex = -1;
+  for(let dataSet = 0; dataSet <data.length; dataSet++){
+    let dataLoading = data[dataSet][0]; //data[dataSet][1] is the Data category String
+    let totalIndex = -1;
     //Loop through that specific dataset
     for(var i = 0; i < dataLoading.length; i++){
       //Remove no name K.K. songs
@@ -78,9 +68,9 @@ export async function getStorageData(data, checkListKey, defaultValue){
         continue;
       }
       totalIndex++;
-      var checkListKeyString = checkListKey[dataSet][0];
+      let checkListKeyString = checkListKey[dataSet][0];
       //Loop through specific checklistKey property for that dataset
-      for(var x = 1; x < checkListKey[dataSet].length; x++){
+      for(let x = 1; x < checkListKey[dataSet].length; x++){
         checkListKeyString += dataLoading[i][checkListKey[dataSet][x]];
       }
       //Get value from storage
@@ -97,10 +87,10 @@ export async function getStorageData(data, checkListKey, defaultValue){
       dataLoading[i].checkListKey=checkListKeyString;
 
       if(checkListKey[dataSet][0] === "fishCheckList" || checkListKey[dataSet][0] === "seaCheckList" || checkListKey[dataSet][0] === "bugCheckList"){
-        var hemispherePre = ["NH ", "SH "];
-        var monthShort = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
-        for(var hemispherePreIndex=0; hemispherePreIndex<hemispherePre.length; hemispherePreIndex++){
-          for(var monthShortIndex=0; monthShortIndex<monthShort.length; monthShortIndex++){
+        let hemispherePre = ["NH ", "SH "];
+        let monthShort = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+        for(let hemispherePreIndex=0; hemispherePreIndex<hemispherePre.length; hemispherePreIndex++){
+          for(let monthShortIndex=0; monthShortIndex<monthShort.length; monthShortIndex++){
             dataLoading[i][hemispherePre[hemispherePreIndex]+[monthShort[monthShortIndex]+" Active"]] = dataLoading[i][hemispherePre[hemispherePreIndex]+[monthShort[monthShortIndex]]]!=="NA"?"true":"false";
             if(dataLoading[i][hemispherePre[hemispherePreIndex]+[monthShort[monthShortIndex]]]!=="NA" && dataLoading[i][hemispherePre[hemispherePreIndex]+[monthShort[monthShortIndex]]]!=="All day")
               dataLoading[i][hemispherePre[hemispherePreIndex]+"time"] = dataLoading[i][hemispherePre[hemispherePreIndex]+[monthShort[monthShortIndex]]];
@@ -110,19 +100,15 @@ export async function getStorageData(data, checkListKey, defaultValue){
         }
       }
       if(global.language!=="English"){
-        if(!customDatabase){
-          dataLoading[i]["NameLanguage"]=attemptToTranslateItem(dataLoading[i]["Name"]);
-        }else{
+        // if(!customDatabase){
+        //   dataLoading[i]["NameLanguage"]=attemptToTranslateItem(dataLoading[i]["Name"]);
+        // }else{
           dataLoading[i]["NameLanguage"]=attemptToTranslate(dataLoading[i]["Name"], true);
-        }
+        // }
       } else {
         dataLoading[i]["NameLanguage"]=dataLoading[i]["Name"];
       }
-      if(!customDatabase){
-        dataLoading[i]["Data Category"]=data[dataSet];
-      } else {
-        dataLoading[i]["Data Category"]=data[dataSet][1];
-      }
+      dataLoading[i]["Data Category"]=data[dataSet][1];
     }
     dataLoadingTotal.push(dataLoading);
   }
@@ -184,6 +170,8 @@ export function determineDataGlobal(datakeyName){
     return global.dataLoadedCards;
   else if(datakeyName==="dataLoadedMaterials")
     return global.dataLoadedMaterials;
+  else if(datakeyName==="dataLoadedGyroids")
+    return global.dataLoadedGyroids;
 }
 
 export async function resetFilters(){
@@ -319,32 +307,34 @@ export async function loadGlobalData(){
     ["amiiboCheckListSeriesWelcomeamiiboseries","Name"],
     ["amiiboCheckListSeriesSanrioseries","Name"],
   ], "false")
-  global.dataLoadedReactions = await getStorageData(["Reactions"],[["emojiCheckList","Name"]],"false");
-  global.dataLoadedMusic = await getStorageData(["Music"],[["songCheckList","Name"]],"false");
-  global.dataLoadedConstruction = await getStorageData(["Construction","Fencing"],[["constructionCheckList","Name"],["fenceCheckList","Name"]],"false");
-  global.dataLoadedFish = await getStorageData(["Fish"],[["fishCheckList","Name"]],"false");
-  global.dataLoadedBugs = await getStorageData(["Insects"],[["bugCheckList","Name"]],"false");
-  global.dataLoadedSea = await getStorageData(["Sea Creatures"],[["seaCheckList","Name"]],"false");
+  global.dataLoadedReactions = await getStorageData([[require("./assets/data/DataCreated/Reactions.json"),"Reactions"]],[["emojiCheckList","Name"]],"false");
+  global.dataLoadedMusic = await getStorageData([[require("./assets/data/DataCreated/Music.json"),"Music"]],[["songCheckList","Name"]],"false");
+  global.dataLoadedConstruction = await getStorageData([[require("./assets/data/DataCreated/Construction.json"),"Construction"],[require("./assets/data/DataCreated/Fencing.json"),"Fencing"]],[["constructionCheckList","Name"],["fenceCheckList","Name"]],"false");
+  global.dataLoadedFish = await getStorageData([[require("./assets/data/DataCreated/Fish.json"),"Fish"]],[["fishCheckList","Name"]],"false");
+  global.dataLoadedBugs = await getStorageData([[require("./assets/data/DataCreated/Insects.json"), "Insects"]],[["bugCheckList","Name"]],"false");
+  global.dataLoadedSea = await getStorageData([[require("./assets/data/DataCreated/Sea Creatures.json"), "Sea Creatures"]],[["seaCheckList","Name"]],"false");
   global.dataLoadedCreatures = await getStorageData([
-    "Fish",
-    "Sea Creatures",
-    "Insects",
+    [require("./assets/data/DataCreated/Fish.json"),"Fish"],
+    [require("./assets/data/DataCreated/Sea Creatures.json"), "Sea Creatures"],
+    [require("./assets/data/DataCreated/Insects.json"), "Insects"],
   ],[
     ["fishCheckList","Name"],
     ["seaCheckList","Name"],
     ["bugCheckList","Name"]
-  ],"false");
-  global.dataLoadedFossils = await getStorageData(["Fossils"],[["fossilCheckList","Name"]],"false");
-  global.dataLoadedArt = await getStorageData(["Art"],[["artCheckList","Name","Genuine"]],"false");
-  global.dataLoadedVillagers = await getStorageData(["Villagers"],[["villagerCheckList","Name"]],"false");
+  ],"false", true);
+  global.dataLoadedFossils = await getStorageData([[require("./assets/data/DataCreated/Fossils.json"),"Fossils"]],[["fossilCheckList","Name"]],"false");
+  global.dataLoadedArt = await getStorageData([[require("./assets/data/DataCreated/Art.json"),"Art"]],[["artCheckList","Name","Genuine"]],"false");
+  global.dataLoadedVillagers = await getStorageData([[require("./assets/data/DataCreated/Villagers.json"),"Villagers"]],[["villagerCheckList","Name"]],"false");
   global.dataLoadedFurniture = await getStorageData([
-    "Housewares",
-    "Miscellaneous",
-    "Wall-mounted",
-    "Photos",
-    "Posters",
+    [require("./assets/data/DataCreated/Housewares.json"), "Housewares"],
+    [require("./assets/data/DataCreated/Miscellaneous.json"), "Miscellaneous"],
+    [require("./assets/data/DataCreated/Wall-mounted.json"), "Wall-mounted"],
+    [require("./assets/data/DataCreated/Ceiling Decor.json"), "Ceiling Decor"],
+    [require("./assets/data/DataCreated/Photos.json"), "Photos"],
+    [require("./assets/data/DataCreated/Posters.json"), "Posters"],
   ],
   [
+    ["furnitureCheckList","Name","Variation","Pattern"],
     ["furnitureCheckList","Name","Variation","Pattern"],
     ["furnitureCheckList","Name","Variation","Pattern"],
     ["furnitureCheckList","Name","Variation","Pattern"],
@@ -353,16 +343,16 @@ export async function loadGlobalData(){
     ["furnitureCheckList","Name"],
   ],"false");
   global.dataLoadedClothing = await getStorageData([
-    "Headwear",
-    "Accessories",
-    "Tops",
-    "Dress-Up",
-    "Clothing Other",
-    "Bottoms",
-    "Socks",
-    "Shoes",
-    "Bags",
-    "Umbrellas",
+    [require("./assets/data/DataCreated/Headwear.json"), "Headwear"],
+    [require("./assets/data/DataCreated/Accessories.json"), "Accessories"],
+    [require("./assets/data/DataCreated/Tops.json"), "Tops"],
+    [require("./assets/data/DataCreated/Dress-Up.json"), "Dress-Up"],
+    [require("./assets/data/DataCreated/Clothing Other.json"),"Clothing Other"],
+    [require("./assets/data/DataCreated/Bottoms.json"),"Bottoms"],
+    [require("./assets/data/DataCreated/Socks.json"),"Socks"],
+    [require("./assets/data/DataCreated/Shoes.json"),"Shoes"],
+    [require("./assets/data/DataCreated/Bags.json"),"Bags"],
+    [require("./assets/data/DataCreated/Umbrellas.json"),"Umbrellas"],
   ],
   [
     ["clothingCheckList","Name","Variation"],
@@ -378,52 +368,55 @@ export async function loadGlobalData(){
   ],"false");
   global.dataLoadedFloorWalls = await getStorageData(
   [
-    "Floors",
-    "Rugs",
-    "Wallpaper"
+    [require("./assets/data/DataCreated/Floors.json"), "Floors"],
+    [require("./assets/data/DataCreated/Rugs.json"), "Rugs"],
+    [require("./assets/data/DataCreated/Wallpaper.json"), "Wallpaper"],
   ],
   [
     ["floorWallsCheckList","Name"],
     ["floorWallsCheckList","Name"],
     ["floorWallsCheckList","Name"],
   ],"false");
-  global.dataLoadedTools = await getStorageData(["Tools"],[["toolsCheckList","Name","Variation"]],"false");
-  global.dataLoadedRecipes = await getStorageData(["Recipes"],[["recipesCheckList","Name"]],"false");
-  global.dataLoadedCards = await getStorageData(["Message Cards"],[["cardsCheckList","Name"]],"false");
-  global.dataLoadedMaterials = await getStorageData(["Other"],[["materialsCheckList","Name"]],"false");
+  global.dataLoadedTools = await getStorageData([[require("./assets/data/DataCreated/Tools.json"), "Tools"]],[["toolsCheckList","Name","Variation"]],"false");
+  global.dataLoadedRecipes = await getStorageData([[require("./assets/data/DataCreated/Recipes.json"),"Recipes"],],[["recipesCheckList","Name"]],"false");
+  global.dataLoadedCards = await getStorageData([[require("./assets/data/DataCreated/Message Cards.json"), "Message Cards"],],[["cardsCheckList","Name"]],"false");
+  global.dataLoadedMaterials = await getStorageData([[require("./assets/data/DataCreated/Other.json"),"Other"]],[["materialsCheckList","Name"]],"false");
+  global.dataLoadedGyroids = await getStorageData([[require("./assets/data/DataCreated/Gyroids.json"),"Gyroids"]],[["gyroidCheckList","Name","Variation","Pattern"]],"false");
   global.dataLoadedAll = await getStorageData(
   [
-    "Housewares",
-    "Miscellaneous",
-    "Wall-mounted",
-    "Photos",
-    "Posters",
-    "Headwear",
-    "Accessories",
-    "Tops",
-    "Dress-Up",
-    "Clothing Other",
-    "Bottoms",
-    "Socks",
-    "Shoes",
-    "Bags",
-    "Umbrellas",
-    "Floors",
-    "Rugs",
-    "Wallpaper",
-    "Recipes",
-    "Tools",
-    "Fish",
-    "Insects",
-    "Sea Creatures",
-    "Fossils",
-    "Art",
-    "Villagers",
-    "Music",
-    "Reactions",
-    "Construction",
-    "Fencing",
-    "Other",
+    [require("./assets/data/DataCreated/Housewares.json"), "Housewares"],
+    [require("./assets/data/DataCreated/Miscellaneous.json"), "Miscellaneous"],
+    [require("./assets/data/DataCreated/Wall-mounted.json"), "Wall-mounted"],
+    [require("./assets/data/DataCreated/Ceiling Decor.json"), "Ceiling Decor"],
+    [require("./assets/data/DataCreated/Photos.json"), "Photos"],
+    [require("./assets/data/DataCreated/Posters.json"), "Posters"],
+    [require("./assets/data/DataCreated/Headwear.json"), "Headwear"],
+    [require("./assets/data/DataCreated/Accessories.json"), "Accessories"],
+    [require("./assets/data/DataCreated/Tops.json"), "Tops"],
+    [require("./assets/data/DataCreated/Dress-Up.json"), "Dress-Up"],
+    [require("./assets/data/DataCreated/Clothing Other.json"),"Clothing Other"],
+    [require("./assets/data/DataCreated/Bottoms.json"),"Bottoms"],
+    [require("./assets/data/DataCreated/Socks.json"),"Socks"],
+    [require("./assets/data/DataCreated/Shoes.json"),"Shoes"],
+    [require("./assets/data/DataCreated/Bags.json"),"Bags"],
+    [require("./assets/data/DataCreated/Umbrellas.json"),"Umbrellas"],
+    [require("./assets/data/DataCreated/Floors.json"), "Floors"],
+    [require("./assets/data/DataCreated/Rugs.json"), "Rugs"],
+    [require("./assets/data/DataCreated/Wallpaper.json"), "Wallpaper"],
+    [require("./assets/data/DataCreated/Recipes.json"), 'Recipes'],
+    [require("./assets/data/DataCreated/Tools.json"), "Tools"],
+    [require("./assets/data/DataCreated/Fish.json"), "Fish"],
+    [require("./assets/data/DataCreated/Insects.json"), "Insects"],
+    [require("./assets/data/DataCreated/Sea Creatures.json"),"Sea Creatures"],
+    [require("./assets/data/DataCreated/Fossils.json"),"Fossils"],
+    [require("./assets/data/DataCreated/Art.json"),"Art"],
+    [require("./assets/data/DataCreated/Villagers.json"),"Villagers"],
+    [require("./assets/data/DataCreated/Music.json"),"Music"],
+    [require("./assets/data/DataCreated/Reactions.json"),"Reactions"],
+    [require("./assets/data/DataCreated/Construction.json"),"Construction"],
+    [require("./assets/data/DataCreated/Fencing.json"),"Fencing"],
+    [require("./assets/data/DataCreated/Other.json"),"Other"],
+    [require("./assets/data/DataCreated/Gyroids.json"),"Gyroids"],
     [require("./assets/data/Amiibo Data/Series 1.json"),"Series 1"],
     [require("./assets/data/Amiibo Data/Series 2.json"),"Series 2"],
     [require("./assets/data/Amiibo Data/Series 3.json"),"Series 3"],
@@ -433,6 +426,7 @@ export async function loadGlobalData(){
     [require("./assets/data/Amiibo Data/Sanrio series.json"),"Sanrio Series"],
   ],
   [
+    ["furnitureCheckList","Name","Variation","Pattern"],
     ["furnitureCheckList","Name","Variation","Pattern"],
     ["furnitureCheckList","Name","Variation","Pattern"],
     ["furnitureCheckList","Name","Variation","Pattern"],
@@ -464,6 +458,7 @@ export async function loadGlobalData(){
     ["constructionCheckList","Name"],
     ["fenceCheckList","Name"],
     ["materialsCheckList","Name"],
+    ["gyroidCheckList","Name","Variation","Pattern"],
     ["amiiboCheckListSeries1","Name"],
     ["amiiboCheckListSeries2","Name"],
     ["amiiboCheckListSeries3","Name"],
@@ -903,8 +898,6 @@ export function attemptToTranslate(text, forcedTranslation=false){
     return text;
   }
 
-  
-
   var textArray = [];
   if(text.toString().includes(";")){
     textArray = text.toString().split(";");
@@ -1119,14 +1112,14 @@ export function translateDateRange(dateRange){
 } 
 
 export function getCurrentVillagerObjects(){
-  const data = require("./assets/data/data.json");
+  const data = require("./assets/data/DataCreated/Villagers.json");
   var currentVillagers = [];
   for(var i=0; i<global.collectionList.length; i++){
     if(global.collectionList[i].includes("villagerCheckList")){
       var villagerName = global.collectionList[i].replace("villagerCheckList","");
-      for(var z=0; z<data["Villagers"].length; z++){
-        if(data["Villagers"][z]["Name"]===villagerName){
-          currentVillagers.push(data["Villagers"][z]);
+      for(var z=0; z<data.length; z++){
+        if(data[z]["Name"]===villagerName){
+          currentVillagers.push(data[z]);
         }
       }
     }
@@ -1135,11 +1128,11 @@ export function getCurrentVillagerObjects(){
 }
 
 function getAllVillagerPersonalities(){
-  const data = require("./assets/data/data.json");
+  const data = require("./assets/data/DataCreated/Villagers.json");
   var villagerPersonalities = [];
   var currentPersonality = "";
-  for(var z=0; z<data["Villagers"].length; z++){
-    currentPersonality = data["Villagers"][z]["Personality"];
+  for(var z=0; z<data.length; z++){
+    currentPersonality = data[z]["Personality"];
     if(!villagerPersonalities.includes(currentPersonality)){
       villagerPersonalities.push(currentPersonality);
     }

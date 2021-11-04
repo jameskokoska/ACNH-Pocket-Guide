@@ -10,14 +10,12 @@ export default class GyroidsPage extends Component {
     return(
       <ListPage 
         title="Gyroids"
-        comingSoon={true}
-        imageProperty={["Icon Image"]}
+        // comingSoon={true}
+        imageProperty={["Image"]}
         textProperty={["NameLanguage",]}
-        textProperty2={["creatureTime"]}
-        textProperty3={["Where/How"]}
         searchKey={[["NameLanguage",]]}
         gridType="smallGrid" //smallGrid, largeGrid, row
-        dataGlobalName={"dataLoadedFish"}
+        dataGlobalName={"dataLoadedGyroids"}
         appBarColor={colors.gyroidAppBar[global.darkMode]}
         titleColor={colors.textWhiteOnly[global.darkMode]}
         searchBarColor={colors.searchbarBG[global.darkMode]}
@@ -26,10 +24,7 @@ export default class GyroidsPage extends Component {
         labelColor={colors.textBlack[global.darkMode]}
         accentColor={colors.fishAccent[global.darkMode]}
         specialLabelColor={colors.fishText[global.darkMode]}
-        popUpCornerImageProperty={["Where/How"]}
-        popUpCornerImageLabelProperty={["Where/How"]}
-        popUpPhraseProperty={["Catch phrase"]}
-        popUpContainer={[["FishPopup",550]]} //name of the popup class and height
+        popUpContainer={[["GyroidPopup",550]]}
       />
     )
   }

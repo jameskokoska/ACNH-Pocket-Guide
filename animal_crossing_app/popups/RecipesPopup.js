@@ -17,7 +17,7 @@ class RecipesPopup extends Component {
       <InfoLineBeside
         image1={require("../assets/icons/bellBag.png")} 
         image2={require("../assets/icons/coin.png")} 
-        item1={findItemIDName(this.props.item["Crafted Item Internal ID"],this.props.item["Name"])}
+        item1={this.props.item}
         item2={findItemIDName(this.props.item["Crafted Item Internal ID"],this.props.item["Name"])}
         textProperty1={["Buy"]}
         textProperty2={["Sell"]}

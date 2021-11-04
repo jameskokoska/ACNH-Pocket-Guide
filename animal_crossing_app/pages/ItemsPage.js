@@ -62,6 +62,7 @@ class FurnitureRouteClass extends React.PureComponent {
           "Image",
           "Image",
           "Image",
+          "Image",
         ]}
         textProperty={[
           "NameLanguage",
@@ -69,8 +70,10 @@ class FurnitureRouteClass extends React.PureComponent {
           "NameLanguage",
           "NameLanguage",
           "NameLanguage",
+          "NameLanguage",
         ]}
         searchKey={[
+          ["NameLanguage",],
           ["NameLanguage",],
           ["NameLanguage",],
           ["NameLanguage",],
@@ -93,6 +96,7 @@ class FurnitureRouteClass extends React.PureComponent {
           "Source",
           "Source",
           "Source",
+          "Source",
         ]}
         popUpCornerImageLabelProperty={[
           "Source",
@@ -100,8 +104,10 @@ class FurnitureRouteClass extends React.PureComponent {
           "Source",
           "Source",
           "Source",
+          "Source",
         ]}
         popUpContainer={[
+          ["FurniturePopup",460],
           ["FurniturePopup",460],
           ["FurniturePopup",460],
           ["FurniturePopup",460],

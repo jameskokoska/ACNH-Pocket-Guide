@@ -2,21 +2,21 @@
   {
     "title":"Beautiful Island",
     "image":"flowerIcon.png",
-    "description":"Coming soon"
+    "description":"Villagers pitch in with weeding, watering flowers, and clearing trash from the waters."
   },
   {
     "title":"Early Bird",
     "image":"alarmClock.png",
-    "description":"Coming soon"
+    "description":"Residents are more active in the morning and businesses open earlier."
   },
   {
     "title":"Night Owl",
     "image":"fullmoon.png",
-    "description":"Coming soon"
+    "description":"Boosts nightlife since residents stay up later. Island businesses extend their hours."
   },
   {
     "title":"Bell Boom",
     "image":"bellBag.png",
-    "description":"Coming soon"
+    "description":"Cost of goods on the island go up. But also the amount you get from selling increases."
   }
 ]

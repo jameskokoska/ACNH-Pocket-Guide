@@ -11,7 +11,7 @@ import TextFont from './TextFont';
 import Check from './Check';
 import FastImage from './FastImage';
 import {checkOff, capitalize, commas, removeBrackets} from "../LoadJsonData"
-import {getPhoto, getPhotoShadow} from "./GetPhoto"
+import {getFoodPhoto, getPhoto, getPhotoShadow} from "./GetPhoto"
 import {getMonthShort} from "./DateFunctions"
 import colors from "../Colors"
 import {getCurrentDateObject, parseActiveTime} from "./DateFunctions"
@@ -193,11 +193,16 @@ class ListItem extends React.Component{
 
     if(this.props.gridType==="smallGrid"){
       var textProperty2Component = <View/>;
-      if(this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]!==""){
+      if(this.props.textProperty2!==undefined && this.props.item[textProperty2Text]!==undefined && this.props.textProperty2[this.props.item.dataSet]!==""){
         if(this.props.textProperty2[this.props.item.dataSet]==="(DIY)")
           textProperty2Component = <View/> //added image instead
         else 
           textProperty2Component = <TextFont bold={false} style={{textAlign:'center', color:this.props.labelColor, fontSize:12,}}>{capitalize(this.props.item[textProperty2Text])}</TextFont>
+      }
+      let imageSrc = this.props.item[this.props.imageProperty[this.props.item.dataSet]];
+      //image workaround
+      if(this.props.item["Data Category"]==="Recipes"){
+        imageSrc = getFoodPhoto(this.props.item["Name"],imageSrc)
       }
       return (
         <View style={styles.gridWrapper}>
@@ -235,7 +240,7 @@ class ListItem extends React.Component{
                 <FastImage
                   style={styles.gridBoxImage}
                   source={{
-                    uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
+                    uri: imageSrc,
                   }}
                   cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
                 />:

@@ -401,5 +401,29 @@
     "popUpPhraseProperty":"Stack Size",
     "searchKey":["NameLanguage"],
     "checkListKey":["materialsCheckList","Name"]
-  }  
+  },
+  "Ceiling Decor" : {
+    "data":"Ceiling Decor",
+    "disablePopup":"false",
+    "imageProperty":"Image",
+    "textProperty":"NameLanguage",
+    "textProperty2":"",
+    "textProperty3":"",
+    "popUpCornerImageLabelProperty":"Source",
+    "popUpCornerImageProperty":"Source",
+    "searchKey":["NameLanguage"],
+    "checkListKey":["furnitureCheckList","Name","Variation","Pattern"]
+  },
+  "Gyroids" : {
+    "data":"Gyroids",
+    "disablePopup":"false",
+    "imageProperty":"Image",
+    "textProperty":"NameLanguage",
+    "textProperty2":"",
+    "textProperty3":"",
+    "popUpCornerImageLabelProperty":"Source",
+    "popUpCornerImageProperty":"Source",
+    "searchKey":["NameLanguage"],
+    "checkListKey":["gyroidCheckList","Name","Variation","Pattern"]
+  }
 }

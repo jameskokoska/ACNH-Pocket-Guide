@@ -134,10 +134,12 @@ class AllItemsPage extends Component {
             false,
             false,
             false,
+            false,
             true,
             true,
             true,
             true,
+            false,
             false,
             true,
             true,
@@ -148,6 +150,7 @@ class AllItemsPage extends Component {
             true,
           ]}
           popUpPhraseProperty={[
+            "",
             "",
             "",
             "",
@@ -179,8 +182,10 @@ class AllItemsPage extends Component {
             "",
             "",
             "Stack Size",
+            "",
           ]}
           popUpContainer={[
+            ["FurniturePopup",440],
             ["FurniturePopup",440],
             ["FurniturePopup",440],
             ["FurniturePopup",440],
@@ -212,6 +217,7 @@ class AllItemsPage extends Component {
             ["ConstructionPopup",500], //none
             ["ConstructionPopup",500], //none
             ["MaterialsPopup",500], //none
+            ["GyroidPopup",500], //none
           ]}
           popUpCornerImageProperty={[
             "Source",
@@ -245,6 +251,7 @@ class AllItemsPage extends Component {
             "Source",
             "Source",
             "Source",
+            "",
           ]}
           popUpCornerImageLabelProperty={[
             "Source",
@@ -278,8 +285,10 @@ class AllItemsPage extends Component {
             "Source",
             "Source",
             "Source",
+            "Source",
           ]}
           textProperty2={[
+            "",
             "",
             "",
             "",
@@ -318,8 +327,10 @@ class AllItemsPage extends Component {
             "",
             "",
             "",
+            "",
           ]}
           imageProperty={[
+            "Image",
             "Image",
             "Image",
             "Image",
@@ -351,6 +362,7 @@ class AllItemsPage extends Component {
             "Image",
             "Image",
             "Inventory Image",
+            "Image",
             "image",
             "image",
             "image",
@@ -360,6 +372,8 @@ class AllItemsPage extends Component {
             "image"
           ]}
           textProperty={[
+            ["NameLanguage"],
+            ["NameLanguage"],
             ["NameLanguage"],
             ["NameLanguage"],
             ["NameLanguage"],
@@ -431,6 +445,14 @@ class AllItemsPage extends Component {
             ["constructionCheckList","Name"],
             ["fenceCheckList","Name"],
             ["materialsCheckList","Name"],
+            ["gyroidCheckList","Name","Variation","Pattern"],
+            ["amiiboCheckListSeries1","Name"],
+            ["amiiboCheckListSeries2","Name"],
+            ["amiiboCheckListSeries3","Name"],
+            ["amiiboCheckListSeries4","Name"],
+            ["amiiboCheckListPromos","Name"],
+            ["amiiboCheckListSeriesWelcomeamiiboseries","Name"],
+            ["amiiboCheckListSeriesSanrioseries","Name"],
           ]}
           searchKey={[
             ["NameLanguage"],
@@ -470,7 +492,9 @@ class AllItemsPage extends Component {
             ["NameLanguage"],
             ["NameLanguage"],
             ["NameLanguage"],
-            ["NameLanguage"]
+            ["NameLanguage"],
+            ["NameLanguage"],
+            ["NameLanguage"],
           ]}
           dataGlobalName={"dataLoadedAll"}
         />

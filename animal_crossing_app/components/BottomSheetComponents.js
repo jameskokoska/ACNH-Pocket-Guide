@@ -34,6 +34,9 @@ export class CircularImage extends Component {
 export class LeftCornerImage extends Component {
   render() {
     let label = this.props.item[this.props.popUpCornerImageLabelProperty[this.props.item.dataSet]]
+    if(label===undefined || label===""){
+      return <View/>
+    }
     let photo = getPhotoCorner(this.props.item[this.props.popUpCornerImageProperty[this.props.item.dataSet]])
     if(this.props.item["Data Category"]==="Sea Creatures"){
       label = "Underwater"
@@ -165,6 +168,9 @@ export class InfoLine extends Component {
     if(this.props.starting!==undefined){
       starting=this.props.starting;
     }
+    if(this.props.item===undefined){
+      return <View/>
+    }
     if(this.props.item.hasOwnProperty(this.props.textProperty[0])){
       if(this.props.item[this.props.textProperty]==="None"){
         return <View/>
@@ -176,6 +182,9 @@ export class InfoLine extends Component {
     var text2 = attemptToTranslateSpecial(this.props.item[this.props.textProperty2], "variants");
     if(this.props.textProperty[0]==="Season/Event"){
       text1 = getEventName(text1);
+      if(text1===""){
+        return <View/>
+      }
     }
     if(this.props.textProperty[0]==="Source Notes"){
       text1 = attemptToTranslateSourceNotes(text1);

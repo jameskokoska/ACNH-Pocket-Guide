@@ -161,7 +161,7 @@ class CalendarView extends Component{
 
   startTimeout = () => {
     getSettingsString("settingsEnableVibrations")==="true"? Vibration.vibrate(5) : "";
-    this.setState({eventColors:[], eventColorsHeavy:[], importantEvents:[]})
+    this.setState({eventColors:[], eventColorsHeavy:[], importantEvents:[], todayDate:[]})
     this.getCurrentMonthEventColors()
   }
 
@@ -184,7 +184,7 @@ class CalendarView extends Component{
         let eventsForDay = getEventsDay(addDays(firstDayInMonth(this.state.currentDate),day-1), this.props.eventSections, true)
         let currentImportantEvents = false
         let currentTodayDate = false
-        if(currentMonth === this.props.currentDate.getMonth()+1 && currentYear === this.props.currentDate.getFullYear() && day === this.props.currentDate.getDate()){
+        if(this.state.currentDate.getMonth() === getCurrentDateObject().getMonth() && currentYear === getCurrentDateObject().getFullYear() && day === getCurrentDateObject().getDate()){
           currentTodayDate = true
         }
         for(let event = 0; event<eventsForDay.length; event++){
@@ -342,7 +342,7 @@ class BottomBar extends Component {
 class AllEventsList extends Component{
   constructor(item) {
     super(item);
-    this.data = require("../assets/data/data.json")["Seasons and Events"];
+    this.data = require("../assets/data/DataCreated/Seasons and Events.json");
     this.state = {
       searchData: this.data,
     };

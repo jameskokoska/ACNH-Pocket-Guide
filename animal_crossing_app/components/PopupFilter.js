@@ -156,6 +156,8 @@ class PopupFilter extends Component {
       this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...filterDefinitions["Recipes"]];
     } else if(this.props.title==="Villagers"){
       this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.villagerFilters, ...filterDefinitions["Villagers"]];
+    } else if(this.props.title==="Gyroids"){
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...filterDefinitions["Gyroids"]];
     } else if(this.props.title==="Everything" || this.props.title==="Wishlist"){
       const categories = [{
         "name": "Type Categories",

@@ -39,6 +39,18 @@
         {
           "name": "Wall-mounted",
           "id": "Category:Wall-mounted"
+        },
+        {
+          "name": "Food",
+          "id": "Category:Food"
+        },
+        {
+          "name": "Desert",
+          "id": "Category:Desert"
+        },
+        {
+          "name": "Ceiling",
+          "id": "Category:Ceiling"
         }
       ]
     },
@@ -237,6 +249,82 @@
         {
           "name": "Collecting wood eggs",
           "id": "Source:Collecting wood eggs"
+        },
+        {
+          "name": "Efitem",
+          "id": "Source:Efitem"
+        },
+        {
+          "name": "6C1BC3CE",
+          "id": "Source:6C1BC3CE"
+        },
+        {
+          "name": "BA81C736",
+          "id": "Source:BA81C736"
+        },
+        {
+          "name": "FDC091E1",
+          "id": "Source:FDC091E1"
+        },
+        {
+          "name": "EF366997",
+          "id": "Source:EF366997"
+        },
+        {
+          "name": "415F291C",
+          "id": "Source:415F291C"
+        },
+        {
+          "name": "None",
+          "id": "Source:None"
+        },
+        {
+          "name": "3E61747E",
+          "id": "Source:3E61747E"
+        },
+        {
+          "name": "667FEF40",
+          "id": "Source:667FEF40"
+        },
+        {
+          "name": "776D5010",
+          "id": "Source:776D5010"
+        },
+        {
+          "name": "5AE3CBEB",
+          "id": "Source:5AE3CBEB"
+        },
+        {
+          "name": "27A71BCC",
+          "id": "Source:27A71BCC"
+        },
+        {
+          "name": "D3B03812",
+          "id": "Source:D3B03812"
+        },
+        {
+          "name": "440FBB4E",
+          "id": "Source:440FBB4E"
+        },
+        {
+          "name": "8913E9E7",
+          "id": "Source:8913E9E7"
+        },
+        {
+          "name": "DDC68604",
+          "id": "Source:DDC68604"
+        },
+        {
+          "name": "93B62DA1",
+          "id": "Source:93B62DA1"
+        },
+        {
+          "name": "00E89F29",
+          "id": "Source:00E89F29"
+        },
+        {
+          "name": "37A52400",
+          "id": "Source:37A52400"
         }
       ]
     },
@@ -393,6 +481,248 @@
       ]
     }
   ],
+  "Gyroids": [
+    {
+      "name": "Variation",
+      "id": "Variation",
+      "children": [
+        {
+          "name": "Silver",
+          "id": "Variation:Silver"
+        },
+        {
+          "name": "Copper",
+          "id": "Variation:Copper"
+        },
+        {
+          "name": "Blue",
+          "id": "Variation:Blue"
+        },
+        {
+          "name": "Black",
+          "id": "Variation:Black"
+        },
+        {
+          "name": "Yellow",
+          "id": "Variation:Yellow"
+        },
+        {
+          "name": "Brown",
+          "id": "Variation:Brown"
+        },
+        {
+          "name": "Green",
+          "id": "Variation:Green"
+        },
+        {
+          "name": "Pink",
+          "id": "Variation:Pink"
+        },
+        {
+          "name": "Purple",
+          "id": "Variation:Purple"
+        },
+        {
+          "name": "White",
+          "id": "Variation:White"
+        },
+        {
+          "name": "Orange",
+          "id": "Variation:Orange"
+        },
+        {
+          "name": "Beige",
+          "id": "Variation:Beige"
+        },
+        {
+          "name": "Gray",
+          "id": "Variation:Gray"
+        },
+        {
+          "name": "Red",
+          "id": "Variation:Red"
+        },
+        {
+          "name": "Wood",
+          "id": "Variation:Wood"
+        },
+        {
+          "name": "Camel",
+          "id": "Variation:Camel"
+        },
+        {
+          "name": "NA",
+          "id": "Variation:NA"
+        },
+        {
+          "name": "Pop",
+          "id": "Variation:Pop"
+        },
+        {
+          "name": "Natural",
+          "id": "Variation:Natural"
+        },
+        {
+          "name": "Cool",
+          "id": "Variation:Cool"
+        },
+        {
+          "name": "Cute",
+          "id": "Variation:Cute"
+        },
+        {
+          "name": "Chic",
+          "id": "Variation:Chic"
+        },
+        {
+          "name": "Gold",
+          "id": "Variation:Gold"
+        },
+        {
+          "name": "Light brown",
+          "id": "Variation:Light brown"
+        },
+        {
+          "name": "Light green",
+          "id": "Variation:Light green"
+        }
+      ]
+    },
+    {
+      "name": "Color 1",
+      "id": "Color 1",
+      "children": [
+        {
+          "name": "Gray",
+          "id": "Color 1:Gray"
+        },
+        {
+          "name": "Brown",
+          "id": "Color 1:Brown"
+        },
+        {
+          "name": "Blue",
+          "id": "Color 1:Blue"
+        },
+        {
+          "name": "Black",
+          "id": "Color 1:Black"
+        },
+        {
+          "name": "Yellow",
+          "id": "Color 1:Yellow"
+        },
+        {
+          "name": "Green",
+          "id": "Color 1:Green"
+        },
+        {
+          "name": "Pink",
+          "id": "Color 1:Pink"
+        },
+        {
+          "name": "Aqua",
+          "id": "Color 1:Aqua"
+        },
+        {
+          "name": "Purple",
+          "id": "Color 1:Purple"
+        },
+        {
+          "name": "White",
+          "id": "Color 1:White"
+        },
+        {
+          "name": "Orange",
+          "id": "Color 1:Orange"
+        },
+        {
+          "name": "Beige",
+          "id": "Color 1:Beige"
+        },
+        {
+          "name": "Red",
+          "id": "Color 1:Red"
+        }
+      ]
+    },
+    {
+      "name": "Color 2",
+      "id": "Color 2",
+      "children": [
+        {
+          "name": "Gray",
+          "id": "Color 2:Gray"
+        },
+        {
+          "name": "Brown",
+          "id": "Color 2:Brown"
+        },
+        {
+          "name": "Aqua",
+          "id": "Color 2:Aqua"
+        },
+        {
+          "name": "Orange",
+          "id": "Color 2:Orange"
+        },
+        {
+          "name": "Green",
+          "id": "Color 2:Green"
+        },
+        {
+          "name": "Pink",
+          "id": "Color 2:Pink"
+        },
+        {
+          "name": "Blue",
+          "id": "Color 2:Blue"
+        },
+        {
+          "name": "White",
+          "id": "Color 2:White"
+        },
+        {
+          "name": "Beige",
+          "id": "Color 2:Beige"
+        },
+        {
+          "name": "Colorful",
+          "id": "Color 2:Colorful"
+        },
+        {
+          "name": "Yellow",
+          "id": "Color 2:Yellow"
+        },
+        {
+          "name": "Red",
+          "id": "Color 2:Red"
+        },
+        {
+          "name": "Purple",
+          "id": "Color 2:Purple"
+        },
+        {
+          "name": "Black",
+          "id": "Color 2:Black"
+        }
+      ]
+    },
+    {
+      "name": "Source",
+      "id": "Source",
+      "children": [
+        {
+          "name": "Gyroid",
+          "id": "Source:Gyroid"
+        },
+        {
+          "name": "CafeMaster",
+          "id": "Source:CafeMaster"
+        }
+      ]
+    }
+  ],
   "Reactions": [
     {
       "name": "Source",
@@ -541,10 +871,6 @@
         {
           "name": "Musical Instrument",
           "id": "Tag:Musical Instrument"
-        },
-        {
-          "name": "Fan",
-          "id": "Tag:Fan"
         },
         {
           "name": "Hospital",
@@ -707,6 +1033,10 @@
           "id": "Tag:Playground"
         },
         {
+          "name": "Fan",
+          "id": "Tag:Fan"
+        },
+        {
           "name": "Toilet",
           "id": "Tag:Toilet"
         },
@@ -787,6 +1117,14 @@
           "id": "Tag:Special Fish"
         },
         {
+          "name": "TableClock",
+          "id": "Tag:TableClock"
+        },
+        {
+          "name": "Bromide",
+          "id": "Tag:Bromide"
+        },
+        {
           "name": "Air Conditioning",
           "id": "Tag:Air Conditioning"
         },
@@ -797,6 +1135,14 @@
         {
           "name": "Sculpture",
           "id": "Tag:Sculpture"
+        },
+        {
+          "name": "CeilingEtc",
+          "id": "Tag:CeilingEtc"
+        },
+        {
+          "name": "CeilingLamp",
+          "id": "Tag:CeilingLamp"
         }
       ]
     },
@@ -855,16 +1201,16 @@
           "id": "Color 1:Pink"
         },
         {
-          "name": "Green",
-          "id": "Color 1:Green"
-        },
-        {
           "name": "Colorful",
           "id": "Color 1:Colorful"
         },
         {
           "name": "Gray",
           "id": "Color 1:Gray"
+        },
+        {
+          "name": "Green",
+          "id": "Color 1:Green"
         },
         {
           "name": "Orange",
@@ -901,10 +1247,6 @@
           "id": "Color 2:Black"
         },
         {
-          "name": "Pink",
-          "id": "Color 2:Pink"
-        },
-        {
           "name": "Yellow",
           "id": "Color 2:Yellow"
         },
@@ -939,6 +1281,10 @@
         {
           "name": "Purple",
           "id": "Color 2:Purple"
+        },
+        {
+          "name": "Pink",
+          "id": "Color 2:Pink"
         }
       ]
     },
@@ -977,14 +1323,6 @@
         {
           "name": "Pink",
           "id": "Variation:Pink"
-        },
-        {
-          "name": "Green",
-          "id": "Variation:Green"
-        },
-        {
-          "name": "Yellow",
-          "id": "Variation:Yellow"
         },
         {
           "name": "Silver",
@@ -1045,6 +1383,14 @@
         {
           "name": "Gray",
           "id": "Variation:Gray"
+        },
+        {
+          "name": "Green",
+          "id": "Variation:Green"
+        },
+        {
+          "name": "Yellow",
+          "id": "Variation:Yellow"
         },
         {
           "name": "Green bamboo",
@@ -1999,6 +2345,498 @@
           "id": "Variation:Mossy stone"
         },
         {
+          "name": "Brown stripes",
+          "id": "Variation:Brown stripes"
+        },
+        {
+          "name": "White & brown",
+          "id": "Variation:White & brown"
+        },
+        {
+          "name": "Basketballs",
+          "id": "Variation:Basketballs"
+        },
+        {
+          "name": "Soccer balls",
+          "id": "Variation:Soccer balls"
+        },
+        {
+          "name": "Volleyballs",
+          "id": "Variation:Volleyballs"
+        },
+        {
+          "name": "Dodgeballs",
+          "id": "Variation:Dodgeballs"
+        },
+        {
+          "name": "Leafy",
+          "id": "Variation:Leafy"
+        },
+        {
+          "name": "Bare",
+          "id": "Variation:Bare"
+        },
+        {
+          "name": "Closed",
+          "id": "Variation:Closed"
+        },
+        {
+          "name": "Blooming",
+          "id": "Variation:Blooming"
+        },
+        {
+          "name": "Dark gray",
+          "id": "Variation:Dark gray"
+        },
+        {
+          "name": "Pink-beige",
+          "id": "Variation:Pink-beige"
+        },
+        {
+          "name": "Blue & white",
+          "id": "Variation:Blue & white"
+        },
+        {
+          "name": "White & natural finish",
+          "id": "Variation:White & natural finish"
+        },
+        {
+          "name": "Green & black",
+          "id": "Variation:Green & black"
+        },
+        {
+          "name": "Black & dark wood",
+          "id": "Variation:Black & dark wood"
+        },
+        {
+          "name": "Brick & natural wood",
+          "id": "Variation:Brick & natural wood"
+        },
+        {
+          "name": "Yellow & black",
+          "id": "Variation:Yellow & black"
+        },
+        {
+          "name": "Brick",
+          "id": "Variation:Brick"
+        },
+        {
+          "name": "Whitestone marble",
+          "id": "Variation:Whitestone marble"
+        },
+        {
+          "name": "Blackstone marble",
+          "id": "Variation:Blackstone marble"
+        },
+        {
+          "name": "Gray stones",
+          "id": "Variation:Gray stones"
+        },
+        {
+          "name": "Pink tile",
+          "id": "Variation:Pink tile"
+        },
+        {
+          "name": "Summer peak",
+          "id": "Variation:Summer peak"
+        },
+        {
+          "name": "Fall peak",
+          "id": "Variation:Fall peak"
+        },
+        {
+          "name": "Winter peak",
+          "id": "Variation:Winter peak"
+        },
+        {
+          "name": "Red-rock peak",
+          "id": "Variation:Red-rock peak"
+        },
+        {
+          "name": "Gray-rock peak",
+          "id": "Variation:Gray-rock peak"
+        },
+        {
+          "name": "Gold & black",
+          "id": "Variation:Gold & black"
+        },
+        {
+          "name": "Green mat",
+          "id": "Variation:Green mat"
+        },
+        {
+          "name": "Modern",
+          "id": "Variation:Modern"
+        },
+        {
+          "name": "Ornate",
+          "id": "Variation:Ornate"
+        },
+        {
+          "name": "Mt. Fuji",
+          "id": "Variation:Mt. Fuji"
+        },
+        {
+          "name": "Plum blossoms",
+          "id": "Variation:Plum blossoms"
+        },
+        {
+          "name": "Roses",
+          "id": "Variation:Roses"
+        },
+        {
+          "name": "Rust",
+          "id": "Variation:Rust"
+        },
+        {
+          "name": "Warning",
+          "id": "Variation:Warning"
+        },
+        {
+          "name": "Stop",
+          "id": "Variation:Stop"
+        },
+        {
+          "name": "No Entry",
+          "id": "Variation:No Entry"
+        },
+        {
+          "name": "Slippery",
+          "id": "Variation:Slippery"
+        },
+        {
+          "name": "No Parking",
+          "id": "Variation:No Parking"
+        },
+        {
+          "name": "Black & green",
+          "id": "Variation:Black & green"
+        },
+        {
+          "name": "Black & blue",
+          "id": "Variation:Black & blue"
+        },
+        {
+          "name": "Dark green",
+          "id": "Variation:Dark green"
+        },
+        {
+          "name": "Blue tile",
+          "id": "Variation:Blue tile"
+        },
+        {
+          "name": "Blue stripes",
+          "id": "Variation:Blue stripes"
+        },
+        {
+          "name": "Pink stripes",
+          "id": "Variation:Pink stripes"
+        },
+        {
+          "name": "Salmon pink",
+          "id": "Variation:Salmon pink"
+        },
+        {
+          "name": "Classic",
+          "id": "Variation:Classic"
+        },
+        {
+          "name": "Empress-tree wood",
+          "id": "Variation:Empress-tree wood"
+        },
+        {
+          "name": "Rich brown",
+          "id": "Variation:Rich brown"
+        },
+        {
+          "name": "Antique",
+          "id": "Variation:Antique"
+        },
+        {
+          "name": "Dark blue",
+          "id": "Variation:Dark blue"
+        },
+        {
+          "name": "Berry red",
+          "id": "Variation:Berry red"
+        },
+        {
+          "name": "Floral print",
+          "id": "Variation:Floral print"
+        },
+        {
+          "name": "Language arts",
+          "id": "Variation:Language arts"
+        },
+        {
+          "name": "Void",
+          "id": "Variation:Void"
+        },
+        {
+          "name": "Liberty",
+          "id": "Variation:Liberty"
+        },
+        {
+          "name": "Alabaster",
+          "id": "Variation:Alabaster"
+        },
+        {
+          "name": "Passion",
+          "id": "Variation:Passion"
+        },
+        {
+          "name": "Ocean",
+          "id": "Variation:Ocean"
+        },
+        {
+          "name": "Grove",
+          "id": "Variation:Grove"
+        },
+        {
+          "name": "Wealth",
+          "id": "Variation:Wealth"
+        },
+        {
+          "name": "White & pink",
+          "id": "Variation:White & pink"
+        },
+        {
+          "name": "Ivory & wood",
+          "id": "Variation:Ivory & wood"
+        },
+        {
+          "name": "Ash",
+          "id": "Variation:Ash"
+        },
+        {
+          "name": "Avocado",
+          "id": "Variation:Avocado"
+        },
+        {
+          "name": "Country",
+          "id": "Variation:Country"
+        },
+        {
+          "name": "Nursery",
+          "id": "Variation:Nursery"
+        },
+        {
+          "name": "Leaves",
+          "id": "Variation:Leaves"
+        },
+        {
+          "name": "Light brown & red",
+          "id": "Variation:Light brown & red"
+        },
+        {
+          "name": "Dark brown & white",
+          "id": "Variation:Dark brown & white"
+        },
+        {
+          "name": "White & green",
+          "id": "Variation:White & green"
+        },
+        {
+          "name": "Peacock blue",
+          "id": "Variation:Peacock blue"
+        },
+        {
+          "name": "Brown & green",
+          "id": "Variation:Brown & green"
+        },
+        {
+          "name": "Ivy",
+          "id": "Variation:Ivy"
+        },
+        {
+          "name": "Blue flowers",
+          "id": "Variation:Blue flowers"
+        },
+        {
+          "name": "Purple flowers",
+          "id": "Variation:Purple flowers"
+        },
+        {
+          "name": "Pink flowers",
+          "id": "Variation:Pink flowers"
+        },
+        {
+          "name": "White flowers",
+          "id": "Variation:White flowers"
+        },
+        {
+          "name": "Yellow flowers",
+          "id": "Variation:Yellow flowers"
+        },
+        {
+          "name": "Orange flowers",
+          "id": "Variation:Orange flowers"
+        },
+        {
+          "name": "Pumpkins",
+          "id": "Variation:Pumpkins"
+        },
+        {
+          "name": "Tomatoes",
+          "id": "Variation:Tomatoes"
+        },
+        {
+          "name": "Potatoes",
+          "id": "Variation:Potatoes"
+        },
+        {
+          "name": "Carrots",
+          "id": "Variation:Carrots"
+        },
+        {
+          "name": "Sugarcane",
+          "id": "Variation:Sugarcane"
+        },
+        {
+          "name": "Flour",
+          "id": "Variation:Flour"
+        },
+        {
+          "name": "Light brick",
+          "id": "Variation:Light brick"
+        },
+        {
+          "name": "Terra-cotta",
+          "id": "Variation:Terra-cotta"
+        },
+        {
+          "name": "New",
+          "id": "Variation:New"
+        },
+        {
+          "name": "Rusty",
+          "id": "Variation:Rusty"
+        },
+        {
+          "name": "Vintage",
+          "id": "Variation:Vintage"
+        },
+        {
+          "name": "White brick",
+          "id": "Variation:White brick"
+        },
+        {
+          "name": "Sun",
+          "id": "Variation:Sun"
+        },
+        {
+          "name": "Flowers",
+          "id": "Variation:Flowers"
+        },
+        {
+          "name": "Gold & red",
+          "id": "Variation:Gold & red"
+        },
+        {
+          "name": "Gold & blue",
+          "id": "Variation:Gold & blue"
+        },
+        {
+          "name": "Silver & red",
+          "id": "Variation:Silver & red"
+        },
+        {
+          "name": "Silver & blue",
+          "id": "Variation:Silver & blue"
+        },
+        {
+          "name": "Bronze & yellow",
+          "id": "Variation:Bronze & yellow"
+        },
+        {
+          "name": "Green & gray",
+          "id": "Variation:Green & gray"
+        },
+        {
+          "name": "Simple",
+          "id": "Variation:Simple"
+        },
+        {
+          "name": "Lattice",
+          "id": "Variation:Lattice"
+        },
+        {
+          "name": "Transparent art",
+          "id": "Variation:Transparent art"
+        },
+        {
+          "name": "Colored panels",
+          "id": "Variation:Colored panels"
+        },
+        {
+          "name": "Pastel panels",
+          "id": "Variation:Pastel panels"
+        },
+        {
+          "name": "Kumiko woodworking",
+          "id": "Variation:Kumiko woodworking"
+        },
+        {
+          "name": "Japanese painting",
+          "id": "Variation:Japanese painting"
+        },
+        {
+          "name": "White tile",
+          "id": "Variation:White tile"
+        },
+        {
+          "name": "Green tile",
+          "id": "Variation:Green tile"
+        },
+        {
+          "name": "Brown stones",
+          "id": "Variation:Brown stones"
+        },
+        {
+          "name": "Silver with mat",
+          "id": "Variation:Silver with mat"
+        },
+        {
+          "name": "Gray with documents",
+          "id": "Variation:Gray with documents"
+        },
+        {
+          "name": "White with wooden top",
+          "id": "Variation:White with wooden top"
+        },
+        {
+          "name": "Pearlescent",
+          "id": "Variation:Pearlescent"
+        },
+        {
+          "name": "Vermilion",
+          "id": "Variation:Vermilion"
+        },
+        {
+          "name": "Bronze patina",
+          "id": "Variation:Bronze patina"
+        },
+        {
+          "name": "Blue & black",
+          "id": "Variation:Blue & black"
+        },
+        {
+          "name": "Vintage wood",
+          "id": "Variation:Vintage wood"
+        },
+        {
+          "name": "Bark edged",
+          "id": "Variation:Bark edged"
+        },
+        {
+          "name": "Flower",
+          "id": "Variation:Flower"
+        },
+        {
+          "name": "Yellow & white",
+          "id": "Variation:Yellow & white"
+        },
+        {
           "name": "Stacks of cash",
           "id": "Variation:Stacks of cash"
         },
@@ -2025,18 +2863,6 @@
         {
           "name": "Watermelon",
           "id": "Variation:Watermelon"
-        },
-        {
-          "name": "Whipped-cream topping",
-          "id": "Variation:Whipped-cream topping"
-        },
-        {
-          "name": "Chocolate buttercream",
-          "id": "Variation:Chocolate buttercream"
-        },
-        {
-          "name": "Strawberry buttercream",
-          "id": "Variation:Strawberry buttercream"
         },
         {
           "name": "Simple path game",
@@ -2103,28 +2929,8 @@
           "id": "Variation:Black cherry"
         },
         {
-          "name": "Milk chocolate",
-          "id": "Variation:Milk chocolate"
-        },
-        {
-          "name": "Dark chocolate",
-          "id": "Variation:Dark chocolate"
-        },
-        {
-          "name": "White chocolate",
-          "id": "Variation:White chocolate"
-        },
-        {
-          "name": "Strawberry chocolate",
-          "id": "Variation:Strawberry chocolate"
-        },
-        {
           "name": "Unglazed",
           "id": "Variation:Unglazed"
-        },
-        {
-          "name": "Simple",
-          "id": "Variation:Simple"
         },
         {
           "name": "Yellow amber",
@@ -2193,26 +2999,6 @@
         {
           "name": "Letter",
           "id": "Variation:Letter"
-        },
-        {
-          "name": "Warning",
-          "id": "Variation:Warning"
-        },
-        {
-          "name": "Stop",
-          "id": "Variation:Stop"
-        },
-        {
-          "name": "No Entry",
-          "id": "Variation:No Entry"
-        },
-        {
-          "name": "Slippery",
-          "id": "Variation:Slippery"
-        },
-        {
-          "name": "No Parking",
-          "id": "Variation:No Parking"
         },
         {
           "name": "Soda",
@@ -2299,10 +3085,6 @@
           "id": "Variation:Sepia"
         },
         {
-          "name": "Avocado",
-          "id": "Variation:Avocado"
-        },
-        {
           "name": "Plaid",
           "id": "Variation:Plaid"
         },
@@ -2319,10 +3101,6 @@
           "id": "Variation:Tea"
         },
         {
-          "name": "Dark blue",
-          "id": "Variation:Dark blue"
-        },
-        {
           "name": "Black & silver",
           "id": "Variation:Black & silver"
         },
@@ -2331,16 +3109,8 @@
           "id": "Variation:Pink & purple"
         },
         {
-          "name": "Tomatoes",
-          "id": "Variation:Tomatoes"
-        },
-        {
           "name": "Green smoothie",
           "id": "Variation:Green smoothie"
-        },
-        {
-          "name": "Carrots",
-          "id": "Variation:Carrots"
         },
         {
           "name": "Blueberries",
@@ -2419,30 +3189,6 @@
           "id": "Variation:Denim"
         },
         {
-          "name": "Cat",
-          "id": "Variation:Cat"
-        },
-        {
-          "name": "Strawberry & flowers",
-          "id": "Variation:Strawberry & flowers"
-        },
-        {
-          "name": "Carrot",
-          "id": "Variation:Carrot"
-        },
-        {
-          "name": "Dog",
-          "id": "Variation:Dog"
-        },
-        {
-          "name": "Bird",
-          "id": "Variation:Bird"
-        },
-        {
-          "name": "Chocolate",
-          "id": "Variation:Chocolate"
-        },
-        {
           "name": "Striped house",
           "id": "Variation:Striped house"
         },
@@ -2509,10 +3255,6 @@
         {
           "name": "Quilted pattern",
           "id": "Variation:Quilted pattern"
-        },
-        {
-          "name": "Flowers",
-          "id": "Variation:Flowers"
         },
         {
           "name": "Quilted animals",
@@ -2595,18 +3337,6 @@
           "id": "Variation:Savannah"
         },
         {
-          "name": "Vanilla flavored",
-          "id": "Variation:Vanilla flavored"
-        },
-        {
-          "name": "Cocoa flavored",
-          "id": "Variation:Cocoa flavored"
-        },
-        {
-          "name": "Strawberry flavored",
-          "id": "Variation:Strawberry flavored"
-        },
-        {
           "name": "Lemon & white",
           "id": "Variation:Lemon & white"
         },
@@ -2645,10 +3375,6 @@
         {
           "name": "Canned pet food",
           "id": "Variation:Canned pet food"
-        },
-        {
-          "name": "Berry red",
-          "id": "Variation:Berry red"
         },
         {
           "name": "Corn soup",
@@ -2695,10 +3421,6 @@
           "id": "Variation:Reference"
         },
         {
-          "name": "Ash",
-          "id": "Variation:Ash"
-        },
-        {
           "name": "Rattan",
           "id": "Variation:Rattan"
         },
@@ -2723,10 +3445,6 @@
           "id": "Variation:Oribe-style"
         },
         {
-          "name": "Modern",
-          "id": "Variation:Modern"
-        },
-        {
           "name": "Camphor-tree wood",
           "id": "Variation:Camphor-tree wood"
         },
@@ -2739,12 +3457,368 @@
           "id": "Variation:Zelkova wood"
         },
         {
-          "name": "Chestnut",
-          "id": "Variation:Chestnut"
+          "name": "Red & tan",
+          "id": "Variation:Red & tan"
         },
         {
-          "name": "Strawberry",
-          "id": "Variation:Strawberry"
+          "name": "Beige & brown",
+          "id": "Variation:Beige & brown"
+        },
+        {
+          "name": "Brown & red",
+          "id": "Variation:Brown & red"
+        },
+        {
+          "name": "Yellow & green",
+          "id": "Variation:Yellow & green"
+        },
+        {
+          "name": "Blue & navy",
+          "id": "Variation:Blue & navy"
+        },
+        {
+          "name": "Canned fruits & veggies",
+          "id": "Variation:Canned fruits & veggies"
+        },
+        {
+          "name": "Canned snacks",
+          "id": "Variation:Canned snacks"
+        },
+        {
+          "name": "Caprese salad",
+          "id": "Variation:Caprese salad"
+        },
+        {
+          "name": "Cold entrée with sauce",
+          "id": "Variation:Cold entrée with sauce"
+        },
+        {
+          "name": "Terrine",
+          "id": "Variation:Terrine"
+        },
+        {
+          "name": "Tteokbokki",
+          "id": "Variation:Tteokbokki"
+        },
+        {
+          "name": "Penne",
+          "id": "Variation:Penne"
+        },
+        {
+          "name": "Pilaf",
+          "id": "Variation:Pilaf"
+        },
+        {
+          "name": "Original blend",
+          "id": "Variation:Original blend"
+        },
+        {
+          "name": "Red (Mocha)",
+          "id": "Variation:Red (Mocha)"
+        },
+        {
+          "name": "Green (Kilimanjaro)",
+          "id": "Variation:Green (Kilimanjaro)"
+        },
+        {
+          "name": "Blue (Blue Mountain)",
+          "id": "Variation:Blue (Blue Mountain)"
+        },
+        {
+          "name": "Black (Decaf)",
+          "id": "Variation:Black (Decaf)"
+        },
+        {
+          "name": "Stylish",
+          "id": "Variation:Stylish"
+        },
+        {
+          "name": "Light pink",
+          "id": "Variation:Light pink"
+        },
+        {
+          "name": "Hisshou (Certain victory)",
+          "id": "Variation:Hisshou (Certain victory)"
+        },
+        {
+          "name": "Metal",
+          "id": "Variation:Metal"
+        },
+        {
+          "name": "Medium-length gold",
+          "id": "Variation:Medium-length gold"
+        },
+        {
+          "name": "Long black",
+          "id": "Variation:Long black"
+        },
+        {
+          "name": "Short brown",
+          "id": "Variation:Short brown"
+        },
+        {
+          "name": "Medium-length white",
+          "id": "Variation:Medium-length white"
+        },
+        {
+          "name": "Long red",
+          "id": "Variation:Long red"
+        },
+        {
+          "name": "Short pink",
+          "id": "Variation:Short pink"
+        },
+        {
+          "name": "Medium-length black",
+          "id": "Variation:Medium-length black"
+        },
+        {
+          "name": "Salmon",
+          "id": "Variation:Salmon"
+        },
+        {
+          "name": "Whitefish",
+          "id": "Variation:Whitefish"
+        },
+        {
+          "name": "Blueback fish",
+          "id": "Variation:Blueback fish"
+        },
+        {
+          "name": "Red-fleshed fish block",
+          "id": "Variation:Red-fleshed fish block"
+        },
+        {
+          "name": "Whitefish block",
+          "id": "Variation:Whitefish block"
+        },
+        {
+          "name": "Fatty tuna",
+          "id": "Variation:Fatty tuna"
+        },
+        {
+          "name": "Salt",
+          "id": "Variation:Salt"
+        },
+        {
+          "name": "Nuts",
+          "id": "Variation:Nuts"
+        },
+        {
+          "name": "Coffee beans",
+          "id": "Variation:Coffee beans"
+        },
+        {
+          "name": "Fruit syrup",
+          "id": "Variation:Fruit syrup"
+        },
+        {
+          "name": "Cookies",
+          "id": "Variation:Cookies"
+        },
+        {
+          "name": "Marshmallows",
+          "id": "Variation:Marshmallows"
+        },
+        {
+          "name": "Yarn",
+          "id": "Variation:Yarn"
+        },
+        {
+          "name": "Mapo tofu",
+          "id": "Variation:Mapo tofu"
+        },
+        {
+          "name": "Egg-and-tomato dish",
+          "id": "Variation:Egg-and-tomato dish"
+        },
+        {
+          "name": "Fried rice",
+          "id": "Variation:Fried rice"
+        },
+        {
+          "name": "Stir-fried peppers",
+          "id": "Variation:Stir-fried peppers"
+        },
+        {
+          "name": "Babaocai",
+          "id": "Variation:Babaocai"
+        },
+        {
+          "name": "Shrimp in chili sauce",
+          "id": "Variation:Shrimp in chili sauce"
+        },
+        {
+          "name": "Brass",
+          "id": "Variation:Brass"
+        },
+        {
+          "name": "Goukaku (Success)",
+          "id": "Variation:Goukaku (Success)"
+        },
+        {
+          "name": "Unpainted",
+          "id": "Variation:Unpainted"
+        },
+        {
+          "name": "Robots",
+          "id": "Variation:Robots"
+        },
+        {
+          "name": "Cars",
+          "id": "Variation:Cars"
+        },
+        {
+          "name": "Trains",
+          "id": "Variation:Trains"
+        },
+        {
+          "name": "Transportation",
+          "id": "Variation:Transportation"
+        },
+        {
+          "name": "Space",
+          "id": "Variation:Space"
+        },
+        {
+          "name": "Historical",
+          "id": "Variation:Historical"
+        },
+        {
+          "name": "Buildings",
+          "id": "Variation:Buildings"
+        },
+        {
+          "name": "Craft tape",
+          "id": "Variation:Craft tape"
+        },
+        {
+          "name": "Packing tape",
+          "id": "Variation:Packing tape"
+        },
+        {
+          "name": "Fabric tape",
+          "id": "Variation:Fabric tape"
+        },
+        {
+          "name": "Curing tape",
+          "id": "Variation:Curing tape"
+        },
+        {
+          "name": "Red, blue & yellow",
+          "id": "Variation:Red, blue & yellow"
+        },
+        {
+          "name": "Green, yellow & orange",
+          "id": "Variation:Green, yellow & orange"
+        },
+        {
+          "name": "Purple, red & teal",
+          "id": "Variation:Purple, red & teal"
+        },
+        {
+          "name": "Pastels",
+          "id": "Variation:Pastels"
+        },
+        {
+          "name": "Sepia tones",
+          "id": "Variation:Sepia tones"
+        },
+        {
+          "name": "Gradation",
+          "id": "Variation:Gradation"
+        },
+        {
+          "name": "Japanese newspapers",
+          "id": "Variation:Japanese newspapers"
+        },
+        {
+          "name": "Newspapers",
+          "id": "Variation:Newspapers"
+        },
+        {
+          "name": "Guidebooks",
+          "id": "Variation:Guidebooks"
+        },
+        {
+          "name": "Fashion magazines",
+          "id": "Variation:Fashion magazines"
+        },
+        {
+          "name": "Dictionaries",
+          "id": "Variation:Dictionaries"
+        },
+        {
+          "name": "Technical books",
+          "id": "Variation:Technical books"
+        },
+        {
+          "name": "Old books",
+          "id": "Variation:Old books"
+        },
+        {
+          "name": "Pearlescent white",
+          "id": "Variation:Pearlescent white"
+        },
+        {
+          "name": "Pearlescent black",
+          "id": "Variation:Pearlescent black"
+        },
+        {
+          "name": "Pearlescent pink",
+          "id": "Variation:Pearlescent pink"
+        },
+        {
+          "name": "Pearlescent yellow",
+          "id": "Variation:Pearlescent yellow"
+        },
+        {
+          "name": "Pearlescent purple",
+          "id": "Variation:Pearlescent purple"
+        },
+        {
+          "name": "Botanical",
+          "id": "Variation:Botanical"
+        },
+        {
+          "name": "Waves & cranes",
+          "id": "Variation:Waves & cranes"
+        },
+        {
+          "name": "Daffodils",
+          "id": "Variation:Daffodils"
+        },
+        {
+          "name": "Flowers & birds",
+          "id": "Variation:Flowers & birds"
+        },
+        {
+          "name": "Flowers & butterflies",
+          "id": "Variation:Flowers & butterflies"
+        },
+        {
+          "name": "Chili",
+          "id": "Variation:Chili"
+        },
+        {
+          "name": "Ramen broth",
+          "id": "Variation:Ramen broth"
+        },
+        {
+          "name": "Miso broth",
+          "id": "Variation:Miso broth"
+        },
+        {
+          "name": "Red & black",
+          "id": "Variation:Red & black"
+        },
+        {
+          "name": "Blue & red",
+          "id": "Variation:Blue & red"
+        },
+        {
+          "name": "Fish kanji",
+          "id": "Variation:Fish kanji"
         },
         {
           "name": "Signature",
@@ -2763,20 +3837,12 @@
           "id": "Variation:Words of wisdom"
         },
         {
-          "name": "Red & black",
-          "id": "Variation:Red & black"
-        },
-        {
           "name": "Pink-white",
           "id": "Variation:Pink-white"
         },
         {
           "name": "Gold & silver",
           "id": "Variation:Gold & silver"
-        },
-        {
-          "name": "Silver & blue",
-          "id": "Variation:Silver & blue"
         },
         {
           "name": "Silver & green",
@@ -2855,10 +3921,6 @@
           "id": "Variation:Ocean creatures"
         },
         {
-          "name": "Space",
-          "id": "Variation:Space"
-        },
-        {
           "name": "Still Life",
           "id": "Variation:Still Life"
         },
@@ -2883,8 +3945,12 @@
           "id": "Variation:Field of Flowers"
         },
         {
-          "name": "Blooming",
-          "id": "Variation:Blooming"
+          "name": "Dog",
+          "id": "Variation:Dog"
+        },
+        {
+          "name": "Bird",
+          "id": "Variation:Bird"
         },
         {
           "name": "Bouquet",
@@ -2907,20 +3973,12 @@
           "id": "Variation:Orange & black"
         },
         {
-          "name": "Dark gray",
-          "id": "Variation:Dark gray"
-        },
-        {
           "name": "Sports",
           "id": "Variation:Sports"
         },
         {
           "name": "University",
           "id": "Variation:University"
-        },
-        {
-          "name": "Classic",
-          "id": "Variation:Classic"
         },
         {
           "name": "Sponsor",
@@ -2961,6 +4019,38 @@
         {
           "name": "Atlantic Ocean",
           "id": "Variation:Atlantic Ocean"
+        },
+        {
+          "name": "Bright",
+          "id": "Variation:Bright"
+        },
+        {
+          "name": "Happy",
+          "id": "Variation:Happy"
+        },
+        {
+          "name": "Light purple",
+          "id": "Variation:Light purple"
+        },
+        {
+          "name": "Black & purple",
+          "id": "Variation:Black & purple"
+        },
+        {
+          "name": "Red & yellow",
+          "id": "Variation:Red & yellow"
+        },
+        {
+          "name": "Green & red",
+          "id": "Variation:Green & red"
+        },
+        {
+          "name": "Grapes",
+          "id": "Variation:Grapes"
+        },
+        {
+          "name": "Birds",
+          "id": "Variation:Birds"
         }
       ]
     },
@@ -3037,6 +4127,66 @@
           "id": "Source:Cyrus"
         },
         {
+          "name": "NewYearWorld2",
+          "id": "Source:NewYearWorld2"
+        },
+        {
+          "name": "MileExchangeATM",
+          "id": "Source:MileExchangeATM"
+        },
+        {
+          "name": "ShopOneRoom",
+          "id": "Source:ShopOneRoom"
+        },
+        {
+          "name": "MileExchangeFtrAfterED",
+          "id": "Source:MileExchangeFtrAfterED"
+        },
+        {
+          "name": "OneRoomBigFtr",
+          "id": "Source:OneRoomBigFtr"
+        },
+        {
+          "name": "WinterSolstice_JP",
+          "id": "Source:WinterSolstice_JP"
+        },
+        {
+          "name": "ShopOneRoomDefault",
+          "id": "Source:ShopOneRoomDefault"
+        },
+        {
+          "name": "ShopOneRoomMiscGoods",
+          "id": "Source:ShopOneRoomMiscGoods"
+        },
+        {
+          "name": "CafeMaster",
+          "id": "Source:CafeMaster"
+        },
+        {
+          "name": "SummerSolstice_EU",
+          "id": "Source:SummerSolstice_EU"
+        },
+        {
+          "name": "RadioExercise",
+          "id": "Source:RadioExercise"
+        },
+        {
+          "name": "ManCatalogSpTab",
+          "id": "Source:ManCatalogSpTab"
+        },
+        {
+          "name": "RecycleBox_Fr",
+          "id": "Source:RecycleBox_Fr"
+        },
+        {
+          "name": "MileExchangeStoreRoom",
+          "id": "Source:MileExchangeStoreRoom"
+        },
+        {
+          "name": "MileExchangeRecipeDIYStorage",
+          "id": "Source:MileExchangeRecipeDIYStorage"
+        },
+        {
           "name": "Nintendo",
           "id": "Source:Nintendo"
         },
@@ -3073,8 +4223,32 @@
           "id": "Source:All villagers"
         },
         {
+          "name": "ShopOneRoomMiscGoodsDefault",
+          "id": "Source:ShopOneRoomMiscGoodsDefault"
+        },
+        {
+          "name": "ShopOneRoomNonSouvenir",
+          "id": "Source:ShopOneRoomNonSouvenir"
+        },
+        {
+          "name": "BptSale",
+          "id": "Source:BptSale"
+        },
+        {
+          "name": "OneRoomBenefit",
+          "id": "Source:OneRoomBenefit"
+        },
+        {
+          "name": "NewYearEtoTiger",
+          "id": "Source:NewYearEtoTiger"
+        },
+        {
           "name": "Blathers",
           "id": "Source:Blathers"
+        },
+        {
+          "name": "MuseumComplete",
+          "id": "Source:MuseumComplete"
         },
         {
           "name": "High Friendship",
@@ -3083,6 +4257,14 @@
         {
           "name": "Check Toy Day stockings the day after Toy Day",
           "id": "Source:Check Toy Day stockings the day after Toy Day"
+        },
+        {
+          "name": "None",
+          "id": "Source:None"
+        },
+        {
+          "name": "Museum3Event",
+          "id": "Source:Museum3Event"
         },
         {
           "name": "Nook Shopping Posters",
@@ -3179,10 +4361,6 @@
           "id": "Season/Event:NA"
         },
         {
-          "name": "Summer shopping",
-          "id": "Season/Event:Summer shopping"
-        },
-        {
           "name": "Fishing Tourney",
           "id": "Season/Event:Fishing Tourney"
         },
@@ -3205,6 +4383,10 @@
         {
           "name": "Tanabata",
           "id": "Season/Event:Tanabata"
+        },
+        {
+          "name": "Summer shopping",
+          "id": "Season/Event:Summer shopping"
         },
         {
           "name": "ornaments",
@@ -3339,44 +4521,20 @@
           "id": "Season/Event:Wedding Season"
         },
         {
-          "name": "Silvester",
-          "id": "Season/Event:Silvester"
-        },
-        {
           "name": "Mother's Day",
           "id": "Season/Event:Mother's Day"
-        },
-        {
-          "name": "Valentine's Day (Nook Shopping)",
-          "id": "Season/Event:Valentine's Day (Nook Shopping)"
         },
         {
           "name": "Nature Day (Nook Shopping)",
           "id": "Season/Event:Nature Day (Nook Shopping)"
         },
         {
-          "name": "Cheese Rolling",
-          "id": "Season/Event:Cheese Rolling"
-        },
-        {
-          "name": "Dragon Boat Festival",
-          "id": "Season/Event:Dragon Boat Festival"
-        },
-        {
-          "name": "Shōgatsu (2)",
-          "id": "Season/Event:Shōgatsu (2)"
+          "name": "Valentine's Day (Nook Shopping)",
+          "id": "Season/Event:Valentine's Day (Nook Shopping)"
         },
         {
           "name": "Libra",
           "id": "Season/Event:Libra"
-        },
-        {
-          "name": "Ōmisoka",
-          "id": "Season/Event:Ōmisoka"
-        },
-        {
-          "name": "New Year's Day (Russia)",
-          "id": "Season/Event:New Year's Day (Russia)"
         },
         {
           "name": "Groundhog Day",
@@ -3415,28 +4573,12 @@
           "id": "Season/Event:New Year's Day (Asia)"
         },
         {
-          "name": "π Day",
-          "id": "Season/Event:π Day"
-        },
-        {
           "name": "Obon",
           "id": "Season/Event:Obon"
         },
         {
-          "name": "Moon-Viewing Day (2)",
-          "id": "Season/Event:Moon-Viewing Day (2)"
-        },
-        {
           "name": "Day of the Dead",
           "id": "Season/Event:Day of the Dead"
-        },
-        {
-          "name": "Moon-Viewing Day (3)",
-          "id": "Season/Event:Moon-Viewing Day (3)"
-        },
-        {
-          "name": "Chuseok",
-          "id": "Season/Event:Chuseok"
         },
         {
           "name": "International Museum Day",
@@ -3507,10 +4649,6 @@
           "id": "HHA Concept 1:music"
         },
         {
-          "name": "living room",
-          "id": "HHA Concept 1:living room"
-        },
-        {
           "name": "school",
           "id": "HHA Concept 1:school"
         },
@@ -3521,6 +4659,10 @@
         {
           "name": "garden",
           "id": "HHA Concept 1:garden"
+        },
+        {
+          "name": "living room",
+          "id": "HHA Concept 1:living room"
         },
         {
           "name": "expensive",
@@ -3593,6 +4735,90 @@
         {
           "name": "horror",
           "id": "HHA Concept 1:horror"
+        },
+        {
+          "name": "B29A1A78",
+          "id": "HHA Concept 1:B29A1A78"
+        },
+        {
+          "name": "Hospital",
+          "id": "HHA Concept 1:Hospital"
+        },
+        {
+          "name": "4FF0F8CD",
+          "id": "HHA Concept 1:4FF0F8CD"
+        },
+        {
+          "name": "Country",
+          "id": "HHA Concept 1:Country"
+        },
+        {
+          "name": "5176BB25",
+          "id": "HHA Concept 1:5176BB25"
+        },
+        {
+          "name": "EF8FD02E",
+          "id": "HHA Concept 1:EF8FD02E"
+        },
+        {
+          "name": "C4A03996",
+          "id": "HHA Concept 1:C4A03996"
+        },
+        {
+          "name": "A4C811EF",
+          "id": "HHA Concept 1:A4C811EF"
+        },
+        {
+          "name": "538ACC75",
+          "id": "HHA Concept 1:538ACC75"
+        },
+        {
+          "name": "EB39891A",
+          "id": "HHA Concept 1:EB39891A"
+        },
+        {
+          "name": "3758804A",
+          "id": "HHA Concept 1:3758804A"
+        },
+        {
+          "name": "Fashionable",
+          "id": "HHA Concept 1:Fashionable"
+        },
+        {
+          "name": "5.85E+06",
+          "id": "HHA Concept 1:5.85E+06"
+        },
+        {
+          "name": "Retro",
+          "id": "HHA Concept 1:Retro"
+        },
+        {
+          "name": "B00A78D1",
+          "id": "HHA Concept 1:B00A78D1"
+        },
+        {
+          "name": "Town",
+          "id": "HHA Concept 1:Town"
+        },
+        {
+          "name": "DF9EFF9F",
+          "id": "HHA Concept 1:DF9EFF9F"
+        },
+        {
+          "name": "6435D20D",
+          "id": "HHA Concept 1:6435D20D"
+        },
+        {
+          "name": "Sports",
+          "id": "HHA Concept 1:Sports"
+        },
+        {
+          "name": "Nature",
+          "id": "HHA Concept 1:Nature"
+        },
+        {
+          "name": "8A6AB7ED",
+          "id": "HHA Concept 1:8A6AB7ED"
         }
       ]
     },
@@ -3607,10 +4833,6 @@
         {
           "name": "None",
           "id": "HHA Concept 2:None"
-        },
-        {
-          "name": "office",
-          "id": "HHA Concept 2:office"
         },
         {
           "name": "expensive",
@@ -3661,6 +4883,10 @@
           "id": "HHA Concept 2:concert"
         },
         {
+          "name": "office",
+          "id": "HHA Concept 2:office"
+        },
+        {
           "name": "living room",
           "id": "HHA Concept 2:living room"
         },
@@ -3685,16 +4911,104 @@
           "id": "HHA Concept 2:music"
         },
         {
-          "name": "ocean",
-          "id": "HHA Concept 2:ocean"
+          "name": "Town",
+          "id": "HHA Concept 2:Town"
         },
         {
-          "name": "den",
-          "id": "HHA Concept 2:den"
+          "name": "4FF0F8CD",
+          "id": "HHA Concept 2:4FF0F8CD"
+        },
+        {
+          "name": "Fashionable",
+          "id": "HHA Concept 2:Fashionable"
+        },
+        {
+          "name": "Sports",
+          "id": "HHA Concept 2:Sports"
+        },
+        {
+          "name": "Nature",
+          "id": "HHA Concept 2:Nature"
+        },
+        {
+          "name": "5176BB25",
+          "id": "HHA Concept 2:5176BB25"
+        },
+        {
+          "name": "Resort",
+          "id": "HHA Concept 2:Resort"
+        },
+        {
+          "name": "6435D20D",
+          "id": "HHA Concept 2:6435D20D"
+        },
+        {
+          "name": "EF8FD02E",
+          "id": "HHA Concept 2:EF8FD02E"
+        },
+        {
+          "name": "B00A78D1",
+          "id": "HHA Concept 2:B00A78D1"
+        },
+        {
+          "name": "DF9EFF9F",
+          "id": "HHA Concept 2:DF9EFF9F"
+        },
+        {
+          "name": "538ACC75",
+          "id": "HHA Concept 2:538ACC75"
+        },
+        {
+          "name": "EB39891A",
+          "id": "HHA Concept 2:EB39891A"
+        },
+        {
+          "name": "3758804A",
+          "id": "HHA Concept 2:3758804A"
+        },
+        {
+          "name": "A4C811EF",
+          "id": "HHA Concept 2:A4C811EF"
+        },
+        {
+          "name": "Hospital",
+          "id": "HHA Concept 2:Hospital"
+        },
+        {
+          "name": "8A6AB7ED",
+          "id": "HHA Concept 2:8A6AB7ED"
+        },
+        {
+          "name": "B29A1A78",
+          "id": "HHA Concept 2:B29A1A78"
+        },
+        {
+          "name": "5.85E+06",
+          "id": "HHA Concept 2:5.85E+06"
+        },
+        {
+          "name": "Country",
+          "id": "HHA Concept 2:Country"
+        },
+        {
+          "name": "Retro",
+          "id": "HHA Concept 2:Retro"
         },
         {
           "name": "kitchen",
           "id": "HHA Concept 2:kitchen"
+        },
+        {
+          "name": "ocean",
+          "id": "HHA Concept 2:ocean"
+        },
+        {
+          "name": "C4A03996",
+          "id": "HHA Concept 2:C4A03996"
+        },
+        {
+          "name": "den",
+          "id": "HHA Concept 2:den"
         },
         {
           "name": "freezing cold",
@@ -3859,6 +5173,50 @@
           "id": "HHA Series:wooden block"
         },
         {
+          "name": "Cool",
+          "id": "HHA Series:Cool"
+        },
+        {
+          "name": "8B5A435B",
+          "id": "HHA Series:8B5A435B"
+        },
+        {
+          "name": "Elegant",
+          "id": "HHA Series:Elegant"
+        },
+        {
+          "name": "29B111C8",
+          "id": "HHA Series:29B111C8"
+        },
+        {
+          "name": "42224322",
+          "id": "HHA Series:42224322"
+        },
+        {
+          "name": "719EC1C4",
+          "id": "HHA Series:719EC1C4"
+        },
+        {
+          "name": "C515F721",
+          "id": "HHA Series:C515F721"
+        },
+        {
+          "name": "Country",
+          "id": "HHA Series:Country"
+        },
+        {
+          "name": "Simple",
+          "id": "HHA Series:Simple"
+        },
+        {
+          "name": "422596FF",
+          "id": "HHA Series:422596FF"
+        },
+        {
+          "name": "6EBC6A26",
+          "id": "HHA Series:6EBC6A26"
+        },
+        {
           "name": "motherly",
           "id": "HHA Series:motherly"
         }
@@ -3945,6 +5303,42 @@
           "id": "HHA Set:study"
         },
         {
+          "name": "C47890B4",
+          "id": "HHA Set:C47890B4"
+        },
+        {
+          "name": "42BEF91E",
+          "id": "HHA Set:42BEF91E"
+        },
+        {
+          "name": "A12FA829",
+          "id": "HHA Set:A12FA829"
+        },
+        {
+          "name": "Garden",
+          "id": "HHA Set:Garden"
+        },
+        {
+          "name": "Kitchen",
+          "id": "HHA Set:Kitchen"
+        },
+        {
+          "name": "99CA18C5",
+          "id": "HHA Set:99CA18C5"
+        },
+        {
+          "name": "2B65863B",
+          "id": "HHA Set:2B65863B"
+        },
+        {
+          "name": "6150ABD5",
+          "id": "HHA Set:6150ABD5"
+        },
+        {
+          "name": "AD64AD18",
+          "id": "HHA Set:AD64AD18"
+        },
+        {
           "name": "cherry",
           "id": "HHA Set:cherry"
         }
@@ -3961,10 +5355,6 @@
         {
           "name": "MusicalInstrument",
           "id": "HHA Category:MusicalInstrument"
-        },
-        {
-          "name": "AC",
-          "id": "HHA Category:AC"
         },
         {
           "name": "Clock",
@@ -3991,6 +5381,10 @@
           "id": "HHA Category:Pet"
         },
         {
+          "name": "AC",
+          "id": "HHA Category:AC"
+        },
+        {
           "name": "Plant",
           "id": "HHA Category:Plant"
         },
@@ -4009,6 +5403,14 @@
         {
           "name": "SmallGoods",
           "id": "HHA Category:SmallGoods"
+        },
+        {
+          "name": "Kitchen",
+          "id": "HHA Category:Kitchen"
+        },
+        {
+          "name": "Food",
+          "id": "HHA Category:Food"
         }
       ]
     },
@@ -4035,6 +5437,10 @@
         {
           "name": "Cheap",
           "id": "Speaker Type:Cheap"
+        },
+        {
+          "name": "964812AF",
+          "id": "Speaker Type:964812AF"
         }
       ]
     },
@@ -4065,6 +5471,10 @@
         {
           "name": "Emission",
           "id": "Lighting Type:Emission"
+        },
+        {
+          "name": "Shade",
+          "id": "Lighting Type:Shade"
         }
       ]
     }
@@ -4601,8 +6011,40 @@
           "id": "Variation:Sky blue"
         },
         {
+          "name": "White & black",
+          "id": "Variation:White & black"
+        },
+        {
+          "name": "White & green",
+          "id": "Variation:White & green"
+        },
+        {
+          "name": "White & yellow",
+          "id": "Variation:White & yellow"
+        },
+        {
+          "name": "Coral",
+          "id": "Variation:Coral"
+        },
+        {
+          "name": "Dark green",
+          "id": "Variation:Dark green"
+        },
+        {
           "name": "Magenta",
           "id": "Variation:Magenta"
+        },
+        {
+          "name": "Light blue & pink",
+          "id": "Variation:Light blue & pink"
+        },
+        {
+          "name": "Pink & yellow",
+          "id": "Variation:Pink & yellow"
+        },
+        {
+          "name": "Orange & lime",
+          "id": "Variation:Orange & lime"
         },
         {
           "name": "Zebra",
@@ -4761,10 +6203,6 @@
           "id": "Variation:Denim"
         },
         {
-          "name": "Coral",
-          "id": "Variation:Coral"
-        },
-        {
           "name": "Energetic plaid",
           "id": "Variation:Energetic plaid"
         },
@@ -4893,12 +6331,112 @@
           "id": "Variation:Light gray"
         },
         {
-          "name": "Indigo blue",
-          "id": "Variation:Indigo blue"
+          "name": "Pale blue",
+          "id": "Variation:Pale blue"
+        },
+        {
+          "name": "Neon blue",
+          "id": "Variation:Neon blue"
+        },
+        {
+          "name": "Neon orange",
+          "id": "Variation:Neon orange"
+        },
+        {
+          "name": "Neon pink",
+          "id": "Variation:Neon pink"
+        },
+        {
+          "name": "Neon green",
+          "id": "Variation:Neon green"
         },
         {
           "name": "Fuchsia",
           "id": "Variation:Fuchsia"
+        },
+        {
+          "name": "Pale green",
+          "id": "Variation:Pale green"
+        },
+        {
+          "name": "Tamashii (Soul)",
+          "id": "Variation:Tamashii (Soul)"
+        },
+        {
+          "name": "Kizuna (Bond)",
+          "id": "Variation:Kizuna (Bond)"
+        },
+        {
+          "name": "Men (Noodles)",
+          "id": "Variation:Men (Noodles)"
+        },
+        {
+          "name": "Yume (Dream)",
+          "id": "Variation:Yume (Dream)"
+        },
+        {
+          "name": "Purple necktie",
+          "id": "Variation:Purple necktie"
+        },
+        {
+          "name": "Red roses on black",
+          "id": "Variation:Red roses on black"
+        },
+        {
+          "name": "Orange roses on blue",
+          "id": "Variation:Orange roses on blue"
+        },
+        {
+          "name": "Blue roses on white",
+          "id": "Variation:Blue roses on white"
+        },
+        {
+          "name": "Yellow roses on white",
+          "id": "Variation:Yellow roses on white"
+        },
+        {
+          "name": "Pink necktie",
+          "id": "Variation:Pink necktie"
+        },
+        {
+          "name": "Blue necktie",
+          "id": "Variation:Blue necktie"
+        },
+        {
+          "name": "Green necktie",
+          "id": "Variation:Green necktie"
+        },
+        {
+          "name": "White towel & white shirt",
+          "id": "Variation:White towel & white shirt"
+        },
+        {
+          "name": "Red towel & white shirt",
+          "id": "Variation:Red towel & white shirt"
+        },
+        {
+          "name": "Blue towel & white shirt",
+          "id": "Variation:Blue towel & white shirt"
+        },
+        {
+          "name": "Black towel & white shirt",
+          "id": "Variation:Black towel & white shirt"
+        },
+        {
+          "name": "Pink towel & black shirt",
+          "id": "Variation:Pink towel & black shirt"
+        },
+        {
+          "name": "Orange towel & black shirt",
+          "id": "Variation:Orange towel & black shirt"
+        },
+        {
+          "name": "Green towel & black shirt",
+          "id": "Variation:Green towel & black shirt"
+        },
+        {
+          "name": "Indigo blue",
+          "id": "Variation:Indigo blue"
         },
         {
           "name": "Vermilion",
@@ -4907,10 +6445,6 @@
         {
           "name": "Yellow-green",
           "id": "Variation:Yellow-green"
-        },
-        {
-          "name": "Dark green",
-          "id": "Variation:Dark green"
         },
         {
           "name": "Pale orange",
@@ -4927,10 +6461,6 @@
         {
           "name": "Green & blue",
           "id": "Variation:Green & blue"
-        },
-        {
-          "name": "Pale blue",
-          "id": "Variation:Pale blue"
         },
         {
           "name": "Pop",
@@ -4975,10 +6505,6 @@
         {
           "name": "Stars",
           "id": "Variation:Stars"
-        },
-        {
-          "name": "Pale green",
-          "id": "Variation:Pale green"
         },
         {
           "name": "Muslin",
@@ -5027,6 +6553,10 @@
         {
           "name": "Greige",
           "id": "Variation:Greige"
+        },
+        {
+          "name": "Light pink",
+          "id": "Variation:Light pink"
         },
         {
           "name": "Blue & red",
@@ -5097,10 +6627,6 @@
           "id": "Variation:Red & light blue"
         },
         {
-          "name": "Pink & yellow",
-          "id": "Variation:Pink & yellow"
-        },
-        {
           "name": "Yellow & purple",
           "id": "Variation:Yellow & purple"
         },
@@ -5121,8 +6647,8 @@
           "id": "Variation:Purple & green"
         },
         {
-          "name": "Light pink",
-          "id": "Variation:Light pink"
+          "name": "Black & pink",
+          "id": "Variation:Black & pink"
         },
         {
           "name": "Polka dots",
@@ -5139,6 +6665,10 @@
         {
           "name": "Colorful quilt design",
           "id": "Variation:Colorful quilt design"
+        },
+        {
+          "name": "Ash",
+          "id": "Variation:Ash"
         }
       ]
     },
@@ -5233,12 +6763,20 @@
           "id": "Source:Gullivarrr"
         },
         {
+          "name": "NotAvailable",
+          "id": "Source:NotAvailable"
+        },
+        {
           "name": "Recycle box",
           "id": "Source:Recycle box"
         },
         {
           "name": "Nintendo",
           "id": "Source:Nintendo"
+        },
+        {
+          "name": "VeniceCarnival",
+          "id": "Source:VeniceCarnival"
         },
         {
           "name": "Nook Shopping Daily Selection",
@@ -5257,12 +6795,36 @@
           "id": "Source:Mom"
         },
         {
+          "name": "OneRoomTailorKKFes",
+          "id": "Source:OneRoomTailorKKFes"
+        },
+        {
+          "name": "NookLink",
+          "id": "Source:NookLink"
+        },
+        {
+          "name": "Tomatina",
+          "id": "Source:Tomatina"
+        },
+        {
+          "name": "RadioExercise",
+          "id": "Source:RadioExercise"
+        },
+        {
           "name": "Nook's Cranny",
           "id": "Source:Nook's Cranny"
         },
         {
           "name": "Kicks",
           "id": "Source:Kicks"
+        },
+        {
+          "name": "ShoesBagShop_Commune",
+          "id": "Source:ShoesBagShop_Commune"
+        },
+        {
+          "name": "ManCatalogSpTab",
+          "id": "Source:ManCatalogSpTab"
         }
       ]
     },
@@ -5727,6 +7289,10 @@
           "id": "Tag:Iron"
         },
         {
+          "name": "FloorSimpleGlodSilverBronze",
+          "id": "Tag:FloorSimpleGlodSilverBronze"
+        },
+        {
           "name": "Slender Rugs",
           "id": "Tag:Slender Rugs"
         },
@@ -5941,6 +7507,14 @@
         {
           "name": "Special Inorganic Walls",
           "id": "Tag:Special Inorganic Walls"
+        },
+        {
+          "name": "WallFacility",
+          "id": "Tag:WallFacility"
+        },
+        {
+          "name": "WallGoldSilverBronze",
+          "id": "Tag:WallGoldSilverBronze"
         }
       ]
     },
@@ -6117,6 +7691,14 @@
           "id": "Source:Franklin"
         },
         {
+          "name": "CmlCommune_WallFloor",
+          "id": "Source:CmlCommune_WallFloor"
+        },
+        {
+          "name": "ManCatalogSpTab",
+          "id": "Source:ManCatalogSpTab"
+        },
+        {
           "name": "Nintendo",
           "id": "Source:Nintendo"
         },
@@ -6131,6 +7713,18 @@
         {
           "name": "Mom",
           "id": "Source:Mom"
+        },
+        {
+          "name": "CmlCommune_RugM",
+          "id": "Source:CmlCommune_RugM"
+        },
+        {
+          "name": "CmlCommune_RugL",
+          "id": "Source:CmlCommune_RugL"
+        },
+        {
+          "name": "CmlCommune_RugS",
+          "id": "Source:CmlCommune_RugS"
         }
       ]
     },
@@ -6179,6 +7773,10 @@
         {
           "name": "4x4",
           "id": "Size:4x4"
+        },
+        {
+          "name": "1x1",
+          "id": "Size:1x1"
         }
       ]
     },
@@ -6391,8 +7989,52 @@
           "id": "HHA Concept 1:heritage"
         },
         {
+          "name": "Country",
+          "id": "HHA Concept 1:Country"
+        },
+        {
+          "name": "EF8FD02E",
+          "id": "HHA Concept 1:EF8FD02E"
+        },
+        {
+          "name": "Nature",
+          "id": "HHA Concept 1:Nature"
+        },
+        {
+          "name": "Town",
+          "id": "HHA Concept 1:Town"
+        },
+        {
+          "name": "Fashionable",
+          "id": "HHA Concept 1:Fashionable"
+        },
+        {
+          "name": "Hospital",
+          "id": "HHA Concept 1:Hospital"
+        },
+        {
+          "name": "4FF0F8CD",
+          "id": "HHA Concept 1:4FF0F8CD"
+        },
+        {
+          "name": "None",
+          "id": "HHA Concept 1:None"
+        },
+        {
           "name": "outdoors",
           "id": "HHA Concept 1:outdoors"
+        },
+        {
+          "name": "Sports",
+          "id": "HHA Concept 1:Sports"
+        },
+        {
+          "name": "5.85E+06",
+          "id": "HHA Concept 1:5.85E+06"
+        },
+        {
+          "name": "concert",
+          "id": "HHA Concept 1:concert"
         },
         {
           "name": "office",
@@ -6401,6 +8043,26 @@
         {
           "name": "music",
           "id": "HHA Concept 1:music"
+        },
+        {
+          "name": "EB39891A",
+          "id": "HHA Concept 1:EB39891A"
+        },
+        {
+          "name": "A4C811EF",
+          "id": "HHA Concept 1:A4C811EF"
+        },
+        {
+          "name": "538ACC75",
+          "id": "HHA Concept 1:538ACC75"
+        },
+        {
+          "name": "3758804A",
+          "id": "HHA Concept 1:3758804A"
+        },
+        {
+          "name": "DF9EFF9F",
+          "id": "HHA Concept 1:DF9EFF9F"
         }
       ]
     },
@@ -6473,8 +8135,60 @@
           "id": "HHA Concept 2:garden"
         },
         {
+          "name": "Town",
+          "id": "HHA Concept 2:Town"
+        },
+        {
+          "name": "6435D20D",
+          "id": "HHA Concept 2:6435D20D"
+        },
+        {
+          "name": "concert",
+          "id": "HHA Concept 2:concert"
+        },
+        {
+          "name": "A4C811EF",
+          "id": "HHA Concept 2:A4C811EF"
+        },
+        {
+          "name": "Sports",
+          "id": "HHA Concept 2:Sports"
+        },
+        {
+          "name": "8A6AB7ED",
+          "id": "HHA Concept 2:8A6AB7ED"
+        },
+        {
+          "name": "DF9EFF9F",
+          "id": "HHA Concept 2:DF9EFF9F"
+        },
+        {
+          "name": "Retro",
+          "id": "HHA Concept 2:Retro"
+        },
+        {
+          "name": "B29A1A78",
+          "id": "HHA Concept 2:B29A1A78"
+        },
+        {
           "name": "kitchen",
           "id": "HHA Concept 2:kitchen"
+        },
+        {
+          "name": "5176BB25",
+          "id": "HHA Concept 2:5176BB25"
+        },
+        {
+          "name": "EB39891A",
+          "id": "HHA Concept 2:EB39891A"
+        },
+        {
+          "name": "5.85E+06",
+          "id": "HHA Concept 2:5.85E+06"
+        },
+        {
+          "name": "Country",
+          "id": "HHA Concept 2:Country"
         },
         {
           "name": "ocean",
@@ -6483,6 +8197,22 @@
         {
           "name": "den",
           "id": "HHA Concept 2:den"
+        },
+        {
+          "name": "Nature",
+          "id": "HHA Concept 2:Nature"
+        },
+        {
+          "name": "3758804A",
+          "id": "HHA Concept 2:3758804A"
+        },
+        {
+          "name": "EF8FD02E",
+          "id": "HHA Concept 2:EF8FD02E"
+        },
+        {
+          "name": "538ACC75",
+          "id": "HHA Concept 2:538ACC75"
         }
       ]
     },
@@ -7337,6 +9067,66 @@
           "id": "Source:Cyrus"
         },
         {
+          "name": "NewYearWorld2",
+          "id": "Source:NewYearWorld2"
+        },
+        {
+          "name": "MileExchangeATM",
+          "id": "Source:MileExchangeATM"
+        },
+        {
+          "name": "ShopOneRoom",
+          "id": "Source:ShopOneRoom"
+        },
+        {
+          "name": "MileExchangeFtrAfterED",
+          "id": "Source:MileExchangeFtrAfterED"
+        },
+        {
+          "name": "OneRoomBigFtr",
+          "id": "Source:OneRoomBigFtr"
+        },
+        {
+          "name": "WinterSolstice_JP",
+          "id": "Source:WinterSolstice_JP"
+        },
+        {
+          "name": "ShopOneRoomDefault",
+          "id": "Source:ShopOneRoomDefault"
+        },
+        {
+          "name": "ShopOneRoomMiscGoods",
+          "id": "Source:ShopOneRoomMiscGoods"
+        },
+        {
+          "name": "CafeMaster",
+          "id": "Source:CafeMaster"
+        },
+        {
+          "name": "SummerSolstice_EU",
+          "id": "Source:SummerSolstice_EU"
+        },
+        {
+          "name": "RadioExercise",
+          "id": "Source:RadioExercise"
+        },
+        {
+          "name": "ManCatalogSpTab",
+          "id": "Source:ManCatalogSpTab"
+        },
+        {
+          "name": "RecycleBox_Fr",
+          "id": "Source:RecycleBox_Fr"
+        },
+        {
+          "name": "MileExchangeStoreRoom",
+          "id": "Source:MileExchangeStoreRoom"
+        },
+        {
+          "name": "MileExchangeRecipeDIYStorage",
+          "id": "Source:MileExchangeRecipeDIYStorage"
+        },
+        {
           "name": "Nintendo",
           "id": "Source:Nintendo"
         },
@@ -7373,8 +9163,32 @@
           "id": "Source:All villagers"
         },
         {
+          "name": "ShopOneRoomMiscGoodsDefault",
+          "id": "Source:ShopOneRoomMiscGoodsDefault"
+        },
+        {
+          "name": "ShopOneRoomNonSouvenir",
+          "id": "Source:ShopOneRoomNonSouvenir"
+        },
+        {
+          "name": "BptSale",
+          "id": "Source:BptSale"
+        },
+        {
+          "name": "OneRoomBenefit",
+          "id": "Source:OneRoomBenefit"
+        },
+        {
+          "name": "NewYearEtoTiger",
+          "id": "Source:NewYearEtoTiger"
+        },
+        {
           "name": "Blathers",
           "id": "Source:Blathers"
+        },
+        {
+          "name": "MuseumComplete",
+          "id": "Source:MuseumComplete"
         },
         {
           "name": "High Friendship",
@@ -7383,6 +9197,14 @@
         {
           "name": "Check Toy Day stockings the day after Toy Day",
           "id": "Source:Check Toy Day stockings the day after Toy Day"
+        },
+        {
+          "name": "None",
+          "id": "Source:None"
+        },
+        {
+          "name": "Museum3Event",
+          "id": "Source:Museum3Event"
         },
         {
           "name": "Nook Shopping Posters",
@@ -7409,16 +9231,52 @@
           "id": "Source:Tom Nook"
         },
         {
+          "name": "NotAvailable",
+          "id": "Source:NotAvailable"
+        },
+        {
           "name": "Recycle box",
           "id": "Source:Recycle box"
+        },
+        {
+          "name": "VeniceCarnival",
+          "id": "Source:VeniceCarnival"
+        },
+        {
+          "name": "OneRoomTailorKKFes",
+          "id": "Source:OneRoomTailorKKFes"
+        },
+        {
+          "name": "Tomatina",
+          "id": "Source:Tomatina"
         },
         {
           "name": "Kicks",
           "id": "Source:Kicks"
         },
         {
+          "name": "ShoesBagShop_Commune",
+          "id": "Source:ShoesBagShop_Commune"
+        },
+        {
           "name": "Saharah",
           "id": "Source:Saharah"
+        },
+        {
+          "name": "CmlCommune_WallFloor",
+          "id": "Source:CmlCommune_WallFloor"
+        },
+        {
+          "name": "CmlCommune_RugM",
+          "id": "Source:CmlCommune_RugM"
+        },
+        {
+          "name": "CmlCommune_RugL",
+          "id": "Source:CmlCommune_RugL"
+        },
+        {
+          "name": "CmlCommune_RugS",
+          "id": "Source:CmlCommune_RugS"
         },
         {
           "name": "Balloons",
@@ -7565,6 +9423,78 @@
           "id": "Source:Collecting wood eggs"
         },
         {
+          "name": "Efitem",
+          "id": "Source:Efitem"
+        },
+        {
+          "name": "6C1BC3CE",
+          "id": "Source:6C1BC3CE"
+        },
+        {
+          "name": "BA81C736",
+          "id": "Source:BA81C736"
+        },
+        {
+          "name": "FDC091E1",
+          "id": "Source:FDC091E1"
+        },
+        {
+          "name": "EF366997",
+          "id": "Source:EF366997"
+        },
+        {
+          "name": "415F291C",
+          "id": "Source:415F291C"
+        },
+        {
+          "name": "3E61747E",
+          "id": "Source:3E61747E"
+        },
+        {
+          "name": "667FEF40",
+          "id": "Source:667FEF40"
+        },
+        {
+          "name": "776D5010",
+          "id": "Source:776D5010"
+        },
+        {
+          "name": "5AE3CBEB",
+          "id": "Source:5AE3CBEB"
+        },
+        {
+          "name": "27A71BCC",
+          "id": "Source:27A71BCC"
+        },
+        {
+          "name": "D3B03812",
+          "id": "Source:D3B03812"
+        },
+        {
+          "name": "440FBB4E",
+          "id": "Source:440FBB4E"
+        },
+        {
+          "name": "8913E9E7",
+          "id": "Source:8913E9E7"
+        },
+        {
+          "name": "DDC68604",
+          "id": "Source:DDC68604"
+        },
+        {
+          "name": "93B62DA1",
+          "id": "Source:93B62DA1"
+        },
+        {
+          "name": "00E89F29",
+          "id": "Source:00E89F29"
+        },
+        {
+          "name": "37A52400",
+          "id": "Source:37A52400"
+        },
+        {
           "name": "Redd's Raffle",
           "id": "Source:Redd's Raffle"
         },
@@ -7575,6 +9505,22 @@
         {
           "name": "May Day Tour",
           "id": "Source:May Day Tour"
+        },
+        {
+          "name": "FoxCommuneFood",
+          "id": "Source:FoxCommuneFood"
+        },
+        {
+          "name": "FoxCommuneSubtool",
+          "id": "Source:FoxCommuneSubtool"
+        },
+        {
+          "name": "ShopSubTool",
+          "id": "Source:ShopSubTool"
+        },
+        {
+          "name": "FoxCommuneBook",
+          "id": "Source:FoxCommuneBook"
         },
         {
           "name": "Assessing fossils",
@@ -7653,6 +9599,14 @@
           "id": "Source:Planting a bamboo shoot"
         },
         {
+          "name": "ShopCookingRecipeBook1",
+          "id": "Source:ShopCookingRecipeBook1"
+        },
+        {
+          "name": "MileExchangeDIYRecipePlus",
+          "id": "Source:MileExchangeDIYRecipePlus"
+        },
+        {
           "name": "Glowing dig spot",
           "id": "Source:Glowing dig spot"
         },
@@ -7717,6 +9671,14 @@
           "id": "Source:Beach"
         },
         {
+          "name": "MileExchangeOfficePlus",
+          "id": "Source:MileExchangeOfficePlus"
+        },
+        {
+          "name": "MileExchangeFenceRemake",
+          "id": "Source:MileExchangeFenceRemake"
+        },
+        {
           "name": "Nook Shopping",
           "id": "Source:Nook Shopping"
         },
@@ -7733,6 +9695,10 @@
           "id": "Source:Picking pumpkins"
         },
         {
+          "name": "BrokenGyroid",
+          "id": "Source:BrokenGyroid"
+        },
+        {
           "name": "Chopping a tree",
           "id": "Source:Chopping a tree"
         },
@@ -7745,12 +9711,20 @@
           "id": "Source:Reese"
         },
         {
+          "name": "MileExchangeTipsApp",
+          "id": "Source:MileExchangeTipsApp"
+        },
+        {
           "name": "5-star town status",
           "id": "Source:5-star town status"
         },
         {
           "name": "Burying bells in a glowing spot",
           "id": "Source:Burying bells in a glowing spot"
+        },
+        {
+          "name": "MileExchangeReactionv200",
+          "id": "Source:MileExchangeReactionv200"
         },
         {
           "name": "Orange Tree",
@@ -7785,12 +9759,28 @@
           "id": "Source:Mail"
         },
         {
+          "name": "MileExchangeBridgeSlopePlus",
+          "id": "Source:MileExchangeBridgeSlopePlus"
+        },
+        {
+          "name": "MileExchangeInteriorPRO",
+          "id": "Source:MileExchangeInteriorPRO"
+        },
+        {
           "name": "Digging up a pumpkin plant",
           "id": "Source:Digging up a pumpkin plant"
         },
         {
           "name": "Expired turnips",
           "id": "Source:Expired turnips"
+        },
+        {
+          "name": "MileExchangeHairStylev200",
+          "id": "Source:MileExchangeHairStylev200"
+        },
+        {
+          "name": "Harvest_CookingRecipeBook",
+          "id": "Source:Harvest_CookingRecipeBook"
         },
         {
           "name": "Use a fountain firework",
@@ -7821,10 +9811,6 @@
         {
           "name": "Musical Instrument",
           "id": "Tag:Musical Instrument"
-        },
-        {
-          "name": "Fan",
-          "id": "Tag:Fan"
         },
         {
           "name": "Hospital",
@@ -7987,6 +9973,10 @@
           "id": "Tag:Playground"
         },
         {
+          "name": "Fan",
+          "id": "Tag:Fan"
+        },
+        {
           "name": "Toilet",
           "id": "Tag:Toilet"
         },
@@ -8067,6 +10057,14 @@
           "id": "Tag:Special Fish"
         },
         {
+          "name": "TableClock",
+          "id": "Tag:TableClock"
+        },
+        {
+          "name": "Bromide",
+          "id": "Tag:Bromide"
+        },
+        {
           "name": "Air Conditioning",
           "id": "Tag:Air Conditioning"
         },
@@ -8077,6 +10075,14 @@
         {
           "name": "Sculpture",
           "id": "Tag:Sculpture"
+        },
+        {
+          "name": "CeilingEtc",
+          "id": "Tag:CeilingEtc"
+        },
+        {
+          "name": "CeilingLamp",
+          "id": "Tag:CeilingLamp"
         },
         {
           "name": "Tile Floors",
@@ -8257,6 +10263,10 @@
         {
           "name": "Iron",
           "id": "Tag:Iron"
+        },
+        {
+          "name": "FloorSimpleGlodSilverBronze",
+          "id": "Tag:FloorSimpleGlodSilverBronze"
         },
         {
           "name": "Slender Rugs",
@@ -8471,6 +10481,14 @@
           "id": "Tag:Special Inorganic Walls"
         },
         {
+          "name": "WallFacility",
+          "id": "Tag:WallFacility"
+        },
+        {
+          "name": "WallGoldSilverBronze",
+          "id": "Tag:WallGoldSilverBronze"
+        },
+        {
           "name": "Picture",
           "id": "Tag:Picture"
         },
@@ -8483,8 +10501,32 @@
           "id": "Tag:Unnecessary"
         },
         {
+          "name": "Pillar",
+          "id": "Tag:Pillar"
+        },
+        {
           "name": "FossilUnknown",
           "id": "Tag:FossilUnknown"
+        },
+        {
+          "name": "FieldWeedLight",
+          "id": "Tag:FieldWeedLight"
+        },
+        {
+          "name": "HaniwaPiece",
+          "id": "Tag:HaniwaPiece"
+        },
+        {
+          "name": "Counter",
+          "id": "Tag:Counter"
+        },
+        {
+          "name": "FtrWall",
+          "id": "Tag:FtrWall"
+        },
+        {
+          "name": "FieldVine",
+          "id": "Tag:FieldVine"
         }
       ]
     },
@@ -8757,10 +10799,6 @@
           "id": "Season/Event:NA"
         },
         {
-          "name": "Summer shopping",
-          "id": "Season/Event:Summer shopping"
-        },
-        {
           "name": "Fishing Tourney",
           "id": "Season/Event:Fishing Tourney"
         },
@@ -8783,6 +10821,10 @@
         {
           "name": "Tanabata",
           "id": "Season/Event:Tanabata"
+        },
+        {
+          "name": "Summer shopping",
+          "id": "Season/Event:Summer shopping"
         },
         {
           "name": "ornaments",
@@ -8917,44 +10959,20 @@
           "id": "Season/Event:Wedding Season"
         },
         {
-          "name": "Silvester",
-          "id": "Season/Event:Silvester"
-        },
-        {
           "name": "Mother's Day",
           "id": "Season/Event:Mother's Day"
-        },
-        {
-          "name": "Valentine's Day (Nook Shopping)",
-          "id": "Season/Event:Valentine's Day (Nook Shopping)"
         },
         {
           "name": "Nature Day (Nook Shopping)",
           "id": "Season/Event:Nature Day (Nook Shopping)"
         },
         {
-          "name": "Cheese Rolling",
-          "id": "Season/Event:Cheese Rolling"
-        },
-        {
-          "name": "Dragon Boat Festival",
-          "id": "Season/Event:Dragon Boat Festival"
-        },
-        {
-          "name": "Shōgatsu (2)",
-          "id": "Season/Event:Shōgatsu (2)"
+          "name": "Valentine's Day (Nook Shopping)",
+          "id": "Season/Event:Valentine's Day (Nook Shopping)"
         },
         {
           "name": "Libra",
           "id": "Season/Event:Libra"
-        },
-        {
-          "name": "Ōmisoka",
-          "id": "Season/Event:Ōmisoka"
-        },
-        {
-          "name": "New Year's Day (Russia)",
-          "id": "Season/Event:New Year's Day (Russia)"
         },
         {
           "name": "Groundhog Day",
@@ -8993,28 +11011,12 @@
           "id": "Season/Event:New Year's Day (Asia)"
         },
         {
-          "name": "π Day",
-          "id": "Season/Event:π Day"
-        },
-        {
           "name": "Obon",
           "id": "Season/Event:Obon"
         },
         {
-          "name": "Moon-Viewing Day (2)",
-          "id": "Season/Event:Moon-Viewing Day (2)"
-        },
-        {
           "name": "Day of the Dead",
           "id": "Season/Event:Day of the Dead"
-        },
-        {
-          "name": "Moon-Viewing Day (3)",
-          "id": "Season/Event:Moon-Viewing Day (3)"
-        },
-        {
-          "name": "Chuseok",
-          "id": "Season/Event:Chuseok"
         },
         {
           "name": "International Museum Day",
@@ -9209,6 +11211,18 @@
         {
           "name": "Wall-mounted",
           "id": "Category:Wall-mounted"
+        },
+        {
+          "name": "Food",
+          "id": "Category:Food"
+        },
+        {
+          "name": "Desert",
+          "id": "Category:Desert"
+        },
+        {
+          "name": "Ceiling",
+          "id": "Category:Ceiling"
         },
         {
           "name": "Bridge",
@@ -9595,16 +11609,16 @@
           "id": "Color 1:Pink"
         },
         {
-          "name": "Green",
-          "id": "Color 1:Green"
-        },
-        {
           "name": "Colorful",
           "id": "Color 1:Colorful"
         },
         {
           "name": "Gray",
           "id": "Color 1:Gray"
+        },
+        {
+          "name": "Green",
+          "id": "Color 1:Green"
         },
         {
           "name": "Orange",
@@ -9645,10 +11659,6 @@
           "id": "Color 2:Black"
         },
         {
-          "name": "Pink",
-          "id": "Color 2:Pink"
-        },
-        {
           "name": "Yellow",
           "id": "Color 2:Yellow"
         },
@@ -9683,6 +11693,10 @@
         {
           "name": "Purple",
           "id": "Color 2:Purple"
+        },
+        {
+          "name": "Pink",
+          "id": "Color 2:Pink"
         },
         {
           "name": "None",
@@ -9777,14 +11791,6 @@
           "id": "Variation:Pink"
         },
         {
-          "name": "Green",
-          "id": "Variation:Green"
-        },
-        {
-          "name": "Yellow",
-          "id": "Variation:Yellow"
-        },
-        {
           "name": "Silver",
           "id": "Variation:Silver"
         },
@@ -9843,6 +11849,14 @@
         {
           "name": "Gray",
           "id": "Variation:Gray"
+        },
+        {
+          "name": "Green",
+          "id": "Variation:Green"
+        },
+        {
+          "name": "Yellow",
+          "id": "Variation:Yellow"
         },
         {
           "name": "Green bamboo",
@@ -10797,6 +12811,498 @@
           "id": "Variation:Mossy stone"
         },
         {
+          "name": "Brown stripes",
+          "id": "Variation:Brown stripes"
+        },
+        {
+          "name": "White & brown",
+          "id": "Variation:White & brown"
+        },
+        {
+          "name": "Basketballs",
+          "id": "Variation:Basketballs"
+        },
+        {
+          "name": "Soccer balls",
+          "id": "Variation:Soccer balls"
+        },
+        {
+          "name": "Volleyballs",
+          "id": "Variation:Volleyballs"
+        },
+        {
+          "name": "Dodgeballs",
+          "id": "Variation:Dodgeballs"
+        },
+        {
+          "name": "Leafy",
+          "id": "Variation:Leafy"
+        },
+        {
+          "name": "Bare",
+          "id": "Variation:Bare"
+        },
+        {
+          "name": "Closed",
+          "id": "Variation:Closed"
+        },
+        {
+          "name": "Blooming",
+          "id": "Variation:Blooming"
+        },
+        {
+          "name": "Dark gray",
+          "id": "Variation:Dark gray"
+        },
+        {
+          "name": "Pink-beige",
+          "id": "Variation:Pink-beige"
+        },
+        {
+          "name": "Blue & white",
+          "id": "Variation:Blue & white"
+        },
+        {
+          "name": "White & natural finish",
+          "id": "Variation:White & natural finish"
+        },
+        {
+          "name": "Green & black",
+          "id": "Variation:Green & black"
+        },
+        {
+          "name": "Black & dark wood",
+          "id": "Variation:Black & dark wood"
+        },
+        {
+          "name": "Brick & natural wood",
+          "id": "Variation:Brick & natural wood"
+        },
+        {
+          "name": "Yellow & black",
+          "id": "Variation:Yellow & black"
+        },
+        {
+          "name": "Brick",
+          "id": "Variation:Brick"
+        },
+        {
+          "name": "Whitestone marble",
+          "id": "Variation:Whitestone marble"
+        },
+        {
+          "name": "Blackstone marble",
+          "id": "Variation:Blackstone marble"
+        },
+        {
+          "name": "Gray stones",
+          "id": "Variation:Gray stones"
+        },
+        {
+          "name": "Pink tile",
+          "id": "Variation:Pink tile"
+        },
+        {
+          "name": "Summer peak",
+          "id": "Variation:Summer peak"
+        },
+        {
+          "name": "Fall peak",
+          "id": "Variation:Fall peak"
+        },
+        {
+          "name": "Winter peak",
+          "id": "Variation:Winter peak"
+        },
+        {
+          "name": "Red-rock peak",
+          "id": "Variation:Red-rock peak"
+        },
+        {
+          "name": "Gray-rock peak",
+          "id": "Variation:Gray-rock peak"
+        },
+        {
+          "name": "Gold & black",
+          "id": "Variation:Gold & black"
+        },
+        {
+          "name": "Green mat",
+          "id": "Variation:Green mat"
+        },
+        {
+          "name": "Modern",
+          "id": "Variation:Modern"
+        },
+        {
+          "name": "Ornate",
+          "id": "Variation:Ornate"
+        },
+        {
+          "name": "Mt. Fuji",
+          "id": "Variation:Mt. Fuji"
+        },
+        {
+          "name": "Plum blossoms",
+          "id": "Variation:Plum blossoms"
+        },
+        {
+          "name": "Roses",
+          "id": "Variation:Roses"
+        },
+        {
+          "name": "Rust",
+          "id": "Variation:Rust"
+        },
+        {
+          "name": "Warning",
+          "id": "Variation:Warning"
+        },
+        {
+          "name": "Stop",
+          "id": "Variation:Stop"
+        },
+        {
+          "name": "No Entry",
+          "id": "Variation:No Entry"
+        },
+        {
+          "name": "Slippery",
+          "id": "Variation:Slippery"
+        },
+        {
+          "name": "No Parking",
+          "id": "Variation:No Parking"
+        },
+        {
+          "name": "Black & green",
+          "id": "Variation:Black & green"
+        },
+        {
+          "name": "Black & blue",
+          "id": "Variation:Black & blue"
+        },
+        {
+          "name": "Dark green",
+          "id": "Variation:Dark green"
+        },
+        {
+          "name": "Blue tile",
+          "id": "Variation:Blue tile"
+        },
+        {
+          "name": "Blue stripes",
+          "id": "Variation:Blue stripes"
+        },
+        {
+          "name": "Pink stripes",
+          "id": "Variation:Pink stripes"
+        },
+        {
+          "name": "Salmon pink",
+          "id": "Variation:Salmon pink"
+        },
+        {
+          "name": "Classic",
+          "id": "Variation:Classic"
+        },
+        {
+          "name": "Empress-tree wood",
+          "id": "Variation:Empress-tree wood"
+        },
+        {
+          "name": "Rich brown",
+          "id": "Variation:Rich brown"
+        },
+        {
+          "name": "Antique",
+          "id": "Variation:Antique"
+        },
+        {
+          "name": "Dark blue",
+          "id": "Variation:Dark blue"
+        },
+        {
+          "name": "Berry red",
+          "id": "Variation:Berry red"
+        },
+        {
+          "name": "Floral print",
+          "id": "Variation:Floral print"
+        },
+        {
+          "name": "Language arts",
+          "id": "Variation:Language arts"
+        },
+        {
+          "name": "Void",
+          "id": "Variation:Void"
+        },
+        {
+          "name": "Liberty",
+          "id": "Variation:Liberty"
+        },
+        {
+          "name": "Alabaster",
+          "id": "Variation:Alabaster"
+        },
+        {
+          "name": "Passion",
+          "id": "Variation:Passion"
+        },
+        {
+          "name": "Ocean",
+          "id": "Variation:Ocean"
+        },
+        {
+          "name": "Grove",
+          "id": "Variation:Grove"
+        },
+        {
+          "name": "Wealth",
+          "id": "Variation:Wealth"
+        },
+        {
+          "name": "White & pink",
+          "id": "Variation:White & pink"
+        },
+        {
+          "name": "Ivory & wood",
+          "id": "Variation:Ivory & wood"
+        },
+        {
+          "name": "Ash",
+          "id": "Variation:Ash"
+        },
+        {
+          "name": "Avocado",
+          "id": "Variation:Avocado"
+        },
+        {
+          "name": "Country",
+          "id": "Variation:Country"
+        },
+        {
+          "name": "Nursery",
+          "id": "Variation:Nursery"
+        },
+        {
+          "name": "Leaves",
+          "id": "Variation:Leaves"
+        },
+        {
+          "name": "Light brown & red",
+          "id": "Variation:Light brown & red"
+        },
+        {
+          "name": "Dark brown & white",
+          "id": "Variation:Dark brown & white"
+        },
+        {
+          "name": "White & green",
+          "id": "Variation:White & green"
+        },
+        {
+          "name": "Peacock blue",
+          "id": "Variation:Peacock blue"
+        },
+        {
+          "name": "Brown & green",
+          "id": "Variation:Brown & green"
+        },
+        {
+          "name": "Ivy",
+          "id": "Variation:Ivy"
+        },
+        {
+          "name": "Blue flowers",
+          "id": "Variation:Blue flowers"
+        },
+        {
+          "name": "Purple flowers",
+          "id": "Variation:Purple flowers"
+        },
+        {
+          "name": "Pink flowers",
+          "id": "Variation:Pink flowers"
+        },
+        {
+          "name": "White flowers",
+          "id": "Variation:White flowers"
+        },
+        {
+          "name": "Yellow flowers",
+          "id": "Variation:Yellow flowers"
+        },
+        {
+          "name": "Orange flowers",
+          "id": "Variation:Orange flowers"
+        },
+        {
+          "name": "Pumpkins",
+          "id": "Variation:Pumpkins"
+        },
+        {
+          "name": "Tomatoes",
+          "id": "Variation:Tomatoes"
+        },
+        {
+          "name": "Potatoes",
+          "id": "Variation:Potatoes"
+        },
+        {
+          "name": "Carrots",
+          "id": "Variation:Carrots"
+        },
+        {
+          "name": "Sugarcane",
+          "id": "Variation:Sugarcane"
+        },
+        {
+          "name": "Flour",
+          "id": "Variation:Flour"
+        },
+        {
+          "name": "Light brick",
+          "id": "Variation:Light brick"
+        },
+        {
+          "name": "Terra-cotta",
+          "id": "Variation:Terra-cotta"
+        },
+        {
+          "name": "New",
+          "id": "Variation:New"
+        },
+        {
+          "name": "Rusty",
+          "id": "Variation:Rusty"
+        },
+        {
+          "name": "Vintage",
+          "id": "Variation:Vintage"
+        },
+        {
+          "name": "White brick",
+          "id": "Variation:White brick"
+        },
+        {
+          "name": "Sun",
+          "id": "Variation:Sun"
+        },
+        {
+          "name": "Flowers",
+          "id": "Variation:Flowers"
+        },
+        {
+          "name": "Gold & red",
+          "id": "Variation:Gold & red"
+        },
+        {
+          "name": "Gold & blue",
+          "id": "Variation:Gold & blue"
+        },
+        {
+          "name": "Silver & red",
+          "id": "Variation:Silver & red"
+        },
+        {
+          "name": "Silver & blue",
+          "id": "Variation:Silver & blue"
+        },
+        {
+          "name": "Bronze & yellow",
+          "id": "Variation:Bronze & yellow"
+        },
+        {
+          "name": "Green & gray",
+          "id": "Variation:Green & gray"
+        },
+        {
+          "name": "Simple",
+          "id": "Variation:Simple"
+        },
+        {
+          "name": "Lattice",
+          "id": "Variation:Lattice"
+        },
+        {
+          "name": "Transparent art",
+          "id": "Variation:Transparent art"
+        },
+        {
+          "name": "Colored panels",
+          "id": "Variation:Colored panels"
+        },
+        {
+          "name": "Pastel panels",
+          "id": "Variation:Pastel panels"
+        },
+        {
+          "name": "Kumiko woodworking",
+          "id": "Variation:Kumiko woodworking"
+        },
+        {
+          "name": "Japanese painting",
+          "id": "Variation:Japanese painting"
+        },
+        {
+          "name": "White tile",
+          "id": "Variation:White tile"
+        },
+        {
+          "name": "Green tile",
+          "id": "Variation:Green tile"
+        },
+        {
+          "name": "Brown stones",
+          "id": "Variation:Brown stones"
+        },
+        {
+          "name": "Silver with mat",
+          "id": "Variation:Silver with mat"
+        },
+        {
+          "name": "Gray with documents",
+          "id": "Variation:Gray with documents"
+        },
+        {
+          "name": "White with wooden top",
+          "id": "Variation:White with wooden top"
+        },
+        {
+          "name": "Pearlescent",
+          "id": "Variation:Pearlescent"
+        },
+        {
+          "name": "Vermilion",
+          "id": "Variation:Vermilion"
+        },
+        {
+          "name": "Bronze patina",
+          "id": "Variation:Bronze patina"
+        },
+        {
+          "name": "Blue & black",
+          "id": "Variation:Blue & black"
+        },
+        {
+          "name": "Vintage wood",
+          "id": "Variation:Vintage wood"
+        },
+        {
+          "name": "Bark edged",
+          "id": "Variation:Bark edged"
+        },
+        {
+          "name": "Flower",
+          "id": "Variation:Flower"
+        },
+        {
+          "name": "Yellow & white",
+          "id": "Variation:Yellow & white"
+        },
+        {
           "name": "Stacks of cash",
           "id": "Variation:Stacks of cash"
         },
@@ -10823,18 +13329,6 @@
         {
           "name": "Watermelon",
           "id": "Variation:Watermelon"
-        },
-        {
-          "name": "Whipped-cream topping",
-          "id": "Variation:Whipped-cream topping"
-        },
-        {
-          "name": "Chocolate buttercream",
-          "id": "Variation:Chocolate buttercream"
-        },
-        {
-          "name": "Strawberry buttercream",
-          "id": "Variation:Strawberry buttercream"
         },
         {
           "name": "Simple path game",
@@ -10901,28 +13395,8 @@
           "id": "Variation:Black cherry"
         },
         {
-          "name": "Milk chocolate",
-          "id": "Variation:Milk chocolate"
-        },
-        {
-          "name": "Dark chocolate",
-          "id": "Variation:Dark chocolate"
-        },
-        {
-          "name": "White chocolate",
-          "id": "Variation:White chocolate"
-        },
-        {
-          "name": "Strawberry chocolate",
-          "id": "Variation:Strawberry chocolate"
-        },
-        {
           "name": "Unglazed",
           "id": "Variation:Unglazed"
-        },
-        {
-          "name": "Simple",
-          "id": "Variation:Simple"
         },
         {
           "name": "Yellow amber",
@@ -10991,26 +13465,6 @@
         {
           "name": "Letter",
           "id": "Variation:Letter"
-        },
-        {
-          "name": "Warning",
-          "id": "Variation:Warning"
-        },
-        {
-          "name": "Stop",
-          "id": "Variation:Stop"
-        },
-        {
-          "name": "No Entry",
-          "id": "Variation:No Entry"
-        },
-        {
-          "name": "Slippery",
-          "id": "Variation:Slippery"
-        },
-        {
-          "name": "No Parking",
-          "id": "Variation:No Parking"
         },
         {
           "name": "Soda",
@@ -11097,10 +13551,6 @@
           "id": "Variation:Sepia"
         },
         {
-          "name": "Avocado",
-          "id": "Variation:Avocado"
-        },
-        {
           "name": "Plaid",
           "id": "Variation:Plaid"
         },
@@ -11117,10 +13567,6 @@
           "id": "Variation:Tea"
         },
         {
-          "name": "Dark blue",
-          "id": "Variation:Dark blue"
-        },
-        {
           "name": "Black & silver",
           "id": "Variation:Black & silver"
         },
@@ -11129,16 +13575,8 @@
           "id": "Variation:Pink & purple"
         },
         {
-          "name": "Tomatoes",
-          "id": "Variation:Tomatoes"
-        },
-        {
           "name": "Green smoothie",
           "id": "Variation:Green smoothie"
-        },
-        {
-          "name": "Carrots",
-          "id": "Variation:Carrots"
         },
         {
           "name": "Blueberries",
@@ -11217,30 +13655,6 @@
           "id": "Variation:Denim"
         },
         {
-          "name": "Cat",
-          "id": "Variation:Cat"
-        },
-        {
-          "name": "Strawberry & flowers",
-          "id": "Variation:Strawberry & flowers"
-        },
-        {
-          "name": "Carrot",
-          "id": "Variation:Carrot"
-        },
-        {
-          "name": "Dog",
-          "id": "Variation:Dog"
-        },
-        {
-          "name": "Bird",
-          "id": "Variation:Bird"
-        },
-        {
-          "name": "Chocolate",
-          "id": "Variation:Chocolate"
-        },
-        {
           "name": "Striped house",
           "id": "Variation:Striped house"
         },
@@ -11307,10 +13721,6 @@
         {
           "name": "Quilted pattern",
           "id": "Variation:Quilted pattern"
-        },
-        {
-          "name": "Flowers",
-          "id": "Variation:Flowers"
         },
         {
           "name": "Quilted animals",
@@ -11393,18 +13803,6 @@
           "id": "Variation:Savannah"
         },
         {
-          "name": "Vanilla flavored",
-          "id": "Variation:Vanilla flavored"
-        },
-        {
-          "name": "Cocoa flavored",
-          "id": "Variation:Cocoa flavored"
-        },
-        {
-          "name": "Strawberry flavored",
-          "id": "Variation:Strawberry flavored"
-        },
-        {
           "name": "Lemon & white",
           "id": "Variation:Lemon & white"
         },
@@ -11443,10 +13841,6 @@
         {
           "name": "Canned pet food",
           "id": "Variation:Canned pet food"
-        },
-        {
-          "name": "Berry red",
-          "id": "Variation:Berry red"
         },
         {
           "name": "Corn soup",
@@ -11493,10 +13887,6 @@
           "id": "Variation:Reference"
         },
         {
-          "name": "Ash",
-          "id": "Variation:Ash"
-        },
-        {
           "name": "Rattan",
           "id": "Variation:Rattan"
         },
@@ -11521,10 +13911,6 @@
           "id": "Variation:Oribe-style"
         },
         {
-          "name": "Modern",
-          "id": "Variation:Modern"
-        },
-        {
           "name": "Camphor-tree wood",
           "id": "Variation:Camphor-tree wood"
         },
@@ -11537,12 +13923,368 @@
           "id": "Variation:Zelkova wood"
         },
         {
-          "name": "Chestnut",
-          "id": "Variation:Chestnut"
+          "name": "Red & tan",
+          "id": "Variation:Red & tan"
         },
         {
-          "name": "Strawberry",
-          "id": "Variation:Strawberry"
+          "name": "Beige & brown",
+          "id": "Variation:Beige & brown"
+        },
+        {
+          "name": "Brown & red",
+          "id": "Variation:Brown & red"
+        },
+        {
+          "name": "Yellow & green",
+          "id": "Variation:Yellow & green"
+        },
+        {
+          "name": "Blue & navy",
+          "id": "Variation:Blue & navy"
+        },
+        {
+          "name": "Canned fruits & veggies",
+          "id": "Variation:Canned fruits & veggies"
+        },
+        {
+          "name": "Canned snacks",
+          "id": "Variation:Canned snacks"
+        },
+        {
+          "name": "Caprese salad",
+          "id": "Variation:Caprese salad"
+        },
+        {
+          "name": "Cold entrée with sauce",
+          "id": "Variation:Cold entrée with sauce"
+        },
+        {
+          "name": "Terrine",
+          "id": "Variation:Terrine"
+        },
+        {
+          "name": "Tteokbokki",
+          "id": "Variation:Tteokbokki"
+        },
+        {
+          "name": "Penne",
+          "id": "Variation:Penne"
+        },
+        {
+          "name": "Pilaf",
+          "id": "Variation:Pilaf"
+        },
+        {
+          "name": "Original blend",
+          "id": "Variation:Original blend"
+        },
+        {
+          "name": "Red (Mocha)",
+          "id": "Variation:Red (Mocha)"
+        },
+        {
+          "name": "Green (Kilimanjaro)",
+          "id": "Variation:Green (Kilimanjaro)"
+        },
+        {
+          "name": "Blue (Blue Mountain)",
+          "id": "Variation:Blue (Blue Mountain)"
+        },
+        {
+          "name": "Black (Decaf)",
+          "id": "Variation:Black (Decaf)"
+        },
+        {
+          "name": "Stylish",
+          "id": "Variation:Stylish"
+        },
+        {
+          "name": "Light pink",
+          "id": "Variation:Light pink"
+        },
+        {
+          "name": "Hisshou (Certain victory)",
+          "id": "Variation:Hisshou (Certain victory)"
+        },
+        {
+          "name": "Metal",
+          "id": "Variation:Metal"
+        },
+        {
+          "name": "Medium-length gold",
+          "id": "Variation:Medium-length gold"
+        },
+        {
+          "name": "Long black",
+          "id": "Variation:Long black"
+        },
+        {
+          "name": "Short brown",
+          "id": "Variation:Short brown"
+        },
+        {
+          "name": "Medium-length white",
+          "id": "Variation:Medium-length white"
+        },
+        {
+          "name": "Long red",
+          "id": "Variation:Long red"
+        },
+        {
+          "name": "Short pink",
+          "id": "Variation:Short pink"
+        },
+        {
+          "name": "Medium-length black",
+          "id": "Variation:Medium-length black"
+        },
+        {
+          "name": "Salmon",
+          "id": "Variation:Salmon"
+        },
+        {
+          "name": "Whitefish",
+          "id": "Variation:Whitefish"
+        },
+        {
+          "name": "Blueback fish",
+          "id": "Variation:Blueback fish"
+        },
+        {
+          "name": "Red-fleshed fish block",
+          "id": "Variation:Red-fleshed fish block"
+        },
+        {
+          "name": "Whitefish block",
+          "id": "Variation:Whitefish block"
+        },
+        {
+          "name": "Fatty tuna",
+          "id": "Variation:Fatty tuna"
+        },
+        {
+          "name": "Salt",
+          "id": "Variation:Salt"
+        },
+        {
+          "name": "Nuts",
+          "id": "Variation:Nuts"
+        },
+        {
+          "name": "Coffee beans",
+          "id": "Variation:Coffee beans"
+        },
+        {
+          "name": "Fruit syrup",
+          "id": "Variation:Fruit syrup"
+        },
+        {
+          "name": "Cookies",
+          "id": "Variation:Cookies"
+        },
+        {
+          "name": "Marshmallows",
+          "id": "Variation:Marshmallows"
+        },
+        {
+          "name": "Yarn",
+          "id": "Variation:Yarn"
+        },
+        {
+          "name": "Mapo tofu",
+          "id": "Variation:Mapo tofu"
+        },
+        {
+          "name": "Egg-and-tomato dish",
+          "id": "Variation:Egg-and-tomato dish"
+        },
+        {
+          "name": "Fried rice",
+          "id": "Variation:Fried rice"
+        },
+        {
+          "name": "Stir-fried peppers",
+          "id": "Variation:Stir-fried peppers"
+        },
+        {
+          "name": "Babaocai",
+          "id": "Variation:Babaocai"
+        },
+        {
+          "name": "Shrimp in chili sauce",
+          "id": "Variation:Shrimp in chili sauce"
+        },
+        {
+          "name": "Brass",
+          "id": "Variation:Brass"
+        },
+        {
+          "name": "Goukaku (Success)",
+          "id": "Variation:Goukaku (Success)"
+        },
+        {
+          "name": "Unpainted",
+          "id": "Variation:Unpainted"
+        },
+        {
+          "name": "Robots",
+          "id": "Variation:Robots"
+        },
+        {
+          "name": "Cars",
+          "id": "Variation:Cars"
+        },
+        {
+          "name": "Trains",
+          "id": "Variation:Trains"
+        },
+        {
+          "name": "Transportation",
+          "id": "Variation:Transportation"
+        },
+        {
+          "name": "Space",
+          "id": "Variation:Space"
+        },
+        {
+          "name": "Historical",
+          "id": "Variation:Historical"
+        },
+        {
+          "name": "Buildings",
+          "id": "Variation:Buildings"
+        },
+        {
+          "name": "Craft tape",
+          "id": "Variation:Craft tape"
+        },
+        {
+          "name": "Packing tape",
+          "id": "Variation:Packing tape"
+        },
+        {
+          "name": "Fabric tape",
+          "id": "Variation:Fabric tape"
+        },
+        {
+          "name": "Curing tape",
+          "id": "Variation:Curing tape"
+        },
+        {
+          "name": "Red, blue & yellow",
+          "id": "Variation:Red, blue & yellow"
+        },
+        {
+          "name": "Green, yellow & orange",
+          "id": "Variation:Green, yellow & orange"
+        },
+        {
+          "name": "Purple, red & teal",
+          "id": "Variation:Purple, red & teal"
+        },
+        {
+          "name": "Pastels",
+          "id": "Variation:Pastels"
+        },
+        {
+          "name": "Sepia tones",
+          "id": "Variation:Sepia tones"
+        },
+        {
+          "name": "Gradation",
+          "id": "Variation:Gradation"
+        },
+        {
+          "name": "Japanese newspapers",
+          "id": "Variation:Japanese newspapers"
+        },
+        {
+          "name": "Newspapers",
+          "id": "Variation:Newspapers"
+        },
+        {
+          "name": "Guidebooks",
+          "id": "Variation:Guidebooks"
+        },
+        {
+          "name": "Fashion magazines",
+          "id": "Variation:Fashion magazines"
+        },
+        {
+          "name": "Dictionaries",
+          "id": "Variation:Dictionaries"
+        },
+        {
+          "name": "Technical books",
+          "id": "Variation:Technical books"
+        },
+        {
+          "name": "Old books",
+          "id": "Variation:Old books"
+        },
+        {
+          "name": "Pearlescent white",
+          "id": "Variation:Pearlescent white"
+        },
+        {
+          "name": "Pearlescent black",
+          "id": "Variation:Pearlescent black"
+        },
+        {
+          "name": "Pearlescent pink",
+          "id": "Variation:Pearlescent pink"
+        },
+        {
+          "name": "Pearlescent yellow",
+          "id": "Variation:Pearlescent yellow"
+        },
+        {
+          "name": "Pearlescent purple",
+          "id": "Variation:Pearlescent purple"
+        },
+        {
+          "name": "Botanical",
+          "id": "Variation:Botanical"
+        },
+        {
+          "name": "Waves & cranes",
+          "id": "Variation:Waves & cranes"
+        },
+        {
+          "name": "Daffodils",
+          "id": "Variation:Daffodils"
+        },
+        {
+          "name": "Flowers & birds",
+          "id": "Variation:Flowers & birds"
+        },
+        {
+          "name": "Flowers & butterflies",
+          "id": "Variation:Flowers & butterflies"
+        },
+        {
+          "name": "Chili",
+          "id": "Variation:Chili"
+        },
+        {
+          "name": "Ramen broth",
+          "id": "Variation:Ramen broth"
+        },
+        {
+          "name": "Miso broth",
+          "id": "Variation:Miso broth"
+        },
+        {
+          "name": "Red & black",
+          "id": "Variation:Red & black"
+        },
+        {
+          "name": "Blue & red",
+          "id": "Variation:Blue & red"
+        },
+        {
+          "name": "Fish kanji",
+          "id": "Variation:Fish kanji"
         },
         {
           "name": "Signature",
@@ -11561,20 +14303,12 @@
           "id": "Variation:Words of wisdom"
         },
         {
-          "name": "Red & black",
-          "id": "Variation:Red & black"
-        },
-        {
           "name": "Pink-white",
           "id": "Variation:Pink-white"
         },
         {
           "name": "Gold & silver",
           "id": "Variation:Gold & silver"
-        },
-        {
-          "name": "Silver & blue",
-          "id": "Variation:Silver & blue"
         },
         {
           "name": "Silver & green",
@@ -11653,10 +14387,6 @@
           "id": "Variation:Ocean creatures"
         },
         {
-          "name": "Space",
-          "id": "Variation:Space"
-        },
-        {
           "name": "Still Life",
           "id": "Variation:Still Life"
         },
@@ -11681,8 +14411,12 @@
           "id": "Variation:Field of Flowers"
         },
         {
-          "name": "Blooming",
-          "id": "Variation:Blooming"
+          "name": "Dog",
+          "id": "Variation:Dog"
+        },
+        {
+          "name": "Bird",
+          "id": "Variation:Bird"
         },
         {
           "name": "Bouquet",
@@ -11705,20 +14439,12 @@
           "id": "Variation:Orange & black"
         },
         {
-          "name": "Dark gray",
-          "id": "Variation:Dark gray"
-        },
-        {
           "name": "Sports",
           "id": "Variation:Sports"
         },
         {
           "name": "University",
           "id": "Variation:University"
-        },
-        {
-          "name": "Classic",
-          "id": "Variation:Classic"
         },
         {
           "name": "Sponsor",
@@ -11761,8 +14487,44 @@
           "id": "Variation:Atlantic Ocean"
         },
         {
+          "name": "Bright",
+          "id": "Variation:Bright"
+        },
+        {
+          "name": "Happy",
+          "id": "Variation:Happy"
+        },
+        {
+          "name": "Light purple",
+          "id": "Variation:Light purple"
+        },
+        {
+          "name": "Black & purple",
+          "id": "Variation:Black & purple"
+        },
+        {
+          "name": "Red & yellow",
+          "id": "Variation:Red & yellow"
+        },
+        {
+          "name": "Green & red",
+          "id": "Variation:Green & red"
+        },
+        {
+          "name": "Grapes",
+          "id": "Variation:Grapes"
+        },
+        {
+          "name": "Birds",
+          "id": "Variation:Birds"
+        },
+        {
           "name": "Mustard",
           "id": "Variation:Mustard"
+        },
+        {
+          "name": "Chestnut",
+          "id": "Variation:Chestnut"
         },
         {
           "name": "Baby pink",
@@ -11805,10 +14567,6 @@
           "id": "Variation:Blue & purple"
         },
         {
-          "name": "Black & blue",
-          "id": "Variation:Black & blue"
-        },
-        {
           "name": "Lime & purple",
           "id": "Variation:Lime & purple"
         },
@@ -11825,16 +14583,8 @@
           "id": "Variation:Blue-gray"
         },
         {
-          "name": "Light purple",
-          "id": "Variation:Light purple"
-        },
-        {
           "name": "Red & blue",
           "id": "Variation:Red & blue"
-        },
-        {
-          "name": "Green & red",
-          "id": "Variation:Green & red"
         },
         {
           "name": "Purple & yellow",
@@ -11857,20 +14607,12 @@
           "id": "Variation:Midnight"
         },
         {
-          "name": "Passion",
-          "id": "Variation:Passion"
-        },
-        {
           "name": "Love",
           "id": "Variation:Love"
         },
         {
           "name": "Sunset",
           "id": "Variation:Sunset"
-        },
-        {
-          "name": "Ocean",
-          "id": "Variation:Ocean"
         },
         {
           "name": "Twilight",
@@ -11889,8 +14631,16 @@
           "id": "Variation:Black sesame"
         },
         {
+          "name": "Strawberry",
+          "id": "Variation:Strawberry"
+        },
+        {
           "name": "Gold leaf",
           "id": "Variation:Gold leaf"
+        },
+        {
+          "name": "Chocolate",
+          "id": "Variation:Chocolate"
         },
         {
           "name": "Natural & red",
@@ -11903,6 +14653,22 @@
         {
           "name": "Rose gold",
           "id": "Variation:Rose gold"
+        },
+        {
+          "name": "White & black",
+          "id": "Variation:White & black"
+        },
+        {
+          "name": "White & yellow",
+          "id": "Variation:White & yellow"
+        },
+        {
+          "name": "Pink & yellow",
+          "id": "Variation:Pink & yellow"
+        },
+        {
+          "name": "Orange & lime",
+          "id": "Variation:Orange & lime"
         },
         {
           "name": "Peach",
@@ -11933,14 +14699,6 @@
           "id": "Variation:Orange, yellow & black"
         },
         {
-          "name": "Blue & white",
-          "id": "Variation:Blue & white"
-        },
-        {
-          "name": "Yellow & black",
-          "id": "Variation:Yellow & black"
-        },
-        {
           "name": "Purple & pink",
           "id": "Variation:Purple & pink"
         },
@@ -11963,10 +14721,6 @@
         {
           "name": "Red necktie",
           "id": "Variation:Red necktie"
-        },
-        {
-          "name": "Red & yellow",
-          "id": "Variation:Red & yellow"
         },
         {
           "name": "Navy & red",
@@ -12043,10 +14797,6 @@
         {
           "name": "Dreamy plaid",
           "id": "Variation:Dreamy plaid"
-        },
-        {
-          "name": "Peacock blue",
-          "id": "Variation:Peacock blue"
         },
         {
           "name": "1",
@@ -12133,20 +14883,108 @@
           "id": "Variation:Purple-striped necktie"
         },
         {
-          "name": "Indigo blue",
-          "id": "Variation:Indigo blue"
+          "name": "Pale blue",
+          "id": "Variation:Pale blue"
+        },
+        {
+          "name": "Neon blue",
+          "id": "Variation:Neon blue"
+        },
+        {
+          "name": "Neon orange",
+          "id": "Variation:Neon orange"
+        },
+        {
+          "name": "Neon pink",
+          "id": "Variation:Neon pink"
+        },
+        {
+          "name": "Neon green",
+          "id": "Variation:Neon green"
         },
         {
           "name": "Fuchsia",
           "id": "Variation:Fuchsia"
         },
         {
-          "name": "Vermilion",
-          "id": "Variation:Vermilion"
+          "name": "Tamashii (Soul)",
+          "id": "Variation:Tamashii (Soul)"
         },
         {
-          "name": "Dark green",
-          "id": "Variation:Dark green"
+          "name": "Kizuna (Bond)",
+          "id": "Variation:Kizuna (Bond)"
+        },
+        {
+          "name": "Men (Noodles)",
+          "id": "Variation:Men (Noodles)"
+        },
+        {
+          "name": "Yume (Dream)",
+          "id": "Variation:Yume (Dream)"
+        },
+        {
+          "name": "Purple necktie",
+          "id": "Variation:Purple necktie"
+        },
+        {
+          "name": "Red roses on black",
+          "id": "Variation:Red roses on black"
+        },
+        {
+          "name": "Orange roses on blue",
+          "id": "Variation:Orange roses on blue"
+        },
+        {
+          "name": "Blue roses on white",
+          "id": "Variation:Blue roses on white"
+        },
+        {
+          "name": "Yellow roses on white",
+          "id": "Variation:Yellow roses on white"
+        },
+        {
+          "name": "Pink necktie",
+          "id": "Variation:Pink necktie"
+        },
+        {
+          "name": "Blue necktie",
+          "id": "Variation:Blue necktie"
+        },
+        {
+          "name": "Green necktie",
+          "id": "Variation:Green necktie"
+        },
+        {
+          "name": "White towel & white shirt",
+          "id": "Variation:White towel & white shirt"
+        },
+        {
+          "name": "Red towel & white shirt",
+          "id": "Variation:Red towel & white shirt"
+        },
+        {
+          "name": "Blue towel & white shirt",
+          "id": "Variation:Blue towel & white shirt"
+        },
+        {
+          "name": "Black towel & white shirt",
+          "id": "Variation:Black towel & white shirt"
+        },
+        {
+          "name": "Pink towel & black shirt",
+          "id": "Variation:Pink towel & black shirt"
+        },
+        {
+          "name": "Orange towel & black shirt",
+          "id": "Variation:Orange towel & black shirt"
+        },
+        {
+          "name": "Green towel & black shirt",
+          "id": "Variation:Green towel & black shirt"
+        },
+        {
+          "name": "Indigo blue",
+          "id": "Variation:Indigo blue"
         },
         {
           "name": "Pale orange",
@@ -12159,10 +14997,6 @@
         {
           "name": "Green & blue",
           "id": "Variation:Green & blue"
-        },
-        {
-          "name": "Pale blue",
-          "id": "Variation:Pale blue"
         },
         {
           "name": "Zigzag",
@@ -12201,14 +15035,6 @@
           "id": "Variation:Orange & white"
         },
         {
-          "name": "Green & black",
-          "id": "Variation:Green & black"
-        },
-        {
-          "name": "Blue & black",
-          "id": "Variation:Blue & black"
-        },
-        {
           "name": "Garnet",
           "id": "Variation:Garnet"
         },
@@ -12223,10 +15049,6 @@
         {
           "name": "Greige",
           "id": "Variation:Greige"
-        },
-        {
-          "name": "Blue & red",
-          "id": "Variation:Blue & red"
         },
         {
           "name": "Orange & red",
@@ -12285,10 +15107,6 @@
           "id": "Variation:Red & light blue"
         },
         {
-          "name": "Pink & yellow",
-          "id": "Variation:Pink & yellow"
-        },
-        {
           "name": "Yellow & purple",
           "id": "Variation:Yellow & purple"
         },
@@ -12309,8 +15127,8 @@
           "id": "Variation:Purple & green"
         },
         {
-          "name": "Light pink",
-          "id": "Variation:Light pink"
+          "name": "Black & pink",
+          "id": "Variation:Black & pink"
         },
         {
           "name": "Colorful quilt design",
@@ -12345,8 +15163,40 @@
           "id": "Variation:Geese"
         },
         {
-          "name": "Leaves",
-          "id": "Variation:Leaves"
+          "name": "Fashion",
+          "id": "Variation:Fashion"
+        },
+        {
+          "name": "Comic",
+          "id": "Variation:Comic"
+        },
+        {
+          "name": "Novel",
+          "id": "Variation:Novel"
+        },
+        {
+          "name": "Gardening guide",
+          "id": "Variation:Gardening guide"
+        },
+        {
+          "name": "Bug guide",
+          "id": "Variation:Bug guide"
+        },
+        {
+          "name": "Fish guide",
+          "id": "Variation:Fish guide"
+        },
+        {
+          "name": "Fossil guide",
+          "id": "Variation:Fossil guide"
+        },
+        {
+          "name": "Orange & green",
+          "id": "Variation:Orange & green"
+        },
+        {
+          "name": "Pink & blue",
+          "id": "Variation:Pink & blue"
         }
       ]
     },
@@ -12437,10 +15287,6 @@
           "id": "HHA Concept 1:music"
         },
         {
-          "name": "living room",
-          "id": "HHA Concept 1:living room"
-        },
-        {
           "name": "school",
           "id": "HHA Concept 1:school"
         },
@@ -12451,6 +15297,10 @@
         {
           "name": "garden",
           "id": "HHA Concept 1:garden"
+        },
+        {
+          "name": "living room",
+          "id": "HHA Concept 1:living room"
         },
         {
           "name": "expensive",
@@ -12523,6 +15373,90 @@
         {
           "name": "horror",
           "id": "HHA Concept 1:horror"
+        },
+        {
+          "name": "B29A1A78",
+          "id": "HHA Concept 1:B29A1A78"
+        },
+        {
+          "name": "Hospital",
+          "id": "HHA Concept 1:Hospital"
+        },
+        {
+          "name": "4FF0F8CD",
+          "id": "HHA Concept 1:4FF0F8CD"
+        },
+        {
+          "name": "Country",
+          "id": "HHA Concept 1:Country"
+        },
+        {
+          "name": "5176BB25",
+          "id": "HHA Concept 1:5176BB25"
+        },
+        {
+          "name": "EF8FD02E",
+          "id": "HHA Concept 1:EF8FD02E"
+        },
+        {
+          "name": "C4A03996",
+          "id": "HHA Concept 1:C4A03996"
+        },
+        {
+          "name": "A4C811EF",
+          "id": "HHA Concept 1:A4C811EF"
+        },
+        {
+          "name": "538ACC75",
+          "id": "HHA Concept 1:538ACC75"
+        },
+        {
+          "name": "EB39891A",
+          "id": "HHA Concept 1:EB39891A"
+        },
+        {
+          "name": "3758804A",
+          "id": "HHA Concept 1:3758804A"
+        },
+        {
+          "name": "Fashionable",
+          "id": "HHA Concept 1:Fashionable"
+        },
+        {
+          "name": "5.85E+06",
+          "id": "HHA Concept 1:5.85E+06"
+        },
+        {
+          "name": "Retro",
+          "id": "HHA Concept 1:Retro"
+        },
+        {
+          "name": "B00A78D1",
+          "id": "HHA Concept 1:B00A78D1"
+        },
+        {
+          "name": "Town",
+          "id": "HHA Concept 1:Town"
+        },
+        {
+          "name": "DF9EFF9F",
+          "id": "HHA Concept 1:DF9EFF9F"
+        },
+        {
+          "name": "6435D20D",
+          "id": "HHA Concept 1:6435D20D"
+        },
+        {
+          "name": "Sports",
+          "id": "HHA Concept 1:Sports"
+        },
+        {
+          "name": "Nature",
+          "id": "HHA Concept 1:Nature"
+        },
+        {
+          "name": "8A6AB7ED",
+          "id": "HHA Concept 1:8A6AB7ED"
         }
       ]
     },
@@ -12537,10 +15471,6 @@
         {
           "name": "None",
           "id": "HHA Concept 2:None"
-        },
-        {
-          "name": "office",
-          "id": "HHA Concept 2:office"
         },
         {
           "name": "expensive",
@@ -12591,6 +15521,10 @@
           "id": "HHA Concept 2:concert"
         },
         {
+          "name": "office",
+          "id": "HHA Concept 2:office"
+        },
+        {
           "name": "living room",
           "id": "HHA Concept 2:living room"
         },
@@ -12615,16 +15549,104 @@
           "id": "HHA Concept 2:music"
         },
         {
-          "name": "ocean",
-          "id": "HHA Concept 2:ocean"
+          "name": "Town",
+          "id": "HHA Concept 2:Town"
         },
         {
-          "name": "den",
-          "id": "HHA Concept 2:den"
+          "name": "4FF0F8CD",
+          "id": "HHA Concept 2:4FF0F8CD"
+        },
+        {
+          "name": "Fashionable",
+          "id": "HHA Concept 2:Fashionable"
+        },
+        {
+          "name": "Sports",
+          "id": "HHA Concept 2:Sports"
+        },
+        {
+          "name": "Nature",
+          "id": "HHA Concept 2:Nature"
+        },
+        {
+          "name": "5176BB25",
+          "id": "HHA Concept 2:5176BB25"
+        },
+        {
+          "name": "Resort",
+          "id": "HHA Concept 2:Resort"
+        },
+        {
+          "name": "6435D20D",
+          "id": "HHA Concept 2:6435D20D"
+        },
+        {
+          "name": "EF8FD02E",
+          "id": "HHA Concept 2:EF8FD02E"
+        },
+        {
+          "name": "B00A78D1",
+          "id": "HHA Concept 2:B00A78D1"
+        },
+        {
+          "name": "DF9EFF9F",
+          "id": "HHA Concept 2:DF9EFF9F"
+        },
+        {
+          "name": "538ACC75",
+          "id": "HHA Concept 2:538ACC75"
+        },
+        {
+          "name": "EB39891A",
+          "id": "HHA Concept 2:EB39891A"
+        },
+        {
+          "name": "3758804A",
+          "id": "HHA Concept 2:3758804A"
+        },
+        {
+          "name": "A4C811EF",
+          "id": "HHA Concept 2:A4C811EF"
+        },
+        {
+          "name": "Hospital",
+          "id": "HHA Concept 2:Hospital"
+        },
+        {
+          "name": "8A6AB7ED",
+          "id": "HHA Concept 2:8A6AB7ED"
+        },
+        {
+          "name": "B29A1A78",
+          "id": "HHA Concept 2:B29A1A78"
+        },
+        {
+          "name": "5.85E+06",
+          "id": "HHA Concept 2:5.85E+06"
+        },
+        {
+          "name": "Country",
+          "id": "HHA Concept 2:Country"
+        },
+        {
+          "name": "Retro",
+          "id": "HHA Concept 2:Retro"
         },
         {
           "name": "kitchen",
           "id": "HHA Concept 2:kitchen"
+        },
+        {
+          "name": "ocean",
+          "id": "HHA Concept 2:ocean"
+        },
+        {
+          "name": "C4A03996",
+          "id": "HHA Concept 2:C4A03996"
+        },
+        {
+          "name": "den",
+          "id": "HHA Concept 2:den"
         },
         {
           "name": "freezing cold",
@@ -12789,6 +15811,50 @@
           "id": "HHA Series:wooden block"
         },
         {
+          "name": "Cool",
+          "id": "HHA Series:Cool"
+        },
+        {
+          "name": "8B5A435B",
+          "id": "HHA Series:8B5A435B"
+        },
+        {
+          "name": "Elegant",
+          "id": "HHA Series:Elegant"
+        },
+        {
+          "name": "29B111C8",
+          "id": "HHA Series:29B111C8"
+        },
+        {
+          "name": "42224322",
+          "id": "HHA Series:42224322"
+        },
+        {
+          "name": "719EC1C4",
+          "id": "HHA Series:719EC1C4"
+        },
+        {
+          "name": "C515F721",
+          "id": "HHA Series:C515F721"
+        },
+        {
+          "name": "Country",
+          "id": "HHA Series:Country"
+        },
+        {
+          "name": "Simple",
+          "id": "HHA Series:Simple"
+        },
+        {
+          "name": "422596FF",
+          "id": "HHA Series:422596FF"
+        },
+        {
+          "name": "6EBC6A26",
+          "id": "HHA Series:6EBC6A26"
+        },
+        {
           "name": "motherly",
           "id": "HHA Series:motherly"
         }
@@ -12875,6 +15941,42 @@
           "id": "HHA Set:study"
         },
         {
+          "name": "C47890B4",
+          "id": "HHA Set:C47890B4"
+        },
+        {
+          "name": "42BEF91E",
+          "id": "HHA Set:42BEF91E"
+        },
+        {
+          "name": "A12FA829",
+          "id": "HHA Set:A12FA829"
+        },
+        {
+          "name": "Garden",
+          "id": "HHA Set:Garden"
+        },
+        {
+          "name": "Kitchen",
+          "id": "HHA Set:Kitchen"
+        },
+        {
+          "name": "99CA18C5",
+          "id": "HHA Set:99CA18C5"
+        },
+        {
+          "name": "2B65863B",
+          "id": "HHA Set:2B65863B"
+        },
+        {
+          "name": "6150ABD5",
+          "id": "HHA Set:6150ABD5"
+        },
+        {
+          "name": "AD64AD18",
+          "id": "HHA Set:AD64AD18"
+        },
+        {
           "name": "cherry",
           "id": "HHA Set:cherry"
         }
@@ -12891,10 +15993,6 @@
         {
           "name": "MusicalInstrument",
           "id": "HHA Category:MusicalInstrument"
-        },
-        {
-          "name": "AC",
-          "id": "HHA Category:AC"
         },
         {
           "name": "Clock",
@@ -12921,6 +16019,10 @@
           "id": "HHA Category:Pet"
         },
         {
+          "name": "AC",
+          "id": "HHA Category:AC"
+        },
+        {
           "name": "Plant",
           "id": "HHA Category:Plant"
         },
@@ -12939,6 +16041,14 @@
         {
           "name": "SmallGoods",
           "id": "HHA Category:SmallGoods"
+        },
+        {
+          "name": "Kitchen",
+          "id": "HHA Category:Kitchen"
+        },
+        {
+          "name": "Food",
+          "id": "HHA Category:Food"
         }
       ]
     },
@@ -12965,6 +16075,10 @@
         {
           "name": "Cheap",
           "id": "Speaker Type:Cheap"
+        },
+        {
+          "name": "964812AF",
+          "id": "Speaker Type:964812AF"
         }
       ]
     },
@@ -12995,6 +16109,10 @@
         {
           "name": "Emission",
           "id": "Lighting Type:Emission"
+        },
+        {
+          "name": "Shade",
+          "id": "Lighting Type:Shade"
         }
       ]
     },
@@ -13049,6 +16167,10 @@
         {
           "name": "1.11.0",
           "id": "Version Added:1.11.0"
+        },
+        {
+          "name": "2.0.0",
+          "id": "Version Added:2.0.0"
         }
       ]
     }

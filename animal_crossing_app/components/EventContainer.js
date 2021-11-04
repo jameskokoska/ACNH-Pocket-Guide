@@ -88,8 +88,8 @@ export function EventContainer(props){
 }
 
 export function getEventsDay(date, eventSections, showEventsIfInRange){
-  const seasonData = require("../assets/data/data.json")["Seasons and Events"];
-  const villagerData = require("../assets/data/data.json")["Villagers"];
+  const seasonData = require("../assets/data/DataCreated/Seasons and Events.json");
+  const villagerData = require("../assets/data/DataCreated/Villagers.json");
   var totalEvents = [];
 
   villagerData.map( (villager, index)=>{

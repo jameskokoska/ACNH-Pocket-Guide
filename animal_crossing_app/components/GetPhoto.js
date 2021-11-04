@@ -450,7 +450,7 @@ export function getMaterialImage(material, reduceComplexity=false, flowerSingle=
     materialStripped = materialStripped.replace("mums", "mum");
     materialStripped = materialStripped.replace("tulips", "tulip");
   }
-  var data = require("../assets/data/data.json")["Other"];
+  var data = require("../assets/data/DataCreated/Other.json");
   if(reduceComplexity){
     materialStripped = materialStripped.replace("-","").toLowerCase();
     materialStripped = materialStripped.replace(" ","");
@@ -462,21 +462,34 @@ export function getMaterialImage(material, reduceComplexity=false, flowerSingle=
         return data[index]["Inventory Image"]
       }
     }
-    return "";
+    return checkMoreMaterials(material);
   } else {
     for(var index = 0; index < data.length; index++){
       if(data[index]["Name"]===material){
         return data[index]["Inventory Image"]
       }
     }
-    return "";
+    return checkMoreMaterials(material);
+  } 
+}
+
+function checkMoreMaterials(material){
+  let foodPhoto = getFoodPhoto(material,"couldn't find")
+  if(foodPhoto !== "couldn't find"){
+    return foodPhoto
   }
-  
+
+  let fishPhoto = getFishPhoto(material,"couldn't find")
+  if(fishPhoto !== "couldn't find"){
+    return fishPhoto
+  }
+
+  return ""
 }
 
 export function getPaintingPhotoFake(name){
   console.log(name)
-  var data = require("../assets/data/data.json")["Art"];;
+  var data = rrequire("../assets/data/DataCreated/Art.json");
   for(var index = 0; index < data.length; index++){
     if(data[index]["Name"]===name && data[index]["Genuine"]==="No"){
       if(data[index]["High-Res Texture"]!=="NA")
@@ -486,6 +499,26 @@ export function getPaintingPhotoFake(name){
     }
   }
   return "none";
+}
+
+export function getFoodPhoto(name, defaultImg){
+  var data = require("../assets/data/DataCreated/Food.json");
+  for(var index = 0; index < data.length; index++){
+    if(data[index]["Name"]===name){
+      return data[index]["Image"]
+    }
+  }
+  return defaultImg;
+}
+
+export function getFishPhoto(name, defaultImg){
+  var data = require("../assets/data/DataCreated/Fish.json");
+  for(var index = 0; index < data.length; index++){
+    if(data[index]["Name"]===name){
+      return data[index]["Icon Image"]
+    }
+  }
+  return defaultImg;
 }
 
 export function getPhotoShadow(item, centered){

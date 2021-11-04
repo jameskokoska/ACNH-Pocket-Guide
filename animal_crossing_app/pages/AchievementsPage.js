@@ -19,10 +19,10 @@ import FadeInOut from "../components/FadeInOut";
 export default class AchievementsPage extends Component {
   constructor(props){
     super(props);
-    this.data = require("../assets/data/data.json")["Achievements"]
+    this.data = require("../assets/data/DataCreated/Achievements.json");
     this.state = {
       selectedAchievement:"",
-      data:require("../assets/data/data.json")["Achievements"]
+      data: require("../assets/data/DataCreated/Achievements.json"),
     }
   }
 

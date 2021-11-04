@@ -24,6 +24,7 @@ import TextFont from "./TextFont"
 import {compareItemID, removeAccents,getSettingsString} from "../LoadJsonData"
 import {PopupBottomCustom} from "./Popup"
 import {gameVersion, museumCategories} from "../Changelog"
+import GyroidPopup from '../popups/GyroidPopup';
 
 //use tabs={false} if the page doesn't have  the tab bar
 
@@ -959,6 +960,8 @@ class BottomSheetRender extends Component{
         marginHorizontal = 60;
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="MaterialsPopup"){
         popUpContainer = <MaterialsPopup item={this.state.item}/>
+      } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="GyroidPopup"){
+        popUpContainer = <GyroidPopup item={this.state.item}/>
       }
     } else {
       return <View/>

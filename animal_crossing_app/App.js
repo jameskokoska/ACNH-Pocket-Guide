@@ -450,10 +450,15 @@ class PopupInfos extends Component {
     const numLogins = parseInt(await getStorage("numLogins","0"))+1;
     // this.tipDismissed = await getStorage("tipDismissed","false");
     let backupPopupDismissed = await getStorage("backupPopupDismissed","false");
+    // let updatePopupDismissed = await getStorage("updatePopupDismissed","false");
     if(backupPopupDismissed==="false" && numLogins >= 12){
       AsyncStorage.setItem("backupPopupDismissed", "true");
       this.popupBackup?.setPopupVisible(true)
     }
+    // if(updatePopupDismissed==="false" && numLogins >= 1){
+    //   AsyncStorage.setItem("updatePopupDismissed", "true");
+    //   this.popupUpdate?.setPopupVisible(true)
+    // }
     if(numLogins===5){
       this.popupRating?.setPopupVisible(true)
     }
@@ -465,6 +470,8 @@ class PopupInfos extends Component {
     return <>
       <PopupRating ref={(popupRating) => this.popupRating = popupRating}/>
       <Popup mailLink={true} ref={(popupBackup) => this.popupBackup = popupBackup} text="Data Backup" textLower="You can now backup your data to the cloud and enable auto backups in the settings." button1={"Go to page"} button1Action={()=>{this.props.setPage(30)}} button2={"Cancel"} button2Action={()=>{}}/>
+      <Popup mailLink={true} ref={(popupUpdate) => this.popupUpdate = popupUpdate} text="Missing Items" textLower="Some items are missing as the update to the app rolls out. Please wait a few hours for app update 2." button1={"OK"} button1Action={()=>{}}/>
+
       {/* <PopupTip numLogins={this.numLogins} tipDismissed={this.tipDismissed}/> */}
     </>
   }

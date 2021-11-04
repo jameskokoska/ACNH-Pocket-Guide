@@ -1,9 +1,24 @@
-export const gameVersion = "1.11.0"
+export const gameVersion = "2.0.0"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
 -I am updating the app with new content from the update....
--Please by patient as this may take a few days :)
+-Please be patient as details come in :)
+-
+-Some items are missing as I am releasing the data update
+-Please be patient
+-
+-Added items from the new update
+-This will get updated with more data as it comes!
+-Translations will come soon
+-Added Gyroids page
+-Added Food Recipes
+-Added Ceiling furniture
+-You can view all the new items in the [New Items] page
+-Fixed Calendar Page current date
+-Fixed Buy amount for some recipes
+-
+-Thank you to the ACNH Spreadsheet team for all the hard work!!!
 -
 -Updated translations and descriptions
 -Fixed event items page not showing some items (e.g. Turkey Day)
