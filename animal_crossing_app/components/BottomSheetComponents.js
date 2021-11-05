@@ -576,7 +576,11 @@ export function getVariations(name, globalDatabase, checkListKey, startingIndex 
     if(globalDatabase[i].length > startingIndex-1){
       failCount = 0;
       for(var j=startingIndex-1; j>0; j--){
-        if(globalDatabase[i][j]["checkListKey"].split("CheckList")[0]!==checkListKey.split("CheckList")[0]){
+        if(globalDatabase[i][j]["checkListKey"]===undefined){
+          console.log("ERROR!!!")
+          console.log(globalDatabase[i][j]["Name"])
+          break;
+        } else if(globalDatabase[i][j]["checkListKey"].split("CheckList")[0]!==checkListKey.split("CheckList")[0]){
           break;
         }
         if(globalDatabase[i][j]["Name"].toLowerCase()===name.toLowerCase()){

@@ -66,13 +66,14 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
   for(let dataSet = 0; dataSet <inputData.length; dataSet++){
     let dataLoading = inputData[dataSet][0]; //data[dataSet][1] is the Data category String
     let totalIndex = -1;
+    let dontPush = false;
     //Loop through that specific dataset
     for(var i = 0; i < dataLoading.length; i++){
       //Remove no name K.K. songs
-      if(dataLoading[i].hasOwnProperty("Name")&&dataLoading[i]["Name"].includes("Hazure")){
-        dataLoading.splice(i,1);
-        continue;
-      }
+      // if(dataLoading[i].hasOwnProperty("Name")&&dataLoading[i]["Name"].includes("Hazure")){
+      //   dataLoading.splice(i,1);
+      //   continue;
+      // }
       totalIndex++;
       let checkListKeyString = checkListKey[dataSet][0];
       //Loop through specific checklistKey property for that dataset
@@ -100,7 +101,7 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
       // }
       // dataLoading[i].collected=value;
       // dataLoading[i].wishlist=wishlist;
-      dataLoading[i].checkListKey=checkListKeyString;
+      dataLoading[i]["checkListKey"]=checkListKeyString;
 
       if(checkListKey[dataSet][0] === "fishCheckList" || checkListKey[dataSet][0] === "seaCheckList" || checkListKey[dataSet][0] === "bugCheckList"){
         let hemispherePre = ["NH ", "SH "];
@@ -286,7 +287,7 @@ export function capitalize(name) {
     var name = name.replace(/(^\w{1})|(\s{1}\w{1})/g, match => match.toUpperCase());
     return name.charAt(0).toUpperCase() + name.slice(1);
   } else {
-    return "null";
+    return "";
   }
 }
 
@@ -294,7 +295,7 @@ export function capitalizeFirst(name) {
   if(name!==undefined){
     return name.charAt(0).toUpperCase() + name.slice(1);
   } else {
-    return "null";
+    return "";
   }
 }
 
@@ -1222,7 +1223,7 @@ export function getInverseVillagerFilters(string=false){
 export function findItemIDName(id, name){
   for(var dataSet = 0; dataSet < global.dataLoadedAll.length; dataSet++){
     for(var i = 0; i < global.dataLoadedAll[dataSet].length; i++){
-      if(global.dataLoadedAll[dataSet][i].hasOwnProperty("Internal ID") && global.dataLoadedAll[dataSet][i]["Internal ID"]===id  && global.dataLoadedAll[dataSet][i]["Name"]===name){
+      if(global.dataLoadedAll[dataSet][i].hasOwnProperty("Internal ID") && global.dataLoadedAll[dataSet][i]["Internal ID"].toString()===id.toString() && global.dataLoadedAll[dataSet][i]["Name"]===name){
         return global.dataLoadedAll[dataSet][i];
       }
     }
@@ -1251,7 +1252,7 @@ export function compareItemID(itemIDs, currentItem){
   }
   for(var i=0; i<itemIDs.length; i++){
     for(var x=0; x<itemIDs[i]["list"].length; x++){
-      if((itemIDs[i]["list"][x]===currentItem["Name"]||itemIDs[i]["list"][x]===currentItem["Internal ID"]) && currentItem["checkListKey"].includes(itemIDs[i]["key"])){
+      if((itemIDs[i]["list"][x].toString()===currentItem["Name"].toString()||itemIDs[i]["list"][x].toString()===currentItem["Internal ID"].toString()) && currentItem["checkListKey"].includes(itemIDs[i]["key"])){
         return true;
       }
     }

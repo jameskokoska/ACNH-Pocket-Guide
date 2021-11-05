@@ -196,13 +196,14 @@ class App extends Component {
           
           let fileURI = `${FileSystem.documentDirectory}${generateJSON[generateJSONIndex]+".json"}`;
           await FileSystem.writeAsStringAsync(fileURI, parsed)
-          // console.log(await FileSystem.readDirectoryAsync(FileSystem.documentDirectory))
         }
         this.popupGeneratingData?.setPopupText(attemptToTranslate("Loading app..."))
         await AsyncStorage.setItem("dataVersion", dataVersion);
       } else {
         this.popupLoading?.setPopupVisible(true)
       }
+      console.log(await FileSystem.readDirectoryAsync(FileSystem.documentDirectory))
+
       
 
     this.backHandler = BackHandler.addEventListener(
