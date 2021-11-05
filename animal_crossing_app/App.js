@@ -21,7 +21,7 @@ import LottieView from 'lottie-react-native';
 import CreditsPage from './pages/CreditsPage';
 import FlowerPage from './pages/FlowerPage';
 import CardsPage from './pages/CardsPage';
-import {getDefaultLanguage, getStorage,getSettingsString, settings, loadGlobalData} from './LoadJsonData';
+import {getDefaultLanguage, getStorage,getSettingsString, settings, loadGlobalData, attemptToTranslate} from './LoadJsonData';
 import Onboard from './pages/Onboard';
 import colors from './Colors.js';
 import * as Font from 'expo-font';
@@ -46,12 +46,16 @@ import TVGuidePage from './pages/TVGuidePage';
 import OrdinancePage from './pages/OrdinancePage';
 import GyroidsPage from './pages/GyroidsPage';
 import { autoBackup } from './components/FirebaseBackup';
-import Popup from './components/Popup';
+import Popup, { PopupRaw, PopupRawLoading } from './components/Popup';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { navigationRef } from './RootNavigation';
 import * as RootNavigation from './RootNavigation.js';
 import CraftableItemsPage from './pages/CraftableItemsPage';
+import XLSX from 'xlsx';
+import { Asset } from 'expo-asset';
+import * as FileSystem from 'expo-file-system'
+import {dataVersion} from "./Changelog"
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -104,7 +108,7 @@ class App extends Component {
     global.creatorCode = await getStorage("creatorCode"+global.profile,"");
     global.selectedFruit = await getStorage("selectedFruit"+global.profile,"");
     global.customTimeOffset = await getStorage("customDateOffset"+global.profile,"0");
-    console.log(global.collectionList)
+    // console.log(global.collectionList)
   }
 
   loadSections = async(key, defaultSections) => {
@@ -147,20 +151,70 @@ class App extends Component {
   }
 
   async componentDidMount(){
-    setTimeout(async () => {
     this.mounted = true;
-    // await AsyncStorage.setItem("firstLogin", "true");
+    
+
+    setTimeout(async () => {
+      let defaultLanguage = getDefaultLanguage();
+      global.language = await getStorage("Language",defaultLanguage);
+
+      //Load Fonts
+      await Font.loadAsync({
+        "ArialRounded": require('./assets/fonts/arialRound.ttf'),
+      });
+      await Font.loadAsync({
+        "ArialRoundedBold": require('./assets/fonts/arialRoundBold.ttf'),
+      });
+
+      let dataVersionLoaded = await getStorage("dataVersion","");
+      
+      let generateJSON = ["Housewares","Miscellaneous","Photos","Tops","Dress-Up","Headwear"]
+      let generated = 0
+      for(let generateJSONIndex = 0; generateJSONIndex < generateJSON.length; generateJSONIndex++){
+        if((await FileSystem.readDirectoryAsync(FileSystem.documentDirectory)).includes(generateJSON[generateJSONIndex]+".json")){
+          console.log("Loaded from memory")
+          generated = generated + 1
+          // let fileURI = `${FileSystem.documentDirectory}${generateJSON[generateJSONIndex]+".json"}`;
+          // console.log(JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json")))
+        }
+      }
+      if(dataVersionLoaded === "" || dataVersionLoaded !== dataVersion){
+        console.log("New data version")
+      }
+      if(generated < generateJSON.length || dataVersionLoaded === "" || dataVersionLoaded !== dataVersion){
+        this.popupGeneratingData?.setPopupVisible(true)
+        console.log("Generating into memory")
+        const [{ localUri }] = await Asset.loadAsync(require("./assets/data/dataGenerate.zip"));
+        console.log(localUri)
+
+        let b64 = await FileSystem.readAsStringAsync(localUri, {encoding: FileSystem.EncodingType.Base64})
+        this.popupGeneratingData?.setPopupText(attemptToTranslate("Almost done!"))
+        let excel = await XLSX.read(b64, {type: "base64"})
+        this.popupGeneratingData?.setPopupText(attemptToTranslate("A few more seconds!"))
+        for(let generateJSONIndex = 0; generateJSONIndex < generateJSON.length; generateJSONIndex++){
+          let parsed =  JSON.stringify(await XLSX.utils.sheet_to_json(excel.Sheets[generateJSON[generateJSONIndex]]))
+          
+          let fileURI = `${FileSystem.documentDirectory}${generateJSON[generateJSONIndex]+".json"}`;
+          await FileSystem.writeAsStringAsync(fileURI, parsed)
+          // console.log(await FileSystem.readDirectoryAsync(FileSystem.documentDirectory))
+        }
+        this.popupGeneratingData?.setPopupText(attemptToTranslate("Loading app..."))
+        await AsyncStorage.setItem("dataVersion", dataVersion);
+      } else {
+        this.popupLoading?.setPopupVisible(true)
+      }
+
+      console.log(JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json"))[0])
+
+      
 
     this.backHandler = BackHandler.addEventListener(
       "hardwareBackPress",
       this.handleBackButton,
     );
-
     const firstLogin = await getStorage("firstLogin","true");
     global.profile = await getStorage("selectedProfile","");
     await this.loadProfileData(global.profile);
-    var defaultLanguage = getDefaultLanguage();
-    global.language = await getStorage("Language",defaultLanguage);
     
     //Load Global Data
     await loadGlobalData();
@@ -169,14 +223,6 @@ class App extends Component {
     await this.loadSettings();
 
     this.updateSettings();
-
-    //Load Fonts
-    await Font.loadAsync({
-      "ArialRounded": require('./assets/fonts/arialRound.ttf'),
-    });
-    await Font.loadAsync({
-      "ArialRoundedBold": require('./assets/fonts/arialRoundBold.ttf'),
-    });
 
     //load home screen sections
     const defaultSections = {
@@ -227,12 +273,10 @@ class App extends Component {
     this.sideMenuSections = await this.loadList("SideMenuSections", sideSections, "displayName")
     this.sideMenuSectionsDisabled = JSON.parse(await getStorage("SideMenuSectionsDisabled","[]"))
 
-    if(this.mounted){
-      this.setState({
-        firstLogin: firstLogin,
-        loaded:true,
-      });
-    }
+    this.setState({
+      firstLogin: firstLogin,
+      loaded:true,
+    });
     if(getSettingsString("settingsAutoBackup")==="true"){
       this.startAutoBackup();
     }
@@ -286,7 +330,7 @@ class App extends Component {
 
   startAutoBackup = async () => {
     let result = await autoBackup();
-    console.log(result)
+    // console.log(result)
     ToastAndroid.show(result, ToastAndroid.LONG);
   }
 
@@ -334,6 +378,8 @@ class App extends Component {
           <LottieView autoPlay loop style={{width: "95%",zIndex:1,transform: [{ scale: 1.25 },],}} source={chosenSplashScreen}/>
         </FadeInOut>
       </View>
+      <PopupRaw ref={(popupGeneratingData) => this.popupGeneratingData = popupGeneratingData} text={attemptToTranslate("Generating Data...")} textLower2={attemptToTranslate("Please wait")} textLower={attemptToTranslate("This may take a few minutes and is only done once.")}/>
+      <PopupRawLoading ref={(popupLoading) => this.popupLoading = popupLoading}/>
       </>
     } else if (this.state.firstLogin==="true"){
       return <Onboard setFirstLogin={this.setFirstLogin}/>
@@ -462,7 +508,7 @@ class PopupInfos extends Component {
     if(numLogins===5){
       this.popupRating?.setPopupVisible(true)
     }
-    console.log("numlogins:"+numLogins)
+    // console.log("numlogins:"+numLogins)
     await AsyncStorage.setItem("numLogins", numLogins.toString());
     this.numLogins = numLogins;
   }

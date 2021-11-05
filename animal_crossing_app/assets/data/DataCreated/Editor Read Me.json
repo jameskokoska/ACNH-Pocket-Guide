@@ -1,0 +1,32 @@
+[
+  {
+    "undefined": "Spreadsheet Discord (report issues, find resources, or stop by and say hi!)"
+  },
+  {
+    "undefined": "Sources"
+  },
+  {
+    "undefined": "All images (Credit to ElChicoEevee and Alexis)"
+  },
+  {
+    "undefined": "All item names (Credit to imthe666st)"
+  },
+  {
+    "undefined": "Item translations (Maintained by Alexis)"
+  },
+  {
+    "undefined": "Villager House Exteriors (Rendered by SuperSpazzy)"
+  },
+  {
+    "undefined": "Style Guide"
+  },
+  {
+    "undefined": "Please leave a message in the #changelog channel after finalising your edits\r\n\r\nName \r\nPreferably from in-game, otherwise match text file entries with image filenames  \r\n\r\nImage \r\nInsert image by copying =image(\"\") into the appropriate cell, and entering our hosting URL (ending in .png) between the quotation marks. It will be automatically resized by the spreadsheet. Find Google Drive folder with all datamined images under Sources.\r\n\r\nSee the guide below for more details about the acnhcdn.com/ image URL endpoints.\r\n\r\nSource--(semicolon between multiple sources)\r\n\"Nook's Cranny\" for the shop \r\n\"Nook Miles Exchange\" for the miles redemption option in the res services terminal \r\n\"Nook Shopping\" for the online bell shopping option in the res services terminal (ONLY for songs and special items) \r\n\"Able Sisters\" for the tailor \"Dodo Airlines\" for Dodo Airlines \r\n\"Gulliver\", \"Saharah\", \"Celeste\", \"Kicks\" etc. for appropriate NPC name, except when in relation to an event \r\n\"Crafting\" for ANY DIY item \r\n\"Bunny Day\", \"Fishing Tourney\", \"Bug-Off\", or similar title for any event (check existing entries to keep titles consistent) \r\n\"[Personality]\" for recipes to show which villager personality can give that recipe through bottles, crafting, or as a campsite request. May be in addition to non-villager recipe sources \r\nAdd \"(Only available during [Season Name])\" in source notes to denote what time of year an item is given. For example, a gift from Mabel during Summer would read \"Source: Mabel; Source Notes: Only available during (Summer)\".  \r\n\r\nMiniseason Names \r\nCherry-Blossom Season (when oak trees have pink leaves and cherry-blossom petals can be caught) \r\nMushroom Season (when mushrooms spawn on the ground) \r\nFestive Season (when cedar trees are decorated and drop ornaments)\r\nMaple Leaf Season (when oak trees have orange leaves and maple leaves can be caught)\r\n\r\nUnique Entry IDS\r\nIf you add a new item, please grab a unique entry id from the \"Unused Entry Ids\" sheet. Don't forget to remove it from the unused sheet if you use it"
+  },
+  {
+    "undefined": "Image URL Endpoint Guide"
+  },
+  {
+    "undefined": "Base URL: https://acnhcdn.com/latest/\r\n        All other URL paths below are appended to the base URL.\r\n        For all image paths, appending \"Cropped\" to the filename will return an image with all transparent padding removed.\r\n\r\n./FtrIcon/<FileName>\r\n        This path is used for the majority of images.\r\n        For [ Clothing, Music, Bugs, Fish, Fossils ], FtrIcon contains the following image variations:\r\n                Clothing - \"Storage\" / 3D rotated images\r\n                Music - Framed album cover images\r\n                Bugs - placed furniture model images\r\n                Fish - placed furniture model images\r\n                Fossils - placed furniture model images\r\n\r\n./ClosetIcon/<FileName>\r\n        [ Tops, Bottoms, Dresses, Headwear, Accessories, Socks, Shoes, Bags, Umbrellas ]\r\n        This path is used for the Closet Image on the Clothing tabs.\r\n        It contains the 0&deg; rotated wardrobe/closet images.\r\n\r\n./Audio/<FileName>\r\n        [ Music ]\r\n        This path is used for the Album Image on the Music tab.\r\n        It contains the un-framed album cover images used on the music player select screens.\r\n\r\n./BookFishIcon/<FileName>\r\n./BookInsectIcon/<FileName>\r\n        [ Bugs, Fish ]\r\n        These paths are used for the Critterpedia Images on the Bug & Fish tabs.\r\n        They contain the full-color bug & fish pictures from the Critterpedia.\r\n\r\n./HouseDoorIcon/<FileName>\r\n./HousePostIcon/<FileName>\r\n./HouseRoofIcon/<FileName>\r\n./HouseWallIcon/<FileName>\r\n        [ Construction ]\r\n        These paths are used for the Construction tab.\r\n        They contain the door, mailbox, roof, and siding preview images shown when customizing your house at Town Hall.\r\n\r\n./NpcIcon/<FileName>\r\n        [ Villager ]\r\n        This path is used for the Villager tab images.\r\n        It contains the villager icons shown on the map screen.\r\n\r\n./MenuIcon/<FileName>\r\n        [ Bugs, Fish, Nook Miles, Other ]\r\n        This path is used for some images in the Nook Miles & Other tabs, as well as the Inventory Image column in the Fish & Bug tabs.\r\n        It contains inventory icons & covers some items that cannot be put in house storage, such as trees & flower plants."
+  }
+]

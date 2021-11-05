@@ -56,9 +56,15 @@ export function inVillagerPhoto(checkListKeyString, shouldCheck){
 
 export async function getStorageData(data, checkListKey, defaultValue, debug){
   var dataLoadingTotal = [];
+  let inputData;
+  if(data===undefined){
+    inputData = [];
+  } else {
+    inputData = data
+  }
   //Loop through all datasets
-  for(let dataSet = 0; dataSet <data.length; dataSet++){
-    let dataLoading = data[dataSet][0]; //data[dataSet][1] is the Data category String
+  for(let dataSet = 0; dataSet <inputData.length; dataSet++){
+    let dataLoading = inputData[dataSet][0]; //data[dataSet][1] is the Data category String
     let totalIndex = -1;
     //Loop through that specific dataset
     for(var i = 0; i < dataLoading.length; i++){
@@ -108,7 +114,7 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
       } else {
         dataLoading[i]["NameLanguage"]=dataLoading[i]["Name"];
       }
-      dataLoading[i]["Data Category"]=data[dataSet][1];
+      dataLoading[i]["Data Category"]=inputData[dataSet][1];
     }
     dataLoadingTotal.push(dataLoading);
   }
@@ -209,7 +215,18 @@ export async function deleteSavedPhotos(){
   const files = await FileSystem.readDirectoryAsync(FileSystem.documentDirectory);
   const sizeMB = ((await FileSystem.getInfoAsync(FileSystem.documentDirectory)).size)/1000000;
   for(var i=0; i<files.length; i++){
-    await FileSystem.deleteAsync(FileSystem.documentDirectory+files[i]);
+    if(!files[i].includes(".json"))
+      await FileSystem.deleteAsync(FileSystem.documentDirectory+files[i]);
+  }
+  return [files.length, sizeMB];
+}
+
+export async function deleteGeneratedData(){
+  const files = await FileSystem.readDirectoryAsync(FileSystem.documentDirectory);
+  const sizeMB = ((await FileSystem.getInfoAsync(FileSystem.documentDirectory)).size)/1000000;
+  for(var i=0; i<files.length; i++){
+    if(files[i].includes(".json"))
+      await FileSystem.deleteAsync(FileSystem.documentDirectory+files[i]);
   }
   return [files.length, sizeMB];
 }
@@ -326,11 +343,11 @@ export async function loadGlobalData(){
   global.dataLoadedArt = await getStorageData([[require("./assets/data/DataCreated/Art.json"),"Art"]],[["artCheckList","Name","Genuine"]],"false");
   global.dataLoadedVillagers = await getStorageData([[require("./assets/data/DataCreated/Villagers.json"),"Villagers"]],[["villagerCheckList","Name"]],"false");
   global.dataLoadedFurniture = await getStorageData([
-    [require("./assets/data/DataCreated/Housewares.json"), "Housewares"],
-    [require("./assets/data/DataCreated/Miscellaneous.json"), "Miscellaneous"],
+    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json")), "Housewares"],
+    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Miscellaneous.json")), "Miscellaneous"],
     [require("./assets/data/DataCreated/Wall-mounted.json"), "Wall-mounted"],
     [require("./assets/data/DataCreated/Ceiling Decor.json"), "Ceiling Decor"],
-    [require("./assets/data/DataCreated/Photos.json"), "Photos"],
+    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Photos.json")), "Photos"],
     [require("./assets/data/DataCreated/Posters.json"), "Posters"],
   ],
   [
@@ -343,10 +360,10 @@ export async function loadGlobalData(){
     ["furnitureCheckList","Name"],
   ],"false");
   global.dataLoadedClothing = await getStorageData([
-    [require("./assets/data/DataCreated/Headwear.json"), "Headwear"],
+    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Headwear.json")), "Headwear"],
     [require("./assets/data/DataCreated/Accessories.json"), "Accessories"],
-    [require("./assets/data/DataCreated/Tops.json"), "Tops"],
-    [require("./assets/data/DataCreated/Dress-Up.json"), "Dress-Up"],
+    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Tops.json")), "Tops"],
+    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Dress-Up.json")), "Dress-Up"],
     [require("./assets/data/DataCreated/Clothing Other.json"),"Clothing Other"],
     [require("./assets/data/DataCreated/Bottoms.json"),"Bottoms"],
     [require("./assets/data/DataCreated/Socks.json"),"Socks"],
@@ -384,16 +401,16 @@ export async function loadGlobalData(){
   global.dataLoadedGyroids = await getStorageData([[require("./assets/data/DataCreated/Gyroids.json"),"Gyroids"]],[["gyroidCheckList","Name","Variation","Pattern"]],"false");
   global.dataLoadedAll = await getStorageData(
   [
-    [require("./assets/data/DataCreated/Housewares.json"), "Housewares"],
-    [require("./assets/data/DataCreated/Miscellaneous.json"), "Miscellaneous"],
+    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json")), "Housewares"],
+    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Miscellaneous.json")), "Miscellaneous"],
     [require("./assets/data/DataCreated/Wall-mounted.json"), "Wall-mounted"],
     [require("./assets/data/DataCreated/Ceiling Decor.json"), "Ceiling Decor"],
-    [require("./assets/data/DataCreated/Photos.json"), "Photos"],
+    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Photos.json")), "Photos"],
     [require("./assets/data/DataCreated/Posters.json"), "Posters"],
-    [require("./assets/data/DataCreated/Headwear.json"), "Headwear"],
+    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Headwear.json")), "Headwear"],
     [require("./assets/data/DataCreated/Accessories.json"), "Accessories"],
-    [require("./assets/data/DataCreated/Tops.json"), "Tops"],
-    [require("./assets/data/DataCreated/Dress-Up.json"), "Dress-Up"],
+    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Tops.json")), "Tops"],
+    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Dress-Up.json")), "Dress-Up"],
     [require("./assets/data/DataCreated/Clothing Other.json"),"Clothing Other"],
     [require("./assets/data/DataCreated/Bottoms.json"),"Bottoms"],
     [require("./assets/data/DataCreated/Socks.json"),"Socks"],
