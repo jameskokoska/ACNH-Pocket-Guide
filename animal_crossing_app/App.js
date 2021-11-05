@@ -203,9 +203,6 @@ class App extends Component {
       } else {
         this.popupLoading?.setPopupVisible(true)
       }
-
-      console.log(JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json"))[0])
-
       
 
     this.backHandler = BackHandler.addEventListener(

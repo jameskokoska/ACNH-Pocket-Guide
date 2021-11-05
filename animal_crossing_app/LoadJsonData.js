@@ -77,7 +77,17 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
       let checkListKeyString = checkListKey[dataSet][0];
       //Loop through specific checklistKey property for that dataset
       for(let x = 1; x < checkListKey[dataSet].length; x++){
-        checkListKeyString += dataLoading[i][checkListKey[dataSet][x]];
+        if(dataLoading[i][checkListKey[dataSet][x]]!==undefined){
+          checkListKeyString += dataLoading[i][checkListKey[dataSet][x]];
+        }else{
+          if(i===0){
+            console.log(checkListKey[dataSet][x])
+            console.log(inputData[dataSet][1])
+          }
+        }
+      }
+      if(checkListKeyString===checkListKey[dataSet][0]){
+        checkListKeyString=checkListKeyString+"things be missing"
       }
       //Get value from storage
       // var value=defaultValue;
@@ -351,7 +361,6 @@ export async function loadGlobalData(){
     [require("./assets/data/DataCreated/Posters.json"), "Posters"],
   ],
   [
-    ["furnitureCheckList","Name","Variation","Pattern"],
     ["furnitureCheckList","Name","Variation","Pattern"],
     ["furnitureCheckList","Name","Variation","Pattern"],
     ["furnitureCheckList","Name","Variation","Pattern"],

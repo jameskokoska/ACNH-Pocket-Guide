@@ -1,5 +1,5 @@
 export const gameVersion = "2.0.0"
-export const dataVersion = "2"
+export const dataVersion = "3"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
