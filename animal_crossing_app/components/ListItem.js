@@ -201,9 +201,9 @@ class ListItem extends React.Component{
       }
       let imageSrc = this.props.item[this.props.imageProperty[this.props.item.dataSet]];
       //image workaround
-      if(this.props.item["Data Category"]==="Recipes"){
-        imageSrc = getFoodPhoto(this.props.item["Name"],imageSrc)
-      }
+      // if(this.props.item["Data Category"]==="Recipes"){
+      //   imageSrc = getFoodPhoto(this.props.item["Name"],imageSrc)
+      // }
       return (
         <View style={styles.gridWrapper}>
           

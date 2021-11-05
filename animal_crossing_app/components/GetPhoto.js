@@ -502,12 +502,12 @@ export function getPaintingPhotoFake(name){
 }
 
 export function getFoodPhoto(name, defaultImg){
-  // var data = require("../assets/data/DataCreated/Food.json");
-  // for(var index = 0; index < data.length; index++){
-  //   if(data[index]["Name"]===name){
-  //     return data[index]["Image"]
-  //   }
-  // }
+  var data = require("../assets/data/DataCreated/Food.json");
+  for(var index = 0; index < data.length; index++){
+    if(data[index]["Name"]===name){
+      return data[index]["Image"]
+    }
+  }
   return defaultImg;
 }
 
