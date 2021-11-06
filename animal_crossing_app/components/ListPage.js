@@ -25,6 +25,7 @@ import {compareItemID, removeAccents,getSettingsString} from "../LoadJsonData"
 import {PopupBottomCustom} from "./Popup"
 import {gameVersion, museumCategories} from "../Changelog"
 import GyroidPopup from '../popups/GyroidPopup';
+import FoodPopup from '../popups/FoodPopup';
 
 //use tabs={false} if the page doesn't have  the tab bar
 
@@ -949,6 +950,9 @@ class BottomSheetRender extends Component{
         marginHorizontal = 60;
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="FurniturePopup"){
         popUpContainer = <FurniturePopup item={this.state.item}/>
+        marginHorizontal = 60;
+      } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="FoodPopup"){
+        popUpContainer = <FoodPopup item={this.state.item}/>
         marginHorizontal = 60;
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="FloorWallsPopup"){
         popUpContainer = <FloorWallsPopup item={this.state.item}/>

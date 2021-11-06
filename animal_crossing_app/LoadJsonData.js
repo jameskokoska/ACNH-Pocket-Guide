@@ -187,6 +187,8 @@ export function determineDataGlobal(datakeyName){
     return global.dataLoadedCards;
   else if(datakeyName==="dataLoadedMaterials")
     return global.dataLoadedMaterials;
+  else if(datakeyName==="dataLoadedFood")
+    return global.dataLoadedFood;
   else if(datakeyName==="dataLoadedGyroids")
     return global.dataLoadedGyroids;
 }
@@ -411,6 +413,7 @@ export async function loadGlobalData(){
   global.dataLoadedRecipes = await getStorageData([[require("./assets/data/DataCreated/Recipes.json"),"Recipes"],],[["recipesCheckList","Name"]],"false");
   global.dataLoadedCards = await getStorageData([[require("./assets/data/DataCreated/Message Cards.json"), "Message Cards"],],[["cardsCheckList","Name"]],"false");
   global.dataLoadedMaterials = await getStorageData([[require("./assets/data/DataCreated/Other.json"),"Other"]],[["materialsCheckList","Name"]],"false");
+  global.dataLoadedFood = await getStorageData([[require("./assets/data/DataCreated/Food.json"),"Food"]],[["furnitureCheckList","Name","Variation","Pattern"]],"false");
   global.dataLoadedGyroids = await getStorageData([[require("./assets/data/DataCreated/Gyroids.json"),"Gyroids"]],[["gyroidCheckList","Name","Variation","Pattern"]],"false");
   global.dataLoadedAll = await getStorageData(
   [
@@ -420,6 +423,7 @@ export async function loadGlobalData(){
     [require("./assets/data/DataCreated/Ceiling Decor.json"), "Ceiling Decor"],
     [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Photos.json")), "Photos"],
     [require("./assets/data/DataCreated/Posters.json"), "Posters"],
+    [require("./assets/data/DataCreated/Food.json"), "Food"],
     [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Headwear.json")), "Headwear"],
     [require("./assets/data/DataCreated/Accessories.json"), "Accessories"],
     [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Tops.json")), "Tops"],
@@ -462,6 +466,7 @@ export async function loadGlobalData(){
     ["furnitureCheckList","Name","Variation","Pattern"],
     ["furnitureCheckList","Name","Variation","Pattern"],
     ["furnitureCheckList","Name"],
+    ["furnitureCheckList","Name","Variation","Pattern"], //because some food was previously furniture
     ["clothingCheckList","Name","Variation"],
     ["clothingCheckList","Name","Variation"],
     ["clothingCheckList","Name","Variation"],

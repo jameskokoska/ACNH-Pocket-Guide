@@ -7,6 +7,8 @@ export const changelog = `
 -Please be patient as details come in :)
 -
 -Fixed art popup
+-Added Food tab (in items page) and Food items (in addition to recipes)
+-Fixed catalog scanner
 -
 -Loading times have increased due to a larger database
 -The database is now loaded into memory when updated

@@ -50,6 +50,34 @@ class MaterialsRouteClass extends React.PureComponent {
   }
 }
 
+class FoodRouteClass extends React.PureComponent {
+  render(){
+    return(
+      <ListPage 
+        title="Food"
+        imageProperty={["Image"]}
+        textProperty={["NameLanguage",]}
+        searchKey={[["NameLanguage",]]}
+        gridType="smallGrid" //smallGrid, largeGrid, row
+        subHeader="To view recipes, go to the Recipes + Tools page"
+        dataGlobalName={"dataLoadedFood"}
+        appBarColor={colors.foodAppBar[global.darkMode]}
+        titleColor={colors.textWhite[0]}
+        searchBarColor={colors.searchbarBG[global.darkMode]}
+        backgroundColor={colors.lightDarkAccent[global.darkMode]}
+        boxColor={true}
+        labelColor={colors.textBlack[global.darkMode]}
+        accentColor={colors.foodAccent[global.darkMode]}
+        popUpCornerImageProperty={["Source"]}
+        popUpCornerImageLabelProperty={["Source"]}
+        popUpContainer={[["FoodPopup",500]]}
+        specialLabelColor={colors.fishText[global.darkMode]}
+        popUpPhraseProperty={["Stack Size"]}
+      />
+    )
+  }
+}
+
 class FurnitureRouteClass extends React.PureComponent {
   render(){
     return(
@@ -303,6 +331,7 @@ class ItemsPage extends Component {
         { key: 'Furniture', title: attemptToTranslate('Furniture') },
         { key: 'Clothing', title: attemptToTranslate('Clothing') },
         { key: 'FloorWalls', title: attemptToTranslate('Floor & Walls') },
+        { key: 'Food', title: attemptToTranslate('Food') },
         { key: 'Materials', title: attemptToTranslate('Misc. Materials') },
       ],
     }
@@ -314,6 +343,8 @@ class ItemsPage extends Component {
         return <FurnitureRouteClass/>;
       case 'Clothing':
         return <ClothingRouteClass/>;
+      case 'Food':
+        return <FoodRouteClass/>;
       case 'FloorWalls':
         return <FloorsWallsRouteClass/>;
       case 'Materials':

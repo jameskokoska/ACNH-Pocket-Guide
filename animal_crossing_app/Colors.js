@@ -88,6 +88,8 @@ const colors = {
     cardsAccent : ["#fbf0fc","#57365c"],
     materialsAppBar : ["#66A9AC","#266164"],
     materialsAccent : ["#e8feff","#434C53"],
+    foodAppBar : ["#B9A54B","#776F28"],
+    foodAccent : ["#FFFDE8","#535243"],
     wishlistAppBar: ["#E69D9F", "#8B535A"],
     wishlistAccent: ["#FCE1E3", "#805759"],
     obtainableItemsAppBar: ["#D4D8A3", "#7C7A56"],
