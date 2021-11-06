@@ -6,6 +6,8 @@ export const changelog = `
 -I am updating the app with new content from the update....
 -Please be patient as details come in :)
 -
+-Fixed art popup
+-
 -Loading times have increased due to a larger database
 -The database is now loaded into memory when updated
 -Added items from the new update

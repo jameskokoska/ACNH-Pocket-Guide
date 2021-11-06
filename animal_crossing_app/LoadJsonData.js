@@ -234,12 +234,15 @@ export async function deleteSavedPhotos(){
 
 export async function deleteGeneratedData(){
   const files = await FileSystem.readDirectoryAsync(FileSystem.documentDirectory);
+  let totalFiles = 0
   const sizeMB = ((await FileSystem.getInfoAsync(FileSystem.documentDirectory)).size)/1000000;
   for(var i=0; i<files.length; i++){
-    if(files[i].includes(".json"))
+    if(files[i].includes(".json")){
       await FileSystem.deleteAsync(FileSystem.documentDirectory+files[i]);
+      totalFiles++
+    }
   }
-  return [files.length, sizeMB];
+  return [totalFiles, sizeMB];
 }
 
 export function checkOff(checkListKey, collected, type="", indexSpecial="", vibrate=getSettingsString("settingsEnableVibrations")==="true"){
