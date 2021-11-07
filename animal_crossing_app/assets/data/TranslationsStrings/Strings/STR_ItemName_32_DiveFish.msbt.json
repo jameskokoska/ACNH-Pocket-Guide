@@ -1,0 +1,762 @@
+﻿[
+  {
+    "label": "DiveFish_02620",
+    "locale": {
+      "CNzh": "裙带菜",
+      "EUde": "Wakame-Alge",
+      "EUen": "seaweed",
+      "EUes": "alga wakame",
+      "EUfr": "wakame",
+      "EUit": "alga wakame",
+      "EUnl": "zeewier",
+      "EUru": "морские водоросли",
+      "JPja": "ワカメ",
+      "KRko": "미역",
+      "TWzh": "裙帶菜",
+      "USen": "seaweed",
+      "USes": "alga wakame",
+      "USfr": "wakamé"
+    }
+  },
+  {
+    "label": "DiveFish_02830",
+    "locale": {
+      "CNzh": "海葡萄",
+      "EUde": "Kriechsprossalge",
+      "EUen": "sea grapes",
+      "EUes": "uva de mar",
+      "EUfr": "algue raisin de mer",
+      "EUit": "vite di mare",
+      "EUnl": "zeedruiven",
+      "EUru": "морской виноград",
+      "JPja": "ウミブドウ",
+      "KRko": "바다포도",
+      "TWzh": "海葡萄",
+      "USen": "sea grapes",
+      "USes": "uva de mar",
+      "USfr": "algue raisin de mer"
+    }
+  },
+  {
+    "label": "DiveFish_02831",
+    "locale": {
+      "CNzh": "海胆",
+      "EUde": "Seeigel",
+      "EUen": "sea urchin",
+      "EUes": "erizo de mar",
+      "EUfr": "oursin",
+      "EUit": "riccio di mare",
+      "EUnl": "zee-egel",
+      "EUru": "морской еж",
+      "JPja": "ウニ",
+      "KRko": "성게",
+      "TWzh": "海膽",
+      "USen": "sea urchin",
+      "USes": "erizo de mar",
+      "USfr": "oursin"
+    }
+  },
+  {
+    "label": "DiveFish_02832",
+    "locale": {
+      "CNzh": "藤壶",
+      "EUde": "Seepocke",
+      "EUen": "acorn barnacle",
+      "EUes": "bellota de mar",
+      "EUfr": "balane",
+      "EUit": "dente di cane",
+      "EUnl": "zeepok",
+      "EUru": "морской желудь",
+      "JPja": "フジツボ",
+      "KRko": "따개비",
+      "TWzh": "藤壺",
+      "USen": "acorn barnacle",
+      "USes": "bellota de mar",
+      "USfr": "balane"
+    }
+  },
+  {
+    "label": "DiveFish_02833",
+    "locale": {
+      "CNzh": "牡蛎",
+      "EUde": "Auster",
+      "EUen": "oyster",
+      "EUes": "ostra",
+      "EUfr": "huître",
+      "EUit": "ostrica",
+      "EUnl": "oester",
+      "EUru": "устрица",
+      "JPja": "オイスター",
+      "KRko": "굴",
+      "TWzh": "牡蠣",
+      "USen": "oyster",
+      "USes": "ostra",
+      "USfr": "huître"
+    }
+  },
+  {
+    "label": "DiveFish_02834",
+    "locale": {
+      "CNzh": "角蝾螺",
+      "EUde": "Turbanschnecke",
+      "EUen": "turban shell",
+      "EUes": "caracola espinosa",
+      "EUfr": "turbo",
+      "EUit": "lumaca turbante",
+      "EUnl": "tulbandschelp",
+      "EUru": "рогатый тюрбан",
+      "JPja": "サザエ",
+      "KRko": "소라",
+      "TWzh": "角蠑螺",
+      "USen": "turban shell",
+      "USes": "caracola espinosa",
+      "USfr": "turbo"
+    }
+  },
+  {
+    "label": "DiveFish_02835",
+    "locale": {
+      "CNzh": "鲍鱼",
+      "EUde": "Seeohr",
+      "EUen": "abalone",
+      "EUes": "abulón",
+      "EUfr": "ormeau",
+      "EUit": "abalone",
+      "EUnl": "abalone",
+      "EUru": "абалон",
+      "JPja": "アワビ",
+      "KRko": "전복",
+      "TWzh": "鮑魚",
+      "USen": "abalone",
+      "USes": "abulón",
+      "USfr": "ormeau"
+    }
+  },
+  {
+    "label": "DiveFish_02838",
+    "locale": {
+      "CNzh": "马氏珠母贝",
+      "EUde": "Perlmuschel",
+      "EUen": "pearl oyster",
+      "EUes": "ostra perlera",
+      "EUfr": "huître perlière",
+      "EUit": "ostrica pinctada",
+      "EUnl": "pareloester",
+      "EUru": "жемчужница",
+      "JPja": "アコヤガイ",
+      "KRko": "진주조개",
+      "TWzh": "珠母蛤",
+      "USen": "pearl oyster",
+      "USes": "ostra perlera",
+      "USfr": "huître perlière"
+    }
+  },
+  {
+    "label": "DiveFish_02839",
+    "locale": {
+      "CNzh": "虾夷扇贝",
+      "EUde": "Kammmuschel",
+      "EUen": "scallop",
+      "EUes": "vieira",
+      "EUfr": "pétoncle",
+      "EUit": "capasanta",
+      "EUnl": "mantelschelp",
+      "EUru": "гребешок",
+      "JPja": "ホタテ",
+      "KRko": "가리비",
+      "TWzh": "帆立貝",
+      "USen": "scallop",
+      "USes": "vieira",
+      "USfr": "pétoncle"
+    }
+  },
+  {
+    "label": "DiveFish_02840",
+    "locale": {
+      "CNzh": "海葵",
+      "EUde": "Seeanemone",
+      "EUen": "sea anemone",
+      "EUes": "anémona",
+      "EUfr": "anémone de mer",
+      "EUit": "anemone di mare",
+      "EUnl": "zeeanemoon",
+      "EUru": "актиния",
+      "JPja": "イソギンチャク",
+      "KRko": "말미잘",
+      "TWzh": "海葵",
+      "USen": "sea anemone",
+      "USes": "anémona",
+      "USfr": "anémone de mer"
+    }
+  },
+  {
+    "label": "DiveFish_02841",
+    "locale": {
+      "CNzh": "海星",
+      "EUde": "Seestern",
+      "EUen": "sea star",
+      "EUes": "estrella de mar",
+      "EUfr": "étoile de mer",
+      "EUit": "stella marina",
+      "EUnl": "zeester",
+      "EUru": "морская звезда",
+      "JPja": "ヒトデ",
+      "KRko": "불가사리",
+      "TWzh": "海星",
+      "USen": "sea star",
+      "USes": "estrella de mar",
+      "USfr": "étoile de mer"
+    }
+  },
+  {
+    "label": "DiveFish_02842",
+    "locale": {
+      "CNzh": "海参",
+      "EUde": "Seegurke",
+      "EUen": "sea cucumber",
+      "EUes": "pepino de mar",
+      "EUfr": "concombre de mer",
+      "EUit": "cetriolo di mare",
+      "EUnl": "zeekomkommer",
+      "EUru": "морской огурец",
+      "JPja": "ナマコ",
+      "KRko": "해삼",
+      "TWzh": "海參",
+      "USen": "sea cucumber",
+      "USes": "pepino de mar",
+      "USfr": "concombre de mer"
+    }
+  },
+  {
+    "label": "DiveFish_02843",
+    "locale": {
+      "CNzh": "海蛞蝓",
+      "EUde": "Nacktkiemer",
+      "EUen": "sea slug",
+      "EUes": "babosa de mar",
+      "EUfr": "limace de mer",
+      "EUit": "nudibranchi",
+      "EUnl": "zeeslak",
+      "EUru": "голожаберник",
+      "JPja": "ウミウシ",
+      "KRko": "갯민숭달팽이",
+      "TWzh": "海蛞蝓",
+      "USen": "sea slug",
+      "USes": "babosa de mar",
+      "USfr": "limace de mer"
+    }
+  },
+  {
+    "label": "DiveFish_02844",
+    "locale": {
+      "CNzh": "海扁虫",
+      "EUde": "Meerstrudelwurm",
+      "EUen": "flatworm",
+      "EUes": "gusano políclado",
+      "EUfr": "ver plat",
+      "EUit": "verme piatto",
+      "EUnl": "platworm",
+      "EUru": "плоский червь",
+      "JPja": "ヒラムシ",
+      "KRko": "납작벌레",
+      "TWzh": "海扁蟲",
+      "USen": "flatworm",
+      "USes": "gusano políclado",
+      "USfr": "ver plat"
+    }
+  },
+  {
+    "label": "DiveFish_02845",
+    "locale": {
+      "CNzh": "虾蛄",
+      "EUde": "Fangschreckenkrebs",
+      "EUen": "mantis shrimp",
+      "EUes": "langosta mantis",
+      "EUfr": "crevette-mante",
+      "EUit": "gambero mantide",
+      "EUnl": "mantisgarnaal",
+      "EUru": "рак-богомол",
+      "JPja": "シャコ",
+      "KRko": "갯가재",
+      "TWzh": "蝦蛄",
+      "USen": "mantis shrimp",
+      "USes": "langosta mantis",
+      "USfr": "crevette-mante"
+    }
+  },
+  {
+    "label": "DiveFish_02846",
+    "locale": {
+      "CNzh": "甜虾",
+      "EUde": "Botan-Garnele",
+      "EUen": "sweet shrimp",
+      "EUes": "camarón boreal",
+      "EUfr": "crevette nordique",
+      "EUit": "gamberetto boreale",
+      "EUnl": "Noorse garnaal",
+      "EUru": "северная креветка",
+      "JPja": "アマエビ",
+      "KRko": "북쪽분홍새우",
+      "TWzh": "甜蝦",
+      "USen": "sweet shrimp",
+      "USes": "camarón boreal",
+      "USfr": "crevette nordique"
+    }
+  },
+  {
+    "label": "DiveFish_02847",
+    "locale": {
+      "CNzh": "日本对虾",
+      "EUde": "Kuruma-Garnele",
+      "EUen": "tiger prawn",
+      "EUes": "langostino tigre",
+      "EUfr": "crevette tigrée",
+      "EUit": "gambero black tiger",
+      "EUnl": "tijgergarnaal",
+      "EUru": "тигровая креветка",
+      "JPja": "クルマエビ",
+      "KRko": "보리새우",
+      "TWzh": "日本囊對蝦",
+      "USen": "tiger prawn",
+      "USes": "langostino tigre",
+      "USfr": "crevette tigrée"
+    }
+  },
+  {
+    "label": "DiveFish_02848",
+    "locale": {
+      "CNzh": "伊势龙虾",
+      "EUde": "Languste",
+      "EUen": "spiny lobster",
+      "EUes": "langosta espinosa",
+      "EUfr": "langouste",
+      "EUit": "aragosta mediterranea",
+      "EUnl": "langoest",
+      "EUru": "колючий лангуст",
+      "JPja": "イセエビ",
+      "KRko": "닭새우",
+      "TWzh": "伊勢龍蝦",
+      "USen": "spiny lobster",
+      "USes": "langosta espinosa",
+      "USfr": "langouste"
+    }
+  },
+  {
+    "label": "DiveFish_02849",
+    "locale": {
+      "CNzh": "龙虾",
+      "EUde": "Hummer",
+      "EUen": "lobster",
+      "EUes": "bogavante",
+      "EUfr": "homard",
+      "EUit": "astice",
+      "EUnl": "kreeft",
+      "EUru": "омар",
+      "JPja": "ロブスター",
+      "KRko": "바닷가재",
+      "TWzh": "螯龍蝦",
+      "USen": "lobster",
+      "USes": "bogavante",
+      "USfr": "homard"
+    }
+  },
+  {
+    "label": "DiveFish_02850",
+    "locale": {
+      "CNzh": "松叶蟹",
+      "EUde": "Schneekrabbe",
+      "EUen": "snow crab",
+      "EUes": "cangrejo de nieve",
+      "EUfr": "crabe des neiges",
+      "EUit": "granchio della neve",
+      "EUnl": "sneeuwkrab",
+      "EUru": "краб-стригун",
+      "JPja": "ズワイガニ",
+      "KRko": "대게",
+      "TWzh": "松葉蟹",
+      "USen": "snow crab",
+      "USes": "cangrejo de nieve",
+      "USfr": "crabe des neiges"
+    }
+  },
+  {
+    "label": "DiveFish_02852",
+    "locale": {
+      "CNzh": "帝王蟹",
+      "EUde": "Königskrabbe",
+      "EUen": "red king crab",
+      "EUes": "cangrejo boreal",
+      "EUfr": "crabe royal",
+      "EUit": "granchio gigante",
+      "EUnl": "rode koningskrab",
+      "EUru": "камчатский краб",
+      "JPja": "タラバガニ",
+      "KRko": "왕게",
+      "TWzh": "鱈場蟹",
+      "USen": "red king crab",
+      "USes": "cangrejo boreal",
+      "USfr": "crabe royal"
+    }
+  },
+  {
+    "label": "DiveFish_02853",
+    "locale": {
+      "CNzh": "高脚蟹",
+      "EUde": "Riesenkrabbe",
+      "EUen": "spider crab",
+      "EUes": "cangrejo gigante japonés",
+      "EUfr": "crabe-araignée géant",
+      "EUit": "granchio gig. del Giappone",
+      "EUnl": "reuzenkrab",
+      "EUru": "краб-паук",
+      "JPja": "タカアシガニ",
+      "KRko": "키다리게",
+      "TWzh": "高腳蟹",
+      "USen": "spider crab",
+      "USes": "cangrejo gigante japonés",
+      "USfr": "crabe-araignée géant"
+    }
+  },
+  {
+    "label": "DiveFish_02854",
+    "locale": {
+      "CNzh": "章鱼",
+      "EUde": "Oktopus",
+      "EUen": "octopus",
+      "EUes": "pulpo",
+      "EUfr": "poulpe",
+      "EUit": "polpo",
+      "EUnl": "octopus",
+      "EUru": "осьминог",
+      "JPja": "タコ",
+      "KRko": "문어",
+      "TWzh": "章魚",
+      "USen": "octopus",
+      "USes": "pulpo",
+      "USfr": "pieuvre"
+    }
+  },
+  {
+    "label": "DiveFish_02855",
+    "locale": {
+      "CNzh": "花园鳗",
+      "EUde": "Röhrenaal",
+      "EUen": "spotted garden eel",
+      "EUes": "anguila jardinera",
+      "EUfr": "anguille de jardin",
+      "EUit": "anguilla di giardino",
+      "EUnl": "gevlekte buisaal",
+      "EUru": "леопардовый угорь",
+      "JPja": "チンアナゴ",
+      "KRko": "가든일",
+      "TWzh": "花園鰻",
+      "USen": "spotted garden eel",
+      "USes": "anguila jardinera",
+      "USfr": "anguille de jardin"
+    }
+  },
+  {
+    "label": "DiveFish_02856",
+    "locale": {
+      "CNzh": "鹦鹉螺",
+      "EUde": "Perlboot",
+      "EUen": "chambered nautilus",
+      "EUes": "nautilo",
+      "EUfr": "nautile",
+      "EUit": "nautilus",
+      "EUnl": "nautilus",
+      "EUru": "наутилус",
+      "JPja": "オウムガイ",
+      "KRko": "앵무조개",
+      "TWzh": "鸚鵡螺",
+      "USen": "chambered nautilus",
+      "USes": "nautilo",
+      "USfr": "nautile"
+    }
+  },
+  {
+    "label": "DiveFish_02857",
+    "locale": {
+      "CNzh": "鲎",
+      "EUde": "Pfeilschwanzkrebs",
+      "EUen": "horseshoe crab",
+      "EUes": "cangrejo herradura",
+      "EUfr": "limule",
+      "EUit": "granchio ferro di cavallo",
+      "EUnl": "degenkrab",
+      "EUru": "мечехвост",
+      "JPja": "カブトガニ",
+      "KRko": "투구게",
+      "TWzh": "鱟",
+      "USen": "horseshoe crab",
+      "USes": "cangrejo herradura",
+      "USfr": "limule"
+    }
+  },
+  {
+    "label": "DiveFish_02858",
+    "locale": {
+      "CNzh": "大王具足虫",
+      "EUde": "Riesenassel",
+      "EUen": "giant isopod",
+      "EUes": "isópodo gigante",
+      "EUfr": "bathynome géant",
+      "EUit": "isopode gigante",
+      "EUnl": "reuzenpissebed",
+      "EUru": "гигантская изопода",
+      "JPja": "ダイオウグソクムシ",
+      "KRko": "자이언트 이소포드",
+      "TWzh": "大王具足蟲",
+      "USen": "giant isopod",
+      "USes": "isópodo gigante",
+      "USfr": "isopode géant"
+    }
+  },
+  {
+    "label": "DiveFish_06920",
+    "locale": {
+      "CNzh": "萤火鱿",
+      "EUde": "Leuchtkalmar",
+      "EUen": "firefly squid",
+      "EUes": "calamar luciérnaga",
+      "EUfr": "calmar luciole",
+      "EUit": "calamaro lucciola",
+      "EUnl": "vuurvliegpijlinktvis",
+      "EUru": "сверкающий кальмар",
+      "JPja": "ホタルイカ",
+      "KRko": "반딧불오징어",
+      "TWzh": "螢火魷",
+      "USen": "firefly squid",
+      "USes": "calamar luciérnaga",
+      "USfr": "calmar luciole"
+    }
+  },
+  {
+    "label": "DiveFish_07191",
+    "locale": {
+      "CNzh": "梭子蟹",
+      "EUde": "Gazami-Krabbe",
+      "EUen": "gazami crab",
+      "EUes": "cangrejo gazami",
+      "EUfr": "crabe gazami",
+      "EUit": "granchio gazami",
+      "EUnl": "Japanse blauwe krab",
+      "EUru": "газами-краб",
+      "JPja": "ガザミ",
+      "KRko": "꽃게",
+      "TWzh": "三疣梭子蟹",
+      "USen": "gazami crab",
+      "USes": "cangrejo gazami",
+      "USfr": "crabe gazami"
+    }
+  },
+  {
+    "label": "DiveFish_07203",
+    "locale": {
+      "CNzh": "吸血鬼乌贼",
+      "EUde": "Vampirtintenfisch",
+      "EUen": "vampire squid",
+      "EUes": "calamar vampiro",
+      "EUfr": "vampire des abysses",
+      "EUit": "calamaro vampiro",
+      "EUnl": "vampierinktvis",
+      "EUru": "адский кальмар-вампир",
+      "JPja": "コウモリダコ",
+      "KRko": "흡혈오징어",
+      "TWzh": "吸血烏賊",
+      "USen": "vampire squid",
+      "USes": "calamar vampiro",
+      "USfr": "vampire des abysses"
+    }
+  },
+  {
+    "label": "DiveFish_07214",
+    "locale": {
+      "CNzh": "大砗磲",
+      "EUde": "Gigas-Riesenmuschel",
+      "EUen": "gigas giant clam",
+      "EUes": "taclobo gigante",
+      "EUfr": "bénitier colossal",
+      "EUit": "tridacna gigante",
+      "EUnl": "reuzendoopvontschelp",
+      "EUru": "гигантская тридакна",
+      "JPja": "オオシャコガイ",
+      "KRko": "대왕거거",
+      "TWzh": "大硨磲",
+      "USen": "gigas giant clam",
+      "USes": "taclobo gigante",
+      "USfr": "bénitier colossal"
+    }
+  },
+  {
+    "label": "DiveFish_07228",
+    "locale": {
+      "CNzh": "海鞘",
+      "EUde": "Seeananas",
+      "EUen": "sea pineapple",
+      "EUes": "piña de mar",
+      "EUfr": "halocynthia roretzi",
+      "EUit": "ananas di mare",
+      "EUnl": "zeeananas",
+      "EUru": "морской ананас",
+      "JPja": "ホヤ",
+      "KRko": "멍게",
+      "TWzh": "海鞘",
+      "USen": "sea pineapple",
+      "USes": "piña de mar",
+      "USfr": "halocynthia roretzi"
+    }
+  },
+  {
+    "label": "DiveFish_07245",
+    "locale": {
+      "CNzh": "海月水母",
+      "EUde": "Ohrenqualle",
+      "EUen": "moon jellyfish",
+      "EUes": "medusa luna",
+      "EUfr": "méduse lune",
+      "EUit": "medusa aurelia",
+      "EUnl": "oorkwal",
+      "EUru": "ушастая аурелия",
+      "JPja": "ミズクラゲ",
+      "KRko": "보름달물해파리",
+      "TWzh": "海月水母",
+      "USen": "moon jellyfish",
+      "USes": "medusa luna",
+      "USfr": "méduse lune"
+    }
+  },
+  {
+    "label": "DiveFish_07252",
+    "locale": {
+      "CNzh": "扁面蛸",
+      "EUde": "Regenschirm-Oktopus",
+      "EUen": "umbrella octopus",
+      "EUes": "pulpo paraguas",
+      "EUfr": "pieuvre parapluie",
+      "EUit": "polpo ombrello",
+      "EUnl": "depressa-inktvis",
+      "EUru": "опистотейтис",
+      "JPja": "メンダコ",
+      "KRko": "우무문어",
+      "TWzh": "扁面蛸",
+      "USen": "umbrella octopus",
+      "USes": "pulpo paraguas",
+      "USfr": "pieuvre parapluie"
+    }
+  },
+  {
+    "label": "DiveFish_07267",
+    "locale": {
+      "CNzh": "石笔海胆",
+      "EUde": "Griffelseeigel",
+      "EUen": "slate pencil urchin",
+      "EUes": "erizo lápiz de pizarra",
+      "EUfr": "oursin crayon",
+      "EUit": "riccio matita",
+      "EUnl": "griffelzee-egel",
+      "EUru": "грифельный морск. еж",
+      "JPja": "パイプウニ",
+      "KRko": "연필성게",
+      "TWzh": "石筆海膽",
+      "USen": "slate pencil urchin",
+      "USes": "erizo lápiz de pizarra",
+      "USfr": "oursin crayon"
+    }
+  },
+  {
+    "label": "DiveFish_07278",
+    "locale": {
+      "CNzh": "花螺",
+      "EUde": "Babylon-Seeschnecke",
+      "EUen": "whelk",
+      "EUes": "buccino",
+      "EUfr": "bulot",
+      "EUit": "buccino",
+      "EUnl": "wulk",
+      "EUru": "моллюск-трубач",
+      "JPja": "バイガイ",
+      "KRko": "수랑",
+      "TWzh": "峨螺",
+      "USen": "whelk",
+      "USes": "buccino",
+      "USfr": "bulot"
+    }
+  },
+  {
+    "label": "DiveFish_07303",
+    "locale": {
+      "CNzh": "海猪",
+      "EUde": "Scotoplanes",
+      "EUen": "sea pig",
+      "EUes": "cerdo de mar",
+      "EUfr": "cochon de mer",
+      "EUit": "porcellino di mare",
+      "EUnl": "zeevarken",
+      "EUru": "скотопланес",
+      "JPja": "センジュナマコ",
+      "KRko": "바다돼지",
+      "TWzh": "海豬",
+      "USen": "sea pig",
+      "USes": "cerdo de mar",
+      "USfr": "cochon de mer"
+    }
+  },
+  {
+    "label": "DiveFish_07308",
+    "locale": {
+      "CNzh": "珍宝蟹",
+      "EUde": "Pazifik-Taschenkrebs",
+      "EUen": "Dungeness crab",
+      "EUes": "buey del Pacífico",
+      "EUfr": "crabe de Dungeness",
+      "EUit": "granciporro",
+      "EUnl": "Dungeness-krab",
+      "EUru": "данженесский краб",
+      "JPja": "ダンジネスクラブ",
+      "KRko": "던지니스크랩",
+      "TWzh": "首長黃道蟹",
+      "USen": "Dungeness crab",
+      "USes": "buey del Pacífico",
+      "USfr": "crabe de Dungeness"
+    }
+  },
+  {
+    "label": "DiveFish_07318",
+    "locale": {
+      "CNzh": "偕老同穴",
+      "EUde": "Gießkannenschwamm",
+      "EUen": "Venus' flower basket",
+      "EUes": "canasta de flores de Venus",
+      "EUfr": "corbeille de Vénus",
+      "EUit": "cestello di Venere",
+      "EUnl": "venusmandje",
+      "EUru": "корзинка Венеры",
+      "JPja": "カイロウドウケツ",
+      "KRko": "해로동혈",
+      "TWzh": "偕老同穴",
+      "USen": "Venus' flower basket",
+      "USes": "canasta de flores de Venus",
+      "USfr": "corbeille de Vénus"
+    }
+  },
+  {
+    "label": "DiveFish_07411",
+    "locale": {
+      "CNzh": "贻贝",
+      "EUde": "Miesmuschel",
+      "EUen": "mussel",
+      "EUes": "mejillón",
+      "EUfr": "moule",
+      "EUit": "cozza",
+      "EUnl": "mossel",
+      "EUru": "мидия",
+      "JPja": "ムールガイ",
+      "KRko": "지중해담치",
+      "TWzh": "貽貝",
+      "USen": "mussel",
+      "USes": "mejillón",
+      "USfr": "moule"
+    }
+  }
+]

@@ -1,0 +1,325 @@
+﻿[
+  {
+    "label": "PhotoStudioList_00751",
+    "locale": {
+      "CNzh": "固定梯子工具组",
+      "EUde": "Leiter-Bausatz",
+      "EUen": "ladder set-up kit",
+      "EUes": "kit de escalerilla",
+      "EUfr": "kit installation d'échelle",
+      "EUit": "kit fissa-scala",
+      "EUnl": "ladderopstelpakket",
+      "EUru": "крепеж лестницы",
+      "JPja": "FIXはしごキット",
+      "KRko": "FIX 사다리 키트",
+      "TWzh": "固定梯子工具組",
+      "USen": "ladder set-up kit",
+      "USes": "kit de escalerita",
+      "USfr": "kit installation d'échelle"
+    }
+  },
+  {
+    "label": "PhotoStudioList_00752",
+    "locale": {
+      "CNzh": "料理手册",
+      "EUde": "Rezept",
+      "EUen": "cooking recipe",
+      "EUes": "receta de cocina",
+      "EUfr": "recette de cuisine",
+      "EUit": "ricetta",
+      "EUnl": "recept",
+      "EUru": "рецепт",
+      "JPja": "クッキングレシピ",
+      "KRko": "요리 레시피",
+      "TWzh": "料理方程式",
+      "USen": "cooking recipe",
+      "USes": "receta de cocina",
+      "USfr": "recette de cuisine"
+    }
+  },
+  {
+    "label": "PhotoStudioList_00753",
+    "locale": {
+      "CNzh": "壁纸",
+      "EUde": "Tapete",
+      "EUen": "wallpaper",
+      "EUes": "papel de pared",
+      "EUfr": "papier peint",
+      "EUit": "carta da parati",
+      "EUnl": "behang",
+      "EUru": "обои",
+      "JPja": "かべがみ",
+      "KRko": "벽지",
+      "TWzh": "壁紙",
+      "USen": "wallpaper",
+      "USes": "papel de pared",
+      "USfr": "papier peint"
+    }
+  },
+  {
+    "label": "PhotoStudioList_00754",
+    "locale": {
+      "CNzh": "地板",
+      "EUde": "Boden",
+      "EUen": "flooring",
+      "EUes": "suelo",
+      "EUfr": "sol",
+      "EUit": "pavimento",
+      "EUnl": "vloerbedekking",
+      "EUru": "пол",
+      "JPja": "ゆかいた",
+      "KRko": "바닥",
+      "TWzh": "地板",
+      "USen": "flooring",
+      "USes": "suelo",
+      "USfr": "sol"
+    }
+  },
+  {
+    "label": "PhotoStudioList_00755",
+    "locale": {
+      "CNzh": "灌木苗",
+      "EUde": "Buschsetzling",
+      "EUen": "shrub start",
+      "EUes": "arbusto de vivero",
+      "EUfr": "pousse d'arbuste",
+      "EUit": "germoglio di cespuglio",
+      "EUnl": "struikzaailing",
+      "EUru": "молодой кустик",
+      "JPja": "ていぼくのなえ",
+      "KRko": "낮은 나무 묘목",
+      "TWzh": "灌木苗",
+      "USen": "shrub start",
+      "USes": "arbusto de vivero",
+      "USfr": "pousse d'arbuste"
+    }
+  },
+  {
+    "label": "PhotoStudioList_00756",
+    "locale": {
+      "CNzh": "波金袋",
+      "EUde": "Poki-Sack",
+      "EUen": "Poki bag",
+      "EUes": "bolsa de pokis",
+      "EUfr": "sac de pokis",
+      "EUit": "sacco di poki",
+      "EUnl": "zak poki",
+      "EUru": "мешок поки",
+      "JPja": "ポキぶくろ",
+      "KRko": "푸키 주머니",
+      "TWzh": "波金袋",
+      "USen": "Poki bag",
+      "USes": "bolsa de pokis",
+      "USfr": "sac de pokis"
+    }
+  },
+  {
+    "label": "PhotoStudioList_00757",
+    "locale": {
+      "CNzh": "蔬菜苗",
+      "EUde": "Gemüsesetzling",
+      "EUen": "produce start",
+      "EUes": "cultivo de vivero",
+      "EUfr": "pousse potagère",
+      "EUit": "germoglio di ortaggio",
+      "EUnl": "gewaszaailing",
+      "EUru": "овощная рассада",
+      "JPja": "やさいのなえ",
+      "KRko": "야채 모종",
+      "TWzh": "蔬菜苗",
+      "USen": "produce start",
+      "USes": "cultivo de vivero",
+      "USfr": "pousse potagère"
+    }
+  },
+  {
+    "label": "PhotoStudioList_00758",
+    "locale": {
+      "CNzh": "杂草",
+      "EUde": "Unkraut",
+      "EUen": "clump of weeds",
+      "EUes": "hierbajo",
+      "EUfr": "mauvaise herbe",
+      "EUit": "erbaccia",
+      "EUnl": "onkruid",
+      "EUru": "сорняк",
+      "JPja": "ざっそう",
+      "KRko": "잡초",
+      "TWzh": "雜草",
+      "USen": "clump of weeds",
+      "USes": "maleza",
+      "USfr": "mauvaise herbe"
+    }
+  },
+  {
+    "label": "PhotoStudioList_00759",
+    "locale": {
+      "CNzh": "光藓",
+      "EUde": "Leuchtmoos",
+      "EUen": "glowing moss",
+      "EUes": "musgo luminoso",
+      "EUfr": "schistostega",
+      "EUit": "muschio luminoso",
+      "EUnl": "lichtmos",
+      "EUru": "кусок светящегося мха",
+      "JPja": "ヒカリゴケ",
+      "KRko": "빛이끼",
+      "TWzh": "光蘚",
+      "USen": "glowing moss",
+      "USes": "musgo luminoso",
+      "USfr": "schistostega"
+    }
+  },
+  {
+    "label": "PhotoStudioList_00760",
+    "locale": {
+      "CNzh": "藤蔓",
+      "EUde": "Ranke",
+      "EUen": "vine",
+      "EUes": "enredadera",
+      "EUfr": "vigne",
+      "EUit": "pianta di edera",
+      "EUnl": "klimplant",
+      "EUru": "лоза",
+      "JPja": "ツル",
+      "KRko": "덩굴",
+      "TWzh": "藤蔓",
+      "USen": "vine",
+      "USes": "enredadera",
+      "USfr": "vigne"
+    }
+  },
+  {
+    "label": "PhotoStudioList_07730",
+    "locale": {
+      "CNzh": "铃钱（金币）",
+      "EUde": "Sterni-Münze",
+      "EUen": "Bell coin",
+      "EUes": "moneda baya",
+      "EUfr": "pièce de clochettes",
+      "EUit": "stellina (moneta)",
+      "EUnl": "klingelmunt",
+      "EUru": "динь",
+      "JPja": "ベル（コイン）",
+      "KRko": "동전",
+      "TWzh": "鈴錢（金幣）",
+      "USen": "Bell coin",
+      "USes": "moneda baya",
+      "USfr": "pièce de clochettes"
+    }
+  },
+  {
+    "label": "PhotoStudioList_07731",
+    "locale": {
+      "CNzh": "铃钱袋",
+      "EUde": "Sterni-Sack",
+      "EUen": "Bell bag",
+      "EUes": "bolsa de bayas",
+      "EUfr": "sac de clochettes",
+      "EUit": "sacco di stelline",
+      "EUnl": "zak klingels",
+      "EUru": "мешок с динями",
+      "JPja": "ベルぶくろ",
+      "KRko": "벨 주머니",
+      "TWzh": "鈴錢袋",
+      "USen": "Bell bag",
+      "USes": "bolsa de bayas",
+      "USfr": "sac de clochettes"
+    }
+  },
+  {
+    "label": "PhotoStudioList_07732",
+    "locale": {
+      "CNzh": "双壳贝",
+      "EUde": "Klappmuschel",
+      "EUen": "bivalve",
+      "EUes": "bivalvo",
+      "EUfr": "coquillage bivalve",
+      "EUit": "conchiglia bivalve",
+      "EUnl": "schelp",
+      "EUru": "двустворчатая раковина",
+      "JPja": "にまいがい",
+      "KRko": "조개",
+      "TWzh": "雙殼貝",
+      "USen": "bivalve",
+      "USes": "bivalvo",
+      "USfr": "coquillage bivalve"
+    }
+  },
+  {
+    "label": "PhotoStudioList_07733",
+    "locale": {
+      "CNzh": "螺",
+      "EUde": "Spiralmuschel",
+      "EUen": "spiral shell",
+      "EUes": "concha en espiral",
+      "EUfr": "coquillage spiralé",
+      "EUit": "conchiglia a spirale",
+      "EUnl": "spiraalschelp",
+      "EUru": "спиральная раковина",
+      "JPja": "まきがい",
+      "KRko": "고둥",
+      "TWzh": "螺",
+      "USen": "spiral shell",
+      "USes": "concha marina en espiral",
+      "USfr": "coquillage spiralé"
+    }
+  },
+  {
+    "label": "PhotoStudioList_07734",
+    "locale": {
+      "CNzh": "大头菜",
+      "EUde": "Rüben",
+      "EUen": "turnips",
+      "EUes": "nabo",
+      "EUfr": "lot de navets",
+      "EUit": "rape",
+      "EUnl": "knollen",
+      "EUru": "репа",
+      "JPja": "カブ",
+      "KRko": "무",
+      "TWzh": "大頭菜",
+      "USen": "turnips",
+      "USes": "nabo",
+      "USfr": "lot de navets"
+    }
+  },
+  {
+    "label": "PhotoStudioList_07735",
+    "locale": {
+      "CNzh": "手册",
+      "EUde": "Anleitung",
+      "EUen": "recipe",
+      "EUes": "proyecto de bricolaje",
+      "EUfr": "plan de bricolage",
+      "EUit": "schema",
+      "EUnl": "plan",
+      "EUru": "инструкция",
+      "JPja": "レシピ",
+      "KRko": "레시피",
+      "TWzh": "方程式",
+      "USen": "recipe",
+      "USes": "esquema de proyecto",
+      "USfr": "plan de bricolage"
+    }
+  },
+  {
+    "label": "PhotoStudioList_07736",
+    "locale": {
+      "CNzh": "种子袋",
+      "EUde": "Saatbeutel",
+      "EUen": "seed bag",
+      "EUes": "bolsa de semillas",
+      "EUfr": "sac de graines",
+      "EUit": "sacco di semi",
+      "EUnl": "zakje zaad",
+      "EUru": "пакетик с семенами",
+      "JPja": "たねぶくろ",
+      "KRko": "씨앗 주머니",
+      "TWzh": "種子袋",
+      "USen": "seed bag",
+      "USes": "bolsa de semillas",
+      "USfr": "sac de graines"
+    }
+  }
+]

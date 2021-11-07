@@ -1,0 +1,1237 @@
+﻿[
+  {
+    "label": "Axe_02100",
+    "locale": {
+      "CNzh": "斧头",
+      "EUde": "Axt",
+      "EUen": "axe",
+      "EUes": "hacha",
+      "EUfr": "hache",
+      "EUit": "ascia",
+      "EUnl": "bijl",
+      "EUru": "топор",
+      "JPja": "オノ",
+      "KRko": "도끼",
+      "TWzh": "斧頭",
+      "USen": "axe",
+      "USes": "hacha",
+      "USfr": "hache"
+    }
+  },
+  {
+    "label": "Axe_03068",
+    "locale": {
+      "CNzh": "简陋斧头",
+      "EUde": "Wackelaxt",
+      "EUen": "flimsy axe",
+      "EUes": "hacha endeble",
+      "EUfr": "hache rudimentaire",
+      "EUit": "ascia fragile",
+      "EUnl": "breekbare bijl",
+      "EUru": "непрочный топор",
+      "JPja": "ショボいオノ",
+      "KRko": "엉성한 도끼",
+      "TWzh": "簡陋斧頭",
+      "USen": "flimsy axe",
+      "USes": "hacha frágil",
+      "USfr": "hache rudimentaire"
+    }
+  },
+  {
+    "label": "Axe_05856",
+    "locale": {
+      "CNzh": "石斧头",
+      "EUde": "Steinaxt",
+      "EUen": "stone axe",
+      "EUes": "hacha de piedra",
+      "EUfr": "hache de pierre",
+      "EUit": "ascia di pietra",
+      "EUnl": "stenen bijl",
+      "EUru": "каменный топор",
+      "JPja": "いしのオノ",
+      "KRko": "돌도끼",
+      "TWzh": "石斧頭",
+      "USen": "stone axe",
+      "USes": "hacha de piedra",
+      "USfr": "hache de pierre"
+    }
+  },
+  {
+    "label": "Axe_09617",
+    "locale": {
+      "CNzh": "金色斧头",
+      "EUde": "Goldaxt",
+      "EUen": "golden axe",
+      "EUes": "hacha de oro",
+      "EUfr": "hache dorée",
+      "EUit": "ascia d'oro",
+      "EUnl": "gouden bijl",
+      "EUru": "золотой топор",
+      "JPja": "きんのオノ",
+      "KRko": "금도끼",
+      "TWzh": "金色斧頭",
+      "USen": "golden axe",
+      "USes": "hacha de oro",
+      "USfr": "hache dorée"
+    }
+  },
+  {
+    "label": "Axe_12615",
+    "locale": {
+      "CNzh": "快要坏掉的斧头",
+      "EUde": "Morschaxt",
+      "EUen": "worn axe",
+      "EUes": "hacha maltrecha",
+      "EUfr": "hache émoussée",
+      "EUit": "ascia consumata",
+      "EUnl": "versleten bijl",
+      "EUru": "видавший виды топор",
+      "JPja": "こわれかけのオノ",
+      "KRko": "튼튼하지 않은 도끼",
+      "TWzh": "快壞掉的斧頭",
+      "USen": "worn axe",
+      "USes": "hacha maltrecha",
+      "USfr": "hache émoussée"
+    }
+  },
+  {
+    "label": "ChangeStick_02544",
+    "locale": {
+      "CNzh": "星星棒",
+      "EUde": "Sternenstab",
+      "EUen": "star wand",
+      "EUes": "varita estrella",
+      "EUfr": "baguette étoile",
+      "EUit": "bacchetta stella",
+      "EUnl": "sterrenstaf",
+      "EUru": "палочка со звездой",
+      "JPja": "スターなステッキ",
+      "KRko": "별 지팡이",
+      "TWzh": "星星棒",
+      "USen": "star wand",
+      "USes": "varita estrella",
+      "USfr": "baguette étoile"
+    }
+  },
+  {
+    "label": "ChangeStick_05083",
+    "locale": {
+      "CNzh": "风信子棒",
+      "EUde": "Hyazinthenstab",
+      "EUen": "hyacinth wand",
+      "EUes": "varita jacinto",
+      "EUfr": "baguette jacinthe",
+      "EUit": "bacchetta giacinto",
+      "EUnl": "hyacintenstaf",
+      "EUru": "палочка с гиацинтом",
+      "JPja": "ヒヤシンスのステッキ",
+      "KRko": "히아신스 지팡이",
+      "TWzh": "風信子棒",
+      "USen": "hyacinth wand",
+      "USes": "varita jacinto",
+      "USfr": "baguette jacinthe"
+    }
+  },
+  {
+    "label": "ChangeStick_05084",
+    "locale": {
+      "CNzh": "银莲花棒",
+      "EUde": "Anemonenstab",
+      "EUen": "windflower wand",
+      "EUes": "varita anémona",
+      "EUfr": "baguette anémone",
+      "EUit": "bacchetta anemone",
+      "EUnl": "anemonenstaf",
+      "EUru": "палочка с ветреницей",
+      "JPja": "アネモネのステッキ",
+      "KRko": "아네모네 지팡이",
+      "TWzh": "銀蓮花棒",
+      "USen": "windflower wand",
+      "USes": "varita anémona",
+      "USfr": "baguette anémone"
+    }
+  },
+  {
+    "label": "ChangeStick_05085",
+    "locale": {
+      "CNzh": "郁金香棒",
+      "EUde": "Tulpenstab",
+      "EUen": "tulip wand",
+      "EUes": "varita tulipán",
+      "EUfr": "baguette tulipe",
+      "EUit": "bacchetta tulipano",
+      "EUnl": "tulpenstaf",
+      "EUru": "палочка с тюльпаном",
+      "JPja": "チューリップのステッキ",
+      "KRko": "튤립 지팡이",
+      "TWzh": "鬱金香棒",
+      "USen": "tulip wand",
+      "USes": "varita tulipán",
+      "USfr": "baguette tulipe"
+    }
+  },
+  {
+    "label": "ChangeStick_05091",
+    "locale": {
+      "CNzh": "三色堇棒",
+      "EUde": "Veilchenstab",
+      "EUen": "pansy wand",
+      "EUes": "varita viola",
+      "EUfr": "baguette pensée",
+      "EUit": "bacchetta viola",
+      "EUnl": "viooltjesstaf",
+      "EUru": "палочка с фиалкой",
+      "JPja": "パンジーのステッキ",
+      "KRko": "팬지 지팡이",
+      "TWzh": "三色堇棒",
+      "USen": "pansy wand",
+      "USes": "varita viola",
+      "USfr": "baguette pensée"
+    }
+  },
+  {
+    "label": "ChangeStick_05092",
+    "locale": {
+      "CNzh": "波斯菊棒",
+      "EUde": "Cosmeastab",
+      "EUen": "cosmos wand",
+      "EUes": "varita cosmos",
+      "EUfr": "baguette cosmos",
+      "EUit": "bacchetta cosmea",
+      "EUnl": "cosmeastaf",
+      "EUru": "палочка с космеей",
+      "JPja": "コスモスのステッキ",
+      "KRko": "코스모스 지팡이",
+      "TWzh": "波斯菊棒",
+      "USen": "cosmos wand",
+      "USes": "varita cosmos",
+      "USfr": "baguette cosmos"
+    }
+  },
+  {
+    "label": "ChangeStick_05093",
+    "locale": {
+      "CNzh": "玫瑰棒",
+      "EUde": "Rosenstab",
+      "EUen": "rose wand",
+      "EUes": "varita rosa",
+      "EUfr": "baguette rose",
+      "EUit": "bacchetta rosa",
+      "EUnl": "rozenstaf",
+      "EUru": "палочка с розой",
+      "JPja": "バラのステッキ",
+      "KRko": "장미 지팡이",
+      "TWzh": "玫瑰棒",
+      "USen": "rose wand",
+      "USes": "varita rosa",
+      "USfr": "baguette rose"
+    }
+  },
+  {
+    "label": "ChangeStick_05094",
+    "locale": {
+      "CNzh": "百合棒",
+      "EUde": "Lilienstab",
+      "EUen": "lily wand",
+      "EUes": "varita lirio",
+      "EUfr": "baguette lys",
+      "EUit": "bacchetta giglio",
+      "EUnl": "leliestaf",
+      "EUru": "палочка с лилией",
+      "JPja": "ユリのステッキ",
+      "KRko": "백합 지팡이",
+      "TWzh": "百合棒",
+      "USen": "lily wand",
+      "USes": "varita lirio",
+      "USfr": "baguette lys"
+    }
+  },
+  {
+    "label": "ChangeStick_05095",
+    "locale": {
+      "CNzh": "菊花棒",
+      "EUde": "Chrysanthemenstab",
+      "EUen": "mums wand",
+      "EUes": "varita crisantemo",
+      "EUfr": "baguette chrysanthème",
+      "EUit": "bacchetta crisantemo",
+      "EUnl": "chrysantenstaf",
+      "EUru": "палочка с хризантемой",
+      "JPja": "キクのステッキ",
+      "KRko": "국화 지팡이",
+      "TWzh": "菊花棒",
+      "USen": "mums wand",
+      "USes": "varita crisantemo",
+      "USfr": "baguette chrysanthème"
+    }
+  },
+  {
+    "label": "ChangeStick_07584",
+    "locale": {
+      "CNzh": "棒子",
+      "EUde": "Stab",
+      "EUen": "wand",
+      "EUes": "varita",
+      "EUfr": "baguette magique",
+      "EUit": "bacchetta",
+      "EUnl": "toverstaf",
+      "EUru": "палочка",
+      "JPja": "ステッキ",
+      "KRko": "지팡이",
+      "TWzh": "棒子",
+      "USen": "wand",
+      "USes": "varita",
+      "USfr": "baguette magique"
+    }
+  },
+  {
+    "label": "ChangeStick_07585",
+    "locale": {
+      "CNzh": "冰之棒",
+      "EUde": "Eisstab",
+      "EUen": "ice wand",
+      "EUes": "varita hielo",
+      "EUfr": "baguette glace",
+      "EUit": "bacchetta ghiaccio",
+      "EUnl": "ijsstaf",
+      "EUru": "ледяная палочка",
+      "JPja": "こおりのステッキ",
+      "KRko": "얼음 지팡이",
+      "TWzh": "冰之棒",
+      "USen": "ice wand",
+      "USes": "varita hielo",
+      "USfr": "baguette glace"
+    }
+  },
+  {
+    "label": "ChangeStick_07586",
+    "locale": {
+      "CNzh": "贝壳棒",
+      "EUde": "Muschelstab",
+      "EUen": "shell wand",
+      "EUes": "varita concha marina",
+      "EUfr": "baguette coquillage",
+      "EUit": "bacchetta conchiglia",
+      "EUnl": "schelpenstaf",
+      "EUru": "палочка с ракушкой",
+      "JPja": "かいがらのステッキ",
+      "KRko": "조개껍데기 지팡이",
+      "TWzh": "貝殼棒",
+      "USen": "shell wand",
+      "USes": "varita caracola",
+      "USfr": "baguette coquillage"
+    }
+  },
+  {
+    "label": "ChangeStick_07587",
+    "locale": {
+      "CNzh": "树枝棒",
+      "EUde": "Zweigstab",
+      "EUen": "tree-branch wand",
+      "EUes": "varita rama",
+      "EUfr": "baguette branche",
+      "EUit": "bacchetta ramo",
+      "EUnl": "wilgenstaf",
+      "EUru": "палочка из ветки",
+      "JPja": "きのえだのステッキ",
+      "KRko": "나뭇가지 지팡이",
+      "TWzh": "樹枝棒",
+      "USen": "tree-branch wand",
+      "USes": "varita rama",
+      "USfr": "baguette branche"
+    }
+  },
+  {
+    "label": "ChangeStick_07588",
+    "locale": {
+      "CNzh": "蘑菇棒",
+      "EUde": "Pilzstab",
+      "EUen": "mushroom wand",
+      "EUes": "varita champiñón",
+      "EUfr": "baguette champignon",
+      "EUit": "bacchetta fungo",
+      "EUnl": "paddenstoelstaf",
+      "EUru": "грибная палочка",
+      "JPja": "キノコのステッキ",
+      "KRko": "버섯 지팡이",
+      "TWzh": "蘑菇棒",
+      "USen": "mushroom wand",
+      "USes": "varita champiñón",
+      "USfr": "baguette champignon"
+    }
+  },
+  {
+    "label": "ChangeStick_07589",
+    "locale": {
+      "CNzh": "樱花棒",
+      "EUde": "Kirschblütenstab",
+      "EUen": "cherry-blossom wand",
+      "EUes": "varita flor de cerezo",
+      "EUfr": "baguette fleurs de cerisier",
+      "EUit": "bacchetta ciliegio",
+      "EUnl": "kersenbloesemstaf",
+      "EUru": "палочка с сакурой",
+      "JPja": "さくらのステッキ",
+      "KRko": "벚꽃 지팡이",
+      "TWzh": "櫻花棒",
+      "USen": "cherry-blossom wand",
+      "USes": "varita flor de cerezo",
+      "USfr": "baguette fleurs de cerisier"
+    }
+  },
+  {
+    "label": "ChangeStick_07590",
+    "locale": {
+      "CNzh": "竹棒",
+      "EUde": "Bambusstab",
+      "EUen": "bamboo wand",
+      "EUes": "varita bambú",
+      "EUfr": "baguette bambou",
+      "EUit": "bacchetta bambù",
+      "EUnl": "bamboestaf",
+      "EUru": "палочка из бамбука",
+      "JPja": "たけのステッキ",
+      "KRko": "대나무 지팡이",
+      "TWzh": "竹棒",
+      "USen": "bamboo wand",
+      "USes": "varita bambú",
+      "USfr": "baguette bambou"
+    }
+  },
+  {
+    "label": "ChangeStick_07591",
+    "locale": {
+      "CNzh": "黄金棒",
+      "EUde": "Goldstab",
+      "EUen": "golden wand",
+      "EUes": "varita dorada",
+      "EUfr": "baguette d'or",
+      "EUit": "bacchetta d'oro",
+      "EUnl": "gouden staf",
+      "EUru": "золотая палочка",
+      "JPja": "おうごんのステッキ",
+      "KRko": "황금 지팡이",
+      "TWzh": "黃金棒",
+      "USen": "golden wand",
+      "USes": "varita dorada",
+      "USfr": "baguette d'or"
+    }
+  },
+  {
+    "label": "ChangeStick_07592",
+    "locale": {
+      "CNzh": "铁棒",
+      "EUde": "Eisenstab",
+      "EUen": "iron wand",
+      "EUes": "varita de hierro",
+      "EUfr": "baguette en fer",
+      "EUit": "bacchetta d'acciaio",
+      "EUnl": "ijzeren staf",
+      "EUru": "железная палочка",
+      "JPja": "てつのステッキ",
+      "KRko": "철 지팡이",
+      "TWzh": "鐵棒",
+      "USen": "iron wand",
+      "USes": "varita de hierro",
+      "USfr": "baguette en fer"
+    }
+  },
+  {
+    "label": "ChangeStick_08769",
+    "locale": {
+      "CNzh": "虫子棒",
+      "EUde": "Insektenstab",
+      "EUen": "bug wand",
+      "EUes": "varita bicho",
+      "EUfr": "baguette insecte",
+      "EUit": "bacchetta insetto",
+      "EUnl": "insectenstaf",
+      "EUru": "палочка с насекомым",
+      "JPja": "ムシのステッキ",
+      "KRko": "곤충 지팡이",
+      "TWzh": "蟲子棒",
+      "USen": "bug wand",
+      "USes": "varita insecto",
+      "USfr": "baguette insecte"
+    }
+  },
+  {
+    "label": "ChangeStick_08770",
+    "locale": {
+      "CNzh": "鱼儿棒",
+      "EUde": "Fischstab",
+      "EUen": "fish wand",
+      "EUes": "varita pez",
+      "EUfr": "baguette poisson",
+      "EUit": "bacchetta pesce",
+      "EUnl": "vissenstaf",
+      "EUru": "палочка с рыбой",
+      "JPja": "おサカナのステッキ",
+      "KRko": "물고기 지팡이",
+      "TWzh": "魚兒棒",
+      "USen": "fish wand",
+      "USes": "varita pez",
+      "USfr": "baguette poisson"
+    }
+  },
+  {
+    "label": "ChangeStick_12578",
+    "locale": {
+      "CNzh": "复活节棒",
+      "EUde": "Häschentag-Stab",
+      "EUen": "Bunny Day wand",
+      "EUes": "varita Caza del Huevo",
+      "EUfr": "baguette fête des œufs",
+      "EUit": "bacchetta caccia all'uovo",
+      "EUnl": "eierstaf",
+      "EUru": "палочка на День зайцев",
+      "JPja": "イースターなステッキ",
+      "KRko": "이스터 지팡이",
+      "TWzh": "復活節棒",
+      "USen": "Bunny Day wand",
+      "USes": "varita Caza del Huevo",
+      "USfr": "baguette fête des œufs"
+    }
+  },
+  {
+    "label": "ChangeStick_12695",
+    "locale": {
+      "CNzh": "婚礼棒",
+      "EUde": "Hochzeitsstab",
+      "EUen": "wedding wand",
+      "EUes": "varita ramo de boda",
+      "EUfr": "baguette de mariage",
+      "EUit": "bacchetta nuziale",
+      "EUnl": "trouwstaf",
+      "EUru": "свадебная палочка",
+      "JPja": "ウェディングなステッキ",
+      "KRko": "웨딩 지팡이",
+      "TWzh": "婚禮棒",
+      "USen": "wedding wand",
+      "USes": "varita ramo de boda",
+      "USfr": "baguette de mariage"
+    }
+  },
+  {
+    "label": "ChangeStick_13173",
+    "locale": {
+      "CNzh": "Kiki & Lala棒",
+      "EUde": "Kiki-&-Lala-Stab",
+      "EUen": "Kiki & Lala wand",
+      "EUes": "varita Kiki & Lala",
+      "EUfr": "baguette Kiki & Lala",
+      "EUit": "bacchetta Kiki & Lala",
+      "EUnl": "Kiki-&-Lala-staf",
+      "EUru": "палочка Kiki & Lala",
+      "JPja": "キキ&ララなステッキ",
+      "KRko": "리틀트윈스타 지팡이",
+      "TWzh": "Kiki & Lala棒",
+      "USen": "Kiki & Lala wand",
+      "USes": "varita Kiki & Lala",
+      "USfr": "baguette Kiki & Lala"
+    }
+  },
+  {
+    "label": "ChangeStick_13237",
+    "locale": {
+      "CNzh": "万圣节棒",
+      "EUde": "Kürbisstab",
+      "EUen": "spooky wand",
+      "EUes": "varita calabaza",
+      "EUfr": "baguette Halloween",
+      "EUit": "bacchetta brividi",
+      "EUnl": "pompoenstaf",
+      "EUru": "жуткая палочка",
+      "JPja": "ハロウィンなステッキ",
+      "KRko": "할로윈 지팡이",
+      "TWzh": "萬聖節棒",
+      "USen": "spooky wand",
+      "USes": "varita calabaza",
+      "USfr": "baguette frisson"
+    }
+  },
+  {
+    "label": "ChangeStick_14239",
+    "locale": {
+      "CNzh": "三叶草棒",
+      "EUde": "Kleeblattstab",
+      "EUen": "shamrock wand",
+      "EUes": "varita trébol",
+      "EUfr": "baguette trèfle",
+      "EUit": "bacchetta trifoglio",
+      "EUnl": "klaverstaf",
+      "EUru": "палочка с трилистником",
+      "JPja": "シャムロックステッキ",
+      "KRko": "성 패트릭 지팡이",
+      "TWzh": "三葉草棒",
+      "USen": "shamrock wand",
+      "USes": "varita trébol",
+      "USfr": "baguette trèfle"
+    }
+  },
+  {
+    "label": "CliffMaker_02543",
+    "locale": {
+      "CNzh": "悬崖施工许可证",
+      "EUde": "Plateaulizenz",
+      "EUen": "cliff construction permit",
+      "EUes": "permiso de elevaciones",
+      "EUfr": "permis falaise",
+      "EUit": "licenza rilievi",
+      "EUnl": "klifvergunning",
+      "EUru": "лицензия на скалы",
+      "JPja": "がけこうじライセンス",
+      "KRko": "절벽 공사 허가증",
+      "TWzh": "懸崖施工許可證",
+      "USen": "cliff construction permit",
+      "USes": "permiso de desniveles",
+      "USfr": "permis falaise"
+    }
+  },
+  {
+    "label": "FishingRod_02377",
+    "locale": {
+      "CNzh": "钓竿",
+      "EUde": "Angel",
+      "EUen": "fishing rod",
+      "EUes": "caña",
+      "EUfr": "canne à pêche",
+      "EUit": "canna da pesca",
+      "EUnl": "hengel",
+      "EUru": "удочка",
+      "JPja": "つりざお",
+      "KRko": "낚싯대",
+      "TWzh": "釣竿",
+      "USen": "fishing rod",
+      "USes": "caña",
+      "USfr": "canne à pêche"
+    }
+  },
+  {
+    "label": "FishingRod_03084",
+    "locale": {
+      "CNzh": "简陋钓竿",
+      "EUde": "Wackelangel",
+      "EUen": "flimsy fishing rod",
+      "EUes": "caña endeble",
+      "EUfr": "canne à pêche rudimentaire",
+      "EUit": "canna da pesca fragile",
+      "EUnl": "breekbare hengel",
+      "EUru": "непрочная удочка",
+      "JPja": "ショボいつりざお",
+      "KRko": "엉성한 낚싯대",
+      "TWzh": "簡陋釣竿",
+      "USen": "flimsy fishing rod",
+      "USes": "caña frágil",
+      "USfr": "canne à pêche rudimentaire"
+    }
+  },
+  {
+    "label": "FishingRod_08471",
+    "locale": {
+      "CNzh": "鱼儿钓竿",
+      "EUde": "Fisch-Angel",
+      "EUen": "fish fishing rod",
+      "EUes": "caña pececito",
+      "EUfr": "canne à pêche poisson",
+      "EUit": "canna pesciolino",
+      "EUnl": "vissenhengel",
+      "EUru": "удочка с уткой",
+      "JPja": "おサカナつりざお",
+      "KRko": "물고기 낚싯대",
+      "TWzh": "魚兒釣竿",
+      "USen": "fish fishing rod",
+      "USes": "caña pececito",
+      "USfr": "canne à pêche poisson"
+    }
+  },
+  {
+    "label": "FishingRod_08472",
+    "locale": {
+      "CNzh": "彩色钓竿",
+      "EUde": "Kinderangel",
+      "EUen": "colorful fishing rod",
+      "EUes": "caña multicolor",
+      "EUfr": "canne à pêche colorée",
+      "EUit": "canna da pesca colorata",
+      "EUnl": "kleurrijke hengel",
+      "EUru": "яркая удочка",
+      "JPja": "カラフルなつりざお",
+      "KRko": "컬러풀 낚싯대",
+      "TWzh": "彩色釣竿",
+      "USen": "colorful fishing rod",
+      "USes": "caña multicolor",
+      "USfr": "canne à pêche colorée"
+    }
+  },
+  {
+    "label": "FishingRod_08473",
+    "locale": {
+      "CNzh": "户外钓竿",
+      "EUde": "Profi-Angel",
+      "EUen": "outdoorsy fishing rod",
+      "EUes": "caña de acampada",
+      "EUfr": "canne à pêche de rando",
+      "EUit": "canna da campeggio",
+      "EUnl": "kampeerhengel",
+      "EUru": "походная удочка",
+      "JPja": "アウトドアなつりざお",
+      "KRko": "아웃도어 낚싯대",
+      "TWzh": "戶外釣竿",
+      "USen": "outdoorsy fishing rod",
+      "USes": "caña de campamento",
+      "USfr": "canne à pêche de rando"
+    }
+  },
+  {
+    "label": "FishingRod_08660",
+    "locale": {
+      "CNzh": "金色钓竿",
+      "EUde": "Goldangel",
+      "EUen": "golden rod",
+      "EUes": "caña de oro",
+      "EUfr": "canne à pêche dorée",
+      "EUit": "canna d'oro",
+      "EUnl": "gouden hengel",
+      "EUru": "золотая удочка",
+      "JPja": "きんのつりざお",
+      "KRko": "금 낚싯대",
+      "TWzh": "金色釣竿",
+      "USen": "golden rod",
+      "USes": "caña de oro",
+      "USfr": "canne à pêche dorée"
+    }
+  },
+  {
+    "label": "GroundMaker_03075",
+    "locale": {
+      "CNzh": "道路施工许可证",
+      "EUde": "Wegelizenz",
+      "EUen": "path construction permit",
+      "EUes": "permiso de caminos",
+      "EUfr": "permis routes",
+      "EUit": "licenza strade",
+      "EUnl": "padenvergunning",
+      "EUru": "лицензия на дороги",
+      "JPja": "どうろこうじライセンス",
+      "KRko": "도로 공사 허가증",
+      "TWzh": "道路施工許可證",
+      "USen": "path construction permit",
+      "USes": "permiso de caminos",
+      "USfr": "permis routes"
+    }
+  },
+  {
+    "label": "Ladder_02615",
+    "locale": {
+      "CNzh": "梯子",
+      "EUde": "Leiter",
+      "EUen": "ladder",
+      "EUes": "escalera de mano",
+      "EUfr": "échelle",
+      "EUit": "scala a pioli",
+      "EUnl": "ladder",
+      "EUru": "лестница",
+      "JPja": "はしご",
+      "KRko": "사다리",
+      "TWzh": "梯子",
+      "USen": "ladder",
+      "USes": "escalera de mano",
+      "USfr": "échelle"
+    }
+  },
+  {
+    "label": "Net_02376",
+    "locale": {
+      "CNzh": "简陋捕虫网",
+      "EUde": "Wackelkescher",
+      "EUen": "flimsy net",
+      "EUes": "red endeble",
+      "EUfr": "filet rudimentaire",
+      "EUit": "retino fragile",
+      "EUnl": "breekbaar net",
+      "EUru": "непрочный сачок",
+      "JPja": "ショボいあみ",
+      "KRko": "엉성한 잠자리채",
+      "TWzh": "簡陋捕蟲網",
+      "USen": "flimsy net",
+      "USes": "red frágil",
+      "USfr": "filet rudimentaire"
+    }
+  },
+  {
+    "label": "Net_05784",
+    "locale": {
+      "CNzh": "捕虫网",
+      "EUde": "Kescher",
+      "EUen": "net",
+      "EUes": "red",
+      "EUfr": "filet",
+      "EUit": "retino",
+      "EUnl": "net",
+      "EUru": "сачок",
+      "JPja": "あみ",
+      "KRko": "잠자리채",
+      "TWzh": "捕蟲網",
+      "USen": "net",
+      "USes": "red",
+      "USfr": "filet"
+    }
+  },
+  {
+    "label": "Net_08176",
+    "locale": {
+      "CNzh": "星星捕虫网",
+      "EUde": "Sternkescher",
+      "EUen": "star net",
+      "EUes": "red estrella",
+      "EUfr": "filet étoilé",
+      "EUit": "retino stella",
+      "EUnl": "sterrennet",
+      "EUru": "сачок со звездой",
+      "JPja": "スターなあみ",
+      "KRko": "별모양 잠자리채",
+      "TWzh": "星星捕蟲網",
+      "USen": "star net",
+      "USes": "red estrella",
+      "USfr": "filet étoilé"
+    }
+  },
+  {
+    "label": "Net_08177",
+    "locale": {
+      "CNzh": "彩色捕虫网",
+      "EUde": "Kinderkescher",
+      "EUen": "colorful net",
+      "EUes": "red colorida",
+      "EUfr": "filet coloré",
+      "EUit": "retino colorato",
+      "EUnl": "kleurrijk net",
+      "EUru": "яркий сачок",
+      "JPja": "カラフルなあみ",
+      "KRko": "컬러풀 잠자리채",
+      "TWzh": "彩色捕蟲網",
+      "USen": "colorful net",
+      "USes": "red colorida",
+      "USfr": "filet coloré"
+    }
+  },
+  {
+    "label": "Net_08178",
+    "locale": {
+      "CNzh": "户外捕虫网",
+      "EUde": "Profi-Kescher",
+      "EUen": "outdoorsy net",
+      "EUes": "red de acampada",
+      "EUfr": "filet de rando",
+      "EUit": "retino da campeggio",
+      "EUnl": "kampeernet",
+      "EUru": "походный сачок",
+      "JPja": "アウトドアなあみ",
+      "KRko": "아웃도어 잠자리채",
+      "TWzh": "戶外捕蟲網",
+      "USen": "outdoorsy net",
+      "USes": "red de campamento",
+      "USfr": "filet de rando"
+    }
+  },
+  {
+    "label": "Net_08179",
+    "locale": {
+      "CNzh": "金色捕虫网",
+      "EUde": "Goldkescher",
+      "EUen": "golden net",
+      "EUes": "red de oro",
+      "EUfr": "filet doré",
+      "EUit": "retino d'oro",
+      "EUnl": "gouden net",
+      "EUru": "золотой сачок",
+      "JPja": "きんのあみ",
+      "KRko": "금 잠자리채",
+      "TWzh": "金色捕蟲網",
+      "USen": "golden net",
+      "USes": "red de oro",
+      "USfr": "filet doré"
+    }
+  },
+  {
+    "label": "RiverMaker_03247",
+    "locale": {
+      "CNzh": "河流施工许可证",
+      "EUde": "Gewässerlizenz",
+      "EUen": "waterscaping permit",
+      "EUes": "permiso de obras fluviales",
+      "EUfr": "permis cours d'eau",
+      "EUit": "licenza fiumi e laghi",
+      "EUnl": "watervergunning",
+      "EUru": "лицензия на реки и озера",
+      "JPja": "かせんこうじライセンス",
+      "KRko": "하천 공사 허가증",
+      "TWzh": "河川施工許可證",
+      "USen": "waterscaping permit",
+      "USes": "permiso de obras fluviales",
+      "USfr": "permis cours d'eau"
+    }
+  },
+  {
+    "label": "Shovel_02099",
+    "locale": {
+      "CNzh": "铲子",
+      "EUde": "Schaufel",
+      "EUen": "shovel",
+      "EUes": "pala",
+      "EUfr": "pelle",
+      "EUit": "pala",
+      "EUnl": "schep",
+      "EUru": "лопата",
+      "JPja": "スコップ",
+      "KRko": "삽",
+      "TWzh": "鏟子",
+      "USen": "shovel",
+      "USes": "pala",
+      "USfr": "pelle"
+    }
+  },
+  {
+    "label": "Shovel_03082",
+    "locale": {
+      "CNzh": "简陋铲子",
+      "EUde": "Wackelschaufel",
+      "EUen": "flimsy shovel",
+      "EUes": "pala endeble",
+      "EUfr": "pelle rudimentaire",
+      "EUit": "pala fragile",
+      "EUnl": "breekbare schep",
+      "EUru": "непрочная лопата",
+      "JPja": "ショボいスコップ",
+      "KRko": "엉성한 삽",
+      "TWzh": "簡陋鏟子",
+      "USen": "flimsy shovel",
+      "USes": "pala frágil",
+      "USfr": "pelle rudimentaire"
+    }
+  },
+  {
+    "label": "Shovel_08574",
+    "locale": {
+      "CNzh": "金色铲子",
+      "EUde": "Goldschaufel",
+      "EUen": "golden shovel",
+      "EUes": "pala de oro",
+      "EUfr": "pelle dorée",
+      "EUit": "pala d'oro",
+      "EUnl": "gouden schep",
+      "EUru": "золотая лопата",
+      "JPja": "きんのスコップ",
+      "KRko": "금 삽",
+      "TWzh": "金色鏟子",
+      "USen": "golden shovel",
+      "USes": "pala de oro",
+      "USfr": "pelle dorée"
+    }
+  },
+  {
+    "label": "Shovel_08575",
+    "locale": {
+      "CNzh": "户外铲子",
+      "EUde": "Profi-Schaufel",
+      "EUen": "outdoorsy shovel",
+      "EUes": "pala de acampada",
+      "EUfr": "pelle de rando",
+      "EUit": "pala da campeggio",
+      "EUnl": "kampeerschep",
+      "EUru": "походная лопата",
+      "JPja": "アウトドアなスコップ",
+      "KRko": "아웃도어 삽",
+      "TWzh": "戶外鏟子",
+      "USen": "outdoorsy shovel",
+      "USes": "pala de campamento",
+      "USfr": "pelle de rando"
+    }
+  },
+  {
+    "label": "Shovel_08576",
+    "locale": {
+      "CNzh": "花纹铲子",
+      "EUde": "Designerschaufel",
+      "EUen": "printed-design shovel",
+      "EUes": "pala con estampado",
+      "EUfr": "pelle design",
+      "EUit": "pala con motivo stampato",
+      "EUnl": "schep met patroon",
+      "EUru": "лопата с рисунком",
+      "JPja": "がらものスコップ",
+      "KRko": "꽃무늬 삽",
+      "TWzh": "花紋鏟子",
+      "USen": "printed-design shovel",
+      "USes": "pala con estampado",
+      "USfr": "pelle design"
+    }
+  },
+  {
+    "label": "Shovel_08577",
+    "locale": {
+      "CNzh": "彩色铲子",
+      "EUde": "Kinderschaufel",
+      "EUen": "colorful shovel",
+      "EUes": "pala colorida",
+      "EUfr": "pelle colorée",
+      "EUit": "pala colorata",
+      "EUnl": "kleurrijke schep",
+      "EUru": "яркая лопата",
+      "JPja": "カラフルなスコップ",
+      "KRko": "컬러풀 삽",
+      "TWzh": "彩色鏟子",
+      "USen": "colorful shovel",
+      "USes": "pala colorida",
+      "USfr": "pelle colorée"
+    }
+  },
+  {
+    "label": "SincerityTowel_12856",
+    "locale": {
+      "CNzh": "ぞうきん",
+      "EUde": "ぞうきん",
+      "EUen": "ぞうきん",
+      "EUes": "ぞうきん",
+      "EUfr": "ぞうきん",
+      "EUit": "ぞうきん",
+      "EUnl": "ぞうきん",
+      "EUru": "ぞうきん",
+      "JPja": "ぞうきん",
+      "KRko": "ぞうきん",
+      "TWzh": "ぞうきん",
+      "USen": "ぞうきん",
+      "USes": "ぞうきん",
+      "USfr": "ぞうきん"
+    }
+  },
+  {
+    "label": "Slingshot_02822",
+    "locale": {
+      "CNzh": "弹弓",
+      "EUde": "Schleuder",
+      "EUen": "slingshot",
+      "EUes": "tirachinas",
+      "EUfr": "lance-pierre",
+      "EUit": "fionda",
+      "EUnl": "katapult",
+      "EUru": "рогатка",
+      "JPja": "パチンコ",
+      "KRko": "새총",
+      "TWzh": "彈弓",
+      "USen": "slingshot",
+      "USes": "resortera",
+      "USfr": "lance-pierre"
+    }
+  },
+  {
+    "label": "Slingshot_08578",
+    "locale": {
+      "CNzh": "金色弹弓",
+      "EUde": "Goldschleuder",
+      "EUen": "golden slingshot",
+      "EUes": "tirachinas de oro",
+      "EUfr": "lance-pierre doré",
+      "EUit": "fionda d'oro",
+      "EUnl": "gouden katapult",
+      "EUru": "золотая рогатка",
+      "JPja": "きんのパチンコ",
+      "KRko": "금 새총",
+      "TWzh": "金色彈弓",
+      "USen": "golden slingshot",
+      "USes": "resortera de oro",
+      "USfr": "lance-pierre doré"
+    }
+  },
+  {
+    "label": "Slingshot_08579",
+    "locale": {
+      "CNzh": "户外弹弓",
+      "EUde": "Profi-Schleuder",
+      "EUen": "outdoorsy slingshot",
+      "EUes": "tirachinas de acampada",
+      "EUfr": "lance-pierre de rando",
+      "EUit": "fionda da campeggio",
+      "EUnl": "kampeerkatapult",
+      "EUru": "походная рогатка",
+      "JPja": "アウトドアなパチンコ",
+      "KRko": "아웃도어 새총",
+      "TWzh": "戶外彈弓",
+      "USen": "outdoorsy slingshot",
+      "USes": "resortera de campamento",
+      "USfr": "lance-pierre de rando"
+    }
+  },
+  {
+    "label": "Slingshot_08580",
+    "locale": {
+      "CNzh": "彩色弹弓",
+      "EUde": "Kinderschleuder",
+      "EUen": "colorful slingshot",
+      "EUes": "tirachinas colorido",
+      "EUfr": "lance-pierre coloré",
+      "EUit": "fionda colorata",
+      "EUnl": "kleurrijke katapult",
+      "EUru": "яркая рогатка",
+      "JPja": "カラフルなパチンコ",
+      "KRko": "컬러풀 새총",
+      "TWzh": "彩色彈弓",
+      "USen": "colorful slingshot",
+      "USes": "resortera colorida",
+      "USfr": "lance-pierre coloré"
+    }
+  },
+  {
+    "label": "Timer_03331",
+    "locale": {
+      "CNzh": "计时器",
+      "EUde": "Stoppuhr",
+      "EUen": "timer",
+      "EUes": "cronómetro",
+      "EUfr": "chrono",
+      "EUit": "cronometro",
+      "EUnl": "stopwatch",
+      "EUru": "таймер",
+      "JPja": "タイマー",
+      "KRko": "타이머",
+      "TWzh": "計時器",
+      "USen": "timer",
+      "USes": "cronómetro",
+      "USfr": "chrono"
+    }
+  },
+  {
+    "label": "Watering_02379",
+    "locale": {
+      "CNzh": "浇花壶",
+      "EUde": "Gießkanne",
+      "EUen": "watering can",
+      "EUes": "regadera",
+      "EUfr": "arrosoir",
+      "EUit": "annaffiatoio",
+      "EUnl": "gieter",
+      "EUru": "лейка",
+      "JPja": "ジョウロ",
+      "KRko": "물뿌리개",
+      "TWzh": "澆花壺",
+      "USen": "watering can",
+      "USes": "regadera",
+      "USfr": "arrosoir"
+    }
+  },
+  {
+    "label": "Watering_03083",
+    "locale": {
+      "CNzh": "简陋浇花壶",
+      "EUde": "Wackelgießkanne",
+      "EUen": "flimsy watering can",
+      "EUes": "regadera endeble",
+      "EUfr": "arrosoir rudimentaire",
+      "EUit": "annaffiatoio fragile",
+      "EUnl": "breekbare gieter",
+      "EUru": "непрочная лейка",
+      "JPja": "ショボいジョウロ",
+      "KRko": "엉성한 물뿌리개",
+      "TWzh": "簡陋澆花壺",
+      "USen": "flimsy watering can",
+      "USes": "regadera frágil",
+      "USfr": "arrosoir rudimentaire"
+    }
+  },
+  {
+    "label": "Watering_08533",
+    "locale": {
+      "CNzh": "金色浇花壶",
+      "EUde": "Goldkanne",
+      "EUen": "golden watering can",
+      "EUes": "regadera de oro",
+      "EUfr": "arrosoir doré",
+      "EUit": "annaffiatoio d'oro",
+      "EUnl": "gouden gieter",
+      "EUru": "золотая лейка",
+      "JPja": "きんのジョウロ",
+      "KRko": "금 물뿌리개",
+      "TWzh": "金色澆花壺",
+      "USen": "golden watering can",
+      "USes": "regadera de oro",
+      "USfr": "arrosoir doré"
+    }
+  },
+  {
+    "label": "Watering_08534",
+    "locale": {
+      "CNzh": "彩色浇花壶",
+      "EUde": "Kinderkanne",
+      "EUen": "colorful watering can",
+      "EUes": "regadera colorida",
+      "EUfr": "arrosoir coloré",
+      "EUit": "annaffiatoio colorato",
+      "EUnl": "kleurrijke gieter",
+      "EUru": "яркая лейка",
+      "JPja": "カラフルなジョウロ",
+      "KRko": "컬러풀 물뿌리개",
+      "TWzh": "彩色澆花壺",
+      "USen": "colorful watering can",
+      "USes": "regadera colorida",
+      "USfr": "arrosoir coloré"
+    }
+  },
+  {
+    "label": "Watering_08535",
+    "locale": {
+      "CNzh": "大象浇花壶",
+      "EUde": "Elefantenkanne",
+      "EUen": "elephant watering can",
+      "EUes": "regadera elefante",
+      "EUfr": "arrosoir éléphant",
+      "EUit": "annaffiatoio elefante",
+      "EUnl": "olifantengieter",
+      "EUru": "лейка-слон",
+      "JPja": "ゾウさんジョウロ",
+      "KRko": "코끼리 물뿌리개",
+      "TWzh": "大象澆花壺",
+      "USen": "elephant watering can",
+      "USes": "regadera elefante",
+      "USfr": "arrosoir éléphant"
+    }
+  },
+  {
+    "label": "Watering_08536",
+    "locale": {
+      "CNzh": "户外浇花壶",
+      "EUde": "Profi-Kanne",
+      "EUen": "outdoorsy watering can",
+      "EUes": "regadera de acampada",
+      "EUfr": "arrosoir de rando",
+      "EUit": "annaffiatoio da campeggio",
+      "EUnl": "kampeergieter",
+      "EUru": "походная лейка",
+      "JPja": "アウトドアなジョウロ",
+      "KRko": "아웃도어 물뿌리개",
+      "TWzh": "戶外澆花壺",
+      "USen": "outdoorsy watering can",
+      "USes": "regadera de campamento",
+      "USfr": "arrosoir de rando"
+    }
+  },
+  {
+    "label": "WoodenStickTool_04703",
+    "locale": {
+      "CNzh": "撑杆跳竿子",
+      "EUde": "Sprungstab",
+      "EUen": "vaulting pole",
+      "EUes": "pértiga",
+      "EUfr": "perche",
+      "EUit": "asta da salto",
+      "EUnl": "polsstok",
+      "EUru": "шест",
+      "JPja": "たかとびぼう",
+      "KRko": "높이뛰기 장대",
+      "TWzh": "撐竿跳竿子",
+      "USen": "vaulting pole",
+      "USes": "garrocha",
+      "USfr": "perche"
+    }
+  }
+]

@@ -1,0 +1,3118 @@
+﻿[
+  {
+    "label": "Dishes_12791",
+    "locale": {
+      "CNzh": "担担面",
+      "EUde": "Tantanmen",
+      "EUen": "tantanmen",
+      "EUes": "ramen picante al sésamo",
+      "EUfr": "bol de tantanmen",
+      "EUit": "tantanmen",
+      "EUnl": "tantanmen-ramen",
+      "EUru": "тантанмен-рамэн",
+      "JPja": "タンタンメン",
+      "KRko": "탄탄멘",
+      "TWzh": "擔擔麵",
+      "USen": "tantanmen",
+      "USes": "ramen picante al sésamo",
+      "USfr": "bol de tantanmen"
+    }
+  },
+  {
+    "label": "Dishes_12792",
+    "locale": {
+      "CNzh": "酱油拉面",
+      "EUde": "Shoyu-Ramen",
+      "EUen": "shoyu ramen",
+      "EUes": "ramen a la salsa de soja",
+      "EUfr": "bol de shoyu ramen",
+      "EUit": "shoyu ramen",
+      "EUnl": "shoyu-ramen",
+      "EUru": "сёю-рамэн",
+      "JPja": "しょうゆラーメン",
+      "KRko": "쇼유라멘",
+      "TWzh": "醬油拉麵",
+      "USen": "shoyu ramen",
+      "USes": "ramen a la salsa de soya",
+      "USfr": "bol de ramen shoyu"
+    }
+  },
+  {
+    "label": "Dishes_12793",
+    "locale": {
+      "CNzh": "豚骨拉面",
+      "EUde": "Herzhaft-Ramen",
+      "EUen": "hearty ramen",
+      "EUes": "ramen tradicional",
+      "EUfr": "bol de ramen généreux",
+      "EUit": "tonkotsu ramen",
+      "EUnl": "hartige ramen",
+      "EUru": "наваристый рамэн",
+      "JPja": "とんこつラーメン",
+      "KRko": "돈코츠라멘",
+      "TWzh": "豚骨拉麵",
+      "USen": "hearty ramen",
+      "USes": "ramen tradicional",
+      "USfr": "bol de ramen riche"
+    }
+  },
+  {
+    "label": "Dishes_12794",
+    "locale": {
+      "CNzh": "味噌拉面",
+      "EUde": "Miso-Ramen",
+      "EUen": "miso ramen",
+      "EUes": "ramen de miso",
+      "EUfr": "bol de miso ramen",
+      "EUit": "miso ramen",
+      "EUnl": "miso-ramen",
+      "EUru": "мисо-рамэн",
+      "JPja": "みそラーメン",
+      "KRko": "미소라멘",
+      "TWzh": "味噌拉麵",
+      "USen": "miso ramen",
+      "USes": "ramen de miso",
+      "USfr": "bol de ramen miso"
+    }
+  },
+  {
+    "label": "Dishes_12795",
+    "locale": {
+      "CNzh": "盐味拉面",
+      "EUde": "Shio-Ramen",
+      "EUen": "shio ramen",
+      "EUes": "ramen salado",
+      "EUfr": "bol de shio ramen",
+      "EUit": "shio ramen",
+      "EUnl": "shio-ramen",
+      "EUru": "сио-рамэн",
+      "JPja": "しおラーメン",
+      "KRko": "시오라멘",
+      "TWzh": "鹽味拉麵",
+      "USen": "shio ramen",
+      "USes": "ramen salado",
+      "USfr": "bol de ramen shio"
+    }
+  },
+  {
+    "label": "Dishes_12813",
+    "locale": {
+      "CNzh": "咸面包",
+      "EUde": "Snackbrot",
+      "EUen": "savory bread",
+      "EUes": "cesta de pan vegetal",
+      "EUfr": "corbeille de pains salés",
+      "EUit": "cestino di pane",
+      "EUnl": "hartig brood",
+      "EUru": "вкусная выпечка",
+      "JPja": "そうざいパン",
+      "KRko": "고소한 빵",
+      "TWzh": "鹹麵包",
+      "USen": "savory bread",
+      "USes": "cesta de pan vegetal",
+      "USfr": "corbeille de pains salés"
+    }
+  },
+  {
+    "label": "Dishes_12815",
+    "locale": {
+      "CNzh": "手抓饭",
+      "EUde": "Pilaw",
+      "EUen": "pilaf",
+      "EUes": "arroz pilaf",
+      "EUfr": "riz pilaf",
+      "EUit": "pilaf",
+      "EUnl": "pilav",
+      "EUru": "пилав",
+      "JPja": "ピラフ",
+      "KRko": "필래프",
+      "TWzh": "手抓飯",
+      "USen": "pilaf",
+      "USes": "arroz pilaf",
+      "USfr": "riz pilaf"
+    }
+  },
+  {
+    "label": "Dishes_12816",
+    "locale": {
+      "CNzh": "握寿司",
+      "EUde": "Nigiri-Sushi",
+      "EUen": "nigirizushi",
+      "EUes": "bandeja de nigiri",
+      "EUfr": "menu nigirizushi",
+      "EUit": "nigiri sushi",
+      "EUnl": "nigiri-sushi",
+      "EUru": "суши нигири",
+      "JPja": "にぎりずし",
+      "KRko": "초밥",
+      "TWzh": "握壽司",
+      "USen": "nigirizushi",
+      "USes": "bandeja de nigiri",
+      "USfr": "plateau nigirizushi"
+    }
+  },
+  {
+    "label": "Dishes_12817",
+    "locale": {
+      "CNzh": "高级握寿司",
+      "EUde": "Premium-Nigiri-Sushi",
+      "EUen": "premium nigirizushi",
+      "EUes": "bandeja de nigiri superior",
+      "EUfr": "menu nigirizushi premium",
+      "EUit": "nigiri sushi pregiato",
+      "EUnl": "kwaliteitsnigiri-sushi",
+      "EUru": "суши нигири премиум",
+      "JPja": "じょうにぎり",
+      "KRko": "고급 초밥",
+      "TWzh": "高級握壽司",
+      "USen": "premium nigirizushi",
+      "USes": "bandeja de nigiri superior",
+      "USfr": "plateau nigirizushi premium"
+    }
+  },
+  {
+    "label": "Dishes_12818",
+    "locale": {
+      "CNzh": "顶级握寿司",
+      "EUde": "Superb-Nigiri-Sushi",
+      "EUen": "super-premium nigirizushi",
+      "EUes": "bandeja de nigiri supremo",
+      "EUfr": "menu nigirizushi spécial",
+      "EUit": "nigiri sushi superpregiato",
+      "EUnl": "topkwaliteitsnigiri-sushi",
+      "EUru": "особые суши нигири",
+      "JPja": "とくじょうにぎり",
+      "KRko": "최고급 초밥",
+      "TWzh": "頂級握壽司",
+      "USen": "super-premium nigirizushi",
+      "USes": "bandeja de nigiri supremo",
+      "USfr": "plateau nigirizushi spécial"
+    }
+  },
+  {
+    "label": "Dishes_12822",
+    "locale": {
+      "CNzh": "面包",
+      "EUde": "Brot",
+      "EUen": "bread",
+      "EUes": "cesta de pan y bollería",
+      "EUfr": "corbeille de pains",
+      "EUit": "pane",
+      "EUnl": "wit brood",
+      "EUru": "выпечка",
+      "JPja": "パン",
+      "KRko": "빵",
+      "TWzh": "麵包",
+      "USen": "bread",
+      "USes": "cesta de panes",
+      "USfr": "corbeille de pains"
+    }
+  },
+  {
+    "label": "Dishes_12823",
+    "locale": {
+      "CNzh": "有机面包",
+      "EUde": "Biobrot",
+      "EUen": "organic bread",
+      "EUes": "cesta de pan integral",
+      "EUfr": "corbeille de pains bio",
+      "EUit": "pane organico",
+      "EUnl": "bruin brood",
+      "EUru": "выпечка с отрубями",
+      "JPja": "オーガニックパン",
+      "KRko": "유기농 빵",
+      "TWzh": "有機麵包",
+      "USen": "organic bread",
+      "USes": "cesta de pan integral",
+      "USfr": "corbeille de pains bio"
+    }
+  },
+  {
+    "label": "Dishes_12824",
+    "locale": {
+      "CNzh": "甜面包",
+      "EUde": "Naschbrot",
+      "EUen": "snack bread",
+      "EUes": "cesta de pan y galletas",
+      "EUfr": "corbeille de viennoiseries",
+      "EUit": "cestino di panini",
+      "EUnl": "zoet brood",
+      "EUru": "сдобная выпечка",
+      "JPja": "かしパン",
+      "KRko": "과자 빵",
+      "TWzh": "甜麵包",
+      "USen": "snack bread",
+      "USes": "cesta de pan y galletas",
+      "USfr": "corbeille de viennoiseries"
+    }
+  },
+  {
+    "label": "Dishes_12827",
+    "locale": {
+      "CNzh": "炒饭",
+      "EUde": "Bratreis",
+      "EUen": "fried rice",
+      "EUes": "arroz salteado",
+      "EUfr": "riz sauté",
+      "EUit": "riso saltato",
+      "EUnl": "gebakken rijst",
+      "EUru": "жареный рис",
+      "JPja": "チャーハン",
+      "KRko": "볶음밥",
+      "TWzh": "炒飯",
+      "USen": "fried rice",
+      "USes": "arroz salteado",
+      "USfr": "riz sauté"
+    }
+  },
+  {
+    "label": "Dishes_12828",
+    "locale": {
+      "CNzh": "意式炖饭",
+      "EUde": "Risotto",
+      "EUen": "risotto",
+      "EUes": "risotto",
+      "EUfr": "risotto",
+      "EUit": "risotto",
+      "EUnl": "risotto",
+      "EUru": "ризотто",
+      "JPja": "リゾット",
+      "KRko": "리조또",
+      "TWzh": "義式燉飯",
+      "USen": "risotto",
+      "USes": "risotto",
+      "USfr": "risotto"
+    }
+  },
+  {
+    "label": "Dishes_12829",
+    "locale": {
+      "CNzh": "咖喱饭",
+      "EUde": "Reiscurry",
+      "EUen": "curry with rice",
+      "EUes": "arroz al curry",
+      "EUfr": "riz au curry",
+      "EUit": "risotto al curry",
+      "EUnl": "curry met rijst",
+      "EUru": "карри с рисом",
+      "JPja": "カレーライス",
+      "KRko": "카레라이스",
+      "TWzh": "咖哩飯",
+      "USen": "curry with rice",
+      "USes": "arroz al curry",
+      "USfr": "riz au curry"
+    }
+  },
+  {
+    "label": "Dishes_12830",
+    "locale": {
+      "CNzh": "蛋包饭",
+      "EUde": "Reis mit Omelett",
+      "EUen": "omurice",
+      "EUes": "arroz con tortilla y tomate",
+      "EUfr": "omuraisu",
+      "EUit": "omurice",
+      "EUnl": "Japanse gevulde omelet",
+      "EUru": "омурайсу",
+      "JPja": "オムライス",
+      "KRko": "오므라이스",
+      "TWzh": "蛋包飯",
+      "USen": "omurice",
+      "USes": "omurice",
+      "USfr": "omuraisu"
+    }
+  },
+  {
+    "label": "Dishes_12831",
+    "locale": {
+      "CNzh": "打抛猪肉饭",
+      "EUde": "Phat kaphrao",
+      "EUen": "pad krapow",
+      "EUes": "arroz salteado a la albahaca",
+      "EUfr": "pad kra pao",
+      "EUit": "pad ka prao",
+      "EUnl": "pad krapao",
+      "EUru": "пад-капао",
+      "JPja": "ガパオライス",
+      "KRko": "팟 카프라오",
+      "TWzh": "打拋豬肉飯",
+      "USen": "pad krapow",
+      "USes": "pad ka prao",
+      "USfr": "pad kra pao"
+    }
+  },
+  {
+    "label": "Dishes_12832",
+    "locale": {
+      "CNzh": "番茄酱炒饭",
+      "EUde": "Reis mit Ketchup",
+      "EUen": "ketchup fried rice",
+      "EUes": "arroz salteado con tomate",
+      "EUfr": "riz au ketchup",
+      "EUit": "riso saltato al ketchup",
+      "EUnl": "gebakken rijst met ketchup",
+      "EUru": "жареный рис с кетчупом",
+      "JPja": "ケチャップライス",
+      "KRko": "케첩 볶음밥",
+      "TWzh": "番茄醬炒飯",
+      "USen": "ketchup fried rice",
+      "USes": "arroz salteado con tomate",
+      "USfr": "riz au ketchup"
+    }
+  },
+  {
+    "label": "Dishes_12833",
+    "locale": {
+      "CNzh": "印度香饭",
+      "EUde": "Biryani",
+      "EUen": "biryani",
+      "EUes": "arroz biryani",
+      "EUfr": "biryani",
+      "EUit": "biryani",
+      "EUnl": "biryani",
+      "EUru": "бирьяни",
+      "JPja": "ビリヤニ",
+      "KRko": "비리야니",
+      "TWzh": "印度香飯",
+      "USen": "biryani",
+      "USes": "arroz biryani",
+      "USfr": "biryani"
+    }
+  },
+  {
+    "label": "Dishes_12834",
+    "locale": {
+      "CNzh": "蒜香意大利面",
+      "EUde": "Spaghetti peperoncino",
+      "EUen": "spaghetti peperoncino",
+      "EUes": "pasta arrabbiata",
+      "EUfr": "plat de spaghetti pimenté",
+      "EUit": "pasta all'arrabbiata",
+      "EUnl": "spaghetti peperoncino",
+      "EUru": "спагетти пеперончино",
+      "JPja": "ペペロンチーノ",
+      "KRko": "페페론치노",
+      "TWzh": "蒜香義大利麵",
+      "USen": "spaghetti peperoncino",
+      "USes": "pasta arrabbiata",
+      "USfr": "plat de spaghetti pimenté"
+    }
+  },
+  {
+    "label": "Dishes_12835",
+    "locale": {
+      "CNzh": "鱿鱼墨汁意大利面",
+      "EUde": "Tintenfischtinte-Spaghetti",
+      "EUen": "squid-ink spaghetti",
+      "EUes": "pasta a la tinta de calamar",
+      "EUfr": "plat pâtes encre de seiche",
+      "EUit": "pasta al nero di seppia",
+      "EUnl": "spaghetti met inktvisinkt",
+      "EUru": "черные спагетти",
+      "JPja": "いかすみパスタ",
+      "KRko": "먹물 파스타",
+      "TWzh": "魷魚墨汁義大利麵",
+      "USen": "squid-ink spaghetti",
+      "USes": "pasta a la tinta de calamar",
+      "USfr": "plat pâtes encre de seiche"
+    }
+  },
+  {
+    "label": "Dishes_12836",
+    "locale": {
+      "CNzh": "白酱意大利面",
+      "EUde": "Spaghetti carbonara",
+      "EUen": "spaghetti carbonara",
+      "EUes": "pasta carbonara",
+      "EUfr": "plat de spaghetti carbonara",
+      "EUit": "pasta alla carbonara",
+      "EUnl": "spaghetti carbonara",
+      "EUru": "спагетти карбонара",
+      "JPja": "カルボナーラ",
+      "KRko": "까르보나라",
+      "TWzh": "白醬義大利麵",
+      "USen": "spaghetti carbonara",
+      "USes": "pasta carbonara",
+      "USfr": "plat de spaghetti carbonara"
+    }
+  },
+  {
+    "label": "Dishes_12837",
+    "locale": {
+      "CNzh": "青酱意大利面",
+      "EUde": "Spaghetti genovese",
+      "EUen": "spaghetti genovese",
+      "EUes": "pasta al pesto",
+      "EUfr": "plat de spaghetti au pesto",
+      "EUit": "pasta al pesto",
+      "EUnl": "spaghetti met pesto",
+      "EUru": "спагетти по-генуэзски",
+      "JPja": "ジェノベーゼパスタ",
+      "KRko": "제노베제 파스타",
+      "TWzh": "青醬義大利麵",
+      "USen": "spaghetti genovese",
+      "USes": "pasta al pesto",
+      "USfr": "plat de spaghetti au pesto"
+    }
+  },
+  {
+    "label": "Dishes_12838",
+    "locale": {
+      "CNzh": "茄汁意大利面",
+      "EUde": "Spaghetti marinara",
+      "EUen": "spaghetti marinara",
+      "EUes": "pasta marinara",
+      "EUfr": "plat de spaghetti tomates",
+      "EUit": "pasta al sugo",
+      "EUnl": "spaghetti met tomatensaus",
+      "EUru": "спагетти маринара",
+      "JPja": "トマトソースパスタ",
+      "KRko": "토마토 파스타",
+      "TWzh": "紅醬義大利麵",
+      "USen": "spaghetti marinara",
+      "USes": "pasta marinara",
+      "USfr": "plat de spaghetti tomates"
+    }
+  },
+  {
+    "label": "Dishes_12840",
+    "locale": {
+      "CNzh": "那不勒斯意大利面",
+      "EUde": "Spaghetti napoletana",
+      "EUen": "spaghetti napolitan",
+      "EUes": "pasta napolitana",
+      "EUfr": "plat de spaghetti napoli",
+      "EUit": "pasta ai peperoni",
+      "EUnl": "spaghetti napoletana",
+      "EUru": "спагетти по-неаполитански",
+      "JPja": "ナポリタンスパゲッティ",
+      "KRko": "나폴리탄 파스타",
+      "TWzh": "拿坡里義大利麵",
+      "USen": "spaghetti napolitan",
+      "USes": "pasta napolitana",
+      "USfr": "plat de spaghetti napoli"
+    }
+  },
+  {
+    "label": "Dishes_13327",
+    "locale": {
+      "CNzh": "奶汁烤菜",
+      "EUde": "Gratin",
+      "EUen": "gratin",
+      "EUes": "gratinado",
+      "EUfr": "gratin",
+      "EUit": "sformato",
+      "EUnl": "gegratineerde schotel",
+      "EUru": "запеканка",
+      "JPja": "グラタン",
+      "KRko": "그라탱",
+      "TWzh": "焗烤",
+      "USen": "gratin",
+      "USes": "gratinado",
+      "USfr": "gratin"
+    }
+  },
+  {
+    "label": "Dishes_13328",
+    "locale": {
+      "CNzh": "蛤蜊浓汤",
+      "EUde": "Muschelsuppe",
+      "EUen": "clam chowder",
+      "EUes": "sopa de almejas",
+      "EUfr": "potée de palourdes",
+      "EUit": "zuppa di vongole",
+      "EUnl": "vissoep",
+      "EUru": "похлебка из моллюсков",
+      "JPja": "クラムチャウダー",
+      "KRko": "클램 차우더",
+      "TWzh": "蛤蜊巧達湯",
+      "USen": "clam chowder",
+      "USes": "sopa de almejas",
+      "USfr": "chaudrée de palourdes"
+    }
+  },
+  {
+    "label": "Dishes_13329",
+    "locale": {
+      "CNzh": "南瓜派",
+      "EUde": "Kürbis-Tarte",
+      "EUen": "pumpkin pie",
+      "EUes": "pastel de calabaza",
+      "EUfr": "tarte à la citrouille",
+      "EUit": "crostata di zucca",
+      "EUnl": "pompoentaart",
+      "EUru": "тыквенный пирог",
+      "JPja": "パンプキンパイ",
+      "KRko": "호박파이",
+      "TWzh": "南瓜派",
+      "USen": "pumpkin pie",
+      "USes": "pastel de calabaza",
+      "USfr": "tarte à la citrouille"
+    }
+  },
+  {
+    "label": "Dishes_13330",
+    "locale": {
+      "CNzh": "法式煎比目鱼排",
+      "EUde": "Flunder Müllerinart",
+      "EUen": "olive-flounder meunière",
+      "EUes": "rodaballo a la molinera",
+      "EUfr": "cardeau meunière",
+      "EUit": "sogliola alla mugnaia",
+      "EUnl": "vis met botersaus",
+      "EUru": "жареный палтус",
+      "JPja": "ヒラメのムニエル",
+      "KRko": "넙치 뫼니에르",
+      "TWzh": "法式煎比目魚排",
+      "USen": "olive-flounder meunière",
+      "USes": "rodaballo al limón",
+      "USfr": "cardeau meunière"
+    }
+  },
+  {
+    "label": "Dishes_13931",
+    "locale": {
+      "CNzh": "胡萝卜浓汤",
+      "EUde": "Karottensuppe",
+      "EUen": "carrot potage",
+      "EUes": "crema de zanahoria",
+      "EUfr": "potage à la carotte",
+      "EUit": "zuppa di carote",
+      "EUnl": "wortelsoep",
+      "EUru": "морковный суп-пюре",
+      "JPja": "ニンジンのポタージュ",
+      "KRko": "당근 포타주",
+      "TWzh": "胡蘿蔔濃湯",
+      "USen": "carrot potage",
+      "USes": "sopa crema de zanahoria",
+      "USfr": "potage à la carotte"
+    }
+  },
+  {
+    "label": "Dishes_13932",
+    "locale": {
+      "CNzh": "土豆浓汤",
+      "EUde": "Kartoffelsuppe",
+      "EUen": "potato potage",
+      "EUes": "crema de patata",
+      "EUfr": "potage à la pomme de terre",
+      "EUit": "zuppa di patate",
+      "EUnl": "aardappelsoep",
+      "EUru": "картофельный суп-пюре",
+      "JPja": "ジャガイモのポタージュ",
+      "KRko": "감자 포타주",
+      "TWzh": "馬鈴薯濃湯",
+      "USen": "potato potage",
+      "USes": "sopa crema de papa",
+      "USfr": "potage de patates"
+    }
+  },
+  {
+    "label": "Dishes_13933",
+    "locale": {
+      "CNzh": "焗烤面包",
+      "EUde": "Brotsuppe",
+      "EUen": "bread gratin",
+      "EUes": "pan relleno gratinado",
+      "EUfr": "gratin de pain",
+      "EUit": "zuppa in pagnotta",
+      "EUnl": "brood gevuld met soep",
+      "EUru": "суп в хлебе",
+      "JPja": "パングラタン",
+      "KRko": "빵 그라탱",
+      "TWzh": "焗烤麵包",
+      "USen": "bread gratin",
+      "USes": "pan relleno gratinado",
+      "USfr": "gratin de pain"
+    }
+  },
+  {
+    "label": "Dishes_13934",
+    "locale": {
+      "CNzh": "橘子派",
+      "EUde": "Orangen-Tarte",
+      "EUen": "orange pie",
+      "EUes": "pastel de naranja",
+      "EUfr": "tarte feuilletée aux oranges",
+      "EUit": "crostata alle arance",
+      "EUnl": "sinaasappeltaart",
+      "EUru": "апельсиновый пирог",
+      "JPja": "オレンジパイ",
+      "KRko": "오렌지파이",
+      "TWzh": "橘子派",
+      "USen": "orange pie",
+      "USes": "pastel de naranja",
+      "USfr": "tarte feuilletée aux oranges"
+    }
+  },
+  {
+    "label": "Dishes_13935",
+    "locale": {
+      "CNzh": "桃子派",
+      "EUde": "Pfirsich-Tarte",
+      "EUen": "peach pie",
+      "EUes": "pastel de melocotón",
+      "EUfr": "tarte feuilletée aux pêches",
+      "EUit": "crostata alle pesche",
+      "EUnl": "perziktaart",
+      "EUru": "персиковый пирог",
+      "JPja": "ピーチパイ",
+      "KRko": "복숭아파이",
+      "TWzh": "桃子派",
+      "USen": "peach pie",
+      "USes": "pastel de durazno",
+      "USfr": "tarte feuilletée aux pêches"
+    }
+  },
+  {
+    "label": "Dishes_13936",
+    "locale": {
+      "CNzh": "梨子派",
+      "EUde": "Birnen-Tarte",
+      "EUen": "pear pie",
+      "EUes": "pastel de pera",
+      "EUfr": "tarte feuilletée aux poires",
+      "EUit": "crostata alle pere",
+      "EUnl": "perentaart",
+      "EUru": "грушевый пирог",
+      "JPja": "ナシのパイ",
+      "KRko": "배파이",
+      "TWzh": "梨子派",
+      "USen": "pear pie",
+      "USes": "pastel de pera",
+      "USfr": "tarte feuilletée aux poires"
+    }
+  },
+  {
+    "label": "Dishes_13937",
+    "locale": {
+      "CNzh": "樱桃派",
+      "EUde": "Kirsch-Tarte",
+      "EUen": "cherry pie",
+      "EUes": "pastel de cereza",
+      "EUfr": "tarte feuilletée aux cerises",
+      "EUit": "crostata alle ciliegie",
+      "EUnl": "kersentaart",
+      "EUru": "вишневый пирог",
+      "JPja": "チェリーパイ",
+      "KRko": "체리파이",
+      "TWzh": "櫻桃派",
+      "USen": "cherry pie",
+      "USes": "pastel de cereza",
+      "USfr": "tarte feuilletée aux cerises"
+    }
+  },
+  {
+    "label": "Dishes_13938",
+    "locale": {
+      "CNzh": "意式南瓜面疙瘩",
+      "EUde": "Gnocchi di zucca",
+      "EUen": "gnocchi di zucca",
+      "EUes": "plato de ñoquis de calabaza",
+      "EUfr": "plat de gnocchi de citrouille",
+      "EUit": "piatto di gnocchi di zucca",
+      "EUnl": "pompoengnocchi",
+      "EUru": "тыквенные ньокки",
+      "JPja": "カボチャのニョッキ",
+      "KRko": "호박 뇨끼",
+      "TWzh": "義式南瓜麵疙瘩",
+      "USen": "gnocchi di zucca",
+      "USes": "plato de ñoquis de calabaza",
+      "USfr": "plat de gnocchi de citrouille"
+    }
+  },
+  {
+    "label": "Dishes_13939",
+    "locale": {
+      "CNzh": "意式土豆面疙瘩",
+      "EUde": "Gnocchi di patate",
+      "EUen": "gnocchi di patate",
+      "EUes": "plato de ñoquis de patata",
+      "EUfr": "plat de gnocchi p. de terre",
+      "EUit": "piatto di gnocchi di patate",
+      "EUnl": "aardappelgnocchi",
+      "EUru": "картофельные ньокки",
+      "JPja": "ジャガイモのニョッキ",
+      "KRko": "감자 뇨끼",
+      "TWzh": "義式馬鈴薯麵疙瘩",
+      "USen": "gnocchi di patate",
+      "USes": "plato de ñoquis de papa",
+      "USfr": "plat de gnocchi de patate"
+    }
+  },
+  {
+    "label": "Dishes_13940",
+    "locale": {
+      "CNzh": "意式胡萝卜面疙瘩",
+      "EUde": "Gnocchi di carote",
+      "EUen": "gnocchi di carote",
+      "EUes": "plato de ñoquis zanahoria",
+      "EUfr": "plat de gnocchi de carotte",
+      "EUit": "piatto di gnocchi di carote",
+      "EUnl": "wortelgnocchi",
+      "EUru": "морковные ньокки",
+      "JPja": "ニンジンのニョッキ",
+      "KRko": "당근 뇨끼",
+      "TWzh": "義式胡蘿蔔麵疙瘩",
+      "USen": "gnocchi di carote",
+      "USes": "plato de ñoquis zanahoria",
+      "USfr": "plat de gnocchi de carotte"
+    }
+  },
+  {
+    "label": "Dishes_13941",
+    "locale": {
+      "CNzh": "南瓜汤",
+      "EUde": "Kürbissuppe",
+      "EUen": "pumpkin soup",
+      "EUes": "sopa de calabaza",
+      "EUfr": "soupe à la citrouille",
+      "EUit": "zuppa di zucca",
+      "EUnl": "pompoen gevuld met soep",
+      "EUru": "тыквенный суп",
+      "JPja": "カボチャのスープ",
+      "KRko": "호박 수프",
+      "TWzh": "南瓜湯",
+      "USen": "pumpkin soup",
+      "USes": "sopa de calabaza",
+      "USfr": "soupe à la citrouille"
+    }
+  },
+  {
+    "label": "Dishes_13942",
+    "locale": {
+      "CNzh": "意式蔬菜汤",
+      "EUde": "Minestrone",
+      "EUen": "minestrone soup",
+      "EUes": "sopa minestrone",
+      "EUfr": "minestrone",
+      "EUit": "zuppa di verdure",
+      "EUnl": "minestronesoep",
+      "EUru": "минестроне",
+      "JPja": "ミネストローネ",
+      "KRko": "미네스트로네 수프",
+      "TWzh": "義式蔬菜湯",
+      "USen": "minestrone soup",
+      "USes": "sopa minestrone",
+      "USfr": "minestrone"
+    }
+  },
+  {
+    "label": "Dishes_13943",
+    "locale": {
+      "CNzh": "竹笋汤",
+      "EUde": "Bambussprossensuppe",
+      "EUen": "bamboo-shoot soup",
+      "EUes": "sopa de brotes de bambú",
+      "EUfr": "soupe pousses de bambou",
+      "EUit": "zuppa di germogli di bambù",
+      "EUnl": "bamboesoep",
+      "EUru": "суп из побегов бамбука",
+      "JPja": "たけのこスープ",
+      "KRko": "죽순 수프",
+      "TWzh": "竹筍湯",
+      "USen": "bamboo-shoot soup",
+      "USes": "sopa de brotes de bambú",
+      "USfr": "soupe pousses de bambou"
+    }
+  },
+  {
+    "label": "Dishes_13944",
+    "locale": {
+      "CNzh": "苹果派",
+      "EUde": "Apfel-Tarte",
+      "EUen": "apple pie",
+      "EUes": "pastel de manzana",
+      "EUfr": "tarte feuilletée aux pommes",
+      "EUit": "crostata alle mele",
+      "EUnl": "appeltaart",
+      "EUru": "яблочный пирог",
+      "JPja": "アップルパイ",
+      "KRko": "애플파이",
+      "TWzh": "蘋果派",
+      "USen": "apple pie",
+      "USes": "pastel de manzana",
+      "USfr": "tarte feuilletée aux pommes"
+    }
+  },
+  {
+    "label": "Dishes_13945",
+    "locale": {
+      "CNzh": "裙带菜汤",
+      "EUde": "Algensuppe",
+      "EUen": "seaweed soup",
+      "EUes": "sopa de algas",
+      "EUfr": "soupe aux algues",
+      "EUit": "zuppa di alghe wakame",
+      "EUnl": "zeewiersoep",
+      "EUru": "суп из водорослей",
+      "JPja": "わかめスープ",
+      "KRko": "미역국",
+      "TWzh": "海帶湯",
+      "USen": "seaweed soup",
+      "USes": "sopa de algas",
+      "USfr": "soupe aux algues"
+    }
+  },
+  {
+    "label": "Dishes_13946",
+    "locale": {
+      "CNzh": "胡萝卜蛋糕",
+      "EUde": "Karottenkuchen",
+      "EUen": "carrot cake",
+      "EUes": "pastel de zanahoria",
+      "EUfr": "gâteau aux carottes",
+      "EUit": "fetta di torta alle carote",
+      "EUnl": "worteltaart",
+      "EUru": "морковный торт",
+      "JPja": "キャロットケーキ",
+      "KRko": "당근 케이크",
+      "TWzh": "胡蘿蔔蛋糕",
+      "USen": "carrot cake",
+      "USes": "pastel de zanahoria",
+      "USfr": "gâteau aux carottes"
+    }
+  },
+  {
+    "label": "Dishes_13947",
+    "locale": {
+      "CNzh": "苹果挞",
+      "EUde": "Apfelkuchen",
+      "EUen": "apple tart",
+      "EUes": "tarta de manzana",
+      "EUfr": "tarte sablée aux pommes",
+      "EUit": "fetta di crostata alle mele",
+      "EUnl": "stuk appeltaart",
+      "EUru": "яблочный тарт",
+      "JPja": "リンゴのタルト",
+      "KRko": "사과 타르트",
+      "TWzh": "蘋果塔",
+      "USen": "apple tart",
+      "USes": "tarta de manzana",
+      "USfr": "tarte sablée aux pommes"
+    }
+  },
+  {
+    "label": "Dishes_13948",
+    "locale": {
+      "CNzh": "法式蔬菜咸派",
+      "EUde": "Gemüse-Quiche",
+      "EUen": "veggie quiche",
+      "EUes": "quiche de verduras",
+      "EUfr": "quiche aux légumes",
+      "EUit": "quiche di verdure",
+      "EUnl": "groentequiche",
+      "EUru": "овощной киш",
+      "JPja": "やさいのキッシュ",
+      "KRko": "야채 키슈",
+      "TWzh": "法式蔬菜鹹派",
+      "USen": "veggie quiche",
+      "USes": "quiche de verduras",
+      "USfr": "quiche aux légumes"
+    }
+  },
+  {
+    "label": "Dishes_13949",
+    "locale": {
+      "CNzh": "橘子挞",
+      "EUde": "Orangenkuchen",
+      "EUen": "orange tart",
+      "EUes": "tarta de naranja",
+      "EUfr": "tarte sablée aux oranges",
+      "EUit": "fetta di crostata alle arance",
+      "EUnl": "stuk sinaasappeltaart",
+      "EUru": "апельсиновый тарт",
+      "JPja": "オレンジタルト",
+      "KRko": "오렌지 타르트",
+      "TWzh": "橘子塔",
+      "USen": "orange tart",
+      "USes": "tarta de naranja",
+      "USfr": "tarte sablée aux oranges"
+    }
+  },
+  {
+    "label": "Dishes_13950",
+    "locale": {
+      "CNzh": "水果挞",
+      "EUde": "Obstkuchen",
+      "EUen": "mixed-fruits tart",
+      "EUes": "tarta de frutas",
+      "EUfr": "tarte sablée aux fruits",
+      "EUit": "fetta di crostata alla frutta",
+      "EUnl": "stuk fruittaart",
+      "EUru": "фруктовый тарт",
+      "JPja": "フルーツタルト",
+      "KRko": "과일 타르트",
+      "TWzh": "水果塔",
+      "USen": "mixed-fruits tart",
+      "USes": "tarta de frutas",
+      "USfr": "tarte sablée aux fruits"
+    }
+  },
+  {
+    "label": "Dishes_13951",
+    "locale": {
+      "CNzh": "桃子挞",
+      "EUde": "Pfirsichkuchen",
+      "EUen": "peach tart",
+      "EUes": "tarta de melocotón",
+      "EUfr": "tarte sablée aux pêches",
+      "EUit": "fetta di crostata alle pesche",
+      "EUnl": "stuk perziktaart",
+      "EUru": "персиковый тарт",
+      "JPja": "ピーチタルト",
+      "KRko": "복숭아 타르트",
+      "TWzh": "桃子塔",
+      "USen": "peach tart",
+      "USes": "tarta de durazno",
+      "USfr": "tarte sablée aux pêches"
+    }
+  },
+  {
+    "label": "Dishes_13952",
+    "locale": {
+      "CNzh": "樱桃挞",
+      "EUde": "Kirschkuchen",
+      "EUen": "cherry tart",
+      "EUes": "tarta de cereza",
+      "EUfr": "tarte sablée aux cerises",
+      "EUit": "fetta di crostata alle ciliegie",
+      "EUnl": "stuk kersentaart",
+      "EUru": "вишневый тарт",
+      "JPja": "チェリータルト",
+      "KRko": "체리 타르트",
+      "TWzh": "櫻桃塔",
+      "USen": "cherry tart",
+      "USes": "tarta de cereza",
+      "USfr": "tarte sablée aux cerises"
+    }
+  },
+  {
+    "label": "Dishes_13953",
+    "locale": {
+      "CNzh": "梨子挞",
+      "EUde": "Birnenkuchen",
+      "EUen": "pear tart",
+      "EUes": "tarta de pera",
+      "EUfr": "tarte sablée aux poires",
+      "EUit": "fetta di crostata alle pere",
+      "EUnl": "stuk perentaart",
+      "EUru": "грушевый тарт",
+      "JPja": "ナシのタルト",
+      "KRko": "배 타르트",
+      "TWzh": "梨子塔",
+      "USen": "pear tart",
+      "USes": "tarta de pera",
+      "USfr": "tarte sablée aux poires"
+    }
+  },
+  {
+    "label": "Dishes_13957",
+    "locale": {
+      "CNzh": "水果派",
+      "EUde": "Obst-Tarte",
+      "EUen": "mixed-fruits pie",
+      "EUes": "pastel de frutas",
+      "EUfr": "tarte feuilletée aux fruits",
+      "EUit": "crostata alla frutta",
+      "EUnl": "fruitvlaai",
+      "EUru": "фруктовый пирог",
+      "JPja": "フルーツパイ",
+      "KRko": "과일파이",
+      "TWzh": "水果派",
+      "USen": "mixed-fruits pie",
+      "USes": "pastel de frutas",
+      "USfr": "tarte feuilletée aux fruits"
+    }
+  },
+  {
+    "label": "Dishes_13959",
+    "locale": {
+      "CNzh": "水果三明治",
+      "EUde": "Obst-Sandwich",
+      "EUen": "mixed-fruits sandwich",
+      "EUes": "sándwich de fruta",
+      "EUfr": "sandwich aux fruits",
+      "EUit": "tramezzino alla frutta",
+      "EUnl": "fruitsandwich",
+      "EUru": "фруктовый сэндвич",
+      "JPja": "フルーツサンド",
+      "KRko": "과일 샌드위치",
+      "TWzh": "水果三明治",
+      "USen": "mixed-fruits sandwich",
+      "USes": "sándwich de frutas",
+      "USfr": "sandwich aux fruits"
+    }
+  },
+  {
+    "label": "Dishes_13960",
+    "locale": {
+      "CNzh": "椰子布丁",
+      "EUde": "Kokospudding",
+      "EUen": "coconut pudding",
+      "EUes": "gelatina de coco",
+      "EUfr": "flan à la noix de coco",
+      "EUit": "budino al cocco",
+      "EUnl": "kokospudding",
+      "EUru": "кокосовый пудинг",
+      "JPja": "ココナッツプリン",
+      "KRko": "코코넛 푸딩",
+      "TWzh": "椰子布丁",
+      "USen": "coconut pudding",
+      "USes": "gelatina de coco",
+      "USfr": "pudding à la noix de coco"
+    }
+  },
+  {
+    "label": "Dishes_13961",
+    "locale": {
+      "CNzh": "梨子果冻",
+      "EUde": "Birnen-Wackelpudding",
+      "EUen": "pear jelly",
+      "EUes": "gelatina de pera",
+      "EUfr": "gelée à la poire",
+      "EUit": "gelatina di pere",
+      "EUnl": "perenpudding",
+      "EUru": "грушевое желе",
+      "JPja": "ナシのゼリー",
+      "KRko": "배 젤리",
+      "TWzh": "梨子果凍",
+      "USen": "pear jelly",
+      "USes": "gelatina de pera",
+      "USfr": "gelée à la poire"
+    }
+  },
+  {
+    "label": "Dishes_13962",
+    "locale": {
+      "CNzh": "樱桃果冻",
+      "EUde": "Kirsch-Wackelpudding",
+      "EUen": "cherry jelly",
+      "EUes": "gelatina de cereza",
+      "EUfr": "gelée à la cerise",
+      "EUit": "gelatina di ciliegie",
+      "EUnl": "kersenpudding",
+      "EUru": "вишневое желе",
+      "JPja": "さくらんぼゼリー",
+      "KRko": "체리 젤리",
+      "TWzh": "櫻桃果凍",
+      "USen": "cherry jelly",
+      "USes": "gelatina de cereza",
+      "USfr": "gelée à la cerise"
+    }
+  },
+  {
+    "label": "Dishes_13963",
+    "locale": {
+      "CNzh": "桃子果冻",
+      "EUde": "Pfirsich-Wackelpudding",
+      "EUen": "peach jelly",
+      "EUes": "gelatina de melocotón",
+      "EUfr": "gelée à la pêche",
+      "EUit": "gelatina di pesche",
+      "EUnl": "perzikpudding",
+      "EUru": "персиковое желе",
+      "JPja": "ピーチゼリー",
+      "KRko": "복숭아 젤리",
+      "TWzh": "桃子果凍",
+      "USen": "peach jelly",
+      "USes": "gelatina de durazno",
+      "USfr": "gelée à la pêche"
+    }
+  },
+  {
+    "label": "Dishes_13964",
+    "locale": {
+      "CNzh": "蘑菇可丽饼",
+      "EUde": "Pilz-Crêpe",
+      "EUen": "mushroom crepe",
+      "EUes": "crepe de champiñones",
+      "EUfr": "crêpe aux champignons",
+      "EUit": "crêpe ai funghi",
+      "EUnl": "crêpe met champignons",
+      "EUru": "блинчик с грибами",
+      "JPja": "キノコのクレープ",
+      "KRko": "버섯 크레이프",
+      "TWzh": "蘑菇可麗餅",
+      "USen": "mushroom crepe",
+      "USes": "crepe de champiñones",
+      "USfr": "crêpe aux champignons"
+    }
+  },
+  {
+    "label": "Dishes_13965",
+    "locale": {
+      "CNzh": "海鲜沙拉",
+      "EUde": "Meeresfrüchte-Salat",
+      "EUen": "seafood salad",
+      "EUes": "salpicón de marisco",
+      "EUfr": "salade aux fruits de mer",
+      "EUit": "insalata di mare",
+      "EUnl": "zeevruchtensalade",
+      "EUru": "салат из морепродуктов",
+      "JPja": "シーフードサラダ",
+      "KRko": "시푸드 샐러드",
+      "TWzh": "海鮮沙拉",
+      "USen": "seafood salad",
+      "USes": "ensalada de mariscos",
+      "USfr": "salade aux fruits de mer"
+    }
+  },
+  {
+    "label": "Dishes_13966",
+    "locale": {
+      "CNzh": "水果沙拉",
+      "EUde": "Obstsalat",
+      "EUen": "fruit salad",
+      "EUes": "ensalada de frutas",
+      "EUfr": "salade de fruits",
+      "EUit": "macedonia",
+      "EUnl": "fruitsalade",
+      "EUru": "фруктовый салат",
+      "JPja": "フルーツサラダ",
+      "KRko": "과일 샐러드",
+      "TWzh": "水果沙拉",
+      "USen": "fruit salad",
+      "USes": "ensalada de frutas",
+      "USfr": "salade de fruits"
+    }
+  },
+  {
+    "label": "Dishes_13967",
+    "locale": {
+      "CNzh": "橘子果冻",
+      "EUde": "Orangen-Wackelpudding",
+      "EUen": "orange jelly",
+      "EUes": "gelatina de naranja",
+      "EUfr": "gelée à l'orange",
+      "EUit": "gelatina di arance",
+      "EUnl": "sinaasappelpudding",
+      "EUru": "апельсиновое желе",
+      "JPja": "オレンジゼリー",
+      "KRko": "오렌지 젤리",
+      "TWzh": "橘子果凍",
+      "USen": "orange jelly",
+      "USes": "gelatina de naranja",
+      "USfr": "gelée à l'orange"
+    }
+  },
+  {
+    "label": "Dishes_13968",
+    "locale": {
+      "CNzh": "凉拌胡萝卜丝",
+      "EUde": "Karottensalat",
+      "EUen": "salade de carottes râpées",
+      "EUes": "ensalada de zanahoria",
+      "EUfr": "salade de carottes râpées",
+      "EUit": "insalata di carote",
+      "EUnl": "wortelsalade",
+      "EUru": "салат из тертой моркови",
+      "JPja": "キャロットラペ",
+      "KRko": "당근 라페",
+      "TWzh": "涼拌胡蘿蔔絲",
+      "USen": "salade de carottes râpées",
+      "USes": "ensalada de zanahoria",
+      "USfr": "salade de carottes râpées"
+    }
+  },
+  {
+    "label": "Dishes_13969",
+    "locale": {
+      "CNzh": "夏威夷盖饭",
+      "EUde": "Poke-Salat",
+      "EUen": "poke",
+      "EUes": "ensalada poke",
+      "EUfr": "poke",
+      "EUit": "insalata pokè",
+      "EUnl": "poke-salade",
+      "EUru": "салат поке",
+      "JPja": "ポキ",
+      "KRko": "포케",
+      "TWzh": "夏威夷蓋飯",
+      "USen": "poke",
+      "USes": "ensalada poke",
+      "USfr": "poké"
+    }
+  },
+  {
+    "label": "Dishes_13970",
+    "locale": {
+      "CNzh": "大头菜沙拉",
+      "EUde": "Rübensalat",
+      "EUen": "turnip salad",
+      "EUes": "ensalada de nabos",
+      "EUfr": "salade de navets",
+      "EUit": "insalata di rape",
+      "EUnl": "knolsalade",
+      "EUru": "салат из репы",
+      "JPja": "カブのサラダ",
+      "KRko": "무 샐러드",
+      "TWzh": "大頭菜沙拉",
+      "USen": "turnip salad",
+      "USes": "ensalada de nabos",
+      "USfr": "salade de navets"
+    }
+  },
+  {
+    "label": "Dishes_13971",
+    "locale": {
+      "CNzh": "苹果果冻",
+      "EUde": "Apfel-Wackelpudding",
+      "EUen": "apple jelly",
+      "EUes": "gelatina de manzana",
+      "EUfr": "gelée à la pomme",
+      "EUit": "gelatina di mele",
+      "EUnl": "appelpudding",
+      "EUru": "яблочное желе",
+      "JPja": "アップルゼリー",
+      "KRko": "사과 젤리",
+      "TWzh": "蘋果果凍",
+      "USen": "apple jelly",
+      "USes": "gelatina de manzana",
+      "USfr": "gelée à la pomme"
+    }
+  },
+  {
+    "label": "Dishes_13972",
+    "locale": {
+      "CNzh": "蘑菇沙拉",
+      "EUde": "Pilzsalat",
+      "EUen": "mushroom salad",
+      "EUes": "ensalada de champiñones",
+      "EUfr": "salade de champignons",
+      "EUit": "insalata di funghi",
+      "EUnl": "champignonsalade",
+      "EUru": "салат из грибов",
+      "JPja": "キノコのサラダ",
+      "KRko": "버섯 샐러드",
+      "TWzh": "蘑菇沙拉",
+      "USen": "mushroom salad",
+      "USes": "ensalada de champiñones",
+      "USfr": "salade de champignons"
+    }
+  },
+  {
+    "label": "Dishes_13973",
+    "locale": {
+      "CNzh": "蔬菜可丽饼",
+      "EUde": "Gemüse-Crêpe",
+      "EUen": "veggie crepe",
+      "EUes": "crepe vegetal",
+      "EUfr": "crêpe aux légumes",
+      "EUit": "crêpe vegetariana",
+      "EUnl": "crêpe met groente",
+      "EUru": "блинчик с овощами",
+      "JPja": "ベジタブルクレープ",
+      "KRko": "야채 크레이프",
+      "TWzh": "蔬菜可麗餅",
+      "USen": "veggie crepe",
+      "USes": "crepe vegetal",
+      "USfr": "crêpe aux légumes"
+    }
+  },
+  {
+    "label": "Dishes_13974",
+    "locale": {
+      "CNzh": "蔬菜三明治",
+      "EUde": "Gemüse-Sandwich",
+      "EUen": "veggie sandwich",
+      "EUes": "sándwich vegetal",
+      "EUfr": "sandwich aux légumes",
+      "EUit": "tramezzino vegetariano",
+      "EUnl": "groentesandwich",
+      "EUru": "сэндвич с овощами",
+      "JPja": "ベジタブルサンド",
+      "KRko": "야채 샌드위치",
+      "TWzh": "蔬菜三明治",
+      "USen": "veggie sandwich",
+      "USes": "sándwich vegetal",
+      "USfr": "sandwich aux légumes"
+    }
+  },
+  {
+    "label": "Dishes_13975",
+    "locale": {
+      "CNzh": "水果可丽饼",
+      "EUde": "Obst-Crêpe",
+      "EUen": "mixed-fruits crepe",
+      "EUes": "crepe de frutas",
+      "EUfr": "crêpe aux fruits",
+      "EUit": "crêpe alla frutta mista",
+      "EUnl": "crêpe met fruit",
+      "EUru": "блинчик с фруктами",
+      "JPja": "フルーツクレープ",
+      "KRko": "과일 크레이프",
+      "TWzh": "水果可麗餅",
+      "USen": "mixed-fruits crepe",
+      "USes": "crepe de frutas",
+      "USfr": "crêpe aux fruits"
+    }
+  },
+  {
+    "label": "Dishes_13976",
+    "locale": {
+      "CNzh": "鲑鱼三明治",
+      "EUde": "Lachs-Sandwich",
+      "EUen": "salmon sandwich",
+      "EUes": "sándwich de salmón",
+      "EUfr": "sandwich au saumon",
+      "EUit": "tramezzino al salmone",
+      "EUnl": "zalmsandwich",
+      "EUru": "сэндвич с лососем",
+      "JPja": "サーモンサンド",
+      "KRko": "연어 샌드위치",
+      "TWzh": "鮭魚三明治",
+      "USen": "salmon sandwich",
+      "USes": "sándwich de salmón",
+      "USfr": "sandwich au saumon"
+    }
+  },
+  {
+    "label": "Dishes_13977",
+    "locale": {
+      "CNzh": "甜味可丽饼",
+      "EUde": "Zucker-Crêpe",
+      "EUen": "sugar crepe",
+      "EUes": "crepe azucarada",
+      "EUfr": "crêpe au sucre",
+      "EUit": "crêpe allo zucchero",
+      "EUnl": "crêpe met poedersuiker",
+      "EUru": "блинчик с сахаром",
+      "JPja": "シュガークレープ",
+      "KRko": "슈거 크레이프",
+      "TWzh": "甜味可麗餅",
+      "USen": "sugar crepe",
+      "USes": "crepe azucarada",
+      "USfr": "crêpe au sucre"
+    }
+  },
+  {
+    "label": "Dishes_13978",
+    "locale": {
+      "CNzh": "饼干",
+      "EUde": "Butterplätzchen",
+      "EUen": "cookies",
+      "EUes": "plato de galletas",
+      "EUfr": "plat de biscuits",
+      "EUit": "piatto di biscotti",
+      "EUnl": "koekjes",
+      "EUru": "печенье",
+      "JPja": "クッキー",
+      "KRko": "쿠키",
+      "TWzh": "餅乾",
+      "USen": "cookies",
+      "USes": "plato de galletas",
+      "USfr": "plat de biscuits"
+    }
+  },
+  {
+    "label": "Dishes_13979",
+    "locale": {
+      "CNzh": "橘子磅蛋糕",
+      "EUde": "Orangen-Rührkuchen",
+      "EUen": "orange pound cake",
+      "EUes": "bizcocho de naranja",
+      "EUfr": "quatre-quarts à l'orange",
+      "EUit": "plumcake all'arancia",
+      "EUnl": "sinaasappelcake",
+      "EUru": "апельсинный кекс",
+      "JPja": "オレンジパウンドケーキ",
+      "KRko": "오렌지 파운드케이크",
+      "TWzh": "橘子磅蛋糕",
+      "USen": "orange pound cake",
+      "USes": "bizcochuelo de naranja",
+      "USfr": "quatre-quarts à l'orange"
+    }
+  },
+  {
+    "label": "Dishes_13980",
+    "locale": {
+      "CNzh": "磅蛋糕",
+      "EUde": "Rührkuchen",
+      "EUen": "pound cake",
+      "EUes": "bizcocho",
+      "EUfr": "quatre-quarts",
+      "EUit": "plumcake",
+      "EUnl": "cake",
+      "EUru": "кекс",
+      "JPja": "パウンドケーキ",
+      "KRko": "파운드케이크",
+      "TWzh": "磅蛋糕",
+      "USen": "pound cake",
+      "USes": "bizcochuelo",
+      "USfr": "quatre-quarts"
+    }
+  },
+  {
+    "label": "Dishes_13981",
+    "locale": {
+      "CNzh": "南瓜磅蛋糕",
+      "EUde": "Kürbis-Rührkuchen",
+      "EUen": "pumpkin pound cake",
+      "EUes": "bizcocho de calabaza",
+      "EUfr": "quatre-quarts à la citrouille",
+      "EUit": "plumcake alla zucca",
+      "EUnl": "pompoencake",
+      "EUru": "тыквенный кекс",
+      "JPja": "カボチャのパウンドケーキ",
+      "KRko": "호박 파운드케이크",
+      "TWzh": "南瓜磅蛋糕",
+      "USen": "pumpkin pound cake",
+      "USes": "bizcocho de calabaza",
+      "USfr": "quatre-quarts à la citrouille"
+    }
+  },
+  {
+    "label": "Dishes_13983",
+    "locale": {
+      "CNzh": "芡汁大头菜盅",
+      "EUde": "Kabu ankake",
+      "EUen": "kabu ankake",
+      "EUes": "nabo relleno",
+      "EUfr": "kabu ankake",
+      "EUit": "rapa ripiena",
+      "EUnl": "knol gevuld met saus",
+      "EUru": "репа кабу анкакэ",
+      "JPja": "まるごとカブあんかけ",
+      "KRko": "무찜",
+      "TWzh": "整顆大頭菜勾芡",
+      "USen": "kabu ankake",
+      "USes": "nabo relleno",
+      "USfr": "kabu ankake"
+    }
+  },
+  {
+    "label": "Dishes_13986",
+    "locale": {
+      "CNzh": "扭结面包",
+      "EUde": "Brezeln",
+      "EUen": "pretzels",
+      "EUes": "cesta de prétzeles",
+      "EUfr": "corbeille de bretzels",
+      "EUit": "cestino di brezel",
+      "EUnl": "pretzels",
+      "EUru": "крендельки",
+      "JPja": "プレッツェル",
+      "KRko": "프레첼",
+      "TWzh": "扭結麵包",
+      "USen": "pretzels",
+      "USes": "cesta de pretzels",
+      "USfr": "corbeille de bretzels"
+    }
+  },
+  {
+    "label": "Dishes_13987",
+    "locale": {
+      "CNzh": "糖霜扭结面包",
+      "EUde": "Zuckerguss-Brezeln",
+      "EUen": "frosted pretzels",
+      "EUes": "cesta prétzeles glaseados",
+      "EUfr": "corbeille de bretzels glacés",
+      "EUit": "cestino di brezel glassati",
+      "EUnl": "geglazuurde pretzels",
+      "EUru": "крендельки с глазурью",
+      "JPja": "アイシングプレッツェル",
+      "KRko": "아이싱 프레첼",
+      "TWzh": "糖霜扭結麵包",
+      "USen": "frosted pretzels",
+      "USes": "cesta de pretzels glaseados",
+      "USfr": "corbeille de bretzels glacés"
+    }
+  },
+  {
+    "label": "Dishes_13988",
+    "locale": {
+      "CNzh": "番茄沙拉盅",
+      "EUde": "Tomate mit Salatfüllung",
+      "EUen": "salad-stuffed tomato",
+      "EUes": "tomate relleno",
+      "EUfr": "tomate farcie de salade",
+      "EUit": "pomodoro ripieno d'insalata",
+      "EUnl": "tomaat gevuld met salade",
+      "EUru": "салат в помидоре",
+      "JPja": "まるごとトマトのサラダ",
+      "KRko": "통 토마토 샐러드",
+      "TWzh": "番茄沙拉盅",
+      "USen": "salad-stuffed tomato",
+      "USes": "tomate relleno",
+      "USfr": "tomate farcie de salade"
+    }
+  },
+  {
+    "label": "Dishes_13989",
+    "locale": {
+      "CNzh": "椰子饼干",
+      "EUde": "Kokoskekse",
+      "EUen": "coconut cookies",
+      "EUes": "plato de galletas de coco",
+      "EUfr": "plat de biscuits coco",
+      "EUit": "piatto di biscotti al cocco",
+      "EUnl": "kokoskoekjes",
+      "EUru": "печенье с кокосом",
+      "JPja": "ココナッツクッキー",
+      "KRko": "코코넛 쿠키",
+      "TWzh": "椰子餅乾",
+      "USen": "coconut cookies",
+      "USes": "plato de galletas de coco",
+      "USfr": "plat de biscuits coco"
+    }
+  },
+  {
+    "label": "Dishes_13990",
+    "locale": {
+      "CNzh": "蔬菜饼干",
+      "EUde": "Gemüsekekse",
+      "EUen": "veggie cookies",
+      "EUes": "plato de galletas vegetales",
+      "EUfr": "plat de biscuits légumes",
+      "EUit": "piatto di biscotti vegetariani",
+      "EUnl": "groentekoekjes",
+      "EUru": "овощное печенье",
+      "JPja": "やさいクッキー",
+      "KRko": "야채 쿠키",
+      "TWzh": "蔬菜餅乾",
+      "USen": "veggie cookies",
+      "USes": "plato de galletas vegetales",
+      "USfr": "plat de biscuits légumes"
+    }
+  },
+  {
+    "label": "Dishes_13992",
+    "locale": {
+      "CNzh": "果酱饼干",
+      "EUde": "Marmeladenkekse",
+      "EUen": "thumbprint jam cookies",
+      "EUes": "plato de galletas decoradas",
+      "EUfr": "plat de biscuits confiture",
+      "EUit": "piatto di biscotti marmellata",
+      "EUnl": "jamkoekjes",
+      "EUru": "печенье с вареньем",
+      "JPja": "ジャムクッキー",
+      "KRko": "잼 쿠키",
+      "TWzh": "果醬餅乾",
+      "USen": "thumbprint jam cookies",
+      "USes": "plato de galletas decoradas",
+      "USfr": "plat de biscuits confiture"
+    }
+  },
+  {
+    "label": "Dishes_13993",
+    "locale": {
+      "CNzh": "糖霜饼干",
+      "EUde": "Zuckerguss-Kekse",
+      "EUen": "frosted cookies",
+      "EUes": "plato de galletas glaseadas",
+      "EUfr": "plat de biscuits glacés",
+      "EUit": "piatto di biscotti glassati",
+      "EUnl": "geglazuurde koekjes",
+      "EUru": "печенье с глазурью",
+      "JPja": "アイシングクッキー",
+      "KRko": "아이싱 쿠키",
+      "TWzh": "糖霜餅乾",
+      "USen": "frosted cookies",
+      "USes": "plato de galletas glaseadas",
+      "USfr": "plat de biscuits glacés"
+    }
+  },
+  {
+    "label": "Dishes_14002",
+    "locale": {
+      "CNzh": "黑糖磅蛋糕",
+      "EUde": "Rohzucker-Rührkuchen",
+      "EUen": "brown-sugar pound cake",
+      "EUes": "bizcocho de azúcar moreno",
+      "EUfr": "quatre-quarts au sucre roux",
+      "EUit": "plumcake zucchero di canna",
+      "EUnl": "bruinesuikercake",
+      "EUru": "кекс с коричнев. сахаром",
+      "JPja": "こくとうパウンドケーキ",
+      "KRko": "흑당 파운드케이크",
+      "TWzh": "黑糖磅蛋糕",
+      "USen": "brown-sugar pound cake",
+      "USes": "bizcochuelo azúcar morena",
+      "USfr": "quatre-quarts cassonade"
+    }
+  },
+  {
+    "label": "Dishes_14003",
+    "locale": {
+      "CNzh": "鲈鱼派",
+      "EUde": "Seebarsch-Pastete",
+      "EUen": "sea-bass pie",
+      "EUes": "empanada de lubina",
+      "EUfr": "tourte au bar commun",
+      "EUit": "sformato di spigola",
+      "EUnl": "zeebaarstaart",
+      "EUru": "пирог с судаком",
+      "JPja": "スズキのパイ",
+      "KRko": "농어파이",
+      "TWzh": "鱸魚派",
+      "USen": "sea-bass pie",
+      "USes": "pastel de lubina",
+      "USfr": "pâté au bar commun"
+    }
+  },
+  {
+    "label": "Dishes_14010",
+    "locale": {
+      "CNzh": "沙拉",
+      "EUde": "Salat",
+      "EUen": "salad",
+      "EUes": "ensalada",
+      "EUfr": "salade",
+      "EUit": "insalatona",
+      "EUnl": "salade",
+      "EUru": "салат",
+      "JPja": "サラダ",
+      "KRko": "샐러드",
+      "TWzh": "沙拉",
+      "USen": "salad",
+      "USes": "ensalada",
+      "USfr": "salade"
+    }
+  },
+  {
+    "label": "Dishes_14048",
+    "locale": {
+      "CNzh": "蘑菇浓汤",
+      "EUde": "Pilzsuppe",
+      "EUen": "mushroom potage",
+      "EUes": "crema de champiñones",
+      "EUfr": "potage aux champignons",
+      "EUit": "zuppa di funghi",
+      "EUnl": "champignonsoep",
+      "EUru": "грибное рагу",
+      "JPja": "キノコのポタージュ",
+      "KRko": "버섯 포타주",
+      "TWzh": "蘑菇濃湯",
+      "USen": "mushroom potage",
+      "USes": "sopa crema champiñones",
+      "USfr": "potage aux champignons"
+    }
+  },
+  {
+    "label": "Dishes_14104",
+    "locale": {
+      "CNzh": "炸鱼薯条",
+      "EUde": "Fish and Chips",
+      "EUen": "fish and chips",
+      "EUes": "fish & chips",
+      "EUfr": "fish and chips",
+      "EUit": "piatto di fritti",
+      "EUnl": "vis en friet",
+      "EUru": "рыба с картофелем фри",
+      "JPja": "フィッシュ&チップス",
+      "KRko": "피시&칩스",
+      "TWzh": "炸魚薯條",
+      "USen": "fish and chips",
+      "USes": "fish & chips",
+      "USfr": "fish and chips"
+    }
+  },
+  {
+    "label": "Dishes_14105",
+    "locale": {
+      "CNzh": "炸薯条",
+      "EUde": "Pommes frites",
+      "EUen": "french fries",
+      "EUes": "plato de patatas fritas",
+      "EUfr": "plat de frites",
+      "EUit": "porzione di patatine fritte",
+      "EUnl": "friet",
+      "EUru": "картофель фри",
+      "JPja": "フライドポテト",
+      "KRko": "감자튀김",
+      "TWzh": "炸薯條",
+      "USen": "french fries",
+      "USes": "plato de papas fritas",
+      "USfr": "plat de frites"
+    }
+  },
+  {
+    "label": "Dishes_14109",
+    "locale": {
+      "CNzh": "司康饼",
+      "EUde": "Scones",
+      "EUen": "plain scones",
+      "EUes": "plato de scones",
+      "EUfr": "plat de scones nature",
+      "EUit": "piatto di scone",
+      "EUnl": "scones",
+      "EUru": "простые булочки",
+      "JPja": "スコーン",
+      "KRko": "스콘",
+      "TWzh": "司康鬆餅",
+      "USen": "plain scones",
+      "USes": "plato de scones",
+      "USfr": "plat de scones nature"
+    }
+  },
+  {
+    "label": "Dishes_14110",
+    "locale": {
+      "CNzh": "蔬菜纸杯蛋糕",
+      "EUde": "Gemüse-Cupcakes",
+      "EUen": "veggie cupcakes",
+      "EUes": "plato de cupcakes vegetales",
+      "EUfr": "plat de cupcakes légumes",
+      "EUit": "piatto di cupcake di verdure",
+      "EUnl": "groentecupcakes",
+      "EUru": "кексики с овощами",
+      "JPja": "やさいのカップケーキ",
+      "KRko": "야채 컵케이크",
+      "TWzh": "蔬菜紙杯蛋糕",
+      "USen": "veggie cupcakes",
+      "USes": "plato de cupcakes vegetales",
+      "USfr": "plat de cupcakes légumes"
+    }
+  },
+  {
+    "label": "Dishes_14111",
+    "locale": {
+      "CNzh": "番茄贝果三明治",
+      "EUde": "Tomaten-Bagel-Sandwich",
+      "EUen": "tomato bagel sandwich",
+      "EUes": "bagel con tomate",
+      "EUfr": "bagel à la tomate",
+      "EUit": "bagel con pomodoro",
+      "EUnl": "bagel met tomaat",
+      "EUru": "бейгл с помидором",
+      "JPja": "トマトのベーグルサンド",
+      "KRko": "토마토 베이글 샌드위치",
+      "TWzh": "番茄貝果三明治",
+      "USen": "tomato bagel sandwich",
+      "USes": "bagel con tomate",
+      "USfr": "bagel avec tomates"
+    }
+  },
+  {
+    "label": "Dishes_14112",
+    "locale": {
+      "CNzh": "黑糖纸杯蛋糕",
+      "EUde": "Rohzucker-Cupcakes",
+      "EUen": "brown-sugar cupcakes",
+      "EUes": "plato cupcakes glaseados",
+      "EUfr": "plat de cupcakes sucre roux",
+      "EUit": "piatto cupcake zucch. canna",
+      "EUnl": "bruinesuikercupcakes",
+      "EUru": "кексики с корич. сахаром",
+      "JPja": "こくとうカップケーキ",
+      "KRko": "흑당 컵케이크",
+      "TWzh": "黑糖紙杯蛋糕",
+      "USen": "brown-sugar cupcakes",
+      "USes": "plato cupcakes glaseados",
+      "USfr": "plat de cupcakes cassonade"
+    }
+  },
+  {
+    "label": "Dishes_14113",
+    "locale": {
+      "CNzh": "胡萝卜司康饼",
+      "EUde": "Karotten-Scones",
+      "EUen": "carrot scones",
+      "EUes": "plato scones de zanahoria",
+      "EUfr": "plat de scones aux carottes",
+      "EUit": "piatto di scone alla carota",
+      "EUnl": "wortelscones",
+      "EUru": "морковные булочки",
+      "JPja": "キャロットスコーン",
+      "KRko": "당근 스콘",
+      "TWzh": "胡蘿蔔司康鬆餅",
+      "USen": "carrot scones",
+      "USes": "plato scones de zanahoria",
+      "USfr": "plat de scones aux carottes"
+    }
+  },
+  {
+    "label": "Dishes_14114",
+    "locale": {
+      "CNzh": "南瓜纸杯蛋糕",
+      "EUde": "Kürbis-Cupcakes",
+      "EUen": "pumpkin cupcakes",
+      "EUes": "plato cupcakes de calabaza",
+      "EUfr": "plat de cupcakes citrouille",
+      "EUit": "piatto di cupcake alla zucca",
+      "EUnl": "pompoencupcakes",
+      "EUru": "тыквенные кексики",
+      "JPja": "カボチャのカップケーキ",
+      "KRko": "호박 컵케이크",
+      "TWzh": "南瓜紙杯蛋糕",
+      "USen": "pumpkin cupcakes",
+      "USes": "plato cupcakes de calabaza",
+      "USfr": "plat de cupcakes citrouille"
+    }
+  },
+  {
+    "label": "Dishes_14115",
+    "locale": {
+      "CNzh": "水果司康饼",
+      "EUde": "Obst-Scones",
+      "EUen": "fruit scones",
+      "EUes": "plato scones de fruta",
+      "EUfr": "plat de scones aux fruits",
+      "EUit": "piatto di scone alla frutta",
+      "EUnl": "fruitscones",
+      "EUru": "фруктовые булочки",
+      "JPja": "フルーツのスコーン",
+      "KRko": "과일 스콘",
+      "TWzh": "水果司康鬆餅",
+      "USen": "fruit scones",
+      "USes": "plato scones de fruta",
+      "USfr": "plat de scones aux fruits"
+    }
+  },
+  {
+    "label": "Dishes_14116",
+    "locale": {
+      "CNzh": "水果纸杯蛋糕",
+      "EUde": "Obst-Cupcakes",
+      "EUen": "fruit cupcakes",
+      "EUes": "plato de cupcakes de fruta",
+      "EUfr": "plat de cupcakes aux fruits",
+      "EUit": "piatto di cupcake alla frutta",
+      "EUnl": "fruitcupcakes",
+      "EUru": "фруктовые кексики",
+      "JPja": "フルーツカップケーキ",
+      "KRko": "과일 컵케이크",
+      "TWzh": "水果紙杯蛋糕",
+      "USen": "fruit cupcakes",
+      "USes": "plato de cupcakes de fruta",
+      "USfr": "plat de cupcakes aux fruits"
+    }
+  },
+  {
+    "label": "Dishes_14117",
+    "locale": {
+      "CNzh": "南瓜司康饼",
+      "EUde": "Kürbis-Scones",
+      "EUen": "pumpkin scones",
+      "EUes": "plato scones de calabaza",
+      "EUfr": "plat de scones citrouille",
+      "EUit": "piatto di scone alla zucca",
+      "EUnl": "pompoenscones",
+      "EUru": "тыквенные булочки",
+      "JPja": "カボチャのスコーン",
+      "KRko": "호박 스콘",
+      "TWzh": "南瓜司康鬆餅",
+      "USen": "pumpkin scones",
+      "USes": "plato scones de calabaza",
+      "USfr": "plat de scones citrouille"
+    }
+  },
+  {
+    "label": "Dishes_14118",
+    "locale": {
+      "CNzh": "原味纸杯蛋糕",
+      "EUde": "Cupcakes ohne alles",
+      "EUen": "plain cupcakes",
+      "EUes": "plato de cupcakes",
+      "EUfr": "plat de cupcakes nature",
+      "EUit": "piatto di cupcake",
+      "EUnl": "cupcakes",
+      "EUru": "простые кексики",
+      "JPja": "プレーンカップケーキ",
+      "KRko": "플레인 컵케이크",
+      "TWzh": "原味紙杯蛋糕",
+      "USen": "plain cupcakes",
+      "USes": "plato de cupcakes",
+      "USfr": "plat de cupcakes nature"
+    }
+  },
+  {
+    "label": "Dishes_14119",
+    "locale": {
+      "CNzh": "鲑鱼贝果三明治",
+      "EUde": "Lachs-Bagel-Sandwich",
+      "EUen": "salmon bagel sandwich",
+      "EUes": "bagel con salmón",
+      "EUfr": "bagel au saumon",
+      "EUit": "bagel con salmone",
+      "EUnl": "bagel met zalm",
+      "EUru": "бейгл с лососем",
+      "JPja": "サーモンのベーグルサンド",
+      "KRko": "연어 베이글 샌드위치",
+      "TWzh": "鮭魚貝果三明治",
+      "USen": "salmon bagel sandwich",
+      "USes": "bagel con salmón",
+      "USfr": "bagel au saumon"
+    }
+  },
+  {
+    "label": "Dishes_14120",
+    "locale": {
+      "CNzh": "鱿鱼墨汁咖喱",
+      "EUde": "Sepia-Curry",
+      "EUen": "squid-ink curry",
+      "EUes": "curry a la tinta de calamar",
+      "EUfr": "curry à l'encre de calmar",
+      "EUit": "curry al nero di seppia",
+      "EUnl": "inktviscurry",
+      "EUru": "карри с чернилами сепии",
+      "JPja": "イカスミカレー",
+      "KRko": "먹물 카레",
+      "TWzh": "魷魚墨汁咖哩",
+      "USen": "squid-ink curry",
+      "USes": "curry a la tinta de calamar",
+      "USfr": "curry à l'encre de calmar"
+    }
+  },
+  {
+    "label": "Dishes_14121",
+    "locale": {
+      "CNzh": "南瓜咖喱",
+      "EUde": "Kürbis-Curry",
+      "EUen": "pumpkin curry",
+      "EUes": "curry de calabaza",
+      "EUfr": "curry à la citrouille",
+      "EUit": "curry alla zucca",
+      "EUnl": "pompoencurry",
+      "EUru": "карри с тыквой",
+      "JPja": "パンプキンカレー",
+      "KRko": "호박 카레",
+      "TWzh": "南瓜咖哩",
+      "USen": "pumpkin curry",
+      "USes": "curry de calabaza",
+      "USfr": "curry à la citrouille"
+    }
+  },
+  {
+    "label": "Dishes_14122",
+    "locale": {
+      "CNzh": "胡萝卜叶咖喱",
+      "EUde": "Karottengrün-Curry",
+      "EUen": "carrot-tops curry",
+      "EUes": "curry de zanahoria",
+      "EUfr": "curry aux fanes de carottes",
+      "EUit": "curry con carote",
+      "EUnl": "wortelloofcurry",
+      "EUru": "карри с зеленью моркови",
+      "JPja": "ニンジンのはっぱカレー",
+      "KRko": "당근 잎 카레",
+      "TWzh": "胡蘿蔔葉咖哩",
+      "USen": "carrot-tops curry",
+      "USes": "curry de zanahoria",
+      "USfr": "curry aux fanes de carottes"
+    }
+  },
+  {
+    "label": "Dishes_14123",
+    "locale": {
+      "CNzh": "水果贝果三明治",
+      "EUde": "Obst-Bagel-Sandwich",
+      "EUen": "mixed-fruits bagel sandwich",
+      "EUes": "bagel con fruta",
+      "EUfr": "bagel aux fruits",
+      "EUit": "bagel con frutta",
+      "EUnl": "bagel met fruit",
+      "EUru": "бейгл с фруктами",
+      "JPja": "フルーツのベーグルサンド",
+      "KRko": "과일 베이글 샌드위치",
+      "TWzh": "水果貝果三明治",
+      "USen": "mixed-fruits bagel sandwich",
+      "USes": "bagel con fruta",
+      "USfr": "bagel aux fruits"
+    }
+  },
+  {
+    "label": "Dishes_14124",
+    "locale": {
+      "CNzh": "番茄咖喱",
+      "EUde": "Tomaten-Curry",
+      "EUen": "tomato curry",
+      "EUes": "curry de tomate",
+      "EUfr": "curry à la tomate",
+      "EUit": "curry al pomodoro",
+      "EUnl": "tomatencurry",
+      "EUru": "томатное карри",
+      "JPja": "トマトカレー",
+      "KRko": "토마토 카레",
+      "TWzh": "番茄咖哩",
+      "USen": "tomato curry",
+      "USes": "curry de tomate",
+      "USfr": "curry à la tomate"
+    }
+  },
+  {
+    "label": "Dishes_14125",
+    "locale": {
+      "CNzh": "南瓜贝果三明治",
+      "EUde": "Kürbis-Bagel-Sandwich",
+      "EUen": "pumpkin bagel sandwich",
+      "EUes": "bagel con calabaza",
+      "EUfr": "bagel à la citrouille",
+      "EUit": "bagel con zucca",
+      "EUnl": "bagel met pompoen",
+      "EUru": "бейгл с тыквой",
+      "JPja": "カボチャのベーグルサンド",
+      "KRko": "호박 베이글 샌드위치",
+      "TWzh": "南瓜貝果三明治",
+      "USen": "pumpkin bagel sandwich",
+      "USes": "bagel con calabaza",
+      "USfr": "bagel avec citrouille"
+    }
+  },
+  {
+    "label": "Dishes_14126",
+    "locale": {
+      "CNzh": "胡萝卜贝果三明治",
+      "EUde": "Karotten-Bagel-Sandwich",
+      "EUen": "carrot bagel sandwich",
+      "EUes": "bagel con zanahoria",
+      "EUfr": "bagel à la carotte",
+      "EUit": "bagel con carote",
+      "EUnl": "bagel met wortel",
+      "EUru": "бейгл с морковью",
+      "JPja": "ニンジンのベーグルサンド",
+      "KRko": "당근 베이글 샌드위치",
+      "TWzh": "胡蘿蔔貝果三明治",
+      "USen": "carrot bagel sandwich",
+      "USes": "bagel con zanahoria",
+      "USfr": "bagel avec carottes"
+    }
+  },
+  {
+    "label": "Dishes_14127",
+    "locale": {
+      "CNzh": "土豆咖喱",
+      "EUde": "Kartoffel-Curry",
+      "EUen": "potato curry",
+      "EUes": "curry de patata",
+      "EUfr": "curry de pommes de terre",
+      "EUit": "curry con patate",
+      "EUnl": "aardappelcurry",
+      "EUru": "карри с картофелем",
+      "JPja": "ジャガイモのカレー",
+      "KRko": "감자 카레",
+      "TWzh": "馬鈴薯咖哩",
+      "USen": "potato curry",
+      "USes": "curry de papa",
+      "USfr": "curry de patates"
+    }
+  },
+  {
+    "label": "Dishes_14128",
+    "locale": {
+      "CNzh": "蘑菇咖喱",
+      "EUde": "Pilz-Curry",
+      "EUen": "mushroom curry",
+      "EUes": "curry de champiñones",
+      "EUfr": "curry aux champignons",
+      "EUit": "curry ai funghi",
+      "EUnl": "champignoncurry",
+      "EUru": "карри с грибами",
+      "JPja": "キノコカレー",
+      "KRko": "버섯 카레",
+      "TWzh": "蘑菇咖哩",
+      "USen": "mushroom curry",
+      "USes": "curry de champiñones",
+      "USfr": "curry aux champignons"
+    }
+  },
+  {
+    "label": "Dishes_14129",
+    "locale": {
+      "CNzh": "美式松饼",
+      "EUde": "Pfannkuchen",
+      "EUen": "pancakes",
+      "EUes": "torre de tortitas",
+      "EUfr": "pile de pancakes",
+      "EUit": "doppio pancake",
+      "EUnl": "pannenkoeken met stroop",
+      "EUru": "блины",
+      "JPja": "パンケーキ",
+      "KRko": "팬케이크",
+      "TWzh": "美式鬆餅",
+      "USen": "pancakes",
+      "USes": "torre de panqueques",
+      "USfr": "pile de pancakes"
+    }
+  },
+  {
+    "label": "Dishes_14130",
+    "locale": {
+      "CNzh": "椰子美式松饼",
+      "EUde": "Kokospfannkuchen",
+      "EUen": "coconut pancakes",
+      "EUes": "torre de tortitas de coco",
+      "EUfr": "pile de pancakes coco",
+      "EUit": "doppio pancake al cocco",
+      "EUnl": "pannenkoeken met kokos",
+      "EUru": "блины с кокосом",
+      "JPja": "ココナッツのパンケーキ",
+      "KRko": "코코넛 파운드케이크",
+      "TWzh": "椰子美式鬆餅",
+      "USen": "coconut pancakes",
+      "USes": "torre panqueques de coco",
+      "USfr": "pile de pancakes coco"
+    }
+  },
+  {
+    "label": "Dishes_14131",
+    "locale": {
+      "CNzh": "土豆格雷派饼",
+      "EUde": "Kartoffelpfannkuchen",
+      "EUen": "potato galette",
+      "EUes": "galette de patata",
+      "EUfr": "galette de pommes de terre",
+      "EUit": "crespella con patate",
+      "EUnl": "rijfkoek",
+      "EUru": "картофельная лепешка",
+      "JPja": "ジャガイモのガレット",
+      "KRko": "감자 갈레트",
+      "TWzh": "馬鈴薯格雷派餅",
+      "USen": "potato galette",
+      "USes": "galette de papa",
+      "USfr": "galette de patates"
+    }
+  },
+  {
+    "label": "Dishes_14132",
+    "locale": {
+      "CNzh": "水果美式松饼",
+      "EUde": "Obstpfannkuchen",
+      "EUen": "fruit-topped pancakes",
+      "EUes": "torre de tortitas con fruta",
+      "EUfr": "pile de pancakes aux fruits",
+      "EUit": "doppio pancake alla frutta",
+      "EUnl": "pannenkoeken met fruit",
+      "EUru": "блины с фруктами",
+      "JPja": "フルーツのパンケーキ",
+      "KRko": "과일 팬케이크",
+      "TWzh": "水果美式鬆餅",
+      "USen": "fruit-topped pancakes",
+      "USes": "torre panqueques con fruta",
+      "USfr": "pile de pancakes avec fruits"
+    }
+  },
+  {
+    "label": "Dishes_14161",
+    "locale": {
+      "CNzh": "泰式水煮鲷鱼",
+      "EUde": "Pesce all'acqua pazza",
+      "EUen": "pesce all'acqua pazza",
+      "EUes": "pargo rojo escalfado",
+      "EUfr": "vivaneau poché à l'italienne",
+      "EUit": "pesce all'acqua pazza",
+      "EUnl": "snapper in acqua pazza",
+      "EUru": "пошированная рыба",
+      "JPja": "タイのアクアパッツァ",
+      "KRko": "도미 아쿠아파짜",
+      "TWzh": "義式水煮鯛魚",
+      "USen": "pesce all'acqua pazza",
+      "USes": "pargo rojo escalfado",
+      "USfr": "vivaneau poché à l'italienne"
+    }
+  },
+  {
+    "label": "Dishes_14162",
+    "locale": {
+      "CNzh": "酱煮鲽鱼",
+      "EUde": "Karei no nitsuke",
+      "EUen": "karei no nitsuke",
+      "EUes": "gallo pochado",
+      "EUfr": "limande à la sauce soja",
+      "EUit": "platessa alla salsa di soia",
+      "EUnl": "schar in sojasaus",
+      "EUru": "камбала карэй но ницукэ",
+      "JPja": "カレイのにつけ",
+      "KRko": "가자미조림",
+      "TWzh": "醬煮鰈魚",
+      "USen": "karei no nitsuke",
+      "USes": "gallo pochado",
+      "USfr": "limande à la sauce soja"
+    }
+  },
+  {
+    "label": "Dishes_14163",
+    "locale": {
+      "CNzh": "酥炸竹荚鱼",
+      "EUde": "Bratmakrele",
+      "EUen": "aji fry",
+      "EUes": "jurel rebozado",
+      "EUfr": "chinchard frit",
+      "EUit": "sgombro fritto",
+      "EUnl": "gebakken makreel",
+      "EUru": "жареная ставрида адзи",
+      "JPja": "アジのフライ",
+      "KRko": "전갱이 튀김",
+      "TWzh": "酥炸竹莢魚",
+      "USen": "aji fry",
+      "USes": "jurel rebozado",
+      "USfr": "chinchard frit"
+    }
+  },
+  {
+    "label": "Dishes_14164",
+    "locale": {
+      "CNzh": "嫩煎比目鱼",
+      "EUde": "Pilz-Bratflunder",
+      "EUen": "sautéed olive flounder",
+      "EUes": "rodaballo salteado",
+      "EUfr": "cardeau poêlé",
+      "EUit": "sogliola saltata",
+      "EUnl": "gebakken bot",
+      "EUru": "поджаренный палтус",
+      "JPja": "ヒラメのソテー",
+      "KRko": "넙치 소테",
+      "TWzh": "嫩煎比目魚",
+      "USen": "sautéed olive flounder",
+      "USes": "rodaballo salteado",
+      "USfr": "cardeau poêlé"
+    }
+  },
+  {
+    "label": "Dishes_14165",
+    "locale": {
+      "CNzh": "香草烤鲈鱼",
+      "EUde": "Kräuter-Seebarsch",
+      "EUen": "grilled sea bass with herbs",
+      "EUes": "lubina a las finas hierbas",
+      "EUfr": "bar grillé aux herbes",
+      "EUit": "spigola grigliata alle erbe",
+      "EUnl": "gegrilde zeebaars",
+      "EUru": "судак с пряными травами",
+      "JPja": "スズキのこうそうやき",
+      "KRko": "농어 허브 구이",
+      "TWzh": "香草烤鱸魚",
+      "USen": "grilled sea bass with herbs",
+      "USes": "lubina a las finas hierbas",
+      "USfr": "bar grillé aux herbes"
+    }
+  },
+  {
+    "label": "Dishes_14166",
+    "locale": {
+      "CNzh": "薄切生鲑鱼",
+      "EUde": "Carpaccio di salmone",
+      "EUen": "carpaccio di salmone",
+      "EUes": "carpaccio de salmón",
+      "EUfr": "carpaccio de saumon",
+      "EUit": "carpaccio di salmone",
+      "EUnl": "zalmcarpaccio",
+      "EUru": "карпаччо из лосося",
+      "JPja": "サーモンのカルパッチョ",
+      "KRko": "연어 카르파초",
+      "TWzh": "薄切生鮭魚片",
+      "USen": "carpaccio di salmone",
+      "USes": "carpaccio de salmón",
+      "USfr": "carpaccio de saumon"
+    }
+  },
+  {
+    "label": "Dishes_14167",
+    "locale": {
+      "CNzh": "薄切生旗鱼",
+      "EUde": "Carpaccio di marlin blu",
+      "EUen": "carpaccio di marlin blu",
+      "EUes": "carpaccio de pez espada",
+      "EUfr": "carpaccio de marlin bleu",
+      "EUit": "carpaccio di marlin blu",
+      "EUnl": "marlijncarpaccio",
+      "EUru": "карпаччо из марлина",
+      "JPja": "カジキのカルパッチョ",
+      "KRko": "청새치 카르파초",
+      "TWzh": "薄切生旗魚片",
+      "USen": "carpaccio di marlin blu",
+      "USes": "carpaccio de pez espada",
+      "USfr": "carpaccio de marlin bleu"
+    }
+  },
+  {
+    "label": "Dishes_14168",
+    "locale": {
+      "CNzh": "薄切生条石鲷",
+      "EUde": "Schnabelbarsch-Carpaccio",
+      "EUen": "barred-knifejaw carpaccio",
+      "EUes": "carpaccio de dorada",
+      "EUfr": "carpaccio d'ishidai",
+      "EUit": "carpaccio d'ishidai",
+      "EUnl": "kraaibekcarpaccio",
+      "EUru": "карпаччо из оплегната",
+      "JPja": "イシダイのカルパッチョ",
+      "KRko": "돌돔 카르파초",
+      "TWzh": "薄切生條石鯛片",
+      "USen": "barred-knifejaw carpaccio",
+      "USes": "carpaccio de dorada",
+      "USfr": "carpaccio d'ishidai"
+    }
+  },
+  {
+    "label": "Dishes_14169",
+    "locale": {
+      "CNzh": "橘子果酱",
+      "EUde": "Orangenmarmelade",
+      "EUen": "orange marmalade",
+      "EUes": "mermelada de naranja",
+      "EUfr": "lot de marmelades d'orange",
+      "EUit": "marmellata di arance",
+      "EUnl": "sinaasappeljam",
+      "EUru": "апельсиновое варенье",
+      "JPja": "マーマレード",
+      "KRko": "오렌지 잼",
+      "TWzh": "橘子果醬",
+      "USen": "orange marmalade",
+      "USes": "mermelada de naranja",
+      "USfr": "lot de marmelades d'orange"
+    }
+  },
+  {
+    "label": "Dishes_14170",
+    "locale": {
+      "CNzh": "桃子果酱",
+      "EUde": "Pfirsichmarmelade",
+      "EUen": "peach jam",
+      "EUes": "mermelada de melocotón",
+      "EUfr": "lot de confitures de pêche",
+      "EUit": "marmellata di pesche",
+      "EUnl": "perzikjam",
+      "EUru": "персиковое варенье",
+      "JPja": "ピーチジャム",
+      "KRko": "복숭아 잼",
+      "TWzh": "桃子果醬",
+      "USen": "peach jam",
+      "USes": "mermelada de durazno",
+      "USfr": "lot de confitures de pêche"
+    }
+  },
+  {
+    "label": "Dishes_14171",
+    "locale": {
+      "CNzh": "梨子果酱",
+      "EUde": "Birnenmarmelade",
+      "EUen": "pear jam",
+      "EUes": "mermelada de pera",
+      "EUfr": "lot de confitures de poire",
+      "EUit": "marmellata di pere",
+      "EUnl": "perenjam",
+      "EUru": "грушевое варенье",
+      "JPja": "ナシのジャム",
+      "KRko": "배 잼",
+      "TWzh": "梨子果醬",
+      "USen": "pear jam",
+      "USes": "mermelada de pera",
+      "USfr": "lot de confitures de poire"
+    }
+  },
+  {
+    "label": "Dishes_14172",
+    "locale": {
+      "CNzh": "薄切生虾夷扇贝",
+      "EUde": "Carpaccio di capesante",
+      "EUen": "carpaccio di capesante",
+      "EUes": "carpaccio de vieira",
+      "EUfr": "carpaccio de pétoncle",
+      "EUit": "carpaccio di capesante",
+      "EUnl": "mantelschelpcarpaccio",
+      "EUru": "карпаччо из гребешков",
+      "JPja": "ホタテのカルパッチョ",
+      "KRko": "가리비 카르파초",
+      "TWzh": "薄切生帆立貝",
+      "USen": "carpaccio di capesante",
+      "USes": "carpaccio de vieira",
+      "USfr": "carpaccio de pétoncle"
+    }
+  },
+  {
+    "label": "Dishes_14173",
+    "locale": {
+      "CNzh": "樱桃果酱",
+      "EUde": "Kirschmarmelade",
+      "EUen": "cherry jam",
+      "EUes": "mermelada de cereza",
+      "EUfr": "lot de confitures de cerise",
+      "EUit": "marmellata di ciliegie",
+      "EUnl": "kersenjam",
+      "EUru": "вишневое варенье",
+      "JPja": "チェリージャム",
+      "KRko": "체리 잼",
+      "TWzh": "櫻桃果醬",
+      "USen": "cherry jam",
+      "USes": "mermelada de cereza",
+      "USfr": "lot de confitures de cerise"
+    }
+  },
+  {
+    "label": "Dishes_14174",
+    "locale": {
+      "CNzh": "西式腌蔬菜",
+      "EUde": "Einleggemüse",
+      "EUen": "pickled veggies",
+      "EUes": "conserva de verduras",
+      "EUfr": "lot conserves de légumes",
+      "EUit": "giardiniera sottaceto",
+      "EUnl": "ingelegde groenten",
+      "EUru": "маринованные овощи",
+      "JPja": "やさいのピクルス",
+      "KRko": "야채 피클",
+      "TWzh": "西式醃蔬菜",
+      "USen": "pickled veggies",
+      "USes": "frasco verduras escabeche",
+      "USfr": "lot conserves de légumes"
+    }
+  },
+  {
+    "label": "Dishes_14175",
+    "locale": {
+      "CNzh": "番茄泥",
+      "EUde": "Tomatenpüree",
+      "EUen": "tomato puree",
+      "EUes": "puré de tomate",
+      "EUfr": "lot de purées de tomate",
+      "EUit": "passata di pomodoro",
+      "EUnl": "tomatenpuree",
+      "EUru": "томатная паста",
+      "JPja": "トマトピューレ",
+      "KRko": "토마토 퓨레",
+      "TWzh": "番茄泥",
+      "USen": "tomato puree",
+      "USes": "puré de tomate",
+      "USfr": "lot de purées de tomate"
+    }
+  },
+  {
+    "label": "Dishes_14176",
+    "locale": {
+      "CNzh": "苹果果酱",
+      "EUde": "Apfelmarmelade",
+      "EUen": "apple jam",
+      "EUes": "mermelada de manzana",
+      "EUfr": "lot de confitures de pomme",
+      "EUit": "marmellata di mele",
+      "EUnl": "appeljam",
+      "EUru": "яблочное варенье",
+      "JPja": "リンゴジャム",
+      "KRko": "사과 잼",
+      "TWzh": "蘋果果醬",
+      "USen": "apple jam",
+      "USes": "mermelada de manzana",
+      "USfr": "lot de confitures de pomme"
+    }
+  },
+  {
+    "label": "Dishes_14177",
+    "locale": {
+      "CNzh": "椰子油",
+      "EUde": "Kokosöl",
+      "EUen": "coconut oil",
+      "EUes": "aceite de coco",
+      "EUfr": "lot de pots d'huile de coco",
+      "EUit": "olio di cocco",
+      "EUnl": "kokosolie",
+      "EUru": "кокосовое масло",
+      "JPja": "ココナッツオイル",
+      "KRko": "코코넛 오일",
+      "TWzh": "椰子油",
+      "USen": "coconut oil",
+      "USes": "aceite de coco",
+      "USfr": "lot de pots d'huile de coco"
+    }
+  },
+  {
+    "label": "Dishes_14178",
+    "locale": {
+      "CNzh": "蒜香橄榄油凤尾鱼",
+      "EUde": "Anchoas al ajillo",
+      "EUen": "anchoas al ajillo",
+      "EUes": "sartén de anchoas al ajillo",
+      "EUfr": "plat d'anchois à l'ail",
+      "EUit": "tapa di acciughe all'aglio",
+      "EUnl": "gemarineerde ansjovissen",
+      "EUru": "хамса аль ахийо",
+      "JPja": "アンチョビのアヒージョ",
+      "KRko": "안초비 아히요",
+      "TWzh": "蒜香橄欖油鳳尾魚",
+      "USen": "anchoas al ajillo",
+      "USes": "sartén de anchoas al ajillo",
+      "USfr": "plat d'anchois à l'ail"
+    }
+  },
+  {
+    "label": "Dishes_14179",
+    "locale": {
+      "CNzh": "蒜香橄榄油番茄",
+      "EUde": "Tomates al ajillo",
+      "EUen": "tomates al ajillo",
+      "EUes": "sartén de tomates al ajillo",
+      "EUfr": "plat de tomates à l'ail",
+      "EUit": "tapa di pomodorini all'aglio",
+      "EUnl": "gemarineerde tomaten",
+      "EUru": "помидоры аль ахийо",
+      "JPja": "トマトのアヒージョ",
+      "KRko": "토마토 아히요",
+      "TWzh": "蒜香橄欖油番茄",
+      "USen": "tomates al ajillo",
+      "USes": "sartén de tomates al ajillo",
+      "USfr": "plat de tomates à l'ail"
+    }
+  },
+  {
+    "label": "Dishes_14180",
+    "locale": {
+      "CNzh": "蒜香橄榄油蘑菇",
+      "EUde": "Champiñones al ajillo",
+      "EUen": "champiñones al ajillo",
+      "EUes": "sartén champiñones al ajillo",
+      "EUfr": "plat de champignons à l'ail",
+      "EUit": "tapa di funghi all'aglio",
+      "EUnl": "gemarineerde champignons",
+      "EUru": "грибы аль ахийо",
+      "JPja": "キノコのアヒージョ",
+      "KRko": "버섯 아히요",
+      "TWzh": "蒜香橄欖油蘑菇",
+      "USen": "champiñones al ajillo",
+      "USes": "sartén champiñones al ajillo",
+      "USfr": "plat de champignons à l'ail"
+    }
+  },
+  {
+    "label": "Dishes_14181",
+    "locale": {
+      "CNzh": "油渍凤尾鱼",
+      "EUde": "Einlegsardinen",
+      "EUen": "sardines in oil",
+      "EUes": "conserva de boquerones",
+      "EUfr": "lot conserves de sardines",
+      "EUit": "set di acciughe sott'olio",
+      "EUnl": "ingemaakte sardientjes",
+      "EUru": "сардины в банках",
+      "JPja": "オイルサーディン",
+      "KRko": "멸치 병조림",
+      "TWzh": "瓶漬鳳尾魚",
+      "USen": "sardines in oil",
+      "USes": "tarro sardinas en conserva",
+      "USfr": "lot conserves de sardines"
+    }
+  },
+  {
+    "label": "Dishes_14182",
+    "locale": {
+      "CNzh": "手撕面包",
+      "EUde": "Partybrot",
+      "EUen": "pull-apart bread",
+      "EUes": "sartén de pan frito",
+      "EUfr": "pain soleil",
+      "EUit": "torta Danubio",
+      "EUnl": "breekbrood",
+      "EUru": "спекшаяся выпечка",
+      "JPja": "ちぎりパン",
+      "KRko": "찢어 먹는 빵",
+      "TWzh": "手撕麵包",
+      "USen": "pull-apart bread",
+      "USes": "sartén de pan frito",
+      "USfr": "pain à partager"
+    }
+  },
+  {
+    "label": "Dishes_14183",
+    "locale": {
+      "CNzh": "蒜香橄榄油海鲜",
+      "EUde": "Meeresfrüchte ajillo",
+      "EUen": "seafood ajillo",
+      "EUes": "sartén de marisco al ajillo",
+      "EUfr": "plat de fruits de mer à l'ail",
+      "EUit": "tapa frutti di mare all'aglio",
+      "EUnl": "gemarineerde zeevruchten",
+      "EUru": "морепродукты аль ахийо",
+      "JPja": "シーフードのアヒージョ",
+      "KRko": "시푸드 아히요",
+      "TWzh": "蒜香橄欖油海鮮",
+      "USen": "seafood ajillo",
+      "USes": "sartén de mariscos al ajillo",
+      "USfr": "plat de fruits de mer à l'ail"
+    }
+  },
+  {
+    "label": "Dishes_14185",
+    "locale": {
+      "CNzh": "佃煮蘑菇",
+      "EUde": "Einlegpilze",
+      "EUen": "jarred mushrooms",
+      "EUes": "conserva de champiñones",
+      "EUfr": "lot conserves de champis",
+      "EUit": "conserva di funghi",
+      "EUnl": "ingemaakte champignons",
+      "EUru": "грибы в банке",
+      "JPja": "なめたけ",
+      "KRko": "버섯조림",
+      "TWzh": "佃煮蘑菇",
+      "USen": "jarred mushrooms",
+      "USes": "frasco de champiñones",
+      "USfr": "champignons en conserve"
+    }
+  },
+  {
+    "label": "Dishes_14186",
+    "locale": {
+      "CNzh": "水煮竹笋",
+      "EUde": "Einlegbambussprossen",
+      "EUen": "jarred bamboo shoots",
+      "EUes": "conserva brotes de bambú",
+      "EUfr": "lot de conserves de bambou",
+      "EUit": "conserva germogli di bambù",
+      "EUnl": "ingemaakte bamboe",
+      "EUru": "побеги бамбука в банке",
+      "JPja": "たけのこのみずに",
+      "KRko": "삶은 죽순",
+      "TWzh": "水煮竹筍",
+      "USen": "jarred bamboo shoots",
+      "USes": "frasco brotes de bambú",
+      "USfr": "lot de conserves de bambou"
+    }
+  },
+  {
+    "label": "Dishes_14465",
+    "locale": {
+      "CNzh": "奶油土豆",
+      "EUde": "Backkartoffeln",
+      "EUen": "baked potatoes",
+      "EUes": "plato de patatas asadas",
+      "EUfr": "plat de p. de terre au four",
+      "EUit": "piatto di patate al forno",
+      "EUnl": "gepofte aardappels",
+      "EUru": "печеный картофель",
+      "JPja": "じゃがバター",
+      "KRko": "버터 감자",
+      "TWzh": "奶油馬鈴薯",
+      "USen": "baked potatoes",
+      "USes": "plato de papas asadas",
+      "USfr": "plat de patates au four"
+    }
+  },
+  {
+    "label": "Dishes_14466",
+    "locale": {
+      "CNzh": "玛格丽特披萨",
+      "EUde": "Pizza Margherita",
+      "EUen": "pizza margherita",
+      "EUes": "pizza margarita",
+      "EUfr": "pizza margherita",
+      "EUit": "pizza margherita",
+      "EUnl": "pizza margherita",
+      "EUru": "пицца Маргарита",
+      "JPja": "マルゲリータ",
+      "KRko": "마르게리타 피자",
+      "TWzh": "瑪格麗特披薩",
+      "USen": "pizza margherita",
+      "USes": "pizza margarita",
+      "USfr": "pizza margherita"
+    }
+  },
+  {
+    "label": "Dishes_14552",
+    "locale": {
+      "CNzh": "万圣节饼干",
+      "EUde": "Halloween-Kekse",
+      "EUen": "spooky cookies",
+      "EUes": "plato de galletas pavorosas",
+      "EUfr": "assiette cookies Halloween",
+      "EUit": "piatto di biscotti brividi",
+      "EUnl": "pompoenkoekjes",
+      "EUru": "жуткое печенье",
+      "JPja": "ハロウィンなクッキー",
+      "KRko": "할로윈 쿠키",
+      "TWzh": "萬聖節餅乾",
+      "USen": "spooky cookies",
+      "USes": "plato de galletas pavorosas",
+      "USfr": "assiette biscuits frisson"
+    }
+  },
+  {
+    "label": "Dishes_14565",
+    "locale": {
+      "CNzh": "鸽巢莎布蕾饼干",
+      "EUde": "Café-Taubenschlag-Keks",
+      "EUen": "Roost sablé cookie",
+      "EUes": "galleta de El Alpiste",
+      "EUfr": "biscuit Le Perchoir",
+      "EUit": "biscotto La Piccionaia",
+      "EUnl": "zandgebakje à la De Til",
+      "EUru": "печенье кафе «Насест»",
+      "JPja": "ハトのすサブレ",
+      "KRko": "비둘기 둥지 쿠키",
+      "TWzh": "鴿巢莎布蕾餅乾",
+      "USen": "Roost sablé cookie",
+      "USes": "galleta de El Alpiste",
+      "USfr": "biscuit Le Perchoir"
+    }
+  },
+  {
+    "label": "Dishes_14696",
+    "locale": {
+      "CNzh": "海鲜披萨",
+      "EUde": "Pizza mit Meeresfrüchten",
+      "EUen": "seafood pizza",
+      "EUes": "pizza de marisco",
+      "EUfr": "pizza aux fruits de mer",
+      "EUit": "pizza ai frutti di mare",
+      "EUnl": "zeevruchtenpizza",
+      "EUru": "пицца с морепродуктами",
+      "JPja": "シーフードピザ",
+      "KRko": "시푸드 피자",
+      "TWzh": "海鮮披薩",
+      "USen": "seafood pizza",
+      "USes": "pizza de mariscos",
+      "USfr": "pizza aux fruits de mer"
+    }
+  },
+  {
+    "label": "Dishes_14697",
+    "locale": {
+      "CNzh": "水果披萨",
+      "EUde": "Pizza mit Obst",
+      "EUen": "fruit pizza",
+      "EUes": "pizza de fruta",
+      "EUfr": "pizza aux fruits",
+      "EUit": "pizza alla frutta",
+      "EUnl": "fruitpizza",
+      "EUru": "пицца с фруктами",
+      "JPja": "フルーツピザ",
+      "KRko": "과일 피자",
+      "TWzh": "水果披薩",
+      "USen": "fruit pizza",
+      "USes": "pizza de frutas",
+      "USfr": "pizza aux fruits"
+    }
+  },
+  {
+    "label": "Dishes_14698",
+    "locale": {
+      "CNzh": "蘑菇披萨",
+      "EUde": "Pizza mit Pilzen",
+      "EUen": "mushroom pizza",
+      "EUes": "pizza de champiñones",
+      "EUfr": "pizza aux champignons",
+      "EUit": "pizza ai funghi",
+      "EUnl": "champignonpizza",
+      "EUru": "пицца с грибами",
+      "JPja": "キノコのピザ",
+      "KRko": "버섯 피자",
+      "TWzh": "蘑菇披薩",
+      "USen": "mushroom pizza",
+      "USes": "pizza de champiñones",
+      "USfr": "pizza aux champignons"
+    }
+  },
+  {
+    "label": "Dishes_14716",
+    "locale": {
+      "CNzh": "法式咸蛋糕",
+      "EUde": "Salzkuchen",
+      "EUen": "cake salé",
+      "EUes": "bizcocho salado",
+      "EUfr": "cake salé",
+      "EUit": "plumcake salato",
+      "EUnl": "hartige cake",
+      "EUru": "соленый пирог",
+      "JPja": "ケークサレ",
+      "KRko": "케이크 살레",
+      "TWzh": "法式鹹蛋糕",
+      "USen": "cake salé",
+      "USes": "pastel salado",
+      "USfr": "cake salé"
+    }
+  },
+  {
+    "label": "Drink_12783",
+    "locale": {
+      "CNzh": "血橙果汁",
+      "EUde": "Blutorangensaft",
+      "EUen": "blood-orange juice",
+      "EUes": "zumo de naranja sanguina",
+      "EUfr": "jus d'orange sanguine",
+      "EUit": "succo d'arancia rossa",
+      "EUnl": "bloedsinaasappelsap",
+      "EUru": "сок красного апельсина",
+      "JPja": "ブラッドオレンジジュース",
+      "KRko": "블러드 오렌지 주스",
+      "TWzh": "血橙果汁",
+      "USen": "blood-orange juice",
+      "USes": "jugo de naranja sanguina",
+      "USfr": "jus d'orange sanguine"
+    }
+  },
+  {
+    "label": "Drink_12784",
+    "locale": {
+      "CNzh": "哈密瓜苏打水",
+      "EUde": "Melonensaft",
+      "EUen": "melon soda",
+      "EUes": "refresco de melón",
+      "EUfr": "soda au melon",
+      "EUit": "soda al melone",
+      "EUnl": "meloenfrisdrank",
+      "EUru": "дынный лимонад",
+      "JPja": "メロンソーダ",
+      "KRko": "멜론 소다",
+      "TWzh": "哈密瓜蘇打",
+      "USen": "melon soda",
+      "USes": "refresco de melón",
+      "USfr": "liqueur au melon"
+    }
+  },
+  {
+    "label": "Drink_12785",
+    "locale": {
+      "CNzh": "冰咖啡",
+      "EUde": "Eiskaffee",
+      "EUen": "iced coffee",
+      "EUes": "café solo con hielo",
+      "EUfr": "café glacé",
+      "EUit": "caffè con ghiaccio",
+      "EUnl": "ijskoffie",
+      "EUru": "кофе со льдом",
+      "JPja": "アイスコーヒー",
+      "KRko": "아이스 커피",
+      "TWzh": "冰咖啡",
+      "USen": "iced coffee",
+      "USes": "café helado",
+      "USfr": "café glacé"
+    }
+  },
+  {
+    "label": "Drink_12787",
+    "locale": {
+      "CNzh": "草莓苏打水",
+      "EUde": "Erdbeerlimo",
+      "EUen": "strawberry soda",
+      "EUes": "refresco de fresa",
+      "EUfr": "soda à la fraise",
+      "EUit": "soda alla fragola",
+      "EUnl": "aardbeienfrisdrank",
+      "EUru": "клубничный лимонад",
+      "JPja": "ストロベリーソーダ",
+      "KRko": "스트로베리 소다",
+      "TWzh": "草莓蘇打",
+      "USen": "strawberry soda",
+      "USes": "batido de fresa",
+      "USfr": "liqueur à la fraise"
+    }
+  },
+  {
+    "label": "Drink_12788",
+    "locale": {
+      "CNzh": "冰拿铁",
+      "EUde": "Eis-Milchkaffee",
+      "EUen": "iced caffè latte",
+      "EUes": "café con leche con hielo",
+      "EUfr": "café latte glacé",
+      "EUit": "caffelatte con ghiaccio",
+      "EUnl": "ijs-latte",
+      "EUru": "латте со льдом",
+      "JPja": "アイスカフェラテ",
+      "KRko": "아이스 카페라떼",
+      "TWzh": "冰拿鐵",
+      "USen": "iced caffè latte",
+      "USes": "café con leche helado",
+      "USfr": "café latte glacé"
+    }
+  },
+  {
+    "label": "Drink_12789",
+    "locale": {
+      "CNzh": "彩色果汁",
+      "EUde": "Regenbogenfarbensaft",
+      "EUen": "colorful juice",
+      "EUes": "zumo multifrutas",
+      "EUfr": "soda arc-en-ciel",
+      "EUit": "succo variopinto",
+      "EUnl": "kleurrijk sapje",
+      "EUru": "разноцветный сок",
+      "JPja": "カラフルジュース",
+      "KRko": "컬러풀 주스",
+      "TWzh": "彩色果汁",
+      "USen": "colorful juice",
+      "USes": "jugo multifrutas",
+      "USfr": "liqueur arc-en-ciel"
+    }
+  },
+  {
+    "label": "Drink_12790",
+    "locale": {
+      "CNzh": "冰柠檬红茶",
+      "EUde": "Zitroneneistee",
+      "EUen": "iced lemon tea",
+      "EUes": "té helado al limón",
+      "EUfr": "thé glacé citron",
+      "EUit": "tè al limone con ghiaccio",
+      "EUnl": "citroen-ijsthee",
+      "EUru": "лимонный чай со льдом",
+      "JPja": "アイスレモンティー",
+      "KRko": "아이스 레몬티",
+      "TWzh": "冰檸檬紅茶",
+      "USen": "iced lemon tea",
+      "USes": "té helado al limón",
+      "USfr": "thé glacé citron"
+    }
+  },
+  {
+    "label": "Drink_12800",
+    "locale": {
+      "CNzh": "奶昔",
+      "EUde": "Milchshake",
+      "EUen": "milkshake",
+      "EUes": "batido",
+      "EUfr": "milkshake",
+      "EUit": "frappè",
+      "EUnl": "milkshake",
+      "EUru": "молочный коктейль",
+      "JPja": "ミルクセーキ",
+      "KRko": "밀크셰이크",
+      "TWzh": "奶昔",
+      "USen": "milkshake",
+      "USes": "batido",
+      "USfr": "lait frappé"
+    }
+  },
+  {
+    "label": "Drink_13982",
+    "locale": {
+      "CNzh": "番茄汁",
+      "EUde": "Tomatensaft",
+      "EUen": "tomato juice",
+      "EUes": "zumo de tomate",
+      "EUfr": "jus de tomate",
+      "EUit": "succo di pomodoro",
+      "EUnl": "tomatensap",
+      "EUru": "томатный сок",
+      "JPja": "トマトジュース",
+      "KRko": "토마토 주스",
+      "TWzh": "番茄汁",
+      "USen": "tomato juice",
+      "USes": "jugo de tomate",
+      "USfr": "jus de tomate"
+    }
+  },
+  {
+    "label": "Drink_13984",
+    "locale": {
+      "CNzh": "胡萝卜汁",
+      "EUde": "Karottensaft",
+      "EUen": "carrot juice",
+      "EUes": "zumo de zanahoria",
+      "EUfr": "jus de carotte",
+      "EUit": "succo di carota",
+      "EUnl": "wortelsap",
+      "EUru": "морковный сок",
+      "JPja": "キャロットジュース",
+      "KRko": "당근 주스",
+      "TWzh": "胡蘿蔔汁",
+      "USen": "carrot juice",
+      "USes": "jugo de zanahoria",
+      "USfr": "jus de carotte"
+    }
+  },
+  {
+    "label": "Drink_13985",
+    "locale": {
+      "CNzh": "椰奶",
+      "EUde": "Kokosmilch",
+      "EUen": "coconut milk",
+      "EUes": "leche de coco",
+      "EUfr": "lait de coco",
+      "EUit": "latte di cocco",
+      "EUnl": "kokosmelk",
+      "EUru": "кокосовое молоко",
+      "JPja": "ココナッツミルク",
+      "KRko": "코코넛 밀크",
+      "TWzh": "椰奶",
+      "USen": "coconut milk",
+      "USes": "leche de coco",
+      "USfr": "lait de coco"
+    }
+  },
+  {
+    "label": "Drink_13991",
+    "locale": {
+      "CNzh": "樱桃冰沙",
+      "EUde": "Kirsch-Smoothie",
+      "EUen": "cherry smoothie",
+      "EUes": "zumo de cereza",
+      "EUfr": "smoothie à la cerise",
+      "EUit": "frullato alla ciliegia",
+      "EUnl": "kersensmoothie",
+      "EUru": "вишневый смузи",
+      "JPja": "さくらんぼスムージー",
+      "KRko": "체리 스무디",
+      "TWzh": "櫻桃冰沙",
+      "USen": "cherry smoothie",
+      "USes": "jugo de cereza",
+      "USfr": "smoothie à la cerise"
+    }
+  },
+  {
+    "label": "Drink_13995",
+    "locale": {
+      "CNzh": "梨子冰沙",
+      "EUde": "Birnen-Smoothie",
+      "EUen": "pear smoothie",
+      "EUes": "zumo de pera",
+      "EUfr": "smoothie à la poire",
+      "EUit": "frullato alla pera",
+      "EUnl": "perensmoothie",
+      "EUru": "грушевый смузи",
+      "JPja": "ナシスムージー",
+      "KRko": "배 스무디",
+      "TWzh": "梨子冰沙",
+      "USen": "pear smoothie",
+      "USes": "jugo de pera",
+      "USfr": "smoothie à la poire"
+    }
+  },
+  {
+    "label": "Drink_13999",
+    "locale": {
+      "CNzh": "桃子冰沙",
+      "EUde": "Pfirsich-Smoothie",
+      "EUen": "peach smoothie",
+      "EUes": "zumo de melocotón",
+      "EUfr": "smoothie à la pêche",
+      "EUit": "frullato alla pesca",
+      "EUnl": "perziksmoothie",
+      "EUru": "персиковый смузи",
+      "JPja": "モモスムージー",
+      "KRko": "복숭아 스무디",
+      "TWzh": "桃子冰沙",
+      "USen": "peach smoothie",
+      "USes": "jugo de durazno",
+      "USfr": "smoothie à la pêche"
+    }
+  },
+  {
+    "label": "Drink_14000",
+    "locale": {
+      "CNzh": "苹果冰沙",
+      "EUde": "Apfel-Smoothie",
+      "EUen": "apple smoothie",
+      "EUes": "zumo de manzana",
+      "EUfr": "smoothie à la pomme",
+      "EUit": "frullato alla mela",
+      "EUnl": "appelsmoothie",
+      "EUru": "яблочный смузи",
+      "JPja": "リンゴスムージー",
+      "KRko": "사과 스무디",
+      "TWzh": "蘋果冰沙",
+      "USen": "apple smoothie",
+      "USes": "jugo de manzana",
+      "USfr": "smoothie à la pomme"
+    }
+  },
+  {
+    "label": "Drink_14001",
+    "locale": {
+      "CNzh": "橘子冰沙",
+      "EUde": "Orangen-Smoothie",
+      "EUen": "orange smoothie",
+      "EUes": "zumo de naranja",
+      "EUfr": "smoothie à l'orange",
+      "EUit": "frullato all'arancia",
+      "EUnl": "sinaasappelsmoothie",
+      "EUru": "апельсиновый смузи",
+      "JPja": "オレンジスムージー",
+      "KRko": "오렌지 스무디",
+      "TWzh": "橘子冰沙",
+      "USen": "orange smoothie",
+      "USes": "jugo de naranja",
+      "USfr": "smoothie à l'orange"
+    }
+  }
+]

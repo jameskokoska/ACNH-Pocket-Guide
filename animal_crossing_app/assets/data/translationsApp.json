@@ -531,11 +531,11 @@
     ],
     "Main": [
         {
-            "English": "839 items",
-            "English (Europe)": "839 items",
+            "English": "841 items",
+            "English (Europe)": "841 items",
             "French": "828 items",
             "French (US)": "828 items",
-            "German": "828 items",
+            "German": "841 items",
             "Spanish": "828 items",
             "Spanish (US)": "824 items",
             "Russian": "828 items",
@@ -9865,6 +9865,7 @@
         {
             "English": "Label Themes",
             "English (Europe)": "Label Themes",
+            "German": "Label-Themen",
             "Italian": "Stili di Beatrice",
             "Dutch": "Labelthema's",
             "Portuguese": "Temas Label"
@@ -9872,6 +9873,7 @@
         {
             "English": "Everyday",
             "English (Europe)": "Everyday",
+            "German": "Jeden Tag",
             "Italian": "Da tutti i giorni",
             "Dutch": "Elke dag",
             "Portuguese": "Todo dia"
@@ -9879,6 +9881,7 @@
         {
             "English": "Comfy",
             "English (Europe)": "Comfy",
+            "German": "Bequem",
             "Italian": "Confortevole",
             "Dutch": "Comfortabel",
             "Portuguese": "Confortável"
@@ -9886,6 +9889,7 @@
         {
             "English": "Formal",
             "English (Europe)": "Formal",
+            "German": "Formal",
             "Italian": "Formale",
             "Dutch": "Formeel",
             "Portuguese": "Formal"
@@ -9893,6 +9897,7 @@
         {
             "English": "Work",
             "English (Europe)": "Work",
+            "German": "Arbeit",
             "Italian": "Da lavoro",
             "Dutch": "Werk",
             "Portuguese": "Trabalho"
@@ -9900,6 +9905,7 @@
         {
             "English": "Theatrical",
             "English (Europe)": "Theatrical",
+            "German": "Theatralisch",
             "Italian": "Da fiaba",
             "Dutch": "theatraal",
             "Portuguese": "Teatral"
@@ -9907,6 +9913,7 @@
         {
             "English": "Outdoorsy",
             "English (Europe)": "Outdoorsy",
+            "German": "Freizeitkleidung",
             "Italian": "Da aria aperta",
             "Dutch": "buiten",
             "Portuguese": "Ao ar livre"
@@ -9914,6 +9921,7 @@
         {
             "English": "Sporty",
             "English (Europe)": "Sporty",
+            "German": "Sportlich",
             "Italian": "Sportivo",
             "Dutch": "Sportief",
             "Portuguese": "Desportivo"
@@ -9921,6 +9929,7 @@
         {
             "English": "Vacation",
             "English (Europe)": "Vacation",
+            "German": "Ferien",
             "Italian": "Da vacanza",
             "Dutch": "Vakantie",
             "Portuguese": "Férias "
@@ -9928,6 +9937,7 @@
         {
             "English": "Goth",
             "English (Europe)": "Goth",
+            "German": "Gothic",
             "Italian": "Goth",
             "Dutch": "gotisch",
             "Portuguese": "Gótico"
@@ -10065,6 +10075,7 @@
         {
             "English": "Gyroids",
             "English (Europe)": "Gyroids",
+            "German": "Gyroiden",
             "Dutch": "Gyroids"
         },
         {
@@ -10085,7 +10096,7 @@
             "English (Europe)": "Please be patient",
             "French": "S'il vous plaît soyez patient",
             "French (US)": "S'il vous plaît soyez patient",
-            "German": "Bitte haben Sie Geduld",
+            "German": "Bitte habe etwas Geduld",
             "Spanish": "Por favor sea paciente",
             "Spanish (US)": "Por favor sea paciente",
             "Russian": "Пожалуйста, будьте терпеливы",
@@ -10098,7 +10109,7 @@
             "English (Europe)": "Ordinances",
             "French": "Ordonnances",
             "French (US)": "Ordonnances",
-            "German": "Verordnungen",
+            "German": "Verordnungen ",
             "Spanish": "Ordenanzas",
             "Spanish (US)": "Ordenanzas",
             "Russian": "Постановления",
@@ -10150,7 +10161,7 @@
             "English (Europe)": "Bell Boom",
             "French": "Boom de cloche",
             "French (US)": "Boom de cloche",
-            "German": "Glocke Boom",
+            "German": "Sterni Baum",
             "Spanish": "Campana boom",
             "Spanish (US)": "Campana boom",
             "Russian": "Белл Бум",
@@ -10306,7 +10317,7 @@
             "English (Europe)": "An error occurred. Please check your internet connection and try again later.",
             "French": "Une erreur s'est produite. Veuillez vérifier votre connexion Internet et réessayer plus tard.",
             "French (US)": "Une erreur s'est produite. Veuillez vérifier votre connexion Internet et réessayer plus tard.",
-            "German": "Ein Fehler ist aufgetreten. Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es später erneut.",
+            "German": "Ein Fehler ist aufgetreten. Bitte überprüfe deine Internetverbindung und versuche es später erneut.",
             "Spanish": "Ocurrió un error. Comprueba tu conexión a Internet y vuelve a intentarlo más tarde.",
             "Spanish (US)": "Ocurrió un error. Comprueba tu conexión a Internet y vuelve a intentarlo más tarde.",
             "Russian": "Произошла ошибка. Проверьте подключение к Интернету и повторите попытку позже.",
@@ -10319,7 +10330,7 @@
             "English (Europe)": "There are no backups stored. Please Upload one.",
             "French": "Il n'y a pas de sauvegardes stockées. Veuillez en télécharger un.",
             "French (US)": "Il n'y a pas de sauvegardes stockées. Veuillez en télécharger un.",
-            "German": "Es werden keine Backups gespeichert. Bitte laden Sie eine hoch.",
+            "German": "Es werden keine Backups gespeichert. Bitte speichere es selbst ab.",
             "Spanish": "No hay copias de seguridad almacenadas. Sube uno.",
             "Spanish (US)": "No hay copias de seguridad almacenadas. Sube uno.",
             "Russian": "Резервных копий нет. Пожалуйста, загрузите один.",
@@ -10332,7 +10343,7 @@
             "English (Europe)": "An error occurred. Please check your internet connection and try again later.",
             "French": "Une erreur s'est produite. Veuillez vérifier votre connexion Internet et réessayer plus tard.",
             "French (US)": "Une erreur s'est produite. Veuillez vérifier votre connexion Internet et réessayer plus tard.",
-            "German": "Ein Fehler ist aufgetreten. Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es später erneut.",
+            "German": "Ein Fehler ist aufgetreten. Bitte überprüfe deine Internetverbindung und versuche es später erneut.",
             "Spanish": "Ocurrió un error. Comprueba tu conexión a Internet y vuelve a intentarlo más tarde.",
             "Spanish (US)": "Ocurrió un error. Comprueba tu conexión a Internet y vuelve a intentarlo más tarde.",
             "Russian": "Произошла ошибка. Проверьте подключение к Интернету и повторите попытку позже.",
@@ -10358,7 +10369,7 @@
             "English (Europe)": "You can turn on auto data backup in the Settings.",
             "French": "Vous pouvez activer la sauvegarde automatique des données dans les paramètres.",
             "French (US)": "Vous pouvez activer la sauvegarde automatique des données dans les paramètres.",
-            "German": "Sie können die automatische Datensicherung in den Einstellungen aktivieren.",
+            "German": "Du kannst die automatische Datensicherung in den Einstellungen aktivieren.",
             "Spanish": "Puede activar la copia de seguridad automática de datos en la Configuración.",
             "Spanish (US)": "Puede activar la copia de seguridad automática de datos en la Configuración.",
             "Russian": "Вы можете включить автоматическое резервное копирование данных в Настройках.",
@@ -10397,7 +10408,7 @@
             "English (Europe)": "Once your credentials are remembered on the backup page, automatic backups will occur every time you open the application and are connected to the internet. Auto backups overwrite what is currently backed up in the cloud!",
             "French": "Une fois que vos informations d'identification sont mémorisées sur la page de sauvegarde, des sauvegardes automatiques se produisent chaque fois que vous ouvrez l'application et que vous êtes connecté à Internet. Les sauvegardes automatiques écrasent ce qui est actuellement sauvegardé dans le cloud !",
             "French (US)": "Une fois que vos informations d'identification sont mémorisées sur la page de sauvegarde, des sauvegardes automatiques se produisent chaque fois que vous ouvrez l'application et que vous êtes connecté à Internet. Les sauvegardes automatiques écrasent ce qui est actuellement sauvegardé dans le cloud !",
-            "German": "Sobald Ihre Anmeldeinformationen auf der Backup-Seite gespeichert sind, werden jedes Mal automatische Backups durchgeführt, wenn Sie die Anwendung öffnen und mit dem Internet verbunden sind. Automatische Backups überschreiben, was aktuell in der Cloud gesichert ist!",
+            "German": "Sobald Ihre Anmeldeinformationen auf der Backup-Seite gespeichert sind, werden jedes Mal automatische Backups durchgeführt, wenn du die Anwendung öffnest und mit dem Internet verbunden bist. Automatische Backups überschreiben, was aktuell in der Cloud gesichert ist!",
             "Spanish": "Una vez que se recuerdan sus credenciales en la página de respaldo, se realizarán respaldos automáticos cada vez que abra la aplicación y se conecte a Internet. ¡Las copias de seguridad automáticas sobrescriben lo que está actualmente respaldado en la nube!",
             "Spanish (US)": "Una vez que se recuerdan sus credenciales en la página de respaldo, se realizarán respaldos automáticos cada vez que abra la aplicación y se conecte a Internet. ¡Las copias de seguridad automáticas sobrescriben lo que está actualmente respaldado en la nube!",
             "Russian": "После того, как ваши учетные данные будут сохранены на странице резервного копирования, автоматическое резервное копирование будет происходить каждый раз, когда вы открываете приложение и подключаетесь к Интернету. Автоматическое резервное копирование перезаписывает то, что в настоящее время зарезервировано в облаке!",
@@ -10410,7 +10421,7 @@
             "English (Europe)": "The login credentials are not set for cloud backup or are incorrect. Please set them in the Backup + Restore page.",
             "French": "Les identifiants de connexion ne sont pas définis pour la sauvegarde dans le cloud ou sont incorrects. Veuillez les définir dans la page Sauvegarde + Restauration.",
             "French (US)": "Les identifiants de connexion ne sont pas définis pour la sauvegarde dans le cloud ou sont incorrects. Veuillez les définir dans la page Sauvegarde + Restauration.",
-            "German": "Die Anmeldedaten sind nicht für die Cloud-Sicherung festgelegt oder falsch. Bitte stellen Sie sie auf der Seite Backup + Restore ein.",
+            "German": "Die Anmeldedaten sind nicht für die Cloud-Sicherung festgelegt oder falsch. Bitte stelle sie auf der Seite Backup + Restore ein.",
             "Spanish": "Las credenciales de inicio de sesión no están configuradas para la copia de seguridad en la nube o son incorrectas. Configúrelos en la página Copia de seguridad + Restaurar.",
             "Spanish (US)": "Las credenciales de inicio de sesión no están configuradas para la copia de seguridad en la nube o son incorrectas. Configúrelos en la página Copia de seguridad + Restaurar.",
             "Russian": "Учетные данные для входа не настроены для облачного резервного копирования или неверны. Пожалуйста, установите их на странице \"Резервное копирование + восстановление\".",
@@ -10423,7 +10434,7 @@
             "English (Europe)": "Make sure your credentials and account is setup on the Backup and Restore page.",
             "French": "Assurez-vous que vos informations d'identification et votre compte sont configurés sur la page Sauvegarde et restauration.",
             "French (US)": "Assurez-vous que vos informations d'identification et votre compte sont configurés sur la page Sauvegarde et restauration.",
-            "German": "Stellen Sie sicher, dass Ihre Anmeldeinformationen und Ihr Konto auf der Seite Sichern und Wiederherstellen eingerichtet sind.",
+            "German": "Stelle sicher, dass deine Anmeldeinformationen und dein Konto auf der Seite Sichern und Wiederherstellen eingerichtet sind.",
             "Spanish": "Asegúrese de que sus credenciales y su cuenta estén configuradas en la página Copia de seguridad y restauración.",
             "Spanish (US)": "Asegúrese de que sus credenciales y su cuenta estén configuradas en la página Copia de seguridad y restauración.",
             "Russian": "Убедитесь, что ваши учетные данные и учетная запись настроены на странице резервного копирования и восстановления.",
@@ -10449,7 +10460,7 @@
             "English (Europe)": "You can now backup your data to the cloud and enable auto backups in the settings.",
             "French": "Vous pouvez maintenant sauvegarder vos données sur le cloud et activer les sauvegardes automatiques dans les paramètres.",
             "French (US)": "Vous pouvez maintenant sauvegarder vos données sur le cloud et activer les sauvegardes automatiques dans les paramètres.",
-            "German": "Sie können nun Ihre Daten in der Cloud sichern und in den Einstellungen automatische Sicherungen aktivieren.",
+            "German": "Du kannst nun deine Daten in der Cloud sichern und in den Einstellungen automatische Sicherungen aktivieren.",
             "Spanish": "Ahora puede hacer una copia de seguridad de sus datos en la nube y habilitar copias de seguridad automáticas en la configuración.",
             "Spanish (US)": "Ahora puede hacer una copia de seguridad de sus datos en la nube y habilitar copias de seguridad automáticas en la configuración.",
             "Russian": "Теперь вы можете сделать резервную копию своих данных в облаке и включить автоматическое резервное копирование в настройках.",
@@ -10488,7 +10499,7 @@
             "English (Europe)": "Please enter an email and password",
             "French": "Veuillez saisir un e-mail et un mot de passe",
             "French (US)": "Veuillez saisir un e-mail et un mot de passe",
-            "German": "Bitte geben Sie eine E-Mail und ein Passwort ein",
+            "German": "Bitte gebe deine E-Mail und ein Passwort ein",
             "Spanish": "Ingrese un correo electrónico y una contraseña",
             "Spanish (US)": "Ingrese un correo electrónico y una contraseña",
             "Russian": "Пожалуйста, введите адрес электронной почты и пароль",
@@ -10501,7 +10512,7 @@
             "English (Europe)": "The email address is badly formatted.",
             "French": "L'adresse e-mail est mal formatée.",
             "French (US)": "L'adresse e-mail est mal formatée.",
-            "German": "Die E-Mail-Adresse ist falsch formatiert.",
+            "German": "Die E-Mail-Adresse ist falsch.",
             "Spanish": "La dirección de correo electrónico está mal formateada.",
             "Spanish (US)": "La dirección de correo electrónico está mal formateada.",
             "Russian": "Адрес электронной почты неправильно отформатирован.",
@@ -10514,7 +10525,7 @@
             "English (Europe)": "There is no user record corresponding to this identifier. The user may have been deleted. Please try to create an account and Sign-up.",
             "French": "Il n'y a pas de fiche utilisateur correspondant à cet identifiant. L'utilisateur a peut-être été supprimé. Veuillez essayer de créer un compte et de vous inscrire.",
             "French (US)": "Il n'y a pas de fiche utilisateur correspondant à cet identifiant. L'utilisateur a peut-être été supprimé. Veuillez essayer de créer un compte et de vous inscrire.",
-            "German": "Es gibt keinen Benutzerdatensatz, der dieser Kennung entspricht. Der Benutzer wurde möglicherweise gelöscht. Bitte versuchen Sie, ein Konto zu erstellen und sich anzumelden.",
+            "German": "Es gibt keinen Benutzerdatensatz, der dieser Kennung entspricht. Der Benutzer wurde möglicherweise gelöscht. Bitte versuche es, ein Konto zu erstellen und dich anzumelden.",
             "Spanish": "No hay ningún registro de usuario que corresponda a este identificador. Es posible que se haya eliminado al usuario. Intente crear una cuenta y registrarse.",
             "Spanish (US)": "No hay ningún registro de usuario que corresponda a este identificador. Es posible que se haya eliminado al usuario. Intente crear una cuenta y registrarse.",
             "Russian": "Нет записи пользователя, соответствующей этому идентификатору. Возможно, пользователь был удален. Пожалуйста, попробуйте создать учетную запись и зарегистрируйтесь.",
@@ -10527,7 +10538,7 @@
             "English (Europe)": "Have villager photo",
             "French": "Avoir une photo de villageois",
             "French (US)": "Avoir une photo de villageois",
-            "German": "Haben Sie ein Dorfbewohner-Foto",
+            "German": "Hasr du ein Dorfbewohner-Foto",
             "Spanish": "Tener foto de aldeano",
             "Spanish (US)": "Tener foto de aldeano",
             "Russian": "Есть фото селянина",
@@ -10553,7 +10564,7 @@
             "English (Europe)": "Note: You have images hidden to avoid spoilers. Disable this in the Settings page to view all images.",
             "French": "Remarque : vous avez des images cachées pour éviter les spoilers. Désactivez-le dans la page Paramètres pour afficher toutes les images.",
             "French (US)": "Remarque : vous avez des images cachées pour éviter les spoilers. Désactivez-le dans la page Paramètres pour afficher toutes les images.",
-            "German": "Hinweis: Sie haben Bilder ausgeblendet, um Spoiler zu vermeiden. Deaktivieren Sie dies auf der Seite Einstellungen, um alle Bilder anzuzeigen.",
+            "German": "Hinweis: Du hast Bilder ausgeblendet, um Spoiler zu vermeiden. Deaktiviere dies auf der Seite Einstellungen, um alle Bilder anzuzeigen.",
             "Spanish": "Nota: Tienes imágenes ocultas para evitar spoilers. Desactive esto en la página de Configuración para ver todas las imágenes.",
             "Spanish (US)": "Nota: Tienes imágenes ocultas para evitar spoilers. Desactive esto en la página de Configuración para ver todas las imágenes.",
             "Russian": "Примечание. У вас есть скрытые изображения, чтобы избежать спойлеров. Отключите это на странице настроек, чтобы просмотреть все изображения.",
@@ -10579,7 +10590,7 @@
             "English (Europe)": "Hide images to avoid any spoilers if the item is not yet collected.",
             "French": "Cachez les images pour éviter tout spoil si l'objet n'est pas encore récupéré.",
             "French (US)": "Cachez les images pour éviter tout spoil si l'objet n'est pas encore récupéré.",
-            "German": "Blenden Sie Bilder aus, um Spoiler zu vermeiden, wenn der Artikel noch nicht gesammelt wurde.",
+            "German": "Blende Bilder aus, um Spoiler zu vermeiden, wenn der Artikel noch nicht gesammelt wurde.",
             "Spanish": "Oculte las imágenes para evitar spoilers si el artículo aún no se ha recopilado.",
             "Spanish (US)": "Oculte las imágenes para evitar spoilers si el artículo aún no se ha recopilado.",
             "Russian": "Скройте изображения, чтобы избежать спойлеров, если предмет еще не собран.",
@@ -10787,7 +10798,7 @@
             "English (Europe)": "Swipe left/right to change months",
             "French": "Balayez vers la gauche/droite pour changer de mois",
             "French (US)": "Balayez vers la gauche/droite pour changer de mois",
-            "German": "Wischen Sie nach links/rechts, um die Monate zu ändern",
+            "German": "Wische nach links/rechts, um die Monate zu ändern",
             "Spanish": "Desliza hacia la izquierda / derecha para cambiar los meses",
             "Spanish (US)": "Desliza hacia la izquierda / derecha para cambiar los meses",
             "Russian": "Проведите пальцем влево / вправо, чтобы изменить месяцы",
@@ -10891,7 +10902,7 @@
             "English (Europe)": "All generated data has been removed. Restart to regenerate the data.",
             "French": "Toutes les données générées ont été supprimées. Redémarrez pour régénérer les données.",
             "French (US)": "Toutes les données générées ont été supprimées. Redémarrez pour régénérer les données.",
-            "German": "Alle generierten Daten wurden entfernt. Starten Sie neu, um die Daten neu zu generieren.",
+            "German": "Alle generierten Daten wurden entfernt. Starte neu, um die Daten neu zu generieren.",
             "Spanish": "Se han eliminado todos los datos generados. Reinicie para regenerar los datos.",
             "Spanish (US)": "Se han eliminado todos los datos generados. Reinicie para regenerar los datos.",
             "Russian": "Все сгенерированные данные были удалены. Перезапустите, чтобы восстановить данные.",
@@ -11229,7 +11240,7 @@
             "English (Europe)": "Buying art from Redd",
             "French": "Acheter de l'art de Redd",
             "French (US)": "Acheter de l'art de Redd",
-            "German": "Kunst bei Redd kaufen",
+            "German": "Kunst bei Reiner kaufen",
             "Spanish": "Comprar arte de Redd",
             "Spanish (US)": "Comprar arte de Redd",
             "Russian": "Покупка произведений искусства в Redd",
@@ -11255,7 +11266,7 @@
             "English (Europe)": "Digging fossils",
             "French": "Creuser des fossiles",
             "French (US)": "Creuser des fossiles",
-            "German": "Fossilien graben",
+            "German": "Fossilien ausgraben",
             "Spanish": "Excavando fósiles",
             "Spanish (US)": "Excavando fósiles",
             "Russian": "Копание окаменелостей",
@@ -11268,7 +11279,7 @@
             "English (Europe)": "Finding message bottle",
             "French": "Trouver une bouteille de message",
             "French (US)": "Trouver une bouteille de message",
-            "German": "Nachrichtenflasche finden",
+            "German": "Eine Flaschenpost finden",
             "Spanish": "Encontrar botella de mensaje",
             "Spanish (US)": "Encontrar botella de mensaje",
             "Russian": "Поиск бутылки с сообщениями",
@@ -11294,7 +11305,7 @@
             "English (Europe)": "Dressing up in the Able Sisters",
             "French": "Habillez-vous dans les sœurs capables",
             "French (US)": "Habillez-vous dans les sœurs capables",
-            "German": "Sich in die fähigen Schwestern verkleiden",
+            "German": "In der Schneiderei umziehen",
             "Spanish": "Vestirse con las Able Sisters",
             "Spanish (US)": "Vestirse con las Able Sisters",
             "Russian": "Нарядитесь в Able Sisters",
@@ -11307,7 +11318,7 @@
             "English (Europe)": "Visiting Harv",
             "French": "Visite de Joe",
             "French (US)": "Visite de Joe",
-            "German": "Besuch in Harv",
+            "German": "Besuch in Harvey",
             "Spanish": "Visitando Fauno",
             "Spanish (US)": "Visitando Fauno",
             "Russian": "Посещение Харва",
@@ -11353,12 +11364,22 @@
             "Italian": "In visita a Isabelle",
             "Dutch": "Op bezoek bij Isabelle",
             "Portuguese": "Visitando Isabelle"
+        },
+        {
+            "English": "Food",
+            "English (Europe)": "Food",
+            "German": "Essen"
+        },
+        {
+            "English": "To view recipes, go to the Recipes + Tools page",
+            "English (Europe)": "To view recipes, go to the Recipes + Tools page",
+            "German": "Um Rezepte anzuzeigen, gehe auf die Seite Rezepte + Tools"
         }
     ],
     "Sources": [
         {
-            "English": "99 items",
-            "English (Europe)": "99 items",
+            "English": "130 items",
+            "English (Europe)": "130 items",
             "French": "99 items",
             "French (US)": "99 items",
             "German": "99 items",
@@ -12506,6 +12527,130 @@
             "Dutch": "Vissen",
             "Russian": "Рыбалка",
             "Portuguese": "Pescando"
+        },
+        {
+            "English": "Saharah's Commune",
+            "English (Europe)": "Saharah's Commune"
+        },
+        {
+            "English": "Requires Katrina to see bad luck in your future",
+            "English (Europe)": "Requires Katrina to see bad luck in your future"
+        },
+        {
+            "English": "Katrina's Cleansing Service",
+            "English (Europe)": "Katrina's Cleansing Service"
+        },
+        {
+            "English": "Requires a Nintendo Switch Online membership",
+            "English (Europe)": "Requires a Nintendo Switch Online membership"
+        },
+        {
+            "English": "In the Special Items section in Nook Shopping, after inviting to Photopia with an amiibo ",
+            "English (Europe)": "In the Special Items section in Nook Shopping, after inviting to Photopia with an amiibo "
+        },
+        {
+            "English": "Available from Nook's Cranny; ",
+            "English (Europe)": "Available from Nook's Cranny; "
+        },
+        {
+            "English": "Available from Tom Nook during Countdown",
+            "English (Europe)": "Available from Tom Nook during Countdown"
+        },
+        {
+            "English": "Redd's Commune Raffle",
+            "English (Europe)": "Redd's Commune Raffle"
+        },
+        {
+            "English": "Kick's Commune",
+            "English (Europe)": "Kick's Commune"
+        },
+        {
+            "English": "Gyroid",
+            "English (Europe)": "Gyroid"
+        },
+        {
+            "English": "Digging up a carrot plant",
+            "English (Europe)": "Digging up a carrot plant"
+        },
+        {
+            "English": "Digging up a carrot plant",
+            "English (Europe)": "Digging up a carrot plant"
+        },
+        {
+            "English": "Digging up a potato plant",
+            "English (Europe)": "Digging up a potato plant"
+        },
+        {
+            "English": "Digging up a sugarcane plant",
+            "English (Europe)": "Digging up a sugarcane plant"
+        },
+        {
+            "English": "Digging up a tomato plant",
+            "English (Europe)": "Digging up a tomato plant"
+        },
+        {
+            "English": "Digging up a wheat plant",
+            "English (Europe)": "Digging up a wheat plant"
+        },
+        {
+            "English": "Catching a horse mackerel",
+            "English (Europe)": "Catching a horse mackerel"
+        },
+        {
+            "English": "Catch an anchovy",
+            "English (Europe)": "Catch an anchovy"
+        },
+        {
+            "English": "Catching a barred knifejaw",
+            "English (Europe)": "Catching a barred knifejaw"
+        },
+        {
+            "English": "Basic Cooking Recipes",
+            "English (Europe)": "Basic Cooking Recipes"
+        },
+        {
+            "English": "Catching a blue marlin",
+            "English (Europe)": "Catching a blue marlin"
+        },
+        {
+            "English": "Catching a salmon",
+            "English (Europe)": "Catching a salmon"
+        },
+        {
+            "English": "Be a Chef! DIY Recipes+",
+            "English (Europe)": "Be a Chef! DIY Recipes+"
+        },
+        {
+            "English": "Turkey Day Recipes",
+            "English (Europe)": "Turkey Day Recipes"
+        },
+        {
+            "English": "Catching a dab",
+            "English (Europe)": "Catching a dab"
+        },
+        {
+            "English": "Custom Fencing in a Flash",
+            "English (Europe)": "Custom Fencing in a Flash"
+        },
+        {
+            "English": "Catching a red snapper",
+            "English (Europe)": "Catching a red snapper"
+        },
+        {
+            "English": "Catching a olive flounder",
+            "English (Europe)": "Catching a olive flounder"
+        },
+        {
+            "English": "Catching a sea bass",
+            "English (Europe)": "Catching a sea bass"
+        },
+        {
+            "English": "Catching a squid",
+            "English (Europe)": "Catching a squid"
+        },
+        {
+            "English": "New Reactions Notebook",
+            "English (Europe)": "New Reactions Notebook"
         }
     ],
     "Source Notes": [
@@ -13980,11 +14125,11 @@
     ],
     "Event Names": [
         {
-            "English": "54 items",
-            "English (Europe)": "54 items",
+            "English": "59 items",
+            "English (Europe)": "59 items",
             "French": "52 items",
             "French (US)": "52 items",
-            "German": "52 items",
+            "German": "54 items",
             "Spanish": "38 items",
             "Spanish (US)": "38 items",
             "Italian": "0 items",
@@ -14492,11 +14637,33 @@
         },
         {
             "English": "Lantern Festival",
-            "English (Europe)": "Lantern Festival"
+            "English (Europe)": "Lantern Festival",
+            "German": "Laternenfest"
         },
         {
             "English": "Day Of The Dead",
-            "English (Europe)": "Day Of The Dead"
+            "English (Europe)": "Day Of The Dead",
+            "German": "Tag der Toten"
+        },
+        {
+            "English": "Obon",
+            "English (Europe)": "Obon"
+        },
+        {
+            "English": "Moon-Viewing Day (2)",
+            "English (Europe)": "Moon-Viewing Day (2)"
+        },
+        {
+            "English": "Moon-Viewing Day (3)",
+            "English (Europe)": "Moon-Viewing Day (3)"
+        },
+        {
+            "English": "Chuseok",
+            "English (Europe)": "Chuseok"
+        },
+        {
+            "English": "Shichi-Go-San",
+            "English (Europe)": "Shichi-Go-San"
         }
     ],
     "Missing Items": [
@@ -15580,8 +15747,8 @@
     ],
     "Achievements": [
         {
-            "English": "817 items",
-            "English (Europe)": "817 items",
+            "English": "904 items",
+            "English (Europe)": "904 items",
             "French": "817 items",
             "French (US)": "817 items",
             "German": "817 items",
@@ -21504,11 +21671,359 @@
             "French": "Divinité",
             "French (US)": "Divinité",
             "German": "höchstes Wesen"
+        },
+        {
+            "English": "Father; Mother",
+            "English (Europe)": "Father; Mother"
+        },
+        {
+            "English": "Pa; Ma",
+            "English (Europe)": "Pa; Ma"
+        },
+        {
+            "English": "Darling; Honey",
+            "English (Europe)": "Darling; Honey"
+        },
+        {
+            "English": "Master; Matriarch",
+            "English (Europe)": "Master; Matriarch"
+        },
+        {
+            "English": "King; Queen",
+            "English (Europe)": "King; Queen"
+        },
+        {
+            "English": "Writing a Cookbook?",
+            "English (Europe)": "Writing a Cookbook?"
+        },
+        {
+            "English": "The recipes in your collection could stretch for miles, so allow me to present you with these...miles! Delight the eyes and stomachs of your neighbors with all your delicious creations, hm?",
+            "English (Europe)": "The recipes in your collection could stretch for miles, so allow me to present you with these...miles! Delight the eyes and stomachs of your neighbors with all your delicious creations, hm?"
+        },
+        {
+            "English": "Ever-Improving",
+            "English (Europe)": "Ever-Improving"
+        },
+        {
+            "English": "Skilled",
+            "English (Europe)": "Skilled"
+        },
+        {
+            "English": "Homestyle",
+            "English (Europe)": "Homestyle"
+        },
+        {
+            "English": "Test Chef",
+            "English (Europe)": "Test Chef"
+        },
+        {
+            "English": "Cook",
+            "English (Europe)": "Cook"
+        },
+        {
+            "English": "Chef",
+            "English (Europe)": "Chef"
+        },
+        {
+            "English": "Mmm-Mmm-Miles!",
+            "English (Europe)": "Mmm-Mmm-Miles!"
+        },
+        {
+            "English": "Gathering ingredients and creating delicious treats is great fun, is it not? Yes, yes, I do believe our chefs out there deserve miles for all the times they've prepared something delicious!",
+            "English (Europe)": "Gathering ingredients and creating delicious treats is great fun, is it not? Yes, yes, I do believe our chefs out there deserve miles for all the times they've prepared something delicious!"
+        },
+        {
+            "English": "Scorching",
+            "English (Europe)": "Scorching"
+        },
+        {
+            "English": "Sugary",
+            "English (Europe)": "Sugary"
+        },
+        {
+            "English": "Spicy",
+            "English (Europe)": "Spicy"
+        },
+        {
+            "English": "Gourmet",
+            "English (Europe)": "Gourmet"
+        },
+        {
+            "English": "Culinary",
+            "English (Europe)": "Culinary"
+        },
+        {
+            "English": "Sweets",
+            "English (Europe)": "Sweets"
+        },
+        {
+            "English": "Head Chef",
+            "English (Europe)": "Head Chef"
+        },
+        {
+            "English": "Epicure",
+            "English (Europe)": "Epicure"
+        },
+        {
+            "English": "Glutton",
+            "English (Europe)": "Glutton"
+        },
+        {
+            "English": "Nice to Meet You, Gyroid!",
+            "English (Europe)": "Nice to Meet You, Gyroid!"
+        },
+        {
+            "English": "You've discovered your first gyroid! This special occasion deserves miles, yes, yes. I hope you feel inspired to collect all sorts of different, wonderful gyroids now.",
+            "English (Europe)": "You've discovered your first gyroid! This special occasion deserves miles, yes, yes. I hope you feel inspired to collect all sorts of different, wonderful gyroids now."
+        },
+        {
+            "English": "Rain-Soaked",
+            "English (Europe)": "Rain-Soaked"
+        },
+        {
+            "English": "Gyroid Getter",
+            "English (Europe)": "Gyroid Getter"
+        },
+        {
+            "English": "Collect different kinds of gyroids, and earn miles in return! I suspect once you experience life in their presence, you'll find it hard to resist hunting for more, hm?",
+            "English (Europe)": "Collect different kinds of gyroids, and earn miles in return! I suspect once you experience life in their presence, you'll find it hard to resist hunting for more, hm?"
+        },
+        {
+            "English": "Distinctive",
+            "English (Europe)": "Distinctive"
+        },
+        {
+            "English": "Whimsical",
+            "English (Europe)": "Whimsical"
+        },
+        {
+            "English": "Novel",
+            "English (Europe)": "Novel"
+        },
+        {
+            "English": "Curator",
+            "English (Europe)": "Curator"
+        },
+        {
+            "English": "Statue",
+            "English (Europe)": "Statue"
+        },
+        {
+            "English": "Symbol",
+            "English (Europe)": "Symbol"
+        },
+        {
+            "English": "Sprout Out Loud",
+            "English (Europe)": "Sprout Out Loud"
+        },
+        {
+            "English": "Plant your produce starts across the whole island for a fresh, bounteous crop! Whether it's a small home garden or a full-on field, support Nook Inc. with all your produce-planting power! Yes, yes!",
+            "English (Europe)": "Plant your produce starts across the whole island for a fresh, bounteous crop! Whether it's a small home garden or a full-on field, support Nook Inc. with all your produce-planting power! Yes, yes!"
+        },
+        {
+            "English": "Field-Fresh",
+            "English (Europe)": "Field-Fresh"
+        },
+        {
+            "English": "Locally Sourced",
+            "English (Europe)": "Locally Sourced"
+        },
+        {
+            "English": "Sustainable",
+            "English (Europe)": "Sustainable"
+        },
+        {
+            "English": "Hardworking",
+            "English (Europe)": "Hardworking"
+        },
+        {
+            "English": "Green-Thumbed",
+            "English (Europe)": "Green-Thumbed"
+        },
+        {
+            "English": "Fertilizer",
+            "English (Europe)": "Fertilizer"
+        },
+        {
+            "English": "Soil",
+            "English (Europe)": "Soil"
+        },
+        {
+            "English": "Start",
+            "English (Europe)": "Start"
+        },
+        {
+            "English": "Days",
+            "English (Europe)": "Days"
+        },
+        {
+            "English": "Success",
+            "English (Europe)": "Success"
+        },
+        {
+            "English": "Executive Producer",
+            "English (Europe)": "Executive Producer"
+        },
+        {
+            "English": "Nothing feels quite like harvesting produce that you grew by the sweat of your brow, yes, yes! Now go enjoy the fruits of your labor—and the pumpkins, carrots, sugarcane, and potatoes too!",
+            "English (Europe)": "Nothing feels quite like harvesting produce that you grew by the sweat of your brow, yes, yes! Now go enjoy the fruits of your labor—and the pumpkins, carrots, sugarcane, and potatoes too!"
+        },
+        {
+            "English": "Farming",
+            "English (Europe)": "Farming"
+        },
+        {
+            "English": "Crop-Tending",
+            "English (Europe)": "Crop-Tending"
+        },
+        {
+            "English": "Vibrant",
+            "English (Europe)": "Vibrant"
+        },
+        {
+            "English": "Nurturing",
+            "English (Europe)": "Nurturing"
+        },
+        {
+            "English": "Thriving",
+            "English (Europe)": "Thriving"
+        },
+        {
+            "English": "Greenhorn",
+            "English (Europe)": "Greenhorn"
+        },
+        {
+            "English": "Crops",
+            "English (Europe)": "Crops"
+        },
+        {
+            "English": "Baby",
+            "English (Europe)": "Baby"
+        },
+        {
+            "English": "Young'un",
+            "English (Europe)": "Young'un"
+        },
+        {
+            "English": "Populace",
+            "English (Europe)": "Populace"
+        },
+        {
+            "English": "Shellaborator; Shellarina",
+            "English (Europe)": "Shellaborator; Shellarina"
+        },
+        {
+            "English": "Set Sail for Adventure",
+            "English (Europe)": "Set Sail for Adventure"
+        },
+        {
+            "English": "Rare items and exciting adventures are yours when you head out on a special tour with a veteran sailor, yes, yes!",
+            "English (Europe)": "Rare items and exciting adventures are yours when you head out on a special tour with a veteran sailor, yes, yes!"
+        },
+        {
+            "English": "Sun-Kissed",
+            "English (Europe)": "Sun-Kissed"
+        },
+        {
+            "English": "Household",
+            "English (Europe)": "Household"
+        },
+        {
+            "English": "Voyaging",
+            "English (Europe)": "Voyaging"
+        },
+        {
+            "English": "Family-Minded",
+            "English (Europe)": "Family-Minded"
+        },
+        {
+            "English": "Impressive",
+            "English (Europe)": "Impressive"
+        },
+        {
+            "English": "Boater",
+            "English (Europe)": "Boater"
+        },
+        {
+            "English": "Provider",
+            "English (Europe)": "Provider"
+        },
+        {
+            "English": "Explorer",
+            "English (Europe)": "Explorer"
+        },
+        {
+            "English": "Parent",
+            "English (Europe)": "Parent"
+        },
+        {
+            "English": "Come Home to the Roost",
+            "English (Europe)": "Come Home to the Roost"
+        },
+        {
+            "English": "The Roost, located on the second floor of the museum, is quite picky about the coffee they serve, yes, yes! Do stop in to enjoy a cup and earn some dark-roasted miles!",
+            "English (Europe)": "The Roost, located on the second floor of the museum, is quite picky about the coffee they serve, yes, yes! Do stop in to enjoy a cup and earn some dark-roasted miles!"
+        },
+        {
+            "English": "Aromatic",
+            "English (Europe)": "Aromatic"
+        },
+        {
+            "English": "Caffeinated",
+            "English (Europe)": "Caffeinated"
+        },
+        {
+            "English": "Fragrant",
+            "English (Europe)": "Fragrant"
+        },
+        {
+            "English": "Rich",
+            "English (Europe)": "Rich"
+        },
+        {
+            "English": "Acidic",
+            "English (Europe)": "Acidic"
+        },
+        {
+            "English": "Beans",
+            "English (Europe)": "Beans"
+        },
+        {
+            "English": "Break",
+            "English (Europe)": "Break"
+        },
+        {
+            "English": "Blend",
+            "English (Europe)": "Blend"
+        },
+        {
+            "English": "Barista",
+            "English (Europe)": "Barista"
+        },
+        {
+            "English": "Stretch to Refresh!",
+            "English (Europe)": "Stretch to Refresh!"
+        },
+        {
+            "English": "The health of our residents is a top priority, yes, yes! So we're holding group-stretching sessions in the plaza. I'll provide miles once per day for participating, and there will be a tape deck for music. I hope I see you there!",
+            "English (Europe)": "The health of our residents is a top priority, yes, yes! So we're holding group-stretching sessions in the plaza. I'll provide miles once per day for participating, and there will be a tape deck for music. I hope I see you there!"
+        },
+        {
+            "English": "Athletic",
+            "English (Europe)": "Athletic"
+        },
+        {
+            "English": "Peak-Performing",
+            "English (Europe)": "Peak-Performing"
+        },
+        {
+            "English": "Stoic",
+            "English (Europe)": "Stoic"
         }
     ],
     "Cards": [
         {
-            "English": "67 items",
+            "English": "76 items",
             "English (Europe)": "67 items",
             "French": "53 items",
             "French (US)": "53 items",
@@ -22027,6 +22542,33 @@
             "French (US)": "Carte de",
             "German": "Karte von",
             "Dutch": "kaart ontvangen van"
+        },
+        {
+            "English": "Dawning-year card"
+        },
+        {
+            "English": "Fireworks card"
+        },
+        {
+            "English": "Flight-ticket card"
+        },
+        {
+            "English": "Glowing-moss card"
+        },
+        {
+            "English": "MsgWherearenOffice00"
+        },
+        {
+            "English": "Paradise Planning card"
+        },
+        {
+            "English": "Plumeria card"
+        },
+        {
+            "English": "Sunset card"
+        },
+        {
+            "English": "Tropical card"
         }
     ],
     "Museum Descriptions": [
@@ -25053,7 +25595,7 @@
             "French": "197 items",
             "French (US)": "197 items",
             "German": "205 items",
-            "Russian": "196 items",
+            "Russian": "197 items",
             "Spanish": "14 items",
             "Spanish (US)": "0 items",
             "Italian": "0 items",
@@ -25634,7 +26176,8 @@
             "English (Europe)": "I caught a tarantula! This situation just got hairy!",
             "French": "Tu as attrapé une tarentule ! J'en ai les poils qui se hérissent !",
             "French (US)": "Tu as attrapé une tarentule ! J'en ai les poils qui se hérissent !",
-            "German": "Eine Vogelspinne! Das war richtig haarsträubend."
+            "German": "Eine Vogelspinne! Das war richtig haarsträubend.",
+            "Russian": "В сачок попался паук-птицеед! У меня даже волосы дыбом встали! "
         },
         {
             "English": "I caught a tiger beetle! I pounced first!",

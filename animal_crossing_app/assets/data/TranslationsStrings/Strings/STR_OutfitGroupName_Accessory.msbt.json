@@ -1,0 +1,1807 @@
+﻿[
+  {
+    "label": "1055",
+    "locale": {
+      "CNzh": "奶嘴",
+      "EUde": "Schnuller",
+      "EUen": "pacifier",
+      "EUes": "chupete",
+      "EUfr": "tétine",
+      "EUit": "ciuccio",
+      "EUnl": "speen",
+      "EUru": "соска-пустышка",
+      "JPja": "おしゃぶり",
+      "KRko": "노리개젖꼭지",
+      "TWzh": "奶嘴",
+      "USen": "pacifier",
+      "USes": "chupete",
+      "USfr": "suce"
+    }
+  },
+  {
+    "label": "1137",
+    "locale": {
+      "CNzh": "凯丝的墨镜",
+      "EUde": "Samthea-Sonnenbrille",
+      "EUen": "Labelle sunglasses",
+      "EUes": "gafa de sol Trini",
+      "EUfr": "monture solaire Maria",
+      "EUit": "montatura da sole Bice",
+      "EUnl": "Labelle-zonnebril",
+      "EUru": "очки «Лэйблеск»",
+      "JPja": "ケイトのサングラス",
+      "KRko": "케이트의 선글라스",
+      "TWzh": "凱絲墨鏡",
+      "USen": "Labelle sunglasses",
+      "USes": "par de lentes de sol Trini",
+      "USfr": "monture solaire Maria"
+    }
+  },
+  {
+    "label": "1148",
+    "locale": {
+      "CNzh": "Nook Inc.眼罩",
+      "EUde": "Nook-Inc.-Augenmaske",
+      "EUen": "Nook Inc. eye mask",
+      "EUes": "antifaz dormir de Nook Inc.",
+      "EUfr": "masque repos Nook Inc.",
+      "EUit": "copriocchi Nook Inc.",
+      "EUnl": "Nook Inc.-slaapmasker",
+      "EUru": "маска для сна Nook Inc.",
+      "JPja": "たぬきかいはつアイマスク",
+      "KRko": "Nook Inc. 안대",
+      "TWzh": "Nook Inc.眼罩",
+      "USen": "Nook Inc. eye mask",
+      "USes": "antifaz dormir de Nook Inc.",
+      "USfr": "masque repos Nook Inc."
+    }
+  },
+  {
+    "label": "1182",
+    "locale": {
+      "CNzh": "DAL眼罩",
+      "EUde": "DAL-Augenmaske",
+      "EUen": "DAL eye mask",
+      "EUes": "antifaz para dormir de DAL",
+      "EUfr": "masque repos DAL",
+      "EUit": "copriocchi DAL",
+      "EUnl": "DAL-slaapmasker",
+      "EUru": "маска для сна DAL",
+      "JPja": "ＤＡＬアイマスク",
+      "KRko": "DAL 안대",
+      "TWzh": "DAL眼罩",
+      "USen": "DAL eye mask",
+      "USes": "antifaz para dormir de DAL",
+      "USfr": "masque repos DAL"
+    }
+  },
+  {
+    "label": "1183",
+    "locale": {
+      "CNzh": "DAL墨镜",
+      "EUde": "DAL-Sonnenbrille",
+      "EUen": "DAL sunglasses",
+      "EUes": "gafa de sol de DAL",
+      "EUfr": "monture solaire DAL",
+      "EUit": "montatura da sole DAL",
+      "EUnl": "DAL-zonnebril",
+      "EUru": "солнечные очки DAL",
+      "JPja": "ＤＡＬサングラス",
+      "KRko": "DAL 선글라스",
+      "TWzh": "DAL墨鏡",
+      "USen": "DAL sunglasses",
+      "USes": "par de lentes de sol DAL",
+      "USfr": "monture solaire DAL"
+    }
+  },
+  {
+    "label": "1225",
+    "locale": {
+      "CNzh": "海盗眼罩",
+      "EUde": "Piratenaugenklappe",
+      "EUen": "pirate eye patch",
+      "EUes": "parche pirata",
+      "EUfr": "cache-œil de pirate",
+      "EUit": "benda piratesca",
+      "EUnl": "piratenooglapje",
+      "EUru": "пиратская повязка",
+      "JPja": "かいぞくのアイパッチ",
+      "KRko": "해적 안대",
+      "TWzh": "海盜眼罩",
+      "USen": "pirate eye patch",
+      "USes": "parche pirata",
+      "USfr": "cache-œil de pirate"
+    }
+  },
+  {
+    "label": "1226",
+    "locale": {
+      "CNzh": "海盗胡子",
+      "EUde": "Piratenbart",
+      "EUen": "pirate beard",
+      "EUes": "barba de pirata",
+      "EUfr": "barbe de pirate",
+      "EUit": "barba da pirata",
+      "EUnl": "piratenbaard",
+      "EUru": "пиратская борода",
+      "JPja": "かいぞくのひげ",
+      "KRko": "해적 수염",
+      "TWzh": "海盜鬍子",
+      "USen": "pirate beard",
+      "USes": "barba de pirata",
+      "USfr": "barbe de pirate"
+    }
+  },
+  {
+    "label": "1248",
+    "locale": {
+      "CNzh": "百褶口罩",
+      "EUde": "Chirurgenmaske",
+      "EUen": "pleated mask",
+      "EUes": "mascarilla quirúrgica",
+      "EUfr": "masque plissé",
+      "EUit": "mascherina chirurgica",
+      "EUnl": "mondkapje",
+      "EUru": "хирургическая маска",
+      "JPja": "プリーツマスク",
+      "KRko": "덴탈 마스크",
+      "TWzh": "百褶口罩",
+      "USen": "pleated mask",
+      "USes": "mascarilla quirúrgica",
+      "USfr": "masque plissé"
+    }
+  },
+  {
+    "label": "1251",
+    "locale": {
+      "CNzh": "塞鼻孔的纸巾",
+      "EUde": "Nasentamponade",
+      "EUen": "nose tissue",
+      "EUes": "gasa para la nariz",
+      "EUfr": "tampon nasal",
+      "EUit": "tampone nasale",
+      "EUnl": "neusstopdoekje",
+      "EUru": "марлевая турунда",
+      "JPja": "はなのつめもの",
+      "KRko": "코 휴지",
+      "TWzh": "塞鼻孔的面紙捲",
+      "USen": "nose tissue",
+      "USes": "gasa para la nariz",
+      "USfr": "mouchoir nasal"
+    }
+  },
+  {
+    "label": "1254",
+    "locale": {
+      "CNzh": "眼睛纱布",
+      "EUde": "Augenkompresse",
+      "EUen": "eye gauze",
+      "EUes": "gasa para el ojo",
+      "EUfr": "bandage oculaire",
+      "EUit": "benda oculare",
+      "EUnl": "ooggaasje",
+      "EUru": "повязка на глаз",
+      "JPja": "めのガーゼ",
+      "KRko": "눈 거즈",
+      "TWzh": "眼睛紗布",
+      "USen": "eye gauze",
+      "USes": "gasa para el ojo",
+      "USfr": "bandage oculaire"
+    }
+  },
+  {
+    "label": "1271",
+    "locale": {
+      "CNzh": "动物假鼻子",
+      "EUde": "Tiernase",
+      "EUen": "animal nose",
+      "EUes": "nariz de animal",
+      "EUfr": "nez d'animal",
+      "EUit": "muso animale",
+      "EUnl": "dierensnuit",
+      "EUru": "звериная мордочка",
+      "JPja": "アニマルなつけばな",
+      "KRko": "동물 코",
+      "TWzh": "動物鼻子道具",
+      "USen": "animal nose",
+      "USes": "nariz de animal",
+      "USfr": "nez d'animal"
+    }
+  },
+  {
+    "label": "1300",
+    "locale": {
+      "CNzh": "Nook Inc.潜水镜附呼吸管",
+      "EUde": "Nook-Inc.-Taucherbrille",
+      "EUen": "Nook Inc. snorkel",
+      "EUes": "gafa de buceo Nook Inc.",
+      "EUfr": "masque avec tuba Nook Inc.",
+      "EUit": "maschera mare Nook Inc.",
+      "EUnl": "Nook Inc.-duikbril",
+      "EUru": "подводная маска Nook Inc.",
+      "JPja": "たぬきかいはつシュノーケル",
+      "KRko": "Nook Inc. 스노클",
+      "TWzh": "Nook Inc.潛水鏡附呼吸管",
+      "USen": "Nook Inc. snorkel",
+      "USes": "visor de buceo Nook Inc.",
+      "USfr": "masque avec tuba Nook Inc."
+    }
+  },
+  {
+    "label": "1311",
+    "locale": {
+      "CNzh": "向日葵墨镜",
+      "EUde": "Sonnenblumenbrille",
+      "EUen": "sunflower sunglasses",
+      "EUes": "gafa de sol girasol",
+      "EUfr": "monture solaire tournesol",
+      "EUit": "montatura girasole",
+      "EUnl": "zonnebloemzonnebril",
+      "EUru": "очки-подсолнухи",
+      "JPja": "ひまわりのサングラス",
+      "KRko": "해바라기 선글라스",
+      "TWzh": "向日葵墨鏡",
+      "USen": "sunflower sunglasses",
+      "USes": "par de lentes de sol girasol",
+      "USfr": "monture solaire tournesol"
+    }
+  },
+  {
+    "label": "1324",
+    "locale": {
+      "CNzh": "马力欧胡子",
+      "EUde": "Mario-Schnauzer",
+      "EUen": "Mario 'stache",
+      "EUes": "bigote de Mario",
+      "EUfr": "moustache de Mario",
+      "EUit": "baffo di Mario",
+      "EUnl": "Mario-snor",
+      "EUru": "усы Марио",
+      "JPja": "マリオのひげ",
+      "KRko": "마리오 수염",
+      "TWzh": "瑪利歐鬍子",
+      "USen": "Mario 'stache",
+      "USes": "bigote de Mario",
+      "USfr": "moustache de Mario"
+    }
+  },
+  {
+    "label": "1325",
+    "locale": {
+      "CNzh": "路易吉胡子",
+      "EUde": "Luigi-Schnauzer",
+      "EUen": "Luigi 'stache",
+      "EUes": "bigote de Luigi",
+      "EUfr": "moustache de Luigi",
+      "EUit": "baffo di Luigi",
+      "EUnl": "Luigi-snor",
+      "EUru": "усы Луиджи",
+      "JPja": "ルイージのひげ",
+      "KRko": "루이지 수염",
+      "TWzh": "路易吉鬍子",
+      "USen": "Luigi 'stache",
+      "USes": "bigote de Luigi",
+      "USfr": "moustache de Luigi"
+    }
+  },
+  {
+    "label": "1326",
+    "locale": {
+      "CNzh": "瓦力欧胡子",
+      "EUde": "Wario-Schnauzer",
+      "EUen": "Wario 'stache",
+      "EUes": "bigote de Wario",
+      "EUfr": "moustache de Wario",
+      "EUit": "baffo di Wario",
+      "EUnl": "Wario-snor",
+      "EUru": "усы Варио",
+      "JPja": "ワリオのひげ",
+      "KRko": "와리오 수염",
+      "TWzh": "瓦利歐鬍子",
+      "USen": "Wario 'stache",
+      "USes": "bigote de Wario",
+      "USfr": "moustache de Wario"
+    }
+  },
+  {
+    "label": "1354",
+    "locale": {
+      "CNzh": "三叶草墨镜",
+      "EUde": "Kleeblattsonnenbrille",
+      "EUen": "shamrock sunglasses",
+      "EUes": "gafa de sol trébol",
+      "EUfr": "monture solaire trèfle",
+      "EUit": "montatura trifoglio",
+      "EUnl": "klaverzonnebril",
+      "EUru": "очки-трилистник",
+      "JPja": "シャムロックサングラス",
+      "KRko": "성 패트릭 선글라스",
+      "TWzh": "三葉草墨鏡",
+      "USen": "shamrock sunglasses",
+      "USes": "par de lentes de sol trébol",
+      "USfr": "monture solaire trèfle"
+    }
+  },
+  {
+    "label": "1356",
+    "locale": {
+      "CNzh": "塞两侧鼻孔的纸巾",
+      "EUde": "Doppel-Nasentamponade",
+      "EUen": "double nose tissues",
+      "EUes": "gasa doble para la nariz",
+      "EUfr": "double tampon nasal",
+      "EUit": "paio di tamponi nasali",
+      "EUnl": "dubbel neusstopdoekje",
+      "EUru": "марлевые турунды",
+      "JPja": "りょうばなのつめもの",
+      "KRko": "양쪽 코 휴지",
+      "TWzh": "塞兩邊鼻孔的面紙捲",
+      "USen": "double nose tissues",
+      "USes": "gasa doble para la nariz",
+      "USfr": "double mouchoir nasal"
+    }
+  },
+  {
+    "label": "1369",
+    "locale": {
+      "CNzh": "圆形粗框眼镜",
+      "EUde": "Rundbrille",
+      "EUen": "round-frame glasses",
+      "EUes": "gafa redonda de pasta",
+      "EUfr": "monture arrondie",
+      "EUit": "montatura tonda",
+      "EUnl": "bril met rond montuur",
+      "EUru": "очки с круглой оправой",
+      "JPja": "まるぶちめがね",
+      "KRko": "둥근 테 안경",
+      "TWzh": "圓形粗框眼鏡",
+      "USen": "round-frame glasses",
+      "USes": "par de lentes de pasta",
+      "USfr": "monture arrondie"
+    }
+  },
+  {
+    "label": "1391",
+    "locale": {
+      "CNzh": "方形眉框眼镜",
+      "EUde": "Quadrat-Browline-Brille",
+      "EUen": "squared browline glasses",
+      "EUes": "gafa montura superior recta",
+      "EUfr": "monture browline carrée",
+      "EUit": "montatura browline quadra",
+      "EUnl": "rechte-browlinebril",
+      "EUru": "угловатые броулайнеры",
+      "JPja": "スクエアサーモントめがね",
+      "KRko": "사각 하금테 안경",
+      "TWzh": "方形眉框眼鏡",
+      "USen": "squared browline glasses",
+      "USes": "par de lentes rectos",
+      "USfr": "monture carrée"
+    }
+  },
+  {
+    "label": "1438",
+    "locale": {
+      "CNzh": "荧光色墨镜",
+      "EUde": "Neonbrille",
+      "EUen": "neon shades",
+      "EUes": "gafa de sol neón",
+      "EUfr": "monture fluo",
+      "EUit": "montatura neon",
+      "EUnl": "neonzonnebril",
+      "EUru": "неоновые очки от солнца",
+      "JPja": "ネオンのサングラス",
+      "KRko": "네온 선글라스",
+      "TWzh": "螢光色墨鏡",
+      "USen": "neon shades",
+      "USes": "par de lentes de sol neón",
+      "USfr": "monture fluo"
+    }
+  },
+  {
+    "label": "1447",
+    "locale": {
+      "CNzh": "威尼斯狂欢节面具",
+      "EUde": "Karneval-in-Venedig-Maske",
+      "EUen": "Venetian carnival mask",
+      "EUes": "máscara carnaval veneciano",
+      "EUfr": "masque vénitien",
+      "EUit": "maschera veneziana",
+      "EUnl": "Venetiaans carnavalsmasker",
+      "EUru": "венецианск. карнав. маска",
+      "JPja": "ヴェニスのカーニバルマスク",
+      "KRko": "베네치아 카니발 가면",
+      "TWzh": "威尼斯嘉年華面具",
+      "USen": "Venetian carnival mask",
+      "USes": "máscara carnaval veneciano",
+      "USfr": "masque vénitien"
+    }
+  },
+  {
+    "label": "1461",
+    "locale": {
+      "CNzh": "简约墨镜",
+      "EUde": "Einfach-Sonnenbrille",
+      "EUen": "simple sunglasses",
+      "EUes": "gafa de sol simple",
+      "EUfr": "monture solaire simple",
+      "EUit": "montatura da sole semplice",
+      "EUnl": "eenvoudige zonnebril",
+      "EUru": "простые очки от солнца",
+      "JPja": "シンプルなサングラス",
+      "KRko": "심플 선글라스",
+      "TWzh": "簡約墨鏡",
+      "USen": "simple sunglasses",
+      "USes": "par de lentes de sol simples",
+      "USfr": "monture solaire simple"
+    }
+  },
+  {
+    "label": "1489",
+    "locale": {
+      "CNzh": "非常搞笑眼镜",
+      "EUde": "Blödelbrille",
+      "EUen": "silly glasses",
+      "EUes": "gafa graciosa con párpados",
+      "EUfr": "monture facétieuse",
+      "EUit": "montatura buffa",
+      "EUnl": "gekke fopbril",
+      "EUru": "шуточные очки",
+      "JPja": "いとをかしなメガネ",
+      "KRko": "입체 코믹한 안경",
+      "TWzh": "非常搞笑眼鏡",
+      "USen": "silly glasses",
+      "USes": "par de lentes con párpados",
+      "USfr": "monture rigolote"
+    }
+  },
+  {
+    "label": "184",
+    "locale": {
+      "CNzh": "鸭嘴道具",
+      "EUde": "Schnabel",
+      "EUen": "beak",
+      "EUes": "pico",
+      "EUfr": "bec",
+      "EUit": "becco",
+      "EUnl": "snavel",
+      "EUru": "клюв",
+      "JPja": "くちばし",
+      "KRko": "부리",
+      "TWzh": "鴨嘴道具",
+      "USen": "beak",
+      "USes": "pico",
+      "USfr": "bec"
+    }
+  },
+  {
+    "label": "185",
+    "locale": {
+      "CNzh": "八字翘胡",
+      "EUde": "Zwirbelbart",
+      "EUen": "handlebar mustache",
+      "EUes": "bigote inglés",
+      "EUfr": "moustache en guidon",
+      "EUit": "baffo a manubrio",
+      "EUnl": "klassieke snor",
+      "EUru": "большие усы",
+      "JPja": "カイゼルひげ",
+      "KRko": "콧수염",
+      "TWzh": "八字翹鬍",
+      "USen": "handlebar mustache",
+      "USes": "bigote inglés",
+      "USfr": "moustache en guidon"
+    }
+  },
+  {
+    "label": "257",
+    "locale": {
+      "CNzh": "圆框眼镜",
+      "EUde": "Laborbrille",
+      "EUen": "rimmed glasses",
+      "EUes": "gafa redonda",
+      "EUfr": "monture intello",
+      "EUit": "montatura rotonda",
+      "EUnl": "ronde bril",
+      "EUru": "очки в роговой оправе",
+      "JPja": "まるめがね",
+      "KRko": "동글 안경",
+      "TWzh": "圓框眼鏡",
+      "USen": "rimmed glasses",
+      "USes": "par de lentes redondos",
+      "USfr": "monture intello"
+    }
+  },
+  {
+    "label": "258",
+    "locale": {
+      "CNzh": "方框眼镜",
+      "EUde": "Rechteckbrille",
+      "EUen": "square glasses",
+      "EUes": "gafa rectangular",
+      "EUfr": "monture rectangulaire",
+      "EUit": "montatura squadrata",
+      "EUnl": "rechthoekige bril",
+      "EUru": "прямоугольные очки",
+      "JPja": "スクエアめがね",
+      "KRko": "사각 안경",
+      "TWzh": "方框眼鏡",
+      "USen": "square glasses",
+      "USes": "par de lentes rectangulares",
+      "USfr": "monture rectangulaire"
+    }
+  },
+  {
+    "label": "259",
+    "locale": {
+      "CNzh": "爱心墨镜",
+      "EUde": "Herzchenbrille",
+      "EUen": "heart shades",
+      "EUes": "gafa corazón",
+      "EUfr": "monture cœur",
+      "EUit": "montatura a cuori",
+      "EUnl": "hartenzonnebril",
+      "EUru": "очки-сердечки",
+      "JPja": "ハートのサングラス",
+      "KRko": "하트 선글라스",
+      "TWzh": "愛心墨鏡",
+      "USen": "heart shades",
+      "USes": "par de lentes corazón",
+      "USfr": "monture cœur"
+    }
+  },
+  {
+    "label": "260",
+    "locale": {
+      "CNzh": "眉框眼镜",
+      "EUde": "Browline-Brille",
+      "EUen": "browline glasses",
+      "EUes": "gafa montura superior",
+      "EUfr": "monture browline",
+      "EUit": "montatura browline",
+      "EUnl": "browline-bril",
+      "EUru": "броулайнеры",
+      "JPja": "サーモントめがね",
+      "KRko": "하금테 안경",
+      "TWzh": "眉框眼鏡",
+      "USen": "browline glasses",
+      "USes": "par de lentes armazón alto",
+      "USfr": "monture papillon"
+    }
+  },
+  {
+    "label": "261",
+    "locale": {
+      "CNzh": "八角形眼镜",
+      "EUde": "Achteckbrille",
+      "EUen": "octagonal glasses",
+      "EUes": "gafa octogonal",
+      "EUfr": "monture octogonale",
+      "EUit": "montatura ottagonale",
+      "EUnl": "achthoekige bril",
+      "EUru": "восьмиугольные очки",
+      "JPja": "オクタゴンめがね",
+      "KRko": "팔각 안경",
+      "TWzh": "八角形眼鏡",
+      "USen": "octagonal glasses",
+      "USes": "par de lentes octogonales",
+      "USfr": "monture octogonale"
+    }
+  },
+  {
+    "label": "262",
+    "locale": {
+      "CNzh": "星形墨镜",
+      "EUde": "Sternenbrille",
+      "EUen": "star shades",
+      "EUes": "gafa estrella",
+      "EUfr": "monture étoiles",
+      "EUit": "montatura a stelle",
+      "EUnl": "sterrenzonnebril",
+      "EUru": "очки-звездочки",
+      "JPja": "ほしのサングラス",
+      "KRko": "별 선글라스",
+      "TWzh": "星形墨鏡",
+      "USen": "star shades",
+      "USes": "par de lentes estrella",
+      "USfr": "monture étoiles"
+    }
+  },
+  {
+    "label": "263",
+    "locale": {
+      "CNzh": "波士顿框眼镜",
+      "EUde": "Rundsonnenbrille",
+      "EUen": "round shades",
+      "EUes": "gafa de sol redonda",
+      "EUfr": "monture solaire ronde",
+      "EUit": "montatura con lenti scure",
+      "EUnl": "ronde zonnebril",
+      "EUru": "очки «Кошачий глаз»",
+      "JPja": "ボストンめがね",
+      "KRko": "둥근 선글라스",
+      "TWzh": "波士頓框眼鏡",
+      "USen": "round shades",
+      "USes": "par de lentes sol redondos",
+      "USfr": "monture solaire ronde"
+    }
+  },
+  {
+    "label": "264",
+    "locale": {
+      "CNzh": "三角形墨镜",
+      "EUde": "Dreiecksbrille",
+      "EUen": "triangle shades",
+      "EUes": "gafa de sol roquera",
+      "EUfr": "monture triangle",
+      "EUit": "montatura triangolare",
+      "EUnl": "driehoekige zonnebril",
+      "EUru": "треугольные очки",
+      "JPja": "さんかくサングラス",
+      "KRko": "삼각 선글라스",
+      "TWzh": "三角形墨鏡",
+      "USen": "triangle shades",
+      "USes": "par de lentes sol roqueros",
+      "USfr": "monture triangle"
+    }
+  },
+  {
+    "label": "277",
+    "locale": {
+      "CNzh": "双梁眼镜",
+      "EUde": "Doppelstegbrille",
+      "EUen": "double-bridge glasses",
+      "EUes": "gafa de doble puente",
+      "EUfr": "monture double pont",
+      "EUit": "montatura a doppio ponte",
+      "EUnl": "pilotenbril",
+      "EUru": "очки с двойным мостом",
+      "JPja": "ダブルブリッジめがね",
+      "KRko": "더블 브리지 안경",
+      "TWzh": "雙樑眼鏡",
+      "USen": "double-bridge glasses",
+      "USes": "par de lentes doble puente",
+      "USfr": "monture double pont"
+    }
+  },
+  {
+    "label": "286",
+    "locale": {
+      "CNzh": "瓶底眼镜",
+      "EUde": "Flaschenglasbrille",
+      "EUen": "glass-bottle glasses",
+      "EUes": "gafa de culo de vaso",
+      "EUfr": "monture double foyer",
+      "EUit": "montatura con lenti spesse",
+      "EUnl": "jampotbril",
+      "EUru": "очки с толстыми линзами",
+      "JPja": "ビンぞこめがね",
+      "KRko": "두꺼운 안경",
+      "TWzh": "瓶底眼鏡",
+      "USen": "glass-bottle glasses",
+      "USes": "par de lentes gruesos",
+      "USfr": "monture double foyer"
+    }
+  },
+  {
+    "label": "315",
+    "locale": {
+      "CNzh": "有裂痕的眼镜",
+      "EUde": "Kaputte Brille",
+      "EUen": "shattered glasses",
+      "EUes": "gafa rota",
+      "EUfr": "monture à verres brisés",
+      "EUit": "montatura con lenti rotte",
+      "EUnl": "kapotte bril",
+      "EUru": "очки с трещинами",
+      "JPja": "ヒビわれめがね",
+      "KRko": "금이 간 안경",
+      "TWzh": "有裂痕的眼鏡",
+      "USen": "shattered glasses",
+      "USes": "par de lentes rotos",
+      "USfr": "monture à verres brisés"
+    }
+  },
+  {
+    "label": "358",
+    "locale": {
+      "CNzh": "眼罩",
+      "EUde": "Augenmaske",
+      "EUen": "eye mask",
+      "EUes": "antifaz para dormir",
+      "EUfr": "masque repos",
+      "EUit": "mascherina per dormire",
+      "EUnl": "slaapmasker",
+      "EUru": "маска для сна",
+      "JPja": "アイマスク",
+      "KRko": "아이마스크",
+      "TWzh": "眼罩",
+      "USen": "eye mask",
+      "USes": "antifaz para dormir",
+      "USfr": "masque de sommeil"
+    }
+  },
+  {
+    "label": "375",
+    "locale": {
+      "CNzh": "口罩",
+      "EUde": "Mundschutz",
+      "EUen": "doctor's mask",
+      "EUes": "mascarilla quirúrgica",
+      "EUfr": "masque chirurgical",
+      "EUit": "mascherina medica",
+      "EUnl": "doktersmasker",
+      "EUru": "маска врача",
+      "JPja": "マスク",
+      "KRko": "마스크",
+      "TWzh": "口罩",
+      "USen": "doctor's mask",
+      "USes": "máscara cirujano",
+      "USfr": "masque chirurgical"
+    }
+  },
+  {
+    "label": "376",
+    "locale": {
+      "CNzh": "医疗眼罩",
+      "EUde": "Augenverband",
+      "EUen": "post-op patch",
+      "EUes": "parche médico",
+      "EUfr": "pansement oculaire",
+      "EUit": "benda postoperatoria",
+      "EUnl": "oogverband",
+      "EUru": "глазной пластырь",
+      "JPja": "がんたい",
+      "KRko": "안대",
+      "TWzh": "醫療眼罩",
+      "USen": "post-op patch",
+      "USes": "parche médico",
+      "USfr": "pansement oculaire"
+    }
+  },
+  {
+    "label": "377",
+    "locale": {
+      "CNzh": "滑雪风镜",
+      "EUde": "Skibrille",
+      "EUen": "ski goggles",
+      "EUes": "gafa de esquí",
+      "EUfr": "masque de ski",
+      "EUit": "maschera da sci",
+      "EUnl": "skibril",
+      "EUru": "лыжные очки",
+      "JPja": "スキーゴーグル",
+      "KRko": "스키 고글",
+      "TWzh": "滑雪風鏡",
+      "USen": "ski goggles",
+      "USes": "visor esquí",
+      "USfr": "lunettes de skis"
+    }
+  },
+  {
+    "label": "378",
+    "locale": {
+      "CNzh": "泳镜",
+      "EUde": "Schwimmbrille",
+      "EUen": "goggles",
+      "EUes": "gafa para piscina",
+      "EUfr": "monture piscine",
+      "EUit": "paio di occhialini da nuoto",
+      "EUnl": "zwembril",
+      "EUru": "очки для плавания",
+      "JPja": "すいえいゴーグル",
+      "KRko": "물안경",
+      "TWzh": "泳鏡",
+      "USen": "goggles",
+      "USes": "visor de natación",
+      "USfr": "monture piscine"
+    }
+  },
+  {
+    "label": "379",
+    "locale": {
+      "CNzh": "复古墨镜",
+      "EUde": "Retro-Sonnenbrille",
+      "EUen": "retro shades",
+      "EUes": "gafa retro",
+      "EUfr": "monture rétro irisée",
+      "EUit": "montatura rétro",
+      "EUnl": "retrozonnebril",
+      "EUru": "солнечные ретро-очки",
+      "JPja": "レトロなサングラス",
+      "KRko": "레트로 선글라스",
+      "TWzh": "復古墨鏡",
+      "USen": "retro shades",
+      "USes": "par de lentes retro",
+      "USfr": "monture rétro irisée"
+    }
+  },
+  {
+    "label": "380",
+    "locale": {
+      "CNzh": "单眼眼罩",
+      "EUde": "Augenklappe",
+      "EUen": "eye patch",
+      "EUes": "parche",
+      "EUfr": "cache-œil",
+      "EUit": "benda per occhio",
+      "EUnl": "ooglapje",
+      "EUru": "глазная повязка",
+      "JPja": "アイパッチ",
+      "KRko": "검정 안대",
+      "TWzh": "單眼眼罩",
+      "USen": "eye patch",
+      "USes": "parche",
+      "USfr": "cache-œil"
+    }
+  },
+  {
+    "label": "381",
+    "locale": {
+      "CNzh": "运动墨镜",
+      "EUde": "Sportbrille",
+      "EUen": "sporty shades",
+      "EUes": "gafa de sol esquí",
+      "EUfr": "monture sport",
+      "EUit": "montatura sportiva",
+      "EUnl": "sportieve zonnebril",
+      "EUru": "спортивные очки",
+      "JPja": "スポーツサングラス",
+      "KRko": "스포츠 선글라스",
+      "TWzh": "運動墨鏡",
+      "USen": "sporty shades",
+      "USes": "par de lentes sol esquí",
+      "USfr": "monture sport"
+    }
+  },
+  {
+    "label": "382",
+    "locale": {
+      "CNzh": "飞行员墨镜",
+      "EUde": "Pilotenbrille",
+      "EUen": "pilot shades",
+      "EUes": "gafa de sol piloto",
+      "EUfr": "monture pilote",
+      "EUit": "montatura a goccia",
+      "EUnl": "pilotenzonnebril",
+      "EUru": "авиаторы",
+      "JPja": "パイロットサングラス",
+      "KRko": "파일럿 선글라스",
+      "TWzh": "飛行員墨鏡",
+      "USen": "pilot shades",
+      "USes": "par de lentes sol piloto",
+      "USfr": "monture pilote"
+    }
+  },
+  {
+    "label": "383",
+    "locale": {
+      "CNzh": "琥珀眼镜",
+      "EUde": "Kunststoffbrille",
+      "EUen": "tortoise specs",
+      "EUes": "gafa de carey",
+      "EUfr": "monture tortue",
+      "EUit": "montatura tartarugata",
+      "EUnl": "bril met schildpadmontuur",
+      "EUru": "черепаховые очки",
+      "JPja": "べっこうめがね",
+      "KRko": "거북이 등껍질 안경",
+      "TWzh": "琥珀眼鏡",
+      "USen": "tortoise specs",
+      "USes": "par de lentes de carey",
+      "USfr": "monture tortue"
+    }
+  },
+  {
+    "label": "384",
+    "locale": {
+      "CNzh": "迷你墨镜",
+      "EUde": "Minisonnenbrille",
+      "EUen": "tiny shades",
+      "EUes": "gafa de sol mini",
+      "EUfr": "monture mini",
+      "EUit": "montatura piccola",
+      "EUnl": "kleine zonnebril",
+      "EUru": "мини-очки",
+      "JPja": "ちいさいサングラス",
+      "KRko": "작은 선글라스",
+      "TWzh": "迷你墨鏡",
+      "USen": "tiny shades",
+      "USes": "par de lentes sol mini",
+      "USfr": "monture mini"
+    }
+  },
+  {
+    "label": "385",
+    "locale": {
+      "CNzh": "单片眼镜",
+      "EUde": "Monokel",
+      "EUen": "monocle",
+      "EUes": "monóculo",
+      "EUfr": "monocle",
+      "EUit": "monocolo",
+      "EUnl": "monocle",
+      "EUru": "монокль",
+      "JPja": "モノクル",
+      "KRko": "모노클",
+      "TWzh": "單片眼鏡",
+      "USen": "monocle",
+      "USes": "monóculo",
+      "USfr": "monocle"
+    }
+  },
+  {
+    "label": "386",
+    "locale": {
+      "CNzh": "3D眼镜",
+      "EUde": "3D-Brille",
+      "EUen": "3D glasses",
+      "EUes": "gafa 3D",
+      "EUfr": "monture 3D",
+      "EUit": "paio di occhiali 3D",
+      "EUnl": "3⁠D-⁠bril",
+      "EUru": "3D-очки",
+      "JPja": "3Dめがね",
+      "KRko": "3D안경",
+      "TWzh": "3D眼鏡",
+      "USen": "3D glasses",
+      "USes": "par de lentes 3D",
+      "USfr": "monture 3D"
+    }
+  },
+  {
+    "label": "387",
+    "locale": {
+      "CNzh": "百叶窗墨镜",
+      "EUde": "Lamellenbrille",
+      "EUen": "ladder shades",
+      "EUes": "gafa de rejilla",
+      "EUfr": "monture stores",
+      "EUit": "montatura a tapparella",
+      "EUnl": "lamellenbril",
+      "EUru": "очки-решетки",
+      "JPja": "ブラインドサングラス",
+      "KRko": "블라인드 선글라스",
+      "TWzh": "百葉窗墨鏡",
+      "USen": "ladder shades",
+      "USes": "par de lentes rejilla",
+      "USfr": "monture stores"
+    }
+  },
+  {
+    "label": "397",
+    "locale": {
+      "CNzh": "猫鼻子道具",
+      "EUde": "Katzenschnauze",
+      "EUen": "cat nose",
+      "EUes": "hocico de gato",
+      "EUfr": "museau de chat",
+      "EUit": "naso da gatto",
+      "EUnl": "kattensnuit",
+      "EUru": "кошачья мордочка",
+      "JPja": "ネコのつけばな",
+      "KRko": "고양이 코",
+      "TWzh": "貓鼻子道具",
+      "USen": "cat nose",
+      "USes": "hocico de gato",
+      "USfr": "museau de chat"
+    }
+  },
+  {
+    "label": "405",
+    "locale": {
+      "CNzh": "小黄瓜面膜",
+      "EUde": "Gurkenmaske",
+      "EUen": "cucumber pack",
+      "EUes": "mascarilla de pepino",
+      "EUfr": "masque concombre",
+      "EUit": "maschera al cetriolo",
+      "EUnl": "komkommerschijfjes",
+      "EUru": "огуречная маска",
+      "JPja": "きゅうりパック",
+      "KRko": "오이 팩",
+      "TWzh": "小黃瓜面膜",
+      "USen": "cucumber pack",
+      "USes": "mascarilla pepino",
+      "USfr": "masque concombre"
+    }
+  },
+  {
+    "label": "406",
+    "locale": {
+      "CNzh": "圣诞老人胡子",
+      "EUde": "Weihnachtsmannbart",
+      "EUen": "Santa beard",
+      "EUes": "barba Papá Noel",
+      "EUfr": "barbe de père Noël",
+      "EUit": "barba da Babbo Natale",
+      "EUnl": "kerstmanbaard",
+      "EUru": "борода Санты",
+      "JPja": "サンタのヒゲ",
+      "KRko": "산타 수염",
+      "TWzh": "聖誕老人鬍子",
+      "USen": "Santa beard",
+      "USes": "barba Papá Noel",
+      "USfr": "barbe de père Noël"
+    }
+  },
+  {
+    "label": "407",
+    "locale": {
+      "CNzh": "鼻子道具",
+      "EUde": "Clownsnase",
+      "EUen": "fake nose",
+      "EUes": "nariz postiza",
+      "EUfr": "nez de clown",
+      "EUit": "naso finto",
+      "EUnl": "clownsneus",
+      "EUru": "нос клоуна",
+      "JPja": "つけばな",
+      "KRko": "가짜 코",
+      "TWzh": "鼻子道具",
+      "USen": "fake nose",
+      "USes": "nariz postiza",
+      "USfr": "nez de clown"
+    }
+  },
+  {
+    "label": "408",
+    "locale": {
+      "CNzh": "胡子眼镜",
+      "EUde": "Schnauzerbrille",
+      "EUen": "stache & glasses",
+      "EUes": "gafa de broma",
+      "EUfr": "kit rigolo",
+      "EUit": "montatura carnevalesca",
+      "EUnl": "bril met snor",
+      "EUru": "очки с усами",
+      "JPja": "ヒゲメガネ",
+      "KRko": "수염 안경",
+      "TWzh": "鬍子眼鏡",
+      "USen": "stache & glasses",
+      "USes": "par de lentes broma",
+      "USfr": "kit rigolo"
+    }
+  },
+  {
+    "label": "415",
+    "locale": {
+      "CNzh": "生日眼镜",
+      "EUde": "Geburtstagsbrille",
+      "EUen": "birthday shades",
+      "EUes": "gafa de cumpleaños",
+      "EUfr": "monture anniversaire",
+      "EUit": "montatura da compleanno",
+      "EUnl": "verjaardagszonnebril",
+      "EUru": "именинные очки",
+      "JPja": "バースデーサングラス",
+      "KRko": "생일 선글라스",
+      "TWzh": "生日墨鏡",
+      "USen": "birthday shades",
+      "USes": "par de lentes cumpleaños",
+      "USfr": "monture de fête"
+    }
+  },
+  {
+    "label": "417",
+    "locale": {
+      "CNzh": "面膜",
+      "EUde": "Kosmetikmaske",
+      "EUen": "facial mask",
+      "EUes": "mascarilla facial",
+      "EUfr": "masque de beauté",
+      "EUit": "maschera idratante",
+      "EUnl": "gezichtsmasker",
+      "EUru": "косметическая маска",
+      "JPja": "パック",
+      "KRko": "팩",
+      "TWzh": "面膜",
+      "USen": "facial mask",
+      "USes": "mascarilla facial",
+      "USfr": "masque de beauté"
+    }
+  },
+  {
+    "label": "418",
+    "locale": {
+      "CNzh": "搞笑眼镜",
+      "EUde": "Scherzbrille",
+      "EUen": "funny glasses",
+      "EUes": "gafa graciosa",
+      "EUfr": "monture farceuse",
+      "EUit": "montatura simpatica",
+      "EUnl": "fopbril",
+      "EUru": "забавные очки",
+      "JPja": "をかしなめがね",
+      "KRko": "코믹한 안경",
+      "TWzh": "搞笑眼鏡",
+      "USen": "funny glasses",
+      "USes": "par de lentes graciosos",
+      "USfr": "monture farceuse"
+    }
+  },
+  {
+    "label": "432",
+    "locale": {
+      "CNzh": "潜水镜附呼吸管",
+      "EUde": "Taucherbrille",
+      "EUen": "snorkel mask",
+      "EUes": "gafa de buceo",
+      "EUfr": "masque plongée",
+      "EUit": "maschera con boccaglio",
+      "EUnl": "duikbril",
+      "EUru": "маска для ныряния",
+      "JPja": "シュノーケル",
+      "KRko": "스노클",
+      "TWzh": "潛水鏡附呼吸管",
+      "USen": "snorkel mask",
+      "USes": "visor de buceo",
+      "USfr": "masque de plongée"
+    }
+  },
+  {
+    "label": "433",
+    "locale": {
+      "CNzh": "太空墨镜",
+      "EUde": "Cyberbrille",
+      "EUen": "cyber shades",
+      "EUes": "cibergafa",
+      "EUfr": "monture futuriste",
+      "EUit": "visore da ciberspazio",
+      "EUnl": "cyberzonnebril",
+      "EUru": "киберочки",
+      "JPja": "サイバーサングラス",
+      "KRko": "사이버 선글라스",
+      "TWzh": "太空墨鏡",
+      "USen": "cyber shades",
+      "USes": "par de ciberlentes",
+      "USfr": "monture futuriste"
+    }
+  },
+  {
+    "label": "441",
+    "locale": {
+      "CNzh": "舞会面具",
+      "EUde": "Maskenballmaske",
+      "EUen": "ballroom mask",
+      "EUes": "máscara de baile",
+      "EUfr": "masque de bal",
+      "EUit": "mascherina da ballo",
+      "EUnl": "simpel balmasker",
+      "EUru": "бальная маска",
+      "JPja": "ぶとうかいのかめん",
+      "KRko": "무도회 가면",
+      "TWzh": "舞會面具",
+      "USen": "ballroom mask",
+      "USes": "máscara de baile",
+      "USfr": "masque de bal"
+    }
+  },
+  {
+    "label": "463",
+    "locale": {
+      "CNzh": "下半框眼镜",
+      "EUde": "Halbrandbrille",
+      "EUen": "bottom-rimmed glasses",
+      "EUes": "gafa montura inferior",
+      "EUfr": "monture demi-lune",
+      "EUit": "montatura a mezzaluna",
+      "EUnl": "bril zonder bovenrand",
+      "EUru": "очки-половинки",
+      "JPja": "アンダーリムめがね",
+      "KRko": "역반무테 안경",
+      "TWzh": "下半框眼鏡",
+      "USen": "bottom-rimmed glasses",
+      "USes": "par de lentes armazón bajo",
+      "USfr": "monture demi-lune"
+    }
+  },
+  {
+    "label": "466",
+    "locale": {
+      "CNzh": "兔鼻子道具",
+      "EUde": "Hasenschnauze",
+      "EUen": "bunny nose",
+      "EUes": "hocico de conejito",
+      "EUfr": "museau de lapin",
+      "EUit": "naso da coniglio",
+      "EUnl": "konijnensnuit",
+      "EUru": "мордочка зайки",
+      "JPja": "ウサギのつけばな",
+      "KRko": "토끼 코",
+      "TWzh": "兔鼻子道具",
+      "USen": "bunny nose",
+      "USes": "hocico de conejito",
+      "USfr": "museau de lapin"
+    }
+  },
+  {
+    "label": "473",
+    "locale": {
+      "CNzh": "圆形墨镜",
+      "EUde": "Kunststoffsonnenbrille",
+      "EUen": "round tinted shades",
+      "EUes": "gafa de sol de carey",
+      "EUfr": "monture teintée ronde",
+      "EUit": "montatura rotonda fumé",
+      "EUnl": "halfgetinte zonnebril",
+      "EUru": "тонированные очки",
+      "JPja": "ラウンドサングラス",
+      "KRko": "얇은 테 둥근 선글라스",
+      "TWzh": "圓形墨鏡",
+      "USen": "round tinted shades",
+      "USes": "par de lentes de sol carey",
+      "USfr": "monture teintée ronde"
+    }
+  },
+  {
+    "label": "474",
+    "locale": {
+      "CNzh": "蝴蝶框墨镜",
+      "EUde": "Schmetterlingsbrille",
+      "EUen": "butterfly shades",
+      "EUes": "gafa de sol mariposa",
+      "EUfr": "monture solaire papillon",
+      "EUit": "montatura a farfalla",
+      "EUnl": "vlinderzonnebril",
+      "EUru": "очки-бабочки",
+      "JPja": "バタフライサングラス",
+      "KRko": "나비 선글라스",
+      "TWzh": "蝴蝶框墨鏡",
+      "USen": "butterfly shades",
+      "USes": "par de lentes sol mariposa",
+      "USfr": "monture solaire papillon"
+    }
+  },
+  {
+    "label": "475",
+    "locale": {
+      "CNzh": "椭圆形眼镜",
+      "EUde": "Eiformbrille",
+      "EUen": "oval glasses",
+      "EUes": "gafa ovalada",
+      "EUfr": "monture polymère ovale",
+      "EUit": "montatura tondeggiante",
+      "EUnl": "ovale bril",
+      "EUru": "овальные очки",
+      "JPja": "オーバルめがね",
+      "KRko": "타원 안경",
+      "TWzh": "橢圓形眼鏡",
+      "USen": "oval glasses",
+      "USes": "par de lentes ovalados",
+      "USfr": "monture polymère ovale"
+    }
+  },
+  {
+    "label": "484",
+    "locale": {
+      "CNzh": "像素墨镜",
+      "EUde": "Pixelbrille",
+      "EUen": "pixel shades",
+      "EUes": "gafa pixelada",
+      "EUfr": "monture pixel",
+      "EUit": "montatura pixellata",
+      "EUnl": "pixelzonnebril",
+      "EUru": "пиксельные очки",
+      "JPja": "ドットサングラス",
+      "KRko": "도트 선글라스",
+      "TWzh": "像素墨鏡",
+      "USen": "pixel shades",
+      "USes": "par de lentes pixelados",
+      "USfr": "monture pixel"
+    }
+  },
+  {
+    "label": "485",
+    "locale": {
+      "CNzh": "猪鼻子道具",
+      "EUde": "Schweinsnase",
+      "EUen": "pig nose",
+      "EUes": "hocico de cerdo",
+      "EUfr": "groin de cochon",
+      "EUit": "naso da maialino",
+      "EUnl": "varkenssnuit",
+      "EUru": "свиной пятачок",
+      "JPja": "ブタのつけばな",
+      "KRko": "돼지 코",
+      "TWzh": "豬鼻子道具",
+      "USen": "pig nose",
+      "USes": "hocico de cerdo",
+      "USfr": "nez de cochon"
+    }
+  },
+  {
+    "label": "487",
+    "locale": {
+      "CNzh": "防毒面具",
+      "EUde": "Gasmaske",
+      "EUen": "gas mask",
+      "EUes": "máscara de gas",
+      "EUfr": "masque à gaz",
+      "EUit": "maschera antigas",
+      "EUnl": "gasmasker",
+      "EUru": "противогаз",
+      "JPja": "ガスマスク",
+      "KRko": "가스 마스크",
+      "TWzh": "防毒面具",
+      "USen": "gas mask",
+      "USes": "máscara de gas",
+      "USfr": "masque à gaz"
+    }
+  },
+  {
+    "label": "489",
+    "locale": {
+      "CNzh": "饭粒",
+      "EUde": "Reisrest",
+      "EUen": "sticky rice",
+      "EUes": "resto de arroz",
+      "EUfr": "reste de riz",
+      "EUit": "riso appiccicoso",
+      "EUnl": "rijstkorrels",
+      "EUru": "зернышки риса",
+      "JPja": "ごはんつぶ",
+      "KRko": "밥풀",
+      "TWzh": "飯粒",
+      "USen": "sticky rice",
+      "USes": "resto de arroz",
+      "USfr": "reste de riz"
+    }
+  },
+  {
+    "label": "494",
+    "locale": {
+      "CNzh": "威尼斯面具",
+      "EUde": "Ballmaske",
+      "EUen": "masquerade mask",
+      "EUes": "antifaz baile de máscaras",
+      "EUfr": "loup",
+      "EUit": "mascherina festosa",
+      "EUnl": "elegant balmasker",
+      "EUru": "маскарадная маска",
+      "JPja": "ベネチアンマスク",
+      "KRko": "베네치안 마스크",
+      "TWzh": "威尼斯面具",
+      "USen": "masquerade mask",
+      "USes": "antifaz baile de máscaras",
+      "USfr": "masque mascarade"
+    }
+  },
+  {
+    "label": "496",
+    "locale": {
+      "CNzh": "木框眼镜",
+      "EUde": "Holzbrille",
+      "EUen": "wooden-frame glasses",
+      "EUes": "montura de madera",
+      "EUfr": "demi-monture en bois",
+      "EUit": "montatura di legno",
+      "EUnl": "bril met houten montuur",
+      "EUru": "очки в дерев. оправе",
+      "JPja": "ウッドフレームめがね",
+      "KRko": "나무 프레임 안경",
+      "TWzh": "木框眼鏡",
+      "USen": "wooden-frame glasses",
+      "USes": "par de lentes madera",
+      "USfr": "demi-monture en bois"
+    }
+  },
+  {
+    "label": "497",
+    "locale": {
+      "CNzh": "折叠口罩",
+      "EUde": "Inkognito-Maske",
+      "EUen": "privacy mask",
+      "EUes": "máscara anonimato",
+      "EUfr": "masque d'anonymat",
+      "EUit": "mascherina da incognito",
+      "EUnl": "mondmasker",
+      "EUru": "маска анонимности",
+      "JPja": "カラスマスク",
+      "KRko": "블랙 마스크",
+      "TWzh": "黑色口罩",
+      "USen": "privacy mask",
+      "USes": "máscara anonimato",
+      "USfr": "masque d'anonymat"
+    }
+  },
+  {
+    "label": "498",
+    "locale": {
+      "CNzh": "翘胡子",
+      "EUde": "Schnauzbart",
+      "EUen": "curly mustache",
+      "EUes": "bigote de artista",
+      "EUfr": "moustache élégante",
+      "EUit": "baffo arricciato",
+      "EUnl": "krulsnor",
+      "EUru": "закрученные усы",
+      "JPja": "まきヒゲ",
+      "KRko": "꼬부랑 수염",
+      "TWzh": "翹鬍子",
+      "USen": "curly mustache",
+      "USes": "bigote de artista",
+      "USfr": "moustache élégante"
+    }
+  },
+  {
+    "label": "502",
+    "locale": {
+      "CNzh": "山羊胡",
+      "EUde": "Ziegenbart",
+      "EUen": "goatee",
+      "EUes": "perilla",
+      "EUfr": "barbiche",
+      "EUit": "pizzetto",
+      "EUnl": "sik",
+      "EUru": "козлиная бородка",
+      "JPja": "アゴひげ",
+      "KRko": "턱수염",
+      "TWzh": "山羊鬍",
+      "USen": "goatee",
+      "USes": "barba de chivo",
+      "USfr": "barbiche"
+    }
+  },
+  {
+    "label": "503",
+    "locale": {
+      "CNzh": "创可贴",
+      "EUde": "Pflaster",
+      "EUen": "bandage",
+      "EUes": "par de tiritas",
+      "EUfr": "assortiment de pansements",
+      "EUit": "set di cerotti",
+      "EUnl": "pleisters",
+      "EUru": "пластырь",
+      "JPja": "ばんそうこう",
+      "KRko": "반창고",
+      "TWzh": "絆創帶",
+      "USen": "bandage",
+      "USes": "par de curitas",
+      "USfr": "assortiment de pansements"
+    }
+  },
+  {
+    "label": "504",
+    "locale": {
+      "CNzh": "小丑面具",
+      "EUde": "Clownsmaske",
+      "EUen": "jester's mask",
+      "EUes": "careta de bufón",
+      "EUfr": "masque de clown",
+      "EUit": "maschera da giullare",
+      "EUnl": "narrenmasker",
+      "EUru": "маска шута",
+      "JPja": "ピエロのかめん",
+      "KRko": "피에로 가면",
+      "TWzh": "小丑面具",
+      "USen": "jester's mask",
+      "USes": "careta de bufón",
+      "USfr": "masque de bouffon"
+    }
+  },
+  {
+    "label": "505",
+    "locale": {
+      "CNzh": "络腮胡",
+      "EUde": "Rundbart",
+      "EUen": "rounded beard",
+      "EUes": "barba perfilada",
+      "EUfr": "collier de barbe",
+      "EUit": "barba rifinita",
+      "EUnl": "ringbaard",
+      "EUru": "борода «Короб»",
+      "JPja": "ラウンドひげ",
+      "KRko": "둥근 수염",
+      "TWzh": "絡腮鬍",
+      "USen": "rounded beard",
+      "USes": "barba perfilada",
+      "USfr": "collier de barbe"
+    }
+  },
+  {
+    "label": "508",
+    "locale": {
+      "CNzh": "叶子",
+      "EUde": "Blatt",
+      "EUen": "leaf",
+      "EUes": "hoja",
+      "EUfr": "feuille",
+      "EUit": "foglia",
+      "EUnl": "blaadje",
+      "EUru": "листик",
+      "JPja": "はっぱ",
+      "KRko": "나뭇잎",
+      "TWzh": "葉子",
+      "USen": "leaf",
+      "USes": "hoja",
+      "USfr": "feuille"
+    }
+  },
+  {
+    "label": "509",
+    "locale": {
+      "CNzh": "水钻眼镜",
+      "EUde": "Strassbrille",
+      "EUen": "rhinestone shades",
+      "EUes": "gafa de sol con bisutería",
+      "EUfr": "monture strass",
+      "EUit": "montatura con strass",
+      "EUnl": "straszonnebril",
+      "EUru": "очки со стразами",
+      "JPja": "ラインストーンめがね",
+      "KRko": "라인스톤 안경",
+      "TWzh": "水鑽眼鏡",
+      "USen": "rhinestone shades",
+      "USes": "par de lentes diva",
+      "USfr": "monture strass"
+    }
+  },
+  {
+    "label": "510",
+    "locale": {
+      "CNzh": "英雄面具",
+      "EUde": "Superheldenmaske",
+      "EUen": "superhero mask",
+      "EUes": "antifaz",
+      "EUfr": "masque de héros",
+      "EUit": "maschera da eroe",
+      "EUnl": "superheldenmasker",
+      "EUru": "маска супергероя",
+      "JPja": "ヒーローマスク",
+      "KRko": "히어로 마스크",
+      "TWzh": "英雄面具",
+      "USen": "superhero mask",
+      "USes": "antifaz",
+      "USfr": "masque de héros"
+    }
+  },
+  {
+    "label": "511",
+    "locale": {
+      "CNzh": "蒸汽庞克护目镜",
+      "EUde": "Steampunkbrille",
+      "EUen": "steampunk glasses",
+      "EUes": "gafa steampunk",
+      "EUfr": "monture steampunk",
+      "EUit": "montatura steampunk",
+      "EUnl": "steampunkbril",
+      "EUru": "очки «Стимпанк»",
+      "JPja": "スチームパンクなゴーグル",
+      "KRko": "스팀펑크 안경",
+      "TWzh": "蒸汽龐克護目鏡",
+      "USen": "steampunk glasses",
+      "USes": "par de lentes steampunk",
+      "USfr": "monture steampunk"
+    }
+  },
+  {
+    "label": "614",
+    "locale": {
+      "CNzh": "虚拟实境头戴式显示器",
+      "EUde": "Cyberhelm",
+      "EUen": "HMD",
+      "EUes": "visor 3D",
+      "EUfr": "visiocasque",
+      "EUit": "visore",
+      "EUnl": "V⁠R-⁠bril",
+      "EUru": "цифровой шлем",
+      "JPja": "HMD",
+      "KRko": "HMD",
+      "TWzh": "虛擬實境頭戴式顯示器",
+      "USen": "HMD",
+      "USes": "visor 3D",
+      "USfr": "visiocasque"
+    }
+  },
+  {
+    "label": "615",
+    "locale": {
+      "CNzh": "夜视镜",
+      "EUde": "Nachtsichtbrille",
+      "EUen": "night-vision goggles",
+      "EUes": "gafa de visión nocturna",
+      "EUfr": "paire de jumelles IR",
+      "EUit": "visore notturno",
+      "EUnl": "nachtkijker",
+      "EUru": "очки ночного видения",
+      "JPja": "ナイトビジョン",
+      "KRko": "나이트 비전 고글",
+      "TWzh": "夜視鏡",
+      "USen": "night-vision goggles",
+      "USes": "visor nocturno",
+      "USfr": "lunettes de vision de nuit"
+    }
+  },
+  {
+    "label": "630",
+    "locale": {
+      "CNzh": "小狗鼻子道具",
+      "EUde": "Hundeschnauze",
+      "EUen": "dog nose",
+      "EUes": "hocico de perro",
+      "EUfr": "museau de chien",
+      "EUit": "naso da cane",
+      "EUnl": "hondensnuit",
+      "EUru": "собачья мордочка",
+      "JPja": "イヌのつけばな",
+      "KRko": "강아지 코",
+      "TWzh": "小狗鼻子道具",
+      "USen": "dog nose",
+      "USes": "hocico de perro",
+      "USfr": "museau de chien"
+    }
+  },
+  {
+    "label": "819",
+    "locale": {
+      "CNzh": "糖果色骷髅面具",
+      "EUde": "Calavera-Maske",
+      "EUen": "candy-skull mask",
+      "EUes": "máscara de calavera dulce",
+      "EUfr": "masque calavera fleuri",
+      "EUit": "maschera calavera dolce",
+      "EUnl": "suikerschedelmasker",
+      "EUru": "маска «Сахарный череп»",
+      "JPja": "スカルキャンディマスク",
+      "KRko": "슈가스컬 가면",
+      "TWzh": "骷髏糖面具",
+      "USen": "candy-skull mask",
+      "USes": "máscara calaverita",
+      "USfr": "masque calavera fleuri"
+    }
+  },
+  {
+    "label": "856",
+    "locale": {
+      "CNzh": "泡泡口香糖",
+      "EUde": "Kaugummiblase",
+      "EUen": "bubblegum",
+      "EUes": "pompa de chicle",
+      "EUfr": "bulle de chewing-gum",
+      "EUit": "gomma con palloncino",
+      "EUnl": "kauwgombel",
+      "EUru": "жвачка",
+      "JPja": "ふうせんガム",
+      "KRko": "풍선껌",
+      "TWzh": "泡泡口香糖",
+      "USen": "bubblegum",
+      "USes": "globo de chicle",
+      "USfr": "boule de gomme"
+    }
+  },
+  {
+    "label": "857",
+    "locale": {
+      "CNzh": "花朵墨镜",
+      "EUde": "Blumensonnenbrille",
+      "EUen": "flower sunglasses",
+      "EUes": "gafa de sol floral",
+      "EUfr": "monture solaire fleurs",
+      "EUit": "montatura a fiori",
+      "EUnl": "bloemenzonnebril",
+      "EUru": "очки-цветы",
+      "JPja": "フラワーサングラス",
+      "KRko": "플라워 선글라스",
+      "TWzh": "花朵墨鏡",
+      "USen": "flower sunglasses",
+      "USes": "par de lentes de sol florales",
+      "USfr": "monture solaire fleurs"
+    }
+  },
+  {
+    "label": "865",
+    "locale": {
+      "CNzh": "吸管眼镜",
+      "EUde": "Strohhalmbrille",
+      "EUen": "drinking-straw glasses",
+      "EUes": "gafa pajita de refresco",
+      "EUfr": "monture paille",
+      "EUit": "montatura a cannuccia",
+      "EUnl": "rietjesbril",
+      "EUru": "очки из трубочки",
+      "JPja": "ストローメガネ",
+      "KRko": "빨대 안경",
+      "TWzh": "吸管眼鏡",
+      "USen": "drinking-straw glasses",
+      "USes": "par de lentes tubito",
+      "USfr": "monture paille"
+    }
+  },
+  {
+    "label": "899",
+    "locale": {
+      "CNzh": "鼻水",
+      "EUde": "Rotznase",
+      "EUen": "nose drip",
+      "EUes": "gota de moco",
+      "EUfr": "goutte de morve",
+      "EUit": "goccia di moccio",
+      "EUnl": "snottebel",
+      "EUru": "сопля",
+      "JPja": "はなみず",
+      "KRko": "콧물",
+      "TWzh": "鼻水",
+      "USen": "nose drip",
+      "USes": "gota de moco",
+      "USfr": "goutte de morve"
+    }
+  },
+  {
+    "label": "904",
+    "locale": {
+      "CNzh": "沾在嘴边的东西",
+      "EUde": "Essensrest",
+      "EUen": "food mess",
+      "EUes": "resto de pasta",
+      "EUfr": "vestige de repas",
+      "EUit": "resto di cibo",
+      "EUnl": "etensresten",
+      "EUru": "остатки еды",
+      "JPja": "たべこぼし",
+      "KRko": "음식 부스러기",
+      "TWzh": "沾到嘴邊的東西",
+      "USen": "food mess",
+      "USes": "resto de pasta",
+      "USfr": "vestige de repas"
+    }
+  },
+  {
+    "label": "921",
+    "locale": {
+      "CNzh": "反射镜",
+      "EUde": "Arztspiegel",
+      "EUen": "reflector",
+      "EUes": "espejo médico",
+      "EUfr": "réflecteur de dentiste",
+      "EUit": "specchio ortodontico",
+      "EUnl": "oogspiegel",
+      "EUru": "лобный рефлектор",
+      "JPja": "はんしゃきょう",
+      "KRko": "반사경",
+      "TWzh": "反射鏡",
+      "USen": "reflector",
+      "USes": "espejo médico",
+      "USfr": "réflecteur de dentiste"
+    }
+  },
+  {
+    "label": "922",
+    "locale": {
+      "CNzh": "皮口罩",
+      "EUde": "Kunstledermaske",
+      "EUen": "pleather mask",
+      "EUes": "máscara con tachuelas",
+      "EUfr": "masque en similicuir",
+      "EUit": "mascherina di ecopelle",
+      "EUnl": "kunstleren masker",
+      "EUru": "маска из кожзама",
+      "JPja": "レザーマスク",
+      "KRko": "가죽 마스크",
+      "TWzh": "皮面具",
+      "USen": "pleather mask",
+      "USes": "máscara de cuero sintético",
+      "USfr": "masque en similicuir"
+    }
+  },
+  {
+    "label": "937",
+    "locale": {
+      "CNzh": "化装舞会面具",
+      "EUde": "Elegantmaske",
+      "EUen": "elegant masquerade mask",
+      "EUes": "antifaz elegante",
+      "EUfr": "loup élégant",
+      "EUit": "maschera decorata",
+      "EUnl": "chic balmasker",
+      "EUru": "изысканная маска",
+      "JPja": "マスカレードなマスク",
+      "KRko": "가장무도회 가면",
+      "TWzh": "化裝舞會面具",
+      "USen": "elegant masquerade mask",
+      "USes": "antifaz elegante",
+      "USfr": "loup élégant"
+    }
+  }
+]

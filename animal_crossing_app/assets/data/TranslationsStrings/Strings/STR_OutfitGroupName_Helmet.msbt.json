@@ -1,0 +1,1503 @@
+﻿[
+  {
+    "label": "1008",
+    "locale": {
+      "CNzh": "公主假发",
+      "EUde": "Diadem-Perücke",
+      "EUen": "tiara hair",
+      "EUes": "diadema de princesa",
+      "EUfr": "diadème",
+      "EUit": "diadema",
+      "EUnl": "tiarapruik",
+      "EUru": "парик с диадемой",
+      "JPja": "おひめさま",
+      "KRko": "공주님 머리",
+      "TWzh": "公主假髮",
+      "USen": "tiara hair",
+      "USes": "diadema de princesa",
+      "USfr": "diadème"
+    }
+  },
+  {
+    "label": "1009",
+    "locale": {
+      "CNzh": "发带",
+      "EUde": "Haarband",
+      "EUen": "headband",
+      "EUes": "cinta para el pelo",
+      "EUfr": "bandeau",
+      "EUit": "fascia",
+      "EUnl": "haarbandpruik",
+      "EUru": "парик с ленточкой",
+      "JPja": "ヘアターバン",
+      "KRko": "헤어밴드",
+      "TWzh": "髮帶",
+      "USen": "headband",
+      "USes": "cinta para el cabello",
+      "USfr": "bandeau"
+    }
+  },
+  {
+    "label": "1010",
+    "locale": {
+      "CNzh": "金币头饰",
+      "EUde": "Münzen-Stirnband",
+      "EUen": "coin headpiece",
+      "EUes": "gorra de monedas",
+      "EUfr": "parure de sultane",
+      "EUit": "copricapo con monete",
+      "EUnl": "muntenpruik",
+      "EUru": "парик с монетками",
+      "JPja": "コインヘッドピース",
+      "KRko": "코인 헤드피스",
+      "TWzh": "金幣頭飾",
+      "USen": "coin headpiece",
+      "USes": "gorra de monedas",
+      "USfr": "parure de sultane"
+    }
+  },
+  {
+    "label": "1011",
+    "locale": {
+      "CNzh": "小辫子",
+      "EUde": "Khan-Perücke",
+      "EUen": "pigtail",
+      "EUes": "coleta mongola",
+      "EUfr": "natte",
+      "EUit": "codino cinese",
+      "EUnl": "paardenstaart",
+      "EUru": "парик-косичка",
+      "JPja": "べんぱつ",
+      "KRko": "변발",
+      "TWzh": "小辮子",
+      "USen": "pigtail",
+      "USes": "cola de caballo",
+      "USfr": "natte"
+    }
+  },
+  {
+    "label": "1012",
+    "locale": {
+      "CNzh": "视觉系假发",
+      "EUde": "Visual-Kei-Perücke",
+      "EUen": "visual-punk wig",
+      "EUes": "peluca punk",
+      "EUfr": "perruque visual kei",
+      "EUit": "parrucca visual kei",
+      "EUnl": "Japanse punkpruik",
+      "EUru": "панковский парик",
+      "JPja": "ヴィジュアルけいウィッグ",
+      "KRko": "록 밴드 스타일 가발",
+      "TWzh": "視覺系假髮",
+      "USen": "visual-punk wig",
+      "USes": "peluca punk",
+      "USfr": "perruque visual kei"
+    }
+  },
+  {
+    "label": "1040",
+    "locale": {
+      "CNzh": "雪人头套",
+      "EUde": "Schneemannhut",
+      "EUen": "snowperson head",
+      "EUes": "casco de Copito",
+      "EUfr": "cagoule neige",
+      "EUit": "testa da pupazzo di neve",
+      "EUnl": "sneeuwpopkop",
+      "EUru": "шапка снеговика",
+      "JPja": "ゆきだるまのぼうし",
+      "KRko": "눈사람 모자",
+      "TWzh": "雪人帽子",
+      "USen": "snowperson head",
+      "USes": "casco de Copito",
+      "USfr": "cagoule neige"
+    }
+  },
+  {
+    "label": "1113",
+    "locale": {
+      "CNzh": "星星头套",
+      "EUde": "Sternenkapuze",
+      "EUen": "star head",
+      "EUes": "casco estrella",
+      "EUfr": "cagoule étoile",
+      "EUit": "cappuccio stella",
+      "EUnl": "sterrenkop",
+      "EUru": "звездный шлем",
+      "JPja": "おほしさまのあたま",
+      "KRko": "별님 머리",
+      "TWzh": "星星頭套",
+      "USen": "star head",
+      "USes": "casco estrella",
+      "USfr": "cagoule étoile"
+    }
+  },
+  {
+    "label": "1265",
+    "locale": {
+      "CNzh": "魔法学校兜帽",
+      "EUde": "Zauberlehrlingskapuze",
+      "EUen": "magic-academy hood",
+      "EUes": "capucha escuela de magia",
+      "EUfr": "capuche école de magie",
+      "EUit": "cappuccio scuola di magia",
+      "EUnl": "tovenaarsleerlingkap",
+      "EUru": "капюшон академии магов",
+      "JPja": "まほうスクールのフード",
+      "KRko": "마법 학교 후드",
+      "TWzh": "魔法學校兜帽",
+      "USen": "magic-academy hood",
+      "USes": "capucha escuela de magia",
+      "USfr": "capuche école de magie"
+    }
+  },
+  {
+    "label": "1266",
+    "locale": {
+      "CNzh": "南瓜王头套",
+      "EUde": "Jakob-Maske",
+      "EUen": "Jack's face",
+      "EUes": "máscara de Soponcio",
+      "EUfr": "masque Jacqu'O",
+      "EUit": "maschera di Fifonio",
+      "EUnl": "masker van Jack",
+      "EUru": "шлем Джека",
+      "JPja": "パンプキングフェイス",
+      "KRko": "펌킹 페이스",
+      "TWzh": "南瓜王面孔",
+      "USen": "Jack's face",
+      "USes": "máscara de Soponcio",
+      "USfr": "masque Jacqu'O"
+    }
+  },
+  {
+    "label": "1282",
+    "locale": {
+      "CNzh": "My Melody头巾",
+      "EUde": "My-Melody-Kapuze",
+      "EUen": "My Melody hood",
+      "EUes": "capucha My Melody",
+      "EUfr": "capuche My Melody",
+      "EUit": "cappuccio My Melody",
+      "EUnl": "My Melody-kap",
+      "EUru": "капюшон My Melody",
+      "JPja": "マイメロディなずきん",
+      "KRko": "마이멜로디 두건",
+      "TWzh": "My Melody頭巾",
+      "USen": "My Melody hood",
+      "USes": "capucha My Melody",
+      "USfr": "capuchon My Melody"
+    }
+  },
+  {
+    "label": "1288",
+    "locale": {
+      "CNzh": "Pompompurin头",
+      "EUde": "Pompompurin-Hut",
+      "EUen": "Pompompurin hat",
+      "EUes": "gorro Pompompurin",
+      "EUfr": "perruque Pompompurin",
+      "EUit": "cappello Pompompurin",
+      "EUnl": "Pompompurin-pruik",
+      "EUru": "берет Pompompurin",
+      "JPja": "ポムポムプリンなあたま",
+      "KRko": "폼폼푸린 머리",
+      "TWzh": "Pompompurin頭",
+      "USen": "Pompompurin hat",
+      "USes": "gorro Pompompurin",
+      "USfr": "perruque Pompompurin"
+    }
+  },
+  {
+    "label": "1304",
+    "locale": {
+      "CNzh": "Cinnamoroll帽子",
+      "EUde": "Cinnamoroll-Hut",
+      "EUen": "Cinnamoroll hat",
+      "EUes": "gorro Cinnamoroll",
+      "EUfr": "chapeau Cinnamoroll",
+      "EUit": "cappello Cinnamoroll",
+      "EUnl": "Cinnamoroll-muts",
+      "EUru": "шапочка Cinnamoroll",
+      "JPja": "シナモロールなぼうし",
+      "KRko": "시나모롤 모자",
+      "TWzh": "Cinnamoroll帽子",
+      "USen": "Cinnamoroll hat",
+      "USes": "gorro Cinnamoroll",
+      "USfr": "chapeau Cinnamoroll"
+    }
+  },
+  {
+    "label": "1312",
+    "locale": {
+      "CNzh": "保暖耳罩针织帽",
+      "EUde": "Ohrenschützer-Strickmütze",
+      "EUen": "knit cap with earmuffs",
+      "EUes": "gorro de punto y orejeras",
+      "EUfr": "bonnet avec cache-oreilles",
+      "EUit": "berretto con paraorecchi",
+      "EUnl": "gebreide oorflapmuts",
+      "EUru": "вязаная шапка с ушами",
+      "JPja": "みみあてつきニットぼう",
+      "KRko": "귀마개와 니트 모자",
+      "TWzh": "保暖耳罩針織帽",
+      "USen": "knit cap with earmuffs",
+      "USes": "gorro tejido y orejeras",
+      "USfr": "tuque avec cache-oreilles"
+    }
+  },
+  {
+    "label": "1343",
+    "locale": {
+      "CNzh": "阿龟面具",
+      "EUde": "Okame-Maske",
+      "EUen": "okame mask",
+      "EUes": "máscara de Okame",
+      "EUfr": "masque okame",
+      "EUit": "maschera da Okame",
+      "EUnl": "okame-masker",
+      "EUru": "маска окамэ",
+      "JPja": "おかめのおめん",
+      "KRko": "복을 부르는 가면",
+      "TWzh": "阿龜面具",
+      "USen": "okame mask",
+      "USes": "máscara de Okame",
+      "USfr": "masque okame"
+    }
+  },
+  {
+    "label": "1348",
+    "locale": {
+      "CNzh": "光藓头套",
+      "EUde": "Leuchtmooshaube",
+      "EUen": "glowing-moss hood",
+      "EUes": "capucha musgo luminoso",
+      "EUfr": "capuche schistostega",
+      "EUit": "cappuccio muschio lumin.",
+      "EUnl": "lichtmoskap",
+      "EUru": "капюшон из светящ. мха",
+      "JPja": "ヒカリゴケのかぶりもの",
+      "KRko": "빛이끼 모자",
+      "TWzh": "光蘚頭套",
+      "USen": "glowing-moss hood",
+      "USes": "capucha musgo luminoso",
+      "USfr": "capuche mousse luisante"
+    }
+  },
+  {
+    "label": "1374",
+    "locale": {
+      "CNzh": "角隐",
+      "EUde": "Hochzeitshaube",
+      "EUen": "tsunokakushi",
+      "EUes": "tocado tsunokakushi",
+      "EUfr": "tsunokakushi",
+      "EUit": "tsunokakushi",
+      "EUnl": "tsunokakushi",
+      "EUru": "косынка цунокакуси",
+      "JPja": "つのかくし",
+      "KRko": "일본 전통 신부모자",
+      "TWzh": "角隱",
+      "USen": "tsunokakushi",
+      "USes": "tocado tsunokakushi",
+      "USfr": "tsunokakushi"
+    }
+  },
+  {
+    "label": "1400",
+    "locale": {
+      "CNzh": "卫生帽",
+      "EUde": "Hygienehaube",
+      "EUen": "hygiene-safety hood",
+      "EUes": "capucha higiénica",
+      "EUfr": "cagoule stérile",
+      "EUit": "cappuccio sanitario",
+      "EUnl": "hygiënekap",
+      "EUru": "спецкапюшон",
+      "JPja": "えいせいぼう",
+      "KRko": "위생모",
+      "TWzh": "衛生帽",
+      "USen": "hygiene-safety hood",
+      "USes": "capucha higiénica",
+      "USfr": "cagoule stérile"
+    }
+  },
+  {
+    "label": "1439",
+    "locale": {
+      "CNzh": "蝴蝶结假发",
+      "EUde": "Schleifenperücke",
+      "EUen": "wig with ribbon",
+      "EUes": "peluca con maxilazo",
+      "EUfr": "perruque à ruban",
+      "EUit": "parrucca con fiocco",
+      "EUnl": "pruik met strik",
+      "EUru": "парик с бантом",
+      "JPja": "リボンつきウィッグ",
+      "KRko": "리본 가발",
+      "TWzh": "蝴蝶結假髮",
+      "USen": "wig with ribbon",
+      "USes": "peluca con maxilazo",
+      "USfr": "perruque à ruban"
+    }
+  },
+  {
+    "label": "1440",
+    "locale": {
+      "CNzh": "庞克头假发",
+      "EUde": "Punk-Perücke",
+      "EUen": "punk hair wig",
+      "EUes": "peluca cresta punk",
+      "EUfr": "perruque punk",
+      "EUit": "parrucca punk",
+      "EUnl": "punkhaarpruik",
+      "EUru": "парик панка",
+      "JPja": "パンクヘアーなウィッグ",
+      "KRko": "펑크 스타일 가발",
+      "TWzh": "龐克頭假髮",
+      "USen": "punk hair wig",
+      "USes": "peluca cresta punk",
+      "USfr": "perruque punk"
+    }
+  },
+  {
+    "label": "1451",
+    "locale": {
+      "CNzh": "看似强悍的头盔",
+      "EUde": "Kraftprotzhelm",
+      "EUen": "tough helmet",
+      "EUes": "casco bárbaro",
+      "EUfr": "casque à cornes",
+      "EUit": "casco con corna",
+      "EUnl": "stevige helm",
+      "EUru": "серьезный шлем",
+      "JPja": "つよそうなかぶと",
+      "KRko": "강해 보이는 투구",
+      "TWzh": "看似強悍的頭盔",
+      "USen": "tough helmet",
+      "USes": "casco bárbaro",
+      "USfr": "casque à cornes"
+    }
+  },
+  {
+    "label": "674",
+    "locale": {
+      "CNzh": "小偷头巾",
+      "EUde": "Wanderkopftuch",
+      "EUen": "headkerchief",
+      "EUes": "pañuelo anudado en la nariz",
+      "EUfr": "foulard vert",
+      "EUit": "fazzoletto giapponese",
+      "EUnl": "hoofddoek",
+      "EUru": "платок",
+      "JPja": "ほっかむり",
+      "KRko": "뒤집어쓴 보자기",
+      "TWzh": "小偷頭巾",
+      "USen": "headkerchief",
+      "USes": "pañuelo anudado en la nariz",
+      "USfr": "foulard vert"
+    }
+  },
+  {
+    "label": "675",
+    "locale": {
+      "CNzh": "童话风头巾",
+      "EUde": "Märchenkapuze",
+      "EUen": "fairy-tale hood",
+      "EUes": "caperuza de cuento",
+      "EUfr": "chaperon féerique",
+      "EUit": "cappuccio fiabesco",
+      "EUnl": "sprookjeskapje",
+      "EUru": "сказочный капюшон",
+      "JPja": "メルヘンなずきん",
+      "KRko": "메르헨 두건",
+      "TWzh": "童話風頭巾",
+      "USen": "fairy-tale hood",
+      "USes": "caperuza de cuento",
+      "USfr": "capuche de petit chaperon"
+    }
+  },
+  {
+    "label": "676",
+    "locale": {
+      "CNzh": "木乃伊头套",
+      "EUde": "Mumienmaske",
+      "EUen": "mummy mask",
+      "EUes": "careta de momia",
+      "EUfr": "masque de momie",
+      "EUit": "maschera da mummia",
+      "EUnl": "mummiemasker",
+      "EUru": "маска мумии",
+      "JPja": "ミイラのかぶりもの",
+      "KRko": "미라 마스크",
+      "TWzh": "木乃伊頭套",
+      "USen": "mummy mask",
+      "USes": "careta de momia",
+      "USfr": "masque de momie"
+    }
+  },
+  {
+    "label": "677",
+    "locale": {
+      "CNzh": "兔子头套",
+      "EUde": "Hasenkapuze",
+      "EUen": "bunny hood",
+      "EUes": "gorro de conejito",
+      "EUfr": "cagoule lapin",
+      "EUit": "cappello da coniglio",
+      "EUnl": "konijnenmuts",
+      "EUru": "шапка зайки",
+      "JPja": "ウサギのかぶりもの",
+      "KRko": "토끼 모자",
+      "TWzh": "兔子頭套",
+      "USen": "bunny hood",
+      "USes": "gorro de conejito",
+      "USfr": "cagoule lapin"
+    }
+  },
+  {
+    "label": "678",
+    "locale": {
+      "CNzh": "猫头套",
+      "EUde": "Katzenmütze",
+      "EUen": "cat cap",
+      "EUes": "gorro de gato",
+      "EUfr": "cagoule chat",
+      "EUit": "cappello da gatto",
+      "EUnl": "kattenmuts",
+      "EUru": "шапка кошки",
+      "JPja": "ネコのかぶりもの",
+      "KRko": "고양이 모자",
+      "TWzh": "貓頭套",
+      "USen": "cat cap",
+      "USes": "gorro de gato",
+      "USfr": "cagoule chat"
+    }
+  },
+  {
+    "label": "679",
+    "locale": {
+      "CNzh": "全罩式头套",
+      "EUde": "Skimaske",
+      "EUen": "ski mask",
+      "EUes": "pasamontañas",
+      "EUfr": "cagoule",
+      "EUit": "passamontagna",
+      "EUnl": "bivakmuts",
+      "EUru": "лыжная маска",
+      "JPja": "めだしぼう",
+      "KRko": "복면 마스크",
+      "TWzh": "全罩式頭套",
+      "USen": "ski mask",
+      "USes": "pasamontañas",
+      "USfr": "cagoule"
+    }
+  },
+  {
+    "label": "680",
+    "locale": {
+      "CNzh": "骸骨头套",
+      "EUde": "Skelettkapuze",
+      "EUen": "skeleton hood",
+      "EUes": "capucha calavera",
+      "EUfr": "masque de squelette",
+      "EUit": "copricapo scheletro",
+      "EUnl": "schedelmuts",
+      "EUru": "шапка скелета",
+      "JPja": "ガイコツのかぶりもの",
+      "KRko": "해골 모자",
+      "TWzh": "骸骨頭套",
+      "USen": "skeleton hood",
+      "USes": "capucha calavera",
+      "USfr": "masque de squelette"
+    }
+  },
+  {
+    "label": "682",
+    "locale": {
+      "CNzh": "熊头套",
+      "EUde": "Bärenmütze",
+      "EUen": "bear cap",
+      "EUes": "gorro de oso",
+      "EUfr": "cagoule ours",
+      "EUit": "cappello da orso",
+      "EUnl": "berenmuts",
+      "EUru": "шапка медведя",
+      "JPja": "クマのかぶりもの",
+      "KRko": "곰 모자",
+      "TWzh": "熊頭套",
+      "USen": "bear cap",
+      "USes": "gorro de oso",
+      "USfr": "cagoule ours"
+    }
+  },
+  {
+    "label": "683",
+    "locale": {
+      "CNzh": "河童头套",
+      "EUde": "Käpten-Mütze",
+      "EUen": "kappa cap",
+      "EUes": "gorro de kappa",
+      "EUfr": "cagoule kappa",
+      "EUit": "cappello da kappa",
+      "EUnl": "kappa-muts",
+      "EUru": "шапка каппы",
+      "JPja": "カッパのおさら",
+      "KRko": "거북이 모자",
+      "TWzh": "河童頭頂",
+      "USen": "kappa cap",
+      "USes": "gorro de kappa",
+      "USfr": "cagoule kappa"
+    }
+  },
+  {
+    "label": "686",
+    "locale": {
+      "CNzh": "铁甲头盔",
+      "EUde": "Ritterhelm",
+      "EUen": "knight's helmet",
+      "EUes": "yelmo",
+      "EUfr": "casque de chevalier",
+      "EUit": "elmo medievale",
+      "EUnl": "ridderhelm",
+      "EUru": "рыцарский шлем",
+      "JPja": "アイアンアーマーヘルメット",
+      "KRko": "아이언 아머 헬멧",
+      "TWzh": "鐵甲面罩",
+      "USen": "knight's helmet",
+      "USes": "yelmo",
+      "USfr": "casque de chevalier"
+    }
+  },
+  {
+    "label": "687",
+    "locale": {
+      "CNzh": "青蛙头套",
+      "EUde": "Froschmütze",
+      "EUen": "frog cap",
+      "EUes": "gorro de rana",
+      "EUfr": "cagoule grenouille",
+      "EUit": "cappello da rana",
+      "EUnl": "kikkermuts",
+      "EUru": "шапка лягушки",
+      "JPja": "カエルのかぶりもの",
+      "KRko": "개구리 모자",
+      "TWzh": "青蛙頭套",
+      "USen": "frog cap",
+      "USes": "gorro de rana",
+      "USfr": "cagoule grenouille"
+    }
+  },
+  {
+    "label": "691",
+    "locale": {
+      "CNzh": "鬼面具",
+      "EUde": "Ogermaske",
+      "EUen": "horned-ogre mask",
+      "EUes": "careta de ogro",
+      "EUfr": "masque d'ogre cornu",
+      "EUit": "maschera da orco",
+      "EUnl": "gehoornd boemanmasker",
+      "EUru": "маска великана-людоеда",
+      "JPja": "オニのおめん",
+      "KRko": "도깨비 가면",
+      "TWzh": "鬼面具",
+      "USen": "horned-ogre mask",
+      "USes": "careta de ogro",
+      "USfr": "masque d'ogre cornu"
+    }
+  },
+  {
+    "label": "692",
+    "locale": {
+      "CNzh": "金甲头盔",
+      "EUde": "Goldhelm",
+      "EUen": "gold helmet",
+      "EUes": "yelmo dorado",
+      "EUfr": "casque en or",
+      "EUit": "elmo d'oro",
+      "EUnl": "gouden helm",
+      "EUru": "золотой шлем",
+      "JPja": "ゴールデンアーマーヘルメット",
+      "KRko": "골든 아머 헬멧",
+      "TWzh": "金頭盔",
+      "USen": "gold helmet",
+      "USes": "yelmo dorado",
+      "USfr": "casque en or"
+    }
+  },
+  {
+    "label": "697",
+    "locale": {
+      "CNzh": "美式足球头盔",
+      "EUde": "Football-Helm",
+      "EUen": "football helmet",
+      "EUes": "casco de rugby",
+      "EUfr": "casque de football",
+      "EUit": "casco da football",
+      "EUnl": "Americanfootballhelm",
+      "EUru": "футбольный шлем",
+      "JPja": "アメフトヘルメット",
+      "KRko": "럭비 헬멧",
+      "TWzh": "美式足球安全帽",
+      "USen": "football helmet",
+      "USes": "casco de rugby",
+      "USfr": "casque de football"
+    }
+  },
+  {
+    "label": "698",
+    "locale": {
+      "CNzh": "消防员头盔",
+      "EUde": "Feuerwehrhut",
+      "EUen": "firefighter's hat",
+      "EUes": "casco de bombero",
+      "EUfr": "casque de pompier",
+      "EUit": "elmo da pompiere",
+      "EUnl": "brandweerhelm",
+      "EUru": "шлем пожарного",
+      "JPja": "しょうぼうしのぼうし",
+      "KRko": "소방관 모자",
+      "TWzh": "消防員帽子",
+      "USen": "firefighter's hat",
+      "USes": "casco de bombero",
+      "USfr": "casque de pompier"
+    }
+  },
+  {
+    "label": "699",
+    "locale": {
+      "CNzh": "焊接面罩",
+      "EUde": "Schweißmaske",
+      "EUen": "welding mask",
+      "EUes": "máscara de soldar",
+      "EUfr": "masque de soudure",
+      "EUit": "maschera da saldatore",
+      "EUnl": "lasmasker",
+      "EUru": "шлем сварщика",
+      "JPja": "ようせつマスク",
+      "KRko": "용접 마스크",
+      "TWzh": "焊接面罩",
+      "USen": "welding mask",
+      "USes": "máscara de soldar",
+      "USfr": "masque de soudure"
+    }
+  },
+  {
+    "label": "702",
+    "locale": {
+      "CNzh": "头盔",
+      "EUde": "Samuraihelm",
+      "EUen": "samurai helmet",
+      "EUes": "casco de samurái",
+      "EUfr": "casque de samouraï",
+      "EUit": "elmo da samurai",
+      "EUnl": "samoeraihelm",
+      "EUru": "шлем самурая",
+      "JPja": "かぶと",
+      "KRko": "일본 무사 투구",
+      "TWzh": "頭盔",
+      "USen": "samurai helmet",
+      "USes": "casco de samurái",
+      "USfr": "casque de samouraï"
+    }
+  },
+  {
+    "label": "704",
+    "locale": {
+      "CNzh": "荷兰帽子",
+      "EUde": "Trachtenhaube",
+      "EUen": "milkmaid hat",
+      "EUes": "tocado holandés",
+      "EUfr": "chapeau hollandais",
+      "EUit": "cuffia olandese",
+      "EUnl": "melkmeisjesmuts",
+      "EUru": "шапочка молочницы",
+      "JPja": "オランダのぼうし",
+      "KRko": "네덜란드 모자",
+      "TWzh": "荷蘭帽子",
+      "USen": "milkmaid hat",
+      "USes": "tocado holandés",
+      "USfr": "chapeau hollandais"
+    }
+  },
+  {
+    "label": "706",
+    "locale": {
+      "CNzh": "飞行帽",
+      "EUde": "Pilotenkappe",
+      "EUen": "pilot's cap",
+      "EUes": "gorra de aviación",
+      "EUfr": "casque de pilote",
+      "EUit": "casco d'aviatore",
+      "EUnl": "pilotenmuts",
+      "EUru": "шапка летчика",
+      "JPja": "ひこうぼう",
+      "KRko": "비행 모자",
+      "TWzh": "飛行帽",
+      "USen": "pilot's cap",
+      "USes": "gorra de aviación",
+      "USfr": "casque de pilote"
+    }
+  },
+  {
+    "label": "707",
+    "locale": {
+      "CNzh": "婴儿帽子",
+      "EUde": "Babyhütchen",
+      "EUen": "baby's hat",
+      "EUes": "gorro de bebé",
+      "EUfr": "chapeau de bébé",
+      "EUit": "cuffietta",
+      "EUnl": "babymutsje",
+      "EUru": "чепчик младенца",
+      "JPja": "あかちゃんのぼうし",
+      "KRko": "아기 모자",
+      "TWzh": "嬰兒帽子",
+      "USen": "baby's hat",
+      "USes": "gorro de bebé",
+      "USfr": "chapeau de bébé"
+    }
+  },
+  {
+    "label": "708",
+    "locale": {
+      "CNzh": "忍者头巾",
+      "EUde": "Ninjakapuze",
+      "EUen": "ninja hood",
+      "EUes": "caperuza de ninja",
+      "EUfr": "cagoule de ninja",
+      "EUit": "cappuccio ninja",
+      "EUnl": "ninjamasker",
+      "EUru": "капюшон ниндзя",
+      "JPja": "にんじゃずきん",
+      "KRko": "닌자 두건",
+      "TWzh": "忍者頭巾",
+      "USen": "ninja hood",
+      "USes": "caperuza de ninja",
+      "USfr": "cagoule de ninja"
+    }
+  },
+  {
+    "label": "709",
+    "locale": {
+      "CNzh": "棒球头盔",
+      "EUde": "Baseballhelm",
+      "EUen": "batter's helmet",
+      "EUes": "casco de bateador",
+      "EUfr": "casque de batteur",
+      "EUit": "elmetto da battitore",
+      "EUnl": "slagmanshelm",
+      "EUru": "шлем бейсболиста",
+      "JPja": "やきゅうのヘルメット",
+      "KRko": "야구 헬멧",
+      "TWzh": "棒球安全帽",
+      "USen": "batter's helmet",
+      "USes": "casco de bateador",
+      "USfr": "casque de batteur"
+    }
+  },
+  {
+    "label": "711",
+    "locale": {
+      "CNzh": "职业摔角面具",
+      "EUde": "Wrestlingmaske",
+      "EUen": "wrestling mask",
+      "EUes": "máscara de lucha libre",
+      "EUfr": "masque de catch",
+      "EUit": "maschera da wrestling",
+      "EUnl": "worstelaarsmasker",
+      "EUru": "маска рестлера",
+      "JPja": "プロレスのマスク",
+      "KRko": "프로 레슬링 마스크",
+      "TWzh": "職業摔角面具",
+      "USen": "wrestling mask",
+      "USes": "máscara de lucha libre",
+      "USfr": "masque de catch"
+    }
+  },
+  {
+    "label": "712",
+    "locale": {
+      "CNzh": "热狗头套",
+      "EUde": "Hotdog-Kapuze",
+      "EUen": "hot-dog hood",
+      "EUes": "capucha salchicha",
+      "EUfr": "capuche saucisse",
+      "EUit": "berretto hot dog",
+      "EUnl": "hotdogmuts",
+      "EUru": "шапка «Хот-дог»",
+      "JPja": "ホットドッグマスク",
+      "KRko": "핫도그 마스크",
+      "TWzh": "熱狗頭套",
+      "USen": "hot-dog hood",
+      "USes": "capucha salchicha",
+      "USfr": "capuche saucisse"
+    }
+  },
+  {
+    "label": "713",
+    "locale": {
+      "CNzh": "耳罩针织帽",
+      "EUde": "Ohrenwärmer-Strickmütze",
+      "EUen": "knit cap with earflaps",
+      "EUes": "gorro de punto con orejeras",
+      "EUfr": "bonnet cache-oreilles tricot",
+      "EUit": "cappello con paraorecchi",
+      "EUnl": "gebreide flapmuts",
+      "EUru": "вязаная шапка с ушами",
+      "JPja": "みみあてつきニット",
+      "KRko": "귀마개 니트 모자",
+      "TWzh": "耳罩針織帽",
+      "USen": "knit cap with earflaps",
+      "USes": "gorro tejido con orejas",
+      "USfr": "bonnet cache-oreilles tricot"
+    }
+  },
+  {
+    "label": "717",
+    "locale": {
+      "CNzh": "宇航员头盔",
+      "EUde": "Astronautenhelm",
+      "EUen": "space helmet",
+      "EUes": "casco espacial",
+      "EUfr": "casque spatial",
+      "EUit": "casco spaziale",
+      "EUnl": "ruimtehelm",
+      "EUru": "шлем космонавта",
+      "JPja": "アストロヘルメット",
+      "KRko": "아스트로 헬멧",
+      "TWzh": "太空人安全帽",
+      "USen": "space helmet",
+      "USes": "casco espacial",
+      "USfr": "casque spatial"
+    }
+  },
+  {
+    "label": "718",
+    "locale": {
+      "CNzh": "漆弹面罩",
+      "EUde": "Paintball-Maske",
+      "EUen": "paintball mask",
+      "EUes": "casco de paintball",
+      "EUfr": "masque de paintball",
+      "EUit": "maschera da paintball",
+      "EUnl": "paintballmasker",
+      "EUru": "маска для пейнтбола",
+      "JPja": "ペイントボールマスク",
+      "KRko": "페인트 볼 마스크",
+      "TWzh": "漆彈面罩",
+      "USen": "paintball mask",
+      "USes": "casco de paintball",
+      "USfr": "masque de paintball"
+    }
+  },
+  {
+    "label": "738",
+    "locale": {
+      "CNzh": "英雄头盔",
+      "EUde": "Superheldenhelm",
+      "EUen": "zap helmet",
+      "EUes": "supercasco",
+      "EUfr": "casque de héros",
+      "EUit": "casco da eroe",
+      "EUnl": "superhelm",
+      "EUru": "шлем супергероя",
+      "JPja": "ヒーローヘルメット",
+      "KRko": "히어로 헬멧",
+      "TWzh": "英雄安全帽",
+      "USen": "zap helmet",
+      "USes": "supercasco",
+      "USfr": "casque de héros"
+    }
+  },
+  {
+    "label": "741",
+    "locale": {
+      "CNzh": "特本头巾",
+      "EUde": "Turban",
+      "EUen": "turban",
+      "EUes": "turbante",
+      "EUfr": "turban",
+      "EUit": "turbante",
+      "EUnl": "tulband",
+      "EUru": "тюрбан",
+      "JPja": "ターバン",
+      "KRko": "터번",
+      "TWzh": "特本頭巾",
+      "USen": "turban",
+      "USes": "turbante",
+      "USfr": "turban"
+    }
+  },
+  {
+    "label": "742",
+    "locale": {
+      "CNzh": "带护目镜头盔",
+      "EUde": "Skibrillenhelm",
+      "EUen": "helmet with goggles",
+      "EUes": "casco motocicleta clásico",
+      "EUfr": "casque avec lunettes",
+      "EUit": "casco con occhiali",
+      "EUnl": "helm met beschermbril",
+      "EUru": "шлем с очками",
+      "JPja": "ゴーグルつきヘルメット",
+      "KRko": "고글 헬멧",
+      "TWzh": "護目鏡安全帽",
+      "USen": "helmet with goggles",
+      "USes": "casco motocicleta clásico",
+      "USfr": "casque avec lunettes"
+    }
+  },
+  {
+    "label": "748",
+    "locale": {
+      "CNzh": "全罩式头盔",
+      "EUde": "Rennfahrerhelm",
+      "EUen": "racing helmet",
+      "EUes": "casco de carreras",
+      "EUfr": "casque de course",
+      "EUit": "casco da pilota",
+      "EUnl": "coureurshelm",
+      "EUru": "шлем гонщика",
+      "JPja": "フルフェイスメット",
+      "KRko": "풀페이스 헬멧",
+      "TWzh": "全罩式安全帽",
+      "USen": "racing helmet",
+      "USes": "casco de carreras",
+      "USfr": "casque de course"
+    }
+  },
+  {
+    "label": "750",
+    "locale": {
+      "CNzh": "驯鹿帽子",
+      "EUde": "Rentiermütze",
+      "EUen": "reindeer hat",
+      "EUes": "gorro de reno",
+      "EUfr": "coiffe de renne",
+      "EUit": "cappello da renna",
+      "EUnl": "rendiermuts",
+      "EUru": "шапка оленя",
+      "JPja": "トナカイのぼうし",
+      "KRko": "순록 모자",
+      "TWzh": "馴鹿帽子",
+      "USen": "reindeer hat",
+      "USes": "sombrero de reno",
+      "USfr": "coiffe de renne"
+    }
+  },
+  {
+    "label": "758",
+    "locale": {
+      "CNzh": "恶魔头套",
+      "EUde": "Kobold-Mütze",
+      "EUen": "imp hood",
+      "EUes": "gorro de diablo",
+      "EUfr": "capuche de diablotin",
+      "EUit": "copricapo con corna",
+      "EUnl": "duveltjesmuts",
+      "EUru": "шапка чертика",
+      "JPja": "デビルなかぶりもの",
+      "KRko": "악마 모자",
+      "TWzh": "惡魔頭套",
+      "USen": "imp hood",
+      "USes": "gorro de diablo",
+      "USfr": "capuche de diablotin"
+    }
+  },
+  {
+    "label": "759",
+    "locale": {
+      "CNzh": "绵羊头套",
+      "EUde": "Schafkapuze",
+      "EUen": "sheep hood",
+      "EUes": "gorro de carnero",
+      "EUfr": "capuche de bélier",
+      "EUit": "cappello da montone",
+      "EUnl": "schapenmuts",
+      "EUru": "шапка барана",
+      "JPja": "ひつじのかぶりもの",
+      "KRko": "양 모자",
+      "TWzh": "綿羊頭套",
+      "USen": "sheep hood",
+      "USes": "gorro de carnero",
+      "USfr": "capuche de bélier"
+    }
+  },
+  {
+    "label": "790",
+    "locale": {
+      "CNzh": "图坦卡门面具",
+      "EUde": "Pharaomaske",
+      "EUen": "King Tut mask",
+      "EUes": "máscara egipcia",
+      "EUfr": "masque de pharaon",
+      "EUit": "maschera Re Tut",
+      "EUnl": "faraomasker",
+      "EUru": "маска фараона Тута",
+      "JPja": "ツタンカーメン",
+      "KRko": "투탕카멘",
+      "TWzh": "圖坦卡門面具",
+      "USen": "King Tut mask",
+      "USes": "máscara egipcia",
+      "USfr": "masque de pharaon"
+    }
+  },
+  {
+    "label": "822",
+    "locale": {
+      "CNzh": "农作遮阳帽",
+      "EUde": "Schleier-Gärtnerhut",
+      "EUen": "veiled gardening hat",
+      "EUes": "gorra para agricultura",
+      "EUfr": "chapeau agricole",
+      "EUit": "cappello con veletta",
+      "EUnl": "tuinierpet",
+      "EUru": "дачная шапка",
+      "JPja": "のうぎょうぼう",
+      "KRko": "농부 모자",
+      "TWzh": "農作遮陽帽",
+      "USen": "veiled gardening hat",
+      "USes": "gorra para agricultura",
+      "USfr": "chapeau agricole"
+    }
+  },
+  {
+    "label": "825",
+    "locale": {
+      "CNzh": "拳击头套",
+      "EUde": "Boxerhelm",
+      "EUen": "headgear",
+      "EUes": "protector de cabeza",
+      "EUfr": "casque de boxe",
+      "EUit": "casco",
+      "EUnl": "hoofdbeschermer",
+      "EUru": "парик боксера со шлемом",
+      "JPja": "ヘッドギア",
+      "KRko": "헤드기어",
+      "TWzh": "拳擊頭套",
+      "USen": "headgear",
+      "USes": "protector de cabeza",
+      "USfr": "casque de boxe"
+    }
+  },
+  {
+    "label": "826",
+    "locale": {
+      "CNzh": "朋克头",
+      "EUde": "Irokesenperücke",
+      "EUen": "mohawk wig",
+      "EUes": "cresta mohicana",
+      "EUfr": "perruque iroquoise",
+      "EUit": "parrucca da moicano",
+      "EUnl": "hanenkampruik",
+      "EUru": "парик-ирокез",
+      "JPja": "モヒカン",
+      "KRko": "모히칸",
+      "TWzh": "龐克頭",
+      "USen": "mohawk wig",
+      "USes": "cresta mohicana",
+      "USfr": "perruque en crête"
+    }
+  },
+  {
+    "label": "827",
+    "locale": {
+      "CNzh": "飞机头",
+      "EUde": "Schmalztollenperücke",
+      "EUen": "pompadour wig",
+      "EUes": "tupé rockabilly",
+      "EUfr": "perruque banane",
+      "EUit": "parrucca da principe",
+      "EUnl": "vetkuifpruik",
+      "EUru": "парик регента",
+      "JPja": "リーゼント",
+      "KRko": "리젠트",
+      "TWzh": "飛機頭",
+      "USen": "pompadour wig",
+      "USes": "tupé rockabilly",
+      "USfr": "perruque banane"
+    }
+  },
+  {
+    "label": "828",
+    "locale": {
+      "CNzh": "武士头",
+      "EUde": "Samuraiperücke",
+      "EUen": "samurai wig",
+      "EUes": "peluca de samurái",
+      "EUfr": "coiffe de samouraï",
+      "EUit": "parrucca da samurai",
+      "EUnl": "samoeraipruik",
+      "EUru": "парик самурая",
+      "JPja": "ちょんまげ",
+      "KRko": "일본식 상투",
+      "TWzh": "武士頭",
+      "USen": "samurai wig",
+      "USes": "peluca de samurái",
+      "USfr": "coiffe de samouraï"
+    }
+  },
+  {
+    "label": "829",
+    "locale": {
+      "CNzh": "丸子头",
+      "EUde": "Großmutterperücke",
+      "EUen": "matronly bun",
+      "EUes": "peluca señora mayor",
+      "EUfr": "perruque de matrone",
+      "EUit": "parrucca da matrona",
+      "EUnl": "omaknotpruik",
+      "EUru": "парик-кичка",
+      "JPja": "たまねぎヘアー",
+      "KRko": "양파 머리",
+      "TWzh": "洋蔥頭",
+      "USen": "matronly bun",
+      "USes": "peluca señora mayor",
+      "USfr": "perruque de matrone"
+    }
+  },
+  {
+    "label": "830",
+    "locale": {
+      "CNzh": "纯白头纱",
+      "EUde": "Brautschleier",
+      "EUen": "bridal veil",
+      "EUes": "velo de novia",
+      "EUfr": "voile de mariée",
+      "EUit": "velo da sposa",
+      "EUnl": "bruidssluier",
+      "EUru": "парик с фатой",
+      "JPja": "じゅんぱくのヴェール",
+      "KRko": "순백 베일",
+      "TWzh": "純白頭紗",
+      "USen": "bridal veil",
+      "USes": "velo de novia",
+      "USfr": "voile de mariée"
+    }
+  },
+  {
+    "label": "831",
+    "locale": {
+      "CNzh": "双丸子头",
+      "EUde": "Doppel-Dutt",
+      "EUen": "bun wig",
+      "EUes": "moño",
+      "EUfr": "perruque beignet",
+      "EUit": "parrucca con chignon",
+      "EUnl": "knotjespruik",
+      "EUru": "парик с чепцами",
+      "JPja": "おだんごあたま",
+      "KRko": "양갈래 머리",
+      "TWzh": "丸子頭",
+      "USen": "bun wig",
+      "USes": "par de gorritos de seda",
+      "USfr": "perruque beigne"
+    }
+  },
+  {
+    "label": "832",
+    "locale": {
+      "CNzh": "头戴式耳机",
+      "EUde": "DJ-Kappe",
+      "EUen": "DJ cap",
+      "EUes": "gorra de DJ",
+      "EUfr": "casque de DJ",
+      "EUit": "cappello con cuffie",
+      "EUnl": "dj-pet",
+      "EUru": "кепка диджея",
+      "JPja": "ヘッドホン",
+      "KRko": "헤드폰",
+      "TWzh": "頭戴式耳機",
+      "USen": "DJ cap",
+      "USes": "gorra de DJ",
+      "USfr": "casque de DJ"
+    }
+  },
+  {
+    "label": "833",
+    "locale": {
+      "CNzh": "头饰",
+      "EUde": "Gothic-Kopfputz",
+      "EUen": "gothic headdress",
+      "EUes": "peluca con tocado",
+      "EUfr": "chevelure gothique",
+      "EUit": "copricapo gotico",
+      "EUnl": "victoriaanse haarband",
+      "EUru": "парик с аксессуаром",
+      "JPja": "ヘッドドレス",
+      "KRko": "헤드드레스",
+      "TWzh": "頭飾",
+      "USen": "gothic headdress",
+      "USes": "peluca con tocado",
+      "USfr": "chevelure gothique"
+    }
+  },
+  {
+    "label": "834",
+    "locale": {
+      "CNzh": "面纱",
+      "EUde": "1001-Nacht-Schleier",
+      "EUen": "veil",
+      "EUes": "velo princesa desierto",
+      "EUfr": "voile princesse du désert",
+      "EUit": "velo da mille e una notte",
+      "EUnl": "woestijnprinsessensluier",
+      "EUru": "парик с вуалью",
+      "JPja": "ベール",
+      "KRko": "베일",
+      "TWzh": "面紗",
+      "USen": "veil",
+      "USes": "velo princesa desierto",
+      "USfr": "voile princesse du désert"
+    }
+  },
+  {
+    "label": "836",
+    "locale": {
+      "CNzh": "艺伎假发",
+      "EUde": "Geishaperücke",
+      "EUen": "geisha wig",
+      "EUes": "peluca de geisha",
+      "EUfr": "coiffe de geisha",
+      "EUit": "parrucca da geisha",
+      "EUnl": "geishapruik",
+      "EUru": "парик гейши",
+      "JPja": "ゲイシャさん",
+      "KRko": "게이샤 머리",
+      "TWzh": "藝妓假髮",
+      "USen": "geisha wig",
+      "USes": "peluca de geisha",
+      "USfr": "coiffe de geisha"
+    }
+  },
+  {
+    "label": "837",
+    "locale": {
+      "CNzh": "音乐家假发",
+      "EUde": "Komponistenperücke",
+      "EUen": "composer's wig",
+      "EUes": "pelucón",
+      "EUfr": "perruque de compositeur",
+      "EUit": "parrucca da musicista",
+      "EUnl": "componistenpruik",
+      "EUru": "парик композитора",
+      "JPja": "おんがくかのかつら",
+      "KRko": "음악가 가발",
+      "TWzh": "音樂家假髮",
+      "USen": "composer's wig",
+      "USes": "pelucón",
+      "USfr": "perruque de compositeur"
+    }
+  },
+  {
+    "label": "838",
+    "locale": {
+      "CNzh": "动力头盔",
+      "EUde": "Power-Helm",
+      "EUen": "power helmet",
+      "EUes": "casco de energía",
+      "EUfr": "casque de puissance",
+      "EUit": "casco da tuta potenziata",
+      "EUnl": "superkrachthelm",
+      "EUru": "силовой шлем",
+      "JPja": "パワードメット",
+      "KRko": "파워 헬멧",
+      "TWzh": "動力頭盔",
+      "USen": "power helmet",
+      "USes": "casco de energía",
+      "USfr": "casque de puissance"
+    }
+  },
+  {
+    "label": "900",
+    "locale": {
+      "CNzh": "纸袋头套",
+      "EUde": "Papiertüte",
+      "EUen": "paper-bag hood",
+      "EUes": "bolsa de papel",
+      "EUfr": "sac en papier",
+      "EUit": "cappuccio borsa di carta",
+      "EUnl": "papieren zak",
+      "EUru": "шлем-пакет из бумаги",
+      "JPja": "かみぶくろのかぶりもの",
+      "KRko": "종이 봉투 가면",
+      "TWzh": "紙袋頭套",
+      "USen": "paper-bag hood",
+      "USes": "bolsa de papel",
+      "USfr": "sac en papier"
+    }
+  },
+  {
+    "label": "917",
+    "locale": {
+      "CNzh": "狐狸面具",
+      "EUde": "Fuchsmaske",
+      "EUen": "fox mask",
+      "EUes": "máscara de zorro",
+      "EUfr": "masque de renard",
+      "EUit": "maschera da volpe",
+      "EUnl": "vossenmasker",
+      "EUru": "маска лисы",
+      "JPja": "キツネのおめん",
+      "KRko": "여우 가면",
+      "TWzh": "狐狸面具",
+      "USen": "fox mask",
+      "USes": "máscara de zorro",
+      "USfr": "masque de renard"
+    }
+  },
+  {
+    "label": "918",
+    "locale": {
+      "CNzh": "老翁能面具",
+      "EUde": "Greisenmaske",
+      "EUen": "elder mask",
+      "EUes": "máscara de sabio",
+      "EUfr": "masque de sage",
+      "EUit": "maschera da saggio",
+      "EUnl": "ouderenmasker",
+      "EUru": "маска старика",
+      "JPja": "おきなののうめん",
+      "KRko": "동양 전통 가면",
+      "TWzh": "老翁能面具",
+      "USen": "elder mask",
+      "USes": "máscara de sabio",
+      "USfr": "masque de sage"
+    }
+  },
+  {
+    "label": "919",
+    "locale": {
+      "CNzh": "能面具",
+      "EUde": "No-Maske",
+      "EUen": "Noh mask",
+      "EUes": "máscara de teatro Noh",
+      "EUfr": "masque de nô",
+      "EUit": "maschera da teatro nō",
+      "EUnl": "no-masker",
+      "EUru": "маска театра «но»",
+      "JPja": "のうめん",
+      "KRko": "일본 전통 가면",
+      "TWzh": "能面具",
+      "USen": "Noh mask",
+      "USes": "máscara de teatro Noh",
+      "USfr": "masque de nô"
+    }
+  },
+  {
+    "label": "923",
+    "locale": {
+      "CNzh": "曲棍球面罩",
+      "EUde": "Hockeymaske",
+      "EUen": "hockey mask",
+      "EUes": "máscara de hockey",
+      "EUfr": "masque de hockey",
+      "EUit": "maschera da hockey",
+      "EUnl": "ijshockeymasker",
+      "EUru": "хоккейная маска",
+      "JPja": "ホッケーのマスク",
+      "KRko": "하키 마스크",
+      "TWzh": "曲棍球面罩",
+      "USen": "hockey mask",
+      "USes": "máscara de hockey",
+      "USfr": "masque de hockey"
+    }
+  },
+  {
+    "label": "931",
+    "locale": {
+      "CNzh": "捕手面罩",
+      "EUde": "Baseballmaske",
+      "EUen": "catcher's mask",
+      "EUes": "máscara de béisbol",
+      "EUfr": "masque de receveur",
+      "EUit": "maschera da ricevitore",
+      "EUnl": "achtervangershelm",
+      "EUru": "маска бейсболиста",
+      "JPja": "キャッチャーマスク",
+      "KRko": "포수 마스크",
+      "TWzh": "捕手面罩",
+      "USen": "catcher's mask",
+      "USes": "máscara de béisbol",
+      "USfr": "masque de receveur"
+    }
+  },
+  {
+    "label": "932",
+    "locale": {
+      "CNzh": "防灾头巾",
+      "EUde": "Katastrophenhaube",
+      "EUen": "emergency headcover",
+      "EUes": "protector de cabeza infantil",
+      "EUfr": "capuche de protection",
+      "EUit": "cappuccio d'emergenza",
+      "EUnl": "aardbevingsmuts",
+      "EUru": "защитный капюшон",
+      "JPja": "ぼうさいずきん",
+      "KRko": "방재용 두건",
+      "TWzh": "防災頭巾",
+      "USen": "emergency headcover",
+      "USes": "protector de cabeza infantil",
+      "USfr": "capuche de protection"
+    }
+  },
+  {
+    "label": "933",
+    "locale": {
+      "CNzh": "阿拉伯帽子",
+      "EUde": "Kufija",
+      "EUen": "kaffiyeh",
+      "EUes": "pañuelo árabe",
+      "EUfr": "keffieh",
+      "EUit": "kefiah",
+      "EUnl": "keffiyeh",
+      "EUru": "куфия",
+      "JPja": "アラビアのぼうし",
+      "KRko": "아라비아 모자",
+      "TWzh": "阿拉伯帽子",
+      "USen": "kaffiyeh",
+      "USes": "pañuelo árabe",
+      "USfr": "keffieh"
+    }
+  },
+  {
+    "label": "934",
+    "locale": {
+      "CNzh": "黑子头巾",
+      "EUde": "Kabuki-Hut",
+      "EUen": "stagehand hat",
+      "EUes": "velo de tramoyista",
+      "EUfr": "chapeau machiniste",
+      "EUit": "cappuccio in garza nera",
+      "EUnl": "kuroko-muts",
+      "EUru": "шапка сценрабочего",
+      "JPja": "くろこ",
+      "KRko": "검은 복면",
+      "TWzh": "黑子頭巾",
+      "USen": "stagehand hat",
+      "USes": "gorro con velo",
+      "USfr": "chapeau machiniste"
+    }
+  },
+  {
+    "label": "956",
+    "locale": {
+      "CNzh": "叶子面具",
+      "EUde": "Blatt-Maske",
+      "EUen": "leaf mask",
+      "EUes": "máscara hoja",
+      "EUfr": "masque feuille",
+      "EUit": "maschera a foglia",
+      "EUnl": "bladmasker",
+      "EUru": "маска-лист",
+      "JPja": "はっぱのおめん",
+      "KRko": "나뭇잎 가면",
+      "TWzh": "葉子面具",
+      "USen": "leaf mask",
+      "USes": "máscara hoja",
+      "USfr": "masque feuille"
+    }
+  }
+]

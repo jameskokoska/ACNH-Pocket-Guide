@@ -1,0 +1,211 @@
+﻿[
+  {
+    "label": "TurnipExpired_02642",
+    "locale": {
+      "CNzh": "坏掉的大头菜",
+      "EUde": "Rüben (verdorben)",
+      "EUen": "spoiled turnips",
+      "EUes": "manojo pasado",
+      "EUfr": "lot de navets pourris",
+      "EUit": "mazzo di rape marce",
+      "EUnl": "bedorven knollen",
+      "EUru": "гнилые репы",
+      "JPja": "くさったカブ",
+      "KRko": "썩은 무",
+      "TWzh": "壞掉的大頭菜",
+      "USen": "spoiled turnips",
+      "USes": "manojo pasado",
+      "USfr": "lot de navets pourris"
+    }
+  },
+  {
+    "label": "Turnip_02632",
+    "locale": {
+      "CNzh": "10棵大头菜",
+      "EUde": "10 Rüben",
+      "EUen": "10 turnips",
+      "EUes": "manojo 10 nabos",
+      "EUfr": "lot de 10 navets",
+      "EUit": "mazzo di 10 rape",
+      "EUnl": "10 knollen",
+      "EUru": "10 реп",
+      "JPja": "10カブ",
+      "KRko": "10무",
+      "TWzh": "10棵",
+      "USen": "10 turnips",
+      "USes": "manojo 10 nabos",
+      "USfr": "lot de 10 navets"
+    }
+  },
+  {
+    "label": "Turnip_02633",
+    "locale": {
+      "CNzh": "20棵大头菜",
+      "EUde": "20 Rüben",
+      "EUen": "20 turnips",
+      "EUes": "manojo 20 nabos",
+      "EUfr": "lot de 20 navets",
+      "EUit": "mazzo di 20 rape",
+      "EUnl": "20 knollen",
+      "EUru": "20 реп",
+      "JPja": "20カブ",
+      "KRko": "20무",
+      "TWzh": "20棵",
+      "USen": "20 turnips",
+      "USes": "manojo 20 nabos",
+      "USfr": "lot de 20 navets"
+    }
+  },
+  {
+    "label": "Turnip_02634",
+    "locale": {
+      "CNzh": "30棵大头菜",
+      "EUde": "30 Rüben",
+      "EUen": "30 turnips",
+      "EUes": "manojo 30 nabos",
+      "EUfr": "lot de 30 navets",
+      "EUit": "mazzo di 30 rape",
+      "EUnl": "30 knollen",
+      "EUru": "30 реп",
+      "JPja": "30カブ",
+      "KRko": "30무",
+      "TWzh": "30棵",
+      "USen": "30 turnips",
+      "USes": "manojo 30 nabos",
+      "USfr": "lot de 30 navets"
+    }
+  },
+  {
+    "label": "Turnip_02635",
+    "locale": {
+      "CNzh": "40棵大头菜",
+      "EUde": "40 Rüben",
+      "EUen": "40 turnips",
+      "EUes": "manojo 40 nabos",
+      "EUfr": "lot de 40 navets",
+      "EUit": "mazzo di 40 rape",
+      "EUnl": "40 knollen",
+      "EUru": "40 реп",
+      "JPja": "40カブ",
+      "KRko": "40무",
+      "TWzh": "40棵",
+      "USen": "40 turnips",
+      "USes": "manojo 40 nabos",
+      "USfr": "lot de 40 navets"
+    }
+  },
+  {
+    "label": "Turnip_02636",
+    "locale": {
+      "CNzh": "50棵大头菜",
+      "EUde": "50 Rüben",
+      "EUen": "50 turnips",
+      "EUes": "manojo 50 nabos",
+      "EUfr": "lot de 50 navets",
+      "EUit": "mazzo di 50 rape",
+      "EUnl": "50 knollen",
+      "EUru": "50 реп",
+      "JPja": "50カブ",
+      "KRko": "50무",
+      "TWzh": "50棵",
+      "USen": "50 turnips",
+      "USes": "manojo 50 nabos",
+      "USfr": "lot de 50 navets"
+    }
+  },
+  {
+    "label": "Turnip_02637",
+    "locale": {
+      "CNzh": "60棵大头菜",
+      "EUde": "60 Rüben",
+      "EUen": "60 turnips",
+      "EUes": "manojo 60 nabos",
+      "EUfr": "lot de 60 navets",
+      "EUit": "mazzo di 60 rape",
+      "EUnl": "60 knollen",
+      "EUru": "60 реп",
+      "JPja": "60カブ",
+      "KRko": "60무",
+      "TWzh": "60棵",
+      "USen": "60 turnips",
+      "USes": "manojo 60 nabos",
+      "USfr": "lot de 60 navets"
+    }
+  },
+  {
+    "label": "Turnip_02638",
+    "locale": {
+      "CNzh": "70棵大头菜",
+      "EUde": "70 Rüben",
+      "EUen": "70 turnips",
+      "EUes": "manojo 70 nabos",
+      "EUfr": "lot de 70 navets",
+      "EUit": "mazzo di 70 rape",
+      "EUnl": "70 knollen",
+      "EUru": "70 реп",
+      "JPja": "70カブ",
+      "KRko": "70무",
+      "TWzh": "70棵",
+      "USen": "70 turnips",
+      "USes": "manojo 70 nabos",
+      "USfr": "lot de 70 navets"
+    }
+  },
+  {
+    "label": "Turnip_02639",
+    "locale": {
+      "CNzh": "80棵大头菜",
+      "EUde": "80 Rüben",
+      "EUen": "80 turnips",
+      "EUes": "manojo 80 nabos",
+      "EUfr": "lot de 80 navets",
+      "EUit": "mazzo di 80 rape",
+      "EUnl": "80 knollen",
+      "EUru": "80 реп",
+      "JPja": "80カブ",
+      "KRko": "80무",
+      "TWzh": "80棵",
+      "USen": "80 turnips",
+      "USes": "manojo 80 nabos",
+      "USfr": "lot de 80 navets"
+    }
+  },
+  {
+    "label": "Turnip_02640",
+    "locale": {
+      "CNzh": "90棵大头菜",
+      "EUde": "90 Rüben",
+      "EUen": "90 turnips",
+      "EUes": "manojo 90 nabos",
+      "EUfr": "lot de 90 navets",
+      "EUit": "mazzo di 90 rape",
+      "EUnl": "90 knollen",
+      "EUru": "90 реп",
+      "JPja": "90カブ",
+      "KRko": "90무",
+      "TWzh": "90棵",
+      "USen": "90 turnips",
+      "USes": "manojo 90 nabos",
+      "USfr": "lot de 90 navets"
+    }
+  },
+  {
+    "label": "Turnip_02641",
+    "locale": {
+      "CNzh": "100棵大头菜",
+      "EUde": "100 Rüben",
+      "EUen": "100 turnips",
+      "EUes": "manojo 100 nabos",
+      "EUfr": "lot de 100 navets",
+      "EUit": "mazzo di 100 rape",
+      "EUnl": "100 knollen",
+      "EUru": "100 реп",
+      "JPja": "100カブ",
+      "KRko": "100무",
+      "TWzh": "100棵",
+      "USen": "100 turnips",
+      "USes": "manojo 100 nabos",
+      "USfr": "lot de 100 navets"
+    }
+  }
+]

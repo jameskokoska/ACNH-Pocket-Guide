@@ -1,0 +1,59 @@
+﻿[
+  {
+    "label": "1258",
+    "locale": {
+      "CNzh": "Nook Inc.潜水衣",
+      "EUde": "Nook-Inc.-Taucheranzug",
+      "EUen": "Nook Inc. wet suit",
+      "EUes": "traje de buceo de Nook Inc.",
+      "EUfr": "combi plongée Nook Inc.",
+      "EUit": "muta Nook Inc.",
+      "EUnl": "Nook Inc.-duikpak",
+      "EUru": "гидрокостюм Nook Inc.",
+      "JPja": "たぬきかいはつマリンスーツ",
+      "KRko": "Nook Inc. 잠수복",
+      "TWzh": "Nook Inc.潛水衣",
+      "USen": "Nook Inc. wet suit",
+      "USes": "traje de buceo de Nook Inc.",
+      "USfr": "combi plongée Nook Inc."
+    }
+  },
+  {
+    "label": "1259",
+    "locale": {
+      "CNzh": "叶子图案潜水衣",
+      "EUde": "Blattmuster-Taucheranzug",
+      "EUen": "leaf-print wet suit",
+      "EUes": "traje de buceo hoja",
+      "EUfr": "combi plongée motif feuille",
+      "EUit": "muta con foglia",
+      "EUnl": "duikpak met bladerprint",
+      "EUru": "гидрокостюм с листьями",
+      "JPja": "はっぱがらマリンスーツ",
+      "KRko": "나뭇잎 잠수복",
+      "TWzh": "葉子圖案潛水衣",
+      "USen": "leaf-print wet suit",
+      "USes": "traje de buceo hoja",
+      "USfr": "combi plongée motif feuille"
+    }
+  },
+  {
+    "label": "1260",
+    "locale": {
+      "CNzh": "粗横纹潜水衣",
+      "EUde": "Streifen-Taucheranzug",
+      "EUen": "horizontal-striped wet suit",
+      "EUes": "traje de buceo a rayas",
+      "EUfr": "combi plongée à rayures",
+      "EUit": "muta a righe orizzontali",
+      "EUnl": "gestreept duikpak",
+      "EUru": "гидрокостюм в полоску",
+      "JPja": "ボーダーのマリンスーツ",
+      "KRko": "줄무늬 잠수복",
+      "TWzh": "粗橫紋潛水衣",
+      "USen": "horizontal-striped wet suit",
+      "USes": "traje de buceo a rayas",
+      "USfr": "combi plongée à rayures"
+    }
+  }
+]

@@ -1,0 +1,1142 @@
+﻿[
+  {
+    "label": "Fence_03080",
+    "locale": {
+      "CNzh": "砖块栅栏",
+      "EUde": "Ziegelsteinmauer",
+      "EUen": "brick fence",
+      "EUes": "cerca de ladrillo",
+      "EUfr": "muret en briques",
+      "EUit": "muretto di mattoni",
+      "EUnl": "bakstenen muurtje",
+      "EUru": "кирпичный забор",
+      "JPja": "レンガのカベ",
+      "KRko": "벽돌 울타리",
+      "TWzh": "磚塊柵欄",
+      "USen": "brick fence",
+      "USes": "cerca de ladrillo",
+      "USfr": "muret en briques"
+    }
+  },
+  {
+    "label": "Fence_03080_pl",
+    "locale": {
+      "CNzh": "砖块栅栏",
+      "EUde": "Ziegelsteinmauer",
+      "EUen": "brick fencing",
+      "EUes": "cercas de ladrillo",
+      "EUfr": "muret en briques",
+      "EUit": "muretti di mattoni",
+      "EUnl": "bakstenen muurtje",
+      "EUru": "кирпичные заборы",
+      "JPja": "レンガのカベ",
+      "KRko": "벽돌 울타리",
+      "TWzh": "磚塊柵欄",
+      "USen": "brick fencing",
+      "USes": "cercas de ladrillo",
+      "USfr": "muret en briques"
+    }
+  },
+  {
+    "label": "Fence_03402",
+    "locale": {
+      "CNzh": "直条木板栅栏",
+      "EUde": "Bretterzaun",
+      "EUen": "vertical-board fence",
+      "EUes": "valla de tablones",
+      "EUfr": "clôture lattes verticales",
+      "EUit": "recinzione di assi verticali",
+      "EUnl": "lichte schutting",
+      "EUru": "штакетник",
+      "JPja": "たていたのさく",
+      "KRko": "세로 널빤지 울타리",
+      "TWzh": "直條木板柵欄",
+      "USen": "vertical-board fence",
+      "USes": "valla de tablas",
+      "USfr": "clôture lattes verticales"
+    }
+  },
+  {
+    "label": "Fence_03402_pl",
+    "locale": {
+      "CNzh": "直条木板栅栏",
+      "EUde": "Bretterzaun",
+      "EUen": "vertical-board fencing",
+      "EUes": "vallas de tablones",
+      "EUfr": "clôture lattes verticales",
+      "EUit": "recinzioni di assi verticali",
+      "EUnl": "lichte schutting",
+      "EUru": "штакетники",
+      "JPja": "たていたのさく",
+      "KRko": "세로 널빤지 울타리",
+      "TWzh": "直條木板柵欄",
+      "USen": "vertical-board fencing",
+      "USes": "vallas de tablas",
+      "USfr": "clôture lattes verticales"
+    }
+  },
+  {
+    "label": "Fence_03403",
+    "locale": {
+      "CNzh": "竹栅栏",
+      "EUde": "Bambuszaun",
+      "EUen": "bamboo lattice fence",
+      "EUes": "valla celosía de bambú",
+      "EUfr": "clôture bambou à treillis",
+      "EUit": "recinzione di bambù",
+      "EUnl": "bamboeschutting",
+      "EUru": "забор из бамбука",
+      "JPja": "たけがき",
+      "KRko": "대나무 울타리",
+      "TWzh": "竹柵欄",
+      "USen": "bamboo lattice fence",
+      "USes": "valla celosía de bambú",
+      "USfr": "clôture bambou à treillis"
+    }
+  },
+  {
+    "label": "Fence_03403_pl",
+    "locale": {
+      "CNzh": "竹栅栏",
+      "EUde": "Bambuszaun",
+      "EUen": "bamboo lattice fencing",
+      "EUes": "vallas celosía de bambú",
+      "EUfr": "clôture bambou à treillis",
+      "EUit": "recinzioni di bambù",
+      "EUnl": "bamboeschutting",
+      "EUru": "заборы из бамбука",
+      "JPja": "たけがき",
+      "KRko": "대나무 울타리",
+      "TWzh": "竹柵欄",
+      "USen": "bamboo lattice fencing",
+      "USes": "vallas celosía de bambú",
+      "USfr": "clôture bambou à treillis"
+    }
+  },
+  {
+    "label": "Fence_04349",
+    "locale": {
+      "CNzh": "横条木板栅栏",
+      "EUde": "Weidezaun",
+      "EUen": "corral fence",
+      "EUes": "valla de corral",
+      "EUfr": "clôture de ferme",
+      "EUit": "staccionata ranch",
+      "EUnl": "boerderijhek",
+      "EUru": "дощатый забор",
+      "JPja": "よこいたのさく",
+      "KRko": "가로 널빤지 울타리",
+      "TWzh": "橫條木板柵欄",
+      "USen": "corral fence",
+      "USes": "valla de corral",
+      "USfr": "clôture de ferme"
+    }
+  },
+  {
+    "label": "Fence_04349_pl",
+    "locale": {
+      "CNzh": "横条木板栅栏",
+      "EUde": "Weidezaun",
+      "EUen": "corral fencing",
+      "EUes": "vallas de corral",
+      "EUfr": "clôture de ferme",
+      "EUit": "staccionate ranch",
+      "EUnl": "boerderijhek",
+      "EUru": "дощатые заборы",
+      "JPja": "よこいたのさく",
+      "KRko": "가로 널빤지 울타리",
+      "TWzh": "橫條木板柵欄",
+      "USen": "corral fencing",
+      "USes": "vallas de corral",
+      "USfr": "clôture de ferme"
+    }
+  },
+  {
+    "label": "Fence_04350",
+    "locale": {
+      "CNzh": "圆木栅栏",
+      "EUde": "Baumstammzaun",
+      "EUen": "country fence",
+      "EUes": "valla leños",
+      "EUfr": "clôture de rondins",
+      "EUit": "staccionata di ceppi",
+      "EUnl": "paalhekje",
+      "EUru": "забор из столбиков",
+      "JPja": "まるたのさく",
+      "KRko": "통나무 울타리",
+      "TWzh": "圓木柵欄",
+      "USen": "country fence",
+      "USes": "valla rural",
+      "USfr": "clôture de rondins"
+    }
+  },
+  {
+    "label": "Fence_04350_pl",
+    "locale": {
+      "CNzh": "圆木栅栏",
+      "EUde": "Baumstammzaun",
+      "EUen": "country fencing",
+      "EUes": "vallas leños",
+      "EUfr": "clôture de rondins",
+      "EUit": "staccionate di ceppi",
+      "EUnl": "paalhekje",
+      "EUru": "заборы из столбиков",
+      "JPja": "まるたのさく",
+      "KRko": "통나무 울타리",
+      "TWzh": "圓木柵欄",
+      "USen": "country fencing",
+      "USes": "vallas rurales",
+      "USfr": "clôture de rondins"
+    }
+  },
+  {
+    "label": "Fence_04351",
+    "locale": {
+      "CNzh": "横条圆木栅栏",
+      "EUde": "Westernzaun",
+      "EUen": "log fence",
+      "EUes": "valla de troncos",
+      "EUfr": "clôture tronc",
+      "EUit": "recinzione di tronchi",
+      "EUnl": "weidehek",
+      "EUru": "забор из жердей",
+      "JPja": "よこむきのまるたのさく",
+      "KRko": "가로 통나무 울타리",
+      "TWzh": "橫條圓木柵欄",
+      "USen": "log fence",
+      "USes": "valla de troncos",
+      "USfr": "clôture tronc"
+    }
+  },
+  {
+    "label": "Fence_04351_pl",
+    "locale": {
+      "CNzh": "横条圆木栅栏",
+      "EUde": "Westernzaun",
+      "EUen": "log fencing",
+      "EUes": "vallas de troncos",
+      "EUfr": "clôture tronc",
+      "EUit": "recinzioni di tronchi",
+      "EUnl": "weidehek",
+      "EUru": "заборы из жердей",
+      "JPja": "よこむきのまるたのさく",
+      "KRko": "가로 통나무 울타리",
+      "TWzh": "橫條圓木柵欄",
+      "USen": "log fencing",
+      "USes": "vallas de troncos",
+      "USfr": "clôture tronc"
+    }
+  },
+  {
+    "label": "Fence_04352",
+    "locale": {
+      "CNzh": "钉子与绳索",
+      "EUde": "Seilzaun",
+      "EUen": "rope fence",
+      "EUes": "valla cordón",
+      "EUfr": "clôture de corde",
+      "EUit": "recinzione di corda",
+      "EUnl": "touwhek",
+      "EUru": "ограда из веревки",
+      "JPja": "ペグとロープ",
+      "KRko": "페그 울타리",
+      "TWzh": "釘子與繩索",
+      "USen": "rope fence",
+      "USes": "valla de soga",
+      "USfr": "clôture de corde"
+    }
+  },
+  {
+    "label": "Fence_04352_pl",
+    "locale": {
+      "CNzh": "钉子与绳索",
+      "EUde": "Seilzaun",
+      "EUen": "rope fencing",
+      "EUes": "vallas cordones",
+      "EUfr": "clôture de corde",
+      "EUit": "recinzioni di corda",
+      "EUnl": "touwhek",
+      "EUru": "ограды из веревки",
+      "JPja": "ペグとロープ",
+      "KRko": "페그 울타리",
+      "TWzh": "釘子與繩索",
+      "USen": "rope fencing",
+      "USes": "vallas de soga",
+      "USfr": "clôture de corde"
+    }
+  },
+  {
+    "label": "Fence_04354",
+    "locale": {
+      "CNzh": "东方风栅栏",
+      "EUde": "Asienzaun",
+      "EUen": "imperial fence",
+      "EUes": "valla dinastía",
+      "EUfr": "clôture dynastie orientale",
+      "EUit": "recinzione cinese",
+      "EUnl": "keizerlijk hek",
+      "EUru": "забор в азиатском стиле",
+      "JPja": "オリエンタルなさく",
+      "KRko": "오리엔탈 울타리",
+      "TWzh": "東方風柵欄",
+      "USen": "imperial fence",
+      "USes": "valla dinastía",
+      "USfr": "clôture dynastie"
+    }
+  },
+  {
+    "label": "Fence_04354_pl",
+    "locale": {
+      "CNzh": "东方风栅栏",
+      "EUde": "Asienzaun",
+      "EUen": "imperial fencing",
+      "EUes": "vallas dinastía",
+      "EUfr": "clôture dynastie orientale",
+      "EUit": "recinzioni cinesi",
+      "EUnl": "keizerlijk hek",
+      "EUru": "заборы в азиатском стиле",
+      "JPja": "オリエンタルなさく",
+      "KRko": "오리엔탈 울타리",
+      "TWzh": "東方風柵欄",
+      "USen": "imperial fencing",
+      "USes": "vallas dinastía",
+      "USfr": "clôture dynastie"
+    }
+  },
+  {
+    "label": "Fence_04355",
+    "locale": {
+      "CNzh": "砖块围墙",
+      "EUde": "Betonmauer",
+      "EUen": "block fence",
+      "EUes": "cerca de bloques",
+      "EUfr": "muret blocs de béton",
+      "EUit": "muretto a blocchi",
+      "EUnl": "blokkenmuurtje",
+      "EUru": "забор из блоков",
+      "JPja": "ブロックべい",
+      "KRko": "돌담",
+      "TWzh": "磚塊圍牆",
+      "USen": "block fence",
+      "USes": "cerca de bloques",
+      "USfr": "muret blocs de béton"
+    }
+  },
+  {
+    "label": "Fence_04355_pl",
+    "locale": {
+      "CNzh": "砖块围墙",
+      "EUde": "Betonmauer",
+      "EUen": "block fencing",
+      "EUes": "cercas de bloques",
+      "EUfr": "muret blocs de béton",
+      "EUit": "muretti a blocchi",
+      "EUnl": "blokkenmuurtje",
+      "EUru": "заборы из блоков",
+      "JPja": "ブロックべい",
+      "KRko": "돌담",
+      "TWzh": "磚塊圍牆",
+      "USen": "block fencing",
+      "USes": "cercas de bloques",
+      "USfr": "muret blocs de béton"
+    }
+  },
+  {
+    "label": "Fence_04356",
+    "locale": {
+      "CNzh": "干稻草栅栏",
+      "EUde": "Strohzaun",
+      "EUen": "straw fence",
+      "EUes": "valla de paja",
+      "EUfr": "clôture de paille",
+      "EUit": "recinzione di paglia",
+      "EUnl": "strohek",
+      "EUru": "соломенный забор",
+      "JPja": "わらぼしのさく",
+      "KRko": "짚단 울타리",
+      "TWzh": "乾稻草柵欄",
+      "USen": "straw fence",
+      "USes": "valla de paja",
+      "USfr": "clôture de paille"
+    }
+  },
+  {
+    "label": "Fence_04356_pl",
+    "locale": {
+      "CNzh": "干稻草栅栏",
+      "EUde": "Strohzaun",
+      "EUen": "straw fencing",
+      "EUes": "vallas de paja",
+      "EUfr": "clôture de paille",
+      "EUit": "recinzioni di paglia",
+      "EUnl": "strohek",
+      "EUru": "соломенные заборы",
+      "JPja": "わらぼしのさく",
+      "KRko": "짚단 울타리",
+      "TWzh": "乾稻草柵欄",
+      "USen": "straw fencing",
+      "USes": "vallas de paja",
+      "USfr": "clôture de paille"
+    }
+  },
+  {
+    "label": "Fence_04357",
+    "locale": {
+      "CNzh": "铁栅栏",
+      "EUde": "Eisenzaun",
+      "EUen": "iron fence",
+      "EUes": "verja de hierro",
+      "EUfr": "clôture en fer",
+      "EUit": "recinzione di ferro",
+      "EUnl": "ijzeren hek",
+      "EUru": "железный забор",
+      "JPja": "てつのさく",
+      "KRko": "철제 울타리",
+      "TWzh": "鐵柵欄",
+      "USen": "iron fence",
+      "USes": "valla de hierro",
+      "USfr": "clôture en fer"
+    }
+  },
+  {
+    "label": "Fence_04357_pl",
+    "locale": {
+      "CNzh": "铁栅栏",
+      "EUde": "Eisenzaun",
+      "EUen": "iron fencing",
+      "EUes": "verjas de hierro",
+      "EUfr": "clôture en fer",
+      "EUit": "recinzioni di ferro",
+      "EUnl": "ijzeren hek",
+      "EUru": "железные заборы",
+      "JPja": "てつのさく",
+      "KRko": "철제 울타리",
+      "TWzh": "鐵柵欄",
+      "USen": "iron fencing",
+      "USes": "vallas de hierro",
+      "USfr": "clôture en fer"
+    }
+  },
+  {
+    "label": "Fence_04358",
+    "locale": {
+      "CNzh": "尖刺栅栏",
+      "EUde": "Spitzpfostenzaun",
+      "EUen": "spiky fence",
+      "EUes": "valla puntiaguda",
+      "EUfr": "clôture épieux",
+      "EUit": "recinzione appuntita",
+      "EUnl": "puntig hek",
+      "EUru": "забор из кольев",
+      "JPja": "トゲトゲのさく",
+      "KRko": "뾰족뾰족 울타리",
+      "TWzh": "尖刺柵欄",
+      "USen": "spiky fence",
+      "USes": "valla puntiaguda",
+      "USfr": "clôture épieux"
+    }
+  },
+  {
+    "label": "Fence_04358_pl",
+    "locale": {
+      "CNzh": "尖刺栅栏",
+      "EUde": "Spitzpfostenzaun",
+      "EUen": "spiky fencing",
+      "EUes": "vallas puntiagudas",
+      "EUfr": "clôture épieux",
+      "EUit": "recinzioni appuntite",
+      "EUnl": "puntig hek",
+      "EUru": "заборы из кольев",
+      "JPja": "トゲトゲのさく",
+      "KRko": "뾰족뾰족 울타리",
+      "TWzh": "尖刺柵欄",
+      "USen": "spiky fencing",
+      "USes": "vallas puntiagudas",
+      "USfr": "clôture épieux"
+    }
+  },
+  {
+    "label": "Fence_05206",
+    "locale": {
+      "CNzh": "石砌铁艺栅栏",
+      "EUde": "Villenzaun",
+      "EUen": "iron-and-stone fence",
+      "EUes": "verja de hierro y piedra",
+      "EUfr": "clôture manoir",
+      "EUit": "muretto con ringhiera",
+      "EUnl": "hek met pijlers",
+      "EUru": "кованый забор",
+      "JPja": "ようふうのさく",
+      "KRko": "아이언 스톤 울타리",
+      "TWzh": "西洋風柵欄",
+      "USen": "iron-and-stone fence",
+      "USes": "valla de hierro y piedra",
+      "USfr": "clôture manoir"
+    }
+  },
+  {
+    "label": "Fence_05206_pl",
+    "locale": {
+      "CNzh": "石砌铁艺栅栏",
+      "EUde": "Villenzaun",
+      "EUen": "iron-and-stone fencing",
+      "EUes": "verjas de hierro y piedra",
+      "EUfr": "clôture manoir",
+      "EUit": "muretti con ringhiera",
+      "EUnl": "hek met pijlers",
+      "EUru": "кованые заборы",
+      "JPja": "ようふうのさく",
+      "KRko": "아이언 스톤 울타리",
+      "TWzh": "西洋風柵欄",
+      "USen": "iron-and-stone fencing",
+      "USes": "vallas de hierro y piedra",
+      "USfr": "clôture manoir"
+    }
+  },
+  {
+    "label": "Fence_05207",
+    "locale": {
+      "CNzh": "和风栅栏",
+      "EUde": "Japanmauer",
+      "EUen": "zen fence",
+      "EUes": "cerca oriental",
+      "EUfr": "muret zen",
+      "EUit": "muretto giapponese",
+      "EUnl": "zenmuurtje",
+      "EUru": "забор-дзен",
+      "JPja": "わふうのさく",
+      "KRko": "동양풍 울타리",
+      "TWzh": "和風柵欄",
+      "USen": "zen fence",
+      "USes": "cerca oriental",
+      "USfr": "muret zen"
+    }
+  },
+  {
+    "label": "Fence_05207_pl",
+    "locale": {
+      "CNzh": "和风栅栏",
+      "EUde": "Japanmauer",
+      "EUen": "zen fencing",
+      "EUes": "cercas orientales",
+      "EUfr": "muret zen",
+      "EUit": "muretti giapponesi",
+      "EUnl": "zenmuurtje",
+      "EUru": "заборы-дзен",
+      "JPja": "わふうのさく",
+      "KRko": "동양풍 울타리",
+      "TWzh": "和風柵欄",
+      "USen": "zen fencing",
+      "USes": "cercas orientales",
+      "USfr": "muret zen"
+    }
+  },
+  {
+    "label": "Fence_05208",
+    "locale": {
+      "CNzh": "大型交叉格栅",
+      "EUde": "Riesengitterzaun",
+      "EUen": "large lattice fence",
+      "EUes": "valla alta celosía",
+      "EUfr": "clôture treillis haute",
+      "EUit": "recinzione graticcio XL",
+      "EUnl": "rasterschutting",
+      "EUru": "высокая решетка",
+      "JPja": "おおきなラティス",
+      "KRko": "커다란 격자 울타리",
+      "TWzh": "大型交叉格柵",
+      "USen": "large lattice fence",
+      "USes": "valla alta celosía",
+      "USfr": "clôture treillis haute"
+    }
+  },
+  {
+    "label": "Fence_05208_pl",
+    "locale": {
+      "CNzh": "大型交叉格栅",
+      "EUde": "Riesengitterzaun",
+      "EUen": "large lattice fencing",
+      "EUes": "vallas altas celosía",
+      "EUfr": "clôture treillis haute",
+      "EUit": "recinzioni graticcio XL",
+      "EUnl": "rasterschutting",
+      "EUru": "высокие решетки",
+      "JPja": "おおきなラティス",
+      "KRko": "커다란 격자 울타리",
+      "TWzh": "大型交叉格柵",
+      "USen": "large lattice fencing",
+      "USes": "vallas altas celosía",
+      "USfr": "clôture treillis haute"
+    }
+  },
+  {
+    "label": "Fence_05210",
+    "locale": {
+      "CNzh": "圆木墙栅栏",
+      "EUde": "Baumstammwandzaun",
+      "EUen": "log-wall fence",
+      "EUes": "valla de maderos",
+      "EUfr": "clôture rondins",
+      "EUit": "recinzione muro di tronchi",
+      "EUnl": "boomstammenhek",
+      "EUru": "бревенчатый забор",
+      "JPja": "まるたかべのさく",
+      "KRko": "통나무 벽 울타리",
+      "TWzh": "圓木牆柵欄",
+      "USen": "log-wall fence",
+      "USes": "valla pared de troncos",
+      "USfr": "barrière de rondins"
+    }
+  },
+  {
+    "label": "Fence_05210_pl",
+    "locale": {
+      "CNzh": "圆木墙栅栏",
+      "EUde": "Baumstammwandzaun",
+      "EUen": "log-wall fencing",
+      "EUes": "vallas de maderos",
+      "EUfr": "clôture rondins",
+      "EUit": "recinzioni muro di tronchi",
+      "EUnl": "boomstammenhek",
+      "EUru": "бревенчатые заборы",
+      "JPja": "まるたかべのさく",
+      "KRko": "통나무 벽 울타리",
+      "TWzh": "圓木牆柵欄",
+      "USen": "log-wall fencing",
+      "USes": "vallas pared de troncos",
+      "USfr": "barrière de rondins"
+    }
+  },
+  {
+    "label": "Fence_05212",
+    "locale": {
+      "CNzh": "石栅栏",
+      "EUde": "Feldsteinmauer",
+      "EUen": "stone fence",
+      "EUes": "cerca de piedra",
+      "EUfr": "muret en pierre sèche",
+      "EUit": "muretto di pietra",
+      "EUnl": "stenen muurtje",
+      "EUru": "каменный забор",
+      "JPja": "いしかべ",
+      "KRko": "돌 울타리",
+      "TWzh": "石柵欄",
+      "USen": "stone fence",
+      "USes": "cerca de piedra",
+      "USfr": "muret en pierre sèche"
+    }
+  },
+  {
+    "label": "Fence_05212_pl",
+    "locale": {
+      "CNzh": "石栅栏",
+      "EUde": "Feldsteinmauer",
+      "EUen": "stone fencing",
+      "EUes": "cercas de piedra",
+      "EUfr": "muret en pierre sèche",
+      "EUit": "muretti di pietra",
+      "EUnl": "stenen muurtje",
+      "EUru": "каменные заборы",
+      "JPja": "いしかべ",
+      "KRko": "돌 울타리",
+      "TWzh": "石柵欄",
+      "USen": "stone fencing",
+      "USes": "cercas de piedra",
+      "USfr": "muret en pierre sèche"
+    }
+  },
+  {
+    "label": "Fence_05213",
+    "locale": {
+      "CNzh": "有刺铁丝网",
+      "EUde": "Stacheldrahtzaun",
+      "EUen": "barbed-wire fence",
+      "EUes": "valla de alambre",
+      "EUfr": "clôture de barbelés",
+      "EUit": "filo spinato",
+      "EUnl": "prikkeldraadhek",
+      "EUru": "колючая проволока",
+      "JPja": "ゆうしてっせん",
+      "KRko": "가시철조망 울타리",
+      "TWzh": "有刺鐵絲網",
+      "USen": "barbed-wire fence",
+      "USes": "valla de alambre",
+      "USfr": "clôture de barbelés"
+    }
+  },
+  {
+    "label": "Fence_05213_pl",
+    "locale": {
+      "CNzh": "有刺铁丝网",
+      "EUde": "Stacheldrahtzaun",
+      "EUen": "barbed-wire fencing",
+      "EUes": "vallas de alambre",
+      "EUfr": "clôture de barbelés",
+      "EUit": "filo spinato",
+      "EUnl": "prikkeldraadhek",
+      "EUru": "колючая проволока",
+      "JPja": "ゆうしてっせん",
+      "KRko": "가시철조망 울타리",
+      "TWzh": "有刺鐵絲網",
+      "USen": "barbed-wire fencing",
+      "USes": "vallas de alambre",
+      "USfr": "clôture de barbelés"
+    }
+  },
+  {
+    "label": "Fence_11711",
+    "locale": {
+      "CNzh": "朴素木制栅栏",
+      "EUde": "Standard-Holzzaun",
+      "EUen": "simple wooden fence",
+      "EUes": "valla de madera",
+      "EUfr": "clôture en bois standard",
+      "EUit": "recinzione di legno grezzo",
+      "EUnl": "houten hekje",
+      "EUru": "простой дерев. забор",
+      "JPja": "そぼくなもくせいのさく",
+      "KRko": "소박한 목제 울타리",
+      "TWzh": "樸素木製柵欄",
+      "USen": "simple wooden fence",
+      "USes": "valla de madera",
+      "USfr": "clôture en bois standard"
+    }
+  },
+  {
+    "label": "Fence_11711_pl",
+    "locale": {
+      "CNzh": "朴素木制栅栏",
+      "EUde": "Standard-Holzzaun",
+      "EUen": "simple wooden fencing",
+      "EUes": "vallas de madera",
+      "EUfr": "clôture en bois standard",
+      "EUit": "recinzioni di legno grezzo",
+      "EUnl": "houten hekje",
+      "EUru": "простые дерев. заборы",
+      "JPja": "そぼくなもくせいのさく",
+      "KRko": "소박한 목제 울타리",
+      "TWzh": "樸素木製柵欄",
+      "USen": "simple wooden fencing",
+      "USes": "vallas de madera",
+      "USfr": "clôture en bois standard"
+    }
+  },
+  {
+    "label": "Fence_11712",
+    "locale": {
+      "CNzh": "交叉格栅",
+      "EUde": "Gitterzaun",
+      "EUen": "lattice fence",
+      "EUes": "valla celosía",
+      "EUfr": "clôture en treillis standard",
+      "EUit": "recinzione graticcio",
+      "EUnl": "rasterhek",
+      "EUru": "решетка",
+      "JPja": "ラティス",
+      "KRko": "격자 울타리",
+      "TWzh": "交叉格柵",
+      "USen": "lattice fence",
+      "USes": "valla celosía",
+      "USfr": "clôture en treillis standard"
+    }
+  },
+  {
+    "label": "Fence_11712_pl",
+    "locale": {
+      "CNzh": "交叉格栅",
+      "EUde": "Gitterzaun",
+      "EUen": "lattice fencing",
+      "EUes": "vallas celosía",
+      "EUfr": "clôture en treillis standard",
+      "EUit": "recinzioni graticcio",
+      "EUnl": "rasterhek",
+      "EUru": "решетки",
+      "JPja": "ラティス",
+      "KRko": "격자 울타리",
+      "TWzh": "交叉格柵",
+      "USen": "lattice fencing",
+      "USes": "vallas celosía",
+      "USfr": "clôture en treillis standard"
+    }
+  },
+  {
+    "label": "Fence_12630",
+    "locale": {
+      "CNzh": "复活节栅栏",
+      "EUde": "Häschentag-Zaun",
+      "EUen": "Bunny Day fence",
+      "EUes": "valla Caza del Huevo",
+      "EUfr": "clôture fête des œufs",
+      "EUit": "recinzione caccia all'uovo",
+      "EUnl": "eierhek",
+      "EUru": "забор «День зайцев»",
+      "JPja": "イースターなさく",
+      "KRko": "이스터 울타리",
+      "TWzh": "復活節柵欄",
+      "USen": "Bunny Day fence",
+      "USes": "valla Caza del Huevo",
+      "USfr": "clôture fête des œufs"
+    }
+  },
+  {
+    "label": "Fence_12630_pl",
+    "locale": {
+      "CNzh": "复活节栅栏",
+      "EUde": "Häschentag-Zaun",
+      "EUen": "Bunny Day fencing",
+      "EUes": "vallas Caza del Huevo",
+      "EUfr": "clôture fête des œufs",
+      "EUit": "recinzioni caccia all'uovo",
+      "EUnl": "eierhek",
+      "EUru": "заборы «День зайцев»",
+      "JPja": "イースターなさく",
+      "KRko": "이스터 울타리",
+      "TWzh": "復活節柵欄",
+      "USen": "Bunny Day fencing",
+      "USes": "vallas Caza del Huevo",
+      "USfr": "clôture fête des œufs"
+    }
+  },
+  {
+    "label": "Fence_12758",
+    "locale": {
+      "CNzh": "树篱",
+      "EUde": "Hecke",
+      "EUen": "hedge",
+      "EUes": "seto",
+      "EUfr": "clôture végétale",
+      "EUit": "siepe",
+      "EUnl": "heg",
+      "EUru": "живая изгородь",
+      "JPja": "いけがき",
+      "KRko": "낮은 나무 울타리",
+      "TWzh": "樹叢",
+      "USen": "hedge",
+      "USes": "arbusto",
+      "USfr": "clôture végétale"
+    }
+  },
+  {
+    "label": "Fence_12758_pl",
+    "locale": {
+      "CNzh": "树篱",
+      "EUde": "Hecke",
+      "EUen": "hedges",
+      "EUes": "setos",
+      "EUfr": "clôture végétale",
+      "EUit": "siepi",
+      "EUnl": "heg",
+      "EUru": "живые изгороди",
+      "JPja": "いけがき",
+      "KRko": "낮은 나무 울타리",
+      "TWzh": "樹叢",
+      "USen": "hedges",
+      "USes": "arbustos",
+      "USfr": "clôture végétale"
+    }
+  },
+  {
+    "label": "Fence_12894",
+    "locale": {
+      "CNzh": "婚礼栅栏",
+      "EUde": "Hochzeitsabsperrung",
+      "EUen": "wedding fence",
+      "EUes": "valla de boda",
+      "EUfr": "clôture de mariage",
+      "EUit": "recinzione nuziale",
+      "EUnl": "trouwhek",
+      "EUru": "свадебный забор",
+      "JPja": "ウェディングなさく",
+      "KRko": "웨딩 울타리",
+      "TWzh": "婚禮柵欄",
+      "USen": "wedding fence",
+      "USes": "valla de boda",
+      "USfr": "clôture de mariage"
+    }
+  },
+  {
+    "label": "Fence_12894_pl",
+    "locale": {
+      "CNzh": "婚礼栅栏",
+      "EUde": "Hochzeitsabsperrung",
+      "EUen": "wedding fencing",
+      "EUes": "vallas de boda",
+      "EUfr": "clôture de mariage",
+      "EUit": "recinzioni nuziali",
+      "EUnl": "trouwhek",
+      "EUru": "свадебные заборы",
+      "JPja": "ウェディングなさく",
+      "KRko": "웨딩 울타리",
+      "TWzh": "婚禮柵欄",
+      "USen": "wedding fencing",
+      "USes": "vallas de boda",
+      "USfr": "clôture de mariage"
+    }
+  },
+  {
+    "label": "Fence_13275",
+    "locale": {
+      "CNzh": "万圣节栅栏",
+      "EUde": "Kürbiszaun",
+      "EUen": "spooky fence",
+      "EUes": "valla calabaza",
+      "EUfr": "clôture Halloween",
+      "EUit": "recinzione brividi",
+      "EUnl": "pompoenhek",
+      "EUru": "жуткий забор",
+      "JPja": "ハロウィンなさく",
+      "KRko": "할로윈 울타리",
+      "TWzh": "萬聖節柵欄",
+      "USen": "spooky fence",
+      "USes": "valla calabaza",
+      "USfr": "clôture frisson"
+    }
+  },
+  {
+    "label": "Fence_13275_pl",
+    "locale": {
+      "CNzh": "万圣节栅栏",
+      "EUde": "Kürbiszaun",
+      "EUen": "spooky fencing",
+      "EUes": "vallas calabaza",
+      "EUfr": "clôture Halloween",
+      "EUit": "recinzioni brividi",
+      "EUnl": "pompoenhek",
+      "EUru": "жуткие заборы",
+      "JPja": "ハロウィンなさく",
+      "KRko": "할로윈 울타리",
+      "TWzh": "萬聖節柵欄",
+      "USen": "spooky fencing",
+      "USes": "vallas calabaza",
+      "USfr": "clôture frisson"
+    }
+  },
+  {
+    "label": "Fence_14278",
+    "locale": {
+      "CNzh": "人鱼栅栏",
+      "EUde": "Nixenzaun",
+      "EUen": "mermaid fence",
+      "EUes": "valla sirena",
+      "EUfr": "clôture sirène",
+      "EUit": "recinzione sirena",
+      "EUnl": "meerminnenhek",
+      "EUru": "забор русалки",
+      "JPja": "マーメイドなさく",
+      "KRko": "머메이드 울타리",
+      "TWzh": "人魚柵欄",
+      "USen": "mermaid fence",
+      "USes": "valla sirena",
+      "USfr": "clôture sirène"
+    }
+  },
+  {
+    "label": "Fence_14278_pl",
+    "locale": {
+      "CNzh": "人鱼栅栏",
+      "EUde": "Nixenzaun",
+      "EUen": "mermaid fencing",
+      "EUes": "vallas sirena",
+      "EUfr": "clôture sirène",
+      "EUit": "recinzioni sirena",
+      "EUnl": "meerminnenhek",
+      "EUru": "заборы русалки",
+      "JPja": "マーメイドなさく",
+      "KRko": "머메이드 울타리",
+      "TWzh": "人魚柵欄",
+      "USen": "mermaid fencing",
+      "USes": "vallas sirena",
+      "USfr": "clôture sirène"
+    }
+  },
+  {
+    "label": "Fence_14755",
+    "locale": {
+      "CNzh": "青竹栅栏",
+      "EUde": "Grün-Bambuszaun",
+      "EUen": "green bamboo fence",
+      "EUes": "valla de bambú verde",
+      "EUfr": "clôture bambou vert",
+      "EUit": "recinzione bambù verde",
+      "EUnl": "groen bamboehek",
+      "EUru": "зелен. забор из бамбука",
+      "JPja": "あおたけのさく",
+      "KRko": "초록 대나무 울타리",
+      "TWzh": "青竹柵欄",
+      "USen": "green bamboo fence",
+      "USes": "valla de bambú verde",
+      "USfr": "clôture bambou vert"
+    }
+  },
+  {
+    "label": "Fence_14755_pl",
+    "locale": {
+      "CNzh": "青竹栅栏",
+      "EUde": "Grün-Bambuszaun",
+      "EUen": "green bamboo fencing",
+      "EUes": "vallas de bambú verde",
+      "EUfr": "clôture bambou vert",
+      "EUit": "recinzioni bambù verde",
+      "EUnl": "groen bamboehek",
+      "EUru": "зелен. заборы из бамбука",
+      "JPja": "あおたけのさく",
+      "KRko": "초록 대나무 울타리",
+      "TWzh": "青竹柵欄",
+      "USen": "green bamboo fencing",
+      "USes": "vallas de bambú verde",
+      "USfr": "clôture bambou vert"
+    }
+  },
+  {
+    "label": "Fence_14756",
+    "locale": {
+      "CNzh": "冰栅栏",
+      "EUde": "Eiszaun",
+      "EUen": "frozen fence",
+      "EUes": "valla iceberg",
+      "EUfr": "clôture arctique",
+      "EUit": "recinzione iceberg",
+      "EUnl": "ijshek",
+      "EUru": "ледяной забор",
+      "JPja": "こおりのさく",
+      "KRko": "얼음 울타리",
+      "TWzh": "冰柵欄",
+      "USen": "frozen fence",
+      "USes": "valla iceberg",
+      "USfr": "clôture arctique"
+    }
+  },
+  {
+    "label": "Fence_14756_pl",
+    "locale": {
+      "CNzh": "冰栅栏",
+      "EUde": "Eiszaun",
+      "EUen": "frozen fencing",
+      "EUes": "vallas iceberg",
+      "EUfr": "clôture arctique",
+      "EUit": "recinzioni iceberg",
+      "EUnl": "ijshek",
+      "EUru": "ледяные заборы",
+      "JPja": "こおりのさく",
+      "KRko": "얼음 울타리",
+      "TWzh": "冰柵欄",
+      "USen": "frozen fencing",
+      "USes": "vallas iceberg",
+      "USfr": "clôture arctique"
+    }
+  },
+  {
+    "label": "Fence_14757",
+    "locale": {
+      "CNzh": "竹帘栅栏",
+      "EUde": "Bambus-Lamellenzaun",
+      "EUen": "bamboo-slats fence",
+      "EUes": "valla listones bambú",
+      "EUfr": "clôture lattes bambou",
+      "EUit": "recinzione stecche bambù",
+      "EUnl": "bamboelattenhek",
+      "EUru": "штакетник из бамбука",
+      "JPja": "すだれのさく",
+      "KRko": "대나무 발 울타리",
+      "TWzh": "竹簾柵欄",
+      "USen": "bamboo-slats fence",
+      "USes": "valla listones bambú",
+      "USfr": "clôture lattes bambou"
+    }
+  },
+  {
+    "label": "Fence_14757_pl",
+    "locale": {
+      "CNzh": "竹帘栅栏",
+      "EUde": "Bambus-Lamellenzaun",
+      "EUen": "bamboo-slats fencing",
+      "EUes": "vallas listones bambú",
+      "EUfr": "clôture lattes bambou",
+      "EUit": "recinzioni stecche bambù",
+      "EUnl": "bamboelattenhek",
+      "EUru": "штакетники из бамбука",
+      "JPja": "すだれのさく",
+      "KRko": "대나무 발 울타리",
+      "TWzh": "竹簾柵欄",
+      "USen": "bamboo-slats fencing",
+      "USes": "vallas listones bambú",
+      "USfr": "clôture lattes bambou"
+    }
+  },
+  {
+    "label": "Fence_14758",
+    "locale": {
+      "CNzh": "铁皮栅栏",
+      "EUde": "Blechzaun",
+      "EUen": "corrugated iron fence",
+      "EUes": "valla de chapa ondulada",
+      "EUfr": "clôture tôle ondulée",
+      "EUit": "recinzione di ferro ondulato",
+      "EUnl": "golfplatenhek",
+      "EUru": "ржавый железн. забор",
+      "JPja": "トタンのさく",
+      "KRko": "슬레이트 울타리",
+      "TWzh": "鐵皮柵欄",
+      "USen": "corrugated iron fence",
+      "USes": "valla de chapa ondulada",
+      "USfr": "clôture tôle ondulée"
+    }
+  },
+  {
+    "label": "Fence_14758_pl",
+    "locale": {
+      "CNzh": "铁皮栅栏",
+      "EUde": "Blechzaun",
+      "EUen": "corrugated iron fencing",
+      "EUes": "vallas de chapa ondulada",
+      "EUfr": "clôture tôle ondulée",
+      "EUit": "recinzioni di ferro ondulato",
+      "EUnl": "golfplatenhek",
+      "EUru": "ржавые железн. заборы",
+      "JPja": "トタンのさく",
+      "KRko": "슬레이트 울타리",
+      "TWzh": "鐵皮柵欄",
+      "USen": "corrugated iron fencing",
+      "USes": "vallas de chapa ondulada",
+      "USfr": "clôture tôle ondulée"
+    }
+  },
+  {
+    "label": "Fence_14759",
+    "locale": {
+      "CNzh": "公园栅栏",
+      "EUde": "Parkzaun",
+      "EUen": "park fence",
+      "EUes": "valla de parque infantil",
+      "EUfr": "clôture aire de jeu",
+      "EUit": "recinzione da parco",
+      "EUnl": "parkhek",
+      "EUru": "забор детской площадки",
+      "JPja": "こうえんのさく",
+      "KRko": "공원 울타리",
+      "TWzh": "公園柵欄",
+      "USen": "park fence",
+      "USes": "valla de parque infantil",
+      "USfr": "clôture aire de jeu"
+    }
+  },
+  {
+    "label": "Fence_14759_pl",
+    "locale": {
+      "CNzh": "公园栅栏",
+      "EUde": "Parkzaun",
+      "EUen": "park fencing",
+      "EUes": "vallas de parque infantil",
+      "EUfr": "clôture aire de jeu",
+      "EUit": "recinzioni da parco",
+      "EUnl": "parkhek",
+      "EUru": "заборы детской площадки",
+      "JPja": "こうえんのさく",
+      "KRko": "공원 울타리",
+      "TWzh": "公園柵欄",
+      "USen": "park fencing",
+      "USes": "vallas de parque infantil",
+      "USfr": "clôture aire de jeu"
+    }
+  }
+]

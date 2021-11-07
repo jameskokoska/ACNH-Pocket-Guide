@@ -1,0 +1,1522 @@
+﻿[
+  {
+    "label": "InsectToy_05922",
+    "locale": {
+      "CNzh": "锯锹形虫模型",
+      "EUde": "Sägez.-Hirschkäfermodell",
+      "EUen": "saw stag model",
+      "EUes": "figura esc. ciervo sierra",
+      "EUfr": "modèle de lucane inclinatus",
+      "EUit": "replica di coleottero cervo",
+      "EUnl": "modelzaaghertkever",
+      "EUru": "модель жука-оленя",
+      "JPja": "ノコギリクワガタのもけい",
+      "KRko": "톱사슴벌레 모형",
+      "TWzh": "鋸鍬形蟲模型",
+      "USen": "saw stag model",
+      "USes": "figura esc. ciervo sierra",
+      "USfr": "modèle de lucane inclinatus"
+    }
+  },
+  {
+    "label": "InsectToy_05924",
+    "locale": {
+      "CNzh": "巨大兜虫模型",
+      "EUde": "Mega-Herkuleskäf.-Modell",
+      "EUen": "grand h. hercules model",
+      "EUes": "estatua es. astado hércules",
+      "EUfr": "modèle du Roi Dynaste",
+      "EUit": "replica XL scarabeo Ercole",
+      "EUnl": "modelherculeskever XL",
+      "EUru": "модель жука-геркулеса",
+      "JPja": "おおいなるカブトのもけい",
+      "KRko": "위대한 장수풍뎅이 모형",
+      "TWzh": "巨大獨角仙模型",
+      "USen": "grand h. hercules model",
+      "USes": "estatua es. astado hércules",
+      "USfr": "modèle du Roi Dynaste"
+    }
+  },
+  {
+    "label": "InsectToy_05927",
+    "locale": {
+      "CNzh": "黄蜂模型",
+      "EUde": "Wespenmodell",
+      "EUen": "wasp model",
+      "EUes": "figura de avispa",
+      "EUfr": "modèle de guêpe",
+      "EUit": "replica di vespa",
+      "EUnl": "modelwesp",
+      "EUru": "модель осы",
+      "JPja": "ハチのもけい",
+      "KRko": "벌 모형",
+      "TWzh": "黃蜂模型",
+      "USen": "wasp model",
+      "USes": "figura de avispa",
+      "USfr": "modèle de guêpe"
+    }
+  },
+  {
+    "label": "InsectToy_05928",
+    "locale": {
+      "CNzh": "蜜蜂模型",
+      "EUde": "Honigbienenmodell",
+      "EUen": "honeybee model",
+      "EUes": "figura de abeja melífera",
+      "EUfr": "modèle d'abeille naine",
+      "EUit": "replica di ape operaia",
+      "EUnl": "modelhoningbij",
+      "EUru": "модель восковой пчелы",
+      "JPja": "ミツバチのもけい",
+      "KRko": "꿀벌 모형",
+      "TWzh": "蜜蜂模型",
+      "USen": "honeybee model",
+      "USes": "figura de abeja melífera",
+      "USfr": "modèle d'abeille naine"
+    }
+  },
+  {
+    "label": "InsectToy_05929",
+    "locale": {
+      "CNzh": "宝石金龟模型",
+      "EUde": "Goldskarabäusmodell",
+      "EUen": "scarab beetle model",
+      "EUes": "figura de escarabajo oro",
+      "EUfr": "modèle de scarabée",
+      "EUit": "replica di chrysina resplen.",
+      "EUnl": "modelscarabee",
+      "EUru": "модель золотого скарабея",
+      "JPja": "プラチナコガネのもけい",
+      "KRko": "보석풍뎅이 모형",
+      "TWzh": "寶石金龜模型",
+      "USen": "scarab beetle model",
+      "USes": "figura de escarabajo oro",
+      "USfr": "modèle de scarabée"
+    }
+  },
+  {
+    "label": "InsectToy_05935",
+    "locale": {
+      "CNzh": "跳蚤模型",
+      "EUde": "Flohmodell",
+      "EUen": "flea model",
+      "EUes": "figura de pulga",
+      "EUfr": "modèle de puce",
+      "EUit": "replica di pulce",
+      "EUnl": "modelvlo",
+      "EUru": "модель блохи",
+      "JPja": "ノミのもけい",
+      "KRko": "벼룩 모형",
+      "TWzh": "跳蚤模型",
+      "USen": "flea model",
+      "USes": "figura de pulga",
+      "USfr": "modèle de puce"
+    }
+  },
+  {
+    "label": "InsectToy_05936",
+    "locale": {
+      "CNzh": "蚊子模型",
+      "EUde": "Mückenmodell",
+      "EUen": "mosquito model",
+      "EUes": "figura de mosquito",
+      "EUfr": "modèle de moustique",
+      "EUit": "replica di zanzara",
+      "EUnl": "modelmug",
+      "EUru": "модель комара",
+      "JPja": "カのもけい",
+      "KRko": "모기 모형",
+      "TWzh": "蚊子模型",
+      "USen": "mosquito model",
+      "USes": "figura de mosquito",
+      "USfr": "modèle de moustique"
+    }
+  },
+  {
+    "label": "InsectToy_05938",
+    "locale": {
+      "CNzh": "独角仙模型",
+      "EUde": "Nashornkäfermodell",
+      "EUen": "horned dynastid model",
+      "EUes": "figura esc. astado japonés",
+      "EUfr": "modèle de scarabée kabuto",
+      "EUit": "replica scarab. kabutomushi",
+      "EUnl": "modelneushoornkever",
+      "EUru": "модель дупляка",
+      "JPja": "カブトムシのもけい",
+      "KRko": "장수풍뎅이 모형",
+      "TWzh": "獨角仙模型",
+      "USen": "horned dynastid model",
+      "USes": "figura esc. astado japonés",
+      "USfr": "modèle de scarabée kabuto"
+    }
+  },
+  {
+    "label": "InsectToy_05944",
+    "locale": {
+      "CNzh": "凤蝶模型",
+      "EUde": "Schwalbenschwanzmodell",
+      "EUen": "tiger butterfly model",
+      "EUes": "figura de mariposa tigre",
+      "EUfr": "modèle de machaon",
+      "EUit": "replica di farfalla tigre",
+      "EUnl": "modelkoninginnenpage",
+      "EUru": "модель махаона",
+      "JPja": "アゲハチョウのもけい",
+      "KRko": "호랑나비 모형",
+      "TWzh": "鳳蝶模型",
+      "USen": "tiger butterfly model",
+      "USes": "figura de mariposa tigre",
+      "USfr": "modèle de machaon"
+    }
+  },
+  {
+    "label": "InsectToy_07046",
+    "locale": {
+      "CNzh": "油蝉模型",
+      "EUde": "Braunzikadenmodell",
+      "EUen": "brown cicada model",
+      "EUes": "figura de cigarra marrón",
+      "EUfr": "modèle de cigale cercope",
+      "EUit": "replica di cicala marrone",
+      "EUnl": "model-bruine-cicade",
+      "EUru": "модель коричнев. цикады",
+      "JPja": "アブラゼミのもけい",
+      "KRko": "유지매미 모형",
+      "TWzh": "油蟬模型",
+      "USen": "brown cicada model",
+      "USes": "figura de cigarra marrón",
+      "USfr": "modèle de cigale cercope"
+    }
+  },
+  {
+    "label": "InsectToy_07049",
+    "locale": {
+      "CNzh": "红颈凤蝶模型",
+      "EUde": "Troides-brookiana-Modell",
+      "EUen": "R. Brooke's birdwing model",
+      "EUes": "figura mariposa alas Brooke",
+      "EUfr": "modèle troides brookiana",
+      "EUit": "replica farfalla Raja Brooke",
+      "EUnl": "model-Rajah-Brooke-vlinder",
+      "EUru": "модель трогоноптеры Бр.",
+      "JPja": "アカエリトリバネアゲハのもけい",
+      "KRko": "붉은목도리비단나비 모형",
+      "TWzh": "紅頸鳳蝶模型",
+      "USen": "R. Brooke's birdwing model",
+      "USes": "figura mariposa alas Brooke",
+      "USfr": "modèle troides brookiana"
+    }
+  },
+  {
+    "label": "InsectToy_07050",
+    "locale": {
+      "CNzh": "红蜻蜓模型",
+      "EUde": "Feuerlibellenmodell",
+      "EUen": "red dragonfly model",
+      "EUes": "figura de libélula roja",
+      "EUfr": "modèle de sympetrum",
+      "EUit": "replica di libellula rossa",
+      "EUnl": "model-rode-libel",
+      "EUru": "модель красной стрекозы",
+      "JPja": "アキアカネのもけい",
+      "KRko": "고추잠자리 모형",
+      "TWzh": "紅蜻蜓模型",
+      "USen": "red dragonfly model",
+      "USes": "figura de libélula roja",
+      "USfr": "modèle de libellule rouge"
+    }
+  },
+  {
+    "label": "InsectToy_07051",
+    "locale": {
+      "CNzh": "巨大蝴蝶模型",
+      "EUde": "Mega-Vogelfaltermodell",
+      "EUen": "grand Q. A. birdwing model",
+      "EUes": "estatua marip. alas pájaro",
+      "EUfr": "modèle du Roi Papillon",
+      "EUit": "replica XL farfalla regina A.",
+      "EUnl": "model-A.-vogelvlinder XL",
+      "EUru": "модель птицекрылки Ал.",
+      "JPja": "おおいなるチョウのもけい",
+      "KRko": "위대한 나비 모형",
+      "TWzh": "巨大蝴蝶模型",
+      "USen": "grand Q. A. birdwing model",
+      "USes": "estatua marip. alas pájaro",
+      "USfr": "modèle du Roi Papillon"
+    }
+  },
+  {
+    "label": "InsectToy_07052",
+    "locale": {
+      "CNzh": "水黾模型",
+      "EUde": "Wasserläufermodell",
+      "EUen": "pondskater model",
+      "EUes": "figura de zapatero",
+      "EUfr": "modèle de patineur",
+      "EUit": "replica di gerride",
+      "EUnl": "modelschaatsenrijder",
+      "EUru": "модель водомерки",
+      "JPja": "アメンボのもけい",
+      "KRko": "소금쟁이 모형",
+      "TWzh": "水黽模型",
+      "USen": "pondskater model",
+      "USes": "figura de zapatero",
+      "USfr": "modèle de patineur"
+    }
+  },
+  {
+    "label": "InsectToy_07053",
+    "locale": {
+      "CNzh": "蚂蚁模型",
+      "EUde": "Ameisenmodell",
+      "EUen": "ant model",
+      "EUes": "figura de hormiga",
+      "EUfr": "modèle de fourmi",
+      "EUit": "replica di formica",
+      "EUnl": "modelmier",
+      "EUru": "модель муравья",
+      "JPja": "アリのもけい",
+      "KRko": "개미 모형",
+      "TWzh": "螞蟻模型",
+      "USen": "ant model",
+      "USes": "figura de hormiga",
+      "USfr": "modèle de fourmi"
+    }
+  },
+  {
+    "label": "InsectToy_07054",
+    "locale": {
+      "CNzh": "鼠妇模型",
+      "EUde": "Kugelasselmodell",
+      "EUen": "pill bug model",
+      "EUes": "figura de cochinilla",
+      "EUfr": "modèle de cloporte",
+      "EUit": "replica di porcellino di terra",
+      "EUnl": "modelpissebed",
+      "EUru": "модель мокрицы",
+      "JPja": "ダンゴムシのもけい",
+      "KRko": "공벌레 모형",
+      "TWzh": "鼠婦模型",
+      "USen": "pill bug model",
+      "USes": "figura de cochinilla",
+      "USfr": "modèle de cloporte"
+    }
+  },
+  {
+    "label": "InsectToy_07055",
+    "locale": {
+      "CNzh": "海蟑螂模型",
+      "EUde": "Ligia-exotica-Modell",
+      "EUen": "wharf roach model",
+      "EUes": "figura cochinilla de arena",
+      "EUfr": "modèle de ligie",
+      "EUit": "replica di ligia exotica",
+      "EUnl": "modelstrandpissebed",
+      "EUru": "модель морского таракана",
+      "JPja": "フナムシのもけい",
+      "KRko": "갯강구 모형",
+      "TWzh": "海蟑螂模型",
+      "USen": "wharf roach model",
+      "USes": "figura cochinilla de arena",
+      "USfr": "modèle de ligie"
+    }
+  },
+  {
+    "label": "InsectToy_07056",
+    "locale": {
+      "CNzh": "飞蛾模型",
+      "EUde": "Mottenmodell",
+      "EUen": "moth model",
+      "EUes": "figura de polilla",
+      "EUfr": "modèle de papillon de nuit",
+      "EUit": "replica di falena",
+      "EUnl": "modelmot",
+      "EUru": "модель павлиноглазки",
+      "JPja": "ガのもけい",
+      "KRko": "나방 모형",
+      "TWzh": "飛蛾模型",
+      "USen": "moth model",
+      "USes": "figura de polilla",
+      "USfr": "modèle de papillon de nuit"
+    }
+  },
+  {
+    "label": "InsectToy_07057",
+    "locale": {
+      "CNzh": "龙虱模型",
+      "EUde": "Schwimmkäfermodell",
+      "EUen": "diving beetle model",
+      "EUes": "figura escarabajo nadador",
+      "EUfr": "modèle de dytique",
+      "EUit": "replica di ditisco",
+      "EUnl": "modelwaterroofkever",
+      "EUru": "модель плавунца",
+      "JPja": "ゲンゴロウのもけい",
+      "KRko": "물방개 모형",
+      "TWzh": "龍蝨模型",
+      "USen": "diving beetle model",
+      "USes": "figura escarabajo nadador",
+      "USfr": "modèle de dytique"
+    }
+  },
+  {
+    "label": "InsectToy_07058",
+    "locale": {
+      "CNzh": "绿胸晏蜓模型",
+      "EUde": "Königslibellenmodell",
+      "EUen": "darner dragonfly model",
+      "EUes": "figura libélula cab. diablo",
+      "EUfr": "modèle d'anax napolitain",
+      "EUit": "replica di libellula depressa",
+      "EUnl": "model-zuidelijke-keizerlibel",
+      "EUru": "модель дозорщика",
+      "JPja": "ギンヤンマのもけい",
+      "KRko": "왕잠자리 모형",
+      "TWzh": "綠胸晏蜓模型",
+      "USen": "darner dragonfly model",
+      "USes": "figura libélula cab. diablo",
+      "USfr": "modèle d'anax napolitain"
+    }
+  },
+  {
+    "label": "InsectToy_07059",
+    "locale": {
+      "CNzh": "巨大花金龟模型",
+      "EUde": "Mega-Goliathkäfermodell",
+      "EUen": "grand goliath beetle model",
+      "EUes": "estatua de goliat",
+      "EUfr": "modèle du Roi Scarabée",
+      "EUit": "replica XL scarabeo Golia",
+      "EUnl": "modelgoliathkever XL",
+      "EUru": "модель жука-голиафа",
+      "JPja": "おおいなるハナムグリのもけい",
+      "KRko": "위대한 꽃무지 모형",
+      "TWzh": "巨大花金龜模型",
+      "USen": "grand goliath beetle model",
+      "USes": "estatua de goliat",
+      "USfr": "modèle du Roi Scarabée"
+    }
+  },
+  {
+    "label": "InsectToy_07060",
+    "locale": {
+      "CNzh": "苍蝇模型",
+      "EUde": "Fliegenmodell",
+      "EUen": "fly model",
+      "EUes": "figura de mosca",
+      "EUfr": "modèle de mouche",
+      "EUit": "replica di mosca",
+      "EUnl": "modelvlieg",
+      "EUru": "модель мухи",
+      "JPja": "ハエのもけい",
+      "KRko": "파리 모형",
+      "TWzh": "蒼蠅模型",
+      "USen": "fly model",
+      "USes": "figura de mosca",
+      "USfr": "modèle de mouche"
+    }
+  },
+  {
+    "label": "InsectToy_07061",
+    "locale": {
+      "CNzh": "兰花螳螂模型",
+      "EUde": "Orchideenmantismodell",
+      "EUen": "orchid mantis model",
+      "EUes": "figura de mantis orquídea",
+      "EUfr": "modèle de mante orchidée",
+      "EUit": "replica di mantide orchidea",
+      "EUnl": "model-orch.-bidsprinkhaan",
+      "EUru": "модель орхид. богомола",
+      "JPja": "ハナカマキリのもけい",
+      "KRko": "연꽃사마귀 모형",
+      "TWzh": "蘭花螳螂模型",
+      "USen": "orchid mantis model",
+      "USes": "figura de mantis orquídea",
+      "USfr": "modèle de mante orchidée"
+    }
+  },
+  {
+    "label": "InsectToy_07062",
+    "locale": {
+      "CNzh": "虎甲虫模型",
+      "EUde": "Sandlaufkäfermodell",
+      "EUen": "tiger beetle model",
+      "EUes": "figura de escarabajo tigre",
+      "EUfr": "modèle de cicindèle",
+      "EUit": "replica di cicindela",
+      "EUnl": "modelzandloopkever",
+      "EUru": "модель жука-скакуна",
+      "JPja": "ハンミョウのもけい",
+      "KRko": "길앞잡이 모형",
+      "TWzh": "虎甲蟲模型",
+      "USen": "tiger beetle model",
+      "USes": "figura de escarabajo tigre",
+      "USfr": "modèle de cicindèle"
+    }
+  },
+  {
+    "label": "InsectToy_07063",
+    "locale": {
+      "CNzh": "暮蝉模型",
+      "EUde": "Abendzikadenmodell",
+      "EUen": "evening cicada model",
+      "EUes": "figura de cigarrilla",
+      "EUfr": "modèle de cigale higurashi",
+      "EUit": "replica di cicala notturna",
+      "EUnl": "modelavondcicade",
+      "EUru": "модель ночной цикады",
+      "JPja": "ヒグラシのもけい",
+      "KRko": "쓰르라미 모형",
+      "TWzh": "暮蟬模型",
+      "USen": "evening cicada model",
+      "USes": "figura de cigarra",
+      "USfr": "modèle de cigale higurashi"
+    }
+  },
+  {
+    "label": "InsectToy_07064",
+    "locale": {
+      "CNzh": "细身赤锹形虫模型",
+      "EUde": "Cyclommatusmodell",
+      "EUen": "cyclommatus stag model",
+      "EUes": "figura esc. cyclommatus",
+      "EUfr": "modèle lucane cyclommatus",
+      "EUit": "replica di col. cyclommatus",
+      "EUnl": "model-vliegend-hert",
+      "EUru": "модель жука-рогача",
+      "JPja": "ホソアカクワガタのもけい",
+      "KRko": "엘라푸스가위사슴벌레 모형",
+      "TWzh": "細身赤鍬形蟲模型",
+      "USen": "cyclommatus stag model",
+      "USes": "figura esc. cyclommatus",
+      "USfr": "modèle lucane cyclommatus"
+    }
+  },
+  {
+    "label": "InsectToy_07065",
+    "locale": {
+      "CNzh": "萤火虫模型",
+      "EUde": "Leuchtkäfermodell",
+      "EUen": "firefly model",
+      "EUes": "figura de luciérnaga",
+      "EUfr": "modèle de luciole",
+      "EUit": "replica di lucciola",
+      "EUnl": "modelvuurvliegje",
+      "EUru": "модель светлячка",
+      "JPja": "ホタルのもけい",
+      "KRko": "반디 모형",
+      "TWzh": "螢火蟲模型",
+      "USen": "firefly model",
+      "USes": "figura de luciérnaga",
+      "USfr": "modèle de luciole"
+    }
+  },
+  {
+    "label": "InsectToy_07066",
+    "locale": {
+      "CNzh": "蜣螂模型",
+      "EUde": "Mistkäfermodell",
+      "EUen": "dung beetle model",
+      "EUes": "figura escarabajo pelotero",
+      "EUfr": "modèle de bousier",
+      "EUit": "replica scarabeo stercorario",
+      "EUnl": "modelmestkever",
+      "EUru": "модель жука-навозника",
+      "JPja": "フンコロガシのもけい",
+      "KRko": "쇠똥구리 모형",
+      "TWzh": "糞金龜模型",
+      "USen": "dung beetle model",
+      "USes": "figura escarabajo pelotero",
+      "USfr": "modèle de bousier"
+    }
+  },
+  {
+    "label": "InsectToy_07067",
+    "locale": {
+      "CNzh": "稻蝗模型",
+      "EUde": "Heuschreckenmodell",
+      "EUen": "rice grasshopper model",
+      "EUes": "figura de langosta",
+      "EUfr": "modèle de criquet",
+      "EUit": "replica di locusta",
+      "EUnl": "modelrijstsprinkhaan",
+      "EUru": "модель рисовой кобылки",
+      "JPja": "イナゴのもけい",
+      "KRko": "메뚜기 모형",
+      "TWzh": "稻蝗模型",
+      "USen": "rice grasshopper model",
+      "USes": "figura de langosta",
+      "USfr": "modèle de criquet"
+    }
+  },
+  {
+    "label": "InsectToy_07068",
+    "locale": {
+      "CNzh": "螳螂模型",
+      "EUde": "Gottesanbeterinnenmodell",
+      "EUen": "mantis model",
+      "EUes": "figura de mantis religiosa",
+      "EUfr": "modèle de mante religieuse",
+      "EUit": "replica di mantide",
+      "EUnl": "modelbidsprinkhaan",
+      "EUru": "модель богомола",
+      "JPja": "カマキリのもけい",
+      "KRko": "사마귀 모형",
+      "TWzh": "螳螂模型",
+      "USen": "mantis model",
+      "USes": "figura de mantis religiosa",
+      "USfr": "modèle de mante religieuse"
+    }
+  },
+  {
+    "label": "InsectToy_07069",
+    "locale": {
+      "CNzh": "椿象模型",
+      "EUde": "Stinkwanzenmodell",
+      "EUen": "stinkbug model",
+      "EUes": "figura de chinche",
+      "EUfr": "modèle de punaise",
+      "EUit": "replica di cimice",
+      "EUnl": "modelschildwants",
+      "EUru": "модель щитника",
+      "JPja": "カメムシのもけい",
+      "KRko": "노린재 모형",
+      "TWzh": "椿象模型",
+      "USen": "stinkbug model",
+      "USes": "figura de chinche",
+      "USfr": "modèle de punaise"
+    }
+  },
+  {
+    "label": "InsectToy_07070",
+    "locale": {
+      "CNzh": "星天牛模型",
+      "EUde": "Fichtenbockmodell",
+      "EUen": "citrus long-horned b. model",
+      "EUes": "figura longicornio asiático",
+      "EUfr": "modèle de capricorne",
+      "EUit": "replica di tarlo asiatico",
+      "EUnl": "model-Aziatische-boktor",
+      "EUru": "модель цитрусового усача",
+      "JPja": "ゴマダラカミキリのもけい",
+      "KRko": "알락하늘소 모형",
+      "TWzh": "星天牛模型",
+      "USen": "citrus long-horned b. model",
+      "USes": "figura longicornio asiático",
+      "USfr": "mod. capric. des agrumes"
+    }
+  },
+  {
+    "label": "InsectToy_07071",
+    "locale": {
+      "CNzh": "乌鸦凤蝶模型",
+      "EUde": "Ritterfaltermodell",
+      "EUen": "peacock butterfly model",
+      "EUes": "figura de mariposa bianor",
+      "EUfr": "modèle de papilio bianor",
+      "EUit": "replica di farfalla vanessa io",
+      "EUnl": "modelpauwenpage",
+      "EUru": "модель бианора",
+      "JPja": "カラスアゲハのもけい",
+      "KRko": "제비나비 모형",
+      "TWzh": "烏鴉鳳蝶模型",
+      "USen": "peacock butterfly model",
+      "USes": "figura de mariposa bianor",
+      "USfr": "modèle de papilio bianor"
+    }
+  },
+  {
+    "label": "InsectToy_07072",
+    "locale": {
+      "CNzh": "蜗牛模型",
+      "EUde": "Schneckenmodell",
+      "EUen": "snail model",
+      "EUes": "figura de caracol",
+      "EUfr": "modèle d'escargot",
+      "EUit": "replica di chiocciola",
+      "EUnl": "modelslak",
+      "EUru": "модель улитки",
+      "JPja": "カタツムリのもけい",
+      "KRko": "달팽이 모형",
+      "TWzh": "蝸牛模型",
+      "USen": "snail model",
+      "USes": "figura de caracol",
+      "USfr": "modèle d'escargot"
+    }
+  },
+  {
+    "label": "InsectToy_07073",
+    "locale": {
+      "CNzh": "蚱蜢模型",
+      "EUde": "Grashüpfermodell",
+      "EUen": "grasshopper model",
+      "EUes": "figura de saltamontes",
+      "EUfr": "modèle de sauterelle",
+      "EUit": "replica di cavalletta",
+      "EUnl": "modelsprinkhaan",
+      "EUru": "модель кузнечика",
+      "JPja": "キリギリスのもけい",
+      "KRko": "여치 모형",
+      "TWzh": "蚱蜢模型",
+      "USen": "grasshopper model",
+      "USes": "figura de saltamontes",
+      "USfr": "modèle de sauterelle"
+    }
+  },
+  {
+    "label": "InsectToy_07074",
+    "locale": {
+      "CNzh": "雪隐金龟模型",
+      "EUde": "Gold-Mistkäfermodell",
+      "EUen": "earth-boring dung b. model",
+      "EUes": "figura escarab. geotrúpido",
+      "EUfr": "modèle de geotrupidae",
+      "EUit": "replica di geotrupidae",
+      "EUnl": "model-echte-mestkever",
+      "EUru": "модель навозника-землер.",
+      "JPja": "オオセンチコガネのもけい",
+      "KRko": "보라금풍뎅이 모형",
+      "TWzh": "雪隱金龜模型",
+      "USen": "earth-boring dung b. model",
+      "USes": "figura escarab. geotrúpido",
+      "USfr": "modèle de géotrupe"
+    }
+  },
+  {
+    "label": "InsectToy_07075",
+    "locale": {
+      "CNzh": "高卡萨斯南洋大兜虫模型",
+      "EUde": "Atlaskäfermodell",
+      "EUen": "horned atlas model",
+      "EUes": "figura esc. astado atlas",
+      "EUfr": "modèle de scarabée Atlas",
+      "EUit": "replica di scarabeo atlas",
+      "EUnl": "modelatlaskever",
+      "EUru": "модель жука-атласа",
+      "JPja": "コーカサスオオカブトのもけい",
+      "KRko": "코카서스장수풍뎅이 모형",
+      "TWzh": "高卡薩斯南洋大兜蟲模型",
+      "USen": "horned atlas model",
+      "USes": "figura esc. astado atlas",
+      "USfr": "modèle de scarabée Atlas"
+    }
+  },
+  {
+    "label": "InsectToy_07076",
+    "locale": {
+      "CNzh": "叶竹节虫模型",
+      "EUde": "Blattschreckenmodell",
+      "EUen": "walking leaf model",
+      "EUes": "figura de insecto hoja",
+      "EUfr": "modèle de phyllie",
+      "EUit": "replica di insetto foglia",
+      "EUnl": "model-wandelend-blad",
+      "EUru": "модель листотела",
+      "JPja": "コノハムシのもけい",
+      "KRko": "잎사귀벌레 모형",
+      "TWzh": "葉竹節蟲模型",
+      "USen": "walking leaf model",
+      "USes": "figura de insecto hoja",
+      "USfr": "modèle de phyllie"
+    }
+  },
+  {
+    "label": "InsectToy_07077",
+    "locale": {
+      "CNzh": "蟋蟀模型",
+      "EUde": "Grillenmodell",
+      "EUen": "cricket model",
+      "EUes": "figura de grillo común",
+      "EUfr": "modèle de grillon des prés",
+      "EUit": "replica di grillo",
+      "EUnl": "modelkrekel",
+      "EUru": "модель сверчка",
+      "JPja": "コオロギのもけい",
+      "KRko": "귀뚜라미 모형",
+      "TWzh": "蟋蟀模型",
+      "USen": "cricket model",
+      "USes": "figura de grillo común",
+      "USfr": "modèle de grillon des prés"
+    }
+  },
+  {
+    "label": "InsectToy_07078",
+    "locale": {
+      "CNzh": "熊蝉模型",
+      "EUde": "Riesenzikadenmodell",
+      "EUen": "giant cicada model",
+      "EUes": "figura de cigarra gigante",
+      "EUfr": "modèle de cigale géante",
+      "EUit": "replica di cicala gigante",
+      "EUnl": "modelreuzencicade",
+      "EUru": "модель гигантской цикады",
+      "JPja": "クマゼミのもけい",
+      "KRko": "곰매미 모형",
+      "TWzh": "熊蟬模型",
+      "USen": "giant cicada model",
+      "USes": "figura de cigarra gigante",
+      "USfr": "modèle de cigale géante"
+    }
+  },
+  {
+    "label": "InsectToy_07079",
+    "locale": {
+      "CNzh": "蜘蛛模型",
+      "EUde": "Spinnenmodell",
+      "EUen": "spider model",
+      "EUes": "figura de araña",
+      "EUfr": "modèle d'araignée",
+      "EUit": "replica di ragno",
+      "EUnl": "modelspin",
+      "EUru": "модель паука",
+      "JPja": "クモのもけい",
+      "KRko": "거미 모형",
+      "TWzh": "蜘蛛模型",
+      "USen": "spider model",
+      "USes": "figura de araña",
+      "USfr": "modèle d'araignée"
+    }
+  },
+  {
+    "label": "InsectToy_07080",
+    "locale": {
+      "CNzh": "彩袄蛱蝶模型",
+      "EUde": "Agrias-Faltermodell",
+      "EUen": "agrias butterfly model",
+      "EUes": "figura de mariposa narciso",
+      "EUfr": "modèle d'agrias",
+      "EUit": "replica di farfalla agrias",
+      "EUnl": "modelagriasvlinder",
+      "EUru": "модель агриаса клаудина",
+      "JPja": "ミイロタテハのもけい",
+      "KRko": "아그리아스나비 모형",
+      "TWzh": "彩襖蛺蝶模型",
+      "USen": "agrias butterfly model",
+      "USes": "figura de mariposa narciso",
+      "USfr": "modèle d'agrias"
+    }
+  },
+  {
+    "label": "InsectToy_07081",
+    "locale": {
+      "CNzh": "斑透翅蝉模型",
+      "EUde": "Hyalessa-Zikadenmodell",
+      "EUen": "robust cicada model",
+      "EUes": "figura de cigarra oriental",
+      "EUfr": "modèle de cigale hyalessa",
+      "EUit": "replica di cicala robusta",
+      "EUnl": "model-minmin-cicade",
+      "EUru": "модель певчей цикады",
+      "JPja": "ミンミンゼミのもけい",
+      "KRko": "참매미 모형",
+      "TWzh": "斑透翅蟬模型",
+      "USen": "robust cicada model",
+      "USes": "figura de cigarra oriental",
+      "USfr": "modèle de cigale hyalessa"
+    }
+  },
+  {
+    "label": "InsectToy_07082",
+    "locale": {
+      "CNzh": "蓑衣虫模型",
+      "EUde": "Sackträgermodell",
+      "EUen": "bagworm model",
+      "EUes": "figura de oruga de bolsón",
+      "EUfr": "modèle de psyché",
+      "EUit": "replica di bruco dal fodero",
+      "EUnl": "modelzakjesdrager",
+      "EUru": "модель мешочницы",
+      "JPja": "ミノムシのもけい",
+      "KRko": "도롱이벌레 모형",
+      "TWzh": "蓑衣蟲模型",
+      "USen": "bagworm model",
+      "USes": "figura de oruga de bolsón",
+      "USfr": "modèle de psyché"
+    }
+  },
+  {
+    "label": "InsectToy_07083",
+    "locale": {
+      "CNzh": "深山锹形虫模型",
+      "EUde": "Hirschkäfermodell",
+      "EUen": "miyama stag model",
+      "EUes": "figura esc. ciervo Miyama",
+      "EUfr": "modèle de lucane miyama",
+      "EUit": "replica coleottero lucanide",
+      "EUnl": "model-Miyama-hertkever",
+      "EUru": "модель горн. жука-оленя",
+      "JPja": "ミヤマクワガタのもけい",
+      "KRko": "사슴벌레 모형",
+      "TWzh": "深山鍬形蟲模型",
+      "USen": "miyama stag model",
+      "USes": "figura esc. ciervo Miyama",
+      "USfr": "modèle de lucane miyama"
+    }
+  },
+  {
+    "label": "InsectToy_07084",
+    "locale": {
+      "CNzh": "斑缘点粉蝶模型",
+      "EUde": "Zitronenfaltermodell",
+      "EUen": "yellow butterfly model",
+      "EUes": "figura de mariposa colias",
+      "EUfr": "modèle de citrin",
+      "EUit": "replica di farfalla gialla",
+      "EUnl": "modelcitroenvlinder",
+      "EUru": "модель желтушки",
+      "JPja": "モンキチョウのもけい",
+      "KRko": "노랑나비 모형",
+      "TWzh": "斑緣點粉蝶模型",
+      "USen": "yellow butterfly model",
+      "USes": "figura de mariposa colias",
+      "USfr": "modèle de citrin"
+    }
+  },
+  {
+    "label": "InsectToy_07085",
+    "locale": {
+      "CNzh": "白粉蝶模型",
+      "EUde": "Kohlweißlingmodell",
+      "EUen": "common butterfly model",
+      "EUes": "figura de mariposa común",
+      "EUfr": "modèle de piéride",
+      "EUit": "replica di farfalla comune",
+      "EUnl": "modelkoolwitje",
+      "EUru": "модель белянки",
+      "JPja": "モンシロチョウのもけい",
+      "KRko": "배추흰나비 모형",
+      "TWzh": "白粉蝶模型",
+      "USen": "common butterfly model",
+      "USes": "figura de mariposa común",
+      "USfr": "modèle piéride de la rave"
+    }
+  },
+  {
+    "label": "InsectToy_07086",
+    "locale": {
+      "CNzh": "大蓝闪蝶模型",
+      "EUde": "Himmelsfaltermodell",
+      "EUen": "emperor butterfly model",
+      "EUes": "figura de mariposa celeste",
+      "EUfr": "modèle de morpho bleu",
+      "EUit": "replica di farfalla morfo blu",
+      "EUnl": "model-blauwe-morpho",
+      "EUru": "модель морфо менелая",
+      "JPja": "モルフォチョウのもけい",
+      "KRko": "몰포나비 모형",
+      "TWzh": "大藍閃蝶模型",
+      "USen": "emperor butterfly model",
+      "USes": "figura de mariposa celeste",
+      "USfr": "modèle de morpho bleu"
+    }
+  },
+  {
+    "label": "InsectToy_07087",
+    "locale": {
+      "CNzh": "竹节虫模型",
+      "EUde": "Stabschreckenmodell",
+      "EUen": "walking stick model",
+      "EUes": "figura de insecto palo",
+      "EUfr": "modèle de phasme",
+      "EUit": "replica di insetto stecco",
+      "EUnl": "model-wandelende-tak",
+      "EUru": "модель палочника",
+      "JPja": "ナナフシのもけい",
+      "KRko": "긴수염대벌레 모형",
+      "TWzh": "竹節蟲模型",
+      "USen": "walking stick model",
+      "USes": "figura de insecto palo",
+      "USfr": "modèle de phasme"
+    }
+  },
+  {
+    "label": "InsectToy_07088",
+    "locale": {
+      "CNzh": "彩虹锹形虫模型",
+      "EUde": "Pracht-Hirschkäfermodell",
+      "EUen": "rainbow stag model",
+      "EUes": "figura esc. ciervo arcoíris",
+      "EUfr": "modèle de lucane copris",
+      "EUit": "replica di col. arcobaleno",
+      "EUnl": "modelregenbooghertkever",
+      "EUru": "модель радуж. жука-оленя",
+      "JPja": "ニジイロクワガタのもけい",
+      "KRko": "뮤엘러리사슴벌레 모형",
+      "TWzh": "彩虹鍬形蟲模型",
+      "USen": "rainbow stag model",
+      "USes": "figura esc. ciervo arcoíris",
+      "USfr": "modèle de lucane copris"
+    }
+  },
+  {
+    "label": "InsectToy_07089",
+    "locale": {
+      "CNzh": "蝼蛄模型",
+      "EUde": "Maulwurfsgrillenmodell",
+      "EUen": "mole cricket model",
+      "EUes": "figura de grillo cebollero",
+      "EUfr": "modèle de taupe-grillon",
+      "EUit": "replica di grillotalpa",
+      "EUnl": "modelveenmol",
+      "EUru": "модель медведки",
+      "JPja": "オケラのもけい",
+      "KRko": "땅강아지 모형",
+      "TWzh": "螻蛄模型",
+      "USen": "mole cricket model",
+      "USes": "figura de grillo cebollero",
+      "USfr": "modèle de taupe-grillon"
+    }
+  },
+  {
+    "label": "InsectToy_07090",
+    "locale": {
+      "CNzh": "巨大蜻蜓模型",
+      "EUde": "Mega-Quelljungfermodell",
+      "EUen": "grand b. dragonfly model",
+      "EUes": "estatua de libélula tigre",
+      "EUfr": "modèle de la Reine Libellule",
+      "EUit": "replica XL di libellula striata",
+      "EUnl": "modelbronlibel XL",
+      "EUru": "модель кордулегастера",
+      "JPja": "おおいなるトンボのもけい",
+      "KRko": "위대한 잠자리 모형",
+      "TWzh": "巨大蜻蜓模型",
+      "USen": "grand b. dragonfly model",
+      "USes": "estatua de libélula tigre",
+      "USfr": "modèle de la Reine Libellule"
+    }
+  },
+  {
+    "label": "InsectToy_07091",
+    "locale": {
+      "CNzh": "大桦斑蝶模型",
+      "EUde": "Monarchfaltermodell",
+      "EUen": "monarch butterfly model",
+      "EUes": "figura de mariposa monarca",
+      "EUfr": "modèle de monarque",
+      "EUit": "replica di farfalla monarca",
+      "EUnl": "modelmonarchvlinder",
+      "EUru": "модель монарха",
+      "JPja": "オオカバマダラのもけい",
+      "KRko": "왕나비 모형",
+      "TWzh": "大樺斑蝶模型",
+      "USen": "monarch butterfly model",
+      "USes": "figura de mariposa monarca",
+      "USfr": "modèle de monarque"
+    }
+  },
+  {
+    "label": "InsectToy_07092",
+    "locale": {
+      "CNzh": "大锹形虫模型",
+      "EUde": "Riesen-Hirschkäfermodell",
+      "EUen": "giant stag model",
+      "EUes": "figura esc. ciervo gigante",
+      "EUfr": "modèle lucane cerf-volant",
+      "EUit": "replica coleottero gigante",
+      "EUnl": "modelreuzenhertkever",
+      "EUru": "модель гигант. жука-оленя",
+      "JPja": "オオクワガタのもけい",
+      "KRko": "왕사슴벌레 모형",
+      "TWzh": "大鍬形蟲模型",
+      "USen": "giant stag model",
+      "USes": "figura esc. ciervo gigante",
+      "USfr": "modèle lucane cerf-volant"
+    }
+  },
+  {
+    "label": "InsectToy_07093",
+    "locale": {
+      "CNzh": "黄金鬼锹形虫模型",
+      "EUde": "Allotopus-rosenb.-Modell",
+      "EUen": "golden stag model",
+      "EUes": "figura esc. ciervo tornasol",
+      "EUfr": "modèle de lucane lamprima",
+      "EUit": "replica di coleottero dorato",
+      "EUnl": "model-gouden-hertkever",
+      "EUru": "модель лампримы",
+      "JPja": "オウゴンオニクワガタのもけい",
+      "KRko": "황금사슴벌레 모형",
+      "TWzh": "黃金鬼鍬形蟲模型",
+      "USen": "golden stag model",
+      "USes": "figura esc. ciervo tornasol",
+      "USfr": "modèle de lucane lamprima"
+    }
+  },
+  {
+    "label": "InsectToy_07094",
+    "locale": {
+      "CNzh": "蝎子模型",
+      "EUde": "Skorpionmodell",
+      "EUen": "scorpion model",
+      "EUes": "figura de escorpión",
+      "EUfr": "modèle de scorpion",
+      "EUit": "replica di scorpione",
+      "EUnl": "modelschorpioen",
+      "EUru": "модель скорпиона",
+      "JPja": "サソリのもけい",
+      "KRko": "전갈 모형",
+      "TWzh": "蠍子模型",
+      "USen": "scorpion model",
+      "USes": "figura de escorpión",
+      "USfr": "modèle de scorpion"
+    }
+  },
+  {
+    "label": "InsectToy_07095",
+    "locale": {
+      "CNzh": "蝉蜕模型",
+      "EUde": "Zikadenlarvenhautmodell",
+      "EUen": "cicada shell model",
+      "EUes": "figura de muda de cigarra",
+      "EUfr": "modèle de mue de cigale",
+      "EUit": "replica di esuvia di cicala",
+      "EUnl": "modelcicadehuid",
+      "EUru": "модель кокона цикады",
+      "JPja": "セミのぬけがらのもけい",
+      "KRko": "매미 허물 모형",
+      "TWzh": "蟬蛻模型",
+      "USen": "cicada shell model",
+      "USes": "figura de carcasa de cigarra",
+      "USfr": "modèle de mue de cigale"
+    }
+  },
+  {
+    "label": "InsectToy_07096",
+    "locale": {
+      "CNzh": "铃虫模型",
+      "EUde": "Singgrillenmodell",
+      "EUen": "bell cricket model",
+      "EUes": "figura de grillo campana",
+      "EUfr": "modèle de grillon du Midi",
+      "EUit": "replica di suzumushi",
+      "EUnl": "modelbelkrekel",
+      "EUru": "модель домашнего сверчка",
+      "JPja": "スズムシのもけい",
+      "KRko": "방울벌레 모형",
+      "TWzh": "鈴蟲模型",
+      "USen": "bell cricket model",
+      "USes": "figura de grillo campana",
+      "USfr": "modèle de grillon du Midi"
+    }
+  },
+  {
+    "label": "InsectToy_07097",
+    "locale": {
+      "CNzh": "中华剑角蝗模型",
+      "EUde": "Nasenschreckenmodell",
+      "EUen": "long locust model",
+      "EUes": "figura de langosta alargada",
+      "EUfr": "modèle d'acrida cinerea",
+      "EUit": "replica di acrida cinerea",
+      "EUnl": "modelveldsprinkhaan",
+      "EUru": "модель акриды",
+      "JPja": "ショウリョウバッタのもけい",
+      "KRko": "방아깨비 모형",
+      "TWzh": "中華劍角蝗模型",
+      "USen": "long locust model",
+      "USes": "figura de langosta alargada",
+      "USfr": "modèle d'acrida cinerea"
+    }
+  },
+  {
+    "label": "InsectToy_07099",
+    "locale": {
+      "CNzh": "吉丁虫模型",
+      "EUde": "Prachtkäfermodell",
+      "EUen": "jewel beetle model",
+      "EUes": "figura de escarabajo joya",
+      "EUfr": "modèle de bupreste",
+      "EUit": "replica di stigmodera",
+      "EUnl": "modelprachtkever",
+      "EUru": "модель златки",
+      "JPja": "タマムシのもけい",
+      "KRko": "비단벌레 모형",
+      "TWzh": "吉丁蟲模型",
+      "USen": "jewel beetle model",
+      "USes": "figura de escarabajo joya",
+      "USfr": "modèle de bupreste"
+    }
+  },
+  {
+    "label": "InsectToy_07101",
+    "locale": {
+      "CNzh": "狼蛛模型",
+      "EUde": "Vogelspinnenmodell",
+      "EUen": "tarantula model",
+      "EUes": "figura de tarántula",
+      "EUfr": "modèle de tarentule",
+      "EUit": "replica di tarantola",
+      "EUnl": "modelvogelspin",
+      "EUru": "модель паука-птицееда",
+      "JPja": "タランチュラのもけい",
+      "KRko": "타란툴라 모형",
+      "TWzh": "狼蛛模型",
+      "USen": "tarantula model",
+      "USes": "figura de tarántula",
+      "USfr": "modèle de tarentule"
+    }
+  },
+  {
+    "label": "InsectToy_07102",
+    "locale": {
+      "CNzh": "瓢虫模型",
+      "EUde": "Marienkäfermodell",
+      "EUen": "ladybug model",
+      "EUes": "figura de mariquita",
+      "EUfr": "modèle de coccinelle",
+      "EUit": "replica di coccinella",
+      "EUnl": "modellieveheersbeestje",
+      "EUru": "модель божьей коровки",
+      "JPja": "テントウムシのもけい",
+      "KRko": "무당벌레 모형",
+      "TWzh": "瓢蟲模型",
+      "USen": "ladybug model",
+      "USes": "figura de catarina",
+      "USfr": "modèle de coccinelle"
+    }
+  },
+  {
+    "label": "InsectToy_07103",
+    "locale": {
+      "CNzh": "飞蝗模型",
+      "EUde": "Wanderschreckenmodell",
+      "EUen": "migratory locust model",
+      "EUes": "figura langosta migratoria",
+      "EUfr": "modèle de criquet pèlerin",
+      "EUit": "replica di locusta migratoria",
+      "EUnl": "modeltreksprinkhaan",
+      "EUru": "модель перелетн. саранчи",
+      "JPja": "トノサマバッタのもけい",
+      "KRko": "섬풀무치 모형",
+      "TWzh": "飛蝗模型",
+      "USen": "migratory locust model",
+      "USes": "figura langosta migratoria",
+      "USfr": "modèle de criquet pèlerin"
+    }
+  },
+  {
+    "label": "InsectToy_07104",
+    "locale": {
+      "CNzh": "寒蝉模型",
+      "EUde": "Bergzikadenmodell",
+      "EUen": "walker cicada model",
+      "EUes": "figura de cigarra común",
+      "EUfr": "modèle de cigale cicadelle",
+      "EUit": "replica di cicala sputacchina",
+      "EUnl": "modelbergcicade",
+      "EUru": "модель горной цикады",
+      "JPja": "ツクツクホウシのもけい",
+      "KRko": "애매미 모형",
+      "TWzh": "寒蟬模型",
+      "USen": "walker cicada model",
+      "USes": "figura de cigarra común",
+      "USfr": "modèle de cigale cicadelle"
+    }
+  },
+  {
+    "label": "InsectToy_07105",
+    "locale": {
+      "CNzh": "提琴虫模型",
+      "EUde": "Geigenkäfermodell",
+      "EUen": "violin beetle model",
+      "EUes": "figura de escarabajo violín",
+      "EUfr": "modèle de mormolyce",
+      "EUit": "replica di carabo violino",
+      "EUnl": "modelvioolkever",
+      "EUru": "модель жужелицы",
+      "JPja": "バイオリンムシのもけい",
+      "KRko": "바이올린벌레 모형",
+      "TWzh": "提琴蟲模型",
+      "USen": "violin beetle model",
+      "USes": "figura de escarabajo violín",
+      "USfr": "modèle de mormolyce"
+    }
+  },
+  {
+    "label": "InsectToy_07108",
+    "locale": {
+      "CNzh": "寄居蟹模型",
+      "EUde": "Einsiedlerkrebsmodell",
+      "EUen": "hermit crab model",
+      "EUes": "figura de cangrejo ermitaño",
+      "EUfr": "modèle de bernard-l'ermite",
+      "EUit": "replica di granchio paguro",
+      "EUnl": "modelheremietkreeft",
+      "EUru": "модель рака-отшельника",
+      "JPja": "ヤドカリのもけい",
+      "KRko": "소라게 모형",
+      "TWzh": "寄居蟹模型",
+      "USen": "hermit crab model",
+      "USes": "figura de cangrejo ermitaño",
+      "USfr": "modèle de bernard-l'ermite"
+    }
+  },
+  {
+    "label": "InsectToy_07109",
+    "locale": {
+      "CNzh": "巨大飞蛾模型",
+      "EUde": "Mega-Atlasspinnermodell",
+      "EUen": "grand Atlas moth model",
+      "EUes": "estatua de polilla atlas",
+      "EUfr": "modèle Roi Papillon de nuit",
+      "EUit": "replica XL di farfalla cobra",
+      "EUnl": "modelatlasvlinder XL",
+      "EUru": "модель павлиноглазки атл.",
+      "JPja": "おおいなるガのもけい",
+      "KRko": "위대한 나방 모형",
+      "TWzh": "巨大飛蛾模型",
+      "USen": "grand Atlas moth model",
+      "USes": "estatua de polilla atlas",
+      "USfr": "modèle Roi Papillon de nuit"
+    }
+  },
+  {
+    "label": "InsectToy_07110",
+    "locale": {
+      "CNzh": "象兜虫模型",
+      "EUde": "Elefantenkäfermodell",
+      "EUen": "horned elephant model",
+      "EUes": "figura esc. astado elefante",
+      "EUfr": "modèle scarabée éléphant",
+      "EUit": "replica di scarabeo elefante",
+      "EUnl": "modelolifantkever",
+      "EUru": "модель жука-слона",
+      "JPja": "ゾウカブトのもけい",
+      "KRko": "코끼리장수풍뎅이 모형",
+      "TWzh": "象兜蟲模型",
+      "USen": "horned elephant model",
+      "USes": "figura esc. astado elefante",
+      "USfr": "modèle scarabée éléphant"
+    }
+  },
+  {
+    "label": "InsectToy_07111",
+    "locale": {
+      "CNzh": "青带凤蝶模型",
+      "EUde": "Kolibrifaltermodell",
+      "EUen": "common bluebottle model",
+      "EUes": "figura marip. triángulo azul",
+      "EUfr": "modèle graphium sarpedon",
+      "EUit": "replica graphium sarpedon",
+      "EUnl": "model-blauwe-driehoek",
+      "EUru": "модель графиума сарпед.",
+      "JPja": "アオスジアゲハのもけい",
+      "KRko": "청띠제비나비 모형",
+      "TWzh": "青帶鳳蝶模型",
+      "USen": "common bluebottle model",
+      "USes": "figura marip. triángulo azul",
+      "USfr": "modèle graphium sarpedon"
+    }
+  },
+  {
+    "label": "InsectToy_07112",
+    "locale": {
+      "CNzh": "大白斑蝶模型",
+      "EUde": "Weiße-Baumnym.-Modell",
+      "EUen": "paper kite butterfly model",
+      "EUes": "figura marip. cometa papel",
+      "EUfr": "modèle de grand planeur",
+      "EUit": "replica farfalla carta di riso",
+      "EUnl": "modelpapiervlinder",
+      "EUru": "модель идеи левконоя",
+      "JPja": "オオゴマダラのもけい",
+      "KRko": "왕얼룩나비 모형",
+      "TWzh": "大白斑蝶模型",
+      "USen": "paper kite butterfly model",
+      "USes": "figura marip. cometa papel",
+      "USfr": "modèle de grand planeur"
+    }
+  },
+  {
+    "label": "InsectToy_07113",
+    "locale": {
+      "CNzh": "大紫蛱蝶模型",
+      "EUde": "Japan-Schillerfaltermodell",
+      "EUen": "great purple emperor model",
+      "EUes": "figura marip. emp. japonés",
+      "EUfr": "modèle de sasakia charonda",
+      "EUit": "replica farfalla imper. viola",
+      "EUnl": "model-paarse-keizervlinder",
+      "EUru": "модель сасакии харонды",
+      "JPja": "オオムラサキのもけい",
+      "KRko": "왕오색나비 모형",
+      "TWzh": "大紫蛺蝶模型",
+      "USen": "great purple emperor model",
+      "USes": "figura marip. emp. japonés",
+      "USfr": "mod. gr. empereur pourpre"
+    }
+  },
+  {
+    "label": "InsectToy_07114",
+    "locale": {
+      "CNzh": "日铜锣花金龟模型",
+      "EUde": "Japan-Rosenkäfermodell",
+      "EUen": "drone beetle model",
+      "EUes": "figura esc. verde japonés",
+      "EUfr": "modèle pseudotorynorrhina",
+      "EUit": "replica di cetonia dorata",
+      "EUnl": "modelbladsprietkever",
+      "EUru": "модель бронзовки",
+      "JPja": "カナブンのもけい",
+      "KRko": "풍이 모형",
+      "TWzh": "日銅鑼花金龜模型",
+      "USen": "drone beetle model",
+      "USes": "figura esc. verde japonés",
+      "USfr": "modèle de cétoine dorée"
+    }
+  },
+  {
+    "label": "InsectToy_07115",
+    "locale": {
+      "CNzh": "巨大锹形虫模型",
+      "EUde": "Mega-Giraffenhk.-Modell",
+      "EUen": "grand giraffe stag model",
+      "EUes": "estatua esc. ciervo jirafa",
+      "EUfr": "modèle du Roi Lucane",
+      "EUit": "replica XL coleottero giraffa",
+      "EUnl": "modelgirafhertkever XL",
+      "EUru": "модель рогача-жирафа",
+      "JPja": "おおいなるクワガタのもけい",
+      "KRko": "위대한 사슴벌레 모형",
+      "TWzh": "巨大鍬形蟲模型",
+      "USen": "grand giraffe stag model",
+      "USes": "estatua esc. ciervo jirafa",
+      "USfr": "modèle du Roi Lucane"
+    }
+  },
+  {
+    "label": "InsectToy_07116",
+    "locale": {
+      "CNzh": "人面椿象模型",
+      "EUde": "Gesichtswanzenmodell",
+      "EUen": "man-faced stink bug model",
+      "EUes": "figura chinche rost. humano",
+      "EUfr": "modèle de catacanthus",
+      "EUit": "replica di catacanthus",
+      "EUnl": "modelgezichtschildwants",
+      "EUru": "модель щитника с лицом",
+      "JPja": "ジンメンカメムシのもけい",
+      "KRko": "인면노린재 모형",
+      "TWzh": "人面椿象模型",
+      "USen": "man-faced stink bug model",
+      "USes": "figura chinche rost. humano",
+      "USfr": "modèle de catacanthus"
+    }
+  },
+  {
+    "label": "InsectToy_07117",
+    "locale": {
+      "CNzh": "日落蛾模型",
+      "EUde": "Regenbogenfaltermodell",
+      "EUen": "M. sunset moth model",
+      "EUes": "figura de polilla crepuscular",
+      "EUfr": "modèle chrysiridia rhipheus",
+      "EUit": "repl. urania del Madagascar",
+      "EUnl": "modeladriandolo",
+      "EUru": "модель урании мадагаск.",
+      "JPja": "ニシキオオツバメガのもけい",
+      "KRko": "마다가스카르비단제비나방 모형",
+      "TWzh": "日落蛾模型",
+      "USen": "M. sunset moth model",
+      "USes": "figura de polilla crepuscular",
+      "USfr": "modèle d'adriandolo"
+    }
+  },
+  {
+    "label": "InsectToy_07118",
+    "locale": {
+      "CNzh": "宝石象鼻虫模型",
+      "EUde": "Blaurüsselkäfermodell",
+      "EUen": "blue weevil beetle model",
+      "EUes": "figura de gorgojo azul",
+      "EUfr": "modèle de charançon bleu",
+      "EUit": "repl. coleottero Schoenherr",
+      "EUnl": "model-blauwe-snuitkever",
+      "EUru": "модель син. долгоносика",
+      "JPja": "ホウセキゾウムシのもけい",
+      "KRko": "유포루스바구미 모형",
+      "TWzh": "寶石象鼻蟲模型",
+      "USen": "blue weevil beetle model",
+      "USes": "figura de gorgojo azul",
+      "USfr": "modèle de charançon bleu"
+    }
+  },
+  {
+    "label": "InsectToy_07119",
+    "locale": {
+      "CNzh": "琉璃星天牛模型",
+      "EUde": "Alpenbockmodell",
+      "EUen": "rosalia batesi beetle model",
+      "EUes": "figura de esc. rosalia batesi",
+      "EUfr": "modèle de rosalia batesi",
+      "EUit": "replica coleot. rosalia batesi",
+      "EUnl": "modelalpenboktor",
+      "EUru": "модель розалии",
+      "JPja": "ルリボシカミキリのもけい",
+      "KRko": "루리하늘소 모형",
+      "TWzh": "琉璃星天牛模型",
+      "USen": "rosalia batesi beetle model",
+      "USes": "figura de esc. rosalia batesi",
+      "USfr": "modèle de rosalia batesi"
+    }
+  },
+  {
+    "label": "InsectToy_07120",
+    "locale": {
+      "CNzh": "田鳖模型",
+      "EUde": "Riesenwanzenmodell",
+      "EUen": "giant water bug model",
+      "EUes": "figura chinche acu. gigante",
+      "EUfr": "modèle punaise d'eau",
+      "EUit": "repl. cimice d'acqua gigante",
+      "EUnl": "modelreuzenwaterwants",
+      "EUru": "модель водяного клопа",
+      "JPja": "タガメのもけい",
+      "KRko": "물장군 모형",
+      "TWzh": "田鱉模型",
+      "USen": "giant water bug model",
+      "USes": "figura chinche acu. gigante",
+      "USfr": "modèle punaise d'eau"
+    }
+  },
+  {
+    "label": "InsectToy_07121",
+    "locale": {
+      "CNzh": "豆娘模型",
+      "EUde": "Wasserjungfermodell",
+      "EUen": "damselfly model",
+      "EUes": "figura de libélula damisela",
+      "EUfr": "modèle de demoiselle",
+      "EUit": "replica di zigottero",
+      "EUnl": "modeljuffer",
+      "EUru": "модель равнокр. стрекозы",
+      "JPja": "イトトンボのもけい",
+      "KRko": "실잠자리 모형",
+      "TWzh": "豆娘模型",
+      "USen": "damselfly model",
+      "USes": "figura de libélula damisela",
+      "USfr": "modèle de demoiselle"
+    }
+  },
+  {
+    "label": "InsectToy_07407",
+    "locale": {
+      "CNzh": "蜈蚣模型",
+      "EUde": "Hundertfüßermodell",
+      "EUen": "centipede model",
+      "EUes": "figura de ciempiés",
+      "EUfr": "modèle de mille-pattes",
+      "EUit": "replica di centopiedi",
+      "EUnl": "modelduizendpoot",
+      "EUru": "модель многоножки",
+      "JPja": "ムカデのもけい",
+      "KRko": "지네 모형",
+      "TWzh": "蜈蚣模型",
+      "USen": "centipede model",
+      "USes": "figura de ciempiés",
+      "USfr": "modèle de mille-pattes"
+    }
+  }
+]

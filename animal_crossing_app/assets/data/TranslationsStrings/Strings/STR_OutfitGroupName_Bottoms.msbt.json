@@ -1,0 +1,2909 @@
+﻿[
+  {
+    "label": "014",
+    "locale": {
+      "CNzh": "卡其裤",
+      "EUde": "Chino",
+      "EUen": "chino pants",
+      "EUes": "pantalón chino",
+      "EUfr": "pantalon en toile",
+      "EUit": "pantalone chino",
+      "EUnl": "chino",
+      "EUru": "брюки из хлопка",
+      "JPja": "チノパン",
+      "KRko": "치노 팬츠",
+      "TWzh": "卡其褲",
+      "USen": "chino pants",
+      "USes": "pantalón de gabardina",
+      "USfr": "pantalon en toile"
+    }
+  },
+  {
+    "label": "015",
+    "locale": {
+      "CNzh": "口袋撞色裤",
+      "EUde": "Zweifarbhose",
+      "EUen": "two-tone pants",
+      "EUes": "pantalón bicolor",
+      "EUfr": "pantalon bicolore",
+      "EUit": "pantalone bicolore",
+      "EUnl": "tweekleurige broek",
+      "EUru": "двухцветные брюки",
+      "JPja": "ツートンなズボン",
+      "KRko": "투톤 바지",
+      "TWzh": "撞色褲",
+      "USen": "two-tone pants",
+      "USes": "pantalón bicolor",
+      "USfr": "pantalon bicolore"
+    }
+  },
+  {
+    "label": "016",
+    "locale": {
+      "CNzh": "嘉顿格纹裙子",
+      "EUde": "Karorock",
+      "EUen": "gingham picnic skirt",
+      "EUes": "falda vichy",
+      "EUfr": "jupe vichy",
+      "EUit": "gonna a quadri",
+      "EUnl": "picknickrokje",
+      "EUru": "клетчатая юбка",
+      "JPja": "ギンガムチェックのスカート",
+      "KRko": "깅엄 체크 치마",
+      "TWzh": "嘉頓格紋裙",
+      "USen": "gingham picnic skirt",
+      "USes": "falda vichy",
+      "USfr": "jupe vichy"
+    }
+  },
+  {
+    "label": "017",
+    "locale": {
+      "CNzh": "牛仔裤",
+      "EUde": "Jeans",
+      "EUen": "denim pants",
+      "EUes": "pantalón tejano",
+      "EUfr": "jean",
+      "EUit": "paio di jeans ranch",
+      "EUnl": "jeans",
+      "EUru": "джинсы",
+      "JPja": "デニムパンツ",
+      "KRko": "데님 바지",
+      "TWzh": "牛仔褲",
+      "USen": "denim pants",
+      "USes": "pantalón de jean",
+      "USfr": "jean"
+    }
+  },
+  {
+    "label": "1091",
+    "locale": {
+      "CNzh": "足球裤",
+      "EUde": "Fußballhose",
+      "EUen": "soccer shorts",
+      "EUes": "pantalón corto fútbol",
+      "EUfr": "short de foot",
+      "EUit": "paio di pantaloni da calcio",
+      "EUnl": "voetbalbroekje",
+      "EUru": "футбольные шорты",
+      "JPja": "サッカーのズボン",
+      "KRko": "축구 바지",
+      "TWzh": "足球褲",
+      "USen": "soccer shorts",
+      "USes": "pantalón corto fútbol",
+      "USfr": "short de soccer"
+    }
+  },
+  {
+    "label": "1092",
+    "locale": {
+      "CNzh": "探险服裤子",
+      "EUde": "Safarihose",
+      "EUen": "explorer shorts",
+      "EUes": "pantalón corto exploración",
+      "EUfr": "bermuda aventure",
+      "EUit": "pantalone da esploratore",
+      "EUnl": "ontdekkingsreizigersbroekje",
+      "EUru": "шорты исследователя",
+      "JPja": "たんけんふくのズボン",
+      "KRko": "탐험복 바지",
+      "TWzh": "探險服褲子",
+      "USen": "explorer shorts",
+      "USes": "pantalón corto exploración",
+      "USfr": "bermuda aventure"
+    }
+  },
+  {
+    "label": "1093",
+    "locale": {
+      "CNzh": "动物花纹半裙",
+      "EUde": "Tiermusterrock",
+      "EUen": "animal-stripes skirt",
+      "EUes": "falda estampado animal",
+      "EUfr": "jupe motif animalier",
+      "EUit": "gonna animalier",
+      "EUnl": "tijgerrokje",
+      "EUru": "звериная юбка",
+      "JPja": "アニマルがらスカート",
+      "KRko": "동물 무늬 스커트",
+      "TWzh": "動物花紋裙",
+      "USen": "animal-stripes skirt",
+      "USes": "falda estampado animal",
+      "USfr": "jupe motif animalier"
+    }
+  },
+  {
+    "label": "1095",
+    "locale": {
+      "CNzh": "美式足球裤",
+      "EUde": "Footballhose",
+      "EUen": "football pants",
+      "EUes": "pantalón rugby",
+      "EUfr": "pantalon de foot américain",
+      "EUit": "paio di pantaloni da football",
+      "EUnl": "Americanfootballbroekje",
+      "EUru": "футбольные бриджи",
+      "JPja": "アメフトズボン",
+      "KRko": "미식축구 바지",
+      "TWzh": "美式足球褲",
+      "USen": "football pants",
+      "USes": "pantalón rugby",
+      "USfr": "pantalon de football"
+    }
+  },
+  {
+    "label": "1129",
+    "locale": {
+      "CNzh": "凯丝的中裤",
+      "EUde": "Samthea-Shorts",
+      "EUen": "Labelle shorts",
+      "EUes": "pantalón corto Trini",
+      "EUfr": "short Maria",
+      "EUit": "paio di calzoncini Bice",
+      "EUnl": "Labelle-short",
+      "EUru": "шорты «Лэйблеск»",
+      "JPja": "ケイトのハーフパンツ",
+      "KRko": "케이트의 반바지",
+      "TWzh": "凱絲五分褲",
+      "USen": "Labelle shorts",
+      "USes": "pantalón corto Trini",
+      "USfr": "short Maria"
+    }
+  },
+  {
+    "label": "1130",
+    "locale": {
+      "CNzh": "凯丝的半裙",
+      "EUde": "Samthea-Rock",
+      "EUen": "Labelle skirt",
+      "EUes": "falda larga Trini",
+      "EUfr": "jupe Maria",
+      "EUit": "gonna Bice",
+      "EUnl": "Labelle-rok",
+      "EUru": "юбка «Лэйблеск»",
+      "JPja": "ケイトのスカート",
+      "KRko": "케이트의 치마",
+      "TWzh": "凱絲裙",
+      "USen": "Labelle skirt",
+      "USes": "falda larga Trini",
+      "USfr": "jupe Maria"
+    }
+  },
+  {
+    "label": "1187",
+    "locale": {
+      "CNzh": "波点迷你裙",
+      "EUde": "Pünktchen-Minirock",
+      "EUen": "polka-dot miniskirt",
+      "EUes": "falda lunarcitos",
+      "EUfr": "mini-jupe à pois",
+      "EUit": "minigonna a pois",
+      "EUnl": "minirokje met stippen",
+      "EUru": "мини-юбка в горох",
+      "JPja": "ドットミニスカート",
+      "KRko": "도트 미니스커트",
+      "TWzh": "點點迷你裙",
+      "USen": "polka-dot miniskirt",
+      "USes": "falda lunarcitos",
+      "USfr": "mini-jupe à pois"
+    }
+  },
+  {
+    "label": "119",
+    "locale": {
+      "CNzh": "运动针织裤",
+      "EUde": "Sofahose",
+      "EUen": "sweatpants",
+      "EUes": "pantalón cómodo",
+      "EUfr": "pantalon de jogging",
+      "EUit": "pantalone comodo",
+      "EUnl": "joggingbroek",
+      "EUru": "трикотажные штаны",
+      "JPja": "スウェットパンツ",
+      "KRko": "스웨트 팬츠",
+      "TWzh": "棉褲",
+      "USen": "sweatpants",
+      "USes": "pantalón cómodo",
+      "USfr": "pantalon de jogging"
+    }
+  },
+  {
+    "label": "1190",
+    "locale": {
+      "CNzh": "绿色的草裙",
+      "EUde": "Grasröckchen",
+      "EUen": "green grass skirt",
+      "EUes": "falda de hojas",
+      "EUfr": "jupe savane verte",
+      "EUit": "gonna foglie di banano",
+      "EUnl": "groengrasrokje",
+      "EUru": "юбка из зеленых листьев",
+      "JPja": "みどりのこしみの",
+      "KRko": "초록색 도롱이 하의",
+      "TWzh": "綠色草裙",
+      "USen": "green grass skirt",
+      "USes": "falda de hojas",
+      "USfr": "jupe de feuilles verte"
+    }
+  },
+  {
+    "label": "120",
+    "locale": {
+      "CNzh": "粗花呢裙",
+      "EUde": "Tweed-Rock",
+      "EUen": "tweed skirt",
+      "EUes": "falda de tweed",
+      "EUfr": "jupe en tweed",
+      "EUit": "gonna di tweed",
+      "EUnl": "tweedrokje",
+      "EUru": "твидовая юбка",
+      "JPja": "ツイードスカート",
+      "KRko": "트위드 치마",
+      "TWzh": "斜紋軟呢裙",
+      "USen": "tweed skirt",
+      "USes": "falda de tweed",
+      "USfr": "jupe en tweed"
+    }
+  },
+  {
+    "label": "1227",
+    "locale": {
+      "CNzh": "海盗裤",
+      "EUde": "Piratenhose",
+      "EUen": "pirate pants",
+      "EUes": "pantalón de pirata",
+      "EUfr": "pantalon de pirate",
+      "EUit": "pantalone da pirata",
+      "EUnl": "piratenbroek",
+      "EUru": "пиратские штаны",
+      "JPja": "かいぞくのズボン",
+      "KRko": "해적 바지",
+      "TWzh": "海盜褲",
+      "USen": "pirate pants",
+      "USes": "pantalón de pirata",
+      "USfr": "pantalon de pirate"
+    }
+  },
+  {
+    "label": "1235",
+    "locale": {
+      "CNzh": "ぞうきんがけのズボン",
+      "EUde": "ぞうきんがけのズボン",
+      "EUen": "ぞうきんがけのズボン",
+      "EUes": "ぞうきんがけのズボン",
+      "EUfr": "ぞうきんがけのズボン",
+      "EUit": "ぞうきんがけのズボン",
+      "EUnl": "ぞうきんがけのズボン",
+      "EUru": "ぞうきんがけのズボン",
+      "JPja": "ぞうきんがけのズボン",
+      "KRko": "ぞうきんがけのズボン",
+      "TWzh": "ぞうきんがけのズボン",
+      "USen": "ぞうきんがけのズボン",
+      "USes": "ぞうきんがけのズボン",
+      "USfr": "ぞうきんがけのズボン"
+    }
+  },
+  {
+    "label": "125",
+    "locale": {
+      "CNzh": "皮裤",
+      "EUde": "Kunstlederhose",
+      "EUen": "pleather pants",
+      "EUes": "pantalón de polipiel",
+      "EUfr": "pantalon en similicuir",
+      "EUit": "pantalone in ecopelle",
+      "EUnl": "kunstleren broek",
+      "EUru": "брюки из кожзама",
+      "JPja": "レザーパンツ",
+      "KRko": "가죽 바지",
+      "TWzh": "皮褲",
+      "USen": "pleather pants",
+      "USes": "pantalón cuero sintético",
+      "USfr": "pantalon en similicuir"
+    }
+  },
+  {
+    "label": "1253",
+    "locale": {
+      "CNzh": "尿布",
+      "EUde": "Windel",
+      "EUen": "diaper",
+      "EUes": "pañal",
+      "EUfr": "couche",
+      "EUit": "pannolino",
+      "EUnl": "luier",
+      "EUru": "подгузник",
+      "JPja": "おむつ",
+      "KRko": "기저귀",
+      "TWzh": "尿布",
+      "USen": "diaper",
+      "USes": "pañal",
+      "USfr": "couche"
+    }
+  },
+  {
+    "label": "126",
+    "locale": {
+      "CNzh": "西装裤",
+      "EUde": "Stoffhose",
+      "EUen": "slacks",
+      "EUes": "pantalón de vestir",
+      "EUfr": "pantalon de bureau",
+      "EUit": "pantalone classico",
+      "EUnl": "pantalon",
+      "EUru": "строгие брюки",
+      "JPja": "スラックス",
+      "KRko": "슬랙스",
+      "TWzh": "西裝褲",
+      "USen": "slacks",
+      "USes": "pantalón de vestir",
+      "USfr": "pantalon de bureau"
+    }
+  },
+  {
+    "label": "127",
+    "locale": {
+      "CNzh": "运动健身裤",
+      "EUde": "Trainingshose",
+      "EUen": "athletic pants",
+      "EUes": "pantalón sport",
+      "EUfr": "pantalon de survêt",
+      "EUit": "pantalone della tuta",
+      "EUnl": "trainingsbroek",
+      "EUru": "штаны для разминки",
+      "JPja": "ジャージズボン",
+      "KRko": "트레이닝복 바지",
+      "TWzh": "運動褲",
+      "USen": "athletic pants",
+      "USes": "pantalón sport",
+      "USfr": "pantalon de sport"
+    }
+  },
+  {
+    "label": "128",
+    "locale": {
+      "CNzh": "粗横纹裤",
+      "EUde": "Ringelhose",
+      "EUen": "striped pants",
+      "EUes": "pantalón rayas",
+      "EUfr": "pantalon rayé",
+      "EUit": "pantalone a righe",
+      "EUnl": "gestreepte broek",
+      "EUru": "штаны в полоску",
+      "JPja": "ボーダーパンツ",
+      "KRko": "줄무늬 바지",
+      "TWzh": "粗橫紋褲",
+      "USen": "striped pants",
+      "USes": "pantalón a rayas",
+      "USfr": "pantalon rayé"
+    }
+  },
+  {
+    "label": "129",
+    "locale": {
+      "CNzh": "破洞牛仔裤",
+      "EUde": "Fetzenjeanshose",
+      "EUen": "worn-out jeans",
+      "EUes": "pantalón agujereado",
+      "EUfr": "pantalon jean usé",
+      "EUit": "paio di jeans strappati",
+      "EUnl": "versleten jeans",
+      "EUru": "поношенные джинсы",
+      "JPja": "あなあきデニム",
+      "KRko": "찢어진 데님 바지",
+      "TWzh": "破洞牛仔褲",
+      "USen": "worn-out jeans",
+      "USes": "pantalón agujereado",
+      "USfr": "pantalon jean usé"
+    }
+  },
+  {
+    "label": "1397",
+    "locale": {
+      "CNzh": "橡胶半身围裙",
+      "EUde": "Gummischürze",
+      "EUen": "rubber half apron",
+      "EUes": "delantal impermeable",
+      "EUfr": "bas de tablier caoutchouc",
+      "EUit": "mezzo grembiule di gomma",
+      "EUnl": "rubberen halfschort",
+      "EUru": "резиновый полуфартук",
+      "JPja": "ゴムのまえかけ",
+      "KRko": "고무 반 앞치마",
+      "TWzh": "橡膠半身圍裙",
+      "USen": "rubber half apron",
+      "USes": "delantal impermeable",
+      "USfr": "bas de tablier caoutchouc"
+    }
+  },
+  {
+    "label": "140",
+    "locale": {
+      "CNzh": "体育运动裤",
+      "EUde": "Aufwärmhose",
+      "EUen": "track pants",
+      "EUes": "pantalón de chándal urbano",
+      "EUfr": "pantalon survêt de sport",
+      "EUit": "pantalone da ginnastica",
+      "EUnl": "atletiekbroek",
+      "EUru": "штаны для бега",
+      "JPja": "スポーツジャージのズボン",
+      "KRko": "스포츠 트레이닝복 바지",
+      "TWzh": "體育運動褲",
+      "USen": "track pants",
+      "USes": "pantalón atletismo",
+      "USfr": "pantalon de survêtement"
+    }
+  },
+  {
+    "label": "142",
+    "locale": {
+      "CNzh": "苏格兰裙",
+      "EUde": "Kilt",
+      "EUen": "kilt",
+      "EUes": "kilt",
+      "EUfr": "kilt",
+      "EUit": "kilt",
+      "EUnl": "kilt",
+      "EUru": "килт",
+      "JPja": "キルト",
+      "KRko": "킬트",
+      "TWzh": "蘇格蘭裙",
+      "USen": "kilt",
+      "USes": "kilt",
+      "USfr": "kilt"
+    }
+  },
+  {
+    "label": "1428",
+    "locale": {
+      "CNzh": "格纹学生裙",
+      "EUde": "Karo-Schulrock",
+      "EUen": "checkered school skirt",
+      "EUes": "falda escolar escocesa",
+      "EUfr": "jupe scolaire à carreaux",
+      "EUit": "gonna scuola a scacchi",
+      "EUnl": "geruite schoolrok",
+      "EUru": "школьная юбка в клетку",
+      "JPja": "チェックのがくせいスカート",
+      "KRko": "체크무늬 교복 치마",
+      "TWzh": "格紋學生裙",
+      "USen": "checkered school skirt",
+      "USes": "falda escolar escocesa",
+      "USfr": "jupe scolaire à carreaux"
+    }
+  },
+  {
+    "label": "1429",
+    "locale": {
+      "CNzh": "格纹学生裤",
+      "EUde": "Karo-Schulhose",
+      "EUen": "checkered school pants",
+      "EUes": "pantalón escolar escocés",
+      "EUfr": "pantalon scolaire à carreaux",
+      "EUit": "pantalone scuola a scacchi",
+      "EUnl": "geruite schoolbroek",
+      "EUru": "школьн. брюки в клетку",
+      "JPja": "チェックのがくせいズボン",
+      "KRko": "체크무늬 교복 바지",
+      "TWzh": "格紋學生褲",
+      "USen": "checkered school pants",
+      "USes": "pantalón escolar escocés",
+      "USfr": "pantalon scolaire à carreaux"
+    }
+  },
+  {
+    "label": "1431",
+    "locale": {
+      "CNzh": "蟒蛇纹西装裤",
+      "EUde": "Pythonmusterhose",
+      "EUen": "python-print slacks",
+      "EUes": "pantalón de vestir pitón",
+      "EUfr": "pantalon python",
+      "EUit": "pantalone stampa pitonata",
+      "EUnl": "pantalon met slangenprint",
+      "EUru": "брюки со змеин. узором",
+      "JPja": "パイソンがらスラックス",
+      "KRko": "뱀 무늬 슬랙스",
+      "TWzh": "蟒蛇紋西裝褲",
+      "USen": "python-print slacks",
+      "USes": "pantalón de vestir pitón",
+      "USfr": "pantalon motif python"
+    }
+  },
+  {
+    "label": "1432",
+    "locale": {
+      "CNzh": "玫瑰纹西装裤",
+      "EUde": "Rosenmusterhose",
+      "EUen": "rose-print slacks",
+      "EUes": "pantalón de vestir rosas",
+      "EUfr": "pantalon motif roses",
+      "EUit": "pantalone stampa a rose",
+      "EUnl": "pantalon met rozenprint",
+      "EUru": "брюки с розами",
+      "JPja": "バラがらスラックス",
+      "KRko": "장미 무늬 슬랙스",
+      "TWzh": "玫瑰紋西裝褲",
+      "USen": "rose-print slacks",
+      "USes": "pantalón de vestir rosas",
+      "USfr": "pantalon motif roses"
+    }
+  },
+  {
+    "label": "144",
+    "locale": {
+      "CNzh": "水手服裙",
+      "EUde": "Marinerock",
+      "EUen": "sailor skirt",
+      "EUes": "falda marinera",
+      "EUfr": "jupe matelot",
+      "EUit": "gonna marinara",
+      "EUnl": "matrozenrokje",
+      "EUru": "юбка-плиссе",
+      "JPja": "セーラーふくのスカート",
+      "KRko": "세일러복 치마",
+      "TWzh": "水手服裙",
+      "USen": "sailor skirt",
+      "USes": "falda marinera",
+      "USfr": "jupe matelot"
+    }
+  },
+  {
+    "label": "145",
+    "locale": {
+      "CNzh": "迷彩裤",
+      "EUde": "Tarnhose",
+      "EUen": "camo pants",
+      "EUes": "pantalón camuflaje",
+      "EUfr": "pantalon camouflage",
+      "EUit": "pantalone mimetico",
+      "EUnl": "camouflagebroek",
+      "EUru": "камуфляжные брюки",
+      "JPja": "めいさいパンツ",
+      "KRko": "밀리터리 바지",
+      "TWzh": "迷彩褲",
+      "USen": "camo pants",
+      "USes": "pantalón camuflaje",
+      "USfr": "pantalon camouflage"
+    }
+  },
+  {
+    "label": "1454",
+    "locale": {
+      "CNzh": "玫瑰纹裙",
+      "EUde": "Rosenmusterrock",
+      "EUen": "rose-print skirt",
+      "EUes": "falda estampado rosas",
+      "EUfr": "jupe motif roses",
+      "EUit": "gonna stampa a rose",
+      "EUnl": "rok met rozenprint",
+      "EUru": "юбка с розами",
+      "JPja": "バラがらスカート",
+      "KRko": "장미 무늬 치마",
+      "TWzh": "玫瑰紋裙",
+      "USen": "rose-print skirt",
+      "USes": "falda estampado rosas",
+      "USfr": "jupe motif roses"
+    }
+  },
+  {
+    "label": "1466",
+    "locale": {
+      "CNzh": "居家五分裤",
+      "EUde": "Chill-Shorts",
+      "EUen": "loungewear shorts",
+      "EUes": "pantalón de pijama corto",
+      "EUfr": "short d'intérieur",
+      "EUit": "pantaloncino comodo",
+      "EUnl": "loungeshort",
+      "EUru": "удобные шорты",
+      "JPja": "ルームウェアのハーフパンツ",
+      "KRko": "홈웨어 반바지",
+      "TWzh": "居家五分褲",
+      "USen": "loungewear shorts",
+      "USes": "pantalón corto de pijama",
+      "USfr": "short de détente"
+    }
+  },
+  {
+    "label": "148",
+    "locale": {
+      "CNzh": "工作裤",
+      "EUde": "Cargohose",
+      "EUen": "cargo pants",
+      "EUes": "pantalón cargo",
+      "EUfr": "pantalon cargo",
+      "EUit": "pantalone con tasche",
+      "EUnl": "cargobroek",
+      "EUru": "брюки-карго",
+      "JPja": "カーゴパンツ",
+      "KRko": "카고 바지",
+      "TWzh": "工作褲",
+      "USen": "cargo pants",
+      "USes": "pantalón cargo",
+      "USfr": "pantalon cargo"
+    }
+  },
+  {
+    "label": "149",
+    "locale": {
+      "CNzh": "反折裤",
+      "EUde": "Umkrempelhose",
+      "EUen": "cuffed pants",
+      "EUes": "pantalón bajo vuelto",
+      "EUfr": "pantalon à revers",
+      "EUit": "pantalone con risvolti",
+      "EUnl": "omgeslagen broek",
+      "EUru": "брюки с манжетами",
+      "JPja": "すそみせズボン",
+      "KRko": "롤업 바지",
+      "TWzh": "反摺褲",
+      "USen": "cuffed pants",
+      "USes": "pantalón dobladillo",
+      "USfr": "pantalon à revers"
+    }
+  },
+  {
+    "label": "152",
+    "locale": {
+      "CNzh": "蕾丝短裙",
+      "EUde": "Spitzenrock",
+      "EUen": "lace skirt",
+      "EUes": "falda encaje",
+      "EUfr": "jupe en dentelle",
+      "EUit": "gonna merlettata",
+      "EUnl": "kanten rokje",
+      "EUru": "кружевная юбка",
+      "JPja": "レーススカート",
+      "KRko": "레이스 치마",
+      "TWzh": "蕾絲裙",
+      "USen": "lace skirt",
+      "USes": "falda encaje",
+      "USfr": "jupe en dentelle"
+    }
+  },
+  {
+    "label": "158",
+    "locale": {
+      "CNzh": "圣诞裤",
+      "EUde": "Weihnachtsmannhose",
+      "EUen": "Santa pants",
+      "EUes": "pantalón Papá Noel",
+      "EUfr": "pantalon père Noël",
+      "EUit": "pantalone da Babbo Natale",
+      "EUnl": "kerstmanbroek",
+      "EUru": "штаны Санты",
+      "JPja": "サンタのズボン",
+      "KRko": "산타 바지",
+      "TWzh": "聖誕褲",
+      "USen": "Santa pants",
+      "USes": "pantalón Papá Noel",
+      "USfr": "pantalon père Noël"
+    }
+  },
+  {
+    "label": "160",
+    "locale": {
+      "CNzh": "制服裤",
+      "EUde": "Uniformhose",
+      "EUen": "dress pants",
+      "EUes": "pantalón uniforme escolar",
+      "EUfr": "pantalon d'uniforme",
+      "EUit": "pantalone scolastico",
+      "EUnl": "nette broek",
+      "EUru": "формальные брюки",
+      "JPja": "せいふくのズボン",
+      "KRko": "교복 바지",
+      "TWzh": "制服褲",
+      "USen": "dress pants",
+      "USes": "pantalón uniforme escolar",
+      "USfr": "pantalon d'uniforme"
+    }
+  },
+  {
+    "label": "161",
+    "locale": {
+      "CNzh": "华丽西装裤",
+      "EUde": "Imponierhose",
+      "EUen": "flashy slacks",
+      "EUes": "pantalón de vestir llamativo",
+      "EUfr": "pantalon tape-à-l'œil",
+      "EUit": "pantalone vistoso",
+      "EUnl": "glanzende broek",
+      "EUru": "броские брюки",
+      "JPja": "ハデなスラックス",
+      "KRko": "화려한 슬랙스",
+      "TWzh": "亮面西裝褲",
+      "USen": "flashy slacks",
+      "USes": "pantalón de vestir llamativo",
+      "USfr": "pantalon tape-à-l'œil"
+    }
+  },
+  {
+    "label": "175",
+    "locale": {
+      "CNzh": "西部牛仔裤",
+      "EUde": "Western-Hose",
+      "EUen": "western pants",
+      "EUes": "pantalón de vaquero",
+      "EUfr": "pantalon western",
+      "EUit": "pantalone da cowboy",
+      "EUnl": "westernbroek",
+      "EUru": "ковбойские брюки",
+      "JPja": "カウボーイパンツ",
+      "KRko": "카우보이 바지",
+      "TWzh": "西部牛仔褲",
+      "USen": "western pants",
+      "USes": "pantalón de vaquero",
+      "USfr": "pantalon western"
+    }
+  },
+  {
+    "label": "240",
+    "locale": {
+      "CNzh": "粗花呢裤",
+      "EUde": "Tweedhose",
+      "EUen": "tweed pants",
+      "EUes": "pantalón de tweed",
+      "EUfr": "pantalon en tweed",
+      "EUit": "pantalone di tweed",
+      "EUnl": "tweedbroek",
+      "EUru": "твидовые брюки",
+      "JPja": "ツイードパンツ",
+      "KRko": "트위드 바지",
+      "TWzh": "斜紋軟呢褲",
+      "USen": "tweed pants",
+      "USes": "pantalón de tweed",
+      "USfr": "pantalon en tweed"
+    }
+  },
+  {
+    "label": "245",
+    "locale": {
+      "CNzh": "工装中裤",
+      "EUde": "Cargo-Shorts",
+      "EUen": "cargo shorts",
+      "EUes": "pantalón corto cargo",
+      "EUfr": "short cargo",
+      "EUit": "pantaloncino con tasche",
+      "EUnl": "cargoshort",
+      "EUru": "шорты-карго",
+      "JPja": "ハーフカーゴパンツ",
+      "KRko": "카고 반바지",
+      "TWzh": "工作短褲",
+      "USen": "cargo shorts",
+      "USes": "pantalón corto cargo",
+      "USfr": "short cargo"
+    }
+  },
+  {
+    "label": "248",
+    "locale": {
+      "CNzh": "跑步短裤",
+      "EUde": "Lauf-Shorts",
+      "EUen": "jogging shorts",
+      "EUes": "minipantalón jogging",
+      "EUfr": "short de footing",
+      "EUit": "pantaloncino da jogging",
+      "EUnl": "joggingshort",
+      "EUru": "шорты для пробежек",
+      "JPja": "ランニングパンツ",
+      "KRko": "러닝 팬츠",
+      "TWzh": "跑步短褲",
+      "USen": "jogging shorts",
+      "USes": "minipantalón de correr",
+      "USfr": "short de jogging"
+    }
+  },
+  {
+    "label": "255",
+    "locale": {
+      "CNzh": "长百褶裙",
+      "EUde": "Faltenrock",
+      "EUen": "long pleated skirt",
+      "EUes": "falda plisada larga",
+      "EUfr": "jupe longue plissée",
+      "EUit": "gonna lunga plissettata",
+      "EUnl": "lange plooirok",
+      "EUru": "юбка-плиссе макси",
+      "JPja": "ロングプリーツスカート",
+      "KRko": "롱 플리츠 스커트",
+      "TWzh": "百褶長裙",
+      "USen": "long pleated skirt",
+      "USes": "falda plisada larga",
+      "USfr": "jupe longue plissée"
+    }
+  },
+  {
+    "label": "256",
+    "locale": {
+      "CNzh": "网球裙",
+      "EUde": "Tennisrock",
+      "EUen": "tennis skirt",
+      "EUes": "falda tenis",
+      "EUfr": "jupe de tennis",
+      "EUit": "gonnellino da tennis",
+      "EUnl": "tennisrokje",
+      "EUru": "теннисная юбка",
+      "JPja": "テニススカート",
+      "KRko": "테니스 스커트",
+      "TWzh": "網球裙",
+      "USen": "tennis skirt",
+      "USes": "falda tenis",
+      "USfr": "jupe de tennis"
+    }
+  },
+  {
+    "label": "265",
+    "locale": {
+      "CNzh": "牛仔裙",
+      "EUde": "Jeansrock",
+      "EUen": "denim skirt",
+      "EUes": "falda vaquera",
+      "EUfr": "jupe en jean",
+      "EUit": "gonna di jeans",
+      "EUnl": "jeansrokje",
+      "EUru": "джинсовая юбка",
+      "JPja": "デニムスカート",
+      "KRko": "데님 스커트",
+      "TWzh": "牛仔裙",
+      "USen": "denim skirt",
+      "USes": "falda de jean",
+      "USfr": "jupe en jean"
+    }
+  },
+  {
+    "label": "269",
+    "locale": {
+      "CNzh": "破洞牛仔短裤",
+      "EUde": "Fetzenjeansshorts",
+      "EUen": "worn-out cutoffs",
+      "EUes": "minipantalón agujereado",
+      "EUfr": "mini-short en jean troué",
+      "EUit": "paio di jeans corti strappati",
+      "EUnl": "versleten denim short",
+      "EUru": "поношенные шорты",
+      "JPja": "あなあきショートデニム",
+      "KRko": "찢어진 데님 숏팬츠",
+      "TWzh": "破洞牛仔短褲",
+      "USen": "worn-out cutoffs",
+      "USes": "minipantalón agujereado",
+      "USfr": "mini-short en jean troué"
+    }
+  },
+  {
+    "label": "270",
+    "locale": {
+      "CNzh": "圆点长裙",
+      "EUde": "Maxi-Pünktchenrock",
+      "EUen": "long polka skirt",
+      "EUes": "falda lunares",
+      "EUfr": "jupe longue à pois",
+      "EUit": "gonna lunga a pois",
+      "EUnl": "lange rok met stippen",
+      "EUru": "макси-юбка в горошек",
+      "JPja": "みずたまロングスカート",
+      "KRko": "물방울 롱스커트",
+      "TWzh": "圓點長裙",
+      "USen": "long polka skirt",
+      "USes": "falda a lunares",
+      "USfr": "jupe longue à pois"
+    }
+  },
+  {
+    "label": "272",
+    "locale": {
+      "CNzh": "条纹工作裤",
+      "EUde": "Hickory-Streifen-Hose",
+      "EUen": "hickory-stripe pants",
+      "EUes": "pantalón raya fina",
+      "EUfr": "pantalon de travail",
+      "EUit": "pantalone a righine",
+      "EUnl": "gestreepte jeans",
+      "EUru": "брюки в полоску",
+      "JPja": "ヒッコリーのペインターパンツ",
+      "KRko": "히코리 페인터 팬츠",
+      "TWzh": "條紋油漆工褲",
+      "USen": "hickory-stripe pants",
+      "USes": "pantalón raya fina",
+      "USfr": "pantalon de travail"
+    }
+  },
+  {
+    "label": "273",
+    "locale": {
+      "CNzh": "链条裤",
+      "EUde": "Kettenhose",
+      "EUen": "chain pants",
+      "EUes": "pantalón cadena y hebilla",
+      "EUfr": "pantalon à chaîne",
+      "EUit": "pantalone con catena",
+      "EUnl": "broek met ketting",
+      "EUru": "брюки с цепочкой",
+      "JPja": "チェーンつきパンツ",
+      "KRko": "체인 바지",
+      "TWzh": "鏈條褲",
+      "USen": "chain pants",
+      "USes": "pantalón cadena y hebilla",
+      "USfr": "pantalon à chaîne"
+    }
+  },
+  {
+    "label": "274",
+    "locale": {
+      "CNzh": "羽绒裤",
+      "EUde": "Thermohose",
+      "EUen": "down pants",
+      "EUes": "pantalón acolchado",
+      "EUfr": "pantalon doudoune",
+      "EUit": "pantalone imbottito",
+      "EUnl": "gewatteerde broek",
+      "EUru": "штаны на пуху",
+      "JPja": "ダウンパンツ",
+      "KRko": "패딩 바지",
+      "TWzh": "羽絨褲",
+      "USen": "down pants",
+      "USes": "pantalón acolchado",
+      "USfr": "pantalon doudoune"
+    }
+  },
+  {
+    "label": "275",
+    "locale": {
+      "CNzh": "卡其长裙",
+      "EUde": "Maxi-Chinorock",
+      "EUen": "long chino skirt",
+      "EUes": "falda chino",
+      "EUfr": "jupe longue chino",
+      "EUit": "gonna chino lunga",
+      "EUnl": "lange chinorok",
+      "EUru": "длинная юбка из хлопка",
+      "JPja": "ロングチノスカート",
+      "KRko": "롱 치노 스커트",
+      "TWzh": "卡其長裙",
+      "USen": "long chino skirt",
+      "USes": "falda beige",
+      "USfr": "jupe longue chino"
+    }
+  },
+  {
+    "label": "280",
+    "locale": {
+      "CNzh": "羽绒短裙",
+      "EUde": "Thermorock",
+      "EUen": "down skirt",
+      "EUes": "falda corta acolchada",
+      "EUfr": "jupe doudoune",
+      "EUit": "gonna imbottita",
+      "EUnl": "gewatteerde rok",
+      "EUru": "юбка на пуху",
+      "JPja": "ダウンスカート",
+      "KRko": "패딩 치마",
+      "TWzh": "羽絨裙",
+      "USen": "down skirt",
+      "USes": "falda corta acolchada",
+      "USfr": "jupe doudoune"
+    }
+  },
+  {
+    "label": "283",
+    "locale": {
+      "CNzh": "牛仔短裤",
+      "EUde": "Jeans-Shorts",
+      "EUen": "denim cutoffs",
+      "EUes": "minipantalón tejano",
+      "EUfr": "mini-short en jean",
+      "EUit": "paio di jeans corti",
+      "EUnl": "jeansshort",
+      "EUru": "джинсовые шорты",
+      "JPja": "デニムショートパンツ",
+      "KRko": "데님 숏팬츠",
+      "TWzh": "牛仔短褲",
+      "USen": "denim cutoffs",
+      "USes": "minipantalón de jean",
+      "USfr": "mini-short en jean"
+    }
+  },
+  {
+    "label": "287",
+    "locale": {
+      "CNzh": "棉质短裙",
+      "EUde": "Feierabend-Rock",
+      "EUen": "sporty skirt",
+      "EUes": "falda corta sport",
+      "EUfr": "jupe jogging",
+      "EUit": "gonna di tuta",
+      "EUnl": "sportief rokje",
+      "EUru": "юбка из трикотажа",
+      "JPja": "スウェットスカート",
+      "KRko": "스웨트 치마",
+      "TWzh": "棉裙",
+      "USen": "sporty skirt",
+      "USes": "falda corta sport",
+      "USfr": "jupe jogging"
+    }
+  },
+  {
+    "label": "295",
+    "locale": {
+      "CNzh": "灯芯绒短裙",
+      "EUde": "Cordrock",
+      "EUen": "corduroy skirt",
+      "EUes": "falda corta de pana",
+      "EUfr": "jupe en velours côtelé",
+      "EUit": "gonna di velluto a coste",
+      "EUnl": "corduroy rokje",
+      "EUru": "юбка из вельвета",
+      "JPja": "コーデュロイスカート",
+      "KRko": "코듀로이 치마",
+      "TWzh": "燈芯絨裙",
+      "USen": "corduroy skirt",
+      "USes": "falda corta de pana",
+      "USfr": "jupe en velours côtelé"
+    }
+  },
+  {
+    "label": "296",
+    "locale": {
+      "CNzh": "阔腿裤",
+      "EUde": "Gaucho-Hose",
+      "EUen": "gaucho pants",
+      "EUes": "pantalón gaucho",
+      "EUfr": "pantalon gaucho",
+      "EUit": "pantalone da gaucho",
+      "EUnl": "gauchobroek",
+      "EUru": "брюки-гаучо",
+      "JPja": "ガウチョパンツ",
+      "KRko": "와이드 팬츠",
+      "TWzh": "闊腿褲",
+      "USen": "gaucho pants",
+      "USes": "pantalón gaucho",
+      "USfr": "pantalon gaucho"
+    }
+  },
+  {
+    "label": "299",
+    "locale": {
+      "CNzh": "皮裙",
+      "EUde": "Kunstlederrock",
+      "EUen": "pleather skirt",
+      "EUes": "falda corta de polipiel",
+      "EUfr": "jupe en similicuir",
+      "EUit": "gonna in ecopelle a tubino",
+      "EUnl": "kunstleren rokje",
+      "EUru": "юбка из кожзама",
+      "JPja": "レザースカート",
+      "KRko": "가죽 치마",
+      "TWzh": "皮裙",
+      "USen": "pleather skirt",
+      "USes": "falda corta cuero sintético",
+      "USfr": "jupe en similicuir"
+    }
+  },
+  {
+    "label": "301",
+    "locale": {
+      "CNzh": "流苏短裙",
+      "EUde": "Fransenrock",
+      "EUen": "fringe skirt",
+      "EUes": "falda corta con flecos",
+      "EUfr": "jupe à franges",
+      "EUit": "gonna con frange",
+      "EUnl": "rokje met franje",
+      "EUru": "юбка с бахромой",
+      "JPja": "フリンジスカート",
+      "KRko": "프린지 스커트",
+      "TWzh": "流蘇裙",
+      "USen": "fringe skirt",
+      "USes": "falda corta con flecos",
+      "USfr": "jupe à franges"
+    }
+  },
+  {
+    "label": "305",
+    "locale": {
+      "CNzh": "牛仔工作裤",
+      "EUde": "Maler-Jeanshose",
+      "EUen": "denim painter's pants",
+      "EUes": "vaquero de trabajo",
+      "EUfr": "jean de travail",
+      "EUit": "paio di jeans da lavoro",
+      "EUnl": "omgeslagen jeans",
+      "EUru": "джинсы с отворотами",
+      "JPja": "デニムのペインターパンツ",
+      "KRko": "데님 페인터 팬츠",
+      "TWzh": "牛仔油漆工褲",
+      "USen": "denim painter's pants",
+      "USes": "pantalón de jean de trabajo",
+      "USfr": "jean de travail"
+    }
+  },
+  {
+    "label": "308",
+    "locale": {
+      "CNzh": "中国风七分裤",
+      "EUde": "Asia-Blumen-Shorts",
+      "EUen": "silk floral-print pants",
+      "EUes": "pirata de seda exótico",
+      "EUfr": "pantacourt chinois",
+      "EUit": "pinocchietto di seta esotico",
+      "EUnl": "gebloemde zijden broek",
+      "EUru": "шелк. штаны в цветочек",
+      "JPja": "チャイナなクロップドパンツ",
+      "KRko": "중국풍 크롭 팬츠",
+      "TWzh": "中華風七分褲",
+      "USen": "silk floral-print pants",
+      "USes": "pantalón capri flores",
+      "USfr": "pantacourt floral de soie"
+    }
+  },
+  {
+    "label": "309",
+    "locale": {
+      "CNzh": "中国风裤子",
+      "EUde": "Asia-Wolken-Hose",
+      "EUen": "silk pants",
+      "EUes": "pantalón de seda",
+      "EUfr": "pantalon chinois",
+      "EUit": "pantalone di seta",
+      "EUnl": "zijden broek",
+      "EUru": "шелковые брюки",
+      "JPja": "チャイナなズボン",
+      "KRko": "중국풍 바지",
+      "TWzh": "中華風褲子",
+      "USen": "silk pants",
+      "USes": "pantalón de seda",
+      "USfr": "pantalon de soie"
+    }
+  },
+  {
+    "label": "310",
+    "locale": {
+      "CNzh": "功夫裤",
+      "EUde": "Kung-Fu-Hose",
+      "EUen": "kung-fu pants",
+      "EUes": "pantalón kung-fu",
+      "EUfr": "pantalon de kung-fu",
+      "EUit": "pantalone da kung fu",
+      "EUnl": "kungfubroek",
+      "EUru": "штаны для кун-фу",
+      "JPja": "カンフーなズボン",
+      "KRko": "쿵푸 바지",
+      "TWzh": "功夫褲",
+      "USen": "kung-fu pants",
+      "USes": "pantalón kung-fu",
+      "USfr": "pantalon kung-fu"
+    }
+  },
+  {
+    "label": "312",
+    "locale": {
+      "CNzh": "草裙",
+      "EUde": "Baströckchen",
+      "EUen": "grass skirt",
+      "EUes": "falda de paja",
+      "EUfr": "jupe savane",
+      "EUit": "gonna fieno",
+      "EUnl": "rieten rokje",
+      "EUru": "юбка из сухих листьев",
+      "JPja": "こしみの",
+      "KRko": "도롱이 하의",
+      "TWzh": "草裙",
+      "USen": "grass skirt",
+      "USes": "falda de paja",
+      "USfr": "jupe de feuilles"
+    }
+  },
+  {
+    "label": "327",
+    "locale": {
+      "CNzh": "喇叭裤",
+      "EUde": "Glockenhose",
+      "EUen": "bell-bottoms",
+      "EUes": "pantalón acampanado",
+      "EUfr": "pantalon pattes d'eph",
+      "EUit": "pantalone a zampa",
+      "EUnl": "bellbottom",
+      "EUru": "брюки-клеш",
+      "JPja": "ベルボトムパンツ",
+      "KRko": "나팔바지",
+      "TWzh": "喇叭褲",
+      "USen": "bell-bottoms",
+      "USes": "pantalón acampanado",
+      "USfr": "pantalon pattes d'éléphant"
+    }
+  },
+  {
+    "label": "331",
+    "locale": {
+      "CNzh": "荷叶边裤子",
+      "EUde": "Volanthose",
+      "EUen": "frilly pants",
+      "EUes": "pantalón con volantes",
+      "EUfr": "pantalon à volant",
+      "EUit": "pantalone vezzoso",
+      "EUnl": "ruchesbroek",
+      "EUru": "брюки с оборками",
+      "JPja": "フリルつきパンツ",
+      "KRko": "프릴 바지",
+      "TWzh": "荷葉邊褲子",
+      "USen": "frilly pants",
+      "USes": "pantalón con volados",
+      "USfr": "pantalon à volant"
+    }
+  },
+  {
+    "label": "332",
+    "locale": {
+      "CNzh": "帆船图案短裤",
+      "EUde": "Jacht-Shorts",
+      "EUen": "yacht shorts",
+      "EUes": "minipantalón yates",
+      "EUfr": "short voiliers",
+      "EUit": "pantaloncino da yacht",
+      "EUnl": "zeilshort",
+      "EUru": "летние шорты",
+      "JPja": "ヨットのショートパンツ",
+      "KRko": "요트 숏팬츠",
+      "TWzh": "帆船短褲",
+      "USen": "yacht shorts",
+      "USes": "minipantalón yates",
+      "USfr": "short voiliers"
+    }
+  },
+  {
+    "label": "333",
+    "locale": {
+      "CNzh": "混色五分裤",
+      "EUde": "Vielfarben-Shorts",
+      "EUen": "multicolor shorts",
+      "EUes": "pantalón corto multicolor",
+      "EUfr": "short multicolore",
+      "EUit": "pantaloncino multicolore",
+      "EUnl": "veelkleurige korte broek",
+      "EUru": "двухцветные шорты",
+      "JPja": "マルチカラーのハーフパンツ",
+      "KRko": "컬러풀 반바지",
+      "TWzh": "多色五分褲",
+      "USen": "multicolor shorts",
+      "USes": "pantalón corto multicolor",
+      "USfr": "short multicolore"
+    }
+  },
+  {
+    "label": "334",
+    "locale": {
+      "CNzh": "简约五分裤",
+      "EUde": "Ausgehshorts",
+      "EUen": "formal shorts",
+      "EUes": "pantalón corto sobrio",
+      "EUfr": "short sobre",
+      "EUit": "pantaloncino classico",
+      "EUnl": "keurige short",
+      "EUru": "классические шорты",
+      "JPja": "きれいめハーフパンツ",
+      "KRko": "깔끔한 반바지",
+      "TWzh": "清爽五分褲",
+      "USen": "formal shorts",
+      "USes": "pantalón corto sobrio",
+      "USfr": "short sobre"
+    }
+  },
+  {
+    "label": "335",
+    "locale": {
+      "CNzh": "豹纹迷你裙",
+      "EUde": "Leoparden-Minirock",
+      "EUen": "leopard miniskirt",
+      "EUes": "falda corta de leopardo",
+      "EUfr": "mini-jupe léopard",
+      "EUit": "minigonna maculata",
+      "EUnl": "luipaardrokje",
+      "EUru": "леопардовая мини-юбка",
+      "JPja": "ヒョウがらミニスカート",
+      "KRko": "표범 무늬 미니스커트",
+      "TWzh": "豹紋迷你裙",
+      "USen": "leopard miniskirt",
+      "USes": "falda corta de leopardo",
+      "USfr": "mini-jupe léopard"
+    }
+  },
+  {
+    "label": "336",
+    "locale": {
+      "CNzh": "格纹长裙",
+      "EUde": "Karo-Maxirock",
+      "EUen": "long plaid skirt",
+      "EUes": "falda tartán",
+      "EUfr": "jupe longue écossaise",
+      "EUit": "gonna lunga scozzese",
+      "EUnl": "lange plaidrok",
+      "EUru": "длинная юбка в клетку",
+      "JPja": "チェックのロングスカート",
+      "KRko": "체크무늬 롱스커트",
+      "TWzh": "格紋長裙",
+      "USen": "long plaid skirt",
+      "USes": "falda escocesa",
+      "USfr": "jupe longue écossaise"
+    }
+  },
+  {
+    "label": "339",
+    "locale": {
+      "CNzh": "贵族裤子",
+      "EUde": "Adelshose",
+      "EUen": "noble pants",
+      "EUes": "pantalón nobiliario",
+      "EUfr": "haut-de-chausse",
+      "EUit": "pantalone nobile",
+      "EUnl": "aristocratenbroek",
+      "EUru": "брюки вельможи",
+      "JPja": "きぞくのズボン",
+      "KRko": "귀족 바지",
+      "TWzh": "貴族褲子",
+      "USen": "noble pants",
+      "USes": "pantalón nobiliario",
+      "USfr": "haut-de-chausse"
+    }
+  },
+  {
+    "label": "344",
+    "locale": {
+      "CNzh": "凤梨夏威夷裤",
+      "EUde": "Ananas-Aloha-Hose",
+      "EUen": "pineapple aloha shorts",
+      "EUes": "bermuda piña aloha",
+      "EUfr": "short Hawaï ananas",
+      "EUit": "paio bermuda aloha ananas",
+      "EUnl": "ananas-hawaïshort",
+      "EUru": "гавайские ананасн. шорты",
+      "JPja": "パインがらアロハパンツ",
+      "KRko": "파인애플 알로하 바지",
+      "TWzh": "鳳梨夏威夷褲",
+      "USen": "pineapple aloha shorts",
+      "USes": "bermuda aloha piñas",
+      "USfr": "short Hawaï ananas"
+    }
+  },
+  {
+    "label": "347",
+    "locale": {
+      "CNzh": "七分裤",
+      "EUde": "7/8-Hose",
+      "EUen": "cropped pants",
+      "EUes": "pantalón tres cuartos",
+      "EUfr": "pantacourt",
+      "EUit": "pantalone al polpaccio",
+      "EUnl": "driekwartbroek",
+      "EUru": "укороченные брюки",
+      "JPja": "クロップドパンツ",
+      "KRko": "크롭 팬츠",
+      "TWzh": "七分褲",
+      "USen": "cropped pants",
+      "USes": "pantalón tres cuartos",
+      "USfr": "pantacourt"
+    }
+  },
+  {
+    "label": "349",
+    "locale": {
+      "CNzh": "蛋糕蓬蓬裙",
+      "EUde": "Volantrock",
+      "EUen": "frilly skirt",
+      "EUes": "falda corta con volantes",
+      "EUfr": "jupe volantée",
+      "EUit": "gonna vezzosa",
+      "EUnl": "ruchesrokje",
+      "EUru": "юбка с оборками",
+      "JPja": "フリルスカート",
+      "KRko": "프릴 스커트",
+      "TWzh": "蓬蓬裙",
+      "USen": "frilly skirt",
+      "USes": "falda corta con volados",
+      "USfr": "jupe volantée"
+    }
+  },
+  {
+    "label": "359",
+    "locale": {
+      "CNzh": "粗花呢蛋糕蓬蓬裙",
+      "EUde": "Tweed-Volantrock",
+      "EUen": "tweed frilly skirt",
+      "EUes": "falda de tweed con lazo",
+      "EUfr": "jupe en tweed à volant",
+      "EUit": "gonna vezzosa di tweed",
+      "EUnl": "tweed-ruchesrokje",
+      "EUru": "твидовая юбка с оборками",
+      "JPja": "ツイードフリルスカート",
+      "KRko": "트위드 프릴 스커트",
+      "TWzh": "斜紋軟呢蓬蓬裙",
+      "USen": "tweed frilly skirt",
+      "USes": "falda de tweed con lazo",
+      "USfr": "jupe en tweed à volant"
+    }
+  },
+  {
+    "label": "361",
+    "locale": {
+      "CNzh": "休闲裤",
+      "EUde": "Freizeithose",
+      "EUen": "casual pants",
+      "EUes": "pantalón holgado",
+      "EUfr": "pantalon d'intérieur",
+      "EUit": "pantalone casual",
+      "EUnl": "casual broek",
+      "EUru": "удобные штаны",
+      "JPja": "ワイドイージーパンツ",
+      "KRko": "와이드 이지 팬츠",
+      "TWzh": "休閒寬褲",
+      "USen": "casual pants",
+      "USes": "pantalón holgado",
+      "USfr": "pantalon d'intérieur"
+    }
+  },
+  {
+    "label": "365",
+    "locale": {
+      "CNzh": "迷彩短裙",
+      "EUde": "Tarnrock",
+      "EUen": "camo skirt",
+      "EUes": "falda corta camuflaje",
+      "EUfr": "jupe camouflage",
+      "EUit": "gonna mimetica",
+      "EUnl": "camouflagerokje",
+      "EUru": "камуфляжная юбка",
+      "JPja": "めいさいスカート",
+      "KRko": "밀리터리 치마",
+      "TWzh": "迷彩裙",
+      "USen": "camo skirt",
+      "USes": "falda corta camuflaje",
+      "USfr": "jupe camouflage"
+    }
+  },
+  {
+    "label": "369",
+    "locale": {
+      "CNzh": "裤裙",
+      "EUde": "Hosenrock",
+      "EUen": "culottes",
+      "EUes": "culote",
+      "EUfr": "jupe-culotte",
+      "EUit": "paio di culotte",
+      "EUnl": "culotte",
+      "EUru": "юбка-шорты",
+      "JPja": "キュロット",
+      "KRko": "퀼로트",
+      "TWzh": "褲裙",
+      "USen": "culottes",
+      "USes": "pantalón corto holgado",
+      "USfr": "jupe-culotte"
+    }
+  },
+  {
+    "label": "374",
+    "locale": {
+      "CNzh": "滑雪裤",
+      "EUde": "Skihose",
+      "EUen": "ski pants",
+      "EUes": "pantalón de esquí",
+      "EUfr": "pantalon de ski",
+      "EUit": "pantalone da sci",
+      "EUnl": "skibroek",
+      "EUru": "лыжные штаны",
+      "JPja": "スキーウェアのズボン",
+      "KRko": "스키복 바지",
+      "TWzh": "滑雪褲",
+      "USen": "ski pants",
+      "USes": "pantalón de esquí",
+      "USfr": "pantalon de ski"
+    }
+  },
+  {
+    "label": "395",
+    "locale": {
+      "CNzh": "户外活动裤",
+      "EUde": "Outdoor-Hose",
+      "EUen": "outdoor shorts",
+      "EUes": "pantalón de paseo",
+      "EUfr": "short de randonnée",
+      "EUit": "pantaloncino da camminata",
+      "EUnl": "kampeerbroek",
+      "EUru": "походные шорты",
+      "JPja": "アウトドアパンツ",
+      "KRko": "아웃도어 팬츠",
+      "TWzh": "戶外活動褲",
+      "USen": "outdoor shorts",
+      "USes": "pantalón de paseo",
+      "USfr": "short de randonnée"
+    }
+  },
+  {
+    "label": "399",
+    "locale": {
+      "CNzh": "朋克风格裤子",
+      "EUde": "Punk-Hose",
+      "EUen": "punk pants",
+      "EUes": "pantalón punk",
+      "EUfr": "pantalon punk",
+      "EUit": "pantalone punk",
+      "EUnl": "punkbroek",
+      "EUru": "брюки панка",
+      "JPja": "ボンテージパンツ",
+      "KRko": "펑크 팬츠",
+      "TWzh": "龐克裙褲",
+      "USen": "punk pants",
+      "USes": "pantalón punk",
+      "USfr": "pantalon punk"
+    }
+  },
+  {
+    "label": "401",
+    "locale": {
+      "CNzh": "民族风裤子",
+      "EUde": "Ethno-Shorts",
+      "EUen": "vibrant shorts",
+      "EUes": "bermuda playera",
+      "EUfr": "bermuda chamarré",
+      "EUit": "pantaloncino folcloristico",
+      "EUnl": "bonte bermuda",
+      "EUru": "пестрые шорты",
+      "JPja": "エスニックパンツ",
+      "KRko": "에스닉 바지",
+      "TWzh": "民族風褲子",
+      "USen": "vibrant shorts",
+      "USes": "bermuda playera",
+      "USfr": "bermuda chamarré"
+    }
+  },
+  {
+    "label": "404",
+    "locale": {
+      "CNzh": "膝盖补丁裤",
+      "EUde": "Spielplatzhose",
+      "EUen": "patched-knee pants",
+      "EUes": "pantalón con rodilleras",
+      "EUfr": "pantalon renforcé",
+      "EUit": "pantaloncino con toppe",
+      "EUnl": "kniestukkenbroek",
+      "EUru": "брюки с заплатками",
+      "JPja": "ひざあてズボン",
+      "KRko": "덧댄 바지",
+      "TWzh": "膝蓋補丁褲",
+      "USen": "patched-knee pants",
+      "USes": "pantalón con rodilleras",
+      "USfr": "pantalon renforcé"
+    }
+  },
+  {
+    "label": "409",
+    "locale": {
+      "CNzh": "三节裙",
+      "EUde": "Stufenrock",
+      "EUen": "tiered skirt",
+      "EUes": "falda escalonada",
+      "EUfr": "jupe bohème",
+      "EUit": "gonna a strati",
+      "EUnl": "gelaagde rok",
+      "EUru": "ярусная юбка",
+      "JPja": "ティアードスカート",
+      "KRko": "티어드 스커트",
+      "TWzh": "蛋糕裙",
+      "USen": "tiered skirt",
+      "USes": "falda escalonada",
+      "USfr": "jupe bohème"
+    }
+  },
+  {
+    "label": "411",
+    "locale": {
+      "CNzh": "西装短裙",
+      "EUde": "Business-Rock",
+      "EUen": "career skirt",
+      "EUes": "falda de oficina",
+      "EUfr": "jupe crayon",
+      "EUit": "gonna da ufficio",
+      "EUnl": "zakelijke rok",
+      "EUru": "офисная юбка",
+      "JPja": "キャリアなスカート",
+      "KRko": "정장 치마",
+      "TWzh": "西裝裙",
+      "USen": "career skirt",
+      "USes": "falda de oficina",
+      "USfr": "jupe crayon"
+    }
+  },
+  {
+    "label": "412",
+    "locale": {
+      "CNzh": "不规则垂坠裙",
+      "EUde": "Draperie-Rock",
+      "EUen": "draped skirt",
+      "EUes": "falda en cascada tartán",
+      "EUfr": "jupe drapée",
+      "EUit": "gonna drappeggiata",
+      "EUnl": "gedrapeerde rok",
+      "EUru": "юбка с драпировкой",
+      "JPja": "ドレープスカート",
+      "KRko": "드레이프 스커트",
+      "TWzh": "不規則摺邊裙",
+      "USen": "draped skirt",
+      "USes": "falda en cascada escocesa",
+      "USfr": "jupe drapée"
+    }
+  },
+  {
+    "label": "419",
+    "locale": {
+      "CNzh": "单车裤",
+      "EUde": "Radler-Shorts",
+      "EUen": "cycling shorts",
+      "EUes": "pantalón corto de ciclista",
+      "EUfr": "short cycliste",
+      "EUit": "pantaloncino da ciclista",
+      "EUnl": "wielrennersbroekje",
+      "EUru": "велошорты",
+      "JPja": "サイクルボトム",
+      "KRko": "자전거 경주복 하의",
+      "TWzh": "單車褲",
+      "USen": "cycling shorts",
+      "USes": "pantalón corto de ciclista",
+      "USfr": "short cycliste"
+    }
+  },
+  {
+    "label": "420",
+    "locale": {
+      "CNzh": "冲浪裤",
+      "EUde": "Surfer-Shorts",
+      "EUen": "surfing shorts",
+      "EUes": "bermuda surf",
+      "EUfr": "short de surf",
+      "EUit": "pantaloncino da surf",
+      "EUnl": "surfshort",
+      "EUru": "шорты для серфинга",
+      "JPja": "サーフパンツ",
+      "KRko": "서핑 바지",
+      "TWzh": "衝浪褲",
+      "USen": "surfing shorts",
+      "USes": "bermuda surf",
+      "USfr": "short de surf"
+    }
+  },
+  {
+    "label": "421",
+    "locale": {
+      "CNzh": "蕾丝短裤",
+      "EUde": "Spitzenshorts",
+      "EUen": "lace shorts",
+      "EUes": "minipantalón encaje",
+      "EUfr": "short dentelle",
+      "EUit": "pantaloncino di pizzo",
+      "EUnl": "kanten short",
+      "EUru": "кружевные шорты",
+      "JPja": "レースショートパンツ",
+      "KRko": "레이스 숏팬츠",
+      "TWzh": "蕾絲短褲",
+      "USen": "lace shorts",
+      "USes": "minipantalón encaje",
+      "USfr": "short dentelle"
+    }
+  },
+  {
+    "label": "422",
+    "locale": {
+      "CNzh": "运动短裤",
+      "EUde": "Athletenshorts",
+      "EUen": "athletic shorts",
+      "EUes": "pantalón corto atletismo",
+      "EUfr": "short de sport",
+      "EUit": "pantaloncino della tuta",
+      "EUnl": "korte sportbroek",
+      "EUru": "шорты бегуна",
+      "JPja": "ジャージショートパンツ",
+      "KRko": "트레이닝복 숏팬츠",
+      "TWzh": "運動短褲",
+      "USen": "athletic shorts",
+      "USes": "pantalón corto sport",
+      "USfr": "short de sport"
+    }
+  },
+  {
+    "label": "426",
+    "locale": {
+      "CNzh": "泰拳裤子",
+      "EUde": "Muai-Thai-Hose",
+      "EUen": "muay-thai shorts",
+      "EUes": "pantalón corto muay thai",
+      "EUfr": "short de boxe thaï",
+      "EUit": "pantaloncino da muay thai",
+      "EUnl": "kickboksshort",
+      "EUru": "шорты для бокса",
+      "JPja": "ムエタイパンツ",
+      "KRko": "무에타이 바지",
+      "TWzh": "泰拳褲",
+      "USen": "muay-thai shorts",
+      "USes": "pantalón corto muay thai",
+      "USfr": "short de boxe thaï"
+    }
+  },
+  {
+    "label": "427",
+    "locale": {
+      "CNzh": "金色点点裤子",
+      "EUde": "Goldtupfen-Shorts",
+      "EUen": "dotted shorts",
+      "EUes": "minipantalón topos",
+      "EUfr": "short à pois",
+      "EUit": "pantaloncino a pois",
+      "EUnl": "korte broek met stippen",
+      "EUru": "шорты в горошек",
+      "JPja": "ゴールドドットパンツ",
+      "KRko": "금색 도트 바지",
+      "TWzh": "金色點點褲",
+      "USen": "dotted shorts",
+      "USes": "minipantalón a lunares",
+      "USfr": "short à pois"
+    }
+  },
+  {
+    "label": "429",
+    "locale": {
+      "CNzh": "系带裹裙",
+      "EUde": "Gürtel-Wickelrock",
+      "EUen": "belted wraparound skirt",
+      "EUes": "falda envolvente tartán",
+      "EUfr": "jupe portefeuille à ceinture",
+      "EUit": "gonna portafoglio tartan",
+      "EUnl": "wikkelrok met ceintuur",
+      "EUru": "юбка с запахом и ремнями",
+      "JPja": "ベルトのまきスカート",
+      "KRko": "벨트 랩 스커트",
+      "TWzh": "腰帶一片裙",
+      "USen": "belted wraparound skirt",
+      "USes": "falda envolvente escocesa",
+      "USfr": "jupe portefeuille à ceinture"
+    }
+  },
+  {
+    "label": "430",
+    "locale": {
+      "CNzh": "花朵图案刺绣裙",
+      "EUde": "Blumenstick-Rock",
+      "EUen": "embroidered floral skirt",
+      "EUes": "falda flores bordadas",
+      "EUfr": "jupe à fleurs brodées",
+      "EUit": "gonna a ricami floreali",
+      "EUnl": "geborduurde bloemenrok",
+      "EUru": "юбка с цветочками",
+      "JPja": "ししゅうのはながらスカート",
+      "KRko": "꽃무늬 자수 치마",
+      "TWzh": "刺繡花紋裙",
+      "USen": "embroidered floral skirt",
+      "USes": "falda flores bordadas",
+      "USfr": "jupe à fleurs brodées"
+    }
+  },
+  {
+    "label": "431",
+    "locale": {
+      "CNzh": "几何图案刺绣裙",
+      "EUde": "Dessinstick-Rock",
+      "EUen": "embroidered-pattern skirt",
+      "EUes": "falda cenefas bordadas",
+      "EUfr": "jupe à motif brodé",
+      "EUit": "gonna a ricami geometrici",
+      "EUnl": "geborduurde rok",
+      "EUru": "юбка с вышивкой",
+      "JPja": "きかがくししゅうのスカート",
+      "KRko": "기하학 자수 치마",
+      "TWzh": "幾何刺繡裙",
+      "USen": "embroidered-pattern skirt",
+      "USes": "falda cenefas bordadas",
+      "USfr": "jupe à motif brodé"
+    }
+  },
+  {
+    "label": "459",
+    "locale": {
+      "CNzh": "缎面裤子",
+      "EUde": "Satinhose",
+      "EUen": "satin pants",
+      "EUes": "pantalón de satén",
+      "EUfr": "pantalon en satin",
+      "EUit": "pantalone satinato",
+      "EUnl": "satijnen broek",
+      "EUru": "атласные брюки",
+      "JPja": "サテンのパンツ",
+      "KRko": "새틴 바지",
+      "TWzh": "緞面褲子",
+      "USen": "satin pants",
+      "USes": "pantalón de satén",
+      "USfr": "pantalon en satin"
+    }
+  },
+  {
+    "label": "468",
+    "locale": {
+      "CNzh": "灯芯绒裤",
+      "EUde": "Cordhose",
+      "EUen": "corduroy pants",
+      "EUes": "pantalón de pana",
+      "EUfr": "pantalon en velours côtelé",
+      "EUit": "pantalone di velluto a coste",
+      "EUnl": "corduroy broek",
+      "EUru": "брюки из вельвета",
+      "JPja": "コーデュロイボトム",
+      "KRko": "코듀로이 바지",
+      "TWzh": "燈芯絨褲",
+      "USen": "corduroy pants",
+      "USes": "pantalón de pana",
+      "USfr": "pantalon en velours côtelé"
+    }
+  },
+  {
+    "label": "478",
+    "locale": {
+      "CNzh": "花朵图案蕾丝裙",
+      "EUde": "Blumenspitzenrock",
+      "EUen": "floral lace skirt",
+      "EUes": "falda encaje floral",
+      "EUfr": "jupe à fleurs en dentelle",
+      "EUit": "gonna merlettata floreale",
+      "EUnl": "kanten bloemenrok",
+      "EUru": "кружевная юбка с цветами",
+      "JPja": "はながらレースのスカート",
+      "KRko": "꽃무늬 레이스 치마",
+      "TWzh": "花紋蕾絲裙",
+      "USen": "floral lace skirt",
+      "USes": "falda encaje floral",
+      "USfr": "jupe à fleurs en dentelle"
+    }
+  },
+  {
+    "label": "480",
+    "locale": {
+      "CNzh": "喇叭裙",
+      "EUde": "Minirock",
+      "EUen": "flare skirt",
+      "EUes": "falda acampanada",
+      "EUfr": "jupe évasée",
+      "EUit": "gonna scampanata",
+      "EUnl": "uitlopend rokje",
+      "EUru": "юбка-клеш",
+      "JPja": "フレアスカート",
+      "KRko": "플레어스커트",
+      "TWzh": "喇叭裙",
+      "USen": "flare skirt",
+      "USes": "falda campamento",
+      "USfr": "jupe évasée"
+    }
+  },
+  {
+    "label": "648",
+    "locale": {
+      "CNzh": "反折直筒裤",
+      "EUde": "Outdoor-Chino",
+      "EUen": "wide chino pants",
+      "EUes": "pantalón chino holgado",
+      "EUfr": "pantalon large en toile",
+      "EUit": "pantalone chino largo",
+      "EUnl": "wijdepijpenchino",
+      "EUru": "широкие брюки из хлопка",
+      "JPja": "ワイドチノ",
+      "KRko": "와이드 치노",
+      "TWzh": "卡其寬褲",
+      "USen": "wide chino pants",
+      "USes": "pantalón beige holgado",
+      "USfr": "pantalon large en toile"
+    }
+  },
+  {
+    "label": "649",
+    "locale": {
+      "CNzh": "酸洗牛仔裤",
+      "EUde": "Bleichjeanshose",
+      "EUen": "acid-washed jeans",
+      "EUes": "tejano desteñido",
+      "EUfr": "jean délavé",
+      "EUit": "paio di jeans sbiaditi",
+      "EUnl": "gebleekte jeans",
+      "EUru": "джинсы-варенки",
+      "JPja": "ケミカルウォッシュデニム",
+      "KRko": "워싱 청바지",
+      "TWzh": "化學洗牛仔褲",
+      "USen": "acid-washed jeans",
+      "USes": "pantalón desteñido",
+      "USfr": "jean délavé"
+    }
+  },
+  {
+    "label": "690",
+    "locale": {
+      "CNzh": "舞蹈运动裤",
+      "EUde": "Tänzerhose",
+      "EUen": "dance warm-up pants",
+      "EUes": "pantalón compañía de baile",
+      "EUfr": "pantalon équipe de danse",
+      "EUit": "pantalone della tuta danza",
+      "EUnl": "streetdance-broek",
+      "EUru": "штаны для танцев",
+      "JPja": "ダンスジャージズボン",
+      "KRko": "댄스 트레이닝복 바지",
+      "TWzh": "跳舞運動褲",
+      "USen": "dance warm-up pants",
+      "USes": "pantalón compañía de baile",
+      "USfr": "pantalon équipe de danse"
+    }
+  },
+  {
+    "label": "726",
+    "locale": {
+      "CNzh": "对话框短裤",
+      "EUde": "Comic-Shorts",
+      "EUen": "comic shorts",
+      "EUes": "bermuda cómics",
+      "EUfr": "short bédé",
+      "EUit": "pantaloncino cartoonesco",
+      "EUnl": "stripboekshort",
+      "EUru": "шорты с комиксами",
+      "JPja": "アメコミがらハーフパンツ",
+      "KRko": "만화 무늬 반바지",
+      "TWzh": "對話框短褲",
+      "USen": "comic shorts",
+      "USes": "bermuda cómics",
+      "USfr": "short bédé"
+    }
+  },
+  {
+    "label": "727",
+    "locale": {
+      "CNzh": "花裤",
+      "EUde": "Monpe-Arbeitshose",
+      "EUen": "traditional monpe pants",
+      "EUes": "pantalón monpe",
+      "EUfr": "pantalon monpe",
+      "EUit": "pantalone monpe",
+      "EUnl": "klassieke monpe-broek",
+      "EUru": "шаровары",
+      "JPja": "もんぺ",
+      "KRko": "일 바지",
+      "TWzh": "束口燈籠褲",
+      "USen": "traditional monpe pants",
+      "USes": "pantalón monpe",
+      "USfr": "pantalon monpe"
+    }
+  },
+  {
+    "label": "728",
+    "locale": {
+      "CNzh": "防雨裤",
+      "EUde": "Regenhose",
+      "EUen": "rain pants",
+      "EUes": "pantalón impermeable",
+      "EUfr": "pantalon imperméable",
+      "EUit": "pantalone impermeabile",
+      "EUnl": "regenbroek",
+      "EUru": "непромокаемые штаны",
+      "JPja": "レインパンツ",
+      "KRko": "레인 팬츠",
+      "TWzh": "防雨褲",
+      "USen": "rain pants",
+      "USes": "pantalón impermeable",
+      "USfr": "pantalon imperméable"
+    }
+  },
+  {
+    "label": "729",
+    "locale": {
+      "CNzh": "毛线短裙",
+      "EUde": "Strickrock",
+      "EUen": "knit skirt",
+      "EUes": "falda corta de punto",
+      "EUfr": "jupe en tricot",
+      "EUit": "gonna di lana",
+      "EUnl": "gebreide rok",
+      "EUru": "вязаная юбка",
+      "JPja": "ニットスカート",
+      "KRko": "니트 치마",
+      "TWzh": "針織裙",
+      "USen": "knit skirt",
+      "USes": "falda corta tejida",
+      "USfr": "jupe en tricot"
+    }
+  },
+  {
+    "label": "730",
+    "locale": {
+      "CNzh": "仿毛皮短裙",
+      "EUde": "Schleifchen-Kunstfellrock",
+      "EUen": "faux-fur skirt",
+      "EUes": "falda corta de pelo sintético",
+      "EUfr": "jupe en fausse fourrure",
+      "EUit": "gonna di ecopelliccia",
+      "EUnl": "imitatiebontrok",
+      "EUru": "юбка «под мех»",
+      "JPja": "ファースカート",
+      "KRko": "인조털 치마",
+      "TWzh": "毛毛裙",
+      "USen": "faux-fur skirt",
+      "USes": "falda corta de piel sintética",
+      "USfr": "jupe en fausse fourrure"
+    }
+  },
+  {
+    "label": "731",
+    "locale": {
+      "CNzh": "荷叶边棉裤",
+      "EUde": "Volantsofahose",
+      "EUen": "frilly sweatpants",
+      "EUes": "pantalón chándal volantes",
+      "EUfr": "pantalon jogging à volants",
+      "EUit": "pantalone volant vezzoso",
+      "EUnl": "rucheslegging",
+      "EUru": "штаны с оборками",
+      "JPja": "スウェットフリルズボン",
+      "KRko": "프릴 스웨트 팬츠",
+      "TWzh": "荷葉邊棉褲",
+      "USen": "frilly sweatpants",
+      "USes": "pantalón cómodo volados",
+      "USfr": "pantalon jogging à volants"
+    }
+  },
+  {
+    "label": "732",
+    "locale": {
+      "CNzh": "棉质长裙",
+      "EUde": "Feierabend-Maxirock",
+      "EUen": "long sweatskirt",
+      "EUes": "falda sport",
+      "EUfr": "jupe jogging longue",
+      "EUit": "gonna lunga casual",
+      "EUnl": "lange sweatstofrok",
+      "EUru": "юбка макси из трикотажа",
+      "JPja": "スウェットロングスカート",
+      "KRko": "스웨트 롱스커트",
+      "TWzh": "棉質長裙",
+      "USen": "long sweatskirt",
+      "USes": "falda sport",
+      "USfr": "jupe jogging longue"
+    }
+  },
+  {
+    "label": "733",
+    "locale": {
+      "CNzh": "绒毛短裙",
+      "EUde": "Fleecerock",
+      "EUen": "boa skirt",
+      "EUes": "falda corta mullida",
+      "EUfr": "jupe en polaire",
+      "EUit": "gonna boa",
+      "EUnl": "zachte rok",
+      "EUru": "пушистая юбка",
+      "JPja": "ボアスカート",
+      "KRko": "보아 스커트",
+      "TWzh": "絨毛裙",
+      "USen": "boa skirt",
+      "USes": "falda corta mullida",
+      "USfr": "jupe en flanelle"
+    }
+  },
+  {
+    "label": "734",
+    "locale": {
+      "CNzh": "绒毛短裤",
+      "EUde": "Fleece-Shorts",
+      "EUen": "boa shorts",
+      "EUes": "pantalón corto mullido",
+      "EUfr": "short en polaire",
+      "EUit": "pantaloncino boa",
+      "EUnl": "zachte short",
+      "EUru": "пушистые шорты",
+      "JPja": "ボアハーフパンツ",
+      "KRko": "보아 반바지",
+      "TWzh": "絨毛短褲",
+      "USen": "boa shorts",
+      "USes": "pantalón corto mullido",
+      "USfr": "short en flanelle"
+    }
+  },
+  {
+    "label": "735",
+    "locale": {
+      "CNzh": "喇叭皮裙",
+      "EUde": "Kunstleder-Minirock",
+      "EUen": "pleather flare skirt",
+      "EUes": "falda acampanada polipiel",
+      "EUfr": "jupe évasée en similicuir",
+      "EUit": "gonna in ecopelle",
+      "EUnl": "uitlopend kunstleren rokje",
+      "EUru": "юбка-клеш из кожзама",
+      "JPja": "レザーのフレアスカート",
+      "KRko": "가죽 플레어스커트",
+      "TWzh": "喇叭皮裙",
+      "USen": "pleather flare skirt",
+      "USes": "falda acampanada sintética",
+      "USfr": "jupe évasée en similicuir"
+    }
+  },
+  {
+    "label": "736",
+    "locale": {
+      "CNzh": "前排扣荷叶边裙",
+      "EUde": "Knopfleisten-Spitzenrock",
+      "EUen": "buttoned lace skirt",
+      "EUes": "falda con botones",
+      "EUfr": "jupe longue à boutons",
+      "EUit": "gonna merlettata a bottoni",
+      "EUnl": "kanten knoopjesrok",
+      "EUru": "юбка с пуговицами",
+      "JPja": "まえボタンレースのスカート",
+      "KRko": "버튼 레이스 치마",
+      "TWzh": "前排釦蕾絲裙",
+      "USen": "buttoned lace skirt",
+      "USes": "falda con botones",
+      "USfr": "jupe longue à boutons"
+    }
+  },
+  {
+    "label": "737",
+    "locale": {
+      "CNzh": "缤纷芭蕾舞裙",
+      "EUde": "Tanzröckchen",
+      "EUen": "petal skirt",
+      "EUes": "falda pétalos",
+      "EUfr": "jupe pétales",
+      "EUit": "gonna petali",
+      "EUnl": "dansrokje",
+      "EUru": "юбка из тюля",
+      "JPja": "チュチュスカート",
+      "KRko": "발레리나 치마",
+      "TWzh": "芭蕾舞紗裙",
+      "USen": "petal skirt",
+      "USes": "falda pétalos",
+      "USfr": "jupe pétales"
+    }
+  },
+  {
+    "label": "752",
+    "locale": {
+      "CNzh": "千鸟格纹短裙",
+      "EUde": "Symmetrierock",
+      "EUen": "plover skirt",
+      "EUes": "falda pata de gallo",
+      "EUfr": "jupe pied-de-coq",
+      "EUit": "gonna pied de poule",
+      "EUnl": "pied-de-poule rok",
+      "EUru": "юбка «Гусиная лапка»",
+      "JPja": "ちどりのスカート",
+      "KRko": "하운드투스 치마",
+      "TWzh": "千鳥格紋裙",
+      "USen": "plover skirt",
+      "USes": "falda pata de gallo",
+      "USfr": "jupe pied-de-coq"
+    }
+  },
+  {
+    "label": "754",
+    "locale": {
+      "CNzh": "拼接裙",
+      "EUde": "Upcycle-Rock",
+      "EUen": "upcycled skirt",
+      "EUes": "falda de supraciclaje",
+      "EUfr": "jupe recyclée",
+      "EUit": "gonna riciclata",
+      "EUnl": "kringlooprok",
+      "EUru": "юбка из вторсырья",
+      "JPja": "シャビーなスカート",
+      "KRko": "쉐비 스커트",
+      "TWzh": "拼接裙",
+      "USen": "upcycled skirt",
+      "USes": "falda de supraciclaje",
+      "USfr": "jupe recyclée"
+    }
+  },
+  {
+    "label": "755",
+    "locale": {
+      "CNzh": "印花牛仔裤",
+      "EUde": "Design-Jeanshose",
+      "EUen": "embellished denim pants",
+      "EUes": "tejano con estampado",
+      "EUfr": "jean décoré",
+      "EUit": "paio di jeans decorati",
+      "EUnl": "vleugelstikseljeans",
+      "EUru": "джинсы с аппликацией",
+      "JPja": "プリントデニム",
+      "KRko": "프린트 데님 바지",
+      "TWzh": "印花牛仔褲",
+      "USen": "embellished denim pants",
+      "USes": "pantalón de jean decorado",
+      "USfr": "jean décoré"
+    }
+  },
+  {
+    "label": "756",
+    "locale": {
+      "CNzh": "格子裤",
+      "EUde": "Suteteko-Hose",
+      "EUen": "traditional suteteko pants",
+      "EUes": "pantalón suteteko",
+      "EUfr": "pantalon suteteko",
+      "EUit": "pantalone suteteko",
+      "EUnl": "klassieke suteteko-broek",
+      "EUru": "длинные свободн. шорты",
+      "JPja": "ステテコ",
+      "KRko": "실내용 5부 바지",
+      "TWzh": "格子褲",
+      "USen": "traditional suteteko pants",
+      "USes": "pantalón suteteko",
+      "USfr": "pantalon suteteko"
+    }
+  },
+  {
+    "label": "781",
+    "locale": {
+      "CNzh": "拼布裙",
+      "EUde": "Patchwork-Rock",
+      "EUen": "patchwork skirt",
+      "EUes": "falda recortes",
+      "EUfr": "jupe patchwork",
+      "EUit": "gonna patchwork",
+      "EUnl": "patchworkrok",
+      "EUru": "лоскутная юбка",
+      "JPja": "パッチワークスカート",
+      "KRko": "패치워크 스커트",
+      "TWzh": "拼布裙",
+      "USen": "patchwork skirt",
+      "USes": "falda retazos",
+      "USfr": "jupe patchwork"
+    }
+  },
+  {
+    "label": "817",
+    "locale": {
+      "CNzh": "长绒格纹热裤",
+      "EUde": "Karoshorts",
+      "EUen": "plaid shorts",
+      "EUes": "minipantalón lana tartán",
+      "EUfr": "short écossais à ceinture",
+      "EUit": "pantaloncino con cintura",
+      "EUnl": "geruite short",
+      "EUru": "шорты в клетку",
+      "JPja": "シャギーチェックのホットパンツ",
+      "KRko": "체크무늬 핫팬츠",
+      "TWzh": "法蘭絨格紋熱褲",
+      "USen": "plaid shorts",
+      "USes": "minipantalón lana escocés",
+      "USfr": "short écossais à ceinture"
+    }
+  },
+  {
+    "label": "818",
+    "locale": {
+      "CNzh": "墨西哥传统裙子",
+      "EUde": "Traditionsrock",
+      "EUen": "colorful skirt",
+      "EUes": "falda colorida",
+      "EUfr": "jupe bariolée",
+      "EUit": "gonna pittoresca",
+      "EUnl": "kleurrijke rok",
+      "EUru": "пестрая юбка",
+      "JPja": "エナグワス",
+      "KRko": "컬러풀 스커트",
+      "TWzh": "墨西哥傳統裙子",
+      "USen": "colorful skirt",
+      "USes": "falda colorida",
+      "USfr": "jupe bariolée"
+    }
+  },
+  {
+    "label": "840",
+    "locale": {
+      "CNzh": "破旧裤子",
+      "EUde": "Lumpenhose",
+      "EUen": "torn pants",
+      "EUes": "pantalón desgarrado",
+      "EUfr": "pantalon déchiré",
+      "EUit": "pantalone strappato",
+      "EUnl": "kapotte broek",
+      "EUru": "порванные брюки",
+      "JPja": "やぶれたズボン",
+      "KRko": "뜯어진 바지",
+      "TWzh": "破爛褲子",
+      "USen": "torn pants",
+      "USes": "pantalón desgarrado",
+      "USfr": "pantalon déchiré"
+    }
+  },
+  {
+    "label": "841",
+    "locale": {
+      "CNzh": "健身棉质裤",
+      "EUde": "7/8-Sofahose",
+      "EUen": "three-quarter sweatpants",
+      "EUes": "pirata gimnasio",
+      "EUfr": "pantacourt de jogging",
+      "EUit": "pinocchietto sportivo",
+      "EUnl": "driekwartjoggingbroek",
+      "EUru": "трикотажн. брюки капри",
+      "JPja": "フィットネススウェットパンツ",
+      "KRko": "피트니스 스웨트 팬츠",
+      "TWzh": "運動棉褲",
+      "USen": "three-quarter sweatpants",
+      "USes": "pantalón capri gimnasio",
+      "USfr": "pantacourt d'exercice"
+    }
+  },
+  {
+    "label": "842",
+    "locale": {
+      "CNzh": "直筒百褶裙",
+      "EUde": "Kellerfaltenrock",
+      "EUen": "box-pleated skirt",
+      "EUes": "falda plisada corta",
+      "EUfr": "jupe plissée courte",
+      "EUit": "gonna corta plissettata",
+      "EUnl": "stolpplooirok",
+      "EUru": "мини-юбка с бантовкой",
+      "JPja": "ボックスプリーツスカート",
+      "KRko": "박스 플리츠 스커트",
+      "TWzh": "直筒前褶裙",
+      "USen": "box-pleated skirt",
+      "USes": "falda plisada corta",
+      "USfr": "jupe plissée courte"
+    }
+  },
+  {
+    "label": "843",
+    "locale": {
+      "CNzh": "麂皮毛毛裙",
+      "EUde": "Kunstfellrock",
+      "EUen": "faux-shearling skirt",
+      "EUes": "falda corta sherpa",
+      "EUfr": "jupe en imitation agneau",
+      "EUit": "gonna in finto montone",
+      "EUnl": "winterrok",
+      "EUru": "юбка «под овчину»",
+      "JPja": "ムートンスカート",
+      "KRko": "양가죽 스커트",
+      "TWzh": "麂皮裙",
+      "USen": "faux-shearling skirt",
+      "USes": "falda corta piel sintética",
+      "USfr": "jupe fourrée"
+    }
+  },
+  {
+    "label": "844",
+    "locale": {
+      "CNzh": "混色条纹热裤",
+      "EUde": "Streifen-Shorts",
+      "EUen": "striped shorts",
+      "EUes": "pantalón corto franjas",
+      "EUfr": "short à rayures bariolé",
+      "EUit": "pantaloncino a righe",
+      "EUnl": "gestreepte short",
+      "EUru": "полосатые шорты",
+      "JPja": "マルチストライプのホットパンツ",
+      "KRko": "스트라이프 핫팬츠",
+      "TWzh": "混色條紋熱褲",
+      "USen": "striped shorts",
+      "USes": "pantalón corto franjas",
+      "USfr": "short à rayures bariolé"
+    }
+  },
+  {
+    "label": "845",
+    "locale": {
+      "CNzh": "针织裤",
+      "EUde": "Strickhose",
+      "EUen": "knit pants",
+      "EUes": "pantalón de punto",
+      "EUfr": "pantalon en tricot",
+      "EUit": "pantalone di maglia",
+      "EUnl": "gebreide broek",
+      "EUru": "вязаные штаны",
+      "JPja": "ニットパンツ",
+      "KRko": "니트 바지",
+      "TWzh": "針織褲",
+      "USen": "knit pants",
+      "USes": "pantalón tejido",
+      "USfr": "pantalon en tricot"
+    }
+  },
+  {
+    "label": "846",
+    "locale": {
+      "CNzh": "牛仔长裙",
+      "EUde": "Maxi-Jeansrock",
+      "EUen": "long denim skirt",
+      "EUes": "falda vaquera con cinturón",
+      "EUfr": "jupe longue en jean",
+      "EUit": "gonna lunga di jeans",
+      "EUnl": "lange jeansrok",
+      "EUru": "длинная джинсовая юбка",
+      "JPja": "ロングデニムスカート",
+      "KRko": "롱 데님 스커트",
+      "TWzh": "牛仔長裙",
+      "USen": "long denim skirt",
+      "USes": "falda de jean con cinturón",
+      "USfr": "jupe longue en jean"
+    }
+  },
+  {
+    "label": "847",
+    "locale": {
+      "CNzh": "围裙连短裙",
+      "EUde": "Schürzenrock",
+      "EUen": "apron skirt",
+      "EUes": "falda corta con delantal",
+      "EUfr": "jupe tablier",
+      "EUit": "gonna a grembiule",
+      "EUnl": "rok met schort",
+      "EUru": "юбка с фартуком",
+      "JPja": "エプロンつきスカート",
+      "KRko": "에이프런 스커트",
+      "TWzh": "圍裙連裙子",
+      "USen": "apron skirt",
+      "USes": "falda corta con delantal",
+      "USfr": "jupe tablier"
+    }
+  },
+  {
+    "label": "848",
+    "locale": {
+      "CNzh": "毛毛睡裤",
+      "EUde": "Frottee-Shorts",
+      "EUen": "terry-cloth shorts",
+      "EUes": "minipantalón de felpa",
+      "EUfr": "short en tissu éponge",
+      "EUit": "pantaloncino di tela",
+      "EUnl": "badstoffen korte broek",
+      "EUru": "махровые шорты",
+      "JPja": "もこもこホットパンツ",
+      "KRko": "수면 잠옷 핫팬츠",
+      "TWzh": "毛絨熱褲",
+      "USen": "terry-cloth shorts",
+      "USes": "minipantalón de felpa",
+      "USfr": "short en tissu éponge"
+    }
+  },
+  {
+    "label": "849",
+    "locale": {
+      "CNzh": "篮球裤",
+      "EUde": "Basketball-Shorts",
+      "EUen": "basketball shorts",
+      "EUes": "bermuda básquet",
+      "EUfr": "short de basketball",
+      "EUit": "pantaloncino da basket",
+      "EUnl": "basketbalshort",
+      "EUru": "баскетбольные шорты",
+      "JPja": "バスケットパンツ",
+      "KRko": "농구복 하의",
+      "TWzh": "籃球褲",
+      "USen": "basketball shorts",
+      "USes": "bermuda de básquet",
+      "USfr": "short de basketball"
+    }
+  },
+  {
+    "label": "850",
+    "locale": {
+      "CNzh": "运动裤",
+      "EUde": "Workout-Hose",
+      "EUen": "workout pants",
+      "EUes": "pantalón maratón",
+      "EUfr": "pantalon de fitness",
+      "EUit": "pantalone da allenamento",
+      "EUnl": "work-outlegging",
+      "EUru": "штаны для аэробики",
+      "JPja": "ワークアウトパンツ",
+      "KRko": "경기복 바지",
+      "TWzh": "健身褲",
+      "USen": "workout pants",
+      "USes": "pantalón maratón",
+      "USfr": "pantalon de fitness"
+    }
+  },
+  {
+    "label": "851",
+    "locale": {
+      "CNzh": "MA-1防风裙",
+      "EUde": "Uniformrock",
+      "EUen": "bomber-style skirt",
+      "EUes": "falda militar",
+      "EUfr": "jupe aviateur",
+      "EUit": "gonna bomber",
+      "EUnl": "uniformrok",
+      "EUru": "юбка а-ля бомбер",
+      "JPja": "ＭＡ‐１スカート",
+      "KRko": "MA-1 스커트",
+      "TWzh": "MA-1防風裙",
+      "USen": "bomber-style skirt",
+      "USes": "falda militar",
+      "USfr": "jupe aviateur"
+    }
+  },
+  {
+    "label": "852",
+    "locale": {
+      "CNzh": "亮片热裤",
+      "EUde": "Pailletten-Shorts",
+      "EUen": "spangle shorts",
+      "EUes": "minipantalón de lentejuelas",
+      "EUfr": "short à sequins",
+      "EUit": "pantaloncino con lustrini",
+      "EUnl": "lovertjesshort",
+      "EUru": "шорты с блестками",
+      "JPja": "スパンコールのホットパンツ",
+      "KRko": "스팽글 핫팬츠",
+      "TWzh": "亮片熱褲",
+      "USen": "spangle shorts",
+      "USes": "minipantalón de lentejuelas",
+      "USfr": "short à sequins"
+    }
+  },
+  {
+    "label": "853",
+    "locale": {
+      "CNzh": "混色条纹阔腿裤",
+      "EUde": "Streifen-Glockenhose",
+      "EUen": "striped bell-bottoms",
+      "EUes": "pantalón acampanado rayas",
+      "EUfr": "pattes d'eph à rayures",
+      "EUit": "pantalone a zampa a righe",
+      "EUnl": "gestreepte bellbottom",
+      "EUru": "брюки-клеш в полоску",
+      "JPja": "マルチストライプワイドパンツ",
+      "KRko": "스트라이프 와이드 팬츠",
+      "TWzh": "混色條紋寬褲",
+      "USen": "striped bell-bottoms",
+      "USes": "pantalón acampanado rayas",
+      "USfr": "pattes d'éléphant à rayures"
+    }
+  },
+  {
+    "label": "854",
+    "locale": {
+      "CNzh": "搞笑表演亮片裤",
+      "EUde": "Komikerhose",
+      "EUen": "comedian's pants",
+      "EUes": "pantalón de humorista",
+      "EUfr": "pantalon de comique",
+      "EUit": "pantalone di scena",
+      "EUnl": "komiekenbroek",
+      "EUru": "брюки юмориста",
+      "JPja": "コメディアンのパンツ",
+      "KRko": "코미디언 바지",
+      "TWzh": "搞笑藝人亮片褲",
+      "USen": "comedian's pants",
+      "USes": "pantalón de humorista",
+      "USfr": "pantalon d'humoriste"
+    }
+  },
+  {
+    "label": "855",
+    "locale": {
+      "CNzh": "珍珠短裙",
+      "EUde": "Perlen-Rock",
+      "EUen": "pearl skirt",
+      "EUes": "falda con perlas",
+      "EUfr": "jupe perlée",
+      "EUit": "gonna con perle",
+      "EUnl": "parelrokje",
+      "EUru": "юбка с жемчугом",
+      "JPja": "パールつきスカート",
+      "KRko": "펄 스커트",
+      "TWzh": "珍珠裙子",
+      "USen": "pearl skirt",
+      "USes": "falda con perlas",
+      "USfr": "jupe perlée"
+    }
+  },
+  {
+    "label": "860",
+    "locale": {
+      "CNzh": "皮短裤",
+      "EUde": "Kunstleder-Shorts",
+      "EUen": "pleather shorts",
+      "EUes": "minipantalón de polipiel",
+      "EUfr": "short clouté en similicuir",
+      "EUit": "pantaloncino in ecopelle",
+      "EUnl": "kunstleren short",
+      "EUru": "шорты из кожзама",
+      "JPja": "レザーのショートパンツ",
+      "KRko": "가죽 숏팬츠",
+      "TWzh": "皮短褲",
+      "USen": "pleather shorts",
+      "USes": "minipantalón sintético",
+      "USfr": "short clouté en similicuir"
+    }
+  },
+  {
+    "label": "861",
+    "locale": {
+      "CNzh": "葛布兰刺绣短裤",
+      "EUde": "Gobelin-Shorts",
+      "EUen": "gobelin shorts",
+      "EUes": "bermuda gobelino",
+      "EUfr": "short tapisserie",
+      "EUit": "pantaloncino gobelin",
+      "EUnl": "wandtapijtshort",
+      "EUru": "шорты «под гобелен»",
+      "JPja": "ゴブランハーフパンツ",
+      "KRko": "고블랭 반바지",
+      "TWzh": "戈布蘭刺繡短褲",
+      "USen": "gobelin shorts",
+      "USes": "bermuda gobelino",
+      "USfr": "short tapisserie"
+    }
+  },
+  {
+    "label": "862",
+    "locale": {
+      "CNzh": "泰国大象裤",
+      "EUde": "Elefantenmuster-Hose",
+      "EUen": "elephant-print pants",
+      "EUes": "pantalón paquidermo",
+      "EUfr": "pantalon motif éléphants",
+      "EUit": "pantalone pachiderma",
+      "EUnl": "olifantenbroek",
+      "EUru": "штаны со слонами",
+      "JPja": "タイパンツ",
+      "KRko": "타이 어부 바지",
+      "TWzh": "泰國大象褲",
+      "USen": "elephant-print pants",
+      "USes": "pantalón paquidermo",
+      "USfr": "pantalon motif éléphants"
+    }
+  },
+  {
+    "label": "870",
+    "locale": {
+      "CNzh": "危地马拉传统裙子",
+      "EUde": "Corte-Rock",
+      "EUen": "corte skirt",
+      "EUes": "falda étnica",
+      "EUfr": "jupe maya",
+      "EUit": "gonna etnica",
+      "EUnl": "Maya-rok",
+      "EUru": "этническая юбка с узором",
+      "JPja": "コルテ",
+      "KRko": "코르테 스커트",
+      "TWzh": "瓜地馬拉傳統裙子",
+      "USen": "corte skirt",
+      "USes": "falda étnica",
+      "USfr": "jupe maya"
+    }
+  },
+  {
+    "label": "871",
+    "locale": {
+      "CNzh": "奇马约图腾绒毛裤",
+      "EUde": "Chimayo-Hose",
+      "EUen": "geometric-print pants",
+      "EUes": "pantalón étnico",
+      "EUfr": "pantalon Chimayo",
+      "EUit": "pantalone stile geometrico",
+      "EUnl": "Chimayo-broek",
+      "EUru": "штаны с геомет. рисунком",
+      "JPja": "チマヨがらフリースパンツ",
+      "KRko": "치마요무늬 플리스 팬츠",
+      "TWzh": "奇馬約圖騰刷毛褲",
+      "USen": "geometric-print pants",
+      "USes": "pantalón étnico",
+      "USfr": "pantalon Chimayo"
+    }
+  },
+  {
+    "label": "884",
+    "locale": {
+      "CNzh": "麂皮镂空长裙",
+      "EUde": "Kunstleder-Bordürenrock",
+      "EUen": "cut-pleather skirt",
+      "EUes": "falda polipiel punta redonda",
+      "EUfr": "jupe en similicuir ouvragée",
+      "EUit": "gonna in ecopelle orlata",
+      "EUnl": "kunstleren motiefrok",
+      "EUru": "юбка из кожзама с каймой",
+      "JPja": "カットレザースカート",
+      "KRko": "펀칭 가죽 치마",
+      "TWzh": "鏤空皮裙",
+      "USen": "cut-pleather skirt",
+      "USes": "falda sintética recortada",
+      "USfr": "jupe en similicuir ouvragée"
+    }
+  },
+  {
+    "label": "885",
+    "locale": {
+      "CNzh": "拼布皮裙",
+      "EUde": "Kunstleder-Flickenrock",
+      "EUen": "pleather patch skirt",
+      "EUes": "falda corta recortes polipiel",
+      "EUfr": "jupe en similicuir patchwork",
+      "EUit": "gonna mosaico in ecopelle",
+      "EUnl": "kunstleren patchworkrok",
+      "EUru": "юбка из кусков кожзама",
+      "JPja": "レザーパッチスカート",
+      "KRko": "가죽 패치 스커트",
+      "TWzh": "拼布皮裙",
+      "USen": "pleather patch skirt",
+      "USes": "falda corta sintética retazos",
+      "USfr": "jupe en similicuir patchwork"
+    }
+  },
+  {
+    "label": "890",
+    "locale": {
+      "CNzh": "纽扣裹裙",
+      "EUde": "Knöpfe-Wickelrock",
+      "EUen": "buttoned wraparound skirt",
+      "EUes": "falda envolvente bicolor",
+      "EUfr": "jupe portefeuille boutonnée",
+      "EUit": "gonna portafoglio a bottoni",
+      "EUnl": "wikkelrok met knoopjes",
+      "EUru": "юбка с запахом на кнопках",
+      "JPja": "ボタンのまきスカート",
+      "KRko": "단추 랩 스커트",
+      "TWzh": "鈕扣一片裙",
+      "USen": "buttoned wraparound skirt",
+      "USes": "falda envolvente bicolor",
+      "USfr": "jupe portefeuille boutonnée"
+    }
+  },
+  {
+    "label": "896",
+    "locale": {
+      "CNzh": "扎染长裙",
+      "EUde": "Batikrock",
+      "EUen": "tie-dye skirt",
+      "EUes": "falda hippy",
+      "EUfr": "jupe tie and dye",
+      "EUit": "gonna batik",
+      "EUnl": "tie-⁠dye-rok",
+      "EUru": "юбка из батика",
+      "JPja": "タイダイスカート",
+      "KRko": "타이다이 스커트",
+      "TWzh": "紮染裙子",
+      "USen": "tie-dye skirt",
+      "USes": "falda teñida",
+      "USfr": "jupe tie and dye"
+    }
+  },
+  {
+    "label": "902",
+    "locale": {
+      "CNzh": "植物图案短裤",
+      "EUde": "Botanik-Shorts",
+      "EUen": "botanical shorts",
+      "EUes": "bermuda jardín botánico",
+      "EUfr": "short botanique",
+      "EUit": "pantaloncino botanico",
+      "EUnl": "tropische short",
+      "EUru": "ботанические шорты",
+      "JPja": "ボタニカルハーフパンツ",
+      "KRko": "보태니컬 반바지",
+      "TWzh": "植物圖案短褲",
+      "USen": "botanical shorts",
+      "USes": "bermuda jardín botánico",
+      "USfr": "short botanique"
+    }
+  },
+  {
+    "label": "905",
+    "locale": {
+      "CNzh": "学生裤",
+      "EUde": "Schulhose",
+      "EUen": "school pants",
+      "EUes": "pantalón escolar",
+      "EUfr": "pantalon d'écolier",
+      "EUit": "pantalone da scolaro",
+      "EUnl": "schooluniformbroek",
+      "EUru": "школьные брюки",
+      "JPja": "がくせいふくのズボン",
+      "KRko": "학생복 바지",
+      "TWzh": "學校制服褲",
+      "USen": "school pants",
+      "USes": "pantalón escolar",
+      "USfr": "pantalon d'écolier"
+    }
+  },
+  {
+    "label": "906",
+    "locale": {
+      "CNzh": "柠檬图案长裙",
+      "EUde": "Zitronenrock",
+      "EUen": "lemon skirt",
+      "EUes": "falda limones",
+      "EUfr": "jupe citrons",
+      "EUit": "gonna con limoni",
+      "EUnl": "citroenenrok",
+      "EUru": "юбка с лимонами",
+      "JPja": "レモンのスカート",
+      "KRko": "레몬 스커트",
+      "TWzh": "檸檬裙子",
+      "USen": "lemon skirt",
+      "USes": "falda limones",
+      "USfr": "jupe citrons"
+    }
+  },
+  {
+    "label": "907",
+    "locale": {
+      "CNzh": "梦幻可爱裤子",
+      "EUde": "Fantasiehose",
+      "EUen": "dreamy pants",
+      "EUes": "pantalón ensueño",
+      "EUfr": "pantalon joli rêve",
+      "EUit": "pantalone da sogno",
+      "EUnl": "dromerige broek",
+      "EUru": "штаны из грез",
+      "JPja": "ゆめかわなズボン",
+      "KRko": "아기자기한 바지",
+      "TWzh": "夢幻可愛褲子",
+      "USen": "dreamy pants",
+      "USes": "pantalón ensueño",
+      "USfr": "pantalon joli rêve"
+    }
+  },
+  {
+    "label": "908",
+    "locale": {
+      "CNzh": "花朵图案长裙",
+      "EUde": "Blumenwiesenrock",
+      "EUen": "floral skirt",
+      "EUes": "falda floral",
+      "EUfr": "jupe florale",
+      "EUit": "gonna floreale",
+      "EUnl": "bloemenrok",
+      "EUru": "юбка с цветочным узором",
+      "JPja": "はながらスカート",
+      "KRko": "꽃무늬 치마",
+      "TWzh": "花紋裙子",
+      "USen": "floral skirt",
+      "USes": "falda floral",
+      "USfr": "jupe florale"
+    }
+  },
+  {
+    "label": "912",
+    "locale": {
+      "CNzh": "水手服长裙",
+      "EUde": "Maxi-Segelrock",
+      "EUen": "long sailor skirt",
+      "EUes": "falda marinera larga",
+      "EUfr": "jupe longue marine",
+      "EUit": "gonna lunga marinara",
+      "EUnl": "lange matrozenrok",
+      "EUru": "длинная юбка-плиссе",
+      "JPja": "ロングセーラースカート",
+      "KRko": "롱 세일러 스커트",
+      "TWzh": "水手服長裙",
+      "USen": "long sailor skirt",
+      "USes": "falda marinera larga",
+      "USfr": "jupe matelot longue"
+    }
+  }
+]

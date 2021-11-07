@@ -1,0 +1,1332 @@
+﻿[
+  {
+    "label": "PictureFake_00005",
+    "locale": {
+      "CNzh": "端庄的名画",
+      "EUde": "Anmutsgemälde",
+      "EUen": "graceful painting",
+      "EUes": "retrato oriental",
+      "EUfr": "toile gracieuse",
+      "EUit": "quadro armonioso",
+      "EUnl": "sierlijk schilderij",
+      "EUru": "изящная картина",
+      "JPja": "しなやかなめいが",
+      "KRko": "절제된 명화",
+      "TWzh": "端莊的名畫",
+      "USen": "graceful painting",
+      "USes": "retrato oriental",
+      "USfr": "toile gracieuse"
+    }
+  },
+  {
+    "label": "PictureFake_00009",
+    "locale": {
+      "CNzh": "平静的名画",
+      "EUde": "Altertumsgemälde",
+      "EUen": "quaint painting",
+      "EUes": "retrato holandés",
+      "EUfr": "toile charmante",
+      "EUit": "quadro buffo",
+      "EUnl": "traditioneel schilderij",
+      "EUru": "старинная картина",
+      "JPja": "おちついためいが",
+      "KRko": "침착한 명화",
+      "TWzh": "平靜的名畫",
+      "USen": "quaint painting",
+      "USes": "retrato holandés",
+      "USfr": "toile charmante"
+    }
+  },
+  {
+    "label": "PictureFake_00013",
+    "locale": {
+      "CNzh": "勇敢的名画",
+      "EUde": "Einfachgemälde",
+      "EUen": "basic painting",
+      "EUes": "retrato heroico",
+      "EUfr": "toile classique",
+      "EUit": "quadro semplice",
+      "EUnl": "klassiek schilderij",
+      "EUru": "обычная картина",
+      "JPja": "いさましいめいが",
+      "KRko": "용감한 명화",
+      "TWzh": "勇敢的名畫",
+      "USen": "basic painting",
+      "USes": "retrato heroico",
+      "USfr": "toile classique"
+    }
+  },
+  {
+    "label": "PictureFake_00017",
+    "locale": {
+      "CNzh": "有名的名画",
+      "EUde": "Berühmtgemälde",
+      "EUen": "famous painting",
+      "EUes": "retrato italiano",
+      "EUfr": "toile célèbre",
+      "EUit": "quadro famoso",
+      "EUnl": "beroemd schilderij",
+      "EUru": "знаменитая картина",
+      "JPja": "ゆうめいなめいが",
+      "KRko": "유명한 명화",
+      "TWzh": "有名的名畫",
+      "USen": "famous painting",
+      "USes": "retrato italiano",
+      "USfr": "toile célèbre"
+    }
+  },
+  {
+    "label": "PictureFake_00023",
+    "locale": {
+      "CNzh": "婀娜的名画",
+      "EUde": "Edelgemälde",
+      "EUen": "serene painting",
+      "EUes": "retrato regio",
+      "EUfr": "toile royale",
+      "EUit": "quadro simbolico",
+      "EUnl": "sereen schilderij",
+      "EUru": "безмятежная картина",
+      "JPja": "たおやかなめいが",
+      "KRko": "아늑한 명화",
+      "TWzh": "婀娜的名畫",
+      "USen": "serene painting",
+      "USes": "retrato regio",
+      "USfr": "toile royale"
+    }
+  },
+  {
+    "label": "PictureFake_00027",
+    "locale": {
+      "CNzh": "漂亮的名画",
+      "EUde": "Perlengemälde",
+      "EUen": "wistful painting",
+      "EUes": "retrato perla",
+      "EUfr": "toile nacrée",
+      "EUit": "quadro realista",
+      "EUnl": "melancholisch schilderij",
+      "EUru": "мечтательная картина",
+      "JPja": "すてきなめいが",
+      "KRko": "근사한 명화",
+      "TWzh": "漂亮的名畫",
+      "USen": "wistful painting",
+      "USes": "retrato perla",
+      "USfr": "toile nacrée"
+    }
+  },
+  {
+    "label": "PictureFake_00031",
+    "locale": {
+      "CNzh": "动人的名画",
+      "EUde": "Schöngemälde",
+      "EUen": "moving painting",
+      "EUes": "cuadro alegórico",
+      "EUfr": "toile émouvante",
+      "EUit": "quadro colorato",
+      "EUnl": "symbolisch schilderij",
+      "EUru": "трогательная картина",
+      "JPja": "きれいなめいが",
+      "KRko": "예쁜 명화",
+      "TWzh": "動人的名畫",
+      "USen": "moving painting",
+      "USes": "cuadro alegórico",
+      "USfr": "toile émouvante"
+    }
+  },
+  {
+    "label": "PictureFake_00041",
+    "locale": {
+      "CNzh": "有趣的名画",
+      "EUde": "Gemüsegemälde",
+      "EUen": "jolly painting",
+      "EUes": "cuadro orgánico",
+      "EUfr": "toile potagère",
+      "EUit": "quadro organico",
+      "EUnl": "fleurig schilderij",
+      "EUru": "веселая картина",
+      "JPja": "おもしろいめいが",
+      "KRko": "재미있는 명화",
+      "TWzh": "有趣的名畫",
+      "USen": "jolly painting",
+      "USes": "cuadro orgánico",
+      "USfr": "toile potagère"
+    }
+  },
+  {
+    "label": "PictureFake_00055",
+    "locale": {
+      "CNzh": "惊人的名画",
+      "EUde": "Enormgemälde",
+      "EUen": "amazing painting",
+      "EUes": "cuadro holandés",
+      "EUfr": "toile incroyable",
+      "EUit": "quadro stupendo",
+      "EUnl": "subliem schilderij",
+      "EUru": "потрясающая картина",
+      "JPja": "すごいめいが",
+      "KRko": "대단한 명화",
+      "TWzh": "驚人的名畫",
+      "USen": "amazing painting",
+      "USes": "cuadro holandés",
+      "USfr": "toile incroyable"
+    }
+  },
+  {
+    "label": "PictureFake_00065",
+    "locale": {
+      "CNzh": "俊俏的名画",
+      "EUde": "Furchtgemälde",
+      "EUen": "scary painting",
+      "EUes": "cuadro japonés",
+      "EUfr": "toile effrayante",
+      "EUit": "quadro spaventoso",
+      "EUnl": "griezelig schilderij",
+      "EUru": "страшная картина",
+      "JPja": "いなせなめいが",
+      "KRko": "씩씩한 명화",
+      "TWzh": "俊俏的名畫",
+      "USen": "scary painting",
+      "USes": "cuadro japonés",
+      "USfr": "toile effrayante"
+    }
+  },
+  {
+    "label": "PictureFake_00071",
+    "locale": {
+      "CNzh": "肃穆的名画",
+      "EUde": "Feierlichgemälde",
+      "EUen": "solemn painting",
+      "EUes": "cuadro español",
+      "EUfr": "toile solennelle",
+      "EUit": "quadro solenne",
+      "EUnl": "plechtig schilderij",
+      "EUru": "торжественная картина",
+      "JPja": "おごそかなめいが",
+      "KRko": "엄숙한 명화",
+      "TWzh": "肅穆的名畫",
+      "USen": "solemn painting",
+      "USes": "cuadro español",
+      "USfr": "toile solennelle"
+    }
+  },
+  {
+    "label": "PictureFake_12620",
+    "locale": {
+      "CNzh": "学术性的名画",
+      "EUde": "Wissenschaftsgemälde",
+      "EUen": "academic painting",
+      "EUes": "cuadro anatómico",
+      "EUfr": "toile académique",
+      "EUit": "quadro accademico",
+      "EUnl": "academisch schilderij",
+      "EUru": "академическая картина",
+      "JPja": "アカデミックなめいが",
+      "KRko": "아카데믹한 명화",
+      "TWzh": "學術性的名畫",
+      "USen": "academic painting",
+      "USes": "cuadro anatómico",
+      "USfr": "toile académique"
+    }
+  },
+  {
+    "label": "PictureFake_12623",
+    "locale": {
+      "CNzh": "细致的名画",
+      "EUde": "Detailgemälde",
+      "EUen": "detailed painting",
+      "EUes": "cuadro detallado",
+      "EUfr": "toile détaillée",
+      "EUit": "quadro dettagliato",
+      "EUnl": "gedetailleerd schilderij",
+      "EUru": "детальная картина",
+      "JPja": "ちみつなめいが",
+      "KRko": "섬세한 명화",
+      "TWzh": "細緻的名畫",
+      "USen": "detailed painting",
+      "USes": "cuadro detallado",
+      "USfr": "toile détaillée"
+    }
+  },
+  {
+    "label": "PictureFake_12629",
+    "locale": {
+      "CNzh": "优美的名画",
+      "EUde": "Wintergemälde",
+      "EUen": "scenic painting",
+      "EUes": "cuadro invernal",
+      "EUfr": "toile hivernale",
+      "EUit": "quadro invernale",
+      "EUnl": "winters schilderij",
+      "EUru": "живописная картина",
+      "JPja": "みごとなめいが",
+      "KRko": "뛰어난 명화",
+      "TWzh": "優美的名畫",
+      "USen": "scenic painting",
+      "USes": "cuadro invernal",
+      "USfr": "toile hivernale"
+    }
+  },
+  {
+    "label": "Picture_00002",
+    "locale": {
+      "CNzh": "优美的名画",
+      "EUde": "Wintergemälde",
+      "EUen": "scenic painting",
+      "EUes": "cuadro invernal",
+      "EUfr": "toile hivernale",
+      "EUit": "quadro invernale",
+      "EUnl": "winters schilderij",
+      "EUru": "живописная картина",
+      "JPja": "みごとなめいが",
+      "KRko": "뛰어난 명화",
+      "TWzh": "優美的名畫",
+      "USen": "scenic painting",
+      "USes": "cuadro invernal",
+      "USfr": "toile hivernale"
+    }
+  },
+  {
+    "label": "Picture_00006",
+    "locale": {
+      "CNzh": "端庄的名画",
+      "EUde": "Anmutsgemälde",
+      "EUen": "graceful painting",
+      "EUes": "retrato oriental",
+      "EUfr": "toile gracieuse",
+      "EUit": "quadro armonioso",
+      "EUnl": "sierlijk schilderij",
+      "EUru": "изящная картина",
+      "JPja": "しなやかなめいが",
+      "KRko": "절제된 명화",
+      "TWzh": "端莊的名畫",
+      "USen": "graceful painting",
+      "USes": "retrato oriental",
+      "USfr": "toile gracieuse"
+    }
+  },
+  {
+    "label": "Picture_00010",
+    "locale": {
+      "CNzh": "平静的名画",
+      "EUde": "Altertumsgemälde",
+      "EUen": "quaint painting",
+      "EUes": "retrato holandés",
+      "EUfr": "toile charmante",
+      "EUit": "quadro buffo",
+      "EUnl": "traditioneel schilderij",
+      "EUru": "старинная картина",
+      "JPja": "おちついためいが",
+      "KRko": "침착한 명화",
+      "TWzh": "平靜的名畫",
+      "USen": "quaint painting",
+      "USes": "retrato holandés",
+      "USfr": "toile charmante"
+    }
+  },
+  {
+    "label": "Picture_00014",
+    "locale": {
+      "CNzh": "勇敢的名画",
+      "EUde": "Einfachgemälde",
+      "EUen": "basic painting",
+      "EUes": "retrato heroico",
+      "EUfr": "toile classique",
+      "EUit": "quadro semplice",
+      "EUnl": "klassiek schilderij",
+      "EUru": "обычная картина",
+      "JPja": "いさましいめいが",
+      "KRko": "용감한 명화",
+      "TWzh": "勇敢的名畫",
+      "USen": "basic painting",
+      "USes": "retrato heroico",
+      "USfr": "toile classique"
+    }
+  },
+  {
+    "label": "Picture_00018",
+    "locale": {
+      "CNzh": "有名的名画",
+      "EUde": "Berühmtgemälde",
+      "EUen": "famous painting",
+      "EUes": "retrato italiano",
+      "EUfr": "toile célèbre",
+      "EUit": "quadro famoso",
+      "EUnl": "beroemd schilderij",
+      "EUru": "знаменитая картина",
+      "JPja": "ゆうめいなめいが",
+      "KRko": "유명한 명화",
+      "TWzh": "有名的名畫",
+      "USen": "famous painting",
+      "USes": "retrato italiano",
+      "USfr": "toile célèbre"
+    }
+  },
+  {
+    "label": "Picture_00020",
+    "locale": {
+      "CNzh": "厉害的名画",
+      "EUde": "Perfektgemälde",
+      "EUen": "perfect painting",
+      "EUes": "bodegón",
+      "EUfr": "toile parfaite",
+      "EUit": "quadro perfetto",
+      "EUnl": "kleurrijk schilderij",
+      "EUru": "совершенная картина",
+      "JPja": "すばらしいめいが",
+      "KRko": "훌륭한 명화",
+      "TWzh": "厲害的名畫",
+      "USen": "perfect painting",
+      "USes": "cuadro perfecto",
+      "USfr": "toile parfaite"
+    }
+  },
+  {
+    "label": "Picture_00024",
+    "locale": {
+      "CNzh": "婀娜的名画",
+      "EUde": "Edelgemälde",
+      "EUen": "serene painting",
+      "EUes": "retrato regio",
+      "EUfr": "toile royale",
+      "EUit": "quadro simbolico",
+      "EUnl": "sereen schilderij",
+      "EUru": "безмятежная картина",
+      "JPja": "たおやかなめいが",
+      "KRko": "아늑한 명화",
+      "TWzh": "婀娜的名畫",
+      "USen": "serene painting",
+      "USes": "retrato regio",
+      "USfr": "toile royale"
+    }
+  },
+  {
+    "label": "Picture_00028",
+    "locale": {
+      "CNzh": "漂亮的名画",
+      "EUde": "Perlengemälde",
+      "EUen": "wistful painting",
+      "EUes": "retrato perla",
+      "EUfr": "toile nacrée",
+      "EUit": "quadro realista",
+      "EUnl": "melancholisch schilderij",
+      "EUru": "мечтательная картина",
+      "JPja": "すてきなめいが",
+      "KRko": "근사한 명화",
+      "TWzh": "漂亮的名畫",
+      "USen": "wistful painting",
+      "USes": "retrato perla",
+      "USfr": "toile nacrée"
+    }
+  },
+  {
+    "label": "Picture_00032",
+    "locale": {
+      "CNzh": "动人的名画",
+      "EUde": "Schöngemälde",
+      "EUen": "moving painting",
+      "EUes": "cuadro alegórico",
+      "EUfr": "toile émouvante",
+      "EUit": "quadro colorato",
+      "EUnl": "symbolisch schilderij",
+      "EUru": "трогательная картина",
+      "JPja": "きれいなめいが",
+      "KRko": "예쁜 명화",
+      "TWzh": "動人的名畫",
+      "USen": "moving painting",
+      "USes": "cuadro alegórico",
+      "USfr": "toile émouvante"
+    }
+  },
+  {
+    "label": "Picture_00034",
+    "locale": {
+      "CNzh": "舒适的名画",
+      "EUde": "Warmgemälde",
+      "EUen": "warm painting",
+      "EUes": "cuadro clásico",
+      "EUfr": "toile radieuse",
+      "EUit": "quadro classico",
+      "EUnl": "verleidelijk schilderij",
+      "EUru": "романтичная картина",
+      "JPja": "いいかんじのめいが",
+      "KRko": "느낌이 좋은 명화",
+      "TWzh": "舒適的名畫",
+      "USen": "warm painting",
+      "USes": "cuadro clásico",
+      "USfr": "toile radieuse"
+    }
+  },
+  {
+    "label": "Picture_00038",
+    "locale": {
+      "CNzh": "磅礴的名画",
+      "EUde": "Wellengemälde",
+      "EUen": "dynamic painting",
+      "EUes": "cuadro ola",
+      "EUfr": "toile déferlante",
+      "EUit": "quadro marino",
+      "EUnl": "woelig schilderij",
+      "EUru": "волнительная картина",
+      "JPja": "いきなめいが",
+      "KRko": "멋들어진 명화",
+      "TWzh": "磅礡的名畫",
+      "USen": "dynamic painting",
+      "USes": "cuadro ola",
+      "USfr": "toile déferlante"
+    }
+  },
+  {
+    "label": "Picture_00042",
+    "locale": {
+      "CNzh": "有趣的名画",
+      "EUde": "Gemüsegemälde",
+      "EUen": "jolly painting",
+      "EUes": "cuadro orgánico",
+      "EUfr": "toile potagère",
+      "EUit": "quadro organico",
+      "EUnl": "fleurig schilderij",
+      "EUru": "веселая картина",
+      "JPja": "おもしろいめいが",
+      "KRko": "재미있는 명화",
+      "TWzh": "有趣的名畫",
+      "USen": "jolly painting",
+      "USes": "cuadro orgánico",
+      "USfr": "toile potagère"
+    }
+  },
+  {
+    "label": "Picture_00044",
+    "locale": {
+      "CNzh": "常见的名画",
+      "EUde": "Bekanntgemälde",
+      "EUen": "common painting",
+      "EUes": "cuadro segadoras",
+      "EUfr": "toile commune",
+      "EUit": "quadro povero",
+      "EUnl": "landelijk schilderij",
+      "EUru": "сельская картина",
+      "JPja": "よくみるめいが",
+      "KRko": "평범한 명화",
+      "TWzh": "常見的名畫",
+      "USen": "common painting",
+      "USes": "cuadro segadoras",
+      "USfr": "toile commune"
+    }
+  },
+  {
+    "label": "Picture_00046",
+    "locale": {
+      "CNzh": "热闹的名画",
+      "EUde": "Strenggemälde",
+      "EUen": "proper painting",
+      "EUes": "cuadro dama",
+      "EUfr": "toile austère",
+      "EUit": "quadro austero",
+      "EUnl": "formeel schilderij",
+      "EUru": "строгая картина",
+      "JPja": "にぎやかなめいが",
+      "KRko": "활기 넘치는 명화",
+      "TWzh": "熱鬧的名畫",
+      "USen": "proper painting",
+      "USes": "cuadro dama",
+      "USfr": "toile austère"
+    }
+  },
+  {
+    "label": "Picture_00048",
+    "locale": {
+      "CNzh": "很好的名画",
+      "EUde": "Hübschgemälde",
+      "EUen": "nice painting",
+      "EUes": "retrato músico",
+      "EUfr": "toile magnifique",
+      "EUit": "quadro antico",
+      "EUnl": "muzikaal schilderij",
+      "EUru": "приятная картина",
+      "JPja": "いいめいが",
+      "KRko": "좋은 명화",
+      "TWzh": "很好的名畫",
+      "USen": "nice painting",
+      "USes": "retrato músico",
+      "USfr": "toile magnifique"
+    }
+  },
+  {
+    "label": "Picture_00050",
+    "locale": {
+      "CNzh": "珍贵的名画",
+      "EUde": "Blumengemälde",
+      "EUen": "flowery painting",
+      "EUes": "cuadro flores",
+      "EUfr": "toile florale",
+      "EUit": "quadro fiorito",
+      "EUnl": "zonnig schilderij",
+      "EUru": "цветочная картина",
+      "JPja": "たぐいまれなるめいが",
+      "KRko": "진귀한 명화",
+      "TWzh": "珍貴的名畫",
+      "USen": "flowery painting",
+      "USes": "cuadro flores",
+      "USfr": "toile florale"
+    }
+  },
+  {
+    "label": "Picture_00052",
+    "locale": {
+      "CNzh": "强健的名画",
+      "EUde": "Kraftgemälde",
+      "EUen": "moody painting",
+      "EUes": "retrato joven",
+      "EUfr": "toile puissante",
+      "EUit": "quadro possente",
+      "EUnl": "noest schilderij",
+      "EUru": "энергичная картина",
+      "JPja": "ちからづよいめいが",
+      "KRko": "힘찬 명화",
+      "TWzh": "強健的名畫",
+      "USen": "moody painting",
+      "USes": "retrato joven",
+      "USfr": "toile puissante"
+    }
+  },
+  {
+    "label": "Picture_00056",
+    "locale": {
+      "CNzh": "惊人的名画",
+      "EUde": "Enormgemälde",
+      "EUen": "amazing painting",
+      "EUes": "cuadro holandés",
+      "EUfr": "toile incroyable",
+      "EUit": "quadro stupendo",
+      "EUnl": "subliem schilderij",
+      "EUru": "потрясающая картина",
+      "JPja": "すごいめいが",
+      "KRko": "대단한 명화",
+      "TWzh": "驚人的名畫",
+      "USen": "amazing painting",
+      "USes": "cuadro holandés",
+      "USfr": "toile incroyable"
+    }
+  },
+  {
+    "label": "Picture_00066",
+    "locale": {
+      "CNzh": "俊俏的名画",
+      "EUde": "Furchtgemälde",
+      "EUen": "scary painting",
+      "EUes": "cuadro japonés",
+      "EUfr": "toile effrayante",
+      "EUit": "quadro spaventoso",
+      "EUnl": "griezelig schilderij",
+      "EUru": "страшная картина",
+      "JPja": "いなせなめいが",
+      "KRko": "씩씩한 명화",
+      "TWzh": "俊俏的名畫",
+      "USen": "scary painting",
+      "USes": "cuadro japonés",
+      "USfr": "toile effrayante"
+    }
+  },
+  {
+    "label": "Picture_00068",
+    "locale": {
+      "CNzh": "名贵的名画",
+      "EUde": "Wahrgemälde",
+      "EUen": "worthy painting",
+      "EUes": "cuadro romántico",
+      "EUfr": "toile précieuse",
+      "EUit": "quadro prezioso",
+      "EUnl": "zegevierend schilderij",
+      "EUru": "достойная картина",
+      "JPja": "かちのあるめいが",
+      "KRko": "가치 있는 명화",
+      "TWzh": "名貴的名畫",
+      "USen": "worthy painting",
+      "USes": "cuadro romántico",
+      "USfr": "toile précieuse"
+    }
+  },
+  {
+    "label": "Picture_00072",
+    "locale": {
+      "CNzh": "肃穆的名画",
+      "EUde": "Feierlichgemälde",
+      "EUen": "solemn painting",
+      "EUes": "cuadro español",
+      "EUfr": "toile solennelle",
+      "EUit": "quadro solenne",
+      "EUnl": "plechtig schilderij",
+      "EUru": "торжественная картина",
+      "JPja": "おごそかなめいが",
+      "KRko": "엄숙한 명화",
+      "TWzh": "肅穆的名畫",
+      "USen": "solemn painting",
+      "USes": "cuadro español",
+      "USfr": "toile solennelle"
+    }
+  },
+  {
+    "label": "Picture_00078",
+    "locale": {
+      "CNzh": "和煦的名画",
+      "EUde": "Ruhegemälde",
+      "EUen": "calm painting",
+      "EUes": "paisaje francés",
+      "EUfr": "toile apaisante",
+      "EUit": "quadro riposante",
+      "EUnl": "vredig schilderij",
+      "EUru": "спокойная картина",
+      "JPja": "おだやかなめいが",
+      "KRko": "평온한 명화",
+      "TWzh": "和煦的名畫",
+      "USen": "calm painting",
+      "USes": "paisaje francés",
+      "USfr": "toile apaisante"
+    }
+  },
+  {
+    "label": "Picture_12618",
+    "locale": {
+      "CNzh": "闪烁的名画",
+      "EUde": "Funkelgemälde",
+      "EUen": "twinkling painting",
+      "EUes": "paisaje estrellado",
+      "EUfr": "toile scintillante",
+      "EUit": "quadro sfavillante",
+      "EUnl": "nachtelijk schilderij",
+      "EUru": "звездная картина",
+      "JPja": "またたくめいが",
+      "KRko": "반짝이는 명화",
+      "TWzh": "閃爍的名畫",
+      "USen": "twinkling painting",
+      "USes": "paisaje estrellado",
+      "USfr": "toile scintillante"
+    }
+  },
+  {
+    "label": "Picture_12619",
+    "locale": {
+      "CNzh": "学术性的名画",
+      "EUde": "Wissenschaftsgemälde",
+      "EUen": "academic painting",
+      "EUes": "cuadro anatómico",
+      "EUfr": "toile académique",
+      "EUit": "quadro accademico",
+      "EUnl": "academisch schilderij",
+      "EUru": "академическая картина",
+      "JPja": "アカデミックなめいが",
+      "KRko": "아카데믹한 명화",
+      "TWzh": "學術性的名畫",
+      "USen": "academic painting",
+      "USes": "cuadro anatómico",
+      "USfr": "toile académique"
+    }
+  },
+  {
+    "label": "Picture_12621",
+    "locale": {
+      "CNzh": "沉没的名画",
+      "EUde": "Versinkgemälde",
+      "EUen": "sinking painting",
+      "EUes": "cuadro literario",
+      "EUfr": "toile tragique",
+      "EUit": "quadro acquatico",
+      "EUnl": "tragisch schilderij",
+      "EUru": "речная картина",
+      "JPja": "しずみゆくめいが",
+      "KRko": "가라앉는 명화",
+      "TWzh": "沉沒的名畫",
+      "USen": "sinking painting",
+      "USes": "cuadro literario",
+      "USfr": "toile tragique"
+    }
+  },
+  {
+    "label": "Picture_12622",
+    "locale": {
+      "CNzh": "细致的名画",
+      "EUde": "Detailgemälde",
+      "EUen": "detailed painting",
+      "EUes": "cuadro detallado",
+      "EUfr": "toile détaillée",
+      "EUit": "quadro dettagliato",
+      "EUnl": "gedetailleerd schilderij",
+      "EUru": "детальная картина",
+      "JPja": "ちみつなめいが",
+      "KRko": "섬세한 명화",
+      "TWzh": "細緻的名畫",
+      "USen": "detailed painting",
+      "USes": "cuadro detallado",
+      "USfr": "toile détaillée"
+    }
+  },
+  {
+    "label": "Picture_12624",
+    "locale": {
+      "CNzh": "光线的名画",
+      "EUde": "Lichtgemälde",
+      "EUen": "glowing painting",
+      "EUes": "cuadro vespertino",
+      "EUfr": "toile crépusculaire",
+      "EUit": "quadro abbagliante",
+      "EUnl": "weemoedig schilderij",
+      "EUru": "сияющая картина",
+      "JPja": "ひかりのめいが",
+      "KRko": "빛의 명화",
+      "TWzh": "光線的名畫",
+      "USen": "glowing painting",
+      "USes": "cuadro vespertino",
+      "USfr": "toile crépusculaire"
+    }
+  },
+  {
+    "label": "Picture_12625",
+    "locale": {
+      "CNzh": "神秘的名画",
+      "EUde": "Rätselgemälde",
+      "EUen": "mysterious painting",
+      "EUes": "cuadro tenebroso",
+      "EUfr": "toile ténébreuse",
+      "EUit": "quadro misterioso",
+      "EUnl": "mysterieus schilderij",
+      "EUru": "загадочная картина",
+      "JPja": "なぞめいためいが",
+      "KRko": "미스터리한 명화",
+      "TWzh": "神秘的名畫",
+      "USen": "mysterious painting",
+      "USes": "cuadro tenebroso",
+      "USfr": "toile ténébreuse"
+    }
+  },
+  {
+    "label": "SculptureFake_00075",
+    "locale": {
+      "CNzh": "粗野的名画右半边",
+      "EUde": "Ungestümgemälde (rechts)",
+      "EUen": "wild painting right half",
+      "EUes": "cuadro naturaleza (dcha.)",
+      "EUfr": "partie d. de toile sauvage",
+      "EUit": "quadro intenso (metà dx)",
+      "EUnl": "onstuimig schilderij (r)",
+      "EUru": "прав. часть дикой картины",
+      "JPja": "あらぶるめいがのみぎ",
+      "KRko": "혼란스러운 명화의 오른쪽",
+      "TWzh": "粗野的名畫右半邊",
+      "USen": "wild painting right half",
+      "USes": "cuadro naturaleza (dcha.)",
+      "USfr": "partie d. de toile sauvage"
+    }
+  },
+  {
+    "label": "SculptureFake_01332",
+    "locale": {
+      "CNzh": "充满母爱的雕塑",
+      "EUde": "Wölfinnenstatue",
+      "EUen": "motherly statue",
+      "EUes": "figura materna",
+      "EUfr": "statue maternelle",
+      "EUit": "statua leggendaria",
+      "EUnl": "moederlijk beeld",
+      "EUru": "материнская статуя",
+      "JPja": "ぼせいあふれるちょうこく",
+      "KRko": "모성이 느껴지는 조각",
+      "TWzh": "充滿母愛的雕塑",
+      "USen": "motherly statue",
+      "USes": "figura materna",
+      "USfr": "statue maternelle"
+    }
+  },
+  {
+    "label": "SculptureFake_01334",
+    "locale": {
+      "CNzh": "英挺的雕塑",
+      "EUde": "Galantstatue",
+      "EUen": "gallant statue",
+      "EUes": "estatua majestuosa",
+      "EUfr": "statue majestueuse",
+      "EUit": "statua maestosa",
+      "EUnl": "verheven standbeeld",
+      "EUru": "доблестная статуя",
+      "JPja": "りりしいちょうこく",
+      "KRko": "늠름한 조각",
+      "TWzh": "英挺的雕塑",
+      "USen": "gallant statue",
+      "USes": "estatua majestuosa",
+      "USfr": "statue majestueuse"
+    }
+  },
+  {
+    "label": "SculptureFake_01336",
+    "locale": {
+      "CNzh": "强壮的雕塑",
+      "EUde": "Athletenstatue",
+      "EUen": "robust statue",
+      "EUes": "estatua atlética",
+      "EUfr": "statue athlétique",
+      "EUit": "statua atletica",
+      "EUnl": "atletisch standbeeld",
+      "EUru": "атлетическая статуя",
+      "JPja": "たくましいちょうこく",
+      "KRko": "듬직한 조각",
+      "TWzh": "強壯的雕塑",
+      "USen": "robust statue",
+      "USes": "estatua atlética",
+      "USfr": "statue athlétique"
+    }
+  },
+  {
+    "label": "SculptureFake_01338",
+    "locale": {
+      "CNzh": "远古的雕塑",
+      "EUde": "Uraltstatue",
+      "EUen": "ancient statue",
+      "EUes": "estatua primitiva",
+      "EUfr": "statuette antique",
+      "EUit": "statua antica",
+      "EUnl": "prehistorisch beeldje",
+      "EUru": "древняя статуя",
+      "JPja": "いにしえのちょうこく",
+      "KRko": "태고의 조각",
+      "TWzh": "遠古的雕塑",
+      "USen": "ancient statue",
+      "USes": "estatua primitiva",
+      "USfr": "statuette antique"
+    }
+  },
+  {
+    "label": "SculptureFake_01342",
+    "locale": {
+      "CNzh": "美丽的雕塑",
+      "EUde": "Eleganzstatue",
+      "EUen": "beautiful statue",
+      "EUes": "estatua femenina",
+      "EUfr": "statue féminine",
+      "EUit": "statua aggraziata",
+      "EUnl": "gracieus standbeeld",
+      "EUru": "прекрасная статуя",
+      "JPja": "うつくしいちょうこく",
+      "KRko": "아름다운 조각",
+      "TWzh": "美麗的雕塑",
+      "USen": "beautiful statue",
+      "USes": "estatua femenina",
+      "USfr": "statue féminine"
+    }
+  },
+  {
+    "label": "SculptureFake_01344",
+    "locale": {
+      "CNzh": "神秘的雕塑",
+      "EUde": "Geheimnisbüste",
+      "EUen": "mystic statue",
+      "EUes": "busto antiguo",
+      "EUfr": "sculpture mystérieuse",
+      "EUit": "statua enigmatica",
+      "EUnl": "enigmatisch beeld",
+      "EUru": "загадочная статуя",
+      "JPja": "しんぴてきなちょうこく",
+      "KRko": "신비로운 조각",
+      "TWzh": "神祕的雕塑",
+      "USen": "mystic statue",
+      "USes": "busto antiguo",
+      "USfr": "sculpture mystérieuse"
+    }
+  },
+  {
+    "label": "SculptureFake_01346",
+    "locale": {
+      "CNzh": "神圣的雕塑",
+      "EUde": "Erhabenstatue",
+      "EUen": "valiant statue",
+      "EUes": "estatua alada",
+      "EUfr": "statue héroïque",
+      "EUit": "statua eroica",
+      "EUnl": "heroïsch standbeeld",
+      "EUru": "героическая статуя",
+      "JPja": "こうごうしいちょうこく",
+      "KRko": "거룩한 조각",
+      "TWzh": "神聖的雕塑",
+      "USen": "valiant statue",
+      "USes": "estatua alada",
+      "USfr": "statue héroïque"
+    }
+  },
+  {
+    "label": "SculptureFake_12534",
+    "locale": {
+      "CNzh": "石头颅雕塑",
+      "EUde": "Dickkopfskulptur",
+      "EUen": "rock-head statue",
+      "EUes": "cabeza colosal",
+      "EUfr": "sculpture déterminée",
+      "EUit": "testa di roccia",
+      "EUnl": "koppig standbeeld",
+      "EUru": "твердолобая статуя",
+      "JPja": "いしあたまなちょうこく",
+      "KRko": "돌 머리의 조각",
+      "TWzh": "石頭顱雕塑",
+      "USen": "rock-head statue",
+      "USes": "cabeza colosal",
+      "USfr": "sculpture déterminée"
+    }
+  },
+  {
+    "label": "SculptureFake_12536",
+    "locale": {
+      "CNzh": "线索的雕塑",
+      "EUde": "Hinweisskulptur",
+      "EUen": "informative statue",
+      "EUes": "piedra políglota",
+      "EUfr": "tablette édifiante",
+      "EUit": "pietra informativa",
+      "EUnl": "taalkundig standbeeld",
+      "EUru": "образовательная статуя",
+      "JPja": "てがかりのちょうこく",
+      "KRko": "단서가 되는 조각",
+      "TWzh": "線索的雕塑",
+      "USen": "informative statue",
+      "USes": "piedra políglota",
+      "USfr": "tablette édifiante"
+    }
+  },
+  {
+    "label": "SculptureFake_12538",
+    "locale": {
+      "CNzh": "出乎意料的雕塑",
+      "EUde": "Prachtskulptur",
+      "EUen": "tremendous statue",
+      "EUes": "urna imponente",
+      "EUfr": "sculpture singulière",
+      "EUit": "scultura imponente",
+      "EUnl": "bijzonder standbeeld",
+      "EUru": "массивная статуя",
+      "JPja": "とてつもないちょうこく",
+      "KRko": "어마어마한 조각",
+      "TWzh": "出乎意料的雕塑",
+      "USen": "tremendous statue",
+      "USes": "urna imponente",
+      "USfr": "sculpture singulière"
+    }
+  },
+  {
+    "label": "SculptureFake_12540",
+    "locale": {
+      "CNzh": "武士的雕刻",
+      "EUde": "Kriegerstatue",
+      "EUen": "warrior statue",
+      "EUes": "escultura guerrera",
+      "EUfr": "statue guerrière",
+      "EUit": "statua guerriera",
+      "EUnl": "krijgszuchtig standbeeld",
+      "EUru": "воинственная статуя",
+      "JPja": "もののふのちょうこく",
+      "KRko": "무사의 조각",
+      "TWzh": "武士的雕塑",
+      "USen": "warrior statue",
+      "USes": "escultura guerrera",
+      "USfr": "statue guerrière"
+    }
+  },
+  {
+    "label": "SculptureFake_12571",
+    "locale": {
+      "CNzh": "粗野的名画左半边",
+      "EUde": "Ungestümgemälde (links)",
+      "EUen": "wild painting left half",
+      "EUes": "cuadro naturaleza (izda.)",
+      "EUfr": "partie g. de toile sauvage",
+      "EUit": "quadro intenso (metà sx)",
+      "EUnl": "onstuimig schilderij (l)",
+      "EUru": "лев. часть дикой картины",
+      "JPja": "あらぶるめいがのひだり",
+      "KRko": "혼란스러운 명화의 왼쪽",
+      "TWzh": "粗野的名畫左半邊",
+      "USen": "wild painting left half",
+      "USes": "cuadro naturaleza (izda.)",
+      "USfr": "partie g. de toile sauvage"
+    }
+  },
+  {
+    "label": "Sculpture_00076",
+    "locale": {
+      "CNzh": "粗野的名画右半边",
+      "EUde": "Ungestümgemälde (rechts)",
+      "EUen": "wild painting right half",
+      "EUes": "cuadro naturaleza (dcha.)",
+      "EUfr": "partie d. de toile sauvage",
+      "EUit": "quadro intenso (metà dx)",
+      "EUnl": "onstuimig schilderij (r)",
+      "EUru": "прав. часть дикой картины",
+      "JPja": "あらぶるめいがのみぎ",
+      "KRko": "혼란스러운 명화의 오른쪽",
+      "TWzh": "粗野的名畫右半邊",
+      "USen": "wild painting right half",
+      "USes": "cuadro naturaleza (dcha.)",
+      "USfr": "partie d. de toile sauvage"
+    }
+  },
+  {
+    "label": "Sculpture_01331",
+    "locale": {
+      "CNzh": "充满母爱的雕塑",
+      "EUde": "Wölfinnenstatue",
+      "EUen": "motherly statue",
+      "EUes": "figura materna",
+      "EUfr": "statue maternelle",
+      "EUit": "statua leggendaria",
+      "EUnl": "moederlijk beeld",
+      "EUru": "материнская статуя",
+      "JPja": "ぼせいあふれるちょうこく",
+      "KRko": "모성이 느껴지는 조각",
+      "TWzh": "充滿母愛的雕塑",
+      "USen": "motherly statue",
+      "USes": "figura materna",
+      "USfr": "statue maternelle"
+    }
+  },
+  {
+    "label": "Sculpture_01333",
+    "locale": {
+      "CNzh": "英挺的雕塑",
+      "EUde": "Galantstatue",
+      "EUen": "gallant statue",
+      "EUes": "estatua majestuosa",
+      "EUfr": "statue majestueuse",
+      "EUit": "statua maestosa",
+      "EUnl": "verheven standbeeld",
+      "EUru": "доблестная статуя",
+      "JPja": "りりしいちょうこく",
+      "KRko": "늠름한 조각",
+      "TWzh": "英挺的雕塑",
+      "USen": "gallant statue",
+      "USes": "estatua majestuosa",
+      "USfr": "statue majestueuse"
+    }
+  },
+  {
+    "label": "Sculpture_01335",
+    "locale": {
+      "CNzh": "强壮的雕塑",
+      "EUde": "Athletenstatue",
+      "EUen": "robust statue",
+      "EUes": "estatua atlética",
+      "EUfr": "statue athlétique",
+      "EUit": "statua atletica",
+      "EUnl": "atletisch standbeeld",
+      "EUru": "атлетическая статуя",
+      "JPja": "たくましいちょうこく",
+      "KRko": "듬직한 조각",
+      "TWzh": "強壯的雕塑",
+      "USen": "robust statue",
+      "USes": "estatua atlética",
+      "USfr": "statue athlétique"
+    }
+  },
+  {
+    "label": "Sculpture_01337",
+    "locale": {
+      "CNzh": "远古的雕塑",
+      "EUde": "Uraltstatue",
+      "EUen": "ancient statue",
+      "EUes": "estatua primitiva",
+      "EUfr": "statuette antique",
+      "EUit": "statua antica",
+      "EUnl": "prehistorisch beeldje",
+      "EUru": "древняя статуя",
+      "JPja": "いにしえのちょうこく",
+      "KRko": "태고의 조각",
+      "TWzh": "遠古的雕塑",
+      "USen": "ancient statue",
+      "USes": "estatua primitiva",
+      "USfr": "statuette antique"
+    }
+  },
+  {
+    "label": "Sculpture_01339",
+    "locale": {
+      "CNzh": "伟大的雕塑",
+      "EUde": "Würdestatue",
+      "EUen": "great statue",
+      "EUes": "estatua triunfante",
+      "EUfr": "statue imposante",
+      "EUit": "statua trionfante",
+      "EUnl": "majestueus standbeeld",
+      "EUru": "великая статуя",
+      "JPja": "いだいなちょうこく",
+      "KRko": "위대한 조각",
+      "TWzh": "偉大的雕塑",
+      "USen": "great statue",
+      "USes": "estatua triunfante",
+      "USfr": "statue imposante"
+    }
+  },
+  {
+    "label": "Sculpture_01341",
+    "locale": {
+      "CNzh": "美丽的雕塑",
+      "EUde": "Eleganzstatue",
+      "EUen": "beautiful statue",
+      "EUes": "estatua femenina",
+      "EUfr": "statue féminine",
+      "EUit": "statua aggraziata",
+      "EUnl": "gracieus standbeeld",
+      "EUru": "прекрасная статуя",
+      "JPja": "うつくしいちょうこく",
+      "KRko": "아름다운 조각",
+      "TWzh": "美麗的雕塑",
+      "USen": "beautiful statue",
+      "USes": "estatua femenina",
+      "USfr": "statue féminine"
+    }
+  },
+  {
+    "label": "Sculpture_01343",
+    "locale": {
+      "CNzh": "神秘的雕塑",
+      "EUde": "Geheimnisbüste",
+      "EUen": "mystic statue",
+      "EUes": "busto antiguo",
+      "EUfr": "sculpture mystérieuse",
+      "EUit": "statua enigmatica",
+      "EUnl": "enigmatisch beeld",
+      "EUru": "загадочная статуя",
+      "JPja": "しんぴてきなちょうこく",
+      "KRko": "신비로운 조각",
+      "TWzh": "神祕的雕塑",
+      "USen": "mystic statue",
+      "USes": "busto antiguo",
+      "USfr": "sculpture mystérieuse"
+    }
+  },
+  {
+    "label": "Sculpture_01345",
+    "locale": {
+      "CNzh": "神圣的雕塑",
+      "EUde": "Erhabenstatue",
+      "EUen": "valiant statue",
+      "EUes": "estatua alada",
+      "EUfr": "statue héroïque",
+      "EUit": "statua eroica",
+      "EUnl": "heroïsch standbeeld",
+      "EUru": "героическая статуя",
+      "JPja": "こうごうしいちょうこく",
+      "KRko": "거룩한 조각",
+      "TWzh": "神聖的雕塑",
+      "USen": "valiant statue",
+      "USes": "estatua alada",
+      "USfr": "statue héroïque"
+    }
+  },
+  {
+    "label": "Sculpture_12533",
+    "locale": {
+      "CNzh": "石头颅雕塑",
+      "EUde": "Dickkopfskulptur",
+      "EUen": "rock-head statue",
+      "EUes": "cabeza colosal",
+      "EUfr": "sculpture déterminée",
+      "EUit": "testa di roccia",
+      "EUnl": "koppig standbeeld",
+      "EUru": "твердолобая статуя",
+      "JPja": "いしあたまなちょうこく",
+      "KRko": "돌 머리의 조각",
+      "TWzh": "石頭顱雕塑",
+      "USen": "rock-head statue",
+      "USes": "cabeza colosal",
+      "USfr": "sculpture déterminée"
+    }
+  },
+  {
+    "label": "Sculpture_12535",
+    "locale": {
+      "CNzh": "线索的雕塑",
+      "EUde": "Hinweisskulptur",
+      "EUen": "informative statue",
+      "EUes": "piedra políglota",
+      "EUfr": "tablette édifiante",
+      "EUit": "pietra informativa",
+      "EUnl": "taalkundig standbeeld",
+      "EUru": "образовательная статуя",
+      "JPja": "てがかりのちょうこく",
+      "KRko": "단서가 되는 조각",
+      "TWzh": "線索的雕塑",
+      "USen": "informative statue",
+      "USes": "piedra políglota",
+      "USfr": "tablette édifiante"
+    }
+  },
+  {
+    "label": "Sculpture_12537",
+    "locale": {
+      "CNzh": "出乎意料的雕塑",
+      "EUde": "Prachtskulptur",
+      "EUen": "tremendous statue",
+      "EUes": "urna imponente",
+      "EUfr": "sculpture singulière",
+      "EUit": "scultura imponente",
+      "EUnl": "bijzonder standbeeld",
+      "EUru": "массивная статуя",
+      "JPja": "とてつもないちょうこく",
+      "KRko": "어마어마한 조각",
+      "TWzh": "出乎意料的雕塑",
+      "USen": "tremendous statue",
+      "USes": "urna imponente",
+      "USfr": "sculpture singulière"
+    }
+  },
+  {
+    "label": "Sculpture_12539",
+    "locale": {
+      "CNzh": "武士的雕刻",
+      "EUde": "Kriegerstatue",
+      "EUen": "warrior statue",
+      "EUes": "escultura guerrera",
+      "EUfr": "statue guerrière",
+      "EUit": "statua guerriera",
+      "EUnl": "krijgszuchtig standbeeld",
+      "EUru": "воинственная статуя",
+      "JPja": "もののふのちょうこく",
+      "KRko": "무사의 조각",
+      "TWzh": "武士的雕塑",
+      "USen": "warrior statue",
+      "USes": "escultura guerrera",
+      "USfr": "statue guerrière"
+    }
+  },
+  {
+    "label": "Sculpture_12541",
+    "locale": {
+      "CNzh": "似曾相识的雕塑",
+      "EUde": "Vertrautstatue",
+      "EUen": "familiar statue",
+      "EUes": "estatua pensativa",
+      "EUfr": "statue pensive",
+      "EUit": "statua pensierosa",
+      "EUnl": "peinzend standbeeld",
+      "EUru": "знакомая статуя",
+      "JPja": "なじみのあるちょうこく",
+      "KRko": "익숙한 조각",
+      "TWzh": "似曾相識的雕塑",
+      "USen": "familiar statue",
+      "USes": "estatua pensativa",
+      "USfr": "statue pensive"
+    }
+  },
+  {
+    "label": "Sculpture_12570",
+    "locale": {
+      "CNzh": "粗野的名画左半边",
+      "EUde": "Ungestümgemälde (links)",
+      "EUen": "wild painting left half",
+      "EUes": "cuadro naturaleza (izda.)",
+      "EUfr": "partie g. de toile sauvage",
+      "EUit": "quadro intenso (metà sx)",
+      "EUnl": "onstuimig schilderij (l)",
+      "EUru": "лев. часть дикой картины",
+      "JPja": "あらぶるめいがのひだり",
+      "KRko": "혼란스러운 명화의 왼쪽",
+      "TWzh": "粗野的名畫左半邊",
+      "USen": "wild painting left half",
+      "USes": "cuadro naturaleza (izda.)",
+      "USfr": "partie g. de toile sauvage"
+    }
+  }
+]

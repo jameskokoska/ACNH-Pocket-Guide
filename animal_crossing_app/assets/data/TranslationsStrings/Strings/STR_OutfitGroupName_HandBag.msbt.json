@@ -1,0 +1,344 @@
+﻿[
+  {
+    "label": "1503",
+    "locale": {
+      "CNzh": "藤篮包",
+      "EUde": "Korbtasche",
+      "EUen": "basket bag",
+      "EUes": "bolso de mimbre",
+      "EUfr": "panier",
+      "EUit": "cesto",
+      "EUnl": "rieten tas",
+      "EUru": "корзинка",
+      "JPja": "かごバッグ",
+      "KRko": "바스켓 백",
+      "TWzh": "籐籃包",
+      "USen": "basket bag",
+      "USes": "bolsa de mimbre",
+      "USfr": "panier"
+    }
+  },
+  {
+    "label": "1504",
+    "locale": {
+      "CNzh": "粗横纹藤篮包",
+      "EUde": "Streifen-Korbtasche",
+      "EUen": "striped basket bag",
+      "EUes": "bolso de mimbre a rayas",
+      "EUfr": "panier à rayures",
+      "EUit": "cesto a strisce",
+      "EUnl": "gestreepte rieten tas",
+      "EUru": "полосатая корзинка",
+      "JPja": "ボーダーがらかごバッグ",
+      "KRko": "줄무늬 바스켓 백",
+      "TWzh": "粗橫紋籐籃包",
+      "USen": "striped basket bag",
+      "USes": "bolsa de mimbre a rayas",
+      "USfr": "panier à rayures"
+    }
+  },
+  {
+    "label": "1505",
+    "locale": {
+      "CNzh": "菱形纹藤篮包",
+      "EUde": "Rauten-Korbtasche",
+      "EUen": "diamond-weave basket bag",
+      "EUes": "bolso de mimbre a rombos",
+      "EUfr": "panier motif losanges",
+      "EUit": "cesto con intreccio a rombi",
+      "EUnl": "rieten tas met ruitpatroon",
+      "EUru": "корзинка в ромбы",
+      "JPja": "ダイヤがらかごバッグ",
+      "KRko": "다이아무늬 바스켓 백",
+      "TWzh": "菱形紋籐籃包",
+      "USen": "diamond-weave basket bag",
+      "USes": "bolsa de mimbre a rombos",
+      "USfr": "panier motif losanges"
+    }
+  },
+  {
+    "label": "1506",
+    "locale": {
+      "CNzh": "风吕敷",
+      "EUde": "Furoshiki",
+      "EUen": "furoshiki bag",
+      "EUes": "hatillo furoshiki",
+      "EUfr": "sac furoshiki",
+      "EUit": "borsa furoshiki",
+      "EUnl": "furoshiki-tas",
+      "EUru": "узелок из фуросики",
+      "JPja": "ふろしき",
+      "KRko": "보자기 가방",
+      "TWzh": "風呂敷",
+      "USen": "furoshiki bag",
+      "USes": "bolsa furoshiki",
+      "USfr": "sac furoshiki"
+    }
+  },
+  {
+    "label": "1507",
+    "locale": {
+      "CNzh": "皮手提包",
+      "EUde": "Kunstlederhandtasche",
+      "EUen": "pleather handbag",
+      "EUes": "bolso de mano de polipiel",
+      "EUfr": "sac à main simili-cuir",
+      "EUit": "borsa in ecopelle",
+      "EUnl": "kunstleren handtas",
+      "EUru": "сумка из кожзама",
+      "JPja": "レザーのハンドバッグ",
+      "KRko": "가죽 핸드백",
+      "TWzh": "皮手提包",
+      "USen": "pleather handbag",
+      "USes": "bolso de mano sintético",
+      "USfr": "sac à main similicuir"
+    }
+  },
+  {
+    "label": "1508",
+    "locale": {
+      "CNzh": "Logo纸袋",
+      "EUde": "Logo-Papiertüte",
+      "EUen": "logo paper bag",
+      "EUes": "bolsa de compra logotipo",
+      "EUfr": "sac papier à logo",
+      "EUit": "borsa di carta con logo",
+      "EUnl": "papieren tas met logo",
+      "EUru": "фирменн. бумажная сумка",
+      "JPja": "ロゴいりかみぶくろ",
+      "KRko": "로고 종이 가방",
+      "TWzh": "Logo紙袋",
+      "USen": "logo paper bag",
+      "USes": "bolsa de compra logotipo",
+      "USfr": "sac papier à logo"
+    }
+  },
+  {
+    "label": "1509",
+    "locale": {
+      "CNzh": "电器店纸袋",
+      "EUde": "Elektroladen-Papiertüte",
+      "EUen": "electronics-store paper bag",
+      "EUes": "bolsa de compra electrónica",
+      "EUfr": "sac papier boutique électro",
+      "EUit": "borsa negozio di elettronica",
+      "EUnl": "tas van een elektronicazaak",
+      "EUru": "сумка для электроники",
+      "JPja": "でんきやのかみぶくろ",
+      "KRko": "전자제품 전문점 종이 가방",
+      "TWzh": "電器店紙袋",
+      "USen": "electronics-store paper bag",
+      "USes": "bolsa de compra electrónica",
+      "USfr": "sac papier boutique électro."
+    }
+  },
+  {
+    "label": "1510",
+    "locale": {
+      "CNzh": "服装店纸袋",
+      "EUde": "Boutique-Papiertüte",
+      "EUen": "apparel-shop paper bag",
+      "EUes": "bolsa de compra boutique",
+      "EUfr": "sac papier boutique mode",
+      "EUit": "borsa boutique",
+      "EUnl": "kledingwinkeltas",
+      "EUru": "сумка из магазина одежды",
+      "JPja": "アパレルショップのかみぶくろ",
+      "KRko": "어패럴 숍 종이 가방",
+      "TWzh": "服裝店紙袋",
+      "USen": "apparel-shop paper bag",
+      "USes": "bolsa de compra boutique",
+      "USfr": "sac papier boutique mode"
+    }
+  },
+  {
+    "label": "1511",
+    "locale": {
+      "CNzh": "百货公司纸袋",
+      "EUde": "Kaufhaus-Papiertüte",
+      "EUen": "department-store paper bag",
+      "EUes": "bolsa de centro comercial",
+      "EUfr": "sac papier grand magasin",
+      "EUit": "borsa centro commerciale",
+      "EUnl": "tas van een warenhuis",
+      "EUru": "сумка из универмага",
+      "JPja": "デパートのかみぶくろ",
+      "KRko": "백화점 종이 가방",
+      "TWzh": "百貨公司紙袋",
+      "USen": "department-store paper bag",
+      "USes": "bolsa de centro comercial",
+      "USfr": "sac papier grand magasin"
+    }
+  },
+  {
+    "label": "1512",
+    "locale": {
+      "CNzh": "手拿包",
+      "EUde": "Clutch",
+      "EUen": "clutch",
+      "EUes": "bolso de mano",
+      "EUfr": "trousse",
+      "EUit": "borsetta senza manici",
+      "EUnl": "clutchtasje",
+      "EUru": "сумка-конверт",
+      "JPja": "セカンドバッグ",
+      "KRko": "클러치 백",
+      "TWzh": "手拿包",
+      "USen": "clutch",
+      "USes": "bolsa de mano",
+      "USfr": "trousse"
+    }
+  },
+  {
+    "label": "1513",
+    "locale": {
+      "CNzh": "简约托特包",
+      "EUde": "Standard-Stofftasche",
+      "EUen": "simple tote bag",
+      "EUes": "bolso de tela simple",
+      "EUfr": "cabas simple",
+      "EUit": "borsa tote semplice",
+      "EUnl": "eenvoudige draagtas",
+      "EUru": "простая большая сумка",
+      "JPja": "シンプルトートバッグ",
+      "KRko": "심플 토트백",
+      "TWzh": "簡約托特包",
+      "USen": "simple tote bag",
+      "USes": "bolsa de tela simple",
+      "USfr": "cabas simple"
+    }
+  },
+  {
+    "label": "1514",
+    "locale": {
+      "CNzh": "迷彩托特包",
+      "EUde": "Tarn-Stofftasche",
+      "EUen": "camo tote bag",
+      "EUes": "bolso de tela camuflaje",
+      "EUfr": "cabas camouflage",
+      "EUit": "borsa tote mimetica",
+      "EUnl": "camouflagedraagtas",
+      "EUru": "камуфляжн. больш. сумка",
+      "JPja": "めいさいトートバッグ",
+      "KRko": "밀리터리 토트백",
+      "TWzh": "迷彩托特包",
+      "USen": "camo tote bag",
+      "USes": "bolsa de tela camuflaje",
+      "USfr": "cabas camouflage"
+    }
+  },
+  {
+    "label": "1515",
+    "locale": {
+      "CNzh": "碎花托特包",
+      "EUde": "Blümchen-Stofftasche",
+      "EUen": "tiny-flower-print tote bag",
+      "EUes": "bolso de tela florecillas",
+      "EUfr": "cabas motif petites fleurs",
+      "EUit": "borsa tote motivo fiorellini",
+      "EUnl": "bloemetjesdraagtas",
+      "EUru": "большая сумка в цветочек",
+      "JPja": "こばながらトートバッグ",
+      "KRko": "작은 꽃무늬 토트백",
+      "TWzh": "碎花托特包",
+      "USen": "tiny-flower-print tote bag",
+      "USes": "bolsa de tela florecitas",
+      "USfr": "cabas motif petites fleurs"
+    }
+  },
+  {
+    "label": "1516",
+    "locale": {
+      "CNzh": "Logo托特包",
+      "EUde": "Logo-Stofftasche",
+      "EUen": "logo tote bag",
+      "EUes": "bolso de tela logotipo",
+      "EUfr": "cabas à logo",
+      "EUit": "borsa tote con logo",
+      "EUnl": "draagtas met logo",
+      "EUru": "фирменная больш. сумка",
+      "JPja": "ロゴいりトートバッグ",
+      "KRko": "로고 토트백",
+      "TWzh": "Logo托特包",
+      "USen": "logo tote bag",
+      "USes": "bolsa de tela logotipo",
+      "USfr": "cabas à logo"
+    }
+  },
+  {
+    "label": "1517",
+    "locale": {
+      "CNzh": "蔬菜图案环保袋",
+      "EUde": "Gemüse-Ökotasche",
+      "EUen": "veggie-print eco bag",
+      "EUes": "bolsa reutilizable vegetales",
+      "EUfr": "sac bio motif légumes",
+      "EUit": "borsa riutilizzabile vegetali",
+      "EUnl": "ecotas met groenteprint",
+      "EUru": "сумка из ткани с овощами",
+      "JPja": "やさいがらエコバッグ",
+      "KRko": "야채 무늬 에코백",
+      "TWzh": "蔬菜圖案環保袋",
+      "USen": "veggie-print eco bag",
+      "USes": "bolsa reutilizable vegetales",
+      "USfr": "sac bio motif légumes"
+    }
+  },
+  {
+    "label": "1518",
+    "locale": {
+      "CNzh": "鱼儿图案环保袋",
+      "EUde": "Fisch-Ökotasche",
+      "EUen": "fish-print eco bag",
+      "EUes": "bolsa reutilizable peces",
+      "EUfr": "sac bio motif poissons",
+      "EUit": "borsa riutilizzabile pesci",
+      "EUnl": "ecotas met vissenprint",
+      "EUru": "сумка из ткани с рыбой",
+      "JPja": "おさかながらエコバッグ",
+      "KRko": "물고기 무늬 에코백",
+      "TWzh": "魚兒圖案環保袋",
+      "USen": "fish-print eco bag",
+      "USes": "bolsa reutilizable peces",
+      "USfr": "sac bio motif poissons"
+    }
+  },
+  {
+    "label": "1519",
+    "locale": {
+      "CNzh": "面包图案环保袋",
+      "EUde": "Brot-Ökotasche",
+      "EUen": "bread-print eco bag",
+      "EUes": "bolsa reutilizable pan",
+      "EUfr": "sac bio motif pain",
+      "EUit": "borsa riutilizzabile pane",
+      "EUnl": "ecotas met broodprint",
+      "EUru": "сумка из ткани с выпечкой",
+      "JPja": "パンがらエコバッグ",
+      "KRko": "빵 무늬 에코백",
+      "TWzh": "麵包圖案環保袋",
+      "USen": "bread-print eco bag",
+      "USes": "bolsa reutilizable pan",
+      "USfr": "sac bio motif pain"
+    }
+  },
+  {
+    "label": "1520",
+    "locale": {
+      "CNzh": "花纹环保袋",
+      "EUde": "Blumen-Ökotasche",
+      "EUen": "flower-print eco bag",
+      "EUes": "bolsa reutilizable flores",
+      "EUfr": "sac bio motif fleurs",
+      "EUit": "borsa riutilizzabile fiori",
+      "EUnl": "ecotas met bloemenprint",
+      "EUru": "сумка из ткани в цветочек",
+      "JPja": "はながらエコバッグ",
+      "KRko": "꽃무늬 에코백",
+      "TWzh": "花紋環保袋",
+      "USen": "flower-print eco bag",
+      "USes": "bolsa reutilizable flores",
+      "USfr": "sac bio motif fleurs"
+    }
+  }
+]

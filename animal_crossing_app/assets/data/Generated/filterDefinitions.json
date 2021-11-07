@@ -41,16 +41,16 @@
           "id": "Category:Wall-mounted"
         },
         {
-          "name": "Food",
-          "id": "Category:Food"
+          "name": "Sweet",
+          "id": "Category:Sweet"
         },
         {
-          "name": "Desert",
-          "id": "Category:Desert"
+          "name": "Savory",
+          "id": "Category:Savory"
         },
         {
-          "name": "Ceiling",
-          "id": "Category:Ceiling"
+          "name": "Ceiling Decor",
+          "id": "Category:Ceiling Decor"
         }
       ]
     },
@@ -215,6 +215,10 @@
           "id": "Source:Test Your DIY Skills"
         },
         {
+          "name": "None",
+          "id": "Source:None"
+        },
+        {
           "name": "Pavé",
           "id": "Source:Pavé"
         },
@@ -251,80 +255,100 @@
           "id": "Source:Collecting wood eggs"
         },
         {
-          "name": "Efitem",
-          "id": "Source:Efitem"
+          "name": "Catching a horse mackerel",
+          "id": "Source:Catching a horse mackerel"
         },
         {
-          "name": "6C1BC3CE",
-          "id": "Source:6C1BC3CE"
+          "name": "Catch an anchovy",
+          "id": "Source:Catch an anchovy"
         },
         {
-          "name": "BA81C736",
-          "id": "Source:BA81C736"
+          "name": "Daisy Mae",
+          "id": "Source:Daisy Mae"
         },
         {
-          "name": "FDC091E1",
-          "id": "Source:FDC091E1"
+          "name": "Catching a barred knifejaw",
+          "id": "Source:Catching a barred knifejaw"
         },
         {
-          "name": "EF366997",
-          "id": "Source:EF366997"
+          "name": "WherearenMncBoxBrick",
+          "id": "Source:WherearenMncBoxBrick"
         },
         {
-          "name": "415F291C",
-          "id": "Source:415F291C"
+          "name": "Basic Cooking Recipes",
+          "id": "Source:Basic Cooking Recipes"
         },
         {
-          "name": "None",
-          "id": "Source:None"
+          "name": "Catching a blue marlin",
+          "id": "Source:Catching a blue marlin"
         },
         {
-          "name": "3E61747E",
-          "id": "Source:3E61747E"
+          "name": "Catching a salmon",
+          "id": "Source:Catching a salmon"
         },
         {
-          "name": "667FEF40",
-          "id": "Source:667FEF40"
+          "name": "Be a Chef! DIY Recipes+",
+          "id": "Source:Be a Chef! DIY Recipes+"
         },
         {
-          "name": "776D5010",
-          "id": "Source:776D5010"
+          "name": "Turkey Day Recipes",
+          "id": "Source:Turkey Day Recipes"
         },
         {
-          "name": "5AE3CBEB",
-          "id": "Source:5AE3CBEB"
+          "name": "WherearenMncBoxConcrete",
+          "id": "Source:WherearenMncBoxConcrete"
         },
         {
-          "name": "27A71BCC",
-          "id": "Source:27A71BCC"
+          "name": "WherearenMncBoxComplete",
+          "id": "Source:WherearenMncBoxComplete"
         },
         {
-          "name": "D3B03812",
-          "id": "Source:D3B03812"
+          "name": "Catching a dab",
+          "id": "Source:Catching a dab"
         },
         {
-          "name": "440FBB4E",
-          "id": "Source:440FBB4E"
+          "name": "Custom Fencing in a Flash",
+          "id": "Source:Custom Fencing in a Flash"
         },
         {
-          "name": "8913E9E7",
-          "id": "Source:8913E9E7"
+          "name": "WherearenMncBoxMarble",
+          "id": "Source:WherearenMncBoxMarble"
         },
         {
-          "name": "DDC68604",
-          "id": "Source:DDC68604"
+          "name": "WherearenMncBoxPlain",
+          "id": "Source:WherearenMncBoxPlain"
         },
         {
-          "name": "93B62DA1",
-          "id": "Source:93B62DA1"
+          "name": "WherearenMncBoxSteel",
+          "id": "Source:WherearenMncBoxSteel"
         },
         {
-          "name": "00E89F29",
-          "id": "Source:00E89F29"
+          "name": "WherearenMncLesson",
+          "id": "Source:WherearenMncLesson"
         },
         {
-          "name": "37A52400",
-          "id": "Source:37A52400"
+          "name": "WherearenKabetasuUnlock",
+          "id": "Source:WherearenKabetasuUnlock"
+        },
+        {
+          "name": "Catching a red snapper",
+          "id": "Source:Catching a red snapper"
+        },
+        {
+          "name": "Brewster",
+          "id": "Source:Brewster"
+        },
+        {
+          "name": "Catching a olive flounder",
+          "id": "Source:Catching a olive flounder"
+        },
+        {
+          "name": "Catching a sea bass",
+          "id": "Source:Catching a sea bass"
+        },
+        {
+          "name": "Catching a squid",
+          "id": "Source:Catching a squid"
         }
       ]
     },
@@ -729,52 +753,56 @@
       "id": "Source",
       "children": [
         {
-          "name": "Peppy villagers",
-          "id": "Source:Peppy villagers"
+          "name": "All villagers",
+          "id": "Source:All villagers"
         },
         {
           "name": "Cranky villagers",
           "id": "Source:Cranky villagers"
         },
         {
-          "name": "Snooty villagers",
-          "id": "Source:Snooty villagers"
-        },
-        {
           "name": "Big Sister villagers",
           "id": "Source:Big Sister villagers"
-        },
-        {
-          "name": "Lazy villagers",
-          "id": "Source:Lazy villagers"
-        },
-        {
-          "name": "Viva Festivale Reaction Set",
-          "id": "Source:Viva Festivale Reaction Set"
         },
         {
           "name": "Normal villagers",
           "id": "Source:Normal villagers"
         },
         {
-          "name": "All villagers",
-          "id": "Source:All villagers"
+          "name": "Peppy villagers",
+          "id": "Source:Peppy villagers"
         },
         {
-          "name": "Jock villagers",
-          "id": "Source:Jock villagers"
+          "name": "Snooty villagers",
+          "id": "Source:Snooty villagers"
         },
         {
           "name": "Smug villagers",
           "id": "Source:Smug villagers"
         },
         {
-          "name": "Hip Reaction Collection",
-          "id": "Source:Hip Reaction Collection"
+          "name": "Jock villagers",
+          "id": "Source:Jock villagers"
+        },
+        {
+          "name": "Lazy villagers",
+          "id": "Source:Lazy villagers"
         },
         {
           "name": "Jack",
           "id": "Source:Jack"
+        },
+        {
+          "name": "Hip Reaction Collection",
+          "id": "Source:Hip Reaction Collection"
+        },
+        {
+          "name": "Viva Festivale Reaction Set",
+          "id": "Source:Viva Festivale Reaction Set"
+        },
+        {
+          "name": "New Reactions Notebook",
+          "id": "Source:New Reactions Notebook"
         }
       ]
     }
@@ -881,8 +909,8 @@
           "id": "Tag:Seaside"
         },
         {
-          "name": "Vehicle",
-          "id": "Tag:Vehicle"
+          "name": "Ranch",
+          "id": "Tag:Ranch"
         },
         {
           "name": "Bed",
@@ -897,8 +925,8 @@
           "id": "Tag:Chair"
         },
         {
-          "name": "Clock",
-          "id": "Tag:Clock"
+          "name": "Folk Craft Decor",
+          "id": "Tag:Folk Craft Decor"
         },
         {
           "name": "Table",
@@ -913,16 +941,8 @@
           "id": "Tag:Chest"
         },
         {
-          "name": "Bathroom Things",
-          "id": "Tag:Bathroom Things"
-        },
-        {
           "name": "Toy",
           "id": "Tag:Toy"
-        },
-        {
-          "name": "Ranch",
-          "id": "Tag:Ranch"
         },
         {
           "name": "Space",
@@ -957,12 +977,20 @@
           "id": "Tag:Audio"
         },
         {
-          "name": "Outdoors Decor",
-          "id": "Tag:Outdoors Decor"
+          "name": "Vehicle",
+          "id": "Tag:Vehicle"
         },
         {
           "name": "Sports",
           "id": "Tag:Sports"
+        },
+        {
+          "name": "Bathroom Things",
+          "id": "Tag:Bathroom Things"
+        },
+        {
+          "name": "Toilet",
+          "id": "Tag:Toilet"
         },
         {
           "name": "Seasonal Decor",
@@ -975,10 +1003,6 @@
         {
           "name": "Animal",
           "id": "Tag:Animal"
-        },
-        {
-          "name": "Fireplace",
-          "id": "Tag:Fireplace"
         },
         {
           "name": "Plants",
@@ -997,16 +1021,12 @@
           "id": "Tag:Easter"
         },
         {
-          "name": "Kitchen Things",
-          "id": "Tag:Kitchen Things"
+          "name": "School",
+          "id": "Tag:School"
         },
         {
           "name": "Shop",
           "id": "Tag:Shop"
-        },
-        {
-          "name": "School",
-          "id": "Tag:School"
         },
         {
           "name": "Cinnamoroll",
@@ -1021,12 +1041,12 @@
           "id": "Tag:Supplies"
         },
         {
-          "name": "Work Bench",
-          "id": "Tag:Work Bench"
-        },
-        {
           "name": "Facility Decor",
           "id": "Tag:Facility Decor"
+        },
+        {
+          "name": "Work Bench",
+          "id": "Tag:Work Bench"
         },
         {
           "name": "Playground",
@@ -1037,8 +1057,8 @@
           "id": "Tag:Fan"
         },
         {
-          "name": "Toilet",
-          "id": "Tag:Toilet"
+          "name": "Fireplace",
+          "id": "Tag:Fireplace"
         },
         {
           "name": "Insect",
@@ -1061,20 +1081,12 @@
           "id": "Tag:Kiki & Lala"
         },
         {
-          "name": "Folk Craft Decor",
-          "id": "Tag:Folk Craft Decor"
-        },
-        {
           "name": "My Melody",
           "id": "Tag:My Melody"
         },
         {
           "name": "Fish",
           "id": "Tag:Fish"
-        },
-        {
-          "name": "Sewing Table",
-          "id": "Tag:Sewing Table"
         },
         {
           "name": "Pompompurin",
@@ -1085,24 +1097,20 @@
           "id": "Tag:Heating"
         },
         {
-          "name": "Study",
-          "id": "Tag:Study"
+          "name": "Museum",
+          "id": "Tag:Museum"
+        },
+        {
+          "name": "Game Console",
+          "id": "Tag:Game Console"
         },
         {
           "name": "Office",
           "id": "Tag:Office"
         },
         {
-          "name": "Museum",
-          "id": "Tag:Museum"
-        },
-        {
-          "name": "Beauty",
-          "id": "Tag:Beauty"
-        },
-        {
-          "name": "Game Console",
-          "id": "Tag:Game Console"
+          "name": "Kitchen Things",
+          "id": "Tag:Kitchen Things"
         },
         {
           "name": "Special Insect",
@@ -1111,6 +1119,10 @@
         {
           "name": "Dining",
           "id": "Tag:Dining"
+        },
+        {
+          "name": "Study",
+          "id": "Tag:Study"
         },
         {
           "name": "Special Fish",
@@ -1133,8 +1145,12 @@
           "id": "Tag:House Door Decor"
         },
         {
-          "name": "Sculpture",
-          "id": "Tag:Sculpture"
+          "name": "Clock",
+          "id": "Tag:Clock"
+        },
+        {
+          "name": "Posters",
+          "id": "Tag:Posters"
         },
         {
           "name": "CeilingEtc",
@@ -1497,8 +1513,8 @@
           "id": "Variation:Blank"
         },
         {
-          "name": "After school",
-          "id": "Variation:After school"
+          "name": "Scribbles",
+          "id": "Variation:Scribbles"
         },
         {
           "name": "Foreign language",
@@ -1993,12 +2009,12 @@
           "id": "Variation:Shabby"
         },
         {
-          "name": "Beige & white",
-          "id": "Variation:Beige & white"
+          "name": "Ivory & wood",
+          "id": "Variation:Ivory & wood"
         },
         {
-          "name": "Brown & black",
-          "id": "Variation:Brown & black"
+          "name": "Black & wood",
+          "id": "Variation:Black & wood"
         },
         {
           "name": "Caution",
@@ -2085,6 +2101,10 @@
           "id": "Variation:Reddish brown"
         },
         {
+          "name": "Vintage",
+          "id": "Variation:Vintage"
+        },
+        {
           "name": "Coral pink",
           "id": "Variation:Coral pink"
         },
@@ -2161,32 +2181,24 @@
           "id": "Variation:Pearl"
         },
         {
-          "name": "Red roof",
-          "id": "Variation:Red roof"
+          "name": "Red & brown",
+          "id": "Variation:Red & brown"
         },
         {
-          "name": "Green roof",
-          "id": "Variation:Green roof"
+          "name": "Green & dark brown",
+          "id": "Variation:Green & dark brown"
         },
         {
-          "name": "Blue roof",
-          "id": "Variation:Blue roof"
+          "name": "Blue & gray",
+          "id": "Variation:Blue & gray"
         },
         {
-          "name": "Black roof",
-          "id": "Variation:Black roof"
-        },
-        {
-          "name": "Aqua roof",
-          "id": "Variation:Aqua roof"
+          "name": "Aqua & pink",
+          "id": "Variation:Aqua & pink"
         },
         {
           "name": "Light gray",
           "id": "Variation:Light gray"
-        },
-        {
-          "name": "Copper",
-          "id": "Variation:Copper"
         },
         {
           "name": "Vanilla",
@@ -2217,12 +2229,28 @@
           "id": "Variation:Strawberry swirl"
         },
         {
+          "name": "Red & black",
+          "id": "Variation:Red & black"
+        },
+        {
+          "name": "Blue & white",
+          "id": "Variation:Blue & white"
+        },
+        {
+          "name": "Black & silver",
+          "id": "Variation:Black & silver"
+        },
+        {
           "name": "Monochrome",
           "id": "Variation:Monochrome"
         },
         {
           "name": "Zebra",
           "id": "Variation:Zebra"
+        },
+        {
+          "name": "Orange & silver",
+          "id": "Variation:Orange & silver"
         },
         {
           "name": "Graffiti",
@@ -2233,8 +2261,12 @@
           "id": "Variation:Hibiscus flowers"
         },
         {
-          "name": "Off-white",
-          "id": "Variation:Off-white"
+          "name": "Vivid",
+          "id": "Variation:Vivid"
+        },
+        {
+          "name": "Classic",
+          "id": "Variation:Classic"
         },
         {
           "name": "Black & orange",
@@ -2281,6 +2313,14 @@
           "id": "Variation:With ads"
         },
         {
+          "name": "Copper",
+          "id": "Variation:Copper"
+        },
+        {
+          "name": "Rust",
+          "id": "Variation:Rust"
+        },
+        {
           "name": "Garden",
           "id": "Variation:Garden"
         },
@@ -2319,10 +2359,6 @@
         {
           "name": "Mixed wood",
           "id": "Variation:Mixed wood"
-        },
-        {
-          "name": "Vivid",
-          "id": "Variation:Vivid"
         },
         {
           "name": "White granite",
@@ -2391,10 +2427,6 @@
         {
           "name": "Pink-beige",
           "id": "Variation:Pink-beige"
-        },
-        {
-          "name": "Blue & white",
-          "id": "Variation:Blue & white"
         },
         {
           "name": "White & natural finish",
@@ -2485,10 +2517,6 @@
           "id": "Variation:Roses"
         },
         {
-          "name": "Rust",
-          "id": "Variation:Rust"
-        },
-        {
           "name": "Warning",
           "id": "Variation:Warning"
         },
@@ -2535,10 +2563,6 @@
         {
           "name": "Salmon pink",
           "id": "Variation:Salmon pink"
-        },
-        {
-          "name": "Classic",
-          "id": "Variation:Classic"
         },
         {
           "name": "Empress-tree wood",
@@ -2599,10 +2623,6 @@
         {
           "name": "White & pink",
           "id": "Variation:White & pink"
-        },
-        {
-          "name": "Ivory & wood",
-          "id": "Variation:Ivory & wood"
         },
         {
           "name": "Ash",
@@ -2711,10 +2731,6 @@
         {
           "name": "Rusty",
           "id": "Variation:Rusty"
-        },
-        {
-          "name": "Vintage",
-          "id": "Variation:Vintage"
         },
         {
           "name": "White brick",
@@ -3025,10 +3041,6 @@
           "id": "Variation:Chocolate mint"
         },
         {
-          "name": "Empty",
-          "id": "Variation:Empty"
-        },
-        {
           "name": "Veggie sauté",
           "id": "Variation:Veggie sauté"
         },
@@ -3099,10 +3111,6 @@
         {
           "name": "Tea",
           "id": "Variation:Tea"
-        },
-        {
-          "name": "Black & silver",
-          "id": "Variation:Black & silver"
         },
         {
           "name": "Pink & purple",
@@ -3247,10 +3255,6 @@
         {
           "name": "Blue cat",
           "id": "Variation:Blue cat"
-        },
-        {
-          "name": "Blue & gray",
-          "id": "Variation:Blue & gray"
         },
         {
           "name": "Quilted pattern",
@@ -3809,10 +3813,6 @@
           "id": "Variation:Miso broth"
         },
         {
-          "name": "Red & black",
-          "id": "Variation:Red & black"
-        },
-        {
           "name": "Blue & red",
           "id": "Variation:Blue & red"
         },
@@ -4127,28 +4127,12 @@
           "id": "Source:Cyrus"
         },
         {
-          "name": "NewYearWorld2",
-          "id": "Source:NewYearWorld2"
-        },
-        {
-          "name": "MileExchangeATM",
-          "id": "Source:MileExchangeATM"
-        },
-        {
           "name": "ShopOneRoom",
           "id": "Source:ShopOneRoom"
         },
         {
-          "name": "MileExchangeFtrAfterED",
-          "id": "Source:MileExchangeFtrAfterED"
-        },
-        {
           "name": "OneRoomBigFtr",
           "id": "Source:OneRoomBigFtr"
-        },
-        {
-          "name": "WinterSolstice_JP",
-          "id": "Source:WinterSolstice_JP"
         },
         {
           "name": "ShopOneRoomDefault",
@@ -4163,10 +4147,6 @@
           "id": "Source:CafeMaster"
         },
         {
-          "name": "SummerSolstice_EU",
-          "id": "Source:SummerSolstice_EU"
-        },
-        {
           "name": "RadioExercise",
           "id": "Source:RadioExercise"
         },
@@ -4177,14 +4157,6 @@
         {
           "name": "RecycleBox_Fr",
           "id": "Source:RecycleBox_Fr"
-        },
-        {
-          "name": "MileExchangeStoreRoom",
-          "id": "Source:MileExchangeStoreRoom"
-        },
-        {
-          "name": "MileExchangeRecipeDIYStorage",
-          "id": "Source:MileExchangeRecipeDIYStorage"
         },
         {
           "name": "Nintendo",
@@ -4231,16 +4203,12 @@
           "id": "Source:ShopOneRoomNonSouvenir"
         },
         {
-          "name": "BptSale",
-          "id": "Source:BptSale"
+          "name": "Katrina's Cleansing Service",
+          "id": "Source:Katrina's Cleansing Service"
         },
         {
           "name": "OneRoomBenefit",
           "id": "Source:OneRoomBenefit"
-        },
-        {
-          "name": "NewYearEtoTiger",
-          "id": "Source:NewYearEtoTiger"
         },
         {
           "name": "Blathers",
@@ -4549,16 +4517,8 @@
           "id": "Season/Event:Scorpio"
         },
         {
-          "name": "Dano Festival",
-          "id": "Season/Event:Dano Festival"
-        },
-        {
           "name": "Father's Day",
           "id": "Season/Event:Father's Day"
-        },
-        {
-          "name": "Nochevieja",
-          "id": "Season/Event:Nochevieja"
         },
         {
           "name": "April Fools' Day",
@@ -4657,20 +4617,28 @@
           "id": "HHA Concept 1:ocean"
         },
         {
-          "name": "garden",
-          "id": "HHA Concept 1:garden"
+          "name": "city life",
+          "id": "HHA Concept 1:city life"
         },
         {
-          "name": "living room",
-          "id": "HHA Concept 1:living room"
+          "name": "retro",
+          "id": "HHA Concept 1:retro"
         },
         {
           "name": "expensive",
           "id": "HHA Concept 1:expensive"
         },
         {
+          "name": "arcade",
+          "id": "HHA Concept 1:arcade"
+        },
+        {
           "name": "facility",
           "id": "HHA Concept 1:facility"
+        },
+        {
+          "name": "local",
+          "id": "HHA Concept 1:local"
         },
         {
           "name": "space",
@@ -4701,12 +4669,52 @@
           "id": "HHA Concept 1:workshop"
         },
         {
+          "name": "sports",
+          "id": "HHA Concept 1:sports"
+        },
+        {
+          "name": "garden",
+          "id": "HHA Concept 1:garden"
+        },
+        {
           "name": "shop",
           "id": "HHA Concept 1:shop"
         },
         {
+          "name": "park",
+          "id": "HHA Concept 1:park"
+        },
+        {
+          "name": "living room",
+          "id": "HHA Concept 1:living room"
+        },
+        {
+          "name": "restaurant",
+          "id": "HHA Concept 1:restaurant"
+        },
+        {
+          "name": "European",
+          "id": "HHA Concept 1:European"
+        },
+        {
+          "name": "apparel shop",
+          "id": "HHA Concept 1:apparel shop"
+        },
+        {
           "name": "kitchen",
           "id": "HHA Concept 1:kitchen"
+        },
+        {
+          "name": "construction site",
+          "id": "HHA Concept 1:construction site"
+        },
+        {
+          "name": "amusement park",
+          "id": "HHA Concept 1:amusement park"
+        },
+        {
+          "name": "public bath",
+          "id": "HHA Concept 1:public bath"
         },
         {
           "name": "den",
@@ -4721,104 +4729,56 @@
           "id": "HHA Concept 1:freezing cold"
         },
         {
-          "name": "None",
-          "id": "HHA Concept 1:None"
+          "name": "ancient",
+          "id": "HHA Concept 1:ancient"
         },
         {
-          "name": "heritage",
-          "id": "HHA Concept 1:heritage"
+          "name": "None",
+          "id": "HHA Concept 1:None"
         },
         {
           "name": "office",
           "id": "HHA Concept 1:office"
         },
         {
+          "name": "fantasy",
+          "id": "HHA Concept 1:fantasy"
+        },
+        {
+          "name": "nature",
+          "id": "HHA Concept 1:nature"
+        },
+        {
+          "name": "lab",
+          "id": "HHA Concept 1:lab"
+        },
+        {
           "name": "horror",
           "id": "HHA Concept 1:horror"
         },
         {
-          "name": "B29A1A78",
-          "id": "HHA Concept 1:B29A1A78"
+          "name": "heritage",
+          "id": "HHA Concept 1:heritage"
         },
         {
-          "name": "Hospital",
-          "id": "HHA Concept 1:Hospital"
+          "name": "hospital",
+          "id": "HHA Concept 1:hospital"
         },
         {
-          "name": "4FF0F8CD",
-          "id": "HHA Concept 1:4FF0F8CD"
+          "name": "sci-fi",
+          "id": "HHA Concept 1:sci-fi"
         },
         {
-          "name": "Country",
-          "id": "HHA Concept 1:Country"
+          "name": "café",
+          "id": "HHA Concept 1:café"
         },
         {
-          "name": "5176BB25",
-          "id": "HHA Concept 1:5176BB25"
+          "name": "supermarket",
+          "id": "HHA Concept 1:supermarket"
         },
         {
-          "name": "EF8FD02E",
-          "id": "HHA Concept 1:EF8FD02E"
-        },
-        {
-          "name": "C4A03996",
-          "id": "HHA Concept 1:C4A03996"
-        },
-        {
-          "name": "A4C811EF",
-          "id": "HHA Concept 1:A4C811EF"
-        },
-        {
-          "name": "538ACC75",
-          "id": "HHA Concept 1:538ACC75"
-        },
-        {
-          "name": "EB39891A",
-          "id": "HHA Concept 1:EB39891A"
-        },
-        {
-          "name": "3758804A",
-          "id": "HHA Concept 1:3758804A"
-        },
-        {
-          "name": "Fashionable",
-          "id": "HHA Concept 1:Fashionable"
-        },
-        {
-          "name": "5.85E+06",
-          "id": "HHA Concept 1:5.85E+06"
-        },
-        {
-          "name": "Retro",
-          "id": "HHA Concept 1:Retro"
-        },
-        {
-          "name": "B00A78D1",
-          "id": "HHA Concept 1:B00A78D1"
-        },
-        {
-          "name": "Town",
-          "id": "HHA Concept 1:Town"
-        },
-        {
-          "name": "DF9EFF9F",
-          "id": "HHA Concept 1:DF9EFF9F"
-        },
-        {
-          "name": "6435D20D",
-          "id": "HHA Concept 1:6435D20D"
-        },
-        {
-          "name": "Sports",
-          "id": "HHA Concept 1:Sports"
-        },
-        {
-          "name": "Nature",
-          "id": "HHA Concept 1:Nature"
-        },
-        {
-          "name": "8A6AB7ED",
-          "id": "HHA Concept 1:8A6AB7ED"
+          "name": "stylish",
+          "id": "HHA Concept 1:stylish"
         }
       ]
     },
@@ -4835,6 +4795,14 @@
           "id": "HHA Concept 2:None"
         },
         {
+          "name": "lab",
+          "id": "HHA Concept 2:lab"
+        },
+        {
+          "name": "local",
+          "id": "HHA Concept 2:local"
+        },
+        {
           "name": "expensive",
           "id": "HHA Concept 2:expensive"
         },
@@ -4847,36 +4815,84 @@
           "id": "HHA Concept 2:shop"
         },
         {
+          "name": "arcade",
+          "id": "HHA Concept 2:arcade"
+        },
+        {
           "name": "fancy",
           "id": "HHA Concept 2:fancy"
+        },
+        {
+          "name": "nature",
+          "id": "HHA Concept 2:nature"
         },
         {
           "name": "facility",
           "id": "HHA Concept 2:facility"
         },
         {
-          "name": "heritage",
-          "id": "HHA Concept 2:heritage"
+          "name": "fantasy",
+          "id": "HHA Concept 2:fantasy"
         },
         {
-          "name": "school",
-          "id": "HHA Concept 2:school"
+          "name": "heritage",
+          "id": "HHA Concept 2:heritage"
         },
         {
           "name": "garden",
           "id": "HHA Concept 2:garden"
         },
         {
+          "name": "resort",
+          "id": "HHA Concept 2:resort"
+        },
+        {
+          "name": "ocean",
+          "id": "HHA Concept 2:ocean"
+        },
+        {
+          "name": "school",
+          "id": "HHA Concept 2:school"
+        },
+        {
+          "name": "city life",
+          "id": "HHA Concept 2:city life"
+        },
+        {
+          "name": "ancient",
+          "id": "HHA Concept 2:ancient"
+        },
+        {
+          "name": "hospital",
+          "id": "HHA Concept 2:hospital"
+        },
+        {
+          "name": "restaurant",
+          "id": "HHA Concept 2:restaurant"
+        },
+        {
           "name": "party",
           "id": "HHA Concept 2:party"
         },
         {
-          "name": "harmonious",
-          "id": "HHA Concept 2:harmonious"
+          "name": "amusement park",
+          "id": "HHA Concept 2:amusement park"
         },
         {
-          "name": "workshop",
-          "id": "HHA Concept 2:workshop"
+          "name": "sports",
+          "id": "HHA Concept 2:sports"
+        },
+        {
+          "name": "café",
+          "id": "HHA Concept 2:café"
+        },
+        {
+          "name": "retro",
+          "id": "HHA Concept 2:retro"
+        },
+        {
+          "name": "public bath",
+          "id": "HHA Concept 2:public bath"
         },
         {
           "name": "concert",
@@ -4887,132 +4903,76 @@
           "id": "HHA Concept 2:office"
         },
         {
+          "name": "European",
+          "id": "HHA Concept 2:European"
+        },
+        {
           "name": "living room",
           "id": "HHA Concept 2:living room"
+        },
+        {
+          "name": "sci-fi",
+          "id": "HHA Concept 2:sci-fi"
+        },
+        {
+          "name": "workshop",
+          "id": "HHA Concept 2:workshop"
+        },
+        {
+          "name": "park",
+          "id": "HHA Concept 2:park"
         },
         {
           "name": "horror",
           "id": "HHA Concept 2:horror"
         },
         {
-          "name": "outdoors",
-          "id": "HHA Concept 2:outdoors"
-        },
-        {
-          "name": "fitness",
-          "id": "HHA Concept 2:fitness"
-        },
-        {
-          "name": "space",
-          "id": "HHA Concept 2:space"
-        },
-        {
           "name": "music",
           "id": "HHA Concept 2:music"
         },
         {
-          "name": "Town",
-          "id": "HHA Concept 2:Town"
+          "name": "outdoors",
+          "id": "HHA Concept 2:outdoors"
         },
         {
-          "name": "4FF0F8CD",
-          "id": "HHA Concept 2:4FF0F8CD"
+          "name": "harmonious",
+          "id": "HHA Concept 2:harmonious"
         },
         {
-          "name": "Fashionable",
-          "id": "HHA Concept 2:Fashionable"
-        },
-        {
-          "name": "Sports",
-          "id": "HHA Concept 2:Sports"
-        },
-        {
-          "name": "Nature",
-          "id": "HHA Concept 2:Nature"
-        },
-        {
-          "name": "5176BB25",
-          "id": "HHA Concept 2:5176BB25"
-        },
-        {
-          "name": "Resort",
-          "id": "HHA Concept 2:Resort"
-        },
-        {
-          "name": "6435D20D",
-          "id": "HHA Concept 2:6435D20D"
-        },
-        {
-          "name": "EF8FD02E",
-          "id": "HHA Concept 2:EF8FD02E"
-        },
-        {
-          "name": "B00A78D1",
-          "id": "HHA Concept 2:B00A78D1"
-        },
-        {
-          "name": "DF9EFF9F",
-          "id": "HHA Concept 2:DF9EFF9F"
-        },
-        {
-          "name": "538ACC75",
-          "id": "HHA Concept 2:538ACC75"
-        },
-        {
-          "name": "EB39891A",
-          "id": "HHA Concept 2:EB39891A"
-        },
-        {
-          "name": "3758804A",
-          "id": "HHA Concept 2:3758804A"
-        },
-        {
-          "name": "A4C811EF",
-          "id": "HHA Concept 2:A4C811EF"
-        },
-        {
-          "name": "Hospital",
-          "id": "HHA Concept 2:Hospital"
-        },
-        {
-          "name": "8A6AB7ED",
-          "id": "HHA Concept 2:8A6AB7ED"
-        },
-        {
-          "name": "B29A1A78",
-          "id": "HHA Concept 2:B29A1A78"
-        },
-        {
-          "name": "5.85E+06",
-          "id": "HHA Concept 2:5.85E+06"
-        },
-        {
-          "name": "Country",
-          "id": "HHA Concept 2:Country"
-        },
-        {
-          "name": "Retro",
-          "id": "HHA Concept 2:Retro"
+          "name": "construction site",
+          "id": "HHA Concept 2:construction site"
         },
         {
           "name": "kitchen",
           "id": "HHA Concept 2:kitchen"
         },
         {
-          "name": "ocean",
-          "id": "HHA Concept 2:ocean"
-        },
-        {
-          "name": "C4A03996",
-          "id": "HHA Concept 2:C4A03996"
-        },
-        {
-          "name": "den",
-          "id": "HHA Concept 2:den"
+          "name": "fitness",
+          "id": "HHA Concept 2:fitness"
         },
         {
           "name": "freezing cold",
           "id": "HHA Concept 2:freezing cold"
+        },
+        {
+          "name": "space",
+          "id": "HHA Concept 2:space"
+        },
+        {
+          "name": "stylish",
+          "id": "HHA Concept 2:stylish"
+        },
+        {
+          "name": "supermarket",
+          "id": "HHA Concept 2:supermarket"
+        },
+        {
+          "name": "apparel shop",
+          "id": "HHA Concept 2:apparel shop"
+        },
+        {
+          "name": "den",
+          "id": "HHA Concept 2:den"
         }
       ]
     },
@@ -5133,6 +5093,10 @@
           "id": "HHA Series:My Melody"
         },
         {
+          "name": "wedding",
+          "id": "HHA Series:wedding"
+        },
+        {
           "name": "pirate",
           "id": "HHA Series:pirate"
         },
@@ -5149,8 +5113,16 @@
           "id": "HHA Series:shell"
         },
         {
+          "name": "simple",
+          "id": "HHA Series:simple"
+        },
+        {
           "name": "spooky",
           "id": "HHA Series:spooky"
+        },
+        {
+          "name": "plaza",
+          "id": "HHA Series:plaza"
         },
         {
           "name": "throwback",
@@ -5161,10 +5133,6 @@
           "id": "HHA Series:Turkey Day"
         },
         {
-          "name": "wedding",
-          "id": "HHA Series:wedding"
-        },
-        {
           "name": "wooden",
           "id": "HHA Series:wooden"
         },
@@ -5173,48 +5141,40 @@
           "id": "HHA Series:wooden block"
         },
         {
-          "name": "Cool",
-          "id": "HHA Series:Cool"
+          "name": "cool",
+          "id": "HHA Series:cool"
         },
         {
-          "name": "8B5A435B",
-          "id": "HHA Series:8B5A435B"
+          "name": "dreamy",
+          "id": "HHA Series:dreamy"
         },
         {
-          "name": "Elegant",
-          "id": "HHA Series:Elegant"
+          "name": "elegant",
+          "id": "HHA Series:elegant"
         },
         {
-          "name": "29B111C8",
-          "id": "HHA Series:29B111C8"
+          "name": "Moroccan",
+          "id": "HHA Series:Moroccan"
         },
         {
-          "name": "42224322",
-          "id": "HHA Series:42224322"
+          "name": "Nordic",
+          "id": "HHA Series:Nordic"
         },
         {
-          "name": "719EC1C4",
-          "id": "HHA Series:719EC1C4"
+          "name": "patchwork",
+          "id": "HHA Series:patchwork"
         },
         {
-          "name": "C515F721",
-          "id": "HHA Series:C515F721"
+          "name": "ranch",
+          "id": "HHA Series:ranch"
         },
         {
-          "name": "Country",
-          "id": "HHA Series:Country"
+          "name": "sloppy",
+          "id": "HHA Series:sloppy"
         },
         {
-          "name": "Simple",
-          "id": "HHA Series:Simple"
-        },
-        {
-          "name": "422596FF",
-          "id": "HHA Series:422596FF"
-        },
-        {
-          "name": "6EBC6A26",
-          "id": "HHA Series:6EBC6A26"
+          "name": "vintage",
+          "id": "HHA Series:vintage"
         },
         {
           "name": "motherly",
@@ -5257,6 +5217,10 @@
         {
           "name": "imperial dining",
           "id": "HHA Set:imperial dining"
+        },
+        {
+          "name": "iron garden",
+          "id": "HHA Set:iron garden"
         },
         {
           "name": "pet",
@@ -5303,44 +5267,44 @@
           "id": "HHA Set:study"
         },
         {
-          "name": "C47890B4",
-          "id": "HHA Set:C47890B4"
+          "name": "artsy",
+          "id": "HHA Set:artsy"
         },
         {
-          "name": "42BEF91E",
-          "id": "HHA Set:42BEF91E"
+          "name": "castle",
+          "id": "HHA Set:castle"
         },
         {
-          "name": "A12FA829",
-          "id": "HHA Set:A12FA829"
+          "name": "gaming",
+          "id": "HHA Set:gaming"
         },
         {
-          "name": "Garden",
-          "id": "HHA Set:Garden"
+          "name": "garden",
+          "id": "HHA Set:garden"
         },
         {
-          "name": "Kitchen",
-          "id": "HHA Set:Kitchen"
+          "name": "kitchen",
+          "id": "HHA Set:kitchen"
         },
         {
-          "name": "99CA18C5",
-          "id": "HHA Set:99CA18C5"
+          "name": "chalkboard",
+          "id": "HHA Set:chalkboard"
         },
         {
-          "name": "2B65863B",
-          "id": "HHA Set:2B65863B"
+          "name": "metal and wood",
+          "id": "HHA Set:metal and wood"
         },
         {
-          "name": "6150ABD5",
-          "id": "HHA Set:6150ABD5"
-        },
-        {
-          "name": "AD64AD18",
-          "id": "HHA Set:AD64AD18"
+          "name": "ruined",
+          "id": "HHA Set:ruined"
         },
         {
           "name": "cherry",
           "id": "HHA Set:cherry"
+        },
+        {
+          "name": "bug head",
+          "id": "HHA Set:bug head"
         }
       ]
     },
@@ -5389,6 +5353,10 @@
           "id": "HHA Category:Plant"
         },
         {
+          "name": "Kitchen",
+          "id": "HHA Category:Kitchen"
+        },
+        {
           "name": "Trash",
           "id": "HHA Category:Trash"
         },
@@ -5403,10 +5371,6 @@
         {
           "name": "SmallGoods",
           "id": "HHA Category:SmallGoods"
-        },
-        {
-          "name": "Kitchen",
-          "id": "HHA Category:Kitchen"
         },
         {
           "name": "Food",
@@ -5439,8 +5403,8 @@
           "id": "Speaker Type:Cheap"
         },
         {
-          "name": "964812AF",
-          "id": "Speaker Type:964812AF"
+          "name": "Music Box",
+          "id": "Speaker Type:Music Box"
         }
       ]
     },
@@ -6775,10 +6739,6 @@
           "id": "Source:Nintendo"
         },
         {
-          "name": "VeniceCarnival",
-          "id": "Source:VeniceCarnival"
-        },
-        {
           "name": "Nook Shopping Daily Selection",
           "id": "Source:Nook Shopping Daily Selection"
         },
@@ -6803,10 +6763,6 @@
           "id": "Source:NookLink"
         },
         {
-          "name": "Tomatina",
-          "id": "Source:Tomatina"
-        },
-        {
           "name": "RadioExercise",
           "id": "Source:RadioExercise"
         },
@@ -6819,8 +6775,8 @@
           "id": "Source:Kicks"
         },
         {
-          "name": "ShoesBagShop_Commune",
-          "id": "Source:ShoesBagShop_Commune"
+          "name": "Kick's Commune",
+          "id": "Source:Kick's Commune"
         },
         {
           "name": "ManCatalogSpTab",
@@ -7691,8 +7647,8 @@
           "id": "Source:Franklin"
         },
         {
-          "name": "CmlCommune_WallFloor",
-          "id": "Source:CmlCommune_WallFloor"
+          "name": "Saharah's Commune",
+          "id": "Source:Saharah's Commune"
         },
         {
           "name": "ManCatalogSpTab",
@@ -7713,18 +7669,6 @@
         {
           "name": "Mom",
           "id": "Source:Mom"
-        },
-        {
-          "name": "CmlCommune_RugM",
-          "id": "Source:CmlCommune_RugM"
-        },
-        {
-          "name": "CmlCommune_RugL",
-          "id": "Source:CmlCommune_RugL"
-        },
-        {
-          "name": "CmlCommune_RugS",
-          "id": "Source:CmlCommune_RugS"
         }
       ]
     },
@@ -7913,8 +7857,12 @@
           "id": "HHA Concept 1:bathroom"
         },
         {
-          "name": "expensive",
-          "id": "HHA Concept 1:expensive"
+          "name": "stylish",
+          "id": "HHA Concept 1:stylish"
+        },
+        {
+          "name": "city life",
+          "id": "HHA Concept 1:city life"
         },
         {
           "name": "facility",
@@ -7941,28 +7889,52 @@
           "id": "HHA Concept 1:living room"
         },
         {
+          "name": "expensive",
+          "id": "HHA Concept 1:expensive"
+        },
+        {
           "name": "party",
           "id": "HHA Concept 1:party"
         },
         {
-          "name": "shop",
-          "id": "HHA Concept 1:shop"
-        },
-        {
-          "name": "fitness",
-          "id": "HHA Concept 1:fitness"
+          "name": "sports",
+          "id": "HHA Concept 1:sports"
         },
         {
           "name": "workshop",
           "id": "HHA Concept 1:workshop"
         },
         {
+          "name": "arcade",
+          "id": "HHA Concept 1:arcade"
+        },
+        {
           "name": "school",
           "id": "HHA Concept 1:school"
         },
         {
+          "name": "local",
+          "id": "HHA Concept 1:local"
+        },
+        {
+          "name": "ancient",
+          "id": "HHA Concept 1:ancient"
+        },
+        {
+          "name": "amusement park",
+          "id": "HHA Concept 1:amusement park"
+        },
+        {
+          "name": "nature",
+          "id": "HHA Concept 1:nature"
+        },
+        {
           "name": "space",
           "id": "HHA Concept 1:space"
+        },
+        {
+          "name": "supermarket",
+          "id": "HHA Concept 1:supermarket"
         },
         {
           "name": "kitchen",
@@ -7981,40 +7953,28 @@
           "id": "HHA Concept 1:ocean"
         },
         {
+          "name": "retro",
+          "id": "HHA Concept 1:retro"
+        },
+        {
+          "name": "European",
+          "id": "HHA Concept 1:European"
+        },
+        {
           "name": "den",
           "id": "HHA Concept 1:den"
         },
         {
-          "name": "heritage",
-          "id": "HHA Concept 1:heritage"
+          "name": "café",
+          "id": "HHA Concept 1:café"
         },
         {
-          "name": "Country",
-          "id": "HHA Concept 1:Country"
+          "name": "hospital",
+          "id": "HHA Concept 1:hospital"
         },
         {
-          "name": "EF8FD02E",
-          "id": "HHA Concept 1:EF8FD02E"
-        },
-        {
-          "name": "Nature",
-          "id": "HHA Concept 1:Nature"
-        },
-        {
-          "name": "Town",
-          "id": "HHA Concept 1:Town"
-        },
-        {
-          "name": "Fashionable",
-          "id": "HHA Concept 1:Fashionable"
-        },
-        {
-          "name": "Hospital",
-          "id": "HHA Concept 1:Hospital"
-        },
-        {
-          "name": "4FF0F8CD",
-          "id": "HHA Concept 1:4FF0F8CD"
+          "name": "sci-fi",
+          "id": "HHA Concept 1:sci-fi"
         },
         {
           "name": "None",
@@ -8025,16 +7985,28 @@
           "id": "HHA Concept 1:outdoors"
         },
         {
-          "name": "Sports",
-          "id": "HHA Concept 1:Sports"
+          "name": "fitness",
+          "id": "HHA Concept 1:fitness"
         },
         {
-          "name": "5.85E+06",
-          "id": "HHA Concept 1:5.85E+06"
+          "name": "shop",
+          "id": "HHA Concept 1:shop"
+        },
+        {
+          "name": "apparel shop",
+          "id": "HHA Concept 1:apparel shop"
         },
         {
           "name": "concert",
           "id": "HHA Concept 1:concert"
+        },
+        {
+          "name": "restaurant",
+          "id": "HHA Concept 1:restaurant"
+        },
+        {
+          "name": "heritage",
+          "id": "HHA Concept 1:heritage"
         },
         {
           "name": "office",
@@ -8045,24 +8017,8 @@
           "id": "HHA Concept 1:music"
         },
         {
-          "name": "EB39891A",
-          "id": "HHA Concept 1:EB39891A"
-        },
-        {
-          "name": "A4C811EF",
-          "id": "HHA Concept 1:A4C811EF"
-        },
-        {
-          "name": "538ACC75",
-          "id": "HHA Concept 1:538ACC75"
-        },
-        {
-          "name": "3758804A",
-          "id": "HHA Concept 1:3758804A"
-        },
-        {
-          "name": "DF9EFF9F",
-          "id": "HHA Concept 1:DF9EFF9F"
+          "name": "fantasy",
+          "id": "HHA Concept 1:fantasy"
         }
       ]
     },
@@ -8071,16 +8027,32 @@
       "id": "HHA Concept 2",
       "children": [
         {
+          "name": "public bath",
+          "id": "HHA Concept 2:public bath"
+        },
+        {
           "name": "facility",
           "id": "HHA Concept 2:facility"
         },
         {
-          "name": "living room",
-          "id": "HHA Concept 2:living room"
+          "name": "amusement park",
+          "id": "HHA Concept 2:amusement park"
         },
         {
           "name": "shop",
           "id": "HHA Concept 2:shop"
+        },
+        {
+          "name": "local",
+          "id": "HHA Concept 2:local"
+        },
+        {
+          "name": "retro",
+          "id": "HHA Concept 2:retro"
+        },
+        {
+          "name": "workshop",
+          "id": "HHA Concept 2:workshop"
         },
         {
           "name": "None",
@@ -8091,6 +8063,18 @@
           "id": "HHA Concept 2:child's room"
         },
         {
+          "name": "restaurant",
+          "id": "HHA Concept 2:restaurant"
+        },
+        {
+          "name": "European",
+          "id": "HHA Concept 2:European"
+        },
+        {
+          "name": "living room",
+          "id": "HHA Concept 2:living room"
+        },
+        {
           "name": "school",
           "id": "HHA Concept 2:school"
         },
@@ -8099,12 +8083,28 @@
           "id": "HHA Concept 2:expensive"
         },
         {
-          "name": "fancy",
-          "id": "HHA Concept 2:fancy"
+          "name": "nature",
+          "id": "HHA Concept 2:nature"
+        },
+        {
+          "name": "city life",
+          "id": "HHA Concept 2:city life"
+        },
+        {
+          "name": "construction site",
+          "id": "HHA Concept 2:construction site"
         },
         {
           "name": "music",
           "id": "HHA Concept 2:music"
+        },
+        {
+          "name": "ancient",
+          "id": "HHA Concept 2:ancient"
+        },
+        {
+          "name": "stylish",
+          "id": "HHA Concept 2:stylish"
         },
         {
           "name": "horror",
@@ -8123,96 +8123,72 @@
           "id": "HHA Concept 2:heritage"
         },
         {
-          "name": "workshop",
-          "id": "HHA Concept 2:workshop"
+          "name": "sci-fi",
+          "id": "HHA Concept 2:sci-fi"
         },
         {
-          "name": "party",
-          "id": "HHA Concept 2:party"
+          "name": "fancy",
+          "id": "HHA Concept 2:fancy"
         },
         {
-          "name": "garden",
-          "id": "HHA Concept 2:garden"
-        },
-        {
-          "name": "Town",
-          "id": "HHA Concept 2:Town"
-        },
-        {
-          "name": "6435D20D",
-          "id": "HHA Concept 2:6435D20D"
-        },
-        {
-          "name": "concert",
-          "id": "HHA Concept 2:concert"
-        },
-        {
-          "name": "A4C811EF",
-          "id": "HHA Concept 2:A4C811EF"
-        },
-        {
-          "name": "Sports",
-          "id": "HHA Concept 2:Sports"
-        },
-        {
-          "name": "8A6AB7ED",
-          "id": "HHA Concept 2:8A6AB7ED"
-        },
-        {
-          "name": "DF9EFF9F",
-          "id": "HHA Concept 2:DF9EFF9F"
-        },
-        {
-          "name": "Retro",
-          "id": "HHA Concept 2:Retro"
-        },
-        {
-          "name": "B29A1A78",
-          "id": "HHA Concept 2:B29A1A78"
-        },
-        {
-          "name": "kitchen",
-          "id": "HHA Concept 2:kitchen"
-        },
-        {
-          "name": "5176BB25",
-          "id": "HHA Concept 2:5176BB25"
-        },
-        {
-          "name": "EB39891A",
-          "id": "HHA Concept 2:EB39891A"
-        },
-        {
-          "name": "5.85E+06",
-          "id": "HHA Concept 2:5.85E+06"
-        },
-        {
-          "name": "Country",
-          "id": "HHA Concept 2:Country"
+          "name": "fantasy",
+          "id": "HHA Concept 2:fantasy"
         },
         {
           "name": "ocean",
           "id": "HHA Concept 2:ocean"
         },
         {
+          "name": "party",
+          "id": "HHA Concept 2:party"
+        },
+        {
+          "name": "office",
+          "id": "HHA Concept 2:office"
+        },
+        {
+          "name": "garden",
+          "id": "HHA Concept 2:garden"
+        },
+        {
+          "name": "café",
+          "id": "HHA Concept 2:café"
+        },
+        {
+          "name": "resort",
+          "id": "HHA Concept 2:resort"
+        },
+        {
+          "name": "concert",
+          "id": "HHA Concept 2:concert"
+        },
+        {
+          "name": "sports",
+          "id": "HHA Concept 2:sports"
+        },
+        {
+          "name": "park",
+          "id": "HHA Concept 2:park"
+        },
+        {
+          "name": "lab",
+          "id": "HHA Concept 2:lab"
+        },
+        {
+          "name": "kitchen",
+          "id": "HHA Concept 2:kitchen"
+        },
+        {
+          "name": "apparel shop",
+          "id": "HHA Concept 2:apparel shop"
+        },
+        {
           "name": "den",
           "id": "HHA Concept 2:den"
         },
         {
-          "name": "Nature",
-          "id": "HHA Concept 2:Nature"
-        },
-        {
-          "name": "3758804A",
-          "id": "HHA Concept 2:3758804A"
-        },
-        {
-          "name": "EF8FD02E",
-          "id": "HHA Concept 2:EF8FD02E"
-        },
-        {
-          "name": "538ACC75",
-          "id": "HHA Concept 2:538ACC75"
+          "name": "supermarket",
+          "id": "HHA Concept 2:supermarket"
         }
       ]
     },
@@ -8227,6 +8203,10 @@
         {
           "name": "bamboo",
           "id": "HHA Series:bamboo"
+        },
+        {
+          "name": "Moroccan",
+          "id": "HHA Series:Moroccan"
         },
         {
           "name": "Mario",
@@ -8297,12 +8277,16 @@
           "id": "HHA Series:Pompompurin"
         },
         {
-          "name": "rattan",
-          "id": "HHA Series:rattan"
+          "name": "simple",
+          "id": "HHA Series:simple"
         },
         {
           "name": "spooky",
           "id": "HHA Series:spooky"
+        },
+        {
+          "name": "shell",
+          "id": "HHA Series:shell"
         },
         {
           "name": "Turkey Day",
@@ -8329,8 +8313,12 @@
           "id": "HHA Series:flowers"
         },
         {
-          "name": "shell",
-          "id": "HHA Series:shell"
+          "name": "sloppy",
+          "id": "HHA Series:sloppy"
+        },
+        {
+          "name": "diner",
+          "id": "HHA Series:diner"
         }
       ]
     }
@@ -9067,28 +9055,12 @@
           "id": "Source:Cyrus"
         },
         {
-          "name": "NewYearWorld2",
-          "id": "Source:NewYearWorld2"
-        },
-        {
-          "name": "MileExchangeATM",
-          "id": "Source:MileExchangeATM"
-        },
-        {
           "name": "ShopOneRoom",
           "id": "Source:ShopOneRoom"
         },
         {
-          "name": "MileExchangeFtrAfterED",
-          "id": "Source:MileExchangeFtrAfterED"
-        },
-        {
           "name": "OneRoomBigFtr",
           "id": "Source:OneRoomBigFtr"
-        },
-        {
-          "name": "WinterSolstice_JP",
-          "id": "Source:WinterSolstice_JP"
         },
         {
           "name": "ShopOneRoomDefault",
@@ -9103,10 +9075,6 @@
           "id": "Source:CafeMaster"
         },
         {
-          "name": "SummerSolstice_EU",
-          "id": "Source:SummerSolstice_EU"
-        },
-        {
           "name": "RadioExercise",
           "id": "Source:RadioExercise"
         },
@@ -9117,14 +9085,6 @@
         {
           "name": "RecycleBox_Fr",
           "id": "Source:RecycleBox_Fr"
-        },
-        {
-          "name": "MileExchangeStoreRoom",
-          "id": "Source:MileExchangeStoreRoom"
-        },
-        {
-          "name": "MileExchangeRecipeDIYStorage",
-          "id": "Source:MileExchangeRecipeDIYStorage"
         },
         {
           "name": "Nintendo",
@@ -9171,16 +9131,12 @@
           "id": "Source:ShopOneRoomNonSouvenir"
         },
         {
-          "name": "BptSale",
-          "id": "Source:BptSale"
+          "name": "Katrina's Cleansing Service",
+          "id": "Source:Katrina's Cleansing Service"
         },
         {
           "name": "OneRoomBenefit",
           "id": "Source:OneRoomBenefit"
-        },
-        {
-          "name": "NewYearEtoTiger",
-          "id": "Source:NewYearEtoTiger"
         },
         {
           "name": "Blathers",
@@ -9239,44 +9195,24 @@
           "id": "Source:Recycle box"
         },
         {
-          "name": "VeniceCarnival",
-          "id": "Source:VeniceCarnival"
-        },
-        {
           "name": "OneRoomTailorKKFes",
           "id": "Source:OneRoomTailorKKFes"
-        },
-        {
-          "name": "Tomatina",
-          "id": "Source:Tomatina"
         },
         {
           "name": "Kicks",
           "id": "Source:Kicks"
         },
         {
-          "name": "ShoesBagShop_Commune",
-          "id": "Source:ShoesBagShop_Commune"
+          "name": "Kick's Commune",
+          "id": "Source:Kick's Commune"
         },
         {
           "name": "Saharah",
           "id": "Source:Saharah"
         },
         {
-          "name": "CmlCommune_WallFloor",
-          "id": "Source:CmlCommune_WallFloor"
-        },
-        {
-          "name": "CmlCommune_RugM",
-          "id": "Source:CmlCommune_RugM"
-        },
-        {
-          "name": "CmlCommune_RugL",
-          "id": "Source:CmlCommune_RugL"
-        },
-        {
-          "name": "CmlCommune_RugS",
-          "id": "Source:CmlCommune_RugS"
+          "name": "Saharah's Commune",
+          "id": "Source:Saharah's Commune"
         },
         {
           "name": "Balloons",
@@ -9423,76 +9359,100 @@
           "id": "Source:Collecting wood eggs"
         },
         {
-          "name": "Efitem",
-          "id": "Source:Efitem"
+          "name": "Catching a horse mackerel",
+          "id": "Source:Catching a horse mackerel"
         },
         {
-          "name": "6C1BC3CE",
-          "id": "Source:6C1BC3CE"
+          "name": "Catch an anchovy",
+          "id": "Source:Catch an anchovy"
         },
         {
-          "name": "BA81C736",
-          "id": "Source:BA81C736"
+          "name": "Daisy Mae",
+          "id": "Source:Daisy Mae"
         },
         {
-          "name": "FDC091E1",
-          "id": "Source:FDC091E1"
+          "name": "Catching a barred knifejaw",
+          "id": "Source:Catching a barred knifejaw"
         },
         {
-          "name": "EF366997",
-          "id": "Source:EF366997"
+          "name": "WherearenMncBoxBrick",
+          "id": "Source:WherearenMncBoxBrick"
         },
         {
-          "name": "415F291C",
-          "id": "Source:415F291C"
+          "name": "Basic Cooking Recipes",
+          "id": "Source:Basic Cooking Recipes"
         },
         {
-          "name": "3E61747E",
-          "id": "Source:3E61747E"
+          "name": "Catching a blue marlin",
+          "id": "Source:Catching a blue marlin"
         },
         {
-          "name": "667FEF40",
-          "id": "Source:667FEF40"
+          "name": "Catching a salmon",
+          "id": "Source:Catching a salmon"
         },
         {
-          "name": "776D5010",
-          "id": "Source:776D5010"
+          "name": "Be a Chef! DIY Recipes+",
+          "id": "Source:Be a Chef! DIY Recipes+"
         },
         {
-          "name": "5AE3CBEB",
-          "id": "Source:5AE3CBEB"
+          "name": "Turkey Day Recipes",
+          "id": "Source:Turkey Day Recipes"
         },
         {
-          "name": "27A71BCC",
-          "id": "Source:27A71BCC"
+          "name": "WherearenMncBoxConcrete",
+          "id": "Source:WherearenMncBoxConcrete"
         },
         {
-          "name": "D3B03812",
-          "id": "Source:D3B03812"
+          "name": "WherearenMncBoxComplete",
+          "id": "Source:WherearenMncBoxComplete"
         },
         {
-          "name": "440FBB4E",
-          "id": "Source:440FBB4E"
+          "name": "Catching a dab",
+          "id": "Source:Catching a dab"
         },
         {
-          "name": "8913E9E7",
-          "id": "Source:8913E9E7"
+          "name": "Custom Fencing in a Flash",
+          "id": "Source:Custom Fencing in a Flash"
         },
         {
-          "name": "DDC68604",
-          "id": "Source:DDC68604"
+          "name": "WherearenMncBoxMarble",
+          "id": "Source:WherearenMncBoxMarble"
         },
         {
-          "name": "93B62DA1",
-          "id": "Source:93B62DA1"
+          "name": "WherearenMncBoxPlain",
+          "id": "Source:WherearenMncBoxPlain"
         },
         {
-          "name": "00E89F29",
-          "id": "Source:00E89F29"
+          "name": "WherearenMncBoxSteel",
+          "id": "Source:WherearenMncBoxSteel"
         },
         {
-          "name": "37A52400",
-          "id": "Source:37A52400"
+          "name": "WherearenMncLesson",
+          "id": "Source:WherearenMncLesson"
+        },
+        {
+          "name": "WherearenKabetasuUnlock",
+          "id": "Source:WherearenKabetasuUnlock"
+        },
+        {
+          "name": "Catching a red snapper",
+          "id": "Source:Catching a red snapper"
+        },
+        {
+          "name": "Brewster",
+          "id": "Source:Brewster"
+        },
+        {
+          "name": "Catching a olive flounder",
+          "id": "Source:Catching a olive flounder"
+        },
+        {
+          "name": "Catching a sea bass",
+          "id": "Source:Catching a sea bass"
+        },
+        {
+          "name": "Catching a squid",
+          "id": "Source:Catching a squid"
         },
         {
           "name": "Redd's Raffle",
@@ -9507,20 +9467,8 @@
           "id": "Source:May Day Tour"
         },
         {
-          "name": "FoxCommuneFood",
-          "id": "Source:FoxCommuneFood"
-        },
-        {
-          "name": "FoxCommuneSubtool",
-          "id": "Source:FoxCommuneSubtool"
-        },
-        {
-          "name": "ShopSubTool",
-          "id": "Source:ShopSubTool"
-        },
-        {
-          "name": "FoxCommuneBook",
-          "id": "Source:FoxCommuneBook"
+          "name": "Redd's Commune Raffle",
+          "id": "Source:Redd's Commune Raffle"
         },
         {
           "name": "Assessing fossils",
@@ -9535,12 +9483,16 @@
           "id": "Source:K.K. concert"
         },
         {
+          "name": "Hip Reaction Collection",
+          "id": "Source:Hip Reaction Collection"
+        },
+        {
           "name": "Viva Festivale Reaction Set",
           "id": "Source:Viva Festivale Reaction Set"
         },
         {
-          "name": "Hip Reaction Collection",
-          "id": "Source:Hip Reaction Collection"
+          "name": "New Reactions Notebook",
+          "id": "Source:New Reactions Notebook"
         },
         {
           "name": "Resident Services Upgrade",
@@ -9591,20 +9543,8 @@
           "id": "Source:Dig Spot"
         },
         {
-          "name": "Daisy Mae",
-          "id": "Source:Daisy Mae"
-        },
-        {
           "name": "Planting a bamboo shoot",
           "id": "Source:Planting a bamboo shoot"
-        },
-        {
-          "name": "ShopCookingRecipeBook1",
-          "id": "Source:ShopCookingRecipeBook1"
-        },
-        {
-          "name": "MileExchangeDIYRecipePlus",
-          "id": "Source:MileExchangeDIYRecipePlus"
         },
         {
           "name": "Glowing dig spot",
@@ -9671,14 +9611,6 @@
           "id": "Source:Beach"
         },
         {
-          "name": "MileExchangeOfficePlus",
-          "id": "Source:MileExchangeOfficePlus"
-        },
-        {
-          "name": "MileExchangeFenceRemake",
-          "id": "Source:MileExchangeFenceRemake"
-        },
-        {
           "name": "Nook Shopping",
           "id": "Source:Nook Shopping"
         },
@@ -9711,20 +9643,12 @@
           "id": "Source:Reese"
         },
         {
-          "name": "MileExchangeTipsApp",
-          "id": "Source:MileExchangeTipsApp"
-        },
-        {
           "name": "5-star town status",
           "id": "Source:5-star town status"
         },
         {
           "name": "Burying bells in a glowing spot",
           "id": "Source:Burying bells in a glowing spot"
-        },
-        {
-          "name": "MileExchangeReactionv200",
-          "id": "Source:MileExchangeReactionv200"
         },
         {
           "name": "Orange Tree",
@@ -9759,24 +9683,32 @@
           "id": "Source:Mail"
         },
         {
-          "name": "MileExchangeBridgeSlopePlus",
-          "id": "Source:MileExchangeBridgeSlopePlus"
-        },
-        {
-          "name": "MileExchangeInteriorPRO",
-          "id": "Source:MileExchangeInteriorPRO"
+          "name": "Digging up a carrot plant",
+          "id": "Source:Digging up a carrot plant"
         },
         {
           "name": "Digging up a pumpkin plant",
           "id": "Source:Digging up a pumpkin plant"
         },
         {
-          "name": "Expired turnips",
-          "id": "Source:Expired turnips"
+          "name": "Digging up a potato plant",
+          "id": "Source:Digging up a potato plant"
         },
         {
-          "name": "MileExchangeHairStylev200",
-          "id": "Source:MileExchangeHairStylev200"
+          "name": "Digging up a sugarcane plant",
+          "id": "Source:Digging up a sugarcane plant"
+        },
+        {
+          "name": "Digging up a tomato plant",
+          "id": "Source:Digging up a tomato plant"
+        },
+        {
+          "name": "Digging up a wheat plant",
+          "id": "Source:Digging up a wheat plant"
+        },
+        {
+          "name": "Expired turnips",
+          "id": "Source:Expired turnips"
         },
         {
           "name": "Harvest_CookingRecipeBook",
@@ -9821,8 +9753,8 @@
           "id": "Tag:Seaside"
         },
         {
-          "name": "Vehicle",
-          "id": "Tag:Vehicle"
+          "name": "Ranch",
+          "id": "Tag:Ranch"
         },
         {
           "name": "Bed",
@@ -9837,8 +9769,8 @@
           "id": "Tag:Chair"
         },
         {
-          "name": "Clock",
-          "id": "Tag:Clock"
+          "name": "Folk Craft Decor",
+          "id": "Tag:Folk Craft Decor"
         },
         {
           "name": "Table",
@@ -9853,16 +9785,8 @@
           "id": "Tag:Chest"
         },
         {
-          "name": "Bathroom Things",
-          "id": "Tag:Bathroom Things"
-        },
-        {
           "name": "Toy",
           "id": "Tag:Toy"
-        },
-        {
-          "name": "Ranch",
-          "id": "Tag:Ranch"
         },
         {
           "name": "Space",
@@ -9897,12 +9821,20 @@
           "id": "Tag:Audio"
         },
         {
-          "name": "Outdoors Decor",
-          "id": "Tag:Outdoors Decor"
+          "name": "Vehicle",
+          "id": "Tag:Vehicle"
         },
         {
           "name": "Sports",
           "id": "Tag:Sports"
+        },
+        {
+          "name": "Bathroom Things",
+          "id": "Tag:Bathroom Things"
+        },
+        {
+          "name": "Toilet",
+          "id": "Tag:Toilet"
         },
         {
           "name": "Seasonal Decor",
@@ -9915,10 +9847,6 @@
         {
           "name": "Animal",
           "id": "Tag:Animal"
-        },
-        {
-          "name": "Fireplace",
-          "id": "Tag:Fireplace"
         },
         {
           "name": "Plants",
@@ -9937,16 +9865,12 @@
           "id": "Tag:Easter"
         },
         {
-          "name": "Kitchen Things",
-          "id": "Tag:Kitchen Things"
+          "name": "School",
+          "id": "Tag:School"
         },
         {
           "name": "Shop",
           "id": "Tag:Shop"
-        },
-        {
-          "name": "School",
-          "id": "Tag:School"
         },
         {
           "name": "Cinnamoroll",
@@ -9961,12 +9885,12 @@
           "id": "Tag:Supplies"
         },
         {
-          "name": "Work Bench",
-          "id": "Tag:Work Bench"
-        },
-        {
           "name": "Facility Decor",
           "id": "Tag:Facility Decor"
+        },
+        {
+          "name": "Work Bench",
+          "id": "Tag:Work Bench"
         },
         {
           "name": "Playground",
@@ -9977,8 +9901,8 @@
           "id": "Tag:Fan"
         },
         {
-          "name": "Toilet",
-          "id": "Tag:Toilet"
+          "name": "Fireplace",
+          "id": "Tag:Fireplace"
         },
         {
           "name": "Insect",
@@ -10001,20 +9925,12 @@
           "id": "Tag:Kiki & Lala"
         },
         {
-          "name": "Folk Craft Decor",
-          "id": "Tag:Folk Craft Decor"
-        },
-        {
           "name": "My Melody",
           "id": "Tag:My Melody"
         },
         {
           "name": "Fish",
           "id": "Tag:Fish"
-        },
-        {
-          "name": "Sewing Table",
-          "id": "Tag:Sewing Table"
         },
         {
           "name": "Pompompurin",
@@ -10025,24 +9941,20 @@
           "id": "Tag:Heating"
         },
         {
-          "name": "Study",
-          "id": "Tag:Study"
+          "name": "Museum",
+          "id": "Tag:Museum"
+        },
+        {
+          "name": "Game Console",
+          "id": "Tag:Game Console"
         },
         {
           "name": "Office",
           "id": "Tag:Office"
         },
         {
-          "name": "Museum",
-          "id": "Tag:Museum"
-        },
-        {
-          "name": "Beauty",
-          "id": "Tag:Beauty"
-        },
-        {
-          "name": "Game Console",
-          "id": "Tag:Game Console"
+          "name": "Kitchen Things",
+          "id": "Tag:Kitchen Things"
         },
         {
           "name": "Special Insect",
@@ -10051,6 +9963,10 @@
         {
           "name": "Dining",
           "id": "Tag:Dining"
+        },
+        {
+          "name": "Study",
+          "id": "Tag:Study"
         },
         {
           "name": "Special Fish",
@@ -10073,8 +9989,12 @@
           "id": "Tag:House Door Decor"
         },
         {
-          "name": "Sculpture",
-          "id": "Tag:Sculpture"
+          "name": "Clock",
+          "id": "Tag:Clock"
+        },
+        {
+          "name": "Posters",
+          "id": "Tag:Posters"
         },
         {
           "name": "CeilingEtc",
@@ -10493,16 +10413,16 @@
           "id": "Tag:Picture"
         },
         {
+          "name": "Sculpture",
+          "id": "Tag:Sculpture"
+        },
+        {
           "name": "Etc",
           "id": "Tag:Etc"
         },
         {
           "name": "Unnecessary",
           "id": "Tag:Unnecessary"
-        },
-        {
-          "name": "Pillar",
-          "id": "Tag:Pillar"
         },
         {
           "name": "FossilUnknown",
@@ -10515,14 +10435,6 @@
         {
           "name": "HaniwaPiece",
           "id": "Tag:HaniwaPiece"
-        },
-        {
-          "name": "Counter",
-          "id": "Tag:Counter"
-        },
-        {
-          "name": "FtrWall",
-          "id": "Tag:FtrWall"
         },
         {
           "name": "FieldVine",
@@ -10987,16 +10899,8 @@
           "id": "Season/Event:Scorpio"
         },
         {
-          "name": "Dano Festival",
-          "id": "Season/Event:Dano Festival"
-        },
-        {
           "name": "Father's Day",
           "id": "Season/Event:Father's Day"
-        },
-        {
-          "name": "Nochevieja",
-          "id": "Season/Event:Nochevieja"
         },
         {
           "name": "April Fools' Day",
@@ -11213,16 +11117,16 @@
           "id": "Category:Wall-mounted"
         },
         {
-          "name": "Food",
-          "id": "Category:Food"
+          "name": "Sweet",
+          "id": "Category:Sweet"
         },
         {
-          "name": "Desert",
-          "id": "Category:Desert"
+          "name": "Savory",
+          "id": "Category:Savory"
         },
         {
-          "name": "Ceiling",
-          "id": "Category:Ceiling"
+          "name": "Ceiling Decor",
+          "id": "Category:Ceiling Decor"
         },
         {
           "name": "Bridge",
@@ -11963,8 +11867,8 @@
           "id": "Variation:Blank"
         },
         {
-          "name": "After school",
-          "id": "Variation:After school"
+          "name": "Scribbles",
+          "id": "Variation:Scribbles"
         },
         {
           "name": "Foreign language",
@@ -12459,12 +12363,12 @@
           "id": "Variation:Shabby"
         },
         {
-          "name": "Beige & white",
-          "id": "Variation:Beige & white"
+          "name": "Ivory & wood",
+          "id": "Variation:Ivory & wood"
         },
         {
-          "name": "Brown & black",
-          "id": "Variation:Brown & black"
+          "name": "Black & wood",
+          "id": "Variation:Black & wood"
         },
         {
           "name": "Caution",
@@ -12551,6 +12455,10 @@
           "id": "Variation:Reddish brown"
         },
         {
+          "name": "Vintage",
+          "id": "Variation:Vintage"
+        },
+        {
           "name": "Coral pink",
           "id": "Variation:Coral pink"
         },
@@ -12627,32 +12535,24 @@
           "id": "Variation:Pearl"
         },
         {
-          "name": "Red roof",
-          "id": "Variation:Red roof"
+          "name": "Red & brown",
+          "id": "Variation:Red & brown"
         },
         {
-          "name": "Green roof",
-          "id": "Variation:Green roof"
+          "name": "Green & dark brown",
+          "id": "Variation:Green & dark brown"
         },
         {
-          "name": "Blue roof",
-          "id": "Variation:Blue roof"
+          "name": "Blue & gray",
+          "id": "Variation:Blue & gray"
         },
         {
-          "name": "Black roof",
-          "id": "Variation:Black roof"
-        },
-        {
-          "name": "Aqua roof",
-          "id": "Variation:Aqua roof"
+          "name": "Aqua & pink",
+          "id": "Variation:Aqua & pink"
         },
         {
           "name": "Light gray",
           "id": "Variation:Light gray"
-        },
-        {
-          "name": "Copper",
-          "id": "Variation:Copper"
         },
         {
           "name": "Vanilla",
@@ -12683,12 +12583,28 @@
           "id": "Variation:Strawberry swirl"
         },
         {
+          "name": "Red & black",
+          "id": "Variation:Red & black"
+        },
+        {
+          "name": "Blue & white",
+          "id": "Variation:Blue & white"
+        },
+        {
+          "name": "Black & silver",
+          "id": "Variation:Black & silver"
+        },
+        {
           "name": "Monochrome",
           "id": "Variation:Monochrome"
         },
         {
           "name": "Zebra",
           "id": "Variation:Zebra"
+        },
+        {
+          "name": "Orange & silver",
+          "id": "Variation:Orange & silver"
         },
         {
           "name": "Graffiti",
@@ -12699,8 +12615,12 @@
           "id": "Variation:Hibiscus flowers"
         },
         {
-          "name": "Off-white",
-          "id": "Variation:Off-white"
+          "name": "Vivid",
+          "id": "Variation:Vivid"
+        },
+        {
+          "name": "Classic",
+          "id": "Variation:Classic"
         },
         {
           "name": "Black & orange",
@@ -12747,6 +12667,14 @@
           "id": "Variation:With ads"
         },
         {
+          "name": "Copper",
+          "id": "Variation:Copper"
+        },
+        {
+          "name": "Rust",
+          "id": "Variation:Rust"
+        },
+        {
           "name": "Garden",
           "id": "Variation:Garden"
         },
@@ -12785,10 +12713,6 @@
         {
           "name": "Mixed wood",
           "id": "Variation:Mixed wood"
-        },
-        {
-          "name": "Vivid",
-          "id": "Variation:Vivid"
         },
         {
           "name": "White granite",
@@ -12857,10 +12781,6 @@
         {
           "name": "Pink-beige",
           "id": "Variation:Pink-beige"
-        },
-        {
-          "name": "Blue & white",
-          "id": "Variation:Blue & white"
         },
         {
           "name": "White & natural finish",
@@ -12951,10 +12871,6 @@
           "id": "Variation:Roses"
         },
         {
-          "name": "Rust",
-          "id": "Variation:Rust"
-        },
-        {
           "name": "Warning",
           "id": "Variation:Warning"
         },
@@ -13001,10 +12917,6 @@
         {
           "name": "Salmon pink",
           "id": "Variation:Salmon pink"
-        },
-        {
-          "name": "Classic",
-          "id": "Variation:Classic"
         },
         {
           "name": "Empress-tree wood",
@@ -13065,10 +12977,6 @@
         {
           "name": "White & pink",
           "id": "Variation:White & pink"
-        },
-        {
-          "name": "Ivory & wood",
-          "id": "Variation:Ivory & wood"
         },
         {
           "name": "Ash",
@@ -13177,10 +13085,6 @@
         {
           "name": "Rusty",
           "id": "Variation:Rusty"
-        },
-        {
-          "name": "Vintage",
-          "id": "Variation:Vintage"
         },
         {
           "name": "White brick",
@@ -13491,10 +13395,6 @@
           "id": "Variation:Chocolate mint"
         },
         {
-          "name": "Empty",
-          "id": "Variation:Empty"
-        },
-        {
           "name": "Veggie sauté",
           "id": "Variation:Veggie sauté"
         },
@@ -13565,10 +13465,6 @@
         {
           "name": "Tea",
           "id": "Variation:Tea"
-        },
-        {
-          "name": "Black & silver",
-          "id": "Variation:Black & silver"
         },
         {
           "name": "Pink & purple",
@@ -13713,10 +13609,6 @@
         {
           "name": "Blue cat",
           "id": "Variation:Blue cat"
-        },
-        {
-          "name": "Blue & gray",
-          "id": "Variation:Blue & gray"
         },
         {
           "name": "Quilted pattern",
@@ -14273,10 +14165,6 @@
         {
           "name": "Miso broth",
           "id": "Variation:Miso broth"
-        },
-        {
-          "name": "Red & black",
-          "id": "Variation:Red & black"
         },
         {
           "name": "Blue & red",
@@ -14883,6 +14771,10 @@
           "id": "Variation:Purple-striped necktie"
         },
         {
+          "name": "Off-white",
+          "id": "Variation:Off-white"
+        },
+        {
           "name": "Pale blue",
           "id": "Variation:Pale blue"
         },
@@ -15191,12 +15083,12 @@
           "id": "Variation:Fossil guide"
         },
         {
-          "name": "Orange & green",
-          "id": "Variation:Orange & green"
-        },
-        {
           "name": "Pink & blue",
           "id": "Variation:Pink & blue"
+        },
+        {
+          "name": "Orange & green",
+          "id": "Variation:Orange & green"
         }
       ]
     },
@@ -15295,20 +15187,28 @@
           "id": "HHA Concept 1:ocean"
         },
         {
-          "name": "garden",
-          "id": "HHA Concept 1:garden"
+          "name": "city life",
+          "id": "HHA Concept 1:city life"
         },
         {
-          "name": "living room",
-          "id": "HHA Concept 1:living room"
+          "name": "retro",
+          "id": "HHA Concept 1:retro"
         },
         {
           "name": "expensive",
           "id": "HHA Concept 1:expensive"
         },
         {
+          "name": "arcade",
+          "id": "HHA Concept 1:arcade"
+        },
+        {
           "name": "facility",
           "id": "HHA Concept 1:facility"
+        },
+        {
+          "name": "local",
+          "id": "HHA Concept 1:local"
         },
         {
           "name": "space",
@@ -15339,12 +15239,52 @@
           "id": "HHA Concept 1:workshop"
         },
         {
+          "name": "sports",
+          "id": "HHA Concept 1:sports"
+        },
+        {
+          "name": "garden",
+          "id": "HHA Concept 1:garden"
+        },
+        {
           "name": "shop",
           "id": "HHA Concept 1:shop"
         },
         {
+          "name": "park",
+          "id": "HHA Concept 1:park"
+        },
+        {
+          "name": "living room",
+          "id": "HHA Concept 1:living room"
+        },
+        {
+          "name": "restaurant",
+          "id": "HHA Concept 1:restaurant"
+        },
+        {
+          "name": "European",
+          "id": "HHA Concept 1:European"
+        },
+        {
+          "name": "apparel shop",
+          "id": "HHA Concept 1:apparel shop"
+        },
+        {
           "name": "kitchen",
           "id": "HHA Concept 1:kitchen"
+        },
+        {
+          "name": "construction site",
+          "id": "HHA Concept 1:construction site"
+        },
+        {
+          "name": "amusement park",
+          "id": "HHA Concept 1:amusement park"
+        },
+        {
+          "name": "public bath",
+          "id": "HHA Concept 1:public bath"
         },
         {
           "name": "den",
@@ -15359,104 +15299,60 @@
           "id": "HHA Concept 1:freezing cold"
         },
         {
-          "name": "None",
-          "id": "HHA Concept 1:None"
+          "name": "ancient",
+          "id": "HHA Concept 1:ancient"
         },
         {
-          "name": "heritage",
-          "id": "HHA Concept 1:heritage"
+          "name": "None",
+          "id": "HHA Concept 1:None"
         },
         {
           "name": "office",
           "id": "HHA Concept 1:office"
         },
         {
+          "name": "fantasy",
+          "id": "HHA Concept 1:fantasy"
+        },
+        {
+          "name": "nature",
+          "id": "HHA Concept 1:nature"
+        },
+        {
+          "name": "lab",
+          "id": "HHA Concept 1:lab"
+        },
+        {
           "name": "horror",
           "id": "HHA Concept 1:horror"
         },
         {
-          "name": "B29A1A78",
-          "id": "HHA Concept 1:B29A1A78"
+          "name": "heritage",
+          "id": "HHA Concept 1:heritage"
         },
         {
-          "name": "Hospital",
-          "id": "HHA Concept 1:Hospital"
+          "name": "hospital",
+          "id": "HHA Concept 1:hospital"
         },
         {
-          "name": "4FF0F8CD",
-          "id": "HHA Concept 1:4FF0F8CD"
+          "name": "sci-fi",
+          "id": "HHA Concept 1:sci-fi"
         },
         {
-          "name": "Country",
-          "id": "HHA Concept 1:Country"
+          "name": "café",
+          "id": "HHA Concept 1:café"
         },
         {
-          "name": "5176BB25",
-          "id": "HHA Concept 1:5176BB25"
+          "name": "supermarket",
+          "id": "HHA Concept 1:supermarket"
         },
         {
-          "name": "EF8FD02E",
-          "id": "HHA Concept 1:EF8FD02E"
+          "name": "stylish",
+          "id": "HHA Concept 1:stylish"
         },
         {
-          "name": "C4A03996",
-          "id": "HHA Concept 1:C4A03996"
-        },
-        {
-          "name": "A4C811EF",
-          "id": "HHA Concept 1:A4C811EF"
-        },
-        {
-          "name": "538ACC75",
-          "id": "HHA Concept 1:538ACC75"
-        },
-        {
-          "name": "EB39891A",
-          "id": "HHA Concept 1:EB39891A"
-        },
-        {
-          "name": "3758804A",
-          "id": "HHA Concept 1:3758804A"
-        },
-        {
-          "name": "Fashionable",
-          "id": "HHA Concept 1:Fashionable"
-        },
-        {
-          "name": "5.85E+06",
-          "id": "HHA Concept 1:5.85E+06"
-        },
-        {
-          "name": "Retro",
-          "id": "HHA Concept 1:Retro"
-        },
-        {
-          "name": "B00A78D1",
-          "id": "HHA Concept 1:B00A78D1"
-        },
-        {
-          "name": "Town",
-          "id": "HHA Concept 1:Town"
-        },
-        {
-          "name": "DF9EFF9F",
-          "id": "HHA Concept 1:DF9EFF9F"
-        },
-        {
-          "name": "6435D20D",
-          "id": "HHA Concept 1:6435D20D"
-        },
-        {
-          "name": "Sports",
-          "id": "HHA Concept 1:Sports"
-        },
-        {
-          "name": "Nature",
-          "id": "HHA Concept 1:Nature"
-        },
-        {
-          "name": "8A6AB7ED",
-          "id": "HHA Concept 1:8A6AB7ED"
+          "name": "resort",
+          "id": "HHA Concept 1:resort"
         }
       ]
     },
@@ -15473,6 +15369,14 @@
           "id": "HHA Concept 2:None"
         },
         {
+          "name": "lab",
+          "id": "HHA Concept 2:lab"
+        },
+        {
+          "name": "local",
+          "id": "HHA Concept 2:local"
+        },
+        {
           "name": "expensive",
           "id": "HHA Concept 2:expensive"
         },
@@ -15485,36 +15389,84 @@
           "id": "HHA Concept 2:shop"
         },
         {
+          "name": "arcade",
+          "id": "HHA Concept 2:arcade"
+        },
+        {
           "name": "fancy",
           "id": "HHA Concept 2:fancy"
+        },
+        {
+          "name": "nature",
+          "id": "HHA Concept 2:nature"
         },
         {
           "name": "facility",
           "id": "HHA Concept 2:facility"
         },
         {
-          "name": "heritage",
-          "id": "HHA Concept 2:heritage"
+          "name": "fantasy",
+          "id": "HHA Concept 2:fantasy"
         },
         {
-          "name": "school",
-          "id": "HHA Concept 2:school"
+          "name": "heritage",
+          "id": "HHA Concept 2:heritage"
         },
         {
           "name": "garden",
           "id": "HHA Concept 2:garden"
         },
         {
+          "name": "resort",
+          "id": "HHA Concept 2:resort"
+        },
+        {
+          "name": "ocean",
+          "id": "HHA Concept 2:ocean"
+        },
+        {
+          "name": "school",
+          "id": "HHA Concept 2:school"
+        },
+        {
+          "name": "city life",
+          "id": "HHA Concept 2:city life"
+        },
+        {
+          "name": "ancient",
+          "id": "HHA Concept 2:ancient"
+        },
+        {
+          "name": "hospital",
+          "id": "HHA Concept 2:hospital"
+        },
+        {
+          "name": "restaurant",
+          "id": "HHA Concept 2:restaurant"
+        },
+        {
           "name": "party",
           "id": "HHA Concept 2:party"
         },
         {
-          "name": "harmonious",
-          "id": "HHA Concept 2:harmonious"
+          "name": "amusement park",
+          "id": "HHA Concept 2:amusement park"
         },
         {
-          "name": "workshop",
-          "id": "HHA Concept 2:workshop"
+          "name": "sports",
+          "id": "HHA Concept 2:sports"
+        },
+        {
+          "name": "café",
+          "id": "HHA Concept 2:café"
+        },
+        {
+          "name": "retro",
+          "id": "HHA Concept 2:retro"
+        },
+        {
+          "name": "public bath",
+          "id": "HHA Concept 2:public bath"
         },
         {
           "name": "concert",
@@ -15525,132 +15477,76 @@
           "id": "HHA Concept 2:office"
         },
         {
+          "name": "European",
+          "id": "HHA Concept 2:European"
+        },
+        {
           "name": "living room",
           "id": "HHA Concept 2:living room"
+        },
+        {
+          "name": "sci-fi",
+          "id": "HHA Concept 2:sci-fi"
+        },
+        {
+          "name": "workshop",
+          "id": "HHA Concept 2:workshop"
+        },
+        {
+          "name": "park",
+          "id": "HHA Concept 2:park"
         },
         {
           "name": "horror",
           "id": "HHA Concept 2:horror"
         },
         {
-          "name": "outdoors",
-          "id": "HHA Concept 2:outdoors"
-        },
-        {
-          "name": "fitness",
-          "id": "HHA Concept 2:fitness"
-        },
-        {
-          "name": "space",
-          "id": "HHA Concept 2:space"
-        },
-        {
           "name": "music",
           "id": "HHA Concept 2:music"
         },
         {
-          "name": "Town",
-          "id": "HHA Concept 2:Town"
+          "name": "outdoors",
+          "id": "HHA Concept 2:outdoors"
         },
         {
-          "name": "4FF0F8CD",
-          "id": "HHA Concept 2:4FF0F8CD"
+          "name": "harmonious",
+          "id": "HHA Concept 2:harmonious"
         },
         {
-          "name": "Fashionable",
-          "id": "HHA Concept 2:Fashionable"
-        },
-        {
-          "name": "Sports",
-          "id": "HHA Concept 2:Sports"
-        },
-        {
-          "name": "Nature",
-          "id": "HHA Concept 2:Nature"
-        },
-        {
-          "name": "5176BB25",
-          "id": "HHA Concept 2:5176BB25"
-        },
-        {
-          "name": "Resort",
-          "id": "HHA Concept 2:Resort"
-        },
-        {
-          "name": "6435D20D",
-          "id": "HHA Concept 2:6435D20D"
-        },
-        {
-          "name": "EF8FD02E",
-          "id": "HHA Concept 2:EF8FD02E"
-        },
-        {
-          "name": "B00A78D1",
-          "id": "HHA Concept 2:B00A78D1"
-        },
-        {
-          "name": "DF9EFF9F",
-          "id": "HHA Concept 2:DF9EFF9F"
-        },
-        {
-          "name": "538ACC75",
-          "id": "HHA Concept 2:538ACC75"
-        },
-        {
-          "name": "EB39891A",
-          "id": "HHA Concept 2:EB39891A"
-        },
-        {
-          "name": "3758804A",
-          "id": "HHA Concept 2:3758804A"
-        },
-        {
-          "name": "A4C811EF",
-          "id": "HHA Concept 2:A4C811EF"
-        },
-        {
-          "name": "Hospital",
-          "id": "HHA Concept 2:Hospital"
-        },
-        {
-          "name": "8A6AB7ED",
-          "id": "HHA Concept 2:8A6AB7ED"
-        },
-        {
-          "name": "B29A1A78",
-          "id": "HHA Concept 2:B29A1A78"
-        },
-        {
-          "name": "5.85E+06",
-          "id": "HHA Concept 2:5.85E+06"
-        },
-        {
-          "name": "Country",
-          "id": "HHA Concept 2:Country"
-        },
-        {
-          "name": "Retro",
-          "id": "HHA Concept 2:Retro"
+          "name": "construction site",
+          "id": "HHA Concept 2:construction site"
         },
         {
           "name": "kitchen",
           "id": "HHA Concept 2:kitchen"
         },
         {
-          "name": "ocean",
-          "id": "HHA Concept 2:ocean"
-        },
-        {
-          "name": "C4A03996",
-          "id": "HHA Concept 2:C4A03996"
-        },
-        {
-          "name": "den",
-          "id": "HHA Concept 2:den"
+          "name": "fitness",
+          "id": "HHA Concept 2:fitness"
         },
         {
           "name": "freezing cold",
           "id": "HHA Concept 2:freezing cold"
+        },
+        {
+          "name": "space",
+          "id": "HHA Concept 2:space"
+        },
+        {
+          "name": "stylish",
+          "id": "HHA Concept 2:stylish"
+        },
+        {
+          "name": "supermarket",
+          "id": "HHA Concept 2:supermarket"
+        },
+        {
+          "name": "apparel shop",
+          "id": "HHA Concept 2:apparel shop"
+        },
+        {
+          "name": "den",
+          "id": "HHA Concept 2:den"
         }
       ]
     },
@@ -15771,6 +15667,10 @@
           "id": "HHA Series:My Melody"
         },
         {
+          "name": "wedding",
+          "id": "HHA Series:wedding"
+        },
+        {
           "name": "pirate",
           "id": "HHA Series:pirate"
         },
@@ -15787,8 +15687,16 @@
           "id": "HHA Series:shell"
         },
         {
+          "name": "simple",
+          "id": "HHA Series:simple"
+        },
+        {
           "name": "spooky",
           "id": "HHA Series:spooky"
+        },
+        {
+          "name": "plaza",
+          "id": "HHA Series:plaza"
         },
         {
           "name": "throwback",
@@ -15799,10 +15707,6 @@
           "id": "HHA Series:Turkey Day"
         },
         {
-          "name": "wedding",
-          "id": "HHA Series:wedding"
-        },
-        {
           "name": "wooden",
           "id": "HHA Series:wooden"
         },
@@ -15811,48 +15715,40 @@
           "id": "HHA Series:wooden block"
         },
         {
-          "name": "Cool",
-          "id": "HHA Series:Cool"
+          "name": "cool",
+          "id": "HHA Series:cool"
         },
         {
-          "name": "8B5A435B",
-          "id": "HHA Series:8B5A435B"
+          "name": "dreamy",
+          "id": "HHA Series:dreamy"
         },
         {
-          "name": "Elegant",
-          "id": "HHA Series:Elegant"
+          "name": "elegant",
+          "id": "HHA Series:elegant"
         },
         {
-          "name": "29B111C8",
-          "id": "HHA Series:29B111C8"
+          "name": "Moroccan",
+          "id": "HHA Series:Moroccan"
         },
         {
-          "name": "42224322",
-          "id": "HHA Series:42224322"
+          "name": "Nordic",
+          "id": "HHA Series:Nordic"
         },
         {
-          "name": "719EC1C4",
-          "id": "HHA Series:719EC1C4"
+          "name": "patchwork",
+          "id": "HHA Series:patchwork"
         },
         {
-          "name": "C515F721",
-          "id": "HHA Series:C515F721"
+          "name": "ranch",
+          "id": "HHA Series:ranch"
         },
         {
-          "name": "Country",
-          "id": "HHA Series:Country"
+          "name": "sloppy",
+          "id": "HHA Series:sloppy"
         },
         {
-          "name": "Simple",
-          "id": "HHA Series:Simple"
-        },
-        {
-          "name": "422596FF",
-          "id": "HHA Series:422596FF"
-        },
-        {
-          "name": "6EBC6A26",
-          "id": "HHA Series:6EBC6A26"
+          "name": "vintage",
+          "id": "HHA Series:vintage"
         },
         {
           "name": "motherly",
@@ -15895,6 +15791,10 @@
         {
           "name": "imperial dining",
           "id": "HHA Set:imperial dining"
+        },
+        {
+          "name": "iron garden",
+          "id": "HHA Set:iron garden"
         },
         {
           "name": "pet",
@@ -15941,44 +15841,44 @@
           "id": "HHA Set:study"
         },
         {
-          "name": "C47890B4",
-          "id": "HHA Set:C47890B4"
+          "name": "artsy",
+          "id": "HHA Set:artsy"
         },
         {
-          "name": "42BEF91E",
-          "id": "HHA Set:42BEF91E"
+          "name": "castle",
+          "id": "HHA Set:castle"
         },
         {
-          "name": "A12FA829",
-          "id": "HHA Set:A12FA829"
+          "name": "gaming",
+          "id": "HHA Set:gaming"
         },
         {
-          "name": "Garden",
-          "id": "HHA Set:Garden"
+          "name": "garden",
+          "id": "HHA Set:garden"
         },
         {
-          "name": "Kitchen",
-          "id": "HHA Set:Kitchen"
+          "name": "kitchen",
+          "id": "HHA Set:kitchen"
         },
         {
-          "name": "99CA18C5",
-          "id": "HHA Set:99CA18C5"
+          "name": "chalkboard",
+          "id": "HHA Set:chalkboard"
         },
         {
-          "name": "2B65863B",
-          "id": "HHA Set:2B65863B"
+          "name": "metal and wood",
+          "id": "HHA Set:metal and wood"
         },
         {
-          "name": "6150ABD5",
-          "id": "HHA Set:6150ABD5"
-        },
-        {
-          "name": "AD64AD18",
-          "id": "HHA Set:AD64AD18"
+          "name": "ruined",
+          "id": "HHA Set:ruined"
         },
         {
           "name": "cherry",
           "id": "HHA Set:cherry"
+        },
+        {
+          "name": "bug head",
+          "id": "HHA Set:bug head"
         }
       ]
     },
@@ -16027,6 +15927,10 @@
           "id": "HHA Category:Plant"
         },
         {
+          "name": "Kitchen",
+          "id": "HHA Category:Kitchen"
+        },
+        {
           "name": "Trash",
           "id": "HHA Category:Trash"
         },
@@ -16041,10 +15945,6 @@
         {
           "name": "SmallGoods",
           "id": "HHA Category:SmallGoods"
-        },
-        {
-          "name": "Kitchen",
-          "id": "HHA Category:Kitchen"
         },
         {
           "name": "Food",
@@ -16077,8 +15977,8 @@
           "id": "Speaker Type:Cheap"
         },
         {
-          "name": "964812AF",
-          "id": "Speaker Type:964812AF"
+          "name": "Music Box",
+          "id": "Speaker Type:Music Box"
         }
       ]
     },
@@ -16171,6 +16071,10 @@
         {
           "name": "2.0.0",
           "id": "Version Added:2.0.0"
+        },
+        {
+          "name": "NA",
+          "id": "Version Added:NA"
         }
       ]
     }

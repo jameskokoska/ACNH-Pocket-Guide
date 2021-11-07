@@ -1,0 +1,2092 @@
+﻿[
+  {
+    "label": "MusicMiss_04315",
+    "locale": {
+      "CNzh": "はずれ01",
+      "EUde": "はずれ01",
+      "EUen": "はずれ01",
+      "EUes": "はずれ01",
+      "EUfr": "はずれ01",
+      "EUit": "はずれ01",
+      "EUnl": "はずれ01",
+      "EUru": "はずれ01",
+      "JPja": "はずれ01",
+      "KRko": "はずれ01",
+      "TWzh": "はずれ01",
+      "USen": "はずれ01",
+      "USes": "はずれ01",
+      "USfr": "はずれ01"
+    }
+  },
+  {
+    "label": "MusicMiss_04316",
+    "locale": {
+      "CNzh": "はずれ02",
+      "EUde": "はずれ02",
+      "EUen": "はずれ02",
+      "EUes": "はずれ02",
+      "EUfr": "はずれ02",
+      "EUit": "はずれ02",
+      "EUnl": "はずれ02",
+      "EUru": "はずれ02",
+      "JPja": "はずれ02",
+      "KRko": "はずれ02",
+      "TWzh": "はずれ02",
+      "USen": "はずれ02",
+      "USes": "はずれ02",
+      "USfr": "はずれ02"
+    }
+  },
+  {
+    "label": "MusicMiss_04317",
+    "locale": {
+      "CNzh": "はずれ03",
+      "EUde": "はずれ03",
+      "EUen": "はずれ03",
+      "EUes": "はずれ03",
+      "EUfr": "はずれ03",
+      "EUit": "はずれ03",
+      "EUnl": "はずれ03",
+      "EUru": "はずれ03",
+      "JPja": "はずれ03",
+      "KRko": "はずれ03",
+      "TWzh": "はずれ03",
+      "USen": "はずれ03",
+      "USes": "はずれ03",
+      "USfr": "はずれ03"
+    }
+  },
+  {
+    "label": "Music_02405",
+    "locale": {
+      "CNzh": "K.K.赞美诗歌",
+      "EUde": "K.K. Choral",
+      "EUen": "K.K. Chorale",
+      "EUes": "Tota-góspel",
+      "EUfr": "Chorale de Kéké",
+      "EUit": "K.K. Corale",
+      "EUnl": "K⁠.⁠K⁠.-⁠⁠koraal",
+      "EUru": "Хорал К. К.",
+      "JPja": "けけさんびか",
+      "KRko": "K.K.찬송가",
+      "TWzh": "K.K.讚美詩歌",
+      "USen": "K.K. Chorale",
+      "USes": "Tota-góspel",
+      "USfr": "Chorale de Kéké"
+    }
+  },
+  {
+    "label": "Music_02406",
+    "locale": {
+      "CNzh": "K.K.进行曲",
+      "EUde": "K.K. Marsch",
+      "EUen": "K.K. March",
+      "EUes": "Tota-marcha",
+      "EUfr": "Marche de Kéké",
+      "EUit": "K.K. Marcia",
+      "EUnl": "K⁠.⁠K⁠.-⁠mars",
+      "EUru": "Марш К. К.",
+      "JPja": "けけマーチ",
+      "KRko": "K.K.행진곡",
+      "TWzh": "K.K.進行曲",
+      "USen": "K.K. March",
+      "USes": "Tota-marcha",
+      "USfr": "Marche de Kéké"
+    }
+  },
+  {
+    "label": "Music_02407",
+    "locale": {
+      "CNzh": "K.K.圆舞曲",
+      "EUde": "K.K. Walzer",
+      "EUen": "K.K. Waltz",
+      "EUes": "Tota-vals",
+      "EUfr": "Valse de Kéké",
+      "EUit": "K.K. Valzer",
+      "EUnl": "K⁠.⁠K⁠.-⁠wals",
+      "EUru": "Вальс К. К.",
+      "JPja": "けけワルツ",
+      "KRko": "K.K.왈츠",
+      "TWzh": "K.K.圓舞曲",
+      "USen": "K.K. Waltz",
+      "USes": "Tota-vals",
+      "USfr": "Valse de Kéké"
+    }
+  },
+  {
+    "label": "Music_02408",
+    "locale": {
+      "CNzh": "K.K.摇摆乐",
+      "EUde": "K.K. Swing",
+      "EUen": "K.K. Swing",
+      "EUes": "Tota-swing",
+      "EUfr": "Swing de Kéké",
+      "EUit": "K.K. Swing",
+      "EUnl": "K.K.-⁠swing",
+      "EUru": "Свинг К. К.",
+      "JPja": "けけスウィング",
+      "KRko": "K.K.스윙",
+      "TWzh": "K.K.搖擺樂",
+      "USen": "K.K. Swing",
+      "USes": "Tota-swing",
+      "USfr": "Swing de Kéké"
+    }
+  },
+  {
+    "label": "Music_02409",
+    "locale": {
+      "CNzh": "K.K.爵士乐",
+      "EUde": "K.K. Jazz",
+      "EUen": "K.K. Jazz",
+      "EUes": "Tota-jazz",
+      "EUfr": "Jazz de Kéké",
+      "EUit": "K.K. Jazz",
+      "EUnl": "K⁠.⁠K⁠.-⁠jazz",
+      "EUru": "Джаз К. К.",
+      "JPja": "けけジャズ",
+      "KRko": "K.K.재즈",
+      "TWzh": "K.K.爵士樂",
+      "USen": "K.K. Jazz",
+      "USes": "Tota-jazz",
+      "USfr": "Jazz de Kéké"
+    }
+  },
+  {
+    "label": "Music_02410",
+    "locale": {
+      "CNzh": "K.K.融合爵士乐",
+      "EUde": "K.K. Fusion",
+      "EUen": "K.K. Fusion",
+      "EUes": "Tota-fusión",
+      "EUfr": "Fusion Kéké",
+      "EUit": "K.K. Fusion",
+      "EUnl": "K⁠.⁠K⁠.-⁠fusion",
+      "EUru": "Фьюжен К. К.",
+      "JPja": "けけフュージョン",
+      "KRko": "K.K.퓨전",
+      "TWzh": "K.K.融合爵士樂",
+      "USen": "K.K. Fusion",
+      "USes": "Tota-fusión",
+      "USfr": "Fusion Kéké"
+    }
+  },
+  {
+    "label": "Music_02411",
+    "locale": {
+      "CNzh": "K.K.练习曲",
+      "EUde": "K.K. Etüde",
+      "EUen": "K.K. Étude",
+      "EUes": "Tota-solo",
+      "EUfr": "Étude de Kéké",
+      "EUit": "K.K. Studio",
+      "EUnl": "K⁠.⁠K⁠.-⁠etude",
+      "EUru": "Этюд К. К.",
+      "JPja": "けけのエチュード",
+      "KRko": "K.K.에튀드",
+      "TWzh": "K.K.練習曲",
+      "USen": "K.K. Étude",
+      "USes": "Tota-solo",
+      "USfr": "Étude de Kéké"
+    }
+  },
+  {
+    "label": "Music_02412",
+    "locale": {
+      "CNzh": "K.K.摇篮曲",
+      "EUde": "K.K. Schlaflied",
+      "EUen": "K.K. Lullaby",
+      "EUes": "Tota-nana",
+      "EUfr": "Berceuse de Kéké",
+      "EUit": "K.K. Ninnananna",
+      "EUnl": "K⁠.⁠K⁠.-⁠slaapliedje",
+      "EUru": "Колыбельная К. К.",
+      "JPja": "けけララバイ",
+      "KRko": "K.K.자장가",
+      "TWzh": "K.K.搖籃曲",
+      "USen": "K.K. Lullaby",
+      "USes": "Tota-arrullo",
+      "USfr": "Berceuse de Kéké"
+    }
+  },
+  {
+    "label": "Music_02413",
+    "locale": {
+      "CNzh": "K.K.咏叹调",
+      "EUde": "K.K. Arie",
+      "EUen": "K.K. Aria",
+      "EUes": "Tota-aria",
+      "EUfr": "Aria de Kéké",
+      "EUit": "K.K. Aria",
+      "EUnl": "K⁠.⁠K⁠.-⁠aria",
+      "EUru": "Ария К. К.",
+      "JPja": "けけマリア",
+      "KRko": "K.K.마리아",
+      "TWzh": "K.K.詠嘆調",
+      "USen": "K.K. Aria",
+      "USes": "Tota-aria",
+      "USfr": "Aria de Kéké"
+    }
+  },
+  {
+    "label": "Music_02414",
+    "locale": {
+      "CNzh": "K.K.桑巴",
+      "EUde": "K.K. Samba",
+      "EUen": "K.K. Samba",
+      "EUes": "Tota-samba",
+      "EUfr": "Samba de Kéké",
+      "EUit": "K.K. Samba",
+      "EUnl": "K⁠.⁠K⁠.-⁠samba",
+      "EUru": "Самба К. К.",
+      "JPja": "けけサンバ",
+      "KRko": "K.K.삼바",
+      "TWzh": "K.K.森巴",
+      "USen": "K.K. Samba",
+      "USes": "Tota-samba",
+      "USfr": "Samba de Kéké"
+    }
+  },
+  {
+    "label": "Music_02415",
+    "locale": {
+      "CNzh": "K.K.巴萨诺瓦",
+      "EUde": "K.K. Bossa",
+      "EUen": "K.K. Bossa",
+      "EUes": "Tota-bossa nova",
+      "EUfr": "Bossa de Kéké",
+      "EUit": "K.K. Bossa",
+      "EUnl": "K⁠.⁠K⁠.-⁠bossanova",
+      "EUru": "Босанова К. К.",
+      "JPja": "けけボッサ",
+      "KRko": "K.K.보사노바",
+      "TWzh": "K.K.巴薩諾瓦",
+      "USen": "K.K. Bossa",
+      "USes": "Tota-bossa nova",
+      "USfr": "Bossa de Kéké"
+    }
+  },
+  {
+    "label": "Music_02416",
+    "locale": {
+      "CNzh": "K.K.卡利普索",
+      "EUde": "K.K. Calypso",
+      "EUen": "K.K. Calypso",
+      "EUes": "Tota-calipso",
+      "EUfr": "Calypso de Kéké",
+      "EUit": "K.K. Calipso",
+      "EUnl": "K⁠.⁠K⁠.-⁠calypso",
+      "EUru": "Калипсо К. К.",
+      "JPja": "けけカリプソ",
+      "KRko": "K.K.칼립소",
+      "TWzh": "K.K.卡利普索",
+      "USen": "K.K. Calypso",
+      "USes": "Tota-calipso",
+      "USfr": "Calypso de Kéké"
+    }
+  },
+  {
+    "label": "Music_02417",
+    "locale": {
+      "CNzh": "K.K.萨尔萨",
+      "EUde": "K.K. Salsa",
+      "EUen": "K.K. Salsa",
+      "EUes": "Tota-salsa",
+      "EUfr": "Salsa de Kéké",
+      "EUit": "K.K. Salsa",
+      "EUnl": "K⁠.⁠K⁠.-⁠salsa",
+      "EUru": "Сальса К. К.",
+      "JPja": "けけサルサ",
+      "KRko": "K.K.살사",
+      "TWzh": "K.K.騷莎",
+      "USen": "K.K. Salsa",
+      "USes": "Tota-salsa",
+      "USfr": "Salsa de Kéké"
+    }
+  },
+  {
+    "label": "Music_02418",
+    "locale": {
+      "CNzh": "K.K.曼波",
+      "EUde": "K.K. Mambo",
+      "EUen": "K.K. Mambo",
+      "EUes": "Tota-mambo",
+      "EUfr": "Mambo de Kéké",
+      "EUit": "K.K. Mambo",
+      "EUnl": "K⁠.⁠K⁠.-⁠mambo",
+      "EUru": "Мамбо К. К.",
+      "JPja": "けけマンボ",
+      "KRko": "K.K.맘보",
+      "TWzh": "K.K.曼波",
+      "USen": "K.K. Mambo",
+      "USes": "Tota-mambo",
+      "USfr": "Mambo de Kéké"
+    }
+  },
+  {
+    "label": "Music_02419",
+    "locale": {
+      "CNzh": "K.K.雷鬼",
+      "EUde": "K.K. Reggae",
+      "EUen": "K.K. Reggae",
+      "EUes": "Tota-reggae",
+      "EUfr": "Reggae de Kéké",
+      "EUit": "K.K. Reggae",
+      "EUnl": "K⁠.⁠K⁠.-⁠reggae",
+      "EUru": "Регги К. К.",
+      "JPja": "けけレゲエ",
+      "KRko": "K.K.레게",
+      "TWzh": "K.K.雷鬼",
+      "USen": "K.K. Reggae",
+      "USes": "Tota-reggae",
+      "USfr": "Reggae de Kéké"
+    }
+  },
+  {
+    "label": "Music_02420",
+    "locale": {
+      "CNzh": "K.K.斯卡",
+      "EUde": "K.K. Ska",
+      "EUen": "K.K. Ska",
+      "EUes": "Tota-ska",
+      "EUfr": "Ska Kéké",
+      "EUit": "K.K. Ska",
+      "EUnl": "K⁠.⁠K⁠.-⁠ska",
+      "EUru": "Ска К. К.",
+      "JPja": "けけスカ",
+      "KRko": "K.K.스카",
+      "TWzh": "K.K.斯卡",
+      "USen": "K.K. Ska",
+      "USes": "Tota-ska",
+      "USfr": "Ska Kéké"
+    }
+  },
+  {
+    "label": "Music_02421",
+    "locale": {
+      "CNzh": "K.K.探戈",
+      "EUde": "K.K. Tango",
+      "EUen": "K.K. Tango",
+      "EUes": "Tota-tango",
+      "EUfr": "Tango de Kéké",
+      "EUit": "K.K. Tango",
+      "EUnl": "K⁠.⁠K⁠.-⁠tango",
+      "EUru": "Танго К. К.",
+      "JPja": "けけタンゴ",
+      "KRko": "K.K.탱고",
+      "TWzh": "K.K.探戈",
+      "USen": "K.K. Tango",
+      "USes": "Tota-tango",
+      "USfr": "Tango de Kéké"
+    }
+  },
+  {
+    "label": "Music_02422",
+    "locale": {
+      "CNzh": "冲绳K.K.",
+      "EUde": "K.K. Jahrmarkt",
+      "EUen": "K.K. Faire",
+      "EUes": "Tota-romanza",
+      "EUfr": "Virelai Kéké",
+      "EUit": "K.K. Festa",
+      "EUnl": "K⁠.⁠K⁠.-⁠boerendans",
+      "EUru": "Ярмарка К. К.",
+      "JPja": "ハイサイけけ",
+      "KRko": "혼저옵서예K.K.",
+      "TWzh": "沖繩K.K.",
+      "USen": "K.K. Faire",
+      "USes": "Tota-romanza",
+      "USfr": "Virelai Kéké"
+    }
+  },
+  {
+    "label": "Music_02423",
+    "locale": {
+      "CNzh": "夏威夷K.K.",
+      "EUde": "K.K. Südseetraum",
+      "EUen": "Aloha K.K.",
+      "EUes": "Tota-aloha",
+      "EUfr": "Ukulélé Kéké",
+      "EUit": "K.K. Aloha",
+      "EUnl": "Aloha K.⁠K.",
+      "EUru": "Алоха К. К.",
+      "JPja": "アロハけけ",
+      "KRko": "알로하K.K.",
+      "TWzh": "夏威夷K.K.",
+      "USen": "Aloha K.K.",
+      "USes": "Tota-aloha",
+      "USfr": "Ukulélé Kéké"
+    }
+  },
+  {
+    "label": "Music_02424",
+    "locale": {
+      "CNzh": "爱尔兰乐曲",
+      "EUde": "K.K. Glückspilz",
+      "EUen": "Lucky K.K.",
+      "EUes": "Tota-celta",
+      "EUfr": "Kéké le verni",
+      "EUit": "K.K. Felicità",
+      "EUnl": "K.⁠K. de Kelt",
+      "EUru": "Счастливчик К. К.",
+      "JPja": "アイリッシュそんぐ",
+      "KRko": "아일랜드의 노래",
+      "TWzh": "愛爾蘭樂曲",
+      "USen": "Lucky K.K.",
+      "USes": "Tota-celta",
+      "USfr": "Kéké le veinard"
+    }
+  },
+  {
+    "label": "Music_02425",
+    "locale": {
+      "CNzh": "秘鲁之歌",
+      "EUde": "K.K. Kondor",
+      "EUen": "K.K. Condor",
+      "EUes": "Tota-andina",
+      "EUfr": "El Condor Kéké",
+      "EUit": "K.K. Condor",
+      "EUnl": "K.⁠K. bij de condors",
+      "EUru": "Кондор К. К.",
+      "JPja": "ペルーのうた",
+      "KRko": "페루의 노래",
+      "TWzh": "秘魯之歌",
+      "USen": "K.K. Condor",
+      "USes": "Tota-andina",
+      "USfr": "El Condor Kéké"
+    }
+  },
+  {
+    "label": "Music_02426",
+    "locale": {
+      "CNzh": "哥萨克乐曲",
+      "EUde": "K.K. Steppensong",
+      "EUen": "K.K. Steppe",
+      "EUes": "Tota-estepa",
+      "EUfr": "Kéké balalaïka",
+      "EUit": "K.K. Steppa",
+      "EUnl": "K.⁠K. op de steppe",
+      "EUru": "Степь К. К.",
+      "JPja": "コサックそんぐ",
+      "KRko": "까자크의 노래",
+      "TWzh": "哥薩克樂曲",
+      "USen": "K.K. Steppe",
+      "USes": "Tota-estepa",
+      "USfr": "Kéké balalaïka"
+    }
+  },
+  {
+    "label": "Music_02427",
+    "locale": {
+      "CNzh": "K.K.中华",
+      "EUde": "Super-K.K.",
+      "EUen": "Imperial K.K.",
+      "EUes": "Tota-imperio",
+      "EUfr": "Kéké l'Empereur",
+      "EUit": "K.K. Imperiale",
+      "EUnl": "K.⁠K. de wijze meester",
+      "EUru": "Величие К. К.",
+      "JPja": "けけチャイナ",
+      "KRko": "K.K.차이나",
+      "TWzh": "K.K.中華",
+      "USen": "Imperial K.K.",
+      "USes": "Tota-imperio",
+      "USfr": "Kéké l'Empereur"
+    }
+  },
+  {
+    "label": "Music_02428",
+    "locale": {
+      "CNzh": "土耳其乐曲",
+      "EUde": "K.K. Orientsong",
+      "EUen": "K.K. Casbah",
+      "EUes": "Tota-alcazaba",
+      "EUfr": "Cheb Kéké",
+      "EUit": "K.K. Assolo",
+      "EUnl": "K.⁠K. in de kasba",
+      "EUru": "Крепость К. К.",
+      "JPja": "トルコそんぐ",
+      "KRko": "터키의 노래",
+      "TWzh": "土耳其樂曲",
+      "USen": "K.K. Casbah",
+      "USes": "Tota-alcazaba",
+      "USfr": "Ali Kéké"
+    }
+  },
+  {
+    "label": "Music_02429",
+    "locale": {
+      "CNzh": "K.K.非洲音乐",
+      "EUde": "K.K. Safari",
+      "EUen": "K.K. Safari",
+      "EUes": "Tota-safari",
+      "EUfr": "Ali Farka Kéké",
+      "EUit": "K.K. Safari",
+      "EUnl": "K.⁠K. in de jungle",
+      "EUru": "Сафари К. К.",
+      "JPja": "けけアフロ",
+      "KRko": "K.K.아프리카",
+      "TWzh": "K.K.非洲音樂",
+      "USen": "K.K. Safari",
+      "USes": "Tota-safari",
+      "USfr": "Kéké safari"
+    }
+  },
+  {
+    "label": "Music_02430",
+    "locale": {
+      "CNzh": "K.K.民谣",
+      "EUde": "K.K. Folk",
+      "EUen": "K.K. Folk",
+      "EUes": "Tota-folk",
+      "EUfr": "Folk Kéké",
+      "EUit": "K.K. Folk",
+      "EUnl": "K⁠.⁠K⁠.-⁠folk",
+      "EUru": "Фолк К. К.",
+      "JPja": "けけみんよう",
+      "KRko": "K.K.민요",
+      "TWzh": "K.K.民謠",
+      "USen": "K.K. Folk",
+      "USes": "Tota-folk",
+      "USfr": "Kéké folklorique"
+    }
+  },
+  {
+    "label": "Music_02431",
+    "locale": {
+      "CNzh": "K.K.摇滚",
+      "EUde": "K.K. Rock",
+      "EUen": "K.K. Rock",
+      "EUes": "Tota-rock",
+      "EUfr": "Rock Kéké",
+      "EUit": "K.K. Rock",
+      "EUnl": "K⁠.⁠K⁠.-⁠rock",
+      "EUru": "Рок К. К.",
+      "JPja": "けけロック",
+      "KRko": "K.K.록",
+      "TWzh": "K.K.搖滾",
+      "USen": "K.K. Rock",
+      "USes": "Tota-rock",
+      "USfr": "Rock Kéké"
+    }
+  },
+  {
+    "label": "Music_02432",
+    "locale": {
+      "CNzh": "K.K.50年代摇滚",
+      "EUde": "K.K. Rocksong",
+      "EUen": "Rockin' K.K.",
+      "EUes": "Tota-total",
+      "EUfr": "Bouge avec Kéké",
+      "EUit": "K.K. Spericolato",
+      "EUnl": "K⁠.⁠K⁠.-⁠rock-'⁠n-roll",
+      "EUru": "К. К. в ударе",
+      "JPja": "けけのロケンロール",
+      "KRko": "K.K.로큰롤",
+      "TWzh": "K.K.50年代搖滾",
+      "USen": "Rockin' K.K.",
+      "USes": "Tota-total",
+      "USfr": "Bouge avec Kéké"
+    }
+  },
+  {
+    "label": "Music_02433",
+    "locale": {
+      "CNzh": "拉格泰姆音乐",
+      "EUde": "K.K. Ragtime",
+      "EUen": "K.K. Ragtime",
+      "EUes": "Tota-ragtime",
+      "EUfr": "Ragtime Kéké",
+      "EUit": "K.K. Ritmo",
+      "EUnl": "K⁠.⁠K⁠.-⁠ragtime",
+      "EUru": "Регтайм К. К.",
+      "JPja": "ラグタイム",
+      "KRko": "래그타임",
+      "TWzh": "拉格泰姆音樂",
+      "USen": "K.K. Ragtime",
+      "USes": "Tota-ragtime",
+      "USfr": "Ragtime Kéké"
+    }
+  },
+  {
+    "label": "Music_02434",
+    "locale": {
+      "CNzh": "新奥尔良乐曲",
+      "EUde": "K.K. Gumbo",
+      "EUen": "K.K. Gumbo",
+      "EUes": "Tota-gumbo",
+      "EUfr": "Gumbo Kéké",
+      "EUit": "K.K. Gumbo",
+      "EUnl": "K⁠.⁠K⁠.-⁠gumbo",
+      "EUru": "Гамбо К. К.",
+      "JPja": "ニューオリンズそんぐ",
+      "KRko": "딕시랜드 재즈",
+      "TWzh": "新奧爾良樂曲",
+      "USen": "K.K. Gumbo",
+      "USes": "Tota-gumbo",
+      "USfr": "Gombo Kéké"
+    }
+  },
+  {
+    "label": "Music_02435",
+    "locale": {
+      "CNzh": "K.K.放克",
+      "EUde": "K. Funk",
+      "EUen": "The K. Funk",
+      "EUes": "Tota-funk",
+      "EUfr": "Le Kéké Funk",
+      "EUit": "K.K. Funk",
+      "EUnl": "K⁠.⁠K⁠.-⁠funk",
+      "EUru": "Фанк К. К.",
+      "JPja": "けけファンク",
+      "KRko": "K.K.펑키",
+      "TWzh": "K.K.放克",
+      "USen": "The K. Funk",
+      "USes": "Tota-funk",
+      "USfr": "Le Kéké Funk"
+    }
+  },
+  {
+    "label": "Music_02436",
+    "locale": {
+      "CNzh": "K.K.蓝调",
+      "EUde": "K.K. Blues",
+      "EUen": "K.K. Blues",
+      "EUes": "Tota-blues",
+      "EUfr": "Kéké blues",
+      "EUit": "K.K. Blues",
+      "EUnl": "K⁠.⁠K⁠.-⁠blues",
+      "EUru": "Блюз К. К.",
+      "JPja": "けけブルース",
+      "KRko": "K.K.블루스",
+      "TWzh": "K.K.藍調",
+      "USen": "K.K. Blues",
+      "USes": "Tota-blues",
+      "USfr": "Kéké blues"
+    }
+  },
+  {
+    "label": "Music_02437",
+    "locale": {
+      "CNzh": "K.K.心灵音乐",
+      "EUde": "K.K. mit Gefühl",
+      "EUen": "Soulful K.K.",
+      "EUes": "Tota-lenta",
+      "EUfr": "Kéké soul",
+      "EUit": "K.K. Anima",
+      "EUnl": "K⁠.⁠K⁠.-⁠soulblues",
+      "EUru": "Соулфул К. К.",
+      "JPja": "けけゴスペル",
+      "KRko": "K.K.가스펠",
+      "TWzh": "K.K.心靈音樂",
+      "USen": "Soulful K.K.",
+      "USes": "Tota-lenta",
+      "USfr": "Kéké soul"
+    }
+  },
+  {
+    "label": "Music_02438",
+    "locale": {
+      "CNzh": "K.K.灵魂乐",
+      "EUde": "K.K. Soul",
+      "EUen": "K.K. Soul",
+      "EUes": "Tota-soul",
+      "EUfr": "Soul de Kéké",
+      "EUit": "K.K. Soul",
+      "EUnl": "K⁠.⁠K⁠.-⁠soul",
+      "EUru": "Соул К. К.",
+      "JPja": "けけソウル",
+      "KRko": "K.K.소울",
+      "TWzh": "K.K.靈魂樂",
+      "USen": "K.K. Soul",
+      "USes": "Tota-soul",
+      "USfr": "Soul de Kéké"
+    }
+  },
+  {
+    "label": "Music_02439",
+    "locale": {
+      "CNzh": "都市K.K.",
+      "EUde": "K.K. Cruisin'",
+      "EUen": "K.K. Cruisin'",
+      "EUes": "Tota-gánster",
+      "EUfr": "Kéké R&B",
+      "EUit": "K.K. Cool",
+      "EUnl": "K⁠.⁠K⁠.-⁠club",
+      "EUru": "Круиз К. К.",
+      "JPja": "アーバンけけ",
+      "KRko": "팝K.K.",
+      "TWzh": "都市K.K.",
+      "USen": "K.K. Cruisin'",
+      "USes": "Tota-gánster",
+      "USfr": "Kéké R&B"
+    }
+  },
+  {
+    "label": "Music_02440",
+    "locale": {
+      "CNzh": "K.K.情歌",
+      "EUde": "K.K. Liebeslied",
+      "EUen": "K.K. Love Song",
+      "EUes": "Tota-amor",
+      "EUfr": "Romance Kéké",
+      "EUit": "K.K. Amore",
+      "EUnl": "K⁠.⁠K⁠.-⁠liefdeslied",
+      "EUru": "Романс К. К.",
+      "JPja": "けけラヴソング",
+      "KRko": "K.K.러브송",
+      "TWzh": "K.K.情歌",
+      "USen": "K.K. Love Song",
+      "USes": "Tota-amor",
+      "USfr": "Romance Kéké"
+    }
+  },
+  {
+    "label": "Music_02441",
+    "locale": {
+      "CNzh": "鼓打贝斯",
+      "EUde": "K.K. D & B",
+      "EUen": "K.K. D&B",
+      "EUes": "Tota-drum&bass",
+      "EUfr": "Drum & bass Kéké",
+      "EUit": "K.K. & Band",
+      "EUnl": "K⁠.⁠K⁠.-⁠drum-'⁠n-bass",
+      "EUru": "Драм-н-бэйс К. К.",
+      "JPja": "ドラムンベース",
+      "KRko": "드럼앤베이스",
+      "TWzh": "鼓打貝斯",
+      "USen": "K.K. D&B",
+      "USes": "Tota-drum&bass",
+      "USfr": "Drum & bass Kéké"
+    }
+  },
+  {
+    "label": "Music_02442",
+    "locale": {
+      "CNzh": "电音节奏",
+      "EUde": "K.K. Technopop",
+      "EUen": "K.K. Technopop",
+      "EUes": "Tota-tecno",
+      "EUfr": "Technopop Kéké",
+      "EUit": "K.K. Techno",
+      "EUnl": "K⁠.⁠K⁠.-⁠technopop",
+      "EUru": "Техно-поп К. К.",
+      "JPja": "テクノビート",
+      "KRko": "테크노 비트",
+      "TWzh": "電音節奏",
+      "USen": "K.K. Technopop",
+      "USes": "Tota-tecno",
+      "USfr": "Technopop Kéké"
+    }
+  },
+  {
+    "label": "Music_02443",
+    "locale": {
+      "CNzh": "欧陆节拍",
+      "EUde": "DJ K.K.",
+      "EUen": "DJ K.K.",
+      "EUes": "Tota-D.J.-Total",
+      "EUfr": "DJ Kéké",
+      "EUit": "K.K. DJ",
+      "EUnl": "DJ K.⁠K.",
+      "EUru": "DJ KK",
+      "JPja": "ユーロビート",
+      "KRko": "유로 비트",
+      "TWzh": "歐陸節拍",
+      "USen": "DJ K.K.",
+      "USes": "Tota-D.J.-Total",
+      "USfr": "DJ Kéké"
+    }
+  },
+  {
+    "label": "Music_02444",
+    "locale": {
+      "CNzh": "只有我",
+      "EUde": "Ganz allein",
+      "EUen": "Only Me",
+      "EUes": "Solo yo",
+      "EUfr": "Moi et juste moi",
+      "EUit": "Solo io",
+      "EUnl": "Alleen ik",
+      "EUru": "Только я",
+      "JPja": "オンリーミー",
+      "KRko": "온리미",
+      "TWzh": "只有我",
+      "USen": "Only Me",
+      "USes": "Solo yo",
+      "USfr": "Moi et juste moi"
+    }
+  },
+  {
+    "label": "Music_02445",
+    "locale": {
+      "CNzh": "K.K.乡村",
+      "EUde": "K.K. Country",
+      "EUen": "K.K. Country",
+      "EUes": "Tota-country",
+      "EUfr": "Country Kéké",
+      "EUit": "K.K. Country",
+      "EUnl": "K⁠.⁠K⁠.-⁠country",
+      "EUru": "Кантри К. К.",
+      "JPja": "けけカントリー",
+      "KRko": "K.K.컨트리",
+      "TWzh": "K.K.鄉村",
+      "USen": "K.K. Country",
+      "USes": "Tota-country",
+      "USfr": "Country Kéké"
+    }
+  },
+  {
+    "label": "Music_02446",
+    "locale": {
+      "CNzh": "电吉他乐曲",
+      "EUde": "Surfin' K.K.",
+      "EUen": "Surfin' K.K.",
+      "EUes": "Tota-surf",
+      "EUfr": "Kéké à la plage",
+      "EUit": "K.K. Surf",
+      "EUnl": "K⁠.⁠K⁠.-⁠surf",
+      "EUru": "Серф К. К.",
+      "JPja": "エレキそんぐ",
+      "KRko": "일렉트릭 뮤직",
+      "TWzh": "電吉他樂曲",
+      "USen": "Surfin' K.K.",
+      "USes": "Tota-surf",
+      "USfr": "Kéké à la plage"
+    }
+  },
+  {
+    "label": "Music_02447",
+    "locale": {
+      "CNzh": "K.K.叙事歌谣",
+      "EUde": "K.K. Ballade",
+      "EUen": "K.K. Ballad",
+      "EUes": "Tota-balada",
+      "EUfr": "Ballade de Kéké",
+      "EUit": "K.K. Lento",
+      "EUnl": "K⁠.⁠K⁠.-⁠ballade",
+      "EUru": "Баллада К. К.",
+      "JPja": "けけバラッド",
+      "KRko": "K.K.발라드",
+      "TWzh": "K.K.敘事歌謠",
+      "USen": "K.K. Ballad",
+      "USes": "Tota-balada",
+      "USfr": "Ballade de Kéké"
+    }
+  },
+  {
+    "label": "Music_02448",
+    "locale": {
+      "CNzh": "昭和K.K.歌谣",
+      "EUde": "K.K. Freundelied",
+      "EUen": "Comrade K.K.",
+      "EUes": "Tota-camarada",
+      "EUfr": "Tovaritch Kéké",
+      "EUit": "K.K. Compagno",
+      "EUnl": "Kameraad K.⁠K.",
+      "EUru": "Товарищ К. К.",
+      "JPja": "しょうわけけかよう",
+      "KRko": "추억의 K.K.가요",
+      "TWzh": "昭和K.K.歌謠",
+      "USen": "Comrade K.K.",
+      "USes": "Tota-camarada",
+      "USfr": "Camarade Kéké"
+    }
+  },
+  {
+    "label": "Music_02449",
+    "locale": {
+      "CNzh": "K.K.演歌",
+      "EUde": "K.K. Klagelied",
+      "EUen": "K.K. Lament",
+      "EUes": "Tota-lamento",
+      "EUfr": "Complainte Kéké",
+      "EUit": "K.K. Lacrime",
+      "EUnl": "K⁠.⁠K⁠.-⁠klaagzang",
+      "EUru": "Жалобная песнь К. К.",
+      "JPja": "けけえんか",
+      "KRko": "K.K.트로트",
+      "TWzh": "K.K.演歌",
+      "USen": "K.K. Lament",
+      "USes": "Tota-lamento",
+      "USfr": "Complainte Kéké"
+    }
+  },
+  {
+    "label": "Music_02450",
+    "locale": {
+      "CNzh": "冲吧！K.K.摩托车手",
+      "EUde": "Go K.K. Rider!",
+      "EUen": "Go K.K. Rider",
+      "EUes": "Llanero Tota",
+      "EUfr": "Kéké route 66",
+      "EUit": "K.K. Cross",
+      "EUnl": "Super-⁠K⁠.⁠K⁠.",
+      "EUru": "Доброго пути, К. К.!",
+      "JPja": "ゆけ!けけライダー",
+      "KRko": "가자! K.K.라이더",
+      "TWzh": "衝吧！K.K.摩托車手",
+      "USen": "Go K.K. Rider",
+      "USes": "Llanero Tota",
+      "USfr": "Kéké route 66"
+    }
+  },
+  {
+    "label": "Music_02451",
+    "locale": {
+      "CNzh": "惊悚歌",
+      "EUde": "K.K. Trauerlied",
+      "EUen": "K.K. Dirge",
+      "EUes": "Tota-réquiem",
+      "EUfr": "Requiem de Kéké",
+      "EUit": "K.K. Canto",
+      "EUnl": "K.⁠K. in het donker",
+      "EUru": "Реквием К. К.",
+      "JPja": "こわいうた",
+      "KRko": "무서운 노래",
+      "TWzh": "驚悚歌",
+      "USen": "K.K. Dirge",
+      "USes": "Tota-réquiem",
+      "USfr": "Requiem de Kéké"
+    }
+  },
+  {
+    "label": "Music_02452",
+    "locale": {
+      "CNzh": "K.K.西部",
+      "EUde": "K.K. Western",
+      "EUen": "K.K. Western",
+      "EUes": "Tota-Oeste",
+      "EUfr": "Far West Kéké",
+      "EUit": "K.K. Western",
+      "EUnl": "K⁠.⁠K⁠.-⁠western",
+      "EUru": "Вестерн К. К.",
+      "JPja": "けけウェスタン",
+      "KRko": "K.K.웨스턴",
+      "TWzh": "K.K.西部",
+      "USen": "K.K. Western",
+      "USes": "Tota-Oeste",
+      "USfr": "Far West Kéké"
+    }
+  },
+  {
+    "label": "Music_02453",
+    "locale": {
+      "CNzh": "K.K.老师",
+      "EUde": "Herr K.K.",
+      "EUen": "Mr. K.K.",
+      "EUes": "Míster Totakeke",
+      "EUfr": "M. Kéké",
+      "EUit": "K.K. Sig. No",
+      "EUnl": "Meester K.⁠K.",
+      "EUru": "Господин К. К.",
+      "JPja": "けけせんせい",
+      "KRko": "K.K.선생님",
+      "TWzh": "K.K.老師",
+      "USen": "Mr. K.K.",
+      "USes": "Míster Totakeke",
+      "USfr": "M. Kéké"
+    }
+  },
+  {
+    "label": "Music_02454",
+    "locale": {
+      "CNzh": "K.K.巴黎",
+      "EUde": "K.K. Kaffeeblues",
+      "EUen": "Café K.K.",
+      "EUes": "Tota-café",
+      "EUfr": "Kéké café",
+      "EUit": "K.K. Bar",
+      "EUnl": "Café K.⁠K.",
+      "EUru": "Кафе К. К.",
+      "JPja": "けけパリ",
+      "KRko": "K.K.파리",
+      "TWzh": "K.K.巴黎",
+      "USen": "Café K.K.",
+      "USes": "Tota-café",
+      "USfr": "Kéké café"
+    }
+  },
+  {
+    "label": "Music_02455",
+    "locale": {
+      "CNzh": "K.K.嘉年华",
+      "EUde": "K.K. Parade",
+      "EUen": "K.K. Parade",
+      "EUes": "Tota-desfile",
+      "EUfr": "Kéké académie",
+      "EUit": "K.K. Parata",
+      "EUnl": "K⁠.⁠K⁠.-⁠parade",
+      "EUru": "Парад К. К.",
+      "JPja": "けけパレード",
+      "KRko": "K.K.퍼레이드",
+      "TWzh": "K.K.嘉年華",
+      "USen": "K.K. Parade",
+      "USes": "Tota-desfile",
+      "USfr": "Kéké académie"
+    }
+  },
+  {
+    "label": "Music_02456",
+    "locale": {
+      "CNzh": "墨西哥绅士K.K.",
+      "EUde": "K.K. Combo",
+      "EUen": "K.K. Mariachi",
+      "EUes": "Tota-mariachi",
+      "EUfr": "Mariachi Kéké",
+      "EUit": "K.K. Amico",
+      "EUnl": "K⁠.⁠K⁠.-⁠mariachi",
+      "EUru": "Марьячи К. К.",
+      "JPja": "セニョールけけ",
+      "KRko": "세뇨르K.K.",
+      "TWzh": "墨西哥紳士K.K.",
+      "USen": "K.K. Mariachi",
+      "USes": "Tota-mariachi",
+      "USfr": "Mariachi Kéké"
+    }
+  },
+  {
+    "label": "Music_02457",
+    "locale": {
+      "CNzh": "K.K.乐曲",
+      "EUde": "K.K. Song",
+      "EUen": "K.K. Song",
+      "EUes": "Tota-canción",
+      "EUfr": "Rengaine de Kéké",
+      "EUit": "K.K. Canzone",
+      "EUnl": "K⁠.⁠K⁠.-⁠lied",
+      "EUru": "Песнь К. К.",
+      "JPja": "けけソング",
+      "KRko": "K.K.의 노래",
+      "TWzh": "K.K.樂曲",
+      "USen": "K.K. Song",
+      "USes": "Tota-canción",
+      "USfr": "Rengaine de Kéké"
+    }
+  },
+  {
+    "label": "Music_02458",
+    "locale": {
+      "CNzh": "我爱你",
+      "EUde": "Ich liebe dich",
+      "EUen": "I Love You",
+      "EUes": "Te quiero",
+      "EUfr": "Je vous aime",
+      "EUit": "Ti amo",
+      "EUnl": "Ik hou van jou",
+      "EUru": "Я вас люблю",
+      "JPja": "だいすき",
+      "KRko": "사랑해",
+      "TWzh": "我愛你",
+      "USen": "I Love You",
+      "USes": "Te quiero",
+      "USfr": "Je vous aime"
+    }
+  },
+  {
+    "label": "Music_02459",
+    "locale": {
+      "CNzh": "前天",
+      "EUde": "Vorgestern",
+      "EUen": "Two Days Ago",
+      "EUes": "Anteayer",
+      "EUfr": "2 jours plus tôt",
+      "EUit": "Due giorni fa",
+      "EUnl": "Eergisteren",
+      "EUru": "Два дня назад",
+      "JPja": "おととい",
+      "KRko": "이틀 전",
+      "TWzh": "前天",
+      "USen": "Two Days Ago",
+      "USes": "Anteayer",
+      "USfr": "2 jours plus tôt"
+    }
+  },
+  {
+    "label": "Music_02460",
+    "locale": {
+      "CNzh": "我的归所",
+      "EUde": "Mein Zuhause",
+      "EUen": "My Place",
+      "EUes": "Mi hogar",
+      "EUfr": "Chez moi",
+      "EUit": "Casa mia",
+      "EUnl": "Mijn thuis",
+      "EUru": "Мой дом",
+      "JPja": "ぼくのばしょ",
+      "KRko": "내가 있는 곳",
+      "TWzh": "我的歸所",
+      "USen": "My Place",
+      "USes": "Mi hogar",
+      "USfr": "Chez moi"
+    }
+  },
+  {
+    "label": "Music_02461",
+    "locale": {
+      "CNzh": "森林生活",
+      "EUde": "Waldlichtung",
+      "EUen": "Forest Life",
+      "EUes": "Forestal y tal",
+      "EUfr": "Vie de forêt",
+      "EUit": "Vita selvaggia",
+      "EUnl": "In het bos",
+      "EUru": "Лесная жизнь",
+      "JPja": "もりのせいかつ",
+      "KRko": "숲 속 생활",
+      "TWzh": "森林生活",
+      "USen": "Forest Life",
+      "USes": "Forestal y tal",
+      "USfr": "Vie de forêt"
+    }
+  },
+  {
+    "label": "Music_02462",
+    "locale": {
+      "CNzh": "漫弥",
+      "EUde": "Am Rande",
+      "EUen": "To the Edge",
+      "EUes": "Hasta el final",
+      "EUfr": "Limite",
+      "EUit": "Al limite",
+      "EUnl": "Op het randje",
+      "EUru": "На краю",
+      "JPja": "ナミナミ",
+      "KRko": "파도소리",
+      "TWzh": "漫瀰",
+      "USen": "To the Edge",
+      "USes": "Hasta el final",
+      "USfr": "Limite"
+    }
+  },
+  {
+    "label": "Music_02463",
+    "locale": {
+      "CNzh": "思考中",
+      "EUde": "Nachdenklich",
+      "EUen": "Pondering",
+      "EUes": "Sopesando",
+      "EUfr": "Réfléchir",
+      "EUit": "Pensando",
+      "EUnl": "De denker",
+      "EUru": "Размышления",
+      "JPja": "かんがえちゅう",
+      "KRko": "생각 중",
+      "TWzh": "思考中",
+      "USen": "Pondering",
+      "USes": "Sopesando",
+      "USfr": "Réfléchir"
+    }
+  },
+  {
+    "label": "Music_02464",
+    "locale": {
+      "CNzh": "K.K.迪克西",
+      "EUde": "K.K. Dixie",
+      "EUen": "K.K. Dixie",
+      "EUes": "Tota-old-jazz",
+      "EUfr": "Kéké Dixie",
+      "EUit": "K.K. Dixie",
+      "EUnl": "K⁠.⁠K⁠.-⁠dixieland",
+      "EUru": "Дикси К. К.",
+      "JPja": "けけディキシー",
+      "KRko": "K.K.딕시",
+      "TWzh": "K.K.迪克西",
+      "USen": "K.K. Dixie",
+      "USes": "Tota-old-jazz",
+      "USfr": "Kéké Dixie"
+    }
+  },
+  {
+    "label": "Music_02465",
+    "locale": {
+      "CNzh": "K.K.甘美朗",
+      "EUde": "K.K. Marathon",
+      "EUen": "K.K. Marathon",
+      "EUes": "Tota-maratón",
+      "EUfr": "Kéké marathon",
+      "EUit": "K.K. Maratona",
+      "EUnl": "K⁠.⁠K⁠.-⁠gamelan",
+      "EUru": "Марафон К. К.",
+      "JPja": "けけガムラン",
+      "KRko": "K.K.가믈란",
+      "TWzh": "K.K.甘美朗",
+      "USen": "K.K. Marathon",
+      "USes": "Tota-maratón",
+      "USfr": "Kéké marathon"
+    }
+  },
+  {
+    "label": "Music_02466",
+    "locale": {
+      "CNzh": "K.K.领主",
+      "EUde": "King K.K.",
+      "EUen": "King K.K.",
+      "EUes": "Rey Tota",
+      "EUfr": "Kéké King",
+      "EUit": "K.K. Re",
+      "EUnl": "Keizer K.⁠K.",
+      "EUru": "Король К. К.",
+      "JPja": "けけだいみょう",
+      "KRko": "K.K.왕조",
+      "TWzh": "K.K.領主",
+      "USen": "King K.K.",
+      "USes": "Rey Tota",
+      "USfr": "Le roi Kéké"
+    }
+  },
+  {
+    "label": "Music_02467",
+    "locale": {
+      "CNzh": "阿尔卑斯山乐曲",
+      "EUde": "Berglied",
+      "EUen": "Mountain Song",
+      "EUes": "Totalerileriló",
+      "EUfr": "Chant montagnard",
+      "EUit": "Canzone montana",
+      "EUnl": "Jodelaheho",
+      "EUru": "Горная песнь",
+      "JPja": "アルペンそんぐ",
+      "KRko": "알프스의 노래",
+      "TWzh": "阿爾卑斯山樂曲",
+      "USen": "Mountain Song",
+      "USes": "Totalerileriló",
+      "USfr": "Chant montagnard"
+    }
+  },
+  {
+    "label": "Music_02468",
+    "locale": {
+      "CNzh": "船歌2001",
+      "EUde": "Seefahrerlied 2001",
+      "EUen": "Marine Song 2001",
+      "EUes": "Tota 2001",
+      "EUfr": "Chant marin",
+      "EUit": "Canzone marina",
+      "EUnl": "Zeelied",
+      "EUru": "Песня о море 2001",
+      "JPja": "ふなうた2001",
+      "KRko": "뱃노래2001",
+      "TWzh": "船歌2001",
+      "USen": "Marine Song 2001",
+      "USes": "Tota 2001",
+      "USfr": "Chant marin"
+    }
+  },
+  {
+    "label": "Music_02469",
+    "locale": {
+      "CNzh": "意大利面",
+      "EUde": "Neapolitaner",
+      "EUen": "Neapolitan",
+      "EUes": "Napolitana",
+      "EUfr": "Napolitaine",
+      "EUit": "Napoletana",
+      "EUnl": "Napolitain",
+      "EUru": "Неаполитанское",
+      "JPja": "ナポリタン",
+      "KRko": "토마토 스파게티",
+      "TWzh": "義大利麵",
+      "USen": "Neapolitan",
+      "USes": "Napolitana",
+      "USfr": "Napolitaine"
+    }
+  },
+  {
+    "label": "Music_02470",
+    "locale": {
+      "CNzh": "二段斜坡",
+      "EUde": "Bergsteigung",
+      "EUen": "Steep Hill",
+      "EUes": "Colina arriba",
+      "EUfr": "La pente",
+      "EUit": "Irto colle",
+      "EUnl": "Heuvelopwaarts",
+      "EUru": "Крутой холм",
+      "JPja": "にだんざか",
+      "KRko": "오르막길",
+      "TWzh": "二段斜坡",
+      "USen": "Steep Hill",
+      "USes": "Colina arriba",
+      "USfr": "La pente"
+    }
+  },
+  {
+    "label": "Music_02471",
+    "locale": {
+      "CNzh": "K.K.乡村摇滚",
+      "EUde": "K.K. Rockabilly",
+      "EUen": "K.K. Rockabilly",
+      "EUes": "Tota-rockabilly",
+      "EUfr": "Rockabilly Kéké",
+      "EUit": "K.K. Rockabilly",
+      "EUnl": "K⁠.⁠K⁠.-⁠rockabilly",
+      "EUru": "Рокабилли К. К.",
+      "JPja": "けけビリー",
+      "KRko": "K.K.빌리",
+      "TWzh": "K.K.鄉村搖滾",
+      "USen": "K.K. Rockabilly",
+      "USes": "Tota-rockabilly",
+      "USfr": "Rockabilly Kéké"
+    }
+  },
+  {
+    "label": "Music_02472",
+    "locale": {
+      "CNzh": "K.K.刑警",
+      "EUde": "Agent K.K.",
+      "EUen": "Agent K.K.",
+      "EUes": "Agente Totakeke",
+      "EUfr": "Agent Kéké",
+      "EUit": "Agente K.K.",
+      "EUnl": "⁠Agent K.K.",
+      "EUru": "Агент К. К.",
+      "JPja": "けけけいじ",
+      "KRko": "K.K.형사",
+      "TWzh": "K.K.刑警",
+      "USen": "Agent K.K.",
+      "USes": "Agente Totakeke",
+      "USfr": "Agent Kéké"
+    }
+  },
+  {
+    "label": "Music_02473",
+    "locale": {
+      "CNzh": "K.K.大和祭典",
+      "EUde": "K.K. Parade 2",
+      "EUen": "K.K. Rally",
+      "EUes": "Tota-parada",
+      "EUfr": "Parade Kéké",
+      "EUit": "K.K. Gran galà",
+      "EUnl": "K⁠.⁠K⁠.-⁠optocht",
+      "EUru": "Ралли К. К.",
+      "JPja": "けけおんど",
+      "KRko": "K.K.축제",
+      "TWzh": "K.K.大和祭典",
+      "USen": "K.K. Rally",
+      "USes": "Tota-parada",
+      "USfr": "Parade Kéké"
+    }
+  },
+  {
+    "label": "Music_02474",
+    "locale": {
+      "CNzh": "K.K.金属摇滚",
+      "EUde": "K.K. Metal",
+      "EUen": "K.K. Metal",
+      "EUes": "Tota-metal",
+      "EUfr": "Kéké metal",
+      "EUit": "K.K. Metal",
+      "EUnl": "K⁠.⁠K⁠.-⁠metal",
+      "EUru": "Металл К. К.",
+      "JPja": "けけメタル",
+      "KRko": "K.K.메탈",
+      "TWzh": "K.K.金屬搖滾",
+      "USen": "K.K. Metal",
+      "USes": "Tota-metal",
+      "USfr": "Kéké métal"
+    }
+  },
+  {
+    "label": "Music_02475",
+    "locale": {
+      "CNzh": "蓝色饭团",
+      "EUde": "Alter Kuchen",
+      "EUen": "Stale Cupcakes",
+      "EUes": "Pastelito seco",
+      "EUfr": "Vieux biscuits",
+      "EUit": "Vecchi dolcetti",
+      "EUnl": "Oude cupcakes",
+      "EUru": "Черствые капкейки",
+      "JPja": "ブルーおにぎり",
+      "KRko": "블루 삼각 김밥",
+      "TWzh": "藍色飯糰",
+      "USen": "Stale Cupcakes",
+      "USes": "Pastelito seco",
+      "USfr": "Vieux biscuits"
+    }
+  },
+  {
+    "label": "Music_02476",
+    "locale": {
+      "CNzh": "春暖花开",
+      "EUde": "Frühlingsblüten",
+      "EUen": "Spring Blossoms",
+      "EUes": "Capullos en flor",
+      "EUfr": "Floraison",
+      "EUit": "Fiori marzolini",
+      "EUnl": "Lentebloesems",
+      "EUru": "Весенний цвет",
+      "JPja": "はるのこもれび",
+      "KRko": "봄날의 여유",
+      "TWzh": "春暖花開",
+      "USen": "Spring Blossoms",
+      "USes": "Capullos en flor",
+      "USfr": "Floraison"
+    }
+  },
+  {
+    "label": "Music_02477",
+    "locale": {
+      "CNzh": "流浪",
+      "EUde": "Ich wandere",
+      "EUen": "Wandering",
+      "EUes": "Vagabundo",
+      "EUfr": "Errance",
+      "EUit": "Il viaggiatore",
+      "EUnl": "Wandelen",
+      "EUru": "Поход",
+      "JPja": "ほうろう",
+      "KRko": "방랑자",
+      "TWzh": "流浪",
+      "USen": "Wandering",
+      "USes": "Vagabundo",
+      "USfr": "Errance"
+    }
+  },
+  {
+    "label": "Music_02478",
+    "locale": {
+      "CNzh": "K.K.浩室",
+      "EUde": "K.K. House",
+      "EUen": "K.K. House",
+      "EUes": "Tota-house",
+      "EUfr": "Kéké House",
+      "EUit": "K.K. House",
+      "EUnl": "K⁠.⁠K⁠.-⁠house",
+      "EUru": "Хаус К. К.",
+      "JPja": "けけハウス",
+      "KRko": "K.K.하우스",
+      "TWzh": "K.K.浩室",
+      "USen": "K.K. House",
+      "USes": "Tota-house",
+      "USfr": "Kéké House"
+    }
+  },
+  {
+    "label": "Music_02479",
+    "locale": {
+      "CNzh": "K.K.奏鸣曲",
+      "EUde": "K.K. Sonate",
+      "EUen": "K.K. Sonata",
+      "EUes": "Tota-sonata",
+      "EUfr": "Sonate Kéké",
+      "EUit": "K.K. Sonata",
+      "EUnl": "K⁠.⁠K⁠.-⁠sonate",
+      "EUru": "Соната К. К.",
+      "JPja": "けけのソナタ",
+      "KRko": "K.K.소나타",
+      "TWzh": "K.K.奏鳴曲",
+      "USen": "K.K. Sonata",
+      "USes": "Tota-sonata",
+      "USfr": "Sonate Kéké"
+    }
+  },
+  {
+    "label": "Music_02480",
+    "locale": {
+      "CNzh": "白日梦",
+      "EUde": "Schlummerlied",
+      "EUen": "Hypno K.K.",
+      "EUes": "Mírame a los ojos",
+      "EUfr": "Psykéké",
+      "EUit": "K.K. Ipnotico",
+      "EUnl": "Hypnotherapie",
+      "EUru": "Гипноз К. К.",
+      "JPja": "うたたねのゆめ",
+      "KRko": "졸면서 꾸는 꿈",
+      "TWzh": "白日夢",
+      "USen": "Hypno K.K.",
+      "USes": "Mírame a los ojos",
+      "USfr": "Psykéké"
+    }
+  },
+  {
+    "label": "Music_02481",
+    "locale": {
+      "CNzh": "散散步",
+      "EUde": "Spaziergang",
+      "EUen": "K.K. Stroll",
+      "EUes": "Paseíto",
+      "EUfr": "Flânerie Kéké",
+      "EUit": "K.K. Trallalà",
+      "EUnl": "Op straat",
+      "EUru": "Прогулка К. К.",
+      "JPja": "おさんぽ",
+      "KRko": "산책",
+      "TWzh": "散散步",
+      "USen": "K.K. Stroll",
+      "USes": "Paseíto",
+      "USfr": "Flânerie Kéké"
+    }
+  },
+  {
+    "label": "Music_02482",
+    "locale": {
+      "CNzh": "动物岛",
+      "EUde": "Die Insel der Tiere",
+      "EUen": "K.K. Island",
+      "EUes": "Mi isla, mi hogar",
+      "EUfr": "Kéké des îles",
+      "EUit": "K.K. Isola",
+      "EUnl": "Onbewoond eiland",
+      "EUru": "Остров К. К.",
+      "JPja": "どうぶつのしま",
+      "KRko": "동물의 섬",
+      "TWzh": "動物島",
+      "USen": "K.K. Island",
+      "USes": "Mi isla, mi hogar",
+      "USfr": "Kéké des îles"
+    }
+  },
+  {
+    "label": "Music_02483",
+    "locale": {
+      "CNzh": "极简音乐",
+      "EUde": "Minimal Music",
+      "EUen": "Space K.K.",
+      "EUes": "Canción minimalista",
+      "EUfr": "Space Kéké",
+      "EUit": "K.K. Minimal",
+      "EUnl": "K⁠.⁠K⁠.-⁠minimalisme",
+      "EUru": "Космос К. К.",
+      "JPja": "ミニマルおんがく",
+      "KRko": "미니멀 음악",
+      "TWzh": "極簡音樂",
+      "USen": "Space K.K.",
+      "USes": "Canción minimalista",
+      "USfr": "Kéké cosmos"
+    }
+  },
+  {
+    "label": "Music_02484",
+    "locale": {
+      "CNzh": "K.K.好莱坞",
+      "EUde": "K.K. Filmmusik",
+      "EUen": "K.K. Adventure",
+      "EUes": "Tota-banda sonora",
+      "EUfr": "Kéké star",
+      "EUit": "K.K. Superstar",
+      "EUnl": "K⁠.⁠K⁠.-⁠filmmuziek",
+      "EUru": "Приключения К. К.",
+      "JPja": "けけハリウッド",
+      "KRko": "K.K.할리우드",
+      "TWzh": "K.K.好萊塢",
+      "USen": "K.K. Adventure",
+      "USes": "Tota-banda sonora",
+      "USfr": "Kéké star"
+    }
+  },
+  {
+    "label": "Music_02485",
+    "locale": {
+      "CNzh": "K.K.印度王公",
+      "EUde": "K.K. Maharadscha",
+      "EUen": "K.K. Oasis",
+      "EUes": "Tota-marajá",
+      "EUfr": "Maharadjah Kéké",
+      "EUit": "K.K. Maragià",
+      "EUnl": "⁠Maharadja K.K.",
+      "EUru": "Оазис К. К.",
+      "JPja": "けけマハラジャ",
+      "KRko": "K.K.마하라자",
+      "TWzh": "K.K.印度王公",
+      "USen": "K.K. Oasis",
+      "USes": "Tota-marajá",
+      "USfr": "Maharadjah Kéké"
+    }
+  },
+  {
+    "label": "Music_02486",
+    "locale": {
+      "CNzh": "K.K.吉普赛",
+      "EUde": "K.K. Basar",
+      "EUen": "K.K. Bazaar",
+      "EUes": "Tota-bazar",
+      "EUfr": "Kéké bohême",
+      "EUit": "K.K. Bazar",
+      "EUnl": "K.⁠K. op de bazaar",
+      "EUru": "Базар К. К.",
+      "JPja": "けけロマ",
+      "KRko": "K.K.로마",
+      "TWzh": "K.K.吉普賽",
+      "USen": "K.K. Bazaar",
+      "USes": "Tota-bazar",
+      "USfr": "Kéké bohême"
+    }
+  },
+  {
+    "label": "Music_02487",
+    "locale": {
+      "CNzh": "K.K.米隆加",
+      "EUde": "K.K. Milonga",
+      "EUen": "K.K. Milonga",
+      "EUes": "Tota-milonga",
+      "EUfr": "Milonga Kéké",
+      "EUit": "K.K. Milonga",
+      "EUnl": "K⁠.⁠K⁠.-⁠milonga",
+      "EUru": "Милонга К. К.",
+      "JPja": "けけのミロンガ",
+      "KRko": "K.K.밀롱가",
+      "TWzh": "K.K.米隆加",
+      "USen": "K.K. Milonga",
+      "USes": "Tota-milonga",
+      "USfr": "Milonga Kéké"
+    }
+  },
+  {
+    "label": "Music_02488",
+    "locale": {
+      "CNzh": "K.K.律动",
+      "EUde": "K.K. Groove",
+      "EUen": "K.K. Groove",
+      "EUes": "Tota-groove",
+      "EUfr": "Groove Kéké",
+      "EUit": "K.K. Groove",
+      "EUnl": "K⁠.⁠K⁠.-⁠groove",
+      "EUru": "Грув К. К.",
+      "JPja": "けけグルーヴ",
+      "KRko": "K.K.그루브",
+      "TWzh": "K.K.律動",
+      "USen": "K.K. Groove",
+      "USes": "Tota-groove",
+      "USfr": "Groove Kéké"
+    }
+  },
+  {
+    "label": "Music_02489",
+    "locale": {
+      "CNzh": "K.K.三味线",
+      "EUde": "K.K. Melodie",
+      "EUen": "K.K. Jongara",
+      "EUes": "Tota-shamisen",
+      "EUfr": "Shamisen Kéké",
+      "EUit": "K.K. Shamisen",
+      "EUnl": "K⁠.⁠K⁠.-⁠jongara",
+      "EUru": "Джонгара К. К.",
+      "JPja": "けけじょんがら",
+      "KRko": "K.K.샤미센 연주곡",
+      "TWzh": "K.K.三味線",
+      "USen": "K.K. Jongara",
+      "USes": "Tota-shamisen",
+      "USfr": "Shamisen Kéké"
+    }
+  },
+  {
+    "label": "Music_02490",
+    "locale": {
+      "CNzh": "K.K.佛朗明哥",
+      "EUde": "K.K. Flamenco",
+      "EUen": "K.K. Flamenco",
+      "EUes": "Tota-flamenco",
+      "EUfr": "Flamenco Kéké",
+      "EUit": "K.K. Flamenco",
+      "EUnl": "K⁠.⁠K⁠.-⁠flamenco",
+      "EUru": "Фламенко К. К.",
+      "JPja": "けけフラメンコ",
+      "KRko": "K.K.플라멩코",
+      "TWzh": "K.K.佛朗明哥",
+      "USen": "K.K. Flamenco",
+      "USes": "Tota-flamenco",
+      "USfr": "Flamenco Kéké"
+    }
+  },
+  {
+    "label": "Music_02491",
+    "locale": {
+      "CNzh": "K.K.波蕾洛",
+      "EUde": "K.K. Sonnenuntergang",
+      "EUen": "K.K. Moody",
+      "EUes": "Tota-bolero",
+      "EUfr": "Slow Kéké",
+      "EUit": "K.K. Tramonto",
+      "EUnl": "K⁠.⁠K⁠.-⁠bolero",
+      "EUru": "Задумчивый К. К.",
+      "JPja": "けけボレロ",
+      "KRko": "K.K.볼레로",
+      "TWzh": "K.K.波蕾洛",
+      "USen": "K.K. Moody",
+      "USes": "Tota-bolero",
+      "USfr": "Slow Kéké"
+    }
+  },
+  {
+    "label": "Music_02492",
+    "locale": {
+      "CNzh": "K.K.偶像",
+      "EUde": "K.K. Pop",
+      "EUen": "Bubblegum K.K.",
+      "EUes": "Tota-pop",
+      "EUfr": "Bubblegum Kéké",
+      "EUit": "K.K. Bolle rosa",
+      "EUnl": "K⁠.⁠K⁠.-⁠bubblegum",
+      "EUru": "Бабблгам-поп К. К.",
+      "JPja": "けけアイドル",
+      "KRko": "K.K.아이돌",
+      "TWzh": "K.K.偶像",
+      "USen": "Bubblegum K.K.",
+      "USes": "Tota-pop",
+      "USfr": "Kéké gomme balloune"
+    }
+  },
+  {
+    "label": "Music_02493",
+    "locale": {
+      "CNzh": "K.K.电子民谣",
+      "EUde": "K.K. Synthiepop",
+      "EUen": "K.K. Synth",
+      "EUes": "Tota-electrónica",
+      "EUfr": "Synthé Kéké",
+      "EUit": "K.K. Synth",
+      "EUnl": "K⁠.⁠K⁠.-⁠synthpop",
+      "EUru": "Синти-поп К. К.",
+      "JPja": "けけトロニカ",
+      "KRko": "K.K.트로니카",
+      "TWzh": "K.K.電子民謠",
+      "USen": "K.K. Synth",
+      "USes": "Tota-electrónica",
+      "USfr": "Synthé Kéké"
+    }
+  },
+  {
+    "label": "Music_02494",
+    "locale": {
+      "CNzh": "K.K.迪斯科",
+      "EUde": "K.K. Disco",
+      "EUen": "K.K. Disco",
+      "EUes": "Tota-disco",
+      "EUfr": "Disco Kéké",
+      "EUit": "K.K. Disco",
+      "EUnl": "K⁠.⁠K⁠.-⁠disco",
+      "EUru": "Диско К. К.",
+      "JPja": "けけディスコ",
+      "KRko": "K.K.디스코",
+      "TWzh": "K.K.迪斯可",
+      "USen": "K.K. Disco",
+      "USes": "Tota-disco",
+      "USfr": "Disco Kéké"
+    }
+  },
+  {
+    "label": "Music_02495",
+    "locale": {
+      "CNzh": "你的生日",
+      "EUde": "Geburtstagslied",
+      "EUen": "K.K. Birthday",
+      "EUes": "Feliz en tu día",
+      "EUfr": "Anniversaire Kéké",
+      "EUit": "K.K. Compleanno",
+      "EUnl": "Fijne verjaardag",
+      "EUru": "День рождения К. К.",
+      "JPja": "きみのたんじょうび",
+      "KRko": "그대의 생일",
+      "TWzh": "你的生日",
+      "USen": "K.K. Birthday",
+      "USes": "Feliz cumpleaños",
+      "USfr": "Anniversaire Kéké"
+    }
+  },
+  {
+    "label": "Music_04312",
+    "locale": {
+      "CNzh": "动物城镇",
+      "EUde": "Die Stadt der Tiere",
+      "EUen": "Animal City",
+      "EUes": "Ciudad animal",
+      "EUfr": "À nous la belle ville",
+      "EUit": "La città degli animali",
+      "EUnl": "Animal City",
+      "EUru": "Город зверушек",
+      "JPja": "どうぶつのまち",
+      "KRko": "동물의 마을",
+      "TWzh": "動物城鎮",
+      "USen": "Animal City",
+      "USes": "Ciudad animal",
+      "USfr": "À nous la belle ville"
+    }
+  },
+  {
+    "label": "Music_04313",
+    "locale": {
+      "CNzh": "再会",
+      "EUde": "Abschied",
+      "EUen": "Farewell",
+      "EUes": "Despedida",
+      "EUfr": "Adieux",
+      "EUit": "Arrivederci",
+      "EUnl": "Vaarwel",
+      "EUru": "Прощание",
+      "JPja": "さよなら",
+      "KRko": "작별",
+      "TWzh": "再會",
+      "USen": "Farewell",
+      "USes": "Despedida",
+      "USfr": "Adieux"
+    }
+  },
+  {
+    "label": "Music_04314",
+    "locale": {
+      "CNzh": "兜风",
+      "EUde": "Am Steuer",
+      "EUen": "Drivin'",
+      "EUes": "Al volante",
+      "EUfr": "Sur la route",
+      "EUit": "Gita al volante",
+      "EUnl": "Achter het stuur",
+      "EUru": "За рулем",
+      "JPja": "ドライブ",
+      "KRko": "드라이브",
+      "TWzh": "兜風",
+      "USen": "Drivin'",
+      "USes": "Al volante",
+      "USfr": "Sur la route"
+    }
+  },
+  {
+    "label": "Music_04318",
+    "locale": {
+      "CNzh": "大家集合吧",
+      "EUde": "Neue Horizonte",
+      "EUen": "Welcome Horizons",
+      "EUes": "Nuevo horizonte",
+      "EUfr": "Horizons nouveaux",
+      "EUit": "Nuovi orizzonti",
+      "EUnl": "Welkome horizon",
+      "EUru": "Светлые горизонты",
+      "JPja": "みんなあつまれ",
+      "KRko": "모두 모여봐요",
+      "TWzh": "大家集合吧",
+      "USen": "Welcome Horizons",
+      "USes": "Nuevo horizonte",
+      "USfr": "Horizons nouveaux"
+    }
+  },
+  {
+    "label": "Music_07657",
+    "locale": {
+      "CNzh": "K.K.赋格曲",
+      "EUde": "K.K. Fuge",
+      "EUen": "K.K. Fugue",
+      "EUes": "Tota-fuga",
+      "EUfr": "Fugue de Kéké",
+      "EUit": "K.K. Fuga",
+      "EUnl": "K⁠.⁠K⁠.-⁠fuga",
+      "EUru": "Фуга К. К.",
+      "JPja": "けけフーガ",
+      "KRko": "K.K.푸가",
+      "TWzh": "K.K.賦格曲",
+      "USen": "K.K. Fugue",
+      "USes": "Tota-fuga",
+      "USfr": "Fugue de Kéké"
+    }
+  },
+  {
+    "label": "Music_07658",
+    "locale": {
+      "CNzh": "K.K.波尔卡舞曲",
+      "EUde": "K.K. Polka",
+      "EUen": "K.K. Polka",
+      "EUes": "Tota-polka",
+      "EUfr": "Polka de Kéké",
+      "EUit": "K.K. Polka",
+      "EUnl": "K⁠.⁠K⁠.-⁠polka",
+      "EUru": "Полька К. К.",
+      "JPja": "けけポルカ",
+      "KRko": "K.K.폴카",
+      "TWzh": "K.K.波爾卡舞曲",
+      "USen": "K.K. Polka",
+      "USes": "Tota-polka",
+      "USfr": "Polka de Kéké"
+    }
+  },
+  {
+    "label": "Music_07659",
+    "locale": {
+      "CNzh": "K.K.Slack-Key吉他",
+      "EUde": "K.K. Slack-Key",
+      "EUen": "K.K. Slack-Key",
+      "EUes": "Tota-kī hō'alu",
+      "EUfr": "Ki ho'alu Kéké",
+      "EUit": "K.K. Slack-Key",
+      "EUnl": "K.K.-slack-key",
+      "EUru": "Слэк-ки К. К.",
+      "JPja": "けけスラッキー",
+      "KRko": "K.K.슬랙키",
+      "TWzh": "K.K. Slack-Key吉他",
+      "USen": "K.K. Slack-Key",
+      "USes": "Tota-kī hō'alu",
+      "USfr": "Ki ho'alu Kéké"
+    }
+  },
+  {
+    "label": "Music_07660",
+    "locale": {
+      "CNzh": "K.K.咻乐",
+      "EUde": "K.K. Chorinho",
+      "EUen": "K.K. Chorinho",
+      "EUes": "Tota-chorinho",
+      "EUfr": "Chorinho Kéké",
+      "EUit": "K.K. Chorinho",
+      "EUnl": "K⁠.⁠K⁠.-⁠chorinho",
+      "EUru": "Шориньо К. К.",
+      "JPja": "けけショーロ",
+      "KRko": "K.K.쇼로",
+      "TWzh": "K.K.咻樂",
+      "USen": "K.K. Chorinho",
+      "USes": "Tota-chorinho",
+      "USfr": "Chorinho Kéké"
+    }
+  },
+  {
+    "label": "Music_07661",
+    "locale": {
+      "CNzh": "冷波",
+      "EUde": "Chillwave",
+      "EUen": "Chillwave",
+      "EUes": "Tota-sintes",
+      "EUfr": "Chillwave Kéké",
+      "EUit": "K.K. Chillwave",
+      "EUnl": "K⁠.⁠K⁠.-⁠chillwave",
+      "EUru": "Чиллвейв",
+      "JPja": "チルウェイヴ",
+      "KRko": "칠웨이브",
+      "TWzh": "冷波",
+      "USen": "Chillwave",
+      "USes": "Tota-sintes",
+      "USfr": "Chillwave Kéké"
+    }
+  },
+  {
+    "label": "Music_07662",
+    "locale": {
+      "CNzh": "K.K.混搭音乐",
+      "EUde": "K.K. Dub",
+      "EUen": "K.K. Dub",
+      "EUes": "Tota-dub",
+      "EUfr": "Dub Kéké",
+      "EUit": "K.K. Dub",
+      "EUnl": "K⁠.⁠K⁠.-⁠dub",
+      "EUru": "Даб К. К.",
+      "JPja": "けけダブ",
+      "KRko": "K.K.덥",
+      "TWzh": "K.K.混搭音樂",
+      "USen": "K.K. Dub",
+      "USes": "Tota-dub",
+      "USfr": "Dub Kéké"
+    }
+  },
+  {
+    "label": "Music_07663",
+    "locale": {
+      "CNzh": "K.K.爱人们",
+      "EUde": "K.K. Lovers",
+      "EUen": "K.K. Lovers",
+      "EUes": "Tota-amores",
+      "EUfr": "Romantique Kéké",
+      "EUit": "K.K. Serenata",
+      "EUnl": "K⁠.⁠K⁠.-lovers",
+      "EUru": "Лаверс-рок К. К.",
+      "JPja": "けけラヴァーズ",
+      "KRko": "K.K.러버스",
+      "TWzh": "K.K.愛人們",
+      "USen": "K.K. Lovers",
+      "USes": "Tota-amores",
+      "USfr": "Romantique Kéké"
+    }
+  },
+  {
+    "label": "Music_07664",
+    "locale": {
+      "CNzh": "K.K.舞场雷鬼",
+      "EUde": "K.K. Dancehall",
+      "EUen": "K.K. Bashment",
+      "EUes": "Tota-dancehall",
+      "EUfr": "Dancehall Kéké",
+      "EUit": "K.K. Dancehall",
+      "EUnl": "K⁠.⁠K⁠.-⁠dancehall",
+      "EUru": "Дэнсхолл К. К.",
+      "JPja": "けけバッシュメント",
+      "KRko": "K.K.배시먼트",
+      "TWzh": "K.K.舞場雷鬼",
+      "USen": "K.K. Bashment",
+      "USes": "Tota-dancehall",
+      "USfr": "Dancehall Kéké"
+    }
+  },
+  {
+    "label": "Music_07665",
+    "locale": {
+      "CNzh": "K.K.嘻哈",
+      "EUde": "K.K. Hop",
+      "EUen": "K.K. Hop",
+      "EUes": "Tota-hop",
+      "EUfr": "Rap de Kéké",
+      "EUit": "K.K. Rap",
+      "EUnl": "K⁠.⁠K⁠.-⁠hiphop",
+      "EUru": "Хоп К. К.",
+      "JPja": "けけホップ",
+      "KRko": "K.K.홉",
+      "TWzh": "K.K.嘻哈",
+      "USen": "K.K. Hop",
+      "USes": "Tota-hop",
+      "USfr": "Rap de Kéké"
+    }
+  },
+  {
+    "label": "Music_07666",
+    "locale": {
+      "CNzh": "K.K.地板舞",
+      "EUde": "K.K. Break",
+      "EUen": "K.K. Break",
+      "EUes": "Tota-break",
+      "EUfr": "Break Kéké",
+      "EUit": "K.K. Break",
+      "EUnl": "K⁠.⁠K⁠.-⁠break",
+      "EUru": "Брейк К. К.",
+      "JPja": "けけブレイク",
+      "KRko": "K.K.브레이크",
+      "TWzh": "K.K.地板舞",
+      "USen": "K.K. Break",
+      "USes": "Tota-break",
+      "USfr": "Break Kéké"
+    }
+  },
+  {
+    "label": "Music_07667",
+    "locale": {
+      "CNzh": "K.K.喉音",
+      "EUde": "K.K. Khöömei",
+      "EUen": "K.K. Khoomei",
+      "EUes": "Tota-khöömei",
+      "EUfr": "Khöömii Kéké",
+      "EUit": "K.K. Khoomei",
+      "EUnl": "K⁠.⁠K⁠.-⁠keelzang",
+      "EUru": "Хоомей К. К.",
+      "JPja": "けけホーミー",
+      "KRko": "K.K.후미",
+      "TWzh": "K.K.喉音",
+      "USen": "K.K. Khoomei",
+      "USes": "Tota-khöömei",
+      "USfr": "Khöömii Kéké"
+    }
+  },
+  {
+    "label": "Music_07668",
+    "locale": {
+      "CNzh": "K.K.电子合成音",
+      "EUde": "K.K. Synthi",
+      "EUen": "K.K. Robot Synth",
+      "EUes": "Tota-loid",
+      "EUfr": "Cyber-Kéké",
+      "EUit": "K.K. Robot",
+      "EUnl": "K⁠.⁠K⁠.-⁠loid",
+      "EUru": "Робо-синти К. К.",
+      "JPja": "けけロイド",
+      "KRko": "K.K.로이드",
+      "TWzh": "K.K.電子合成音",
+      "USen": "K.K. Robot Synth",
+      "USes": "Tota-loid",
+      "USfr": "Cyber-Kéké"
+    }
+  }
+]

@@ -1,0 +1,686 @@
+﻿[
+  {
+    "label": "Gyroid_14046",
+    "locale": {
+      "CNzh": "铃钱陶俑",
+      "EUde": "Xylophoid",
+      "EUen": "xylophoid",
+      "EUes": "xilofoide",
+      "EUfr": "xylophoïde",
+      "EUit": "xilofoide",
+      "EUnl": "xylophoid",
+      "EUru": "ксилофоид",
+      "JPja": "ベルはにわ",
+      "KRko": "벨 토용",
+      "TWzh": "鈴錢陶俑",
+      "USen": "xylophoid",
+      "USes": "xilofoide",
+      "USfr": "xylophoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14047",
+    "locale": {
+      "CNzh": "宝宝陶俑",
+      "EUde": "Dissonoid",
+      "EUen": "babbloid",
+      "EUes": "dulzoide",
+      "EUfr": "babilloïde",
+      "EUit": "dolcioide",
+      "EUnl": "brabbeloid",
+      "EUru": "лепетоид",
+      "JPja": "ベビーはにわ",
+      "KRko": "베이비 토용",
+      "TWzh": "寶寶陶俑",
+      "USen": "babbloid",
+      "USes": "dulzoide",
+      "USfr": "babilloïde"
+    }
+  },
+  {
+    "label": "Gyroid_14056",
+    "locale": {
+      "CNzh": "汪陶俑",
+      "EUde": "Kläffoid",
+      "EUen": "arfoid",
+      "EUes": "ladroide",
+      "EUfr": "ouafoïde",
+      "EUit": "bauoide",
+      "EUnl": "blaffoid",
+      "EUru": "гавгавоид",
+      "JPja": "ワンはにわ",
+      "KRko": "멍멍 토용",
+      "TWzh": "汪陶俑",
+      "USen": "arfoid",
+      "USes": "ladroide",
+      "USfr": "ouafoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14057",
+    "locale": {
+      "CNzh": "瓶陶俑",
+      "EUde": "Flötoid",
+      "EUen": "whistloid",
+      "EUes": "silboide",
+      "EUfr": "flûtoïde",
+      "EUit": "fischioide",
+      "EUnl": "fluitoid",
+      "EUru": "свистоид",
+      "JPja": "ホーはにわ",
+      "KRko": "후후 토용",
+      "TWzh": "瓶陶俑",
+      "USen": "whistloid",
+      "USes": "silboide",
+      "USfr": "flûtoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14058",
+    "locale": {
+      "CNzh": "边陶俑",
+      "EUde": "Harfoid",
+      "EUen": "bwongoid",
+      "EUes": "puntoide",
+      "EUfr": "pyangoïde",
+      "EUit": "pizzicoide",
+      "EUnl": "plingoid",
+      "EUru": "бумбоид",
+      "JPja": "ベンはにわ",
+      "KRko": "뚱땅 토용",
+      "TWzh": "邊陶俑",
+      "USen": "bwongoid",
+      "USes": "puntoide",
+      "USfr": "pyangoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14059",
+    "locale": {
+      "CNzh": "弦陶俑",
+      "EUde": "Saitoid",
+      "EUen": "twangoid",
+      "EUes": "rasgueoide",
+      "EUfr": "cordoïde",
+      "EUit": "tengoide",
+      "EUnl": "ploinkoid",
+      "EUru": "струноид",
+      "JPja": "バインはにわ",
+      "KRko": "디링 토용",
+      "TWzh": "弦陶俑",
+      "USen": "twangoid",
+      "USes": "rasgueoide",
+      "USfr": "cordoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14060",
+    "locale": {
+      "CNzh": "哺悠陶俑",
+      "EUde": "Puipuioid",
+      "EUen": "laseroid",
+      "EUes": "hablaseroide",
+      "EUfr": "laseroïde",
+      "EUit": "laseroide",
+      "EUnl": "laseroid",
+      "EUru": "лазероид",
+      "JPja": "ピュンはにわ",
+      "KRko": "삐융 토용",
+      "TWzh": "哺悠陶俑",
+      "USen": "laseroid",
+      "USes": "hablaseroide",
+      "USfr": "laseroïde"
+    }
+  },
+  {
+    "label": "Gyroid_14061",
+    "locale": {
+      "CNzh": "哔噗陶俑",
+      "EUde": "Quäkoid",
+      "EUen": "squeakoid",
+      "EUes": "estrujónido",
+      "EUfr": "couinoïde",
+      "EUit": "squittoide",
+      "EUnl": "piepoid",
+      "EUru": "пищоид",
+      "JPja": "ピープーはにわ",
+      "KRko": "삐뽀 토용",
+      "TWzh": "逼噗陶俑",
+      "USen": "squeakoid",
+      "USes": "estrujónido",
+      "USfr": "couinoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14062",
+    "locale": {
+      "CNzh": "框隆陶俑",
+      "EUde": "Arboroid",
+      "EUen": "tockoid",
+      "EUes": "varítono",
+      "EUfr": "pockoïde",
+      "EUit": "tactacoide",
+      "EUnl": "tokkoid",
+      "EUru": "колотоид",
+      "JPja": "コロンはにわ",
+      "KRko": "똑딱 토용",
+      "TWzh": "框隆陶俑",
+      "USen": "tockoid",
+      "USes": "varítono",
+      "USfr": "pockoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14063",
+    "locale": {
+      "CNzh": "砰陶俑",
+      "EUde": "Kontraltoid",
+      "EUen": "ringoid",
+      "EUes": "monotoide",
+      "EUfr": "zonzoïde",
+      "EUit": "melodoide",
+      "EUnl": "bingoid",
+      "EUru": "диньдоноид",
+      "JPja": "ポーンはにわ",
+      "KRko": "딩동 토용",
+      "TWzh": "砰陶俑",
+      "USen": "ringoid",
+      "USes": "monotoide",
+      "USfr": "zonzoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14064",
+    "locale": {
+      "CNzh": "猪陶俑",
+      "EUde": "Grunzoid",
+      "EUen": "oinkoid",
+      "EUes": "oinkoide",
+      "EUfr": "grouikoïde",
+      "EUit": "grugnoide",
+      "EUnl": "knorroid",
+      "EUru": "хрюкоид",
+      "JPja": "フゴはにわ",
+      "KRko": "꿀꿀 토용",
+      "TWzh": "豬陶俑",
+      "USen": "oinkoid",
+      "USes": "oinkoide",
+      "USfr": "grouikoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14065",
+    "locale": {
+      "CNzh": "呜哇哇陶俑",
+      "EUde": "Nörgloid",
+      "EUen": "tremoloid",
+      "EUes": "sinusoide",
+      "EUfr": "graciloïde",
+      "EUit": "fragiloide",
+      "EUnl": "jengeloid",
+      "EUru": "завывоид",
+      "JPja": "ウワワはにわ",
+      "KRko": "우와와 토용",
+      "TWzh": "嗚哇哇陶俑",
+      "USen": "tremoloid",
+      "USes": "sinusoide",
+      "USfr": "tremoloïde"
+    }
+  },
+  {
+    "label": "Gyroid_14066",
+    "locale": {
+      "CNzh": "嘟脸陶俑",
+      "EUde": "Flatuloid",
+      "EUen": "bubbloid",
+      "EUes": "mirlitoide",
+      "EUfr": "jouffloïde",
+      "EUit": "paffutoide",
+      "EUnl": "bubbeloid",
+      "EUru": "надувоид",
+      "JPja": "ホッペはにわ",
+      "KRko": "뿌우 토용",
+      "TWzh": "嘟臉陶俑",
+      "USen": "bubbloid",
+      "USes": "flautoide",
+      "USfr": "jouffloïde"
+    }
+  },
+  {
+    "label": "Gyroid_14067",
+    "locale": {
+      "CNzh": "花苞陶俑",
+      "EUde": "Ouvertoid",
+      "EUen": "petaloid",
+      "EUes": "clavicoina",
+      "EUfr": "pétaloïde",
+      "EUit": "petaloide",
+      "EUnl": "klavechoid",
+      "EUru": "лепесткоид",
+      "JPja": "ピラはにわ",
+      "KRko": "띠롱 토용",
+      "TWzh": "花苞陶俑",
+      "USen": "petaloid",
+      "USes": "clavicoina",
+      "USfr": "pétaloïde"
+    }
+  },
+  {
+    "label": "Gyroid_14074",
+    "locale": {
+      "CNzh": "机械陶俑",
+      "EUde": "Timbaloid",
+      "EUen": "aluminoid",
+      "EUes": "aluminoide",
+      "EUfr": "aluminoïde",
+      "EUit": "alluminoide",
+      "EUnl": "aluminoid",
+      "EUru": "алюминоид",
+      "JPja": "カンはにわ",
+      "KRko": "양철 토용",
+      "TWzh": "機械陶俑",
+      "USen": "aluminoid",
+      "USes": "aluminoide",
+      "USfr": "aluminoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14075",
+    "locale": {
+      "CNzh": "叩叩陶俑",
+      "EUde": "Dumpfoid",
+      "EUen": "wallopoid",
+      "EUes": "acolchoida",
+      "EUfr": "poufoïde",
+      "EUit": "tonfoide",
+      "EUnl": "kloppoid",
+      "EUru": "выбивоид",
+      "JPja": "ドスドスはにわ",
+      "KRko": "툭툭 토용",
+      "TWzh": "叩叩陶俑",
+      "USen": "wallopoid",
+      "USes": "acolchoida",
+      "USfr": "poufoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14076",
+    "locale": {
+      "CNzh": "钹陶俑",
+      "EUde": "Hihatoid",
+      "EUen": "drummoid",
+      "EUes": "platoide",
+      "EUfr": "cymbaloïde",
+      "EUit": "tamburoide",
+      "EUnl": "drummoid",
+      "EUru": "ударноид",
+      "JPja": "シャーンはにわ",
+      "KRko": "둠칫 토용",
+      "TWzh": "鈸陶俑",
+      "USen": "drummoid",
+      "USes": "platoide",
+      "USfr": "cymbaloïde"
+    }
+  },
+  {
+    "label": "Gyroid_14077",
+    "locale": {
+      "CNzh": "波比陶俑",
+      "EUde": "Klongoid",
+      "EUen": "dootoid",
+      "EUes": "bipoide",
+      "EUfr": "bipoïde",
+      "EUit": "pigoloide",
+      "EUnl": "pingeloid",
+      "EUru": "пипоид",
+      "JPja": "ポッピはにわ",
+      "KRko": "뽀삐 토용",
+      "TWzh": "波比陶俑",
+      "USen": "dootoid",
+      "USes": "bipoide",
+      "USfr": "bipoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14078",
+    "locale": {
+      "CNzh": "发条陶俑",
+      "EUde": "Surroid",
+      "EUen": "whirroid",
+      "EUes": "zumbínida",
+      "EUfr": "ronronnoïde",
+      "EUit": "ronzoide",
+      "EUnl": "bzzzoid",
+      "EUru": "дребезоид",
+      "JPja": "ジーはにわ",
+      "KRko": "지직 토용",
+      "TWzh": "發條陶俑",
+      "USen": "whirroid",
+      "USes": "zumbínida",
+      "USfr": "ronronnoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14080",
+    "locale": {
+      "CNzh": "波波陶俑",
+      "EUde": "Floppoid",
+      "EUen": "thwopoid",
+      "EUes": "flopoide",
+      "EUfr": "plopoïde",
+      "EUit": "stappoide",
+      "EUnl": "floepoid",
+      "EUru": "хлопоид",
+      "JPja": "スポはにわ",
+      "KRko": "뽁 토용",
+      "TWzh": "波波陶俑",
+      "USen": "thwopoid",
+      "USes": "flopoide",
+      "USfr": "plopoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14081",
+    "locale": {
+      "CNzh": "贝斯陶俑",
+      "EUde": "Bassoid",
+      "EUen": "rumbloid",
+      "EUes": "tetracordia",
+      "EUfr": "grommeloïde",
+      "EUit": "bassoide",
+      "EUnl": "bassoid",
+      "EUru": "басоид",
+      "JPja": "ベースはにわ",
+      "KRko": "베이스 토용",
+      "TWzh": "貝斯陶俑",
+      "USen": "rumbloid",
+      "USes": "tetracordia",
+      "USfr": "grommeloïde"
+    }
+  },
+  {
+    "label": "Gyroid_14082",
+    "locale": {
+      "CNzh": "叭啦陶俑",
+      "EUde": "Summsoid",
+      "EUen": "bendoid",
+      "EUes": "arcoviol",
+      "EUfr": "spleenoïde",
+      "EUit": "piegoide",
+      "EUnl": "gonzoid",
+      "EUru": "жужжоид",
+      "JPja": "ブーンはにわ",
+      "KRko": "부웅 토용",
+      "TWzh": "叭啦陶俑",
+      "USen": "bendoid",
+      "USes": "arcoviol",
+      "USfr": "spleenoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14083",
+    "locale": {
+      "CNzh": "咚陶俑",
+      "EUde": "Paukoid",
+      "EUen": "boomoid",
+      "EUes": "bomboina",
+      "EUfr": "boumoïde",
+      "EUit": "boomoide",
+      "EUnl": "paukoid",
+      "EUru": "барабаноид",
+      "JPja": "ドンはにわ",
+      "KRko": "둥둥 토용",
+      "TWzh": "咚陶俑",
+      "USen": "boomoid",
+      "USes": "bomboina",
+      "USfr": "boumoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14086",
+    "locale": {
+      "CNzh": "滴滴陶俑",
+      "EUde": "Blubboid",
+      "EUen": "bloopoid",
+      "EUes": "hidroide",
+      "EUfr": "plocoïde",
+      "EUit": "idroide",
+      "EUnl": "blubboid",
+      "EUru": "каплоид",
+      "JPja": "ポワはにわ",
+      "KRko": "또록 토용",
+      "TWzh": "滴滴陶俑",
+      "USen": "bloopoid",
+      "USes": "hidroide",
+      "USfr": "plocoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14087",
+    "locale": {
+      "CNzh": "比悠陶俑",
+      "EUde": "Sproingoid",
+      "EUen": "sproingoid",
+      "EUes": "muelloide",
+      "EUfr": "boingoïde",
+      "EUit": "rimbalzoide",
+      "EUnl": "boingoid",
+      "EUru": "пружиноид",
+      "JPja": "ビヨンはにわ",
+      "KRko": "뵤옹 토용",
+      "TWzh": "比悠陶俑",
+      "USen": "sproingoid",
+      "USes": "resortoide",
+      "USfr": "boïngoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14088",
+    "locale": {
+      "CNzh": "咯滋陶俑",
+      "EUde": "Knuspoid",
+      "EUen": "crumploid",
+      "EUes": "arrugandia",
+      "EUfr": "froissoïde",
+      "EUit": "stropiccioide",
+      "EUnl": "kreukeloid",
+      "EUru": "смятоид",
+      "JPja": "クシャはにわ",
+      "KRko": "콰삭 토용",
+      "TWzh": "咯滋陶俑",
+      "USen": "crumploid",
+      "USes": "arrugandia",
+      "USfr": "froissoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14089",
+    "locale": {
+      "CNzh": "响响陶俑",
+      "EUde": "Klackerlaklackoid",
+      "EUen": "clatteroid",
+      "EUes": "castañoide",
+      "EUfr": "cliquetoïde",
+      "EUit": "clangoide",
+      "EUnl": "klapperoid",
+      "EUru": "погремоид",
+      "JPja": "カタカタはにわ",
+      "KRko": "딸깍 토용",
+      "TWzh": "響響陶俑",
+      "USen": "clatteroid",
+      "USes": "castañoide",
+      "USfr": "cliquetoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14090",
+    "locale": {
+      "CNzh": "老板陶俑",
+      "EUde": "Gurroid",
+      "EUen": "brewstoid",
+      "EUes": "figaroide",
+      "EUfr": "robustoïde",
+      "EUit": "bartoide",
+      "EUnl": "roekoid",
+      "EUru": "брюстоид",
+      "JPja": "マスターはにわ",
+      "KRko": "마스터 토용",
+      "TWzh": "老闆陶俑",
+      "USen": "brewstoid",
+      "USes": "figaroide",
+      "USfr": "robustoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14092",
+    "locale": {
+      "CNzh": "沙沙陶俑",
+      "EUde": "Maracoid",
+      "EUen": "scatteroid",
+      "EUes": "agitoide",
+      "EUfr": "maracassoïde",
+      "EUit": "agitoide",
+      "EUnl": "ritseloid",
+      "EUru": "потрясоид",
+      "JPja": "シャカはにわ",
+      "KRko": "쉐킷 토용",
+      "TWzh": "沙沙陶俑",
+      "USen": "scatteroid",
+      "USes": "agitoide",
+      "USfr": "maracassoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14093",
+    "locale": {
+      "CNzh": "刺刺陶俑",
+      "EUde": "Bzzzoid",
+      "EUen": "spikenoid",
+      "EUes": "pinchoide",
+      "EUfr": "piquoïde",
+      "EUit": "spinoide",
+      "EUnl": "zoemoid",
+      "EUru": "терноид",
+      "JPja": "トゲはにわ",
+      "KRko": "가시 토용",
+      "TWzh": "刺刺陶俑",
+      "USen": "spikenoid",
+      "USes": "espinoide",
+      "USfr": "piquoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14094",
+    "locale": {
+      "CNzh": "栓陶俑",
+      "EUde": "Pressoid",
+      "EUen": "squeezoid",
+      "EUes": "gomicoida",
+      "EUfr": "sproutchoïde",
+      "EUit": "schiaccioide",
+      "EUnl": "kwekkoid",
+      "EUru": "скрипоид",
+      "JPja": "ギュウはにわ",
+      "KRko": "끼익 토용",
+      "TWzh": "栓陶俑",
+      "USen": "squeezoid",
+      "USes": "gomicoida",
+      "USfr": "sproutchoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14095",
+    "locale": {
+      "CNzh": "啪他陶俑",
+      "EUde": "Flatteroid",
+      "EUen": "flutteroid",
+      "EUes": "aletensoide",
+      "EUfr": "frémissoïde",
+      "EUit": "fremitoide",
+      "EUnl": "fladderoid",
+      "EUru": "трепыхоид",
+      "JPja": "パタパタはにわ",
+      "KRko": "푸르르 토용",
+      "TWzh": "啪他陶俑",
+      "USen": "flutteroid",
+      "USes": "aletensoide",
+      "USfr": "frémissoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14098",
+    "locale": {
+      "CNzh": "假面陶俑",
+      "EUde": "Boioingoid",
+      "EUen": "boioingoid",
+      "EUes": "vibroide",
+      "EUfr": "masquoïde",
+      "EUit": "boingoide",
+      "EUnl": "trilloid",
+      "EUru": "маскоид",
+      "JPja": "メンはにわ",
+      "KRko": "가면 토용",
+      "TWzh": "假面陶俑",
+      "USen": "boioingoid",
+      "USes": "vibroide",
+      "USfr": "masquoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14099",
+    "locale": {
+      "CNzh": "超音陶俑",
+      "EUde": "Signaloid",
+      "EUen": "stelloid",
+      "EUes": "reverberoide",
+      "EUfr": "résonoïde",
+      "EUit": "risuonoide",
+      "EUnl": "kosmoid",
+      "EUru": "космоид",
+      "JPja": "エコーはにわ",
+      "KRko": "에코 토용",
+      "TWzh": "超音陶俑",
+      "USen": "stelloid",
+      "USes": "reverberoide",
+      "USfr": "résonoïde"
+    }
+  },
+  {
+    "label": "Gyroid_14100",
+    "locale": {
+      "CNzh": "铃陶俑",
+      "EUde": "Klingelingoid",
+      "EUen": "jingloid",
+      "EUes": "cascabela",
+      "EUfr": "tintinabuloïde",
+      "EUit": "tintinnoide",
+      "EUnl": "rinkeloid",
+      "EUru": "бубенцоид",
+      "JPja": "スズはにわ",
+      "KRko": "방울 토용",
+      "TWzh": "鈴陶俑",
+      "USen": "jingloid",
+      "USes": "cascabela",
+      "USfr": "tintinabuloïde"
+    }
+  },
+  {
+    "label": "Gyroid_14101",
+    "locale": {
+      "CNzh": "匡铛陶俑",
+      "EUde": "Klapperoid",
+      "EUen": "rattloid",
+      "EUes": "cacharroide",
+      "EUfr": "crécelloïde",
+      "EUit": "sonaglioide",
+      "EUnl": "kletteroid",
+      "EUru": "черепкоид",
+      "JPja": "カランはにわ",
+      "KRko": "땡그랑 토용",
+      "TWzh": "匡噹陶俑",
+      "USen": "rattloid",
+      "USes": "cacharroide",
+      "USfr": "crécelloïde"
+    }
+  }
+]

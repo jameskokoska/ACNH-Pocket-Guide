@@ -1,0 +1,2035 @@
+﻿[
+  {
+    "label": "1003",
+    "locale": {
+      "CNzh": "麂皮运动鞋",
+      "EUde": "Paar Veloursturnschuhe",
+      "EUen": "faux-suede sneakers",
+      "EUes": "zapatilla imitación ante",
+      "EUfr": "paire de tennis en suédine",
+      "EUit": "paio sneaker finto camoscio",
+      "EUnl": "kunstsuède sneakers",
+      "EUru": "кроссовки «под замшу»",
+      "JPja": "スエードスニーカー",
+      "KRko": "스웨이드 스니커",
+      "TWzh": "麂皮運動鞋",
+      "USen": "faux-suede sneakers",
+      "USes": "tenis gamuza sintética",
+      "USfr": "paire de tennis en suédine"
+    }
+  },
+  {
+    "label": "1097",
+    "locale": {
+      "CNzh": "功夫鞋",
+      "EUde": "Paar Kung-Fu-Schuhe",
+      "EUen": "kung-fu shoes",
+      "EUes": "zapato kung-fu",
+      "EUfr": "p. de chaussons de kung-fu",
+      "EUit": "paio di scarpe da kung fu",
+      "EUnl": "kungfuschoenen",
+      "EUru": "тапочки для кунг-фу",
+      "JPja": "カンフーシューズ",
+      "KRko": "쿵푸 신발",
+      "TWzh": "功夫鞋",
+      "USen": "kung-fu shoes",
+      "USes": "zapato kung-fu",
+      "USfr": "p. de chaussons de kung-fu"
+    }
+  },
+  {
+    "label": "1098",
+    "locale": {
+      "CNzh": "刺绣鞋",
+      "EUde": "Paar Stickschuhe",
+      "EUen": "embroidered shoes",
+      "EUes": "manoletina con bordado",
+      "EUfr": "p. de chaussures brodées",
+      "EUit": "paio di scarpe ricamate",
+      "EUnl": "geborduurde schoenen",
+      "EUru": "расшитые туфли",
+      "JPja": "ししゅうのくつ",
+      "KRko": "자수 구두",
+      "TWzh": "刺繡鞋",
+      "USen": "embroidered shoes",
+      "USes": "bailarina con bordado",
+      "USfr": "p. de souliers brodés"
+    }
+  },
+  {
+    "label": "1135",
+    "locale": {
+      "CNzh": "凯丝的浅口鞋",
+      "EUde": "Paar Samthea-Pumps",
+      "EUen": "Labelle pumps",
+      "EUes": "manoletina Trini",
+      "EUfr": "paire de ballerines Maria",
+      "EUit": "paio scarpe con tacco Bice",
+      "EUnl": "Labelle-pumps",
+      "EUru": "туфли «Лэйблеск»",
+      "JPja": "ケイトのパンプス",
+      "KRko": "케이트의 펌프스",
+      "TWzh": "凱絲低跟鞋",
+      "USen": "Labelle pumps",
+      "USes": "bailarina Trini",
+      "USfr": "paire de ballerines Maria"
+    }
+  },
+  {
+    "label": "1136",
+    "locale": {
+      "CNzh": "凯丝的休闲鞋",
+      "EUde": "Paar Samthea-Sneaker",
+      "EUen": "Labelle sneakers",
+      "EUes": "zapatilla Trini",
+      "EUfr": "paire de baskets Maria",
+      "EUit": "paio di sneaker Bice",
+      "EUnl": "Labelle-sneakers",
+      "EUru": "кеды «Лэйблеск»",
+      "JPja": "ケイトのスニーカー",
+      "KRko": "케이트의 스니커",
+      "TWzh": "凱絲運動鞋",
+      "USen": "Labelle sneakers",
+      "USes": "tenis Trini",
+      "USfr": "paire d'espadrilles Maria"
+    }
+  },
+  {
+    "label": "1145",
+    "locale": {
+      "CNzh": "Nook Inc.拖鞋",
+      "EUde": "Paar Nook-Inc.-Pantoffeln",
+      "EUen": "Nook Inc. slippers",
+      "EUes": "pantufla de Nook Inc.",
+      "EUfr": "p. de chaussons Nook Inc.",
+      "EUit": "paio di pantofole Nook Inc.",
+      "EUnl": "Nook Inc.-sloffen",
+      "EUru": "тапочки Nook Inc.",
+      "JPja": "たぬきかいはつスリッパ",
+      "KRko": "Nook Inc. 슬리퍼",
+      "TWzh": "Nook Inc.拖鞋",
+      "USen": "Nook Inc. slippers",
+      "USes": "pantufla de Nook Inc.",
+      "USfr": "p. de chaussons Nook Inc."
+    }
+  },
+  {
+    "label": "1184",
+    "locale": {
+      "CNzh": "DAL拖鞋",
+      "EUde": "Paar DAL-Pantoffeln",
+      "EUen": "DAL slippers",
+      "EUes": "pantufla de DAL",
+      "EUfr": "paire de chaussons DAL",
+      "EUit": "paio di pantofole DAL",
+      "EUnl": "DAL-sloffen",
+      "EUru": "тапочки DAL",
+      "JPja": "ＤＡＬスリッパ",
+      "KRko": "DAL 슬리퍼",
+      "TWzh": "DAL拖鞋",
+      "USen": "DAL slippers",
+      "USes": "pantufla de DAL",
+      "USfr": "paire de chaussons DAL"
+    }
+  },
+  {
+    "label": "1191",
+    "locale": {
+      "CNzh": "回收长靴",
+      "EUde": "Paar Recyclingstiefel",
+      "EUen": "recycled boots",
+      "EUes": "bota reciclada",
+      "EUfr": "paire de bottes recyclées",
+      "EUit": "paio di stivali riciclati",
+      "EUnl": "hergebruikte laarzen",
+      "EUru": "сапоги из утиль-сырья",
+      "JPja": "リサイクルながぐつ",
+      "KRko": "재활용 장화",
+      "TWzh": "舊長靴",
+      "USen": "recycled boots",
+      "USes": "bota reciclada",
+      "USfr": "paire de bottes recyclées"
+    }
+  },
+  {
+    "label": "1211",
+    "locale": {
+      "CNzh": "地面蛋鞋子",
+      "EUde": "Paar Erd-Ei-Schuhe",
+      "EUen": "earth-egg shoes",
+      "EUes": "zapato de huevo terrestre",
+      "EUfr": "p. chaussures œuf terrestre",
+      "EUit": "paio di scarpe uova terrestri",
+      "EUnl": "aarde-ei-schoenen",
+      "EUru": "боты «Земляное яйцо»",
+      "JPja": "じめんのたまごのくつ",
+      "KRko": "땅 달걀 신발",
+      "TWzh": "地面蛋鞋子",
+      "USen": "earth-egg shoes",
+      "USes": "zapato de huevo terrestre",
+      "USfr": "p. souliers œuf terrestre"
+    }
+  },
+  {
+    "label": "1212",
+    "locale": {
+      "CNzh": "岩石蛋鞋子",
+      "EUde": "Paar Fels-Ei-Schuhe",
+      "EUen": "stone-egg shoes",
+      "EUes": "zapato de huevo rupestre",
+      "EUfr": "p. chaussures œuf minéral",
+      "EUit": "paio scarpe uova rocciose",
+      "EUnl": "steenei-schoenen",
+      "EUru": "боты «Каменное яйцо»",
+      "JPja": "いわのたまごのくつ",
+      "KRko": "바위 달걀 신발",
+      "TWzh": "岩石蛋鞋子",
+      "USen": "stone-egg shoes",
+      "USes": "zapato de huevo rupestre",
+      "USfr": "p. souliers œuf minéral"
+    }
+  },
+  {
+    "label": "1213",
+    "locale": {
+      "CNzh": "叶子蛋鞋子",
+      "EUde": "Paar Laub-Ei-Schuhe",
+      "EUen": "leaf-egg shoes",
+      "EUes": "zapato de huevo boscoso",
+      "EUfr": "p. chaussures œuf feuillu",
+      "EUit": "paio scarpe uova frondose",
+      "EUnl": "bladei-schoenen",
+      "EUru": "боты «Лиственное яйцо»",
+      "JPja": "はっぱのたまごのくつ",
+      "KRko": "나뭇잎 달걀 신발",
+      "TWzh": "葉子蛋鞋子",
+      "USen": "leaf-egg shoes",
+      "USes": "zapato de huevo boscoso",
+      "USfr": "p. souliers œuf feuillu"
+    }
+  },
+  {
+    "label": "1214",
+    "locale": {
+      "CNzh": "森林蛋鞋子",
+      "EUde": "Paar Holz-Ei-Schuhe",
+      "EUen": "wood-egg shoes",
+      "EUes": "zapato de huevo leñoso",
+      "EUfr": "p. chaussures œuf boisé",
+      "EUit": "paio scarpe uova boscose",
+      "EUnl": "houtei-schoenen",
+      "EUru": "боты «Лесное яйцо»",
+      "JPja": "ウッディなたまごのくつ",
+      "KRko": "나무 달걀 신발",
+      "TWzh": "森林蛋鞋子",
+      "USen": "wood-egg shoes",
+      "USes": "zapato de huevo leñoso",
+      "USfr": "p. souliers œuf boisé"
+    }
+  },
+  {
+    "label": "1215",
+    "locale": {
+      "CNzh": "飞天蛋鞋子",
+      "EUde": "Paar Luft-Ei-Schuhe",
+      "EUen": "sky-egg shoes",
+      "EUes": "zapato de huevo celeste",
+      "EUfr": "p. chaussures œuf aérien",
+      "EUit": "paio di scarpe uova celesti",
+      "EUnl": "luchtei-schoenen",
+      "EUru": "боты «Небесное яйцо»",
+      "JPja": "そらとぶたまごのくつ",
+      "KRko": "하늘을 나는 달걀 신발",
+      "TWzh": "飛天蛋鞋子",
+      "USen": "sky-egg shoes",
+      "USes": "zapato de huevo celeste",
+      "USfr": "p. souliers œuf aérien"
+    }
+  },
+  {
+    "label": "1216",
+    "locale": {
+      "CNzh": "鱼儿蛋鞋子",
+      "EUde": "Paar Wasser-Ei-Schuhe",
+      "EUen": "water-egg shoes",
+      "EUes": "zapato de huevo acuático",
+      "EUfr": "p. chaussures œuf aquatiq.",
+      "EUit": "p. scarpe uova acquatiche",
+      "EUnl": "waterei-schoenen",
+      "EUru": "боты «Водяное яйцо»",
+      "JPja": "サカナのたまごのくつ",
+      "KRko": "물고기 달걀 신발",
+      "TWzh": "魚兒蛋鞋子",
+      "USen": "water-egg shoes",
+      "USes": "zapato de huevo acuático",
+      "USfr": "p. souliers œuf aquatiq."
+    }
+  },
+  {
+    "label": "1217",
+    "locale": {
+      "CNzh": "纯白浅口鞋",
+      "EUde": "Paar Hochzeits-Pumps",
+      "EUen": "wedding pumps",
+      "EUes": "zapato nupcial con lazo",
+      "EUfr": "p. escarpins de mariage",
+      "EUit": "paio ballerine nuziali fiocco",
+      "EUnl": "trouwballerina's",
+      "EUru": "свадебные лодочки",
+      "JPja": "じゅんぱくのパンプス",
+      "KRko": "순백 펌프스",
+      "TWzh": "純白低跟鞋",
+      "USen": "wedding pumps",
+      "USes": "zapato nupcial con lazo",
+      "USfr": "p. escarpins de mariage"
+    }
+  },
+  {
+    "label": "1218",
+    "locale": {
+      "CNzh": "纯白鞋",
+      "EUde": "Paar Hochzeitsschuhe",
+      "EUen": "wedding shoes",
+      "EUes": "zapato nupcial con hebilla",
+      "EUfr": "p. chaussures de mariage",
+      "EUit": "paio scarpe nuziali fibbia",
+      "EUnl": "trouwschoenen",
+      "EUru": "свадебные туфли",
+      "JPja": "じゅんぱくのシューズ",
+      "KRko": "순백 슈즈",
+      "TWzh": "純白鞋",
+      "USen": "wedding shoes",
+      "USes": "zapato nupcial con hebilla",
+      "USfr": "p. souliers de mariage"
+    }
+  },
+  {
+    "label": "1223",
+    "locale": {
+      "CNzh": "人鱼鞋",
+      "EUde": "Paar Nixenschuhe",
+      "EUen": "mermaid shoes",
+      "EUes": "zapato sirena",
+      "EUfr": "paire de chaussures sirène",
+      "EUit": "paio scarpe sirena",
+      "EUnl": "meerminnenballerina's",
+      "EUru": "туфли русалки",
+      "JPja": "マーメイドなくつ",
+      "KRko": "머메이드 구두",
+      "TWzh": "人魚鞋",
+      "USen": "mermaid shoes",
+      "USes": "zapato sirena",
+      "USfr": "paire de souliers sirène"
+    }
+  },
+  {
+    "label": "1228",
+    "locale": {
+      "CNzh": "海盗靴",
+      "EUde": "Paar Piratenstiefel",
+      "EUen": "pirate boots",
+      "EUes": "bota pirata",
+      "EUfr": "paire de bottes de pirate",
+      "EUit": "paio di stivali da pirata",
+      "EUnl": "piratenlaarzen",
+      "EUru": "пиратские сапоги",
+      "JPja": "かいぞくのブーツ",
+      "KRko": "해적 부츠",
+      "TWzh": "海盜靴",
+      "USen": "pirate boots",
+      "USes": "bota pirata",
+      "USfr": "paire de bottes de pirate"
+    }
+  },
+  {
+    "label": "1247",
+    "locale": {
+      "CNzh": "脚部石膏",
+      "EUde": "Gips",
+      "EUen": "cast",
+      "EUes": "escayola de pie",
+      "EUfr": "plâtre",
+      "EUit": "gesso",
+      "EUnl": "gipsverband",
+      "EUru": "гипс на ногу",
+      "JPja": "ギプス",
+      "KRko": "깁스",
+      "TWzh": "腳部石膏",
+      "USen": "cast",
+      "USes": "yeso",
+      "USfr": "plâtre"
+    }
+  },
+  {
+    "label": "1269",
+    "locale": {
+      "CNzh": "鲜艳动物玩偶服靴子",
+      "EUde": "Paar Tierkostüm-Schuhe",
+      "EUen": "flashy animal boots",
+      "EUes": "bota de animal",
+      "EUfr": "p. de bottes animal flashy",
+      "EUit": "paio di stivali da animale",
+      "EUnl": "dierenlaarzen",
+      "EUru": "броские звериные сапоги",
+      "JPja": "ハデなアニマルきぐるみブーツ",
+      "KRko": "화려한 동물 인형 옷 부츠",
+      "TWzh": "鮮豔動物玩偶裝靴子",
+      "USen": "flashy animal boots",
+      "USes": "bota de animal",
+      "USfr": "p. de bottes animal flashy"
+    }
+  },
+  {
+    "label": "1270",
+    "locale": {
+      "CNzh": "魔法师靴子",
+      "EUde": "Paar Zauberschuhe",
+      "EUen": "mage's boots",
+      "EUes": "bota de hechicería",
+      "EUfr": "paire de bottes de mage",
+      "EUit": "paio di stivali stregoneschi",
+      "EUnl": "heksenlaarzen",
+      "EUru": "полусапоги мага",
+      "JPja": "まほうつかいのブーツ",
+      "KRko": "마법사 부츠",
+      "TWzh": "魔法師靴子",
+      "USen": "mage's boots",
+      "USes": "bota de hechicería",
+      "USfr": "paire de bottes de mage"
+    }
+  },
+  {
+    "label": "1281",
+    "locale": {
+      "CNzh": "Hello Kitty鞋",
+      "EUde": "Paar Hello-Kitty-Schuhe",
+      "EUen": "Hello Kitty shoes",
+      "EUes": "mercedita Hello Kitty",
+      "EUfr": "p. de chaussures Hello Kitty",
+      "EUit": "paio di scarpe Hello Kitty",
+      "EUnl": "Hello Kitty-ballerina's",
+      "EUru": "туфли Hello Kitty",
+      "JPja": "ハローキティなくつ",
+      "KRko": "헬로키티 구두",
+      "TWzh": "Hello Kitty鞋",
+      "USen": "Hello Kitty shoes",
+      "USes": "zapato hebilla Hello Kitty",
+      "USfr": "p. de souliers Hello Kitty"
+    }
+  },
+  {
+    "label": "1283",
+    "locale": {
+      "CNzh": "My Melody靴子",
+      "EUde": "Paar My-Melody-Schuhe",
+      "EUen": "My Melody boots",
+      "EUes": "bota My Melody",
+      "EUfr": "paire de bottes My Melody",
+      "EUit": "paio di stivali My Melody",
+      "EUnl": "My Melody-ballerina's",
+      "EUru": "унты My Melody",
+      "JPja": "マイメロディなブーツ",
+      "KRko": "마이멜로디 부츠",
+      "TWzh": "My Melody靴子",
+      "USen": "My Melody boots",
+      "USes": "bota My Melody",
+      "USfr": "p. de bottes My Melody"
+    }
+  },
+  {
+    "label": "1287",
+    "locale": {
+      "CNzh": "Kiki & Lala扣带鞋",
+      "EUde": "Paar Kiki-&-Lala-Schuhe",
+      "EUen": "Kiki & Lala shoes",
+      "EUes": "mercedita Kiki & Lala",
+      "EUfr": "p. d'escarpins Kiki & Lala",
+      "EUit": "paio di scarpe Kiki & Lala",
+      "EUnl": "Kiki-&-Lala-ballerina's",
+      "EUru": "туфли Kiki & Lala",
+      "JPja": "キキ&ララなストラップシューズ",
+      "KRko": "리틀트윈스타 스트랩 슈즈",
+      "TWzh": "Kiki & Lala扣帶鞋",
+      "USen": "Kiki & Lala shoes",
+      "USes": "zapato hebilla Kiki & Lala",
+      "USfr": "p. d'escarpins Kiki & Lala"
+    }
+  },
+  {
+    "label": "1290",
+    "locale": {
+      "CNzh": "Pompompurin靴子",
+      "EUde": "Paar Pompompurin-Schuhe",
+      "EUen": "Pompompurin boots",
+      "EUes": "botín Pompompurin",
+      "EUfr": "p. de bottes Pompompurin",
+      "EUit": "paio di stivali Pompompurin",
+      "EUnl": "Pompompurin-schoenen",
+      "EUru": "полусапоги Pompompurin",
+      "JPja": "ポムポムプリンなブーツ",
+      "KRko": "폼폼푸린 부츠",
+      "TWzh": "Pompompurin靴子",
+      "USen": "Pompompurin boots",
+      "USes": "botín Pompompurin",
+      "USfr": "p. de bottes Pompompurin"
+    }
+  },
+  {
+    "label": "1292",
+    "locale": {
+      "CNzh": "Cinnamoroll运动鞋",
+      "EUde": "Paar Cinnamoroll-Sneaker",
+      "EUen": "Cinnamoroll sneakers",
+      "EUes": "zapatilla Cinnamoroll",
+      "EUfr": "p. de baskets Cinnamoroll",
+      "EUit": "paio di sneaker Cinnamoroll",
+      "EUnl": "Cinnamoroll-sneakers",
+      "EUru": "полукеды Cinnamoroll",
+      "JPja": "シナモロールなスニーカー",
+      "KRko": "시나모롤 스니커",
+      "TWzh": "Cinnamoroll運動鞋",
+      "USen": "Cinnamoroll sneakers",
+      "USes": "tenis Cinnamoroll",
+      "USfr": "p. d'espadrilles Cinnamoroll"
+    }
+  },
+  {
+    "label": "1297",
+    "locale": {
+      "CNzh": "Kerokerokeroppi靴子",
+      "EUde": "Paar Keroppi-Stiefel",
+      "EUen": "Kerokerokeroppi boots",
+      "EUes": "bota Kerokerokeroppi",
+      "EUfr": "p. bottes Kerokerokeroppi",
+      "EUit": "paio stivali Kerokerokeroppi",
+      "EUnl": "Kerokerokeroppi-laarzen",
+      "EUru": "сапоги Kerokerokeroppi",
+      "JPja": "けろけろけろっぴなブーツ",
+      "KRko": "케로케로케로피 부츠",
+      "TWzh": "Kerokerokeroppi靴子",
+      "USen": "Kerokerokeroppi boots",
+      "USes": "bota Kerokerokeroppi",
+      "USfr": "p. bottes Kerokerokeroppi"
+    }
+  },
+  {
+    "label": "1327",
+    "locale": {
+      "CNzh": "瓦力欧鞋",
+      "EUde": "Paar Wario-Latschen",
+      "EUen": "Wario shoes",
+      "EUes": "zapato de Wario",
+      "EUfr": "p. de chaussures de Wario",
+      "EUit": "paio di scarpe di Wario",
+      "EUnl": "Wario-schoenen",
+      "EUru": "туфли Варио",
+      "JPja": "ワリオのくつ",
+      "KRko": "와리오 신발",
+      "TWzh": "瓦利歐鞋",
+      "USen": "Wario shoes",
+      "USes": "zapato de Wario",
+      "USfr": "p. de souliers de Wario"
+    }
+  },
+  {
+    "label": "1328",
+    "locale": {
+      "CNzh": "马力欧鞋",
+      "EUde": "Paar Mario-Schuhe",
+      "EUen": "Mario shoes",
+      "EUes": "zapato de Mario",
+      "EUfr": "p. de chaussures de Mario",
+      "EUit": "paio di scarpe di Mario",
+      "EUnl": "Mario-schoenen",
+      "EUru": "ботинки Марио",
+      "JPja": "マリオのくつ",
+      "KRko": "마리오 신발",
+      "TWzh": "瑪利歐鞋",
+      "USen": "Mario shoes",
+      "USes": "zapato de Mario",
+      "USfr": "p. de souliers de Mario"
+    }
+  },
+  {
+    "label": "1331",
+    "locale": {
+      "CNzh": "桃花公主鞋",
+      "EUde": "Paar Peach-Pumps",
+      "EUen": "Princess Peach shoes",
+      "EUes": "zapato de Peach",
+      "EUfr": "p. chauss. Princesse Peach",
+      "EUit": "paio di scarpe di Peach",
+      "EUnl": "prinses-Peach-pumps",
+      "EUru": "туфли принцессы Пич",
+      "JPja": "ピーチひめのくつ",
+      "KRko": "피치공주 구두",
+      "TWzh": "碧姬公主鞋",
+      "USen": "Princess Peach shoes",
+      "USes": "zapato de Peach",
+      "USfr": "p. soul. de Princesse Peach"
+    }
+  },
+  {
+    "label": "1353",
+    "locale": {
+      "CNzh": "三叶草鞋",
+      "EUde": "Paar Kleeblattschuhe",
+      "EUen": "shamrock shoes",
+      "EUes": "botín trébol",
+      "EUfr": "paire de chaussures trèfle",
+      "EUit": "paio di scarpe trifoglio",
+      "EUnl": "klaverschoenen",
+      "EUru": "туфли «Трилистник»",
+      "JPja": "シャムロックシューズ",
+      "KRko": "성 패트릭 슈즈",
+      "TWzh": "三葉草鞋",
+      "USen": "shamrock shoes",
+      "USes": "zapato trébol",
+      "USfr": "paire de souliers trèfle"
+    }
+  },
+  {
+    "label": "1355",
+    "locale": {
+      "CNzh": "路易吉鞋",
+      "EUde": "Paar Luigi-Schuhe",
+      "EUen": "Luigi shoes",
+      "EUes": "zapato de Luigi",
+      "EUfr": "p. de chaussures de Luigi",
+      "EUit": "paio di scarpe di Luigi",
+      "EUnl": "Luigi-schoenen",
+      "EUru": "ботинки Луиджи",
+      "JPja": "ルイージのくつ",
+      "KRko": "루이지 신발",
+      "TWzh": "路易吉鞋",
+      "USen": "Luigi shoes",
+      "USes": "zapato de Luigi",
+      "USfr": "p. de souliers de Luigi"
+    }
+  },
+  {
+    "label": "1363",
+    "locale": {
+      "CNzh": "舞鞋",
+      "EUde": "Paar Tanzschuhe",
+      "EUen": "dance shoes",
+      "EUes": "zapato baile de fin de curso",
+      "EUfr": "p. de chaussures de danse",
+      "EUit": "paio di scarpe da ballo",
+      "EUnl": "dansschoenen",
+      "EUru": "танцевальные туфли",
+      "JPja": "ダンスシューズ",
+      "KRko": "댄스 슈즈",
+      "TWzh": "舞鞋",
+      "USen": "dance shoes",
+      "USes": "zapato baile de fin de curso",
+      "USfr": "p. de souliers de danse"
+    }
+  },
+  {
+    "label": "1419",
+    "locale": {
+      "CNzh": "巧美生活凉鞋",
+      "EUde": "Paar FHA-Sandalen",
+      "EUen": "Paradise Planning sandals",
+      "EUes": "sandalia Archipiélago",
+      "EUfr": "paire de sandales LVDL",
+      "EUit": "paio di sandali CV",
+      "EUnl": "resortplanbureausandalen",
+      "EUru": "сандалии курортн. бюро",
+      "JPja": "タクミライフのサンダル",
+      "KRko": "파라다이스 플래닝 샌들",
+      "TWzh": "巧美生活涼鞋",
+      "USen": "Paradise Planning sandals",
+      "USes": "sandalia Archipiélago",
+      "USfr": "p. sandales PSM"
+    }
+  },
+  {
+    "label": "1420",
+    "locale": {
+      "CNzh": "巧美生活拖鞋",
+      "EUde": "Paar FHA-Pantoffeln",
+      "EUen": "Paradise Planning slippers",
+      "EUes": "pantufla Archipiélago",
+      "EUfr": "paire de chaussons LVDL",
+      "EUit": "paio di pantofole CV",
+      "EUnl": "resortplanbureausloffen",
+      "EUru": "тапочки курортного бюро",
+      "JPja": "タクミライフのスリッパ",
+      "KRko": "파라다이스 플래닝 슬리퍼",
+      "TWzh": "巧美生活拖鞋",
+      "USen": "Paradise Planning slippers",
+      "USes": "pantufla Archipiélago",
+      "USfr": "p. chaussons PSM"
+    }
+  },
+  {
+    "label": "1453",
+    "locale": {
+      "CNzh": "简约低跟鞋",
+      "EUde": "Paar Simpel-Pumps",
+      "EUen": "basic pumps",
+      "EUes": "manoletina sencilla",
+      "EUfr": "paire d'escarpins simple",
+      "EUit": "paio di ballerine semplici",
+      "EUnl": "eenvoudige pumps",
+      "EUru": "обычные лодочки",
+      "JPja": "シンプルなパンプス",
+      "KRko": "심플한 펌프스",
+      "TWzh": "簡約低跟鞋",
+      "USen": "basic pumps",
+      "USes": "bailarina sencilla",
+      "USfr": "paire d'escarpins simple"
+    }
+  },
+  {
+    "label": "236",
+    "locale": {
+      "CNzh": "木屐",
+      "EUde": "Paar Kimono-Sandalen",
+      "EUen": "kimono sandals",
+      "EUes": "sandalia kimono",
+      "EUfr": "paire de sandales kimono",
+      "EUit": "paio di zoccoli da kimono",
+      "EUnl": "kimonosandalen",
+      "EUru": "японские сандалии",
+      "JPja": "げた",
+      "KRko": "일본풍 샌들",
+      "TWzh": "二齒木屐",
+      "USen": "kimono sandals",
+      "USes": "sandalia kimono",
+      "USfr": "paire de sandales kimono"
+    }
+  },
+  {
+    "label": "515",
+    "locale": {
+      "CNzh": "浴室拖鞋",
+      "EUde": "Paar Badelatschen",
+      "EUen": "shower sandals",
+      "EUes": "chancla de piscina",
+      "EUfr": "paire de claquettes de bain",
+      "EUit": "paio di ciabatte da doccia",
+      "EUnl": "badslippers",
+      "EUru": "тапочки для душа",
+      "JPja": "シャワーサンダル",
+      "KRko": "줄무늬 슬리퍼",
+      "TWzh": "浴室拖鞋",
+      "USen": "shower sandals",
+      "USes": "chancla de piscina",
+      "USfr": "p. de gougounes de douche"
+    }
+  },
+  {
+    "label": "517",
+    "locale": {
+      "CNzh": "皮休闲鞋",
+      "EUde": "Paar Kunstleder-Sneaker",
+      "EUen": "pleather sneakers",
+      "EUes": "deportiva de polipiel",
+      "EUfr": "paire de tennis en similicuir",
+      "EUit": "paio di sneaker in ecopelle",
+      "EUnl": "kunstleren sneakers",
+      "EUru": "кроссовки из кожзама",
+      "JPja": "レザーのスニーカー",
+      "KRko": "가죽 스니커",
+      "TWzh": "皮運動鞋",
+      "USen": "pleather sneakers",
+      "USes": "tenis de cuero sintético",
+      "USfr": "paire d'esp. en similicuir"
+    }
+  },
+  {
+    "label": "520",
+    "locale": {
+      "CNzh": "雪地靴",
+      "EUde": "Paar Kunstfellstiefel",
+      "EUen": "faux-shearling boots",
+      "EUes": "bota sherpa",
+      "EUfr": "paire de bottes fourrées",
+      "EUit": "paio di stivali finto montone",
+      "EUnl": "winterlaarzen",
+      "EUru": "сапожки под овчину",
+      "JPja": "ムートンブーツ",
+      "KRko": "양털 부츠",
+      "TWzh": "麂皮雪靴",
+      "USen": "faux-shearling boots",
+      "USes": "bota de piel sintética",
+      "USfr": "paire de bottes fourrées"
+    }
+  },
+  {
+    "label": "521",
+    "locale": {
+      "CNzh": "漆皮浅口鞋",
+      "EUde": "Paar Vinyl-Pumps",
+      "EUen": "vinyl round-toed pumps",
+      "EUes": "tacón vinilo punta redonda",
+      "EUfr": "paire d'escarpins en vinyle",
+      "EUit": "paio di ballerine in vernice",
+      "EUnl": "vinylen pumps",
+      "EUru": "виниловые лодочки",
+      "JPja": "エナメルのパンプス",
+      "KRko": "에나멜 펌프스",
+      "TWzh": "漆皮低跟鞋",
+      "USen": "vinyl round-toed pumps",
+      "USes": "zapato vinilo punta redonda",
+      "USfr": "paire d'escarpins en vinyle"
+    }
+  },
+  {
+    "label": "522",
+    "locale": {
+      "CNzh": "乐福鞋",
+      "EUde": "Paar Slipper",
+      "EUen": "loafers",
+      "EUes": "mocasín",
+      "EUfr": "paire de chaussures bateau",
+      "EUit": "paio di mocassini",
+      "EUnl": "instappers",
+      "EUru": "лоферы",
+      "JPja": "ローファー",
+      "KRko": "로퍼",
+      "TWzh": "樂福鞋",
+      "USen": "loafers",
+      "USes": "mocasín",
+      "USfr": "paire de souliers bateau"
+    }
+  },
+  {
+    "label": "523",
+    "locale": {
+      "CNzh": "交叉带凉鞋",
+      "EUde": "Paar Kreuzriemensandalen",
+      "EUen": "cross-belt sandals",
+      "EUes": "sandalia de banda cruzada",
+      "EUfr": "p. sandales brides croisées",
+      "EUit": "paio di sandali a due fasce",
+      "EUnl": "kruislingse sandalen",
+      "EUru": "сандалии с перевязью",
+      "JPja": "クロスベルトサンダル",
+      "KRko": "크로스 벨트 샌들",
+      "TWzh": "交叉帶涼鞋",
+      "USen": "cross-belt sandals",
+      "USes": "sandalia cruzada",
+      "USfr": "p. sandales brides croisées"
+    }
+  },
+  {
+    "label": "526",
+    "locale": {
+      "CNzh": "商务皮鞋",
+      "EUde": "Paar Business-Schuhe",
+      "EUen": "business shoes",
+      "EUes": "zapato ejecutivo",
+      "EUfr": "paire de chaussures pro",
+      "EUit": "paio di scarpe da impiegato",
+      "EUnl": "zakenschoenen",
+      "EUru": "деловые ботинки",
+      "JPja": "ビジネスシューズ",
+      "KRko": "비즈니스 슈즈",
+      "TWzh": "商務皮鞋",
+      "USen": "business shoes",
+      "USes": "zapato ejecutivo",
+      "USfr": "paire de souliers pro"
+    }
+  },
+  {
+    "label": "528",
+    "locale": {
+      "CNzh": "天鹅绒靴",
+      "EUde": "Paar Veloursstiefel",
+      "EUen": "velour boots",
+      "EUes": "botín de velur",
+      "EUfr": "paire de bottes en velours",
+      "EUit": "paio di stivali di velour",
+      "EUnl": "fluwelen laarzen",
+      "EUru": "велюровые сапоги",
+      "JPja": "ベロアブーツ",
+      "KRko": "벨루어 부츠",
+      "TWzh": "絨面靴",
+      "USen": "velour boots",
+      "USes": "botín de velvetón",
+      "USfr": "paire de bottes en velours"
+    }
+  },
+  {
+    "label": "529",
+    "locale": {
+      "CNzh": "雨靴",
+      "EUde": "Paar Regenstiefel",
+      "EUen": "rain boots",
+      "EUes": "katiuska",
+      "EUfr": "paire de bottes de pluie",
+      "EUit": "paio di stivali da pioggia",
+      "EUnl": "regenlaarzen",
+      "EUru": "резиновые сапоги",
+      "JPja": "レインブーツ",
+      "KRko": "레인 부츠",
+      "TWzh": "雨靴",
+      "USen": "rain boots",
+      "USes": "bota de lluvia",
+      "USfr": "paire de bottes de pluie"
+    }
+  },
+  {
+    "label": "530",
+    "locale": {
+      "CNzh": "草履拖鞋",
+      "EUde": "Paar Sandalen",
+      "EUen": "zori",
+      "EUes": "sandalia de bambú",
+      "EUfr": "paire de zori",
+      "EUit": "paio di zori",
+      "EUnl": "zori",
+      "EUru": "дзори",
+      "JPja": "ぞうり",
+      "KRko": "가락 신",
+      "TWzh": "草履拖鞋",
+      "USen": "zori",
+      "USes": "sandalia de bambú",
+      "USfr": "paire de zori"
+    }
+  },
+  {
+    "label": "705",
+    "locale": {
+      "CNzh": "登山鞋",
+      "EUde": "Paar Trekkingschuhe",
+      "EUen": "trekking shoes",
+      "EUes": "zapato de senderismo",
+      "EUfr": "p. de chaussures de rando",
+      "EUit": "paio di scarpe da trekking",
+      "EUnl": "wandelschoenen",
+      "EUru": "походные ботинки",
+      "JPja": "トレッキングシューズ",
+      "KRko": "트래킹 슈즈",
+      "TWzh": "登山鞋",
+      "USen": "trekking shoes",
+      "USes": "zapato de senderismo",
+      "USfr": "p. de souliers de rando"
+    }
+  },
+  {
+    "label": "760",
+    "locale": {
+      "CNzh": "兽爪鞋",
+      "EUde": "Paar Pfoten",
+      "EUen": "paw slippers",
+      "EUes": "pantufla zarpa",
+      "EUfr": "paire de chaussons animal",
+      "EUit": "paio di pantofole a zampa",
+      "EUnl": "pootpantoffels",
+      "EUru": "слипперы-лапы",
+      "JPja": "アニマルスリッパ",
+      "KRko": "동물 슬리퍼",
+      "TWzh": "動物拖鞋",
+      "USen": "paw slippers",
+      "USes": "pantufla garra",
+      "USfr": "paire de chaussons animal"
+    }
+  },
+  {
+    "label": "761",
+    "locale": {
+      "CNzh": "沙滩拖鞋",
+      "EUde": "Paar Badesandalen",
+      "EUen": "flip-flops",
+      "EUes": "chancla",
+      "EUfr": "paire de tongs",
+      "EUit": "paio di infradito",
+      "EUnl": "teenslippers",
+      "EUru": "шлепанцы",
+      "JPja": "ビーチサンダル",
+      "KRko": "비치 샌들",
+      "TWzh": "沙灘拖鞋",
+      "USen": "flip-flops",
+      "USes": "chancla",
+      "USfr": "paire de sandales"
+    }
+  },
+  {
+    "label": "762",
+    "locale": {
+      "CNzh": "扣带鞋",
+      "EUde": "Paar Riemchenschuhe",
+      "EUen": "mary janes",
+      "EUes": "mercedita",
+      "EUfr": "paire de babies",
+      "EUit": "paio di scarpe con cinturino",
+      "EUnl": "kinderschoenen",
+      "EUru": "туфли с перемычкой",
+      "JPja": "ストラップシューズ",
+      "KRko": "메리제인 슈즈",
+      "TWzh": "扣帶鞋",
+      "USen": "mary janes",
+      "USes": "zapato hebilla negro",
+      "USfr": "paire d'espadrilles"
+    }
+  },
+  {
+    "label": "763",
+    "locale": {
+      "CNzh": "铁甲靴",
+      "EUde": "Paar Silberrüstungsschuhe",
+      "EUen": "armor shoes",
+      "EUes": "escarpe",
+      "EUfr": "paire de solerets",
+      "EUit": "paio scarpe armatura",
+      "EUnl": "ridderlaarzen",
+      "EUru": "рыцарские сапоги",
+      "JPja": "アイアンアーマーシューズ",
+      "KRko": "아이언 아머 슈즈",
+      "TWzh": "鐵甲鞋",
+      "USen": "armor shoes",
+      "USes": "escarpe",
+      "USfr": "paire de solerets"
+    }
+  },
+  {
+    "label": "764",
+    "locale": {
+      "CNzh": "室内鞋",
+      "EUde": "Paar Uwabaki",
+      "EUen": "slip-on school shoes",
+      "EUes": "zapatilla escolar japonesa",
+      "EUfr": "paire de souliers d'école",
+      "EUit": "paio di pantofole da scuola",
+      "EUnl": "Japanse schoolschoenen",
+      "EUru": "увабаки",
+      "JPja": "うわばき",
+      "KRko": "학교 실내화",
+      "TWzh": "室內便鞋",
+      "USen": "slip-on school shoes",
+      "USes": "zapatilla escolar japonesa",
+      "USfr": "paire de souliers d'école"
+    }
+  },
+  {
+    "label": "765",
+    "locale": {
+      "CNzh": "皮短靴",
+      "EUde": "Paar Kunstlederstiefel",
+      "EUen": "pleather ankle booties",
+      "EUes": "botín de polipiel",
+      "EUfr": "paire de bottines similicuir",
+      "EUit": "paio di stivaletti in ecopelle",
+      "EUnl": "kunstleren enkellaarsjes",
+      "EUru": "полусапожки из кожзама",
+      "JPja": "レザーのショートブーツ",
+      "KRko": "가죽 앵클 부츠",
+      "TWzh": "皮短靴",
+      "USen": "pleather ankle booties",
+      "USes": "bota corta cuero sintético",
+      "USfr": "paire de bottines similicuir"
+    }
+  },
+  {
+    "label": "766",
+    "locale": {
+      "CNzh": "花朵凉鞋",
+      "EUde": "Paar Blümchensandalen",
+      "EUen": "flower sandals",
+      "EUes": "sandalia con flor",
+      "EUfr": "paire de sandales fleuries",
+      "EUit": "paio di sandali floreali",
+      "EUnl": "sandalen met bloemen",
+      "EUru": "сандалии с цветком",
+      "JPja": "フラワーなサンダル",
+      "KRko": "플라워 샌들",
+      "TWzh": "花朵拖鞋",
+      "USen": "flower sandals",
+      "USes": "sandalia con flor",
+      "USfr": "paire de sandales fleuries"
+    }
+  },
+  {
+    "label": "767",
+    "locale": {
+      "CNzh": "翻毛短靴",
+      "EUde": "Paar Kunstfellstiefeletten",
+      "EUen": "faux-fur ankle booties",
+      "EUes": "botín de pelo sintético",
+      "EUfr": "p. bottines fausse fourrure",
+      "EUit": "paio stivaletti ecopelliccia",
+      "EUnl": "laarsjes met imitatiebont",
+      "EUru": "полусапожки «под мех»",
+      "JPja": "ファーブーツ",
+      "KRko": "인조털 부츠",
+      "TWzh": "毛毛靴",
+      "USen": "faux-fur ankle booties",
+      "USes": "bota corta piel sintética",
+      "USfr": "p. bottines fausse fourrure"
+    }
+  },
+  {
+    "label": "768",
+    "locale": {
+      "CNzh": "豹纹浅口鞋",
+      "EUde": "Paar Leopardenschuhe",
+      "EUen": "leopard pumps",
+      "EUes": "manoletina de leopardo",
+      "EUfr": "paire de ballerines léopard",
+      "EUit": "paio di ballerine maculate",
+      "EUnl": "luipaardpumps",
+      "EUru": "леопардовые туфли",
+      "JPja": "アニマルパンプス",
+      "KRko": "레오파드 펌프스",
+      "TWzh": "豹紋低跟鞋",
+      "USen": "leopard pumps",
+      "USes": "bailarina de leopardo",
+      "USfr": "paire de ballerines léopard"
+    }
+  },
+  {
+    "label": "769",
+    "locale": {
+      "CNzh": "珠珠拖鞋",
+      "EUde": "Paar Zehensandalen",
+      "EUen": "beaded sandals",
+      "EUes": "sandalia de cuentas",
+      "EUfr": "paire de sandales à perles",
+      "EUit": "paio di infradito perlati",
+      "EUnl": "teenslippers met kraaltjes",
+      "EUru": "сандалии с декором",
+      "JPja": "ビーズししゅうのサンダル",
+      "KRko": "비즈 자수 샌들",
+      "TWzh": "珠珠拖鞋",
+      "USen": "beaded sandals",
+      "USes": "sandalia de cuentas",
+      "USfr": "paire de sandales à perles"
+    }
+  },
+  {
+    "label": "772",
+    "locale": {
+      "CNzh": "长靴",
+      "EUde": "Paar Stiefel",
+      "EUen": "boots",
+      "EUes": "bota",
+      "EUfr": "paire de bottines",
+      "EUit": "paio di stivali",
+      "EUnl": "laarsjes",
+      "EUru": "сапоги",
+      "JPja": "ながぐつ",
+      "KRko": "장화",
+      "TWzh": "長靴",
+      "USen": "boots",
+      "USes": "bota",
+      "USfr": "paire de bottes"
+    }
+  },
+  {
+    "label": "776",
+    "locale": {
+      "CNzh": "古老靴子",
+      "EUde": "Paar Legendenstiefel",
+      "EUen": "antique boots",
+      "EUes": "bota del medievo",
+      "EUfr": "paire de bottes sept lieues",
+      "EUit": "paio di stivali leggenda",
+      "EUnl": "klassieke laarzen",
+      "EUru": "старинные сапоги",
+      "JPja": "アンティークなブーツ",
+      "KRko": "앤티크 부츠",
+      "TWzh": "古老靴子",
+      "USen": "antique boots",
+      "USes": "bota medieval",
+      "USfr": "paire de bottes sept lieues"
+    }
+  },
+  {
+    "label": "777",
+    "locale": {
+      "CNzh": "金甲靴",
+      "EUde": "Paar Goldrüstungsschuhe",
+      "EUen": "gold-armor shoes",
+      "EUes": "escarpe de oro",
+      "EUfr": "paire de solerets or",
+      "EUit": "paio scarpe armatura dorata",
+      "EUnl": "gouden ridderlaarzen",
+      "EUru": "латные золотые сапоги",
+      "JPja": "ゴールデンアーマーシューズ",
+      "KRko": "골든 아머 슈즈",
+      "TWzh": "金甲鞋",
+      "USen": "gold-armor shoes",
+      "USes": "escarpe de oro",
+      "USfr": "paire de solerets or"
+    }
+  },
+  {
+    "label": "778",
+    "locale": {
+      "CNzh": "拖鞋",
+      "EUde": "Paar Filzpantoffeln",
+      "EUen": "slippers",
+      "EUes": "pantufla",
+      "EUfr": "paire de pantoufles",
+      "EUit": "paio di pantofole",
+      "EUnl": "pantoffels",
+      "EUru": "слипперы",
+      "JPja": "スリッパ",
+      "KRko": "슬리퍼",
+      "TWzh": "拖鞋",
+      "USen": "slippers",
+      "USes": "pantufla",
+      "USfr": "paire de pantoufles"
+    }
+  },
+  {
+    "label": "779",
+    "locale": {
+      "CNzh": "马丁靴",
+      "EUde": "Paar Arbeitsstiefel",
+      "EUen": "work boots",
+      "EUes": "bota de trabajo",
+      "EUfr": "paire de bottes de travail",
+      "EUit": "paio di anfibi",
+      "EUnl": "werkschoenen",
+      "EUru": "рабочие сапоги",
+      "JPja": "ワークブーツ",
+      "KRko": "워커",
+      "TWzh": "馬丁靴",
+      "USen": "work boots",
+      "USes": "bota de trabajo",
+      "USfr": "paire de bottes de travail"
+    }
+  },
+  {
+    "label": "780",
+    "locale": {
+      "CNzh": "莫卡辛靴",
+      "EUde": "Paar Mokassinstiefeletten",
+      "EUen": "moccasin boots",
+      "EUes": "botín estilo mocasín",
+      "EUfr": "paire de bottines mocassins",
+      "EUit": "paio di stivaletti mocassino",
+      "EUnl": "mocassinlaarsjes",
+      "EUru": "полусапожки-мокасины",
+      "JPja": "モカシンブーツ",
+      "KRko": "모카신 부츠",
+      "TWzh": "莫卡辛靴",
+      "USen": "moccasin boots",
+      "USes": "bota corta estilo mocasín",
+      "USfr": "paire de bottines mocassins"
+    }
+  },
+  {
+    "label": "782",
+    "locale": {
+      "CNzh": "毛球靴",
+      "EUde": "Paar Puschel-Stiefel",
+      "EUen": "pom-pom boots",
+      "EUes": "botín con pompones",
+      "EUfr": "paire de bottes à pompons",
+      "EUit": "paio di stivaletti pon-pon",
+      "EUnl": "laarsjes met pompons",
+      "EUru": "сапоги с помпонами",
+      "JPja": "ポンポンつきブーツ",
+      "KRko": "폼폼 부츠",
+      "TWzh": "毛球靴",
+      "USen": "pom-pom boots",
+      "USes": "bota corta con pompones",
+      "USfr": "paire de bottes à pompons"
+    }
+  },
+  {
+    "label": "783",
+    "locale": {
+      "CNzh": "盔甲护腿靴",
+      "EUde": "Paar Samuraistiefel",
+      "EUen": "samurai greaves",
+      "EUes": "bota de samurái",
+      "EUfr": "paire de grèves de samouraï",
+      "EUit": "paio di gambiere da samurai",
+      "EUnl": "samoerai-sandalen",
+      "EUru": "поножи воина",
+      "JPja": "かっちゅうのすねあて",
+      "KRko": "갑옷 다리 보호대",
+      "TWzh": "盔甲護腿鞋",
+      "USen": "samurai greaves",
+      "USes": "bota de samurái",
+      "USfr": "paire de grèves de samouraï"
+    }
+  },
+  {
+    "label": "784",
+    "locale": {
+      "CNzh": "扣带浅口鞋",
+      "EUde": "Paar Riemchenpumps",
+      "EUen": "strappy heels",
+      "EUes": "tacón de tiras",
+      "EUfr": "paire d'escarpins à bride",
+      "EUit": "paio ballerine con cinturino",
+      "EUnl": "elegante hakjes",
+      "EUru": "туфли c застежками",
+      "JPja": "ストラップつきパンプス",
+      "KRko": "스트랩 펌프스",
+      "TWzh": "扣帶低跟鞋",
+      "USen": "strappy heels",
+      "USes": "tacón de tiras",
+      "USfr": "paire d'escarpins à bride"
+    }
+  },
+  {
+    "label": "785",
+    "locale": {
+      "CNzh": "居家拖鞋",
+      "EUde": "Paar Pantoffeln",
+      "EUen": "house slippers",
+      "EUes": "pantufla hogareña",
+      "EUfr": "paire de chaussons",
+      "EUit": "paio di pantofole da casa",
+      "EUnl": "huissloffen",
+      "EUru": "домашние тапочки",
+      "JPja": "ルームシューズ",
+      "KRko": "실내용 슬리퍼",
+      "TWzh": "室內拖鞋",
+      "USen": "house slippers",
+      "USes": "pantufla hogareña",
+      "USfr": "paire de chaussons"
+    }
+  },
+  {
+    "label": "786",
+    "locale": {
+      "CNzh": "懒人拖鞋",
+      "EUde": "Paar Kunststoffschlappen",
+      "EUen": "slip-on sandals",
+      "EUes": "sandalia de plástico",
+      "EUfr": "paire de sabots caoutchouc",
+      "EUit": "paio di ciabatte di gomma",
+      "EUnl": "plastic sloffen",
+      "EUru": "пляжные сабо",
+      "JPja": "スリッポンサンダル",
+      "KRko": "슬립온 샌들",
+      "TWzh": "布希鞋",
+      "USen": "slip-on sandals",
+      "USes": "sandalia de plástico",
+      "USfr": "paire de sabots caoutchouc"
+    }
+  },
+  {
+    "label": "787",
+    "locale": {
+      "CNzh": "懒人鞋",
+      "EUde": "Paar Schlupfschuhe",
+      "EUen": "slip-on loafers",
+      "EUes": "mocasín de talón bajo",
+      "EUfr": "paire de mocassins en toile",
+      "EUit": "paio di mocassini casual",
+      "EUnl": "casual instappers",
+      "EUru": "лоферы без шнурков",
+      "JPja": "スリッポン",
+      "KRko": "슬립온",
+      "TWzh": "懶人鞋",
+      "USen": "slip-on loafers",
+      "USes": "mocasín de talón bajo",
+      "USfr": "paire de mocassins en toile"
+    }
+  },
+  {
+    "label": "789",
+    "locale": {
+      "CNzh": "洛丽塔鞋",
+      "EUde": "Paar Prinzessinnenschuhe",
+      "EUen": "shiny bow platform shoes",
+      "EUes": "zapato muñequita",
+      "EUfr": "paire de babies à rubans",
+      "EUit": "paio di scarpette bambolina",
+      "EUnl": "schoenen met enkelbandjes",
+      "EUru": "милые туфли",
+      "JPja": "ロリータシューズ",
+      "KRko": "리본 레이스 슈즈",
+      "TWzh": "蘿莉塔鞋",
+      "USen": "shiny bow platform shoes",
+      "USes": "zapato muñequita",
+      "USfr": "paire d'escarpins à rubans"
+    }
+  },
+  {
+    "label": "791",
+    "locale": {
+      "CNzh": "芭蕾舞鞋",
+      "EUde": "Paar Ballettschuhe",
+      "EUen": "ballet slippers",
+      "EUes": "zapatilla de ballet",
+      "EUfr": "paire de chaussons danse",
+      "EUit": "paio di scarpette da punta",
+      "EUnl": "balletschoenen",
+      "EUru": "пуанты",
+      "JPja": "バレエシューズ",
+      "KRko": "발레 슈즈",
+      "TWzh": "芭蕾舞鞋",
+      "USen": "ballet slippers",
+      "USes": "zapatilla de ballet",
+      "USfr": "paire de chaussons danse"
+    }
+  },
+  {
+    "label": "792",
+    "locale": {
+      "CNzh": "视觉系靴",
+      "EUde": "Paar Visual-Kei-Stiefel",
+      "EUen": "visual-punk boots",
+      "EUes": "bota punk",
+      "EUfr": "paire de bottes visual kei",
+      "EUit": "paio di stivali visual kei",
+      "EUnl": "Japanse punklaarzen",
+      "EUru": "панковские сапоги",
+      "JPja": "ヴィジュアルけいブーツ",
+      "KRko": "펑크 스타일 부츠",
+      "TWzh": "視覺系靴",
+      "USen": "visual-punk boots",
+      "USes": "bota punk",
+      "USfr": "paire de bottes visual kei"
+    }
+  },
+  {
+    "label": "794",
+    "locale": {
+      "CNzh": "高筒帆布鞋",
+      "EUde": "Paar Knöchelturnschuhe",
+      "EUen": "rubber-toe high tops",
+      "EUes": "zapatilla alta con puntera",
+      "EUfr": "p. tennis skate montantes",
+      "EUit": "paio di sneaker alte",
+      "EUnl": "sneakers met rubber neus",
+      "EUru": "высокие кеды",
+      "JPja": "ラバートゥハイカットスニーカー",
+      "KRko": "러버토 하이컷 스니커",
+      "TWzh": "高筒帆布鞋",
+      "USen": "rubber-toe high tops",
+      "USes": "tenis alto con puntera",
+      "USfr": "p. espa. skate montantes"
+    }
+  },
+  {
+    "label": "795",
+    "locale": {
+      "CNzh": "木鞋",
+      "EUde": "Paar Holzpantoffeln",
+      "EUen": "wooden clogs",
+      "EUes": "zueco florido",
+      "EUfr": "paire de sabots décorés",
+      "EUit": "paio di zoccoli di legno",
+      "EUnl": "klompen",
+      "EUru": "деревянные клоги",
+      "JPja": "きぐつ",
+      "KRko": "네덜란드 나막신",
+      "TWzh": "木鞋",
+      "USen": "wooden clogs",
+      "USes": "zueco florido",
+      "USfr": "paire de sabots décorés"
+    }
+  },
+  {
+    "label": "796",
+    "locale": {
+      "CNzh": "双带凉鞋",
+      "EUde": "Paar Pantoletten",
+      "EUen": "comfy sandals",
+      "EUes": "sandalia holgada",
+      "EUfr": "paire sandales confortables",
+      "EUit": "paio di sandali comodi",
+      "EUnl": "comfortabele sandalen",
+      "EUru": "пробковые пантолеты",
+      "JPja": "コンフォートサンダル",
+      "KRko": "컴포트 샌들",
+      "TWzh": "雙帶拖鞋",
+      "USen": "comfy sandals",
+      "USes": "sandalia holgada",
+      "USfr": "paire sandales confortables"
+    }
+  },
+  {
+    "label": "797",
+    "locale": {
+      "CNzh": "罗马凉鞋",
+      "EUde": "Paar Gladiator-Sandalen",
+      "EUen": "gladiator sandals",
+      "EUes": "sandalia gladiador",
+      "EUfr": "paire de spartiates",
+      "EUit": "paio di sandali gladiatore",
+      "EUnl": "gladiatorensandalen",
+      "EUru": "сандалии гладиатора",
+      "JPja": "グラディエーターサンダル",
+      "KRko": "글레디에이터 샌들",
+      "TWzh": "羅馬涼鞋",
+      "USen": "gladiator sandals",
+      "USes": "sandalia gladiador",
+      "USfr": "paire de spartiates"
+    }
+  },
+  {
+    "label": "799",
+    "locale": {
+      "CNzh": "英雄靴",
+      "EUde": "Paar Superheldenstiefel",
+      "EUen": "zap boots",
+      "EUes": "superbota",
+      "EUfr": "paire de bottes de héros",
+      "EUit": "paio di stivali da eroe",
+      "EUnl": "superlaarzen",
+      "EUru": "сапоги супергероя",
+      "JPja": "ヒーローブーツ",
+      "KRko": "히어로 부츠",
+      "TWzh": "英雄靴",
+      "USen": "zap boots",
+      "USes": "superbota",
+      "USfr": "paire de bottes de héros"
+    }
+  },
+  {
+    "label": "800",
+    "locale": {
+      "CNzh": "篮球鞋",
+      "EUde": "Paar Basketballschuhe",
+      "EUen": "basketball shoes",
+      "EUes": "zapatilla de básquet",
+      "EUfr": "paire de baskets",
+      "EUit": "paio di scarpe da basket",
+      "EUnl": "basketbalschoenen",
+      "EUru": "баскетбольные кеды",
+      "JPja": "バスケットシューズ",
+      "KRko": "농구화",
+      "TWzh": "籃球鞋",
+      "USen": "basketball shoes",
+      "USes": "tenis de básquet",
+      "USfr": "p. d'espadrilles basketball"
+    }
+  },
+  {
+    "label": "801",
+    "locale": {
+      "CNzh": "小丑鞋",
+      "EUde": "Paar Narrenschuhe",
+      "EUen": "jester's shoes",
+      "EUes": "zapato de bufón",
+      "EUfr": "paire de bottes bouffon",
+      "EUit": "paio di scarpe da giullare",
+      "EUnl": "narrenschoenen",
+      "EUru": "ботинки шута",
+      "JPja": "ピエロのくつ",
+      "KRko": "피에로 신발",
+      "TWzh": "小丑鞋",
+      "USen": "jester's shoes",
+      "USes": "zapato de bufón",
+      "USfr": "paire de bottes bouffon"
+    }
+  },
+  {
+    "label": "802",
+    "locale": {
+      "CNzh": "户外凉鞋",
+      "EUde": "Paar Outdoor-Sandalen",
+      "EUen": "outdoor sandals",
+      "EUes": "sandalia de paseo",
+      "EUfr": "paire de sandales de rando",
+      "EUit": "paio di sandali tecnici",
+      "EUnl": "kampeersandalen",
+      "EUru": "походные сандалии",
+      "JPja": "アウトドアサンダル",
+      "KRko": "아웃도어 샌들",
+      "TWzh": "戶外涼鞋",
+      "USen": "outdoor sandals",
+      "USes": "sandalia de paseo",
+      "USfr": "p. sandales de randonnée"
+    }
+  },
+  {
+    "label": "804",
+    "locale": {
+      "CNzh": "西部牛仔靴",
+      "EUde": "Paar Cowboystiefel",
+      "EUen": "cowboy boots",
+      "EUes": "bota del Oeste",
+      "EUfr": "paire de bottes de cow-boy",
+      "EUit": "paio di stivali da cowboy",
+      "EUnl": "cowboylaarzen",
+      "EUru": "ковбойские сапоги",
+      "JPja": "ウェスタンブーツ",
+      "KRko": "웨스턴 부츠",
+      "TWzh": "西部牛仔靴",
+      "USen": "cowboy boots",
+      "USes": "bota del Oeste",
+      "USfr": "paire de bottes de cowboy"
+    }
+  },
+  {
+    "label": "808",
+    "locale": {
+      "CNzh": "韩服绣花鞋",
+      "EUde": "Paar Ornamentschuhe",
+      "EUen": "traditional flower shoes",
+      "EUes": "zapato florido tradicional",
+      "EUfr": "paire de ggotshin",
+      "EUit": "paio di ggotshin",
+      "EUnl": "klassieke bloemenschoenen",
+      "EUru": "обувь с цветами",
+      "JPja": "コッシン",
+      "KRko": "꽃신",
+      "TWzh": "繡花鞋",
+      "USen": "traditional flower shoes",
+      "USes": "zapato florido tradicional",
+      "USfr": "paire de ggotshin"
+    }
+  },
+  {
+    "label": "809",
+    "locale": {
+      "CNzh": "水陆凉鞋",
+      "EUde": "Paar Strandsandalen",
+      "EUen": "water sandals",
+      "EUes": "sandalia de goma",
+      "EUfr": "paire sandalettes de plage",
+      "EUit": "paio di sandali da mare",
+      "EUnl": "watersandalen",
+      "EUru": "пляжные сандалии",
+      "JPja": "アクアサンダル",
+      "KRko": "아쿠아 샌들",
+      "TWzh": "水涼鞋",
+      "USen": "water sandals",
+      "USes": "sandalia de goma",
+      "USfr": "paire de sandales d'eau"
+    }
+  },
+  {
+    "label": "811",
+    "locale": {
+      "CNzh": "钉鞋",
+      "EUde": "Paar Fußballschuhe",
+      "EUen": "cleats",
+      "EUes": "zapatilla de tacos",
+      "EUfr": "paire de souliers crampons",
+      "EUit": "paio di scarpini da calcio",
+      "EUnl": "voetbalschoenen",
+      "EUru": "бутсы",
+      "JPja": "スパイク",
+      "KRko": "스파이크 슈즈",
+      "TWzh": "釘鞋",
+      "USen": "cleats",
+      "USes": "botín",
+      "USfr": "paire de souliers crampons"
+    }
+  },
+  {
+    "label": "812",
+    "locale": {
+      "CNzh": "尖头鞋",
+      "EUde": "Paar Pikes",
+      "EUen": "winklepickers",
+      "EUes": "zapato de puntera afilada",
+      "EUfr": "paire de winklepickers",
+      "EUit": "paio di scarpe a punta",
+      "EUnl": "puntschoenen",
+      "EUru": "остроносые туфли",
+      "JPja": "トンがったクツ",
+      "KRko": "뾰족코 구두",
+      "TWzh": "尖頭鞋",
+      "USen": "winklepickers",
+      "USes": "zapato de puntera afilada",
+      "USfr": "paire de winklepickers"
+    }
+  },
+  {
+    "label": "814",
+    "locale": {
+      "CNzh": "气垫鞋",
+      "EUde": "Paar Hightech-Turnschuhe",
+      "EUen": "hi-tech sneakers",
+      "EUes": "deportiva alto rendimiento",
+      "EUfr": "paire de tennis high-tech",
+      "EUit": "paio di sneaker hi-tech",
+      "EUnl": "hightech sneakers",
+      "EUru": "супермодные кроссовки",
+      "JPja": "ハイテクシューズ",
+      "KRko": "하이테크 슈즈",
+      "TWzh": "氣墊鞋",
+      "USen": "hi-tech sneakers",
+      "USes": "tenis de alto rendimiento",
+      "USfr": "paire d'espa. high-tech"
+    }
+  },
+  {
+    "label": "815",
+    "locale": {
+      "CNzh": "滑雪靴",
+      "EUde": "Paar Skistiefel",
+      "EUen": "ski boots",
+      "EUes": "bota de esquí",
+      "EUfr": "paire de bottes de ski",
+      "EUit": "paio di scarponi da sci",
+      "EUnl": "skilaarzen",
+      "EUru": "лыжные ботинки",
+      "JPja": "スキーブーツ",
+      "KRko": "스키 부츠",
+      "TWzh": "滑雪靴",
+      "USen": "ski boots",
+      "USes": "bota de esquí",
+      "USfr": "paire de bottes de ski"
+    }
+  },
+  {
+    "label": "820",
+    "locale": {
+      "CNzh": "绑带靴",
+      "EUde": "Paar Schnürstiefel",
+      "EUen": "lace-up boots",
+      "EUes": "bota alta",
+      "EUfr": "paire de bottes à lacets",
+      "EUit": "paio di stivali con lacci",
+      "EUnl": "geveterde laarzen",
+      "EUru": "ботинки на шнурках",
+      "JPja": "あみあげブーツ",
+      "KRko": "레이스업 부츠",
+      "TWzh": "綁帶靴",
+      "USen": "lace-up boots",
+      "USes": "bota alta",
+      "USfr": "paire de bottes à lacets"
+    }
+  },
+  {
+    "label": "821",
+    "locale": {
+      "CNzh": "摔角鞋",
+      "EUde": "Paar Wrestlingschuhe",
+      "EUen": "wrestling shoes",
+      "EUes": "bota de lucha",
+      "EUfr": "paire de bottes de catch",
+      "EUit": "paio di scarpe da wrestling",
+      "EUnl": "worstelschoenen",
+      "EUru": "борцовские ботинки",
+      "JPja": "リングシューズ",
+      "KRko": "복싱 슈즈",
+      "TWzh": "摔角鞋",
+      "USen": "wrestling shoes",
+      "USes": "bota de lucha",
+      "USfr": "paire de bottes de lutte"
+    }
+  },
+  {
+    "label": "839",
+    "locale": {
+      "CNzh": "动力靴",
+      "EUde": "Paar Power-Stiefel",
+      "EUen": "power boots",
+      "EUes": "bota de energía",
+      "EUfr": "paire bottes de puissance",
+      "EUit": "paio stivali tuta potenziata",
+      "EUnl": "superkrachtlaarzen",
+      "EUru": "силовые ботинки",
+      "JPja": "パワードブーツ",
+      "KRko": "파워 부츠",
+      "TWzh": "動力靴",
+      "USen": "power boots",
+      "USes": "bota de energía",
+      "USfr": "p. de bottes de puissance"
+    }
+  },
+  {
+    "label": "863",
+    "locale": {
+      "CNzh": "太空靴",
+      "EUde": "Paar Astronautenstiefel",
+      "EUen": "space boots",
+      "EUes": "bota espacial",
+      "EUfr": "paire de bottes spatiales",
+      "EUit": "paio di stivali spaziali",
+      "EUnl": "ruimtelaarzen",
+      "EUru": "ботинки космонавта",
+      "JPja": "スペースブーツ",
+      "KRko": "스페이스 부츠",
+      "TWzh": "太空靴",
+      "USen": "space boots",
+      "USes": "bota espacial",
+      "USfr": "paire de bottes spatiales"
+    }
+  },
+  {
+    "label": "864",
+    "locale": {
+      "CNzh": "童用休闲鞋",
+      "EUde": "Paar Kinderturnschuhe",
+      "EUen": "kiddie sneakers",
+      "EUes": "deportiva juvenil",
+      "EUfr": "paire de baskets enfant",
+      "EUit": "paio di sneaker da bimbi",
+      "EUnl": "kindersneakers",
+      "EUru": "детские кроссовки",
+      "JPja": "キッズなスニーカー",
+      "KRko": "키즈 스니커",
+      "TWzh": "兒童運動鞋",
+      "USen": "kiddie sneakers",
+      "USes": "tenis juvenil",
+      "USfr": "paire d'espadrilles enfant"
+    }
+  },
+  {
+    "label": "868",
+    "locale": {
+      "CNzh": "步行鞋",
+      "EUde": "Paar Spazierschuhe",
+      "EUen": "walking shoes",
+      "EUes": "zapatilla anatómica",
+      "EUfr": "p. chaussures confortables",
+      "EUit": "paio di scarpe da passeggio",
+      "EUnl": "gemakkelijke schoenen",
+      "EUru": "легкие слипоны",
+      "JPja": "ウォーキングシューズ",
+      "KRko": "워킹 슈즈",
+      "TWzh": "步行鞋",
+      "USen": "walking shoes",
+      "USes": "tenis anatómico",
+      "USfr": "p. souliers confortables"
+    }
+  },
+  {
+    "label": "876",
+    "locale": {
+      "CNzh": "厕所拖鞋",
+      "EUde": "Paar Badepantoffeln",
+      "EUen": "restroom slippers",
+      "EUes": "pantufla aseo",
+      "EUfr": "paire de pantoufles de WC",
+      "EUit": "paio di pantofole da bagno",
+      "EUnl": "badkamersloffen",
+      "EUru": "туалетные тапочки",
+      "JPja": "トイレスリッパ",
+      "KRko": "화장실 슬리퍼",
+      "TWzh": "廁所拖鞋",
+      "USen": "restroom slippers",
+      "USes": "pantufla de baño",
+      "USfr": "p. pantoufles de toilette"
+    }
+  },
+  {
+    "label": "878",
+    "locale": {
+      "CNzh": "可爱休闲鞋",
+      "EUde": "Paar Herzchenturnschuhe",
+      "EUen": "cute sneakers",
+      "EUes": "zapatilla cuqui",
+      "EUfr": "paire de baskets cœur",
+      "EUit": "paio di sneaker graziose",
+      "EUnl": "schattige sneakers",
+      "EUru": "милые кроссовки",
+      "JPja": "キュートなスニーカー",
+      "KRko": "큐트 스니커",
+      "TWzh": "可愛運動鞋",
+      "USen": "cute sneakers",
+      "USes": "tenis adorable",
+      "USfr": "paire d'espadrilles cœur"
+    }
+  },
+  {
+    "label": "881",
+    "locale": {
+      "CNzh": "莫卡辛鞋",
+      "EUde": "Paar Mokassins",
+      "EUen": "moccasins",
+      "EUes": "mocasín tradicional",
+      "EUfr": "paire de mocassins",
+      "EUit": "paio di mocassini classici",
+      "EUnl": "mocassins met strik",
+      "EUru": "мокасины",
+      "JPja": "モカシン",
+      "KRko": "모카신",
+      "TWzh": "莫卡辛鞋",
+      "USen": "moccasins",
+      "USes": "mocasín tradicional",
+      "USfr": "paire de mocassins"
+    }
+  },
+  {
+    "label": "882",
+    "locale": {
+      "CNzh": "水上运动鞋",
+      "EUde": "Paar Wassersportschuhe",
+      "EUen": "water shoes",
+      "EUes": "zapato acuático",
+      "EUfr": "paire de chaussures plage",
+      "EUit": "paio di scarpe da scoglio",
+      "EUnl": "waterschoenen",
+      "EUru": "тапочки для купания",
+      "JPja": "マリンシューズ",
+      "KRko": "아쿠아 슈즈",
+      "TWzh": "水上運動鞋",
+      "USen": "water shoes",
+      "USes": "zapato acuático",
+      "USfr": "paire de souliers de plage"
+    }
+  },
+  {
+    "label": "883",
+    "locale": {
+      "CNzh": "翼纹绅士鞋",
+      "EUde": "Paar Derbyschuhe",
+      "EUen": "wingtip shoes",
+      "EUes": "zapato de claqué",
+      "EUfr": "paire de brogues",
+      "EUit": "paio scarpe coda di rondine",
+      "EUnl": "wingtip-schoenen",
+      "EUru": "классические броги",
+      "JPja": "ウイングチップのシューズ",
+      "KRko": "윙팁 슈즈",
+      "TWzh": "翼紋紳士鞋",
+      "USen": "wingtip shoes",
+      "USes": "zapato de claqué",
+      "USfr": "paire de brogues"
+    }
+  },
+  {
+    "label": "888",
+    "locale": {
+      "CNzh": "蝴蝶结拖鞋",
+      "EUde": "Paar Schleifchensandalen",
+      "EUen": "ribbon sandals",
+      "EUes": "sandalia gran lazo",
+      "EUfr": "paire de claquettes à nœud",
+      "EUit": "paio di sandali con fiocco",
+      "EUnl": "slippers met strikken",
+      "EUru": "сандалии с бантиком",
+      "JPja": "リボンサンダル",
+      "KRko": "리본 샌들",
+      "TWzh": "蝴蝶結拖鞋",
+      "USen": "ribbon sandals",
+      "USes": "sandalia gran lazo",
+      "USfr": "paire de gougounes à nœud"
+    }
+  },
+  {
+    "label": "894",
+    "locale": {
+      "CNzh": "运动凉鞋",
+      "EUde": "Paar Sportsandalen",
+      "EUen": "sporty sandals",
+      "EUes": "sandalia deportiva",
+      "EUfr": "paire de sandales de sport",
+      "EUit": "paio di sandali sportivi",
+      "EUnl": "sportsandalen",
+      "EUru": "спортивные сандалии",
+      "JPja": "スポーツサンダル",
+      "KRko": "스포츠 샌들",
+      "TWzh": "運動涼鞋",
+      "USen": "sporty sandals",
+      "USes": "sandalia deportiva",
+      "USfr": "paire de sandales de sport"
+    }
+  },
+  {
+    "label": "924",
+    "locale": {
+      "CNzh": "雕花绅士鞋",
+      "EUde": "Paar Ghillie Brogues",
+      "EUen": "ghillie brogues",
+      "EUes": "zapato calado con cordón",
+      "EUfr": "paire de ghillie brogues",
+      "EUit": "paio di scarpe inglesine",
+      "EUnl": "Schotse veterschoenen",
+      "EUru": "броги",
+      "JPja": "ギリー・ブローグズ",
+      "KRko": "길리 브로그",
+      "TWzh": "雕花紳士鞋",
+      "USen": "ghillie brogues",
+      "USes": "zapato calado con cordón",
+      "USfr": "paire de ghillie brogues"
+    }
+  },
+  {
+    "label": "925",
+    "locale": {
+      "CNzh": "摩洛哥拖鞋",
+      "EUde": "Paar Babuschen",
+      "EUen": "babouches",
+      "EUes": "babucha",
+      "EUfr": "paire de babouches",
+      "EUit": "paio di babbucce",
+      "EUnl": "babouches",
+      "EUru": "бабуши",
+      "JPja": "バブーシュ",
+      "KRko": "바부슈",
+      "TWzh": "摩洛哥拖鞋",
+      "USen": "babouches",
+      "USes": "babucha",
+      "USfr": "paire de babouches"
+    }
+  },
+  {
+    "label": "938",
+    "locale": {
+      "CNzh": "高筒休闲鞋",
+      "EUde": "Paar Basketballstiefel",
+      "EUen": "high-tops",
+      "EUes": "zapatilla alta",
+      "EUfr": "paire de baskets montantes",
+      "EUit": "paio di scarpe alte",
+      "EUnl": "hoge sneakers",
+      "EUru": "высокие кроссовки",
+      "JPja": "ハイカットスニーカー",
+      "KRko": "하이탑 스니커",
+      "TWzh": "高筒運動鞋",
+      "USen": "high-tops",
+      "USes": "tenis alto",
+      "USfr": "paire d'espadrilles hautes"
+    }
+  },
+  {
+    "label": "941",
+    "locale": {
+      "CNzh": "工程师靴",
+      "EUde": "Paar Stahlkappenschuhe",
+      "EUen": "steel-toed boots",
+      "EUes": "bota con protección",
+      "EUfr": "paire de bottes à coque",
+      "EUit": "paio di stivali con rinforzo",
+      "EUnl": "laarzen met stalen neus",
+      "EUru": "обувь со стальным носком",
+      "JPja": "エンジニアブーツ",
+      "KRko": "엔지니어 부츠",
+      "TWzh": "工程師靴",
+      "USen": "steel-toed boots",
+      "USes": "bota con protección",
+      "USfr": "paire de bottes cap d'acier"
+    }
+  },
+  {
+    "label": "946",
+    "locale": {
+      "CNzh": "帆布鞋",
+      "EUde": "Paar Kappenturnschuhe",
+      "EUen": "rubber-toe sneakers",
+      "EUes": "zapatilla con puntera",
+      "EUfr": "paire de baskets en toile",
+      "EUit": "paio scarpe punta in gomma",
+      "EUnl": "lage sneakers",
+      "EUru": "прорезиненные кеды",
+      "JPja": "ラバートゥスニーカー",
+      "KRko": "러버토 스니커",
+      "TWzh": "帆布鞋",
+      "USen": "rubber-toe sneakers",
+      "USes": "tenis con puntera de goma",
+      "USfr": "p. espa. à bout caoutchouc"
+    }
+  },
+  {
+    "label": "947",
+    "locale": {
+      "CNzh": "尖头靴",
+      "EUde": "Paar Spitz-Stiefelchen",
+      "EUen": "mage's booties",
+      "EUes": "botín de hechicería",
+      "EUfr": "paire de bottines pointues",
+      "EUit": "paio di stivaletti appuntiti",
+      "EUnl": "heksenlaarsjes",
+      "EUru": "чародейские ботинки",
+      "JPja": "とんがりブーツ",
+      "KRko": "마술사 부츠",
+      "TWzh": "尖頭靴",
+      "USen": "mage's booties",
+      "USes": "bota corta hechicería",
+      "USfr": "paire de bottines de mage"
+    }
+  }
+]

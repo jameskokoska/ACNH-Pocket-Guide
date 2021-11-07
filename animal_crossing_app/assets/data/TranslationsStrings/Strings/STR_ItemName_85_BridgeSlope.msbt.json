@@ -1,0 +1,306 @@
+﻿[
+  {
+    "label": "BridgeItem_05912",
+    "locale": {
+      "CNzh": "石桥",
+      "EUde": "Steinbrücke",
+      "EUen": "stone bridge",
+      "EUes": "puente de piedra",
+      "EUfr": "pont de pierre",
+      "EUit": "ponte di pietra",
+      "EUnl": "stenen brug",
+      "EUru": "каменный мост",
+      "JPja": "いしのはし",
+      "KRko": "돌 다리",
+      "TWzh": "石橋",
+      "USen": "stone bridge",
+      "USes": "puente de piedra",
+      "USfr": "pont de pierre"
+    }
+  },
+  {
+    "label": "BridgeItem_05913",
+    "locale": {
+      "CNzh": "吊桥",
+      "EUde": "Hängebrücke",
+      "EUen": "suspension bridge",
+      "EUes": "puente colgante",
+      "EUfr": "pont suspendu",
+      "EUit": "ponte sospeso",
+      "EUnl": "hangbrug",
+      "EUru": "подвесной мост",
+      "JPja": "つりばし",
+      "KRko": "출렁다리",
+      "TWzh": "吊橋",
+      "USen": "suspension bridge",
+      "USes": "puente colgante",
+      "USfr": "pont suspendu"
+    }
+  },
+  {
+    "label": "BridgeItem_05914",
+    "locale": {
+      "CNzh": "木桥",
+      "EUde": "Holzbrücke",
+      "EUen": "wooden bridge",
+      "EUes": "puente de tablones",
+      "EUfr": "pont en bois",
+      "EUit": "ponte di legno",
+      "EUnl": "houten brug",
+      "EUru": "деревянный мост",
+      "JPja": "もくせいのはし",
+      "KRko": "목제 다리",
+      "TWzh": "木橋",
+      "USen": "wooden bridge",
+      "USes": "puente de tablones",
+      "USfr": "pont en bois"
+    }
+  },
+  {
+    "label": "BridgeItem_05915",
+    "locale": {
+      "CNzh": "砖桥",
+      "EUde": "Backsteinbrücke",
+      "EUen": "brick bridge",
+      "EUes": "puente de ladrillo",
+      "EUfr": "pont en brique",
+      "EUit": "ponte di mattoni",
+      "EUnl": "bakstenen brug",
+      "EUru": "кирпичный мост",
+      "JPja": "レンガのはし",
+      "KRko": "벽돌 다리",
+      "TWzh": "磚塊橋",
+      "USen": "brick bridge",
+      "USes": "puente de ladrillo",
+      "USfr": "pont en brique"
+    }
+  },
+  {
+    "label": "BridgeItem_05916",
+    "locale": {
+      "CNzh": "和风桥",
+      "EUde": "Japan-Brücke",
+      "EUen": "zen bridge",
+      "EUes": "puente de madera",
+      "EUfr": "pont zen",
+      "EUit": "ponte giapponese",
+      "EUnl": "zenbrug",
+      "EUru": "мост «Дзен»",
+      "JPja": "わふうのはし",
+      "KRko": "동양풍 다리",
+      "TWzh": "和風橋",
+      "USen": "zen bridge",
+      "USes": "puente de madera",
+      "USfr": "pont zen"
+    }
+  },
+  {
+    "label": "BridgeItem_05917",
+    "locale": {
+      "CNzh": "圆木桥",
+      "EUde": "Baumstammbrücke",
+      "EUen": "log bridge",
+      "EUes": "puente de troncos",
+      "EUfr": "pont en rondins",
+      "EUit": "ponte di tronchi",
+      "EUnl": "boomstammenbrug",
+      "EUru": "мост из поленьев",
+      "JPja": "まるたのはし",
+      "KRko": "통나무 다리",
+      "TWzh": "圓木橋",
+      "USen": "log bridge",
+      "USes": "puente de troncos",
+      "USfr": "pont en rondins"
+    }
+  },
+  {
+    "label": "BridgeItem_05918",
+    "locale": {
+      "CNzh": "红色和风桥",
+      "EUde": "Rot-Japan-Brücke",
+      "EUen": "red zen bridge",
+      "EUes": "puente de madera rojo",
+      "EUfr": "pont zen rouge",
+      "EUit": "ponte giapponese rosso",
+      "EUnl": "rode zenbrug",
+      "EUru": "красный мост «Дзен»",
+      "JPja": "あかいわふうのはし",
+      "KRko": "빨간 동양풍 다리",
+      "TWzh": "紅色和風橋",
+      "USen": "red zen bridge",
+      "USes": "puente de madera rojo",
+      "USfr": "pont zen rouge"
+    }
+  },
+  {
+    "label": "BridgeItem_05919",
+    "locale": {
+      "CNzh": "铁桥",
+      "EUde": "Eisenbrücke",
+      "EUen": "iron bridge",
+      "EUes": "puente de hierro",
+      "EUfr": "pont en fer",
+      "EUit": "ponte di ferro",
+      "EUnl": "ijzeren brug",
+      "EUru": "железный мост",
+      "JPja": "てつのはし",
+      "KRko": "철제 다리",
+      "TWzh": "鐵橋",
+      "USen": "iron bridge",
+      "USes": "puente de hierro",
+      "USfr": "pont en fer"
+    }
+  },
+  {
+    "label": "SlopeItem_05863",
+    "locale": {
+      "CNzh": "石台阶",
+      "EUde": "Steintreppe",
+      "EUen": "stone staircase",
+      "EUes": "escalera de piedra",
+      "EUfr": "escalier en pierre",
+      "EUit": "scala di pietra",
+      "EUnl": "stenen trap",
+      "EUru": "каменная лестница",
+      "JPja": "いしのかいだん",
+      "KRko": "돌 계단",
+      "TWzh": "石樓梯",
+      "USen": "stone staircase",
+      "USes": "escalera de piedra",
+      "USfr": "escalier en pierre"
+    }
+  },
+  {
+    "label": "SlopeItem_05864",
+    "locale": {
+      "CNzh": "红色钢筋台阶",
+      "EUde": "Rot-Stahltreppe",
+      "EUen": "red steel staircase",
+      "EUes": "escalera de acero rojo",
+      "EUfr": "escalier en acier rouge",
+      "EUit": "scala di acciaio rosso",
+      "EUnl": "rode stalen trap",
+      "EUru": "красная стальн. лестница",
+      "JPja": "あかいてっこつかいだん",
+      "KRko": "빨간 철골 계단",
+      "TWzh": "紅色鋼筋樓梯",
+      "USen": "red steel staircase",
+      "USes": "escalera de acero rojo",
+      "USfr": "escalier en acier rouge"
+    }
+  },
+  {
+    "label": "SlopeItem_05865",
+    "locale": {
+      "CNzh": "白色木板斜坡",
+      "EUde": "Weiß-Bretterrampe",
+      "EUen": "white-plank ramp",
+      "EUes": "rampa de tablas blancas",
+      "EUfr": "pente planches blanches",
+      "EUit": "rampa di assi bianche",
+      "EUnl": "witte houten helling",
+      "EUru": "рампа из белых досок",
+      "JPja": "しろいいたのスロープ",
+      "KRko": "하얀 널빤지 슬로프",
+      "TWzh": "白色木板斜坡",
+      "USen": "white-plank ramp",
+      "USes": "rampa de tablas blancas",
+      "USfr": "pente planches blanches"
+    }
+  },
+  {
+    "label": "SlopeItem_05866",
+    "locale": {
+      "CNzh": "天然斜坡",
+      "EUde": "Hangpfad",
+      "EUen": "natural ramp",
+      "EUes": "rampa natural",
+      "EUfr": "pente naturelle",
+      "EUit": "rampa naturale",
+      "EUnl": "natuurlijke helling",
+      "EUru": "естественный склон",
+      "JPja": "ナチュラルなスロープ",
+      "KRko": "내추럴 슬로프",
+      "TWzh": "自然風斜坡",
+      "USen": "natural ramp",
+      "USes": "rampa natural",
+      "USfr": "pente naturelle"
+    }
+  },
+  {
+    "label": "SlopeItem_05867",
+    "locale": {
+      "CNzh": "圆木台阶",
+      "EUde": "Baumstammtreppe",
+      "EUen": "log staircase",
+      "EUes": "escalera de troncos",
+      "EUfr": "escalier en rondins",
+      "EUit": "scala di tronchi",
+      "EUnl": "boomstammentrap",
+      "EUru": "лестница из поленьев",
+      "JPja": "まるたのかいだん",
+      "KRko": "통나무 계단",
+      "TWzh": "圓木樓梯",
+      "USen": "log staircase",
+      "USes": "escalera de troncos",
+      "USfr": "escalier en rondins"
+    }
+  },
+  {
+    "label": "SlopeItem_05868",
+    "locale": {
+      "CNzh": "蓝色木板斜坡",
+      "EUde": "Blau-Bretterrampe",
+      "EUen": "blue-plank ramp",
+      "EUes": "rampa de tablas azules",
+      "EUfr": "pente planches bleues",
+      "EUit": "rampa di assi blu",
+      "EUnl": "blauwe houten helling",
+      "EUru": "рампа из синих досок",
+      "JPja": "あおいいたのスロープ",
+      "KRko": "파란 널빤지 슬로프",
+      "TWzh": "藍色木板斜坡",
+      "USen": "blue-plank ramp",
+      "USes": "rampa de tablas azules",
+      "USfr": "pente planches bleues"
+    }
+  },
+  {
+    "label": "SlopeItem_05869",
+    "locale": {
+      "CNzh": "蓝色钢筋台阶",
+      "EUde": "Blau-Stahltreppe",
+      "EUen": "blue steel staircase",
+      "EUes": "escalera de acero azul",
+      "EUfr": "escalier en acier bleu",
+      "EUit": "scala di acciaio blu",
+      "EUnl": "blauwe stalen trap",
+      "EUru": "синяя стальная лестница",
+      "JPja": "あおいてっこつかいだん",
+      "KRko": "파란 철골 계단",
+      "TWzh": "藍色鋼筋樓梯",
+      "USen": "blue steel staircase",
+      "USes": "escalera de acero azul",
+      "USfr": "escalier en acier bleu"
+    }
+  },
+  {
+    "label": "SlopeItem_05870",
+    "locale": {
+      "CNzh": "砖台阶",
+      "EUde": "Backsteintreppe",
+      "EUen": "brick staircase",
+      "EUes": "escalera de ladrillos",
+      "EUfr": "escalier en brique",
+      "EUit": "scala di mattoni",
+      "EUnl": "bakstenen trap",
+      "EUru": "кирпичная лестница",
+      "JPja": "レンガのかいだん",
+      "KRko": "벽돌 계단",
+      "TWzh": "磚塊樓梯",
+      "USen": "brick staircase",
+      "USes": "escalera de ladrillos",
+      "USfr": "escalier en brique"
+    }
+  }
+]
