@@ -149,6 +149,7 @@ class AllItemsPage extends Component {
             true,
             true,
             true,
+            true,
           ]}
           popUpPhraseProperty={[
             "",
@@ -334,6 +335,7 @@ class AllItemsPage extends Component {
             "",
             "",
             "",
+            "",
           ]}
           imageProperty={[
             "Image",
@@ -376,9 +378,11 @@ class AllItemsPage extends Component {
             "image",
             "image",
             "image",
+            "image",
             "image"
           ]}
           textProperty={[
+            ["NameLanguage"],
             ["NameLanguage"],
             ["NameLanguage"],
             ["NameLanguage"],
@@ -459,11 +463,13 @@ class AllItemsPage extends Component {
             ["amiiboCheckListSeries2","Name"],
             ["amiiboCheckListSeries3","Name"],
             ["amiiboCheckListSeries4","Name"],
+            ["amiiboCheckListSeries5","Name"],
             ["amiiboCheckListPromos","Name"],
             ["amiiboCheckListSeriesWelcomeamiiboseries","Name"],
             ["amiiboCheckListSeriesSanrioseries","Name"],
           ]}
           searchKey={[
+            ["NameLanguage"],
             ["NameLanguage"],
             ["NameLanguage"],
             ["NameLanguage"],

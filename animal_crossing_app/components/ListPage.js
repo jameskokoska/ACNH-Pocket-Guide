@@ -181,8 +181,8 @@ function ListPage(props){
     var searchActual = searchFilters;
     if(props.filterCollectedOnly){
       searchActual = ["Collected"];
-    } else if (props.newItems){
-      searchActual = ["New version"];
+    // } else if (props.newItems){
+    //   searchActual = ["New version"];
     // } else if (props.wishlistItems){
     //   searchActual = ["Wishlist",...searchFilters]; //todo add wishlist filtering eventually
     } else if (props.villagerGifts) {
@@ -237,13 +237,14 @@ function ListPage(props){
           var showUncraftableVar = true;
           var showPartiallyFoundOnly = true;
           for(var z = 0; z < searchActual.length; z++){
-            if(searchActual.includes("New version") && props.newItems && item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===gameVersion){
-              filterFound = true;
-              break;
-            } else if (searchActual.includes("New version") && props.newItems){
-              filterFound = false;
-              break;
-            } else if(searchActual.includes("Wishlist") && props.wishlistItems && global.collectionList.includes("wishlist"+item["checkListKey"])){
+            // if(searchActual.includes("New version") && props.newItems && item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===gameVersion){
+            //   filterFound = true;
+            //   break;
+            // } else if (searchActual.includes("New version") && props.newItems){
+            //   filterFound = false;
+            //   break;
+            // } 
+            if(searchActual.includes("Wishlist") && props.wishlistItems && global.collectionList.includes("wishlist"+item["checkListKey"])){
               filterFound = true;
               break;
             } else if (searchActual.includes("Wishlist") && props.wishlistItems){
@@ -479,7 +480,7 @@ function ListPage(props){
               // }
               // if(item.[props.textProperty[j]]===previousVariation){
               //   previousVariation = item.[props.textProperty[j]];
-              if(item["Name"]===previousVariation && !item["checkListKey"].includes("recipesCheckList")){
+              if(item["Name"]===previousVariation && !item["checkListKey"].includes("recipesCheckList") && !item["checkListKey"].includes("amiiboCheckList")){
                 previousVariation = item["Name"];
               } else {
                 //the final filter to check
@@ -502,6 +503,15 @@ function ListPage(props){
                     item.dataSet = j;
                     item.index = i;
                     dataUpdated = [...dataUpdated, item];
+                    // previousVariation = item.[props.textProperty[j]];
+                    // previousVariation = item["Name"];
+                  } 
+                } else if(props.newItems){
+                  if(item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===gameVersion){
+                    item.dataSet = j;
+                    item.index = i;
+                    dataUpdated = [...dataUpdated, item];
+                    previousVariation = item["Name"];
                     // previousVariation = item.[props.textProperty[j]];
                     // previousVariation = item["Name"];
                   } 

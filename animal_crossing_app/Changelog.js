@@ -6,6 +6,16 @@ export const changelog = `
 -I am updating the app with new content from the update....
 -Please be patient as details come in :)
 -
+-Updated translationsfor items!
+-Added All Amiibo Series 5 Cards
+-Fixed Amiibo Search (multiple with the same name)
+-Updated filters
+-Improved loading times
+-Improved Visitors History date display
+-Added Amiibo to Everything page
+-Added filters to New Items page
+-Added Source cooking icon
+-
 -Fixed art popup
 -Added Food tab (in items page) and Food items (in addition to recipes)
 -Fixed catalog scanner

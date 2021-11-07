@@ -17,6 +17,6 @@ key.jks
 
 firebaseConfig.js
 
-assets/data/Translations/TranslationsStrings/Strings/*
+assets/data/Translations/TranslationsStrings/Strings/**/*
 assets/data/translationsNewOutput.json
 translationsNewOutput.json

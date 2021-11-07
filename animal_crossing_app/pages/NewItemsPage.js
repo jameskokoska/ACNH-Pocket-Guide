@@ -14,7 +14,7 @@ export default class NewItemsPage extends Component {
     return(
       <AllItemsPage 
         setPage={this.props.setPage}
-        disableFilters={true}
+        // disableFilters={true}
         title="New Items"
         subHeader="Items that have been added from the most recent update"
         newItems={true}

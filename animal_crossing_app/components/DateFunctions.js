@@ -30,6 +30,12 @@ export function getDateStringWeekMonthDay(dateObject){
   return attemptToTranslate(getWeekDay(dateObject.getDay())) + ", " + (doWeSwapDate()===false ? month + " " + day : day + " " + month);
 }
 
+export function getDateStringWeekMonthDayShort(dateObject){
+  let month = attemptToTranslate(getMonthShort(parseInt(dateObject.getMonth())))
+  let day = dateObject.getDate().toString()
+  return attemptToTranslate(getWeekDayShort(dateObject.getDay())) + ", " + (doWeSwapDate()===false ? month + " " + day : day + " " + month);
+}
+
 function getCurrentDateObject(){
   if(getSettingsString("settingsUseCustomDate")==="true" && global.customTimeOffset!==undefined){
     var newDate = new Date(new Date().getTime() + parseInt(global.customTimeOffset));

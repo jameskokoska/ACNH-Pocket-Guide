@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Vibration,TouchableOpacity,StyleSheet,View, Image} from 'react-native';
 import TextFont from './TextFont';
-import {getCurrentDateObject, toShortWeekDay} from './DateFunctions';
+import {addDays, getCurrentDateObject, getDateStringWeekMonthDay, getDateStringWeekMonthDayShort, toShortWeekDay} from './DateFunctions';
 import {getStorage,} from "../LoadJsonData"
 import colors from '../Colors'
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -146,16 +146,17 @@ export default class VisitorList extends Component {
               <View key={date}>
                 <SubHeader margin={false}>{getDateStringMonthDay(date,"Week of")}</SubHeader>
                 <View style={{marginBottom:10, flex: 1, flexDirection: 'row', flexWrap:"wrap"}}>
-                  {this.characterList.map( (character, index)=>
-                    <CharacterItem
+                  {this.characterList.map( (character, index)=>{
+                    return (<CharacterItem
                       key={character.name+index.toString()}
                       character={character}
                       setVisited={this.setVisited}
                       onTap={()=>{}}
                       day={this.state.data[date]!==undefined?this.state.data[date][character.name]:""}
                       onlyShowVisited={true}
-                    />
-                  )}
+                      fullDate={getFullDate(date, this.state.data[date][character.name])}
+                    />)
+                    })}
                 </View>
               </View>
             )
@@ -219,7 +220,10 @@ class CharacterItem extends Component {
             {imageComponent}
           </View>
         </TouchableOpacity>
-        {dayDisplay===""?<View/>:<TextFont suffix="." numberOfLines={2} bold={false} style={{width: 60, marginTop: 3, color: colors.textBlack[global.darkMode], fontSize: 12, textAlign:"center"}}>{toShortWeekDay(dayDisplay)}</TextFont>}
+        {this.props.fullDate===undefined?
+          (dayDisplay===""?<View/>:<TextFont suffix="." numberOfLines={2} bold={false} style={{width: 60, marginTop: 3, color: colors.textBlack[global.darkMode], fontSize: 12, textAlign:"center"}}>{toShortWeekDay(dayDisplay)}</TextFont>)
+          :
+          <TextFont suffix="." numberOfLines={2} bold={false} style={{width: 60, marginTop: 3, color: colors.textBlack[global.darkMode], fontSize: 12, textAlign:"center"}}>{this.props.fullDate}</TextFont>}
       </View>
     )
   }
@@ -244,3 +248,31 @@ const styles = StyleSheet.create({
     elevation: 0,
   },
 })
+
+//week of in format 2021-11-01
+function getFullDate(weekOf, dayOf){
+  if(dayOf===undefined){
+    return ""
+  } else {
+    let date = new Date()
+    date.setFullYear(parseInt(weekOf.split("-")[0]))
+    date.setMonth(parseInt(weekOf.split("-")[1])-1)
+    date.setDate(parseInt(weekOf.split("-")[2]))
+    let weekDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    let weekDayIndex = 0;
+    for(let weekDay = 0; weekDay < weekDays.length; weekDay++){
+      if(weekDays[weekDay]===dayOf){
+        weekDayIndex = weekDay
+        break
+      }
+    }
+    for(let i = 0; i < 7; i++){
+      if(date.getDay()===weekDayIndex){
+        return getDateStringWeekMonthDayShort(date)
+      } else {
+        date = addDays(date, 1)
+      }
+    }
+  }
+  return ""
+}

@@ -382,6 +382,8 @@ export function getPhotoCorner(name){
     return <Image source={require("../assets/icons/nook.png")} style={{height: 55, width: 55, resizeMode:'contain'}}/>;
   else if(name.includes("crafting"))
     return <Image source={require("../assets/icons/crafting.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
+  else if(name.includes("cooking"))
+    return <Image source={require("../assets/icons/cooking.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
   else if(name.includes("gulliver"))
     return <Image source={require("../assets/icons/oceanIcon.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>
   else if(name.includes("blathers"))
