@@ -56,22 +56,39 @@ export function inVillagerPhoto(checkListKeyString, shouldCheck){
 
 export async function getStorageData(data, checkListKey, defaultValue, debug){
   var dataLoadingTotal = [];
+  let inputData;
+  if(data===undefined){
+    inputData = [];
+  } else {
+    inputData = data
+  }
   //Loop through all datasets
-  for(let dataSet = 0; dataSet <data.length; dataSet++){
-    let dataLoading = data[dataSet][0]; //data[dataSet][1] is the Data category String
+  for(let dataSet = 0; dataSet <inputData.length; dataSet++){
+    let dataLoading = inputData[dataSet][0]; //data[dataSet][1] is the Data category String
     let totalIndex = -1;
+    let dontPush = false;
     //Loop through that specific dataset
     for(var i = 0; i < dataLoading.length; i++){
       //Remove no name K.K. songs
-      if(dataLoading[i].hasOwnProperty("Name")&&dataLoading[i]["Name"].includes("Hazure")){
-        dataLoading.splice(i,1);
-        continue;
-      }
+      // if(dataLoading[i].hasOwnProperty("Name")&&dataLoading[i]["Name"].includes("Hazure")){
+      //   dataLoading.splice(i,1);
+      //   continue;
+      // }
       totalIndex++;
       let checkListKeyString = checkListKey[dataSet][0];
       //Loop through specific checklistKey property for that dataset
       for(let x = 1; x < checkListKey[dataSet].length; x++){
-        checkListKeyString += dataLoading[i][checkListKey[dataSet][x]];
+        if(dataLoading[i][checkListKey[dataSet][x]]!==undefined){
+          checkListKeyString += dataLoading[i][checkListKey[dataSet][x]];
+        }else{
+          if(i===0){
+            console.log(checkListKey[dataSet][x])
+            console.log(inputData[dataSet][1])
+          }
+        }
+      }
+      if(checkListKeyString===checkListKey[dataSet][0]){
+        checkListKeyString=checkListKeyString+"things be missing"
       }
       //Get value from storage
       // var value=defaultValue;
@@ -84,7 +101,7 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
       // }
       // dataLoading[i].collected=value;
       // dataLoading[i].wishlist=wishlist;
-      dataLoading[i].checkListKey=checkListKeyString;
+      dataLoading[i]["checkListKey"]=checkListKeyString;
 
       if(checkListKey[dataSet][0] === "fishCheckList" || checkListKey[dataSet][0] === "seaCheckList" || checkListKey[dataSet][0] === "bugCheckList"){
         let hemispherePre = ["NH ", "SH "];
@@ -108,7 +125,7 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
       } else {
         dataLoading[i]["NameLanguage"]=dataLoading[i]["Name"];
       }
-      dataLoading[i]["Data Category"]=data[dataSet][1];
+      dataLoading[i]["Data Category"]=inputData[dataSet][1];
     }
     dataLoadingTotal.push(dataLoading);
   }
@@ -170,6 +187,8 @@ export function determineDataGlobal(datakeyName){
     return global.dataLoadedCards;
   else if(datakeyName==="dataLoadedMaterials")
     return global.dataLoadedMaterials;
+  else if(datakeyName==="dataLoadedFood")
+    return global.dataLoadedFood;
   else if(datakeyName==="dataLoadedGyroids")
     return global.dataLoadedGyroids;
 }
@@ -209,9 +228,23 @@ export async function deleteSavedPhotos(){
   const files = await FileSystem.readDirectoryAsync(FileSystem.documentDirectory);
   const sizeMB = ((await FileSystem.getInfoAsync(FileSystem.documentDirectory)).size)/1000000;
   for(var i=0; i<files.length; i++){
-    await FileSystem.deleteAsync(FileSystem.documentDirectory+files[i]);
+    if(!files[i].includes(".json"))
+      await FileSystem.deleteAsync(FileSystem.documentDirectory+files[i]);
   }
   return [files.length, sizeMB];
+}
+
+export async function deleteGeneratedData(){
+  const files = await FileSystem.readDirectoryAsync(FileSystem.documentDirectory);
+  let totalFiles = 0
+  const sizeMB = ((await FileSystem.getInfoAsync(FileSystem.documentDirectory)).size)/1000000;
+  for(var i=0; i<files.length; i++){
+    if(files[i].includes(".json")){
+      await FileSystem.deleteAsync(FileSystem.documentDirectory+files[i]);
+      totalFiles++
+    }
+  }
+  return [totalFiles, sizeMB];
 }
 
 export function checkOff(checkListKey, collected, type="", indexSpecial="", vibrate=getSettingsString("settingsEnableVibrations")==="true"){
@@ -259,7 +292,7 @@ export function capitalize(name) {
     var name = name.replace(/(^\w{1})|(\s{1}\w{1})/g, match => match.toUpperCase());
     return name.charAt(0).toUpperCase() + name.slice(1);
   } else {
-    return "null";
+    return "";
   }
 }
 
@@ -267,7 +300,7 @@ export function capitalizeFirst(name) {
   if(name!==undefined){
     return name.charAt(0).toUpperCase() + name.slice(1);
   } else {
-    return "null";
+    return "";
   }
 }
 
@@ -326,11 +359,11 @@ export async function loadGlobalData(){
   global.dataLoadedArt = await getStorageData([[require("./assets/data/DataCreated/Art.json"),"Art"]],[["artCheckList","Name","Genuine"]],"false");
   global.dataLoadedVillagers = await getStorageData([[require("./assets/data/DataCreated/Villagers.json"),"Villagers"]],[["villagerCheckList","Name"]],"false");
   global.dataLoadedFurniture = await getStorageData([
-    [require("./assets/data/DataCreated/Housewares.json"), "Housewares"],
-    [require("./assets/data/DataCreated/Miscellaneous.json"), "Miscellaneous"],
+    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json")), "Housewares"],
+    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Miscellaneous.json")), "Miscellaneous"],
     [require("./assets/data/DataCreated/Wall-mounted.json"), "Wall-mounted"],
     [require("./assets/data/DataCreated/Ceiling Decor.json"), "Ceiling Decor"],
-    [require("./assets/data/DataCreated/Photos.json"), "Photos"],
+    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Photos.json")), "Photos"],
     [require("./assets/data/DataCreated/Posters.json"), "Posters"],
   ],
   [
@@ -339,14 +372,13 @@ export async function loadGlobalData(){
     ["furnitureCheckList","Name","Variation","Pattern"],
     ["furnitureCheckList","Name","Variation","Pattern"],
     ["furnitureCheckList","Name","Variation","Pattern"],
-    ["furnitureCheckList","Name","Variation","Pattern"],
     ["furnitureCheckList","Name"],
   ],"false");
   global.dataLoadedClothing = await getStorageData([
-    [require("./assets/data/DataCreated/Headwear.json"), "Headwear"],
+    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Headwear.json")), "Headwear"],
     [require("./assets/data/DataCreated/Accessories.json"), "Accessories"],
-    [require("./assets/data/DataCreated/Tops.json"), "Tops"],
-    [require("./assets/data/DataCreated/Dress-Up.json"), "Dress-Up"],
+    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Tops.json")), "Tops"],
+    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Dress-Up.json")), "Dress-Up"],
     [require("./assets/data/DataCreated/Clothing Other.json"),"Clothing Other"],
     [require("./assets/data/DataCreated/Bottoms.json"),"Bottoms"],
     [require("./assets/data/DataCreated/Socks.json"),"Socks"],
@@ -381,19 +413,21 @@ export async function loadGlobalData(){
   global.dataLoadedRecipes = await getStorageData([[require("./assets/data/DataCreated/Recipes.json"),"Recipes"],],[["recipesCheckList","Name"]],"false");
   global.dataLoadedCards = await getStorageData([[require("./assets/data/DataCreated/Message Cards.json"), "Message Cards"],],[["cardsCheckList","Name"]],"false");
   global.dataLoadedMaterials = await getStorageData([[require("./assets/data/DataCreated/Other.json"),"Other"]],[["materialsCheckList","Name"]],"false");
+  global.dataLoadedFood = await getStorageData([[require("./assets/data/DataCreated/Food.json"),"Food"]],[["furnitureCheckList","Name","Variation","Pattern"]],"false");
   global.dataLoadedGyroids = await getStorageData([[require("./assets/data/DataCreated/Gyroids.json"),"Gyroids"]],[["gyroidCheckList","Name","Variation","Pattern"]],"false");
   global.dataLoadedAll = await getStorageData(
   [
-    [require("./assets/data/DataCreated/Housewares.json"), "Housewares"],
-    [require("./assets/data/DataCreated/Miscellaneous.json"), "Miscellaneous"],
+    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json")), "Housewares"],
+    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Miscellaneous.json")), "Miscellaneous"],
     [require("./assets/data/DataCreated/Wall-mounted.json"), "Wall-mounted"],
     [require("./assets/data/DataCreated/Ceiling Decor.json"), "Ceiling Decor"],
-    [require("./assets/data/DataCreated/Photos.json"), "Photos"],
+    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Photos.json")), "Photos"],
     [require("./assets/data/DataCreated/Posters.json"), "Posters"],
-    [require("./assets/data/DataCreated/Headwear.json"), "Headwear"],
+    [require("./assets/data/DataCreated/Food.json"), "Food"],
+    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Headwear.json")), "Headwear"],
     [require("./assets/data/DataCreated/Accessories.json"), "Accessories"],
-    [require("./assets/data/DataCreated/Tops.json"), "Tops"],
-    [require("./assets/data/DataCreated/Dress-Up.json"), "Dress-Up"],
+    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Tops.json")), "Tops"],
+    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Dress-Up.json")), "Dress-Up"],
     [require("./assets/data/DataCreated/Clothing Other.json"),"Clothing Other"],
     [require("./assets/data/DataCreated/Bottoms.json"),"Bottoms"],
     [require("./assets/data/DataCreated/Socks.json"),"Socks"],
@@ -432,6 +466,7 @@ export async function loadGlobalData(){
     ["furnitureCheckList","Name","Variation","Pattern"],
     ["furnitureCheckList","Name","Variation","Pattern"],
     ["furnitureCheckList","Name"],
+    ["furnitureCheckList","Name","Variation","Pattern"], //because some food was previously furniture
     ["clothingCheckList","Name","Variation"],
     ["clothingCheckList","Name","Variation"],
     ["clothingCheckList","Name","Variation"],
@@ -1196,7 +1231,7 @@ export function getInverseVillagerFilters(string=false){
 export function findItemIDName(id, name){
   for(var dataSet = 0; dataSet < global.dataLoadedAll.length; dataSet++){
     for(var i = 0; i < global.dataLoadedAll[dataSet].length; i++){
-      if(global.dataLoadedAll[dataSet][i].hasOwnProperty("Internal ID") && global.dataLoadedAll[dataSet][i]["Internal ID"]===id  && global.dataLoadedAll[dataSet][i]["Name"]===name){
+      if(global.dataLoadedAll[dataSet][i].hasOwnProperty("Internal ID") && global.dataLoadedAll[dataSet][i]["Internal ID"].toString()===id.toString() && global.dataLoadedAll[dataSet][i]["Name"]===name){
         return global.dataLoadedAll[dataSet][i];
       }
     }
@@ -1225,7 +1260,7 @@ export function compareItemID(itemIDs, currentItem){
   }
   for(var i=0; i<itemIDs.length; i++){
     for(var x=0; x<itemIDs[i]["list"].length; x++){
-      if((itemIDs[i]["list"][x]===currentItem["Name"]||itemIDs[i]["list"][x]===currentItem["Internal ID"]) && currentItem["checkListKey"].includes(itemIDs[i]["key"])){
+      if((itemIDs[i]["list"][x].toString()===currentItem["Name"].toString()||itemIDs[i]["list"][x].toString()===currentItem["Internal ID"].toString()) && currentItem["checkListKey"].includes(itemIDs[i]["key"])){
         return true;
       }
     }

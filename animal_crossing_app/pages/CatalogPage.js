@@ -22,6 +22,7 @@ class CatalogPage extends Component {
       method:"",
       totalSuccess:"",
       totalFail:"",
+      totalErrorItems: "",
     }
   }
 
@@ -45,11 +46,12 @@ class CatalogPage extends Component {
       var success = false;
       this.totalSuccess = 0;
       this.totalFail = 0;
+      let totalErrorItems = [];
       for(var z = 0; z < inputList.length; z++){
         success = false;
         for(var i = 0; i < global.dataLoadedAll.length; i++){
           for(var a = 0; a < global.dataLoadedAll[i].length; a++){
-            if(global.dataLoadedAll[i][a]["Name"].toLowerCase() === inputList[z].toLowerCase()){
+            if(global.dataLoadedAll[i][a]["Name"]!==undefined && global.dataLoadedAll[i][a]["Name"].toLowerCase() === inputList[z].toLowerCase()){
               success = true;
               this.totalSuccess++;
               if(inputType==="recipes" && global.dataLoadedAll[i][a]["checkListKey"].includes("recipesCheckList")){
@@ -71,16 +73,20 @@ class CatalogPage extends Component {
         }
         if(!success){
           console.log("Didn't find:" + inputList[z]);
+          if(inputList[z]!==undefined)
+            totalErrorItems.push(inputList[z])
           this.totalFail++;
         }
       }
       await loadGlobalData();
       global.collectionList = Array.from(new Set(collectionList));
       collectionListSave();
+      console.log(totalErrorItems)
       this.setState({
         method: this.method,
         totalFail: this.totalFail,
-        totalSuccess: this.totalSuccess
+        totalSuccess: this.totalSuccess,
+        totalErrorItems: totalErrorItems.join("\n")
       })
     } catch(err){
       this.setState({
@@ -138,7 +144,7 @@ class CatalogPage extends Component {
           button1={"OK"}
           button1Action={()=>{}}
           text={"Import Results"}
-          textLower={this.state.method + "\n"+attemptToTranslate("Imported:") + " " + this.state.totalSuccess + " " + attemptToTranslate("items") +"\n" + attemptToTranslate("Errors:") + " " + this.state.totalFail + " " + attemptToTranslate("items")}
+          textLower={this.state.method + "\n"+attemptToTranslate("Imported:") + " " + this.state.totalSuccess + " " + attemptToTranslate("items") +"\n" + attemptToTranslate("Errors:") + " " + this.state.totalFail + " " + attemptToTranslate("items") + "\n" + this.state.totalErrorItems}
         />
         <Popup 
           ref={(popupWait) => this.popupWait = popupWait}

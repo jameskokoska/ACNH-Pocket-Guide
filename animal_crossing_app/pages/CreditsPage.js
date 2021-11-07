@@ -7,7 +7,7 @@ import PopupRating from "../components/PopupRating"
 import ButtonComponent from "../components/ButtonComponent"
 import {MailLink, ExternalLink, SubHeader, Header, Paragraph} from "../components/Formattings"
 import {attemptToTranslate} from "../LoadJsonData"
-import {changelog} from "../Changelog"
+import {changelog, dataVersion} from "../Changelog"
 
 class CreditsPage extends Component {
   render(){
@@ -122,7 +122,8 @@ class CreditsPage extends Component {
 
           <View style={{height: 35}}/>
           <SubHeader>App Information</SubHeader>
-          <TextFont bold={true} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 15,}}>{"\nv" + global.version + " - " + global.versionCode + "\n\nChangelog:"}</TextFont>
+          <TextFont bold={true} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 15,}}>{"\nDatabase v" + dataVersion}</TextFont>
+          <TextFont bold={true} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 15,}}>{"App v" + global.version + " - " + global.versionCode + "\n\nChangelog:"}</TextFont>
           {
             changelogText.map((point, index) => (
               <TextFont key={point+index} bold={false} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 14,}}>{point}</TextFont>

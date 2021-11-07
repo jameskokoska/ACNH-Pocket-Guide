@@ -8,7 +8,7 @@ import Popup from '../components/Popup'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {ExportFile, LoadFile, ExportClipboard, LoadClipboard} from '../components/LoadFile';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import {attemptToTranslate, deleteSavedPhotos, resetFilters, getSettingsString} from '../LoadJsonData';
+import {attemptToTranslate, deleteSavedPhotos, resetFilters, getSettingsString, deleteGeneratedData} from '../LoadJsonData';
 import {SubHeader, Paragraph, HeaderNote, MailLink, Header} from "../components/Formattings"
 import DropDownPicker from 'react-native-dropdown-picker'
 import {PopupBottomCustom} from "../components/Popup"
@@ -27,6 +27,14 @@ class SettingsPage extends Component {
     this.setState({deletedInfo:deletedInfo});
     this.popupDeleteSavedPhotosWait.setPopupVisible(false);
     this.popupDeleteSavedPhotos.setPopupVisible(true);
+  }
+
+  deleteGeneratedData = async () =>{
+    this.popupDeleteSavedPhotosWait.setPopupVisible(true);
+    const deletedInfo = await deleteGeneratedData();
+    this.setState({deletedInfo:deletedInfo});
+    this.popupDeleteSavedPhotosWait.setPopupVisible(false);
+    this.popupDeleteGeneratedData.setPopupVisible(true);
   }
 
   setDateOffset = (timeOffset) => {
@@ -99,6 +107,8 @@ class SettingsPage extends Component {
           <ButtonComponent text="Delete Downloaded Images" onPress={async () => {this.deleteSavedPhotos()}} vibrate={70} color={colors.filtersResetButton[global.darkMode]}/>
           <Popup ref={(popupDeleteSavedPhotos) => this.popupDeleteSavedPhotos = popupDeleteSavedPhotos} text={"Deleted Downloaded Images"} textLower={attemptToTranslate("All downloaded photos have been removed. A restart may be required to load back images.") + "\n" + attemptToTranslate("Deleted:") + " " +this.state.deletedInfo[0] + "\n" + attemptToTranslate("Storage cleared:") + " " +parseInt(this.state.deletedInfo[1]) + " MB"} button1={"OK"} button1Action={()=>{console.log("")}}/>
           <Popup ref={(popupDeleteSavedPhotosWait) => this.popupDeleteSavedPhotosWait = popupDeleteSavedPhotosWait} text="Deleting..." textLower="Please wait"/>
+          <ButtonComponent text="Delete Generated Internal Data" onPress={async () => {this.deleteGeneratedData()}} vibrate={70} color={colors.filtersResetButton[global.darkMode]}/>
+          <Popup ref={(popupDeleteGeneratedData) => this.popupDeleteGeneratedData = popupDeleteGeneratedData} text={"Deleted Generated Data"} textLower={attemptToTranslate("All generated data has been removed. Restart to regenerate the data.") + "\n" + attemptToTranslate("Deleted:") + " " +this.state.deletedInfo[0] + "\n" + attemptToTranslate("Storage cleared:") + " " +parseInt(this.state.deletedInfo[1]) + " MB"} button1={"OK"} button1Action={()=>{console.log("")}}/>
           
           <View style={{height: 20}}/>
           <ButtonComponent text="Reset Data" onPress={() => {this.popupWarning.setPopupVisible(true)}} vibrate={100} color={colors.cancelButton[global.darkMode]}/>

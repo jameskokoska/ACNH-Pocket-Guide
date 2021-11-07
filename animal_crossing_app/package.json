@@ -37,14 +37,16 @@
     "react-native-onboarding-swiper": "^1.1.4",
     "react-native-pager-view": "5.0.12",
     "react-native-reanimated": "~2.1.0",
+    "react-native-safe-area-context": "3.2.0",
+    "react-native-screens": "~3.0.0",
     "react-native-sectioned-multi-select": "^0.8.1",
     "react-native-sortable-grid": "^2.0.0",
     "react-native-tab-view": "^3.0.1",
     "react-native-webview": "^11.2.3",
     "reanimated-bottom-sheet": "^1.0.0-alpha.22",
     "toggle-switch-react-native": "^2.3.0",
-    "react-native-screens": "~3.0.0",
-    "react-native-safe-area-context": "3.2.0"
+    "xlsx": "^0.17.3",
+    "expo-asset": "~8.3.1"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0"

@@ -1,13 +1,17 @@
 export const gameVersion = "2.0.0"
+export const dataVersion = "3"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
 -I am updating the app with new content from the update....
 -Please be patient as details come in :)
 -
--Some items are missing as I am releasing the data update
--Please be patient
+-Fixed art popup
+-Added Food tab (in items page) and Food items (in addition to recipes)
+-Fixed catalog scanner
 -
+-Loading times have increased due to a larger database
+-The database is now loaded into memory when updated
 -Added items from the new update
 -This will get updated with more data as it comes!
 -Translations will come soon

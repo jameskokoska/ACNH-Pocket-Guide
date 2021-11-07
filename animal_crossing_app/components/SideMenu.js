@@ -299,12 +299,12 @@ export const sideSections = [
   //   "color": "selectIsland",
   //   "disabled":false
   // },
-  {
-    "pageNum" : 32,
-    "picture" : require("../assets/icons/clipboard.png"),
-    "displayName" : "Ordinances",
-    "color": "selectOrdinances",
-  },
+  // {
+  //   "pageNum" : 32,
+  //   "picture" : require("../assets/icons/clipboard.png"),
+  //   "displayName" : "Ordinances",
+  //   "color": "selectOrdinances",
+  // },
   {
     "pageNum" : 15,
     "picture" : require("../assets/icons/acnhFAQIcon.png"),

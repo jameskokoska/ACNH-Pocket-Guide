@@ -17,6 +17,7 @@
     "NH End Date": "11/25",
     "SH Start Date": "3/1",
     "SH End Date": "5/25",
+    "Version": "1.0.0",
     "Internal ID": "433",
     "Unique Entry ID": "oWdfeTEzWt8puvKW3"
   },
@@ -38,6 +39,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "0",
     "Unique Entry ID": "FfCPKSQkxM64FZ2nd"
   },
@@ -59,6 +61,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "388",
     "Unique Entry ID": "TDuhkjRtw7KAQakP2"
   },
@@ -80,6 +83,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "391",
     "Unique Entry ID": "AdTRESNSb7JfssoCt"
   },
@@ -101,6 +105,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "363",
     "Unique Entry ID": "p5cZtRuvvHRk4nETq"
   },
@@ -122,6 +127,7 @@
     "NH End Date": "8/31",
     "SH Start Date": "12/1",
     "SH End Date": "2/28\r\n2/29",
+    "Version": "1.0.0",
     "Internal ID": "432",
     "Unique Entry ID": "jEjPnzF6G3hDkq8P4"
   },
@@ -143,6 +149,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "389",
     "Unique Entry ID": "rRnBoDeMhYutyWtqD"
   },
@@ -164,6 +171,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "405",
     "Unique Entry ID": "meW8u7nvBuTdJpCeG"
   },
@@ -185,6 +193,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "395",
     "Unique Entry ID": "bmD2rpkaq8gdBi8TZ"
   },
@@ -206,11 +215,12 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "382",
     "Unique Entry ID": "Pa6BykAvEjxAgrNmB"
   },
   {
-    "Name": "Card from",
+    "Name": "Dawning-year card",
     "Image": "https://acnhcdn.com/latest/MessageCard/MsgNewyear01.png",
     "Buy": "NFS",
     "Back Color": "None",
@@ -227,6 +237,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "403",
     "Unique Entry ID": "K7N64yJH3NpwKk6BY"
   },
@@ -248,6 +259,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "429",
     "Unique Entry ID": "q4KoqTjC22ghtvuu4"
   },
@@ -269,6 +281,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "427",
     "Unique Entry ID": "pyhPqjY5seC6N2EPP"
   },
@@ -290,6 +303,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "428",
     "Unique Entry ID": "8H9YnYnz44vYZBTzd"
   },
@@ -311,6 +325,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "387",
     "Unique Entry ID": "9SnHEWxApcQCBiefK"
   },
@@ -332,6 +347,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "435",
     "Unique Entry ID": "eD6D9pW3A6a8YM5Es"
   },
@@ -353,11 +369,12 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "411",
     "Unique Entry ID": "pK5n68w5djRAXGrBR"
   },
   {
-    "Name": "Card from Nintendo",
+    "Name": "Fireworks card",
     "Image": "https://acnhcdn.com/latest/MessageCard/MsgNewyear00.png",
     "Buy": "NFS",
     "Back Color": "#090650",
@@ -374,6 +391,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "402",
     "Unique Entry ID": "CRrysKXYPecdavppY"
   },
@@ -395,6 +413,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "430",
     "Unique Entry ID": "aFfbn4p7DAQDEfLnB"
   },
@@ -416,6 +435,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "431",
     "Unique Entry ID": "jmD477wFpZYTyg7JW"
   },
@@ -437,6 +457,7 @@
     "NH End Date": "11/25",
     "SH Start Date": "3/1",
     "SH End Date": "5/25",
+    "Version": "1.0.0",
     "Internal ID": "375",
     "Unique Entry ID": "4gutEbpyCGQJywuqR"
   },
@@ -458,6 +479,7 @@
     "NH End Date": "5/31",
     "SH Start Date": "8/25",
     "SH End Date": "11/30",
+    "Version": "1.0.0",
     "Internal ID": "379",
     "Unique Entry ID": "CePQFE2nenXK2nS8W"
   },
@@ -479,6 +501,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "364",
     "Unique Entry ID": "ek9h3bN59WHc4c9ee"
   },
@@ -500,6 +523,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "412",
     "Unique Entry ID": "EwqiNdRrQJFLjEPTD"
   },
@@ -521,6 +545,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "368",
     "Unique Entry ID": "shuuoFNypR6Fgntq5"
   },
@@ -542,6 +567,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "393",
     "Unique Entry ID": "tGtbK6hWXFuDDtEQY"
   },
@@ -563,6 +589,7 @@
     "NH End Date": "5/31",
     "SH Start Date": "8/25",
     "SH End Date": "11/30",
+    "Version": "1.0.0",
     "Internal ID": "406",
     "Unique Entry ID": "qBukA5CtCMxwiuQs2"
   },
@@ -584,6 +611,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "360",
     "Unique Entry ID": "tWZFw2DJ85cJhfyJE"
   },
@@ -605,6 +633,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "396",
     "Unique Entry ID": "yQ4NKsgLyQyaxonn6"
   },
@@ -626,6 +655,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "378",
     "Unique Entry ID": "LDXqDQmHJmGTvgRcf"
   },
@@ -647,6 +677,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "394",
     "Unique Entry ID": "y6pgsRhjp7BEJufqM"
   },
@@ -668,6 +699,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "376",
     "Unique Entry ID": "hFxBjcAtSZGc4b6Ef"
   },
@@ -689,6 +721,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "392",
     "Unique Entry ID": "SKZtd2YWveniGktxw"
   },
@@ -710,6 +743,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "410",
     "Unique Entry ID": "B6M3bgwNGuhfojaAv"
   },
@@ -731,6 +765,7 @@
     "NH End Date": "8/31",
     "SH Start Date": "12/1",
     "SH End Date": "2/28\r\n2/29",
+    "Version": "1.0.0",
     "Internal ID": "366",
     "Unique Entry ID": "soTMti7GC6DBuNTTQ"
   },
@@ -752,6 +787,7 @@
     "NH End Date": "5/31",
     "SH Start Date": "8/25",
     "SH End Date": "11/30",
+    "Version": "1.0.0",
     "Internal ID": "373",
     "Unique Entry ID": "XuiGAQaASmhbhaYQR"
   },
@@ -773,6 +809,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "372",
     "Unique Entry ID": "d8JvDkZmHn7fa25nd"
   },
@@ -794,6 +831,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "384",
     "Unique Entry ID": "8u6GWaqqKowKDaQMc"
   },
@@ -815,6 +853,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "434",
     "Unique Entry ID": "Lg9oDxdeWQoiqSDfa"
   },
@@ -836,6 +875,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "408",
     "Unique Entry ID": "LYSrW8P9Qtbgjp6Fo"
   },
@@ -857,6 +897,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "361",
     "Unique Entry ID": "KNgFTS9DnY2yDj3Po"
   },
@@ -878,6 +919,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "365",
     "Unique Entry ID": "jADvDRLmF5dHJkBZP"
   },
@@ -899,6 +941,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "399",
     "Unique Entry ID": "whjFSsXWHv75vvXwH"
   },
@@ -920,6 +963,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "397",
     "Unique Entry ID": "Lzhq6cyapSuGRsuvu"
   },
@@ -941,6 +985,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "357",
     "Unique Entry ID": "eMmoyy8BfudhMeZvW"
   },
@@ -962,6 +1007,7 @@
     "NH End Date": "9/15",
     "SH Start Date": "11/1",
     "SH End Date": "3/15",
+    "Version": "1.0.0",
     "Internal ID": "409",
     "Unique Entry ID": "DpdwLMqmxy4cCKNfZ"
   },
@@ -983,6 +1029,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "377",
     "Unique Entry ID": "yBe5TtK8cowF38QFo"
   },
@@ -1004,6 +1051,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "371",
     "Unique Entry ID": "qKHdMdrTEFdQvQTNy"
   },
@@ -1025,6 +1073,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "381",
     "Unique Entry ID": "ztwWJo7Rv4RLuHcjK"
   },
@@ -1046,6 +1095,7 @@
     "NH End Date": "11/25",
     "SH Start Date": "3/1",
     "SH End Date": "5/25",
+    "Version": "1.0.0",
     "Internal ID": "386",
     "Unique Entry ID": "eK9QMfBwFzoc9DvBc"
   },
@@ -1067,6 +1117,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "398",
     "Unique Entry ID": "nznxAbGCBPW97Nibg"
   },
@@ -1088,6 +1139,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "385",
     "Unique Entry ID": "iyFNtujivporYgfva"
   },
@@ -1109,6 +1161,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "390",
     "Unique Entry ID": "pfp4eHBrZzYJXao2v"
   },
@@ -1130,6 +1183,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "380",
     "Unique Entry ID": "HH9MTDZSbQjSLMdvM"
   },
@@ -1151,6 +1205,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "407",
     "Unique Entry ID": "tfxwrM9jHukBqzcMe"
   },
@@ -1172,6 +1227,7 @@
     "NH End Date": "2/24",
     "SH Start Date": "5/26",
     "SH End Date": "8/24",
+    "Version": "1.0.0",
     "Internal ID": "367",
     "Unique Entry ID": "emawdP4yt2aKdjG5v"
   },
@@ -1193,6 +1249,7 @@
     "NH End Date": "2/24",
     "SH Start Date": "5/26",
     "SH End Date": "8/24",
+    "Version": "1.0.0",
     "Internal ID": "374",
     "Unique Entry ID": "CKTiJB94AipapsMyQ"
   },
@@ -1214,6 +1271,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "404",
     "Unique Entry ID": "uMreu3ZFwHpPAPCiH"
   },
@@ -1235,6 +1293,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "356",
     "Unique Entry ID": "2MfR4So6XB8X5btra"
   },
@@ -1256,6 +1315,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "362",
     "Unique Entry ID": "XNi8ib3tkDKRD3h9W"
   },
@@ -1277,6 +1337,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "358",
     "Unique Entry ID": "Xj9q2wzes2bAzEGSz"
   },
@@ -1298,6 +1359,7 @@
     "NH End Date": "2/24",
     "SH Start Date": "5/26",
     "SH End Date": "8/24",
+    "Version": "1.0.0",
     "Internal ID": "414",
     "Unique Entry ID": "sYi9GYXt3svjcEFBA"
   },
@@ -1319,6 +1381,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "416",
     "Unique Entry ID": "vHZqSxqW4WRAyb3Qw"
   },
@@ -1340,6 +1403,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "383",
     "Unique Entry ID": "qjuD4YWMv86AkwRp6"
   },
@@ -1361,6 +1425,7 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "413",
     "Unique Entry ID": "iBqa4MMzucwejjWmm"
   },
@@ -1382,6 +1447,7 @@
     "NH End Date": "2/24",
     "SH Start Date": "5/26",
     "SH End Date": "8/24",
+    "Version": "1.0.0",
     "Internal ID": "370",
     "Unique Entry ID": "ptYcfxZjk4CnCpPRp"
   },
@@ -1403,7 +1469,113 @@
     "NH End Date": "NA",
     "SH Start Date": "NA",
     "SH End Date": "NA",
+    "Version": "1.0.0",
     "Internal ID": "359",
     "Unique Entry ID": "3sCFGDHSNaYD5rhhZ"
+  },
+  {
+    "Name": "Flight-ticket card",
+    "Image": "https://acnhcdn.com/latest/MessageCard/MsgWherearen05.png",
+    "Back Color": "None",
+    "Body Color": "#27211E",
+    "Head Color": "#FFFADF",
+    "Foot Color": "#27211E",
+    "Pen Color 1": "#05050F",
+    "Pen Color 2": "#0413F4",
+    "Pen Color 3": "#ED0402",
+    "Pen Color 4": "#FFBB00",
+    "Version": "2.0.0",
+    "Internal ID": "439",
+    "Unique Entry ID": "XGnRzexuWbqFGnR7P"
+  },
+  {
+    "Name": "Glowing-moss card",
+    "Image": "https://acnhcdn.com/latest/MessageCard/MsgWherearen03.png",
+    "Back Color": "None",
+    "Body Color": "#E5FFFF",
+    "Head Color": "#90FFFF",
+    "Foot Color": "#D3FB76",
+    "Pen Color 1": "#05050F",
+    "Pen Color 2": "#0413F4",
+    "Pen Color 3": "#ED0402",
+    "Pen Color 4": "#FFBB00",
+    "Version": "2.0.0",
+    "Internal ID": "438",
+    "Unique Entry ID": "EnzJovE36QtxCGf2B"
+  },
+  {
+    "Name": "MsgWherearenOffice00",
+    "Image": "https://acnhcdn.com/latest/MessageCard/MsgWherearenOffice00.png",
+    "Back Color": "None",
+    "Body Color": "#2A1615",
+    "Head Color": "#2A1615",
+    "Foot Color": "#2A1615",
+    "Pen Color 1": "#05050F",
+    "Pen Color 2": "#0413F4",
+    "Pen Color 3": "#ED0402",
+    "Pen Color 4": "#FFBB00",
+    "Version": "2.0.0",
+    "Internal ID": "437",
+    "Unique Entry ID": "Tg7b6bh48DD79G9fr"
+  },
+  {
+    "Name": "Paradise Planning card",
+    "Image": "https://acnhcdn.com/latest/MessageCard/MsgWherearenShopping00.png",
+    "Back Color": "None",
+    "Body Color": "#FFF1C3",
+    "Head Color": "#FFF1C3",
+    "Foot Color": "#FFF1C3",
+    "Pen Color 1": "#05050F",
+    "Pen Color 2": "#0413F4",
+    "Pen Color 3": "#ED0402",
+    "Pen Color 4": "#FFBB00",
+    "Version": "2.0.0",
+    "Internal ID": "445",
+    "Unique Entry ID": "tGCQBx4teagP9gB9z"
+  },
+  {
+    "Name": "Plumeria card",
+    "Image": "https://acnhcdn.com/latest/MessageCard/MsgWherearen00.png",
+    "Back Color": "None",
+    "Body Color": "#FFFFFF",
+    "Head Color": "#FFF548",
+    "Foot Color": "#FFF548",
+    "Pen Color 1": "#05050F",
+    "Pen Color 2": "#0413F4",
+    "Pen Color 3": "#ED0402",
+    "Pen Color 4": "#FFBB00",
+    "Version": "2.0.0",
+    "Internal ID": "440",
+    "Unique Entry ID": "wPC5MssczpxvgZnub"
+  },
+  {
+    "Name": "Sunset card",
+    "Image": "https://acnhcdn.com/latest/MessageCard/MsgWherearen02.png",
+    "Back Color": "None",
+    "Body Color": "#FFFFFF",
+    "Head Color": "#FFFFFF",
+    "Foot Color": "#FFFFFF",
+    "Pen Color 1": "#05050F",
+    "Pen Color 2": "#0413F4",
+    "Pen Color 3": "#ED0402",
+    "Pen Color 4": "#FFBB00",
+    "Version": "2.0.0",
+    "Internal ID": "443",
+    "Unique Entry ID": "ZtyRsYeBeK52eWFYP"
+  },
+  {
+    "Name": "Tropical card",
+    "Image": "https://acnhcdn.com/latest/MessageCard/MsgWherearen04.png",
+    "Back Color": "#15648D",
+    "Body Color": "#F8DDA4",
+    "Head Color": "#F8DDA4",
+    "Foot Color": "#F8DDA4",
+    "Pen Color 1": "#05050F",
+    "Pen Color 2": "#0413F4",
+    "Pen Color 3": "#ED0402",
+    "Pen Color 4": "#FFBB00",
+    "Version": "2.0.0",
+    "Internal ID": "444",
+    "Unique Entry ID": "G95bKJDn3LjJ899gZ"
   }
 ]

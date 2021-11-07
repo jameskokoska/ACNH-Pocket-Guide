@@ -19,7 +19,9 @@ import Animated from 'react-native-reanimated';
 import FadeInOut from "./FadeInOut"
 import { MailLink } from "./Formattings";
 import * as RootNavigation from '../RootNavigation.js';
-
+import { Appearance } from 'react-native-appearance';
+import LottieView from 'lottie-react-native';
+import { attemptToTranslate } from "../LoadJsonData";
 
 // <Popup 
 //  button1={"OK"} 
@@ -112,6 +114,134 @@ class Popup extends Component {
   }
 }
 export default Popup;
+
+
+export class PopupRaw extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      popupVisible: false,
+      text: ""
+    };
+  }
+  
+  setPopupVisible = (visible) => {
+    this.setState({popupVisible:visible});
+  }
+
+  setPopupText = (text) => {
+    this.setState({text:text});
+  }
+
+  render(){
+    return (
+        <Modal
+          animationType="fade"
+          transparent={true}
+          visible={this.state.popupVisible}
+          statusBarTranslucent
+          onRequestClose={()=>{this.props.button1===undefined && this.props.button2===undefined ? 0 : this.setPopupVisible(false);}}
+        >
+        <View style={[{position:"absolute",bottom:0, width: Dimensions.get('window').width}]}>
+          <View style={{alignItems:"center", justifyContent:"center"}}>
+            <View style={[styles.modalView,{backgroundColor: colors.white[Appearance.getColorScheme()==="light" ? 0 : 1]}]}>
+              <TextFont bold={true} style={{fontSize: 25, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.props.text}</TextFont>
+              <ScrollView style={{maxHeight:Dimensions.get('window').height*0.75}}>
+                <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.props.textLower}</TextFont>
+                <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.props.textLower2}</TextFont>
+                <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.state.text}</TextFont>
+                <View style={{justifyContent:"center", alignItems:"center"}}>
+                  <LottieView autoPlay loop
+                    style={{width: 100, zIndex:1, transform: [{ scale: 1.1 },{ rotate: '0deg'},],}}
+                    source={require('../assets/loading.json')}
+                  />
+                </View>
+              </ScrollView>          
+            </View>
+          </View>
+        </View>
+      </Modal>
+    )
+  }
+}
+
+export class PopupRawLoading extends Component {
+  constructor(props) {
+    super(props);
+    this.allLoadingTexts = [
+      "Loading", 
+      "Building Museum", 
+      "Ordering Coffee", 
+      "Talking to Villagers",
+      "Talking to Brewster",
+      "Flying with Orville",
+      "Landing on the sea",
+      "Picking up seashells",
+      "Shaking trees",
+      "Popping balloons",
+      "Crafting DIYs",
+      "Selling turnips",
+      "Time travelling",
+      "Listening to K.K.",
+      "Upgrading house",
+      "Selling items",
+      "Making bells",
+      "Watering flowers",
+      "Smashing rocks",
+      "Waking up Gulliver",
+      "Buying art from Redd",
+      "Collecting Nook Miles",
+      "Digging fossils",
+      "Finding message bottle",
+      "Checking turnip prices",
+      "Dressing up in the Able Sisters",
+      "Visiting Harv",
+      "Finding Gyroids",
+      "Catching butterflies",
+      "Visiting Isabelle"
+    ]
+    this.state = {
+      popupVisible: false,
+      loadingText: this.allLoadingTexts[Math.floor(Math.random()*this.allLoadingTexts.length)]
+    };
+  }
+
+  componentDidMount(){
+    setInterval(()=>{
+      this.setState({loadingText:this.allLoadingTexts[Math.floor(Math.random()*this.allLoadingTexts.length)]})
+    }, 4000);
+  }
+  
+  setPopupVisible = (visible) => {
+    this.setState({popupVisible:visible});
+  }
+
+  render(){
+    return (
+        <Modal
+          animationType="fade"
+          transparent={true}
+          visible={this.state.popupVisible}
+          statusBarTranslucent
+          onRequestClose={()=>{this.props.button1===undefined && this.props.button2===undefined ? 0 : this.setPopupVisible(false);}}
+        >
+        <View style={[{position:"absolute",bottom:0, width: Dimensions.get('window').width}]}>
+          <View style={{alignItems:"center", justifyContent:"center"}}>
+            <View style={[styles.modalView,{width:"90%",backgroundColor: colors.white[Appearance.getColorScheme()==="light" ? 0 : 1]}]}>
+              <TextFont bold={true} style={{fontSize: 20, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{attemptToTranslate(this.state.loadingText)+"..."}</TextFont>
+              <View style={{justifyContent:"center", alignItems:"center"}}>
+                <LottieView autoPlay loop
+                  style={{marginBottom: -25, width: 100, zIndex:1, transform: [{ scale: 1 },{ rotate: '0deg'},],}}
+                  source={require('../assets/loading.json')}
+                />
+              </View>   
+            </View>
+          </View>
+        </View>
+      </Modal>
+    )
+  }
+}
 
 
 /* 

@@ -135,6 +135,7 @@ class AllItemsPage extends Component {
             false,
             false,
             false,
+            false,
             true,
             true,
             true,
@@ -150,6 +151,7 @@ class AllItemsPage extends Component {
             true,
           ]}
           popUpPhraseProperty={[
+            "",
             "",
             "",
             "",
@@ -191,6 +193,7 @@ class AllItemsPage extends Component {
             ["FurniturePopup",440],
             ["FurniturePopup",440],
             ["FurniturePopup",440],
+            ["FoodPopup",440],
             ["ClothingPopup",450],
             ["ClothingPopup",450],
             ["ClothingPopup",450],
@@ -220,6 +223,7 @@ class AllItemsPage extends Component {
             ["GyroidPopup",500], //none
           ]}
           popUpCornerImageProperty={[
+            "Source",
             "Source",
             "Source",
             "Source",
@@ -274,6 +278,7 @@ class AllItemsPage extends Component {
             "Source",
             "Source",
             "Source",
+            "Source",
             "Where/How",
             "Where/How",
             "Where/How",
@@ -288,6 +293,7 @@ class AllItemsPage extends Component {
             "Source",
           ]}
           textProperty2={[
+            "",
             "",
             "",
             "",
@@ -330,6 +336,7 @@ class AllItemsPage extends Component {
             "",
           ]}
           imageProperty={[
+            "Image",
             "Image",
             "Image",
             "Image",
@@ -412,6 +419,7 @@ class AllItemsPage extends Component {
             ["NameLanguage"],
             ["NameLanguage"],
             ["NameLanguage"],
+            ["NameLanguage"],
           ]}
           checkListKey={[
             ["furnitureCheckList","Name","Variation","Pattern"],
@@ -419,6 +427,7 @@ class AllItemsPage extends Component {
             ["furnitureCheckList","Name","Variation","Pattern"],
             ["furnitureCheckList","Name","Variation","Pattern"],
             ["furnitureCheckList","Name"],
+            ["furnitureCheckList","Name","Variation","Pattern"],
             ["clothingCheckList","Name","Variation"],
             ["clothingCheckList","Name","Variation"],
             ["clothingCheckList","Name","Variation"],
@@ -455,6 +464,7 @@ class AllItemsPage extends Component {
             ["amiiboCheckListSeriesSanrioseries","Name"],
           ]}
           searchKey={[
+            ["NameLanguage"],
             ["NameLanguage"],
             ["NameLanguage"],
             ["NameLanguage"],

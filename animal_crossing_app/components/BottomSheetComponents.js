@@ -174,8 +174,6 @@ export class InfoLine extends Component {
     if(this.props.item.hasOwnProperty(this.props.textProperty[0])){
       if(this.props.item[this.props.textProperty]==="None"){
         return <View/>
-      } else if(this.props.item[this.props.textProperty].toLowerCase()==="null" || this.props.item[this.props.textProperty].toLowerCase()==="na"){
-        return <View/>
       }
     }
     var text1 = attemptToTranslateSpecial(this.props.item[this.props.textProperty], "variants");
@@ -193,13 +191,15 @@ export class InfoLine extends Component {
       }
     }
     if(this.props.textProperty[0]==="Favorite Song"){
-      text1 = attemptToTranslateItem(this.props.item[this.props.textProperty])
+      text1 = ""
     }
     var text = capitalizeFirst(commas(text1));
     if(this.props.textProperty2 !== undefined && this.props.item[this.props.textProperty] !== this.props.item[this.props.textProperty2]){
       text+= ", " + capitalizeFirst(commas(text2))
     }
-    if(text1===undefined || text1.toLowerCase()==="null" || text1.toLowerCase()==="na"){
+    if(text1===undefined){
+      return <View/>
+    } else if (text1.toString().toLowerCase()==="null" || text1.toString().toLowerCase()==="na"){
       return <View/>
     }
     
@@ -576,7 +576,11 @@ export function getVariations(name, globalDatabase, checkListKey, startingIndex 
     if(globalDatabase[i].length > startingIndex-1){
       failCount = 0;
       for(var j=startingIndex-1; j>0; j--){
-        if(globalDatabase[i][j]["checkListKey"].split("CheckList")[0]!==checkListKey.split("CheckList")[0]){
+        if(globalDatabase[i][j]["checkListKey"]===undefined){
+          console.log("ERROR!!!")
+          console.log(globalDatabase[i][j]["Name"])
+          break;
+        } else if(globalDatabase[i][j]["checkListKey"].split("CheckList")[0]!==checkListKey.split("CheckList")[0]){
           break;
         }
         if(globalDatabase[i][j]["Name"].toLowerCase()===name.toLowerCase()){
