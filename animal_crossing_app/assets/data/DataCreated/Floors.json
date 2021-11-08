@@ -4912,6 +4912,7 @@
     "Tag": "Special Nature Floors",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexFloorCemetery00",
     "Internal ID": "13127",
     "Unique Entry ID": "iWLJxsd4fz8Bdq4eF"
@@ -4933,6 +4934,7 @@
     "Tag": "Cloth Floors",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexFloorSummer00",
     "Internal ID": "12727",
     "Unique Entry ID": "Dah42cyaRs39uWLQt"
@@ -4954,6 +4956,7 @@
     "Tag": "Special Inorganic Floors",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpFloorClub00",
     "Internal ID": "13193",
     "Unique Entry ID": "Z9BAjTnK4D2FQ2XSb"
@@ -4975,6 +4978,7 @@
     "Tag": "Cloth Floors",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexFloorTheater00",
     "Internal ID": "12917",
     "Unique Entry ID": "4L6GcFvuMqg44ohdS"
@@ -4996,6 +5000,7 @@
     "Tag": "Nature - Green",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpFloorGlowMoss00",
     "Internal ID": "13879",
     "Unique Entry ID": "uGTqQ89qidnrGWJE7"
@@ -5017,6 +5022,7 @@
     "Tag": "Wood Floors",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexFloorSchoolgym00",
     "Internal ID": "12854",
     "Unique Entry ID": "YWtXprjJARzm8rHEC"
@@ -5038,6 +5044,7 @@
     "Tag": "Nature - Brown",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexFloorSchoolyard00",
     "Internal ID": "12853",
     "Unique Entry ID": "qPip9BWoSumjwR74D"
@@ -5059,6 +5066,7 @@
     "Tag": "Special Inorganic Floors",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpFloorMagic00",
     "Internal ID": "5249",
     "Unique Entry ID": "FYM36HDEkeCpEfhBa"
@@ -5080,6 +5088,7 @@
     "Tag": "Morocco",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexFloorMoroccanSquareTile00",
     "Internal ID": "13604",
     "Unique Entry ID": "ERbAkRNcFf6HTN4qj"
@@ -5101,6 +5110,7 @@
     "Tag": "Wood Floors",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexFloorClassroom00",
     "Internal ID": "12852",
     "Unique Entry ID": "EHNhGbKdG4gM8E6mT"
@@ -5122,6 +5132,7 @@
     "Tag": "Wood Floors",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexFloorOldBoard00",
     "Internal ID": "13484",
     "Unique Entry ID": "YuEieHpCKRmQDpwA4"
@@ -5143,6 +5154,7 @@
     "Tag": "Tile Floors",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexFloorLabo00",
     "Internal ID": "12730",
     "Unique Entry ID": "kH7PZmDTJNBXyC8DW"
@@ -5164,6 +5176,7 @@
     "Tag": "Iron",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexFloorOperatingRoom00",
     "Internal ID": "12729",
     "Unique Entry ID": "jbeZwwgpTpcNp4nMB"
@@ -5177,7 +5190,9 @@
     "Sell": "750",
     "Color 1": "Brown",
     "Color 2": "Brown",
-    "Source": "ManCatalogSpTab",
+    "Source": "Wardell",
+    "Season/Event": "Happy Home Paradise",
+    "Season/Event Exclusive": "Yes",
     "HHA Base Points": "151",
     "HHA Concept 1": "living room",
     "HHA Concept 2": "None",
@@ -5185,6 +5200,7 @@
     "Tag": "FloorSimpleGlodSilverBronze",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexFloorGoldRich00",
     "Internal ID": "13026",
     "Unique Entry ID": "r4w8gQhhJty9bm7xR"
@@ -5206,6 +5222,7 @@
     "Tag": "Tile Floors",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexFloorHospitalRoom00",
     "Internal ID": "12726",
     "Unique Entry ID": "FErNxHjdPBPz7KarF"
@@ -5227,6 +5244,7 @@
     "Tag": "Iron",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexFloorCookery00",
     "Internal ID": "12915",
     "Unique Entry ID": "HwfcevySwq687Symt"
@@ -5248,6 +5266,7 @@
     "Tag": "Machine Floor",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexFloorRobo00",
     "Internal ID": "5072",
     "Unique Entry ID": "CiGQrSFNxZcfEFtBh"
@@ -5261,7 +5280,9 @@
     "Sell": "750",
     "Color 1": "White",
     "Color 2": "White",
-    "Source": "ManCatalogSpTab",
+    "Source": "Wardell",
+    "Season/Event": "Happy Home Paradise",
+    "Season/Event Exclusive": "Yes",
     "HHA Base Points": "151",
     "HHA Concept 1": "None",
     "HHA Concept 2": "None",
@@ -5269,6 +5290,7 @@
     "Tag": "Special Inorganic Floors",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpFloorSketch00",
     "Internal ID": "14897",
     "Unique Entry ID": "hWZn7wcpwD4BGZw2c"
@@ -5290,6 +5312,7 @@
     "Tag": "Special Nature Floors",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpFloorRopenet00",
     "Internal ID": "13880",
     "Unique Entry ID": "83n3sq2mysXuXmMju"
@@ -5311,6 +5334,7 @@
     "Tag": "Machine Floor",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexFloorSteampunk00",
     "Internal ID": "5055",
     "Unique Entry ID": "SyR2wuY2NxNTGC5Z5"
@@ -5332,6 +5356,7 @@
     "Tag": "Simple Carpet",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexFloorGlamping00",
     "Internal ID": "13485",
     "Unique Entry ID": "7FeE8tYxwSiqgxZHf"

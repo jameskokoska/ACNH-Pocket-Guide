@@ -90899,24 +90899,6 @@
     "Korean": "검은색 석회 외벽",
     "Russian": "фасад с черной отделкой"
   },
-  "blue cobblestone exterior": {
-    "id": "149",
-    "Version": "1.0.0",
-    "English": "blue cobblestone exterior",
-    "English (Europe)": "blue cobblestone exterior",
-    "German": "Blau-Granitfassade",
-    "Spanish": "fachada adoquines azul",
-    "Spanish (US)": "fachada adoquines azul",
-    "French": "façade à pierres bleue",
-    "French (US)": "façade à pierres bleue",
-    "Italian": "esterno in pietra blu",
-    "Dutch": "blauw metselwerk",
-    "Chinese": "蓝色石墙",
-    "Chinese (Traditional)": "藍色石牆",
-    "Japanese": "あおいいしのかべ",
-    "Korean": "파란색 돌 외벽",
-    "Russian": "синий каменный фасад"
-  },
   "blue stucco exterior": {
     "id": "155",
     "Version": "1.0.0",
@@ -90971,24 +90953,6 @@
     "Korean": "갈색 나이테 외벽",
     "Russian": "коричневый фасад шале"
   },
-  "brown cobblestone exterior": {
-    "id": "146",
-    "Version": "1.0.0",
-    "English": "brown cobblestone exterior",
-    "English (Europe)": "brown cobblestone exterior",
-    "German": "Braun-Granitfassade",
-    "Spanish": "fachada adoquines marrón",
-    "Spanish (US)": "fachada adoquines marrón",
-    "French": "façade à pierres brune",
-    "French (US)": "façade à pierres beige",
-    "Italian": "esterno in pietra marrone",
-    "Dutch": "bruin-beige metselwerk",
-    "Chinese": "茶色石墙",
-    "Chinese (Traditional)": "茶色石牆",
-    "Japanese": "ちゃいろいいしのかべ",
-    "Korean": "갈색 돌 외벽",
-    "Russian": "коричн. каменный фасад"
-  },
   "chalet exterior": {
     "id": "9",
     "Version": "1.0.0",
@@ -91006,42 +90970,6 @@
     "Japanese": "きわくのかべ",
     "Korean": "나이테 외벽",
     "Russian": "фасад шале"
-  },
-  "chic cobblestone exterior": {
-    "id": "145",
-    "Version": "1.0.0",
-    "English": "chic cobblestone exterior",
-    "English (Europe)": "chic cobblestone exterior",
-    "German": "Schick-Granitfassade",
-    "Spanish": "fachada adoquines chic",
-    "Spanish (US)": "fachada adoquines chic",
-    "French": "façade à pierres chic",
-    "French (US)": "façade à pierres chic",
-    "Italian": "esterno in pietra chic",
-    "Dutch": "zwart-wit metselwerk",
-    "Chinese": "雅致石墙",
-    "Chinese (Traditional)": "典雅石牆",
-    "Japanese": "シックないしのかべ",
-    "Korean": "시크한 돌 외벽",
-    "Russian": "стильн. каменный фасад"
-  },
-  "cobblestone exterior": {
-    "id": "10",
-    "Version": "1.0.0",
-    "English": "cobblestone exterior",
-    "English (Europe)": "cobblestone exterior",
-    "German": "Granitfassade",
-    "Spanish": "fachada adoquines",
-    "Spanish (US)": "fachada adoquines",
-    "French": "façade à pierres",
-    "French (US)": "façade à pierres",
-    "Italian": "esterno in pietra",
-    "Dutch": "grijs-wit metselwerk",
-    "Chinese": "石墙",
-    "Chinese (Traditional)": "石牆",
-    "Japanese": "いしのかべ",
-    "Korean": "돌 외벽",
-    "Russian": "каменный фасад"
   },
   "common exterior": {
     "id": "0",
@@ -91079,24 +91007,6 @@
     "Korean": "하얀색 나이테 외벽",
     "Russian": "кремовый фасад шале"
   },
-  "gray cobblestone exterior": {
-    "id": "151",
-    "Version": "1.0.0",
-    "English": "gray cobblestone exterior",
-    "English (Europe)": "gray cobblestone exterior",
-    "German": "Grau-Granitfassade",
-    "Spanish": "fachada adoquines gris",
-    "Spanish (US)": "fachada adoquines gris",
-    "French": "façade à pierres grise",
-    "French (US)": "façade à pierres grise",
-    "Italian": "esterno in pietra grigio",
-    "Dutch": "grijs metselwerk",
-    "Chinese": "灰色石墙",
-    "Chinese (Traditional)": "灰色石牆",
-    "Japanese": "グレーのいしのかべ",
-    "Korean": "회색 돌 외벽",
-    "Russian": "серый каменный фасад"
-  },
   "gray stucco exterior": {
     "id": "153",
     "Version": "1.0.0",
@@ -91133,24 +91043,6 @@
     "Korean": "회색 평범한 외벽",
     "Russian": "фасад с серым кантом"
   },
-  "green cobblestone exterior": {
-    "id": "150",
-    "Version": "1.0.0",
-    "English": "green cobblestone exterior",
-    "English (Europe)": "green cobblestone exterior",
-    "German": "Grün-Granitfassade",
-    "Spanish": "fachada adoquines verde",
-    "Spanish (US)": "fachada adoquines verde",
-    "French": "façade à pierres verte",
-    "French (US)": "façade à pierres verte",
-    "Italian": "esterno in pietra verde",
-    "Dutch": "zwart-groen metselwerk",
-    "Chinese": "绿色石墙",
-    "Chinese (Traditional)": "綠色石牆",
-    "Japanese": "みどりのいしのかべ",
-    "Korean": "초록색 돌 외벽",
-    "Russian": "зелен. каменный фасад"
-  },
   "light-blue chalet exterior": {
     "id": "22",
     "Version": "1.0.0",
@@ -91186,24 +91078,6 @@
     "Japanese": "オレンジいろのきわくのかべ",
     "Korean": "오렌지색 나이테 외벽",
     "Russian": "оранжевый фасад шале"
-  },
-  "orange cobblestone exterior": {
-    "id": "148",
-    "Version": "1.0.0",
-    "English": "orange cobblestone exterior",
-    "English (Europe)": "orange cobblestone exterior",
-    "German": "Orange-Granitfassade",
-    "Spanish": "fachada adoquines naranja",
-    "Spanish (US)": "fachada adoquines naranja",
-    "French": "façade à pierres orange",
-    "French (US)": "façade à pierres orange",
-    "Italian": "esterno in pietra arancione",
-    "Dutch": "wit-oranje metselwerk",
-    "Chinese": "橘色石墙",
-    "Chinese (Traditional)": "橘色石牆",
-    "Japanese": "オレンジいろのいしのかべ",
-    "Korean": "오렌지색 돌 외벽",
-    "Russian": "оранж. каменный фасад"
   },
   "pink common exterior": {
     "id": "161",
@@ -91258,24 +91132,6 @@
     "Japanese": "あかいきわくのかべ",
     "Korean": "빨간색 나이테 외벽",
     "Russian": "красный фасад шале"
-  },
-  "red cobblestone exterior": {
-    "id": "147",
-    "Version": "1.0.0",
-    "English": "red cobblestone exterior",
-    "English (Europe)": "red cobblestone exterior",
-    "German": "Rot-Granitfassade",
-    "Spanish": "fachada adoquines roja",
-    "Spanish (US)": "fachada adoquines roja",
-    "French": "façade à pierres rouge",
-    "French (US)": "façade à pierres rouge",
-    "Italian": "esterno in pietra rosso",
-    "Dutch": "zwart-rood metselwerk",
-    "Chinese": "红色石墙",
-    "Chinese (Traditional)": "紅色石牆",
-    "Japanese": "あかいいしのかべ",
-    "Korean": "빨간색 돌 외벽",
-    "Russian": "красн. каменный фасад"
   },
   "red common exterior": {
     "id": "162",
@@ -100817,6 +100673,24 @@
     "Japanese": "パリ祭",
     "Korean": "프랑스 혁명기념일",
     "Russian": "14 Июля"
+  },
+  "New Year's Day": {
+    "id": "WorldNewYear",
+    "Version": "1.6.0",
+    "English": "New Year's Day",
+    "English (Europe)": "New Year's Day",
+    "German": "Neujahr",
+    "Spanish": "Año Nuevo",
+    "Spanish (US)": "Año Nuevo",
+    "French": "Jour de l'an",
+    "French (US)": "Jour de l'An",
+    "Italian": "Capodanno",
+    "Dutch": "Nieuwjaarsdag",
+    "Chinese": "New Year",
+    "Chinese (Traditional)": "New Year",
+    "Japanese": "New Year",
+    "Korean": "새해",
+    "Russian": "Новый год"
   },
   "plaza teacup ride": {
     "Chinese": "广场咖啡杯",
@@ -117666,22 +117540,6 @@
     "Spanish (US)": "uniforme servicio japonés",
     "French (US)": "uniforme zen"
   },
-  "ぞうきんがけエプロン": {
-    "Chinese": "ぞうきんがけエプロン",
-    "German": "ぞうきんがけエプロン",
-    "English (Europe)": "ぞうきんがけエプロン",
-    "Spanish": "ぞうきんがけエプロン",
-    "French": "ぞうきんがけエプロン",
-    "Italian": "ぞうきんがけエプロン",
-    "Dutch": "ぞうきんがけエプロン",
-    "Russian": "ぞうきんがけエプロン",
-    "Japanese": "ぞうきんがけエプロン",
-    "Korean": "ぞうきんがけエプロン",
-    "Chinese (Traditional)": "ぞうきんがけエプロン",
-    "English": "ぞうきんがけエプロン",
-    "Spanish (US)": "ぞうきんがけエプロン",
-    "French (US)": "ぞうきんがけエプロン"
-  },
   "checkered school pants": {
     "Chinese": "格纹学生裤",
     "German": "Karo-Schulhose",
@@ -117809,22 +117667,6 @@
     "English": "rubber half apron",
     "Spanish (US)": "delantal impermeable",
     "French (US)": "bas de tablier caoutchouc"
-  },
-  "ぞうきんがけのズボン": {
-    "Chinese": "ぞうきんがけのズボン",
-    "German": "ぞうきんがけのズボン",
-    "English (Europe)": "ぞうきんがけのズボン",
-    "Spanish": "ぞうきんがけのズボン",
-    "French": "ぞうきんがけのズボン",
-    "Italian": "ぞうきんがけのズボン",
-    "Dutch": "ぞうきんがけのズボン",
-    "Russian": "ぞうきんがけのズボン",
-    "Japanese": "ぞうきんがけのズボン",
-    "Korean": "ぞうきんがけのズボン",
-    "Chinese (Traditional)": "ぞうきんがけのズボン",
-    "English": "ぞうきんがけのズボン",
-    "Spanish (US)": "ぞうきんがけのズボン",
-    "French (US)": "ぞうきんがけのズボン"
   },
   "athletic outfit": {
     "Chinese": "运动制服",
@@ -118593,22 +118435,6 @@
     "English": "woven-vines hat",
     "Spanish (US)": "sombrero enredadera",
     "French (US)": "chapeau vigne tressée"
-  },
-  "ぞうきんがけのバンダナ": {
-    "Chinese": "ぞうきんがけのバンダナ",
-    "German": "ぞうきんがけのバンダナ",
-    "English (Europe)": "ぞうきんがけのバンダナ",
-    "Spanish": "ぞうきんがけのバンダナ",
-    "French": "ぞうきんがけのバンダナ",
-    "Italian": "ぞうきんがけのバンダナ",
-    "Dutch": "ぞうきんがけのバンダナ",
-    "Russian": "ぞうきんがけのバンダナ",
-    "Japanese": "ぞうきんがけのバンダナ",
-    "Korean": "ぞうきんがけのバンダナ",
-    "Chinese (Traditional)": "ぞうきんがけのバンダナ",
-    "English": "ぞうきんがけのバンダナ",
-    "Spanish (US)": "ぞうきんがけのバンダナ",
-    "French (US)": "ぞうきんがけのバンダナ"
   },
   "double nose tissues": {
     "Chinese": "塞两侧鼻孔的纸巾",

@@ -98,6 +98,7 @@ filters = [
             data["Ceiling Decor"],
             data["Photos"],
             data["Posters"],
+            data["Food"],
             data["Headwear"],
             data["Accessories"],
             data["Tops"],

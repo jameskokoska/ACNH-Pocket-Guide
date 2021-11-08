@@ -11,6 +11,7 @@ class VillagersPage extends Component {
         <ListPage 
           setPage={this.props.setPage}
           tabs={false}
+          subHeader="Tap the Heart to add villagers currently in your town."
           extraInfo={
             {
               type:"guideRedirect",

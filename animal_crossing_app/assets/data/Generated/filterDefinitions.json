@@ -127,12 +127,12 @@
           "id": "Source:Zipper"
         },
         {
-          "name": "Egg bottle",
-          "id": "Source:Egg bottle"
+          "name": "Egg bottles",
+          "id": "Source:Egg bottles"
         },
         {
-          "name": "Egg balloon",
-          "id": "Source:Egg balloon"
+          "name": "Egg balloons",
+          "id": "Source:Egg balloons"
         },
         {
           "name": "Collecting earth eggs",
@@ -215,10 +215,6 @@
           "id": "Source:Test Your DIY Skills"
         },
         {
-          "name": "None",
-          "id": "Source:None"
-        },
-        {
           "name": "Pavé",
           "id": "Source:Pavé"
         },
@@ -259,8 +255,8 @@
           "id": "Source:Catching a horse mackerel"
         },
         {
-          "name": "Catch an anchovy",
-          "id": "Source:Catch an anchovy"
+          "name": "Catching an anchovy",
+          "id": "Source:Catching an anchovy"
         },
         {
           "name": "Daisy Mae",
@@ -271,8 +267,8 @@
           "id": "Source:Catching a barred knifejaw"
         },
         {
-          "name": "WherearenMncBoxBrick",
-          "id": "Source:WherearenMncBoxBrick"
+          "name": "Niko",
+          "id": "Source:Niko"
         },
         {
           "name": "Basic Cooking Recipes",
@@ -291,16 +287,16 @@
           "id": "Source:Be a Chef! DIY Recipes+"
         },
         {
+          "name": "Kapp'n island bottles",
+          "id": "Source:Kapp'n island bottles"
+        },
+        {
+          "name": "HHP island bottles",
+          "id": "Source:HHP island bottles"
+        },
+        {
           "name": "Turkey Day Recipes",
           "id": "Source:Turkey Day Recipes"
-        },
-        {
-          "name": "WherearenMncBoxConcrete",
-          "id": "Source:WherearenMncBoxConcrete"
-        },
-        {
-          "name": "WherearenMncBoxComplete",
-          "id": "Source:WherearenMncBoxComplete"
         },
         {
           "name": "Catching a dab",
@@ -309,26 +305,6 @@
         {
           "name": "Custom Fencing in a Flash",
           "id": "Source:Custom Fencing in a Flash"
-        },
-        {
-          "name": "WherearenMncBoxMarble",
-          "id": "Source:WherearenMncBoxMarble"
-        },
-        {
-          "name": "WherearenMncBoxPlain",
-          "id": "Source:WherearenMncBoxPlain"
-        },
-        {
-          "name": "WherearenMncBoxSteel",
-          "id": "Source:WherearenMncBoxSteel"
-        },
-        {
-          "name": "WherearenMncLesson",
-          "id": "Source:WherearenMncLesson"
-        },
-        {
-          "name": "WherearenKabetasuUnlock",
-          "id": "Source:WherearenKabetasuUnlock"
         },
         {
           "name": "Catching a red snapper",
@@ -483,6 +459,10 @@
         {
           "name": "Wedding Season",
           "id": "Season/Event:Wedding Season"
+        },
+        {
+          "name": "Happy Home Paradise",
+          "id": "Season/Event:Happy Home Paradise"
         }
       ]
     },
@@ -737,12 +717,12 @@
       "id": "Source",
       "children": [
         {
-          "name": "Gyroid",
-          "id": "Source:Gyroid"
+          "name": "Dig Spot",
+          "id": "Source:Dig Spot"
         },
         {
-          "name": "CafeMaster",
-          "id": "Source:CafeMaster"
+          "name": "Brewster",
+          "id": "Source:Brewster"
         }
       ]
     }
@@ -801,8 +781,16 @@
           "id": "Source:Viva Festivale Reaction Set"
         },
         {
+          "name": "Group Stretching",
+          "id": "Source:Group Stretching"
+        },
+        {
           "name": "New Reactions Notebook",
           "id": "Source:New Reactions Notebook"
+        },
+        {
+          "name": "DJ K.K. concert",
+          "id": "Source:DJ K.K. concert"
         }
       ]
     }
@@ -1131,6 +1119,10 @@
         {
           "name": "TableClock",
           "id": "Tag:TableClock"
+        },
+        {
+          "name": "DishFood",
+          "id": "Tag:DishFood"
         },
         {
           "name": "Bromide",
@@ -4127,44 +4119,32 @@
           "id": "Source:Cyrus"
         },
         {
-          "name": "ShopOneRoom",
-          "id": "Source:ShopOneRoom"
-        },
-        {
-          "name": "OneRoomBigFtr",
-          "id": "Source:OneRoomBigFtr"
-        },
-        {
-          "name": "ShopOneRoomDefault",
-          "id": "Source:ShopOneRoomDefault"
-        },
-        {
-          "name": "ShopOneRoomMiscGoods",
-          "id": "Source:ShopOneRoomMiscGoods"
-        },
-        {
-          "name": "CafeMaster",
-          "id": "Source:CafeMaster"
-        },
-        {
-          "name": "RadioExercise",
-          "id": "Source:RadioExercise"
-        },
-        {
-          "name": "ManCatalogSpTab",
-          "id": "Source:ManCatalogSpTab"
-        },
-        {
-          "name": "RecycleBox_Fr",
-          "id": "Source:RecycleBox_Fr"
-        },
-        {
-          "name": "Nintendo",
-          "id": "Source:Nintendo"
+          "name": "HHP Office",
+          "id": "Source:HHP Office"
         },
         {
           "name": "Nook Shopping Daily Selection",
           "id": "Source:Nook Shopping Daily Selection"
+        },
+        {
+          "name": "Brewster",
+          "id": "Source:Brewster"
+        },
+        {
+          "name": "Group Stretching",
+          "id": "Source:Group Stretching"
+        },
+        {
+          "name": "Wardell",
+          "id": "Source:Wardell"
+        },
+        {
+          "name": "Recycle box",
+          "id": "Source:Recycle box"
+        },
+        {
+          "name": "Nintendo",
+          "id": "Source:Nintendo"
         },
         {
           "name": "NookLink",
@@ -4195,28 +4175,32 @@
           "id": "Source:All villagers"
         },
         {
-          "name": "ShopOneRoomMiscGoodsDefault",
-          "id": "Source:ShopOneRoomMiscGoodsDefault"
-        },
-        {
-          "name": "ShopOneRoomNonSouvenir",
-          "id": "Source:ShopOneRoomNonSouvenir"
-        },
-        {
           "name": "Katrina's Cleansing Service",
           "id": "Source:Katrina's Cleansing Service"
-        },
-        {
-          "name": "OneRoomBenefit",
-          "id": "Source:OneRoomBenefit"
         },
         {
           "name": "Blathers",
           "id": "Source:Blathers"
         },
         {
-          "name": "MuseumComplete",
-          "id": "Source:MuseumComplete"
+          "name": "Donating all bugs",
+          "id": "Source:Donating all bugs"
+        },
+        {
+          "name": "Donating all fish",
+          "id": "Source:Donating all fish"
+        },
+        {
+          "name": "Donating all art",
+          "id": "Source:Donating all art"
+        },
+        {
+          "name": "Donating all fossils",
+          "id": "Source:Donating all fossils"
+        },
+        {
+          "name": "Donating all sea creatures",
+          "id": "Source:Donating all sea creatures"
         },
         {
           "name": "High Friendship",
@@ -4317,16 +4301,12 @@
       "id": "Season/Event",
       "children": [
         {
-          "name": "Super Mario Bros.",
-          "id": "Season/Event:Super Mario Bros."
+          "name": "NA",
+          "id": "Season/Event:NA"
         },
         {
           "name": "New Year's Day (World)",
           "id": "Season/Event:New Year's Day (World)"
-        },
-        {
-          "name": "NA",
-          "id": "Season/Event:NA"
         },
         {
           "name": "Fishing Tourney",
@@ -4363,6 +4343,10 @@
         {
           "name": "Birthday",
           "id": "Season/Event:Birthday"
+        },
+        {
+          "name": "Super Mario Bros.",
+          "id": "Season/Event:Super Mario Bros."
         },
         {
           "name": "cherry-blossom petals",
@@ -4489,6 +4473,22 @@
           "id": "Season/Event:Wedding Season"
         },
         {
+          "name": "New Year's Day",
+          "id": "Season/Event:New Year's Day"
+        },
+        {
+          "name": "Winter Solstice (northern hemisphere) (2)",
+          "id": "Season/Event:Winter Solstice (northern hemisphere) (2)"
+        },
+        {
+          "name": "Summer Solstice (northern hemisphere) (2)",
+          "id": "Season/Event:Summer Solstice (northern hemisphere) (2)"
+        },
+        {
+          "name": "Happy Home Paradise",
+          "id": "Season/Event:Happy Home Paradise"
+        },
+        {
           "name": "Mother's Day",
           "id": "Season/Event:Mother's Day"
         },
@@ -4541,6 +4541,10 @@
           "id": "Season/Event:Day of the Dead"
         },
         {
+          "name": "Shōgatsu (5)",
+          "id": "Season/Event:Shōgatsu (5)"
+        },
+        {
           "name": "International Museum Day",
           "id": "Season/Event:International Museum Day"
         },
@@ -4579,12 +4583,12 @@
       "id": "Season/Event Exclusive",
       "children": [
         {
-          "name": "Yes",
-          "id": "Season/Event Exclusive:Yes"
-        },
-        {
           "name": "NA",
           "id": "Season/Event Exclusive:NA"
+        },
+        {
+          "name": "Yes",
+          "id": "Season/Event Exclusive:Yes"
         },
         {
           "name": "No",
@@ -6727,10 +6731,6 @@
           "id": "Source:Gullivarrr"
         },
         {
-          "name": "NotAvailable",
-          "id": "Source:NotAvailable"
-        },
-        {
           "name": "Recycle box",
           "id": "Source:Recycle box"
         },
@@ -6763,8 +6763,12 @@
           "id": "Source:NookLink"
         },
         {
-          "name": "RadioExercise",
-          "id": "Source:RadioExercise"
+          "name": "NotAvailable",
+          "id": "Source:NotAvailable"
+        },
+        {
+          "name": "Group Stretching",
+          "id": "Source:Group Stretching"
         },
         {
           "name": "Nook's Cranny",
@@ -6779,8 +6783,8 @@
           "id": "Source:Kick's Commune"
         },
         {
-          "name": "ManCatalogSpTab",
-          "id": "Source:ManCatalogSpTab"
+          "name": "Wardell",
+          "id": "Source:Wardell"
         }
       ]
     },
@@ -6921,6 +6925,10 @@
           "id": "Season/Event:Wedding Season (Able Sisters)"
         },
         {
+          "name": "Carnival of Venice",
+          "id": "Season/Event:Carnival of Venice"
+        },
+        {
           "name": "Bug-Off",
           "id": "Season/Event:Bug-Off"
         },
@@ -6945,6 +6953,10 @@
           "id": "Season/Event:Father's Day (2)"
         },
         {
+          "name": "Tomato Festival",
+          "id": "Season/Event:Tomato Festival"
+        },
+        {
           "name": "Cowherd & Weaver Girl Day",
           "id": "Season/Event:Cowherd & Weaver Girl Day"
         },
@@ -6955,6 +6967,10 @@
         {
           "name": "Fall shopping",
           "id": "Season/Event:Fall shopping"
+        },
+        {
+          "name": "Happy Home Paradise",
+          "id": "Season/Event:Happy Home Paradise"
         },
         {
           "name": "acorns and pine cones",
@@ -7651,8 +7667,8 @@
           "id": "Source:Saharah's Commune"
         },
         {
-          "name": "ManCatalogSpTab",
-          "id": "Source:ManCatalogSpTab"
+          "name": "Wardell",
+          "id": "Source:Wardell"
         },
         {
           "name": "Nintendo",
@@ -7783,6 +7799,10 @@
         {
           "name": "Turkey Day",
           "id": "Season/Event:Turkey Day"
+        },
+        {
+          "name": "Happy Home Paradise",
+          "id": "Season/Event:Happy Home Paradise"
         },
         {
           "name": "ornaments",
@@ -9055,44 +9075,32 @@
           "id": "Source:Cyrus"
         },
         {
-          "name": "ShopOneRoom",
-          "id": "Source:ShopOneRoom"
-        },
-        {
-          "name": "OneRoomBigFtr",
-          "id": "Source:OneRoomBigFtr"
-        },
-        {
-          "name": "ShopOneRoomDefault",
-          "id": "Source:ShopOneRoomDefault"
-        },
-        {
-          "name": "ShopOneRoomMiscGoods",
-          "id": "Source:ShopOneRoomMiscGoods"
-        },
-        {
-          "name": "CafeMaster",
-          "id": "Source:CafeMaster"
-        },
-        {
-          "name": "RadioExercise",
-          "id": "Source:RadioExercise"
-        },
-        {
-          "name": "ManCatalogSpTab",
-          "id": "Source:ManCatalogSpTab"
-        },
-        {
-          "name": "RecycleBox_Fr",
-          "id": "Source:RecycleBox_Fr"
-        },
-        {
-          "name": "Nintendo",
-          "id": "Source:Nintendo"
+          "name": "HHP Office",
+          "id": "Source:HHP Office"
         },
         {
           "name": "Nook Shopping Daily Selection",
           "id": "Source:Nook Shopping Daily Selection"
+        },
+        {
+          "name": "Brewster",
+          "id": "Source:Brewster"
+        },
+        {
+          "name": "Group Stretching",
+          "id": "Source:Group Stretching"
+        },
+        {
+          "name": "Wardell",
+          "id": "Source:Wardell"
+        },
+        {
+          "name": "Recycle box",
+          "id": "Source:Recycle box"
+        },
+        {
+          "name": "Nintendo",
+          "id": "Source:Nintendo"
         },
         {
           "name": "NookLink",
@@ -9123,28 +9131,32 @@
           "id": "Source:All villagers"
         },
         {
-          "name": "ShopOneRoomMiscGoodsDefault",
-          "id": "Source:ShopOneRoomMiscGoodsDefault"
-        },
-        {
-          "name": "ShopOneRoomNonSouvenir",
-          "id": "Source:ShopOneRoomNonSouvenir"
-        },
-        {
           "name": "Katrina's Cleansing Service",
           "id": "Source:Katrina's Cleansing Service"
-        },
-        {
-          "name": "OneRoomBenefit",
-          "id": "Source:OneRoomBenefit"
         },
         {
           "name": "Blathers",
           "id": "Source:Blathers"
         },
         {
-          "name": "MuseumComplete",
-          "id": "Source:MuseumComplete"
+          "name": "Donating all bugs",
+          "id": "Source:Donating all bugs"
+        },
+        {
+          "name": "Donating all fish",
+          "id": "Source:Donating all fish"
+        },
+        {
+          "name": "Donating all art",
+          "id": "Source:Donating all art"
+        },
+        {
+          "name": "Donating all fossils",
+          "id": "Source:Donating all fossils"
+        },
+        {
+          "name": "Donating all sea creatures",
+          "id": "Source:Donating all sea creatures"
         },
         {
           "name": "High Friendship",
@@ -9167,6 +9179,18 @@
           "id": "Source:Nook Shopping Posters"
         },
         {
+          "name": "Cooking",
+          "id": "Source:Cooking"
+        },
+        {
+          "name": "HHP Café",
+          "id": "Source:HHP Café"
+        },
+        {
+          "name": "CookPumpkin",
+          "id": "Source:CookPumpkin"
+        },
+        {
           "name": "Able Sisters",
           "id": "Source:Able Sisters"
         },
@@ -9187,16 +9211,12 @@
           "id": "Source:Tom Nook"
         },
         {
-          "name": "NotAvailable",
-          "id": "Source:NotAvailable"
-        },
-        {
-          "name": "Recycle box",
-          "id": "Source:Recycle box"
-        },
-        {
           "name": "OneRoomTailorKKFes",
           "id": "Source:OneRoomTailorKKFes"
+        },
+        {
+          "name": "NotAvailable",
+          "id": "Source:NotAvailable"
         },
         {
           "name": "Kicks",
@@ -9263,12 +9283,12 @@
           "id": "Source:Wildest Dreams DIY"
         },
         {
-          "name": "Egg bottle",
-          "id": "Source:Egg bottle"
+          "name": "Egg bottles",
+          "id": "Source:Egg bottles"
         },
         {
-          "name": "Egg balloon",
-          "id": "Source:Egg balloon"
+          "name": "Egg balloons",
+          "id": "Source:Egg balloons"
         },
         {
           "name": "Collecting earth eggs",
@@ -9363,8 +9383,8 @@
           "id": "Source:Catching a horse mackerel"
         },
         {
-          "name": "Catch an anchovy",
-          "id": "Source:Catch an anchovy"
+          "name": "Catching an anchovy",
+          "id": "Source:Catching an anchovy"
         },
         {
           "name": "Daisy Mae",
@@ -9375,8 +9395,8 @@
           "id": "Source:Catching a barred knifejaw"
         },
         {
-          "name": "WherearenMncBoxBrick",
-          "id": "Source:WherearenMncBoxBrick"
+          "name": "Niko",
+          "id": "Source:Niko"
         },
         {
           "name": "Basic Cooking Recipes",
@@ -9395,16 +9415,16 @@
           "id": "Source:Be a Chef! DIY Recipes+"
         },
         {
+          "name": "Kapp'n island bottles",
+          "id": "Source:Kapp'n island bottles"
+        },
+        {
+          "name": "HHP island bottles",
+          "id": "Source:HHP island bottles"
+        },
+        {
           "name": "Turkey Day Recipes",
           "id": "Source:Turkey Day Recipes"
-        },
-        {
-          "name": "WherearenMncBoxConcrete",
-          "id": "Source:WherearenMncBoxConcrete"
-        },
-        {
-          "name": "WherearenMncBoxComplete",
-          "id": "Source:WherearenMncBoxComplete"
         },
         {
           "name": "Catching a dab",
@@ -9415,32 +9435,8 @@
           "id": "Source:Custom Fencing in a Flash"
         },
         {
-          "name": "WherearenMncBoxMarble",
-          "id": "Source:WherearenMncBoxMarble"
-        },
-        {
-          "name": "WherearenMncBoxPlain",
-          "id": "Source:WherearenMncBoxPlain"
-        },
-        {
-          "name": "WherearenMncBoxSteel",
-          "id": "Source:WherearenMncBoxSteel"
-        },
-        {
-          "name": "WherearenMncLesson",
-          "id": "Source:WherearenMncLesson"
-        },
-        {
-          "name": "WherearenKabetasuUnlock",
-          "id": "Source:WherearenKabetasuUnlock"
-        },
-        {
           "name": "Catching a red snapper",
           "id": "Source:Catching a red snapper"
-        },
-        {
-          "name": "Brewster",
-          "id": "Source:Brewster"
         },
         {
           "name": "Catching a olive flounder",
@@ -9493,6 +9489,10 @@
         {
           "name": "New Reactions Notebook",
           "id": "Source:New Reactions Notebook"
+        },
+        {
+          "name": "DJ K.K. concert",
+          "id": "Source:DJ K.K. concert"
         },
         {
           "name": "Resident Services Upgrade",
@@ -9575,6 +9575,10 @@
           "id": "Source:Digging up a fully grown bush"
         },
         {
+          "name": "Picking carrots",
+          "id": "Source:Picking carrots"
+        },
+        {
           "name": "Planting a cedar sapling",
           "id": "Source:Planting a cedar sapling"
         },
@@ -9623,12 +9627,12 @@
           "id": "Source:Wrapping a present"
         },
         {
-          "name": "Picking pumpkins",
-          "id": "Source:Picking pumpkins"
+          "name": "Kapp'n islands",
+          "id": "Source:Kapp'n islands"
         },
         {
-          "name": "BrokenGyroid",
-          "id": "Source:BrokenGyroid"
+          "name": "Picking pumpkins",
+          "id": "Source:Picking pumpkins"
         },
         {
           "name": "Chopping a tree",
@@ -9679,6 +9683,10 @@
           "id": "Source:Planting a pear"
         },
         {
+          "name": "Picking potatoes",
+          "id": "Source:Picking potatoes"
+        },
+        {
           "name": "Mail",
           "id": "Source:Mail"
         },
@@ -9707,12 +9715,20 @@
           "id": "Source:Digging up a wheat plant"
         },
         {
+          "name": "Egg balloon",
+          "id": "Source:Egg balloon"
+        },
+        {
           "name": "Expired turnips",
           "id": "Source:Expired turnips"
         },
         {
-          "name": "Harvest_CookingRecipeBook",
-          "id": "Source:Harvest_CookingRecipeBook"
+          "name": "Picking sugarcane",
+          "id": "Source:Picking sugarcane"
+        },
+        {
+          "name": "Picking tomatoes",
+          "id": "Source:Picking tomatoes"
         },
         {
           "name": "Use a fountain firework",
@@ -9725,6 +9741,10 @@
         {
           "name": "Don't return treasure quest item",
           "id": "Source:Don't return treasure quest item"
+        },
+        {
+          "name": "Picking wheat",
+          "id": "Source:Picking wheat"
         }
       ]
     },
@@ -9977,6 +9997,10 @@
           "id": "Tag:TableClock"
         },
         {
+          "name": "DishFood",
+          "id": "Tag:DishFood"
+        },
+        {
           "name": "Bromide",
           "id": "Tag:Bromide"
         },
@@ -10003,6 +10027,14 @@
         {
           "name": "CeilingLamp",
           "id": "Tag:CeilingLamp"
+        },
+        {
+          "name": "DishDrink",
+          "id": "Tag:DishDrink"
+        },
+        {
+          "name": "Etc",
+          "id": "Tag:Etc"
         },
         {
           "name": "Tile Floors",
@@ -10417,10 +10449,6 @@
           "id": "Tag:Sculpture"
         },
         {
-          "name": "Etc",
-          "id": "Tag:Etc"
-        },
-        {
           "name": "Unnecessary",
           "id": "Tag:Unnecessary"
         },
@@ -10699,16 +10727,12 @@
       "id": "Season/Event",
       "children": [
         {
-          "name": "Super Mario Bros.",
-          "id": "Season/Event:Super Mario Bros."
+          "name": "NA",
+          "id": "Season/Event:NA"
         },
         {
           "name": "New Year's Day (World)",
           "id": "Season/Event:New Year's Day (World)"
-        },
-        {
-          "name": "NA",
-          "id": "Season/Event:NA"
         },
         {
           "name": "Fishing Tourney",
@@ -10745,6 +10769,10 @@
         {
           "name": "Birthday",
           "id": "Season/Event:Birthday"
+        },
+        {
+          "name": "Super Mario Bros.",
+          "id": "Season/Event:Super Mario Bros."
         },
         {
           "name": "cherry-blossom petals",
@@ -10871,6 +10899,22 @@
           "id": "Season/Event:Wedding Season"
         },
         {
+          "name": "New Year's Day",
+          "id": "Season/Event:New Year's Day"
+        },
+        {
+          "name": "Winter Solstice (northern hemisphere) (2)",
+          "id": "Season/Event:Winter Solstice (northern hemisphere) (2)"
+        },
+        {
+          "name": "Summer Solstice (northern hemisphere) (2)",
+          "id": "Season/Event:Summer Solstice (northern hemisphere) (2)"
+        },
+        {
+          "name": "Happy Home Paradise",
+          "id": "Season/Event:Happy Home Paradise"
+        },
+        {
           "name": "Mother's Day",
           "id": "Season/Event:Mother's Day"
         },
@@ -10923,6 +10967,10 @@
           "id": "Season/Event:Day of the Dead"
         },
         {
+          "name": "Shōgatsu (5)",
+          "id": "Season/Event:Shōgatsu (5)"
+        },
+        {
           "name": "International Museum Day",
           "id": "Season/Event:International Museum Day"
         },
@@ -10953,6 +11001,66 @@
         {
           "name": "Marine Day",
           "id": "Season/Event:Marine Day"
+        },
+        {
+          "name": "Silvester",
+          "id": "Season/Event:Silvester"
+        },
+        {
+          "name": "Moon-Viewing Day (2)",
+          "id": "Season/Event:Moon-Viewing Day (2)"
+        },
+        {
+          "name": "Cheese Rolling",
+          "id": "Season/Event:Cheese Rolling"
+        },
+        {
+          "name": "Dragon Boat Festival",
+          "id": "Season/Event:Dragon Boat Festival"
+        },
+        {
+          "name": "Shōgatsu (2)",
+          "id": "Season/Event:Shōgatsu (2)"
+        },
+        {
+          "name": "Moon-Viewing Day (3)",
+          "id": "Season/Event:Moon-Viewing Day (3)"
+        },
+        {
+          "name": "Nanakusa Gayu",
+          "id": "Season/Event:Nanakusa Gayu"
+        },
+        {
+          "name": "New Year's Eve",
+          "id": "Season/Event:New Year's Eve"
+        },
+        {
+          "name": "New Year's Day (Russia)",
+          "id": "Season/Event:New Year's Day (Russia)"
+        },
+        {
+          "name": "Shōgatsu (4)",
+          "id": "Season/Event:Shōgatsu (4)"
+        },
+        {
+          "name": "Chuseok",
+          "id": "Season/Event:Chuseok"
+        },
+        {
+          "name": "Dano Festival",
+          "id": "Season/Event:Dano Festival"
+        },
+        {
+          "name": "Winter Solstice (northern hemisphere) (3)",
+          "id": "Season/Event:Winter Solstice (northern hemisphere) (3)"
+        },
+        {
+          "name": "Nochevieja",
+          "id": "Season/Event:Nochevieja"
+        },
+        {
+          "name": "π Day",
+          "id": "Season/Event:π Day"
         },
         {
           "name": "Fireworks Show",
@@ -10995,6 +11103,10 @@
           "id": "Season/Event:Wedding Season (Able Sisters)"
         },
         {
+          "name": "Carnival of Venice",
+          "id": "Season/Event:Carnival of Venice"
+        },
+        {
           "name": "Festive shopping",
           "id": "Season/Event:Festive shopping"
         },
@@ -11009,6 +11121,10 @@
         {
           "name": "Father's Day (2)",
           "id": "Season/Event:Father's Day (2)"
+        },
+        {
+          "name": "Tomato Festival",
+          "id": "Season/Event:Tomato Festival"
         },
         {
           "name": "Cowherd & Weaver Girl Day",
@@ -11057,10 +11173,6 @@
         {
           "name": "Wedding Season (Nook Shopping 1)",
           "id": "Season/Event:Wedding Season (Nook Shopping 1)"
-        },
-        {
-          "name": "New Year's Eve",
-          "id": "Season/Event:New Year's Eve"
         },
         {
           "name": "Shichi-Go-San",
@@ -11159,12 +11271,12 @@
       "id": "Season/Event Exclusive",
       "children": [
         {
-          "name": "Yes",
-          "id": "Season/Event Exclusive:Yes"
-        },
-        {
           "name": "NA",
           "id": "Season/Event Exclusive:NA"
+        },
+        {
+          "name": "Yes",
+          "id": "Season/Event Exclusive:Yes"
         },
         {
           "name": "No",
@@ -14407,12 +14519,184 @@
           "id": "Variation:Birds"
         },
         {
-          "name": "Mustard",
-          "id": "Variation:Mustard"
+          "name": "Whipped-cream topping",
+          "id": "Variation:Whipped-cream topping"
+        },
+        {
+          "name": "Chocolate buttercream",
+          "id": "Variation:Chocolate buttercream"
+        },
+        {
+          "name": "Strawberry buttercream",
+          "id": "Variation:Strawberry buttercream"
+        },
+        {
+          "name": "Clear",
+          "id": "Variation:Clear"
+        },
+        {
+          "name": "Milk",
+          "id": "Variation:Milk"
+        },
+        {
+          "name": "Coffee-flavored milk",
+          "id": "Variation:Coffee-flavored milk"
+        },
+        {
+          "name": "Strawberry-flavored milk",
+          "id": "Variation:Strawberry-flavored milk"
+        },
+        {
+          "name": "Orange juice",
+          "id": "Variation:Orange juice"
+        },
+        {
+          "name": "Apple juice",
+          "id": "Variation:Apple juice"
+        },
+        {
+          "name": "Grape juice",
+          "id": "Variation:Grape juice"
+        },
+        {
+          "name": "Vegetable juice",
+          "id": "Variation:Vegetable juice"
+        },
+        {
+          "name": "Vegetable potage",
+          "id": "Variation:Vegetable potage"
+        },
+        {
+          "name": "Milk chocolate",
+          "id": "Variation:Milk chocolate"
+        },
+        {
+          "name": "Dark chocolate",
+          "id": "Variation:Dark chocolate"
+        },
+        {
+          "name": "White chocolate",
+          "id": "Variation:White chocolate"
+        },
+        {
+          "name": "Strawberry chocolate",
+          "id": "Variation:Strawberry chocolate"
+        },
+        {
+          "name": "Shoyu ramen",
+          "id": "Variation:Shoyu ramen"
+        },
+        {
+          "name": "Shio ramen",
+          "id": "Variation:Shio ramen"
+        },
+        {
+          "name": "Miso ramen",
+          "id": "Variation:Miso ramen"
+        },
+        {
+          "name": "Tom yum kung",
+          "id": "Variation:Tom yum kung"
+        },
+        {
+          "name": "Spicy ramen",
+          "id": "Variation:Spicy ramen"
+        },
+        {
+          "name": "Cat",
+          "id": "Variation:Cat"
+        },
+        {
+          "name": "Strawberry & flowers",
+          "id": "Variation:Strawberry & flowers"
+        },
+        {
+          "name": "Carrot",
+          "id": "Variation:Carrot"
+        },
+        {
+          "name": "Chocolate",
+          "id": "Variation:Chocolate"
+        },
+        {
+          "name": "Salted & cola",
+          "id": "Variation:Salted & cola"
+        },
+        {
+          "name": "Salted & iced coffee",
+          "id": "Variation:Salted & iced coffee"
+        },
+        {
+          "name": "Salted & orange juice",
+          "id": "Variation:Salted & orange juice"
+        },
+        {
+          "name": "Caramel & iced tea",
+          "id": "Variation:Caramel & iced tea"
+        },
+        {
+          "name": "Caramel & melon soda",
+          "id": "Variation:Caramel & melon soda"
+        },
+        {
+          "name": "Curry-flavored & berry soda",
+          "id": "Variation:Curry-flavored & berry soda"
+        },
+        {
+          "name": "Vanilla flavored",
+          "id": "Variation:Vanilla flavored"
+        },
+        {
+          "name": "Cocoa flavored",
+          "id": "Variation:Cocoa flavored"
+        },
+        {
+          "name": "Strawberry flavored",
+          "id": "Variation:Strawberry flavored"
+        },
+        {
+          "name": "Flavored chips",
+          "id": "Variation:Flavored chips"
+        },
+        {
+          "name": "Sour-cream chips",
+          "id": "Variation:Sour-cream chips"
+        },
+        {
+          "name": "Rice crackers",
+          "id": "Variation:Rice crackers"
+        },
+        {
+          "name": "Chocolate-chip cookies",
+          "id": "Variation:Chocolate-chip cookies"
+        },
+        {
+          "name": "Crackers",
+          "id": "Variation:Crackers"
+        },
+        {
+          "name": "Chocolates",
+          "id": "Variation:Chocolates"
+        },
+        {
+          "name": "Cheesy snacks",
+          "id": "Variation:Cheesy snacks"
+        },
+        {
+          "name": "Spicy snacks",
+          "id": "Variation:Spicy snacks"
         },
         {
           "name": "Chestnut",
           "id": "Variation:Chestnut"
+        },
+        {
+          "name": "Strawberry",
+          "id": "Variation:Strawberry"
+        },
+        {
+          "name": "Mustard",
+          "id": "Variation:Mustard"
         },
         {
           "name": "Baby pink",
@@ -14519,16 +14803,8 @@
           "id": "Variation:Black sesame"
         },
         {
-          "name": "Strawberry",
-          "id": "Variation:Strawberry"
-        },
-        {
           "name": "Gold leaf",
           "id": "Variation:Gold leaf"
-        },
-        {
-          "name": "Chocolate",
-          "id": "Variation:Chocolate"
         },
         {
           "name": "Natural & red",
@@ -16071,10 +16347,6 @@
         {
           "name": "2.0.0",
           "id": "Version Added:2.0.0"
-        },
-        {
-          "name": "NA",
-          "id": "Version Added:NA"
         }
       ]
     }

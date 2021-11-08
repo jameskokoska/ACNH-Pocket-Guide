@@ -561,6 +561,7 @@ class PopupImage extends Component {
             textProperty2={["Kit Cost"]}
             ending2={"x"}
           />
+          {this.state.item["checkListKey"]?.includes("clothing")?<VillagersGifts compact item={this.state.item}/>:<View/>}
         </View>
       </PopupInfoCustom>
     )
@@ -666,7 +667,7 @@ export class VillagersGifts extends Component {
         <View style={{flexWrap: 'wrap', flexDirection:"row",justifyContent:"center"}}>
           {chosenVillagers.map( (villager, index)=>{
               return(
-                <View key={villager["Name"]+index+this.props.item["Name"]} style={{margin:5}}>
+                <View key={villager["Name"]+index+this.props.item["Name"]} style={{margin:this.props.compact===true?2:5}}>
                   <View style={{width: 60,height: 60,borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.lightDarkAccent[global.darkMode]}}>
                     <FastImage
                       style={{height: 45,width: 45,resizeMode:'contain',}}

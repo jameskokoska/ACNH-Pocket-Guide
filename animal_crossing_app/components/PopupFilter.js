@@ -172,7 +172,7 @@ class PopupFilter extends Component {
       const categories = [{
         "name": "Type Categories",
         "id": "Type Categories",
-        "children": [{"name":"Bridge","id":"Category:Bridge"},{"name":"Incline","id":"Category:Incline"},{"name":"Doors","id":"Category:Door"},{"name":"Roofing","id":"Category:Roofing"},{"name":"Siding","id":"Category:Siding"},{"name":"Mailbox","id":"Category:Mailbox"}]
+        "children": [{"name":"Fencing","id":"Data Category:Fencing"},{"name":"Bridge","id":"Category:Bridge"},{"name":"Incline","id":"Category:Incline"},{"name":"Doors","id":"Category:Door"},{"name":"Roofing","id":"Category:Roofing"},{"name":"Siding","id":"Category:Siding"},{"name":"Mailbox","id":"Category:Mailbox"}]
       }]
       this.possibleFilters = [...this.sortByFilters,...this.possibleFilters,...categories]
     } else if(this.props.title==="Music"){

@@ -531,15 +531,15 @@
     ],
     "Main": [
         {
-            "English": "841 items",
-            "English (Europe)": "841 items",
+            "English": "845 items",
+            "English (Europe)": "845 items",
             "French": "828 items",
             "French (US)": "828 items",
-            "German": "841 items",
+            "German": "844 items",
             "Spanish": "828 items",
             "Spanish (US)": "824 items",
             "Russian": "828 items",
-            "Italian": "838 items",
+            "Italian": "843 items",
             "Dutch": "813 items",
             "Chinese": "0 items",
             "Chinese (Traditional)": "0 items",
@@ -706,8 +706,8 @@
         {
             "English": "Mystery Islands",
             "English (Europe)": "Mystery Islands",
-            "French": "Iles Mystéres",
-            "French (US)": "Iles Mystéres",
+            "French": "Iles Mystères",
+            "French (US)": "Iles Mystères",
             "German": "Meileninseln",
             "Spanish": "Islas Misteriosas",
             "Spanish (US)": "Islas Misteriosas",
@@ -1304,8 +1304,8 @@
         {
             "English": "Uncheck All",
             "English (Europe)": "Uncheck All",
-            "French": "Déselectionner tout",
-            "French (US)": "Déselectionner tout",
+            "French": "Désélectionner tout",
+            "French (US)": "Désélectionner tout",
             "German": "Auswahl aufheben",
             "Spanish": "Desmarcar Todo",
             "Spanish (US)": "Desmarcar Todo",
@@ -1720,8 +1720,8 @@
         {
             "English": "Art",
             "English (Europe)": "Art",
-            "French": "Art",
-            "French (US)": "Art",
+            "French": "Œuvres d'art",
+            "French (US)": "Œuvres d'art",
             "German": "Kunstwerke",
             "Spanish": "Arte",
             "Spanish (US)": "Arte",
@@ -1824,7 +1824,7 @@
         {
             "English": "You have no villagers added",
             "English (Europe)": "You have no villagers added",
-            "French": "Vous n'avez aucun villageois ajoutés",
+            "French": "Vous n'avez aucun villageois ajouté",
             "French (US)": "Vous n'avez aucun villageois ajoutés",
             "German": "Du hast keine Bewohner hinzugefügt",
             "Spanish": "No has añadido vecinos",
@@ -2084,8 +2084,8 @@
         {
             "English": "Art",
             "English (Europe)": "Art",
-            "French": "Art",
-            "French (US)": "Art",
+            "French": "Œuvres d'art",
+            "French (US)": "Œuvres d'art",
             "German": "Kunstwerke",
             "Spanish": "Arte",
             "Spanish (US)": "Arte",
@@ -3831,7 +3831,7 @@
             "Spanish": "Hoy",
             "Spanish (US)": "Hoy",
             "Russian": "Сегодня",
-            "Italian": "Domani",
+            "Italian": "Oggi",
             "Dutch": "Vandaag",
             "Portuguese": "Hoje"
         },
@@ -6249,7 +6249,7 @@
             "Spanish": "AAD Concepto 1",
             "Spanish (US)": "AAD Concepto 1",
             "Russian": "АДУ - Концепт 1",
-            "Italian": "Happy Home Academy Concept 1",
+            "Italian": "Concept Accademia delle Belle Case 1",
             "Dutch": "HHA-concept 1",
             "Portuguese": "Conceito HHA 1"
         },
@@ -6262,7 +6262,7 @@
             "Spanish": "AAD Concepto 2",
             "Spanish (US)": "AAD Concepto 2",
             "Russian": "АДУ - Концепт 2",
-            "Italian": "Happy Home Academy Concept 2",
+            "Italian": "Concept Accademia delle Belle Case 2",
             "Dutch": "HHA-concept 2",
             "Portuguese": "Conceito HHA 2"
         },
@@ -6275,7 +6275,7 @@
             "Spanish": "Serie AAD",
             "Spanish (US)": "Serie AAD",
             "Russian": "АДУ Серии",
-            "Italian": "Serie Happy Home Academy",
+            "Italian": "Serie Accademia delle Belle Case",
             "Dutch": "HHA-serie",
             "Portuguese": "HHA Series"
         },
@@ -6288,7 +6288,7 @@
             "Spanish": "Categoría AAD",
             "Spanish (US)": "Categoría AAD",
             "Russian": "АДУ Категории",
-            "Italian": "Categoria Happy Home Academy",
+            "Italian": "Categoria Accademia delle Belle Case",
             "Dutch": "HHA-categorie",
             "Portuguese": "Categoria HHA"
         },
@@ -6301,7 +6301,7 @@
             "Spanish": "Set AAD",
             "Spanish (US)": "Set AAD",
             "Russian": "АДУ Набор",
-            "Italian": "Set Happy Home Academy",
+            "Italian": "Set Accademia delle Belle Case",
             "Dutch": "HHA-set",
             "Portuguese": "Conjunto HHA"
         },
@@ -6664,7 +6664,7 @@
             "Spanish": "Personalidades faltantes:",
             "Spanish (US)": "Personalidades faltantes:",
             "Russian": "Не хватает типов личности жителей:",
-            "Italian": "Peronalità mancanti:",
+            "Italian": "Personalità mancanti:",
             "Dutch": "Ontbrekende persoonlijkheden:",
             "Portuguese": "Personalidades ausentes:"
         },
@@ -8702,7 +8702,7 @@
             "Spanish": "Insectos",
             "Spanish (US)": "Insectos",
             "Russian": "Насекомые",
-            "Italian": "Insett",
+            "Italian": "Insetti",
             "Dutch": "insecten",
             "Portuguese": "Insetos"
         },
@@ -9802,7 +9802,7 @@
             "English (Europe)": "Active Creatures has been moved to a separate page.",
             "French": "Les créatures actives ont été déplacées vers une page séparée.",
             "French (US)": "Les créatures actives ont été déplacées vers une page séparée.",
-            "German": "Aktive Kreaturen wurde auf eine separate Seite verschoben.",
+            "German": "Aktive Lebewesen wurde auf eine separate Seite verschoben.",
             "Spanish": "Active Creatures se ha movido a una página separada.",
             "Spanish (US)": "Active Creatures se ha movido a una página separada.",
             "Russian": "Активные существа перенесены на отдельную страницу.",
@@ -10568,7 +10568,7 @@
             "Spanish": "Nota: Tienes imágenes ocultas para evitar spoilers. Desactive esto en la página de Configuración para ver todas las imágenes.",
             "Spanish (US)": "Nota: Tienes imágenes ocultas para evitar spoilers. Desactive esto en la página de Configuración para ver todas las imágenes.",
             "Russian": "Примечание. У вас есть скрытые изображения, чтобы избежать спойлеров. Отключите это на странице настроек, чтобы просмотреть все изображения.",
-            "Italian": "Nota: alcune immagini nascoste per evitarti spoiler. Disabilitalo nella pagina Impostazioni per visualizzare tutte le immagini.",
+            "Italian": "Nota: alcune immagini sono nascoste per evitarti spoiler. Disabilitalo nella pagina Impostazioni per visualizzare tutte le immagini.",
             "Dutch": "Opmerking: je hebt afbeeldingen verborgen om spoilers te voorkomen. Schakel dit uit op de pagina Instellingen om alle afbeeldingen te bekijken.",
             "Portuguese": "Nota: Você tem imagens ocultas para evitar spoilers. Desative isso na página Configurações para visualizar todas as imagens."
         },
@@ -10659,7 +10659,7 @@
             "Spanish": "Retro",
             "Spanish (US)": "Retro",
             "Russian": "Ретро",
-            "Italian": "retrò",
+            "Italian": "Retrò",
             "Dutch": "Retro",
             "Portuguese": "Retro"
         },
@@ -10698,7 +10698,7 @@
             "Spanish": "Barato",
             "Spanish (US)": "Barato",
             "Russian": "Дешевый",
-            "Italian": "A buon mercato",
+            "Italian": "Economico",
             "Dutch": "Goedkoop",
             "Portuguese": "Barato"
         },
@@ -10737,7 +10737,7 @@
             "Spanish": "Monitor",
             "Spanish (US)": "Monitor",
             "Russian": "Монитор",
-            "Italian": "Tenere sotto controllo",
+            "Italian": "Monitor",
             "Dutch": "Toezicht houden op",
             "Portuguese": "Monitor"
         },
@@ -11192,7 +11192,7 @@
             "Spanish": "Haciendo campanas",
             "Spanish (US)": "Haciendo campanas",
             "Russian": "Делаем колокольчики",
-            "Italian": "Fare campane",
+            "Italian": "Fare soldi",
             "Dutch": "Bellen maken",
             "Portuguese": "Fazendo sinos"
         },
@@ -11218,7 +11218,7 @@
             "Spanish": "Rompiendo rocas",
             "Spanish (US)": "Rompiendo rocas",
             "Russian": "Разбивая скалы",
-            "Italian": "Rocce frantumanti",
+            "Italian": "Rompere le rocce",
             "Dutch": "Stenen breken",
             "Portuguese": "Quebrando pedras"
         },
@@ -11231,7 +11231,7 @@
             "Spanish": "Despertando a Gulliver",
             "Spanish (US)": "Despertando a Gulliver",
             "Russian": "Просыпающийся Гулливер",
-            "Italian": "Svegliarsi Gulliver",
+            "Italian": "Svegliare Gulliver",
             "Dutch": "Gulliver wakker maken",
             "Portuguese": "Acordando Gulliver"
         },
@@ -11270,7 +11270,7 @@
             "Spanish": "Excavando fósiles",
             "Spanish (US)": "Excavando fósiles",
             "Russian": "Копание окаменелостей",
-            "Italian": "Scavando fossili",
+            "Italian": "Scavare fossili",
             "Dutch": "Fossielen graven",
             "Portuguese": "Escavando fósseis"
         },
@@ -11309,7 +11309,7 @@
             "Spanish": "Vestirse con las Able Sisters",
             "Spanish (US)": "Vestirse con las Able Sisters",
             "Russian": "Нарядитесь в Able Sisters",
-            "Italian": "Vestirsi nelle Sorelle Abili",
+            "Italian": "Vestirsi da Ago e Filo",
             "Dutch": "Verkleden in de Able Sisters",
             "Portuguese": "Vestindo-se com as Irmãs Capazes"
         },
@@ -11368,12 +11368,36 @@
         {
             "English": "Food",
             "English (Europe)": "Food",
-            "German": "Essen"
+            "German": "Essen",
+            "Italian": "Cibo"
         },
         {
             "English": "To view recipes, go to the Recipes + Tools page",
             "English (Europe)": "To view recipes, go to the Recipes + Tools page",
-            "German": "Um Rezepte anzuzeigen, gehe auf die Seite Rezepte + Tools"
+            "German": "Um Rezepte anzuzeigen, gehe auf die Seite Rezepte + Tools",
+            "Italian": "Per vedere le ricette, vai alla pagina Ricette + Strumenti"
+        },
+        {
+            "English": "View Craftable items",
+            "English (Europe)": "View Craftable items",
+            "German": "Zeige herstellbare Gegenstände an",
+            "Italian": "Vedi oggetti costruibili"
+        },
+        {
+            "English": "Ceiling Decor",
+            "English (Europe)": "Ceiling Decor",
+            "German": "Deckendekoration",
+            "Italian": "Da soffitto"
+        },
+        {
+            "English": "Show craftable item variations",
+            "English (Europe)": "Show craftable item variations",
+            "German": "Zeige herstellbare Gegenstandsvariationen an",
+            "Italian": "Mostra varianti degli oggetti costruibili"
+        },
+        {
+            "English": "Tap the Heart to add villagers currently in your town.",
+            "English (Europe)": "Tap the Heart to add villagers currently in your town."
         }
     ],
     "Sources": [
@@ -11382,10 +11406,10 @@
             "English (Europe)": "130 items",
             "French": "99 items",
             "French (US)": "99 items",
-            "German": "99 items",
+            "German": "110 items",
             "Spanish": "95 items",
             "Spanish (US)": "50 items",
-            "Italian": "53 items",
+            "Italian": "130 items",
             "Dutch": "46 items",
             "Chinese": "0 items",
             "Chinese (Traditional)": "0 items",
@@ -11544,8 +11568,8 @@
         {
             "English": "High Friendship",
             "English (Europe)": "High Friendship",
-            "French": "Amitiée élevée",
-            "French (US)": "Amitiée élevée",
+            "French": "Amitié élevée",
+            "French (US)": "Amitié élevée",
             "German": "Hohes Freundschaftslevel",
             "Spanish": "Alta Amistad",
             "Spanish (US)": "Alta Amistad",
@@ -12053,6 +12077,7 @@
             "French (US)": "Fabriquer de bons outils",
             "German": "Altagswerkzeuge",
             "Spanish": "Herramientas apañadas",
+            "Italian": "Schemi strumenti molto buoni",
             "Russian": "Инструкции очень хороших инструментов",
             "Portuguese": "Receitas de ferramentas muito boas"
         },
@@ -12064,6 +12089,7 @@
             "German": "Häschentag- Flaschenpost",
             "Spanish": "Botella Caza Del Huevo",
             "Spanish (US)": "Botella Caza Del Huevo",
+            "Italian": "Bottiglia uovo",
             "Russian": "Яичная бутылка",
             "Portuguese": "Garrafa de ovo"
         },
@@ -12075,6 +12101,7 @@
             "German": "Häschentag-Ballon",
             "Spanish": "Globo Caza Del Huevo",
             "Spanish (US)": "Globo Caza Del Huevo",
+            "Italian": "Palloncino uovo",
             "Russian": "Яичный шарик",
             "Portuguese": "Balão de ovo"
         },
@@ -12086,6 +12113,7 @@
             "German": "sammel Erd-Glückseier ",
             "Spanish": "Recolectar Huevo Terrestres",
             "Spanish (US)": "Recolectar Huevo Terrestres",
+            "Italian": "Collezionando uova di terra",
             "Russian": "Сбор земляных яиц",
             "Portuguese": "Collecting earth eggs"
         },
@@ -12097,6 +12125,7 @@
             "German": "Lerne alle Häschentag-Outfit Bastelanleitungen ",
             "Spanish": "Aprender todos los vestidos DIY de la Caza Del Huevo",
             "Spanish (US)": "Aprender todos los vestidos DIY(Hazlo Tu Mismo) de la Caza Del Huevo",
+            "Italian": "Imparando tutti gli schemi dei vestiti uovo",
             "Russian": "Выучить все инструкции к яичным одеждам",
             "Portuguese": "Aprendendo todas as roupas de ovo DIYs"
         },
@@ -12107,6 +12136,7 @@
             "French (US)": "Déterrer les palourdes",
             "German": "Teppichmuscheln ausgraben ",
             "Spanish": "Desenterrar almejas",
+            "Italian": "Dissotterrando vongole",
             "Russian": "Выкопать ракушки",
             "Portuguese": "Desenterrando conchas"
         },
@@ -12117,6 +12147,7 @@
             "French (US)": "Plan pour les débutants",
             "German": "Bastelanleitungen für Anfänger ",
             "Spanish": "Bricolaje para principiantes",
+            "Italian": "Fai da te per principianti",
             "Russian": "Инструкции для новичков",
             "Portuguese": "DIY para Iniciantes"
         },
@@ -12128,6 +12159,7 @@
             "German": "Zerbrich 100 Äxte",
             "Spanish": "Romper 100 hachas",
             "Spanish (US)": "Romper 100 hachas",
+            "Italian": "Rompendo 100 asce",
             "Russian": "Сломать 100 топоров",
             "Portuguese": "Quebrando 100 machados"
         },
@@ -12138,6 +12170,7 @@
             "French (US)": "Compléter la section Insectes du Bébêtopédie",
             "German": "Alle Insekten in der Faunapädie App vervollständigen ",
             "Spanish": "Completar la Capturapedia de bichos",
+            "Italian": "Completando l'enciclopedia degli insetti",
             "Russian": "Собрать полную коллекцию насекомых",
             "Portuguese": "Completando Critterpedia de insetos"
         },
@@ -12148,6 +12181,7 @@
             "French (US)": "Compléter la section Poissons du Bébêtopédie",
             "German": "Alle Fische in der Faunapädie App vervollständigen ",
             "Spanish": "Completar la Capturapedia de peces",
+            "Italian": "Completando l'enciclopedia dei pesci",
             "Russian": "Собрать полную коллекцию рыб",
             "Portuguese": "Concluindo Critterpedia de peixe"
         },
@@ -12159,6 +12193,7 @@
             "German": "Hilf Gulliver 30 mal",
             "Spanish": "Ayuda a Gulliver 30 veces",
             "Spanish (US)": "Ayuda a Gulliver 30 veces",
+            "Italian": "Aiutando Gulliver 30 volte",
             "Russian": "Помочь Гулливеру 30 раз",
             "Portuguese": "Ajudando Gulliver 30 vezes"
         },
@@ -12169,6 +12204,7 @@
             "French (US)": "Bricolage tous azimuts",
             "German": "Teste deine Diy Fähigkeiten ",
             "Spanish": "Bricolaje para expertos",
+            "Italian": "Metti alla prova le tue abilità nel Fai da te",
             "Russian": "Проверить ваши умения мастерить",
             "Portuguese": "Teste suas habilidades de DIY"
         },
@@ -12179,6 +12215,7 @@
             "French (US)": "Plan de la Fête du Partage",
             "German": "Schlemmerfest Bastelanleitung",
             "Spanish": "Set del Día del Pavo",
+            "Italian": "Fai da te del giorno del Ringraziamento",
             "Russian": "Инструкции уютного дня индейки",
             "Portuguese": "DIY do dia do Pavão "
         },
@@ -12189,6 +12226,7 @@
             "French (US)": "Escapade du 1er Mai",
             "German": "Mai-Feierrei-Event",
             "Spanish": "Primero de Mayo",
+            "Italian": "Tour del primo maggio",
             "Russian": "Первомайский тур",
             "Portuguese": "Primeiro de Maio"
         },
@@ -12199,6 +12237,7 @@
             "French (US)": "Expertiser des fossiles",
             "German": "Fossilien analysieren lassen",
             "Spanish": "Examinar fósiles",
+            "Italian": "Facendo esaminare fossili",
             "Russian": "Пожертвовать ископаемые",
             "Portuguese": "Avaliando fósseis"
         },
@@ -12209,6 +12248,7 @@
             "French (US)": "Arbre feuillu",
             "German": "Hartholzbaum",
             "Spanish": "Árboles normales",
+            "Italian": "Legno duro",
             "Russian": "Дерево твёрдой породы",
             "Portuguese": "Árvores Normais"
         },
@@ -12219,6 +12259,7 @@
             "French (US)": "Faire un voeu sur les étoiles filantes",
             "German": "Sternschnuppen fangen",
             "Spanish": "Deseos a estrellas fugaces",
+            "Italian": "Esprimendo desideri con le stelle cadenti",
             "Russian": "Загадать желание на падающую звезду",
             "Portuguese": "Desejando as estrelas cadentes"
         },
@@ -12229,6 +12270,7 @@
             "French (US)": "Couper un bambou",
             "German": "Bambus Abholzen",
             "Spanish": "Talar un árbol de bambú",
+            "Italian": "Abbattendo piante di bambù",
             "Russian": "Срубить бамбук",
             "Portuguese": "Cortando uma árvore de bambu"
         },
@@ -12240,6 +12282,7 @@
             "German": "Ein Loch graben",
             "Spanish": "Lugar de excavación",
             "Spanish (US)": "Lugar de excavación",
+            "Italian": "Punto da cui scavare",
             "Russian": "Место для копания",
             "Portuguese": "Lugar de escavação "
         },
@@ -12251,6 +12294,7 @@
             "German": "Eine Bambussprosse einpflanzen ",
             "Spanish": "Plantar un brote de bambú",
             "Spanish (US)": "Plantar un brote de bambú",
+            "Italian": "Piantando un germoglio di bambù",
             "Russian": "Посадить бамбуковый саженец",
             "Portuguese": "Plantar um broto de bambu"
         },
@@ -12261,6 +12305,7 @@
             "French (US)": "Creuser un trou lumineux",
             "German": "Sterni-Grube",
             "Spanish": "Lugar de excavación brillante",
+            "Italian": "Punto luminoso da cui scavare",
             "Russian": "Светящееся место для копания",
             "Portuguese": "Ponto de escavação brilhante"
         },
@@ -12272,6 +12317,7 @@
             "German": "Blumen pflücken ",
             "Spanish": "Coger flores",
             "Spanish (US)": "Coger flores",
+            "Italian": "Raccogliendo fiori",
             "Russian": "Сбор цветов",
             "Portuguese": "Colhendo flores"
         },
@@ -12281,6 +12327,7 @@
             "French": "Reproduire",
             "French (US)": "Reproduire",
             "German": "Blumen züchten ",
+            "Italian": "Coltivando fiori",
             "Russian": "Разведение",
             "Portuguese": "Reproduzindo"
         },
@@ -12292,6 +12339,7 @@
             "German": "Nadelbaum",
             "Spanish": "Cedro",
             "Spanish (US)": "Cedro",
+            "Italian": "Albero di cedro",
             "Russian": "Кедр",
             "Portuguese": "Árvore Cedar"
         },
@@ -12302,6 +12350,7 @@
             "French (US)": "Déterrer un buisson complètement développé",
             "German": "Einen Busch ausgraben ",
             "Spanish": "Desenterrar un arbusto que ya ha crecido",
+            "Italian": "Estirpando un cespuglio maturo",
             "Russian": "Выкопать взрослый куст",
             "Portuguese": "Desenterrando um arbusto totalmente crescido"
         },
@@ -12312,6 +12361,7 @@
             "French (US)": "Planter un jeune cèdre",
             "German": "Einen Nadelbaumspross pflanzen ",
             "Spanish": "Plantar un cedro joven",
+            "Italian": "Piantando una piantina di cedro",
             "Russian": "Посадить саженец кедра",
             "Portuguese": "Plantando uma muda de cedar"
         },
@@ -12322,6 +12372,7 @@
             "French (US)": "Attraper avec un filet",
             "German": "Mit einem Kescher einfangen ",
             "Spanish": "Capturar con una red",
+            "Italian": "Catturando col retino",
             "Russian": "Поймать сеткой",
             "Portuguese": "Pegando com uma rede"
         },
@@ -12332,6 +12383,7 @@
             "French (US)": "Sur le sol",
             "German": "Auf dem Boden ",
             "Spanish": "Sobre el suelo",
+            "Italian": "Per terra",
             "Dutch": "Op de grond",
             "Russian": "На земле",
             "Portuguese": "No chão"
@@ -12343,6 +12395,7 @@
             "French (US)": "Secouer un arbre feuillu ou un cèdre",
             "German": "Einen Baum schütteln",
             "Spanish": "Sacudir un árbol normal o un cedro",
+            "Italian": "Scuotendo alberi da legno duro o cedri",
             "Russian": "Трясти дерево твёрдой породы",
             "Portuguese": "Sacudindo uma arvore normal ou cedar"
         },
@@ -12353,6 +12406,7 @@
             "French (US)": "Plonger sous l'eau",
             "German": "Stelle zum Tauchen",
             "Spanish": "Zona de buceo",
+            "Italian": "Punto di immersione",
             "Russian": "Место для ныряния",
             "Portuguese": "Ponto de Mergulho"
         },
@@ -12363,6 +12417,7 @@
             "French (US)": "Trou de palourde",
             "German": "Stelle zum Muschelausgraben",
             "Spanish": "Zona de desentierro de almejas",
+            "Italian": "Punto dove estrarre vongole",
             "Russian": "Место для откапывания ракушки",
             "Portuguese": "Local de escavação de moluscos"
         },
@@ -12374,6 +12429,7 @@
             "German": "Strand",
             "Spanish": "Playa",
             "Spanish (US)": "Playa",
+            "Italian": "Spiaggia",
             "Dutch": "Strand",
             "Russian": "Пляж",
             "Portuguese": "Praia"
@@ -12385,6 +12441,7 @@
             "French (US)": "Offrir un objet à un villageois",
             "German": "Botengang",
             "Spanish": "Entregar un objeto a un vecino",
+            "Italian": "Consegnando un oggetto a un abitante",
             "Russian": "Принести вещь жителю",
             "Portuguese": "Entregando item para um morador"
         },
@@ -12395,6 +12452,7 @@
             "French (US)": "Emballer un cadeau",
             "German": "Ein Geschenk verpacken ",
             "Spanish": "Envolver un regalo",
+            "Italian": "Impacchettando un regalo",
             "Dutch": "Een cadeau inpakken",
             "Russian": "Запаковать подарок",
             "Portuguese": "Embrulhando um presente"
@@ -12407,6 +12465,7 @@
             "German": "Kürbisse einsammeln",
             "Spanish": "Coger calabazas",
             "Spanish (US)": "Coger calabazas",
+            "Italian": "Raccogliendo zucche",
             "Dutch": "Pompoenen plukken",
             "Russian": "Собрать тыкву",
             "Portuguese": "Colhendo abóboras"
@@ -12418,6 +12477,7 @@
             "French (US)": "Couper un arbre",
             "German": "Einen Baum fällen",
             "Spanish": "Talar un árbol",
+            "Italian": "Abbattendo un albero",
             "Dutch": "Een boom omhakken",
             "Russian": "Срубить дерево",
             "Portuguese": "Cortando uma árvore"
@@ -12429,6 +12489,7 @@
             "French (US)": "Planter un jeune arbre",
             "German": "Einen Setzling einpflanzen ",
             "Spanish": "Plantar un árbol joven",
+            "Italian": "Piantando una piantina",
             "Dutch": "Een jonge boom planten",
             "Russian": "Посадить саженец",
             "Portuguese": "Plantar uma muda"
@@ -12441,6 +12502,7 @@
             "German": "5-Sterne Insel Image",
             "Spanish": "Estado de la ciudad 5 estrellas",
             "Spanish (US)": "Estado de la ciudad 5 estrellas",
+            "Italian": "Status da isola a 5 stelle",
             "Russian": "5-звёздочный статус города",
             "Portuguese": "Status de cidade 5 estrelas"
         },
@@ -12451,6 +12513,7 @@
             "French (US)": "Enterrer les clochettes dans un trou lumineux",
             "German": "Sternis in der Sterni-Grube verbuddeln ",
             "Spanish": "Enterrando bayas en un agujero brillante",
+            "Italian": "Sotterrando stelline in un punto luminoso",
             "Russian": "Закопать дини в светящееся точке",
             "Portuguese": "Enterrando bells em um local brilhante"
         },
@@ -12461,6 +12524,7 @@
             "French (US)": "Sac de graines",
             "German": "Saatbeutel",
             "Spanish": "Semillas",
+            "Italian": "Sacchetto di semi",
             "Russian": "Пакет с семенами",
             "Portuguese": "Saco de sementes"
         },
@@ -12471,6 +12535,7 @@
             "French (US)": "Déterrer une citrouille",
             "German": "Eine Kürbispflanze ausgraben ",
             "Spanish": "Desenterrar una calabaza",
+            "Italian": "Estirpando una pianta di zucca",
             "Russian": "Выкопать растение с тыквой",
             "Portuguese": "Desenterrando uma planta de abóbora"
         },
@@ -12481,6 +12546,7 @@
             "French (US)": "Navets pourris",
             "German": "Vergammelte Rüben",
             "Spanish": "Nabos estropeados",
+            "Italian": "Rape marce",
             "Russian": "Тухлые репки",
             "Portuguese": "Turnips estragadas"
         },
@@ -12492,6 +12558,7 @@
             "German": "Benutze eine Fontäne ",
             "Spanish": "Usa una bengala de tubo",
             "Spanish (US)": "Usa una bengala de tubo",
+            "Italian": "Usare un fuoco d'artificio a fontana",
             "Russian": "Использовать фейерверк-фонтан",
             "Portuguese": "Use uma fonte de fogos de artifício"
         },
@@ -12503,6 +12570,7 @@
             "German": "Verlorene Gegenstände nicht zurückgeben",
             "Spanish": "No devolver objeto perdido",
             "Spanish (US)": "No devolver objeto perdido",
+            "Italian": "Non restituire un oggetto smarrito",
             "Russian": "Не возвращать потерянную вещь",
             "Portuguese": "Não devolva o item perdido"
         },
@@ -12514,6 +12582,7 @@
             "German": "Einen gefundenen Gegenstand bei der Schatzsuche nicht zurückgeben",
             "Spanish": "No devuelvas el objeto de la búsqueda del tesoro",
             "Spanish (US)": "No devuelvas el objeto de la búsqueda del tesoro",
+            "Italian": "Non restituire un oggetto da caccia al tesoro",
             "Russian": "Не возвращать квестовое сокровище",
             "Portuguese": "Não devolva o item da missão do tesouro"
         },
@@ -12524,133 +12593,176 @@
             "French (US)": "Pêcher",
             "German": "Angeln",
             "Spanish": "Pescar",
+            "Italian": "Pescando",
             "Dutch": "Vissen",
             "Russian": "Рыбалка",
             "Portuguese": "Pescando"
         },
         {
             "English": "Saharah's Commune",
-            "English (Europe)": "Saharah's Commune"
+            "English (Europe)": "Saharah's Commune",
+            "Italian": "Comune di Sahara"
         },
         {
             "English": "Requires Katrina to see bad luck in your future",
-            "English (Europe)": "Requires Katrina to see bad luck in your future"
+            "English (Europe)": "Requires Katrina to see bad luck in your future",
+            "Italian": "Wanda deve predire sfortuna nel tuo futuro"
         },
         {
             "English": "Katrina's Cleansing Service",
-            "English (Europe)": "Katrina's Cleansing Service"
+            "English (Europe)": "Katrina's Cleansing Service",
+            "Italian": "Servizio purificazione di Wanda"
         },
         {
             "English": "Requires a Nintendo Switch Online membership",
-            "English (Europe)": "Requires a Nintendo Switch Online membership"
+            "English (Europe)": "Requires a Nintendo Switch Online membership",
+            "German": "Erfordert eine Nintendo Switch Online Mitgliedschaft",
+            "Italian": "Richiede iscrizione a Nintendo Switch Online"
         },
         {
             "English": "In the Special Items section in Nook Shopping, after inviting to Photopia with an amiibo ",
-            "English (Europe)": "In the Special Items section in Nook Shopping, after inviting to Photopia with an amiibo "
+            "English (Europe)": "In the Special Items section in Nook Shopping, after inviting to Photopia with an amiibo ",
+            "Italian": "Nella sezione Oggetti Speciali del Nook Shopping, dopo averli invitati a Fotopia con un amiibo"
         },
         {
             "English": "Available from Nook's Cranny; ",
-            "English (Europe)": "Available from Nook's Cranny; "
+            "English (Europe)": "Available from Nook's Cranny; ",
+            "Italian": "Disponibile nella Bottega di Nook"
         },
         {
             "English": "Available from Tom Nook during Countdown",
-            "English (Europe)": "Available from Tom Nook during Countdown"
+            "English (Europe)": "Available from Tom Nook during Countdown",
+            "German": "Verfügbar bei Tom Nook während des Countdowns",
+            "Italian": "Disponibile da Toom Nook durante il Countdown"
         },
         {
             "English": "Redd's Commune Raffle",
-            "English (Europe)": "Redd's Commune Raffle"
+            "English (Europe)": "Redd's Commune Raffle",
+            "Italian": "Lotteria della Comune di Volpolo"
         },
         {
             "English": "Kick's Commune",
-            "English (Europe)": "Kick's Commune"
+            "English (Europe)": "Kick's Commune",
+            "Italian": "Comune di Sciuscià"
         },
         {
             "English": "Gyroid",
-            "English (Europe)": "Gyroid"
+            "English (Europe)": "Gyroid",
+            "Italian": "Giroide"
         },
         {
             "English": "Digging up a carrot plant",
-            "English (Europe)": "Digging up a carrot plant"
+            "English (Europe)": "Digging up a carrot plant",
+            "German": "Eine Karottenpflanze ausgraben",
+            "Italian": "Estirpando una pianta di carote"
         },
         {
             "English": "Digging up a carrot plant",
-            "English (Europe)": "Digging up a carrot plant"
+            "English (Europe)": "Digging up a carrot plant",
+            "German": "Eine Karottenpflanze ausgraben",
+            "Italian": "Estirpando una pianta di carote"
         },
         {
             "English": "Digging up a potato plant",
-            "English (Europe)": "Digging up a potato plant"
+            "English (Europe)": "Digging up a potato plant",
+            "German": "Eine Kartoffelpflanze ausgraben",
+            "Italian": "Estirpando una pianta di patate"
         },
         {
             "English": "Digging up a sugarcane plant",
-            "English (Europe)": "Digging up a sugarcane plant"
+            "English (Europe)": "Digging up a sugarcane plant",
+            "German": "Eine Zuckerrohrpflanze ausgraben",
+            "Italian": "Estirpando una pianta di canna da zucchero"
         },
         {
             "English": "Digging up a tomato plant",
-            "English (Europe)": "Digging up a tomato plant"
+            "English (Europe)": "Digging up a tomato plant",
+            "German": "Eine Tomatenpflanze ausgraben",
+            "Italian": "Estirpando una pianta di pomodori"
         },
         {
             "English": "Digging up a wheat plant",
-            "English (Europe)": "Digging up a wheat plant"
+            "English (Europe)": "Digging up a wheat plant",
+            "Italian": "Estirpando una pianta di grano"
         },
         {
             "English": "Catching a horse mackerel",
-            "English (Europe)": "Catching a horse mackerel"
+            "English (Europe)": "Catching a horse mackerel",
+            "Italian": "Catturando un ippocampo"
         },
         {
             "English": "Catch an anchovy",
-            "English (Europe)": "Catch an anchovy"
+            "English (Europe)": "Catch an anchovy",
+            "Italian": "Pescando un'acciuga"
         },
         {
             "English": "Catching a barred knifejaw",
-            "English (Europe)": "Catching a barred knifejaw"
+            "English (Europe)": "Catching a barred knifejaw",
+            "Italian": "Catturando un ishidai"
         },
         {
             "English": "Basic Cooking Recipes",
-            "English (Europe)": "Basic Cooking Recipes"
+            "English (Europe)": "Basic Cooking Recipes",
+            "Italian": "Ricette di cucina basilari"
         },
         {
             "English": "Catching a blue marlin",
-            "English (Europe)": "Catching a blue marlin"
+            "English (Europe)": "Catching a blue marlin",
+            "German": "Einen Schwertfisch fangen",
+            "Italian": "Pescando un marlin blu"
         },
         {
             "English": "Catching a salmon",
-            "English (Europe)": "Catching a salmon"
+            "English (Europe)": "Catching a salmon",
+            "Italian": "Pescando un salmone"
         },
         {
             "English": "Be a Chef! DIY Recipes+",
-            "English (Europe)": "Be a Chef! DIY Recipes+"
+            "English (Europe)": "Be a Chef! DIY Recipes+",
+            "Italian": "Sii uno Chef! Ricette fai da te+"
         },
         {
             "English": "Turkey Day Recipes",
-            "English (Europe)": "Turkey Day Recipes"
+            "English (Europe)": "Turkey Day Recipes",
+            "German": "Schlemmerfest Rezepte",
+            "Italian": "Ricette del giorno del Ringraziamento"
         },
         {
             "English": "Catching a dab",
-            "English (Europe)": "Catching a dab"
+            "English (Europe)": "Catching a dab",
+            "Italian": "Catturando una platessa"
         },
         {
             "English": "Custom Fencing in a Flash",
-            "English (Europe)": "Custom Fencing in a Flash"
+            "English (Europe)": "Custom Fencing in a Flash",
+            "Italian": "Personalizza staccionate in un attimo"
         },
         {
             "English": "Catching a red snapper",
-            "English (Europe)": "Catching a red snapper"
+            "English (Europe)": "Catching a red snapper",
+            "Italian": "Pescando un lutiano rosso"
         },
         {
             "English": "Catching a olive flounder",
-            "English (Europe)": "Catching a olive flounder"
+            "English (Europe)": "Catching a olive flounder",
+            "Italian": "Pescando una sogliola"
         },
         {
             "English": "Catching a sea bass",
-            "English (Europe)": "Catching a sea bass"
+            "English (Europe)": "Catching a sea bass",
+            "German": "Einen Seebarsch fangen",
+            "Italian": "Pescando una spigola"
         },
         {
             "English": "Catching a squid",
-            "English (Europe)": "Catching a squid"
+            "English (Europe)": "Catching a squid",
+            "German": "Einen Tintenfisch fangen",
+            "Italian": "Catturando un polpo"
         },
         {
             "English": "New Reactions Notebook",
-            "English (Europe)": "New Reactions Notebook"
+            "English (Europe)": "New Reactions Notebook",
+            "Italian": "Quadernino delle nuove emozioni"
         }
     ],
     "Source Notes": [
@@ -12662,7 +12774,7 @@
             "German": "151 items",
             "Spanish": "123 items",
             "Spanish (US)": "114 items",
-            "Italian": "0 items",
+            "Italian": "3 items",
             "Dutch": "0 items",
             "Chinese": "0 items",
             "Chinese (Traditional)": "0 items",
@@ -12678,6 +12790,7 @@
             "German": "Erhältlich in Nook's Laden (beide Upgrade-Stufen) im einzigartigen Möbelslot",
             "Spanish": "Disponible en MiniNook (siempre y cuando esté mejorado) en la ranura de muebles única.",
             "Spanish (US)": "Disponible en Mininook (siempre y cuando esté mejorado) en la ranura de muebles única.",
+            "Italian": "Disponibile nella Bottega di Nook (in qualsiasi miglioramento) nel posto dei mobili unici.",
             "Russian": "Доступно в Лавке Нука (независимо от улучшения), в уникальной ячейке для мебели",
             "Portuguese": "Disponível no Nook's Cranny (qualquer nível de atualização) no slot de móveis exclusivo"
         },
@@ -12689,6 +12802,7 @@
             "German": "Erhältlich in Nook's Laden (nur aufgerüstet), im einzigartigen Möbelslot",
             "Spanish": "Disponible en MiniNook (siempre y cuando esté mejorado) en la ranura de muebles única.",
             "Spanish (US)": "Disponible en Mininook (siempre y cuando esté mejorado) en la ranura de muebles única.",
+            "Italian": "Disponibile nella Bottega di Nook (soltanto se migliorata) nello slot dei mobili unici.",
             "Russian": "Доступно в Лавке Нука (только после улучшения), в уникальной ячейке для мебели",
             "Portuguese": "Disponível no Nook's Cranny (apenas atualizado), no slot de móveis exclusivo"
         },
@@ -12700,6 +12814,7 @@
             "German": "Erhältlich in Nook's Laden (nur aufgerüstet), im dritten einzigartigen Möbelslot",
             "Spanish": "Disponible en MiniNook (siempre y cuando esté mejorado) en la tercera ranura de muebles única.",
             "Spanish (US)": "Disponible en Mininook (siempre y cuando esté mejorado) en la tercera ranura de muebles única.",
+            "Italian": "Disponibile nella Bottega di Nook (soltanto se migliorata) nel terzo slot dei mobili unici.",
             "Russian": "Доступно в Лавке Нука (только после улучшения), в третьей уникальной ячейке для мебели",
             "Portuguese": "Disponível no Nook's Cranny (atualizado apenas), no terceiro slot exclusivo para móveis"
         },
@@ -14125,8 +14240,8 @@
     ],
     "Event Names": [
         {
-            "English": "59 items",
-            "English (Europe)": "59 items",
+            "English": "71 items",
+            "English (Europe)": "71 items",
             "French": "52 items",
             "French (US)": "52 items",
             "German": "54 items",
@@ -14664,11 +14779,59 @@
         {
             "English": "Shichi-Go-San",
             "English (Europe)": "Shichi-Go-San"
+        },
+        {
+            "English": "Nook Friday",
+            "English (Europe)": "Nook Friday"
+        },
+        {
+            "English": "Winter Solstice (northern hemisphere) (2)",
+            "English (Europe)": "Winter Solstice (northern hemisphere) (2)"
+        },
+        {
+            "English": "Winter Solstice (northern hemisphere) (3)",
+            "English (Europe)": "Winter Solstice (northern hemisphere) (3)"
+        },
+        {
+            "English": "Summer Solstice (southern hemisphere) (2)",
+            "English (Europe)": "Summer Solstice (southern hemisphere) (2)"
+        },
+        {
+            "English": "Shōgatsu (4)",
+            "English (Europe)": "Shōgatsu (4)"
+        },
+        {
+            "English": "Shōgatsu (5)",
+            "English (Europe)": "Shōgatsu (5)"
+        },
+        {
+            "English": "Nanakusa Gayu",
+            "English (Europe)": "Nanakusa Gayu"
+        },
+        {
+            "English": "Carnival of Venice",
+            "English (Europe)": "Carnival of Venice"
+        },
+        {
+            "English": "Summer Solstice (northern hemisphere) (2)",
+            "English (Europe)": "Summer Solstice (northern hemisphere) (2)"
+        },
+        {
+            "English": "Winter Solstice (southern hemisphere) (2)",
+            "English (Europe)": "Winter Solstice (southern hemisphere) (2)"
+        },
+        {
+            "English": "Winter Solstice (southern hemisphere) (3)",
+            "English (Europe)": "Winter Solstice (southern hemisphere) (3)"
+        },
+        {
+            "English": "Tomato Festival",
+            "English (Europe)": "Tomato Festival"
         }
     ],
     "Missing Items": [
         {
-            "English": "45 items",
+            "English": "65 items",
             "English (Europe)": "45 items",
             "French": "45 items",
             "French (US)": "45 items",
@@ -15296,6 +15459,66 @@
             "Japanese": "イチゴのわたあめ",
             "Korean": "딸기맛 솜사탕",
             "Russian": "клубничн. сахарная вата"
+        },
+        {
+            "English": "blue cobblestones"
+        },
+        {
+            "English": "brown cobblestones"
+        },
+        {
+            "English": "chic cobblestones"
+        },
+        {
+            "English": "cobblestones"
+        },
+        {
+            "English": "gray cobblestones"
+        },
+        {
+            "English": "green cobblestones"
+        },
+        {
+            "English": "orange cobblestones"
+        },
+        {
+            "English": "red cobblestones"
+        },
+        {
+            "English": "Nook Friday"
+        },
+        {
+            "English": "Winter Solstice (northern hemisphere) (2)"
+        },
+        {
+            "English": "Winter Solstice (northern hemisphere) (3)"
+        },
+        {
+            "English": "Summer Solstice (southern hemisphere) (2)"
+        },
+        {
+            "English": "Shōgatsu (4)"
+        },
+        {
+            "English": "Shōgatsu (5)"
+        },
+        {
+            "English": "Nanakusa Gayu"
+        },
+        {
+            "English": "Carnival of Venice"
+        },
+        {
+            "English": "Summer Solstice (northern hemisphere) (2)"
+        },
+        {
+            "English": "Winter Solstice (southern hemisphere) (2)"
+        },
+        {
+            "English": "Winter Solstice (southern hemisphere) (3)"
+        },
+        {
+            "English": "Tomato Festival"
         }
     ],
     "Special Translations": [
@@ -15747,11 +15970,11 @@
     ],
     "Achievements": [
         {
-            "English": "904 items",
+            "English": "913 items",
             "English (Europe)": "904 items",
             "French": "817 items",
             "French (US)": "817 items",
-            "German": "817 items",
+            "German": "818 items",
             "Spanish": "105 items",
             "Spanish (US)": "0 items",
             "Italian": "0 items",
@@ -21690,7 +21913,8 @@
         },
         {
             "English": "King; Queen",
-            "English (Europe)": "King; Queen"
+            "English (Europe)": "King; Queen",
+            "German": "König; Königin"
         },
         {
             "English": "Writing a Cookbook?",
@@ -22019,6 +22243,33 @@
         {
             "English": "Stoic",
             "English (Europe)": "Stoic"
+        },
+        {
+            "English": "Learn a specified number of cooking DIY recipes"
+        },
+        {
+            "English": "Cook a specified number of foods"
+        },
+        {
+            "English": "Dig up your first gyroid"
+        },
+        {
+            "English": "Touch specified number of unique gyroids"
+        },
+        {
+            "English": "Plant a specified number of produce sprouts (replanting existing sprouts does not count)"
+        },
+        {
+            "English": "Harvest a specified number of produce"
+        },
+        {
+            "English": "Number of times you've gone on a Kapp'n tour"
+        },
+        {
+            "English": "Number of days you've gotten coffee from Brewster"
+        },
+        {
+            "English": "Number of days you've participated in group stretching"
         }
     ],
     "Cards": [

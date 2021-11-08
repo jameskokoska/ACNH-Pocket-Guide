@@ -26,6 +26,7 @@ import {PopupBottomCustom} from "./Popup"
 import {gameVersion, museumCategories} from "../Changelog"
 import GyroidPopup from '../popups/GyroidPopup';
 import FoodPopup from '../popups/FoodPopup';
+import LottieView from 'lottie-react-native';
 
 //use tabs={false} if the page doesn't have  the tab bar
 
@@ -143,6 +144,7 @@ function ListPage(props){
     setSearchFilters(searchFilters);
   }
 
+  const [loading, setLoading] = useState(false)
   const [data, setData] = useState("empty")
   const [possibleFiltersState, setPossibleFilters] = useState("empty")
   const popupFilter = React.useRef(null);
@@ -155,156 +157,169 @@ function ListPage(props){
   }, [])
 
   useEffect(()=>{
-    var dataUpdated = [];
-    var previousVariation = "";
-    var item;
-    var dataLoaded2D = determineDataGlobal(props.dataGlobalName);
+    setLoading(true)
+    setTimeout(async () => {
+      var dataUpdated = [];
+      var previousVariation = "";
+      var item;
+      var dataLoaded2D = determineDataGlobal(props.dataGlobalName);
 
-    var currentVillagerFilters;
-    var currentVillagerFiltersInverse;
-    if(props.title==="Obtainable DIYs" || props.title==="Obtainable Reactions" || props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions"){
-      currentVillagerFilters = getCurrentVillagerFilters();
-      currentVillagerFiltersInverse = getInverseVillagerFilters();
-    }
-    
-    // console.log(props.currentSetFilters)
-    var searchCategoryOnly = false;
-    for(var y = 0; y < searchFilters.length; y++){
-      if(searchFilters[y].includes("Data Category")){
-        searchCategoryOnly = true;
-      } else if (!searchFilters[y].includes("Collected")){
-        searchCategoryOnly = false;
-        break;
+      var currentVillagerFilters;
+      var currentVillagerFiltersInverse;
+      if(props.title==="Obtainable DIYs" || props.title==="Obtainable Reactions" || props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions"){
+        currentVillagerFilters = getCurrentVillagerFilters();
+        currentVillagerFiltersInverse = getInverseVillagerFilters();
       }
-    }
-
-    var searchActual = searchFilters;
-    if(props.filterCollectedOnly){
-      searchActual = ["Collected"];
-    // } else if (props.newItems){
-    //   searchActual = ["New version"];
-    // } else if (props.wishlistItems){
-    //   searchActual = ["Wishlist",...searchFilters]; //todo add wishlist filtering eventually
-    } else if (props.villagerGifts) {
-      searchActual = [...props.villagerGiftsFilters,...searchActual];
-    } else if (props.itemIDs!==undefined && props.itemIDs!=="") {
-      searchActual = ["SearchIDs"]
-    } else if (props.title==="Obtainable DIYs" || props.title==="Obtainable Reactions") {
-      searchActual = [...currentVillagerFilters,...searchActual];
-    } else if (props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions") {
-      searchActual = [...currentVillagerFiltersInverse,...searchActual];
-      if(currentVillagerFiltersInverse.length===0){
-        searchActual = [":"];
-      }
-    } else if (props.currentSetFilters!==undefined && props.currentSetFilters!="") {
-      searchActual = [...props.currentSetFilters,...searchActual];
-    }
-
-    console.log(searchActual)
-    //organize filters into categories
-    var filters = {}
-    var filterCategory = ""
-    var filterCategoriesDone = []
-    for(var p = 0; p < searchActual.length; p++){
-      if(searchActual[p].includes(":")){
-        filterCategory = searchActual[p].split(":")[0]
-        var filtersWithin = []
-        if(!filterCategoriesDone.includes(searchActual[p].split(":")[0])){
-          for(var w = 0; w < searchActual.length; w++){
-            if(searchActual[w].includes(":")){
-              if(searchActual[w].split(":")[0]===filterCategory){
-                filtersWithin.push(searchActual[w].split(":")[1])
-              }
-            }
-          }
-          filters[filterCategory]=filtersWithin
-          filterCategoriesDone.push(filterCategory)
+      
+      // console.log(props.currentSetFilters)
+      var searchCategoryOnly = false;
+      for(var y = 0; y < searchFilters.length; y++){
+        if(searchFilters[y].includes("Data Category")){
+          searchCategoryOnly = true;
+        } else if (!searchFilters[y].includes("Collected")){
+          searchCategoryOnly = false;
+          break;
         }
       }
-    }
-    // console.log(filters)
-    
 
-    for(var j = 0; j < dataLoaded2D.length; j++){
-      var dataLoaded = dataLoaded2D[j];
+      var searchActual = searchFilters;
+      if(props.filterCollectedOnly){
+        searchActual = ["Collected"];
+      // } else if (props.newItems){
+      //   searchActual = ["New version"];
+      // } else if (props.wishlistItems){
+      //   searchActual = ["Wishlist",...searchFilters]; //todo add wishlist filtering eventually
+      } else if (props.villagerGifts) {
+        searchActual = [...props.villagerGiftsFilters,...searchActual];
+      } else if (props.itemIDs!==undefined && props.itemIDs!=="") {
+        searchActual = ["SearchIDs"]
+      } else if (props.title==="Obtainable DIYs" || props.title==="Obtainable Reactions") {
+        searchActual = [...currentVillagerFilters,...searchActual];
+      } else if (props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions") {
+        searchActual = [...currentVillagerFiltersInverse,...searchActual];
+        if(currentVillagerFiltersInverse.length===0){
+          searchActual = [":"];
+        }
+      } else if (props.currentSetFilters!==undefined && props.currentSetFilters!="") {
+        searchActual = [...props.currentSetFilters,...searchActual];
+      }
 
-      for(var i = 0; i < dataLoaded.length; i++){
-        item = dataLoaded[i];
-        //Loop through the specific search criteria specified for this dataset
-        for(var x = 0; x < props.searchKey[j].length; x++){
-          var searchFound = false;
-          var filterFound = false;
-          var showUncraftableVar = true;
-          var showPartiallyFoundOnly = true;
-          for(var z = 0; z < searchActual.length; z++){
-            // if(searchActual.includes("New version") && props.newItems && item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===gameVersion){
-            //   filterFound = true;
-            //   break;
-            // } else if (searchActual.includes("New version") && props.newItems){
-            //   filterFound = false;
-            //   break;
-            // } 
-            if(searchActual.includes("Wishlist") && props.wishlistItems && global.collectionList.includes("wishlist"+item["checkListKey"])){
-              filterFound = true;
-              break;
-            } else if (searchActual.includes("Wishlist") && props.wishlistItems){
-              filterFound = false;
-              break;
-            } else if (searchActual.includes("SearchIDs")) {
-              if(compareItemID(props.itemIDs, item)){
-                filterFound = true;
-              } else {
-                filterFound = false;
-                searchFound= false;
-              }
-              break;
-            } else if(item["Data Category"]!==undefined && item["Data Category"]==="Art" && item["Genuine"]!==undefined && item["Genuine"]!=="Yes"){
-              //Fix art, remove fake art from list no matter what
-              break;
-            }
-            //Check category
-            var searchCategory = true;
-            for(var y = 0; y < searchActual.length; y++){
-              if(searchActual[y].includes("Data Category")){
-                //Category selected
-                if(item[searchActual[y].split(":")[0]]!==undefined && item[searchActual[y].split(":")[0]].toLowerCase()===searchActual[y].split(":")[1].toLowerCase()){
-                  //Item in selected category
-                  searchCategory = true;
-                  break;
-                } else {
-                  searchCategory = false;
+      console.log(searchActual)
+      //organize filters into categories
+      var filters = {}
+      var filterCategory = ""
+      var filterCategoriesDone = []
+      for(var p = 0; p < searchActual.length; p++){
+        if(searchActual[p].includes(":")){
+          filterCategory = searchActual[p].split(":")[0]
+          var filtersWithin = []
+          if(!filterCategoriesDone.includes(searchActual[p].split(":")[0])){
+            for(var w = 0; w < searchActual.length; w++){
+              if(searchActual[w].includes(":")){
+                if(searchActual[w].split(":")[0]===filterCategory){
+                  filtersWithin.push(searchActual[w].split(":")[1])
                 }
               }
             }
-            //If the property is in search, not needed
-            // if(props.searchKey[j].includes(search[z].split("-")[0])){
-            //If property is Collected
-            var searchCollected = true;
-            if(searchActual.includes("Collected") || props.filterCollectedOnly){
-              searchCollected = false;
-              if(global.collectionList.includes(item["checkListKey"])){
-                searchCollected = true;
-                if(searchActual.length===1 || props.filterCollectedOnly){
+            filters[filterCategory]=filtersWithin
+            filterCategoriesDone.push(filterCategory)
+          }
+        }
+      }
+      // console.log(filters)
+      
+
+      for(var j = 0; j < dataLoaded2D.length; j++){
+        var dataLoaded = dataLoaded2D[j];
+
+        for(var i = 0; i < dataLoaded.length; i++){
+          item = dataLoaded[i];
+          //Loop through the specific search criteria specified for this dataset
+          for(var x = 0; x < props.searchKey[j].length; x++){
+            var searchFound = false;
+            var filterFound = false;
+            var showUncraftableVar = true;
+            var showPartiallyFoundOnly = true;
+            for(var z = 0; z < searchActual.length; z++){
+              // if(searchActual.includes("New version") && props.newItems && item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===gameVersion){
+              //   filterFound = true;
+              //   break;
+              // } else if (searchActual.includes("New version") && props.newItems){
+              //   filterFound = false;
+              //   break;
+              // } 
+              if(searchActual.includes("Wishlist") && props.wishlistItems && global.collectionList.includes("wishlist"+item["checkListKey"])){
+                filterFound = true;
+                break;
+              } else if (searchActual.includes("Wishlist") && props.wishlistItems){
+                filterFound = false;
+                break;
+              } else if (searchActual.includes("SearchIDs")) {
+                if(compareItemID(props.itemIDs, item)){
                   filterFound = true;
-                  //Only check collected filter
-                  if(searchCollected && props.filterCollectedOnly){
+                } else {
+                  filterFound = false;
+                  searchFound= false;
+                }
+                break;
+              } else if(item["Data Category"]!==undefined && item["Data Category"]==="Art" && item["Genuine"]!==undefined && item["Genuine"]!=="Yes"){
+                //Fix art, remove fake art from list no matter what
+                break;
+              }
+              //Check category
+              var searchCategory = true;
+              for(var y = 0; y < searchActual.length; y++){
+                if(searchActual[y].includes("Data Category")){
+                  //Category selected
+                  if(item[searchActual[y].split(":")[0]]!==undefined && item[searchActual[y].split(":")[0]].toLowerCase()===searchActual[y].split(":")[1].toLowerCase()){
+                    //Item in selected category
+                    searchCategory = true;
+                    break;
+                  } else {
+                    searchCategory = false;
+                  }
+                }
+              }
+              //If the property is in search, not needed
+              // if(props.searchKey[j].includes(search[z].split("-")[0])){
+              //If property is Collected
+              var searchCollected = true;
+              if(searchActual.includes("Collected") || props.filterCollectedOnly){
+                searchCollected = false;
+                if(global.collectionList.includes(item["checkListKey"])){
+                  searchCollected = true;
+                  if(searchActual.length===1 || props.filterCollectedOnly){
+                    filterFound = true;
+                    //Only check collected filter
+                    if(searchCollected && props.filterCollectedOnly){
+                      filterFound = true;
+                      break;
+                    }
+                    break;
+                  }
+                }
+              } else if(searchActual.includes("Not Collected")){
+                searchCollected = false;
+                //Not collected: remove variations (use only base item)
+                //Don't need to check data type because each type will be looped through and then move on to another data set type
+                if(!global.collectionList.includes(item["checkListKey"]) && i-1 >= 0 && dataLoaded[i-1]["Name"]!==item["Name"]){
+                  searchCollected = true;
+                  if(searchActual.length===1){
                     filterFound = true;
                     break;
                   }
-                  break;
+                } else if (i-1<0) {
+                  if(!global.collectionList.includes(item["checkListKey"])){
+                    searchCollected = true;
+                    if(searchActual.length===1){
+                      filterFound = true;
+                      break;
+                    }
+                  }
                 }
-              }
-            } else if(searchActual.includes("Not Collected")){
-              searchCollected = false;
-              //Not collected: remove variations (use only base item)
-              //Don't need to check data type because each type will be looped through and then move on to another data set type
-              if(!global.collectionList.includes(item["checkListKey"]) && i-1 >= 0 && dataLoaded[i-1]["Name"]!==item["Name"]){
-                searchCollected = true;
-                if(searchActual.length===1){
-                  filterFound = true;
-                  break;
-                }
-              } else if (i-1<0) {
+              } else if(searchActual.includes("Not Collected (Keep variations)")){
+                searchCollected = false;
+                //Not collected: remove variations (use only base item)
                 if(!global.collectionList.includes(item["checkListKey"])){
                   searchCollected = true;
                   if(searchActual.length===1){
@@ -313,377 +328,376 @@ function ListPage(props){
                   }
                 }
               }
-            } else if(searchActual.includes("Not Collected (Keep variations)")){
-              searchCollected = false;
-              //Not collected: remove variations (use only base item)
-              if(!global.collectionList.includes(item["checkListKey"])){
-                searchCollected = true;
-                if(searchActual.length===1){
-                  filterFound = true;
-                  break;
+              if(searchActual.includes("Collected")&&(searchActual.includes("Not Collected")||searchActual.includes("Not Collected (Keep variations)"))){
+                searchCollected=true;
+              }
+              if (searchActual.includes("Partially collected variations")){
+                if(allVariationsChecked(item, item.index)){
+                  showPartiallyFoundOnly = false;
+                } else {
+                  showPartiallyFoundOnly = true;
+                  searchCollected = true;
+                }
+                if((searchActual.includes("Collected")||searchActual.includes("Not Collected")) && searchCollected){
+                  showPartiallyFoundOnly = true;
                 }
               }
-            }
-            if(searchActual.includes("Collected")&&(searchActual.includes("Not Collected")||searchActual.includes("Not Collected (Keep variations)"))){
-              searchCollected=true;
-            }
-            if (searchActual.includes("Partially collected variations")){
-              if(allVariationsChecked(item, item.index)){
-                showPartiallyFoundOnly = false;
-              } else {
-                showPartiallyFoundOnly = true;
-                searchCollected = true;
-              }
-              if((searchActual.includes("Collected")||searchActual.includes("Not Collected")) && searchCollected){
-                showPartiallyFoundOnly = true;
-              }
-            }
 
-            //special case for categories
-            if(props.title==="Obtainable DIYs" || props.title==="Obtainable Reactions" || props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions"){
-              if(searchCollected && item[searchActual[z].split(":")[0]]!==undefined && item[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
-                if((props.title==="Obtainable DIYs" || props.title==="Unobtainable DIYs") && item.checkListKey.includes("recipesCheckList")){
-                  filterFound = true;
-                  break;
-                } else if((props.title==="Obtainable Reactions" || props.title==="Unobtainable Reactions") && item.checkListKey.includes("emojiCheckList")){
-                  filterFound = true;
-                  break;
+              //special case for categories
+              if(props.title==="Obtainable DIYs" || props.title==="Obtainable Reactions" || props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions"){
+                if(searchCollected && item[searchActual[z].split(":")[0]]!==undefined && item[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
+                  if((props.title==="Obtainable DIYs" || props.title==="Unobtainable DIYs") && item.checkListKey.includes("recipesCheckList")){
+                    filterFound = true;
+                    break;
+                  } else if((props.title==="Obtainable Reactions" || props.title==="Unobtainable Reactions") && item.checkListKey.includes("emojiCheckList")){
+                    filterFound = true;
+                    break;
+                  } else {
+                    filterFound = false;
+                    continue;
+                  }
                 } else {
                   filterFound = false;
                   continue;
                 }
-              } else {
-                filterFound = false;
-                continue;
               }
-            }
-            else if(searchCollected && (props.villagerGifts===true && item["Color 1"]!==undefined && item["Color 2"]!==undefined && item["Style 1"]!==undefined && item["Style 2"]!==undefined) &&
-              (item["Color 1"].includes(searchActual[0])  || 
-              item["Color 2"].includes(searchActual[1])  || 
-              item["Color 2"].includes(searchActual[0])  || 
-              item["Color 1"].includes(searchActual[1])   ) && (
-              item["Style 1"].includes(searchActual[2])  || 
-              item["Style 2"].includes(searchActual[3])  || 
-              item["Style 2"].includes(searchActual[2])  || 
-              item["Style 1"].includes(searchActual[3]) )
-            ){
-              if(searchActual.includes("Villager Equippable:Yes")||searchActual.includes("Villager Equippable:No")){
-                if((item["Villager Equippable"]==="Yes" && searchActual.includes("Villager Equippable:Yes")) || (item["Villager Equippable"]==="No" && searchActual.includes("Villager Equippable:No"))){
-                  filterFound = true;
+              else if(searchCollected && (props.villagerGifts===true && item["Color 1"]!==undefined && item["Color 2"]!==undefined && item["Style 1"]!==undefined && item["Style 2"]!==undefined) &&
+                (item["Color 1"].includes(searchActual[0])  || 
+                item["Color 2"].includes(searchActual[1])  || 
+                item["Color 2"].includes(searchActual[0])  || 
+                item["Color 1"].includes(searchActual[1])   ) && (
+                item["Style 1"].includes(searchActual[2])  || 
+                item["Style 2"].includes(searchActual[3])  || 
+                item["Style 2"].includes(searchActual[2])  || 
+                item["Style 1"].includes(searchActual[3]) )
+              ){
+                if(searchActual.includes("Villager Equippable:Yes")||searchActual.includes("Villager Equippable:No")){
+                  if((item["Villager Equippable"]==="Yes" && searchActual.includes("Villager Equippable:Yes")) || (item["Villager Equippable"]==="No" && searchActual.includes("Villager Equippable:No"))){
+                    filterFound = true;
+                  } else {
+                    filterFound = false;
+                    break;
+                  }
                 } else {
-                  filterFound = false;
+                  filterFound = true;
                   break;
                 }
-              } else {
-                filterFound = true;
+              } else if(props.villagerGifts===true){
+                filterFound = false;
                 break;
-              }
-            } else if(props.villagerGifts===true){
-              filterFound = false;
-              break;
-            } 
-            //Only check the property selected
-            else if((searchCollected) && (searchCategory || searchCategoryOnly) && (!searchActual[z].includes("Data Category") || searchCategoryOnly)){
-              filterFound = true;
-              for(var f = 0; f<Object.keys(filters).length; f++){
-                var filterCategory = Object.keys(filters)[f];
-                var filterCurrentFound = false;
-                for(var e = 0; e<filters[filterCategory].length; e++){
-                  //check if split by semicolon
-                  if(item[filterCategory]!==undefined){
-                    var allEntries = item[filterCategory].split("; ")
-                    for(var o = 0; o<allEntries.length; o++){
-                      if(allEntries[o]!==undefined && allEntries[o].toLowerCase()===filters[filterCategory][e].toLowerCase()){
-                        filterCurrentFound = true
-                        break;
-                      } 
+              } 
+              //Only check the property selected
+              else if((searchCollected) && (searchCategory || searchCategoryOnly) && (!searchActual[z].includes("Data Category") || searchCategoryOnly)){
+                filterFound = true;
+                for(var f = 0; f<Object.keys(filters).length; f++){
+                  var filterCategory = Object.keys(filters)[f];
+                  var filterCurrentFound = false;
+                  for(var e = 0; e<filters[filterCategory].length; e++){
+                    //check if split by semicolon
+                    if(item[filterCategory]!==undefined){
+                      var allEntries = item[filterCategory].split("; ")
+                      for(var o = 0; o<allEntries.length; o++){
+                        if(allEntries[o]!==undefined && allEntries[o].toLowerCase()===filters[filterCategory][e].toLowerCase()){
+                          filterCurrentFound = true
+                          break;
+                        } 
+                      }
+                    }
+                    if(item[filterCategory]!==undefined && item[filterCategory].toLowerCase()===filters[filterCategory][e].toLowerCase()){
+                      filterCurrentFound = true
+                      break;
                     }
                   }
-                  if(item[filterCategory]!==undefined && item[filterCategory].toLowerCase()===filters[filterCategory][e].toLowerCase()){
-                    filterCurrentFound = true
+                  if(filterCurrentFound && props.noStackFilters){
+                    filterFound = true;
+                    break;
+                  } else if(filterCurrentFound===false){
+                    filterFound = false;
                     break;
                   }
                 }
-                if(filterCurrentFound && props.noStackFilters){
-                  filterFound = true;
-                  break;
-                } else if(filterCurrentFound===false){
-                  filterFound = false;
-                  break;
-                }
-              }
-              showUncraftableVar = true;
-              if(searchActual.includes("Show uncraftable item variations") && item["Body Customize"] !==undefined && item["Body Customize"] ==="No" && item["Variant ID"] !==undefined && item["Variant ID"] !=="NA"){
                 showUncraftableVar = true;
-              } else if (searchActual.includes("Show uncraftable item variations")){
-                showUncraftableVar = false;
-              }
+                if(searchActual.includes("Show uncraftable item variations") && item["Body Customize"] !==undefined && item["Body Customize"] ==="No" && item["Variant ID"] !==undefined && item["Variant ID"] !=="NA"){
+                  showUncraftableVar = true;
+                } else if (searchActual.includes("Show uncraftable item variations")){
+                  showUncraftableVar = false;
+                }
 
-              if(searchActual.includes("Show craftable item variations") && ((item["Pattern Customize"] !==undefined && item["Pattern Customize"] ==="No") || (item["Pattern Customize"] ===undefined)) && ((item["Body Customize"] !==undefined && item["Body Customize"] ==="No") || (item["Body Customize"] ===undefined)) && item["Variant ID"] !==undefined && item["Variant ID"] !=="NA"){
-                showUncraftableVar = false;
-              } else if (searchActual.includes("Show craftable item variations") && item["Variant ID"] !==undefined && item["Variant ID"] ==="NA"){
-                showUncraftableVar = false;
-              } else if (searchActual.includes("Show craftable item variations") && item["Kit Cost"]===undefined){
-                showUncraftableVar = false;
+                if(searchActual.includes("Show craftable item variations") && ((item["Pattern Customize"] !==undefined && item["Pattern Customize"] ==="No") || (item["Pattern Customize"] ===undefined)) && ((item["Body Customize"] !==undefined && item["Body Customize"] ==="No") || (item["Body Customize"] ===undefined)) && item["Variant ID"] !==undefined && item["Variant ID"] !=="NA"){
+                  showUncraftableVar = false;
+                } else if (searchActual.includes("Show craftable item variations") && item["Variant ID"] !==undefined && item["Variant ID"] ==="NA"){
+                  showUncraftableVar = false;
+                } else if (searchActual.includes("Show craftable item variations") && item["Kit Cost"]===undefined){
+                  showUncraftableVar = false;
+                }
+                // if( item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
+                //   filterFound = true;
+                // } else if (item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].includes("; ")){
+                //   var allEntries = item.[searchActual[z].split(":")[0]].split("; ")
+                //   for(var o = 0; o<allEntries.length; o++){
+                //     if(allEntries[o]!==undefined && allEntries[o].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
+                //       filterFound = true;
+                //     } 
+                //   }
+                // } else if (searchActual[z].includes(":")){
+                //   filterFound = false;
+                //   break;
+                // }
+                // if(filterFound){
+                //   break;
+                // }
               }
-              // if( item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
-              //   filterFound = true;
-              // } else if (item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].includes("; ")){
-              //   var allEntries = item.[searchActual[z].split(":")[0]].split("; ")
-              //   for(var o = 0; o<allEntries.length; o++){
-              //     if(allEntries[o]!==undefined && allEntries[o].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
-              //       filterFound = true;
-              //     } 
-              //   }
-              // } else if (searchActual[z].includes(":")){
-              //   filterFound = false;
-              //   break;
-              // }
-              // if(filterFound){
-              //   break;
               // }
             }
-            // }
-          }
-          
-          if(item[props.searchKey[j][x]]!==undefined){
-            //Translate search attribute from database
-            //Search translations done here
-            // searchFound = attemptToTranslateItem(item.[props.searchKey[j][x]]).toLowerCase().includes(search.toLowerCase())
-            searchFound = removeAccents(item[props.searchKey[j][x]].toLowerCase()).includes(removeAccents(search.toLowerCase()))
-          }
-          //&&((!props.wishlistItems&&!props.filterCollectedOnly&&!props.newItems)||searchFound)
-          if(showPartiallyFoundOnly && showUncraftableVar && (search==="" || searchFound) && (filterFound || searchActual.length === 0)){
-            //Search result found...
-              //If recipes item page, and its not DIY, remove
-              if(props.recipes){
-                if(item["DIY"]!=="Yes"){
-                  continue;
+            
+            if(item[props.searchKey[j][x]]!==undefined){
+              //Translate search attribute from database
+              //Search translations done here
+              // searchFound = attemptToTranslateItem(item.[props.searchKey[j][x]]).toLowerCase().includes(search.toLowerCase())
+              searchFound = removeAccents(item[props.searchKey[j][x]].toLowerCase()).includes(removeAccents(search.toLowerCase()))
+            }
+            //&&((!props.wishlistItems&&!props.filterCollectedOnly&&!props.newItems)||searchFound)
+            if(showPartiallyFoundOnly && showUncraftableVar && (search==="" || searchFound) && (filterFound || searchActual.length === 0)){
+              //Search result found...
+                //If recipes item page, and its not DIY, remove
+                if(props.recipes){
+                  if(item["DIY"]!=="Yes"){
+                    continue;
+                  }
                 }
-              }
-              //If current active creatures, don't add it if not active
-              if(props.activeCreatures){
-                var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH "
-                var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
-                if(!isActive2(item[hemispherePre+currentMonthShort],getCurrentDateObject().getHours())){
-                  continue;
+                //If current active creatures, don't add it if not active
+                if(props.activeCreatures){
+                  var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH "
+                  var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
+                  if(!isActive2(item[hemispherePre+currentMonthShort],getCurrentDateObject().getHours())){
+                    continue;
+                  }
                 }
-              }
-              //If list only active creatures for the month, don't add it if === NA
-              //This is now done through filtering
-              // if(props.activeCreaturesMonth && getSettingsString("settingsListOnlyActiveCreatures") === "true"){
-              //   var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH "
-              //   var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
-              //   if(item[hemispherePre+currentMonthShort]==="NA"){
-              //     continue;
-              //   }
-              // }
-              // if(item.[props.textProperty[j]]===previousVariation){
-              //   previousVariation = item.[props.textProperty[j]];
-              if(item["Name"]===previousVariation && !item["checkListKey"].includes("recipesCheckList") && !item["checkListKey"].includes("amiiboCheckList")){
-                previousVariation = item["Name"];
-              } else {
-                //the final filter to check
+                //If list only active creatures for the month, don't add it if === NA
+                //This is now done through filtering
+                // if(props.activeCreaturesMonth && getSettingsString("settingsListOnlyActiveCreatures") === "true"){
+                //   var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH "
+                //   var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
+                //   if(item[hemispherePre+currentMonthShort]==="NA"){
+                //     continue;
+                //   }
+                // }
+                // if(item.[props.textProperty[j]]===previousVariation){
+                //   previousVariation = item.[props.textProperty[j]];
 
-                if(props.showCraftableFromMaterial){
-                  let materialIndex = ""
-                  for(let i=1; i<10; i++){
-                    materialIndex = "Material " + i.toString()
-                    if(item[materialIndex]!==undefined && item[materialIndex]===props.showCraftableFromMaterial["Name"]){
+                //keep variations
+                if(item["Name"]===previousVariation && !item["checkListKey"].includes("recipesCheckList") && !item["checkListKey"].includes("amiiboCheckList") && !item["checkListKey"].includes("constructionCheckList") && !item["checkListKey"].includes("fenceCheckList")){
+                  previousVariation = item["Name"];
+                } else {
+                  //the final filter to check
+
+                  if(props.showCraftableFromMaterial){
+                    let materialIndex = ""
+                    for(let i=1; i<10; i++){
+                      materialIndex = "Material " + i.toString()
+                      if(item[materialIndex]!==undefined && item[materialIndex]===props.showCraftableFromMaterial["Name"]){
+                        item.dataSet = j;
+                        item.index = i;
+                        dataUpdated = [...dataUpdated, item];
+                        break;
+                      } 
+                    }
+                    break;
+                  }
+                  if(props.wishlistItems || searchActual.includes("Wishlist")){
+                    if(global.collectionList.includes("wishlist"+item["checkListKey"])){
                       item.dataSet = j;
                       item.index = i;
                       dataUpdated = [...dataUpdated, item];
-                      break;
+                      // previousVariation = item.[props.textProperty[j]];
+                      // previousVariation = item["Name"];
                     } 
+                  } else if(props.newItems){
+                    if(item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===gameVersion){
+                      item.dataSet = j;
+                      item.index = i;
+                      dataUpdated = [...dataUpdated, item];
+                      previousVariation = item["Name"];
+                      // previousVariation = item.[props.textProperty[j]];
+                      // previousVariation = item["Name"];
+                    } 
+                  } else if(searchActual.includes("Museum")){
+                    if(item["Data Category"]!==undefined && museumCategories.includes(item["Data Category"]) && global.collectionList.includes("museum"+item["checkListKey"])){
+                      item.dataSet = j;
+                      item.index = i;
+                      dataUpdated = [...dataUpdated, item];
+                      // previousVariation = item.[props.textProperty[j]];
+                      previousVariation = item["Name"];
+                    } 
+                  } else if(searchActual.includes("Not Museum")){
+                    if(item["Data Category"]!==undefined && museumCategories.includes(item["Data Category"]) && !global.collectionList.includes("museum"+item["checkListKey"])){
+                      item.dataSet = j;
+                      item.index = i;
+                      dataUpdated = [...dataUpdated, item];
+                      // previousVariation = item.[props.textProperty[j]];
+                      previousVariation = item["Name"];
+                    } 
+                  } else if(searchActual.includes("Old Resident")){
+                    if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && global.collectionList.includes("oldResident"+item["checkListKey"])){
+                      item.dataSet = j;
+                      item.index = i;
+                      dataUpdated = [...dataUpdated, item];
+                      // previousVariation = item.[props.textProperty[j]];
+                      previousVariation = item["Name"];
+                    } 
+                  } else if(searchActual.includes("Not Old Resident")){
+                    if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && !global.collectionList.includes("oldResident"+item["checkListKey"])){
+                      item.dataSet = j;
+                      item.index = i;
+                      dataUpdated = [...dataUpdated, item];
+                      // previousVariation = item.[props.textProperty[j]];
+                      previousVariation = item["Name"];
+                    } 
+                  } else if(searchActual.includes("Have villager photo")){
+                    if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && global.collectionList.includes("havePhoto"+item["checkListKey"])){
+                      item.dataSet = j;
+                      item.index = i;
+                      dataUpdated = [...dataUpdated, item];
+                      // previousVariation = item.[props.textProperty[j]];
+                      previousVariation = item["Name"];
+                    } 
+                  } else if(searchActual.includes("Do not have villager photo")){
+                    if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && !global.collectionList.includes("havePhoto"+item["checkListKey"])){
+                      item.dataSet = j;
+                      item.index = i;
+                      dataUpdated = [...dataUpdated, item];
+                      // previousVariation = item.[props.textProperty[j]];
+                      previousVariation = item["Name"];
+                    } 
+                  } else {
+                    item.dataSet = j;
+                    item.index = i;
+                    dataUpdated = [...dataUpdated, item];
+                    // previousVariation = item.[props.textProperty[j]];
+                    previousVariation = item["Name"];
                   }
-                  break;
+                  
                 }
-                if(props.wishlistItems || searchActual.includes("Wishlist")){
-                  if(global.collectionList.includes("wishlist"+item["checkListKey"])){
-                    item.dataSet = j;
-                    item.index = i;
-                    dataUpdated = [...dataUpdated, item];
-                    // previousVariation = item.[props.textProperty[j]];
-                    // previousVariation = item["Name"];
-                  } 
-                } else if(props.newItems){
-                  if(item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===gameVersion){
-                    item.dataSet = j;
-                    item.index = i;
-                    dataUpdated = [...dataUpdated, item];
-                    previousVariation = item["Name"];
-                    // previousVariation = item.[props.textProperty[j]];
-                    // previousVariation = item["Name"];
-                  } 
-                } else if(searchActual.includes("Museum")){
-                  if(item["Data Category"]!==undefined && museumCategories.includes(item["Data Category"]) && global.collectionList.includes("museum"+item["checkListKey"])){
-                    item.dataSet = j;
-                    item.index = i;
-                    dataUpdated = [...dataUpdated, item];
-                    // previousVariation = item.[props.textProperty[j]];
-                    previousVariation = item["Name"];
-                  } 
-                } else if(searchActual.includes("Not Museum")){
-                  if(item["Data Category"]!==undefined && museumCategories.includes(item["Data Category"]) && !global.collectionList.includes("museum"+item["checkListKey"])){
-                    item.dataSet = j;
-                    item.index = i;
-                    dataUpdated = [...dataUpdated, item];
-                    // previousVariation = item.[props.textProperty[j]];
-                    previousVariation = item["Name"];
-                  } 
-                } else if(searchActual.includes("Old Resident")){
-                  if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && global.collectionList.includes("oldResident"+item["checkListKey"])){
-                    item.dataSet = j;
-                    item.index = i;
-                    dataUpdated = [...dataUpdated, item];
-                    // previousVariation = item.[props.textProperty[j]];
-                    previousVariation = item["Name"];
-                  } 
-                } else if(searchActual.includes("Not Old Resident")){
-                  if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && !global.collectionList.includes("oldResident"+item["checkListKey"])){
-                    item.dataSet = j;
-                    item.index = i;
-                    dataUpdated = [...dataUpdated, item];
-                    // previousVariation = item.[props.textProperty[j]];
-                    previousVariation = item["Name"];
-                  } 
-                } else if(searchActual.includes("Have villager photo")){
-                  if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && global.collectionList.includes("havePhoto"+item["checkListKey"])){
-                    item.dataSet = j;
-                    item.index = i;
-                    dataUpdated = [...dataUpdated, item];
-                    // previousVariation = item.[props.textProperty[j]];
-                    previousVariation = item["Name"];
-                  } 
-                } else if(searchActual.includes("Do not have villager photo")){
-                  if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && !global.collectionList.includes("havePhoto"+item["checkListKey"])){
-                    item.dataSet = j;
-                    item.index = i;
-                    dataUpdated = [...dataUpdated, item];
-                    // previousVariation = item.[props.textProperty[j]];
-                    previousVariation = item["Name"];
-                  } 
-                } else {
-                  item.dataSet = j;
-                  item.index = i;
-                  dataUpdated = [...dataUpdated, item];
-                  // previousVariation = item.[props.textProperty[j]];
-                  previousVariation = item["Name"];
-                }
-                
-              }
-            // } else {
-            //   item.dataSet = j;
-            //   item.index = i;
-            //   dataUpdated = [...dataUpdated, item];
-            //   break;
-            // }
+              // } else {
+              //   item.dataSet = j;
+              //   item.index = i;
+              //   dataUpdated = [...dataUpdated, item];
+              //   break;
+              // }
+            }
           }
         }
       }
-    }
 
-    //Sort alphabetically
-    if(getSettingsString("settingsSortAlphabetically")==="true"){
-      var dataLoadedCopy = dataUpdated.slice(0);
-      dataLoadedCopy.sort(function(a, b) {
-        var textA
-        var textB
-        if(a===undefined || a.NameLanguage===undefined){
-          textA = ""
-        } else {
-          textA = removeAccents(a.NameLanguage.toUpperCase()).replace("-"," ");
-        }
-        if(b===undefined || b.NameLanguage===undefined){
-          textB = ""
-        } else {
-          textB = removeAccents(b.NameLanguage.toUpperCase()).replace("-"," ");
-        }
-        return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-      });
-      dataUpdated = dataLoadedCopy
-    }
-
-    //Sort based on critterpedia entry number
-    if(getSettingsString("settingsSortCritterpedia")==="true" && (props.title==="Fish" || props.title==="Bugs" || props.title==="Sea Creatures")){
-      var dataLoadedCopy = dataUpdated.slice(0);
-      dataLoadedCopy.sort(function(a, b) {
-        var textA = parseInt(a["#"]);
-        var textB = parseInt(b["#"]);
-        return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-      });
-      dataUpdated = dataLoadedCopy
-    }
-
-    //Sort based on filters
-    var shouldSortDirection = false;
-    for(var sort = 0; sort<searchActual.length; sort++){
-      var shouldSortDirection = searchActual[sort].includes("Reverse direction");
-      if(shouldSortDirection){
-        break;
-      }
-    }
-    for(var sort = 0; sort<searchActual.length; sort++){
-      if(searchActual[sort].includes("Sort-")){
-        var propertyToSort = searchActual[sort].replace("Sort-","")
+      //Sort alphabetically
+      if(getSettingsString("settingsSortAlphabetically")==="true"){
         var dataLoadedCopy = dataUpdated.slice(0);
-          dataLoadedCopy.sort(function(a, b) {
-            var valueA = a[propertyToSort]
-            if(a[propertyToSort]===undefined && !shouldSortDirection){
-              valueA="zzzzzzzzzzz"
-            } else if(a[propertyToSort]===undefined){
-              valueA="aaaaaaaaaaa"
+        dataLoadedCopy.sort(function(a, b) {
+          var textA
+          var textB
+          if(a===undefined || a.NameLanguage===undefined){
+            textA = "zzzzzzzzzzzzzz"
+          } else {
+            textA = removeAccents(a.NameLanguage.toUpperCase()).replace("-"," ");
+            if(textA===""){
+              textA = "zzzzzzzzzzzzzz"
             }
-            var valueB = b[propertyToSort]
-            if(b[propertyToSort]===undefined && !shouldSortDirection){
-              valueB="zzzzzzzzzzz"
-            } else if(b[propertyToSort]===undefined){
-              valueB="aaaaaaaaaaa"
+          }
+          if(b===undefined || b.NameLanguage===undefined){
+            textB = "zzzzzzzzzzzzzz"
+          } else {
+            textB = removeAccents(b.NameLanguage.toUpperCase()).replace("-"," ");
+            if(textB===""){
+              textB = "zzzzzzzzzzzzzz"
             }
-            
-            var textA = valueA;
-            var textB = valueB;
-            if(searchActual.includes)
-            if(!shouldSortDirection){
-              return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-            } else {
-              return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
-            }
-          });
-        dataUpdated = dataLoadedCopy
-      } else if(searchActual[sort].includes("SortInt-")){
-        var propertyToSort = searchActual[sort].replace("SortInt-","")
-        var dataLoadedCopy = dataUpdated.slice(0);
-          dataLoadedCopy.sort(function(a, b) {
-            var valueA = a[propertyToSort]
-            if(a[propertyToSort]===undefined && shouldSortDirection){
-              valueA=10000000000000
-            } else if(a[propertyToSort]===undefined){
-              valueA=0
-            }
-            var valueB = b[propertyToSort]
-            if(b[propertyToSort]===undefined && shouldSortDirection){
-              valueB=10000000000000
-            } else if(b[propertyToSort]===undefined){
-              valueB=0
-            }
-            
-            var textA = parseInt(valueA);
-            var textB = parseInt(valueB);
-            if(searchActual.includes)
-            if(shouldSortDirection){
-              return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-            } else {
-              return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
-            }
-          });
+          }
+          return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+        });
         dataUpdated = dataLoadedCopy
       }
-    }
 
-    setData(dataUpdated)
-    setRefresh(false)
-    
+      //Sort based on critterpedia entry number
+      if(getSettingsString("settingsSortCritterpedia")==="true" && (props.title==="Fish" || props.title==="Bugs" || props.title==="Sea Creatures")){
+        var dataLoadedCopy = dataUpdated.slice(0);
+        dataLoadedCopy.sort(function(a, b) {
+          var textA = parseInt(a["#"]);
+          var textB = parseInt(b["#"]);
+          return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+        });
+        dataUpdated = dataLoadedCopy
+      }
+
+      //Sort based on filters
+      var shouldSortDirection = false;
+      for(var sort = 0; sort<searchActual.length; sort++){
+        var shouldSortDirection = searchActual[sort].includes("Reverse direction");
+        if(shouldSortDirection){
+          break;
+        }
+      }
+      for(var sort = 0; sort<searchActual.length; sort++){
+        if(searchActual[sort].includes("Sort-")){
+          var propertyToSort = searchActual[sort].replace("Sort-","")
+          var dataLoadedCopy = dataUpdated.slice(0);
+            dataLoadedCopy.sort(function(a, b) {
+              var valueA = a[propertyToSort]
+              if(a[propertyToSort]===undefined && !shouldSortDirection){
+                valueA="zzzzzzzzzzz"
+              } else if(a[propertyToSort]===undefined){
+                valueA="aaaaaaaaaaa"
+              }
+              var valueB = b[propertyToSort]
+              if(b[propertyToSort]===undefined && !shouldSortDirection){
+                valueB="zzzzzzzzzzz"
+              } else if(b[propertyToSort]===undefined){
+                valueB="aaaaaaaaaaa"
+              }
+              
+              var textA = valueA;
+              var textB = valueB;
+              if(searchActual.includes)
+              if(!shouldSortDirection){
+                return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+              } else {
+                return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+              }
+            });
+          dataUpdated = dataLoadedCopy
+        } else if(searchActual[sort].includes("SortInt-")){
+          var propertyToSort = searchActual[sort].replace("SortInt-","")
+          var dataLoadedCopy = dataUpdated.slice(0);
+            dataLoadedCopy.sort(function(a, b) {
+              var valueA = a[propertyToSort]
+              if(a[propertyToSort]===undefined && shouldSortDirection){
+                valueA=10000000000000
+              } else if(a[propertyToSort]===undefined){
+                valueA=0
+              }
+              var valueB = b[propertyToSort]
+              if(b[propertyToSort]===undefined && shouldSortDirection){
+                valueB=10000000000000
+              } else if(b[propertyToSort]===undefined){
+                valueB=0
+              }
+              
+              var textA = parseInt(valueA);
+              var textB = parseInt(valueB);
+              if(searchActual.includes)
+              if(shouldSortDirection){
+                return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+              } else {
+                return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+              }
+            });
+          dataUpdated = dataLoadedCopy
+        }
+      }
+
+      setData(dataUpdated)
+      setRefresh(false)
+      setLoading(false)
+      scrollY.current.setValue(0)
+    }, 10)
   }, [props, search, searchFilters, refresh])
   
   var numColumns=3;
@@ -810,9 +824,16 @@ function ListPage(props){
       {header}
       <PopupFilter villagerGifts={props.villagerGifts} disableFilters={props.disableFilters} title={props.title} ref={popupFilter} filterSearchable={props.filterSearchable} updateSearchFilters={updateSearchFilters}/> 
       {/* setFilterPopupState(false) */}
-      <Animated.FlatList
+      {loading? <View style={{alignItems:"center", justifyContent:"center", width:"100%", height:"100%"}}>
+      <LottieView 
+        autoPlay
+        loop
+        style={{width: "25%",zIndex:1,transform: [{ scale: 1.25 },{ rotate: '0deg'},],}}
+        source={require('../assets/loading.json')}
+      />
+      </View>:<Animated.FlatList
         nestedScrollEnabled
-        initialNumToRender={45}
+        initialNumToRender={4}
         scrollEventThrottle={16}
         contentContainerStyle={{paddingTop: paddingTop+10, paddingLeft: 8, paddingRight: 8, paddingBottom: paddingBottomContent}}
         onScroll={handleScroll}
@@ -824,8 +845,9 @@ function ListPage(props){
         key={numColumns}
         style={style}
         removeClippedSubviews={true}
-        updateCellsBatchingPeriod={500}
-        windowSize={10}
+        // updateCellsBatchingPeriod={500}
+        
+        windowSize={4}
         refreshControl={
           <RefreshControl
             onRefresh={()=>{if(props.wishlistItems||searchFilters.some(item=>refreshFiltersArray.includes(item)))setRefresh(true)}} //only refresh if the order has the possibility of changing
@@ -835,7 +857,7 @@ function ListPage(props){
             colors={[colors.textBlack[global.darkMode]]}
           />
         }
-      />
+      />}
       
       <PopupBottomCustom
         ref={sheetRef}

@@ -740,13 +740,13 @@ export class CollectionProgress extends Component {
     //To get totals: run CreateFilterDefinition.py
     //"Furniture" and "Clothing" and "Floor & Walls"
     var floorWallsCount = countCollection("floorWallsCheckList");
-    var floorWallsCountTotal = 600;
+    var floorWallsCountTotal = 724;
     var floorWallsPercentage = floorWallsCount/floorWallsCountTotal * 100;
     var furnitureCount = countCollection("furnitureCheckList");
-    var furnitureCountTotal = 17016
+    var furnitureCountTotal = 32170
     var furniturePercentage = furnitureCount/furnitureCountTotal * 100;
     var clothingCount = countCollection("clothingCheckList");
-    var clothingCountTotal = 9418;
+    var clothingCountTotal = 10545;
     var clothingPercentage = clothingCount/clothingCountTotal * 100;
     return(<>
       <View style={{height: 15}}/>

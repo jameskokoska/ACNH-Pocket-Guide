@@ -8679,6 +8679,7 @@
     "Tag": "Special Walls",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpWallAirplane00",
     "Internal ID": "5497",
     "Unique Entry ID": "Z62odoapxLDBurx9r"
@@ -8707,6 +8708,7 @@
     "Tag": "Brick",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexWallAntique00",
     "Internal ID": "13331",
     "Unique Entry ID": "ETTnjcgHmkCL56GxD"
@@ -8735,6 +8737,7 @@
     "Tag": "WallFacility",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexWallDisplay00",
     "Internal ID": "12911",
     "Unique Entry ID": "njfAsLH73QkJBxgg5"
@@ -8763,6 +8766,7 @@
     "Tag": "Neta Walls",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexWallPublicBath00",
     "Internal ID": "4829",
     "Unique Entry ID": "x5kZ8HpHrN5mXe8wX"
@@ -8791,6 +8795,7 @@
     "Tag": "Special Walls",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpWallFrench01",
     "Internal ID": "13866",
     "Unique Entry ID": "sQ5tk8wwoJhvHBj44"
@@ -8819,6 +8824,7 @@
     "Tag": "Special Walls",
     "Catalog": "For sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpWallWindow01",
     "Internal ID": "13438",
     "Unique Entry ID": "LXuaBG839ogDDzkPe"
@@ -8847,6 +8853,7 @@
     "Tag": "Asia",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexWallTadelakt00",
     "Internal ID": "13487",
     "Unique Entry ID": "stCTPTZtxH5iakJzd"
@@ -8875,6 +8882,7 @@
     "Tag": "Nature Walls",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpWallSchoolyard00",
     "Internal ID": "12855",
     "Unique Entry ID": "r6GkwPtTHqgKbKD8c"
@@ -8903,6 +8911,7 @@
     "Tag": "Special Inorganic Walls",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpWallCandle00",
     "Internal ID": "5492",
     "Unique Entry ID": "XmH9GSRmcFZ7HfECB"
@@ -8931,6 +8940,7 @@
     "Tag": "Stripe Walls",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpWallSummer00",
     "Internal ID": "12721",
     "Unique Entry ID": "ixM9xgbth7JXjE8Mp"
@@ -8959,6 +8969,7 @@
     "Tag": "Special Walls",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpWallClub00",
     "Internal ID": "13130",
     "Unique Entry ID": "Dsyv8o4HCHf92g9j5"
@@ -8987,6 +8998,7 @@
     "Tag": "WallFacility",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexWallCoffee00",
     "Internal ID": "12908",
     "Unique Entry ID": "kzCjxQsgHnvqNcHjY"
@@ -9015,6 +9027,7 @@
     "Tag": "WallFacility",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpWallStand00",
     "Internal ID": "12913",
     "Unique Entry ID": "heesFhfzdGF2Yf5sq"
@@ -9043,6 +9056,7 @@
     "Tag": "WallFacility",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpWallFrozenFood00",
     "Internal ID": "13358",
     "Unique Entry ID": "hMLoXRHP2DGtEfoRE"
@@ -9071,6 +9085,7 @@
     "Tag": "Nature Walls",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpWallGlowCave00",
     "Internal ID": "13881",
     "Unique Entry ID": "jMHwiBTGKCvtCF5GN"
@@ -9099,6 +9114,7 @@
     "Tag": "Nature Walls",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpWallGlowMoss00",
     "Internal ID": "13019",
     "Unique Entry ID": "9R9RS7LePEZwAMDrT"
@@ -9127,6 +9143,7 @@
     "Tag": "Nature Walls",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpWallGlowRemains00",
     "Internal ID": "13874",
     "Unique Entry ID": "MpgCdjR8QPeo5TtGg"
@@ -9155,6 +9172,7 @@
     "Tag": "Special Cool Nature Walls",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpWallCemetery00",
     "Internal ID": "5511",
     "Unique Entry ID": "aNSptq7wunS7ezfQe"
@@ -9183,6 +9201,7 @@
     "Tag": "Iron Walls",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexWallLocker01",
     "Internal ID": "13441",
     "Unique Entry ID": "DThEXePPszmFcsCpv"
@@ -9211,6 +9230,7 @@
     "Tag": "WallFacility",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexWallShelf01",
     "Internal ID": "13442",
     "Unique Entry ID": "xujwrSS3Q7YKTRGLA"
@@ -9239,6 +9259,7 @@
     "Tag": "Neta Walls",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpWallGreenHouse00",
     "Internal ID": "13434",
     "Unique Entry ID": "hdknyvkKdgrsWfqx5"
@@ -9267,6 +9288,7 @@
     "Tag": "WallFacility",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexWallBoard00",
     "Internal ID": "12848",
     "Unique Entry ID": "NCBd3TwM7prv5MPfM"
@@ -9295,6 +9317,7 @@
     "Tag": "WallFacility",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexWallIcecream00",
     "Internal ID": "12909",
     "Unique Entry ID": "wFAgqt6mCbvc9qjo4"
@@ -9323,6 +9346,7 @@
     "Tag": "Special Warm Nature Walls",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpWallLimestone00",
     "Internal ID": "5507",
     "Unique Entry ID": "vcz2byxybzfXkuCSX"
@@ -9351,6 +9375,7 @@
     "Tag": "Special Inorganic Walls",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexWallMuseum00",
     "Internal ID": "4842",
     "Unique Entry ID": "NQvZs3xkbGd6azYxB"
@@ -9379,6 +9404,7 @@
     "Tag": "WallFacility",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexWallOperatingRoom00",
     "Internal ID": "12851",
     "Unique Entry ID": "BS7HgCFLJpppWYxrD"
@@ -9407,6 +9433,7 @@
     "Tag": "Asia",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexWallTadelakt01",
     "Internal ID": "13497",
     "Unique Entry ID": "tN3DQ95fSAWs3o5SM"
@@ -9435,6 +9462,7 @@
     "Tag": "Nature Walls",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexWallTeahouse00",
     "Internal ID": "12910",
     "Unique Entry ID": "BrjPZz2J4AvQBgpR3"
@@ -9449,7 +9477,9 @@
     "Sell": "750",
     "Color 1": "Yellow",
     "Color 2": "Yellow",
-    "Source": "ManCatalogSpTab",
+    "Source": "Wardell",
+    "Season/Event": "Happy Home Paradise",
+    "Season/Event Exclusive": "Yes",
     "Window Type": "None",
     "Window Color": "NA",
     "Pane Type": "NA",
@@ -9463,6 +9493,7 @@
     "Tag": "WallGoldSilverBronze",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexWallGoldRich00",
     "Internal ID": "13020",
     "Unique Entry ID": "z22bvaYd3o8NtChdj"
@@ -9491,6 +9522,7 @@
     "Tag": "Cute Walls",
     "Catalog": "For sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexWallFootmark00",
     "Internal ID": "13482",
     "Unique Entry ID": "m5usCdM6aRQPQme5x"
@@ -9519,6 +9551,7 @@
     "Tag": "WallFacility",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexWallMedicineRoom00",
     "Internal ID": "12724",
     "Unique Entry ID": "RsJaDrDCjLfrtCB9G"
@@ -9547,6 +9580,7 @@
     "Tag": "Iron Walls",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexWallLocker00",
     "Internal ID": "12849",
     "Unique Entry ID": "9KJS7LeM7STiSXYKH"
@@ -9575,6 +9609,7 @@
     "Tag": "Brick",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexWallRestaurant00",
     "Internal ID": "12907",
     "Unique Entry ID": "HCYc3GcoJqWhMM7nc"
@@ -9603,6 +9638,7 @@
     "Tag": "Iron Walls",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexWallRobo00",
     "Internal ID": "5455",
     "Unique Entry ID": "hJZQA7tyayEK3spG6"
@@ -9617,7 +9653,9 @@
     "Sell": "750",
     "Color 1": "White",
     "Color 2": "White",
-    "Source": "ManCatalogSpTab",
+    "Source": "Wardell",
+    "Season/Event": "Happy Home Paradise",
+    "Season/Event Exclusive": "Yes",
     "Window Type": "None",
     "Window Color": "NA",
     "Pane Type": "NA",
@@ -9631,6 +9669,7 @@
     "Tag": "Special Inorganic Walls",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpWallSketch00",
     "Internal ID": "14896",
     "Unique Entry ID": "faa5CutSpc3i8ZSY8"
@@ -9659,6 +9698,7 @@
     "Tag": "Nature Walls",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpWallRopenet00",
     "Internal ID": "13875",
     "Unique Entry ID": "kjhatSss6jpDHcG5j"
@@ -9687,6 +9727,7 @@
     "Tag": "Iron Walls",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexWallSteampunk00",
     "Internal ID": "4937",
     "Unique Entry ID": "DhX6XzLy3Bg7s4owN"
@@ -9715,6 +9756,7 @@
     "Tag": "WallFacility",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexWallSupermarket00",
     "Internal ID": "5220",
     "Unique Entry ID": "tttMaoMYDWcGjpCSD"
@@ -9743,6 +9785,7 @@
     "Tag": "Simple Walls",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexWallGlamping00",
     "Internal ID": "13435",
     "Unique Entry ID": "T5kHeh2QvsQNQ5avc"
@@ -9771,6 +9814,7 @@
     "Tag": "Special Walls",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpWallTrain00",
     "Internal ID": "5496",
     "Unique Entry ID": "pkPNcpqbtoB3fNmCT"
@@ -9799,6 +9843,7 @@
     "Tag": "Special Walls",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpWallFrench00",
     "Internal ID": "12906",
     "Unique Entry ID": "itpyDq45huqbfAcqB"
@@ -9827,6 +9872,7 @@
     "Tag": "Special Walls",
     "Catalog": "For sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomSpWallWindow00",
     "Internal ID": "13332",
     "Unique Entry ID": "DZQQvsrgHThm5gHZZ"
@@ -9855,6 +9901,7 @@
     "Tag": "WallFacility",
     "Catalog": "Not for sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexWallShelf00",
     "Internal ID": "12912",
     "Unique Entry ID": "sNhncamcj9AS7Fq2Z"
@@ -9883,6 +9930,7 @@
     "Tag": "Japanese Style",
     "Catalog": "For sale",
     "Version Added": "2.0.0",
+    "Unlocked?": "Yes",
     "Filename": "RoomTexWallTwotone00",
     "Internal ID": "13333",
     "Unique Entry ID": "puwFr4WzMEfameWnz"

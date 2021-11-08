@@ -44,29 +44,29 @@ class ListItem extends React.Component{
     }
   }
 
-  componentDidUpdate(prevProps){
-    if(prevProps!==this.props){
-      if(this.state.collected!==inChecklist(this.props.item.checkListKey)){
-        this.setCollected(!this.state.collected)
-      }
-      if(this.state.wishlist!==inWishlist(this.props.item.checkListKey)){
-        this.setWishlist(!this.state.wishlist)
-      }
-      let checkVariations = variationsCheckedPercent(this.props.item, this.props.item.index);
-      if(this.state.variationsPercent!==checkVariations){
-        this.setState({variationsPercent: checkVariations})
-      }
-      if(this.state.museum!==inMuseum(this.props.item.checkListKey, this.checkMuseumButton())){
-        this.setMuseum(!this.state.museum)
-      }
-      if(this.state.villager!==inVillager(this.props.item.checkListKey, this.checkVillagerButton())){
-        this.setVillager(!this.state.villager)
-      }
-      if(this.state.villagerPhoto!==inVillagerPhoto(this.props.item.checkListKey, this.checkVillagerPhotoButton())){
-        this.setVillagerPhoto(!this.state.villagerPhoto)
-      }
-    }
-  }
+  // componentDidUpdate(prevProps){
+  //   if(prevProps!==this.props){
+  //     if(this.state.collected!==inChecklist(this.props.item.checkListKey)){
+  //       this.setCollected(!this.state.collected)
+  //     }
+  //     if(this.state.wishlist!==inWishlist(this.props.item.checkListKey)){
+  //       this.setWishlist(!this.state.wishlist)
+  //     }
+  //     let checkVariations = variationsCheckedPercent(this.props.item, this.props.item.index);
+  //     if(this.state.variationsPercent!==checkVariations){
+  //       this.setState({variationsPercent: checkVariations})
+  //     }
+  //     if(this.state.museum!==inMuseum(this.props.item.checkListKey, this.checkMuseumButton())){
+  //       this.setMuseum(!this.state.museum)
+  //     }
+  //     if(this.state.villager!==inVillager(this.props.item.checkListKey, this.checkVillagerButton())){
+  //       this.setVillager(!this.state.villager)
+  //     }
+  //     if(this.state.villagerPhoto!==inVillagerPhoto(this.props.item.checkListKey, this.checkVillagerPhotoButton())){
+  //       this.setVillagerPhoto(!this.state.villagerPhoto)
+  //     }
+  //   }
+  // }
   componentDidMount() {
     this.mounted = true;
   }

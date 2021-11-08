@@ -483,6 +483,7 @@
   {
     "Name": "Writing a Cookbook?",
     "Achievement Description": "The recipes in your collection could stretch for miles, so allow me to present you with these...miles! Delight the eyes and stomachs of your neighbors with all your delicious creations, hm?",
+    "Achievement Criteria": "Learn a specified number of cooking DIY recipes",
     "#": "14",
     "Internal ID": "105",
     "Internal Name": "FillCookingList",
@@ -519,6 +520,7 @@
   {
     "Name": "Mmm-Mmm-Miles!",
     "Achievement Description": "Gathering ingredients and creating delicious treats is great fun, is it not? Yes, yes, I do believe our chefs out there deserve miles for all the times they've prepared something delicious!",
+    "Achievement Criteria": "Cook a specified number of foods",
     "#": "15",
     "Internal ID": "107",
     "Internal Name": "CookFood",
@@ -703,6 +705,7 @@
   {
     "Name": "Nice to Meet You, Gyroid!",
     "Achievement Description": "You've discovered your first gyroid! This special occasion deserves miles, yes, yes. I hope you feel inspired to collect all sorts of different, wonderful gyroids now.",
+    "Achievement Criteria": "Dig up your first gyroid",
     "#": "20",
     "Internal ID": "106",
     "Internal Name": "DigGyroid",
@@ -739,6 +742,7 @@
   {
     "Name": "Gyroid Getter",
     "Achievement Description": "Collect different kinds of gyroids, and earn miles in return! I suspect once you experience life in their presence, you'll find it hard to resist hunting for more, hm?",
+    "Achievement Criteria": "Touch specified number of unique gyroids",
     "#": "21",
     "Internal ID": "104",
     "Internal Name": "FillGyroidList",
@@ -1034,6 +1038,7 @@
   {
     "Name": "Sprout Out Loud",
     "Achievement Description": "Plant your produce starts across the whole island for a fresh, bounteous crop! Whether it's a small home garden or a full-on field, support Nook Inc. with all your produce-planting power! Yes, yes!",
+    "Achievement Criteria": "Plant a specified number of produce sprouts (replanting existing sprouts does not count)",
     "#": "29",
     "Internal ID": "100",
     "Internal Name": "PlantVegetableSeedling",
@@ -1070,6 +1075,7 @@
   {
     "Name": "Executive Producer",
     "Achievement Description": "Nothing feels quite like harvesting produce that you grew by the sweat of your brow, yes, yes! Now go enjoy the fruits of your labor—and the pumpkins, carrots, sugarcane, and potatoes too!",
+    "Achievement Criteria": "Harvest a specified number of produce",
     "#": "30",
     "Internal ID": "102",
     "Internal Name": "HarvestVegetable",
@@ -2882,6 +2888,7 @@
   {
     "Name": "Set Sail for Adventure",
     "Achievement Description": "Rare items and exciting adventures are yours when you head out on a special tour with a veteran sailor, yes, yes!",
+    "Achievement Criteria": "Number of times you've gone on a Kapp'n tour",
     "#": "79",
     "Internal ID": "103",
     "Internal Name": "VisitKappeiTour",
@@ -2918,6 +2925,7 @@
   {
     "Name": "Come Home to the Roost",
     "Achievement Description": "The Roost, located on the second floor of the museum, is quite picky about the coffee they serve, yes, yes! Do stop in to enjoy a cup and earn some dark-roasted miles!",
+    "Achievement Criteria": "Number of days you've gotten coffee from Brewster",
     "#": "80",
     "Internal ID": "108",
     "Internal Name": "DrinkCoffee",
@@ -2954,6 +2962,7 @@
   {
     "Name": "Stretch to Refresh!",
     "Achievement Description": "The health of our residents is a top priority, yes, yes! So we're holding group-stretching sessions in the plaza. I'll provide miles once per day for participating, and there will be a tape deck for music. I hope I see you there!",
+    "Achievement Criteria": "Number of days you've participated in group stretching",
     "#": "81",
     "Internal ID": "109",
     "Internal Name": "JoinRadioGymnastics",

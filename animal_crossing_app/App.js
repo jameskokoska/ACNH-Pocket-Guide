@@ -202,7 +202,7 @@ class App extends Component {
       } else {
         this.popupLoading?.setPopupVisible(true)
       }
-      console.log(await FileSystem.readDirectoryAsync(FileSystem.documentDirectory))
+      // console.log(await FileSystem.readDirectoryAsync(FileSystem.documentDirectory))
 
       
 

@@ -6,6 +6,19 @@ export const changelog = `
 -I am updating the app with new content from the update....
 -Please be patient as details come in :)
 -
+-Added help text for adding villagers
+-In variation popup - added which villagers like that item as a gift (for clothing)
+-Long press a variation to view more details
+-Updated data
+-Updated total items for collections progress
+-Added fence filter in Construction page
+-Added fence variations and house exteriors
+-Added loading indicator when searching through large lists
+-Updated translations
+-Lists now load as you scroll to improve performance
+-Fixed alphabetical order
+-Fixed header not appearing when search
+-
 -Updated translationsfor items!
 -Added All Amiibo Series 5 Cards
 -Fixed Amiibo Search (multiple with the same name)

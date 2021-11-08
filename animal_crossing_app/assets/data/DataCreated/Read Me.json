@@ -1,9 +1,12 @@
 [
   {
-    "https://tinyurl.com/acnh-sheet": "THIS IS NOT THE PLACE TO REQUEST EDIT ACCESS. If you want to help, join our Discord using the link below."
+    "https://tinyurl.com/acnh-sheet": "Published Sheet - Read-Only"
   },
   {
-    "https://tinyurl.com/acnh-sheet": "Hi, welcome to the item spreadsheet for ACNH!\r\n\r\nUpdate 02/01: Added Setsubun event, added new columns to account for hemisphere-dependent icons, fixed alphabetical sorting of certain tabs, general fixes all around.\r\n\r\nUpdate 01/28: Added 1.7.0 items and events, updated color data for a few furniture items.\r\n\r\nThe purpose of our spreadsheet is to create a complete collection of data on items, villagers, achievements, and more! We fully welcome the use of our data for creators to make websites or applications from for the betterment of the Animal Crossing community. If you use our data for an app or site, please provide a link back to the spreadsheet on your page, and contact us to get your name added to the list of partners."
+    "https://tinyurl.com/acnh-sheet": "DO NOT REQUEST EDIT ACCESS HERE.\r\nTHE SHEET GOES OFFLINE WHEN WE UPDATE. THIS IS NORMAL."
+  },
+  {
+    "https://tinyurl.com/acnh-sheet": "Hi, welcome to the item spreadsheet for ACNH!\r\n\r\nUpdate 11/06 2.0: Added Paradise Planning tab with villager requests, added dates for new events, adjusted sources for new items, added \"Happy Home Paradise\" as an \"Event\" for HHP-exclusive items, minor changes all around\r\n\r\nUpdate 11/06: Added strings for sources of new items, added Source Notes to some items with certain requirements, added more columns to Food tab, minor fixes\r\n\r\nUpdate 11/04: Fixed recipe images for Cooking recipes, added missing NPC icons, removed some duplicate rows, added all variants to Food, minor changes\r\n\r\nUpdate 11/03: ADDED NAMES AND IMAGES FOR ALL 2.0.0 ITEMS. Not all data has been added yet. We will be doing a second update within the next week that completes all missing data and irons out some kinks in our sheet structure.\r\n\r\nFood tab added for food items. Gyroids tab added for gyroids.\r\n\r\nThis was a huge update, so if you are a developer, you should probably check our server to get help figuring out what stuff was changed. LOTS of items switched tabs (use entry IDs to keep track of item movement), and several tabs had columns added to them.\r\n\r\nThe purpose of our spreadsheet is to create a complete collection of data on items, villagers, achievements, and more! We fully welcome the use of our data for creators to make websites or applications from for the betterment of the Animal Crossing community. If you use our data for an app or site, please provide a link back to the spreadsheet on your page, and contact us to get your name added to the list of partners."
   },
   {
     "https://tinyurl.com/acnh-sheet": "Spreadsheet Discord (report issues, find resources, or stop by and say hi!)"
