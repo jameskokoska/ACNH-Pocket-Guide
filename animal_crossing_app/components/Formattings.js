@@ -34,13 +34,14 @@ export class MailLink extends Component {
   }
 }
 
-/* <TouchableOpacity style={{marginHorizontal:15, padding: 15}} onPress={() => Linking.openURL('https://ko-fi.com/dapperappdeveloper')}>
-  <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>If you enjoy this app, consider supporting it by tapping here</TextFont>
-</TouchableOpacity> */
+
 export class GiveSupport extends Component {
   render(){
     return(
-      <View/>
+      <TouchableOpacity style={{marginHorizontal:15, padding: 15}} onPress={() => Linking.openURL('https://ko-fi.com/dapperappdeveloper')}>
+        <TextFont bold={false} style={{color: colors.textBlack[global.darkMode], fontSize: 18, textAlign:"center"}}>If you enjoy this free app, consider supporting the developer :)</TextFont>
+        <TextFont bold={false} style={{marginTop:10, color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>Thank you!</TextFont>
+      </TouchableOpacity>
     )
   }
 }

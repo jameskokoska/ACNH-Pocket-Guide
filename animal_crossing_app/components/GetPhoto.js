@@ -186,10 +186,28 @@ export function getPhoto(name, fallback=""){
       return require("../assets/icons/flick.png");
     case "cj.png":
       return require("../assets/icons/cj.png");
+    case "brewster.png":
+      return require("../assets/icons/brewster.png");
+    case "gyroid.png":
+      return require("../assets/icons/gyroid.png");
+    case "coffee.png":
+      return require("../assets/icons/coffee.png");
+    case "kapp.png":
+      return require("../assets/icons/kapp.png");
+    case "harvey.png":
+      return require("../assets/icons/harvey.png");
+    case "brewster.png":
+      return require("../assets/icons/brewster.png");
     case "nookShopping.png":
       return require("../assets/icons/nookShopping.png");
     case "recycle.png":
       return require("../assets/icons/recycle.png");
+    case "suitcase.png":
+      return require("../assets/icons/suitcase.png");
+    case "airplane.png":
+      return require("../assets/icons/airplane.png");
+    case "cooking.png":
+      return require("../assets/icons/cooking.png");
     case "balloon.png":
       return require("../assets/icons/balloon.png");
     case "sparkle.png":

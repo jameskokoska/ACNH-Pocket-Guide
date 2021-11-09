@@ -37,6 +37,7 @@ class CreditsPage extends Component {
           <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
             <SubHeader style={{marginBottom:5}}>{attemptToTranslate("French") + ":"}</SubHeader>
             <SubHeader> Christophe Laffitte</SubHeader>
+            <SubHeader> Rose Cornette-Lafable</SubHeader>
           </View>
           <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
             <SubHeader style={{marginBottom:5}}>{attemptToTranslate("Spanish") + ":"}</SubHeader>
@@ -67,6 +68,7 @@ class CreditsPage extends Component {
             <SubHeader> Lyndsie</SubHeader>
             <SubHeader> Ilaria Caiazzo</SubHeader>
             <SubHeader> Filip Gavran</SubHeader>
+            <SubHeader> Martina Previtera</SubHeader>
           </View>
           <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
             <SubHeader style={{marginBottom:5}}>{attemptToTranslate("Portuguese") + ":"}</SubHeader>

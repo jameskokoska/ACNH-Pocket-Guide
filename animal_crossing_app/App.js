@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Vibration, BackHandler, Dimensions, Text, View, StatusBar, ToastAndroid} from 'react-native';
+import {Vibration, BackHandler, Dimensions, Text, View, StatusBar, ToastAndroid, Linking} from 'react-native';
 import FAB, { FABWrapper } from './components/FAB';
 import CalendarPage from './pages/CalendarPage';
 import SongsPage from './pages/SongsPage';
@@ -492,12 +492,17 @@ class App extends Component {
 class PopupInfos extends Component {
   async componentDidMount(){
     const numLogins = parseInt(await getStorage("numLogins","0"))+1;
-    // this.tipDismissed = await getStorage("tipDismissed","false");
     let backupPopupDismissed = await getStorage("backupPopupDismissed","false");
     // let updatePopupDismissed = await getStorage("updatePopupDismissed","false");
     if(backupPopupDismissed==="false" && numLogins >= 12){
       AsyncStorage.setItem("backupPopupDismissed", "true");
       this.popupBackup?.setPopupVisible(true)
+    }
+    let supportPopupDismissed = await getStorage("supportPopupDismissed","false");
+    // let updatePopupDismissed = await getStorage("updatePopupDismissed","false");
+    if(supportPopupDismissed==="false" && numLogins >= 9){
+      AsyncStorage.setItem("supportPopupDismissed", "true");
+      this.popupSupport?.setPopupVisible(true)
     }
     // if(updatePopupDismissed==="false" && numLogins >= 1){
     //   AsyncStorage.setItem("updatePopupDismissed", "true");
@@ -514,9 +519,7 @@ class PopupInfos extends Component {
     return <>
       <PopupRating ref={(popupRating) => this.popupRating = popupRating}/>
       <Popup mailLink={true} ref={(popupBackup) => this.popupBackup = popupBackup} text="Data Backup" textLower="You can now backup your data to the cloud and enable auto backups in the settings." button1={"Go to page"} button1Action={()=>{this.props.setPage(30)}} button2={"Cancel"} button2Action={()=>{}}/>
-      <Popup mailLink={true} ref={(popupUpdate) => this.popupUpdate = popupUpdate} text="Missing Items" textLower="Some items are missing as the update to the app rolls out. Please wait a few hours for app update 2." button1={"OK"} button1Action={()=>{}}/>
-
-      {/* <PopupTip numLogins={this.numLogins} tipDismissed={this.tipDismissed}/> */}
+      <Popup support={true} noDismiss ref={(popupSupport) => this.popupSupport = popupSupport} text="Leave a Tip" button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
     </>
   }
 }

@@ -6,6 +6,14 @@ import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
 export function doWeSwapDate(){
   if(global.language.includes("French")){
     return true;
+  } else if(global.language.includes("German")){
+    return true;
+  } else if(global.language.includes("Spanish")){
+    return true;
+  } else if(global.language.includes("Italian")){
+    return true;
+  } else if(global.language.includes("Dutch")){
+    return true;
   } else {
     return false;
   }

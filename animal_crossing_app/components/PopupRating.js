@@ -68,7 +68,7 @@ class PopupRating extends Component {
                 color={colors.okButton[global.darkMode]}
                 vibrate={5}
                 onPress={() => {
-                  this.setState({popupVisible:false, open2:true})
+                  this.setState({popupVisible:false})
                   Linking.openURL(
                     "https://play.google.com/store/apps/details?id=com.acnh.pocket_guide&showAllReviews=true"
                   );
@@ -78,14 +78,6 @@ class PopupRating extends Component {
           </View>
         </View>
       </Modal>
-      <Popup 
-        button1={"OK"} 
-        button1Action={()=>{}}
-        text={"Thank you!"}
-        textLower={"Your feedback is always appreciated!"}
-        popupVisible={this.state.open2} 
-        close={() => this.setState({open2:!this.state.open2})}
-      />
       </>
     )
   }

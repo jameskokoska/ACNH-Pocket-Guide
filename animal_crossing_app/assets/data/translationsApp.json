@@ -531,21 +531,21 @@
     ],
     "Main": [
         {
-            "English": "845 items",
-            "English (Europe)": "845 items",
-            "French": "828 items",
-            "French (US)": "828 items",
-            "German": "844 items",
-            "Spanish": "828 items",
-            "Spanish (US)": "824 items",
-            "Russian": "828 items",
-            "Italian": "843 items",
-            "Dutch": "813 items",
+            "English": "847 items",
+            "English (Europe)": "847 items",
+            "French": "836 items",
+            "French (US)": "836 items",
+            "German": "847 items",
+            "Spanish": "836 items",
+            "Spanish (US)": "832 items",
+            "Russian": "836 items",
+            "Italian": "846 items",
+            "Dutch": "821 items",
             "Chinese": "0 items",
             "Chinese (Traditional)": "0 items",
             "Japanese": "0 items",
             "Korean": "0 items",
-            "Portuguese": "836 items"
+            "Portuguese": "844 items"
         },
         {
             "English": "Home",
@@ -998,7 +998,7 @@
             "Spanish": "Ene",
             "Spanish (US)": "Ene",
             "Russian": "Янв",
-            "Italian": "Genn.",
+            "Italian": "Genn",
             "Dutch": "Jan",
             "Portuguese": "Jan"
         },
@@ -1011,7 +1011,7 @@
             "Spanish": "Feb",
             "Spanish (US)": "Feb",
             "Russian": "Фев",
-            "Italian": "Febbr.",
+            "Italian": "Febbr",
             "Dutch": "Feb",
             "Portuguese": "Fev"
         },
@@ -1024,7 +1024,7 @@
             "Spanish": "Mar",
             "Spanish (US)": "Mar",
             "Russian": "Мар",
-            "Italian": "Mar.",
+            "Italian": "Mar",
             "Dutch": "Mar",
             "Portuguese": "Mar"
         },
@@ -1037,7 +1037,7 @@
             "Spanish": "Abr",
             "Spanish (US)": "Abr",
             "Russian": "Апр",
-            "Italian": "Apr.",
+            "Italian": "Apr",
             "Dutch": "Apr",
             "Portuguese": "Abr"
         },
@@ -1050,7 +1050,7 @@
             "Spanish": "May",
             "Spanish (US)": "May",
             "Russian": "Май",
-            "Italian": "Magg.",
+            "Italian": "Magg",
             "Dutch": "Mei",
             "Portuguese": "Maio"
         },
@@ -1063,7 +1063,7 @@
             "Spanish": "Jun",
             "Spanish (US)": "Jun",
             "Russian": "Июн",
-            "Italian": "Giu.",
+            "Italian": "Giu",
             "Dutch": "Jun",
             "Portuguese": "Jun"
         },
@@ -1076,7 +1076,7 @@
             "Spanish": "Jul",
             "Spanish (US)": "Jul",
             "Russian": "Июл",
-            "Italian": "Lug.",
+            "Italian": "Lug",
             "Dutch": "Jul",
             "Portuguese": "Jul"
         },
@@ -1089,7 +1089,7 @@
             "Spanish": "Ago",
             "Spanish (US)": "Ago",
             "Russian": "Авг",
-            "Italian": "Ag. ",
+            "Italian": "Ag",
             "Dutch": "Aug",
             "Portuguese": "Ago"
         },
@@ -1102,7 +1102,7 @@
             "Spanish": "Sep",
             "Spanish (US)": "Sep",
             "Russian": "Сен",
-            "Italian": "Sett.",
+            "Italian": "Sett",
             "Dutch": "Sep",
             "Portuguese": "Set"
         },
@@ -1115,7 +1115,7 @@
             "Spanish": "Oct",
             "Spanish (US)": "Oct",
             "Russian": "Окт",
-            "Italian": "Ott.",
+            "Italian": "Ott",
             "Dutch": "Okt",
             "Portuguese": "Out"
         },
@@ -1128,7 +1128,7 @@
             "Spanish": "Nov",
             "Spanish (US)": "Nov",
             "Russian": "Ноя",
-            "Italian": "Nov.",
+            "Italian": "Nov",
             "Dutch": "Nov",
             "Portuguese": "Nov"
         },
@@ -1141,7 +1141,7 @@
             "Spanish": "Dic",
             "Spanish (US)": "Dic",
             "Russian": "Дек",
-            "Italian": "Dic.",
+            "Italian": "Dic",
             "Dutch": "Dec",
             "Portuguese": "Dez"
         },
@@ -1154,7 +1154,7 @@
             "Spanish": "Lun",
             "Spanish (US)": "Lun",
             "Russian": "Пн",
-            "Italian": "Lun.",
+            "Italian": "Lun",
             "Dutch": "Ma",
             "Portuguese": "Seg"
         },
@@ -1167,7 +1167,7 @@
             "Spanish": "Mart",
             "Spanish (US)": "Mart",
             "Russian": "Вт",
-            "Italian": "Mart.",
+            "Italian": "Mart",
             "Dutch": "Dins",
             "Portuguese": "Terç"
         },
@@ -1180,7 +1180,7 @@
             "Spanish": "Mar",
             "Spanish (US)": "Mar",
             "Russian": "Вт",
-            "Italian": "Mart.",
+            "Italian": "Mart",
             "Dutch": "Di",
             "Portuguese": "Terç"
         },
@@ -1193,7 +1193,7 @@
             "Spanish": "Mie",
             "Spanish (US)": "Mie",
             "Russian": "Ср",
-            "Italian": "Mer.",
+            "Italian": "Mer",
             "Dutch": "Woe",
             "Portuguese": "Qua"
         },
@@ -1206,7 +1206,7 @@
             "Spanish": "Juev",
             "Spanish (US)": "Juev",
             "Russian": "Чт",
-            "Italian": "Gio.",
+            "Italian": "Gio",
             "Dutch": "Don",
             "Portuguese": "Qui"
         },
@@ -1219,7 +1219,7 @@
             "Spanish": "Jue",
             "Spanish (US)": "Jue",
             "Russian": "Чт",
-            "Italian": "Gio.",
+            "Italian": "Gio",
             "Dutch": "Do",
             "Portuguese": "Qui"
         },
@@ -1232,7 +1232,7 @@
             "Spanish": "Vier",
             "Spanish (US)": "Vier",
             "Russian": "Пт",
-            "Italian": "Ven.",
+            "Italian": "Ven",
             "Dutch": "Vrij",
             "Portuguese": "Sx"
         },
@@ -1245,7 +1245,7 @@
             "Spanish": "Sáb",
             "Spanish (US)": "Sáb",
             "Russian": "Сб",
-            "Italian": "Sab.",
+            "Italian": "Sab",
             "Dutch": "Za",
             "Portuguese": "Sab"
         },
@@ -1258,7 +1258,7 @@
             "Spanish": "Dom",
             "Spanish (US)": "Dom",
             "Russian": "Вс",
-            "Italian": "Dom.",
+            "Italian": "Dom",
             "Dutch": "Zo",
             "Portuguese": "Dom"
         },
@@ -3571,8 +3571,8 @@
             "Spanish": "¡Por supuesto!",
             "Spanish (US)": "¡Por supuesto!",
             "Russian": "Конечно! ",
-            "Italian": "Ok",
-            "Dutch": "Ja zeker",
+            "Italian": "Ok!",
+            "Dutch": "Ja zeker!",
             "Portuguese": "Certo!"
         },
         {
@@ -7030,19 +7030,6 @@
             "Italian": "Falso",
             "Dutch": "Nep",
             "Portuguese": "Falsa"
-        },
-        {
-            "English": "If you enjoy my app and would like to support me, send me an email! (Tap here)",
-            "English (Europe)": "If you enjoy my app and would like to support me, send me an email! (Tap here)",
-            "French": "Si vous appréciez mon application et souhaitez me soutenir, envoyez-moi un e-mail ! (Appuyez ici)",
-            "French (US)": "Si vous appréciez mon application et souhaitez me soutenir, envoyez-moi un e-mail ! (Appuyez ici)",
-            "German": "Wenn dir meine App gefällt und du mich unterstützen möchtest, sende mir gern eine E-Mail!  (Hier tippen)",
-            "Spanish": "¡Si disfrutas o te gusta la app y quieres apoyarme, enviame un e-mail! (Toca aquí)",
-            "Spanish (US)": "¡Si disfrutas o te gusta la app y quieres apoyarme, enviame un e-mail! (Toca aquí)",
-            "Russian": "Если вам нравится моё приложение и вы хотите меня поддержать, пришлите мне имэйл! (нажмите сюда)",
-            "Italian": "Se ti piace la mia app e vuoi supportarmi, mandami un'email! (premi qui)",
-            "Dutch": "Als je mijn app leuk vindt en me wilt steunen, stuur me dan een e-mail! (Klik hier)",
-            "Portuguese": "Se você gostou do meu aplicativo e gostaria de me apoiar, envie-me um e-mail! (Toque aqui)"
         },
         {
             "English": "Select Events",
@@ -11368,48 +11355,131 @@
         {
             "English": "Food",
             "English (Europe)": "Food",
+            "French": "Nourriture",
+            "French (US)": "Nourriture",
             "German": "Essen",
-            "Italian": "Cibo"
+            "Spanish": "Comida",
+            "Spanish (US)": "Comida",
+            "Russian": "Еда",
+            "Italian": "Cibo",
+            "Dutch": "Voedsel",
+            "Portuguese": "Comida"
         },
         {
             "English": "To view recipes, go to the Recipes + Tools page",
             "English (Europe)": "To view recipes, go to the Recipes + Tools page",
+            "French": "Pour consulter les recettes, rendez-vous sur la page Recettes + Outils",
+            "French (US)": "Pour consulter les recettes, rendez-vous sur la page Recettes + Outils",
             "German": "Um Rezepte anzuzeigen, gehe auf die Seite Rezepte + Tools",
-            "Italian": "Per vedere le ricette, vai alla pagina Ricette + Strumenti"
+            "Spanish": "Para ver recetas, vaya a la página Recetas + Herramientas",
+            "Spanish (US)": "Para ver recetas, vaya a la página Recetas + Herramientas",
+            "Russian": "Чтобы просмотреть рецепты, перейдите на страницу Рецепты + Инструменты.",
+            "Italian": "Per vedere le ricette, vai alla pagina Ricette + Strumenti",
+            "Dutch": "Ga naar de pagina Recepten + Hulpmiddelen om recepten te bekijken",
+            "Portuguese": "Para ver as receitas, vá para a página Receitas + Ferramentas"
         },
         {
             "English": "View Craftable items",
             "English (Europe)": "View Craftable items",
+            "French": "Voir les objets à fabriquer",
+            "French (US)": "Voir les objets à fabriquer",
             "German": "Zeige herstellbare Gegenstände an",
-            "Italian": "Vedi oggetti costruibili"
+            "Spanish": "Ver artículos que se pueden crear",
+            "Spanish (US)": "Ver artículos que se pueden crear",
+            "Russian": "Просмотр создаваемых предметов",
+            "Italian": "Vedi oggetti costruibili",
+            "Dutch": "Maakbare items bekijken",
+            "Portuguese": "Exibir itens fabricáveis"
         },
         {
             "English": "Ceiling Decor",
             "English (Europe)": "Ceiling Decor",
+            "French": "Décor de plafond",
+            "French (US)": "Décor de plafond",
             "German": "Deckendekoration",
-            "Italian": "Da soffitto"
+            "Spanish": "Decoración de techo",
+            "Spanish (US)": "Decoración de techo",
+            "Russian": "Потолочный декор",
+            "Italian": "Da soffitto",
+            "Dutch": "Plafonddecoratie",
+            "Portuguese": "Decoração de teto"
         },
         {
             "English": "Show craftable item variations",
             "English (Europe)": "Show craftable item variations",
+            "French": "Afficher les variantes d'objets à fabriquer",
+            "French (US)": "Afficher les variantes d'objets à fabriquer",
             "German": "Zeige herstellbare Gegenstandsvariationen an",
-            "Italian": "Mostra varianti degli oggetti costruibili"
+            "Spanish": "Mostrar variaciones de artículos que se pueden crear",
+            "Spanish (US)": "Mostrar variaciones de artículos que se pueden crear",
+            "Russian": "Показать варианты предметов, которые можно создать",
+            "Italian": "Mostra varianti degli oggetti costruibili",
+            "Dutch": "Variaties van bewerkbare items weergeven",
+            "Portuguese": "Mostrar variações de itens fabricáveis"
         },
         {
             "English": "Tap the Heart to add villagers currently in your town.",
-            "English (Europe)": "Tap the Heart to add villagers currently in your town."
+            "English (Europe)": "Tap the Heart to add villagers currently in your town.",
+            "French": "Appuyez sur le cœur pour ajouter des villageois actuellement dans votre ville.",
+            "French (US)": "Appuyez sur le cœur pour ajouter des villageois actuellement dans votre ville.",
+            "German": "Tippen Sie auf das Herz, um Dorfbewohner hinzuzufügen, die sich derzeit in Ihrer Stadt befinden.",
+            "Spanish": "Toque el corazón para agregar aldeanos que se encuentran actualmente en su ciudad.",
+            "Spanish (US)": "Toque el corazón para agregar aldeanos que se encuentran actualmente en su ciudad.",
+            "Russian": "Нажмите на Сердце, чтобы добавить жителей, которые в настоящее время проживают в вашем городе.",
+            "Italian": "Tocca il cuore per aggiungere gli abitanti del villaggio attualmente nella tua città.",
+            "Dutch": "Tik op het hart om dorpelingen in je stad toe te voegen.",
+            "Portuguese": "Toque no Coração para adicionar aldeões atualmente em sua cidade."
+        },
+        {
+            "English": "Leave a Tip",
+            "English (Europe)": "Leave a Tip",
+            "French": "Laisser un Pourboire",
+            "French (US)": "Laisser un Pourboire",
+            "German": "Trinkgeld geben",
+            "Spanish": "Deja una propina",
+            "Spanish (US)": "Deja una propina",
+            "Russian": "Оставить отзыв",
+            "Italian": "Lasciare una mancia",
+            "Dutch": "Laat een fooi achter",
+            "Portuguese": "Deixe uma dica"
+        },
+        {
+            "English": "If you enjoy this free app, consider supporting the developer :)",
+            "English (Europe)": "If you enjoy this free app, consider supporting the developer :)",
+            "French": "Si vous appréciez cette application gratuite, pensez à soutenir le développeur :)",
+            "French (US)": "Si vous appréciez cette application gratuite, pensez à soutenir le développeur :)",
+            "German": "Wenn Ihnen diese kostenlose App gefällt, sollten Sie den Entwickler unterstützen :)",
+            "Spanish": "Si disfruta de esta aplicación gratuita, considere apoyar al desarrollador :)",
+            "Spanish (US)": "Si disfruta de esta aplicación gratuita, considere apoyar al desarrollador :)",
+            "Russian": "Если вам нравится это бесплатное приложение, подумайте о поддержке разработчика :)",
+            "Italian": "Se ti piace questa app gratuita, considera di supportare lo sviluppatore :)",
+            "Dutch": "Als je deze gratis app leuk vindt, overweeg dan om de ontwikkelaar te steunen :)",
+            "Portuguese": "Se você gosta deste aplicativo gratuito, considere apoiar o desenvolvedor :)"
+        },
+        {
+            "English": "Thank you!",
+            "English (Europe)": "Thank you!",
+            "French": "Merci!",
+            "French (US)": "Merci!",
+            "German": "Dankeschön!",
+            "Spanish": "¡Gracias!",
+            "Spanish (US)": "¡Gracias!",
+            "Russian": "Спасибо!",
+            "Italian": "Grazie!",
+            "Dutch": "Bedankt!",
+            "Portuguese": "Obrigado!"
         }
     ],
     "Sources": [
         {
-            "English": "130 items",
-            "English (Europe)": "130 items",
+            "English": "156 items",
+            "English (Europe)": "156 items",
             "French": "99 items",
             "French (US)": "99 items",
-            "German": "110 items",
+            "German": "109 items",
             "Spanish": "95 items",
             "Spanish (US)": "50 items",
-            "Italian": "130 items",
+            "Italian": "129 items",
             "Dutch": "46 items",
             "Chinese": "0 items",
             "Chinese (Traditional)": "0 items",
@@ -12657,12 +12727,6 @@
             "Italian": "Estirpando una pianta di carote"
         },
         {
-            "English": "Digging up a carrot plant",
-            "English (Europe)": "Digging up a carrot plant",
-            "German": "Eine Karottenpflanze ausgraben",
-            "Italian": "Estirpando una pianta di carote"
-        },
-        {
             "English": "Digging up a potato plant",
             "English (Europe)": "Digging up a potato plant",
             "German": "Eine Kartoffelpflanze ausgraben",
@@ -12763,12 +12827,120 @@
             "English": "New Reactions Notebook",
             "English (Europe)": "New Reactions Notebook",
             "Italian": "Quadernino delle nuove emozioni"
+        },
+        {
+            "English": "HHP Office",
+            "English (Europe)": "HHP Office"
+        },
+        {
+            "English": "Group Stretching",
+            "English (Europe)": "Group Stretching"
+        },
+        {
+            "English": "Wardell",
+            "English (Europe)": "Wardell"
+        },
+        {
+            "English": "Cooking",
+            "English (Europe)": "Cooking"
+        },
+        {
+            "English": "HHP Café",
+            "English (Europe)": "HHP Café"
+        },
+        {
+            "English": "CookPumpkin",
+            "English (Europe)": "CookPumpkin"
+        },
+        {
+            "English": "Donating all bugs",
+            "English (Europe)": "Donating all bugs"
+        },
+        {
+            "English": "Donating all fish",
+            "English (Europe)": "Donating all fish"
+        },
+        {
+            "English": "Donating all art",
+            "English (Europe)": "Donating all art"
+        },
+        {
+            "English": "Donating all fossils",
+            "English (Europe)": "Donating all fossils"
+        },
+        {
+            "English": "Donating all sea creatures",
+            "English (Europe)": "Donating all sea creatures"
+        },
+        {
+            "English": "Museum3Event",
+            "English (Europe)": "Museum3Event"
+        },
+        {
+            "English": "OneRoomTailorKKFes",
+            "English (Europe)": "OneRoomTailorKKFes"
+        },
+        {
+            "English": "NotAvailable",
+            "English (Europe)": "NotAvailable"
+        },
+        {
+            "English": "Picking carrots",
+            "English (Europe)": "Picking carrots"
+        },
+        {
+            "English": "Kapp'n islands",
+            "English (Europe)": "Kapp'n islands"
+        },
+        {
+            "English": "Picking potatoes",
+            "English (Europe)": "Picking potatoes"
+        },
+        {
+            "English": "Picking sugarcane",
+            "English (Europe)": "Picking sugarcane"
+        },
+        {
+            "English": "Picking tomatoes",
+            "English (Europe)": "Picking tomatoes"
+        },
+        {
+            "English": "Picking wheat",
+            "English (Europe)": "Picking wheat"
+        },
+        {
+            "English": "Egg bottles",
+            "English (Europe)": "Egg bottles"
+        },
+        {
+            "English": "Egg balloons",
+            "English (Europe)": "Egg balloons"
+        },
+        {
+            "English": "Catching an anchovy",
+            "English (Europe)": "Catching an anchovy"
+        },
+        {
+            "English": "Niko",
+            "English (Europe)": "Niko"
+        },
+        {
+            "English": "Kapp'n island bottles",
+            "English (Europe)": "Kapp'n island bottles"
+        },
+        {
+            "English": "HHP island bottles",
+            "English (Europe)": "HHP island bottles"
+        },
+        {
+            "English": "DJ K.K. concert",
+            "English (Europe)": "DJ K.K. concert"
         }
     ],
     "Source Notes": [
         {
-            "English": "151 items",
-            "English (Europe)": "151 items",
+            "English": "170 items",
+            "English (Europe)": "170 items",
             "French": "151 items",
             "French (US)": "151 items",
             "German": "151 items",
@@ -14236,6 +14408,82 @@
             "French (US)": "Récompense pour avoir terminé le Rallye Tampons dans la galerie d'art lors de la Journée Internationale des Musées",
             "German": "Belohnung für den Abschluss der Stempeljagd in der Kunstgalerie während des Internationalen Museumstages",
             "Portuguese": "Recompensa por completar o Stamp Rally na galeria de arte durante o Dia Internacional dos Museus"
+        },
+        {
+            "English": "Sit down for coffee on 20 different days",
+            "English (Europe)": "Sit down for coffee on 20 different days"
+        },
+        {
+            "English": "Sent in the mail after doing group stretches on 10 different days",
+            "English (Europe)": "Sent in the mail after doing group stretches on 10 different days"
+        },
+        {
+            "English": "Sit down for coffee on 10 different days",
+            "English (Europe)": "Sit down for coffee on 10 different days"
+        },
+        {
+            "English": "Sit down for coffee on 15 different days",
+            "English (Europe)": "Sit down for coffee on 15 different days"
+        },
+        {
+            "English": "Sit down for coffee on 40 different days",
+            "English (Europe)": "Sit down for coffee on 40 different days"
+        },
+        {
+            "English": "Sit down for coffee on 30 different days",
+            "English (Europe)": "Sit down for coffee on 30 different days"
+        },
+        {
+            "English": "Available from Nook's Cranny;",
+            "English (Europe)": "Available from Nook's Cranny;"
+        },
+        {
+            "English": "Available from Tom Nook during Countdown",
+            "English (Europe)": "Available from Tom Nook during Countdown"
+        },
+        {
+            "English": "Sent in the mail after doing group stretches on 20 different days",
+            "English (Europe)": "Sent in the mail after doing group stretches on 20 different days"
+        },
+        {
+            "English": "Sent in the mail after doing group stretches on 30 different days",
+            "English (Europe)": "Sent in the mail after doing group stretches on 30 different days"
+        },
+        {
+            "English": "Sent in the mail after doing group stretches on 3 different days",
+            "English (Europe)": "Sent in the mail after doing group stretches on 3 different days"
+        },
+        {
+            "English": "Sit down for coffee on 50 different days",
+            "English (Europe)": "Sit down for coffee on 50 different days"
+        },
+        {
+            "English": "Sent in the mail after purchasing turnips",
+            "English (Europe)": "Sent in the mail after purchasing turnips"
+        },
+        {
+            "English": "Received after donating DIY materials, after 19th HHP house",
+            "English (Europe)": "Received after donating DIY materials, after 19th HHP house"
+        },
+        {
+            "English": "Received the day after completing 15th HHP house",
+            "English (Europe)": "Received the day after completing 15th HHP house"
+        },
+        {
+            "English": "Received after completing 8th HHP house",
+            "English (Europe)": "Received after completing 8th HHP house"
+        },
+        {
+            "English": "Sit down for coffee on 5 different days",
+            "English (Europe)": "Sit down for coffee on 5 different days"
+        },
+        {
+            "English": "Received in the mail after buying veggies from Leif on 3 different days.",
+            "English (Europe)": "Received in the mail after buying veggies from Leif on 3 different days."
+        },
+        {
+            "English": "Received after doing your 50th group stretch",
+            "English (Europe)": "Received after doing your 50th group stretch"
         }
     ],
     "Event Names": [
@@ -14831,8 +15079,8 @@
     ],
     "Missing Items": [
         {
-            "English": "65 items",
-            "English (Europe)": "45 items",
+            "English": "53 items",
+            "English (Europe)": "53 items",
             "French": "45 items",
             "French (US)": "45 items",
             "German": "45 items",
@@ -15461,64 +15709,36 @@
             "Russian": "клубничн. сахарная вата"
         },
         {
-            "English": "blue cobblestones"
+            "English": "blue cobblestones",
+            "English (Europe)": "blue cobblestones"
         },
         {
-            "English": "brown cobblestones"
+            "English": "brown cobblestones",
+            "English (Europe)": "brown cobblestones"
         },
         {
-            "English": "chic cobblestones"
+            "English": "chic cobblestones",
+            "English (Europe)": "chic cobblestones"
         },
         {
-            "English": "cobblestones"
+            "English": "cobblestones",
+            "English (Europe)": "cobblestones"
         },
         {
-            "English": "gray cobblestones"
+            "English": "gray cobblestones",
+            "English (Europe)": "gray cobblestones"
         },
         {
-            "English": "green cobblestones"
+            "English": "green cobblestones",
+            "English (Europe)": "green cobblestones"
         },
         {
-            "English": "orange cobblestones"
+            "English": "orange cobblestones",
+            "English (Europe)": "orange cobblestones"
         },
         {
-            "English": "red cobblestones"
-        },
-        {
-            "English": "Nook Friday"
-        },
-        {
-            "English": "Winter Solstice (northern hemisphere) (2)"
-        },
-        {
-            "English": "Winter Solstice (northern hemisphere) (3)"
-        },
-        {
-            "English": "Summer Solstice (southern hemisphere) (2)"
-        },
-        {
-            "English": "Shōgatsu (4)"
-        },
-        {
-            "English": "Shōgatsu (5)"
-        },
-        {
-            "English": "Nanakusa Gayu"
-        },
-        {
-            "English": "Carnival of Venice"
-        },
-        {
-            "English": "Summer Solstice (northern hemisphere) (2)"
-        },
-        {
-            "English": "Winter Solstice (southern hemisphere) (2)"
-        },
-        {
-            "English": "Winter Solstice (southern hemisphere) (3)"
-        },
-        {
-            "English": "Tomato Festival"
+            "English": "red cobblestones",
+            "English (Europe)": "red cobblestones"
         }
     ],
     "Special Translations": [

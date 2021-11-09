@@ -207,7 +207,7 @@ export const sideSections = [
   },
   {
     "pageNum" : 33,
-    "picture" : require("../assets/icons/loid.png"),
+    "picture" : require("../assets/icons/gyroid.png"),
     "displayName" : "Gyroids",
     "color": "selectGyroids",
   },

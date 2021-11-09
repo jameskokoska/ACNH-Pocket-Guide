@@ -116,7 +116,7 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
             dataLoading[i][hemispherePre[hemispherePreIndex]+"time"] = "All day"
         }
       }
-      if(global.language!=="English"){
+      if(global.language!=="English" && global.language!=="Portuguese"){
         // if(!customDatabase){
         //   dataLoading[i]["NameLanguage"]=attemptToTranslateItem(dataLoading[i]["Name"]);
         // }else{
@@ -1053,6 +1053,12 @@ export function translateBirthday(villager){
     return (villager + "'s Geburtstag")
   } else if(global.language==="Russian"){
     return ("День рождения " + villager)
+  } else if(global.language==="Italian"){
+    return ("Compleanno di " + villager)
+  } else if(global.language==="Dutch"){
+    return (villager + "'s Verjaardag")
+  } else if(global.language==="Portuguese"){
+    return ("Aniversário de " + villager)
   } else {
     return (villager + "'s Birthday")
   }
@@ -1067,6 +1073,12 @@ export function translateIslandNameInputLabel1(){
     return "der";
   } else if (global.language==="Russian"){
     return " ";
+  } else if(global.language==="Italian"){
+    return ("dall'isola")
+  } else if(global.language==="Dutch"){
+    return ("van het eiland")
+  } else if(global.language==="Portuguese"){
+    return ("da ilha")
   } else {
     return "of";
   }

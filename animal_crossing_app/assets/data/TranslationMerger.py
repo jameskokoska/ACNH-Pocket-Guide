@@ -1,6 +1,10 @@
 import json
 import codecs
 
+def printEntries(listItems):
+    for itemList in listItems:
+        print(itemList)
+
 print("Matching [Name] and [English]... from data.json and translations.json")
 propertiesToCheck = ["Name","Description", "Achievement Description","Achievement Criteria","Tier 1 Modifier", "Tier 2 Modifier", "Tier 3 Modifier", "Tier 4 Modifier", "Tier 5 Modifier", "Tier 6 Modifier", "Tier 1 Noun", "Tier 2 Noun", "Tier 3 Noun", "Tier 4 Noun", "Tier 5 Noun", "Tier 6 Noun"]
 count=0
@@ -54,7 +58,8 @@ for dataSheet in data:
             if(datum.get("Source")!=None and ";" in datum.get("Source")):
                 for sourceSplit in datum.get("Source").split("; "):
                     if(alreadyTranslated(sourceSplit)==False and datum.get("Source") not in sources):
-                        sources.append(sourceSplit)
+                        if(sourceSplit not in sources):
+                            sources.append(sourceSplit)
                         if(debug):
                             print("New Source")
                             print(sourceSplit)
@@ -62,7 +67,8 @@ for dataSheet in data:
                 if(debug):
                     print("New Source")
                     print(datum.get("Source"))
-                sources.append(datum.get("Source"))
+                if(datum.get("Source") not in sources):
+                    sources.append(datum.get("Source"))
         for propertyToCheck in propertiesToCheck:
             for translationSheet in translation:
                 if(translationSheet in ignore):
@@ -85,12 +91,12 @@ for dataSheet in data:
     print(str(int(length/len(data)*100))+"%")
 
 if(debugEnd):
-    print("Missing Items")
-    print(missingItems)
-    print("Source Notes")
-    print(sourceNotes)
-    print("Sources")
-    print(sources)
+    print("----Missing Items----")
+    printEntries(missingItems)
+    print("----Source Notes----")
+    printEntries(sourceNotes)
+    print("----Sources----")
+    printEntries(sources)
     
 print("Opening more translations... (generated with Generate Translations.py)")
 with open('translationsNewOutput.json', encoding='utf-8-sig') as f:

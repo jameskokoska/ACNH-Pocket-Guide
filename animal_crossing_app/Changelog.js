@@ -6,6 +6,12 @@ export const changelog = `
 -I am updating the app with new content from the update....
 -Please be patient as details come in :)
 -
+-Added more ToDo list icons
+-Updated visitor icons
+-Updated translations
+-Changed order of date for different languages
+-Portuguese language now loads significantly faster
+-
 -Added help text for adding villagers
 -In variation popup - added which villagers like that item as a gift (for clothing)
 -Long press a variation to view more details
