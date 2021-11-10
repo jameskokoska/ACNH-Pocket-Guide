@@ -6,6 +6,7 @@ export const changelog = `
 -Thank you everyone for your support and tips on the app!
 -Thank you for being a Silver Supporter: Nigerski!
 -
+-Quick fix: Unobtainable DIYs tab crash
 -Profile and Island name not translated
 -Villager names on Paradise Planning translated
 -Updated translations

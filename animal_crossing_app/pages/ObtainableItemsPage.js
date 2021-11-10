@@ -58,7 +58,7 @@ class ObtainableDIYsRouteClass extends React.PureComponent {
 class UnobtainableDIYsRouteClass extends React.PureComponent {
   render(){
     return(
-      <RecipesRouteClass
+      <CraftingPage
         tabs={true}
         smallerHeader={true}
         filterSearchable={false}
