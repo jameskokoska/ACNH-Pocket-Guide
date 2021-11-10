@@ -1273,9 +1273,11 @@ export function compareItemID(itemIDs, currentItem){
     return false;
   }
   for(var i=0; i<itemIDs.length; i++){
-    for(var x=0; x<itemIDs[i]["list"].length; x++){
-      if((itemIDs[i]["list"][x].toString()===currentItem["Name"].toString()||itemIDs[i]["list"][x].toString()===currentItem["Internal ID"].toString()) && currentItem["checkListKey"].includes(itemIDs[i]["key"])){
-        return true;
+    if(currentItem["checkListKey"].includes(itemIDs[i]["key"])){
+      for(var x=0; x<itemIDs[i]["list"].length; x++){
+        if((itemIDs[i]["list"][x].toString()===currentItem["Name"].toString()||itemIDs[i]["list"][x].toString()===currentItem["Internal ID"].toString())){
+          return true;
+        }
       }
     }
   }
@@ -1395,4 +1397,18 @@ export function allEventItemsCheck(eventName){
     }
   }
   return true
+}
+
+//findItem, getItem
+export function findObject(string, paramToSearch, dataCategory){
+  for(var dataSet = 0; dataSet < global.dataLoadedAll.length; dataSet++){
+    for(var i = 0; i < global.dataLoadedAll[dataSet].length; i++){
+      if(global.dataLoadedAll[dataSet][i]["Data Category"]===dataCategory){
+        if(global.dataLoadedAll[dataSet][i].hasOwnProperty(paramToSearch) && global.dataLoadedAll[dataSet][i][paramToSearch].toString()===string){
+          return global.dataLoadedAll[dataSet][i];
+        }
+      }
+    }
+  }
+  return false
 }

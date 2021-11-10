@@ -61,8 +61,8 @@ class MysteryIslandsPage extends Component {
         <ScrollView style={{backgroundColor:colors.background[global.darkMode]}}>
           <View style={{height: 100}}/>
           <Header>Mystery Islands</Header>
-          <HeaderNote>{"Note: long press to check off the island as visited"}</HeaderNote>
-          <HeaderNote>{"Tap each for more details"}</HeaderNote>
+          {/* <HeaderNote>{"Note: long press to check off the island as visited"}</HeaderNote>
+          <HeaderNote>{"Tap each for more details"}</HeaderNote> */}
           <View style={{height: 10}}/>
           <View style={{marginHorizontal: 20, flex: 1, flexDirection: 'row', justifyContent:'space-evenly',flexWrap:"wrap"}}>
           {

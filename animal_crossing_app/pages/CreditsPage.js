@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {ScrollView, View,} from 'react-native';
+import {Linking, ScrollView, View,} from 'react-native';
 import TextFont from '../components/TextFont'
 import StoreHoursContainer from '../components/StoreHoursContainer';
 import colors from '../Colors'
@@ -8,6 +8,7 @@ import ButtonComponent from "../components/ButtonComponent"
 import {MailLink, ExternalLink, SubHeader, Header, Paragraph} from "../components/Formattings"
 import {attemptToTranslate} from "../LoadJsonData"
 import {changelog, dataVersion} from "../Changelog"
+import Popup from '../components/Popup';
 
 class CreditsPage extends Component {
   render(){
@@ -31,6 +32,22 @@ class CreditsPage extends Component {
           <StoreHoursContainer backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} image={require("../assets/icons/James.png")} text="James" textBottom="Lead Programmer"/>
           <StoreHoursContainer backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} image={require("../assets/icons/Ryan.png")} text="Ryan" textBottom="Lead Graphics"/>
           <View style={{height: 20}}/>
+          <SubHeader style={{fontSize: 26}}>Silver Supporters</SubHeader>
+          <Paragraph style={{marginBottom:10}}>{attemptToTranslate("Thanks for your support!")}</Paragraph>
+          <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
+            <SubHeader>Nigerski</SubHeader>
+          </View>
+          <View style={{height: 5}}/>
+          <View style={{paddingHorizontal: 20}}>
+            <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.popupSupport?.setPopupVisible(true)}} text={"Leave a tip"} />
+            <Popup support={true} noDismiss ref={(popupSupport) => this.popupSupport = popupSupport} text="Leave a Tip" button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
+            <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.popupRating?.setPopupVisible(true)}} text={"Leave a rating"} />
+            <PopupRating ref={(popupRating) => this.popupRating = popupRating}/>
+          </View>
+          <View style={{height: 20}}/>
+          <MailLink/>
+
+          <View style={{height: 40}}/>
           <SubHeader>Volunteer Translators</SubHeader>
           <Paragraph>{attemptToTranslate("Thanks for your help!")}</Paragraph>
           <View style={{height: 10}}/>
@@ -80,13 +97,9 @@ class CreditsPage extends Component {
             <SubHeader> MarvelousBi</SubHeader>
           </View>
           
-          <View style={{height: 20}}/>
-          <MailLink/>
-          <PopupRating ref={(popupRating) => this.popupRating = popupRating}/>
-          <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.popupRating?.setPopupVisible(true)}} text={"Leave a rating"} />
           {/* <PopupTip show={this.state.show2} noShow={()=>{this.setState({show2:false})}}/>
           <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.setState({show2:true})}} text={"Give a tip"} /> */}
-          <View style={{height:60}}/>
+          <View style={{height:30}}/>
           <SubHeader>Additional Information</SubHeader>
           <Paragraph>This application was created using React Native, with the original App programmed in Flutter. This application and contents are NOT affiliated with Nintendo. All local artwork recreated/licensed. This application is not made for commercial use, and is provided at a price of 0$ (free) on the Google Play Store with no advertisements. All application source code is of property to respective owners/contributors listed on the Credits page and/or licenses associated within specific packages/libraries within this application.</Paragraph>
           <Paragraph>The copyright of assets is likely to be held by the publisher where applicable. With limited number of low-resolution images for identification, critical commentary and information, the copyrighted content depicted in question qualifies as fair use under United States copyright law and therefore does not significantly impede the right of the copyright holder, since in this context the material is not being used to turn a profit and presents ideas that cannot be exhibited otherwise.</Paragraph>

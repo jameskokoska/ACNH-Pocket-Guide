@@ -195,7 +195,7 @@ export const sideSections = [
   },
   {
     "pageNum" : 2,
-    "picture" : require("../assets/icons/bugs.png"),
+    "picture" : require("../assets/icons/creatures.png"),
     "displayName" : "Creatures + Museum",
     "color": "selectCreatures",
   },
@@ -225,8 +225,8 @@ export const sideSections = [
   },
   {
     "pageNum" : 6,
-    "picture" : require("../assets/icons/crafting.png"),
-    "displayName" : "Recipes + Tools",
+    "picture" : require("../assets/icons/recipes.png"),
+    "displayName" : "Recipes",
     "color": "selectCrafting",
   },
   {
@@ -238,7 +238,7 @@ export const sideSections = [
   {
     "pageNum" : 9,
     "picture" : require("../assets/icons/construction.png"),
-    "displayName" : "Construction",
+    "displayName" : "Construction + Tools",
     "color": "selectConstruction",
   },
   {
@@ -272,6 +272,12 @@ export const sideSections = [
     "pageNum" : 16,
     "picture" : require("../assets/icons/calendar.png"),
     "displayName" : "Calendar + Events",
+    "color": "selectCalendar",
+  },
+  {
+    "pageNum" : 35,
+    "picture" : require("../assets/icons/paradisePlanning.png"),
+    "displayName" : "Paradise Planning",
     "color": "selectCalendar",
   },
   {

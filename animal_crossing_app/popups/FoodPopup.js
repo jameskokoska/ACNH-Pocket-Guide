@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {View} from 'react-native';
 import {SizeInfo, InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
+import ViewRecipeButton from './ViewRecipeComponent';
 
 class FoodPopup extends Component {
   constructor(props){
@@ -51,6 +52,7 @@ class FoodPopup extends Component {
         item={this.props.item}
         textProperty={["Source Notes"]}
       />
+      <ViewRecipeButton item={this.props.item}/>
     </View>
   }
 }

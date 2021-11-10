@@ -13,8 +13,12 @@ class RecipesPopup extends Component {
     }
   }
   render(){
+    //will be false if View Recipe can't find the item
+    if(this.props.item===false || this.props.item===undefined){
+      return <View/>
+    }
     return <View style={{width: "100%", alignItems: "center"}}>
-      <InfoLineBeside
+      {this.props.recipeOnly?<View/>:<InfoLineBeside
         image1={require("../assets/icons/bellBag.png")} 
         image2={require("../assets/icons/coin.png")} 
         item1={this.props.item}
@@ -23,12 +27,12 @@ class RecipesPopup extends Component {
         textProperty2={["Sell"]}
         ending1={"Exchange Currency"}
         ending2={"Exchange Currency"}
-      />
-      <InfoLine
+      />}
+      {this.props.recipeOnly?<View/>:<InfoLine
         image={require("../assets/icons/popper.png")} 
         item={this.props.item}
         textProperty={["Season/Event"]}
-      />
+      />}
       <InfoLine
         translateItem={true}
         image={require("../assets/icons/leaf.png")} 

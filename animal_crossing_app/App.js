@@ -35,7 +35,7 @@ import NewItemsPage from "./pages/NewItemsPage"
 import WishlistPage from "./pages/WishlistPage"
 import AchievementsPage from "./pages/AchievementsPage"
 import VillagerPresentsPage from "./pages/VillagerPresentsPage"
-import VillagerFurniture from "./pages/VillagerFurniture"
+import VillagerFurniture, { VillagerFurnitureParadisePlanning } from "./pages/VillagerFurniture"
 import ObtainableItemsPage from "./pages/ObtainableItemsPage"
 import CustomFiltersPage from "./pages/CustomFiltersPage"
 import VillagersCompatibilityPage from "./pages/VillagersCompatibilityPage"
@@ -56,6 +56,7 @@ import XLSX from 'xlsx';
 import { Asset } from 'expo-asset';
 import * as FileSystem from 'expo-file-system'
 import {dataVersion} from "./Changelog"
+import ParadisePlanningPage from './pages/ParadisePlanningPage';
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -75,7 +76,7 @@ class App extends Component {
     this.numLogins;
     this.state = {
       loaded: false,
-      currentPage: 0,
+      currentPage:0,
       open:false,
       propsPassed:""
     }
@@ -453,6 +454,10 @@ class App extends Component {
         currentPageView = <GyroidsPage/>
       } else if (this.state.currentPage===34){
         currentPageView = <CraftableItemsPage material={this.state.propsPassed}/>
+      } else if (this.state.currentPage===35){
+        currentPageView = <ParadisePlanningPage/>
+      } else if (this.state.currentPage===36){
+        currentPageView = <VillagerFurnitureParadisePlanning request={this.state.propsPassed}/>
       } else {
         currentPageView = <Text>Default</Text>
       }
@@ -468,6 +473,7 @@ class App extends Component {
       const NavigatorCustomFiltersPage = ({route, navigation})=>{return <CustomFiltersPage currentFiltersSearchFor={route.params.propsPassed} titlePassed={route.params.propsPassed} setPage={this.setPage}/>}
       const NavigatorVillagerFurniture = ({route, navigation})=>{return <VillagerFurniture villager={route.params.propsPassed}/>}
       const NavigatorCraftableItemsPage = ({route, navigation})=>{return <CraftableItemsPage material={route.params.propsPassed}/>}
+      const NavigatorVillagerFurnitureParadisePlanning = ({route, navigation})=>{return <VillagerFurnitureParadisePlanning request={route.params.propsPassed}/>}
       return (
         <View style={{flex:1,backgroundColor: "#000000"}}>
         <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage} sideMenuSections={this.sideMenuSections} sideMenuSectionsDisabled={this.sideMenuSectionsDisabled}>
@@ -478,6 +484,7 @@ class App extends Component {
             <Stack.Screen name="22" component={NavigatorVillagerFurniture}/>
             <Stack.Screen name="23" component={NavigatorCustomFiltersPage}/>
             <Stack.Screen name="34" component={NavigatorCraftableItemsPage}/>
+            <Stack.Screen name="36" component={NavigatorVillagerFurnitureParadisePlanning}/>
           </Stack.Navigator>
           </NavigationContainer>
         <PopupInfos setPage={this.setPage}/>

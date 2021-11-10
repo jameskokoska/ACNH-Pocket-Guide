@@ -13,7 +13,7 @@ class Clock extends Component {
     var hours = getCurrentDateObject().getHours();
     var minutes = getCurrentDateObject().getMinutes();
     var afternoon = false;
-    if(hours>12 && getSettingsString("settingsUse24HourClock")==="false"){
+    if(hours>=12 && getSettingsString("settingsUse24HourClock")==="false"){
       hours=hours-12;
       afternoon=true;
     }

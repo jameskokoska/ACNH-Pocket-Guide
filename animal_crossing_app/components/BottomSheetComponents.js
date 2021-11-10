@@ -190,9 +190,9 @@ export class InfoLine extends Component {
         return <View/>
       }
     }
-    if(this.props.textProperty[0]==="Favorite Song"){
-      text1 = ""
-    }
+    // if(this.props.textProperty[0]==="Favorite Song"){
+    //   text1 = ""
+    // }
     var text = capitalizeFirst(commas(text1));
     if(this.props.textProperty2 !== undefined && this.props.item[this.props.textProperty] !== this.props.item[this.props.textProperty2]){
       text+= ", " + capitalizeFirst(commas(text2))

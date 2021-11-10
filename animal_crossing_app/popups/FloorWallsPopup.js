@@ -4,6 +4,7 @@ import {Dimensions, Image, View, Text} from 'react-native';
 import {SizeInfo, InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
 import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"
+import ViewRecipeButton from './ViewRecipeComponent';
 
 
 class FloorWallsPopup extends Component {
@@ -65,6 +66,7 @@ class FloorWallsPopup extends Component {
         item={this.props.item}
         textProperty={["Source Notes"]}
       />
+      <ViewRecipeButton item={this.props.item}/>
     </View>
   }
 }

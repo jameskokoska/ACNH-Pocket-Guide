@@ -85,7 +85,7 @@ class AllItemsPage extends Component {
     }
     return(
         <ListPage 
-        noStackFilters={noStackFilters}
+          noStackFilters={noStackFilters}
           extraInfo={extraInfo}
           currentSetFilters={currentSetFilters}
           smallerHeader={smallerHeader}

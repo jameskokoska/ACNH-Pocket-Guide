@@ -4,7 +4,12 @@ import {Dimensions, Image, View, Text} from 'react-native';
 import {VillagersGifts, InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
 import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"
-
+import { PopupInfoCustom } from '../components/Popup';
+import { SubHeader } from '../components/Formattings';
+import RecipesPopup from './RecipesPopup';
+import { capitalize, findObject } from '../LoadJsonData';
+import ButtonComponent from '../components/ButtonComponent';
+import ViewRecipeButton from './ViewRecipeComponent';
 
 class ClothingPopup extends Component {
   constructor(props){
@@ -63,6 +68,7 @@ class ClothingPopup extends Component {
         textProperty={["Source Notes"]}
       />
       <VillagersGifts item={this.props.item}/>
+      <ViewRecipeButton item={this.props.item}/>
     </View>
   }
 }

@@ -3,8 +3,23 @@ export const dataVersion = "3"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
--I am updating the app with new content from the update....
--Please be patient as details come in :)
+-Thank you everyone for your support and tips on the app!
+-Thank you for being a Silver Supporter: Nigerski!
+-
+-Added Paradise Planning page 
+-Added gender filters for villagers
+-Added View Recipe button in item popup
+-Recipe page now on its own
+-Added Recipe icon for items
+-Museum and Crafting page icon change
+-Tools moved to Construction page
+-Added more ToDo list icons
+-Fixed AM/PM for clock
+-Added more Source icons
+-Fixed Favorite Song for Villagers
+-Added Umbrella to Villager's Furniture page
+-Added Song to Villager's Furniture page
+-Improved the About page
 -
 -Added more ToDo list icons
 -Updated visitor icons

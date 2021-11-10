@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {View} from 'react-native';
 import {SizeInfo, InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
-import {determineCustomizationString} from "../LoadJsonData"
+import {determineCustomizationString, findObject} from "../LoadJsonData"
+import ViewRecipeButton from './ViewRecipeComponent';
 
 class FurniturePopup extends Component {
   constructor(props){
@@ -71,6 +72,7 @@ class FurniturePopup extends Component {
         item={this.props.item}
         textProperty={["Source Notes"]}
       />
+      <ViewRecipeButton item={this.props.item}/>
     </View>
   }
 }

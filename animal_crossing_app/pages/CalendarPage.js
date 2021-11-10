@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Animated, FlatList, TouchableNativeFeedback, Dimensions, Vibration, Image, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-import {Agenda} from 'react-native-calendars';
 import TextFont from '../components/TextFont';
 import colors from '../Colors'
 import {getPhoto} from "../components/GetPhoto"
@@ -8,9 +7,7 @@ import {doWeSwapDate, getMonthFromString, getCurrentDateObject, addDays, getMont
 import {getEventName, removeAccents, translateDateRange, attemptToTranslateItem, capitalize, getSettingsString, attemptToTranslate, translateBirthday} from "../LoadJsonData"
 import {EventContainer, getEventsDay, getSpecialOccurrenceDate} from "../components/EventContainer"
 import FastImage from '../components/FastImage';
-import DelayInput from "react-native-debounce-input";
 import {Header, MailLink, ExternalLink, SubHeader, Paragraph, HeaderNote} from "../components/Formattings"
-import {LocaleConfig} from 'react-native-calendars';
 import HeaderFlatList from "../components/Header"
 import {VillagerPopupPopup} from "./HomePage"
 import {specialEvents, isDateInRange} from "../components/DateFunctions"

@@ -52,6 +52,13 @@ class PopupFilter extends Component {
         {name:"Old villager resident", id:"Old Resident"},{name:"Not an old villager resident", id:"Not Old Resident"},{name:"Have villager photo", id:"Have villager photo"},{name:"Do not have villager photo", id:"Do not have villager photo"}
       ]
     }]
+    this.genderFilters = [{
+      "name": "Genders",
+      "id": "GenderFilters",
+      "children": [
+        {name:"Male", id:"Gender:Male"},{name:"Female", id:"Gender:Female"}
+      ]
+    }]
     this.sortByFilters = [
       {
         "name": "Sort by...",
@@ -161,13 +168,13 @@ class PopupFilter extends Component {
     } else if(this.props.title==="Recipes"){
       this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...filterDefinitions["Recipes"]];
     } else if(this.props.title==="Villagers"){
-      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.villagerFilters, ...filterDefinitions["Villagers"]];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.villagerFilters, ...this.genderFilters, ...filterDefinitions["Villagers"]];
     } else if(this.props.title==="Gyroids"){
       this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...filterDefinitions["Gyroids"]];
     } else if(this.props.title==="New Items"){
       this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.villagerFilters, ...notCraftVariationsFilters, ...categoriesAll];
     } else if(this.props.title==="Everything" || this.props.title==="Wishlist"){
-      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.museumFilters, ...this.villagerFilters, ...categoriesAll, ...notCraftVariationsFilters, ...activeFilters, ...filterDefinitions["All Items"]];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.museumFilters, ...this.villagerFilters, ...this.genderFilters, ...categoriesAll, ...notCraftVariationsFilters, ...activeFilters, ...filterDefinitions["All Items"]];
     } else if(this.props.title==="Construction"){
       const categories = [{
         "name": "Type Categories",

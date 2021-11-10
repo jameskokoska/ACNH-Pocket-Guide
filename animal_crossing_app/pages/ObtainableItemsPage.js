@@ -7,7 +7,7 @@ import {getInverseVillagerFilters, getCurrentVillagerNamesString, getSettingsStr
 import {ClothingRouteClass} from "./ItemsPage"
 import {InfoLineBeside, InfoLine} from '../components/BottomSheetComponents';
 import EmoticonsPage from "./EmoticonsPage";
-import {RecipesRouteClass} from "./CraftingPage"
+import CraftingPage from "./CraftingPage"
 import {PopupInfoCustom} from "../components/Popup"
 import TextFont from "../components/TextFont"
 
@@ -31,7 +31,7 @@ const renderTabBar = props => (
 class ObtainableDIYsRouteClass extends React.PureComponent {
   render(){
     return(
-      <RecipesRouteClass
+      <CraftingPage
         tabs={true}
         smallerHeader={true}
         filterSearchable={false}

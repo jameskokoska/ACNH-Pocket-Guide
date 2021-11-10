@@ -193,11 +193,15 @@ class ListItem extends React.Component{
 
     if(this.props.gridType==="smallGrid"){
       var textProperty2Component = <View/>;
-      if(this.props.textProperty2!==undefined && this.props.item[textProperty2Text]!==undefined && this.props.textProperty2[this.props.item.dataSet]!==""){
-        if(this.props.textProperty2[this.props.item.dataSet]==="(DIY)")
-          textProperty2Component = <View/> //added image instead
-        else 
-          textProperty2Component = <TextFont bold={false} style={{textAlign:'center', color:this.props.labelColor, fontSize:12,}}>{capitalize(this.props.item[textProperty2Text])}</TextFont>
+      let DIYImage = ""
+      if(this.props.textProperty2!==undefined && this.props.item[textProperty2Text]!==undefined && this.props.textProperty2[this.props.item.dataSet]!==undefined && this.props.textProperty2[this.props.item.dataSet]!==""){
+        textProperty2Component = <TextFont bold={false} style={{textAlign:'center', color:this.props.labelColor, fontSize:12,}}>{capitalize(this.props.item[textProperty2Text])}</TextFont>
+      } else if(this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]!==undefined && this.props.textProperty2[this.props.item.dataSet]==="(DIY)"){
+        if(this.props.item["Image"]!==undefined && this.props.item["Image"].includes("Cooking")){
+          DIYImage = "cookingRecipe.png"
+        } else {
+          DIYImage = "recipe.png"
+        }
       }
       let imageSrc = this.props.item[this.props.imageProperty[this.props.item.dataSet]];
       //image workaround
@@ -229,7 +233,7 @@ class ListItem extends React.Component{
                 </TouchableOpacity>
               </View>
               {(this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]!=="" && this.props.textProperty2[this.props.item.dataSet]==="(DIY)")?<View style={{zIndex:1, position:"absolute", left: -8, top: -6, padding:15, opacity: 0.5, }}>
-                <Image style={{resizeMode:'contain',width:25, height:25}} source={require("../assets/icons/recipe.png")}/>
+                <Image style={{resizeMode:'contain',width:25, height:25}} source={getPhoto(DIYImage)}/>
               </View>
               :<View/>}
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
