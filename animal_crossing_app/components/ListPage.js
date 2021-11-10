@@ -234,6 +234,18 @@ function ListPage(props){
 
         for(var i = 0; i < dataLoaded.length; i++){
           item = dataLoaded[i];
+
+          //optimization for loading
+          //remove if doesn't satisfy main filter before trying other stuff
+          if(props.wishlistItems || searchActual.includes("Wishlist")){
+            if(!global.collectionList.includes("wishlist"+item["checkListKey"])){
+              continue;
+            }
+          }else if(props.newItems){
+            if(item["Version Added"] !==undefined && item["Version Added"]!==gameVersion){
+              continue;
+            }
+          }
           //Loop through the specific search criteria specified for this dataset
           for(var x = 0; x < props.searchKey[j].length; x++){
             var searchFound = false;
@@ -505,13 +517,13 @@ function ListPage(props){
                     break;
                   }
                   if(props.wishlistItems || searchActual.includes("Wishlist")){
-                    if(global.collectionList.includes("wishlist"+item["checkListKey"])){
+                    // if(global.collectionList.includes("wishlist"+item["checkListKey"])){
                       item.dataSet = j;
                       item.index = i;
                       dataUpdated = [...dataUpdated, item];
                       // previousVariation = item.[props.textProperty[j]];
                       // previousVariation = item["Name"];
-                    } 
+                    // } 
                   } else if(props.newItems){
                     if(item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===gameVersion){
                       item.dataSet = j;

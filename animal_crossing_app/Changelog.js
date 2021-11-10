@@ -8,6 +8,11 @@ export const changelog = `
 -
 -Quick fix: View craftable items button crash
 -View craftable items only appears if there are items that can be crafted
+-Wishlist should now load almost instantly
+-New Items page loading improvements
+-General Performance improvements:
+-  Filtering, selecting items and scrolling
+-  Switching pages and navigating
 -
 -Added Paradise Planning page 
 -Added gender filters for villagers
