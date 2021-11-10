@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Animated,FlatList, Dimensions, TouchableOpacity,StyleSheet, Text, View, Image} from 'react-native';
-import {removeAccents,getStorage, findObject} from "../LoadJsonData"
+import {removeAccents,getStorage, findObject, attemptToTranslateItem} from "../LoadJsonData"
 import colors from '../Colors'
 import {attemptToTranslateAchievement} from "../LoadJsonData"
 import FastImage from "../components/FastImage"
@@ -36,7 +36,7 @@ export default class ParadiserequestningPage extends Component {
         let requestRequest = request["Request"];
         if(removeAccents(requestRequest.toLowerCase()).includes(removeAccents(text.toLowerCase()))){
           outputData.push(request);
-        } else if (request["Name"].toLowerCase().includes(text.toLowerCase())){
+        } else if (attemptToTranslateItem(request["Name"]).toLowerCase().includes(text.toLowerCase())){
           outputData.push(request);
         }
       })
@@ -85,7 +85,7 @@ class Request extends React.PureComponent{
       <TouchableOpacity activeOpacity={0.7} onPress={()=>{RootNavigation.navigate('36', {propsPassed:this.props.request});}}>
       <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
         <View style={{paddingRight:40}}>
-          <SubHeader style={{fontSize: 28,}}>{this.props.request["Name"]}</SubHeader>
+          <SubHeader style={{fontSize: 28,}}>{this.villagerObject["NameLanguage"]}</SubHeader>
           <SubHeader style={{fontSize: 19,}}>{this.props.request["Request"]}</SubHeader>
         </View>
         <FastImage source={{uri:this.villagerObject["Icon Image"]}} cacheKey={this.villagerObject["Icon Image"]} style={{position:"absolute", right:13, top:13, height: 60, width: 60, resizeMode:'contain'}}/>

@@ -4,7 +4,7 @@ import  {DrawerLayout, ScrollView} from 'react-native-gesture-handler'
 import SidebarElement from './SidebarElement';
 import colors from '../Colors.js';
 import TextFont from './TextFont';
-import {getSettingsString, getStorage} from '../LoadJsonData';
+import {attemptToTranslate, getSettingsString, getStorage} from '../LoadJsonData';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {ProfileIcon} from "../pages/ProfileCurrentPage"
 
@@ -87,8 +87,8 @@ export default class SideMenu extends Component {
             <View style={{flexDirection:"row", width:this.maxWidth-10}}>
               <ProfileIcon onPress={()=>{this.props.setPage(26)}} profile={global.profile} style={{marginLeft:20}}/>
               <TouchableOpacity onPress={()=>{this.props.setPage(26)}} style={{justifyContent:"center"}}>
-                <TextFont bold={true} style={{fontSize: 19, marginLeft:14, marginRight:100, color: colors.textBlack[global.darkMode]}}>{global.name===""?"Tap to setup your profile":global.name}</TextFont>
-                {global.name===""?<View/>:<TextFont bold={false} style={{fontSize: 18, marginLeft:14, marginRight:6, color: colors.textBlack[global.darkMode]}}>{global.islandName}</TextFont>}
+                <TextFont translate={false} bold={true} style={{fontSize: 19, marginLeft:14, marginRight:100, color: colors.textBlack[global.darkMode]}}>{global.name===""?attemptToTranslate("Tap to setup your profile"):global.name}</TextFont>
+                {global.name===""?<View/>:<TextFont translate={false} bold={false} style={{fontSize: 18, marginLeft:14, marginRight:6, color: colors.textBlack[global.darkMode]}}>{global.islandName}</TextFont>}
               </TouchableOpacity>
             </View>
             <TextFont bold={true} style={{marginHorizontal: 20, marginTop: 16, marginBottom: 10, fontSize: 31, color: colors.textBlack[global.darkMode]}}>ACNH Pocket</TextFont>
