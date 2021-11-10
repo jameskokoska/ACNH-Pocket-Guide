@@ -1412,3 +1412,18 @@ export function findObject(string, paramToSearch, dataCategory){
   }
   return false
 }
+
+//find if any item is craftable given a material
+export function anythingCraftable(materialName){
+  if(materialName===undefined){return false}
+  for(var i = 0; i < global.dataLoadedRecipes[0].length; i++){
+    let item = global.dataLoadedRecipes[0][i]
+    for(let j=1; j<10; j++){
+      let materialIndex = "Material " + j.toString()
+      if(item[materialIndex]!==undefined && item[materialIndex]===materialName){
+        return true
+      } 
+    }
+  }
+  return false
+}

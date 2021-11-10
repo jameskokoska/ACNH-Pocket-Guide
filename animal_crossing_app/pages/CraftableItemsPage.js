@@ -4,7 +4,7 @@ import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import ListPage from '../components/ListPage';
 import colors from '../Colors.js';
 import {capitalize, getSettingsString} from "../LoadJsonData"
-import {RecipesRouteClass} from "./CraftingPage"
+import CraftingPage from "./CraftingPage"
 import {InfoLineBeside, InfoLine} from '../components/BottomSheetComponents';
 import ErrorPage from "../pages/ErrorPage"
 
@@ -15,9 +15,10 @@ export default class CraftableItemsPage extends Component {
   render(){
     if(this.props.material!==undefined && this.props.material!==""){
       return(
-        <RecipesRouteClass 
+        <CraftingPage 
           title={capitalize(this.props.material["NameLanguage"])}
           tabs={false}
+          smallerHeader
           showCraftableFromMaterial={this.props.material}
           subHeader={"Items you can craft with this"}
         />

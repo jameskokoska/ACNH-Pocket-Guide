@@ -6,6 +6,7 @@ import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"
 import ButtonComponent from '../components/ButtonComponent';
 import * as RootNavigation from '../RootNavigation.js';
+import { anythingCraftable } from '../LoadJsonData';
 
 class MaterialsPopup extends Component {
   constructor(props){
@@ -46,14 +47,14 @@ class MaterialsPopup extends Component {
         item={this.props.item}
         textProperty={["Source Notes"]}
       />
-      <ButtonComponent
+      {anythingCraftable(this.props.item["Name"])?<ButtonComponent
         text={"View Craftable Items"}
         color={colors.okButton[global.darkMode]}
         vibrate={5}
         onPress={() => {
           // this.props.setPage(22, true, this.props.item)
           RootNavigation.navigate('34', {propsPassed:this.props.item});
-      }}/>
+      }}/>:<View/>}
     </View>
   }
 }
