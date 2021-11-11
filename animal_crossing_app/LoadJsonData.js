@@ -120,7 +120,11 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
         // if(!customDatabase){
         //   dataLoading[i]["NameLanguage"]=attemptToTranslateItem(dataLoading[i]["Name"]);
         // }else{
-          dataLoading[i]["NameLanguage"]=attemptToTranslate(dataLoading[i]["Name"], true);
+          if(checkListKey[dataSet][0]==="villagerCheckList"){
+            dataLoading[i]["NameLanguage"]=attemptToTranslateSpecial(dataLoading[i]["Name"],"villagers")
+          } else {
+            dataLoading[i]["NameLanguage"]=attemptToTranslate(dataLoading[i]["Name"], true);
+          }
         // }
       } else {
         dataLoading[i]["NameLanguage"]=dataLoading[i]["Name"];
@@ -824,6 +828,9 @@ export const settings = [
 //attemptToTranslateSpecial(type="catchphrase")
 //gets translation from original item translation spreadsheet json converted Catchphrases
 
+//attemptToTranslateSpecial(type="villagers")
+//gets translation from original item translation spreadsheet json converted villagers
+
 //attemptToTranslateAchievement()
 //translates from Achievements only
 
@@ -842,6 +849,7 @@ export const settings = [
 
 const variantTranslations = require("./assets/data/Generated/translatedVariants.json");
 const catchphraseTranslations = require("./assets/data/Generated/translatedVillagerCatchPhrases.json");
+const villagerTranslations = require("./assets/data/Generated/translatedVillagers.json");
 const appTranslations = require("./assets/data/translationsApp.json")["Main"];
 const achievementTranslations = require("./assets/data/translationsApp.json")["Achievements"];
 const itemTranslations = require("./assets/data/Generated/translatedItems.json")
@@ -901,6 +909,8 @@ export function attemptToTranslateSpecial(text, type){
       translated = variantTranslations;
     } else if (type==="catchphrase"){
       translated = catchphraseTranslations;
+    } else if (type==="villagers"){
+      translated = villagerTranslations;
     } else {
       return text
     }

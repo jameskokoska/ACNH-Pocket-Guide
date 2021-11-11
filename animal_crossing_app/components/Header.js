@@ -60,6 +60,7 @@ const Header = (props) => {
                   onSubmitEditing={function(event){props.updateSearch(event.nativeEvent.text)}}
                 />
               </View>
+              {props.customButton?props.customButton:<View/>}
               <TouchableOpacity onPress={()=>{props.openPopupFilter(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
                 {filterImage}
               </TouchableOpacity>

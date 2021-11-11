@@ -42,6 +42,8 @@ found = True
 previousName = ""
 for dataSheet in data:
     for datum in data[dataSheet]:
+        if(dataSheet==="Villagers"):
+            continue
         #if(found==False):
         #    print("Warning: Could not find translation!")
         #if(datum.get("Name")==previousName):

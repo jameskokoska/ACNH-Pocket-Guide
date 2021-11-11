@@ -5,6 +5,11 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -Thank you everyone for your support and tips on the app!
 -
+-Fixed villager name translations
+-Can check off Paradise Planning items
+-Paradise Planning checklist backed up to cloud and restored
+-Added filters to Paradise Planning
+-
 -Updated database
 -Added Interior Structures to Construction page
 -Added Counter and Pillar filters

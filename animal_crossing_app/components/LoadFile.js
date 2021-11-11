@@ -61,9 +61,11 @@ class LoadFile extends Component {
 export async function importAllData(text){
   var totalImport = text.split("\n");
   var totalAchievements = [];
+  var totalHHP = [];
   var currentProfile = ""
   var currentCollectionList = (await getStorage("collectedString"+currentProfile,"")).split("\n");
   var currentAchievementsList = JSON.parse(await getStorage("Achievements"+profile,"[]"));
+  var currentHHPList = JSON.parse(await getStorage("ParadisePlanning"+profile,"[]"));
 
   for(var i = 0; i<totalImport.length; i++){
     if(totalImport[i].includes("{") && totalImport[i].includes("}")){
@@ -77,6 +79,8 @@ export async function importAllData(text){
         currentAchievementsList = JSON.parse(await getStorage("Achievements"+profile,"[]"));
       } else if(key[1]==="Achievements"){
         totalAchievements.push(importEntry);
+      } else if(key[1]==="HHP"){
+        totalHHP.push(importEntry);
       } else {
         await AsyncStorage.setItem(key[1]+currentProfile, importEntry);
         if(key[1]==="name"&&currentProfile===global.profile){
@@ -106,6 +110,7 @@ export async function importAllData(text){
     }
     if(totalImport[i]==="---END---" || i+1===totalImport.length){
       await AsyncStorage.setItem("Achievements"+currentProfile, JSON.stringify([...new Set([...totalAchievements,...currentAchievementsList])]));
+      await AsyncStorage.setItem("ParadisePlanning"+currentProfile, JSON.stringify([...new Set([...totalHHP,...currentHHPList])]));
       var outputString = "";
       for(var x = 0; x<currentCollectionList.length; x++){
         outputString += currentCollectionList[x];
@@ -125,6 +130,7 @@ export async function getAllData(){
     var profile = profileNames[i]
     var data = await getStorage("collectedString"+profile,"");
     var data2 = "\n{Achievements}" + [...new Set(JSON.parse(await getStorage("Achievements"+profile,"[]")))].join("\n{Achievements}");
+    var data9 = "\n{HHP}" + [...new Set(JSON.parse(await getStorage("ParadisePlanning"+profile,"[]")))].join("\n{HHP}");
     // data2 = uniq = [...new Set(data2)]
     console.log("Achievements"+profile)
     console.log(await getStorage("Achievements"+profile,"[]"))
@@ -134,7 +140,7 @@ export async function getAllData(){
     var data6 = "\n{friendCode}" + (await getStorage("friendCode"+profile,""))
     var data7 = "\n{selectedFruit}" + (await getStorage("selectedFruit"+profile,""))
     var data8 = "\n{settingsNorthernHemisphere}" + (await getStorage("settingsNorthernHemisphere"+profile,""))
-    dataTotal = dataTotal + "{Profile}"+profile +"\n" + data + data2 + data3 + data4 + data5 + data6 + data7 + data8 + "\n" + "---END---" + "\n"
+    dataTotal = dataTotal + "{Profile}"+profile +"\n" + data + data2 + data3 + data4 + data5 + data6 + data7 + data8 + data9 + "\n" + "---END---" + "\n"
   }
   console.log(dataTotal.replace(/^\s*\n/gm, ""))
   return dataTotal.replace(/^\s*\n/gm, "")
