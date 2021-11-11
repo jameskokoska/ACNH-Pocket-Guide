@@ -31,6 +31,11 @@ export default class GyroidPopup extends Component {
         translateItem={false}
       />
       <InfoLine
+        image={require("../assets/icons/instrument.png")} 
+        item={this.props.item}
+        textProperty={["Sound Type"]}
+      />
+      <InfoLine
         image={require("../assets/icons/colorPalette.png")} 
         item={this.props.item}
         textProperty={["Color 1"]}
@@ -51,16 +56,6 @@ export default class GyroidPopup extends Component {
         item={this.props.item}
         textProperty={["Tag"]}
       />
-      <View style={{alignItems: 'center',justifyContent: 'center',flexDirection:"row",flexWrap:"wrap"}}>
-        <InfoLineTriple
-          image={require("../assets/icons/house.png")} 
-          item={this.props.item}
-          textProperty1={"HHA Series"}
-          textProperty2={"HHA Concept 1"}
-          textProperty3={"HHA Concept 2"}
-        />
-        <SizeInfo size={this.props.item["Size"]}/>
-      </View>
       {/* <InfoLine
         image={require("../assets/icons/popper.png")} 
         item={this.props.item}

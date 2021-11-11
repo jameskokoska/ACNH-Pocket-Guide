@@ -789,8 +789,8 @@
           "id": "Source:New Reactions Notebook"
         },
         {
-          "name": "DJ K.K. concert",
-          "id": "Source:DJ K.K. concert"
+          "name": "DJ KK concert",
+          "id": "Source:DJ KK concert"
         }
       ]
     }
@@ -4211,12 +4211,8 @@
           "id": "Source:Check Toy Day stockings the day after Toy Day"
         },
         {
-          "name": "None",
-          "id": "Source:None"
-        },
-        {
-          "name": "Museum3Event",
-          "id": "Source:Museum3Event"
+          "name": "Lottie",
+          "id": "Source:Lottie"
         },
         {
           "name": "Nook Shopping Posters",
@@ -4301,12 +4297,16 @@
       "id": "Season/Event",
       "children": [
         {
-          "name": "NA",
-          "id": "Season/Event:NA"
+          "name": "Super Mario Bros.",
+          "id": "Season/Event:Super Mario Bros."
         },
         {
           "name": "New Year's Day (World)",
           "id": "Season/Event:New Year's Day (World)"
+        },
+        {
+          "name": "NA",
+          "id": "Season/Event:NA"
         },
         {
           "name": "Fishing Tourney",
@@ -4343,10 +4343,6 @@
         {
           "name": "Birthday",
           "id": "Season/Event:Birthday"
-        },
-        {
-          "name": "Super Mario Bros.",
-          "id": "Season/Event:Super Mario Bros."
         },
         {
           "name": "cherry-blossom petals",
@@ -4583,12 +4579,12 @@
       "id": "Season/Event Exclusive",
       "children": [
         {
-          "name": "NA",
-          "id": "Season/Event Exclusive:NA"
-        },
-        {
           "name": "Yes",
           "id": "Season/Event Exclusive:Yes"
+        },
+        {
+          "name": "NA",
+          "id": "Season/Event Exclusive:NA"
         },
         {
           "name": "No",
@@ -6779,8 +6775,8 @@
           "id": "Source:Kicks"
         },
         {
-          "name": "Kick's Commune",
-          "id": "Source:Kick's Commune"
+          "name": "Kicks' Co-op",
+          "id": "Source:Kicks' Co-op"
         },
         {
           "name": "Wardell",
@@ -7663,8 +7659,8 @@
           "id": "Source:Franklin"
         },
         {
-          "name": "Saharah's Commune",
-          "id": "Source:Saharah's Commune"
+          "name": "Saharah's Co-op",
+          "id": "Source:Saharah's Co-op"
         },
         {
           "name": "Wardell",
@@ -9167,12 +9163,8 @@
           "id": "Source:Check Toy Day stockings the day after Toy Day"
         },
         {
-          "name": "None",
-          "id": "Source:None"
-        },
-        {
-          "name": "Museum3Event",
-          "id": "Source:Museum3Event"
+          "name": "Lottie",
+          "id": "Source:Lottie"
         },
         {
           "name": "Nook Shopping Posters",
@@ -9223,16 +9215,16 @@
           "id": "Source:Kicks"
         },
         {
-          "name": "Kick's Commune",
-          "id": "Source:Kick's Commune"
+          "name": "Kicks' Co-op",
+          "id": "Source:Kicks' Co-op"
         },
         {
           "name": "Saharah",
           "id": "Source:Saharah"
         },
         {
-          "name": "Saharah's Commune",
-          "id": "Source:Saharah's Commune"
+          "name": "Saharah's Co-op",
+          "id": "Source:Saharah's Co-op"
         },
         {
           "name": "Balloons",
@@ -9463,8 +9455,8 @@
           "id": "Source:May Day Tour"
         },
         {
-          "name": "Redd's Commune Raffle",
-          "id": "Source:Redd's Commune Raffle"
+          "name": "Redd's Co-op Raffle",
+          "id": "Source:Redd's Co-op Raffle"
         },
         {
           "name": "Assessing fossils",
@@ -9491,8 +9483,8 @@
           "id": "Source:New Reactions Notebook"
         },
         {
-          "name": "DJ K.K. concert",
-          "id": "Source:DJ K.K. concert"
+          "name": "DJ KK concert",
+          "id": "Source:DJ KK concert"
         },
         {
           "name": "Resident Services Upgrade",
@@ -9519,6 +9511,10 @@
           "id": "Source:5th House Upgrade (2nd Floor)"
         },
         {
+          "name": "Dig Spot",
+          "id": "Source:Dig Spot"
+        },
+        {
           "name": "Hardwood Tree",
           "id": "Source:Hardwood Tree"
         },
@@ -9537,10 +9533,6 @@
         {
           "name": "Chopping a bamboo tree",
           "id": "Source:Chopping a bamboo tree"
-        },
-        {
-          "name": "Dig Spot",
-          "id": "Source:Dig Spot"
         },
         {
           "name": "Planting a bamboo shoot",
@@ -9717,6 +9709,10 @@
         {
           "name": "Egg balloon",
           "id": "Source:Egg balloon"
+        },
+        {
+          "name": "None",
+          "id": "Source:None"
         },
         {
           "name": "Expired turnips",
@@ -10449,6 +10445,22 @@
           "id": "Tag:Sculpture"
         },
         {
+          "name": "Pillar",
+          "id": "Tag:Pillar"
+        },
+        {
+          "name": "Counter",
+          "id": "Tag:Counter"
+        },
+        {
+          "name": "FtrWall",
+          "id": "Tag:FtrWall"
+        },
+        {
+          "name": "Haniwa",
+          "id": "Tag:Haniwa"
+        },
+        {
           "name": "Unnecessary",
           "id": "Tag:Unnecessary"
         },
@@ -10727,12 +10739,16 @@
       "id": "Season/Event",
       "children": [
         {
-          "name": "NA",
-          "id": "Season/Event:NA"
+          "name": "Super Mario Bros.",
+          "id": "Season/Event:Super Mario Bros."
         },
         {
           "name": "New Year's Day (World)",
           "id": "Season/Event:New Year's Day (World)"
+        },
+        {
+          "name": "NA",
+          "id": "Season/Event:NA"
         },
         {
           "name": "Fishing Tourney",
@@ -10769,10 +10785,6 @@
         {
           "name": "Birthday",
           "id": "Season/Event:Birthday"
-        },
-        {
-          "name": "Super Mario Bros.",
-          "id": "Season/Event:Super Mario Bros."
         },
         {
           "name": "cherry-blossom petals",
@@ -11271,12 +11283,12 @@
       "id": "Season/Event Exclusive",
       "children": [
         {
-          "name": "NA",
-          "id": "Season/Event Exclusive:NA"
-        },
-        {
           "name": "Yes",
           "id": "Season/Event Exclusive:Yes"
+        },
+        {
+          "name": "NA",
+          "id": "Season/Event Exclusive:NA"
         },
         {
           "name": "No",
@@ -15365,6 +15377,10 @@
         {
           "name": "Orange & green",
           "id": "Variation:Orange & green"
+        },
+        {
+          "name": "Wood",
+          "id": "Variation:Wood"
         }
       ]
     },
@@ -15435,6 +15451,10 @@
         {
           "name": "4x4",
           "id": "Size:4x4"
+        },
+        {
+          "name": "0.5x0.5",
+          "id": "Size:0.5x0.5"
         }
       ]
     },

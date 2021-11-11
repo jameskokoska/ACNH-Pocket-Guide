@@ -10,6 +10,7 @@ export default class GyroidsPage extends Component {
     return(
       <ListPage 
         title="Gyroids"
+        tabs={false}
         // comingSoon={true}
         imageProperty={["Image"]}
         textProperty={["NameLanguage",]}

@@ -531,8 +531,8 @@
     ],
     "Main": [
         {
-            "English": "847 items",
-            "English (Europe)": "847 items",
+            "English": "855 items",
+            "English (Europe)": "855 items",
             "French": "836 items",
             "French (US)": "836 items",
             "German": "847 items",
@@ -9720,17 +9720,17 @@
             "Portuguese": "Pode ser personalizado"
         },
         {
-            "English": "cannot be customized, variations must be obtained",
-            "English (Europe)": "cannot be customized, variations must be obtained",
-            "French": "ne peut pas être personnalisé, des variations doivent être obtenues",
-            "French (US)": "ne peut pas être personnalisé, des variations doivent être obtenues",
-            "German": "kann nicht angepasst werden, Variationen müssen vorhanden sein",
-            "Spanish": "no puede ser personalizado, las variaciones se deben obtener",
-            "Spanish (US)": "no puede ser personalizado, las variaciones se deben obtener",
-            "Russian": "не может быть изменено, нужно получить модификаторы",
-            "Italian": "non può essere personalizzato, le variazioni devono essere ottenute",
-            "Dutch": "kan niet worden aangepast, variaties moeten worden verkregen",
-            "Portuguese": "não pode ser personalizado, variações devem ser obtidas"
+            "English": "cannot be customized yourself",
+            "English (Europe)": "cannot be customized yourself",
+            "French": "ne peut pas être personnalisé vous-même",
+            "French (US)": "ne peut pas être personnalisé vous-même",
+            "German": "kann nicht selbst angepasst werden",
+            "Spanish": "no se puede personalizar usted mismo",
+            "Spanish (US)": "no se puede personalizar usted mismo",
+            "Russian": "нельзя настроить самостоятельно",
+            "Italian": "non può essere personalizzato da soli",
+            "Dutch": "kan niet zelf worden aangepast",
+            "Portuguese": "não pode ser personalizado"
         },
         {
             "English": "Spawn rates:",
@@ -11468,12 +11468,44 @@
             "Italian": "Grazie!",
             "Dutch": "Bedankt!",
             "Portuguese": "Obrigado!"
+        },
+        {
+            "English": "Paradise Planning",
+            "English (Europe)": "Paradise Planning"
+        },
+        {
+            "English": "View Recipe",
+            "English (Europe)": "View Recipe"
+        },
+        {
+            "English": "Silver Supporters",
+            "English (Europe)": "Silver Supporters"
+        },
+        {
+            "English": "Gold Supporters",
+            "English (Europe)": "Gold Supporters"
+        },
+        {
+            "English": "Thanks for your support!",
+            "English (Europe)": "Thanks for your support!"
+        },
+        {
+            "English": "Your email is only used as a Username and to verify identity for a lost password.",
+            "English (Europe)": "Your email is only used as a Username and to verify identity for a lost password."
+        },
+        {
+            "English": "Construction + Tools",
+            "English (Europe)": "Construction + Tools"
+        },
+        {
+            "English": "Interior Structures",
+            "English (Europe)": "Interior Structures"
         }
     ],
     "Sources": [
         {
-            "English": "156 items",
-            "English (Europe)": "156 items",
+            "English": "160 items",
+            "English (Europe)": "160 items",
             "French": "99 items",
             "French (US)": "99 items",
             "German": "109 items",
@@ -12935,18 +12967,34 @@
         {
             "English": "DJ K.K. concert",
             "English (Europe)": "DJ K.K. concert"
+        },
+        {
+            "English": "Saharah's Co-op",
+            "English (Europe)": "Saharah's Co-op"
+        },
+        {
+            "English": "Redd's Co-op Raffle",
+            "English (Europe)": "Redd's Co-op Raffle"
+        },
+        {
+            "English": "Kicks' Co-op",
+            "English (Europe)": "Kicks' Co-op"
+        },
+        {
+            "English": "DJ KK concert",
+            "English (Europe)": "DJ KK concert"
         }
     ],
     "Source Notes": [
         {
-            "English": "170 items",
-            "English (Europe)": "170 items",
+            "English": "172 items",
+            "English (Europe)": "172 items",
             "French": "151 items",
             "French (US)": "151 items",
             "German": "151 items",
             "Spanish": "123 items",
             "Spanish (US)": "114 items",
-            "Italian": "3 items",
+            "Italian": "13 items",
             "Dutch": "0 items",
             "Chinese": "0 items",
             "Chinese (Traditional)": "0 items",
@@ -12998,6 +13046,7 @@
             "German": "Erhältlich in allen Shops, einschließlich bei Nepp & Schlepp, bevor der Shop wieder geöffnet wird",
             "Spanish": "Disponible en todos los niveles de la tienda, incluidos Tendo y Nendo antes de abrir el MiniNook",
             "Spanish (US)": "Disponible en todos los niveles de la tienda, incluidos Tendo y Nendo antes de abrir el MiniNook",
+            "Italian": "Disponibile con tutti i livelli del negozio, includendo Marco e Mirco prima dell'apertura del negozio",
             "Russian": "Доступно в магазине любого уровня, включая Тимми и Томми до открытия магазина",
             "Portuguese": "Disponível em todos os níveis de lojas, incluindo Timmy e Tommy antes da abertura da loja"
         },
@@ -13009,6 +13058,7 @@
             "German": "Verknüpfe deinen Nintendo-Account mit Pocket Camp und löse dann einen 16-stelligen Code auf deinem Nintendo Switch ein",
             "Spanish": "Vincula tu Cuenta de Nintendo a Pocket Camp, entonces reclama tu código de 16 dígitos en tu Nintendo Switch.",
             "Spanish (US)": "Vincula tu Cuenta de Nintendo a Pocket Camp, entonces reclama tu código de 16 dígitos en tu Nintendo Switch.",
+            "Italian": "Collega il tuo Account Nintendo a Pocket Camp e poi riscatta il codice a 16 cifre sulla tua Nintendo Switch",
             "Russian": "Привяжите аккаунт Нинтендо к Pocket Camp, затем используйте 16-значный код в вашем Нинтендо Свитч",
             "Portuguese": "Vincule a conta Nintendo ao Pocket Camp e resgate um código de 16 dígitos em seu Nintendo Switch"
         },
@@ -13020,6 +13070,7 @@
             "German": "Scanne die zugehörige Sanrio-amiibo-Karte",
             "Spanish": "Escanea la carta amiibo de Sanrio correspondiente",
             "Spanish (US)": "Escanea la carta amiibo de Sanrio correspondiente",
+            "Italian": "Scannerizza la carta amiibo corrispondente",
             "Russian": "Отсканируйте связанную Санрио Амиибо карту",
             "Portuguese": "Digitalize o cartão Sanrio amiibo associado"
         },
@@ -13031,6 +13082,7 @@
             "German": "Belohnung von Pavó nach Erhalt von 9 Möbeln und 3 Regenbogenfedern",
             "Spanish": "Recompensa de Conga después de recibir 9 muebles y dar 3 plumas de arcoíris.\n",
             "Spanish (US)": "Recompensa de Conga después de recibir 9 muebles y dar 3 plumas de arcoíris.\n",
+            "Italian": "Ricompensa di Pavao dopo aver ricevuto 9 mobili e dando 3 piume arcobaleno",
             "Russian": "Награда ",
             "Portuguese": "Recompensa do Pavé após receber 9 itens de mobília e dar 3 penas de arco-íris"
         },
@@ -13042,6 +13094,7 @@
             "German": "Tausche gleiche 3 Insekten ein, um am nächsten Tag ein Modell per Post zu erhalten",
             "Spanish": "Dale 3 insectos iguales para recibir un modelo por correo el siguiente dia",
             "Spanish (US)": "Dale 3 insectos iguales para recibir un modelo por correo el siguiente dia",
+            "Italian": "Scambia 3 insetti per ricevere un modello per posta il giorno successivo",
             "Portuguese": "Troque 3 insetos para receber um modelo pelo correio no dia seguinte"
         },
         {
@@ -13052,6 +13105,7 @@
             "German": "Erhältlich in Nook's Laden (nur aufgerüstet), im saisonalen Slot",
             "Spanish": "Disponible en MiniNook (solo si está mejorado) en la parte de temporada",
             "Spanish (US)": "Disponible en Mininook (solo si está mejorado) en la parte de temporada",
+            "Italian": "Disponibile dalla Bottega di Nook (solo se migliorata) nello slot stagionale",
             "Portuguese": "Disponível no Nook's Cranny (atualizado apenas), no slot sazonal"
         },
         {
@@ -13062,6 +13116,7 @@
             "German": "Einen Brief von Serenada bekommen ",
             "Spanish": "Enviado por Alakama al jugador por correo",
             "Spanish (US)": "Enviado por Alakama al al jugador por correo",
+            "Italian": "Inviato per posta da Luna",
             "Portuguese": "Enviado por Luna para o jogador"
         },
         {
@@ -13072,6 +13127,7 @@
             "German": "Tausche 3 gleiche Fische ein, um am nächsten Tag ein Modell per Post zu erhalten",
             "Spanish": "Dale 3 peces iguales para recibir un modelo por correo el siguiente dia",
             "Spanish (US)": "Dale 3 peces iguales para recibir un modelo por correo el siguiente dia",
+            "Italian": "Scambia 3 pesci per ottenere un modello per posta il giorno successivo",
             "Portuguese": "Troque 3 peixes para receber um modelo pelo correio no dia seguinte"
         },
         {
@@ -13082,6 +13138,7 @@
             "German": "Erhältlich im wiederkaufbaren Slot in Nook's Laden",
             "Spanish": "Disponible en la ranura de recompra de MiniNook",
             "Spanish (US)": "Disponible en la ranura de recompra de Mininook",
+            "Italian": "Disponibile nello slot degli oggetti ricomprabili nella bottega di Nook",
             "Portuguese": "Disponível no slot re-comprável em Nook's Cranny"
         },
         {
@@ -13092,6 +13149,7 @@
             "German": "Wurde nach dem 1.1.0-Update in einem Brief von Nintendo an Spieler gesendet, die den ACNH Nintendo Switch in limitierter Auflage verwenden",
             "Spanish": "Enviado por Nintedo por correo a los jugadores que usaron la edición de Nintendo Switch de ACNH después de la actualización 1.1.0.",
             "Spanish (US)": "Eviado por Nintedo por correo a los jugadores que usaron la edición de Nintendo Switch de ACNH después de la actualización 1.1.0.",
+            "Italian": "Inviato per posta ai giocatori che usano la Nintendo Switch di Animal Crossing edizione limitata dopo l'update 1.1.0",
             "Portuguese": "Enviado para jogadores usando a edição limitada ACNH Nintendo Switch após a atualização 1.1.0 em uma carta da Nintendo"
         },
         {
@@ -14484,6 +14542,14 @@
         {
             "English": "Received after doing your 50th group stretch",
             "English (Europe)": "Received after doing your 50th group stretch"
+        },
+        {
+            "English": "Available from Nook's Cranny;",
+            "English (Europe)": "Available from Nook's Cranny;"
+        },
+        {
+            "English": "Available from Tom Nook during Countdown",
+            "English (Europe)": "Available from Tom Nook during Countdown"
         }
     ],
     "Event Names": [
@@ -16192,7 +16258,7 @@
         {
             "English": "913 items",
             "English (Europe)": "904 items",
-            "French": "817 items",
+            "French": "819 items",
             "French (US)": "817 items",
             "German": "818 items",
             "Spanish": "105 items",
@@ -22446,11 +22512,13 @@
         },
         {
             "English": "Stretch to Refresh!",
-            "English (Europe)": "Stretch to Refresh!"
+            "English (Europe)": "Stretch to Refresh!",
+            "French": "1, 2, 3, on se bouge !"
         },
         {
             "English": "The health of our residents is a top priority, yes, yes! So we're holding group-stretching sessions in the plaza. I'll provide miles once per day for participating, and there will be a tape deck for music. I hope I see you there!",
-            "English (Europe)": "The health of our residents is a top priority, yes, yes! So we're holding group-stretching sessions in the plaza. I'll provide miles once per day for participating, and there will be a tape deck for music. I hope I see you there!"
+            "English (Europe)": "The health of our residents is a top priority, yes, yes! So we're holding group-stretching sessions in the plaza. I'll provide miles once per day for participating, and there will be a tape deck for music. I hope I see you there!",
+            "French": "La santé de nos résidents est notre priorité n°1, oui oui ! Alors nous proposons chaque jour des séances d'aérobic sur la place. Et une fois par jour, tu auras droit à quelques miles en récompense de ta participation !"
         },
         {
             "English": "Athletic",

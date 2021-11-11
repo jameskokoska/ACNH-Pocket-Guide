@@ -342,7 +342,7 @@ export async function loadGlobalData(){
   ], "false")
   global.dataLoadedReactions = await getStorageData([[require("./assets/data/DataCreated/Reactions.json"),"Reactions"]],[["emojiCheckList","Name"]],"false");
   global.dataLoadedMusic = await getStorageData([[require("./assets/data/DataCreated/Music.json"),"Music"]],[["songCheckList","Name"]],"false");
-  global.dataLoadedConstruction = await getStorageData([[require("./assets/data/DataCreated/Construction.json"),"Construction"],[require("./assets/data/DataCreated/Fencing.json"),"Fencing"]],[["constructionCheckList","Name"],["fenceCheckList","Name"]],"false");
+  global.dataLoadedConstruction = await getStorageData([[require("./assets/data/DataCreated/Construction.json"),"Construction"],[require("./assets/data/DataCreated/Fencing.json"),"Fencing"],[require("./assets/data/DataCreated/Interior Structures.json"),"Interior Structures"]],[["constructionCheckList","Name"],["fenceCheckList","Name"],["interiorStructuresCheckList","Name","Color 1","Color 2"]],"false");
   global.dataLoadedFish = await getStorageData([[require("./assets/data/DataCreated/Fish.json"),"Fish"]],[["fishCheckList","Name"]],"false");
   global.dataLoadedBugs = await getStorageData([[require("./assets/data/DataCreated/Insects.json"), "Insects"]],[["bugCheckList","Name"]],"false");
   global.dataLoadedSea = await getStorageData([[require("./assets/data/DataCreated/Sea Creatures.json"), "Sea Creatures"]],[["seaCheckList","Name"]],"false");
@@ -449,6 +449,7 @@ export async function loadGlobalData(){
     [require("./assets/data/DataCreated/Reactions.json"),"Reactions"],
     [require("./assets/data/DataCreated/Construction.json"),"Construction"],
     [require("./assets/data/DataCreated/Fencing.json"),"Fencing"],
+    [require("./assets/data/DataCreated/Interior Structures.json"),"Interior Structures"],
     [require("./assets/data/DataCreated/Other.json"),"Other"],
     [require("./assets/data/DataCreated/Gyroids.json"),"Gyroids"],
     [require("./assets/data/Amiibo Data/Series 1.json"),"Series 1"],
@@ -493,6 +494,7 @@ export async function loadGlobalData(){
     ["emojiCheckList","Name"],
     ["constructionCheckList","Name"],
     ["fenceCheckList","Name"],
+    ["interiorStructuresCheckList","Name","Color 1","Color 2"],
     ["materialsCheckList","Name"],
     ["gyroidCheckList","Name","Variation","Pattern"],
     ["amiiboCheckListSeries1","Name"],
@@ -1308,7 +1310,7 @@ export function determineCustomizationString(item){
       canCustomize.push("the pattern")
     }
     if(canCustomize.length===0){
-      return capitalizeFirst(attemptToTranslate("cannot be customized, variations must be obtained"))
+      return capitalizeFirst(attemptToTranslate("cannot be customized yourself"))
     }else if(canCustomize.length>1){
       return capitalizeFirst(attemptToTranslate(canCustomize[0]) + " " +  "and" + " " +  attemptToTranslate(canCustomize[1]) + " " +  attemptToTranslate("can be customized"))
     }else{
@@ -1321,8 +1323,9 @@ export function determineCustomizationString(item){
 
 export function variationsCheckedPercent(item, index){
   if(!item) return false;
+  if(item["Data Category"]!==undefined && item["Data Category"]==="Interior Structures") return false;
   
-  if(item.hasOwnProperty("Variation") && item["Variation"]!=="NA"){
+  if((item.hasOwnProperty("Variation") && item["Variation"]!=="NA") || item.hasOwnProperty("Pattern") && item["Pattern"]!=="NA"){
     const variations = getVariations(item["Name"],global.dataLoadedAll,item["checkListKey"], index);
     const howManyVariations = howManyVariationsChecked(variations)
     if(howManyVariations<1){

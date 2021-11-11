@@ -29,12 +29,12 @@ export class ConstructionRouteClass extends React.PureComponent {
   render(){
     return(
       <ListPage 
-        disablePopup={[true, true]}
+        disablePopup={[true, true, true]}
         title="Construction"
-        imageProperty={["Image","Image"]}
-        textProperty={["NameLanguage","NameLanguage"]}
+        imageProperty={["Image","Image","Image"]}
+        textProperty={["NameLanguage","NameLanguage","NameLanguage"]}
         textProperty2={"construction"}
-        searchKey={[["NameLanguage"],["NameLanguage"]]}
+        searchKey={[["NameLanguage"],["NameLanguage"],["NameLanguage"]]}
         gridType="largeGridSmaller" //smallGrid, largeGrid, row
         dataGlobalName={"dataLoadedConstruction"}
         appBarColor={colors.constructionAppBar[global.darkMode]}

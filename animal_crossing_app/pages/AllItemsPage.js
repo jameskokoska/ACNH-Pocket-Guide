@@ -140,6 +140,7 @@ class AllItemsPage extends Component {
             true,
             true,
             true,
+            true,
             false,
             false,
             true,
@@ -184,6 +185,7 @@ class AllItemsPage extends Component {
             "",
             "",
             "",
+            "",
             "Stack Size",
             "",
           ]}
@@ -218,6 +220,7 @@ class AllItemsPage extends Component {
             ["VillagerPopup",450],
             ["MusicPopup",500], //none
             ["EmojipediaPopup",500], //none
+            ["ConstructionPopup",500], //none
             ["ConstructionPopup",500], //none
             ["ConstructionPopup",500], //none
             ["MaterialsPopup",500], //none
@@ -256,6 +259,7 @@ class AllItemsPage extends Component {
             "Source",
             "Source",
             "Source",
+            "Source",
             "",
           ]}
           popUpCornerImageLabelProperty={[
@@ -286,6 +290,7 @@ class AllItemsPage extends Component {
             "Source",
             "Source",
             "Gender",
+            "Source",
             "Source",
             "Source",
             "Source",
@@ -336,6 +341,7 @@ class AllItemsPage extends Component {
             "",
             "",
             "",
+            "",
           ]}
           imageProperty={[
             "Image",
@@ -370,6 +376,7 @@ class AllItemsPage extends Component {
             "Image",
             "Image",
             "Image",
+            "Image",
             "Inventory Image",
             "Image",
             "image",
@@ -382,6 +389,7 @@ class AllItemsPage extends Component {
             "image"
           ]}
           textProperty={[
+            ["NameLanguage"],
             ["NameLanguage"],
             ["NameLanguage"],
             ["NameLanguage"],
@@ -457,6 +465,7 @@ class AllItemsPage extends Component {
             ["emojiCheckList","Name"],
             ["constructionCheckList","Name"],
             ["fenceCheckList","Name"],
+            ["interiorStructuresCheckList","Name","Color 1","Color 2"],
             ["materialsCheckList","Name"],
             ["gyroidCheckList","Name","Variation","Pattern"],
             ["amiiboCheckListSeries1","Name"],
@@ -469,6 +478,7 @@ class AllItemsPage extends Component {
             ["amiiboCheckListSeriesSanrioseries","Name"],
           ]}
           searchKey={[
+            ["NameLanguage"],
             ["NameLanguage"],
             ["NameLanguage"],
             ["NameLanguage"],

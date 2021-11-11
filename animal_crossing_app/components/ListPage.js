@@ -498,7 +498,7 @@ function ListPage(props){
                 //   previousVariation = item.[props.textProperty[j]];
 
                 //keep variations
-                if(item["Name"]===previousVariation && !item["checkListKey"].includes("recipesCheckList") && !item["checkListKey"].includes("amiiboCheckList") && !item["checkListKey"].includes("constructionCheckList") && !item["checkListKey"].includes("fenceCheckList")){
+                if(item["Name"]===previousVariation && !item["checkListKey"].includes("recipesCheckList") && !item["checkListKey"].includes("amiiboCheckList") && !item["checkListKey"].includes("constructionCheckList") && !item["checkListKey"].includes("fenceCheckList") && !item["checkListKey"].includes("interiorStructuresCheckList")){
                   previousVariation = item["Name"];
                 } else {
                   //the final filter to check

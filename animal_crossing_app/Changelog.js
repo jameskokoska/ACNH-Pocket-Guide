@@ -1,15 +1,23 @@
 export const gameVersion = "2.0.0"
-export const dataVersion = "3"
+export const dataVersion = "4"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
 -Thank you everyone for your support and tips on the app!
--Thank you for being a Silver Supporter: Nigerski!
+-
+-Updated database
+-Added Interior Structures to Construction page
+-Added Counter and Pillar filters
+-Fixed partially collected variations indicator for pattern items
+-Added Gyroid sound type to popup
+-Added Cyrus customization price to popups
+-Updated translations
+-Updated dates for events
+-Updated icons
 -
 -Quick fix: Unobtainable DIYs tab crash
 -Profile and Island name not translated
 -Villager names on Paradise Planning translated
--Updated translations
 -
 -Quick fix: View craftable items button crash
 -View craftable items only appears if there are items that can be crafted

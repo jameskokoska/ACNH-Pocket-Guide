@@ -204,6 +204,10 @@ export class InfoLine extends Component {
     }
     
     var imageSource = <Image style={styles.infoLineImage} source={this.props.image}/>;
+    var extraImageSource = <View/>
+    if(this.props.textProperty!==undefined && this.props.textProperty[0]==="Cyrus Customize Price"){
+      extraImageSource = <Image style={styles.infoLineImage} source={require("../assets/icons/diyKit.png")}/>
+    }
     if(this.props.item[this.props.ending]!== undefined && this.props.ending==="Exchange Currency" && this.props.textProperty[0]=== "Buy"){
       if(text==="NFS" && this.props.item["Exchange Price"] !==undefined && this.props.item["Exchange Price"] !=="NA"){
         text = commas(this.props.item["Exchange Price"]);
@@ -263,6 +267,7 @@ export class InfoLine extends Component {
       text=capitalize(text)
     }
     return <View style={[styles.infoLineBox,{justifyContent:this.props.center===false?"flex-start":"center"}]}>
+            {extraImageSource}
             {imageSource}
             <TextFont adjustsFontSizeToFit={true} bold={true} style={[styles.infoLineTitle,{color:colors.textBlack[global.darkMode]}]}>{starting + text + ending}</TextFont>
             {colors1}{colors2}

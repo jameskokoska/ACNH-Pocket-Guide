@@ -48,6 +48,12 @@ class FurniturePopup extends Component {
       />
       {customizationStringComponent}
       <InfoLine
+        image={require("../assets/icons/cyrus.png")} 
+        item={this.props.item}
+        textProperty={["Cyrus Customize Price"]}
+        ending={"Exchange Currency"}
+      />
+      <InfoLine
         image={require("../assets/icons/tag.png")} 
         item={this.props.item}
         textProperty={["Tag"]}

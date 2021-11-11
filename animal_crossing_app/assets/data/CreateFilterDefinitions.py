@@ -124,6 +124,8 @@ filters = [
             data["Reactions"],
             data["Construction"],
             data["Fencing"],
+            data["Interior Structures"],
+            data["Gyroids"],
             data["Other"],
         ],
         [
