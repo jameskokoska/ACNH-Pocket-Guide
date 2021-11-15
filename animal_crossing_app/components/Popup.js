@@ -51,7 +51,7 @@ class Popup extends Component {
     if(this.props.button1!==undefined){
       this.Button1 = <ButtonComponent
         text={this.props.button1}
-        color={colors.okButton[global.darkMode]}
+        color={colors.okButton[global.darkMode]??colors.okButton3[0]}
         vibrate={5}
         onPress={async () => {
           this.setPopupVisible(!this.state.popupVisible);
@@ -62,7 +62,7 @@ class Popup extends Component {
     if(this.props.button2!==undefined){
       this.Button2 = <ButtonComponent
         text={this.props.button2}
-        color={colors.cancelButton[global.darkMode]}
+        color={colors.cancelButton[global.darkMode]??colors.okButton[0]}
         vibrate={10}
         onPress={() => {
           this.setPopupVisible(!this.state.popupVisible);
@@ -150,6 +150,7 @@ export class PopupRaw extends Component {
               <ScrollView style={{maxHeight:Dimensions.get('window').height*0.75}}>
                 <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.props.textLower}</TextFont>
                 <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.props.textLower2}</TextFont>
+                <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.props.textLower3}</TextFont>
                 <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.state.text}</TextFont>
                 <View style={{justifyContent:"center", alignItems:"center"}}>
                   <LottieView autoPlay loop
@@ -167,6 +168,8 @@ export class PopupRaw extends Component {
 }
 
 export class PopupRawLoading extends Component {
+  intervalID = 0;
+
   constructor(props) {
     super(props);
     this.allLoadingTexts = [
@@ -208,13 +211,17 @@ export class PopupRawLoading extends Component {
   }
 
   componentDidMount(){
-    setInterval(()=>{
+    this.intervalID = setInterval(()=>{
       this.setState({loadingText:this.allLoadingTexts[Math.floor(Math.random()*this.allLoadingTexts.length)]})
     }, 4000);
   }
   
   setPopupVisible = (visible) => {
     this.setState({popupVisible:visible});
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.intervalID);
   }
 
   render(){

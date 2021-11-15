@@ -12,11 +12,14 @@ class VillagersPage extends Component {
           setPage={this.props.setPage}
           tabs={false}
           subHeader="Tap the Heart to add villagers currently in your town."
+          subHeader2="Tap the [?] in the top right corner for more information."
           extraInfo={
             {
               type:"guideRedirect",
               title:"Guide + FAQ",
-              content:"You can read more details about villagers by visiting villagers guide page",
+              content:"Mark which villagers you have photos of by tapping the photo icon.",
+              content2:"Mark which villagers have once been in your town by tapping the moving boxes icon.",
+              content3:"You can read more details about villagers by visiting villagers guide page",
               linkText: "Tap here to read more about villagers",
               redirectPassBack: "villagersRedirect"
             }

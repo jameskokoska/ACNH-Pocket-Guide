@@ -63,6 +63,8 @@ export default class GuideRedirectButton extends Component {
             <View style={{height:6}}/>
             <SubHeader>{this.props.extraInfo.title}</SubHeader>
             <Paragraph styled={true}>{this.props.extraInfo.content}</Paragraph>
+            {this.props.extraInfo.content2!==undefined?<Paragraph styled={true}>{this.props.extraInfo.content2}</Paragraph>:<View/>}
+            {this.props.extraInfo.content3!==undefined?<Paragraph styled={true}>{this.props.extraInfo.content3}</Paragraph>:<View/>}
             {this.props.extraInfo.type==="externalRedirect"?<TouchableOpacity onPress={() => Linking.openURL(this.props.extraInfo.redirectPassBack)}>
               <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", padding:10, marginTop:10}}>{this.props.extraInfo.linkText}</TextFont>
             </TouchableOpacity>:<TouchableOpacity onPress={() => this.props.setPage(15, true, this.props.extraInfo.redirectPassBack)}>

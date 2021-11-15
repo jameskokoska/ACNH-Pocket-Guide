@@ -196,7 +196,7 @@ class App extends Component {
       await this.loadSettings();
       this.updateDarkMode();
 
-      if(generated < this.generateJSON.length || dataVersionLoaded === "" || dataVersionLoaded !== dataVersion){
+      if(true || generated < this.generateJSON.length || dataVersionLoaded === "" || dataVersionLoaded !== dataVersion){
         let dataVersionLoadedAttempted = await getStorage("dataVersionAttempted","loaded");
 
         if(dataVersionLoadedAttempted==="not loaded"){
@@ -409,16 +409,16 @@ class App extends Component {
           <LottieView autoPlay loop style={{width: "95%",zIndex:1,transform: [{ scale: 1.25 },],}} source={chosenSplashScreen}/>
         </FadeInOut>
       </View>
-      <PopupRaw ref={(popupGeneratingData) => this.popupGeneratingData = popupGeneratingData} text={attemptToTranslate("Generating Data...")} textLower2={attemptToTranslate("Please wait")} textLower={attemptToTranslate("This may take a few minutes and is only done once.")}/>
-      <Popup 
+      <PopupRaw ref={(popupGeneratingData) => this.popupGeneratingData = popupGeneratingData} text={attemptToTranslate("Generating Data...")} textLower={attemptToTranslate("This may take a few minutes and is only done once.")} textLower2={attemptToTranslate("If this takes longer than a minute restart the app and select Download data.")}/>
+      <Popup
         ref={(popupGenerateMenu) => this.popupGenerateMenu = popupGenerateMenu}
-        button1={"Generate"}
+        button1={"Download"}
         button1Action={async ()=>{
-          await this.continueMountingGenerate(true);
-        }}
-        button2={"Download"}
-        button2Action={async ()=>{
           await this.continueMountingGenerate("online");
+        }}
+        button2={"Generate"}
+        button2Action={async ()=>{
+          await this.continueMountingGenerate(true);
         }}
         text={"Generate Data"}
         textLower={"It seems generating data may have had some issues. If generating data fails or takes too long, select [Download]."}

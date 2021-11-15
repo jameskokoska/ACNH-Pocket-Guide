@@ -5,6 +5,8 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -Thank you everyone for your support and tips on the app!
 -
+-Thank you Christina for being a Silver Supporter of the app!
+-
 -Collection totals no longer include variations of items
 - This is because Cyrus can customize anything now
 -Fixed collection totals
@@ -12,6 +14,7 @@ export const changelog = `
 -Data can now be downloaded instead of generated
 - For those who have issues of infinite data generation
 -Fixed center text
+-Added more help text on villager page
 -
 -Quick fix: crash on different lists
 -Fixed variation popups for items with missing images

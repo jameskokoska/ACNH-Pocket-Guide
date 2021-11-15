@@ -162,22 +162,23 @@ filters = [
         ]
     ]
 ]
-
-getLengthOfGroup = input("Would you like to get the length of a section for the collection list (with variations) + 1 for main checkmark?")
-if(getLengthOfGroup!=""):
-    previousVariation = ""
-    total = 0
-    for category in filters:
-        if(category[0]==getLengthOfGroup):
-            for dataSet in category[1]:
-                for item in dataSet:
-                    total+=1
-                    if(item["Name"]!=previousVariation):
-                        previousVariation = item["Name"]
-                    if("Variation" in item and item["Variation"] !="NA"):
-                        total+=1 #for the base item (add one for the large checkmark)
-
-    print(total)
+if False:
+    print()
+#getLengthOfGroup = input("Would you like to get the length of a section for the collection list (with variations) + 1 for main checkmark?")
+#if(getLengthOfGroup!=""):
+#    previousVariation = ""
+#    total = 0
+#    for category in filters:
+#        if(category[0]==getLengthOfGroup):
+#            for dataSet in category[1]:
+#                for item in dataSet:
+#                    total+=1
+#                    if(item["Name"]!=previousVariation):
+#                        previousVariation = item["Name"]
+#                    if("Variation" in item and item["Variation"] !="NA"):
+#                        total+=1 #for the base item (add one for the large checkmark)
+#
+#    print(total)
 else:
     possibleFilters = []
     count = -1

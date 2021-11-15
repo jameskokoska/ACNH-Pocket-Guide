@@ -36,6 +36,7 @@ class CreditsPage extends Component {
           <Paragraph style={{marginBottom:10}}>{attemptToTranslate("Thanks for your support!")}</Paragraph>
           <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
             <SubHeader>Nigerski</SubHeader>
+            <SubHeader>Christina</SubHeader>
           </View>
           <View style={{height: 5}}/>
           <View style={{paddingHorizontal: 20}}>

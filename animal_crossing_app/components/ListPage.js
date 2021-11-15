@@ -761,7 +761,7 @@ function ListPage(props){
           width: Dimensions.get('window').width, 
           height: Dimensions.get('window').height, position:"absolute"}} 
         pointerEvents="none"> */}
-        <Header setPage={props.setPage} extraInfo={props.extraInfo} smallerHeader={props.smallerHeader} disableFilters={props.disableFilters} customHeader={props.customHeader} disableSearch={props.disableSearch} subHeader={props.subHeader} searchFilters={searchFilters} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
+        <Header setPage={props.setPage} extraInfo={props.extraInfo} smallerHeader={props.smallerHeader} disableFilters={props.disableFilters} customHeader={props.customHeader} disableSearch={props.disableSearch} subHeader={props.subHeader} subHeader2={props.subHeader2} searchFilters={searchFilters} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
         {/* </Animated.View> */}
       </Animated.View>
 
