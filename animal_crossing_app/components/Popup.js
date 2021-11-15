@@ -150,7 +150,6 @@ export class PopupRaw extends Component {
               <ScrollView style={{maxHeight:Dimensions.get('window').height*0.75}}>
                 <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.props.textLower}</TextFont>
                 <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.props.textLower2}</TextFont>
-                <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.props.textLower3}</TextFont>
                 <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.state.text}</TextFont>
                 <View style={{justifyContent:"center", alignItems:"center"}}>
                   <LottieView autoPlay loop
@@ -368,7 +367,7 @@ export class PopupBottomCustom extends Component {
   renderContent = () => {
     return(
       <>
-      <View style={{width:Dimensions.get('window').width,height:Dimensions.get('window').height-this.state.heightOffset}}/>
+      <TouchableOpacity style={{width:Dimensions.get('window').width,height:Dimensions.get('window').height-this.state.heightOffset}} onPress={()=>{this.setPopupVisible(false);}}/>
       <View
         style={{
           borderTopLeftRadius: 20,

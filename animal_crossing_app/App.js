@@ -196,7 +196,7 @@ class App extends Component {
       await this.loadSettings();
       this.updateDarkMode();
 
-      if(true || generated < this.generateJSON.length || dataVersionLoaded === "" || dataVersionLoaded !== dataVersion){
+      if(generated < this.generateJSON.length || dataVersionLoaded === "" || dataVersionLoaded !== dataVersion){
         let dataVersionLoadedAttempted = await getStorage("dataVersionAttempted","loaded");
 
         if(dataVersionLoadedAttempted==="not loaded"){

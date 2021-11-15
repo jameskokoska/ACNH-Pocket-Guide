@@ -278,7 +278,7 @@ export const sideSections = [
     "pageNum" : 35,
     "picture" : require("../assets/icons/paradisePlanning.png"),
     "displayName" : "Paradise Planning",
-    "color": "selectCalendar",
+    "color": "selectParadise",
   },
   {
     "pageNum" : 21,

@@ -15,6 +15,8 @@ export const changelog = `
 - For those who have issues of infinite data generation
 -Fixed center text
 -Added more help text on villager page
+-Can tap blank space above popup to close it
+-Color fixes
 -
 -Quick fix: crash on different lists
 -Fixed variation popups for items with missing images

@@ -136,6 +136,7 @@ const colors = {
     selectBackupAndRestore : ["#cdd8df","#72818b"],
     selectFAQ : ["#D6DBE7","#7d8986"],
     selectCalendar : ["#f2e2d8", "#907373"],
+    selectParadise : ["#DBF2D8", "#65886C"],
     selectWishlist: ["#FDE7E9", "#886769"],
     selectActiveCreatures: ["#FDE7E9", "#886769"],
     selectAchievements : ["#E8ECFD","#566181"],
