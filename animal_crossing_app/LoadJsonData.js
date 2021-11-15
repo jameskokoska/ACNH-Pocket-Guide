@@ -150,6 +150,29 @@ export function countCollection(checkListKeyStart){
   return count;
 }
 
+export function countCollectionSpecial(datakeyName){
+  let database = determineDataGlobal(datakeyName)
+  let count = 0;
+  let total = 0;
+  let previousVariation = "";
+  for(let i = 0; i<database.length; i++){
+    for(let k = 0; k<database[i].length; k++){
+      if(previousVariation===database[i][k]["Name"]){
+        continue
+      } else {
+        total++
+        previousVariation=database[i][k]["Name"]
+        for(let j = 0; j<global.collectionList.length; j++){
+          if(database[i][k]["checkListKey"]===global.collectionList[j] && !global.collectionList[j].includes("wishlist") && !global.collectionList[j].includes("museum")){
+            count++
+          }
+        }
+      }
+    }
+  }
+  return [count, total];
+}
+
 export function determineDataGlobal(datakeyName){
   if(datakeyName==="dataLoadedAmiibo")
     return global.dataLoadedAmiibo;

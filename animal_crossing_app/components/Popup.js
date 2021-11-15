@@ -53,7 +53,7 @@ class Popup extends Component {
         text={this.props.button1}
         color={colors.okButton[global.darkMode]}
         vibrate={5}
-        onPress={() => {
+        onPress={async () => {
           this.setPopupVisible(!this.state.popupVisible);
           this.props.button1Action();
         }}
@@ -244,7 +244,6 @@ export class PopupRawLoading extends Component {
   }
 }
 
-
 /* 
 this.popup?.setPopupVisible(true);
 <PopupInfoCustom ref={(popup) => this.popup = popup} buttonText={"Close"}>
@@ -288,10 +287,10 @@ export class PopupInfoCustom extends Component {
           transparent={true}
           visible={this.state.popupVisible}
           statusBarTranslucent
-          onRequestClose={()=>{this.setPopupVisible(false);}}
+          onRequestClose={()=>{this.props.noDismiss===true ? 0 : this.setPopupVisible(false);}}
         >
         <View style={styles.centeredView}>
-          <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} style={{position:"absolute", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: "black", opacity: 0.1}}/>
+          {this.props.noDismiss===true ? <View/> : <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} style={{position:"absolute", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: "black", opacity: 0.1}}/>}
           <View style={[styles.modalView,this.props.style,{backgroundColor: colors.white[global.darkMode]}]}>
             {this.props.header===undefined ? <View/> : header}
             <ScrollView style={{maxHeight:Dimensions.get('window').height*0.7-this.state.headerHeight-this.state.buttonHeight}}>

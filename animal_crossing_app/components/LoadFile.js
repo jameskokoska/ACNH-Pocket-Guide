@@ -132,8 +132,8 @@ export async function getAllData(){
     var data2 = "\n{Achievements}" + [...new Set(JSON.parse(await getStorage("Achievements"+profile,"[]")))].join("\n{Achievements}");
     var data9 = "\n{HHP}" + [...new Set(JSON.parse(await getStorage("ParadisePlanning"+profile,"[]")))].join("\n{HHP}");
     // data2 = uniq = [...new Set(data2)]
-    console.log("Achievements"+profile)
-    console.log(await getStorage("Achievements"+profile,"[]"))
+    // console.log("Achievements"+profile)
+    // console.log(await getStorage("Achievements"+profile,"[]"))
     var data3 = "\n{name}" + (await getStorage("name"+profile,""))
     var data4 = "\n{islandName}" + (await getStorage("islandName"+profile,""))
     var data5 = "\n{dreamAddress}" + (await getStorage("dreamAddress"+profile,""))
@@ -142,7 +142,7 @@ export async function getAllData(){
     var data8 = "\n{settingsNorthernHemisphere}" + (await getStorage("settingsNorthernHemisphere"+profile,""))
     dataTotal = dataTotal + "{Profile}"+profile +"\n" + data + data2 + data3 + data4 + data5 + data6 + data7 + data8 + data9 + "\n" + "---END---" + "\n"
   }
-  console.log(dataTotal.replace(/^\s*\n/gm, ""))
+  // console.log(dataTotal.replace(/^\s*\n/gm, ""))
   return dataTotal.replace(/^\s*\n/gm, "")
 }
 

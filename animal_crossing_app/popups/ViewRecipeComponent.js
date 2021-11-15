@@ -22,7 +22,7 @@ export default class ViewRecipeButton extends Component {
         }}/> : <View/>}
       <PopupInfoCustom ref={(popupRecipe) => this.popupRecipe = popupRecipe} buttonText={"Close"}>
         <View style={{alignItems:"center"}}>
-          <SubHeader style={{fontSize:27, marginBottom: 6}}>{capitalize(this.props.item["NameLanguage"])}</SubHeader>
+          <SubHeader style={{fontSize:27, marginBottom: 6, textAlign:"center"}}>{capitalize(this.props.item["NameLanguage"])}</SubHeader>
           <RecipesPopup recipeOnly item={findObject(this.props.item["Name"],"Name","Recipes")}/>
         </View>
       </PopupInfoCustom>

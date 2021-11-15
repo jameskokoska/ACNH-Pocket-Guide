@@ -46,7 +46,7 @@ import TVGuidePage from './pages/TVGuidePage';
 import OrdinancePage from './pages/OrdinancePage';
 import GyroidsPage from './pages/GyroidsPage';
 import { autoBackup } from './components/FirebaseBackup';
-import Popup, { PopupRaw, PopupRawLoading } from './components/Popup';
+import Popup, { PopupInfoCustom, PopupRaw, PopupRawLoading } from './components/Popup';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { navigationRef } from './RootNavigation';
@@ -57,6 +57,7 @@ import { Asset } from 'expo-asset';
 import * as FileSystem from 'expo-file-system'
 import {dataVersion} from "./Changelog"
 import ParadisePlanningPage from './pages/ParadisePlanningPage';
+import { DownloadDatabase } from './components/DownloadDatabase';
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -82,6 +83,16 @@ class App extends Component {
     }
     this.lastPage = [0];
     this.lastPropsPassed = [];
+    this.generateJSONLinks = {
+      //https://drive.google.com/uc?export=download&id=1VoGYele5FbcmOWNHbGUe4KeaIeH1Gva_
+      "Housewares":"https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/DataCreated/Housewares.json",
+      "Miscellaneous":"https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/DataCreated/Miscellaneous.json",
+      "Photos":"https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/DataCreated/Photos.json",
+      "Tops":"https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/DataCreated/Tops.json",
+      "Dress-Up":"https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/DataCreated/Dress-Up.json",
+      "Headwear":"https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/DataCreated/Headwear.json",
+    }
+    this.generateJSON = Object.keys(this.generateJSONLinks)
 
     Dimensions.addEventListener('change', () => {
       this.forceUpdate()
@@ -154,7 +165,6 @@ class App extends Component {
   async componentDidMount(){
     this.mounted = true;
     
-
     setTimeout(async () => {
       let defaultLanguage = getDefaultLanguage();
       global.language = await getStorage("Language",defaultLanguage);
@@ -169,43 +179,69 @@ class App extends Component {
 
       let dataVersionLoaded = await getStorage("dataVersion","");
       
-      let generateJSON = ["Housewares","Miscellaneous","Photos","Tops","Dress-Up","Headwear"]
       let generated = 0
-      for(let generateJSONIndex = 0; generateJSONIndex < generateJSON.length; generateJSONIndex++){
-        if((await FileSystem.readDirectoryAsync(FileSystem.documentDirectory)).includes(generateJSON[generateJSONIndex]+".json")){
+      for(let generateJSONIndex = 0; generateJSONIndex < this.generateJSON.length; generateJSONIndex++){
+        if((await FileSystem.readDirectoryAsync(FileSystem.documentDirectory)).includes(this.generateJSON[generateJSONIndex]+".json")){
           console.log("Loaded from memory")
           generated = generated + 1
-          // let fileURI = `${FileSystem.documentDirectory}${generateJSON[generateJSONIndex]+".json"}`;
+          // let fileURI = `${FileSystem.documentDirectory}${this.generateJSON[generateJSONIndex]+".json"}`;
           // console.log(JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json")))
         }
       }
       if(dataVersionLoaded === "" || dataVersionLoaded !== dataVersion){
         console.log("New data version")
       }
-      if(generated < generateJSON.length || dataVersionLoaded === "" || dataVersionLoaded !== dataVersion){
-        this.popupGeneratingData?.setPopupVisible(true)
-        console.log("Generating into memory")
-        const [{ localUri }] = await Asset.loadAsync(require("./assets/data/dataGenerate.zip"));
-        console.log(localUri)
 
-        let b64 = await FileSystem.readAsStringAsync(localUri, {encoding: FileSystem.EncodingType.Base64})
-        this.popupGeneratingData?.setPopupText(attemptToTranslate("Almost done!"))
-        let excel = await XLSX.read(b64, {type: "base64"})
-        this.popupGeneratingData?.setPopupText(attemptToTranslate("A few more seconds!"))
-        for(let generateJSONIndex = 0; generateJSONIndex < generateJSON.length; generateJSONIndex++){
-          let parsed =  JSON.stringify(await XLSX.utils.sheet_to_json(excel.Sheets[generateJSON[generateJSONIndex]]))
-          
-          let fileURI = `${FileSystem.documentDirectory}${generateJSON[generateJSONIndex]+".json"}`;
-          await FileSystem.writeAsStringAsync(fileURI, parsed)
+      //Load Settings
+      await this.loadSettings();
+      this.updateDarkMode();
+
+      if(generated < this.generateJSON.length || dataVersionLoaded === "" || dataVersionLoaded !== dataVersion){
+        let dataVersionLoadedAttempted = await getStorage("dataVersionAttempted","loaded");
+
+        if(dataVersionLoadedAttempted==="not loaded"){
+          this.popupGenerateMenu?.setPopupVisible(true)
+        }else{
+          await AsyncStorage.setItem("dataVersionAttempted", "not loaded");
+          await this.continueMountingGenerate(true)
         }
-        this.popupGeneratingData?.setPopupText(attemptToTranslate("Loading app..."))
-        await AsyncStorage.setItem("dataVersion", dataVersion);
-      } else {
+      }else{
         this.popupLoading?.setPopupVisible(true)
+        await this.continueMountingGenerate(false)
       }
-      // console.log(await FileSystem.readDirectoryAsync(FileSystem.documentDirectory))
+    }, 10);
+  }
 
-      
+  continueMountingGenerate = async(generate) => {
+    if(generate===true){
+      this.popupGeneratingData?.setPopupVisible(true)
+      console.log("Generating into memory")
+      const [{ localUri }] = await Asset.loadAsync(require("./assets/data/dataGenerate.zip"));
+      console.log(localUri)
+
+      let b64 = await FileSystem.readAsStringAsync(localUri, {encoding: FileSystem.EncodingType.Base64})
+      this.popupGeneratingData?.setPopupText(attemptToTranslate("Almost done!"))
+      let excel = await XLSX.read(b64, {type: "base64"})
+      this.popupGeneratingData?.setPopupText(attemptToTranslate("A few more seconds!"))
+      for(let generateJSONIndex = 0; generateJSONIndex < this.generateJSON.length; generateJSONIndex++){
+        let parsed =  JSON.stringify(await XLSX.utils.sheet_to_json(excel.Sheets[this.generateJSON[generateJSONIndex]]))
+        
+        let fileURI = `${FileSystem.documentDirectory}${this.generateJSON[generateJSONIndex]+".json"}`;
+        await FileSystem.writeAsStringAsync(fileURI, parsed)
+      }
+      this.popupGeneratingData?.setPopupText(attemptToTranslate("Loading app..."))
+      await this.continueMountingFinish()
+    } else if(generate==="online") {
+      this.popupDownload?.startDownload()
+    } else {
+      await this.continueMountingFinish()
+    }
+  // console.log(await FileSystem.readDirectoryAsync(FileSystem.documentDirectory))
+  }
+
+  continueMountingFinish = async() => {
+    await AsyncStorage.setItem("dataVersion", dataVersion);
+    await AsyncStorage.setItem("dataVersionAttempted", "loaded");
 
     this.backHandler = BackHandler.addEventListener(
       "hardwareBackPress",
@@ -217,9 +253,6 @@ class App extends Component {
     
     //Load Global Data
     await loadGlobalData();
-
-    //Load Settings
-    await this.loadSettings();
 
     this.updateSettings();
 
@@ -279,7 +312,6 @@ class App extends Component {
     if(getSettingsString("settingsAutoBackup")==="true"){
       this.startAutoBackup();
     }
-    }, 10);
   }
 
   componentWillUnmount() {
@@ -378,6 +410,22 @@ class App extends Component {
         </FadeInOut>
       </View>
       <PopupRaw ref={(popupGeneratingData) => this.popupGeneratingData = popupGeneratingData} text={attemptToTranslate("Generating Data...")} textLower2={attemptToTranslate("Please wait")} textLower={attemptToTranslate("This may take a few minutes and is only done once.")}/>
+      <Popup 
+        ref={(popupGenerateMenu) => this.popupGenerateMenu = popupGenerateMenu}
+        button1={"Generate"}
+        button1Action={async ()=>{
+          await this.continueMountingGenerate(true);
+        }}
+        button2={"Download"}
+        button2Action={async ()=>{
+          await this.continueMountingGenerate("online");
+        }}
+        text={"Generate Data"}
+        textLower={"It seems generating data may have had some issues. If generating data fails or takes too long, select [Download]."}
+        mailLink
+        noDismiss
+      />
+      <DownloadDatabase ref={(popupDownload) => this.popupDownload = popupDownload} generateJSONLinks={this.generateJSONLinks} continueMountingFinish={async () => {await this.continueMountingFinish()}}/>
       <PopupRawLoading ref={(popupLoading) => this.popupLoading = popupLoading}/>
       </>
     } else if (this.state.firstLogin==="true"){
