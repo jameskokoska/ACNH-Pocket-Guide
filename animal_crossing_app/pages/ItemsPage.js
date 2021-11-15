@@ -192,7 +192,7 @@ export class ClothingRouteClass extends React.PureComponent{
           "Closet Image",
           "Closet Image",
           "Closet Image",
-          "Closet Image",
+          "Storage Image",
           "Storage Image",
         ]}
         textProperty={[

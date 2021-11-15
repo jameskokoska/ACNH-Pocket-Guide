@@ -41,8 +41,8 @@ for file in files:
     print(str(int(length/len(files)*100))+"%")
 
 print("Writing...")
-#with open('translationsNewOutput.json', 'w', encoding='utf8') as json_file:
-#    json.dump(allTranslationEntryObject, json_file, ensure_ascii=False,indent=2)             
+with open('translationsNewOutput.json', 'w', encoding='utf8') as json_file:
+    json.dump(allTranslationEntryObject, json_file, ensure_ascii=False,indent=2)             
 
 print("Converting Villager translations")
 file = glob.glob('./TranslationsStrings/Villagers.json')

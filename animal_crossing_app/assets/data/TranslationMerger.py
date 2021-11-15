@@ -10,7 +10,7 @@ propertiesToCheck = ["Name","Description", "Achievement Description","Achievemen
 count=0
 length=0
 outputDictionary = {}
-ignore = ["Changelog","READ ME","Variants","Patterns","HHA Themes","HHA Set","HHA Situation","Special NPCs","Villagers Catch Phrase"]
+ignore = ["Changelog","READ ME","Variants","Patterns","HHA Themes","HHA Set","HHA Situation","Special NPCs","Villagers Catch Phrase","Villagers"]
 
 debug = False
 debugEnd = True
@@ -41,9 +41,9 @@ missingItems=[]
 found = True
 previousName = ""
 for dataSheet in data:
+    if dataSheet in ignore:
+        continue
     for datum in data[dataSheet]:
-        if(dataSheet==="Villagers"):
-            continue
         #if(found==False):
         #    print("Warning: Could not find translation!")
         #if(datum.get("Name")==previousName):

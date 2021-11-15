@@ -5,7 +5,7 @@ import FastImage from './FastImage';
 import Check from './Check';
 import TextFont from './TextFont'
 import {inWishlist, getEventName, inChecklist, attemptToTranslateItem, commas, capitalize, checkOff, capitalizeFirst} from '../LoadJsonData'
-import {getSizeImage, getPhotoCorner, getMaterialImage} from "./GetPhoto"
+import {getSizeImage, getPhotoCorner, getMaterialImage, getPhoto} from "./GetPhoto"
 import {getCurrentVillagerObjects, attemptToTranslateCreatureCatchPhrase, attemptToTranslateMuseumDescription, attemptToTranslateSourceNotes, getSettingsString, attemptToTranslate, attemptToTranslateSpecial} from "../LoadJsonData"
 import {ScrollView} from 'react-native-gesture-handler'
 import {PopupInfoCustom} from "./Popup"
@@ -426,7 +426,7 @@ export class Variations extends Component {
           <>
           <View style={{flexWrap: 'wrap', flexDirection:"row",justifyContent:"center"}}>
             {this.state.variations.map( (item, index)=>
-              <VariationItem wishlist={this.state.wishlistItems.includes(item.checkListKey)} variations={this.state.variations} updateRightCornerCheck={this.props.updateRightCornerCheck} updateKey={this.state.updateKey} updateChecked={this.state.updateChecked} originalCheckListKey={originalCheckListKey} updateCheckChildFunction={this.props.updateCheckChildFunction} index={index} key={item[this.props.imageProperty[dataSet]]} globalDatabase={this.props.globalDatabase} item={item} setPopupVisible={(state, image, item)=>this.popup?.setPopupVisible(state, image, item)} dataSet={dataSet} imageProperty={imageProperty}/>
+              <VariationItem wishlist={this.state.wishlistItems.includes(item.checkListKey)} variations={this.state.variations} updateRightCornerCheck={this.props.updateRightCornerCheck} updateKey={this.state.updateKey} updateChecked={this.state.updateChecked} originalCheckListKey={originalCheckListKey} updateCheckChildFunction={this.props.updateCheckChildFunction} index={index} key={item["Unique Entry ID"]!==undefined?item["Unique Entry ID"]:item[this.props.imageProperty[dataSet]]} globalDatabase={this.props.globalDatabase} item={item} setPopupVisible={(state, image, item)=>this.popup?.setPopupVisible(state, image, item)} dataSet={dataSet} imageProperty={imageProperty}/>
             )}
           </View>
           <PopupImage ref={(popup) => this.popup = popup} updateWishlist={this.updateWishlist}/>
@@ -493,13 +493,17 @@ class VariationItem extends Component{
         }}>
         {this.state.wishlist? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:13, height:13, resizeMode:"contain",position:'absolute', left:9, top: 9, zIndex:10,}}/> : <View/>}
         <View style={[{borderWidth: 2, borderColor: this.state.checked ? colors.checkGreen[global.darkMode] : colors.eventBackground[global.darkMode], marginHorizontal:3, marginVertical: 2, padding: 5, borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
+          {item[this.props.imageProperty[dataSet]]!==undefined&&item[this.props.imageProperty[dataSet]].startsWith("http")?
           <FastImage
             style={{height: getSettingsString("settingsLargerItemPreviews")==="false"?53:70, width: getSettingsString("settingsLargerItemPreviews")==="false"?53:70, resizeMode:'contain',}}
             source={{
               uri: item[this.props.imageProperty[dataSet]],
             }}
             cacheKey={item[this.props.imageProperty[dataSet]]}
-          />
+          />:<Image
+            style={{height: getSettingsString("settingsLargerItemPreviews")==="false"?53:70, width: getSettingsString("settingsLargerItemPreviews")==="false"?53:70, resizeMode:'contain',}}
+            source={getPhoto(item[this.props.imageProperty[dataSet]]!==undefined?item[this.props.imageProperty[dataSet]].toLowerCase():"")}
+          />}
         </View>
       </TouchableOpacity>
     )

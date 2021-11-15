@@ -359,7 +359,7 @@ class AllItemsPage extends Component {
             "Closet Image",
             "Closet Image",
             "Closet Image",
-            "Closet Image",
+            "Storage Image",
             "Storage Image",
             "Image",
             "Image",

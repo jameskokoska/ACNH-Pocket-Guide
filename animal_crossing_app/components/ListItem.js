@@ -190,6 +190,7 @@ class ListItem extends React.Component{
     }
 
     var label = this.props.item[this.props.textProperty[this.props.item.dataSet]]
+    let imageSrc = this.props.item[this.props.imageProperty[this.props.item.dataSet]];
 
     if(this.props.gridType==="smallGrid"){
       var textProperty2Component = <View/>;
@@ -203,7 +204,6 @@ class ListItem extends React.Component{
           DIYImage = "recipe.png"
         }
       }
-      let imageSrc = this.props.item[this.props.imageProperty[this.props.item.dataSet]];
       //image workaround
       // if(this.props.item["Data Category"]==="Recipes"){
       //   imageSrc = getFoodPhoto(this.props.item["Name"],imageSrc)
@@ -246,7 +246,7 @@ class ListItem extends React.Component{
                   source={{
                     uri: imageSrc,
                   }}
-                  cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
+                  cacheKey={imageSrc}
                 />:
                 <Image style={styles.gridBoxImage} source={getPhoto(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toLowerCase())}/>):
                 <View style={{height:7}}/>
@@ -289,9 +289,9 @@ class ListItem extends React.Component{
                 <FastImage
                   style={styles.gridBoxImageLarge}
                   source={{
-                    uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
+                    uri: imageSrc,
                   }}
-                  cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
+                  cacheKey={imageSrc}
                 />:
                 <Image style={styles.gridBoxImageLarge} source={getPhoto(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toLowerCase())}/>):
                 <View style={{height:7}}/>
@@ -344,9 +344,9 @@ class ListItem extends React.Component{
               {(!this.props.avoidSpoilers||this.state.collected)?<FastImage
                 style={styles.gridBoxImageLargeSmaller}
                 source={{
-                  uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
+                  uri: imageSrc,
                 }}
-                cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
+                cacheKey={imageSrc}
               />:<View style={{height:7}}/>}
               <View style={styles.gridBoxTextLargeSmaller}>
                 <TextFont translate={false} bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{capitalize(label)}</TextFont>

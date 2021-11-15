@@ -465,6 +465,8 @@ export function getPhotoCorner(name){
     return <Image source={require("../assets/icons/female.png")} style={{height: 40, width: 40, resizeMode:'contain'}}/>
   else if(name.includes("male"))
     return <Image source={require("../assets/icons/male.png")} style={{height: 37, width: 37, resizeMode:'contain'}}/>
+  else if(name.includes("recycle"))
+    return <Image source={require("../assets/icons/recycle.png")} style={{height: 40, width: 40, resizeMode:'contain'}}/>
   else
     return <Image source={require("../assets/icons/leaf.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
 }

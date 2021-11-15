@@ -5,6 +5,8 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -Thank you everyone for your support and tips on the app!
 -
+-Quick fix: crash on different lists
+-Fixed variation popups for items with missing images
 -Fixed villager name translations
 -Can check off Paradise Planning items
 -Paradise Planning checklist backed up to cloud and restored
