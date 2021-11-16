@@ -352,7 +352,7 @@
             "Spanish": "- Lista de criaturas activas",
             "Spanish (US)": "- Lista de criaturas activas",
             "Italian": "- Lista delle creature attive",
-            "Dutch": "Lijst van actieve insecten",
+            "Dutch": "Lijst van actieve beesten",
             "Russian": "- Список активных существ",
             "Portuguese": "- Lista de criaturas disponíveis"
         },
@@ -531,21 +531,21 @@
     ],
     "Main": [
         {
-            "English": "855 items",
-            "English (Europe)": "855 items",
-            "French": "836 items",
-            "French (US)": "836 items",
-            "German": "847 items",
-            "Spanish": "836 items",
-            "Spanish (US)": "832 items",
-            "Russian": "836 items",
-            "Italian": "846 items",
-            "Dutch": "821 items",
+            "English": "866 items",
+            "English (Europe)": "866 items",
+            "French": "855 items",
+            "French (US)": "855 items",
+            "German": "866 items",
+            "Spanish": "855 items",
+            "Spanish (US)": "851 items",
+            "Russian": "855 items",
+            "Italian": "865 items",
+            "Dutch": "840 items",
             "Chinese": "0 items",
             "Chinese (Traditional)": "0 items",
             "Japanese": "0 items",
             "Korean": "0 items",
-            "Portuguese": "844 items"
+            "Portuguese": "863 items"
         },
         {
             "English": "Home",
@@ -1623,7 +1623,7 @@
             "Spanish (US)": "Domingo",
             "Russian": "Воскресенье",
             "Italian": "Domenica ",
-            "Dutch": "Zonda",
+            "Dutch": "Zondag",
             "Portuguese": "Domingo"
         },
         {
@@ -2013,7 +2013,7 @@
             "Spanish (US)": "No recogido (Mantener variaciones)",
             "Russian": "Не собрано (оставить варианты)",
             "Italian": "Non raccolto (Mantieni variazioni)",
-            "Dutch": "Niet opgehaald (variaties behouden)",
+            "Dutch": "Niet verzameld (variaties behouden)",
             "Portuguese": "Não coletado (manter variações)"
         },
         {
@@ -2026,7 +2026,7 @@
             "Spanish (US)": "Pez",
             "Russian": "Рыба",
             "Italian": "Pesci ",
-            "Dutch": "Vis",
+            "Dutch": "Vissen",
             "Portuguese": "Peixes"
         },
         {
@@ -2675,7 +2675,7 @@
             "Spanish (US)": "Hubo un error, verifique el enlace y vuelva a intentarlo...",
             "Russian": "Произошла ошибка. Пожалуйста, проверьте верность ссылки п попробуйте ещё раз...",
             "Italian": "C'è stato un errore, controlla il link e riprova",
-            "Dutch": "Er is iets fout gegaan, controleer of de link goed is ingevoerd en probeer opnieuw",
+            "Dutch": "Er ging iets mis, controleer of de link goed is ingevoerd en probeer opnieuw",
             "Portuguese": "Ocorreu um erro, verifique o link e tente novamente ..."
         },
         {
@@ -2740,7 +2740,7 @@
             "Spanish (US)": "(Segunda opción)",
             "Russian": "(Вторая опция)",
             "Italian": "(Seconda opzione)",
-            "Dutch": "(Tweede mogelijkheid)",
+            "Dutch": "(Tweede optie)",
             "Portuguese": "(Segunda opçao)"
         },
         {
@@ -11471,35 +11471,250 @@
         },
         {
             "English": "Paradise Planning",
-            "English (Europe)": "Paradise Planning"
+            "English (Europe)": "Paradise Planning",
+            "French": "Planification paradisiaque",
+            "French (US)": "Planification paradisiaque",
+            "German": "Paradiesplanung",
+            "Spanish": "Planificación del paraíso",
+            "Spanish (US)": "Planificación del paraíso",
+            "Russian": "Райское планирование",
+            "Italian": "Pianificazione del paradiso",
+            "Dutch": "Paradijsplanning",
+            "Portuguese": "Planejamento do paraíso"
         },
         {
             "English": "View Recipe",
-            "English (Europe)": "View Recipe"
+            "English (Europe)": "View Recipe",
+            "French": "Voir la recette",
+            "French (US)": "Voir la recette",
+            "German": "Rezepte ansehen ",
+            "Spanish": "Ver la receta",
+            "Spanish (US)": "Ver la receta",
+            "Russian": "Посмотреть рецепт",
+            "Italian": "Visualizza la ricetta",
+            "Dutch": "Bekijk Recept",
+            "Portuguese": "Ver receita"
         },
         {
             "English": "Silver Supporters",
-            "English (Europe)": "Silver Supporters"
+            "English (Europe)": "Silver Supporters",
+            "French": "Supporters Argent",
+            "French (US)": "Supporters Argent",
+            "German": "Silber Supporter",
+            "Spanish": "Partidarios de plata",
+            "Spanish (US)": "Partidarios de plata",
+            "Russian": "Серебряные болельщики",
+            "Italian": "Sostenitori d'argento",
+            "Dutch": "Zilveren supporters",
+            "Portuguese": "Apoiadores de prata"
         },
         {
             "English": "Gold Supporters",
-            "English (Europe)": "Gold Supporters"
+            "English (Europe)": "Gold Supporters",
+            "French": "Supporters Or",
+            "French (US)": "Supporters Or",
+            "German": "Gold Supporter",
+            "Spanish": "Partidarios de oro",
+            "Spanish (US)": "Partidarios de oro",
+            "Russian": "Золотые сторонники",
+            "Italian": "Sostenitori d'oro",
+            "Dutch": "Gouden supporters",
+            "Portuguese": "Apoiadores de ouro"
         },
         {
             "English": "Thanks for your support!",
-            "English (Europe)": "Thanks for your support!"
+            "English (Europe)": "Thanks for your support!",
+            "French": "Merci pour votre aide!",
+            "French (US)": "Merci pour votre aide!",
+            "German": "Danke für deine Unterstützung!",
+            "Spanish": "¡Gracias por su apoyo!",
+            "Spanish (US)": "¡Gracias por su apoyo!",
+            "Russian": "Спасибо за поддержку!",
+            "Italian": "Grazie per il vostro sostegno!",
+            "Dutch": "Bedankt voor uw steun!",
+            "Portuguese": "Obrigado por seu apoio!"
         },
         {
             "English": "Your email is only used as a Username and to verify identity for a lost password.",
-            "English (Europe)": "Your email is only used as a Username and to verify identity for a lost password."
+            "English (Europe)": "Your email is only used as a Username and to verify identity for a lost password.",
+            "French": "Votre e-mail est uniquement utilisé comme nom d'utilisateur et pour vérifier l'identité d'un mot de passe perdu.",
+            "French (US)": "Votre e-mail est uniquement utilisé comme nom d'utilisateur et pour vérifier l'identité d'un mot de passe perdu.",
+            "German": "Deine E-Mail wird nur als Benutzername und zur Überprüfung der Identität bei einem verlorenen Passwort verwendet.",
+            "Spanish": "Su correo electrónico solo se utiliza como nombre de usuario y para verificar la identidad de una contraseña perdida.",
+            "Spanish (US)": "Su correo electrónico solo se utiliza como nombre de usuario y para verificar la identidad de una contraseña perdida.",
+            "Russian": "Ваш адрес электронной почты используется только в качестве имени пользователя и для подтверждения личности при утерянном пароле.",
+            "Italian": "La tua email viene utilizzata solo come nome utente e per verificare l'identità di una password persa.",
+            "Dutch": "Uw e-mailadres wordt alleen gebruikt als gebruikersnaam en om de identiteit te verifiëren voor een verloren wachtwoord.",
+            "Portuguese": "Seu e-mail é usado apenas como um nome de usuário e para verificar a identidade de uma senha perdida."
         },
         {
             "English": "Construction + Tools",
-            "English (Europe)": "Construction + Tools"
+            "English (Europe)": "Construction + Tools",
+            "French": "Construction + Outils",
+            "French (US)": "Construction + Outils",
+            "German": "Konstruktion + Werkzeuge",
+            "Spanish": "Construcción + Herramientas",
+            "Spanish (US)": "Construcción + Herramientas",
+            "Russian": "Строительство + Инструменты",
+            "Italian": "Costruzione + Strumenti",
+            "Dutch": "Constructie + Gereedschap",
+            "Portuguese": "Construção + Ferramentas"
         },
         {
             "English": "Interior Structures",
-            "English (Europe)": "Interior Structures"
+            "English (Europe)": "Interior Structures",
+            "French": "Structures intérieures",
+            "French (US)": "Structures intérieures",
+            "German": "Innere Strukturen ",
+            "Spanish": "Estructuras interiores",
+            "Spanish (US)": "Estructuras interiores",
+            "Russian": "Внутренние конструкции",
+            "Italian": "Strutture Interne",
+            "Dutch": "Interieurstructuren",
+            "Portuguese": "Estruturas Interiores"
+        },
+        {
+            "English": "Please make sure you are connected to the internet and restart the application",
+            "English (Europe)": "Please make sure you are connected to the internet and restart the application",
+            "French": "Veuillez vous assurer que vous êtes connecté à Internet et redémarrez l'application",
+            "French (US)": "Veuillez vous assurer que vous êtes connecté à Internet et redémarrez l'application",
+            "German": "Bitte stellen Sie sicher, dass Sie mit dem Internet verbunden sind und starten Sie die Anwendung neu",
+            "Spanish": "Asegúrese de estar conectado a Internet y reinicie la aplicación.",
+            "Spanish (US)": "Asegúrese de estar conectado a Internet y reinicie la aplicación.",
+            "Russian": "Убедитесь, что вы подключены к Интернету, и перезапустите приложение.",
+            "Italian": "Assicurati di essere connesso a Internet e riavvia l'applicazione",
+            "Dutch": "Zorg ervoor dat u verbonden bent met internet en start de applicatie opnieuw op",
+            "Portuguese": "Certifique-se de que está conectado à internet e reinicie o aplicativo"
+        },
+        {
+            "English": "Downloading Data...",
+            "English (Europe)": "Downloading Data...",
+            "French": "Téléchargement des données...",
+            "French (US)": "Téléchargement des données...",
+            "German": "Daten werden heruntergeladen...",
+            "Spanish": "Descarga de datos ...",
+            "Spanish (US)": "Descarga de datos ...",
+            "Russian": "Скачивание данных ...",
+            "Italian": "Download dati in corso...",
+            "Dutch": "Gegevens downloaden...",
+            "Portuguese": "Baixando dados ..."
+        },
+        {
+            "English": "This may take a few minutes and is only done once.",
+            "English (Europe)": "This may take a few minutes and is only done once.",
+            "French": "Cela peut prendre quelques minutes et n'est effectué qu'une seule fois.",
+            "French (US)": "Cela peut prendre quelques minutes et n'est effectué qu'une seule fois.",
+            "German": "Dies kann einige Minuten dauern und wird nur einmal durchgeführt.",
+            "Spanish": "Esto puede tardar unos minutos y solo se hace una vez.",
+            "Spanish (US)": "Esto puede tardar unos minutos y solo se hace una vez.",
+            "Russian": "Это может занять несколько минут и выполняется только один раз.",
+            "Italian": "Questa operazione potrebbe richiedere alcuni minuti e viene eseguita solo una volta.",
+            "Dutch": "Dit kan enkele minuten duren en gebeurt maar één keer.",
+            "Portuguese": "Isso pode levar alguns minutos e é feito apenas uma vez."
+        },
+        {
+            "English": "Generate Data",
+            "English (Europe)": "Generate Data",
+            "French": "Générer des données",
+            "French (US)": "Générer des données",
+            "German": "Daten generieren",
+            "Spanish": "Generar datos",
+            "Spanish (US)": "Generar datos",
+            "Russian": "Генерировать данные",
+            "Italian": "Genera dati",
+            "Dutch": "Gegevens genereren",
+            "Portuguese": "Gerar Dados"
+        },
+        {
+            "English": "Download",
+            "English (Europe)": "Download",
+            "French": "Télécharger",
+            "French (US)": "Télécharger",
+            "German": "Herunterladen",
+            "Spanish": "Descargar",
+            "Spanish (US)": "Descargar",
+            "Russian": "Скачать",
+            "Italian": "Scarica",
+            "Dutch": "Downloaden",
+            "Portuguese": "Download"
+        },
+        {
+            "English": "Generate",
+            "English (Europe)": "Generate",
+            "French": "produire",
+            "French (US)": "produire",
+            "German": "Generieren",
+            "Spanish": "Generar",
+            "Spanish (US)": "Generar",
+            "Russian": "Генерировать",
+            "Italian": "creare",
+            "Dutch": "genereren",
+            "Portuguese": "Gerar"
+        },
+        {
+            "English": "It seems generating data may have had some issues. If generating data fails or takes too long, select [Download].",
+            "English (Europe)": "It seems generating data may have had some issues. If generating data fails or takes too long, select [Download].",
+            "French": "Il semble que la génération de données ait pu poser des problèmes. Si la génération des données échoue ou prend trop de temps, sélectionnez [Télécharger].",
+            "French (US)": "Il semble que la génération de données ait pu poser des problèmes. Si la génération des données échoue ou prend trop de temps, sélectionnez [Télécharger].",
+            "German": "Es scheint, dass beim Generieren von Daten einige Probleme aufgetreten sind. Wenn das Generieren von Daten fehlschlägt oder zu lange dauert, wählen Sie [Herunterladen].",
+            "Spanish": "Parece que la generación de datos puede haber tenido algunos problemas. Si la generación de datos falla o tarda demasiado, seleccione [Descargar].",
+            "Spanish (US)": "Parece que la generación de datos puede haber tenido algunos problemas. Si la generación de datos falla o tarda demasiado, seleccione [Descargar].",
+            "Russian": "Похоже, при создании данных возникли проблемы. Если создание данных не удается или занимает слишком много времени, выберите [Загрузить].",
+            "Italian": "Sembra che la generazione di dati possa aver avuto alcuni problemi. Se la generazione dei dati non riesce o richiede troppo tempo, selezionare [Download].",
+            "Dutch": "Het lijkt erop dat het genereren van gegevens problemen heeft gehad. Als het genereren van gegevens mislukt of te lang duurt, selecteert u [Download].",
+            "Portuguese": "Parece que a geração de dados pode ter tido alguns problemas. Se a geração de dados falhar ou demorar muito, selecione [Download]."
+        },
+        {
+            "English": "If this takes longer than a minute restart the app and select Download data.",
+            "English (Europe)": "If this takes longer than a minute restart the app and select Download data.",
+            "French": "Si cela prend plus d'une minute, redémarrez l'application et sélectionnez Télécharger les données.",
+            "French (US)": "Si cela prend plus d'une minute, redémarrez l'application et sélectionnez Télécharger les données.",
+            "German": "Wenn dies länger als eine Minute dauert, starten Sie die App neu und wählen Sie Daten herunterladen.",
+            "Spanish": "Si esto toma más de un minuto, reinicie la aplicación y seleccione Descargar datos.",
+            "Spanish (US)": "Si esto toma más de un minuto, reinicie la aplicación y seleccione Descargar datos.",
+            "Russian": "Если это займет больше минуты, перезапустите приложение и выберите Загрузить данные.",
+            "Italian": "Se l'operazione richiede più di un minuto, riavvia l'app e seleziona Scarica dati.",
+            "Dutch": "Als dit langer dan een minuut duurt, start u de app opnieuw en selecteert u Gegevens downloaden.",
+            "Portuguese": "Se demorar mais de um minuto, reinicie o aplicativo e selecione Baixar dados."
+        },
+        {
+            "English": "Mark which villagers you have photos of by tapping the photo icon.",
+            "English (Europe)": "Mark which villagers you have photos of by tapping the photo icon.",
+            "French": "Marquez les villageois dont vous avez des photos en appuyant sur l'icône photo.",
+            "French (US)": "Marquez les villageois dont vous avez des photos en appuyant sur l'icône photo.",
+            "German": "Markieren Sie, von welchen Dorfbewohnern Sie Fotos haben, indem Sie auf das Fotosymbol tippen.",
+            "Spanish": "Marca de qué aldeanos tienes fotos tocando el ícono de la foto.",
+            "Spanish (US)": "Marca de qué aldeanos tienes fotos tocando el ícono de la foto.",
+            "Russian": "Отметьте жителей деревни, которых у вас есть фотографии, нажав на значок фотографии.",
+            "Italian": "Contrassegna gli abitanti del villaggio di cui hai foto toccando l'icona della foto.",
+            "Dutch": "Markeer van welke dorpelingen je foto's hebt door op het fotopictogram te tikken.",
+            "Portuguese": "Marque de quais aldeões você tem fotos tocando no ícone da foto."
+        },
+        {
+            "English": "Mark which villagers have once been in your town by tapping the moving boxes icon.",
+            "English (Europe)": "Mark which villagers have once been in your town by tapping the moving boxes icon.",
+            "French": "Marquez quels villageois ont déjà été dans votre ville en appuyant sur l'icône des boîtes de déménagement.",
+            "French (US)": "Marquez quels villageois ont déjà été dans votre ville en appuyant sur l'icône des boîtes de déménagement.",
+            "German": "Markieren Sie, welche Dorfbewohner einmal in Ihrer Stadt waren, indem Sie auf das Umzugskarton-Symbol tippen.",
+            "Spanish": "Marca qué aldeanos han estado alguna vez en tu ciudad tocando el ícono de cajas de mudanza.",
+            "Spanish (US)": "Marca qué aldeanos han estado alguna vez en tu ciudad tocando el ícono de cajas de mudanza.",
+            "Russian": "Отметьте, какие жители когда-то были в вашем городе, нажав на значок движущихся ящиков.",
+            "Italian": "Contrassegna quali abitanti del villaggio sono stati una volta nella tua città toccando l'icona delle scatole mobili.",
+            "Dutch": "Markeer welke dorpelingen ooit in uw stad zijn geweest door op het pictogram van de verhuisdozen te tikken.",
+            "Portuguese": "Marque quais aldeões já estiveram em sua cidade tocando no ícone de caixas móveis."
+        },
+        {
+            "English": "Tap here!",
+            "English (Europe)": "Tap here!",
+            "French": "Appuyez ici!",
+            "French (US)": "Appuyez ici!",
+            "German": "Hier drücken!",
+            "Spanish": "¡Pulse aquí!",
+            "Spanish (US)": "¡Pulse aquí!",
+            "Russian": "Нажмите здесь!",
+            "Italian": "Tocca qui!",
+            "Dutch": "Klik hier!",
+            "Portuguese": "Toque aqui!"
         }
     ],
     "Sources": [
@@ -11508,11 +11723,11 @@
             "English (Europe)": "160 items",
             "French": "99 items",
             "French (US)": "99 items",
-            "German": "109 items",
+            "German": "118 items",
             "Spanish": "95 items",
             "Spanish (US)": "50 items",
             "Italian": "129 items",
-            "Dutch": "46 items",
+            "Dutch": "80 items",
             "Chinese": "0 items",
             "Chinese (Traditional)": "0 items",
             "Japanese": "0 items",
@@ -11699,6 +11914,7 @@
             "French (US)": "Posters Nook Shopping",
             "German": "Poster der Inselbewohner ",
             "Italian": "Poster Nook Shopping",
+            "Dutch": "Nook's winkel poster",
             "Russian": "Постеры Нука",
             "Portuguese": "Nook Shopping Posters"
         },
@@ -11835,6 +12051,7 @@
             "German": "Bist du der Bastelboss?",
             "Spanish": "Bricolaje para epatar",
             "Italian": "Fai da te per esperti",
+            "Dutch": "Wilde Dromen DIY",
             "Russian": "Инструкции дичайших снов",
             "Portuguese": "Wildest Dreams DIY"
         },
@@ -11928,6 +12145,7 @@
             "Spanish": "Golpeando una piedra",
             "Spanish (US)": "Golpeando una roca",
             "Italian": "Colpendo una pietra",
+            "Dutch": "Een steen slaan",
             "Russian": "Разбить скалу",
             "Portuguese": "Batendo em uma pedra"
         },
@@ -12000,6 +12218,7 @@
             "Spanish": "Tómbola de Ladino",
             "Spanish (US)": "Rifa de Redd",
             "Italian": "Lotteria di Volpolo",
+            "Dutch": "Redd's Loterij",
             "Russian": "Лотерея Редда",
             "Portuguese": "Sorteio de Redd"
         },
@@ -12250,6 +12469,7 @@
             "German": "Bastelanleitungen für Anfänger ",
             "Spanish": "Bricolaje para principiantes",
             "Italian": "Fai da te per principianti",
+            "Dutch": "DIY voor beginners",
             "Russian": "Инструкции для новичков",
             "Portuguese": "DIY para Iniciantes"
         },
@@ -12262,6 +12482,7 @@
             "Spanish": "Romper 100 hachas",
             "Spanish (US)": "Romper 100 hachas",
             "Italian": "Rompendo 100 asce",
+            "Dutch": "Breek 100 bijlen",
             "Russian": "Сломать 100 топоров",
             "Portuguese": "Quebrando 100 machados"
         },
@@ -12296,6 +12517,7 @@
             "Spanish": "Ayuda a Gulliver 30 veces",
             "Spanish (US)": "Ayuda a Gulliver 30 veces",
             "Italian": "Aiutando Gulliver 30 volte",
+            "Dutch": "Help Gulliver 30 keer",
             "Russian": "Помочь Гулливеру 30 раз",
             "Portuguese": "Ajudando Gulliver 30 vezes"
         },
@@ -12351,6 +12573,7 @@
             "German": "Hartholzbaum",
             "Spanish": "Árboles normales",
             "Italian": "Legno duro",
+            "Dutch": "Hardhout boom",
             "Russian": "Дерево твёрдой породы",
             "Portuguese": "Árvores Normais"
         },
@@ -12373,6 +12596,7 @@
             "German": "Bambus Abholzen",
             "Spanish": "Talar un árbol de bambú",
             "Italian": "Abbattendo piante di bambù",
+            "Dutch": "Bamboeboom omhakken",
             "Russian": "Срубить бамбук",
             "Portuguese": "Cortando uma árvore de bambu"
         },
@@ -12385,6 +12609,7 @@
             "Spanish": "Lugar de excavación",
             "Spanish (US)": "Lugar de excavación",
             "Italian": "Punto da cui scavare",
+            "Dutch": "Graafplek",
             "Russian": "Место для копания",
             "Portuguese": "Lugar de escavação "
         },
@@ -12408,6 +12633,7 @@
             "German": "Sterni-Grube",
             "Spanish": "Lugar de excavación brillante",
             "Italian": "Punto luminoso da cui scavare",
+            "Dutch": "Gloeiende graafplek",
             "Russian": "Светящееся место для копания",
             "Portuguese": "Ponto de escavação brilhante"
         },
@@ -12420,6 +12646,7 @@
             "Spanish": "Coger flores",
             "Spanish (US)": "Coger flores",
             "Italian": "Raccogliendo fiori",
+            "Dutch": "Bloemen plukken",
             "Russian": "Сбор цветов",
             "Portuguese": "Colhendo flores"
         },
@@ -12453,6 +12680,7 @@
             "German": "Einen Busch ausgraben ",
             "Spanish": "Desenterrar un arbusto que ya ha crecido",
             "Italian": "Estirpando un cespuglio maturo",
+            "Dutch": "Een volgroeide boom opgraven",
             "Russian": "Выкопать взрослый куст",
             "Portuguese": "Desenterrando um arbusto totalmente crescido"
         },
@@ -12475,6 +12703,7 @@
             "German": "Mit einem Kescher einfangen ",
             "Spanish": "Capturar con una red",
             "Italian": "Catturando col retino",
+            "Dutch": "Vangen met een net",
             "Russian": "Поймать сеткой",
             "Portuguese": "Pegando com uma rede"
         },
@@ -12509,6 +12738,7 @@
             "German": "Stelle zum Tauchen",
             "Spanish": "Zona de buceo",
             "Italian": "Punto di immersione",
+            "Dutch": "Duikplek",
             "Russian": "Место для ныряния",
             "Portuguese": "Ponto de Mergulho"
         },
@@ -12649,6 +12879,7 @@
             "German": "Vergammelte Rüben",
             "Spanish": "Nabos estropeados",
             "Italian": "Rape marce",
+            "Dutch": "bedorven knollen",
             "Russian": "Тухлые репки",
             "Portuguese": "Turnips estragadas"
         },
@@ -12661,6 +12892,7 @@
             "Spanish": "Usa una bengala de tubo",
             "Spanish (US)": "Usa una bengala de tubo",
             "Italian": "Usare un fuoco d'artificio a fontana",
+            "Dutch": "fontijnvuurwerk gebruiken",
             "Russian": "Использовать фейерверк-фонтан",
             "Portuguese": "Use uma fonte de fogos de artifício"
         },
@@ -12703,33 +12935,40 @@
         {
             "English": "Saharah's Commune",
             "English (Europe)": "Saharah's Commune",
+            "German": "Azizas Kommune",
             "Italian": "Comune di Sahara"
         },
         {
             "English": "Requires Katrina to see bad luck in your future",
             "English (Europe)": "Requires Katrina to see bad luck in your future",
+            "German": "Erfordert Smeralda, um Pech in deiner Zukunft zu sehen",
             "Italian": "Wanda deve predire sfortuna nel tuo futuro"
         },
         {
             "English": "Katrina's Cleansing Service",
             "English (Europe)": "Katrina's Cleansing Service",
+            "German": "Smeralda Reinigungsservice",
             "Italian": "Servizio purificazione di Wanda"
         },
         {
             "English": "Requires a Nintendo Switch Online membership",
             "English (Europe)": "Requires a Nintendo Switch Online membership",
             "German": "Erfordert eine Nintendo Switch Online Mitgliedschaft",
-            "Italian": "Richiede iscrizione a Nintendo Switch Online"
+            "Italian": "Richiede iscrizione a Nintendo Switch Online",
+            "Dutch": "Nintendo Switch Online lidmaatschap benodigd"
         },
         {
             "English": "In the Special Items section in Nook Shopping, after inviting to Photopia with an amiibo ",
             "English (Europe)": "In the Special Items section in Nook Shopping, after inviting to Photopia with an amiibo ",
+            "German": "Im Bereich „Sonderartikel“ in Nook Shopping, nachdem du einem Amiibo auf Photopia eingeladen hast",
             "Italian": "Nella sezione Oggetti Speciali del Nook Shopping, dopo averli invitati a Fotopia con un amiibo"
         },
         {
             "English": "Available from Nook's Cranny; ",
             "English (Europe)": "Available from Nook's Cranny; ",
-            "Italian": "Disponibile nella Bottega di Nook"
+            "German": "Erhältlich in Nook's Laden",
+            "Italian": "Disponibile nella Bottega di Nook",
+            "Dutch": "Beschikbaar bij Nook's Cranny"
         },
         {
             "English": "Available from Tom Nook during Countdown",
@@ -12740,6 +12979,7 @@
         {
             "English": "Redd's Commune Raffle",
             "English (Europe)": "Redd's Commune Raffle",
+            "German": "Reiners Tombola",
             "Italian": "Lotteria della Comune di Volpolo"
         },
         {
@@ -12750,19 +12990,22 @@
         {
             "English": "Gyroid",
             "English (Europe)": "Gyroid",
+            "German": "Gyroid",
             "Italian": "Giroide"
         },
         {
             "English": "Digging up a carrot plant",
             "English (Europe)": "Digging up a carrot plant",
             "German": "Eine Karottenpflanze ausgraben",
-            "Italian": "Estirpando una pianta di carote"
+            "Italian": "Estirpando una pianta di carote",
+            "Dutch": "wortelplant opgraven"
         },
         {
             "English": "Digging up a potato plant",
             "English (Europe)": "Digging up a potato plant",
             "German": "Eine Kartoffelpflanze ausgraben",
-            "Italian": "Estirpando una pianta di patate"
+            "Italian": "Estirpando una pianta di patate",
+            "Dutch": "aardappelplant opgraven"
         },
         {
             "English": "Digging up a sugarcane plant",
@@ -12774,11 +13017,13 @@
             "English": "Digging up a tomato plant",
             "English (Europe)": "Digging up a tomato plant",
             "German": "Eine Tomatenpflanze ausgraben",
-            "Italian": "Estirpando una pianta di pomodori"
+            "Italian": "Estirpando una pianta di pomodori",
+            "Dutch": "Tomatenplant opgraven"
         },
         {
             "English": "Digging up a wheat plant",
             "English (Europe)": "Digging up a wheat plant",
+            "German": "Weizen ausgraben ",
             "Italian": "Estirpando una pianta di grano"
         },
         {
@@ -12799,6 +13044,7 @@
         {
             "English": "Basic Cooking Recipes",
             "English (Europe)": "Basic Cooking Recipes",
+            "German": "Erste Kochrezepte",
             "Italian": "Ricette di cucina basilari"
         },
         {
@@ -12874,11 +13120,13 @@
         },
         {
             "English": "Cooking",
-            "English (Europe)": "Cooking"
+            "English (Europe)": "Cooking",
+            "Dutch": "Koken"
         },
         {
             "English": "HHP Café",
-            "English (Europe)": "HHP Café"
+            "English (Europe)": "HHP Café",
+            "Dutch": "HHP Café"
         },
         {
             "English": "CookPumpkin",
@@ -12886,23 +13134,28 @@
         },
         {
             "English": "Donating all bugs",
-            "English (Europe)": "Donating all bugs"
+            "English (Europe)": "Donating all bugs",
+            "Dutch": "Alle insecten doneren"
         },
         {
             "English": "Donating all fish",
-            "English (Europe)": "Donating all fish"
+            "English (Europe)": "Donating all fish",
+            "Dutch": "Alle vissen doneren"
         },
         {
             "English": "Donating all art",
-            "English (Europe)": "Donating all art"
+            "English (Europe)": "Donating all art",
+            "Dutch": "Alle kunst doneren"
         },
         {
             "English": "Donating all fossils",
-            "English (Europe)": "Donating all fossils"
+            "English (Europe)": "Donating all fossils",
+            "Dutch": "Alle fossielen doneren"
         },
         {
             "English": "Donating all sea creatures",
-            "English (Europe)": "Donating all sea creatures"
+            "English (Europe)": "Donating all sea creatures",
+            "Dutch": "Alle diepzeedieren doneren"
         },
         {
             "English": "Museum3Event",
@@ -12914,19 +13167,23 @@
         },
         {
             "English": "NotAvailable",
-            "English (Europe)": "NotAvailable"
+            "English (Europe)": "NotAvailable",
+            "Dutch": "Niet Beschikbaar"
         },
         {
             "English": "Picking carrots",
-            "English (Europe)": "Picking carrots"
+            "English (Europe)": "Picking carrots",
+            "Dutch": "Wortels plukken"
         },
         {
             "English": "Kapp'n islands",
-            "English (Europe)": "Kapp'n islands"
+            "English (Europe)": "Kapp'n islands",
+            "Dutch": "Kapp'ns eilanden"
         },
         {
             "English": "Picking potatoes",
-            "English (Europe)": "Picking potatoes"
+            "English (Europe)": "Picking potatoes",
+            "Dutch": "Aardappels plukken"
         },
         {
             "English": "Picking sugarcane",
@@ -12934,7 +13191,8 @@
         },
         {
             "English": "Picking tomatoes",
-            "English (Europe)": "Picking tomatoes"
+            "English (Europe)": "Picking tomatoes",
+            "Dutch": "Tomaten plukken"
         },
         {
             "English": "Picking wheat",
@@ -12995,7 +13253,7 @@
             "Spanish": "123 items",
             "Spanish (US)": "114 items",
             "Italian": "13 items",
-            "Dutch": "0 items",
+            "Dutch": "29 items",
             "Chinese": "0 items",
             "Chinese (Traditional)": "0 items",
             "Japanese": "0 items",
@@ -13240,6 +13498,7 @@
             "German": "Am Geburtstag des Spielers erhältlich ",
             "Spanish": "Recibido en el dia de tu cumpleaños",
             "Spanish (US)": "Recibido en el dia de tu cumpleaños",
+            "Dutch": "Ontvangen op de spelers verjaardag",
             "Portuguese": "Recebido no aniversário do jogador"
         },
         {
@@ -13250,6 +13509,7 @@
             "German": "Im August auf der Nordhalbkugel erhältlich und im Juli auf der Südhalbkugel erhältlich ",
             "Spanish": "Recibido en agosto en el hemisferio norte y recibido en julio en el hemisferio sur",
             "Spanish (US)": "Recibido en agosto en el hemisferio norte y recibido en julio en el hemisferio sur",
+            "Dutch": "Ontvangen in augustus in het Noordelijk Halfrond en ontvangen in juli in het Zuiderlijk Halfrond",
             "Portuguese": "Recebido em agosto no Hemisfério Norte e recebido em julho no Hemisfério Sul"
         },
         {
@@ -13260,6 +13520,7 @@
             "German": "Im Juli auf der Nordhalbkugel erhältlich und im Februar auf der Südhalbkugel erhältlich ",
             "Spanish": "Recibido en julio en el hemisferio norte y recibido en febrero en el hemisferio sur",
             "Spanish (US)": "Recibido en julio en el hemisferio norte y recibido en febrero en el hemisferio sur",
+            "Dutch": "Onvangen in juli in het Noorderlijk Halfrond en ontvangen in februari in het Zuiderlijk Halfrond",
             "Portuguese": "Recebido em julho no Hemisfério Norte e recebido em fevereiro no Hemisfério Sul"
         },
         {
@@ -13270,6 +13531,7 @@
             "German": "Im Oktober auf der Nordhalbkugel erhältlich und im April auf der Südhalbkugel erhältlich ",
             "Spanish": "Recibido en octubre en el hemisferio norte y recibido en abril en el hemisferio sur",
             "Spanish (US)": "Recibido en octubre en el hemisferio norte y recibido en abril en el hemisferio sur",
+            "Dutch": "Ontvangen in oktober in het Noorderlijk Halfrond en ontvangen in april in het Zuiderlijk Halfrond",
             "Portuguese": "Recebido em outubro no Hemisfério Norte e recebido em abril no Hemisfério Sul"
         },
         {
@@ -13280,6 +13542,7 @@
             "German": "Im April auf der Nordhalbkugel erhältlich und im Oktober auf der Südhalbkugel erhältlich ",
             "Spanish": "Recibido en abril en el hemisferio norte y recibido en octubre en el hemisferio sur",
             "Spanish (US)": "Recibido en abril en el hemisferio norte y recibido en octubre en el hemisferio sur",
+            "Dutch": "Ontvangen in april in het Noorderlijk Halfrond en ontvangen in oktober in het Zuiderlijk Halfrond",
             "Portuguese": "Recebido em abril no Hemisfério Norte e recebido em outubro no Hemisfério Sul"
         },
         {
@@ -13290,6 +13553,7 @@
             "German": "Wurde den Spielern nach dem 1.1.0-Update in einem Brief von Nintendo geschickt",
             "Spanish": "Enviado por correo en una carta de Nintendo después e la actualización 1.1.0",
             "Spanish (US)": "Enviado por correo en una carta de Nintendo después e la actualización 1.1.0",
+            "Dutch": "Verzonden naar spelers na de 1.1.0 update, in een brief van Nintendo",
             "Portuguese": "Enviado para os jogadores após a atualização 1.1.0 em uma carta da Nintendo"
         },
         {
@@ -13300,6 +13564,7 @@
             "German": "Wurde nach dem Update 1.5.0 in einem Brief von Nintendo an Spieler gesendet",
             "Spanish": "Enviado por correo en una carta de Nintendo después e la actualización 1.5.0",
             "Spanish (US)": "Enviado por correo en una carta de Nintendo después e la actualización 1.5.0",
+            "Dutch": "Verzonden naar spelers na de 1.5.0 update in een brief van Nintendo",
             "Portuguese": "Enviado para os jogadores após a atualização 1.5.0 em uma carta da Nintendo"
         },
         {
@@ -13330,6 +13595,7 @@
             "German": "Wurde nach dem Update 1.6.0 in einem Brief von Nintendo an Spieler gesendet",
             "Spanish": "Enviado a jugadores después de la actualización 1.6.0 mediante una carta de Nintendo",
             "Spanish (US)": "Enviado a jugadores después de la actualización 1.6.0 mediante una carta de Nintendo",
+            "Dutch": "Verzonden naar spelers na de 1.6.0 update in een brief van Nintendo",
             "Portuguese": "Enviado para os jogadores após a atualização 1.6.0 em uma carta da Nintendo"
         },
         {
@@ -13370,6 +13636,7 @@
             "German": "Mit der Post erhalten",
             "Spanish": "Recibido por correo",
             "Spanish (US)": "Recibido por correo",
+            "Dutch": "Ontvangen per post",
             "Portuguese": "Recebido pelo correio"
         },
         {
@@ -13380,6 +13647,7 @@
             "German": "Im Januar in beiden Hemisphären erhältlich ",
             "Spanish": "Recibido en enero en ambos hemisferios",
             "Spanish (US)": "Recibido en enero en ambos hemisferios",
+            "Dutch": "Ontvangen in januari in beide halfronden",
             "Portuguese": "Recebido em janeiro em ambos os hemisférios"
         },
         {
@@ -13390,6 +13658,7 @@
             "German": "Im Februar auf der Nordhalbkugel erhältlich und im August auf der Südhalbkugel erhältlich ",
             "Spanish": "Recibido en febrero en el hemisferio norte y recibido en agosto en el hemisferio sur",
             "Spanish (US)": "Recibido en febrero en el hemisferio norte y recibido en agosto en el hemisferio sur",
+            "Dutch": "onvangen in februari in het Noorderlijk Halfrond en ontvangen in Augustus in het Zuiderlijk Halfrond",
             "Portuguese": "Recebido em fevereiro no Hemisfério Norte e recebido em agosto no Hemisfério Sul"
         },
         {
@@ -13400,6 +13669,7 @@
             "German": "Tausche Süßigkeiten oder einen Lutscher mit einem Dorfbewohner",
             "Spanish": "Intercambia un caramelo o una piruleta con un vecino",
             "Spanish (US)": "Intercambia un caramelo o una piruleta con un vecino",
+            "Dutch": "Ruil snoep of een lolli met een bewoner",
             "Portuguese": "Troque doces ou um pirulito com um morador"
         },
         {
@@ -13410,6 +13680,7 @@
             "German": "Wurde den Spielern nach dem 1.2.0-Update in einem Brief von Nintendo geschickt",
             "Spanish": "Enviado a los jugadores por Nintendo después de la actualización 1.2.0",
             "Spanish (US)": "Enviado a los jugadores por Nintendo después de la actualización 1.2.0",
+            "Dutch": "verstuurd naar spelers na de 1.2.0 update in een brief van Nintendo",
             "Portuguese": "Enviado para os jogadores após a atualização 1.2.0 em uma carta da Nintendo"
         },
         {
@@ -13420,6 +13691,7 @@
             "German": "Wurde den Spielern nach dem Update 1.4.0 in einem Brief von Nintendo geschickt",
             "Spanish": "Enviado a los jugadores por Nintendo después de la actualización 1.4.0",
             "Spanish (US)": "Enviado a los jugadores por Nintendo después de la actualización 1.4.0",
+            "Dutch": "verstuurd naar spelers na de 1.4.0 update in een brief van Nintendo",
             "Portuguese": "Enviado para os jogadores após a atualização 1.4.0 em uma carta da Nintendo"
         },
         {
@@ -13430,6 +13702,7 @@
             "German": "Wurde nach dem Update 1.8.0 in einem Brief von Nintendo an Spieler geschickt",
             "Spanish": "Enviado a los jugadores por Nintendo después de la actualización 1.8.0",
             "Spanish (US)": "Enviado a los jugadores por Nintendo después de la actualización 1.8.0",
+            "Dutch": "verstuurd naar spelers na de 1.8.0 update in een brief van Nintendo",
             "Portuguese": "Enviado para os jogadores após a atualização 1.8.0 em uma carta da Nintendo"
         },
         {
@@ -13440,6 +13713,7 @@
             "German": "Belohnung für die Bereitstellung der angeforderten Zutaten an Gernod",
             "Spanish": "Recompensa por llevarle a Guindo todos los ingredientes solicitados",
             "Spanish (US)": "Recompensa por llevarle a Guindo todos los ingredientes solicitados",
+            "Dutch": "Beloning voor het geven van de gevraagde ingredienten aan Franklin",
             "Portuguese": "Recompensa por dar a Franklin os ingredientes solicitados"
         },
         {
@@ -13450,6 +13724,7 @@
             "German": "Im November auf der Nordhalbkugel erhältlich und im Mai auf der Südhalbkugel erhältlich ",
             "Spanish": "Recibido en noviembre en el hemisferio norte y recibido en mayo en el hemisferio sur",
             "Spanish (US)": "Recibido en noviembre en el hemisferio norte y recibido en mayo en el hemisferio sur",
+            "Dutch": "Ontvangen in november in het Noorderlijk Halfrond en ontvangen in mei in het Zuiderlijk Halfrond",
             "Portuguese": "Recebido em novembro no Hemisfério Norte e recebido em maio no Hemisfério Sul"
         },
         {
@@ -13540,6 +13815,7 @@
             "German": "Erhältlich in Nook's Laden ",
             "Spanish": "Dispobible en el MiniNook",
             "Spanish (US)": "Dispobible en el MiniNook",
+            "Dutch": "Beschikbaar bij Nook's Cranny;",
             "Portuguese": "Disponível no Nook's Cranny;"
         },
         {
@@ -13630,6 +13906,7 @@
             "German": "Im Dezember auf der Nordhalbkugel erhältlich und im Juni auf der Südhalbkugel erhältlich ",
             "Spanish": "Recibido en diciembre en el hemisferio norte y recibido en junio en el hemisferio sur",
             "Spanish (US)": "Recibido en diciembre en el hemisferio norte y recibido en junio en el hemisferio sur",
+            "Dutch": "Ontvangen in december in het Noorderlijk Halfrond en ontvangen in juni in het Zuiderlijk Halfrond",
             "Portuguese": "Recebido em dezembro no Hemisfério Norte e recebido em junho no Hemisfério Sul"
         },
         {
@@ -13640,6 +13917,7 @@
             "German": "Im Juni auf der Nordhalbkugel erhältlich und im Dezember auf der Südhalbkugel erhältlich ",
             "Spanish": "Recibido en junio en el hemisferio norte y en diciembre en el hemisferio sur",
             "Spanish (US)": "Recibido en junio en el hemisferio norte y en diciembre en el hemisferio sur",
+            "Dutch": "Ontvangen in juni in het Noorderlijk Halfrond en ontvangen in december in het Zuiderlijk Halfrond",
             "Portuguese": "Recebido em junho no Hemisfério Norte e recebido em dezembro no Hemisfério Sul"
         },
         {
@@ -13650,6 +13928,7 @@
             "German": "Gib Jakob Süßigkeiten oder einen Lolli",
             "Spanish": "Dale a Soponcio caramelos o piruletas",
             "Spanish (US)": "Dale a Soponcio caramelos o piruletas",
+            "Dutch": "Geef Jack snoep of een lolli",
             "Portuguese": "Dê a Jack um doce ou um pirulito"
         },
         {
@@ -13690,6 +13969,7 @@
             "German": "An Spieler nach dem 1.3.0-Update in einem Brief von Nintendo verschickt; Erhältlich bei Tina&Sina ",
             "Spanish": "Enviado a jugadores después de la actualización 1.3.0 en una carta de Nintendo",
             "Spanish (US)": "Enviado a jugadores después de la actualización 1.3.0 en una carta de Nintendo",
+            "Dutch": "Verstuurd naar spelers na de 1.3.0 update in een brief van Nintendo; beschikbaar in Mabels tijdelijke winkel of Able Zusters winkel",
             "Portuguese": "Enviado para os jogadores após a atualização 1.3.0 em uma carta da Nintendo; Disponível na loja temporária da Mabel ou na loja Able Sisters"
         },
         {
@@ -13769,6 +14049,7 @@
             "German": "Verstecktes Lied - nur auf Anfrage",
             "Spanish": "Canción secreta - Sólo cuando se la pides",
             "Spanish (US)": "Canción secreta - Sólo cuando se la pides",
+            "Dutch": "Verborgen nummer - alleen op aanvraag",
             "Portuguese": "Música oculta - somente por solicitação"
         },
         {
@@ -13836,6 +14117,7 @@
             "German": "Schütteln",
             "Spanish": "Agitando",
             "Spanish (US)": "Agitando",
+            "Dutch": "Schudden",
             "Portuguese": "Tremendo"
         },
         {
@@ -13875,6 +14157,7 @@
             "German": "mittelgroßer Schatten",
             "Spanish": "Sombra mediana",
             "Spanish (US)": "Sombra mediana",
+            "Dutch": "Medium schaduw",
             "Portuguese": "Sombra média"
         },
         {
@@ -13935,6 +14218,7 @@
             "German": "Kleiner Schatten ",
             "Spanish": "Sombra pequeña",
             "Spanish (US)": "Sombra pequeña",
+            "Dutch": "Kleine schaduw",
             "Portuguese": "Sombra pequena"
         },
         {
@@ -13975,6 +14259,7 @@
             "German": "großer Schatten ",
             "Spanish": "Sombra grande",
             "Spanish (US)": "Sombra grande",
+            "Dutch": "Grote schaduw",
             "Portuguese": "Sombra grande"
         },
         {
@@ -13993,6 +14278,7 @@
             "German": "Seit 1.6.0 verkauft Gerd das ganze Jahr über Kürbissetzlinge.",
             "Spanish": "Desde la actualización 1.6.0 Gandulio vende semillas de calabaza todo el año",
             "Spanish (US)": "Desde la actualización 1.6.0 Gandulio vende semillas de calabaza todo el año",
+            "Dutch": "Sinds 1.6.0 verkoopt Leif pompoenstekjes het hele jaar",
             "Portuguese": "Desde 1.6.0, Leif vende abóbora desde o início do ano."
         },
         {
@@ -14013,6 +14299,7 @@
             "German": "winziger Schatten beim Fischen",
             "Spanish": "Sombra muy pequeña cuando pescas",
             "Spanish (US)": "Sombra muy pequeña cuando pescas",
+            "Dutch": "extra kleine schaduw tijdens vissen",
             "Portuguese": "Sombra extra pequena ao pescar"
         },
         {
@@ -14562,7 +14849,7 @@
             "Spanish": "38 items",
             "Spanish (US)": "38 items",
             "Italian": "0 items",
-            "Dutch": "3 items",
+            "Dutch": "25 items",
             "Chinese": "0 items",
             "Chinese (Traditional)": "0 items",
             "Japanese": "0 items",
@@ -14660,6 +14947,7 @@
             "German": "Geburtstag ",
             "Spanish": "Cumpleaños",
             "Spanish (US)": "Cumpleaños",
+            "Dutch": "Verjaardag",
             "Russian": "День рождения"
         },
         {
@@ -14670,6 +14958,7 @@
             "German": "Angelturnier",
             "Spanish": "Torneo de pesca",
             "Spanish (US)": "Torneo de pesca",
+            "Dutch": "Vistournament",
             "Russian": "Рыбный тур"
         },
         {
@@ -14708,6 +14997,7 @@
             "German": "Internationaler Museumstag",
             "Spanish": "Día Internacional de los Museos",
             "Spanish (US)": "Día Internacional de los Museos",
+            "Dutch": "Internationale Museumdag",
             "Russian": "Международный день Музея"
         },
         {
@@ -14758,6 +15048,7 @@
             "German": "Feuerwerks Show",
             "Spanish": "Espectáculo de fuegos artificiales",
             "Spanish (US)": "Espectáculo de fuegos artificiales",
+            "Dutch": "Vuurwerkshow",
             "Russian": "Шоу фейерверков"
         },
         {
@@ -14768,6 +15059,7 @@
             "German": "Halloween (Vorbereitung)",
             "Spanish": "Halloween",
             "Spanish (US)": "Halloween",
+            "Dutch": "Halloween (dagen gereed)",
             "Russian": "Хэллоуин (подготовка)"
         },
         {
@@ -14778,6 +15070,7 @@
             "German": "Halloween",
             "Spanish": "Halloween",
             "Spanish (US)": "Halloween",
+            "Dutch": "Halloween",
             "Russian": "Хэллоуин"
         },
         {
@@ -14788,6 +15081,7 @@
             "German": "Schlemmerfest",
             "Spanish": "Dia del Pavo",
             "Spanish (US)": "Dia del Pavo",
+            "Dutch": "Kalkoendag",
             "Russian": "День благодарения"
         },
         {
@@ -14796,6 +15090,7 @@
             "French": "Jour du Partage (jours de shopping)",
             "French (US)": "Jour du Partage (jours de shopping)",
             "German": "Schlemmerfest (Shopping",
+            "Dutch": "Kalkoendag (winkeldagen)",
             "Russian": "День благодарения (день закупок)"
         },
         {
@@ -14806,6 +15101,7 @@
             "German": "Spielzeugtag (Vorbereitung Phase1)",
             "Spanish": "Día de los Juguetes",
             "Spanish (US)": "Día de los Juguetes",
+            "Dutch": "Speelgoeddag (dagen gereed fase 1)",
             "Russian": "День игрушек (подготовка этап 1)"
         },
         {
@@ -14816,6 +15112,7 @@
             "German": "Spielzeugtag (Vorbereitung Phase2)",
             "Spanish": "Día de los Juguetes",
             "Spanish (US)": "Día de los Juguetes",
+            "Dutch": "Speelgoeddag (dagen gereed fase 2)",
             "Russian": "День игрушек (подготовка этап 2)"
         },
         {
@@ -14826,6 +15123,7 @@
             "German": "Spielzeugtag",
             "Spanish": "Día de los Juguetes",
             "Spanish (US)": "Día de los Juguetes",
+            "Dutch": "Speelgoeddag",
             "Russian": "День игрушек"
         },
         {
@@ -14836,6 +15134,7 @@
             "German": "Spielzeugtag (der Tag danach)",
             "Spanish": "Día de los Juguetes (día después)",
             "Spanish (US)": "Día de los Juguetes (día después)",
+            "Dutch": "Speelgoeddag (dag erna)",
             "Russian": "День игрушек (день после)"
         },
         {
@@ -14928,6 +15227,7 @@
             "French": "Carnaval (jours de préparation)",
             "French (US)": "Carnaval (jours de préparation)",
             "German": "Festival (Vorbereitung)",
+            "Dutch": "Festival (dagen gereed)",
             "Russian": "Фестиваль (подготовка)"
         },
         {
@@ -14936,6 +15236,7 @@
             "French": "Carnaval",
             "French (US)": "Carnaval",
             "German": "Festival ",
+            "Dutch": "Festival",
             "Russian": "Фестиваль"
         },
         {
@@ -14970,6 +15271,7 @@
             "German": "Valentinstag",
             "Spanish": "Día de San Valentín",
             "Spanish (US)": "Día de San Valentín",
+            "Dutch": "Valentijnsdag (Nook Shopping)",
             "Russian": "День святого Валентина (закупка у Нука)"
         },
         {
@@ -14980,6 +15282,7 @@
             "German": "Super Mario Bros.",
             "Spanish": "Super Mario Bros.",
             "Spanish (US)": "Super Mario Bros.",
+            "Dutch": "Super Mario Bros",
             "Russian": "Братья Супер Марио"
         },
         {
@@ -15022,6 +15325,7 @@
             "German": "Tag der Natur (Nook Shopping)",
             "Spanish": "Día de la Naturaleza",
             "Spanish (US)": "Día de la Naturaleza",
+            "Dutch": "Natuurdag",
             "Russian": "День природы (Нук шоппинг)"
         },
         {
@@ -15062,17 +15366,20 @@
             "German": "Vatertag",
             "Spanish": "Día del Padre",
             "Spanish (US)": "Día del Padre",
+            "Dutch": "Vaderdag (2)",
             "Russian": "День отца (2)"
         },
         {
             "English": "Lantern Festival",
             "English (Europe)": "Lantern Festival",
-            "German": "Laternenfest"
+            "German": "Laternenfest",
+            "Dutch": "Lantaren Festival"
         },
         {
             "English": "Day Of The Dead",
             "English (Europe)": "Day Of The Dead",
-            "German": "Tag der Toten"
+            "German": "Tag der Toten",
+            "Dutch": "Dag des Doden"
         },
         {
             "English": "Obon",
@@ -15096,7 +15403,8 @@
         },
         {
             "English": "Nook Friday",
-            "English (Europe)": "Nook Friday"
+            "English (Europe)": "Nook Friday",
+            "Dutch": "Nook Vrijdag"
         },
         {
             "English": "Winter Solstice (northern hemisphere) (2)",
@@ -15140,7 +15448,8 @@
         },
         {
             "English": "Tomato Festival",
-            "English (Europe)": "Tomato Festival"
+            "English (Europe)": "Tomato Festival",
+            "Dutch": "Tomatenfestival"
         }
     ],
     "Missing Items": [
@@ -16258,7 +16567,7 @@
         {
             "English": "913 items",
             "English (Europe)": "904 items",
-            "French": "819 items",
+            "French": "821 items",
             "French (US)": "817 items",
             "German": "818 items",
             "Spanish": "105 items",
@@ -22204,11 +22513,13 @@
         },
         {
             "English": "Writing a Cookbook?",
-            "English (Europe)": "Writing a Cookbook?"
+            "English (Europe)": "Writing a Cookbook?",
+            "French": "Les recettes du bonheur"
         },
         {
             "English": "The recipes in your collection could stretch for miles, so allow me to present you with these...miles! Delight the eyes and stomachs of your neighbors with all your delicious creations, hm?",
-            "English (Europe)": "The recipes in your collection could stretch for miles, so allow me to present you with these...miles! Delight the eyes and stomachs of your neighbors with all your delicious creations, hm?"
+            "English (Europe)": "The recipes in your collection could stretch for miles, so allow me to present you with these...miles! Delight the eyes and stomachs of your neighbors with all your delicious creations, hm?",
+            "French": "Voici quelques miles en récompense des mille et une recettes de ton répertoire. Sois sympa, fais-en aussi profiter les narines et les papilles de tes voisins, hmm ?"
         },
         {
             "English": "Ever-Improving",

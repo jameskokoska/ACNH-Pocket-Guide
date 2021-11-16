@@ -179,6 +179,26 @@ export function getPhoto(name, fallback=""){
       return require("../assets/icons/oceanIcon.png");
     case "saharah.png":
       return require("../assets/icons/saharah.png");
+    case "niko.png":
+      return require("../assets/icons/niko.png");
+    case "wardell.png":
+      return require("../assets/icons/wardell.png");
+    case "tortimer.png":
+      return require("../assets/icons/tortimer.png");
+    case "redd.png":
+      return require("../assets/icons/redd.png");
+    case "leif.png":
+      return require("../assets/icons/leif.png");
+    case "kicks.png":
+      return require("../assets/icons/kicks.png");
+    case "harriet.png":
+      return require("../assets/icons/harriet.png");
+    case "katrina.png":
+      return require("../assets/icons/katrina.png");
+    case "daisymae.png":
+      return require("../assets/icons/daisymae.png");
+    case "lottie.png":
+      return require("../assets/icons/lottie.png");
     case "whisp.png":
       return require("../assets/icons/whisp.png");
     case "gulivarrr.png":
@@ -255,6 +275,22 @@ export function getPhoto(name, fallback=""){
       return require("../assets/icons/treasureMap.png");
     case "cyrus.png":
       return require("../assets/icons/cyrus.png");
+    case "tool-box.png":
+      return require("../assets/icons/tool-box.png");
+    case "clothing-shop.png":
+      return require("../assets/icons/clothing-shop.png");
+    case "clothes-rack.png":
+      return require("../assets/icons/clothes-rack.png");
+    case "school.png":
+      return require("../assets/icons/school.png");
+    case "cage.png":
+      return require("../assets/icons/cage.png");
+    case "restaurant.png":
+      return require("../assets/icons/restaurant.png");
+    case "cafe.png":
+      return require("../assets/icons/cafe.png");
+    case "hospital-building.png":
+      return require("../assets/icons/hospital-building.png");
   }
   if(name.includes("bamboo")){
     return require("../assets/icons/bamboo.png");
@@ -422,17 +458,31 @@ export function getPhotoCorner(name){
   else if(name.includes("brewster"))
     return <Image source={require("../assets/icons/brewster.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
   else if(name.includes("kicks"))
-    return <FastImage source={{uri:"https://acnhcdn.com/latest/NpcIcon/skk.png"}} cacheKey={"https://acnhcdn.com/latest/NpcIcon/skk.png"} style={{height: 55, width: 55, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/kicks.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
   else if(name.includes("daisy mae"))
-    return <FastImage source={{uri:"https://acnhcdn.com/latest/NpcIcon/boc.png"}} cacheKey={"https://acnhcdn.com/latest/NpcIcon/boc.png"} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/daisymae.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
   else if(name.includes("cyrus"))
     return <Image source={require("../assets/icons/cyrus.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
   else if(name.includes("k.k."))
     return <FastImage source={{uri:"https://acnhcdn.com/latest/NpcIcon/tkkA.png"}} cacheKey={"https://acnhcdn.com/latest/NpcIcon/tkkA.png"} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
   else if(name.includes("katrina"))
-    return <FastImage source={{uri:"https://acnhcdn.com/latest/NpcIcon/bpt.png"}} cacheKey={"https://acnhcdn.com/latest/NpcIcon/bpt.png"} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/katrina.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
   else if(name.includes("redd"))
-    return <FastImage source={{uri:"https://acnhcdn.com/latest/NpcIcon/fox.png"}} cacheKey={"https://acnhcdn.com/latest/NpcIcon/fox.png"} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/redd.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+  else if(name.includes("lottie") || name.includes("hhp office"))
+    return <Image source={require("../assets/icons/lottie.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+  else if(name.includes("leif"))
+    return <Image source={require("../assets/icons/leif.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+  else if(name.includes("niko"))
+    return <Image source={require("../assets/icons/niko.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+  else if(name.includes("wardell"))
+    return <Image source={require("../assets/icons/wardell.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+  else if(name.includes("harriet"))
+    return <Image source={require("../assets/icons/harriet.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+  else if(name.includes("harvey"))
+    return <Image source={require("../assets/icons/harvey.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+  else if(name.includes("café"))
+    return <Image source={require("../assets/icons/cafe.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
   else if(name.includes("celeste"))
     return <FastImage source={{uri:"https://acnhcdn.com/latest/NpcIcon/ows.png"}} cacheKey={"https://acnhcdn.com/latest/NpcIcon/ows.png"} style={{height: 55, width: 55, resizeMode:'contain'}}/>;
   else if(name.includes("new year"))

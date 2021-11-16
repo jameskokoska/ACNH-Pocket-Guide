@@ -17,6 +17,7 @@ export default class ActiveCreaturesPage extends Component {
             attemptToTranslate("The background is red if this is the last month you are able to catch this creature before you need to wait again."),
           ]
         }
+        tabs={false}
         leaveWarning = {true}
         activeCreatures={true}
         activeCreaturesPahe={true}

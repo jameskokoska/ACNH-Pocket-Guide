@@ -28,6 +28,7 @@ export default class PopupChangelog extends Component {
         this.setPopupVisible(true);
       }, 10);
     }
+    this.numLogins = parseInt(await getStorage("numLogins","0"))
     BackHandler.addEventListener("hardwareBackPress", this.handleBackButton);
   }
 
@@ -61,6 +62,7 @@ export default class PopupChangelog extends Component {
       <>
         <PopupBottomCustom ref={(popup) => this.popup = popup} onClose={async () => {await AsyncStorage.setItem("changelog", global.version)}}>
           <TextFont bold={true} style={{fontSize: 28, textAlign:"center",color: colors.textBlack[global.darkMode],}}>{"What's New?"}</TextFont>
+          {this.numLogins>3?<GiveSupport tapHere blueText style={{marginBottom:-20}}/>:<View/>}
           {
             changelogText.map((point, index) => {
               return(<TextFont key={index} bold={false} style={{marginBottom:4, fontSize: 18, color: colors.textBlack[global.darkMode]}}>{point}</TextFont>)
@@ -71,7 +73,6 @@ export default class PopupChangelog extends Component {
           <View style={{height:25}}/>
           <MailLink/>
           <View style={{height:15}}/>
-          <GiveSupport/>
           <View style={{height:10}}/>
         </PopupBottomCustom>
       </>

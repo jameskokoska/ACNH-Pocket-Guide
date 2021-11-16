@@ -3,13 +3,14 @@ export const dataVersion = "4"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
--Thank you everyone for your support and tips on the app!
--
+-Thank you everyone for the kind tips :)
 -Thank you Christina for being a Silver Supporter of the app!
 -
 -Collection totals no longer include variations of items
 - This is because Cyrus can customize anything now
 -Fixed collection totals
+-Added way more ToDo list icons
+-Added more Source icons
 -Collection totals now load properly (might take some time to count)
 -Data can now be downloaded instead of generated
 - For those who have issues of infinite data generation
@@ -17,6 +18,8 @@ export const changelog = `
 -Added more help text on villager page
 -Can tap blank space above popup to close it
 -Color fixes
+-Updated translations
+-Adjusted heights of some popups
 -
 -Quick fix: crash on different lists
 -Fixed variation popups for items with missing images
@@ -61,6 +64,8 @@ export const changelog = `
 -Added Umbrella to Villager's Furniture page
 -Added Song to Villager's Furniture page
 -Improved the About page
+-
+-Past changes:
 -
 -Added more ToDo list icons
 -Updated visitor icons
@@ -112,8 +117,6 @@ export const changelog = `
 -Updated translations and descriptions
 -Fixed event items page not showing some items (e.g. Turkey Day)
 -Fixed backup popup crash
--
--Past changes:
 -
 -A checkmark will appear on the event if you collected all the items!
 -Events and Homepage load faster (background loading)
