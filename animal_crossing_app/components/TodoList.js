@@ -13,6 +13,7 @@ import DropDownPicker from 'react-native-dropdown-picker'
 import FastImage from "./FastImage"
 import {PopupInfoCustom} from "./Popup"
 import ButtonComponent from "./ButtonComponent";
+import * as RootNavigation from '../RootNavigation.js';
 
 export class TodoList extends Component {
   constructor(props){
@@ -397,9 +398,10 @@ export class TurnipLog extends Component {
         )}
         <TouchableOpacity style={{marginVertical:10, backgroundColor:colors.eventBackground[global.darkMode], padding: 10, borderRadius: 10}} 
           onPress={()=>{
-            Linking.openURL(
-              this.turnipLink,
-            );
+            // Linking.openURL(
+            //   this.turnipLink,
+            // );
+            RootNavigation.navigate('BrowserPage', {propsPassed:this.turnipLink});
         }}>
           <TextFont bold={true} style={{color: colors.fishText[global.darkMode], fontSize: 18, textAlign:"center"}}>{"View on turnipprophet.io"}</TextFont>
           <TextFont style={{color: colors.fishText[global.darkMode], fontSize: 12, textAlign:"center"}}>{"(Price calculator and predictor)"}</TextFont>

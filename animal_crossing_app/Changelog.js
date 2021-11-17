@@ -4,7 +4,10 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
 -Thank you everyone for the kind tips :)
--Thank you Christina for being a Silver Supporter of the app!
+-
+-When you can't navigate back on Guide page, it will open the side menu
+-Turnip Prophet now opens inside the apps browser
+-To open the side menu on the home page, only swipe on the left edge now
 -
 -Collection totals no longer include variations of items
 - This is because Cyrus can customize anything now

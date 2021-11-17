@@ -11,7 +11,6 @@ class GuidePage extends Component {
   constructor(props) {
     super(props);
     this.handleBackButton = this.handleBackButton.bind(this);
-    this.firstOpen = 0;
     var currentURL = "https://wuffs.org/acnh/weather/"
     this.state = {
       canGoBack: false,
@@ -22,6 +21,8 @@ class GuidePage extends Component {
 
   handleBackButton = () => {
     this.webView.goBack();
+    if(this.state.canGoBack)
+      return true;
   };
 
   componentDidMount() {

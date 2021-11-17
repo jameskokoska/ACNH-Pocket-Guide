@@ -77,7 +77,7 @@ export default class SideMenu extends Component {
       }
     }
   }
-  nonTabbedPages = [0];
+  nonTabbedPages = []; //can be 0 as the home page so you can swipe from anywhere, but now only edge
   renderDrawer = () => {
     return (
       <View style={{width: "100%", height:"100%", backgroundColor:colors.textWhite[global.darkMode]}}>
