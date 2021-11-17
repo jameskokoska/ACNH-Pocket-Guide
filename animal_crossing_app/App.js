@@ -520,24 +520,24 @@ class App extends Component {
       const NavigatorVillagerFurniture = ({route, navigation})=>{return <VillagerFurniture villager={route.params.propsPassed}/>}
       const NavigatorCraftableItemsPage = ({route, navigation})=>{return <CraftableItemsPage material={route.params.propsPassed}/>}
       const NavigatorVillagerFurnitureParadisePlanning = ({route, navigation})=>{return <VillagerFurnitureParadisePlanning request={route.params.propsPassed}/>}
-      const NavigatorBrowserPage = ({route, navigation})=>{return <BrowserPage page={route.params.propsPassed} languageMessage={"You can change the language at the bottom of the page, by tapping Language"} splashImage={require('./assets/icons/turnip.png')} splashText={"Turnip Prophet"}/>}
+      const NavigatorBrowserPage = ({route, navigation})=>{return <BrowserPage page={route.params.propsPassed} languageMessage={"You can change the language at the bottom of the page, by tapping Language"} splashImage={require('./assets/icons/turnip.png')} splashText={"Turnip Prophet"} splashCredits={"By mikebryant"}/>}
       return (
         <View style={{flex:1,backgroundColor: "#000000"}}>
-        <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage} sideMenuSections={this.sideMenuSections} sideMenuSectionsDisabled={this.sideMenuSectionsDisabled}>
-          <NavigationContainer ref={navigationRef} theme={{colors: {background: colors.background[global.darkMode],},}}>
-            <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
-              <Stack.Screen name="Home" component={NavigatorHomePage} />
-              <Stack.Screen name="20" component={NavigatorVillagerPresentsPage}/>
-              <Stack.Screen name="22" component={NavigatorVillagerFurniture}/>
-              <Stack.Screen name="23" component={NavigatorCustomFiltersPage}/>
-              <Stack.Screen name="34" component={NavigatorCraftableItemsPage}/>
-              <Stack.Screen name="36" component={NavigatorVillagerFurnitureParadisePlanning}/>
-              <Stack.Screen name="BrowserPage" component={NavigatorBrowserPage}/>
-            </Stack.Navigator>
-          </NavigationContainer>
-          <PopupInfos setPage={this.setPage}/>
+          <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage} sideMenuSections={this.sideMenuSections} sideMenuSectionsDisabled={this.sideMenuSectionsDisabled}>
+            <NavigationContainer ref={navigationRef} theme={{colors: {background: colors.background[global.darkMode],},}}>
+              <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
+                <Stack.Screen name="Home" component={NavigatorHomePage} />
+                <Stack.Screen name="20" component={NavigatorVillagerPresentsPage}/>
+                <Stack.Screen name="22" component={NavigatorVillagerFurniture}/>
+                <Stack.Screen name="23" component={NavigatorCustomFiltersPage}/>
+                <Stack.Screen name="34" component={NavigatorCraftableItemsPage}/>
+                <Stack.Screen name="36" component={NavigatorVillagerFurnitureParadisePlanning}/>
+                <Stack.Screen name="BrowserPage" component={NavigatorBrowserPage}/>
+              </Stack.Navigator>
+            </NavigationContainer>
+            <PopupInfos setPage={this.setPage}/>
+          </SideMenu>
           <FABWrapper ref={(fab) => this.fab = fab} openDrawer={this.openDrawer}/>
-        </SideMenu>
         </View>
       );
     }

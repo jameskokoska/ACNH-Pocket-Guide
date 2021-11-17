@@ -8,6 +8,9 @@ export const changelog = `
 -When you can't navigate back on Guide page, it will open the side menu
 -Turnip Prophet now opens inside the apps browser
 -To open the side menu on the home page, only swipe on the left edge now
+-Bottom Floating Menu Action Button now stays in place
+-Added back animation to Floating Menu Action Button
+-Increased resolution of turnip icon
 -
 -Collection totals no longer include variations of items
 - This is because Cyrus can customize anything now

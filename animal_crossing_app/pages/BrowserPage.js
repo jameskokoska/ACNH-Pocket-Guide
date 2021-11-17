@@ -43,6 +43,7 @@ export default class BrowserPage extends Component {
         <View style={{alignItems:"center", justifyContent:"center", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: colors.lightDarkAccent[global.darkMode]}}>
           <Image style={{width: "60%", height:"40%", resizeMode:"contain"}} source={this.props.splashImage}/>
           <TextFont bold={true} style={{marginBottom: 10, fontSize:23, color:colors.textBlack[global.darkMode]}}>{this.props.splashText}</TextFont>
+          <TextFont bold={false} style={{marginBottom: 10, fontSize:15, color:colors.textBlack[global.darkMode]}}>{this.props.splashCredits}</TextFont>
         </View>
       </FadeInOut>
       </View>

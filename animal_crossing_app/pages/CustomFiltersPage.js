@@ -12,6 +12,7 @@ export default class CustomFiltersPage extends Component {
     super();
   }
   render(){
+    //the props are the same (for some reason?)
     if(this.props.currentFiltersSearchFor!==undefined && this.props.currentFiltersSearchFor!==""){
       var eventName = getEventName(this.props.titlePassed)
       console.log(this.props.currentFiltersSearchFor)
