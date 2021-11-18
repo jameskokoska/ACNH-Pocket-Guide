@@ -246,6 +246,10 @@ function ListPage(props){
               continue;
             }
           }
+          //Remove Hazure item
+          if(item["Name"]!==undefined && item["Name"].includes("Hazure")){
+            continue;
+          }
           //Loop through the specific search criteria specified for this dataset
           for(var x = 0; x < props.searchKey[j].length; x++){
             var searchFound = false;

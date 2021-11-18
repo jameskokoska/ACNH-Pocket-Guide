@@ -96,6 +96,7 @@ class CreditsPage extends Component {
             <SubHeader style={{marginBottom:5}}>{attemptToTranslate("Dutch") + ":"}</SubHeader>
             <SubHeader> Anonymous</SubHeader>
             <SubHeader> MarvelousBi</SubHeader>
+            <SubHeader> Annelie</SubHeader>
           </View>
           
           {/* <PopupTip show={this.state.show2} noShow={()=>{this.setState({show2:false})}}/>

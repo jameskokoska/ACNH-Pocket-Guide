@@ -16,7 +16,7 @@ export default class SideMenu extends Component {
     if(Dimensions.get('window').width*0.7 < this.maxWidth){
       this.maxWidth = Dimensions.get('window').width*0.7;
     }
-    console.log(this.props.sideMenuSectionsDisabled)
+    // console.log(this.props.sideMenuSectionsDisabled)
   }
   disableEditMode = (progress) => {
     if(this.state.editMode===true && progress>0.15){
@@ -77,6 +77,13 @@ export default class SideMenu extends Component {
       }
     }
   }
+  getSectionColorFix(displayName){
+    for(let i = 0; i<sideSections.length; i++){
+      if(sideSections[i]["displayName"]===displayName){
+        return sideSections[i]["color"]
+      }
+    }
+  }
   nonTabbedPages = []; //can be 0 as the home page so you can swipe from anywhere, but now only edge
   renderDrawer = () => {
     return (
@@ -104,7 +111,7 @@ export default class SideMenu extends Component {
                   pageNum={section.pageNum} 
                   setPage={this.props.setPage} 
                   currentPage={this.props.currentPage} 
-                  backgroundColor={colors[section.color][global.darkMode]}
+                  backgroundColor={colors[this.getSectionColorFix(section.displayName)][global.darkMode]}
                   textColor={colors.textBlack[global.darkMode]} 
                   unselectedColor={this.state.editMode&&!section.cannotDisable?colors.inkWell[global.darkMode]+(disabled?"1F":"8F"):colors.textWhite[global.darkMode]}
                   editMode={this.state.editMode}

@@ -142,6 +142,8 @@ export function countCollection(checkListKeyStart){
     if(global.collectionList[i].includes(checkListKeyStart) && !global.collectionList[i].includes("wishlist") && !global.collectionList[i].includes("museum")){
       if(checkListKeyStart.includes("artCheckList") && (global.collectionList[i].includes("No") || (global.collectionList[i].includes("0") && global.collectionList[i].includes("Yes")))){
         continue;
+      } else if(checkListKeyStart.includes("songCheckList") && global.collectionList[i].includes("Hazure")){
+        continue;
       } else {
         count++
       }
@@ -303,6 +305,11 @@ export function collectionListSave(){
   }
   console.log(outputString)
   AsyncStorage.setItem("collectedString"+global.profile, outputString);
+}
+
+export function collectionListRemoveDuplicates(){
+  global.collectionList = [...new Set(global.collectionList)];
+  collectionListSave()
 }
 
 export function removeAccents(text){

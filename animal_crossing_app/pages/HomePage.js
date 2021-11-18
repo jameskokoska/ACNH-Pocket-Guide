@@ -7,7 +7,7 @@ import StoreHoursContainer from '../components/StoreHoursContainer';
 import ProgressContainer from '../components/ProgressContainer';
 import LottieView from 'lottie-react-native';
 import colors from '../Colors'
-import {setSettingsString, getCurrentVillagerNamesString, getInverseVillagerFilters, capitalize,countCollection,getStorage, countCollectionSpecial} from "../LoadJsonData"
+import {setSettingsString, getCurrentVillagerNamesString, getInverseVillagerFilters, capitalize,countCollection,getStorage, countCollectionSpecial, collectionListRemoveDuplicates} from "../LoadJsonData"
 import TextFont from "../components/TextFont"
 import ActiveCreatures from "../components/ActiveCreatures"
 import CurrentVillagers from "../components/CurrentVillagers"
@@ -755,6 +755,7 @@ export class CollectionProgress extends Component {
   }
   componentDidMount(){
     setTimeout(()=>{
+      collectionListRemoveDuplicates();
       var fishCount = countCollection("fishCheckList");
       var fishCountTotal = global.dataLoadedFish[0].length;
       var fishPercentage = fishCount/fishCountTotal * 100;
@@ -771,7 +772,7 @@ export class CollectionProgress extends Component {
       var artCountTotal = 43;
       var artPercentage = artCount/artCountTotal * 100;
       var musicCount = countCollection("songCheckList");
-      var musicCountTotal = global.dataLoadedMusic[0].length;
+      var musicCountTotal = global.dataLoadedMusic[0].length - 3; //there are 3 Hazure songs
       var musicPercentage = musicCount/musicCountTotal * 100;
       var emojipediaCount = countCollection("emojiCheckList");
       var emojipediaCountTotal = global.dataLoadedReactions[0].length;

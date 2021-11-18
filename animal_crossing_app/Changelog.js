@@ -5,6 +5,12 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -Thank you everyone for the kind tips :)
 -
+-Fixed Collection totals double counting some items
+-Updated fossil bones icon
+-Updated icons on side menu
+-Fixed side menu colors
+-Removed Hazure songs from list
+-
 -When you can't navigate back on Guide page, it will open the side menu
 -Turnip Prophet now opens inside the apps browser
 -To open the side menu on the home page, only swipe on the left edge now

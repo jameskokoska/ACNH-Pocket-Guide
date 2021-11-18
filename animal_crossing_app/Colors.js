@@ -128,7 +128,7 @@ const colors = {
     selectConstruction : ["#ECE5D0", "#9B8B77"],
     selectCards : ["#E6D0E9", "#988799"],
     selectMisc : ["#c1d8d0", "#6d8387"],
-    selectSettings : ["#cdd8df","#72818b"],
+    selectSettings : ["#B3C6D4","#72818b"],
     selectAbout : ["#D6DBE7","#7d8986"],
     selectMeteoNook : ["#CBD6EE","#747F9C"],
     selectProfile: ["#D6DBE7","#596B66"],
