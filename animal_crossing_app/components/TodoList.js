@@ -120,11 +120,17 @@ export class TodoList extends Component {
     this.popupAddTask.setPopupVisible(true);
   }
 
-  addItem = (item) => {
-    var addedTask = this.state.data;
-    addedTask.push(item);
-    this.setState({data: addedTask});
-    this.saveList(addedTask);
+  addItem = (item, edit=false) => {
+    let tasks = this.state.data;
+    if(edit===false){
+      tasks = this.state.data;
+      tasks.push(item);
+    }
+    if(edit!==false){
+      tasks[edit] = item;
+    }
+    this.setState({data: tasks});
+    this.saveList(tasks);
   }
 
   uncheckAll = () => {
@@ -200,6 +206,7 @@ export class TodoList extends Component {
                   deleteItem={this.deleteItem}
                   reorderItem={this.reorderItem}
                   showEdit={this.state.showEdit}
+                  editTask={()=>{this.popupAddTask?.setPopupVisible(true, item, index);}}
                 />
               )
             } else {
@@ -212,6 +219,7 @@ export class TodoList extends Component {
                   deleteItem={this.deleteItem}
                   reorderItem={this.reorderItem}
                   showEdit={this.state.showEdit}
+                  editTask={()=>{this.popupAddTask?.setPopupVisible(true, item, index);}}
                 />
               )
             }
@@ -396,7 +404,7 @@ export class TurnipLog extends Component {
             index={index}
           />
         )}
-        <TouchableOpacity style={{marginVertical:10, backgroundColor:colors.eventBackground[global.darkMode], padding: 10, borderRadius: 10}} 
+        <TouchableOpacity style={{marginVertical:8, backgroundColor:colors.eventBackground[global.darkMode], padding: 10, borderRadius: 10}} 
           onPress={()=>{
             // Linking.openURL(
             //   this.turnipLink,
@@ -417,8 +425,8 @@ class TurnipItem extends Component {
     if(this.props.item.purchase!==undefined){
       var item = {title: this.props.item.title, purchase: this.props.item.purchase,};
       return(
-        <View style={[styles.row,{paddingLeft: 20, height: 70, backgroundColor:colors.eventBackground[global.darkMode]}]}>
-          <TextFont bold={true} numberOfLines={2} style={{width:"45%", fontSize:17, color:colors.textBlack[global.darkMode]}}>{capitalize(this.props.item.title)}</TextFont>
+        <View style={[styles.row,{paddingLeft: 20, height: 55, paddingVertical:5,backgroundColor:colors.eventBackground[global.darkMode]}]}>
+          <TextFont bold={true} numberOfLines={2} style={{width:"45%", fontSize:16, color:colors.textBlack[global.darkMode]}}>{capitalize(this.props.item.title)}</TextFont>
           <TextInput
             allowFontScaling={false}
             keyboardType={"numeric"}
@@ -434,8 +442,8 @@ class TurnipItem extends Component {
     } else {
       var item = {title: this.props.item.title, am: this.props.item.am, pm:this.props.item.pm};
       return(
-        <View style={[styles.row,{paddingLeft: 20, height: 70, backgroundColor:colors.eventBackground[global.darkMode]}]}>
-          <TextFont bold={true} numberOfLines={2} style={{width:"45%", fontSize:17, color:colors.textBlack[global.darkMode]}}>{capitalize(this.props.item.title)}</TextFont>
+        <View style={[styles.row,{paddingLeft: 20, height: 55, paddingVertical:5, backgroundColor:colors.eventBackground[global.darkMode]}]}>
+          <TextFont bold={true} numberOfLines={2} style={{width:"45%", fontSize:16, color:colors.textBlack[global.darkMode]}}>{capitalize(this.props.item.title)}</TextFont>
           <TextInput
             allowFontScaling={false}
             keyboardType={"numeric"}
@@ -446,7 +454,7 @@ class TurnipItem extends Component {
             placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
             multiline={true}
           />
-          <View style={{width:"5%"}}/>
+          <View style={{width:"3%"}}/>
           <TextInput
             allowFontScaling={false}
             keyboardType={"numeric"}
@@ -485,6 +493,15 @@ class TodoItem extends Component {
               this.setState({showRemove:false})
           }}>
             <Image source={require("../assets/icons/deleteIcon.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
+          </TouchableOpacity>
+        </View>
+        <View style={{flexDirection:"row",left:-10, bottom:-10,position:'absolute',zIndex:10, }}>
+          <TouchableOpacity style={{padding:9}} 
+            onPress={()=>{
+              props.editTask(); 
+              this.setState({showRemove:false})
+          }}>
+            <Image source={require("../assets/icons/pencil.png")} style={{opacity:0.5,width:20, height:20, borderRadius:100,}}/>
           </TouchableOpacity>
         </View>
         <View style={{flexDirection:"row",right:5, top:-5,position:'absolute',zIndex:10, }}>
@@ -578,6 +595,15 @@ class TodoItemSmall extends Component {
               this.setState({showRemove:false})
           }}>
             <Image source={require("../assets/icons/deleteIcon.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
+          </TouchableOpacity>
+        </View>
+        <View style={{flexDirection:"row",left:-10, bottom:20,position:'absolute',zIndex:10, }}>
+          <TouchableOpacity style={{padding:9}} 
+            onPress={()=>{
+              props.editTask(); 
+              this.setState({showRemove:false})
+          }}>
+            <Image source={require("../assets/icons/pencil.png")} style={{opacity:0.5,width:20, height:20, borderRadius:100,}}/>
           </TouchableOpacity>
         </View>
         <View style={{flexDirection:"row",right:1, top:-5,position:'absolute',zIndex:10, }}>

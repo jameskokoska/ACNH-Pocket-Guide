@@ -59,6 +59,9 @@ import {dataVersion} from "./Changelog"
 import ParadisePlanningPage from './pages/ParadisePlanningPage';
 import { DownloadDatabase } from './components/DownloadDatabase';
 import BrowserPage from './pages/BrowserPage';
+import { ToastProvider } from 'react-native-toast-notifications'
+import Toast from "react-native-toast-notifications";
+import TextFont from './components/TextFont';
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -360,7 +363,25 @@ class App extends Component {
   startAutoBackup = async () => {
     let result = await autoBackup();
     // console.log(result)
-    ToastAndroid.show(result, ToastAndroid.LONG);
+    // ToastAndroid.show(result, ToastAndroid.LONG);
+    let needsPadding = false
+    if(global.settingsCurrent!==undefined&&getSettingsString("settingsShowFAB")==="true"){
+      needsPadding = true;
+    }
+    toast.show(result[0], {type:result[1]===false?"success":"danger", 
+      renderType:{
+        success: (toast) => (
+          <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 12, marginRight: needsPadding?100:20, borderRadius: 5, backgroundColor: colors.popupSuccess[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+            <TextFont translate={false} style={{color:"white", fontSize: 15}}>{toast.message}</TextFont>
+          </View>
+        ),
+        danger: (toast) => (
+          <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 12, marginRight: needsPadding?100:20, borderRadius: 5, backgroundColor: colors.popupDanger[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+            <TextFont translate={false} style={{color:"white", fontSize: 15}}>{toast.message}</TextFont>
+          </View>
+        )
+      }
+    })
   }
 
   openDrawer(vibrate=true) {
@@ -523,6 +544,7 @@ class App extends Component {
       const NavigatorBrowserPage = ({route, navigation})=>{return <BrowserPage page={route.params.propsPassed} languageMessage={"You can change the language at the bottom of the page, by tapping Language"} splashImage={require('./assets/icons/turnip.png')} splashText={"Turnip Prophet"} splashCredits={"By mikebryant"}/>}
       return (
         <View style={{flex:1,backgroundColor: "#000000"}}>
+          <Toast ref={(ref) => global['toast'] = ref} />
           <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage} sideMenuSections={this.sideMenuSections} sideMenuSectionsDisabled={this.sideMenuSectionsDisabled}>
             <NavigationContainer ref={navigationRef} theme={{colors: {background: colors.background[global.darkMode],},}}>
               <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>

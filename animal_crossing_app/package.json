@@ -42,6 +42,7 @@
     "react-native-sectioned-multi-select": "^0.8.1",
     "react-native-sortable-grid": "^2.0.0",
     "react-native-tab-view": "^3.0.1",
+    "react-native-toast-notifications": "^3.2.3",
     "react-native-webview": "^11.2.3",
     "reanimated-bottom-sheet": "^1.0.0-alpha.22",
     "toggle-switch-react-native": "^2.3.0",

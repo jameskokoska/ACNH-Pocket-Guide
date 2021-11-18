@@ -12,6 +12,7 @@ import {attemptToTranslate, deleteSavedPhotos, resetFilters, getSettingsString, 
 import {SubHeader, Paragraph, HeaderNote, MailLink, Header} from "../components/Formattings"
 import DropDownPicker from 'react-native-dropdown-picker'
 import {PopupBottomCustom} from "../components/Popup"
+import { dataVersion } from '../Changelog';
 
 class SettingsPage extends Component {
   constructor(props){
@@ -117,6 +118,9 @@ class SettingsPage extends Component {
           <View style={{height:50}}/>
           <MailLink/>
           <View style={{height: 50}}/>
+          <TextFont bold={true} style={{marginLeft: 20, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 12,}}>{"\nDatabase v" + dataVersion}</TextFont>
+          <TextFont bold={true} style={{marginLeft: 20, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 12,}}>{"App v" + global.version + " - " + global.versionCode}</TextFont>
+          <View style={{height: 15}}/>
         </ScrollView>
      </View>
      </>

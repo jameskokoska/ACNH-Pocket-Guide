@@ -3,7 +3,12 @@ export const dataVersion = "4"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
--Thank you everyone for the kind tips :)
+-Thank you everyone for the tips, I appreciate it!
+-
+-You can now edit the name and icon of ToDo list items
+-Improved auto backups popup significantly
+-Made Turnip Log fit better
+-Added app version and database version at bottom of settings page
 -
 -Fixed Collection totals double counting some items
 -Updated fossil bones icon

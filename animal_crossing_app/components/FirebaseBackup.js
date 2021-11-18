@@ -13,38 +13,42 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const auth = app.auth();
 
 export async function autoBackup(){
-    let email = await getStorage("loginEmail","")
-    let password = await getStorage("loginPassword","")
-    let output = ""
-    try {
-      if (email !== '' && password !== '') {
-        await auth.signInWithEmailAndPassword(email, password);
-        console.log(auth.currentUser.uid)
+  let email = await getStorage("loginEmail","")
+  let password = await getStorage("loginPassword","")
+  let output = ""
+  let error = false
+  try {
+    if (email !== '' && password !== '') {
+      await auth.signInWithEmailAndPassword(email, password);
+      console.log(auth.currentUser.uid)
+    } else {
+      throw({"message":attemptToTranslate("The login credentials are not set for cloud backup or are incorrect. Please set them in the Backup + Restore page.")})
+    }
+  } catch (errorMesssage) {
+    error=true
+    return [attemptToTranslate("Auto Backups") + ": " + errorMesssage.message,true];
+  }
+  console.log("logged in")
+  let allData = await getAllData()
+  try{
+    await (app.database()).ref('users/' + auth.currentUser.uid).set({data: allData})
+    await (app.database()).ref('users/' + auth.currentUser.uid).once('value').then(async (snapshot) => {
+      if(snapshot.val()===null || snapshot.val()["data"]===undefined){
+        await auth.signOut();
+        console.log("signed out")
+        output = attemptToTranslate("Auto Backups") + ": " + attemptToTranslate("An error occurred. No backup was created.");
+        error = true
       } else {
-        throw({"message":attemptToTranslate("The login credentials are not set for cloud backup or are incorrect. Please set them in the Backup + Restore page.")})
+        await auth.signOut();
+        console.log("signed out")
+        output = attemptToTranslate("Auto Backups") + " ("+ email +"): " + attemptToTranslate("There are") + " " + snapshot.val()["data"].split("\n").length.toString() + " " + attemptToTranslate("entries on the server now")
       }
-    } catch (error) {
-      return attemptToTranslate("Auto Backups") + ": " + error.message;
-    }
-    console.log("logged in")
-    let allData = await getAllData()
-    try{
-      await (app.database()).ref('users/' + auth.currentUser.uid).set({data: allData})
-      await (app.database()).ref('users/' + auth.currentUser.uid).once('value').then(async (snapshot) => {
-        if(snapshot.val()===null || snapshot.val()["data"]===undefined){
-          await auth.signOut();
-          console.log("signed out")
-          output = attemptToTranslate("Auto Backups") + ": " + attemptToTranslate("An error occurred. No backup was created.");
-        } else {
-          await auth.signOut();
-          console.log("signed out")
-          output = attemptToTranslate("Auto Backups") + " ("+ email +"): " + attemptToTranslate("There are") + " " + snapshot.val()["data"].split("\n").length.toString() + " " + attemptToTranslate("entries on the server now")
-        }
-      })
-    } catch {
-      output = attemptToTranslate("Auto Backups") + ": " + attemptToTranslate("An error occurred. Please check your internet connection and try again later.")
-    }
-    return output  
+    })
+  } catch {
+    output = attemptToTranslate("Auto Backups") + ": " + attemptToTranslate("An error occurred. Please check your internet connection and try again later.")
+    error = true
+  }
+  return [output,error]
 }
 
 export default class FirebaseBackup extends Component {

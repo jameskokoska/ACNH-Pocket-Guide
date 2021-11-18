@@ -202,5 +202,7 @@ const colors = {
     missingVariations : ["#E4DD1ADE","#D8D22BB6"],
     allVariations : ["#6BC055DE","#55B428B6"],
     loanProgress : ["#D0EEFF","#253041"],
+    popupDanger : ["#AF5858","#A86B6B"],
+    popupSuccess : ["#487944","#347030"],
 }
 module.exports = colors;

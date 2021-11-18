@@ -153,15 +153,25 @@ class PopupAddTask extends Component {
     this.state = {
       popupVisible: false,
       smallToggle:false,
-      selectedImage: "leaf.png"
+      selectedImage: "leaf.png",
+      title: "",
     };
     this.task = {title: "", picture:"", finished: false, small:this.state.smallToggle};
     this.images = taskImages;
+    this.edit=false;
   }
 
-  setPopupVisible = (visible) => {
+  setPopupVisible = (visible, item=false, index=-1) => {
     this.popup?.setPopupVisible(true);
-    this.task = {title: "", picture:this.state.selectedImage, finished: false, small:this.state.smallToggle};
+    if(item===false){
+      this.setState({title:"",selectedImage: "leaf.png", popupTitle:"Add Task"})
+      this.task = {title: "", picture:this.state.selectedImage, finished: false, small:this.state.smallToggle};
+      this.edit = false;
+    } else {
+      this.setState({title:item.title,selectedImage: item.picture, popupTitle:"Edit Task", smallToggle: item.small})
+      this.task = {title: item.title, picture:item.picture, finished: item.finished, small:item.small};
+      this.edit = index;
+    }
   }
 
   render(){
@@ -180,23 +190,29 @@ class PopupAddTask extends Component {
           color={colors.okButton[global.darkMode]}
           vibrate={15}
           onPress={() => {
-            this.props.addItem(this.task);
+            if(this.edit===false || this.edit===-1){
+              this.props.addItem(this.task);
+            } else {
+              this.props.addItem(this.task, this.edit);
+            }
+            
             this.popup?.setPopupVisible(false);
           }}
         /> 
       </View>
     </>
     var header = <>
-      <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Add Task</TextFont>
+      <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.state.popupTitle}</TextFont>
       <View style={{height:10}}/>
       <View style={{flexDirection: 'row'}}>
         <View style={{flex:1, justifyContent:"center", marginHorizontal:5,}}>
           <TextInput
             allowFontScaling={false}
             style={{fontSize: 20, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 10, borderRadius: 5}}
-            onChangeText={(text) => {this.task.title=text}}
+            onChangeText={(text) => {this.task.title=text; this.setState({title:text})}}
             placeholder={attemptToTranslate("Task Name")}
             placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+            value={this.state.title}
           />
         </View>
         <View style={{justifyContent:"center", alignItems:"center", marginHorizontal:5}}>
