@@ -577,7 +577,7 @@ class PopupInfos extends Component {
     }
     let supportPopupDismissed = await getStorage("supportPopupDismissed","false");
     // let updatePopupDismissed = await getStorage("updatePopupDismissed","false");
-    if(supportPopupDismissed==="false" && numLogins >= 9){
+    if(supportPopupDismissed==="false" && numLogins >= 7){
       AsyncStorage.setItem("supportPopupDismissed", "true");
       this.popupSupport?.setPopupVisible(true)
     }
@@ -585,7 +585,7 @@ class PopupInfos extends Component {
     //   AsyncStorage.setItem("updatePopupDismissed", "true");
     //   this.popupUpdate?.setPopupVisible(true)
     // }
-    if(numLogins===5){
+    if(numLogins===4){
       this.popupRating?.setPopupVisible(true)
     }
     // console.log("numlogins:"+numLogins)

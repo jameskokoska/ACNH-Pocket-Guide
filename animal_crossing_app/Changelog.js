@@ -5,6 +5,13 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -Thank you everyone for the tips, I appreciate it!
 -
+-Header fades in better when loaded
+-Fixed translations for villagers birthdays
+-Fixed open drawer crash on calendar page
+-Fixed calendar formatting on some phones
+-Improved buttons for calendar page
+-Fixed lag when switching months on calendar page
+-
 -You can now edit the name and icon of ToDo list items
 -Improved auto backups popup significantly
 -Made Turnip Log fit better

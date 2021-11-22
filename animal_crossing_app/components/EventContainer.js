@@ -89,14 +89,14 @@ export function EventContainer(props){
 
 export function getEventsDay(date, eventSections, showEventsIfInRange){
   const seasonData = require("../assets/data/DataCreated/Seasons and Events.json");
-  const villagerData = require("../assets/data/DataCreated/Villagers.json");
+  const villagerData = global.dataLoadedVillagers[0];
   var totalEvents = [];
 
   villagerData.map( (villager, index)=>{
     if((date.getMonth()+1).toString()===(villager["Birthday"].split("/"))[0]&& date.getDate().toString()===(villager["Birthday"].split("/"))[1]){
       if(eventSections["Old Resident Villager's Birthdays"] && global.collectionList.includes("oldResident"+"villagerCheckList"+villager["Name"])){
         totalEvents.push({
-          name: capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),
+          name: capitalize(translateBirthday(attemptToTranslateItem(villager["NameLanguage"]))),
           time: "All day",
           image: villager["Icon Image"],
           day:date.getDate(),
@@ -111,7 +111,7 @@ export function getEventsDay(date, eventSections, showEventsIfInRange){
         }
       } else if(eventSections["Favorite Villager's Birthdays"] && global.collectionList.includes("villagerCheckList"+villager["Name"])){
         totalEvents.push({
-          name: capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),
+          name: capitalize(translateBirthday(attemptToTranslateItem(villager["NameLanguage"]))),
           time: "All day",
           image: villager["Icon Image"],
           day:date.getDate(),
@@ -127,7 +127,7 @@ export function getEventsDay(date, eventSections, showEventsIfInRange){
         }
       } else if (eventSections["All Villager's Birthdays"]){
         totalEvents.push({
-          name: capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),
+          name: capitalize(translateBirthday(attemptToTranslateItem(villager["NameLanguage"]))),
           time: "All day",
           image: villager["Icon Image"],
           day:date.getDate(),

@@ -119,20 +119,6 @@ export default class CalendarPage extends Component {
     );    
   }
 
-  renderEmptyDate() {
-    return (
-      <View/>
-    );
-  }
-
-  rowHasChanged(r1, r2) {
-    return r1.name !== r2.name;
-  }
-
-  dateToString(date) {
-    return date.toISOString().split('T')[0];
-  }
-
 }
 
 function firstDayInMonth(date) {
@@ -218,16 +204,35 @@ class CalendarView extends Component{
     let windowWidth = Dimensions.get('window').width;
     if(windowWidth>Dimensions.get('window').height)
       windowWidth = Dimensions.get('window').height;
+    
+    //Split up the list into rows of 7 days, to avoid flex box wrap weirdness
+    let daysListIn7 = []
+    let currentDaysList = []
+    let counter = 1
+    for(let i = 0; i < daysList.length; i++){
+      currentDaysList.push(daysList[i])
+      if(counter >= 7){
+        daysListIn7.push(currentDaysList)
+        currentDaysList = []
+        counter = 0
+      }
+      counter++
+    }
+    if(currentDaysList!==[]){
+      daysListIn7.push(currentDaysList)
+    }
     return <View style={{backgroundColor:colors.background[global.darkMode], height:Dimensions.get('window').height, width:Dimensions.get('window').width}}>
       <ScrollView>
         <View>
           <View style={{height:Dimensions.get('window').height/6-80}}/>
           <View style={{justifyContent:"center", alignItems:'center'}}>
             <View style={{alignItems:"center", marginTop: 100, flexDirection:"row",justifyContent:"space-between", width:windowWidth-marginHorizontal*2}}>
-              <TouchableOpacity style={{justifyContent:"center", alignItems:"center",padding:10, borderRadius:8, backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode]}} activeOpacity={0.6} 
+              <TouchableOpacity style={{zIndex:5, justifyContent:"center", alignItems:"center",padding:10, borderRadius:8, backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode]}} activeOpacity={0.6} 
                 onPress={()=>{
-                  this.setState({allowedToSwipe:false, currentDate:new Date(this.state.currentDate.setMonth(this.state.currentDate.getMonth()-1))})
-                  this.startTimeout()
+                  if(this.state.eventColors[0]!==undefined){
+                    this.setState({allowedToSwipe:false, currentDate:new Date(this.state.currentDate.setMonth(this.state.currentDate.getMonth()-1))})
+                    this.startTimeout()
+                  }
                 }}
               >
                 <Image
@@ -235,11 +240,13 @@ class CalendarView extends Component{
                   source={global.darkMode ? require("../assets/icons/leftArrowWhite.png") : require("../assets/icons/leftArrow.png")}
                 />
               </TouchableOpacity>
-              <Header style={{fontSize: 28,marginHorizontal:20}}>{attemptToTranslate(getMonth(this.state.currentDate.getMonth())) + " " + currentYear.toString()}</Header>
-              <TouchableOpacity style={{justifyContent:"center", alignItems:"center",padding:10, borderRadius:8, backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode]}} activeOpacity={0.6} 
+              <Header style={{marginHorizontal:0, fontSize: 28,position:"absolute", textAlign:"center", width:"100%"}}>{attemptToTranslate(getMonth(this.state.currentDate.getMonth())) + " " + currentYear.toString()}</Header>
+              <TouchableOpacity style={{zIndex:5, justifyContent:"center", alignItems:"center",padding:10, borderRadius:8, backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode]}} activeOpacity={0.6} 
                 onPress={()=>{
-                  this.setState({allowedToSwipe:false, currentDate:new Date(this.state.currentDate.setMonth(this.state.currentDate.getMonth()+1))})
-                  this.startTimeout()
+                  if(this.state.eventColors[0]!==undefined){
+                    this.setState({allowedToSwipe:false, currentDate:new Date(this.state.currentDate.setMonth(this.state.currentDate.getMonth()+1))})
+                    this.startTimeout()
+                  }
                 }}
               >
                 <Image
@@ -249,30 +256,34 @@ class CalendarView extends Component{
               </TouchableOpacity>
             </View>
             <View style={{height:10}}/>
-            <View style={{maxWidth:windowWidth,}}>
-              <View style={{display:"flex",flexDirection:"row", overflow:"visible", flexWrap:"wrap", marginHorizontal:marginHorizontal}}>
-                {daysList.map((item)=>{
-                  if(item<=-1000){
-                    return <View key={item} style={{width:((windowWidth-marginHorizontal*2-70)/7), height: 20, alignItems:"center", justifyContent:"center", margin:5}}>
-                      <SubHeader margin={false} style={{fontSize:11}}>{getWeekDayShort((item+1000)*-1)}</SubHeader>
-                    </View>
-                  }
-                  if(item<1){
-                    return <View key={item} style={{width:((windowWidth-marginHorizontal*2-70)/7), height: 50, alignItems:"center", justifyContent:"center", margin:5}}>
-                    </View>
-                  }
-                  return <TouchableOpacity key={item} activeOpacity={0.6} onPress={()=>{this.props.setCurrentDay(new Date(this.state.currentDate).setDate(item)); this.props.scrollToTop()}}>
-                    <View style={{borderRadius:10,borderWidth: 1.3, borderColor: this.state.todayDate[item] ? colors.textBlack[global.darkMode] : (this.state.importantEvents[item]?(this.state.eventColorsHeavy[item]!==undefined?this.state.eventColorsHeavy[item][0]:"transparent"):"transparent"),backgroundColor:this.state.eventColors[item]!==undefined?this.state.eventColors[item][0]:"transparent", width:((windowWidth-marginHorizontal*2-70)/7), height: 50, alignItems:"center", justifyContent:"center", margin:5}}>
-                      <SubHeader margin={false} style={{fontSize:15}}>{item.toString()}</SubHeader>
-                      <View style={{flexDirection:"row", position:"absolute", bottom:7}}>
-                        {this.state.eventColors[item]!==undefined?
-                        this.state.eventColorsHeavy[item].map((item)=>{
-                          return <View key={item+10000} style={{borderRadius:10,backgroundColor:item, width:5, height: 5, marginHorizontal:2}}/>
-                        })
-                        :<View/>}
-                      </View>
-                    </View>
-                  </TouchableOpacity>
+            <View style={{maxWidth:windowWidth}}>
+              <View style={{display:"flex",flexDirection:"column",}}>
+                {daysListIn7.map((daysList)=>{
+                  return <View style={{display:"flex",flexDirection:"row"}}>
+                    {daysList.map((item)=>{
+                      if(item<=-1000){
+                        return <View key={item} style={{width:((windowWidth-marginHorizontal*2-70)/7), height: 20, alignItems:"center", justifyContent:"center", margin:5}}>
+                          <SubHeader numberOfLines={1} margin={false} style={{fontSize:11}}>{getWeekDayShort((item+1000)*-1)}</SubHeader>
+                        </View>
+                      }
+                      if(item<1){
+                        return <View key={item} style={{width:((windowWidth-marginHorizontal*2-70)/7), height: 50, alignItems:"center", justifyContent:"center", margin:5}}>
+                        </View>
+                      }
+                      return <TouchableOpacity key={item} activeOpacity={0.6} onPress={()=>{this.props.setCurrentDay(new Date(this.state.currentDate).setDate(item)); this.props.scrollToTop()}}>
+                        <View style={{borderRadius:10,borderWidth: 1.3, borderColor: this.state.todayDate[item] ? colors.textBlack[global.darkMode] : (this.state.importantEvents[item]?(this.state.eventColorsHeavy[item]!==undefined?this.state.eventColorsHeavy[item][0]:"transparent"):"transparent"),backgroundColor:this.state.eventColors[item]!==undefined?this.state.eventColors[item][0]:"transparent", width:((windowWidth-marginHorizontal*2-70)/7), height: 50, alignItems:"center", justifyContent:"center", margin:5}}>
+                          <SubHeader margin={false} style={{fontSize:15}}>{item.toString()}</SubHeader>
+                          <View style={{flexDirection:"row", position:"absolute", bottom:7}}>
+                            {this.state.eventColors[item]!==undefined?
+                            this.state.eventColorsHeavy[item].map((item)=>{
+                              return <View key={item+10000} style={{borderRadius:10,backgroundColor:item, width:5, height: 5, marginHorizontal:2}}/>
+                            })
+                            :<View/>}
+                          </View>
+                        </View>
+                      </TouchableOpacity>
+                    })}
+                  </View>
                 })}
               </View>
             </View>
@@ -316,22 +327,22 @@ class LegendEntry extends Component{
 
 class BottomBar extends Component {  
   render(){
-    return <View style={{position:"absolute", zIndex:5, bottom:0, borderTopRightRadius: 20, borderTopLeftRadius: 20, flexDirection: "row", justifyContent:"space-evenly",elevation:5, backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode], width:Dimensions.get('window').width, height:45}}>
-      <TouchableNativeFeedback onPress={()=>{this.props.viewToday(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode], false)}>
-        <View style={{borderRadius: 10, borderWidth:3,borderColor:colors.lightDarkAccentHeavy2[global.darkMode],width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
+    return <View style={{position:"absolute", zIndex:5, bottom:0, borderTopRightRadius: 10, borderTopLeftRadius: 10, flexDirection: "row", justifyContent:"space-evenly",elevation:5, backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode], width:Dimensions.get('window').width, height:45}}>
+      <TouchableOpacity onPress={()=>{this.props.viewToday(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
+        <View style={{paddingHorizontal: 8, borderRadius: 10, borderWidth:3,borderColor:colors.lightDarkAccentHeavy2[global.darkMode],width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
           <TextFont bold={true} style={{textAlign:"center", fontSize: 12,color: colors.textBlack[global.darkMode]}}>View Today</TextFont>
         </View>
-      </TouchableNativeFeedback>
-      <TouchableNativeFeedback onPress={()=>{this.props.openCalendar(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode], false)}>
-        <View style={{borderRadius: 10, borderWidth:3,borderColor:colors.lightDarkAccentHeavy2[global.darkMode],width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={()=>{this.props.openCalendar(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
+        <View style={{paddingHorizontal: 8, borderRadius: 10, borderWidth:3,borderColor:colors.lightDarkAccentHeavy2[global.darkMode],width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
           <TextFont bold={true} style={{textAlign:"center", fontSize: 12,color: colors.textBlack[global.darkMode]}}>Open Calendar</TextFont>
         </View>
-      </TouchableNativeFeedback>
-      <TouchableNativeFeedback onPress={()=>{this.props.viewList(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode], false)}>
-        <View style={{borderRadius: 10, borderWidth:3,borderColor:colors.lightDarkAccentHeavy2[global.darkMode],width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={()=>{this.props.viewList(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
+        <View style={{paddingHorizontal: 8, borderRadius: 10, borderWidth:3,borderColor:colors.lightDarkAccentHeavy2[global.darkMode],width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
           <TextFont bold={true} style={{textAlign:"center", fontSize: 12,color: colors.textBlack[global.darkMode]}}>View All</TextFont>
         </View>
-      </TouchableNativeFeedback>
+      </TouchableOpacity>
     </View>
   }
 }
