@@ -8,6 +8,7 @@ import colors from "../Colors"
 import ToggleSwitch from 'toggle-switch-react-native'
 import { getSettingsString, setSettingsString } from '../LoadJsonData';
 import TextFont from '../components/TextFont';
+import Popup from '../components/Popup';
 
 class BackupPage extends Component {
   constructor(props) {

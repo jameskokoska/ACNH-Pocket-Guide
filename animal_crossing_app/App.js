@@ -585,7 +585,7 @@ class PopupInfos extends Component {
     //   AsyncStorage.setItem("updatePopupDismissed", "true");
     //   this.popupUpdate?.setPopupVisible(true)
     // }
-    if(numLogins===4){
+    if(numLogins===5){
       this.popupRating?.setPopupVisible(true)
     }
     // console.log("numlogins:"+numLogins)

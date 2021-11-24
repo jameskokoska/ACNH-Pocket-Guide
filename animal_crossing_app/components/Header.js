@@ -55,7 +55,7 @@ const Header = (props) => {
                   placeholder={attemptToTranslate("Search")}
                   style={styles.searchText}
                   onChangeText={function(text){props.updateSearch(text);}} 
-                  onFocus={() => {Vibration.vibrate(15);}}
+                  onFocus={() => {getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(15) : "";}}
                   minLength={1}
                   delayTimeout={400}
                   onSubmitEditing={function(event){props.updateSearch(event.nativeEvent.text)}}
@@ -140,7 +140,7 @@ export const HeaderActive = (props) => {
               placeholder={attemptToTranslate("Search")}
               style={styles.searchText}
               onChangeText={function(text){props.updateSearch(text);}} 
-              onFocus={() => {Vibration.vibrate(15);}}
+              onFocus={() => {getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(15) : "";}}
               minLength={1}
               delayTimeout={400}
               onSubmitEditing={function(event){props.updateSearch(event.nativeEvent.text)}}

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ButtonComponent from './ButtonComponent';
 import { TextInput } from 'react-native-gesture-handler';
-import {View} from 'react-native';
+import {TouchableOpacity, View} from 'react-native';
 import TextFont from './TextFont';
 import colors from "../Colors"
 import app from '../firebase';
@@ -157,6 +157,17 @@ export default class FirebaseBackup extends Component {
     }
     return attemptToTranslate(formattedError)
   }
+
+  resetPassword = async () => {
+    try {
+      await auth.sendPasswordResetEmail(this.state.email)
+      this.resetPasswordSuccessPopup?.setPopupVisible(true)
+    } catch (error) {
+      console.log(error)
+      this.setState({error:error.message});
+      this.resetPasswordErrorPopup?.setPopupVisible(true)
+    }
+  }
  
   render(){
     return <>
@@ -242,10 +253,52 @@ export default class FirebaseBackup extends Component {
         vibrate={10}
         onPress={() => {this.getData(this.state.uid)}}
       />:<View/>}
-      <View style={{height: 8}}/>
+      <View style={{height: 2}}/>
       {this.state.uid!=="" ? <TextFont style={{marginVertical:10, textAlign:"center", color:colors.fishText[global.darkMode], marginHorizontal:40}}>{"Note: Uploading data will replace what is currently backed up in the cloud!"}</TextFont>:<View/>}
       {(this.state.uid===""&&this.state.error!=="") ? <TextFont style={{marginVertical:10, textAlign:"center", color:colors.textError[global.darkMode], marginHorizontal:40}}>{this.formatError(this.state.error)}</TextFont>:<View/>}
-      <View style={{height: 8}}/>
+      <View style={{height: 2}}/>
+      <TouchableOpacity style={{padding:10}} 
+        onPress={()=>{
+          if(this.state.email!=undefined && this.state.email.includes("@"))
+            this.resetPassPopup?.setPopupVisible(true)
+          else
+          this.emptyUsernamePopup?.setPopupVisible(true)
+        }}>
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"Forgot Password"}</TextFont>
+      </TouchableOpacity>
+      <View style={{height: 15}}/>
+      <Popup 
+        ref={(resetPassPopup) => this.resetPassPopup = resetPassPopup}
+        button1={"Yes"}
+        button1Action={()=>{
+          this.resetPassword()
+        }}
+        button2={"Cancel"}
+        button2Action={()=>{}}
+        text={"Reset Password?"}
+        textLower={"You will get an email with instructions."}
+      />
+      <Popup
+        ref={(emptyUsernamePopup) => this.emptyUsernamePopup = emptyUsernamePopup}
+        button1={"OK"}
+        button1Action={()=>{}}
+        text={"Reset Password Error"}
+        textLower={"Please fill in your email. The password can be blank."}
+      />
+      <Popup
+        ref={(resetPasswordErrorPopup) => this.resetPasswordErrorPopup = resetPasswordErrorPopup}
+        button1={"OK"}
+        button1Action={()=>{}}
+        text={"Reset Password Error"}
+        textLower={this.state.error}
+      />
+      <Popup
+        ref={(resetPasswordSuccessPopup) => this.resetPasswordSuccessPopup = resetPasswordSuccessPopup}
+        button1={"OK"}
+        button1Action={()=>{}}
+        text={"Email Sent"}
+        textLower={"You should get an email with instructions on how to reset your password."}
+      />
     </>
   }
 }

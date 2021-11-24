@@ -3,7 +3,14 @@ export const dataVersion = "4"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
--Thank you everyone for the tips, I appreciate it!
+-Thank you everyone for the support and tips!
+-I have purchased a new phone for app development!
+-
+-Thank you NoLNoodle for bring a Silver supporter!
+-
+-Added reset password button on Backup page
+-Updated translations
+-More changes coming soon!
 -
 -Header fades in better when loaded
 -Fixed translations for villagers birthdays
