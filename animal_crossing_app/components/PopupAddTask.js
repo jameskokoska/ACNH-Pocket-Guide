@@ -208,7 +208,7 @@ class PopupAddTask extends Component {
         <View style={{flex:1, justifyContent:"center", marginHorizontal:5,}}>
           <TextInput
             allowFontScaling={false}
-            style={{fontSize: 20, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 10, borderRadius: 5}}
+            style={{fontSize: 18, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 10, borderRadius: 5}}
             onChangeText={(text) => {this.task.title=text; this.setState({title:text})}}
             placeholder={attemptToTranslate("Task Name")}
             placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}

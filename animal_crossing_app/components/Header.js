@@ -42,7 +42,7 @@ const Header = (props) => {
         <View style={{height: props.headerHeight / 2}}>
           <View style={styles.subHeader}>
             <FadeInOut fadeIn={true}>
-              <TextFont style={[styles.title, {fontSize: props.smallerHeader?30:41, color: props.titleColor}]} bold={true}>{props.title}</TextFont>
+              <TextFont style={[styles.title, {fontSize: props.smallerHeader?28:38, color: props.titleColor}]} bold={true}>{props.title}</TextFont>
               {props.customHeader}
               {props.subHeader!==undefined&&props.subHeader!=="" ? <TextFont numberOfLines={4} style={[styles.title, {paddingBottom:5, marginTop: -5, fontSize: 13, color: props.titleColor}]}>{props.subHeader}</TextFont> : <View/>}
               {props.subHeader2!==undefined&&props.subHeader2!=="" ? <TextFont numberOfLines={4} style={[styles.title, {paddingBottom:5, marginTop: -10, fontSize: 13, color: props.titleColor}]}>{props.subHeader2}</TextFont> : <View/>}

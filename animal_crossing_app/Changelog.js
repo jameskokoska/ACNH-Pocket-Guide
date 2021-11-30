@@ -4,9 +4,14 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
 -Thank you everyone for the support and tips!
--I have purchased a new phone for app development!
 -
--Thank you NoLNoodle for bring a Silver supporter!
+-Added Achievement progress to profile page
+-Font size fixes
+-Prompts if you want to delete that ToDo item
+-Spaced out ToDo touch targets for small items
+-Decreased header height
+-Recipe ingredients now in separated box
+-Fixed status bar on some phones
 -
 -Added reset password button on Backup page
 -Updated translations

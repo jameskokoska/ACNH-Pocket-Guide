@@ -252,7 +252,7 @@ class ListItem extends React.Component{
                 <View style={{height:7}}/>
               }
               <View style={styles.gridBoxText}>
-                <TextFont translate={false} numberOfLines={2} bold={true} style={{textAlign:'center', color:this.props.labelColor, fontSize:13}}>{capitalize(label)}</TextFont>
+                <TextFont translate={false} numberOfLines={2} bold={true} style={{textAlign:'center', color:this.props.labelColor, fontSize:12}}>{capitalize(label)}</TextFont>
                 {textProperty2Component}
               </View>
             </View>

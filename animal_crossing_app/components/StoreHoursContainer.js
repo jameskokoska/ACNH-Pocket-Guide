@@ -33,12 +33,12 @@ export default StoreHoursContainer;
 
 const styles = StyleSheet.create({
   textContainerTop:{
-    fontSize: 25,
+    fontSize: 21,
   },
   textContainerBottom:{
     marginTop: 2,
     marginRight: 10,
-    fontSize: 20,
+    fontSize: 17,
   },
   textContainer:{
     marginLeft: 30,

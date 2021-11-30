@@ -33,8 +33,9 @@ import LottieView from 'lottie-react-native';
 Object.entries(exports).forEach(([name, exported]) => window[name] = exported);
 
 const {diffClamp} = Animated;
-function calculateHeaderHeight(){
-  var headerHeight = Dimensions.get('window').height*0.3;
+function calculateHeaderHeight(tabs){
+  console.log(tabs)
+  var headerHeight = tabs || tabs===undefined ? Dimensions.get('window').height*0.28-30 : Dimensions.get('window').height*0.29;
   var maxHeight = 845.7*0.3;
   if(headerHeight > maxHeight){
     headerHeight = maxHeight;
@@ -47,7 +48,7 @@ function calculateHeaderHeight(){
 }
 
 function ListPage(props){
-  var headerHeight = calculateHeaderHeight();
+  var headerHeight = calculateHeaderHeight(props.tabs);
   var selectedItem;
   var updateCheckChildFunction;
   var updateWishlistChildFunction;

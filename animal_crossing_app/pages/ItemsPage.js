@@ -26,7 +26,8 @@ const renderTabBar = props => (
 class MaterialsRouteClass extends React.PureComponent {
   render(){
     return(
-      <ListPage 
+      <ListPage
+        tabs={true}
         title="Materials"
         imageProperty={["Inventory Image"]}
         textProperty={["NameLanguage",]}
@@ -54,6 +55,7 @@ class FoodRouteClass extends React.PureComponent {
   render(){
     return(
       <ListPage 
+        tabs={true}
         title="Food"
         imageProperty={["Image"]}
         textProperty={["NameLanguage",]}
@@ -82,6 +84,7 @@ class FurnitureRouteClass extends React.PureComponent {
   render(){
     return(
       <ListPage 
+        tabs={true}
         filterSearchable = {true}
         title="Furniture"
         imageProperty={[
@@ -173,7 +176,7 @@ export class ClothingRouteClass extends React.PureComponent{
     }
     return (
       <ListPage 
-        tabs={this.props.tabs}
+        tabs={tabs}
         extraInfo={extraInfo}
         setPage={this.props.setPage}
         customHeader={customHeader}
@@ -274,6 +277,7 @@ class FloorsWallsRouteClass extends React.PureComponent {
   render(){
     return(
       <ListPage 
+        tabs={true}
         filterSearchable = {true}
         title="Floor & Walls"
         imageProperty={[

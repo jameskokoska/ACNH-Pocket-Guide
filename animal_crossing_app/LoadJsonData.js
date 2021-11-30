@@ -175,6 +175,24 @@ export function countCollectionSpecial(datakeyName){
   return [count, total];
 }
 
+//total achievements
+export function countAchievements(){
+  let data = require("./assets/data/DataCreated/Achievements.json");
+  let totalAchievements = 0
+  for(let i = 0; i<data.length; i++){
+    if(data[i]["Num of Tiers"]!==undefined){
+      totalAchievements = totalAchievements + parseInt(data[i]["Num of Tiers"]);
+    }
+  }
+  return totalAchievements
+}
+
+//collected achievements
+export async function countCollectionAchievements(){
+  var storageData = JSON.parse(await getStorage("Achievements"+global.profile,JSON.stringify([])));
+  return storageData.length;
+}
+
 export function determineDataGlobal(datakeyName){
   if(datakeyName==="dataLoadedAmiibo")
     return global.dataLoadedAmiibo;

@@ -17,11 +17,11 @@ class ButtonComponent extends Component {
   render(){
     return(
         <TouchableOpacity
-          style={[this.props.style,{marginHorizontal:this.props.marginHorizontal===undefined?10:this.props.marginHorizontal, marginTop: 15, paddingHorizontal:30, paddingTop: 12, paddingBottom: 12, elevation:2, borderRadius: 19, backgroundColor: this.props.color,  justifyContent: 'center', alignItems: 'center'}]}
+          style={[this.props.style,{marginHorizontal:this.props.marginHorizontal===undefined?10:this.props.marginHorizontal, marginTop: 13, paddingHorizontal:28, paddingTop: 10, paddingBottom: 12, elevation:2, borderRadius: 19, backgroundColor: this.props.color,  justifyContent: 'center', alignItems: 'center'}]}
           activeOpacity={0.5}
           onPress={()=> {this.props.onPress(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(this.props.vibrate) : "";}}
         >
-          <TextFont style={{fontSize: 16, color: "white", textAlign:"center"}}>{this.props.text}</TextFont>
+          <TextFont style={{fontSize: 15.5, color: "white", textAlign:"center"}}>{this.props.text}</TextFont>
         </TouchableOpacity>
     )
   }

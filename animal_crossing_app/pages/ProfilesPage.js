@@ -124,15 +124,15 @@ class ProfilesComponent extends Component{
         <View style={{marginHorizontal:20, flexDirection:"row", alignItems:"center"}}>
           <ProfileIcon profile={this.props.profile}/>
           <View>
-            <SubHeader style={{fontSize:26, marginHorizontal:14}} margin={false}>{this.displayProfile}</SubHeader>
-            {doWeSwapDate()?<SubHeader style={{fontSize:22, marginHorizontal:14}} margin={false}>{attemptToTranslate(getWeekDayShort(this.state.date.getDay())) + ". " + this.state.date.getDate() + " " + attemptToTranslate(getMonthShort(this.state.date.getMonth())) + ", " + time}</SubHeader>:<SubHeader style={{fontSize:22, marginHorizontal:14}} margin={false}>{attemptToTranslate(getWeekDayShort(this.state.date.getDay())) + ". " + attemptToTranslate(getMonthShort(this.state.date.getMonth())) + " " + this.state.date.getDate() + ", " + time}</SubHeader>}
+            <SubHeader style={{fontSize:25, marginHorizontal:14}} margin={false}>{this.displayProfile}</SubHeader>
+            {doWeSwapDate()?<SubHeader style={{fontSize:17, marginHorizontal:14}} margin={false}>{attemptToTranslate(getWeekDayShort(this.state.date.getDay())) + ". " + this.state.date.getDate() + " " + attemptToTranslate(getMonthShort(this.state.date.getMonth())) + ", " + time}</SubHeader>:<SubHeader style={{fontSize:17, marginHorizontal:14}} margin={false}>{attemptToTranslate(getWeekDayShort(this.state.date.getDay())) + ". " + attemptToTranslate(getMonthShort(this.state.date.getMonth())) + " " + this.state.date.getDate() + ", " + time}</SubHeader>}
           </View>
         </View>
         <View style={{height:20}}/>
         <TextInput
           maxLength = {15}
           allowFontScaling={false}
-          style={{marginHorizontal:20, fontSize: 23, color:colors.textBlack[global.darkMode], backgroundColor: colors.lightDarkAccent[global.darkMode], padding:8, paddingHorizontal:15, borderRadius:7, fontFamily: "ArialRounded"}}
+          style={{marginHorizontal:20, fontSize: 20, color:colors.textBlack[global.darkMode], backgroundColor: colors.lightDarkAccent[global.darkMode], padding:8, paddingHorizontal:15, borderRadius:7, fontFamily: "ArialRounded"}}
           onChangeText={async (text) => {AsyncStorage.setItem("name"+this.profile, text); this.selected?global.name=text:"";}}
           placeholder={"["+attemptToTranslate("Name")+"]"}
           placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
@@ -143,7 +143,7 @@ class ProfilesComponent extends Component{
         <TextInput
           maxLength = {15}
           allowFontScaling={false}
-          style={{marginHorizontal:20, fontSize: 23, color:colors.textBlack[global.darkMode], backgroundColor: colors.lightDarkAccent[global.darkMode], padding:8, paddingHorizontal:15, borderRadius:7, fontFamily: "ArialRounded"}}
+          style={{marginHorizontal:20, fontSize: 20, color:colors.textBlack[global.darkMode], backgroundColor: colors.lightDarkAccent[global.darkMode], padding:8, paddingHorizontal:15, borderRadius:7, fontFamily: "ArialRounded"}}
           onChangeText={async (text) => {AsyncStorage.setItem("islandName"+this.profile, text); this.selected?global.islandName=text:"";}}
           placeholder={"["+attemptToTranslate("Island")+"]"}
           placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}

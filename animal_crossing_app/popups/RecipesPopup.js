@@ -33,76 +33,78 @@ class RecipesPopup extends Component {
         item={this.props.item}
         textProperty={["Season/Event"]}
       />}
-      <InfoLine
-        translateItem={true}
-        image={require("../assets/icons/leaf.png")} 
-        item={this.props.item}
-        textProperty={"Material 1"}
-        starting={this.props.item["#1"]+ "x "}
-      />
-      <InfoLine
-        translateItem={true}
-        image={require("../assets/icons/leaf.png")} 
-        item={this.props.item}
-        textProperty={"Material 2"}
-        starting={this.props.item["#2"]+ "x "}
-      />
-      <InfoLine
-        translateItem={true}
-        image={require("../assets/icons/leaf.png")} 
-        item={this.props.item}
-        textProperty={"Material 3"}
-        starting={this.props.item["#3"]+ "x "}
-      />
-      <InfoLine
-        translateItem={true}
-        image={require("../assets/icons/leaf.png")} 
-        item={this.props.item}
-        textProperty={"Material 4"}
-        starting={this.props.item["#4"]+ "x "}
-      />
-      <InfoLine
-        translateItem={true}
-        image={require("../assets/icons/leaf.png")} 
-        item={this.props.item}
-        textProperty={"Material 5"}
-        starting={this.props.item["#5"]+ "x "}
-      />
-      <InfoLine
-        translateItem={true}
-        image={require("../assets/icons/leaf.png")} 
-        item={this.props.item}
-        textProperty={"Material 6"}
-        starting={this.props.item["#6"]+ "x "}
-      />
-      <InfoLine
-        translateItem={true}
-        image={require("../assets/icons/leaf.png")} 
-        item={this.props.item}
-        textProperty={"Material 7"}
-        starting={this.props.item["#7"]+ "x "}
-      />
-      <InfoLine
-        translateItem={true}
-        image={require("../assets/icons/leaf.png")} 
-        item={this.props.item}
-        textProperty={"Material 8"}
-        starting={this.props.item["#8"]+ "x "}
-      />
-      <InfoLine
-        translateItem={true}
-        image={require("../assets/icons/leaf.png")} 
-        item={this.props.item}
-        textProperty={"Material 9"}
-        starting={this.props.item["#9"]+ "x "}
-      />
-      <InfoLine
-        translateItem={true}
-        image={require("../assets/icons/leaf.png")} 
-        item={this.props.item}
-        textProperty={"Material 10"}
-        starting={this.props.item["#10"]+ "x "}
-      />
+      <View style={{backgroundColor: colors.lightDarkAccentTextBG[global.darkMode], padding:10, paddingHorizontal: 15, marginHorizontal: 5, marginVertical: 10, borderRadius: 8}}>
+        <InfoLine
+          translateItem={true}
+          image={require("../assets/icons/leaf.png")} 
+          item={this.props.item}
+          textProperty={"Material 1"}
+          starting={this.props.item["#1"]+ "x "}
+        />
+        <InfoLine
+          translateItem={true}
+          image={require("../assets/icons/leaf.png")} 
+          item={this.props.item}
+          textProperty={"Material 2"}
+          starting={this.props.item["#2"]+ "x "}
+        />
+        <InfoLine
+          translateItem={true}
+          image={require("../assets/icons/leaf.png")} 
+          item={this.props.item}
+          textProperty={"Material 3"}
+          starting={this.props.item["#3"]+ "x "}
+        />
+        <InfoLine
+          translateItem={true}
+          image={require("../assets/icons/leaf.png")} 
+          item={this.props.item}
+          textProperty={"Material 4"}
+          starting={this.props.item["#4"]+ "x "}
+        />
+        <InfoLine
+          translateItem={true}
+          image={require("../assets/icons/leaf.png")} 
+          item={this.props.item}
+          textProperty={"Material 5"}
+          starting={this.props.item["#5"]+ "x "}
+        />
+        <InfoLine
+          translateItem={true}
+          image={require("../assets/icons/leaf.png")} 
+          item={this.props.item}
+          textProperty={"Material 6"}
+          starting={this.props.item["#6"]+ "x "}
+        />
+        <InfoLine
+          translateItem={true}
+          image={require("../assets/icons/leaf.png")} 
+          item={this.props.item}
+          textProperty={"Material 7"}
+          starting={this.props.item["#7"]+ "x "}
+        />
+        <InfoLine
+          translateItem={true}
+          image={require("../assets/icons/leaf.png")} 
+          item={this.props.item}
+          textProperty={"Material 8"}
+          starting={this.props.item["#8"]+ "x "}
+        />
+        <InfoLine
+          translateItem={true}
+          image={require("../assets/icons/leaf.png")} 
+          item={this.props.item}
+          textProperty={"Material 9"}
+          starting={this.props.item["#9"]+ "x "}
+        />
+        <InfoLine
+          translateItem={true}
+          image={require("../assets/icons/leaf.png")} 
+          item={this.props.item}
+          textProperty={"Material 10"}
+          starting={this.props.item["#10"]+ "x "}
+        />
+      </View>
       <InfoLine
         image={require("../assets/icons/magnifyingGlass.png")} 
         item={this.props.item}

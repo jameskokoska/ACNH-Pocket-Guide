@@ -109,7 +109,7 @@ export default Clock;
 
 const styles = StyleSheet.create({
   weekDay:{
-    fontSize:26,
+    fontSize:24,
     backgroundColor: "white",
     borderRadius: 100,
     marginLeft: 13,
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     elevation: 5
   },
   monthDay:{
-    fontSize:35,
+    fontSize:32,
     color:"white",
     elevation: 5,
     textShadowColor: 'rgba(0, 0, 0, 0.4)',
@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     elevation: 5
   },
   meridian:{
-    fontSize:38,
+    fontSize:33,
     marginLeft: 5,
     marginBottom: 7,
     color: "white",
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 20
   },
   clockTime: {
-    fontSize: 70,
+    fontSize: 60,
     color: "white",
     elevation: 5,
     textShadowColor: 'rgba(0, 0, 0, 0.4)',

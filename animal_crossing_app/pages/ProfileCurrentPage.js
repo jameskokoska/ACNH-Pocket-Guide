@@ -30,7 +30,7 @@ export default class CreditsPage extends Component {
           <View style={{height: 100}}/>
           <View style={{flexDirection:"row", alignItems:"center", marginHorizontal:20}}>
             <ProfileIcon profile={global.profile}/>
-            <Header style={{marginHorizontal:15}}>Profile</Header>
+            <Header style={{fontSize: 35, marginHorizontal:15}}>Profile</Header>
           </View>
           <View style={{height: 50}}/>
           <HomeContentArea backgroundColor={colors.sectionBackground1[global.darkMode]} accentColor={colors.profileColor[global.darkMode]} title="Islander Info" titleColor={colors.profileColor[global.darkModeReverse]}>
@@ -45,7 +45,6 @@ export default class CreditsPage extends Component {
           <View style={{height: 50}}/>
         </ScrollView>
         <VillagerPopupPopup ref={(villagerPopupPopup) => this.villagerPopupPopup = villagerPopupPopup} setPage={this.props.setPage}/>
-
      </View>
     )
   }

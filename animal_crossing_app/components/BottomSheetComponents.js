@@ -266,12 +266,12 @@ export class InfoLine extends Component {
       text = attemptToTranslateItem(text.toLowerCase())
       text=capitalize(text)
     }
-    return <View style={[styles.infoLineBox,{justifyContent:this.props.center===false?"flex-start":"center"}]}>
-            {extraImageSource}
-            {imageSource}
-            <TextFont adjustsFontSizeToFit={true} bold={true} style={[styles.infoLineTitle,{color:colors.textBlack[global.darkMode]}]}>{starting + text + ending}</TextFont>
-            {colors1}{colors2}
-        </View>
+    return <View style={[styles.infoLineBox,{justifyContent:this.props.center===false?"flex-start":"center", marginVertical:this.props.condensed===true?-5:0}]}>
+      {extraImageSource}
+      {imageSource}
+      <TextFont adjustsFontSizeToFit={true} bold={true} style={[styles.infoLineTitle,{color:colors.textBlack[global.darkMode]}]}>{starting + text + ending}</TextFont>
+      {colors1}{colors2}
+    </View>
   }
 }
 
@@ -305,7 +305,7 @@ export class InfoDescription extends Component {
   render(){
     return(
       <View style={{backgroundColor: colors.lightDarkAccentTextBG[global.darkMode], padding:15, paddingHorizontal: 25, marginHorizontal: 10, marginVertical: 5, borderRadius: 8}}>
-        <TextFont translate={false} style={{lineHeight: 20, fontSize: 17, textAlign:"left", color:colors.textBlack[global.darkMode]}}>{attemptToTranslateMuseumDescription(this.props.text)}</TextFont>
+        <TextFont translate={false} style={{lineHeight: 20, fontSize: 16, textAlign:"left", color:colors.textBlack[global.darkMode]}}>{attemptToTranslateMuseumDescription(this.props.text)}</TextFont>
       </View>
     )
   }
@@ -707,12 +707,12 @@ const styles = StyleSheet.create({
     resizeMode:'contain',
   },
   infoLineTitle:{
-    fontSize: 20,
+    fontSize: 19,
     marginLeft: 8,
     maxWidth: "85%",
   },
   infoLineTitleDouble:{
-    fontSize: 17,
+    fontSize: 16,
     marginLeft: 8,
   },
   infoLineTitleTriple:{
@@ -729,8 +729,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection:"row",
-    paddingTop: 8,
-    paddingBottom: 8,
+    paddingTop: 7,
+    paddingBottom: 7,
     marginLeft: 10,
     marginRight: 10,
   },
@@ -746,7 +746,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   title:{
-    fontSize: 30,
+    fontSize: 28,
     textAlign: "center",
   },
   rowImageBackground:{

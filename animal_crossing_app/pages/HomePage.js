@@ -7,7 +7,7 @@ import StoreHoursContainer from '../components/StoreHoursContainer';
 import ProgressContainer from '../components/ProgressContainer';
 import LottieView from 'lottie-react-native';
 import colors from '../Colors'
-import {setSettingsString, getCurrentVillagerNamesString, getInverseVillagerFilters, capitalize,countCollection,getStorage, countCollectionSpecial, collectionListRemoveDuplicates} from "../LoadJsonData"
+import {setSettingsString, getCurrentVillagerNamesString, getInverseVillagerFilters, capitalize,countCollection,getStorage, countCollectionSpecial, collectionListRemoveDuplicates, countCollectionAchievements, countAchievements} from "../LoadJsonData"
 import TextFont from "../components/TextFont"
 import ActiveCreatures from "../components/ActiveCreatures"
 import CurrentVillagers from "../components/CurrentVillagers"
@@ -123,10 +123,10 @@ class HomePage extends Component {
         />
       </PopupBottomCustom>
       <ScrollView ref={(scrollViewRef) => this.scrollViewRef = scrollViewRef}>
-        <View style={{height:45}}/>
+        <View style={{height:55}}/>
         <Clock swapDate={doWeSwapDate()}/>
         <View style={{height:125}}/>
-        <View style={{height:38}}>
+        <View style={{height:40}}>
           <View style={{padding:10, paddingVertical:12, position:"absolute",right:0, top: -15}}>
             <View style={{flexDirection:"row"}}>
               <TouchableOpacity style={{padding:5, paddingVertical:12}} 
@@ -375,7 +375,7 @@ export class Profile extends Component{
         <TextInput
           maxLength = {15}
           allowFontScaling={false}
-          style={{fontSize: 30, width:"100%", textAlign:"center", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
+          style={{fontSize: 28, width:"100%", textAlign:"center", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
           onChangeText={async (text) => {AsyncStorage.setItem("name"+global.profile, text); global.name=text;}}
           placeholder={"["+attemptToTranslate("Name")+"]"}
           placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
@@ -386,7 +386,7 @@ export class Profile extends Component{
         <TextInput
           maxLength = {15}
           allowFontScaling={false}
-          style={{fontSize: 30, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
+          style={{fontSize: 28, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
           onChangeText={async (text) => {AsyncStorage.setItem("islandName"+global.profile, text); global.islandName=text}}
           placeholder={"["+attemptToTranslate("Island")+"]"}
           placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
@@ -751,10 +751,13 @@ export class CollectionProgress extends Component {
       clothingCount: 0,
       clothingCountTotal: 0,
       clothingPercentage: 0,
+      achievementsCount: 0,
+      achievementsCountTotal: 0,
+      achievementsPercentage: 0,
     }
   }
   componentDidMount(){
-    setTimeout(()=>{
+    setTimeout(async ()=>{
       collectionListRemoveDuplicates();
       var fishCount = countCollection("fishCheckList");
       var fishCountTotal = global.dataLoadedFish[0].length;
@@ -792,6 +795,9 @@ export class CollectionProgress extends Component {
       var clothingCount = countClothing[0]
       var clothingCountTotal = countClothing[1]
       var clothingPercentage = clothingCount/clothingCountTotal * 100;
+      var achievementsCount = await countCollectionAchievements();
+      var achievementsCountTotal = countAchievements();
+      var achievementsPercentage = achievementsCount/achievementsCountTotal * 100;
       this.setState({
         fishCount: fishCount,
         fishCountTotal: fishCountTotal,
@@ -829,6 +835,9 @@ export class CollectionProgress extends Component {
         clothingCount: clothingCount,
         clothingCountTotal: clothingCountTotal,
         clothingPercentage: clothingPercentage,
+        achievementsCount: achievementsCount,
+        achievementsCountTotal: achievementsCountTotal,
+        achievementsPercentage: achievementsPercentage,
       })
     },10)
   }
@@ -847,6 +856,7 @@ export class CollectionProgress extends Component {
       <ProgressContainer color={colors.furnitureAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.furniturePercentage} image={require("../assets/icons/leaf.png")} text={attemptToTranslate("Furniture") + " " + this.state.furnitureCount + "/" + this.state.furnitureCountTotal.toString()}/>
       <ProgressContainer color={colors.floorWallsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.floorWallsPercentage} image={require("../assets/icons/carpet.png")} text={attemptToTranslate("Floor & Walls") + " " + this.state.floorWallsCount + "/" + this.state.floorWallsCountTotal.toString()}/>
       <ProgressContainer color={colors.clothingAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.clothingPercentage} image={require("../assets/icons/top.png")} text={attemptToTranslate("Clothing") + " " + this.state.clothingCount + "/" + this.state.clothingCountTotal.toString()}/>
+      <ProgressContainer color={colors.achievementsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.achievementsPercentage} image={require("../assets/icons/achievementIcon.png")} text={attemptToTranslate("Achievements") + " " + this.state.achievementsCount + "/" + this.state.achievementsCountTotal.toString()}/>
       <View style={{height: 15}}/>
       </>
     )
@@ -856,7 +866,7 @@ export class CollectionProgress extends Component {
 
 const styles = StyleSheet.create({
   dayHeader:{
-    fontSize: 20,
+    fontSize: 17,
     marginTop: 15,
     marginHorizontal: 20,
     marginBottom: 4,

@@ -60,7 +60,7 @@ export default class PopupAddLoan extends Component {
       </View>
     </>
     var header = <>
-      <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Add Loan</TextFont>      
+      <TextFont bold={true} style={{fontSize: 24, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Add Loan</TextFont>      
       <View style={{height:10}}/>
     </>
     return (
@@ -71,7 +71,7 @@ export default class PopupAddLoan extends Component {
               <TextInput
                 maxLength={30}
                 allowFontScaling={false}
-                style={{fontSize: 20, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 10, borderRadius: 5}}
+                style={{fontSize: 18, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 10, borderRadius: 5}}
                 onChangeText={(text) => {this.loan.title=text}}
                 placeholder={attemptToTranslate("Loan Name")}
                 placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
@@ -81,7 +81,7 @@ export default class PopupAddLoan extends Component {
                 maxLength={12}
                 keyboardType={"numeric"}
                 allowFontScaling={false}
-                style={{fontSize: 20, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 10, borderRadius: 5}}
+                style={{fontSize: 18, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 10, borderRadius: 5}}
                 onChangeText={(text) => {this.loan.total=text}}
                 placeholder={attemptToTranslate("Total Cost")}
                 placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
@@ -144,7 +144,7 @@ export class PopupAmountEntry extends Component {
                 maxLength={12}
                 keyboardType={"numeric"}
                 allowFontScaling={false}
-                style={{fontSize: 20, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 10, borderRadius: 5}}
+                style={{fontSize: 18, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 10, borderRadius: 5}}
                 onChangeText={(text) => {this.amount=text}}
                 placeholder={attemptToTranslate("Amount")}
                 placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}

@@ -11,7 +11,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {getSettingsString, attemptToTranslate, getCurrentVillagerObjects, getCurrentVillagerNamesString} from "../LoadJsonData"
 import DropDownPicker from 'react-native-dropdown-picker'
 import FastImage from "./FastImage"
-import {PopupInfoCustom} from "./Popup"
+import Popup, {PopupInfoCustom} from "./Popup"
 import ButtonComponent from "./ButtonComponent";
 import * as RootNavigation from '../RootNavigation.js';
 
@@ -22,7 +22,9 @@ export class TodoList extends Component {
       data: [],
       showEdit: false,
       showVillagersTalkList: false,
+      deleteIndex: 0
     }
+    this.deleteIndex=-1
   }
 
   componentDidMount(){
@@ -85,7 +87,13 @@ export class TodoList extends Component {
   }
 
   deleteItem = (index) => {
-    const newTaskList = this.state.data.filter((item,i) => i!=index);
+    this.deleteIndex = index
+    this.setState({deleteIndex: index})
+    this.popupDeleteToDo.setPopupVisible(true)
+  }
+
+  deleteItemGo = () => {
+    const newTaskList = this.state.data.filter((index,i) => i!=this.deleteIndex);
     this.setState({data:newTaskList});
     getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
     this.saveList(newTaskList);
@@ -245,7 +253,8 @@ export class TodoList extends Component {
         <TouchableOpacity style={{paddingVertical:20,}} onPress={() => this.props.setPage(8)}>
           <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, textAlign:"center"}}>{"Tap here and go add some!"}</TextFont>
         </TouchableOpacity>
-      </PopupInfoCustom> 
+      </PopupInfoCustom>
+      <Popup ref={(popupDeleteToDo) => this.popupDeleteToDo = popupDeleteToDo} text="Delete?" textLower={this.state.data[this.state.deleteIndex]?.title} button1={"Cancel"} button1Action={()=>{}} button2={"Delete"} button2Action={()=>{this.deleteItemGo()}}/>
     </>
   }
 }
@@ -588,7 +597,7 @@ class TodoItemSmall extends Component {
   removeButton = (props)=>{
     if(props.showEdit || this.state.showRemove)
       return(<>
-        <View style={{flexDirection:"row",left:-8, top:-5,position:'absolute',zIndex:10, }}>
+        <View style={{flexDirection:"row",left:-9, top:-9,position:'absolute',zIndex:10, }}>
           <TouchableOpacity style={{padding:9}} 
             onPress={()=>{
               props.deleteItem(props.index); 
@@ -597,7 +606,7 @@ class TodoItemSmall extends Component {
             <Image source={require("../assets/icons/deleteIcon.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
           </TouchableOpacity>
         </View>
-        <View style={{flexDirection:"row",left:-10, bottom:20,position:'absolute',zIndex:10, }}>
+        <View style={{flexDirection:"row",left:-9, top:32,position:'absolute',zIndex:10, }}>
           <TouchableOpacity style={{padding:9}} 
             onPress={()=>{
               props.editTask(); 
@@ -606,7 +615,7 @@ class TodoItemSmall extends Component {
             <Image source={require("../assets/icons/pencil.png")} style={{opacity:0.5,width:20, height:20, borderRadius:100,}}/>
           </TouchableOpacity>
         </View>
-        <View style={{flexDirection:"row",right:1, top:-5,position:'absolute',zIndex:10, }}>
+        <View style={{flexDirection:"row",right:-2, top:-9,position:'absolute',zIndex:10, }}>
           <TouchableOpacity style={{paddingVertical:9, padding:2}} 
             onPress={()=>{
               props.reorderItem(props.index, -1); 

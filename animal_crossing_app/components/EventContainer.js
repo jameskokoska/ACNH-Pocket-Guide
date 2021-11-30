@@ -512,13 +512,13 @@ export function getDayOfWeekObject(dayOfWeek){
 const styles = StyleSheet.create({
   textContainerTop:{
     textAlign:"center",
-    fontSize: 20,
+    fontSize: 19,
     marginHorizontal: 25, 
   },
   textContainerBottom:{
     textAlign:"center",
     marginTop: 3,
-    fontSize: 18,
+    fontSize: 16,
     marginHorizontal: 20, 
   },
   textContainer:{

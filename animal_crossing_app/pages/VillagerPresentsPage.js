@@ -36,6 +36,7 @@ export default class VillagerPresentsPage extends Component {
               item={this.props.villager}
               textProperty={["Style 1"]}
               textProperty2={["Style 2"]}
+              condensed={true}
             />
             <InfoLine
               center={false}
@@ -43,7 +44,9 @@ export default class VillagerPresentsPage extends Component {
               item={this.props.villager}
               textProperty={["Color 1"]}
               textProperty2={["Color 2"]}
+              condensed={true}
             />
+            <View style={{height:10}}/>
           </>}
         />
       )

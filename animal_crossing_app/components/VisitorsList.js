@@ -139,7 +139,7 @@ export default class VisitorList extends Component {
           canDeselect={false}
         />
       </PopupInfoCustom>
-      <PopupInfoCustom buttons={buttonsHistory} ref={(popupHistory) => this.popupHistory = popupHistory} buttonDisabled={true} buttonText={"OK"} header={<TextFont bold={true} style={{fontSize: 28, marginBottom:11, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Visitor History</TextFont>}>
+      <PopupInfoCustom buttons={buttonsHistory} ref={(popupHistory) => this.popupHistory = popupHistory} buttonDisabled={true} buttonText={"OK"} header={<TextFont bold={true} style={{fontSize: 24, marginBottom:11, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Visitor History</TextFont>}>
         {Object.keys(this.state.data).map( (date, index)=>{
           if(date!==this.currentMondayIndex){
             return(
@@ -232,15 +232,15 @@ class CharacterItem extends Component {
 
 const styles = StyleSheet.create({
   rowImageBackground:{
-    width: 70,
-    height: 70,
+    width: 65,
+    height: 65,
     borderRadius: 100,
     justifyContent: "center",
     alignItems: "center",
   },
   rowImage:{
-    height: 55,
-    width: 55,
+    height: 46,
+    width: 46,
     resizeMode:'contain',
   },
   row: {

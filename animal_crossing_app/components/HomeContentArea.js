@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     left: 20
   },
   topTitle:{
-    fontSize:20,
+    fontSize:18,
     borderRadius: 100,
     paddingLeft: 18,
     paddingRight: 18,

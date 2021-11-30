@@ -61,6 +61,7 @@ class SongsPage extends Component {
         />
       </View>
         <ListPage 
+          tabs={false}
           disablePopup={[true]}
           title="Music"
           imageProperty={["Album Image"]}

@@ -104,9 +104,9 @@ const styles = StyleSheet.create({
     resizeMode:'contain',
   },
   sidebarTitle:{
-    fontSize: 14,
-    marginLeft: 20,
-    marginRight: 20,
+    fontSize: 13.5,
+    marginLeft: 15,
+    marginRight: 15,
   },
   sidebarBox: {
     alignItems: 'center',

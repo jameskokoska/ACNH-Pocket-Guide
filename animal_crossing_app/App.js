@@ -59,7 +59,6 @@ import {dataVersion} from "./Changelog"
 import ParadisePlanningPage from './pages/ParadisePlanningPage';
 import { DownloadDatabase } from './components/DownloadDatabase';
 import BrowserPage from './pages/BrowserPage';
-import { ToastProvider } from 'react-native-toast-notifications'
 import Toast from "react-native-toast-notifications";
 import TextFont from './components/TextFont';
 
@@ -168,6 +167,8 @@ class App extends Component {
 
   async componentDidMount(){
     this.mounted = true;
+
+    StatusBar.setHidden(true);
     
     setTimeout(async () => {
       let defaultLanguage = getDefaultLanguage();
@@ -532,7 +533,7 @@ class App extends Component {
       let otherComponents = <>
         <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
         <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
-        <StatusBar hidden={getSettingsString("settingsShowStatusBar")==="false"} backgroundColor={colors.background[global.darkMode]} barStyle={global.darkMode===1?"light-content":"dark-content"}/>
+        <StatusBar translucent={false} hidden={getSettingsString("settingsShowStatusBar")==="false"} backgroundColor={colors.background[global.darkMode]} barStyle={global.darkMode===1?"light-content":"dark-content"}/>
       </>
 
       const NavigatorHomePage = ()=><>{otherComponents}{currentPageView}</>
@@ -577,7 +578,7 @@ class PopupInfos extends Component {
     }
     let supportPopupDismissed = await getStorage("supportPopupDismissed","false");
     // let updatePopupDismissed = await getStorage("updatePopupDismissed","false");
-    if(supportPopupDismissed==="false" && numLogins >= 7){
+    if(supportPopupDismissed==="false" && numLogins >= 6){
       AsyncStorage.setItem("supportPopupDismissed", "true");
       this.popupSupport?.setPopupVisible(true)
     }
@@ -585,7 +586,7 @@ class PopupInfos extends Component {
     //   AsyncStorage.setItem("updatePopupDismissed", "true");
     //   this.popupUpdate?.setPopupVisible(true)
     // }
-    if(numLogins===5){
+    if(numLogins===4){
       this.popupRating?.setPopupVisible(true)
     }
     // console.log("numlogins:"+numLogins)

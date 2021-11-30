@@ -50,7 +50,7 @@ export class GiveSupport extends Component {
 export class SubHeader extends Component {
   render(){
     return(
-      <TextFont numberOfLines={this.props.numberOfLines!==undefined?this.props.numberOfLines:2000} bold={true} style={[{fontSize: 22, marginHorizontal: this.props.margin!==false?30:0, color:colors.textBlack[global.darkMode],},this.props.style]}>{this.props.children}</TextFont>
+      <TextFont numberOfLines={this.props.numberOfLines!==undefined?this.props.numberOfLines:2000} bold={true} style={[{fontSize: 20, marginHorizontal: this.props.margin!==false?30:0, color:colors.textBlack[global.darkMode],},this.props.style]}>{this.props.children}</TextFont>
     )
   }
 }
@@ -58,7 +58,7 @@ export class SubHeader extends Component {
 export class Header extends Component {
   render(){
     return(
-      <TextFont bold={this.props.bold===false?false:true} style={[{fontSize: 40, marginHorizontal: 30, color:colors.textBlack[global.darkMode]},this.props.style]}>{this.props.children}</TextFont>
+      <TextFont bold={this.props.bold===false?false:true} style={[{fontSize: 38, marginHorizontal: 30, color:colors.textBlack[global.darkMode]},this.props.style]}>{this.props.children}</TextFont>
     )
   }
 }

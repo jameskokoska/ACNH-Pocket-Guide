@@ -98,9 +98,9 @@ class Popup extends Component {
         <View style={[styles.centeredView,{padding:this.props.centerPadding}]}>
           {(this.props.button1===undefined && this.props.button2===undefined) || this.props.noDismiss===true ? <View/> : <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} style={{position:"absolute", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: "black", opacity: 0.1}}/>}
           <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
-            <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.props.text}</TextFont>
+            <TextFont bold={true} style={{fontSize: 25, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.props.text}</TextFont>
             <ScrollView style={{maxHeight:Dimensions.get('window').height*0.75}}>
-              {this.props.textLower===undefined?<View/>:<TextFont bold={false} style={{fontSize: 18, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.props.textLower}</TextFont>}
+              {this.props.textLower===undefined?<View/>:<TextFont bold={false} style={{fontSize: 17, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.props.textLower}</TextFont>}
             </ScrollView>
             {this.props.mailLink?<View style={{marginVertical:10}}><MailLink/></View>:<View/>}
             {this.props.support?<View style={{marginVertical:10}}><GiveSupport/></View>:<View/>}

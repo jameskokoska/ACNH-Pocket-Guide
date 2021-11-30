@@ -7,6 +7,7 @@ export default class AmiiboPage extends Component {
   render(){
     return(
       <ListPage 
+        tabs={false}
         disablePopup={[true, true, true, true, true, true, true]}
         title="Amiibo Cards"
         imageProperty={["image","image","image","image","image","image","image","image"]}

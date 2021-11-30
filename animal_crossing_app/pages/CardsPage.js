@@ -8,6 +8,7 @@ class CardsPage extends Component {
   render(){
     return(
         <ListPage 
+          tabs={false}
           disablePopup={[true]}
           title="Letters"
           imageProperty={["Image"]}
