@@ -15,6 +15,7 @@ import Header from "../components/Header"
 import {PopupBottomCustom} from "../components/Popup"
 import DelayInput from "react-native-debounce-input";
 import FadeInOut from "../components/FadeInOut";
+import { calculateHeaderHeight } from '../components/ListPage';
 
 export default class AchievementsPage extends Component {
   constructor(props){
@@ -58,7 +59,7 @@ export default class AchievementsPage extends Component {
     }
   }
 
-  headerHeight = Dimensions.get('window').height*0.3;
+  headerHeight = calculateHeaderHeight(true, 0.2);
   scrollY = new Animated.Value(0);
   scrollYClamped = Animated.diffClamp(this.scrollY, 0, this.headerHeight/0.8); //or 1.5
   translateY = this.scrollYClamped.interpolate({

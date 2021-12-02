@@ -146,14 +146,14 @@ export class PopupRaw extends Component {
         <View style={[{position:"absolute",bottom:0, width: Dimensions.get('window').width}]}>
           <View style={{alignItems:"center", justifyContent:"center"}}>
             <View style={[styles.modalView,{backgroundColor: colors.white[Appearance.getColorScheme()==="light" ? 0 : 1]}]}>
-              <TextFont bold={true} style={{fontSize: 25, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.props.text}</TextFont>
+              <TextFont bold={true} style={{fontSize: 24, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.props.text}</TextFont>
               <ScrollView style={{maxHeight:Dimensions.get('window').height*0.75}}>
                 <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.props.textLower}</TextFont>
                 <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.props.textLower2}</TextFont>
                 <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.state.text}</TextFont>
                 <View style={{justifyContent:"center", alignItems:"center"}}>
                   <LottieView autoPlay loop
-                    style={{width: 100, zIndex:1, transform: [{ scale: 1.1 },{ rotate: '0deg'},],}}
+                    style={{width: 90, zIndex:1, transform: [{ scale: 1.1 },{ rotate: '0deg'},],}}
                     source={require('../assets/loading.json')}
                   />
                 </View>
@@ -238,7 +238,7 @@ export class PopupRawLoading extends Component {
               <TextFont bold={true} style={{fontSize: 20, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{attemptToTranslate(this.state.loadingText)+"..."}</TextFont>
               <View style={{justifyContent:"center", alignItems:"center"}}>
                 <LottieView autoPlay loop
-                  style={{marginBottom: -25, width: 100, zIndex:1, transform: [{ scale: 1 },{ rotate: '0deg'},],}}
+                  style={{marginBottom: -25, width: 90, zIndex:1, transform: [{ scale: 1 },{ rotate: '0deg'},],}}
                   source={require('../assets/loading.json')}
                 />
               </View>   

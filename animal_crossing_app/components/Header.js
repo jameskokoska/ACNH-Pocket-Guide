@@ -96,7 +96,7 @@ export const HeaderLoading = (props) => {
         autoPlay
         loop
         style={{
-          width: "25%",
+          width: 85,
           zIndex:1,
           transform: [
             { scale: 1.25 },

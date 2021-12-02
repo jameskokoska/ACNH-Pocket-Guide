@@ -290,7 +290,7 @@ class CalendarView extends Component{
             <View style={{height:10}}/>
             {this.state.eventColors[0]===undefined?
               <LottieView autoPlay loop
-                style={{width: 100, zIndex:1,transform: [{ scale: 1 },{ rotate: '0deg'},],}}
+                style={{width: 90, zIndex:1,transform: [{ scale: 1 },{ rotate: '0deg'},],}}
                 source={require('../assets/loading.json')}
               />:<View/>
             }

@@ -7,6 +7,7 @@ export const changelog = `
 -Thank you DeadlySweetz for becoming a Gold Supporter!
 -
 -Added filter for cooking and crafting recipes
+-Fixed formatting on landscape/tablets
 -Fixed notification icon (Play Store update required)
 -Adjusted colors of UI elements for color blind (in creature popups)
 -Adjusted font size

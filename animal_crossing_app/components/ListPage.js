@@ -33,9 +33,9 @@ import LottieView from 'lottie-react-native';
 Object.entries(exports).forEach(([name, exported]) => window[name] = exported);
 
 const {diffClamp} = Animated;
-function calculateHeaderHeight(tabs){
+export function calculateHeaderHeight(tabs, increaseFactorBy=0){
   console.log(tabs)
-  var headerHeight = tabs || tabs===undefined ? Dimensions.get('window').height*0.28-30 : Dimensions.get('window').height*0.29;
+  var headerHeight = tabs || tabs===undefined ? Dimensions.get('window').height*(0.28+increaseFactorBy)-30 : Dimensions.get('window').height*(0.29+increaseFactorBy);
   var maxHeight = 845.7*0.3;
   if(headerHeight > maxHeight){
     headerHeight = maxHeight;
@@ -855,7 +855,7 @@ function ListPage(props){
       <LottieView 
         autoPlay
         loop
-        style={{width: "25%",zIndex:1,transform: [{ scale: 1.25 },{ rotate: '0deg'},],}}
+        style={{width: 85,zIndex:1,transform: [{ scale: 1.25 },{ rotate: '0deg'},],}}
         source={require('../assets/loading.json')}
       />
       </View>:<Animated.FlatList

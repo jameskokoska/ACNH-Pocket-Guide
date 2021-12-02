@@ -10,6 +10,7 @@ import * as RootNavigation from '../RootNavigation.js';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Check from '../components/Check';
 import FadeInOut from '../components/FadeInOut';
+import { calculateHeaderHeight } from '../components/ListPage';
 
 let paradiseChecklist = [];
 
@@ -108,7 +109,7 @@ export default class ParadiserequestningPage extends Component {
     }
   }
 
-  headerHeight = Dimensions.get('window').height*0.3;
+  headerHeight = calculateHeaderHeight(true, 0.2);
   scrollY = new Animated.Value(0);
   scrollYClamped = Animated.diffClamp(this.scrollY, 0, this.headerHeight/0.8); //or 1.5
   translateY = this.scrollYClamped.interpolate({
