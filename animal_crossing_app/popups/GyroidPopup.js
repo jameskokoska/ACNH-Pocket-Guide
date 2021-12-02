@@ -50,12 +50,12 @@ export default class GyroidPopup extends Component {
         textProperty2={["Kit Cost"]}
         ending2={"x"}
       />
-      {customizationStringComponent}
       <InfoLine
         image={require("../assets/icons/tag.png")} 
         item={this.props.item}
         textProperty={["Tag"]}
       />
+      {customizationStringComponent}
       {/* <InfoLine
         image={require("../assets/icons/popper.png")} 
         item={this.props.item}

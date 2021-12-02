@@ -696,8 +696,8 @@ export class VillagersGifts extends Component {
 
 const styles = StyleSheet.create({
   infoLineImage:{
-    width: 30,
-    height: 30,
+    width: 25,
+    height: 25,
     resizeMode:'contain',
   },
   infoLineImageItem:{
@@ -707,17 +707,17 @@ const styles = StyleSheet.create({
     resizeMode:'contain',
   },
   infoLineTitle:{
-    fontSize: 19,
-    marginLeft: 8,
+    fontSize: 18.5,
+    marginLeft: 7,
     maxWidth: "85%",
   },
   infoLineTitleDouble:{
-    fontSize: 16,
-    marginLeft: 8,
+    fontSize: 15.5,
+    marginLeft: 7,
   },
   infoLineTitleTriple:{
-    fontSize: 14,
-    marginLeft: 8,
+    fontSize: 13,
+    marginLeft: 7,
   },
   infoLineBoxBeside: {
     alignItems: 'center',

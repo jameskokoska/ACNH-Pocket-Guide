@@ -2,7 +2,7 @@
   "expo": {
     "name": "ACNH Pocket Guide",
     "slug": "animal_crossing_app",
-    "version": "12.3",
+    "version": "12.4.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
@@ -17,19 +17,23 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "notification": {
+      "icon": "assets/notificationIcon.png",
+      "color": "#78BD76"
+    },
     "ios": {
       "supportsTablet": false
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/icon.png",
+        "foregroundImage": "./assets/icon-adaptive.png",
         "backgroundColor": "#FFFFFF"
       },
       "useNextNotificationsApi": true,
       "playStoreUrl" : "https://play.google.com/store/apps/details?id=com.acnh.pocket_guide",
       "permissions": [ "WRITE_EXTERNAL_STORAGE","VIBRATE","STATUS_BAR","READ_EXTERNAL_STORAGE"],
       "package": "com.acnh.pocket_guide",
-      "versionCode": 199
+      "versionCode": 200
     },
     "web": {
       "favicon": "./assets/icon.png"

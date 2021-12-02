@@ -46,7 +46,6 @@ class FurniturePopup extends Component {
         textProperty2={["Kit Cost"]}
         ending2={"x"}
       />
-      {customizationStringComponent}
       <InfoLine
         image={require("../assets/icons/cyrus.png")} 
         item={this.props.item}
@@ -78,6 +77,7 @@ class FurniturePopup extends Component {
         item={this.props.item}
         textProperty={["Source Notes"]}
       />
+      {customizationStringComponent}
       <ViewRecipeButton item={this.props.item}/>
     </View>
   }

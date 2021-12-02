@@ -2,6 +2,32 @@ import * as Notifications from 'expo-notifications';
 import React, {Component} from 'react';
 import {getSettingsString} from "./LoadJsonData"
 
+// Notifications.setNotificationHandler({
+//   handleNotification: async () => ({
+//     shouldShowAlert: true,
+//     shouldPlaySound: true,
+//     shouldSetBadge: true,
+//   }),
+// });
+
+// export async function testNotification(){
+//   await Notifications.scheduleNotificationAsync({
+//     content: {
+//       title: "Test",
+//       body: 'Notification',
+//       color : "#6474A8",
+//     },
+//     trigger: { seconds: 1 },
+//   });
+// }
+
+// <Button
+//     title="Test"
+//     onPress={async () => {
+//       await testNotification();
+//     }}
+//   />
+
 export async function schedulePushNotification(date,time,name,body) {
   const dateTrigger = new Date(date);
   const timeChosen = new Date(time)
@@ -20,11 +46,10 @@ export async function schedulePushNotification(date,time,name,body) {
     content: {
       title: name,
       body: body,
-      color : "#5EB950",
+      color : "#6DA864",
     },
     trigger,
   });
-  
 }
 
 export async function logNextTriggerDate() {

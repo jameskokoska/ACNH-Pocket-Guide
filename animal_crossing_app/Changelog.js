@@ -3,7 +3,15 @@ export const dataVersion = "4"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
--Thank you everyone for the support and tips!
+-Thank you everyone for the support and tips, I appreciate it!
+-Thank you DeadlySweetz for becoming a Gold Supporter!
+-
+-Added filter for cooking and crafting recipes
+-Adjusted colors of UI elements for color blind (in creature popups)
+-Adjusted font size
+-Rearranged text on furniture popup
+-Events now use the correct year
+-Note: Past event days from previous years are not supported
 -
 -Added Achievement progress to profile page
 -Font size fixes

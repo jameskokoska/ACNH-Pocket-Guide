@@ -73,8 +73,8 @@ export function EventContainer(props){
             {allCollected?<Check play={allCollected} width={53} height={53}/>:<View/>}
           </View>
           <View style={[styles.textContainer,{paddingHorizontal: props.showDate===false?0:14}]}>
-            <TextFont translate={false} numberOfLines={3} bold={true} style={[styles.textContainerTop,{color:props.textColor, textAlign:props.showDate===false?"left":"center", marginLeft:props.showDate===false?30:10}]}>{props.event.name}</TextFont>
-            <TextFont style={[styles.textContainerBottom,{color:props.textColor, textAlign:props.showDate===false?"left":"center", marginLeft:props.showDate===false?30:10}]}>{props.event.time}</TextFont>
+            <TextFont translate={false} numberOfLines={3} bold={true} style={[styles.textContainerTop,{color:props.textColor, textAlign:props.showDate===false?"left":"center", marginLeft:props.showDate===false?23:10}]}>{props.event.name}</TextFont>
+            <TextFont style={[styles.textContainerBottom,{color:props.textColor, textAlign:props.showDate===false?"left":"center", marginLeft:props.showDate===false?23:10}]}>{props.event.time}</TextFont>
           </View>
           {props.showDate===false?<></>:
           <View style={{width: 33, alignItems:"center", marginLeft: -8}}>
@@ -196,6 +196,10 @@ export function getEventsDay(date, eventSections, showEventsIfInRange){
 
   seasonData.map( (event, index)=>{
     var eventName = getEventName(event["Name"])
+
+    if(date.getFullYear().toString() !== event["Year"] && event["Year"]!=="Any"){
+      return
+    }
 
     if((event["Type"].toLowerCase()==="special event" || event["Type"].toLowerCase()==="basegame event") && !event["Name"].toLowerCase().includes("ready days") || 
       eventSections["Crafting Seasons"] && event["Type"].toLowerCase()==="crafting season" ||

@@ -251,6 +251,16 @@ function ListPage(props){
           if(item["Name"]!==undefined && item["Name"].includes("Hazure")){
             continue;
           }
+          //Filter Recipe DIYs
+          if((searchActual.includes("Filter Cooking DIY") || searchActual.includes("Filter Crafting DIY")) && item["Data Category"]!==undefined && item["Data Category"]==="Recipes" && item["Image"]!==undefined){
+            if(searchActual.includes("Filter Cooking DIY") && !item["Image"].includes("Cooking")){
+              continue;
+            } else if(searchActual.includes("Filter Crafting DIY") && item["Image"].includes("Cooking")){
+              continue;
+            }
+          } else if((searchActual.includes("Filter Cooking DIY") || searchActual.includes("Filter Crafting DIY")) && item["Data Category"]!==undefined && item["Data Category"]!=="Recipes"){
+            continue;
+          }
           //Loop through the specific search criteria specified for this dataset
           for(var x = 0; x < props.searchKey[j].length; x++){
             var searchFound = false;

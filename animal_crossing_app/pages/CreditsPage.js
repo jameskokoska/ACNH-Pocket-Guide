@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Linking, ScrollView, View,} from 'react-native';
+import {Button, Linking, ScrollView, View,} from 'react-native';
 import TextFont from '../components/TextFont'
 import StoreHoursContainer from '../components/StoreHoursContainer';
 import colors from '../Colors'
@@ -9,6 +9,7 @@ import {MailLink, ExternalLink, SubHeader, Header, Paragraph} from "../component
 import {attemptToTranslate} from "../LoadJsonData"
 import {changelog, dataVersion} from "../Changelog"
 import Popup from '../components/Popup';
+import { testNotification } from '../Notifications';
 
 class CreditsPage extends Component {
   render(){
@@ -32,8 +33,14 @@ class CreditsPage extends Component {
           <StoreHoursContainer backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} image={require("../assets/icons/James.png")} text="James" textBottom="Lead Programmer"/>
           <StoreHoursContainer backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} image={require("../assets/icons/Ryan.png")} text="Ryan" textBottom="Lead Graphics"/>
           <View style={{height: 20}}/>
-          <SubHeader style={{fontSize: 26}}>Silver Supporters</SubHeader>
-          <Paragraph style={{marginBottom:10}}>{attemptToTranslate("Thanks for your support!")}</Paragraph>
+          <SubHeader style={{fontSize: 24}}>Gold Supporters</SubHeader>
+          <Paragraph style={{marginBottom:6, marginTop:2}}>{attemptToTranslate("Thanks for your support!")}</Paragraph>
+          <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
+            <SubHeader>DeadlySweetz</SubHeader>
+          </View>
+          <View style={{height:12}}/>
+          <SubHeader style={{fontSize: 24}}>Silver Supporters</SubHeader>
+          <Paragraph style={{marginBottom:6, marginTop:2}}>{attemptToTranslate("Thanks for your support!")}</Paragraph>
           <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
             <SubHeader>Nigerski</SubHeader>
             <SubHeader>Christina</SubHeader>
