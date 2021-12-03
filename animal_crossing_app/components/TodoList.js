@@ -216,6 +216,13 @@ export class TodoList extends Component {
               }else if(item.value==="Uncheck All"){
                 this.uncheckAll(); 
               }else if(item.value==="Uncheck Each Day"){
+                if(!this.state.resetEachDay){
+                  //set up first time when enabled
+                  let dateWithOffset = addHours(getCurrentDateObject(),-5)
+                  let currentDateString = dateWithOffset.getMonth().toString()+"-"+dateWithOffset.getDate().toString()+"-"+dateWithOffset.getFullYear().toString()
+                  let lastOpened = await getStorage("lastOpenedDay"+global.profile,currentDateString);
+                  console.log("enabled reset tasks")
+                }
                 await AsyncStorage.setItem("resetEachDay",!this.state.resetEachDay?"true":"false");
                 this.setState({resetEachDay:!this.state.resetEachDay})
               }
