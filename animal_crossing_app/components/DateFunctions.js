@@ -25,6 +25,12 @@ export function addDays(date, days) {
   return result;
 }
 
+export function addHours(date, hours) {
+  var result = new Date(date);
+  result.setHours(result.getHours() + hours);
+  return result;
+}
+
 //in the form 2021-04-11
 export function getDateStringMonthDay(date, prefix=""){
   var day = parseInt(date.slice(8,10))

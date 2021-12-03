@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Dimensions, Linking, TextInput, Vibration,TouchableNativeFeedback,TouchableOpacity,StyleSheet, Text, View, Image} from 'react-native';
 import TextFont from './TextFont';
-import {getCurrentDateObject, getMonth, getWeekDayShort} from './DateFunctions';
+import {addHours, getCurrentDateObject, getDateStringMonthDay, getMonth, getWeekDayShort} from './DateFunctions';
 import {getStorage, checkOff, capitalize, commas, removeBrackets} from "../LoadJsonData"
 import {getPhoto} from "./GetPhoto"
 import Check from './Check';
@@ -14,6 +14,7 @@ import FastImage from "./FastImage"
 import Popup, {PopupInfoCustom} from "./Popup"
 import ButtonComponent from "./ButtonComponent";
 import * as RootNavigation from '../RootNavigation.js';
+import { DropdownMenu } from './Dropdown';
 
 export class TodoList extends Component {
   constructor(props){
@@ -22,7 +23,8 @@ export class TodoList extends Component {
       data: [],
       showEdit: false,
       showVillagersTalkList: false,
-      deleteIndex: 0
+      deleteIndex: 0,
+      resetEachDay: false
     }
     this.deleteIndex=-1
   }
@@ -52,9 +54,20 @@ export class TodoList extends Component {
     ]
     var showVillagersTalkList = (await getStorage("showVillagersTalkList","false"))==="true";
     var storageData = JSON.parse(await getStorage("ToDoList"+global.profile,JSON.stringify(defaultList)));
-    
+    var resetEachDay = (await getStorage("resetEachDay","false"))==="true";
     if(this.mounted){
-      this.setState({data:storageData,showVillagersTalkList:showVillagersTalkList});
+      this.setState({data:storageData,showVillagersTalkList:showVillagersTalkList, resetEachDay: resetEachDay});
+    }
+    if(resetEachDay){
+      let dateWithOffset = addHours(getCurrentDateObject(),-5)
+      let currentDateString = dateWithOffset.getMonth().toString()+"-"+dateWithOffset.getDate().toString()+"-"+dateWithOffset.getFullYear().toString()
+      let lastOpened = await getStorage("lastOpenedDay"+global.profile,currentDateString);
+      // console.log(lastOpened)
+      if(lastOpened!==currentDateString){
+        this.uncheckAll()
+      }
+      await AsyncStorage.setItem("lastOpenedDay"+global.profile, currentDateString);
+      // console.log(currentDateString)
     }
     this.props.setLoadedToDo(true);
   }
@@ -179,26 +192,38 @@ export class TodoList extends Component {
 
   render(){
     return <>
-      <View style={{alignItems:"center",flexDirection:"row", right:0, top:0,position:'absolute',zIndex:10}}>
-        <TouchableOpacity style={{padding:10}} 
-          onPress={()=>{
-            this.uncheckAll(); 
-        }}>
-          <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"Uncheck All"}</TextFont>
-        </TouchableOpacity>
-        <TouchableOpacity style={{padding:10}} 
-          onPress={()=>{
-            this.setState({showEdit:!this.state.showEdit});
-            getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
-        }}>
-          <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{this.state.showEdit ? "Disable Edit List" : "Edit List"}</TextFont>
-        </TouchableOpacity>
-        <TouchableOpacity style={{padding:10}} 
+      <View style={{alignItems:"center",flexDirection:"row", right:-3, top:0,position:'absolute',zIndex:10}}>
+        <TouchableOpacity style={{padding:10, paddingRight:0, marginRight:-5}} 
           onPress={()=>{
             this.addItemPopup(true); 
         }}>
           <Image source={require("../assets/icons/addIcon.png")} style={{width:25, height:25, borderRadius:100,}}/>
         </TouchableOpacity>
+        <DropdownMenu
+          style={{padding:10, paddingLeft:0}}
+          width={120}
+          items={[
+            {label:this.state.showEdit ? "Disable Edit List" : "Edit List", value:"Edit List", highlighted: this.state.showEdit ? true : false},
+            {label:"Uncheck All", value:"Uncheck All",},
+            {label:"Uncheck Each Day (at 5 AM)", value:"Uncheck Each Day", highlighted: this.state.resetEachDay}
+          ]}
+          defaultValue={""}
+          onChangeItem={
+            async (item)=>{
+              if(item.value==="Edit List"){
+                this.setState({showEdit:!this.state.showEdit});
+                getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+              }else if(item.value==="Uncheck All"){
+                this.uncheckAll(); 
+              }else if(item.value==="Uncheck Each Day"){
+                await AsyncStorage.setItem("resetEachDay",!this.state.resetEachDay?"true":"false");
+                this.setState({resetEachDay:!this.state.resetEachDay})
+              }
+            }
+          }
+        >
+          <Image style={{width:21,height:21,resizeMode:'contain',marginLeft:10,}} source={global.darkMode ? require("../assets/icons/menuDotsWhite.png") : require("../assets/icons/menuDots.png")} />
+        </DropdownMenu>
       </View>
       <View style={{height:10}}/>
       <View style={{alignItems: 'center'}}>
@@ -362,7 +387,9 @@ export class TurnipLog extends Component {
           <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"Clear Prices"}</TextFont>
         </TouchableOpacity>
       <View style={{marginHorizontal:25, marginTop: 15}}>
-        <DropDownPicker
+        <DropdownMenu
+          selection
+          width={Dimensions.get('window').width-100}
           items={[
             {label: attemptToTranslate("Last week's pattern") + ": " + attemptToTranslate("Unknown"), value: "-1",},
             {label: attemptToTranslate("Last week's pattern") + ": " + attemptToTranslate("Fluctuating"), value: "0",},
@@ -371,37 +398,17 @@ export class TurnipLog extends Component {
             {label: attemptToTranslate("Last week's pattern") + ": " + attemptToTranslate("Decreasing"), value: "2",},
           ]}
           defaultValue={this.state.lastPattern}
-          placeholder={attemptToTranslate("Last week's pattern")}
-          dropDownMaxHeight={300}
-          containerStyle={{height: 45}}
-          style={[{width: "100%", borderWidth: 0, backgroundColor: colors.lightDarkAccentHeavyBackground[global.darkMode], borderTopLeftRadius: 8, borderTopRightRadius: 8,borderBottomLeftRadius: 8, borderBottomRightRadius: 8}]}
-          itemStyle={{
-              justifyContent: 'flex-start'
-          }}
-          labelStyle={{fontFamily: "ArialRoundedBold", fontSize: 15, marginLeft:10, color:colors.textBlack[global.darkMode]}}
-          customTickIcon={()=><View/>}
-          activeItemStyle={{borderRadius: 10, backgroundColor: colors.lightDarkAccentHeavy[global.darkMode]}}
-          dropDownStyle={{borderBottomLeftRadius: 10, borderBottomRightRadius: 10, borderWidth: 0, backgroundColor: colors.lightDarkAccent2[global.darkMode], opacity: 0.98, }}
           onChangeItem={async (item) => {this.setState({lastPattern:item.value}); await AsyncStorage.setItem("TurnipListLastPattern"+global.profile, item.value);}}
         />
         <View style={{height:5}}/>
-        <DropDownPicker
+        <DropdownMenu
+          selection
+          width={Dimensions.get('window').width-100}
           items={[
             {label: attemptToTranslate("First time buyer?") + ": " + attemptToTranslate("Yes"), value: "true",},
             {label: attemptToTranslate("First time buyer?") + ": " + attemptToTranslate("No"), value: "false",},
           ]}
           defaultValue={this.state.firstTime}
-          placeholder={attemptToTranslate("First time buyer?")}
-          dropDownMaxHeight={300}
-          containerStyle={{height: 45}}
-          style={[{width: "100%", borderWidth: 0, backgroundColor: colors.lightDarkAccentHeavyBackground[global.darkMode], borderTopLeftRadius: 8, borderTopRightRadius: 8,borderBottomLeftRadius: 8, borderBottomRightRadius: 8}]}
-          itemStyle={{
-              justifyContent: 'flex-start'
-          }}
-          labelStyle={{fontFamily: "ArialRoundedBold", fontSize: 15, marginLeft:10, color:colors.textBlack[global.darkMode]}}
-          customTickIcon={()=><View/>}
-          activeItemStyle={{borderRadius: 10, backgroundColor: colors.lightDarkAccentHeavy[global.darkMode]}}
-          dropDownStyle={{borderBottomLeftRadius: 10, borderBottomRightRadius: 10, borderWidth: 0, backgroundColor: colors.lightDarkAccent2[global.darkMode], opacity: 0.98, }}
           onChangeItem={async (item) => {this.setState({firstTime:item.value}); await AsyncStorage.setItem("TurnipListFirstTime"+global.profile, item.value);}}
         />
 

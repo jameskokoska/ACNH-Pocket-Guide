@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Vibration, Image, Dimensions, TouchableOpacity, TextInput, StyleSheet, Text, View} from 'react-native';
+import {ScrollView, Vibration, Image, Dimensions, TouchableOpacity, TextInput, StyleSheet, Text, View, Keyboard} from 'react-native';
 import Clock from '../components/Clock';
 import HomeContentArea from '../components/HomeContentArea';
 import {EventContainer,getEventsDay} from '../components/EventContainer';
@@ -16,7 +16,7 @@ import {getCurrentDateObject, doWeSwapDate, addDays} from '../components/DateFun
 import {TodoList, TurnipLog} from '../components/TodoList';
 import VisitorsList from '../components/VisitorsList';
 import {translateDreamAddressBeginning, translateIslandNameInputLabel2, translateIslandNameInputLabel1, getSettingsString, attemptToTranslate} from "../LoadJsonData"
-import { ScrollView } from 'react-native-gesture-handler';
+// import { ScrollView } from 'react-native-gesture-handler';
 import Popup, {PopupBottomCustom} from "../components/Popup"
 import VillagerPopup from "../popups/VillagerPopup"
 import ToggleSwitch from 'toggle-switch-react-native'
@@ -198,7 +198,7 @@ class HomePage extends Component {
               </HomeContentArea>
             }
             return sections["Collection"]===true?<HomeContentArea index={index} key={"Collection"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.collectionColor[global.darkMode]} title="Collection" titleColor={colors.collectionColor[global.darkModeReverse]}>
-              <CollectionProgress/>
+              <CollectionProgress setPage={this.props.setPage}/>
             </HomeContentArea>:<View/>
           }else if(section["name"]==="Profile"){
             if(this.state.editOrder){
@@ -372,27 +372,9 @@ export class Profile extends Component{
   render(){
     return(
       <View style={{alignItems:"center", marginHorizontal:50}}>
-        <TextInput
-          maxLength = {15}
-          allowFontScaling={false}
-          style={{fontSize: 28, width:"100%", textAlign:"center", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
-          onChangeText={async (text) => {AsyncStorage.setItem("name"+global.profile, text); global.name=text;}}
-          placeholder={"["+attemptToTranslate("Name")+"]"}
-          placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
-          defaultValue={global.name}
-          multiline={false}
-        />
+        <NameEntry/>
         <TextFont bold={true} style={{marginTop: 0, marginBottom: -2, color:colors.fishText[global.darkMode]}}>{translateIslandNameInputLabel1()}</TextFont>
-        <TextInput
-          maxLength = {15}
-          allowFontScaling={false}
-          style={{fontSize: 28, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
-          onChangeText={async (text) => {AsyncStorage.setItem("islandName"+global.profile, text); global.islandName=text}}
-          placeholder={"["+attemptToTranslate("Island")+"]"}
-          placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
-          defaultValue={global.islandName}
-          multiline={false}
-        />
+        <IslandEntry/>
         <TextFont bold={true} style={{marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{translateIslandNameInputLabel2()}</TextFont>
         <TouchableOpacity onPress={() => this.props.setPage(13)}>
           <TextFont bold={false} style={{padding:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{getSettingsString("settingsNorthernHemisphere")==="true" ? "Northern Hemisphere" : "Southern Hemisphere"}</TextFont>
@@ -415,6 +397,72 @@ export class Profile extends Component{
   }
 }
 
+export class NameEntry extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      name:global.name,
+    }
+  }
+  onChangeText = (text) =>{
+    if(text.includes("\n")) Keyboard.dismiss()
+    text = text.replace("\n","")
+    this.setState({name:text});
+    AsyncStorage.setItem("name"+global.profile, text);
+    global.name=text;
+  }
+  render(){
+    return(
+      <>
+        <TextInput
+          maxLength = {17}
+          allowFontScaling={false}
+          style={{fontSize: 28, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
+          onChangeText={async (text) => {this.onChangeText(text)}}
+          placeholder={"["+attemptToTranslate("Name")+"]"}
+          placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+          value={this.state.name}
+          defaultValue={global.name}
+          multiline={true}
+        />
+      </>
+    )
+  }
+}
+
+export class IslandEntry extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      islandName:global.islandName,
+    }
+  }
+  onChangeText = (text) =>{
+    if(text.includes("\n")) Keyboard.dismiss()
+    text = text.replace("\n","")
+    this.setState({islandName:text});
+    AsyncStorage.setItem("islandName"+global.profile, text);
+    global.islandName=text;
+  }
+  render(){
+    return(
+      <>
+        <TextInput
+          maxLength = {17}
+          allowFontScaling={false}
+          style={{fontSize: 28, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
+          onChangeText={async (text) => {this.onChangeText(text)}}
+          placeholder={"["+attemptToTranslate("Island")+"]"}
+          placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+          value={this.state.islandName}
+          defaultValue={global.islandName}
+          multiline={true}
+        />
+      </>
+    )
+  }
+}
+
 export class DreamAddress extends Component {
   constructor(props) {
     super(props)
@@ -423,6 +471,8 @@ export class DreamAddress extends Component {
     }
   }
   onChangeText = (text) =>{
+    if(text.includes("\n")) Keyboard.dismiss()
+    text = text.replace("\n","")
     var newValue = "";
     if(text===translateDreamAddressBeginning()){
       this.setState({dreamAddress:""});
@@ -457,7 +507,7 @@ export class DreamAddress extends Component {
           placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
           value={this.state.dreamAddress}
           defaultValue={global.dreamAddress}
-          multiline={false}
+          multiline={true}
         />
         <TextFont bold={false} style={{marginTop: -5, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{"Dream Address"}</TextFont>
       </>
@@ -473,6 +523,8 @@ export class FriendCode extends Component {
     }
   }
   onChangeText = (text) =>{
+    if(text.includes("\n")) Keyboard.dismiss()
+    text = text.replace("\n","")
     var newValue = "";
     if(text==="SW"){
       this.setState({friendCode:""});
@@ -507,7 +559,7 @@ export class FriendCode extends Component {
           placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
           value={this.state.friendCode}
           defaultValue={global.friendCode}
-          multiline={false}
+          multiline={true}
         />
         <TextFont bold={false} style={{marginTop: -5, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{"Friend Code"}</TextFont>
       </>
@@ -523,6 +575,8 @@ export class CreatorCode extends Component {
     }
   }
   onChangeText = (text) =>{
+    if(text.includes("\n")) Keyboard.dismiss()
+    text = text.replace("\n","")
     var newValue = "";
     if(text==="MA"){
       this.setState({creatorCode:""});
@@ -557,7 +611,7 @@ export class CreatorCode extends Component {
           placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
           value={this.state.creatorCode}
           defaultValue={global.creatorCode}
-          multiline={false}
+          multiline={true}
         />
         <TextFont bold={false} style={{marginTop: -5, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{"Creator Code"}</TextFont>
       </>
@@ -845,18 +899,18 @@ export class CollectionProgress extends Component {
     
     return(<>
       <View style={{height: 15}}/>
-      <ProgressContainer color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.fishPercentage} image={require("../assets/icons/fish.png")} text={attemptToTranslate("Fish") + " " + this.state.fishCount + "/" + this.state.fishCountTotal.toString()}/>
-      <ProgressContainer color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.seaPercentage} image={require("../assets/icons/octopus.png")} text={attemptToTranslate("Sea Creatures") + " " + this.state.seaCount + "/" + this.state.seaCountTotal.toString()}/>
-      <ProgressContainer color={colors.bugAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.bugsPercentage} image={require("../assets/icons/bugs.png")} text={attemptToTranslate("Bugs") + " " + this.state.bugsCount + "/" + this.state.bugsCountTotal.toString()}/>
-      <ProgressContainer color={colors.fossilAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.fossilPercentage} image={require("../assets/icons/bones.png")} text={attemptToTranslate("Fossils") + " " + this.state.fossilCount + "/" + this.state.fossilCountTotal.toString()}/>
-      <ProgressContainer color={colors.artAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.artPercentage} image={require("../assets/icons/colorPalette.png")} text={attemptToTranslate("Art") + " " + this.state.artCount + "/" + this.state.artCountTotal.toString()}/>
-      <ProgressContainer color={colors.musicAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.musicPercentage} image={require("../assets/icons/music.png")} text={attemptToTranslate("Songs") + " " + this.state.musicCount + "/" + this.state.musicCountTotal.toString()}/>
-      <ProgressContainer color={colors.emojipediaAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.emojipediaPercentage} image={require("../assets/icons/emote.png")} text={attemptToTranslate("Emotes") + " " + this.state.emojipediaCount + "/" + this.state.emojipediaCountTotal.toString()}/>
-      <ProgressContainer color={colors.toolsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.recipePercentage} image={require("../assets/icons/crafting.png")} text={attemptToTranslate("Recipes") + " " + this.state.recipeCount + "/" + this.state.recipeCountTotal.toString()}/>
-      <ProgressContainer color={colors.furnitureAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.furniturePercentage} image={require("../assets/icons/leaf.png")} text={attemptToTranslate("Furniture") + " " + this.state.furnitureCount + "/" + this.state.furnitureCountTotal.toString()}/>
-      <ProgressContainer color={colors.floorWallsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.floorWallsPercentage} image={require("../assets/icons/carpet.png")} text={attemptToTranslate("Floor & Walls") + " " + this.state.floorWallsCount + "/" + this.state.floorWallsCountTotal.toString()}/>
-      <ProgressContainer color={colors.clothingAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.clothingPercentage} image={require("../assets/icons/top.png")} text={attemptToTranslate("Clothing") + " " + this.state.clothingCount + "/" + this.state.clothingCountTotal.toString()}/>
-      <ProgressContainer color={colors.achievementsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.achievementsPercentage} image={require("../assets/icons/achievementIcon.png")} text={attemptToTranslate("Achievements") + " " + this.state.achievementsCount + "/" + this.state.achievementsCountTotal.toString()}/>
+      <ProgressContainer setPage={this.props.setPage} page={2} tab={0} color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.fishPercentage} image={require("../assets/icons/fish.png")} text={attemptToTranslate("Fish") + " " + this.state.fishCount + "/" + this.state.fishCountTotal.toString()}/>
+      <ProgressContainer setPage={this.props.setPage} page={2} tab={1} color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.seaPercentage} image={require("../assets/icons/octopus.png")} text={attemptToTranslate("Sea Creatures") + " " + this.state.seaCount + "/" + this.state.seaCountTotal.toString()}/>
+      <ProgressContainer setPage={this.props.setPage} page={2} tab={2} color={colors.bugAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.bugsPercentage} image={require("../assets/icons/bugs.png")} text={attemptToTranslate("Bugs") + " " + this.state.bugsCount + "/" + this.state.bugsCountTotal.toString()}/>
+      <ProgressContainer setPage={this.props.setPage} page={2} tab={3} color={colors.fossilAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.fossilPercentage} image={require("../assets/icons/bones.png")} text={attemptToTranslate("Fossils") + " " + this.state.fossilCount + "/" + this.state.fossilCountTotal.toString()}/>
+      <ProgressContainer setPage={this.props.setPage} page={2} tab={4} color={colors.artAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.artPercentage} image={require("../assets/icons/colorPalette.png")} text={attemptToTranslate("Art") + " " + this.state.artCount + "/" + this.state.artCountTotal.toString()}/>
+      <ProgressContainer setPage={this.props.setPage} page={4} tab={""} color={colors.musicAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.musicPercentage} image={require("../assets/icons/music.png")} text={attemptToTranslate("Songs") + " " + this.state.musicCount + "/" + this.state.musicCountTotal.toString()}/>
+      <ProgressContainer setPage={this.props.setPage} page={5} tab={""} color={colors.emojipediaAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.emojipediaPercentage} image={require("../assets/icons/emote.png")} text={attemptToTranslate("Emotes") + " " + this.state.emojipediaCount + "/" + this.state.emojipediaCountTotal.toString()}/>
+      <ProgressContainer setPage={this.props.setPage} page={6} tab={""} color={colors.toolsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.recipePercentage} image={require("../assets/icons/crafting.png")} text={attemptToTranslate("Recipes") + " " + this.state.recipeCount + "/" + this.state.recipeCountTotal.toString()}/>
+      <ProgressContainer setPage={this.props.setPage} page={3} tab={0} color={colors.furnitureAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.furniturePercentage} image={require("../assets/icons/leaf.png")} text={attemptToTranslate("Furniture") + " " + this.state.furnitureCount + "/" + this.state.furnitureCountTotal.toString()}/>
+      <ProgressContainer setPage={this.props.setPage} page={3} tab={2} color={colors.floorWallsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.floorWallsPercentage} image={require("../assets/icons/carpet.png")} text={attemptToTranslate("Floor & Walls") + " " + this.state.floorWallsCount + "/" + this.state.floorWallsCountTotal.toString()}/>
+      <ProgressContainer setPage={this.props.setPage} page={3} tab={1} color={colors.clothingAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.clothingPercentage} image={require("../assets/icons/top.png")} text={attemptToTranslate("Clothing") + " " + this.state.clothingCount + "/" + this.state.clothingCountTotal.toString()}/>
+      <ProgressContainer setPage={this.props.setPage} page={19} tab={""} color={colors.achievementsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.achievementsPercentage} image={require("../assets/icons/achievementIcon.png")} text={attemptToTranslate("Achievements") + " " + this.state.achievementsCount + "/" + this.state.achievementsCountTotal.toString()}/>
       <View style={{height: 15}}/>
       </>
     )

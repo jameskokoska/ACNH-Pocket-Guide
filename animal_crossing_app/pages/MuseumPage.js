@@ -199,10 +199,14 @@ class ArtRouteClass extends React.PureComponent {
 
 
 class MuseumPage extends Component {
-  constructor() {
+  constructor(props) {
     super();
+    let selectedTab = 0
+    if(props.selectedTab!==undefined && props.selectedTab!==""){
+      selectedTab = props.selectedTab
+    }
     this.state = {
-      index: 0,
+      index: selectedTab,
       routes: [
         { key: 'Fish', title: attemptToTranslate('Fish') },
         { key: 'Bugs', title: attemptToTranslate('Bugs') },

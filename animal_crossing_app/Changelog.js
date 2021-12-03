@@ -4,7 +4,15 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
 -Thank you everyone for the support and tips, I appreciate it!
--Thank you DeadlySweetz for becoming a Gold Supporter!
+-
+-In the collection progress
+- You can tap each category to go to its page
+-Custom time selector now defaults to the last chosen time
+-Added option for ToDo list to reset everyday at 5am
+-Added ToDo list menu
+-Improved drop down menu selection
+-Improved scrolling on profile and home screen
+-Fixed bug with scrolling and text input
 -
 -Added filter for cooking and crafting recipes
 -Fixed formatting on landscape/tablets

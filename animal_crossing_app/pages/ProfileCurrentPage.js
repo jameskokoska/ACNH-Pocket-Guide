@@ -40,7 +40,7 @@ export default class CreditsPage extends Component {
             <View style={{height: 20}}/>
           </HomeContentArea>
           <HomeContentArea backgroundColor={colors.sectionBackground2[global.darkMode]} accentColor={colors.collectionColor[global.darkMode]} title="Collection" titleColor={colors.collectionColor[global.darkModeReverse]}>
-            <CollectionProgress/>
+            <CollectionProgress setPage={this.props.setPage}/>
           </HomeContentArea>
           <View style={{height: 50}}/>
         </ScrollView>

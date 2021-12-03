@@ -6,7 +6,7 @@ import colors from "../Colors"
 class ProgressContainer extends Component {
   render(){
     var percentage = 10;
-    return(<>
+    return(<TouchableNativeFeedback onPress={()=>{this.props.setPage(this.props.page, true, this.props.tab)}} background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}>
       <View style={[styles.progressContainer,{backgroundColor:this.props.backgroundColor}]}>
         <View style={[styles.progressBar,{width:this.props.percentage+"%",backgroundColor:this.props.color}]}>
         </View>
@@ -15,7 +15,7 @@ class ProgressContainer extends Component {
           <TextFont style={{fontSize: 18, marginLeft: 10, color:this.props.textColor}}>{this.props.text}</TextFont>
         </View>
       </View>
-    </>
+    </TouchableNativeFeedback>
     )
   }
 }

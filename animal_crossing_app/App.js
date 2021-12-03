@@ -61,6 +61,7 @@ import { DownloadDatabase } from './components/DownloadDatabase';
 import BrowserPage from './pages/BrowserPage';
 import Toast from "react-native-toast-notifications";
 import TextFont from './components/TextFont';
+import { DefaultTheme, Provider } from 'react-native-paper';
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -457,9 +458,9 @@ class App extends Component {
       } else if (this.state.currentPage===1){
         currentPageView = <AllItemsPage setPage={this.setPage}/>
       } else if(this.state.currentPage===2){
-        currentPageView = <MuseumPage/>
+        currentPageView = <MuseumPage selectedTab={this.state.propsPassed}/>
       } else if (this.state.currentPage===3){
-        currentPageView = <ItemsPage/>
+        currentPageView = <ItemsPage selectedTab={this.state.propsPassed}/>
       } else if (this.state.currentPage===4){
         currentPageView = <SongsPage/>
       } else if (this.state.currentPage===5){
@@ -543,21 +544,36 @@ class App extends Component {
       const NavigatorCraftableItemsPage = ({route, navigation})=>{return <CraftableItemsPage material={route.params.propsPassed}/>}
       const NavigatorVillagerFurnitureParadisePlanning = ({route, navigation})=>{return <VillagerFurnitureParadisePlanning request={route.params.propsPassed}/>}
       const NavigatorBrowserPage = ({route, navigation})=>{return <BrowserPage page={route.params.propsPassed} languageMessage={"You can change the language at the bottom of the page, by tapping Language"} splashImage={require('./assets/icons/turnip.png')} splashText={"Turnip Prophet"} splashCredits={"By mikebryant"}/>}
+      console.log(global.darkMode)
+      let theme = {
+        ...DefaultTheme,
+        mode:"exact",
+        colors:{
+          background:"#00000000",
+          accent:"#00000000",
+          primary:"#00000000",
+          surface:"#00000000",
+          backdrop:"#00000000",
+          onSurface:"#00000000",
+        }
+      }
       return (
         <View style={{flex:1,backgroundColor: "#000000"}}>
           <Toast ref={(ref) => global['toast'] = ref} />
           <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage} sideMenuSections={this.sideMenuSections} sideMenuSectionsDisabled={this.sideMenuSectionsDisabled}>
-            <NavigationContainer ref={navigationRef} theme={{colors: {background: colors.background[global.darkMode],},}}>
-              <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
-                <Stack.Screen name="Home" component={NavigatorHomePage} />
-                <Stack.Screen name="20" component={NavigatorVillagerPresentsPage}/>
-                <Stack.Screen name="22" component={NavigatorVillagerFurniture}/>
-                <Stack.Screen name="23" component={NavigatorCustomFiltersPage}/>
-                <Stack.Screen name="34" component={NavigatorCraftableItemsPage}/>
-                <Stack.Screen name="36" component={NavigatorVillagerFurnitureParadisePlanning}/>
-                <Stack.Screen name="BrowserPage" component={NavigatorBrowserPage}/>
-              </Stack.Navigator>
-            </NavigationContainer>
+            <Provider theme={theme}>
+              <NavigationContainer ref={navigationRef} theme={{colors: {background: colors.background[global.darkMode],},}}>
+                <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
+                  <Stack.Screen name="Home" component={NavigatorHomePage} />
+                  <Stack.Screen name="20" component={NavigatorVillagerPresentsPage}/>
+                  <Stack.Screen name="22" component={NavigatorVillagerFurniture}/>
+                  <Stack.Screen name="23" component={NavigatorCustomFiltersPage}/>
+                  <Stack.Screen name="34" component={NavigatorCraftableItemsPage}/>
+                  <Stack.Screen name="36" component={NavigatorVillagerFurnitureParadisePlanning}/>
+                  <Stack.Screen name="BrowserPage" component={NavigatorBrowserPage}/>
+                </Stack.Navigator>
+              </NavigationContainer>
+            </Provider>
             <PopupInfos setPage={this.setPage}/>
           </SideMenu>
           <FABWrapper ref={(fab) => this.fab = fab} openDrawer={this.openDrawer}/>

@@ -13,6 +13,8 @@ import {SubHeader, Paragraph, HeaderNote, MailLink, Header} from "../components/
 import DropDownPicker from 'react-native-dropdown-picker'
 import {PopupBottomCustom} from "../components/Popup"
 import { dataVersion } from '../Changelog';
+import { DropdownMenu, DropdownMenuPicker } from '../components/Dropdown';
+import { getCurrentDateObject } from '../components/DateFunctions';
 
 class SettingsPage extends Component {
   constructor(props){
@@ -166,8 +168,8 @@ export class CustomDatePicker extends Component{
   constructor(props){
     super(props);
     this.state = {
-      date:new Date(),
-      time:new Date(),
+      date:getCurrentDateObject(),
+      time:getCurrentDateObject(),
       datePickerVisible: false,
       timePickerVisible: false,
     }
@@ -263,26 +265,19 @@ export class LanguagePicker extends Component{
       global.language = "English"
     }
     return(<>
-      <View style={{marginTop:10, marginBottom:8, marginHorizontal:20, justifyContent:"center"}}>
-        <DropDownPicker
+      <View style={{marginTop:5, marginBottom:8, marginHorizontal:20, justifyContent:"center"}}>
+        <DropdownMenu 
+          width={Dimensions.get('window').width-83}
+          selection={true}
           items={languages}
           defaultValue={global.language}
-          placeholder={"Select Language..."}
-          dropDownMaxHeight={300}
-          containerStyle={{height: 45}}
-          style={[{width:"100%", borderWidth: 0, backgroundColor: colors.lightDarkAccentHeavyBackground[global.darkMode], borderTopLeftRadius: 8, borderTopRightRadius: 8,borderBottomLeftRadius: 8, borderBottomRightRadius: 8}]}
-          itemStyle={{
-              justifyContent: 'flex-start'
-          }}
-          searchablePlaceholderTextColor={colors.filterSearch[global.darkMode]}
-          labelStyle={{fontFamily: "ArialRoundedBold", fontSize: 15, marginLeft:10, color:colors.textBlack[global.darkMode]}}
-          customTickIcon={()=><View/>}
-          activeItemStyle={{borderRadius: 10, backgroundColor: colors.lightDarkAccentHeavy[global.darkMode]}}
-          dropDownStyle={{borderBottomLeftRadius: 10, borderBottomRightRadius: 10, borderWidth: 0, backgroundColor: colors.lightDarkAccent2[global.darkMode], opacity: 0.98, }}
-          onChangeItem={async (item)=>{global.language=item.value, await AsyncStorage.setItem("Language", item.value); this.props.restartPopup(true)}}
-        />
+          onChangeItem={
+            async (item)=>{global.language=item.value, await AsyncStorage.setItem("Language", item.value); 
+          this.props.restartPopup(true)
+        }}/>
       </View>
       <HeaderNote>Translations only apply to game item names only, all other app content is in English. Some items may be missing translations. If you would like to help translate this app, feel free to reach out via email. </HeaderNote>
+      
     </>
     )
   }
