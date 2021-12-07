@@ -17,7 +17,7 @@ import colors from "../Colors";
 import BottomSheet from 'reanimated-bottom-sheet';
 import Animated from 'react-native-reanimated';
 import FadeInOut from "./FadeInOut"
-import { GiveSupport, MailLink } from "./Formattings";
+import { GiveSupport, HeaderNote, MailLink, SubHeader } from "./Formattings";
 import * as RootNavigation from '../RootNavigation.js';
 import { Appearance } from 'react-native-appearance';
 import LottieView from 'lottie-react-native';
@@ -99,11 +99,12 @@ class Popup extends Component {
           {(this.props.button1===undefined && this.props.button2===undefined) || this.props.noDismiss===true ? <View/> : <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} style={{position:"absolute", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: "black", opacity: 0.1}}/>}
           <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
             <TextFont bold={true} style={{fontSize: 25, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.props.text}</TextFont>
-            <ScrollView style={{maxHeight:Dimensions.get('window').height*0.75}}>
+            <ScrollView style={{maxHeight:Dimensions.get('window').height*0.75, marginTop:this.props.margin?10:0}}>
               {this.props.textLower===undefined?<View/>:<TextFont bold={false} style={{fontSize: 17, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.props.textLower}</TextFont>}
             </ScrollView>
             {this.props.mailLink?<View style={{marginVertical:10}}><MailLink/></View>:<View/>}
             {this.props.support?<View style={{marginVertical:10}}><GiveSupport/></View>:<View/>}
+            {this.props.support2?<View style={{marginVertical:10}}><HeaderNote style={{textAlign:'center'}}>If you already supported, thank you!!</HeaderNote></View>:<View/>}
             <View style={{flexDirection:"row", justifyContent:"center"}}>
               {this.Button2}
               {this.Button1}

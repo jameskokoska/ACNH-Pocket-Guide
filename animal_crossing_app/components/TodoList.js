@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Dimensions, Linking, TextInput, Vibration,TouchableNativeFeedback,TouchableOpacity,StyleSheet, Text, View, Image} from 'react-native';
 import TextFont from './TextFont';
 import {addHours, getCurrentDateObject, getDateStringMonthDay, getMonth, getWeekDayShort} from './DateFunctions';
-import {getStorage, checkOff, capitalize, commas, removeBrackets} from "../LoadJsonData"
+import {getStorage, checkOff, capitalize, commas, removeBrackets, attemptToTranslateSpecial} from "../LoadJsonData"
 import {getPhoto} from "./GetPhoto"
 import Check from './Check';
 import colors from '../Colors'
@@ -15,6 +15,7 @@ import Popup, {PopupInfoCustom} from "./Popup"
 import ButtonComponent from "./ButtonComponent";
 import * as RootNavigation from '../RootNavigation.js';
 import { DropdownMenu } from './Dropdown';
+import FadeInOut from './FadeInOut';
 
 export class TodoList extends Component {
   constructor(props){
@@ -55,6 +56,10 @@ export class TodoList extends Component {
     var showVillagersTalkList = (await getStorage("showVillagersTalkList","false"))==="true";
     var storageData = JSON.parse(await getStorage("ToDoList"+global.profile,JSON.stringify(defaultList)));
     var resetEachDay = (await getStorage("resetEachDay","false"))==="true";
+    if(showVillagersTalkList){
+      storageData = [...storageData, ...this.populateDataWithNewVillagers(storageData)];
+      await this.saveList(storageData);
+    }
     if(this.mounted){
       this.setState({data:storageData,showVillagersTalkList:showVillagersTalkList, resetEachDay: resetEachDay});
     }
@@ -79,6 +84,27 @@ export class TodoList extends Component {
     for(var i = 0; i<currentVillagers.length; i++){
       currentVillager = {villagerChecklist: true, title: attemptToTranslate("Talk to") + " " + attemptToTranslate(currentVillagers[i]["Name"], true), finished: false, picture: currentVillagers[i]["Icon Image"], small:true}
       data.push(currentVillager)
+    }
+    return data;
+  }
+
+  populateDataWithNewVillagers = (currentData) => {
+    var currentVillagers = getCurrentVillagerObjects();
+    var data = [];
+    var currentVillager = {}
+
+    for(var i = 0; i<currentVillagers.length; i++){
+      currentVillager = {villagerChecklist: true, title: attemptToTranslate("Talk to") + " " + attemptToTranslateSpecial(currentVillagers[i]["Name"],"villagers"), finished: false, picture: currentVillagers[i]["Icon Image"], small:true}
+      let found = false
+      for(var j = 0; j<currentData.length; j++){
+        if(currentData[j]["picture"]===currentVillagers[i]["Icon Image"]){
+          found = true
+          break;
+        }
+      }
+      if(!found){
+        data.push(currentVillager)
+      }
     }
     return data;
   }
@@ -236,7 +262,18 @@ export class TodoList extends Component {
       <View style={{alignItems: 'center'}}>
         <View style={{paddingTop:0, marginHorizontal: 0, flex: 1, flexDirection: 'row', justifyContent:'center',flexWrap:"wrap"}}>
           {this.state.data.map( (item, index)=>{
-            if(item.small){
+            if(this.state.showEdit){
+              return <TodoItemEdit
+                key={item+index.toString()}
+                item={item}
+                index={index}
+                checkOffItem={this.checkOffItem}
+                deleteItem={this.deleteItem}
+                reorderItem={this.reorderItem}
+                showEdit={this.state.showEdit}
+                editTask={()=>{this.popupAddTask?.setPopupVisible(true, item, index);}}
+              />
+            }else if(item.small){
               return(
                 <TodoItemSmall
                   key={item+index.toString()}
@@ -276,7 +313,11 @@ export class TodoList extends Component {
       </>:<View/>}
       <TouchableOpacity style={{marginTop:5, padding:12, alignSelf: 'center'}} 
         onPress={()=>{
-          this.toggleVillagerTalk(); 
+          if(this.state.showVillagersTalkList){
+            this.popupRemoveTalkVillagers.setPopupVisible(true)
+          }else{
+            this.toggleVillagerTalk(); 
+          }
       }}>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{this.state.showVillagersTalkList ? "Hide talk to villagers list" : "Show talk to villagers list"}</TextFont>
       </TouchableOpacity>
@@ -286,6 +327,7 @@ export class TodoList extends Component {
           <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, textAlign:"center"}}>{"Tap here and go add some!"}</TextFont>
         </TouchableOpacity>
       </PopupInfoCustom>
+      <Popup ref={(popupRemoveTalkVillagers) => this.popupRemoveTalkVillagers = popupRemoveTalkVillagers} text={attemptToTranslate("Hide talk to villagers list")+"?"} button1={"Cancel"} button1Action={()=>{}} button2={"Yes"} button2Action={()=>{this.toggleVillagerTalk()}}/>
       <Popup ref={(popupDeleteToDo) => this.popupDeleteToDo = popupDeleteToDo} text="Delete?" textLower={this.state.data[this.state.deleteIndex]?.title} button1={"Cancel"} button1Action={()=>{}} button2={"Delete"} button2Action={()=>{this.deleteItemGo()}}/>
     </>
   }
@@ -684,6 +726,93 @@ class TodoItemSmall extends Component {
         </TouchableOpacity>
         {this.props.item.title==="" ? <View/> : <TextFont translate={false} numberOfLines={2} bold={false} style={{width: 60, marginTop: 3, color: colors.textBlack[global.darkMode], fontSize: 12, textAlign:"center"}}>{this.props.item.title}</TextFont>}
       </View>
+    )
+  }
+}
+
+class TodoItemEdit extends Component {
+  constructor(){
+    super()
+    this.state={fadeRefresh:true}
+  }
+  removeButton = (props)=>{
+    if(props.showEdit)
+      return(<>
+        <View style={{flexDirection:"row",left:-10, top:-5,position:'absolute',zIndex:10, }}>
+          <TouchableOpacity style={{padding:9}} 
+            onPress={()=>{
+              props.deleteItem(props.index); 
+          }}>
+            <Image source={require("../assets/icons/deleteIcon.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
+          </TouchableOpacity>
+        </View>
+      </>)
+    else
+      return(
+        <View/>
+      )
+  }
+  componentDidUpdate(prevProps){
+    if(this.props.item.key!==prevProps.item.key){
+      console.log("change")
+      this.setState({fadeRefresh:false})
+      console.log("fadeOut")
+      setTimeout(() => {
+        this.setState({fadeRefresh:true})
+        console.log("fadeIn")
+      }, 150);
+    }
+  }
+  render(){
+    var imageComp = <View/>
+    if(this.props.item.picture.startsWith("http")){
+      imageComp = <FastImage
+        style={{height: 45,width: 45,resizeMode:'contain',}}
+        source={{uri:this.props.item.picture}}
+        cacheKey={this.props.item.picture}
+      />
+    } else {
+      imageComp = <Image
+        style={{height: 35,width: 35,resizeMode:'contain',}}
+        source={getPhoto(this.props.item.picture)}
+      />
+    }
+    return (
+      <FadeInOut fadeIn={this.state.fadeRefresh} duration={200}>
+        <View style={{width: Dimensions.get('window').width-20*2}}>
+          {this.removeButton(this.props)}
+            <View style={[styles.row,{backgroundColor:colors.eventBackground[global.darkMode]}]}>
+              <View style={[styles.rowImageBackground,{backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
+                {imageComp}
+              </View>
+              <View style={styles.rowTextTop}>
+                <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:20, color:colors.textBlack[global.darkMode]}}>{this.props.item.title}</TextFont>
+              </View>
+              <View style={{flexDirection:"column",zIndex:10, position:"absolute",right:10}}>
+                <TouchableOpacity style={{padding:4, paddingTop:10}} 
+                  onPress={()=>{
+                    this.props.reorderItem(this.props.index, -1); 
+                }}>
+                  <Image source={require("../assets/icons/upArrow.png")} style={{opacity:0.5,width:25, height:25, borderRadius:100,}}/>
+                </TouchableOpacity>
+                <TouchableOpacity style={{padding:4, paddingBottom:10}} 
+                  onPress={()=>{
+                    this.props.reorderItem(this.props.index, 1); 
+                }}>
+                  <Image source={require("../assets/icons/downArrow.png")} style={{opacity:0.5,width:25, height:25, borderRadius:100,}}/>
+                </TouchableOpacity>
+              </View>
+              <View style={{position:'absolute',zIndex:10, right:35}}>
+                <TouchableOpacity style={{padding:9}} 
+                  onPress={()=>{
+                    this.props.editTask(); 
+                }}>
+                  <Image source={require("../assets/icons/pencil.png")} style={{opacity:0.5,width:25, height:25, borderRadius:100,}}/>
+                </TouchableOpacity>
+              </View>
+            </View>
+        </View>
+      </FadeInOut>
     )
   }
 }

@@ -1,7 +1,11 @@
 import React, {Component} from 'react';
 import {View} from 'react-native';
 import {SizeInfo, InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
+import ButtonComponent from '../components/ButtonComponent';
+import { anythingCraftable } from '../LoadJsonData';
 import ViewRecipeButton from './ViewRecipeComponent';
+import colors from "../Colors"
+import * as RootNavigation from '../RootNavigation.js';
 
 class FoodPopup extends Component {
   constructor(props){
@@ -52,6 +56,14 @@ class FoodPopup extends Component {
         item={this.props.item}
         textProperty={["Source Notes"]}
       />
+      {anythingCraftable(this.props.item["Name"])?<ButtonComponent
+        text={"View Craftable Items"}
+        color={colors.okButton[global.darkMode]}
+        vibrate={5}
+        onPress={() => {
+          // this.props.setPage(22, true, this.props.item)
+          RootNavigation.navigate('34', {propsPassed:this.props.item});
+      }}/>:<View/>}
       <ViewRecipeButton item={this.props.item}/>
     </View>
   }

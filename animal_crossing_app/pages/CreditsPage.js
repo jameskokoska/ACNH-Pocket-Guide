@@ -83,6 +83,7 @@ class CreditsPage extends Component {
             <SubHeader> Fataky</SubHeader>
             <SubHeader> Trevor Kenny</SubHeader>
             <SubHeader> Altaria175</SubHeader>
+            <SubHeader> Rebecca H.</SubHeader>
           </View>
           <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
             <SubHeader style={{marginBottom:5}}>{attemptToTranslate("Russian") + ":"}</SubHeader>

@@ -586,18 +586,23 @@ class App extends Component {
 class PopupInfos extends Component {
   async componentDidMount(){
     const numLogins = parseInt(await getStorage("numLogins","0"))+1;
+    // let backupPopupDismissed = await getStorage("backupPopupDismissed","false");
     let backupPopupDismissed = await getStorage("backupPopupDismissed","false");
-    // let updatePopupDismissed = await getStorage("updatePopupDismissed","false");
     if(backupPopupDismissed==="false" && numLogins >= 12){
       AsyncStorage.setItem("backupPopupDismissed", "true");
       this.popupBackup?.setPopupVisible(true)
     }
-    let supportPopupDismissed = await getStorage("supportPopupDismissed","false");
-    // let updatePopupDismissed = await getStorage("updatePopupDismissed","false");
-    if(supportPopupDismissed==="false" && numLogins >= 6){
-      AsyncStorage.setItem("supportPopupDismissed", "true");
-      this.popupSupport?.setPopupVisible(true)
+    // let supportPopupDismissed = await getStorage("supportPopupDismissed","false");
+    // if(supportPopupDismissed==="false" && numLogins >= 6){
+    //   AsyncStorage.setItem("supportPopupDismissed", "true");
+    //   this.popupSupport?.setPopupVisible(true)
+    // }
+    let supportPopupDismissed2 = await getStorage("supportPopupDismissed2","false");
+    if(supportPopupDismissed2==="false" && numLogins >= 5){
+      AsyncStorage.setItem("supportPopupDismissed2", "true");
+      this.popupSupport2?.setPopupVisible(true)
     }
+    // let updatePopupDismissed = await getStorage("updatePopupDismissed","false");
     // if(updatePopupDismissed==="false" && numLogins >= 1){
     //   AsyncStorage.setItem("updatePopupDismissed", "true");
     //   this.popupUpdate?.setPopupVisible(true)
@@ -614,6 +619,7 @@ class PopupInfos extends Component {
       <PopupRating ref={(popupRating) => this.popupRating = popupRating}/>
       <Popup mailLink={true} ref={(popupBackup) => this.popupBackup = popupBackup} text="Data Backup" textLower="You can now backup your data to the cloud and enable auto backups in the settings." button1={"Go to page"} button1Action={()=>{this.props.setPage(30)}} button2={"Cancel"} button2Action={()=>{}}/>
       <Popup support={true} noDismiss ref={(popupSupport) => this.popupSupport = popupSupport} text="Leave a Tip" button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
+      <Popup margin support2={true} noDismiss ref={(popupSupport2) => this.popupSupport2 = popupSupport2} text="Support the App" textLower={attemptToTranslate("Consider leaving a tip to keep the app ad free for all") + " 😊"} button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
     </>
   }
 }

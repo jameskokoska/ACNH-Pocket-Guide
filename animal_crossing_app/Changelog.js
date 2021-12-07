@@ -5,6 +5,19 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -Thank you everyone for the support and tips, I appreciate it!
 -
+-Renamed Emoticons to Reactions
+-Fixed sidebar menu buttons
+-Avoid spoilers will show image when at least one variation collected
+-Improved reordering of ToDo list - when using Edit List
+-ToDo list adds new villagers to your list automatically
+-ToDo list asks before hiding talk to villagers list
+-Fixed translations for villager names on ToDo list
+-Updated translations
+-Added View Craftable recipes for materials such as flour, sugar etc
+-Made view spoiler warning smaller on header
+-Added category info to item popups (housewares, ceiling decor, tops, hats etc.)
+-Fixed keyboard resizing elements on Android
+-
 -In the collection progress
 - You can tap each category to go to its page
 -Custom time selector now defaults to the last chosen time
@@ -30,10 +43,10 @@ export const changelog = `
 -Decreased header height
 -Recipe ingredients now in separated box
 -Fixed status bar on some phones
--
 -Added reset password button on Backup page
 -Updated translations
--More changes coming soon!
+-
+-Past changes:
 -
 -Header fades in better when loaded
 -Fixed translations for villagers birthdays
@@ -118,8 +131,6 @@ export const changelog = `
 -Added Umbrella to Villager's Furniture page
 -Added Song to Villager's Furniture page
 -Improved the About page
--
--Past changes:
 -
 -Added more ToDo list icons
 -Updated visitor icons

@@ -4,9 +4,10 @@ import {Dimensions, Image, View, Text} from 'react-native';
 import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
 import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"
-import ButtonComponent from '../components/ButtonComponent';
 import * as RootNavigation from '../RootNavigation.js';
 import { anythingCraftable } from '../LoadJsonData';
+import ViewRecipeButton from './ViewRecipeComponent';
+import ButtonComponent from '../components/ButtonComponent';
 
 class MaterialsPopup extends Component {
   constructor(props){

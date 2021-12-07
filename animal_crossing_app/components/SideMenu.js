@@ -227,7 +227,7 @@ export const sideSections = [
   {
     "pageNum" : 5,
     "picture" : require("../assets/icons/emote.png"),
-    "displayName" : "Emoticons",
+    "displayName" : "Reactions",
     "color": "selectEmotes",
   },
   {

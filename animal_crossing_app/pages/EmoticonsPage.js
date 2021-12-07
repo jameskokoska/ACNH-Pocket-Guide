@@ -10,7 +10,7 @@ class EmoticonsPage extends Component {
     return(
         <ListPage 
           disablePopup={[true]}
-          title={this.props.title===undefined?"Emoticons":this.props.title}
+          title={this.props.title===undefined?"Reactions":this.props.title}
           extraInfo={this.props.extraInfo===undefined?"":this.props.extraInfo}
           appBarColor={this.props.appBarColor===undefined?colors.emojipediaAppBar[global.darkMode]:this.props.appBarColor}
           accentColor={this.props.accentColor===undefined?colors.emojipediaAccent[global.darkMode]:this.props.accentColor}

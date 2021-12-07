@@ -240,7 +240,7 @@ class ListItem extends React.Component{
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
               <CheckVillagerPhoto showVillagerPhotoButton={this.showVillagerPhotoButton} setCollected={this.setCollected} collected={this.state.collected} setVillagerPhoto={this.setVillagerPhoto} item={this.props.item} villager={this.state.villagerPhoto} villagerPage={this.checkVillagerPhotoButton()}/>
               {this.state.wishlist? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7 + ((this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]!=="" && this.props.textProperty2[this.props.item.dataSet]==="(DIY)")?2:0), top: 7 + ((this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]!=="" && this.props.textProperty2[this.props.item.dataSet]==="(DIY)")?33:0), zIndex:10,}}/> : <View/>}
-              { (!this.props.avoidSpoilers||this.state.collected)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].startsWith("http") ? 
+              { (!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].startsWith("http") ? 
                 <FastImage
                   style={styles.gridBoxImage}
                   source={{
@@ -285,7 +285,7 @@ class ListItem extends React.Component{
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
               {this.state.wishlist ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
-              { (!this.props.avoidSpoilers||this.state.collected)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].startsWith("http") ? 
+              { (!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].startsWith("http") ? 
                 <FastImage
                   style={styles.gridBoxImageLarge}
                   source={{
@@ -341,7 +341,7 @@ class ListItem extends React.Component{
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
               {this.state.wishlist===true ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
-              {(!this.props.avoidSpoilers||this.state.collected)?<FastImage
+              {(!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected)?<FastImage
                 style={styles.gridBoxImageLargeSmaller}
                 source={{
                   uri: imageSrc,
@@ -380,7 +380,7 @@ class ListItem extends React.Component{
             <View style={[styles.row,{backgroundColor:boxColor}]}>
               {this.state.wishlist ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', right:7, top: 7, zIndex:10,}}/> : <View/>}
               <View style={[styles.rowImageBackground,{backgroundColor:this.props.accentColor}]}>
-                {(!this.props.avoidSpoilers||this.state.collected)?<FastImage
+                {(!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected)?<FastImage
                   style={styles.rowImage}
                   source={{
                     uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],

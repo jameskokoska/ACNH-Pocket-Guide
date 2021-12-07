@@ -67,6 +67,11 @@ class ClothingPopup extends Component {
         item={this.props.item}
         textProperty={["Source Notes"]}
       />
+      <InfoLine
+        image={require("../assets/icons/scroll.png")} 
+        item={this.props.item}
+        textProperty={["Data Category"]}
+      />
       <VillagersGifts item={this.props.item}/>
       <ViewRecipeButton item={this.props.item}/>
     </View>

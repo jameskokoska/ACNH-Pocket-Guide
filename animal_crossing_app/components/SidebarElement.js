@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import TextFont from './TextFont'
 import {getSettingsString} from "../LoadJsonData"
+import colors from '../Colors.js';
 
 class SidebarElement extends Component {
  
@@ -72,18 +73,20 @@ class SidebarElement extends Component {
     if(this.props.editMode || !this.props.disabled){
       return (
         <>
-          <TouchableNativeFeedback onPress={() => {
-            if(this.props.editMode && !this.props.cannotDisable){
-              this.props.editSections(this.props.title); 
-            } else {
-              getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(15) : ""; this.props.setPage(this.props.pageNum);
-            }
+          <TouchableNativeFeedback 
+            background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode], false)}
+            onPress={() => {
+              if(this.props.editMode && !this.props.cannotDisable){
+                this.props.editSections(this.props.title); 
+              } else {
+                getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(15) : ""; this.props.setPage(this.props.pageNum);
+              }
           }}>
             <View style={[styles.sidebarBox, {opacity:this.props.disabled?0.7:1,backgroundColor: backgroundColor,elevation: elevation}]}>
               {!this.props.disabled?removeButton:addButton}
               {changeOrderButtons}
               <Image style={styles.sidebarImage} source={this.props.image}/>
-              <TextFont bold={true} style={[styles.sidebarTitle,{color:this.props.textColor}]}>{this.props.title}</TextFont>
+              <TextFont bold={true} style={[styles.sidebarTitle,{color:this.props.textColor}]}>{this.props.title==="Emoticons"?"Reactions":this.props.title}</TextFont>
             </View>
           </TouchableNativeFeedback>
         </>

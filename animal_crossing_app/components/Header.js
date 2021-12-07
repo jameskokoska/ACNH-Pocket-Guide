@@ -46,7 +46,7 @@ const Header = (props) => {
               {props.customHeader}
               {props.subHeader!==undefined&&props.subHeader!=="" ? <TextFont numberOfLines={4} style={[styles.title, {paddingBottom:5, marginTop: -5, fontSize: 13, color: props.titleColor}]}>{props.subHeader}</TextFont> : <View/>}
               {props.subHeader2!==undefined&&props.subHeader2!=="" ? <TextFont numberOfLines={4} style={[styles.title, {paddingBottom:5, marginTop: -10, fontSize: 13, color: props.titleColor}]}>{props.subHeader2}</TextFont> : <View/>}
-              {getSettingsString("settingsHideImages")==="true"?<TextFont numberOfLines={4} style={[styles.title, {paddingBottom:5, marginTop: -5, fontSize: 13, color: props.titleColor}]}>{"Note: You have images hidden to avoid spoilers. Disable this in the Settings page to view all images."}</TextFont>:<View/>}
+              {getSettingsString("settingsHideImages")==="true"?<TextFont numberOfLines={4} style={[styles.title, {paddingBottom:3, marginTop: -7, fontSize: 8, color: props.titleColor}]}>{"Note: You have images hidden to avoid spoilers. Disable this in the Settings page to view all images."}</TextFont>:<View/>}
             </FadeInOut>
             {!props.disableSearch ? <View style={{flexDirection: 'row'}}>
               <View style={[styles.searchBox, {backgroundColor:props.searchBarColor}]}>
