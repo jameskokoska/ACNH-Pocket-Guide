@@ -5,6 +5,8 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -Thank you everyone for the support and tips, I appreciate it!
 -
+-Hot fix: Fixed Reaction page filters
+-
 -Renamed Emoticons to Reactions
 -Fixed sidebar menu buttons
 -Avoid spoilers will show image when at least one variation collected

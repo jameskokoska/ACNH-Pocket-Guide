@@ -754,12 +754,9 @@ class TodoItemEdit extends Component {
   }
   componentDidUpdate(prevProps){
     if(this.props.item.key!==prevProps.item.key){
-      console.log("change")
       this.setState({fadeRefresh:false})
-      console.log("fadeOut")
       setTimeout(() => {
         this.setState({fadeRefresh:true})
-        console.log("fadeIn")
       }, 150);
     }
   }
@@ -778,7 +775,7 @@ class TodoItemEdit extends Component {
       />
     }
     return (
-      <FadeInOut fadeIn={this.state.fadeRefresh} duration={200}>
+      <FadeInOut fadeIn={this.state.fadeRefresh} duration={150}>
         <View style={{width: Dimensions.get('window').width-20*2}}>
           {this.removeButton(this.props)}
             <View style={[styles.row,{backgroundColor:colors.eventBackground[global.darkMode]}]}>

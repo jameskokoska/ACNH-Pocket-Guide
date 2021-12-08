@@ -163,7 +163,7 @@ class PopupFilter extends Component {
         "children": [{"name":"Floors","id":"Data Category:Floors"},{"name":"Rugs","id":"Data Category:Rugs"},{"name":"Wallpaper","id":"Data Category:Wallpaper"}]
       }]
       this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...categories, ...filterDefinitions["Floor & Walls"]];
-    } else if(this.props.title==="Emoticons"){
+    } else if(this.props.title==="Reactions"){
       this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...filterDefinitions["Reactions"]];
     } else if(this.props.title==="Recipes"){
       const categories = [{
