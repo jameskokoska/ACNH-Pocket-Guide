@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, Linking, ScrollView, View,} from 'react-native';
+import {Button, Linking, ScrollView, View, Image} from 'react-native';
 import TextFont from '../components/TextFont'
 import StoreHoursContainer from '../components/StoreHoursContainer';
 import colors from '../Colors'
@@ -30,22 +30,19 @@ class CreditsPage extends Component {
           <View style={{height: 100}}/>
           <Header>Credits</Header>
           <View style={{height: 20}}/>
-          <StoreHoursContainer backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} image={require("../assets/icons/James.png")} text="James" textBottom="Lead Programmer"/>
-          <StoreHoursContainer backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} image={require("../assets/icons/Ryan.png")} text="Ryan" textBottom="Lead Graphics"/>
+          <CreditImageContainer image={require("../assets/icons/James.png")} text="James" textBottom="Lead Programmer"/>
+          <CreditImageContainer image={require("../assets/icons/Ryan.png")} text="Ryan" textBottom="Lead Graphics"/>
           <View style={{height: 20}}/>
           <SubHeader style={{fontSize: 24}}>Gold Supporters</SubHeader>
           <Paragraph style={{marginBottom:6, marginTop:2}}>{attemptToTranslate("Thanks for your support!")}</Paragraph>
-          <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
-            <SubHeader>DeadlySweetz</SubHeader>
-          </View>
+          <CreditTextBox text="DeadlySweetz"/>
+          <CreditImageContainer image={require("../assets/icons/Frank.png")} text="Frank S." textBottom="Gold Supporter"/>
           <View style={{height:12}}/>
           <SubHeader style={{fontSize: 24}}>Silver Supporters</SubHeader>
           <Paragraph style={{marginBottom:6, marginTop:2}}>{attemptToTranslate("Thanks for your support!")}</Paragraph>
-          <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
-            <SubHeader>Nigerski</SubHeader>
-            <SubHeader>Christina</SubHeader>
-            <SubHeader>NoLNoodle</SubHeader>
-          </View>
+          <CreditTextBox text="Nigerski"/>
+          <CreditTextBox text="Christina J."/>
+          <CreditTextBox text="NoLNoodle"/>
           <View style={{height: 5}}/>
           <View style={{paddingHorizontal: 20}}>
             <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.popupSupport?.setPopupVisible(true)}} text={"Leave a tip"} />
@@ -60,12 +57,12 @@ class CreditsPage extends Component {
           <SubHeader>Volunteer Translators</SubHeader>
           <Paragraph>{attemptToTranslate("Thanks for your help!")}</Paragraph>
           <View style={{height: 10}}/>
-          <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
+          <CreditBox>
             <SubHeader style={{marginBottom:5}}>{attemptToTranslate("French") + ":"}</SubHeader>
             <SubHeader> Christophe Laffitte</SubHeader>
             <SubHeader> Rose Cornette-Lafable</SubHeader>
-          </View>
-          <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
+          </CreditBox>
+          <CreditBox>
             <SubHeader style={{marginBottom:5}}>{attemptToTranslate("Spanish") + ":"}</SubHeader>
             <SubHeader> adrisniper7</SubHeader>
             <SubHeader> Vicente Soldevilla</SubHeader>
@@ -74,8 +71,8 @@ class CreditsPage extends Component {
             <SubHeader> Jorge Abraham</SubHeader>
             <SubHeader> Lizbeth Salazar Zetina</SubHeader>
             <SubHeader> SakerMaker</SubHeader>
-          </View>
-          <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
+          </CreditBox>
+          <CreditBox>
             <SubHeader style={{marginBottom:5}}>{attemptToTranslate("German") + ":"}</SubHeader>
             <SubHeader> Ännchen</SubHeader>
             <SubHeader> Andy S.</SubHeader>
@@ -84,29 +81,29 @@ class CreditsPage extends Component {
             <SubHeader> Trevor Kenny</SubHeader>
             <SubHeader> Altaria175</SubHeader>
             <SubHeader> Rebecca H.</SubHeader>
-          </View>
-          <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
+          </CreditBox>
+          <CreditBox>
             <SubHeader style={{marginBottom:5}}>{attemptToTranslate("Russian") + ":"}</SubHeader>
             <SubHeader> Alex Karpsson</SubHeader>
             <SubHeader> Yura Menschikov</SubHeader>
-          </View>
-          <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
+          </CreditBox>
+          <CreditBox>
             <SubHeader style={{marginBottom:5}}>{attemptToTranslate("Italian") + ":"}</SubHeader>
             <SubHeader> Lyndsie</SubHeader>
             <SubHeader> Ilaria Caiazzo</SubHeader>
             <SubHeader> Filip Gavran</SubHeader>
             <SubHeader> Martina Previtera</SubHeader>
-          </View>
-          <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
+          </CreditBox>
+          <CreditBox>
             <SubHeader style={{marginBottom:5}}>{attemptToTranslate("Portuguese") + ":"}</SubHeader>
             <SubHeader> Erick Trigueiro</SubHeader>
-          </View>
-          <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
+          </CreditBox>
+          <CreditBox>
             <SubHeader style={{marginBottom:5}}>{attemptToTranslate("Dutch") + ":"}</SubHeader>
             <SubHeader> Anonymous</SubHeader>
             <SubHeader> MarvelousBi</SubHeader>
             <SubHeader> Annelie</SubHeader>
-          </View>
+          </CreditBox>
           
           {/* <PopupTip show={this.state.show2} noShow={()=>{this.setState({show2:false})}}/>
           <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.setState({show2:true})}} text={"Give a tip"} /> */}
@@ -162,3 +159,31 @@ class CreditsPage extends Component {
   }
 }
 export default CreditsPage;
+
+class CreditImageContainer extends Component{
+  render(){
+    return <View style={{backgroundColor:colors.white[global.darkMode], borderRadius: 10, flexDirection:"row", paddingHorizontal:30, paddingRight:20, paddingVertical: 20, marginHorizontal:20, marginVertical: 5}}>
+      <Image style={{width:70, height:70,resizeMode:'contain',}} source={this.props.image}/>
+      <View style={{flex:1, marginLeft:30, justifyContent:'center'}}>
+        <TextFont bold={true} style={{color:colors.textBlack[global.darkMode], fontSize: 23}}>{this.props.text}</TextFont>
+        {this.props.textBottom?<TextFont style={{color:colors.textBlack[global.darkMode], fontSize: 17}}>{this.props.textBottom}</TextFont>:<View/>}
+      </View>
+    </View>
+  }
+}
+
+class CreditTextBox extends Component{
+  render(){
+    return <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 15, paddingRight: 10, marginHorizontal: 20, marginVertical: 4,  borderRadius: 10}}>
+      <SubHeader>{this.props.text}</SubHeader>
+    </View>
+  }
+}
+
+class CreditBox extends Component{
+  render(){
+    return <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
+      {this.props.children}
+    </View>
+  }
+}
