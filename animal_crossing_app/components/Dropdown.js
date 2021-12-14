@@ -32,6 +32,12 @@ export class DropdownMenu extends Component {
     this.setState({canOpen:true});
   }, timeout);
 
+  componentDidUpdate(prevProps){
+    if(this.state.selectedTitle==="" && this.props.defaultValue!==undefined && prevProps.defaultValue===undefined){
+      this.setState({selectedTitle: getLabelFromValue(this.props.items, this.props.defaultValue)})
+    }
+  }
+
   render(){
     let button = <></>
     if(this.props.selection===true){

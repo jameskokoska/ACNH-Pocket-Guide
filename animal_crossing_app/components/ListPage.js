@@ -673,11 +673,36 @@ function ListPage(props){
               } else if(a[propertyToSort]===undefined){
                 valueA="aaaaaaaaaaa"
               }
-              var valueB = b[propertyToSort]
+
+              var valueB = b[propertyToSort]              
               if(b[propertyToSort]===undefined && !shouldSortDirection){
                 valueB="zzzzzzzzzzz"
               } else if(b[propertyToSort]===undefined){
                 valueB="aaaaaaaaaaa"
+              }
+
+              //Fix birthday sorting
+              if(searchActual[sort]==="Sort-Birthday"){
+                let part1 = valueA.split("/")[0];
+                let part2 = valueA.split("/")[1];
+                if(valueA.split("/")[0].length===1){
+                  part1 = "0"+valueA.split("/")[0]
+                }
+                if(valueA.split("/")[1].length===1){
+                  part2 = "0"+valueA.split("/")[1]
+                }
+                valueA = part1+"/"+part2
+              }
+              if(searchActual[sort]==="Sort-Birthday"){
+                let part1 = valueB.split("/")[0];
+                let part2 = valueB.split("/")[1];
+                if(valueB.split("/")[0].length===1){
+                  part1 = "0"+valueB.split("/")[0]
+                }
+                if(valueB.split("/")[1].length===1){
+                  part2 = "0"+valueB.split("/")[1]
+                }
+                valueB = part1+"/"+part2
               }
               
               var textA = valueA;

@@ -5,6 +5,9 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -Thank you everyone for the support and tips, I appreciate it!
 -
+-Fix for turnip log not remembering 'last week's pattern' and 'first time buyer'
+-Can sort villagers by birthdays (in villager page)
+-
 -Updated About page
 -Hot fix: Fixed Reaction page filters
 -

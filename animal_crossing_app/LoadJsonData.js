@@ -1370,9 +1370,9 @@ export function determineCustomizationString(item){
     if(canCustomize.length===0){
       return capitalizeFirst(attemptToTranslate("cannot be customized yourself"))
     }else if(canCustomize.length>1){
-      return capitalizeFirst(attemptToTranslate(canCustomize[0]) + " " +  "and" + " " +  attemptToTranslate(canCustomize[1]) + " " +  attemptToTranslate("can be customized"))
+      return capitalizeFirst(attemptToTranslate(canCustomize[0]) + " " +  "and" + " " +  attemptToTranslate(canCustomize[1]) + " " +  attemptToTranslate("can be customized with Customization Kits"))
     }else{
-      return capitalizeFirst(attemptToTranslate(canCustomize[0]) + " " + attemptToTranslate("can be customized"))
+      return capitalizeFirst(attemptToTranslate(canCustomize[0]) + " " + attemptToTranslate("can be customized with Customization Kits"))
     }
   } else {
     return ""

@@ -338,8 +338,6 @@ export class TurnipLog extends Component {
     super(props);
     this.state = {
       data: [],
-      lastPattern:"-1",
-      firstTime: "false",
     }
     this.turnipLink = "https://turnipprophet.io/";
     this.loadList();

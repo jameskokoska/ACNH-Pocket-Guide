@@ -695,7 +695,7 @@
             "Russian": "Рецепты + Инструменты",
             "Italian": "Ricette + Strumenti",
             "Dutch": "DIY's en gereedschappen",
-            "Chinese": "食谱+工具",
+            "Chinese": "DIY手册+",
             "Portuguese": "Receitas + Ferramentas"
         },
         {
@@ -2291,7 +2291,7 @@
             "Russian": "Рецепты",
             "Italian": "Ricette",
             "Dutch": "DIY's",
-            "Chinese": "食谱或图纸",
+            "Chinese": "DIY手册+",
             "Portuguese": "Receitas"
         },
         {
@@ -2305,7 +2305,7 @@
             "Russian": "Рецепты (DIYs)",
             "Italian": "Ricette (DIYs)",
             "Dutch": "DIY's",
-            "Chinese": "食谱或图纸（DIY）"
+            "Chinese": "DIY手册+"
         },
         {
             "English": "Tools",
@@ -4861,7 +4861,7 @@
             "Spanish (US)": "Malhumorado",
             "Russian": "Капризный",
             "Italian": "Bisbetico",
-            "Chinese": "暴躁的",
+            "Chinese": "暴躁",
             "Portuguese": "Cranky"
         },
         {
@@ -10259,8 +10259,8 @@
             "Portuguese": "e"
         },
         {
-            "English": "can be customized",
-            "English (Europe)": "can be customized",
+            "English": "can be customized with Customization Kits",
+            "English (Europe)": "can be customized with Customization Kits",
             "French": "Peut être personnalisé",
             "French (US)": "Peut être personnalisé",
             "German": "kann angepasst werden",
@@ -17463,12 +17463,12 @@
             "English (Europe)": "904 items (9 items missing)",
             "French": "821 items (92 items missing)",
             "French (US)": "817 items (96 items missing)",
-            "German": "821 items (92 items missing)",
+            "German": "899 items (14 items missing)",
             "Spanish": "105 items (808 items missing)",
             "Spanish (US)": "0 items (913 items missing)",
             "Italian": "0 items (913 items missing)",
             "Dutch": "249 items (664 items missing)",
-            "Chinese": "0 items (913 items missing)",
+            "Chinese": "74 items (839 items missing)",
             "Chinese (Traditional)": "0 items (913 items missing)",
             "Japanese": "0 items (913 items missing)",
             "Korean": "0 items (913 items missing)",
@@ -17482,7 +17482,8 @@
             "French (US)": "(island name) Miles de bienvenue !",
             "German": "(Inselname) in Sicht!",
             "Spanish": "Millas Nook de Bienvenida",
-            "Dutch": "(Eilandnaam)miles"
+            "Dutch": "(Eilandnaam)miles",
+            "Chinese": "欢迎来到(island name)岛！"
         },
         {
             "English": "Angling for Perfection!",
@@ -17491,7 +17492,8 @@
             "French (US)": "Pêcheur sachant pêcher",
             "German": "Angelmeister",
             "Spanish": "Toda la pesca",
-            "Dutch": "Vissen voor beginners"
+            "Dutch": "Vissen voor beginners",
+            "Chinese": "目标是成为垂钓高手"
         },
         {
             "English": "Island Ichthyologist",
@@ -17500,7 +17502,8 @@
             "French (US)": "Ichtyologue insulaire",
             "German": "Ichthyologe",
             "Spanish": "Ictiología avanzada",
-            "Dutch": "Vis, ik heb je"
+            "Dutch": "Vis, ik heb je",
+            "Chinese": "成为鱼类博士吧"
         },
         {
             "English": "Island Togetherness",
@@ -17509,7 +17512,8 @@
             "French (US)": "Dis bonjour !",
             "German": "Soziales Tier",
             "Spanish": "De flor en flor",
-            "Dutch": "Sociaal dier"
+            "Dutch": "Sociaal dier",
+            "Chinese": "打招呼是一切的基础！"
         },
         {
             "English": "You've Got the Bug",
@@ -17518,7 +17522,8 @@
             "French (US)": "Pas bébête !",
             "German": "Insektenjäger",
             "Spanish": "¿Y a ti qué te pica?",
-            "Dutch": "Beestjesboel"
+            "Dutch": "Beestjesboel",
+            "Chinese": "迈向虫类猎人之路"
         },
         {
             "English": "Bugs Don't Bug Me",
@@ -17527,7 +17532,8 @@
             "French (US)": "Tout ce qui grouille",
             "German": "Entomologe",
             "Spanish": "¡Bichos a mí!",
-            "Dutch": "Twee vliegen in één klap"
+            "Dutch": "Twee vliegen in één klap",
+            "Chinese": "能成为虫类博士吗？！"
         },
         {
             "English": "Have a Nice DIY!",
@@ -17536,7 +17542,8 @@
             "French (US)": "Bricollection",
             "German": "Selbst ist der Bewohner",
             "Spanish": "El saber no ocupa lugar",
-            "Dutch": "Doe-het-zelf kennis"
+            "Dutch": "Doe-het-zelf kennis",
+            "Chinese": "增加DIY的手册吧！"
         },
         {
             "English": "Deep Dive",
@@ -17545,7 +17552,8 @@
             "French (US)": "Le fin du fin des fonds",
             "German": "Tiefseetaucher",
             "Spanish": "Millas submarinas",
-            "Dutch": "Duik in het diepe"
+            "Dutch": "Duik in het diepe",
+            "Chinese": "潜入海里吧，潜水健将！"
         },
         {
             "English": "Underwater Understudy",
@@ -17554,7 +17562,8 @@
             "French (US)": "La bosse de l'abysse",
             "German": "Meeresfrüchtchen",
             "Spanish": "Saber acuático",
-            "Dutch": "Onderwater onderzoek"
+            "Dutch": "Onderwater onderzoek",
+            "Chinese": "成为海洋博士的一大步"
         },
         {
             "English": "DIY Tools",
@@ -17563,7 +17572,8 @@
             "French (US)": "Bricolage d'outillage",
             "German": "Marke Eigenbau",
             "Spanish": "Herramientas caseras",
-            "Dutch": "Zelfgemaakt gereedschap"
+            "Dutch": "Zelfgemaakt gereedschap",
+            "Chinese": "日常生活从制作道具开始"
         },
         {
             "English": "DIY Furniture",
@@ -17572,7 +17582,8 @@
             "French (US)": "Bricolage de meubles",
             "German": "Möbelmacher",
             "Spanish": "Mobiliario casero",
-            "Dutch": "Zelfgemaakte meubels"
+            "Dutch": "Zelfgemaakte meubels",
+            "Chinese": "手工制作的家具让生活更丰富"
         },
         {
             "English": "Furniture Freshener",
@@ -17581,7 +17592,8 @@
             "French (US)": "Déco perso",
             "German": "Möbel-Umgestalter",
             "Spanish": "Laca y pintura",
-            "Dutch": "Meubel-make-over"
+            "Dutch": "Meubel-make-over",
+            "Chinese": "成为改造高手吧！"
         },
         {
             "English": "Rough-hewn",
@@ -17590,7 +17602,8 @@
             "French (US)": "Bûcheron bûcheur",
             "German": "Auf dem Holzweg",
             "Spanish": "Tienes madera",
-            "Dutch": "Ik hout van miles"
+            "Dutch": "Ik hout van miles",
+            "Chinese": "森林伐木工！"
         },
         {
             "English": "Trashed Tools",
@@ -17599,7 +17612,8 @@
             "French (US)": "La casse, ça paye",
             "German": "Der Verschleiß ist heiß",
             "Spanish": "Revienta herramientas",
-            "Dutch": "Arbeidskracht"
+            "Dutch": "Arbeidskracht",
+            "Chinese": "道具粉碎机！"
         },
         {
             "English": "Rock-Splitting Champ",
@@ -17608,7 +17622,8 @@
             "French (US)": "Des cailloux à la pelle",
             "German": "Steinreich",
             "Spanish": "Para partirse",
-            "Dutch": "Rotsklaps rijk"
+            "Dutch": "Rotsklaps rijk",
+            "Chinese": "敲击岩石的专家！"
         },
         {
             "English": "Bona Fide Bone Finder!",
@@ -17617,7 +17632,8 @@
             "French (US)": "Fossiles, vrais miles",
             "German": "Fossilienfund",
             "Spanish": "A otro perro con ese hueso",
-            "Dutch": "Paleontoloog in spe"
+            "Dutch": "Paleontoloog in spe",
+            "Chinese": "化石发掘队员认证！"
         },
         {
             "English": "Fossil Assessment",
@@ -17626,7 +17642,8 @@
             "French (US)": "Expertise de fossiles",
             "German": "Fossilienforschung",
             "Spanish": "Fósiles inestimables",
-            "Dutch": "Steengoede Paleontoloog"
+            "Dutch": "Steengoede Paleontoloog",
+            "Chinese": "什么样的化石啊？！"
         },
         {
             "English": "Greedy Weeder",
@@ -17635,7 +17652,8 @@
             "French (US)": "Adieu, la mauvaise herbe",
             "German": "Unkrautfeind",
             "Spanish": "¡Abajo el hierbajo!",
-            "Dutch": "Het onkruid eruit"
+            "Dutch": "Het onkruid eruit",
+            "Chinese": "招募除草志愿者"
         },
         {
             "English": "Flower Power",
@@ -17644,7 +17662,8 @@
             "French (US)": "Flower Power",
             "German": "Meistergärtner",
             "Spanish": "Jardineria con florituras",
-            "Dutch": "Wie zaait, zal oogsten"
+            "Dutch": "Wie zaait, zal oogsten",
+            "Chinese": "享受园艺的乐趣吧！"
         },
         {
             "English": "Flower Tender",
@@ -17653,7 +17672,8 @@
             "French (US)": "L'arroseur arrosé",
             "German": "Blumengießer",
             "Spanish": "Que llueva",
-            "Dutch": "Gulle gieter"
+            "Dutch": "Gulle gieter",
+            "Chinese": "浇浇花，有花相伴的生活"
         },
         {
             "English": "Tomorrow's Trees Today",
@@ -17662,7 +17682,8 @@
             "French (US)": "Forestation",
             "German": "Baumpflanzer",
             "Spanish": "Desarrollo sostenible",
-            "Dutch": "Lof voor loof"
+            "Dutch": "Lof voor loof",
+            "Chinese": "给岛上增添绿色！植树挑战！"
         },
         {
             "English": "Pick of the Bunch",
@@ -17671,7 +17692,8 @@
             "French (US)": "Corne d'abondance",
             "German": "Profipflücker",
             "Spanish": "Los frutos del trabajo",
-            "Dutch": "Vruchtbare handel"
+            "Dutch": "Vruchtbare handel",
+            "Chinese": "享受采摘水果的乐趣吧！"
         },
         {
             "English": "Fruit Roots",
@@ -17680,7 +17702,8 @@
             "French (US)": "Fruits pour tous les goûts",
             "German": "Obstbauer",
             "Spanish": "Macedonia",
-            "Dutch": "Fruitbuit"
+            "Dutch": "Fruitbuit",
+            "Chinese": "水果乐园"
         },
         {
             "English": "Shrubbery Hubbubbery",
@@ -17689,7 +17712,8 @@
             "French (US)": "La passion des pousses",
             "German": "Da ist was im Busch...",
             "Spanish": "Gusto por el arbusto",
-            "Dutch": "Puike struiken"
+            "Dutch": "Puike struiken",
+            "Chinese": "用灌木装点的花园生活！"
         },
         {
             "English": "Go Ahead. Be Shellfish!",
@@ -17698,7 +17722,8 @@
             "French (US)": "Les fruits de la mer",
             "German": "Muschelsammler",
             "Spanish": "Conchaventa",
-            "Dutch": "Schelpenier"
+            "Dutch": "Schelpenier",
+            "Chinese": "捡贝壳高手！"
         },
         {
             "English": "Clam and Collected",
@@ -17707,7 +17732,8 @@
             "French (US)": "Pêche à la palourde",
             "German": "Muschelgräber",
             "Spanish": "El mar te da tesoros",
-            "Dutch": "Winstgevende wandeling"
+            "Dutch": "Winstgevende wandeling",
+            "Chinese": "挑战挖蛤蜊！"
         },
         {
             "English": "Trash Fishin'",
@@ -17716,7 +17742,8 @@
             "French (US)": "Déchets pêchés",
             "German": "Saubermann",
             "Spanish": "Reciclaje salvaje",
-            "Dutch": "Vuilnis vissen"
+            "Dutch": "Vuilnis vissen",
+            "Chinese": "净化大海与河川！"
         },
         {
             "English": "Cast Master",
@@ -17725,7 +17752,8 @@
             "French (US)": "Maître-pêcheur",
             "German": "Angellegende",
             "Spanish": "Sedal como la seda",
-            "Dutch": "Handige hengelaar"
+            "Dutch": "Handige hengelaar",
+            "Chinese": "能成为传说中的垂钓者吗？"
         },
         {
             "English": "Dream House",
@@ -17734,7 +17762,8 @@
             "French (US)": "Maison de rêve",
             "German": "Der Traum vom Eigenheim",
             "Spanish": "La casa de tus sueños",
-            "Dutch": "Het huis van je dromen"
+            "Dutch": "Het huis van je dromen",
+            "Chinese": "梦寐以求的家！"
         },
         {
             "English": "Decorated Decorator",
@@ -17752,7 +17781,8 @@
             "French (US)": "De l'art de meubler",
             "German": "Vermöbelt",
             "Spanish": "Interiorizando",
-            "Dutch": "Meubelmania"
+            "Dutch": "Meubelmania",
+            "Chinese": "让装饰丰富生活！"
         },
         {
             "English": "Good Things in Store!",
@@ -17761,7 +17791,8 @@
             "French (US)": "Un peu d'ordre",
             "German": "Aufräumprofi",
             "Spanish": "Trasteando con el trastero",
-            "Dutch": "Wie wat bewaard, krijgt wat"
+            "Dutch": "Wie wat bewaard, krijgt wat",
+            "Chinese": "收纳专家就是生活的专家"
         },
         {
             "English": "Remarkable Remodeler",
@@ -17770,7 +17801,8 @@
             "French (US)": "Déco à la chaîne",
             "German": "Demolieren? Renovieren!",
             "Spanish": "Reforma reformidable",
-            "Dutch": "Voortreffelijke verbouwer"
+            "Dutch": "Voortreffelijke verbouwer",
+            "Chinese": "让心情随着装修焕然一新！"
         },
         {
             "English": "Smile Isle",
@@ -17779,7 +17811,8 @@
             "French (US)": "Aider son prochain",
             "German": "Hilfsbereit",
             "Spanish": "Favor por favor",
-            "Dutch": "Brave burger"
+            "Dutch": "Brave burger",
+            "Chinese": "亲切是很重要的狸！"
         },
         {
             "English": "Reaction Ruler",
@@ -17788,7 +17821,8 @@
             "French (US)": "La tactique des mimiques",
             "German": "Emotionsmeister",
             "Spanish": "Tu emoción nos embarga",
-            "Dutch": "Een open boek"
+            "Dutch": "Een open boek",
+            "Chinese": "用反应让沟通更丰富多彩"
         },
         {
             "English": "Island Shutterbug",
@@ -17797,7 +17831,8 @@
             "French (US)": "Y a pas photo",
             "German": "Fotofreund",
             "Spanish": "¡Mira al pajarito!",
-            "Dutch": "Eerste eilandkiekje"
+            "Dutch": "Eerste eilandkiekje",
+            "Chinese": "将回忆留在照片上"
         },
         {
             "English": "Edit Credit",
@@ -17806,7 +17841,8 @@
             "French (US)": "Passeport en ordre",
             "German": "Passt schon!",
             "Spanish": "Pasaporte personalizado",
-            "Dutch": "Paspoortplezier"
+            "Dutch": "Paspoortplezier",
+            "Chinese": "别忘了更新护照"
         },
         {
             "English": "NookPhone Life",
@@ -17815,7 +17851,8 @@
             "French (US)": "Accro à l'écran",
             "German": "Dein NookPhone!",
             "Spanish": "Contigo a todas partes",
-            "Dutch": "Mobiel en makkelijk"
+            "Dutch": "Mobiel en makkelijk",
+            "Chinese": "智能手机生活！"
         },
         {
             "English": "That's One Smart Phone",
@@ -17824,7 +17861,8 @@
             "French (US)": "Profane du NookPhone",
             "German": "Smartes Telefon",
             "Spanish": "Usa tu teléfono, inteligente",
-            "Dutch": "Een vernuftige phone"
+            "Dutch": "Een vernuftige phone",
+            "Chinese": "灵活运用手机吧！"
         },
         {
             "English": "Shop to It",
@@ -17833,7 +17871,8 @@
             "French (US)": "Amples emplettes",
             "German": "Versand-Fan",
             "Spanish": "Aquí hay quien te atienda",
-            "Dutch": "De winkel die alles heeft"
+            "Dutch": "De winkel die alles heeft",
+            "Chinese": "尽情网购"
         },
         {
             "English": "Growing Collection",
@@ -17842,7 +17881,8 @@
             "French (US)": "Collectionnite",
             "German": "Katalogstöberer",
             "Spanish": "Catalogía",
-            "Dutch": "Cataloguskampioen"
+            "Dutch": "Cataloguskampioen",
+            "Chinese": "目录充实，生活也充实🎵"
         },
         {
             "English": "Nook Miles for Miles!",
@@ -17851,7 +17891,8 @@
             "French (US)": "Chaîne de miles",
             "German": "Meilenstein",
             "Spanish": "Millas a millares",
-            "Dutch": "Nook-miles-miles"
+            "Dutch": "Nook-miles-miles",
+            "Chinese": "集里游+让你里数也+"
         },
         {
             "English": "First-Time Buyer",
@@ -17860,7 +17901,8 @@
             "French (US)": "L'achat qui rapporte",
             "German": "Erster Einkauf",
             "Spanish": "Rascarse el bolsillo",
-            "Dutch": "Winkeldebuut"
+            "Dutch": "Winkeldebuut",
+            "Chinese": "感谢你的购物！"
         },
         {
             "English": "Seller of Unwanted Stuff",
@@ -17869,7 +17911,8 @@
             "French (US)": "Seconde main",
             "German": "Verkaufen statt Horten",
             "Spanish": "Vaciar el altillo",
-            "Dutch": "Vintage voor winst"
+            "Dutch": "Vintage voor winst",
+            "Chinese": "闲置品收购！"
         },
         {
             "English": "Moving Fees Paid!",
@@ -17878,7 +17921,8 @@
             "French (US)": "Prêt payé !",
             "German": "Umzug abbezahlt",
             "Spanish": "Has pagado el PAID",
-            "Dutch": "Verhuiskosten voldaan"
+            "Dutch": "Verhuiskosten voldaan",
+            "Chinese": "移居费用里数返还！"
         },
         {
             "English": "Bell Ringer",
@@ -17887,7 +17931,8 @@
             "French (US)": "Perce-oseille",
             "German": "Griff nach den Sternis",
             "Spanish": "La baya por la ventana",
-            "Dutch": "Gat in de hand"
+            "Dutch": "Gat in de hand",
+            "Chinese": "购物带动经济狸！"
         },
         {
             "English": "Miles for Stalkholders",
@@ -17896,7 +17941,8 @@
             "French (US)": "Capitalisme vert",
             "German": "Rübenspekulant",
             "Spanish": "Economía de raíz",
-            "Dutch": "Voor de knol"
+            "Dutch": "Voor de knol",
+            "Chinese": "大头菜东家独享优惠里数"
         },
         {
             "English": "Cornering the Stalk Market",
@@ -17905,7 +17951,8 @@
             "French (US)": "Clochettisation des navets",
             "German": "Rübenguru",
             "Spanish": "Inversión de impresión",
-            "Dutch": "Knollen winst"
+            "Dutch": "Knollen winst",
+            "Chinese": "迈向大头菜梦想家之路"
         },
         {
             "English": "No More Loan Payments!",
@@ -17914,7 +17961,8 @@
             "French (US)": "Crédit, c'est fini",
             "German": "Kredit abbezahlt",
             "Spanish": "Adiós deudas",
-            "Dutch": "Uit de rode cijfers"
+            "Dutch": "Uit de rode cijfers",
+            "Chinese": "祝贺你！还清贷款狸！"
         },
         {
             "English": "Bulletin-Board Benefit",
@@ -17923,7 +17971,8 @@
             "French (US)": "Avantages de l'affichage",
             "German": "Was für ein Brett!",
             "Spanish": "¡Anúnciate!",
-            "Dutch": "Miles voor mededelingen"
+            "Dutch": "Miles voor mededelingen",
+            "Chinese": "在布告栏交流！"
         },
         {
             "English": "Popular Pen Pal",
@@ -17932,7 +17981,8 @@
             "French (US)": "L'amitié n'attend pas",
             "German": "Beliebter Brieffreund",
             "Spanish": "Corresponsal responsable",
-            "Dutch": "Populaire penvriend"
+            "Dutch": "Populaire penvriend",
+            "Chinese": "笔耕不辍"
         },
         {
             "English": "Flea Flicker",
@@ -17941,7 +17991,8 @@
             "French (US)": "Attrape-puces",
             "German": "Flohzirkus",
             "Spanish": "Entre el índice y el pulgar",
-            "Dutch": "Vlooiencircus"
+            "Dutch": "Vlooiencircus",
+            "Chinese": "抓住跳蚤吧！"
         },
         {
             "English": "Cicada Memories",
@@ -17968,7 +18019,8 @@
             "French (US)": "Je pense, donc je puits",
             "German": "Spatenstich",
             "Spanish": "El agujero primero",
-            "Dutch": "Je eerste valkuil"
+            "Dutch": "Je eerste valkuil",
+            "Chinese": "恶作剧头目！"
         },
         {
             "English": "Taking the Sting Out",
@@ -17976,7 +18028,8 @@
             "French": "Des miles dard-dard",
             "French (US)": "Des miles dard-dard",
             "German": "Wer die Wespe stört...",
-            "Spanish": "El aguijón en el pajar"
+            "Spanish": "El aguijón en el pajar",
+            "Chinese": "旧伤未愈又添新伤！"
         },
         {
             "English": "Faint of Heart",
@@ -17985,7 +18038,8 @@
             "French (US)": "Évanoui ? Oui, oui !",
             "German": "Furchtloser Fänger",
             "Spanish": "¿Estás bien?",
-            "Dutch": "Van je stokje"
+            "Dutch": "Van je stokje",
+            "Chinese": "注意微信的虫子！"
         },
         {
             "English": "Overcoming Pitfalls",
@@ -18003,7 +18057,8 @@
             "French (US)": "Faussaire de famille",
             "German": "Falscher Fuffziger",
             "Spanish": "¡Te han timado!",
-            "Dutch": "Bedrogen en belogen"
+            "Dutch": "Bedrogen en belogen",
+            "Chinese": "小心赝品！"
         },
         {
             "English": "Lost Treasure",
@@ -18012,7 +18067,8 @@
             "French (US)": "Trésor englouti",
             "German": "Wie gewonnen, so...",
             "Spanish": "Premio aguado",
-            "Dutch": "Verloren schat"
+            "Dutch": "Verloren schat",
+            "Chinese": "水障碍"
         },
         {
             "English": "It's Raining Treasure!",
@@ -18021,7 +18077,8 @@
             "French (US)": "Cadeaux du ciel",
             "German": "Ballonschütze",
             "Spanish": "Regalos caídos del cielo",
-            "Dutch": "Een balonnetje neerhalen"
+            "Dutch": "Een balonnetje neerhalen",
+            "Chinese": "目标成为气球猎人！"
         },
         {
             "English": "Fun with Fences",
@@ -18030,7 +18087,8 @@
             "French (US)": "L'allure de la clôture",
             "German": "Zäune schaffen Räume",
             "Spanish": "¡Vaya con las vallas!",
-            "Dutch": "Hekken op plekken"
+            "Dutch": "Hekken op plekken",
+            "Chinese": "要用栅栏围出庭院吗？"
         },
         {
             "English": "Snowmaestro",
@@ -18048,7 +18106,8 @@
             "French (US)": "Vœux pas pieux",
             "German": "Wünsch dir was",
             "Spanish": "Haciendo deseos realidad",
-            "Dutch": "Wensen komen uit"
+            "Dutch": "Wensen komen uit",
+            "Chinese": "向流星许愿"
         },
         {
             "English": "Exterior Decorator",
@@ -18057,7 +18116,8 @@
             "French (US)": "Terre meuble",
             "German": "Landschaftsgestaltung",
             "Spanish": "Decoración de exteriores",
-            "Dutch": "Buitenhuisarchitect"
+            "Dutch": "Buitenhuisarchitect",
+            "Chinese": "加强岛上景观的活动"
         },
         {
             "English": "(island name) Icons",
@@ -18066,7 +18126,8 @@
             "French (US)": "(island name) dans l'âme",
             "German": "Kreative gesucht!",
             "Spanish": "Símbolos de la isla",
-            "Dutch": "(eilandnaam) -iconen"
+            "Dutch": "(eilandnaam) -iconen",
+            "Chinese": "(island name)岛的象征"
         },
         {
             "English": "Island Designer",
@@ -18075,7 +18136,8 @@
             "French (US)": "Remod'île",
             "German": "Gestalte deine Insel!",
             "Spanish": "Obras públicas",
-            "Dutch": "Eilandontwerper"
+            "Dutch": "Eilandontwerper",
+            "Chinese": "用“岛屿创作家”设计岛屿"
         },
         {
             "English": "Wispy Island Secrets",
@@ -18084,7 +18146,8 @@
             "French (US)": "Follement secret",
             "German": "Gruselige Geheimnisse",
             "Spanish": "Secretos de la isla",
-            "Dutch": "Eilandgeheimen"
+            "Dutch": "Eilandgeheimen",
+            "Chinese": "在岛上看到的东西是秘密狸！"
         },
         {
             "English": "Gulliver's Travails",
@@ -18093,7 +18156,8 @@
             "French (US)": "Au secours du naufragé",
             "German": "Lebensretter",
             "Spanish": "Los naufragios de Gulliver",
-            "Dutch": "Gullivers reilen en zeilen"
+            "Dutch": "Gullivers reilen en zeilen",
+            "Chinese": "值得信赖的救生员！"
         },
         {
             "English": "K.K. Mania",
@@ -18102,7 +18166,8 @@
             "French (US)": "GG, Kéké !",
             "German": "K.K.-Konzertkartenkäufer",
             "Spanish": "Todo quisqui con Totakeke",
-            "Dutch": "K.K.-koorts"
+            "Dutch": "K.K.-koorts",
+            "Chinese": "享受现场演唱会吧🎵"
         },
         {
             "English": "True Patron of the Arts",
@@ -18111,7 +18176,8 @@
             "French (US)": "L'art en partage",
             "German": "Mäzenatentum",
             "Spanish": "Fomentar el arte",
-            "Dutch": "Kijk op kunst"
+            "Dutch": "Kijk op kunst",
+            "Chinese": "艺术品收藏家！"
         },
         {
             "English": "You Otter Know",
@@ -18120,7 +18186,8 @@
             "French (US)": "Paie ton pétoncle",
             "German": "Otter wie, Otter was...?",
             "Spanish": "La nutria se nutre",
-            "Dutch": "Otteroverpeinzingen"
+            "Dutch": "Otteroverpeinzingen",
+            "Chinese": "不要放开虾夷扇贝"
         },
         {
             "English": "True Friends",
@@ -18129,7 +18196,8 @@
             "French (US)": "Amitié florissante",
             "German": "Wahre Freunde",
             "Spanish": "El valor de la amistad",
-            "Dutch": "Echte vrienden"
+            "Dutch": "Echte vrienden",
+            "Chinese": "相亲相爱！"
         },
         {
             "English": "Birthday Celebration",
@@ -18191,7 +18259,8 @@
             "French (US)": "Changement de décor",
             "German": "Erstes eigenes Design",
             "Spanish": "Primer diseño propio",
-            "Dutch": "Eerste eigen ontwerp"
+            "Dutch": "Eerste eigen ontwerp",
+            "Chinese": "试着做一下“我的设计”吗？"
         },
         {
             "English": "Custom Design Pro!",
@@ -18200,7 +18269,8 @@
             "French (US)": "Pro des motifs",
             "German": "Design-Profi",
             "Spanish": "Diseño de alto nivel",
-            "Dutch": "Speciale ontwerpen"
+            "Dutch": "Speciale ontwerpen",
+            "Chinese": "专业设计师初次登场！"
         },
         {
             "English": "Paydirt!",
@@ -18209,7 +18279,8 @@
             "French (US)": "Six pièces sous terre",
             "German": "Geldgräberstimmung",
             "Spanish": "Esta isla es una mina",
-            "Dutch": "Schatgraver"
+            "Dutch": "Schatgraver",
+            "Chinese": "神秘宝藏……？！"
         },
         {
             "English": "Shady Shakedown",
@@ -18218,7 +18289,8 @@
             "French (US)": "Mobilier perché",
             "German": "Abgeblättert",
             "Spanish": "Sacudida mobiliaria",
-            "Dutch": "Bladgoud"
+            "Dutch": "Bladgoud",
+            "Chinese": "藏在树叶里……？！"
         },
         {
             "English": "Golden Milestone",
@@ -18236,7 +18308,8 @@
             "French (US)": "Le bonjour aux voisins",
             "German": "Mein Eiland, dein Eiland",
             "Spanish": "La isla no se aísla",
-            "Dutch": "Eilandhopper"
+            "Dutch": "Eilandhopper",
+            "Chinese": "流浪的旅行者！"
         },
         {
             "English": "Host the Most",
@@ -18254,7 +18327,8 @@
             "French (US)": "Labeur quotidien",
             "German": "Jeden Tag auf der Insel",
             "Spanish": "Actividad insular",
-            "Dutch": "Bezige bewoner"
+            "Dutch": "Bezige bewoner",
+            "Chinese": "在岛上的宝贵时光"
         },
         {
             "English": "You traveled a long way just to move to our little island, and you enrolled in the Nook Mileage Program. So you earned your first miles! There are lots of ways to earn miles by just enjoying island life!",
@@ -23147,161 +23221,161 @@
             "English (Europe)": "Water's Edge",
             "French": "du littoral",
             "French (US)": "du littoral",
-            "German": "Wasserrand"
+            "German": "Gischt-"
         },
         {
             "English": "Basement",
             "English (Europe)": "Basement",
             "French": "du sous-sol",
             "French (US)": "du sous-sol",
-            "German": "Keller"
+            "German": "Keller-"
         },
         {
             "English": "Abounding",
             "English (Europe)": "Abounding",
             "French": "nanti.e",
             "French (US)": "nanti.e",
-            "German": "Überfluss"
+            "German": "Überschwänglicher/Überschwängliche"
         },
         {
             "English": "Invulnerable",
             "English (Europe)": "Invulnerable",
             "French": "invulnérable",
             "French (US)": "invulnérable",
-            "German": "Unverwundbar"
+            "German": "Alleskönnender/Alleskönnende"
         },
         {
             "English": "Foolhardy",
             "English (Europe)": "Foolhardy",
             "French": "intrépide",
             "French (US)": "intrépide",
-            "German": "Tollkühn"
+            "German": "Tollkühner/Tollkühne"
         },
         {
             "English": "Super-Popular",
             "English (Europe)": "Super-Popular",
             "French": "en haut de l’affiche",
             "French (US)": "en haut de l’affiche",
-            "German": "Super Beliebt"
+            "German": "Superbeliebter"
         },
         {
             "English": "Always-On",
             "English (Europe)": "Always-On",
             "French": "toujours en ligne",
             "French (US)": "toujours en ligne",
-            "German": "Immer an"
+            "German": "Online-"
         },
         {
             "English": "Legendary",
             "English (Europe)": "Legendary",
             "French": "de légende",
             "French (US)": "de légende",
-            "German": "Legendär"
+            "German": "Legendärer/Legendäre"
         },
         {
             "English": "Year-Round",
             "English (Europe)": "Year-Round",
             "French": "infatigable",
             "French (US)": "infatigable",
-            "German": "Das ganze Jahr"
+            "German": "Ganzjahrs-"
         },
         {
             "English": "Name-Dropping",
             "English (Europe)": "Name-Dropping",
             "French": "prétentieux.euse",
             "French (US)": "prétentieux.euse",
-            "German": "Namensverlust"
+            "German": "Angeberischer"
         },
         {
             "English": "Shadowy",
             "English (Europe)": "Shadowy",
             "French": "de l’ombre",
             "French (US)": "de l’ombre",
-            "German": "Schattenhaft"
+            "German": "Dubioser/Dubiose"
         },
         {
             "English": "Deadline",
             "English (Europe)": "Deadline",
             "French": "de dernière minute",
             "French (US)": "de dernière minute",
-            "German": "Abgabe Termin "
+            "German": "Prokrastinierender/Prokrastinierende"
         },
         {
             "English": "Elusive",
             "English (Europe)": "Elusive",
             "French": "insaisissable",
             "French (US)": "insaisissable",
-            "German": "Schwer fassbar"
+            "German": "Schwer zu fassender/Schwer zu fassende"
         },
         {
             "English": "Longtime",
             "English (Europe)": "Longtime",
             "French": "depuis longtemps",
             "French (US)": "depuis longtemps",
-            "German": "Langzeit "
+            "German": "Langzeit-"
         },
         {
             "English": "Inspirational",
             "English (Europe)": "Inspirational",
             "French": "encourageant.e",
             "French (US)": "encourageant.e",
-            "German": "Inspirierend"
+            "German": "Erschütternder"
         },
         {
             "English": "Glittering",
             "English (Europe)": "Glittering",
             "French": "étincelant.e",
             "French (US)": "étincelant.e",
-            "German": "Glitzern"
+            "German": "Glanzvoller/Glanzvolle"
         },
         {
             "English": "Ready-Made",
             "English (Europe)": "Ready-Made",
             "French": "instantané.e",
             "French (US)": "instantané.e",
-            "German": "Fertig gemacht"
+            "German": "Schon fast"
         },
         {
             "English": "Catch of the Day",
             "English (Europe)": "Catch of the Day",
             "French": "Grosse prise",
             "French (US)": "Grosse prise",
-            "German": "Fang des Tages"
+            "German": "Flussgeist"
         },
         {
             "English": "Expert",
             "English (Europe)": "Expert",
             "French": "Expert.e",
             "French (US)": "Expert.e",
-            "German": "Experte"
+            "German": "Experte/Expertin"
         },
         {
             "English": "Heart Stealer",
             "English (Europe)": "Heart Stealer",
             "French": "Charmeur.euse",
             "French (US)": "Charmeur.euse",
-            "German": "Kopfverdreher"
+            "German": "Herzensbrecher/Herzensbrecherin"
         },
         {
             "English": "Metamorphosis",
             "English (Europe)": "Metamorphosis",
             "French": "Métamorphose",
             "French (US)": "Métamorphose",
-            "German": "Metamorphose "
+            "German": "Verwandlung "
         },
         {
             "English": "Critter",
             "English (Europe)": "Critter",
             "French": "Bestiole",
             "French (US)": "Bestiole",
-            "German": "Lebewesen "
+            "German": "Viech "
         },
         {
             "English": "Father;Mother",
             "English (Europe)": "Father;Mother",
             "French": "Père/Mère",
             "French (US)": "Père/Mère",
-            "German": "Vater, Mutter"
+            "German": "Vater/Mutter"
         },
         {
             "English": "Monster",
@@ -23315,21 +23389,21 @@
             "English (Europe)": "Darling;Honey",
             "French": "Chéri.e",
             "French (US)": "Chéri.e",
-            "German": "Schatz, Liebling "
+            "German": "Herzallerliebster/Herzallerliebste"
         },
         {
             "English": "Meister",
             "English (Europe)": "Meister",
             "French": "Formateur.trice",
             "French (US)": "Formateur.trice",
-            "German": "Meister"
+            "German": "Meister/Meisterin"
         },
         {
             "English": "King;Queen",
             "English (Europe)": "King;Queen",
             "French": "Roi/Reine",
             "French (US)": "Roi/Reine",
-            "German": "König; Königin "
+            "German": "König/Königin "
         },
         {
             "English": "Inspiration",
@@ -23343,14 +23417,14 @@
             "English (Europe)": "Superhero",
             "French": "Super-héros.ine",
             "French (US)": "Super-héros.ine",
-            "German": "Superheld"
+            "German": "Superheld/Superheldin"
         },
         {
             "English": "Ruiner",
             "English (Europe)": "Ruiner",
             "French": "Démolisseur.euse",
             "French (US)": "Démolisseur.euse",
-            "German": "Verderber"
+            "German": "Zerstörer/Zerstörerin"
         },
         {
             "English": "Discovery",
@@ -23364,21 +23438,21 @@
             "English (Europe)": "Beast",
             "French": "Bête",
             "French (US)": "Bête",
-            "German": "Bestie"
+            "German": "Untier"
         },
         {
             "English": "Groom;Bride",
             "English (Europe)": "Groom;Bride",
             "French": "Bosquet",
             "French (US)": "Bosquet",
-            "German": "Bräutigam; Braut "
+            "German": "Bräutigam/Braut "
         },
         {
             "English": "Boss",
             "English (Europe)": "Boss",
             "French": "Boss",
             "French (US)": "Boss",
-            "German": "Chef"
+            "German": "Boss"
         },
         {
             "English": "Scent",
@@ -23392,182 +23466,186 @@
             "English (Europe)": "Mr. Popular;Ms. Popular",
             "French": "Pomme",
             "French (US)": "Pomme",
-            "German": "Mr. Populär; Mrs. Populär "
+            "German": "Liebling"
         },
         {
             "English": "Shellaborator;Shellarina",
             "English (Europe)": "Shellaborator;Shellarina",
             "French": "Conque",
             "French (US)": "Conque",
-            "German": "Muschelsammler, Muschellsammlerin"
+            "German": "Molluske"
         },
         {
             "English": "Mermaid",
             "English (Europe)": "Mermaid",
             "French": "Sirène",
             "French (US)": "Sirène",
-            "German": "Meerjungfrau "
+            "German": "Meermann/Meerjungfrau "
         },
         {
             "English": "Backbone",
             "English (Europe)": "Backbone",
             "French": "Pilier",
             "French (US)": "Pilier",
-            "German": "Rückrad"
+            "German": "Hauptpfeiler"
         },
         {
             "English": "Interior-Design Fan",
             "English (Europe)": "Interior-Design Fan",
             "French": "Fan de déco",
             "French (US)": "Fan de déco",
-            "German": "Inneneinrichtung Begeisterter "
+            "German": "Inneneinrichter/Inneneinrichterin"
         },
         {
             "English": "Life Hacker",
             "English (Europe)": "Life Hacker",
             "French": "Débrouillard.e",
             "French (US)": "Débrouillard.e",
-            "German": "LifeHacker "
+            "German": "Lebenskünstler/Lebenskünstlerin"
         },
         {
             "English": "Hero;Heroine",
             "English (Europe)": "Hero;Heroine",
             "French": "Héros.ine",
             "French (US)": "Héros.ine",
-            "German": "Held; Heldin "
+            "German": "Held/Heldin "
         },
         {
             "English": "Mega Star",
             "English (Europe)": "Mega Star",
             "French": "Méga star",
             "French (US)": "Méga star",
-            "German": "Große Berühmtheit "
+            "German": "Megastar"
         },
         {
             "English": "Bigwig",
             "English (Europe)": "Bigwig",
             "French": "Gros bonnet",
             "French (US)": "Gros bonnet",
-            "German": "Bonze"
+            "German": "Netzwerker/Netzwerkerin"
         },
         {
             "English": "Walking Dictionary",
             "English (Europe)": "Walking Dictionary",
             "French": "Dico ambulant",
             "French (US)": "Dico ambulant",
-            "German": "Walking Dictionary"
+            "German": "Alleswisser/Alleswisserin"
         },
         {
             "English": "Dynamo",
             "English (Europe)": "Dynamo",
             "French": "Bosseur.euse",
             "French (US)": "Bosseur.euse",
-            "German": "Dynamo"
+            "German": "Arbeitstier"
         },
         {
             "English": "VIP",
             "English (Europe)": "VIP",
             "French": "VIP",
             "French (US)": "VIP",
-            "German": "Vip"
+            "German": "VIP"
         },
         {
             "English": "Fixer",
             "English (Europe)": "Fixer",
             "French": "Négociateur.trice",
             "French (US)": "Négociateur.trice",
-            "German": "Handwerker "
+            "German": "Mittelsmann/Mittelsfrau "
         },
         {
             "English": "Writer",
             "English (Europe)": "Writer",
             "French": "Écrivain.e",
             "French (US)": "Écrivain.e",
-            "German": "Schriftsteller"
+            "German": "Autor/Autorin"
         },
         {
             "English": "Vagabond",
             "English (Europe)": "Vagabond",
             "French": "Flâneur.euse",
             "French (US)": "Flâneur.euse",
-            "German": "Rumtreiber"
+            "German": "Vagabund/Vagabundin"
         },
         {
             "English": "Follower",
             "English (Europe)": "Follower",
             "French": "Admirateur.trice",
             "French (US)": "Admirateur.trice",
-            "German": "Bewunderer"
+            "German": "Anhänger/Anhängerin"
         },
         {
             "English": "Statement",
             "English (Europe)": "Statement",
             "French": "Déclaration",
             "French (US)": "Déclaration",
-            "German": "Standpunkt "
+            "German": "Ausspruch "
         },
         {
             "English": "Emperor;Empress",
             "English (Europe)": "Emperor;Empress",
             "French": "Empereur.Impératrice",
             "French (US)": "Empereur.Impératrice",
-            "German": "Kaiser, Kaiserin"
+            "German": "Kaiser/Kaiserin"
         },
         {
             "English": "MVP",
             "English (Europe)": "MVP",
             "French": "Champion",
             "French (US)": "Champion",
-            "German": "MPV"
+            "German": "Unentbehrlicher/Unentbehrliche"
         },
         {
             "English": "Tropically Grown",
             "English (Europe)": "Tropically Grown",
             "French": "des tropiques",
             "French (US)": "des tropiques",
-            "German": "Tropisches Gewächs"
+            "German": "Tropen-"
         },
         {
             "English": "Radiant",
             "English (Europe)": "Radiant",
             "French": "rayonnant.e",
             "French (US)": "rayonnant.e",
-            "German": "Strahlend"
+            "German": "Gleißende"
         },
         {
             "English": "Coconut",
             "English (Europe)": "Coconut",
             "French": "Noix de coco",
             "French (US)": "Noix de coco",
-            "German": "Kokosnuss "
+            "German": "Kokosnuss"
         },
         {
             "English": "Supreme Being",
             "English (Europe)": "Supreme Being",
             "French": "Divinité",
             "French (US)": "Divinité",
-            "German": "höchstes Wesen"
+            "German": "Gottheit"
         },
         {
             "English": "Father; Mother",
-            "English (Europe)": "Father; Mother"
+            "English (Europe)": "Father; Mother",
+            "German": "Vater/Mutter"
         },
         {
             "English": "Pa; Ma",
-            "English (Europe)": "Pa; Ma"
+            "English (Europe)": "Pa; Ma",
+            "German": "Vati/Mutti"
         },
         {
             "English": "Darling; Honey",
-            "English (Europe)": "Darling; Honey"
+            "English (Europe)": "Darling; Honey",
+            "German": "Herzallerliebster/Herzallerliebste"
         },
         {
             "English": "Master; Matriarch",
-            "English (Europe)": "Master; Matriarch"
+            "English (Europe)": "Master; Matriarch",
+            "German": "Könner/Könnerin"
         },
         {
             "English": "King; Queen",
             "English (Europe)": "King; Queen",
-            "German": "König; Königin"
+            "German": "König/Königin"
         },
         {
             "English": "Writing a Cookbook?",
@@ -23578,51 +23656,63 @@
         {
             "English": "The recipes in your collection could stretch for miles, so allow me to present you with these...miles! Delight the eyes and stomachs of your neighbors with all your delicious creations, hm?",
             "English (Europe)": "The recipes in your collection could stretch for miles, so allow me to present you with these...miles! Delight the eyes and stomachs of your neighbors with all your delicious creations, hm?",
-            "French": "Voici quelques miles en récompense des mille et une recettes de ton répertoire. Sois sympa, fais-en aussi profiter les narines et les papilles de tes voisins, hmm ?"
+            "French": "Voici quelques miles en récompense des mille et une recettes de ton répertoire. Sois sympa, fais-en aussi profiter les narines et les papilles de tes voisins, hmm ?",
+            "German": "Deine Rezeptsammlung ist riesig, das muss mit Meilen belohnt werden! Lass deine Nachbarn an deinen leckeren Kreationen teilhaben, hm?"
         },
         {
             "English": "Ever-Improving",
-            "English (Europe)": "Ever-Improving"
+            "English (Europe)": "Ever-Improving",
+            "German": "Lernbegieriger/Lernbegierige"
         },
         {
             "English": "Skilled",
-            "English (Europe)": "Skilled"
+            "English (Europe)": "Skilled",
+            "German": "Talentierter/Talentierte"
         },
         {
             "English": "Homestyle",
-            "English (Europe)": "Homestyle"
+            "English (Europe)": "Homestyle",
+            "German": "Gutbürgerlicher/Gutbürgerliche"
         },
         {
             "English": "Test Chef",
-            "English (Europe)": "Test Chef"
+            "English (Europe)": "Test Chef",
+            "German": "Jungkoch/Jungköchin"
         },
         {
             "English": "Cook",
-            "English (Europe)": "Cook"
+            "English (Europe)": "Cook",
+            "German": "Souschef/Souschefin"
         },
         {
             "English": "Chef",
-            "English (Europe)": "Chef"
+            "English (Europe)": "Chef",
+            "German": "Chefkoch/Chefköchin"
         },
         {
             "English": "Mmm-Mmm-Miles!",
-            "English (Europe)": "Mmm-Mmm-Miles!"
+            "English (Europe)": "Mmm-Mmm-Miles!",
+            "German": "Mmm-Mmm-Meilen!"
         },
         {
             "English": "Gathering ingredients and creating delicious treats is great fun, is it not? Yes, yes, I do believe our chefs out there deserve miles for all the times they've prepared something delicious!",
-            "English (Europe)": "Gathering ingredients and creating delicious treats is great fun, is it not? Yes, yes, I do believe our chefs out there deserve miles for all the times they've prepared something delicious!"
+            "English (Europe)": "Gathering ingredients and creating delicious treats is great fun, is it not? Yes, yes, I do believe our chefs out there deserve miles for all the times they've prepared something delicious!",
+            "German": "Macht es nicht Spaß, Zutaten zu sammeln und Leckereien zu kreieren? Ich finde, all die Feinschmecker da draußen, die uns mit ihren feinen Kreationen erfreuen, verdienen Meilen, ja, ja!"
         },
         {
             "English": "Scorching",
-            "English (Europe)": "Scorching"
+            "English (Europe)": "Scorching",
+            "German": "Schmorender/Schmorende"
         },
         {
             "English": "Sugary",
-            "English (Europe)": "Sugary"
+            "English (Europe)": "Sugary",
+            "German": "Zuckerige"
         },
         {
             "English": "Spicy",
-            "English (Europe)": "Spicy"
+            "English (Europe)": "Spicy",
+            "German": "Pikanter/Pikante"
         },
         {
             "English": "Gourmet",
@@ -23634,11 +23724,13 @@
         },
         {
             "English": "Sweets",
-            "English (Europe)": "Sweets"
+            "English (Europe)": "Sweets",
+            "German": "Süßigkeit"
         },
         {
             "English": "Head Chef",
-            "English (Europe)": "Head Chef"
+            "English (Europe)": "Head Chef",
+            "German": "Meisterkoch/Meisterköchin"
         },
         {
             "English": "Epicure",
@@ -23651,15 +23743,17 @@
         {
             "English": "Nice to Meet You, Gyroid!",
             "English (Europe)": "Nice to Meet You, Gyroid!",
-            "German": "Gluck mal, Gyroid!"
+            "German": "Guck mal, ein Gyroid!"
         },
         {
             "English": "You've discovered your first gyroid! This special occasion deserves miles, yes, yes. I hope you feel inspired to collect all sorts of different, wonderful gyroids now.",
-            "English (Europe)": "You've discovered your first gyroid! This special occasion deserves miles, yes, yes. I hope you feel inspired to collect all sorts of different, wonderful gyroids now."
+            "English (Europe)": "You've discovered your first gyroid! This special occasion deserves miles, yes, yes. I hope you feel inspired to collect all sorts of different, wonderful gyroids now.",
+            "German": "Du hast deinen ersten Gyroiden gefunden! Dieser besondere Moment muss mit Meilen gewürdigt werden, ja, ja. Ich hoffe, dass dich das motiviert, viele verschiedene, wunderbare Gyroiden zu sammeln!"
         },
         {
             "English": "Rain-Soaked",
-            "English (Europe)": "Rain-Soaked"
+            "English (Europe)": "Rain-Soaked",
+            "German": "Durchnässter"
         },
         {
             "English": "Gyroid Getter",
@@ -23668,51 +23762,63 @@
         },
         {
             "English": "Collect different kinds of gyroids, and earn miles in return! I suspect once you experience life in their presence, you'll find it hard to resist hunting for more, hm?",
-            "English (Europe)": "Collect different kinds of gyroids, and earn miles in return! I suspect once you experience life in their presence, you'll find it hard to resist hunting for more, hm?"
+            "English (Europe)": "Collect different kinds of gyroids, and earn miles in return! I suspect once you experience life in their presence, you'll find it hard to resist hunting for more, hm?",
+            "German": "Sammele verschiedene Arten von Gyroiden und erhalte Meilen dafür! Und wenn man einen gefunden hat, will man doch noch mehr, hm?\n\n"
         },
         {
             "English": "Distinctive",
-            "English (Europe)": "Distinctive"
+            "English (Europe)": "Distinctive",
+            "German": "Unverwechselbarer/Unverwechselbare"
         },
         {
             "English": "Whimsical",
-            "English (Europe)": "Whimsical"
+            "English (Europe)": "Whimsical",
+            "German": "Wunderliche"
         },
         {
             "English": "Novel",
-            "English (Europe)": "Novel"
+            "English (Europe)": "Novel",
+            "German": "Ungewöhnliches"
         },
         {
             "English": "Curator",
-            "English (Europe)": "Curator"
+            "English (Europe)": "Curator",
+            "German": "Kurator/Kuratorin"
         },
         {
             "English": "Statue",
-            "English (Europe)": "Statue"
+            "English (Europe)": "Statue",
+            "German": "Statue"
         },
         {
             "English": "Symbol",
-            "English (Europe)": "Symbol"
+            "English (Europe)": "Symbol",
+            "German": "Symbol"
         },
         {
             "English": "Sprout Out Loud",
-            "English (Europe)": "Sprout Out Loud"
+            "English (Europe)": "Sprout Out Loud",
+            "German": "Kraft der Landwirtschaft"
         },
         {
             "English": "Plant your produce starts across the whole island for a fresh, bounteous crop! Whether it's a small home garden or a full-on field, support Nook Inc. with all your produce-planting power! Yes, yes!",
-            "English (Europe)": "Plant your produce starts across the whole island for a fresh, bounteous crop! Whether it's a small home garden or a full-on field, support Nook Inc. with all your produce-planting power! Yes, yes!"
+            "English (Europe)": "Plant your produce starts across the whole island for a fresh, bounteous crop! Whether it's a small home garden or a full-on field, support Nook Inc. with all your produce-planting power! Yes, yes!",
+            "German": "Baue fleißig an, ob im Hintergarten oder auf einem richtigen Feld. Eine reiche Ernte erwartet dich – in Form von Feldfrüchten und Nook-Meilen gleichermaßen, ja, ja!"
         },
         {
             "English": "Field-Fresh",
-            "English (Europe)": "Field-Fresh"
+            "English (Europe)": "Field-Fresh",
+            "German": "Feldfrisches"
         },
         {
             "English": "Locally Sourced",
-            "English (Europe)": "Locally Sourced"
+            "English (Europe)": "Locally Sourced",
+            "German": "Nährstoffreicher"
         },
         {
             "English": "Sustainable",
-            "English (Europe)": "Sustainable"
+            "English (Europe)": "Sustainable",
+            "German": "Nachhaltiger"
         },
         {
             "English": "Hardworking",
@@ -23724,15 +23830,18 @@
         },
         {
             "English": "Fertilizer",
-            "English (Europe)": "Fertilizer"
+            "English (Europe)": "Fertilizer",
+            "German": "Düngemittel"
         },
         {
             "English": "Soil",
-            "English (Europe)": "Soil"
+            "English (Europe)": "Soil",
+            "German": "Erdboden"
         },
         {
             "English": "Start",
-            "English (Europe)": "Start"
+            "English (Europe)": "Start",
+            "German": "Setzling"
         },
         {
             "English": "Days",
@@ -23744,27 +23853,33 @@
         },
         {
             "English": "Executive Producer",
-            "English (Europe)": "Executive Producer"
+            "English (Europe)": "Executive Producer",
+            "German": "Erntedank"
         },
         {
             "English": "Nothing feels quite like harvesting produce that you grew by the sweat of your brow, yes, yes! Now go enjoy the fruits of your labor—and the pumpkins, carrots, sugarcane, and potatoes too!",
-            "English (Europe)": "Nothing feels quite like harvesting produce that you grew by the sweat of your brow, yes, yes! Now go enjoy the fruits of your labor—and the pumpkins, carrots, sugarcane, and potatoes too!"
+            "English (Europe)": "Nothing feels quite like harvesting produce that you grew by the sweat of your brow, yes, yes! Now go enjoy the fruits of your labor—and the pumpkins, carrots, sugarcane, and potatoes too!",
+            "German": "Alles schmeckt hundertmal so gut, wenn man es mit den eigenen Händen erntet. Zeit, die Früchte deiner Arbeit zu genießen. Ganz zu schweigen von all den Tomaten, Kürbissen, Karotten, Kartoffeln…\n\n"
         },
         {
             "English": "Farming",
-            "English (Europe)": "Farming"
+            "English (Europe)": "Farming",
+            "German": "Bewirtschaftendes"
         },
         {
             "English": "Crop-Tending",
-            "English (Europe)": "Crop-Tending"
+            "English (Europe)": "Crop-Tending",
+            "German": "Landwirtlicher/Landwirtliche"
         },
         {
             "English": "Vibrant",
-            "English (Europe)": "Vibrant"
+            "English (Europe)": "Vibrant",
+            "German": "Erntefrische"
         },
         {
             "English": "Nurturing",
-            "English (Europe)": "Nurturing"
+            "English (Europe)": "Nurturing",
+            "German": "Hätschelnder"
         },
         {
             "English": "Thriving",
@@ -23772,19 +23887,23 @@
         },
         {
             "English": "Greenhorn",
-            "English (Europe)": "Greenhorn"
+            "English (Europe)": "Greenhorn",
+            "German": "Greenhorn"
         },
         {
             "English": "Crops",
-            "English (Europe)": "Crops"
+            "English (Europe)": "Crops",
+            "German": "Erntehelfer/Erntehelferin"
         },
         {
             "English": "Baby",
-            "English (Europe)": "Baby"
+            "English (Europe)": "Baby",
+            "German": "Aubergine"
         },
         {
             "English": "Young'un",
-            "English (Europe)": "Young'un"
+            "English (Europe)": "Young'un",
+            "German": "Erbsenzähler"
         },
         {
             "English": "Populace",
@@ -23792,31 +23911,38 @@
         },
         {
             "English": "Shellaborator; Shellarina",
-            "English (Europe)": "Shellaborator; Shellarina"
+            "English (Europe)": "Shellaborator; Shellarina",
+            "German": "Molluske"
         },
         {
             "English": "Set Sail for Adventure",
-            "English (Europe)": "Set Sail for Adventure"
+            "English (Europe)": "Set Sail for Adventure",
+            "German": "Kurs auf Abenteuer"
         },
         {
             "English": "Rare items and exciting adventures are yours when you head out on a special tour with a veteran sailor, yes, yes!",
-            "English (Europe)": "Rare items and exciting adventures are yours when you head out on a special tour with a veteran sailor, yes, yes!"
+            "English (Europe)": "Rare items and exciting adventures are yours when you head out on a special tour with a veteran sailor, yes, yes!",
+            "German": "Seltene Gegenstände und Abenteuer erwarten dich, wenn du dich mit einem alten Seebären auf eine besondere Reise machst, ja, ja!"
         },
         {
             "English": "Sun-Kissed",
-            "English (Europe)": "Sun-Kissed"
+            "English (Europe)": "Sun-Kissed",
+            "German": "Sonnengebräunter/Sonnengebräunte"
         },
         {
             "English": "Household",
-            "English (Europe)": "Household"
+            "English (Europe)": "Household",
+            "German": "Heimkehrender/Heimkehrende"
         },
         {
             "English": "Voyaging",
-            "English (Europe)": "Voyaging"
+            "English (Europe)": "Voyaging",
+            "German": "Navigierender/Navigierende"
         },
         {
             "English": "Family-Minded",
-            "English (Europe)": "Family-Minded"
+            "English (Europe)": "Family-Minded",
+            "German": "Familienliebender"
         },
         {
             "English": "Impressive",
@@ -23824,43 +23950,53 @@
         },
         {
             "English": "Boater",
-            "English (Europe)": "Boater"
+            "English (Europe)": "Boater",
+            "German": "Bootsfahrer/Bootsfahrerin"
         },
         {
             "English": "Provider",
-            "English (Europe)": "Provider"
+            "English (Europe)": "Provider",
+            "German": "Versorger/Versorgerin"
         },
         {
             "English": "Explorer",
-            "English (Europe)": "Explorer"
+            "English (Europe)": "Explorer",
+            "German": "Weltenbummler/Weltenbummlerin"
         },
         {
             "English": "Parent",
-            "English (Europe)": "Parent"
+            "English (Europe)": "Parent",
+            "German": "Elternteil"
         },
         {
             "English": "Come Home to the Roost",
-            "English (Europe)": "Come Home to the Roost"
+            "English (Europe)": "Come Home to the Roost",
+            "German": "Kaffee im Taubenschlag"
         },
         {
             "English": "The Roost, located on the second floor of the museum, is quite picky about the coffee they serve, yes, yes! Do stop in to enjoy a cup and earn some dark-roasted miles!",
-            "English (Europe)": "The Roost, located on the second floor of the museum, is quite picky about the coffee they serve, yes, yes! Do stop in to enjoy a cup and earn some dark-roasted miles!"
+            "English (Europe)": "The Roost, located on the second floor of the museum, is quite picky about the coffee they serve, yes, yes! Do stop in to enjoy a cup and earn some dark-roasted miles!",
+            "German": "Im Café Taubenschlag, das sich im ersten Stock des Museums befindet, ist man sehr wählerisch beim Kaffeesortiment, ja, ja! Schau mal vorbei und verdiene dir ein paar Meilen!"
         },
         {
             "English": "Aromatic",
-            "English (Europe)": "Aromatic"
+            "English (Europe)": "Aromatic",
+            "German": "Aromatische"
         },
         {
             "English": "Caffeinated",
-            "English (Europe)": "Caffeinated"
+            "English (Europe)": "Caffeinated",
+            "German": "Koffeinhaltiger/Koffeinhaltige"
         },
         {
             "English": "Fragrant",
-            "English (Europe)": "Fragrant"
+            "English (Europe)": "Fragrant",
+            "German": "Duftende"
         },
         {
             "English": "Rich",
-            "English (Europe)": "Rich"
+            "English (Europe)": "Rich",
+            "German": "Gehaltvolle"
         },
         {
             "English": "Acidic",
@@ -23868,15 +24004,18 @@
         },
         {
             "English": "Beans",
-            "English (Europe)": "Beans"
+            "English (Europe)": "Beans",
+            "German": "Bohne"
         },
         {
             "English": "Break",
-            "English (Europe)": "Break"
+            "English (Europe)": "Break",
+            "German": "Pause"
         },
         {
             "English": "Blend",
-            "English (Europe)": "Blend"
+            "English (Europe)": "Blend",
+            "German": "Mischung"
         },
         {
             "English": "Barista",
@@ -23885,51 +24024,64 @@
         {
             "English": "Stretch to Refresh!",
             "English (Europe)": "Stretch to Refresh!",
-            "French": "1, 2, 3, on se bouge !"
+            "French": "1, 2, 3, on se bouge !",
+            "German": "Dehnen macht munter!"
         },
         {
             "English": "The health of our residents is a top priority, yes, yes! So we're holding group-stretching sessions in the plaza. I'll provide miles once per day for participating, and there will be a tape deck for music. I hope I see you there!",
             "English (Europe)": "The health of our residents is a top priority, yes, yes! So we're holding group-stretching sessions in the plaza. I'll provide miles once per day for participating, and there will be a tape deck for music. I hope I see you there!",
-            "French": "La santé de nos résidents est notre priorité n°1, oui oui ! Alors nous proposons chaque jour des séances d'aérobic sur la place. Et une fois par jour, tu auras droit à quelques miles en récompense de ta participation !"
+            "French": "La santé de nos résidents est notre priorité n°1, oui oui ! Alors nous proposons chaque jour des séances d'aérobic sur la place. Et une fois par jour, tu auras droit à quelques miles en récompense de ta participation !",
+            "German": "Die Gesundheit unserer Bewohner ist uns wichtig, ja, ja! Deswegen bieten wir auf dem Festplatz Gruppengymnastik an. Für die Teilnahme gibt es täglich Meilen, und es steht auch ein Radiorekorder für Musik bereit!"
         },
         {
             "English": "Athletic",
-            "English (Europe)": "Athletic"
+            "English (Europe)": "Athletic",
+            "German": "Athletischer"
         },
         {
             "English": "Peak-Performing",
-            "English (Europe)": "Peak-Performing"
+            "English (Europe)": "Peak-Performing",
+            "German": "Spitzen-"
         },
         {
             "English": "Stoic",
             "English (Europe)": "Stoic"
         },
         {
-            "English": "Learn a specified number of cooking DIY recipes"
+            "English": "Learn a specified number of cooking DIY recipes",
+            "German": "Lerne eine bestimmte Anzahl von Rezepten."
         },
         {
-            "English": "Cook a specified number of foods"
+            "English": "Cook a specified number of foods",
+            "German": "Koche eine bestimmte Anzahl an Gerichten."
         },
         {
-            "English": "Dig up your first gyroid"
+            "English": "Dig up your first gyroid",
+            "German": "Grabe zum ersten Mal einen Gyroiden aus."
         },
         {
-            "English": "Touch specified number of unique gyroids"
+            "English": "Touch specified number of unique gyroids",
+            "German": "Hebe eine bestimmte Anzahl an Gyroiden auf."
         },
         {
-            "English": "Plant a specified number of produce sprouts (replanting existing sprouts does not count)"
+            "English": "Plant a specified number of produce sprouts (replanting existing sprouts does not count)",
+            "German": "Pflanze eine bestimmte Anzahl von Gemüsesetzlingen (das Ausgraben und Umpflanzen existierender Gemüsepflanzen zählt nicht)."
         },
         {
-            "English": "Harvest a specified number of produce"
+            "English": "Harvest a specified number of produce",
+            "German": "Ernte eine bestimmte Anzahl an Gemüse."
         },
         {
-            "English": "Number of times you've gone on a Kapp'n tour"
+            "English": "Number of times you've gone on a Kapp'n tour",
+            "German": "Gehe auf eine Bestimmte Anzahl Bootsausflüge mit Käpten."
         },
         {
-            "English": "Number of days you've gotten coffee from Brewster"
+            "English": "Number of days you've gotten coffee from Brewster",
+            "German": "Bestelle an einer bestimmten Anzahl unterschiedlicher Tage Kaffee im Café Taubenschlag."
         },
         {
-            "English": "Number of days you've participated in group stretching"
+            "English": "Number of days you've participated in group stretching",
+            "German": "Nimm an einer bestimmten Anzahl unterschiedlicher Tage an der Gruppengymnastik teil."
         }
     ],
     "Cards": [
@@ -23938,7 +24090,7 @@
             "English (Europe)": "67 items (9 items missing)",
             "French": "53 items (23 items missing)",
             "French (US)": "53 items (23 items missing)",
-            "German": "67 items (9 items missing)",
+            "German": "75 items (1 items missing)",
             "Spanish": "0 items (76 items missing)",
             "Spanish (US)": "0 items (76 items missing)",
             "Italian": "0 items (76 items missing)",
@@ -24097,13 +24249,13 @@
             "English (Europe)": "Card from Your pals at Dodo Airlines",
             "French": "Carte du personnel de Dodo Airlines",
             "French (US)": "Carte du personnel de Dodo Airlines",
-            "German": "Karte von der Dodo Airlines ",
+            "German": "Karte von Dodo Airlines ",
             "Dutch": "Kaart van je vrienden van DAL"
         },
         {
             "English": "Carpet-of-leaves card",
             "English (Europe)": "Carpet-of-leaves card",
-            "German": "Laupteppich-Karte",
+            "German": "Laubteppich-Karte",
             "Dutch": "Herfst kaart"
         },
         {
@@ -24179,13 +24331,13 @@
             "English (Europe)": "Fantasy-stars card",
             "French": "Carte étoiles fantaisie",
             "French (US)": "Carte étoiles fantaisie",
-            "German": "Himmel-Pop-Karte",
+            "German": "Himmels-Pop-Karte",
             "Dutch": "Fantasie sterren kaart"
         },
         {
             "English": "Father's Day card",
             "English (Europe)": "Father's Day card",
-            "German": "Vatertags-Karte",
+            "German": "Vatertag-Karte",
             "Dutch": "Vaderdags kaart"
         },
         {
@@ -24285,7 +24437,7 @@
         {
             "English": "Turkey Day card",
             "English (Europe)": "Turkey Day card",
-            "German": "Schlemmerfest-Karte",
+            "German": "Schlemmfest-Karte",
             "Dutch": "Smakenfestijn kaart"
         },
         {
@@ -24314,7 +24466,7 @@
         {
             "English": "Mother's Day card",
             "English (Europe)": "Mother's Day card",
-            "German": "Muttertags-Karte",
+            "German": "Muttertag-Karte",
             "Dutch": "Moededag kaart"
         },
         {
@@ -24456,31 +24608,39 @@
             "Dutch": "kaart ontvangen van"
         },
         {
-            "English": "Dawning-year card"
+            "English": "Dawning-year card",
+            "German": "Jahresanbruchkarte"
         },
         {
-            "English": "Fireworks card"
+            "English": "Fireworks card",
+            "German": "Feuerwerkkarte"
         },
         {
-            "English": "Flight-ticket card"
+            "English": "Flight-ticket card",
+            "German": "Flugticketkarte"
         },
         {
-            "English": "Glowing-moss card"
+            "English": "Glowing-moss card",
+            "German": "Leuchtmoos-Karte"
         },
         {
             "English": "MsgWherearenOffice00"
         },
         {
-            "English": "Paradise Planning card"
+            "English": "Paradise Planning card",
+            "German": "FHA-Karte"
         },
         {
-            "English": "Plumeria card"
+            "English": "Plumeria card",
+            "German": "Frangipani-Karte"
         },
         {
-            "English": "Sunset card"
+            "English": "Sunset card",
+            "German": "Sonnenuntergangs-Karte"
         },
         {
-            "English": "Tropical card"
+            "English": "Tropical card",
+            "German": "Tropen-Karte"
         }
     ],
     "Museum Descriptions": [
@@ -27508,7 +27668,7 @@
             "French": "197 items",
             "French (US)": "197 items",
             "German": "205 items",
-            "Russian": "199 items",
+            "Russian": "200 items",
             "Spanish": "14 items",
             "Spanish (US)": "0 items",
             "Italian": "0 items",
@@ -28719,7 +28879,8 @@
             "English (Europe)": "OH MY GOSH! I caught a stringfish! Five more and I'll have a guitarfish!",
             "French": "Waouh ! Tu as pris un dai yu ! J'en avais pas vu depuis dai yustres !",
             "French (US)": "Waouh ! Tu as pris un dai yu ! J'en avais pas vu depuis dai yustres !",
-            "German": "HUCH! Ein Huchen! Nach denen muss man suchen!"
+            "German": "HUCH! Ein Huchen! Nach denen muss man suchen!",
+            "Russian": "На удочку попался таймень! Сдвину шляпу набекрень! "
         },
         {
             "English": "I caught a sturgeon! Wonder if it can perform sturgery...",
