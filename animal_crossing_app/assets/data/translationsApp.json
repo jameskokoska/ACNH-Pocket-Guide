@@ -570,21 +570,21 @@
     ],
     "Main": [
         {
-            "English": "884 items",
-            "English (Europe)": "884 items",
-            "French": "873 items (11 items missing)",
-            "French (US)": "873 items (11 items missing)",
-            "German": "884 items",
-            "Spanish": "873 items (11 items missing)",
-            "Spanish (US)": "869 items (15 items missing)",
-            "Russian": "884 items",
-            "Italian": "883 items (1 items missing)",
-            "Dutch": "858 items (26 items missing)",
-            "Chinese": "513 items (371 items missing)",
-            "Chinese (Traditional)": "0 items (884 items missing)",
-            "Japanese": "0 items (884 items missing)",
-            "Korean": "0 items (884 items missing)",
-            "Portuguese": "881 items (3 items missing)"
+            "English": "886 items",
+            "English (Europe)": "886 items",
+            "French": "875 items (11 items missing)",
+            "French (US)": "875 items (11 items missing)",
+            "German": "886 items",
+            "Spanish": "875 items (11 items missing)",
+            "Spanish (US)": "871 items (15 items missing)",
+            "Russian": "886 items",
+            "Italian": "885 items (1 items missing)",
+            "Dutch": "860 items (26 items missing)",
+            "Chinese": "513 items (373 items missing)",
+            "Chinese (Traditional)": "0 items (886 items missing)",
+            "Japanese": "0 items (886 items missing)",
+            "Korean": "0 items (886 items missing)",
+            "Portuguese": "883 items (3 items missing)"
         },
         {
             "English": "Home",
@@ -11712,7 +11712,7 @@
             "English (Europe)": "Upgrading house",
             "French": "Maison de mise à niveau",
             "French (US)": "Maison de mise à niveau",
-            "German": "Haus aufrüsten",
+            "German": "Haus ausbauen",
             "Spanish": "Mejorando la casa",
             "Spanish (US)": "Mejorando la casa",
             "Russian": "Модернизация дома",
@@ -12512,6 +12512,32 @@
             "Italian": "Se hai già supportato, grazie!!",
             "Dutch": "Als je al gesteund hebt, bedankt!!",
             "Portuguese": "Se você já apoiou, obrigado !!"
+        },
+        {
+            "English": "Automatically collect when donated to Museum",
+            "English (Europe)": "Automatically collect when donated to Museum",
+            "French": "Collecter automatiquement lorsqu'il est donné au musée",
+            "French (US)": "Collecter automatiquement lorsqu'il est donné au musée",
+            "German": "Automatisch sammeln, wenn es an das Museum gespendet wird",
+            "Spanish": "Se recolecta automáticamente cuando se dona al museo",
+            "Spanish (US)": "Se recolecta automáticamente cuando se dona al museo",
+            "Russian": "Автоматически собирать при передаче в музей",
+            "Italian": "Raccogli automaticamente quando donato al Museo",
+            "Dutch": "Automatisch verzamelen wanneer het wordt gedoneerd aan Museum",
+            "Portuguese": "Recolher automaticamente quando doado ao Museu"
+        },
+        {
+            "English": "Automatically check off the item as collected when the donated to museum button is checked.",
+            "English (Europe)": "Automatically check off the item as collected when the donated to museum button is checked.",
+            "French": "Cochez automatiquement l'article comme collecté lorsque le bouton Donné au musée est coché.",
+            "French (US)": "Cochez automatiquement l'article comme collecté lorsque le bouton Donné au musée est coché.",
+            "German": "Haken Sie den Artikel automatisch als gesammelt ab, wenn die Schaltfläche \"Gespendet an das Museum\" aktiviert ist.",
+            "Spanish": "Marque automáticamente el artículo como recolectado cuando se marca el botón Donado al museo.",
+            "Spanish (US)": "Marque automáticamente el artículo como recolectado cuando se marca el botón Donado al museo.",
+            "Russian": "Автоматически отмечать предмет как собранный, когда отмечена кнопка «Пожертвовать музею».",
+            "Italian": "Seleziona automaticamente l'oggetto come raccolto quando viene selezionato il pulsante Donato al museo.",
+            "Dutch": "Vink het item automatisch af als verzameld wanneer de knop Gedoneerd aan museum is aangevinkt.",
+            "Portuguese": "Marque automaticamente o item conforme coletado quando o botão doado ao museu for selecionado."
         }
     ],
     "Sources": [
