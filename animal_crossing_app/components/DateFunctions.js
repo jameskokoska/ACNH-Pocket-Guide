@@ -19,6 +19,18 @@ export function doWeSwapDate(){
   }
 }
 
+//in the form: mm/dd
+export function swapDateCards(date){
+  if(date===undefined || !date.includes("/")){
+    return date
+  }
+  if(doWeSwapDate()){
+    return date.split("/")[1] + "/" + date.split("/")[0] 
+  } else {
+    return date
+  }
+}
+
 export function addDays(date, days) {
   var result = new Date(date);
   result.setDate(result.getDate() + days);

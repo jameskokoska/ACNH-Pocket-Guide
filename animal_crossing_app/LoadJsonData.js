@@ -677,7 +677,7 @@ export const settings = [
 
   {
     "keyName" : "breaker",
-    "text" : "Creatures",
+    "text" : "Museum",
   },
   // {
   //   "keyName" : "settingsListOnlyActiveCreatures",
@@ -702,6 +702,14 @@ export const settings = [
     "picture" : require("./assets/icons/filter.png"),
     "displayName" : "Sort creatures based on Critterpedia",
     "description" : "Sort creatures the same way they are sorted in the Critterpedia. This applies to the Creatures + Museum page.",
+  },
+  {
+    "keyName" : "settingsAutoCheckMuseum",
+    "defaultValue" : "true",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/owl.png"),
+    "displayName" : "Automatically collect when donated to Museum",
+    "description" : "Automatically check off the item as collected when the donated to museum button is checked.",
   },
   {
     "keyName" : "breaker",

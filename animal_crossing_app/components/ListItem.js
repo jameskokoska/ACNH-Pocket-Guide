@@ -12,7 +12,7 @@ import Check from './Check';
 import FastImage from './FastImage';
 import {checkOff, capitalize, commas, removeBrackets} from "../LoadJsonData"
 import {getFoodPhoto, getPhoto, getPhotoShadow} from "./GetPhoto"
-import {getMonthShort} from "./DateFunctions"
+import {getMonthShort, swapDateCards} from "./DateFunctions"
 import colors from "../Colors"
 import {getCurrentDateObject, parseActiveTime} from "./DateFunctions"
 import {inMuseum, inVillager, inVillagerPhoto, inWishlist, inChecklist,getSettingsString, variationsCheckedPercent} from "../LoadJsonData"
@@ -240,7 +240,7 @@ class ListItem extends React.Component{
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
               <CheckVillagerPhoto showVillagerPhotoButton={this.showVillagerPhotoButton} setCollected={this.setCollected} collected={this.state.collected} setVillagerPhoto={this.setVillagerPhoto} item={this.props.item} villager={this.state.villagerPhoto} villagerPage={this.checkVillagerPhotoButton()}/>
               {this.state.wishlist? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7 + ((this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]!=="" && this.props.textProperty2[this.props.item.dataSet]==="(DIY)")?2:0), top: 7 + ((this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]!=="" && this.props.textProperty2[this.props.item.dataSet]==="(DIY)")?33:0), zIndex:10,}}/> : <View/>}
-              { (!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].startsWith("http") ? 
+              { (!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].startsWith("http") ? 
                 <FastImage
                   style={styles.gridBoxImage}
                   source={{
@@ -285,7 +285,7 @@ class ListItem extends React.Component{
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
               {this.state.wishlist ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
-              { (!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].startsWith("http") ? 
+              { (!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].startsWith("http") ? 
                 <FastImage
                   style={styles.gridBoxImageLarge}
                   source={{
@@ -311,7 +311,7 @@ class ListItem extends React.Component{
         priceComponent = <View style={{flexDirection:"row", alignItems:"center", justifyContent:"center", marginTop: 3}}><Image style={{width:15,height:15,resizeMode:'contain',  marginRight:3}} source={require("../assets/icons/coin.png")}/><TextFont translate={false} bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{commas(this.props.item["Sell"])}</TextFont></View>
       } else if(this.props.textProperty2==="cards"){
         if(this.props.item[getSettingsString("settingsNorthernHemisphere") === "true" ? "NH Start Date":"SH Start Date"] !== (undefined || "NA")){
-          priceComponent = <View style={{flexDirection:"row", alignItems:"center", justifyContent:"center", marginTop: 3}}><Image style={{width:15,height:15,resizeMode:'contain',  marginRight:3}} source={require("../assets/icons/clockIcon.png")}/><TextFont translate={false} bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{this.props.item[getSettingsString("settingsNorthernHemisphere") === "true" ? "NH Start Date":"SH Start Date"] + " - " + this.props.item[getSettingsString("settingsNorthernHemisphere") === "true" ? "NH End Date":"SH End Date"]}</TextFont></View>
+          priceComponent = <View style={{flexDirection:"row", alignItems:"center", justifyContent:"center", marginTop: 3}}><Image style={{width:15,height:15,resizeMode:'contain',  marginRight:3}} source={require("../assets/icons/clockIcon.png")}/><TextFont translate={false} bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{swapDateCards(this.props.item[getSettingsString("settingsNorthernHemisphere") === "true" ? "NH Start Date":"SH Start Date"]) + " - " + swapDateCards(this.props.item[getSettingsString("settingsNorthernHemisphere") === "true" ? "NH End Date":"SH End Date"])}</TextFont></View>
         } else if (this.props.item["Buy"]==="NFS") {
           priceComponent = <TextFont translate={false} bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{"NFS"}</TextFont>
         }
@@ -341,7 +341,7 @@ class ListItem extends React.Component{
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
               {this.state.wishlist===true ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
-              {(!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected)?<FastImage
+              {(!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto)?<FastImage
                 style={styles.gridBoxImageLargeSmaller}
                 source={{
                   uri: imageSrc,
@@ -380,7 +380,7 @@ class ListItem extends React.Component{
             <View style={[styles.row,{backgroundColor:boxColor}]}>
               {this.state.wishlist ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', right:7, top: 7, zIndex:10,}}/> : <View/>}
               <View style={[styles.rowImageBackground,{backgroundColor:this.props.accentColor}]}>
-                {(!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected)?<FastImage
+                {(!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto)?<FastImage
                   style={styles.rowImage}
                   source={{
                     uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
@@ -433,7 +433,7 @@ class CheckMuseum extends Component {
         checkOff(this.props.item.checkListKey, this.props.museum, "museum");
         this.props.setMuseum(this.props.museum===true ? false:true);
         //check off if donated to museum
-        if(!this.props.collected && !this.props.museum){
+        if(!this.props.collected && !this.props.museum && getSettingsString("settingsAutoCheckMuseum")==="true"){
           checkOff(this.props.item.checkListKey, this.props.collected); 
           this.props.setCollected(this.props.collected===true ? false:true);
         }
