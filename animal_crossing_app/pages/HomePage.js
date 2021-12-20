@@ -17,7 +17,7 @@ import {TodoList, TurnipLog} from '../components/TodoList';
 import VisitorsList from '../components/VisitorsList';
 import {translateDreamAddressBeginning, translateIslandNameInputLabel2, translateIslandNameInputLabel1, getSettingsString, attemptToTranslate} from "../LoadJsonData"
 // import { ScrollView } from 'react-native-gesture-handler';
-import Popup, {PopupBottomCustom} from "../components/Popup"
+import Popup, {PopupBottomCustom, PopupRaw} from "../components/Popup"
 import VillagerPopup from "../popups/VillagerPopup"
 import ToggleSwitch from 'toggle-switch-react-native'
 import {SubHeader, Paragraph} from "../components/Formattings"
@@ -811,46 +811,49 @@ export class CollectionProgress extends Component {
     }
   }
   componentDidMount(){
+    if(global.collectionList!==undefined && global.collectionList.length>7000){
+      this.popupLoading.setPopupVisible(true)
+    }
     setTimeout(async ()=>{
       collectionListRemoveDuplicates();
-      var fishCount = countCollection("fishCheckList");
+      var fishCount = await countCollection("fishCheckList");
       var fishCountTotal = global.dataLoadedFish[0].length;
       var fishPercentage = fishCount/fishCountTotal * 100;
-      var seaCount = countCollection("seaCheckList");
+      var seaCount = await countCollection("seaCheckList");
       var seaCountTotal = global.dataLoadedSea[0].length;
       var seaPercentage = seaCount/seaCountTotal * 100;
-      var bugsCount = countCollection("bugCheckList");
+      var bugsCount = await countCollection("bugCheckList");
       var bugsCountTotal = global.dataLoadedBugs[0].length;
       var bugsPercentage = bugsCount/bugsCountTotal * 100;
-      var fossilCount = countCollection("fossilCheckList");
+      var fossilCount = await countCollection("fossilCheckList");
       var fossilCountTotal = global.dataLoadedFossils[0].length;
       var fossilPercentage = fossilCount/fossilCountTotal * 100;
-      var artCount = countCollection("artCheckList");
+      var artCount = await countCollection("artCheckList");
       var artCountTotal = 43;
       var artPercentage = artCount/artCountTotal * 100;
-      var musicCount = countCollection("songCheckList");
+      var musicCount = await countCollection("songCheckList");
       var musicCountTotal = global.dataLoadedMusic[0].length - 3; //there are 3 Hazure songs
       var musicPercentage = musicCount/musicCountTotal * 100;
-      var emojipediaCount = countCollection("emojiCheckList");
+      var emojipediaCount = await countCollection("emojiCheckList");
       var emojipediaCountTotal = global.dataLoadedReactions[0].length;
       var emojipediaPercentage = emojipediaCount/emojipediaCountTotal * 100;
-      var recipeCount = countCollection("recipesCheckList");
+      var recipeCount = await countCollection("recipesCheckList");
       var recipeCountTotal = global.dataLoadedRecipes[0].length;
       var recipePercentage = recipeCount/recipeCountTotal * 100;
-      let countFloorWalls = countCollectionSpecial("dataLoadedFloorWalls");
+      let countFloorWalls = await countCollectionSpecial("dataLoadedFloorWalls");
       var floorWallsCount = countFloorWalls[0]
       var floorWallsCountTotal = countFloorWalls[1]
       var floorWallsPercentage = floorWallsCount/floorWallsCountTotal * 100;
-      let countFurniture = countCollectionSpecial("dataLoadedFurniture");
+      let countFurniture = await countCollectionSpecial("dataLoadedFurniture");
       var furnitureCount = countFurniture[0]
       var furnitureCountTotal = countFurniture[1]
       var furniturePercentage = furnitureCount/furnitureCountTotal * 100;
-      let countClothing = countCollectionSpecial("dataLoadedClothing");
+      let countClothing = await countCollectionSpecial("dataLoadedClothing");
       var clothingCount = countClothing[0]
       var clothingCountTotal = countClothing[1]
       var clothingPercentage = clothingCount/clothingCountTotal * 100;
       var achievementsCount = await countCollectionAchievements();
-      var achievementsCountTotal = countAchievements();
+      var achievementsCountTotal = await countAchievements();
       var achievementsPercentage = achievementsCount/achievementsCountTotal * 100;
       this.setState({
         fishCount: fishCount,
@@ -893,11 +896,18 @@ export class CollectionProgress extends Component {
         achievementsCountTotal: achievementsCountTotal,
         achievementsPercentage: achievementsPercentage,
       })
+      this.popupLoading.setPopupVisible(false)
     },10)
   }
   render(){
-    
     return(<>
+      <PopupRaw
+        ref={(popupLoading) => this.popupLoading = popupLoading} 
+        text={attemptToTranslate("Counting Collection...")}
+        textFontSize={18}
+        loadingScale={1.3}
+        loadingWidth={40}
+      />
       <View style={{height: 15}}/>
       <ProgressContainer setPage={this.props.setPage} page={2} tab={0} color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.fishPercentage} image={require("../assets/icons/fish.png")} text={attemptToTranslate("Fish") + " " + this.state.fishCount + "/" + this.state.fishCountTotal.toString()}/>
       <ProgressContainer setPage={this.props.setPage} page={2} tab={1} color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.seaPercentage} image={require("../assets/icons/octopus.png")} text={attemptToTranslate("Sea Creatures") + " " + this.state.seaCount + "/" + this.state.seaCountTotal.toString()}/>
@@ -905,7 +915,7 @@ export class CollectionProgress extends Component {
       <ProgressContainer setPage={this.props.setPage} page={2} tab={3} color={colors.fossilAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.fossilPercentage} image={require("../assets/icons/bones.png")} text={attemptToTranslate("Fossils") + " " + this.state.fossilCount + "/" + this.state.fossilCountTotal.toString()}/>
       <ProgressContainer setPage={this.props.setPage} page={2} tab={4} color={colors.artAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.artPercentage} image={require("../assets/icons/colorPalette.png")} text={attemptToTranslate("Art") + " " + this.state.artCount + "/" + this.state.artCountTotal.toString()}/>
       <ProgressContainer setPage={this.props.setPage} page={4} tab={""} color={colors.musicAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.musicPercentage} image={require("../assets/icons/music.png")} text={attemptToTranslate("Songs") + " " + this.state.musicCount + "/" + this.state.musicCountTotal.toString()}/>
-      <ProgressContainer setPage={this.props.setPage} page={5} tab={""} color={colors.emojipediaAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.emojipediaPercentage} image={require("../assets/icons/emote.png")} text={attemptToTranslate("Emotes") + " " + this.state.emojipediaCount + "/" + this.state.emojipediaCountTotal.toString()}/>
+      <ProgressContainer setPage={this.props.setPage} page={5} tab={""} color={colors.emojipediaAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.emojipediaPercentage} image={require("../assets/icons/emote.png")} text={attemptToTranslate("Reactions") + " " + this.state.emojipediaCount + "/" + this.state.emojipediaCountTotal.toString()}/>
       <ProgressContainer setPage={this.props.setPage} page={6} tab={""} color={colors.toolsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.recipePercentage} image={require("../assets/icons/crafting.png")} text={attemptToTranslate("Recipes") + " " + this.state.recipeCount + "/" + this.state.recipeCountTotal.toString()}/>
       <ProgressContainer setPage={this.props.setPage} page={3} tab={0} color={colors.furnitureAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.furniturePercentage} image={require("../assets/icons/leaf.png")} text={attemptToTranslate("Furniture") + " " + this.state.furnitureCount + "/" + this.state.furnitureCountTotal.toString()}/>
       <ProgressContainer setPage={this.props.setPage} page={3} tab={2} color={colors.floorWallsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.floorWallsPercentage} image={require("../assets/icons/carpet.png")} text={attemptToTranslate("Floor & Walls") + " " + this.state.floorWallsCount + "/" + this.state.floorWallsCountTotal.toString()}/>

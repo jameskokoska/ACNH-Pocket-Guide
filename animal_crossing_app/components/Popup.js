@@ -98,7 +98,7 @@ class Popup extends Component {
         <View style={[styles.centeredView,{padding:this.props.centerPadding}]}>
           {(this.props.button1===undefined && this.props.button2===undefined) || this.props.noDismiss===true ? <View/> : <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} style={{position:"absolute", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: "black", opacity: 0.1}}/>}
           <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
-            <TextFont bold={true} style={{fontSize: 25, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.props.text}</TextFont>
+            {this.props.text?<TextFont bold={true} style={{fontSize: 25, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.props.text}</TextFont>:<View/>}
             <ScrollView style={{maxHeight:Dimensions.get('window').height*0.75, marginTop:this.props.margin?10:0}}>
               {this.props.textLower===undefined?<View/>:<TextFont bold={false} style={{fontSize: 17, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.props.textLower}</TextFont>}
             </ScrollView>
@@ -147,14 +147,14 @@ export class PopupRaw extends Component {
         <View style={[{position:"absolute",bottom:0, width: Dimensions.get('window').width}]}>
           <View style={{alignItems:"center", justifyContent:"center"}}>
             <View style={[styles.modalView,{backgroundColor: colors.white[Appearance.getColorScheme()==="light" ? 0 : 1]}]}>
-              <TextFont bold={true} style={{fontSize: 24, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.props.text}</TextFont>
+              <TextFont bold={true} style={{fontSize: this.props.textFontSize===undefined?24:this.props.textFontSize, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.props.text}</TextFont>
               <ScrollView style={{maxHeight:Dimensions.get('window').height*0.75}}>
-                <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.props.textLower}</TextFont>
-                <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.props.textLower2}</TextFont>
-                <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.state.text}</TextFont>
+                {this.props.textLower!==undefined?<TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.props.textLower}</TextFont>:<View/>}
+                {this.props.textLower2!==undefined?<TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.props.textLower2}</TextFont>:<View/>}
+                {this.state.text!==undefined?<TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.state.text}</TextFont>:<View/>}
                 <View style={{justifyContent:"center", alignItems:"center"}}>
                   <LottieView autoPlay loop
-                    style={{width: 90, zIndex:1, transform: [{ scale: 1.1 },{ rotate: '0deg'},],}}
+                    style={{width: this.props.loadingWidth===undefined?90:this.props.loadingWidth, zIndex:1, transform: [{ scale: this.props.loadingScale===undefined?1.1:this.props.loadingScale },{ rotate: '0deg'},],}}
                     source={require('../assets/loading.json')}
                   />
                 </View>

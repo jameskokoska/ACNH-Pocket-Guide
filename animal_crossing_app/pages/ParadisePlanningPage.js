@@ -11,10 +11,9 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import Check from '../components/Check';
 import FadeInOut from '../components/FadeInOut';
 import { calculateHeaderHeight } from '../components/ListPage';
+import Toast from "react-native-toast-notifications";
 
-let paradiseChecklist = [];
-
-export default class ParadiserequestningPage extends Component {
+export default class ParadisePlanningPage extends Component {
   constructor(props){
     super(props);
     this.data = require("../assets/data/DataCreated/Paradise Planning.json");
@@ -25,30 +24,33 @@ export default class ParadiserequestningPage extends Component {
       loaded: false,
       setFilter: 0,
     }
-    this.loadList()
   }
 
   loadList = async() => {
     var storageData = JSON.parse(await getStorage("ParadisePlanning"+global.profile,JSON.stringify([])));
-    if(storageData.constructor!==Array){
+    if(storageData.constructor!==Array || storageData === undefined){
       storageData=[];
     }
-    paradiseChecklist = storageData
+    this.paradiseChecklist = storageData
     this.setState({loaded: true})
   }
 
   checkOffItem = (id) => {
-    var oldList = paradiseChecklist;
-    if(oldList.includes(id)){
-      oldList = oldList.filter(item => item !== id)
-      this.saveList(oldList);
-      paradiseChecklist = oldList
-      getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
-    } else {
-      oldList.push(id);
-      this.saveList(oldList);
-      paradiseChecklist = oldList
-      getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10,220,20]) : "";
+    try {
+      var oldList = this.paradiseChecklist;
+      if(oldList.includes(id)){
+        oldList = oldList.filter(item => item !== id)
+        this.saveList(oldList);
+        this.paradiseChecklist = oldList
+        getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+      } else {
+        oldList.push(id);
+        this.saveList(oldList);
+        this.paradiseChecklist = oldList
+        getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10,220,20]) : "";
+      }
+    } catch (e){
+      toast.show("Please report this error to dapperappdeveloper@gmail.com : \n" + e.toString(), {type:"danger"})
     }
   }
 
@@ -56,8 +58,9 @@ export default class ParadiserequestningPage extends Component {
     await AsyncStorage.setItem("ParadisePlanning"+global.profile, JSON.stringify(checklist));
   }
 
-  componentDidMount() {
+  async componentDidMount(){
     this.mounted = true;
+    await this.loadList()
   }
   componentWillUnmount() {
     this.mounted = false;
@@ -76,11 +79,11 @@ export default class ParadiserequestningPage extends Component {
 
         //handle filters
         if(this.filterTypes[filter]==="checked"){
-          if(!paradiseChecklist.includes(request["Name"])){
+          if(!this.paradiseChecklist.includes(request["Name"])){
             skip=true
           }
         }else if(this.filterTypes[filter]==="not checked"){
-          if(paradiseChecklist.includes(request["Name"])){
+          if(this.paradiseChecklist.includes(request["Name"])){
             skip=true
           }
         }
@@ -139,7 +142,7 @@ export default class ParadiserequestningPage extends Component {
           onScroll={Animated.event([{ nativeEvent: {contentOffset: {y: this.scrollY}}}],{useNativeDriver: true,},)}
           data={this.state.data}
           renderItem={({item, index}) => {
-              return(<Request request={item} checkOffItem={this.checkOffItem}/>)
+              return(<Request request={item} checkOffItem={this.checkOffItem} paradiseChecklist={this.paradiseChecklist}/>)
           }}
           keyExtractor={(item, index) => `list-item-${index}-${item["Name"]}`}
           contentContainerStyle={{paddingBottom:Dimensions.get('window').height/3}}
@@ -171,10 +174,10 @@ class Request extends React.PureComponent{
   constructor(props){
     super(props);
     this.villagerObject = findObject(this.props.request["Name"], "Name", "Villagers")
-    this.state = {checked:paradiseChecklist.includes(this.props.request["Name"])}
+    this.state = {checked:this.props.paradiseChecklist.includes(this.props.request["Name"])}
   }
   componentDidMount(){
-    this.setState({checked:paradiseChecklist.includes(this.props.request["Name"])})
+    this.setState({checked:this.props.paradiseChecklist.includes(this.props.request["Name"])})
   }
   render(){
     return <>

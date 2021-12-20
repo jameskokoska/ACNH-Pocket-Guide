@@ -128,7 +128,7 @@ class PopupFilter extends Component {
           {"name":"Scissors","id":"handSign:Scissors"},
         ]
       }]
-      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...categories, ...handSigns];
+      this.possibleFilters = [...this.possibleFilters, ...categories, ...handSigns];
     } else if(this.props.title==="Active Creatures"){
       const categories = [{
         "name": "Type Categories",
@@ -164,20 +164,20 @@ class PopupFilter extends Component {
       }]
       this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...categories, ...filterDefinitions["Floor & Walls"]];
     } else if(this.props.title==="Reactions"){
-      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...filterDefinitions["Reactions"]];
+      this.possibleFilters = [...this.possibleFilters, ...filterDefinitions["Reactions"]];
     } else if(this.props.title==="Recipes"){
       const categories = [{
         "name": "Type Categories",
         "id":"Type Categories",
         "children": [{"name":"Crafting Recipes (DIY)","id":"Filter Crafting DIY"},{"name":"Cooking Recipes (DIY)","id":"Filter Cooking DIY"}]
       }]
-      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...categories, ...filterDefinitions["Recipes"]];
+      this.possibleFilters = [...this.possibleFilters, ...categories, ...filterDefinitions["Recipes"]];
     } else if(this.props.title==="Villagers"){
       this.sortByFilters[0]["children"] = [{name:"Reverse sorting direction", id:"Reverse direction"},
       {name:"", id:"break"},{name:"Birthday", id:"Sort-Birthday"}]
-      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.villagerFilters, ...this.genderFilters, ...filterDefinitions["Villagers"]];
+      this.possibleFilters = [...this.possibleFilters, ...this.villagerFilters, ...this.genderFilters, ...filterDefinitions["Villagers"]];
     } else if(this.props.title==="Gyroids"){
-      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...filterDefinitions["Gyroids"]];
+      this.possibleFilters = [...this.possibleFilters, ...filterDefinitions["Gyroids"]];
     } else if(this.props.title==="New Items"){
       this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.villagerFilters, ...notCraftVariationsFilters, ...categoriesAll];
     } else if(this.props.title==="Everything" || this.props.title==="Wishlist"){
@@ -190,7 +190,7 @@ class PopupFilter extends Component {
       }]
       this.possibleFilters = [...this.sortByFilters,...this.possibleFilters,...categories]
     } else if(this.props.title==="Music"){
-      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...filterDefinitions["Music"]]
+      this.possibleFilters = [...this.possibleFilters, ...filterDefinitions["Music"]]
     } else if(this.props.villagerGifts===true){
       const categories = [{
         "name": "Villager Wearable Filters",

@@ -80,12 +80,13 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
       for(let x = 1; x < checkListKey[dataSet].length; x++){
         if(dataLoading[i][checkListKey[dataSet][x]]!==undefined){
           checkListKeyString += dataLoading[i][checkListKey[dataSet][x]];
-        }else{
-          if(i===0){
-            console.log(checkListKey[dataSet][x])
-            console.log(inputData[dataSet][1])
-          }
         }
+        // else{
+        //   if(i===0){
+        //     console.log(checkListKey[dataSet][x])
+        //     console.log(inputData[dataSet][1])
+        //   }
+        // }
       }
       if(checkListKeyString===checkListKey[dataSet][0]){
         checkListKeyString=checkListKeyString+"things be missing"
@@ -136,7 +137,7 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
   return dataLoadingTotal;
 }
 
-export function countCollection(checkListKeyStart){
+export async function countCollection(checkListKeyStart){
   var count = 0;
   for(var i = 0; i<global.collectionList.length; i++){
     if(global.collectionList[i].includes(checkListKeyStart) && !global.collectionList[i].includes("wishlist") && !global.collectionList[i].includes("museum")){
@@ -152,7 +153,7 @@ export function countCollection(checkListKeyStart){
   return count;
 }
 
-export function countCollectionSpecial(datakeyName){
+export async function countCollectionSpecial(datakeyName){
   let database = determineDataGlobal(datakeyName)
   let count = 0;
   let total = 0;
@@ -176,7 +177,7 @@ export function countCollectionSpecial(datakeyName){
 }
 
 //total achievements
-export function countAchievements(){
+export async function countAchievements(){
   let data = require("./assets/data/DataCreated/Achievements.json");
   let totalAchievements = 0
   for(let i = 0; i<data.length; i++){

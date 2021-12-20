@@ -73,10 +73,11 @@ export default class FirebaseBackup extends Component {
         }).then(()=>{
           this.setState({messageExport:attemptToTranslate("Verifying data...")});
           (app.database()).ref('users/' + user).once('value').then(async (snapshot) => {
-            if(snapshot.val()===null || snapshot.val()["data"]===undefined){
+            if(snapshot.val()===null || snapshot.val()["data"]===undefined || snapshot.val()["data"].length!==allData.length){
               this.setState({messageExport:attemptToTranslate("An error occurred. No backup was created.")});
               return
             } else {
+              console.log("length comparison:" +  snapshot.val()["data"].length + " " + allData.length)
               this.setState({messageExport:attemptToTranslate("There are") + " " + snapshot.val()["data"].split("\n").length.toString() + " " + attemptToTranslate("entries on the server now")+"\n" + attemptToTranslate("Exported to user:") + "\n"  + this.state.email + "\n" + user.toString()});
             }
           })

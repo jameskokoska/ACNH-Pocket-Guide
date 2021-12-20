@@ -3,10 +3,20 @@ export const dataVersion = "4"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
--Thank you everyone for the support and tips, I appreciate it!
+-Happy Holidays!
+-More features coming soon!
+-Just taking some time for the holidays
 -
 -Popup Changelog won't appear when new user first opens the app
 -Importing a large file backup now has loading prompt
+-Added catch error for Paradise Planning page. Please report this bug if it occurs.
+-Fixed villager name translation for notifications
+-Added loading bar when database is counting collection (for large collections only)
+-Removed sorting filters for items pages that it doesn't apply to
+-Added popup for info on how to add villagers in your town (only appears once)
+-Cloud backup service verifies data in a better way to ensure successful upload
+-
+-Past changes:
 -
 -If avoiding spoilers, villager image will show for past villagers and if you collected their photo
 -Fixed date on Letters page, flipped based on language
@@ -59,8 +69,6 @@ export const changelog = `
 -Fixed status bar on some phones
 -Added reset password button on Backup page
 -Updated translations
--
--Past changes:
 -
 -Header fades in better when loaded
 -Fixed translations for villagers birthdays
