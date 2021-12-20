@@ -205,6 +205,7 @@ export class InfoLine extends Component {
     
     var imageSource = <Image style={styles.infoLineImage} source={this.props.image}/>;
     var extraImageSource = <View/>
+    var currencyBells = false;
     if(this.props.textProperty!==undefined && this.props.textProperty[0]==="Cyrus Customize Price"){
       extraImageSource = <Image style={styles.infoLineImage} source={require("../assets/icons/diyKit.png")}/>
     }
@@ -223,6 +224,7 @@ export class InfoLine extends Component {
         imageSource = <Image style={styles.infoLineImage} source={require("../assets/icons/crystal.png")}/>;
       } else if( text!=="NFS" ){
         ending = " " + attemptToTranslate("bells");
+        currencyBells = true
       } else {
         ending = "";
       }
@@ -230,6 +232,12 @@ export class InfoLine extends Component {
       ending="";
     } else if (this.props.ending==="Exchange Currency"){
       ending = " " + attemptToTranslate("bells");
+      currencyBells = true
+    }
+
+    if(currencyBells && global.ordinance === "Bell Boom" && this.props.item[this.props.textProperty]!==undefined){
+      console.log("bell boom")
+      text = commas(parseInt(parseInt(this.props.item[this.props.textProperty])*1.2))
     }
 
     if(this.props.textProperty.includes("Material")){

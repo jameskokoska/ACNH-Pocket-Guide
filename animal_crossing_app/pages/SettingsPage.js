@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Image, ScrollView, View, Dimensions} from 'react-native';
+import {Image, ScrollView, View, Dimensions, TouchableOpacity} from 'react-native';
 import TextFont from '../components/TextFont'
 import SettingsContainer from '../components/SettingsContainer';
 import colors from '../Colors';
@@ -60,6 +60,9 @@ class SettingsPage extends Component {
           <View style={{marginTop: 15}}/>
           <SettingsDivider text={"Game language"}/>
           <LanguagePicker restartPopup={(show)=>this.popupRestart.setPopupVisible(show)}/>
+          <View style={{height:10}}/>
+          <SettingsDivider text={"Island ordinance"}/>
+          <OrdinancePicker setPage={this.props.setPage}/>
           <View style={{height:10}}/>
           {global.settingsCurrent.map( (setting, index)=>
             {
@@ -277,7 +280,34 @@ export class LanguagePicker extends Component{
         }}/>
       </View>
       <HeaderNote>Translations only apply to game item names only, all other app content is in English. Some items may be missing translations. If you would like to help translate this app, feel free to reach out via email. </HeaderNote>
-      
+    </>
+    )
+  }
+}
+
+export class OrdinancePicker extends Component{
+  render(){
+    let ordinances = [
+      {label: "None", value: "",},
+      {label: "Beautiful Island", value: "Beautiful Island",},
+      {label: "Early Bird", value: "Early Bird",},
+      {label: "Night Owl", value: "Night Owl",},
+      {label: "Bell Boom", value: "Bell Boom",},
+    ]
+    return(<>
+      <View style={{marginTop:5, marginBottom:5, marginHorizontal:20, justifyContent:"center"}}>
+        <DropdownMenu 
+          width={Dimensions.get('window').width-83}
+          selection={true}
+          items={ordinances}
+          defaultValue={global.ordinance}
+          onChangeItem={
+            async (item)=>{global.ordinance=item.value, await AsyncStorage.setItem("ordinance"+global.profile, item.value); 
+        }}/>
+      </View>
+      <TouchableOpacity onPress={() => this.props.setPage(15, true, "ordinanceRedirect")}>
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 13, textAlign:"center", padding:4,}}>{"You can read about Ordinances by tapping here."}</TextFont>
+      </TouchableOpacity>
     </>
     )
   }

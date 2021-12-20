@@ -130,6 +130,7 @@ class App extends Component {
     global.creatorCode = await getStorage("creatorCode"+global.profile,"");
     global.selectedFruit = await getStorage("selectedFruit"+global.profile,"");
     global.customTimeOffset = await getStorage("customDateOffset"+global.profile,"0");
+    global.ordinance = await getStorage("ordinance"+global.profile,"");
     // console.log(global.collectionList)
   }
 

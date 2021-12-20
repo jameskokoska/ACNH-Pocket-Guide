@@ -3,6 +3,64 @@ import React, {Component} from 'react';
 import {Text} from 'react-native';
 import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
 
+export function hoursNook(type){
+  if(type==="openHour"){
+    if(global.ordinance==="Early Bird"){
+      return 7
+    }
+    return 8
+  } else if(type==="closeHour"){
+    if(global.ordinance==="Night Owl"){
+      return 23
+    }
+    return 22
+  }
+  if(getSettingsString("settingsUse24HourClock") === "true"){
+    if(global.ordinance==="Early Bird"){
+      return "7:00 - 22:00"
+    } else if(global.ordinance==="Night Owl"){
+      return "8:00 - 23:00"
+    } 
+    return "8:00 - 22:00"
+  }else{
+    if(global.ordinance==="Early Bird"){
+      return "7 AM - 10 PM"
+    } else if(global.ordinance==="Night Owl"){
+      return "8 AM - 11 PM"
+    } 
+    return "8 AM - 10 PM"
+  }
+}
+
+export function hoursAble(type){
+  if(type==="openHour"){
+    if(global.ordinance==="Early Bird"){
+      return 8
+    }
+    return 9
+  } else if(type==="closeHour"){
+    if(global.ordinance==="Night Owl"){
+      return 22
+    }
+    return 21
+  }
+  if(getSettingsString("settingsUse24HourClock") === "true"){
+    if(global.ordinance==="Early Bird"){
+      return "8:00 - 21:00"
+    } else if(global.ordinance==="Night Owl"){
+      return "9:00 - 22:00"
+    } 
+    return "9:00 - 21:00"
+  }else{
+    if(global.ordinance==="Early Bird"){
+      return "8 AM - 9 PM"
+    } else if(global.ordinance==="Night Owl"){
+      return "9 AM - 10 PM"
+    } 
+    return "9 AM - 9 PM"
+  }
+}
+
 export function doWeSwapDate(){
   if(global.language.includes("French")){
     return true;

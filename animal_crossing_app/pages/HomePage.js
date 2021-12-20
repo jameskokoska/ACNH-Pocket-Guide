@@ -12,7 +12,7 @@ import TextFont from "../components/TextFont"
 import ActiveCreatures from "../components/ActiveCreatures"
 import CurrentVillagers from "../components/CurrentVillagers"
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {getCurrentDateObject, doWeSwapDate, addDays} from '../components/DateFunctions';
+import {getCurrentDateObject, doWeSwapDate, addDays, hoursStringNook, hoursStringAble, hoursNook, hoursAble} from '../components/DateFunctions';
 import {TodoList, TurnipLog} from '../components/TodoList';
 import VisitorsList from '../components/VisitorsList';
 import {translateDreamAddressBeginning, translateIslandNameInputLabel2, translateIslandNameInputLabel1, getSettingsString, attemptToTranslate} from "../LoadJsonData"
@@ -234,8 +234,8 @@ class HomePage extends Component {
             }
             return sections["Store Hours"]===true?<HomeContentArea index={index} key={"Store Hours"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.storeHoursColor[global.darkMode]} title="Store Hours" titleColor={colors.storeHoursColor[global.darkModeReverse]}>
               <View style={{height: 15}}/>
-              <StoreHoursContainer image={require("../assets/icons/nook.png")} text="Nook's Cranny" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "8:00 - 22:00" : "8 AM - 10 PM"} openHour={8} closeHour={22}/>
-              <StoreHoursContainer image={require("../assets/icons/able.png")} text="Able Sisters" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "9:00 - 21:00" : "9 AM - 9 PM"} openHour={9} closeHour={21}/>
+              <StoreHoursContainer image={require("../assets/icons/nook.png")} text="Nook's Cranny" textBottom={hoursNook()} openHour={hoursNook("openHour")} closeHour={hoursNook("closeHour")}/>
+              <StoreHoursContainer image={require("../assets/icons/able.png")} text="Able Sisters" textBottom={hoursAble()} openHour={hoursAble("openHour")} closeHour={hoursAble("closeHour")}/>
               <View style={{height: 15}}/>
             </HomeContentArea>:<View/>
           }

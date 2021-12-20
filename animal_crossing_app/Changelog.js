@@ -7,6 +7,7 @@ export const changelog = `
 -More features coming soon!
 -Just taking some time for the holidays
 -
+-Added ordinances! Select it in the Settings page
 -Popup Changelog won't appear when new user first opens the app
 -Importing a large file backup now has loading prompt
 -Added catch error for Paradise Planning page. Please report this bug if it occurs.
