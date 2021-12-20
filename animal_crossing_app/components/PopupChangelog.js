@@ -22,13 +22,15 @@ export default class PopupChangelog extends Component {
     this.mounted = true;
     this.openChangelog = await getStorage("changelog","");
     this.popupVisible = false;
-    if(this.openChangelog === "" || this.openChangelog !== global.version){
+    this.numLogins = parseInt(await getStorage("numLogins","0"))
+    if((this.openChangelog === "" || this.openChangelog !== global.version) && this.numLogins>0){
       this.timeoutHandle = setTimeout(()=>{
         this.popupVisible = true;
         this.setPopupVisible(true);
       }, 10);
+    } else {
+      await AsyncStorage.setItem("changelog", global.version);
     }
-    this.numLogins = parseInt(await getStorage("numLogins","0"))
     BackHandler.addEventListener("hardwareBackPress", this.handleBackButton);
   }
 

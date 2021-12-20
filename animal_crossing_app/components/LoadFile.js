@@ -28,16 +28,24 @@ class LoadFile extends Component {
           button1Action={async ()=>{
             var document = await DocumentPicker.getDocumentAsync();
             console.log(document.uri);
+            this.popupWait.setPopupVisible(true)
             fetch(document.uri)
             .then( file => file.text() )
             .then( async (text) => {
               var totalImported = await importAllData(text)
               this.setState({loadedNumber:totalImported}) 
+              this.popupWait.setPopupVisible(false)
+              this.loadPopupResults?.setPopupVisible(true);
             })
-            this.loadPopupResults?.setPopupVisible(true);
           }}
           text={"Import File"}
           textLower={"\n" + attemptToTranslate("Please import ACNHPocketGuideData.txt.")}
+        />
+        <Popup 
+          ref={(popupWait) => this.popupWait = popupWait}
+          button1Action={()=>{}}
+          text={"Importing..."}
+          textLower={"Please wait"}
         />
         <Popup 
           ref={(loadPopupResults) => this.loadPopupResults = loadPopupResults}

@@ -5,6 +5,9 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -Thank you everyone for the support and tips, I appreciate it!
 -
+-Popup Changelog won't appear when new user first opens the app
+-Importing a large file backup now has loading prompt
+-
 -If avoiding spoilers, villager image will show for past villagers and if you collected their photo
 -Fixed date on Letters page, flipped based on language
 -Added 'Automatically collect when donated to Museum' setting
