@@ -65,6 +65,12 @@ import { DefaultTheme, Provider } from 'react-native-paper';
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
+
+//expo build:android has been superseded by eas build. Learn more: https://blog.expo.dev/turtle-goes-out-to-sea-d334db2a6b60
+// Run the following:
+// › npm install -g eas-cli
+// › eas build -p android https://docs.expo.dev/build/setup/
+// expo build:android will be discontinued on January 4, 2023 (385 days left).
 const appInfo = require("./app.json");
 global.version = appInfo["expo"]["version"];
 global.versionCode = appInfo["expo"]["android"]["versionCode"];
