@@ -570,21 +570,21 @@
     ],
     "Main": [
         {
-            "English": "886 items",
-            "English (Europe)": "886 items",
-            "French": "875 items (11 items missing)",
-            "French (US)": "875 items (11 items missing)",
-            "German": "886 items",
-            "Spanish": "875 items (11 items missing)",
-            "Spanish (US)": "871 items (15 items missing)",
-            "Russian": "886 items",
-            "Italian": "885 items (1 items missing)",
-            "Dutch": "860 items (26 items missing)",
-            "Chinese": "513 items (373 items missing)",
-            "Chinese (Traditional)": "0 items (886 items missing)",
-            "Japanese": "0 items (886 items missing)",
-            "Korean": "0 items (886 items missing)",
-            "Portuguese": "883 items (3 items missing)"
+            "English": "896 items",
+            "English (Europe)": "896 items",
+            "French": "885 items (11 items missing)",
+            "French (US)": "885 items (11 items missing)",
+            "German": "896 items",
+            "Spanish": "885 items (11 items missing)",
+            "Spanish (US)": "881 items (15 items missing)",
+            "Russian": "896 items",
+            "Italian": "895 items (1 items missing)",
+            "Dutch": "870 items (26 items missing)",
+            "Chinese": "513 items (383 items missing)",
+            "Chinese (Traditional)": "0 items (896 items missing)",
+            "Japanese": "0 items (896 items missing)",
+            "Korean": "0 items (896 items missing)",
+            "Portuguese": "893 items (3 items missing)"
         },
         {
             "English": "Home",
@@ -4258,7 +4258,7 @@
             "English (Europe)": "Thanks for your help!",
             "French": "Merci pour votre aide!",
             "French (US)": "Merci pour votre aide!",
-            "German": "Danke für deine Hilfe!",
+            "German": "Danke für eure Hilfe!",
             "Spanish": "¡Gracias por su ayuda!",
             "Spanish (US)": "¡Gracias por su ayuda!",
             "Russian": "Спасибо вам за помощь!",
@@ -4516,7 +4516,7 @@
             "Russian": "Летают",
             "Italian": "Volano",
             "Dutch": "Vliegend",
-            "Chinese": "在飞舞",
+            "Chinese": "飞舞",
             "Portuguese": "Voando"
         },
         {
@@ -4965,7 +4965,7 @@
             "Spanish (US)": "Normal",
             "Russian": "Нормальный",
             "Italian": "Normale",
-            "Chinese": "普通的",
+            "Chinese": "普通",
             "Portuguese": "Normal"
         },
         {
@@ -7163,7 +7163,7 @@
             "Russian": "Рекомендуется поселить жителей всех типов личности, чтобы получить от них всевозможные инструкции и реакции. ",
             "Italian": "È consigliabile avere tutti i tipi di personalità abitante per avere tutte le ricette ed emozioni.",
             "Dutch": "Het wordt aanbevolen dat je alle persoonlijkheidstypes hebt om alle DIY's en emotie's te kunnen krijgen.",
-            "Chinese": "建议你拥有所有的个性类型，以便能够获得所有的DIY和反应。",
+            "Chinese": "建议你拥有所有的性格类型，以便能够获得所有的DIY和反应。",
             "Portuguese": "Recomenda-se que você tenha todos os tipos de personalidade para poder obter todos os DIYs e Reações."
         },
         {
@@ -7177,7 +7177,7 @@
             "Russian": "Не хватает типов личности жителей:",
             "Italian": "Personalità mancanti:",
             "Dutch": "Ontbrekende persoonlijkheden:",
-            "Chinese": "缺少的个性：",
+            "Chinese": "缺少的性格：",
             "Portuguese": "Personalidades ausentes:"
         },
         {
@@ -7275,7 +7275,7 @@
             "Russian": "Вы сможете получить всё, так как у вас есть жители всех типов личности!",
             "Italian": "Puoi avere tutto poichè possiedi tutti i tipi di personalità!",
             "Dutch": "Je kunt alles krijgen omdat je alle persoonlijkheidstypes hebt!",
-            "Chinese": "你可以得到所有的东西，因为你有所有的人格类型!",
+            "Chinese": "你可以得到所有的东西，因为你有所有的性格类型!",
             "Portuguese": "Você pode obter tudo desde que tenha todos os tipos de personalidade!"
         },
         {
@@ -12007,17 +12007,17 @@
             "Portuguese": "Deixe uma dica"
         },
         {
-            "English": "If you enjoy this free app, consider supporting the developer :)",
-            "English (Europe)": "If you enjoy this free app, consider supporting the developer :)",
-            "French": "Si vous appréciez cette application gratuite, pensez à soutenir le développeur :)",
-            "French (US)": "Si vous appréciez cette application gratuite, pensez à soutenir le développeur :)",
-            "German": "Wenn dir diese kostenlose App gefällt, solltest du den Entwickler unterstützen :)",
-            "Spanish": "Si disfruta de esta aplicación gratuita, considere apoyar al desarrollador :)",
-            "Spanish (US)": "Si disfruta de esta aplicación gratuita, considere apoyar al desarrollador :)",
-            "Russian": "Если вам нравится это бесплатное приложение, подумайте о поддержке разработчика :)",
-            "Italian": "Se ti piace questa app gratuita, considera di supportare lo sviluppatore :)",
-            "Dutch": "Als je deze gratis app leuk vindt, overweeg dan om de ontwikkelaar te steunen :)",
-            "Portuguese": "Se você gosta deste aplicativo gratuito, considere apoiar o desenvolvedor :)"
+            "English": "If you enjoy this free app, consider supporting the developer",
+            "English (Europe)": "If you enjoy this free app, consider supporting the developer",
+            "French": "Si vous appréciez cette application gratuite, pensez à soutenir le développeur",
+            "French (US)": "Si vous appréciez cette application gratuite, pensez à soutenir le développeur",
+            "German": "Wenn dir diese kostenlose App gefällt, solltest du den Entwickler unterstützen",
+            "Spanish": "Si disfruta de esta aplicación gratuita, considere apoyar al desarrollador",
+            "Spanish (US)": "Si disfruta de esta aplicación gratuita, considere apoyar al desarrollador",
+            "Russian": "Если вам нравится это бесплатное приложение, подумайте о поддержке разработчика",
+            "Italian": "Se ti piace questa app gratuita, considera di supportare lo sviluppatore",
+            "Dutch": "Als je deze gratis app leuk vindt, overweeg dan om de ontwikkelaar te steunen",
+            "Portuguese": "Se você gosta deste aplicativo gratuito, considere apoiar o desenvolvedor"
         },
         {
             "English": "Thank you!",
@@ -12538,6 +12538,136 @@
             "Italian": "Seleziona automaticamente l'oggetto come raccolto quando viene selezionato il pulsante Donato al museo.",
             "Dutch": "Vink het item automatisch af als verzameld wanneer de knop Gedoneerd aan museum is aangevinkt.",
             "Portuguese": "Marque automaticamente o item conforme coletado quando o botão doado ao museu for selecionado."
+        },
+        {
+            "English": "Counting Collection...",
+            "English (Europe)": "Counting Collection...",
+            "French": "Comptage Collection...",
+            "French (US)": "Comptage Collection...",
+            "German": "Sammlung zählen...",
+            "Spanish": "Contando colección ...",
+            "Spanish (US)": "Contando colección ...",
+            "Russian": "Подсчет коллекции ...",
+            "Italian": "Conteggio raccolta...",
+            "Dutch": "Tellen collectie...",
+            "Portuguese": "Contando coleção ..."
+        },
+        {
+            "English": "Island ordinance",
+            "English (Europe)": "Island ordinance",
+            "French": "Ordonnance de l'île",
+            "French (US)": "Ordonnance de l'île",
+            "German": "Inselverordnung",
+            "Spanish": "Ordenanza de la isla",
+            "Spanish (US)": "Ordenanza de la isla",
+            "Russian": "Постановление острова",
+            "Italian": "Ordinanza dell'isola",
+            "Dutch": "Eilandverordening",
+            "Portuguese": "Ordenança da ilha"
+        },
+        {
+            "English": "You can read about Ordinances by tapping here.",
+            "English (Europe)": "You can read about Ordinances by tapping here.",
+            "French": "Vous pouvez en savoir plus sur les ordonnances en appuyant ici.",
+            "French (US)": "Vous pouvez en savoir plus sur les ordonnances en appuyant ici.",
+            "German": "Sie können über Verordnungen lesen, indem Sie hier tippen.",
+            "Spanish": "Puede leer sobre las ordenanzas tocando aquí.",
+            "Spanish (US)": "Puede leer sobre las ordenanzas tocando aquí.",
+            "Russian": "Вы можете прочитать о таинствах, нажав здесь.",
+            "Italian": "Puoi leggere le ordinanze toccando qui.",
+            "Dutch": "U kunt over verordeningen lezen door hier te tikken.",
+            "Portuguese": "Você pode ler sobre as Ordenanças tocando aqui."
+        },
+        {
+            "English": "None",
+            "English (Europe)": "None",
+            "French": "Rien",
+            "French (US)": "Rien",
+            "German": "Keiner",
+            "Spanish": "Ninguna",
+            "Spanish (US)": "Ninguna",
+            "Russian": "Никто",
+            "Italian": "Nessuno",
+            "Dutch": "Geen",
+            "Portuguese": "Nenhum"
+        },
+        {
+            "English": "Beautiful Island",
+            "English (Europe)": "Beautiful Island",
+            "French": "Belle île",
+            "French (US)": "Belle île",
+            "German": "Schöne Insel",
+            "Spanish": "Isla bonita",
+            "Spanish (US)": "Isla bonita",
+            "Russian": "Красивый остров",
+            "Italian": "Isola bellissima",
+            "Dutch": "Mooi eiland",
+            "Portuguese": "Bela ilha"
+        },
+        {
+            "English": "Early Bird",
+            "English (Europe)": "Early Bird",
+            "French": "Lève tôt",
+            "French (US)": "Lève tôt",
+            "German": "Früher Vogel",
+            "Spanish": "Madrugador",
+            "Spanish (US)": "Madrugador",
+            "Russian": "Ранняя пташка",
+            "Italian": "Early Bird",
+            "Dutch": "Vroege vogel",
+            "Portuguese": "Madrugador"
+        },
+        {
+            "English": "Night Owl",
+            "English (Europe)": "Night Owl",
+            "French": "Hibou de nuit",
+            "French (US)": "Hibou de nuit",
+            "German": "Nachteule",
+            "Spanish": "Noctámbulo",
+            "Spanish (US)": "Noctámbulo",
+            "Russian": "Ночная Сова",
+            "Italian": "Nottambulo",
+            "Dutch": "Nachtuil",
+            "Portuguese": "Night Owl"
+        },
+        {
+            "English": "Bell Boom",
+            "English (Europe)": "Bell Boom",
+            "French": "Boum de la cloche",
+            "French (US)": "Boum de la cloche",
+            "German": "Glocke Boom",
+            "Spanish": "Campana boom",
+            "Spanish (US)": "Campana boom",
+            "Russian": "Белл Бум",
+            "Italian": "campana boom",
+            "Dutch": "Bell Boom",
+            "Portuguese": "Bell Boom"
+        },
+        {
+            "English": "Happy Holidays!",
+            "English (Europe)": "Happy Holidays!",
+            "French": "Joyeuses fêtes!",
+            "French (US)": "Joyeuses fêtes!",
+            "German": "Schöne Ferien!",
+            "Spanish": "¡Felices vacaciones!",
+            "Spanish (US)": "¡Felices vacaciones!",
+            "Russian": "Счастливых праздников!",
+            "Italian": "Buone vacanze!",
+            "Dutch": "Fijne vakantie!",
+            "Portuguese": "Boas festas!"
+        },
+        {
+            "English": "Support the app to keep it ad free for all",
+            "English (Europe)": "Support the app to keep it ad free for all",
+            "French": "Soutenez l'application pour qu'elle reste gratuite pour tous",
+            "French (US)": "Soutenez l'application pour qu'elle reste gratuite pour tous",
+            "German": "Unterstützen Sie die App, damit sie für alle werbefrei bleibt",
+            "Spanish": "Apoye la aplicación para mantenerla libre de anuncios para todos",
+            "Spanish (US)": "Apoye la aplicación para mantenerla libre de anuncios para todos",
+            "Russian": "Поддержите приложение, чтобы оно было бесплатным для всех",
+            "Italian": "Supporta l'app per mantenerla senza pubblicità per tutti",
+            "Dutch": "Ondersteun de app om deze voor iedereen advertentievrij te houden",
+            "Portuguese": "Apoie o aplicativo para mantê-lo gratuito para todos"
         }
     ],
     "Sources": [
@@ -17489,12 +17619,12 @@
             "English (Europe)": "904 items (9 items missing)",
             "French": "821 items (92 items missing)",
             "French (US)": "817 items (96 items missing)",
-            "German": "899 items (14 items missing)",
+            "German": "908 items (5 items missing)",
             "Spanish": "105 items (808 items missing)",
             "Spanish (US)": "0 items (913 items missing)",
             "Italian": "0 items (913 items missing)",
             "Dutch": "249 items (664 items missing)",
-            "Chinese": "74 items (839 items missing)",
+            "Chinese": "75 items (838 items missing)",
             "Chinese (Traditional)": "0 items (913 items missing)",
             "Japanese": "0 items (913 items missing)",
             "Korean": "0 items (913 items missing)",
@@ -18065,7 +18195,7 @@
             "German": "Furchtloser Fänger",
             "Spanish": "¿Estás bien?",
             "Dutch": "Van je stokje",
-            "Chinese": "注意微信的虫子！"
+            "Chinese": "注意危险的虫子！"
         },
         {
             "English": "Overcoming Pitfalls",
@@ -18232,7 +18362,8 @@
             "French (US)": "Fête d'anniversaire",
             "German": "Gratulantenbonus",
             "Spanish": "Feliz cumpleaños ajeno",
-            "Dutch": "Feestbeest"
+            "Dutch": "Feestbeest",
+            "Chinese": "祝贺生日吧！"
         },
         {
             "English": "Happy Birthday!",
@@ -23848,11 +23979,13 @@
         },
         {
             "English": "Hardworking",
-            "English (Europe)": "Hardworking"
+            "English (Europe)": "Hardworking",
+            "German": "Arbeitsame"
         },
         {
             "English": "Green-Thumbed",
-            "English (Europe)": "Green-Thumbed"
+            "English (Europe)": "Green-Thumbed",
+            "German": "Gründäumiger"
         },
         {
             "English": "Fertilizer",
@@ -23871,11 +24004,13 @@
         },
         {
             "English": "Days",
-            "English (Europe)": "Days"
+            "English (Europe)": "Days",
+            "German": "Routine"
         },
         {
             "English": "Success",
-            "English (Europe)": "Success"
+            "English (Europe)": "Success",
+            "German": "Erfolg"
         },
         {
             "English": "Executive Producer",
@@ -23909,7 +24044,8 @@
         },
         {
             "English": "Thriving",
-            "English (Europe)": "Thriving"
+            "English (Europe)": "Thriving",
+            "German": "Gedeihende"
         },
         {
             "English": "Greenhorn",
@@ -23933,7 +24069,8 @@
         },
         {
             "English": "Populace",
-            "English (Europe)": "Populace"
+            "English (Europe)": "Populace",
+            "German": "Gemeinschaft"
         },
         {
             "English": "Shellaborator; Shellarina",
@@ -24026,7 +24163,8 @@
         },
         {
             "English": "Acidic",
-            "English (Europe)": "Acidic"
+            "English (Europe)": "Acidic",
+            "German": "Saurer/Sauer"
         },
         {
             "English": "Beans",
@@ -24045,7 +24183,8 @@
         },
         {
             "English": "Barista",
-            "English (Europe)": "Barista"
+            "English (Europe)": "Barista",
+            "German": "Barista"
         },
         {
             "English": "Stretch to Refresh!",
@@ -24071,7 +24210,8 @@
         },
         {
             "English": "Stoic",
-            "English (Europe)": "Stoic"
+            "English (Europe)": "Stoic",
+            "German": "Stoischer"
         },
         {
             "English": "Learn a specified number of cooking DIY recipes",
@@ -29317,7 +29457,7 @@
         },
         {
             "English": "Tin can (insert catch phrase here!)",
-            "German": "Eine Dose!(Seit wann mögen Fische denn bitte schön Fertiggerichte?)",
+            "German": "Eine Dose! (Seit wann mögen Fische denn bitte schön Fertiggerichte?)",
             "Russian": "На удочку попалась жестянка! Эх, жизнь моя..."
         },
         {
@@ -29327,7 +29467,7 @@
         },
         {
             "English": "Old tire (insert catch phrase here!)",
-            "German": "Eine Reifen! (Der ist reif für den Müll, würde ich sagen.)",
+            "German": "Ein Reifen! (Der ist reif für den Müll, würde ich sagen.)",
             "Russian": "На удочку попалась старая шина! От машины-амфибии, что ли?"
         },
         {

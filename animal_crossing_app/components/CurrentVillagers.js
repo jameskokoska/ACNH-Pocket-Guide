@@ -12,10 +12,18 @@ export default class CurrentVillagers extends Component {
   }
   render(){
     var currentVillagers
-    if(this.props.villagersToShow===undefined)
+    if(this.props.villagersToShow===undefined){
       currentVillagers = getCurrentVillagerObjects();
-    else
+      var currentVillagersCopy = currentVillagers.slice(0);
+      currentVillagersCopy.sort(function(a, b) {
+        var textA = a["Name"];
+        var textB = b["Name"];
+        return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+      });
+      currentVillagers = currentVillagersCopy
+    }else{
       currentVillagers = this.props.villagersToShow
+    }
     
     if(currentVillagers.length===0){
       return(<>

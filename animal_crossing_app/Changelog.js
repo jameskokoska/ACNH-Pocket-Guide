@@ -5,7 +5,9 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -Happy Holidays!
 -More features coming soon!
--Just taking some time for the holidays
+-
+-Current villagers sort alphabetically
+-Updated translations
 -
 -Added ordinances! Select it in the Settings page
 -Popup Changelog won't appear when new user first opens the app
