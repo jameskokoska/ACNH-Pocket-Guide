@@ -12,6 +12,7 @@ import GuideRedirectButton from "./PopupGuideRedirectButton"
 
 const Header = (props) => {
   var filterImage;
+  const [emptySearch, setEmptySearch] = useState(true)
   if(props.disableFilters){
     filterImage=<View/>
   } else if(props.searchFilters.constructor===Array && props.searchFilters.length>=1){
@@ -21,17 +22,19 @@ const Header = (props) => {
           loop={false}
           style={{
             position:"absolute",
-            top: -11,
-            left: -11,
+            top: 0,
+            left: 0,
+            transform: [{ scale: 1.2 },],
           }}
           source={require("../assets/emphasis.json")}
         />
-      <Image style={{width:25,height:25, margin: 10, marginTop: 12, opacity: 0.7, marginRight: 30, resizeMode:"contain"}} source={require("../assets/icons/filterApplied.png")}/>
+      <Image style={{width:25,height:25, margin: 10, marginTop: 12, opacity: 0.7, resizeMode:"contain"}} source={require("../assets/icons/filterApplied.png")}/>
     </>
   } else {
-    filterImage = <Image style={{width:25,height:25, margin: 10, marginTop: 12, opacity: 0.35, marginRight: 30, resizeMode:"contain"}} source={require("../assets/icons/filterSearch.png")}/>
+    filterImage = <Image style={{width:25,height:25, margin: 10, marginTop: 12, opacity: 0.35, resizeMode:"contain"}} source={require("../assets/icons/filterSearch.png")}/>
   }
-  const popupExtraInfo = React.useRef(null);
+  let clearImage = <Image style={{width:25,height:25, margin: 10, marginTop: 12, opacity: 0.35, resizeMode:"contain",}} source={require("../assets/icons/exit.png")}/>
+  const textInput = React.useRef(null);
   return (
     <>
       <GuideRedirectButton style={{position:"absolute", padding:15, right:0}} extraInfo={props.extraInfo} setPage={props.setPage}/>
@@ -54,17 +57,24 @@ const Header = (props) => {
                   allowFontScaling={false}
                   placeholder={attemptToTranslate("Search")}
                   style={styles.searchText}
-                  onChangeText={function(text){props.updateSearch(text);}} 
+                  onChangeText={function(text){props.updateSearch(text); if(text===""){setEmptySearch(true)} else {setEmptySearch(false)}}} 
                   onFocus={() => {getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(15) : "";}}
                   minLength={1}
                   delayTimeout={400}
                   onSubmitEditing={function(event){props.updateSearch(event.nativeEvent.text)}}
+                  inputRef={textInput}
                 />
+                <TouchableOpacity style={{position:"absolute", right:props.disableFilters&&props.customButton===undefined?5:35}} onPress={()=>{textInput.current.clear(); setEmptySearch(true); props.updateSearch(""); textInput.current.focus(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
+                  <FadeInOut fadeIn={!emptySearch} duration={200}>
+                    {clearImage}
+                  </FadeInOut>
+                </TouchableOpacity>
+                <TouchableOpacity style={{position:"absolute", right:5}} onPress={()=>{props.openPopupFilter(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
+                  {filterImage}
+                </TouchableOpacity>
               </View>
               {props.customButton?props.customButton:<View/>}
-              <TouchableOpacity onPress={()=>{props.openPopupFilter(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
-                {filterImage}
-              </TouchableOpacity>
+              
             </View> : <View style={{height:15}}/>}
           </View>
         </View>
@@ -207,13 +217,13 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   searchText: {
-    color: '#515151',
+    color: '#292929',
     fontSize: 17,
     lineHeight: 22,
     marginLeft: 8,
     width:'100%',
     paddingRight: 25,
-    height: 30,
+    paddingRight: 73
   },
   searchBox: {
     paddingVertical: 8,

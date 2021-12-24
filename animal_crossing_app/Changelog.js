@@ -6,6 +6,11 @@ export const changelog = `
 -Happy Holidays!
 -More features coming soon!
 -
+-Added clear input text button to search bar
+-Improved text colors for search
+-Improved 'event items' pages
+- Fixed any missing items for events
+-
 -Current villagers sort alphabetically
 -Updated translations
 -

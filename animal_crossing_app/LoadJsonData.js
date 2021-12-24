@@ -263,12 +263,12 @@ export function getSpecificFilters(searchFor){
   var foundFilters = [];
   for(var i=0; i<filterDefinitionsAll.length; i++){
     for(var j=0; j<filterDefinitionsAll[i]["children"].length; j++){
-      if(filterDefinitionsAll[i]["children"][j]["id"].split(":")[1].toLowerCase().includes(searchFor.toLowerCase())){
+      if(filterDefinitionsAll[i]["children"][j]["id"].split(":")[1].toLowerCase()===(searchFor.toLowerCase())){
         foundFilters.push(filterDefinitionsAll[i]["children"][j]["id"])
       }
     }
   }
-  console.log(foundFilters)
+  // console.log(foundFilters)
   return foundFilters;
 }
 
