@@ -7,6 +7,8 @@ export const changelog = `
 -More features coming soon!
 -
 -Fixed clear search when unfocused
+-Added back sort by villager birthday (removed by accident)
+-Fixed sorting by Buy Price in Everything page
 -
 -Added clear input text button to search bar
 -Improved text colors for search

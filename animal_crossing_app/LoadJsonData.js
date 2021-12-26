@@ -1497,3 +1497,7 @@ export function anythingCraftable(materialName){
   }
   return false
 }
+
+export function isInteger(value) {
+  return /^\d+$/.test(value);
+}

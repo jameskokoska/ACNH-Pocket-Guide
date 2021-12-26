@@ -2,7 +2,7 @@ import React, {Component, useState, useRef, useEffect} from 'react';
 import {TouchableOpacity, View, Animated,StyleSheet,RefreshControl} from 'react-native';
 import Header, {HeaderLoading, HeaderActive} from './Header';
 import ListItem from './ListItem';
-import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters} from "../LoadJsonData"
+import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters, isInteger} from "../LoadJsonData"
 import {Dimensions } from "react-native";
 import {Variations,Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from './BottomSheetComponents';
 import colors from "../Colors.js"
@@ -720,15 +720,15 @@ function ListPage(props){
           var dataLoadedCopy = dataUpdated.slice(0);
             dataLoadedCopy.sort(function(a, b) {
               var valueA = a[propertyToSort]
-              if(a[propertyToSort]===undefined && shouldSortDirection){
+              if((a[propertyToSort]===undefined || !isInteger(a[propertyToSort])) && shouldSortDirection){
                 valueA=10000000000000
-              } else if(a[propertyToSort]===undefined){
+              } else if(a[propertyToSort]===undefined || !isInteger(a[propertyToSort])){
                 valueA=0
               }
               var valueB = b[propertyToSort]
-              if(b[propertyToSort]===undefined && shouldSortDirection){
+              if((b[propertyToSort]===undefined || !isInteger(b[propertyToSort])) && shouldSortDirection){
                 valueB=10000000000000
-              } else if(b[propertyToSort]===undefined){
+              } else if(b[propertyToSort]===undefined || !isInteger(b[propertyToSort])){
                 valueB=0
               }
               

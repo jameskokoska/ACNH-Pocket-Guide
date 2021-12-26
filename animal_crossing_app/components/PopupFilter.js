@@ -175,7 +175,7 @@ class PopupFilter extends Component {
     } else if(this.props.title==="Villagers"){
       this.sortByFilters[0]["children"] = [{name:"Reverse sorting direction", id:"Reverse direction"},
       {name:"", id:"break"},{name:"Birthday", id:"Sort-Birthday"}]
-      this.possibleFilters = [...this.possibleFilters, ...this.villagerFilters, ...this.genderFilters, ...filterDefinitions["Villagers"]];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.villagerFilters, ...this.genderFilters, ...filterDefinitions["Villagers"]];
     } else if(this.props.title==="Gyroids"){
       this.possibleFilters = [...this.possibleFilters, ...filterDefinitions["Gyroids"]];
     } else if(this.props.title==="New Items"){
