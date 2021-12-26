@@ -26,6 +26,12 @@ class ToolsPopup extends Component {
         translateItem={false}
       />
       <InfoLine
+        image={require("../assets/icons/colorPalette.png")} 
+        item={this.props.item}
+        textProperty={["Color 1"]}
+        textProperty2={["Color 2"]}
+      />
+      <InfoLine
         image={require("../assets/icons/magnifyingGlass.png")} 
         item={this.props.item}
         textProperty={["Source Notes"]}

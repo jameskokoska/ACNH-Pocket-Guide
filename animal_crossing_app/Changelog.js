@@ -9,6 +9,9 @@ export const changelog = `
 -Fixed clear search when unfocused
 -Added back sort by villager birthday (removed by accident)
 -Fixed sorting by Buy Price in Everything page
+-Removed sort by filters that don't exist for that page
+-Added sort by filters for Art, Fossils, Tools pages
+-Added color info for Art, Fossils, Tools popups
 -
 -Added clear input text button to search bar
 -Improved text colors for search
