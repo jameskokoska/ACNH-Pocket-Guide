@@ -6,7 +6,7 @@ export const changelog = `
 -Happy Holidays!
 -More features coming soon!
 -
--Fixed clear search bug
+-Fixed clear search when unfocused
 -
 -Added clear input text button to search bar
 -Improved text colors for search
