@@ -6,6 +6,8 @@ export const changelog = `
 -Happy Holidays!
 -More features coming soon!
 -
+-Fixed clear search bug
+-
 -Added clear input text button to search bar
 -Improved text colors for search
 -Improved 'event items' pages

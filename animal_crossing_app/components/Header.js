@@ -57,11 +57,11 @@ const Header = (props) => {
                   allowFontScaling={false}
                   placeholder={attemptToTranslate("Search")}
                   style={styles.searchText}
-                  onChangeText={function(text){props.updateSearch(text); if(text===""){setEmptySearch(true)} else {setEmptySearch(false)}}} 
+                  onChangeText={function(text){if(textInput.current.isFocused() || !emptySearch) props.updateSearch(text); if(text===""){setEmptySearch(true)} else {if(textInput.current.isFocused()) setEmptySearch(false)}}} 
                   onFocus={() => {getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(15) : "";}}
                   minLength={1}
                   delayTimeout={400}
-                  onSubmitEditing={function(event){props.updateSearch(event.nativeEvent.text)}}
+                  onSubmitEditing={function(event){props.updateSearch(event.nativeEvent.text); if(event.nativeEvent.text===""){setEmptySearch(true)} else {if(textInput.current.isFocused()) setEmptySearch(false)}}}
                   inputRef={textInput}
                 />
                 <TouchableOpacity style={{position:"absolute", right:props.disableFilters&&props.customButton===undefined?5:35}} onPress={()=>{textInput.current.clear(); setEmptySearch(true); props.updateSearch(""); textInput.current.focus(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
