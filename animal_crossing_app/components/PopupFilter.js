@@ -230,7 +230,11 @@ class PopupFilter extends Component {
         "children": [{"name":"Villager can wear","id":"Villager Equippable:Yes"},{"name":"Villager cannot wear","id":"Villager Equippable:No"}]
       }]
       this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...categories]
-    }
+    } else if(this.props.title==="Food"){
+      this.possibleFilters = [...this.sortByFiltersReducedWithColor, ...this.possibleFilters, ...filterDefinitions["Music"]]
+    } else if(this.props.title==="Materials"){
+      this.possibleFilters = [...this.sortByFiltersReduced, ...this.possibleFilters, ...filterDefinitions["Music"]]
+    } 
   }
 
   componentWillUnmount() {

@@ -6,6 +6,8 @@ export const changelog = `
 -Happy Holidays!
 -More features coming soon!
 -
+-Added sorting for Food and Materials page
+-
 -Fixed clear search when unfocused
 -Added back sort by villager birthday (removed by accident)
 -Fixed sorting by Buy Price in Everything page
