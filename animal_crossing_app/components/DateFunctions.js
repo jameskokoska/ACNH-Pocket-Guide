@@ -312,9 +312,22 @@ export function isDateInRange(range,rangeYear, date, specialCheck=""){ //startOn
     dateEnd.setMonth(getMonthFromString(rangeSplit[2]));
     dateEnd.setDate(parseInt(rangeSplit[3])+1); //ensures the end date is larger so current date is within range
     dateEnd.setYear(rangeYear);
+
+    //we have a date Dec-Jan
     if(parseInt(getMonthFromString(rangeSplit[2]))<parseInt(getMonthFromString(rangeSplit[0]))){
       dateEnd.setYear(parseInt(rangeYear)+1);
+      if(date>dateStart && date<dateEnd){
+        return true;
+      } else {
+        //The year has rolled over (it is January for e.g.)
+        dateStart.setYear(rangeYear-1);
+        dateEnd.setYear(parseInt(rangeYear));
+        if(date>dateStart && date<dateEnd){
+          return true;
+        } 
+      }
     }
+
     if(date>dateStart && date<dateEnd){
       return true;
     } else {

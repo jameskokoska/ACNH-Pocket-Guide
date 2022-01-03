@@ -595,7 +595,7 @@ class PopupInfos extends Component {
     const numLogins = parseInt(await getStorage("numLogins","0"))+1;
     // let backupPopupDismissed = await getStorage("backupPopupDismissed","false");
     let backupPopupDismissed = await getStorage("backupPopupDismissed","false");
-    if(backupPopupDismissed==="false" && numLogins >= 12){
+    if(backupPopupDismissed==="false" && numLogins >= 9){
       AsyncStorage.setItem("backupPopupDismissed", "true");
       this.popupBackup?.setPopupVisible(true)
     }
@@ -609,10 +609,15 @@ class PopupInfos extends Component {
     //   AsyncStorage.setItem("supportPopupDismissed2", "true");
     //   this.popupSupport2?.setPopupVisible(true)
     // }
-    let supportPopupDismissed3 = await getStorage("supportPopupDismissed3","false");
-    if(supportPopupDismissed3==="false" && numLogins >= 5){
-      AsyncStorage.setItem("supportPopupDismissed3", "true");
-      this.popupSupport3?.setPopupVisible(true)
+    // let supportPopupDismissed3 = await getStorage("supportPopupDismissed3","false");
+    // if(supportPopupDismissed3==="false" && numLogins >= 5){
+    //   AsyncStorage.setItem("supportPopupDismissed3", "true");
+    //   this.popupSupport3?.setPopupVisible(true)
+    // }
+    let supportPopupDismissed4 = await getStorage("supportPopupDismissed4","false");
+    if(supportPopupDismissed4==="false" && numLogins >= 5){
+      AsyncStorage.setItem("supportPopupDismissed4", "true");
+      this.popupSupport4?.setPopupVisible(true)
     }
     // let updatePopupDismissed = await getStorage("updatePopupDismissed","false");
     // if(updatePopupDismissed==="false" && numLogins >= 1){
@@ -633,6 +638,7 @@ class PopupInfos extends Component {
       <Popup support={true} noDismiss ref={(popupSupport) => this.popupSupport = popupSupport} text="Leave a Tip" button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
       <Popup margin support2={true} noDismiss ref={(popupSupport2) => this.popupSupport2 = popupSupport2} text="Support the App" textLower={attemptToTranslate("Consider leaving a tip to keep the app ad free for all") + " 😊"} button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
       <Popup margin support2={true} noDismiss ref={(popupSupport3) => this.popupSupport3 = popupSupport3} text="Happy Holidays!" textLower={attemptToTranslate("Support the app to keep it ad free for all") + " 😄"} button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
+      <Popup margin support2={true} noDismiss ref={(popupSupport4) => this.popupSupport4 = popupSupport4} text="Happy New Year!" textLower={attemptToTranslate("Consider supporting this ad free app") + " 🙂"} button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
     </>
   }
 }

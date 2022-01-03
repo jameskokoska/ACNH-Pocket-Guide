@@ -3,10 +3,12 @@ export const dataVersion = "4"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
--Happy Holidays!
--More features coming soon!
+-Fixed events that go over the year in length
+-More features coming!
 -
 -Added sorting for Food and Materials page
+-Added new event icons
+-Updated translations
 -
 -Fixed clear search when unfocused
 -Added back sort by villager birthday (removed by accident)

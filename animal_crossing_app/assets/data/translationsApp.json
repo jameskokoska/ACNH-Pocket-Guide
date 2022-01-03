@@ -570,21 +570,21 @@
     ],
     "Main": [
         {
-            "English": "896 items",
-            "English (Europe)": "896 items",
-            "French": "885 items (11 items missing)",
-            "French (US)": "885 items (11 items missing)",
-            "German": "896 items",
-            "Spanish": "885 items (11 items missing)",
-            "Spanish (US)": "881 items (15 items missing)",
-            "Russian": "896 items",
-            "Italian": "895 items (1 items missing)",
-            "Dutch": "870 items (26 items missing)",
-            "Chinese": "513 items (383 items missing)",
-            "Chinese (Traditional)": "0 items (896 items missing)",
-            "Japanese": "0 items (896 items missing)",
-            "Korean": "0 items (896 items missing)",
-            "Portuguese": "893 items (3 items missing)"
+            "English": "898 items",
+            "English (Europe)": "898 items",
+            "French": "887 items (11 items missing)",
+            "French (US)": "887 items (11 items missing)",
+            "German": "898 items",
+            "Spanish": "887 items (11 items missing)",
+            "Spanish (US)": "883 items (15 items missing)",
+            "Russian": "898 items",
+            "Italian": "897 items (1 items missing)",
+            "Dutch": "872 items (26 items missing)",
+            "Chinese": "896 items (2 items missing)",
+            "Chinese (Traditional)": "0 items (898 items missing)",
+            "Japanese": "0 items (898 items missing)",
+            "Korean": "0 items (898 items missing)",
+            "Portuguese": "895 items (3 items missing)"
         },
         {
             "English": "Home",
@@ -1899,7 +1899,7 @@
             "Russian": "Профиль",
             "Italian": "Profilo",
             "Dutch": "Profiel",
-            "Chinese": "档案",
+            "Chinese": "配置文件",
             "Portuguese": "Perfil"
         },
         {
@@ -3724,8 +3724,8 @@
         {
             "English": "Send me an email!",
             "English (Europe)": "Send me an email!",
-            "French": "Envoyez-moi un e-mail!",
-            "French (US)": "Envoyez-moi un e-mail!",
+            "French": "Envoyez-moi un e-mail !",
+            "French (US)": "Envoyez-moi un e-mail !",
             "German": "Schicke mir eine E-Mail!",
             "Spanish": "¡Envíame un correo electrónico!",
             "Spanish (US)": "¡Envíame un correo electrónico!",
@@ -3836,8 +3836,8 @@
         {
             "English": "Sure!",
             "English (Europe)": "Sure!",
-            "French": "Bien sur!",
-            "French (US)": "Bien sur!",
+            "French": "Bien sûr !",
+            "French (US)": "Bien sûr !",
             "German": "Sicher!",
             "Spanish": "¡Por supuesto!",
             "Spanish (US)": "¡Por supuesto!",
@@ -7750,6 +7750,7 @@
             "Russian": "Уведомления созданы на основе выбранных вами категорий",
             "Italian": "Le notifiche sono create basandosi sulle categorie selezionate. Sono caricate una settimana nel futuro e impostate in base all'ora del tuo telefono.",
             "Dutch": "Meldingen worden gemaakt op basis van de categorieën die u selecteert. Ze worden pas een week in de toekomst geladen en zijn ingesteld op basis van uw telefoontijd.",
+            "Chinese": "通知是根据你选择的类别来创建的。它们只在未来一周内加载，并根据你的手机时间设置。",
             "Portuguese": "As notificações são criadas com base nas categorias selecionadas. Eles são carregados apenas uma semana no futuro e são configurados de acordo com o horário do seu telefone."
         },
         {
@@ -7763,6 +7764,7 @@
             "Russian": "Править События",
             "Italian": "Modifica eventi",
             "Dutch": "Evenementen bewerken",
+            "Chinese": "编辑事件",
             "Portuguese": "Editar Eventos"
         },
         {
@@ -7776,6 +7778,7 @@
             "Russian": "Уведомления",
             "Italian": "Notifiche",
             "Dutch": "Meldingen",
+            "Chinese": "通知",
             "Portuguese": "Notificações"
         },
         {
@@ -7789,6 +7792,7 @@
             "Russian": "Включает/Отключает уведомления. Вы можете выбрать уведомления событий под [Править События] в разделе [События] на домашней страничке.",
             "Italian": "Questa impostazione attiva/disattiva le notifiche. Puoi selezionare le notifiche per gli eventi sotto [Modifica Eventi] della sezione [Eventi] nella homepage.",
             "Dutch": "Hiermee worden meldingen in-/uitgeschakeld. U kunt gebeurtenismeldingen selecteren onder [Evenementen bewerken] van het gedeelte [Evenementen] op de startpagina.",
+            "Chinese": "这将启用/禁用通知。你可以在主页上的[事件]部分的[编辑事件]下选择事件通知。",
             "Portuguese": "Isso habilitará desabilitará notificações. Você pode selecionar notificações de eventos em [Editar Eventos] da seção [Eventos] na página inicial."
         },
         {
@@ -7802,6 +7806,7 @@
             "Russian": "Уведомления приложения",
             "Italian": "Notifiche app",
             "Dutch": "App notificaties",
+            "Chinese": "应用程序通知",
             "Portuguese": "Notificações aplicativo"
         },
         {
@@ -7815,6 +7820,7 @@
             "Russian": "Вы можете выбрать уведомления событий под [Править События] в разделе [События] на домашней страничке.",
             "Italian": "Puoi selezionare le notifiche per gli eventi sotto [Modifica Eventi] della sezione [Eventi] nella homepage.",
             "Dutch": "U kunt gebeurtenismeldingen selecteren onder [Evenementen bewerken] van het gedeelte [Evenementen] op de startpagina.",
+            "Chinese": "你可以在主页上的[事件]部分的[编辑事件]下选择事件通知。",
             "Portuguese": "Você pode selecionar notificações de eventos em [Editar Eventos] da seção [Eventos] na página inicial."
         },
         {
@@ -7828,6 +7834,7 @@
             "Russian": "Показать историю",
             "Italian": "Vedi Cronologia",
             "Dutch": "Bekijk geschiedenis",
+            "Chinese": "查看历史",
             "Portuguese": "Ver Histórico"
         },
         {
@@ -7841,6 +7848,7 @@
             "Russian": "История посетителя",
             "Italian": "Cronologia visitatori",
             "Dutch": "Bezoekersgeschiedenis",
+            "Chinese": "访客历史",
             "Portuguese": "Histórico dos Visitantes"
         },
         {
@@ -7854,6 +7862,7 @@
             "Russian": "Посетители",
             "Italian": "Visitatori",
             "Dutch": "Bezoekers",
+            "Chinese": "访客",
             "Portuguese": "Visitantes"
         },
         {
@@ -7867,6 +7876,7 @@
             "Russian": "Очистить историю",
             "Italian": "Pulisci cronologia",
             "Dutch": "Geschiedenis wissen",
+            "Chinese": "清除历史记录",
             "Portuguese": "Apagar Histórico"
         },
         {
@@ -7880,6 +7890,7 @@
             "Russian": "Неделя",
             "Italian": "Settimana di",
             "Dutch": "Week van",
+            "Chinese": "一周的",
             "Portuguese": "Semana de"
         },
         {
@@ -7893,6 +7904,7 @@
             "Russian": "Выбрать дату",
             "Italian": "Seleziona data",
             "Dutch": "Selecteer een datum",
+            "Chinese": "选择日期",
             "Portuguese": "Selecionar Data"
         },
         {
@@ -7906,6 +7918,7 @@
             "Russian": "Истории пока нет, ждём конца недели.",
             "Italian": "Nessuna cronologia, la settimana non è ancora finita.",
             "Dutch": "Nog geen geschiedenis, wachtend op het einde van de week.",
+            "Chinese": "还没有历史记录，等待该周结束。",
             "Portuguese": "Sem histórico ainda, esperando o fim da semana."
         },
         {
@@ -7919,6 +7932,7 @@
             "Russian": "Установить время уведомлений",
             "Italian": "Imposta orario notifiche",
             "Dutch": "Stel meldingstijd in",
+            "Chinese": "设置通知时间",
             "Portuguese": "Definir Hora Notificação"
         },
         {
@@ -7932,6 +7946,7 @@
             "Russian": "Одежда жителя и мебель в доме по умолчанию",
             "Italian": "Arredamento e vestiario di default degli abitanti",
             "Dutch": "Villager's standaard huismeubilair en kleding",
+            "Chinese": "岛民默认的房屋家具和衣服",
             "Portuguese": "Móveis e roupas padrão da casa do morador"
         },
         {
@@ -7945,6 +7960,7 @@
             "Russian": "Показать мебель",
             "Italian": "Vedi arredamento",
             "Dutch": "Bekijk Meubels",
+            "Chinese": "查看家具",
             "Portuguese": "Exibir móveis"
         },
         {
@@ -7957,6 +7973,7 @@
             "Russian": "Все жители (пока ужалены)",
             "Italian": "Tutti gli abitanti (quando punti)",
             "Dutch": "Alle dorpelingen (terwijl gestoken)",
+            "Chinese": "所有岛民（被蜇时）",
             "Portuguese": "Todos moradores (enquanto picados)"
         },
         {
@@ -7970,6 +7987,7 @@
             "Russian": "4-ое улучшение дома (правая комната)",
             "Italian": "Aggiornamento quarta casa (stanza destra)",
             "Dutch": "4e Huis Upgrade (Rechter Kamer)",
+            "Chinese": "第4次房子升级（右室）",
             "Portuguese": "4 º Upgrade da Casa (Quarto Direito)"
         },
         {
@@ -7983,6 +8001,7 @@
             "Russian": "3-ье улучшение дома (левая комната)",
             "Italian": "Aggiornamento terza casa (stanza sinistra)",
             "Dutch": "3e Huis Upgrade (Linker Kamer)",
+            "Chinese": "第3次房子升级（左室）",
             "Portuguese": "3ª Upgrade da  Casa (Quarto Esquerdo)"
         },
         {
@@ -7996,6 +8015,7 @@
             "Russian": "5-ое улучшение дома (второй этаж)",
             "Italian": "Aggiornamento seconda casa (secondo piano)",
             "Dutch": "5e huisupgrade (2e verdieping)",
+            "Chinese": "第5次房子升级（2楼）",
             "Portuguese": "Reforma da 5ª Casa (2º Andar)"
         },
         {
@@ -8009,6 +8029,7 @@
             "Russian": "При тряске обычных деревьев или кедров",
             "Italian": "Scuotere un pino o un cedro",
             "Dutch": "Een hardhout- of cederboom schudden",
+            "Chinese": "摇动硬木或雪松树",
             "Portuguese": "Sacudindo uma árvore hardwood ou cedar"
         },
         {
@@ -8022,6 +8043,7 @@
             "Russian": "Река (водопад)",
             "Italian": "Fiume (altura)",
             "Dutch": "Rivier (klip)",
+            "Chinese": "河流(崖顶)",
             "Portuguese": "Rio (penhasco)"
         },
         {
@@ -8035,6 +8057,7 @@
             "Russian": "Море (в дождь)",
             "Italian": "Mare (giorni di pioggia)",
             "Dutch": "Zee (regenachtige dagen)",
+            "Chinese": "海 (雨天)",
             "Portuguese": "Mar (dias chuvosos)"
         },
         {
@@ -8048,6 +8071,7 @@
             "Russian": "Река (устье)",
             "Italian": "Fiume (inizio)",
             "Dutch": "Riviermonding)",
+            "Chinese": "河流(河口)",
             "Portuguese": "Rio (começo)"
         },
         {
@@ -8061,6 +8085,7 @@
             "Russian": "На деревьях (любых)",
             "Italian": "Sugli alberi (di ogni tipo)",
             "Dutch": "Op bomen (alle soorten)",
+            "Chinese": "在树上（任何种类）",
             "Portuguese": "Em árvores (qualquer tipo)"
         },
         {
@@ -8074,6 +8099,7 @@
             "Russian": "При тряске обычных деревьев или кедров",
             "Italian": "Svuotendo gli alberi (solo cedro e pino)",
             "Dutch": "Schudden van bomen (alleen hardhout of ceder)",
+            "Chinese": "摇晃树木（仅限硬木或雪松）",
             "Portuguese": "Balançando as árvores (apenas hardwood ou cedar)"
         },
         {
@@ -8087,6 +8113,7 @@
             "Russian": "Толкая снежки",
             "Italian": "Spingendo le palle di neve",
             "Dutch": "Sneeuwballen duwen",
+            "Chinese": "推雪球",
             "Portuguese": "Empurrando bolas de neve"
         },
         {
@@ -8100,6 +8127,7 @@
             "Russian": "Летают около мусора (ботинки, покрышки, банки, использованные фейерверки) или около гнилых репок",
             "Italian": "Volano vicino alla spazzatura (stivali, copertoni, fuochi d'artificio usati) o rape marce",
             "Dutch": "Vliegen in de buurt van afval (laarzen, banden, blikjes, gebruikt fonteinvuurwerk) of rotte rapen",
+            "Chinese": "在垃圾（靴子、轮胎、罐子、用过的喷泉烟花）或腐烂的大头菜附近飞行",
             "Portuguese": "Voando perto do lixo (botas, pneus, latas, fogos de artifício usados) ou nabos podres"
         },
         {
@@ -8113,6 +8141,7 @@
             "Russian": "Под землёй (копать там, где громче всего шум)",
             "Italian": "Sotto terra (scava dove il rumore è più forte)",
             "Dutch": "Ondergronds (graven waar het geluid het hardst is)",
+            "Chinese": "在地下（在噪音最大的地方挖）",
             "Portuguese": "Subterrâneo (cave onde o ruído é mais alto)"
         },
         {
@@ -8126,6 +8155,7 @@
             "Russian": "Любая погода",
             "Italian": "Con ogni condizione metereologica",
             "Dutch": "Elk weer",
+            "Chinese": "任何天气",
             "Portuguese": "Qualquer tempo"
         },
         {
@@ -8139,6 +8169,7 @@
             "Russian": "Только дождь",
             "Italian": "Solo con la pioggia",
             "Dutch": "Alleen regen",
+            "Chinese": "仅限雨天",
             "Portuguese": "Só chuva"
         },
         {
@@ -8152,6 +8183,7 @@
             "Russian": "Мелкая",
             "Italian": "Piccolo",
             "Dutch": "Klein",
+            "Chinese": "S",
             "Portuguese": "Pequeno"
         },
         {
@@ -8165,6 +8197,7 @@
             "Russian": "Самая большая",
             "Italian": "XX-Largo",
             "Dutch": "XX-Groot",
+            "Chinese": "XXL",
             "Portuguese": "XX-Grande"
         },
         {
@@ -8178,6 +8211,7 @@
             "Russian": "Большая",
             "Italian": "Largo",
             "Dutch": "Groot",
+            "Chinese": "L",
             "Portuguese": "Grande"
         },
         {
@@ -8191,6 +8225,7 @@
             "Russian": "Средняя",
             "Italian": "Medio",
             "Dutch": "Medium",
+            "Chinese": "M",
             "Portuguese": "Médio"
         },
         {
@@ -8204,6 +8239,7 @@
             "Russian": "Очень мелкая",
             "Italian": "X-Piccolo",
             "Dutch": "X-Small",
+            "Chinese": "XS",
             "Portuguese": "X-Pequeno"
         },
         {
@@ -8217,6 +8253,7 @@
             "Russian": "Очень большая",
             "Italian": "X-Largo",
             "Dutch": "X-Large",
+            "Chinese": "XL",
             "Portuguese": "X-Grande"
         },
         {
@@ -8229,6 +8266,7 @@
             "Russian": "Очень большая с плавником",
             "Italian": "X-Largo con Fin",
             "Dutch": "X-Large met Fin",
+            "Chinese": "XL带鳍",
             "Portuguese": "X-Grande w/Fin"
         },
         {
@@ -8242,6 +8280,7 @@
             "Russian": "Длинная",
             "Italian": "Lungo",
             "Dutch": "Lang",
+            "Chinese": "长型",
             "Portuguese": "Longo"
         },
         {
@@ -8255,6 +8294,7 @@
             "Russian": "Тень",
             "Italian": "Ombra",
             "Dutch": "Schaduw",
+            "Chinese": "阴影",
             "Portuguese": "Sombra"
         },
         {
@@ -8268,6 +8308,7 @@
             "Russian": "Скорость передвижения",
             "Italian": "Velocità di movimento",
             "Dutch": "Bewegingssnelheid",
+            "Chinese": "移动速度",
             "Portuguese": "Velocidade de Movimento"
         },
         {
@@ -8281,6 +8322,7 @@
             "Russian": "Средняя",
             "Italian": "Medio",
             "Dutch": "Medium",
+            "Chinese": "中型",
             "Portuguese": "Médio"
         },
         {
@@ -8294,6 +8336,7 @@
             "Russian": "На месте",
             "Italian": "Fermo",
             "Dutch": "Stationair",
+            "Chinese": "静止",
             "Portuguese": "Parado"
         },
         {
@@ -8307,6 +8350,7 @@
             "Russian": "Медленная",
             "Italian": "Lento",
             "Dutch": "Traag",
+            "Chinese": "慢",
             "Portuguese": "Devagar"
         },
         {
@@ -8320,6 +8364,7 @@
             "Russian": "Очень медленная",
             "Italian": "Molto lento",
             "Dutch": "Zeer langzaam",
+            "Chinese": "非常慢",
             "Portuguese": "Muito devagar"
         },
         {
@@ -8333,6 +8378,7 @@
             "Russian": "Очень быстрая",
             "Italian": "Molto veloce",
             "Dutch": "Erg snel",
+            "Chinese": "非常快",
             "Portuguese": "Muito rápido"
         },
         {
@@ -8346,6 +8392,7 @@
             "Russian": "Быстрая",
             "Italian": "Veloce",
             "Dutch": "Snel",
+            "Chinese": "快",
             "Portuguese": "Rápido"
         },
         {
@@ -8359,6 +8406,7 @@
             "Russian": "Кухня",
             "Italian": "Cucina",
             "Dutch": "Keuken",
+            "Chinese": "厨房",
             "Portuguese": "Cozinha"
         },
         {
@@ -8372,6 +8420,7 @@
             "Russian": "Школа",
             "Italian": "Scuola",
             "Dutch": "School",
+            "Chinese": "学校",
             "Portuguese": "Escola"
         },
         {
@@ -8385,6 +8434,7 @@
             "Russian": "Обучение",
             "Italian": "Studio",
             "Dutch": "Studie",
+            "Chinese": "学习",
             "Portuguese": "Estudo"
         },
         {
@@ -8398,6 +8448,7 @@
             "Russian": "Личность",
             "Italian": "Personalità",
             "Dutch": "Persoonlijkheid",
+            "Chinese": "角色",
             "Portuguese": "Personalidade"
         },
         {
@@ -8411,6 +8462,7 @@
             "Russian": "Виды",
             "Italian": "Specie",
             "Dutch": "Soort",
+            "Chinese": "物种",
             "Portuguese": "Espécies"
         },
         {
@@ -8424,6 +8476,7 @@
             "Russian": "Вы можете получить следующие предметы во время этого события",
             "Italian": "Puoi ottenere questi oggetti da questo evento",
             "Dutch": "Je kunt deze items van dit evenement krijgen",
+            "Chinese": "你可以从这个事件中获得这些物品",
             "Portuguese": "Você pode obter esses itens neste evento"
         },
         {
@@ -8437,6 +8490,7 @@
             "Russian": "На страничке гида можно найти больше детальной информации о событиях.",
             "Italian": "Per leggere di più su eventi specifici e dettagli puoi visitare la pagina guida",
             "Dutch": "U kunt meer lezen over specifieke evenementen en details door de gidspagina te bezoeken",
+            "Chinese": "你可以通过访问指南页面阅读更多关于具体事件和细节的信息",
             "Portuguese": "Você pode ler mais sobre eventos e detalhes específicos visitando a página do guia"
         },
         {
@@ -8450,6 +8504,7 @@
             "Russian": "Нажмите сюда, чтобы получить больше информации о событиях",
             "Italian": "Premi qui per saperne di più sugli eventi",
             "Dutch": "Tik hier om over evenementen te lezen",
+            "Chinese": "点击这里阅读活动信息",
             "Portuguese": "Toque aqui para ler sobre eventos"
         },
         {
@@ -8463,6 +8518,7 @@
             "Russian": "На страничке гида можно разузнать о разведении и скрещивании цветов",
             "Italian": "Per leggere di più su fiori e ibridazione puoi visitare la pagina guida",
             "Dutch": "U kunt meer details over bloemen en veredeling lezen door naar de gidspagina te gaan",
+            "Chinese": "你可以通过访问指南页来阅读更多关于花和繁殖的细节。",
             "Portuguese": "Você pode ler mais detalhes sobre flores e reprodução visitando a página do guia"
         },
         {
@@ -8476,6 +8532,7 @@
             "Russian": "Нажмите сюда, чтобы разузнать о разведении и скрещивании цветов",
             "Italian": "Premi qui per saperne di più su fiori e ibridazione",
             "Dutch": "Tik hier om meer te lezen over bloemen en veredeling",
+            "Chinese": "点击这里阅读更多关于花和繁殖的信息",
             "Portuguese": "Toque aqui para ler mais sobre flores e reprodução"
         },
         {
@@ -8489,6 +8546,7 @@
             "Russian": "На страничке гида можно узнать о последних обновлениях игры",
             "Italian": "Per leggere di più sui nuovi aggiornamenti puoi visitare la pagina guida",
             "Dutch": "Je kunt meer lezen over de nieuwe game-update door de gidspagina te bezoeken",
+            "Chinese": "你可以通过访问指南页面来阅读更多关于新游戏更新的信息",
             "Portuguese": "Você pode ler mais sobre a nova atualização do jogo visitando a página do guia"
         },
         {
@@ -8502,6 +8560,7 @@
             "Russian": "Нажмите сюда, чтобы узнать о последних обновлениях игры",
             "Italian": "Premi qui per saperne di più sul nuovo aggiornamento",
             "Dutch": "Tik hier om over de nieuwe update te lezen",
+            "Chinese": "点击这里阅读关于新的更新",
             "Portuguese": "Toque aqui para ler sobre a nova atualização"
         },
         {
@@ -8515,6 +8574,7 @@
             "Russian": "На страничке гида можно прочесть о подарках",
             "Italian": "Per leggere di più sui regali puoi visitare la pagina guida",
             "Dutch": "U kunt meer details over geschenken lezen door naar de gidspagina te gaan",
+            "Chinese": "你可以通过访问指南页来阅读更多关于礼物的细节",
             "Portuguese": "Você pode ler mais detalhes sobre presentes visitando a página do guia"
         },
         {
@@ -8528,6 +8588,7 @@
             "Russian": "Нажмите сюда, чтобы узнать больше о подарках",
             "Italian": "Premi qui per saperne di più sui regali",
             "Dutch": "Tik hier om meer te lezen over cadeaus geven",
+            "Chinese": "点这里阅读更多关于礼物的信息",
             "Portuguese": "Toque aqui para ler mais sobre presentes"
         },
         {
@@ -8541,6 +8602,7 @@
             "Russian": "Показать пустые ячейки (без галочек)",
             "Italian": "Mostra le caselle vuote",
             "Dutch": "Lege vinkjes weergeven",
+            "Chinese": "显示空复选标记",
             "Portuguese": "Mostrar caixas de verificação vazias"
         },
         {
@@ -8554,6 +8616,7 @@
             "Russian": "Показать пустые ячейки (без галочек) в списках. Включение функции позволит вам отмечать галочкой новые объекты в списке. Отключение этой функции ускорит работу приложения.",
             "Italian": "Mostra le caselle vuote in lista. Possono essere premute per selezionare l'oggetto. Disabilitare l'opzione può aumentare la performance app poichè meno animazioni devono essere renderizzate.",
             "Dutch": "Toon een leeg vinkje in lijsten. Kan worden aangetikt om het item snel af te vinken. Als u dit uitschakelt, kunnen de prestaties verbeteren, omdat er minder animaties hoeven te worden weergegeven.",
+            "Chinese": "在列表中显示一个空复选标记。可以点选来快速勾选项目。禁用它可以提高性能，因为需要渲染的动画较少。",
             "Portuguese": "Mostra uma marca de verificação vazia nas listas. Pode ser tocado para marcar rapidamente o item. Desativar isso pode aumentar o desempenho, pois menos animações precisam ser renderizadas."
         },
         {
@@ -8567,6 +8630,7 @@
             "Russian": "На страничке гида вы можете прочесть про NPC, посещающих остров. Иконка с часами показывается напротив тех NPC, которые уже посетили ваш остров на этой неделе.",
             "Italian": "Per leggere di più sui visitatori NPC visitando la pagina guida. L'icona dell'orologio mostra che l'NPC ha già visitato l'isola la scorsa settimana.",
             "Dutch": "U kunt meer details over NPC-bezoekers lezen door naar de gidspagina te gaan. Het tijdpictogram geeft aan dat de NPC vorige week is langs geweest.",
+            "Chinese": "你可以通过访问指南页阅读关于NPC访客的更多细节。时间图标显示该NPC在上周访问过。",
             "Portuguese": "Você pode ler mais detalhes sobre os visitantes NPC visitando a página do guia. O ícone de tempo mostra que o NPC o visitou na semana passada."
         },
         {
@@ -8580,6 +8644,7 @@
             "Russian": "Нажмите сюда, чтобы узнать больше про NPC, посещающих остров.",
             "Italian": "Premi qui per saperne di più sui visitatori NPC.",
             "Dutch": "Tik hier om meer te lezen over NPC-bezoekers",
+            "Chinese": "点击这里阅读关于NPC游客的更多信息",
             "Portuguese": "Toque aqui para ler mais sobre visitantes NPC"
         },
         {
@@ -8593,6 +8658,7 @@
             "Russian": "Снежные хлопья",
             "Italian": "Fiocchi di neve",
             "Dutch": "Sneeuwvlokken",
+            "Chinese": "雪花",
             "Portuguese": "Flocos de neve"
         },
         {
@@ -8606,6 +8672,7 @@
             "Russian": "День Святого Валентина (Шоппинг Нука)",
             "Italian": "Giorno di San Valentino (Nook Shopping)",
             "Dutch": "Valentijnsdag (Nook Shopping)",
+            "Chinese": "情人节（NOOK购物）",
             "Portuguese": "Dia dos Namorados (Nook Shopping)"
         },
         {
@@ -8619,6 +8686,7 @@
             "Russian": "День Матери",
             "Italian": "Festa della mamma",
             "Dutch": "Moederdag",
+            "Chinese": "母亲节",
             "Portuguese": "Dia das Mães"
         },
         {
@@ -8632,6 +8700,7 @@
             "Russian": "NFS",
             "Italian": "NFS",
             "Dutch": "NFS",
+            "Chinese": "非卖品",
             "Portuguese": "NFS"
         },
         {
@@ -8645,6 +8714,7 @@
             "Russian": "Размер",
             "Italian": "Misura",
             "Dutch": "Maat",
+            "Chinese": "尺码",
             "Portuguese": "Tamanho"
         },
         {
@@ -8658,6 +8728,7 @@
             "Russian": "Отсортировать существа на основании Critterpedia",
             "Italian": "Ordina creature dalla Critterpedia",
             "Dutch": "Sorteer wezens op basis van Critterpedia",
+            "Chinese": "根据Critterpedia对生物进行分类",
             "Portuguese": "Classifique as criaturas com base na Critterpedia"
         },
         {
@@ -8671,6 +8742,7 @@
             "Russian": "Отсортировать существа по принципу Critterpedia. Это касается как страницу Существа, так и страницу Музея",
             "Italian": "Ordina creature nello stesso modo in cui sono ordinate nella Critterpedia. Si applica alla pagina Creature + Museo.",
             "Dutch": "Sorteer wezens op dezelfde manier als ze zijn gesorteerd in de Critterpedia. Dit geldt voor de pagina Creatures + Museum.",
+            "Chinese": "根据生物在Critterpedia中的排序方式对生物进行排序。这适用于 \"生物+博物馆 \"页面。",
             "Portuguese": "Classifique as criaturas da mesma maneira que são classificadas na Critterpedia. Isso se aplica à página Criaturas + Museu."
         },
         {
@@ -8684,6 +8756,7 @@
             "Russian": "Найти бутылку с инструкцией",
             "Italian": "Trova Ricetta in bottiglia",
             "Dutch": "Vind doe-het-zelf-fles",
+            "Chinese": "寻找DIY瓶",
             "Portuguese": "Encontrar garrafa DIY"
         },
         {
@@ -8697,6 +8770,7 @@
             "Russian": "Совместимость жителей",
             "Italian": "Compatibilità Abitanti",
             "Dutch": "Compatibiliteit met dorpelingen",
+            "Chinese": "岛民的兼容性",
             "Portuguese": "Compatibilidade Morador"
         },
         {
@@ -8710,6 +8784,7 @@
             "Russian": "Точность этого функционала не была доказана в ACNH, этот функционал взят из старых игр. Используйте его только в качестве отсылки, так как это может не влиять на игровой процесс.Типы разговоров жителей могут основываться на их личностях. Всего сравнивается первые 15 избранных жителей.",
             "Italian": "Non è stato ancora confermato in ACNH, ed è una feature dei giochi precedenti. Usa questa impostazione come riferimento, potendo non impattare il gioco. I tipi di conversazione degli abitanti potrebbero essere basati sulle loro personalità. Solo i primi 15 abitanti preferiti sono paragonati.",
             "Dutch": "Dit is nog niet bewezen juist in ACNH en is een functie van oudere games. Gebruik het alleen als referentie, omdat het geen invloed heeft op de gameplay. De soorten gesprekken van dorpelingen kunnen gebaseerd zijn op hun persoonlijkheden. Alleen de eerste 15 favoriete dorpsbewoners worden vergeleken.",
+            "Chinese": "该功能在ACNH中还没有被证明是准确的，是来自老游戏的一个功能，仅供参考，因为它可能不会影响游戏性。岛民的对话类型可能是基于他们的性格。只有前15个最喜欢的岛民被比较。",
             "Portuguese": "Isso ainda não foi provado ser preciso no ACNH e é um recurso de jogos mais antigos. Use apenas como referência, pois não pode afetar a jogabilidade. Os tipos de conversa dos moradores podem ser baseados em suas personalidades. Apenas os primeiros 15 aldeões favoritos são comparados."
         },
         {
@@ -8723,6 +8798,7 @@
             "Russian": "Нажмите здесь, чтобы увидеть расчёт совместимости",
             "Italian": "Premi qui per saperne di più su come la compatibilità viene calcolata",
             "Dutch": "Tik hier om te zien hoe de compatibiliteit wordt berekend",
+            "Chinese": "点此查看兼容性的计算方法",
             "Portuguese": "Toque aqui para ver como a compatibilidade é calculada"
         },
         {
@@ -8736,6 +8812,7 @@
             "Russian": "Дружные",
             "Italian": "Vanno d'accordo",
             "Dutch": "Kunnen opschieten",
+            "Chinese": "合得来",
             "Portuguese": "Se da bem"
         },
         {
@@ -8749,6 +8826,7 @@
             "Russian": "Нейтральные",
             "Italian": "Neutrale",
             "Dutch": "Neutrale",
+            "Chinese": "中立",
             "Portuguese": "Neutro"
         },
         {
@@ -8762,6 +8840,7 @@
             "Russian": "Изредка спорят",
             "Italian": "Occasionale",
             "Dutch": "Zo nu en dan",
+            "Chinese": "偶尔",
             "Portuguese": "Ocasionalmente"
         },
         {
@@ -8775,6 +8854,7 @@
             "Russian": "Ссорятся",
             "Italian": "Conflitto",
             "Dutch": "Conflict",
+            "Chinese": "冲突",
             "Portuguese": "Conflito"
         },
         {
@@ -8788,6 +8868,7 @@
             "Russian": "Точность этого функционала не была доказана в ACNH, этот функционал взят из старых игр. Постарайтесь не полагаться на эту информацию.",
             "Italian": "Non é stato ancora approvato come vero in ACNH, ed é un opzione dei giochi precedenti. Riferircisi con cautela.",
             "Dutch": "Dit is nog NIET bewezen juist te zijn in ACNH, en is een functie van oudere games. Verwijs met de nodige voorzichtigheid.",
+            "Chinese": "该功能在ACNH中还没有被证明是准确的，是来自老游戏的一个功能。请谨慎参考。",
             "Portuguese": "Isso ainda NÃO foi provado ser preciso no ACNH e é um recurso de jogos mais antigos. Faça referência com cuidado."
         },
         {
@@ -8801,6 +8882,7 @@
             "Russian": "Вы можете разузнать больше о гостящих жителях на страничке гида",
             "Italian": "Per leggere di pié sugli abitanti visitando la pagina guida degli abitanti",
             "Dutch": "U kunt meer details over dorpelingen lezen door de dorpsgidspagina te bezoeken",
+            "Chinese": "你可以通过访问岛民指南页来阅读更多关于岛民的细节。",
             "Portuguese": "Você pode ler mais detalhes sobre os moradores visitando a página do guia dos moradores"
         },
         {
@@ -8814,6 +8896,7 @@
             "Russian": "Нажмите здесь, чтобы разузнать больше о жителях",
             "Italian": "Premi qui per saperne di piú sugli abitanti",
             "Dutch": "Tik hier om meer te lezen over dorpelingen",
+            "Chinese": "点击这里阅读更多关于岛民的信息",
             "Portuguese": "Toque aqui para ler mais sobre os moradores"
         },
         {
@@ -8827,6 +8910,7 @@
             "Russian": "Нажмите на \"?\" в верхнем правом углу для дополнительной информации.",
             "Italian": "Premi [?] nell'angolo in alto a destra per maggiori informazioni",
             "Dutch": "Tik op de [?] in de rechterbovenhoek voor meer informatie.",
+            "Chinese": "点击右上角的[?]获取更多信息。",
             "Portuguese": "Toque em [?] no canto superior direito para obter mais informações."
         },
         {
@@ -8840,6 +8924,7 @@
             "Russian": "Нажмите на \"i\" в верхнем правом углу для дополнительной информации.",
             "Italian": "Premi [i] nell'angolo in alto a destra per maggiori informazioni",
             "Dutch": "Tik op de [i] in de rechterbovenhoek voor meer informatie.",
+            "Chinese": "点击右上角的[i]获取更多信息。",
             "Portuguese": "Toque no [i] no canto superior direito para obter mais informações."
         },
         {
@@ -8853,6 +8938,7 @@
             "Russian": "Очистить цены",
             "Italian": "Azzera prezzi",
             "Dutch": "Prijzen wissen",
+            "Chinese": "清除价格",
             "Portuguese": "Limpar Preços "
         },
         {
@@ -8866,6 +8952,7 @@
             "Russian": "Вы уверены, что хотите очистить ваши цены на репку?",
             "Italian": "Sei sicuro di voler azzerare i prezzi delle rape?",
             "Dutch": "Weet u zeker dat u uw raapprijzen wilt wissen?",
+            "Chinese": "你确定你要清除你的大头菜价格吗？",
             "Portuguese": "Tem certeza de que deseja limpar seus preços de turnips?"
         },
         {
@@ -8879,6 +8966,7 @@
             "Russian": "Сжать вариации в прокручиваемый список",
             "Italian": "Comprimi le variazioni in una lista scorrevole",
             "Dutch": "Comprimeer variaties in een schuifbare lijst",
+            "Chinese": "将各种变化压缩到一个可滚动的列表中",
             "Portuguese": "Compactar variações em uma lista rolável"
         },
         {
@@ -8892,6 +8980,7 @@
             "Russian": "Прокрутка текста внутри всплывающих окон может не работать. Отключение этой функции позволит увидеть содержимое всплывающих окон целиком. ",
             "Italian": "Le gestures potrebbero impedire il corretto funzionamento dello scorrimento allínterno di un popup. Disabilita questa opzione per vedere tutte le variazioni senza scorrimento.",
             "Dutch": "De manier waarop gebaren werken, staat het scrollen in een pop-upcontainer mogelijk niet toe. Schakel dit uit om alle variaties te kunnen zien zonder dat een geneste scroll nodig is.",
+            "Chinese": "手势的工作方式可能不允许在弹出的容器内滚动。禁用这个功能，就可以看到所有的变化，而不需要嵌套滚动。",
             "Portuguese": "Da forma como os gestos funcionam, eles podem não permitir a rolagem dentro de um contêiner pop-up. Desative isso para ver todas as variações sem a necessidade de um pergaminho aninhado."
         },
         {
@@ -8905,6 +8994,7 @@
             "Russian": "Примечание: если не было импортировано ни одной записи, пожалуйста, проверьте правильность входных данных, в том числе и скопированных. ",
             "Italian": "Nota: Se ha importato 0 dati, controlla di aver copiato il corretto contenuto creato dall'esportazione negli appunti.",
             "Dutch": "Opmerking: als dit 0 gehelen heeft geïmporteerd, controleer dan nogmaals of u de juiste inhoud hebt gekopieerd die is gemaakt van het exporteren naar het klembord.",
+            "Chinese": "注意：如果这时导入了0个条目，请仔细检查你是否复制了从导出到剪贴板上创建的正确内容。",
             "Portuguese": "Nota: Se 0 entradas importadas, verifique se você copiou o conteúdo correto criado a partir da exportação para a área de transferência."
         },
         {
@@ -8918,6 +9008,7 @@
             "Russian": "Импортировать данные из хранилища",
             "Italian": "Importa dati da Appunti.",
             "Dutch": "Gegevens importeren van klembord",
+            "Chinese": "从剪贴板导入数据",
             "Portuguese": "Importar Dados da Área de Transferência"
         },
         {
@@ -8931,6 +9022,7 @@
             "Russian": "Экспортировать данные в хранилище",
             "Italian": "Esporta dati su Appunti",
             "Dutch": "Gegevens exporteren naar klembord",
+            "Chinese": "导出数据到剪贴板",
             "Portuguese": "Exportar Dados da Área de Transferência"
         },
         {
@@ -8944,6 +9036,7 @@
             "Russian": "Скопировано в буфер обмена",
             "Italian": "I dati sono stati copiati su Appunti",
             "Dutch": "Gegevens worden naar uw klembord gekopieerd",
+            "Chinese": "数据已复制到剪贴板上",
             "Portuguese": "Os dados foram copiados para a sua área de transferência"
         },
         {
@@ -8957,6 +9050,7 @@
             "Russian": "Вставить в безопасное место",
             "Italian": "Incolla in un posto sicuro",
             "Dutch": "Plak het ergens veilig",
+            "Chinese": "把它粘贴到安全的地方",
             "Portuguese": "Cole em algum lugar seguro"
         },
         {
@@ -8970,6 +9064,7 @@
             "Russian": "Произошла ошибка. Выберите другую папку и повторите ещё раз. ",
             "Italian": "Si è verificato un errore, scegli un'altra cartella e riprova.",
             "Dutch": "Er is een fout opgetreden, kies een andere map en probeer het opnieuw.",
+            "Chinese": "发生了一个错误，请选择另一个文件夹并重新尝试。",
             "Portuguese": "Ocorreu um erro, escolha outra pasta e tente novamente."
         },
         {
@@ -8983,6 +9078,7 @@
             "Russian": "Время подсвечивается красным цветом, если существо не может быть поймано в текущем месяце",
             "Italian": "L'ora è mostrata in rosso se la creatura non può essere catturata nel mese corrente.",
             "Dutch": "De tijd wordt in het rood weergegeven als het wezen in de huidige maand niet kan worden gevangen.",
+            "Chinese": "如果在当前月份无法捕捉到该生物，则时间显示为红色。",
             "Portuguese": "O tempo é exibido em vermelho se a criatura não puder ser capturada no mês atual."
         },
         {
@@ -8996,6 +9092,7 @@
             "Russian": "Фон становится красным, если данное существо пропадёт в следующем месяце",
             "Italian": "Lo sfondo è rosso se questo è l'ultimo mese in cui potrai catturare questa creatura, prima di dover aspettare ancora.",
             "Dutch": "De achtergrond is rood als dit de laatste maand is dat je dit wezen kunt vangen voordat je weer moet wachten.",
+            "Chinese": "如果这是你在需要再次等待之前能够抓到这个生物的最后一个月，则背景为红色。",
             "Portuguese": "O fundo é vermelho se este for o último mês em que você conseguiu capturar esta criatura antes de precisar esperar novamente."
         },
         {
@@ -9009,6 +9106,7 @@
             "Russian": "Домашняя утварь",
             "Italian": "Articoli per la casa",
             "Dutch": "Huishoudelijke artikelen",
+            "Chinese": "家庭用品",
             "Portuguese": "Utilidades domésticas"
         },
         {
@@ -9022,6 +9120,7 @@
             "Russian": "Разное",
             "Italian": "Miscellanea",
             "Dutch": "Diversen",
+            "Chinese": "杂项",
             "Portuguese": "Diversos"
         },
         {
@@ -9035,6 +9134,7 @@
             "Russian": "Настенное",
             "Italian": "A muro",
             "Dutch": "Op de muur gemonteerd",
+            "Chinese": "壁挂式",
             "Portuguese": "Montado na parede"
         },
         {
@@ -9048,6 +9148,7 @@
             "Russian": "Фотографии",
             "Italian": "Foto",
             "Dutch": "Foto's",
+            "Chinese": "照片",
             "Portuguese": "Fotos"
         },
         {
@@ -9061,6 +9162,7 @@
             "Russian": "Плакаты",
             "Italian": "Posters",
             "Dutch": "Affiches",
+            "Chinese": "海报",
             "Portuguese": "Pôsteres"
         },
         {
@@ -9074,6 +9176,7 @@
             "Russian": "Головные уборы",
             "Italian": "Cappelli",
             "Dutch": "hoofddeksels",
+            "Chinese": "头饰",
             "Portuguese": "Chapéu"
         },
         {
@@ -9087,6 +9190,7 @@
             "Russian": "Аксессуары",
             "Italian": "Accessori",
             "Dutch": "Accessoires",
+            "Chinese": "饰品",
             "Portuguese": "Acessórios"
         },
         {
@@ -9100,6 +9204,7 @@
             "Russian": "Верхняя часть одежды",
             "Italian": "Top",
             "Dutch": "Topjes",
+            "Chinese": "上衣",
             "Portuguese": "Tops"
         },
         {
@@ -9113,6 +9218,7 @@
             "Russian": "Наряд",
             "Italian": "Travestimento",
             "Dutch": "Aankleden",
+            "Chinese": "打扮",
             "Portuguese": "Vestir"
         },
         {
@@ -9126,6 +9232,7 @@
             "Russian": "Прочая одежда",
             "Italian": "Altro abbigliamento",
             "Dutch": "Kleding Overig",
+            "Chinese": "服装 其他",
             "Portuguese": "Outras roupas"
         },
         {
@@ -9139,6 +9246,7 @@
             "Russian": "Нижняя часть одежды",
             "Italian": "Parte inferiore",
             "Dutch": "Bodems",
+            "Chinese": "下装",
             "Portuguese": "Partes inferiores"
         },
         {
@@ -9152,6 +9260,7 @@
             "Russian": "Носки",
             "Italian": "Calzini",
             "Dutch": "Sokken",
+            "Chinese": "袜子",
             "Portuguese": "Meias"
         },
         {
@@ -9165,6 +9274,7 @@
             "Russian": "Обувь",
             "Italian": "Scarpe",
             "Dutch": "Schoenen",
+            "Chinese": "鞋类",
             "Portuguese": "Sapato"
         },
         {
@@ -9178,6 +9288,7 @@
             "Russian": "Сумки",
             "Italian": "Borse",
             "Dutch": "Tassen",
+            "Chinese": "箱包",
             "Portuguese": "Bolsas"
         },
         {
@@ -9191,6 +9302,7 @@
             "Russian": "Зонты",
             "Italian": "Ombrelli",
             "Dutch": "Paraplu's",
+            "Chinese": "雨伞",
             "Portuguese": "Guarda-chuva"
         },
         {
@@ -9204,6 +9316,7 @@
             "Russian": "Полы",
             "Italian": "Pavimenti",
             "Dutch": "vloeren",
+            "Chinese": "地板",
             "Portuguese": "Piso"
         },
         {
@@ -9217,6 +9330,7 @@
             "Russian": "Коврики",
             "Italian": "Tappeti",
             "Dutch": "Tapijten",
+            "Chinese": "地毯",
             "Portuguese": "Tapete"
         },
         {
@@ -9230,6 +9344,7 @@
             "Russian": "Обои",
             "Italian": "Carta da parati",
             "Dutch": "Behang",
+            "Chinese": "墙纸",
             "Portuguese": "Papel de parede"
         },
         {
@@ -9243,6 +9358,7 @@
             "Russian": "Насекомые",
             "Italian": "Insetti",
             "Dutch": "insecten",
+            "Chinese": "昆虫",
             "Portuguese": "Insetos"
         },
         {
@@ -9256,6 +9372,7 @@
             "Russian": "Ограждения",
             "Italian": "Recinzioni",
             "Dutch": "schermen",
+            "Chinese": "栅栏",
             "Portuguese": "Cercas"
         },
         {
@@ -9269,6 +9386,7 @@
             "Russian": "Другое",
             "Italian": "Altro ",
             "Dutch": "Ander",
+            "Chinese": "其他",
             "Portuguese": "Outros"
         },
         {
@@ -9282,6 +9400,7 @@
             "Russian": "Закрыть",
             "Italian": "Chiudere",
             "Dutch": "Dichtbij",
+            "Chinese": "关闭",
             "Portuguese": "Fechar"
         },
         {
@@ -9295,6 +9414,7 @@
             "Russian": "Оставить отзыв?",
             "Italian": "Lasceresti una donazione?",
             "Dutch": "Laat een fooi achter?",
+            "Chinese": "打赏？",
             "Portuguese": "Deixe uma dica?"
         },
         {
@@ -9308,6 +9428,7 @@
             "Russian": "Понравилось приложение? Поддержи проект нажав здесь",
             "Italian": "Se ti piace l'app, considera di supportarci premendo qui",
             "Dutch": "Als je deze app leuk vindt, overweeg dan om deze te ondersteunen door hier te tikken",
+            "Chinese": "如果你喜欢这个应用程序，请点击这里支持它",
             "Portuguese": "Se você gosta deste aplicativo, considere apoiá-lo tocando aqui"
         },
         {
@@ -9321,6 +9442,7 @@
             "Russian": "Оставить отзыв",
             "Italian": "Lascia una donazione",
             "Dutch": "Geef een fooi",
+            "Chinese": "打赏",
             "Portuguese": "Dê uma dica"
         },
         {
@@ -9334,6 +9456,7 @@
             "Russian": "Выбрать фильтры",
             "Italian": "Seleziona filtri",
             "Dutch": "Selecteer filters",
+            "Chinese": "选择过滤器",
             "Portuguese": "Selecione Filtros"
         },
         {
@@ -9347,6 +9470,7 @@
             "Russian": "Подтвердить",
             "Italian": "Conferma",
             "Dutch": "Bevestigen",
+            "Chinese": "确认",
             "Portuguese": "Confirme"
         },
         {
@@ -9360,6 +9484,7 @@
             "Russian": "В коллекции/Не в коллекции",
             "Italian": "Collezionato/Non Collezionato",
             "Dutch": "Verzameld/niet verzameld",
+            "Chinese": "已收集/未收集",
             "Portuguese": "Coletados/Não Coletados"
         },
         {
@@ -9373,6 +9498,7 @@
             "Russian": "Категории",
             "Italian": "Tipo di categorie",
             "Dutch": "Type categorieën",
+            "Chinese": "类型分类",
             "Portuguese": "Tipo de Categorias"
         },
         {
@@ -9386,6 +9512,7 @@
             "Russian": "Фильтр неизготавливаемых предметов",
             "Italian": "Filtro per le variazioni non costruibili",
             "Dutch": "Filter voor niet-bewerkbare itemvariaties",
+            "Chinese": "无法制作的物品变体过滤器",
             "Portuguese": "Filtro de Variações de Itens Não Construtiveis"
         },
         {
@@ -9399,6 +9526,7 @@
             "Russian": "Фильтр активностей",
             "Italian": "Attiva filtri tempo",
             "Dutch": "Actieve tijden-filters",
+            "Chinese": "活动时间过滤器",
             "Portuguese": "Filtros de Tempos Ativos"
         },
         {
@@ -9412,6 +9540,7 @@
             "Russian": "Профили/Острова",
             "Italian": "Profili/Isole",
             "Dutch": "Profielen/eilanden",
+            "Chinese": "配置文件/岛屿",
             "Portuguese": "Perfis/Ilhas"
         },
         {
@@ -9425,6 +9554,7 @@
             "Russian": "Профили",
             "Italian": "Profili",
             "Dutch": "Profielen",
+            "Chinese": "配置文件",
             "Portuguese": "Profiles"
         },
         {
@@ -9438,6 +9568,7 @@
             "Russian": "Профили позволяют вам хранить несколько островов/пользователей для их отслеживания. Загрузите профиль чтобы внести текущие сохраненные настройки и коллекции",
             "Italian": "I profili ti permettono di avere più isole/utenti per tenere traccia di cose differenti. Carica un profilo per caricare le impostazioni correnti salvate e la corrispettiva collezione.",
             "Dutch": "Met profielen kunt u meerdere verschillende eilanden/gebruikers hebben om verschillende dingen te volgen. Laad een profiel om de huidige opgeslagen instellingen en verzameling te laden.",
+            "Chinese": "配置文件允许你有多个不同的岛屿/用户来追踪不同的东西。加载一个配置文件来加载当前保存的设置和收藏。",
             "Portuguese": "Os perfis permitem que você tenha várias ilhas / usuários diferentes para marcar coisas diferentes. Carregue um perfil para carregar as configurações e coleção salvas no momento."
         },
         {
@@ -9451,6 +9582,7 @@
             "Russian": "Загрузить профиль",
             "Italian": "Carica profilo",
             "Dutch": "Laad profiel",
+            "Chinese": "加载配置文件",
             "Portuguese": "Carregar perfil"
         },
         {
@@ -9464,6 +9596,7 @@
             "Russian": "Главная",
             "Italian": "Principale",
             "Dutch": "Hoofd",
+            "Chinese": "主页",
             "Portuguese": "Principal"
         },
         {
@@ -9477,6 +9610,7 @@
             "Russian": "Профиль 1",
             "Italian": "Profilo 1",
             "Dutch": "Profiel 1",
+            "Chinese": "配置文件1",
             "Portuguese": "Perfil 1"
         },
         {
@@ -9490,6 +9624,7 @@
             "Russian": "Профиль 2",
             "Italian": "Profilo 2",
             "Dutch": "Profiel 2",
+            "Chinese": "配置文件2",
             "Portuguese": "Perfil 2"
         },
         {
@@ -9503,6 +9638,7 @@
             "Russian": "Профиль 3",
             "Italian": "Profilo 3",
             "Dutch": "Profiel 3",
+            "Chinese": "配置文件3",
             "Portuguese": "Perfil 3"
         },
         {
@@ -9516,6 +9652,7 @@
             "Russian": "Профиль 4",
             "Italian": "Profilo 4",
             "Dutch": "Profiel 4",
+            "Chinese": "配置文件4",
             "Portuguese": "Perfil 4"
         },
         {
@@ -9529,6 +9666,7 @@
             "Russian": "Добавить займ",
             "Italian": "Aggiungi mutuo",
             "Dutch": "Lening toevoegen",
+            "Chinese": "添加贷款",
             "Portuguese": "Add Empréstimo a Pagar"
         },
         {
@@ -9542,6 +9680,7 @@
             "Russian": "Название займа",
             "Italian": "Nome mutuo",
             "Dutch": "lening naam",
+            "Chinese": "贷款名称",
             "Portuguese": "Nome do Empréstimo"
         },
         {
@@ -9555,6 +9694,7 @@
             "Russian": "Итоговая стоимость",
             "Italian": "Costo totale",
             "Dutch": "Totale prijs",
+            "Chinese": "总成本",
             "Portuguese": "Custo total"
         },
         {
@@ -9568,6 +9708,7 @@
             "Russian": "диней осталось",
             "Italian": "Stelline rimanenti",
             "Dutch": "klokken over",
+            "Chinese": "剩余时间",
             "Portuguese": "bells restantes"
         },
         {
@@ -9581,6 +9722,7 @@
             "Russian": "Оплатить",
             "Italian": "Paga",
             "Dutch": "Betalen",
+            "Chinese": "支付",
             "Portuguese": "Pagar"
         },
         {
@@ -9594,6 +9736,7 @@
             "Russian": "Изменить",
             "Italian": "Modifica",
             "Dutch": "Bewerking",
+            "Chinese": "编辑",
             "Portuguese": "Editar"
         },
         {
@@ -9607,6 +9750,7 @@
             "Russian": "Редактировать страницу",
             "Italian": "Modifica Pagine",
             "Dutch": "Pagina's bewerken",
+            "Chinese": "编辑页面",
             "Portuguese": "Editar Páginas "
         },
         {
@@ -9620,6 +9764,7 @@
             "Russian": "Завершить редактирование",
             "Italian": "Disabilita Modifica pagine",
             "Dutch": "Pagina's bewerken uitschakelen",
+            "Chinese": "禁用编辑页面",
             "Portuguese": "Desabilitar Editar Páginas"
         },
         {
@@ -9633,6 +9778,7 @@
             "Russian": "Информация о островитянине",
             "Italian": "Informazioni isolano",
             "Dutch": "Informatie over eilandbewoners",
+            "Chinese": "岛民信息",
             "Portuguese": "Informações Habitante"
         },
         {
@@ -9646,6 +9792,7 @@
             "Russian": "Выбрать иконку",
             "Italian": "Seleziona icona",
             "Dutch": "Selecteer Icoon",
+            "Chinese": "选择图标",
             "Portuguese": "Selecione Icone"
         },
         {
@@ -9659,6 +9806,7 @@
             "Russian": "Пользовательская иконка",
             "Italian": "Immagine personalizzata",
             "Dutch": "Aangepaste afbeelding",
+            "Chinese": "自定义图像",
             "Portuguese": "Imagem Personalizada"
         },
         {
@@ -9672,6 +9820,7 @@
             "Russian": "Карточки Amiibo",
             "Italian": "Carte amiibo",
             "Dutch": "Amiibo-kaarten",
+            "Chinese": "Amiibo卡",
             "Portuguese": "Cartas Amiibo"
         },
         {
@@ -9685,6 +9834,7 @@
             "Russian": "Жесты рукой",
             "Italian": "Segno con la mano",
             "Dutch": "Handteken",
+            "Chinese": "手牌",
             "Portuguese": "Sinal de Mão"
         },
         {
@@ -9698,6 +9848,7 @@
             "Russian": "Камень",
             "Italian": "Sasso",
             "Dutch": "Steen",
+            "Chinese": "岩石",
             "Portuguese": "Pedra"
         },
         {
@@ -9711,6 +9862,7 @@
             "Russian": "Бумага",
             "Italian": "Carta ",
             "Dutch": "Papier",
+            "Chinese": "纸牌",
             "Portuguese": "Papel"
         },
         {
@@ -9724,6 +9876,7 @@
             "Russian": "Ножницы",
             "Italian": "Forbici",
             "Dutch": "Schaar",
+            "Chinese": "剪刀",
             "Portuguese": "Tesoura"
         },
         {
@@ -9737,6 +9890,7 @@
             "Russian": "Серия 1",
             "Italian": "Serie 1",
             "Dutch": "Serie 1",
+            "Chinese": "第一弹",
             "Portuguese": "Séries 1"
         },
         {
@@ -9750,6 +9904,7 @@
             "Russian": "Серия 2",
             "Italian": "Serie 2",
             "Dutch": "Serie 2",
+            "Chinese": "第二弹",
             "Portuguese": "Séries 2"
         },
         {
@@ -9763,6 +9918,7 @@
             "Russian": "Серия 3",
             "Italian": "Serie 3",
             "Dutch": "Serie 3",
+            "Chinese": "第三弹",
             "Portuguese": "Séries 3"
         },
         {
@@ -9776,6 +9932,7 @@
             "Russian": "Серия 4",
             "Italian": "Serie 4",
             "Dutch": "Serie 4",
+            "Chinese": "第四弹",
             "Portuguese": "Séries 4"
         },
         {
@@ -9789,6 +9946,7 @@
             "Russian": "Серия 5",
             "Italian": "Serie 5",
             "Dutch": "Serie 5",
+            "Chinese": "第五弹",
             "Portuguese": "Séries 5"
         },
         {
@@ -9802,6 +9960,7 @@
             "Russian": "Добро пожаловать в серию Amiibo",
             "Italian": "Serie Welcome Amiibo",
             "Dutch": "Welkom Amiibo-serie",
+            "Chinese": "欢迎来到Amiibo系列",
             "Portuguese": "Bem-vindo a Séries Amiibo "
         },
         {
@@ -9815,6 +9974,7 @@
             "Russian": "Серия Санрио",
             "Italian": "Serie Sanrio",
             "Dutch": "Sanrio-serie",
+            "Chinese": "三丽鸥系列",
             "Portuguese": "Sanrio Séries "
         },
         {
@@ -9828,6 +9988,7 @@
             "Russian": "Показать список жителей для разговора",
             "Italian": "Mostra la lista \"parla agli abitanti\"",
             "Dutch": "Toon gesprek met dorpelingen lijst",
+            "Chinese": "显示与岛民交谈的列表",
             "Portuguese": "Mostrar conversa com a lista de moradores"
         },
         {
@@ -9841,6 +10002,7 @@
             "Russian": "Скрыть список жителей для разговора",
             "Italian": "Nascondi la lista \"parla agli abitanti\"",
             "Dutch": "Lijst met dorpsbewoners verbergen",
+            "Chinese": "隐藏与岛民交谈的列表",
             "Portuguese": "Esconder conversa com a lista de moradores"
         },
         {
@@ -9854,6 +10016,7 @@
             "Russian": "Поговорить с",
             "Italian": "Parla a",
             "Dutch": "Praten met",
+            "Chinese": "谈话",
             "Portuguese": "Falar com"
         },
         {
@@ -9867,6 +10030,7 @@
             "Russian": "Отслеживание кредита",
             "Italian": "Carica tracciamento",
             "Dutch": "Lening volgen",
+            "Chinese": "贷款追踪",
             "Portuguese": "Marcador de Empréstimo"
         },
         {
@@ -9880,6 +10044,7 @@
             "Russian": "Мост",
             "Italian": "Ponte",
             "Dutch": "Brug",
+            "Chinese": "桥梁",
             "Portuguese": "Ponte"
         },
         {
@@ -9893,6 +10058,7 @@
             "Russian": "Дом",
             "Italian": "Casa",
             "Dutch": "huis",
+            "Chinese": "房屋",
             "Portuguese": "Casa"
         },
         {
@@ -9906,6 +10072,7 @@
             "Russian": "Нажмите чтобы настроить свой профиль",
             "Italian": "Premi per impostare il tuo profilo",
             "Dutch": "Tik om je profiel in te stellen",
+            "Chinese": "点选设置你的个人资料",
             "Portuguese": "Toque para configurar seu perfil"
         },
         {
@@ -9919,6 +10086,7 @@
             "Russian": "Сортировать...",
             "Italian": "Ordina per...",
             "Dutch": "Sorteer op...",
+            "Chinese": "排序方式...",
             "Portuguese": "Ordenar por..."
         },
         {
@@ -9932,6 +10100,7 @@
             "Russian": "Изменить порядок сортировки",
             "Italian": "Inverti ordine",
             "Dutch": "Omgekeerde sorteerrichting",
+            "Chinese": "反向排序方向",
             "Portuguese": "Direção de ordem reversa"
         },
         {
@@ -9945,6 +10114,7 @@
             "Russian": "Категории",
             "Italian": "Tipo di categorie",
             "Dutch": "Type categorie",
+            "Chinese": "类型类别",
             "Portuguese": "Categoria de tipo"
         },
         {
@@ -9958,6 +10128,7 @@
             "Russian": "Цена продажи",
             "Italian": "Prezzo di vendita",
             "Dutch": "Verkoop prijs",
+            "Chinese": "卖价",
             "Portuguese": "Preço de venda"
         },
         {
@@ -9971,6 +10142,7 @@
             "Russian": "Цена покупки",
             "Italian": "Prezzo di acquisto",
             "Dutch": "Koop prijs",
+            "Chinese": "购买价格",
             "Portuguese": "Preço de compra"
         },
         {
@@ -9984,6 +10156,7 @@
             "Russian": "Мебельная бирка",
             "Italian": "Tag mobile",
             "Dutch": "Meubellabel",
+            "Chinese": "家具标签",
             "Portuguese": "Etiqueta de móveis"
         },
         {
@@ -9997,6 +10170,7 @@
             "Russian": "Пожертвовано в музей",
             "Italian": "Donato al museo",
             "Dutch": "Gedoneerd aan museum",
+            "Chinese": "捐赠给博物馆",
             "Portuguese": "Doado ao museu"
         },
         {
@@ -10010,6 +10184,7 @@
             "Russian": "Не пожертвовано в музей",
             "Italian": "Non donato al museo",
             "Dutch": "Niet geschonken aan museum",
+            "Chinese": "未捐赠给博物馆",
             "Portuguese": "Não doado ao museu"
         },
         {
@@ -10023,6 +10198,7 @@
             "Russian": "Показать кнопку пожертвований музею",
             "Italian": "Mostra pulsante \"donato al museo\"",
             "Dutch": "Toon gedoneerd aan museum knop",
+            "Chinese": "显示捐赠给博物馆的按钮",
             "Portuguese": "Mostrar botão doado ao museu"
         },
         {
@@ -10036,6 +10212,7 @@
             "Russian": "Показывает кнопку пожертвования, которую можно использовать для отслеживания того, пожертвовали ли вы предмет музею и имеется ли он у вас в коллекции.",
             "Italian": "Mostra il pulsante per le donazioni che può essere usato per tracciare se un oggetto è stato donato al museo, oltre ad averlo collezionato.",
             "Dutch": "Toont een donatieknop die kan worden gebruikt om bij te houden of je het naast het verzamelen ook aan het museum hebt gedoneerd.",
+            "Chinese": "显示一个捐赠按钮，可以用来追踪你除了收藏之外，是否已经捐赠给了博物馆。",
             "Portuguese": "Mostra um botão de doação que pode ser usado para marcar se você doou ao museu, além de coletá-lo."
         },
         {
@@ -10049,6 +10226,7 @@
             "Russian": "Вы можете перечитать журнал изменений в разделе [О программе]",
             "Italian": "Puoi consultare il changelog nella pagina [Su di noi]",
             "Dutch": "Je kunt de changelog herlezen op de [Over] pagina",
+            "Chinese": "你可以在[关于]页面中重读更新日志",
             "Portuguese": "Você pode reler o changelog na página [Sobre]"
         },
         {
@@ -10062,6 +10240,7 @@
             "Russian": "Если решили помочь с переводом нашего приложения, напишите нам на электронную почту! ",
             "Italian": "Se vuoi darci una mano a tradurre l'app, mandaci un'email!",
             "Dutch": "Als je wilt helpen met het vertalen van deze app, neem dan gerust contact op via e-mail!",
+            "Chinese": "如果你想帮助翻译这个应用程序，请随时通过电子邮件联系我们!",
             "Portuguese": "Se você gostaria de ajudar a traduzir este aplicativo, sinta-se à vontade para entrar em contato por e-mail!"
         },
         {
@@ -10075,6 +10254,7 @@
             "Russian": "Вы можете прочитать больше про карточки Amiibo перейдя на страницу гайда",
             "Italian": "Per leggere di più sulle carte Amiibo, visita la pagina guida",
             "Dutch": "Je kunt meer lezen over Amiibo-kaarten door de gidspagina te bezoeken",
+            "Chinese": "你可以通过访问指南页面阅读更多关于Amiibo卡的信息",
             "Portuguese": "Você pode ler mais sobre os cartões Amiibo visitando a página do guia"
         },
         {
@@ -10088,6 +10268,7 @@
             "Russian": "Нажмите здесь чтобы почитать про карточки Amiibo",
             "Italian": "Premi qui per saperne di più sulle carte Amiibo",
             "Dutch": "Tik hier om meer te lezen over Amiibo-kaarten",
+            "Chinese": "点击这里阅读关于Amiibo卡的信息",
             "Portuguese": "Toque aqui para ler sobre os cartões Amiibo"
         },
         {
@@ -10101,6 +10282,7 @@
             "Russian": "Английский ",
             "Italian": "Inglese",
             "Dutch": "Engels",
+            "Chinese": "English",
             "Portuguese": "English"
         },
         {
@@ -10114,6 +10296,7 @@
             "Russian": "Английский (Европа) ",
             "Italian": "Inglese (Europa)",
             "Dutch": "Engels (Europa)",
+            "Chinese": "English (Europe)",
             "Portuguese": "English (Europe)"
         },
         {
@@ -10127,6 +10310,7 @@
             "Russian": "Французский",
             "Italian": "Francese",
             "Dutch": "Frans",
+            "Chinese": "French",
             "Portuguese": "French"
         },
         {
@@ -10140,6 +10324,7 @@
             "Russian": "Французский (Канада) ",
             "Italian": "Francese (Québec)",
             "Dutch": "Frans (Québec)",
+            "Chinese": "French (Québec)",
             "Portuguese": "French (Québec)"
         },
         {
@@ -10153,6 +10338,7 @@
             "Russian": "Испанский ",
             "Italian": "Spagnolo",
             "Dutch": "Spaans",
+            "Chinese": "Spanish",
             "Portuguese": "Spanish"
         },
         {
@@ -10166,6 +10352,7 @@
             "Russian": "Испанский (США) ",
             "Italian": "Spagnolo (US)",
             "Dutch": "Spaans (VS)",
+            "Chinese": "Spanish (US)",
             "Portuguese": "Spanish (US)"
         },
         {
@@ -10179,6 +10366,7 @@
             "Russian": "Немецкий",
             "Italian": "Tedesco",
             "Dutch": "Duitse",
+            "Chinese": "German",
             "Portuguese": "German"
         },
         {
@@ -10192,6 +10380,7 @@
             "Russian": "Русский",
             "Italian": "Russo",
             "Dutch": "Russisch",
+            "Chinese": "Russian",
             "Portuguese": "Russian"
         },
         {
@@ -10204,7 +10393,8 @@
             "Spanish (US)": "Holandés",
             "Russian": "Голландский",
             "Italian": "Olandese",
-            "Dutch": "Nederlands"
+            "Dutch": "Nederlands",
+            "Chinese": "Dutch"
         },
         {
             "English": "Favorite villagers who like this item as a gift",
@@ -10217,6 +10407,7 @@
             "Russian": "Избранные жители, которым понравится эта вещь в качестве подарка",
             "Italian": "Abitanti preferiti a cui piace questo oggetto come regalo",
             "Dutch": "Favoriete dorpelingen die dit item leuk vinden als cadeau",
+            "Chinese": "喜欢将这个物品作为礼物的岛民加入最爱",
             "Portuguese": "Moradores favoritos que gostam deste item como um presente"
         },
         {
@@ -10230,6 +10421,7 @@
             "Russian": "тело ",
             "Italian": "Il corpo",
             "Dutch": "het lichaam",
+            "Chinese": "身体",
             "Portuguese": "o corpo"
         },
         {
@@ -10243,6 +10435,7 @@
             "Russian": "образец",
             "Italian": "Lo schema",
             "Dutch": "het patroon",
+            "Chinese": "图案",
             "Portuguese": "o modelo"
         },
         {
@@ -10256,6 +10449,7 @@
             "Russian": "и",
             "Italian": "e",
             "Dutch": "en",
+            "Chinese": "和",
             "Portuguese": "e"
         },
         {
@@ -10269,6 +10463,7 @@
             "Russian": "может быть изменено",
             "Italian": "può essere personalizzato",
             "Dutch": "kan aangepast worden",
+            "Chinese": "可使用定制套装进行定制",
             "Portuguese": "Pode ser personalizado"
         },
         {
@@ -10282,6 +10477,7 @@
             "Russian": "нельзя настроить самостоятельно",
             "Italian": "non può essere personalizzato da soli",
             "Dutch": "kan niet zelf worden aangepast",
+            "Chinese": "不能自己定制",
             "Portuguese": "não pode ser personalizado"
         },
         {
@@ -10295,6 +10491,7 @@
             "Russian": "Частота появления:",
             "Italian": "Tassi di spawn",
             "Dutch": "Spawn tarieven:",
+            "Chinese": "产卵率：",
             "Portuguese": "Taxas de spawn:"
         },
         {
@@ -10308,6 +10505,7 @@
             "Russian": "Обычные существа появляются чаще",
             "Italian": "Creature comuni che hanno uno spawn più alto",
             "Dutch": "Gewone wezens hebben hogere spawn-snelheden",
+            "Chinese": "普通生物有较高的产卵率",
             "Portuguese": "Criaturas comuns têm taxas de spawn mais altas"
         },
         {
@@ -10321,6 +10519,7 @@
             "Russian": "Основные события в игре",
             "Italian": "Evento presente nel gioco base",
             "Dutch": "Basisspel-evenementen",
+            "Chinese": "基本游戏事件",
             "Portuguese": "Eventos de jogo de base"
         },
         {
@@ -10334,6 +10533,7 @@
             "Russian": "Новый год",
             "Italian": "Capodanno",
             "Dutch": "Nieuwjaarsdag",
+            "Chinese": "元旦",
             "Portuguese": "Dia de Ano Novo"
         },
         {
@@ -10347,6 +10547,7 @@
             "Russian": "Активные существа перенесены на отдельную страницу.",
             "Italian": "Le creature attive sono state spostate in una pagina dedicata.",
             "Dutch": "Active Creatures is verplaatst naar een aparte pagina.",
+            "Chinese": "活跃的生物已经被移到一个单独的页面。",
             "Portuguese": "Criaturas Disponíveis foi movido para uma página separada."
         },
         {
@@ -10360,6 +10561,7 @@
             "Russian": "Вы можете нажать здесь, чтобы перейти на эту страницу, или открыть боковую панель.",
             "Italian": "Per andare a quella pagina puoi premere qui oppure aprire la barra laterale.",
             "Dutch": "Je kunt hier tikken om naar die pagina te gaan of de zijbalk openen.",
+            "Chinese": "你可以点击这里进入该页面，或者打开侧边栏。",
             "Portuguese": "Você pode tocar aqui para ir para essa página ou abrir a barra lateral."
         },
         {
@@ -10373,6 +10575,7 @@
             "Russian": "MeteoNook",
             "Italian": "MeteoNook",
             "Dutch": "MeteoNook",
+            "Chinese": "MeteoNook",
             "Portuguese": "MeteoNook"
         },
         {
@@ -10386,6 +10589,7 @@
             "Russian": "Язык",
             "Italian": "Lingua",
             "Dutch": "Taal",
+            "Chinese": "语言",
             "Portuguese": "Língua"
         },
         {
@@ -10399,6 +10603,7 @@
             "Russian": "Вы можете изменить язык в правом верхнем углу, нажав Настройки",
             "Italian": "Puoi cambiare la lingua nell'angolo in alto a destra, premendo Impostazioni",
             "Dutch": "U kunt de taal in de rechterbovenhoek wijzigen door op Instellingen . te tikken",
+            "Chinese": "你可以通过点击右上角的设置改变语言",
             "Portuguese": "Você pode alterar o idioma no canto superior direito, tocando em Configurações"
         },
         {
@@ -10408,6 +10613,7 @@
             "Russian": "Темы ярлыков",
             "Italian": "Stili di Beatrice",
             "Dutch": "Labelthema's",
+            "Chinese": "标签主题",
             "Portuguese": "Temas Label"
         },
         {
@@ -10417,6 +10623,7 @@
             "Russian": "Ежедневный",
             "Italian": "Da tutti i giorni",
             "Dutch": "Elke dag",
+            "Chinese": "每天",
             "Portuguese": "Todo dia"
         },
         {
@@ -10426,6 +10633,7 @@
             "Russian": "Удобный",
             "Italian": "Confortevole",
             "Dutch": "Comfortabel",
+            "Chinese": "舒适的",
             "Portuguese": "Confortável"
         },
         {
@@ -10435,6 +10643,7 @@
             "Russian": "Формальный",
             "Italian": "Formale",
             "Dutch": "Formeel",
+            "Chinese": "正式的",
             "Portuguese": "Formal"
         },
         {
@@ -10444,6 +10653,7 @@
             "Russian": "Рабочий",
             "Italian": "Da lavoro",
             "Dutch": "Werk",
+            "Chinese": "工作",
             "Portuguese": "Trabalho"
         },
         {
@@ -10453,6 +10663,7 @@
             "Russian": "Театральный",
             "Italian": "Da fiaba",
             "Dutch": "theatraal",
+            "Chinese": "戏剧性",
             "Portuguese": "Teatral"
         },
         {
@@ -10462,6 +10673,7 @@
             "Russian": "Уличный",
             "Italian": "Da aria aperta",
             "Dutch": "buiten",
+            "Chinese": "户外运动",
             "Portuguese": "Ao ar livre"
         },
         {
@@ -10471,6 +10683,7 @@
             "Russian": "Спортивный",
             "Italian": "Sportivo",
             "Dutch": "Sportief",
+            "Chinese": "运动型",
             "Portuguese": "Desportivo"
         },
         {
@@ -10480,6 +10693,7 @@
             "Russian": "Отпуск",
             "Italian": "Da vacanza",
             "Dutch": "Vakantie",
+            "Chinese": "假期",
             "Portuguese": "Férias "
         },
         {
@@ -10489,6 +10703,7 @@
             "Russian": "Готический",
             "Italian": "Goth",
             "Dutch": "gotisch",
+            "Chinese": "哥特人",
             "Portuguese": "Gótico"
         },
         {
@@ -10502,6 +10717,7 @@
             "Russian": "Старожил",
             "Italian": "Precente abitante dell'isola",
             "Dutch": "Oude dorpsbewoner",
+            "Chinese": "老岛民",
             "Portuguese": "Antigo morador da ilha"
         },
         {
@@ -10515,6 +10731,7 @@
             "Russian": "Не старожил",
             "Italian": "Non un precedente abitante dell'isola",
             "Dutch": "Geen oude inwoner van het dorp",
+            "Chinese": "不是老岛民",
             "Portuguese": "Não é um antigo morador da ilha"
         },
         {
@@ -10528,6 +10745,7 @@
             "Russian": "Дни рождения старожилов",
             "Italian": "Compleanni dei precedenti abitanti dell'isola",
             "Dutch": "Verjaardagen van oude bewoners van dorpsbewoners",
+            "Chinese": "老岛民的生日",
             "Portuguese": "Aniversário dos antigos moradores"
         },
         {
@@ -10541,6 +10759,7 @@
             "Russian": "(элементы не переведены)",
             "Italian": "(articoli non tradotti)",
             "Dutch": "(items niet vertaald)",
+            "Chinese": "(未翻译的项目)",
             "Portuguese": "(itens não traduzidos)"
         },
         {
@@ -10554,6 +10773,7 @@
             "Russian": "Управлять данными",
             "Italian": "Gestisci Dati",
             "Dutch": "Gegevens beheren",
+            "Chinese": "管理数据",
             "Portuguese": "Gerenciar dados"
         },
         {
@@ -10567,6 +10787,7 @@
             "Russian": "Резервное копирование + восстановление",
             "Italian": "Backup + Ripristino",
             "Dutch": "Back-up + Herstellen",
+            "Chinese": "备份+恢复",
             "Portuguese": "Backup + Restaurar"
         },
         {
@@ -10580,6 +10801,7 @@
             "Russian": "Всегда полезно периодически делать резервные копии ваших данных!",
             "Italian": "È sempre bene mantenere backup periodici dei propri dati!",
             "Dutch": "Het is altijd goed om periodieke back-ups van uw gegevens te maken!",
+            "Chinese": "最好对你的数据进行定期备份！",
             "Portuguese": "É sempre bom manter backups periódicos de seus dados!"
         },
         {
@@ -10593,6 +10815,7 @@
             "Russian": "Файлы",
             "Italian": "File",
             "Dutch": "Bestanden",
+            "Chinese": "文件",
             "Portuguese": "Arquivos"
         },
         {
@@ -10606,6 +10829,7 @@
             "Russian": "(Рекомендуемые)",
             "Italian": "(Consigliato)",
             "Dutch": "(Aanbevolen)",
+            "Chinese": "(推荐)",
             "Portuguese": "(Recomendado)"
         },
         {
@@ -10619,6 +10843,7 @@
             "Russian": "Буфер обмена",
             "Italian": "Appunti",
             "Dutch": "Klembord",
+            "Chinese": "剪贴板",
             "Portuguese": "Prancheta"
         },
         {
@@ -10626,7 +10851,8 @@
             "English (Europe)": "Gyroids",
             "German": "Gyroiden",
             "Russian": "Гироиды",
-            "Dutch": "Gyroids"
+            "Dutch": "Gyroids",
+            "Chinese": "陶俑"
         },
         {
             "English": "Coming soon",
@@ -10639,6 +10865,7 @@
             "Russian": "Скоро появится",
             "Italian": "Prossimamente",
             "Dutch": "Komt binnenkort",
+            "Chinese": "即将推出",
             "Portuguese": "Em breve"
         },
         {
@@ -10652,6 +10879,7 @@
             "Russian": "Пожалуйста, подождите",
             "Italian": "Per favore abbi pazienza",
             "Dutch": "Wees alstublieft geduldig",
+            "Chinese": "请耐心等待",
             "Portuguese": "Por favor, seja paciente"
         },
         {
@@ -10665,6 +10893,7 @@
             "Russian": "Постановления",
             "Italian": "Ordinanze",
             "Dutch": "verordeningen",
+            "Chinese": "条例",
             "Portuguese": "Ordenanças"
         },
         {
@@ -10678,6 +10907,7 @@
             "Russian": "Красивый остров",
             "Italian": "Abbelliamo l'Isola",
             "Dutch": "Mooi eiland",
+            "Chinese": "优美岛",
             "Portuguese": "Bela ilha"
         },
         {
@@ -10691,6 +10921,7 @@
             "Russian": "Ранняя пташка",
             "Italian": "Isola Mattiniera",
             "Dutch": "Vroege vogel",
+            "Chinese": "早鸟",
             "Portuguese": "Madrugador"
         },
         {
@@ -10704,6 +10935,7 @@
             "Russian": "Ночная сова",
             "Italian": "Isola Nottambula",
             "Dutch": "Nachtuil",
+            "Chinese": "夜猫",
             "Portuguese": "Coruja da noite"
         },
         {
@@ -10717,6 +10949,7 @@
             "Russian": "Бум диней",
             "Italian": "Pioggia di Stelline",
             "Dutch": "Bell Boom",
+            "Chinese": "经济复苏",
             "Portuguese": "Bell Boom"
         },
         {
@@ -10730,6 +10963,7 @@
             "Russian": "Версия добавлена",
             "Italian": "Aggiunto nella versione",
             "Dutch": "Versie toegevoegd",
+            "Chinese": "版本添加",
             "Portuguese": "Versão adicionada"
         },
         {
@@ -10743,6 +10977,7 @@
             "Russian": "Облачное резервное копирование",
             "Italian": "Backup in cloud",
             "Dutch": "Cloud backup",
+            "Chinese": "云备份",
             "Portuguese": "Backup na nuvem"
         },
         {
@@ -10756,6 +10991,7 @@
             "Russian": "Эл. адрес",
             "Italian": "E-mail",
             "Dutch": "E-mail",
+            "Chinese": "电子邮件",
             "Portuguese": "O email"
         },
         {
@@ -10769,6 +11005,7 @@
             "Russian": "Пароль",
             "Italian": "Password",
             "Dutch": "Wachtwoord",
+            "Chinese": "密码",
             "Portuguese": "Senha"
         },
         {
@@ -10782,6 +11019,7 @@
             "Russian": "Войти",
             "Italian": "Registrati",
             "Dutch": "Inloggen",
+            "Chinese": "登录",
             "Portuguese": "Entrar"
         },
         {
@@ -10795,6 +11033,7 @@
             "Russian": "Зарегистрироваться",
             "Italian": "Iscriviti",
             "Dutch": "Inschrijven",
+            "Chinese": "注册",
             "Portuguese": "Inscrever-se"
         },
         {
@@ -10808,6 +11047,7 @@
             "Russian": "Выйти",
             "Italian": "Disconnetti",
             "Dutch": "Afmelden",
+            "Chinese": "注销",
             "Portuguese": "Sair"
         },
         {
@@ -10821,6 +11061,7 @@
             "Russian": "Загрузить данные",
             "Italian": "Upload dei dati",
             "Dutch": "Gegevens uploaden",
+            "Chinese": "上传数据",
             "Portuguese": "Carregar Dados"
         },
         {
@@ -10834,6 +11075,7 @@
             "Russian": "Скачать и импортировать данные",
             "Italian": "Scarica e importa dati",
             "Dutch": "Gegevens downloaden en importeren",
+            "Chinese": "下载和导入数据",
             "Portuguese": "Baixar e importar dados"
         },
         {
@@ -10847,6 +11089,7 @@
             "Russian": "Есть",
             "Italian": "Ci sono già",
             "Dutch": "Er zijn",
+            "Chinese": "服务器上有",
             "Portuguese": "Existem"
         },
         {
@@ -10860,6 +11103,7 @@
             "Russian": "записей на сервере",
             "Italian": "voci sul server",
             "Dutch": "vermeldingen op de server nu",
+            "Chinese": "个条目",
             "Portuguese": "entradas no servidor"
         },
         {
@@ -10867,12 +11111,13 @@
             "English (Europe)": "An error occurred. Please check your internet connection and try again later.",
             "French": "Une erreur s'est produite. Veuillez vérifier votre connexion Internet et réessayer plus tard.",
             "French (US)": "Une erreur s'est produite. Veuillez vérifier votre connexion Internet et réessayer plus tard.",
-            "German": "Ein Fehler ist aufgetreten. Bitte überprüfe deine Internetverbindung und versuche es später erneut.",
+            "German": " ",
             "Spanish": "Ocurrió un error. Comprueba tu conexión a Internet y vuelve a intentarlo más tarde.",
             "Spanish (US)": "Ocurrió un error. Comprueba tu conexión a Internet y vuelve a intentarlo más tarde.",
             "Russian": "Произошла ошибка. Проверьте подключение к Интернету и повторите попытку позже.",
             "Italian": "Si è verificato un errore. Controlla la tua connessione Internet e riprova più tardi.",
             "Dutch": "Er is een fout opgetreden. Controleer uw internetverbinding en probeer het later opnieuw.",
+            "Chinese": "发生了一个错误。请检查您的网络连接并稍后再试。",
             "Portuguese": "Um erro ocorreu. Verifique sua conexão com a Internet e tente novamente mais tarde."
         },
         {
@@ -10886,6 +11131,7 @@
             "Russian": "Резервных копий нет. Пожалуйста, загрузите один.",
             "Italian": "Non ci sono backup archiviati. Caricane uno.",
             "Dutch": "Er worden geen back-ups opgeslagen. Upload er een.",
+            "Chinese": "没有存储的备份。请上传一个。",
             "Portuguese": "Não há backups armazenados. Faça upload de um."
         },
         {
@@ -10899,6 +11145,7 @@
             "Russian": "Произошла ошибка. Проверьте подключение к Интернету и повторите попытку позже.",
             "Italian": "Si è verificato un errore. Controlla la tua connessione Internet e riprova più tardi.",
             "Dutch": "Er is een fout opgetreden. Controleer uw internetverbinding en probeer het later opnieuw.",
+            "Chinese": "发生了一个错误。请检查您的互联网连接并稍后再试。",
             "Portuguese": "Um erro ocorreu. Verifique sua conexão com a Internet e tente novamente mais tarde."
         },
         {
@@ -10912,6 +11159,7 @@
             "Russian": "Проверка данных ...",
             "Italian": "Verifica dei dati in corso...",
             "Dutch": "Gegevens verifiëren...",
+            "Chinese": "验证数据...",
             "Portuguese": "Verificando dados ..."
         },
         {
@@ -10925,6 +11173,7 @@
             "Russian": "Вы можете включить автоматическое резервное копирование данных в Настройках.",
             "Italian": "Puoi attivare il backup automatico dei dati nelle Impostazioni.",
             "Dutch": "U kunt automatische gegevensback-up inschakelen in de Instellingen.",
+            "Chinese": "你可以在设置中打开自动数据备份。",
             "Portuguese": "Você pode ativar o backup automático de dados nas configurações."
         },
         {
@@ -10938,6 +11187,7 @@
             "Russian": "Примечание. Выгрузка данных заменит то, что в настоящее время хранится в облаке!",
             "Italian": "Nota: caricare altri dati sostituirà quelli già archiviati in cloud!",
             "Dutch": "Opmerking: het uploaden van gegevens vervangt wat er momenteel in de cloud is geback-upt!",
+            "Chinese": "注意：上传数据将取代当前在云端的备份内容",
             "Portuguese": "Nota: O upload de dados substituirá o que está atualmente em backup na nuvem!"
         },
         {
@@ -10951,6 +11201,7 @@
             "Russian": "Автоматическое резервное копирование",
             "Italian": "Backup automatici",
             "Dutch": "Automatische back-ups",
+            "Chinese": "自动备份",
             "Portuguese": "Backups automáticos"
         },
         {
@@ -10964,6 +11215,7 @@
             "Russian": "После того, как ваши учетные данные будут сохранены на странице резервного копирования, автоматическое резервное копирование будет происходить каждый раз, когда вы открываете приложение и подключаетесь к Интернету. Автоматическое резервное копирование перезаписывает то, что в настоящее время зарезервировано в облаке!",
             "Italian": "Una volta che le tue credenziali sono state registrate nella pagina di backup, i backup automatici verranno eseguiti ogni volta che apri l'app e sei connesso a Internet. I backup automatici sovrascrivono ciò che è già archiviato nel cloud!",
             "Dutch": "Zodra uw inloggegevens zijn onthouden op de back-uppagina, worden er automatisch back-ups gemaakt elke keer dat u de applicatie opent en bent verbonden met internet. Automatische back-ups overschrijven wat momenteel in de cloud is geback-upt!",
+            "Chinese": "一旦你的凭证在备份页面被记住，每次你打开应用程序并连接到互联网时都会进行自动备份。自动备份会覆盖当前在云端备份的内容!",
             "Portuguese": "Assim que suas credenciais forem lembradas na página de backup, backups automáticos ocorrerão sempre que você abrir o aplicativo e estiver conectado à Internet. Os backups automáticos sobrescrevem o que está atualmente em backup na nuvem!"
         },
         {
@@ -10977,6 +11229,7 @@
             "Russian": "Учетные данные для входа не настроены для облачного резервного копирования или неверны. Пожалуйста, установите их на странице \"Резервное копирование + восстановление\".",
             "Italian": "Le credenziali di accesso non sono impostate per il backup in cloud o sono errate. Impostale nella pagina Backup + Ripristino.",
             "Dutch": "De inloggegevens zijn niet ingesteld voor cloudback-up of zijn onjuist. Stel ze in op de pagina Back-up + herstellen.",
+            "Chinese": "登录凭证没有设置为云备份或不正确。请在 \"备份+恢复 \"页面设置。",
             "Portuguese": "As credenciais de login não estão definidas para backup em nuvem ou estão incorretas. Defina-os na página Backup + Restore."
         },
         {
@@ -10990,6 +11243,7 @@
             "Russian": "Убедитесь, что ваши учетные данные и учетная запись настроены на странице резервного копирования и восстановления.",
             "Italian": "Assicurati che le tue credenziali e il tuo account siano impostati nella pagina Backup e Ripristino.",
             "Dutch": "Zorg ervoor dat uw inloggegevens en account zijn ingesteld op de pagina Back-up en herstel.",
+            "Chinese": "确保你的凭证和账户在 \"备份和恢复 \"页面上被设置。",
             "Portuguese": "Certifique-se de que suas credenciais e conta estejam configuradas na página Backup e Restauração."
         },
         {
@@ -11003,6 +11257,7 @@
             "Russian": "Перейти на страницу",
             "Italian": "Vai alla pagina",
             "Dutch": "Ga naar pagina",
+            "Chinese": "转到页面",
             "Portuguese": "Vá para página"
         },
         {
@@ -11016,6 +11271,7 @@
             "Russian": "Теперь вы можете сделать резервную копию своих данных в облаке и включить автоматическое резервное копирование в настройках.",
             "Italian": "Ora puoi eseguire il backup dei tuoi dati sul cloud e abilitare i backup automatici nelle impostazioni.",
             "Dutch": "U kunt nu een back-up van uw gegevens naar de cloud maken en automatische back-ups inschakelen in de instellingen.",
+            "Chinese": "你现在可以把你的数据备份到云端，并在设置中启用自动备份。",
             "Portuguese": "Agora você pode fazer backup de seus dados para a nuvem e habilitar backups automáticos nas configurações."
         },
         {
@@ -11029,6 +11285,7 @@
             "Russian": "Пароль недействителен или у пользователя нет пароля.",
             "Italian": "La password non è valida o l'utente non dispone di una password.",
             "Dutch": "Het wachtwoord is ongeldig of de gebruiker heeft geen wachtwoord.",
+            "Chinese": "密码无效，或者用户没有密码。",
             "Portuguese": "A senha é inválida ou o usuário não possui uma senha."
         },
         {
@@ -11042,6 +11299,7 @@
             "Russian": "Адрес электронной почты уже используется другой учетной записью.",
             "Italian": "L'indirizzo email è già in uso da un altro account.",
             "Dutch": "Het e-mailadres is al in gebruik door een ander account.",
+            "Chinese": "该电子邮件地址已被其他账户使用。",
             "Portuguese": "O endereço de e-mail já está sendo usado por outra conta."
         },
         {
@@ -11055,6 +11313,7 @@
             "Russian": "Пожалуйста, введите адрес электронной почты и пароль",
             "Italian": "Prego inserire e-mail e password",
             "Dutch": "Voer een e-mailadres en wachtwoord in",
+            "Chinese": "请输入电子邮件和密码",
             "Portuguese": "Por favor, insira um e-mail e senha"
         },
         {
@@ -11068,6 +11327,7 @@
             "Russian": "Неверный формат адреса электронной почты.",
             "Italian": "L'indirizzo e-mail è formattato male.",
             "Dutch": "Het e-mailadres is slecht opgemaakt.",
+            "Chinese": "电子邮件地址的格式有误",
             "Portuguese": "O endereço de e-mail está formatado incorretamente."
         },
         {
@@ -11081,6 +11341,7 @@
             "Russian": "Нет записи пользователя, соответствующей этому идентификатору. Возможно, пользователь был удален. Пожалуйста, попробуйте создать учетную запись и зарегистрируйтесь.",
             "Italian": "Nessuna registrazione utente corrispondente a questo identificativo. L'utente potrebbe essere stato cancellato. Prova a creare un account e registrati.",
             "Dutch": "Er is geen gebruikersrecord dat overeenkomt met deze identifier. De gebruiker is mogelijk verwijderd. Probeer a.u.b. een account aan te maken en u aan te melden.",
+            "Chinese": "没有与此标识符对应的用户记录。该用户可能已被删除。请尝试创建一个账户并注册。",
             "Portuguese": "Não há registro de usuário correspondente a este identificador. O usuário pode ter sido excluído. Por favor, tente criar uma conta e se inscrever."
         },
         {
@@ -11094,6 +11355,7 @@
             "Russian": "Есть фото жителя",
             "Italian": "Ha una foto da abitante",
             "Dutch": "Heb een foto van een dorpeling",
+            "Chinese": "有岛民照片",
             "Portuguese": "Tem uma foto do aldeão"
         },
         {
@@ -11107,6 +11369,7 @@
             "Russian": "Нет фото жителя",
             "Italian": "Non ha una foto da abitante",
             "Dutch": "Heb geen dorpsfoto",
+            "Chinese": "没有岛民照片",
             "Portuguese": "Não tem foto de aldeão"
         },
         {
@@ -11120,6 +11383,7 @@
             "Russian": "Примечание. Мы скрыли некоторые ваши изображения, чтобы избежать спойлеров. Чтобы просмотреть все изображения, измените опцию в странице Настроек.",
             "Italian": "Nota: alcune immagini sono nascoste per evitarti spoiler. Disabilitalo nella pagina Impostazioni per visualizzare tutte le immagini.",
             "Dutch": "Opmerking: je hebt afbeeldingen verborgen om spoilers te voorkomen. Schakel dit uit op de pagina Instellingen om alle afbeeldingen te bekijken.",
+            "Chinese": "注意：你的图片被隐藏了，以避免破坏者。在 \"设置 \"页面中禁用此功能以查看所有图片。",
             "Portuguese": "Nota: Você tem imagens ocultas para evitar spoilers. Desative isso na página Configurações para visualizar todas as imagens."
         },
         {
@@ -11133,6 +11397,7 @@
             "Russian": "Избежать спойлеров - скрыть изображения для предварительного просмотра",
             "Italian": "Evita spoiler - nascondi le immagini di anteprima",
             "Dutch": "Vermijd spoilers - Verberg voorbeeldafbeeldingen",
+            "Chinese": "避免破坏者 - 隐藏预览图像",
             "Portuguese": "Evite spoilers - ocultar imagens de visualização"
         },
         {
@@ -11146,6 +11411,7 @@
             "Russian": "Скройте изображения, чтобы избежать спойлеров, если предмет еще не собран.",
             "Italian": "Nascondi le immagini per evitare spoiler se l'oggetto non è ancora stato collezionato.",
             "Dutch": "Verberg afbeeldingen om spoilers te voorkomen als het item nog niet is verzameld.",
+            "Chinese": "如果该项目还没有被收集则隐藏图像，以避免任何破坏者，",
             "Portuguese": "Oculte as imagens para evitar spoilers se o item ainda não tiver sido coletado."
         },
         {
@@ -11159,6 +11425,7 @@
             "Russian": "Женщина",
             "Italian": "Femmina",
             "Dutch": "Vrouwelijk",
+            "Chinese": "女性",
             "Portuguese": "Masculino"
         },
         {
@@ -11172,6 +11439,7 @@
             "Russian": "Мужчина",
             "Italian": "Maschio",
             "Dutch": "Mannelijk",
+            "Chinese": "男性",
             "Portuguese": "Fêmea"
         },
         {
@@ -11185,6 +11453,7 @@
             "Russian": "Тип динамика",
             "Italian": "Tipo di altoparlante",
             "Dutch": "Luidsprekertype:",
+            "Chinese": "扬声器类型",
             "Portuguese": "Tipo de alto-falante"
         },
         {
@@ -11198,6 +11467,7 @@
             "Russian": "Не воспроизводит музыку",
             "Italian": "Non riproduce musica",
             "Dutch": "Speelt geen muziek af",
+            "Chinese": "不播放音乐",
             "Portuguese": "Não toca musica"
         },
         {
@@ -11211,6 +11481,7 @@
             "Russian": "Ретро",
             "Italian": "Retrò",
             "Dutch": "Retro",
+            "Chinese": "复古",
             "Portuguese": "Retro"
         },
         {
@@ -11224,6 +11495,7 @@
             "Russian": "Hi-Fi",
             "Italian": "Hi-fi",
             "Dutch": "Hifi",
+            "Chinese": "高保真",
             "Portuguese": "Hi Fi"
         },
         {
@@ -11237,6 +11509,7 @@
             "Russian": "Фонокорректор",
             "Italian": "Phono",
             "Dutch": "Phono",
+            "Chinese": "唱机",
             "Portuguese": "Phono"
         },
         {
@@ -11250,6 +11523,7 @@
             "Russian": "Дешевый",
             "Italian": "Economico",
             "Dutch": "Goedkoop",
+            "Chinese": "廉价",
             "Portuguese": "Barato"
         },
         {
@@ -11263,6 +11537,7 @@
             "Russian": "Тип освещения",
             "Italian": "Tipo di illuminazione",
             "Dutch": "Verlichtingstype:",
+            "Chinese": "照明类型",
             "Portuguese": "Tipo de Iluminação"
         },
         {
@@ -11276,6 +11551,7 @@
             "Russian": "Без освещения",
             "Italian": "Nessuna illuminazione",
             "Dutch": "Geen verlichting",
+            "Chinese": "无照明",
             "Portuguese": "Sem iluminação"
         },
         {
@@ -11289,6 +11565,7 @@
             "Russian": "Монитор",
             "Italian": "Monitor",
             "Dutch": "Toezicht houden op",
+            "Chinese": "监视器",
             "Portuguese": "Monitor"
         },
         {
@@ -11302,6 +11579,7 @@
             "Russian": "Флуоресцентный",
             "Italian": "Fluorescente",
             "Dutch": "fluorescerend",
+            "Chinese": "荧光灯",
             "Portuguese": "Fluorescente"
         },
         {
@@ -11315,6 +11593,7 @@
             "Russian": "Свеча",
             "Italian": "Candela",
             "Dutch": "Kaars",
+            "Chinese": "蜡烛",
             "Portuguese": "Vela"
         },
         {
@@ -11328,6 +11607,7 @@
             "Russian": "Прожектор",
             "Italian": "Riflettore",
             "Dutch": "schijnwerper",
+            "Chinese": "聚光灯",
             "Portuguese": "Holofote"
         },
         {
@@ -11341,6 +11621,7 @@
             "Russian": "Эмиссия",
             "Italian": "Emissione",
             "Dutch": "Uitstoot",
+            "Chinese": "排放物",
             "Portuguese": "Emissão"
         },
         {
@@ -11354,6 +11635,7 @@
             "Russian": "Проведите пальцем влево / вправо, чтобы изменить месяцы",
             "Italian": "Scorri verso sinistra/destra per cambiare i mesi",
             "Dutch": "Veeg naar links/rechts om maanden te wijzigen",
+            "Chinese": "向左/右滑动以改变月份",
             "Portuguese": "Deslize para a esquerda / direita para mudar os meses"
         },
         {
@@ -11367,6 +11649,7 @@
             "Russian": "Событие начинается",
             "Italian": "L'evento inizia",
             "Dutch": "Evenement begint",
+            "Chinese": "事件开始",
             "Portuguese": "Início do evento"
         },
         {
@@ -11380,6 +11663,7 @@
             "Russian": "Событие заканчивается",
             "Italian": "L'evento finisce",
             "Dutch": "Evenement eindigt",
+            "Chinese": "活动结束",
             "Portuguese": "Evento termina"
         },
         {
@@ -11393,6 +11677,7 @@
             "Russian": "Показать все события, происходящие сегодня",
             "Italian": "Mostra tutti gli eventi in corso oggi",
             "Dutch": "Toon alle evenementen die vandaag plaatsvinden",
+            "Chinese": "显示今天发生的所有事件",
             "Portuguese": "Mostrar todos os eventos que acontecem hoje"
         },
         {
@@ -11406,6 +11691,7 @@
             "Russian": "Подводный",
             "Italian": "sott'acqua",
             "Dutch": "Onderwater",
+            "Chinese": "水下活动",
             "Portuguese": "Embaixo da agua"
         },
         {
@@ -11419,6 +11705,7 @@
             "Russian": "Предметы, которые вы можете создать из этого",
             "Italian": "Oggetti che puoi creare con questo",
             "Dutch": "Items die je hiermee kunt knutselen",
+            "Chinese": "你可以用这个制作的物品",
             "Portuguese": "Itens que você pode criar com este"
         },
         {
@@ -11432,6 +11719,7 @@
             "Russian": "Удалить сгенерированные внутренние данные",
             "Italian": "Elimina i dati interni generati",
             "Dutch": "Gegenereerde interne gegevens verwijderen",
+            "Chinese": "删除生成的内部数据",
             "Portuguese": "Excluir dados internos gerados"
         },
         {
@@ -11445,6 +11733,7 @@
             "Russian": "Удаленные сгенерированные данные",
             "Italian": "Dati generati eliminati",
             "Dutch": "Verwijderde gegenereerde gegevens",
+            "Chinese": "删除已生成的数据",
             "Portuguese": "Dados Gerados Excluídos"
         },
         {
@@ -11458,6 +11747,7 @@
             "Russian": "Все сгенерированные данные были удалены. Перезапустите, чтобы восстановить данные.",
             "Italian": "Tutti i dati generati sono stati rimossi. Riavvia per rigenerare i dati.",
             "Dutch": "Alle gegenereerde gegevens zijn verwijderd. Start opnieuw om de gegevens opnieuw te genereren.",
+            "Chinese": "所有生成的数据已被删除。重新启动以重新生成数据。",
             "Portuguese": "Todos os dados gerados foram removidos. Reinicie para regenerar os dados."
         },
         {
@@ -11471,6 +11761,7 @@
             "Russian": "Создание данных ...",
             "Italian": "Generazione dati...",
             "Dutch": "Gegevens genereren...",
+            "Chinese": "生成数据...",
             "Portuguese": "Gerando dados ..."
         },
         {
@@ -11484,6 +11775,7 @@
             "Russian": "Это может занять несколько минут и выполняется только один раз.",
             "Italian": "Questa operazione potrebbe richiedere alcuni minuti e viene eseguita solo una volta.",
             "Dutch": "Dit kan enkele minuten duren en gebeurt maar één keer.",
+            "Chinese": "这可能需要几分钟的时间，而且只做一次。",
             "Portuguese": "Isso pode levar alguns minutos e é feito apenas uma vez."
         },
         {
@@ -11497,6 +11789,7 @@
             "Russian": "Почти сделано!",
             "Italian": "Quasi fatto!",
             "Dutch": "Bijna klaar!",
+            "Chinese": "几乎完成了!",
             "Portuguese": "Quase pronto!"
         },
         {
@@ -11510,6 +11803,7 @@
             "Russian": "Еще несколько секунд!",
             "Italian": "Ancora qualche secondo!",
             "Dutch": "App laden...",
+            "Chinese": "还有几秒钟!",
             "Portuguese": "Mais alguns segundos!"
         },
         {
@@ -11523,6 +11817,7 @@
             "Russian": "Загрузка приложения ...",
             "Italian": "Caricamento dell'app...",
             "Dutch": "App laden...",
+            "Chinese": "加载应用程序...",
             "Portuguese": "Carregando aplicativo ..."
         },
         {
@@ -11536,6 +11831,7 @@
             "Russian": "Загрузка",
             "Italian": "Caricamento in corso",
             "Dutch": "Bezig met laden",
+            "Chinese": "正在加载",
             "Portuguese": "Carregando"
         },
         {
@@ -11546,9 +11842,10 @@
             "German": "Museum bauen",
             "Spanish": "Museo del edificio",
             "Spanish (US)": "Museo del edificio",
-            "Russian": "Строительный музей",
+            "Russian": "Построить музей",
             "Italian": "Museo dell'edificio",
             "Dutch": "Gebouwmuseum",
+            "Chinese": "建设博物馆",
             "Portuguese": "Museu do Edifício"
         },
         {
@@ -11562,6 +11859,7 @@
             "Russian": "Заказ кофе",
             "Italian": "Ordinare il caffè",
             "Dutch": "Koffie bestellen",
+            "Chinese": "订购咖啡",
             "Portuguese": "Pedindo Café"
         },
         {
@@ -11575,6 +11873,7 @@
             "Russian": "Разговор с сельскими жителями",
             "Italian": "Parlando con gli abitanti del villaggio",
             "Dutch": "Praten met dorpelingen",
+            "Chinese": "与岛民交谈",
             "Portuguese": "Conversando com os aldeões"
         },
         {
@@ -11588,6 +11887,7 @@
             "Russian": "Разговор с Брюстером",
             "Italian": "Parlando con Brewster",
             "Dutch": "Praten met Brewster",
+            "Chinese": "与布鲁斯特交谈",
             "Portuguese": "Falando com Brewster"
         },
         {
@@ -11601,6 +11901,7 @@
             "Russian": "Полет с Орвиллом",
             "Italian": "Volare con Orville",
             "Dutch": "Vliegen met Orville",
+            "Chinese": "与奥维尔一起飞行",
             "Portuguese": "Voando com Orville"
         },
         {
@@ -11614,6 +11915,7 @@
             "Russian": "Посадка на море",
             "Italian": "Sbarco in mare",
             "Dutch": "Landen op zee",
+            "Chinese": "降落在海上",
             "Portuguese": "Pousando no mar"
         },
         {
@@ -11627,6 +11929,7 @@
             "Russian": "Сбор ракушек",
             "Italian": "Raccogliendo conchiglie",
             "Dutch": "Schelpen rapen",
+            "Chinese": "捡拾贝壳",
             "Portuguese": "Pegando conchas"
         },
         {
@@ -11637,9 +11940,10 @@
             "German": "Bäume schütteln",
             "Spanish": "Sacudiendo árboles",
             "Spanish (US)": "Sacudiendo árboles",
-            "Russian": "Качая деревья",
+            "Russian": "Трясти деревья",
             "Italian": "alberi che scuotono",
             "Dutch": "Bomen schudden",
+            "Chinese": "摇晃树木",
             "Portuguese": "Agitando árvores"
         },
         {
@@ -11650,9 +11954,10 @@
             "German": "Luftballons abschießen",
             "Spanish": "Hacer estallar globos",
             "Spanish (US)": "Hacer estallar globos",
-            "Russian": "Лопание воздушных шаров",
+            "Russian": "Лопать воздушный шарик",
             "Italian": "Palloncini che scoppiano",
             "Dutch": "Ballonnen laten knallen",
+            "Chinese": "打爆气球",
             "Portuguese": "Balões estourando"
         },
         {
@@ -11663,9 +11968,10 @@
             "German": "Bauen und Basteln",
             "Spanish": "Elaboración de bricolaje",
             "Spanish (US)": "Elaboración de bricolaje",
-            "Russian": "Ремесло своими руками",
+            "Russian": "Сделать своими руками",
             "Italian": "Fai da te",
             "Dutch": "DIY's maken",
+            "Chinese": "手工制作DIY",
             "Portuguese": "Elaborando DIYs"
         },
         {
@@ -11676,9 +11982,10 @@
             "German": "Rüben verkaufen",
             "Spanish": "Venta de nabos",
             "Spanish (US)": "Venta de nabos",
-            "Russian": "Продам репу",
+            "Russian": "Продать репку",
             "Italian": "Vendere rape",
             "Dutch": "Rapen verkopen",
+            "Chinese": "卖大头菜",
             "Portuguese": "Vendendo nabos"
         },
         {
@@ -11692,6 +11999,7 @@
             "Russian": "Путешествие во времени",
             "Italian": "Viaggiare nel tempo",
             "Dutch": "Tijdreizen",
+            "Chinese": "时间旅行",
             "Portuguese": "Viagem no tempo"
         },
         {
@@ -11702,9 +12010,10 @@
             "German": "K.K. zuhören",
             "Spanish": "Escuchando a K.K.",
             "Spanish (US)": "Escuchando a K.K.",
-            "Russian": "Слушая К.К.",
+            "Russian": "Слушать К.К.",
             "Italian": "Ascoltando K.K.",
             "Dutch": "Luisteren naar K.K.",
+            "Chinese": "倾听K.K.的音乐",
             "Portuguese": "Ouvindo K.K."
         },
         {
@@ -11715,9 +12024,10 @@
             "German": "Haus ausbauen",
             "Spanish": "Mejorando la casa",
             "Spanish (US)": "Mejorando la casa",
-            "Russian": "Модернизация дома",
+            "Russian": "Улучшить дом",
             "Italian": "Migliorare la casa",
             "Dutch": "Huis upgraden",
+            "Chinese": "升级房子",
             "Portuguese": "Atualizando casa"
         },
         {
@@ -11728,9 +12038,10 @@
             "German": "Artikel verkaufen",
             "Spanish": "Venta de articulos",
             "Spanish (US)": "Venta de articulos",
-            "Russian": "Продажа предметов",
+            "Russian": "Продать предмет",
             "Italian": "Vendere oggetti",
             "Dutch": "Artikelen verkopen",
+            "Chinese": "出售物品",
             "Portuguese": "Venda de itens"
         },
         {
@@ -11741,9 +12052,10 @@
             "German": "Sternis verdienen",
             "Spanish": "Haciendo campanas",
             "Spanish (US)": "Haciendo campanas",
-            "Russian": "Делаем колокольчики",
+            "Russian": "Заработать дини",
             "Italian": "Fare soldi",
             "Dutch": "Bellen maken",
+            "Chinese": "制作铃铛",
             "Portuguese": "Fazendo sinos"
         },
         {
@@ -11754,9 +12066,10 @@
             "German": "Blumen gießen",
             "Spanish": "Regar las flores",
             "Spanish (US)": "Regar las flores",
-            "Russian": "Полив цветов",
+            "Russian": "Полить цветы",
             "Italian": "Innaffiare i fiori",
             "Dutch": "Bloemen water geven",
+            "Chinese": "浇花",
             "Portuguese": "Regando flores"
         },
         {
@@ -11767,9 +12080,10 @@
             "German": "Felsen zerschlagen",
             "Spanish": "Rompiendo rocas",
             "Spanish (US)": "Rompiendo rocas",
-            "Russian": "Разбивая скалы",
+            "Russian": "Разбить скалу",
             "Italian": "Rompere le rocce",
             "Dutch": "Stenen breken",
+            "Chinese": "砸石头",
             "Portuguese": "Quebrando pedras"
         },
         {
@@ -11780,9 +12094,10 @@
             "German": "Gulliver aufwecken",
             "Spanish": "Despertando a Gulliver",
             "Spanish (US)": "Despertando a Gulliver",
-            "Russian": "Просыпающийся Гулливер",
+            "Russian": "Разбудить Гулливера",
             "Italian": "Svegliare Gulliver",
             "Dutch": "Gulliver wakker maken",
+            "Chinese": "唤醒格列佛",
             "Portuguese": "Acordando Gulliver"
         },
         {
@@ -11793,9 +12108,10 @@
             "German": "Kunst bei Reiner kaufen",
             "Spanish": "Comprar arte de Redd",
             "Spanish (US)": "Comprar arte de Redd",
-            "Russian": "Покупка произведений искусства в Redd",
+            "Russian": "Купить произведение искусства у Рэдда",
             "Italian": "Acquistare opere d'arte da Redd",
             "Dutch": "Kunst kopen bij Redd",
+            "Chinese": "向雷德购买艺术品",
             "Portuguese": "Comprando arte no Redd"
         },
         {
@@ -11806,9 +12122,10 @@
             "German": "Nook-Meilen sammeln",
             "Spanish": "Recolectando millas Nook",
             "Spanish (US)": "Recolectando millas Nook",
-            "Russian": "Накопление Nook Miles",
+            "Russian": "Накопить мили Нука",
             "Italian": "Raccogliere miglia Nook",
             "Dutch": "Nook Miles verzamelen",
+            "Chinese": "收集Nook狸数",
             "Portuguese": "Coletando Nook Miles"
         },
         {
@@ -11819,9 +12136,10 @@
             "German": "Fossilien ausgraben",
             "Spanish": "Excavando fósiles",
             "Spanish (US)": "Excavando fósiles",
-            "Russian": "Копание окаменелостей",
+            "Russian": "Выкопать окаменелость",
             "Italian": "Scavare fossili",
             "Dutch": "Fossielen graven",
+            "Chinese": "挖掘化石",
             "Portuguese": "Escavando fósseis"
         },
         {
@@ -11832,9 +12150,10 @@
             "German": "Flaschenpost finden",
             "Spanish": "Encontrar botella de mensaje",
             "Spanish (US)": "Encontrar botella de mensaje",
-            "Russian": "Поиск бутылки с сообщениями",
+            "Russian": "Найти бутылку с письмом",
             "Italian": "Trovare la bottiglia del messaggio",
             "Dutch": "Berichtenfles vinden",
+            "Chinese": "寻找漂流瓶",
             "Portuguese": "Encontrando garrafa de mensagem"
         },
         {
@@ -11845,9 +12164,10 @@
             "German": "Rübenpreise prüfen",
             "Spanish": "Comprobación de los precios de los nabos",
             "Spanish (US)": "Comprobación de los precios de los nabos",
-            "Russian": "Проверка цен на репу",
+            "Russian": "Проверить цены на репку",
             "Italian": "Controllo dei prezzi delle rape",
             "Dutch": "Raapprijzen controleren",
+            "Chinese": "检查大头菜的价格",
             "Portuguese": "Verificando preços de nabo"
         },
         {
@@ -11858,9 +12178,10 @@
             "German": "In der Schneiderei Kleidung anprobieren",
             "Spanish": "Vestirse con las Able Sisters",
             "Spanish (US)": "Vestirse con las Able Sisters",
-            "Russian": "Нарядитесь в Able Sisters",
+            "Russian": "Нарядиться у сестёр Эйбл",
             "Italian": "Vestirsi da Ago e Filo",
             "Dutch": "Verkleden in de Able Sisters",
+            "Chinese": "在Able Sisters打扮打扮",
             "Portuguese": "Vestindo-se com as Irmãs Capazes"
         },
         {
@@ -11871,9 +12192,10 @@
             "German": "Besuch bei Harvey",
             "Spanish": "Visitando Fauno",
             "Spanish (US)": "Visitando Fauno",
-            "Russian": "Посещение Харва",
+            "Russian": "Посетить Харва",
             "Italian": "Visitare Harv",
             "Dutch": "Harv . bezoeken",
+            "Chinese": "拜访哈夫",
             "Portuguese": "Vising Harv"
         },
         {
@@ -11884,9 +12206,10 @@
             "German": "Gyroiden finden",
             "Spanish": "Encontrar giroscopios",
             "Spanish (US)": "Encontrar giroscopios",
-            "Russian": "В поисках гироидов",
+            "Russian": "Найти Гироида",
             "Italian": "Trovare i giroidi",
             "Dutch": "Gyroïden vinden",
+            "Chinese": "寻找陶俑",
             "Portuguese": "Encontrando Gyroids"
         },
         {
@@ -11897,9 +12220,10 @@
             "German": "Schmetterlinge fangen",
             "Spanish": "Atrapando mariposas",
             "Spanish (US)": "Atrapando mariposas",
-            "Russian": "Ловля бабочек",
+            "Russian": "Словить бабочку",
             "Italian": "Catturare le farfalle",
             "Dutch": "Vlinders vangen",
+            "Chinese": "捕捉蝴蝶",
             "Portuguese": "Pegando borboletas"
         },
         {
@@ -11910,9 +12234,10 @@
             "German": "Zu Besuch bei Melinda",
             "Spanish": "Visitando Canela",
             "Spanish (US)": "Visitando Canela",
-            "Russian": "В гостях у Изабель",
+            "Russian": "Навестить Изабель",
             "Italian": "In visita a Isabelle",
             "Dutch": "Op bezoek bij Isabelle",
+            "Chinese": "拜访西施惠",
             "Portuguese": "Visitando Isabelle"
         },
         {
@@ -11926,6 +12251,7 @@
             "Russian": "Еда",
             "Italian": "Cibo",
             "Dutch": "Voedsel",
+            "Chinese": "食物",
             "Portuguese": "Comida"
         },
         {
@@ -11939,6 +12265,7 @@
             "Russian": "Чтобы просмотреть рецепты, перейдите на страницу Рецепты + Инструменты.",
             "Italian": "Per vedere le ricette, vai alla pagina Ricette + Strumenti",
             "Dutch": "Ga naar de pagina Recepten + Hulpmiddelen om recepten te bekijken",
+            "Chinese": "查看DIY+手册，请到 \"DIY+手册 \"页面。",
             "Portuguese": "Para ver as receitas, vá para a página Receitas + Ferramentas"
         },
         {
@@ -11952,6 +12279,7 @@
             "Russian": "Просмотр создаваемых предметов",
             "Italian": "Vedi oggetti costruibili",
             "Dutch": "Maakbare items bekijken",
+            "Chinese": "查看可制作的物品",
             "Portuguese": "Exibir itens fabricáveis"
         },
         {
@@ -11965,6 +12293,7 @@
             "Russian": "Потолочный декор",
             "Italian": "Da soffitto",
             "Dutch": "Plafonddecoratie",
+            "Chinese": "天花板装饰",
             "Portuguese": "Decoração de teto"
         },
         {
@@ -11978,6 +12307,7 @@
             "Russian": "Показать варианты предметов, которые можно создать",
             "Italian": "Mostra varianti degli oggetti costruibili",
             "Dutch": "Variaties van bewerkbare items weergeven",
+            "Chinese": "显示可制作的物品变化",
             "Portuguese": "Mostrar variações de itens fabricáveis"
         },
         {
@@ -11991,6 +12321,7 @@
             "Russian": "Нажмите на Сердце, чтобы добавить жителей, которые в настоящее время проживают в вашем городе.",
             "Italian": "Tocca il cuore per aggiungere gli abitanti del villaggio attualmente nella tua città.",
             "Dutch": "Tik op het hart om dorpelingen in je stad toe te voegen.",
+            "Chinese": "点击心形添加目前在你镇上的岛民。",
             "Portuguese": "Toque no Coração para adicionar aldeões atualmente em sua cidade."
         },
         {
@@ -12001,9 +12332,10 @@
             "German": "Trinkgeld geben",
             "Spanish": "Deja una propina",
             "Spanish (US)": "Deja una propina",
-            "Russian": "Оставить отзыв",
+            "Russian": "Оставить чаевые",
             "Italian": "Lasciare una mancia",
             "Dutch": "Laat een fooi achter",
+            "Chinese": "打赏",
             "Portuguese": "Deixe uma dica"
         },
         {
@@ -12017,6 +12349,7 @@
             "Russian": "Если вам нравится это бесплатное приложение, подумайте о поддержке разработчика",
             "Italian": "Se ti piace questa app gratuita, considera di supportare lo sviluppatore",
             "Dutch": "Als je deze gratis app leuk vindt, overweeg dan om de ontwikkelaar te steunen",
+            "Chinese": "如果你喜欢这个免费的应用程序，请考虑支持开发商。",
             "Portuguese": "Se você gosta deste aplicativo gratuito, considere apoiar o desenvolvedor"
         },
         {
@@ -12030,6 +12363,7 @@
             "Russian": "Спасибо!",
             "Italian": "Grazie!",
             "Dutch": "Bedankt!",
+            "Chinese": "谢谢你!",
             "Portuguese": "Obrigado!"
         },
         {
@@ -12040,9 +12374,10 @@
             "German": "Paradiesplanung",
             "Spanish": "Planificación del paraíso",
             "Spanish (US)": "Planificación del paraíso",
-            "Russian": "Райское планирование",
+            "Russian": "Планирование Рая",
             "Italian": "Pianificazione del paradiso",
             "Dutch": "Paradijsplanning",
+            "Chinese": "天堂计划",
             "Portuguese": "Planejamento do paraíso"
         },
         {
@@ -12056,6 +12391,7 @@
             "Russian": "Посмотреть рецепт",
             "Italian": "Visualizza la ricetta",
             "Dutch": "Bekijk Recept",
+            "Chinese": "查看DIY+手册",
             "Portuguese": "Ver receita"
         },
         {
@@ -12066,9 +12402,10 @@
             "German": "Silber Supporter",
             "Spanish": "Partidarios de plata",
             "Spanish (US)": "Partidarios de plata",
-            "Russian": "Серебряные болельщики",
+            "Russian": "Серебряная поддержка",
             "Italian": "Sostenitori d'argento",
             "Dutch": "Zilveren supporters",
+            "Chinese": "银牌支持者",
             "Portuguese": "Apoiadores de prata"
         },
         {
@@ -12079,22 +12416,24 @@
             "German": "Gold Supporter",
             "Spanish": "Partidarios de oro",
             "Spanish (US)": "Partidarios de oro",
-            "Russian": "Золотые сторонники",
+            "Russian": "Золотая поддержка",
             "Italian": "Sostenitori d'oro",
             "Dutch": "Gouden supporters",
+            "Chinese": "金牌支持者",
             "Portuguese": "Apoiadores de ouro"
         },
         {
             "English": "Thanks for your support!",
             "English (Europe)": "Thanks for your support!",
-            "French": "Merci pour votre aide!",
-            "French (US)": "Merci pour votre aide!",
+            "French": "Merci pour votre aide !",
+            "French (US)": "Merci pour votre aide !",
             "German": "Danke für deine Unterstützung!",
             "Spanish": "¡Gracias por su apoyo!",
             "Spanish (US)": "¡Gracias por su apoyo!",
             "Russian": "Спасибо за поддержку!",
             "Italian": "Grazie per il vostro sostegno!",
             "Dutch": "Bedankt voor uw steun!",
+            "Chinese": "感谢你的支持!",
             "Portuguese": "Obrigado por seu apoio!"
         },
         {
@@ -12108,6 +12447,7 @@
             "Russian": "Ваш адрес электронной почты используется только в качестве имени пользователя и для подтверждения личности при утерянном пароле.",
             "Italian": "La tua email viene utilizzata solo come nome utente e per verificare l'identità di una password persa.",
             "Dutch": "Uw e-mailadres wordt alleen gebruikt als gebruikersnaam en om de identiteit te verifiëren voor een verloren wachtwoord.",
+            "Chinese": "您的电子邮件只用作用户名和验证丢失密码的身份。",
             "Portuguese": "Seu e-mail é usado apenas como um nome de usuário e para verificar a identidade de uma senha perdida."
         },
         {
@@ -12121,6 +12461,7 @@
             "Russian": "Строительство + Инструменты",
             "Italian": "Costruzione + Strumenti",
             "Dutch": "Constructie + Gereedschap",
+            "Chinese": "建筑+工具",
             "Portuguese": "Construção + Ferramentas"
         },
         {
@@ -12134,6 +12475,7 @@
             "Russian": "Внутренние конструкции",
             "Italian": "Strutture Interne",
             "Dutch": "Interieurstructuren",
+            "Chinese": "内部结构",
             "Portuguese": "Estruturas Interiores"
         },
         {
@@ -12147,6 +12489,7 @@
             "Russian": "Убедитесь, что вы подключены к Интернету, и перезапустите приложение.",
             "Italian": "Assicurati di essere connesso a Internet e riavvia l'applicazione",
             "Dutch": "Zorg ervoor dat u verbonden bent met internet en start de applicatie opnieuw op",
+            "Chinese": "请确认您已连接到互联网并重新启动应用程序。",
             "Portuguese": "Certifique-se de que está conectado à internet e reinicie o aplicativo"
         },
         {
@@ -12160,6 +12503,7 @@
             "Russian": "Скачивание данных ...",
             "Italian": "Download dati in corso...",
             "Dutch": "Gegevens downloaden...",
+            "Chinese": "正在下载数据...",
             "Portuguese": "Baixando dados ..."
         },
         {
@@ -12173,6 +12517,7 @@
             "Russian": "Это может занять несколько минут и выполняется только один раз.",
             "Italian": "Questa operazione potrebbe richiedere alcuni minuti e viene eseguita solo una volta.",
             "Dutch": "Dit kan enkele minuten duren en gebeurt maar één keer.",
+            "Chinese": "这可能需要几分钟的时间，而且只做一次。",
             "Portuguese": "Isso pode levar alguns minutos e é feito apenas uma vez."
         },
         {
@@ -12186,6 +12531,7 @@
             "Russian": "Генерировать данные",
             "Italian": "Genera dati",
             "Dutch": "Gegevens genereren",
+            "Chinese": "生成数据",
             "Portuguese": "Gerar Dados"
         },
         {
@@ -12199,6 +12545,7 @@
             "Russian": "Скачать",
             "Italian": "Scarica",
             "Dutch": "Downloaden",
+            "Chinese": "下载",
             "Portuguese": "Download"
         },
         {
@@ -12212,6 +12559,7 @@
             "Russian": "Генерировать",
             "Italian": "creare",
             "Dutch": "genereren",
+            "Chinese": "生成",
             "Portuguese": "Gerar"
         },
         {
@@ -12225,6 +12573,7 @@
             "Russian": "Похоже, при создании данных возникли проблемы. Если создание данных не удается или занимает слишком много времени, выберите [Загрузить].",
             "Italian": "Sembra che la generazione di dati possa aver avuto alcuni problemi. Se la generazione dei dati non riesce o richiede troppo tempo, selezionare [Download].",
             "Dutch": "Het lijkt erop dat het genereren van gegevens problemen heeft gehad. Als het genereren van gegevens mislukt of te lang duurt, selecteert u [Download].",
+            "Chinese": "看来生成数据可能有一些问题。如果生成数据失败或需要太长时间，请选择[下载]。",
             "Portuguese": "Parece que a geração de dados pode ter tido alguns problemas. Se a geração de dados falhar ou demorar muito, selecione [Download]."
         },
         {
@@ -12238,6 +12587,7 @@
             "Russian": "Если это займет больше минуты, перезапустите приложение и выберите Загрузить данные.",
             "Italian": "Se l'operazione richiede più di un minuto, riavvia l'app e seleziona Scarica dati.",
             "Dutch": "Als dit langer dan een minuut duurt, start u de app opnieuw en selecteert u Gegevens downloaden.",
+            "Chinese": "如果这需要超过一分钟的时间，重新启动应用程序并选择下载数据。",
             "Portuguese": "Se demorar mais de um minuto, reinicie o aplicativo e selecione Baixar dados."
         },
         {
@@ -12251,6 +12601,7 @@
             "Russian": "Отметьте жителей деревни, которых у вас есть фотографии, нажав на значок фотографии.",
             "Italian": "Contrassegna gli abitanti del villaggio di cui hai foto toccando l'icona della foto.",
             "Dutch": "Markeer van welke dorpelingen je foto's hebt door op het fotopictogram te tikken.",
+            "Chinese": "点击照片图标，标记你有哪些岛民的照片。",
             "Portuguese": "Marque de quais aldeões você tem fotos tocando no ícone da foto."
         },
         {
@@ -12264,6 +12615,7 @@
             "Russian": "Отметьте, какие жители когда-то были в вашем городе, нажав на значок движущихся ящиков.",
             "Italian": "Contrassegna quali abitanti del villaggio sono stati una volta nella tua città toccando l'icona delle scatole mobili.",
             "Dutch": "Markeer welke dorpelingen ooit in uw stad zijn geweest door op het pictogram van de verhuisdozen te tikken.",
+            "Chinese": "通过点击移动的盒子图标来标记哪些岛民曾经在你的镇上出现过。",
             "Portuguese": "Marque quais aldeões já estiveram em sua cidade tocando no ícone de caixas móveis."
         },
         {
@@ -12277,6 +12629,7 @@
             "Russian": "Нажмите здесь!",
             "Italian": "Tocca qui!",
             "Dutch": "Klik hier!",
+            "Chinese": "点这里!",
             "Portuguese": "Toque aqui!"
         },
         {
@@ -12290,6 +12643,7 @@
             "Russian": "Вы можете изменить язык внизу страницы, нажав Язык.",
             "Italian": "Puoi cambiare la lingua in fondo alla pagina, toccando Lingua",
             "Dutch": "U kunt de taal onder aan de pagina wijzigen door op Taal . te tikken",
+            "Chinese": "你可以在页面底部通过点击语言来改变语言。",
             "Portuguese": "Você pode alterar o idioma na parte inferior da página, tocando em Idioma"
         },
         {
@@ -12303,6 +12657,7 @@
             "Russian": "Ошибка",
             "Italian": "Errore",
             "Dutch": "Fout",
+            "Chinese": "错误",
             "Portuguese": "Erro"
         },
         {
@@ -12316,6 +12671,7 @@
             "Russian": "При загрузке произошла ошибка. Обратите внимание, что для этой функции требуется подключение к Интернету.",
             "Italian": "Si è verificato un errore durante il caricamento. Tieni presente che questa funzione richiede una connessione a Internet.",
             "Dutch": "Er is een fout opgetreden bij het laden. Houd er rekening mee dat deze functie een internetverbinding nodig heeft.",
+            "Chinese": "在加载时出现了错误。注意，这个功能需要互联网连接。",
             "Portuguese": "Ocorreu um erro ao carregar. Observe que esse recurso precisa de uma conexão com a Internet."
         },
         {
@@ -12329,6 +12685,7 @@
             "Russian": "Редактировать задачу",
             "Italian": "Modifica attività",
             "Dutch": "Taak bewerken",
+            "Chinese": "编辑任务",
             "Portuguese": "Editar Tarefa"
         },
         {
@@ -12339,9 +12696,10 @@
             "German": "Passwort zurücksetzen?",
             "Spanish": "¿Restablecer la contraseña?",
             "Spanish (US)": "¿Restablecer la contraseña?",
-            "Russian": "Сброс пароля?",
+            "Russian": "Сбросить пароль?",
             "Italian": "Resetta la password?",
             "Dutch": "Wachtwoord opnieuw instellen?",
+            "Chinese": "重置密码？",
             "Portuguese": "Redefinir senha?"
         },
         {
@@ -12355,6 +12713,7 @@
             "Russian": "Ошибка сброса пароля",
             "Italian": "Reimposta errore password",
             "Dutch": "Reset wachtwoord fout",
+            "Chinese": "重置密码错误",
             "Portuguese": "Erro de redefinição de senha"
         },
         {
@@ -12368,6 +12727,7 @@
             "Russian": "Пожалуйста, заполните вашу электронную почту. Пароль может быть пустым.",
             "Italian": "Si prega di compilare la tua email. La password può essere vuota.",
             "Dutch": "Gelieve uw e-mail in te vullen. Het wachtwoord mag leeg zijn.",
+            "Chinese": "请填写您的电子邮件。密码可以是空白的。",
             "Portuguese": "Por favor, preencha seu email. A senha pode ficar em branco."
         },
         {
@@ -12381,6 +12741,7 @@
             "Russian": "Вы получите электронное письмо с инструкциями.",
             "Italian": "Riceverai un'email con le istruzioni.",
             "Dutch": "U ontvangt een e-mail met instructies.",
+            "Chinese": "你会收到一封带有说明的电子邮件。",
             "Portuguese": "Você receberá um e-mail com instruções."
         },
         {
@@ -12394,6 +12755,7 @@
             "Russian": "Вы должны получить электронное письмо с инструкциями по изменению пароля.",
             "Italian": "Dovresti ricevere un'e-mail con le istruzioni su come reimpostare la password.",
             "Dutch": "U zou een e-mail moeten ontvangen met instructies voor het opnieuw instellen van uw wachtwoord.",
+            "Chinese": "你应该会收到一封电子邮件，说明如何重置你的密码。",
             "Portuguese": "Você deve receber um e-mail com instruções sobre como redefinir sua senha."
         },
         {
@@ -12407,6 +12769,7 @@
             "Russian": "Письмо отправлено",
             "Italian": "Email inviata",
             "Dutch": "Email verzonden",
+            "Chinese": "已发送的电子邮件",
             "Portuguese": "Email enviado"
         },
         {
@@ -12420,6 +12783,7 @@
             "Russian": "Удалить?",
             "Italian": "Elimina?",
             "Dutch": "Verwijderen?",
+            "Chinese": "删除？",
             "Portuguese": "Excluir?"
         },
         {
@@ -12433,6 +12797,7 @@
             "Russian": "Рецепты крафта (Сделай сам)",
             "Italian": "Ricette di creazione (fai da te)",
             "Dutch": "Ambachtelijke Recepten (DIY)",
+            "Chinese": "手工制作的手册（DIY）",
             "Portuguese": "Crafting Recipes (DIY)"
         },
         {
@@ -12446,6 +12811,7 @@
             "Russian": "Рецепты приготовления (DIY)",
             "Italian": "Ricette di cucina (fai da te)",
             "Dutch": "Kookrecepten (DIY)",
+            "Chinese": "烹饪食谱(DIY)",
             "Portuguese": "Receitas de cozinha (faça você mesmo)"
         },
         {
@@ -12459,6 +12825,7 @@
             "Russian": "Снимите флажок каждый день (в 5 утра)",
             "Italian": "Deseleziona ogni giorno (alle 5 del mattino)",
             "Dutch": "Schakel elke dag uit (om 05:00 uur)",
+            "Chinese": "每天取消勾选（早上5点）",
             "Portuguese": "Desmarque a cada dia (às 5h)"
         },
         {
@@ -12472,6 +12839,7 @@
             "Russian": "Реакции",
             "Italian": "reazioni",
             "Dutch": "reacties",
+            "Chinese": "反应",
             "Portuguese": "Reações"
         },
         {
@@ -12485,19 +12853,21 @@
             "Russian": "Поддержите приложение",
             "Italian": "Supporta l'App",
             "Dutch": "Ondersteun de app",
+            "Chinese": "支持该应用程序",
             "Portuguese": "Apoie o aplicativo"
         },
         {
             "English": "Consider leaving a tip to keep the app ad free for all",
             "English (Europe)": "Consider leaving a tip to keep the app ad free for all",
-            "French": "Pensez à laisser un pourboire pour que l'annonce de l'application reste gratuite pour tous",
-            "French (US)": "Pensez à laisser un pourboire pour que l'annonce de l'application reste gratuite pour tous",
+            "French": "Pensez à laisser un pourboire pour que l'application reste sans publicité pour tous",
+            "French (US)": "Pensez à laisser un pourboire pour que l'application reste sans publicité pour tous",
             "German": "Erwägen Sie, einen Tipp zu hinterlassen, damit die App-Werbung für alle kostenlos bleibt",
             "Spanish": "Considere dejar un consejo para mantener la aplicación gratuita para todos.",
             "Spanish (US)": "Considere dejar un consejo para mantener la aplicación gratuita para todos.",
             "Russian": "Оставьте чаевые, чтобы реклама в приложении оставалась бесплатной для всех.",
             "Italian": "Considera di lasciare una mancia per mantenere l'annuncio dell'app gratuito per tutti",
             "Dutch": "Overweeg een tip achter te laten om de app voor iedereen gratis te houden",
+            "Chinese": "考虑打赏以保持该应用程序对所有人都是无广告的",
             "Portuguese": "Considere deixar uma dica para manter o anúncio do aplicativo gratuito para todos"
         },
         {
@@ -12511,6 +12881,7 @@
             "Russian": "Если вы уже поддержали, спасибо !!",
             "Italian": "Se hai già supportato, grazie!!",
             "Dutch": "Als je al gesteund hebt, bedankt!!",
+            "Chinese": "如果你已经支持了，谢谢你！!",
             "Portuguese": "Se você já apoiou, obrigado !!"
         },
         {
@@ -12524,6 +12895,7 @@
             "Russian": "Автоматически собирать при передаче в музей",
             "Italian": "Raccogli automaticamente quando donato al Museo",
             "Dutch": "Automatisch verzamelen wanneer het wordt gedoneerd aan Museum",
+            "Chinese": "捐赠给博物馆时自动收集",
             "Portuguese": "Recolher automaticamente quando doado ao Museu"
         },
         {
@@ -12537,6 +12909,7 @@
             "Russian": "Автоматически отмечать предмет как собранный, когда отмечена кнопка «Пожертвовать музею».",
             "Italian": "Seleziona automaticamente l'oggetto come raccolto quando viene selezionato il pulsante Donato al museo.",
             "Dutch": "Vink het item automatisch af als verzameld wanneer de knop Gedoneerd aan museum is aangevinkt.",
+            "Chinese": "当捐赠给博物馆的按钮被选中时，自动勾选该项目为已收集。",
             "Portuguese": "Marque automaticamente o item conforme coletado quando o botão doado ao museu for selecionado."
         },
         {
@@ -12550,32 +12923,35 @@
             "Russian": "Подсчет коллекции ...",
             "Italian": "Conteggio raccolta...",
             "Dutch": "Tellen collectie...",
+            "Chinese": "计数收集...",
             "Portuguese": "Contando coleção ..."
         },
         {
             "English": "Island ordinance",
             "English (Europe)": "Island ordinance",
-            "French": "Ordonnance de l'île",
-            "French (US)": "Ordonnance de l'île",
+            "French": "Arrêté de l'île",
+            "French (US)": "Arrêté de l'île",
             "German": "Inselverordnung",
             "Spanish": "Ordenanza de la isla",
             "Spanish (US)": "Ordenanza de la isla",
             "Russian": "Постановление острова",
             "Italian": "Ordinanza dell'isola",
             "Dutch": "Eilandverordening",
+            "Chinese": "岛屿条例",
             "Portuguese": "Ordenança da ilha"
         },
         {
             "English": "You can read about Ordinances by tapping here.",
             "English (Europe)": "You can read about Ordinances by tapping here.",
-            "French": "Vous pouvez en savoir plus sur les ordonnances en appuyant ici.",
-            "French (US)": "Vous pouvez en savoir plus sur les ordonnances en appuyant ici.",
+            "French": "Vous pouvez en savoir plus sur les arrêtés en appuyant ici.",
+            "French (US)": "Vous pouvez en savoir plus sur les arrêtés en appuyant ici.",
             "German": "Sie können über Verordnungen lesen, indem Sie hier tippen.",
             "Spanish": "Puede leer sobre las ordenanzas tocando aquí.",
             "Spanish (US)": "Puede leer sobre las ordenanzas tocando aquí.",
             "Russian": "Вы можете прочитать о таинствах, нажав здесь.",
             "Italian": "Puoi leggere le ordinanze toccando qui.",
             "Dutch": "U kunt over verordeningen lezen door hier te tikken.",
+            "Chinese": "你可以通过点选这里来阅读有关法令。",
             "Portuguese": "Você pode ler sobre as Ordenanças tocando aqui."
         },
         {
@@ -12589,71 +12965,77 @@
             "Russian": "Никто",
             "Italian": "Nessuno",
             "Dutch": "Geen",
+            "Chinese": "无",
             "Portuguese": "Nenhum"
         },
         {
             "English": "Beautiful Island",
             "English (Europe)": "Beautiful Island",
-            "French": "Belle île",
-            "French (US)": "Belle île",
+            "French": "Entretien du charme",
+            "French (US)": "Entretien du charme",
             "German": "Schöne Insel",
             "Spanish": "Isla bonita",
             "Spanish (US)": "Isla bonita",
             "Russian": "Красивый остров",
             "Italian": "Isola bellissima",
             "Dutch": "Mooi eiland",
+            "Chinese": "优美岛",
             "Portuguese": "Bela ilha"
         },
         {
             "English": "Early Bird",
             "English (Europe)": "Early Bird",
-            "French": "Lève tôt",
-            "French (US)": "Lève tôt",
+            "French": "Lever matinal",
+            "French (US)": "Lever matinal",
             "German": "Früher Vogel",
             "Spanish": "Madrugador",
             "Spanish (US)": "Madrugador",
             "Russian": "Ранняя пташка",
             "Italian": "Early Bird",
             "Dutch": "Vroege vogel",
+            "Chinese": "早鸟",
             "Portuguese": "Madrugador"
         },
         {
             "English": "Night Owl",
             "English (Europe)": "Night Owl",
-            "French": "Hibou de nuit",
-            "French (US)": "Hibou de nuit",
+            "French": "Coucher tardif",
+            "French (US)": "Coucher tardif",
             "German": "Nachteule",
             "Spanish": "Noctámbulo",
             "Spanish (US)": "Noctámbulo",
             "Russian": "Ночная Сова",
             "Italian": "Nottambulo",
             "Dutch": "Nachtuil",
+            "Chinese": "夜猫",
             "Portuguese": "Night Owl"
         },
         {
             "English": "Bell Boom",
             "English (Europe)": "Bell Boom",
-            "French": "Boum de la cloche",
-            "French (US)": "Boum de la cloche",
+            "French": "Inflation des prix",
+            "French (US)": "Inflation des prix",
             "German": "Glocke Boom",
             "Spanish": "Campana boom",
             "Spanish (US)": "Campana boom",
             "Russian": "Белл Бум",
             "Italian": "campana boom",
             "Dutch": "Bell Boom",
+            "Chinese": "经济复苏",
             "Portuguese": "Bell Boom"
         },
         {
             "English": "Happy Holidays!",
             "English (Europe)": "Happy Holidays!",
-            "French": "Joyeuses fêtes!",
-            "French (US)": "Joyeuses fêtes!",
+            "French": "Joyeuses fêtes !",
+            "French (US)": "Joyeuses fêtes !",
             "German": "Schöne Ferien!",
             "Spanish": "¡Felices vacaciones!",
             "Spanish (US)": "¡Felices vacaciones!",
             "Russian": "Счастливых праздников!",
             "Italian": "Buone vacanze!",
             "Dutch": "Fijne vakantie!",
+            "Chinese": "节日快乐!",
             "Portuguese": "Boas festas!"
         },
         {
@@ -12667,15 +13049,42 @@
             "Russian": "Поддержите приложение, чтобы оно было бесплатным для всех",
             "Italian": "Supporta l'app per mantenerla senza pubblicità per tutti",
             "Dutch": "Ondersteun de app om deze voor iedereen advertentievrij te houden",
+            "Chinese": "支持该应用程序，以保持其对所有人都是无广告的",
             "Portuguese": "Apoie o aplicativo para mantê-lo gratuito para todos"
+        },
+        {
+            "English": "Happy New Year!",
+            "English (Europe)": "Happy New Year!",
+            "French": "Bonne année!",
+            "French (US)": "Bonne année!",
+            "German": "Frohes neues Jahr!",
+            "Spanish": "¡Feliz año nuevo!",
+            "Spanish (US)": "¡Feliz año nuevo!",
+            "Russian": "С новым годом!",
+            "Italian": "Buon anno!",
+            "Dutch": "Gelukkig nieuwjaar!",
+            "Portuguese": "Feliz Ano Novo!"
+        },
+        {
+            "English": "Consider supporting this ad free app",
+            "English (Europe)": "Consider supporting this ad free app",
+            "French": "Pensez à soutenir cette application sans publicité",
+            "French (US)": "Pensez à soutenir cette application sans publicité",
+            "German": "Erwägen Sie, diese werbefreie App zu unterstützen",
+            "Spanish": "Considere apoyar esta aplicación sin anuncios",
+            "Spanish (US)": "Considere apoyar esta aplicación sin anuncios",
+            "Russian": "Рассмотрите возможность поддержки этого приложения без рекламы",
+            "Italian": "Prendi in considerazione l'idea di supportare questa app senza pubblicità",
+            "Dutch": "Overweeg deze advertentievrije app te ondersteunen",
+            "Portuguese": "Considere oferecer suporte a este aplicativo gratuito"
         }
     ],
     "Sources": [
         {
             "English": "160 items",
             "English (Europe)": "160 items",
-            "French": "99 items (61 items missing)",
-            "French (US)": "99 items (61 items missing)",
+            "French": "123 items (37 items missing)",
+            "French (US)": "121 items (39 items missing)",
             "German": "159 items (1 items missing)",
             "Spanish": "95 items (65 items missing)",
             "Spanish (US)": "50 items (110 items missing)",
@@ -13889,6 +14298,8 @@
         {
             "English": "Saharah's Commune",
             "English (Europe)": "Saharah's Commune",
+            "French": "La boutique de Sarah",
+            "French (US)": "La boutique de Sarah",
             "German": "Azizas Laden (Kommune)",
             "Italian": "Comune di Sahara"
         },
@@ -13907,6 +14318,8 @@
         {
             "English": "Requires a Nintendo Switch Online membership",
             "English (Europe)": "Requires a Nintendo Switch Online membership",
+            "French": "Nécessite un abonnement au service Nintendo Switch Online",
+            "French (US)": "Nécessite un abonnement au service Nintendo Switch Online",
             "German": "Erfordert eine Nintendo Switch Online Mitgliedschaft",
             "Italian": "Richiede iscrizione a Nintendo Switch Online",
             "Dutch": "Nintendo Switch Online lidmaatschap benodigd"
@@ -13933,24 +14346,30 @@
         {
             "English": "Redd's Commune Raffle",
             "English (Europe)": "Redd's Commune Raffle",
+            "French": "La tombola de Rounard (boutique)",
             "German": "Reiners Tombola (Kommune)",
             "Italian": "Lotteria della Comune di Volpolo"
         },
         {
             "English": "Kick's Commune",
             "English (Europe)": "Kick's Commune",
+            "French": "La boutique de Blaise",
             "German": "Schuberts Laden (Kommune)",
             "Italian": "Comune di Sciuscià"
         },
         {
             "English": "Gyroid",
             "English (Europe)": "Gyroid",
+            "French": "Gyroïde",
+            "French (US)": "Gyroïde",
             "German": "Gyroid",
             "Italian": "Giroide"
         },
         {
             "English": "Digging up a carrot plant",
             "English (Europe)": "Digging up a carrot plant",
+            "French": "Déterrer un germe de carotte",
+            "French (US)": "Déterrer un germe de carotte",
             "German": "Eine Karottenpflanze ausgraben",
             "Italian": "Estirpando una pianta di carote",
             "Dutch": "wortelplant opgraven"
@@ -13958,6 +14377,8 @@
         {
             "English": "Digging up a potato plant",
             "English (Europe)": "Digging up a potato plant",
+            "French": "Déterrer un germe de pomme de terre",
+            "French (US)": "Déterrer un germe de pomme de terre",
             "German": "Eine Kartoffelpflanze ausgraben",
             "Italian": "Estirpando una pianta di patate",
             "Dutch": "aardappelplant opgraven"
@@ -13965,12 +14386,16 @@
         {
             "English": "Digging up a sugarcane plant",
             "English (Europe)": "Digging up a sugarcane plant",
+            "French": "Déterrer un germe de canne à sucre",
+            "French (US)": "Déterrer un germe de canne à sucre",
             "German": "Eine Zuckerrohrpflanze ausgraben",
             "Italian": "Estirpando una pianta di canna da zucchero"
         },
         {
             "English": "Digging up a tomato plant",
             "English (Europe)": "Digging up a tomato plant",
+            "French": "Déterrer un germe de tomate",
+            "French (US)": "Déterrer un germe de tomate",
             "German": "Eine Tomatenpflanze ausgraben",
             "Italian": "Estirpando una pianta di pomodori",
             "Dutch": "Tomatenplant opgraven"
@@ -13978,18 +14403,24 @@
         {
             "English": "Digging up a wheat plant",
             "English (Europe)": "Digging up a wheat plant",
+            "French": "Déterrer un germe de blé",
+            "French (US)": "Déterrer un germe de blé",
             "German": "Weizen ausgraben ",
             "Italian": "Estirpando una pianta di grano"
         },
         {
             "English": "Catching a horse mackerel",
             "English (Europe)": "Catching a horse mackerel",
+            "French": "Attraper un chinchard",
+            "French (US)": "Attraper un chinchard",
             "German": "Eine Makrele fangen",
             "Italian": "Catturando un ippocampo"
         },
         {
             "English": "Catch an anchovy",
             "English (Europe)": "Catch an anchovy",
+            "French": "Attraper un anchois",
+            "French (US)": "Attraper un anchois",
             "German": "Eine Sardelle fangen",
             "Italian": "Pescando un'acciuga"
         },
@@ -14008,12 +14439,16 @@
         {
             "English": "Catching a blue marlin",
             "English (Europe)": "Catching a blue marlin",
+            "French": "Attraper un marlin bleu",
+            "French (US)": "Attraper un marlin bleu",
             "German": "Einen Marlin fangen",
             "Italian": "Pescando un marlin blu"
         },
         {
             "English": "Catching a salmon",
             "English (Europe)": "Catching a salmon",
+            "French": "Attraper un saumon",
+            "French (US)": "Attraper un saumon",
             "German": "Einen Lachs fangen",
             "Italian": "Pescando un salmone"
         },
@@ -14151,6 +14586,8 @@
         {
             "English": "Picking carrots",
             "English (Europe)": "Picking carrots",
+            "French": "Récolter des carottes",
+            "French (US)": "Récolter des carottes",
             "German": "Karotten ernten",
             "Dutch": "Wortels plukken"
         },
@@ -14163,23 +14600,31 @@
         {
             "English": "Picking potatoes",
             "English (Europe)": "Picking potatoes",
+            "French": "Récolter des pommes de terre",
+            "French (US)": "Récolter des pommes de terre",
             "German": "Kartoffeln ernten",
             "Dutch": "Aardappels plukken"
         },
         {
             "English": "Picking sugarcane",
             "English (Europe)": "Picking sugarcane",
+            "French": "Récolter des cannes à sucre",
+            "French (US)": "Récolter des cannes à sucre",
             "German": "Zuckerrohr ernten"
         },
         {
             "English": "Picking tomatoes",
             "English (Europe)": "Picking tomatoes",
+            "French": "Récolter des tomates",
+            "French (US)": "Récolter des tomates",
             "German": "Tomaten ernten",
             "Dutch": "Tomaten plukken"
         },
         {
             "English": "Picking wheat",
             "English (Europe)": "Picking wheat",
+            "French": "Récolter du blé",
+            "French (US)": "Récolter du blé",
             "German": "Weizen ernten"
         },
         {
@@ -14195,11 +14640,15 @@
         {
             "English": "Catching an anchovy",
             "English (Europe)": "Catching an anchovy",
+            "French": "Attraper un anchois",
+            "French (US)": "Attraper un anchois",
             "German": "Eine Sardelle fangen"
         },
         {
             "English": "Niko",
             "English (Europe)": "Niko",
+            "French": "Gratien",
+            "French (US)": "Gratien",
             "German": "Bono"
         },
         {
@@ -14220,16 +14669,22 @@
         {
             "English": "Saharah's Co-op",
             "English (Europe)": "Saharah's Co-op",
+            "French": "La boutique de Sarah",
+            "French (US)": "La boutique de Sarah",
             "German": "Azizas Laden (Kommune)"
         },
         {
             "English": "Redd's Co-op Raffle",
             "English (Europe)": "Redd's Co-op Raffle",
+            "French": "La tombola de Rounard (Boutique)",
+            "French (US)": "La tombola de Rounard (Boutique)",
             "German": "Reiners Tombola (Kommune)"
         },
         {
             "English": "Kicks' Co-op",
             "English (Europe)": "Kicks' Co-op",
+            "French": "La boutique de Blaise",
+            "French (US)": "La boutique de Blaise",
             "German": "Schuberts Laden (Kommune)"
         },
         {
@@ -16494,8 +16949,8 @@
         {
             "English": "53 items",
             "English (Europe)": "53 items",
-            "French": "45 items (8 items missing)",
-            "French (US)": "45 items (8 items missing)",
+            "French": "53 items",
+            "French (US)": "53 items",
             "German": "45 items (8 items missing)",
             "Spanish": "44 items (9 items missing)",
             "Spanish (US)": "52 items (1 items missing)",
@@ -17127,41 +17582,57 @@
         {
             "English": "blue cobblestones",
             "English (Europe)": "blue cobblestones",
+            "French": "façade à pierres bleue",
+            "French (US)": "façade à pierres bleue",
             "Spanish (US)": "Blau-Granitfassade"
         },
         {
             "English": "brown cobblestones",
             "English (Europe)": "brown cobblestones",
+            "French": "façade à pierres brune",
+            "French (US)": "façade à pierres brune",
             "Spanish (US)": "Braun-Granitfassade"
         },
         {
             "English": "chic cobblestones",
             "English (Europe)": "chic cobblestones",
+            "French": "façade à pierres chic",
+            "French (US)": "façade à pierres chic",
             "Spanish (US)": "Schick-Granitfassade"
         },
         {
             "English": "cobblestones",
             "English (Europe)": "cobblestones",
+            "French": "façade à pierres gris clair",
+            "French (US)": "façade à pierres gris clair",
             "Spanish (US)": "Hellgrau-Granitfassade"
         },
         {
             "English": "gray cobblestones",
             "English (Europe)": "gray cobblestones",
+            "French": "façade à pierres grise",
+            "French (US)": "façade à pierres grise",
             "Spanish (US)": "Grau-Granitfassade"
         },
         {
             "English": "green cobblestones",
             "English (Europe)": "green cobblestones",
+            "French": "façade à pierres verte",
+            "French (US)": "façade à pierres verte",
             "Spanish (US)": "Grün-Granitfassade"
         },
         {
             "English": "orange cobblestones",
             "English (Europe)": "orange cobblestones",
+            "French": "façade à pierres orange",
+            "French (US)": "façade à pierres orange",
             "Spanish (US)": "Orange-Granitfassade"
         },
         {
             "English": "red cobblestones",
             "English (Europe)": "red cobblestones",
+            "French": "façade à pierres rouge",
+            "French (US)": "façade à pierres rouge",
             "Spanish (US)": "Rot-Granitfassade"
         }
     ],
@@ -17617,8 +18088,8 @@
         {
             "English": "913 items",
             "English (Europe)": "904 items (9 items missing)",
-            "French": "821 items (92 items missing)",
-            "French (US)": "817 items (96 items missing)",
+            "French": "850 items (63 items missing)",
+            "French (US)": "845 items (68 items missing)",
             "German": "908 items (5 items missing)",
             "Spanish": "105 items (808 items missing)",
             "Spanish (US)": "0 items (913 items missing)",
@@ -23849,62 +24320,88 @@
         {
             "English": "Mmm-Mmm-Miles!",
             "English (Europe)": "Mmm-Mmm-Miles!",
+            "French": "Délices de miles",
+            "French (US)": "Délices de miles",
             "German": "Mmm-Mmm-Meilen!"
         },
         {
             "English": "Gathering ingredients and creating delicious treats is great fun, is it not? Yes, yes, I do believe our chefs out there deserve miles for all the times they've prepared something delicious!",
             "English (Europe)": "Gathering ingredients and creating delicious treats is great fun, is it not? Yes, yes, I do believe our chefs out there deserve miles for all the times they've prepared something delicious!",
+            "French": "Rassembler des ingrédients pour concocter de délicieuses créations culinaires, c'est amusant, non ? Et en plus, ça peut te rapporter des miles, oui oui !",
+            "French (US)": "Rassembler des ingrédients pour concocter de délicieuses créations culinaires, c'est amusant, non ? Et en plus, ça peut te rapporter des miles, oui oui !",
             "German": "Macht es nicht Spaß, Zutaten zu sammeln und Leckereien zu kreieren? Ich finde, all die Feinschmecker da draußen, die uns mit ihren feinen Kreationen erfreuen, verdienen Meilen, ja, ja!"
         },
         {
             "English": "Scorching",
             "English (Europe)": "Scorching",
+            "French": "Brûlant",
+            "French (US)": "Brûlant",
             "German": "Schmorender/Schmorende"
         },
         {
             "English": "Sugary",
             "English (Europe)": "Sugary",
+            "French": "Sucré",
+            "French (US)": "Sucré",
             "German": "Zuckerige"
         },
         {
             "English": "Spicy",
             "English (Europe)": "Spicy",
+            "French": "Épicé",
+            "French (US)": "Épicé",
             "German": "Pikanter/Pikante"
         },
         {
             "English": "Gourmet",
-            "English (Europe)": "Gourmet"
+            "English (Europe)": "Gourmet",
+            "French": "Gastronomique",
+            "French (US)": "Gastronomique"
         },
         {
             "English": "Culinary",
-            "English (Europe)": "Culinary"
+            "English (Europe)": "Culinary",
+            "French": "Culinaire",
+            "French (US)": "Culinaire"
         },
         {
             "English": "Sweets",
             "English (Europe)": "Sweets",
+            "French": "Confiseries",
+            "French (US)": "Confiseries",
             "German": "Süßigkeit"
         },
         {
             "English": "Head Chef",
             "English (Europe)": "Head Chef",
+            "French": "Chef cuisinier",
+            "French (US)": "Chef cuisinier",
             "German": "Meisterkoch/Meisterköchin"
         },
         {
             "English": "Epicure",
-            "English (Europe)": "Epicure"
+            "English (Europe)": "Epicure",
+            "French": "Gourmet",
+            "French (US)": "Gourmet"
         },
         {
             "English": "Glutton",
-            "English (Europe)": "Glutton"
+            "English (Europe)": "Glutton",
+            "French": "Gourmand",
+            "French (US)": "Gourmand"
         },
         {
             "English": "Nice to Meet You, Gyroid!",
             "English (Europe)": "Nice to Meet You, Gyroid!",
+            "French": "Oh, un gyroïde !",
+            "French (US)": "Oh, un gyroïde !",
             "German": "Guck mal, ein Gyroid!"
         },
         {
             "English": "You've discovered your first gyroid! This special occasion deserves miles, yes, yes. I hope you feel inspired to collect all sorts of different, wonderful gyroids now.",
             "English (Europe)": "You've discovered your first gyroid! This special occasion deserves miles, yes, yes. I hope you feel inspired to collect all sorts of different, wonderful gyroids now.",
+            "French": "Tu as trouvé ton premier gyroïde ! Pour fêter ça, voici quelques miles pour toi, oui oui. J'espère que ça te motivera à trouver de plus en plus de ces créatures aussi mystérieuses que fascinantes...",
+            "French (US)": "Tu as trouvé ton premier gyroïde ! Pour fêter ça, voici quelques miles pour toi, oui oui. J'espère que ça te motivera à trouver de plus en plus de ces créatures aussi mystérieuses que fascinantes...",
             "German": "Du hast deinen ersten Gyroiden gefunden! Dieser besondere Moment muss mit Meilen gewürdigt werden, ja, ja. Ich hoffe, dass dich das motiviert, viele verschiedene, wunderbare Gyroiden zu sammeln!"
         },
         {
@@ -23915,11 +24412,15 @@
         {
             "English": "Gyroid Getter",
             "English (Europe)": "Gyroid Getter",
+            "French": "À la chasse aux gyroïdes",
+            "French (US)": "À la chasse aux gyroïdes",
             "German": "Gyroiden-Greifer"
         },
         {
             "English": "Collect different kinds of gyroids, and earn miles in return! I suspect once you experience life in their presence, you'll find it hard to resist hunting for more, hm?",
             "English (Europe)": "Collect different kinds of gyroids, and earn miles in return! I suspect once you experience life in their presence, you'll find it hard to resist hunting for more, hm?",
+            "French": "Collectionne toutes sortes de gyroïdes et gagne des miles au passage ! D'ailleurs, une fois qu'on a eu des gyroïdes chez soi, il est difficile de se passer de leur présence attachante...",
+            "French (US)": "Collectionne toutes sortes de gyroïdes et gagne des miles au passage ! D'ailleurs, une fois qu'on a eu des gyroïdes chez soi, il est difficile de se passer de leur présence attachante...",
             "German": "Sammele verschiedene Arten von Gyroiden und erhalte Meilen dafür! Und wenn man einen gefunden hat, will man doch noch mehr, hm?\n\n"
         },
         {
@@ -23940,11 +24441,15 @@
         {
             "English": "Curator",
             "English (Europe)": "Curator",
+            "French": "Conservateur",
+            "French (US)": "Conservateur",
             "German": "Kurator/Kuratorin"
         },
         {
             "English": "Statue",
             "English (Europe)": "Statue",
+            "French": "Statue",
+            "French (US)": "Statue",
             "German": "Statue"
         },
         {
@@ -23955,11 +24460,15 @@
         {
             "English": "Sprout Out Loud",
             "English (Europe)": "Sprout Out Loud",
+            "French": "Retour à la terre",
+            "French (US)": "Retour à la terre",
             "German": "Kraft der Landwirtschaft"
         },
         {
             "English": "Plant your produce starts across the whole island for a fresh, bounteous crop! Whether it's a small home garden or a full-on field, support Nook Inc. with all your produce-planting power! Yes, yes!",
             "English (Europe)": "Plant your produce starts across the whole island for a fresh, bounteous crop! Whether it's a small home garden or a full-on field, support Nook Inc. with all your produce-planting power! Yes, yes!",
+            "French": "Plante des pousses potagères partout sur l'île pour récolter une profusion de produits frais ! Que ce soit dans un petit jardin ou un grand champ, apporte ton soutien à l'initiative agricole de Nook Inc. ! Oui oui !",
+            "French (US)": "Plante des pousses potagères partout sur l'île pour récolter une profusion de produits frais ! Que ce soit dans un petit jardin ou un grand champ, apporte ton soutien à l'initiative agricole de Nook Inc. ! Oui oui !",
             "German": "Baue fleißig an, ob im Hintergarten oder auf einem richtigen Feld. Eine reiche Ernte erwartet dich – in Form von Feldfrüchten und Nook-Meilen gleichermaßen, ja, ja!"
         },
         {
@@ -23990,11 +24499,15 @@
         {
             "English": "Fertilizer",
             "English (Europe)": "Fertilizer",
+            "French": "Engrais",
+            "French (US)": "Engrais",
             "German": "Düngemittel"
         },
         {
             "English": "Soil",
             "English (Europe)": "Soil",
+            "French": "Sol",
+            "French (US)": "Sol",
             "German": "Erdboden"
         },
         {
@@ -24015,16 +24528,21 @@
         {
             "English": "Executive Producer",
             "English (Europe)": "Executive Producer",
+            "French": "Frais les légumes",
+            "French (US)": "Frais les légumes",
             "German": "Erntedank"
         },
         {
             "English": "Nothing feels quite like harvesting produce that you grew by the sweat of your brow, yes, yes! Now go enjoy the fruits of your labor—and the pumpkins, carrots, sugarcane, and potatoes too!",
             "English (Europe)": "Nothing feels quite like harvesting produce that you grew by the sweat of your brow, yes, yes! Now go enjoy the fruits of your labor—and the pumpkins, carrots, sugarcane, and potatoes too!",
+            "French": "Rien de plus gratifiant que de récolter de beaux légumes obtenus à la sueur de son front, oui oui ! Alors va vite profiter du fruit de ton labeur... citrouilles, carottes, cannes à sucre et pommes de terre !",
+            "French (US)": "Rien de plus gratifiant que de récolter de beaux légumes obtenus à la sueur de son front, oui oui ! Alors va vite profiter du fruit de ton labeur... citrouilles, carottes, cannes à sucre et pommes de terre !",
             "German": "Alles schmeckt hundertmal so gut, wenn man es mit den eigenen Händen erntet. Zeit, die Früchte deiner Arbeit zu genießen. Ganz zu schweigen von all den Tomaten, Kürbissen, Karotten, Kartoffeln…\n\n"
         },
         {
             "English": "Farming",
             "English (Europe)": "Farming",
+            "French": "agriculture",
             "German": "Bewirtschaftendes"
         },
         {
@@ -24080,11 +24598,15 @@
         {
             "English": "Set Sail for Adventure",
             "English (Europe)": "Set Sail for Adventure",
+            "French": "Larguez les amarres",
+            "French (US)": "Larguez les amarres",
             "German": "Kurs auf Abenteuer"
         },
         {
             "English": "Rare items and exciting adventures are yours when you head out on a special tour with a veteran sailor, yes, yes!",
             "English (Europe)": "Rare items and exciting adventures are yours when you head out on a special tour with a veteran sailor, yes, yes!",
+            "French": "Embarque pour un voyage maritime spécial avec un vieux loup de mer afin de vivre des aventures palpitantes et d'obtenir des objets rares, oui oui !",
+            "French (US)": "Embarque pour un voyage maritime spécial avec un vieux loup de mer afin de vivre des aventures palpitantes et d'obtenir des objets rares, oui oui !",
             "German": "Seltene Gegenstände und Abenteuer erwarten dich, wenn du dich mit einem alten Seebären auf eine besondere Reise machst, ja, ja!"
         },
         {
@@ -24134,11 +24656,15 @@
         {
             "English": "Come Home to the Roost",
             "English (Europe)": "Come Home to the Roost",
+            "French": "Un café et ça repart",
+            "French (US)": "Un café et ça repart",
             "German": "Kaffee im Taubenschlag"
         },
         {
             "English": "The Roost, located on the second floor of the museum, is quite picky about the coffee they serve, yes, yes! Do stop in to enjoy a cup and earn some dark-roasted miles!",
             "English (Europe)": "The Roost, located on the second floor of the museum, is quite picky about the coffee they serve, yes, yes! Do stop in to enjoy a cup and earn some dark-roasted miles!",
+            "French": "Le Perchoir, situé au 1er étage du musée, ne sert que du café d'exception, oui oui. Va donc y savourer une tasse, et gagne des miles en prime !",
+            "French (US)": "Le Perchoir, situé au 1er étage du musée, ne sert que du café d'exception, oui oui. Va donc y savourer une tasse, et gagne des miles en prime !",
             "German": "Im Café Taubenschlag, das sich im ersten Stock des Museums befindet, ist man sehr wählerisch beim Kaffeesortiment, ja, ja! Schau mal vorbei und verdiene dir ein paar Meilen!"
         },
         {
@@ -24184,6 +24710,8 @@
         {
             "English": "Barista",
             "English (Europe)": "Barista",
+            "French": "Barista",
+            "French (US)": "Barista",
             "German": "Barista"
         },
         {
@@ -24813,8 +25341,8 @@
         {
             "English": "277 items",
             "English (Europe)": "277 items",
-            "French": "271 items (6 items missing)",
-            "French (US)": "271 items (6 items missing)",
+            "French": "274 items (3 items missing)",
+            "French (US)": "274 items (3 items missing)",
             "German": "277 items",
             "Spanish": "62 items (215 items missing)",
             "Spanish (US)": "0 items (277 items missing)",
@@ -26442,6 +26970,8 @@
         {
             "English": "Hoo! I had been hoping someone would bring me a Megacerops! This large fellow was a bit like our modern rhinoceros, but with two horns on its nose! Sadly, their small teeth restricted them to a diet of rather soft plants, and eventually they died out. I feel there is a valuable lesson to be had there about learning to enjoy a variety of foods...",
             "English (Europe)": "Hoo! I had been hoping someone would bring me a Megacerops! This large fellow was a bit like our modern rhinoceros, but with two horns on its nose! Sadly, their small teeth restricted them to a diet of rather soft plants, and eventually they died out. I feel there is a valuable lesson to be had there about learning to enjoy a variety of foods...",
+            "French": "Oh ! J'ai toujours espéré qu'on m'apporte un brontothérium ! Ce grand gaillard était un peu le rhinocéros de son époque, avec ses deux cornes sur le museau ! Hélas, ses petites dents limitant son régime à quelques plantes rares et fragiles, il a fini par s'éteindre. Moralité : il faut veiller à varier son alimentation !",
+            "French (US)": "Oh ! J'ai toujours espéré qu'on m'apporte un brontothérium ! Ce grand gaillard était un peu le rhinocéros de son époque, avec ses deux cornes sur le museau ! Hélas, ses petites dents limitant son régime à quelques plantes rares et fragiles, il a fini par s'éteindre. Moralité : il faut veiller à varier son alimentation !",
             "German": "Ich hatte gehofft, dass mir jemand einen Megacerops bringen würde! Dieser Riese ähnelt unserem heutigen Rhinozeros, nur mit zwei Hörnern auf der Nase! Leider konnten sie aufgrund ihrer kleinen Zähne nur weiche Pflanzen fressen und starben letztlich aus. Ich denke, daraus kann man lernen, nich zu einseitig zu essen!"
         },
         {
@@ -26482,6 +27012,8 @@
         {
             "English": "Chief actor in my most terrifying nightmares, the Sabertooth Tiger was a mighty predator of long ago. Its most famous feature, obviously, is its razor-sharp, eight-inch-long, t-t-te-tee-te-tee...FANGS! I'm sorry—this is so unprofessional of me. Come on, Blathers! Stiff upper beak, eh wot! While no one has seen a living specimen for some 10,000 years, we must remain ever vigilant!",
             "English (Europe)": "Chief actor in my most terrifying nightmares, the Sabertooth Tiger was a mighty predator of long ago. Its most famous feature, obviously, is its razor-sharp, eight-inch-long, t-t-te-tee-te-tee...FANGS! I'm sorry—this is so unprofessional of me. Come on, Blathers! Stiff upper beak, eh wot! While no one has seen a living specimen for some 10,000 years, we must remain ever vigilant!",
+            "French": "Voici la tête d'affiche de mes pires cauchemars, un puissant prédateur de son époque... le smilodon ! Il est bien sûr avant tout connu pour ses crocs aiguisés comme des lames de ra-ra-ra... gloups, de rasoir, ouh ! Pardon, c'était peu professionnel de ma part. D'autant que l'espèce est éteinte depuis près de 10 000 ans. On ignore ce qui est arrivé, mais je le soupçonne d'avoir trop fait la fine bouche... quand il avait les crocs.",
+            "French (US)": "Voici la tête d'affiche de mes pires cauchemars, un puissant prédateur de son époque... le smilodon ! Il est bien sûr avant tout connu pour ses crocs aiguisés comme des lames de ra-ra-ra... gloups, de rasoir, ouh ! Pardon, c'était peu professionnel de ma part. D'autant que l'espèce est éteinte depuis près de 10 000 ans. On ignore ce qui est arrivé, mais je le soupçonne d'avoir trop fait la fine bouche... quand il avait les crocs.",
             "German": "Hauptakteur in meinen schlimmsten Albträumen – der Säbelzahntiger, ein mächtiges Raubtier des Pleistozän. Erkennbar ist er, selbstverständlich, an seinen messerscharfen, bis zu 20 Zentimeter langen FANGZÄHNEN! Verzeihung, das ist gerade äußerst unprofesionell von mir. Komm schon Eugen! Schnabel steif halten! Zwar wurde seit über 10.000 Jahren keiner mehr gesichtet, doch wir müssen immer wachsam bleiben!"
         },
         {
@@ -26492,6 +27024,8 @@
         {
             "English": "Ahem. Yes. The Spinosaurus was a very large, carnivorous dinosaur, roughly the size of a T. Rex. Unlike its more famous cousin, however, Spinosaurus seems to have spent a great deal of time in water. Similar to modern crocodiles, this creature lived on a diet of fish AND land-dwelling animals. Personally, I am simply relieved that it did not seek FLYING prey.",
             "English (Europe)": "Ahem. Yes. The Spinosaurus was a very large, carnivorous dinosaur, roughly the size of a T. Rex. Unlike its more famous cousin, however, Spinosaurus seems to have spent a great deal of time in water. Similar to modern crocodiles, this creature lived on a diet of fish AND land-dwelling animals. Personally, I am simply relieved that it did not seek FLYING prey.",
+            "French": "Ah. Oui. Le spinosaure. Un carnivore immense, d'une taille comparable à celle du monumental tyrannosaure. Contrairement à son célèbre cousin, cependant, il passait un temps considérable dans l'eau. À l'instar des crocodiles que nous connaissons, il se nourrissait de poissons ET d'animaux terrestres. Au moins, il ne poussait pas le mauvais goût jusqu'à s'attaquer à l'engeance ailée.",
+            "French (US)": "Ah. Oui. Le spinosaure. Un carnivore immense, d'une taille comparable à celle du monumental tyrannosaure. Contrairement à son célèbre cousin, cependant, il passait un temps considérable dans l'eau. À l'instar des crocodiles que nous connaissons, il se nourrissait de poissons ET d'animaux terrestres. Au moins, il ne poussait pas le mauvais goût jusqu'à s'attaquer à l'engeance ailée.",
             "German": "Oh ja. Spinosaurus war ein großer, fleischfressender Dinosaurier, etwa so groß wie der Tyrannosaurus Rex. Anders als sein berühmterer Verwandter verbrachte Spinosaurus viel Zeit im Wasser. Ähnlich wie heutige Krokodile ernährte sich diese Geschöpfe von Fisch UND Landbewohnern. Ich persönlich bin ganz froh darum, dass sie nicht auch fliegende Beute jagten."
         },
         {
@@ -27834,7 +28368,7 @@
             "French": "197 items",
             "French (US)": "197 items",
             "German": "205 items",
-            "Russian": "200 items",
+            "Russian": "201 items",
             "Spanish": "14 items",
             "Spanish (US)": "0 items",
             "Italian": "0 items",
@@ -28004,7 +28538,8 @@
             "English (Europe)": "I caught a dung beetle! This species likes feces!",
             "French": "Tu as attrapé un bousier ! Chacun son truc. Lui, c'est les boules de bouse !",
             "French (US)": "Tu as attrapé un bousier ! Chacun son truc. Lui, c'est les boules de bouse !",
-            "German": "Ein Mistkäfer! Keine Sammlung ist komplett, wenn sie den vermisst!"
+            "German": "Ein Mistkäfer! Keine Sammlung ist komplett, wenn sie den vermisst!",
+            "Russian": "В сачок попался жук-навозник! Эти жуки любят навоз. Надо же... "
         },
         {
             "English": "I caught an earth-boring dung beetle! It's not boring at all!",

@@ -336,6 +336,8 @@ export function getPhoto(name, fallback=""){
     return require("../assets/icons/nookLinkCoin.png")
   else if(name.includes("acorns")){
     return require("../assets/icons/fall.png");
+  } else if(name.includes("snowflakes")){
+    return require("../assets/icons/snowman.png");
   } else if(name.includes("snow")){
     return require("../assets/icons/snow.png");
   } else if(name.includes("toy")&&name.includes("ready")){
@@ -384,6 +386,8 @@ export function getPhoto(name, fallback=""){
     return require("../assets/icons/birthdayCake.png");
   } else if(name.includes("museum") || name.includes("blathers")){
     return require("../assets/icons/museum.png");
+  } else if(name.includes("ornaments")){
+    return require("../assets/icons/ornaments.png");
   }
   if(fallback.includes("season")){
     return require("../assets/icons/season.png");
@@ -427,8 +431,10 @@ export function getPhotoCorner(name){
     return <Image source={require("../assets/icons/forest.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
   else if(name.includes("ground"))
     return <Image source={require("../assets/icons/sprout.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
-  else if(name.includes("snowballs") || name.includes("jingle") || name.includes("snowboy"))
+  else if(name.includes("snowballs") || name.includes("jingle"))
     return <Image source={require("../assets/icons/snow.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+  else if(name.includes("snowboy"))
+    return <Image source={require("../assets/icons/snowman.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
   else if(name.includes("villagers") || name.includes("rover"))
     return <Image source={require("../assets/icons/cat.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
   else if(name.includes("fossil") || name.includes("dig") || name.includes("plant"))
