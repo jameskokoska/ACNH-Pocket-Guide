@@ -907,18 +907,18 @@ export const settings = [
 const variantTranslations = require("./assets/data/Generated/translatedVariants.json");
 const catchphraseTranslations = require("./assets/data/Generated/translatedVillagerCatchPhrases.json");
 const villagerTranslations = require("./assets/data/Generated/translatedVillagers.json");
-const appTranslations = require("./assets/data/translationsApp.json")["Main"];
-const achievementTranslations = require("./assets/data/translationsApp.json")["Achievements"];
+const appTranslations = require("./assets/data/Generated/translationsAppGenerated.json")["Main"];
+const achievementTranslations = require("./assets/data/Generated/translationsAppGenerated.json")["Achievements"];
 const itemTranslations = require("./assets/data/Generated/translatedItems.json")
-const itemTranslationsMissing = require("./assets/data/translationsApp.json")["Missing Items"];
-const eventTranslationsMissing = require("./assets/data/translationsApp.json")["Event Names"];
-const sourcesTranslations = require("./assets/data/translationsApp.json")["Sources"];
-const sourceNotesTranslations = require("./assets/data/translationsApp.json")["Source Notes"];
-const cardsTranslations = require("./assets/data/translationsApp.json")["Cards"];
-const NPCTranslations = require("./assets/data/translationsApp.json")["NPCs"];
-const mysteryIslandsTranslations = require("./assets/data/translationsApp.json")["Mystery Islands"];
-const creatureCatchPhraseTranslations = require("./assets/data/translationsApp.json")["Catch Phrases"];
-const museumDescriptionTranslations = require("./assets/data/translationsApp.json")["Museum Descriptions"];
+const itemTranslationsMissing = require("./assets/data/Generated/translationsAppGenerated.json")["Missing Items"];
+const eventTranslationsMissing = require("./assets/data/Generated/translationsAppGenerated.json")["Event Names"];
+const sourcesTranslations = require("./assets/data/Generated/translationsAppGenerated.json")["Sources"];
+const sourceNotesTranslations = require("./assets/data/Generated/translationsAppGenerated.json")["Source Notes"];
+const cardsTranslations = require("./assets/data/Generated/translationsAppGenerated.json")["Cards"];
+const NPCTranslations = require("./assets/data/Generated/translationsAppGenerated.json")["NPCs"];
+const mysteryIslandsTranslations = require("./assets/data/Generated/translationsAppGenerated.json")["Mystery Islands"];
+const creatureCatchPhraseTranslations = require("./assets/data/Generated/translationsAppGenerated.json")["Catch Phrases"];
+const museumDescriptionTranslations = require("./assets/data/Generated/translationsAppGenerated.json")["Museum Descriptions"];
 
 export function attemptToTranslateFromDatabases(text, databases){
   if(text===undefined){
@@ -927,12 +927,10 @@ export function attemptToTranslateFromDatabases(text, databases){
     return text;
   }
   for(var i=0; i<databases.length; i++){
-    for(var j=0; j<databases[i].length; j++){
-      if(databases[i][j].hasOwnProperty("English") && databases[i][j]["English"].toLowerCase()===text.toString().toLowerCase()){
-        var translatedText = databases[i][j][global.language];
-        if(translatedText!==undefined&&translatedText!==null&&translatedText!==""){
-          return translatedText;
-        }
+    if(databases[i][text.toString().toLowerCase()]!==undefined && databases[i][text.toString().toLowerCase()]["English"]!==undefined && databases[i][text.toString().toLowerCase()]["English"].toString().toLowerCase()===text.toString().toLowerCase()){
+      var translatedText = databases[i][text.toString().toLowerCase()][global.language];
+      if(translatedText!==undefined&&translatedText!==null&&translatedText!==""){
+        return translatedText;
       }
     }
   }
@@ -1038,24 +1036,26 @@ export function attemptToTranslate(text, forcedTranslation=false){
       }
     }
 
-    for(var i=0; i<appTranslations.length; i++){
-      if(appTranslations[i].hasOwnProperty("English") && appTranslations[i]["English"].toLowerCase()===textArray[j].toString().toLowerCase()){
-        var translatedText = appTranslations[i][global.language];
-        if(translatedText===undefined||translatedText===null||translatedText===""){
-          translatedTextOut+=textArray[j];
-          success = true;
-          break;
+    // if(text==="Edit Sections"){
+    //   console.log(appTranslations[text.toString().toLowerCase()]["English"])
+    // }
+    if(appTranslations[text.toString().toLowerCase()]!==undefined && appTranslations[text.toString().toLowerCase()]["English"]!==undefined && appTranslations[text.toString().toLowerCase()]["English"].toString().toLowerCase()===text.toString().toLowerCase()){
+      var translatedText = appTranslations[text.toString().toLowerCase()][global.language];
+      if(translatedText===undefined||translatedText===null||translatedText===""){
+        translatedTextOut+=textArray[j];
+        success = true;
+        break;
+      } else {
+        if(j>0){
+          translatedTextOut+="; " + translatedText;
         } else {
-          if(j>0){
-            translatedTextOut+="; " + translatedText;
-          } else {
-            translatedTextOut+=translatedText;
-          }
-          success = true;
-          break;
+          translatedTextOut+=translatedText;
         }
+        success = true;
+        break;
       }
     }
+
     if(success===false){
       var extraTranslation = attemptToTranslateFromDatabases(textArray[j], [NPCTranslations, sourcesTranslations])
       if(extraTranslation!==textArray[j]){

@@ -6,6 +6,7 @@ export const changelog = `
 -Fixed events that go over the year in length
 -More features coming!
 -
+-Significantly improved the speed of how translations are loaded
 -Added sorting for Food and Materials page
 -Added new event icons
 -Updated translations
