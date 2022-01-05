@@ -6,6 +6,9 @@ export const changelog = `
 -Fixed events that go over the year in length
 -More features coming!
 -
+-Added ability to invert filters/filter out items
+-Option located at the bottom of each filters list
+-
 -Significantly improved the speed of how translations are loaded
 -Added sorting for Food and Materials page
 -Added new event icons

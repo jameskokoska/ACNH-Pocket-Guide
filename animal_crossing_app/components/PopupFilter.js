@@ -101,6 +101,15 @@ class PopupFilter extends Component {
         ]
       },
     ]
+    this.invertFilters = [
+      {
+        "name": "Invert Filters...",
+        "id": "Invert Filters...",
+        "children": [
+          {name:"Filter Out", id:"Filter Out"},
+        ]
+      },
+    ]
     var notCraftVariationsFilters = [{
       "name": "Uncraftable Item Variations Filter",
       "id": "Uncraftable Item Variations Filter",
@@ -163,66 +172,66 @@ class PopupFilter extends Component {
       }]
       this.possibleFilters = [...this.sortByFiltersReduced,...this.possibleFilters, ...this.museumFilters, ...categories];
     } else if(this.props.title==="Fish"){
-      this.possibleFilters = [...this.sortByFiltersReduced,...this.possibleFilters, ...this.museumFilters, ...activeFilters, ...filterDefinitions["Fish"]];
+      this.possibleFilters = [...this.sortByFiltersReduced,...this.possibleFilters, ...this.museumFilters, ...activeFilters, ...filterDefinitions["Fish"], ...this.invertFilters];
     } else if(this.props.title==="Bugs"){
-      this.possibleFilters = [...this.sortByFiltersReduced,...this.possibleFilters, ...this.museumFilters, ...activeFilters, ...filterDefinitions["Bugs"]];
+      this.possibleFilters = [...this.sortByFiltersReduced,...this.possibleFilters, ...this.museumFilters, ...activeFilters, ...filterDefinitions["Bugs"], ...this.invertFilters];
     } else if(this.props.title==="Sea Creatures"){
-      this.possibleFilters = [...this.sortByFiltersReduced,...this.possibleFilters, ...this.museumFilters, ...activeFilters, ...filterDefinitions["Sea Creatures"]];
+      this.possibleFilters = [...this.sortByFiltersReduced,...this.possibleFilters, ...this.museumFilters, ...activeFilters, ...filterDefinitions["Sea Creatures"], ...this.invertFilters];
     } else if(this.props.title==="Fossils"){
-      this.possibleFilters = [...this.sortByFiltersReducedWithColor,...this.possibleFilters, ...this.museumFilters, ...activeFilters, ...filterDefinitions["Sea Creatures"]];
+      this.possibleFilters = [...this.sortByFiltersReducedWithColor,...this.possibleFilters, ...this.museumFilters, ...activeFilters, ...filterDefinitions["Sea Creatures"], ...this.invertFilters];
     } else if(this.props.title==="Art"){
-      this.possibleFilters = [...this.sortByFiltersReducedWithColor,...this.possibleFilters, ...this.museumFilters, ...activeFilters, ...filterDefinitions["Sea Creatures"]];
+      this.possibleFilters = [...this.sortByFiltersReducedWithColor,...this.possibleFilters, ...this.museumFilters, ...this.invertFilters];
     } else if(this.props.title==="Furniture"){
       const categories = [{
         "name": "Type Categories",
         "id": "Type Categories",
         "children": [{"name":"Housewares","id":"Data Category:Housewares"},{"name":"Miscellaneous","id":"Data Category:Miscellaneous"},{"name":"Wall-mounted","id":"Data Category:Wall-mounted"},{"name":"Ceiling Decor","id":"Data Category:Ceiling Decor"},{"name":"Photos","id":"Data Category:Photos"},{"name":"Posters","id":"Data Category:Posters"} ]
       }]
-      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...categories, ...notCraftVariationsFilters, ...filterDefinitions["Furniture"]];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...categories, ...notCraftVariationsFilters, ...filterDefinitions["Furniture"], ...this.invertFilters];
     } else if(this.props.title==="Clothing"){
       const categories = [{
         "name": "Type Categories",
         "id": "Type Categories",
         "children": [{"name":"Headwear","id":"Data Category:Headwear"},{"name":"Accessories","id":"Data Category:Accessories"},{"name":"Tops","id":"Data Category:Tops"},{"name":"Dress-Up","id":"Data Category:Dress-Up"},{"name":"Clothing Other","id":"Data Category:Clothing Other"},{"name":"Bottoms","id":"Data Category:Bottoms"},{"name":"Socks","id":"Data Category:Socks"},{"name":"Shoes","id":"Data Category:Shoes"},{"name":"Bags","id":"Data Category:Bags"},{"name":"Umbrellas","id":"Data Category:Umbrellas"} ]
       }]
-      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...categories, ...notCraftVariationsFilters, ...filterDefinitions["Clothing"]];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...categories, ...notCraftVariationsFilters, ...filterDefinitions["Clothing"], ...this.invertFilters];
     } else if(this.props.title==="Floor & Walls"){
       const categories = [{
         "name": "Type Categories",
         "id": "Type Categories",
         "children": [{"name":"Floors","id":"Data Category:Floors"},{"name":"Rugs","id":"Data Category:Rugs"},{"name":"Wallpaper","id":"Data Category:Wallpaper"}]
       }]
-      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...categories, ...filterDefinitions["Floor & Walls"]];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...categories, ...filterDefinitions["Floor & Walls"], ...this.invertFilters];
     } else if(this.props.title==="Reactions"){
-      this.possibleFilters = [...this.possibleFilters, ...filterDefinitions["Reactions"]];
+      this.possibleFilters = [...this.possibleFilters, ...filterDefinitions["Reactions"], ...this.invertFilters];
     } else if(this.props.title==="Recipes"){
       const categories = [{
         "name": "Type Categories",
         "id":"Type Categories",
         "children": [{"name":"Crafting Recipes (DIY)","id":"Filter Crafting DIY"},{"name":"Cooking Recipes (DIY)","id":"Filter Cooking DIY"}]
       }]
-      this.possibleFilters = [...this.possibleFilters, ...categories, ...filterDefinitions["Recipes"]];
+      this.possibleFilters = [...this.possibleFilters, ...categories, ...filterDefinitions["Recipes"], ...this.invertFilters];
     } else if(this.props.title==="Villagers"){
       this.sortByFilters[0]["children"] = [{name:"Reverse sorting direction", id:"Reverse direction"},
       {name:"", id:"break"},{name:"Birthday", id:"Sort-Birthday"}]
-      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.villagerFilters, ...this.genderFilters, ...filterDefinitions["Villagers"]];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.villagerFilters, ...this.genderFilters, ...filterDefinitions["Villagers"], ...this.invertFilters];
     } else if(this.props.title==="Gyroids"){
-      this.possibleFilters = [...this.possibleFilters, ...filterDefinitions["Gyroids"]];
+      this.possibleFilters = [...this.possibleFilters, ...filterDefinitions["Gyroids"], ...this.invertFilters];
     } else if(this.props.title==="New Items"){
-      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.villagerFilters, ...notCraftVariationsFilters, ...categoriesAll];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.villagerFilters, ...notCraftVariationsFilters, ...categoriesAll, ...this.invertFilters];
     } else if(this.props.title==="Everything" || this.props.title==="Wishlist"){
-      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.museumFilters, ...this.villagerFilters, ...this.genderFilters, ...categoriesAll, ...notCraftVariationsFilters, ...activeFilters, ...filterDefinitions["All Items"]];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.museumFilters, ...this.villagerFilters, ...this.genderFilters, ...categoriesAll, ...notCraftVariationsFilters, ...activeFilters, ...filterDefinitions["All Items"], ...this.invertFilters];
     } else if(this.props.title==="Construction"){
       const categories = [{
         "name": "Type Categories",
         "id": "Type Categories",
         "children": [{"name":"Counter","id":"Tag:Counter"},{"name":"Pillar","id":"Tag:Pillar"},{"name":"Fencing","id":"Data Category:Fencing"},{"name":"Bridge","id":"Category:Bridge"},{"name":"Incline","id":"Category:Incline"},{"name":"Doors","id":"Category:Door"},{"name":"Roofing","id":"Category:Roofing"},{"name":"Siding","id":"Category:Siding"},{"name":"Mailbox","id":"Category:Mailbox"}]
       }]
-      this.possibleFilters = [...this.sortByFiltersReduced,...this.possibleFilters,...categories]
+      this.possibleFilters = [...this.sortByFiltersReduced,...this.possibleFilters,...categories, ...this.invertFilters]
     } else if(this.props.title==="Tools"){
-      this.possibleFilters = [...this.sortByFiltersReducedWithColor,...this.possibleFilters, ...this.museumFilters, ...activeFilters, ...filterDefinitions["Sea Creatures"]];
+      this.possibleFilters = [...this.sortByFiltersReducedWithColor,...this.possibleFilters, ...this.invertFilters];
     } else if(this.props.title==="Music"){
-      this.possibleFilters = [...this.possibleFilters, ...filterDefinitions["Music"]]
+      this.possibleFilters = [...this.possibleFilters, ...filterDefinitions["Music"], ...this.invertFilters]
     } else if(this.props.villagerGifts===true){
       const categories = [{
         "name": "Villager Wearable Filters",
@@ -231,9 +240,9 @@ class PopupFilter extends Component {
       }]
       this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...categories]
     } else if(this.props.title==="Food"){
-      this.possibleFilters = [...this.sortByFiltersReducedWithColor, ...this.possibleFilters, ...filterDefinitions["Music"]]
+      this.possibleFilters = [...this.sortByFiltersReducedWithColor, ...this.possibleFilters]
     } else if(this.props.title==="Materials"){
-      this.possibleFilters = [...this.sortByFiltersReduced, ...this.possibleFilters, ...filterDefinitions["Music"]]
+      this.possibleFilters = [...this.sortByFiltersReduced, ...this.possibleFilters]
     } 
   }
 

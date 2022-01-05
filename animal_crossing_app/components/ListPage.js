@@ -183,6 +183,15 @@ function ListPage(props){
         }
       }
 
+      var filterOut = false
+      var skip = false
+      for(var y = 0; y < searchFilters.length; y++){
+        if(searchFilters[y].includes("Filter Out")){
+          filterOut = true;
+          break;
+        }
+      }
+
       var searchActual = searchFilters;
       if(props.filterCollectedOnly){
         searchActual = ["Collected"];
@@ -415,34 +424,61 @@ function ListPage(props){
               } 
               //Only check the property selected
               else if((searchCollected) && (searchCategory || searchCategoryOnly) && (!searchActual[z].includes("Data Category") || searchCategoryOnly)){
-                filterFound = true;
-                for(var f = 0; f<Object.keys(filters).length; f++){
-                  var filterCategory = Object.keys(filters)[f];
-                  var filterCurrentFound = false;
-                  for(var e = 0; e<filters[filterCategory].length; e++){
-                    //check if split by semicolon
-                    if(item[filterCategory]!==undefined){
-                      var allEntries = item[filterCategory].split("; ")
-                      for(var o = 0; o<allEntries.length; o++){
-                        if(allEntries[o]!==undefined && allEntries[o].toLowerCase()===filters[filterCategory][e].toLowerCase()){
-                          filterCurrentFound = true
-                          break;
-                        } 
+                //filtering out, invert filter
+                if(filterOut){
+                  filterFound = true
+                  for(var f = 0; f<Object.keys(filters).length; f++){
+                    var filterCategory = Object.keys(filters)[f];
+                    for(var e = 0; e<filters[filterCategory].length; e++){
+                      //check if split by semicolon
+                      if(item[filterCategory]!==undefined){
+                        var allEntries = item[filterCategory].split("; ")
+                        for(var o = 0; o<allEntries.length; o++){
+                          if(allEntries[o]!==undefined && allEntries[o].toLowerCase()===filters[filterCategory][e].toLowerCase()){
+                            filterFound = false
+                            break;
+                          }
+                        }
+                      }
+                      if(filterFound===false){
+                        break
                       }
                     }
-                    if(item[filterCategory]!==undefined && item[filterCategory].toLowerCase()===filters[filterCategory][e].toLowerCase()){
-                      filterCurrentFound = true
+                    if(filterFound===false){
+                      break
+                    }
+                  }
+                } else {
+                  filterFound = true;
+                  for(var f = 0; f<Object.keys(filters).length; f++){
+                    var filterCategory = Object.keys(filters)[f];
+                    var filterCurrentFound = false;
+                    for(var e = 0; e<filters[filterCategory].length; e++){
+                      //check if split by semicolon
+                      if(item[filterCategory]!==undefined){
+                        var allEntries = item[filterCategory].split("; ")
+                        for(var o = 0; o<allEntries.length; o++){
+                          if(allEntries[o]!==undefined && allEntries[o].toLowerCase()===filters[filterCategory][e].toLowerCase()){
+                            filterCurrentFound = true
+                            break;
+                          } 
+                        }
+                      }
+                      if(item[filterCategory]!==undefined && item[filterCategory].toLowerCase()===filters[filterCategory][e].toLowerCase()){
+                        filterCurrentFound = true
+                        break;
+                      }
+                    }
+                    if(filterCurrentFound && props.noStackFilters){
+                      filterFound = true;
+                      break;
+                    } else if(filterCurrentFound===false){
+                      filterFound = false;
                       break;
                     }
                   }
-                  if(filterCurrentFound && props.noStackFilters){
-                    filterFound = true;
-                    break;
-                  } else if(filterCurrentFound===false){
-                    filterFound = false;
-                    break;
-                  }
                 }
+                
                 showUncraftableVar = true;
                 if(searchActual.includes("Show uncraftable item variations") && item["Body Customize"] !==undefined && item["Body Customize"] ==="No" && item["Variant ID"] !==undefined && item["Variant ID"] !=="NA"){
                   showUncraftableVar = true;
@@ -476,6 +512,9 @@ function ListPage(props){
               }
               // }
             }
+
+            if(skip)
+              continue
             
             if(item[props.searchKey[j][x]]!==undefined){
               //Translate search attribute from database
