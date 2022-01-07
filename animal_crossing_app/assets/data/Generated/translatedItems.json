@@ -101263,22 +101263,6 @@
     "Spanish (US)": "pan relleno gratinado",
     "French (US)": "gratin de pain"
   },
-  "brown sugar": {
-    "Chinese": "黑糖",
-    "German": "Rohzucker",
-    "English (Europe)": "brown sugar",
-    "Spanish": "paquete de azúcar moreno",
-    "French": "sucre brun",
-    "Italian": "zucchero bruno",
-    "Dutch": "bruine suiker",
-    "Russian": "пачка коричневого сахара",
-    "Japanese": "こくとう",
-    "Korean": "흑설탕",
-    "Chinese (Traditional)": "黑糖",
-    "English": "brown sugar",
-    "Spanish (US)": "paquete de azúcar morena",
-    "French (US)": "sucre brun"
-  },
   "brown-sugar cupcakes": {
     "Chinese": "黑糖纸杯蛋糕",
     "German": "Rohzucker-Cupcakes",
@@ -101774,38 +101758,6 @@
     "English": "extravagant meal",
     "Spanish (US)": "menú de lujo",
     "French (US)": "menu de dégustation"
-  },
-  "fish and chips": {
-    "Chinese": "炸鱼薯条",
-    "German": "Fish and Chips",
-    "English (Europe)": "fish and chips",
-    "Spanish": "fish & chips",
-    "French": "fish and chips",
-    "Italian": "piatto di fritti",
-    "Dutch": "vis en friet",
-    "Russian": "рыба с картофелем фри",
-    "Japanese": "フィッシュ&チップス",
-    "Korean": "피시&칩스",
-    "Chinese (Traditional)": "炸魚薯條",
-    "English": "fish and chips",
-    "Spanish (US)": "fish & chips",
-    "French (US)": "fish and chips"
-  },
-  "flour": {
-    "Chinese": "面粉",
-    "German": "Mehl",
-    "English (Europe)": "flour",
-    "Spanish": "paquete de harina",
-    "French": "farine",
-    "Italian": "farina",
-    "Dutch": "bloem",
-    "Russian": "пачка муки",
-    "Japanese": "こむぎこ",
-    "Korean": "밀가루",
-    "Chinese (Traditional)": "麵粉",
-    "English": "flour",
-    "Spanish (US)": "paquete de harina",
-    "French (US)": "farine"
   },
   "french fries": {
     "Chinese": "炸薯条",
@@ -103615,22 +103567,6 @@
     "Spanish (US)": "batido de fresa",
     "French (US)": "liqueur à la fraise"
   },
-  "sugar": {
-    "Chinese": "砂糖",
-    "German": "Zucker",
-    "English (Europe)": "sugar",
-    "Spanish": "paquete de azúcar",
-    "French": "sucre",
-    "Italian": "zucchero",
-    "Dutch": "suiker",
-    "Russian": "пачка сахара",
-    "Japanese": "さとう",
-    "Korean": "설탕",
-    "Chinese (Traditional)": "砂糖",
-    "English": "sugar",
-    "Spanish (US)": "paquete de azúcar",
-    "French (US)": "sucre"
-  },
   "sugar crepe": {
     "Chinese": "甜味可丽饼",
     "German": "Zucker-Crêpe",
@@ -103934,22 +103870,6 @@
     "English": "western-style meal",
     "Spanish (US)": "menú de estilo occidental",
     "French (US)": "repas européen"
-  },
-  "whole-wheat flour": {
-    "Chinese": "全麦面粉",
-    "German": "Vollkornmehl",
-    "English (Europe)": "whole-wheat flour",
-    "Spanish": "paquete de harina integral",
-    "French": "farine complète",
-    "Italian": "farina integrale",
-    "Dutch": "volkorenmeel",
-    "Russian": "пачка обойной муки",
-    "Japanese": "ぜんりゅうふん",
-    "Korean": "통밀 가루",
-    "Chinese (Traditional)": "全麥麵粉",
-    "English": "whole-wheat flour",
-    "Spanish (US)": "paquete de harina integral",
-    "French (US)": "farine complète"
   },
   "bug poster": {
     "Chinese": "虫子裱框海报",
@@ -110415,22 +110335,6 @@
     "Spanish (US)": "toalla sobre camiseta",
     "French (US)": "maillot avec serviette"
   },
-  "tee with silicon bib": {
-    "Chinese": "硅胶围兜婴儿衣",
-    "German": "Lätzchen-Shirt",
-    "English (Europe)": "tee with silicon bib",
-    "Spanish": "camiseta y babero silicona",
-    "French": "t-shirt avec bavoir silicone",
-    "Italian": "maglietta con bavaglino",
-    "Dutch": "slabbetjes-⁠T-shirt",
-    "Russian": "футболка с нагрудником",
-    "Japanese": "シリコンスタイつきベビーシャツ",
-    "Korean": "실리콘 턱받이와 아기 옷",
-    "Chinese (Traditional)": "矽膠圍兜兜嬰兒衣",
-    "English": "tee with silicon bib",
-    "Spanish (US)": "camiseta y babero silicona",
-    "French (US)": "t-shirt avec bavette silicone"
-  },
   "Tomato Festival tee": {
     "Chinese": "西红柿节T恤",
     "German": "Tomatenfest-Shirt",
@@ -113215,6 +113119,22 @@
     "Spanish (US)": "xilofoide",
     "French (US)": "xylophoïde"
   },
+  "brown sugar": {
+    "Chinese": "黑糖",
+    "German": "Rohzucker",
+    "English (Europe)": "brown sugar",
+    "Spanish": "paquete de azúcar moreno",
+    "French": "sucre brun",
+    "Italian": "zucchero bruno",
+    "Dutch": "bruine suiker",
+    "Russian": "пачка коричневого сахара",
+    "Japanese": "こくとう",
+    "Korean": "흑설탕",
+    "Chinese (Traditional)": "黑糖",
+    "English": "brown sugar",
+    "Spanish (US)": "paquete de azúcar morena",
+    "French (US)": "sucre brun"
+  },
   "carrot": {
     "Chinese": "胡萝卜",
     "German": "Karotte",
@@ -113262,6 +113182,22 @@
     "English": "Custom Designs Patterns+",
     "Spanish (US)": "Estampados en Mis diseños",
     "French (US)": "Conseils motifs perso +"
+  },
+  "flour": {
+    "Chinese": "面粉",
+    "German": "Mehl",
+    "English (Europe)": "flour",
+    "Spanish": "paquete de harina",
+    "French": "farine",
+    "Italian": "farina",
+    "Dutch": "bloem",
+    "Russian": "пачка муки",
+    "Japanese": "こむぎこ",
+    "Korean": "밀가루",
+    "Chinese (Traditional)": "麵粉",
+    "English": "flour",
+    "Spanish (US)": "paquete de harina",
+    "French (US)": "farine"
   },
   "glowing moss": {
     "Chinese": "光藓",
@@ -113567,6 +113503,22 @@
     "Spanish (US)": "caja de dulces de souvenir",
     "French (US)": "boîte de chocolats souvenir"
   },
+  "sugar": {
+    "Chinese": "砂糖",
+    "German": "Zucker",
+    "English (Europe)": "sugar",
+    "Spanish": "paquete de azúcar",
+    "French": "sucre",
+    "Italian": "zucchero",
+    "Dutch": "suiker",
+    "Russian": "пачка сахара",
+    "Japanese": "さとう",
+    "Korean": "설탕",
+    "Chinese (Traditional)": "砂糖",
+    "English": "sugar",
+    "Spanish (US)": "paquete de azúcar",
+    "French (US)": "sucre"
+  },
   "sugarcane": {
     "Chinese": "甘蔗",
     "German": "Zuckerrohr",
@@ -113662,6 +113614,22 @@
     "English": "vine",
     "Spanish (US)": "enredadera",
     "French (US)": "vigne"
+  },
+  "whole-wheat flour": {
+    "Chinese": "全麦面粉",
+    "German": "Vollkornmehl",
+    "English (Europe)": "whole-wheat flour",
+    "Spanish": "paquete de harina integral",
+    "French": "farine complète",
+    "Italian": "farina integrale",
+    "Dutch": "volkorenmeel",
+    "Russian": "пачка обойной муки",
+    "Japanese": "ぜんりゅうふん",
+    "Korean": "통밀 가루",
+    "Chinese (Traditional)": "全麥麵粉",
+    "English": "whole-wheat flour",
+    "Spanish (US)": "paquete de harina integral",
+    "French (US)": "farine complète"
   },
   "wheat": {
     "Chinese": "小麦",

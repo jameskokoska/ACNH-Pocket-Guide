@@ -236,9 +236,25 @@ export function determineDataGlobal(datakeyName){
   else if(datakeyName==="dataLoadedMaterials")
     return global.dataLoadedMaterials;
   else if(datakeyName==="dataLoadedFood")
-    return global.dataLoadedFood;
+    return getFoodItems();
   else if(datakeyName==="dataLoadedGyroids")
     return global.dataLoadedGyroids;
+}
+
+function getFoodItems(){
+  let outputItems = []
+  let item = {}
+  let dataLoaded2D = global.dataLoadedFurniture
+  for(let j = 0; j < dataLoaded2D.length; j++){
+    var dataLoaded = dataLoaded2D[j];
+    for(let i = 0; i < dataLoaded.length; i++){
+      item = dataLoaded[i];
+      if(item["Tag"]!==undefined && (item["Tag"]==="DishFood"||item["Tag"]==="DishDrink")){
+        outputItems.push(item)
+      }
+    }
+  }
+  return [outputItems]
 }
 
 export async function resetFilters(){
@@ -409,7 +425,7 @@ export async function loadGlobalData(){
     ["bugCheckList","Name"]
   ],"false", true);
   global.dataLoadedFossils = await getStorageData([[require("./assets/data/DataCreated/Fossils.json"),"Fossils"]],[["fossilCheckList","Name"]],"false");
-  global.dataLoadedArt = await getStorageData([[require("./assets/data/DataCreated/Art.json"),"Art"]],[["artCheckList","Name","Genuine"]],"false");
+  global.dataLoadedArt = await getStorageData([[require("./assets/data/DataCreated/Artwork.json"),"Art"]],[["artCheckList","Name","Genuine"]],"false");
   global.dataLoadedVillagers = await getStorageData([[require("./assets/data/DataCreated/Villagers.json"),"Villagers"]],[["villagerCheckList","Name"]],"false");
   global.dataLoadedFurniture = await getStorageData([
     [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json")), "Housewares"],
@@ -462,11 +478,10 @@ export async function loadGlobalData(){
     ["floorWallsCheckList","Name"],
     ["floorWallsCheckList","Name"],
   ],"false");
-  global.dataLoadedTools = await getStorageData([[require("./assets/data/DataCreated/Tools.json"), "Tools"]],[["toolsCheckList","Name","Variation"]],"false");
+  global.dataLoadedTools = await getStorageData([[require("./assets/data/DataCreated/ToolsGoods.json"), "Tools"]],[["toolsCheckList","Name","Variation"]],"false");
   global.dataLoadedRecipes = await getStorageData([[require("./assets/data/DataCreated/Recipes.json"),"Recipes"],],[["recipesCheckList","Name"]],"false");
   global.dataLoadedCards = await getStorageData([[require("./assets/data/DataCreated/Message Cards.json"), "Message Cards"],],[["cardsCheckList","Name"]],"false");
   global.dataLoadedMaterials = await getStorageData([[require("./assets/data/DataCreated/Other.json"),"Other"]],[["materialsCheckList","Name"]],"false");
-  global.dataLoadedFood = await getStorageData([[require("./assets/data/DataCreated/Food.json"),"Food"]],[["furnitureCheckList","Name","Variation","Pattern"]],"false");
   global.dataLoadedGyroids = await getStorageData([[require("./assets/data/DataCreated/Gyroids.json"),"Gyroids"]],[["gyroidCheckList","Name","Variation","Pattern"]],"false");
   global.dataLoadedAll = await getStorageData(
   [
@@ -476,7 +491,6 @@ export async function loadGlobalData(){
     [require("./assets/data/DataCreated/Ceiling Decor.json"), "Ceiling Decor"],
     [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Photos.json")), "Photos"],
     [require("./assets/data/DataCreated/Posters.json"), "Posters"],
-    [require("./assets/data/DataCreated/Food.json"), "Food"],
     [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Headwear.json")), "Headwear"],
     [require("./assets/data/DataCreated/Accessories.json"), "Accessories"],
     [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Tops.json")), "Tops"],
@@ -491,12 +505,12 @@ export async function loadGlobalData(){
     [require("./assets/data/DataCreated/Rugs.json"), "Rugs"],
     [require("./assets/data/DataCreated/Wallpaper.json"), "Wallpaper"],
     [require("./assets/data/DataCreated/Recipes.json"), 'Recipes'],
-    [require("./assets/data/DataCreated/Tools.json"), "Tools"],
+    [require("./assets/data/DataCreated/ToolsGoods.json"), "Tools"],
     [require("./assets/data/DataCreated/Fish.json"), "Fish"],
     [require("./assets/data/DataCreated/Insects.json"), "Insects"],
     [require("./assets/data/DataCreated/Sea Creatures.json"),"Sea Creatures"],
     [require("./assets/data/DataCreated/Fossils.json"),"Fossils"],
-    [require("./assets/data/DataCreated/Art.json"),"Art"],
+    [require("./assets/data/DataCreated/Artwork.json"),"Art"],
     [require("./assets/data/DataCreated/Villagers.json"),"Villagers"],
     [require("./assets/data/DataCreated/Music.json"),"Music"],
     [require("./assets/data/DataCreated/Reactions.json"),"Reactions"],
@@ -521,7 +535,6 @@ export async function loadGlobalData(){
     ["furnitureCheckList","Name","Variation","Pattern"],
     ["furnitureCheckList","Name","Variation","Pattern"],
     ["furnitureCheckList","Name"],
-    ["furnitureCheckList","Name","Variation","Pattern"], //because some food was previously furniture
     ["clothingCheckList","Name","Variation"],
     ["clothingCheckList","Name","Variation"],
     ["clothingCheckList","Name","Variation"],

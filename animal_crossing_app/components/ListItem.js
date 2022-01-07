@@ -11,7 +11,7 @@ import TextFont from './TextFont';
 import Check from './Check';
 import FastImage from './FastImage';
 import {checkOff, capitalize, commas, removeBrackets} from "../LoadJsonData"
-import {getFoodPhoto, getPhoto, getPhotoShadow} from "./GetPhoto"
+import {getPhoto, getPhotoShadow} from "./GetPhoto"
 import {getMonthShort, swapDateCards} from "./DateFunctions"
 import colors from "../Colors"
 import {getCurrentDateObject, parseActiveTime} from "./DateFunctions"
@@ -208,6 +208,12 @@ class ListItem extends React.Component{
       // if(this.props.item["Data Category"]==="Recipes"){
       //   imageSrc = getFoodPhoto(this.props.item["Name"],imageSrc)
       // }
+      let lowerWishlistIcon = false;
+      if(this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]!=="" && (this.props.textProperty2[this.props.item.dataSet]==="(DIY)")){
+        lowerWishlistIcon = true
+      } else if (this.state.museum || this.state.villager){
+        lowerWishlistIcon = true
+      }
       return (
         <View style={styles.gridWrapper}>
           
@@ -239,7 +245,7 @@ class ListItem extends React.Component{
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
               <CheckVillagerPhoto showVillagerPhotoButton={this.showVillagerPhotoButton} setCollected={this.setCollected} collected={this.state.collected} setVillagerPhoto={this.setVillagerPhoto} item={this.props.item} villager={this.state.villagerPhoto} villagerPage={this.checkVillagerPhotoButton()}/>
-              {this.state.wishlist? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7 + ((this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]!=="" && this.props.textProperty2[this.props.item.dataSet]==="(DIY)")?2:0), top: 7 + ((this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]!=="" && this.props.textProperty2[this.props.item.dataSet]==="(DIY)")?33:0), zIndex:10,}}/> : <View/>}
+              {this.state.wishlist? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7 + (lowerWishlistIcon?2:0), top: 7 + (lowerWishlistIcon?33:0), zIndex:10,}}/> : <View/>}
               { (!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].startsWith("http") ? 
                 <FastImage
                   style={styles.gridBoxImage}

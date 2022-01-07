@@ -10,7 +10,7 @@ import {
   Vibration,
 } from 'react-native';
 import TextFont from './TextFont'
-import {getSettingsString} from "../LoadJsonData"
+import {attemptToTranslate, capitalizeFirst, getSettingsString} from "../LoadJsonData"
 import colors from '../Colors.js';
 
 class SidebarElement extends Component {
@@ -86,7 +86,7 @@ class SidebarElement extends Component {
               {!this.props.disabled?removeButton:addButton}
               {changeOrderButtons}
               <Image style={styles.sidebarImage} source={this.props.image}/>
-              <TextFont bold={true} style={[styles.sidebarTitle,{color:this.props.textColor}]}>{this.props.title==="Emoticons"?"Reactions":this.props.title}</TextFont>
+              <TextFont translate={false} bold={true} style={[styles.sidebarTitle,{color:this.props.textColor}]}>{this.props.title==="Emoticons"?"Reactions":capitalizeFirst(attemptToTranslate(this.props.title))}</TextFont>
             </View>
           </TouchableNativeFeedback>
         </>

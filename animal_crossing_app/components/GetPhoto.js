@@ -581,10 +581,10 @@ export function getMaterialImage(material, reduceComplexity=false, flowerSingle=
 }
 
 function checkMoreMaterials(material){
-  let foodPhoto = getFoodPhoto(material,"couldn't find")
-  if(foodPhoto !== "couldn't find"){
-    return foodPhoto
-  }
+  // let foodPhoto = getFoodPhoto(material,"couldn't find")
+  // if(foodPhoto !== "couldn't find"){
+  //   return foodPhoto
+  // }
 
   let fishPhoto = getFishPhoto(material,"couldn't find")
   if(fishPhoto !== "couldn't find"){
@@ -596,7 +596,7 @@ function checkMoreMaterials(material){
 
 export function getPaintingPhotoFake(name){
   console.log(name)
-  var data = require("../assets/data/DataCreated/Art.json");
+  var data = require("../assets/data/DataCreated/Artwork.json");
   for(var index = 0; index < data.length; index++){
     if(data[index]["Name"]===name && data[index]["Genuine"]==="No"){
       if(data[index]["High-Res Texture"]!=="NA")
@@ -608,15 +608,15 @@ export function getPaintingPhotoFake(name){
   return "none";
 }
 
-export function getFoodPhoto(name, defaultImg){
-  var data = require("../assets/data/DataCreated/Food.json");
-  for(var index = 0; index < data.length; index++){
-    if(data[index]["Name"]===name){
-      return data[index]["Image"]
-    }
-  }
-  return defaultImg;
-}
+// export function getFoodPhoto(name, defaultImg){
+//   var data = require("../assets/data/DataCreated/Food.json");
+//   for(var index = 0; index < data.length; index++){
+//     if(data[index]["Name"]===name){
+//       return data[index]["Image"]
+//     }
+//   }
+//   return defaultImg;
+// }
 
 export function getFishPhoto(name, defaultImg){
   var data = require("../assets/data/DataCreated/Fish.json");

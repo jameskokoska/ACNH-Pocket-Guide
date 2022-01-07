@@ -34,7 +34,7 @@ filters = [
             data["Photos"],
             data["Posters"]
         ],
-        ["Tag", "Catalog", "Color 1","Color 2","Variation","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category", "Speaker Type", "Lighting Type"]
+        ["Tag", "Catalog", "Color 1","Color 2","Variation","Source", "DIY", "Size", "Exchange Currency", "Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category", "Speaker Type", "Lighting Type"]
     ],
     [
         "Clothing",
@@ -50,7 +50,7 @@ filters = [
             data["Bags"],
             data["Umbrellas"],
         ],
-        ["Catalog", "Style 1","Style 2","Color 1","Color 2","Variation","Seasonality","Source", "DIY", "Size", "Season/Event", "Season/Event Exclusive", "Label Themes"]
+        ["Catalog", "Style 1","Style 2","Color 1","Color 2","Variation","Seasonality","Source", "DIY", "Size", "Exchange Currency", "Season/Event", "Season/Event Exclusive", "Label Themes"]
     ],
     [
         "Floor & Walls",
@@ -59,7 +59,7 @@ filters = [
             data["Rugs"],
             data["Wallpaper"]
         ],
-        ["Tag","Color 1","Color 2","Source","DIY","Size","Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series",]
+        ["Tag","Color 1","Color 2","Source","DIY","Size","Exchange Currency", "Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series",]
     ],
     [
         "Fish",
@@ -98,7 +98,6 @@ filters = [
             data["Ceiling Decor"],
             data["Photos"],
             data["Posters"],
-            data["Food"],
             data["Headwear"],
             data["Accessories"],
             data["Tops"],
@@ -113,12 +112,12 @@ filters = [
             data["Rugs"],
             data["Wallpaper"],
             data["Recipes"],
-            data["Tools"],
+            data["ToolsGoods"],
             data["Fish"],
             data["Insects"],
             data["Sea Creatures"],
             data["Fossils"],
-            data["Art"],
+            data["Artwork"],
             data["Villagers"],
             data["Music"],
             data["Reactions"],
@@ -137,6 +136,7 @@ filters = [
             "Weather",
             "Shadow",
             "Movement Speed",
+            "Exchange Currency",
             "Season/Event",
             "Category",
             "Season/Event Exclusive",

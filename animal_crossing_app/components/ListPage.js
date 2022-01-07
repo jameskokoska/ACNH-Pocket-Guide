@@ -245,6 +245,13 @@ function ListPage(props){
         for(var i = 0; i < dataLoaded.length; i++){
           item = dataLoaded[i];
 
+          //filter out food/drinks from furniture page
+          if(props.title==="Furniture"){
+            if(item["Tag"]!==undefined && (item["Tag"]==="DishFood"||item["Tag"]==="DishDrink")){
+              continue;
+            }
+          }
+ 
           //optimization for loading
           //remove if doesn't satisfy main filter before trying other stuff
           if(props.wishlistItems || searchActual.includes("Wishlist")){
@@ -252,7 +259,7 @@ function ListPage(props){
               continue;
             }
           }else if(props.newItems){
-            if(item["Version Added"] !==undefined && item["Version Added"]!==gameVersion){
+            if(item["Version Added"] !==undefined && !gameVersion.includes(item["Version Added"])){
               continue;
             }
           }
@@ -579,7 +586,7 @@ function ListPage(props){
                       // previousVariation = item["Name"];
                     // } 
                   } else if(props.newItems){
-                    if(item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===gameVersion){
+                    if(item["Version Added"] !==undefined && item["Version Added"] !=="NA" && gameVersion.includes(item["Version Added"])){
                       item.dataSet = j;
                       item.index = i;
                       dataUpdated = [...dataUpdated, item];
@@ -782,6 +789,16 @@ function ListPage(props){
             });
           dataUpdated = dataLoadedCopy
         }
+      }
+
+      if(props.newItems){
+        var dataLoadedCopy = dataUpdated.slice(0);
+        dataLoadedCopy.sort(function(a, b) {
+          var textA = a["Version Added"];
+          var textB = b["Version Added"];
+          return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+        });
+        dataUpdated = dataLoadedCopy
       }
 
       setData(dataUpdated)

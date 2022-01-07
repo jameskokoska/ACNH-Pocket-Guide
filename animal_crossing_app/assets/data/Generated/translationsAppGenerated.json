@@ -12198,6 +12198,16 @@
       "Italian": "Prendi in considerazione l'idea di supportare questa app senza pubblicità",
       "Dutch": "Overweeg deze advertentievrije app te ondersteunen",
       "Portuguese": "Considere oferecer suporte a este aplicativo gratuito"
+    },
+    "invert filters...": {
+      "English": "Invert Filters...",
+      "English (Europe)": "Invert Filters...",
+      "German": "Filter invertieren..."
+    },
+    "filter out": {
+      "English": "Filter Out",
+      "English (Europe)": "Filter Out",
+      "German": "Aussortieren"
     }
   },
   "Sources": {
@@ -13795,6 +13805,10 @@
       "English": "DJ KK concert",
       "English (Europe)": "DJ KK concert",
       "German": "Musikfestival (HHP)"
+    },
+    "hhp apparel shop": {
+      "English": "HHP Apparel Shop",
+      "English (Europe)": "HHP Apparel Shop"
     }
   },
   "Source Notes": {
@@ -15368,6 +15382,18 @@
       "English": "Received after doing your 50th group stretch",
       "English (Europe)": "Received after doing your 50th group stretch",
       "German": "Erhältlich nach der 50. Gruppengymnastik-Teilnahme"
+    },
+    "available during dj kk festival": {
+      "English": "Available during DJ KK festival",
+      "English (Europe)": "Available during DJ KK festival"
+    },
+    "only available as a work clothes for paradise planning": {
+      "English": "Only available as a work clothes for Paradise Planning",
+      "English (Europe)": "Only available as a work clothes for Paradise Planning"
+    },
+    "obtain turkey day recipes from franklin or buy it from nook's cranny": {
+      "English": "Obtain Turkey Day Recipes from Franklin or buy it from Nook's Cranny",
+      "English (Europe)": "Obtain Turkey Day Recipes from Franklin or buy it from Nook's Cranny"
     }
   },
   "Event Names": {
@@ -16606,56 +16632,252 @@
       "English (Europe)": "blue cobblestones",
       "French": "façade à pierres bleue",
       "French (US)": "façade à pierres bleue",
-      "Spanish (US)": "Blau-Granitfassade"
+      "German": "blaues Kopfsteinpflaster",
+      "Spanish": "Blau-Granitfassade",
+      "Spanish (US)": "Blau-Granitfassade",
+      "Italian": "ciottoli blu",
+      "Dutch": "blauwe kasseien",
+      "Russian": "голубые булыжники"
     },
     "brown cobblestones": {
       "English": "brown cobblestones",
       "English (Europe)": "brown cobblestones",
       "French": "façade à pierres brune",
       "French (US)": "façade à pierres brune",
-      "Spanish (US)": "Braun-Granitfassade"
+      "German": "braunes Kopfsteinpflaster",
+      "Spanish": "Braun-Granitfassade",
+      "Spanish (US)": "Braun-Granitfassade",
+      "Italian": "ciottoli marroni",
+      "Dutch": "bruine kasseien",
+      "Russian": "коричневые булыжники"
     },
     "chic cobblestones": {
       "English": "chic cobblestones",
       "English (Europe)": "chic cobblestones",
       "French": "façade à pierres chic",
       "French (US)": "façade à pierres chic",
-      "Spanish (US)": "Schick-Granitfassade"
+      "German": "schickes Kopfsteinpflaster",
+      "Spanish": "Schick-Granitfassade",
+      "Spanish (US)": "Schick-Granitfassade",
+      "Italian": "ciottoli chic",
+      "Dutch": "chique kasseien",
+      "Russian": "шикарные булыжники"
     },
     "cobblestones": {
       "English": "cobblestones",
       "English (Europe)": "cobblestones",
       "French": "façade à pierres gris clair",
       "French (US)": "façade à pierres gris clair",
-      "Spanish (US)": "Hellgrau-Granitfassade"
+      "German": "Kopfsteinpflaster",
+      "Spanish": "Hellgrau-Granitfassade",
+      "Spanish (US)": "Hellgrau-Granitfassade",
+      "Italian": "ciottoli",
+      "Dutch": "kasseien",
+      "Russian": "булыжники"
     },
     "gray cobblestones": {
       "English": "gray cobblestones",
       "English (Europe)": "gray cobblestones",
       "French": "façade à pierres grise",
       "French (US)": "façade à pierres grise",
-      "Spanish (US)": "Grau-Granitfassade"
+      "German": "graues Kopfsteinpflaster",
+      "Spanish": "Grau-Granitfassade",
+      "Spanish (US)": "Grau-Granitfassade",
+      "Italian": "ciottoli grigi",
+      "Dutch": "grijze kasseien",
+      "Russian": "серые булыжники"
     },
     "green cobblestones": {
       "English": "green cobblestones",
       "English (Europe)": "green cobblestones",
       "French": "façade à pierres verte",
       "French (US)": "façade à pierres verte",
-      "Spanish (US)": "Grün-Granitfassade"
+      "German": "Grüne Kopfsteinpflaster",
+      "Spanish": "Grün-Granitfassade",
+      "Spanish (US)": "Grün-Granitfassade",
+      "Italian": "ciottoli verdi",
+      "Dutch": "groene kasseien",
+      "Russian": "зеленые булыжники"
     },
     "orange cobblestones": {
       "English": "orange cobblestones",
       "English (Europe)": "orange cobblestones",
       "French": "façade à pierres orange",
       "French (US)": "façade à pierres orange",
-      "Spanish (US)": "Orange-Granitfassade"
+      "German": "orangefarbenes Kopfsteinpflaster",
+      "Spanish": "Orange-Granitfassade",
+      "Spanish (US)": "Orange-Granitfassade",
+      "Italian": "ciottoli arancioni",
+      "Dutch": "oranje kasseien",
+      "Russian": "оранжевые булыжники"
     },
     "red cobblestones": {
       "English": "red cobblestones",
       "English (Europe)": "red cobblestones",
       "French": "façade à pierres rouge",
       "French (US)": "façade à pierres rouge",
-      "Spanish (US)": "Rot-Granitfassade"
+      "German": "rotes Kopfsteinpflaster",
+      "Spanish": "Rot-Granitfassade",
+      "Spanish (US)": "Rot-Granitfassade",
+      "Italian": "ciottoli rossi",
+      "Dutch": "rode kasseien",
+      "Russian": "красные булыжники"
+    },
+    "fish-and-chips": {
+      "English": "fish-and-chips",
+      "English (Europe)": "fish-and-chips",
+      "French": "poisson et frites",
+      "French (US)": "poisson et frites",
+      "German": "Fisch und Pommes",
+      "Spanish": "pescado y papas fritas",
+      "Spanish (US)": "pescado y papas fritas",
+      "Italian": "pesce e patatine",
+      "Dutch": "Fish and chips",
+      "Russian": "рыба и чипсы"
+    },
+    "zodiac rat figurine": {
+      "English": "zodiac rat figurine",
+      "English (Europe)": "zodiac rat figurine",
+      "French": "figurine de rat du zodiaque",
+      "French (US)": "figurine de rat du zodiaque",
+      "German": "Sternzeichen Ratte Figur",
+      "Spanish": "estatuilla de rata del zodiaco",
+      "Spanish (US)": "estatuilla de rata del zodiaco",
+      "Italian": "statuetta di topo zodiacale",
+      "Dutch": "dierenriem rat beeldje",
+      "Russian": "фигурка зодиакальной крысы"
+    },
+    "zodiac rabbit figurine": {
+      "English": "zodiac rabbit figurine",
+      "English (Europe)": "zodiac rabbit figurine",
+      "French": "figurine de lapin du zodiaque",
+      "French (US)": "figurine de lapin du zodiaque",
+      "German": "Tierkreis Hase Figur",
+      "Spanish": "estatuilla de conejo del zodiaco",
+      "Spanish (US)": "estatuilla de conejo del zodiaco",
+      "Italian": "Figurina del coniglio dello zodiaco",
+      "Dutch": "dierenriem konijn beeldje",
+      "Russian": "фигурка зодиакального кролика"
+    },
+    "zodiac dragon figurine": {
+      "English": "zodiac dragon figurine",
+      "English (Europe)": "zodiac dragon figurine",
+      "French": "figurine de dragon du zodiaque",
+      "French (US)": "figurine de dragon du zodiaque",
+      "German": "Tierkreis Drache Figur",
+      "Spanish": "estatuilla del dragón del zodiaco",
+      "Spanish (US)": "estatuilla del dragón del zodiaco",
+      "Italian": "Figurina del drago dello zodiaco",
+      "Dutch": "dierenriem draak beeldje",
+      "Russian": "зодиакальная фигурка дракона"
+    },
+    "zodiac snake figurine": {
+      "English": "zodiac snake figurine",
+      "English (Europe)": "zodiac snake figurine",
+      "French": "figurine de serpent du zodiaque",
+      "French (US)": "figurine de serpent du zodiaque",
+      "German": "Sternzeichen Schlangenfigur",
+      "Spanish": "figura de serpiente del zodiaco",
+      "Spanish (US)": "figura de serpiente del zodiaco",
+      "Italian": "statuetta del serpente dello zodiaco",
+      "Dutch": "dierenriem slang beeldje",
+      "Russian": "фигурка зодиакальной змеи"
+    },
+    "zodiac horse figurine": {
+      "English": "zodiac horse figurine",
+      "English (Europe)": "zodiac horse figurine",
+      "French": "figurine cheval du zodiaque",
+      "French (US)": "figurine cheval du zodiaque",
+      "German": "Sternzeichen Pferd Figur",
+      "Spanish": "estatuilla del caballo del zodiaco",
+      "Spanish (US)": "estatuilla del caballo del zodiaco",
+      "Italian": "Figurina del cavallo dello zodiaco",
+      "Dutch": "dierenriem paard beeldje",
+      "Russian": "зодиакальная фигурка лошади"
+    },
+    "zodiac sheep figurine": {
+      "English": "zodiac sheep figurine",
+      "English (Europe)": "zodiac sheep figurine",
+      "French": "figurine de mouton du zodiaque",
+      "French (US)": "figurine de mouton du zodiaque",
+      "German": "Tierkreis Schaf Figur",
+      "Spanish": "estatuilla de oveja del zodiaco",
+      "Spanish (US)": "estatuilla de oveja del zodiaco",
+      "Italian": "statuetta di pecora dello zodiaco",
+      "Dutch": "dierenriem schaap beeldje",
+      "Russian": "зодиакальная фигурка овцы"
+    },
+    "zodiac monkey figurine": {
+      "English": "zodiac monkey figurine",
+      "English (Europe)": "zodiac monkey figurine",
+      "French": "figurine de singe du zodiaque",
+      "French (US)": "figurine de singe du zodiaque",
+      "German": "Sternzeichen Affenfigur",
+      "Spanish": "estatuilla del mono del zodiaco",
+      "Spanish (US)": "estatuilla del mono del zodiaco",
+      "Italian": "statuetta della scimmia dello zodiaco",
+      "Dutch": "dierenriem aap beeldje",
+      "Russian": "зодиакальная фигурка обезьяны"
+    },
+    "zodiac rooster figurine": {
+      "English": "zodiac rooster figurine",
+      "English (Europe)": "zodiac rooster figurine",
+      "French": "figurine coq du zodiaque",
+      "French (US)": "figurine coq du zodiaque",
+      "German": "Sternzeichen Hahn Figur",
+      "Spanish": "estatuilla del gallo del zodiaco",
+      "Spanish (US)": "estatuilla del gallo del zodiaco",
+      "Italian": "Figurina del gallo dello zodiaco",
+      "Dutch": "dierenriem haan beeldje",
+      "Russian": "фигурка зодиакального петуха"
+    },
+    "zodiac dog figurine": {
+      "English": "zodiac dog figurine",
+      "English (Europe)": "zodiac dog figurine",
+      "French": "figurine de chien du zodiaque",
+      "French (US)": "figurine de chien du zodiaque",
+      "German": "Sternzeichen Hundefigur",
+      "Spanish": "estatuilla del perro del zodiaco",
+      "Spanish (US)": "estatuilla del perro del zodiaco",
+      "Italian": "Figurina del cane dello zodiaco",
+      "Dutch": "dierenriem hond beeldje",
+      "Russian": "зодиакальная фигурка собаки"
+    },
+    "zodiac boar figurine": {
+      "English": "zodiac boar figurine",
+      "English (Europe)": "zodiac boar figurine",
+      "French": "figurine de sanglier du zodiaque",
+      "French (US)": "figurine de sanglier du zodiaque",
+      "German": "Tierkreis Eber Figur",
+      "Spanish": "estatuilla de jabalí del zodiaco",
+      "Spanish (US)": "estatuilla de jabalí del zodiaco",
+      "Italian": "Figurina di cinghiale dello zodiaco",
+      "Dutch": "dierenriem zwijn beeldje",
+      "Russian": "фигурка зодиакального кабана"
+    },
+    "zodiac pig figurine": {
+      "English": "zodiac pig figurine",
+      "English (Europe)": "zodiac pig figurine",
+      "French": "figurine cochon du zodiaque",
+      "French (US)": "figurine cochon du zodiaque",
+      "German": "Sternzeichen Schwein Figur",
+      "Spanish": "estatuilla de cerdo del zodiaco",
+      "Spanish (US)": "estatuilla de cerdo del zodiaco",
+      "Italian": "Figurina di maiale dello zodiaco",
+      "Dutch": "dierenriem varken beeldje",
+      "Russian": "зодиакальная фигурка свиньи"
+    },
+    "tee with silicone bib": {
+      "English": "tee with silicone bib",
+      "English (Europe)": "tee with silicone bib",
+      "French": "t-shirt avec bavoir en silicone",
+      "French (US)": "t-shirt avec bavoir en silicone",
+      "German": "T-Shirt mit Silikonlätzchen",
+      "Spanish": "camiseta con babero de silicona",
+      "Spanish (US)": "camiseta con babero de silicona",
+      "Italian": "maglietta con pettorina in silicone",
+      "Dutch": "T-shirt met siliconen slabbetje",
+      "Russian": "футболка с силиконовым нагрудником"
     }
   },
   "Special Translations": {},
@@ -23305,13 +23527,15 @@
       "English": "Gourmet",
       "English (Europe)": "Gourmet",
       "French": "Gastronomique",
-      "French (US)": "Gastronomique"
+      "French (US)": "Gastronomique",
+      "German": "Gourmet "
     },
     "culinary": {
       "English": "Culinary",
       "English (Europe)": "Culinary",
       "French": "Culinaire",
-      "French (US)": "Culinaire"
+      "French (US)": "Culinaire",
+      "German": "Kulinarisch"
     },
     "sweets": {
       "English": "Sweets",
@@ -23331,13 +23555,15 @@
       "English": "Epicure",
       "English (Europe)": "Epicure",
       "French": "Gourmet",
-      "French (US)": "Gourmet"
+      "French (US)": "Gourmet",
+      "German": "Genießer"
     },
     "glutton": {
       "English": "Glutton",
       "English (Europe)": "Glutton",
       "French": "Gourmand",
-      "French (US)": "Gourmand"
+      "French (US)": "Gourmand",
+      "German": "Vielfraß"
     },
     "nice to meet you, gyroid!": {
       "English": "Nice to Meet You, Gyroid!",
@@ -23580,7 +23806,8 @@
     },
     "impressive": {
       "English": "Impressive",
-      "English (Europe)": "Impressive"
+      "English (Europe)": "Impressive",
+      "German": "Beeindruckend"
     },
     "boater": {
       "English": "Boater",

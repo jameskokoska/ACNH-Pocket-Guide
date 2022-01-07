@@ -29,6 +29,11 @@ class FoodPopup extends Component {
       <InfoLine
         image={require("../assets/icons/colorPalette.png")} 
         item={this.props.item}
+        textProperty={["Exchange Currency"]}
+      />
+      <InfoLine
+        image={require("../assets/icons/colorPalette.png")} 
+        item={this.props.item}
         textProperty={["Color 1"]}
         textProperty2={["Color 2"]}
       />

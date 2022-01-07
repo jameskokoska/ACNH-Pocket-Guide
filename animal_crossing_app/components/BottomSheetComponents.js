@@ -240,6 +240,15 @@ export class InfoLine extends Component {
       text = commas(parseInt(parseInt(this.props.item[this.props.textProperty])*1.2))
     }
 
+    //handle poki
+    if(this.props.textProperty[0]!==undefined && this.props.textProperty[0]==="Exchange Currency" && this.props.item[this.props.textProperty[0]]==="Poki"){
+      if(this.props.item["Exchange Price"]!==undefined){
+        imageSource = <Image style={styles.infoLineImage} source={require("../assets/icons/pokiBag.png")}/>;
+        text = commas(this.props.item["Exchange Price"])
+        ending= " " + attemptToTranslate("poki");
+      }
+    }
+
     if(this.props.textProperty.includes("Material")){
       imageSource =  getMaterialImage(this.props.item[this.props.textProperty]);
       if(imageSource === ""){
@@ -254,11 +263,12 @@ export class InfoLine extends Component {
         />
       }
     }
+
     if(this.props.birthday){
-      
       var textSplit = this.props.item[this.props.textProperty].split("/")
       text = doWeSwapDate()===true ? textSplit[1] + " " + attemptToTranslate(getMonth(textSplit[0]-1)) : attemptToTranslate(getMonth(textSplit[0]-1)) + " " + textSplit[1]
     }
+
     var colors1 = <View/>
     var colors2 = <View/>
     if(this.props.textProperty[0]==="Color 1"&&this.props.textProperty2[0]==="Color 2"){

@@ -570,21 +570,21 @@
     ],
     "Main": [
         {
-            "English": "898 items",
-            "English (Europe)": "898 items",
-            "French": "887 items (11 items missing)",
-            "French (US)": "887 items (11 items missing)",
-            "German": "898 items",
-            "Spanish": "887 items (11 items missing)",
-            "Spanish (US)": "883 items (15 items missing)",
-            "Russian": "898 items",
-            "Italian": "897 items (1 items missing)",
-            "Dutch": "872 items (26 items missing)",
-            "Chinese": "896 items (2 items missing)",
-            "Chinese (Traditional)": "0 items (898 items missing)",
-            "Japanese": "0 items (898 items missing)",
-            "Korean": "0 items (898 items missing)",
-            "Portuguese": "895 items (3 items missing)"
+            "English": "900 items",
+            "English (Europe)": "900 items",
+            "French": "887 items (13 items missing)",
+            "French (US)": "887 items (13 items missing)",
+            "German": "900 items",
+            "Spanish": "887 items (13 items missing)",
+            "Spanish (US)": "883 items (17 items missing)",
+            "Russian": "898 items (2 items missing)",
+            "Italian": "897 items (3 items missing)",
+            "Dutch": "872 items (28 items missing)",
+            "Chinese": "896 items (4 items missing)",
+            "Chinese (Traditional)": "0 items (900 items missing)",
+            "Japanese": "0 items (900 items missing)",
+            "Korean": "0 items (900 items missing)",
+            "Portuguese": "895 items (5 items missing)"
         },
         {
             "English": "Home",
@@ -10925,8 +10925,8 @@
             "Portuguese": "Madrugador"
         },
         {
-            "English": "Night owl",
-            "English (Europe)": "Night owl",
+            "English": "Night Owl",
+            "English (Europe)": "Night Owl",
             "French": "Oiseau de nuit",
             "French (US)": "Oiseau de nuit",
             "German": "Nachteulenverordnung",
@@ -13077,25 +13077,35 @@
             "Italian": "Prendi in considerazione l'idea di supportare questa app senza pubblicità",
             "Dutch": "Overweeg deze advertentievrije app te ondersteunen",
             "Portuguese": "Considere oferecer suporte a este aplicativo gratuito"
+        },
+        {
+            "English": "Invert Filters...",
+            "English (Europe)": "Invert Filters...",
+            "German": "Filter invertieren..."
+        },
+        {
+            "English": "Filter Out",
+            "English (Europe)": "Filter Out",
+            "German": "Aussortieren"
         }
     ],
     "Sources": [
         {
-            "English": "160 items",
-            "English (Europe)": "160 items",
-            "French": "123 items (37 items missing)",
-            "French (US)": "121 items (39 items missing)",
-            "German": "159 items (1 items missing)",
-            "Spanish": "95 items (65 items missing)",
-            "Spanish (US)": "50 items (110 items missing)",
-            "Italian": "129 items (31 items missing)",
-            "Dutch": "80 items (80 items missing)",
-            "Chinese": "0 items (160 items missing)",
-            "Chinese (Traditional)": "0 items (160 items missing)",
-            "Japanese": "0 items (160 items missing)",
-            "Korean": "0 items (160 items missing)",
-            "Russian": "99 items (61 items missing)",
-            "Portuguese": "99 items (61 items missing)"
+            "English": "161 items",
+            "English (Europe)": "161 items",
+            "French": "123 items (38 items missing)",
+            "French (US)": "121 items (40 items missing)",
+            "German": "159 items (2 items missing)",
+            "Spanish": "95 items (66 items missing)",
+            "Spanish (US)": "50 items (111 items missing)",
+            "Italian": "129 items (32 items missing)",
+            "Dutch": "80 items (81 items missing)",
+            "Chinese": "0 items (161 items missing)",
+            "Chinese (Traditional)": "0 items (161 items missing)",
+            "Japanese": "0 items (161 items missing)",
+            "Korean": "0 items (161 items missing)",
+            "Russian": "99 items (62 items missing)",
+            "Portuguese": "99 items (62 items missing)"
         },
         {
             "English": "Nook Shopping Seasonal",
@@ -14691,25 +14701,29 @@
             "English": "DJ KK concert",
             "English (Europe)": "DJ KK concert",
             "German": "Musikfestival (HHP)"
+        },
+        {
+            "English": "HHP Apparel Shop",
+            "English (Europe)": "HHP Apparel Shop"
         }
     ],
     "Source Notes": [
         {
-            "English": "172 items",
-            "English (Europe)": "172 items",
-            "French": "151 items (21 items missing)",
-            "French (US)": "151 items (21 items missing)",
-            "German": "172 items",
-            "Spanish": "123 items (49 items missing)",
-            "Spanish (US)": "114 items (58 items missing)",
-            "Italian": "13 items (159 items missing)",
-            "Dutch": "29 items (143 items missing)",
-            "Chinese": "0 items (172 items missing)",
-            "Chinese (Traditional)": "0 items (172 items missing)",
-            "Japanese": "0 items (172 items missing)",
-            "Korean": "0 items (172 items missing)",
-            "Russian": "10 items (162 items missing)",
-            "Portuguese": "151 items (21 items missing)"
+            "English": "175 items",
+            "English (Europe)": "175 items",
+            "French": "151 items (24 items missing)",
+            "French (US)": "151 items (24 items missing)",
+            "German": "172 items (3 items missing)",
+            "Spanish": "123 items (52 items missing)",
+            "Spanish (US)": "114 items (61 items missing)",
+            "Italian": "13 items (162 items missing)",
+            "Dutch": "29 items (146 items missing)",
+            "Chinese": "0 items (175 items missing)",
+            "Chinese (Traditional)": "0 items (175 items missing)",
+            "Japanese": "0 items (175 items missing)",
+            "Korean": "0 items (175 items missing)",
+            "Russian": "10 items (165 items missing)",
+            "Portuguese": "151 items (24 items missing)"
         },
         {
             "English": "Available in Nook's Cranny (either upgrade tier) in the unique furniture slot",
@@ -16312,6 +16326,18 @@
             "English": "Available from Tom Nook during Countdown",
             "English (Europe)": "Available from Tom Nook during Countdown",
             "German": "Von Tom Nook während des Countdowns"
+        },
+        {
+            "English": "Available during DJ KK festival",
+            "English (Europe)": "Available during DJ KK festival"
+        },
+        {
+            "English": "Only available as a work clothes for Paradise Planning",
+            "English (Europe)": "Only available as a work clothes for Paradise Planning"
+        },
+        {
+            "English": "Obtain Turkey Day Recipes from Franklin or buy it from Nook's Cranny",
+            "English (Europe)": "Obtain Turkey Day Recipes from Franklin or buy it from Nook's Cranny"
         }
     ],
     "Event Names": [
@@ -16947,21 +16973,21 @@
     ],
     "Missing Items": [
         {
-            "English": "53 items",
-            "English (Europe)": "53 items",
-            "French": "53 items",
-            "French (US)": "53 items",
-            "German": "45 items (8 items missing)",
-            "Spanish": "44 items (9 items missing)",
-            "Spanish (US)": "52 items (1 items missing)",
-            "Italian": "41 items (12 items missing)",
-            "Dutch": "25 items (28 items missing)",
-            "Chinese": "27 items (26 items missing)",
-            "Chinese (Traditional)": "25 items (28 items missing)",
-            "Japanese": "25 items (28 items missing)",
-            "Korean": "25 items (28 items missing)",
-            "Russian": "45 items (8 items missing)",
-            "Portuguese": "0 items (53 items missing)"
+            "English": "66 items",
+            "English (Europe)": "66 items",
+            "French": "66 items",
+            "French (US)": "66 items",
+            "German": "66 items",
+            "Spanish": "65 items (1 items missing)",
+            "Spanish (US)": "65 items (1 items missing)",
+            "Italian": "62 items (4 items missing)",
+            "Dutch": "46 items (20 items missing)",
+            "Chinese": "27 items (39 items missing)",
+            "Chinese (Traditional)": "25 items (41 items missing)",
+            "Japanese": "25 items (41 items missing)",
+            "Korean": "25 items (41 items missing)",
+            "Russian": "66 items",
+            "Portuguese": "0 items (66 items missing)"
         },
         {
             "English": "coral Nook Inc. aloha shirt",
@@ -17584,56 +17610,252 @@
             "English (Europe)": "blue cobblestones",
             "French": "façade à pierres bleue",
             "French (US)": "façade à pierres bleue",
-            "Spanish (US)": "Blau-Granitfassade"
+            "German": "blaues Kopfsteinpflaster",
+            "Spanish": "Blau-Granitfassade",
+            "Spanish (US)": "Blau-Granitfassade",
+            "Italian": "ciottoli blu",
+            "Dutch": "blauwe kasseien",
+            "Russian": "голубые булыжники"
         },
         {
             "English": "brown cobblestones",
             "English (Europe)": "brown cobblestones",
             "French": "façade à pierres brune",
             "French (US)": "façade à pierres brune",
-            "Spanish (US)": "Braun-Granitfassade"
+            "German": "braunes Kopfsteinpflaster",
+            "Spanish": "Braun-Granitfassade",
+            "Spanish (US)": "Braun-Granitfassade",
+            "Italian": "ciottoli marroni",
+            "Dutch": "bruine kasseien",
+            "Russian": "коричневые булыжники"
         },
         {
             "English": "chic cobblestones",
             "English (Europe)": "chic cobblestones",
             "French": "façade à pierres chic",
             "French (US)": "façade à pierres chic",
-            "Spanish (US)": "Schick-Granitfassade"
+            "German": "schickes Kopfsteinpflaster",
+            "Spanish": "Schick-Granitfassade",
+            "Spanish (US)": "Schick-Granitfassade",
+            "Italian": "ciottoli chic",
+            "Dutch": "chique kasseien",
+            "Russian": "шикарные булыжники"
         },
         {
             "English": "cobblestones",
             "English (Europe)": "cobblestones",
             "French": "façade à pierres gris clair",
             "French (US)": "façade à pierres gris clair",
-            "Spanish (US)": "Hellgrau-Granitfassade"
+            "German": "Kopfsteinpflaster",
+            "Spanish": "Hellgrau-Granitfassade",
+            "Spanish (US)": "Hellgrau-Granitfassade",
+            "Italian": "ciottoli",
+            "Dutch": "kasseien",
+            "Russian": "булыжники"
         },
         {
             "English": "gray cobblestones",
             "English (Europe)": "gray cobblestones",
             "French": "façade à pierres grise",
             "French (US)": "façade à pierres grise",
-            "Spanish (US)": "Grau-Granitfassade"
+            "German": "graues Kopfsteinpflaster",
+            "Spanish": "Grau-Granitfassade",
+            "Spanish (US)": "Grau-Granitfassade",
+            "Italian": "ciottoli grigi",
+            "Dutch": "grijze kasseien",
+            "Russian": "серые булыжники"
         },
         {
             "English": "green cobblestones",
             "English (Europe)": "green cobblestones",
             "French": "façade à pierres verte",
             "French (US)": "façade à pierres verte",
-            "Spanish (US)": "Grün-Granitfassade"
+            "German": "Grüne Kopfsteinpflaster",
+            "Spanish": "Grün-Granitfassade",
+            "Spanish (US)": "Grün-Granitfassade",
+            "Italian": "ciottoli verdi",
+            "Dutch": "groene kasseien",
+            "Russian": "зеленые булыжники"
         },
         {
             "English": "orange cobblestones",
             "English (Europe)": "orange cobblestones",
             "French": "façade à pierres orange",
             "French (US)": "façade à pierres orange",
-            "Spanish (US)": "Orange-Granitfassade"
+            "German": "orangefarbenes Kopfsteinpflaster",
+            "Spanish": "Orange-Granitfassade",
+            "Spanish (US)": "Orange-Granitfassade",
+            "Italian": "ciottoli arancioni",
+            "Dutch": "oranje kasseien",
+            "Russian": "оранжевые булыжники"
         },
         {
             "English": "red cobblestones",
             "English (Europe)": "red cobblestones",
             "French": "façade à pierres rouge",
             "French (US)": "façade à pierres rouge",
-            "Spanish (US)": "Rot-Granitfassade"
+            "German": "rotes Kopfsteinpflaster",
+            "Spanish": "Rot-Granitfassade",
+            "Spanish (US)": "Rot-Granitfassade",
+            "Italian": "ciottoli rossi",
+            "Dutch": "rode kasseien",
+            "Russian": "красные булыжники"
+        },
+        {
+            "English": "fish-and-chips",
+            "English (Europe)": "fish-and-chips",
+            "French": "poisson et frites",
+            "French (US)": "poisson et frites",
+            "German": "Fisch und Pommes",
+            "Spanish": "pescado y papas fritas",
+            "Spanish (US)": "pescado y papas fritas",
+            "Italian": "pesce e patatine",
+            "Dutch": "Fish and chips",
+            "Russian": "рыба и чипсы"
+        },
+        {
+            "English": "zodiac rat figurine",
+            "English (Europe)": "zodiac rat figurine",
+            "French": "figurine de rat du zodiaque",
+            "French (US)": "figurine de rat du zodiaque",
+            "German": "Sternzeichen Ratte Figur",
+            "Spanish": "estatuilla de rata del zodiaco",
+            "Spanish (US)": "estatuilla de rata del zodiaco",
+            "Italian": "statuetta di topo zodiacale",
+            "Dutch": "dierenriem rat beeldje",
+            "Russian": "фигурка зодиакальной крысы"
+        },
+        {
+            "English": "zodiac rabbit figurine",
+            "English (Europe)": "zodiac rabbit figurine",
+            "French": "figurine de lapin du zodiaque",
+            "French (US)": "figurine de lapin du zodiaque",
+            "German": "Tierkreis Hase Figur",
+            "Spanish": "estatuilla de conejo del zodiaco",
+            "Spanish (US)": "estatuilla de conejo del zodiaco",
+            "Italian": "Figurina del coniglio dello zodiaco",
+            "Dutch": "dierenriem konijn beeldje",
+            "Russian": "фигурка зодиакального кролика"
+        },
+        {
+            "English": "zodiac dragon figurine",
+            "English (Europe)": "zodiac dragon figurine",
+            "French": "figurine de dragon du zodiaque",
+            "French (US)": "figurine de dragon du zodiaque",
+            "German": "Tierkreis Drache Figur",
+            "Spanish": "estatuilla del dragón del zodiaco",
+            "Spanish (US)": "estatuilla del dragón del zodiaco",
+            "Italian": "Figurina del drago dello zodiaco",
+            "Dutch": "dierenriem draak beeldje",
+            "Russian": "зодиакальная фигурка дракона"
+        },
+        {
+            "English": "zodiac snake figurine",
+            "English (Europe)": "zodiac snake figurine",
+            "French": "figurine de serpent du zodiaque",
+            "French (US)": "figurine de serpent du zodiaque",
+            "German": "Sternzeichen Schlangenfigur",
+            "Spanish": "figura de serpiente del zodiaco",
+            "Spanish (US)": "figura de serpiente del zodiaco",
+            "Italian": "statuetta del serpente dello zodiaco",
+            "Dutch": "dierenriem slang beeldje",
+            "Russian": "фигурка зодиакальной змеи"
+        },
+        {
+            "English": "zodiac horse figurine",
+            "English (Europe)": "zodiac horse figurine",
+            "French": "figurine cheval du zodiaque",
+            "French (US)": "figurine cheval du zodiaque",
+            "German": "Sternzeichen Pferd Figur",
+            "Spanish": "estatuilla del caballo del zodiaco",
+            "Spanish (US)": "estatuilla del caballo del zodiaco",
+            "Italian": "Figurina del cavallo dello zodiaco",
+            "Dutch": "dierenriem paard beeldje",
+            "Russian": "зодиакальная фигурка лошади"
+        },
+        {
+            "English": "zodiac sheep figurine",
+            "English (Europe)": "zodiac sheep figurine",
+            "French": "figurine de mouton du zodiaque",
+            "French (US)": "figurine de mouton du zodiaque",
+            "German": "Tierkreis Schaf Figur",
+            "Spanish": "estatuilla de oveja del zodiaco",
+            "Spanish (US)": "estatuilla de oveja del zodiaco",
+            "Italian": "statuetta di pecora dello zodiaco",
+            "Dutch": "dierenriem schaap beeldje",
+            "Russian": "зодиакальная фигурка овцы"
+        },
+        {
+            "English": "zodiac monkey figurine",
+            "English (Europe)": "zodiac monkey figurine",
+            "French": "figurine de singe du zodiaque",
+            "French (US)": "figurine de singe du zodiaque",
+            "German": "Sternzeichen Affenfigur",
+            "Spanish": "estatuilla del mono del zodiaco",
+            "Spanish (US)": "estatuilla del mono del zodiaco",
+            "Italian": "statuetta della scimmia dello zodiaco",
+            "Dutch": "dierenriem aap beeldje",
+            "Russian": "зодиакальная фигурка обезьяны"
+        },
+        {
+            "English": "zodiac rooster figurine",
+            "English (Europe)": "zodiac rooster figurine",
+            "French": "figurine coq du zodiaque",
+            "French (US)": "figurine coq du zodiaque",
+            "German": "Sternzeichen Hahn Figur",
+            "Spanish": "estatuilla del gallo del zodiaco",
+            "Spanish (US)": "estatuilla del gallo del zodiaco",
+            "Italian": "Figurina del gallo dello zodiaco",
+            "Dutch": "dierenriem haan beeldje",
+            "Russian": "фигурка зодиакального петуха"
+        },
+        {
+            "English": "zodiac dog figurine",
+            "English (Europe)": "zodiac dog figurine",
+            "French": "figurine de chien du zodiaque",
+            "French (US)": "figurine de chien du zodiaque",
+            "German": "Sternzeichen Hundefigur",
+            "Spanish": "estatuilla del perro del zodiaco",
+            "Spanish (US)": "estatuilla del perro del zodiaco",
+            "Italian": "Figurina del cane dello zodiaco",
+            "Dutch": "dierenriem hond beeldje",
+            "Russian": "зодиакальная фигурка собаки"
+        },
+        {
+            "English": "zodiac boar figurine",
+            "English (Europe)": "zodiac boar figurine",
+            "French": "figurine de sanglier du zodiaque",
+            "French (US)": "figurine de sanglier du zodiaque",
+            "German": "Tierkreis Eber Figur",
+            "Spanish": "estatuilla de jabalí del zodiaco",
+            "Spanish (US)": "estatuilla de jabalí del zodiaco",
+            "Italian": "Figurina di cinghiale dello zodiaco",
+            "Dutch": "dierenriem zwijn beeldje",
+            "Russian": "фигурка зодиакального кабана"
+        },
+        {
+            "English": "zodiac pig figurine",
+            "English (Europe)": "zodiac pig figurine",
+            "French": "figurine cochon du zodiaque",
+            "French (US)": "figurine cochon du zodiaque",
+            "German": "Sternzeichen Schwein Figur",
+            "Spanish": "estatuilla de cerdo del zodiaco",
+            "Spanish (US)": "estatuilla de cerdo del zodiaco",
+            "Italian": "Figurina di maiale dello zodiaco",
+            "Dutch": "dierenriem varken beeldje",
+            "Russian": "зодиакальная фигурка свиньи"
+        },
+        {
+            "English": "tee with silicone bib",
+            "English (Europe)": "tee with silicone bib",
+            "French": "t-shirt avec bavoir en silicone",
+            "French (US)": "t-shirt avec bavoir en silicone",
+            "German": "T-Shirt mit Silikonlätzchen",
+            "Spanish": "camiseta con babero de silicona",
+            "Spanish (US)": "camiseta con babero de silicona",
+            "Italian": "maglietta con pettorina in silicone",
+            "Dutch": "T-shirt met siliconen slabbetje",
+            "Russian": "футболка с силиконовым нагрудником"
         }
     ],
     "Special Translations": [
@@ -18090,7 +18312,7 @@
             "English (Europe)": "904 items (9 items missing)",
             "French": "850 items (63 items missing)",
             "French (US)": "845 items (68 items missing)",
-            "German": "908 items (5 items missing)",
+            "German": "913 items",
             "Spanish": "105 items (808 items missing)",
             "Spanish (US)": "0 items (913 items missing)",
             "Italian": "0 items (913 items missing)",
@@ -24356,13 +24578,15 @@
             "English": "Gourmet",
             "English (Europe)": "Gourmet",
             "French": "Gastronomique",
-            "French (US)": "Gastronomique"
+            "French (US)": "Gastronomique",
+            "German": "Gourmet "
         },
         {
             "English": "Culinary",
             "English (Europe)": "Culinary",
             "French": "Culinaire",
-            "French (US)": "Culinaire"
+            "French (US)": "Culinaire",
+            "German": "Kulinarisch"
         },
         {
             "English": "Sweets",
@@ -24382,13 +24606,15 @@
             "English": "Epicure",
             "English (Europe)": "Epicure",
             "French": "Gourmet",
-            "French (US)": "Gourmet"
+            "French (US)": "Gourmet",
+            "German": "Genießer"
         },
         {
             "English": "Glutton",
             "English (Europe)": "Glutton",
             "French": "Gourmand",
-            "French (US)": "Gourmand"
+            "French (US)": "Gourmand",
+            "German": "Vielfraß"
         },
         {
             "English": "Nice to Meet You, Gyroid!",
@@ -24631,7 +24857,8 @@
         },
         {
             "English": "Impressive",
-            "English (Europe)": "Impressive"
+            "English (Europe)": "Impressive",
+            "German": "Beeindruckend"
         },
         {
             "English": "Boater",

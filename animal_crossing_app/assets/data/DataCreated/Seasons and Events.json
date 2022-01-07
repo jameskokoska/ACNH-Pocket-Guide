@@ -842,6 +842,20 @@
     "Unique Entry ID": "cBXYqjysyynrFu7fw"
   },
   {
+    "Name": "New Year's Eve (Russia)",
+    "Type": "Nook Shopping event",
+    "Version Added": "1.6.0",
+    "Version Last Updated": "2.0.0",
+    "Year": "2021",
+    "Dates (Northern Hemisphere)": "December 22 – December 31",
+    "Dates (Southern Hemisphere)": "December 22 – December 31",
+    "Display Name": "New Year's Eve",
+    "Internal Label": "RoshiaNewYear",
+    "Unlock Date": "2021-01-01",
+    "Unlock Method": "NTP",
+    "Unique Entry ID": "7tSXFbSyGohRqRcAd"
+  },
+  {
     "Name": "Shōgatsu (1)",
     "Type": "Nook Shopping event",
     "Version Added": "1.6.0",
@@ -882,20 +896,6 @@
     "Unlock Date": "2021-01-01",
     "Unlock Method": "NTP",
     "Unique Entry ID": "j6XM3Bsw5vtskwub2"
-  },
-  {
-    "Name": "New Year's Day (Russia)",
-    "Type": "Nook Shopping event",
-    "Version Added": "1.6.0",
-    "Version Last Updated": "2.0.0",
-    "Year": "2021",
-    "Dates (Northern Hemisphere)": "December 22 – December 31",
-    "Dates (Southern Hemisphere)": "December 22 – December 31",
-    "Display Name": "New Year's Day",
-    "Internal Label": "RoshiaNewYear",
-    "Unlock Date": "2021-01-01",
-    "Unlock Method": "NTP",
-    "Unique Entry ID": "7tSXFbSyGohRqRcAd"
   },
   {
     "Name": "New Year's Day (World)",
@@ -1368,8 +1368,8 @@
     "Version Added": "1.10.0",
     "Version Last Updated": "2.0.0",
     "Year": "2022",
-    "Dates (Northern Hemisphere)": "July 9 – July 17",
-    "Dates (Southern Hemisphere)": "July 9 – July 17",
+    "Dates (Northern Hemisphere)": "July 9 – July 18",
+    "Dates (Southern Hemisphere)": "July 9 – July 18",
     "Display Name": "Marine Day",
     "Internal Label": "RegionMarineDay",
     "Unlock Date": "2021-07-08",

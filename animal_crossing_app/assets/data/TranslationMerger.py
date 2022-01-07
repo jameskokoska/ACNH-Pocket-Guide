@@ -6,7 +6,7 @@ def printEntries(listItems):
         print(itemList)
 
 print("Matching [Name] and [English]... from data.json and translations.json")
-propertiesToCheck = ["Name","Description", "Achievement Description","Achievement Criteria","Tier 1 Modifier", "Tier 2 Modifier", "Tier 3 Modifier", "Tier 4 Modifier", "Tier 5 Modifier", "Tier 6 Modifier", "Tier 1 Noun", "Tier 2 Noun", "Tier 3 Noun", "Tier 4 Noun", "Tier 5 Noun", "Tier 6 Noun"]
+propertiesToCheck = ["Name","Description", "Tag", "Achievement Description","Achievement Criteria","Tier 1 Modifier", "Tier 2 Modifier", "Tier 3 Modifier", "Tier 4 Modifier", "Tier 5 Modifier", "Tier 6 Modifier", "Tier 1 Noun", "Tier 2 Noun", "Tier 3 Noun", "Tier 4 Noun", "Tier 5 Noun", "Tier 6 Noun"]
 count=0
 length=0
 outputDictionary = {}

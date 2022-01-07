@@ -18,3 +18,4 @@ for sheet in data:
             output[sheet][item["English"].lower()] = item
 with open('Generated/translationsAppGenerated.json', 'w', encoding='utf8') as json_file:
     json.dump(output, json_file, ensure_ascii=False,indent=2)
+input("Done!")

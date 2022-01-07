@@ -152,7 +152,7 @@
     "Version Added": "1.0.0",
     "NPC ID": "boc",
     "Internal ID": "61",
-    "Birthday": "5/5",
+    "Birthday": "3/30",
     "Name Color": "#ab2629",
     "Bubble Color": "#ff9b43",
     "Icon Filename": "boc",
@@ -952,7 +952,7 @@
     "Version Added": "1.0.0",
     "NPC ID": "doc",
     "Internal ID": "66",
-    "Birthday": "12/17",
+    "Birthday": "7/4",
     "Name Color": "#38889e",
     "Bubble Color": "#ffdf50",
     "Icon Filename": "doc",
@@ -962,7 +962,7 @@
   {
     "Name": "Wisp",
     "Icon Image": "https://acnhcdn.com/latest/NpcIcon/gstA.png",
-    "Photo Image": "NA",
+    "Photo Image": "https://acnhcdn.com/latest/NpcPoster/NpcSpGst.png",
     "Gender": "Male",
     "Gender (Asia)": "Male",
     "Version Added": "1.0.0",
@@ -1006,5 +1006,33 @@
     "Icon Filename": "pyn",
     "Photo Filename": "NpcSpPyn",
     "Unique Entry ID": "MxHc7P8664FtCcd2y"
+  },
+  {
+    "Name": "Niko",
+    "Icon Image": "https://acnhcdn.com/latest/NpcIcon/mnc.png",
+    "Photo Image": "https://acnhcdn.com/latest/NpcPoster/NpcSpMnc.png",
+    "Gender": "Male",
+    "Gender (Asia)": "Male",
+    "Version Added": "2.0.0",
+    "NPC ID": "mnc",
+    "Internal ID": "68",
+    "Birthday": "1/11",
+    "Icon Filename": "mnc",
+    "Photo Filename": "NpcSpMnc",
+    "Unique Entry ID": "f2KPY2PxQiHX3ySo4"
+  },
+  {
+    "Name": "Wardell",
+    "Icon Image": "https://acnhcdn.com/latest/NpcIcon/man.png",
+    "Photo Image": "https://acnhcdn.com/latest/NpcPoster/NpcSpMan.png",
+    "Gender": "Male",
+    "Gender (Asia)": "Male",
+    "Version Added": "2.0.0",
+    "NPC ID": "man",
+    "Internal ID": "67",
+    "Birthday": "2/7",
+    "Icon Filename": "man",
+    "Photo Filename": "NpcSpMan",
+    "Unique Entry ID": "dWPNFAFQLTh6BBuBa"
   }
 ]

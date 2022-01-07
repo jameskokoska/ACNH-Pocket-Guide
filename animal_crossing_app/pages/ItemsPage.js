@@ -74,7 +74,6 @@ class FoodRouteClass extends React.PureComponent {
         popUpCornerImageLabelProperty={["Source"]}
         popUpContainer={[["FoodPopup",500]]}
         specialLabelColor={colors.fishText[global.darkMode]}
-        popUpPhraseProperty={["Stack Size"]}
       />
     )
   }

@@ -1,13 +1,21 @@
-export const gameVersion = "2.0.0"
-export const dataVersion = "4"
+export const gameVersion = ["2.0.0","2.0.4"]
+export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
--Fixed events that go over the year in length
--More features coming!
+-Updated database
+-Added Poki prices
+-Added Exchange Currency filters
+-Added new Zodiac items
+-Fixed wishlist icon for creatures and villagers
+-Decreased size of flower's page headers
+-Fixed capitalizations
+-Updated translations
 -
 -Added ability to invert filters/filter out items
 -Option located at the bottom of each filters list
+-
+-Fixed events that go over the year in length
 -
 -Significantly improved the speed of how translations are loaded
 -Added sorting for Food and Materials page

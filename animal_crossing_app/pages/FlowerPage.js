@@ -71,7 +71,7 @@ class SpecificFlowerPage extends Component {
 
       <View style={{marginTop: 100}}/>
       
-      <TextFont suffix={" "+attemptToTranslate(capitalize(this.props.flowerGroup))} bold={true} style={{fontSize: 36, marginLeft: 30, color:colors.textBlack[global.darkMode]}}>{"Hybrid"}</TextFont>
+      <TextFont suffix={" "+attemptToTranslate(capitalize(this.props.flowerGroup))} bold={true} style={{fontSize: 32, marginLeft: 30, color:colors.textBlack[global.darkMode], marginRight: 25}}>{"Hybrid"}</TextFont>
       <View style={{marginTop: 10}}/>
       {
         data[this.props.flowerGroup].map(flower=> (
