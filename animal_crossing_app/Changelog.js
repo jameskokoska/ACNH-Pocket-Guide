@@ -10,13 +10,15 @@ export const changelog = `
 -Added new Zodiac items
 -Fixed wishlist icon for creatures and villagers
 -Decreased size of flower's page headers
--Fixed capitalizations
+-Fixed missing Amiibo card images
 -Updated translations
 -Added item count at bottom of list
 -Faster loading times
 -Faster collection counting
 -Faster wishlist loading
 -Improved performance for large collections
+-Fixed capitalizations
+-Formatting/UI fixes
 -
 -Added ability to invert filters/filter out items
 -Option located at the bottom of each filters list
