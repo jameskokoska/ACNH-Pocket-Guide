@@ -16,6 +16,7 @@ export const changelog = `
 -Faster loading times
 -Faster collection counting
 -Faster wishlist loading
+-Improved performance for large collections
 -
 -Added ability to invert filters/filter out items
 -Option located at the bottom of each filters list
