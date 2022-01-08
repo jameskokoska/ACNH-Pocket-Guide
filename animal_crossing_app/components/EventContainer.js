@@ -94,7 +94,7 @@ export function getEventsDay(date, eventSections, showEventsIfInRange){
 
   villagerData.map( (villager, index)=>{
     if((date.getMonth()+1).toString()===(villager["Birthday"].split("/"))[0]&& date.getDate().toString()===(villager["Birthday"].split("/"))[1]){
-      if(eventSections["Old Resident Villager's Birthdays"] && global.collectionList.includes("oldResident"+"villagerCheckList"+villager["Name"])){
+      if(eventSections["Old Resident Villager's Birthdays"] && global.collectionListIndexed["oldResident"+"villagerCheckList"+villager["Name"]]===true){
         totalEvents.push({
           name: capitalize(translateBirthday(villager["NameLanguage"])),
           time: "All day",
@@ -109,7 +109,7 @@ export function getEventsDay(date, eventSections, showEventsIfInRange){
         if(eventSections["App notifications"]){
           schedulePushNotification(date,eventSections["Set Notification Time"],"🎂 " + capitalize(translateBirthday(villager["NameLanguage"])),attemptToTranslateItem("All day"));
         }
-      } else if(eventSections["Favorite Villager's Birthdays"] && global.collectionList.includes("villagerCheckList"+villager["Name"])){
+      } else if(eventSections["Favorite Villager's Birthdays"] && global.collectionListIndexed["villagerCheckList"+villager["Name"]]===true){
         totalEvents.push({
           name: capitalize(translateBirthday(attemptToTranslateItem(villager["NameLanguage"]))),
           time: "All day",

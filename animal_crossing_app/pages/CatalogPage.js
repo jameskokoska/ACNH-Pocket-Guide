@@ -6,7 +6,7 @@ import TextFont from '../components/TextFont'
 import StoreHoursContainer from '../components/StoreHoursContainer';
 import colors from '../Colors'
 import ButtonComponent from "../components/ButtonComponent"
-import {attemptToTranslate, collectionListSave, checkOff, loadGlobalData} from "../LoadJsonData"
+import {attemptToTranslate, collectionListSave, checkOff, loadGlobalData, indexCollectionList} from "../LoadJsonData"
 import Popup from '../components/Popup';
 
 
@@ -81,6 +81,7 @@ class CatalogPage extends Component {
       await loadGlobalData();
       global.collectionList = Array.from(new Set(collectionList));
       collectionListSave();
+      global.collectionListIndexed = indexCollectionList(global.collectionList)
       console.log(totalErrorItems)
       this.setState({
         method: this.method,

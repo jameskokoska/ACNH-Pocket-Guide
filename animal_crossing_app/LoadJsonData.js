@@ -15,7 +15,7 @@ export async function getStorage(storageKey, defaultValue){
 }
 
 export function inWishlist(checkListKeyString){
-  if(global.collectionList.includes("wishlist"+checkListKeyString)){
+  if(global.collectionListIndexed["wishlist"+checkListKeyString]===true){
     return true;
   } else {
     return false
@@ -23,7 +23,7 @@ export function inWishlist(checkListKeyString){
 }
 
 export function inChecklist(checkListKeyString){
-  if(global.collectionList.includes(checkListKeyString)){
+  if(global.collectionListIndexed[checkListKeyString]===true){
     return true;
   } else {
     return false
@@ -31,7 +31,7 @@ export function inChecklist(checkListKeyString){
 }
 
 export function inMuseum(checkListKeyString, shouldCheck){
-  if(shouldCheck && global.collectionList.includes("museum"+checkListKeyString)){
+  if(shouldCheck && global.collectionListIndexed["museum"+checkListKeyString]===true){
     return true;
   } else {
     return false
@@ -39,7 +39,7 @@ export function inMuseum(checkListKeyString, shouldCheck){
 }
 
 export function inVillager(checkListKeyString, shouldCheck){
-  if(shouldCheck && global.collectionList.includes("oldResident"+checkListKeyString)){
+  if(shouldCheck && global.collectionListIndexed["oldResident"+checkListKeyString]===true){
     return true;
   } else {
     return false
@@ -47,7 +47,7 @@ export function inVillager(checkListKeyString, shouldCheck){
 }
 
 export function inVillagerPhoto(checkListKeyString, shouldCheck){
-  if(shouldCheck && global.collectionList.includes("havePhoto"+checkListKeyString)){
+  if(shouldCheck && global.collectionListIndexed["havePhoto"+checkListKeyString]===true){
     return true;
   } else {
     return false
@@ -165,10 +165,8 @@ export async function countCollectionSpecial(datakeyName){
       } else {
         total++
         previousVariation=database[i][k]["Name"]
-        for(let j = 0; j<global.collectionList.length; j++){
-          if(database[i][k]["checkListKey"]===global.collectionList[j] && !global.collectionList[j].includes("wishlist") && !global.collectionList[j].includes("museum")){
-            count++
-          }
+        if(global.collectionListIndexed[database[i][k]["checkListKey"]]===true){
+          count++
         }
       }
     }
@@ -317,16 +315,18 @@ export function checkOff(checkListKey, collected, type="", indexSpecial="", vibr
   if(collected===false){
     vibrate ? Vibration.vibrate([0,10,100,20]) : "";
     global.collectionList.push(type+checkListKey+indexSpecial)
+    global.collectionListIndexed[type+checkListKey+indexSpecial]=true
   } else {
     vibrate ? Vibration.vibrate(10) : "";
     collectionListRemove(type+checkListKey+indexSpecial)
+    global.collectionListIndexed[type+checkListKey+indexSpecial]=false
   }
   collectionListSave();
   //console.log(global.collectionList)
 }
 
 function collectionListRemove(checkListKey){
-  if(global.collectionList.includes(checkListKey)){
+  if(global.collectionListIndexed[checkListKey]===true){
     global.collectionList = global.collectionList.filter(e => e !== checkListKey)
     global.collectionList = global.collectionList.filter(e => e !== "")
   }
@@ -1245,14 +1245,9 @@ export function translateDateRange(dateRange){
 export function getCurrentVillagerObjects(){
   const data = require("./assets/data/DataCreated/Villagers.json");
   var currentVillagers = [];
-  for(var i=0; i<global.collectionList.length; i++){
-    if(global.collectionList[i].includes("villagerCheckList")){
-      var villagerName = global.collectionList[i].replace("villagerCheckList","");
-      for(var z=0; z<data.length; z++){
-        if(data[z]["Name"]===villagerName){
-          currentVillagers.push(data[z]);
-        }
-      }
+  for(var z=0; z<data.length; z++){
+    if(global.collectionListIndexed["villagerCheckList"+data[z]["Name"]]===true){
+      currentVillagers.push(data[z]);
     }
   }
   return currentVillagers;
@@ -1513,4 +1508,16 @@ export function anythingCraftable(materialName){
 
 export function isInteger(value) {
   return /^\d+$/.test(value);
+}
+
+export function indexCollectionList(collectionList){
+  console.log(collectionList)
+  let collectionListOut = {}
+  for(let entry of collectionList){
+    if(entry==="---ACNH Pocket Guide Backup---"||entry===""){
+      continue
+    }
+    collectionListOut[entry]=true
+  }
+  return collectionListOut
 }

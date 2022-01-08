@@ -211,7 +211,7 @@ class ListItem extends React.Component{
       let lowerWishlistIcon = false;
       if(this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]!=="" && (this.props.textProperty2[this.props.item.dataSet]==="(DIY)")){
         lowerWishlistIcon = true
-      } else if (this.state.museum || this.state.villager){
+      } else if (this.checkMuseumButton() || this.checkVillagerPhotoButton()){
         lowerWishlistIcon = true
       }
       return (

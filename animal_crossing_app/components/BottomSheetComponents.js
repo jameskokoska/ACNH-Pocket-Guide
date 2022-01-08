@@ -462,7 +462,7 @@ export function howManyVariationsChecked(allVariations){
   var totalChecked = 0;
   for(var i=0; i<allVariations.length; i++){
     var extraIndex = i===0 ? "0":"";
-    if(global.collectionList.includes(allVariations[i]["checkListKey"]+extraIndex)){
+    if(global.collectionListIndexed[allVariations[i]["checkListKey"]+extraIndex]===true){
       totalChecked++
     }
   }
@@ -474,7 +474,7 @@ class VariationItem extends Component{
     super(props);
     this.extraIndex = this.props.index===0 ? "0":"";
     this.state = {
-      checked: global.collectionList.includes(this.props.item["checkListKey"]+this.extraIndex),
+      checked: global.collectionListIndexed[this.props.item["checkListKey"]+this.extraIndex]===true,
       wishlist:this.props.wishlist
     }
   }

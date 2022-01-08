@@ -11,6 +11,7 @@ export const changelog = `
 -Decreased size of flower's page headers
 -Fixed capitalizations
 -Updated translations
+-Added item count at bottom of list
 -
 -Added ability to invert filters/filter out items
 -Option located at the bottom of each filters list

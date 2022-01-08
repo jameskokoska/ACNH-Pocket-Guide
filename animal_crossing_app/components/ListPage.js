@@ -2,7 +2,7 @@ import React, {Component, useState, useRef, useEffect} from 'react';
 import {TouchableOpacity, View, Animated,StyleSheet,RefreshControl} from 'react-native';
 import Header, {HeaderLoading, HeaderActive} from './Header';
 import ListItem from './ListItem';
-import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters, isInteger} from "../LoadJsonData"
+import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters, isInteger, attemptToTranslate} from "../LoadJsonData"
 import {Dimensions } from "react-native";
 import {Variations,Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from './BottomSheetComponents';
 import colors from "../Colors.js"
@@ -255,7 +255,7 @@ function ListPage(props){
           //optimization for loading
           //remove if doesn't satisfy main filter before trying other stuff
           if(props.wishlistItems || searchActual.includes("Wishlist")){
-            if(!global.collectionList.includes("wishlist"+item["checkListKey"])){
+            if(!global.collectionListIndexed["wishlist"+item["checkListKey"]]===true){
               continue;
             }
           }else if(props.newItems){
@@ -291,7 +291,7 @@ function ListPage(props){
               //   filterFound = false;
               //   break;
               // } 
-              if(searchActual.includes("Wishlist") && props.wishlistItems && global.collectionList.includes("wishlist"+item["checkListKey"])){
+              if(searchActual.includes("Wishlist") && props.wishlistItems && global.collectionListIndexed["wishlist"+item["checkListKey"]]===true){
                 filterFound = true;
                 break;
               } else if (searchActual.includes("Wishlist") && props.wishlistItems){
@@ -329,7 +329,7 @@ function ListPage(props){
               var searchCollected = true;
               if(searchActual.includes("Collected") || props.filterCollectedOnly){
                 searchCollected = false;
-                if(global.collectionList.includes(item["checkListKey"])){
+                if(global.collectionListIndexed[item["checkListKey"]]===true){
                   searchCollected = true;
                   if(searchActual.length===1 || props.filterCollectedOnly){
                     filterFound = true;
@@ -345,14 +345,14 @@ function ListPage(props){
                 searchCollected = false;
                 //Not collected: remove variations (use only base item)
                 //Don't need to check data type because each type will be looped through and then move on to another data set type
-                if(!global.collectionList.includes(item["checkListKey"]) && i-1 >= 0 && dataLoaded[i-1]["Name"]!==item["Name"]){
+                if(!global.collectionListIndexed[item["checkListKey"]]===true && i-1 >= 0 && dataLoaded[i-1]["Name"]!==item["Name"]){
                   searchCollected = true;
                   if(searchActual.length===1){
                     filterFound = true;
                     break;
                   }
                 } else if (i-1<0) {
-                  if(!global.collectionList.includes(item["checkListKey"])){
+                  if(!global.collectionListIndexed[item["checkListKey"]]===true){
                     searchCollected = true;
                     if(searchActual.length===1){
                       filterFound = true;
@@ -363,7 +363,7 @@ function ListPage(props){
               } else if(searchActual.includes("Not Collected (Keep variations)")){
                 searchCollected = false;
                 //Not collected: remove variations (use only base item)
-                if(!global.collectionList.includes(item["checkListKey"])){
+                if(!global.collectionListIndexed[item["checkListKey"]]===true){
                   searchCollected = true;
                   if(searchActual.length===1){
                     filterFound = true;
@@ -595,7 +595,7 @@ function ListPage(props){
                       // previousVariation = item["Name"];
                     } 
                   } else if(searchActual.includes("Museum")){
-                    if(item["Data Category"]!==undefined && museumCategories.includes(item["Data Category"]) && global.collectionList.includes("museum"+item["checkListKey"])){
+                    if(item["Data Category"]!==undefined && museumCategories.includes(item["Data Category"]) && global.collectionListIndexed["museum"+item["checkListKey"]]===true){
                       item.dataSet = j;
                       item.index = i;
                       dataUpdated = [...dataUpdated, item];
@@ -603,7 +603,7 @@ function ListPage(props){
                       previousVariation = item["Name"];
                     } 
                   } else if(searchActual.includes("Not Museum")){
-                    if(item["Data Category"]!==undefined && museumCategories.includes(item["Data Category"]) && !global.collectionList.includes("museum"+item["checkListKey"])){
+                    if(item["Data Category"]!==undefined && museumCategories.includes(item["Data Category"]) && !global.collectionListIndexed["museum"+item["checkListKey"]]===true){
                       item.dataSet = j;
                       item.index = i;
                       dataUpdated = [...dataUpdated, item];
@@ -611,7 +611,7 @@ function ListPage(props){
                       previousVariation = item["Name"];
                     } 
                   } else if(searchActual.includes("Old Resident")){
-                    if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && global.collectionList.includes("oldResident"+item["checkListKey"])){
+                    if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && global.collectionListIndexed["oldResident"+item["checkListKey"]]===true){
                       item.dataSet = j;
                       item.index = i;
                       dataUpdated = [...dataUpdated, item];
@@ -619,7 +619,7 @@ function ListPage(props){
                       previousVariation = item["Name"];
                     } 
                   } else if(searchActual.includes("Not Old Resident")){
-                    if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && !global.collectionList.includes("oldResident"+item["checkListKey"])){
+                    if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && !global.collectionListIndexed["oldResident"+item["checkListKey"]]===true){
                       item.dataSet = j;
                       item.index = i;
                       dataUpdated = [...dataUpdated, item];
@@ -627,7 +627,7 @@ function ListPage(props){
                       previousVariation = item["Name"];
                     } 
                   } else if(searchActual.includes("Have villager photo")){
-                    if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && global.collectionList.includes("havePhoto"+item["checkListKey"])){
+                    if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && global.collectionListIndexed["havePhoto"+item["checkListKey"]]===true){
                       item.dataSet = j;
                       item.index = i;
                       dataUpdated = [...dataUpdated, item];
@@ -635,7 +635,7 @@ function ListPage(props){
                       previousVariation = item["Name"];
                     } 
                   } else if(searchActual.includes("Do not have villager photo")){
-                    if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && !global.collectionList.includes("havePhoto"+item["checkListKey"])){
+                    if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && !global.collectionListIndexed["havePhoto"+item["checkListKey"]]===true){
                       item.dataSet = j;
                       item.index = i;
                       dataUpdated = [...dataUpdated, item];
@@ -904,9 +904,9 @@ function ListPage(props){
       <PopupFilter villagerGifts={props.villagerGifts} disableFilters={props.disableFilters} title={props.title} ref={popupFilter} filterSearchable={props.filterSearchable} updateSearchFilters={updateSearchFilters}/> 
       <View style={{height:Dimensions.get('window').height/2}}/>
       <TouchableOpacity onPress={() => props.setPage(1)}>
-        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"You have no wishlist items."}</TextFont>
-        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"Long press items to add them to your wishlist."}</TextFont>
-        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>Tap here and go add some</TextFont>
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", marginHorizontal:30}}>{"You have no wishlist items."}</TextFont>
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", marginHorizontal:30}}>{"Long press items to add them to your wishlist."}</TextFont>
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center", marginHorizontal:30}}>Tap here and go add some</TextFont>
       </TouchableOpacity>
       <View style={{height:30}}/>
     </>)
@@ -954,7 +954,7 @@ function ListPage(props){
         style={style}
         removeClippedSubviews={true}
         // updateCellsBatchingPeriod={500}
-        
+        ListFooterComponent={<TextFont style={{marginTop:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{data.length+" "+attemptToTranslate("entries.").slice(0,data.length===1?-2:-1)}</TextFont>}
         windowSize={4}
         refreshControl={
           <RefreshControl

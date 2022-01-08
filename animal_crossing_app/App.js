@@ -21,7 +21,7 @@ import LottieView from 'lottie-react-native';
 import CreditsPage from './pages/CreditsPage';
 import FlowerPage from './pages/FlowerPage';
 import CardsPage from './pages/CardsPage';
-import {getDefaultLanguage, getStorage,getSettingsString, settings, loadGlobalData, attemptToTranslate} from './LoadJsonData';
+import {getDefaultLanguage, getStorage,getSettingsString, settings, loadGlobalData, attemptToTranslate, indexCollectionList} from './LoadJsonData';
 import Onboard from './pages/Onboard';
 import colors from './Colors.js';
 import * as Font from 'expo-font';
@@ -123,6 +123,7 @@ class App extends Component {
     //empty string is default profile
     global.profile = selectedProfile
     global.collectionList = (await getStorage("collectedString"+global.profile,"")).split("\n");
+    global.collectionListIndexed = indexCollectionList(global.collectionList)
     global.name = await getStorage("name"+global.profile,"");
     global.islandName = await getStorage("islandName"+global.profile,"");
     global.dreamAddress = await getStorage("dreamAddress"+global.profile,"");
