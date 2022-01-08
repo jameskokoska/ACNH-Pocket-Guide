@@ -4,6 +4,7 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
 -Updated database
+-Huge performance improvements
 -Added Poki prices
 -Added Exchange Currency filters
 -Added new Zodiac items
@@ -12,6 +13,9 @@ export const changelog = `
 -Fixed capitalizations
 -Updated translations
 -Added item count at bottom of list
+-Faster loading times
+-Faster collection counting
+-Faster wishlist loading
 -
 -Added ability to invert filters/filter out items
 -Option located at the bottom of each filters list
