@@ -8,7 +8,7 @@ import * as FileSystem from 'expo-file-system';
 import * as MediaLibrary from 'expo-media-library';
 import { StorageAccessFramework } from 'expo-file-system';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {attemptToTranslate, getStorage, collectionListSave, loadGlobalData, setSettingsString} from "../LoadJsonData"
+import {attemptToTranslate, getStorage, collectionListSave, loadGlobalData, setSettingsString, indexCollectionList} from "../LoadJsonData"
 import colors from "../Colors"
 import {profileNames} from "../pages/ProfilesPage"
 
@@ -129,6 +129,7 @@ export async function importAllData(text){
     }
   }
   global.collectionList = (await getStorage("collectedString"+global.profile,"")).split("\n");
+  global.collectionListIndexed = indexCollectionList(global.collectionList)
   return totalImport.length
 }
 

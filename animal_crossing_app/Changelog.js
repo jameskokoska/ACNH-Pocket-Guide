@@ -19,6 +19,8 @@ export const changelog = `
 -Improved performance for large collections
 -Fixed capitalizations
 -Formatting/UI fixes
+-Fixed crashes when searching on some pages
+-Fixed importing of data from cloud backups
 -
 -Added ability to invert filters/filter out items
 -Option located at the bottom of each filters list

@@ -886,46 +886,6 @@ function ListPage(props){
         <HeaderLoading disableSearch={props.disableSearch} title={props.title} headerHeight={headerHeight} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
       </>
     )
-  } else if(props.comingSoon){
-    return(<>
-      <View style={{height:10}}/>
-      {header}
-      <PopupFilter villagerGifts={props.villagerGifts} disableFilters={props.disableFilters} title={props.title} ref={popupFilter} filterSearchable={props.filterSearchable} updateSearchFilters={updateSearchFilters}/> 
-      <View style={{height:Dimensions.get('window').height/2}}/>
-      <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Coming soon</TextFont>
-      <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Please be patient</TextFont>
-      <View style={{height:30}}/>
-      </>
-    )
-  } else if (searchFilters!=undefined && searchFilters.length===0 && data.length===0 && props.wishlistItems && search==="" && !global.collectionList.includes("wishlist")){
-    return(<>
-      <View style={{height:10}}/>
-      {header}
-      <PopupFilter villagerGifts={props.villagerGifts} disableFilters={props.disableFilters} title={props.title} ref={popupFilter} filterSearchable={props.filterSearchable} updateSearchFilters={updateSearchFilters}/> 
-      <View style={{height:Dimensions.get('window').height/2}}/>
-      <TouchableOpacity onPress={() => props.setPage(1)}>
-        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", marginHorizontal:30}}>{"You have no wishlist items."}</TextFont>
-        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", marginHorizontal:30}}>{"Long press items to add them to your wishlist."}</TextFont>
-        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center", marginHorizontal:30}}>Tap here and go add some</TextFont>
-      </TouchableOpacity>
-      <View style={{height:30}}/>
-    </>)
-  } else if (data.length===0 && (props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions") && search===""){
-    return(<>
-      <View style={{height:10}}/>
-      {header}
-      <View style={{height:Dimensions.get('window').height/2}}/>
-        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"You can get everything since you have all personality types!"}</TextFont>
-      <View style={{height:30}}/>
-    </>)
-  } else if (data.length===0 && (props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions") && search===""){
-    return(<>
-      <View style={{height:10}}/>
-      {header}
-      <View style={{height:Dimensions.get('window').height/2}}/>
-        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"Your search results/selected filters produced no results"}</TextFont>
-      <View style={{height:30}}/>
-    </>)
   } else {
     return (
     <View style={{backgroundColor:props.backgroundColor}} >
@@ -954,7 +914,33 @@ function ListPage(props){
         style={style}
         removeClippedSubviews={true}
         // updateCellsBatchingPeriod={500}
-        ListFooterComponent={<TextFont style={{marginTop:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{data.length+" "+attemptToTranslate("entries.").slice(0,data.length===1?-2:-1)}</TextFont>}
+        ListFooterComponent={()=>{
+          if(searchFilters!=undefined && searchFilters.length===0 && data.length===0 && props.wishlistItems && search===""){
+            return <>
+              <View style={{height:100}}/>
+                <TouchableOpacity onPress={() => props.setPage(1)}>
+                  <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", marginHorizontal:30}}>{"You have no wishlist items."}</TextFont>
+                  <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", marginHorizontal:30}}>{"Long press items to add them to your wishlist."}</TextFont>
+                  <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center", marginHorizontal:30}}>Tap here and go add some</TextFont>
+                </TouchableOpacity>
+              <View style={{height:30}}/>
+            </>
+          }else if (searchFilters!=undefined && searchFilters.length===0 && data.length===0 && (props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions") && search===""){
+            return <>
+              <View style={{height:100}}/>
+                <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", marginHorizontal:30}}>{"You can get everything since you have all personality types!"}</TextFont>
+              <View style={{height:30}}/>
+            </>
+          }else if (props.comingSoon){
+            return <>
+              <View style={{height:100}}/>
+                <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Coming soon</TextFont>
+                <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Please be patient</TextFont>
+              <View style={{height:30}}/>
+            </>
+          }
+          return <TextFont style={{marginTop:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{data.length+" "+(data.length!==1?attemptToTranslate("entries."):attemptToTranslate("entry."))}</TextFont>
+        }}
         windowSize={4}
         refreshControl={
           <RefreshControl
