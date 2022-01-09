@@ -725,6 +725,50 @@
           "id": "Source:Brewster"
         }
       ]
+    },
+    {
+      "name": "Sound Type",
+      "id": "Sound Type",
+      "children": [
+        {
+          "name": "Drum set",
+          "id": "Sound Type:Drum set"
+        },
+        {
+          "name": "Melody",
+          "id": "Sound Type:Melody"
+        },
+        {
+          "name": "Kick",
+          "id": "Sound Type:Kick"
+        },
+        {
+          "name": "Snare",
+          "id": "Sound Type:Snare"
+        },
+        {
+          "name": "Crash",
+          "id": "Sound Type:Crash"
+        },
+        {
+          "name": "Hi-hat",
+          "id": "Sound Type:Hi-hat"
+        }
+      ]
+    },
+    {
+      "name": "Lighting Type",
+      "id": "Lighting Type",
+      "children": [
+        {
+          "name": "No lighting",
+          "id": "Lighting Type:No lighting"
+        },
+        {
+          "name": "Fluorescent",
+          "id": "Lighting Type:Fluorescent"
+        }
+      ]
     }
   ],
   "Reactions": [
@@ -16651,6 +16695,36 @@
         {
           "name": "Music Box",
           "id": "Speaker Type:Music Box"
+        }
+      ]
+    },
+    {
+      "name": "Sound Type",
+      "id": "Sound Type",
+      "children": [
+        {
+          "name": "Drum set",
+          "id": "Sound Type:Drum set"
+        },
+        {
+          "name": "Melody",
+          "id": "Sound Type:Melody"
+        },
+        {
+          "name": "Kick",
+          "id": "Sound Type:Kick"
+        },
+        {
+          "name": "Snare",
+          "id": "Sound Type:Snare"
+        },
+        {
+          "name": "Crash",
+          "id": "Sound Type:Crash"
+        },
+        {
+          "name": "Hi-hat",
+          "id": "Sound Type:Hi-hat"
         }
       ]
     },

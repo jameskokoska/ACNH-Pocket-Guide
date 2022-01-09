@@ -168,7 +168,7 @@ export default CreditsPage;
 
 class CreditImageContainer extends Component{
   render(){
-    return <View style={{backgroundColor:colors.white[global.darkMode], borderRadius: 10, flexDirection:"row", paddingHorizontal:30, paddingRight:20, paddingVertical: this.props.largerImage?17:20, marginHorizontal:20, marginVertical: 5}}>
+    return <View style={{alignItems:"center", justifyContent:"center",backgroundColor:colors.white[global.darkMode], borderRadius: 10, flexDirection:"row", paddingHorizontal:30, paddingRight:20, paddingVertical: this.props.largerImage?17:20, marginHorizontal:20, marginVertical: 5}}>
       <Image style={{width:75, height:this.props.largerImage?80:70,resizeMode:'contain',}} source={this.props.image}/>
       <View style={{flex:1, marginLeft:25, justifyContent:'center'}}>
         <TextFont bold={true} style={{color:colors.textBlack[global.darkMode], fontSize: 23}}>{this.props.text}</TextFont>

@@ -3,7 +3,7 @@ import {ScrollView, Vibration, Image, Dimensions, TouchableOpacity, TextInput, S
 import Clock from '../components/Clock';
 import HomeContentArea from '../components/HomeContentArea';
 import {EventContainer,getEventsDay} from '../components/EventContainer';
-import StoreHoursContainer from '../components/StoreHoursContainer';
+import StoreHoursContainer, { StoreHoursContainerHarvey } from '../components/StoreHoursContainer';
 import ProgressContainer from '../components/ProgressContainer';
 import LottieView from 'lottie-react-native';
 import colors from '../Colors'
@@ -234,8 +234,21 @@ class HomePage extends Component {
             }
             return sections["Store Hours"]===true?<HomeContentArea index={index} key={"Store Hours"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.storeHoursColor[global.darkMode]} title="Store Hours" titleColor={colors.storeHoursColor[global.darkModeReverse]}>
               <View style={{height: 15}}/>
-              <StoreHoursContainer image={require("../assets/icons/nook.png")} text="Nook's Cranny" textBottom={hoursNook()} openHour={hoursNook("openHour")} closeHour={hoursNook("closeHour")}/>
-              <StoreHoursContainer image={require("../assets/icons/able.png")} text="Able Sisters" textBottom={hoursAble()} openHour={hoursAble("openHour")} closeHour={hoursAble("closeHour")}/>
+              <StoreHoursContainer filter={"Nook's Cranny"} image={require("../assets/icons/nook.png")} text="Nook's Cranny" textBottom={hoursNook()} openHour={hoursNook("openHour")} closeHour={hoursNook("closeHour")}/>
+              <StoreHoursContainer filter={"Able Sisters"} image={require("../assets/icons/able.png")} text="Able Sisters" textBottom={hoursAble()} openHour={hoursAble("openHour")} closeHour={hoursAble("closeHour")}/>
+              <View style={{height: 5}}/>
+              <View style={{flexDirection:"row", flexWrap:"wrap", justifyContent:"center"}}>
+                <StoreHoursContainerHarvey filter={"Katrina's Cleansing Service"} image={require("../assets/icons/katrina.png")} text="Katrina" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 1:00" : "5 AM - 1 AM"} openHour={5} closeHour={1}/>
+                <StoreHoursContainerHarvey filter={"Saharah's Co-op"} image={require("../assets/icons/saharah.png")} text="Saharah" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 24:00" : "5 AM - 12 AM"} openHour={5} closeHour={24}/>
+                <StoreHoursContainerHarvey image={require("../assets/icons/tortimer.png")} text="Tortimer" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 23:00" : "5 AM - 11 PM"} openHour={5} closeHour={23}/>
+                <StoreHoursContainerHarvey image={require("../assets/icons/cyrus.png")} text="Cyrus" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 24:00" : "5 AM - 12 AM"} openHour={5} closeHour={24}/>
+                <StoreHoursContainerHarvey filter={"Leif"} image={require("../assets/icons/leif.png")} text="Leif" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 23:00" : "5 AM - 11 PM"} openHour={5} closeHour={23}/>
+                <StoreHoursContainerHarvey filter={"Redd's Co-op Raffle"} image={require("../assets/icons/redd.png")} text="Redd" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 1:00" : "5 AM - 1 AM"} openHour={5} closeHour={1}/>
+                <StoreHoursContainerHarvey filter={"Kicks' Co-op"} image={require("../assets/icons/kicks.png")} text="Kicks" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 24:00" : "5 AM - 12 AM"} openHour={5} closeHour={24}/>
+
+
+
+              </View>
               <View style={{height: 15}}/>
             </HomeContentArea>:<View/>
           }

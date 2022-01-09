@@ -12,7 +12,7 @@ filters = [
     [
         "Gyroids",
         [data["Gyroids"]],
-        ["Variation", "Color 1","Color 2","Source"]
+        ["Variation", "Color 1","Color 2","Source","Sound Type","Lighting Type"]
     ],
     [
         "Reactions",
@@ -157,6 +157,7 @@ filters = [
             "HHA Set",
             "HHA Category",
             "Speaker Type",
+            "Sound Type",
             "Lighting Type",
             "Version Added"
         ]

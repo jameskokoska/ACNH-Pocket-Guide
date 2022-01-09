@@ -241,12 +241,14 @@ export class InfoLine extends Component {
     }
 
     //handle poki
-    if(this.props.textProperty[0]!==undefined && this.props.textProperty[0]==="Exchange Currency" && this.props.item[this.props.textProperty[0]]==="Poki"){
+    if(this.props.poki===true && this.props.textProperty[0]!==undefined && this.props.textProperty[0]==="Exchange Currency" && this.props.item[this.props.textProperty[0]]==="Poki"){
       if(this.props.item["Exchange Price"]!==undefined){
         imageSource = <Image style={styles.infoLineImage} source={require("../assets/icons/pokiBag.png")}/>;
         text = commas(this.props.item["Exchange Price"])
         ending= " " + attemptToTranslate("poki");
       }
+    } else if (this.props.poki===true){
+      return <View/>
     }
 
     if(this.props.textProperty.includes("Material")){

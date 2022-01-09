@@ -16,14 +16,18 @@ export default class CustomFiltersPage extends Component {
     if(this.props.currentFiltersSearchFor!==undefined && this.props.currentFiltersSearchFor!==""){
       var eventName = getEventName(this.props.titlePassed)
       console.log(this.props.currentFiltersSearchFor)
+      let filteredFilter = this.props.currentFiltersSearchFor;
+      if(filteredFilter.startsWith("STORE HOURS:")){
+        filteredFilter = filteredFilter.replace("STORE HOURS:","")
+      }
       return(
         <AllItemsPage 
           noStackFilters={true} //dangerous because only collected filters will stack...
-          smallerHeader={this.props.titlePassed!==undefined&&this.props.titlePassed.length>15?true:false}
+          smallerHeader={this.props.titlePassed!==undefined&&filteredFilter.length>15?true:false}
           // disableFilters={true}
-          title={capitalize(eventName)}
-          currentSetFilters={getSpecificFilters(this.props.currentFiltersSearchFor)}
-          subHeader="You can get these items from this event"
+          title={this.props.currentFiltersSearchFor.startsWith("STORE HOURS:")?capitalize(filteredFilter):capitalize(eventName)}
+          currentSetFilters={getSpecificFilters(filteredFilter)}
+          subHeader={this.props.currentFiltersSearchFor.startsWith("STORE HOURS:")?"":"You can get these items from this event"}
           appBarColor = {colors.customFiltersAppBar[global.darkMode]}
           accentColor = {colors.customFiltersAccent[global.darkMode]}
           setPage = {this.props.setPage}
