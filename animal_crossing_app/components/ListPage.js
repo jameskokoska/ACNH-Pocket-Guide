@@ -34,7 +34,7 @@ Object.entries(exports).forEach(([name, exported]) => window[name] = exported);
 
 const {diffClamp} = Animated;
 export function calculateHeaderHeight(tabs, increaseFactorBy=0){
-  console.log(tabs)
+  // console.log(tabs)
   var headerHeight = tabs || tabs===undefined ? Dimensions.get('window').height*(0.28+increaseFactorBy)-30 : Dimensions.get('window').height*(0.29+increaseFactorBy);
   var maxHeight = 845.7*0.3;
   if(headerHeight > maxHeight){

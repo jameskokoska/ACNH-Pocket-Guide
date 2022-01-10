@@ -338,7 +338,7 @@ export function collectionListSave(){
     outputString += global.collectionList[i];
     outputString += "\n";
   }
-  console.log(outputString)
+  // console.log(outputString)
   AsyncStorage.setItem("collectedString"+global.profile, outputString);
 }
 

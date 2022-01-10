@@ -60,10 +60,10 @@ class SettingsPage extends Component {
           <View style={{marginTop: 15}}/>
           <SettingsDivider text={"Game language"}/>
           <LanguagePicker restartPopup={(show)=>this.popupRestart.setPopupVisible(show)}/>
-          <View style={{height:10}}/>
+          <View style={{height:4}}/>
           <SettingsDivider text={"Island ordinance"}/>
           <OrdinancePicker setPage={this.props.setPage}/>
-          <View style={{height:10}}/>
+          <View style={{height:5}}/>
           {global.settingsCurrent.map( (setting, index)=>
             {
               if(setting["keyName"]!="breaker"){
@@ -279,11 +279,12 @@ export class LanguagePicker extends Component{
           this.props.restartPopup(true)
         }}/>
       </View>
-      <HeaderNote>Translations only apply to game item names only, all other app content is in English. Some items may be missing translations. If you would like to help translate this app, feel free to reach out via email. </HeaderNote>
     </>
     )
   }
 }
+// <HeaderNote>Translations only apply to game item names only, all other app content is in English. Some items may be missing translations. If you would like to help translate this app, feel free to reach out via email. </HeaderNote>
+
 
 export class OrdinancePicker extends Component{
   render(){
@@ -295,7 +296,7 @@ export class OrdinancePicker extends Component{
       {label: "Bell Boom", value: "Bell Boom",},
     ]
     return(<>
-      <View style={{marginTop:5, marginBottom:5, marginHorizontal:20, justifyContent:"center"}}>
+      <View style={{marginTop:5, marginBottom:2, marginHorizontal:20, justifyContent:"center"}}>
         <DropdownMenu 
           width={Dimensions.get('window').width-83}
           selection={true}

@@ -7,7 +7,7 @@ import colors from '../Colors.js';
 class SongsPage extends Component {
   render(){
     var animationWidth = 380
-    console.log(-1/(animationWidth/Dimensions.get('window').width)*100+100)
+    // console.log(-1/(animationWidth/Dimensions.get('window').width)*100+100)
     return(
       <>
       <View pointerEvents="none" 
