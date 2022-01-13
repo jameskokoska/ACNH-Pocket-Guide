@@ -83,8 +83,13 @@ class AllItemsPage extends Component {
     if(this.props.noStackFilters !==undefined){
       noStackFilters = this.props.noStackFilters;
     }
+    var currentSearch = "";
+    if(this.props.currentSearch !==undefined){
+      currentSearch = this.props.currentSearch;
+    }
     return(
-        <ListPage 
+        <ListPage
+          currentSearch={currentSearch}
           noStackFilters={noStackFilters}
           extraInfo={extraInfo}
           currentSetFilters={currentSetFilters}

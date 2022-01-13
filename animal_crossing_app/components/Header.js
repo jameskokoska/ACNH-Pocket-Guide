@@ -12,7 +12,7 @@ import GuideRedirectButton from "./PopupGuideRedirectButton"
 
 const Header = (props) => {
   var filterImage;
-  const [emptySearch, setEmptySearch] = useState(true)
+  const [emptySearch, setEmptySearch] = useState(props.currentSearch==="")
   if(props.disableFilters){
     filterImage=<View/>
   } else if(props.searchFilters.constructor===Array && props.searchFilters.length>=1){
@@ -63,6 +63,7 @@ const Header = (props) => {
                   delayTimeout={400}
                   onSubmitEditing={function(event){props.updateSearch(event.nativeEvent.text); if(event.nativeEvent.text===""){setEmptySearch(true)} else {if(textInput.current.isFocused()) setEmptySearch(false)}}}
                   inputRef={textInput}
+                  value={props.currentSearch}
                 />
                 <TouchableOpacity style={{position:"absolute", right:props.disableFilters&&props.customButton===undefined?5:35}} onPress={()=>{textInput.current.clear(); setEmptySearch(true); props.updateSearch(""); textInput.current.focus(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
                   <FadeInOut fadeIn={!emptySearch} duration={200}>

@@ -3,6 +3,9 @@ export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added Global Search on home screen, swipe down on home page to instantly search All Items
+-Improved search for Achievements page
+-
 -Added Sound Type filters for Gyroids
 -Fixed Poki prices showing when there are none
 -Added hours of Harvey's islands shop

@@ -62,6 +62,7 @@ import BrowserPage from './pages/BrowserPage';
 import Toast from "react-native-toast-notifications";
 import TextFont from './components/TextFont';
 import { DefaultTheme, Provider } from 'react-native-paper';
+import GlobalSearchPage from './pages/GlobalSearchPage';
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -552,6 +553,8 @@ class App extends Component {
       const NavigatorCraftableItemsPage = ({route, navigation})=>{return <CraftableItemsPage material={route.params.propsPassed}/>}
       const NavigatorVillagerFurnitureParadisePlanning = ({route, navigation})=>{return <VillagerFurnitureParadisePlanning request={route.params.propsPassed}/>}
       const NavigatorBrowserPage = ({route, navigation})=>{return <BrowserPage page={route.params.propsPassed} languageMessage={"You can change the language at the bottom of the page, by tapping Language"} splashImage={require('./assets/icons/turnip.png')} splashText={"Turnip Prophet"} splashCredits={"By mikebryant"}/>}
+      const NavigatorGlobalSearchPage = ({route, navigation})=>{return <GlobalSearchPage currentSearch={route.params.propsPassed} setPage={this.setPage}/>}
+
       console.log(global.darkMode)
       let theme = {
         ...DefaultTheme,
@@ -579,6 +582,7 @@ class App extends Component {
                   <Stack.Screen name="34" component={NavigatorCraftableItemsPage}/>
                   <Stack.Screen name="36" component={NavigatorVillagerFurnitureParadisePlanning}/>
                   <Stack.Screen name="BrowserPage" component={NavigatorBrowserPage}/>
+                  <Stack.Screen name="GlobalSearchPage" component={NavigatorGlobalSearchPage}/>
                 </Stack.Navigator>
               </NavigationContainer>
             </Provider>

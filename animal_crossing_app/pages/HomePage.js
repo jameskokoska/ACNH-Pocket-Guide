@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {ScrollView, Vibration, Image, Dimensions, TouchableOpacity, TextInput, StyleSheet, Text, View, Keyboard} from 'react-native';
+import {Animated, ScrollView, Vibration, Image, Dimensions, TouchableOpacity, TextInput, StyleSheet, Text, View, Keyboard} from 'react-native';
 import Clock from '../components/Clock';
 import HomeContentArea from '../components/HomeContentArea';
 import {EventContainer,getEventsDay} from '../components/EventContainer';
@@ -31,6 +31,8 @@ import {SelectionImage} from "../components/Selections"
 import PopupChangelog from '../components/PopupChangelog';
 import LoanList from "../components/LoanList"
 import { LinearGradient } from 'expo-linear-gradient';
+import { calculateHeaderHeight } from '../components/ListPage';
+import * as RootNavigation from '../RootNavigation.js';
 
 class HomePage extends Component {
   constructor(props){
@@ -39,6 +41,11 @@ class HomePage extends Component {
     if(eventSections.hasOwnProperty("App notifications")){
       getSettingsString("settingsNotifications")==="true" ? eventSections["App notifications"]=true : eventSections["App notifications"]=false;
     }
+    this.searchOpen = false
+    this.keyboardStatus = false
+    this.searchText = ""
+    this.cannotOpenSearchOnThisSlide = false;
+    this.keyboardInterference = false;
     this.state = {
       eventSections:props.eventSections,
       sectionsOrder:this.props.sectionsOrder, 
@@ -47,6 +54,37 @@ class HomePage extends Component {
     }
   }
   
+  componentDidMount(){
+    setTimeout(()=>{this.scrollViewRef?.scrollTo({
+      y:this.headerHeight,
+      animated:false
+    });},0)
+    this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this.keyboardDidHide);
+    this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this.keyboardDidShow);
+
+  }
+    
+  componentWillUnmount(){
+    this.keyboardDidHideListener.remove();
+    this.keyboardDidShowListener.remove();
+  }
+
+  keyboardDidHide = () => {
+    if (this.searchOpen) {
+      this.keyboardInterference = true
+      this.scrollViewRef.scrollTo({
+        y:this.headerHeight
+      });
+      this.closeSearch()
+      setTimeout(()=>{this.keyboardInterference = false},1000)
+    }
+    this.keyboardStatus = false
+  }
+
+  keyboardDidShow = () => {
+    this.keyboardStatus = true
+  }
+
   openVillagerPopup = (item) => {
     this.villagerPopupPopup?.setPopupVisible(true, item);
   }
@@ -93,6 +131,50 @@ class HomePage extends Component {
     await AsyncStorage.setItem("SectionsOrder", JSON.stringify(items));
   };
 
+  headerHeight = 70;
+  clampHeight = 10;
+  doubleScrollToOpenClampHeight = 10;
+  scrollY = new Animated.Value(0);
+  scrollYClamped = Animated.diffClamp(this.scrollY, 0, this.headerHeight+2);
+  
+  handleSnap = ({nativeEvent}) => {
+    const offsetY = nativeEvent.contentOffset.y;
+    if(this.cannotOpenSearchOnThisSlide && offsetY<=this.clampHeight){
+      this.scrollViewRef.scrollTo({
+        y: offsetY + this.headerHeight
+      });
+      return
+    } else {
+      // console.log(offsetY)
+      if (offsetY<=this.clampHeight) {
+        //header search open
+        this.scrollViewRef.scrollTo({
+          y:0
+        });
+        this.openSearch()
+      }
+      else if (offsetY > this.headerHeight){
+        this.closeSearch()
+        return
+      } else {
+        this.scrollViewRef.scrollTo({
+          y:offsetY + this.headerHeight
+        });
+        this.closeSearch()
+      }
+    }
+  };
+
+  openSearch = () => {
+    this.searchOpen = true
+    this.searchRef?.focus()
+  }
+
+  closeSearch = () => {
+    this.searchOpen = false
+    this.searchRef?.blur()
+  }
+
   render(){
 
     var landscape = <LottieView autoPlay loop style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/home.json')}/>
@@ -122,7 +204,78 @@ class HomePage extends Component {
           sections={this.state.eventSections}
         />
       </PopupBottomCustom>
-      <ScrollView ref={(scrollViewRef) => this.scrollViewRef = scrollViewRef}>
+      <Animated.ScrollView
+        onMomentumScrollEnd={this.handleSnap}
+        ref={(scrollViewRef) => this.scrollViewRef = scrollViewRef}
+        onScroll={Animated.event([{ nativeEvent: {contentOffset: {y: this.scrollY}}}], {useNativeDriver: true, 
+          listener: (event)=>{
+            if(event.nativeEvent.contentOffset.y>this.headerHeight) this.closeSearch()
+            if (this.keyboardInterference===false && !this.cannotOpenSearchOnThisSlide && this.searchOpen===false && event.nativeEvent.contentOffset.y<=this.clampHeight) {
+              this.scrollViewRef.scrollTo({y:0});
+              this.openSearch()
+            }
+          }
+        },)}
+        // Not needed because when the keyboard is closed, the search is closed too
+        // onScrollEndDrag={
+        //   (event) => {
+        //     if(event.nativeEvent.contentOffset.y===0){
+        //       if(this.keyboardStatus===false){
+        //         this.closeSearch()
+        //         this.openSearch()
+        //       }
+        //     }
+        //   }
+        // }
+        onScrollBeginDrag={
+          (event) => {
+            if(event.nativeEvent.contentOffset.y>this.headerHeight + this.doubleScrollToOpenClampHeight){
+              this.cannotOpenSearchOnThisSlide = true
+            } else {
+              this.cannotOpenSearchOnThisSlide = false
+            }
+          }
+        }
+      >
+        
+        <View style={{justifyContent:"center",backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode],height:this.headerHeight, borderBottomLeftRadius: 10, borderBottomRightRadius: 10}}>
+          <TextInput
+            ref={(searchRef) => this.searchRef = searchRef}
+            allowFontScaling={false}
+            style={{opacity:0.8, marginVertical: 10, marginHorizontal:15, padding:10, paddingHorizontal:20, fontSize: 17, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], borderRadius: 5}}
+            onChangeText={(text) => {this.searchText = text}}
+            placeholder={"Search for an item..."}
+            defaultValue={""}
+            placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+            onSubmitEditing={(event)=>{
+              this.scrollViewRef.scrollTo({
+                y:this.headerHeight
+              });
+              this.closeSearch()
+              this.searchRef.clear()
+              this.searchText = ""
+              if(event.nativeEvent.text!==""){
+                RootNavigation.navigate('GlobalSearchPage', {propsPassed:event.nativeEvent.text});
+              }
+            }}
+          />
+          {/* You can't touch the search button - need keyboardShouldPersistTaps='handled' for ScrollView */}
+          <TouchableOpacity style={{position:"absolute", right:20}} onPress={()=>{
+            this.scrollViewRef.scrollTo({
+              y:this.headerHeight
+            });
+            this.closeSearch()
+            this.searchRef.clear()
+            let searchTextTemp = this.searchText
+            this.searchText = ""
+            RootNavigation.navigate('GlobalSearchPage', {propsPassed:searchTextTemp});
+          }}>
+            <FadeInOut fadeIn={true} duration={200}>
+            <Image style={{width:20,height:20, margin: 10, marginTop: 12, opacity: 0.25, resizeMode:"contain",}} source={global.darkMode?require("../assets/icons/searchWhite.png"):require("../assets/icons/search.png")}/>
+            </FadeInOut>
+          </TouchableOpacity>
+        </View>
+
         <View style={{height:55}}/>
         <Clock swapDate={doWeSwapDate()}/>
         <View style={{height:125}}/>
@@ -260,7 +413,7 @@ class HomePage extends Component {
           <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center",}}>{"You can tap here to go to that page, or open the sidebar."}</TextFont>
         </TouchableOpacity>
         <View style={{height: 75}}/>
-      </ScrollView>
+      </Animated.ScrollView>
       
       <View style={{position:"absolute", width: "100%", height:"100%", zIndex:-5, top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center',overflow: "hidden" }}>
         <View style={{width:690, height: "100%", zIndex:1, position:'absolute', overflow: "hidden", }}>

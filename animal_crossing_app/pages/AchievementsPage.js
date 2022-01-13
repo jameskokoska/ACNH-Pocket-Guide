@@ -1,19 +1,13 @@
 import React, {Component} from 'react';
-import {Animated,FlatList, Dimensions, Linking, TextInput, Vibration,TouchableNativeFeedback,TouchableOpacity,StyleSheet, Text, View, Image} from 'react-native';
+import {Animated,FlatList, Dimensions, Vibration,TouchableNativeFeedback,TouchableOpacity,StyleSheet, Text, View, Image} from 'react-native';
 import TextFont from '../components/TextFont';
-import {getCurrentDateObject, getMonth, getWeekDayShort} from '../components/DateFunctions';
-import {removeAccents,getStorage, checkOff, capitalize, commas, removeBrackets} from "../LoadJsonData"
-import {getPhoto} from "../components/GetPhoto"
-import Check from '../components/Check';
+import {removeAccents,getStorage, commas} from "../LoadJsonData"
 import colors from '../Colors'
-import PopupAddTask from "../components/PopupAddTask"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {capitalizeFirst, getSettingsString, attemptToTranslate, attemptToTranslateAchievement} from "../LoadJsonData"
-import FastImage from "../components/FastImage"
 import {SubHeader, Paragraph} from "../components/Formattings"
 import Header from "../components/Header"
 import {PopupBottomCustom} from "../components/Popup"
-import DelayInput from "react-native-debounce-input";
 import FadeInOut from "../components/FadeInOut";
 import { calculateHeaderHeight } from '../components/ListPage';
 
@@ -46,7 +40,7 @@ export default class AchievementsPage extends Component {
     } else {
       var outputData = [];
       this.data.map( (achievement, index)=>{
-        var achievementName = attemptToTranslateAchievement(achievement["Name"]);
+        var achievementName = attemptToTranslateAchievement(achievement["Name"]).replace("(island name)", global.islandName);
         if(removeAccents(achievementName.toLowerCase()).includes(removeAccents(text.toLowerCase()))){
           outputData.push(achievement);
         } else if (achievement["Internal Category"].toLowerCase().includes(text.toLowerCase())){

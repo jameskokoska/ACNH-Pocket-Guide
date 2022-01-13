@@ -117,7 +117,7 @@ class CreditsPage extends Component {
           <SubHeader>Additional Information</SubHeader>
           <Paragraph>This application was created using React Native, with the original App programmed in Flutter. This application and contents are NOT affiliated with Nintendo. All local artwork recreated/licensed. This application is not made for commercial use, and is provided at a price of 0$ (free) on the Google Play Store with no advertisements. All application source code is of property to respective owners/contributors listed on the Credits page and/or licenses associated within specific packages/libraries within this application.</Paragraph>
           <Paragraph>The copyright of assets is likely to be held by the publisher where applicable. With limited number of low-resolution images for identification, critical commentary and information, the copyrighted content depicted in question qualifies as fair use under United States copyright law and therefore does not significantly impede the right of the copyright holder, since in this context the material is not being used to turn a profit and presents ideas that cannot be exhibited otherwise.</Paragraph>
-          <Paragraph>ACNH Guide Privacy Policy:</Paragraph>
+          <Paragraph>ACNH Pocket Guide Privacy Policy:</Paragraph>
           <ExternalLink link="https://docs.google.com/document/d/1NPwtPfFH5_jP_vJHecl5PRT2SPhTXGeGog5WM_S7ZgE/edit?usp=sharing"/>
           <Paragraph>Twemoji Icons Graphics licensed under CC-BY 4.0:</Paragraph>
           <ExternalLink link="https://twemoji.twitter.com/"/>
