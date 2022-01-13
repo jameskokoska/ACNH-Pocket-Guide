@@ -158,7 +158,7 @@ class HomePage extends Component {
         return
       } else {
         this.scrollViewRef.scrollTo({
-          y:offsetY + this.headerHeight
+          y:this.headerHeight
         });
         this.closeSearch()
       }
