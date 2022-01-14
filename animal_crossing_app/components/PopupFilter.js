@@ -220,7 +220,7 @@ class PopupFilter extends Component {
     } else if(this.props.title==="New Items"){
       this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.villagerFilters, ...notCraftVariationsFilters, ...categoriesAll, ...this.invertFilters];
     } else if(this.props.title==="Everything" || this.props.title==="Wishlist" || this.props.title==="Search Items"){
-      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.museumFilters, ...this.villagerFilters, ...this.genderFilters, ...categoriesAll, ...notCraftVariationsFilters, ...activeFilters, ...filterDefinitions["All Items"], ...this.invertFilters];
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.museumFilters, ...this.villagerFilters, ...categoriesAll, ...notCraftVariationsFilters, ...activeFilters, ...filterDefinitions["All Items"], ...this.genderFilters, ...this.invertFilters];
     } else if(this.props.title==="Construction"){
       const categories = [{
         "name": "Type Categories",
@@ -243,7 +243,7 @@ class PopupFilter extends Component {
       this.possibleFilters = [...this.sortByFiltersReducedWithColor, ...this.possibleFilters]
     } else if(this.props.title==="Materials"){
       this.possibleFilters = [...this.sortByFiltersReduced, ...this.possibleFilters]
-    } 
+    }
   }
 
   componentWillUnmount() {

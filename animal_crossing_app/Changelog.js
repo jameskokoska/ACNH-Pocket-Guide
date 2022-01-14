@@ -7,6 +7,8 @@ export const changelog = `
 -Added animations to Collection progress
 -Added animations to Loan Tracking
 -Added filters to Quick Search
+-Loan input shows input keyboard automatically
+-Filters now sorted in alphabetical order
 -
 -Added Quick Search on home screen, swipe down on home page to instantly search All Items
 -Improved search for Achievements page

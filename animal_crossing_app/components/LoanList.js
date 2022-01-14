@@ -1,20 +1,13 @@
 import React, {Component} from 'react';
-import {Linking, TextInput, Vibration,TouchableNativeFeedback,TouchableOpacity,StyleSheet, Text, View, Image, Animated} from 'react-native';
+import {Vibration,TouchableNativeFeedback,TouchableOpacity, View, Image, Animated} from 'react-native';
 import TextFont from './TextFont';
-import {getCurrentDateObject, getMonth, getWeekDayShort} from './DateFunctions';
-import {getStorage, checkOff, capitalize, commas, removeBrackets} from "../LoadJsonData"
-import {getPhoto} from "./GetPhoto"
-import Check from './Check';
+import {getStorage, capitalize, commas} from "../LoadJsonData"
 import colors from '../Colors'
 import PopupAddLoan from "./PopupAddLoan"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
-import DropDownPicker from 'react-native-dropdown-picker'
-import FastImage from "./FastImage"
-import {PopupInfoCustom} from "./Popup"
 import ButtonComponent from "./ButtonComponent";
 import {PopupAmountEntry} from "./PopupAddLoan";
-import AnimateNumber from 'react-native-countup';
 
 export default class LoanList extends Component {
   constructor(props){
@@ -217,7 +210,6 @@ class LoanItem extends Component {
     }
     return (
       <View onLayout={(event) => {
-        console.log(event.nativeEvent.layout.height)
           let height = event?.nativeEvent?.layout?.height;
           this.setState({height:height})
           this.animation(height)

@@ -106,6 +106,7 @@ export class PopupAmountEntry extends Component {
   setPopupVisible = (visible) => {
     this.popup?.setPopupVisible(true);
     this.amount = 0
+    setTimeout(()=>{this.textInput.focus()},150)
   }
 
   render(){
@@ -141,6 +142,7 @@ export class PopupAmountEntry extends Component {
           <View style={{flex: 1, flexWrap: 'wrap', flexDirection:"row",justifyContent:"center"}}>
             <View style={{flex:1, justifyContent:"center", marginHorizontal:5,}}>
               <TextInput
+                ref={(textInput) => this.textInput = textInput} 
                 maxLength={12}
                 keyboardType={"numeric"}
                 allowFontScaling={false}

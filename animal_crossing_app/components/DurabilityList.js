@@ -30,8 +30,8 @@ export default class DurabilityList extends Component {
 
   loadList = async() => {
     var defaultList = [
-      {title: attemptToTranslate('Bridge'), total: 250000, current:0},
-      {title: attemptToTranslate('House'), total: 1000000, current:250000},
+      {title: 'Shovel', total: 100, current:0, image: "https://acnhcdn.com/latest/FtrIcon/ToolScoop_Remake_0_0.png"},
+      {title: 'Slingshot', total: 20, current:0, image: "https://acnhcdn.com/latest/FtrIcon/ToolSlingshot_Remake_0_0.png"},
     ]
     var storageData = JSON.parse(await getStorage("ToolList"+global.profile,JSON.stringify(defaultList)));
     if(this.mounted){

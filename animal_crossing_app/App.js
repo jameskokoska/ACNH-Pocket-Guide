@@ -63,6 +63,7 @@ import Toast from "react-native-toast-notifications";
 import TextFont from './components/TextFont';
 import { DefaultTheme, Provider } from 'react-native-paper';
 import GlobalSearchPage from './pages/GlobalSearchPage';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -435,33 +436,35 @@ class App extends Component {
       var splashScreens = [require('./assets/airplane.json'),require('./assets/balloon.json')];
       var chosenSplashScreen = splashScreens[Math.floor(this.random * splashScreens.length)];
       return <>
-      <View style={{position: "absolute", backgroundColor: colors.background[Appearance.getColorScheme()==="light" ? 0 : 1], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
-      <View style={{alignItems:"center", justifyContent:"center",backgroundColor: colors.background[Appearance.getColorScheme()==="light" ? 0 : 1], width:Dimensions.get('window').width, height:Dimensions.get('window').height*0.85}}>
-        <FadeInOut fadeIn={true}>
-          <LottieView autoPlay loop style={{width: "95%",zIndex:1,transform: [{ scale: 1.25 },],}} source={chosenSplashScreen}/>
-        </FadeInOut>
-      </View>
-      <PopupRaw ref={(popupGeneratingData) => this.popupGeneratingData = popupGeneratingData} text={attemptToTranslate("Generating Data...")} textLower={attemptToTranslate("This may take a few minutes and is only done once.")} textLower2={attemptToTranslate("If this takes longer than a minute restart the app and select Download data.")}/>
-      <Popup
-        ref={(popupGenerateMenu) => this.popupGenerateMenu = popupGenerateMenu}
-        button1={"Download"}
-        button1Action={async ()=>{
-          await this.continueMountingGenerate("online");
-        }}
-        button2={"Generate"}
-        button2Action={async ()=>{
-          await this.continueMountingGenerate(true);
-        }}
-        text={"Generate Data"}
-        textLower={"It seems generating data may have had some issues. If generating data fails or takes too long, select [Download]."}
-        mailLink
-        noDismiss
-      />
-      <DownloadDatabase ref={(popupDownload) => this.popupDownload = popupDownload} generateJSONLinks={this.generateJSONLinks} continueMountingFinish={async () => {await this.continueMountingFinish()}}/>
-      <PopupRawLoading ref={(popupLoading) => this.popupLoading = popupLoading}/>
+        <View style={{position: "absolute", backgroundColor: colors.background[Appearance.getColorScheme()==="light" ? 0 : 1], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
+        <View style={{alignItems:"center", justifyContent:"center",backgroundColor: colors.background[Appearance.getColorScheme()==="light" ? 0 : 1], width:Dimensions.get('window').width, height:Dimensions.get('window').height*0.85}}>
+          <FadeInOut fadeIn={true}>
+            <LottieView autoPlay loop style={{width: "95%",zIndex:1,transform: [{ scale: 1.25 },],}} source={chosenSplashScreen}/>
+          </FadeInOut>
+        </View>
+        <PopupRaw ref={(popupGeneratingData) => this.popupGeneratingData = popupGeneratingData} text={attemptToTranslate("Generating Data...")} textLower={attemptToTranslate("This may take a few minutes and is only done once.")} textLower2={attemptToTranslate("If this takes longer than a minute restart the app and select Download data.")}/>
+        <Popup
+          ref={(popupGenerateMenu) => this.popupGenerateMenu = popupGenerateMenu}
+          button1={"Download"}
+          button1Action={async ()=>{
+            await this.continueMountingGenerate("online");
+          }}
+          button2={"Generate"}
+          button2Action={async ()=>{
+            await this.continueMountingGenerate(true);
+          }}
+          text={"Generate Data"}
+          textLower={"It seems generating data may have had some issues. If generating data fails or takes too long, select [Download]."}
+          mailLink
+          noDismiss
+        />
+        <DownloadDatabase ref={(popupDownload) => this.popupDownload = popupDownload} generateJSONLinks={this.generateJSONLinks} continueMountingFinish={async () => {await this.continueMountingFinish()}}/>
+        <PopupRawLoading ref={(popupLoading) => this.popupLoading = popupLoading}/>
       </>
     } else if (this.state.firstLogin==="true"){
-      return <Onboard setFirstLogin={this.setFirstLogin}/>
+      return <GestureHandlerRootView style={{flex:1,backgroundColor: "#000000"}}>
+        <Onboard setFirstLogin={this.setFirstLogin}/>
+      </GestureHandlerRootView>
     } else {
       var currentPageView;
       if (this.state.currentPage===0){
@@ -571,7 +574,7 @@ class App extends Component {
         }
       }
       return (
-        <View style={{flex:1,backgroundColor: "#000000"}}>
+        <GestureHandlerRootView style={{flex:1,backgroundColor: "#000000"}}>
           <Toast ref={(ref) => global['toast'] = ref} />
           <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage} sideMenuSections={this.sideMenuSections} sideMenuSectionsDisabled={this.sideMenuSectionsDisabled}>
             <Provider theme={theme}>
@@ -591,7 +594,7 @@ class App extends Component {
             <PopupInfos setPage={this.setPage}/>
           </SideMenu>
           <FABWrapper ref={(fab) => this.fab = fab} openDrawer={this.openDrawer}/>
-        </View>
+        </GestureHandlerRootView>
       );
     }
   }

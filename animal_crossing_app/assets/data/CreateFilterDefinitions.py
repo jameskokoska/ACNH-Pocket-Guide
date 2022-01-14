@@ -1,5 +1,7 @@
 import json
 import codecs
+
+
 with open('data.json', encoding='utf-8-sig') as d:
     data = json.load(d)
 
@@ -217,6 +219,7 @@ else:
                         currentFilter["id"] = filter+ ":" + datum.get(filter)
                         possibleFilters.append(currentFilter)
                         doneFilters.append(datum.get(filter))
+            possibleFilters.sort(key=lambda x: x["name"])
             currentCategory["children"]=possibleFilters
             possibleFilters = []
             totalFilters.append(currentCategory)
