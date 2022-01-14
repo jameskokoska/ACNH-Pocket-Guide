@@ -280,6 +280,7 @@ class App extends Component {
       "Collection" : false,
       "Profile" : false,
       "Loan Tracking" : true,
+      "Tool Durability" : true,
       "Store Hours" : true,
       // "Active Creatures" : true,
     }
@@ -292,6 +293,7 @@ class App extends Component {
       {"name":"Collection"},
       {"name":"Profile"},
       {"name":"Loan Tracking"},
+      {"name":"Tool Durability"},
       {"name":"Store Hours"},
     ]
     this.sectionsOrder = await this.loadList("SectionsOrder",defaultSectionsOrder,"name")

@@ -1491,6 +1491,49 @@ export function findObject(string, paramToSearch, dataCategory){
   return false
 }
 
+export function findObjectWithGlobal(string, paramToSearch, globalCategory){
+  for(var dataSet = 0; dataSet < globalCategory.length; dataSet++){
+    for(var i = 0; i < globalCategory[dataSet].length; i++){
+      if(globalCategory[dataSet][i].hasOwnProperty(paramToSearch) && globalCategory[dataSet][i][paramToSearch].toString()===string){
+        return globalCategory[dataSet][i];
+      }
+    }
+  }
+  return false
+}
+
+export function findMultipleObjectWithGlobal(strings, paramToSearch, globalCategory, removeVariations=false, sortAfter=false){
+  let outputObjects = []
+  let previousVariation = ""
+  for(var dataSet = 0; dataSet < globalCategory.length; dataSet++){
+    for(var i = 0; i < globalCategory[dataSet].length; i++){
+      for(var x = 0; x < strings.length; x++){
+        if(removeVariations && globalCategory[dataSet][i].hasOwnProperty("Name") && previousVariation===globalCategory[dataSet][i]["Name"]){
+          previousVariation = globalCategory[dataSet][i]["Name"]
+          continue
+        }
+        if(globalCategory[dataSet][i].hasOwnProperty(paramToSearch) && globalCategory[dataSet][i][paramToSearch].toString()===strings[x]){
+          outputObjects.push(globalCategory[dataSet][i]);
+          previousVariation = globalCategory[dataSet][i]["Name"]
+        }
+      }
+    }
+  }
+  if(sortAfter){
+    let outputObjects2 = []
+    for(let string of strings){
+      for(let item of outputObjects){
+        if(item[paramToSearch]===string){
+          outputObjects2.push(item)
+          continue
+        }
+      }
+    }
+    return outputObjects2
+  }
+  return outputObjects
+}
+
 //find if any item is craftable given a material
 export function anythingCraftable(materialName){
   if(materialName===undefined){return false}

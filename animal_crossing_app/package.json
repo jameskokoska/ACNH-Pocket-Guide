@@ -29,6 +29,7 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz",
     "react-native-appearance": "~0.3.3",
     "react-native-collapsible": "^1.5.3",
+    "react-native-countup": "0.0.2",
     "react-native-debounce-input": "^1.0.5",
     "react-native-draggable-grid": "^2.1.4",
     "react-native-dropdown-picker": "^3.7.6",

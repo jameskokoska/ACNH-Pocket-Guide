@@ -1,22 +1,16 @@
 import React, {Component} from 'react';
-import {Linking, TextInput, Vibration,TouchableNativeFeedback,TouchableOpacity,StyleSheet, Text, View, Image, Animated} from 'react-native';
+import {Vibration,TouchableNativeFeedback,TouchableOpacity,StyleSheet, Text, View, Image, Animated} from 'react-native';
 import TextFont from './TextFont';
-import {getCurrentDateObject, getMonth, getWeekDayShort} from './DateFunctions';
-import {getStorage, checkOff, capitalize, commas, removeBrackets} from "../LoadJsonData"
-import {getPhoto} from "./GetPhoto"
-import Check from './Check';
+import {getStorage, commas,} from "../LoadJsonData"
 import colors from '../Colors'
-import PopupAddLoan from "./PopupAddLoan"
+import PopupAddTool from "./PopupAddTool"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
-import DropDownPicker from 'react-native-dropdown-picker'
-import FastImage from "./FastImage"
-import {PopupInfoCustom} from "./Popup"
 import ButtonComponent from "./ButtonComponent";
-import {PopupAmountEntry} from "./PopupAddLoan";
-import AnimateNumber from 'react-native-countup';
+import FastImage from './FastImage';
+// import AnimateNumber from 'react-native-countup'
 
-export default class LoanList extends Component {
+export default class DurabilityList extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -39,14 +33,14 @@ export default class LoanList extends Component {
       {title: attemptToTranslate('Bridge'), total: 250000, current:0},
       {title: attemptToTranslate('House'), total: 1000000, current:250000},
     ]
-    var storageData = JSON.parse(await getStorage("LoanList"+global.profile,JSON.stringify(defaultList)));
+    var storageData = JSON.parse(await getStorage("ToolList"+global.profile,JSON.stringify(defaultList)));
     if(this.mounted){
       this.setState({data:storageData,});
     }
   }
 
   saveList = async(data) => {
-    await AsyncStorage.setItem("LoanList"+global.profile, JSON.stringify(data));
+    await AsyncStorage.setItem("ToolList"+global.profile, JSON.stringify(data));
   }
 
   editAmount = (index, amount) => {
@@ -89,7 +83,7 @@ export default class LoanList extends Component {
 
   addItemPopup = (open) => {
     getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
-    this.popupAddLoan.setPopupVisible(true);
+    this.popupAddTool.setPopupVisible(true);
   }
 
   addItem = (item) => {
@@ -122,7 +116,7 @@ export default class LoanList extends Component {
         <View style={{paddingTop:0, marginHorizontal: 0, flex: 1, flexDirection: 'row', justifyContent:'center',flexWrap:"wrap"}}>
           {this.state.data.map( (item, index)=>{
             return(
-              <LoanItem
+              <ToolItem
                 key={item+index.toString()}
                 item={item}
                 index={index}
@@ -135,19 +129,19 @@ export default class LoanList extends Component {
           })}
         </View>
       </View>
-      <PopupAddLoan ref={(popupAddLoan) => this.popupAddLoan = popupAddLoan} addItem={this.addItem}/>
+      <PopupAddTool ref={(popupAddTool) => this.popupAddTool = popupAddTool} addItem={this.addItem}/>
     </>
   }
 }
 
 
-class LoanItem extends Component {
-  constructor() {
+class ToolItem extends Component {
+  constructor(props) {
     super();
     this.state = {
       showRemove:false,
       animationValue: new Animated.Value(0),
-      height:0,
+      width:0,
     }
   }
   componentDidUpdate(prevProps){
@@ -189,7 +183,7 @@ class LoanItem extends Component {
         <View/>
       )
   }
-  animation = (height = 0) =>{
+  animation=(width=0)=>{
     var percent = (this.props.item?.current/this.props.item?.total)
     if(this.props.item?.total===0 || this.props.item===undefined || this.props.item.total===undefined || this.props.item.current===undefined){
       percent = 1
@@ -200,31 +194,27 @@ class LoanItem extends Component {
       percent = 0
     }
     let animateToValue = 0
-    if(height!==0){
-      animateToValue = percent*height
+    if(width!==0){
+      animateToValue = percent*width
     } else {
-      animateToValue = percent*this.state.height
+      animateToValue = percent*this.state.width
     }
     Animated.timing(this.state.animationValue, {
       toValue: animateToValue,
       duration: 400,
-      useNativeDriver: false
-    }).start();    
+      useNativeDriver: false,
+    }).start();
   }
   render(){
-    if(this.props.item===undefined){
-      return <View/>
-    }
     return (
       <View onLayout={(event) => {
-        console.log(event.nativeEvent.layout.height)
-          let height = event?.nativeEvent?.layout?.height;
-          this.setState({height:height})
-          this.animation(height)
+          let width = event?.nativeEvent?.layout?.width;
+          this.setState({width:width})
+          this.animation(width)
         }} style={{width: "90%", margin:10}}
       >
         <View style={{width: "100%", position:"absolute", backgroundColor:colors.eventBackground[global.darkMode], height:"100%", borderRadius:10, bottom:0 }}/>
-        <Animated.View style={{width: "100%", position:"absolute", backgroundColor:colors.loanProgress[global.darkMode], height:this.state.animationValue, borderRadius:10, bottom:0}}/>
+        <Animated.View style={{height:"100%", position:"absolute", backgroundColor:colors.loanProgress[global.darkMode], width:this.state.animationValue, borderRadius:10, bottom:0}}/>
         {this.removeButton(this.props)}
         <TouchableNativeFeedback onLongPress={() => {  
             this.setState({showRemove:!this.state.showRemove})
@@ -232,42 +222,85 @@ class LoanItem extends Component {
           }}
           background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"1A", false)}
         >
-          <View style={{alignItems: 'center'}}>
-            <View style={{height:13}}/>
-            <TextFont bold={true} numberOfLines={2} style={{textAlign:"center", fontSize:22, color:colors.textBlack[global.darkMode]}}>{capitalize(this.props.item?.title)}</TextFont>
-            <View style={{height:4}}/>
-            <View style={{alignItems: 'center',flexDirection:"row",}}>
-              <TextFont translate={false} style={{fontSize:19, color:colors.textBlack[global.darkMode]}}>{commas(this.props.item?.current)}</TextFont>
-              <View style={{width:10}}/>
-              <TextFont style={{fontSize:25, color:colors.textBlack[global.darkMode]}}>/</TextFont>
-              <View style={{width:10}}/>
-              <TextFont translate={false} style={{fontSize:19, color:colors.textBlack[global.darkMode]}}>{commas(this.props.item?.total) + " " + attemptToTranslate("bells")}</TextFont>
+          <View style={{justifyContent:"center", padding:5, paddingVertical:13}}>
+            <View style={{flexDirection:"row", justifyContent:"space-around", alignItems:"center"}}>
+              <View style={{borderRadius:50, backgroundColor:colors.lightDarkAccentHeavy[global.darkMode], padding:10}}>
+                <FastImage cacheKey={this.props.item.image} source={{uri:this.props.item.image}} style={{height: 55, width: 55, resizeMode:'contain'}}/>
+              </View>
+              <TouchableOpacity
+                onPress={() => {
+                  this.props.editAmount(this.props.index,this.props.item?.current>0 ? this.props.item?.current-1 : this.props.item?.current)
+                  getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+                  this.animation()
+                }}
+              >
+                <Image source={require("../assets/icons/deleteIcon.png")} style={{opacity:0.8,width:34, height:34, borderRadius:100, margin:10, marginVertical: 22}}/>
+              </TouchableOpacity>
+              <View style={{flexDirection:"column", alignItems:"center"}}>
+                <View style={{alignItems: 'baseline',flexDirection:"row",}}>
+                  <TextFont translate={false} bold={true} style={{fontSize:25, color:colors.textBlack[global.darkMode]}}>{commas(this.props.item?.total-this.props.item?.current<0?0:this.props.item?.total-this.props.item?.current)}</TextFont>
+                </View>
+                {/* <AnimateNumber style={{fontSize:25, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}} formatter={(val) => {
+                    return val.toFixed(0)
+                  }} initial={0} value={this.props.item?.total-this.props.item?.current}/> */}
+                <TextFont style={{fontSize:15, color:colors.textBlack[global.darkMode], marginTop:-4}}>{"remaining"}</TextFont>
+                <View style={{alignItems: 'center',flexDirection:"row",}}>
+                  <TextFont translate={false} style={{fontSize:15, color:colors.textBlack[global.darkMode]}}>{commas(this.props.item?.current)}</TextFont>
+                  <View style={{width:5}}/>
+                  <TextFont style={{fontSize:18, color:colors.textBlack[global.darkMode]}}>/</TextFont>
+                  <View style={{width:5}}/>
+                  <TextFont translate={false} style={{fontSize:15, color:colors.textBlack[global.darkMode]}}>{commas(this.props.item?.total)}</TextFont>
+                </View>
+              </View>
+              <TouchableOpacity
+                onPress={() => {
+                  this.props.editAmount(this.props.index,this.props.item?.current<this.props.item?.total ? this.props.item?.current+1 : this.props.item?.current)
+                  getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+                  this.animation()
+                }}
+              >
+                <Image source={require("../assets/icons/addIcon.png")} style={{opacity:0.8,width:34, height:34, borderRadius:100, margin:10, marginVertical: 22}}/>
+              </TouchableOpacity>
             </View>
-            <TextFont translate={false} style={{fontSize:19, color:colors.textBlack[global.darkMode]}}>{commas(this.props.item?.total-this.props.item?.current<0?0:this.props.item?.total-this.props.item?.current) + " " + attemptToTranslate("bells remaining")}</TextFont>
-            <View style={{alignItems: 'center',flexDirection:"row",}}>
+            {this.state.showRemove || this.props.showEdit?
               <ButtonComponent
-                text={"Edit"}
+                text={"Repair"}
                 color={colors.okButton[global.darkMode]}
                 vibrate={15}
                 onPress={() => {
-                  this.popupEditAmount?.setPopupVisible(true);
+                  this.props.editAmount(this.props.index,0)
+                  this.animation()
+                  this.setState({showRemove:false})
                 }}
               />
-              <PopupAmountEntry editItem={(amount)=>{this.props.editAmount(this.props.index,amount); this.animation()}} ref={(popupEditAmount) => this.popupEditAmount = popupEditAmount} title="Edit Amount"/>
-              <ButtonComponent
-                text={"Pay"}
-                color={colors.okButton[global.darkMode]}
-                vibrate={15}
-                onPress={() => {
-                  this.popupAddAmount?.setPopupVisible(true);
-                }}
-              />
-              <PopupAmountEntry editItem={(amount)=>{this.props.editAmount(this.props.index,this.props.item?.current+amount); this.animation()}} ref={(popupAddAmount) => this.popupAddAmount = popupAddAmount} title="Pay Amount"/>
-            </View>
-            <View style={{height:13}}/>
+              :
+              <View/>
+            }
           </View>
         </TouchableNativeFeedback>
       </View>
     )
+  }
+}
+
+export class CountUp extends Component{
+  constructor(props) {
+    super();
+    this.state = {
+      currentNumber: 0
+    }
+  }
+  componentDidMount(){
+    this.countUp(this.props.startValue)
+  }
+  countUp = (i) => {
+    this.setState({currentNumber:i})
+    if (this.props.countDown && i < this.props.endValue)
+      setTimeout(()=>{this.countUp(i - 1)}, 10);
+    else if ((this.props.countDown===false || this.props.countDown===undefined) && i < this.props.endValue)
+      setTimeout(()=>{this.countUp(i + 1)}, 10);
+  }
+  render(){
+    return <TextFont style={{fontSize:15, color:colors.textBlack[global.darkMode]}}>{this.state.currentNumber}</TextFont>
   }
 }

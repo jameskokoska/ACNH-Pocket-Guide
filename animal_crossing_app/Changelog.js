@@ -3,6 +3,11 @@ export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added Tool Durability tracking as Home Page section
+-Added animations to Collection progress
+-Added animations to Loan Tracking
+-Added filters to Quick Search
+-
 -Added Quick Search on home screen, swipe down on home page to instantly search All Items
 -Improved search for Achievements page
 -

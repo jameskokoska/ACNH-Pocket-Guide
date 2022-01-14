@@ -28,7 +28,9 @@ export class SelectionImage extends Component {
       <View style={{flex: 1, flexWrap: 'wrap', flexDirection:"row",justifyContent:"center"}}>
       {this.props.images.map( (image, index)=>{
         var imageComponent = <View/>
-        if(image.constructor === String && image.startsWith("http")){
+        if(image==="" || image===undefined){
+          imageComponent = <View/>
+        }else if(image.constructor === String && image.startsWith("http")){
           imageComponent = <FastImage
             style={{width: this.props.sizeImageOnline[0],height: this.props.sizeImageOnline[1],resizeMode:'contain',}}
             source={{uri:image}}
