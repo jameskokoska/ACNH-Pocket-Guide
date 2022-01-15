@@ -10,6 +10,7 @@ export const changelog = `
 -Loan input shows input keyboard automatically
 -Filters now sorted in alphabetical order
 -Added Shooting Star counter
+-Added all events for all years
 -Removed Active Creatures shortcut on Home page
 -Updated translations
 -Added Personality filters and data to Amiibo Cards

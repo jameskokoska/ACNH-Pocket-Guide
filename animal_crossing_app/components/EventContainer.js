@@ -194,108 +194,117 @@ export function getEventsDay(date, eventSections, showEventsIfInRange){
     }
   })
 
+  let hemisphereShort = getSettingsString("settingsNorthernHemisphere")==="true" ? "NH" : "SH"
+  let currentYear = date.getFullYear().toString()
+  let eventDateKey = currentYear + " " + hemisphereShort
   seasonData.map( (event, index)=>{
-    var eventName = getEventName(event["Name"])
+    if(event["Name"]===undefined || event["Name"].toLocaleLowerCase().includes("Bug-Off") || event["Name"].toLocaleLowerCase().includes("Fishing Tourney") || event["Name"].toLocaleLowerCase().includes("Fireworks")){
+      //these are handles by specialEvents map above
+    } else {
+      var eventName = getEventName(event["Name"])
 
-    if(date.getFullYear().toString() !== event["Year"] && event["Year"]!=="Any"){
-      return
-    }
+      // if(date.getFullYear().toString() !== event["Year"] && event["Year"]!=="Any"){
+      //   return
+      // }
 
-    if((event["Type"].toLowerCase()==="special event" || event["Type"].toLowerCase()==="basegame event") && !event["Name"].toLowerCase().includes("ready days") || 
-      eventSections["Crafting Seasons"] && event["Type"].toLowerCase()==="crafting season" ||
-      eventSections["Event Ready Days"] && event["Name"].toLowerCase().includes("ready days") || 
-      eventSections["Nook Shopping Events"] && event["Type"].toLowerCase()===("nook shopping event") || 
-      eventSections["Zodiac Seasons"] && event["Type"].toLowerCase()===("zodiac season") || 
-      eventSections["Shopping Seasons"] && event["Type"].toLowerCase()===("shopping season")
-    ){
-      if(event["Dates (Northern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")==="true"){
-        if(isDateInRange(event["Dates (Northern Hemisphere)"], date.getFullYear(), date, "startOnly")){
-          let isImportant = event["Type"].toLowerCase()==="special event" && !event["Name"].includes("days")
-          totalEvents.push({
-            name: capitalize(eventName),
-            time: event["Type"],
-            image: event["Name"],
-            day:date.getDate(),
-            weekday:date.getDay(),
-            color:isImportant ? colors.specialEventBackground[global.darkMode]:colors.startEventBackground[global.darkMode],
-            colorHeavy:isImportant ? colors.specialEventBackgroundHeavy[global.darkMode]:colors.startEventBackgroundHeavy[global.darkMode],
-            type:"filter",
-            filter:event["Name"],
-            important: isImportant
-          });
-          if(eventSections["App notifications"]){
-            schedulePushNotification(date,eventSections["Set Notification Time"],capitalize(eventName),attemptToTranslate(event["Type"]));
+      if((event["Type"].toLowerCase()==="special event" || event["Type"].toLowerCase()==="basegame event") && !event["Name"].includes("days before") && !event["Name"].includes("weeks before") || 
+        eventSections["Crafting Seasons"] && event["Type"].toLowerCase()==="crafting season" ||
+        eventSections["Event Ready Days"] && event["Name"].toLowerCase().includes("days before") || 
+        eventSections["Nook Shopping Events"] && event["Type"].toLowerCase()===("nook shopping event") || 
+        eventSections["Zodiac Seasons"] && event["Type"].toLowerCase()===("zodiac season") || 
+        eventSections["Shopping Seasons"] && event["Type"].toLowerCase()===("shopping season")
+      ){
+        if(event[eventDateKey]!=="NA" && getSettingsString("settingsNorthernHemisphere")==="true"){
+          if(isDateInRange(event[eventDateKey], date.getFullYear(), date, "startOnly")){
+            let isImportant = event["Type"].toLowerCase()==="special event" && !event["Name"].includes("days before") && !event["Name"].includes("weeks before")
+            totalEvents.push({
+              name: capitalize(eventName),
+              time: event["Type"],
+              image: event["Name"],
+              day:date.getDate(),
+              weekday:date.getDay(),
+              color:isImportant ? colors.specialEventBackground[global.darkMode]:colors.startEventBackground[global.darkMode],
+              colorHeavy:isImportant ? colors.specialEventBackgroundHeavy[global.darkMode]:colors.startEventBackgroundHeavy[global.darkMode],
+              type:"filter",
+              filter:event["Name"],
+              important: isImportant
+            });
+            if(eventSections["App notifications"]){
+              schedulePushNotification(date,eventSections["Set Notification Time"],capitalize(eventName),attemptToTranslate(event["Type"]));
+            }
+          } else if(eventSections["Show End Day of Events"] && isDateInRange(event[eventDateKey], date.getFullYear(), date, "endOnly")){
+            totalEvents.push({
+              name: capitalize(eventName) + " " + attemptToTranslate("End"),
+              time: event["Type"],
+              image: event["Name"],
+              day:date.getDate(),
+              weekday:date.getDay(),
+              color:colors.warningEventBackground[global.darkMode],
+              colorHeavy:colors.warningEventBackgroundHeavy[global.darkMode],
+              type:"filter",
+              filter:event["Name"]
+            });
+            if(eventSections["App notifications"]){
+              schedulePushNotification(date,eventSections["Set Notification Time"],attemptToTranslate("Last day!") + " " + capitalize(eventName),attemptToTranslate(capitalize(event["Type"])));
+            }
+          } else if(showEventsIfInRange && isDateInRange(event[eventDateKey], date.getFullYear(), date)){
+            totalEvents.push({
+              name: capitalize(eventName),
+              time: event["Type"],
+              image: event["Name"],
+              day:date.getDate(),
+              weekday:date.getDay(),
+              type:"filter",
+              filter:event["Name"]
+            });
           }
-        } else if(eventSections["Show End Day of Events"] && isDateInRange(event["Dates (Northern Hemisphere)"], date.getFullYear(), date, "endOnly")){
-          totalEvents.push({
-            name: capitalize(eventName) + " " + attemptToTranslate("End"),
-            time: event["Type"],
-            image: event["Name"],
-            day:date.getDate(),
-            weekday:date.getDay(),
-            color:colors.warningEventBackground[global.darkMode],
-            colorHeavy:colors.warningEventBackgroundHeavy[global.darkMode],
-            type:"filter",
-            filter:event["Name"]
-          });
-          if(eventSections["App notifications"]){
-            schedulePushNotification(date,eventSections["Set Notification Time"],attemptToTranslate("Last day!") + " " + capitalize(eventName),attemptToTranslate(capitalize(event["Type"])));
+        } else if (event[eventDateKey]!=="NA" && getSettingsString("settingsNorthernHemisphere")!=="true"){
+          if(isDateInRange(event[eventDateKey], date.getFullYear(), date, "startOnly")){
+            let isImportant = event["Type"].toLowerCase()==="special event" && !event["Name"].includes("days before") && !event["Name"].includes("weeks before")
+            totalEvents.push({
+              name: capitalize(eventName),
+              time: event["Type"],
+              image: event["Name"],
+              day:date.getDate(),
+              weekday:date.getDay(),
+              color:isImportant ? colors.specialEventBackground[global.darkMode]:colors.startEventBackground[global.darkMode],
+              colorHeavy:isImportant ? colors.specialEventBackgroundHeavy[global.darkMode]:colors.startEventBackgroundHeavy[global.darkMode],
+              type:"filter",
+              filter:event["Name"]
+            });
+            if(eventSections["App notifications"]){
+              schedulePushNotification(date,eventSections["Set Notification Time"],capitalize(eventName),attemptToTranslate(event["Type"]));
+            }
+          } else if(eventSections["Show End Day of Events"] && isDateInRange(event[eventDateKey], date.getFullYear(), date, "endOnly")){
+            totalEvents.push({
+              name: capitalize(eventName) + " " + attemptToTranslate("End"),
+              time: event["Type"],
+              image: event["Name"],
+              day:date.getDate(),
+              weekday:date.getDay(),
+              color:colors.warningEventBackground[global.darkMode],
+              colorHeavy:colors.warningEventBackgroundHeavy[global.darkMode],
+              type:"filter",
+              filter:event["Name"]
+            });
+            if(eventSections["App notifications"]){
+              schedulePushNotification(date,eventSections["Set Notification Time"],attemptToTranslate("Last day!") + " " + eventName, attemptToTranslate(capitalize(event["Type"])));
+            }
+          } else if(showEventsIfInRange && isDateInRange(event[eventDateKey], date.getFullYear(), date)){
+            totalEvents.push({
+              name: capitalize(eventName),
+              time: event["Type"],
+              image: event["Name"],
+              day:date.getDate(),
+              weekday:date.getDay(),
+              type:"filter",
+              filter:event["Name"]
+            });
           }
-        } else if(showEventsIfInRange && isDateInRange(event["Dates (Northern Hemisphere)"], date.getFullYear(), date)){
-          totalEvents.push({
-            name: capitalize(eventName),
-            time: event["Type"],
-            image: event["Name"],
-            day:date.getDate(),
-            weekday:date.getDay(),
-            type:"filter",
-            filter:event["Name"]
-          });
-        }
-      } else if (event["Dates (Southern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")!=="true"){
-        if(isDateInRange(event["Dates (Southern Hemisphere)"], date.getFullYear(), date, "startOnly")){
-          totalEvents.push({
-            name: capitalize(eventName),
-            time: event["Type"],
-            image: event["Name"],
-            day:date.getDate(),
-            weekday:date.getDay(),
-            color:colors.startEventBackground[global.darkMode],
-            colorHeavy:colors.startEventBackgroundHeavy[global.darkMode],
-            type:"filter",
-            filter:event["Name"]
-          });
-          if(eventSections["App notifications"]){
-            schedulePushNotification(date,eventSections["Set Notification Time"],capitalize(eventName),attemptToTranslate(event["Type"]));
-          }
-        } else if(eventSections["Show End Day of Events"] && isDateInRange(event["Dates (Southern Hemisphere)"], date.getFullYear(), date, "endOnly")){
-          totalEvents.push({
-            name: capitalize(eventName) + " " + attemptToTranslate("End"),
-            time: event["Type"],
-            image: event["Name"],
-            day:date.getDate(),
-            weekday:date.getDay(),
-            color:colors.warningEventBackground[global.darkMode],
-            colorHeavy:colors.warningEventBackgroundHeavy[global.darkMode],
-            type:"filter",
-            filter:event["Name"]
-          });
-          if(eventSections["App notifications"]){
-            schedulePushNotification(date,eventSections["Set Notification Time"],attemptToTranslate("Last day!") + " " + eventName, attemptToTranslate(capitalize(event["Type"])));
-          }
-        } else if(showEventsIfInRange && isDateInRange(event["Dates (Southern Hemisphere)"], date.getFullYear(), date)){
-          totalEvents.push({
-            name: capitalize(eventName),
-            time: event["Type"],
-            image: event["Name"],
-            day:date.getDate(),
-            weekday:date.getDay(),
-            type:"filter",
-            filter:event["Name"]
-          });
-        }
-      } 
+        } 
+      }
     }
+    
   })
 
   if(eventSections["Daisy Mae"] && date.getDay()===0){
