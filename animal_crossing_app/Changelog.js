@@ -4,12 +4,13 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
 -Added Tool Durability tracking as Home Page section
+-Added Shooting Star counter as Home Page section
+- Tap [Edit Sections] to enable these features
 -Added animations to Collection progress
 -Added animations to Loan Tracking
 -Added filters to Quick Search
 -Loan input shows input keyboard automatically
 -Filters now sorted in alphabetical order
--Added Shooting Star counter
 -Removed Active Creatures shortcut on Home page
 -Updated translations
 -Added Personality filters and data to Amiibo Cards
