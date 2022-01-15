@@ -254,14 +254,15 @@ export function getEventsDay(date, eventSections, showEventsIfInRange){
         }
       } else if (event["Dates (Southern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")!=="true"){
         if(isDateInRange(event["Dates (Southern Hemisphere)"], date.getFullYear(), date, "startOnly")){
+          let isImportant = event["Type"].toLowerCase()==="special event" && !event["Name"].includes("days")
           totalEvents.push({
             name: capitalize(eventName),
             time: event["Type"],
             image: event["Name"],
             day:date.getDate(),
             weekday:date.getDay(),
-            color:colors.startEventBackground[global.darkMode],
-            colorHeavy:colors.startEventBackgroundHeavy[global.darkMode],
+            color:isImportant ? colors.specialEventBackground[global.darkMode]:colors.startEventBackground[global.darkMode],
+            colorHeavy:isImportant ? colors.specialEventBackgroundHeavy[global.darkMode]:colors.startEventBackgroundHeavy[global.darkMode],
             type:"filter",
             filter:event["Name"]
           });

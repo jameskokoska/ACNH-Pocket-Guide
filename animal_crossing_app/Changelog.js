@@ -16,6 +16,7 @@ export const changelog = `
 -Fixed Amiibo cards missing images
 -Fixed popup background wrong size on some devices
 -Color changes and fixes
+-Fixed event colors for Southern Hemisphere
 -Package updates
 -
 -Added Quick Search on home screen, swipe down on home page to instantly search All Items
