@@ -1,57 +1,62 @@
 [
-   {
-      "image":"401 Isabelle amiibo card JP.jpg",
-      "number":"401",
-      "Name":"Isabelle (Character Parfait)",
-      "typeImage":"https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/3\\/30\\/SpecialSpeciesIconSilhouette.png\\/50px-SpecialSpeciesIconSilhouette.png",
-      "type":"Special",
-      "starSign":"Sagittarius",
-      "birthday":"December 20th",
-      "dice":"1",
-      "handSign":"Scissors"
-   },
-   {
-      "image":"https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/1\\/18\\/402_Goldie_amiibo_card_NA.png\\/75px-402_Goldie_amiibo_card_NA.png",
-      "number":"402",
-      "Name":"Goldie (amiibo Festival)",
-      "typeImage":"https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/7\\/7f\\/DogSpeciesIconSilhouette.png\\/50px-DogSpeciesIconSilhouette.png",
-      "type":"Dog",
-      "starSign":"Capricorn",
-      "birthday":"December 27th",
-      "dice":"2",
-      "handSign":"Rock"
-   },
-   {
-      "image":"https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/f\\/fe\\/403_Stitches_amiibo_card_NA.png\\/75px-403_Stitches_amiibo_card_NA.png",
-      "number":"403",
-      "Name":"Stitches (amiibo Festival)",
-      "typeImage":"https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/2\\/23\\/Bear_cubSpeciesIconSilhouette.png\\/50px-Bear_cubSpeciesIconSilhouette.png",
-      "type":"Cub",
-      "starSign":"Aquarius",
-      "birthday":"February 10th",
-      "dice":"6",
-      "handSign":"Scissors"
-   },
-   {
-      "image":"https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/5\\/51\\/404_Rosie_amiibo_card_NA.png\\/75px-404_Rosie_amiibo_card_NA.png",
-      "number":"404",
-      "Name":"Rosie (amiibo Festival)",
-      "typeImage":"https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/b\\/ba\\/CatSpeciesIconSilhouette.png\\/50px-CatSpeciesIconSilhouette.png",
-      "type":"Cat",
-      "starSign":"Pisces",
-      "birthday":"February 27th",
-      "dice":"4",
-      "handSign":"Paper"
-   },
-   {
-      "image":"https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/4\\/41\\/405_K.K._amiibo_card_JP.png\\/75px-405_K.K._amiibo_card_JP.png",
-      "number":"405",
-      "Name":"K.K. (Character Parfait)",
-      "typeImage":"https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/3\\/30\\/SpecialSpeciesIconSilhouette.png\\/50px-SpecialSpeciesIconSilhouette.png",
-      "type":"Special",
-      "starSign":"Virgo",
-      "birthday":"August 23rd",
-      "dice":"2",
-      "handSign":"Rock"
-   }
+  {
+    "image": "https://dodo.ac/np/images/thumb/8/85/Isabelle_Character_Parfait_amiibo_card_JP.jpg/75px-Isabelle_Character_Parfait_amiibo_card_JP.jpg",
+    "number": "401",
+    "Name": "Isabelle (Character Parfait)",
+    "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/3\\/30\\/SpecialSpeciesIconSilhouette.png\\/50px-SpecialSpeciesIconSilhouette.png",
+    "type": "Special",
+    "starSign": "Sagittarius",
+    "birthday": "December 20th",
+    "dice": "1",
+    "handSign": "Scissors",
+    "Personality": "NA"
+  },
+  {
+    "image": "https://dodo.ac/np/images/thumb/0/0e/Goldie_AF_amiibo_card_NA.png/75px-Goldie_AF_amiibo_card_NA.png",
+    "number": "402",
+    "Name": "Goldie (amiibo Festival)",
+    "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/7\\/7f\\/DogSpeciesIconSilhouette.png\\/50px-DogSpeciesIconSilhouette.png",
+    "type": "Dog",
+    "starSign": "Capricorn",
+    "birthday": "December 27th",
+    "dice": "2",
+    "handSign": "Rock",
+    "Personality": "NA"
+  },
+  {
+    "image": "https://dodo.ac/np/images/thumb/6/6e/Stitches_AF_amiibo_card_NA.png/75px-Stitches_AF_amiibo_card_NA.png",
+    "number": "403",
+    "Name": "Stitches (amiibo Festival)",
+    "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/2\\/23\\/Bear_cubSpeciesIconSilhouette.png\\/50px-Bear_cubSpeciesIconSilhouette.png",
+    "type": "Cub",
+    "starSign": "Aquarius",
+    "birthday": "February 10th",
+    "dice": "6",
+    "handSign": "Scissors",
+    "Personality": "NA"
+  },
+  {
+    "image": "https://dodo.ac/np/images/thumb/5/5e/Rosie_AF_amiibo_card_NA.png/75px-Rosie_AF_amiibo_card_NA.png",
+    "number": "404",
+    "Name": "Rosie (amiibo Festival)",
+    "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/b\\/ba\\/CatSpeciesIconSilhouette.png\\/50px-CatSpeciesIconSilhouette.png",
+    "type": "Cat",
+    "starSign": "Pisces",
+    "birthday": "February 27th",
+    "dice": "4",
+    "handSign": "Paper",
+    "Personality": "NA"
+  },
+  {
+    "image": "https://dodo.ac/np/images/thumb/7/74/K.K._Pikopuri_amiibo_card_JP.png/75px-K.K._Pikopuri_amiibo_card_JP.png",
+    "number": "405",
+    "Name": "K.K. (Character Parfait)",
+    "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/3\\/30\\/SpecialSpeciesIconSilhouette.png\\/50px-SpecialSpeciesIconSilhouette.png",
+    "type": "Special",
+    "starSign": "Virgo",
+    "birthday": "August 23rd",
+    "dice": "2",
+    "handSign": "Rock",
+    "Personality": "NA"
+  }
 ]

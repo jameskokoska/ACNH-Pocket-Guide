@@ -28,10 +28,8 @@
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
     "react-native-appearance": "~0.3.3",
-    "react-native-collapsible": "^1.5.3",
     "react-native-countup": "0.0.2",
     "react-native-debounce-input": "^1.0.5",
-    "react-native-dropdown-picker": "^3.7.6",
     "react-native-gesture-handler": "~2.1.0",
     "react-native-image-pan-zoom": "^2.1.12",
     "react-native-modal-datetime-picker": "^9.1.0",
@@ -41,14 +39,13 @@
     "react-native-reanimated": "~2.3.1",
     "react-native-safe-area-context": "3.3.2",
     "react-native-screens": "~3.10.1",
-    "react-native-sectioned-multi-select": "^0.8.1",
+    "react-native-sectioned-multi-select": "^0.8.4",
     "react-native-tab-view": "^3.0.1",
     "react-native-toast-notifications": "^3.2.3",
     "react-native-webview": "11.15.0",
     "reanimated-bottom-sheet": "^1.0.0-alpha.22",
     "toggle-switch-react-native": "^2.3.0",
-    "xlsx": "^0.17.3",
-    "expo-navigation-bar": "~1.1.1"
+    "xlsx": "^0.17.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

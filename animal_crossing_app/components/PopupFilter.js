@@ -1,19 +1,14 @@
 import React, { Component } from "react";
 import {
-  Alert,
   Modal,
   StyleSheet,
-  Text,
   TouchableOpacity,
   View,
-  Vibration,
-  Easing,
   Dimensions
 } from "react-native";
 import TextFont from "./TextFont";
 import ButtonComponent from "./ButtonComponent";
 import colors from "../Colors";
-import DropDownPicker from 'react-native-dropdown-picker'
 import {translateFilters, getStorage, attemptToTranslate, getSettingsString} from '../LoadJsonData';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 const filterDefinitions = require("../assets/data/Generated/filterDefinitions.json");
@@ -163,7 +158,22 @@ class PopupFilter extends Component {
           {"name":"Scissors","id":"handSign:Scissors"},
         ]
       }]
-      this.possibleFilters = [...this.possibleFilters, ...categories, ...handSigns];
+      const personality = [{
+        "name": "Personality",
+        "id": "Personality",
+        "children": [
+          {"name":"None","id":"Personality:NA"},
+          {"name": "Big Sister","id": "Personality:Big Sister"},
+          {"name": "Cranky","id": "Personality:Cranky"},
+          {"name": "Jock","id": "Personality:Jock"},
+          {"name": "Lazy","id": "Personality:Lazy"},
+          {"name": "Normal","id": "Personality:Normal"},
+          {"name": "Peppy","id": "Personality:Peppy"},
+          {"name": "Smug","id": "Personality:Smug"},
+          {"name": "Snooty","id": "Personality:Snooty"}
+        ]
+      }]
+      this.possibleFilters = [...this.possibleFilters, ...categories, ...handSigns, ...personality];
     } else if(this.props.title==="Active Creatures"){
       const categories = [{
         "name": "Type Categories",
@@ -378,7 +388,7 @@ class PopupFilter extends Component {
           }}
         >
           <View style={styles.centeredView}>
-            <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} style={{position:"absolute", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: "black", opacity: 0.1}}/>
+          <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} activeOpacity={0.15} style={{position:"absolute", left:-100, top:-100, width: Dimensions.get('window').width+200, height: Dimensions.get('window').height+200, backgroundColor: "black", opacity: 0.1}}/>
             <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode], height:Dimensions.get('window').height*0.75}]}>
               <TextFont bold={true} style={{fontSize: 22, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Set Filters</TextFont>
               <View style={{height:10}}/>
@@ -397,7 +407,7 @@ class PopupFilter extends Component {
                 ref={SectionedMultiSelect => {this.SectionedMultiSelect = SectionedMultiSelect; if(this.openFirst){SectionedMultiSelect._toggleSelector(true); this.openFirst=false}}}
                 colors={{primary:colors.okButton[global.darkMode], chipColor:colors.selectedText[global.darkMode], text:colors.textBlack[global.darkMode], subText:colors.textBlack[global.darkMode], itemBackground: colors.white[global.darkMode], subItemBackground: colors.white[global.darkMode]}}
                 hideSelect={true}
-                styles={{chipText:{fontFamily:"ArialRoundedBold", padding:10, fontSize:15, color:colors.textBlack[global.darkMode]},confirmText:{padding:7},container:{backgroundColor:colors.white[global.darkMode], borderRadius:15}, selectedItem:{backgroundColor:colors.lightDarkAccent[global.darkMode], marginHorizontal:5, paddingHorizontal:10, borderRadius:5,}, subItem:{marginHorizontal:5, paddingHorizontal:10, paddingVertical:7}, item:{paddingVertical:12}, searchBar:{backgroundColor:colors.lightDarkAccent2[global.darkMode]}, searchTextInput:{color:colors.textBlack[global.darkMode]}}}
+                styles={{chipText:{fontFamily:"ArialRoundedBold", fontSize:14, color:colors.textBlack[global.darkMode]},confirmText:{padding:7},container:{backgroundColor:colors.white[global.darkMode], borderRadius:15}, selectedItem:{backgroundColor:colors.lightDarkAccent[global.darkMode], marginHorizontal:5, paddingHorizontal:10, borderRadius:5,}, subItem:{marginHorizontal:5, paddingHorizontal:10, paddingVertical:7}, item:{paddingVertical:12}, searchBar:{backgroundColor:colors.lightDarkAccent2[global.darkMode]}, searchTextInput:{color:colors.textBlack[global.darkMode]}}}
                 modalWithTouchable={true}
                 itemFontFamily={{fontFamily:"ArialRoundedBold"}}
                 subItemFontFamily={{fontFamily:"ArialRounded"}}

@@ -47,4 +47,5 @@ for objectMain in dataOutput:
             currentObject[objectProperties[propertyIndex]] = attribute
         propertyIndex+=1
     allObjects.append(currentObject)
+    
 print(allObjects)

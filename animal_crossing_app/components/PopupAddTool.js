@@ -18,6 +18,25 @@ export default class PopupAddTool extends Component {
       popupVisible: false,
     };
     this.tool = {title: "", image:"", total:0, current:0};
+    this.images = []
+    this.items = []
+  }
+
+  componentDidMount(){
+    this.items = findMultipleObjectWithGlobal(
+      [
+        "flimsy shovel","shovel","colorful shovel","outdoorsy shovel","printed-design shovel","golden shovel",
+        "flimsy net", "net", "colorful net", "outdoorsy net", "star net", "golden net",
+        "flimsy fishing rod", "fishing rod", "colorful fishing rod", "outdoorsy fishing rod", "fish fishing rod","golden rod",
+        "slingshot", "colorful slingshot", "outdoorsy slingshot", "golden slingshot",
+        "flimsy axe", "stone axe", "axe", "golden axe", 
+        "flimsy watering can", "watering can", "colorful watering can", "outdoorsy watering can", "elephant watering can", "golden watering can"
+      ], "Name",global.dataLoadedTools,true,true
+    )
+    for(let item of this.items){this.images.push(item["Image"])}
+    this.tool.image = this.images[0]
+    this.tool.total = this.items[0]["Uses"]
+    this.tool.title = this.items[0]["Name Language"]
   }
 
   setPopupVisible = (visible) => {
@@ -52,18 +71,6 @@ export default class PopupAddTool extends Component {
       <TextFont bold={true} style={{fontSize: 24, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Add Tool</TextFont>      
       <View style={{height:10}}/>
     </>
-    this.items = findMultipleObjectWithGlobal(
-      [
-        "flimsy shovel","shovel","colorful shovel","outdoorsy shovel","printed-design shovel","golden shovel",
-        "flimsy net", "net", "colorful net", "outdoorsy net", "star net", "golden net",
-        "flimsy fishing rod", "fishing rod", "colorful fishing rod", "outdoorsy fishing rod", "fish fishing rod","golden rod",
-        "slingshot", "colorful slingshot", "outdoorsy slingshot", "golden slingshot",
-        "flimsy axe", "stone axe", "axe", "golden axe", 
-        "flimsy watering can", "watering can", "colorful watering can", "outdoorsy watering can", "elephant watering can", "golden watering can"
-      ], "Name",global.dataLoadedTools,true,true
-    )
-    let images = []
-    for(let item of this.items){images.push(item["Image"])}
     return (
       <>
         <PopupInfoCustom ref={(popup) => this.popup = popup} buttonDisabled={true} buttons={buttons} header={header}>
@@ -71,7 +78,7 @@ export default class PopupAddTool extends Component {
             <View style={{flex:1, justifyContent:"center", marginHorizontal:5,}}>
               <SelectionImage
                 selectedImage={this.tool.image} 
-                images={images}
+                images={this.images}
                 onSelected={(image)=>{
                   for(let item of this.items){
                     if(item["Image"]===image){

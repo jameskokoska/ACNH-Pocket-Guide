@@ -44,17 +44,17 @@ export default class DurabilityList extends Component {
   }
 
   editAmount = (index, amount) => {
-    const newLoanList=this.state.data;
-    newLoanList[index].current = amount;
-    this.setState({data:newLoanList})
-    this.saveList(newLoanList);
+    const newItemList=this.state.data;
+    newItemList[index].current = amount;
+    this.setState({data:newItemList})
+    this.saveList(newItemList);
   }
 
   deleteItem = (index) => {
-    const newLoanList = this.state.data.filter((item,i) => i!=index);
-    this.setState({data:newLoanList});
+    const newItemList = this.state.data.filter((item,i) => i!=index);
+    this.setState({data:newItemList});
     getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
-    this.saveList(newLoanList);
+    this.saveList(newItemList);
   }
 
   reorderItem = (index, direction) => {
@@ -87,10 +87,10 @@ export default class DurabilityList extends Component {
   }
 
   addItem = (item) => {
-    var addedLoan = this.state.data;
-    addedLoan.push(item);
-    this.setState({data: addedLoan});
-    this.saveList(addedLoan);
+    var addedItem = this.state.data;
+    addedItem.push(item);
+    this.setState({data: addedItem});
+    this.saveList(addedItem);
   }
 
 
@@ -135,7 +135,7 @@ export default class DurabilityList extends Component {
 }
 
 
-class ToolItem extends Component {
+export class ToolItem extends Component {
   constructor(props) {
     super();
     this.state = {
@@ -214,9 +214,12 @@ class ToolItem extends Component {
         }} style={{width: "90%", margin:10}}
       >
         <View style={{width: "100%", position:"absolute", backgroundColor:colors.eventBackground[global.darkMode], height:"100%", borderRadius:10, bottom:0 }}/>
-        <Animated.View style={{height:"100%", position:"absolute", backgroundColor:colors.loanProgress[global.darkMode], width:this.state.animationValue, borderRadius:10, bottom:0}}/>
+        <Animated.View style={{height:"100%", position:"absolute", backgroundColor:this.props.color!==undefined?this.props.color:colors.toolProgress[global.darkMode], width:this.state.animationValue, borderRadius:10, bottom:0}}/>
         {this.removeButton(this.props)}
-        <TouchableNativeFeedback onLongPress={() => {  
+        <TouchableNativeFeedback onLongPress={() => {
+            if(this.props.noLongPress===true){
+              return
+            }
             this.setState({showRemove:!this.state.showRemove})
             getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(8) : "";
           }}
@@ -224,17 +227,18 @@ class ToolItem extends Component {
         >
           <View style={{justifyContent:"center", padding:5, paddingVertical:13}}>
             <View style={{flexDirection:"row", justifyContent:"space-around", alignItems:"center"}}>
-              <View style={{borderRadius:50, backgroundColor:colors.lightDarkAccentHeavy[global.darkMode], padding:10}}>
+              <View style={{borderRadius:50, backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode], padding:10}}>
                 <FastImage cacheKey={this.props.item.image} source={{uri:this.props.item.image}} style={{height: 55, width: 55, resizeMode:'contain'}}/>
               </View>
               <TouchableOpacity
+                activeOpacity={0.6}
                 onPress={() => {
                   this.props.editAmount(this.props.index,this.props.item?.current>0 ? this.props.item?.current-1 : this.props.item?.current)
                   getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
                   this.animation()
                 }}
               >
-                <Image source={require("../assets/icons/deleteIcon.png")} style={{opacity:0.8,width:34, height:34, borderRadius:100, margin:10, marginVertical: 22}}/>
+                <Image source={require("../assets/icons/minus.png")} style={{opacity:global.darkMode===false?0.9:0.8,width:34, height:34, margin:10, marginVertical: 22}}/>
               </TouchableOpacity>
               <View style={{flexDirection:"column", alignItems:"center"}}>
                 <View style={{alignItems: 'baseline',flexDirection:"row",}}>
@@ -253,13 +257,14 @@ class ToolItem extends Component {
                 </View>
               </View>
               <TouchableOpacity
+                activeOpacity={0.6}
                 onPress={() => {
-                  this.props.editAmount(this.props.index,this.props.item?.current<this.props.item?.total ? this.props.item?.current+1 : this.props.item?.current)
+                  this.props.editAmount(this.props.index,this.props.canGoOver? this.props.item?.current + 1 : (this.props.item?.current<this.props.item?.total ? this.props.item?.current+1 : this.props.item?.current))
                   getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
                   this.animation()
                 }}
               >
-                <Image source={require("../assets/icons/addIcon.png")} style={{opacity:0.8,width:34, height:34, borderRadius:100, margin:10, marginVertical: 22}}/>
+                <Image source={require("../assets/icons/plus.png")} style={{opacity:global.darkMode===false?0.9:0.8,width:34, height:34, margin:10, marginVertical: 22}}/>
               </TouchableOpacity>
             </View>
             {this.state.showRemove || this.props.showEdit?
@@ -276,6 +281,7 @@ class ToolItem extends Component {
               :
               <View/>
             }
+            {this.props.extraComponent!==undefined ? this.props.extraComponent : <View/>}
           </View>
         </TouchableNativeFeedback>
       </View>

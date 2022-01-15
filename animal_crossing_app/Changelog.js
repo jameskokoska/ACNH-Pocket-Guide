@@ -9,6 +9,14 @@ export const changelog = `
 -Added filters to Quick Search
 -Loan input shows input keyboard automatically
 -Filters now sorted in alphabetical order
+-Added Shooting Star counter
+-Removed Active Creatures shortcut on Home page
+-Updated translations
+-Added Personality filters and data to Amiibo Cards
+-Fixed Amiibo cards missing images
+-Fixed popup background wrong size on some devices
+-Color changes and fixes
+-Package updates
 -
 -Added Quick Search on home screen, swipe down on home page to instantly search All Items
 -Improved search for Achievements page

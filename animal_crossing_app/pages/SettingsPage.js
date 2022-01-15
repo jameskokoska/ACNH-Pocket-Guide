@@ -6,14 +6,12 @@ import colors from '../Colors';
 import ButtonComponent from "../components/ButtonComponent"
 import Popup from '../components/Popup'
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {ExportFile, LoadFile, ExportClipboard, LoadClipboard} from '../components/LoadFile';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import {attemptToTranslate, deleteSavedPhotos, resetFilters, getSettingsString, deleteGeneratedData} from '../LoadJsonData';
 import {SubHeader, Paragraph, HeaderNote, MailLink, Header} from "../components/Formattings"
-import DropDownPicker from 'react-native-dropdown-picker'
 import {PopupBottomCustom} from "../components/Popup"
 import { dataVersion } from '../Changelog';
-import { DropdownMenu, DropdownMenuPicker } from '../components/Dropdown';
+import { DropdownMenu, } from '../components/Dropdown';
 import { getCurrentDateObject } from '../components/DateFunctions';
 
 class SettingsPage extends Component {

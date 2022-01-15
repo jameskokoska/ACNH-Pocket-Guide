@@ -248,7 +248,7 @@ class LoanItem extends Component {
               <PopupAmountEntry editItem={(amount)=>{this.props.editAmount(this.props.index,amount); this.animation()}} ref={(popupEditAmount) => this.popupEditAmount = popupEditAmount} title="Edit Amount"/>
               <ButtonComponent
                 text={"Pay"}
-                color={colors.okButton[global.darkMode]}
+                color={colors.okButton3[global.darkMode]}
                 vibrate={15}
                 onPress={() => {
                   this.popupAddAmount?.setPopupVisible(true);

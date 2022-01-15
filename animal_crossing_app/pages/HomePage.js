@@ -34,6 +34,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { calculateHeaderHeight } from '../components/ListPage';
 import * as RootNavigation from '../RootNavigation.js';
 import DurabilityList from '../components/DurabilityList';
+import ShootingStars from '../components/ShootingStars';
 
 class HomePage extends Component {
   constructor(props){
@@ -382,13 +383,25 @@ class HomePage extends Component {
           }else if(section["name"]==="Tool Durability"){
             if(this.state.editOrder){
               let name = "Tool Durability"
-              return <HomeContentArea index={index} key={name+"edit"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.loanTrackingColor[global.darkMode]} title={name} titleColor={colors.loanTrackingColor[global.darkModeReverse]}>
+              return <HomeContentArea index={index} key={name+"edit"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.toolTrackingColor[global.darkMode]} title={name} titleColor={colors.toolTrackingColor[global.darkModeReverse]}>
                 <View style={{height:10}}/><ConfigureHomePageSettingContainer key={name+index.toString()} title={name} defaultValue={this.state.sections[name]} onCheck={(check)=>{this.setPages(check,name)}}/><View style={{height:10}}/>
               </HomeContentArea>
             }
-            return sections["Tool Durability"]===true?<HomeContentArea index={index} key={"Tool Durability"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.loanTrackingColor[global.darkMode]} title="Tool Durability" titleColor={colors.loanTrackingColor[global.darkModeReverse]}>
+            return sections["Tool Durability"]===true?<HomeContentArea index={index} key={"Tool Durability"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.toolTrackingColor[global.darkMode]} title="Tool Durability" titleColor={colors.toolTrackingColor[global.darkModeReverse]}>
               <View style={{height: 15}}/>
               <DurabilityList/>
+              <View style={{height: 15}}/>
+            </HomeContentArea>:<View/>
+          }else if(section["name"]==="Star Counter"){
+            if(this.state.editOrder){
+              let name = "Star Counter"
+              return <HomeContentArea index={index} key={name+"edit"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.shootingStarsColor[global.darkMode]} title={name} titleColor={colors.shootingStarsColor[global.darkModeReverse]}>
+                <View style={{height:10}}/><ConfigureHomePageSettingContainer key={name+index.toString()} title={name} defaultValue={this.state.sections[name]} onCheck={(check)=>{this.setPages(check,name)}}/><View style={{height:10}}/>
+              </HomeContentArea>
+            }
+            return sections["Star Counter"]===true?<HomeContentArea index={index} key={"Star Counter"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.shootingStarsColor[global.darkMode]} title="Star Counter" titleColor={colors.shootingStarsColor[global.darkModeReverse]}>
+              <View style={{height: 15}}/>
+              <ShootingStars setPage={this.props.setPage}/>
               <View style={{height: 15}}/>
             </HomeContentArea>:<View/>
           }else if(section["name"]==="Store Hours"){
@@ -420,11 +433,11 @@ class HomePage extends Component {
           }
         })}
         
-        <View style={{height: 55}}/>
+        {/* <View style={{height: 55}}/>
         <TouchableOpacity activeOpacity={0.8} style={{backgroundColor:colors.lightDarkAccent[global.darkMode], borderRadius:15, margin: 20, padding:20}} onPress={() => this.props.setPage(29, true, "giftsRedirect")}>
           <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center",}}>{"Active Creatures has been moved to a separate page."}</TextFont>
           <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center",}}>{"You can tap here to go to that page, or open the sidebar."}</TextFont>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
         <View style={{height: 75}}/>
       </Animated.ScrollView>
       

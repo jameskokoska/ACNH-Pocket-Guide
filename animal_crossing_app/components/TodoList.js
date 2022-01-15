@@ -9,7 +9,6 @@ import colors from '../Colors'
 import PopupAddTask from "./PopupAddTask"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {getSettingsString, attemptToTranslate, getCurrentVillagerObjects, getCurrentVillagerNamesString} from "../LoadJsonData"
-import DropDownPicker from 'react-native-dropdown-picker'
 import FastImage from "./FastImage"
 import Popup, {PopupInfoCustom} from "./Popup"
 import ButtonComponent from "./ButtonComponent";

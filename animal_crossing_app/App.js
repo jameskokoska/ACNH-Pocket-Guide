@@ -281,7 +281,8 @@ class App extends Component {
       "Collection" : false,
       "Profile" : false,
       "Loan Tracking" : true,
-      "Tool Durability" : true,
+      "Tool Durability" : false,
+      "Star Counter" : false,
       "Store Hours" : true,
       // "Active Creatures" : true,
     }
@@ -295,6 +296,7 @@ class App extends Component {
       {"name":"Profile"},
       {"name":"Loan Tracking"},
       {"name":"Tool Durability"},
+      {"name":"Star Counter"},
       {"name":"Store Hours"},
     ]
     this.sectionsOrder = await this.loadList("SectionsOrder",defaultSectionsOrder,"name")

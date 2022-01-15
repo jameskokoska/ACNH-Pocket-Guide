@@ -29,7 +29,9 @@ class GuidePage extends Component {
       currentURL = "https://chibisnorlax.github.io/acnhfaq/villagers/amiibo/"
     } else if (props.propsPassed==="ordinanceRedirect"){
       currentURL = "https://chibisnorlax.github.io/acnhfaq/island-dev/#what-are-ordinances"
-    }
+    } else if (props.propsPassed==="shootingStarsRedirect"){
+      currentURL = "https://chibisnorlax.github.io/acnhfaq/island-life/stars/#when-will-i-see-meteor-showers"
+    } 
     this.state = {
       canGoBack: false,
       canGoForward: false,

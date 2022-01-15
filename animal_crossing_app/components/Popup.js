@@ -96,7 +96,7 @@ class Popup extends Component {
           onRequestClose={()=>{(this.props.button1===undefined && this.props.button2===undefined) || this.props.noDismiss===true ? 0 : this.setPopupVisible(false);}}
         >
         <View style={[styles.centeredView,{padding:this.props.centerPadding}]}>
-          {(this.props.button1===undefined && this.props.button2===undefined) || this.props.noDismiss===true ? <View/> : <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} style={{position:"absolute", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: "black", opacity: 0.1}}/>}
+          {(this.props.button1===undefined && this.props.button2===undefined) || this.props.noDismiss===true ? <View/> : <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} activeOpacity={0.15} style={{position:"absolute", left:-100, top:-100, width: Dimensions.get('window').width+200, height: Dimensions.get('window').height+200, backgroundColor: "black", opacity: 0.1}}/>}
           <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
             {this.props.text?<TextFont bold={true} style={{fontSize: 25, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.props.text}</TextFont>:<View/>}
             <ScrollView style={{maxHeight:Dimensions.get('window').height*0.75, marginTop:this.props.margin?10:0}}>
@@ -297,7 +297,7 @@ export class PopupInfoCustom extends Component {
           onRequestClose={()=>{this.props.noDismiss===true ? 0 : this.setPopupVisible(false);}}
         >
         <View style={styles.centeredView}>
-          {this.props.noDismiss===true ? <View/> : <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} style={{position:"absolute", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: "black", opacity: 0.1}}/>}
+          {this.props.noDismiss===true ? <View/> : <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} activeOpacity={0.15} style={{position:"absolute", left:-100, top:-100, width: Dimensions.get('window').width+200, height: Dimensions.get('window').height+200, backgroundColor: "black", opacity: 0.1}}/>}
           <View style={[styles.modalView,this.props.style,{backgroundColor: colors.white[global.darkMode]}]}>
             {this.props.header===undefined ? <View/> : header}
             <ScrollView style={{maxHeight:Dimensions.get('window').height*0.7-this.state.headerHeight-this.state.buttonHeight}}>
