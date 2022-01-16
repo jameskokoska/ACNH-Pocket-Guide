@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import {Vibration,TouchableNativeFeedback,TouchableOpacity,StyleSheet, Text, View, Image, Animated} from 'react-native';
+import {Vibration,TouchableNativeFeedback,TouchableOpacity,View, Image, Animated, Dimensions} from 'react-native';
 import TextFont from './TextFont';
 import {getStorage, commas,} from "../LoadJsonData"
 import colors from '../Colors'
 import PopupAddTool from "./PopupAddTool"
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
+import {getSettingsString} from "../LoadJsonData"
 import ButtonComponent from "./ButtonComponent";
 import FastImage from './FastImage';
 // import AnimateNumber from 'react-native-countup'
@@ -140,7 +140,7 @@ export class ToolItem extends Component {
     super();
     this.state = {
       showRemove:false,
-      animationValue: new Animated.Value(0),
+      animationValue: new Animated.Value(-Dimensions.get('window').width),
       width:0,
     }
   }
@@ -195,13 +195,13 @@ export class ToolItem extends Component {
     }
     let animateToValue = 0
     if(width!==0){
-      animateToValue = percent*width
+      animateToValue = width - percent*width
     } else {
-      animateToValue = percent*this.state.width
+      animateToValue = this.state.width - percent*this.state.width
     }
     Animated.timing(this.state.animationValue, {
-      toValue: animateToValue,
-      duration: 400,
+      toValue: animateToValue*-1,
+      duration: 800,
       useNativeDriver: false,
     }).start();
   }
@@ -211,10 +211,10 @@ export class ToolItem extends Component {
           let width = event?.nativeEvent?.layout?.width;
           this.setState({width:width})
           this.animation(width)
-        }} style={{width: "90%", margin:10}}
+        }} style={{width: "90%", margin:10, overflow:"hidden", borderRadius:10}}
       >
-        <View style={{width: "100%", position:"absolute", backgroundColor:colors.eventBackground[global.darkMode], height:"100%", borderRadius:10, bottom:0 }}/>
-        <Animated.View style={{height:"100%", position:"absolute", backgroundColor:this.props.color!==undefined?this.props.color:colors.toolProgress[global.darkMode], width:this.state.animationValue, borderRadius:10, bottom:0}}/>
+        <View style={{width: "100%", position:"absolute", backgroundColor:colors.eventBackground[global.darkMode], height:"100%", bottom:0 }}/>
+        <Animated.View style={{transform: [{ translateX: this.state.animationValue }], height:"100%", position:"absolute", backgroundColor:this.props.color!==undefined?this.props.color:colors.toolProgress[global.darkMode], width:"100%", borderRadius:10, bottom:0}}/>
         {this.removeButton(this.props)}
         <TouchableNativeFeedback onLongPress={() => {
             if(this.props.noLongPress===true){

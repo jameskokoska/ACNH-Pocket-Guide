@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Animated, ScrollView, Vibration, Image, Dimensions, TouchableOpacity, TextInput, StyleSheet, Text, View, Keyboard} from 'react-native';
+import {Animated, Vibration, Image, Dimensions, TouchableOpacity, TextInput, StyleSheet, Text, View, Keyboard} from 'react-native';
 import Clock from '../components/Clock';
 import HomeContentArea from '../components/HomeContentArea';
 import {EventContainer,getEventsDay} from '../components/EventContainer';
@@ -16,7 +16,7 @@ import {getCurrentDateObject, doWeSwapDate, addDays, hoursStringNook, hoursStrin
 import {TodoList, TurnipLog} from '../components/TodoList';
 import VisitorsList from '../components/VisitorsList';
 import {translateDreamAddressBeginning, translateIslandNameInputLabel2, translateIslandNameInputLabel1, getSettingsString, attemptToTranslate} from "../LoadJsonData"
-// import { ScrollView } from 'react-native-gesture-handler';
+import { ScrollView } from 'react-native-gesture-handler';
 import Popup, {PopupBottomCustom, PopupRaw} from "../components/Popup"
 import VillagerPopup from "../popups/VillagerPopup"
 import ToggleSwitch from 'toggle-switch-react-native'
@@ -206,18 +206,24 @@ class HomePage extends Component {
           sections={this.state.eventSections}
         />
       </PopupBottomCustom>
-      <Animated.ScrollView
+      <ScrollView
         onMomentumScrollEnd={this.handleSnap}
         ref={(scrollViewRef) => this.scrollViewRef = scrollViewRef}
-        onScroll={Animated.event([{ nativeEvent: {contentOffset: {y: this.scrollY}}}], {useNativeDriver: true, 
-          listener: (event)=>{
-            if(event.nativeEvent.contentOffset.y>this.headerHeight) this.closeSearch()
-            if (this.keyboardInterference===false && !this.cannotOpenSearchOnThisSlide && this.searchOpen===false && event.nativeEvent.contentOffset.y<=this.clampHeight) {
-              this.scrollViewRef.scrollTo({y:0});
-              this.openSearch()
-            }
+        onScroll={(event)=>{
+          if(event.nativeEvent.contentOffset.y>this.headerHeight) this.closeSearch()
+          if (this.keyboardInterference===false && !this.cannotOpenSearchOnThisSlide && this.searchOpen===false && event.nativeEvent.contentOffset.y<=this.clampHeight) {
+            this.openSearch()
           }
-        },)}
+        }}
+        // onScroll={Animated.event([{ nativeEvent: {contentOffset: {y: this.scrollY}}}], {useNativeDriver: true, 
+        //   listener: (event)=>{
+        //     if(event.nativeEvent.contentOffset.y>this.headerHeight) this.closeSearch()
+        //     if (this.keyboardInterference===false && !this.cannotOpenSearchOnThisSlide && this.searchOpen===false && event.nativeEvent.contentOffset.y<=this.clampHeight) {
+        //       this.scrollViewRef.scrollTo({y:0});
+        //       this.openSearch()
+        //     }
+        //   }
+        // },)}
         // Not needed because when the keyboard is closed, the search is closed too
         // onScrollEndDrag={
         //   (event) => {
@@ -424,9 +430,6 @@ class HomePage extends Component {
                 <StoreHoursContainerHarvey filter={"Leif"} image={require("../assets/icons/leif.png")} text="Leif" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 23:00" : "5 AM - 11 PM"} openHour={5} closeHour={23}/>
                 <StoreHoursContainerHarvey filter={"Redd's Co-op Raffle"} image={require("../assets/icons/redd.png")} text="Redd" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 1:00" : "5 AM - 1 AM"} openHour={5} closeHour={1}/>
                 <StoreHoursContainerHarvey filter={"Kicks' Co-op"} image={require("../assets/icons/kicks.png")} text="Kicks" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 24:00" : "5 AM - 12 AM"} openHour={5} closeHour={24}/>
-
-
-
               </View>
               <View style={{height: 15}}/>
             </HomeContentArea>:<View/>
@@ -439,7 +442,7 @@ class HomePage extends Component {
           <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center",}}>{"You can tap here to go to that page, or open the sidebar."}</TextFont>
         </TouchableOpacity> */}
         <View style={{height: 75}}/>
-      </Animated.ScrollView>
+      </ScrollView>
       
       <View style={{position:"absolute", width: "100%", height:"100%", zIndex:-5, top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center',overflow: "hidden" }}>
         <View style={{width:690, height: "100%", zIndex:1, position:'absolute', overflow: "hidden", }}>

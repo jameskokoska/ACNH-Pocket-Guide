@@ -1,14 +1,13 @@
 import React, {Component} from 'react';
-import {Image, Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text, TouchableNativeFeedback, Animated} from 'react-native';
+import {Image, StyleSheet, View, Text, TouchableNativeFeedback, Animated, Dimensions} from 'react-native';
 import TextFont from './TextFont'
 import colors from "../Colors"
-import { CountUp } from './DurabilityList';
 
 class ProgressContainer extends Component {
   constructor(props) {
     super();
     this.state = {
-      animationValue: new Animated.Value(0),
+      animationValue: new Animated.Value(-Dimensions.get('window').width),
       width:0,
     }
   }
@@ -24,13 +23,13 @@ class ProgressContainer extends Component {
     }
     let animateToValue = 0
     if(width!==0){
-      animateToValue = percent*width
+      animateToValue = width - percent*width
     } else {
-      animateToValue = percent*this.state.width
+      animateToValue = this.state.width - percent*this.state.width
     }
     Animated.timing(this.state.animationValue, {
-      toValue: animateToValue,
-      useNativeDriver: false,
+      toValue: animateToValue*-1,
+      useNativeDriver: true,
       duration: 1000,
       delay: this.props.delay!==undefined?this.props.delay*100:0,
     }).start();
@@ -43,8 +42,8 @@ class ProgressContainer extends Component {
       }}
     >
       <TouchableNativeFeedback onPress={()=>{this.props.setPage(this.props.page, true, this.props.tab)}} background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}>
-        <View style={[styles.progressContainer,{backgroundColor:this.props.backgroundColor}]}>
-          <Animated.View style={[styles.progressBar,{width:this.state.animationValue,backgroundColor:this.props.color}]}/>
+        <View style={[styles.progressContainer,{backgroundColor:this.props.backgroundColor, overflow:"hidden"}]}>
+          <Animated.View style={[styles.progressBar,{width:"100%", backgroundColor:this.props.color, transform: [{ translateX: this.state.animationValue }]}]}/>
           <View style={{width:"100%",height:"100%",flexDirection:"row",position:"absolute", alignItems:"center", justifyContent:"center"}}>
             <Image style={styles.image} source={this.props.image}/>
             <TextFont style={{fontSize: 18, marginLeft: 10, color:this.props.textColor}}>{this.props.text}</TextFont>
