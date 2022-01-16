@@ -3,6 +3,10 @@ export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Removed scrolling lag on home page
+-Updated animation to use native drivers
+-Improved performance of animations
+-
 -Added Tool Durability tracking as Home Page section
 -Added Shooting Star counter as Home Page section
 - Tap [Edit Sections] to enable these features
@@ -19,9 +23,6 @@ export const changelog = `
 -Color changes and fixes
 -Fixed event colors for Southern Hemisphere
 -Package updates
--Removed scrolling lag on home page
--Updated animation to use native drivers
--Improved performance of animations
 -
 -Added Quick Search on home screen, swipe down on home page to instantly search All Items
 -Improved search for Achievements page
