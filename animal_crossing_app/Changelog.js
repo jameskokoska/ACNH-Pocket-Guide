@@ -6,6 +6,7 @@ export const changelog = `
 -Removed scrolling lag on home page
 -Updated animation to use native drivers
 -Improved performance of animations
+-Added entry count to Paradise Planning page
 -
 -Added Tool Durability tracking as Home Page section
 -Added Shooting Star counter as Home Page section

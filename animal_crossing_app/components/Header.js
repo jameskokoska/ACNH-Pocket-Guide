@@ -4,15 +4,12 @@ import TextFont from './TextFont'
 import FadeInOut from "./FadeInOut"
 import LottieView from 'lottie-react-native';
 import DelayInput from "react-native-debounce-input";
-import colors from "../Colors"
 import {capitalize, getSettingsString, attemptToTranslate, findItemCheckListKey, commas} from "../LoadJsonData"
-import {PopupInfoCustom} from "./Popup"
-import {SubHeader, Paragraph} from "./Formattings"
 import GuideRedirectButton from "./PopupGuideRedirectButton"
 
 const Header = (props) => {
   var filterImage;
-  const [emptySearch, setEmptySearch] = useState(props.currentSearch==="")
+  const [emptySearch, setEmptySearch] = useState(props.currentSearch==="" || props.currentSearch===undefined)
   if(props.disableFilters){
     filterImage=<View/>
   } else if(props.searchFilters.constructor===Array && props.searchFilters.length>=1){

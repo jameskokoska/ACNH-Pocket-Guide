@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Animated,FlatList, Dimensions, TouchableOpacity,StyleSheet, Text, View, Image} from 'react-native';
-import {removeAccents,getStorage, findObject, attemptToTranslateItem, getSettingsString, attemptToTranslateSpecial} from "../LoadJsonData"
+import {removeAccents,getStorage, findObject, attemptToTranslateItem, getSettingsString, attemptToTranslateSpecial, attemptToTranslate} from "../LoadJsonData"
 import colors from '../Colors'
 import {attemptToTranslateAchievement} from "../LoadJsonData"
 import FastImage from "../components/FastImage"
@@ -12,6 +12,7 @@ import Check from '../components/Check';
 import FadeInOut from '../components/FadeInOut';
 import { calculateHeaderHeight } from '../components/ListPage';
 import Toast from "react-native-toast-notifications";
+import TextFont from '../components/TextFont';
 
 export default class ParadisePlanningPage extends Component {
   constructor(props){
@@ -146,6 +147,9 @@ export default class ParadisePlanningPage extends Component {
           }}
           keyExtractor={(item, index) => `list-item-${index}-${item["Name"]}`}
           contentContainerStyle={{paddingBottom:Dimensions.get('window').height/3}}
+          ListFooterComponent={()=>{
+            return <TextFont style={{marginTop:10, marginBottom:10, textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{this.state.data.length+" "+(this.state.data.length!==1?attemptToTranslate("entries."):attemptToTranslate("entry."))}</TextFont>
+          }}
         />
       </FadeInOut>
     </>
