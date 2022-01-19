@@ -4,11 +4,17 @@ import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import colors from '../Colors.js';
 import AllItemsPage from "./AllItemsPage"
 import ErrorPage from "../pages/ErrorPage"
+import * as RootNavigation from '../RootNavigation.js';
+import { AndroidBackHandler } from "react-navigation-backhandler";
 
 export default class VillagerFurniture extends Component {
   constructor() {
     super();
   }
+  onBackButtonPressAndroid = () => {
+    RootNavigation.popRoute(1)
+    return true;
+  };
   render(){
     if(this.props.villager!==undefined  && 
       this.props.villager!=="" && 
@@ -21,39 +27,41 @@ export default class VillagerFurniture extends Component {
       this.props.villager["Default Clothing"]!==undefined && 
       this.props.villager["Default Umbrella"]!==undefined){
       return(
-        <AllItemsPage 
-          disableFilters={true}
-          title={this.props.villager["NameLanguage"]}
-          itemIDs={[
-            {
-              list:[...this.props.villager["Furniture List"].split(";"), ...this.props.villager["Kitchen Equipment"].split(',')[0], ...this.props.villager["DIY Workbench"].split(',')[0],],
-              key:"furnitureCheckList"
-            },
-            {
-              list:[this.props.villager["Flooring"]],
-              key:"floorWallsCheckList"
-            },
-            {
-              list:[this.props.villager["Wallpaper"]],
-              key:"floorWallsCheckList"
-            },
-            {
-              list:[this.props.villager["Default Clothing"]],
-              key:"clothingCheckList"
-            },
-            {
-              list:[this.props.villager["Default Umbrella"]],
-              key:"clothingCheckList"
-            },
-            {
-              list:[this.props.villager["Favorite Song"]],
-              key:"songCheckList"
-            },
-          ]}
-          subHeader="Villager's default house furniture and clothing"
-          appBarColor = {colors.furnitureAppBar[global.darkMode]}
-          accentColor = {colors.furnitureAccent[global.darkMode]}
-        />
+        <AndroidBackHandler onBackPress={this.onBackButtonPressAndroid}>
+          <AllItemsPage 
+            disableFilters={true}
+            title={this.props.villager["NameLanguage"]}
+            itemIDs={[
+              {
+                list:[...this.props.villager["Furniture List"].split(";"), ...this.props.villager["Kitchen Equipment"].split(',')[0], ...this.props.villager["DIY Workbench"].split(',')[0],],
+                key:"furnitureCheckList"
+              },
+              {
+                list:[this.props.villager["Flooring"]],
+                key:"floorWallsCheckList"
+              },
+              {
+                list:[this.props.villager["Wallpaper"]],
+                key:"floorWallsCheckList"
+              },
+              {
+                list:[this.props.villager["Default Clothing"]],
+                key:"clothingCheckList"
+              },
+              {
+                list:[this.props.villager["Default Umbrella"]],
+                key:"clothingCheckList"
+              },
+              {
+                list:[this.props.villager["Favorite Song"]],
+                key:"songCheckList"
+              },
+            ]}
+            subHeader="Villager's default house furniture and clothing"
+            appBarColor = {colors.furnitureAppBar[global.darkMode]}
+            accentColor = {colors.furnitureAccent[global.darkMode]}
+          />
+        </AndroidBackHandler>
       )
     } else {
       return(<ErrorPage/>)
@@ -66,6 +74,10 @@ export class VillagerFurnitureParadisePlanning extends Component {
   constructor() {
     super();
   }
+  onBackButtonPressAndroid = () => {
+    RootNavigation.popRoute(1)
+    return true;
+  };
   render(){
     if(this.props.request!==undefined  && 
       this.props.request!=="" && 
@@ -73,23 +85,25 @@ export class VillagerFurnitureParadisePlanning extends Component {
       this.props.request["Song"]!==undefined,
       this.props.request["Request"]!==undefined) {
       return(
-        <AllItemsPage
-          disableFilters={true}
-          title={this.props.request["Request"]}
-          smallerHeader={true}
-          itemIDs={[
-            {
-              list:[...this.props.request["Furniture List"].split(";")],
-              key:"furnitureCheckList"
-            },
-            {
-              list:[this.props.request["Song"]],
-              key:"songCheckList"
-            },
-          ]}
-          appBarColor = {colors.furnitureAppBar[global.darkMode]}
-          accentColor = {colors.furnitureAccent[global.darkMode]}
-        />
+        <AndroidBackHandler onBackPress={this.onBackButtonPressAndroid}>
+          <AllItemsPage
+            disableFilters={true}
+            title={this.props.request["Request"]}
+            smallerHeader={true}
+            itemIDs={[
+              {
+                list:[...this.props.request["Furniture List"].split(";")],
+                key:"furnitureCheckList"
+              },
+              {
+                list:[this.props.request["Song"]],
+                key:"songCheckList"
+              },
+            ]}
+            appBarColor = {colors.furnitureAppBar[global.darkMode]}
+            accentColor = {colors.furnitureAccent[global.darkMode]}
+          />
+        </AndroidBackHandler>
       )
     } else {
       return(<ErrorPage/>)

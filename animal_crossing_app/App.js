@@ -66,6 +66,7 @@ import GlobalSearchPage from './pages/GlobalSearchPage';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import * as Sentry from 'sentry-expo';
 import {sentryConfig} from './sentryConfig'
+import { useAndroidBackHandler } from "react-navigation-backhandler";
 
 //expo build:android -t app-bundle
 //expo build:android -t apk

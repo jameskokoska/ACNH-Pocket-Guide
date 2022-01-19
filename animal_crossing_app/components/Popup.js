@@ -352,8 +352,10 @@ export class PopupBottomCustom extends Component {
       this.setPopupVisible(false)
       return true
     } else {
+      // RootNavigation.popRoute(1)
       // if(RootNavigation.getCurrentRoute()==="Home"){
-      RootNavigation.popRoute(1)
+      //   return true;
+      // }
       return false
     }
   }
