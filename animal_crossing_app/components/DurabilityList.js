@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Vibration,TouchableNativeFeedback,TouchableOpacity,View, Image, Animated, Dimensions} from 'react-native';
+import {Vibration,TouchableNativeFeedback,TouchableOpacity,View, Image, Animated, Dimensions, BackHandler} from 'react-native';
 import TextFont from './TextFont';
 import {getStorage, commas,} from "../LoadJsonData"
 import colors from '../Colors'
@@ -22,10 +22,24 @@ export default class DurabilityList extends Component {
   componentDidMount(){
     this.mounted=true;
     this.loadList();
+    this.backHandler = BackHandler.addEventListener(
+      "hardwareBackPressHome",
+      this.handleBackButton,
+    );
   }
 
   componentWillUnmount(){
     this.mounted=false;
+    BackHandler.removeEventListener("hardwareBackPressHome", this.handleBackButton);
+  }
+
+  handleBackButton = () => {
+    if(this.state.showEdit===true){
+      this.setState({showEdit:false})
+      return true
+    } else {
+      return false
+    }
   }
 
   loadList = async() => {

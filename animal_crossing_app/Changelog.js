@@ -3,6 +3,10 @@ export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Bug and crash fixes
+-Back button fixes
+-Back button works in more places logically
+-
 -Removed scrolling lag on home page
 -Updated animation to use native drivers
 -Improved performance of animations

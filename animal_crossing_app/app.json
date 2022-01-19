@@ -2,7 +2,7 @@
   "expo": {
     "name": "ACNH Pocket Guide",
     "slug": "animal_crossing_app",
-    "version": "14.1.6",
+    "version": "14.1.7",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
@@ -29,15 +29,35 @@
         "foregroundImage": "./assets/icon-adaptive.png",
         "backgroundColor": "#FFFFFF"
       },
-      "softwareKeyboardLayoutMode":"pan",
+      "softwareKeyboardLayoutMode": "pan",
       "useNextNotificationsApi": true,
-      "playStoreUrl" : "https://play.google.com/store/apps/details?id=com.acnh.pocket_guide",
-      "permissions": [ "WRITE_EXTERNAL_STORAGE","VIBRATE","STATUS_BAR","READ_EXTERNAL_STORAGE"],
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.acnh.pocket_guide",
+      "permissions": [
+        "WRITE_EXTERNAL_STORAGE",
+        "VIBRATE",
+        "STATUS_BAR",
+        "READ_EXTERNAL_STORAGE"
+      ],
       "package": "com.acnh.pocket_guide",
-      "versionCode": 224
+      "versionCode": 226
     },
     "web": {
       "favicon": "./assets/icon.png"
+    },
+    "plugins": [
+      "sentry-expo"
+    ],
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "dapperappdeveloper",
+            "project": "animal-crossing-app",
+            "authToken": "e70dba2eb2d04ccb954b242564d54d95b95ed3a92c5548889a1d7b950d2ff649"
+          }
+        }
+      ]
     }
   }
 }

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Dimensions, Linking, TextInput, Vibration,TouchableNativeFeedback,TouchableOpacity,StyleSheet, Text, View, Image} from 'react-native';
+import {Dimensions, Linking, TextInput, Vibration,TouchableNativeFeedback,TouchableOpacity,StyleSheet, Text, View, Image, BackHandler} from 'react-native';
 import TextFont from './TextFont';
 import {addHours, getCurrentDateObject, getDateStringMonthDay, getMonth, getWeekDayShort} from './DateFunctions';
 import {getStorage, checkOff, capitalize, commas, removeBrackets, attemptToTranslateSpecial} from "../LoadJsonData"
@@ -32,10 +32,24 @@ export class TodoList extends Component {
   componentDidMount(){
     this.mounted=true;
     this.loadList();
+    this.backHandler = BackHandler.addEventListener(
+      "hardwareBackPressToDo",
+      this.handleBackButton,
+    );
   }
 
   componentWillUnmount(){
     this.mounted=false;
+    BackHandler.removeEventListener("hardwareBackPressToDo", this.handleBackButton);
+  }
+
+  handleBackButton = () => {
+    if(this.state.showEdit===true){
+      this.setState({showEdit:false})
+      return true
+    } else {
+      return false
+    }
   }
 
   loadList = async() => {

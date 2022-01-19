@@ -438,7 +438,7 @@ function ListPage(props){
                     var filterCategory = Object.keys(filters)[f];
                     for(var e = 0; e<filters[filterCategory].length; e++){
                       //check if split by semicolon
-                      if(item[filterCategory]!==undefined){
+                      if(item!==undefined && item[filterCategory]!==undefined){
                         var allEntries = item[filterCategory].split("; ")
                         for(var o = 0; o<allEntries.length; o++){
                           if(allEntries[o]!==undefined && allEntries[o].toLowerCase()===filters[filterCategory][e].toLowerCase()){
@@ -462,7 +462,7 @@ function ListPage(props){
                     var filterCurrentFound = false;
                     for(var e = 0; e<filters[filterCategory].length; e++){
                       //check if split by semicolon
-                      if(item[filterCategory]!==undefined){
+                      if(item!==undefined && item[filterCategory]!==undefined){
                         var allEntries = item[filterCategory].split("; ")
                         for(var o = 0; o<allEntries.length; o++){
                           if(allEntries[o]!==undefined && allEntries[o].toLowerCase()===filters[filterCategory][e].toLowerCase()){

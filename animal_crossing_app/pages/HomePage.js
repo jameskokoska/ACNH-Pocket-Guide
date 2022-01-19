@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Animated, Vibration, Image, Dimensions, TouchableOpacity, TextInput, StyleSheet, Text, View, Keyboard} from 'react-native';
+import {Animated, Vibration, Image, Dimensions, TouchableOpacity, TextInput, StyleSheet, Text, View, Keyboard, BackHandler} from 'react-native';
 import Clock from '../components/Clock';
 import HomeContentArea from '../components/HomeContentArea';
 import {EventContainer,getEventsDay} from '../components/EventContainer';
@@ -63,12 +63,25 @@ class HomePage extends Component {
     });},0)
     this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this.keyboardDidHide);
     this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this.keyboardDidShow);
-
+    this.backHandler = BackHandler.addEventListener(
+      "hardwareBackPressHome",
+      this.handleBackButton,
+    );
   }
     
   componentWillUnmount(){
     this.keyboardDidHideListener.remove();
     this.keyboardDidShowListener.remove();
+    BackHandler.removeEventListener("hardwareBackPressHome", this.handleBackButton);
+  }
+
+  handleBackButton = () => {
+    if(this.state.editOrder===true){
+      this.setState({editOrder:false})
+      return true
+    } else {
+      return false
+    }
   }
 
   keyboardDidHide = () => {

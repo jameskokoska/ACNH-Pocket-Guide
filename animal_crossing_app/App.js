@@ -64,6 +64,8 @@ import TextFont from './components/TextFont';
 import { DefaultTheme, Provider } from 'react-native-paper';
 import GlobalSearchPage from './pages/GlobalSearchPage';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import * as Sentry from 'sentry-expo';
+import {sentryConfig} from './sentryConfig'
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -73,6 +75,18 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 // › npm install -g eas-cli
 // › eas build -p android https://docs.expo.dev/build/setup/
 // expo build:android will be discontinued on January 4, 2023 (385 days left).
+
+Sentry.init({
+  dsn: sentryConfig["dsn"],
+  // enableInExpoDevelopment: true,
+  // debug: true, // If `true`, Sentry will try to print out useful debugging information if something goes wrong with sending the event. Set it to `false` in production
+});
+
+// Sentry.Native.*
+
+// Sentry.Browser.*
+
+
 const appInfo = require("./app.json");
 global.version = appInfo["expo"]["version"];
 global.versionCode = appInfo["expo"]["android"]["versionCode"];

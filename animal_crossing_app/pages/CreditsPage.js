@@ -160,6 +160,9 @@ class CreditsPage extends Component {
             ))
           }
           <View style={{height: 25}}/>
+          {/* <SubHeader>Debug Tools</SubHeader>
+          <Paragraph>Development use only</Paragraph>
+          <ButtonComponent color="gray" onPress={()=>{throw new Error("Test error log!");}} text={"Error"}/> */}
         </ScrollView>
      </View>
     )

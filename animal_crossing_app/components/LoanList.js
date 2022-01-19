@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Vibration,TouchableNativeFeedback,TouchableOpacity, View, Image, Animated} from 'react-native';
+import {Vibration,TouchableNativeFeedback,TouchableOpacity, View, Image, Animated, BackHandler} from 'react-native';
 import TextFont from './TextFont';
 import {getStorage, capitalize, commas} from "../LoadJsonData"
 import colors from '../Colors'
@@ -21,10 +21,24 @@ export default class LoanList extends Component {
   componentDidMount(){
     this.mounted=true;
     this.loadList();
+    this.backHandler = BackHandler.addEventListener(
+      "hardwareBackPressLoanList",
+      this.handleBackButton,
+    );
   }
 
   componentWillUnmount(){
     this.mounted=false;
+    BackHandler.removeEventListener("hardwareBackPressLoanList", this.handleBackButton);
+  }
+
+  handleBackButton = () => {
+    if(this.state.showEdit===true){
+      this.setState({showEdit:false})
+      return true
+    } else {
+      return false
+    }
   }
 
   loadList = async() => {

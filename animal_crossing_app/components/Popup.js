@@ -335,25 +335,26 @@ export class PopupBottomCustom extends Component {
 
   componentDidMount() {
     this.mounted=true;
+    this.visible=false;
     this.backHandler = BackHandler.addEventListener(
-      "hardwareBackPress",
+      "1hardwareBackPressPopup",
       this.handleBackButton,
     );
   }
 
   componentWillUnmount() {
     this.mounted=false
-    BackHandler.removeEventListener("hardwareBackPress", this.handleBackButton);
+    BackHandler.removeEventListener("1hardwareBackPressPopup", this.handleBackButton);
   }
 
   handleBackButton = () => {
     if(this.visible===true){
       this.setPopupVisible(false)
-      if(RootNavigation.getCurrentRoute()==="Home"){
-        return true
-      } else {
-        return false
-      }
+      return true
+    } else {
+      // if(RootNavigation.getCurrentRoute()==="Home"){
+      RootNavigation.popRoute(1)
+      return false
     }
   }
 
@@ -420,7 +421,7 @@ export class PopupBottomCustom extends Component {
         springConfig={springConfig}
         enabledContentTapInteraction={false}
         onCloseStart={()=>{if(this.mounted){this.setState({openStart:false})}}}
-        onCloseEnd={()=>{if(this.mounted){this.visible=false; console.log(this.visible); this.setState({openStart:false}); this.state.heightOffset = 0} this.props.onClose===undefined ? 0 : this.props.onClose();}}
+        onCloseEnd={()=>{if(this.mounted){this.visible=false; this.setState({openStart:false}); this.state.heightOffset = 0} this.props.onClose===undefined ? 0 : this.props.onClose();}}
         onOpenStart={()=>{if(this.mounted){this.setState({openStart:true})}}}
         onOpenEnd={()=>{if(this.mounted){this.setState({openStart:true})}}}
       />
@@ -428,10 +429,6 @@ export class PopupBottomCustom extends Component {
       </>
     )
   }
-}
-
-class RenderContent extends Component{
-  
 }
 
 const styles = StyleSheet.create({
