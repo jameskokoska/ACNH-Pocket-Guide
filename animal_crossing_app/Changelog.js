@@ -5,7 +5,7 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -Bug and crash fixes
 -Back button fixes
--Back button works in more places logically
+-Back button is more consistent in UI
 -
 -Removed scrolling lag on home page
 -Updated animation to use native drivers
