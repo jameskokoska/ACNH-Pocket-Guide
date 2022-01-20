@@ -173,7 +173,15 @@ class PopupFilter extends Component {
           {"name": "Snooty","id": "Personality:Snooty"}
         ]
       }]
-      this.possibleFilters = [...this.possibleFilters, ...categories, ...handSigns, ...personality];
+      const isVillager = [{
+        "name": "Villager?",
+        "id": "Villager?",
+        "children": [
+          {"name":"Yes","id":"Villager:Yes"},
+          {"name": "No","id": "Villager:No"},
+        ]
+      }]
+      this.possibleFilters = [...this.possibleFilters, ...categories, ...handSigns, ...personality, ...isVillager];
     } else if(this.props.title==="Active Creatures"){
       const categories = [{
         "name": "Type Categories",

@@ -5,7 +5,8 @@
     "Name": "Vivian",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/a\\/af\\/WolfSpeciesIconSilhouette.png\\/50px-WolfSpeciesIconSilhouette.png",
     "type": "Wolf",
-    "Personality": "Snooty"
+    "Personality": "Snooty",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/9\\/97\\/002_Hopkins_NLWa_amiibo_card_NA.png\\/125px-002_Hopkins_NLWa_amiibo_card_NA.png",
@@ -13,7 +14,8 @@
     "Name": "Hopkins",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/d\\/db\\/RabbitSpeciesIconSilhouette.png\\/50px-RabbitSpeciesIconSilhouette.png",
     "type": "Rabbit",
-    "Personality": "Lazy"
+    "Personality": "Lazy",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/8\\/8d\\/003_June_NLWa_amiibo_card_NA.png\\/125px-003_June_NLWa_amiibo_card_NA.png",
@@ -21,7 +23,8 @@
     "Name": "June",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/2\\/23\\/Bear_cubSpeciesIconSilhouette.png\\/50px-Bear_cubSpeciesIconSilhouette.png",
     "type": "Cub",
-    "Personality": "Normal"
+    "Personality": "Normal",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/0\\/01\\/004_Piper_NLWa_amiibo_card_NA.png\\/125px-004_Piper_NLWa_amiibo_card_NA.png",
@@ -29,7 +32,8 @@
     "Name": "Piper",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/8\\/8d\\/BirdSpeciesIconSilhouette.png\\/50px-BirdSpeciesIconSilhouette.png",
     "type": "Bird",
-    "Personality": "Peppy"
+    "Personality": "Peppy",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/e\\/e7\\/005_Paolo_NLWa_amiibo_card_NA.png\\/125px-005_Paolo_NLWa_amiibo_card_NA.png",
@@ -37,7 +41,8 @@
     "Name": "Paolo",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/5\\/54\\/ElephantSpeciesIconSilhouette.png\\/50px-ElephantSpeciesIconSilhouette.png",
     "type": "Elephant",
-    "Personality": "Lazy"
+    "Personality": "Lazy",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/1\\/19\\/006_Hornsby_NLWa_amiibo_card_NA.png\\/125px-006_Hornsby_NLWa_amiibo_card_NA.png",
@@ -45,7 +50,8 @@
     "Name": "Hornsby",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/4\\/47\\/RhinocerosSpeciesIconSilhouette.png\\/50px-RhinocerosSpeciesIconSilhouette.png",
     "type": "Rhinoceros",
-    "Personality": "Lazy"
+    "Personality": "Lazy",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/9\\/94\\/007_Stella_NLWa_amiibo_card_NA.png\\/125px-007_Stella_NLWa_amiibo_card_NA.png",
@@ -53,7 +59,8 @@
     "Name": "Stella",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/7\\/79\\/SheepSpeciesIconSilhouette.png\\/50px-SheepSpeciesIconSilhouette.png",
     "type": "Sheep",
-    "Personality": "Normal"
+    "Personality": "Normal",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/3\\/3f\\/008_Tybalt_NLWa_amiibo_card_NA.png\\/125px-008_Tybalt_NLWa_amiibo_card_NA.png",
@@ -61,7 +68,8 @@
     "Name": "Tybalt",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/c\\/c8\\/TigerSpeciesIconSilhouette.png\\/50px-TigerSpeciesIconSilhouette.png",
     "type": "Tiger",
-    "Personality": "Jock"
+    "Personality": "Jock",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/0\\/0f\\/009_Huck_NLWa_amiibo_card_NA.png\\/125px-009_Huck_NLWa_amiibo_card_NA.png",
@@ -69,7 +77,8 @@
     "Name": "Huck",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/0\\/08\\/FrogSpeciesIconSilhouette.png\\/50px-FrogSpeciesIconSilhouette.png",
     "type": "Frog",
-    "Personality": "Smug"
+    "Personality": "Smug",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/f\\/f0\\/010_Sylvana_NLWa_amiibo_card_NA.png\\/125px-010_Sylvana_NLWa_amiibo_card_NA.png",
@@ -77,7 +86,8 @@
     "Name": "Sylvana",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/7\\/79\\/SquirrelSpeciesIconSilhouette.png\\/50px-SquirrelSpeciesIconSilhouette.png",
     "type": "Squirrel",
-    "Personality": "Normal"
+    "Personality": "Normal",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/c\\/c5\\/011_Boris_NLWa_amiibo_card_NA.png\\/125px-011_Boris_NLWa_amiibo_card_NA.png",
@@ -85,7 +95,8 @@
     "Name": "Boris",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/7\\/75\\/PigSpeciesIconSilhouette.png\\/50px-PigSpeciesIconSilhouette.png",
     "type": "Pig",
-    "Personality": "Cranky"
+    "Personality": "Cranky",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/d\\/d1\\/012_Wade_NLWa_amiibo_card_NA.png\\/125px-012_Wade_NLWa_amiibo_card_NA.png",
@@ -93,7 +104,8 @@
     "Name": "Wade",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/6\\/6d\\/PenguinSpeciesIconSilhouette.png\\/50px-PenguinSpeciesIconSilhouette.png",
     "type": "Penguin",
-    "Personality": "Lazy"
+    "Personality": "Lazy",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/c\\/c9\\/013_Carrie_NLWa_amiibo_card_NA.png\\/125px-013_Carrie_NLWa_amiibo_card_NA.png",
@@ -101,7 +113,8 @@
     "Name": "Carrie",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/8\\/80\\/KangarooSpeciesIconSilhouette.png\\/50px-KangarooSpeciesIconSilhouette.png",
     "type": "Kangaroo",
-    "Personality": "Normal"
+    "Personality": "Normal",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/0\\/0a\\/014_Ketchup_NLWa_amiibo_card_NA.png\\/125px-014_Ketchup_NLWa_amiibo_card_NA.png",
@@ -109,7 +122,8 @@
     "Name": "Ketchup",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/5\\/58\\/DuckSpeciesIconSilhouette.png\\/50px-DuckSpeciesIconSilhouette.png",
     "type": "Duck",
-    "Personality": "Peppy"
+    "Personality": "Peppy",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/f\\/f3\\/015_Rex_NLWa_amiibo_card_NA.png\\/125px-015_Rex_NLWa_amiibo_card_NA.png",
@@ -117,7 +131,8 @@
     "Name": "Rex",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/c\\/c1\\/LionSpeciesIconSilhouette.png\\/50px-LionSpeciesIconSilhouette.png",
     "type": "Lion",
-    "Personality": "Lazy"
+    "Personality": "Lazy",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/4\\/49\\/016_Stu_NLWa_amiibo_card_NA.png\\/125px-016_Stu_NLWa_amiibo_card_NA.png",
@@ -125,7 +140,8 @@
     "Name": "Stu",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/9\\/9e\\/BovineSpeciesIconSilhouette.png\\/50px-BovineSpeciesIconSilhouette.png",
     "type": "Bull",
-    "Personality": "Lazy"
+    "Personality": "Lazy",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/8\\/8b\\/017_Ursala_NLWa_amiibo_card_NA.png\\/125px-017_Ursala_NLWa_amiibo_card_NA.png",
@@ -133,7 +149,8 @@
     "Name": "Ursala",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/8\\/8c\\/BearSpeciesIconSilhouette.png\\/50px-BearSpeciesIconSilhouette.png",
     "type": "Bear",
-    "Personality": "Big Sister"
+    "Personality": "Big Sister",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/a\\/ab\\/018_Jacob_NLWa_amiibo_card_NA.png\\/125px-018_Jacob_NLWa_amiibo_card_NA.png",
@@ -141,7 +158,8 @@
     "Name": "Jacob",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/8\\/8d\\/BirdSpeciesIconSilhouette.png\\/50px-BirdSpeciesIconSilhouette.png",
     "type": "Bird",
-    "Personality": "Lazy"
+    "Personality": "Lazy",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/1\\/1e\\/019_Maddie_NLWa_amiibo_card_NA.png\\/125px-019_Maddie_NLWa_amiibo_card_NA.png",
@@ -149,7 +167,8 @@
     "Name": "Maddie",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/7\\/7f\\/DogSpeciesIconSilhouette.png\\/50px-DogSpeciesIconSilhouette.png",
     "type": "Dog",
-    "Personality": "Peppy"
+    "Personality": "Peppy",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/7\\/72\\/020_Billy_NLWa_amiibo_card_NA.png\\/125px-020_Billy_NLWa_amiibo_card_NA.png",
@@ -157,7 +176,8 @@
     "Name": "Billy",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/b\\/b1\\/GoatSpeciesIconSilhouette.png\\/50px-GoatSpeciesIconSilhouette.png",
     "type": "Goat",
-    "Personality": "Jock"
+    "Personality": "Jock",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/7\\/7c\\/021_Boyd_NLWa_amiibo_card_NA.png\\/125px-021_Boyd_NLWa_amiibo_card_NA.png",
@@ -165,7 +185,8 @@
     "Name": "Boyd",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/e\\/e1\\/GorillaSpeciesIconSilhouette.png\\/50px-GorillaSpeciesIconSilhouette.png",
     "type": "Gorilla",
-    "Personality": "Cranky"
+    "Personality": "Cranky",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/1\\/1c\\/022_Bitty_NLWa_amiibo_card_NA.png\\/125px-022_Bitty_NLWa_amiibo_card_NA.png",
@@ -173,7 +194,8 @@
     "Name": "Bitty",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/6\\/6a\\/HippoSpeciesIconSilhouette.png\\/50px-HippoSpeciesIconSilhouette.png",
     "type": "Hippo",
-    "Personality": "Snooty"
+    "Personality": "Snooty",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/f\\/fd\\/023_Maggie_NLWa_amiibo_card_NA.png\\/125px-023_Maggie_NLWa_amiibo_card_NA.png",
@@ -181,7 +203,8 @@
     "Name": "Maggie",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/7\\/75\\/PigSpeciesIconSilhouette.png\\/50px-PigSpeciesIconSilhouette.png",
     "type": "Pig",
-    "Personality": "Normal"
+    "Personality": "Normal",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/7\\/78\\/024_Murphy_NLWa_amiibo_card_NA.png\\/125px-024_Murphy_NLWa_amiibo_card_NA.png",
@@ -189,7 +212,8 @@
     "Name": "Murphy",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/2\\/23\\/Bear_cubSpeciesIconSilhouette.png\\/50px-Bear_cubSpeciesIconSilhouette.png",
     "type": "Cub",
-    "Personality": "Cranky"
+    "Personality": "Cranky",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/a\\/a6\\/025_Plucky_NLWa_amiibo_card_NA.png\\/125px-025_Plucky_NLWa_amiibo_card_NA.png",
@@ -197,7 +221,8 @@
     "Name": "Plucky",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/9\\/9b\\/ChickenSpeciesIconSilhouette.png\\/50px-ChickenSpeciesIconSilhouette.png",
     "type": "Chicken",
-    "Personality": "Big Sister"
+    "Personality": "Big Sister",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/9\\/90\\/026_Sandy_NLWa_amiibo_card_NA.png\\/125px-026_Sandy_NLWa_amiibo_card_NA.png",
@@ -205,7 +230,8 @@
     "Name": "Sandy",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/b\\/b9\\/OstrichSpeciesIconSilhouette.png\\/50px-OstrichSpeciesIconSilhouette.png",
     "type": "Ostrich",
-    "Personality": "Normal"
+    "Personality": "Normal",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/a\\/ac\\/027_Claude_NLWa_amiibo_card_NA.png\\/125px-027_Claude_NLWa_amiibo_card_NA.png",
@@ -213,7 +239,8 @@
     "Name": "Claude",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/d\\/db\\/RabbitSpeciesIconSilhouette.png\\/50px-RabbitSpeciesIconSilhouette.png",
     "type": "Rabbit",
-    "Personality": "Lazy"
+    "Personality": "Lazy",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/4\\/4c\\/028_Raddle_NLWa_amiibo_card_NA.png\\/125px-028_Raddle_NLWa_amiibo_card_NA.png",
@@ -221,7 +248,8 @@
     "Name": "Raddle",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/0\\/08\\/FrogSpeciesIconSilhouette.png\\/50px-FrogSpeciesIconSilhouette.png",
     "type": "Frog",
-    "Personality": "Lazy"
+    "Personality": "Lazy",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/8\\/80\\/029_Julia_NLWa_amiibo_card_NA.png\\/125px-029_Julia_NLWa_amiibo_card_NA.png",
@@ -229,7 +257,8 @@
     "Name": "Julia",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/b\\/b9\\/OstrichSpeciesIconSilhouette.png\\/50px-OstrichSpeciesIconSilhouette.png",
     "type": "Ostrich",
-    "Personality": "Snooty"
+    "Personality": "Snooty",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/e\\/ea\\/030_Louie_NLWa_amiibo_card_NA.png\\/125px-030_Louie_NLWa_amiibo_card_NA.png",
@@ -237,7 +266,8 @@
     "Name": "Louie",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/e\\/e1\\/GorillaSpeciesIconSilhouette.png\\/50px-GorillaSpeciesIconSilhouette.png",
     "type": "Gorilla",
-    "Personality": "Jock"
+    "Personality": "Jock",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/5\\/5d\\/031_Bea_NLWa_amiibo_card_NA.png\\/125px-031_Bea_NLWa_amiibo_card_NA.png",
@@ -245,7 +275,8 @@
     "Name": "Bea",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/7\\/7f\\/DogSpeciesIconSilhouette.png\\/50px-DogSpeciesIconSilhouette.png",
     "type": "Dog",
-    "Personality": "Normal"
+    "Personality": "Normal",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/3\\/38\\/032_Admiral_NLWa_amiibo_card_NA.png\\/125px-032_Admiral_NLWa_amiibo_card_NA.png",
@@ -253,7 +284,8 @@
     "Name": "Admiral",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/8\\/8d\\/BirdSpeciesIconSilhouette.png\\/50px-BirdSpeciesIconSilhouette.png",
     "type": "Bird",
-    "Personality": "Cranky"
+    "Personality": "Cranky",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/c\\/cc\\/033_Ellie_NLWa_amiibo_card_NA.png\\/125px-033_Ellie_NLWa_amiibo_card_NA.png",
@@ -261,7 +293,8 @@
     "Name": "Ellie",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/5\\/54\\/ElephantSpeciesIconSilhouette.png\\/50px-ElephantSpeciesIconSilhouette.png",
     "type": "Elephant",
-    "Personality": "Normal"
+    "Personality": "Normal",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/a\\/a8\\/034_Boots_NLWa_amiibo_card_NA.png\\/125px-034_Boots_NLWa_amiibo_card_NA.png",
@@ -269,7 +302,8 @@
     "Name": "Boots",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/c\\/cc\\/AlligatorSpeciesIconSilhouette.png\\/50px-AlligatorSpeciesIconSilhouette.png",
     "type": "Alligator",
-    "Personality": "Jock"
+    "Personality": "Jock",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/2\\/2c\\/035_Weber_NLWa_amiibo_card_NA.png\\/125px-035_Weber_NLWa_amiibo_card_NA.png",
@@ -277,7 +311,8 @@
     "Name": "Weber",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/5\\/58\\/DuckSpeciesIconSilhouette.png\\/50px-DuckSpeciesIconSilhouette.png",
     "type": "Duck",
-    "Personality": "Lazy"
+    "Personality": "Lazy",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/f\\/f3\\/036_Candi_NLWa_amiibo_card_NA.png\\/125px-036_Candi_NLWa_amiibo_card_NA.png",
@@ -285,7 +320,8 @@
     "Name": "Candi",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/3\\/37\\/MouseSpeciesIconSilhouette.png\\/50px-MouseSpeciesIconSilhouette.png",
     "type": "Mouse",
-    "Personality": "Peppy"
+    "Personality": "Peppy",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/d\\/de\\/037_Leopold_NLWa_amiibo_card_NA.png\\/125px-037_Leopold_NLWa_amiibo_card_NA.png",
@@ -293,7 +329,8 @@
     "Name": "Leopold",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/c\\/c1\\/LionSpeciesIconSilhouette.png\\/50px-LionSpeciesIconSilhouette.png",
     "type": "Lion",
-    "Personality": "Smug"
+    "Personality": "Smug",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/6\\/64\\/038_Spike_NLWa_amiibo_card_NA.png\\/125px-038_Spike_NLWa_amiibo_card_NA.png",
@@ -301,7 +338,8 @@
     "Name": "Spike",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/4\\/47\\/RhinocerosSpeciesIconSilhouette.png\\/50px-RhinocerosSpeciesIconSilhouette.png",
     "type": "Rhinoceros",
-    "Personality": "Cranky"
+    "Personality": "Cranky",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/a\\/ad\\/039_Cashmere_NLWa_amiibo_card_NA.png\\/125px-039_Cashmere_NLWa_amiibo_card_NA.png",
@@ -309,7 +347,8 @@
     "Name": "Cashmere",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/7\\/79\\/SheepSpeciesIconSilhouette.png\\/50px-SheepSpeciesIconSilhouette.png",
     "type": "Sheep",
-    "Personality": "Snooty"
+    "Personality": "Snooty",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/c\\/c1\\/040_Tad_NLWa_amiibo_card_NA.png\\/125px-040_Tad_NLWa_amiibo_card_NA.png",
@@ -317,7 +356,8 @@
     "Name": "Tad",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/0\\/08\\/FrogSpeciesIconSilhouette.png\\/50px-FrogSpeciesIconSilhouette.png",
     "type": "Frog",
-    "Personality": "Jock"
+    "Personality": "Jock",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/e\\/ec\\/041_Norma_NLWa_amiibo_card_NA.png\\/125px-041_Norma_NLWa_amiibo_card_NA.png",
@@ -325,7 +365,8 @@
     "Name": "Norma",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/9\\/9e\\/BovineSpeciesIconSilhouette.png\\/50px-BovineSpeciesIconSilhouette.png",
     "type": "Cow",
-    "Personality": "Normal"
+    "Personality": "Normal",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/e\\/ea\\/042_Gonzo_NLWa_amiibo_card_NA.png\\/125px-042_Gonzo_NLWa_amiibo_card_NA.png",
@@ -333,7 +374,8 @@
     "Name": "Gonzo",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/9\\/92\\/KoalaSpeciesIconSilhouette.png\\/50px-KoalaSpeciesIconSilhouette.png",
     "type": "Koala",
-    "Personality": "Cranky"
+    "Personality": "Cranky",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/6\\/61\\/043_Sprocket_NLWa_amiibo_card_NA.png\\/125px-043_Sprocket_NLWa_amiibo_card_NA.png",
@@ -341,7 +383,8 @@
     "Name": "Sprocket",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/b\\/b9\\/OstrichSpeciesIconSilhouette.png\\/50px-OstrichSpeciesIconSilhouette.png",
     "type": "Ostrich",
-    "Personality": "Jock"
+    "Personality": "Jock",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/4\\/41\\/044_Snooty_NLWa_amiibo_card_NA.png\\/125px-044_Snooty_NLWa_amiibo_card_NA.png",
@@ -349,7 +392,8 @@
     "Name": "Snooty",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/5\\/5b\\/AnteaterSpeciesIconSilhouette.png\\/50px-AnteaterSpeciesIconSilhouette.png",
     "type": "Anteater",
-    "Personality": "Snooty"
+    "Personality": "Snooty",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/3\\/3e\\/045_Olive_NLWa_amiibo_card_NA.png\\/125px-045_Olive_NLWa_amiibo_card_NA.png",
@@ -357,7 +401,8 @@
     "Name": "Olive",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/2\\/23\\/Bear_cubSpeciesIconSilhouette.png\\/50px-Bear_cubSpeciesIconSilhouette.png",
     "type": "Cub",
-    "Personality": "Normal"
+    "Personality": "Normal",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/9\\/9e\\/046_Dobie_NLWa_amiibo_card_NA.png\\/125px-046_Dobie_NLWa_amiibo_card_NA.png",
@@ -365,7 +410,8 @@
     "Name": "Dobie",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/a\\/af\\/WolfSpeciesIconSilhouette.png\\/50px-WolfSpeciesIconSilhouette.png",
     "type": "Wolf",
-    "Personality": "Cranky"
+    "Personality": "Cranky",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/f\\/f9\\/047_Buzz_NLWa_amiibo_card_NA.png\\/125px-047_Buzz_NLWa_amiibo_card_NA.png",
@@ -373,7 +419,8 @@
     "Name": "Buzz",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/4\\/47\\/EagleSpeciesIconSilhouette.png\\/50px-EagleSpeciesIconSilhouette.png",
     "type": "Eagle",
-    "Personality": "Cranky"
+    "Personality": "Cranky",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/8\\/85\\/048_Cleo_NLWa_amiibo_card_NA.png\\/125px-048_Cleo_NLWa_amiibo_card_NA.png",
@@ -381,7 +428,8 @@
     "Name": "Cleo",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/5\\/59\\/HorseSpeciesIconSilhouette.png\\/50px-HorseSpeciesIconSilhouette.png",
     "type": "Horse",
-    "Personality": "Snooty"
+    "Personality": "Snooty",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/1\\/1e\\/049_Ike_NLWa_amiibo_card_NA.png\\/125px-049_Ike_NLWa_amiibo_card_NA.png",
@@ -389,7 +437,8 @@
     "Name": "Ike",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/8\\/8c\\/BearSpeciesIconSilhouette.png\\/50px-BearSpeciesIconSilhouette.png",
     "type": "Bear",
-    "Personality": "Cranky"
+    "Personality": "Cranky",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/a\\/a6\\/050_Tasha_NLWa_amiibo_card_NA.png\\/125px-050_Tasha_NLWa_amiibo_card_NA.png",
@@ -397,6 +446,7 @@
     "Name": "Tasha",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/7\\/79\\/SquirrelSpeciesIconSilhouette.png\\/50px-SquirrelSpeciesIconSilhouette.png",
     "type": "Squirrel",
-    "Personality": "Snooty"
+    "Personality": "Snooty",
+    "Villager": "Yes"
   }
 ]

@@ -3,11 +3,14 @@ export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added Villager filter for Amiibo Cards
+-Fixed importing of data crash when no file selected
+-Fixed missing images
+-
 -Added Happy Home Network ID to profile
 -Happy Home Network ID and Creator code are included in the backup service
 -Fixed crash on Paradise Planning page
 -Fixed flimsy net durability
--Fixed importing of data crash when no file selected
 -
 -Bug and crash fixes
 -Back button fixes

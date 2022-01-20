@@ -7,7 +7,8 @@
     "type": "Special",
     "starSign": "Gemini",
     "birthday": "May 30th",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/7\\/7a\\/402_Timmy_and_Tommy_amiibo_card_JP.png\\/75px-402_Timmy_and_Tommy_amiibo_card_JP.png",
@@ -17,7 +18,8 @@
     "type": "Special",
     "starSign": "Gemini",
     "birthday": "June 7th",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/8\\/86\\/403_Isabelle_amiibo_card_JP.png\\/75px-403_Isabelle_amiibo_card_JP.png",
@@ -27,7 +29,8 @@
     "type": "Special",
     "starSign": "Sagittarius",
     "birthday": "December 20th",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/d\\/dd\\/404_Orville_amiibo_card_JP.png\\/75px-404_Orville_amiibo_card_JP.png",
@@ -37,7 +40,8 @@
     "type": "Special",
     "starSign": "Libra",
     "birthday": "October 2nd",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/3\\/38\\/405_Wilbur_amiibo_card_JP.png\\/75px-405_Wilbur_amiibo_card_JP.png",
@@ -47,7 +51,8 @@
     "type": "Special",
     "starSign": "Cancer",
     "birthday": "July 4th",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/8\\/89\\/406_Blathers_amiibo_card_JP.png\\/75px-406_Blathers_amiibo_card_JP.png",
@@ -57,7 +62,8 @@
     "type": "Special",
     "starSign": "Libra",
     "birthday": "September 24th",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/7\\/7a\\/407_Celeste_amiibo_card_JP.png\\/75px-407_Celeste_amiibo_card_JP.png",
@@ -67,7 +73,8 @@
     "type": "Special",
     "starSign": "Virgo",
     "birthday": "September 7th",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/4\\/4e\\/408_Mabel_amiibo_card_JP.png\\/75px-408_Mabel_amiibo_card_JP.png",
@@ -77,7 +84,8 @@
     "type": "Special",
     "starSign": "Gemini",
     "birthday": "May 22nd",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/0\\/09\\/409_Sable_amiibo_card_JP.png\\/75px-409_Sable_amiibo_card_JP.png",
@@ -87,7 +95,8 @@
     "type": "Special",
     "starSign": "Scorpio",
     "birthday": "November 22nd",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/d\\/d1\\/410_Label_amiibo_card_JP.png\\/75px-410_Label_amiibo_card_JP.png",
@@ -97,17 +106,19 @@
     "type": "Special",
     "starSign": "Scorpio",
     "birthday": "October 31st",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
-    "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/5\\/54\\/411_K.K._Slider_amiibo_card_JP.png\\/75px-411_K.K._Slider_amiibo_card_JP.png",
+    "image": "https://dodo.ac/np/images/thumb/3/36/411_K.K._amiibo_card_NA.png/75px-411_K.K._amiibo_card_NA.png",
     "number": "411",
     "Name": "K.K. Slider",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/3\\/30\\/SpecialSpeciesIconSilhouette.png\\/50px-SpecialSpeciesIconSilhouette.png",
     "type": "Special",
     "starSign": "Virgo",
     "birthday": "August 23rd",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/5\\/5d\\/412_C.J._amiibo_card_JP.png\\/75px-412_C.J._amiibo_card_JP.png",
@@ -117,7 +128,8 @@
     "type": "Special",
     "starSign": "Pisces",
     "birthday": "March 7th",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/1\\/1b\\/413_Flick_amiibo_card_JP.png\\/75px-413_Flick_amiibo_card_JP.png",
@@ -127,7 +139,8 @@
     "type": "Special",
     "starSign": "Taurus",
     "birthday": "May 10th",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/a\\/a8\\/414_Daisy_Mae_amiibo_card_JP.png\\/75px-414_Daisy_Mae_amiibo_card_JP.png",
@@ -137,7 +150,8 @@
     "type": "Special",
     "starSign": "Aries",
     "birthday": "March 30th",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/a\\/a1\\/415_Kicks_amiibo_card_JP.png\\/75px-415_Kicks_amiibo_card_JP.png",
@@ -147,7 +161,8 @@
     "type": "Special",
     "starSign": "Sagittarius",
     "birthday": "November 30th",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/b\\/b3\\/416_Saharah_amiibo_card_JP.png\\/75px-416_Saharah_amiibo_card_JP.png",
@@ -157,7 +172,8 @@
     "type": "Special",
     "starSign": "Scorpio",
     "birthday": "November 10th",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/a\\/ab\\/417_Harvey_amiibo_card_JP.png\\/75px-417_Harvey_amiibo_card_JP.png",
@@ -167,7 +183,8 @@
     "type": "Special",
     "starSign": "Leo",
     "birthday": "August 2nd",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/b\\/b4\\/418_Gulliver_amiibo_card_JP.png\\/75px-418_Gulliver_amiibo_card_JP.png",
@@ -177,7 +194,8 @@
     "type": "Special",
     "starSign": "Gemini",
     "birthday": "May 25th",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/d\\/df\\/419_Wisp_amiibo_card_JP.png\\/75px-419_Wisp_amiibo_card_JP.png",
@@ -187,7 +205,8 @@
     "type": "Special",
     "starSign": "Pisces",
     "birthday": "February 26th",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/f\\/fc\\/420_Lottie_amiibo_card_JP.png\\/75px-420_Lottie_amiibo_card_JP.png",
@@ -197,7 +216,8 @@
     "type": "Special",
     "starSign": "Virgo",
     "birthday": "September 12th",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/3\\/34\\/421_Niko_amiibo_card_JP.png\\/75px-421_Niko_amiibo_card_JP.png",
@@ -207,7 +227,8 @@
     "type": "Special",
     "starSign": "Capricorn",
     "birthday": "January 11th",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/7\\/73\\/422_Wardell_amiibo_card_JP.png\\/75px-422_Wardell_amiibo_card_JP.png",
@@ -217,7 +238,8 @@
     "type": "Special",
     "starSign": "Aquarius",
     "birthday": "February 7th",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/8\\/8b\\/423_Tom_Nook_amiibo_card_JP.png\\/75px-423_Tom_Nook_amiibo_card_JP.png",
@@ -227,7 +249,8 @@
     "type": "Special",
     "starSign": "Gemini",
     "birthday": "May 30th",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/f\\/f9\\/424_Isabelle_amiibo_card_JP.png\\/75px-424_Isabelle_amiibo_card_JP.png",
@@ -237,7 +260,8 @@
     "type": "Special",
     "starSign": "Sagittarius",
     "birthday": "December 20th",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/8\\/8b\\/425_Sherb_amiibo_card_JP.png\\/75px-425_Sherb_amiibo_card_JP.png",
@@ -247,7 +271,8 @@
     "type": "Goat",
     "starSign": "Capricorn",
     "birthday": "January 18th",
-    "Personality": "Lazy"
+    "Personality": "Lazy",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/f\\/f6\\/426_Megan_amiibo_card_JP.png\\/75px-426_Megan_amiibo_card_JP.png",
@@ -257,7 +282,8 @@
     "type": "Bear",
     "starSign": "Pisces",
     "birthday": "March 13th",
-    "Personality": "Normal"
+    "Personality": "Normal",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/7\\/7c\\/427_Dom_amiibo_card_JP.png\\/75px-427_Dom_amiibo_card_JP.png",
@@ -267,7 +293,8 @@
     "type": "Sheep",
     "starSign": "Pisces",
     "birthday": "March 18th",
-    "Personality": "Jock"
+    "Personality": "Jock",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/e\\/e9\\/428_Audie_amiibo_card_JP.png\\/75px-428_Audie_amiibo_card_JP.png",
@@ -277,7 +304,8 @@
     "type": "Wolf",
     "starSign": "Virgo",
     "birthday": "August 31st",
-    "Personality": "Peppy"
+    "Personality": "Peppy",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/8\\/83\\/429_Cyd_amiibo_card_JP.png\\/75px-429_Cyd_amiibo_card_JP.png",
@@ -287,7 +315,8 @@
     "type": "Elephant",
     "starSign": "Gemini",
     "birthday": "June 9th",
-    "Personality": "Cranky"
+    "Personality": "Cranky",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/6\\/63\\/430_Judy_amiibo_card_JP.png\\/75px-430_Judy_amiibo_card_JP.png",
@@ -297,7 +326,8 @@
     "type": "Bear cub",
     "starSign": "Pisces",
     "birthday": "March 10th",
-    "Personality": "Snooty"
+    "Personality": "Snooty",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/1\\/1f\\/431_Raymond_amiibo_card_JP.png\\/75px-431_Raymond_amiibo_card_JP.png",
@@ -307,7 +337,8 @@
     "type": "Cat",
     "starSign": "Libra",
     "birthday": "October 1st",
-    "Personality": "Smug"
+    "Personality": "Smug",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/c\\/c0\\/432_Reneigh_amiibo_card_JP.png\\/75px-432_Reneigh_amiibo_card_JP.png",
@@ -317,7 +348,8 @@
     "type": "Horse",
     "starSign": "Gemini",
     "birthday": "June 4th",
-    "Personality": "Big Sister"
+    "Personality": "Big Sister",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/f\\/f0\\/433_Sasha_amiibo_card_JP.png\\/75px-433_Sasha_amiibo_card_JP.png",
@@ -327,7 +359,8 @@
     "type": "Rabbit",
     "starSign": "Taurus",
     "birthday": "May 19th",
-    "Personality": "Lazy"
+    "Personality": "Lazy",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/e\\/ed\\/434_Ione_amiibo_card_JP.png\\/75px-434_Ione_amiibo_card_JP.png",
@@ -337,7 +370,8 @@
     "type": "Squirrel",
     "starSign": "Virgo",
     "birthday": "September 11th",
-    "Personality": "Normal"
+    "Personality": "Normal",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/c\\/cb\\/435_Tiansheng_amiibo_card_JP.png\\/75px-435_Tiansheng_amiibo_card_JP.png",
@@ -347,7 +381,8 @@
     "type": "Monkey",
     "starSign": "Leo",
     "birthday": "August 18th",
-    "Personality": "Jock"
+    "Personality": "Jock",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/b\\/b8\\/436_Shino_amiibo_card_JP.png\\/75px-436_Shino_amiibo_card_JP.png",
@@ -357,7 +392,8 @@
     "type": "Deer",
     "starSign": "Scorpio",
     "birthday": "October 31st",
-    "Personality": "Peppy"
+    "Personality": "Peppy",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/b\\/bd\\/437_Marlo_amiibo_card_JP.png\\/75px-437_Marlo_amiibo_card_JP.png",
@@ -367,7 +403,8 @@
     "type": "Hamster",
     "starSign": "Cancer",
     "birthday": "June 26th",
-    "Personality": "Cranky"
+    "Personality": "Cranky",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/2\\/23\\/438_Petri_amiibo_card_JP.png\\/75px-438_Petri_amiibo_card_JP.png",
@@ -377,7 +414,8 @@
     "type": "Mouse",
     "starSign": "Libra",
     "birthday": "October 23rd",
-    "Personality": "Snooty"
+    "Personality": "Snooty",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/5\\/59\\/439_Cephalobot_amiibo_card_JP.png\\/75px-439_Cephalobot_amiibo_card_JP.png",
@@ -387,7 +425,8 @@
     "type": "Octopus",
     "starSign": "Aries",
     "birthday": "April 1st",
-    "Personality": "Smug"
+    "Personality": "Smug",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/7\\/7c\\/440_Quinn_amiibo_card_JP.png\\/75px-440_Quinn_amiibo_card_JP.png",
@@ -397,7 +436,8 @@
     "type": "Eagle",
     "starSign": "Aquarius",
     "birthday": "January 20th",
-    "Personality": "Big Sister"
+    "Personality": "Big Sister",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/e\\/ea\\/441_Chabwick_amiibo_card_JP.png\\/75px-441_Chabwick_amiibo_card_JP.png",
@@ -407,7 +447,8 @@
     "type": "Penguin",
     "starSign": "Capricorn",
     "birthday": "December 24th",
-    "Personality": "Lazy"
+    "Personality": "Lazy",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/9\\/90\\/442_Zoe_amiibo_card_JP.png\\/75px-442_Zoe_amiibo_card_JP.png",
@@ -417,7 +458,8 @@
     "type": "Anteater",
     "starSign": "Aquarius",
     "birthday": "February 10th",
-    "Personality": "Normal"
+    "Personality": "Normal",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/e\\/ee\\/443_Ace_amiibo_card_JP.png\\/75px-443_Ace_amiibo_card_JP.png",
@@ -427,7 +469,8 @@
     "type": "Bird",
     "starSign": "Leo",
     "birthday": "August 11th",
-    "Personality": "Jock"
+    "Personality": "Jock",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/5\\/57\\/444_Rio_amiibo_card_JP.png\\/75px-444_Rio_amiibo_card_JP.png",
@@ -437,7 +480,8 @@
     "type": "Ostrich",
     "starSign": "Virgo",
     "birthday": "September 10th",
-    "Personality": "Peppy"
+    "Personality": "Peppy",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/c\\/cd\\/445_Frett_amiibo_card_JP.png\\/75px-445_Frett_amiibo_card_JP.png",
@@ -447,7 +491,8 @@
     "type": "Dog",
     "starSign": "Scorpio",
     "birthday": "October 30th",
-    "Personality": "Cranky"
+    "Personality": "Cranky",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/d\\/dc\\/446_Azalea_amiibo_card_JP.png\\/75px-446_Azalea_amiibo_card_JP.png",
@@ -457,7 +502,8 @@
     "type": "Rhinoceros",
     "starSign": "Sagittarius",
     "birthday": "December 18th",
-    "Personality": "Snooty"
+    "Personality": "Snooty",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/2\\/27\\/447_Roswell_amiibo_card_JP.png\\/75px-447_Roswell_amiibo_card_JP.png",
@@ -467,7 +513,8 @@
     "type": "Alligator",
     "starSign": "Taurus",
     "birthday": "May 2nd",
-    "Personality": "Smug"
+    "Personality": "Smug",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/d\\/d3\\/448_Faith_amiibo_card_JP.png\\/75px-448_Faith_amiibo_card_JP.png",
@@ -477,6 +524,7 @@
     "type": "Koala",
     "starSign": "Aries",
     "birthday": "March 21st",
-    "Personality": "Big Sister"
+    "Personality": "Big Sister",
+    "Villager": "Yes"
   }
 ]
