@@ -236,7 +236,7 @@ export class InfoLine extends Component {
     }
 
     if(currencyBells && global.ordinance === "Bell Boom" && this.props.item[this.props.textProperty]!==undefined){
-      console.log("bell boom")
+      // console.log("bell boom")
       text = commas(parseInt(parseInt(this.props.item[this.props.textProperty])*1.2))
     }
 

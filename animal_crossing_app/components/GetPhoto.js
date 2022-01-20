@@ -595,7 +595,7 @@ function checkMoreMaterials(material){
 }
 
 export function getPaintingPhotoFake(name){
-  console.log(name)
+  // console.log(name)
   var data = require("../assets/data/DataCreated/Artwork.json");
   for(var index = 0; index < data.length; index++){
     if(data[index]["Name"]===name && data[index]["Genuine"]==="No"){

@@ -1554,7 +1554,7 @@ export function isInteger(value) {
 }
 
 export function indexCollectionList(collectionList){
-  console.log(collectionList)
+  console.log("Collection list: "+collectionList)
   let collectionListOut = {}
   for(let entry of collectionList){
     if(entry==="---ACNH Pocket Guide Backup---"||entry===""){

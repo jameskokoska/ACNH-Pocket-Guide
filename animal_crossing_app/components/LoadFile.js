@@ -67,99 +67,109 @@ class LoadFile extends Component {
 }
 
 export async function importAllData(text){
-  var totalImport = text.split("\n");
-  var totalAchievements = [];
-  var totalHHP = [];
-  var currentProfile = ""
-  var currentCollectionList = (await getStorage("collectedString"+currentProfile,"")).split("\n");
-  var currentAchievementsList = JSON.parse(await getStorage("Achievements"+profile,"[]"));
-  var currentHHPList = JSON.parse(await getStorage("ParadisePlanning"+profile,"[]"));
+  try{
+    var totalImport = text.split("\n");
+    var totalAchievements = [];
+    var totalHHP = [];
+    var currentProfile = ""
+    var currentCollectionList = (await getStorage("collectedString"+currentProfile,"")).split("\n");
+    var currentAchievementsList = JSON.parse(await getStorage("Achievements"+profile,"[]"));
+    var currentHHPList = JSON.parse(await getStorage("ParadisePlanning"+profile,"[]"));
 
-  for(var i = 0; i<totalImport.length; i++){
-    if(totalImport[i].includes("{") && totalImport[i].includes("}")){
-      var key = totalImport[i].match(/\{(.*?)\}/);
-      var importEntry = totalImport[i].replace(key[0],"")
-      if(importEntry==="" || importEntry==="\n" || totalImport[i]==="\n" || totalImport[i]==="---ACNH Pocket Guide Backup---"){
-        continue;
-      }else if(key[1]==="Profile"){
-        currentProfile = importEntry
-        currentCollectionList = (await getStorage("collectedString"+currentProfile,"")).split("\n");
-        currentAchievementsList = JSON.parse(await getStorage("Achievements"+profile,"[]"));
-      } else if(key[1]==="Achievements"){
-        totalAchievements.push(importEntry);
-      } else if(key[1]==="HHP"){
-        totalHHP.push(importEntry);
-      } else {
-        await AsyncStorage.setItem(key[1]+currentProfile, importEntry);
-        if(key[1]==="name"&&currentProfile===global.profile){
-          global.name=importEntry
-        } else if(key[1]==="islandName"&&currentProfile===global.profile) {
-          global.islandName=importEntry
-        } else if (key[1]==="dreamAddress"&&currentProfile===global.profile) {
-          global.dreamAddress=importEntry
-        } else if (key[1]==="friendCode"&&currentProfile===global.profile) {
-          global.friendCode=importEntry
-        } else if (key[1]==="creatorCode"&&currentProfile===global.profile) {
-          global.creatorCode=importEntry
-        } else if (key[1]==="HHPCode"&&currentProfile===global.profile) {
-          global.HHPCode=importEntry
-        } else if (key[1]==="selectedFruit"&&currentProfile===global.profile) {
-          global.selectedFruit=importEntry
-        } else if (key[1]==="settingsNorthernHemisphere"&&currentProfile===global.profile) {
-          setSettingsString("settingsNorthernHemisphere",importEntry);
+    for(var i = 0; i<totalImport.length; i++){
+      if(totalImport[i].includes("{") && totalImport[i].includes("}")){
+        var key = totalImport[i].match(/\{(.*?)\}/);
+        var importEntry = totalImport[i].replace(key[0],"")
+        if(importEntry==="" || importEntry==="\n" || totalImport[i]==="\n" || totalImport[i]==="---ACNH Pocket Guide Backup---"){
+          continue;
+        }else if(key[1]==="Profile"){
+          currentProfile = importEntry
+          currentCollectionList = (await getStorage("collectedString"+currentProfile,"")).split("\n");
+          currentAchievementsList = JSON.parse(await getStorage("Achievements"+profile,"[]"));
+        } else if(key[1]==="Achievements"){
+          totalAchievements.push(importEntry);
+        } else if(key[1]==="HHP"){
+          totalHHP.push(importEntry);
+        } else {
+          await AsyncStorage.setItem(key[1]+currentProfile, importEntry);
+          if(key[1]==="name"&&currentProfile===global.profile){
+            global.name=importEntry
+          } else if(key[1]==="islandName"&&currentProfile===global.profile) {
+            global.islandName=importEntry
+          } else if (key[1]==="dreamAddress"&&currentProfile===global.profile) {
+            global.dreamAddress=importEntry
+          } else if (key[1]==="friendCode"&&currentProfile===global.profile) {
+            global.friendCode=importEntry
+          } else if (key[1]==="creatorCode"&&currentProfile===global.profile) {
+            global.creatorCode=importEntry
+          } else if (key[1]==="HHPCode"&&currentProfile===global.profile) {
+            global.HHPCode=importEntry
+          } else if (key[1]==="selectedFruit"&&currentProfile===global.profile) {
+            global.selectedFruit=importEntry
+          } else if (key[1]==="settingsNorthernHemisphere"&&currentProfile===global.profile) {
+            setSettingsString("settingsNorthernHemisphere",importEntry);
+          }
+        }
+      } else if (totalImport[i]!=="---END---"){
+        var exists = false;
+        for(var j = 0; j<currentCollectionList.length; j++){
+          if(currentCollectionList[j]===totalImport[i]){
+            exists=true;
+          }
+        }
+        if(exists===false){
+          currentCollectionList.push(totalImport[i]);
         }
       }
-    } else if (totalImport[i]!=="---END---"){
-      var exists = false;
-      for(var j = 0; j<currentCollectionList.length; j++){
-        if(currentCollectionList[j]===totalImport[i]){
-          exists=true;
+      if(totalImport[i]==="---END---" || i+1===totalImport.length){
+        await AsyncStorage.setItem("Achievements"+currentProfile, JSON.stringify([...new Set([...totalAchievements,...currentAchievementsList])]));
+        await AsyncStorage.setItem("ParadisePlanning"+currentProfile, JSON.stringify([...new Set([...totalHHP,...currentHHPList])]));
+        var outputString = "";
+        for(var x = 0; x<currentCollectionList.length; x++){
+          outputString += currentCollectionList[x];
+          outputString += "\n";
         }
-      }
-      if(exists===false){
-        currentCollectionList.push(totalImport[i]);
+        await AsyncStorage.setItem("collectedString"+currentProfile, outputString);
+        totalAchievements = []
       }
     }
-    if(totalImport[i]==="---END---" || i+1===totalImport.length){
-      await AsyncStorage.setItem("Achievements"+currentProfile, JSON.stringify([...new Set([...totalAchievements,...currentAchievementsList])]));
-      await AsyncStorage.setItem("ParadisePlanning"+currentProfile, JSON.stringify([...new Set([...totalHHP,...currentHHPList])]));
-      var outputString = "";
-      for(var x = 0; x<currentCollectionList.length; x++){
-        outputString += currentCollectionList[x];
-        outputString += "\n";
-      }
-      await AsyncStorage.setItem("collectedString"+currentProfile, outputString);
-      totalAchievements = []
-    }
+    global.collectionList = (await getStorage("collectedString"+global.profile,"")).split("\n");
+    global.collectionListIndexed = indexCollectionList(global.collectionList)
+    return totalImport.length
+  }catch(error){
+    console.log("Error importing all data: "+error)
+    return 0
   }
-  global.collectionList = (await getStorage("collectedString"+global.profile,"")).split("\n");
-  global.collectionListIndexed = indexCollectionList(global.collectionList)
-  return totalImport.length
 }
 
 export async function getAllData(){
-  var dataTotal = "---ACNH Pocket Guide Backup---\n"
-  for(var i = 0; i<profileNames.length; i++){
-    var profile = profileNames[i]
-    var data = await getStorage("collectedString"+profile,"");
-   
-    // data2 = uniq = [...new Set(data2)]
-    // console.log("Achievements"+profile)
-    // console.log(await getStorage("Achievements"+profile,"[]"))
-    var data3 = "\n{name}" + (await getStorage("name"+profile,""))
-    var data4 = "\n{islandName}" + (await getStorage("islandName"+profile,""))
-    var data5 = "\n{dreamAddress}" + (await getStorage("dreamAddress"+profile,""))
-    var data6 = "\n{friendCode}" + (await getStorage("friendCode"+profile,""))
-    var data7 = "\n{creatorCode}" + (await getStorage("creatorCode"+profile,""))
-    var data8 = "\n{HHPCode}" + (await getStorage("HHPCode"+profile,""))
-    var data9 = "\n{selectedFruit}" + (await getStorage("selectedFruit"+profile,""))
-    var data10 = "\n{settingsNorthernHemisphere}" + (await getStorage("settingsNorthernHemisphere"+profile,""))
-    var data11 = "\n{Achievements}" + [...new Set(JSON.parse(await getStorage("Achievements"+profile,"[]")))].join("\n{Achievements}");
-    var data12 = "\n{HHP}" + [...new Set(JSON.parse(await getStorage("ParadisePlanning"+profile,"[]")))].join("\n{HHP}");
-    dataTotal = dataTotal + "{Profile}"+profile +"\n" + data + data3 + data4 + data5 + data6 + data7 + data8 + data9 + data10 + data11 + data12 + "\n" + "---END---" + "\n"
+  try{
+    var dataTotal = "---ACNH Pocket Guide Backup---\n"
+    for(var i = 0; i<profileNames.length; i++){
+      var profile = profileNames[i]
+      var data = await getStorage("collectedString"+profile,"");
+    
+      // data2 = uniq = [...new Set(data2)]
+      // console.log("Achievements"+profile)
+      // console.log(await getStorage("Achievements"+profile,"[]"))
+      var data3 = "\n{name}" + (await getStorage("name"+profile,""))
+      var data4 = "\n{islandName}" + (await getStorage("islandName"+profile,""))
+      var data5 = "\n{dreamAddress}" + (await getStorage("dreamAddress"+profile,""))
+      var data6 = "\n{friendCode}" + (await getStorage("friendCode"+profile,""))
+      var data7 = "\n{creatorCode}" + (await getStorage("creatorCode"+profile,""))
+      var data8 = "\n{HHPCode}" + (await getStorage("HHPCode"+profile,""))
+      var data9 = "\n{selectedFruit}" + (await getStorage("selectedFruit"+profile,""))
+      var data10 = "\n{settingsNorthernHemisphere}" + (await getStorage("settingsNorthernHemisphere"+profile,""))
+      var data11 = "\n{Achievements}" + [...new Set(JSON.parse(await getStorage("Achievements"+profile,"[]")))].join("\n{Achievements}");
+      var data12 = "\n{HHP}" + [...new Set(JSON.parse(await getStorage("ParadisePlanning"+profile,"[]")))].join("\n{HHP}");
+      dataTotal = dataTotal + "{Profile}"+profile +"\n" + data + data3 + data4 + data5 + data6 + data7 + data8 + data9 + data10 + data11 + data12 + "\n" + "---END---" + "\n"
+    }
+    // console.log(dataTotal.replace(/^\s*\n/gm, ""))
+    return dataTotal.replace(/^\s*\n/gm, "")
+  }catch(error){
+    console.log("Error getting all data: "+error)
+    return ""
   }
-  // console.log(dataTotal.replace(/^\s*\n/gm, ""))
-  return dataTotal.replace(/^\s*\n/gm, "")
 }
 
 class LoadClipboard extends Component {
@@ -212,11 +222,16 @@ class ExportClipboard extends Component {
           vibrate={5}
           onPress={async () => {
             var dataTotal = await getAllData();
+            if(dataTotal==="" || dataTotal===false || dataTotal===undefined){
+              console.log("Backup error. dataTotal appears to be undefined when exporting to clipboard.")
+            } else {
+              await Share.share({
+                message: dataTotal,
+              });
+            }
             // Clipboard.setString(dataTotal);
             // this.exportPopup?.setPopupVisible(true);
-            await Share.share({
-              message: dataTotal,
-            });
+            
           }}
         />
       </>
@@ -247,24 +262,28 @@ class ExportFile extends Component {
           vibrate={5}
           onPress={async () => {
             var dataTotal = await getAllData();
-            console.log(dataTotal)
-            const permissions = await StorageAccessFramework.requestDirectoryPermissionsAsync();
-            if (permissions.granted) {
-              try{
-                const uri = permissions.directoryUri;
-                this.setState({message:attemptToTranslate("Please wait")});
-                this.exportPopup?.setPopupVisible(false);
-                var filePath = await StorageAccessFramework.createFileAsync(uri, "ACNHPocketGuideData.txt", "txt")
-                await StorageAccessFramework.writeAsStringAsync(filePath, dataTotal, { encoding: FileSystem.EncodingType.UTF8 });
-                this.setState({message:"\n"+attemptToTranslate("File exported to") + "\n\n" + filePath, title:"Backup Successful"});
-                this.exportPopup?.setPopupVisible(true);
-              } catch {
-                this.setState({message:"An error occurred, please choose another folder and try again."});
+            if(dataTotal==="" || dataTotal===false || dataTotal===undefined){
+              console.log("Backup error. dataTotal appears to be undefined when exporting to file.")
+            } else {
+              console.log(dataTotal)
+              const permissions = await StorageAccessFramework.requestDirectoryPermissionsAsync();
+              if (permissions.granted) {
+                try{
+                  const uri = permissions.directoryUri;
+                  this.setState({message:attemptToTranslate("Please wait")});
+                  this.exportPopup?.setPopupVisible(false);
+                  var filePath = await StorageAccessFramework.createFileAsync(uri, "ACNHPocketGuideData.txt", "txt")
+                  await StorageAccessFramework.writeAsStringAsync(filePath, dataTotal, { encoding: FileSystem.EncodingType.UTF8 });
+                  this.setState({message:"\n"+attemptToTranslate("File exported to") + "\n\n" + filePath, title:"Backup Successful"});
+                  this.exportPopup?.setPopupVisible(true);
+                } catch {
+                  this.setState({message:"An error occurred, please choose another folder and try again."});
+                  this.exportPopup?.setPopupVisible(true);
+                }
+              } else {
+                this.setState({message:"Error backing up. Please enable the permissions and try again."});
                 this.exportPopup?.setPopupVisible(true);
               }
-            } else {
-              this.setState({message:"Error backing up. Please enable the permissions and try again."});
-              this.exportPopup?.setPopupVisible(true);
             }
           }}
         />

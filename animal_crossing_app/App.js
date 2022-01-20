@@ -577,8 +577,9 @@ class App extends Component {
       const NavigatorVillagerFurnitureParadisePlanning = ({route, navigation})=>{return <VillagerFurnitureParadisePlanning request={route.params.propsPassed}/>}
       const NavigatorBrowserPage = ({route, navigation})=>{return <BrowserPage page={route.params.propsPassed} languageMessage={"You can change the language at the bottom of the page, by tapping Language"} splashImage={require('./assets/icons/turnip.png')} splashText={"Turnip Prophet"} splashCredits={"By mikebryant"}/>}
       const NavigatorGlobalSearchPage = ({route, navigation})=>{return <GlobalSearchPage currentSearch={route.params.propsPassed} setPage={this.setPage}/>}
+      
+      console.log("Current page: " + this.state.currentPage)
 
-      console.log(global.darkMode)
       let theme = {
         ...DefaultTheme,
         mode:"exact",

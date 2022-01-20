@@ -214,7 +214,8 @@ function ListPage(props){
         searchActual = [...props.currentSetFilters,...searchActual];
       }
 
-      console.log(searchActual)
+      console.log("Set filters: " + searchActual)
+
       //organize filters into categories
       var filters = {}
       var filterCategory = ""
