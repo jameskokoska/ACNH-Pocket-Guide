@@ -246,7 +246,7 @@ class ListItem extends React.Component{
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
               <CheckVillagerPhoto showVillagerPhotoButton={this.showVillagerPhotoButton} setCollected={this.setCollected} collected={this.state.collected} setVillagerPhoto={this.setVillagerPhoto} item={this.props.item} villager={this.state.villagerPhoto} villagerPage={this.checkVillagerPhotoButton()}/>
               {this.state.wishlist? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7 + (lowerWishlistIcon?2:0), top: 7 + (lowerWishlistIcon?33:0), zIndex:10,}}/> : <View/>}
-              { (!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].startsWith("http") ? 
+              { ((!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto) && this.props.item[this.props.imageProperty[this.props.item.dataSet]]!==undefined)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().startsWith("http") ? 
                 <FastImage
                   style={styles.gridBoxImage}
                   source={{
@@ -291,7 +291,7 @@ class ListItem extends React.Component{
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
               {this.state.wishlist ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
-              { (!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].startsWith("http") ? 
+              { ((!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto) && this.props.item[this.props.imageProperty[this.props.item.dataSet]]!==undefined)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().startsWith("http") ? 
                 <FastImage
                   style={styles.gridBoxImageLarge}
                   source={{
@@ -347,13 +347,17 @@ class ListItem extends React.Component{
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
               {this.state.wishlist===true ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
-              {(!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto)?<FastImage
-                style={styles.gridBoxImageLargeSmaller}
-                source={{
-                  uri: imageSrc,
-                }}
-                cacheKey={imageSrc}
-              />:<View style={{height:7}}/>}
+              { ((!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto) && this.props.item[this.props.imageProperty[this.props.item.dataSet]]!==undefined)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().startsWith("http") ? 
+                <FastImage
+                  style={styles.gridBoxImageLargeSmaller}
+                  source={{
+                    uri: imageSrc,
+                  }}
+                  cacheKey={imageSrc}
+                />:
+                <Image style={styles.gridBoxImageLargeSmaller} source={getPhoto(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toLowerCase())}/>):
+                <View style={{height:7}}/>
+              }
               <View style={styles.gridBoxTextLargeSmaller}>
                 <TextFont translate={false} bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{capitalize(label)}</TextFont>
                 {priceComponent}
@@ -386,13 +390,17 @@ class ListItem extends React.Component{
             <View style={[styles.row,{backgroundColor:boxColor}]}>
               {this.state.wishlist ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', right:7, top: 7, zIndex:10,}}/> : <View/>}
               <View style={[styles.rowImageBackground,{backgroundColor:this.props.accentColor}]}>
-                {(!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto)?<FastImage
-                  style={styles.rowImage}
-                  source={{
-                    uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
-                  }}
-                  cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
-                />:<View style={{height:7}}/>}
+                { ((!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto) && this.props.item[this.props.imageProperty[this.props.item.dataSet]]!==undefined)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().startsWith("http") ? 
+                  <FastImage
+                    style={styles.rowImage}
+                    source={{
+                      uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
+                    }}
+                    cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
+                  />:
+                  <Image style={styles.rowImage} source={getPhoto(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toLowerCase())}/>):
+                  <View style={{height:7}}/>
+                }
               </View>
               <View style={styles.rowTextContainer}>
                 <View style={styles.rowTextTop}>
