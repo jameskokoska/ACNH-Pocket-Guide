@@ -7,6 +7,7 @@ export const changelog = `
 -Happy Home Network ID and Creator code are included in the backup service
 -Fixed crash on Paradise Planning page
 -Fixed flimsy net durability
+-Fixed importing of data crash when no file selected
 -
 -Bug and crash fixes
 -Back button fixes
