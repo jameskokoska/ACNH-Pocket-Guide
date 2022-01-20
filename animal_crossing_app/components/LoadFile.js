@@ -99,6 +99,10 @@ export async function importAllData(text){
           global.dreamAddress=importEntry
         } else if (key[1]==="friendCode"&&currentProfile===global.profile) {
           global.friendCode=importEntry
+        } else if (key[1]==="creatorCode"&&currentProfile===global.profile) {
+          global.creatorCode=importEntry
+        } else if (key[1]==="HHPCode"&&currentProfile===global.profile) {
+          global.HHPCode=importEntry
         } else if (key[1]==="selectedFruit"&&currentProfile===global.profile) {
           global.selectedFruit=importEntry
         } else if (key[1]==="settingsNorthernHemisphere"&&currentProfile===global.profile) {
@@ -138,8 +142,7 @@ export async function getAllData(){
   for(var i = 0; i<profileNames.length; i++){
     var profile = profileNames[i]
     var data = await getStorage("collectedString"+profile,"");
-    var data2 = "\n{Achievements}" + [...new Set(JSON.parse(await getStorage("Achievements"+profile,"[]")))].join("\n{Achievements}");
-    var data9 = "\n{HHP}" + [...new Set(JSON.parse(await getStorage("ParadisePlanning"+profile,"[]")))].join("\n{HHP}");
+   
     // data2 = uniq = [...new Set(data2)]
     // console.log("Achievements"+profile)
     // console.log(await getStorage("Achievements"+profile,"[]"))
@@ -147,9 +150,13 @@ export async function getAllData(){
     var data4 = "\n{islandName}" + (await getStorage("islandName"+profile,""))
     var data5 = "\n{dreamAddress}" + (await getStorage("dreamAddress"+profile,""))
     var data6 = "\n{friendCode}" + (await getStorage("friendCode"+profile,""))
-    var data7 = "\n{selectedFruit}" + (await getStorage("selectedFruit"+profile,""))
-    var data8 = "\n{settingsNorthernHemisphere}" + (await getStorage("settingsNorthernHemisphere"+profile,""))
-    dataTotal = dataTotal + "{Profile}"+profile +"\n" + data + data2 + data3 + data4 + data5 + data6 + data7 + data8 + data9 + "\n" + "---END---" + "\n"
+    var data7 = "\n{creatorCode}" + (await getStorage("creatorCode"+profile,""))
+    var data8 = "\n{HHPCode}" + (await getStorage("HHPCode"+profile,""))
+    var data9 = "\n{selectedFruit}" + (await getStorage("selectedFruit"+profile,""))
+    var data10 = "\n{settingsNorthernHemisphere}" + (await getStorage("settingsNorthernHemisphere"+profile,""))
+    var data11 = "\n{Achievements}" + [...new Set(JSON.parse(await getStorage("Achievements"+profile,"[]")))].join("\n{Achievements}");
+    var data12 = "\n{HHP}" + [...new Set(JSON.parse(await getStorage("ParadisePlanning"+profile,"[]")))].join("\n{HHP}");
+    dataTotal = dataTotal + "{Profile}"+profile +"\n" + data + data3 + data4 + data5 + data6 + data7 + data8 + data9 + data10 + data11 + data12 + "\n" + "---END---" + "\n"
   }
   // console.log(dataTotal.replace(/^\s*\n/gm, ""))
   return dataTotal.replace(/^\s*\n/gm, "")

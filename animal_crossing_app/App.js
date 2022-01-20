@@ -146,6 +146,7 @@ class App extends Component {
     global.dreamAddress = await getStorage("dreamAddress"+global.profile,"");
     global.friendCode = await getStorage("friendCode"+global.profile,"");
     global.creatorCode = await getStorage("creatorCode"+global.profile,"");
+    global.HHPCode = await getStorage("HHPCode"+global.profile,"");
     global.selectedFruit = await getStorage("selectedFruit"+global.profile,"");
     global.customTimeOffset = await getStorage("customDateOffset"+global.profile,"0");
     global.ordinance = await getStorage("ordinance"+global.profile,"");

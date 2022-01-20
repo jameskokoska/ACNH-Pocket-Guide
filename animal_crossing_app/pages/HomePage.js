@@ -588,9 +588,10 @@ export class Profile extends Component{
           <TextFont bold={false} style={{padding:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{getSettingsString("settingsNorthernHemisphere")==="true" ? "Northern Hemisphere" : "Southern Hemisphere"}</TextFont>
         </TouchableOpacity>
         <View style={{height: 5}}/>
-        <DreamAddress/>
-        <FriendCode/>
-        <CreatorCode/>
+        <Code start={"SW"} storageKey="friendCode" label="Friend Code" setGlobal={(value)=>{global.friendCode=value;}} initialValue={global.friendCode}/>
+        <Code start={translateDreamAddressBeginning()} storageKey="dreamAddress" label="Dream Address" setGlobal={(value)=>{global.dreamAddress=value;}} initialValue={global.dreamAddress}/>
+        <Code start={"MA"} storageKey="creatorCode" label="Creator Code" setGlobal={(value)=>{global.creatorCode=value;}} initialValue={global.creatorCode}/>
+        <Code start={"RA"} storageKey="HHPCode" label="Happy Home Network ID" setGlobal={(value)=>{global.HHPCode=value;}} initialValue={global.HHPCode}/>
         <View style={{height: 18}}/>
         <SelectionImage 
           selectedImage={global.selectedFruit} 
@@ -601,6 +602,58 @@ export class Profile extends Component{
           sizeContainer={[45,45]}
         />
       </View>
+    )
+  }
+}
+
+export class Code extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      code:this.props.initialValue,
+    }
+  }
+  onChangeText = (text) =>{
+    if(text.includes("\n")) Keyboard.dismiss()
+    text = text.replace("\n","")
+    var newValue = "";
+    if(text===this.props.start){
+      this.setState({code:""});
+    } else if (text===this.props.start.charAt(0)){
+      this.setState({code:this.props.start+"-"});
+    } else {
+      const afterIndices = [4,9,14]; 
+      var value = text.replace(this.props.start+"-","");
+      for(let i=0; i<value.length; i++){
+        if(afterIndices.includes(i)){
+          newValue+="-";
+        } 
+        if (value[i] !== "-") {
+          newValue+=value[i];
+        }
+      }
+      newValue = this.props.start+"-"+newValue;
+      this.setState({code:newValue});
+    }
+    this.props.setGlobal(newValue)
+    AsyncStorage.setItem(this.props.storageKey+global.profile, newValue);
+  }
+  render(){
+    return(
+      <>
+        <TextInput
+          maxLength = {17}
+          allowFontScaling={false}
+          style={{fontSize: 18, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
+          onChangeText={async (text) => {this.onChangeText(text)}}
+          placeholder={"["+attemptToTranslate(this.props.label)+"]"}
+          placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+          value={this.state.code}
+          defaultValue={this.props.initialValue}
+          multiline={true}
+        />
+        <TextFont bold={false} style={{marginTop: -5, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{this.props.label}</TextFont>
+      </>
     )
   }
 }
@@ -670,163 +723,6 @@ export class IslandEntry extends Component {
     )
   }
 }
-
-export class DreamAddress extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      dreamAddress:global.dreamAddress,
-    }
-  }
-  onChangeText = (text) =>{
-    if(text.includes("\n")) Keyboard.dismiss()
-    text = text.replace("\n","")
-    var newValue = "";
-    if(text===translateDreamAddressBeginning()){
-      this.setState({dreamAddress:""});
-    } else if (text===translateDreamAddressBeginning()[0]){
-      this.setState({dreamAddress:translateDreamAddressBeginning()+"-"});
-    } else {
-      const afterIndices = [4,9,14]; 
-      var value = text.replace(translateDreamAddressBeginning()+"-","");
-      for(let i=0; i<value.length; i++){
-        if(afterIndices.includes(i)){
-          newValue+="-";
-        } 
-        if (value[i] !== "-") {
-          newValue+=value[i];
-        }
-      }
-      newValue = translateDreamAddressBeginning()+"-"+newValue;
-      this.setState({dreamAddress:newValue});
-    }
-    global.dreamAddress=newValue;
-    AsyncStorage.setItem("dreamAddress"+global.profile, newValue);
-  }
-  render(){
-    return(
-      <>
-        <TextInput
-          maxLength = {17}
-          allowFontScaling={false}
-          style={{fontSize: 18, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
-          onChangeText={async (text) => {this.onChangeText(text)}}
-          placeholder={"["+attemptToTranslate("Dream Address")+"]"}
-          placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
-          value={this.state.dreamAddress}
-          defaultValue={global.dreamAddress}
-          multiline={true}
-        />
-        <TextFont bold={false} style={{marginTop: -5, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{"Dream Address"}</TextFont>
-      </>
-    )
-  }
-}
-
-export class FriendCode extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      friendCode:global.friendCode,
-    }
-  }
-  onChangeText = (text) =>{
-    if(text.includes("\n")) Keyboard.dismiss()
-    text = text.replace("\n","")
-    var newValue = "";
-    if(text==="SW"){
-      this.setState({friendCode:""});
-    } else if (text==="S"){
-      this.setState({friendCode:"SW-"});
-    } else {
-      const afterIndices = [4,9,14]; 
-      var value = text.replace("SW-","");
-      for(let i=0; i<value.length; i++){
-        if(afterIndices.includes(i)){
-          newValue+="-";
-        } 
-        if (value[i] !== "-") {
-          newValue+=value[i];
-        }
-      }
-      newValue = "SW-"+newValue;
-      this.setState({friendCode:newValue});
-    }
-    global.friendCode=newValue;
-    AsyncStorage.setItem("friendCode"+global.profile, newValue);
-  }
-  render(){
-    return(
-      <>
-        <TextInput
-          maxLength = {17}
-          allowFontScaling={false}
-          style={{fontSize: 18, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
-          onChangeText={async (text) => {this.onChangeText(text)}}
-          placeholder={"["+attemptToTranslate("Friend Code")+"]"}
-          placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
-          value={this.state.friendCode}
-          defaultValue={global.friendCode}
-          multiline={true}
-        />
-        <TextFont bold={false} style={{marginTop: -5, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{"Friend Code"}</TextFont>
-      </>
-    )
-  }
-}
-
-export class CreatorCode extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      creatorCode:global.creatorCode,
-    }
-  }
-  onChangeText = (text) =>{
-    if(text.includes("\n")) Keyboard.dismiss()
-    text = text.replace("\n","")
-    var newValue = "";
-    if(text==="MA"){
-      this.setState({creatorCode:""});
-    } else if (text==="M"){
-      this.setState({creatorCode:"MA-"});
-    } else {
-      const afterIndices = [4,9,14]; 
-      var value = text.replace("MA-","");
-      for(let i=0; i<value.length; i++){
-        if(afterIndices.includes(i)){
-          newValue+="-";
-        } 
-        if (value[i] !== "-") {
-          newValue+=value[i];
-        }
-      }
-      newValue = "MA-"+newValue;
-      this.setState({creatorCode:newValue});
-    }
-    global.creatorCode=newValue;
-    AsyncStorage.setItem("creatorCode"+global.profile, newValue);
-  }
-  render(){
-    return(
-      <>
-        <TextInput
-          maxLength = {17}
-          allowFontScaling={false}
-          style={{fontSize: 18, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
-          onChangeText={async (text) => {this.onChangeText(text)}}
-          placeholder={"["+attemptToTranslate("Creator Code")+"]"}
-          placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
-          value={this.state.creatorCode}
-          defaultValue={global.creatorCode}
-          multiline={true}
-        />
-        <TextFont bold={false} style={{marginTop: -5, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{"Creator Code"}</TextFont>
-      </>
-    )
-  }
-}
-
 
 export class ConfigureHomePages extends Component {
   constructor(props) {

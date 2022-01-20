@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Animated,FlatList, Dimensions, TouchableOpacity,StyleSheet, Text, View, Image} from 'react-native';
+import {Animated,FlatList, Dimensions, TouchableOpacity,StyleSheet, Text, View, Image, Vibration} from 'react-native';
 import {removeAccents,getStorage, findObject, attemptToTranslateItem, getSettingsString, attemptToTranslateSpecial, attemptToTranslate} from "../LoadJsonData"
 import colors from '../Colors'
 import {attemptToTranslateAchievement} from "../LoadJsonData"
@@ -48,7 +48,7 @@ export default class ParadisePlanningPage extends Component {
         oldList.push(id);
         this.saveList(oldList);
         this.paradiseChecklist = oldList
-        getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10,220,20]) : "";
+        getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,20,220,20]) : "";
       }
     } catch (e){
       toast.show("Please report this error to dapperappdeveloper@gmail.com : \n" + e.toString(), {type:"danger"})
