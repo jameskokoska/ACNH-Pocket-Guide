@@ -3,6 +3,9 @@ export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Fixed some filters not working - infinite loading
+-Optimizations to internal memory handling
+-Faster sorting and loading of data
 -Added Villager filter for Amiibo Cards
 -Fixed importing of data crash when no file selected
 -Fixed missing images

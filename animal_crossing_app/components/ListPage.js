@@ -440,9 +440,9 @@ function ListPage(props){
                     for(var e = 0; e<filters[filterCategory].length; e++){
                       //check if split by semicolon
                       if(item!==undefined && item[filterCategory]!==undefined){
-                        var allEntries = item[filterCategory].split("; ")
+                        var allEntries = item[filterCategory].toString().split("; ")
                         for(var o = 0; o<allEntries.length; o++){
-                          if(allEntries[o]!==undefined && allEntries[o].toLowerCase()===filters[filterCategory][e].toLowerCase()){
+                          if(allEntries[o]!==undefined && allEntries[o].toString().toLowerCase()===filters[filterCategory][e].toString().toLowerCase()){
                             filterFound = false
                             break;
                           }
@@ -464,15 +464,15 @@ function ListPage(props){
                     for(var e = 0; e<filters[filterCategory].length; e++){
                       //check if split by semicolon
                       if(item!==undefined && item[filterCategory]!==undefined){
-                        var allEntries = item[filterCategory].split("; ")
+                        var allEntries = item[filterCategory].toString().split("; ")
                         for(var o = 0; o<allEntries.length; o++){
-                          if(allEntries[o]!==undefined && allEntries[o].toLowerCase()===filters[filterCategory][e].toLowerCase()){
+                          if(allEntries[o]!==undefined && allEntries[o].toString().toLowerCase()===filters[filterCategory][e].toString().toLowerCase()){
                             filterCurrentFound = true
                             break;
                           } 
                         }
                       }
-                      if(item[filterCategory]!==undefined && item[filterCategory].toLowerCase()===filters[filterCategory][e].toLowerCase()){
+                      if(item[filterCategory]!==undefined && item[filterCategory].toString().toLowerCase()===filters[filterCategory][e].toString().toLowerCase()){
                         filterCurrentFound = true
                         break;
                       }
@@ -582,7 +582,7 @@ function ListPage(props){
                     // if(global.collectionList.includes("wishlist"+item["checkListKey"])){
                       item.dataSet = j;
                       item.index = i;
-                      dataUpdated = [...dataUpdated, item];
+                      dataUpdated.push(item)
                       // previousVariation = item.[props.textProperty[j]];
                       // previousVariation = item["Name"];
                     // } 
@@ -590,7 +590,7 @@ function ListPage(props){
                     if(item["Version Added"] !==undefined && item["Version Added"] !=="NA" && gameVersion.includes(item["Version Added"])){
                       item.dataSet = j;
                       item.index = i;
-                      dataUpdated = [...dataUpdated, item];
+                      dataUpdated.push(item)
                       previousVariation = item["Name"];
                       // previousVariation = item.[props.textProperty[j]];
                       // previousVariation = item["Name"];
@@ -599,7 +599,7 @@ function ListPage(props){
                     if(item["Data Category"]!==undefined && museumCategories.includes(item["Data Category"]) && global.collectionListIndexed["museum"+item["checkListKey"]]===true){
                       item.dataSet = j;
                       item.index = i;
-                      dataUpdated = [...dataUpdated, item];
+                      dataUpdated.push(item)
                       // previousVariation = item.[props.textProperty[j]];
                       previousVariation = item["Name"];
                     } 
@@ -607,7 +607,7 @@ function ListPage(props){
                     if(item["Data Category"]!==undefined && museumCategories.includes(item["Data Category"]) && !global.collectionListIndexed["museum"+item["checkListKey"]]===true){
                       item.dataSet = j;
                       item.index = i;
-                      dataUpdated = [...dataUpdated, item];
+                      dataUpdated.push(item)
                       // previousVariation = item.[props.textProperty[j]];
                       previousVariation = item["Name"];
                     } 
@@ -615,7 +615,7 @@ function ListPage(props){
                     if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && global.collectionListIndexed["oldResident"+item["checkListKey"]]===true){
                       item.dataSet = j;
                       item.index = i;
-                      dataUpdated = [...dataUpdated, item];
+                      dataUpdated.push(item)
                       // previousVariation = item.[props.textProperty[j]];
                       previousVariation = item["Name"];
                     } 
@@ -623,7 +623,7 @@ function ListPage(props){
                     if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && !global.collectionListIndexed["oldResident"+item["checkListKey"]]===true){
                       item.dataSet = j;
                       item.index = i;
-                      dataUpdated = [...dataUpdated, item];
+                      dataUpdated.push(item)
                       // previousVariation = item.[props.textProperty[j]];
                       previousVariation = item["Name"];
                     } 
@@ -631,7 +631,7 @@ function ListPage(props){
                     if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && global.collectionListIndexed["havePhoto"+item["checkListKey"]]===true){
                       item.dataSet = j;
                       item.index = i;
-                      dataUpdated = [...dataUpdated, item];
+                      dataUpdated.push(item)
                       // previousVariation = item.[props.textProperty[j]];
                       previousVariation = item["Name"];
                     } 
@@ -639,14 +639,15 @@ function ListPage(props){
                     if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && !global.collectionListIndexed["havePhoto"+item["checkListKey"]]===true){
                       item.dataSet = j;
                       item.index = i;
-                      dataUpdated = [...dataUpdated, item];
+                      dataUpdated.push(item)
                       // previousVariation = item.[props.textProperty[j]];
                       previousVariation = item["Name"];
                     } 
                   } else {
                     item.dataSet = j;
                     item.index = i;
-                    dataUpdated = [...dataUpdated, item];
+                    dataUpdated.push(item)
+                    // dataUpdated = [...dataUpdated, item];
                     // previousVariation = item.[props.textProperty[j]];
                     previousVariation = item["Name"];
                   }
@@ -665,8 +666,7 @@ function ListPage(props){
 
       //Sort alphabetically
       if(getSettingsString("settingsSortAlphabetically")==="true"){
-        var dataLoadedCopy = dataUpdated.slice(0);
-        dataLoadedCopy.sort(function(a, b) {
+        dataUpdated.sort(function(a, b) {
           var textA
           var textB
           if(a===undefined || a.NameLanguage===undefined){
@@ -687,18 +687,15 @@ function ListPage(props){
           }
           return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
         });
-        dataUpdated = dataLoadedCopy
       }
 
       //Sort based on critterpedia entry number
       if(getSettingsString("settingsSortCritterpedia")==="true" && (props.title==="Fish" || props.title==="Bugs" || props.title==="Sea Creatures")){
-        var dataLoadedCopy = dataUpdated.slice(0);
-        dataLoadedCopy.sort(function(a, b) {
+        dataUpdated.sort(function(a, b) {
           var textA = parseInt(a["#"]);
           var textB = parseInt(b["#"]);
           return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
         });
-        dataUpdated = dataLoadedCopy
       }
 
       //Sort based on filters
@@ -712,94 +709,88 @@ function ListPage(props){
       for(var sort = 0; sort<searchActual.length; sort++){
         if(searchActual[sort].includes("Sort-")){
           var propertyToSort = searchActual[sort].replace("Sort-","")
-          var dataLoadedCopy = dataUpdated.slice(0);
-            dataLoadedCopy.sort(function(a, b) {
-              var valueA = a[propertyToSort]
-              if(a[propertyToSort]===undefined && !shouldSortDirection){
-                valueA="zzzzzzzzzzz"
-              } else if(a[propertyToSort]===undefined){
-                valueA="aaaaaaaaaaa"
-              }
+          dataUpdated.sort(function(a, b) {
+            var valueA = a[propertyToSort]
+            if(a[propertyToSort]===undefined && !shouldSortDirection){
+              valueA="zzzzzzzzzzz"
+            } else if(a[propertyToSort]===undefined){
+              valueA="aaaaaaaaaaa"
+            }
 
-              var valueB = b[propertyToSort]              
-              if(b[propertyToSort]===undefined && !shouldSortDirection){
-                valueB="zzzzzzzzzzz"
-              } else if(b[propertyToSort]===undefined){
-                valueB="aaaaaaaaaaa"
-              }
+            var valueB = b[propertyToSort]              
+            if(b[propertyToSort]===undefined && !shouldSortDirection){
+              valueB="zzzzzzzzzzz"
+            } else if(b[propertyToSort]===undefined){
+              valueB="aaaaaaaaaaa"
+            }
 
-              //Fix birthday sorting
-              if(searchActual[sort]==="Sort-Birthday"){
-                let part1 = valueA.split("/")[0];
-                let part2 = valueA.split("/")[1];
-                if(valueA.split("/")[0].length===1){
-                  part1 = "0"+valueA.split("/")[0]
-                }
-                if(valueA.split("/")[1].length===1){
-                  part2 = "0"+valueA.split("/")[1]
-                }
-                valueA = part1+"/"+part2
+            //Fix birthday sorting
+            if(searchActual[sort]==="Sort-Birthday"){
+              let part1 = valueA.split("/")[0];
+              let part2 = valueA.split("/")[1];
+              if(valueA.split("/")[0].length===1){
+                part1 = "0"+valueA.split("/")[0]
               }
-              if(searchActual[sort]==="Sort-Birthday"){
-                let part1 = valueB.split("/")[0];
-                let part2 = valueB.split("/")[1];
-                if(valueB.split("/")[0].length===1){
-                  part1 = "0"+valueB.split("/")[0]
-                }
-                if(valueB.split("/")[1].length===1){
-                  part2 = "0"+valueB.split("/")[1]
-                }
-                valueB = part1+"/"+part2
+              if(valueA.split("/")[1].length===1){
+                part2 = "0"+valueA.split("/")[1]
               }
-              
-              var textA = valueA;
-              var textB = valueB;
-              if(searchActual.includes)
-              if(!shouldSortDirection){
-                return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-              } else {
-                return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+              valueA = part1+"/"+part2
+            }
+            if(searchActual[sort]==="Sort-Birthday"){
+              let part1 = valueB.split("/")[0];
+              let part2 = valueB.split("/")[1];
+              if(valueB.split("/")[0].length===1){
+                part1 = "0"+valueB.split("/")[0]
               }
-            });
-          dataUpdated = dataLoadedCopy
+              if(valueB.split("/")[1].length===1){
+                part2 = "0"+valueB.split("/")[1]
+              }
+              valueB = part1+"/"+part2
+            }
+            
+            var textA = valueA;
+            var textB = valueB;
+            if(searchActual.includes)
+            if(!shouldSortDirection){
+              return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+            } else {
+              return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+            }
+          });
         } else if(searchActual[sort].includes("SortInt-")){
           var propertyToSort = searchActual[sort].replace("SortInt-","")
-          var dataLoadedCopy = dataUpdated.slice(0);
-            dataLoadedCopy.sort(function(a, b) {
-              var valueA = a[propertyToSort]
-              if((a[propertyToSort]===undefined || !isInteger(a[propertyToSort])) && shouldSortDirection){
-                valueA=10000000000000
-              } else if(a[propertyToSort]===undefined || !isInteger(a[propertyToSort])){
-                valueA=0
-              }
-              var valueB = b[propertyToSort]
-              if((b[propertyToSort]===undefined || !isInteger(b[propertyToSort])) && shouldSortDirection){
-                valueB=10000000000000
-              } else if(b[propertyToSort]===undefined || !isInteger(b[propertyToSort])){
-                valueB=0
-              }
-              
-              var textA = parseInt(valueA);
-              var textB = parseInt(valueB);
-              if(searchActual.includes)
-              if(shouldSortDirection){
-                return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-              } else {
-                return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
-              }
-            });
-          dataUpdated = dataLoadedCopy
+          dataUpdated.sort(function(a, b) {
+            var valueA = a[propertyToSort]
+            if((a[propertyToSort]===undefined || !isInteger(a[propertyToSort])) && shouldSortDirection){
+              valueA=10000000000000
+            } else if(a[propertyToSort]===undefined || !isInteger(a[propertyToSort])){
+              valueA=0
+            }
+            var valueB = b[propertyToSort]
+            if((b[propertyToSort]===undefined || !isInteger(b[propertyToSort])) && shouldSortDirection){
+              valueB=10000000000000
+            } else if(b[propertyToSort]===undefined || !isInteger(b[propertyToSort])){
+              valueB=0
+            }
+            
+            var textA = parseInt(valueA);
+            var textB = parseInt(valueB);
+            if(searchActual.includes)
+            if(shouldSortDirection){
+              return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+            } else {
+              return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+            }
+          });
         }
       }
 
       if(props.newItems){
-        var dataLoadedCopy = dataUpdated.slice(0);
-        dataLoadedCopy.sort(function(a, b) {
+        dataUpdated.sort(function(a, b) {
           var textA = a["Version Added"];
           var textB = b["Version Added"];
           return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
         });
-        dataUpdated = dataLoadedCopy
       }
 
       setData(dataUpdated)
