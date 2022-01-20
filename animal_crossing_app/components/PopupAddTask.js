@@ -224,7 +224,7 @@ class PopupAddTask extends Component {
               offColor="#DFDFDF"
               size="large"
               onToggle={() => {
-                console.log(!this.state.smallToggle)
+                // console.log(!this.state.smallToggle)
                 this.task.small=!this.state.smallToggle;
                 this.setState({smallToggle:!this.state.smallToggle});
                 getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";

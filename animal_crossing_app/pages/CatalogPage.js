@@ -72,7 +72,7 @@ class CatalogPage extends Component {
           }
         }
         if(!success){
-          console.log("Didn't find:" + inputList[z]);
+          console.log("When importing didn't find: " + inputList[z]);
           if(inputList[z]!==undefined)
             totalErrorItems.push(inputList[z])
           this.totalFail++;
@@ -82,7 +82,7 @@ class CatalogPage extends Component {
       global.collectionList = Array.from(new Set(collectionList));
       collectionListSave();
       global.collectionListIndexed = indexCollectionList(global.collectionList)
-      console.log(totalErrorItems)
+      console.log("Total error items: "+ totalErrorItems)
       this.setState({
         method: this.method,
         totalFail: this.totalFail,

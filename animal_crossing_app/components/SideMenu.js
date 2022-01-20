@@ -32,16 +32,16 @@ export default class SideMenu extends Component {
   editSections = async (name) => {
     let sideSectionsDisabled = this.state.sideMenuSectionsDisabled
     if(sideSectionsDisabled.includes(name)){
-      console.log("REMOVED")
+      console.log("Removed side section"+name)
       sideSectionsDisabled = sideSectionsDisabled.filter(e => e !== name)
       sideSectionsDisabled = sideSectionsDisabled.filter(e => e !== "")
     } else {
-      console.log("ADDED")
+      console.log("Added side section"+name)
       sideSectionsDisabled.push(name)
     }
     this.setState({sideMenuSectionsDisabled:sideSectionsDisabled})
     getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
-    console.log(sideSectionsDisabled)
+    console.log("Side sections disabled: " + sideSectionsDisabled)
     await this.saveDisabledSections(sideSectionsDisabled);
   }
   reorderSections = async (index, direction) => {

@@ -27,16 +27,24 @@ class LoadFile extends Component {
           button1={"OK"}
           button1Action={async ()=>{
             var document = await DocumentPicker.getDocumentAsync();
-            console.log(document.uri);
+            console.log("Loading file with URI: " + document.uri)
             this.popupWait.setPopupVisible(true)
-            fetch(document.uri)
-            .then( file => file.text() )
-            .then( async (text) => {
-              var totalImported = await importAllData(text)
-              this.setState({loadedNumber:totalImported}) 
+            if(document===undefined||document.uri===undefined){
+              this.setState({loadedNumber:"\n\nFailed to load file. Please enable file permissions or ensure you selected a file and try again.\n\n"}) 
               this.popupWait.setPopupVisible(false)
               this.loadPopupResults?.setPopupVisible(true);
-            })
+              console.log("Failed to load backup file from storage - document not selected or undefined")
+            } else {
+              fetch(document.uri)
+              .then( file => file.text() )
+              .then( async (text) => {
+                var totalImported = await importAllData(text)
+                this.setState({loadedNumber:totalImported}) 
+                console.log("Loaded file with results: " + totalImported)
+                this.popupWait.setPopupVisible(false)
+                this.loadPopupResults?.setPopupVisible(true);
+              })
+            }
           }}
           text={"Import File"}
           textLower={"\n" + attemptToTranslate("Please import ACNHPocketGuideData.txt.")}

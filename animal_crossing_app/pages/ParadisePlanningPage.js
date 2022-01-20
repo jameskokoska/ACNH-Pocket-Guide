@@ -158,7 +158,7 @@ export default class ParadisePlanningPage extends Component {
 
 class CycleCheckListFilter extends Component{
   render(){
-    console.log(this.props.setFilter)
+    console.log("Paradise planning page filter state: "+this.props.setFilter)
     return <TouchableOpacity style={{width:70, height:63}} activeOpacity={0.7} onPress={()=>{this.props.cycleFilter()}}>
       {this.props.setFilter===0
         ?
