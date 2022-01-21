@@ -116,7 +116,8 @@ class SettingsPage extends Component {
           
           <View style={{height: 20}}/>
           <ButtonComponent text="Reset Data" onPress={() => {this.popupWarning.setPopupVisible(true)}} vibrate={100} color={colors.cancelButton[global.darkMode]}/>
-          <Popup ref={(popupWarning) => this.popupWarning = popupWarning} text="Reset Data" textLower="Would you like to reset your collection? This action cannot be undone." button2={"Reset"} button1={"Cancel"} button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.clear(); this.popupRestart.setPopupVisible(true)}}/>
+          <Popup ref={(popupWarning) => this.popupWarning = popupWarning} text={attemptToTranslate("Reset") +" "+ attemptToTranslate(this.displayProfile)} textLower={attemptToTranslate("Would you like to reset all data, including your collection?") + "\n" + attemptToTranslate("This action cannot be undone.")} button2={"Reset"} button1={"Cancel"} button1Action={()=>{console.log("")}} button2Action={()=>{this.popupAreYouSure.setPopupVisible(true)}}/>
+          <Popup ref={(popupAreYouSure) => this.popupAreYouSure = popupAreYouSure} text={attemptToTranslate("Reset?")} textLower={attemptToTranslate("Are you sure?") + "\n" +attemptToTranslate("This action cannot be undone.")} button2={"Erase Data"} button1={"Cancel"} button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.clear(); this.popupRestart.setPopupVisible(true)}}/>
           <Popup ref={(popupRestart) => this.popupRestart = popupRestart} text="Restart Required" textLower="Please restart the application."/>
           <View style={{height:50}}/>
           <MailLink/>

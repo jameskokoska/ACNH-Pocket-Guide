@@ -983,6 +983,9 @@ export function attemptToTranslateItem(text){
 }
 
 export function attemptToTranslateSpecial(text, type){
+  if(text===undefined){
+    return "undefined"
+  }
   if(global.language!=="English"){
     var translated;
     if(type==="variants"){

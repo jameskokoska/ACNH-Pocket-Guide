@@ -3,6 +3,7 @@ import {View, Dimensions, Text} from 'react-native';
 import ListPage from '../components/ListPage';
 import LottieView from 'lottie-react-native';
 import colors from '../Colors.js';
+import { getSettingsString } from '../LoadJsonData';
 
 class SongsPage extends Component {
   render(){
@@ -23,7 +24,7 @@ class SongsPage extends Component {
         }}
       >
         <LottieView 
-          autoPlay
+          autoPlay={getSettingsString("settingsLowEndDevice")==="true"?false:true}
           loop
           style={{
             width: Dimensions.get('window').width,
@@ -48,7 +49,7 @@ class SongsPage extends Component {
         }}
       >
         <LottieView 
-          autoPlay
+          autoPlay={getSettingsString("settingsLowEndDevice")==="true"?false:true}
           loop
           style={{
             width: Dimensions.get('window').width,
