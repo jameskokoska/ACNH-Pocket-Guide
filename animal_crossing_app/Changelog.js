@@ -4,6 +4,12 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
 -Added [Battery saver / Increase performance] setting
+-Added erase profile to profile page
+-Added collecton count for each profile on profile page
+-Profile page optimizations
+-Songs page has no animation when on battery saver
+-Fixed paradise planning crash
+-
 -Home page loading time improvements
 -Fixed missing translation crash
 -Villager compatibility loading animation
