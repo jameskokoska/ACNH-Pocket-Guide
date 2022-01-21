@@ -213,13 +213,13 @@ export class InfoLine extends Component {
       if(text==="NFS" && this.props.item["Exchange Price"] !==undefined && this.props.item["Exchange Price"] !=="NA"){
         text = commas(this.props.item["Exchange Price"]);
       }
-      if(this.props.item[this.props.ending].toLowerCase().includes("miles")){
+      if(this.props.item[this.props.ending].toString().toLowerCase().includes("miles")){
         ending= " " + attemptToTranslate("miles");
         imageSource = <Image style={styles.infoLineImage} source={require("../assets/icons/miles.png")}/>;
-      } else if(this.props.item[this.props.ending].toLowerCase().includes("nook points")){
+      } else if(this.props.item[this.props.ending].toString().toLowerCase().includes("nook points")){
         ending= " " + attemptToTranslate("Nook points");
         imageSource = <Image style={styles.infoLineImage} source={require("../assets/icons/nookLinkCoin.png")}/>;
-      } else if(this.props.item[this.props.ending].toLowerCase().includes("heart crystals")){
+      } else if(this.props.item[this.props.ending].toString().toLowerCase().includes("heart crystals")){
         ending= " " + attemptToTranslate("heart crystals");
         imageSource = <Image style={styles.infoLineImage} source={require("../assets/icons/crystal.png")}/>;
       } else if( text!=="NFS" ){
@@ -228,7 +228,7 @@ export class InfoLine extends Component {
       } else {
         ending = "";
       }
-    } else if(text.toLowerCase()==="nfs"){
+    } else if(text.toString().toLowerCase()==="nfs"){
       ending="";
     } else if (this.props.ending==="Exchange Currency"){
       ending = " " + attemptToTranslate("bells");
@@ -283,7 +283,7 @@ export class InfoLine extends Component {
       
     }
     if(this.props.translateItem){
-      text = attemptToTranslateItem(text.toLowerCase())
+      text = attemptToTranslateItem(text.toString().toLowerCase())
       text=capitalize(text)
     }
     return <View style={[styles.infoLineBox,{justifyContent:this.props.center===false?"flex-start":"center", marginVertical:this.props.condensed===true?-5:0}]}>
@@ -522,7 +522,7 @@ class VariationItem extends Component{
             cacheKey={item[this.props.imageProperty[dataSet]]}
           />:<Image
             style={{height: getSettingsString("settingsLargerItemPreviews")==="false"?53:70, width: getSettingsString("settingsLargerItemPreviews")==="false"?53:70, resizeMode:'contain',}}
-            source={getPhoto(item[this.props.imageProperty[dataSet]]!==undefined?item[this.props.imageProperty[dataSet]].toLowerCase():"")}
+            source={getPhoto(item[this.props.imageProperty[dataSet]]!==undefined?item[this.props.imageProperty[dataSet]].toString().toLowerCase():"")}
           />}
         </View>
       </TouchableOpacity>
@@ -613,7 +613,7 @@ export function getVariations(name, globalDatabase, checkListKey, startingIndex 
         } else if(globalDatabase[i][j]["checkListKey"].split("CheckList")[0]!==checkListKey.split("CheckList")[0]){
           break;
         }
-        if(globalDatabase[i][j]["Name"].toLowerCase()===name.toLowerCase()){
+        if(globalDatabase[i][j]["Name"].toString().toLowerCase()===name.toString().toLowerCase()){
           totalVariations1.push(globalDatabase[i][j]);
         } else {
           failCount++
@@ -630,7 +630,7 @@ export function getVariations(name, globalDatabase, checkListKey, startingIndex 
         if(globalDatabase[i][j]["checkListKey"].split("CheckList")[0]!==checkListKey.split("CheckList")[0]){
           break;
         }
-        if(globalDatabase[i][j]["Name"].toLowerCase()===name.toLowerCase()){
+        if(globalDatabase[i][j]["Name"].toString().toLowerCase()===name.toString().toLowerCase()){
           totalVariations2.push(globalDatabase[i][j]);
         } else {
           failCount++

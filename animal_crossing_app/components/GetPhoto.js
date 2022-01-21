@@ -401,7 +401,7 @@ export function getPhotoCorner(name){
   if(name===undefined){
     return <View/>;
   } else {
-    name = name.toLowerCase();
+    name = name.toString().toLowerCase();
   }
   if(name.includes("sea") && !name.includes("seasonal") || name.includes("shoreline") || name.includes("beach"))
     return <Image source={require("../assets/icons/oceanIcon.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>
@@ -559,8 +559,8 @@ export function getMaterialImage(material, reduceComplexity=false, flowerSingle=
   }
   var data = require("../assets/data/DataCreated/Other.json");
   if(reduceComplexity){
-    materialStripped = materialStripped.replace("-","").toLowerCase();
-    materialStripped = materialStripped.replace(" ","");
+    materialStripped = materialStripped.toString().replace("-","").toLowerCase();
+    materialStripped = materialStripped.toString().replace(" ","");
     for(var index = 0; index < data.length; index++){
       var dataStripped = data[index]["Name"];
       dataStripped = dataStripped.replace("-","");

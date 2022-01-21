@@ -50,7 +50,7 @@ export function EventContainer(props){
     if(props.event.image.startsWith("http")){
       image = <FastImage style={[styles.eventImage]} source={{uri:props.event.image}} cacheKey={props.event.image}/>
     } else {
-      image = <Image style={styles.eventImage} source={getPhoto(props.event.image.toLowerCase(), props.event.time.toLowerCase())}/>
+      image = <Image style={styles.eventImage} source={getPhoto(props.event.image.toString().toLowerCase(), props.event.time.toString().toLowerCase())}/>
     }
     return(
       <TouchableNativeFeedback 
@@ -201,16 +201,16 @@ export function getEventsDay(date, eventSections, showEventsIfInRange){
       return
     }
 
-    if((event["Type"].toLowerCase()==="special event" || event["Type"].toLowerCase()==="basegame event") && !event["Name"].toLowerCase().includes("ready days") || 
-      eventSections["Crafting Seasons"] && event["Type"].toLowerCase()==="crafting season" ||
-      eventSections["Event Ready Days"] && event["Name"].toLowerCase().includes("ready days") || 
-      eventSections["Nook Shopping Events"] && event["Type"].toLowerCase()===("nook shopping event") || 
-      eventSections["Zodiac Seasons"] && event["Type"].toLowerCase()===("zodiac season") || 
-      eventSections["Shopping Seasons"] && event["Type"].toLowerCase()===("shopping season")
+    if((event["Type"].toString().toLowerCase()==="special event" || event["Type"].toString().toLowerCase()==="basegame event") && !event["Name"].toString().toLowerCase().includes("ready days") || 
+      eventSections["Crafting Seasons"] && event["Type"].toString().toLowerCase()==="crafting season" ||
+      eventSections["Event Ready Days"] && event["Name"].toString().toLowerCase().includes("ready days") || 
+      eventSections["Nook Shopping Events"] && event["Type"].toString().toLowerCase()===("nook shopping event") || 
+      eventSections["Zodiac Seasons"] && event["Type"].toString().toLowerCase()===("zodiac season") || 
+      eventSections["Shopping Seasons"] && event["Type"].toString().toLowerCase()===("shopping season")
     ){
       if(event["Dates (Northern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")==="true"){
         if(isDateInRange(event["Dates (Northern Hemisphere)"], date.getFullYear(), date, "startOnly")){
-          let isImportant = event["Type"].toLowerCase()==="special event" && !event["Name"].includes("days")
+          let isImportant = event["Type"].toString().toLowerCase()==="special event" && !event["Name"].includes("days")
           totalEvents.push({
             name: capitalize(eventName),
             time: event["Type"],
@@ -254,7 +254,7 @@ export function getEventsDay(date, eventSections, showEventsIfInRange){
         }
       } else if (event["Dates (Southern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")!=="true"){
         if(isDateInRange(event["Dates (Southern Hemisphere)"], date.getFullYear(), date, "startOnly")){
-          let isImportant = event["Type"].toLowerCase()==="special event" && !event["Name"].includes("days")
+          let isImportant = event["Type"].toString().toLowerCase()==="special event" && !event["Name"].includes("days")
           totalEvents.push({
             name: capitalize(eventName),
             time: event["Type"],

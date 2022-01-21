@@ -315,7 +315,7 @@ function ListPage(props){
               for(var y = 0; y < searchActual.length; y++){
                 if(searchActual[y].includes("Data Category")){
                   //Category selected
-                  if(item[searchActual[y].split(":")[0]]!==undefined && item[searchActual[y].split(":")[0]].toLowerCase()===searchActual[y].split(":")[1].toLowerCase()){
+                  if(item[searchActual[y].split(":")[0]]!==undefined && item[searchActual[y].split(":")[0]].toString().toLowerCase()===searchActual[y].split(":")[1].toString().toLowerCase()){
                     //Item in selected category
                     searchCategory = true;
                     break;
@@ -389,7 +389,7 @@ function ListPage(props){
 
               //special case for categories
               if(props.title==="Obtainable DIYs" || props.title==="Obtainable Reactions" || props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions"){
-                if(searchCollected && item[searchActual[z].split(":")[0]]!==undefined && item[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
+                if(searchCollected && item[searchActual[z].split(":")[0]]!==undefined && item[searchActual[z].split(":")[0]].toString().toLowerCase()===searchActual[z].split(":")[1].toString().toLowerCase()){
                   if((props.title==="Obtainable DIYs" || props.title==="Unobtainable DIYs") && item.checkListKey.includes("recipesCheckList")){
                     filterFound = true;
                     break;
@@ -501,12 +501,12 @@ function ListPage(props){
                 } else if (searchActual.includes("Show craftable item variations") && item["Kit Cost"]===undefined){
                   showUncraftableVar = false;
                 }
-                // if( item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
+                // if( item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toString().toLowerCase()===searchActual[z].split(":")[1].toString().toLowerCase()){
                 //   filterFound = true;
                 // } else if (item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].includes("; ")){
                 //   var allEntries = item.[searchActual[z].split(":")[0]].split("; ")
                 //   for(var o = 0; o<allEntries.length; o++){
-                //     if(allEntries[o]!==undefined && allEntries[o].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
+                //     if(allEntries[o]!==undefined && allEntries[o].toString().toLowerCase()===searchActual[z].split(":")[1].toString().toLowerCase()){
                 //       filterFound = true;
                 //     } 
                 //   }
@@ -527,8 +527,8 @@ function ListPage(props){
             if(item[props.searchKey[j][x]]!==undefined){
               //Translate search attribute from database
               //Search translations done here
-              // searchFound = attemptToTranslateItem(item.[props.searchKey[j][x]]).toLowerCase().includes(search.toLowerCase())
-              searchFound = removeAccents(item[props.searchKey[j][x]].toLowerCase()).includes(removeAccents(search.toLowerCase()))
+              // searchFound = attemptToTranslateItem(item.[props.searchKey[j][x]]).toString().toLowerCase().includes(search.toString().toLowerCase())
+              searchFound = removeAccents(item[props.searchKey[j][x]].toString().toLowerCase()).includes(removeAccents(search.toString().toLowerCase()))
             }
             //&&((!props.wishlistItems&&!props.filterCollectedOnly&&!props.newItems)||searchFound)
             if(showPartiallyFoundOnly && showUncraftableVar && (search==="" || searchFound) && (filterFound || searchActual.length === 0)){
@@ -894,7 +894,7 @@ function ListPage(props){
       </View>:<Animated.FlatList
         nestedScrollEnabled
         initialNumToRender={4}
-        scrollEventThrottle={16}
+        scrollEventThrottle={getSettingsString("settingsLowEndDevice")==="true"?100:16}
         contentContainerStyle={{paddingTop: paddingTop+10, paddingLeft: 8, paddingRight: 8, paddingBottom: paddingBottomContent}}
         onScroll={handleScroll}
         ref={ref}
@@ -933,7 +933,7 @@ function ListPage(props){
           }
           return <TextFont style={{marginTop:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{data.length+" "+(data.length!==1?attemptToTranslate("entries."):attemptToTranslate("entry."))}</TextFont>
         }}
-        windowSize={4}
+        windowSize={getSettingsString("settingsLowEndDevice")==="true"?3:4}
         refreshControl={
           <RefreshControl
             onRefresh={()=>{if(props.wishlistItems||searchFilters.some(item=>refreshFiltersArray.includes(item)))setRefresh(true)}} //only refresh if the order has the possibility of changing
@@ -1023,6 +1023,10 @@ class BottomSheetRender extends Component{
     this.rightCornerCheck.updateRightCornerCheck(key,checked);
   }
   render(){
+    if(this.state.item==="item"){
+      return <View/>
+    }
+    
     var leftCornerImage;
     if(this.props.popUpCornerImageProperty!==undefined && this.props.popUpCornerImageLabelProperty!==undefined && this.state.item.dataSet!==undefined && this.props.popUpCornerImageProperty[this.state.item.dataSet]!==""){
       leftCornerImage = <LeftCornerImage

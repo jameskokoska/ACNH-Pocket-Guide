@@ -15,12 +15,14 @@ import ButtonComponent from "./ButtonComponent";
 import * as RootNavigation from '../RootNavigation.js';
 import { DropdownMenu } from './Dropdown';
 import FadeInOut from './FadeInOut';
+import LottieView from 'lottie-react-native';
 
 export class TodoList extends Component {
   constructor(props){
     super(props);
     this.state = {
       data: [],
+      loaded:false,
       showEdit: false,
       showVillagersTalkList: false,
       deleteIndex: 0,
@@ -74,7 +76,7 @@ export class TodoList extends Component {
       await this.saveList(storageData);
     }
     if(this.mounted){
-      this.setState({data:storageData,showVillagersTalkList:showVillagersTalkList, resetEachDay: resetEachDay});
+      this.setState({loaded:true,data:storageData,showVillagersTalkList:showVillagersTalkList, resetEachDay: resetEachDay});
     }
     if(resetEachDay){
       let dateWithOffset = addHours(getCurrentDateObject(),-5)
@@ -274,74 +276,83 @@ export class TodoList extends Component {
       <View style={{height:10}}/>
       <View style={{alignItems: 'center'}}>
         <View style={{paddingTop:0, marginHorizontal: 0, flex: 1, flexDirection: 'row', justifyContent:'center',flexWrap:"wrap"}}>
-          {this.state.data.map( (item, index)=>{
-            if(this.state.showEdit){
-              return <TodoItemEdit
-                key={item+index.toString()}
-                item={item}
-                index={index}
-                checkOffItem={this.checkOffItem}
-                deleteItem={this.deleteItem}
-                reorderItem={this.reorderItem}
-                showEdit={this.state.showEdit}
-                editTask={()=>{this.popupAddTask?.setPopupVisible(true, item, index);}}
-              />
-            }else if(item.small){
-              return(
-                <TodoItemSmall
-                  key={item+index.toString()}
-                  item={item}
-                  index={index}
-                  checkOffItem={this.checkOffItem}
-                  deleteItem={this.deleteItem}
-                  reorderItem={this.reorderItem}
-                  showEdit={this.state.showEdit}
-                  editTask={()=>{this.popupAddTask?.setPopupVisible(true, item, index);}}
-                />
-              )
-            } else {
-              return(
-                <TodoItem
-                  key={item+index.toString()}
-                  item={item}
-                  index={index}
-                  checkOffItem={this.checkOffItem}
-                  deleteItem={this.deleteItem}
-                  reorderItem={this.reorderItem}
-                  showEdit={this.state.showEdit}
-                  editTask={()=>{this.popupAddTask?.setPopupVisible(true, item, index);}}
-                />
-              )
-            }
-          })}
+          {this.state.loaded?
+            <>
+              {this.state.data.map( (item, index)=>{
+                if(this.state.showEdit){
+                  return <TodoItemEdit
+                    key={item+index.toString()}
+                    item={item}
+                    index={index}
+                    checkOffItem={this.checkOffItem}
+                    deleteItem={this.deleteItem}
+                    reorderItem={this.reorderItem}
+                    showEdit={this.state.showEdit}
+                    editTask={()=>{this.popupAddTask?.setPopupVisible(true, item, index);}}
+                  />
+                }else if(item.small){
+                  return(
+                    <TodoItemSmall
+                      key={item+index.toString()}
+                      item={item}
+                      index={index}
+                      checkOffItem={this.checkOffItem}
+                      deleteItem={this.deleteItem}
+                      reorderItem={this.reorderItem}
+                      showEdit={this.state.showEdit}
+                      editTask={()=>{this.popupAddTask?.setPopupVisible(true, item, index);}}
+                    />
+                  )
+                } else {
+                  return(
+                    <TodoItem
+                      key={item+index.toString()}
+                      item={item}
+                      index={index}
+                      checkOffItem={this.checkOffItem}
+                      deleteItem={this.deleteItem}
+                      reorderItem={this.reorderItem}
+                      showEdit={this.state.showEdit}
+                      editTask={()=>{this.popupAddTask?.setPopupVisible(true, item, index);}}
+                    />
+                  )
+                }
+              })}
+              {getCurrentVillagerNamesString()==="You have no favorite villagers."?<>
+              <View style={{height:10}}/>
+              <TouchableOpacity onPress={() => this.props.setPage(8)}>
+                <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>You have no villagers added</TextFont>
+                <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>Tap here and go add some</TextFont>
+              </TouchableOpacity>
+              <View style={{height:10}}/>
+              </>:<View/>}
+              <TouchableOpacity style={{marginTop:5, padding:12, alignSelf: 'center'}} 
+                onPress={()=>{
+                  if(this.state.showVillagersTalkList){
+                    this.popupRemoveTalkVillagers.setPopupVisible(true)
+                  }else{
+                    this.toggleVillagerTalk(); 
+                  }
+              }}>
+                <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{this.state.showVillagersTalkList ? "Hide talk to villagers list" : "Show talk to villagers list"}</TextFont>
+              </TouchableOpacity>
+              <PopupAddTask ref={(popupAddTask) => this.popupAddTask = popupAddTask} addItem={this.addItem}/>
+              <PopupInfoCustom header={<TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>You do not have any villagers added!</TextFont>} ref={(popup) => this.popup = popup} buttonText={"Dismiss"}>
+                <TouchableOpacity style={{paddingVertical:20,}} onPress={() => this.props.setPage(8)}>
+                  <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, textAlign:"center"}}>{"Tap here and go add some!"}</TextFont>
+                </TouchableOpacity>
+              </PopupInfoCustom>
+              <Popup ref={(popupRemoveTalkVillagers) => this.popupRemoveTalkVillagers = popupRemoveTalkVillagers} text={attemptToTranslate("Hide talk to villagers list")+"?"} button1={"Cancel"} button1Action={()=>{}} button2={"Yes"} button2Action={()=>{this.toggleVillagerTalk()}}/>
+              <Popup ref={(popupDeleteToDo) => this.popupDeleteToDo = popupDeleteToDo} text="Delete?" textLower={this.state.data[this.state.deleteIndex]?.title} button1={"Cancel"} button1Action={()=>{}} button2={"Delete"} button2Action={()=>{this.deleteItemGo()}}/>
+            </>
+            :
+            <LottieView autoPlay loop
+              style={{width: 90, zIndex:1, transform: [{ scale: 1.1 },{ rotate: '0deg'},],}}
+              source={require('../assets/loading.json')}
+            />
+          }
         </View>
       </View>
-      {getCurrentVillagerNamesString()==="You have no favorite villagers."?<>
-      <View style={{height:10}}/>
-      <TouchableOpacity onPress={() => this.props.setPage(8)}>
-        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>You have no villagers added</TextFont>
-        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>Tap here and go add some</TextFont>
-      </TouchableOpacity>
-      <View style={{height:10}}/>
-      </>:<View/>}
-      <TouchableOpacity style={{marginTop:5, padding:12, alignSelf: 'center'}} 
-        onPress={()=>{
-          if(this.state.showVillagersTalkList){
-            this.popupRemoveTalkVillagers.setPopupVisible(true)
-          }else{
-            this.toggleVillagerTalk(); 
-          }
-      }}>
-        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{this.state.showVillagersTalkList ? "Hide talk to villagers list" : "Show talk to villagers list"}</TextFont>
-      </TouchableOpacity>
-      <PopupAddTask ref={(popupAddTask) => this.popupAddTask = popupAddTask} addItem={this.addItem}/>
-      <PopupInfoCustom header={<TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>You do not have any villagers added!</TextFont>} ref={(popup) => this.popup = popup} buttonText={"Dismiss"}>
-        <TouchableOpacity style={{paddingVertical:20,}} onPress={() => this.props.setPage(8)}>
-          <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, textAlign:"center"}}>{"Tap here and go add some!"}</TextFont>
-        </TouchableOpacity>
-      </PopupInfoCustom>
-      <Popup ref={(popupRemoveTalkVillagers) => this.popupRemoveTalkVillagers = popupRemoveTalkVillagers} text={attemptToTranslate("Hide talk to villagers list")+"?"} button1={"Cancel"} button1Action={()=>{}} button2={"Yes"} button2Action={()=>{this.toggleVillagerTalk()}}/>
-      <Popup ref={(popupDeleteToDo) => this.popupDeleteToDo = popupDeleteToDo} text="Delete?" textLower={this.state.data[this.state.deleteIndex]?.title} button1={"Cancel"} button1Action={()=>{}} button2={"Delete"} button2Action={()=>{this.deleteItemGo()}}/>
     </>
   }
 }
@@ -350,10 +361,17 @@ export class TurnipLog extends Component {
   constructor(props){
     super(props);
     this.state = {
-      data: [],
+      data: this.defaultList(),
     }
-    this.turnipLink = "https://turnipprophet.io/";
-    this.loadList();
+  }
+
+  componentDidMount(){
+    this.mounted = true
+    setTimeout(()=>{this.loadList()},0)
+  }
+
+  componentWillUnmount(){
+    this.mounted=false
   }
 
   defaultList = () => {
@@ -372,7 +390,9 @@ export class TurnipLog extends Component {
     var storageData = JSON.parse(await getStorage("TurnipList"+global.profile,JSON.stringify(this.defaultList())));
     var storageLastPattern = await getStorage("TurnipListLastPattern"+global.profile,"-1");
     var storageFirstTime = await getStorage("TurnipListFirstTime"+global.profile,"false");
-    this.setState({data:storageData, lastPattern: storageLastPattern, firstTime: storageFirstTime});
+    if(this.mounted){
+      this.setState({data:storageData, lastPattern: storageLastPattern, firstTime: storageFirstTime});
+    }
   }
 
   clearHistory = async() => {
@@ -394,25 +414,25 @@ export class TurnipLog extends Component {
   }
 
   getTurnipLink = () => {
-    this.turnipLink = "https://turnipprophet.io/?prices="
+    let turnipLink = "https://turnipprophet.io/?prices="
     for(var i = 0; i<this.state.data.length; i++){
       if(i===0){
-        this.turnipLink += this.state.data[0].purchase;
+        turnipLink += this.state.data[0].purchase;
       }else{
-        this.turnipLink += this.state.data[i].am;
-        this.turnipLink += ".";
-        this.turnipLink += this.state.data[i].pm;
+        turnipLink += this.state.data[i].am;
+        turnipLink += ".";
+        turnipLink += this.state.data[i].pm;
       }
       if(i!==this.state.data.length){
-        this.turnipLink += ".";
+        turnipLink += ".";
       }
     }
-    this.turnipLink += "&first="+this.state.firstTime;
-    this.turnipLink += "&pattern="+this.state.lastPattern;
+    turnipLink += "&first="+this.state.firstTime;
+    turnipLink += "&pattern="+this.state.lastPattern;
+    return turnipLink
   }
 
   render(){
-    var turnipLink = this.getTurnipLink();
     var buttonsHistory = <>
       <View style={{flexDirection:"row", justifyContent:"center"}}>
         <ButtonComponent
@@ -485,7 +505,7 @@ export class TurnipLog extends Component {
             // Linking.openURL(
             //   this.turnipLink,
             // );
-            RootNavigation.navigate('BrowserPage', {propsPassed:this.turnipLink});
+            RootNavigation.navigate('BrowserPage', {propsPassed:this.getTurnipLink()});
         }}>
           <TextFont bold={true} style={{color: colors.fishText[global.darkMode], fontSize: 18, textAlign:"center"}}>{"View on turnipprophet.io"}</TextFont>
           <TextFont style={{color: colors.fishText[global.darkMode], fontSize: 12, textAlign:"center"}}>{"(Price calculator and predictor)"}</TextFont>

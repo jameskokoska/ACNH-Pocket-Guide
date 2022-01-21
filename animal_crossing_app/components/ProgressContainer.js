@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Image, StyleSheet, View, Text, TouchableNativeFeedback, Animated, Dimensions} from 'react-native';
 import TextFont from './TextFont'
 import colors from "../Colors"
+import { getSettingsString } from '../LoadJsonData';
 
 class ProgressContainer extends Component {
   constructor(props) {
@@ -27,12 +28,16 @@ class ProgressContainer extends Component {
     } else {
       animateToValue = this.state.width - percent*this.state.width
     }
-    Animated.timing(this.state.animationValue, {
-      toValue: animateToValue*-1,
-      useNativeDriver: true,
-      duration: 1000,
-      delay: this.props.delay!==undefined?this.props.delay*100:0,
-    }).start();
+    if(getSettingsString("settingsLowEndDevice")==="true"){
+
+    } else {
+      Animated.timing(this.state.animationValue, {
+        toValue: animateToValue*-1,
+        useNativeDriver: true,
+        duration: 1000,
+        delay: this.props.delay!==undefined?this.props.delay*100:0,
+      }).start();
+    }
   }
   render(){
     return(
@@ -43,7 +48,9 @@ class ProgressContainer extends Component {
     >
       <TouchableNativeFeedback onPress={()=>{this.props.setPage(this.props.page, true, this.props.tab)}} background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}>
         <View style={[styles.progressContainer,{backgroundColor:this.props.backgroundColor, overflow:"hidden"}]}>
-          <Animated.View style={[styles.progressBar,{width:"100%", backgroundColor:this.props.color, transform: [{ translateX: this.state.animationValue }]}]}/>
+          {getSettingsString("settingsLowEndDevice")==="true"?
+          <View style={[styles.progressBar,{width:this.props.percentage.toString()+"%", backgroundColor:this.props.color}]}/>:
+          <Animated.View style={[styles.progressBar,{width:"100%", backgroundColor:this.props.color, transform: [{ translateX: this.state.animationValue }]}]}/>}
           <View style={{width:"100%",height:"100%",flexDirection:"row",position:"absolute", alignItems:"center", justifyContent:"center"}}>
             <Image style={styles.image} source={this.props.image}/>
             <TextFont style={{fontSize: 18, marginLeft: 10, color:this.props.textColor}}>{this.props.text}</TextFont>

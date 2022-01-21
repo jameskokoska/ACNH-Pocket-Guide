@@ -192,11 +192,11 @@ class HomePage extends Component {
 
   render(){
 
-    var landscape = <LottieView autoPlay loop style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/home.json')}/>
+    var landscape = <LottieView autoPlay={getSettingsString("settingsLowEndDevice")==="true"?false:true} loop style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/home.json')}/>
     if(getCurrentDateObject().getMonth()===11||getCurrentDateObject().getMonth()===0){
-      landscape = <LottieView autoPlay loop style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeSnow.json')}/>
+      landscape = <LottieView loop autoPlay={getSettingsString("settingsLowEndDevice")==="true"?false:true} style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeSnow.json')}/>
     } else if (getCurrentDateObject().getMonth()===7 && getCurrentDateObject().getDay()===0){
-      landscape = <LottieView autoPlay loop style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeCelebration.json')}/>
+      landscape = <LottieView autoPlay={getSettingsString("settingsLowEndDevice")==="true"?false:true} loop style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeCelebration.json')}/>
     }
     const sections = this.state.sections;
 
@@ -210,15 +210,14 @@ class HomePage extends Component {
           sections={this.state.sections}
         />
       </PopupBottomCustom> */}
-      <PopupBottomCustom ref={(popupEventsSettings) => this.popupEventsSettings = popupEventsSettings} onClose={()=>{}}>
-        <ConfigureHomePages 
-          setPage={(page)=>this.props.setPage(page)} 
-          header={"Select Events"} 
-          refreshEvents={()=>{this.eventSection?.refreshEvents()}} 
-          setPages={(checked,name)=>this.setEventPages(checked,name)} 
-          sections={this.state.eventSections}
-        />
-      </PopupBottomCustom>
+      {sections["Events"]===true?<PopupBottomConfigureHomePages 
+        ref={(popupEventsSettings) => this.popupEventsSettings = popupEventsSettings}
+        setPage={(page)=>this.props.setPage(page)} 
+        header={"Select Events"} 
+        refreshEvents={()=>{this.eventSection?.refreshEvents()}} 
+        setPages={(checked,name)=>this.setEventPages(checked,name)} 
+        sections={this.state.eventSections}
+      />:<View/>}
       <ScrollView
         onMomentumScrollEnd={this.handleSnap}
         ref={(scrollViewRef) => this.scrollViewRef = scrollViewRef}
@@ -258,44 +257,45 @@ class HomePage extends Component {
           }
         }
       >
-        
-        <View style={{justifyContent:"center",backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode],height:this.headerHeight, borderBottomLeftRadius: 10, borderBottomRightRadius: 10}}>
-          <TextInput
-            ref={(searchRef) => this.searchRef = searchRef}
-            allowFontScaling={false}
-            style={{opacity:0.8, marginVertical: 10, marginHorizontal:15, padding:10, paddingHorizontal:20, fontSize: 17, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], borderRadius: 5}}
-            onChangeText={(text) => {this.searchText = text}}
-            placeholder={"Search for an item..."}
-            defaultValue={""}
-            placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
-            onSubmitEditing={(event)=>{
+        <FadeInOut fadeIn={true} delay={200} duration={500}>
+          <View style={{justifyContent:"center",backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode],height:this.headerHeight, borderBottomLeftRadius: 10, borderBottomRightRadius: 10}}>
+            <TextInput
+              ref={(searchRef) => this.searchRef = searchRef}
+              allowFontScaling={false}
+              style={{opacity:0.8, marginVertical: 10, marginHorizontal:15, padding:10, paddingHorizontal:20, fontSize: 17, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], borderRadius: 5}}
+              onChangeText={(text) => {this.searchText = text}}
+              placeholder={"Search for an item..."}
+              defaultValue={""}
+              placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+              onSubmitEditing={(event)=>{
+                this.scrollViewRef.scrollTo({
+                  y:this.headerHeight
+                });
+                this.closeSearch()
+                this.searchRef.clear()
+                this.searchText = ""
+                if(event.nativeEvent.text!==""){
+                  RootNavigation.navigate('GlobalSearchPage', {propsPassed:event.nativeEvent.text});
+                }
+              }}
+            />
+            {/* You can't touch the search button - need keyboardShouldPersistTaps='handled' for ScrollView */}
+            <TouchableOpacity style={{position:"absolute", right:20}} onPress={()=>{
               this.scrollViewRef.scrollTo({
                 y:this.headerHeight
               });
               this.closeSearch()
               this.searchRef.clear()
+              let searchTextTemp = this.searchText
               this.searchText = ""
-              if(event.nativeEvent.text!==""){
-                RootNavigation.navigate('GlobalSearchPage', {propsPassed:event.nativeEvent.text});
-              }
-            }}
-          />
-          {/* You can't touch the search button - need keyboardShouldPersistTaps='handled' for ScrollView */}
-          <TouchableOpacity style={{position:"absolute", right:20}} onPress={()=>{
-            this.scrollViewRef.scrollTo({
-              y:this.headerHeight
-            });
-            this.closeSearch()
-            this.searchRef.clear()
-            let searchTextTemp = this.searchText
-            this.searchText = ""
-            RootNavigation.navigate('GlobalSearchPage', {propsPassed:searchTextTemp});
-          }}>
-            <FadeInOut fadeIn={true} duration={200}>
-            <Image style={{width:20,height:20, margin: 10, marginTop: 12, opacity: 0.25, resizeMode:"contain",}} source={global.darkMode?require("../assets/icons/searchWhite.png"):require("../assets/icons/search.png")}/>
-            </FadeInOut>
-          </TouchableOpacity>
-        </View>
+              RootNavigation.navigate('GlobalSearchPage', {propsPassed:searchTextTemp});
+            }}>
+              <FadeInOut fadeIn={true} duration={200}>
+              <Image style={{width:20,height:20, margin: 10, marginTop: 12, opacity: 0.25, resizeMode:"contain",}} source={global.darkMode?require("../assets/icons/searchWhite.png"):require("../assets/icons/search.png")}/>
+              </FadeInOut>
+            </TouchableOpacity>
+          </View>
+        </FadeInOut>
 
         <View style={{height:55}}/>
         <Clock swapDate={doWeSwapDate()}/>
@@ -495,9 +495,14 @@ class EventSection extends Component {
   }
   
   componentDidMount(){
+    this.mounted=true
     setTimeout(async () => {
       this.refreshEvents();
-    },10)
+    },0)
+  }
+
+  componentWillUnmount(){
+    this.mounted=false
   }
 
   refreshEvents = () => {
@@ -508,7 +513,42 @@ class EventSection extends Component {
     for(var i=2; i<7; i++){
       thisWeekEvents = thisWeekEvents.concat(getEventsDay(addDays(getCurrentDateObject(), i), this.state.eventSections));
     }
-    this.setState({todayEvents: todayEvents, tomorrowEvents: tomorrowEvents, thisWeekEvents: thisWeekEvents, loaded:true})
+    this.todayEventsComponent = todayEvents.map( (event, index)=>
+      <EventContainer 
+        openVillagerPopup={this.props.openVillagerPopup}
+        setPage={this.props.setPage}
+        key={event.name+index} 
+        backgroundColor={colors.eventBackground[global.darkMode]}
+        textColor={colors.textBlack[global.darkMode]}
+        event={event}
+        eventSections={this.state.eventSections}
+      />
+    )
+    this.tomorrowEventsComponent = tomorrowEvents.map( (event, index)=>
+      <EventContainer 
+        openVillagerPopup={this.props.openVillagerPopup}
+        setPage={this.props.setPage}
+        key={event.name+index} 
+        backgroundColor={colors.eventBackground[global.darkMode]}
+        textColor={colors.textBlack[global.darkMode]}
+        event={event}
+        eventSections={this.state.eventSections}
+      />
+    )
+    this.thisWeekEventsComponent = thisWeekEvents.map( (event, index)=>
+      <EventContainer 
+        openVillagerPopup={this.props.openVillagerPopup}
+        setPage={this.props.setPage}
+        key={event.name+index} 
+        backgroundColor={colors.eventBackground[global.darkMode]}
+        textColor={colors.textBlack[global.darkMode]}
+        event={event}
+        eventSections={this.state.eventSections}
+      />
+    )
+    if(this.mounted){
+      this.setState({todayEvents: todayEvents, tomorrowEvents: tomorrowEvents, thisWeekEvents: thisWeekEvents, loaded:true})
+    }
   }
   render(){
     var todayTitle=<View/>
@@ -530,41 +570,11 @@ class EventSection extends Component {
         <TextFont bold={false} style={{marginRight:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"right"}}>{"Edit Events"}</TextFont>
       </TouchableOpacity>
       {todayTitle}
-      {this.state.todayEvents.map( (event, index)=>
-        <EventContainer 
-          openVillagerPopup={this.props.openVillagerPopup}
-          setPage={this.props.setPage}
-          key={event.name+index} 
-          backgroundColor={colors.eventBackground[global.darkMode]}
-          textColor={colors.textBlack[global.darkMode]}
-          event={event}
-          eventSections={this.state.eventSections}
-        />
-      )}
+      {this.todayEventsComponent}
       {tomorrowTitle}
-      {this.state.tomorrowEvents.map( (event, index)=>
-        <EventContainer 
-          openVillagerPopup={this.props.openVillagerPopup}
-          setPage={this.props.setPage}
-          key={event.name+index} 
-          backgroundColor={colors.eventBackground[global.darkMode]}
-          textColor={colors.textBlack[global.darkMode]}
-          event={event}
-          eventSections={this.state.eventSections}
-        />
-      )}
+      {this.tomorrowEventsComponent}
       {thisWeekTitle}
-      {this.state.thisWeekEvents.map( (event, index)=>
-        <EventContainer 
-          openVillagerPopup={this.props.openVillagerPopup}
-          setPage={this.props.setPage}
-          key={event.name+index} 
-          backgroundColor={colors.eventBackground[global.darkMode]}
-          textColor={colors.textBlack[global.darkMode]}
-          event={event}
-          eventSections={this.state.eventSections}
-        />
-      )}
+      {this.thisWeekEventsComponent}
       <View style={{height: 2}}/>
       {this.state.loaded?<TouchableOpacity style={{marginHorizontal: 20, marginVertical:10, backgroundColor:colors.eventBackground[global.darkMode], padding: 10, borderRadius: 10}} 
         onPress={()=>{this.props.setPage(16); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}
@@ -724,6 +734,31 @@ export class IslandEntry extends Component {
   }
 }
 
+//optimization class - only render when called
+export class PopupBottomConfigureHomePages extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      visible:false,
+    }
+  }
+  setPopupVisible = (visible) => {
+    this.setState({visible:visible})
+    this.popupEventsSettings.setPopupVisible(visible)
+  }
+  render(){
+    return <PopupBottomCustom ref={(popupEventsSettings) => this.popupEventsSettings = popupEventsSettings} onClose={()=>{}}>
+      {this.state.visible?<ConfigureHomePages 
+        setPage={this.props.setPage} 
+        header={this.props.header} 
+        refreshEvents={this.props.refreshEvents} 
+        setPages={this.props.setPages} 
+        sections={this.props.sections}
+      />:<View/>}
+    </PopupBottomCustom>
+  }
+}
+
 export class ConfigureHomePages extends Component {
   constructor(props) {
     super(props);
@@ -731,7 +766,6 @@ export class ConfigureHomePages extends Component {
     this.state = {
       sections:sections,
     }
-    
   }
   setPages = (check,name) => {
     this.props.setPages(check,name);
@@ -743,6 +777,7 @@ export class ConfigureHomePages extends Component {
     }
   }
   render(){
+    console.log("RENDEREDDD")
     const sectionNames = Object.keys(this.state.sections);
     return(<>
       <SubHeader>{this.props.header}</SubHeader>
@@ -846,7 +881,7 @@ export class VillagerPopupPopup extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      item:""
+      item:"",
     };   
   }
 
@@ -862,8 +897,13 @@ export class VillagerPopupPopup extends Component {
     }
     return(
       <PopupBottomCustom ref={(popup) => this.popup = popup}>
-        <TextFont bold={true} style={{textAlign:"center",fontSize: 30, marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{this.state.item["NameLanguage"]}</TextFont>
-        {villagerPopup}
+        {this.state.item===""?
+        <View/>
+        :
+        <>
+          <TextFont bold={true} style={{textAlign:"center",fontSize: 30, marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{this.state.item["NameLanguage"]}</TextFont>
+          {villagerPopup}
+        </>}
       </PopupBottomCustom>
     )
   }
@@ -1001,7 +1041,7 @@ export class CollectionProgress extends Component {
         achievementsPercentage: achievementsPercentage,
       })
       this.popupLoading?.setPopupVisible(false)
-    },10)
+    },0)
   }
   render(){
     return(<>

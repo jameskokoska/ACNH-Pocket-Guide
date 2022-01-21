@@ -41,9 +41,9 @@ export default class AchievementsPage extends Component {
       var outputData = [];
       this.data.map( (achievement, index)=>{
         var achievementName = attemptToTranslateAchievement(achievement["Name"]).replace("(island name)", global.islandName);
-        if(removeAccents(achievementName.toLowerCase()).includes(removeAccents(text.toLowerCase()))){
+        if(removeAccents(achievementName.toString().toLowerCase()).includes(removeAccents(text.toString().toLowerCase()))){
           outputData.push(achievement);
-        } else if (achievement["Internal Category"].toLowerCase().includes(text.toLowerCase())){
+        } else if (achievement["Internal Category"].toString().toLowerCase().includes(text.toString().toLowerCase())){
           outputData.push(achievement);
         }
       })
@@ -73,7 +73,7 @@ export default class AchievementsPage extends Component {
         onScroll={Animated.event([{ nativeEvent: {contentOffset: {y: this.scrollY}}}],{useNativeDriver: true,},)}
         data={this.state.data}
         renderItem={({item}) => {
-          return(<Achievement achievement={item} storageData={this.storageData} openPopup={this.openPopup}/>)
+          return(<Achievement achievement={item} openPopup={this.openPopup}/>)
         }}
         keyExtractor={(item, index) => `list-item-${index}-${item["Name"]}`}
         contentContainerStyle={{paddingBottom:Dimensions.get('window').height/3}}

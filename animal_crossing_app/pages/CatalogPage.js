@@ -51,7 +51,7 @@ class CatalogPage extends Component {
         success = false;
         for(var i = 0; i < global.dataLoadedAll.length; i++){
           for(var a = 0; a < global.dataLoadedAll[i].length; a++){
-            if(global.dataLoadedAll[i][a]["Name"]!==undefined && global.dataLoadedAll[i][a]["Name"].toLowerCase() === inputList[z].toLowerCase()){
+            if(global.dataLoadedAll[i][a]["Name"]!==undefined && global.dataLoadedAll[i][a]["Name"].toString().toLowerCase() === inputList[z].toString().toLowerCase()){
               success = true;
               this.totalSuccess++;
               if(inputType==="recipes" && global.dataLoadedAll[i][a]["checkListKey"].includes("recipesCheckList")){

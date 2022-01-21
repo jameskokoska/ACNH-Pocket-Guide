@@ -89,9 +89,9 @@ export default class ParadisePlanningPage extends Component {
           }
         }
         if(!skip){
-          if(removeAccents(requestRequest.toLowerCase()).includes(removeAccents(text.toLowerCase()))){
+          if(removeAccents(requestRequest.toString().toLowerCase()).includes(removeAccents(text.toString().toLowerCase()))){
             outputData.push(request);
-          } else if (attemptToTranslateSpecial(request["Name"], "villagers").toLowerCase().includes(text.toLowerCase())){
+          } else if (attemptToTranslateSpecial(request["Name"], "villagers").toString().toLowerCase().includes(text.toString().toLowerCase())){
             outputData.push(request);
           }
         }

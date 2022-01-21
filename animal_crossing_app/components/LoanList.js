@@ -212,11 +212,15 @@ class LoanItem extends Component {
     } else {
       animateToValue = this.state.height - percent*this.state.height
     }
-    Animated.timing(this.state.animationValue, {
-      toValue: animateToValue,
-      duration: 400,
-      useNativeDriver: true,
-    }).start();
+    if(getSettingsString("settingsLowEndDevice")==="true"){
+
+    } else {
+      Animated.timing(this.state.animationValue, {
+        toValue: animateToValue,
+        duration: 400,
+        useNativeDriver: true,
+      }).start();
+    }
   }
   render(){
     if(this.props.item===undefined){
@@ -230,7 +234,9 @@ class LoanItem extends Component {
         }} style={{width: "90%", margin:10, borderRadius:10, overflow:"hidden"}}
       >
         <View style={{width: "100%", position:"absolute", backgroundColor:colors.eventBackground[global.darkMode], height:"100%", bottom:0 }}/>
-        <Animated.View style={{transform: [{ translateY: this.state.animationValue }], width: "100%", position:"absolute", backgroundColor:colors.loanProgress[global.darkMode], height:"100%", borderRadius:10, bottom:0}}/>
+        {getSettingsString("settingsLowEndDevice")==="true"?
+        <View style={{height:((this.props.item?.current/this.props.item?.total)*100).toString()+"%", width: "100%", position:"absolute", backgroundColor:colors.loanProgress[global.darkMode], borderRadius:10, bottom:0}}/>:
+        <Animated.View style={{transform: [{ translateY: this.state.animationValue }], width: "100%", position:"absolute", backgroundColor:colors.loanProgress[global.darkMode], height:"100%", borderRadius:10, bottom:0}}/>}
         {this.removeButton(this.props)}
         <TouchableNativeFeedback onLongPress={() => {  
             this.setState({showRemove:!this.state.showRemove})

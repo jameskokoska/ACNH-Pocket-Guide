@@ -21,11 +21,13 @@ export default class DurabilityList extends Component {
 
   componentDidMount(){
     this.mounted=true;
-    this.loadList();
     this.backHandler = BackHandler.addEventListener(
       "hardwareBackPressHome",
       this.handleBackButton,
     );
+    setTimeout(()=>{
+      this.loadList();
+    },0)
   }
 
   componentWillUnmount(){
@@ -213,11 +215,15 @@ export class ToolItem extends Component {
     } else {
       animateToValue = this.state.width - percent*this.state.width
     }
-    Animated.timing(this.state.animationValue, {
-      toValue: animateToValue*-1,
-      duration: 800,
-      useNativeDriver: true,
-    }).start();
+    if(getSettingsString("settingsLowEndDevice")==="true"){
+
+    } else {
+      Animated.timing(this.state.animationValue, {
+        toValue: animateToValue*-1,
+        duration: 800,
+        useNativeDriver: true,
+      }).start();
+    }
   }
   render(){
     return (
@@ -228,7 +234,9 @@ export class ToolItem extends Component {
         }} style={{width: "90%", margin:10, overflow:"hidden", borderRadius:10}}
       >
         <View style={{width: "100%", position:"absolute", backgroundColor:colors.eventBackground[global.darkMode], height:"100%", bottom:0 }}/>
-        <Animated.View style={{transform: [{ translateX: this.state.animationValue }], height:"100%", position:"absolute", backgroundColor:this.props.color!==undefined?this.props.color:colors.toolProgress[global.darkMode], width:"100%", borderRadius:10, bottom:0}}/>
+        {getSettingsString("settingsLowEndDevice")==="true"?
+        <View style={{width:((this.props.item?.current/this.props.item?.total)*100).toString()+"%", height:"100%", position:"absolute", backgroundColor:this.props.color!==undefined?this.props.color:colors.toolProgress[global.darkMode], borderRadius:10, bottom:0}}/>:
+        <Animated.View style={{transform: [{ translateX: this.state.animationValue }], height:"100%", position:"absolute", backgroundColor:this.props.color!==undefined?this.props.color:colors.toolProgress[global.darkMode], width:"100%", borderRadius:10, bottom:0}}/>}
         {this.removeButton(this.props)}
         <TouchableNativeFeedback onLongPress={() => {
             if(this.props.noLongPress===true){

@@ -9,12 +9,13 @@ import FastImage from "../components/FastImage"
 import VillagerPopup from "../popups/VillagerPopup"
 import {VillagerPopupPopup} from "./HomePage"
 import GuideRedirectButton from "../components/PopupGuideRedirectButton"
+import LottieView from 'lottie-react-native';
 
 export default class VillagersCompatibilityPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: false,
+      calculatedPossibilities:false
     }
     this.currentVillagers = getCurrentVillagerObjects().slice(0,15)
     this.index = ["Normal", "Lazy", "Big Sister", "Snooty", "Cranky", "Jock", "Peppy", "Smug"]
@@ -35,6 +36,53 @@ export default class VillagersCompatibilityPage extends Component {
     if(this.currentVillagers.length===0){
       this.popup?.setPopupVisible(true);
     }
+    setTimeout(() => {
+      this.villagerCompatibilityComponentsGenerated = this.currentVillagers.map((villager, index) => {
+        return(
+          <View key={villager["Name"]} style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
+            <View style={{flexWrap: 'wrap', flexDirection:"row", marginHorizontal:30, alignItems:"center"}}>
+              <FastImage
+                style={{height: 40,width: 40,resizeMode:'contain',}}
+                source={{uri:villager["Icon Image"]}}
+                cacheKey={villager["Icon Image"]}
+              />
+              <SubHeader margin={false} translate={false} style={{marginHorizontal:10}}>{villager["NameLanguage"] + " - " + attemptToTranslate(villager["Personality"])}</SubHeader>                
+            </View>
+            <View style={{height:10}}/>
+            {this.testCompat.map((compat, index) => {
+              var totalCompat = this.getCompatibilityVillagers(villager, compat)
+              if(totalCompat.length>0){
+                return<View key={villager["Name"]+compat}>
+                  <TextFont style={{fontSize:18, marginHorizontal:30, color:colors.textBlack[global.darkMode]}}>{compat}</TextFont>
+                  <View style={{flex: 1, flexWrap: 'wrap', flexDirection:"row", marginHorizontal:30}}>
+                    {totalCompat.map((villagerCompat, index) => {
+                        return (
+                          <View key={villager["Name"]+villagerCompat["Name"]+compat} >
+                          <View style={{margin:5}}>
+                              <TouchableOpacity onPress={()=>{this.openVillagerPopup(villagerCompat)}}>
+                                <View style={{borderWidth: 2, borderColor: colors["villagerOutline"+compat][global.darkMode], width: 60,height: 60,borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.eventBackground[global.darkMode]}}>
+                                  <FastImage
+                                    style={{height: 50,width: 50,resizeMode:'contain',}}
+                                    source={{uri:villagerCompat["Icon Image"]}}
+                                    cacheKey={villagerCompat["Icon Image"]}
+                                  />
+                                </View>
+                              </TouchableOpacity>
+                            </View>
+                          </View>
+                        )
+                    })}
+                  </View>
+                  <View style={{height: 10}}/>
+                </View>
+              }
+            })}
+          </View>
+        )
+      });
+      this.setState({calculatedPossibilities:true});
+      return true;
+    }, 10);
   }
   
 
@@ -65,6 +113,12 @@ export default class VillagersCompatibilityPage extends Component {
       linkText: "Tap here to see how compatibility is calculated",
       redirectPassBack: "https://docs.google.com/spreadsheets/d/1Sc2HJRcgg-Q_CsFnewIB3n2f4Tgj-QT33qUCrItj0MU/edit#gid=0"
     }
+    let loadingComponent = <View style={{alignItems:"center", justifyContent:"center"}}>
+      <LottieView autoPlay loop
+        style={{width: 90, zIndex:1, transform: [{ scale: 1.1 },{ rotate: '0deg'},],}}
+        source={require('../assets/loading.json')}
+      />
+    </View>
     return(
       <>
         <VillagerPopupPopup ref={(villagerPopupPopup) => this.villagerPopupPopup = villagerPopupPopup} setPage={this.props.setPage}/>
@@ -81,49 +135,7 @@ export default class VillagersCompatibilityPage extends Component {
             <HeaderNote>This has NOT yet been proven to be accurate in ACNH, and is a feature from older games. Reference with caution.</HeaderNote>
             <HeaderNote>Tap the [i] in the top right corner for more information.</HeaderNote>
             <View style={{height: 20}}/>
-            {this.currentVillagers.map((villager, index) => {
-              return(
-                <View key={villager["Name"]} style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
-                  <View style={{flexWrap: 'wrap', flexDirection:"row", marginHorizontal:30, alignItems:"center"}}>
-                    <FastImage
-                      style={{height: 40,width: 40,resizeMode:'contain',}}
-                      source={{uri:villager["Icon Image"]}}
-                      cacheKey={villager["Icon Image"]}
-                    />
-                    <SubHeader margin={false} translate={false} style={{marginHorizontal:10}}>{villager["NameLanguage"] + " - " + attemptToTranslate(villager["Personality"])}</SubHeader>                
-                  </View>
-                  <View style={{height:10}}/>
-                  {this.testCompat.map((compat, index) => {
-                    var totalCompat = this.getCompatibilityVillagers(villager, compat)
-                    if(totalCompat.length>0){
-                      return<View key={villager["Name"]+compat}>
-                        <TextFont style={{fontSize:18, marginHorizontal:30, color:colors.textBlack[global.darkMode]}}>{compat}</TextFont>
-                        <View style={{flex: 1, flexWrap: 'wrap', flexDirection:"row", marginHorizontal:30}}>
-                          {totalCompat.map((villagerCompat, index) => {
-                              return (
-                                <View key={villager["Name"]+villagerCompat["Name"]+compat} >
-                                <View style={{margin:5}}>
-                                    <TouchableOpacity onPress={()=>{this.openVillagerPopup(villagerCompat)}}>
-                                      <View style={{borderWidth: 2, borderColor: colors["villagerOutline"+compat][global.darkMode], width: 60,height: 60,borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.eventBackground[global.darkMode]}}>
-                                        <FastImage
-                                          style={{height: 50,width: 50,resizeMode:'contain',}}
-                                          source={{uri:villagerCompat["Icon Image"]}}
-                                          cacheKey={villagerCompat["Icon Image"]}
-                                        />
-                                      </View>
-                                    </TouchableOpacity>
-                                  </View>
-                                </View>
-                              )
-                          })}
-                        </View>
-                        <View style={{height: 10}}/>
-                      </View>
-                    }
-                  })}
-                </View>
-              )
-            })}
+            {this.state.calculatedPossibilities?this.villagerCompatibilityComponentsGenerated:loadingComponent}
             <View style={{height: 100}}/>
           </View>
         </ScrollView>

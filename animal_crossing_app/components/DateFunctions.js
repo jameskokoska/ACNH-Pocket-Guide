@@ -150,7 +150,7 @@ export function getMonday(weeksAgo = 1){
 function getMonthFromString(currentMonthString, integer=false){
   var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   for(var i=0; i<months.length; i++){
-    if(months[i].toLowerCase()===currentMonthString.toLowerCase()){
+    if(months[i].toString().toLowerCase()===currentMonthString.toString().toLowerCase()){
       if(integer){
         return i
       }

@@ -190,7 +190,7 @@ class ListItem extends React.Component{
     }
 
     var label = this.props.item[this.props.textProperty[this.props.item.dataSet]]
-    let imageSrc = this.props.item[this.props.imageProperty[this.props.item.dataSet]];
+    // let imageSrc = this.props.item[this.props.imageProperty[this.props.item.dataSet]];
 
     if(this.props.gridType==="smallGrid"){
       var textProperty2Component = <View/>;
@@ -250,11 +250,11 @@ class ListItem extends React.Component{
                 <FastImage
                   style={styles.gridBoxImage}
                   source={{
-                    uri: imageSrc,
+                    uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
                   }}
-                  cacheKey={imageSrc}
+                  cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
                 />:
-                <Image style={styles.gridBoxImage} source={getPhoto(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toLowerCase())}/>):
+                <Image style={styles.gridBoxImage} source={getPhoto(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().toLowerCase())}/>):
                 <View style={{height:7}}/>
               }
               <View style={styles.gridBoxText}>
@@ -295,11 +295,11 @@ class ListItem extends React.Component{
                 <FastImage
                   style={styles.gridBoxImageLarge}
                   source={{
-                    uri: imageSrc,
+                    uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
                   }}
-                  cacheKey={imageSrc}
+                  cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
                 />:
-                <Image style={styles.gridBoxImageLarge} source={getPhoto(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toLowerCase())}/>):
+                <Image style={styles.gridBoxImageLarge} source={getPhoto(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().toLowerCase())}/>):
                 <View style={{height:7}}/>
               }
               <View style={styles.gridBoxTextLarge}>
@@ -351,11 +351,11 @@ class ListItem extends React.Component{
                 <FastImage
                   style={styles.gridBoxImageLargeSmaller}
                   source={{
-                    uri: imageSrc,
+                    uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
                   }}
-                  cacheKey={imageSrc}
+                  cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
                 />:
-                <Image style={styles.gridBoxImageLargeSmaller} source={getPhoto(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toLowerCase())}/>):
+                <Image style={styles.gridBoxImageLargeSmaller} source={getPhoto(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().toLowerCase())}/>):
                 <View style={{height:7}}/>
               }
               <View style={styles.gridBoxTextLargeSmaller}>
@@ -398,7 +398,7 @@ class ListItem extends React.Component{
                     }}
                     cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
                   />:
-                  <Image style={styles.rowImage} source={getPhoto(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toLowerCase())}/>):
+                  <Image style={styles.rowImage} source={getPhoto(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().toLowerCase())}/>):
                   <View style={{height:7}}/>
                 }
               </View>

@@ -589,12 +589,16 @@ export function getArtIdentification(name){
 }
 
 export function getSettingsString(key){
-  if(settings!==undefined||global.settingsCurrent!==undefined){
-    for(var i = 0; i<settings.length; i++){
-      if(global.settingsCurrent[i]["keyName"]===key){
-        return global.settingsCurrent[i]["currentValue"];
+  try{
+    if(settings!==undefined||global.settingsCurrent!==undefined){
+      for(var i = 0; i<settings.length; i++){
+        if(global.settingsCurrent[i]["keyName"]===key){
+          return global.settingsCurrent[i]["currentValue"];
+        }
       }
     }
+  } catch {
+    return 0;
   }
   return 0;
 }
@@ -805,6 +809,14 @@ export const settings = [
   {
     "keyName" : "breaker",
     "text" : "System",
+  },
+  {
+    "keyName" : "settingsLowEndDevice",
+    "defaultValue" : "false",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/repeat.png"),
+    "displayName" : "Battery saver / Increase performance",
+    "description" : "Disable animations and preloading of some app data to increase performance and loading times on older devices.",
   },
   {
     "keyName" : "settingsBackButtonChangePages",
@@ -1436,7 +1448,7 @@ export function getFlowerChecklistKey(flowerName){
   flowerStripped = flowerStripped + " Plant"
   for(let dataSet = 0; dataSet < global.dataLoadedMaterials.length; dataSet++){
     for(let i = 0; i < global.dataLoadedMaterials[dataSet].length; i++){
-      if(global.dataLoadedMaterials[dataSet][i]["Name"].toLowerCase()===flowerStripped.toLowerCase()){
+      if(global.dataLoadedMaterials[dataSet][i]["Name"].toString().toLowerCase()===flowerStripped.toString().toLowerCase()){
         return global.dataLoadedMaterials[dataSet][i]["checkListKey"]
       }
     }
@@ -1461,7 +1473,7 @@ export function allEventItemsCheck(eventName){
   let previousDataCategory = ""
   for(let dataSet = 0; dataSet < global.dataLoadedAll.length; dataSet++){
     for(let i = 0; i < global.dataLoadedAll[dataSet].length; i++){
-      if((global.dataLoadedAll[dataSet][i].hasOwnProperty("Source") && global.dataLoadedAll[dataSet][i]["Source"].toLowerCase().split("; ").includes(eventName.toLowerCase())) || (global.dataLoadedAll[dataSet][i].hasOwnProperty("Season/Event") && global.dataLoadedAll[dataSet][i]["Season/Event"].toLowerCase().split("; ").includes(eventName.toLowerCase()))){
+      if((global.dataLoadedAll[dataSet][i].hasOwnProperty("Source") && global.dataLoadedAll[dataSet][i]["Source"].toString().toLowerCase().split("; ").includes(eventName.toString().toLowerCase())) || (global.dataLoadedAll[dataSet][i].hasOwnProperty("Season/Event") && global.dataLoadedAll[dataSet][i]["Season/Event"].toString().toLowerCase().split("; ").includes(eventName.toString().toLowerCase()))){
         if(previousName === global.dataLoadedAll[dataSet][i]["Name"] && previousDataCategory === global.dataLoadedAll[dataSet][i]["Data Category"]){
           continue
         } else {

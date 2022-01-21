@@ -39,12 +39,19 @@ export default class VisitorList extends Component {
   }
 
   componentDidMount(){
-    this.loadList();
+    this.mounted=true
+    setTimeout(()=>{this.loadList();},0)
   }
 
   loadList = async() => {
     var storageData = JSON.parse(await getStorage("VisitorsList"+global.profile,JSON.stringify({})));
-    this.setState({data:storageData});
+    if(this.mounted){
+      this.setState({data:storageData});
+    }
+  }
+
+  componentWillUnmount(){
+    this.mounted=false
   }
 
   saveList = async(data) => {

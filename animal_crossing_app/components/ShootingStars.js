@@ -20,7 +20,9 @@ export default class ShootingStars extends Component {
 
   componentDidMount(){
     this.mounted=true;
-    this.loadList();
+    setTimeout(()=>{
+      this.loadList();
+    },0)
   }
 
   componentWillUnmount(){

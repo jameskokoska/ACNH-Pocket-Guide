@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Animated, Text, View, Easing } from "react-native";
+import { getSettingsString } from "../LoadJsonData";
 //<FadeInOut duration={200} delay={2000} startValue={0} endValue={1} fadeIn={true} fadeInOut={true} scaleInOut={true} maxFade={0.8} minScale={0.5}>
 //   <Text>Hi</Text>
 //</FadeInOut>
@@ -41,6 +42,9 @@ class FadeInOut extends Component {
     };
   }
   componentDidMount(){
+    if(getSettingsString("settingsLowEndDevice")==="true"){
+      return
+    }
     if(this.props.fadeIn===true){
       this.fadeIn();
       this.scaleIn();
@@ -50,6 +54,9 @@ class FadeInOut extends Component {
     }
   }
   componentDidUpdate(prevProps) {
+    if(getSettingsString("settingsLowEndDevice")==="true"){
+      return
+    }
     if(prevProps!==this.props){
       if(this.props.fadeIn===true){
         this.fadeIn();
@@ -103,18 +110,32 @@ class FadeInOut extends Component {
   };
 
   render() {
-    return (
-      <Animated.View
-        style={[this.props.style,[
-          {
-            opacity: this.state.fadeAnimationValue,
-            transform: [{ scale: this.scaleInOut ? this.state.scaleAnimationValue : 1}]
-          }
-        ]]}
-      >
-        {this.props.children}
-      </Animated.View>
-    );
+    if(getSettingsString("settingsLowEndDevice")==="true"){
+      return (
+        <View
+          style={[this.props.style,[
+            {
+              opacity: this.endValue,
+            }
+          ]]}
+        >
+          {this.props.children}
+        </View>
+      )
+    } else {
+      return (
+        <Animated.View
+          style={[this.props.style,[
+            {
+              opacity: this.state.fadeAnimationValue,
+              transform: [{ scale: this.scaleInOut ? this.state.scaleAnimationValue : 1}]
+            }
+          ]]}
+        >
+          {this.props.children}
+        </Animated.View>
+      );
+    }
   }
 }
 

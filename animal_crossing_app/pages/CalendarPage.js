@@ -372,9 +372,9 @@ class AllEventsList extends Component{
       var outputData = [];
       this.data.map( (event, index)=>{
         var eventName = getEventName(event["Name"])
-        if(removeAccents(eventName.toLowerCase()).includes(removeAccents(text.toLowerCase()))){
+        if(removeAccents(eventName.toString().toLowerCase()).includes(removeAccents(text.toString().toLowerCase()))){
           outputData.push(event);
-        } else if (attemptToTranslate(event["Type"]).toLowerCase().includes(text.toLowerCase())){
+        } else if (attemptToTranslate(event["Type"]).toString().toLowerCase().includes(text.toString().toLowerCase())){
           outputData.push(event);
         }
       })
@@ -418,7 +418,7 @@ class RenderItemFlatList extends Component{
   render(){
     var item = this.props.item;
     var image = <View/>
-    image = <Image style={{width: 50, height: 50, resizeMode:'contain',}} source={getPhoto(item["Name"].toLowerCase(), item["Type"].toLowerCase())}/>
+    image = <Image style={{width: 50, height: 50, resizeMode:'contain',}} source={getPhoto(item["Name"].toString().toLowerCase(), item["Type"].toString().toLowerCase())}/>
     var date = "";
     if(item["Dates (Northern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")==="true"){
       date = item["Dates (Northern Hemisphere)"];
