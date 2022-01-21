@@ -129,11 +129,10 @@ export default class DurabilityList extends Component {
       </View>
       <View style={{height:10}}/>
       <View style={{alignItems: 'center'}}>
-        <View style={{paddingTop:0, marginHorizontal: 0, flex: 1, flexDirection: 'row', justifyContent:'center',flexWrap:"wrap"}}>
-          {this.state.data.map( (item, index)=>{
-            return(
+        {this.state.data.map( (item, index)=>{
+          return(
+            <View style={{width:"100%", paddingHorizontal:5}} key={item+index.toString()}>
               <ToolItem
-                key={item+index.toString()}
                 item={item}
                 index={index}
                 editAmount={this.editAmount}
@@ -141,9 +140,9 @@ export default class DurabilityList extends Component {
                 reorderItem={this.reorderItem}
                 showEdit={this.state.showEdit}
               />
-            )
-          })}
-        </View>
+            </View>
+          )
+        })}
       </View>
       <PopupAddTool ref={(popupAddTool) => this.popupAddTool = popupAddTool} addItem={this.addItem}/>
     </>
@@ -231,7 +230,7 @@ export class ToolItem extends Component {
           let width = event?.nativeEvent?.layout?.width;
           this.setState({width:width})
           this.animation(width)
-        }} style={{width: "90%", margin:10, overflow:"hidden", borderRadius:10}}
+        }} style={{margin:10, overflow:"hidden", borderRadius:10}}
       >
         <View style={{width: "100%", position:"absolute", backgroundColor:colors.eventBackground[global.darkMode], height:"100%", bottom:0 }}/>
         {getSettingsString("settingsLowEndDevice")==="true"?
