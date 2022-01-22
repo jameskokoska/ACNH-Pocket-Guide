@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, PureComponent } from "react";
 import {
   Alert,
   Modal,
@@ -21,7 +21,7 @@ import { GiveSupport, HeaderNote, MailLink, SubHeader } from "./Formattings";
 import * as RootNavigation from '../RootNavigation.js';
 import { Appearance } from 'react-native-appearance';
 import LottieView from 'lottie-react-native';
-import { attemptToTranslate } from "../LoadJsonData";
+import { attemptToTranslate, getSettingsString } from "../LoadJsonData";
 
 // <Popup 
 //  button1={"OK"} 
@@ -323,7 +323,7 @@ export class PopupInfoCustom extends Component {
 
 // <PopupBottomCustom ref={(popup) => this.popup = popup} onClose={()=>this.props.onClose()}>
 // </Popup>
-export class PopupBottomCustom extends Component {
+export class PopupBottomCustom extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -369,9 +369,13 @@ export class PopupBottomCustom extends Component {
   }
   
   renderContent = () => {
+    let overHeight = this.state.heightOffset+Dimensions.get('window').height*0.03+140>Dimensions.get('window').height
+    let offsetTop = Dimensions.get('window').height*0.03+140
+    let itemPopupCompensation = (this.props.itemPopup?(getSettingsString("settingsLargerItemPreviews")==="false"?140:240):0)
     return(
       <>
-      <TouchableOpacity style={{width:Dimensions.get('window').width,height:Dimensions.get('window').height-this.state.heightOffset}} onPress={()=>{this.setPopupVisible(false);}}/>
+      <TouchableOpacity style={{top:0,bottom:this.state.heightOffset-itemPopupCompensation,zIndex:5,position:"absolute", width:Dimensions.get('window').width}} onPress={()=>{this.setPopupVisible(false);}}/>
+      <View style={{width:Dimensions.get('window').width,height:Dimensions.get('window').height-this.state.heightOffset}} onPress={()=>{this.setPopupVisible(false);}}/>
       <View
         style={{
           borderTopLeftRadius: 20,
@@ -379,7 +383,7 @@ export class PopupBottomCustom extends Component {
           backgroundColor: this.props.invisible===undefined?colors.white[global.darkMode]:"#0000000",
           padding:this.props.padding===undefined?16:this.props.padding,
           paddingTop: 12,
-          marginTop: this.props.restrictSize===false ? 0 : this.state.heightOffset+Dimensions.get('window').height*0.03+140>Dimensions.get('window').height ? Dimensions.get('window').height*0.03+140 : 0
+          marginTop: this.props.restrictSize===false ? 0 : overHeight ? offsetTop : 0
         }}
         onLayout={(event) => {
             var {x, y, width, height} = event.nativeEvent.layout;

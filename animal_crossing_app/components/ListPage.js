@@ -72,7 +72,7 @@ function ListPage(props){
           props.scrollToEnd();
         }
         //pass in the check mark update function of that current element
-        bottomSheetRenderRef.current.update(item, updateCheckChild)
+        bottomSheetRenderRef?.current?.update(item, updateCheckChild)
         selectedItem = item;
         updateCheckChildFunction = updateCheckChild
         updateWishlistChildFunction = updateWishlistChild
@@ -873,114 +873,115 @@ function ListPage(props){
     return(
       <View/>
     )
-  }else if(data==="empty"){
-    return(<>
-        <HeaderLoading disableSearch={props.disableSearch} title={props.title} headerHeight={headerHeight} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
-      </>
-    )
   } else {
-    return (
-    <View style={{backgroundColor:props.backgroundColor}} >
-      {header}
-      <PopupFilter villagerGifts={props.villagerGifts} disableFilters={props.disableFilters} title={props.title} ref={popupFilter} filterSearchable={props.filterSearchable} updateSearchFilters={updateSearchFilters}/> 
-      {/* setFilterPopupState(false) */}
-      {loading? <View style={{alignItems:"center", justifyContent:"center", width:"100%", height:"100%"}}>
-      <LottieView 
-        autoPlay
-        loop
-        style={{width: 85,zIndex:1,transform: [{ scale: 1.25 },{ rotate: '0deg'},],}}
-        source={require('../assets/loading.json')}
-      />
-      </View>:<Animated.FlatList
-        nestedScrollEnabled
-        initialNumToRender={4}
-        scrollEventThrottle={getSettingsString("settingsLowEndDevice")==="true"?100:16}
-        contentContainerStyle={{paddingTop: paddingTop+10, paddingLeft: 8, paddingRight: 8, paddingBottom: paddingBottomContent}}
-        onScroll={handleScroll}
-        ref={ref}
-        data={data}
-        renderItem={renderItem}
-        keyExtractor={(item, index) => `list-item-${index}-${item.checkListKeyString}`}
-        numColumns={numColumns}
-        key={numColumns}
-        style={style}
-        removeClippedSubviews={true}
-        // updateCellsBatchingPeriod={500}
-        ListFooterComponent={()=>{
-          if(searchFilters!=undefined && searchFilters.length===0 && data.length===0 && props.wishlistItems && search===""){
-            return <>
-              <View style={{height:100}}/>
-                <TouchableOpacity onPress={() => props.setPage(1)}>
-                  <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", marginHorizontal:30}}>{"You have no wishlist items."}</TextFont>
-                  <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", marginHorizontal:30}}>{"Long press items to add them to your wishlist."}</TextFont>
-                  <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center", marginHorizontal:30}}>Tap here and go add some</TextFont>
-                </TouchableOpacity>
-              <View style={{height:30}}/>
-            </>
-          }else if (searchFilters!=undefined && searchFilters.length===0 && data.length===0 && (props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions") && search===""){
-            return <>
-              <View style={{height:100}}/>
-                <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", marginHorizontal:30}}>{"You can get everything since you have all personality types!"}</TextFont>
-              <View style={{height:30}}/>
-            </>
-          }else if (props.comingSoon){
-            return <>
-              <View style={{height:100}}/>
-                <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Coming soon</TextFont>
-                <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Please be patient</TextFont>
-              <View style={{height:30}}/>
-            </>
-          }
-          return <TextFont style={{marginTop:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{data.length+" "+(data.length!==1?attemptToTranslate("entries."):attemptToTranslate("entry."))}</TextFont>
-        }}
-        windowSize={getSettingsString("settingsLowEndDevice")==="true"?3:4}
-        refreshControl={
-          <RefreshControl
-            onRefresh={()=>{if(props.wishlistItems||searchFilters.some(item=>refreshFiltersArray.includes(item)))setRefresh(true)}} //only refresh if the order has the possibility of changing
-            refreshing={refresh}
-            progressViewOffset={headerHeight+50}
-            progressBackgroundColor={colors.lightDarkAccentHeavy2[global.darkMode]}
-            colors={[colors.textBlack[global.darkMode]]}
-          />
-        }
-      />}
-      
-      <PopupBottomCustom
-        ref={sheetRef}
-        padding={0}
-        invisible={true}
-        restrictSize={false}
-        onClose={()=>{
-          console.log(selectedItem); 
-          if(selectedItem!=null && selectedItem!=undefined){
-            !updateCheckChildFunction(inChecklist(selectedItem.checkListKey));
-            !updateWishlistChildFunction(inWishlist(selectedItem.checkListKey));
-          }
-        }}
-      >
-        <BottomSheetRender 
-          setPage={props.setPage}
-          activeCreatures={props.activeCreatures}
-          activeCreaturesPage={props.activeCreaturesPage}
-          ref={bottomSheetRenderRef}
-          imageProperty={props.imageProperty} 
-          textProperty={props.textProperty}
-          textProperty2={props.textProperty2}
-          textProperty3={props.textProperty3}
-          dataGlobalName={props.dataGlobalName}
-          boxColor={props.boxColor}
-          labelColor={props.labelColor}
-          accentColor={props.accentColor}
-          specialLabelColor={props.specialLabelColor}
-          popUpCornerImageProperty={props.popUpCornerImageProperty}
-          popUpCornerImageLabelProperty={props.popUpCornerImageLabelProperty}
-          popUpPhraseProperty={props.popUpPhraseProperty}
-          popUpContainer={props.popUpContainer}
-          checkType={props.checkType}
-          tabs={props.tabs}
+    return (<>
+    {data!=="empty"?
+      <View style={{backgroundColor:props.backgroundColor}} >
+        {header}
+        <PopupFilter villagerGifts={props.villagerGifts} disableFilters={props.disableFilters} title={props.title} ref={popupFilter} filterSearchable={props.filterSearchable} updateSearchFilters={updateSearchFilters}/> 
+        {/* setFilterPopupState(false) */}
+        {loading? <View style={{alignItems:"center", justifyContent:"center", width:"100%", height:"100%"}}>
+        <LottieView 
+          autoPlay
+          loop
+          style={{width: 85,zIndex:1,transform: [{ scale: 1.25 },{ rotate: '0deg'},],}}
+          source={require('../assets/loading.json')}
         />
-      </PopupBottomCustom>
-    </View>
+        </View>:<Animated.FlatList
+          nestedScrollEnabled
+          initialNumToRender={4}
+          scrollEventThrottle={getSettingsString("settingsLowEndDevice")==="true"?100:16}
+          contentContainerStyle={{paddingTop: paddingTop+10, paddingLeft: 8, paddingRight: 8, paddingBottom: paddingBottomContent}}
+          onScroll={handleScroll}
+          ref={ref}
+          data={data}
+          renderItem={renderItem}
+          keyExtractor={(item, index) => `list-item-${index}-${item.checkListKeyString}`}
+          numColumns={numColumns}
+          key={numColumns}
+          style={style}
+          removeClippedSubviews={true}
+          // updateCellsBatchingPeriod={500}
+          ListFooterComponent={()=>{
+            if(searchFilters!=undefined && searchFilters.length===0 && data.length===0 && props.wishlistItems && search===""){
+              return <>
+                <View style={{height:100}}/>
+                  <TouchableOpacity onPress={() => props.setPage(1)}>
+                    <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", marginHorizontal:30}}>{"You have no wishlist items."}</TextFont>
+                    <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", marginHorizontal:30}}>{"Long press items to add them to your wishlist."}</TextFont>
+                    <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center", marginHorizontal:30}}>Tap here and go add some</TextFont>
+                  </TouchableOpacity>
+                <View style={{height:30}}/>
+              </>
+            }else if (searchFilters!=undefined && searchFilters.length===0 && data.length===0 && (props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions") && search===""){
+              return <>
+                <View style={{height:100}}/>
+                  <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", marginHorizontal:30}}>{"You can get everything since you have all personality types!"}</TextFont>
+                <View style={{height:30}}/>
+              </>
+            }else if (props.comingSoon){
+              return <>
+                <View style={{height:100}}/>
+                  <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Coming soon</TextFont>
+                  <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Please be patient</TextFont>
+                <View style={{height:30}}/>
+              </>
+            }
+            return <TextFont style={{marginTop:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{data.length+" "+(data.length!==1?attemptToTranslate("entries."):attemptToTranslate("entry."))}</TextFont>
+          }}
+          windowSize={getSettingsString("settingsLowEndDevice")==="true"?3:4}
+          refreshControl={
+            <RefreshControl
+              onRefresh={()=>{if(props.wishlistItems||searchFilters.some(item=>refreshFiltersArray.includes(item)))setRefresh(true)}} //only refresh if the order has the possibility of changing
+              refreshing={refresh}
+              progressViewOffset={headerHeight+50}
+              progressBackgroundColor={colors.lightDarkAccentHeavy2[global.darkMode]}
+              colors={[colors.textBlack[global.darkMode]]}
+            />
+          }
+        />}
+      </View>
+    :
+      <HeaderLoading disableSearch={props.disableSearch} title={props.title} headerHeight={headerHeight} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
+    }
+
+    <PopupBottomCustom
+      itemPopup={true}
+      ref={sheetRef}
+      padding={0}
+      invisible={true}
+      restrictSize={false}
+      onClose={()=>{
+        console.log(selectedItem); 
+        if(selectedItem!=null && selectedItem!=undefined){
+          !updateCheckChildFunction(inChecklist(selectedItem.checkListKey));
+          !updateWishlistChildFunction(inWishlist(selectedItem.checkListKey));
+        }
+      }}
+    >
+      <BottomSheetRender 
+        setPage={props.setPage}
+        activeCreatures={props.activeCreatures}
+        activeCreaturesPage={props.activeCreaturesPage}
+        ref={bottomSheetRenderRef}
+        imageProperty={props.imageProperty} 
+        textProperty={props.textProperty}
+        textProperty2={props.textProperty2}
+        textProperty3={props.textProperty3}
+        dataGlobalName={props.dataGlobalName}
+        boxColor={props.boxColor}
+        labelColor={props.labelColor}
+        accentColor={props.accentColor}
+        specialLabelColor={props.specialLabelColor}
+        popUpCornerImageProperty={props.popUpCornerImageProperty}
+        popUpCornerImageLabelProperty={props.popUpCornerImageLabelProperty}
+        popUpPhraseProperty={props.popUpPhraseProperty}
+        popUpContainer={props.popUpContainer}
+        checkType={props.checkType}
+        tabs={props.tabs}
+      />
+    </PopupBottomCustom>
+    </>
   );
   }
   

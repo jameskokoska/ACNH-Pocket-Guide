@@ -10,11 +10,13 @@ import Popup from '../components/Popup';
 
 class VillagersPage extends Component {
   async componentDidMount(){
-    let response = await getStorage("villagersPageAddPopup","")
-    if(response === ""){
-      this.addVillagersPopup.setPopupVisible(true)
-      await AsyncStorage.setItem("villagersPageAddPopup", "true");
-    }
+    setTimeout(async ()=>{
+      let response = await getStorage("villagersPageAddPopup","")
+      if(response === ""){
+        this.addVillagersPopup.setPopupVisible(true)
+        await AsyncStorage.setItem("villagersPageAddPopup", "true");
+      }
+    },0)
   }
   render(){
     return(<>

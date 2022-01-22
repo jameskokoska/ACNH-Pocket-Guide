@@ -6,9 +6,12 @@ export const changelog = `
 -Added [Battery saver / Increase performance] setting
 -Added erase profile to profile page
 -Added collecton count for each profile on profile page
+-Tap in empty space to dismiss popups
+-Active creatures information popup
 -Profile page optimizations
 -Songs page has no animation when on battery saver
 -Fixed paradise planning crash
+-Improved speed of opening an item when list page has just loaded
 -
 -Home page loading time improvements
 -Fixed missing translation crash
