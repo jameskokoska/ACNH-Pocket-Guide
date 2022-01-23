@@ -39,16 +39,24 @@ class LoadFile extends Component {
               fetch(document.uri)
               .then( file => file.text() )
               .then( async (text) => {
-                var totalImported = await importAllData(text)
+                if(this.props.experimental===true){
+                  var totalImported = await importAllDataExperimental(text)
+                } else {
+                  var totalImported = await importAllData(text)
+                }
+                if(this.props.experimental){
+                  this.popupRestart.setPopupVisible(true)
+                }
                 this.setState({loadedNumber:totalImported}) 
                 console.log("Loaded file with results: " + totalImported)
                 this.popupWait.setPopupVisible(false)
                 this.loadPopupResults?.setPopupVisible(true);
+                
               })
             }
           }}
           text={"Import File"}
-          textLower={"\n" + attemptToTranslate("Please import ACNHPocketGuideData.txt.")}
+          textLower={"\n" + attemptToTranslate("Please import ACNHPocketGuideData.txt.") + (this.props.experimental?("\n\n"+attemptToTranslate("You need to select the file that has been exported using [Export All Data].")):"")}
         />
         <Popup 
           ref={(popupWait) => this.popupWait = popupWait}
@@ -61,15 +69,37 @@ class LoadFile extends Component {
           button1={"OK"}
           button1Action={()=>{}}
           text={"Import Results"}
-          textLower={attemptToTranslate("Imported:") + " " + this.state.loadedNumber + " " + attemptToTranslate("entires.") + "\n\n" + attemptToTranslate("Note: If this has imported 0 entires, please double check you have chosen the correct file.")}
+          textLower={attemptToTranslate("Imported:") + " " + this.state.loadedNumber + " " + attemptToTranslate("entires.") + "\n\n" + attemptToTranslate("Note: If this has imported 0 entires, please double check you have chosen the correct file.") + "\n" + attemptToTranslate("You need to select the file that has been exported using [Export All Data].")}
+        />
+        <Popup 
+          ref={(popupExperimental) => this.popupExperimental = popupExperimental}
+          button1={"Cancel"}
+          button1Action={()=>{}}
+          button2={"OK"}
+          button2Action={()=>{this.popupExperimental2?.setPopupVisible(true);}}
+          text={"Warning!"}
+          textLower={"Use at your own risk! Ensure you use a backup file that has not been tampered with. This may result in data loss or break the application. Reinstall if this occurs."}
+        />
+        <Popup 
+          ref={(popupExperimental2) => this.popupExperimental2 = popupExperimental2}
+          button1={"Cancel"}
+          button1Action={()=>{}}
+          button2={"OK"}
+          button2Action={()=>{this.loadPopup?.setPopupVisible(true);}}
+          textLower={"Importing all data will replace any current data, not merge!"}
         />
         <ButtonComponent
-          text={"Import Data"}
+          text={this.props.experimental?"Import All Data":"Import Data"}
           color={colors.okButton3[global.darkMode]}
           vibrate={5}
           onPress={() => {
-            this.loadPopup?.setPopupVisible(true);
+            if(this.props.experimental){
+              this.popupExperimental?.setPopupVisible(true)
+            } else {
+              this.loadPopup?.setPopupVisible(true);
+            }
         }}/>
+        <Popup ref={(popupRestart) => this.popupRestart = popupRestart} text="Restart Required" textLower="Please restart the application."/>
       </View>
     )
   }
@@ -146,7 +176,6 @@ export async function importAllData(text){
               }
             }
             let currentList = JSON.parse(await getStorage("TurnipList"+global.profile,JSON.stringify(defaultTurnipList())));
-            let output = []
             for(let item of list){
               for(let currentItem of currentList){
                 if(item["title"]===currentItem["title"]){
@@ -219,6 +248,38 @@ export async function importAllData(text){
     return totalImport.length
   }catch(error){
     console.log("Error importing all data: "+error)
+    return 0
+  }
+}
+
+export async function getAllDataExperimental(){
+  const keys = await AsyncStorage.getAllKeys()
+  const items = await AsyncStorage.multiGet(keys)
+  let out = JSON.stringify(["---ACNH Pocket Guide Backup All Data---",...items])
+  return out
+}
+
+export async function importAllDataExperimental(text){
+  try{
+    if(!text.includes("---ACNH Pocket Guide Backup All Data---")){
+      return attemptToTranslate("Wrong file, it seems you have not selected a backup that was created using [Export All Data]")
+    }
+    let input = JSON.parse(text)
+    if(input[0]!=="---ACNH Pocket Guide Backup All Data---"){
+      return attemptToTranslate("Wrong file, it seems you have not selected a backup that was created using [Export All Data]")
+    }
+    let totalCount = 0
+    for(let pair of input){
+      if(input==="---ACNH Pocket Guide Backup All Data---"){
+        continue
+      }
+      totalCount = totalCount + 1
+      await AsyncStorage.setItem(pair[0],pair[1])
+      
+    }
+    return totalCount
+  }catch(e){
+    console.log("Error importing ALL ALL data: " + e)
     return 0
   }
 }
@@ -352,11 +413,16 @@ class ExportFile extends Component {
           textLower={this.state.message}
         />
         <ButtonComponent
-          text={"Export Data"}
+          text={this.props.experimental?"Export All Data":"Export Data"}
           color={colors.okButton2[global.darkMode]}
           vibrate={5}
           onPress={async () => {
-            var dataTotal = await getAllData();
+            var dataTotal
+            if(this.props.experimental===true){
+              dataTotal = await getAllDataExperimental();
+            } else {
+              dataTotal = await getAllData();
+            }
             if(dataTotal==="" || dataTotal===false || dataTotal===undefined){
               console.log("Backup error. dataTotal appears to be undefined when exporting to file.")
             } else {

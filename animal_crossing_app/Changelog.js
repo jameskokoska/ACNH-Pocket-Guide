@@ -15,6 +15,9 @@ export const changelog = `
 -Improved speed of opening an item when list page has just loaded
 -Updated translations
 -Older device popup - to improve speed
+-Import and Export all app data
+- Useful when switching phones!
+- This is not a replacement for the normal backup
 -
 -Home page loading time improvements
 -Fixed missing translation crash
