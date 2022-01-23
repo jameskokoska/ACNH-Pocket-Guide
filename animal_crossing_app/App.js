@@ -21,7 +21,7 @@ import LottieView from 'lottie-react-native';
 import CreditsPage from './pages/CreditsPage';
 import FlowerPage from './pages/FlowerPage';
 import CardsPage from './pages/CardsPage';
-import {getDefaultLanguage, getStorage,getSettingsString, settings, loadGlobalData, attemptToTranslate, indexCollectionList} from './LoadJsonData';
+import {getDefaultLanguage, getStorage,getSettingsString, settings, loadGlobalData, attemptToTranslate, indexCollectionList, setSettingsString} from './LoadJsonData';
 import Onboard from './pages/Onboard';
 import colors from './Colors.js';
 import * as Font from 'expo-font';
@@ -67,6 +67,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import * as Sentry from 'sentry-expo';
 import {sentryConfig} from './sentryConfig'
 import { useAndroidBackHandler } from "react-navigation-backhandler";
+import * as Device from 'expo-device';
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -101,7 +102,6 @@ class App extends Component {
     this.setFirstLogin = this.setFirstLogin.bind(this);
     this.handleBackButton = this.handleBackButton.bind(this);
     this.random = Math.random();
-    this.numLogins;
     this.state = {
       loaded: false,
       currentPage:0,
@@ -621,48 +621,57 @@ class App extends Component {
 
 class PopupInfos extends Component {
   async componentDidMount(){
-    const numLogins = parseInt(await getStorage("numLogins","0"))+1;
-    // let backupPopupDismissed = await getStorage("backupPopupDismissed","false");
-    let backupPopupDismissed = await getStorage("backupPopupDismissed","false");
-    if(backupPopupDismissed==="false" && numLogins >= 9){
-      AsyncStorage.setItem("backupPopupDismissed", "true");
-      this.popupBackup?.setPopupVisible(true)
-    }
-    // let supportPopupDismissed = await getStorage("supportPopupDismissed","false");
-    // if(supportPopupDismissed==="false" && numLogins >= 6){
-    //   AsyncStorage.setItem("supportPopupDismissed", "true");
-    //   this.popupSupport?.setPopupVisible(true)
-    // }
-    // let supportPopupDismissed2 = await getStorage("supportPopupDismissed2","false");
-    // if(supportPopupDismissed2==="false" && numLogins >= 5){
-    //   AsyncStorage.setItem("supportPopupDismissed2", "true");
-    //   this.popupSupport2?.setPopupVisible(true)
-    // }
-    let supportPopupDismissed3 = await getStorage("supportPopupDismissed3","false");
-    if(supportPopupDismissed3==="false" && numLogins >= 5){
-      AsyncStorage.setItem("supportPopupDismissed3", "true");
-      this.popupSupport3?.setPopupVisible(true)
-    }
-    // let supportPopupDismissed4 = await getStorage("supportPopupDismissed4","false");
-    // if(supportPopupDismissed4==="false" && numLogins >= 5){
-    //   AsyncStorage.setItem("supportPopupDismissed4", "true");
-    //   this.popupSupport4?.setPopupVisible(true)
-    // }
-    // let updatePopupDismissed = await getStorage("updatePopupDismissed","false");
-    // if(updatePopupDismissed==="false" && numLogins >= 1){
-    //   AsyncStorage.setItem("updatePopupDismissed", "true");
-    //   this.popupUpdate?.setPopupVisible(true)
-    // }
-    if(numLogins===4){
-      this.popupRating?.setPopupVisible(true)
-    }
-    // console.log("numlogins:"+numLogins)
-    await AsyncStorage.setItem("numLogins", numLogins.toString());
-    this.numLogins = numLogins;
+    setTimeout(async ()=>{
+      console.log("YEAR"+Device.deviceYearClass)
+      const numLogins = parseInt(await getStorage("numLogins","0"))+1;
+      // let backupPopupDismissed = await getStorage("backupPopupDismissed","false");
+      let backupPopupDismissed = await getStorage("backupPopupDismissed","false");
+      if(backupPopupDismissed==="false" && numLogins >= 9){
+        AsyncStorage.setItem("backupPopupDismissed", "true");
+        this.popupBackup?.setPopupVisible(true)
+      }
+      // let supportPopupDismissed = await getStorage("supportPopupDismissed","false");
+      // if(supportPopupDismissed==="false" && numLogins >= 6){
+      //   AsyncStorage.setItem("supportPopupDismissed", "true");
+      //   this.popupSupport?.setPopupVisible(true)
+      // }
+      // let supportPopupDismissed2 = await getStorage("supportPopupDismissed2","false");
+      // if(supportPopupDismissed2==="false" && numLogins >= 5){
+      //   AsyncStorage.setItem("supportPopupDismissed2", "true");
+      //   this.popupSupport2?.setPopupVisible(true)
+      // }
+      let supportPopupDismissed3 = await getStorage("supportPopupDismissed3","false");
+      if(supportPopupDismissed3==="false" && numLogins >= 5){
+        AsyncStorage.setItem("supportPopupDismissed3", "true");
+        this.popupSupport3?.setPopupVisible(true)
+      }
+      // let supportPopupDismissed4 = await getStorage("supportPopupDismissed4","false");
+      // if(supportPopupDismissed4==="false" && numLogins >= 5){
+      //   AsyncStorage.setItem("supportPopupDismissed4", "true");
+      //   this.popupSupport4?.setPopupVisible(true)
+      // }
+      // let updatePopupDismissed = await getStorage("updatePopupDismissed","false");
+      // if(updatePopupDismissed==="false" && numLogins >= 1){
+      //   AsyncStorage.setItem("updatePopupDismissed", "true");
+      //   this.popupUpdate?.setPopupVisible(true)
+      // }
+      if(numLogins===4){
+        this.popupRating?.setPopupVisible(true)
+      }
+      // console.log("numlogins:"+numLogins)
+      await AsyncStorage.setItem("numLogins", numLogins.toString());
+
+      if(Device.deviceYearClass!==undefined && Device.deviceYearClass!==null && Device.deviceYearClass<=2014 && (await getStorage("improvePerformancePopupDismissed","false"))==="false" && getSettingsString("settingsLowEndDevice")==="false" && numLogins>1){
+        AsyncStorage.setItem("improvePerformancePopupDismissed", "true");
+        this.popupImprovePerformance?.setPopupVisible(true)
+      }
+    },0)
   }
+
   render(){
     return <>
       <PopupRating ref={(popupRating) => this.popupRating = popupRating}/>
+      <Popup ref={(popupImprovePerformance) => this.popupImprovePerformance = popupImprovePerformance} text="Improve Performance" textLower="To increase app performance, consider enabling the [Battery saver / Increase performance] setting." button1={"Enable"} button1Action={()=>{setSettingsString("settingsLowEndDevice","true");}} button2={"Not now"} button2Action={()=>{}}/>
       <Popup mailLink={true} ref={(popupBackup) => this.popupBackup = popupBackup} text="Data Backup" textLower="You can now backup your data to the cloud and enable auto backups in the settings." button1={"Go to page"} button1Action={()=>{this.props.setPage(30)}} button2={"Cancel"} button2Action={()=>{}}/>
       <Popup support={true} noDismiss ref={(popupSupport) => this.popupSupport = popupSupport} text="Leave a Tip" button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
       {/* <Popup margin support2={true} noDismiss ref={(popupSupport2) => this.popupSupport2 = popupSupport2} text="Support the App" textLower={attemptToTranslate("Consider leaving a tip to keep the app ad free for all") + " 😄"} button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/> */}
