@@ -3,6 +3,7 @@ export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Backup now supports Turnip prices and ToDo list
 -Added [Battery saver / Increase performance] setting
 -Added erase profile to profile page
 -Added collecton count for each profile on profile page
@@ -12,6 +13,8 @@ export const changelog = `
 -Songs page has no animation when on battery saver
 -Fixed paradise planning crash
 -Improved speed of opening an item when list page has just loaded
+-Updated translations
+-Older device popup - to improve speed
 -
 -Home page loading time improvements
 -Fixed missing translation crash

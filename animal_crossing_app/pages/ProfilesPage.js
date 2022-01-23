@@ -59,11 +59,11 @@ class ProfilesComponent extends Component{
       this.selected = false;
       if(global.profile===this.props.profile){
         this.selected = true;
-        this.hemisphereSetting = await getStorage("settingsNorthernHemisphere","true")==="true"?true:false;
-        this.customDateSetting = await getStorage("settingsUseCustomDate","false")==="true"?true:false;
+        this.hemisphereSetting = (await getSettingsString("settingsNorthernHemisphere")==="true")?true:false;
+        this.customDateSetting = (await getSettingsString("settingsUseCustomDate")==="true")?true:false;
       } else {
-        this.hemisphereSetting = await getStorage("settingsNorthernHemisphereSaved"+this.profile,"true")==="true"?true:false;
-        this.customDateSetting = await getStorage("settingsUseCustomDateSaved"+this.profile,"false")==="true"?true:false;
+        this.hemisphereSetting = (await getStorage("settingsNorthernHemisphereSaved"+this.profile,"true")==="true")?true:false;
+        this.customDateSetting = (await getStorage("settingsUseCustomDateSaved"+this.profile,"false")==="true")?true:false;
       }
       this.displayProfile = this.props.profile===""?"Main":this.props.profile;
       this.name = await getStorage("name"+this.profile,"");

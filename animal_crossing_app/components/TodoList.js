@@ -55,21 +55,8 @@ export class TodoList extends Component {
   }
 
   loadList = async() => {
-    var defaultList = [
-      {title: attemptToTranslate('Water Flowers'), finished: false, picture:"flower.png"},
-      {title: attemptToTranslate('Dig Fossils'), finished: false, picture:"digIcon.png"},
-      {title: attemptToTranslate('Find DIY bottle'), finished: false, picture: "https://acnhcdn.com/latest/MenuIcon/BottleRecipe.png"},
-      {title: attemptToTranslate('Rock') + " 1", finished: false, picture:"rock.png",small:true},
-      {title: attemptToTranslate('Rock') + " 2", finished: false, picture:"rock.png",small:true},
-      {title: attemptToTranslate('Rock') + " 3", finished: false, picture:"rock.png",small:true},
-      {title: attemptToTranslate('Rock') + " 4", finished: false, picture:"rock.png",small:true},
-      {title: attemptToTranslate('Rock') + " 5", finished: false, picture:"rock.png",small:true},
-      {title: attemptToTranslate('Rock') + " 6", finished: false, picture:"rock.png",small:true},
-      {title: attemptToTranslate('Turnip Prices'), finished: false, picture:"turnip.png", small:true},
-      {title: attemptToTranslate('Turnip Prices'), finished: false, picture:"turnip.png", small:true},
-    ]
-    var showVillagersTalkList = (await getStorage("showVillagersTalkList","false"))==="true";
-    var storageData = JSON.parse(await getStorage("ToDoList"+global.profile,JSON.stringify(defaultList)));
+    var showVillagersTalkList = (await getStorage("showVillagersTalkList"+global.profile,"false"))==="true";
+    var storageData = JSON.parse(await getStorage("ToDoList"+global.profile,JSON.stringify(defaultToDoList())));
     var resetEachDay = (await getStorage("resetEachDay","false"))==="true";
     if(showVillagersTalkList){
       storageData = [...storageData, ...this.populateDataWithNewVillagers(storageData)];
@@ -81,12 +68,12 @@ export class TodoList extends Component {
     if(resetEachDay){
       let dateWithOffset = addHours(getCurrentDateObject(),-5)
       let currentDateString = dateWithOffset.getMonth().toString()+"-"+dateWithOffset.getDate().toString()+"-"+dateWithOffset.getFullYear().toString()
-      let lastOpened = await getStorage("lastOpenedDay"+global.profile,currentDateString);
+      let lastOpened = await getStorage("lastOpenedDay",currentDateString);
       // console.log(lastOpened)
       if(lastOpened!==currentDateString){
         this.uncheckAll()
       }
-      await AsyncStorage.setItem("lastOpenedDay"+global.profile, currentDateString);
+      await AsyncStorage.setItem("lastOpenedDay", currentDateString);
       // console.log(currentDateString)
     }
     this.props.setLoadedToDo(true);
@@ -318,24 +305,26 @@ export class TodoList extends Component {
                   )
                 }
               })}
-              {getCurrentVillagerNamesString()==="You have no favorite villagers."?<>
-              <View style={{height:10}}/>
-              <TouchableOpacity onPress={() => this.props.setPage(8)}>
-                <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>You have no villagers added</TextFont>
-                <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>Tap here and go add some</TextFont>
-              </TouchableOpacity>
-              <View style={{height:10}}/>
-              </>:<View/>}
-              <TouchableOpacity style={{marginTop:5, padding:12, alignSelf: 'center'}} 
-                onPress={()=>{
-                  if(this.state.showVillagersTalkList){
-                    this.popupRemoveTalkVillagers.setPopupVisible(true)
-                  }else{
-                    this.toggleVillagerTalk(); 
-                  }
-              }}>
-                <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{this.state.showVillagersTalkList ? "Hide talk to villagers list" : "Show talk to villagers list"}</TextFont>
-              </TouchableOpacity>
+              <View style={{width:"100%"}}>
+                {getCurrentVillagerNamesString()==="You have no favorite villagers."?<>
+                <View style={{height:10}}/>
+                <TouchableOpacity onPress={() => this.props.setPage(8)}>
+                  <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>You have no villagers added</TextFont>
+                  <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>Tap here and go add some</TextFont>
+                </TouchableOpacity>
+                <View style={{height:10}}/>
+                </>:<View/>}
+                <TouchableOpacity style={{marginTop:5, padding:12, alignSelf: 'center'}} 
+                  onPress={()=>{
+                    if(this.state.showVillagersTalkList){
+                      this.popupRemoveTalkVillagers.setPopupVisible(true)
+                    }else{
+                      this.toggleVillagerTalk(); 
+                    }
+                }}>
+                  <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{this.state.showVillagersTalkList ? "Hide talk to villagers list" : "Show talk to villagers list"}</TextFont>
+                </TouchableOpacity>
+              </View>
               <PopupAddTask ref={(popupAddTask) => this.popupAddTask = popupAddTask} addItem={this.addItem}/>
               <PopupInfoCustom header={<TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>You do not have any villagers added!</TextFont>} ref={(popup) => this.popup = popup} buttonText={"Dismiss"}>
                 <TouchableOpacity style={{paddingVertical:20,}} onPress={() => this.props.setPage(8)}>
@@ -357,11 +346,28 @@ export class TodoList extends Component {
   }
 }
 
+export function defaultToDoList(){
+  var defaultList = [
+    {title: attemptToTranslate('Water Flowers'), finished: false, picture:"flower.png"},
+    {title: attemptToTranslate('Dig Fossils'), finished: false, picture:"digIcon.png"},
+    {title: attemptToTranslate('Find DIY bottle'), finished: false, picture: "https://acnhcdn.com/latest/MenuIcon/BottleRecipe.png"},
+    {title: attemptToTranslate('Rock') + " 1", finished: false, picture:"rock.png",small:true},
+    {title: attemptToTranslate('Rock') + " 2", finished: false, picture:"rock.png",small:true},
+    {title: attemptToTranslate('Rock') + " 3", finished: false, picture:"rock.png",small:true},
+    {title: attemptToTranslate('Rock') + " 4", finished: false, picture:"rock.png",small:true},
+    {title: attemptToTranslate('Rock') + " 5", finished: false, picture:"rock.png",small:true},
+    {title: attemptToTranslate('Rock') + " 6", finished: false, picture:"rock.png",small:true},
+    {title: attemptToTranslate('Turnip Prices'), finished: false, picture:"turnip.png", small:true},
+    {title: attemptToTranslate('Turnip Prices'), finished: false, picture:"turnip.png", small:true},
+  ]
+  return defaultList
+}
+
 export class TurnipLog extends Component {
   constructor(props){
     super(props);
     this.state = {
-      data: this.defaultList(),
+      data: defaultTurnipList(),
     }
   }
 
@@ -374,20 +380,8 @@ export class TurnipLog extends Component {
     this.mounted=false
   }
 
-  defaultList = () => {
-    return [
-      {title: 'Purchase', purchase: ""},
-      {title: 'Monday', am: "", pm:""},
-      {title: 'Tuesday', am: "", pm:""},
-      {title: 'Wednesday', am: "", pm:""},
-      {title: 'Thursday', am: "", pm:""},
-      {title: 'Friday', am: "", pm:""},
-      {title: 'Saturday', am: "", pm:""},
-    ];
-  }
-
   loadList = async() => {
-    var storageData = JSON.parse(await getStorage("TurnipList"+global.profile,JSON.stringify(this.defaultList())));
+    var storageData = JSON.parse(await getStorage("TurnipList"+global.profile,JSON.stringify(defaultTurnipList())));
     var storageLastPattern = await getStorage("TurnipListLastPattern"+global.profile,"-1");
     var storageFirstTime = await getStorage("TurnipListFirstTime"+global.profile,"false");
     if(this.mounted){
@@ -396,10 +390,9 @@ export class TurnipLog extends Component {
   }
 
   clearHistory = async() => {
-    this.setState({data:this.defaultList()});
+    this.setState({data:defaultTurnipList()});
     // console.log(this.state.data);
-    console.log(this.defaultList())
-    await this.saveList(this.defaultList());
+    await this.saveList(defaultTurnipList());
   }
 
   saveList = async(data) => {
@@ -514,6 +507,18 @@ export class TurnipLog extends Component {
       </>
     )
   }
+}
+
+export function defaultTurnipList(){
+  return [
+    {title: 'Purchase', purchase: ""},
+    {title: 'Monday', am: "", pm:""},
+    {title: 'Tuesday', am: "", pm:""},
+    {title: 'Wednesday', am: "", pm:""},
+    {title: 'Thursday', am: "", pm:""},
+    {title: 'Friday', am: "", pm:""},
+    {title: 'Saturday', am: "", pm:""},
+  ];
 }
 
 class TurnipItem extends Component {

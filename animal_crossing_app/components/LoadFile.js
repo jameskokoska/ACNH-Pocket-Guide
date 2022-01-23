@@ -8,9 +8,10 @@ import * as FileSystem from 'expo-file-system';
 import * as MediaLibrary from 'expo-media-library';
 import { StorageAccessFramework } from 'expo-file-system';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {attemptToTranslate, getStorage, collectionListSave, loadGlobalData, setSettingsString, indexCollectionList} from "../LoadJsonData"
+import {attemptToTranslate, getStorage, collectionListSave, loadGlobalData, setSettingsString, indexCollectionList, settings} from "../LoadJsonData"
 import colors from "../Colors"
 import {profileNames} from "../pages/ProfilesPage"
+import { defaultToDoList, defaultTurnipList } from './TodoList';
 
 class LoadFile extends Component {
   constructor() {
@@ -99,23 +100,95 @@ export async function importAllData(text){
         } else if(key[1]==="HHP"){
           totalHHP.push(importEntry);
         } else {
-          await AsyncStorage.setItem(key[1]+currentProfile, importEntry);
-          if(key[1]==="name"&&currentProfile===global.profile){
-            global.name=importEntry
-          } else if(key[1]==="islandName"&&currentProfile===global.profile) {
-            global.islandName=importEntry
-          } else if (key[1]==="dreamAddress"&&currentProfile===global.profile) {
-            global.dreamAddress=importEntry
-          } else if (key[1]==="friendCode"&&currentProfile===global.profile) {
-            global.friendCode=importEntry
-          } else if (key[1]==="creatorCode"&&currentProfile===global.profile) {
-            global.creatorCode=importEntry
-          } else if (key[1]==="HHPCode"&&currentProfile===global.profile) {
-            global.HHPCode=importEntry
-          } else if (key[1]==="selectedFruit"&&currentProfile===global.profile) {
-            global.selectedFruit=importEntry
-          } else if (key[1]==="settingsNorthernHemisphere"&&currentProfile===global.profile) {
-            setSettingsString("settingsNorthernHemisphere",importEntry);
+          if(key[1]==="ToDoList"){
+            //check to ensure data format correct
+            let list = JSON.parse(importEntry)
+            for(let item of list){
+              if(item["title"]===undefined || item["finished"]===undefined || item["picture"]===undefined){
+                throw("ToDoList item undefined attribute")
+              }
+            }
+            let currentList = JSON.parse(await getStorage("ToDoList"+global.profile,JSON.stringify(defaultToDoList())));
+            let output = []
+            for(let item of list){
+              let isInCurrent = false
+              for(let currentItem of currentList){
+                if(item["title"]===currentItem["title"] && item["picture"]===currentItem["picture"]){
+                  if(item["finished"]===true && currentItem["finished"]===false){
+                    currentItem.finished = true
+                  }
+                  isInCurrent = true
+                }
+              }
+              if(!isInCurrent){
+                output.push(item)
+              }
+            }
+            output = [...currentList,...output]
+            await AsyncStorage.setItem(key[1]+currentProfile, JSON.stringify(output));
+          } else if(key[1]==="TurnipList"){
+            //check to ensure data format correct
+            let list = JSON.parse(importEntry)
+            let checkTitles = ["Purchase","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+            for(let item of list){
+              if(!checkTitles.includes(item["title"])){
+                throw("TurnipList item undefined attribute 1")
+              }
+              if(item["title"]!=="Purchase"){
+                if(item["am"]===undefined || item["pm"]===undefined){
+                  throw("TurnipList item undefined attribute 2")
+                }
+              }
+              if(item["title"]==="Purchase"){
+                if(item["purchase"]===undefined){
+                  throw("TurnipList item undefined attribute 3")
+                }
+              }
+            }
+            let currentList = JSON.parse(await getStorage("TurnipList"+global.profile,JSON.stringify(defaultTurnipList())));
+            let output = []
+            for(let item of list){
+              for(let currentItem of currentList){
+                if(item["title"]===currentItem["title"]){
+                  if(currentItem["am"]===""){
+                    currentItem.am = item["am"]
+                  } 
+                  if(currentItem["pm"]===""){
+                    currentItem.pm = item["pm"]
+                  }
+                  if(currentItem["purchase"]===""){
+                    currentItem.purchase = item["purchase"]
+                  }
+                  break
+                }
+              }
+            }
+            await AsyncStorage.setItem(key[1]+currentProfile, JSON.stringify(currentList));
+          } else {
+            await AsyncStorage.setItem(key[1]+currentProfile, importEntry);
+            if(key[1]==="name"&&currentProfile===global.profile){
+              global.name=importEntry
+            } else if(key[1]==="islandName"&&currentProfile===global.profile) {
+              global.islandName=importEntry
+            } else if (key[1]==="dreamAddress"&&currentProfile===global.profile) {
+              global.dreamAddress=importEntry
+            } else if (key[1]==="friendCode"&&currentProfile===global.profile) {
+              global.friendCode=importEntry
+            } else if (key[1]==="creatorCode"&&currentProfile===global.profile) {
+              global.creatorCode=importEntry
+            } else if (key[1]==="HHPCode"&&currentProfile===global.profile) {
+              global.HHPCode=importEntry
+            } else if (key[1]==="selectedFruit"&&currentProfile===global.profile) {
+              global.selectedFruit=importEntry
+            } else if (key[1]==="settingsNorthernHemisphere"&&currentProfile===global.profile) {
+              setSettingsString("settingsNorthernHemisphere",importEntry);
+            } else if (key[1]==="settingsNorthernHemisphereSaved"&&currentProfile===global.profile) {
+              setSettingsString("settingsNorthernHemisphere",importEntry);
+            } else if (key[1]==="settingsUseCustomDateSaved"&&currentProfile===global.profile) {
+              setSettingsString("settingsUseCustomDate",importEntry);
+            } else if (key[1]==="customDateOffset"&&currentProfile===global.profile) {
+              global.customTimeOffset=importEntry
+            }
           }
         }
       } else if (totalImport[i]!=="---END---"){
@@ -167,11 +240,25 @@ export async function getAllData(){
       var data7 = "\n{creatorCode}" + (await getStorage("creatorCode"+profile,""))
       var data8 = "\n{HHPCode}" + (await getStorage("HHPCode"+profile,""))
       var data9 = "\n{selectedFruit}" + (await getStorage("selectedFruit"+profile,""))
-      var data10 = "\n{settingsNorthernHemisphere}" + (await getStorage("settingsNorthernHemisphere"+profile,""))
-      var data11 = "\n{Achievements}" + [...new Set(JSON.parse(await getStorage("Achievements"+profile,"[]")))].join("\n{Achievements}");
-      var data12 = "\n{HHP}" + [...new Set(JSON.parse(await getStorage("ParadisePlanning"+profile,"[]")))].join("\n{HHP}");
-      dataTotal = dataTotal + "{Profile}"+profile +"\n" + data + data3 + data4 + data5 + data6 + data7 + data8 + data9 + data10 + data11 + data12 + "\n" + "---END---" + "\n"
+      var data10 = "\n{settingsNorthernHemisphereSaved}" + (await getStorage("settingsNorthernHemisphereSaved"+profile,""))
+      var data11 = "\n{settingsUseCustomDateSaved}" + (await getStorage("settingsUseCustomDateSaved"+profile,""))
+      var data12 = "\n{Achievements}" + [...new Set(JSON.parse(await getStorage("Achievements"+profile,"[]")))].join("\n{Achievements}");
+      var data13 = "\n{HHP}" + [...new Set(JSON.parse(await getStorage("ParadisePlanning"+profile,"[]")))].join("\n{HHP}");
+      var data14 = "\n{ToDoList}" + (await getStorage("ToDoList"+profile,JSON.stringify(defaultToDoList())))
+      var data15 = "\n{TurnipList}" + (await getStorage("TurnipList"+profile,JSON.stringify(defaultTurnipList())))
+      var data16 = "\n{TurnipListLastPattern}" + (await getStorage("TurnipListLastPattern"+profile,"-1"))
+      var data17 = "\n{TurnipListFirstTime}" + (await getStorage("TurnipListFirstTime"+profile,"false"))
+      var data18 = "\n{customDateOffset}" + (await getStorage("customDateOffset"+profile,"0"))
+      var data19 = "\n{showVillagersTalkList}" + (await getStorage("showVillagersTalkList"+profile,"false"))
+      dataTotal = dataTotal + "{Profile}"+profile +"\n" + data + data3 + data4 + data5 + data6 + data7 + data8 + data9 + data10 + data11 + data12 + data13 + data14 + data15 + data16 + data17 + data18 + data19 + "\n" + "---END---" + "\n"
     }
+    let settingsOutput = ""
+    for(let setting of settings){
+      let settingKey = setting["keyName"]
+      if(settingKey!=="breaker")
+        settingsOutput = settingsOutput + "\n{" + settingKey + "}" + (await getStorage(settingKey + profile,setting["defaultValue"]))
+    }
+    dataTotal = dataTotal + settingsOutput
     // console.log(dataTotal.replace(/^\s*\n/gm, ""))
     return dataTotal.replace(/^\s*\n/gm, "")
   }catch(error){

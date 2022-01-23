@@ -622,7 +622,6 @@ class App extends Component {
 class PopupInfos extends Component {
   async componentDidMount(){
     setTimeout(async ()=>{
-      console.log("YEAR"+Device.deviceYearClass)
       const numLogins = parseInt(await getStorage("numLogins","0"))+1;
       // let backupPopupDismissed = await getStorage("backupPopupDismissed","false");
       let backupPopupDismissed = await getStorage("backupPopupDismissed","false");
@@ -636,17 +635,17 @@ class PopupInfos extends Component {
       //   this.popupSupport?.setPopupVisible(true)
       // }
       // let supportPopupDismissed2 = await getStorage("supportPopupDismissed2","false");
-      // if(supportPopupDismissed2==="false" && numLogins >= 5){
+      // if(supportPopupDismissed2==="false" && numLogins >= 6){
       //   AsyncStorage.setItem("supportPopupDismissed2", "true");
       //   this.popupSupport2?.setPopupVisible(true)
       // }
       let supportPopupDismissed3 = await getStorage("supportPopupDismissed3","false");
-      if(supportPopupDismissed3==="false" && numLogins >= 5){
+      if(supportPopupDismissed3==="false" && numLogins >= 6){
         AsyncStorage.setItem("supportPopupDismissed3", "true");
         this.popupSupport3?.setPopupVisible(true)
       }
       // let supportPopupDismissed4 = await getStorage("supportPopupDismissed4","false");
-      // if(supportPopupDismissed4==="false" && numLogins >= 5){
+      // if(supportPopupDismissed4==="false" && numLogins >= 6){
       //   AsyncStorage.setItem("supportPopupDismissed4", "true");
       //   this.popupSupport4?.setPopupVisible(true)
       // }
