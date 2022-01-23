@@ -12,6 +12,7 @@ import {getWeekDayShort, getMonthShort, doWeSwapDate} from "../components/DateFu
 import {ProfileIcon} from "./ProfileCurrentPage"
 import Popup from '../components/Popup';
 import Toast from "react-native-toast-notifications";
+import { defaultToDoList, defaultTurnipList } from '../components/TodoList';
 
 export const profileNames = ["","Profile 1","Profile 2", "Profile 3", "Profile 4"]
 
@@ -195,7 +196,22 @@ async function resetProfileData(profileToReset){
   await AsyncStorage.setItem("collectedString"+profileToReset, "");
   await AsyncStorage.setItem("name"+profileToReset, "");
   await AsyncStorage.setItem("islandName"+profileToReset, "");
+  await AsyncStorage.setItem("dreamAddress"+profileToReset, "");
+  await AsyncStorage.setItem("friendCode"+profileToReset, "");
+  await AsyncStorage.setItem("creatorCode"+profileToReset, "");
+  await AsyncStorage.setItem("HHPCode"+profileToReset, "");
+  await AsyncStorage.setItem("HHP"+profileToReset, "[]");
+  await AsyncStorage.setItem("Achievements"+profileToReset, "[]");
+  await AsyncStorage.setItem("ToDoList"+profileToReset, JSON.stringify(defaultToDoList()));
+  await AsyncStorage.setItem("TurnipList"+profileToReset, JSON.stringify(defaultTurnipList()));
+  await AsyncStorage.setItem("TurnipListLastPattern"+profileToReset, "-1");
+  await AsyncStorage.setItem("TurnipListFirstTime"+profileToReset, "false");
+  await AsyncStorage.setItem("showVillagersTalkList"+profileToReset, "false");
   await AsyncStorage.setItem("customDateOffset"+profileToReset, "0");
+  await AsyncStorage.setItem("settingsNorthernHemisphereSaved"+profileToReset, "true");
+  await AsyncStorage.setItem("settingsUseCustomDateSaved"+profileToReset, "false");
+  await AsyncStorage.setItem("selectedFruit"+profileToReset, "");
+
   return true
 }
 

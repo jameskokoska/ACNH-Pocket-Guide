@@ -18,11 +18,16 @@ export const changelog = `
 -Import and Export all app data
 - Useful when switching phones!
 - This is not a replacement for the normal backup
+-Fixed restoring turnip log (only restores current profile)
+-Fixed restoring To Do list (only restores current profile)
+-Erase profile data now removes more than just the collection
 -
 -Home page loading time improvements
 -Fixed missing translation crash
 -Villager compatibility loading animation
 -About page optimizations
+-
+-Past changes:
 -
 -Fixed some filters not working - infinite loading
 -Optimizations to internal memory handling
@@ -123,8 +128,6 @@ export const changelog = `
 -Removed sorting filters for items pages that it doesn't apply to
 -Added popup for info on how to add villagers in your town (only appears once)
 -Cloud backup service verifies data in a better way to ensure successful upload
--
--Past changes:
 -
 -If avoiding spoilers, villager image will show for past villagers and if you collected their photo
 -Fixed date on Letters page, flipped based on language

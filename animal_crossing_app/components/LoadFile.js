@@ -138,7 +138,7 @@ export async function importAllData(text){
                 throw("ToDoList item undefined attribute")
               }
             }
-            let currentList = JSON.parse(await getStorage("ToDoList"+global.profile,JSON.stringify(defaultToDoList())));
+            let currentList = JSON.parse(await getStorage("ToDoList"+currentProfile,JSON.stringify(defaultToDoList())));
             let output = []
             for(let item of list){
               let isInCurrent = false
@@ -175,7 +175,7 @@ export async function importAllData(text){
                 }
               }
             }
-            let currentList = JSON.parse(await getStorage("TurnipList"+global.profile,JSON.stringify(defaultTurnipList())));
+            let currentList = JSON.parse(await getStorage("TurnipList"+currentProfile,JSON.stringify(defaultTurnipList())));
             for(let item of list){
               for(let currentItem of currentList){
                 if(item["title"]===currentItem["title"]){

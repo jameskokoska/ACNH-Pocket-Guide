@@ -2,7 +2,7 @@
   "expo": {
     "name": "ACNH Pocket Guide",
     "slug": "animal_crossing_app",
-    "version": "14.8.0",
+    "version": "14.8.5",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
@@ -39,7 +39,7 @@
         "READ_EXTERNAL_STORAGE"
       ],
       "package": "com.acnh.pocket_guide",
-      "versionCode": 237
+      "versionCode": 239
     },
     "web": {
       "favicon": "./assets/icon.png"
