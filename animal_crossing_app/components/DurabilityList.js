@@ -104,6 +104,10 @@ export default class DurabilityList extends Component {
 
   addItem = (item) => {
     var addedItem = this.state.data;
+    //flimsy net fix -> changes 5-10 into 510, so change it to 10
+    if(item?.total===510){
+      item.total=10
+    }
     addedItem.push(item);
     this.setState({data: addedItem});
     this.saveList(addedItem);

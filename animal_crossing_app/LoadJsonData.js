@@ -390,188 +390,195 @@ export function removeBrackets(string){
 }
 
 export async function loadGlobalData(){
-  global.dataLoadedAmiibo = await getStorageData([
-    [require("./assets/data/Amiibo Data/Series 1.json"),"Series 1"],
-    [require("./assets/data/Amiibo Data/Series 2.json"),"Series 2"],
-    [require("./assets/data/Amiibo Data/Series 3.json"),"Series 3"],
-    [require("./assets/data/Amiibo Data/Series 4.json"),"Series 4"],
-    [require("./assets/data/Amiibo Data/Series 5.json"),"Series 5"],
-    [require("./assets/data/Amiibo Data/Promos.json"),"Promos"],
-    [require("./assets/data/Amiibo Data/Welcome amiibo series.json"),"Welcome Amiibo Series"],
-    [require("./assets/data/Amiibo Data/Sanrio series.json"),"Sanrio Series"],
-  ], [
-    ["amiiboCheckListSeries1","Name"],
-    ["amiiboCheckListSeries2","Name"],
-    ["amiiboCheckListSeries3","Name"],
-    ["amiiboCheckListSeries4","Name"],
-    ["amiiboCheckListSeries5","Name"],
-    ["amiiboCheckListPromos","Name"],
-    ["amiiboCheckListSeriesWelcomeamiiboseries","Name"],
-    ["amiiboCheckListSeriesSanrioseries","Name"],
-  ], "false")
-  global.dataLoadedReactions = await getStorageData([[require("./assets/data/DataCreated/Reactions.json"),"Reactions"]],[["emojiCheckList","Name"]],"false");
-  global.dataLoadedMusic = await getStorageData([[require("./assets/data/DataCreated/Music.json"),"Music"]],[["songCheckList","Name"]],"false");
-  global.dataLoadedConstruction = await getStorageData([[require("./assets/data/DataCreated/Construction.json"),"Construction"],[require("./assets/data/DataCreated/Fencing.json"),"Fencing"],[require("./assets/data/DataCreated/Interior Structures.json"),"Interior Structures"]],[["constructionCheckList","Name"],["fenceCheckList","Name"],["interiorStructuresCheckList","Name","Color 1","Color 2"]],"false");
-  global.dataLoadedFish = await getStorageData([[require("./assets/data/DataCreated/Fish.json"),"Fish"]],[["fishCheckList","Name"]],"false");
-  global.dataLoadedBugs = await getStorageData([[require("./assets/data/DataCreated/Insects.json"), "Insects"]],[["bugCheckList","Name"]],"false");
-  global.dataLoadedSea = await getStorageData([[require("./assets/data/DataCreated/Sea Creatures.json"), "Sea Creatures"]],[["seaCheckList","Name"]],"false");
-  global.dataLoadedCreatures = await getStorageData([
-    [require("./assets/data/DataCreated/Fish.json"),"Fish"],
-    [require("./assets/data/DataCreated/Sea Creatures.json"), "Sea Creatures"],
-    [require("./assets/data/DataCreated/Insects.json"), "Insects"],
-  ],[
-    ["fishCheckList","Name"],
-    ["seaCheckList","Name"],
-    ["bugCheckList","Name"]
-  ],"false", true);
-  global.dataLoadedFossils = await getStorageData([[require("./assets/data/DataCreated/Fossils.json"),"Fossils"]],[["fossilCheckList","Name"]],"false");
-  global.dataLoadedArt = await getStorageData([[require("./assets/data/DataCreated/Artwork.json"),"Art"]],[["artCheckList","Name","Genuine"]],"false");
-  global.dataLoadedVillagers = await getStorageData([[require("./assets/data/DataCreated/Villagers.json"),"Villagers"]],[["villagerCheckList","Name"]],"false");
-  global.dataLoadedFurniture = await getStorageData([
-    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json")), "Housewares"],
-    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Miscellaneous.json")), "Miscellaneous"],
-    [require("./assets/data/DataCreated/Wall-mounted.json"), "Wall-mounted"],
-    [require("./assets/data/DataCreated/Ceiling Decor.json"), "Ceiling Decor"],
-    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Photos.json")), "Photos"],
-    [require("./assets/data/DataCreated/Posters.json"), "Posters"],
-  ],
-  [
-    ["furnitureCheckList","Name","Variation","Pattern"],
-    ["furnitureCheckList","Name","Variation","Pattern"],
-    ["furnitureCheckList","Name","Variation","Pattern"],
-    ["furnitureCheckList","Name","Variation","Pattern"],
-    ["furnitureCheckList","Name","Variation","Pattern"],
-    ["furnitureCheckList","Name"],
-  ],"false");
-  global.dataLoadedClothing = await getStorageData([
-    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Headwear.json")), "Headwear"],
-    [require("./assets/data/DataCreated/Accessories.json"), "Accessories"],
-    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Tops.json")), "Tops"],
-    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Dress-Up.json")), "Dress-Up"],
-    [require("./assets/data/DataCreated/Clothing Other.json"),"Clothing Other"],
-    [require("./assets/data/DataCreated/Bottoms.json"),"Bottoms"],
-    [require("./assets/data/DataCreated/Socks.json"),"Socks"],
-    [require("./assets/data/DataCreated/Shoes.json"),"Shoes"],
-    [require("./assets/data/DataCreated/Bags.json"),"Bags"],
-    [require("./assets/data/DataCreated/Umbrellas.json"),"Umbrellas"],
-  ],
-  [
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name"],
-  ],"false");
-  global.dataLoadedFloorWalls = await getStorageData(
-  [
-    [require("./assets/data/DataCreated/Floors.json"), "Floors"],
-    [require("./assets/data/DataCreated/Rugs.json"), "Rugs"],
-    [require("./assets/data/DataCreated/Wallpaper.json"), "Wallpaper"],
-  ],
-  [
-    ["floorWallsCheckList","Name"],
-    ["floorWallsCheckList","Name"],
-    ["floorWallsCheckList","Name"],
-  ],"false");
-  global.dataLoadedTools = await getStorageData([[require("./assets/data/DataCreated/ToolsGoods.json"), "Tools"]],[["toolsCheckList","Name","Variation"]],"false");
-  global.dataLoadedRecipes = await getStorageData([[require("./assets/data/DataCreated/Recipes.json"),"Recipes"],],[["recipesCheckList","Name"]],"false");
-  global.dataLoadedCards = await getStorageData([[require("./assets/data/DataCreated/Message Cards.json"), "Message Cards"],],[["cardsCheckList","Name"]],"false");
-  global.dataLoadedMaterials = await getStorageData([[require("./assets/data/DataCreated/Other.json"),"Other"]],[["materialsCheckList","Name"]],"false");
-  global.dataLoadedGyroids = await getStorageData([[require("./assets/data/DataCreated/Gyroids.json"),"Gyroids"]],[["gyroidCheckList","Name","Variation","Pattern"]],"false");
-  global.dataLoadedAll = await getStorageData(
-  [
-    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json")), "Housewares"],
-    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Miscellaneous.json")), "Miscellaneous"],
-    [require("./assets/data/DataCreated/Wall-mounted.json"), "Wall-mounted"],
-    [require("./assets/data/DataCreated/Ceiling Decor.json"), "Ceiling Decor"],
-    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Photos.json")), "Photos"],
-    [require("./assets/data/DataCreated/Posters.json"), "Posters"],
-    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Headwear.json")), "Headwear"],
-    [require("./assets/data/DataCreated/Accessories.json"), "Accessories"],
-    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Tops.json")), "Tops"],
-    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Dress-Up.json")), "Dress-Up"],
-    [require("./assets/data/DataCreated/Clothing Other.json"),"Clothing Other"],
-    [require("./assets/data/DataCreated/Bottoms.json"),"Bottoms"],
-    [require("./assets/data/DataCreated/Socks.json"),"Socks"],
-    [require("./assets/data/DataCreated/Shoes.json"),"Shoes"],
-    [require("./assets/data/DataCreated/Bags.json"),"Bags"],
-    [require("./assets/data/DataCreated/Umbrellas.json"),"Umbrellas"],
-    [require("./assets/data/DataCreated/Floors.json"), "Floors"],
-    [require("./assets/data/DataCreated/Rugs.json"), "Rugs"],
-    [require("./assets/data/DataCreated/Wallpaper.json"), "Wallpaper"],
-    [require("./assets/data/DataCreated/Recipes.json"), 'Recipes'],
-    [require("./assets/data/DataCreated/ToolsGoods.json"), "Tools"],
-    [require("./assets/data/DataCreated/Fish.json"), "Fish"],
-    [require("./assets/data/DataCreated/Insects.json"), "Insects"],
-    [require("./assets/data/DataCreated/Sea Creatures.json"),"Sea Creatures"],
-    [require("./assets/data/DataCreated/Fossils.json"),"Fossils"],
-    [require("./assets/data/DataCreated/Artwork.json"),"Art"],
-    [require("./assets/data/DataCreated/Villagers.json"),"Villagers"],
-    [require("./assets/data/DataCreated/Music.json"),"Music"],
-    [require("./assets/data/DataCreated/Reactions.json"),"Reactions"],
-    [require("./assets/data/DataCreated/Construction.json"),"Construction"],
-    [require("./assets/data/DataCreated/Fencing.json"),"Fencing"],
-    [require("./assets/data/DataCreated/Interior Structures.json"),"Interior Structures"],
-    [require("./assets/data/DataCreated/Other.json"),"Other"],
-    [require("./assets/data/DataCreated/Gyroids.json"),"Gyroids"],
-    [require("./assets/data/Amiibo Data/Series 1.json"),"Series 1"],
-    [require("./assets/data/Amiibo Data/Series 2.json"),"Series 2"],
-    [require("./assets/data/Amiibo Data/Series 3.json"),"Series 3"],
-    [require("./assets/data/Amiibo Data/Series 4.json"),"Series 4"],
-    [require("./assets/data/Amiibo Data/Series 5.json"),"Series 5"],
-    [require("./assets/data/Amiibo Data/Promos.json"),"Promos"],
-    [require("./assets/data/Amiibo Data/Welcome amiibo series.json"),"Welcome Amiibo Series"],
-    [require("./assets/data/Amiibo Data/Sanrio series.json"),"Sanrio Series"],
-  ],
-  [
-    ["furnitureCheckList","Name","Variation","Pattern"],
-    ["furnitureCheckList","Name","Variation","Pattern"],
-    ["furnitureCheckList","Name","Variation","Pattern"],
-    ["furnitureCheckList","Name","Variation","Pattern"],
-    ["furnitureCheckList","Name","Variation","Pattern"],
-    ["furnitureCheckList","Name"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name"],
-    ["floorWallsCheckList","Name"],
-    ["floorWallsCheckList","Name"],
-    ["floorWallsCheckList","Name"],
-    ["recipesCheckList","Name"],
-    ["toolsCheckList","Name","Variation"],
-    ["fishCheckList","Name"],
-    ["bugCheckList","Name"],
-    ["seaCheckList","Name"],
-    ["fossilCheckList","Name"],
-    ["artCheckList","Name","Genuine"],
-    ["villagerCheckList","Name"],
-    ["songCheckList","Name"],
-    ["emojiCheckList","Name"],
-    ["constructionCheckList","Name"],
-    ["fenceCheckList","Name"],
-    ["interiorStructuresCheckList","Name","Color 1","Color 2"],
-    ["materialsCheckList","Name"],
-    ["gyroidCheckList","Name","Variation","Pattern"],
-    ["amiiboCheckListSeries1","Name"],
-    ["amiiboCheckListSeries2","Name"],
-    ["amiiboCheckListSeries3","Name"],
-    ["amiiboCheckListSeries4","Name"],
-    ["amiiboCheckListSeries5","Name"],
-    ["amiiboCheckListPromos","Name"],
-    ["amiiboCheckListSeriesWelcomeamiiboseries","Name"],
-    ["amiiboCheckListSeriesSanrioseries","Name"],
-  ],"false");
+  try{
+    global.dataLoadedAmiibo = await getStorageData([
+      [require("./assets/data/Amiibo Data/Series 1.json"),"Series 1"],
+      [require("./assets/data/Amiibo Data/Series 2.json"),"Series 2"],
+      [require("./assets/data/Amiibo Data/Series 3.json"),"Series 3"],
+      [require("./assets/data/Amiibo Data/Series 4.json"),"Series 4"],
+      [require("./assets/data/Amiibo Data/Series 5.json"),"Series 5"],
+      [require("./assets/data/Amiibo Data/Promos.json"),"Promos"],
+      [require("./assets/data/Amiibo Data/Welcome amiibo series.json"),"Welcome Amiibo Series"],
+      [require("./assets/data/Amiibo Data/Sanrio series.json"),"Sanrio Series"],
+    ], [
+      ["amiiboCheckListSeries1","Name"],
+      ["amiiboCheckListSeries2","Name"],
+      ["amiiboCheckListSeries3","Name"],
+      ["amiiboCheckListSeries4","Name"],
+      ["amiiboCheckListSeries5","Name"],
+      ["amiiboCheckListPromos","Name"],
+      ["amiiboCheckListSeriesWelcomeamiiboseries","Name"],
+      ["amiiboCheckListSeriesSanrioseries","Name"],
+    ], "false")
+    global.dataLoadedReactions = await getStorageData([[require("./assets/data/DataCreated/Reactions.json"),"Reactions"]],[["emojiCheckList","Name"]],"false");
+    global.dataLoadedMusic = await getStorageData([[require("./assets/data/DataCreated/Music.json"),"Music"]],[["songCheckList","Name"]],"false");
+    global.dataLoadedConstruction = await getStorageData([[require("./assets/data/DataCreated/Construction.json"),"Construction"],[require("./assets/data/DataCreated/Fencing.json"),"Fencing"],[require("./assets/data/DataCreated/Interior Structures.json"),"Interior Structures"]],[["constructionCheckList","Name"],["fenceCheckList","Name"],["interiorStructuresCheckList","Name","Color 1","Color 2"]],"false");
+    global.dataLoadedFish = await getStorageData([[require("./assets/data/DataCreated/Fish.json"),"Fish"]],[["fishCheckList","Name"]],"false");
+    global.dataLoadedBugs = await getStorageData([[require("./assets/data/DataCreated/Insects.json"), "Insects"]],[["bugCheckList","Name"]],"false");
+    global.dataLoadedSea = await getStorageData([[require("./assets/data/DataCreated/Sea Creatures.json"), "Sea Creatures"]],[["seaCheckList","Name"]],"false");
+    global.dataLoadedCreatures = await getStorageData([
+      [require("./assets/data/DataCreated/Fish.json"),"Fish"],
+      [require("./assets/data/DataCreated/Sea Creatures.json"), "Sea Creatures"],
+      [require("./assets/data/DataCreated/Insects.json"), "Insects"],
+    ],[
+      ["fishCheckList","Name"],
+      ["seaCheckList","Name"],
+      ["bugCheckList","Name"]
+    ],"false", true);
+    global.dataLoadedFossils = await getStorageData([[require("./assets/data/DataCreated/Fossils.json"),"Fossils"]],[["fossilCheckList","Name"]],"false");
+    global.dataLoadedArt = await getStorageData([[require("./assets/data/DataCreated/Artwork.json"),"Art"]],[["artCheckList","Name","Genuine"]],"false");
+    global.dataLoadedVillagers = await getStorageData([[require("./assets/data/DataCreated/Villagers.json"),"Villagers"]],[["villagerCheckList","Name"]],"false");
+    global.dataLoadedFurniture = await getStorageData([
+      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json")), "Housewares"],
+      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Miscellaneous.json")), "Miscellaneous"],
+      [require("./assets/data/DataCreated/Wall-mounted.json"), "Wall-mounted"],
+      [require("./assets/data/DataCreated/Ceiling Decor.json"), "Ceiling Decor"],
+      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Photos.json")), "Photos"],
+      [require("./assets/data/DataCreated/Posters.json"), "Posters"],
+    ],
+    [
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name"],
+    ],"false");
+    global.dataLoadedClothing = await getStorageData([
+      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Headwear.json")), "Headwear"],
+      [require("./assets/data/DataCreated/Accessories.json"), "Accessories"],
+      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Tops.json")), "Tops"],
+      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Dress-Up.json")), "Dress-Up"],
+      [require("./assets/data/DataCreated/Clothing Other.json"),"Clothing Other"],
+      [require("./assets/data/DataCreated/Bottoms.json"),"Bottoms"],
+      [require("./assets/data/DataCreated/Socks.json"),"Socks"],
+      [require("./assets/data/DataCreated/Shoes.json"),"Shoes"],
+      [require("./assets/data/DataCreated/Bags.json"),"Bags"],
+      [require("./assets/data/DataCreated/Umbrellas.json"),"Umbrellas"],
+    ],
+    [
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name"],
+    ],"false");
+    global.dataLoadedFloorWalls = await getStorageData(
+    [
+      [require("./assets/data/DataCreated/Floors.json"), "Floors"],
+      [require("./assets/data/DataCreated/Rugs.json"), "Rugs"],
+      [require("./assets/data/DataCreated/Wallpaper.json"), "Wallpaper"],
+    ],
+    [
+      ["floorWallsCheckList","Name"],
+      ["floorWallsCheckList","Name"],
+      ["floorWallsCheckList","Name"],
+    ],"false");
+    global.dataLoadedTools = await getStorageData([[require("./assets/data/DataCreated/ToolsGoods.json"), "Tools"]],[["toolsCheckList","Name","Variation"]],"false");
+    global.dataLoadedRecipes = await getStorageData([[require("./assets/data/DataCreated/Recipes.json"),"Recipes"],],[["recipesCheckList","Name"]],"false");
+    global.dataLoadedCards = await getStorageData([[require("./assets/data/DataCreated/Message Cards.json"), "Message Cards"],],[["cardsCheckList","Name"]],"false");
+    global.dataLoadedMaterials = await getStorageData([[require("./assets/data/DataCreated/Other.json"),"Other"]],[["materialsCheckList","Name"]],"false");
+    global.dataLoadedGyroids = await getStorageData([[require("./assets/data/DataCreated/Gyroids.json"),"Gyroids"]],[["gyroidCheckList","Name","Variation","Pattern"]],"false");
+    global.dataLoadedAll = await getStorageData(
+    [
+      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json")), "Housewares"],
+      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Miscellaneous.json")), "Miscellaneous"],
+      [require("./assets/data/DataCreated/Wall-mounted.json"), "Wall-mounted"],
+      [require("./assets/data/DataCreated/Ceiling Decor.json"), "Ceiling Decor"],
+      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Photos.json")), "Photos"],
+      [require("./assets/data/DataCreated/Posters.json"), "Posters"],
+      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Headwear.json")), "Headwear"],
+      [require("./assets/data/DataCreated/Accessories.json"), "Accessories"],
+      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Tops.json")), "Tops"],
+      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Dress-Up.json")), "Dress-Up"],
+      [require("./assets/data/DataCreated/Clothing Other.json"),"Clothing Other"],
+      [require("./assets/data/DataCreated/Bottoms.json"),"Bottoms"],
+      [require("./assets/data/DataCreated/Socks.json"),"Socks"],
+      [require("./assets/data/DataCreated/Shoes.json"),"Shoes"],
+      [require("./assets/data/DataCreated/Bags.json"),"Bags"],
+      [require("./assets/data/DataCreated/Umbrellas.json"),"Umbrellas"],
+      [require("./assets/data/DataCreated/Floors.json"), "Floors"],
+      [require("./assets/data/DataCreated/Rugs.json"), "Rugs"],
+      [require("./assets/data/DataCreated/Wallpaper.json"), "Wallpaper"],
+      [require("./assets/data/DataCreated/Recipes.json"), 'Recipes'],
+      [require("./assets/data/DataCreated/ToolsGoods.json"), "Tools"],
+      [require("./assets/data/DataCreated/Fish.json"), "Fish"],
+      [require("./assets/data/DataCreated/Insects.json"), "Insects"],
+      [require("./assets/data/DataCreated/Sea Creatures.json"),"Sea Creatures"],
+      [require("./assets/data/DataCreated/Fossils.json"),"Fossils"],
+      [require("./assets/data/DataCreated/Artwork.json"),"Art"],
+      [require("./assets/data/DataCreated/Villagers.json"),"Villagers"],
+      [require("./assets/data/DataCreated/Music.json"),"Music"],
+      [require("./assets/data/DataCreated/Reactions.json"),"Reactions"],
+      [require("./assets/data/DataCreated/Construction.json"),"Construction"],
+      [require("./assets/data/DataCreated/Fencing.json"),"Fencing"],
+      [require("./assets/data/DataCreated/Interior Structures.json"),"Interior Structures"],
+      [require("./assets/data/DataCreated/Other.json"),"Other"],
+      [require("./assets/data/DataCreated/Gyroids.json"),"Gyroids"],
+      [require("./assets/data/Amiibo Data/Series 1.json"),"Series 1"],
+      [require("./assets/data/Amiibo Data/Series 2.json"),"Series 2"],
+      [require("./assets/data/Amiibo Data/Series 3.json"),"Series 3"],
+      [require("./assets/data/Amiibo Data/Series 4.json"),"Series 4"],
+      [require("./assets/data/Amiibo Data/Series 5.json"),"Series 5"],
+      [require("./assets/data/Amiibo Data/Promos.json"),"Promos"],
+      [require("./assets/data/Amiibo Data/Welcome amiibo series.json"),"Welcome Amiibo Series"],
+      [require("./assets/data/Amiibo Data/Sanrio series.json"),"Sanrio Series"],
+    ],
+    [
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name"],
+      ["floorWallsCheckList","Name"],
+      ["floorWallsCheckList","Name"],
+      ["floorWallsCheckList","Name"],
+      ["recipesCheckList","Name"],
+      ["toolsCheckList","Name","Variation"],
+      ["fishCheckList","Name"],
+      ["bugCheckList","Name"],
+      ["seaCheckList","Name"],
+      ["fossilCheckList","Name"],
+      ["artCheckList","Name","Genuine"],
+      ["villagerCheckList","Name"],
+      ["songCheckList","Name"],
+      ["emojiCheckList","Name"],
+      ["constructionCheckList","Name"],
+      ["fenceCheckList","Name"],
+      ["interiorStructuresCheckList","Name","Color 1","Color 2"],
+      ["materialsCheckList","Name"],
+      ["gyroidCheckList","Name","Variation","Pattern"],
+      ["amiiboCheckListSeries1","Name"],
+      ["amiiboCheckListSeries2","Name"],
+      ["amiiboCheckListSeries3","Name"],
+      ["amiiboCheckListSeries4","Name"],
+      ["amiiboCheckListSeries5","Name"],
+      ["amiiboCheckListPromos","Name"],
+      ["amiiboCheckListSeriesWelcomeamiiboseries","Name"],
+      ["amiiboCheckListSeriesSanrioseries","Name"],
+    ],"false");
+    return true
+  } catch (e) {
+    console.log("Error parsing collection JSON: "+e)
+    return false
+  }
+  
 }
 
 const artIdentification = require("./assets/data/artIdentification.json")

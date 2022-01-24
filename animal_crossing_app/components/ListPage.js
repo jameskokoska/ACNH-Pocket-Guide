@@ -1105,41 +1105,42 @@ class BottomSheetRender extends Component{
       />
     }
     return <View>
-      <View
-        style={{
-          borderTopLeftRadius: 50,
-          borderTopRightRadius: 50,
-          backgroundColor: colors.white[global.darkMode],
-          padding: 16,
-          marginTop: getSettingsString("settingsLargerItemPreviews")==="false" ? 100 : 200,
-        }}
-      >
-          <CircularImage 
-            item={this.state.item}
-            imageProperty={this.props.imageProperty}
-            accentColor={this.props.accentColor}
-          />
-          {leftCornerImage}
-          {rightCornerCheck}
-          <View style={{height: 60}}/>
-          {phrase}
-          <Title
-            item={this.state.item}
-            textProperty={this.props.textProperty}
-            popUpPhraseProperty={this.props.popUpPhraseProperty}
-            marginHorizontal={marginHorizontal}
-          />
-          <Variations 
-            updateRightCornerCheck={this.updateRightCornerCheck}
-            ref={(variations) => this.variations = variations}
-            item={this.state.item}
-            updateCheckChildFunction={this.updateCheckChildFunction}
-            imageProperty={this.props.imageProperty} 
-            globalDatabase={global.dataLoadedAll} 
-          />
-          {popUpContainer}
-          {this.props.activeCreatures===true && this.props.activeCreaturesPage===false ? <View style={{height:50}}/> : <View/>}
-          {this.props.tabs===false ? <View style={{height:50}}/> : <View style={{height:100}}/>}
+      <View>
+        <CircularImage 
+          item={this.state.item}
+          imageProperty={this.props.imageProperty}
+          accentColor={this.props.accentColor}
+          showLargerPopupImage={()=>{this.variations?.showPopupImage(true)}}
+        />
+        <View
+          style={{
+            borderTopLeftRadius: 50,
+            borderTopRightRadius: 50,
+            backgroundColor: colors.white[global.darkMode],
+            padding: 16,
+          }}
+        >
+            {leftCornerImage}
+            {rightCornerCheck}
+            <View style={{height: 60}}/>
+            {phrase}
+            <Title
+              item={this.state.item}
+              textProperty={this.props.textProperty}
+              popUpPhraseProperty={this.props.popUpPhraseProperty}
+              marginHorizontal={marginHorizontal}
+            />
+            <Variations 
+              updateRightCornerCheck={this.updateRightCornerCheck}
+              ref={(variations) => this.variations = variations}
+              item={this.state.item}
+              updateCheckChildFunction={this.updateCheckChildFunction}
+              imageProperty={this.props.imageProperty} 
+              globalDatabase={global.dataLoadedAll} 
+            />
+            {popUpContainer}
+            {this.props.tabs===false ? <View style={{height:50}}/> : (getSettingsString("settingsLargerItemPreviews")==="false"?<View style={{height:100}}/>:<View style={{height:50}}/>)}
+        </View>
       </View>
     </View>
   }

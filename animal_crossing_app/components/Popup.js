@@ -371,10 +371,25 @@ export class PopupBottomCustom extends PureComponent {
   renderContent = () => {
     let overHeight = this.state.heightOffset+Dimensions.get('window').height*0.03+140>Dimensions.get('window').height
     let offsetTop = Dimensions.get('window').height*0.03+140
-    let itemPopupCompensation = (this.props.itemPopup?(getSettingsString("settingsLargerItemPreviews")==="false"?140:240):0)
+    let itemPopupCompensation = (this.props.itemPopup?(getSettingsString("settingsLargerItemPreviews")==="false"?170:250):0)
+    let touchableDismiss = <TouchableOpacity activeOpacity={1} style={{top:0,bottom:this.state.heightOffset-itemPopupCompensation,zIndex:5,position:"absolute", width:Dimensions.get('window').width}} onPress={()=>{this.setPopupVisible(false);}}/>
+    let touchableDismiss2 = <View/>
+    let touchableDismiss3 = <View/>
+    //make a custom cutout for image (image can be tapped for larger preview)
+    //image is 130 by 130
+    //if larger its 210 by 210
+    if(this.props.itemPopup){
+      let imageWidth = getSettingsString("settingsLargerItemPreviews")==="false"?150:210
+      let middleHeightOffset = getSettingsString("settingsLargerItemPreviews")==="false"?70:150
+      touchableDismiss = <TouchableOpacity activeOpacity={1} style={{left:0, right: Dimensions.get('window').width/2 + imageWidth/2, top:0,bottom:this.state.heightOffset-itemPopupCompensation,zIndex:5,position:"absolute"}} onPress={()=>{this.setPopupVisible(false);}}/>
+      touchableDismiss2 = <TouchableOpacity activeOpacity={1} style={{right:0, left: Dimensions.get('window').width/2 + imageWidth/2, top:0,bottom:this.state.heightOffset-itemPopupCompensation,zIndex:5,position:"absolute"}} onPress={()=>{this.setPopupVisible(false);}}/>
+      touchableDismiss3 = <TouchableOpacity activeOpacity={1} style={{left:Dimensions.get('window').width/2 - imageWidth/2, right: Dimensions.get('window').width/2 - imageWidth/2, top:0,bottom:this.state.heightOffset-itemPopupCompensation+middleHeightOffset,zIndex:5,position:"absolute"}} onPress={()=>{this.setPopupVisible(false);}}/>
+    }
     return(
       <>
-      <TouchableOpacity style={{top:0,bottom:this.state.heightOffset-itemPopupCompensation,zIndex:5,position:"absolute", width:Dimensions.get('window').width}} onPress={()=>{this.setPopupVisible(false);}}/>
+      {touchableDismiss}
+      {touchableDismiss2}
+      {touchableDismiss3}
       <View style={{width:Dimensions.get('window').width,height:Dimensions.get('window').height-this.state.heightOffset}} onPress={()=>{this.setPopupVisible(false);}}/>
       <View
         style={{

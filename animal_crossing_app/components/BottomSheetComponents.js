@@ -17,16 +17,26 @@ export class CircularImage extends Component {
     if(this.props.popUpCenterImage==="none"){
       return <View/>
     }
-    return <View style={{width:"100%", alignItems: 'center'}}>
-      <View style={[styles.rowImageBackground,{backgroundColor:this.props.accentColor, top: getSettingsString("settingsLargerItemPreviews")==="false" ? -130/2-20 : -210/2-60, height: getSettingsString("settingsLargerItemPreviews")==="false" ? 130 : 210, width: getSettingsString("settingsLargerItemPreviews")==="false" ? 130 : 210,}]}>
-        <FastImage
-          style={[styles.rowImage, {height: getSettingsString("settingsLargerItemPreviews")==="false" ? 95 : 180, width: getSettingsString("settingsLargerItemPreviews")==="false" ? 95 : 180,}]}
-          source={{
-            uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
-          }}
-          cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
-        />
-      </View>
+    //the width of the TouchableOpacity is used in PopupBottomCustom in Popup.js
+    return <View style={{width:"100%", alignItems:'center', justifyContent:'center'}}>
+    <TouchableOpacity
+      activeOpacity={0.9}
+      onPress={() => {  
+        this.props.showLargerPopupImage()
+      }}
+      onLongPress={() => {  
+        this.props.showLargerPopupImage()
+      }}
+      style={[styles.rowImageBackground,{bottom:getSettingsString("settingsLargerItemPreviews")==="false" ? -130/2+3 : -210/2 + 45, width:"100%", zIndex:500,backgroundColor:this.props.accentColor, height: getSettingsString("settingsLargerItemPreviews")==="false" ? 140 : 210, width: getSettingsString("settingsLargerItemPreviews")==="false" ? 140 : 210,}]}
+    >
+      <FastImage
+        style={[styles.rowImage, {height: getSettingsString("settingsLargerItemPreviews")==="false" ? 105 : 180, width: getSettingsString("settingsLargerItemPreviews")==="false" ? 105 : 180,}]}
+        source={{
+          uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
+        }}
+        cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
+      />
+    </TouchableOpacity>
     </View>
   }
 }
@@ -420,10 +430,13 @@ export class Variations extends Component {
   updateWishlist = () => {
     this.setState({wishlistItems:this.getWishlistItems(this.state.variations)})
   }
+  showPopupImage = (visible) => {
+    this.popup?.setPopupVisible(visible, this.props.item[this.props.imageProperty[this.props.item.dataSet]], this.props.item);
+  }
   render(){
     if(this.props.item!=""||this.props.item!=undefined){
       if(this.state.variations.length<=1){
-        return <View/>
+        return <PopupImage ref={(popup) => this.popup = popup} updateWishlist={this.updateWishlist}/>
       }
       var imageProperty = this.props.imageProperty;
       var dataSet = this.props.item.dataSet;
@@ -539,7 +552,7 @@ class PopupImage extends Component {
   }
 
   setPopupVisible = (visible, image, item) => {
-    this.setState({image:image, item:item, wishlist: inWishlist(item.checkListKey),});
+    this.setState({image:image, item:item, wishlist: inWishlist(item?.checkListKey),});
     this.popup?.setPopupVisible(true);
   }
 
@@ -549,6 +562,16 @@ class PopupImage extends Component {
     this.props.updateWishlist();
   }
   render(){
+    let maxWidth = 200
+    if(Dimensions.get('window').width*0.6 > 200 || Dimensions.get('window').height*0.6 > 200){
+      maxWidth = 200
+    } else {
+      if(Dimensions.get('window').width > Dimensions.get('window').height)
+        maxWidth = Dimensions.get('window').height*0.6
+      else
+        maxWidth = Dimensions.get('window').width*0.6
+    }
+    console.log(maxWidth)
     return(
       <PopupInfoCustom ref={(popup) => this.popup = popup} buttonText={"Close"}>
         <View style={{alignItems:"center"}}>
@@ -561,7 +584,7 @@ class PopupImage extends Component {
           </TouchableOpacity>
           <TouchableOpacity activeOpacity={0.9} onPress={() => {this.addToWishlist()}} onLongPress={() => {this.addToWishlist()}}>
             <FastImage
-              style={{width:Dimensions.get('window').width*0.5,height:Dimensions.get('window').width*0.5,resizeMode:'contain',}}
+              style={{width:maxWidth,height:maxWidth,resizeMode:'contain',}}
               source={{
                 uri: this.state.image,
               }}
@@ -590,7 +613,7 @@ class PopupImage extends Component {
             textProperty2={["Kit Cost"]}
             ending2={"x"}
           />
-          {this.state.item["checkListKey"]?.includes("clothing")?<VillagersGifts compact item={this.state.item}/>:<View/>}
+          {this.state.item["checkListKey"]!==undefined && this.state.item["checkListKey"]?.includes("clothing")?<VillagersGifts compact item={this.state.item}/>:<View/>}
         </View>
       </PopupInfoCustom>
     )
@@ -775,7 +798,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     zIndex:50,
     elevation: 5,
-    position:"absolute",
   },
   rowImage:{
     resizeMode:'contain',

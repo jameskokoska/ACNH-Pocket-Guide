@@ -3,10 +3,13 @@ export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Tap / long press any image on item popup to view larger image
+-Fixed flimsy net and flimsy fishing rod durability
+-
 -Backup now supports Turnip prices and ToDo list
 -Added [Battery saver / Increase performance] setting
 -Added erase profile to profile page
--Added collecton count for each profile on profile page
+-Added collection count for each profile on profile page
 -Tap in empty space to dismiss popups
 -Active creatures information popup
 -Profile page optimizations

@@ -284,7 +284,12 @@ class App extends Component {
     await this.loadProfileData(global.profile);
     
     //Load Global Data
-    await loadGlobalData();
+    let loadResult = await loadGlobalData();
+    if(loadResult === false){
+      this.setState({loaded:false})
+      this.popupGenerateMenu?.setPopupVisible(true)
+      return
+    }
 
     this.updateSettings();
 
@@ -629,21 +634,21 @@ class PopupInfos extends Component {
         AsyncStorage.setItem("backupPopupDismissed", "true");
         this.popupBackup?.setPopupVisible(true)
       }
-      // let supportPopupDismissed = await getStorage("supportPopupDismissed","false");
-      // if(supportPopupDismissed==="false" && numLogins >= 6){
-      //   AsyncStorage.setItem("supportPopupDismissed", "true");
-      //   this.popupSupport?.setPopupVisible(true)
-      // }
+      let supportPopupDismissed = await getStorage("supportPopupDismissed","false");
+      if(supportPopupDismissed==="false" && numLogins >= 6){
+        AsyncStorage.setItem("supportPopupDismissed", "true");
+        this.popupSupport3?.setPopupVisible(true)
+      }
       // let supportPopupDismissed2 = await getStorage("supportPopupDismissed2","false");
       // if(supportPopupDismissed2==="false" && numLogins >= 6){
       //   AsyncStorage.setItem("supportPopupDismissed2", "true");
       //   this.popupSupport2?.setPopupVisible(true)
       // }
-      let supportPopupDismissed3 = await getStorage("supportPopupDismissed3","false");
-      if(supportPopupDismissed3==="false" && numLogins >= 6){
-        AsyncStorage.setItem("supportPopupDismissed3", "true");
-        this.popupSupport3?.setPopupVisible(true)
-      }
+      // let supportPopupDismissed3 = await getStorage("supportPopupDismissed3","false");
+      // if(supportPopupDismissed3==="false" && numLogins >= 6){
+      //   AsyncStorage.setItem("supportPopupDismissed3", "true");
+      //   this.popupSupport3?.setPopupVisible(true)
+      // }
       // let supportPopupDismissed4 = await getStorage("supportPopupDismissed4","false");
       // if(supportPopupDismissed4==="false" && numLogins >= 6){
       //   AsyncStorage.setItem("supportPopupDismissed4", "true");
