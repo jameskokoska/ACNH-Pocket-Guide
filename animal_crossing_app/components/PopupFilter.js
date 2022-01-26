@@ -61,6 +61,7 @@ class PopupFilter extends Component {
         "children": [
           {name:"Reverse sorting direction", id:"Reverse direction"},
           {name:"", id:"break"},
+          {name:"Collected", id:"Sort-Collected"},
           {name:"Type category", id:"Sort-Data Category"},
           {name:"Sell price", id:"SortInt-Sell"},
           {name:"Buy price", id:"SortInt-Buy"},
@@ -77,6 +78,7 @@ class PopupFilter extends Component {
         "children": [
           {name:"Reverse sorting direction", id:"Reverse direction"},
           {name:"", id:"break"},
+          {name:"Collected", id:"Sort-Collected"},
           {name:"Sell price", id:"SortInt-Sell"},
           {name:"Buy price", id:"SortInt-Buy"},
           {name:"Color 1", id:"Sort-Color 1"},
@@ -91,6 +93,7 @@ class PopupFilter extends Component {
         "children": [
           {name:"Reverse sorting direction", id:"Reverse direction"},
           {name:"", id:"break"},
+          {name:"Collected", id:"Sort-Collected"},
           {name:"Sell price", id:"SortInt-Sell"},
           {name:"Buy price", id:"SortInt-Buy"},
         ]
@@ -238,7 +241,11 @@ class PopupFilter extends Component {
     } else if(this.props.title==="New Items"){
       this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.villagerFilters, ...notCraftVariationsFilters, ...categoriesAll, ...this.invertFilters];
     } else if(this.props.title==="Everything" || this.props.title==="Wishlist" || this.props.title==="Search Items"){
-      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.museumFilters, ...this.villagerFilters, ...categoriesAll, ...notCraftVariationsFilters, ...activeFilters, ...filterDefinitions["All Items"], ...this.genderFilters, ...this.invertFilters];
+      let currentMuseumFilters = []
+      if(this.props.title!=="Wishlist"){
+        currentMuseumFilters = this.museumFilters
+      }
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...currentMuseumFilters, ...this.villagerFilters, ...categoriesAll, ...notCraftVariationsFilters, ...activeFilters, ...filterDefinitions["All Items"], ...this.genderFilters, ...this.invertFilters];
     } else if(this.props.title==="Construction"){
       const categories = [{
         "name": "Type Categories",
@@ -261,6 +268,8 @@ class PopupFilter extends Component {
       this.possibleFilters = [...this.sortByFiltersReducedWithColor, ...this.possibleFilters]
     } else if(this.props.title==="Materials"){
       this.possibleFilters = [...this.sortByFiltersReduced, ...this.possibleFilters]
+    } else {
+      this.possibleFilters = [...this.possibleFilters, ...this.sortByFiltersReduced]
     }
   }
 

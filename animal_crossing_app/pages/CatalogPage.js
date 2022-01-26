@@ -116,7 +116,10 @@ class CatalogPage extends Component {
           <TextInput
             allowFontScaling={false}
             style={{borderRadius: 10, paddingVertical: 10, paddingHorizontal: 20, marginHorizontal: 20, fontSize: 18, backgroundColor:colors.white[global.darkMode], color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
-            onChangeText={(text) => {this.linkInput = text}}
+            onChangeText={(text) => {
+              this.linkInput = text.replace("https://","")
+              this.linkInput = "https://" + this.linkInput
+            }}
             placeholder={"https://nook.lol/abc123"}
             placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
             multiline={false}
@@ -152,6 +155,7 @@ class CatalogPage extends Component {
           button1Action={()=>{}}
           text={"Importing..."}
           textLower={"Please wait"}
+          loading
         />
      </View>
     )

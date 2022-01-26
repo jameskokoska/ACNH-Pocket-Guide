@@ -707,7 +707,7 @@ function ListPage(props){
         }
       }
       for(var sort = 0; sort<searchActual.length; sort++){
-        if(searchActual[sort].includes("Sort-")){
+        if(searchActual[sort].includes("Sort-") && searchActual[sort]!=="Sort-Collected"){
           var propertyToSort = searchActual[sort].replace("Sort-","")
           dataUpdated.sort(function(a, b) {
             var valueA = a[propertyToSort]
@@ -783,6 +783,33 @@ function ListPage(props){
             }
           });
         }
+      }
+
+      //Sort this last
+      if(searchActual.includes("Sort-Collected")){
+        dataUpdated.sort(function(a, b) {
+          var valueA = inChecklist(a["checkListKey"])
+          if(valueA===undefined && shouldSortDirection){
+            valueA=10000000000000
+          } else if(valueA===undefined){
+            valueA=0
+          }
+          var valueB = inChecklist(b["checkListKey"])
+          if(valueB===undefined && shouldSortDirection){
+            valueB=10000000000000
+          } else if(valueA===undefined){
+            valueB=0
+          }
+          
+          var textA = valueA?10000:0;
+          var textB = valueB?10000:0;
+          if(searchActual.includes)
+          if(shouldSortDirection){
+            return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+          } else {
+            return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+          }
+        });
       }
 
       if(props.newItems){
