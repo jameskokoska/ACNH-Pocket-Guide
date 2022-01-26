@@ -3,6 +3,10 @@ export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added C.J. and Flick sell prices to Fish and Bugs
+-UI and icon Adjustments
+-Updated privacy policy link in About page
+-
 -Tap / long press any image on item popup to view larger image
 -Fixed flimsy net and flimsy fishing rod durability
 -

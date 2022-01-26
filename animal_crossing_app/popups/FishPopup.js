@@ -29,6 +29,13 @@ class FishPopup extends Component {
         ending2={" " + attemptToTranslate("bells")}
       />
       <InfoLine
+        image={require("../assets/icons/cj.png")} 
+        item={this.props.item}
+        textProperty={["Sell"]}
+        ending={" " + attemptToTranslate("bells")}
+        special="C.J."
+      />
+      <InfoLine
         image={require("../assets/icons/hatching.png")} 
         item={dummyItem}
         textProperty={["Spawn Rates String"]}

@@ -195,10 +195,17 @@ class CharacterItem extends Component {
         style={styles.rowImage}
       />
     }else{
-      imageComponent = <Image
-        style={styles.rowImage}
-        source={this.props.character.picture}
-      />
+      if(this.props.character?.name!==undefined && (this.props.character.name==="C.J." || this.props.character.name==="Flick")){
+        imageComponent = <Image
+          style={[styles.rowImage,{width:40, height:40}]}
+          source={this.props.character.picture}
+        />
+      }else{
+        imageComponent = <Image
+          style={styles.rowImage}
+          source={this.props.character.picture}
+        />
+      }
     }
     var dayPassBack;
     if(dayDisplay===""){

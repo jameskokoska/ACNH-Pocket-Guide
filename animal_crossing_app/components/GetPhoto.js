@@ -510,9 +510,9 @@ export function getPhotoCorner(name){
   else if(name.includes("treasure trawler"))
     return <Image source={require("../assets/icons/ship.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>
   else if(name.includes("c.j."))
-    return <Image source={require("../assets/icons/cj.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
+    return <Image source={require("../assets/icons/cj.png")} style={{height: 44, width: 44, resizeMode:'contain'}}/>
   else if(name.includes("flick"))
-    return <Image source={require("../assets/icons/flick.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
+    return <Image source={require("../assets/icons/flick.png")} style={{height: 44, width: 44, resizeMode:'contain'}}/>
   else if(name.includes("fish") || name.includes("catching"))
     return <Image source={require("../assets/icons/fish.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
   else if(name.includes("net"))

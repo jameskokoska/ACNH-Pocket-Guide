@@ -249,6 +249,14 @@ export class InfoLine extends Component {
       // console.log("bell boom")
       text = commas(parseInt(parseInt(this.props.item[this.props.textProperty])*1.2))
     }
+    
+    if(this.props.special!==undefined && this.props.special==="C.J."){
+      extraImageSource = <Image style={[styles.infoLineImage,{marginRight:2}]} source={require("../assets/icons/coin.png")}/>
+      text = commas(parseInt(parseInt(this.props.item[this.props.textProperty])*1.5))
+    } else if(this.props.special!==undefined && this.props.special==="Flick"){
+      extraImageSource = <Image style={[styles.infoLineImage,{marginRight:2}]} source={require("../assets/icons/coin.png")}/>
+      text = commas(parseInt(parseInt(this.props.item[this.props.textProperty])*1.5))
+    }
 
     //handle poki
     if(this.props.poki===true && this.props.textProperty[0]!==undefined && this.props.textProperty[0]==="Exchange Currency" && this.props.item[this.props.textProperty[0]]==="Poki"){

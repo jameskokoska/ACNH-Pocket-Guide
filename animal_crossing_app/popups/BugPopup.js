@@ -21,6 +21,13 @@ class BugPopup extends Component {
         ending={" " + attemptToTranslate("bells")}
       />
       <InfoLine
+        image={require("../assets/icons/flick.png")} 
+        item={this.props.item}
+        textProperty={["Sell"]}
+        ending={" " + attemptToTranslate("bells")}
+        special="Flick"
+      />
+      <InfoLine
         image={require("../assets/icons/weather.png")} 
         item={this.props.item}
         textProperty={["Weather"]}
