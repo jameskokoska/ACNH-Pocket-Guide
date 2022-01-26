@@ -39,7 +39,7 @@
         "READ_EXTERNAL_STORAGE"
       ],
       "package": "com.acnh.pocket_guide",
-      "versionCode": 240
+      "versionCode": 241
     },
     "web": {
       "favicon": "./assets/icon.png"

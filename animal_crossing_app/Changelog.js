@@ -5,7 +5,7 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -Added C.J. and Flick sell prices to Fish and Bugs
 -Can now sort on more pages
--Added Sort by... Collection option
+-Added Sort by... Collected option
 -Updated privacy policy link in About page
 -Catalog import supports link with/without 'https://'
 -Catalog import loading indicator
