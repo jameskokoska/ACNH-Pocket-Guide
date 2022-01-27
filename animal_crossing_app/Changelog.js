@@ -5,6 +5,7 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const changelog = `
 -Updated translations
 -Fixed ToDo list adding item crash
+-Fixed store hours at 5AM
 -
 -Added C.J. and Flick sell prices to Fish and Bugs
 -Can now sort on more pages
