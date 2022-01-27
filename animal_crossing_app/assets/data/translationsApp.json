@@ -33,7 +33,7 @@
             "Portuguese": "Acompanhe a sua coleção através do ACNH com o Pocket Guide!"
         },
         {
-            "English": "With a modern and well polished design ACNH Pocket Guide is the best guide for tracking your collection as you progress through the game. View information on collectibles and creatures, as well as upcoming in game events. With the latest game information, this is the one stop for all your ACNH needs!",
+            "English": "With a modern and well polished design, ACNH Pocket Guide is the best guide for tracking your collection as you progress through the game. View information on collectibles and creatures, as well as upcoming in game events. With the latest game information, this is the one stop for all your ACNH needs!",
             "English (Europe)": "With a modern and well polished design ACNH Pocket Guide is the best guide for tracking your collection as you progress through the game. View information on collectibles and creatures, as well as upcoming in game events. With the latest game information, this is the one stop for all your ACNH needs!",
             "French": "Avec un design moderne et soigné, ACNH Pocket Guide est le meilleur guide pour suivre votre collection au fur et à mesure que vous progressez dans le jeu. Affichez des informations sur les objets de collection et les créatures, ainsi que sur les événements à venir dans le jeu. Avec les dernières informations sur le jeu, c'est le lieu unique pour tous vos besoins ACNH!",
             "French (US)": "Avec un design moderne et soigné, ACNH Pocket Guide est le meilleur guide pour suivre votre collection au fur et à mesure que vous progressez dans le jeu. Affichez des informations sur les objets de collection et les créatures, ainsi que sur les événements à venir dans le jeu. Avec les dernières informations sur le jeu, c'est le lieu unique pour tous vos besoins ACNH!",
@@ -570,21 +570,21 @@
     ],
     "Main": [
         {
-            "English": "950 items",
-            "English (Europe)": "950 items",
-            "French": "938 items (12 items missing)",
-            "French (US)": "938 items (12 items missing)",
-            "German": "950 items",
-            "Spanish": "938 items (12 items missing)",
-            "Spanish (US)": "934 items (16 items missing)",
-            "Russian": "949 items (1 items missing)",
-            "Italian": "948 items (2 items missing)",
-            "Dutch": "923 items (27 items missing)",
-            "Chinese": "897 items (53 items missing)",
-            "Chinese (Traditional)": "0 items (950 items missing)",
-            "Japanese": "0 items (950 items missing)",
-            "Korean": "0 items (950 items missing)",
-            "Portuguese": "946 items (4 items missing)"
+            "English": "1075 items",
+            "English (Europe)": "1075 items",
+            "French": "938 items (137 items missing)",
+            "French (US)": "938 items (137 items missing)",
+            "German": "951 items (124 items missing)",
+            "Spanish": "938 items (137 items missing)",
+            "Spanish (US)": "934 items (141 items missing)",
+            "Russian": "949 items (126 items missing)",
+            "Italian": "948 items (127 items missing)",
+            "Dutch": "923 items (152 items missing)",
+            "Chinese": "897 items (178 items missing)",
+            "Chinese (Traditional)": "0 items (1075 items missing)",
+            "Japanese": "0 items (1075 items missing)",
+            "Korean": "0 items (1075 items missing)",
+            "Portuguese": "946 items (129 items missing)"
         },
         {
             "English": "Home",
@@ -13746,6 +13746,507 @@
             "Italian": "Avvertimento!",
             "Dutch": "Waarschuwing!",
             "Portuguese": "Aviso!"
+        },
+        {
+            "English": "Importing all data will replace any current data, not merge!",
+            "English (Europe)": "Importing all data will replace any current data, not merge!",
+            "German": "Beim Importieren aller Daten werden alle aktuellen Daten ersetzt, nicht zusammengeführt!"
+        },
+        {
+            "English": "Mario",
+            "English (Europe)": "Mario"
+        },
+        {
+            "English": "Cinnamoroll",
+            "English (Europe)": "Cinnamoroll"
+        },
+        {
+            "English": "Hello Kitty",
+            "English (Europe)": "Hello Kitty"
+        },
+        {
+            "English": "Kerokerokeroppi",
+            "English (Europe)": "Kerokerokeroppi"
+        },
+        {
+            "English": "Kiki & Lala",
+            "English (Europe)": "Kiki & Lala"
+        },
+        {
+            "English": "My Melody",
+            "English (Europe)": "My Melody"
+        },
+        {
+            "English": "Pompompurin",
+            "English (Europe)": "Pompompurin"
+        },
+        {
+            "English": "Office",
+            "English (Europe)": "Office"
+        },
+        {
+            "English": "TableClock",
+            "English (Europe)": "TableClock"
+        },
+        {
+            "English": "Bromide",
+            "English (Europe)": "Bromide"
+        },
+        {
+            "English": "Pillar",
+            "English (Europe)": "Pillar"
+        },
+        {
+            "English": "Counter",
+            "English (Europe)": "Counter"
+        },
+        {
+            "English": "FtrWall",
+            "English (Europe)": "FtrWall"
+        },
+        {
+            "English": "Cloth Walls",
+            "English (Europe)": "Cloth Walls"
+        },
+        {
+            "English": "Asia",
+            "English (Europe)": "Asia"
+        },
+        {
+            "English": "Fruit Walls",
+            "English (Europe)": "Fruit Walls"
+        },
+        {
+            "English": "Tile Walls",
+            "English (Europe)": "Tile Walls"
+        },
+        {
+            "English": "Special Walls",
+            "English (Europe)": "Special Walls"
+        },
+        {
+            "English": "Special Cool Nature Walls",
+            "English (Europe)": "Special Cool Nature Walls"
+        },
+        {
+            "English": "Special Warm Nature Walls",
+            "English (Europe)": "Special Warm Nature Walls"
+        },
+        {
+            "English": "Nature Walls",
+            "English (Europe)": "Nature Walls"
+        },
+        {
+            "English": "Wood Walls",
+            "English (Europe)": "Wood Walls"
+        },
+        {
+            "English": "Iron Walls",
+            "English (Europe)": "Iron Walls"
+        },
+        {
+            "English": "Art Deco Walls",
+            "English (Europe)": "Art Deco Walls"
+        },
+        {
+            "English": "Country",
+            "English (Europe)": "Country"
+        },
+        {
+            "English": "Morocco",
+            "English (Europe)": "Morocco"
+        },
+        {
+            "English": "Wood Tile Walls",
+            "English (Europe)": "Wood Tile Walls"
+        },
+        {
+            "English": "Hall Walls",
+            "English (Europe)": "Hall Walls"
+        },
+        {
+            "English": "Pegboard Walls",
+            "English (Europe)": "Pegboard Walls"
+        },
+        {
+            "English": "Two-Tone Tile Walls",
+            "English (Europe)": "Two-Tone Tile Walls"
+        },
+        {
+            "English": "Brick",
+            "English (Europe)": "Brick"
+        },
+        {
+            "English": "Crown Walls",
+            "English (Europe)": "Crown Walls"
+        },
+        {
+            "English": "Neta Walls",
+            "English (Europe)": "Neta Walls"
+        },
+        {
+            "English": "Manor Walls",
+            "English (Europe)": "Manor Walls"
+        },
+        {
+            "English": "Diner Walls",
+            "English (Europe)": "Diner Walls"
+        },
+        {
+            "English": "Flower Walls",
+            "English (Europe)": "Flower Walls"
+        },
+        {
+            "English": "Heart Walls",
+            "English (Europe)": "Heart Walls"
+        },
+        {
+            "English": "Honeycomb",
+            "English (Europe)": "Honeycomb"
+        },
+        {
+            "English": "Flower Pop Walls",
+            "English (Europe)": "Flower Pop Walls"
+        },
+        {
+            "English": "Panel Mold Walls",
+            "English (Europe)": "Panel Mold Walls"
+        },
+        {
+            "English": "Painted Wood",
+            "English (Europe)": "Painted Wood"
+        },
+        {
+            "English": "Toy Walls",
+            "English (Europe)": "Toy Walls"
+        },
+        {
+            "English": "Dollhouse Walls",
+            "English (Europe)": "Dollhouse Walls"
+        },
+        {
+            "English": "Tin Walls",
+            "English (Europe)": "Tin Walls"
+        },
+        {
+            "English": "Simple Walls",
+            "English (Europe)": "Simple Walls"
+        },
+        {
+            "English": "Metro Walls",
+            "English (Europe)": "Metro Walls"
+        },
+        {
+            "English": "Stucco Walls",
+            "English (Europe)": "Stucco Walls"
+        },
+        {
+            "English": "Rose Walls",
+            "English (Europe)": "Rose Walls"
+        },
+        {
+            "English": "Stripe Walls",
+            "English (Europe)": "Stripe Walls"
+        },
+        {
+            "English": "Herringbone",
+            "English (Europe)": "Herringbone"
+        },
+        {
+            "English": "Tea Room Walls",
+            "English (Europe)": "Tea Room Walls"
+        },
+        {
+            "English": "Sanrio Walls",
+            "English (Europe)": "Sanrio Walls"
+        },
+        {
+            "English": "Library Walls",
+            "English (Europe)": "Library Walls"
+        },
+        {
+            "English": "Puzzle Walls",
+            "English (Europe)": "Puzzle Walls"
+        },
+        {
+            "English": "Stone Walls",
+            "English (Europe)": "Stone Walls"
+        },
+        {
+            "English": "Cute Walls",
+            "English (Europe)": "Cute Walls"
+        },
+        {
+            "English": "Wood Plank Walls",
+            "English (Europe)": "Wood Plank Walls"
+        },
+        {
+            "English": "Special Inorganic Walls",
+            "English (Europe)": "Special Inorganic Walls"
+        },
+        {
+            "English": "WallFacility",
+            "English (Europe)": "WallFacility"
+        },
+        {
+            "English": "WallGoldSilverBronze",
+            "English (Europe)": "WallGoldSilverBronze"
+        },
+        {
+            "English": "Tile Floors",
+            "English (Europe)": "Tile Floors"
+        },
+        {
+            "English": "Cloth Floors",
+            "English (Europe)": "Cloth Floors"
+        },
+        {
+            "English": "Arched Brick",
+            "English (Europe)": "Arched Brick"
+        },
+        {
+            "English": "Simple Parquet",
+            "English (Europe)": "Simple Parquet"
+        },
+        {
+            "English": "Grassland",
+            "English (Europe)": "Grassland"
+        },
+        {
+            "English": "Nature - Green",
+            "English (Europe)": "Nature - Green"
+        },
+        {
+            "English": "Stone Floors",
+            "English (Europe)": "Stone Floors"
+        },
+        {
+            "English": "Wood Floors",
+            "English (Europe)": "Wood Floors"
+        },
+        {
+            "English": "Iron Parquet",
+            "English (Europe)": "Iron Parquet"
+        },
+        {
+            "English": "Special Inorganic Floors",
+            "English (Europe)": "Special Inorganic Floors"
+        },
+        {
+            "English": "Deco Wood",
+            "English (Europe)": "Deco Wood"
+        },
+        {
+            "English": "Rubber",
+            "English (Europe)": "Rubber"
+        },
+        {
+            "English": "Sports Floor",
+            "English (Europe)": "Sports Floor"
+        },
+        {
+            "English": "Argyle",
+            "English (Europe)": "Argyle"
+        },
+        {
+            "English": "Nature - Fallen Leaves",
+            "English (Europe)": "Nature - Fallen Leaves"
+        },
+        {
+            "English": "Sanrio Floor",
+            "English (Europe)": "Sanrio Floor"
+        },
+        {
+            "English": "Machine Floor",
+            "English (Europe)": "Machine Floor"
+        },
+        {
+            "English": "Special Nature Floors",
+            "English (Europe)": "Special Nature Floors"
+        },
+        {
+            "English": "Puzzle Mat",
+            "English (Europe)": "Puzzle Mat"
+        },
+        {
+            "English": "Panel",
+            "English (Europe)": "Panel"
+        },
+        {
+            "English": "Sidewalk",
+            "English (Europe)": "Sidewalk"
+        },
+        {
+            "English": "Tile Checker",
+            "English (Europe)": "Tile Checker"
+        },
+        {
+            "English": "Colorful Wood",
+            "English (Europe)": "Colorful Wood"
+        },
+        {
+            "English": "Parquet",
+            "English (Europe)": "Parquet"
+        },
+        {
+            "English": "Nature - Brown",
+            "English (Europe)": "Nature - Brown"
+        },
+        {
+            "English": "Japanese",
+            "English (Europe)": "Japanese"
+        },
+        {
+            "English": "Decadence",
+            "English (Europe)": "Decadence"
+        },
+        {
+            "English": "Animal Floor",
+            "English (Europe)": "Animal Floor"
+        },
+        {
+            "English": "Luxury",
+            "English (Europe)": "Luxury"
+        },
+        {
+            "English": "Kitchen Floors",
+            "English (Europe)": "Kitchen Floors"
+        },
+        {
+            "English": "Neta",
+            "English (Europe)": "Neta"
+        },
+        {
+            "English": "Nature - White",
+            "English (Europe)": "Nature - White"
+        },
+        {
+            "English": "Tatami",
+            "English (Europe)": "Tatami"
+        },
+        {
+            "English": "Tatami Panel",
+            "English (Europe)": "Tatami Panel"
+        },
+        {
+            "English": "Simple Carpet",
+            "English (Europe)": "Simple Carpet"
+        },
+        {
+            "English": "Iron",
+            "English (Europe)": "Iron"
+        },
+        {
+            "English": "FloorSimpleGlodSilverBronze",
+            "English (Europe)": "FloorSimpleGlodSilverBronze"
+        },
+        {
+            "English": "Slender Rugs",
+            "English (Europe)": "Slender Rugs"
+        },
+        {
+            "English": "Fruit Rugs",
+            "English (Europe)": "Fruit Rugs"
+        },
+        {
+            "English": "Park Rugs",
+            "English (Europe)": "Park Rugs"
+        },
+        {
+            "English": "Pattern Rugs",
+            "English (Europe)": "Pattern Rugs"
+        },
+        {
+            "English": "Wood Rugs",
+            "English (Europe)": "Wood Rugs"
+        },
+        {
+            "English": "Kitchen Rugs",
+            "English (Europe)": "Kitchen Rugs"
+        },
+        {
+            "English": "Slender Pattern Rugs",
+            "English (Europe)": "Slender Pattern Rugs"
+        },
+        {
+            "English": "Shaggy Round Rugs",
+            "English (Europe)": "Shaggy Round Rugs"
+        },
+        {
+            "English": "Message Mats",
+            "English (Europe)": "Message Mats"
+        },
+        {
+            "English": "Icon Rugs",
+            "English (Europe)": "Icon Rugs"
+        },
+        {
+            "English": "Sanrio Rugs",
+            "English (Europe)": "Sanrio Rugs"
+        },
+        {
+            "English": "Heart Rugs",
+            "English (Europe)": "Heart Rugs"
+        },
+        {
+            "English": "Rose Rug",
+            "English (Europe)": "Rose Rug"
+        },
+        {
+            "English": "Simple Rugs",
+            "English (Europe)": "Simple Rugs"
+        },
+        {
+            "English": "Hazure01",
+            "English (Europe)": "Hazure01"
+        },
+        {
+            "English": "Hazure02",
+            "English (Europe)": "Hazure02"
+        },
+        {
+            "English": "Hazure03",
+            "English (Europe)": "Hazure03"
+        },
+        {
+            "English": "Picture",
+            "English (Europe)": "Picture"
+        },
+        {
+            "English": "Sculpture",
+            "English (Europe)": "Sculpture"
+        },
+        {
+            "English": "Haniwa",
+            "English (Europe)": "Haniwa"
+        },
+        {
+            "English": "Etc",
+            "English (Europe)": "Etc"
+        },
+        {
+            "English": "Unnecessary",
+            "English (Europe)": "Unnecessary"
+        },
+        {
+            "English": "FossilUnknown",
+            "English (Europe)": "FossilUnknown"
+        },
+        {
+            "English": "FieldWeedLight",
+            "English (Europe)": "FieldWeedLight"
+        },
+        {
+            "English": "HaniwaPiece",
+            "English (Europe)": "HaniwaPiece"
+        },
+        {
+            "English": "FieldVine",
+            "English (Europe)": "FieldVine"
+        },
+        {
+            "English": "NA",
+            "English (Europe)": "NA"
         }
     ],
     "Sources": [
@@ -13754,7 +14255,7 @@
             "English (Europe)": "161 items",
             "French": "123 items (38 items missing)",
             "French (US)": "121 items (40 items missing)",
-            "German": "159 items (2 items missing)",
+            "German": "161 items",
             "Spanish": "95 items (66 items missing)",
             "Spanish (US)": "50 items (111 items missing)",
             "Italian": "129 items (32 items missing)",
@@ -15199,12 +15700,13 @@
         {
             "English": "HHP Café",
             "English (Europe)": "HHP Café",
-            "German": "Café (HHP)",
+            "German": "Café (FHA)",
             "Dutch": "HHP Café"
         },
         {
             "English": "CookPumpkin",
-            "English (Europe)": "CookPumpkin"
+            "English (Europe)": "CookPumpkin",
+            "German": "Kürbisrezepte"
         },
         {
             "English": "Donating all bugs",
@@ -15244,7 +15746,7 @@
         {
             "English": "OneRoomTailorKKFes",
             "English (Europe)": "OneRoomTailorKKFes",
-            "German": "Boutique während Musikfestival (HHP)"
+            "German": "Boutique während Musikfestival (FHA)"
         },
         {
             "English": "NotAvailable",
@@ -15328,12 +15830,12 @@
         {
             "English": "HHP island bottles",
             "English (Europe)": "HHP island bottles",
-            "German": "Ferienhausagentur Flaschenpost (HHP)"
+            "German": "Ferienhausagentur Flaschenpost (FHA)"
         },
         {
             "English": "DJ K.K. concert",
             "English (Europe)": "DJ K.K. concert",
-            "German": "Musikfestival (HHP)"
+            "German": "Musikfestival (FHA)"
         },
         {
             "English": "Saharah's Co-op",
@@ -15359,11 +15861,12 @@
         {
             "English": "DJ KK concert",
             "English (Europe)": "DJ KK concert",
-            "German": "Musikfestival (HHP)"
+            "German": "Musikfestival (FHA)"
         },
         {
             "English": "HHP Apparel Shop",
-            "English (Europe)": "HHP Apparel Shop"
+            "English (Europe)": "HHP Apparel Shop",
+            "German": "FHA Boutique "
         }
     ],
     "Source Notes": [
@@ -15372,7 +15875,7 @@
             "English (Europe)": "175 items",
             "French": "151 items (24 items missing)",
             "French (US)": "151 items (24 items missing)",
-            "German": "172 items (3 items missing)",
+            "German": "175 items",
             "Spanish": "123 items (52 items missing)",
             "Spanish (US)": "114 items (61 items missing)",
             "Italian": "13 items (162 items missing)",
@@ -16988,34 +17491,37 @@
         },
         {
             "English": "Available during DJ KK festival",
-            "English (Europe)": "Available during DJ KK festival"
+            "English (Europe)": "Available during DJ KK festival",
+            "German": "Erhältlich während des DJ KK-Musikfestivals"
         },
         {
             "English": "Only available as a work clothes for Paradise Planning",
-            "English (Europe)": "Only available as a work clothes for Paradise Planning"
+            "English (Europe)": "Only available as a work clothes for Paradise Planning",
+            "German": "Nur als Arbeitskleidung für Happy Home Paradise erhältlich"
         },
         {
             "English": "Obtain Turkey Day Recipes from Franklin or buy it from Nook's Cranny",
-            "English (Europe)": "Obtain Turkey Day Recipes from Franklin or buy it from Nook's Cranny"
+            "English (Europe)": "Obtain Turkey Day Recipes from Franklin or buy it from Nook's Cranny",
+            "German": "Hole dir die Rezepte für den Schlmmertag von Gernod oder kaufe sie in Nook's Laden"
         }
     ],
     "Event Names": [
         {
-            "English": "71 items",
-            "English (Europe)": "71 items",
-            "French": "52 items (19 items missing)",
-            "French (US)": "52 items (19 items missing)",
-            "German": "71 items",
-            "Spanish": "38 items (33 items missing)",
-            "Spanish (US)": "38 items (33 items missing)",
-            "Italian": "0 items (71 items missing)",
-            "Dutch": "25 items (46 items missing)",
-            "Chinese": "0 items (71 items missing)",
-            "Chinese (Traditional)": "0 items (71 items missing)",
-            "Japanese": "0 items (71 items missing)",
-            "Korean": "0 items (71 items missing)",
-            "Russian": "52 items (19 items missing)",
-            "Portuguese": "0 items (71 items missing)"
+            "English": "72 items",
+            "English (Europe)": "72 items",
+            "French": "52 items (20 items missing)",
+            "French (US)": "52 items (20 items missing)",
+            "German": "71 items (1 items missing)",
+            "Spanish": "38 items (34 items missing)",
+            "Spanish (US)": "38 items (34 items missing)",
+            "Italian": "0 items (72 items missing)",
+            "Dutch": "25 items (47 items missing)",
+            "Chinese": "0 items (72 items missing)",
+            "Chinese (Traditional)": "0 items (72 items missing)",
+            "Japanese": "0 items (72 items missing)",
+            "Korean": "0 items (72 items missing)",
+            "Russian": "52 items (20 items missing)",
+            "Portuguese": "0 items (72 items missing)"
         },
         {
             "English": "acorns and pine cones",
@@ -17628,6 +18134,10 @@
             "English (Europe)": "Tomato Festival",
             "German": "Tomatenfest",
             "Dutch": "Tomatenfestival"
+        },
+        {
+            "English": "New Year's Eve (Russia)",
+            "English (Europe)": "New Year's Eve (Russia)"
         }
     ],
     "Missing Items": [
@@ -18967,21 +19477,21 @@
     ],
     "Achievements": [
         {
-            "English": "913 items",
-            "English (Europe)": "904 items (9 items missing)",
-            "French": "850 items (63 items missing)",
-            "French (US)": "845 items (68 items missing)",
-            "German": "913 items",
-            "Spanish": "105 items (808 items missing)",
-            "Spanish (US)": "0 items (913 items missing)",
-            "Italian": "0 items (913 items missing)",
-            "Dutch": "249 items (664 items missing)",
-            "Chinese": "75 items (838 items missing)",
-            "Chinese (Traditional)": "0 items (913 items missing)",
-            "Japanese": "0 items (913 items missing)",
-            "Korean": "0 items (913 items missing)",
-            "Russian": "0 items (913 items missing)",
-            "Portuguese": "0 items (913 items missing)"
+            "English": "923 items",
+            "English (Europe)": "923 items",
+            "French": "850 items (73 items missing)",
+            "French (US)": "845 items (78 items missing)",
+            "German": "913 items (10 items missing)",
+            "Spanish": "105 items (818 items missing)",
+            "Spanish (US)": "0 items (923 items missing)",
+            "Italian": "0 items (923 items missing)",
+            "Dutch": "249 items (674 items missing)",
+            "Chinese": "75 items (848 items missing)",
+            "Chinese (Traditional)": "0 items (923 items missing)",
+            "Japanese": "0 items (923 items missing)",
+            "Korean": "0 items (923 items missing)",
+            "Russian": "0 items (923 items missing)",
+            "Portuguese": "0 items (923 items missing)"
         },
         {
             "English": "(island name) Miles!",
@@ -25629,39 +26139,88 @@
         },
         {
             "English": "Learn a specified number of cooking DIY recipes",
+            "English (Europe)": "Learn a specified number of cooking DIY recipes",
             "German": "Lerne eine bestimmte Anzahl von Rezepten."
         },
         {
             "English": "Cook a specified number of foods",
+            "English (Europe)": "Cook a specified number of foods",
             "German": "Koche eine bestimmte Anzahl an Gerichten."
         },
         {
             "English": "Dig up your first gyroid",
+            "English (Europe)": "Dig up your first gyroid",
             "German": "Grabe zum ersten Mal einen Gyroiden aus."
         },
         {
             "English": "Touch specified number of unique gyroids",
+            "English (Europe)": "Touch specified number of unique gyroids",
             "German": "Hebe eine bestimmte Anzahl an Gyroiden auf."
         },
         {
             "English": "Plant a specified number of produce sprouts (replanting existing sprouts does not count)",
+            "English (Europe)": "Plant a specified number of produce sprouts (replanting existing sprouts does not count)",
             "German": "Pflanze eine bestimmte Anzahl von Gemüsesetzlingen (das Ausgraben und Umpflanzen existierender Gemüsepflanzen zählt nicht)."
         },
         {
             "English": "Harvest a specified number of produce",
+            "English (Europe)": "Harvest a specified number of produce",
             "German": "Ernte eine bestimmte Anzahl an Gemüse."
         },
         {
             "English": "Number of times you've gone on a Kapp'n tour",
+            "English (Europe)": "Number of times you've gone on a Kapp'n tour",
             "German": "Gehe auf eine Bestimmte Anzahl Bootsausflüge mit Käpten."
         },
         {
             "English": "Number of days you've gotten coffee from Brewster",
+            "English (Europe)": "Number of days you've gotten coffee from Brewster",
             "German": "Bestelle an einer bestimmten Anzahl unterschiedlicher Tage Kaffee im Café Taubenschlag."
         },
         {
             "English": "Number of days you've participated in group stretching",
+            "English (Europe)": "Number of days you've participated in group stretching",
             "German": "Nimm an einer bestimmten Anzahl unterschiedlicher Tage an der Gruppengymnastik teil."
+        },
+        {
+            "English": "It Guy; \"It\" Girl",
+            "English (Europe)": "It Guy; \"It\" Girl"
+        },
+        {
+            "English": "Groom; Bride",
+            "English (Europe)": "Groom; Bride"
+        },
+        {
+            "English": "Mr. Popular; Ms. Popular",
+            "English (Europe)": "Mr. Popular; Ms. Popular"
+        },
+        {
+            "English": "Hero; Heroine",
+            "English (Europe)": "Hero; Heroine"
+        },
+        {
+            "English": "Fitness Fan",
+            "English (Europe)": "Fitness Fan"
+        },
+        {
+            "English": "Athlete",
+            "English (Europe)": "Athlete"
+        },
+        {
+            "English": "Bodybuilder",
+            "English (Europe)": "Bodybuilder"
+        },
+        {
+            "English": "Health Nut",
+            "English (Europe)": "Health Nut"
+        },
+        {
+            "English": "Prince; Princess",
+            "English (Europe)": "Prince; Princess"
+        },
+        {
+            "English": "Emperor; Empress",
+            "English (Europe)": "Emperor; Empress"
         }
     ],
     "Cards": [
@@ -25670,7 +26229,7 @@
             "English (Europe)": "67 items (9 items missing)",
             "French": "53 items (23 items missing)",
             "French (US)": "53 items (23 items missing)",
-            "German": "75 items (1 items missing)",
+            "German": "76 items",
             "Spanish": "0 items (76 items missing)",
             "Spanish (US)": "0 items (76 items missing)",
             "Italian": "0 items (76 items missing)",
@@ -26204,7 +26763,8 @@
             "German": "Leuchtmoos-Karte"
         },
         {
-            "English": "MsgWherearenOffice00"
+            "English": "MsgWherearenOffice00",
+            "German": "FHA-Karte"
         },
         {
             "English": "Paradise Planning card",

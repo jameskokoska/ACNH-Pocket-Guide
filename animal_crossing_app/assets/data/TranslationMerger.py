@@ -10,10 +10,10 @@ propertiesToCheck = ["Name","Description", "Tag", "Achievement Description","Ach
 count=0
 length=0
 outputDictionary = {}
-ignore = ["Changelog","READ ME","Variants","Patterns","HHA Themes","HHA Set","HHA Situation","Special NPCs","Villagers Catch Phrase","Villagers"]
+ignore = ["Changelog","READ ME","Variants","Patterns","HHA Themes","HHA Set","HHA Situation","Special NPCs","Villagers Catch Phrase","Villagers","Paradise Planning"]
 
 debug = False
-debugEnd = True
+debugEnd = False
 
 print("Loading files")
 with open('data.json', encoding='utf-8-sig') as d:
@@ -72,16 +72,17 @@ for dataSheet in data:
                 if(datum.get("Source") not in sources):
                     sources.append(datum.get("Source"))
         for propertyToCheck in propertiesToCheck:
-            for translationSheet in translation:
-                if(translationSheet in ignore):
-                    continue
-                for translate in translation[translationSheet]:
-                    if(datum.get(propertyToCheck)==None or translate.get("English")==None):
-                        break
-                    elif(datum.get(propertyToCheck)==translate.get("English")):
-                        #datum.update(translate)                            
-                        outputDictionary[translate.get("English")] = translate
-                        found = True
+            #
+            #for translationSheet in translation:
+            #    if(translationSheet in ignore):
+            #        continue
+            #    for translate in translation[translationSheet]:
+            #        if(datum.get(propertyToCheck)==None or translate.get("English")==None):
+            #            break
+            #        elif(datum.get(propertyToCheck)==translate.get("English")):
+            #            #datum.update(translate)                            
+            #            outputDictionary[translate.get("English")] = translate
+            #            found = True
             if(found == False):
                 if(alreadyTranslated(datum.get(propertyToCheck))==False and datum.get(propertyToCheck) not in missingItems):
                     if(debug):
@@ -128,7 +129,32 @@ print(itemsNotTranslatedStill)
 
 print("Translated: " + str(missingItemsTranslated) + "/" + str(len(missingItems)))
 
+with open('translations.json', encoding='utf-8-sig') as t:
+    translation = json.load(t)
     
+#Go through original sheet
+itemsNotTranslatedStillStill = []
+for datum in itemsNotTranslatedStill:
+    found = False
+    for translationSheet in translation:
+        if(translationSheet in ignore):
+            continue
+        for translate in translation[translationSheet]:
+            if(translate.get("English")==None):
+                break
+            elif(datum==translate.get("English")):
+                outputDictionary[translate.get("English")] = translate
+                found = True
+    if(found==True):
+        continue
+    if(found==False):
+        itemsNotTranslatedStillStill.append(datum)
+        
+print("Items missed after more more translations:")
+print(itemsNotTranslatedStillStill)
+
+print("Translated: " + str(len(itemsNotTranslatedStillStill)) + "/" + str(len(itemsNotTranslatedStill)))
+
 print("Writing to Generated/translatedItems.json")
 with open('Generated/translatedItems.json', 'w', encoding='utf8') as json_file:
     json.dump(outputDictionary, json_file, ensure_ascii=False,indent=2)

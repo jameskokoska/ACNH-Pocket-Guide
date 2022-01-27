@@ -124,7 +124,49 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
           if(checkListKey[dataSet][0]==="villagerCheckList"){
             dataLoading[i]["NameLanguage"]=attemptToTranslateSpecial(dataLoading[i]["Name"],"villagers")
           } else {
-            dataLoading[i]["NameLanguage"]=attemptToTranslate(dataLoading[i]["Name"], true);
+            //handle special case where there are multiple items with same name
+            if(global.language!=="English" && dataLoading[i]["Name"]==="tank" ){
+              // inputData[dataSet][1] is DataCategory
+              if(inputData[dataSet][1] === "Housewares"){
+                let currentTranslation = {
+                  "CNzh": "燃料桶",
+                  "EUde": "Tank",
+                  "EUen": "tank",
+                  "EUes": "cisterna",
+                  "EUfr": "réservoir",
+                  "EUit": "serbatoio",
+                  "EUnl": "tank",
+                  "EUru": "резервуар",
+                  "JPja": "タンク",
+                  "KRko": "탱크",
+                  "TWzh": "燃料桶",
+                  "USen": "tank",
+                  "USes": "cisterna",
+                  "USfr": "réservoir"
+                }
+                dataLoading[i]["NameLanguage"]=translateRepeatItem(currentTranslation,global.language)
+              }else if(inputData[dataSet][1] === "Tops"){
+                let currentTranslation = {
+                  "CNzh": "坦克背心",
+                  "EUde": "Tanktop",
+                  "EUen": "tank",
+                  "EUes": "top básico",
+                  "EUfr": "débardeur",
+                  "EUit": "canotta",
+                  "EUnl": "tanktop",
+                  "EUru": "топ",
+                  "JPja": "タンクトップ",
+                  "KRko": "탱크톱",
+                  "TWzh": "坦克背心",
+                  "USen": "tank",
+                  "USes": "top básico",
+                  "USfr": "camisole"
+                }
+                dataLoading[i]["NameLanguage"]=translateRepeatItem(currentTranslation,global.language)
+              }
+            }else{
+              dataLoading[i]["NameLanguage"]=attemptToTranslate(dataLoading[i]["Name"], true);
+            }
           }
         // }
       } else {
@@ -135,6 +177,29 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
     dataLoadingTotal.push(dataLoading);
   }
   return dataLoadingTotal;
+}
+
+function translateRepeatItem(itemTranslation, language){
+  let languages = {
+    "Chinese":"CNzh",
+    "German":"EUde",
+    "English (Europe)":"EUen",
+    "Spanish":"EUes",
+    "French":"EUfr",
+    "Italian":"EUit",
+    "Dutch":"EUnl",
+    "Russian":"EUru",
+    "Japanese":"JPja",
+    "Korean":"KRko",
+    "Chinese (Traditional)":"TWzh",
+    "English":"USen",
+    "Spanish (US)":"USes",
+    "French (US)":"USfr"
+  }
+  if(languages[language]===undefined || itemTranslation[languages[language]]===undefined){
+    return ""
+  }
+  return itemTranslation[languages[language]]
 }
 
 export async function countCollection(checkListKeyStart){
