@@ -572,19 +572,19 @@
         {
             "English": "1075 items",
             "English (Europe)": "1075 items",
-            "French": "938 items (137 items missing)",
-            "French (US)": "938 items (137 items missing)",
-            "German": "951 items (124 items missing)",
-            "Spanish": "938 items (137 items missing)",
-            "Spanish (US)": "934 items (141 items missing)",
-            "Russian": "949 items (126 items missing)",
-            "Italian": "948 items (127 items missing)",
-            "Dutch": "923 items (152 items missing)",
+            "French": "1051 items (24 items missing)",
+            "French (US)": "1051 items (24 items missing)",
+            "German": "1063 items (12 items missing)",
+            "Spanish": "1051 items (24 items missing)",
+            "Spanish (US)": "1047 items (28 items missing)",
+            "Russian": "1062 items (13 items missing)",
+            "Italian": "1061 items (14 items missing)",
+            "Dutch": "1036 items (39 items missing)",
             "Chinese": "897 items (178 items missing)",
             "Chinese (Traditional)": "0 items (1075 items missing)",
             "Japanese": "0 items (1075 items missing)",
             "Korean": "0 items (1075 items missing)",
-            "Portuguese": "946 items (129 items missing)"
+            "Portuguese": "1059 items (16 items missing)"
         },
         {
             "English": "Home",
@@ -13750,7 +13750,15 @@
         {
             "English": "Importing all data will replace any current data, not merge!",
             "English (Europe)": "Importing all data will replace any current data, not merge!",
-            "German": "Beim Importieren aller Daten werden alle aktuellen Daten ersetzt, nicht zusammengeführt!"
+            "French": "L'importation de toutes les données remplacera toutes les données actuelles, et non les fusionnera !",
+            "French (US)": "L'importation de toutes les données remplacera toutes les données actuelles, et non les fusionnera !",
+            "German": "Beim Importieren aller Daten werden alle aktuellen Daten ersetzt, nicht zusammengeführt!",
+            "Spanish": "Importar todos los datos reemplazará cualquier dato actual, ¡no se fusionará!",
+            "Spanish (US)": "Importar todos los datos reemplazará cualquier dato actual, ¡no se fusionará!",
+            "Russian": "Импорт всех данных заменит любые текущие данные, а не объединит их!",
+            "Italian": "L'importazione di tutti i dati sostituirà tutti i dati correnti, non unirà!",
+            "Dutch": "Het importeren van alle gegevens zal alle huidige gegevens vervangen, niet samenvoegen!",
+            "Portuguese": "A importação de todos os dados substituirá todos os dados atuais, não mesclará!"
         },
         {
             "English": "Mario",
@@ -13782,451 +13790,1459 @@
         },
         {
             "English": "Office",
-            "English (Europe)": "Office"
+            "English (Europe)": "Office",
+            "French": "Bureau",
+            "French (US)": "Bureau",
+            "German": "Sekretariat",
+            "Spanish": "Oficina",
+            "Spanish (US)": "Oficina",
+            "Russian": "Офис",
+            "Italian": "Ufficio",
+            "Dutch": "Kantoor",
+            "Portuguese": "Escritório"
         },
         {
             "English": "TableClock",
-            "English (Europe)": "TableClock"
+            "English (Europe)": "TableClock",
+            "French": "Horloge de table",
+            "French (US)": "Horloge de table",
+            "German": "Tischuhr",
+            "Spanish": "Reloj de mesa",
+            "Spanish (US)": "Reloj de mesa",
+            "Russian": "ТаблицаЧасы",
+            "Italian": "Orologio da tavolo",
+            "Dutch": "Tafelklok",
+            "Portuguese": "Relógio de mesa"
         },
         {
             "English": "Bromide",
-            "English (Europe)": "Bromide"
+            "English (Europe)": "Bromide",
+            "French": "Bromure",
+            "French (US)": "Bromure",
+            "German": "Bromid",
+            "Spanish": "Bromuro",
+            "Spanish (US)": "Bromuro",
+            "Russian": "Бромид",
+            "Italian": "Bromuro",
+            "Dutch": "Bromide",
+            "Portuguese": "Brometo"
         },
         {
             "English": "Pillar",
-            "English (Europe)": "Pillar"
+            "English (Europe)": "Pillar",
+            "French": "Pilier",
+            "French (US)": "Pilier",
+            "German": "Säule",
+            "Spanish": "Pilar",
+            "Spanish (US)": "Pilar",
+            "Russian": "Столб",
+            "Italian": "Pilastro",
+            "Dutch": "Pijler",
+            "Portuguese": "Pilar"
         },
         {
             "English": "Counter",
-            "English (Europe)": "Counter"
+            "English (Europe)": "Counter",
+            "French": "Compteur",
+            "French (US)": "Compteur",
+            "German": "Zähler",
+            "Spanish": "Encimera",
+            "Spanish (US)": "Encimera",
+            "Russian": "Прилавок",
+            "Italian": "Contatore",
+            "Dutch": "Balie",
+            "Portuguese": "Balcão"
         },
         {
             "English": "FtrWall",
-            "English (Europe)": "FtrWall"
+            "English (Europe)": "FtrWall",
+            "French": "FtrMur",
+            "French (US)": "FtrMur",
+            "German": "FtrWall",
+            "Spanish": "FtrPared",
+            "Spanish (US)": "FtrPared",
+            "Russian": "FtrWall",
+            "Italian": "FtrWall",
+            "Dutch": "FtrWall",
+            "Portuguese": "FtrWallName"
         },
         {
             "English": "Cloth Walls",
-            "English (Europe)": "Cloth Walls"
+            "English (Europe)": "Cloth Walls",
+            "French": "Murs en tissu",
+            "French (US)": "Murs en tissu",
+            "German": "Stoffwände",
+            "Spanish": "Paredes de tela",
+            "Spanish (US)": "Paredes de tela",
+            "Russian": "Тканевые стены",
+            "Italian": "Pareti di stoffa",
+            "Dutch": "stoffen muren",
+            "Portuguese": "Paredes de pano"
         },
         {
             "English": "Asia",
-            "English (Europe)": "Asia"
+            "English (Europe)": "Asia",
+            "French": "Asie",
+            "French (US)": "Asie",
+            "German": "Asien",
+            "Spanish": "Asia",
+            "Spanish (US)": "Asia",
+            "Russian": "Азия",
+            "Italian": "Asia",
+            "Dutch": "Azië",
+            "Portuguese": "Ásia"
         },
         {
             "English": "Fruit Walls",
-            "English (Europe)": "Fruit Walls"
+            "English (Europe)": "Fruit Walls",
+            "French": "Murs de fruits",
+            "French (US)": "Murs de fruits",
+            "German": "Obstwände",
+            "Spanish": "Paredes de frutas",
+            "Spanish (US)": "Paredes de frutas",
+            "Russian": "Фруктовые стены",
+            "Italian": "Muri di frutta",
+            "Dutch": "Fruit Muren",
+            "Portuguese": "Paredes de frutas"
         },
         {
             "English": "Tile Walls",
-            "English (Europe)": "Tile Walls"
+            "English (Europe)": "Tile Walls",
+            "French": "Murs de tuiles",
+            "French (US)": "Murs de tuiles",
+            "German": "Fliesenwände",
+            "Spanish": "Paredes de Azulejos",
+            "Spanish (US)": "Paredes de Azulejos",
+            "Russian": "Стены из плитки",
+            "Italian": "Pareti Di Piastrelle",
+            "Dutch": "Tegelwanden",
+            "Portuguese": "Paredes de Azulejo"
         },
         {
             "English": "Special Walls",
-            "English (Europe)": "Special Walls"
+            "English (Europe)": "Special Walls",
+            "French": "Murs spéciaux",
+            "French (US)": "Murs spéciaux",
+            "German": "Besondere Wände",
+            "Spanish": "Paredes Especiales",
+            "Spanish (US)": "Paredes Especiales",
+            "Russian": "Специальные стены",
+            "Italian": "Pareti speciali",
+            "Dutch": "Speciale Muren",
+            "Portuguese": "Paredes Especiais"
         },
         {
             "English": "Special Cool Nature Walls",
-            "English (Europe)": "Special Cool Nature Walls"
+            "English (Europe)": "Special Cool Nature Walls",
+            "French": "Murs spéciaux Cool Nature",
+            "French (US)": "Murs spéciaux Cool Nature",
+            "German": "Spezielle coole Naturwände",
+            "Spanish": "Paredes naturales frescas especiales",
+            "Spanish (US)": "Paredes naturales frescas especiales",
+            "Russian": "Специальные крутые стены природы",
+            "Italian": "Speciali pareti della natura fresca",
+            "Dutch": "Speciale coole natuurmuren",
+            "Portuguese": "Paredes naturais legais especiais"
         },
         {
             "English": "Special Warm Nature Walls",
-            "English (Europe)": "Special Warm Nature Walls"
+            "English (Europe)": "Special Warm Nature Walls",
+            "French": "Murs Nature Chauds Spéciaux",
+            "French (US)": "Murs Nature Chauds Spéciaux",
+            "German": "Spezielle warme Naturwände",
+            "Spanish": "Paredes especiales de naturaleza cálida",
+            "Spanish (US)": "Paredes especiales de naturaleza cálida",
+            "Russian": "Особые теплые стены природы",
+            "Italian": "Speciali pareti naturali calde",
+            "Dutch": "Speciale warme natuurmuren",
+            "Portuguese": "Paredes naturais quentes especiais"
         },
         {
             "English": "Nature Walls",
-            "English (Europe)": "Nature Walls"
+            "English (Europe)": "Nature Walls",
+            "French": "Murs naturels",
+            "French (US)": "Murs naturels",
+            "German": "Naturwände",
+            "Spanish": "Paredes de la naturaleza",
+            "Spanish (US)": "Paredes de la naturaleza",
+            "Russian": "Стены природы",
+            "Italian": "Muri della natura",
+            "Dutch": "Natuurmuren",
+            "Portuguese": "Muros da Natureza"
         },
         {
             "English": "Wood Walls",
-            "English (Europe)": "Wood Walls"
+            "English (Europe)": "Wood Walls",
+            "French": "Murs en bois",
+            "French (US)": "Murs en bois",
+            "German": "Holzwände",
+            "Spanish": "Paredes de Madera",
+            "Spanish (US)": "Paredes de Madera",
+            "Russian": "Деревянные стены",
+            "Italian": "Pareti in legno",
+            "Dutch": "Houten Muren",
+            "Portuguese": "Paredes de madeira"
         },
         {
             "English": "Iron Walls",
-            "English (Europe)": "Iron Walls"
+            "English (Europe)": "Iron Walls",
+            "French": "Murs de fer",
+            "French (US)": "Murs de fer",
+            "German": "Eisenwände",
+            "Spanish": "Paredes de hierro",
+            "Spanish (US)": "Paredes de hierro",
+            "Russian": "Железные стены",
+            "Italian": "Pareti in ferro",
+            "Dutch": "IJzeren muren",
+            "Portuguese": "Paredes de Ferro"
         },
         {
             "English": "Art Deco Walls",
-            "English (Europe)": "Art Deco Walls"
+            "English (Europe)": "Art Deco Walls",
+            "French": "Murs Art Déco",
+            "French (US)": "Murs Art Déco",
+            "German": "Art-Deco-Wände",
+            "Spanish": "Paredes Art Déco",
+            "Spanish (US)": "Paredes Art Déco",
+            "Russian": "Стены в стиле ар-деко",
+            "Italian": "Pareti Art Déco",
+            "Dutch": "Art Deco Muren",
+            "Portuguese": "Paredes Art Déco"
         },
         {
             "English": "Country",
-            "English (Europe)": "Country"
+            "English (Europe)": "Country",
+            "French": "Pays",
+            "French (US)": "Pays",
+            "German": "Land",
+            "Spanish": "País",
+            "Spanish (US)": "País",
+            "Russian": "Страна",
+            "Italian": "Nazione",
+            "Dutch": "Land",
+            "Portuguese": "País"
         },
         {
             "English": "Morocco",
-            "English (Europe)": "Morocco"
+            "English (Europe)": "Morocco",
+            "French": "Maroc",
+            "French (US)": "Maroc",
+            "German": "Marokko",
+            "Spanish": "Marruecos",
+            "Spanish (US)": "Marruecos",
+            "Russian": "Марокко",
+            "Italian": "Marocco",
+            "Dutch": "Marokko",
+            "Portuguese": "Marrocos"
         },
         {
             "English": "Wood Tile Walls",
-            "English (Europe)": "Wood Tile Walls"
+            "English (Europe)": "Wood Tile Walls",
+            "French": "Murs de carreaux de bois",
+            "French (US)": "Murs de carreaux de bois",
+            "German": "Holzfliesenwände",
+            "Spanish": "Paredes de azulejos de madera",
+            "Spanish (US)": "Paredes de azulejos de madera",
+            "Russian": "Стены из деревянной плитки",
+            "Italian": "Pareti in piastrelle di legno",
+            "Dutch": "Houten Tegel Muren",
+            "Portuguese": "Paredes de ladrilhos de madeira"
         },
         {
             "English": "Hall Walls",
-            "English (Europe)": "Hall Walls"
+            "English (Europe)": "Hall Walls",
+            "French": "Murs de la salle",
+            "French (US)": "Murs de la salle",
+            "German": "Hallenwände",
+            "Spanish": "Paredes del pasillo",
+            "Spanish (US)": "Paredes del pasillo",
+            "Russian": "Стены зала",
+            "Italian": "Pareti della Sala",
+            "Dutch": "Hal Muren",
+            "Portuguese": "Paredes do salão"
         },
         {
             "English": "Pegboard Walls",
-            "English (Europe)": "Pegboard Walls"
+            "English (Europe)": "Pegboard Walls",
+            "French": "Murs en panneaux perforés",
+            "French (US)": "Murs en panneaux perforés",
+            "German": "Steckwände",
+            "Spanish": "Paredes de tablero perforado",
+            "Spanish (US)": "Paredes de tablero perforado",
+            "Russian": "Стены из гипборда",
+            "Italian": "Pareti di pegboard",
+            "Dutch": "Pegboard Muren",
+            "Portuguese": "Paredes Pegboard"
         },
         {
             "English": "Two-Tone Tile Walls",
-            "English (Europe)": "Two-Tone Tile Walls"
+            "English (Europe)": "Two-Tone Tile Walls",
+            "French": "Murs de carreaux bicolores",
+            "French (US)": "Murs de carreaux bicolores",
+            "German": "Zweifarbige Fliesenwände",
+            "Spanish": "Paredes de azulejos de dos tonos",
+            "Spanish (US)": "Paredes de azulejos de dos tonos",
+            "Russian": "Стены из двухцветной плитки",
+            "Italian": "Pareti in piastrelle bicolore",
+            "Dutch": "Tweekleurige tegelwanden",
+            "Portuguese": "Paredes de azulejos de dois tons"
         },
         {
             "English": "Brick",
-            "English (Europe)": "Brick"
+            "English (Europe)": "Brick",
+            "French": "Brique",
+            "French (US)": "Brique",
+            "German": "Schrotten",
+            "Spanish": "Ladrillo",
+            "Spanish (US)": "Ladrillo",
+            "Russian": "Кирпич",
+            "Italian": "Mattone",
+            "Dutch": "Steen",
+            "Portuguese": "Tijolo"
         },
         {
             "English": "Crown Walls",
-            "English (Europe)": "Crown Walls"
+            "English (Europe)": "Crown Walls",
+            "French": "Murs de couronne",
+            "French (US)": "Murs de couronne",
+            "German": "Kronenmauern",
+            "Spanish": "Muros de corona",
+            "Spanish (US)": "Muros de corona",
+            "Russian": "Стены Короны",
+            "Italian": "Mura della Corona",
+            "Dutch": "Kroonmuren",
+            "Portuguese": "Paredes da Coroa"
         },
         {
             "English": "Neta Walls",
-            "English (Europe)": "Neta Walls"
+            "English (Europe)": "Neta Walls",
+            "French": "Murs Neta",
+            "French (US)": "Murs Neta",
+            "German": "Neta Wände",
+            "Spanish": "Paredes netas",
+            "Spanish (US)": "Paredes netas",
+            "Russian": "Стены Нета",
+            "Italian": "Mura di Neta",
+            "Dutch": "Neta Walls",
+            "Portuguese": "Paredes Neta"
         },
         {
             "English": "Manor Walls",
-            "English (Europe)": "Manor Walls"
+            "English (Europe)": "Manor Walls",
+            "French": "Murs du manoir",
+            "French (US)": "Murs du manoir",
+            "German": "Herrenhaus Mauern",
+            "Spanish": "Paredes señoriales",
+            "Spanish (US)": "Paredes señoriales",
+            "Russian": "Стены поместья",
+            "Italian": "Mura del maniero",
+            "Dutch": "Landhuismuren",
+            "Portuguese": "Muralhas da Mansão"
         },
         {
             "English": "Diner Walls",
-            "English (Europe)": "Diner Walls"
+            "English (Europe)": "Diner Walls",
+            "French": "Murs du restaurant",
+            "French (US)": "Murs du restaurant",
+            "German": "Diner-Wände",
+            "Spanish": "Paredes del comedor",
+            "Spanish (US)": "Paredes del comedor",
+            "Russian": "Обеденные Стены",
+            "Italian": "Pareti da pranzo",
+            "Dutch": "Dinermuren",
+            "Portuguese": "Paredes de lanchonete"
         },
         {
             "English": "Flower Walls",
-            "English (Europe)": "Flower Walls"
+            "English (Europe)": "Flower Walls",
+            "French": "Murs de fleurs",
+            "French (US)": "Murs de fleurs",
+            "German": "Blumenwände",
+            "Spanish": "Paredes de flores",
+            "Spanish (US)": "Paredes de flores",
+            "Russian": "Цветочные стены",
+            "Italian": "Muri di fiori",
+            "Dutch": "Bloemenmuren",
+            "Portuguese": "Paredes de flores"
         },
         {
             "English": "Heart Walls",
-            "English (Europe)": "Heart Walls"
+            "English (Europe)": "Heart Walls",
+            "French": "Murs de coeur",
+            "French (US)": "Murs de coeur",
+            "German": "Herzwände",
+            "Spanish": "Paredes del corazón",
+            "Spanish (US)": "Paredes del corazón",
+            "Russian": "Стены Сердца",
+            "Italian": "Pareti del cuore",
+            "Dutch": "Hartmuren",
+            "Portuguese": "Paredes do Coração"
         },
         {
             "English": "Honeycomb",
-            "English (Europe)": "Honeycomb"
+            "English (Europe)": "Honeycomb",
+            "French": "Rayon de miel",
+            "French (US)": "Rayon de miel",
+            "German": "Bienenwabe",
+            "Spanish": "Panal",
+            "Spanish (US)": "Panal",
+            "Russian": "Соты",
+            "Italian": "Favo",
+            "Dutch": "Honingraat",
+            "Portuguese": "Favo de mel"
         },
         {
             "English": "Flower Pop Walls",
-            "English (Europe)": "Flower Pop Walls"
+            "English (Europe)": "Flower Pop Walls",
+            "French": "Murs de fleurs pop",
+            "French (US)": "Murs de fleurs pop",
+            "German": "Blumen-Pop-Wände",
+            "Spanish": "Paredes de flores pop",
+            "Spanish (US)": "Paredes de flores pop",
+            "Russian": "Цветочные поп-стены",
+            "Italian": "Pareti di fiori pop",
+            "Dutch": "Bloem Pop Muren",
+            "Portuguese": "Paredes de flores"
         },
         {
             "English": "Panel Mold Walls",
-            "English (Europe)": "Panel Mold Walls"
+            "English (Europe)": "Panel Mold Walls",
+            "French": "Murs de moules à panneaux",
+            "French (US)": "Murs de moules à panneaux",
+            "German": "Paneelformwände",
+            "Spanish": "Paredes de molde de panel",
+            "Spanish (US)": "Paredes de molde de panel",
+            "Russian": "Панели Плесень Стены",
+            "Italian": "Muri a stampo per pannelli",
+            "Dutch": "Paneelvorm Muren",
+            "Portuguese": "Paredes do molde do painel"
         },
         {
             "English": "Painted Wood",
-            "English (Europe)": "Painted Wood"
+            "English (Europe)": "Painted Wood",
+            "French": "Bois Peint",
+            "French (US)": "Bois Peint",
+            "German": "Lackiertes Holz",
+            "Spanish": "Madera Pintada",
+            "Spanish (US)": "Madera Pintada",
+            "Russian": "Крашеное дерево",
+            "Italian": "Legno dipinto",
+            "Dutch": "Geschilderd hout",
+            "Portuguese": "Madeira Pintada"
         },
         {
             "English": "Toy Walls",
-            "English (Europe)": "Toy Walls"
+            "English (Europe)": "Toy Walls",
+            "French": "Murs de jouets",
+            "French (US)": "Murs de jouets",
+            "German": "Spielzeugwände",
+            "Spanish": "Paredes de juguete",
+            "Spanish (US)": "Paredes de juguete",
+            "Russian": "Игрушечные стены",
+            "Italian": "Pareti giocattolo",
+            "Dutch": "Speelgoedmuren",
+            "Portuguese": "Paredes de brinquedos"
         },
         {
             "English": "Dollhouse Walls",
-            "English (Europe)": "Dollhouse Walls"
+            "English (Europe)": "Dollhouse Walls",
+            "French": "Murs de maison de poupée",
+            "French (US)": "Murs de maison de poupée",
+            "German": "Puppenhauswände",
+            "Spanish": "Paredes de casa de muñecas",
+            "Spanish (US)": "Paredes de casa de muñecas",
+            "Russian": "Стены кукольного домика",
+            "Italian": "Pareti della casa delle bambole",
+            "Dutch": "Poppenhuis Muren",
+            "Portuguese": "Paredes de casa de bonecas"
         },
         {
             "English": "Tin Walls",
-            "English (Europe)": "Tin Walls"
+            "English (Europe)": "Tin Walls",
+            "French": "Murs en étain",
+            "French (US)": "Murs en étain",
+            "German": "Zinnwände",
+            "Spanish": "Paredes de hojalata",
+            "Spanish (US)": "Paredes de hojalata",
+            "Russian": "Жестяные стены",
+            "Italian": "Pareti di latta",
+            "Dutch": "Tinnen Muren",
+            "Portuguese": "Paredes de estanho"
         },
         {
             "English": "Simple Walls",
-            "English (Europe)": "Simple Walls"
+            "English (Europe)": "Simple Walls",
+            "French": "Murs simples",
+            "French (US)": "Murs simples",
+            "German": "Einfache Wände",
+            "Spanish": "Paredes simples",
+            "Spanish (US)": "Paredes simples",
+            "Russian": "Простые стены",
+            "Italian": "Pareti Semplici",
+            "Dutch": "Eenvoudige muren",
+            "Portuguese": "Paredes Simples"
         },
         {
             "English": "Metro Walls",
-            "English (Europe)": "Metro Walls"
+            "English (Europe)": "Metro Walls",
+            "French": "Murs du métro",
+            "French (US)": "Murs du métro",
+            "German": "U-Bahn-Wände",
+            "Spanish": "Paredes del metro",
+            "Spanish (US)": "Paredes del metro",
+            "Russian": "Стены Метро",
+            "Italian": "Muri della metropolitana",
+            "Dutch": "Metromuren",
+            "Portuguese": "Paredes do Metrô"
         },
         {
             "English": "Stucco Walls",
-            "English (Europe)": "Stucco Walls"
+            "English (Europe)": "Stucco Walls",
+            "French": "Murs en stuc",
+            "French (US)": "Murs en stuc",
+            "German": "Stuckwände",
+            "Spanish": "Paredes de estuco",
+            "Spanish (US)": "Paredes de estuco",
+            "Russian": "Штукатурные стены",
+            "Italian": "Pareti in stucco",
+            "Dutch": "Stucwerk Muren",
+            "Portuguese": "Paredes de estuque"
         },
         {
             "English": "Rose Walls",
-            "English (Europe)": "Rose Walls"
+            "English (Europe)": "Rose Walls",
+            "French": "Murs de roses",
+            "French (US)": "Murs de roses",
+            "German": "Rosenwände",
+            "Spanish": "Paredes de rosas",
+            "Spanish (US)": "Paredes de rosas",
+            "Russian": "Розовые стены",
+            "Italian": "Pareti rosa",
+            "Dutch": "Rozenmuren",
+            "Portuguese": "Paredes de rosas"
         },
         {
             "English": "Stripe Walls",
-            "English (Europe)": "Stripe Walls"
+            "English (Europe)": "Stripe Walls",
+            "French": "Murs à rayures",
+            "French (US)": "Murs à rayures",
+            "German": "Streifenwände",
+            "Spanish": "Paredes de rayas",
+            "Spanish (US)": "Paredes de rayas",
+            "Russian": "Полосатые стены",
+            "Italian": "Pareti a strisce",
+            "Dutch": "Gestreepte Muren",
+            "Portuguese": "Paredes listradas"
         },
         {
             "English": "Herringbone",
-            "English (Europe)": "Herringbone"
+            "English (Europe)": "Herringbone",
+            "French": "Chevron",
+            "French (US)": "Chevron",
+            "German": "Fischgrätenmuster",
+            "Spanish": "Espiga",
+            "Spanish (US)": "Espiga",
+            "Russian": "Елочка",
+            "Italian": "Spina di pesce",
+            "Dutch": "Visgraat",
+            "Portuguese": "Espinha de Peixe"
         },
         {
             "English": "Tea Room Walls",
-            "English (Europe)": "Tea Room Walls"
+            "English (Europe)": "Tea Room Walls",
+            "French": "Murs de salon de thé",
+            "French (US)": "Murs de salon de thé",
+            "German": "Wände der Teestube",
+            "Spanish": "Paredes del salón de té",
+            "Spanish (US)": "Paredes del salón de té",
+            "Russian": "Стены чайной комнаты",
+            "Italian": "Pareti della sala da tè",
+            "Dutch": "Theekamer Muren",
+            "Portuguese": "Paredes da sala de chá"
         },
         {
             "English": "Sanrio Walls",
-            "English (Europe)": "Sanrio Walls"
+            "English (Europe)": "Sanrio Walls",
+            "French": "Murs Sanrio",
+            "French (US)": "Murs Sanrio",
+            "German": "Sanrio-Wände",
+            "Spanish": "Paredes de Sanrio",
+            "Spanish (US)": "Paredes de Sanrio",
+            "Russian": "Стены Санрио",
+            "Italian": "Mura Sanrio",
+            "Dutch": "Sanrio Muren",
+            "Portuguese": "Sanrio Walls"
         },
         {
             "English": "Library Walls",
-            "English (Europe)": "Library Walls"
+            "English (Europe)": "Library Walls",
+            "French": "Murs de la bibliothèque",
+            "French (US)": "Murs de la bibliothèque",
+            "German": "Bibliothekswände",
+            "Spanish": "Paredes de la biblioteca",
+            "Spanish (US)": "Paredes de la biblioteca",
+            "Russian": "Библиотечные стены",
+            "Italian": "Pareti della Biblioteca",
+            "Dutch": "Bibliotheekmuren",
+            "Portuguese": "Paredes da Biblioteca"
         },
         {
             "English": "Puzzle Walls",
-            "English (Europe)": "Puzzle Walls"
+            "English (Europe)": "Puzzle Walls",
+            "French": "Murs de puzzle",
+            "French (US)": "Murs de puzzle",
+            "German": "Puzzle-Wände",
+            "Spanish": "Rompecabezas de paredes",
+            "Spanish (US)": "Rompecabezas de paredes",
+            "Russian": "Стены-головоломки",
+            "Italian": "Pareti puzzle",
+            "Dutch": "Puzzel Muren",
+            "Portuguese": "Paredes de quebra-cabeça"
         },
         {
             "English": "Stone Walls",
-            "English (Europe)": "Stone Walls"
+            "English (Europe)": "Stone Walls",
+            "French": "Murs de pierre",
+            "French (US)": "Murs de pierre",
+            "German": "Steinmauern",
+            "Spanish": "Muros de piedra",
+            "Spanish (US)": "Muros de piedra",
+            "Russian": "Каменные стены",
+            "Italian": "Muri in pietra",
+            "Dutch": "Stenen muren",
+            "Portuguese": "Paredes de pedra"
         },
         {
             "English": "Cute Walls",
-            "English (Europe)": "Cute Walls"
+            "English (Europe)": "Cute Walls",
+            "French": "Murs mignons",
+            "French (US)": "Murs mignons",
+            "German": "Nette Wände",
+            "Spanish": "lindas paredes",
+            "Spanish (US)": "lindas paredes",
+            "Russian": "Милые Стены",
+            "Italian": "Pareti carine",
+            "Dutch": "Leuke Muren",
+            "Portuguese": "Paredes fofas"
         },
         {
             "English": "Wood Plank Walls",
-            "English (Europe)": "Wood Plank Walls"
+            "English (Europe)": "Wood Plank Walls",
+            "French": "Murs en planches de bois",
+            "French (US)": "Murs en planches de bois",
+            "German": "Holzdielenwände",
+            "Spanish": "Paredes de tablones de madera",
+            "Spanish (US)": "Paredes de tablones de madera",
+            "Russian": "Стены из деревянных досок",
+            "Italian": "Pareti in assi di legno",
+            "Dutch": "Houten Planken Muren",
+            "Portuguese": "Paredes de pranchas de madeira"
         },
         {
             "English": "Special Inorganic Walls",
-            "English (Europe)": "Special Inorganic Walls"
+            "English (Europe)": "Special Inorganic Walls",
+            "French": "Murs inorganiques spéciaux",
+            "French (US)": "Murs inorganiques spéciaux",
+            "German": "Spezielle anorganische Wände",
+            "Spanish": "Paredes Inorgánicas Especiales",
+            "Spanish (US)": "Paredes Inorgánicas Especiales",
+            "Russian": "Специальные неорганические стены",
+            "Italian": "Pareti inorganiche speciali",
+            "Dutch": "Speciale anorganische muren",
+            "Portuguese": "Paredes Inorgânicas Especiais"
         },
         {
             "English": "WallFacility",
-            "English (Europe)": "WallFacility"
+            "English (Europe)": "WallFacility",
+            "French": "MurInstallation",
+            "French (US)": "MurInstallation",
+            "German": "WallFacility",
+            "Spanish": "Instalación de pared",
+            "Spanish (US)": "Instalación de pared",
+            "Russian": "СтенаОбъект",
+            "Italian": "WallFacility",
+            "Dutch": "MuurFaciliteit",
+            "Portuguese": "WallFacility"
         },
         {
             "English": "WallGoldSilverBronze",
-            "English (Europe)": "WallGoldSilverBronze"
+            "English (Europe)": "WallGoldSilverBronze",
+            "French": "MurOrArgentBronze",
+            "French (US)": "MurOrArgentBronze",
+            "German": "WandGoldSilberBronze",
+            "Spanish": "ParedOroPlataBronce",
+            "Spanish (US)": "ParedOroPlataBronce",
+            "Russian": "СтенаЗолотоСереброБронза",
+            "Italian": "MuroOroArgentoBronzo",
+            "Dutch": "MuurGoudZilverBrons",
+            "Portuguese": "WallGoldSilverBronze"
         },
         {
             "English": "Tile Floors",
-            "English (Europe)": "Tile Floors"
+            "English (Europe)": "Tile Floors",
+            "French": "Planchers de tuiles",
+            "French (US)": "Planchers de tuiles",
+            "German": "Fliesenböden",
+            "Spanish": "Pisos de baldosas",
+            "Spanish (US)": "Pisos de baldosas",
+            "Russian": "плиточные полы",
+            "Italian": "Pavimenti in piastrelle",
+            "Dutch": "Tegelvloeren",
+            "Portuguese": "Pisos de cerâmica"
         },
         {
             "English": "Cloth Floors",
-            "English (Europe)": "Cloth Floors"
+            "English (Europe)": "Cloth Floors",
+            "French": "Sols en tissu",
+            "French (US)": "Sols en tissu",
+            "German": "Stoffböden",
+            "Spanish": "Pisos de Tela",
+            "Spanish (US)": "Pisos de Tela",
+            "Russian": "Тканевые полы",
+            "Italian": "Pavimenti in stoffa",
+            "Dutch": "Stoffen vloeren",
+            "Portuguese": "Pisos de pano"
         },
         {
             "English": "Arched Brick",
-            "English (Europe)": "Arched Brick"
+            "English (Europe)": "Arched Brick",
+            "French": "Brique arquée",
+            "French (US)": "Brique arquée",
+            "German": "Gewölbter Backstein",
+            "Spanish": "Ladrillo arqueado",
+            "Spanish (US)": "Ladrillo arqueado",
+            "Russian": "Арочный кирпич",
+            "Italian": "Mattone ad arco",
+            "Dutch": "Gebogen baksteen",
+            "Portuguese": "Tijolo em Arco"
         },
         {
             "English": "Simple Parquet",
-            "English (Europe)": "Simple Parquet"
+            "English (Europe)": "Simple Parquet",
+            "French": "Parquet simple",
+            "French (US)": "Parquet simple",
+            "German": "Einfaches Parkett",
+            "Spanish": "Parquet sencillo",
+            "Spanish (US)": "Parquet sencillo",
+            "Russian": "Простой паркет",
+            "Italian": "Parquet semplice",
+            "Dutch": "Eenvoudig parket",
+            "Portuguese": "Parquet Simples"
         },
         {
             "English": "Grassland",
-            "English (Europe)": "Grassland"
+            "English (Europe)": "Grassland",
+            "French": "Prairie",
+            "French (US)": "Prairie",
+            "German": "Wiese",
+            "Spanish": "Pradera",
+            "Spanish (US)": "Pradera",
+            "Russian": "Пастбище",
+            "Italian": "Prati",
+            "Dutch": "Grasland",
+            "Portuguese": "Pradaria"
         },
         {
             "English": "Nature - Green",
-            "English (Europe)": "Nature - Green"
+            "English (Europe)": "Nature - Green",
+            "French": "Nature - Vert",
+            "French (US)": "Nature - Vert",
+            "German": "Natur - Grün",
+            "Spanish": "Naturaleza - Verde",
+            "Spanish (US)": "Naturaleza - Verde",
+            "Russian": "Природа - Зеленый",
+            "Italian": "Natura - Verde",
+            "Dutch": "Natuur - Groen",
+            "Portuguese": "Natureza - Verde"
         },
         {
             "English": "Stone Floors",
-            "English (Europe)": "Stone Floors"
+            "English (Europe)": "Stone Floors",
+            "French": "Sols en pierre",
+            "French (US)": "Sols en pierre",
+            "German": "Steinböden",
+            "Spanish": "Pisos de piedra",
+            "Spanish (US)": "Pisos de piedra",
+            "Russian": "Каменные полы",
+            "Italian": "Pavimenti in pietra",
+            "Dutch": "Stenen vloeren",
+            "Portuguese": "Pisos de pedra"
         },
         {
             "English": "Wood Floors",
-            "English (Europe)": "Wood Floors"
+            "English (Europe)": "Wood Floors",
+            "French": "Plancher en bois",
+            "French (US)": "Plancher en bois",
+            "German": "Holzboden",
+            "Spanish": "Pisos de madera",
+            "Spanish (US)": "Pisos de madera",
+            "Russian": "Деревянные Полы",
+            "Italian": "Pavimenti in legno",
+            "Dutch": "Houten vloer",
+            "Portuguese": "Chãos de madeira"
         },
         {
             "English": "Iron Parquet",
-            "English (Europe)": "Iron Parquet"
+            "English (Europe)": "Iron Parquet",
+            "French": "Parquet en fer",
+            "French (US)": "Parquet en fer",
+            "German": "Eisenparkett",
+            "Spanish": "Parqué de hierro",
+            "Spanish (US)": "Parqué de hierro",
+            "Russian": "железный паркет",
+            "Italian": "Parquet in ferro",
+            "Dutch": "IJzeren parket",
+            "Portuguese": "Parquet de Ferro"
         },
         {
             "English": "Special Inorganic Floors",
-            "English (Europe)": "Special Inorganic Floors"
+            "English (Europe)": "Special Inorganic Floors",
+            "French": "Sols inorganiques spéciaux",
+            "French (US)": "Sols inorganiques spéciaux",
+            "German": "Spezielle anorganische Böden",
+            "Spanish": "Pisos Inorgánicos Especiales",
+            "Spanish (US)": "Pisos Inorgánicos Especiales",
+            "Russian": "Специальные неорганические полы",
+            "Italian": "Pavimenti inorganici speciali",
+            "Dutch": "Speciale anorganische vloeren",
+            "Portuguese": "Pisos Inorgânicos Especiais"
         },
         {
             "English": "Deco Wood",
-            "English (Europe)": "Deco Wood"
+            "English (Europe)": "Deco Wood",
+            "French": "Déco Bois",
+            "French (US)": "Déco Bois",
+            "German": "Deko-Holz",
+            "Spanish": "Madera decorativa",
+            "Spanish (US)": "Madera decorativa",
+            "Russian": "Деко Вуд",
+            "Italian": "Deco in legno",
+            "Dutch": "Decoratie Hout",
+            "Portuguese": "Madeira Deco"
         },
         {
             "English": "Rubber",
-            "English (Europe)": "Rubber"
+            "English (Europe)": "Rubber",
+            "French": "Caoutchouc",
+            "French (US)": "Caoutchouc",
+            "German": "Gummi",
+            "Spanish": "Caucho",
+            "Spanish (US)": "Caucho",
+            "Russian": "Резина",
+            "Italian": "Gomma",
+            "Dutch": "Rubber",
+            "Portuguese": "Borracha"
         },
         {
             "English": "Sports Floor",
-            "English (Europe)": "Sports Floor"
+            "English (Europe)": "Sports Floor",
+            "French": "Sol sportif",
+            "French (US)": "Sol sportif",
+            "German": "Sportboden",
+            "Spanish": "Piso deportivo",
+            "Spanish (US)": "Piso deportivo",
+            "Russian": "Спортивный этаж",
+            "Italian": "Pavimento sportivo",
+            "Dutch": "Sportvloer",
+            "Portuguese": "Pavimento Esportivo"
         },
         {
             "English": "Argyle",
-            "English (Europe)": "Argyle"
+            "English (Europe)": "Argyle",
+            "French": "Argyle",
+            "French (US)": "Argyle",
+            "German": "Argyle",
+            "Spanish": "Argyle",
+            "Spanish (US)": "Argyle",
+            "Russian": "Аргайл",
+            "Italian": "Argyle",
+            "Dutch": "Argyle",
+            "Portuguese": "Argyle"
         },
         {
             "English": "Nature - Fallen Leaves",
-            "English (Europe)": "Nature - Fallen Leaves"
+            "English (Europe)": "Nature - Fallen Leaves",
+            "French": "Nature - Feuilles mortes",
+            "French (US)": "Nature - Feuilles mortes",
+            "German": "Natur - Gefallene Blätter",
+            "Spanish": "Naturaleza - Hojas caídas",
+            "Spanish (US)": "Naturaleza - Hojas caídas",
+            "Russian": "Природа - Опавшие листья",
+            "Italian": "Natura - Foglie cadute",
+            "Dutch": "Natuur - gevallen bladeren",
+            "Portuguese": "Natureza - Folhas Caídas"
         },
         {
             "English": "Sanrio Floor",
-            "English (Europe)": "Sanrio Floor"
+            "English (Europe)": "Sanrio Floor",
+            "French": "Étage Sanrio",
+            "French (US)": "Étage Sanrio",
+            "German": "Sanrio-Boden",
+            "Spanish": "Piso Sanrio",
+            "Spanish (US)": "Piso Sanrio",
+            "Russian": "Этаж Санрио",
+            "Italian": "Piano Sanrio",
+            "Dutch": "Sanrio Verdieping",
+            "Portuguese": "Piso Sanrio"
         },
         {
             "English": "Machine Floor",
-            "English (Europe)": "Machine Floor"
+            "English (Europe)": "Machine Floor",
+            "French": "Plancher des machines",
+            "French (US)": "Plancher des machines",
+            "German": "Maschinenboden",
+            "Spanish": "Piso de la máquina",
+            "Spanish (US)": "Piso de la máquina",
+            "Russian": "Пол машины",
+            "Italian": "Piano macchina",
+            "Dutch": "Machinevloer",
+            "Portuguese": "Piso da Máquina"
         },
         {
             "English": "Special Nature Floors",
-            "English (Europe)": "Special Nature Floors"
+            "English (Europe)": "Special Nature Floors",
+            "French": "Sols Spécial Nature",
+            "French (US)": "Sols Spécial Nature",
+            "German": "Spezielle Naturböden",
+            "Spanish": "Suelos Naturales Especiales",
+            "Spanish (US)": "Suelos Naturales Especiales",
+            "Russian": "Специальные натуральные полы",
+            "Italian": "Pavimenti Natura Speciale",
+            "Dutch": "Speciale natuurvloeren",
+            "Portuguese": "Pisos Natureza Especial"
         },
         {
             "English": "Puzzle Mat",
-            "English (Europe)": "Puzzle Mat"
+            "English (Europe)": "Puzzle Mat",
+            "French": "Tapis de puzzle",
+            "French (US)": "Tapis de puzzle",
+            "German": "Puzzle-Matte",
+            "Spanish": "Alfombrilla de rompecabezas",
+            "Spanish (US)": "Alfombrilla de rompecabezas",
+            "Russian": "Коврик-пазл",
+            "Italian": "Tappetino puzzle",
+            "Dutch": "Puzzelmat",
+            "Portuguese": "Tapete de quebra-cabeça"
         },
         {
             "English": "Panel",
-            "English (Europe)": "Panel"
+            "English (Europe)": "Panel",
+            "French": "Panneau",
+            "French (US)": "Panneau",
+            "German": "Tafel",
+            "Spanish": "Panel",
+            "Spanish (US)": "Panel",
+            "Russian": "Панель",
+            "Italian": "Pannello",
+            "Dutch": "Paneel",
+            "Portuguese": "Painel"
         },
         {
             "English": "Sidewalk",
-            "English (Europe)": "Sidewalk"
+            "English (Europe)": "Sidewalk",
+            "French": "Trottoir",
+            "French (US)": "Trottoir",
+            "German": "Bürgersteig",
+            "Spanish": "Acera",
+            "Spanish (US)": "Acera",
+            "Russian": "Тротуар",
+            "Italian": "Marciapiede",
+            "Dutch": "Trottoir",
+            "Portuguese": "Calçada"
         },
         {
             "English": "Tile Checker",
-            "English (Europe)": "Tile Checker"
+            "English (Europe)": "Tile Checker",
+            "French": "Vérificateur de carreaux",
+            "French (US)": "Vérificateur de carreaux",
+            "German": "Fliesenprüfer",
+            "Spanish": "Comprobador de azulejos",
+            "Spanish (US)": "Comprobador de azulejos",
+            "Russian": "Проверка плитки",
+            "Italian": "Controllo piastrelle",
+            "Dutch": "Tegel Checker",
+            "Portuguese": "Verificador de peças"
         },
         {
             "English": "Colorful Wood",
-            "English (Europe)": "Colorful Wood"
+            "English (Europe)": "Colorful Wood",
+            "French": "Bois coloré",
+            "French (US)": "Bois coloré",
+            "German": "Buntes Holz",
+            "Spanish": "Madera colorida",
+            "Spanish (US)": "Madera colorida",
+            "Russian": "Красочное дерево",
+            "Italian": "Legno colorato",
+            "Dutch": "Kleurrijk hout",
+            "Portuguese": "Madeira colorida"
         },
         {
             "English": "Parquet",
-            "English (Europe)": "Parquet"
+            "English (Europe)": "Parquet",
+            "French": "Parquet",
+            "French (US)": "Parquet",
+            "German": "Parkett",
+            "Spanish": "Parquet",
+            "Spanish (US)": "Parquet",
+            "Russian": "Паркет",
+            "Italian": "Parquet",
+            "Dutch": "Parket",
+            "Portuguese": "Parquet"
         },
         {
             "English": "Nature - Brown",
-            "English (Europe)": "Nature - Brown"
+            "English (Europe)": "Nature - Brown",
+            "French": "Nature - Marron",
+            "French (US)": "Nature - Marron",
+            "German": "Natur - Braun",
+            "Spanish": "Naturaleza - Marrón",
+            "Spanish (US)": "Naturaleza - Marrón",
+            "Russian": "Природа - коричневый",
+            "Italian": "Natura - Marrone",
+            "Dutch": "Natuur - Bruin",
+            "Portuguese": "Natureza - Marrom"
         },
         {
             "English": "Japanese",
-            "English (Europe)": "Japanese"
+            "English (Europe)": "Japanese",
+            "French": "Japonais",
+            "French (US)": "Japonais",
+            "German": "japanisch",
+            "Spanish": "japonés",
+            "Spanish (US)": "japonés",
+            "Russian": "японский язык",
+            "Italian": "giapponese",
+            "Dutch": "Japans",
+            "Portuguese": "japonês"
         },
         {
             "English": "Decadence",
-            "English (Europe)": "Decadence"
+            "English (Europe)": "Decadence",
+            "French": "Décadence",
+            "French (US)": "Décadence",
+            "German": "Dekadenz",
+            "Spanish": "Decadencia",
+            "Spanish (US)": "Decadencia",
+            "Russian": "декаданс",
+            "Italian": "Decadenza",
+            "Dutch": "Decadentie",
+            "Portuguese": "Decadência"
         },
         {
             "English": "Animal Floor",
-            "English (Europe)": "Animal Floor"
+            "English (Europe)": "Animal Floor",
+            "French": "Étage des animaux",
+            "French (US)": "Étage des animaux",
+            "German": "Tierischer Boden",
+            "Spanish": "Piso de animales",
+            "Spanish (US)": "Piso de animales",
+            "Russian": "Этаж для животных",
+            "Italian": "Pavimento degli animali",
+            "Dutch": "Dierenvloer",
+            "Portuguese": "Piso Animal"
         },
         {
             "English": "Luxury",
-            "English (Europe)": "Luxury"
+            "English (Europe)": "Luxury",
+            "French": "Luxe",
+            "French (US)": "Luxe",
+            "German": "Luxus",
+            "Spanish": "Lujo",
+            "Spanish (US)": "Lujo",
+            "Russian": "Роскошь",
+            "Italian": "Lusso",
+            "Dutch": "Luxe",
+            "Portuguese": "Luxo"
         },
         {
             "English": "Kitchen Floors",
-            "English (Europe)": "Kitchen Floors"
+            "English (Europe)": "Kitchen Floors",
+            "French": "Planchers de cuisine",
+            "French (US)": "Planchers de cuisine",
+            "German": "Küchenböden",
+            "Spanish": "Pisos de cocina",
+            "Spanish (US)": "Pisos de cocina",
+            "Russian": "Кухонные Полы",
+            "Italian": "Pavimenti della cucina",
+            "Dutch": "Keukenvloeren",
+            "Portuguese": "Pisos de cozinha"
         },
         {
             "English": "Neta",
-            "English (Europe)": "Neta"
+            "English (Europe)": "Neta",
+            "French": "Néta",
+            "French (US)": "Néta",
+            "German": "Neta",
+            "Spanish": "neto",
+            "Spanish (US)": "neto",
+            "Russian": "Нета",
+            "Italian": "Neta",
+            "Dutch": "Neta",
+            "Portuguese": "Neta"
         },
         {
             "English": "Nature - White",
-            "English (Europe)": "Nature - White"
+            "English (Europe)": "Nature - White",
+            "French": "Nature - Blanc",
+            "French (US)": "Nature - Blanc",
+            "German": "Natur - Weiß",
+            "Spanish": "Naturaleza - Blanco",
+            "Spanish (US)": "Naturaleza - Blanco",
+            "Russian": "Природа - Белый",
+            "Italian": "Natura - Bianco",
+            "Dutch": "Natuur - Wit",
+            "Portuguese": "Natureza - Branco"
         },
         {
             "English": "Tatami",
-            "English (Europe)": "Tatami"
+            "English (Europe)": "Tatami",
+            "French": "Tatami",
+            "French (US)": "Tatami",
+            "German": "Tatami",
+            "Spanish": "tatamis",
+            "Spanish (US)": "tatamis",
+            "Russian": "Татами",
+            "Italian": "Tatami",
+            "Dutch": "Tatami",
+            "Portuguese": "Tatame"
         },
         {
             "English": "Tatami Panel",
-            "English (Europe)": "Tatami Panel"
+            "English (Europe)": "Tatami Panel",
+            "French": "Panneau de tatami",
+            "French (US)": "Panneau de tatami",
+            "German": "Tatami-Panel",
+            "Spanish": "Panel de tatamis",
+            "Spanish (US)": "Panel de tatamis",
+            "Russian": "Панель татами",
+            "Italian": "Pannello Tatami",
+            "Dutch": "Tatami-paneel",
+            "Portuguese": "Painel de tatame"
         },
         {
             "English": "Simple Carpet",
-            "English (Europe)": "Simple Carpet"
+            "English (Europe)": "Simple Carpet",
+            "French": "Tapis simple",
+            "French (US)": "Tapis simple",
+            "German": "Einfacher Teppich",
+            "Spanish": "Alfombra sencilla",
+            "Spanish (US)": "Alfombra sencilla",
+            "Russian": "Простой ковер",
+            "Italian": "Tappeto semplice",
+            "Dutch": "Eenvoudig tapijt",
+            "Portuguese": "Tapete Simples"
         },
         {
             "English": "Iron",
-            "English (Europe)": "Iron"
+            "English (Europe)": "Iron",
+            "French": "Fer",
+            "French (US)": "Fer",
+            "German": "Eisen",
+            "Spanish": "Planchar",
+            "Spanish (US)": "Planchar",
+            "Russian": "Железо",
+            "Italian": "Ferro",
+            "Dutch": "Ijzer",
+            "Portuguese": "Ferro"
         },
         {
             "English": "FloorSimpleGlodSilverBronze",
-            "English (Europe)": "FloorSimpleGlodSilverBronze"
+            "English (Europe)": "FloorSimpleGlodSilverBronze",
+            "French": "ÉtageSimpleGlodSilverBronze",
+            "French (US)": "ÉtageSimpleGlodSilverBronze",
+            "German": "FloorSimpleGlodSilberBronze",
+            "Spanish": "FloorSimpleGlodSilverBronze",
+            "Spanish (US)": "FloorSimpleGlodSilverBronze",
+            "Russian": "ЭтажSimpleGlodSilverBronze",
+            "Italian": "FloorSimpleGlodSilverBronze",
+            "Dutch": "VloerEenvoudigGlodZilverBrons",
+            "Portuguese": "PisoSimplesGlodSilverBronze"
         },
         {
             "English": "Slender Rugs",
-            "English (Europe)": "Slender Rugs"
+            "English (Europe)": "Slender Rugs",
+            "French": "Tapis minces",
+            "French (US)": "Tapis minces",
+            "German": "Schlanke Teppiche",
+            "Spanish": "Alfombras delgadas",
+            "Spanish (US)": "Alfombras delgadas",
+            "Russian": "Тонкие коврики",
+            "Italian": "Tappeti sottili",
+            "Dutch": "Slanke vloerkleden",
+            "Portuguese": "Tapetes Finos"
         },
         {
             "English": "Fruit Rugs",
-            "English (Europe)": "Fruit Rugs"
+            "English (Europe)": "Fruit Rugs",
+            "French": "Tapis de fruits",
+            "French (US)": "Tapis de fruits",
+            "German": "Fruchtteppiche",
+            "Spanish": "Alfombras de frutas",
+            "Spanish (US)": "Alfombras de frutas",
+            "Russian": "Коврики с фруктами",
+            "Italian": "Tappeti di frutta",
+            "Dutch": "Fruittapijten",
+            "Portuguese": "Tapetes de frutas"
         },
         {
             "English": "Park Rugs",
-            "English (Europe)": "Park Rugs"
+            "English (Europe)": "Park Rugs",
+            "French": "Tapis de parc",
+            "French (US)": "Tapis de parc",
+            "German": "Parkteppiche",
+            "Spanish": "Alfombras de parque",
+            "Spanish (US)": "Alfombras de parque",
+            "Russian": "Парковые ковры",
+            "Italian": "Tappeti del parco",
+            "Dutch": "Park tapijten",
+            "Portuguese": "Tapetes de Parque"
         },
         {
             "English": "Pattern Rugs",
-            "English (Europe)": "Pattern Rugs"
+            "English (Europe)": "Pattern Rugs",
+            "French": "Tapis à motifs",
+            "French (US)": "Tapis à motifs",
+            "German": "Musterteppiche",
+            "Spanish": "Alfombras estampadas",
+            "Spanish (US)": "Alfombras estampadas",
+            "Russian": "Коврики с рисунком",
+            "Italian": "Tappeti a motivi",
+            "Dutch": "Patroon vloerkleden",
+            "Portuguese": "Tapetes padrão"
         },
         {
             "English": "Wood Rugs",
-            "English (Europe)": "Wood Rugs"
+            "English (Europe)": "Wood Rugs",
+            "French": "Tapis en bois",
+            "French (US)": "Tapis en bois",
+            "German": "Holzteppiche",
+            "Spanish": "Alfombras de madera",
+            "Spanish (US)": "Alfombras de madera",
+            "Russian": "Деревянные Коврики",
+            "Italian": "Tappeti in legno",
+            "Dutch": "Houten vloerkleden",
+            "Portuguese": "Tapetes de madeira"
         },
         {
             "English": "Kitchen Rugs",
-            "English (Europe)": "Kitchen Rugs"
+            "English (Europe)": "Kitchen Rugs",
+            "French": "Tapis de cuisine",
+            "French (US)": "Tapis de cuisine",
+            "German": "Küchenteppiche",
+            "Spanish": "Alfombras de cocina",
+            "Spanish (US)": "Alfombras de cocina",
+            "Russian": "Кухонные Коврики",
+            "Italian": "Tappeti da cucina",
+            "Dutch": "Keukentapijten",
+            "Portuguese": "Tapetes de cozinha"
         },
         {
             "English": "Slender Pattern Rugs",
-            "English (Europe)": "Slender Pattern Rugs"
+            "English (Europe)": "Slender Pattern Rugs",
+            "French": "Tapis à motif élancé",
+            "French (US)": "Tapis à motif élancé",
+            "German": "Schlanke Musterteppiche",
+            "Spanish": "Alfombras de patrón delgado",
+            "Spanish (US)": "Alfombras de patrón delgado",
+            "Russian": "Коврики с тонким узором",
+            "Italian": "Tappeti con motivo snello",
+            "Dutch": "Tapijten met slank patroon",
+            "Portuguese": "Tapetes de padrão fino"
         },
         {
             "English": "Shaggy Round Rugs",
-            "English (Europe)": "Shaggy Round Rugs"
+            "English (Europe)": "Shaggy Round Rugs",
+            "French": "Tapis ronds hirsutes",
+            "French (US)": "Tapis ronds hirsutes",
+            "German": "Hochflorige runde Teppiche",
+            "Spanish": "Alfombras Redondas Shaggy",
+            "Spanish (US)": "Alfombras Redondas Shaggy",
+            "Russian": "Мохнатые круглые коврики",
+            "Italian": "Tappeti rotondi Shaggy",
+            "Dutch": "Shaggy ronde vloerkleden",
+            "Portuguese": "Tapetes redondos peludos"
         },
         {
             "English": "Message Mats",
-            "English (Europe)": "Message Mats"
+            "English (Europe)": "Message Mats",
+            "French": "Tapis à messages",
+            "French (US)": "Tapis à messages",
+            "German": "Nachrichtenmatten",
+            "Spanish": "Tapetes de mensajes",
+            "Spanish (US)": "Tapetes de mensajes",
+            "Russian": "Коврики для сообщений",
+            "Italian": "Tappetini per messaggi",
+            "Dutch": "Berichtenmatten",
+            "Portuguese": "Tapetes de mensagens"
         },
         {
             "English": "Icon Rugs",
-            "English (Europe)": "Icon Rugs"
+            "English (Europe)": "Icon Rugs",
+            "French": "Tapis d'icônes",
+            "French (US)": "Tapis d'icônes",
+            "German": "Icon-Teppiche",
+            "Spanish": "Alfombras de iconos",
+            "Spanish (US)": "Alfombras de iconos",
+            "Russian": "Значок Коврики",
+            "Italian": "Tappeti icona",
+            "Dutch": "Icoon vloerkleden",
+            "Portuguese": "Tapetes de ícones"
         },
         {
             "English": "Sanrio Rugs",
-            "English (Europe)": "Sanrio Rugs"
+            "English (Europe)": "Sanrio Rugs",
+            "French": "Tapis Sanrio",
+            "French (US)": "Tapis Sanrio",
+            "German": "Sanrio-Teppiche",
+            "Spanish": "Alfombras Sanrio",
+            "Spanish (US)": "Alfombras Sanrio",
+            "Russian": "Коврики Санрио",
+            "Italian": "Tappeti Sanrio",
+            "Dutch": "Sanrio Tapijten",
+            "Portuguese": "Tapetes Sanrio"
         },
         {
             "English": "Heart Rugs",
-            "English (Europe)": "Heart Rugs"
+            "English (Europe)": "Heart Rugs",
+            "French": "Tapis Coeur",
+            "French (US)": "Tapis Coeur",
+            "German": "Herz-Teppiche",
+            "Spanish": "Alfombras de corazón",
+            "Spanish (US)": "Alfombras de corazón",
+            "Russian": "Ковры Сердце",
+            "Italian": "Tappeti a cuore",
+            "Dutch": "Hart Tapijten",
+            "Portuguese": "Tapetes de coração"
         },
         {
             "English": "Rose Rug",
-            "English (Europe)": "Rose Rug"
+            "English (Europe)": "Rose Rug",
+            "French": "Tapis Rose",
+            "French (US)": "Tapis Rose",
+            "German": "Rosenteppich",
+            "Spanish": "Alfombra rosa",
+            "Spanish (US)": "Alfombra rosa",
+            "Russian": "Розовый ковер",
+            "Italian": "Tappeto rosa",
+            "Dutch": "Roze tapijt",
+            "Portuguese": "Tapete Rosa"
         },
         {
             "English": "Simple Rugs",
-            "English (Europe)": "Simple Rugs"
+            "English (Europe)": "Simple Rugs",
+            "French": "Tapis simples",
+            "French (US)": "Tapis simples",
+            "German": "Einfache Teppiche",
+            "Spanish": "Alfombras Sencillas",
+            "Spanish (US)": "Alfombras Sencillas",
+            "Russian": "Простые коврики",
+            "Italian": "Tappeti semplici",
+            "Dutch": "Eenvoudige vloerkleden",
+            "Portuguese": "Tapetes Simples"
         },
         {
             "English": "Hazure01",
-            "English (Europe)": "Hazure01"
+            "English (Europe)": "Hazure01",
+            "French": "Hazure01",
+            "French (US)": "Hazure01",
+            "German": "Hazure01",
+            "Spanish": "neblina01",
+            "Spanish (US)": "neblina01",
+            "Russian": "Хазуре01",
+            "Italian": "Azzurro01",
+            "Dutch": "Hazure01",
+            "Portuguese": "Hazure01"
         },
         {
             "English": "Hazure02",
-            "English (Europe)": "Hazure02"
+            "English (Europe)": "Hazure02",
+            "French": "Hazure02",
+            "French (US)": "Hazure02",
+            "German": "Hazure02",
+            "Spanish": "Hazure02",
+            "Spanish (US)": "Hazure02",
+            "Russian": "Хазуре02",
+            "Italian": "Azzurro02",
+            "Dutch": "Hazure02",
+            "Portuguese": "Hazure02"
         },
         {
             "English": "Hazure03",
-            "English (Europe)": "Hazure03"
+            "English (Europe)": "Hazure03",
+            "French": "Hazure03",
+            "French (US)": "Hazure03",
+            "German": "Hazure03",
+            "Spanish": "Hazure03",
+            "Spanish (US)": "Hazure03",
+            "Russian": "Хазуре03",
+            "Italian": "Hazure03",
+            "Dutch": "Hazure03",
+            "Portuguese": "Hazure03"
         },
         {
             "English": "Picture",
-            "English (Europe)": "Picture"
+            "English (Europe)": "Picture",
+            "French": "Image",
+            "French (US)": "Image",
+            "German": "Bild",
+            "Spanish": "Imagen",
+            "Spanish (US)": "Imagen",
+            "Russian": "Рисунок",
+            "Italian": "Foto",
+            "Dutch": "Afbeelding",
+            "Portuguese": "Foto"
         },
         {
             "English": "Sculpture",
-            "English (Europe)": "Sculpture"
+            "English (Europe)": "Sculpture",
+            "French": "Sculpture",
+            "French (US)": "Sculpture",
+            "German": "Skulptur",
+            "Spanish": "Escultura",
+            "Spanish (US)": "Escultura",
+            "Russian": "Скульптура",
+            "Italian": "Scultura",
+            "Dutch": "Beeldhouwwerk",
+            "Portuguese": "Escultura"
         },
         {
             "English": "Haniwa",
-            "English (Europe)": "Haniwa"
+            "English (Europe)": "Haniwa",
+            "French": "Haniwa",
+            "French (US)": "Haniwa",
+            "German": "Haniwa",
+            "Spanish": "Haniwa",
+            "Spanish (US)": "Haniwa",
+            "Russian": "Ханива",
+            "Italian": "Hanwa",
+            "Dutch": "Haniwa",
+            "Portuguese": "Haniwa"
         },
         {
             "English": "Etc",
-            "English (Europe)": "Etc"
+            "English (Europe)": "Etc",
+            "French": "Etc",
+            "French (US)": "Etc",
+            "German": "Etc",
+            "Spanish": "Etc.",
+            "Spanish (US)": "Etc.",
+            "Russian": "И т.д",
+            "Italian": "Eccetera",
+            "Dutch": "Enzovoort",
+            "Portuguese": "etc."
         },
         {
             "English": "Unnecessary",
-            "English (Europe)": "Unnecessary"
+            "English (Europe)": "Unnecessary",
+            "French": "Inutile",
+            "French (US)": "Inutile",
+            "German": "Nicht notwendig",
+            "Spanish": "Innecesario",
+            "Spanish (US)": "Innecesario",
+            "Russian": "Ненужный",
+            "Italian": "Non necessario",
+            "Dutch": "Onnodig",
+            "Portuguese": "Desnecessário"
         },
         {
             "English": "FossilUnknown",

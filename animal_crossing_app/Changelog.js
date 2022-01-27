@@ -3,6 +3,8 @@ export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Updated translations
+-
 -Added C.J. and Flick sell prices to Fish and Bugs
 -Can now sort on more pages
 -Added Sort by... Collected option
