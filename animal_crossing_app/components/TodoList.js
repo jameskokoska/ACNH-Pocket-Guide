@@ -166,7 +166,7 @@ export class TodoList extends Component {
 
   addItemPopup = (open) => {
     getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
-    this.popupAddTask.setPopupVisible(true);
+    this.popupAddTask?.setPopupVisible(true);
   }
 
   addItem = (item, edit=false) => {
