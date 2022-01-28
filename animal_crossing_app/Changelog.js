@@ -3,13 +3,14 @@ export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-TV Guide page!
 -Added requires high friendship filter for Reactions
 -Added icon and info if there is custom customization item required (instead of DIY kit)
 -Added Gyroid collection count
 -Can refresh list if sort by Collected filters are active
 -Added Sort by... Collected filter to more pages
--
 -Updated translations
+-
 -Fixed ToDo list adding item crash
 -Fixed store hours at 5AM
 -

@@ -58,7 +58,7 @@ export class SubHeader extends Component {
 export class Header extends Component {
   render(){
     return(
-      <TextFont bold={this.props.bold===false?false:true} style={[{fontSize: 38, marginHorizontal: 30, color:colors.textBlack[global.darkMode]},this.props.style]}>{this.props.children}</TextFont>
+      <TextFont translate={this.props.translate===true || this.props.translate===undefined} bold={this.props.bold===false?false:true} style={[{fontSize: 38, marginHorizontal: 30, color:colors.textBlack[global.darkMode]},this.props.style]}>{this.props.children}</TextFont>
     )
   }
 }

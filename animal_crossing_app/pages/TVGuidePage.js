@@ -3,7 +3,7 @@ import {Image, TouchableOpacity, ScrollView, View, Dimensions, Text} from 'react
 import {MailLink, ExternalLink, SubHeader, Header, Paragraph} from "../components/Formattings"
 import TextFont from '../components/TextFont'
 import colors from '../Colors.js';
-import {attemptToTranslate, capitalizeFirst, getSettingsString} from "../LoadJsonData"
+import {attemptToTranslate, capitalize, capitalizeFirst, getSettingsString} from "../LoadJsonData"
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import { getCurrentDateObject, getWeekDay } from '../components/DateFunctions';
@@ -112,7 +112,7 @@ class SpecificTVPage extends Component {
         <View style={{marginTop: 100}}/>
         <SubHeader>{getWeekDay(this.props.actualDay)}</SubHeader>
         <View style={{marginTop: 3}}/>
-        <Header>TV Guide</Header>
+        <Header translate={false}>{capitalize(attemptToTranslate("TV Guide"))}</Header>
         <View style={{marginTop: 20}}/>
           {data[this.props.dayIndex].map((item)=>{
             return <ContainerBox key={item[0]+item[1]} text={item[0]} text2={attemptToTranslate(item[1])} smallWidth/>
@@ -140,8 +140,8 @@ class ContainerBox extends Component {
       backgroundColor=colors.selectedText[global.darkMode]
     }
     return <View style={{paddingHorizontal:20, flexDirection:"row", alignItems:"center",backgroundColor: backgroundColor, borderTopColor: colors.lightDarkAccentHeavy[global.darkMode],borderTopWidth: 2,}}>
-      <SubHeader margin={false} style={{fontSize:18, marginHorizontal:20, marginVertical:10}}>{convert24Hour(this.props.text)}</SubHeader>
-      <SubHeader margin={false} style={{fontSize:18, flexWrap:"wrap", flex:1, marginHorizontal:20, marginVertical:10}}>{capitalizeFirst(this.props.text2)}</SubHeader>
+      <SubHeader margin={false} style={{marginLeft:10,flex:2.25,fontSize:18, marginVertical:10}}>{convert24Hour(this.props.text)}</SubHeader>
+      <SubHeader margin={false} style={{fontSize:18, flexWrap:"wrap", flex:5, marginLeft:10,marginVertical:10}}>{capitalizeFirst(this.props.text2)}</SubHeader>
     </View>
   }
 }
