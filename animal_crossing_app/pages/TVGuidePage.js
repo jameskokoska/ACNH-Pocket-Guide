@@ -131,15 +131,15 @@ class ContainerBox extends Component {
     let backgroundColor = colors.white[global.darkMode]
     let currentHour = this.props.text.toString().split(":")[0].toString()
     if(highlight.includes(this.props.text2)){
-      backgroundColor = colors.specialEventBirthdayBackgroundHighlight[global.darkMode]
+      backgroundColor = colors.tvGuideHighlightSpecial[global.darkMode]
     }
     if(currentHour.charAt(0)==="0"){
       currentHour = currentHour.slice(1)
     }
     if(getCurrentDateObject().getHours().toString()===currentHour){
-      backgroundColor=colors.selectedText[global.darkMode]
+      backgroundColor=colors.tvGuideHighlight[global.darkMode]
     }
-    return <View style={{paddingHorizontal:20, flexDirection:"row", alignItems:"center",backgroundColor: backgroundColor, borderTopColor: colors.lightDarkAccentHeavy[global.darkMode],borderTopWidth: 2,}}>
+    return <View style={{paddingHorizontal:20, flexDirection:"row", alignItems:"center",backgroundColor: backgroundColor, borderTopColor: colors.lightDarkAccentHeavy2[global.darkMode],borderTopWidth: 2,}}>
       <SubHeader margin={false} style={{marginLeft:10,flex:2.25,fontSize:18, marginVertical:10}}>{convert24Hour(this.props.text)}</SubHeader>
       <SubHeader margin={false} style={{fontSize:18, flexWrap:"wrap", flex:5, marginLeft:10,marginVertical:10}}>{capitalizeFirst(this.props.text2)}</SubHeader>
     </View>

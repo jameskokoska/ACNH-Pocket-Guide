@@ -75,6 +75,8 @@ const colors = {
     specialEventBackgroundHighlight : ["#56CFF7","#3077B4"],
     specialEventBirthdayBackgroundHighlight : ["#D963F3","#8332A3"],
     warningEventBackgroundHeavy : ["#FF5959","#A13341"],
+    tvGuideHighlight : ["#98C7FD","#2D5C86"],
+    tvGuideHighlightSpecial : ["#C498FD","#7B3A8B"],
     startEventBackgroundHeavy : ["#6BFF6B","#3F8018"],
     specialEventResidentBirthdayBackgroundHeavy : ["#B5BFEE","#515883"],
     specialEventBackgroundHeavy : ["#56CFF7","#3077B4"],

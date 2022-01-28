@@ -309,7 +309,7 @@ export const sideSections = [
     "pageNum" : 31,
     "picture" : require("../assets/icons/tv.png"),
     "displayName" : "TV Guide",
-    "color": "selectIsland",
+    "color": "selectConstruction",
     "disabled":false
   },
   // {
