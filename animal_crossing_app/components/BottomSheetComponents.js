@@ -289,6 +289,17 @@ export class InfoLine extends Component {
       text = doWeSwapDate()===true ? textSplit[1] + " " + attemptToTranslate(getMonth(textSplit[0]-1)) : attemptToTranslate(getMonth(textSplit[0]-1)) + " " + textSplit[1]
     }
 
+    if(this.props.textProperty[0]==="Kit Cost" && this.props.item["Kit Type"]!==undefined && this.props.item["Kit Type"]!=="NA" && this.props.item["Kit Type"]!=="Normal" && this.props.item["Kit Type"]!=="None"){
+      ending = ending + " ("+attemptToTranslate(this.props.item["Kit Type"])+")"
+      let materialImage = getMaterialImage(this.props.item["Kit Type"], true)
+      console.log(materialImage)
+      if(materialImage===""){
+        extraImageSource = <Image style={[styles.infoLineImage,{marginRight:2}]} source={getPhoto(this.props.item["Kit Type"].toLowerCase())}/>
+      }else {
+        extraImageSource = <FastImage style={[styles.infoLineImage,{width: 30, height:30}]} source={{uri: materialImage}} cacheKey={materialImage}/>
+      }
+    }
+
     var colors1 = <View/>
     var colors2 = <View/>
     if(this.props.textProperty[0]==="Color 1"&&this.props.textProperty2[0]==="Color 2"){

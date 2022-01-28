@@ -837,6 +837,20 @@
           "id": "Source:Viva Festivale Reaction Set"
         }
       ]
+    },
+    {
+      "name": "Source Notes",
+      "id": "Source Notes",
+      "children": [
+        {
+          "name": "Received after doing your 50th group stretch",
+          "id": "Source Notes:Received after doing your 50th group stretch"
+        },
+        {
+          "name": "Requires a high level of friendship",
+          "id": "Source Notes:Requires a high level of friendship"
+        }
+      ]
     }
   ],
   "Music": [

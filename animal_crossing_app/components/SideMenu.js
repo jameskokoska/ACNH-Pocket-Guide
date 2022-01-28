@@ -305,13 +305,13 @@ export const sideSections = [
     "displayName" : "Mystery Islands",
     "color": "selectIsland",
   },
-  // {
-  //   "pageNum" : 31,
-  //   "picture" : require("../assets/icons/palmTree.png"),
-  //   "displayName" : "TV Guide",
-  //   "color": "selectIsland",
-  //   "disabled":false
-  // },
+  {
+    "pageNum" : 31,
+    "picture" : require("../assets/icons/tv.png"),
+    "displayName" : "TV Guide",
+    "color": "selectIsland",
+    "disabled":false
+  },
   // {
   //   "pageNum" : 32,
   //   "picture" : require("../assets/icons/clipboard.png"),

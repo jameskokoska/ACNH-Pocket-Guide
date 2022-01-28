@@ -54,6 +54,17 @@ class PopupFilter extends Component {
         {name:"Male", id:"Gender:Male"},{name:"Female", id:"Gender:Female"}
       ]
     }]
+    this.sortByFiltersCollectedOnly = [
+      {
+        "name": "Sort by...",
+        "id": "Sort by...",
+        "children": [
+          {name:"Reverse sorting direction", id:"Reverse direction"},
+          {name:"", id:"break"},
+          {name:"Collected", id:"Sort-Collected"},
+        ]
+      },
+    ]
     this.sortByFilters = [
       {
         "name": "Sort by...",
@@ -184,7 +195,7 @@ class PopupFilter extends Component {
           {"name": "No","id": "Villager:No"},
         ]
       }]
-      this.possibleFilters = [...this.possibleFilters, ...categories, ...handSigns, ...personality, ...isVillager];
+      this.possibleFilters = [...this.sortByFiltersCollectedOnly, ...this.possibleFilters, ...categories, ...handSigns, ...personality, ...isVillager];
     } else if(this.props.title==="Active Creatures"){
       const categories = [{
         "name": "Type Categories",
@@ -224,20 +235,20 @@ class PopupFilter extends Component {
       }]
       this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...categories, ...filterDefinitions["Floor & Walls"], ...this.invertFilters];
     } else if(this.props.title==="Reactions"){
-      this.possibleFilters = [...this.possibleFilters, ...filterDefinitions["Reactions"], ...this.invertFilters];
+      this.possibleFilters = [...this.sortByFiltersCollectedOnly, ...this.possibleFilters, ...filterDefinitions["Reactions"], ...this.invertFilters];
     } else if(this.props.title==="Recipes"){
       const categories = [{
         "name": "Type Categories",
         "id":"Type Categories",
         "children": [{"name":"Crafting Recipes (DIY)","id":"Filter Crafting DIY"},{"name":"Cooking Recipes (DIY)","id":"Filter Cooking DIY"}]
       }]
-      this.possibleFilters = [...this.possibleFilters, ...categories, ...filterDefinitions["Recipes"], ...this.invertFilters];
+      this.possibleFilters = [...this.sortByFiltersCollectedOnly, ...this.possibleFilters, ...categories, ...filterDefinitions["Recipes"], ...this.invertFilters];
     } else if(this.props.title==="Villagers"){
       this.sortByFilters[0]["children"] = [{name:"Reverse sorting direction", id:"Reverse direction"},
       {name:"", id:"break"},{name:"Birthday", id:"Sort-Birthday"}]
       this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.villagerFilters, ...this.genderFilters, ...filterDefinitions["Villagers"], ...this.invertFilters];
     } else if(this.props.title==="Gyroids"){
-      this.possibleFilters = [...this.possibleFilters, ...filterDefinitions["Gyroids"], ...this.invertFilters];
+      this.possibleFilters = [...this.sortByFiltersCollectedOnly, ...this.possibleFilters, ...filterDefinitions["Gyroids"], ...this.invertFilters];
     } else if(this.props.title==="New Items"){
       this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.villagerFilters, ...notCraftVariationsFilters, ...categoriesAll, ...this.invertFilters];
     } else if(this.props.title==="Everything" || this.props.title==="Wishlist" || this.props.title==="Search Items"){
@@ -256,7 +267,7 @@ class PopupFilter extends Component {
     } else if(this.props.title==="Tools"){
       this.possibleFilters = [...this.sortByFiltersReducedWithColor,...this.possibleFilters, ...this.invertFilters];
     } else if(this.props.title==="Music"){
-      this.possibleFilters = [...this.possibleFilters, ...filterDefinitions["Music"], ...this.invertFilters]
+      this.possibleFilters = [...this.sortByFiltersCollectedOnly, ...this.possibleFilters, ...filterDefinitions["Music"], ...this.invertFilters]
     } else if(this.props.villagerGifts===true){
       const categories = [{
         "name": "Villager Wearable Filters",
@@ -269,7 +280,7 @@ class PopupFilter extends Component {
     } else if(this.props.title==="Materials"){
       this.possibleFilters = [...this.sortByFiltersReduced, ...this.possibleFilters]
     } else {
-      this.possibleFilters = [...this.possibleFilters, ...this.sortByFiltersReduced]
+      this.possibleFilters = [ ...this.sortByFiltersReduced, ...this.possibleFilters]
     }
   }
 

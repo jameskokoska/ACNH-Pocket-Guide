@@ -374,6 +374,8 @@ export function getPhoto(name, fallback=""){
     return require("../assets/icons/bunny.png");
   } else if(name.includes("halloween")){
     return require("../assets/icons/pumpkin.png");
+  } else if(name.includes("pumpkin")){
+    return require("../assets/icons/pumpkin.png");
   } else if(name.includes("valentine")){
     return require("../assets/icons/heart.png");
   } else if(name.includes("countdown")){
@@ -387,6 +389,8 @@ export function getPhoto(name, fallback=""){
   } else if(name.includes("museum") || name.includes("blathers")){
     return require("../assets/icons/museum.png");
   } else if(name.includes("ornaments")){
+    return require("../assets/icons/ornaments.png");
+  } else if(name.includes("rainbow feathers")){
     return require("../assets/icons/ornaments.png");
   }
   if(fallback.includes("season")){

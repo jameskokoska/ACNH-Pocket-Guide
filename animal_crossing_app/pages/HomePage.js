@@ -949,6 +949,10 @@ export class CollectionProgress extends Component {
       clothingCount: 0,
       clothingCountTotal: 0,
       clothingPercentage: 0,
+      countGyroid: 0,
+      gyroidCount: 0,
+      gyroidCountTotal: 0,
+      gyroidPercentage: 0,
       achievementsCount: 0,
       achievementsCountTotal: 0,
       achievementsPercentage: 0,
@@ -996,6 +1000,10 @@ export class CollectionProgress extends Component {
       var clothingCount = countClothing[0]
       var clothingCountTotal = countClothing[1]
       var clothingPercentage = clothingCount/clothingCountTotal * 100;
+      let countGyroid = await countCollectionSpecial("dataLoadedGyroids");
+      var gyroidCount = countGyroid[0]
+      var gyroidCountTotal = countGyroid[1]
+      var gyroidPercentage = gyroidCount/gyroidCountTotal * 100;
       var achievementsCount = await countCollectionAchievements();
       var achievementsCountTotal = await countAchievements();
       var achievementsPercentage = achievementsCount/achievementsCountTotal * 100;
@@ -1036,6 +1044,10 @@ export class CollectionProgress extends Component {
         clothingCount: clothingCount,
         clothingCountTotal: clothingCountTotal,
         clothingPercentage: clothingPercentage,
+        countGyroid: countGyroid,
+        gyroidCount: gyroidCount,
+        gyroidCountTotal: gyroidCountTotal,
+        gyroidPercentage: gyroidPercentage,
         achievementsCount: achievementsCount,
         achievementsCountTotal: achievementsCountTotal,
         achievementsPercentage: achievementsPercentage,
@@ -1065,7 +1077,8 @@ export class CollectionProgress extends Component {
         <ProgressContainer delay={8} setPage={this.props.setPage} page={3} tab={0} color={colors.furnitureAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.furniturePercentage} image={require("../assets/icons/leaf.png")} text={attemptToTranslate("Furniture") + " " + this.state.furnitureCount + "/" + this.state.furnitureCountTotal.toString()}/>
         <ProgressContainer delay={9} setPage={this.props.setPage} page={3} tab={2} color={colors.floorWallsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.floorWallsPercentage} image={require("../assets/icons/carpet.png")} text={attemptToTranslate("Floor & Walls") + " " + this.state.floorWallsCount + "/" + this.state.floorWallsCountTotal.toString()}/>
         <ProgressContainer delay={10} setPage={this.props.setPage} page={3} tab={1} color={colors.clothingAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.clothingPercentage} image={require("../assets/icons/top.png")} text={attemptToTranslate("Clothing") + " " + this.state.clothingCount + "/" + this.state.clothingCountTotal.toString()}/>
-        <ProgressContainer delay={11} setPage={this.props.setPage} page={19} tab={""} color={colors.achievementsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.achievementsPercentage} image={require("../assets/icons/achievementIcon.png")} text={attemptToTranslate("Achievements") + " " + this.state.achievementsCount + "/" + this.state.achievementsCountTotal.toString()}/>
+        <ProgressContainer delay={11} setPage={this.props.setPage} page={33} tab={""} color={colors.gyroidAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.gyroidPercentage} image={require("../assets/icons/gyroid.png")} text={attemptToTranslate("Gyroids") + " " + this.state.gyroidCount + "/" + this.state.gyroidCountTotal.toString()}/>
+        <ProgressContainer delay={12} setPage={this.props.setPage} page={19} tab={""} color={colors.achievementsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.achievementsPercentage} image={require("../assets/icons/achievementIcon.png")} text={attemptToTranslate("Achievements") + " " + this.state.achievementsCount + "/" + this.state.achievementsCountTotal.toString()}/>
       </View>
       <View style={{height: 15}}/>
       </>

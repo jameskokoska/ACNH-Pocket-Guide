@@ -137,12 +137,14 @@ function ListPage(props){
     "Old Resident",
     "Not Old Resident",
     "Do not have villager photo",
-    "Have villager photo"
+    "Have villager photo",
+    "Sort-Collected"
   ]
 
   const [searchFilters, setSearchFilters] = useState([]);
   function updateSearchFilters(searchFilters){
     setSearchFilters(searchFilters);
+    console.log("Search Filters: "+searchFilters)
   }
 
   const [loading, setLoading] = useState(false)

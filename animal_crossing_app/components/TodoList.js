@@ -72,8 +72,8 @@ export class TodoList extends Component {
       // console.log(lastOpened)
       if(lastOpened!==currentDateString){
         this.uncheckAll()
+        await AsyncStorage.setItem("lastOpenedDay", currentDateString);
       }
-      await AsyncStorage.setItem("lastOpenedDay", currentDateString);
       // console.log(currentDateString)
     }
     this.props.setLoadedToDo(true);
