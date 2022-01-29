@@ -413,11 +413,13 @@ export function collectionListRemoveDuplicates(){
 }
 
 export function removeAccents(text){
-  return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace("-"," ")
+  if(text && text.constructor===String)
+    return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace("-"," ")
+  return ""
 }
 
 export function capitalize(name) {
-  if(name!==undefined){
+  if(name && name.constructor===String){
     if(name.includes("(") && name.includes(")")){
       var withinBrackets = name.match(/\((.*?)\)/);
       name = name.replace(withinBrackets[0], "("+capitalize(withinBrackets[1])+")")
@@ -431,15 +433,15 @@ export function capitalize(name) {
 }
 
 export function capitalizeFirst(name) {
-  if(name!==undefined){
-    return name.charAt(0).toUpperCase() + name.slice(1);
+  if(name && name.constructor===String){
+    return name.toString().charAt(0).toUpperCase() + name.slice(1);
   } else {
     return "";
   }
 }
 
 export function commas(number) {
-  if(number!==undefined){
+  if(number){
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
   } else {
     return "null"
@@ -447,8 +449,8 @@ export function commas(number) {
 }
 
 export function removeBrackets(string){
-  if(string!==undefined){
-    return string.replace(/ *\([^)]*\) */g, "");
+  if(string){
+    return string.toString().replace(/ *\([^)]*\) */g, "");
   } else {
     return "null"
   }
