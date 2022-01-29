@@ -199,7 +199,10 @@ function translateRepeatItem(itemTranslation, language){
   if(languages[language]===undefined || itemTranslation[languages[language]]===undefined){
     return ""
   }
-  return itemTranslation[languages[language]]
+  if(languages[language] && itemTranslation[languages[language]]){
+    return itemTranslation[languages[language]]
+  } 
+  return ""
 }
 
 export async function countCollection(checkListKeyStart){
