@@ -68,7 +68,7 @@ export default class ProgressContainerToggle extends Component{
       let removeButton=<View style={{marginHorizontal:30, left:-10, top:-5,position:'absolute',zIndex:10, }}>
         <TouchableOpacity style={{padding:9}} 
           onPress={()=>{
-            this.props.editSections(this.props.keyName); 
+            this.toggleShown()
         }}>
           <Image source={require("../assets/icons/deleteIcon.png")} style={{opacity:0.8,width:15, height:15, borderRadius:100,}}/>
         </TouchableOpacity>
@@ -76,7 +76,7 @@ export default class ProgressContainerToggle extends Component{
       let addButton=<View style={{marginHorizontal:30,left:-10, top:-5,position:'absolute',zIndex:10, }}>
       <TouchableOpacity style={{padding:9}} 
         onPress={()=>{
-          this.props.editSections(this.props.keyName); 
+          this.toggleShown()
       }}>
         <Image source={require("../assets/icons/addIcon.png")} style={{opacity:0.8,width:15, height:15, borderRadius:100,}}/>
       </TouchableOpacity>
