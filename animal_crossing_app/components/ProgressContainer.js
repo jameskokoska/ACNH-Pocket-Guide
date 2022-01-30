@@ -105,9 +105,9 @@ class ProgressContainer extends Component {
       setTimeout(()=>{this.animation()},0)
     }
   }
-  // componentDidMount(){
-  //   setTimeout(()=>{this.animation()},0)
-  // }
+  componentDidMount(){
+    setTimeout(()=>{this.animation()},0)
+  }
   animation=()=>{
     var percent = this.props.percentage/100
     if(this.props.percentage===undefined){
