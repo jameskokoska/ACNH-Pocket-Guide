@@ -3,6 +3,15 @@ export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added customizable Collection count section!
+-Tweaked location of remove and reorder buttons for lists
+-When tool reaches 0 durability, reset durability button is shown automatically
+-Stability improvements
+-Fixed tapping Sea Creatures and Bugs mixed up for Collection count section
+-Fixed null value in Tool durability section
+-Fixed Toast message crash
+-Added animation delay to collection list animation when reordered
+-
 -TV Guide page!
 -Added requires high friendship filter for Reactions
 -Added icon and info if there is custom customization item required (instead of DIY kit)

@@ -110,7 +110,7 @@ export default class LoanList extends Component {
   render(){
     return <>
       <View style={{alignItems:"center",flexDirection:"row", right:0, top:0,position:'absolute',zIndex:10}}>
-        <TouchableOpacity style={{padding:10}} 
+        <TouchableOpacity style={{padding:10,marginRight:-7}} 
           onPress={()=>{
             this.setState({showEdit:!this.state.showEdit});
             getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
@@ -165,7 +165,7 @@ class LoanItem extends Component {
   removeButton = (props)=>{
     if(props.showEdit || this.state.showRemove)
       return(<>
-        <View style={{flexDirection:"row",left:-10, top:-10,position:'absolute',zIndex:10, }}>
+        <View style={{flexDirection:"row",left:-7, top:-7,position:'absolute',zIndex:10, }}>
           <TouchableOpacity style={{padding:9}} 
             onPress={()=>{
               props.deleteItem(props.index); 
@@ -174,15 +174,15 @@ class LoanItem extends Component {
             <Image source={require("../assets/icons/deleteIcon.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
           </TouchableOpacity>
         </View>
-        <View style={{flexDirection:"row",right:-5, top:-5,position:'absolute',zIndex:10, }}>
-          <TouchableOpacity style={{padding:5}} 
+        <View style={{flexDirection:"row",right:-3, top:-4,position:'absolute',zIndex:10, }}>
+          <TouchableOpacity style={{padding:6}} 
             onPress={()=>{
               props.reorderItem(props.index, -1); 
               this.setState({showRemove:false})
           }}>
             <Image source={require("../assets/icons/upArrow.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
           </TouchableOpacity>
-          <TouchableOpacity style={{padding:5}} 
+          <TouchableOpacity style={{padding:6}} 
             onPress={()=>{
               props.reorderItem(props.index, 1); 
               this.setState({showRemove:false})

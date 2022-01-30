@@ -446,6 +446,8 @@ export function capitalizeFirst(name) {
 export function commas(number) {
   if(number){
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  } else if(number===0){
+    return 0
   } else {
     return "null"
   }

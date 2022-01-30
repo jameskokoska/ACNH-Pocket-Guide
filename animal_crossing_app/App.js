@@ -405,20 +405,22 @@ class App extends Component {
     if(global.settingsCurrent!==undefined&&getSettingsString("settingsShowFAB")==="true"){
       needsPadding = true;
     }
-    toast.show(result[0], {type:result[1]===false?"success":"danger", 
-      renderType:{
-        success: (toast) => (
-          <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 12, marginRight: needsPadding?100:20, borderRadius: 5, backgroundColor: colors.popupSuccess[global.darkMode], alignItems:"center", justifyContent:"center"}}>
-            <TextFont translate={false} style={{color:"white", fontSize: 15}}>{toast.message}</TextFont>
-          </View>
-        ),
-        danger: (toast) => (
-          <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 12, marginRight: needsPadding?100:20, borderRadius: 5, backgroundColor: colors.popupDanger[global.darkMode], alignItems:"center", justifyContent:"center"}}>
-            <TextFont translate={false} style={{color:"white", fontSize: 15}}>{toast.message}</TextFont>
-          </View>
-        )
-      }
-    })
+    if(toast){
+      toast.show(result[0], {type:result[1]===false?"success":"danger", 
+        renderType:{
+          success: (toast) => (
+            <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 12, marginRight: needsPadding?100:20, borderRadius: 5, backgroundColor: colors.popupSuccess[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+              <TextFont translate={false} style={{color:"white", fontSize: 15}}>{toast.message}</TextFont>
+            </View>
+          ),
+          danger: (toast) => (
+            <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 12, marginRight: needsPadding?100:20, borderRadius: 5, backgroundColor: colors.popupDanger[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+              <TextFont translate={false} style={{color:"white", fontSize: 15}}>{toast.message}</TextFont>
+            </View>
+          )
+        }
+      })
+    }
   }
 
   openDrawer(vibrate=true) {

@@ -4,7 +4,7 @@ import Clock from '../components/Clock';
 import HomeContentArea from '../components/HomeContentArea';
 import {EventContainer,getEventsDay} from '../components/EventContainer';
 import StoreHoursContainer, { StoreHoursContainerHarvey } from '../components/StoreHoursContainer';
-import ProgressContainer from '../components/ProgressContainer';
+import ProgressContainerToggle from '../components/ProgressContainer';
 import LottieView from 'lottie-react-native';
 import colors from '../Colors'
 import {setSettingsString, getCurrentVillagerNamesString, getInverseVillagerFilters, capitalize,countCollection,getStorage, countCollectionSpecial, collectionListRemoveDuplicates, countCollectionAchievements, countAchievements} from "../LoadJsonData"
@@ -913,6 +913,7 @@ export class CollectionProgress extends Component {
   constructor(){
     super()
     this.state = {
+      editMode:false,
       fishCount: 0,
       fishCountTotal: 0,
       fishPercentage: 0,
@@ -958,56 +959,130 @@ export class CollectionProgress extends Component {
       achievementsPercentage: 0,
     }
   }
-  componentDidMount(){
+  async componentDidMount(){
+    let collectionSectionsDisabled = JSON.parse(await getStorage("collectionSectionsDisabled"+global.profile,JSON.stringify([])));
+    this.countCollectionTotal(collectionSectionsDisabled)
+  }
+  countCollectionTotal = (collectionSectionsDisabled) => {
     if(global.collectionList!==undefined && global.collectionList.length>7000){
       this.popupLoading.setPopupVisible(true)
     }
     setTimeout(async ()=>{
       collectionListRemoveDuplicates();
-      var fishCount = await countCollection("fishCheckList");
-      var fishCountTotal = global.dataLoadedFish[0].length;
-      var fishPercentage = fishCount/fishCountTotal * 100;
-      var seaCount = await countCollection("seaCheckList");
-      var seaCountTotal = global.dataLoadedSea[0].length;
-      var seaPercentage = seaCount/seaCountTotal * 100;
-      var bugsCount = await countCollection("bugCheckList");
-      var bugsCountTotal = global.dataLoadedBugs[0].length;
-      var bugsPercentage = bugsCount/bugsCountTotal * 100;
-      var fossilCount = await countCollection("fossilCheckList");
-      var fossilCountTotal = global.dataLoadedFossils[0].length;
-      var fossilPercentage = fossilCount/fossilCountTotal * 100;
-      var artCount = await countCollection("artCheckList");
-      var artCountTotal = 43;
-      var artPercentage = artCount/artCountTotal * 100;
-      var musicCount = await countCollection("songCheckList");
-      var musicCountTotal = global.dataLoadedMusic[0].length - 3; //there are 3 Hazure songs
-      var musicPercentage = musicCount/musicCountTotal * 100;
-      var emojipediaCount = await countCollection("emojiCheckList");
-      var emojipediaCountTotal = global.dataLoadedReactions[0].length;
-      var emojipediaPercentage = emojipediaCount/emojipediaCountTotal * 100;
-      var recipeCount = await countCollection("recipesCheckList");
-      var recipeCountTotal = global.dataLoadedRecipes[0].length;
-      var recipePercentage = recipeCount/recipeCountTotal * 100;
-      let countFloorWalls = await countCollectionSpecial("dataLoadedFloorWalls");
-      var floorWallsCount = countFloorWalls[0]
-      var floorWallsCountTotal = countFloorWalls[1]
-      var floorWallsPercentage = floorWallsCount/floorWallsCountTotal * 100;
-      let countFurniture = await countCollectionSpecial("dataLoadedFurniture");
-      var furnitureCount = countFurniture[0]
-      var furnitureCountTotal = countFurniture[1]
-      var furniturePercentage = furnitureCount/furnitureCountTotal * 100;
-      let countClothing = await countCollectionSpecial("dataLoadedClothing");
-      var clothingCount = countClothing[0]
-      var clothingCountTotal = countClothing[1]
-      var clothingPercentage = clothingCount/clothingCountTotal * 100;
-      let countGyroid = await countCollectionSpecial("dataLoadedGyroids");
-      var gyroidCount = countGyroid[0]
-      var gyroidCountTotal = countGyroid[1]
-      var gyroidPercentage = gyroidCount/gyroidCountTotal * 100;
-      var achievementsCount = await countCollectionAchievements();
-      var achievementsCountTotal = await countAchievements();
-      var achievementsPercentage = achievementsCount/achievementsCountTotal * 100;
+      let fishCount = 0
+      let fishCountTotal = 0
+      let fishPercentage = 0
+      if(!collectionSectionsDisabled.includes("fishCount")){
+        fishCount = await countCollection("fishCheckList");
+        fishCountTotal = global.dataLoadedFish[0].length;
+        fishPercentage = fishCount/fishCountTotal * 100;
+      }
+      let seaCount = 0
+      let seaCountTotal = 0
+      let seaPercentage = 0
+      if(!collectionSectionsDisabled.includes("seaCount")){
+        seaCount = await countCollection("seaCheckList");
+        seaCountTotal = global.dataLoadedSea[0].length;
+        seaPercentage = seaCount/seaCountTotal * 100;
+      }
+      let bugsCount = 0
+      let bugsCountTotal = 0
+      let bugsPercentage = 0
+      if(!collectionSectionsDisabled.includes("bugsCount")){
+        bugsCount = await countCollection("bugCheckList");
+        bugsCountTotal = global.dataLoadedBugs[0].length;
+        bugsPercentage = bugsCount/bugsCountTotal * 100;
+      }
+      let fossilCount = 0
+      let fossilCountTotal = 0
+      let fossilPercentage = 0
+      if(!collectionSectionsDisabled.includes("fossilCount")){
+        fossilCount = await countCollection("fossilCheckList");
+        fossilCountTotal = global.dataLoadedFossils[0].length;
+        fossilPercentage = fossilCount/fossilCountTotal * 100;
+      }
+      let artCount = 0
+      let artCountTotal = 0
+      let artPercentage = 0
+      if(!collectionSectionsDisabled.includes("artCount")){
+        artCount = await countCollection("artCheckList");
+        artCountTotal = 43;
+        artPercentage = artCount/artCountTotal * 100;
+      }
+      let musicCount = 0
+      let musicCountTotal = 0
+      let musicPercentage = 0
+      if(!collectionSectionsDisabled.includes("musicCount")){
+        musicCount = await countCollection("songCheckList");
+        musicCountTotal = global.dataLoadedMusic[0].length - 3; //there are 3 Hazure songs
+        musicPercentage = musicCount/musicCountTotal * 100;
+      }
+      let emojipediaCount = 0
+      let emojipediaCountTotal = 0
+      let emojipediaPercentage = 0
+      if(!collectionSectionsDisabled.includes("emojipediaCount")){
+        emojipediaCount = await countCollection("emojiCheckList");
+        emojipediaCountTotal = global.dataLoadedReactions[0].length;
+        emojipediaPercentage = emojipediaCount/emojipediaCountTotal * 100;
+      }
+      let recipeCount = 0
+      let recipeCountTotal = 0
+      let recipePercentage = 0
+      if(!collectionSectionsDisabled.includes("recipeCount")){
+        recipeCount = await countCollection("recipesCheckList");
+        recipeCountTotal = global.dataLoadedRecipes[0].length;
+        recipePercentage = recipeCount/recipeCountTotal * 100;
+      }
+      let countFloorWalls = 0
+      let floorWallsCount = 0
+      let floorWallsCountTotal = 0
+      let floorWallsPercentage = 0
+      if(!collectionSectionsDisabled.includes("floorWallsCount")){
+        countFloorWalls = await countCollectionSpecial("dataLoadedFloorWalls");
+        floorWallsCount = countFloorWalls[0]
+        floorWallsCountTotal = countFloorWalls[1]
+        floorWallsPercentage = floorWallsCount/floorWallsCountTotal * 100;
+      }
+      let countFurniture = 0
+      let furnitureCount = 0
+      let furnitureCountTotal = 0
+      let furniturePercentage = 0
+      if(!collectionSectionsDisabled.includes("furnitureCount")){
+        countFurniture = await countCollectionSpecial("dataLoadedFurniture");
+        furnitureCount = countFurniture[0]
+        furnitureCountTotal = countFurniture[1]
+        furniturePercentage = furnitureCount/furnitureCountTotal * 100;
+      }
+      let countClothing = 0
+      let clothingCount = 0
+      let clothingCountTotal = 0
+      let clothingPercentage = 0
+      if(!collectionSectionsDisabled.includes("clothingCount")){
+        countClothing = await countCollectionSpecial("dataLoadedClothing");
+        clothingCount = countClothing[0]
+        clothingCountTotal = countClothing[1]
+        clothingPercentage = clothingCount/clothingCountTotal * 100;
+      }
+      let countGyroid = 0
+      let gyroidCount = 0
+      let gyroidCountTotal = 0
+      let gyroidPercentage = 0
+      if(!collectionSectionsDisabled.includes("gyroidCount")){
+        countGyroid = await countCollectionSpecial("dataLoadedGyroids");
+        gyroidCount = countGyroid[0]
+        gyroidCountTotal = countGyroid[1]
+        gyroidPercentage = gyroidCount/gyroidCountTotal * 100;
+      }
+      let achievementsCount = 0
+      let achievementsCountTotal = 0
+      let achievementsPercentage = 0
+      if(!collectionSectionsDisabled.includes("achievementsCount")){
+        achievementsCount = await countCollectionAchievements();
+        achievementsCountTotal = await countAchievements();
+        achievementsPercentage = achievementsCount/achievementsCountTotal * 100;
+      }
       this.setState({
+        collectionSectionsDisabled:collectionSectionsDisabled,
         fishCount: fishCount,
         fishCountTotal: fishCountTotal,
         fishPercentage: fishPercentage,
@@ -1054,6 +1129,44 @@ export class CollectionProgress extends Component {
       })
       this.popupLoading?.setPopupVisible(false)
     },0)
+  } 
+  saveList = async (name) => {
+    let collectionSectionsDisabled = this.state.collectionSectionsDisabled
+    if(collectionSectionsDisabled.includes(name)){
+      collectionSectionsDisabled = collectionSectionsDisabled.filter(e => e !== name)
+      collectionSectionsDisabled = collectionSectionsDisabled.filter(e => e !== "")
+    } else {
+      collectionSectionsDisabled.push(name)
+    }
+    this.setState({collectionSectionsDisabled:collectionSectionsDisabled})
+    getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+    console.log("Side sections disabled: " + collectionSectionsDisabled)
+    await AsyncStorage.setItem("collectionSectionsDisabled"+global.profile, JSON.stringify(collectionSectionsDisabled));
+  }
+  toggleEditMode = (state) => {
+    this.setState({editMode:state})
+    if(state===false){
+      this.countCollectionTotal(this.state.collectionSectionsDisabled)
+    }
+  }
+  getDelay = (keyName) => {
+    let originalOrder = [
+      "fishCount",
+      "seaCount",
+      "fossilCount",
+      "artCount",
+      "musicCount",
+      "emojipediaCount",
+      "recipeCount",
+      "furnitureCount",
+      "floorWallsCount",
+      "clothingCount",
+      "gyroidCount",
+      "achievementsCount",
+    ]
+    //subtract the lists
+    originalOrder = originalOrder.filter(n => !this.state.collectionSectionsDisabled.includes(n))
+    return originalOrder.indexOf(keyName)+1
   }
   render(){
     return(<>
@@ -1064,22 +1177,34 @@ export class CollectionProgress extends Component {
         loadingScale={1.3}
         loadingWidth={40}
       />
-      <View style={{height: 15}}/>
-      <View style={{marginHorizontal:30}}>
-        <ProgressContainer delay={0} setPage={this.props.setPage} page={2} tab={0} color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.fishPercentage} image={require("../assets/icons/fish.png")} text={attemptToTranslate("Fish") + " " + this.state.fishCount + "/" + this.state.fishCountTotal.toString()}/>
-        <ProgressContainer delay={1} setPage={this.props.setPage} page={2} tab={1} color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.seaPercentage} image={require("../assets/icons/octopus.png")} text={attemptToTranslate("Sea Creatures") + " " + this.state.seaCount + "/" + this.state.seaCountTotal.toString()}/>
-        <ProgressContainer delay={2} setPage={this.props.setPage} page={2} tab={2} color={colors.bugAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.bugsPercentage} image={require("../assets/icons/bugs.png")} text={attemptToTranslate("Bugs") + " " + this.state.bugsCount + "/" + this.state.bugsCountTotal.toString()}/>
-        <ProgressContainer delay={3} setPage={this.props.setPage} page={2} tab={3} color={colors.fossilAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.fossilPercentage} image={require("../assets/icons/bones.png")} text={attemptToTranslate("Fossils") + " " + this.state.fossilCount + "/" + this.state.fossilCountTotal.toString()}/>
-        <ProgressContainer delay={4} setPage={this.props.setPage} page={2} tab={4} color={colors.artAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.artPercentage} image={require("../assets/icons/colorPalette.png")} text={attemptToTranslate("Art") + " " + this.state.artCount + "/" + this.state.artCountTotal.toString()}/>
-        <ProgressContainer delay={5} setPage={this.props.setPage} page={4} tab={""} color={colors.musicAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.musicPercentage} image={require("../assets/icons/music.png")} text={attemptToTranslate("Songs") + " " + this.state.musicCount + "/" + this.state.musicCountTotal.toString()}/>
-        <ProgressContainer delay={6} setPage={this.props.setPage} page={5} tab={""} color={colors.emojipediaAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.emojipediaPercentage} image={require("../assets/icons/emote.png")} text={attemptToTranslate("Reactions") + " " + this.state.emojipediaCount + "/" + this.state.emojipediaCountTotal.toString()}/>
-        <ProgressContainer delay={7} setPage={this.props.setPage} page={6} tab={""} color={colors.toolsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.recipePercentage} image={require("../assets/icons/crafting.png")} text={attemptToTranslate("Recipes") + " " + this.state.recipeCount + "/" + this.state.recipeCountTotal.toString()}/>
-        <ProgressContainer delay={8} setPage={this.props.setPage} page={3} tab={0} color={colors.furnitureAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.furniturePercentage} image={require("../assets/icons/leaf.png")} text={attemptToTranslate("Furniture") + " " + this.state.furnitureCount + "/" + this.state.furnitureCountTotal.toString()}/>
-        <ProgressContainer delay={9} setPage={this.props.setPage} page={3} tab={2} color={colors.floorWallsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.floorWallsPercentage} image={require("../assets/icons/carpet.png")} text={attemptToTranslate("Floor & Walls") + " " + this.state.floorWallsCount + "/" + this.state.floorWallsCountTotal.toString()}/>
-        <ProgressContainer delay={10} setPage={this.props.setPage} page={3} tab={1} color={colors.clothingAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.clothingPercentage} image={require("../assets/icons/top.png")} text={attemptToTranslate("Clothing") + " " + this.state.clothingCount + "/" + this.state.clothingCountTotal.toString()}/>
-        <ProgressContainer delay={11} setPage={this.props.setPage} page={33} tab={""} color={colors.gyroidAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.gyroidPercentage} image={require("../assets/icons/gyroid.png")} text={attemptToTranslate("Gyroids") + " " + this.state.gyroidCount + "/" + this.state.gyroidCountTotal.toString()}/>
-        <ProgressContainer delay={12} setPage={this.props.setPage} page={19} tab={""} color={colors.achievementsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.achievementsPercentage} image={require("../assets/icons/achievementIcon.png")} text={attemptToTranslate("Achievements") + " " + this.state.achievementsCount + "/" + this.state.achievementsCountTotal.toString()}/>
-      </View>
+      <TouchableOpacity style={{padding:5,position:"absolute",right:20,top:10}} 
+        onPress={async()=>{
+          this.toggleEditMode(!this.state.editMode)
+          getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+      }}>
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{this.state.editMode ? "Disable Edit List" : "Edit List"}</TextFont>
+      </TouchableOpacity>
+      <View style={{height: 25}}/>
+        {this.state.collectionSectionsDisabled?<>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("fishCount")} keyName="fishCount" delay={this.getDelay("fishCount")} setPage={this.props.setPage} page={2} tab={0} color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.fishPercentage} image={require("../assets/icons/fish.png")} text={attemptToTranslate("Fish") + " " + this.state.fishCount + "/" + this.state.fishCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("seaCount")} keyName="seaCount" delay={this.getDelay("seaCount")} setPage={this.props.setPage} page={2} tab={2} color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.seaPercentage} image={require("../assets/icons/octopus.png")} text={attemptToTranslate("Sea Creatures") + " " + this.state.seaCount + "/" + this.state.seaCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("bugsCount")} keyName="bugsCount" delay={this.getDelay("bugsCount")} setPage={this.props.setPage} page={2} tab={1} color={colors.bugAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.bugsPercentage} image={require("../assets/icons/bugs.png")} text={attemptToTranslate("Bugs") + " " + this.state.bugsCount + "/" + this.state.bugsCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("fossilCount")} keyName="fossilCount" delay={this.getDelay("fossilCount")} setPage={this.props.setPage} page={2} tab={3} color={colors.fossilAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.fossilPercentage} image={require("../assets/icons/bones.png")} text={attemptToTranslate("Fossils") + " " + this.state.fossilCount + "/" + this.state.fossilCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("artCount")} keyName="artCount" delay={this.getDelay("artCount")} setPage={this.props.setPage} page={2} tab={4} color={colors.artAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.artPercentage} image={require("../assets/icons/colorPalette.png")} text={attemptToTranslate("Art") + " " + this.state.artCount + "/" + this.state.artCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("musicCount")} keyName="musicCount" delay={this.getDelay("musicCount")} setPage={this.props.setPage} page={4} tab={""} color={colors.musicAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.musicPercentage} image={require("../assets/icons/music.png")} text={attemptToTranslate("Songs") + " " + this.state.musicCount + "/" + this.state.musicCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("emojipediaCount")} keyName="emojipediaCount" delay={this.getDelay("emojipediaCount")} setPage={this.props.setPage} page={5} tab={""} color={colors.emojipediaAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.emojipediaPercentage} image={require("../assets/icons/emote.png")} text={attemptToTranslate("Reactions") + " " + this.state.emojipediaCount + "/" + this.state.emojipediaCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("recipeCount")} keyName="recipeCount" delay={this.getDelay("recipeCount")} setPage={this.props.setPage} page={6} tab={""} color={colors.toolsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.recipePercentage} image={require("../assets/icons/crafting.png")} text={attemptToTranslate("Recipes") + " " + this.state.recipeCount + "/" + this.state.recipeCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("furnitureCount")} keyName="furnitureCount" delay={this.getDelay("furnitureCount")} setPage={this.props.setPage} page={3} tab={0} color={colors.furnitureAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.furniturePercentage} image={require("../assets/icons/leaf.png")} text={attemptToTranslate("Furniture") + " " + this.state.furnitureCount + "/" + this.state.furnitureCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("floorWallsCount")} keyName="floorWallsCount" delay={this.getDelay("floorWallsCount")} setPage={this.props.setPage} page={3} tab={2} color={colors.floorWallsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.floorWallsPercentage} image={require("../assets/icons/carpet.png")} text={attemptToTranslate("Floor & Walls") + " " + this.state.floorWallsCount + "/" + this.state.floorWallsCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("clothingCount")} keyName="clothingCount" delay={this.getDelay("clothingCount")} setPage={this.props.setPage} page={3} tab={1} color={colors.clothingAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.clothingPercentage} image={require("../assets/icons/top.png")} text={attemptToTranslate("Clothing") + " " + this.state.clothingCount + "/" + this.state.clothingCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("gyroidCount")} keyName="gyroidCount" delay={this.getDelay("gyroidCount")} setPage={this.props.setPage} page={33} tab={""} color={colors.gyroidAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.gyroidPercentage} image={require("../assets/icons/gyroid.png")} text={attemptToTranslate("Gyroids") + " " + this.state.gyroidCount + "/" + this.state.gyroidCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("achievementsCount")} keyName="achievementsCount" delay={this.getDelay("achievementsCount")} setPage={this.props.setPage} page={19} tab={""} color={colors.achievementsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.achievementsPercentage} image={require("../assets/icons/achievementIcon.png")} text={attemptToTranslate("Achievements") + " " + this.state.achievementsCount + "/" + this.state.achievementsCountTotal.toString()}/>
+        </>:<View style={{justifyContent:"center", alignItems:"center"}}>
+          <LottieView autoPlay loop
+            style={{width: 90, zIndex:1,}}
+            source={require('../assets/loading.json')}
+          />
+        </View>}
       <View style={{height: 15}}/>
       </>
     )
