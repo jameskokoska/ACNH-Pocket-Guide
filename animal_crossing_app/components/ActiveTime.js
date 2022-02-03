@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {AppRegistry, StyleSheet, ScrollView , StatusBar, Text, View, Dimensions, Image, ImageBackground} from "react-native";
 import colors from '../Colors.js';
 import {parseActiveTime, isActive, isActive2, getCurrentDateObject, getMonthShort} from "./DateFunctions"
-import {getSettingsString} from "../LoadJsonData";
+import {attemptToTranslate, getSettingsString} from "../LoadJsonData";
 
 function getImage(name){
   switch(name){
@@ -268,15 +268,64 @@ class ActiveTime extends Component {
       }
     }
 
+    let activeList = [];
+
     // build active month indicator image list
     for(var i=0; i<months.length; i++){
       var timeRange = this.props.item[hemispherePre+months[i]];
       if(timeRange!=="NA"){
         activeMonthImages.push(imagePrefix + "a" + months[i] + imageSuffix);
+        activeList.push(months[i])
       }else{
         activeMonthImages.push(imagePrefix + "i" + months[i] + imageSuffix);
+        activeList.push(false)
       }
     }
+
+    let timePeriods = [[]]
+    for (let i=0; i < activeList.length; i++) {
+      const item = activeList[i]
+      if (item !== false && timePeriods[timePeriods.length-1].length <= 0) {
+        timePeriods[timePeriods.length-1].push(item)
+      } else if (item === false && timePeriods[timePeriods.length-1].length > 0){
+        timePeriods[timePeriods.length-1].push(activeList[i-1])
+        timePeriods.push([]);
+      }
+    }
+    if (timePeriods[timePeriods.length-1].length <=0) {
+      timePeriods = timePeriods.splice(0, timePeriods.length-1);
+    }
+    // full year check
+    if (timePeriods.length == 1 && timePeriods[0].length == 1 && timePeriods[0][0] == "Jan") {
+      timePeriods[0].push("Dec");
+    } else {
+      // check dec - jan interval
+      if (timePeriods[0][0] === "Jan" && timePeriods[timePeriods.length-1].length == 1) {
+        timePeriods[timePeriods.length-1].push(timePeriods[0][1]);
+        timePeriods = timePeriods.splice(1);
+      }
+    }
+
+    console.log(timePeriods)
+
+    let activeTimeString = ""
+    for(const timePeriod of timePeriods){
+      console.log(timePeriod)
+      if(timePeriod[0]!==timePeriod[1]){
+        activeTimeString = activeTimeString + attemptToTranslate(timePeriod[0]) + " - " + attemptToTranslate(timePeriod[1]) + "; "
+      }else{
+        activeTimeString = activeTimeString + attemptToTranslate(timePeriod[0]) + "; "
+      }
+    }
+
+    activeTimeString = activeTimeString + this.props.item[hemispherePre+"time"];
+
+    let activeTimeStringColor = "white"
+    if(currentTimeRange==="NA"){
+      activeTimeStringColor = "red"
+    }
+
+    console.log(activeTimeString)
 
     // get current time image
     currentTimeImage = imagePrefix + "hour" + currentHour + imageSuffix;
