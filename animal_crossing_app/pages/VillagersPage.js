@@ -13,7 +13,7 @@ class VillagersPage extends Component {
     setTimeout(async ()=>{
       let response = await getStorage("villagersPageAddPopup","")
       if(response === ""){
-        this.addVillagersPopup.setPopupVisible(true)
+        this.addVillagersPopup?.setPopupVisible(true)
         await AsyncStorage.setItem("villagersPageAddPopup", "true");
       }
     },0)

@@ -99,7 +99,7 @@ export default class DurabilityList extends Component {
 
   addItemPopup = (open) => {
     getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
-    this.popupAddTool.setPopupVisible(true);
+    this.popupAddTool?.setPopupVisible(true);
   }
 
   addItem = (item) => {

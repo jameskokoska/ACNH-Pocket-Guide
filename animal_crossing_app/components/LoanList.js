@@ -96,7 +96,7 @@ export default class LoanList extends Component {
 
   addItemPopup = (open) => {
     getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
-    this.popupAddLoan.setPopupVisible(true);
+    this.popupAddLoan?.setPopupVisible(true);
   }
 
   addItem = (item) => {

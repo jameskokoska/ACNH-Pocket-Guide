@@ -166,7 +166,7 @@ class ProfilesComponent extends Component{
         <View style={{marginHorizontal:10}}>
           <CustomDatePicker setDateOffset={this.setDateOffset}/>
           <View style={{flexDirection:"row", justifyContent:"space-between",}}>
-            <ButtonComponent text="Erase" onPress={() => {this.popupWarning.setPopupVisible(true)}} vibrate={100} color={colors.cancelButton[global.darkMode]}/>
+            <ButtonComponent text="Erase" onPress={() => {this.popupWarning?.setPopupVisible(true)}} vibrate={100} color={colors.cancelButton[global.darkMode]}/>
             {this.selected===false?<ButtonComponent vibrate={10} style={{alignSelf: 'flex-end'}} color={colors.okButton[global.darkMode]} text="Load Profile" onPress={() => {
               setSettingsString("settingsNorthernHemisphere",this.hemisphereSetting?"true":"false");
               setSettingsString("settingsUseCustomDate",this.customDateSetting?"true":"false");
@@ -183,8 +183,8 @@ class ProfilesComponent extends Component{
             }}/>:<View/>}
           </View>
         </View>
-        <Popup ref={(popupWarning) => this.popupWarning = popupWarning} text={attemptToTranslate("Erase") +" "+ attemptToTranslate(this.displayProfile)} textLower={attemptToTranslate("Would you like to reset your collection?") + "\n\n" + attemptToTranslate("It will only erase") + " " + attemptToTranslate(this.displayProfile) + " " + attemptToTranslate("data") } button2={"Reset"} button1={"Cancel"} button1Action={()=>{console.log("")}} button2Action={()=>{this.popupAreYouSure.setPopupVisible(true)}}/>
-        <Popup ref={(popupAreYouSure) => this.popupAreYouSure = popupAreYouSure} text={attemptToTranslate("Reset?")} textLower={attemptToTranslate("Are you sure?") + "\n" +attemptToTranslate("This action cannot be undone.") + "\n\n" + attemptToTranslate("It will only erase") + " " + attemptToTranslate(this.displayProfile) + " " + attemptToTranslate("data") } button2={"Erase Data"} button1={"Cancel"} button1Action={()=>{console.log("")}} button2Action={async()=>{await resetProfileData(this.profile); this.popupRestart.setPopupVisible(true)}}/>
+        <Popup ref={(popupWarning) => this.popupWarning = popupWarning} text={attemptToTranslate("Erase") +" "+ attemptToTranslate(this.displayProfile)} textLower={attemptToTranslate("Would you like to reset your collection?") + "\n\n" + attemptToTranslate("It will only erase") + " " + attemptToTranslate(this.displayProfile) + " " + attemptToTranslate("data") } button2={"Reset"} button1={"Cancel"} button1Action={()=>{console.log("")}} button2Action={()=>{this.popupAreYouSure?.setPopupVisible(true)}}/>
+        <Popup ref={(popupAreYouSure) => this.popupAreYouSure = popupAreYouSure} text={attemptToTranslate("Reset?")} textLower={attemptToTranslate("Are you sure?") + "\n" +attemptToTranslate("This action cannot be undone.") + "\n\n" + attemptToTranslate("It will only erase") + " " + attemptToTranslate(this.displayProfile) + " " + attemptToTranslate("data") } button2={"Erase Data"} button1={"Cancel"} button1Action={()=>{console.log("")}} button2Action={async()=>{await resetProfileData(this.profile); this.popupRestart?.setPopupVisible(true)}}/>
         <Popup ref={(popupRestart) => this.popupRestart = popupRestart} text="Restart Required" textLower="Please restart the application."/>
         <View style={{height:5}}/>
       </View>

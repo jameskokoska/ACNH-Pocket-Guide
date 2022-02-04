@@ -130,7 +130,7 @@ export class TodoList extends Component {
   deleteItem = (index) => {
     this.deleteIndex = index
     this.setState({deleteIndex: index})
-    this.popupDeleteToDo.setPopupVisible(true)
+    this.popupDeleteToDo?.setPopupVisible(true)
   }
 
   deleteItemGo = () => {
@@ -317,7 +317,7 @@ export class TodoList extends Component {
                 <TouchableOpacity style={{marginTop:5, padding:12, alignSelf: 'center'}} 
                   onPress={()=>{
                     if(this.state.showVillagersTalkList){
-                      this.popupRemoveTalkVillagers.setPopupVisible(true)
+                      this.popupRemoveTalkVillagers?.setPopupVisible(true)
                     }else{
                       this.toggleVillagerTalk(); 
                     }
@@ -434,7 +434,7 @@ export class TurnipLog extends Component {
           vibrate={20}
           onPress={() => {
             this.clearHistory();
-            this.popupHistory.setPopupVisible(false);
+            this.popupHistory?.setPopupVisible(false);
           }}
         /> 
         <ButtonComponent

@@ -325,7 +325,7 @@ class HomePage extends Component {
               </HomeContentArea>
             }
             return sections["Events"]===true?<HomeContentArea index={index} key={"Events"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.eventsColor[global.darkMode]} title="Events" titleColor={colors.eventsColor[global.darkModeReverse]}>
-              <EventSection openVillagerPopup={this.openVillagerPopup} ref={(eventSection) => this.eventSection = eventSection} setPage={this.props.setPage} eventSections={this.state.eventSections} setPopupVisible={(visible)=>{this.popupEventsSettings.setPopupVisible(visible)}}/>
+              <EventSection openVillagerPopup={this.openVillagerPopup} ref={(eventSection) => this.eventSection = eventSection} setPage={this.props.setPage} eventSections={this.state.eventSections} setPopupVisible={(visible)=>{this.popupEventsSettings?.setPopupVisible(visible)}}/>
             </HomeContentArea>:<View/>
           }else if(section["name"]==="To-Do"){
             if(this.state.editOrder){
@@ -744,7 +744,7 @@ export class PopupBottomConfigureHomePages extends Component {
   }
   setPopupVisible = (visible) => {
     this.setState({visible:visible})
-    this.popupEventsSettings.setPopupVisible(visible)
+    this.popupEventsSettings?.setPopupVisible(visible)
   }
   render(){
     return <PopupBottomCustom ref={(popupEventsSettings) => this.popupEventsSettings = popupEventsSettings} onClose={()=>{}}>
@@ -965,7 +965,7 @@ export class CollectionProgress extends Component {
   }
   countCollectionTotal = (collectionSectionsDisabled) => {
     if(global.collectionList!==undefined && global.collectionList.length>7000){
-      this.popupLoading.setPopupVisible(true)
+      this.popupLoading?.setPopupVisible(true)
     }
     setTimeout(async ()=>{
       collectionListRemoveDuplicates();

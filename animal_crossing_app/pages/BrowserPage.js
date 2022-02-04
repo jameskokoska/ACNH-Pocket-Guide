@@ -32,7 +32,7 @@ export default class BrowserPage extends Component {
   componentDidMount() {
     this.mounted = true;
     if(!global.language.includes("English")){
-      this.popupLanguage.setPopupVisible(true);
+      this.popupLanguage?.setPopupVisible(true);
     }
   }
 

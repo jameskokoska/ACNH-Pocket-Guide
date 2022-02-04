@@ -3,6 +3,8 @@ export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added times and months the creature is active (in text)
+-
 -Added customizable Collection count section!
 -Tweaked location of remove and reorder buttons for lists
 -When tool reaches 0 durability, reset durability button is shown automatically

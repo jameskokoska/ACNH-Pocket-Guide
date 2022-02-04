@@ -70,11 +70,11 @@ class ArtPopup extends Component {
         />
         <View style={{height: 20}}/>
         
-        <TouchableOpacity activeOpacity={0.5} style={{width:"100%"}} onPress={()=>{this.popupReal.setPopupVisible(true)}}>
+        <TouchableOpacity activeOpacity={0.5} style={{width:"100%"}} onPress={()=>{this.popupReal?.setPopupVisible(true)}}>
           {paintingComparisonReal}
         </TouchableOpacity>        
         {paintingComparisonRealLabel}
-        <TouchableOpacity activeOpacity={0.5} style={{width:"100%"}} onPress={()=>{this.popupFake.setPopupVisible(true)}}>
+        <TouchableOpacity activeOpacity={0.5} style={{width:"100%"}} onPress={()=>{this.popupFake?.setPopupVisible(true)}}>
           {paintingComparisonFake}
         </TouchableOpacity>  
         {paintingComparisonFakeLabel}

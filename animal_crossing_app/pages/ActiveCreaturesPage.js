@@ -12,7 +12,7 @@ export default class ActiveCreaturesPage extends Component {
     setTimeout(async ()=>{
       let response = await getStorage("activeCreaturesPageAddPopup","")
       if(response === ""){
-        this.activeCreaturesPopup.setPopupVisible(true)
+        this.activeCreaturesPopup?.setPopupVisible(true)
         await AsyncStorage.setItem("activeCreaturesPageAddPopup", "true");
       }
     },0)

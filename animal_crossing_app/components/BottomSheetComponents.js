@@ -170,6 +170,13 @@ export class InfoLinePlain extends Component{
 
 export class InfoLine extends Component {
   render() {
+    if(this.props.customText!==undefined){
+      var imageSource = <Image style={styles.infoLineImage} source={this.props.image}/>;
+      return <View style={[styles.infoLineBox,{justifyContent:this.props.center===false?"flex-start":"center", marginVertical:this.props.condensed===true?-5:0}]}>
+        {imageSource}
+        <TextFont adjustsFontSizeToFit={true} bold={true} style={[styles.infoLineTitle,{color:this.props.customColor!==undefined ? this.props.customColor : colors.textBlack[global.darkMode] }]}>{this.props.customText}</TextFont>
+      </View>
+    }
     var ending = "";
     if(this.props.ending!==undefined){
       ending=this.props.ending;
@@ -318,7 +325,7 @@ export class InfoLine extends Component {
     return <View style={[styles.infoLineBox,{justifyContent:this.props.center===false?"flex-start":"center", marginVertical:this.props.condensed===true?-5:0}]}>
       {extraImageSource}
       {imageSource}
-      <TextFont adjustsFontSizeToFit={true} bold={true} style={[styles.infoLineTitle,{color:colors.textBlack[global.darkMode]}]}>{starting + text + ending}</TextFont>
+      <TextFont adjustsFontSizeToFit={true} bold={true} style={[styles.infoLineTitle,{color:this.props.customColor!==undefined ? this.props.customColor : colors.textBlack[global.darkMode]}]}>{starting + text + ending}</TextFont>
       {colors1}{colors2}
     </View>
   }

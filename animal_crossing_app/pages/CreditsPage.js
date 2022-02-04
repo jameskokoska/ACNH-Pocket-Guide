@@ -144,7 +144,7 @@ class CreditsPage extends Component {
       <SubHeader>App Information</SubHeader>
       <TextFont bold={true} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 15,}}>{"\nDatabase v" + dataVersion}</TextFont>
       <TextFont bold={true} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 15,}}>{"App v" + global.version + " - " + global.versionCode + "\n\nChangelog:"}</TextFont>        
-      <View style={{height: 25}}/>
+      <View style={{height: 15}}/>
       {/* <SubHeader>Debug Tools</SubHeader>
       <Paragraph>Development use only</Paragraph>
       <ButtonComponent color="gray" onPress={()=>{throw new Error("Test error log!");}} text={"Error"}/> */}

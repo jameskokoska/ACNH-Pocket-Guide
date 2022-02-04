@@ -29,10 +29,10 @@ class LoadFile extends Component {
           button1Action={async ()=>{
             var document = await DocumentPicker.getDocumentAsync();
             console.log("Loading file with URI: " + document.uri)
-            this.popupWait.setPopupVisible(true)
+            this.popupWait?.setPopupVisible(true)
             if(document===undefined||document.uri===undefined){
               this.setState({loadedNumber:"\n\nFailed to load file. Please enable file permissions or ensure you selected a file and try again.\n\n"}) 
-              this.popupWait.setPopupVisible(false)
+              this.popupWait?.setPopupVisible(false)
               this.loadPopupResults?.setPopupVisible(true);
               console.log("Failed to load backup file from storage - document not selected or undefined")
             } else {
@@ -45,11 +45,11 @@ class LoadFile extends Component {
                   var totalImported = await importAllData(text)
                 }
                 if(this.props.experimental){
-                  this.popupRestart.setPopupVisible(true)
+                  this.popupRestart?.setPopupVisible(true)
                 }
                 this.setState({loadedNumber:totalImported}) 
                 console.log("Loaded file with results: " + totalImported)
-                this.popupWait.setPopupVisible(false)
+                this.popupWait?.setPopupVisible(false)
                 this.loadPopupResults?.setPopupVisible(true);
                 
               })
@@ -353,7 +353,7 @@ class LoadClipboard extends Component {
           const text = await Clipboard.getString();
           var totalImported = await importAllData(text);
           this.setState({loadedNumber:totalImported}) 
-          this.loadPopupResults.setPopupVisible(true);
+          this.loadPopupResults?.setPopupVisible(true);
         }}
       />
       </>
