@@ -38,6 +38,8 @@ export const changelog = `
 -Tap / long press any image on item popup to view larger image
 -Fixed flimsy net and flimsy fishing rod durability
 -
+-Past changes:
+-
 -Backup now supports Turnip prices and ToDo list
 -Added [Battery saver / Increase performance] setting
 -Added erase profile to profile page
@@ -61,8 +63,6 @@ export const changelog = `
 -Fixed missing translation crash
 -Villager compatibility loading animation
 -About page optimizations
--
--Past changes:
 -
 -Fixed some filters not working - infinite loading
 -Optimizations to internal memory handling

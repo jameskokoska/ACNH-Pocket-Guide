@@ -135,16 +135,18 @@ class CreditsPage extends Component {
       <Paragraph>{"MeteoNook:\nAuthor: Ash Wolf (Ninji)"}</Paragraph>
       <ExternalLink link="https://wuffs.org/acnh/weather/"/>
 
-      <View style={{height:35}}/>
+      <View style={{height:25}}/>
       <SubHeader>Sources</SubHeader>
       <Paragraph>Mystery Islands - by Ninji:</Paragraph>
       <ExternalLink link="https://wuffs.org/acnh/mysterytour.html"/>
 
       <View style={{height: 35}}/>
       <SubHeader>App Information</SubHeader>
-      <TextFont bold={true} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 15,}}>{"\nDatabase v" + dataVersion}</TextFont>
-      <TextFont bold={true} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 15,}}>{"App v" + global.version + " - " + global.versionCode + "\n\nChangelog:"}</TextFont>        
-      <View style={{height: 15}}/>
+      <View style={{height: 10}}/>
+      <TextFont bold={true} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 15,}}>{"Database v" + dataVersion}</TextFont>
+      <TextFont bold={true} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 15,}}>{"App v" + global.version + " - " + global.versionCode}</TextFont>
+      <View style={{height: 35}}/>
+      <SubHeader>Changelog</SubHeader>
       {/* <SubHeader>Debug Tools</SubHeader>
       <Paragraph>Development use only</Paragraph>
       <ButtonComponent color="gray" onPress={()=>{throw new Error("Test error log!");}} text={"Error"}/> */}
