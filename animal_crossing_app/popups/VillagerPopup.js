@@ -10,6 +10,7 @@ import TextFont from "../components/TextFont"
 import {PopupInfoCustom} from "../components/Popup"
 import {SubHeader, Paragraph} from "../components/Formattings"
 import * as RootNavigation from '../RootNavigation.js';
+import { attemptToTranslateItem } from '../LoadJsonData';
 
 class VillagerPopup extends Component {
   constructor(props){
@@ -47,9 +48,8 @@ class VillagerPopup extends Component {
         textProperty2={["Color 2"]}
       />
       <InfoLine
-        image={require("../assets/icons/music.png")} 
-        item={this.props.item}
-        textProperty={["Favorite Song"]}
+        image={require("../assets/icons/music.png")}
+        customText={attemptToTranslateItem(this.props.item["Favorite Song"])}
       />
       <InfoLine
         image={require("../assets/icons/speechBubble.png")} 
