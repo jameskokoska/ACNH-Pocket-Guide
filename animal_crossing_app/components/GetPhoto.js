@@ -629,6 +629,12 @@ export function getFishPhoto(name, defaultImg){
       return data[index]["Icon Image"]
     }
   }
+  data = require("../assets/data/DataCreated/Sea Creatures.json");
+  for(var index = 0; index < data.length; index++){
+    if(data[index]["Name"]===name){
+      return data[index]["Icon Image"]
+    }
+  }
   return defaultImg;
 }
 

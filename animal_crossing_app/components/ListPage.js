@@ -1168,7 +1168,7 @@ class BottomSheetRender extends Component{
               globalDatabase={global.dataLoadedAll} 
             />
             {popUpContainer}
-            {this.props.tabs===false ? <View style={{height:50}}/> : (getSettingsString("settingsLargerItemPreviews")==="false"?<View style={{height:100}}/>:<View style={{height:50}}/>)}
+            {this.props.tabs===false ? <View style={{height:50}}/> : (getSettingsString("settingsLargerItemPreviews")==="false"?<View style={{height:50}}/>:<View style={{height:50}}/>)}
         </View>
       </View>
     </View>

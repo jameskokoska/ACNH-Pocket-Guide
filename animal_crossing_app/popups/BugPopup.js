@@ -6,9 +6,10 @@ import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"
 import ActiveTime from "../components/ActiveTime";
 import FastImage from '../components/FastImage';
-import {attemptToTranslate} from "../LoadJsonData"
+import {anythingCraftable, attemptToTranslate} from "../LoadJsonData"
 import {BlueText} from "../components/Formattings"
-
+import ButtonComponent from '../components/ButtonComponent';
+import * as RootNavigation from '../RootNavigation.js';
 
 class BugPopup extends Component {
   render(){
@@ -57,6 +58,14 @@ class BugPopup extends Component {
       <View style={{height:15}}/>
       <InfoDescription text={this.props.item["Description"]}/>
       <BlueText>Common creatures have higher spawn rates</BlueText>
+      {anythingCraftable(this.props.item["Name"])?<ButtonComponent
+        text={"View Craftable Items"}
+        color={colors.okButton[global.darkMode]}
+        vibrate={5}
+        onPress={() => {
+          // this.props.setPage(22, true, this.props.item)
+          RootNavigation.navigate('34', {propsPassed:this.props.item});
+      }}/>:<View/>}
     </View>
   }
 }

@@ -3,6 +3,9 @@ export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added View Craftable Items into fish/bugs/sea creatures popup (at bottom)
+-Popup height adjustments
+-
 -Added times and months the creature is active (in text)
 -Crash fixes for popups
 -Fixed translations
