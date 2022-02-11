@@ -50,7 +50,7 @@ export class GiveSupport extends Component {
 export class SubHeader extends Component {
   render(){
     return(
-      <TextFont numberOfLines={this.props.numberOfLines!==undefined?this.props.numberOfLines:2000} bold={true} style={[{fontSize: 20, marginHorizontal: this.props.margin!==false?30:0, color:colors.textBlack[global.darkMode],},this.props.style]}>{this.props.children}</TextFont>
+      <TextFont translate={this.props.translate===true || this.props.translate===undefined} numberOfLines={this.props.numberOfLines!==undefined?this.props.numberOfLines:2000} bold={this.props.bold===undefined || this.props.bold===true?true:false} style={[{fontSize: 20, marginHorizontal: this.props.margin!==false?30:0, color:colors.textBlack[global.darkMode],},this.props.style]}>{this.props.children}</TextFont>
     )
   }
 }

@@ -159,6 +159,7 @@ const colors = {
     okButton : ["#5AA7E6","#2B719C"],
     okButton2 : ["#4C9B5D","#337A32"],
     okButton3 : ["#61A899","#338585"],
+    okButton4 : ["#61A876","#336E85"],
     okButtonFaint : ["#99cbf2","#1B5B83"],
     dateButton : ["#81c784","#519657"],
     cancelButton : ["#E96D6D","#A0343D"],
@@ -210,5 +211,6 @@ const colors = {
     starProgress : ["#FDEBB3","#464023"],
     popupDanger : ["#AF5858","#A86B6B"],
     popupSuccess : ["#487944","#347030"],
+    popupNeutral : ["#DFDFDF","#383838"],
 }
 module.exports = colors;

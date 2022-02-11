@@ -1550,9 +1550,11 @@ export function allEventItemsCheck(eventName){
   }
   let previousName = ""
   let previousDataCategory = ""
+  let foundAnyItem = false
   for(let dataSet = 0; dataSet < global.dataLoadedAll.length; dataSet++){
     for(let i = 0; i < global.dataLoadedAll[dataSet].length; i++){
       if((global.dataLoadedAll[dataSet][i].hasOwnProperty("Source") && global.dataLoadedAll[dataSet][i]["Source"].toString().toLowerCase().split("; ").includes(eventName.toString().toLowerCase())) || (global.dataLoadedAll[dataSet][i].hasOwnProperty("Season/Event") && global.dataLoadedAll[dataSet][i]["Season/Event"].toString().toLowerCase().split("; ").includes(eventName.toString().toLowerCase()))){
+        foundAnyItem = true
         if(previousName === global.dataLoadedAll[dataSet][i]["Name"] && previousDataCategory === global.dataLoadedAll[dataSet][i]["Data Category"]){
           continue
         } else {
@@ -1564,6 +1566,9 @@ export function allEventItemsCheck(eventName){
         }
       }
     }
+  }
+  if(foundAnyItem===false){
+    return "no event items found"
   }
   return true
 }

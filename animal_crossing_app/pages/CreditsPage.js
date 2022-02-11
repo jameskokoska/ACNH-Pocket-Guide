@@ -40,6 +40,7 @@ class CreditsPage extends Component {
       <CreditTextBox text="Christina J."/>
       <CreditTextBox text="NoLNoodle"/>
       <CreditTextBox text="Harkken"/>
+      <CreditTextBox text="RisingProtostar"/>
       <View style={{height: 5}}/>
       <View style={{paddingHorizontal: 20}}>
         <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.popupSupport?.setPopupVisible(true)}} text={"Leave a tip"} />
@@ -114,7 +115,7 @@ class CreditsPage extends Component {
       <ExternalLink link="https://twemoji.twitter.com/"/>
       <Paragraph>Font Awesome icons:</Paragraph>
       <ExternalLink link="https://fontawesome.com/license"/>
-      <Paragraph>FlatIcons: from 'Freepik' and 'Pixel perfect':</Paragraph>
+      <Paragraph>FlatIcons: from 'Freepik' and 'Pixel perfect' and 'Vitaly Gorbachev':</Paragraph>
       <ExternalLink link="https://www.flaticon.com/"/>
       <Paragraph>All game data sourced from the community created spreadsheet. Thank you everyone for all the hard work and for making the spreadsheet!</Paragraph>
       <ExternalLink link="https://tinyurl.com/acnh-sheet"/>

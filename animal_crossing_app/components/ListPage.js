@@ -27,6 +27,7 @@ import {gameVersion, museumCategories} from "../Changelog"
 import GyroidPopup from '../popups/GyroidPopup';
 import FoodPopup from '../popups/FoodPopup';
 import LottieView from 'lottie-react-native';
+import { getHourlySongTitle } from '../pages/SongsPage';
 
 //use tabs={false} if the page doesn't have  the tab bar
 
@@ -88,6 +89,7 @@ function ListPage(props){
       checkType={props.checkType}
       leaveWarning={props.leaveWarning}
       title={props.title}
+      customTapFunction={props.customTapFunction}
     />
   )
   const ref = useRef(null);
@@ -166,6 +168,13 @@ function ListPage(props){
       var previousVariation = "";
       var item;
       var dataLoaded2D = determineDataGlobal(props.dataGlobalName);
+      if(props.title==="Music"){
+        let otherMusic = require("../assets/data/extraSongs.json")
+        for(let song of otherMusic){
+          song["NameLanguage"] = "zzzzz" + " Hourly Music " + getHourlySongTitle(song)
+        }
+        dataLoaded2D = [dataLoaded2D[0], otherMusic]
+      }
 
       var currentVillagerFilters;
       var currentVillagerFiltersInverse;
@@ -562,7 +571,7 @@ function ListPage(props){
                 //   previousVariation = item.[props.textProperty[j]];
 
                 //keep variations
-                if(item["Name"]===previousVariation && !item["checkListKey"].includes("recipesCheckList") && !item["checkListKey"].includes("amiiboCheckList") && !item["checkListKey"].includes("constructionCheckList") && !item["checkListKey"].includes("fenceCheckList") && !item["checkListKey"].includes("interiorStructuresCheckList")){
+                if((props.showAllVariations===false || props.showAllVariations===undefined) && item["Name"]===previousVariation && !item["checkListKey"].includes("recipesCheckList") && !item["checkListKey"].includes("amiiboCheckList") && !item["checkListKey"].includes("constructionCheckList") && !item["checkListKey"].includes("fenceCheckList") && !item["checkListKey"].includes("interiorStructuresCheckList")){
                   previousVariation = item["Name"];
                 } else {
                   //the final filter to check
@@ -836,7 +845,7 @@ function ListPage(props){
     if(Dimensions.get('window').width>maxWidth){
       numColumns = parseInt(Dimensions.get('window').width / (maxWidth/3))
     }
-  } else if (props.gridType==="largeGrid" || props.gridType==="largeGridSmaller"){
+  } else if (props.gridType==="largeGrid" || props.gridType==="largeGridSmaller" || props.gridType==="songGrid"){
     numColumns=2;
     var maxWidth = 511
     if(Dimensions.get('window').width>maxWidth){

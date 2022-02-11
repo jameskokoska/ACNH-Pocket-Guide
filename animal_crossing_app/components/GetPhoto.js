@@ -36,6 +36,9 @@ export function getSizeImage(size){
 }
 
 export function getPhoto(name, fallback=""){
+  if(name===undefined){
+    return ""
+  }
   switch(name){
     case "series5(1).jpg":
       return require("../assets/icons/amiibo/Series5(1).jpg")
@@ -298,7 +301,13 @@ export function getPhoto(name, fallback=""){
     return require("../assets/icons/treasureMap.png");
   } else if(name.includes("shamrock")){
     return require("../assets/icons/shamrock.png");
-  } else if(name.includes("ophiuchus")){
+  } else if(name.includes("rainy")){
+    return require("../assets/icons/rainy.png");
+  } else if(name.includes("sunny")){
+    return require("../assets/icons/sunny.png");
+  } else if(name.includes("snowy")){
+    return require("../assets/icons/snowy.png");
+  }else if(name.includes("ophiuchus")){
     return require("../assets/icons/ophiuchus.png");
   } else if(name.includes("scorpio")){
     return require("../assets/icons/scorpio.png");

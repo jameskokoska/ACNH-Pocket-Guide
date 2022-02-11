@@ -22,15 +22,29 @@ import Check from './Check';
 //  day="31"
 // />
 
+//If an event does not have any items associated with it, use a different event
+//If another event with items does not exist, just leave it... it will not be tappable
+function replaceEventNameForFilter(filter){
+  if(filter){
+    let eventChange = {"Valentine's Day" : "Valentine's Day (Nook Shopping)"}
+    if(eventChange[filter]!==undefined){
+      return eventChange[filter]
+    } else {
+      return filter
+    }
+  }
+}
+
 export function EventContainer(props){
   const [allCollected, setAllCollected] = useState(false);
   let onlyUpdateMe = false
+  let eventFilter = replaceEventNameForFilter(props.event.filter)
 
   useFocusEffect(
     React.useCallback(() => {
       if(onlyUpdateMe){
         setTimeout(()=>{
-          let result = allEventItemsCheck(props.event.filter)
+          let result = allEventItemsCheck(eventFilter)
           setAllCollected(result)
         }, 10);
         onlyUpdateMe = false
@@ -40,7 +54,7 @@ export function EventContainer(props){
 
   useEffect(() => {
     setTimeout(()=>{
-      let result = allEventItemsCheck(props.event.filter)
+      let result = allEventItemsCheck(eventFilter)
       setAllCollected(result)
     }, 10);
     onlyUpdateMe = false
@@ -52,39 +66,43 @@ export function EventContainer(props){
     } else {
       image = <Image style={styles.eventImage} source={getPhoto(props.event.image.toString().toLowerCase(), props.event.time.toString().toLowerCase())}/>
     }
-    return(
-      <TouchableNativeFeedback 
-        background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+(props.event.filter===undefined?"00":"AF"), false)}
+    let child = <View style={[styles.eventContainer,{backgroundColor:props.event.color!==undefined?props.event.color:props.backgroundColor, marginHorizontal:props.showDate===false?10:20, paddingHorizontal:props.showDate===false?20:25,}]}>
+      {image}
+      <View style={{position:'absolute', right: -18, top: -18, zIndex:10}}>
+        {allCollected?<Check play={allCollected} width={53} height={53}/>:<View/>}
+      </View>
+      <View style={[styles.textContainer,{paddingHorizontal: props.showDate===false?0:14}]}>
+        <TextFont translate={false} numberOfLines={3} bold={true} style={[styles.textContainerTop,{color:props.textColor, textAlign:props.showDate===false?"left":"center", marginLeft:props.showDate===false?23:10}]}>{props.event.name}</TextFont>
+        <TextFont style={[styles.textContainerBottom,{color:props.textColor, textAlign:props.showDate===false?"left":"center", marginLeft:props.showDate===false?23:10}]}>{props.event.time}</TextFont>
+      </View>
+      {props.showDate===false?<></>:
+      <View style={{width: 33, alignItems:"center", marginLeft: -8}}>
+        <Image style={styles.eventCalendar} source={require("../assets/icons/calendarIcon.png")}/>
+        <TextFont bold={true} style={{position:"absolute", top:3, textAlign:"center",color:"black", fontSize: 10, opacity: 0.8}}>{getWeekDayShort(props.event.weekday)}</TextFont>
+        <TextFont bold={true} style={{position:"absolute", top:17, textAlign:"center",color:"black", fontSize: 24, opacity: 0.8}}>{props.event.day}</TextFont>
+      </View>}
+    </View>
+
+    if(eventFilter===undefined || allCollected==="no event items found"){
+      return child
+    } else {
+      return <TouchableNativeFeedback 
+        background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+(eventFilter===undefined?"00":"AF"), false)}
         onPress={()=>{
-          if(props.event.filter!==undefined){
+          if(eventFilter!==undefined && allCollected!=="no event items found"){
             if(props.event.hasOwnProperty("type") && props.event.type==="villager"){
-              props.openVillagerPopup(props.event.filter)
+              props.openVillagerPopup(eventFilter)
             } else {
-              // props.setPage(23, true, props.event.filter)
-              RootNavigation.navigate('23', {propsPassed:props.event.filter});
+              // props.setPage(23, true, eventFilter)
+              RootNavigation.navigate('23', {propsPassed:eventFilter});
               onlyUpdateMe = true
             }
           }
         }}
       >
-        <View style={[styles.eventContainer,{backgroundColor:props.event.color!==undefined?props.event.color:props.backgroundColor, marginHorizontal:props.showDate===false?10:20, paddingHorizontal:props.showDate===false?20:25,}]}>
-          {image}
-          <View style={{position:'absolute', right: -18, top: -18, zIndex:10}}>
-            {allCollected?<Check play={allCollected} width={53} height={53}/>:<View/>}
-          </View>
-          <View style={[styles.textContainer,{paddingHorizontal: props.showDate===false?0:14}]}>
-            <TextFont translate={false} numberOfLines={3} bold={true} style={[styles.textContainerTop,{color:props.textColor, textAlign:props.showDate===false?"left":"center", marginLeft:props.showDate===false?23:10}]}>{props.event.name}</TextFont>
-            <TextFont style={[styles.textContainerBottom,{color:props.textColor, textAlign:props.showDate===false?"left":"center", marginLeft:props.showDate===false?23:10}]}>{props.event.time}</TextFont>
-          </View>
-          {props.showDate===false?<></>:
-          <View style={{width: 33, alignItems:"center", marginLeft: -8}}>
-            <Image style={styles.eventCalendar} source={require("../assets/icons/calendarIcon.png")}/>
-            <TextFont bold={true} style={{position:"absolute", top:3, textAlign:"center",color:"black", fontSize: 10, opacity: 0.8}}>{getWeekDayShort(props.event.weekday)}</TextFont>
-            <TextFont bold={true} style={{position:"absolute", top:17, textAlign:"center",color:"black", fontSize: 24, opacity: 0.8}}>{props.event.day}</TextFont>
-          </View>}
-        </View>
+        {child}
       </TouchableNativeFeedback>
-    )
+    }
 }
 
 export function getEventsDay(date, eventSections, showEventsIfInRange){

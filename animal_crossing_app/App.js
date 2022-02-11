@@ -104,7 +104,7 @@ class App extends Component {
     this.random = Math.random();
     this.state = {
       loaded: false,
-      currentPage:0,
+      currentPage:4,
       open:false,
       propsPassed:""
     }

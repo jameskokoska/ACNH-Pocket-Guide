@@ -17,6 +17,8 @@ import colors from "../Colors"
 import {getCurrentDateObject, parseActiveTime} from "./DateFunctions"
 import {inMuseum, inVillager, inVillagerPhoto, inWishlist, inChecklist,getSettingsString, variationsCheckedPercent} from "../LoadJsonData"
 import FadeInOut from "../components/FadeInOut";
+import { SubHeader } from './Formattings';
+import { getHourlySongTitle, MusicButtonComponent } from '../pages/SongsPage';
 
 const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 const villagerCategories = ["Villagers"]
@@ -265,6 +267,50 @@ class ListItem extends React.Component{
           </TouchableNativeFeedback>
         </View>
       );
+    } else if (this.props.gridType==="songGrid"){
+      return( 
+        <View style={{marginVertical: 2, alignItems: 'center', flex: 1,}}>
+          <TouchableNativeFeedback onLongPress={() => {  
+              if(this.props.item.special !== "hourly"){
+                checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
+                this.setWishlist(this.state.wishlist===true ? false:true);
+              }
+            }}
+            background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
+          >
+            <View style={{alignItems: "center", justifyContent:"center",height: 250, width: "95%", borderRadius:10,elevation: 0,marginVertical: 2, backgroundColor: boxColor}}>
+              { ((!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto) && this.props.item[this.props.imageProperty[this.props.item.dataSet]]!==undefined)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().startsWith("http") ? 
+                <FastImage
+                  style={{marginTop:0, padding:0, height:140, width:140, borderRadius: 10, resizeMode:"contain"}}
+                  source={{uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]]}}
+                  cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
+                />:
+                <Image style={{marginTop:0, padding:0, height:140, width:140, resizeMode:"contain", transform:[{scale:0.7}]}} source={
+                  getPhoto((this.props.item.special==="hourly" && this.props.item.special!==undefined) ? this.props.item.weather : this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().toLowerCase())
+                }/>):
+                <View style={{height:7}}/>
+              }
+              <View style={{flexDirection:"column",marginBottom: -5, justifyContent:"center", alignItems:"center"}}>
+                <TextFont translate={false} bold={true} style={{textAlign:'center', color:this.props.labelColor, marginVertical:10}}>{this.props.item.special==="hourly" ? getHourlySongTitle(this.props.item): capitalize(label)}</TextFont>
+                <View style={{flexDirection:"row", justifyContent:"center", alignItems:"center"}}>
+                {this.props.item.special==="hourly" ?  <MusicButtonComponent color={colors.okButton4[global.darkMode]} text={"Play"} onPress={()=>{this.props.customTapFunction(this.props.item,false)}}/> : <>
+                    <MusicButtonComponent color={colors.okButton3[global.darkMode]} text={"Aircheck"} onPress={()=>{this.props.customTapFunction(this.props.item,false)}}/>
+                    <MusicButtonComponent color={colors.okButton3[global.darkMode]} text={"Live"} onPress={()=>{this.props.customTapFunction(this.props.item,true)}}/>
+                  </>
+                }
+                </View>
+              </View>
+              {this.props.item.special==="hourly" ? <View/> : 
+              <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -18, top: -18, zIndex:10}}>
+                <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKey, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
+                  <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
+                </TouchableOpacity>
+              </View>}
+            {this.state.wishlist ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
+            </View>
+          </TouchableNativeFeedback>
+        </View>
+      )
     } else if (this.props.gridType==="largeGrid"){
       return( 
         <View style={styles.gridWrapper}>
