@@ -278,7 +278,7 @@ class ListItem extends React.Component{
             }}
             background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
           >
-            <View style={{alignItems: "center", justifyContent:"center",height: 250, width: "95%", borderRadius:10,elevation: 0,marginVertical: 2, backgroundColor: boxColor}}>
+            <View style={{alignItems: "center", justifyContent:"center", paddingVertical: 15, paddingHorizontal: 5, width: "95%", borderRadius:10,elevation: 0,marginVertical: 2, backgroundColor: boxColor}}>
               { ((!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto) && this.props.item[this.props.imageProperty[this.props.item.dataSet]]!==undefined)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().startsWith("http") ? 
                 <FastImage
                   style={{marginTop:0, padding:0, height:140, width:140, borderRadius: 10, resizeMode:"contain"}}
@@ -292,7 +292,7 @@ class ListItem extends React.Component{
               }
               <View style={{flexDirection:"column",marginBottom: -5, justifyContent:"center", alignItems:"center"}}>
                 <TextFont translate={false} bold={true} style={{textAlign:'center', color:this.props.labelColor, marginVertical:10}}>{this.props.item.special==="hourly" ? getHourlySongTitle(this.props.item): capitalize(label)}</TextFont>
-                <View style={{flexDirection:"row", justifyContent:"center", alignItems:"center"}}>
+                <View style={{flexDirection:"row", justifyContent:"center", alignItems:"center", flexWrap:"wrap"}}>
                 {this.props.item.special==="hourly" ?  <MusicButtonComponent color={colors.okButton4[global.darkMode]} text={"Play"} onPress={()=>{this.props.customTapFunction(this.props.item,false)}}/> : <>
                     <MusicButtonComponent color={colors.okButton3[global.darkMode]} text={"Aircheck"} onPress={()=>{this.props.customTapFunction(this.props.item,false)}}/>
                     <MusicButtonComponent color={colors.okButton3[global.darkMode]} text={"Live"} onPress={()=>{this.props.customTapFunction(this.props.item,true)}}/>

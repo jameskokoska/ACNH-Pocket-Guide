@@ -6,7 +6,10 @@ export const changelog = `
 -Added a music player to the Songs page!
 -Play Hourly BGM or K.K. songs
 -Music will play in the background while you use the app as well!
+-
 -Fixed events with no items associated with it
+-Updated translations
+-
 -
 -Added View Craftable Items into fish/bugs/sea creatures popup (at bottom)
 -Popup height adjustments

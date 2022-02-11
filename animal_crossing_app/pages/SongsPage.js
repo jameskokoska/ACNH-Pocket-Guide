@@ -540,5 +540,5 @@ export function getHourlySongTitle(song){
   } else {
     hourString = hour.toString() + ":00"
   }
-  return hourString + " " + capitalizeFirst(song["weather"])
+  return hourString + " " + capitalizeFirst(attemptToTranslate(song["weather"]))
 }

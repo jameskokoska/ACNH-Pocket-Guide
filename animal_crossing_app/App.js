@@ -104,7 +104,7 @@ class App extends Component {
     this.random = Math.random();
     this.state = {
       loaded: false,
-      currentPage:4,
+      currentPage:0,
       open:false,
       propsPassed:""
     }
@@ -633,9 +633,10 @@ class PopupInfos extends Component {
       const numLoginsOffset = JSON.parse(await getStorage("numLoginsOffset",JSON.stringify([global.version,1])));
       if(numLoginsOffset[0]===global.version){
         if(numLoginsOffset[1]>=1){
-          let supportPopupDismissed = await getStorage("supportPopupDismissed4","false");
+          //can periodically switch this one (ref and storage key)
+          let supportPopupDismissed = await getStorage("supportPopupDismissed3","false");
           if(supportPopupDismissed==="false" && numLogins >= 10){
-            AsyncStorage.setItem("supportPopupDismissed4", "true");
+            AsyncStorage.setItem("supportPopupDismissed3", "true");
             this.popupSupport2?.setPopupVisible(true)
           }
         }
