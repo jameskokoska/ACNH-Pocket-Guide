@@ -139,6 +139,10 @@ export class PopupBottomMusicWrapper extends Component {
 
   setGlobalVariableCheck = () => {
     this.globalVariableCheck = setInterval(() => {
+      if(this.removeSong!==undefined && this.removeSong!==-1){
+        removeSongFromQueue(this.removeSong+1)
+        this.removeSong=-1
+      }
       //listen for change of playing status
       if(global.songPlaying!==this.state.songPlaying){
         this.setState({songPlaying:global.songPlaying})
@@ -171,7 +175,10 @@ export class PopupBottomMusicWrapper extends Component {
 
   render(){
     return <PopupBottomMusic ref={(popup) => this.popup = popup} smallChild={<NowPlayingSmall song={this.state.song}/>}>
-      <NowPlayingLarge song={this.state.song} songPlaying={this.state.songPlaying} songLooping={this.state.songLooping}/>
+      <NowPlayingLarge removeSong={(index)=>{
+        if(this.removeSong===undefined || this.removeSong===-1)
+          this.removeSong = index
+      }} song={this.state.song} songPlaying={this.state.songPlaying} songLooping={this.state.songLooping}/>
     </PopupBottomMusic>
   }
 }
@@ -371,7 +378,7 @@ class NowPlayingLarge extends Component {
       </View>
       <SubHeader bold={false} margin={false} style={{fontSize:20, marginTop: 15, marginLeft: 20, marginBottom: 10,}}>{"Up Next"}</SubHeader>
       {global.songQueue.slice(1).map((item,index)=>{
-        return(<SongContainerRow song={item} key={item["Name"]+index} text={item["NameLanguage"]} text2={item.special==="hourly" ? "Hourly Music" : (item["liveMusic"] === true ? "Live" : "Aircheck")} image={item["Album Image"]} onTap={()=>{removeSongFromQueue(index+1)}}/>)
+        return(<SongContainerRow removeSong={(index)=>this.props.removeSong(index)} index={index} song={item} key={item["Name"]+index} text={item["NameLanguage"]} text2={item.special==="hourly" ? "Hourly Music" : (item["liveMusic"] === true ? "Live" : "Aircheck")} image={item["Album Image"]}/>)
       })}
       <View style={{borderTopColor: colors.lightDarkAccentHeavy2[global.darkMode],borderTopWidth: 2,}}/>
     </>
@@ -380,22 +387,28 @@ class NowPlayingLarge extends Component {
 
 class SongContainerRow extends Component {
   render(){
-    return <TouchableOpacity activeOpacity={0.2} onPress={()=>this.props.onTap()}>
-      <View style={{paddingHorizontal:30, paddingVertical:10,flexDirection:"row", alignItems:"center",borderTopColor: colors.lightDarkAccentHeavy2[global.darkMode],borderTopWidth: 2,}}>
-        {this.props.song.special==="hourly"?
-          <Image style={{marginTop:0, padding:0, width: 55, height:55, resizeMode:"contain", transform:[{scale:0.7}]}} source={getPhoto(this.props.song.weather)}/>
-          :<FastImage
-            style={{width: 55, height:55, resizeMode: "contain", borderRadius: 5}}
-            source={{uri: this.props.image}}
-            cacheKey={this.props.image}
-          />
-        }
-        <View style={{flexDirection:"column",marginLeft:15}}>
-          <SubHeader translate={false} margin={false} style={{fontSize:20}}>{this.props.text}</SubHeader>
-          <SubHeader margin={false} style={{fontSize:17, flexWrap:"wrap"}}>{this.props.text2}</SubHeader>
-        </View>
+    return <View style={{paddingHorizontal:30, paddingVertical:10,flexDirection:"row", alignItems:"center",borderTopColor: colors.lightDarkAccentHeavy2[global.darkMode],borderTopWidth: 2,}}>
+      <View style={{flexDirection:"row",right:3, top:3,position:'absolute',zIndex:10, }}>
+        <TouchableOpacity style={{padding:11}} 
+          onPress={()=>{
+            this.props.removeSong(this.props.index)
+        }}>
+          <Image source={require("../assets/icons/deleteIcon.png")} style={{opacity:0.5,width:17, height:17, borderRadius:100,}}/>
+        </TouchableOpacity>
       </View>
-    </TouchableOpacity>
+      {this.props.song.special==="hourly"?
+        <Image style={{marginTop:0, padding:0, width: 55, height:55, resizeMode:"contain", transform:[{scale:0.7}]}} source={getPhoto(this.props.song.weather)}/>
+        :<FastImage
+          style={{width: 55, height:55, resizeMode: "contain", borderRadius: 5}}
+          source={{uri: this.props.image}}
+          cacheKey={this.props.image}
+        />
+      }
+      <View style={{flexDirection:"column",marginLeft:15}}>
+        <SubHeader translate={false} margin={false} style={{fontSize:20}}>{this.props.text}</SubHeader>
+        <SubHeader margin={false} style={{fontSize:17, flexWrap:"wrap"}}>{this.props.text2}</SubHeader>
+      </View>
+    </View>
   }
 }
 
