@@ -111,7 +111,7 @@ export default class VillagersCompatibilityPage extends Component {
       title:"Villager Compatibility",
       content:"This has not yet been proven to be accurate in ACNH, and is a feature from older games. Use as a reference only, as it may not impact gameplay. Villager's types of conversations may be based on their personalities. Only the first 15 favorite villagers are compared.",
       linkText: "Tap here to see how compatibility is calculated",
-      redirectPassBack: "https://docs.google.com/spreadsheets/d/1Sc2HJRcgg-Q_CsFnewIB3n2f4Tgj-QT33qUCrItj0MU/edit#gid=0"
+      redirectPassBack: "https://docs.google.com/spreadsheets/d/1prjGTzHwlL1jHkMPxIr9BXzJsNMk0Pl0YxkCYIblCIk/edit?usp=sharing"
     }
     let loadingComponent = <View style={{alignItems:"center", justifyContent:"center"}}>
       <LottieView autoPlay loop

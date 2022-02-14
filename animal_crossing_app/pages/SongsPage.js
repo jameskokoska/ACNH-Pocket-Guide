@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Dimensions, TouchableOpacity, BackHandler, Image} from 'react-native';
+import {View, Dimensions, TouchableOpacity, BackHandler, Image, Vibration} from 'react-native';
 import ListPage from '../components/ListPage';
 import LottieView from 'lottie-react-native';
 import colors from '../Colors.js';
@@ -141,6 +141,7 @@ export class PopupBottomMusicWrapper extends Component {
     this.globalVariableCheck = setInterval(() => {
       if(this.removeSong!==undefined && this.removeSong!==-1){
         removeSongFromQueue(this.removeSong+1)
+        getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
         this.removeSong=-1
       }
       //listen for change of playing status
@@ -189,7 +190,7 @@ export class MusicButtonComponent extends Component {
       <TouchableOpacity
         style={{margin:5, paddingHorizontal:13, paddingVertical:8, borderRadius: 10, backgroundColor: this.props.color,  justifyContent: 'center', alignItems: 'center'}}
         activeOpacity={0.5}
-        onPress={()=> {this.props.onPress(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(this.props.vibrate) : "";}}
+        onPress={()=> {this.props.onPress(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}
       >
         <TextFont style={{fontSize: 17, color: "white", textAlign:"center", marginTop:-2}}>{this.props.text}</TextFont>
       </TouchableOpacity>
@@ -359,18 +360,18 @@ class NowPlayingLarge extends Component {
           <SubHeader margin={false} style={{fontSize:20, textAlign:"center", marginTop: 5}}>{this.props.song.special==="hourly" ? "Hourly Music" : (this.props.song["liveMusic"] === true ? "Live" : "Aircheck")}</SubHeader>
         </View>
         <View style={{flexDirection:"row", justifyContent:'center', marginTop: 10}}>
-          <TouchableOpacity onPress={()=>{loopSong(!global.songLooping);}}>
+          <TouchableOpacity onPress={()=>{loopSong(!global.songLooping); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
             <Image style={{opacity: this.props.songLooping ? 1 : 0.3, marginTop:0, padding:0, height:70, width:70, resizeMode:"contain", transform:[{scale:0.7}]}} source={require("../assets/icons/repeat-button.png")}/>
           </TouchableOpacity>
           {this.props.songPlaying?
-            <TouchableOpacity onPress={()=>{pauseSong();}}>
+            <TouchableOpacity onPress={()=>{pauseSong(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
               <Image style={{marginTop:0, padding:0, height:70, width:70, resizeMode:"contain", transform:[{scale:0.7}]}} source={require("../assets/icons/pause-button.png")}/>
             </TouchableOpacity>:
-            <TouchableOpacity onPress={()=>{resumeSong();}}>
+            <TouchableOpacity onPress={()=>{resumeSong(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
               <Image style={{marginTop:0, padding:0, height:70, width:70, resizeMode:"contain", transform:[{scale:0.7}]}} source={require("../assets/icons/play-button.png")}/>
             </TouchableOpacity>
           }
-          <TouchableOpacity onPress={()=>{skipSong()}}>
+          <TouchableOpacity onPress={()=>{skipSong(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
             <Image style={{marginTop:0, padding:0, height:70, width:70, resizeMode:"contain", transform:[{scale:0.7}]}} source={require("../assets/icons/next-button.png")}/>
           </TouchableOpacity>
         </View>
