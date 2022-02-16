@@ -1067,7 +1067,7 @@ class BottomSheetRender extends Component{
     }
     
     var leftCornerImage;
-    if(this.props.popUpCornerImageProperty!==undefined && this.props.popUpCornerImageLabelProperty!==undefined && this.state.item.dataSet!==undefined && this.props.popUpCornerImageProperty[this.state.item.dataSet]!==""){
+    if(this.state.item["Data Category"]==="Sea Creatures" || this.props.popUpCornerImageProperty!==undefined && this.props.popUpCornerImageLabelProperty!==undefined && this.state.item.dataSet!==undefined && this.props.popUpCornerImageProperty[this.state.item.dataSet]!==""){
       leftCornerImage = <LeftCornerImage
         item={this.state.item}
         accentColor={this.props.accentColor}

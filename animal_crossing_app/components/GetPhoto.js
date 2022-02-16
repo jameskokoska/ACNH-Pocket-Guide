@@ -441,7 +441,7 @@ export function getPhotoCorner(name){
   else if(name.includes("palm"))
     return <Image source={require("../assets/icons/palmTree.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
   else if(name.includes("tree"))
-    return <Image source={require("../assets/icons/forest.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/forest.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>;
   else if(name.includes("ground"))
     return <Image source={require("../assets/icons/sprout.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
   else if(name.includes("snowballs") || name.includes("jingle"))

@@ -3,6 +3,8 @@ export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added and revamped icons for creature sources
+-
 -Added a music player to the Songs page!
 -Play Hourly BGM or K.K. songs
 -Music will play in the background while you use the app as well!

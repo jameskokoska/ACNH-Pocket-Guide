@@ -44,7 +44,7 @@ export class CircularImage extends Component {
 export class LeftCornerImage extends Component {
   render() {
     let label = this.props.item[this.props.popUpCornerImageLabelProperty[this.props.item.dataSet]]
-    if(label===undefined || label===""){
+    if((label===undefined || label==="") && this.props.item["Data Category"]!=="Sea Creatures"){
       return <View/>
     }
     let photo = getPhotoCorner(this.props.item[this.props.popUpCornerImageProperty[this.props.item.dataSet]])
