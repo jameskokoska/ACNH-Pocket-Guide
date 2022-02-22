@@ -37,7 +37,7 @@ class ListItem extends React.Component{
     this.showVillagerButton = true
     this.showVillagerPhotoButton = true
     this.state = {
-      collected: inChecklist(this.props.item.checkListKey),
+      collected: inChecklist(this.props.item.checkListKeyParent),
       wishlist: inWishlist(this.props.item.checkListKey),
       museum: inMuseum(this.props.item.checkListKey, this.checkMuseumButton()),
       villager: inVillager(this.props.item.checkListKey, this.checkVillagerButton()),
@@ -226,7 +226,7 @@ class ListItem extends React.Component{
             background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
             onPress={()=>{
               if(disablePopup){
-                checkOff(this.props.item.checkListKey, this.state.collected); 
+                checkOff(this.props.item.checkListKeyParent, this.state.collected); 
                 this.setCollected(this.state.collected===true ? false:true);
               } else {
                 this.props.openBottomSheet(this.setCollected, this.setWishlist);
@@ -236,7 +236,7 @@ class ListItem extends React.Component{
             <View style={[styles.gridBox, {backgroundColor:boxColor}]}>
               {missingVariationsIndicator}
               <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -18, top: -18, zIndex:10}}>
-                <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKey, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
+                <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKeyParent, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
                   <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
                 </TouchableOpacity>
               </View>
@@ -302,7 +302,7 @@ class ListItem extends React.Component{
               </View>
               {this.props.item.special==="hourly" ? <View/> : 
               <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -18, top: -18, zIndex:10}}>
-                <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKey, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
+                <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKeyParent, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
                   <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
                 </TouchableOpacity>
               </View>}
@@ -321,7 +321,7 @@ class ListItem extends React.Component{
           background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
           onPress={()=>{
               if(disablePopup){
-                checkOff(this.props.item.checkListKey, this.state.collected); 
+                checkOff(this.props.item.checkListKeyParent, this.state.collected); 
                 this.setCollected(this.state.collected===true ? false:true);
               } else {
                 this.props.openBottomSheet(this.setCollected, this.setWishlist);
@@ -330,7 +330,7 @@ class ListItem extends React.Component{
           >
             <View style={[styles.gridBoxLarge, {backgroundColor:boxColor}]}>
               <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -18, top: -18, zIndex:10}}>
-                <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKey, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
+                <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKeyParent, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
                   <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
                 </TouchableOpacity>
               </View>
@@ -377,7 +377,7 @@ class ListItem extends React.Component{
           background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
           onPress={()=>{
               if(disablePopup){
-                checkOff(this.props.item.checkListKey, this.state.collected); 
+                checkOff(this.props.item.checkListKeyParent, this.state.collected); 
                 this.setCollected(this.state.collected===true ? false:true);
               } else {
                 this.props.openBottomSheet(this.setCollected, this.setWishlist);
@@ -386,7 +386,7 @@ class ListItem extends React.Component{
           >
             <View style={[styles.gridBoxLarge, {backgroundColor:boxColor}]}>
               <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -18, top: -18, zIndex:10}}>
-                <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKey, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
+                <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKeyParent, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
                   <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
                 </TouchableOpacity>
               </View>
@@ -426,7 +426,7 @@ class ListItem extends React.Component{
           background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
           onPress={()=>{
               if(disablePopup){
-                checkOff(this.props.item.checkListKey, this.state.collected); 
+                checkOff(this.props.item.checkListKeyParent, this.state.collected); 
                 this.setCollected(this.state.collected===true ? false:true);
               } else {
                 this.props.openBottomSheet(this.setCollected, this.setWishlist);
@@ -463,7 +463,7 @@ class ListItem extends React.Component{
               <TouchableOpacity style={{position:"absolute", right: -5, bottom: 0}} 
                 activeOpacity={0.6}
                 onPress={() => {  
-                checkOff(this.props.item.checkListKey, this.state.collected); 
+                checkOff(this.props.item.checkListKeyParent, this.state.collected); 
                 this.setCollected(this.state.collected===true ? false:true);
               }}>
                 <Check checkType={this.props.checkType} fadeOut={false} play={this.state.collected} width={90} height={90} disablePopup={disablePopup}/>
@@ -494,7 +494,7 @@ class CheckMuseum extends Component {
         this.props.setMuseum(this.props.museum===true ? false:true);
         //check off if donated to museum
         if(!this.props.collected && !this.props.museum && getSettingsString("settingsAutoCheckMuseum")==="true"){
-          checkOff(this.props.item.checkListKey, this.props.collected); 
+          checkOff(this.props.item.checkListKeyParent, this.props.collected); 
           this.props.setCollected(this.props.collected===true ? false:true);
         }
       }}>

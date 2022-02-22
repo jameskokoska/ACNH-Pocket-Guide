@@ -67,6 +67,8 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
     let dataLoading = inputData[dataSet][0]; //data[dataSet][1] is the Data category String
     let totalIndex = -1;
     let dontPush = false;
+    let currentParentKey = ""
+    let currentParent = ""
     //Loop through that specific dataset
     for(var i = 0; i < dataLoading.length; i++){
       //Remove no name K.K. songs
@@ -103,6 +105,11 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
       // dataLoading[i].collected=value;
       // dataLoading[i].wishlist=wishlist;
       dataLoading[i]["checkListKey"]=checkListKeyString;
+
+      if(currentParent!==dataLoading[i]["Name"]){
+        currentParentKey = checkListKeyString
+        currentParent = dataLoading[i]["Name"]
+      }
 
       if(checkListKey[dataSet][0] === "fishCheckList" || checkListKey[dataSet][0] === "seaCheckList" || checkListKey[dataSet][0] === "bugCheckList"){
         let hemispherePre = ["NH ", "SH "];
@@ -173,6 +180,7 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
         dataLoading[i]["NameLanguage"]=dataLoading[i]["Name"];
       }
       dataLoading[i]["Data Category"]=inputData[dataSet][1];
+      dataLoading[i]["checkListKeyParent"]=currentParentKey
     }
     dataLoadingTotal.push(dataLoading);
   }

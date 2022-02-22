@@ -3,6 +3,13 @@ export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Fixed how item variations work
+-Item variations now always refer to the main item, not the variation
+-This helps to avoid confusion when checking off other items
+-The wishlist still refers to item variations specefically however
+-Fixed bug where some variations wouldn't appear
+-Fixed bug where item variations were in a random order
+-
 -Added safety net:
 -If the app breaks, you can still recover your data before reinstalling
 -

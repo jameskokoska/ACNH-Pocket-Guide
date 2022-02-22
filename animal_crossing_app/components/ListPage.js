@@ -992,7 +992,7 @@ function ListPage(props){
       onClose={()=>{
         console.log(selectedItem); 
         if(selectedItem!=null && selectedItem!=undefined){
-          !updateCheckChildFunction(inChecklist(selectedItem.checkListKey));
+          !updateCheckChildFunction(inChecklist(selectedItem.checkListKeyParent));
           !updateWishlistChildFunction(inWishlist(selectedItem.checkListKey));
         }
       }}

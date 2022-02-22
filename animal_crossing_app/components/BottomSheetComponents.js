@@ -66,13 +66,13 @@ export class RightCornerCheck extends Component {
     super(props);
     this.setCollected = this.setCollected.bind(this);
     this.state = {
-      collected:inChecklist(this.props.item.checkListKey)
+      collected:inChecklist(this.props.item.checkListKeyParent)
     };
   }
   //update component when new data is passed into the class, or when the check mark local value changes
   componentDidUpdate(prevProps) {
     if(this.props!==prevProps){
-      this.setState({collected:inChecklist(this.props.item.checkListKey)});
+      this.setState({collected:inChecklist(this.props.item.checkListKeyParent)});
     }
   }
   setCollected(collected){
@@ -80,7 +80,7 @@ export class RightCornerCheck extends Component {
     this.props.updateCheckChildFunction(this.state.collected===true ? false:true);
   }
   updateRightCornerCheck(key,checked){
-    if(this.props.item.checkListKey === key){
+    if(this.props.item.checkListKeyParent === key){
       this.setState({collected:checked});
     }
   }
@@ -89,9 +89,9 @@ export class RightCornerCheck extends Component {
     <TouchableOpacity
       activeOpacity={0.6}
       onPress={() => {  
-        checkOff(this.props.item.checkListKey, this.state.collected);
+        checkOff(this.props.item.checkListKeyParent, this.state.collected);
         this.setCollected(this.state.collected===true ? false:true);
-        this.props.updateVariations(this.props.item.checkListKey,this.state.collected);
+        this.props.updateVariations(this.props.item.checkListKeyParent,this.state.collected);
     }}>
       <Check checkType={this.props.checkType} fadeOut={false} play={this.state.collected} width={135} height={135}/>
     </TouchableOpacity>
@@ -538,16 +538,16 @@ class VariationItem extends Component{
       <TouchableOpacity 
         onLongPress={()=>{this.props.setPopupVisible(true, item[this.props.imageProperty[dataSet]], item); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : ""}}
         onPress={()=>{ 
-          if(item.checkListKey+this.extraIndex === this.props.originalCheckListKey)
-            this.props.updateCheckChildFunction(this.state.checked===true ? false:true);
+          // if(item.checkListKey+this.extraIndex === this.props.originalCheckListKey)
+          //   this.props.updateCheckChildFunction(this.state.checked===true ? false:true);
           checkOff(item.checkListKey, this.state.checked, "", this.extraIndex); 
-          this.props.updateRightCornerCheck(item.checkListKey+this.extraIndex,!this.state.checked)
+          // this.props.updateRightCornerCheck(item.checkListKey+this.extraIndex,!this.state.checked)
           this.setState({checked: !this.state.checked})
           
           if(howManyVariationsChecked(this.props.variations) === this.props.variations.length){
             this.props.updateCheckChildFunction(true);
-            this.props.updateRightCornerCheck(this.props.originalCheckListKey,true)
-            checkOff(this.props.originalCheckListKey, !true); 
+            this.props.updateRightCornerCheck(item.checkListKeyParent,true)
+            checkOff(item.checkListKeyParent, !true); 
           }
         }}>
         {this.state.wishlist? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:13, height:13, resizeMode:"contain",position:'absolute', left:9, top: 9, zIndex:10,}}/> : <View/>}
@@ -654,7 +654,7 @@ export function getVariations(name, globalDatabase, checkListKey, startingIndex 
   for(var i=0; i<globalDatabase.length; i++){
     if(globalDatabase[i].length > startingIndex-1){
       failCount = 0;
-      for(var j=startingIndex-1; j>0; j--){
+      for(var j=startingIndex-1; j>=0; j--){
         if(globalDatabase[i][j]["checkListKey"]===undefined){
           console.log("ERROR!!!")
           console.log(globalDatabase[i][j]["Name"])
@@ -664,6 +664,7 @@ export function getVariations(name, globalDatabase, checkListKey, startingIndex 
         }
         if(globalDatabase[i][j]["Name"].toString().toLowerCase()===name.toString().toLowerCase()){
           totalVariations1.push(globalDatabase[i][j]);
+          globalDatabase[i][j].variationIndex = j
         } else {
           failCount++
         }
@@ -681,6 +682,7 @@ export function getVariations(name, globalDatabase, checkListKey, startingIndex 
         }
         if(globalDatabase[i][j]["Name"].toString().toLowerCase()===name.toString().toLowerCase()){
           totalVariations2.push(globalDatabase[i][j]);
+          globalDatabase[i][j].variationIndex = j
         } else {
           failCount++
         }
@@ -691,7 +693,9 @@ export function getVariations(name, globalDatabase, checkListKey, startingIndex 
     }
     
   }
-  return [...totalVariations1, ...totalVariations2];
+  let allVariations =  [...totalVariations1, ...totalVariations2];
+  allVariations.sort(function(a,b) {return (a.variationIndex > b.variationIndex) ? 1 : ((b.variationIndex > a.variationIndex) ? -1 : 0);} );
+  return allVariations
 }
 
 export class InfoLineBeside extends Component {
