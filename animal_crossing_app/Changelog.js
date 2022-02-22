@@ -3,6 +3,7 @@ export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Tap the source in the top left of an item popup to read more
 -Fixed how item variations work
 -Item variations now always refer to the main item, not the variation
 -This helps to avoid confusion when checking off other items

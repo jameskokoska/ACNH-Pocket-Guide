@@ -664,10 +664,10 @@ class PopupInfos extends Component {
       if(numLoginsOffset[0]===global.version){
         if(numLoginsOffset[1]>=1){
           //can periodically switch this one (ref and storage key)
-          let supportPopupDismissed = await getStorage("supportPopupDismissed3","false");
+          let supportPopupDismissed = await getStorage("supportPopupDismissed4","false");
           if(supportPopupDismissed==="false" && numLogins >= 10){
             AsyncStorage.setItem("supportPopupDismissed3", "true");
-            this.popupSupport2?.setPopupVisible(true)
+            this.popupSupport3?.setPopupVisible(true)
           }
         }
         AsyncStorage.setItem("numLoginsOffset", JSON.stringify([global.version,numLoginsOffset[1]+1]));
@@ -684,7 +684,7 @@ class PopupInfos extends Component {
       let supportPopupDismissed = await getStorage("supportPopupDismissed","false");
       if(supportPopupDismissed==="false" && numLogins >= 6){
         AsyncStorage.setItem("supportPopupDismissed", "true");
-        this.popupSupport3?.setPopupVisible(true)
+        this.popupSupport2?.setPopupVisible(true)
       }
       // let supportPopupDismissed2 = await getStorage("supportPopupDismissed2","false");
       // if(supportPopupDismissed2==="false" && numLogins >= 6){

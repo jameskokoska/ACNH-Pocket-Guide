@@ -341,9 +341,9 @@ export function getPhoto(name, fallback=""){
     return require("../assets/icons/blossom.png");
   } else if(name.includes("mario")){
     return require("../assets/icons/mushroom.png");
-  } else if(name.includes("nookLinkCoin"))
+  } else if(name.includes("nookLinkCoin")) {
     return require("../assets/icons/nookLinkCoin.png")
-  else if(name.includes("acorns")){
+  } else if(name.includes("acorns")){
     return require("../assets/icons/fall.png");
   } else if(name.includes("snowflakes")){
     return require("../assets/icons/snowman.png");
@@ -401,6 +401,122 @@ export function getPhoto(name, fallback=""){
     return require("../assets/icons/ornaments.png");
   } else if(name.includes("rainbow feathers")){
     return require("../assets/icons/ornaments.png");
+  } else if(name.includes("sea") && !name.includes("seasonal") || name.includes("shoreline") || name.includes("beach")) {
+    return require("../assets/icons/oceanIcon.png")
+  } else if(name.includes("pier")) {
+    return require("../assets/icons/pier.png");
+  } else if(name.includes("underwater")) {
+    return require("../assets/icons/underwater.png");
+  } else if(name.includes("river")) {
+    return require("../assets/icons/riverIcon.png");
+  } else if(name.includes("pond") || name.includes("water")) {
+    return require("../assets/icons/pondIcon.png");
+  } else if(name.includes("flying")) {
+    return require("../assets/icons/butterflies.png")
+  } else if(name.includes("flowers") || name.includes("breeding") || name.includes("seed")) {
+    return require("../assets/icons/flowerIcon.png")
+  } else if(name.includes("rock")) {
+    return require("../assets/icons/rock.png")
+  } else if(name.includes("friendship")) {
+    return require("../assets/icons/heart.png")
+  } else if(name.includes("turnip")) {
+    return require("../assets/icons/turnip.png")
+  } else if(name.includes("stump")) {
+    return require("../assets/icons/stump.png")
+  } else if(name.includes("palm")) {
+    return require("../assets/icons/palmTree.png")
+  } else if(name.includes("tree")) {
+    return require("../assets/icons/forest.png");
+  } else if(name.includes("ground")) {
+    return require("../assets/icons/sprout.png")
+  } else if(name.includes("snowballs") || name.includes("jingle")) {
+    return require("../assets/icons/snow.png")
+  } else if(name.includes("snowboy")) {
+    return require("../assets/icons/snowman.png")
+  } else if(name.includes("villagers") || name.includes("rover")) {
+    return require("../assets/icons/cat.png")
+  } else if(name.includes("fossil") || name.includes("dig") || name.includes("plant")) {
+    return require("../assets/icons/digIcon.png")
+  } else if(name.includes("able")) {
+    return require("../assets/icons/able.png")
+  } else if(name.includes("pascal")) {
+    return require("../assets/icons/pascal.png")
+  } else if(name.includes("nook miles")) {
+    return require("../assets/icons/miles.png")
+  } else if(name.includes("nooklink")) {
+    return require("../assets/icons/nookLink.png")
+  } else if(name.includes("nook shopping")) {
+    return require("../assets/icons/nookShopping.png")
+  } else if(name.includes("airline")) {
+    return require("../assets/icons/airplane.png")
+  } else if(name.includes("nook")) {
+    return require("../assets/icons/nook.png")
+  } else if(name.includes("crafting")) {
+    return require("../assets/icons/crafting.png")
+  } else if(name.includes("cooking")) {
+    return require("../assets/icons/cooking.png")
+  } else if(name.includes("gulliver")) {
+    return require("../assets/icons/oceanIcon.png")
+  } else if(name.includes("blathers")) {
+    return require("../assets/icons/museum.png")
+  } else if(name.includes("brewster")) {
+    return require("../assets/icons/brewster.png")
+  } else if(name.includes("kicks")) {
+    return require("../assets/icons/kicks.png")
+  } else if(name.includes("daisy mae")) {
+    return require("../assets/icons/daisymae.png")
+  } else if(name.includes("cyrus")) {
+    return require("../assets/icons/cyrus.png")
+  } else if(name.includes("katrina")) {
+    return require("../assets/icons/katrina.png")
+  } else if(name.includes("redd")) {
+    return require("../assets/icons/redd.png")
+  } else if(name.includes("lottie") || name.includes("hhp office")) {
+    return require("../assets/icons/lottie.png")
+  } else if(name.includes("leif")) {
+    return require("../assets/icons/leif.png")
+  } else if(name.includes("niko")) {
+    return require("../assets/icons/niko.png")
+  } else if(name.includes("wardell")) {
+    return require("../assets/icons/wardell.png")
+  } else if(name.includes("harriet")) {
+    return require("../assets/icons/harriet.png")
+  } else if(name.includes("harvey")) {
+    return require("../assets/icons/harvey.png")
+  } else if(name.includes("café")) {
+    return require("../assets/icons/cafe.png")
+  } else if(name.includes("new year")) {
+    return require("../assets/icons/popper.png")
+  } else if(name.includes("saharah")) {
+    return require("../assets/icons/saharah.png")
+  } else if(name.includes("balloons")) {
+    return require("../assets/icons/balloon.png")
+  } else if(name.includes("stars")) {
+    return require("../assets/icons/sparkle.png")
+  } else if(name.includes("recipe")) {
+    return require("../assets/icons/crafting.png")
+  } else if(name.includes("diy")) {
+    return require("../assets/icons/crafting.png")
+  } else if(name.includes("jack")) {
+    return require("../assets/icons/pumpkin.png")
+  } else if(name.includes("zipper")) {
+    return require("../assets/icons/bunny.png")
+  } else if(name.includes("treasure trawler")) {
+    return require("../assets/icons/ship.png")
+  } else if(name.includes("c.j.")) {
+    return require("../assets/icons/cj.png")
+  } else if(name.includes("flick")) {
+    return require("../assets/icons/flick.png")
+  } else if(name.includes("fish") || name.includes("catching")) {
+    return require("../assets/icons/fish.png")
+  } else if(name.includes("net")) {
+    return require("../assets/icons/airIcon.png")
+  } else if(name.includes("female")) {
+    return require("../assets/icons/female.png")
+  } else if(name.includes("male")) {
+    return require("../assets/icons/male.png")
+  } else if(name.includes("recycle")) {
+    return require("../assets/icons/recycle.png")
   }
   if(fallback.includes("season")){
     return require("../assets/icons/season.png");

@@ -47,17 +47,25 @@ export class LeftCornerImage extends Component {
     if((label===undefined || label==="") && this.props.item["Data Category"]!=="Sea Creatures"){
       return <View/>
     }
-    let photo = getPhotoCorner(this.props.item[this.props.popUpCornerImageProperty[this.props.item.dataSet]])
+    let photoSource = this.props.item[this.props.popUpCornerImageProperty[this.props.item.dataSet]]
     if(this.props.item["Data Category"]==="Sea Creatures"){
       label = "Underwater"
-      photo = getPhotoCorner("Underwater")
+      photoSource = "Underwater"
     }
-    return <>
-      <View style={[styles.cornerImageBackground,{backgroundColor:this.props.accentColor}]}>
-        {photo}
-      </View>
-      <TextFont style={[styles.cornerImageLabel,{color:colors.textLight[global.darkMode]}]}>{label}</TextFont>
-    </>
+    let photo = getPhotoCorner(photoSource)
+    return <View style={{ zIndex:50, position: "absolute", top:-15, left:-15,margin: 30,}}>
+      <TouchableOpacity
+        activeOpacity={0.9}
+        onPress={() => {this.popupImageSource?.setPopupVisible(true, getPhoto(photoSource?.toLowerCase()),this.props.item, photoSource)}}
+        style={{alignItems: 'center',}}
+      >
+        <View style={{backgroundColor:this.props.accentColor,width: 75, height: 75, borderRadius: 100, justifyContent: 'center', alignItems: 'center' }}>
+          {photo}
+        </View>
+        <TextFont numberOfLines={4} style={[styles.cornerImageLabel,{color:colors.textLight[global.darkMode]}]}>{label}</TextFont>
+      </TouchableOpacity>
+      <PopupImageSource ref={(popupImageSource) => this.popupImageSource = popupImageSource}/>
+    </View>
   }
 }
 
@@ -597,7 +605,6 @@ class PopupImage extends Component {
       else
         maxWidth = Dimensions.get('window').width*0.6
     }
-    console.log(maxWidth)
     return(
       <PopupInfoCustom ref={(popup) => this.popup = popup} buttonText={"Close"}>
         <View style={{alignItems:"center"}}>
@@ -640,6 +647,47 @@ class PopupImage extends Component {
             ending2={"x"}
           />
           {this.state.item["checkListKey"]!==undefined && this.state.item["checkListKey"]?.includes("clothing")?<VillagersGifts compact item={this.state.item}/>:<View/>}
+        </View>
+      </PopupInfoCustom>
+    )
+  }
+}
+
+class PopupImageSource extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      item:"",
+    }; 
+  }
+
+  setPopupVisible = (visible, image, item, label) => {
+    this.setState({image:image, item:item, label: label});
+    this.popup?.setPopupVisible(true);
+  }
+
+  render(){
+    let maxWidth = 140
+    if(Dimensions.get('window').width*0.6 > 140 || Dimensions.get('window').height*0.6 > 140){
+      maxWidth = 140
+    } else {
+      if(Dimensions.get('window').width > Dimensions.get('window').height)
+        maxWidth = Dimensions.get('window').height*0.6
+      else
+        maxWidth = Dimensions.get('window').width*0.6
+    }
+    let imageComp = <Image
+      style={{height: maxWidth,width: maxWidth,resizeMode:'contain',}}
+      source={this.state.image}
+    />
+    return(
+      <PopupInfoCustom ref={(popup) => this.popup = popup} buttonText={"Close"}>
+        <View style={{alignItems:"center"}}>
+          {imageComp}
+          <TextFont bold style={{color:colors.textBlack[global.darkMode], fontSize:18, textAlign:"center", marginTop: 10}}>{this.state.label}</TextFont>
+          {this.state.label===this.state.item["Source"] || this.state.item["Source"]===undefined ? <></> : <TextFont style={{color:colors.textBlack[global.darkMode], fontSize:16, textAlign:"center", marginTop: 10}}>{this.state.item["Source"]}</TextFont>}
+          {this.state.item["Source Notes"]===undefined || this.state.item["Source Notes"]==="NA" ? <></> : <TextFont style={{color:colors.textBlack[global.darkMode], fontSize:16, textAlign:"center", marginTop: 10}}>{this.state.item["Source Notes"]}</TextFont>}
+          <View style={{height:15}}/>
         </View>
       </PopupInfoCustom>
     )
@@ -833,12 +881,10 @@ const styles = StyleSheet.create({
     resizeMode:'contain',
   },
   cornerImageLabel:{
-    position: "absolute",
-    top: 90,
-    width: 101,
+    width: 90,
     textAlign:"center",
-    paddingLeft: 10,
-    paddingRight: 10,
+    paddingLeft: 5,
+    paddingRight: 5,
   },
   cornerImageBackground:{
     width: 75,
