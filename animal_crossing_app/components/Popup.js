@@ -50,6 +50,7 @@ class Popup extends Component {
     }
     if(this.props.button1!==undefined){
       this.Button1 = <ButtonComponent
+        checkFont={this.props.checkFont}
         text={this.props.button1}
         color={colors.okButton[global.darkMode]??colors.okButton3[0]}
         vibrate={5}
@@ -61,6 +62,7 @@ class Popup extends Component {
     }
     if(this.props.button2!==undefined){
       this.Button2 = <ButtonComponent
+        checkFont={this.props.checkFont}
         text={this.props.button2}
         color={colors.cancelButton[global.darkMode]??colors.okButton[0]}
         vibrate={10}
@@ -87,20 +89,21 @@ class Popup extends Component {
   }
 
   render(){
+    let darkMode = this.props.darkMode ? this.props.darkMode : global.darkMode
     return (
-        <Modal
-          animationType="fade"
-          transparent={true}
-          visible={this.state.popupVisible}
-          statusBarTranslucent
-          onRequestClose={()=>{(this.props.button1===undefined && this.props.button2===undefined) || this.props.noDismiss===true ? 0 : this.setPopupVisible(false);}}
-        >
+      <Modal
+        animationType="fade"
+        transparent={true}
+        visible={this.state.popupVisible}
+        statusBarTranslucent
+        onRequestClose={()=>{(this.props.button1===undefined && this.props.button2===undefined) || this.props.noDismiss===true ? 0 : this.setPopupVisible(false);}}
+      >
         <View style={[styles.centeredView,{padding:this.props.centerPadding}]}>
           {(this.props.button1===undefined && this.props.button2===undefined) || this.props.noDismiss===true ? <View/> : <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} activeOpacity={0.15} style={{position:"absolute", left:-100, top:-100, width: Dimensions.get('window').width+200, height: Dimensions.get('window').height+200, backgroundColor: "black", opacity: 0.1}}/>}
-          <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode], justifyContent:"center", alignItems:"center"}]}>
-            {this.props.text?<TextFont bold={true} style={{fontSize: 25, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.props.text}</TextFont>:<View/>}
+          <View style={[styles.modalView,{backgroundColor: colors.white[darkMode], justifyContent:"center", alignItems:"center"}]}>
+            {this.props.text?<TextFont checkFont={this.props.checkFont} bold={true} style={{fontSize: 25, textAlign:"center", color: colors.textBlack[darkMode]}}>{this.props.text}</TextFont>:<View/>}
             <ScrollView style={{maxHeight:Dimensions.get('window').height*0.75, marginTop:this.props.margin?10:0}}>
-              {this.props.textLower===undefined?<View/>:<TextFont bold={false} style={{fontSize: 17, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.props.textLower}</TextFont>}
+              {this.props.textLower===undefined?<View/>:<TextFont checkFont={this.props.checkFont} bold={false} style={{fontSize: 17, textAlign:"center", color: colors.textBlack[darkMode]}}>{this.props.textLower}</TextFont>}
               {this.props.loading?<LottieView autoPlay loop
                 style={{marginBottom:-10, width: 80, zIndex:1,marginTop:4}}
                 source={require('../assets/loading.json')}

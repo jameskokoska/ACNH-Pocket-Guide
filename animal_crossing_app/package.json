@@ -16,9 +16,11 @@
     "expo": "^44.0.0",
     "expo-application": "~4.0.1",
     "expo-asset": "~8.4.6",
+    "expo-av": "~10.2.0",
     "expo-constants": "~13.0.0",
     "expo-device": "^4.1.0",
     "expo-document-picker": "~10.1.0",
+    "expo-error-recovery": "^3.0.5",
     "expo-file-system": "~13.1.0",
     "expo-font": "~10.0.4",
     "expo-image-picker": "~12.0.1",
@@ -52,8 +54,7 @@
     "reanimated-bottom-sheet": "^1.0.0-alpha.22",
     "sentry-expo": "^4.0.0",
     "toggle-switch-react-native": "^2.3.0",
-    "xlsx": "^0.17.3",
-    "expo-av": "~10.2.0"
+    "xlsx": "^0.17.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

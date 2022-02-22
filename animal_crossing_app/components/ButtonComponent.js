@@ -21,7 +21,7 @@ class ButtonComponent extends Component {
           activeOpacity={0.5}
           onPress={()=> {this.props.onPress(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(this.props.vibrate) : "";}}
         >
-          <TextFont style={{fontSize: 15.5, color: "white", textAlign:"center"}}>{this.props.text}</TextFont>
+          <TextFont checkFont style={{fontSize: 15.5, color: "white", textAlign:"center"}}>{this.props.text}</TextFont>
         </TouchableOpacity>
     )
   }

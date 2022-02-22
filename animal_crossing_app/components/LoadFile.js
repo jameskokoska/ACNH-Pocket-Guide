@@ -411,10 +411,13 @@ class ExportFile extends Component {
           button1Action={()=>{}}
           text={"Export Results"}
           textLower={this.state.message}
+          checkFont={this.props.checkFont}
+          darkMode={this.props.darkMode}
         />
         <ButtonComponent
-          text={this.props.experimental?"Export All Data":"Export Data"}
-          color={colors.okButton2[global.darkMode]}
+          checkFont={this.props.checkFont}
+          text={this.props.experimental?"Export All Data":(this.props.label?this.props.label:"Export Data")}
+          color={this.props.color?this.props.color:colors.okButton2[global.darkMode]}
           vibrate={5}
           onPress={async () => {
             var dataTotal
@@ -442,7 +445,7 @@ class ExportFile extends Component {
                   this.exportPopup?.setPopupVisible(true);
                 }
               } else {
-                this.setState({message:"Error backing up. Please enable the permissions and try again."});
+                this.setState({message:"Error backing up. Please enable the permissions and try again..."});
                 this.exportPopup?.setPopupVisible(true);
               }
             }

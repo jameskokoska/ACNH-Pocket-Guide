@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Vibration, BackHandler, Dimensions, Text, View, StatusBar, ToastAndroid, Linking} from 'react-native';
+import {Vibration, BackHandler, Dimensions, Text, View, StatusBar, Linking, } from 'react-native';
 import FAB, { FABWrapper } from './components/FAB';
 import CalendarPage from './pages/CalendarPage';
 import SongsPage from './pages/SongsPage';
@@ -68,6 +68,18 @@ import * as Sentry from 'sentry-expo';
 import {sentryConfig} from './sentryConfig'
 import { useAndroidBackHandler } from "react-navigation-backhandler";
 import * as Device from 'expo-device';
+import * as ErrorRecovery from 'expo-error-recovery';
+import CrashPage, { EmptyPage } from './pages/CrashPage';
+
+const defaultErrorHandler = ErrorUtils.getGlobalHandler();
+
+const globalErrorHandler = (error, isFatal) => {
+  console.log("globalErrorHandler called!");
+  ErrorRecovery.setRecoveryProps({ error: error, isFatal: isFatal });
+  defaultErrorHandler(error, isFatal);
+};
+
+ErrorUtils.setGlobalHandler(globalErrorHandler);
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -88,13 +100,32 @@ Sentry.init({
 
 // Sentry.Browser.*
 
-
 const appInfo = require("./app.json");
 global.version = appInfo["expo"]["version"];
 global.versionCode = appInfo["expo"]["android"]["versionCode"];
 const Stack = createNativeStackNavigator();
 
 class App extends Component {
+  constructor() {
+    super();
+    this.lastError = ErrorRecovery.recoveredProps
+  }
+  loadApplication = ()=>{
+    this.lastError = false; 
+    ErrorRecovery.setRecoveryProps({ error: "cleared", isFatal: false });
+    this.forceUpdate();
+  }
+  render(){
+    if(this.lastError && this.lastError.error!=="cleared"){
+      return <CrashPage lastError={this.lastError} loadApplication={this.loadApplication}/>
+    } else {
+      return <Main/>
+    }
+  }
+}
+
+
+class Main extends Component {
   constructor() {
     super();
     this.openDrawer = this.openDrawer.bind(this);
@@ -572,7 +603,6 @@ class App extends Component {
 
       let otherComponents = <>
         <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
-        <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
         <StatusBar translucent={false} hidden={getSettingsString("settingsShowStatusBar")==="false"} backgroundColor={colors.background[global.darkMode]} barStyle={global.darkMode===1?"light-content":"dark-content"}/>
       </>
 
@@ -605,7 +635,7 @@ class App extends Component {
           <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage} sideMenuSections={this.sideMenuSections} sideMenuSectionsDisabled={this.sideMenuSectionsDisabled}>
             <Provider theme={theme}>
               <NavigationContainer ref={navigationRef} theme={{colors: {background: colors.background[global.darkMode],},}}>
-                <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
+                <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false, headerTransparent: true, }}>
                   <Stack.Screen name="Home" component={NavigatorHomePage} />
                   <Stack.Screen name="20" component={NavigatorVillagerPresentsPage}/>
                   <Stack.Screen name="22" component={NavigatorVillagerFurniture}/>

@@ -907,7 +907,7 @@ export const settings = [
   },
   {
     "keyName" : "settingsShowStatusBar",
-    "defaultValue" : "false",
+    "defaultValue" : "true",
     "currentValue" : "",
     "picture" : require("./assets/icons/bell.png"),
     "displayName" : "Show notification status bar",
