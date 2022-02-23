@@ -570,21 +570,21 @@
     ],
     "Main": [
         {
-            "English": "1121 items",
-            "English (Europe)": "1121 items",
-            "French": "1097 items (24 items missing)",
-            "French (US)": "1097 items (24 items missing)",
-            "German": "1109 items (12 items missing)",
-            "Spanish": "1097 items (24 items missing)",
-            "Spanish (US)": "1093 items (28 items missing)",
-            "Russian": "1108 items (13 items missing)",
-            "Italian": "1107 items (14 items missing)",
-            "Dutch": "1082 items (39 items missing)",
-            "Chinese": "904 items (217 items missing)",
-            "Chinese (Traditional)": "7 items (1114 items missing)",
-            "Japanese": "7 items (1114 items missing)",
-            "Korean": "7 items (1114 items missing)",
-            "Portuguese": "1105 items (16 items missing)"
+            "English": "1124 items",
+            "English (Europe)": "1124 items",
+            "French": "1100 items (24 items missing)",
+            "French (US)": "1100 items (24 items missing)",
+            "German": "1112 items (12 items missing)",
+            "Spanish": "1100 items (24 items missing)",
+            "Spanish (US)": "1096 items (28 items missing)",
+            "Russian": "1111 items (13 items missing)",
+            "Italian": "1110 items (14 items missing)",
+            "Dutch": "1082 items (42 items missing)",
+            "Chinese": "904 items (220 items missing)",
+            "Chinese (Traditional)": "7 items (1117 items missing)",
+            "Japanese": "7 items (1117 items missing)",
+            "Korean": "7 items (1117 items missing)",
+            "Portuguese": "1108 items (16 items missing)"
         },
         {
             "English": "Home",
@@ -15889,6 +15889,42 @@
             "Japanese": "애플리케이션 로드",
             "Korean": "Загрузить приложение",
             "Portuguese": "Carregar aplicativo"
+        },
+        {
+            "English": "Search For Icon",
+            "English (Europe)": "Search For Icon",
+            "French": "Rechercher l'icône",
+            "French (US)": "Rechercher l'icône",
+            "German": "Suche nach Symbol",
+            "Spanish": "Buscar icono",
+            "Spanish (US)": "Buscar icono",
+            "Russian": "Поиск значка",
+            "Italian": "Cerca icona",
+            "Portuguese": "Pesquisar ícone"
+        },
+        {
+            "English": "Show More",
+            "English (Europe)": "Show More",
+            "French": "Montre plus",
+            "French (US)": "Montre plus",
+            "German": "Zeig mehr",
+            "Spanish": "Mostrar más",
+            "Spanish (US)": "Mostrar más",
+            "Russian": "Показать больше",
+            "Italian": "Mostra di più",
+            "Portuguese": "Mostre mais"
+        },
+        {
+            "English": "Search For Item",
+            "English (Europe)": "Search For Item",
+            "French": "Rechercher un article",
+            "French (US)": "Rechercher un article",
+            "German": "Artikel suchen",
+            "Spanish": "Buscar artículo",
+            "Spanish (US)": "Buscar artículo",
+            "Russian": "Поиск товара",
+            "Italian": "Cerca articolo",
+            "Portuguese": "Pesquisar item"
         }
     ],
     "Sources": [

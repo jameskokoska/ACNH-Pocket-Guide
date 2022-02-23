@@ -674,6 +674,19 @@ export function getPhotoCornerSize(name){
   }
 }
 
+export function getAllMaterialImages(dataLoaded, imageProperty){
+  let output = []
+  for(let database of dataLoaded){
+    for(let item of database){
+      let currentItem = {}
+      currentItem["image"] = item[imageProperty]
+      currentItem["name"] = item["NameLanguage"]
+      output.push(currentItem)
+    }
+  }
+  return output
+}
+
 export function getMaterialImage(material, reduceComplexity=false, flowerSingle=false){
   var materialStripped = material;
   if(flowerSingle){

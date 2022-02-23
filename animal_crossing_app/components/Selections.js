@@ -23,6 +23,11 @@ export class SelectionImage extends Component {
       selectedImage: this.props.selectedImage
     };
   }
+  componentDidUpdate(prevProps){
+    if(this.props.selectedImage!==prevProps.selectedImage){
+      this.setState({selectedImage:this.props.selectedImage})
+    }
+  }
   render(){
     return(<>
       <View style={{flex: 1, flexWrap: 'wrap', flexDirection:"row",justifyContent:"center"}}>

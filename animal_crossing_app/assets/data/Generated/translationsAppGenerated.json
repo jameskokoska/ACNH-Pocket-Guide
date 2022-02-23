@@ -14956,6 +14956,42 @@
       "Japanese": "애플리케이션 로드",
       "Korean": "Загрузить приложение",
       "Portuguese": "Carregar aplicativo"
+    },
+    "search for icon": {
+      "English": "Search For Icon",
+      "English (Europe)": "Search For Icon",
+      "French": "Rechercher l'icône",
+      "French (US)": "Rechercher l'icône",
+      "German": "Suche nach Symbol",
+      "Spanish": "Buscar icono",
+      "Spanish (US)": "Buscar icono",
+      "Russian": "Поиск значка",
+      "Italian": "Cerca icona",
+      "Portuguese": "Pesquisar ícone"
+    },
+    "show more": {
+      "English": "Show More",
+      "English (Europe)": "Show More",
+      "French": "Montre plus",
+      "French (US)": "Montre plus",
+      "German": "Zeig mehr",
+      "Spanish": "Mostrar más",
+      "Spanish (US)": "Mostrar más",
+      "Russian": "Показать больше",
+      "Italian": "Mostra di più",
+      "Portuguese": "Mostre mais"
+    },
+    "search for item": {
+      "English": "Search For Item",
+      "English (Europe)": "Search For Item",
+      "French": "Rechercher un article",
+      "French (US)": "Rechercher un article",
+      "German": "Artikel suchen",
+      "Spanish": "Buscar artículo",
+      "Spanish (US)": "Buscar artículo",
+      "Russian": "Поиск товара",
+      "Italian": "Cerca articolo",
+      "Portuguese": "Pesquisar item"
     }
   },
   "Sources": {

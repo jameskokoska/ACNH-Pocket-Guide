@@ -15,7 +15,7 @@ import {
 import TextFont from "./TextFont";
 import ButtonComponent from "./ButtonComponent";
 import colors from "../Colors";
-import {getPhoto, getMaterialImage} from "./GetPhoto"
+import {getPhoto, getMaterialImage, getAllMaterialImages} from "./GetPhoto"
 import {PopupInfoCustom} from "./Popup"
 import ToggleSwitch from 'toggle-switch-react-native'
 import {getSettingsString,attemptToTranslate} from "../LoadJsonData"
@@ -69,41 +69,51 @@ export const taskImages = [
       getMaterialImage("gyroid fragment",true),
       getMaterialImage("apple",true),
       getMaterialImage("apple tree",true),
+      // getMaterialImage("cherry",true),
+      // getMaterialImage("cherry tree",true),
+      // getMaterialImage("orange",true),
+      // getMaterialImage("orange tree",true),
+      // getMaterialImage("peach",true),
+      // getMaterialImage("peach tree",true),
+      // getMaterialImage("pear",true),
+      // getMaterialImage("pear tree",true),
       getMaterialImage("money tree",true),
       getMaterialImage("tree branch",true),
       getMaterialImage("sapling",true),
       getMaterialImage("wood",true),
       getMaterialImage("clay",true),
-      getMaterialImage("acorn",true),
-      getMaterialImage("pine cone", true),
-      getMaterialImage("skinny mushroom", true),
+      // getMaterialImage("acorn",true),
+      // getMaterialImage("pine cone", true),
+      // getMaterialImage("skinny mushroom", true),
       getMaterialImage("stone", true),
-      getMaterialImage("conch", true),
-      getMaterialImage("coral", true),
-      getMaterialImage("cowrie", true),
-      getMaterialImage("giant clam", true),
+      // getMaterialImage("conch", true),
+      // getMaterialImage("coral", true),
+      // getMaterialImage("cowrie", true),
+      // getMaterialImage("giant clam", true),
+      // getMaterialImage("summer shell", true),
       getMaterialImage("star fragment", true),
-      getMaterialImage("aquarius fragment", true),
+      // getMaterialImage("aquarius fragment", true),
       getMaterialImage("bamboo piece",true),
       getMaterialImage("wasp nest",true),
-      getMaterialImage("hardwood tree",true),
+      // getMaterialImage("hardwood tree",true),
       getMaterialImage("nook miles ticket",true),
-      getMaterialImage("birthday cupcake",true),
-      getMaterialImage("candy",true),
+      // getMaterialImage("candy",true),
       getMaterialImage("customization kit",true),
       getMaterialImage("fossil",true),
       getMaterialImage("gold nugget",true),
       getMaterialImage("message bottle",true),
+      getMaterialImage("rusted part",true),
+      // getMaterialImage("pitfall seed",true),
+      getMaterialImage("present",true),
+      // getMaterialImage("rainbow feather",true),
       "recipe.png",
       "cookingRecipe.png",
       "recipes.png",
-      getMaterialImage("rusted part",true),
-      getMaterialImage("pitfall seed",true),
-      getMaterialImage("present",true),
-      getMaterialImage("rainbow feather",true),
       getMaterialImage("tomato",true),
       getMaterialImage("potato",true),
       getMaterialImage("carrot",true),
+      getMaterialImage("wheat",true),
+      getMaterialImage("sugarcane",true),
       "cooking.png",
       "suitcase.png",
       "treasureMap.png",
@@ -153,11 +163,12 @@ class PopupAddTask extends Component {
     this.state = {
       popupVisible: false,
       smallToggle:false,
+      selectedImageInitial: "leaf.png",
       selectedImage: "leaf.png",
       title: "",
+      images:taskImages
     };
     this.task = {title: "", picture:"", finished: false, small:this.state.smallToggle};
-    this.images = taskImages;
     this.edit=false;
   }
 
@@ -174,8 +185,22 @@ class PopupAddTask extends Component {
     }
   }
 
+  setCustomImage = (image) => {
+    let images = this.state.images
+    this.setState({images:[image, ...images],selectedImageInitial:image, selectedImage: image})
+    this.task.picture=image
+  }
+
   render(){
     var buttons = <>
+      <ButtonComponent
+        text={"Search For Icon"}
+        color={colors.okButton3[global.darkMode]}
+        vibrate={15}
+        onPress={() => {
+          this.popupChooseIcon?.setPopupVisible(true)
+        }}
+      />
       <View style={{flexDirection:"row", justifyContent:"center"}}>
         <ButtonComponent
           text={"Cancel"}
@@ -195,7 +220,6 @@ class PopupAddTask extends Component {
             } else {
               this.props.addItem(this.task, this.edit);
             }
-            
             this.popup?.setPopupVisible(false);
           }}
         /> 
@@ -240,8 +264,8 @@ class PopupAddTask extends Component {
         <PopupInfoCustom ref={(popup) => this.popup = popup} buttonDisabled={true} buttons={buttons} header={header}>
           <View style={{flex: 1, flexWrap: 'wrap', flexDirection:"row",justifyContent:"center"}}>
             <SelectionImage 
-              selectedImage={this.state.selectedImage} 
-              images={this.images}
+              selectedImage={this.state.selectedImageInitial} 
+              images={this.state.images}
               onSelected={(image)=>{this.setState({selectedImage:image}); this.task.picture=image;}}
               canDeselect={false}
               sizeImage={[35,35]}
@@ -250,11 +274,103 @@ class PopupAddTask extends Component {
             />
           </View>
         </PopupInfoCustom>
+        <PopupChooseIcon setImage={(image)=>{this.setCustomImage(image)}} ref={(popupChooseIcon) => this.popupChooseIcon = popupChooseIcon}/>
       </>
     )
   }
 }
 export default PopupAddTask;
+
+class PopupChooseIcon extends Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+      images:[],
+      amountToShow: 15,
+    };
+    this.totalList = [...getAllMaterialImages(global.dataLoadedMaterials, "Inventory Image"), ...getAllMaterialImages(global.dataLoadedTools, "Image"), ...getAllMaterialImages(global.dataLoadedReactions, "Image"), ...getAllMaterialImages(global.dataLoadedVillagers, "Icon Image")];
+  }
+
+  componentDidMount(){
+    setTimeout(()=>{
+      this.getImages("")
+    })
+  }
+
+  getImages = (search) => {
+    let imagesOnly = []
+    for(let item of this.totalList){
+      if(search==="" || (item["name"]?.toLowerCase()).includes(search.toLowerCase()))
+        imagesOnly.push(item["image"])
+    }
+    this.setState({images:imagesOnly})
+  }
+
+  setPopupVisible = (visible) => {
+    this.popup?.setPopupVisible(true);
+  }
+
+  render(){
+    var buttons = <>
+      {this.state.images?.length <= this.state.amountToShow ? <View/> : <ButtonComponent
+        text={"Show More"}
+        color={colors.okButton3[global.darkMode]}
+        vibrate={15}
+        onPress={() => {
+          this.setState({amountToShow: this.state.amountToShow + 10})
+        }}
+      /> }
+      <View style={{flexDirection:"row", justifyContent:"center"}}>
+        <ButtonComponent
+          text={"Cancel"}
+          color={colors.cancelButton[global.darkMode]}
+          vibrate={8}
+          onPress={() => {
+            this.popup?.setPopupVisible(false);
+          }}
+        /> 
+        <ButtonComponent
+          text={"Done"}
+          color={colors.okButton[global.darkMode]}
+          vibrate={15}
+          onPress={() => {
+            this.props.setImage(this.state.selectedImage)
+            this.popup?.setPopupVisible(false);
+          }}
+        /> 
+      </View>
+    </>
+    var header = <>
+      <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{"Search For Icon"}</TextFont>
+      <View style={{height:10}}/>
+      <View style={{flexDirection: 'row'}}>
+        <View style={{flex:1, justifyContent:"center", marginHorizontal:5,}}>
+          <TextInput
+            allowFontScaling={false}
+            style={{fontSize: 18, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 10, borderRadius: 5}}
+            onChangeText={(text) => {this.getImages(text)}}
+            placeholder={attemptToTranslate("Search For Item")}
+            placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+          />
+        </View>
+      </View>
+      <View style={{height:10}}/>
+    </>
+    return <PopupInfoCustom ref={(popup) => this.popup = popup} buttonDisabled={true} buttons={buttons} header={header}>
+      <View style={{flex: 1, flexWrap: 'wrap', flexDirection:"row",justifyContent:"center"}}>
+        <SelectionImage 
+          selectedImage={this.state.selectedImage} 
+          images={this.state.images.slice(0,this.state.amountToShow)}
+          onSelected={(image)=>{this.setState({selectedImage:image})}}
+          canDeselect={false}
+          sizeImage={[35,35]}
+          sizeImageOnline={[45,45]}
+          sizeContainer={[60,60]}
+        />
+      </View>
+    </PopupInfoCustom>
+  }
+}
 
 const styles = StyleSheet.create({
   centeredView: {
