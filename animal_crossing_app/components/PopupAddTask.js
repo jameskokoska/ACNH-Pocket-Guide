@@ -287,6 +287,7 @@ class PopupChooseIcon extends Component{
     this.state = {
       images:[],
       amountToShow: 15,
+      selectedImage: "leaf.png"
     };
     this.totalList = [...getAllMaterialImages(global.dataLoadedMaterials, "Inventory Image"), ...getAllMaterialImages(global.dataLoadedTools, "Image"), ...getAllMaterialImages(global.dataLoadedReactions, "Image"), ...getAllMaterialImages(global.dataLoadedVillagers, "Icon Image")];
   }
@@ -334,7 +335,9 @@ class PopupChooseIcon extends Component{
           color={colors.okButton[global.darkMode]}
           vibrate={15}
           onPress={() => {
-            this.props.setImage(this.state.selectedImage)
+            if(this.state.selectedImage!=="leaf.png"){
+              this.props.setImage(this.state.selectedImage)
+            }
             this.popup?.setPopupVisible(false);
           }}
         /> 

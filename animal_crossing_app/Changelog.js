@@ -3,6 +3,8 @@ export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Fixed ToDo list item crash when selecting custom icon that does not exist
+-
 -Added the ability to add custom icons in the ToDo list
 -Search crafting materials, villagers, reactions and tools as icons
 -
