@@ -181,6 +181,7 @@ class Main extends Component {
     global.selectedFruit = await getStorage("selectedFruit"+global.profile,"");
     global.customTimeOffset = await getStorage("customDateOffset"+global.profile,"0");
     global.ordinance = await getStorage("ordinance"+global.profile,"");
+    global.customLists = JSON.parse(await getStorage("customLists"+global.profile,"[]"));
     // console.log(global.collectionList)
   }
 

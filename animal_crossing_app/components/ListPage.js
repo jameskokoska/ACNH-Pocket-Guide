@@ -2,7 +2,7 @@ import React, {Component, useState, useRef, useEffect} from 'react';
 import {TouchableOpacity, View, Animated,StyleSheet,RefreshControl} from 'react-native';
 import Header, {HeaderLoading, HeaderActive} from './Header';
 import ListItem from './ListItem';
-import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters, isInteger, attemptToTranslate} from "../LoadJsonData"
+import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters, isInteger, attemptToTranslate, checkOff, inCustomLists} from "../LoadJsonData"
 import {Dimensions } from "react-native";
 import {Variations,Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from './BottomSheetComponents';
 import colors from "../Colors.js"
@@ -28,6 +28,7 @@ import GyroidPopup from '../popups/GyroidPopup';
 import FoodPopup from '../popups/FoodPopup';
 import LottieView from 'lottie-react-native';
 import { getHourlySongTitle } from '../pages/SongsPage';
+import { WishlistSelectionPopup } from '../pages/WishlistPage';
 
 //use tabs={false} if the page doesn't have  the tab bar
 
@@ -90,6 +91,20 @@ function ListPage(props){
       leaveWarning={props.leaveWarning}
       title={props.title}
       customTapFunction={props.customTapFunction}
+      selectCustomList={(item, setWishlistState)=>{
+        addItemToCustomListFunction = (listName) => {
+          console.log(listName); 
+          if(listName===""){
+            setWishlistState(!inWishlist(item.checkListKey))
+            checkOff(item.checkListKey, inWishlist(item.checkListKey), "wishlist");
+          }else{
+            checkOff(item.checkListKey, inCustomLists(item.checkListKey, listName), "customLists::"+listName);
+          }
+        }
+        //setWishlistState of the list item box
+        // setWishlistState(true)
+        customListsPopupRef?.current?.setPopupVisible(true)
+      }}
     />
   )
   const ref = useRef(null);
@@ -861,6 +876,8 @@ function ListPage(props){
   
   const sheetRef = React.useRef(null);
   const bottomSheetRenderRef = React.useRef(null);
+  const customListsPopupRef = React.useRef(null);
+  let addItemToCustomListFunction = ()=>{}
 
   // //if bottom sheet is really large, allow scrolling
   var bottomSheetTopPadding = 0;
@@ -1019,6 +1036,7 @@ function ListPage(props){
         tabs={props.tabs}
       />
     </PopupBottomCustom>
+    <WishlistSelectionPopup changeSelectedList={(list)=>{addItemToCustomListFunction(list);}} showDelete={false} showAdd={false} ref={customListsPopupRef} addCustomList={()=>{}}/>
     </>
   );
   }

@@ -14,6 +14,44 @@ export async function getStorage(storageKey, defaultValue){
   return valueReturned;
 }
 
+export function addCustomList(name){
+  if(global.customLists.includes(name) || name===""){
+    return false
+  } else {
+    global.customLists.push(name)
+    AsyncStorage.setItem("customLists"+global.profile, JSON.stringify(global.customLists));
+    return true
+  }
+}
+
+export function removeCustomList(name){
+  if(global.customLists.includes(name)){
+    const oldList = [...global.customLists]
+    let indexToDelete = oldList.indexOf(name);
+    const newList = oldList.filter((index,i) => i!=indexToDelete);
+    global.customLists = newList
+    AsyncStorage.setItem("customLists"+global.profile, JSON.stringify(global.customLists));
+
+    let checkListKeyStart = "customLists::"+name
+    for(var i = 0; i<global.collectionList.length; i++){
+      if(global.collectionList[i].includes(checkListKeyStart) && !global.collectionList[i].includes("wishlist") && !global.collectionList[i].includes("museum")){
+        console.log("removed"+global.collectionList[i])
+        checkOff(global.collectionList[i], false, "", "", false)
+      }
+    }
+    return true
+  }
+  return false
+}
+
+export function inCustomLists(checkListKeyString, name){
+  if(global.collectionListIndexed["customLists::"+name+checkListKeyString]===true){
+    return true;
+  } else {
+    return false
+  }
+}
+
 export function inWishlist(checkListKeyString){
   if(global.collectionListIndexed["wishlist"+checkListKeyString]===true){
     return true;

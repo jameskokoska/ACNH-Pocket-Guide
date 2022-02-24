@@ -10,7 +10,7 @@ import {
 import TextFont from './TextFont';
 import Check from './Check';
 import FastImage from './FastImage';
-import {checkOff, capitalize, commas, removeBrackets} from "../LoadJsonData"
+import {checkOff, capitalize, commas, removeBrackets, inCustomLists} from "../LoadJsonData"
 import {getPhoto, getPhotoShadow} from "./GetPhoto"
 import {getMonthShort, swapDateCards} from "./DateFunctions"
 import colors from "../Colors"
@@ -220,8 +220,12 @@ class ListItem extends React.Component{
         <View style={styles.gridWrapper}>
           
           <TouchableNativeFeedback onLongPress={() => {
-            checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
-            this.setWishlist(this.state.wishlist===true ? false:true);
+            if(global.customLists.length > 0){
+              this.props.selectCustomList(this.props.item, this.setWishlist)
+            }else{
+              checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
+              this.setWishlist(this.state.wishlist===true ? false:true);
+            }
           }}
             background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
             onPress={()=>{
