@@ -12,6 +12,8 @@ export const changelog = `
 -Custom lists item amounts are now backed up to the cloud
 -Ordinances are now backed up to the cloud
 -
+-Fixed ToDo list item crash when selecting custom icon that does not exist
+-
 -Added the ability to add custom icons in the ToDo list
 -Search crafting materials, villagers, reactions and tools as icons
 -

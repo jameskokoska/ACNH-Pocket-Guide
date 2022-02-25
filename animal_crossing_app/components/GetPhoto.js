@@ -37,7 +37,7 @@ export function getSizeImage(size){
 
 export function getPhoto(name, fallback=""){
   if(name===undefined){
-    return ""
+    return require("../assets/icons/leaf.png");
   }
   switch(name){
     case "series5(1).jpg":
