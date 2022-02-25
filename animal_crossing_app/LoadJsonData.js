@@ -14,6 +14,62 @@ export async function getStorage(storageKey, defaultValue){
   return valueReturned;
 }
 
+export function addCustomList(name){
+  if(name===undefined || global.customLists.includes(name) || name==="" || name.includes("}") || name.includes("{")){
+    return false
+  } else {
+    global.customLists.push(name)
+    AsyncStorage.setItem("customLists"+global.profile, JSON.stringify(global.customLists));
+    return true
+  }
+}
+
+export function removeCustomList(name){
+  if(global.customLists.includes(name)){
+    const oldList = [...global.customLists]
+    let indexToDelete = oldList.indexOf(name);
+    const newList = oldList.filter((index,i) => i!=indexToDelete);
+    global.customLists = newList
+    AsyncStorage.setItem("customLists"+global.profile, JSON.stringify(global.customLists));
+
+    let checkListKeyStart = "customLists::"+name
+    const globalCollectionListCopy = [...global.collectionList]
+    for(var i = 0; i<globalCollectionListCopy.length; i++){
+      if(globalCollectionListCopy[i].includes(checkListKeyStart)){
+        checkOff(globalCollectionListCopy[i], true, "", "", false)
+      }
+    }
+    return true
+  }
+  return false
+}
+
+export function inCustomLists(checkListKeyString, name){
+  if(global.collectionListIndexed["customLists::"+name+checkListKeyString]===true){
+    return true;
+  } else {
+    return false
+  }
+}
+
+export function getCustomListsAmount(checkListKeyString, name){
+  if(global.collectionListIndexedAmount["customLists::"+name+checkListKeyString]!==undefined){
+    return global.collectionListIndexedAmount["customLists::"+name+checkListKeyString];
+  } else {
+    return 0
+  }
+}
+
+export function setCustomListsAmount(checkListKeyString, name, amount){
+  global.collectionListIndexedAmount["customLists::"+name+checkListKeyString] = amount;
+  AsyncStorage.setItem("collectionListIndexedAmount", JSON.stringify(global.collectionListIndexedAmount));
+}
+
+export function setLastSelectedListPage(name){
+  global.lastSelectedListPage = name
+  AsyncStorage.setItem("lastSelectedListPage", name);
+}
+
 export function inWishlist(checkListKeyString){
   if(global.collectionListIndexed["wishlist"+checkListKeyString]===true){
     return true;

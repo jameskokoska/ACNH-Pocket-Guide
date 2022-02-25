@@ -470,7 +470,7 @@ export class Variations extends Component {
   render(){
     if(this.props.item!=""||this.props.item!=undefined){
       if(this.state.variations.length<=1){
-        return <PopupImage ref={(popup) => this.popup = popup} updateWishlist={this.updateWishlist}/>
+        return <PopupImage ref={(popup) => this.popup = popup} updateWishlist={this.updateWishlist} selectCustomList={this.props.selectCustomList}/>
       }
       var imageProperty = this.props.imageProperty;
       var dataSet = this.props.item.dataSet;
@@ -485,7 +485,7 @@ export class Variations extends Component {
             )}
           </View>
           </ScrollView>
-          <PopupImage ref={(popup) => this.popup = popup} updateWishlist={this.updateWishlist}/>
+          <PopupImage ref={(popup) => this.popup = popup} updateWishlist={this.updateWishlist} selectCustomList={this.props.selectCustomList}/>
           </>
         )
       } else {
@@ -496,7 +496,7 @@ export class Variations extends Component {
               <VariationItem wishlist={this.state.wishlistItems.includes(item.checkListKey)} variations={this.state.variations} updateRightCornerCheck={this.props.updateRightCornerCheck} updateKey={this.state.updateKey} updateChecked={this.state.updateChecked} originalCheckListKey={originalCheckListKey} updateCheckChildFunction={this.props.updateCheckChildFunction} index={index} key={item["Unique Entry ID"]!==undefined?item["Unique Entry ID"]:item[this.props.imageProperty[dataSet]]} globalDatabase={this.props.globalDatabase} item={item} setPopupVisible={(state, image, item)=>this.popup?.setPopupVisible(state, image, item)} dataSet={dataSet} imageProperty={imageProperty}/>
             )}
           </View>
-          <PopupImage ref={(popup) => this.popup = popup} updateWishlist={this.updateWishlist}/>
+          <PopupImage ref={(popup) => this.popup = popup} updateWishlist={this.updateWishlist} selectCustomList={this.props.selectCustomList}/>
           </>
         )
       }
@@ -591,9 +591,22 @@ class PopupImage extends Component {
   }
 
   addToWishlist = () => {
-    checkOff(this.state.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
-    this.setState({wishlist: this.state.wishlist===true ? false:true});
-    this.props.updateWishlist();
+    console.log("adwjawjdkjkdwakjdajk")
+    // checkOff(this.state.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
+    this.props.selectCustomList(
+      this.state.item, 
+      ()=>{
+        //run when wishlist list selected
+        this.setState({wishlist: this.state.wishlist===true ? false:true});
+        this.props.updateWishlist();
+      }, 
+      ()=>{
+        //run when tapped
+        // this.popup?.setPopupVisible(false);
+      },
+      //dont popup using bottom sheet
+      false
+    );
   }
   render(){
     let maxWidth = 200

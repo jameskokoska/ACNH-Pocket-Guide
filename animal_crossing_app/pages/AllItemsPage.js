@@ -87,8 +87,13 @@ class AllItemsPage extends Component {
     if(this.props.currentSearch !==undefined){
       currentSearch = this.props.currentSearch;
     }
+    var currentCustomList = "";
+    if(this.props.currentCustomList !==undefined){
+      currentCustomList = this.props.currentCustomList;
+    }
     return(
         <ListPage
+          currentCustomList={currentCustomList}
           currentSearch={currentSearch}
           noStackFilters={noStackFilters}
           extraInfo={extraInfo}

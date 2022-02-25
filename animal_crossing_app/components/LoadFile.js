@@ -110,10 +110,12 @@ export async function importAllData(text){
     var totalImport = text.split("\n");
     var totalAchievements = [];
     var totalHHP = [];
+    var totalCustomLists = [];
     var currentProfile = ""
     var currentCollectionList = (await getStorage("collectedString"+currentProfile,"")).split("\n");
     var currentAchievementsList = JSON.parse(await getStorage("Achievements"+profile,"[]"));
     var currentHHPList = JSON.parse(await getStorage("ParadisePlanning"+profile,"[]"));
+    var currentCustomLists = JSON.parse(await getStorage("customLists"+global.profile,"[]"));
 
     for(var i = 0; i<totalImport.length; i++){
       if(totalImport[i].includes("{") && totalImport[i].includes("}")){
@@ -129,8 +131,16 @@ export async function importAllData(text){
           totalAchievements.push(importEntry);
         } else if(key[1]==="HHP"){
           totalHHP.push(importEntry);
+        } else if(key[1]==="CustomLists"){
+          totalCustomLists.push(importEntry);
         } else {
-          if(key[1]==="ToDoList"){
+          if(key[1]==="CustomListsAmount"){
+            let list = JSON.parse(importEntry)
+            let currentList = JSON.parse(await getStorage("collectionListIndexedAmount"+currentProfile,"{}"));
+            let output = {...list, ...currentList};
+            console.log(output)
+            await AsyncStorage.setItem(key[1]+currentProfile, JSON.stringify(output));
+          }else if(key[1]==="ToDoList"){
             //check to ensure data format correct
             let list = JSON.parse(importEntry)
             for(let item of list){
@@ -217,6 +227,8 @@ export async function importAllData(text){
               setSettingsString("settingsUseCustomDate",importEntry);
             } else if (key[1]==="customDateOffset"&&currentProfile===global.profile) {
               global.customTimeOffset=importEntry
+            } else if (key[1]==="ordinance"&&currentProfile===global.profile) {
+              global.ordinance=importEntry
             }
           }
         }
@@ -234,6 +246,10 @@ export async function importAllData(text){
       if(totalImport[i]==="---END---" || i+1===totalImport.length){
         await AsyncStorage.setItem("Achievements"+currentProfile, JSON.stringify([...new Set([...totalAchievements,...currentAchievementsList])]));
         await AsyncStorage.setItem("ParadisePlanning"+currentProfile, JSON.stringify([...new Set([...totalHHP,...currentHHPList])]));
+        await AsyncStorage.setItem("customLists"+currentProfile, JSON.stringify([...new Set([...totalCustomLists,...currentCustomLists])]));
+        if(currentProfile===global.profile){
+          global.customLists = [...new Set([...totalCustomLists,...currentCustomLists])]
+        }
         var outputString = "";
         for(var x = 0; x<currentCollectionList.length; x++){
           outputString += currentCollectionList[x];
@@ -311,7 +327,10 @@ export async function getAllData(){
       var data17 = "\n{TurnipListFirstTime}" + (await getStorage("TurnipListFirstTime"+profile,"false"))
       var data18 = "\n{customDateOffset}" + (await getStorage("customDateOffset"+profile,"0"))
       var data19 = "\n{showVillagersTalkList}" + (await getStorage("showVillagersTalkList"+profile,"false"))
-      dataTotal = dataTotal + "{Profile}"+profile +"\n" + data + data3 + data4 + data5 + data6 + data7 + data8 + data9 + data10 + data11 + data12 + data13 + data14 + data15 + data16 + data17 + data18 + data19 + "\n" + "---END---" + "\n"
+      var data20 = "\n{CustomLists}" + [...new Set(JSON.parse(await getStorage("customLists"+profile,"[]")))].join("\n{CustomLists}");
+      var data21 = "\n{CustomListsAmount}" + (await getStorage("collectionListIndexedAmount"+profile,JSON.stringify({})))
+      var data22 = "\n{ordinance}" + (await getStorage("ordinance"+profile,""))
+      dataTotal = dataTotal + "{Profile}"+profile +"\n" + data + data3 + data4 + data5 + data6 + data7 + data8 + data9 + data10 + data11 + data12 + data13 + data14 + data15 + data16 + data17 + data18 + data19 + data20 + data21 + data22 + "\n" + "---END---" + "\n"
     }
     let settingsOutput = ""
     for(let setting of settings){

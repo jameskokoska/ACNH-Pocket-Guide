@@ -2,7 +2,7 @@ import React, {Component, useState, useRef, useEffect} from 'react';
 import {TouchableOpacity, View, Animated,StyleSheet,RefreshControl} from 'react-native';
 import Header, {HeaderLoading, HeaderActive} from './Header';
 import ListItem from './ListItem';
-import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters, isInteger, attemptToTranslate} from "../LoadJsonData"
+import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters, isInteger, attemptToTranslate, checkOff, inCustomLists, getCustomListsAmount} from "../LoadJsonData"
 import {Dimensions } from "react-native";
 import {Variations,Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from './BottomSheetComponents';
 import colors from "../Colors.js"
@@ -28,6 +28,7 @@ import GyroidPopup from '../popups/GyroidPopup';
 import FoodPopup from '../popups/FoodPopup';
 import LottieView from 'lottie-react-native';
 import { getHourlySongTitle } from '../pages/SongsPage';
+import { WishlistSelectionPopup } from '../pages/WishlistPage';
 
 //use tabs={false} if the page doesn't have  the tab bar
 
@@ -53,6 +54,7 @@ function ListPage(props){
   var selectedItem;
   var updateCheckChildFunction;
   var updateWishlistChildFunction;
+  var updateAmountChildFunction;
   let avoidSpoilers = getSettingsString("settingsHideImages")==="true"
   const renderItem = (({ item }) =>
     <ListItem
@@ -78,6 +80,7 @@ function ListPage(props){
         updateCheckChildFunction = updateCheckChild
         updateWishlistChildFunction = updateWishlistChild
       }}
+      setUpdateAmountChildFunction={(updateAmountChild)=>{updateAmountChildFunction = updateAmountChild; console.log(updateAmountChild)}}
       boxColor={props.boxColor}
       labelColor={props.labelColor}
       accentColor={props.accentColor}
@@ -90,6 +93,8 @@ function ListPage(props){
       leaveWarning={props.leaveWarning}
       title={props.title}
       customTapFunction={props.customTapFunction}
+      selectCustomList={selectCustomList}
+      currentCustomList={props.currentCustomList}
     />
   )
   const ref = useRef(null);
@@ -267,8 +272,14 @@ function ListPage(props){
           //optimization for loading
           //remove if doesn't satisfy main filter before trying other stuff
           if(props.wishlistItems || searchActual.includes("Wishlist")){
-            if(!global.collectionListIndexed["wishlist"+item["checkListKey"]]===true){
-              continue;
+            if(props.currentCustomList===""){
+              if(!inWishlist(item["checkListKey"])===true){
+                continue;
+              }
+            } else {
+              if(!inCustomLists(item["checkListKey"],props.currentCustomList)===true){
+                continue;
+              }
             }
           }else if(props.newItems){
             if(item["Version Added"] !==undefined && !gameVersion.includes(item["Version Added"])){
@@ -302,8 +313,12 @@ function ListPage(props){
               // } else if (searchActual.includes("New version") && props.newItems){
               //   filterFound = false;
               //   break;
-              // } 
-              if(searchActual.includes("Wishlist") && props.wishlistItems && global.collectionListIndexed["wishlist"+item["checkListKey"]]===true){
+              // }
+              if(searchActual.includes("Wishlist") && props.wishlistItems && props.currentCustomList!=="" && inCustomLists(item["checkListKey"],props.currentCustomList)===true){
+                filterFound = true;
+                break;
+              }
+              if(searchActual.includes("Wishlist") && props.wishlistItems && inWishlist(item["checkListKey"])===true){
                 filterFound = true;
                 break;
               } else if (searchActual.includes("Wishlist") && props.wishlistItems){
@@ -861,6 +876,41 @@ function ListPage(props){
   
   const sheetRef = React.useRef(null);
   const bottomSheetRenderRef = React.useRef(null);
+  const customListsPopupRef = React.useRef(null);
+  const customListsPopupBottomRef = React.useRef(null);
+  let addItemToCustomListFunction = ()=>{}
+
+  let selectCustomList = (item, setWishlistState, runWhenOpen=()=>{}, popupBottom=true) => {
+    addItemToCustomListFunction = (listName) => {
+      if(listName===""){
+        let inWishlistState = inWishlist(item.checkListKey)
+        checkOff(item.checkListKey, inWishlistState, "wishlist");
+        setWishlistState(!inWishlistState)
+      }else{
+        checkOff(item.checkListKey, inCustomLists(item.checkListKey, listName), "customLists::"+listName);
+      }
+    }
+    let selectedList = []
+    if(inWishlist(item.checkListKey)){
+      selectedList.push("")
+    }
+    for(let customList of global.customLists){
+      if(inCustomLists(item.checkListKey, customList)){
+        selectedList.push(customList)
+      }
+    }
+
+    if(popupBottom){
+      //order is important
+      customListsPopupBottomRef?.current?.setPopupVisible(true, item.checkListKey, item["NameLanguage"])
+      customListsPopupBottomRef?.current.updateSelectedList(selectedList)
+    } else {
+      customListsPopupRef?.current?.setPopupVisible(true, item.checkListKey, item["NameLanguage"])
+      customListsPopupRef?.current.updateSelectedList(selectedList)
+    }
+
+    runWhenOpen()
+  }
 
   // //if bottom sheet is really large, allow scrolling
   var bottomSheetTopPadding = 0;
@@ -1017,8 +1067,33 @@ function ListPage(props){
         popUpContainer={props.popUpContainer}
         checkType={props.checkType}
         tabs={props.tabs}
+        selectCustomList={selectCustomList}
       />
     </PopupBottomCustom>
+    <WishlistSelectionPopup
+      popupBottom={false}
+      updateWhenOpen 
+      showAmount
+      changeSelectedList={(list)=>{addItemToCustomListFunction(list);}} 
+      showDelete={false} 
+      showAdd={false} 
+      ref={customListsPopupRef} 
+      addCustomList={()=>{}}
+    />
+    <WishlistSelectionPopup
+      popupBottom={true}
+      onClose={(checkListKeyString)=>{
+        if(checkListKeyString && checkListKeyString!=null && checkListKeyString!=undefined && props.currentCustomList!=="" && props.currentCustomList!==undefined)
+          !updateAmountChildFunction(getCustomListsAmount(checkListKeyString, props.currentCustomList));
+      }}
+      updateWhenOpen 
+      showAmount
+      changeSelectedList={(list)=>{addItemToCustomListFunction(list);}} 
+      showDelete={false} 
+      showAdd={false} 
+      ref={customListsPopupBottomRef} 
+      addCustomList={()=>{}}
+    />
     </>
   );
   }
@@ -1169,6 +1244,7 @@ class BottomSheetRender extends Component{
               marginHorizontal={marginHorizontal}
             />
             <Variations 
+              selectCustomList={this.props.selectCustomList}
               updateRightCornerCheck={this.updateRightCornerCheck}
               ref={(variations) => this.variations = variations}
               item={this.state.item}

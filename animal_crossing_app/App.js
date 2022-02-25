@@ -172,6 +172,7 @@ class Main extends Component {
     global.profile = selectedProfile
     global.collectionList = (await getStorage("collectedString"+global.profile,"")).split("\n");
     global.collectionListIndexed = indexCollectionList(global.collectionList)
+    global.collectionListIndexedAmount = JSON.parse(await getStorage("collectionListIndexedAmount"+global.profile,"{}"));
     global.name = await getStorage("name"+global.profile,"");
     global.islandName = await getStorage("islandName"+global.profile,"");
     global.dreamAddress = await getStorage("dreamAddress"+global.profile,"");
@@ -181,6 +182,13 @@ class Main extends Component {
     global.selectedFruit = await getStorage("selectedFruit"+global.profile,"");
     global.customTimeOffset = await getStorage("customDateOffset"+global.profile,"0");
     global.ordinance = await getStorage("ordinance"+global.profile,"");
+    global.customLists = JSON.parse(await getStorage("customLists"+global.profile,"[]"));
+    let lastSelectedListPage = await getStorage("lastSelectedListPage"+global.profile,"");
+    if(lastSelectedListPage!=="" && customLists!==undefined && customLists.includes(lastSelectedListPage)){
+      global.lastSelectedListPage = lastSelectedListPage
+    } else {
+      global.lastSelectedListPage = ""
+    }
     // console.log(global.collectionList)
   }
 
