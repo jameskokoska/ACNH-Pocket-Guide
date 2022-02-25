@@ -5,6 +5,7 @@ const colors = {
     background: ["#f5f5f5","#1a1a1a"], //"#34454f" original
     backgroundLight: ["#ebebeb","#272727"],
     FAB: ["#49599a", "#455a64"],
+    FAB2: ["#67BB4DD8", "#5B7C57D7"],
     searchbarBG : ["#DFDFDF", "#A3A3A3"],
     searchbarIcon : ["#000000","#FFFFFF"],
     shadow : ["#ebebeb", "#313131"],

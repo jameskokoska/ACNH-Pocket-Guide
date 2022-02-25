@@ -402,7 +402,7 @@ export class PopupBottomCustom extends PureComponent {
         style={{
           borderTopLeftRadius: 20,
           borderTopRightRadius: 20,
-          backgroundColor: this.props.invisible===undefined?colors.white[global.darkMode]:"#0000000",
+          backgroundColor: this.props.invisible===undefined?(this.props.backgroundColor===undefined?colors.white[global.darkMode]:this.props.backgroundColor):"#0000000",
           padding:this.props.padding===undefined?16:this.props.padding,
           paddingTop: 12,
           marginTop: this.props.restrictSize===false ? 0 : overHeight ? offsetTop : 0

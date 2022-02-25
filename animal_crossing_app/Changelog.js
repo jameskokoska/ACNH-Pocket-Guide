@@ -3,6 +3,15 @@ export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added custom lists!
+-Go to the Wishlist page to add more lists
+-If you create one or more lists, long press any item and select the list you want to add it to
+-You can also track number of items using custom lists!
+-
+-Custom lists are now backed up to the cloud
+-Custom lists item amounts are now backed up to the cloud
+-Ordinances are now backed up to the cloud
+-
 -Added the ability to add custom icons in the ToDo list
 -Search crafting materials, villagers, reactions and tools as icons
 -
@@ -23,9 +32,10 @@ export const changelog = `
 -Play Hourly BGM or K.K. songs
 -Music will play in the background while you use the app as well!
 -
+-Past changes:
+-
 -Fixed events with no items associated with it
 -Updated translations
--
 -
 -Added View Craftable Items into fish/bugs/sea creatures popup (at bottom)
 -Popup height adjustments
@@ -64,8 +74,6 @@ export const changelog = `
 -
 -Tap / long press any image on item popup to view larger image
 -Fixed flimsy net and flimsy fishing rod durability
--
--Past changes:
 -
 -Backup now supports Turnip prices and ToDo list
 -Added [Battery saver / Increase performance] setting

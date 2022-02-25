@@ -15,7 +15,7 @@ export async function getStorage(storageKey, defaultValue){
 }
 
 export function addCustomList(name){
-  if(global.customLists.includes(name) || name===""){
+  if(name===undefined || global.customLists.includes(name) || name==="" || name.includes("}") || name.includes("{")){
     return false
   } else {
     global.customLists.push(name)
@@ -33,10 +33,10 @@ export function removeCustomList(name){
     AsyncStorage.setItem("customLists"+global.profile, JSON.stringify(global.customLists));
 
     let checkListKeyStart = "customLists::"+name
-    for(var i = 0; i<global.collectionList.length; i++){
-      if(global.collectionList[i].includes(checkListKeyStart) && !global.collectionList[i].includes("wishlist") && !global.collectionList[i].includes("museum")){
-        console.log("removed"+global.collectionList[i])
-        checkOff(global.collectionList[i], false, "", "", false)
+    const globalCollectionListCopy = [...global.collectionList]
+    for(var i = 0; i<globalCollectionListCopy.length; i++){
+      if(globalCollectionListCopy[i].includes(checkListKeyStart)){
+        checkOff(globalCollectionListCopy[i], true, "", "", false)
       }
     }
     return true
@@ -50,6 +50,24 @@ export function inCustomLists(checkListKeyString, name){
   } else {
     return false
   }
+}
+
+export function getCustomListsAmount(checkListKeyString, name){
+  if(global.collectionListIndexedAmount["customLists::"+name+checkListKeyString]!==undefined){
+    return global.collectionListIndexedAmount["customLists::"+name+checkListKeyString];
+  } else {
+    return 0
+  }
+}
+
+export function setCustomListsAmount(checkListKeyString, name, amount){
+  global.collectionListIndexedAmount["customLists::"+name+checkListKeyString] = amount;
+  AsyncStorage.setItem("collectionListIndexedAmount", JSON.stringify(global.collectionListIndexedAmount));
+}
+
+export function setLastSelectedListPage(name){
+  global.lastSelectedListPage = name
+  AsyncStorage.setItem("lastSelectedListPage", name);
 }
 
 export function inWishlist(checkListKeyString){
