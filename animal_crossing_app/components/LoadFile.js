@@ -138,8 +138,18 @@ export async function importAllData(text){
             let list = JSON.parse(importEntry)
             let currentList = JSON.parse(await getStorage("collectionListIndexedAmount"+currentProfile,"{}"));
             let output = {...list, ...currentList};
-            console.log(output)
-            await AsyncStorage.setItem(key[1]+currentProfile, JSON.stringify(output));
+            await AsyncStorage.setItem("collectionListIndexedAmount"+currentProfile, JSON.stringify(output));
+            if(currentProfile===global.profile){
+              global.collectionListIndexedAmount = output
+            }
+          }else if(key[1]==="CustomListsImages"){
+            let list = JSON.parse(importEntry)
+            let currentList = JSON.parse(await getStorage("customListsImagesIndexed"+currentProfile,"{}"));
+            let output = {...list, ...currentList};
+            await AsyncStorage.setItem("customListsImagesIndexed"+currentProfile, JSON.stringify(output));
+            if(currentProfile===global.profile){
+              global.customListsImagesIndexed = output
+            }
           }else if(key[1]==="ToDoList"){
             //check to ensure data format correct
             let list = JSON.parse(importEntry)
@@ -329,8 +339,9 @@ export async function getAllData(){
       var data19 = "\n{showVillagersTalkList}" + (await getStorage("showVillagersTalkList"+profile,"false"))
       var data20 = "\n{CustomLists}" + [...new Set(JSON.parse(await getStorage("customLists"+profile,"[]")))].join("\n{CustomLists}");
       var data21 = "\n{CustomListsAmount}" + (await getStorage("collectionListIndexedAmount"+profile,JSON.stringify({})))
-      var data22 = "\n{ordinance}" + (await getStorage("ordinance"+profile,""))
-      dataTotal = dataTotal + "{Profile}"+profile +"\n" + data + data3 + data4 + data5 + data6 + data7 + data8 + data9 + data10 + data11 + data12 + data13 + data14 + data15 + data16 + data17 + data18 + data19 + data20 + data21 + data22 + "\n" + "---END---" + "\n"
+      var data22 = "\n{CustomListsImages}" + (await getStorage("customListsImagesIndexed"+profile,JSON.stringify({})))
+      var data23 = "\n{ordinance}" + (await getStorage("ordinance"+profile,""))
+      dataTotal = dataTotal + "{Profile}"+profile +"\n" + data + data3 + data4 + data5 + data6 + data7 + data8 + data9 + data10 + data11 + data12 + data13 + data14 + data15 + data16 + data17 + data18 + data19 + data20 + data21 + data22 + data23 + "\n" + "---END---" + "\n"
     }
     let settingsOutput = ""
     for(let setting of settings){

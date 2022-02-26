@@ -189,6 +189,7 @@ class Main extends Component {
     } else {
       global.lastSelectedListPage = ""
     }
+    global.customListsImagesIndexed = JSON.parse(await getStorage("customListsImagesIndexed"+global.profile,"{}"));
     // console.log(global.collectionList)
   }
 

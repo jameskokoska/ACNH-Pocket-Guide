@@ -3,12 +3,15 @@ import {View, ScrollView, Dimensions, Text, LogBox, TouchableOpacity, Image, Tex
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import ListPage from '../components/ListPage';
 import colors from '../Colors.js';
-import {addCustomList, attemptToTranslate, capitalize, commas, getCustomListsAmount, getSettingsString, inCustomLists, inWishlist, removeCustomList, setCustomListsAmount, setLastSelectedListPage} from "../LoadJsonData"
+import {addCustomList, attemptToTranslate, capitalize, changeCustomListImage, commas, getCustomListImage, getCustomListsAmount, getSettingsString, inCustomLists, inWishlist, removeCustomList, setCustomListsAmount, setLastSelectedListPage} from "../LoadJsonData"
 import AllItemsPage from "./AllItemsPage"
 import { Paragraph, SubHeader } from '../components/Formattings';
 import Popup, { PopupBottomCustom, PopupInfoCustom } from '../components/Popup';
 import ButtonComponent from '../components/ButtonComponent';
 import TextFont from '../components/TextFont';
+import FastImage from '../components/FastImage';
+import { getPhoto } from '../components/GetPhoto';
+import { PopupChooseIcon, taskImages } from '../components/PopupAddTask';
 
 export default class Wishlist extends Component {
   constructor() {
@@ -214,13 +217,25 @@ class CustomLists extends Component{
 class PopupAddWishlist extends Component{
   constructor(){
     super();
-    this.listName=""
+    this.listName="";
+    this.image="leaf.png"
   }
   setPopupVisible = () => {
     this.popup?.setPopupVisible(true)
   }
+  setCustomImage = (image) => {
+    this.image=image
+  }
   render(){
     var buttons = <>
+      <ButtonComponent
+        text={"Select Icon"}
+        color={colors.okButton3[global.darkMode]}
+        vibrate={8}
+        onPress={() => {
+          this.popupChooseIcon?.setPopupVisible(false);
+        }}
+      /> 
       <View style={{flexDirection:"row", justifyContent:"center"}}>
         <ButtonComponent
           text={"Cancel"}
@@ -236,12 +251,15 @@ class PopupAddWishlist extends Component{
           vibrate={15}
           onPress={() => {
             this.props.addCustomList(this.listName)
+            changeCustomListImage(this.listName, this.image)
             this.popup?.setPopupVisible(false);
           }}
         /> 
       </View>
     </>
     var header = <>
+      <PopupChooseIcon moreImages={taskImages} setImage={(image)=>{this.setCustomImage(image)}} ref={(popupChooseIcon) => this.popupChooseIcon = popupChooseIcon}/>
+
       <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{"New List"}</TextFont>
       <Paragraph styled>This name cannot be changed.</Paragraph>
       <View style={{height:10}}/>
@@ -265,7 +283,11 @@ class PopupAddWishlist extends Component{
 class WishlistBox extends Component{
   constructor(props){
     super(props)
-    this.state={selected:this.props.selected, amount:getCustomListsAmount(this.props.checkListKeyString, this.props.id)}
+    this.state={image:getCustomListImage(this.props.id), selected:this.props.selected, amount:getCustomListsAmount(this.props.checkListKeyString, this.props.id)}
+  }
+  setCustomImage = (image) => {
+    this.setState({image:image})
+    changeCustomListImage(this.props.id, image)
   }
   componentDidUpdate(prevProps){
     if(prevProps.selected!==this.props.selected || prevProps.checkListKeyString!==this.props.checkListKeyString){
@@ -276,7 +298,30 @@ class WishlistBox extends Component{
     }
   }
   render(){
+    let imageComponent = <View/>
+    if(this.props.id===""){
+      imageComponent = <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, marginVertical:16,width:25, height:25, marginHorizontal:6, resizeMode:"contain", marginRight:8}}/>
+    } else if(this.state.image==="" || this.state.image===undefined){
+      imageComponent = <Image
+        style={{width: 30,height: 30, resizeMode:'contain', marginVertical:14, marginRight:10,}}
+        source={getPhoto("leaf.png")}
+      />
+    }else if(this.state.image.constructor === String && this.state.image.startsWith("http")){
+      imageComponent = <FastImage
+        style={{width: 45,height: 45,resizeMode:'contain',marginRight:1, marginLeft:-5, marginVertical:8,}}
+        source={{uri:this.state.image}}
+        cacheKey={this.state.image}
+      />
+    }else if (this.state.image){
+      imageComponent = <Image
+        style={{width: 30,height: 30,resizeMode:'contain', marginVertical:14, marginRight:10}}
+        source={getPhoto(this.state.image)}
+      />
+    }
+
     return <>
+      <PopupChooseIcon moreImages={taskImages} setImage={(image)=>{this.setCustomImage(image)}} ref={(popupChooseIcon) => this.popupChooseIcon = popupChooseIcon}/>
+
       <TouchableNativeFeedback
         background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode], false)}
         onPress={()=>{
@@ -289,8 +334,17 @@ class WishlistBox extends Component{
           getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
         }}
       >
-        <View style={{flexDirection:"row", alignItems:"center", justifyContent:"space-between",backgroundColor: this.state.selected ? colors.lightDarkAccentHeavy[global.darkMode] : colors.lightDarkAccent[global.darkMode], paddingVertical: this.props.showAmount===true?0:15, paddingRight: 15, marginHorizontal: 10, marginVertical: 4,  borderRadius: 10}}>
-          <SubHeader style={{flex: 1, flexWrap: 'wrap', marginVertical:this.props.showAmount?15:0}}>{this.props.text}</SubHeader>
+        <View style={{flexDirection:"row", alignItems:"center", justifyContent:"space-between",backgroundColor: this.state.selected ? colors.lightDarkAccentHeavy[global.darkMode] : colors.lightDarkAccent[global.darkMode],paddingRight: 15, marginHorizontal: 10, marginVertical: 4,  borderRadius: 10}}>
+          {this.props.showDelete?
+          <TouchableOpacity onPress={()=>{this.props.id!==""?this.popupChooseIcon?.setPopupVisible(true):""}}>
+            <View style={{marginHorizontal:10, paddingLeft:5,marginRight:5}}>
+              {imageComponent}
+            </View>
+          </TouchableOpacity>
+          :<View style={{marginHorizontal:10, paddingLeft:5,marginRight:5}}>
+            {imageComponent}
+          </View>}
+          <SubHeader margin={false} style={{flex: 1, flexWrap: 'wrap', marginVertical:15, marginRight:10}}>{this.props.text}</SubHeader>
           <View style={{flexDirection:"row"}}>
             {this.props.showDelete?<>
               <TouchableOpacity style={{padding:3}} 
@@ -338,7 +392,6 @@ class WishlistBox extends Component{
               </TouchableOpacity>
             </View> : <View/>
             }
-            {this.props.id===""?<Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:20, height:20, resizeMode:"contain", marginRight:3}}/>:<></>}
           </View>
         </View>
       </TouchableNativeFeedback>

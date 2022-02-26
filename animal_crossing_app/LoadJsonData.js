@@ -14,6 +14,19 @@ export async function getStorage(storageKey, defaultValue){
   return valueReturned;
 }
 
+export function changeCustomListImage(name,image){
+  global.customListsImagesIndexed[name]=image
+  AsyncStorage.setItem("customListsImagesIndexed"+global.profile, JSON.stringify(global.customListsImagesIndexed));
+}
+
+export function getCustomListImage(name){
+  if(global.customListsImagesIndexed[name]){
+    return global.customListsImagesIndexed[name]
+  } else {
+    return "leaf.png"
+  }
+}
+
 export function addCustomList(name){
   if(name===undefined || global.customLists.includes(name) || name==="" || name.includes("}") || name.includes("{")){
     return false

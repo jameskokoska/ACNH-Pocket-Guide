@@ -15,10 +15,10 @@ import {
 import TextFont from "./TextFont";
 import ButtonComponent from "./ButtonComponent";
 import colors from "../Colors";
-import {getPhoto, getMaterialImage, getAllMaterialImages} from "./GetPhoto"
+import {getPhoto, getMaterialImage, getAllMaterialImages, convertImagesToMaterialImageFormat} from "./GetPhoto"
 import {PopupInfoCustom} from "./Popup"
 import ToggleSwitch from 'toggle-switch-react-native'
-import {getSettingsString,attemptToTranslate} from "../LoadJsonData"
+import {getSettingsString,attemptToTranslate, changeCustomListImage} from "../LoadJsonData"
 import FastImage from "./FastImage"
 import {SelectionImage} from "./Selections"
 
@@ -281,15 +281,16 @@ class PopupAddTask extends Component {
 }
 export default PopupAddTask;
 
-class PopupChooseIcon extends Component{
+export class PopupChooseIcon extends Component{
   constructor(props) {
     super(props);
+    let moreImages = convertImagesToMaterialImageFormat(this.props.moreImages!==undefined?this.props.moreImages:[])
+    this.totalList = [...moreImages,...getAllMaterialImages(global.dataLoadedMaterials, "Inventory Image"), ...getAllMaterialImages(global.dataLoadedTools, "Image"), ...getAllMaterialImages(global.dataLoadedReactions, "Image"), ...getAllMaterialImages(global.dataLoadedVillagers, "Icon Image")];
     this.state = {
       images:[],
-      amountToShow: 15,
+      amountToShow: moreImages.length+15,
       selectedImage: "leaf.png"
     };
-    this.totalList = [...getAllMaterialImages(global.dataLoadedMaterials, "Inventory Image"), ...getAllMaterialImages(global.dataLoadedTools, "Image"), ...getAllMaterialImages(global.dataLoadedReactions, "Image"), ...getAllMaterialImages(global.dataLoadedVillagers, "Icon Image")];
   }
 
   componentDidMount(){

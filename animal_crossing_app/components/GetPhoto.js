@@ -674,14 +674,27 @@ export function getPhotoCornerSize(name){
   }
 }
 
+export function convertImagesToMaterialImageFormat(images){
+  let output = []
+  for(let item of images){
+    let currentItem = {}
+    currentItem["image"] = item
+    currentItem["name"] = item
+    output.push(currentItem)
+  }
+  return output
+}
+
 export function getAllMaterialImages(dataLoaded, imageProperty){
   let output = []
   for(let database of dataLoaded){
     for(let item of database){
-      let currentItem = {}
-      currentItem["image"] = item[imageProperty]
-      currentItem["name"] = item["NameLanguage"]
-      output.push(currentItem)
+      if(item[imageProperty]!==undefined && item[imageProperty]!=="NA"){
+        let currentItem = {}
+        currentItem["image"] = item[imageProperty]
+        currentItem["name"] = item["NameLanguage"]
+        output.push(currentItem)
+      }
     }
   }
   return output
