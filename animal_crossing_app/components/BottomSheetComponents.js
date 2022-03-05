@@ -53,6 +53,8 @@ export class LeftCornerImage extends Component {
       photoSource = "Underwater"
     }
     let photo = getPhotoCorner(photoSource)
+    console.log("PHOTOSOURCE")
+    console.log(photoSource)
     return <View style={{ zIndex:50, position: "absolute", top:-15, left:-15,margin: 30,}}>
       <TouchableOpacity
         activeOpacity={0.9}

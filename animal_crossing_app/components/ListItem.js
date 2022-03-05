@@ -10,7 +10,7 @@ import {
 import TextFont from './TextFont';
 import Check from './Check';
 import FastImage from './FastImage';
-import {checkOff, capitalize, commas, removeBrackets, inCustomLists, getCustomListsAmount} from "../LoadJsonData"
+import {checkOff, capitalize, commas, removeBrackets, inCustomLists, getCustomListsAmount, getCustomListsIcon} from "../LoadJsonData"
 import {getPhoto, getPhotoShadow} from "./GetPhoto"
 import {getMonthShort, swapDateCards} from "./DateFunctions"
 import colors from "../Colors"
@@ -40,14 +40,16 @@ class ListItem extends React.Component{
     if(this.props.currentCustomList!==""){
       amount = getCustomListsAmount(this.props.item.checkListKey, this.props.currentCustomList)
     }
+    const inWishlistVal = inWishlist(this.props.item.checkListKey)
     this.state = {
       collected: inChecklist(this.props.item.checkListKeyParent),
-      wishlist: inWishlist(this.props.item.checkListKey),
+      wishlist: inWishlistVal,
       museum: inMuseum(this.props.item.checkListKey, this.checkMuseumButton()),
       villager: inVillager(this.props.item.checkListKey, this.checkVillagerButton()),
       villagerPhoto: inVillagerPhoto(this.props.item.checkListKey, this.checkVillagerPhotoButton()),
       variationsPercent: variationsCheckedPercent(this.props.item, this.props.item.index),
-      amount:amount
+      amount:amount,
+      customListsIcon: inWishlistVal? "" : getCustomListsIcon(this.props.item.checkListKey),
     }
   }
 
@@ -91,7 +93,10 @@ class ListItem extends React.Component{
   }
   setWishlist(wishlist){
     if(this.mounted){
-      this.setState({wishlist: wishlist})
+      this.setState({
+        wishlist: wishlist,
+        customListsIcon: wishlist? "" : getCustomListsIcon(this.props.item.checkListKey),
+      })
     }
   }
 
@@ -272,7 +277,26 @@ class ListItem extends React.Component{
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
               <CheckVillagerPhoto showVillagerPhotoButton={this.showVillagerPhotoButton} setCollected={this.setCollected} collected={this.state.collected} setVillagerPhoto={this.setVillagerPhoto} item={this.props.item} villager={this.state.villagerPhoto} villagerPage={this.checkVillagerPhotoButton()}/>
-              {this.state.wishlist? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7 + (lowerWishlistIcon?2:0), top: 7 + (lowerWishlistIcon?33:0), zIndex:10,}}/> : <View/>}
+              { this.state.wishlist ?
+                  <Image 
+                    source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} 
+                    style={{left:7 + (lowerWishlistIcon?2:0), top: 7 + (lowerWishlistIcon?33:0), opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                  /> : 
+                (this.state.customListsIcon==="" || this.state.customListsIcon===undefined) ? 
+                  <View/> :
+                (this.state.customListsIcon.constructor === String && this.state.customListsIcon.startsWith("http")) ?
+                  <FastImage
+                    style={{left:7 + (lowerWishlistIcon?2:0), top: 7 + (lowerWishlistIcon?33:0), opacity:0.7, width:22, height:22, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                    source={{uri:this.state.customListsIcon}}
+                    cacheKey={this.state.customListsIcon}
+                  /> :
+                this.state.customListsIcon ?
+                  <Image
+                    style={{left:7 + (lowerWishlistIcon?2:0), top: 7 + (lowerWishlistIcon?33:0), opacity:0.7, width:20, height:20, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                    source={getPhoto(this.state.customListsIcon)}
+                  /> :
+                <View/>
+              }
               { ((!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto) && this.props.item[this.props.imageProperty[this.props.item.dataSet]]!==undefined)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().startsWith("http") ? 
                 <FastImage
                   style={styles.gridBoxImage}
@@ -336,7 +360,26 @@ class ListItem extends React.Component{
                   <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
                 </TouchableOpacity>
               </View>}
-            {this.state.wishlist ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
+              { this.state.wishlist ?
+                  <Image 
+                    source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} 
+                    style={{left:7 , top: 7, opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                  /> : 
+                (this.state.customListsIcon==="" || this.state.customListsIcon===undefined) ? 
+                  <View/> :
+                (this.state.customListsIcon.constructor === String && this.state.customListsIcon.startsWith("http")) ?
+                  <FastImage
+                    style={{left:7, top: 7, opacity:0.7, width:22, height:22, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                    source={{uri:this.state.customListsIcon}}
+                    cacheKey={this.state.customListsIcon}
+                  /> :
+                this.state.customListsIcon ?
+                  <Image
+                    style={{left:7, top: 7, opacity:0.7, width:20, height:20, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                    source={getPhoto(this.state.customListsIcon)}
+                  /> :
+                <View/>
+              }
             </View>
           </TouchableNativeFeedback>
         </View>
@@ -370,7 +413,26 @@ class ListItem extends React.Component{
               </View>
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
-              {this.state.wishlist ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
+              { this.state.wishlist ?
+                  <Image 
+                    source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} 
+                    style={{left:7, top: 7, opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                  /> : 
+                (this.state.customListsIcon==="" || this.state.customListsIcon===undefined) ? 
+                  <View/> :
+                (this.state.customListsIcon.constructor === String && this.state.customListsIcon.startsWith("http")) ?
+                  <FastImage
+                    style={{left:7, top: 7, opacity:0.7, width:22, height:22, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                    source={{uri:this.state.customListsIcon}}
+                    cacheKey={this.state.customListsIcon}
+                  /> :
+                this.state.customListsIcon ?
+                  <Image
+                    style={{left:7, top: 7, opacity:0.7, width:20, height:20, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                    source={getPhoto(this.state.customListsIcon)}
+                  /> :
+                <View/>
+              }
               { ((!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto) && this.props.item[this.props.imageProperty[this.props.item.dataSet]]!==undefined)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().startsWith("http") ? 
                 <FastImage
                   style={styles.gridBoxImageLarge}
@@ -430,7 +492,26 @@ class ListItem extends React.Component{
               </View>
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
-              {this.state.wishlist===true ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
+              { this.state.wishlist ?
+                  <Image 
+                    source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} 
+                    style={{left:7, top: 7, opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                  /> : 
+                (this.state.customListsIcon==="" || this.state.customListsIcon===undefined) ? 
+                  <View/> :
+                (this.state.customListsIcon.constructor === String && this.state.customListsIcon.startsWith("http")) ?
+                  <FastImage
+                    style={{left:7, top: 7, opacity:0.7, width:22, height:22, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                    source={{uri:this.state.customListsIcon}}
+                    cacheKey={this.state.customListsIcon}
+                  /> :
+                this.state.customListsIcon ?
+                  <Image
+                    style={{left:7, top: 7, opacity:0.7, width:20, height:20, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                    source={getPhoto(this.state.customListsIcon)}
+                  /> :
+                <View/>
+              }
               { ((!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto) && this.props.item[this.props.imageProperty[this.props.item.dataSet]]!==undefined)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().startsWith("http") ? 
                 <FastImage
                   style={styles.gridBoxImageLargeSmaller}
@@ -476,7 +557,26 @@ class ListItem extends React.Component{
             }}
           >
             <View style={[styles.row,{backgroundColor:boxColor}]}>
-              {this.state.wishlist ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', right:7, top: 7, zIndex:10,}}/> : <View/>}
+              { this.state.wishlist ?
+                  <Image 
+                    source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} 
+                    style={{right:7, top: 7, opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                  /> : 
+                (this.state.customListsIcon==="" || this.state.customListsIcon===undefined) ? 
+                  <View/> :
+                (this.state.customListsIcon.constructor === String && this.state.customListsIcon.startsWith("http")) ?
+                  <FastImage
+                    style={{right:7, top: 7, opacity:0.7, width:22, height:22, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                    source={{uri:this.state.customListsIcon}}
+                    cacheKey={this.state.customListsIcon}
+                  /> :
+                this.state.customListsIcon ?
+                  <Image
+                    style={{right:7, top: 7, opacity:0.7, width:20, height:20, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                    source={getPhoto(this.state.customListsIcon)}
+                  /> :
+                <View/>
+              }
               <View style={[styles.rowImageBackground,{backgroundColor:this.props.accentColor}]}>
                 { ((!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto) && this.props.item[this.props.imageProperty[this.props.item.dataSet]]!==undefined)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().startsWith("http") ? 
                   <FastImage

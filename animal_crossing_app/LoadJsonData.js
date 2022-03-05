@@ -91,6 +91,17 @@ export function inWishlist(checkListKeyString){
   }
 }
 
+export function getCustomListsIcon(checkListKey){
+  if(global.collectionListIndexed!==undefined && global.customListsImagesIndexed!==undefined){
+    for(let list of global.customLists){
+      if(inCustomLists(checkListKey, list)){
+        return global.customListsImagesIndexed[list]
+      }
+    }
+  }
+  return ""
+}
+
 export function inChecklist(checkListKeyString){
   if(global.collectionListIndexed[checkListKeyString]===true){
     return true;

@@ -12,6 +12,12 @@ export const changelog = `
 -Custom lists item amounts are now backed up to the cloud
 -Ordinances are now backed up to the cloud
 -
+-Added a music player to the Songs page!
+-
+-Fixed source images missing on some items
+-
+-Past changes:
+-
 -Fixed ToDo list item crash when selecting custom icon that does not exist
 -
 -Added the ability to add custom icons in the ToDo list
@@ -33,8 +39,6 @@ export const changelog = `
 -Added a music player to the Songs page!
 -Play Hourly BGM or K.K. songs
 -Music will play in the background while you use the app as well!
--
--Past changes:
 -
 -Fixed events with no items associated with it
 -Updated translations

@@ -887,7 +887,9 @@ function ListPage(props){
         checkOff(item.checkListKey, inWishlistState, "wishlist");
         setWishlistState(!inWishlistState)
       }else{
+        let inWishlistState = inWishlist(item.checkListKey)
         checkOff(item.checkListKey, inCustomLists(item.checkListKey, listName), "customLists::"+listName);
+        setWishlistState(inWishlistState)
       }
     }
     let selectedList = []
