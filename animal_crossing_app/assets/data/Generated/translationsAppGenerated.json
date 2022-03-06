@@ -791,7 +791,7 @@
       "French": "A faire",
       "French (US)": "A faire",
       "German": "Aufgaben",
-      "Spanish": "Tareas Pendientes",
+      "Spanish": "Que hacer",
       "Spanish (US)": "Que Hacer",
       "Russian": "Список дел",
       "Italian": "Da Fare",
@@ -875,7 +875,7 @@
       "French": "Petit format",
       "French (US)": "Petit format",
       "German": "Miniaufgabe",
-      "Spanish": "Tarea Menor",
+      "Spanish": "Tarea pequeña",
       "Spanish (US)": "Pequeña tarea",
       "Russian": "Маленькое задание",
       "Italian": "Compito piccolo",
@@ -5447,20 +5447,6 @@
       "Chinese": "游乐场",
       "Portuguese": "Parquinho"
     },
-    "toilet": {
-      "English": "Toilet",
-      "English (Europe)": "Toilet",
-      "French": "Toilettes",
-      "French (US)": "Toilettes",
-      "German": "WC",
-      "Spanish": "Inodoro",
-      "Spanish (US)": "Inodoro",
-      "Russian": "Туалет",
-      "Italian": "Bagno",
-      "Dutch": "Wc",
-      "Chinese": "厕所",
-      "Portuguese": "Toalete"
-    },
     "insect": {
       "English": "Insect",
       "English (Europe)": "Insect",
@@ -6278,7 +6264,7 @@
       "French": "Qu'est-ce que les cadeaux des villageois ?",
       "French (US)": "Qu'est-ce que les cadeaux des villageois ?",
       "German": "Was sind Nachbar-Geschenke?",
-      "Spanish": "¿Que son los regalos a vecinos?",
+      "Spanish": "¿Qué son los regalos de los aldeanos?",
       "Spanish (US)": "¿Que son los regalos de vecinos?",
       "Russian": "Какие подарки у жителей? ",
       "Italian": "Cosa sono i regali per gli abitanti?",
@@ -6907,7 +6893,7 @@
       "French": "Saisons de fabrication",
       "French (US)": "Saisons de fabrication",
       "German": "Saisonale Anleitungen",
-      "Spanish": "Temporada de bricolaje",
+      "Spanish": "Temporadas de Bricolaje",
       "Spanish (US)": "Objetos construíbles de temporada",
       "Russian": "Времена года для создания вещей",
       "Italian": "Stagioni per la costruzione",
@@ -6963,7 +6949,7 @@
       "French": "Saisons du Zodiaque",
       "French (US)": "Saisons du Zodiaque",
       "German": "Sternzeichen-Kalender",
-      "Spanish": "Temporadas zodiacales",
+      "Spanish": "Temporadas Zodiacales",
       "Spanish (US)": "Temporadas del Zodiaco",
       "Russian": "Сезоны Знаков Зодиака",
       "Italian": "Stagioni Zodiaco",
@@ -6977,7 +6963,7 @@
       "French": "Afficher le jour de fin des évènements",
       "French (US)": "Afficher le jour de fin des évènements",
       "German": "Letzten Tag von Events anzeigen",
-      "Spanish": "Mostrar el dia final de los eventos",
+      "Spanish": "Mostrar el último día de los eventos",
       "Spanish (US)": "Mostrar el dia final de los eventos",
       "Russian": "Показать Последние дни событий",
       "Italian": "Mostra giorno di fine degli eventi",
@@ -7173,7 +7159,7 @@
       "French": "Sélectionner la date",
       "French (US)": "Sélectionner la date",
       "German": "Datum auswählen",
-      "Spanish": "Selecciona una fecha",
+      "Spanish": "Seleccione una fecha",
       "Spanish (US)": "Selecciona una fecha",
       "Russian": "Выбрать дату",
       "Italian": "Seleziona data",
@@ -7187,7 +7173,7 @@
       "French": "Pas d'historique, en attente de la fin de la semaine",
       "French (US)": "Pas d'historique, en attente de la fin de la semaine",
       "German": "Noch kein Verlauf, bis zum Ende der Woche warten.",
-      "Spanish": "Historial no disponible hasta que termine la semana",
+      "Spanish": "Sin historial todavía, esperando que termine la semana.",
       "Spanish (US)": "Historial no disponible hasta que termine la semana",
       "Russian": "Истории пока нет, ждём конца недели.",
       "Italian": "Nessuna cronologia, la settimana non è ancora finita.",
@@ -7955,7 +7941,7 @@
       "French": "Pas à vendre",
       "French (US)": "Pas à vendre",
       "German": "Unverkäuflich",
-      "Spanish": "No a la venta",
+      "Spanish": "NFS",
       "Spanish (US)": "No a la venta",
       "Russian": "NFS",
       "Italian": "NFS",
@@ -8067,7 +8053,7 @@
       "French": "S'entend",
       "French (US)": "S'entend",
       "German": "Freundlich",
-      "Spanish": "Amigable",
+      "Spanish": "Llevarse bien",
       "Spanish (US)": "Amigable",
       "Russian": "Дружные",
       "Italian": "Vanno d'accordo",
@@ -8081,7 +8067,7 @@
       "French": "Neutre",
       "French (US)": "Neutre",
       "German": "Neutral",
-      "Spanish": "Neutro",
+      "Spanish": "Neutral",
       "Spanish (US)": "Neutro",
       "Russian": "Нейтральные",
       "Italian": "Neutrale",
@@ -8542,7 +8528,7 @@
       "French": "Sacs",
       "French (US)": "Sacs",
       "German": "Taschen",
-      "Spanish": "Bolsos",
+      "Spanish": "Bolsas",
       "Spanish (US)": "Bolsos",
       "Russian": "Сумки",
       "Italian": "Borse",
@@ -9200,7 +9186,7 @@
       "French": "Série Welcome Amiibo",
       "French (US)": "Série Welcome Amiibo",
       "German": "Welcome Amiibo Serie",
-      "Spanish": "Serie Welcome Amiibo",
+      "Spanish": "Serie Bienvenido Amiibo",
       "Spanish (US)": "Serie Welcome Amiibo",
       "Russian": "Добро пожаловать в серию Amiibo",
       "Italian": "Serie Welcome Amiibo",
@@ -9855,6 +9841,7 @@
       "English": "Label Themes",
       "English (Europe)": "Label Themes",
       "German": "Minna Themen",
+      "Spanish": "Etiquetar temas",
       "Russian": "Темы ярлыков",
       "Italian": "Stili di Beatrice",
       "Dutch": "Labelthema's",
@@ -9865,6 +9852,7 @@
       "English": "Everyday",
       "English (Europe)": "Everyday",
       "German": "Alltag",
+      "Spanish": "Cada dia",
       "Russian": "Ежедневный",
       "Italian": "Da tutti i giorni",
       "Dutch": "Elke dag",
@@ -9875,6 +9863,7 @@
       "English": "Comfy",
       "English (Europe)": "Comfy",
       "German": "Freizeit",
+      "Spanish": "Confortable",
       "Russian": "Удобный",
       "Italian": "Confortevole",
       "Dutch": "Comfortabel",
@@ -9885,6 +9874,7 @@
       "English": "Formal",
       "English (Europe)": "Formal",
       "German": "Formell",
+      "Spanish": "Formal",
       "Russian": "Формальный",
       "Italian": "Formale",
       "Dutch": "Formeel",
@@ -9895,6 +9885,7 @@
       "English": "Work",
       "English (Europe)": "Work",
       "German": "Arbeit",
+      "Spanish": "Trabajo",
       "Russian": "Рабочий",
       "Italian": "Da lavoro",
       "Dutch": "Werk",
@@ -9905,6 +9896,7 @@
       "English": "Theatrical",
       "English (Europe)": "Theatrical",
       "German": "Bühne",
+      "Spanish": "Teatral",
       "Russian": "Театральный",
       "Italian": "Da fiaba",
       "Dutch": "theatraal",
@@ -9915,6 +9907,7 @@
       "English": "Outdoorsy",
       "English (Europe)": "Outdoorsy",
       "German": "Outdoor",
+      "Spanish": "Exterior",
       "Russian": "Уличный",
       "Italian": "Da aria aperta",
       "Dutch": "buiten",
@@ -9925,6 +9918,7 @@
       "English": "Sporty",
       "English (Europe)": "Sporty",
       "German": "Sport",
+      "Spanish": "Deportivo",
       "Russian": "Спортивный",
       "Italian": "Sportivo",
       "Dutch": "Sportief",
@@ -9935,6 +9929,7 @@
       "English": "Vacation",
       "English (Europe)": "Vacation",
       "German": "Urlaub",
+      "Spanish": "Vacaciones",
       "Russian": "Отпуск",
       "Italian": "Da vacanza",
       "Dutch": "Vakantie",
@@ -9945,6 +9940,7 @@
       "English": "Goth",
       "English (Europe)": "Goth",
       "German": "Horror",
+      "Spanish": "Horror",
       "Russian": "Готический",
       "Italian": "Goth",
       "Dutch": "gotisch",
@@ -10095,6 +10091,7 @@
       "English": "Gyroids",
       "English (Europe)": "Gyroids",
       "German": "Gyroiden",
+      "Spanish": "Giroides",
       "Russian": "Гироиды",
       "Dutch": "Gyroids",
       "Chinese": "陶俑"
@@ -10651,7 +10648,7 @@
       "French": "Femelle",
       "French (US)": "Femelle",
       "German": "Weiblich",
-      "Spanish": "Mujer",
+      "Spanish": "Femenino",
       "Spanish (US)": "Mujer",
       "Russian": "Женщина",
       "Italian": "Femmina",
@@ -11043,7 +11040,7 @@
       "French": "Chargement de l'application...",
       "French (US)": "Chargement de l'application...",
       "German": "App wird geladen...",
-      "Spanish": "Cargando aplicación ...",
+      "Spanish": "Cargando aplicación...",
       "Spanish (US)": "Cargando aplicación ...",
       "Russian": "Загрузка приложения ...",
       "Italian": "Caricamento dell'app...",
@@ -12305,7 +12302,8 @@
     "poki": {
       "English": "poki",
       "English (Europe)": "poki",
-      "German": "Poki"
+      "German": "Poki",
+      "Spanish": "pokémon"
     },
     "sound type": {
       "English": "Sound Type",
@@ -12855,31 +12853,38 @@
     },
     "mario": {
       "English": "Mario",
-      "English (Europe)": "Mario"
+      "English (Europe)": "Mario",
+      "Spanish": "Mario"
     },
     "cinnamoroll": {
       "English": "Cinnamoroll",
-      "English (Europe)": "Cinnamoroll"
+      "English (Europe)": "Cinnamoroll",
+      "Spanish": "Cinnamoroll"
     },
     "hello kitty": {
       "English": "Hello Kitty",
-      "English (Europe)": "Hello Kitty"
+      "English (Europe)": "Hello Kitty",
+      "Spanish": "Hello Kitty"
     },
     "kerokerokeroppi": {
       "English": "Kerokerokeroppi",
-      "English (Europe)": "Kerokerokeroppi"
+      "English (Europe)": "Kerokerokeroppi",
+      "Spanish": "Kerokerokeroppi"
     },
     "kiki & lala": {
       "English": "Kiki & Lala",
-      "English (Europe)": "Kiki & Lala"
+      "English (Europe)": "Kiki & Lala",
+      "Spanish": "Kiki & Lala"
     },
     "my melody": {
       "English": "My Melody",
-      "English (Europe)": "My Melody"
+      "English (Europe)": "My Melody",
+      "Spanish": "My Melody"
     },
     "pompompurin": {
       "English": "Pompompurin",
-      "English (Europe)": "Pompompurin"
+      "English (Europe)": "Pompompurin",
+      "Spanish": "Pompompurin"
     },
     "office": {
       "English": "Office",
@@ -14339,23 +14344,28 @@
     },
     "fossilunknown": {
       "English": "FossilUnknown",
-      "English (Europe)": "FossilUnknown"
+      "English (Europe)": "FossilUnknown",
+      "Spanish": "FosilDesconocido"
     },
     "fieldweedlight": {
       "English": "FieldWeedLight",
-      "English (Europe)": "FieldWeedLight"
+      "English (Europe)": "FieldWeedLight",
+      "Spanish": "CampoMazaLuz"
     },
     "haniwapiece": {
       "English": "HaniwaPiece",
-      "English (Europe)": "HaniwaPiece"
+      "English (Europe)": "HaniwaPiece",
+      "Spanish": "HaniwaPiece"
     },
     "fieldvine": {
       "English": "FieldVine",
-      "English (Europe)": "FieldVine"
+      "English (Europe)": "FieldVine",
+      "Spanish": "CampoVid"
     },
     "na": {
       "English": "NA",
-      "English (Europe)": "NA"
+      "English (Europe)": "NA",
+      "Spanish": "N/A"
     },
     "rainbow feather": {
       "English": "Rainbow feather",
@@ -14363,7 +14373,7 @@
       "French": "Plume arc-en-ciel",
       "French (US)": "Plume arc-en-ciel",
       "German": "Regenbogenfeder",
-      "Spanish": "pluma arcoiris",
+      "Spanish": "Pluma arcoiris",
       "Spanish (US)": "pluma arcoiris",
       "Russian": "Радужное перо",
       "Italian": "Piuma arcobaleno",

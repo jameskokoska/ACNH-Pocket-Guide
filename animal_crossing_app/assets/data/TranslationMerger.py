@@ -51,6 +51,7 @@ for dataSheet in data:
         found = False
         #print(datum.get("Name"))
         previousName = datum.get("Name")
+        
         if(alreadyTranslated(datum.get("Source Notes"))==False and datum.get("Source Notes") not in sourceNotes):
             sourceNotes.append(datum.get("Source Notes"))
             if(debug):

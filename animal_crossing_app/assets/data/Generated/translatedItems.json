@@ -8559,6 +8559,22 @@
     "Spanish (US)": "rueda de juguete",
     "French (US)": "jeu en pneu"
   },
+  "toilet": {
+    "Chinese": "马桶",
+    "German": "Toilette",
+    "English (Europe)": "toilet",
+    "Spanish": "inodoro",
+    "French": "WC",
+    "Italian": "water",
+    "Dutch": "toiletpot",
+    "Russian": "унитаз",
+    "Japanese": "ようしきトイレ",
+    "Korean": "양변기",
+    "Chinese (Traditional)": "馬桶",
+    "English": "toilet",
+    "Spanish (US)": "inodoro",
+    "French (US)": "toilette"
+  },
   "toilet-cleaning set": {
     "Chinese": "厕所打扫用具组合",
     "German": "Toilettenset",
@@ -94415,22 +94431,6 @@
     "Spanish (US)": "mata de anémona morada",
     "French (US)": "pied d'anémones mauves"
   },
-  "rainbow feather": {
-    "Chinese": "彩虹羽毛",
-    "German": "Regenbogenfeder",
-    "English (Europe)": "rainbow feather",
-    "Spanish": "pluma arcoíris",
-    "French": "plume irisée",
-    "Italian": "piuma arcobaleno",
-    "Dutch": "regenboogveer",
-    "Russian": "радужное перо",
-    "Japanese": "にじいろのはね",
-    "Korean": "무지개 깃털",
-    "Chinese (Traditional)": "彩虹羽毛",
-    "English": "rainbow feather",
-    "Spanish (US)": "pluma arcoíris",
-    "French (US)": "plume irisée"
-  },
   "rare mushroom": {
     "Chinese": "珍贵蘑菇",
     "German": "Seltenpilz",
@@ -99166,25 +99166,6 @@
     "English": "maple leaves",
     "Spanish (US)": "hojas de arce",
     "French (US)": "feuilles d'érable"
-  },
-  "Sports": {
-    "Variant ID": "Ftr_01861_3",
-    "id": "Ftr_01861",
-    "Furniture Name": "stacked magazines",
-    "English": "Sports",
-    "English (Europe)": "Sports",
-    "German": "Sport",
-    "Spanish": "Deportes",
-    "Spanish (US)": "Deportes",
-    "French": "Sport",
-    "French (US)": "Sport",
-    "Italian": "Sport",
-    "Dutch": "Sport",
-    "Chinese": "体育",
-    "Chinese (Traditional)": "體育",
-    "Japanese": "スポーツ",
-    "Korean": "스포츠",
-    "Russian": "Спорт"
   },
   "Garden": {
     "Variant ID": "Ftr_12411_2",

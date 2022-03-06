@@ -3,6 +3,8 @@ export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Updated translations
+-
 -Added custom lists!
 -Go to the Wishlist page to add more lists
 -If you create one or more lists, long press any item and select the list you want to add it to
