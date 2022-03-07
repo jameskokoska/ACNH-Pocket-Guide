@@ -629,7 +629,7 @@ class TodoItem extends Component {
   }
   render(){
     var imageComp = <View/>
-    if(this.props.item.picture?.startsWith("http")){
+    if(this.props.item.picture && this.props.item.picture?.startsWith("http")){
       imageComp = <FastImage
         style={{height: 45,width: 45,resizeMode:'contain',}}
         source={{uri:this.props.item.picture}}
@@ -731,7 +731,7 @@ class TodoItemSmall extends Component {
   }
   render(){
     var imageComp = <View/>
-    if(this.props.item.picture.startsWith("http")){
+    if(this.props.item.picture && this.props.item.picture?.startsWith("http")){
       imageComp = <FastImage
         style={{height: 45,width: 45,resizeMode:'contain',}}
         source={{uri:this.props.item.picture}}
@@ -798,7 +798,7 @@ class TodoItemEdit extends Component {
   }
   render(){
     var imageComp = <View/>
-    if(this.props.item.picture.startsWith("http")){
+    if(this.props.item.picture && this.props.item.picture?.startsWith("http")){
       imageComp = <FastImage
         style={{height: 45,width: 45,resizeMode:'contain',}}
         source={{uri:this.props.item.picture}}

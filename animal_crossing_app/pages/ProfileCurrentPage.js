@@ -86,7 +86,7 @@ export class ProfileIcon extends Component{
     var profileIcon=<View/>
     if(this.state.customProfileIcon){
       profileIcon = <Image source={{uri:this.state.profileIcon}} style={{ width: 65, height: 65, borderRadius:100 }} />
-    }else if(this.state.profileIcon.startsWith("http")){
+    }else if(this.state.profileIcon && this.state.profileIcon?.startsWith("http")){
       profileIcon = <FastImage
         style={{height: 50,width: 50,resizeMode:'contain',}}
         source={{uri:this.state.profileIcon}}

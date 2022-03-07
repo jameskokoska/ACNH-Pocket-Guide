@@ -188,7 +188,7 @@ class CharacterItem extends Component {
       }
     }
     var imageComponent = <View/>
-    if(this.props.character.picture.constructor === String && this.props.character.picture.startsWith("http")){
+    if(this.props.character.picture.constructor === String && this.props.character.picture?.startsWith("http")){
       imageComponent = <FastImage
         source={{uri: this.props.character.picture}}
         cacheKey={this.props.character.picture}
