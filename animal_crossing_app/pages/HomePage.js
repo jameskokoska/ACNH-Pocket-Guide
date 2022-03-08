@@ -777,7 +777,6 @@ export class ConfigureHomePages extends Component {
     }
   }
   render(){
-    console.log("RENDEREDDD")
     const sectionNames = Object.keys(this.state.sections);
     return(<>
       <SubHeader>{this.props.header}</SubHeader>
