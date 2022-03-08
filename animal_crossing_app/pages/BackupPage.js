@@ -41,6 +41,13 @@ class BackupPage extends Component {
             <ExportClipboard/>
             <LoadClipboard/>
           </View>
+          <View style={{height: 60}}/>
+          <SubHeader>All Data (experimental)</SubHeader>
+          <HeaderNote>Recommended to use when switching phones.</HeaderNote>
+          <View style={{paddingHorizontal:40}}>
+            <ExportFile experimental={true}/>
+            <LoadFile experimental={true}/>
+          </View>
           <View style={{height: 100}}/>
           <MailLink/>
           <View style={{height: 100}}/>

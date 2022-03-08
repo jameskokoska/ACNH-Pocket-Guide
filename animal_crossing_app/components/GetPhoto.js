@@ -36,6 +36,9 @@ export function getSizeImage(size){
 }
 
 export function getPhoto(name, fallback=""){
+  if(name===undefined){
+    return require("../assets/icons/leaf.png");
+  }
   switch(name){
     case "series5(1).jpg":
       return require("../assets/icons/amiibo/Series5(1).jpg")
@@ -298,7 +301,13 @@ export function getPhoto(name, fallback=""){
     return require("../assets/icons/treasureMap.png");
   } else if(name.includes("shamrock")){
     return require("../assets/icons/shamrock.png");
-  } else if(name.includes("ophiuchus")){
+  } else if(name.includes("rainy")){
+    return require("../assets/icons/rainy.png");
+  } else if(name.includes("sunny")){
+    return require("../assets/icons/sunny.png");
+  } else if(name.includes("snowy")){
+    return require("../assets/icons/snowy.png");
+  }else if(name.includes("ophiuchus")){
     return require("../assets/icons/ophiuchus.png");
   } else if(name.includes("scorpio")){
     return require("../assets/icons/scorpio.png");
@@ -332,9 +341,9 @@ export function getPhoto(name, fallback=""){
     return require("../assets/icons/blossom.png");
   } else if(name.includes("mario")){
     return require("../assets/icons/mushroom.png");
-  } else if(name.includes("nookLinkCoin"))
+  } else if(name.includes("nookLinkCoin")) {
     return require("../assets/icons/nookLinkCoin.png")
-  else if(name.includes("acorns")){
+  } else if(name.includes("acorns")){
     return require("../assets/icons/fall.png");
   } else if(name.includes("snowflakes")){
     return require("../assets/icons/snowman.png");
@@ -374,6 +383,8 @@ export function getPhoto(name, fallback=""){
     return require("../assets/icons/bunny.png");
   } else if(name.includes("halloween")){
     return require("../assets/icons/pumpkin.png");
+  } else if(name.includes("pumpkin")){
+    return require("../assets/icons/pumpkin.png");
   } else if(name.includes("valentine")){
     return require("../assets/icons/heart.png");
   } else if(name.includes("countdown")){
@@ -388,6 +399,124 @@ export function getPhoto(name, fallback=""){
     return require("../assets/icons/museum.png");
   } else if(name.includes("ornaments")){
     return require("../assets/icons/ornaments.png");
+  } else if(name.includes("rainbow feathers")){
+    return require("../assets/icons/ornaments.png");
+  } else if(name.includes("sea") && !name.includes("seasonal") || name.includes("shoreline") || name.includes("beach")) {
+    return require("../assets/icons/oceanIcon.png")
+  } else if(name.includes("pier")) {
+    return require("../assets/icons/pier.png");
+  } else if(name.includes("underwater")) {
+    return require("../assets/icons/underwater.png");
+  } else if(name.includes("river")) {
+    return require("../assets/icons/riverIcon.png");
+  } else if(name.includes("pond") || name.includes("water")) {
+    return require("../assets/icons/pondIcon.png");
+  } else if(name.includes("flying")) {
+    return require("../assets/icons/butterflies.png")
+  } else if(name.includes("flowers") || name.includes("breeding") || name.includes("seed")) {
+    return require("../assets/icons/flowerIcon.png")
+  } else if(name.includes("rock")) {
+    return require("../assets/icons/rock.png")
+  } else if(name.includes("friendship")) {
+    return require("../assets/icons/heart.png")
+  } else if(name.includes("turnip")) {
+    return require("../assets/icons/turnip.png")
+  } else if(name.includes("stump")) {
+    return require("../assets/icons/stump.png")
+  } else if(name.includes("palm")) {
+    return require("../assets/icons/palmTree.png")
+  } else if(name.includes("tree")) {
+    return require("../assets/icons/forest.png");
+  } else if(name.includes("ground")) {
+    return require("../assets/icons/sprout.png")
+  } else if(name.includes("snowballs") || name.includes("jingle")) {
+    return require("../assets/icons/snow.png")
+  } else if(name.includes("snowboy")) {
+    return require("../assets/icons/snowman.png")
+  } else if(name.includes("villagers") || name.includes("rover")) {
+    return require("../assets/icons/cat.png")
+  } else if(name.includes("fossil") || name.includes("dig") || name.includes("plant")) {
+    return require("../assets/icons/digIcon.png")
+  } else if(name.includes("able")) {
+    return require("../assets/icons/able.png")
+  } else if(name.includes("pascal")) {
+    return require("../assets/icons/pascal.png")
+  } else if(name.includes("nook miles")) {
+    return require("../assets/icons/miles.png")
+  } else if(name.includes("nooklink")) {
+    return require("../assets/icons/nookLink.png")
+  } else if(name.includes("nook shopping")) {
+    return require("../assets/icons/nookShopping.png")
+  } else if(name.includes("airline")) {
+    return require("../assets/icons/airplane.png")
+  } else if(name.includes("nook")) {
+    return require("../assets/icons/nook.png")
+  } else if(name.includes("crafting")) {
+    return require("../assets/icons/crafting.png")
+  } else if(name.includes("cooking")) {
+    return require("../assets/icons/cooking.png")
+  } else if(name.includes("gulliver")) {
+    return require("../assets/icons/oceanIcon.png")
+  } else if(name.includes("blathers")) {
+    return require("../assets/icons/museum.png")
+  } else if(name.includes("brewster")) {
+    return require("../assets/icons/brewster.png")
+  } else if(name.includes("kicks")) {
+    return require("../assets/icons/kicks.png")
+  } else if(name.includes("daisy mae")) {
+    return require("../assets/icons/daisymae.png")
+  } else if(name.includes("cyrus")) {
+    return require("../assets/icons/cyrus.png")
+  } else if(name.includes("katrina")) {
+    return require("../assets/icons/katrina.png")
+  } else if(name.includes("redd")) {
+    return require("../assets/icons/redd.png")
+  } else if(name.includes("lottie") || name.includes("hhp office")) {
+    return require("../assets/icons/lottie.png")
+  } else if(name.includes("leif")) {
+    return require("../assets/icons/leif.png")
+  } else if(name.includes("niko")) {
+    return require("../assets/icons/niko.png")
+  } else if(name.includes("wardell")) {
+    return require("../assets/icons/wardell.png")
+  } else if(name.includes("harriet")) {
+    return require("../assets/icons/harriet.png")
+  } else if(name.includes("harvey")) {
+    return require("../assets/icons/harvey.png")
+  } else if(name.includes("café")) {
+    return require("../assets/icons/cafe.png")
+  } else if(name.includes("new year")) {
+    return require("../assets/icons/popper.png")
+  } else if(name.includes("saharah")) {
+    return require("../assets/icons/saharah.png")
+  } else if(name.includes("balloons")) {
+    return require("../assets/icons/balloon.png")
+  } else if(name.includes("stars")) {
+    return require("../assets/icons/sparkle.png")
+  } else if(name.includes("recipe")) {
+    return require("../assets/icons/crafting.png")
+  } else if(name.includes("diy")) {
+    return require("../assets/icons/crafting.png")
+  } else if(name.includes("jack")) {
+    return require("../assets/icons/pumpkin.png")
+  } else if(name.includes("zipper")) {
+    return require("../assets/icons/bunny.png")
+  } else if(name.includes("treasure trawler")) {
+    return require("../assets/icons/ship.png")
+  } else if(name.includes("c.j.")) {
+    return require("../assets/icons/cj.png")
+  } else if(name.includes("flick")) {
+    return require("../assets/icons/flick.png")
+  } else if(name.includes("fish") || name.includes("catching")) {
+    return require("../assets/icons/fish.png")
+  } else if(name.includes("net")) {
+    return require("../assets/icons/airIcon.png")
+  } else if(name.includes("female")) {
+    return require("../assets/icons/female.png")
+  } else if(name.includes("male")) {
+    return require("../assets/icons/male.png")
+  } else if(name.includes("recycle")) {
+    return require("../assets/icons/recycle.png")
   }
   if(fallback.includes("season")){
     return require("../assets/icons/season.png");
@@ -401,7 +530,7 @@ export function getPhotoCorner(name){
   if(name===undefined){
     return <View/>;
   } else {
-    name = name.toLowerCase();
+    name = name.toString().toLowerCase();
   }
   if(name.includes("sea") && !name.includes("seasonal") || name.includes("shoreline") || name.includes("beach"))
     return <Image source={require("../assets/icons/oceanIcon.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>
@@ -428,7 +557,7 @@ export function getPhotoCorner(name){
   else if(name.includes("palm"))
     return <Image source={require("../assets/icons/palmTree.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
   else if(name.includes("tree"))
-    return <Image source={require("../assets/icons/forest.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/forest.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>;
   else if(name.includes("ground"))
     return <Image source={require("../assets/icons/sprout.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
   else if(name.includes("snowballs") || name.includes("jingle"))
@@ -510,9 +639,9 @@ export function getPhotoCorner(name){
   else if(name.includes("treasure trawler"))
     return <Image source={require("../assets/icons/ship.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>
   else if(name.includes("c.j."))
-    return <Image source={require("../assets/icons/cj.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
+    return <Image source={require("../assets/icons/cj.png")} style={{height: 44, width: 44, resizeMode:'contain'}}/>
   else if(name.includes("flick"))
-    return <Image source={require("../assets/icons/flick.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
+    return <Image source={require("../assets/icons/flick.png")} style={{height: 44, width: 44, resizeMode:'contain'}}/>
   else if(name.includes("fish") || name.includes("catching"))
     return <Image source={require("../assets/icons/fish.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
   else if(name.includes("net"))
@@ -545,6 +674,32 @@ export function getPhotoCornerSize(name){
   }
 }
 
+export function convertImagesToMaterialImageFormat(images){
+  let output = []
+  for(let item of images){
+    let currentItem = {}
+    currentItem["image"] = item
+    currentItem["name"] = item
+    output.push(currentItem)
+  }
+  return output
+}
+
+export function getAllMaterialImages(dataLoaded, imageProperty){
+  let output = []
+  for(let database of dataLoaded){
+    for(let item of database){
+      if(item[imageProperty]!==undefined && item[imageProperty]!=="NA"){
+        let currentItem = {}
+        currentItem["image"] = item[imageProperty]
+        currentItem["name"] = item["NameLanguage"]
+        output.push(currentItem)
+      }
+    }
+  }
+  return output
+}
+
 export function getMaterialImage(material, reduceComplexity=false, flowerSingle=false){
   var materialStripped = material;
   if(flowerSingle){
@@ -559,8 +714,8 @@ export function getMaterialImage(material, reduceComplexity=false, flowerSingle=
   }
   var data = require("../assets/data/DataCreated/Other.json");
   if(reduceComplexity){
-    materialStripped = materialStripped.replace("-","").toLowerCase();
-    materialStripped = materialStripped.replace(" ","");
+    materialStripped = materialStripped.toString().replace("-","").toLowerCase();
+    materialStripped = materialStripped.toString().replace(" ","");
     for(var index = 0; index < data.length; index++){
       var dataStripped = data[index]["Name"];
       dataStripped = dataStripped.replace("-","");
@@ -595,7 +750,7 @@ function checkMoreMaterials(material){
 }
 
 export function getPaintingPhotoFake(name){
-  console.log(name)
+  // console.log(name)
   var data = require("../assets/data/DataCreated/Artwork.json");
   for(var index = 0; index < data.length; index++){
     if(data[index]["Name"]===name && data[index]["Genuine"]==="No"){
@@ -620,6 +775,12 @@ export function getPaintingPhotoFake(name){
 
 export function getFishPhoto(name, defaultImg){
   var data = require("../assets/data/DataCreated/Fish.json");
+  for(var index = 0; index < data.length; index++){
+    if(data[index]["Name"]===name){
+      return data[index]["Icon Image"]
+    }
+  }
+  data = require("../assets/data/DataCreated/Sea Creatures.json");
   for(var index = 0; index < data.length; index++){
     if(data[index]["Name"]===name){
       return data[index]["Icon Image"]

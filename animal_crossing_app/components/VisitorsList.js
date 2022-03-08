@@ -39,12 +39,19 @@ export default class VisitorList extends Component {
   }
 
   componentDidMount(){
-    this.loadList();
+    this.mounted=true
+    setTimeout(()=>{this.loadList();},0)
   }
 
   loadList = async() => {
     var storageData = JSON.parse(await getStorage("VisitorsList"+global.profile,JSON.stringify({})));
-    this.setState({data:storageData});
+    if(this.mounted){
+      this.setState({data:storageData});
+    }
+  }
+
+  componentWillUnmount(){
+    this.mounted=false
   }
 
   saveList = async(data) => {
@@ -181,17 +188,24 @@ class CharacterItem extends Component {
       }
     }
     var imageComponent = <View/>
-    if(this.props.character.picture.constructor === String && this.props.character.picture.startsWith("http")){
+    if(this.props.character.picture.constructor === String && this.props.character.picture?.startsWith("http")){
       imageComponent = <FastImage
         source={{uri: this.props.character.picture}}
         cacheKey={this.props.character.picture}
         style={styles.rowImage}
       />
     }else{
-      imageComponent = <Image
-        style={styles.rowImage}
-        source={this.props.character.picture}
-      />
+      if(this.props.character?.name!==undefined && (this.props.character.name==="C.J." || this.props.character.name==="Flick")){
+        imageComponent = <Image
+          style={[styles.rowImage,{width:40, height:40}]}
+          source={this.props.character.picture}
+        />
+      }else{
+        imageComponent = <Image
+          style={styles.rowImage}
+          source={this.props.character.picture}
+        />
+      }
     }
     var dayPassBack;
     if(dayDisplay===""){

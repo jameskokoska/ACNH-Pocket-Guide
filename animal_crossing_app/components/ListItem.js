@@ -10,13 +10,15 @@ import {
 import TextFont from './TextFont';
 import Check from './Check';
 import FastImage from './FastImage';
-import {checkOff, capitalize, commas, removeBrackets} from "../LoadJsonData"
+import {checkOff, capitalize, commas, removeBrackets, inCustomLists, getCustomListsAmount, getCustomListsIcon} from "../LoadJsonData"
 import {getPhoto, getPhotoShadow} from "./GetPhoto"
 import {getMonthShort, swapDateCards} from "./DateFunctions"
 import colors from "../Colors"
 import {getCurrentDateObject, parseActiveTime} from "./DateFunctions"
 import {inMuseum, inVillager, inVillagerPhoto, inWishlist, inChecklist,getSettingsString, variationsCheckedPercent} from "../LoadJsonData"
 import FadeInOut from "../components/FadeInOut";
+import { SubHeader } from './Formattings';
+import { getHourlySongTitle, MusicButtonComponent } from '../pages/SongsPage';
 
 const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 const villagerCategories = ["Villagers"]
@@ -34,13 +36,20 @@ class ListItem extends React.Component{
     this.showMuseumButton = true
     this.showVillagerButton = true
     this.showVillagerPhotoButton = true
+    let amount = 0
+    if(this.props.currentCustomList!==""){
+      amount = getCustomListsAmount(this.props.item.checkListKey, this.props.currentCustomList)
+    }
+    const inWishlistVal = inWishlist(this.props.item.checkListKey)
     this.state = {
-      collected: inChecklist(this.props.item.checkListKey),
-      wishlist: inWishlist(this.props.item.checkListKey),
+      collected: inChecklist(this.props.item.checkListKeyParent),
+      wishlist: inWishlistVal,
       museum: inMuseum(this.props.item.checkListKey, this.checkMuseumButton()),
       villager: inVillager(this.props.item.checkListKey, this.checkVillagerButton()),
       villagerPhoto: inVillagerPhoto(this.props.item.checkListKey, this.checkVillagerPhotoButton()),
-      variationsPercent: variationsCheckedPercent(this.props.item, this.props.item.index)
+      variationsPercent: variationsCheckedPercent(this.props.item, this.props.item.index),
+      amount:amount,
+      customListsIcon: inWishlistVal? "" : getCustomListsIcon(this.props.item.checkListKey),
     }
   }
 
@@ -84,7 +93,16 @@ class ListItem extends React.Component{
   }
   setWishlist(wishlist){
     if(this.mounted){
-      this.setState({wishlist: wishlist})
+      this.setState({
+        wishlist: wishlist,
+        customListsIcon: wishlist? "" : getCustomListsIcon(this.props.item.checkListKey),
+      })
+    }
+  }
+
+  setAmount(amount){
+    if(this.mounted && this.props.currentCustomList!==""){
+      this.setState({amount:amount})
     }
   }
 
@@ -190,7 +208,7 @@ class ListItem extends React.Component{
     }
 
     var label = this.props.item[this.props.textProperty[this.props.item.dataSet]]
-    let imageSrc = this.props.item[this.props.imageProperty[this.props.item.dataSet]];
+    // let imageSrc = this.props.item[this.props.imageProperty[this.props.item.dataSet]];
 
     if(this.props.gridType==="smallGrid"){
       var textProperty2Component = <View/>;
@@ -218,13 +236,20 @@ class ListItem extends React.Component{
         <View style={styles.gridWrapper}>
           
           <TouchableNativeFeedback onLongPress={() => {
-            checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
-            this.setWishlist(this.state.wishlist===true ? false:true);
+            if(this.props.currentCustomList!=="" && this.props.currentCustomList!==undefined)
+              this.props.setUpdateAmountChildFunction((amount)=>{this.setAmount(amount)})
+
+            if(global.customLists.length > 0){
+              this.props.selectCustomList(this.props.item, this.setWishlist)
+            }else{
+              checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
+              this.setWishlist(this.state.wishlist===true ? false:true);
+            }
           }}
             background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
             onPress={()=>{
               if(disablePopup){
-                checkOff(this.props.item.checkListKey, this.state.collected); 
+                checkOff(this.props.item.checkListKeyParent, this.state.collected); 
                 this.setCollected(this.state.collected===true ? false:true);
               } else {
                 this.props.openBottomSheet(this.setCollected, this.setWishlist);
@@ -234,10 +259,17 @@ class ListItem extends React.Component{
             <View style={[styles.gridBox, {backgroundColor:boxColor}]}>
               {missingVariationsIndicator}
               <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -18, top: -18, zIndex:10}}>
-                <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKey, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
+                <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKeyParent, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
                   <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
                 </TouchableOpacity>
               </View>
+              {this.props.currentCustomList!=="" && this.props.currentCustomList!==undefined && this.state.amount>1 ? 
+                <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: 5, bottom: 5, zIndex:10}}>
+                  <TextFont translate={false} numberOfLines={2} bold={true} style={{textAlign:'center', color:this.props.labelColor, fontSize:14}}>{commas(this.state.amount)+"x"}</TextFont>
+                </View>
+                :
+                <View/>
+              }
               {(this.props.textProperty2!==undefined && this.props.textProperty2[this.props.item.dataSet]!=="" && this.props.textProperty2[this.props.item.dataSet]==="(DIY)")?<View style={{zIndex:1, position:"absolute", left: -8, top: -6, padding:15, opacity: 0.5, }}>
                 <Image style={{resizeMode:'contain',width:25, height:25}} source={getPhoto(DIYImage)}/>
               </View>
@@ -245,16 +277,35 @@ class ListItem extends React.Component{
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
               <CheckVillagerPhoto showVillagerPhotoButton={this.showVillagerPhotoButton} setCollected={this.setCollected} collected={this.state.collected} setVillagerPhoto={this.setVillagerPhoto} item={this.props.item} villager={this.state.villagerPhoto} villagerPage={this.checkVillagerPhotoButton()}/>
-              {this.state.wishlist? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7 + (lowerWishlistIcon?2:0), top: 7 + (lowerWishlistIcon?33:0), zIndex:10,}}/> : <View/>}
-              { (!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].startsWith("http") ? 
+              { this.state.wishlist ?
+                  <Image 
+                    source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} 
+                    style={{left:7 + (lowerWishlistIcon?2:0), top: 7 + (lowerWishlistIcon?33:0), opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                  /> : 
+                (this.state.customListsIcon==="" || this.state.customListsIcon===undefined) ? 
+                  <View/> :
+                (this.state.customListsIcon.constructor === String && this.state.customListsIcon.startsWith("http")) ?
+                  <FastImage
+                    style={{left:7 + (lowerWishlistIcon?2:0), top: 7 + (lowerWishlistIcon?33:0), opacity:0.7, width:22, height:22, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                    source={{uri:this.state.customListsIcon}}
+                    cacheKey={this.state.customListsIcon}
+                  /> :
+                this.state.customListsIcon ?
+                  <Image
+                    style={{left:7 + (lowerWishlistIcon?2:0), top: 7 + (lowerWishlistIcon?33:0), opacity:0.7, width:20, height:20, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                    source={getPhoto(this.state.customListsIcon)}
+                  /> :
+                <View/>
+              }
+              { ((!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto) && this.props.item[this.props.imageProperty[this.props.item.dataSet]]!==undefined)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().startsWith("http") ? 
                 <FastImage
                   style={styles.gridBoxImage}
                   source={{
-                    uri: imageSrc,
+                    uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
                   }}
-                  cacheKey={imageSrc}
+                  cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
                 />:
-                <Image style={styles.gridBoxImage} source={getPhoto(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toLowerCase())}/>):
+                <Image style={styles.gridBoxImage} source={getPhoto(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().toLowerCase())}/>):
                 <View style={{height:7}}/>
               }
               <View style={styles.gridBoxText}>
@@ -265,17 +316,89 @@ class ListItem extends React.Component{
           </TouchableNativeFeedback>
         </View>
       );
+    } else if (this.props.gridType==="songGrid"){
+      return( 
+        <View style={{marginVertical: 2, alignItems: 'center', flex: 1,}}>
+          <TouchableNativeFeedback onLongPress={() => {  
+              if(this.props.item.special !== "hourly"){
+                //only can add if not hourly music
+                if(global.customLists.length > 0){
+                  this.props.selectCustomList(this.props.item, this.setWishlist)
+                }else{
+                  checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
+                  this.setWishlist(this.state.wishlist===true ? false:true);
+                }
+              }
+            }}
+            background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
+          >
+            <View style={{alignItems: "center", justifyContent:"center", paddingVertical: 15, paddingHorizontal: 5, width: "95%", borderRadius:10,elevation: 0,marginVertical: 2, backgroundColor: boxColor}}>
+              { ((!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto) && this.props.item[this.props.imageProperty[this.props.item.dataSet]]!==undefined)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().startsWith("http") ? 
+                <FastImage
+                  style={{marginTop:0, padding:0, height:140, width:140, borderRadius: 10, resizeMode:"contain"}}
+                  source={{uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]]}}
+                  cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
+                />:
+                <Image style={{marginTop:0, padding:0, height:140, width:140, resizeMode:"contain", transform:[{scale:0.7}]}} source={
+                  getPhoto((this.props.item.special==="hourly" && this.props.item.special!==undefined) ? this.props.item.weather : this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().toLowerCase())
+                }/>):
+                <View style={{height:7}}/>
+              }
+              <View style={{flexDirection:"column",marginBottom: -5, justifyContent:"center", alignItems:"center"}}>
+                <TextFont translate={false} bold={true} style={{textAlign:'center', color:this.props.labelColor, marginVertical:10}}>{this.props.item.special==="hourly" ? getHourlySongTitle(this.props.item): capitalize(label)}</TextFont>
+                <View style={{flexDirection:"row", justifyContent:"center", alignItems:"center", flexWrap:"wrap"}}>
+                {this.props.item.special==="hourly" ?  <MusicButtonComponent color={colors.okButton4[global.darkMode]} text={"Play"} onPress={()=>{this.props.customTapFunction(this.props.item,false)}}/> : <>
+                    <MusicButtonComponent color={colors.okButton3[global.darkMode]} text={"Aircheck"} onPress={()=>{this.props.customTapFunction(this.props.item,false)}}/>
+                    <MusicButtonComponent color={colors.okButton3[global.darkMode]} text={"Live"} onPress={()=>{this.props.customTapFunction(this.props.item,true)}}/>
+                  </>
+                }
+                </View>
+              </View>
+              {this.props.item.special==="hourly" ? <View/> : 
+              <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -18, top: -18, zIndex:10}}>
+                <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKeyParent, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
+                  <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
+                </TouchableOpacity>
+              </View>}
+              { this.state.wishlist ?
+                  <Image 
+                    source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} 
+                    style={{left:7 , top: 7, opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                  /> : 
+                (this.state.customListsIcon==="" || this.state.customListsIcon===undefined) ? 
+                  <View/> :
+                (this.state.customListsIcon.constructor === String && this.state.customListsIcon.startsWith("http")) ?
+                  <FastImage
+                    style={{left:7, top: 7, opacity:0.7, width:22, height:22, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                    source={{uri:this.state.customListsIcon}}
+                    cacheKey={this.state.customListsIcon}
+                  /> :
+                this.state.customListsIcon ?
+                  <Image
+                    style={{left:7, top: 7, opacity:0.7, width:20, height:20, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                    source={getPhoto(this.state.customListsIcon)}
+                  /> :
+                <View/>
+              }
+            </View>
+          </TouchableNativeFeedback>
+        </View>
+      )
     } else if (this.props.gridType==="largeGrid"){
       return( 
         <View style={styles.gridWrapper}>
           <TouchableNativeFeedback onLongPress={() => {  
-            checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
-            this.setWishlist(this.state.wishlist===true ? false:true);
+            if(global.customLists.length > 0){
+              this.props.selectCustomList(this.props.item, this.setWishlist)
+            }else{
+              checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
+              this.setWishlist(this.state.wishlist===true ? false:true);
+            }
           }}
           background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
           onPress={()=>{
               if(disablePopup){
-                checkOff(this.props.item.checkListKey, this.state.collected); 
+                checkOff(this.props.item.checkListKeyParent, this.state.collected); 
                 this.setCollected(this.state.collected===true ? false:true);
               } else {
                 this.props.openBottomSheet(this.setCollected, this.setWishlist);
@@ -284,22 +407,41 @@ class ListItem extends React.Component{
           >
             <View style={[styles.gridBoxLarge, {backgroundColor:boxColor}]}>
               <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -18, top: -18, zIndex:10}}>
-                <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKey, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
+                <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKeyParent, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
                   <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
                 </TouchableOpacity>
               </View>
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
-              {this.state.wishlist ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
-              { (!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].startsWith("http") ? 
+              { this.state.wishlist ?
+                  <Image 
+                    source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} 
+                    style={{left:7, top: 7, opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                  /> : 
+                (this.state.customListsIcon==="" || this.state.customListsIcon===undefined) ? 
+                  <View/> :
+                (this.state.customListsIcon.constructor === String && this.state.customListsIcon.startsWith("http")) ?
+                  <FastImage
+                    style={{left:7, top: 7, opacity:0.7, width:22, height:22, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                    source={{uri:this.state.customListsIcon}}
+                    cacheKey={this.state.customListsIcon}
+                  /> :
+                this.state.customListsIcon ?
+                  <Image
+                    style={{left:7, top: 7, opacity:0.7, width:20, height:20, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                    source={getPhoto(this.state.customListsIcon)}
+                  /> :
+                <View/>
+              }
+              { ((!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto) && this.props.item[this.props.imageProperty[this.props.item.dataSet]]!==undefined)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().startsWith("http") ? 
                 <FastImage
                   style={styles.gridBoxImageLarge}
                   source={{
-                    uri: imageSrc,
+                    uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
                   }}
-                  cacheKey={imageSrc}
+                  cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
                 />:
-                <Image style={styles.gridBoxImageLarge} source={getPhoto(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toLowerCase())}/>):
+                <Image style={styles.gridBoxImageLarge} source={getPhoto(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().toLowerCase())}/>):
                 <View style={{height:7}}/>
               }
               <View style={styles.gridBoxTextLarge}>
@@ -325,13 +467,17 @@ class ListItem extends React.Component{
       return( 
         <View style={styles.gridWrapper}>
           <TouchableNativeFeedback onLongPress={() => {  
-            checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
-            this.setWishlist(this.state.wishlist===true ? false:true);
+            if(global.customLists.length > 0){
+              this.props.selectCustomList(this.props.item, this.setWishlist)
+            }else{
+              checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
+              this.setWishlist(this.state.wishlist===true ? false:true);
+            }
           }}
           background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
           onPress={()=>{
               if(disablePopup){
-                checkOff(this.props.item.checkListKey, this.state.collected); 
+                checkOff(this.props.item.checkListKeyParent, this.state.collected); 
                 this.setCollected(this.state.collected===true ? false:true);
               } else {
                 this.props.openBottomSheet(this.setCollected, this.setWishlist);
@@ -340,20 +486,43 @@ class ListItem extends React.Component{
           >
             <View style={[styles.gridBoxLarge, {backgroundColor:boxColor}]}>
               <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -18, top: -18, zIndex:10}}>
-                <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKey, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
+                <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKeyParent, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
                   <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
                 </TouchableOpacity>
               </View>
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
-              {this.state.wishlist===true ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', left:7, top: 7, zIndex:10,}}/> : <View/>}
-              {(!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto)?<FastImage
-                style={styles.gridBoxImageLargeSmaller}
-                source={{
-                  uri: imageSrc,
-                }}
-                cacheKey={imageSrc}
-              />:<View style={{height:7}}/>}
+              { this.state.wishlist ?
+                  <Image 
+                    source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} 
+                    style={{left:7, top: 7, opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                  /> : 
+                (this.state.customListsIcon==="" || this.state.customListsIcon===undefined) ? 
+                  <View/> :
+                (this.state.customListsIcon.constructor === String && this.state.customListsIcon.startsWith("http")) ?
+                  <FastImage
+                    style={{left:7, top: 7, opacity:0.7, width:22, height:22, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                    source={{uri:this.state.customListsIcon}}
+                    cacheKey={this.state.customListsIcon}
+                  /> :
+                this.state.customListsIcon ?
+                  <Image
+                    style={{left:7, top: 7, opacity:0.7, width:20, height:20, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                    source={getPhoto(this.state.customListsIcon)}
+                  /> :
+                <View/>
+              }
+              { ((!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto) && this.props.item[this.props.imageProperty[this.props.item.dataSet]]!==undefined)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().startsWith("http") ? 
+                <FastImage
+                  style={styles.gridBoxImageLargeSmaller}
+                  source={{
+                    uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
+                  }}
+                  cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
+                />:
+                <Image style={styles.gridBoxImageLargeSmaller} source={getPhoto(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().toLowerCase())}/>):
+                <View style={{height:7}}/>
+              }
               <View style={styles.gridBoxTextLargeSmaller}>
                 <TextFont translate={false} bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{capitalize(label)}</TextFont>
                 {priceComponent}
@@ -370,13 +539,17 @@ class ListItem extends React.Component{
       return( 
         <View>
           <TouchableNativeFeedback onLongPress={() => {  
-            checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
-            this.setWishlist(this.state.wishlist===true ? false:true);
+            if(global.customLists.length > 0){
+              this.props.selectCustomList(this.props.item, this.setWishlist)
+            }else{
+              checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
+              this.setWishlist(this.state.wishlist===true ? false:true);
+            }
           }}
           background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
           onPress={()=>{
               if(disablePopup){
-                checkOff(this.props.item.checkListKey, this.state.collected); 
+                checkOff(this.props.item.checkListKeyParent, this.state.collected); 
                 this.setCollected(this.state.collected===true ? false:true);
               } else {
                 this.props.openBottomSheet(this.setCollected, this.setWishlist);
@@ -384,15 +557,38 @@ class ListItem extends React.Component{
             }}
           >
             <View style={[styles.row,{backgroundColor:boxColor}]}>
-              {this.state.wishlist ? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', right:7, top: 7, zIndex:10,}}/> : <View/>}
+              { this.state.wishlist ?
+                  <Image 
+                    source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} 
+                    style={{right:7, top: 7, opacity:0.7, width:17, height:17, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                  /> : 
+                (this.state.customListsIcon==="" || this.state.customListsIcon===undefined) ? 
+                  <View/> :
+                (this.state.customListsIcon.constructor === String && this.state.customListsIcon.startsWith("http")) ?
+                  <FastImage
+                    style={{right:7, top: 7, opacity:0.7, width:22, height:22, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                    source={{uri:this.state.customListsIcon}}
+                    cacheKey={this.state.customListsIcon}
+                  /> :
+                this.state.customListsIcon ?
+                  <Image
+                    style={{right:7, top: 7, opacity:0.7, width:20, height:20, resizeMode:"contain",position:'absolute', zIndex:10,}}
+                    source={getPhoto(this.state.customListsIcon)}
+                  /> :
+                <View/>
+              }
               <View style={[styles.rowImageBackground,{backgroundColor:this.props.accentColor}]}>
-                {(!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto)?<FastImage
-                  style={styles.rowImage}
-                  source={{
-                    uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
-                  }}
-                  cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
-                />:<View style={{height:7}}/>}
+                { ((!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto) && this.props.item[this.props.imageProperty[this.props.item.dataSet]]!==undefined)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().startsWith("http") ? 
+                  <FastImage
+                    style={styles.rowImage}
+                    source={{
+                      uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
+                    }}
+                    cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
+                  />:
+                  <Image style={styles.rowImage} source={getPhoto(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().toLowerCase())}/>):
+                  <View style={{height:7}}/>
+                }
               </View>
               <View style={styles.rowTextContainer}>
                 <View style={styles.rowTextTop}>
@@ -409,7 +605,7 @@ class ListItem extends React.Component{
               <TouchableOpacity style={{position:"absolute", right: -5, bottom: 0}} 
                 activeOpacity={0.6}
                 onPress={() => {  
-                checkOff(this.props.item.checkListKey, this.state.collected); 
+                checkOff(this.props.item.checkListKeyParent, this.state.collected); 
                 this.setCollected(this.state.collected===true ? false:true);
               }}>
                 <Check checkType={this.props.checkType} fadeOut={false} play={this.state.collected} width={90} height={90} disablePopup={disablePopup}/>
@@ -440,7 +636,7 @@ class CheckMuseum extends Component {
         this.props.setMuseum(this.props.museum===true ? false:true);
         //check off if donated to museum
         if(!this.props.collected && !this.props.museum && getSettingsString("settingsAutoCheckMuseum")==="true"){
-          checkOff(this.props.item.checkListKey, this.props.collected); 
+          checkOff(this.props.item.checkListKeyParent, this.props.collected); 
           this.props.setCollected(this.props.collected===true ? false:true);
         }
       }}>

@@ -28,7 +28,7 @@ class CatalogPage extends Component {
 
   import = async () =>{
     try{
-      this.popupWait.setPopupVisible(true);
+      this.popupWait?.setPopupVisible(true);
       var inputList = [];
       var inputType = "";
       if(this.linkInput!=="" || this.input==""){
@@ -51,7 +51,7 @@ class CatalogPage extends Component {
         success = false;
         for(var i = 0; i < global.dataLoadedAll.length; i++){
           for(var a = 0; a < global.dataLoadedAll[i].length; a++){
-            if(global.dataLoadedAll[i][a]["Name"]!==undefined && global.dataLoadedAll[i][a]["Name"].toLowerCase() === inputList[z].toLowerCase()){
+            if(global.dataLoadedAll[i][a]["Name"]!==undefined && global.dataLoadedAll[i][a]["Name"].toString().toLowerCase() === inputList[z].toString().toLowerCase()){
               success = true;
               this.totalSuccess++;
               if(inputType==="recipes" && global.dataLoadedAll[i][a]["checkListKey"].includes("recipesCheckList")){
@@ -72,7 +72,7 @@ class CatalogPage extends Component {
           }
         }
         if(!success){
-          console.log("Didn't find:" + inputList[z]);
+          console.log("When importing didn't find: " + inputList[z]);
           if(inputList[z]!==undefined)
             totalErrorItems.push(inputList[z])
           this.totalFail++;
@@ -82,7 +82,7 @@ class CatalogPage extends Component {
       global.collectionList = Array.from(new Set(collectionList));
       collectionListSave();
       global.collectionListIndexed = indexCollectionList(global.collectionList)
-      console.log(totalErrorItems)
+      console.log("Total error items: "+ totalErrorItems)
       this.setState({
         method: this.method,
         totalFail: this.totalFail,
@@ -116,7 +116,10 @@ class CatalogPage extends Component {
           <TextInput
             allowFontScaling={false}
             style={{borderRadius: 10, paddingVertical: 10, paddingHorizontal: 20, marginHorizontal: 20, fontSize: 18, backgroundColor:colors.white[global.darkMode], color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
-            onChangeText={(text) => {this.linkInput = text}}
+            onChangeText={(text) => {
+              this.linkInput = text.replace("https://","")
+              this.linkInput = "https://" + this.linkInput
+            }}
             placeholder={"https://nook.lol/abc123"}
             placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
             multiline={false}
@@ -135,7 +138,7 @@ class CatalogPage extends Component {
             multiline={true}
           />
           <View style={{height: 35}}/>
-          <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={async ()=>{await this.import(); this.popupWait.setPopupVisible(false); this.popup?.setPopupVisible(true);}} text={"Import"} />
+          <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={async ()=>{await this.import(); this.popupWait?.setPopupVisible(false); this.popup?.setPopupVisible(true);}} text={"Import"} />
           <View style={{height: 10}}/>
           <TextFont suffix={"\n"+attemptToTranslate("Please be patient.")} bold={false} style={{fontSize: 13, marginLeft: 30, marginRight: 30, textAlign:"center",color:colors.textBlack[global.darkMode]}}>{"May take a few seconds to complete."}</TextFont>
           <View style={{height: 50}}/>
@@ -152,6 +155,7 @@ class CatalogPage extends Component {
           button1Action={()=>{}}
           text={"Importing..."}
           textLower={"Please wait"}
+          loading
         />
      </View>
     )

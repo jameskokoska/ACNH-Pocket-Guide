@@ -6,8 +6,10 @@ import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"
 import ActiveTime from "../components/ActiveTime";
 import FastImage from '../components/FastImage';
-import {attemptToTranslate} from "../LoadJsonData"
+import {anythingCraftable, attemptToTranslate} from "../LoadJsonData"
 import {BlueText} from "../components/Formattings"
+import ButtonComponent from '../components/ButtonComponent';
+import * as RootNavigation from '../RootNavigation.js';
 
 //   200
 //     image: "Critterpedia Image",
@@ -27,6 +29,13 @@ class FishPopup extends Component {
         item2={this.props.item}
         textProperty2={["Sell"]}
         ending2={" " + attemptToTranslate("bells")}
+      />
+      <InfoLine
+        image={require("../assets/icons/cj.png")} 
+        item={this.props.item}
+        textProperty={["Sell"]}
+        ending={" " + attemptToTranslate("bells")}
+        special="C.J."
       />
       <InfoLine
         image={require("../assets/icons/hatching.png")} 
@@ -53,6 +62,14 @@ class FishPopup extends Component {
       <View style={{height:15}}/>
       <InfoDescription text={this.props.item["Description"]}/>
       <BlueText>Common creatures have higher spawn rates</BlueText>
+      {anythingCraftable(this.props.item["Name"])?<ButtonComponent
+        text={"View Craftable Items"}
+        color={colors.okButton[global.darkMode]}
+        vibrate={5}
+        onPress={() => {
+          // this.props.setPage(22, true, this.props.item)
+          RootNavigation.navigate('34', {propsPassed:this.props.item});
+      }}/>:<View/>}
     </View>
   }
 }

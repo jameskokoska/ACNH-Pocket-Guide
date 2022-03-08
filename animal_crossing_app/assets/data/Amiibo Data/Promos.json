@@ -9,7 +9,8 @@
     "birthday": "December 20th",
     "dice": "1",
     "handSign": "Scissors",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https://dodo.ac/np/images/thumb/0/0e/Goldie_AF_amiibo_card_NA.png/75px-Goldie_AF_amiibo_card_NA.png",
@@ -21,7 +22,8 @@
     "birthday": "December 27th",
     "dice": "2",
     "handSign": "Rock",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https://dodo.ac/np/images/thumb/6/6e/Stitches_AF_amiibo_card_NA.png/75px-Stitches_AF_amiibo_card_NA.png",
@@ -33,7 +35,8 @@
     "birthday": "February 10th",
     "dice": "6",
     "handSign": "Scissors",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https://dodo.ac/np/images/thumb/5/5e/Rosie_AF_amiibo_card_NA.png/75px-Rosie_AF_amiibo_card_NA.png",
@@ -45,7 +48,8 @@
     "birthday": "February 27th",
     "dice": "4",
     "handSign": "Paper",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   },
   {
     "image": "https://dodo.ac/np/images/thumb/7/74/K.K._Pikopuri_amiibo_card_JP.png/75px-K.K._Pikopuri_amiibo_card_JP.png",
@@ -57,6 +61,7 @@
     "birthday": "August 23rd",
     "dice": "2",
     "handSign": "Rock",
-    "Personality": "NA"
+    "Personality": "NA",
+    "Villager": "No"
   }
 ]

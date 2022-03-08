@@ -2,7 +2,7 @@ import React, {Component, useState, useRef, useEffect} from 'react';
 import {TouchableOpacity, View, Animated,StyleSheet,RefreshControl} from 'react-native';
 import Header, {HeaderLoading, HeaderActive} from './Header';
 import ListItem from './ListItem';
-import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters, isInteger, attemptToTranslate} from "../LoadJsonData"
+import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters, isInteger, attemptToTranslate, checkOff, inCustomLists, getCustomListsAmount} from "../LoadJsonData"
 import {Dimensions } from "react-native";
 import {Variations,Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from './BottomSheetComponents';
 import colors from "../Colors.js"
@@ -27,6 +27,8 @@ import {gameVersion, museumCategories} from "../Changelog"
 import GyroidPopup from '../popups/GyroidPopup';
 import FoodPopup from '../popups/FoodPopup';
 import LottieView from 'lottie-react-native';
+import { getHourlySongTitle } from '../pages/SongsPage';
+import { WishlistSelectionPopup } from '../pages/WishlistPage';
 
 //use tabs={false} if the page doesn't have  the tab bar
 
@@ -52,6 +54,7 @@ function ListPage(props){
   var selectedItem;
   var updateCheckChildFunction;
   var updateWishlistChildFunction;
+  var updateAmountChildFunction;
   let avoidSpoilers = getSettingsString("settingsHideImages")==="true"
   const renderItem = (({ item }) =>
     <ListItem
@@ -66,17 +69,18 @@ function ListPage(props){
       key={item.checkListKeyString}
       dataGlobalName={props.dataGlobalName}
       openBottomSheet={(updateCheckChild, updateWishlistChild)=>{
-        sheetRef.current.setPopupVisible(true); 
+        sheetRef.current.setPopupVisible(true, true); 
         if(props.activeCreatures && props.activeCreaturesPage===false){
           // console.log(props.scrollViewRef)
           props.scrollToEnd();
         }
         //pass in the check mark update function of that current element
-        bottomSheetRenderRef.current.update(item, updateCheckChild)
+        bottomSheetRenderRef?.current?.update(item, updateCheckChild)
         selectedItem = item;
         updateCheckChildFunction = updateCheckChild
         updateWishlistChildFunction = updateWishlistChild
       }}
+      setUpdateAmountChildFunction={(updateAmountChild)=>{updateAmountChildFunction = updateAmountChild; console.log(updateAmountChild)}}
       boxColor={props.boxColor}
       labelColor={props.labelColor}
       accentColor={props.accentColor}
@@ -88,6 +92,9 @@ function ListPage(props){
       checkType={props.checkType}
       leaveWarning={props.leaveWarning}
       title={props.title}
+      customTapFunction={props.customTapFunction}
+      selectCustomList={selectCustomList}
+      currentCustomList={props.currentCustomList}
     />
   )
   const ref = useRef(null);
@@ -137,12 +144,14 @@ function ListPage(props){
     "Old Resident",
     "Not Old Resident",
     "Do not have villager photo",
-    "Have villager photo"
+    "Have villager photo",
+    "Sort-Collected"
   ]
 
   const [searchFilters, setSearchFilters] = useState([]);
   function updateSearchFilters(searchFilters){
     setSearchFilters(searchFilters);
+    console.log("Search Filters: "+searchFilters)
   }
 
   const [loading, setLoading] = useState(false)
@@ -164,6 +173,13 @@ function ListPage(props){
       var previousVariation = "";
       var item;
       var dataLoaded2D = determineDataGlobal(props.dataGlobalName);
+      if(props.title==="Music"){
+        let otherMusic = require("../assets/data/extraSongs.json")
+        for(let song of otherMusic){
+          song["NameLanguage"] = "zzzzz" + " Hourly Music " + getHourlySongTitle(song)
+        }
+        dataLoaded2D = [dataLoaded2D[0], otherMusic]
+      }
 
       var currentVillagerFilters;
       var currentVillagerFiltersInverse;
@@ -214,7 +230,8 @@ function ListPage(props){
         searchActual = [...props.currentSetFilters,...searchActual];
       }
 
-      console.log(searchActual)
+      console.log("Set filters: " + searchActual)
+
       //organize filters into categories
       var filters = {}
       var filterCategory = ""
@@ -255,8 +272,14 @@ function ListPage(props){
           //optimization for loading
           //remove if doesn't satisfy main filter before trying other stuff
           if(props.wishlistItems || searchActual.includes("Wishlist")){
-            if(!global.collectionListIndexed["wishlist"+item["checkListKey"]]===true){
-              continue;
+            if(props.currentCustomList===""){
+              if(!inWishlist(item["checkListKey"])===true){
+                continue;
+              }
+            } else {
+              if(!inCustomLists(item["checkListKey"],props.currentCustomList)===true){
+                continue;
+              }
             }
           }else if(props.newItems){
             if(item["Version Added"] !==undefined && !gameVersion.includes(item["Version Added"])){
@@ -290,8 +313,12 @@ function ListPage(props){
               // } else if (searchActual.includes("New version") && props.newItems){
               //   filterFound = false;
               //   break;
-              // } 
-              if(searchActual.includes("Wishlist") && props.wishlistItems && global.collectionListIndexed["wishlist"+item["checkListKey"]]===true){
+              // }
+              if(searchActual.includes("Wishlist") && props.wishlistItems && props.currentCustomList!=="" && inCustomLists(item["checkListKey"],props.currentCustomList)===true){
+                filterFound = true;
+                break;
+              }
+              if(searchActual.includes("Wishlist") && props.wishlistItems && inWishlist(item["checkListKey"])===true){
                 filterFound = true;
                 break;
               } else if (searchActual.includes("Wishlist") && props.wishlistItems){
@@ -314,7 +341,7 @@ function ListPage(props){
               for(var y = 0; y < searchActual.length; y++){
                 if(searchActual[y].includes("Data Category")){
                   //Category selected
-                  if(item[searchActual[y].split(":")[0]]!==undefined && item[searchActual[y].split(":")[0]].toLowerCase()===searchActual[y].split(":")[1].toLowerCase()){
+                  if(item[searchActual[y].split(":")[0]]!==undefined && item[searchActual[y].split(":")[0]].toString().toLowerCase()===searchActual[y].split(":")[1].toString().toLowerCase()){
                     //Item in selected category
                     searchCategory = true;
                     break;
@@ -388,7 +415,7 @@ function ListPage(props){
 
               //special case for categories
               if(props.title==="Obtainable DIYs" || props.title==="Obtainable Reactions" || props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions"){
-                if(searchCollected && item[searchActual[z].split(":")[0]]!==undefined && item[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
+                if(searchCollected && item[searchActual[z].split(":")[0]]!==undefined && item[searchActual[z].split(":")[0]].toString().toLowerCase()===searchActual[z].split(":")[1].toString().toLowerCase()){
                   if((props.title==="Obtainable DIYs" || props.title==="Unobtainable DIYs") && item.checkListKey.includes("recipesCheckList")){
                     filterFound = true;
                     break;
@@ -438,10 +465,10 @@ function ListPage(props){
                     var filterCategory = Object.keys(filters)[f];
                     for(var e = 0; e<filters[filterCategory].length; e++){
                       //check if split by semicolon
-                      if(item[filterCategory]!==undefined){
-                        var allEntries = item[filterCategory].split("; ")
+                      if(item!==undefined && item[filterCategory]!==undefined){
+                        var allEntries = item[filterCategory].toString().split("; ")
                         for(var o = 0; o<allEntries.length; o++){
-                          if(allEntries[o]!==undefined && allEntries[o].toLowerCase()===filters[filterCategory][e].toLowerCase()){
+                          if(allEntries[o]!==undefined && allEntries[o].toString().toLowerCase()===filters[filterCategory][e].toString().toLowerCase()){
                             filterFound = false
                             break;
                           }
@@ -462,16 +489,16 @@ function ListPage(props){
                     var filterCurrentFound = false;
                     for(var e = 0; e<filters[filterCategory].length; e++){
                       //check if split by semicolon
-                      if(item[filterCategory]!==undefined){
-                        var allEntries = item[filterCategory].split("; ")
+                      if(item!==undefined && item[filterCategory]!==undefined){
+                        var allEntries = item[filterCategory].toString().split("; ")
                         for(var o = 0; o<allEntries.length; o++){
-                          if(allEntries[o]!==undefined && allEntries[o].toLowerCase()===filters[filterCategory][e].toLowerCase()){
+                          if(allEntries[o]!==undefined && allEntries[o].toString().toLowerCase()===filters[filterCategory][e].toString().toLowerCase()){
                             filterCurrentFound = true
                             break;
                           } 
                         }
                       }
-                      if(item[filterCategory]!==undefined && item[filterCategory].toLowerCase()===filters[filterCategory][e].toLowerCase()){
+                      if(item[filterCategory]!==undefined && item[filterCategory].toString().toLowerCase()===filters[filterCategory][e].toString().toLowerCase()){
                         filterCurrentFound = true
                         break;
                       }
@@ -500,12 +527,12 @@ function ListPage(props){
                 } else if (searchActual.includes("Show craftable item variations") && item["Kit Cost"]===undefined){
                   showUncraftableVar = false;
                 }
-                // if( item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
+                // if( item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toString().toLowerCase()===searchActual[z].split(":")[1].toString().toLowerCase()){
                 //   filterFound = true;
                 // } else if (item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].includes("; ")){
                 //   var allEntries = item.[searchActual[z].split(":")[0]].split("; ")
                 //   for(var o = 0; o<allEntries.length; o++){
-                //     if(allEntries[o]!==undefined && allEntries[o].toLowerCase()===searchActual[z].split(":")[1].toLowerCase()){
+                //     if(allEntries[o]!==undefined && allEntries[o].toString().toLowerCase()===searchActual[z].split(":")[1].toString().toLowerCase()){
                 //       filterFound = true;
                 //     } 
                 //   }
@@ -526,8 +553,8 @@ function ListPage(props){
             if(item[props.searchKey[j][x]]!==undefined){
               //Translate search attribute from database
               //Search translations done here
-              // searchFound = attemptToTranslateItem(item.[props.searchKey[j][x]]).toLowerCase().includes(search.toLowerCase())
-              searchFound = removeAccents(item[props.searchKey[j][x]].toLowerCase()).includes(removeAccents(search.toLowerCase()))
+              // searchFound = attemptToTranslateItem(item.[props.searchKey[j][x]]).toString().toLowerCase().includes(search.toString().toLowerCase())
+              searchFound = removeAccents(item[props.searchKey[j][x]].toString().toLowerCase()).includes(removeAccents(search.toString().toLowerCase()))
             }
             //&&((!props.wishlistItems&&!props.filterCollectedOnly&&!props.newItems)||searchFound)
             if(showPartiallyFoundOnly && showUncraftableVar && (search==="" || searchFound) && (filterFound || searchActual.length === 0)){
@@ -559,7 +586,7 @@ function ListPage(props){
                 //   previousVariation = item.[props.textProperty[j]];
 
                 //keep variations
-                if(item["Name"]===previousVariation && !item["checkListKey"].includes("recipesCheckList") && !item["checkListKey"].includes("amiiboCheckList") && !item["checkListKey"].includes("constructionCheckList") && !item["checkListKey"].includes("fenceCheckList") && !item["checkListKey"].includes("interiorStructuresCheckList")){
+                if((props.showAllVariations===false || props.showAllVariations===undefined) && item["Name"]===previousVariation && !item["checkListKey"].includes("recipesCheckList") && !item["checkListKey"].includes("amiiboCheckList") && !item["checkListKey"].includes("constructionCheckList") && !item["checkListKey"].includes("fenceCheckList") && !item["checkListKey"].includes("interiorStructuresCheckList")){
                   previousVariation = item["Name"];
                 } else {
                   //the final filter to check
@@ -581,7 +608,7 @@ function ListPage(props){
                     // if(global.collectionList.includes("wishlist"+item["checkListKey"])){
                       item.dataSet = j;
                       item.index = i;
-                      dataUpdated = [...dataUpdated, item];
+                      dataUpdated.push(item)
                       // previousVariation = item.[props.textProperty[j]];
                       // previousVariation = item["Name"];
                     // } 
@@ -589,7 +616,7 @@ function ListPage(props){
                     if(item["Version Added"] !==undefined && item["Version Added"] !=="NA" && gameVersion.includes(item["Version Added"])){
                       item.dataSet = j;
                       item.index = i;
-                      dataUpdated = [...dataUpdated, item];
+                      dataUpdated.push(item)
                       previousVariation = item["Name"];
                       // previousVariation = item.[props.textProperty[j]];
                       // previousVariation = item["Name"];
@@ -598,7 +625,7 @@ function ListPage(props){
                     if(item["Data Category"]!==undefined && museumCategories.includes(item["Data Category"]) && global.collectionListIndexed["museum"+item["checkListKey"]]===true){
                       item.dataSet = j;
                       item.index = i;
-                      dataUpdated = [...dataUpdated, item];
+                      dataUpdated.push(item)
                       // previousVariation = item.[props.textProperty[j]];
                       previousVariation = item["Name"];
                     } 
@@ -606,7 +633,7 @@ function ListPage(props){
                     if(item["Data Category"]!==undefined && museumCategories.includes(item["Data Category"]) && !global.collectionListIndexed["museum"+item["checkListKey"]]===true){
                       item.dataSet = j;
                       item.index = i;
-                      dataUpdated = [...dataUpdated, item];
+                      dataUpdated.push(item)
                       // previousVariation = item.[props.textProperty[j]];
                       previousVariation = item["Name"];
                     } 
@@ -614,7 +641,7 @@ function ListPage(props){
                     if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && global.collectionListIndexed["oldResident"+item["checkListKey"]]===true){
                       item.dataSet = j;
                       item.index = i;
-                      dataUpdated = [...dataUpdated, item];
+                      dataUpdated.push(item)
                       // previousVariation = item.[props.textProperty[j]];
                       previousVariation = item["Name"];
                     } 
@@ -622,7 +649,7 @@ function ListPage(props){
                     if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && !global.collectionListIndexed["oldResident"+item["checkListKey"]]===true){
                       item.dataSet = j;
                       item.index = i;
-                      dataUpdated = [...dataUpdated, item];
+                      dataUpdated.push(item)
                       // previousVariation = item.[props.textProperty[j]];
                       previousVariation = item["Name"];
                     } 
@@ -630,7 +657,7 @@ function ListPage(props){
                     if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && global.collectionListIndexed["havePhoto"+item["checkListKey"]]===true){
                       item.dataSet = j;
                       item.index = i;
-                      dataUpdated = [...dataUpdated, item];
+                      dataUpdated.push(item)
                       // previousVariation = item.[props.textProperty[j]];
                       previousVariation = item["Name"];
                     } 
@@ -638,14 +665,15 @@ function ListPage(props){
                     if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && !global.collectionListIndexed["havePhoto"+item["checkListKey"]]===true){
                       item.dataSet = j;
                       item.index = i;
-                      dataUpdated = [...dataUpdated, item];
+                      dataUpdated.push(item)
                       // previousVariation = item.[props.textProperty[j]];
                       previousVariation = item["Name"];
                     } 
                   } else {
                     item.dataSet = j;
                     item.index = i;
-                    dataUpdated = [...dataUpdated, item];
+                    dataUpdated.push(item)
+                    // dataUpdated = [...dataUpdated, item];
                     // previousVariation = item.[props.textProperty[j]];
                     previousVariation = item["Name"];
                   }
@@ -664,8 +692,7 @@ function ListPage(props){
 
       //Sort alphabetically
       if(getSettingsString("settingsSortAlphabetically")==="true"){
-        var dataLoadedCopy = dataUpdated.slice(0);
-        dataLoadedCopy.sort(function(a, b) {
+        dataUpdated.sort(function(a, b) {
           var textA
           var textB
           if(a===undefined || a.NameLanguage===undefined){
@@ -686,18 +713,15 @@ function ListPage(props){
           }
           return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
         });
-        dataUpdated = dataLoadedCopy
       }
 
       //Sort based on critterpedia entry number
       if(getSettingsString("settingsSortCritterpedia")==="true" && (props.title==="Fish" || props.title==="Bugs" || props.title==="Sea Creatures")){
-        var dataLoadedCopy = dataUpdated.slice(0);
-        dataLoadedCopy.sort(function(a, b) {
+        dataUpdated.sort(function(a, b) {
           var textA = parseInt(a["#"]);
           var textB = parseInt(b["#"]);
           return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
         });
-        dataUpdated = dataLoadedCopy
       }
 
       //Sort based on filters
@@ -709,96 +733,117 @@ function ListPage(props){
         }
       }
       for(var sort = 0; sort<searchActual.length; sort++){
-        if(searchActual[sort].includes("Sort-")){
+        if(searchActual[sort].includes("Sort-") && searchActual[sort]!=="Sort-Collected"){
           var propertyToSort = searchActual[sort].replace("Sort-","")
-          var dataLoadedCopy = dataUpdated.slice(0);
-            dataLoadedCopy.sort(function(a, b) {
-              var valueA = a[propertyToSort]
-              if(a[propertyToSort]===undefined && !shouldSortDirection){
-                valueA="zzzzzzzzzzz"
-              } else if(a[propertyToSort]===undefined){
-                valueA="aaaaaaaaaaa"
-              }
+          dataUpdated.sort(function(a, b) {
+            var valueA = a[propertyToSort]
+            if(a[propertyToSort]===undefined && !shouldSortDirection){
+              valueA="zzzzzzzzzzz"
+            } else if(a[propertyToSort]===undefined){
+              valueA="aaaaaaaaaaa"
+            }
 
-              var valueB = b[propertyToSort]              
-              if(b[propertyToSort]===undefined && !shouldSortDirection){
-                valueB="zzzzzzzzzzz"
-              } else if(b[propertyToSort]===undefined){
-                valueB="aaaaaaaaaaa"
-              }
+            var valueB = b[propertyToSort]              
+            if(b[propertyToSort]===undefined && !shouldSortDirection){
+              valueB="zzzzzzzzzzz"
+            } else if(b[propertyToSort]===undefined){
+              valueB="aaaaaaaaaaa"
+            }
 
-              //Fix birthday sorting
-              if(searchActual[sort]==="Sort-Birthday"){
-                let part1 = valueA.split("/")[0];
-                let part2 = valueA.split("/")[1];
-                if(valueA.split("/")[0].length===1){
-                  part1 = "0"+valueA.split("/")[0]
-                }
-                if(valueA.split("/")[1].length===1){
-                  part2 = "0"+valueA.split("/")[1]
-                }
-                valueA = part1+"/"+part2
+            //Fix birthday sorting
+            if(searchActual[sort]==="Sort-Birthday"){
+              let part1 = valueA.split("/")[0];
+              let part2 = valueA.split("/")[1];
+              if(valueA.split("/")[0].length===1){
+                part1 = "0"+valueA.split("/")[0]
               }
-              if(searchActual[sort]==="Sort-Birthday"){
-                let part1 = valueB.split("/")[0];
-                let part2 = valueB.split("/")[1];
-                if(valueB.split("/")[0].length===1){
-                  part1 = "0"+valueB.split("/")[0]
-                }
-                if(valueB.split("/")[1].length===1){
-                  part2 = "0"+valueB.split("/")[1]
-                }
-                valueB = part1+"/"+part2
+              if(valueA.split("/")[1].length===1){
+                part2 = "0"+valueA.split("/")[1]
               }
-              
-              var textA = valueA;
-              var textB = valueB;
-              if(searchActual.includes)
-              if(!shouldSortDirection){
-                return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-              } else {
-                return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+              valueA = part1+"/"+part2
+            }
+            if(searchActual[sort]==="Sort-Birthday"){
+              let part1 = valueB.split("/")[0];
+              let part2 = valueB.split("/")[1];
+              if(valueB.split("/")[0].length===1){
+                part1 = "0"+valueB.split("/")[0]
               }
-            });
-          dataUpdated = dataLoadedCopy
+              if(valueB.split("/")[1].length===1){
+                part2 = "0"+valueB.split("/")[1]
+              }
+              valueB = part1+"/"+part2
+            }
+            
+            var textA = valueA;
+            var textB = valueB;
+            if(searchActual.includes)
+            if(!shouldSortDirection){
+              return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+            } else {
+              return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+            }
+          });
         } else if(searchActual[sort].includes("SortInt-")){
           var propertyToSort = searchActual[sort].replace("SortInt-","")
-          var dataLoadedCopy = dataUpdated.slice(0);
-            dataLoadedCopy.sort(function(a, b) {
-              var valueA = a[propertyToSort]
-              if((a[propertyToSort]===undefined || !isInteger(a[propertyToSort])) && shouldSortDirection){
-                valueA=10000000000000
-              } else if(a[propertyToSort]===undefined || !isInteger(a[propertyToSort])){
-                valueA=0
-              }
-              var valueB = b[propertyToSort]
-              if((b[propertyToSort]===undefined || !isInteger(b[propertyToSort])) && shouldSortDirection){
-                valueB=10000000000000
-              } else if(b[propertyToSort]===undefined || !isInteger(b[propertyToSort])){
-                valueB=0
-              }
-              
-              var textA = parseInt(valueA);
-              var textB = parseInt(valueB);
-              if(searchActual.includes)
-              if(shouldSortDirection){
-                return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-              } else {
-                return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
-              }
-            });
-          dataUpdated = dataLoadedCopy
+          dataUpdated.sort(function(a, b) {
+            var valueA = a[propertyToSort]
+            if((a[propertyToSort]===undefined || !isInteger(a[propertyToSort])) && shouldSortDirection){
+              valueA=10000000000000
+            } else if(a[propertyToSort]===undefined || !isInteger(a[propertyToSort])){
+              valueA=0
+            }
+            var valueB = b[propertyToSort]
+            if((b[propertyToSort]===undefined || !isInteger(b[propertyToSort])) && shouldSortDirection){
+              valueB=10000000000000
+            } else if(b[propertyToSort]===undefined || !isInteger(b[propertyToSort])){
+              valueB=0
+            }
+            
+            var textA = parseInt(valueA);
+            var textB = parseInt(valueB);
+            if(searchActual.includes)
+            if(shouldSortDirection){
+              return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+            } else {
+              return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+            }
+          });
         }
       }
 
+      //Sort this last
+      if(searchActual.includes("Sort-Collected")){
+        dataUpdated.sort(function(a, b) {
+          var valueA = inChecklist(a["checkListKey"])
+          if(valueA===undefined && shouldSortDirection){
+            valueA=10000000000000
+          } else if(valueA===undefined){
+            valueA=0
+          }
+          var valueB = inChecklist(b["checkListKey"])
+          if(valueB===undefined && shouldSortDirection){
+            valueB=10000000000000
+          } else if(valueA===undefined){
+            valueB=0
+          }
+          
+          var textA = valueA?10000:0;
+          var textB = valueB?10000:0;
+          if(searchActual.includes)
+          if(shouldSortDirection){
+            return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+          } else {
+            return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+          }
+        });
+      }
+
       if(props.newItems){
-        var dataLoadedCopy = dataUpdated.slice(0);
-        dataLoadedCopy.sort(function(a, b) {
+        dataUpdated.sort(function(a, b) {
           var textA = a["Version Added"];
           var textB = b["Version Added"];
           return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
         });
-        dataUpdated = dataLoadedCopy
       }
 
       setData(dataUpdated)
@@ -815,7 +860,7 @@ function ListPage(props){
     if(Dimensions.get('window').width>maxWidth){
       numColumns = parseInt(Dimensions.get('window').width / (maxWidth/3))
     }
-  } else if (props.gridType==="largeGrid" || props.gridType==="largeGridSmaller"){
+  } else if (props.gridType==="largeGrid" || props.gridType==="largeGridSmaller" || props.gridType==="songGrid"){
     numColumns=2;
     var maxWidth = 511
     if(Dimensions.get('window').width>maxWidth){
@@ -831,6 +876,43 @@ function ListPage(props){
   
   const sheetRef = React.useRef(null);
   const bottomSheetRenderRef = React.useRef(null);
+  const customListsPopupRef = React.useRef(null);
+  const customListsPopupBottomRef = React.useRef(null);
+  let addItemToCustomListFunction = ()=>{}
+
+  let selectCustomList = (item, setWishlistState, runWhenOpen=()=>{}, popupBottom=true) => {
+    addItemToCustomListFunction = (listName) => {
+      if(listName===""){
+        let inWishlistState = inWishlist(item.checkListKey)
+        checkOff(item.checkListKey, inWishlistState, "wishlist");
+        setWishlistState(!inWishlistState)
+      }else{
+        let inWishlistState = inWishlist(item.checkListKey)
+        checkOff(item.checkListKey, inCustomLists(item.checkListKey, listName), "customLists::"+listName);
+        setWishlistState(inWishlistState)
+      }
+    }
+    let selectedList = []
+    if(inWishlist(item.checkListKey)){
+      selectedList.push("")
+    }
+    for(let customList of global.customLists){
+      if(inCustomLists(item.checkListKey, customList)){
+        selectedList.push(customList)
+      }
+    }
+
+    if(popupBottom){
+      //order is important
+      customListsPopupBottomRef?.current?.setPopupVisible(true, item.checkListKey, item["NameLanguage"])
+      customListsPopupBottomRef?.current.updateSelectedList(selectedList)
+    } else {
+      customListsPopupRef?.current?.setPopupVisible(true, item.checkListKey, item["NameLanguage"])
+      customListsPopupRef?.current.updateSelectedList(selectedList)
+    }
+
+    runWhenOpen()
+  }
 
   // //if bottom sheet is really large, allow scrolling
   var bottomSheetTopPadding = 0;
@@ -881,114 +963,140 @@ function ListPage(props){
     return(
       <View/>
     )
-  }else if(data==="empty"){
-    return(<>
-        <HeaderLoading disableSearch={props.disableSearch} title={props.title} headerHeight={headerHeight} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
-      </>
-    )
   } else {
-    return (
-    <View style={{backgroundColor:props.backgroundColor}} >
-      {header}
-      <PopupFilter villagerGifts={props.villagerGifts} disableFilters={props.disableFilters} title={props.title} ref={popupFilter} filterSearchable={props.filterSearchable} updateSearchFilters={updateSearchFilters}/> 
-      {/* setFilterPopupState(false) */}
-      {loading? <View style={{alignItems:"center", justifyContent:"center", width:"100%", height:"100%"}}>
-      <LottieView 
-        autoPlay
-        loop
-        style={{width: 85,zIndex:1,transform: [{ scale: 1.25 },{ rotate: '0deg'},],}}
-        source={require('../assets/loading.json')}
-      />
-      </View>:<Animated.FlatList
-        nestedScrollEnabled
-        initialNumToRender={4}
-        scrollEventThrottle={16}
-        contentContainerStyle={{paddingTop: paddingTop+10, paddingLeft: 8, paddingRight: 8, paddingBottom: paddingBottomContent}}
-        onScroll={handleScroll}
-        ref={ref}
-        data={data}
-        renderItem={renderItem}
-        keyExtractor={(item, index) => `list-item-${index}-${item.checkListKeyString}`}
-        numColumns={numColumns}
-        key={numColumns}
-        style={style}
-        removeClippedSubviews={true}
-        // updateCellsBatchingPeriod={500}
-        ListFooterComponent={()=>{
-          if(searchFilters!=undefined && searchFilters.length===0 && data.length===0 && props.wishlistItems && search===""){
-            return <>
-              <View style={{height:100}}/>
-                <TouchableOpacity onPress={() => props.setPage(1)}>
-                  <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", marginHorizontal:30}}>{"You have no wishlist items."}</TextFont>
-                  <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", marginHorizontal:30}}>{"Long press items to add them to your wishlist."}</TextFont>
-                  <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center", marginHorizontal:30}}>Tap here and go add some</TextFont>
-                </TouchableOpacity>
-              <View style={{height:30}}/>
-            </>
-          }else if (searchFilters!=undefined && searchFilters.length===0 && data.length===0 && (props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions") && search===""){
-            return <>
-              <View style={{height:100}}/>
-                <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", marginHorizontal:30}}>{"You can get everything since you have all personality types!"}</TextFont>
-              <View style={{height:30}}/>
-            </>
-          }else if (props.comingSoon){
-            return <>
-              <View style={{height:100}}/>
-                <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Coming soon</TextFont>
-                <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Please be patient</TextFont>
-              <View style={{height:30}}/>
-            </>
-          }
-          return <TextFont style={{marginTop:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{data.length+" "+(data.length!==1?attemptToTranslate("entries."):attemptToTranslate("entry."))}</TextFont>
-        }}
-        windowSize={4}
-        refreshControl={
-          <RefreshControl
-            onRefresh={()=>{if(props.wishlistItems||searchFilters.some(item=>refreshFiltersArray.includes(item)))setRefresh(true)}} //only refresh if the order has the possibility of changing
-            refreshing={refresh}
-            progressViewOffset={headerHeight+50}
-            progressBackgroundColor={colors.lightDarkAccentHeavy2[global.darkMode]}
-            colors={[colors.textBlack[global.darkMode]]}
-          />
-        }
-      />}
-      
-      <PopupBottomCustom
-        ref={sheetRef}
-        padding={0}
-        invisible={true}
-        restrictSize={false}
-        onClose={()=>{
-          console.log(selectedItem); 
-          if(selectedItem!=null && selectedItem!=undefined){
-            !updateCheckChildFunction(inChecklist(selectedItem.checkListKey));
-            !updateWishlistChildFunction(inWishlist(selectedItem.checkListKey));
-          }
-        }}
-      >
-        <BottomSheetRender 
-          setPage={props.setPage}
-          activeCreatures={props.activeCreatures}
-          activeCreaturesPage={props.activeCreaturesPage}
-          ref={bottomSheetRenderRef}
-          imageProperty={props.imageProperty} 
-          textProperty={props.textProperty}
-          textProperty2={props.textProperty2}
-          textProperty3={props.textProperty3}
-          dataGlobalName={props.dataGlobalName}
-          boxColor={props.boxColor}
-          labelColor={props.labelColor}
-          accentColor={props.accentColor}
-          specialLabelColor={props.specialLabelColor}
-          popUpCornerImageProperty={props.popUpCornerImageProperty}
-          popUpCornerImageLabelProperty={props.popUpCornerImageLabelProperty}
-          popUpPhraseProperty={props.popUpPhraseProperty}
-          popUpContainer={props.popUpContainer}
-          checkType={props.checkType}
-          tabs={props.tabs}
+    return (<>
+    {data!=="empty"?
+      <View style={{backgroundColor:props.backgroundColor}} >
+        {header}
+        <PopupFilter villagerGifts={props.villagerGifts} disableFilters={props.disableFilters} title={props.title} ref={popupFilter} filterSearchable={props.filterSearchable} updateSearchFilters={updateSearchFilters}/> 
+        {/* setFilterPopupState(false) */}
+        {loading? <View style={{alignItems:"center", justifyContent:"center", width:"100%", height:"100%"}}>
+        <LottieView 
+          autoPlay
+          loop
+          style={{width: 85,zIndex:1,transform: [{ scale: 1.25 },{ rotate: '0deg'},],}}
+          source={require('../assets/loading.json')}
         />
-      </PopupBottomCustom>
-    </View>
+        </View>:<Animated.FlatList
+          nestedScrollEnabled
+          initialNumToRender={4}
+          scrollEventThrottle={getSettingsString("settingsLowEndDevice")==="true"?100:16}
+          contentContainerStyle={{paddingTop: paddingTop+10, paddingLeft: 8, paddingRight: 8, paddingBottom: paddingBottomContent}}
+          onScroll={handleScroll}
+          ref={ref}
+          data={data}
+          renderItem={renderItem}
+          keyExtractor={(item, index) => `list-item-${index}-${item.checkListKeyString}`}
+          numColumns={numColumns}
+          key={numColumns}
+          style={style}
+          removeClippedSubviews={true}
+          // updateCellsBatchingPeriod={500}
+          ListFooterComponent={()=>{
+            if(searchFilters!=undefined && searchFilters.length===0 && data.length===0 && props.wishlistItems && search===""){
+              return <>
+                <View style={{height:100}}/>
+                  <TouchableOpacity onPress={() => props.setPage(1)}>
+                    <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", marginHorizontal:30}}>{"You have no wishlist items."}</TextFont>
+                    <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", marginHorizontal:30}}>{"Long press items to add them to your wishlist."}</TextFont>
+                    <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center", marginHorizontal:30}}>Tap here and go add some</TextFont>
+                  </TouchableOpacity>
+                <View style={{height:30}}/>
+              </>
+            }else if (searchFilters!=undefined && searchFilters.length===0 && data.length===0 && (props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions") && search===""){
+              return <>
+                <View style={{height:100}}/>
+                  <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", marginHorizontal:30}}>{"You can get everything since you have all personality types!"}</TextFont>
+                <View style={{height:30}}/>
+              </>
+            }else if (props.comingSoon){
+              return <>
+                <View style={{height:100}}/>
+                  <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Coming soon</TextFont>
+                  <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Please be patient</TextFont>
+                <View style={{height:30}}/>
+              </>
+            }
+            return <TextFont style={{marginTop:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{data.length+" "+(data.length!==1?attemptToTranslate("entries."):attemptToTranslate("entry."))}</TextFont>
+          }}
+          windowSize={getSettingsString("settingsLowEndDevice")==="true"?3:4}
+          refreshControl={
+            <RefreshControl
+              onRefresh={()=>{if(props.wishlistItems||searchFilters.some(item=>refreshFiltersArray.includes(item)))setRefresh(true)}} //only refresh if the order has the possibility of changing
+              refreshing={refresh}
+              progressViewOffset={headerHeight+50}
+              progressBackgroundColor={colors.lightDarkAccentHeavy2[global.darkMode]}
+              colors={[colors.textBlack[global.darkMode]]}
+            />
+          }
+        />}
+      </View>
+    :
+      <HeaderLoading disableSearch={props.disableSearch} title={props.title} headerHeight={headerHeight} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
+    }
+
+    <PopupBottomCustom
+      itemPopup={true}
+      ref={sheetRef}
+      padding={0}
+      invisible={true}
+      restrictSize={false}
+      onClose={()=>{
+        // console.log(selectedItem); 
+        if(selectedItem!=null && selectedItem!=undefined){
+          !updateCheckChildFunction(inChecklist(selectedItem.checkListKeyParent));
+          !updateWishlistChildFunction(inWishlist(selectedItem.checkListKey));
+        }
+      }}
+    >
+      <BottomSheetRender 
+        setPage={props.setPage}
+        activeCreatures={props.activeCreatures}
+        activeCreaturesPage={props.activeCreaturesPage}
+        ref={bottomSheetRenderRef}
+        imageProperty={props.imageProperty} 
+        textProperty={props.textProperty}
+        textProperty2={props.textProperty2}
+        textProperty3={props.textProperty3}
+        dataGlobalName={props.dataGlobalName}
+        boxColor={props.boxColor}
+        labelColor={props.labelColor}
+        accentColor={props.accentColor}
+        specialLabelColor={props.specialLabelColor}
+        popUpCornerImageProperty={props.popUpCornerImageProperty}
+        popUpCornerImageLabelProperty={props.popUpCornerImageLabelProperty}
+        popUpPhraseProperty={props.popUpPhraseProperty}
+        popUpContainer={props.popUpContainer}
+        checkType={props.checkType}
+        tabs={props.tabs}
+        selectCustomList={selectCustomList}
+      />
+    </PopupBottomCustom>
+    <WishlistSelectionPopup
+      popupBottom={false}
+      updateWhenOpen 
+      showAmount
+      changeSelectedList={(list)=>{addItemToCustomListFunction(list);}} 
+      showDelete={false} 
+      showAdd={false} 
+      ref={customListsPopupRef} 
+      addCustomList={()=>{}}
+    />
+    <WishlistSelectionPopup
+      popupBottom={true}
+      onClose={(checkListKeyString)=>{
+        if(checkListKeyString && checkListKeyString!=null && checkListKeyString!=undefined && props.currentCustomList!=="" && props.currentCustomList!==undefined)
+          !updateAmountChildFunction(getCustomListsAmount(checkListKeyString, props.currentCustomList));
+      }}
+      updateWhenOpen 
+      showAmount
+      changeSelectedList={(list)=>{addItemToCustomListFunction(list);}} 
+      showDelete={false} 
+      showAdd={false} 
+      ref={customListsPopupBottomRef} 
+      addCustomList={()=>{}}
+    />
+    </>
   );
   }
   
@@ -1031,8 +1139,12 @@ class BottomSheetRender extends Component{
     this.rightCornerCheck.updateRightCornerCheck(key,checked);
   }
   render(){
+    if(this.state.item==="item"){
+      return <View/>
+    }
+    
     var leftCornerImage;
-    if(this.props.popUpCornerImageProperty!==undefined && this.props.popUpCornerImageLabelProperty!==undefined && this.state.item.dataSet!==undefined && this.props.popUpCornerImageProperty[this.state.item.dataSet]!==""){
+    if(this.state.item["Data Category"]==="Sea Creatures" || this.props.popUpCornerImageProperty!==undefined && this.props.popUpCornerImageLabelProperty!==undefined && this.state.item.dataSet!==undefined && this.props.popUpCornerImageProperty[this.state.item.dataSet]!==""){
       leftCornerImage = <LeftCornerImage
         item={this.state.item}
         accentColor={this.props.accentColor}
@@ -1108,41 +1220,43 @@ class BottomSheetRender extends Component{
       />
     }
     return <View>
-      <View
-        style={{
-          borderTopLeftRadius: 50,
-          borderTopRightRadius: 50,
-          backgroundColor: colors.white[global.darkMode],
-          padding: 16,
-          marginTop: getSettingsString("settingsLargerItemPreviews")==="false" ? 100 : 200,
-        }}
-      >
-          <CircularImage 
-            item={this.state.item}
-            imageProperty={this.props.imageProperty}
-            accentColor={this.props.accentColor}
-          />
-          {leftCornerImage}
-          {rightCornerCheck}
-          <View style={{height: 60}}/>
-          {phrase}
-          <Title
-            item={this.state.item}
-            textProperty={this.props.textProperty}
-            popUpPhraseProperty={this.props.popUpPhraseProperty}
-            marginHorizontal={marginHorizontal}
-          />
-          <Variations 
-            updateRightCornerCheck={this.updateRightCornerCheck}
-            ref={(variations) => this.variations = variations}
-            item={this.state.item}
-            updateCheckChildFunction={this.updateCheckChildFunction}
-            imageProperty={this.props.imageProperty} 
-            globalDatabase={global.dataLoadedAll} 
-          />
-          {popUpContainer}
-          {this.props.activeCreatures===true && this.props.activeCreaturesPage===false ? <View style={{height:50}}/> : <View/>}
-          {this.props.tabs===false ? <View style={{height:50}}/> : <View style={{height:100}}/>}
+      <View>
+        <CircularImage 
+          item={this.state.item}
+          imageProperty={this.props.imageProperty}
+          accentColor={this.props.accentColor}
+          showLargerPopupImage={()=>{this.variations?.showPopupImage(true)}}
+        />
+        <View
+          style={{
+            borderTopLeftRadius: 50,
+            borderTopRightRadius: 50,
+            backgroundColor: colors.white[global.darkMode],
+            padding: 16,
+          }}
+        >
+            {leftCornerImage}
+            {rightCornerCheck}
+            <View style={{height: 60}}/>
+            {phrase}
+            <Title
+              item={this.state.item}
+              textProperty={this.props.textProperty}
+              popUpPhraseProperty={this.props.popUpPhraseProperty}
+              marginHorizontal={marginHorizontal}
+            />
+            <Variations 
+              selectCustomList={this.props.selectCustomList}
+              updateRightCornerCheck={this.updateRightCornerCheck}
+              ref={(variations) => this.variations = variations}
+              item={this.state.item}
+              updateCheckChildFunction={this.updateCheckChildFunction}
+              imageProperty={this.props.imageProperty} 
+              globalDatabase={global.dataLoadedAll} 
+            />
+            {popUpContainer}
+            {this.props.tabs===false ? <View style={{height:50}}/> : (getSettingsString("settingsLargerItemPreviews")==="false"?<View style={{height:50}}/>:<View style={{height:50}}/>)}
+        </View>
       </View>
     </View>
   }

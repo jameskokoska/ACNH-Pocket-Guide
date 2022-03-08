@@ -23,6 +23,11 @@ export class SelectionImage extends Component {
       selectedImage: this.props.selectedImage
     };
   }
+  componentDidUpdate(prevProps){
+    if(this.props.selectedImage!==prevProps.selectedImage){
+      this.setState({selectedImage:this.props.selectedImage})
+    }
+  }
   render(){
     return(<>
       <View style={{flex: 1, flexWrap: 'wrap', flexDirection:"row",justifyContent:"center"}}>
@@ -58,7 +63,7 @@ export class SelectionImage extends Component {
                 }
               }}
             >
-              <View style={{width: this.props.sizeContainer[0],height: this.props.sizeContainer[1],borderRadius: 100,justifyContent: "center",alignItems: "center",borderWidth: 2, borderColor: image===this.state.selectedImage ? colors.checkGreen[global.darkMode] : colors.eventBackground[global.darkMode], backgroundColor:colors.eventBackground[global.darkMode]}}>
+              <View style={{width: this.props.sizeContainer[0],height: this.props.sizeContainer[1],borderRadius: 100,justifyContent: "center",alignItems: "center",borderWidth: 2, borderColor: image===this.state.selectedImage ? colors.checkGreen[global.darkMode] : colors.eventBackground[global.darkMode], backgroundColor:colors.lightDarkAccent[global.darkMode]}}>
                 {imageComponent}
               </View>
             </TouchableOpacity>

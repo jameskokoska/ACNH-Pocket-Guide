@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Vibration,TouchableNativeFeedback,TouchableOpacity, View, Image, Animated} from 'react-native';
+import {Vibration,TouchableNativeFeedback,TouchableOpacity, View, Image, Animated, BackHandler} from 'react-native';
 import TextFont from './TextFont';
 import {getStorage, capitalize, commas} from "../LoadJsonData"
 import colors from '../Colors'
@@ -21,10 +21,24 @@ export default class LoanList extends Component {
   componentDidMount(){
     this.mounted=true;
     this.loadList();
+    this.backHandler = BackHandler.addEventListener(
+      "hardwareBackPressLoanList",
+      this.handleBackButton,
+    );
   }
 
   componentWillUnmount(){
     this.mounted=false;
+    BackHandler.removeEventListener("hardwareBackPressLoanList", this.handleBackButton);
+  }
+
+  handleBackButton = () => {
+    if(this.state.showEdit===true){
+      this.setState({showEdit:false})
+      return true
+    } else {
+      return false
+    }
   }
 
   loadList = async() => {
@@ -82,7 +96,7 @@ export default class LoanList extends Component {
 
   addItemPopup = (open) => {
     getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
-    this.popupAddLoan.setPopupVisible(true);
+    this.popupAddLoan?.setPopupVisible(true);
   }
 
   addItem = (item) => {
@@ -96,7 +110,7 @@ export default class LoanList extends Component {
   render(){
     return <>
       <View style={{alignItems:"center",flexDirection:"row", right:0, top:0,position:'absolute',zIndex:10}}>
-        <TouchableOpacity style={{padding:10}} 
+        <TouchableOpacity style={{padding:10,marginRight:-7}} 
           onPress={()=>{
             this.setState({showEdit:!this.state.showEdit});
             getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
@@ -139,7 +153,7 @@ class LoanItem extends Component {
     super();
     this.state = {
       showRemove:false,
-      animationValue: new Animated.Value(0),
+      animationValue: new Animated.Value(500),
       height:0,
     }
   }
@@ -151,7 +165,7 @@ class LoanItem extends Component {
   removeButton = (props)=>{
     if(props.showEdit || this.state.showRemove)
       return(<>
-        <View style={{flexDirection:"row",left:-10, top:-10,position:'absolute',zIndex:10, }}>
+        <View style={{flexDirection:"row",left:-7, top:-7,position:'absolute',zIndex:10, }}>
           <TouchableOpacity style={{padding:9}} 
             onPress={()=>{
               props.deleteItem(props.index); 
@@ -160,15 +174,15 @@ class LoanItem extends Component {
             <Image source={require("../assets/icons/deleteIcon.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
           </TouchableOpacity>
         </View>
-        <View style={{flexDirection:"row",right:-5, top:-5,position:'absolute',zIndex:10, }}>
-          <TouchableOpacity style={{padding:5}} 
+        <View style={{flexDirection:"row",right:-3, top:-4,position:'absolute',zIndex:10, }}>
+          <TouchableOpacity style={{padding:6}} 
             onPress={()=>{
               props.reorderItem(props.index, -1); 
               this.setState({showRemove:false})
           }}>
             <Image source={require("../assets/icons/upArrow.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
           </TouchableOpacity>
-          <TouchableOpacity style={{padding:5}} 
+          <TouchableOpacity style={{padding:6}} 
             onPress={()=>{
               props.reorderItem(props.index, 1); 
               this.setState({showRemove:false})
@@ -194,15 +208,19 @@ class LoanItem extends Component {
     }
     let animateToValue = 0
     if(height!==0){
-      animateToValue = percent*height
+      animateToValue = height - percent*height
     } else {
-      animateToValue = percent*this.state.height
+      animateToValue = this.state.height - percent*this.state.height
     }
-    Animated.timing(this.state.animationValue, {
-      toValue: animateToValue,
-      duration: 400,
-      useNativeDriver: false
-    }).start();    
+    if(getSettingsString("settingsLowEndDevice")==="true"){
+
+    } else {
+      Animated.timing(this.state.animationValue, {
+        toValue: animateToValue,
+        duration: 400,
+        useNativeDriver: true,
+      }).start();
+    }
   }
   render(){
     if(this.props.item===undefined){
@@ -213,10 +231,12 @@ class LoanItem extends Component {
           let height = event?.nativeEvent?.layout?.height;
           this.setState({height:height})
           this.animation(height)
-        }} style={{width: "90%", margin:10}}
+        }} style={{width: "90%", margin:10, borderRadius:10, overflow:"hidden"}}
       >
-        <View style={{width: "100%", position:"absolute", backgroundColor:colors.eventBackground[global.darkMode], height:"100%", borderRadius:10, bottom:0 }}/>
-        <Animated.View style={{width: "100%", position:"absolute", backgroundColor:colors.loanProgress[global.darkMode], height:this.state.animationValue, borderRadius:10, bottom:0}}/>
+        <View style={{width: "100%", position:"absolute", backgroundColor:colors.eventBackground[global.darkMode], height:"100%", bottom:0 }}/>
+        {getSettingsString("settingsLowEndDevice")==="true"?
+        <View style={{height:((this.props.item?.current/this.props.item?.total)*100).toString()+"%", width: "100%", position:"absolute", backgroundColor:colors.loanProgress[global.darkMode], borderRadius:10, bottom:0}}/>:
+        <Animated.View style={{transform: [{ translateY: this.state.animationValue }], width: "100%", position:"absolute", backgroundColor:colors.loanProgress[global.darkMode], height:"100%", borderRadius:10, bottom:0}}/>}
         {this.removeButton(this.props)}
         <TouchableNativeFeedback onLongPress={() => {  
             this.setState({showRemove:!this.state.showRemove})

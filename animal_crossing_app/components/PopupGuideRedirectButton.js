@@ -56,7 +56,7 @@ export default class GuideRedirectButton extends Component {
     if(this.props.extraInfo && this.props.setPage){
       return (
         <>
-          <TouchableOpacity style={[this.props.style,{zIndex:5}]} onPress={()=>{this.popupExtraInfo.setPopupVisible(true)}}>
+          <TouchableOpacity style={[this.props.style,{zIndex:5}]} onPress={()=>{this.popupExtraInfo?.setPopupVisible(true)}}>
             <Image style={{width:25,height:25,opacity: 0.35, resizeMode:"contain"}} source={icon}/>
           </TouchableOpacity>
           <PopupInfoCustom ref={(popupExtraInfo) => this.popupExtraInfo = popupExtraInfo} buttonText={"Close"}>
@@ -76,7 +76,7 @@ export default class GuideRedirectButton extends Component {
     } else if (!this.props.extraInfo.hasOwnProperty("type") && this.props.extraInfo!=="" && this.props.extraInfo.constructor!==String){
       return(
         <>
-          <TouchableOpacity style={[this.props.style,{zIndex:5}]} onPress={()=>{this.popupExtraInfo.setPopupVisible(true)}}>
+          <TouchableOpacity style={[this.props.style,{zIndex:5}]} onPress={()=>{this.popupExtraInfo?.setPopupVisible(true)}}>
             <Image style={{width:25,height:25,opacity: 0.35, resizeMode:"contain"}} source={icon}/>
           </TouchableOpacity>
           <PopupInfoCustom ref={(popupExtraInfo) => this.popupExtraInfo = popupExtraInfo} buttonText={"Close"}>

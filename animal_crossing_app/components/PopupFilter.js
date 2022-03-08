@@ -14,6 +14,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const filterDefinitions = require("../assets/data/Generated/filterDefinitions.json");
 import SectionedMultiSelect from 'react-native-sectioned-multi-select';
 import {MaterialIcons} from '@expo/vector-icons';
+import { AnimatedPopupWrapper } from "./PopupAnimatedWrapper";
 
 class PopupFilter extends Component {
   constructor(props) {
@@ -54,6 +55,17 @@ class PopupFilter extends Component {
         {name:"Male", id:"Gender:Male"},{name:"Female", id:"Gender:Female"}
       ]
     }]
+    this.sortByFiltersCollectedOnly = [
+      {
+        "name": "Sort by...",
+        "id": "Sort by...",
+        "children": [
+          {name:"Reverse sorting direction", id:"Reverse direction"},
+          {name:"", id:"break"},
+          {name:"Collected", id:"Sort-Collected"},
+        ]
+      },
+    ]
     this.sortByFilters = [
       {
         "name": "Sort by...",
@@ -61,6 +73,7 @@ class PopupFilter extends Component {
         "children": [
           {name:"Reverse sorting direction", id:"Reverse direction"},
           {name:"", id:"break"},
+          {name:"Collected", id:"Sort-Collected"},
           {name:"Type category", id:"Sort-Data Category"},
           {name:"Sell price", id:"SortInt-Sell"},
           {name:"Buy price", id:"SortInt-Buy"},
@@ -77,6 +90,7 @@ class PopupFilter extends Component {
         "children": [
           {name:"Reverse sorting direction", id:"Reverse direction"},
           {name:"", id:"break"},
+          {name:"Collected", id:"Sort-Collected"},
           {name:"Sell price", id:"SortInt-Sell"},
           {name:"Buy price", id:"SortInt-Buy"},
           {name:"Color 1", id:"Sort-Color 1"},
@@ -91,6 +105,7 @@ class PopupFilter extends Component {
         "children": [
           {name:"Reverse sorting direction", id:"Reverse direction"},
           {name:"", id:"break"},
+          {name:"Collected", id:"Sort-Collected"},
           {name:"Sell price", id:"SortInt-Sell"},
           {name:"Buy price", id:"SortInt-Buy"},
         ]
@@ -173,7 +188,15 @@ class PopupFilter extends Component {
           {"name": "Snooty","id": "Personality:Snooty"}
         ]
       }]
-      this.possibleFilters = [...this.possibleFilters, ...categories, ...handSigns, ...personality];
+      const isVillager = [{
+        "name": "Villager?",
+        "id": "Villager?",
+        "children": [
+          {"name":"Yes","id":"Villager:Yes"},
+          {"name": "No","id": "Villager:No"},
+        ]
+      }]
+      this.possibleFilters = [...this.sortByFiltersCollectedOnly, ...this.possibleFilters, ...categories, ...handSigns, ...personality, ...isVillager];
     } else if(this.props.title==="Active Creatures"){
       const categories = [{
         "name": "Type Categories",
@@ -213,24 +236,28 @@ class PopupFilter extends Component {
       }]
       this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...categories, ...filterDefinitions["Floor & Walls"], ...this.invertFilters];
     } else if(this.props.title==="Reactions"){
-      this.possibleFilters = [...this.possibleFilters, ...filterDefinitions["Reactions"], ...this.invertFilters];
+      this.possibleFilters = [...this.sortByFiltersCollectedOnly, ...this.possibleFilters, ...filterDefinitions["Reactions"], ...this.invertFilters];
     } else if(this.props.title==="Recipes"){
       const categories = [{
         "name": "Type Categories",
         "id":"Type Categories",
         "children": [{"name":"Crafting Recipes (DIY)","id":"Filter Crafting DIY"},{"name":"Cooking Recipes (DIY)","id":"Filter Cooking DIY"}]
       }]
-      this.possibleFilters = [...this.possibleFilters, ...categories, ...filterDefinitions["Recipes"], ...this.invertFilters];
+      this.possibleFilters = [...this.sortByFiltersCollectedOnly, ...this.possibleFilters, ...categories, ...filterDefinitions["Recipes"], ...this.invertFilters];
     } else if(this.props.title==="Villagers"){
       this.sortByFilters[0]["children"] = [{name:"Reverse sorting direction", id:"Reverse direction"},
       {name:"", id:"break"},{name:"Birthday", id:"Sort-Birthday"}]
       this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.villagerFilters, ...this.genderFilters, ...filterDefinitions["Villagers"], ...this.invertFilters];
     } else if(this.props.title==="Gyroids"){
-      this.possibleFilters = [...this.possibleFilters, ...filterDefinitions["Gyroids"], ...this.invertFilters];
+      this.possibleFilters = [...this.sortByFiltersCollectedOnly, ...this.possibleFilters, ...filterDefinitions["Gyroids"], ...this.invertFilters];
     } else if(this.props.title==="New Items"){
       this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.villagerFilters, ...notCraftVariationsFilters, ...categoriesAll, ...this.invertFilters];
     } else if(this.props.title==="Everything" || this.props.title==="Wishlist" || this.props.title==="Search Items"){
-      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...this.museumFilters, ...this.villagerFilters, ...categoriesAll, ...notCraftVariationsFilters, ...activeFilters, ...filterDefinitions["All Items"], ...this.genderFilters, ...this.invertFilters];
+      let currentMuseumFilters = []
+      if(this.props.title!=="Wishlist"){
+        currentMuseumFilters = this.museumFilters
+      }
+      this.possibleFilters = [...this.sortByFilters,...this.possibleFilters, ...currentMuseumFilters, ...this.villagerFilters, ...categoriesAll, ...notCraftVariationsFilters, ...activeFilters, ...filterDefinitions["All Items"], ...this.genderFilters, ...this.invertFilters];
     } else if(this.props.title==="Construction"){
       const categories = [{
         "name": "Type Categories",
@@ -241,7 +268,7 @@ class PopupFilter extends Component {
     } else if(this.props.title==="Tools"){
       this.possibleFilters = [...this.sortByFiltersReducedWithColor,...this.possibleFilters, ...this.invertFilters];
     } else if(this.props.title==="Music"){
-      this.possibleFilters = [...this.possibleFilters, ...filterDefinitions["Music"], ...this.invertFilters]
+      this.possibleFilters = [...this.sortByFiltersCollectedOnly, ...this.possibleFilters, ...filterDefinitions["Music"], ...this.invertFilters]
     } else if(this.props.villagerGifts===true){
       const categories = [{
         "name": "Villager Wearable Filters",
@@ -253,6 +280,8 @@ class PopupFilter extends Component {
       this.possibleFilters = [...this.sortByFiltersReducedWithColor, ...this.possibleFilters]
     } else if(this.props.title==="Materials"){
       this.possibleFilters = [...this.sortByFiltersReduced, ...this.possibleFilters]
+    } else {
+      this.possibleFilters = [ ...this.sortByFiltersReduced, ...this.possibleFilters]
     }
   }
 
@@ -387,8 +416,8 @@ class PopupFilter extends Component {
             this.setPopupVisible(!this.state.popupVisible);
           }}
         >
-          <View style={styles.centeredView}>
-          <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} activeOpacity={0.15} style={{position:"absolute", left:-100, top:-100, width: Dimensions.get('window').width+200, height: Dimensions.get('window').height+200, backgroundColor: "black", opacity: 0.1}}/>
+          <AnimatedPopupWrapper style={styles.centeredView} disableAnimations={getSettingsString("settingsLowEndDevice")==="true"}>
+            <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} activeOpacity={0.55} style={{position:"absolute", left:-100, top:-100, width: Dimensions.get('window').width+200, height: Dimensions.get('window').height+200, backgroundColor: "black", opacity: 0.6}}/>
             <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode], height:Dimensions.get('window').height*0.75}]}>
               <TextFont bold={true} style={{fontSize: 22, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Set Filters</TextFont>
               <View style={{height:10}}/>
@@ -452,7 +481,7 @@ class PopupFilter extends Component {
                 </View>
               </View>
             </View>
-          </View>
+          </AnimatedPopupWrapper>
         </Modal>
       </View>
     )

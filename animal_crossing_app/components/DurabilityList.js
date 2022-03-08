@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import {Vibration,TouchableNativeFeedback,TouchableOpacity,StyleSheet, Text, View, Image, Animated} from 'react-native';
+import {Vibration,TouchableNativeFeedback,TouchableOpacity,View, Image, Animated, Dimensions, BackHandler} from 'react-native';
 import TextFont from './TextFont';
 import {getStorage, commas,} from "../LoadJsonData"
 import colors from '../Colors'
 import PopupAddTool from "./PopupAddTool"
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
+import {getSettingsString} from "../LoadJsonData"
 import ButtonComponent from "./ButtonComponent";
 import FastImage from './FastImage';
 // import AnimateNumber from 'react-native-countup'
@@ -21,11 +21,27 @@ export default class DurabilityList extends Component {
 
   componentDidMount(){
     this.mounted=true;
-    this.loadList();
+    this.backHandler = BackHandler.addEventListener(
+      "hardwareBackPressHome",
+      this.handleBackButton,
+    );
+    setTimeout(()=>{
+      this.loadList();
+    },0)
   }
 
   componentWillUnmount(){
     this.mounted=false;
+    BackHandler.removeEventListener("hardwareBackPressHome", this.handleBackButton);
+  }
+
+  handleBackButton = () => {
+    if(this.state.showEdit===true){
+      this.setState({showEdit:false})
+      return true
+    } else {
+      return false
+    }
   }
 
   loadList = async() => {
@@ -83,11 +99,15 @@ export default class DurabilityList extends Component {
 
   addItemPopup = (open) => {
     getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
-    this.popupAddTool.setPopupVisible(true);
+    this.popupAddTool?.setPopupVisible(true);
   }
 
   addItem = (item) => {
     var addedItem = this.state.data;
+    //flimsy net fix -> changes 5-10 into 510, so change it to 10
+    if(item?.total===510){
+      item.total=10
+    }
     addedItem.push(item);
     this.setState({data: addedItem});
     this.saveList(addedItem);
@@ -97,7 +117,7 @@ export default class DurabilityList extends Component {
   render(){
     return <>
       <View style={{alignItems:"center",flexDirection:"row", right:0, top:0,position:'absolute',zIndex:10}}>
-        <TouchableOpacity style={{padding:10}} 
+        <TouchableOpacity style={{padding:10, marginRight:-7}} 
           onPress={()=>{
             this.setState({showEdit:!this.state.showEdit});
             getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
@@ -113,11 +133,10 @@ export default class DurabilityList extends Component {
       </View>
       <View style={{height:10}}/>
       <View style={{alignItems: 'center'}}>
-        <View style={{paddingTop:0, marginHorizontal: 0, flex: 1, flexDirection: 'row', justifyContent:'center',flexWrap:"wrap"}}>
-          {this.state.data.map( (item, index)=>{
-            return(
+        {this.state.data.map( (item, index)=>{
+          return(
+            <View style={{width:"100%", paddingHorizontal:5}} key={item+index.toString()}>
               <ToolItem
-                key={item+index.toString()}
                 item={item}
                 index={index}
                 editAmount={this.editAmount}
@@ -125,9 +144,9 @@ export default class DurabilityList extends Component {
                 reorderItem={this.reorderItem}
                 showEdit={this.state.showEdit}
               />
-            )
-          })}
-        </View>
+            </View>
+          )
+        })}
       </View>
       <PopupAddTool ref={(popupAddTool) => this.popupAddTool = popupAddTool} addItem={this.addItem}/>
     </>
@@ -140,7 +159,7 @@ export class ToolItem extends Component {
     super();
     this.state = {
       showRemove:false,
-      animationValue: new Animated.Value(0),
+      animationValue: new Animated.Value(-Dimensions.get('window').width),
       width:0,
     }
   }
@@ -152,7 +171,7 @@ export class ToolItem extends Component {
   removeButton = (props)=>{
     if(props.showEdit || this.state.showRemove)
       return(<>
-        <View style={{flexDirection:"row",left:-10, top:-10,position:'absolute',zIndex:10, }}>
+        <View style={{flexDirection:"row",left:-7, top:-7,position:'absolute',zIndex:10, }}>
           <TouchableOpacity style={{padding:9}} 
             onPress={()=>{
               props.deleteItem(props.index); 
@@ -161,15 +180,15 @@ export class ToolItem extends Component {
             <Image source={require("../assets/icons/deleteIcon.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
           </TouchableOpacity>
         </View>
-        <View style={{flexDirection:"row",right:-5, top:-5,position:'absolute',zIndex:10, }}>
-          <TouchableOpacity style={{padding:5}} 
+        <View style={{flexDirection:"row",right:-3, top:-4,position:'absolute',zIndex:10, }}>
+          <TouchableOpacity style={{padding:6}} 
             onPress={()=>{
               props.reorderItem(props.index, -1); 
               this.setState({showRemove:false})
           }}>
             <Image source={require("../assets/icons/upArrow.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
           </TouchableOpacity>
-          <TouchableOpacity style={{padding:5}} 
+          <TouchableOpacity style={{padding:6}} 
             onPress={()=>{
               props.reorderItem(props.index, 1); 
               this.setState({showRemove:false})
@@ -195,15 +214,19 @@ export class ToolItem extends Component {
     }
     let animateToValue = 0
     if(width!==0){
-      animateToValue = percent*width
+      animateToValue = width - percent*width
     } else {
-      animateToValue = percent*this.state.width
+      animateToValue = this.state.width - percent*this.state.width
     }
-    Animated.timing(this.state.animationValue, {
-      toValue: animateToValue,
-      duration: 400,
-      useNativeDriver: false,
-    }).start();
+    if(getSettingsString("settingsLowEndDevice")==="true"){
+
+    } else {
+      Animated.timing(this.state.animationValue, {
+        toValue: animateToValue*-1,
+        duration: 800,
+        useNativeDriver: true,
+      }).start();
+    }
   }
   render(){
     return (
@@ -211,10 +234,12 @@ export class ToolItem extends Component {
           let width = event?.nativeEvent?.layout?.width;
           this.setState({width:width})
           this.animation(width)
-        }} style={{width: "90%", margin:10}}
+        }} style={{margin:10, overflow:"hidden", borderRadius:10}}
       >
-        <View style={{width: "100%", position:"absolute", backgroundColor:colors.eventBackground[global.darkMode], height:"100%", borderRadius:10, bottom:0 }}/>
-        <Animated.View style={{height:"100%", position:"absolute", backgroundColor:this.props.color!==undefined?this.props.color:colors.toolProgress[global.darkMode], width:this.state.animationValue, borderRadius:10, bottom:0}}/>
+        <View style={{width: "100%", position:"absolute", backgroundColor:colors.eventBackground[global.darkMode], height:"100%", bottom:0 }}/>
+        {getSettingsString("settingsLowEndDevice")==="true"?
+        <View style={{width:((this.props.item?.current/this.props.item?.total)*100).toString()+"%", height:"100%", position:"absolute", backgroundColor:this.props.color!==undefined?this.props.color:colors.toolProgress[global.darkMode], borderRadius:10, bottom:0}}/>:
+        <Animated.View style={{transform: [{ translateX: this.state.animationValue }], height:"100%", position:"absolute", backgroundColor:this.props.color!==undefined?this.props.color:colors.toolProgress[global.darkMode], width:"100%", borderRadius:10, bottom:0}}/>}
         {this.removeButton(this.props)}
         <TouchableNativeFeedback onLongPress={() => {
             if(this.props.noLongPress===true){
@@ -267,10 +292,10 @@ export class ToolItem extends Component {
                 <Image source={require("../assets/icons/plus.png")} style={{opacity:global.darkMode===false?0.9:0.8,width:34, height:34, margin:10, marginVertical: 22}}/>
               </TouchableOpacity>
             </View>
-            {this.state.showRemove || this.props.showEdit?
+            {this.state.showRemove || this.props.showEdit || (this.props.item.total-this.props.item.current<=0) ?
               <ButtonComponent
                 text={"Repair"}
-                color={colors.okButton[global.darkMode]}
+                color={colors.okButton3[global.darkMode]}
                 vibrate={15}
                 onPress={() => {
                   this.props.editAmount(this.props.index,0)

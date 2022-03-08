@@ -36,7 +36,7 @@ export default class PopupAddTool extends Component {
     for(let item of this.items){this.images.push(item["Image"])}
     this.tool.image = this.images[0]
     this.tool.total = this.items[0]["Uses"]
-    this.tool.title = this.items[0]["Name Language"]
+    this.tool.title = this.items[0]["NameLanguage"]
   }
 
   setPopupVisible = (visible) => {

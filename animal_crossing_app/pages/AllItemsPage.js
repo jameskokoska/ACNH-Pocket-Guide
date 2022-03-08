@@ -87,8 +87,13 @@ class AllItemsPage extends Component {
     if(this.props.currentSearch !==undefined){
       currentSearch = this.props.currentSearch;
     }
+    var currentCustomList = "";
+    if(this.props.currentCustomList !==undefined){
+      currentCustomList = this.props.currentCustomList;
+    }
     return(
         <ListPage
+          currentCustomList={currentCustomList}
           currentSearch={currentSearch}
           noStackFilters={noStackFilters}
           extraInfo={extraInfo}
@@ -238,6 +243,7 @@ class AllItemsPage extends Component {
             "Source",
             "Source",
             "Source",
+            "Source",//Dress-up
             "Source",
             "Source",
             "Source",
@@ -247,23 +253,24 @@ class AllItemsPage extends Component {
             "Source",
             "Source",
             "Source",
-            "Source",
-            "Source",
-            "Where/How",
-            "Where/How",
-            "Where/How",
-            "Source",
-            "Source",
-            "Gender",
-            "Source",
-            "Source",
-            "Source",
-            "Source",
-            "Source",
-            "Source",
-            "",
+            "Source",//Recipes
+            "Source",//tools
+            "Where/How",//fish
+            "Where/How",//insects
+            "Where/How",//sea creatures
+            "Source",//fossils
+            "Source",//art
+            "Gender",//villagers
+            "Source",//music
+            "Source",//reactions
+            "Source",//construction
+            "Source",//fencing
+            "Source",//interior
+            "Source",//other
+            "Source",//gyroids
           ]}
           popUpCornerImageLabelProperty={[
+            "Source",
             "Source",
             "Source",
             "Source",

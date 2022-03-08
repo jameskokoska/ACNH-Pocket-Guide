@@ -49,7 +49,7 @@ export class StoreHoursContainerHarvey extends Component{
     if(currentHour+1===this.props.closeHour){
       backgroundColor = colors.closingSoonStore[global.darkMode]
     } else if(this.props.closeHour < this.props.openHour){
-      if(currentHour > this.props.openHour || currentHour < this.props.closeHour){
+      if(currentHour >= this.props.openHour || currentHour < this.props.closeHour){
         backgroundColor = colors.openStore[global.darkMode];
       }
     } else {

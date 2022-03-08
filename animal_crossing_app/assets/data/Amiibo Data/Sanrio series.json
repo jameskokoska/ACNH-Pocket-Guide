@@ -5,7 +5,8 @@
     "Name": "Rilla",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/e\\/e1\\/GorillaSpeciesIconSilhouette.png\\/50px-GorillaSpeciesIconSilhouette.png",
     "type": "Gorilla",
-    "Personality": "Peppy"
+    "Personality": "Peppy",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/f\\/fb\\/002_Marty_sanrio_amiibo_card_EU.png\\/125px-002_Marty_sanrio_amiibo_card_EU.png",
@@ -13,7 +14,8 @@
     "Name": "Marty",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/2\\/23\\/Bear_cubSpeciesIconSilhouette.png\\/50px-Bear_cubSpeciesIconSilhouette.png",
     "type": "Cub",
-    "Personality": "Lazy"
+    "Personality": "Lazy",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/4\\/42\\/003_%C3%89toile_sanrio_amiibo_card_EU.png\\/125px-003_%C3%89toile_sanrio_amiibo_card_EU.png",
@@ -21,7 +23,8 @@
     "Name": "Étoile",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/7\\/79\\/SheepSpeciesIconSilhouette.png\\/50px-SheepSpeciesIconSilhouette.png",
     "type": "Sheep",
-    "Personality": "Normal"
+    "Personality": "Normal",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/1\\/17\\/004_Chai_sanrio_amiibo_card_EU.png\\/125px-004_Chai_sanrio_amiibo_card_EU.png",
@@ -29,7 +32,8 @@
     "Name": "Chai",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/5\\/54\\/ElephantSpeciesIconSilhouette.png\\/50px-ElephantSpeciesIconSilhouette.png",
     "type": "Elephant",
-    "Personality": "Peppy"
+    "Personality": "Peppy",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/7\\/75\\/005_Chelsea_sanrio_amiibo_card_EU.png\\/125px-005_Chelsea_sanrio_amiibo_card_EU.png",
@@ -37,7 +41,8 @@
     "Name": "Chelsea",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/d\\/d0\\/DeerSpeciesIconSilhouette.png\\/50px-DeerSpeciesIconSilhouette.png",
     "type": "Deer",
-    "Personality": "Normal"
+    "Personality": "Normal",
+    "Villager": "Yes"
   },
   {
     "image": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/8\\/85\\/006_Toby_sanrio_amiibo_card_EU.png\\/125px-006_Toby_sanrio_amiibo_card_EU.png",
@@ -45,6 +50,7 @@
     "Name": "Toby",
     "typeImage": "https:\\/\\/dodo.ac\\/np\\/images\\/thumb\\/d\\/db\\/RabbitSpeciesIconSilhouette.png\\/50px-RabbitSpeciesIconSilhouette.png",
     "type": "Rabbit",
-    "Personality": "Smug"
+    "Personality": "Smug",
+    "Villager": "Yes"
   }
 ]

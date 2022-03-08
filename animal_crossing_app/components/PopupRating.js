@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   View,
   Vibration,
-  Easing
+  Easing, Dimensions
 } from "react-native";
 import TextFont from "./TextFont";
 import ButtonComponent from "./ButtonComponent";
@@ -16,6 +16,8 @@ import colors from "../Colors";
 import LottieView from 'lottie-react-native';
 import Popup from "./Popup";
 import {MailLink} from "./Formattings";
+import { getSettingsString } from "../LoadJsonData";
+import { AnimatedPopupWrapper } from "./PopupAnimatedWrapper";
 
 class PopupRating extends Component {
   constructor(props) {
@@ -30,6 +32,7 @@ class PopupRating extends Component {
   }
 
   render(){
+    const backgroundStyle = {position:"absolute", left:-100, top:-100, width: Dimensions.get('window').width+200, height: Dimensions.get('window').height+200, backgroundColor: "black", opacity: 0.6}
     return (
       <>
         <Modal
@@ -38,7 +41,8 @@ class PopupRating extends Component {
           visible={this.state.popupVisible}
           statusBarTranslucent
         >
-        <View style={styles.centeredView}>
+        <AnimatedPopupWrapper style={styles.centeredView} disableAnimations={getSettingsString("settingsLowEndDevice")==="true"}>
+          <View style={backgroundStyle}/>
           <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
             <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Enjoying the app?</TextFont>
             <TextFont bold={false} style={{fontSize: 18, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Consider leaving a rating</TextFont>
@@ -76,7 +80,7 @@ class PopupRating extends Component {
               />
             </View>
           </View>
-        </View>
+        </AnimatedPopupWrapper>
       </Modal>
       </>
     )
@@ -90,7 +94,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     padding: 20,
     paddingTop: "10%",
-    backgroundColor:"rgba(0,0,0,0.5)",
   },
   modalView: {
     margin: 10,

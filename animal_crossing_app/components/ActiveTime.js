@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import {AppRegistry, StyleSheet, ScrollView , StatusBar, Text, View, Dimensions, Image, ImageBackground} from "react-native";
 import colors from '../Colors.js';
 import {parseActiveTime, isActive, isActive2, getCurrentDateObject, getMonthShort} from "./DateFunctions"
-import {getSettingsString} from "../LoadJsonData";
+import {attemptToTranslate, getSettingsString} from "../LoadJsonData";
+import { InfoLine } from "./BottomSheetComponents.js";
 
 function getImage(name){
   switch(name){
@@ -251,6 +252,7 @@ class ActiveTime extends Component {
 
     // gets current time stuff
     var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH ";
+    var settingsUse24HourClock = getSettingsString("settingsUse24HourClock")==="true";
     var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
     var currentHour = getCurrentDateObject().getHours();
     var currentTimeRange = this.props.item[hemispherePre+currentMonthShort];
@@ -268,13 +270,77 @@ class ActiveTime extends Component {
       }
     }
 
+    let activeList = [];
+
     // build active month indicator image list
     for(var i=0; i<months.length; i++){
       var timeRange = this.props.item[hemispherePre+months[i]];
       if(timeRange!=="NA"){
         activeMonthImages.push(imagePrefix + "a" + months[i] + imageSuffix);
+        activeList.push(months[i])
       }else{
         activeMonthImages.push(imagePrefix + "i" + months[i] + imageSuffix);
+        activeList.push(false)
+      }
+    }
+
+    let timePeriods = [[]]
+    for (let i=0; i < activeList.length; i++) {
+      const item = activeList[i]
+      if (item !== false && timePeriods[timePeriods.length-1].length <= 0) {
+        timePeriods[timePeriods.length-1].push(item)
+      } else if (item === false && timePeriods[timePeriods.length-1].length > 0){
+        timePeriods[timePeriods.length-1].push(activeList[i-1])
+        timePeriods.push([]);
+      } 
+    }
+    if (timePeriods[timePeriods.length-1].length <=0) {
+      timePeriods = timePeriods.splice(0, timePeriods.length-1);
+    }
+    // full year check
+    if (timePeriods.length == 1 && timePeriods[0].length == 1 && timePeriods[0][0] == "Jan") {
+      timePeriods[0].push("Dec");
+    } else {
+      // check dec - jan interval
+      if (timePeriods[0][0] === "Jan" && timePeriods[timePeriods.length-1].length == 1) {
+        timePeriods[timePeriods.length-1].push(timePeriods[0][1]);
+        timePeriods = timePeriods.splice(1);
+      }
+    }
+
+    let activeTimeString = ""
+    let currentIndex = 0
+    let ending = "; "
+    for(const timePeriod of timePeriods){
+      currentIndex=currentIndex+1
+      if(currentIndex === timePeriods.length){
+        ending = ""
+      }
+      if(timePeriod[1]===undefined){
+        activeTimeString = activeTimeString + attemptToTranslate(timePeriod[0]) + " - " + attemptToTranslate("Dec") + ending
+      } else if(timePeriod[1]==="Dec" && timePeriod[0]==="Jan"){
+        activeTimeString = activeTimeString + attemptToTranslate("All Year") + ending
+      } else if(timePeriod[0]!==timePeriod[1]){
+        activeTimeString = activeTimeString + attemptToTranslate(timePeriod[0]) + " - " + attemptToTranslate(timePeriod[1]) + ending
+      } else {
+        activeTimeString = activeTimeString + attemptToTranslate(timePeriod[0]) + ending
+      }
+    }
+
+    let textProperty2Text = this.props.item[hemispherePre+currentMonthShort];
+    let redTextProperty2 = false
+    if(textProperty2Text==="NA"){
+      textProperty2Text = this.props.item[hemispherePre+"time"];
+      redTextProperty2 = true;
+    }
+    if(settingsUse24HourClock && textProperty2Text!=="NA" && textProperty2Text!=="All day"){
+      var splitText = textProperty2Text.split("; ")
+      textProperty2Text = "";
+      for(var z = 0; z<splitText.length; z++){
+        var splitString = splitText[z].replace(/[^\x00-\x7F]/g, "");
+        splitString = splitString.replace("  ", " ");
+        splitString = splitString.split(" ");
+        textProperty2Text = textProperty2Text + (z>0?"; ":"") + parseActiveTime(splitString, 0).toString()+":00" + " - " + parseActiveTime(splitString, 2).toString()+ ":00"
       }
     }
 
@@ -296,6 +362,11 @@ class ActiveTime extends Component {
       } 
     }
 
+    let isActiveCurrentHour = false
+    if(isActive2(this.props.item[hemispherePre+currentMonthShort],getCurrentDateObject().getHours())){
+      isActiveCurrentHour = true
+    }
+
     // console.log(currentMonthImages);
     // console.log(activeMonthImages);
     // console.log(currentTimeImage);
@@ -303,32 +374,43 @@ class ActiveTime extends Component {
     // console.log(this.props.item["Name"]);
 
     return(
-      <View style={{width: Dimensions.get('window').width, marginTop: 20, flexDirection: "row", justifyContent:"space-evenly"}}>
-        <View style={{width: 160, height: 160, margin: 7,}}>
-          {/* BG Month */}
-          <Image source={require("../assets/icons/activeTime/month.png")} style={{position: "absolute", width: 160, height: 160}}/>
-          {/* Current Month */}
-          {currentMonthImages.map((object, index) => {
-            return <Image source={getImage(object)} key={index} style={{position: "absolute", width: 160, height: 160}}></Image>
-          })}
-          {/* Monthly Activity */}
-          {activeMonthImages.map((object, index) => {
-            return <Image source={getImage(object)} key={index} style={{position: "absolute", width: 160, height: 160}}></Image>
-          })}
-        </View>
+      <>
+        <InfoLine
+          image={require("../assets/icons/calendar.png")} 
+          customText={activeTimeString}
+          customColor={redTextProperty2?colors.redText[global.darkMode]:colors.textBlack[global.darkMode]}
+        />
+        <InfoLine
+          image={require("../assets/icons/alarmClock.png")}
+          customText={textProperty2Text}
+          customColor={!isActiveCurrentHour?colors.redText[global.darkMode]:colors.textBlack[global.darkMode]}
+        />
+        <View style={{width: Dimensions.get('window').width, marginTop: 0, flexDirection: "row", justifyContent:"space-evenly"}}>
+          <View style={{width: 160, height: 160, margin: 7,}}>
+            {/* BG Month */}
+            <Image source={require("../assets/icons/activeTime/month.png")} style={{position: "absolute", width: 160, height: 160}}/>
+            {/* Current Month */}
+            {currentMonthImages.map((object, index) => {
+              return <Image source={getImage(object)} key={index} style={{position: "absolute", width: 160, height: 160}}></Image>
+            })}
+            {/* Monthly Activity */}
+            {activeMonthImages.map((object, index) => {
+              return <Image source={getImage(object)} key={index} style={{position: "absolute", width: 160, height: 160}}></Image>
+            })}
+          </View>
 
-        <View style={{width: 160, height: 160, margin: 7,}}>
-          {/* Daily Activity */}
-          {activeTimeImages.map((object, index) => {
-            return <Image source={getImage(object)} key={index} style={{position: "absolute", width: 160, height: 160}}></Image>
-          })}
-          {/* Current Time */}
-          <Image source={getImage(currentTimeImage)} style={{position: "absolute", width: 160, height: 160}}></Image>
-          {/* BG Clock */}
-          <Image source={require("../assets/icons/activeTime/clock.png")} style={{position: "absolute", width: 160, height: 160}}/>
+          <View style={{width: 160, height: 160, margin: 7,}}>
+            {/* Daily Activity */}
+            {activeTimeImages.map((object, index) => {
+              return <Image source={getImage(object)} key={index} style={{position: "absolute", width: 160, height: 160}}></Image>
+            })}
+            {/* Current Time */}
+            <Image source={getImage(currentTimeImage)} style={{position: "absolute", width: 160, height: 160}}></Image>
+            {/* BG Clock */}
+            <Image source={require("../assets/icons/activeTime/clock.png")} style={{position: "absolute", width: 160, height: 160}}/>
+          </View>
         </View>
-
-      </View>
+      </>
     )
   }
 }

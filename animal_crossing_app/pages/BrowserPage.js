@@ -6,11 +6,12 @@ import { WebView } from 'react-native-webview';
 import {getSettingsString} from "../LoadJsonData"
 import Popup from "../components/Popup"
 import FadeInOut from "../components/FadeInOut"
+import * as RootNavigation from '../RootNavigation.js';
+import { AndroidBackHandler } from "react-navigation-backhandler";
 
 export default class BrowserPage extends Component {
   constructor(props) {
     super(props);
-    this.handleBackButton = this.handleBackButton.bind(this);
     let currentURL = this.props.page
     this.state = {
       canGoBack: false,
@@ -19,77 +20,82 @@ export default class BrowserPage extends Component {
     }
   }
 
-  handleBackButton = () => {
-    this.webView.goBack();
+  onBackButtonPressAndroid = () => {
+    if(this.state.canGoBack){
+      this.webView.goBack();
+      return true;
+    }
+    RootNavigation.popRoute(1)
+    return true;
   };
 
   componentDidMount() {
     this.mounted = true;
     if(!global.language.includes("English")){
-      this.popupLanguage.setPopupVisible(true);
+      this.popupLanguage?.setPopupVisible(true);
     }
-    BackHandler.addEventListener("hardwareBackPress", this.handleBackButton);
   }
 
   componentWillUnmount() {
     this.mounted = false;
-    BackHandler.removeEventListener("hardwareBackPress", this.handleBackButton);
   }
  
   render(){
     return(<>
-      <View style={{zIndex:50, position:"absolute"}} pointerEvents="none">
-      <FadeInOut fadeIn={true} delay={700} duration={300} startValue={1} endValue={0}>
-        <View style={{alignItems:"center", justifyContent:"center", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: colors.lightDarkAccent[global.darkMode]}}>
-          <Image style={{width: "60%", height:"40%", resizeMode:"contain"}} source={this.props.splashImage}/>
-          <TextFont bold={true} style={{marginBottom: 10, fontSize:23, color:colors.textBlack[global.darkMode]}}>{this.props.splashText}</TextFont>
-          <TextFont bold={false} style={{marginBottom: 10, fontSize:15, color:colors.textBlack[global.darkMode]}}>{this.props.splashCredits}</TextFont>
+      <AndroidBackHandler onBackPress={this.onBackButtonPressAndroid}>
+        <View style={{zIndex:50, position:"absolute"}} pointerEvents="none">
+        <FadeInOut fadeIn={true} delay={700} duration={300} startValue={1} endValue={0}>
+          <View style={{alignItems:"center", justifyContent:"center", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: colors.lightDarkAccent[global.darkMode]}}>
+            <Image style={{width: "60%", height:"40%", resizeMode:"contain"}} source={this.props.splashImage}/>
+            <TextFont bold={true} style={{marginBottom: 10, fontSize:23, color:colors.textBlack[global.darkMode]}}>{this.props.splashText}</TextFont>
+            <TextFont bold={false} style={{marginBottom: 10, fontSize:15, color:colors.textBlack[global.darkMode]}}>{this.props.splashCredits}</TextFont>
+          </View>
+        </FadeInOut>
         </View>
-      </FadeInOut>
-      </View>
-      <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
-        <WebView
-          forceDarkOn
-          ref={(webView) => this.webView = webView}
-          source={{ uri: this.state.currentURL }}
-          style={{width:Dimensions.get('window').width,height:Dimensions.get('window').height }}
-          injectedJavaScript={"document.body.style.userSelect = 'none';"}
-          onError={() => {
-            this.popup?.setPopupVisible(true);
-          }}
-          onHttpError={() => {
-            this.popup?.setPopupVisible(true);
-          }}
-          startInLoadingState
-          renderLoading={() => (
-            <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:1000, width:1000}}>
-              <ActivityIndicator
-                color='green'
-                size='large'
-              />
-            </View>
-          )}
-          onNavigationStateChange={navState => {
-            if(this.mounted){
-              this.setState({
-                canGoBack: navState.canGoBack,
-                canGoForward: navState.canGoForward,
-                currentURL: navState.url
-              })
-            }
-          }}
-        />
-        <BottomBar 
-          goBack={()=>this.webView.goBack()} 
-          canGoBack={this.state.canGoBack}
-          goForward={()=>this.webView.goForward()}
-          canGoForward = {this.state.canGoForward}
-          currentURL = {this.state.currentURL}
-        />
-        <Popup ref={(popup) => this.popup = popup} button1={"OK"} button1Action={()=>{return}} text={"Error"} textLower={"There was an error loading. Note that this feature needs an internet connection."}/>
-        <Popup ref={(popupLanguage) => this.popupLanguage = popupLanguage} button1={"OK"} button1Action={()=>{return}} text={"Language"} textLower={this.props.languageMessage}/>
-     </View>
-     </>
+        <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
+          <WebView
+            forceDarkOn
+            ref={(webView) => this.webView = webView}
+            source={{ uri: this.state.currentURL }}
+            style={{width:Dimensions.get('window').width,height:Dimensions.get('window').height }}
+            injectedJavaScript={"document.body.style.userSelect = 'none';"}
+            onError={() => {
+              this.popup?.setPopupVisible(true);
+            }}
+            onHttpError={() => {
+              this.popup?.setPopupVisible(true);
+            }}
+            startInLoadingState
+            renderLoading={() => (
+              <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:1000, width:1000}}>
+                <ActivityIndicator
+                  color='green'
+                  size='large'
+                />
+              </View>
+            )}
+            onNavigationStateChange={navState => {
+              if(this.mounted){
+                this.setState({
+                  canGoBack: navState.canGoBack,
+                  canGoForward: navState.canGoForward,
+                  currentURL: navState.url
+                })
+              }
+            }}
+          />
+          <BottomBar 
+            goBack={()=>this.webView.goBack()} 
+            canGoBack={this.state.canGoBack}
+            goForward={()=>this.webView.goForward()}
+            canGoForward = {this.state.canGoForward}
+            currentURL = {this.state.currentURL}
+          />
+          <Popup ref={(popup) => this.popup = popup} button1={"OK"} button1Action={()=>{return}} text={"Error"} textLower={"There was an error loading. Note that this feature needs an internet connection."}/>
+          <Popup ref={(popupLanguage) => this.popupLanguage = popupLanguage} button1={"OK"} button1Action={()=>{return}} text={"Language"} textLower={this.props.languageMessage}/>
+        </View>
+      </AndroidBackHandler>
+      </>
     )
   }
 }

@@ -3,20 +3,150 @@ export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added popup animation
+-Fixed slide popup animation stutter
+-Fixed Wishlist button when Floating Menu Button hidden in settings
+-
+-Updated translations
+-
+-Added custom lists!
+-Go to the Wishlist page to add more lists
+-If you create one or more lists, long press any item and select the list you want to add it to
+-You can also track number of items using custom lists!
+-
+-Custom lists are now backed up to the cloud
+-Custom lists item amounts are now backed up to the cloud
+-Ordinances are now backed up to the cloud
+-
+-Added a music player to the Songs page!
+-
+-Fixed source images missing on some items
+-
+-Past changes:
+-
+-Fixed ToDo list item crash when selecting custom icon that does not exist
+-
+-Added the ability to add custom icons in the ToDo list
+-Search crafting materials, villagers, reactions and tools as icons
+-
+-Tap the source in the top left of an item popup to read more
+-Fixed how item variations work
+-Item variations now always refer to the main item, not the variation
+-This helps to avoid confusion when checking off other items
+-The wishlist still refers to item variations specefically however
+-Fixed bug where some variations wouldn't appear
+-Fixed bug where item variations were in a random order
+-
+-Added safety net:
+-If the app breaks, you can still recover your data before reinstalling
+-
+-Added and revamped icons for creature sources
+-
+-Added a music player to the Songs page!
+-Play Hourly BGM or K.K. songs
+-Music will play in the background while you use the app as well!
+-
+-Fixed events with no items associated with it
+-Updated translations
+-
+-Added View Craftable Items into fish/bugs/sea creatures popup (at bottom)
+-Popup height adjustments
+-
+-Added times and months the creature is active (in text)
+-Crash fixes for popups
+-Fixed translations
+-
+-Added customizable Collection count section!
+-Tweaked location of remove and reorder buttons for lists
+-When tool reaches 0 durability, reset durability button is shown automatically
+-Stability improvements
+-Fixed tapping Sea Creatures and Bugs mixed up for Collection count section
+-Fixed null value in Tool durability section
+-Fixed Toast message crash
+-Added animation delay to collection list animation when reordered
+-
+-TV Guide page!
+-Added requires high friendship filter for Reactions
+-Added icon and info if there is custom customization item required (instead of DIY kit)
+-Added Gyroid collection count
+-Can refresh list if sort by Collected filters are active
+-Added Sort by... Collected filter to more pages
+-Updated translations
+-
+-Fixed ToDo list adding item crash
+-Fixed store hours at 5AM
+-
+-Added C.J. and Flick sell prices to Fish and Bugs
+-Can now sort on more pages
+-Added Sort by... Collected option
+-Updated privacy policy link in About page
+-Catalog import supports link with/without 'https://'
+-Catalog import loading indicator
+-UI and icon Adjustments
+-
+-Tap / long press any image on item popup to view larger image
+-Fixed flimsy net and flimsy fishing rod durability
+-
+-Backup now supports Turnip prices and ToDo list
+-Added [Battery saver / Increase performance] setting
+-Added erase profile to profile page
+-Added collection count for each profile on profile page
+-Tap in empty space to dismiss popups
+-Active creatures information popup
+-Profile page optimizations
+-Songs page has no animation when on battery saver
+-Fixed paradise planning crash
+-Improved speed of opening an item when list page has just loaded
+-Updated translations
+-Older device popup - to improve speed
+-Import and Export all app data
+- Useful when switching phones!
+- This is not a replacement for the normal backup
+-Fixed restoring turnip log (only restores current profile)
+-Fixed restoring To Do list (only restores current profile)
+-Erase profile data now removes more than just the collection
+-
+-Home page loading time improvements
+-Fixed missing translation crash
+-Villager compatibility loading animation
+-About page optimizations
+-
+-Fixed some filters not working - infinite loading
+-Optimizations to internal memory handling
+-Faster sorting and loading of data
+-Added Villager filter for Amiibo Cards
+-Fixed importing of data crash when no file selected
+-Fixed missing images
+-
+-Added Happy Home Network ID to profile
+-Happy Home Network ID and Creator code are included in the backup service
+-Fixed crash on Paradise Planning page
+-Fixed flimsy net durability
+-
+-Bug and crash fixes
+-Back button fixes
+-Back button is more consistent in UI
+-
+-Removed scrolling lag on home page
+-Updated animation to use native drivers
+-Improved performance of animations
+-Added entry count to Paradise Planning page
+-
 -Added Tool Durability tracking as Home Page section
+-Added Shooting Star counter as Home Page section
+- Tap [Edit Sections] to enable these features
 -Added animations to Collection progress
 -Added animations to Loan Tracking
 -Added filters to Quick Search
 -Loan input shows input keyboard automatically
 -Filters now sorted in alphabetical order
--Added Shooting Star counter
--Added all events for all years
 -Removed Active Creatures shortcut on Home page
 -Updated translations
 -Added Personality filters and data to Amiibo Cards
 -Fixed Amiibo cards missing images
 -Fixed popup background wrong size on some devices
 -Color changes and fixes
+-Fixed event colors for Southern Hemisphere
 -Package updates
 -
 -Added Quick Search on home screen, swipe down on home page to instantly search All Items
@@ -80,8 +210,6 @@ export const changelog = `
 -Removed sorting filters for items pages that it doesn't apply to
 -Added popup for info on how to add villagers in your town (only appears once)
 -Cloud backup service verifies data in a better way to ensure successful upload
--
--Past changes:
 -
 -If avoiding spoilers, villager image will show for past villagers and if you collected their photo
 -Fixed date on Letters page, flipped based on language

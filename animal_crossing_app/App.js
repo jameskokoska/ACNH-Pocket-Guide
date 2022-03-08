@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Vibration, BackHandler, Dimensions, Text, View, StatusBar, ToastAndroid, Linking} from 'react-native';
+import {Vibration, BackHandler, Dimensions, Text, View, StatusBar, Linking, } from 'react-native';
 import FAB, { FABWrapper } from './components/FAB';
 import CalendarPage from './pages/CalendarPage';
 import SongsPage from './pages/SongsPage';
@@ -21,7 +21,7 @@ import LottieView from 'lottie-react-native';
 import CreditsPage from './pages/CreditsPage';
 import FlowerPage from './pages/FlowerPage';
 import CardsPage from './pages/CardsPage';
-import {getDefaultLanguage, getStorage,getSettingsString, settings, loadGlobalData, attemptToTranslate, indexCollectionList} from './LoadJsonData';
+import {getDefaultLanguage, getStorage,getSettingsString, settings, loadGlobalData, attemptToTranslate, indexCollectionList, setSettingsString} from './LoadJsonData';
 import Onboard from './pages/Onboard';
 import colors from './Colors.js';
 import * as Font from 'expo-font';
@@ -64,6 +64,22 @@ import TextFont from './components/TextFont';
 import { DefaultTheme, Provider } from 'react-native-paper';
 import GlobalSearchPage from './pages/GlobalSearchPage';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import * as Sentry from 'sentry-expo';
+import {sentryConfig} from './sentryConfig'
+import { useAndroidBackHandler } from "react-navigation-backhandler";
+import * as Device from 'expo-device';
+import * as ErrorRecovery from 'expo-error-recovery';
+import CrashPage, { EmptyPage } from './pages/CrashPage';
+
+const defaultErrorHandler = ErrorUtils.getGlobalHandler();
+
+const globalErrorHandler = (error, isFatal) => {
+  console.log("globalErrorHandler called!");
+  ErrorRecovery.setRecoveryProps({ error: error, isFatal: isFatal });
+  defaultErrorHandler(error, isFatal);
+};
+
+ErrorUtils.setGlobalHandler(globalErrorHandler);
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -73,6 +89,17 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 // › npm install -g eas-cli
 // › eas build -p android https://docs.expo.dev/build/setup/
 // expo build:android will be discontinued on January 4, 2023 (385 days left).
+
+Sentry.init({
+  dsn: sentryConfig["dsn"],
+  // enableInExpoDevelopment: true,
+  // debug: true, // If `true`, Sentry will try to print out useful debugging information if something goes wrong with sending the event. Set it to `false` in production
+});
+
+// Sentry.Native.*
+
+// Sentry.Browser.*
+
 const appInfo = require("./app.json");
 global.version = appInfo["expo"]["version"];
 global.versionCode = appInfo["expo"]["android"]["versionCode"];
@@ -81,12 +108,31 @@ const Stack = createNativeStackNavigator();
 class App extends Component {
   constructor() {
     super();
+    this.lastError = ErrorRecovery.recoveredProps
+  }
+  loadApplication = ()=>{
+    this.lastError = false; 
+    ErrorRecovery.setRecoveryProps({ error: "cleared", isFatal: false });
+    this.forceUpdate();
+  }
+  render(){
+    if(this.lastError && this.lastError.error!=="cleared"){
+      return <CrashPage lastError={this.lastError} loadApplication={this.loadApplication}/>
+    } else {
+      return <Main/>
+    }
+  }
+}
+
+
+class Main extends Component {
+  constructor() {
+    super();
     this.openDrawer = this.openDrawer.bind(this);
     this.setPage = this.setPage.bind(this);
     this.setFirstLogin = this.setFirstLogin.bind(this);
     this.handleBackButton = this.handleBackButton.bind(this);
     this.random = Math.random();
-    this.numLogins;
     this.state = {
       loaded: false,
       currentPage:0,
@@ -126,14 +172,24 @@ class App extends Component {
     global.profile = selectedProfile
     global.collectionList = (await getStorage("collectedString"+global.profile,"")).split("\n");
     global.collectionListIndexed = indexCollectionList(global.collectionList)
+    global.collectionListIndexedAmount = JSON.parse(await getStorage("collectionListIndexedAmount"+global.profile,"{}"));
     global.name = await getStorage("name"+global.profile,"");
     global.islandName = await getStorage("islandName"+global.profile,"");
     global.dreamAddress = await getStorage("dreamAddress"+global.profile,"");
     global.friendCode = await getStorage("friendCode"+global.profile,"");
     global.creatorCode = await getStorage("creatorCode"+global.profile,"");
+    global.HHPCode = await getStorage("HHPCode"+global.profile,"");
     global.selectedFruit = await getStorage("selectedFruit"+global.profile,"");
     global.customTimeOffset = await getStorage("customDateOffset"+global.profile,"0");
     global.ordinance = await getStorage("ordinance"+global.profile,"");
+    global.customLists = JSON.parse(await getStorage("customLists"+global.profile,"[]"));
+    let lastSelectedListPage = await getStorage("lastSelectedListPage"+global.profile,"");
+    if(lastSelectedListPage!=="" && customLists!==undefined && customLists.includes(lastSelectedListPage)){
+      global.lastSelectedListPage = lastSelectedListPage
+    } else {
+      global.lastSelectedListPage = ""
+    }
+    global.customListsImagesIndexed = JSON.parse(await getStorage("customListsImagesIndexed"+global.profile,"{}"));
     // console.log(global.collectionList)
   }
 
@@ -268,7 +324,12 @@ class App extends Component {
     await this.loadProfileData(global.profile);
     
     //Load Global Data
-    await loadGlobalData();
+    let loadResult = await loadGlobalData();
+    if(loadResult === false){
+      this.setState({loaded:false})
+      this.popupGenerateMenu?.setPopupVisible(true)
+      return
+    }
 
     this.updateSettings();
 
@@ -384,20 +445,22 @@ class App extends Component {
     if(global.settingsCurrent!==undefined&&getSettingsString("settingsShowFAB")==="true"){
       needsPadding = true;
     }
-    toast.show(result[0], {type:result[1]===false?"success":"danger", 
-      renderType:{
-        success: (toast) => (
-          <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 12, marginRight: needsPadding?100:20, borderRadius: 5, backgroundColor: colors.popupSuccess[global.darkMode], alignItems:"center", justifyContent:"center"}}>
-            <TextFont translate={false} style={{color:"white", fontSize: 15}}>{toast.message}</TextFont>
-          </View>
-        ),
-        danger: (toast) => (
-          <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 12, marginRight: needsPadding?100:20, borderRadius: 5, backgroundColor: colors.popupDanger[global.darkMode], alignItems:"center", justifyContent:"center"}}>
-            <TextFont translate={false} style={{color:"white", fontSize: 15}}>{toast.message}</TextFont>
-          </View>
-        )
-      }
-    })
+    if(toast){
+      toast.show(result[0], {type:result[1]===false?"success":"danger", 
+        renderType:{
+          success: (toast) => (
+            <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 12, marginRight: needsPadding?100:20, borderRadius: 5, backgroundColor: colors.popupSuccess[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+              <TextFont translate={false} style={{color:"white", fontSize: 15}}>{toast.message}</TextFont>
+            </View>
+          ),
+          danger: (toast) => (
+            <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 12, marginRight: needsPadding?100:20, borderRadius: 5, backgroundColor: colors.popupDanger[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+              <TextFont translate={false} style={{color:"white", fontSize: 15}}>{toast.message}</TextFont>
+            </View>
+          )
+        }
+      })
+    }
   }
 
   openDrawer(vibrate=true) {
@@ -549,7 +612,6 @@ class App extends Component {
 
       let otherComponents = <>
         <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
-        <View style={{zIndex:-5, position: "absolute", backgroundColor: colors.background[global.darkMode], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
         <StatusBar translucent={false} hidden={getSettingsString("settingsShowStatusBar")==="false"} backgroundColor={colors.background[global.darkMode]} barStyle={global.darkMode===1?"light-content":"dark-content"}/>
       </>
 
@@ -561,8 +623,9 @@ class App extends Component {
       const NavigatorVillagerFurnitureParadisePlanning = ({route, navigation})=>{return <VillagerFurnitureParadisePlanning request={route.params.propsPassed}/>}
       const NavigatorBrowserPage = ({route, navigation})=>{return <BrowserPage page={route.params.propsPassed} languageMessage={"You can change the language at the bottom of the page, by tapping Language"} splashImage={require('./assets/icons/turnip.png')} splashText={"Turnip Prophet"} splashCredits={"By mikebryant"}/>}
       const NavigatorGlobalSearchPage = ({route, navigation})=>{return <GlobalSearchPage currentSearch={route.params.propsPassed} setPage={this.setPage}/>}
+      
+      console.log("Current page: " + this.state.currentPage)
 
-      console.log(global.darkMode)
       let theme = {
         ...DefaultTheme,
         mode:"exact",
@@ -581,7 +644,7 @@ class App extends Component {
           <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage} sideMenuSections={this.sideMenuSections} sideMenuSectionsDisabled={this.sideMenuSectionsDisabled}>
             <Provider theme={theme}>
               <NavigationContainer ref={navigationRef} theme={{colors: {background: colors.background[global.darkMode],},}}>
-                <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
+                <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false, headerTransparent: true, }}>
                   <Stack.Screen name="Home" component={NavigatorHomePage} />
                   <Stack.Screen name="20" component={NavigatorVillagerPresentsPage}/>
                   <Stack.Screen name="22" component={NavigatorVillagerFurniture}/>
@@ -604,53 +667,77 @@ class App extends Component {
 
 class PopupInfos extends Component {
   async componentDidMount(){
-    const numLogins = parseInt(await getStorage("numLogins","0"))+1;
-    // let backupPopupDismissed = await getStorage("backupPopupDismissed","false");
-    let backupPopupDismissed = await getStorage("backupPopupDismissed","false");
-    if(backupPopupDismissed==="false" && numLogins >= 9){
-      AsyncStorage.setItem("backupPopupDismissed", "true");
-      this.popupBackup?.setPopupVisible(true)
-    }
-    // let supportPopupDismissed = await getStorage("supportPopupDismissed","false");
-    // if(supportPopupDismissed==="false" && numLogins >= 6){
-    //   AsyncStorage.setItem("supportPopupDismissed", "true");
-    //   this.popupSupport?.setPopupVisible(true)
-    // }
-    let supportPopupDismissed2 = await getStorage("supportPopupDismissed2","false");
-    if(supportPopupDismissed2==="false" && numLogins >= 5){
-      AsyncStorage.setItem("supportPopupDismissed2", "true");
-      this.popupSupport2?.setPopupVisible(true)
-    }
-    // let supportPopupDismissed3 = await getStorage("supportPopupDismissed3","false");
-    // if(supportPopupDismissed3==="false" && numLogins >= 5){
-    //   AsyncStorage.setItem("supportPopupDismissed3", "true");
-    //   this.popupSupport3?.setPopupVisible(true)
-    // }
-    // let supportPopupDismissed4 = await getStorage("supportPopupDismissed4","false");
-    // if(supportPopupDismissed4==="false" && numLogins >= 5){
-    //   AsyncStorage.setItem("supportPopupDismissed4", "true");
-    //   this.popupSupport4?.setPopupVisible(true)
-    // }
-    // let updatePopupDismissed = await getStorage("updatePopupDismissed","false");
-    // if(updatePopupDismissed==="false" && numLogins >= 1){
-    //   AsyncStorage.setItem("updatePopupDismissed", "true");
-    //   this.popupUpdate?.setPopupVisible(true)
-    // }
-    if(numLogins===4){
-      this.popupRating?.setPopupVisible(true)
-    }
-    // console.log("numlogins:"+numLogins)
-    await AsyncStorage.setItem("numLogins", numLogins.toString());
-    this.numLogins = numLogins;
+    setTimeout(async ()=>{
+      const numLogins = parseInt(await getStorage("numLogins","0"))+1;
+      const numLoginsOffset = JSON.parse(await getStorage("numLoginsOffset",JSON.stringify([global.version,1])));
+      if(numLoginsOffset[0]===global.version){
+        if(numLoginsOffset[1]>=1){
+          //can periodically switch this one (ref and storage key)
+          let supportPopupDismissed = await getStorage("supportPopupDismissed5","false");
+          if(supportPopupDismissed==="false" && numLogins >= 10){
+            AsyncStorage.setItem("supportPopupDismissed5", "true");
+            this.popupSupport2?.setPopupVisible(true)
+          }
+        }
+        AsyncStorage.setItem("numLoginsOffset", JSON.stringify([global.version,numLoginsOffset[1]+1]));
+      } else {
+        AsyncStorage.setItem("numLoginsOffset", JSON.stringify([global.version,1]));
+      }
+      
+      // let backupPopupDismissed = await getStorage("backupPopupDismissed","false");
+      let backupPopupDismissed = await getStorage("backupPopupDismissed","false");
+      if(backupPopupDismissed==="false" && numLogins >= 8){
+        AsyncStorage.setItem("backupPopupDismissed", "true");
+        this.popupBackup?.setPopupVisible(true)
+      }
+      let supportPopupDismissed = await getStorage("supportPopupDismissed","false");
+      if(supportPopupDismissed==="false" && numLogins >= 6){
+        AsyncStorage.setItem("supportPopupDismissed", "true");
+        this.popupSupport2?.setPopupVisible(true)
+      }
+      // let supportPopupDismissed2 = await getStorage("supportPopupDismissed2","false");
+      // if(supportPopupDismissed2==="false" && numLogins >= 6){
+      //   AsyncStorage.setItem("supportPopupDismissed2", "true");
+      //   this.popupSupport2?.setPopupVisible(true)
+      // }
+      // let supportPopupDismissed3 = await getStorage("supportPopupDismissed3","false");
+      // if(supportPopupDismissed3==="false" && numLogins >= 6){
+      //   AsyncStorage.setItem("supportPopupDismissed3", "true");
+      //   this.popupSupport3?.setPopupVisible(true)
+      // }
+      // let supportPopupDismissed4 = await getStorage("supportPopupDismissed4","false");
+      // if(supportPopupDismissed4==="false" && numLogins >= 6){
+      //   AsyncStorage.setItem("supportPopupDismissed4", "true");
+      //   this.popupSupport4?.setPopupVisible(true)
+      // }
+      // let updatePopupDismissed = await getStorage("updatePopupDismissed","false");
+      // if(updatePopupDismissed==="false" && numLogins >= 1){
+      //   AsyncStorage.setItem("updatePopupDismissed", "true");
+      //   this.popupUpdate?.setPopupVisible(true)
+      // }
+      if(numLogins===4){
+        this.popupRating?.setPopupVisible(true)
+      }
+      // console.log("numlogins:"+numLogins)
+      await AsyncStorage.setItem("numLogins", numLogins.toString());
+
+      if(Device.deviceYearClass!==undefined && Device.deviceYearClass!==null && Device.deviceYearClass<=2014 && (await getStorage("improvePerformancePopupDismissed","false"))==="false" && getSettingsString("settingsLowEndDevice")==="false" && numLogins>1){
+        AsyncStorage.setItem("improvePerformancePopupDismissed", "true");
+        this.popupImprovePerformance?.setPopupVisible(true)
+      }
+    },0)
   }
+
   render(){
     return <>
       <PopupRating ref={(popupRating) => this.popupRating = popupRating}/>
+      <Popup ref={(popupImprovePerformance) => this.popupImprovePerformance = popupImprovePerformance} text="Improve Performance" textLower="To increase app performance, consider enabling the [Battery saver / Increase performance] setting." button1={"Enable"} button1Action={()=>{setSettingsString("settingsLowEndDevice","true");}} button2={"Not now"} button2Action={()=>{}}/>
       <Popup mailLink={true} ref={(popupBackup) => this.popupBackup = popupBackup} text="Data Backup" textLower="You can now backup your data to the cloud and enable auto backups in the settings." button1={"Go to page"} button1Action={()=>{this.props.setPage(30)}} button2={"Cancel"} button2Action={()=>{}}/>
       <Popup support={true} noDismiss ref={(popupSupport) => this.popupSupport = popupSupport} text="Leave a Tip" button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
-      <Popup margin support2={true} noDismiss ref={(popupSupport2) => this.popupSupport2 = popupSupport2} text="Support the App" textLower={attemptToTranslate("Consider leaving a tip to keep the app ad free for all") + " 😄"} button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
-      {/* <Popup margin support2={true} noDismiss ref={(popupSupport3) => this.popupSupport3 = popupSupport3} text="Happy Holidays!" textLower={attemptToTranslate("Support the app to keep it ad free for all") + " 😄"} button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
-      <Popup margin support2={true} noDismiss ref={(popupSupport4) => this.popupSupport4 = popupSupport4} text="Happy New Year!" textLower={attemptToTranslate("Consider supporting this ad free app") + " 🙂"} button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/> */}
+      <Popup margin support2={true} noDismiss ref={(popupSupport2) => this.popupSupport2 = popupSupport2} text="Buy me a Coffee" textLower={attemptToTranslate("If you enjoy this free app, buy the developer a coffee!") + " ☕"} button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
+      {/* <Popup margin support2={true} noDismiss ref={(popupSupport3) => this.popupSupport3 = popupSupport3} text="Happy Holidays!" textLower={attemptToTranslate("Support the app to keep it ad free for all") + " 😄"} button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>*/}
+      <Popup margin support2={true} noDismiss ref={(popupSupport3) => this.popupSupport3 = popupSupport3} text="Support the App" textLower={attemptToTranslate("Support the app to keep it ad free for all") + " 😄"} button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
+      {/* <Popup margin support2={true} noDismiss ref={(popupSupport4) => this.popupSupport4 = popupSupport4} text="Happy New Year!" textLower={attemptToTranslate("Consider supporting this ad free app") + " 🙂"} button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>  */}
     </>
   }
 }

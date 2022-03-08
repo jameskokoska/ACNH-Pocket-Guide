@@ -17,16 +17,26 @@ export class CircularImage extends Component {
     if(this.props.popUpCenterImage==="none"){
       return <View/>
     }
-    return <View style={{width:"100%", alignItems: 'center'}}>
-      <View style={[styles.rowImageBackground,{backgroundColor:this.props.accentColor, top: getSettingsString("settingsLargerItemPreviews")==="false" ? -130/2-20 : -210/2-60, height: getSettingsString("settingsLargerItemPreviews")==="false" ? 130 : 210, width: getSettingsString("settingsLargerItemPreviews")==="false" ? 130 : 210,}]}>
-        <FastImage
-          style={[styles.rowImage, {height: getSettingsString("settingsLargerItemPreviews")==="false" ? 95 : 180, width: getSettingsString("settingsLargerItemPreviews")==="false" ? 95 : 180,}]}
-          source={{
-            uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
-          }}
-          cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
-        />
-      </View>
+    //the width of the TouchableOpacity is used in PopupBottomCustom in Popup.js
+    return <View style={{width:"100%", alignItems:'center', justifyContent:'center'}}>
+    <TouchableOpacity
+      activeOpacity={0.9}
+      onPress={() => {  
+        this.props.showLargerPopupImage()
+      }}
+      onLongPress={() => {  
+        this.props.showLargerPopupImage()
+      }}
+      style={[styles.rowImageBackground,{bottom:getSettingsString("settingsLargerItemPreviews")==="false" ? -130/2+3 : -210/2 + 45, width:"100%", zIndex:500,backgroundColor:this.props.accentColor, height: getSettingsString("settingsLargerItemPreviews")==="false" ? 140 : 210, width: getSettingsString("settingsLargerItemPreviews")==="false" ? 140 : 210,}]}
+    >
+      <FastImage
+        style={[styles.rowImage, {height: getSettingsString("settingsLargerItemPreviews")==="false" ? 105 : 180, width: getSettingsString("settingsLargerItemPreviews")==="false" ? 105 : 180,}]}
+        source={{
+          uri: this.props.item[this.props.imageProperty[this.props.item.dataSet]],
+        }}
+        cacheKey={this.props.item[this.props.imageProperty[this.props.item.dataSet]]}
+      />
+    </TouchableOpacity>
     </View>
   }
 }
@@ -34,20 +44,28 @@ export class CircularImage extends Component {
 export class LeftCornerImage extends Component {
   render() {
     let label = this.props.item[this.props.popUpCornerImageLabelProperty[this.props.item.dataSet]]
-    if(label===undefined || label===""){
+    if((label===undefined || label==="") && this.props.item["Data Category"]!=="Sea Creatures"){
       return <View/>
     }
-    let photo = getPhotoCorner(this.props.item[this.props.popUpCornerImageProperty[this.props.item.dataSet]])
+    let photoSource = this.props.item[this.props.popUpCornerImageProperty[this.props.item.dataSet]]
     if(this.props.item["Data Category"]==="Sea Creatures"){
       label = "Underwater"
-      photo = getPhotoCorner("Underwater")
+      photoSource = "Underwater"
     }
-    return <>
-      <View style={[styles.cornerImageBackground,{backgroundColor:this.props.accentColor}]}>
-        {photo}
-      </View>
-      <TextFont style={[styles.cornerImageLabel,{color:colors.textLight[global.darkMode]}]}>{label}</TextFont>
-    </>
+    let photo = getPhotoCorner(photoSource)
+    return <View style={{ zIndex:50, position: "absolute", top:-15, left:-15,margin: 30,}}>
+      <TouchableOpacity
+        activeOpacity={0.9}
+        onPress={() => {this.popupImageSource?.setPopupVisible(true, getPhoto(photoSource?.toLowerCase()),this.props.item, photoSource)}}
+        style={{alignItems: 'center',}}
+      >
+        <View style={{backgroundColor:this.props.accentColor,width: 75, height: 75, borderRadius: 100, justifyContent: 'center', alignItems: 'center' }}>
+          {photo}
+        </View>
+        <TextFont numberOfLines={4} style={[styles.cornerImageLabel,{color:colors.textLight[global.darkMode]}]}>{label}</TextFont>
+      </TouchableOpacity>
+      <PopupImageSource ref={(popupImageSource) => this.popupImageSource = popupImageSource}/>
+    </View>
   }
 }
 
@@ -56,13 +74,13 @@ export class RightCornerCheck extends Component {
     super(props);
     this.setCollected = this.setCollected.bind(this);
     this.state = {
-      collected:inChecklist(this.props.item.checkListKey)
+      collected:inChecklist(this.props.item.checkListKeyParent)
     };
   }
   //update component when new data is passed into the class, or when the check mark local value changes
   componentDidUpdate(prevProps) {
     if(this.props!==prevProps){
-      this.setState({collected:inChecklist(this.props.item.checkListKey)});
+      this.setState({collected:inChecklist(this.props.item.checkListKeyParent)});
     }
   }
   setCollected(collected){
@@ -70,7 +88,7 @@ export class RightCornerCheck extends Component {
     this.props.updateCheckChildFunction(this.state.collected===true ? false:true);
   }
   updateRightCornerCheck(key,checked){
-    if(this.props.item.checkListKey === key){
+    if(this.props.item.checkListKeyParent === key){
       this.setState({collected:checked});
     }
   }
@@ -79,9 +97,9 @@ export class RightCornerCheck extends Component {
     <TouchableOpacity
       activeOpacity={0.6}
       onPress={() => {  
-        checkOff(this.props.item.checkListKey, this.state.collected);
+        checkOff(this.props.item.checkListKeyParent, this.state.collected);
         this.setCollected(this.state.collected===true ? false:true);
-        this.props.updateVariations(this.props.item.checkListKey,this.state.collected);
+        this.props.updateVariations(this.props.item.checkListKeyParent,this.state.collected);
     }}>
       <Check checkType={this.props.checkType} fadeOut={false} play={this.state.collected} width={135} height={135}/>
     </TouchableOpacity>
@@ -160,6 +178,13 @@ export class InfoLinePlain extends Component{
 
 export class InfoLine extends Component {
   render() {
+    if(this.props.customText!==undefined){
+      var imageSource = <Image style={styles.infoLineImage} source={this.props.image}/>;
+      return <View style={[styles.infoLineBox,{justifyContent:this.props.center===false?"flex-start":"center", marginVertical:this.props.condensed===true?-5:0}]}>
+        {imageSource}
+        <TextFont adjustsFontSizeToFit={true} bold={true} style={[styles.infoLineTitle,{color:this.props.customColor!==undefined ? this.props.customColor : colors.textBlack[global.darkMode] }]}>{this.props.customText}</TextFont>
+      </View>
+    }
     var ending = "";
     if(this.props.ending!==undefined){
       ending=this.props.ending;
@@ -213,13 +238,13 @@ export class InfoLine extends Component {
       if(text==="NFS" && this.props.item["Exchange Price"] !==undefined && this.props.item["Exchange Price"] !=="NA"){
         text = commas(this.props.item["Exchange Price"]);
       }
-      if(this.props.item[this.props.ending].toLowerCase().includes("miles")){
+      if(this.props.item[this.props.ending].toString().toLowerCase().includes("miles")){
         ending= " " + attemptToTranslate("miles");
         imageSource = <Image style={styles.infoLineImage} source={require("../assets/icons/miles.png")}/>;
-      } else if(this.props.item[this.props.ending].toLowerCase().includes("nook points")){
+      } else if(this.props.item[this.props.ending].toString().toLowerCase().includes("nook points")){
         ending= " " + attemptToTranslate("Nook points");
         imageSource = <Image style={styles.infoLineImage} source={require("../assets/icons/nookLinkCoin.png")}/>;
-      } else if(this.props.item[this.props.ending].toLowerCase().includes("heart crystals")){
+      } else if(this.props.item[this.props.ending].toString().toLowerCase().includes("heart crystals")){
         ending= " " + attemptToTranslate("heart crystals");
         imageSource = <Image style={styles.infoLineImage} source={require("../assets/icons/crystal.png")}/>;
       } else if( text!=="NFS" ){
@@ -228,7 +253,7 @@ export class InfoLine extends Component {
       } else {
         ending = "";
       }
-    } else if(text.toLowerCase()==="nfs"){
+    } else if(text.toString().toLowerCase()==="nfs"){
       ending="";
     } else if (this.props.ending==="Exchange Currency"){
       ending = " " + attemptToTranslate("bells");
@@ -236,8 +261,16 @@ export class InfoLine extends Component {
     }
 
     if(currencyBells && global.ordinance === "Bell Boom" && this.props.item[this.props.textProperty]!==undefined){
-      console.log("bell boom")
+      // console.log("bell boom")
       text = commas(parseInt(parseInt(this.props.item[this.props.textProperty])*1.2))
+    }
+    
+    if(this.props.special!==undefined && this.props.special==="C.J."){
+      extraImageSource = <Image style={[styles.infoLineImage,{marginRight:2}]} source={require("../assets/icons/coin.png")}/>
+      text = commas(parseInt(parseInt(this.props.item[this.props.textProperty])*1.5))
+    } else if(this.props.special!==undefined && this.props.special==="Flick"){
+      extraImageSource = <Image style={[styles.infoLineImage,{marginRight:2}]} source={require("../assets/icons/coin.png")}/>
+      text = commas(parseInt(parseInt(this.props.item[this.props.textProperty])*1.5))
     }
 
     //handle poki
@@ -271,6 +304,17 @@ export class InfoLine extends Component {
       text = doWeSwapDate()===true ? textSplit[1] + " " + attemptToTranslate(getMonth(textSplit[0]-1)) : attemptToTranslate(getMonth(textSplit[0]-1)) + " " + textSplit[1]
     }
 
+    if(this.props.textProperty[0]==="Kit Cost" && this.props.item["Kit Type"]!==undefined && this.props.item["Kit Type"]!=="NA" && this.props.item["Kit Type"]!=="Normal" && this.props.item["Kit Type"]!=="None"){
+      ending = ending + " ("+attemptToTranslate(this.props.item["Kit Type"])+")"
+      let materialImage = getMaterialImage(this.props.item["Kit Type"], true)
+      console.log(materialImage)
+      if(materialImage===""){
+        extraImageSource = <Image style={[styles.infoLineImage,{marginRight:2}]} source={getPhoto(this.props.item["Kit Type"].toLowerCase())}/>
+      }else {
+        extraImageSource = <FastImage style={[styles.infoLineImage,{width: 30, height:30}]} source={{uri: materialImage}} cacheKey={materialImage}/>
+      }
+    }
+
     var colors1 = <View/>
     var colors2 = <View/>
     if(this.props.textProperty[0]==="Color 1"&&this.props.textProperty2[0]==="Color 2"){
@@ -283,13 +327,13 @@ export class InfoLine extends Component {
       
     }
     if(this.props.translateItem){
-      text = attemptToTranslateItem(text.toLowerCase())
+      text = attemptToTranslateItem(text.toString().toLowerCase())
       text=capitalize(text)
     }
     return <View style={[styles.infoLineBox,{justifyContent:this.props.center===false?"flex-start":"center", marginVertical:this.props.condensed===true?-5:0}]}>
       {extraImageSource}
       {imageSource}
-      <TextFont adjustsFontSizeToFit={true} bold={true} style={[styles.infoLineTitle,{color:colors.textBlack[global.darkMode]}]}>{starting + text + ending}</TextFont>
+      <TextFont adjustsFontSizeToFit={true} bold={true} style={[styles.infoLineTitle,{color:this.props.customColor!==undefined ? this.props.customColor : colors.textBlack[global.darkMode]}]}>{starting + text + ending}</TextFont>
       {colors1}{colors2}
     </View>
   }
@@ -420,10 +464,13 @@ export class Variations extends Component {
   updateWishlist = () => {
     this.setState({wishlistItems:this.getWishlistItems(this.state.variations)})
   }
+  showPopupImage = (visible) => {
+    this.popup?.setPopupVisible(visible, this.props.item[this.props.imageProperty[this.props.item.dataSet]], this.props.item);
+  }
   render(){
     if(this.props.item!=""||this.props.item!=undefined){
       if(this.state.variations.length<=1){
-        return <View/>
+        return <PopupImage ref={(popup) => this.popup = popup} updateWishlist={this.updateWishlist} selectCustomList={this.props.selectCustomList}/>
       }
       var imageProperty = this.props.imageProperty;
       var dataSet = this.props.item.dataSet;
@@ -438,7 +485,7 @@ export class Variations extends Component {
             )}
           </View>
           </ScrollView>
-          <PopupImage ref={(popup) => this.popup = popup} updateWishlist={this.updateWishlist}/>
+          <PopupImage ref={(popup) => this.popup = popup} updateWishlist={this.updateWishlist} selectCustomList={this.props.selectCustomList}/>
           </>
         )
       } else {
@@ -449,7 +496,7 @@ export class Variations extends Component {
               <VariationItem wishlist={this.state.wishlistItems.includes(item.checkListKey)} variations={this.state.variations} updateRightCornerCheck={this.props.updateRightCornerCheck} updateKey={this.state.updateKey} updateChecked={this.state.updateChecked} originalCheckListKey={originalCheckListKey} updateCheckChildFunction={this.props.updateCheckChildFunction} index={index} key={item["Unique Entry ID"]!==undefined?item["Unique Entry ID"]:item[this.props.imageProperty[dataSet]]} globalDatabase={this.props.globalDatabase} item={item} setPopupVisible={(state, image, item)=>this.popup?.setPopupVisible(state, image, item)} dataSet={dataSet} imageProperty={imageProperty}/>
             )}
           </View>
-          <PopupImage ref={(popup) => this.popup = popup} updateWishlist={this.updateWishlist}/>
+          <PopupImage ref={(popup) => this.popup = popup} updateWishlist={this.updateWishlist} selectCustomList={this.props.selectCustomList}/>
           </>
         )
       }
@@ -499,16 +546,16 @@ class VariationItem extends Component{
       <TouchableOpacity 
         onLongPress={()=>{this.props.setPopupVisible(true, item[this.props.imageProperty[dataSet]], item); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : ""}}
         onPress={()=>{ 
-          if(item.checkListKey+this.extraIndex === this.props.originalCheckListKey)
-            this.props.updateCheckChildFunction(this.state.checked===true ? false:true);
+          // if(item.checkListKey+this.extraIndex === this.props.originalCheckListKey)
+          //   this.props.updateCheckChildFunction(this.state.checked===true ? false:true);
           checkOff(item.checkListKey, this.state.checked, "", this.extraIndex); 
-          this.props.updateRightCornerCheck(item.checkListKey+this.extraIndex,!this.state.checked)
+          // this.props.updateRightCornerCheck(item.checkListKey+this.extraIndex,!this.state.checked)
           this.setState({checked: !this.state.checked})
           
           if(howManyVariationsChecked(this.props.variations) === this.props.variations.length){
             this.props.updateCheckChildFunction(true);
-            this.props.updateRightCornerCheck(this.props.originalCheckListKey,true)
-            checkOff(this.props.originalCheckListKey, !true); 
+            this.props.updateRightCornerCheck(item.checkListKeyParent,true)
+            checkOff(item.checkListKeyParent, !true); 
           }
         }}>
         {this.state.wishlist? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:13, height:13, resizeMode:"contain",position:'absolute', left:9, top: 9, zIndex:10,}}/> : <View/>}
@@ -522,7 +569,7 @@ class VariationItem extends Component{
             cacheKey={item[this.props.imageProperty[dataSet]]}
           />:<Image
             style={{height: getSettingsString("settingsLargerItemPreviews")==="false"?53:70, width: getSettingsString("settingsLargerItemPreviews")==="false"?53:70, resizeMode:'contain',}}
-            source={getPhoto(item[this.props.imageProperty[dataSet]]!==undefined?item[this.props.imageProperty[dataSet]].toLowerCase():"")}
+            source={getPhoto(item[this.props.imageProperty[dataSet]]!==undefined?item[this.props.imageProperty[dataSet]].toString().toLowerCase():"")}
           />}
         </View>
       </TouchableOpacity>
@@ -539,16 +586,38 @@ class PopupImage extends Component {
   }
 
   setPopupVisible = (visible, image, item) => {
-    this.setState({image:image, item:item, wishlist: inWishlist(item.checkListKey),});
+    this.setState({image:image, item:item, wishlist: inWishlist(item?.checkListKey),});
     this.popup?.setPopupVisible(true);
   }
 
   addToWishlist = () => {
-    checkOff(this.state.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
-    this.setState({wishlist: this.state.wishlist===true ? false:true});
-    this.props.updateWishlist();
+    console.log("adwjawjdkjkdwakjdajk")
+    // checkOff(this.state.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
+    this.props.selectCustomList(
+      this.state.item, 
+      ()=>{
+        //run when wishlist list selected
+        this.setState({wishlist: this.state.wishlist===true ? false:true});
+        this.props.updateWishlist();
+      }, 
+      ()=>{
+        //run when tapped
+        // this.popup?.setPopupVisible(false);
+      },
+      //dont popup using bottom sheet
+      false
+    );
   }
   render(){
+    let maxWidth = 200
+    if(Dimensions.get('window').width*0.6 > 200 || Dimensions.get('window').height*0.6 > 200){
+      maxWidth = 200
+    } else {
+      if(Dimensions.get('window').width > Dimensions.get('window').height)
+        maxWidth = Dimensions.get('window').height*0.6
+      else
+        maxWidth = Dimensions.get('window').width*0.6
+    }
     return(
       <PopupInfoCustom ref={(popup) => this.popup = popup} buttonText={"Close"}>
         <View style={{alignItems:"center"}}>
@@ -561,7 +630,7 @@ class PopupImage extends Component {
           </TouchableOpacity>
           <TouchableOpacity activeOpacity={0.9} onPress={() => {this.addToWishlist()}} onLongPress={() => {this.addToWishlist()}}>
             <FastImage
-              style={{width:Dimensions.get('window').width*0.5,height:Dimensions.get('window').width*0.5,resizeMode:'contain',}}
+              style={{width:maxWidth,height:maxWidth,resizeMode:'contain',}}
               source={{
                 uri: this.state.image,
               }}
@@ -590,7 +659,48 @@ class PopupImage extends Component {
             textProperty2={["Kit Cost"]}
             ending2={"x"}
           />
-          {this.state.item["checkListKey"]?.includes("clothing")?<VillagersGifts compact item={this.state.item}/>:<View/>}
+          {this.state.item["checkListKey"]!==undefined && this.state.item["checkListKey"]?.includes("clothing")?<VillagersGifts compact item={this.state.item}/>:<View/>}
+        </View>
+      </PopupInfoCustom>
+    )
+  }
+}
+
+class PopupImageSource extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      item:"",
+    }; 
+  }
+
+  setPopupVisible = (visible, image, item, label) => {
+    this.setState({image:image, item:item, label: label});
+    this.popup?.setPopupVisible(true);
+  }
+
+  render(){
+    let maxWidth = 140
+    if(Dimensions.get('window').width*0.6 > 140 || Dimensions.get('window').height*0.6 > 140){
+      maxWidth = 140
+    } else {
+      if(Dimensions.get('window').width > Dimensions.get('window').height)
+        maxWidth = Dimensions.get('window').height*0.6
+      else
+        maxWidth = Dimensions.get('window').width*0.6
+    }
+    let imageComp = <Image
+      style={{height: maxWidth,width: maxWidth,resizeMode:'contain',}}
+      source={this.state.image}
+    />
+    return(
+      <PopupInfoCustom ref={(popup) => this.popup = popup} buttonText={"Close"}>
+        <View style={{alignItems:"center"}}>
+          {imageComp}
+          <TextFont bold style={{color:colors.textBlack[global.darkMode], fontSize:18, textAlign:"center", marginTop: 10}}>{this.state.label}</TextFont>
+          {this.state.label===this.state.item["Source"] || this.state.item["Source"]===undefined ? <></> : <TextFont style={{color:colors.textBlack[global.darkMode], fontSize:16, textAlign:"center", marginTop: 10}}>{this.state.item["Source"]}</TextFont>}
+          {this.state.item["Source Notes"]===undefined || this.state.item["Source Notes"]==="NA" ? <></> : <TextFont style={{color:colors.textBlack[global.darkMode], fontSize:16, textAlign:"center", marginTop: 10}}>{this.state.item["Source Notes"]}</TextFont>}
+          <View style={{height:15}}/>
         </View>
       </PopupInfoCustom>
     )
@@ -605,7 +715,7 @@ export function getVariations(name, globalDatabase, checkListKey, startingIndex 
   for(var i=0; i<globalDatabase.length; i++){
     if(globalDatabase[i].length > startingIndex-1){
       failCount = 0;
-      for(var j=startingIndex-1; j>0; j--){
+      for(var j=startingIndex-1; j>=0; j--){
         if(globalDatabase[i][j]["checkListKey"]===undefined){
           console.log("ERROR!!!")
           console.log(globalDatabase[i][j]["Name"])
@@ -613,8 +723,9 @@ export function getVariations(name, globalDatabase, checkListKey, startingIndex 
         } else if(globalDatabase[i][j]["checkListKey"].split("CheckList")[0]!==checkListKey.split("CheckList")[0]){
           break;
         }
-        if(globalDatabase[i][j]["Name"].toLowerCase()===name.toLowerCase()){
+        if(globalDatabase[i][j]["Name"].toString().toLowerCase()===name.toString().toLowerCase()){
           totalVariations1.push(globalDatabase[i][j]);
+          globalDatabase[i][j].variationIndex = j
         } else {
           failCount++
         }
@@ -630,8 +741,9 @@ export function getVariations(name, globalDatabase, checkListKey, startingIndex 
         if(globalDatabase[i][j]["checkListKey"].split("CheckList")[0]!==checkListKey.split("CheckList")[0]){
           break;
         }
-        if(globalDatabase[i][j]["Name"].toLowerCase()===name.toLowerCase()){
+        if(globalDatabase[i][j]["Name"].toString().toLowerCase()===name.toString().toLowerCase()){
           totalVariations2.push(globalDatabase[i][j]);
+          globalDatabase[i][j].variationIndex = j
         } else {
           failCount++
         }
@@ -642,7 +754,9 @@ export function getVariations(name, globalDatabase, checkListKey, startingIndex 
     }
     
   }
-  return [...totalVariations1, ...totalVariations2];
+  let allVariations =  [...totalVariations1, ...totalVariations2];
+  allVariations.sort(function(a,b) {return (a.variationIndex > b.variationIndex) ? 1 : ((b.variationIndex > a.variationIndex) ? -1 : 0);} );
+  return allVariations
 }
 
 export class InfoLineBeside extends Component {
@@ -775,18 +889,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     zIndex:50,
     elevation: 5,
-    position:"absolute",
   },
   rowImage:{
     resizeMode:'contain',
   },
   cornerImageLabel:{
-    position: "absolute",
-    top: 90,
-    width: 101,
+    width: 90,
     textAlign:"center",
-    paddingLeft: 10,
-    paddingRight: 10,
+    paddingLeft: 5,
+    paddingRight: 5,
   },
   cornerImageBackground:{
     width: 75,

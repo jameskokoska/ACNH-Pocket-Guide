@@ -23,19 +23,19 @@ class SettingsPage extends Component {
   }
   
   deleteSavedPhotos = async () =>{
-    this.popupDeleteSavedPhotosWait.setPopupVisible(true);
+    this.popupDeleteSavedPhotosWait?.setPopupVisible(true);
     const deletedInfo = await deleteSavedPhotos();
     this.setState({deletedInfo:deletedInfo});
-    this.popupDeleteSavedPhotosWait.setPopupVisible(false);
-    this.popupDeleteSavedPhotos.setPopupVisible(true);
+    this.popupDeleteSavedPhotosWait?.setPopupVisible(false);
+    this.popupDeleteSavedPhotos?.setPopupVisible(true);
   }
 
   deleteGeneratedData = async () =>{
-    this.popupDeleteSavedPhotosWait.setPopupVisible(true);
+    this.popupDeleteSavedPhotosWait?.setPopupVisible(true);
     const deletedInfo = await deleteGeneratedData();
     this.setState({deletedInfo:deletedInfo});
-    this.popupDeleteSavedPhotosWait.setPopupVisible(false);
-    this.popupDeleteGeneratedData.setPopupVisible(true);
+    this.popupDeleteSavedPhotosWait?.setPopupVisible(false);
+    this.popupDeleteGeneratedData?.setPopupVisible(true);
   }
 
   setDateOffset = (timeOffset) => {
@@ -57,7 +57,7 @@ class SettingsPage extends Component {
           <HeaderNote>Tap each setting to learn more</HeaderNote>
           <View style={{marginTop: 15}}/>
           <SettingsDivider text={"Game language"}/>
-          <LanguagePicker restartPopup={(show)=>this.popupRestart.setPopupVisible(show)}/>
+          <LanguagePicker restartPopup={(show)=>this.popupRestart?.setPopupVisible(show)}/>
           <View style={{height:4}}/>
           <SettingsDivider text={"Island ordinance"}/>
           <OrdinancePicker setPage={this.props.setPage}/>
@@ -76,8 +76,8 @@ class SettingsPage extends Component {
                   openPopup={(setting)=>this.popup.openPopup(setting)}
                   setting={setting}
                   deleteSavedPhotos={this.deleteSavedPhotos}
-                  popupLoadNotifications={()=>{this.popupLoadNotifications.setPopupVisible(true)}}
-                  popupAutoBackups={()=>{this.popupAutoBackups.setPopupVisible(true)}}
+                  popupLoadNotifications={()=>{this.popupLoadNotifications?.setPopupVisible(true)}}
+                  popupAutoBackups={()=>{this.popupAutoBackups?.setPopupVisible(true)}}
                 />
               } else {
                 return <SettingsDivider
@@ -104,7 +104,7 @@ class SettingsPage extends Component {
           
           <ButtonComponent text="Clear All Set Filters" onPress={() => {
             resetFilters();
-            this.popupClearFilters.setPopupVisible(true);
+            this.popupClearFilters?.setPopupVisible(true);
           }} vibrate={70} color={colors.filtersResetButton[global.darkMode]}/>
           <Popup ref={(popupClearFilters) => this.popupClearFilters = popupClearFilters} text="Cleared Set Filters" textLower="All the filters selected have been unset" button1={"OK"} button1Action={()=>{console.log("")}}/>
           
@@ -115,8 +115,9 @@ class SettingsPage extends Component {
           <Popup ref={(popupDeleteGeneratedData) => this.popupDeleteGeneratedData = popupDeleteGeneratedData} text={"Deleted Generated Data"} textLower={attemptToTranslate("All generated data has been removed. Restart to regenerate the data.") + "\n" + attemptToTranslate("Deleted:") + " " +this.state.deletedInfo[0] + "\n" + attemptToTranslate("Storage cleared:") + " " +parseInt(this.state.deletedInfo[1]) + " MB"} button1={"OK"} button1Action={()=>{console.log("")}}/>
           
           <View style={{height: 20}}/>
-          <ButtonComponent text="Reset Data" onPress={() => {this.popupWarning.setPopupVisible(true)}} vibrate={100} color={colors.cancelButton[global.darkMode]}/>
-          <Popup ref={(popupWarning) => this.popupWarning = popupWarning} text="Reset Data" textLower="Would you like to reset your collection? This action cannot be undone." button2={"Reset"} button1={"Cancel"} button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.clear(); this.popupRestart.setPopupVisible(true)}}/>
+          <ButtonComponent text="Reset Data" onPress={() => {this.popupWarning?.setPopupVisible(true)}} vibrate={100} color={colors.cancelButton[global.darkMode]}/>
+          <Popup ref={(popupWarning) => this.popupWarning = popupWarning} text={attemptToTranslate("Reset") +" "+ attemptToTranslate(this.displayProfile)} textLower={attemptToTranslate("Would you like to reset all data, including your collection?") + "\n" + attemptToTranslate("This action cannot be undone.")} button2={"Reset"} button1={"Cancel"} button1Action={()=>{console.log("")}} button2Action={()=>{this.popupAreYouSure?.setPopupVisible(true)}}/>
+          <Popup ref={(popupAreYouSure) => this.popupAreYouSure = popupAreYouSure} text={attemptToTranslate("Reset?")} textLower={attemptToTranslate("Are you sure?") + "\n" +attemptToTranslate("This action cannot be undone.")} button2={"Erase Data"} button1={"Cancel"} button1Action={()=>{console.log("")}} button2Action={()=>{AsyncStorage.clear(); this.popupRestart?.setPopupVisible(true)}}/>
           <Popup ref={(popupRestart) => this.popupRestart = popupRestart} text="Restart Required" textLower="Please restart the application."/>
           <View style={{height:50}}/>
           <MailLink/>

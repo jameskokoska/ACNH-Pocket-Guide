@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, PureComponent } from "react";
 import {
   Alert,
   Modal,
@@ -21,7 +21,8 @@ import { GiveSupport, HeaderNote, MailLink, SubHeader } from "./Formattings";
 import * as RootNavigation from '../RootNavigation.js';
 import { Appearance } from 'react-native-appearance';
 import LottieView from 'lottie-react-native';
-import { attemptToTranslate } from "../LoadJsonData";
+import { attemptToTranslate, getSettingsString } from "../LoadJsonData";
+import { AnimatedPopupWrapper } from "./PopupAnimatedWrapper";
 
 // <Popup 
 //  button1={"OK"} 
@@ -50,6 +51,7 @@ class Popup extends Component {
     }
     if(this.props.button1!==undefined){
       this.Button1 = <ButtonComponent
+        checkFont={this.props.checkFont}
         text={this.props.button1}
         color={colors.okButton[global.darkMode]??colors.okButton3[0]}
         vibrate={5}
@@ -61,6 +63,7 @@ class Popup extends Component {
     }
     if(this.props.button2!==undefined){
       this.Button2 = <ButtonComponent
+        checkFont={this.props.checkFont}
         text={this.props.button2}
         color={colors.cancelButton[global.darkMode]??colors.okButton[0]}
         vibrate={10}
@@ -87,20 +90,26 @@ class Popup extends Component {
   }
 
   render(){
+    let darkMode = this.props.darkMode ? this.props.darkMode : global.darkMode
+    const backgroundStyle = {position:"absolute", left:-100, top:-100, width: Dimensions.get('window').width+200, height: Dimensions.get('window').height+200, backgroundColor: "black", opacity: 0.6}
     return (
-        <Modal
-          animationType="fade"
-          transparent={true}
-          visible={this.state.popupVisible}
-          statusBarTranslucent
-          onRequestClose={()=>{(this.props.button1===undefined && this.props.button2===undefined) || this.props.noDismiss===true ? 0 : this.setPopupVisible(false);}}
-        >
-        <View style={[styles.centeredView,{padding:this.props.centerPadding}]}>
-          {(this.props.button1===undefined && this.props.button2===undefined) || this.props.noDismiss===true ? <View/> : <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} activeOpacity={0.15} style={{position:"absolute", left:-100, top:-100, width: Dimensions.get('window').width+200, height: Dimensions.get('window').height+200, backgroundColor: "black", opacity: 0.1}}/>}
-          <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
-            {this.props.text?<TextFont bold={true} style={{fontSize: 25, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.props.text}</TextFont>:<View/>}
+      <Modal
+        animationType="fade"
+        transparent={true}
+        visible={this.state.popupVisible}
+        statusBarTranslucent
+        onRequestClose={()=>{(this.props.button1===undefined && this.props.button2===undefined) || this.props.noDismiss===true ? 0 : this.setPopupVisible(false);}}
+      >
+        <AnimatedPopupWrapper style={[styles.centeredView,{padding:this.props.centerPadding}]} disableAnimations={getSettingsString("settingsLowEndDevice")==="true"}>
+          {(this.props.button1===undefined && this.props.button2===undefined) || this.props.noDismiss===true ? <View style={backgroundStyle}/> : <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} activeOpacity={0.55} style={backgroundStyle}/>}
+          <View style={[styles.modalView,{backgroundColor: colors.white[darkMode], justifyContent:"center", alignItems:"center"}]}>
+            {this.props.text?<TextFont checkFont={this.props.checkFont} bold={true} style={{fontSize: 25, textAlign:"center", color: colors.textBlack[darkMode]}}>{this.props.text}</TextFont>:<View/>}
             <ScrollView style={{maxHeight:Dimensions.get('window').height*0.75, marginTop:this.props.margin?10:0}}>
-              {this.props.textLower===undefined?<View/>:<TextFont bold={false} style={{fontSize: 17, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.props.textLower}</TextFont>}
+              {this.props.textLower===undefined?<View/>:<TextFont checkFont={this.props.checkFont} bold={false} style={{fontSize: 17, textAlign:"center", color: colors.textBlack[darkMode]}}>{this.props.textLower}</TextFont>}
+              {this.props.loading?<LottieView autoPlay loop
+                style={{marginBottom:-10, width: 80, zIndex:1,marginTop:4}}
+                source={require('../assets/loading.json')}
+              />:<View/>}
             </ScrollView>
             {this.props.mailLink?<View style={{marginVertical:10}}><MailLink/></View>:<View/>}
             {this.props.support?<View style={{marginVertical:10}}><GiveSupport/></View>:<View/>}
@@ -110,7 +119,7 @@ class Popup extends Component {
               {this.Button1}
             </View>
           </View>
-        </View>
+        </AnimatedPopupWrapper>
       </Modal>
     )
   }
@@ -144,7 +153,7 @@ export class PopupRaw extends Component {
           statusBarTranslucent
           onRequestClose={()=>{this.props.button1===undefined && this.props.button2===undefined ? 0 : this.setPopupVisible(false);}}
         >
-        <View style={[{position:"absolute",bottom:0, width: Dimensions.get('window').width}]}>
+        <AnimatedPopupWrapper style={[{position:"absolute",bottom:0, width: Dimensions.get('window').width}]} disableAnimations={true}>
           <View style={{alignItems:"center", justifyContent:"center"}}>
             <View style={[styles.modalView,{backgroundColor: colors.white[Appearance.getColorScheme()==="light" ? 0 : 1]}]}>
               <TextFont bold={true} style={{fontSize: this.props.textFontSize===undefined?24:this.props.textFontSize, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.props.text}</TextFont>
@@ -161,7 +170,7 @@ export class PopupRaw extends Component {
               </ScrollView>          
             </View>
           </View>
-        </View>
+        </AnimatedPopupWrapper>
       </Modal>
     )
   }
@@ -226,14 +235,14 @@ export class PopupRawLoading extends Component {
 
   render(){
     return (
-        <Modal
-          animationType="fade"
-          transparent={true}
-          visible={this.state.popupVisible}
-          statusBarTranslucent
-          onRequestClose={()=>{this.props.button1===undefined && this.props.button2===undefined ? 0 : this.setPopupVisible(false);}}
-        >
-        <View style={[{position:"absolute",bottom:0, width: Dimensions.get('window').width}]}>
+      <Modal
+        animationType="fade"
+        transparent={true}
+        visible={this.state.popupVisible}
+        statusBarTranslucent
+        onRequestClose={()=>{this.props.button1===undefined && this.props.button2===undefined ? 0 : this.setPopupVisible(false);}}
+      >
+        <AnimatedPopupWrapper style={[{position:"absolute",bottom:0, width: Dimensions.get('window').width}]}>
           <View style={{alignItems:"center", justifyContent:"center"}}>
             <View style={[styles.modalView,{width:"90%",backgroundColor: colors.white[Appearance.getColorScheme()==="light" ? 0 : 1]}]}>
               <TextFont bold={true} style={{fontSize: 20, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{attemptToTranslate(this.state.loadingText)+"..."}</TextFont>
@@ -245,7 +254,7 @@ export class PopupRawLoading extends Component {
               </View>   
             </View>
           </View>
-        </View>
+        </AnimatedPopupWrapper>
       </Modal>
     )
   }
@@ -288,6 +297,7 @@ export class PopupInfoCustom extends Component {
   render(){
     var header = <View onLayout={(event) => {var {x, y, width, height} = event.nativeEvent.layout;if(this.mounted){this.setState({headerHeight:height});}}}>{this.props.header}</View>
     var buttons = <View onLayout={(event) => {var {x, y, width, height} = event.nativeEvent.layout;if(this.mounted){this.setState({buttonHeight:height});}}}>{this.props.buttons}</View>
+    const backgroundStyle = {position:"absolute", left:-100, top:-100, width: Dimensions.get('window').width+200, height: Dimensions.get('window').height+200, backgroundColor: "black", opacity: 0.6}
     return (
         <Modal
           animationType="fade"
@@ -296,8 +306,8 @@ export class PopupInfoCustom extends Component {
           statusBarTranslucent
           onRequestClose={()=>{this.props.noDismiss===true ? 0 : this.setPopupVisible(false);}}
         >
-        <View style={styles.centeredView}>
-          {this.props.noDismiss===true ? <View/> : <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} activeOpacity={0.15} style={{position:"absolute", left:-100, top:-100, width: Dimensions.get('window').width+200, height: Dimensions.get('window').height+200, backgroundColor: "black", opacity: 0.1}}/>}
+        <AnimatedPopupWrapper style={styles.centeredView} disableAnimations={getSettingsString("settingsLowEndDevice")==="true"}>
+          {this.props.noDismiss===true ? <View style={backgroundStyle}/> : <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} activeOpacity={0.55} style={backgroundStyle}/>}
           <View style={[styles.modalView,this.props.style,{backgroundColor: colors.white[global.darkMode]}]}>
             {this.props.header===undefined ? <View/> : header}
             <ScrollView style={{maxHeight:Dimensions.get('window').height*0.7-this.state.headerHeight-this.state.buttonHeight}}>
@@ -314,7 +324,7 @@ export class PopupInfoCustom extends Component {
               /> : this.props.buttons===undefined ? <View/> : buttons}
             </View>
           </View>
-        </View>
+        </AnimatedPopupWrapper>
       </Modal>
     )
   }
@@ -323,7 +333,7 @@ export class PopupInfoCustom extends Component {
 
 // <PopupBottomCustom ref={(popup) => this.popup = popup} onClose={()=>this.props.onClose()}>
 // </Popup>
-export class PopupBottomCustom extends Component {
+export class PopupBottomCustom extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -331,57 +341,101 @@ export class PopupBottomCustom extends Component {
       openStart:false,
     }
     this.bottomSheetCallback = new Animated.Value(1);
+    this.showOnceCalculated = false
+    this.height = Dimensions.get('window').height
   }
 
   componentDidMount() {
     this.mounted=true;
+    this.visible=false;
     this.backHandler = BackHandler.addEventListener(
-      "hardwareBackPress",
+      "1hardwareBackPressPopup",
       this.handleBackButton,
     );
   }
 
   componentWillUnmount() {
     this.mounted=false
-    BackHandler.removeEventListener("hardwareBackPress", this.handleBackButton);
+    BackHandler.removeEventListener("1hardwareBackPressPopup", this.handleBackButton);
   }
 
   handleBackButton = () => {
     if(this.visible===true){
       this.setPopupVisible(false)
-      if(RootNavigation.getCurrentRoute()==="Home"){
-        return true
-      } else {
-        return false
-      }
+      return true
+    } else {
+      // RootNavigation.popRoute(1)
+      // if(RootNavigation.getCurrentRoute()==="Home"){
+      //   return true;
+      // }
+      return false
     }
   }
 
-  setPopupVisible = (visible) => {
+  setPopupVisible = (visible, showOnceCalculated=false) => {
+    this.showOnceCalculated = showOnceCalculated
     if(this.mounted){
       this.setState({heightOffset:0})
-      visible ? this.sheetRef?.snapTo(0) : this.sheetRef?.snapTo(1)
+      if(showOnceCalculated===false || getSettingsString("settingsLowEndDevice")==="true"){
+        visible ? this.sheetRef?.snapTo(0) : this.sheetRef?.snapTo(1)
+        this.visible = visible
+      } else {
+        this.timeOutPopup = setTimeout(()=>{
+          //if it cant calculate the new height in 100ms, force show
+          if(this.showOnceCalculated === true){
+            this.showOnceCalculated = false
+            this.sheetRef?.snapTo(0)
+            this.visible = true
+            // console.log("POP2")
+          }
+        },100)
+      }
     }
-    this.visible = visible
   }
   
   renderContent = () => {
+    let overHeight = this.state.heightOffset+Dimensions.get('window').height*0.03+140>Dimensions.get('window').height
+    let offsetTop = Dimensions.get('window').height*0.03+140
+    let itemPopupCompensation = (this.props.itemPopup?(getSettingsString("settingsLargerItemPreviews")==="false"?170:250):0)
+    let touchableDismiss = <TouchableOpacity activeOpacity={1} style={{top:0,bottom:this.state.heightOffset-itemPopupCompensation,zIndex:5,position:"absolute", width:Dimensions.get('window').width}} onPress={()=>{this.setPopupVisible(false);}}/>
+    let touchableDismiss2 = <View/>
+    let touchableDismiss3 = <View/>
+    //make a custom cutout for image (image can be tapped for larger preview)
+    //image is 130 by 130
+    //if larger its 210 by 210
+    if(this.props.itemPopup){
+      let imageWidth = getSettingsString("settingsLargerItemPreviews")==="false"?150:210
+      let middleHeightOffset = getSettingsString("settingsLargerItemPreviews")==="false"?70:150
+      touchableDismiss = <TouchableOpacity activeOpacity={1} style={{left:0, right: Dimensions.get('window').width/2 + imageWidth/2, top:0,bottom:this.state.heightOffset-itemPopupCompensation,zIndex:5,position:"absolute"}} onPress={()=>{this.setPopupVisible(false);}}/>
+      touchableDismiss2 = <TouchableOpacity activeOpacity={1} style={{right:0, left: Dimensions.get('window').width/2 + imageWidth/2, top:0,bottom:this.state.heightOffset-itemPopupCompensation,zIndex:5,position:"absolute"}} onPress={()=>{this.setPopupVisible(false);}}/>
+      touchableDismiss3 = <TouchableOpacity activeOpacity={1} style={{left:Dimensions.get('window').width/2 - imageWidth/2, right: Dimensions.get('window').width/2 - imageWidth/2, top:0,bottom:this.state.heightOffset-itemPopupCompensation+middleHeightOffset,zIndex:5,position:"absolute"}} onPress={()=>{this.setPopupVisible(false);}}/>
+    }
     return(
       <>
-      <TouchableOpacity style={{width:Dimensions.get('window').width,height:Dimensions.get('window').height-this.state.heightOffset}} onPress={()=>{this.setPopupVisible(false);}}/>
+      {touchableDismiss}
+      {touchableDismiss2}
+      {touchableDismiss3}
+      <View style={{width:Dimensions.get('window').width,height:Dimensions.get('window').height-this.state.heightOffset}} onPress={()=>{this.setPopupVisible(false);}}/>
       <View
         style={{
           borderTopLeftRadius: 20,
           borderTopRightRadius: 20,
-          backgroundColor: this.props.invisible===undefined?colors.white[global.darkMode]:"#0000000",
+          backgroundColor: this.props.invisible===undefined?(this.props.backgroundColor===undefined?colors.white[global.darkMode]:this.props.backgroundColor):"#0000000",
           padding:this.props.padding===undefined?16:this.props.padding,
           paddingTop: 12,
-          marginTop: this.props.restrictSize===false ? 0 : this.state.heightOffset+Dimensions.get('window').height*0.03+140>Dimensions.get('window').height ? Dimensions.get('window').height*0.03+140 : 0
+          marginTop: this.props.restrictSize===false ? 0 : overHeight ? offsetTop : 0
         }}
         onLayout={(event) => {
             var {x, y, width, height} = event.nativeEvent.layout;
             if(this.mounted){
-              this.setState({heightOffset:height, updateOffset:false});
+              this.setState({heightOffset:height});
+              if(this.showOnceCalculated){
+                clearTimeout(this.timeOutPopup)
+                // console.log("POP1")
+                this.sheetRef?.snapTo(0)
+                this.visible = true
+                this.showOnceCalculated = false
+              }
             }
           }} 
       >
@@ -414,13 +468,13 @@ export class PopupBottomCustom extends Component {
       <BottomSheet
         callbackNode={this.bottomSheetCallback}
         ref={(sheetRef) => this.sheetRef = sheetRef}
-        snapPoints={[Dimensions.get('window').height, 0, ]}
+        snapPoints={[this.height, 0, ]}
         initialSnap={1}
         renderContent={this.renderContent}
         springConfig={springConfig}
         enabledContentTapInteraction={false}
         onCloseStart={()=>{if(this.mounted){this.setState({openStart:false})}}}
-        onCloseEnd={()=>{if(this.mounted){this.visible=false; console.log(this.visible); this.setState({openStart:false}); this.state.heightOffset = 0} this.props.onClose===undefined ? 0 : this.props.onClose();}}
+        onCloseEnd={()=>{if(this.mounted){this.visible=false; this.setState({openStart:false}); this.state.heightOffset = 0} this.props.onClose===undefined ? 0 : this.props.onClose();}}
         onOpenStart={()=>{if(this.mounted){this.setState({openStart:true})}}}
         onOpenEnd={()=>{if(this.mounted){this.setState({openStart:true})}}}
       />
@@ -430,20 +484,15 @@ export class PopupBottomCustom extends Component {
   }
 }
 
-class RenderContent extends Component{
-  
-}
-
 const styles = StyleSheet.create({
   centeredView: {
     flex: 1,
     justifyContent: "center",
     paddingTop: "10%",
-    backgroundColor:"rgba(0,0,0,0.5)",
   },
   modalView: {
     margin: 30,
-    borderRadius: 10,
+    borderRadius: 15,
     padding: 20,
     elevation: 5
   },

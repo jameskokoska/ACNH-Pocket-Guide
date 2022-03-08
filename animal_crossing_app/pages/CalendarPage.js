@@ -330,7 +330,7 @@ class BottomBar extends Component {
     return <View style={{position:"absolute", zIndex:5, bottom:0, borderTopRightRadius: 10, borderTopLeftRadius: 10, flexDirection: "row", justifyContent:"space-evenly",elevation:5, backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode], width:Dimensions.get('window').width, height:45}}>
       <TouchableOpacity onPress={()=>{this.props.viewToday(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
         <View style={{paddingHorizontal: 8, borderRadius: 10, borderWidth:3,borderColor:colors.lightDarkAccentHeavy2[global.darkMode],width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
-          <TextFont bold={true} style={{textAlign:"center", fontSize: 12,color: colors.textBlack[global.darkMode]}}>View Today</TextFont>
+          <TextFont bold={true} style={{textAlign:"center", fontSize: 12,color: colors.textBlack[global.darkMode]}}>View List</TextFont>
         </View>
       </TouchableOpacity>
       <TouchableOpacity onPress={()=>{this.props.openCalendar(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
@@ -372,9 +372,9 @@ class AllEventsList extends Component{
       var outputData = [];
       this.data.map( (event, index)=>{
         var eventName = getEventName(event["Name"])
-        if(removeAccents(eventName.toLowerCase()).includes(removeAccents(text.toLowerCase()))){
+        if(removeAccents(eventName.toString().toLowerCase()).includes(removeAccents(text.toString().toLowerCase()))){
           outputData.push(event);
-        } else if (attemptToTranslate(event["Type"]).toLowerCase().includes(text.toLowerCase())){
+        } else if (attemptToTranslate(event["Type"]).toString().toLowerCase().includes(text.toString().toLowerCase())){
           outputData.push(event);
         }
       })
@@ -418,7 +418,7 @@ class RenderItemFlatList extends Component{
   render(){
     var item = this.props.item;
     var image = <View/>
-    image = <Image style={{width: 50, height: 50, resizeMode:'contain',}} source={getPhoto(item["Name"].toLowerCase(), item["Type"].toLowerCase())}/>
+    image = <Image style={{width: 50, height: 50, resizeMode:'contain',}} source={getPhoto(item["Name"].toString().toLowerCase(), item["Type"].toString().toLowerCase())}/>
     var date = "";
     if(item["Dates (Northern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")==="true"){
       date = item["Dates (Northern Hemisphere)"];

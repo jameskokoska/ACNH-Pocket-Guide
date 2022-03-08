@@ -20,10 +20,12 @@ for amiibo in amiiboData:
     for villager in data:
         if(amiibo["Name"]==villager["Name"]):
             amiiboData[amiiboIndex]["Personality"] = villager["Personality"]
+            amiiboData[amiiboIndex]["Villager"] = "Yes"
             totalFound+=1
             found = True
     if(found==False):
         amiiboData[amiiboIndex]["Personality"] = "NA"
+        amiiboData[amiiboIndex]["Villager"] = "No"
     amiiboIndex+=1
 
 with open(amiiboPath, 'w', encoding='utf8') as json_file:

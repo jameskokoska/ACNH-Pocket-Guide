@@ -37,8 +37,11 @@ class FAB extends Component {
     if(this.props.offset!==undefined){
       offset = this.props.offset
     }
-    return(
-        <TouchableOpacity onPress={() => {this.animation.play(); this.props.openDrawer(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}} activeOpacity={0.3} style={[styles.FABShape,{backgroundColor: colors.FAB[global.darkMode], bottom:20+offset}]}>
+    return(<TouchableNativeFeedback 
+      background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode], true, 32)}
+      onPress={() => {this.animation.play(); this.props.openDrawer(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}
+      >
+        <View style={[styles.FABShape,{backgroundColor: colors.FAB[global.darkMode], bottom:20+offset}]}>
             <LottieView 
               ref={animation => {
                 this.animation = animation;
@@ -50,7 +53,8 @@ class FAB extends Component {
               }} 
               source={require('../assets/menu.json')}
             />
-        </TouchableOpacity>
+        </View>
+      </TouchableNativeFeedback>
     )
   }
 }

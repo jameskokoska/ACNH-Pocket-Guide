@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import {Animated, ScrollView, Vibration, Image, Dimensions, TouchableOpacity, TextInput, StyleSheet, Text, View, Keyboard} from 'react-native';
+import {Animated, Vibration, Image, Dimensions, TouchableOpacity, TextInput, StyleSheet, Text, View, Keyboard, BackHandler} from 'react-native';
 import Clock from '../components/Clock';
 import HomeContentArea from '../components/HomeContentArea';
 import {EventContainer,getEventsDay} from '../components/EventContainer';
 import StoreHoursContainer, { StoreHoursContainerHarvey } from '../components/StoreHoursContainer';
-import ProgressContainer from '../components/ProgressContainer';
+import ProgressContainerToggle from '../components/ProgressContainer';
 import LottieView from 'lottie-react-native';
 import colors from '../Colors'
 import {setSettingsString, getCurrentVillagerNamesString, getInverseVillagerFilters, capitalize,countCollection,getStorage, countCollectionSpecial, collectionListRemoveDuplicates, countCollectionAchievements, countAchievements} from "../LoadJsonData"
@@ -16,7 +16,7 @@ import {getCurrentDateObject, doWeSwapDate, addDays, hoursStringNook, hoursStrin
 import {TodoList, TurnipLog} from '../components/TodoList';
 import VisitorsList from '../components/VisitorsList';
 import {translateDreamAddressBeginning, translateIslandNameInputLabel2, translateIslandNameInputLabel1, getSettingsString, attemptToTranslate} from "../LoadJsonData"
-// import { ScrollView } from 'react-native-gesture-handler';
+import { ScrollView } from 'react-native-gesture-handler';
 import Popup, {PopupBottomCustom, PopupRaw} from "../components/Popup"
 import VillagerPopup from "../popups/VillagerPopup"
 import ToggleSwitch from 'toggle-switch-react-native'
@@ -63,12 +63,25 @@ class HomePage extends Component {
     });},0)
     this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this.keyboardDidHide);
     this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this.keyboardDidShow);
-
+    this.backHandler = BackHandler.addEventListener(
+      "hardwareBackPressHome",
+      this.handleBackButton,
+    );
   }
     
   componentWillUnmount(){
     this.keyboardDidHideListener.remove();
     this.keyboardDidShowListener.remove();
+    BackHandler.removeEventListener("hardwareBackPressHome", this.handleBackButton);
+  }
+
+  handleBackButton = () => {
+    if(this.state.editOrder===true){
+      this.setState({editOrder:false})
+      return true
+    } else {
+      return false
+    }
   }
 
   keyboardDidHide = () => {
@@ -179,11 +192,11 @@ class HomePage extends Component {
 
   render(){
 
-    var landscape = <LottieView autoPlay loop style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/home.json')}/>
+    var landscape = <LottieView autoPlay={getSettingsString("settingsLowEndDevice")==="true"?false:true} loop style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/home.json')}/>
     if(getCurrentDateObject().getMonth()===11||getCurrentDateObject().getMonth()===0){
-      landscape = <LottieView autoPlay loop style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeSnow.json')}/>
+      landscape = <LottieView loop autoPlay={getSettingsString("settingsLowEndDevice")==="true"?false:true} style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeSnow.json')}/>
     } else if (getCurrentDateObject().getMonth()===7 && getCurrentDateObject().getDay()===0){
-      landscape = <LottieView autoPlay loop style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeCelebration.json')}/>
+      landscape = <LottieView autoPlay={getSettingsString("settingsLowEndDevice")==="true"?false:true} loop style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeCelebration.json')}/>
     }
     const sections = this.state.sections;
 
@@ -197,27 +210,32 @@ class HomePage extends Component {
           sections={this.state.sections}
         />
       </PopupBottomCustom> */}
-      <PopupBottomCustom ref={(popupEventsSettings) => this.popupEventsSettings = popupEventsSettings} onClose={()=>{}}>
-        <ConfigureHomePages 
-          setPage={(page)=>this.props.setPage(page)} 
-          header={"Select Events"} 
-          refreshEvents={()=>{this.eventSection?.refreshEvents()}} 
-          setPages={(checked,name)=>this.setEventPages(checked,name)} 
-          sections={this.state.eventSections}
-        />
-      </PopupBottomCustom>
-      <Animated.ScrollView
+      {sections["Events"]===true?<PopupBottomConfigureHomePages 
+        ref={(popupEventsSettings) => this.popupEventsSettings = popupEventsSettings}
+        setPage={(page)=>this.props.setPage(page)} 
+        header={"Select Events"} 
+        refreshEvents={()=>{this.eventSection?.refreshEvents()}} 
+        setPages={(checked,name)=>this.setEventPages(checked,name)} 
+        sections={this.state.eventSections}
+      />:<View/>}
+      <ScrollView
         onMomentumScrollEnd={this.handleSnap}
         ref={(scrollViewRef) => this.scrollViewRef = scrollViewRef}
-        onScroll={Animated.event([{ nativeEvent: {contentOffset: {y: this.scrollY}}}], {useNativeDriver: true, 
-          listener: (event)=>{
-            if(event.nativeEvent.contentOffset.y>this.headerHeight) this.closeSearch()
-            if (this.keyboardInterference===false && !this.cannotOpenSearchOnThisSlide && this.searchOpen===false && event.nativeEvent.contentOffset.y<=this.clampHeight) {
-              this.scrollViewRef.scrollTo({y:0});
-              this.openSearch()
-            }
+        onScroll={(event)=>{
+          if(event.nativeEvent.contentOffset.y>this.headerHeight) this.closeSearch()
+          if (this.keyboardInterference===false && !this.cannotOpenSearchOnThisSlide && this.searchOpen===false && event.nativeEvent.contentOffset.y<=this.clampHeight) {
+            this.openSearch()
           }
-        },)}
+        }}
+        // onScroll={Animated.event([{ nativeEvent: {contentOffset: {y: this.scrollY}}}], {useNativeDriver: true, 
+        //   listener: (event)=>{
+        //     if(event.nativeEvent.contentOffset.y>this.headerHeight) this.closeSearch()
+        //     if (this.keyboardInterference===false && !this.cannotOpenSearchOnThisSlide && this.searchOpen===false && event.nativeEvent.contentOffset.y<=this.clampHeight) {
+        //       this.scrollViewRef.scrollTo({y:0});
+        //       this.openSearch()
+        //     }
+        //   }
+        // },)}
         // Not needed because when the keyboard is closed, the search is closed too
         // onScrollEndDrag={
         //   (event) => {
@@ -239,44 +257,45 @@ class HomePage extends Component {
           }
         }
       >
-        
-        <View style={{justifyContent:"center",backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode],height:this.headerHeight, borderBottomLeftRadius: 10, borderBottomRightRadius: 10}}>
-          <TextInput
-            ref={(searchRef) => this.searchRef = searchRef}
-            allowFontScaling={false}
-            style={{opacity:0.8, marginVertical: 10, marginHorizontal:15, padding:10, paddingHorizontal:20, fontSize: 17, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], borderRadius: 5}}
-            onChangeText={(text) => {this.searchText = text}}
-            placeholder={"Search for an item..."}
-            defaultValue={""}
-            placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
-            onSubmitEditing={(event)=>{
+        <FadeInOut fadeIn={true} delay={200} duration={500}>
+          <View style={{justifyContent:"center",backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode],height:this.headerHeight, borderBottomLeftRadius: 10, borderBottomRightRadius: 10}}>
+            <TextInput
+              ref={(searchRef) => this.searchRef = searchRef}
+              allowFontScaling={false}
+              style={{opacity:0.8, marginVertical: 10, marginHorizontal:15, padding:10, paddingHorizontal:20, fontSize: 17, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], borderRadius: 5}}
+              onChangeText={(text) => {this.searchText = text}}
+              placeholder={"Search for an item..."}
+              defaultValue={""}
+              placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+              onSubmitEditing={(event)=>{
+                this.scrollViewRef.scrollTo({
+                  y:this.headerHeight
+                });
+                this.closeSearch()
+                this.searchRef.clear()
+                this.searchText = ""
+                if(event.nativeEvent.text!==""){
+                  RootNavigation.navigate('GlobalSearchPage', {propsPassed:event.nativeEvent.text});
+                }
+              }}
+            />
+            {/* You can't touch the search button - need keyboardShouldPersistTaps='handled' for ScrollView */}
+            <TouchableOpacity style={{position:"absolute", right:20}} onPress={()=>{
               this.scrollViewRef.scrollTo({
                 y:this.headerHeight
               });
               this.closeSearch()
               this.searchRef.clear()
+              let searchTextTemp = this.searchText
               this.searchText = ""
-              if(event.nativeEvent.text!==""){
-                RootNavigation.navigate('GlobalSearchPage', {propsPassed:event.nativeEvent.text});
-              }
-            }}
-          />
-          {/* You can't touch the search button - need keyboardShouldPersistTaps='handled' for ScrollView */}
-          <TouchableOpacity style={{position:"absolute", right:20}} onPress={()=>{
-            this.scrollViewRef.scrollTo({
-              y:this.headerHeight
-            });
-            this.closeSearch()
-            this.searchRef.clear()
-            let searchTextTemp = this.searchText
-            this.searchText = ""
-            RootNavigation.navigate('GlobalSearchPage', {propsPassed:searchTextTemp});
-          }}>
-            <FadeInOut fadeIn={true} duration={200}>
-            <Image style={{width:20,height:20, margin: 10, marginTop: 12, opacity: 0.25, resizeMode:"contain",}} source={global.darkMode?require("../assets/icons/searchWhite.png"):require("../assets/icons/search.png")}/>
-            </FadeInOut>
-          </TouchableOpacity>
-        </View>
+              RootNavigation.navigate('GlobalSearchPage', {propsPassed:searchTextTemp});
+            }}>
+              <FadeInOut fadeIn={true} duration={200}>
+              <Image style={{width:20,height:20, margin: 10, marginTop: 12, opacity: 0.25, resizeMode:"contain",}} source={global.darkMode?require("../assets/icons/searchWhite.png"):require("../assets/icons/search.png")}/>
+              </FadeInOut>
+            </TouchableOpacity>
+          </View>
+        </FadeInOut>
 
         <View style={{height:55}}/>
         <Clock swapDate={doWeSwapDate()}/>
@@ -306,7 +325,7 @@ class HomePage extends Component {
               </HomeContentArea>
             }
             return sections["Events"]===true?<HomeContentArea index={index} key={"Events"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.eventsColor[global.darkMode]} title="Events" titleColor={colors.eventsColor[global.darkModeReverse]}>
-              <EventSection openVillagerPopup={this.openVillagerPopup} ref={(eventSection) => this.eventSection = eventSection} setPage={this.props.setPage} eventSections={this.state.eventSections} setPopupVisible={(visible)=>{this.popupEventsSettings.setPopupVisible(visible)}}/>
+              <EventSection openVillagerPopup={this.openVillagerPopup} ref={(eventSection) => this.eventSection = eventSection} setPage={this.props.setPage} eventSections={this.state.eventSections} setPopupVisible={(visible)=>{this.popupEventsSettings?.setPopupVisible(visible)}}/>
             </HomeContentArea>:<View/>
           }else if(section["name"]==="To-Do"){
             if(this.state.editOrder){
@@ -424,9 +443,6 @@ class HomePage extends Component {
                 <StoreHoursContainerHarvey filter={"Leif"} image={require("../assets/icons/leif.png")} text="Leif" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 23:00" : "5 AM - 11 PM"} openHour={5} closeHour={23}/>
                 <StoreHoursContainerHarvey filter={"Redd's Co-op Raffle"} image={require("../assets/icons/redd.png")} text="Redd" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 1:00" : "5 AM - 1 AM"} openHour={5} closeHour={1}/>
                 <StoreHoursContainerHarvey filter={"Kicks' Co-op"} image={require("../assets/icons/kicks.png")} text="Kicks" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 24:00" : "5 AM - 12 AM"} openHour={5} closeHour={24}/>
-
-
-
               </View>
               <View style={{height: 15}}/>
             </HomeContentArea>:<View/>
@@ -439,7 +455,7 @@ class HomePage extends Component {
           <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center",}}>{"You can tap here to go to that page, or open the sidebar."}</TextFont>
         </TouchableOpacity> */}
         <View style={{height: 75}}/>
-      </Animated.ScrollView>
+      </ScrollView>
       
       <View style={{position:"absolute", width: "100%", height:"100%", zIndex:-5, top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center',overflow: "hidden" }}>
         <View style={{width:690, height: "100%", zIndex:1, position:'absolute', overflow: "hidden", }}>
@@ -479,9 +495,14 @@ class EventSection extends Component {
   }
   
   componentDidMount(){
+    this.mounted=true
     setTimeout(async () => {
       this.refreshEvents();
-    },10)
+    },0)
+  }
+
+  componentWillUnmount(){
+    this.mounted=false
   }
 
   refreshEvents = () => {
@@ -492,7 +513,42 @@ class EventSection extends Component {
     for(var i=2; i<7; i++){
       thisWeekEvents = thisWeekEvents.concat(getEventsDay(addDays(getCurrentDateObject(), i), this.state.eventSections));
     }
-    this.setState({todayEvents: todayEvents, tomorrowEvents: tomorrowEvents, thisWeekEvents: thisWeekEvents, loaded:true})
+    this.todayEventsComponent = todayEvents.map( (event, index)=>
+      <EventContainer 
+        openVillagerPopup={this.props.openVillagerPopup}
+        setPage={this.props.setPage}
+        key={event.name+index} 
+        backgroundColor={colors.eventBackground[global.darkMode]}
+        textColor={colors.textBlack[global.darkMode]}
+        event={event}
+        eventSections={this.state.eventSections}
+      />
+    )
+    this.tomorrowEventsComponent = tomorrowEvents.map( (event, index)=>
+      <EventContainer 
+        openVillagerPopup={this.props.openVillagerPopup}
+        setPage={this.props.setPage}
+        key={event.name+index} 
+        backgroundColor={colors.eventBackground[global.darkMode]}
+        textColor={colors.textBlack[global.darkMode]}
+        event={event}
+        eventSections={this.state.eventSections}
+      />
+    )
+    this.thisWeekEventsComponent = thisWeekEvents.map( (event, index)=>
+      <EventContainer 
+        openVillagerPopup={this.props.openVillagerPopup}
+        setPage={this.props.setPage}
+        key={event.name+index} 
+        backgroundColor={colors.eventBackground[global.darkMode]}
+        textColor={colors.textBlack[global.darkMode]}
+        event={event}
+        eventSections={this.state.eventSections}
+      />
+    )
+    if(this.mounted){
+      this.setState({todayEvents: todayEvents, tomorrowEvents: tomorrowEvents, thisWeekEvents: thisWeekEvents, loaded:true})
+    }
   }
   render(){
     var todayTitle=<View/>
@@ -514,41 +570,11 @@ class EventSection extends Component {
         <TextFont bold={false} style={{marginRight:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"right"}}>{"Edit Events"}</TextFont>
       </TouchableOpacity>
       {todayTitle}
-      {this.state.todayEvents.map( (event, index)=>
-        <EventContainer 
-          openVillagerPopup={this.props.openVillagerPopup}
-          setPage={this.props.setPage}
-          key={event.name+index} 
-          backgroundColor={colors.eventBackground[global.darkMode]}
-          textColor={colors.textBlack[global.darkMode]}
-          event={event}
-          eventSections={this.state.eventSections}
-        />
-      )}
+      {this.todayEventsComponent}
       {tomorrowTitle}
-      {this.state.tomorrowEvents.map( (event, index)=>
-        <EventContainer 
-          openVillagerPopup={this.props.openVillagerPopup}
-          setPage={this.props.setPage}
-          key={event.name+index} 
-          backgroundColor={colors.eventBackground[global.darkMode]}
-          textColor={colors.textBlack[global.darkMode]}
-          event={event}
-          eventSections={this.state.eventSections}
-        />
-      )}
+      {this.tomorrowEventsComponent}
       {thisWeekTitle}
-      {this.state.thisWeekEvents.map( (event, index)=>
-        <EventContainer 
-          openVillagerPopup={this.props.openVillagerPopup}
-          setPage={this.props.setPage}
-          key={event.name+index} 
-          backgroundColor={colors.eventBackground[global.darkMode]}
-          textColor={colors.textBlack[global.darkMode]}
-          event={event}
-          eventSections={this.state.eventSections}
-        />
-      )}
+      {this.thisWeekEventsComponent}
       <View style={{height: 2}}/>
       {this.state.loaded?<TouchableOpacity style={{marginHorizontal: 20, marginVertical:10, backgroundColor:colors.eventBackground[global.darkMode], padding: 10, borderRadius: 10}} 
         onPress={()=>{this.props.setPage(16); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}
@@ -572,9 +598,10 @@ export class Profile extends Component{
           <TextFont bold={false} style={{padding:10, color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{getSettingsString("settingsNorthernHemisphere")==="true" ? "Northern Hemisphere" : "Southern Hemisphere"}</TextFont>
         </TouchableOpacity>
         <View style={{height: 5}}/>
-        <DreamAddress/>
-        <FriendCode/>
-        <CreatorCode/>
+        <Code start={"SW"} storageKey="friendCode" label="Friend Code" setGlobal={(value)=>{global.friendCode=value;}} initialValue={global.friendCode}/>
+        <Code start={translateDreamAddressBeginning()} storageKey="dreamAddress" label="Dream Address" setGlobal={(value)=>{global.dreamAddress=value;}} initialValue={global.dreamAddress}/>
+        <Code start={"MA"} storageKey="creatorCode" label="Creator Code" setGlobal={(value)=>{global.creatorCode=value;}} initialValue={global.creatorCode}/>
+        <Code start={"RA"} storageKey="HHPCode" label="Happy Home Network ID" setGlobal={(value)=>{global.HHPCode=value;}} initialValue={global.HHPCode}/>
         <View style={{height: 18}}/>
         <SelectionImage 
           selectedImage={global.selectedFruit} 
@@ -585,6 +612,58 @@ export class Profile extends Component{
           sizeContainer={[45,45]}
         />
       </View>
+    )
+  }
+}
+
+export class Code extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      code:this.props.initialValue,
+    }
+  }
+  onChangeText = (text) =>{
+    if(text.includes("\n")) Keyboard.dismiss()
+    text = text.replace("\n","")
+    var newValue = "";
+    if(text===this.props.start){
+      this.setState({code:""});
+    } else if (text===this.props.start.charAt(0)){
+      this.setState({code:this.props.start+"-"});
+    } else {
+      const afterIndices = [4,9,14]; 
+      var value = text.replace(this.props.start+"-","");
+      for(let i=0; i<value.length; i++){
+        if(afterIndices.includes(i)){
+          newValue+="-";
+        } 
+        if (value[i] !== "-") {
+          newValue+=value[i];
+        }
+      }
+      newValue = this.props.start+"-"+newValue;
+      this.setState({code:newValue});
+    }
+    this.props.setGlobal(newValue)
+    AsyncStorage.setItem(this.props.storageKey+global.profile, newValue);
+  }
+  render(){
+    return(
+      <>
+        <TextInput
+          maxLength = {17}
+          allowFontScaling={false}
+          style={{fontSize: 18, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
+          onChangeText={async (text) => {this.onChangeText(text)}}
+          placeholder={"["+attemptToTranslate(this.props.label)+"]"}
+          placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+          value={this.state.code}
+          defaultValue={this.props.initialValue}
+          multiline={true}
+        />
+        <TextFont bold={false} style={{marginTop: -5, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{this.props.label}</TextFont>
+      </>
     )
   }
 }
@@ -655,162 +734,30 @@ export class IslandEntry extends Component {
   }
 }
 
-export class DreamAddress extends Component {
+//optimization class - only render when called
+export class PopupBottomConfigureHomePages extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      dreamAddress:global.dreamAddress,
+      visible:false,
     }
   }
-  onChangeText = (text) =>{
-    if(text.includes("\n")) Keyboard.dismiss()
-    text = text.replace("\n","")
-    var newValue = "";
-    if(text===translateDreamAddressBeginning()){
-      this.setState({dreamAddress:""});
-    } else if (text===translateDreamAddressBeginning()[0]){
-      this.setState({dreamAddress:translateDreamAddressBeginning()+"-"});
-    } else {
-      const afterIndices = [4,9,14]; 
-      var value = text.replace(translateDreamAddressBeginning()+"-","");
-      for(let i=0; i<value.length; i++){
-        if(afterIndices.includes(i)){
-          newValue+="-";
-        } 
-        if (value[i] !== "-") {
-          newValue+=value[i];
-        }
-      }
-      newValue = translateDreamAddressBeginning()+"-"+newValue;
-      this.setState({dreamAddress:newValue});
-    }
-    global.dreamAddress=newValue;
-    AsyncStorage.setItem("dreamAddress"+global.profile, newValue);
+  setPopupVisible = (visible) => {
+    this.setState({visible:visible})
+    this.popupEventsSettings?.setPopupVisible(visible)
   }
   render(){
-    return(
-      <>
-        <TextInput
-          maxLength = {17}
-          allowFontScaling={false}
-          style={{fontSize: 18, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
-          onChangeText={async (text) => {this.onChangeText(text)}}
-          placeholder={"["+attemptToTranslate("Dream Address")+"]"}
-          placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
-          value={this.state.dreamAddress}
-          defaultValue={global.dreamAddress}
-          multiline={true}
-        />
-        <TextFont bold={false} style={{marginTop: -5, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{"Dream Address"}</TextFont>
-      </>
-    )
+    return <PopupBottomCustom ref={(popupEventsSettings) => this.popupEventsSettings = popupEventsSettings} onClose={()=>{}}>
+      {this.state.visible?<ConfigureHomePages 
+        setPage={this.props.setPage} 
+        header={this.props.header} 
+        refreshEvents={this.props.refreshEvents} 
+        setPages={this.props.setPages} 
+        sections={this.props.sections}
+      />:<View/>}
+    </PopupBottomCustom>
   }
 }
-
-export class FriendCode extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      friendCode:global.friendCode,
-    }
-  }
-  onChangeText = (text) =>{
-    if(text.includes("\n")) Keyboard.dismiss()
-    text = text.replace("\n","")
-    var newValue = "";
-    if(text==="SW"){
-      this.setState({friendCode:""});
-    } else if (text==="S"){
-      this.setState({friendCode:"SW-"});
-    } else {
-      const afterIndices = [4,9,14]; 
-      var value = text.replace("SW-","");
-      for(let i=0; i<value.length; i++){
-        if(afterIndices.includes(i)){
-          newValue+="-";
-        } 
-        if (value[i] !== "-") {
-          newValue+=value[i];
-        }
-      }
-      newValue = "SW-"+newValue;
-      this.setState({friendCode:newValue});
-    }
-    global.friendCode=newValue;
-    AsyncStorage.setItem("friendCode"+global.profile, newValue);
-  }
-  render(){
-    return(
-      <>
-        <TextInput
-          maxLength = {17}
-          allowFontScaling={false}
-          style={{fontSize: 18, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
-          onChangeText={async (text) => {this.onChangeText(text)}}
-          placeholder={"["+attemptToTranslate("Friend Code")+"]"}
-          placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
-          value={this.state.friendCode}
-          defaultValue={global.friendCode}
-          multiline={true}
-        />
-        <TextFont bold={false} style={{marginTop: -5, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{"Friend Code"}</TextFont>
-      </>
-    )
-  }
-}
-
-export class CreatorCode extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      creatorCode:global.creatorCode,
-    }
-  }
-  onChangeText = (text) =>{
-    if(text.includes("\n")) Keyboard.dismiss()
-    text = text.replace("\n","")
-    var newValue = "";
-    if(text==="MA"){
-      this.setState({creatorCode:""});
-    } else if (text==="M"){
-      this.setState({creatorCode:"MA-"});
-    } else {
-      const afterIndices = [4,9,14]; 
-      var value = text.replace("MA-","");
-      for(let i=0; i<value.length; i++){
-        if(afterIndices.includes(i)){
-          newValue+="-";
-        } 
-        if (value[i] !== "-") {
-          newValue+=value[i];
-        }
-      }
-      newValue = "MA-"+newValue;
-      this.setState({creatorCode:newValue});
-    }
-    global.creatorCode=newValue;
-    AsyncStorage.setItem("creatorCode"+global.profile, newValue);
-  }
-  render(){
-    return(
-      <>
-        <TextInput
-          maxLength = {17}
-          allowFontScaling={false}
-          style={{fontSize: 18, width:"100%", color:colors.textBlack[global.darkMode], textAlign:"center", fontFamily: this.props.bold===true ? "ArialRoundedBold":"ArialRounded"}}
-          onChangeText={async (text) => {this.onChangeText(text)}}
-          placeholder={"["+attemptToTranslate("Creator Code")+"]"}
-          placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
-          value={this.state.creatorCode}
-          defaultValue={global.creatorCode}
-          multiline={true}
-        />
-        <TextFont bold={false} style={{marginTop: -5, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{"Creator Code"}</TextFont>
-      </>
-    )
-  }
-}
-
 
 export class ConfigureHomePages extends Component {
   constructor(props) {
@@ -819,7 +766,6 @@ export class ConfigureHomePages extends Component {
     this.state = {
       sections:sections,
     }
-    
   }
   setPages = (check,name) => {
     this.props.setPages(check,name);
@@ -831,6 +777,7 @@ export class ConfigureHomePages extends Component {
     }
   }
   render(){
+    console.log("RENDEREDDD")
     const sectionNames = Object.keys(this.state.sections);
     return(<>
       <SubHeader>{this.props.header}</SubHeader>
@@ -934,7 +881,7 @@ export class VillagerPopupPopup extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      item:""
+      item:"",
     };   
   }
 
@@ -950,8 +897,13 @@ export class VillagerPopupPopup extends Component {
     }
     return(
       <PopupBottomCustom ref={(popup) => this.popup = popup}>
-        <TextFont bold={true} style={{textAlign:"center",fontSize: 30, marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{this.state.item["NameLanguage"]}</TextFont>
-        {villagerPopup}
+        {this.state.item===""?
+        <View/>
+        :
+        <>
+          <TextFont bold={true} style={{textAlign:"center",fontSize: 30, marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{this.state.item["NameLanguage"]}</TextFont>
+          {villagerPopup}
+        </>}
       </PopupBottomCustom>
     )
   }
@@ -961,6 +913,7 @@ export class CollectionProgress extends Component {
   constructor(){
     super()
     this.state = {
+      editMode:false,
       fishCount: 0,
       fishCountTotal: 0,
       fishPercentage: 0,
@@ -997,57 +950,139 @@ export class CollectionProgress extends Component {
       clothingCount: 0,
       clothingCountTotal: 0,
       clothingPercentage: 0,
+      countGyroid: 0,
+      gyroidCount: 0,
+      gyroidCountTotal: 0,
+      gyroidPercentage: 0,
       achievementsCount: 0,
       achievementsCountTotal: 0,
       achievementsPercentage: 0,
     }
   }
-  componentDidMount(){
+  async componentDidMount(){
+    let collectionSectionsDisabled = JSON.parse(await getStorage("collectionSectionsDisabled"+global.profile,JSON.stringify([])));
+    this.countCollectionTotal(collectionSectionsDisabled)
+  }
+  countCollectionTotal = (collectionSectionsDisabled) => {
     if(global.collectionList!==undefined && global.collectionList.length>7000){
-      this.popupLoading.setPopupVisible(true)
+      this.popupLoading?.setPopupVisible(true)
     }
     setTimeout(async ()=>{
       collectionListRemoveDuplicates();
-      var fishCount = await countCollection("fishCheckList");
-      var fishCountTotal = global.dataLoadedFish[0].length;
-      var fishPercentage = fishCount/fishCountTotal * 100;
-      var seaCount = await countCollection("seaCheckList");
-      var seaCountTotal = global.dataLoadedSea[0].length;
-      var seaPercentage = seaCount/seaCountTotal * 100;
-      var bugsCount = await countCollection("bugCheckList");
-      var bugsCountTotal = global.dataLoadedBugs[0].length;
-      var bugsPercentage = bugsCount/bugsCountTotal * 100;
-      var fossilCount = await countCollection("fossilCheckList");
-      var fossilCountTotal = global.dataLoadedFossils[0].length;
-      var fossilPercentage = fossilCount/fossilCountTotal * 100;
-      var artCount = await countCollection("artCheckList");
-      var artCountTotal = 43;
-      var artPercentage = artCount/artCountTotal * 100;
-      var musicCount = await countCollection("songCheckList");
-      var musicCountTotal = global.dataLoadedMusic[0].length - 3; //there are 3 Hazure songs
-      var musicPercentage = musicCount/musicCountTotal * 100;
-      var emojipediaCount = await countCollection("emojiCheckList");
-      var emojipediaCountTotal = global.dataLoadedReactions[0].length;
-      var emojipediaPercentage = emojipediaCount/emojipediaCountTotal * 100;
-      var recipeCount = await countCollection("recipesCheckList");
-      var recipeCountTotal = global.dataLoadedRecipes[0].length;
-      var recipePercentage = recipeCount/recipeCountTotal * 100;
-      let countFloorWalls = await countCollectionSpecial("dataLoadedFloorWalls");
-      var floorWallsCount = countFloorWalls[0]
-      var floorWallsCountTotal = countFloorWalls[1]
-      var floorWallsPercentage = floorWallsCount/floorWallsCountTotal * 100;
-      let countFurniture = await countCollectionSpecial("dataLoadedFurniture");
-      var furnitureCount = countFurniture[0]
-      var furnitureCountTotal = countFurniture[1]
-      var furniturePercentage = furnitureCount/furnitureCountTotal * 100;
-      let countClothing = await countCollectionSpecial("dataLoadedClothing");
-      var clothingCount = countClothing[0]
-      var clothingCountTotal = countClothing[1]
-      var clothingPercentage = clothingCount/clothingCountTotal * 100;
-      var achievementsCount = await countCollectionAchievements();
-      var achievementsCountTotal = await countAchievements();
-      var achievementsPercentage = achievementsCount/achievementsCountTotal * 100;
+      let fishCount = 0
+      let fishCountTotal = 0
+      let fishPercentage = 0
+      if(!collectionSectionsDisabled.includes("fishCount")){
+        fishCount = await countCollection("fishCheckList");
+        fishCountTotal = global.dataLoadedFish[0].length;
+        fishPercentage = fishCount/fishCountTotal * 100;
+      }
+      let seaCount = 0
+      let seaCountTotal = 0
+      let seaPercentage = 0
+      if(!collectionSectionsDisabled.includes("seaCount")){
+        seaCount = await countCollection("seaCheckList");
+        seaCountTotal = global.dataLoadedSea[0].length;
+        seaPercentage = seaCount/seaCountTotal * 100;
+      }
+      let bugsCount = 0
+      let bugsCountTotal = 0
+      let bugsPercentage = 0
+      if(!collectionSectionsDisabled.includes("bugsCount")){
+        bugsCount = await countCollection("bugCheckList");
+        bugsCountTotal = global.dataLoadedBugs[0].length;
+        bugsPercentage = bugsCount/bugsCountTotal * 100;
+      }
+      let fossilCount = 0
+      let fossilCountTotal = 0
+      let fossilPercentage = 0
+      if(!collectionSectionsDisabled.includes("fossilCount")){
+        fossilCount = await countCollection("fossilCheckList");
+        fossilCountTotal = global.dataLoadedFossils[0].length;
+        fossilPercentage = fossilCount/fossilCountTotal * 100;
+      }
+      let artCount = 0
+      let artCountTotal = 0
+      let artPercentage = 0
+      if(!collectionSectionsDisabled.includes("artCount")){
+        artCount = await countCollection("artCheckList");
+        artCountTotal = 43;
+        artPercentage = artCount/artCountTotal * 100;
+      }
+      let musicCount = 0
+      let musicCountTotal = 0
+      let musicPercentage = 0
+      if(!collectionSectionsDisabled.includes("musicCount")){
+        musicCount = await countCollection("songCheckList");
+        musicCountTotal = global.dataLoadedMusic[0].length - 3; //there are 3 Hazure songs
+        musicPercentage = musicCount/musicCountTotal * 100;
+      }
+      let emojipediaCount = 0
+      let emojipediaCountTotal = 0
+      let emojipediaPercentage = 0
+      if(!collectionSectionsDisabled.includes("emojipediaCount")){
+        emojipediaCount = await countCollection("emojiCheckList");
+        emojipediaCountTotal = global.dataLoadedReactions[0].length;
+        emojipediaPercentage = emojipediaCount/emojipediaCountTotal * 100;
+      }
+      let recipeCount = 0
+      let recipeCountTotal = 0
+      let recipePercentage = 0
+      if(!collectionSectionsDisabled.includes("recipeCount")){
+        recipeCount = await countCollection("recipesCheckList");
+        recipeCountTotal = global.dataLoadedRecipes[0].length;
+        recipePercentage = recipeCount/recipeCountTotal * 100;
+      }
+      let countFloorWalls = 0
+      let floorWallsCount = 0
+      let floorWallsCountTotal = 0
+      let floorWallsPercentage = 0
+      if(!collectionSectionsDisabled.includes("floorWallsCount")){
+        countFloorWalls = await countCollectionSpecial("dataLoadedFloorWalls");
+        floorWallsCount = countFloorWalls[0]
+        floorWallsCountTotal = countFloorWalls[1]
+        floorWallsPercentage = floorWallsCount/floorWallsCountTotal * 100;
+      }
+      let countFurniture = 0
+      let furnitureCount = 0
+      let furnitureCountTotal = 0
+      let furniturePercentage = 0
+      if(!collectionSectionsDisabled.includes("furnitureCount")){
+        countFurniture = await countCollectionSpecial("dataLoadedFurniture");
+        furnitureCount = countFurniture[0]
+        furnitureCountTotal = countFurniture[1]
+        furniturePercentage = furnitureCount/furnitureCountTotal * 100;
+      }
+      let countClothing = 0
+      let clothingCount = 0
+      let clothingCountTotal = 0
+      let clothingPercentage = 0
+      if(!collectionSectionsDisabled.includes("clothingCount")){
+        countClothing = await countCollectionSpecial("dataLoadedClothing");
+        clothingCount = countClothing[0]
+        clothingCountTotal = countClothing[1]
+        clothingPercentage = clothingCount/clothingCountTotal * 100;
+      }
+      let countGyroid = 0
+      let gyroidCount = 0
+      let gyroidCountTotal = 0
+      let gyroidPercentage = 0
+      if(!collectionSectionsDisabled.includes("gyroidCount")){
+        countGyroid = await countCollectionSpecial("dataLoadedGyroids");
+        gyroidCount = countGyroid[0]
+        gyroidCountTotal = countGyroid[1]
+        gyroidPercentage = gyroidCount/gyroidCountTotal * 100;
+      }
+      let achievementsCount = 0
+      let achievementsCountTotal = 0
+      let achievementsPercentage = 0
+      if(!collectionSectionsDisabled.includes("achievementsCount")){
+        achievementsCount = await countCollectionAchievements();
+        achievementsCountTotal = await countAchievements();
+        achievementsPercentage = achievementsCount/achievementsCountTotal * 100;
+      }
       this.setState({
+        collectionSectionsDisabled:collectionSectionsDisabled,
         fishCount: fishCount,
         fishCountTotal: fishCountTotal,
         fishPercentage: fishPercentage,
@@ -1084,12 +1119,54 @@ export class CollectionProgress extends Component {
         clothingCount: clothingCount,
         clothingCountTotal: clothingCountTotal,
         clothingPercentage: clothingPercentage,
+        countGyroid: countGyroid,
+        gyroidCount: gyroidCount,
+        gyroidCountTotal: gyroidCountTotal,
+        gyroidPercentage: gyroidPercentage,
         achievementsCount: achievementsCount,
         achievementsCountTotal: achievementsCountTotal,
         achievementsPercentage: achievementsPercentage,
       })
       this.popupLoading?.setPopupVisible(false)
-    },10)
+    },0)
+  } 
+  saveList = async (name) => {
+    let collectionSectionsDisabled = this.state.collectionSectionsDisabled
+    if(collectionSectionsDisabled.includes(name)){
+      collectionSectionsDisabled = collectionSectionsDisabled.filter(e => e !== name)
+      collectionSectionsDisabled = collectionSectionsDisabled.filter(e => e !== "")
+    } else {
+      collectionSectionsDisabled.push(name)
+    }
+    this.setState({collectionSectionsDisabled:collectionSectionsDisabled})
+    getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+    console.log("Side sections disabled: " + collectionSectionsDisabled)
+    await AsyncStorage.setItem("collectionSectionsDisabled"+global.profile, JSON.stringify(collectionSectionsDisabled));
+  }
+  toggleEditMode = (state) => {
+    this.setState({editMode:state})
+    if(state===false){
+      this.countCollectionTotal(this.state.collectionSectionsDisabled)
+    }
+  }
+  getDelay = (keyName) => {
+    let originalOrder = [
+      "fishCount",
+      "seaCount",
+      "fossilCount",
+      "artCount",
+      "musicCount",
+      "emojipediaCount",
+      "recipeCount",
+      "furnitureCount",
+      "floorWallsCount",
+      "clothingCount",
+      "gyroidCount",
+      "achievementsCount",
+    ]
+    //subtract the lists
+    originalOrder = originalOrder.filter(n => !this.state.collectionSectionsDisabled.includes(n))
+    return originalOrder.indexOf(keyName)+1
   }
   render(){
     return(<>
@@ -1100,21 +1177,34 @@ export class CollectionProgress extends Component {
         loadingScale={1.3}
         loadingWidth={40}
       />
-      <View style={{height: 15}}/>
-      <View style={{marginHorizontal:30}}>
-        <ProgressContainer delay={0} setPage={this.props.setPage} page={2} tab={0} color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.fishPercentage} image={require("../assets/icons/fish.png")} text={attemptToTranslate("Fish") + " " + this.state.fishCount + "/" + this.state.fishCountTotal.toString()}/>
-        <ProgressContainer delay={1} setPage={this.props.setPage} page={2} tab={1} color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.seaPercentage} image={require("../assets/icons/octopus.png")} text={attemptToTranslate("Sea Creatures") + " " + this.state.seaCount + "/" + this.state.seaCountTotal.toString()}/>
-        <ProgressContainer delay={2} setPage={this.props.setPage} page={2} tab={2} color={colors.bugAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.bugsPercentage} image={require("../assets/icons/bugs.png")} text={attemptToTranslate("Bugs") + " " + this.state.bugsCount + "/" + this.state.bugsCountTotal.toString()}/>
-        <ProgressContainer delay={3} setPage={this.props.setPage} page={2} tab={3} color={colors.fossilAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.fossilPercentage} image={require("../assets/icons/bones.png")} text={attemptToTranslate("Fossils") + " " + this.state.fossilCount + "/" + this.state.fossilCountTotal.toString()}/>
-        <ProgressContainer delay={4} setPage={this.props.setPage} page={2} tab={4} color={colors.artAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.artPercentage} image={require("../assets/icons/colorPalette.png")} text={attemptToTranslate("Art") + " " + this.state.artCount + "/" + this.state.artCountTotal.toString()}/>
-        <ProgressContainer delay={5} setPage={this.props.setPage} page={4} tab={""} color={colors.musicAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.musicPercentage} image={require("../assets/icons/music.png")} text={attemptToTranslate("Songs") + " " + this.state.musicCount + "/" + this.state.musicCountTotal.toString()}/>
-        <ProgressContainer delay={6} setPage={this.props.setPage} page={5} tab={""} color={colors.emojipediaAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.emojipediaPercentage} image={require("../assets/icons/emote.png")} text={attemptToTranslate("Reactions") + " " + this.state.emojipediaCount + "/" + this.state.emojipediaCountTotal.toString()}/>
-        <ProgressContainer delay={7} setPage={this.props.setPage} page={6} tab={""} color={colors.toolsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.recipePercentage} image={require("../assets/icons/crafting.png")} text={attemptToTranslate("Recipes") + " " + this.state.recipeCount + "/" + this.state.recipeCountTotal.toString()}/>
-        <ProgressContainer delay={8} setPage={this.props.setPage} page={3} tab={0} color={colors.furnitureAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.furniturePercentage} image={require("../assets/icons/leaf.png")} text={attemptToTranslate("Furniture") + " " + this.state.furnitureCount + "/" + this.state.furnitureCountTotal.toString()}/>
-        <ProgressContainer delay={9} setPage={this.props.setPage} page={3} tab={2} color={colors.floorWallsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.floorWallsPercentage} image={require("../assets/icons/carpet.png")} text={attemptToTranslate("Floor & Walls") + " " + this.state.floorWallsCount + "/" + this.state.floorWallsCountTotal.toString()}/>
-        <ProgressContainer delay={10} setPage={this.props.setPage} page={3} tab={1} color={colors.clothingAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.clothingPercentage} image={require("../assets/icons/top.png")} text={attemptToTranslate("Clothing") + " " + this.state.clothingCount + "/" + this.state.clothingCountTotal.toString()}/>
-        <ProgressContainer delay={11} setPage={this.props.setPage} page={19} tab={""} color={colors.achievementsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.achievementsPercentage} image={require("../assets/icons/achievementIcon.png")} text={attemptToTranslate("Achievements") + " " + this.state.achievementsCount + "/" + this.state.achievementsCountTotal.toString()}/>
-      </View>
+      <TouchableOpacity style={{padding:5,position:"absolute",right:20,top:10}} 
+        onPress={async()=>{
+          this.toggleEditMode(!this.state.editMode)
+          getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+      }}>
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{this.state.editMode ? "Disable Edit List" : "Edit List"}</TextFont>
+      </TouchableOpacity>
+      <View style={{height: 25}}/>
+        {this.state.collectionSectionsDisabled?<>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("fishCount")} keyName="fishCount" delay={this.getDelay("fishCount")} setPage={this.props.setPage} page={2} tab={0} color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.fishPercentage} image={require("../assets/icons/fish.png")} text={attemptToTranslate("Fish") + " " + this.state.fishCount + "/" + this.state.fishCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("seaCount")} keyName="seaCount" delay={this.getDelay("seaCount")} setPage={this.props.setPage} page={2} tab={2} color={colors.fishAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.seaPercentage} image={require("../assets/icons/octopus.png")} text={attemptToTranslate("Sea Creatures") + " " + this.state.seaCount + "/" + this.state.seaCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("bugsCount")} keyName="bugsCount" delay={this.getDelay("bugsCount")} setPage={this.props.setPage} page={2} tab={1} color={colors.bugAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.bugsPercentage} image={require("../assets/icons/bugs.png")} text={attemptToTranslate("Bugs") + " " + this.state.bugsCount + "/" + this.state.bugsCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("fossilCount")} keyName="fossilCount" delay={this.getDelay("fossilCount")} setPage={this.props.setPage} page={2} tab={3} color={colors.fossilAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.fossilPercentage} image={require("../assets/icons/bones.png")} text={attemptToTranslate("Fossils") + " " + this.state.fossilCount + "/" + this.state.fossilCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("artCount")} keyName="artCount" delay={this.getDelay("artCount")} setPage={this.props.setPage} page={2} tab={4} color={colors.artAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.artPercentage} image={require("../assets/icons/colorPalette.png")} text={attemptToTranslate("Art") + " " + this.state.artCount + "/" + this.state.artCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("musicCount")} keyName="musicCount" delay={this.getDelay("musicCount")} setPage={this.props.setPage} page={4} tab={""} color={colors.musicAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.musicPercentage} image={require("../assets/icons/music.png")} text={attemptToTranslate("Songs") + " " + this.state.musicCount + "/" + this.state.musicCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("emojipediaCount")} keyName="emojipediaCount" delay={this.getDelay("emojipediaCount")} setPage={this.props.setPage} page={5} tab={""} color={colors.emojipediaAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.emojipediaPercentage} image={require("../assets/icons/emote.png")} text={attemptToTranslate("Reactions") + " " + this.state.emojipediaCount + "/" + this.state.emojipediaCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("recipeCount")} keyName="recipeCount" delay={this.getDelay("recipeCount")} setPage={this.props.setPage} page={6} tab={""} color={colors.toolsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.recipePercentage} image={require("../assets/icons/crafting.png")} text={attemptToTranslate("Recipes") + " " + this.state.recipeCount + "/" + this.state.recipeCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("furnitureCount")} keyName="furnitureCount" delay={this.getDelay("furnitureCount")} setPage={this.props.setPage} page={3} tab={0} color={colors.furnitureAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.furniturePercentage} image={require("../assets/icons/leaf.png")} text={attemptToTranslate("Furniture") + " " + this.state.furnitureCount + "/" + this.state.furnitureCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("floorWallsCount")} keyName="floorWallsCount" delay={this.getDelay("floorWallsCount")} setPage={this.props.setPage} page={3} tab={2} color={colors.floorWallsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.floorWallsPercentage} image={require("../assets/icons/carpet.png")} text={attemptToTranslate("Floor & Walls") + " " + this.state.floorWallsCount + "/" + this.state.floorWallsCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("clothingCount")} keyName="clothingCount" delay={this.getDelay("clothingCount")} setPage={this.props.setPage} page={3} tab={1} color={colors.clothingAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.clothingPercentage} image={require("../assets/icons/top.png")} text={attemptToTranslate("Clothing") + " " + this.state.clothingCount + "/" + this.state.clothingCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("gyroidCount")} keyName="gyroidCount" delay={this.getDelay("gyroidCount")} setPage={this.props.setPage} page={33} tab={""} color={colors.gyroidAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.gyroidPercentage} image={require("../assets/icons/gyroid.png")} text={attemptToTranslate("Gyroids") + " " + this.state.gyroidCount + "/" + this.state.gyroidCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("achievementsCount")} keyName="achievementsCount" delay={this.getDelay("achievementsCount")} setPage={this.props.setPage} page={19} tab={""} color={colors.achievementsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.achievementsPercentage} image={require("../assets/icons/achievementIcon.png")} text={attemptToTranslate("Achievements") + " " + this.state.achievementsCount + "/" + this.state.achievementsCountTotal.toString()}/>
+        </>:<View style={{justifyContent:"center", alignItems:"center"}}>
+          <LottieView autoPlay loop
+            style={{width: 90, zIndex:1,}}
+            source={require('../assets/loading.json')}
+          />
+        </View>}
       <View style={{height: 15}}/>
       </>
     )

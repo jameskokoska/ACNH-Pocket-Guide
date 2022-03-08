@@ -48,7 +48,7 @@ class GuidePage extends Component {
   componentDidMount() {
     this.mounted = true;
     if(!global.language.includes("English")){
-      this.popupLanguage.setPopupVisible(true);
+      this.popupLanguage?.setPopupVisible(true);
     }
     BackHandler.addEventListener("hardwareBackPress", this.handleBackButton);
   }

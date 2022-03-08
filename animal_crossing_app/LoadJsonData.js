@@ -14,12 +14,92 @@ export async function getStorage(storageKey, defaultValue){
   return valueReturned;
 }
 
+export function changeCustomListImage(name,image){
+  global.customListsImagesIndexed[name]=image
+  AsyncStorage.setItem("customListsImagesIndexed"+global.profile, JSON.stringify(global.customListsImagesIndexed));
+}
+
+export function getCustomListImage(name){
+  if(global.customListsImagesIndexed[name]){
+    return global.customListsImagesIndexed[name]
+  } else {
+    return "leaf.png"
+  }
+}
+
+export function addCustomList(name){
+  if(name===undefined || global.customLists.includes(name) || name==="" || name.includes("}") || name.includes("{")){
+    return false
+  } else {
+    global.customLists.push(name)
+    AsyncStorage.setItem("customLists"+global.profile, JSON.stringify(global.customLists));
+    return true
+  }
+}
+
+export function removeCustomList(name){
+  if(global.customLists.includes(name)){
+    const oldList = [...global.customLists]
+    let indexToDelete = oldList.indexOf(name);
+    const newList = oldList.filter((index,i) => i!=indexToDelete);
+    global.customLists = newList
+    AsyncStorage.setItem("customLists"+global.profile, JSON.stringify(global.customLists));
+
+    let checkListKeyStart = "customLists::"+name
+    const globalCollectionListCopy = [...global.collectionList]
+    for(var i = 0; i<globalCollectionListCopy.length; i++){
+      if(globalCollectionListCopy[i].includes(checkListKeyStart)){
+        checkOff(globalCollectionListCopy[i], true, "", "", false)
+      }
+    }
+    return true
+  }
+  return false
+}
+
+export function inCustomLists(checkListKeyString, name){
+  if(global.collectionListIndexed["customLists::"+name+checkListKeyString]===true){
+    return true;
+  } else {
+    return false
+  }
+}
+
+export function getCustomListsAmount(checkListKeyString, name){
+  if(global.collectionListIndexedAmount["customLists::"+name+checkListKeyString]!==undefined){
+    return global.collectionListIndexedAmount["customLists::"+name+checkListKeyString];
+  } else {
+    return 0
+  }
+}
+
+export function setCustomListsAmount(checkListKeyString, name, amount){
+  global.collectionListIndexedAmount["customLists::"+name+checkListKeyString] = amount;
+  AsyncStorage.setItem("collectionListIndexedAmount", JSON.stringify(global.collectionListIndexedAmount));
+}
+
+export function setLastSelectedListPage(name){
+  global.lastSelectedListPage = name
+  AsyncStorage.setItem("lastSelectedListPage", name);
+}
+
 export function inWishlist(checkListKeyString){
   if(global.collectionListIndexed["wishlist"+checkListKeyString]===true){
     return true;
   } else {
     return false
   }
+}
+
+export function getCustomListsIcon(checkListKey){
+  if(global.collectionListIndexed!==undefined && global.customListsImagesIndexed!==undefined){
+    for(let list of global.customLists){
+      if(inCustomLists(checkListKey, list)){
+        return global.customListsImagesIndexed[list]
+      }
+    }
+  }
+  return ""
 }
 
 export function inChecklist(checkListKeyString){
@@ -67,6 +147,8 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
     let dataLoading = inputData[dataSet][0]; //data[dataSet][1] is the Data category String
     let totalIndex = -1;
     let dontPush = false;
+    let currentParentKey = ""
+    let currentParent = ""
     //Loop through that specific dataset
     for(var i = 0; i < dataLoading.length; i++){
       //Remove no name K.K. songs
@@ -104,6 +186,11 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
       // dataLoading[i].wishlist=wishlist;
       dataLoading[i]["checkListKey"]=checkListKeyString;
 
+      if(currentParent!==dataLoading[i]["Name"]){
+        currentParentKey = checkListKeyString
+        currentParent = dataLoading[i]["Name"]
+      }
+
       if(checkListKey[dataSet][0] === "fishCheckList" || checkListKey[dataSet][0] === "seaCheckList" || checkListKey[dataSet][0] === "bugCheckList"){
         let hemispherePre = ["NH ", "SH "];
         let monthShort = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
@@ -124,17 +211,86 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
           if(checkListKey[dataSet][0]==="villagerCheckList"){
             dataLoading[i]["NameLanguage"]=attemptToTranslateSpecial(dataLoading[i]["Name"],"villagers")
           } else {
-            dataLoading[i]["NameLanguage"]=attemptToTranslate(dataLoading[i]["Name"], true);
+            //handle special case where there are multiple items with same name
+            if(global.language!=="English" && dataLoading[i]["Name"]==="tank" ){
+              // inputData[dataSet][1] is DataCategory
+              if(inputData[dataSet][1] === "Housewares"){
+                let currentTranslation = {
+                  "CNzh": "燃料桶",
+                  "EUde": "Tank",
+                  "EUen": "tank",
+                  "EUes": "cisterna",
+                  "EUfr": "réservoir",
+                  "EUit": "serbatoio",
+                  "EUnl": "tank",
+                  "EUru": "резервуар",
+                  "JPja": "タンク",
+                  "KRko": "탱크",
+                  "TWzh": "燃料桶",
+                  "USen": "tank",
+                  "USes": "cisterna",
+                  "USfr": "réservoir"
+                }
+                dataLoading[i]["NameLanguage"]=translateRepeatItem(currentTranslation,global.language)
+              }else if(inputData[dataSet][1] === "Tops"){
+                let currentTranslation = {
+                  "CNzh": "坦克背心",
+                  "EUde": "Tanktop",
+                  "EUen": "tank",
+                  "EUes": "top básico",
+                  "EUfr": "débardeur",
+                  "EUit": "canotta",
+                  "EUnl": "tanktop",
+                  "EUru": "топ",
+                  "JPja": "タンクトップ",
+                  "KRko": "탱크톱",
+                  "TWzh": "坦克背心",
+                  "USen": "tank",
+                  "USes": "top básico",
+                  "USfr": "camisole"
+                }
+                dataLoading[i]["NameLanguage"]=translateRepeatItem(currentTranslation,global.language)
+              }
+            }else{
+              dataLoading[i]["NameLanguage"]=attemptToTranslate(dataLoading[i]["Name"], true);
+            }
           }
         // }
       } else {
         dataLoading[i]["NameLanguage"]=dataLoading[i]["Name"];
       }
       dataLoading[i]["Data Category"]=inputData[dataSet][1];
+      dataLoading[i]["checkListKeyParent"]=currentParentKey
     }
     dataLoadingTotal.push(dataLoading);
   }
   return dataLoadingTotal;
+}
+
+function translateRepeatItem(itemTranslation, language){
+  let languages = {
+    "Chinese":"CNzh",
+    "German":"EUde",
+    "English (Europe)":"EUen",
+    "Spanish":"EUes",
+    "French":"EUfr",
+    "Italian":"EUit",
+    "Dutch":"EUnl",
+    "Russian":"EUru",
+    "Japanese":"JPja",
+    "Korean":"KRko",
+    "Chinese (Traditional)":"TWzh",
+    "English":"USen",
+    "Spanish (US)":"USes",
+    "French (US)":"USfr"
+  }
+  if(languages[language]===undefined || itemTranslation[languages[language]]===undefined){
+    return ""
+  }
+  if(languages[language] && itemTranslation[languages[language]]){
+    return itemTranslation[languages[language]]
+  } 
+  return ""
 }
 
 export async function countCollection(checkListKeyStart){
@@ -348,11 +504,13 @@ export function collectionListRemoveDuplicates(){
 }
 
 export function removeAccents(text){
-  return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace("-"," ")
+  if(text && text.constructor===String)
+    return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace("-"," ")
+  return ""
 }
 
 export function capitalize(name) {
-  if(name!==undefined){
+  if(name && name.constructor===String){
     if(name.includes("(") && name.includes(")")){
       var withinBrackets = name.match(/\((.*?)\)/);
       name = name.replace(withinBrackets[0], "("+capitalize(withinBrackets[1])+")")
@@ -366,212 +524,221 @@ export function capitalize(name) {
 }
 
 export function capitalizeFirst(name) {
-  if(name!==undefined){
-    return name.charAt(0).toUpperCase() + name.slice(1);
+  if(name && name.constructor===String){
+    return name.toString().charAt(0).toUpperCase() + name.slice(1);
   } else {
     return "";
   }
 }
 
 export function commas(number) {
-  if(number!==undefined){
+  if(number){
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  } else if(number===0){
+    return 0
   } else {
     return "null"
   }
 }
 
 export function removeBrackets(string){
-  if(string!==undefined){
-    return string.replace(/ *\([^)]*\) */g, "");
+  if(string){
+    return string.toString().replace(/ *\([^)]*\) */g, "");
   } else {
     return "null"
   }
 }
 
 export async function loadGlobalData(){
-  global.dataLoadedAmiibo = await getStorageData([
-    [require("./assets/data/Amiibo Data/Series 1.json"),"Series 1"],
-    [require("./assets/data/Amiibo Data/Series 2.json"),"Series 2"],
-    [require("./assets/data/Amiibo Data/Series 3.json"),"Series 3"],
-    [require("./assets/data/Amiibo Data/Series 4.json"),"Series 4"],
-    [require("./assets/data/Amiibo Data/Series 5.json"),"Series 5"],
-    [require("./assets/data/Amiibo Data/Promos.json"),"Promos"],
-    [require("./assets/data/Amiibo Data/Welcome amiibo series.json"),"Welcome Amiibo Series"],
-    [require("./assets/data/Amiibo Data/Sanrio series.json"),"Sanrio Series"],
-  ], [
-    ["amiiboCheckListSeries1","Name"],
-    ["amiiboCheckListSeries2","Name"],
-    ["amiiboCheckListSeries3","Name"],
-    ["amiiboCheckListSeries4","Name"],
-    ["amiiboCheckListSeries5","Name"],
-    ["amiiboCheckListPromos","Name"],
-    ["amiiboCheckListSeriesWelcomeamiiboseries","Name"],
-    ["amiiboCheckListSeriesSanrioseries","Name"],
-  ], "false")
-  global.dataLoadedReactions = await getStorageData([[require("./assets/data/DataCreated/Reactions.json"),"Reactions"]],[["emojiCheckList","Name"]],"false");
-  global.dataLoadedMusic = await getStorageData([[require("./assets/data/DataCreated/Music.json"),"Music"]],[["songCheckList","Name"]],"false");
-  global.dataLoadedConstruction = await getStorageData([[require("./assets/data/DataCreated/Construction.json"),"Construction"],[require("./assets/data/DataCreated/Fencing.json"),"Fencing"],[require("./assets/data/DataCreated/Interior Structures.json"),"Interior Structures"]],[["constructionCheckList","Name"],["fenceCheckList","Name"],["interiorStructuresCheckList","Name","Color 1","Color 2"]],"false");
-  global.dataLoadedFish = await getStorageData([[require("./assets/data/DataCreated/Fish.json"),"Fish"]],[["fishCheckList","Name"]],"false");
-  global.dataLoadedBugs = await getStorageData([[require("./assets/data/DataCreated/Insects.json"), "Insects"]],[["bugCheckList","Name"]],"false");
-  global.dataLoadedSea = await getStorageData([[require("./assets/data/DataCreated/Sea Creatures.json"), "Sea Creatures"]],[["seaCheckList","Name"]],"false");
-  global.dataLoadedCreatures = await getStorageData([
-    [require("./assets/data/DataCreated/Fish.json"),"Fish"],
-    [require("./assets/data/DataCreated/Sea Creatures.json"), "Sea Creatures"],
-    [require("./assets/data/DataCreated/Insects.json"), "Insects"],
-  ],[
-    ["fishCheckList","Name"],
-    ["seaCheckList","Name"],
-    ["bugCheckList","Name"]
-  ],"false", true);
-  global.dataLoadedFossils = await getStorageData([[require("./assets/data/DataCreated/Fossils.json"),"Fossils"]],[["fossilCheckList","Name"]],"false");
-  global.dataLoadedArt = await getStorageData([[require("./assets/data/DataCreated/Artwork.json"),"Art"]],[["artCheckList","Name","Genuine"]],"false");
-  global.dataLoadedVillagers = await getStorageData([[require("./assets/data/DataCreated/Villagers.json"),"Villagers"]],[["villagerCheckList","Name"]],"false");
-  global.dataLoadedFurniture = await getStorageData([
-    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json")), "Housewares"],
-    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Miscellaneous.json")), "Miscellaneous"],
-    [require("./assets/data/DataCreated/Wall-mounted.json"), "Wall-mounted"],
-    [require("./assets/data/DataCreated/Ceiling Decor.json"), "Ceiling Decor"],
-    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Photos.json")), "Photos"],
-    [require("./assets/data/DataCreated/Posters.json"), "Posters"],
-  ],
-  [
-    ["furnitureCheckList","Name","Variation","Pattern"],
-    ["furnitureCheckList","Name","Variation","Pattern"],
-    ["furnitureCheckList","Name","Variation","Pattern"],
-    ["furnitureCheckList","Name","Variation","Pattern"],
-    ["furnitureCheckList","Name","Variation","Pattern"],
-    ["furnitureCheckList","Name"],
-  ],"false");
-  global.dataLoadedClothing = await getStorageData([
-    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Headwear.json")), "Headwear"],
-    [require("./assets/data/DataCreated/Accessories.json"), "Accessories"],
-    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Tops.json")), "Tops"],
-    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Dress-Up.json")), "Dress-Up"],
-    [require("./assets/data/DataCreated/Clothing Other.json"),"Clothing Other"],
-    [require("./assets/data/DataCreated/Bottoms.json"),"Bottoms"],
-    [require("./assets/data/DataCreated/Socks.json"),"Socks"],
-    [require("./assets/data/DataCreated/Shoes.json"),"Shoes"],
-    [require("./assets/data/DataCreated/Bags.json"),"Bags"],
-    [require("./assets/data/DataCreated/Umbrellas.json"),"Umbrellas"],
-  ],
-  [
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name"],
-  ],"false");
-  global.dataLoadedFloorWalls = await getStorageData(
-  [
-    [require("./assets/data/DataCreated/Floors.json"), "Floors"],
-    [require("./assets/data/DataCreated/Rugs.json"), "Rugs"],
-    [require("./assets/data/DataCreated/Wallpaper.json"), "Wallpaper"],
-  ],
-  [
-    ["floorWallsCheckList","Name"],
-    ["floorWallsCheckList","Name"],
-    ["floorWallsCheckList","Name"],
-  ],"false");
-  global.dataLoadedTools = await getStorageData([[require("./assets/data/DataCreated/ToolsGoods.json"), "Tools"]],[["toolsCheckList","Name","Variation"]],"false");
-  global.dataLoadedRecipes = await getStorageData([[require("./assets/data/DataCreated/Recipes.json"),"Recipes"],],[["recipesCheckList","Name"]],"false");
-  global.dataLoadedCards = await getStorageData([[require("./assets/data/DataCreated/Message Cards.json"), "Message Cards"],],[["cardsCheckList","Name"]],"false");
-  global.dataLoadedMaterials = await getStorageData([[require("./assets/data/DataCreated/Other.json"),"Other"]],[["materialsCheckList","Name"]],"false");
-  global.dataLoadedGyroids = await getStorageData([[require("./assets/data/DataCreated/Gyroids.json"),"Gyroids"]],[["gyroidCheckList","Name","Variation","Pattern"]],"false");
-  global.dataLoadedAll = await getStorageData(
-  [
-    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json")), "Housewares"],
-    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Miscellaneous.json")), "Miscellaneous"],
-    [require("./assets/data/DataCreated/Wall-mounted.json"), "Wall-mounted"],
-    [require("./assets/data/DataCreated/Ceiling Decor.json"), "Ceiling Decor"],
-    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Photos.json")), "Photos"],
-    [require("./assets/data/DataCreated/Posters.json"), "Posters"],
-    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Headwear.json")), "Headwear"],
-    [require("./assets/data/DataCreated/Accessories.json"), "Accessories"],
-    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Tops.json")), "Tops"],
-    [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Dress-Up.json")), "Dress-Up"],
-    [require("./assets/data/DataCreated/Clothing Other.json"),"Clothing Other"],
-    [require("./assets/data/DataCreated/Bottoms.json"),"Bottoms"],
-    [require("./assets/data/DataCreated/Socks.json"),"Socks"],
-    [require("./assets/data/DataCreated/Shoes.json"),"Shoes"],
-    [require("./assets/data/DataCreated/Bags.json"),"Bags"],
-    [require("./assets/data/DataCreated/Umbrellas.json"),"Umbrellas"],
-    [require("./assets/data/DataCreated/Floors.json"), "Floors"],
-    [require("./assets/data/DataCreated/Rugs.json"), "Rugs"],
-    [require("./assets/data/DataCreated/Wallpaper.json"), "Wallpaper"],
-    [require("./assets/data/DataCreated/Recipes.json"), 'Recipes'],
-    [require("./assets/data/DataCreated/ToolsGoods.json"), "Tools"],
-    [require("./assets/data/DataCreated/Fish.json"), "Fish"],
-    [require("./assets/data/DataCreated/Insects.json"), "Insects"],
-    [require("./assets/data/DataCreated/Sea Creatures.json"),"Sea Creatures"],
-    [require("./assets/data/DataCreated/Fossils.json"),"Fossils"],
-    [require("./assets/data/DataCreated/Artwork.json"),"Art"],
-    [require("./assets/data/DataCreated/Villagers.json"),"Villagers"],
-    [require("./assets/data/DataCreated/Music.json"),"Music"],
-    [require("./assets/data/DataCreated/Reactions.json"),"Reactions"],
-    [require("./assets/data/DataCreated/Construction.json"),"Construction"],
-    [require("./assets/data/DataCreated/Fencing.json"),"Fencing"],
-    [require("./assets/data/DataCreated/Interior Structures.json"),"Interior Structures"],
-    [require("./assets/data/DataCreated/Other.json"),"Other"],
-    [require("./assets/data/DataCreated/Gyroids.json"),"Gyroids"],
-    [require("./assets/data/Amiibo Data/Series 1.json"),"Series 1"],
-    [require("./assets/data/Amiibo Data/Series 2.json"),"Series 2"],
-    [require("./assets/data/Amiibo Data/Series 3.json"),"Series 3"],
-    [require("./assets/data/Amiibo Data/Series 4.json"),"Series 4"],
-    [require("./assets/data/Amiibo Data/Series 5.json"),"Series 5"],
-    [require("./assets/data/Amiibo Data/Promos.json"),"Promos"],
-    [require("./assets/data/Amiibo Data/Welcome amiibo series.json"),"Welcome Amiibo Series"],
-    [require("./assets/data/Amiibo Data/Sanrio series.json"),"Sanrio Series"],
-  ],
-  [
-    ["furnitureCheckList","Name","Variation","Pattern"],
-    ["furnitureCheckList","Name","Variation","Pattern"],
-    ["furnitureCheckList","Name","Variation","Pattern"],
-    ["furnitureCheckList","Name","Variation","Pattern"],
-    ["furnitureCheckList","Name","Variation","Pattern"],
-    ["furnitureCheckList","Name"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name","Variation"],
-    ["clothingCheckList","Name"],
-    ["floorWallsCheckList","Name"],
-    ["floorWallsCheckList","Name"],
-    ["floorWallsCheckList","Name"],
-    ["recipesCheckList","Name"],
-    ["toolsCheckList","Name","Variation"],
-    ["fishCheckList","Name"],
-    ["bugCheckList","Name"],
-    ["seaCheckList","Name"],
-    ["fossilCheckList","Name"],
-    ["artCheckList","Name","Genuine"],
-    ["villagerCheckList","Name"],
-    ["songCheckList","Name"],
-    ["emojiCheckList","Name"],
-    ["constructionCheckList","Name"],
-    ["fenceCheckList","Name"],
-    ["interiorStructuresCheckList","Name","Color 1","Color 2"],
-    ["materialsCheckList","Name"],
-    ["gyroidCheckList","Name","Variation","Pattern"],
-    ["amiiboCheckListSeries1","Name"],
-    ["amiiboCheckListSeries2","Name"],
-    ["amiiboCheckListSeries3","Name"],
-    ["amiiboCheckListSeries4","Name"],
-    ["amiiboCheckListSeries5","Name"],
-    ["amiiboCheckListPromos","Name"],
-    ["amiiboCheckListSeriesWelcomeamiiboseries","Name"],
-    ["amiiboCheckListSeriesSanrioseries","Name"],
-  ],"false");
+  try{
+    global.dataLoadedAmiibo = await getStorageData([
+      [require("./assets/data/Amiibo Data/Series 1.json"),"Series 1"],
+      [require("./assets/data/Amiibo Data/Series 2.json"),"Series 2"],
+      [require("./assets/data/Amiibo Data/Series 3.json"),"Series 3"],
+      [require("./assets/data/Amiibo Data/Series 4.json"),"Series 4"],
+      [require("./assets/data/Amiibo Data/Series 5.json"),"Series 5"],
+      [require("./assets/data/Amiibo Data/Promos.json"),"Promos"],
+      [require("./assets/data/Amiibo Data/Welcome amiibo series.json"),"Welcome Amiibo Series"],
+      [require("./assets/data/Amiibo Data/Sanrio series.json"),"Sanrio Series"],
+    ], [
+      ["amiiboCheckListSeries1","Name"],
+      ["amiiboCheckListSeries2","Name"],
+      ["amiiboCheckListSeries3","Name"],
+      ["amiiboCheckListSeries4","Name"],
+      ["amiiboCheckListSeries5","Name"],
+      ["amiiboCheckListPromos","Name"],
+      ["amiiboCheckListSeriesWelcomeamiiboseries","Name"],
+      ["amiiboCheckListSeriesSanrioseries","Name"],
+    ], "false")
+    global.dataLoadedReactions = await getStorageData([[require("./assets/data/DataCreated/Reactions.json"),"Reactions"]],[["emojiCheckList","Name"]],"false");
+    global.dataLoadedMusic = await getStorageData([[require("./assets/data/DataCreated/Music.json"),"Music"]],[["songCheckList","Name"]],"false");
+    global.dataLoadedConstruction = await getStorageData([[require("./assets/data/DataCreated/Construction.json"),"Construction"],[require("./assets/data/DataCreated/Fencing.json"),"Fencing"],[require("./assets/data/DataCreated/Interior Structures.json"),"Interior Structures"]],[["constructionCheckList","Name"],["fenceCheckList","Name"],["interiorStructuresCheckList","Name","Color 1","Color 2"]],"false");
+    global.dataLoadedFish = await getStorageData([[require("./assets/data/DataCreated/Fish.json"),"Fish"]],[["fishCheckList","Name"]],"false");
+    global.dataLoadedBugs = await getStorageData([[require("./assets/data/DataCreated/Insects.json"), "Insects"]],[["bugCheckList","Name"]],"false");
+    global.dataLoadedSea = await getStorageData([[require("./assets/data/DataCreated/Sea Creatures.json"), "Sea Creatures"]],[["seaCheckList","Name"]],"false");
+    global.dataLoadedCreatures = await getStorageData([
+      [require("./assets/data/DataCreated/Fish.json"),"Fish"],
+      [require("./assets/data/DataCreated/Sea Creatures.json"), "Sea Creatures"],
+      [require("./assets/data/DataCreated/Insects.json"), "Insects"],
+    ],[
+      ["fishCheckList","Name"],
+      ["seaCheckList","Name"],
+      ["bugCheckList","Name"]
+    ],"false", true);
+    global.dataLoadedFossils = await getStorageData([[require("./assets/data/DataCreated/Fossils.json"),"Fossils"]],[["fossilCheckList","Name"]],"false");
+    global.dataLoadedArt = await getStorageData([[require("./assets/data/DataCreated/Artwork.json"),"Art"]],[["artCheckList","Name","Genuine"]],"false");
+    global.dataLoadedVillagers = await getStorageData([[require("./assets/data/DataCreated/Villagers.json"),"Villagers"]],[["villagerCheckList","Name"]],"false");
+    global.dataLoadedFurniture = await getStorageData([
+      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json")), "Housewares"],
+      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Miscellaneous.json")), "Miscellaneous"],
+      [require("./assets/data/DataCreated/Wall-mounted.json"), "Wall-mounted"],
+      [require("./assets/data/DataCreated/Ceiling Decor.json"), "Ceiling Decor"],
+      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Photos.json")), "Photos"],
+      [require("./assets/data/DataCreated/Posters.json"), "Posters"],
+    ],
+    [
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name"],
+    ],"false");
+    global.dataLoadedClothing = await getStorageData([
+      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Headwear.json")), "Headwear"],
+      [require("./assets/data/DataCreated/Accessories.json"), "Accessories"],
+      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Tops.json")), "Tops"],
+      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Dress-Up.json")), "Dress-Up"],
+      [require("./assets/data/DataCreated/Clothing Other.json"),"Clothing Other"],
+      [require("./assets/data/DataCreated/Bottoms.json"),"Bottoms"],
+      [require("./assets/data/DataCreated/Socks.json"),"Socks"],
+      [require("./assets/data/DataCreated/Shoes.json"),"Shoes"],
+      [require("./assets/data/DataCreated/Bags.json"),"Bags"],
+      [require("./assets/data/DataCreated/Umbrellas.json"),"Umbrellas"],
+    ],
+    [
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name"],
+    ],"false");
+    global.dataLoadedFloorWalls = await getStorageData(
+    [
+      [require("./assets/data/DataCreated/Floors.json"), "Floors"],
+      [require("./assets/data/DataCreated/Rugs.json"), "Rugs"],
+      [require("./assets/data/DataCreated/Wallpaper.json"), "Wallpaper"],
+    ],
+    [
+      ["floorWallsCheckList","Name"],
+      ["floorWallsCheckList","Name"],
+      ["floorWallsCheckList","Name"],
+    ],"false");
+    global.dataLoadedTools = await getStorageData([[require("./assets/data/DataCreated/ToolsGoods.json"), "Tools"]],[["toolsCheckList","Name","Variation"]],"false");
+    global.dataLoadedRecipes = await getStorageData([[require("./assets/data/DataCreated/Recipes.json"),"Recipes"],],[["recipesCheckList","Name"]],"false");
+    global.dataLoadedCards = await getStorageData([[require("./assets/data/DataCreated/Message Cards.json"), "Message Cards"],],[["cardsCheckList","Name"]],"false");
+    global.dataLoadedMaterials = await getStorageData([[require("./assets/data/DataCreated/Other.json"),"Other"]],[["materialsCheckList","Name"]],"false");
+    global.dataLoadedGyroids = await getStorageData([[require("./assets/data/DataCreated/Gyroids.json"),"Gyroids"]],[["gyroidCheckList","Name","Variation","Pattern"]],"false");
+    global.dataLoadedAll = await getStorageData(
+    [
+      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json")), "Housewares"],
+      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Miscellaneous.json")), "Miscellaneous"],
+      [require("./assets/data/DataCreated/Wall-mounted.json"), "Wall-mounted"],
+      [require("./assets/data/DataCreated/Ceiling Decor.json"), "Ceiling Decor"],
+      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Photos.json")), "Photos"],
+      [require("./assets/data/DataCreated/Posters.json"), "Posters"],
+      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Headwear.json")), "Headwear"],
+      [require("./assets/data/DataCreated/Accessories.json"), "Accessories"],
+      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Tops.json")), "Tops"],
+      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Dress-Up.json")), "Dress-Up"],
+      [require("./assets/data/DataCreated/Clothing Other.json"),"Clothing Other"],
+      [require("./assets/data/DataCreated/Bottoms.json"),"Bottoms"],
+      [require("./assets/data/DataCreated/Socks.json"),"Socks"],
+      [require("./assets/data/DataCreated/Shoes.json"),"Shoes"],
+      [require("./assets/data/DataCreated/Bags.json"),"Bags"],
+      [require("./assets/data/DataCreated/Umbrellas.json"),"Umbrellas"],
+      [require("./assets/data/DataCreated/Floors.json"), "Floors"],
+      [require("./assets/data/DataCreated/Rugs.json"), "Rugs"],
+      [require("./assets/data/DataCreated/Wallpaper.json"), "Wallpaper"],
+      [require("./assets/data/DataCreated/Recipes.json"), 'Recipes'],
+      [require("./assets/data/DataCreated/ToolsGoods.json"), "Tools"],
+      [require("./assets/data/DataCreated/Fish.json"), "Fish"],
+      [require("./assets/data/DataCreated/Insects.json"), "Insects"],
+      [require("./assets/data/DataCreated/Sea Creatures.json"),"Sea Creatures"],
+      [require("./assets/data/DataCreated/Fossils.json"),"Fossils"],
+      [require("./assets/data/DataCreated/Artwork.json"),"Art"],
+      [require("./assets/data/DataCreated/Villagers.json"),"Villagers"],
+      [require("./assets/data/DataCreated/Music.json"),"Music"],
+      [require("./assets/data/DataCreated/Reactions.json"),"Reactions"],
+      [require("./assets/data/DataCreated/Construction.json"),"Construction"],
+      [require("./assets/data/DataCreated/Fencing.json"),"Fencing"],
+      [require("./assets/data/DataCreated/Interior Structures.json"),"Interior Structures"],
+      [require("./assets/data/DataCreated/Other.json"),"Other"],
+      [require("./assets/data/DataCreated/Gyroids.json"),"Gyroids"],
+      [require("./assets/data/Amiibo Data/Series 1.json"),"Series 1"],
+      [require("./assets/data/Amiibo Data/Series 2.json"),"Series 2"],
+      [require("./assets/data/Amiibo Data/Series 3.json"),"Series 3"],
+      [require("./assets/data/Amiibo Data/Series 4.json"),"Series 4"],
+      [require("./assets/data/Amiibo Data/Series 5.json"),"Series 5"],
+      [require("./assets/data/Amiibo Data/Promos.json"),"Promos"],
+      [require("./assets/data/Amiibo Data/Welcome amiibo series.json"),"Welcome Amiibo Series"],
+      [require("./assets/data/Amiibo Data/Sanrio series.json"),"Sanrio Series"],
+    ],
+    [
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name","Variation"],
+      ["clothingCheckList","Name"],
+      ["floorWallsCheckList","Name"],
+      ["floorWallsCheckList","Name"],
+      ["floorWallsCheckList","Name"],
+      ["recipesCheckList","Name"],
+      ["toolsCheckList","Name","Variation"],
+      ["fishCheckList","Name"],
+      ["bugCheckList","Name"],
+      ["seaCheckList","Name"],
+      ["fossilCheckList","Name"],
+      ["artCheckList","Name","Genuine"],
+      ["villagerCheckList","Name"],
+      ["songCheckList","Name"],
+      ["emojiCheckList","Name"],
+      ["constructionCheckList","Name"],
+      ["fenceCheckList","Name"],
+      ["interiorStructuresCheckList","Name","Color 1","Color 2"],
+      ["materialsCheckList","Name"],
+      ["gyroidCheckList","Name","Variation","Pattern"],
+      ["amiiboCheckListSeries1","Name"],
+      ["amiiboCheckListSeries2","Name"],
+      ["amiiboCheckListSeries3","Name"],
+      ["amiiboCheckListSeries4","Name"],
+      ["amiiboCheckListSeries5","Name"],
+      ["amiiboCheckListPromos","Name"],
+      ["amiiboCheckListSeriesWelcomeamiiboseries","Name"],
+      ["amiiboCheckListSeriesSanrioseries","Name"],
+    ],"false");
+    return true
+  } catch (e) {
+    console.log("Error parsing collection JSON: "+e)
+    return false
+  }
+  
 }
 
 const artIdentification = require("./assets/data/artIdentification.json")
@@ -589,12 +756,16 @@ export function getArtIdentification(name){
 }
 
 export function getSettingsString(key){
-  if(settings!==undefined||global.settingsCurrent!==undefined){
-    for(var i = 0; i<settings.length; i++){
-      if(global.settingsCurrent[i]["keyName"]===key){
-        return global.settingsCurrent[i]["currentValue"];
+  try{
+    if(settings!==undefined||global.settingsCurrent!==undefined){
+      for(var i = 0; i<settings.length; i++){
+        if(global.settingsCurrent[i]["keyName"]===key){
+          return global.settingsCurrent[i]["currentValue"];
+        }
       }
     }
+  } catch {
+    return 0;
   }
   return 0;
 }
@@ -807,6 +978,14 @@ export const settings = [
     "text" : "System",
   },
   {
+    "keyName" : "settingsLowEndDevice",
+    "defaultValue" : "false",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/repeat.png"),
+    "displayName" : "Battery saver / Increase performance",
+    "description" : "Disable animations and preloading of some app data to increase performance and loading times on older devices.",
+  },
+  {
     "keyName" : "settingsBackButtonChangePages",
     "defaultValue" : "false",
     "currentValue" : "",
@@ -816,7 +995,7 @@ export const settings = [
   },
   {
     "keyName" : "settingsShowStatusBar",
-    "defaultValue" : "false",
+    "defaultValue" : "true",
     "currentValue" : "",
     "picture" : require("./assets/icons/bell.png"),
     "displayName" : "Show notification status bar",
@@ -1436,7 +1615,7 @@ export function getFlowerChecklistKey(flowerName){
   flowerStripped = flowerStripped + " Plant"
   for(let dataSet = 0; dataSet < global.dataLoadedMaterials.length; dataSet++){
     for(let i = 0; i < global.dataLoadedMaterials[dataSet].length; i++){
-      if(global.dataLoadedMaterials[dataSet][i]["Name"].toLowerCase()===flowerStripped.toLowerCase()){
+      if(global.dataLoadedMaterials[dataSet][i]["Name"].toString().toLowerCase()===flowerStripped.toString().toLowerCase()){
         return global.dataLoadedMaterials[dataSet][i]["checkListKey"]
       }
     }
@@ -1459,9 +1638,11 @@ export function allEventItemsCheck(eventName){
   }
   let previousName = ""
   let previousDataCategory = ""
+  let foundAnyItem = false
   for(let dataSet = 0; dataSet < global.dataLoadedAll.length; dataSet++){
     for(let i = 0; i < global.dataLoadedAll[dataSet].length; i++){
-      if((global.dataLoadedAll[dataSet][i].hasOwnProperty("Source") && global.dataLoadedAll[dataSet][i]["Source"].toLowerCase().split("; ").includes(eventName.toLowerCase())) || (global.dataLoadedAll[dataSet][i].hasOwnProperty("Season/Event") && global.dataLoadedAll[dataSet][i]["Season/Event"].toLowerCase().split("; ").includes(eventName.toLowerCase()))){
+      if((global.dataLoadedAll[dataSet][i].hasOwnProperty("Source") && global.dataLoadedAll[dataSet][i]["Source"].toString().toLowerCase().split("; ").includes(eventName.toString().toLowerCase())) || (global.dataLoadedAll[dataSet][i].hasOwnProperty("Season/Event") && global.dataLoadedAll[dataSet][i]["Season/Event"].toString().toLowerCase().split("; ").includes(eventName.toString().toLowerCase()))){
+        foundAnyItem = true
         if(previousName === global.dataLoadedAll[dataSet][i]["Name"] && previousDataCategory === global.dataLoadedAll[dataSet][i]["Data Category"]){
           continue
         } else {
@@ -1473,6 +1654,9 @@ export function allEventItemsCheck(eventName){
         }
       }
     }
+  }
+  if(foundAnyItem===false){
+    return "no event items found"
   }
   return true
 }
@@ -1554,7 +1738,7 @@ export function isInteger(value) {
 }
 
 export function indexCollectionList(collectionList){
-  console.log(collectionList)
+  console.log("Collection list: "+collectionList)
   let collectionListOut = {}
   for(let entry of collectionList){
     if(entry==="---ACNH Pocket Guide Backup---"||entry===""){

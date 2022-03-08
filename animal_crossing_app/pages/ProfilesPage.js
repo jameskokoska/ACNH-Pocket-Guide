@@ -10,6 +10,9 @@ import {ConfigureHomePageSettingContainer} from "./HomePage"
 import {CustomDatePicker} from "./SettingsPage"
 import {getWeekDayShort, getMonthShort, doWeSwapDate} from "../components/DateFunctions"
 import {ProfileIcon} from "./ProfileCurrentPage"
+import Popup from '../components/Popup';
+import Toast from "react-native-toast-notifications";
+import { defaultToDoList, defaultTurnipList } from '../components/TodoList';
 
 export const profileNames = ["","Profile 1","Profile 2", "Profile 3", "Profile 4"]
 
@@ -52,22 +55,28 @@ class ProfilesComponent extends Component{
     }
   }
   async componentDidMount(){
-    this.profile = this.props.profile;
-    this.selected = false;
-    if(global.profile===this.props.profile){
-      this.selected = true;
-      this.hemisphereSetting = await getStorage("settingsNorthernHemisphere","true")==="true"?true:false;
-      this.customDateSetting = await getStorage("settingsUseCustomDate","false")==="true"?true:false;
-    } else {
-      this.hemisphereSetting = await getStorage("settingsNorthernHemisphereSaved"+this.profile,"true")==="true"?true:false;
-      this.customDateSetting = await getStorage("settingsUseCustomDateSaved"+this.profile,"false")==="true"?true:false;
-    }
-    this.displayProfile = this.props.profile===""?"Main":this.props.profile;
-    this.name = await getStorage("name"+this.profile,"");
-    this.islandName = await getStorage("islandName"+this.profile,"");
-    this.timeOffset = await getStorage("customDateOffset"+this.profile,"0");
-    this.forceUpdate();
-    this.updateDate();
+    setTimeout(async ()=>{
+      this.profile = this.props.profile;
+      this.selected = false;
+      if(global.profile===this.props.profile){
+        this.selected = true;
+        this.hemisphereSetting = (await getSettingsString("settingsNorthernHemisphere")==="true")?true:false;
+        this.customDateSetting = (await getSettingsString("settingsUseCustomDate")==="true")?true:false;
+      } else {
+        this.hemisphereSetting = (await getStorage("settingsNorthernHemisphereSaved"+this.profile,"true")==="true")?true:false;
+        this.customDateSetting = (await getStorage("settingsUseCustomDateSaved"+this.profile,"false")==="true")?true:false;
+      }
+      this.displayProfile = this.props.profile===""?"Main":this.props.profile;
+      this.name = await getStorage("name"+this.profile,"");
+      this.islandName = await getStorage("islandName"+this.profile,"");
+      this.timeOffset = await getStorage("customDateOffset"+this.profile,"0");
+      this.entries = (await getProfileData(this.profile))-3
+      if(this.entries<0){
+        this.entries = 0
+      }
+      this.forceUpdate();
+      this.updateDate();
+    },0)
   }
   updateNorthernHemisphere = async (value) => {
     if(this.selected){
@@ -124,8 +133,9 @@ class ProfilesComponent extends Component{
         <View style={{marginHorizontal:20, flexDirection:"row", alignItems:"center"}}>
           <ProfileIcon profile={this.props.profile}/>
           <View>
-            <SubHeader style={{fontSize:25, marginHorizontal:14}} margin={false}>{this.displayProfile}</SubHeader>
-            {doWeSwapDate()?<SubHeader style={{fontSize:17, marginHorizontal:14}} margin={false}>{attemptToTranslate(getWeekDayShort(this.state.date.getDay())) + ". " + this.state.date.getDate() + " " + attemptToTranslate(getMonthShort(this.state.date.getMonth())) + ", " + time}</SubHeader>:<SubHeader style={{fontSize:17, marginHorizontal:14}} margin={false}>{attemptToTranslate(getWeekDayShort(this.state.date.getDay())) + ". " + attemptToTranslate(getMonthShort(this.state.date.getMonth())) + " " + this.state.date.getDate() + ", " + time}</SubHeader>}
+            <SubHeader style={{fontSize:24, marginHorizontal:14}} margin={false}>{this.displayProfile}</SubHeader>
+            {doWeSwapDate()?<SubHeader style={{fontSize:16, marginHorizontal:14}} margin={false}>{attemptToTranslate(getWeekDayShort(this.state.date.getDay())) + ". " + this.state.date.getDate() + " " + attemptToTranslate(getMonthShort(this.state.date.getMonth())) + ", " + time}</SubHeader>:<SubHeader style={{fontSize:17, marginHorizontal:14}} margin={false}>{attemptToTranslate(getWeekDayShort(this.state.date.getDay())) + ". " + attemptToTranslate(getMonthShort(this.state.date.getMonth())) + " " + this.state.date.getDate() + ", " + time}</SubHeader>}
+            <SubHeader style={{fontSize:13, marginHorizontal:14}} margin={false}>{this.entries + " " + attemptToTranslate("entries.")}</SubHeader>
           </View>
         </View>
         <View style={{height:20}}/>
@@ -153,14 +163,58 @@ class ProfilesComponent extends Component{
         <View style={{height:7}}/>
         <ConfigureHomePageSettingContainer title={"Northern Hemisphere"} defaultValue={this.hemisphereSetting} onCheck={(check) => {this.updateNorthernHemisphere(check)}}/>
         <ConfigureHomePageSettingContainer title={"Use a custom date"} defaultValue={this.customDateSetting} onCheck={(check) => {this.updateCustomDate(check)}}/>
-        <CustomDatePicker setDateOffset={this.setDateOffset}/>
-        {this.selected===false?<ButtonComponent vibrate={10} style={{alignSelf: 'flex-end'}} color={colors.okButton[global.darkMode]} text="Load Profile" onPress={() => {
-          setSettingsString("settingsNorthernHemisphere",this.hemisphereSetting?"true":"false");
-          setSettingsString("settingsUseCustomDate",this.customDateSetting?"true":"false");
-          this.props.loadProfileData(this.profile);
-        }}/>:<View/>}
+        <View style={{marginHorizontal:10}}>
+          <CustomDatePicker setDateOffset={this.setDateOffset}/>
+          <View style={{flexDirection:"row", justifyContent:"space-between",}}>
+            <ButtonComponent text="Erase" onPress={() => {this.popupWarning?.setPopupVisible(true)}} vibrate={100} color={colors.cancelButton[global.darkMode]}/>
+            {this.selected===false?<ButtonComponent vibrate={10} style={{alignSelf: 'flex-end'}} color={colors.okButton[global.darkMode]} text="Load Profile" onPress={() => {
+              setSettingsString("settingsNorthernHemisphere",this.hemisphereSetting?"true":"false");
+              setSettingsString("settingsUseCustomDate",this.customDateSetting?"true":"false");
+              this.props.loadProfileData(this.profile);
+              toast.show(attemptToTranslate(this.displayProfile) + " " + attemptToTranslate("loaded."), {type:"success",
+              renderType:{
+                success: (toast) => (
+                  <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 12, borderRadius: 5, backgroundColor: colors.popupSuccess[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+                    <TextFont translate={false} style={{color:"white", fontSize: 15}}>{toast.message}</TextFont>
+                  </View>
+                ),
+              }
+            })
+            }}/>:<View/>}
+          </View>
+        </View>
+        <Popup ref={(popupWarning) => this.popupWarning = popupWarning} text={attemptToTranslate("Erase") +" "+ attemptToTranslate(this.displayProfile)} textLower={attemptToTranslate("Would you like to reset your collection?") + "\n\n" + attemptToTranslate("It will only erase") + " " + attemptToTranslate(this.displayProfile) + " " + attemptToTranslate("data") } button2={"Reset"} button1={"Cancel"} button1Action={()=>{console.log("")}} button2Action={()=>{this.popupAreYouSure?.setPopupVisible(true)}}/>
+        <Popup ref={(popupAreYouSure) => this.popupAreYouSure = popupAreYouSure} text={attemptToTranslate("Reset?")} textLower={attemptToTranslate("Are you sure?") + "\n" +attemptToTranslate("This action cannot be undone.") + "\n\n" + attemptToTranslate("It will only erase") + " " + attemptToTranslate(this.displayProfile) + " " + attemptToTranslate("data") } button2={"Erase Data"} button1={"Cancel"} button1Action={()=>{console.log("")}} button2Action={async()=>{await resetProfileData(this.profile); this.popupRestart?.setPopupVisible(true)}}/>
+        <Popup ref={(popupRestart) => this.popupRestart = popupRestart} text="Restart Required" textLower="Please restart the application."/>
         <View style={{height:5}}/>
       </View>
     )
   }
+}
+
+async function resetProfileData(profileToReset){
+  await AsyncStorage.setItem("collectedString"+profileToReset, "");
+  await AsyncStorage.setItem("name"+profileToReset, "");
+  await AsyncStorage.setItem("islandName"+profileToReset, "");
+  await AsyncStorage.setItem("dreamAddress"+profileToReset, "");
+  await AsyncStorage.setItem("friendCode"+profileToReset, "");
+  await AsyncStorage.setItem("creatorCode"+profileToReset, "");
+  await AsyncStorage.setItem("HHPCode"+profileToReset, "");
+  await AsyncStorage.setItem("HHP"+profileToReset, "[]");
+  await AsyncStorage.setItem("Achievements"+profileToReset, "[]");
+  await AsyncStorage.setItem("ToDoList"+profileToReset, JSON.stringify(defaultToDoList()));
+  await AsyncStorage.setItem("TurnipList"+profileToReset, JSON.stringify(defaultTurnipList()));
+  await AsyncStorage.setItem("TurnipListLastPattern"+profileToReset, "-1");
+  await AsyncStorage.setItem("TurnipListFirstTime"+profileToReset, "false");
+  await AsyncStorage.setItem("showVillagersTalkList"+profileToReset, "false");
+  await AsyncStorage.setItem("customDateOffset"+profileToReset, "0");
+  await AsyncStorage.setItem("settingsNorthernHemisphereSaved"+profileToReset, "true");
+  await AsyncStorage.setItem("settingsUseCustomDateSaved"+profileToReset, "false");
+  await AsyncStorage.setItem("selectedFruit"+profileToReset, "");
+
+  return true
+}
+
+async function getProfileData(profile){
+  return ((await getStorage("collectedString"+profile,"")).split("\n")).length;
 }

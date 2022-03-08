@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {Animated,FlatList, Dimensions, TouchableOpacity,StyleSheet, Text, View, Image} from 'react-native';
-import {removeAccents,getStorage, findObject, attemptToTranslateItem, getSettingsString, attemptToTranslateSpecial} from "../LoadJsonData"
+import {Animated,FlatList, Dimensions, TouchableOpacity,StyleSheet, Text, View, Image, Vibration} from 'react-native';
+import {removeAccents,getStorage, findObject, attemptToTranslateItem, getSettingsString, attemptToTranslateSpecial, attemptToTranslate} from "../LoadJsonData"
 import colors from '../Colors'
 import {attemptToTranslateAchievement} from "../LoadJsonData"
 import FastImage from "../components/FastImage"
@@ -12,6 +12,7 @@ import Check from '../components/Check';
 import FadeInOut from '../components/FadeInOut';
 import { calculateHeaderHeight } from '../components/ListPage';
 import Toast from "react-native-toast-notifications";
+import TextFont from '../components/TextFont';
 
 export default class ParadisePlanningPage extends Component {
   constructor(props){
@@ -47,7 +48,7 @@ export default class ParadisePlanningPage extends Component {
         oldList.push(id);
         this.saveList(oldList);
         this.paradiseChecklist = oldList
-        getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10,220,20]) : "";
+        getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,20,220,20]) : "";
       }
     } catch (e){
       toast.show("Please report this error to dapperappdeveloper@gmail.com : \n" + e.toString(), {type:"danger"})
@@ -88,9 +89,9 @@ export default class ParadisePlanningPage extends Component {
           }
         }
         if(!skip){
-          if(removeAccents(requestRequest.toLowerCase()).includes(removeAccents(text.toLowerCase()))){
+          if(removeAccents(requestRequest.toString().toLowerCase()).includes(removeAccents(text.toString().toLowerCase()))){
             outputData.push(request);
-          } else if (attemptToTranslateSpecial(request["Name"], "villagers").toLowerCase().includes(text.toLowerCase())){
+          } else if (request["Name"] !==undefined && attemptToTranslateSpecial(request["Name"], "villagers")!==undefined && attemptToTranslateSpecial(request["Name"], "villagers").toString().toLowerCase().includes(text.toString().toLowerCase())){
             outputData.push(request);
           }
         }
@@ -146,6 +147,9 @@ export default class ParadisePlanningPage extends Component {
           }}
           keyExtractor={(item, index) => `list-item-${index}-${item["Name"]}`}
           contentContainerStyle={{paddingBottom:Dimensions.get('window').height/3}}
+          ListFooterComponent={()=>{
+            return <TextFont style={{marginTop:10, marginBottom:10, textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{this.state.data.length+" "+(this.state.data.length!==1?attemptToTranslate("entries."):attemptToTranslate("entry."))}</TextFont>
+          }}
         />
       </FadeInOut>
     </>
@@ -154,7 +158,7 @@ export default class ParadisePlanningPage extends Component {
 
 class CycleCheckListFilter extends Component{
   render(){
-    console.log(this.props.setFilter)
+    console.log("Paradise planning page filter state: "+this.props.setFilter)
     return <TouchableOpacity style={{width:70, height:63}} activeOpacity={0.7} onPress={()=>{this.props.cycleFilter()}}>
       {this.props.setFilter===0
         ?

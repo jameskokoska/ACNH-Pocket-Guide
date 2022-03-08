@@ -5,6 +5,7 @@ const colors = {
     background: ["#f5f5f5","#1a1a1a"], //"#34454f" original
     backgroundLight: ["#ebebeb","#272727"],
     FAB: ["#49599a", "#455a64"],
+    FAB2: ["#67BB4DD8", "#5B7C57D7"],
     searchbarBG : ["#DFDFDF", "#A3A3A3"],
     searchbarIcon : ["#000000","#FFFFFF"],
     shadow : ["#ebebeb", "#313131"],
@@ -75,6 +76,8 @@ const colors = {
     specialEventBackgroundHighlight : ["#56CFF7","#3077B4"],
     specialEventBirthdayBackgroundHighlight : ["#D963F3","#8332A3"],
     warningEventBackgroundHeavy : ["#FF5959","#A13341"],
+    tvGuideHighlight : ["#98C7FD","#2D5C86"],
+    tvGuideHighlightSpecial : ["#C498FD","#7B3A8B"],
     startEventBackgroundHeavy : ["#6BFF6B","#3F8018"],
     specialEventResidentBirthdayBackgroundHeavy : ["#B5BFEE","#515883"],
     specialEventBackgroundHeavy : ["#56CFF7","#3077B4"],
@@ -157,6 +160,7 @@ const colors = {
     okButton : ["#5AA7E6","#2B719C"],
     okButton2 : ["#4C9B5D","#337A32"],
     okButton3 : ["#61A899","#338585"],
+    okButton4 : ["#61A876","#336E85"],
     okButtonFaint : ["#99cbf2","#1B5B83"],
     dateButton : ["#81c784","#519657"],
     cancelButton : ["#E96D6D","#A0343D"],
@@ -208,5 +212,6 @@ const colors = {
     starProgress : ["#FDEBB3","#464023"],
     popupDanger : ["#AF5858","#A86B6B"],
     popupSuccess : ["#487944","#347030"],
+    popupNeutral : ["#DFDFDF","#383838"],
 }
 module.exports = colors;

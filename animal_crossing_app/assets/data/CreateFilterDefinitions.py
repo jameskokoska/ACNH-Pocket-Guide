@@ -19,7 +19,7 @@ filters = [
     [
         "Reactions",
         [data["Reactions"]],
-        ["Source"]
+        ["Source","Source Notes"]
     ],
     [
         "Music",
