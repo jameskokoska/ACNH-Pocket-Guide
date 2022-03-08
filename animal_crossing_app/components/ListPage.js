@@ -69,7 +69,7 @@ function ListPage(props){
       key={item.checkListKeyString}
       dataGlobalName={props.dataGlobalName}
       openBottomSheet={(updateCheckChild, updateWishlistChild)=>{
-        sheetRef.current.setPopupVisible(true); 
+        sheetRef.current.setPopupVisible(true, true); 
         if(props.activeCreatures && props.activeCreaturesPage===false){
           // console.log(props.scrollViewRef)
           props.scrollToEnd();
@@ -1042,7 +1042,7 @@ function ListPage(props){
       invisible={true}
       restrictSize={false}
       onClose={()=>{
-        console.log(selectedItem); 
+        // console.log(selectedItem); 
         if(selectedItem!=null && selectedItem!=undefined){
           !updateCheckChildFunction(inChecklist(selectedItem.checkListKeyParent));
           !updateWishlistChildFunction(inWishlist(selectedItem.checkListKey));

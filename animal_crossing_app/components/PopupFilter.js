@@ -14,6 +14,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const filterDefinitions = require("../assets/data/Generated/filterDefinitions.json");
 import SectionedMultiSelect from 'react-native-sectioned-multi-select';
 import {MaterialIcons} from '@expo/vector-icons';
+import { AnimatedPopupWrapper } from "./PopupAnimatedWrapper";
 
 class PopupFilter extends Component {
   constructor(props) {
@@ -415,8 +416,8 @@ class PopupFilter extends Component {
             this.setPopupVisible(!this.state.popupVisible);
           }}
         >
-          <View style={styles.centeredView}>
-          <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} activeOpacity={0.15} style={{position:"absolute", left:-100, top:-100, width: Dimensions.get('window').width+200, height: Dimensions.get('window').height+200, backgroundColor: "black", opacity: 0.1}}/>
+          <AnimatedPopupWrapper style={styles.centeredView} disableAnimations={getSettingsString("settingsLowEndDevice")==="true"}>
+            <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} activeOpacity={0.55} style={{position:"absolute", left:-100, top:-100, width: Dimensions.get('window').width+200, height: Dimensions.get('window').height+200, backgroundColor: "black", opacity: 0.6}}/>
             <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode], height:Dimensions.get('window').height*0.75}]}>
               <TextFont bold={true} style={{fontSize: 22, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Set Filters</TextFont>
               <View style={{height:10}}/>
@@ -480,7 +481,7 @@ class PopupFilter extends Component {
                 </View>
               </View>
             </View>
-          </View>
+          </AnimatedPopupWrapper>
         </Modal>
       </View>
     )

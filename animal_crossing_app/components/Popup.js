@@ -22,6 +22,7 @@ import * as RootNavigation from '../RootNavigation.js';
 import { Appearance } from 'react-native-appearance';
 import LottieView from 'lottie-react-native';
 import { attemptToTranslate, getSettingsString } from "../LoadJsonData";
+import { AnimatedPopupWrapper } from "./PopupAnimatedWrapper";
 
 // <Popup 
 //  button1={"OK"} 
@@ -90,6 +91,7 @@ class Popup extends Component {
 
   render(){
     let darkMode = this.props.darkMode ? this.props.darkMode : global.darkMode
+    const backgroundStyle = {position:"absolute", left:-100, top:-100, width: Dimensions.get('window').width+200, height: Dimensions.get('window').height+200, backgroundColor: "black", opacity: 0.6}
     return (
       <Modal
         animationType="fade"
@@ -98,8 +100,8 @@ class Popup extends Component {
         statusBarTranslucent
         onRequestClose={()=>{(this.props.button1===undefined && this.props.button2===undefined) || this.props.noDismiss===true ? 0 : this.setPopupVisible(false);}}
       >
-        <View style={[styles.centeredView,{padding:this.props.centerPadding}]}>
-          {(this.props.button1===undefined && this.props.button2===undefined) || this.props.noDismiss===true ? <View/> : <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} activeOpacity={0.15} style={{position:"absolute", left:-100, top:-100, width: Dimensions.get('window').width+200, height: Dimensions.get('window').height+200, backgroundColor: "black", opacity: 0.1}}/>}
+        <AnimatedPopupWrapper style={[styles.centeredView,{padding:this.props.centerPadding}]} disableAnimations={getSettingsString("settingsLowEndDevice")==="true"}>
+          {(this.props.button1===undefined && this.props.button2===undefined) || this.props.noDismiss===true ? <View style={backgroundStyle}/> : <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} activeOpacity={0.55} style={backgroundStyle}/>}
           <View style={[styles.modalView,{backgroundColor: colors.white[darkMode], justifyContent:"center", alignItems:"center"}]}>
             {this.props.text?<TextFont checkFont={this.props.checkFont} bold={true} style={{fontSize: 25, textAlign:"center", color: colors.textBlack[darkMode]}}>{this.props.text}</TextFont>:<View/>}
             <ScrollView style={{maxHeight:Dimensions.get('window').height*0.75, marginTop:this.props.margin?10:0}}>
@@ -117,7 +119,7 @@ class Popup extends Component {
               {this.Button1}
             </View>
           </View>
-        </View>
+        </AnimatedPopupWrapper>
       </Modal>
     )
   }
@@ -151,7 +153,7 @@ export class PopupRaw extends Component {
           statusBarTranslucent
           onRequestClose={()=>{this.props.button1===undefined && this.props.button2===undefined ? 0 : this.setPopupVisible(false);}}
         >
-        <View style={[{position:"absolute",bottom:0, width: Dimensions.get('window').width}]}>
+        <AnimatedPopupWrapper style={[{position:"absolute",bottom:0, width: Dimensions.get('window').width}]} disableAnimations={true}>
           <View style={{alignItems:"center", justifyContent:"center"}}>
             <View style={[styles.modalView,{backgroundColor: colors.white[Appearance.getColorScheme()==="light" ? 0 : 1]}]}>
               <TextFont bold={true} style={{fontSize: this.props.textFontSize===undefined?24:this.props.textFontSize, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.props.text}</TextFont>
@@ -168,7 +170,7 @@ export class PopupRaw extends Component {
               </ScrollView>          
             </View>
           </View>
-        </View>
+        </AnimatedPopupWrapper>
       </Modal>
     )
   }
@@ -233,14 +235,14 @@ export class PopupRawLoading extends Component {
 
   render(){
     return (
-        <Modal
-          animationType="fade"
-          transparent={true}
-          visible={this.state.popupVisible}
-          statusBarTranslucent
-          onRequestClose={()=>{this.props.button1===undefined && this.props.button2===undefined ? 0 : this.setPopupVisible(false);}}
-        >
-        <View style={[{position:"absolute",bottom:0, width: Dimensions.get('window').width}]}>
+      <Modal
+        animationType="fade"
+        transparent={true}
+        visible={this.state.popupVisible}
+        statusBarTranslucent
+        onRequestClose={()=>{this.props.button1===undefined && this.props.button2===undefined ? 0 : this.setPopupVisible(false);}}
+      >
+        <AnimatedPopupWrapper style={[{position:"absolute",bottom:0, width: Dimensions.get('window').width}]}>
           <View style={{alignItems:"center", justifyContent:"center"}}>
             <View style={[styles.modalView,{width:"90%",backgroundColor: colors.white[Appearance.getColorScheme()==="light" ? 0 : 1]}]}>
               <TextFont bold={true} style={{fontSize: 20, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{attemptToTranslate(this.state.loadingText)+"..."}</TextFont>
@@ -252,7 +254,7 @@ export class PopupRawLoading extends Component {
               </View>   
             </View>
           </View>
-        </View>
+        </AnimatedPopupWrapper>
       </Modal>
     )
   }
@@ -295,6 +297,7 @@ export class PopupInfoCustom extends Component {
   render(){
     var header = <View onLayout={(event) => {var {x, y, width, height} = event.nativeEvent.layout;if(this.mounted){this.setState({headerHeight:height});}}}>{this.props.header}</View>
     var buttons = <View onLayout={(event) => {var {x, y, width, height} = event.nativeEvent.layout;if(this.mounted){this.setState({buttonHeight:height});}}}>{this.props.buttons}</View>
+    const backgroundStyle = {position:"absolute", left:-100, top:-100, width: Dimensions.get('window').width+200, height: Dimensions.get('window').height+200, backgroundColor: "black", opacity: 0.6}
     return (
         <Modal
           animationType="fade"
@@ -303,8 +306,8 @@ export class PopupInfoCustom extends Component {
           statusBarTranslucent
           onRequestClose={()=>{this.props.noDismiss===true ? 0 : this.setPopupVisible(false);}}
         >
-        <View style={styles.centeredView}>
-          {this.props.noDismiss===true ? <View/> : <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} activeOpacity={0.15} style={{position:"absolute", left:-100, top:-100, width: Dimensions.get('window').width+200, height: Dimensions.get('window').height+200, backgroundColor: "black", opacity: 0.1}}/>}
+        <AnimatedPopupWrapper style={styles.centeredView} disableAnimations={getSettingsString("settingsLowEndDevice")==="true"}>
+          {this.props.noDismiss===true ? <View style={backgroundStyle}/> : <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} activeOpacity={0.55} style={backgroundStyle}/>}
           <View style={[styles.modalView,this.props.style,{backgroundColor: colors.white[global.darkMode]}]}>
             {this.props.header===undefined ? <View/> : header}
             <ScrollView style={{maxHeight:Dimensions.get('window').height*0.7-this.state.headerHeight-this.state.buttonHeight}}>
@@ -321,7 +324,7 @@ export class PopupInfoCustom extends Component {
               /> : this.props.buttons===undefined ? <View/> : buttons}
             </View>
           </View>
-        </View>
+        </AnimatedPopupWrapper>
       </Modal>
     )
   }
@@ -338,6 +341,8 @@ export class PopupBottomCustom extends PureComponent {
       openStart:false,
     }
     this.bottomSheetCallback = new Animated.Value(1);
+    this.showOnceCalculated = false
+    this.height = Dimensions.get('window').height
   }
 
   componentDidMount() {
@@ -367,12 +372,25 @@ export class PopupBottomCustom extends PureComponent {
     }
   }
 
-  setPopupVisible = (visible) => {
+  setPopupVisible = (visible, showOnceCalculated=false) => {
+    this.showOnceCalculated = showOnceCalculated
     if(this.mounted){
       this.setState({heightOffset:0})
-      visible ? this.sheetRef?.snapTo(0) : this.sheetRef?.snapTo(1)
+      if(showOnceCalculated===false || getSettingsString("settingsLowEndDevice")==="true"){
+        visible ? this.sheetRef?.snapTo(0) : this.sheetRef?.snapTo(1)
+        this.visible = visible
+      } else {
+        this.timeOutPopup = setTimeout(()=>{
+          //if it cant calculate the new height in 100ms, force show
+          if(this.showOnceCalculated === true){
+            this.showOnceCalculated = false
+            this.sheetRef?.snapTo(0)
+            this.visible = true
+            // console.log("POP2")
+          }
+        },100)
+      }
     }
-    this.visible = visible
   }
   
   renderContent = () => {
@@ -410,7 +428,14 @@ export class PopupBottomCustom extends PureComponent {
         onLayout={(event) => {
             var {x, y, width, height} = event.nativeEvent.layout;
             if(this.mounted){
-              this.setState({heightOffset:height, updateOffset:false});
+              this.setState({heightOffset:height});
+              if(this.showOnceCalculated){
+                clearTimeout(this.timeOutPopup)
+                // console.log("POP1")
+                this.sheetRef?.snapTo(0)
+                this.visible = true
+                this.showOnceCalculated = false
+              }
             }
           }} 
       >
@@ -443,7 +468,7 @@ export class PopupBottomCustom extends PureComponent {
       <BottomSheet
         callbackNode={this.bottomSheetCallback}
         ref={(sheetRef) => this.sheetRef = sheetRef}
-        snapPoints={[Dimensions.get('window').height, 0, ]}
+        snapPoints={[this.height, 0, ]}
         initialSnap={1}
         renderContent={this.renderContent}
         springConfig={springConfig}
@@ -464,11 +489,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     paddingTop: "10%",
-    backgroundColor:"rgba(0,0,0,0.5)",
   },
   modalView: {
     margin: 30,
-    borderRadius: 10,
+    borderRadius: 15,
     padding: 20,
     elevation: 5
   },

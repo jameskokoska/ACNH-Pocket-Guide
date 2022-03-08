@@ -3,6 +3,10 @@ export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added popup animation
+-Fixed slide popup animation stutter
+-Fixed Wishlist button when Floating Menu Button hidden in settings
+-
 -Updated translations
 -
 -Added custom lists!

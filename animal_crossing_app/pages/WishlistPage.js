@@ -32,7 +32,7 @@ export default class Wishlist extends Component {
           background={TouchableNativeFeedback.Ripple(colors.dateButton[global.darkMode], true, 32)}
           onPress={() => {this.popup?.setPopupVisible(true); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}
         >
-          <View style={{zIndex:100, backgroundColor:colors.FAB2[global.darkMode], position:"absolute", bottom:100, right: 20, width:64, height:64, borderRadius:500, justifyContent:'center', alignItems:'center'}}>
+          <View style={{zIndex:100, backgroundColor:colors.FAB2[global.darkMode], position:"absolute", bottom:getSettingsString("settingsShowFAB")==="true" ? 100 : 20, right: 20, width:64, height:64, borderRadius:500, justifyContent:'center', alignItems:'center'}}>
             <Image source={require("../assets/icons/list.png")} style={{opacity:0.6,width:35, height:35, resizeMode:'contain'}}/>
           </View>
         </TouchableNativeFeedback>
