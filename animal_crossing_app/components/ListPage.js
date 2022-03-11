@@ -268,7 +268,26 @@ function ListPage(props){
               continue;
             }
           }
- 
+          
+          let skipRemaining
+          for(let customListName of global.customLists){
+            if(searchActual.includes("{CustomLists}"+customListName)){
+              skipRemaining = true
+              for(let customListFilter of searchActual){
+                if(customListFilter.includes("{CustomLists}")){
+                  let listName = customListFilter.replace("{CustomLists}","")
+                  if(inCustomLists(item.checkListKey, listName)){
+                    skipRemaining = false
+                    break
+                  }
+                }
+              }
+            }
+          }
+          if(skipRemaining==true){
+            continue
+          }
+          
           //optimization for loading
           //remove if doesn't satisfy main filter before trying other stuff
           if(props.wishlistItems || searchActual.includes("Wishlist")){
@@ -276,8 +295,12 @@ function ListPage(props){
               if(!inWishlist(item["checkListKey"])===true){
                 continue;
               }
-            } else {
+            } else if (props.currentCustomList!==undefined){
               if(!inCustomLists(item["checkListKey"],props.currentCustomList)===true){
+                continue;
+              }
+            } else {
+              if(!inWishlist(item["checkListKey"])===true){
                 continue;
               }
             }
@@ -669,7 +692,7 @@ function ListPage(props){
                       // previousVariation = item.[props.textProperty[j]];
                       previousVariation = item["Name"];
                     } 
-                  } else {
+                  }else {
                     item.dataSet = j;
                     item.index = i;
                     dataUpdated.push(item)
@@ -1022,7 +1045,7 @@ function ListPage(props){
           windowSize={getSettingsString("settingsLowEndDevice")==="true"?3:4}
           refreshControl={
             <RefreshControl
-              onRefresh={()=>{if(props.wishlistItems||searchFilters.some(item=>refreshFiltersArray.includes(item)))setRefresh(true)}} //only refresh if the order has the possibility of changing
+              onRefresh={()=>{if(props.wishlistItems||searchFilters.some((item)=>{return(refreshFiltersArray.includes(item) || item.includes("{CustomLists}"))}))setRefresh(true)}} //only refresh if the order has the possibility of changing
               refreshing={refresh}
               progressViewOffset={headerHeight+50}
               progressBackgroundColor={colors.lightDarkAccentHeavy2[global.darkMode]}

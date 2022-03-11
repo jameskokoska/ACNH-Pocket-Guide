@@ -26,14 +26,27 @@ class PopupFilter extends Component {
     this.openFirst = true;
 
     var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH ";
+    let customListFilters = []
+    for(let customListName of global.customLists){
+      customListFilters.push({name:customListName, id:"{CustomLists}"+customListName},)
+    }
 
     this.possibleFilters = [{
       "name": "Collected/Not Collected",
       "id": "Collected/Not Collected",
       "children": [
-        {name:"Collected", id:"Collected"},{name:"Partially collected variations", id:"Partially collected variations"},{name:"Not Collected", id:"Not Collected"},{name:"Not Collected (Keep variations)", id:"Not Collected (Keep variations)"},{name:"Wishlist", id:"Wishlist"},
+        {name:"Collected", id:"Collected"},{name:"Partially collected variations", id:"Partially collected variations"},{name:"Not Collected", id:"Not Collected"},{name:"Not Collected (Keep variations)", id:"Not Collected (Keep variations)"},
       ]
-    }]
+    },
+    {
+      "name": "Custom Lists",
+      "id": "Custom Lists",
+      "children":[
+        {name:"Wishlist", id:"Wishlist"},
+        ...customListFilters
+      ]
+    }
+    ]
     this.museumFilters = [{
       "name": "Museum",
       "id": "MuseumFilters",

@@ -570,21 +570,21 @@
     ],
     "Main": [
         {
-            "English": "1129 items",
-            "English (Europe)": "1129 items",
-            "French": "1105 items (24 items missing)",
-            "French (US)": "1105 items (24 items missing)",
-            "German": "1117 items (12 items missing)",
-            "Spanish": "1129 items",
-            "Spanish (US)": "1101 items (28 items missing)",
-            "Russian": "1116 items (13 items missing)",
-            "Italian": "1115 items (14 items missing)",
-            "Dutch": "1081 items (48 items missing)",
-            "Chinese": "903 items (226 items missing)",
-            "Chinese (Traditional)": "7 items (1122 items missing)",
-            "Japanese": "7 items (1122 items missing)",
-            "Korean": "7 items (1122 items missing)",
-            "Portuguese": "1113 items (16 items missing)"
+            "English": "1130 items",
+            "English (Europe)": "1130 items",
+            "French": "1106 items (24 items missing)",
+            "French (US)": "1106 items (24 items missing)",
+            "German": "1118 items (12 items missing)",
+            "Spanish": "1130 items",
+            "Spanish (US)": "1102 items (28 items missing)",
+            "Russian": "1117 items (13 items missing)",
+            "Italian": "1116 items (14 items missing)",
+            "Dutch": "1081 items (49 items missing)",
+            "Chinese": "903 items (227 items missing)",
+            "Chinese (Traditional)": "7 items (1123 items missing)",
+            "Japanese": "7 items (1123 items missing)",
+            "Korean": "7 items (1123 items missing)",
+            "Portuguese": "1114 items (16 items missing)"
         },
         {
             "English": "Home",
@@ -16007,6 +16007,18 @@
             "Russian": "Выберите список",
             "Italian": "Seleziona un elenco",
             "Portuguese": "Selecione uma lista"
+        },
+        {
+            "English": "Custom Lists",
+            "English (Europe)": "Custom Lists",
+            "French": "Listes personnalisées",
+            "French (US)": "Listes personnalisées",
+            "German": "Benutzerdefinierte Listen",
+            "Spanish": "Listas personalizadas",
+            "Spanish (US)": "Listas personalizadas",
+            "Russian": "Пользовательские списки",
+            "Italian": "Elenchi personalizzati",
+            "Portuguese": "Listas personalizadas"
         }
     ],
     "Sources": [

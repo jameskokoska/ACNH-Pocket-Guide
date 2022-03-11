@@ -15074,6 +15074,18 @@
       "Russian": "Выберите список",
       "Italian": "Seleziona un elenco",
       "Portuguese": "Selecione uma lista"
+    },
+    "custom lists": {
+      "English": "Custom Lists",
+      "English (Europe)": "Custom Lists",
+      "French": "Listes personnalisées",
+      "French (US)": "Listes personnalisées",
+      "German": "Benutzerdefinierte Listen",
+      "Spanish": "Listas personalizadas",
+      "Spanish (US)": "Listas personalizadas",
+      "Russian": "Пользовательские списки",
+      "Italian": "Elenchi personalizzati",
+      "Portuguese": "Listas personalizadas"
     }
   },
   "Sources": {
