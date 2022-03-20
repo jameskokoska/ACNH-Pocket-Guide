@@ -89,6 +89,7 @@ export default class ShootingStars extends Component {
                     popupResetRef?.setPopupVisible(true)
                   }}
                 />}
+                noRepairButton
               />
               <Popup ref={(popupReset) => popupResetRef = popupReset} text="Reset Count?" button1={"Cancel"} button1Action={()=>{}} button2={"Reset"} 
                 button2Action={()=>{

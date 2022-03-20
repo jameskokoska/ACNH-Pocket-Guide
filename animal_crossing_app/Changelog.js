@@ -8,6 +8,10 @@ export const changelog = `
 -Fixed capitlization on some languages on TV Guide page
 -Fixed UI formatting
 -
+-Can specify to include Villagers or Recipes when importing data on the Catalog page
+-Removed Repair Button for Shooting Star counter
+-Other small fixes and UI tweaks
+-
 -Added Custom List filtering
 -Fixed Wishlist filtering
 -Wishlist filtering now under Custom Lists subheader
