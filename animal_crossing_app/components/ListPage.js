@@ -1010,7 +1010,7 @@ function ListPage(props){
             if(searchFilters!=undefined && searchFilters.length===0 && data.length===0 && props.wishlistItems && search===""){
               return <>
                 <View style={{height:100}}/>
-                  <TouchableOpacity onPress={() => props.setPage(1)}>
+                  <TouchableOpacity onPress={() => props.setPage(1, true, "from wishlist page")}>
                     <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", marginHorizontal:30}}>{"You have no wishlist items."}</TextFont>
                     <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", marginHorizontal:30}}>{"Long press items to add them to your wishlist."}</TextFont>
                     <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center", marginHorizontal:30}}>Tap here and go add some</TextFont>

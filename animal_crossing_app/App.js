@@ -472,6 +472,9 @@ class Main extends Component {
   }
 
   setPage(pageNum, previousAdd=true, propsPassed="") {
+    if(propsPassed==="from wishlist page" && this.wishlistPopupInfo){
+      this.wishlistPopupInfo?.setPopupVisible(true)
+    }
     // console.log(this.lastPropsPassed)
     if(this.state.loaded){
       if(this.state.currentPage!==pageNum){
@@ -657,6 +660,12 @@ class Main extends Component {
               </NavigationContainer>
             </Provider>
             <PopupInfos setPage={this.setPage}/>
+            <Popup
+              ref={(wishlistPopupInfo) => this.wishlistPopupInfo = wishlistPopupInfo}
+              button1={"OK"}
+              button1Action={()=>{}}
+              textLower={"Long press items to add them to your wishlist."}
+            />
           </SideMenu>
           <FABWrapper ref={(fab) => this.fab = fab} openDrawer={this.openDrawer}/>
         </GestureHandlerRootView>
