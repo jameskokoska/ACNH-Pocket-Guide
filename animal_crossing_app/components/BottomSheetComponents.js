@@ -4,7 +4,7 @@ import colors from '../Colors.js';
 import FastImage from './FastImage';
 import Check from './Check';
 import TextFont from './TextFont'
-import {inWishlist, getEventName, inChecklist, attemptToTranslateItem, commas, capitalize, checkOff, capitalizeFirst} from '../LoadJsonData'
+import {getCustomListsIcon, inWishlist, getEventName, inChecklist, attemptToTranslateItem, commas, capitalize, checkOff, capitalizeFirst} from '../LoadJsonData'
 import {getSizeImage, getPhotoCorner, getMaterialImage, getPhoto} from "./GetPhoto"
 import {getCurrentVillagerObjects, attemptToTranslateCreatureCatchPhrase, attemptToTranslateMuseumDescription, attemptToTranslateSourceNotes, getSettingsString, attemptToTranslate, attemptToTranslateSpecial} from "../LoadJsonData"
 import {ScrollView} from 'react-native-gesture-handler'
@@ -481,7 +481,7 @@ export class Variations extends Component {
           <ScrollView horizontal={true} style={{marginHorizontal:10}} contentContainerStyle={{ flexGrow: 1, justifyContent: 'center'}}>
           <View style={{marginHorizontal: 4, flexDirection: 'row', justifyContent:'center'}}>
             {this.state.variations.map( (item, index)=>
-              <VariationItem wishlist={this.state.wishlistItems.includes(item.checkListKey)} variations={this.state.variations} updateRightCornerCheck={this.props.updateRightCornerCheck} updateKey={this.state.updateKey} updateChecked={this.state.updateChecked} originalCheckListKey={originalCheckListKey} updateCheckChildFunction={this.props.updateCheckChildFunction} index={index} key={item[this.props.imageProperty[dataSet]]} globalDatabase={this.props.globalDatabase} item={item} setPopupVisible={(state, image, item)=>this.popup?.setPopupVisible(state, image, item)} dataSet={dataSet} imageProperty={imageProperty}/>
+              <VariationItem customListsIcon={getCustomListsIcon(item.checkListKey)} wishlist={this.state.wishlistItems.includes(item.checkListKey)} variations={this.state.variations} updateRightCornerCheck={this.props.updateRightCornerCheck} updateKey={this.state.updateKey} updateChecked={this.state.updateChecked} originalCheckListKey={originalCheckListKey} updateCheckChildFunction={this.props.updateCheckChildFunction} index={index} key={item[this.props.imageProperty[dataSet]]} globalDatabase={this.props.globalDatabase} item={item} setPopupVisible={(state, image, item)=>this.popup?.setPopupVisible(state, image, item)} dataSet={dataSet} imageProperty={imageProperty}/>
             )}
           </View>
           </ScrollView>
@@ -493,7 +493,7 @@ export class Variations extends Component {
           <>
           <View style={{flexWrap: 'wrap', flexDirection:"row",justifyContent:"center"}}>
             {this.state.variations.map( (item, index)=>
-              <VariationItem wishlist={this.state.wishlistItems.includes(item.checkListKey)} variations={this.state.variations} updateRightCornerCheck={this.props.updateRightCornerCheck} updateKey={this.state.updateKey} updateChecked={this.state.updateChecked} originalCheckListKey={originalCheckListKey} updateCheckChildFunction={this.props.updateCheckChildFunction} index={index} key={item["Unique Entry ID"]!==undefined?item["Unique Entry ID"]:item[this.props.imageProperty[dataSet]]} globalDatabase={this.props.globalDatabase} item={item} setPopupVisible={(state, image, item)=>this.popup?.setPopupVisible(state, image, item)} dataSet={dataSet} imageProperty={imageProperty}/>
+              <VariationItem customListsIcon={getCustomListsIcon(item.checkListKey)} wishlist={this.state.wishlistItems.includes(item.checkListKey)} variations={this.state.variations} updateRightCornerCheck={this.props.updateRightCornerCheck} updateKey={this.state.updateKey} updateChecked={this.state.updateChecked} originalCheckListKey={originalCheckListKey} updateCheckChildFunction={this.props.updateCheckChildFunction} index={index} key={item["Unique Entry ID"]!==undefined?item["Unique Entry ID"]:item[this.props.imageProperty[dataSet]]} globalDatabase={this.props.globalDatabase} item={item} setPopupVisible={(state, image, item)=>this.popup?.setPopupVisible(state, image, item)} dataSet={dataSet} imageProperty={imageProperty}/>
             )}
           </View>
           <PopupImage ref={(popup) => this.popup = popup} updateWishlist={this.updateWishlist} selectCustomList={this.props.selectCustomList}/>
@@ -524,7 +524,8 @@ class VariationItem extends Component{
     this.extraIndex = this.props.index===0 ? "0":"";
     this.state = {
       checked: global.collectionListIndexed[this.props.item["checkListKey"]+this.extraIndex]===true,
-      wishlist:this.props.wishlist
+      wishlist:this.props.wishlist,
+      customListsIcon: this.props.customListsIcon,
     }
   }
   componentDidUpdate(prevProps){
@@ -535,7 +536,8 @@ class VariationItem extends Component{
         })
       }
       this.setState({
-        wishlist:this.props.wishlist
+        wishlist:this.props.wishlist,
+        customListsIcon: this.props.customListsIcon,
       })
     }
   }
@@ -558,7 +560,27 @@ class VariationItem extends Component{
             checkOff(item.checkListKeyParent, !true); 
           }
         }}>
-        {this.state.wishlist? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:13, height:13, resizeMode:"contain",position:'absolute', left:9, top: 9, zIndex:10,}}/> : <View/>}
+        { this.state.wishlist ?
+          <Image 
+            source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} 
+            style={{opacity:0.7, width:13, height:13, resizeMode:"contain",position:'absolute', left:9, top: 9, zIndex:10,}}
+          /> : 
+        (this.state.customListsIcon==="" || this.state.customListsIcon===undefined) ? 
+          <View/> :
+        (this.state.customListsIcon.constructor === String && this.state.customListsIcon.startsWith("http")) ?
+          <FastImage
+          style={{opacity:0.7, width:15, height:15, resizeMode:"contain",position:'absolute', left:9, top: 9, zIndex:10,}}
+            source={{uri:this.state.customListsIcon}}
+            cacheKey={this.state.customListsIcon}
+          /> :
+        this.state.customListsIcon ?
+          <Image
+            style={{opacity:0.7, width:13, height:13, resizeMode:"contain",position:'absolute', left:9, top: 9, zIndex:10,}}
+            source={getPhoto(this.state.customListsIcon)}
+          /> :
+        <View/>
+        }
+        {/* {this.state.wishlist? <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{opacity:0.7, width:13, height:13, resizeMode:"contain",position:'absolute', left:9, top: 9, zIndex:10,}}/> : <View/>} */}
         <View style={[{borderWidth: 2, borderColor: this.state.checked ? colors.checkGreen[global.darkMode] : colors.eventBackground[global.darkMode], marginHorizontal:3, marginVertical: 2, padding: 5, borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
           {item[this.props.imageProperty[dataSet]]!==undefined&&item[this.props.imageProperty[dataSet]].startsWith("http")?
           <FastImage
@@ -582,11 +604,12 @@ class PopupImage extends Component {
     super(props);
     this.state = {
       item:"",
+      customListsIcon: "",
     }; 
   }
 
   setPopupVisible = (visible, image, item) => {
-    this.setState({image:image, item:item, wishlist: inWishlist(item?.checkListKey),});
+    this.setState({image:image, item:item, wishlist: inWishlist(item?.checkListKey), customListsIcon:getCustomListsIcon(item?.checkListKey)});
     this.popup?.setPopupVisible(true);
   }
 
@@ -595,9 +618,9 @@ class PopupImage extends Component {
     // checkOff(this.state.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
     this.props.selectCustomList(
       this.state.item, 
-      ()=>{
+      (list)=>{
         //run when wishlist list selected
-        this.setState({wishlist: this.state.wishlist===true ? false:true});
+        this.setState({wishlist: inWishlist(this.state.item.checkListKey), customListsIcon:getCustomListsIcon(this.state.item.checkListKey)});
         this.props.updateWishlist();
       }, 
       ()=>{
@@ -624,9 +647,32 @@ class PopupImage extends Component {
           <TouchableOpacity 
             style={{position:"absolute", right:10, top:10}} 
             onPress={() => {this.addToWishlist()}}>
-            <View style={{width:50, height:50, opacity: this.state.wishlist?1:0.2,justifyContent:"center", alignItems:"center"}}>
-              <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{width:35, height:35, resizeMode:"contain",}}/>
-            </View>
+            { this.state.wishlist ?
+                <View style={{width:50, height:50, opacity: 1,justifyContent:"center", alignItems:"center"}}>
+                  <Image 
+                    source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} 
+                    style={{width:35, height:35, resizeMode:"contain",}}
+                  />
+                </View> : 
+              (this.state.customListsIcon.constructor === String && this.state.customListsIcon.startsWith("http")) ?
+                <View style={{width:50, height:50, opacity: 1,justifyContent:"center", alignItems:"center"}}>
+                  <FastImage
+                    style={{width:40, height:40, resizeMode:"contain",}}
+                    source={{uri:this.state.customListsIcon}}
+                    cacheKey={this.state.customListsIcon}
+                  />
+                </View> :
+              this.state.customListsIcon ?
+                <View style={{width:50, height:50, opacity: 1,justifyContent:"center", alignItems:"center"}}>
+                  <Image
+                    style={{width:35, height:35, resizeMode:"contain",}}
+                    source={getPhoto(this.state.customListsIcon)}
+                  />
+                </View> :
+                <View style={{width:50, height:50, opacity: 0.2,justifyContent:"center", alignItems:"center"}}>
+                  <Image source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} style={{width:35, height:35, resizeMode:"contain",}}/>
+                </View>
+            }
           </TouchableOpacity>
           <TouchableOpacity activeOpacity={0.9} onPress={() => {this.addToWishlist()}} onLongPress={() => {this.addToWishlist()}}>
             <FastImage

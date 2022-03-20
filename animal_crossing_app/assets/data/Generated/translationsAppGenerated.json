@@ -1166,8 +1166,8 @@
     "(price calculator and predictor)": {
       "English": "(Price calculator and predictor)",
       "English (Europe)": "(Price calculator and predictor)",
-      "French": "Calculateur de prix et de prédiction",
-      "French (US)": "Calculateur de prix et de prédiction",
+      "French": "(Calculateur de prix et de prédiction)",
+      "French (US)": "(Calculateur de prix et de prédiction)",
       "German": "Preis- und Prognoserechner",
       "Spanish": "(Calculadora de precios y predictor)",
       "Spanish (US)": "(Calculadora de precios y predictor)",
@@ -1823,8 +1823,8 @@
     "note: long press to check off the island as visited": {
       "English": "Note: long press to check off the island as visited",
       "English (Europe)": "Note: long press to check off the island as visited",
-      "French": "Note : Appui long pour cocher l'île comme visitée",
-      "French (US)": "Note : Appui long pour cocher l'île comme visitée",
+      "French": "Note : Reste appuyé pour cocher l'île comme visitée",
+      "French (US)": "Note : Reste appuyé pour cocher l'île comme visitée",
       "German": "Notiz: Lange gedrückt halten, um die Insel als besucht zu markieren.",
       "Spanish": "Nota: mantén pulsado para marcar la Isla como visitada",
       "Spanish (US)": "Nota: mantenga pulsado para marcar la Isla como visitada",
@@ -1837,8 +1837,8 @@
     "tap each for more details": {
       "English": "Tap each for more details",
       "English (Europe)": "Tap each for more details",
-      "French": "Appuyer sur chacun pour plus de détails",
-      "French (US)": "Appuyer sur chacun pour plus de détails",
+      "French": "Cliquer pour plus de détails",
+      "French (US)": "Cliquer pour plus de détails",
       "German": "Für mehr Details einzeln antippen.",
       "Spanish": "Pulsa para más detalles",
       "Spanish (US)": "Pulsa cada uno para más detalles",
@@ -1907,8 +1907,8 @@
     "town hall, vaulting pole, ladder": {
       "English": "Town Hall, Vaulting Pole, Ladder",
       "English (Europe)": "Town Hall, Vaulting Pole, Ladder",
-      "French": "Mairie, Perche, Echelle",
-      "French (US)": "Mairie, Perche, Echelle",
+      "French": "Bureau des résidents, Perche, Echelle",
+      "French (US)": "Bureau des résidents, Perche, Echelle",
       "German": "Servicecenter, Sprungstab, Leiter",
       "Spanish": "Ayuntamiento, Pértiga, Escalera",
       "Spanish (US)": "Ayuntamiento, Pértiga, Escalera",
@@ -1949,8 +1949,8 @@
     "town hall, ladder": {
       "English": "Town Hall, Ladder",
       "English (Europe)": "Town Hall, Ladder",
-      "French": "Mairie, Echelle",
-      "French (US)": "Mairie, Echelle",
+      "French": "Bureau des résidents , Echelle",
+      "French (US)": "Bureau des résidents, Echelle",
       "German": "Servicecenter, Leiter",
       "Spanish": "Ayuntamiento, Escalera",
       "Spanish (US)": "Ayuntamiento, Escalera",
@@ -1963,8 +1963,8 @@
     "town hall, vaulting pole": {
       "English": "Town Hall, Vaulting Pole",
       "English (Europe)": "Town Hall, Vaulting Pole",
-      "French": "Mairie, Perche",
-      "French (US)": "Mairie, Perche",
+      "French": "Bureau des résidents, Perche",
+      "French (US)": "Bureau des résidents, Perche",
       "German": "Servicecenter, Sprungstab",
       "Spanish": "Ayuntamiento, Pértiga",
       "Spanish (US)": "Ayuntamiento, Pértiga",
@@ -2019,8 +2019,8 @@
     "visit": {
       "English": "Visit",
       "English (Europe)": "Visit",
-      "French": "Visite",
-      "French (US)": "Visite",
+      "French": "Visitez ",
+      "French (US)": "Visitez ",
       "German": "Besuche",
       "Spanish": "Visite",
       "Spanish (US)": "Visitar",
@@ -15021,7 +15021,7 @@
       "French": "Listes",
       "French (US)": "Listes",
       "German": "Listen",
-      "Spanish": "Liza",
+      "Spanish": "Listas",
       "Spanish (US)": "Liza",
       "Russian": "Списки",
       "Italian": "Elenchi",
@@ -15086,6 +15086,66 @@
       "Russian": "Пользовательские списки",
       "Italian": "Elenchi personalizzati",
       "Portuguese": "Listas personalizadas"
+    },
+    "include villagers": {
+      "English": "Include Villagers",
+      "English (Europe)": "Include Villagers",
+      "French": "Inclure les villageois",
+      "French (US)": "Inclure les villageois",
+      "German": "Dorfbewohner einbeziehen",
+      "Spanish": "Incluir aldeanos",
+      "Spanish (US)": "Incluir aldeanos",
+      "Russian": "Включить жителей",
+      "Italian": "Includi gli abitanti del villaggio",
+      "Portuguese": "Incluir aldeões"
+    },
+    "include villagers when importing items. some villagers have the same name as items.": {
+      "English": "Include villagers when importing items. Some villagers have the same name as items.",
+      "English (Europe)": "Include villagers when importing items. Some villagers have the same name as items.",
+      "French": "Inclure les villageois lors de l'importation d'articles. Certains villageois portent le même nom que des objets.",
+      "French (US)": "Inclure les villageois lors de l'importation d'articles. Certains villageois portent le même nom que des objets.",
+      "German": "Beziehe die Dorfbewohner beim Importieren von Gegenständen mit ein. Einige Dorfbewohner haben denselben Namen wie Gegenstände.",
+      "Spanish": "Incluya a los aldeanos al importar artículos. Algunos aldeanos tienen el mismo nombre que los artículos.",
+      "Spanish (US)": "Incluya a los aldeanos al importar artículos. Algunos aldeanos tienen el mismo nombre que los artículos.",
+      "Russian": "Включайте жителей деревни при импорте предметов. Некоторые жители деревни имеют то же имя, что и предметы.",
+      "Italian": "Includere gli abitanti del villaggio durante l'importazione di oggetti. Alcuni abitanti del villaggio hanno lo stesso nome degli oggetti.",
+      "Portuguese": "Inclua aldeões ao importar itens. Alguns aldeões têm o mesmo nome dos itens."
+    },
+    "include recipes": {
+      "English": "Include Recipes",
+      "English (Europe)": "Include Recipes",
+      "French": "Inclure les recettes",
+      "French (US)": "Inclure les recettes",
+      "German": "Rezepte einschließen",
+      "Spanish": "Incluir Recetas",
+      "Spanish (US)": "Incluir Recetas",
+      "Russian": "Включить рецепты",
+      "Italian": "Include Ricette",
+      "Portuguese": "Incluir receitas"
+    },
+    "include recipes when importing items. recipes and the item counterpart have the same name.": {
+      "English": "Include recipes when importing items. Recipes and the item counterpart have the same name.",
+      "English (Europe)": "Include recipes when importing items. Recipes and the item counterpart have the same name.",
+      "French": "Inclure des recettes lors de l'importation d'articles. Les recettes et l'équivalent de l'objet portent le même nom.",
+      "French (US)": "Inclure des recettes lors de l'importation d'articles. Les recettes et l'équivalent de l'objet portent le même nom.",
+      "German": "Schließen Sie beim Importieren von Artikeln Rezepte ein. Rezepte und das Artikelgegenstück haben denselben Namen.",
+      "Spanish": "Incluya recetas al importar artículos. Las recetas y la contrapartida del artículo tienen el mismo nombre.",
+      "Spanish (US)": "Incluya recetas al importar artículos. Las recetas y la contrapartida del artículo tienen el mismo nombre.",
+      "Russian": "Включайте рецепты при импорте предметов. Рецепты и аналог предмета имеют одно и то же имя.",
+      "Italian": "Includi le ricette durante l'importazione di elementi. Le ricette e la controparte dell'articolo hanno lo stesso nome.",
+      "Portuguese": "Inclua receitas ao importar itens. As receitas e a contrapartida do item têm o mesmo nome."
+    },
+    "made in canada": {
+      "English": "Made in Canada",
+      "English (Europe)": "Made in Canada",
+      "French": "Fabriqué au Canada",
+      "French (US)": "Fabriqué au Canada",
+      "German": "Hergestellt in Kanada",
+      "Spanish": "Hecho en Canadá",
+      "Spanish (US)": "Hecho en Canadá",
+      "Russian": "Сделано в Канаде",
+      "Italian": "Prodotto in Canada",
+      "Portuguese": "Feito no Canadá"
     }
   },
   "Sources": {
@@ -15104,8 +15164,8 @@
     "crafting": {
       "English": "Crafting",
       "English (Europe)": "Crafting",
-      "French": "Crafting",
-      "French (US)": "Crafting",
+      "French": "Bricolage",
+      "French (US)": "Bricolage",
       "German": "Bauen und Basteln",
       "Spanish": "Elaboración",
       "Spanish (US)": "Elaboración",
@@ -15142,8 +15202,8 @@
     "nook miles redemption": {
       "English": "Nook Miles Redemption",
       "English (Europe)": "Nook Miles Redemption",
-      "French": "Echange de Nook Miles",
-      "French (US)": "Echange de Nook Miles",
+      "French": "Echange de Miles Nook ",
+      "French (US)": "Echange de Miles Nook",
       "German": "Nook-Meilen einlösen ",
       "Spanish": "Canje de millas nook",
       "Spanish (US)": "Canje de millas nook",
@@ -15350,8 +15410,8 @@
     "4th house upgrade (right room)": {
       "English": "4th House Upgrade (Right Room)",
       "English (Europe)": "4th House Upgrade (Right Room)",
-      "French": "4ème agrandissement de la maison",
-      "French (US)": "4ème agrandissement de la maison",
+      "French": "4ème agrandissement de la maison (pièce de droite)",
+      "French (US)": "4ème agrandissement de la maison (pièce de droite)",
       "German": "4. Hauserweiterung (Rechter Raum)",
       "Spanish": "Cuarta mejora de la casa",
       "Spanish (US)": "Cuarta mejora de la casa",
@@ -15363,8 +15423,8 @@
     "3rd house upgrade (left room)": {
       "English": "3rd House Upgrade (Left Room)",
       "English (Europe)": "3rd House Upgrade (Left Room)",
-      "French": "3ème agrandissement de la maison",
-      "French (US)": "3ème agrandissement de la maison",
+      "French": "3ème agrandissement de la maison (pièce de gauche)",
+      "French (US)": "3ème agrandissement de la maison (pièce de gauche)",
       "German": "3. Hauserweiterung (Linker Raum)",
       "Spanish": "Tercera mejora de la casa",
       "Spanish (US)": "Tercera mejora de la casa",
@@ -15376,8 +15436,8 @@
     "5th house upgrade (2nd floor)": {
       "English": "5th House Upgrade (2nd Floor)",
       "English (Europe)": "5th House Upgrade (2nd Floor)",
-      "French": "5ème agrandissement de la maison",
-      "French (US)": "5ème agrandissement de la maison",
+      "French": "5ème agrandissement de la maison (étage)",
+      "French (US)": "5ème agrandissement de la maison (étage)",
       "German": "5. Hauserweiterung (2. Stock)",
       "Spanish": "Quinta mejora de la casa",
       "Spanish (US)": "Quinta mejora de la casa",
@@ -15401,8 +15461,8 @@
     "wildest dreams diy": {
       "English": "Wildest Dreams DIY",
       "English (Europe)": "Wildest Dreams DIY",
-      "French": "Plan Brico Foldingo",
-      "French (US)": "Plan Brico Foldingo",
+      "French": "Brico Foldingo",
+      "French (US)": "Brico Foldingo",
       "German": "Bist du der Bastelboss?",
       "Spanish": "Bricolaje para epatar",
       "Italian": "Fai da te per esperti",
@@ -15448,8 +15508,8 @@
     "all villagers (while stung)": {
       "English": "All villagers (while stung)",
       "English (Europe)": "All villagers (while stung)",
-      "French": "Tous les villageois (quand ils sont piqués)",
-      "French (US)": "Tous les villageois (quand ils sont piqués)",
+      "French": "Tous les villageois (aprés avoir été piqué)",
+      "French (US)": "Tous les villageois (aprés avoir été piqué)",
       "German": "Alle Nachbarn (während gestochen)",
       "Spanish": "Todos los vecinos (mientras picado por abejas)",
       "Italian": "Tutti gli abitanti (quando punto)",
@@ -15772,8 +15832,8 @@
     "egg balloon": {
       "English": "Egg balloon",
       "English (Europe)": "Egg balloon",
-      "French": "Ballon cadeau en forme d'oeuf",
-      "French (US)": "Ballon cadeau en forme d'oeuf",
+      "French": "Ballon oeuf",
+      "French (US)": "Ballon oeuf",
       "German": "Häschentag-Ballon",
       "Spanish": "Globo Caza Del Huevo",
       "Spanish (US)": "Globo Caza Del Huevo",
@@ -15819,8 +15879,8 @@
     "diy for beginners": {
       "English": "DIY for Beginners",
       "English (Europe)": "DIY for Beginners",
-      "French": "Plan pour les débutants",
-      "French (US)": "Plan pour les débutants",
+      "French": "Le b.a.-ba du bricolage ",
+      "French (US)": "Le b.a.-ba du bricolage ",
       "German": "Mein erstes Bastelbuch",
       "Spanish": "Bricolaje para principiantes",
       "Italian": "Fai da te per principianti",
@@ -15844,8 +15904,8 @@
     "completing bug critterpedia": {
       "English": "Completing bug Critterpedia",
       "English (Europe)": "Completing bug Critterpedia",
-      "French": "Compléter la section Insectes du Bébêtopédie",
-      "French (US)": "Compléter la section Insectes du Bébêtopédie",
+      "French": "Compléter la section Insectes de la Bébêtopédie",
+      "French (US)": "Compléter la section Insectes de la Bébêtopédie",
       "German": "Insekten Faunapädie vervollständigen ",
       "Spanish": "Completar la Capturapedia de bichos",
       "Italian": "Completando l'enciclopedia degli insetti",
@@ -15855,8 +15915,8 @@
     "completing fish critterpedia": {
       "English": "Completing fish Critterpedia",
       "English (Europe)": "Completing fish Critterpedia",
-      "French": "Compléter la section Poissons du Bébêtopédie",
-      "French (US)": "Compléter la section Poissons du Bébêtopédie",
+      "French": "Compléter la section Poissons de la Bébêtopédie",
+      "French (US)": "Compléter la section Poissons de la Bébêtopédie",
       "German": "Fisch Faunapädie vervollständigen ",
       "Spanish": "Completar la Capturapedia de peces",
       "Italian": "Completando l'enciclopedia dei pesci",
@@ -15890,8 +15950,8 @@
     "cozy turkey day diy": {
       "English": "Cozy Turkey Day DIY",
       "English (Europe)": "Cozy Turkey Day DIY",
-      "French": "Plan de la Fête du Partage",
-      "French (US)": "Plan de la Fête du Partage",
+      "French": "Plans Fête du Partage",
+      "French (US)": "Plans Fête du Partage",
       "German": "Schlemmfest-Bastelbuch",
       "Spanish": "Set del Día del Pavo",
       "Italian": "Fai da te del giorno del Ringraziamento",
@@ -15923,8 +15983,8 @@
     "hardwood tree": {
       "English": "Hardwood Tree",
       "English (Europe)": "Hardwood Tree",
-      "French": "Arbre feuillu",
-      "French (US)": "Arbre feuillu",
+      "French": "Feuillu",
+      "French (US)": "Feuillu",
       "German": "Laubbaum",
       "Spanish": "Árboles normales",
       "Italian": "Legno duro",
@@ -15935,8 +15995,8 @@
     "wishing on shooting stars": {
       "English": "Wishing on shooting stars",
       "English (Europe)": "Wishing on shooting stars",
-      "French": "Faire un voeu sur les étoiles filantes",
-      "French (US)": "Faire un voeu sur les étoiles filantes",
+      "French": "Faire un voeu à une étoiles filantes",
+      "French (US)": "Faire un voeu à une étoiles filantes",
       "German": "Etwas von Sternschnuppen wünschen",
       "Spanish": "Deseos a estrellas fugaces",
       "Italian": "Esprimendo desideri con le stelle cadenti",
@@ -16077,8 +16137,8 @@
     "shaking a hardwood or cedar": {
       "English": "Shaking a hardwood or cedar",
       "English (Europe)": "Shaking a hardwood or cedar",
-      "French": "Secouer un arbre feuillu ou un cèdre",
-      "French (US)": "Secouer un arbre feuillu ou un cèdre",
+      "French": "Secouer un Feuillu ou un cèdre",
+      "French (US)": "Secouer un Feuillu ou un cèdre",
       "German": "Einen Baum schütteln",
       "Spanish": "Sacudir un árbol normal o un cedro",
       "Italian": "Scuotendo alberi da legno duro o cedri",
@@ -16124,8 +16184,8 @@
     "delivering item for a villager": {
       "English": "Delivering item for a villager",
       "English (Europe)": "Delivering item for a villager",
-      "French": "Offrir un objet à un villageois",
-      "French (US)": "Offrir un objet à un villageois",
+      "French": "Faire une livraison pour un villageois",
+      "French (US)": "Faire une livraison pour un villageois",
       "German": "Botengang",
       "Spanish": "Entregar un objeto a un vecino",
       "Italian": "Consegnando un oggetto a un abitante",
@@ -16298,12 +16358,16 @@
     "requires katrina to see bad luck in your future": {
       "English": "Requires Katrina to see bad luck in your future",
       "English (Europe)": "Requires Katrina to see bad luck in your future",
+      "French": "Astrid doit prédire de la malchance ",
+      "French (US)": "Astrid doit prédire de la malchance ",
       "German": "Smeralda muss Pech in deiner Zukunft vorhersehen",
       "Italian": "Wanda deve predire sfortuna nel tuo futuro"
     },
     "katrina's cleansing service": {
       "English": "Katrina's Cleansing Service",
       "English (Europe)": "Katrina's Cleansing Service",
+      "French": "Service de purification d'Astrid",
+      "French (US)": "Service de purification d'Astrid",
       "German": "Smeralda Aura-Reinigungsservice",
       "Italian": "Servizio purificazione di Wanda"
     },
@@ -16319,12 +16383,16 @@
     "in the special items section in nook shopping, after inviting to photopia with an amiibo ": {
       "English": "In the Special Items section in Nook Shopping, after inviting to Photopia with an amiibo ",
       "English (Europe)": "In the Special Items section in Nook Shopping, after inviting to Photopia with an amiibo ",
+      "French": "Dans la section Articles Spéciaux du Nook Shopping, après avoir invité l'Amiibo à Photopia",
+      "French (US)": "Dans la section Articles Spéciaux du Nook Shopping, après avoir invité l'Amiibo à Photopia",
       "German": "Unter \"Besondere Waren\" in Nook Shopping, nachdem du ein Amiibo nach Fotopia eingeladen hast",
       "Italian": "Nella sezione Oggetti Speciali del Nook Shopping, dopo averli invitati a Fotopia con un amiibo"
     },
     "available from nook's cranny; ": {
       "English": "Available from Nook's Cranny; ",
       "English (Europe)": "Available from Nook's Cranny; ",
+      "French": "Disponible à la boutique Nook;",
+      "French (US)": "Disponible à la boutique Nook;",
       "German": "Erhältlich in Nooks Laden",
       "Italian": "Disponibile nella Bottega di Nook",
       "Dutch": "Beschikbaar bij Nook's Cranny"
@@ -16332,6 +16400,8 @@
     "available from tom nook during countdown": {
       "English": "Available from Tom Nook during Countdown",
       "English (Europe)": "Available from Tom Nook during Countdown",
+      "French": "Tom Nook pendant le Compte à Rebour du Nouvel An",
+      "French (US)": "Tom Nook pendant le Compte à Rebour du Nouvel An",
       "German": "Verfügbar bei Tom Nook während des Countdowns",
       "Italian": "Disponibile da Toom Nook durante il Countdown"
     },
@@ -16339,6 +16409,7 @@
       "English": "Redd's Commune Raffle",
       "English (Europe)": "Redd's Commune Raffle",
       "French": "La tombola de Rounard (boutique)",
+      "French (US)": "La tombola de Rounard (boutique)",
       "German": "Reiners Tombola (Kommune)",
       "Italian": "Lotteria della Comune di Volpolo"
     },
@@ -16346,6 +16417,7 @@
       "English": "Kick's Commune",
       "English (Europe)": "Kick's Commune",
       "French": "La boutique de Blaise",
+      "French (US)": "La boutique de Blaise",
       "German": "Schuberts Laden (Kommune)",
       "Italian": "Comune di Sciuscià"
     },
@@ -16360,8 +16432,8 @@
     "digging up a carrot plant": {
       "English": "Digging up a carrot plant",
       "English (Europe)": "Digging up a carrot plant",
-      "French": "Déterrer un germe de carotte",
-      "French (US)": "Déterrer un germe de carotte",
+      "French": "Déterrer un plan de carotte",
+      "French (US)": "Déterrer un plan de carotte",
       "German": "Eine Karottenpflanze ausgraben",
       "Italian": "Estirpando una pianta di carote",
       "Dutch": "wortelplant opgraven"
@@ -16369,8 +16441,8 @@
     "digging up a potato plant": {
       "English": "Digging up a potato plant",
       "English (Europe)": "Digging up a potato plant",
-      "French": "Déterrer un germe de pomme de terre",
-      "French (US)": "Déterrer un germe de pomme de terre",
+      "French": "Déterrer un plan de pomme de terre",
+      "French (US)": "Déterrer un plan de pomme de terre",
       "German": "Eine Kartoffelpflanze ausgraben",
       "Italian": "Estirpando una pianta di patate",
       "Dutch": "aardappelplant opgraven"
@@ -16378,16 +16450,16 @@
     "digging up a sugarcane plant": {
       "English": "Digging up a sugarcane plant",
       "English (Europe)": "Digging up a sugarcane plant",
-      "French": "Déterrer un germe de canne à sucre",
-      "French (US)": "Déterrer un germe de canne à sucre",
+      "French": "Déterrer un plan de canne à sucre",
+      "French (US)": "Déterrer un plan de canne à sucre",
       "German": "Eine Zuckerrohrpflanze ausgraben",
       "Italian": "Estirpando una pianta di canna da zucchero"
     },
     "digging up a tomato plant": {
       "English": "Digging up a tomato plant",
       "English (Europe)": "Digging up a tomato plant",
-      "French": "Déterrer un germe de tomate",
-      "French (US)": "Déterrer un germe de tomate",
+      "French": "Déterrer un plan de tomate",
+      "French (US)": "Déterrer un plan de tomate",
       "German": "Eine Tomatenpflanze ausgraben",
       "Italian": "Estirpando una pianta di pomodori",
       "Dutch": "Tomatenplant opgraven"
@@ -16395,8 +16467,8 @@
     "digging up a wheat plant": {
       "English": "Digging up a wheat plant",
       "English (Europe)": "Digging up a wheat plant",
-      "French": "Déterrer un germe de blé",
-      "French (US)": "Déterrer un germe de blé",
+      "French": "Déterrer un plan de blé",
+      "French (US)": "Déterrer un plan de blé",
       "German": "Weizen ausgraben ",
       "Italian": "Estirpando una pianta di grano"
     },
@@ -16419,12 +16491,16 @@
     "catching a barred knifejaw": {
       "English": "Catching a barred knifejaw",
       "English (Europe)": "Catching a barred knifejaw",
+      "French": "Attraper un Ishidai",
+      "French (US)": "Attraper un Ishidai",
       "German": "Einen Schnabelbarsch fangen",
       "Italian": "Catturando un ishidai"
     },
     "basic cooking recipes": {
       "English": "Basic Cooking Recipes",
       "English (Europe)": "Basic Cooking Recipes",
+      "French": "Bien débuter en cuisine ",
+      "French (US)": "Bien débuter en cuisine ",
       "German": "Basis-Rezepte",
       "Italian": "Ricette di cucina basilari"
     },
@@ -16447,81 +16523,104 @@
     "be a chef! diy recipes+": {
       "English": "Be a Chef! DIY Recipes+",
       "English (Europe)": "Be a Chef! DIY Recipes+",
+      "French": "Recette Créations+",
+      "French (US)": "Recette Créations+",
       "German": "Genießen mit Anleitungen+",
       "Italian": "Sii uno Chef! Ricette fai da te+"
     },
     "turkey day recipes": {
       "English": "Turkey Day Recipes",
       "English (Europe)": "Turkey Day Recipes",
+      "French": "Recettes de Fête du Partage",
+      "French (US)": "Recettes de Fête du Partage",
       "German": "Schlemmfest-Bastelbuch",
       "Italian": "Ricette del giorno del Ringraziamento"
     },
     "catching a dab": {
       "English": "Catching a dab",
       "English (Europe)": "Catching a dab",
+      "French": "Attraper une limande",
+      "French (US)": "Attraper une limande",
       "German": "Eine Kliesche fangen",
       "Italian": "Catturando una platessa"
     },
     "custom fencing in a flash": {
       "English": "Custom Fencing in a Flash",
       "English (Europe)": "Custom Fencing in a Flash",
+      "French": "Clôtures persos rapido",
+      "French (US)": "Clôtures persos rapido",
       "German": "Zäune verzaubern-ABC",
       "Italian": "Personalizza staccionate in un attimo"
     },
     "catching a red snapper": {
       "English": "Catching a red snapper",
       "English (Europe)": "Catching a red snapper",
+      "French": "Attraper un vivaneau",
+      "French (US)": "Attraper un vivaneau",
       "German": "Einen Kaiserschnapper fangen",
       "Italian": "Pescando un lutiano rosso"
     },
     "catching a olive flounder": {
       "English": "Catching a olive flounder",
       "English (Europe)": "Catching a olive flounder",
+      "French": "Attraper un cardeau",
+      "French (US)": "Attraper un cardeau",
       "German": "Eine Flunder fangen",
       "Italian": "Pescando una sogliola"
     },
     "catching a sea bass": {
       "English": "Catching a sea bass",
       "English (Europe)": "Catching a sea bass",
+      "French": "Attraper un bar commun",
+      "French (US)": "Attraper un bar commun",
       "German": "Einen Seebarsch fangen",
       "Italian": "Pescando una spigola"
     },
     "catching a squid": {
       "English": "Catching a squid",
       "English (Europe)": "Catching a squid",
+      "French": "Attraper un calmar",
+      "French (US)": "Attraper un calmar",
       "German": "Einen Tintenfisch fangen",
       "Italian": "Catturando un polpo"
     },
     "new reactions notebook": {
       "English": "New Reactions Notebook",
       "English (Europe)": "New Reactions Notebook",
+      "French": "Nouvelles mimiques",
       "German": "Neue-Emotionen-Sammlung",
       "Italian": "Quadernino delle nuove emozioni"
     },
     "hhp office": {
       "English": "HHP Office",
       "English (Europe)": "HHP Office",
+      "French": "Bureau HHP",
       "German": "Ferienhausagentur"
     },
     "group stretching": {
       "English": "Group Stretching",
       "English (Europe)": "Group Stretching",
+      "French": "Séance d'aérobique",
       "German": "Gruppengymnastik"
     },
     "wardell": {
       "English": "Wardell",
       "English (Europe)": "Wardell",
+      "French": "Mantin",
       "German": "Sigmar"
     },
     "cooking": {
       "English": "Cooking",
       "English (Europe)": "Cooking",
+      "French": "Cuisiner",
+      "French (US)": "Cuisiner",
       "German": "Kochen",
       "Dutch": "Koken"
     },
     "hhp café": {
       "English": "HHP Café",
       "English (Europe)": "HHP Café",
+      "French": "Café HHP",
       "German": "Café (FHA)",
       "Dutch": "HHP Café"
     },
@@ -16533,30 +16632,35 @@
     "donating all bugs": {
       "English": "Donating all bugs",
       "English (Europe)": "Donating all bugs",
+      "French": "Donner tous les insectes au musée",
       "German": "Alle Insekten spenden",
       "Dutch": "Alle insecten doneren"
     },
     "donating all fish": {
       "English": "Donating all fish",
       "English (Europe)": "Donating all fish",
+      "French": "Donner tous les poissons au musée",
       "German": "Alle Fische spenden",
       "Dutch": "Alle vissen doneren"
     },
     "donating all art": {
       "English": "Donating all art",
       "English (Europe)": "Donating all art",
+      "French": "Donner toutes les oeuvres d'art au musée",
       "German": "Alle Kunstwerke spenden",
       "Dutch": "Alle kunst doneren"
     },
     "donating all fossils": {
       "English": "Donating all fossils",
       "English (Europe)": "Donating all fossils",
+      "French": "Donner tous les fossiles au musée",
       "German": "Alle Fossilien spenden",
       "Dutch": "Alle fossielen doneren"
     },
     "donating all sea creatures": {
       "English": "Donating all sea creatures",
       "English (Europe)": "Donating all sea creatures",
+      "French": "Donner toutes les créatures marines au musée",
       "German": "Alle Meerestiere spenden",
       "Dutch": "Alle diepzeedieren doneren"
     },
@@ -16587,6 +16691,7 @@
     "kapp'n islands": {
       "English": "Kapp'n islands",
       "English (Europe)": "Kapp'n islands",
+      "French": "Îles d'Amiral",
       "German": "Käptens Inseln",
       "Dutch": "Kapp'ns eilanden"
     },
@@ -16623,11 +16728,13 @@
     "egg bottles": {
       "English": "Egg bottles",
       "English (Europe)": "Egg bottles",
+      "French": "Bouteilles Fête des oeufs ",
       "German": "Häschentag-Flaschenpost"
     },
     "egg balloons": {
       "English": "Egg balloons",
       "English (Europe)": "Egg balloons",
+      "French": "Ballons Fête des oeufs ",
       "German": "Häschentag-Ballon"
     },
     "catching an anchovy": {
@@ -16647,16 +16754,19 @@
     "kapp'n island bottles": {
       "English": "Kapp'n island bottles",
       "English (Europe)": "Kapp'n island bottles",
+      "French": "Bouteilles des îles d'Amiral",
       "German": "Käptens Insel Flaschenpost"
     },
     "hhp island bottles": {
       "English": "HHP island bottles",
       "English (Europe)": "HHP island bottles",
+      "French": "Bouteilles des îles HHP",
       "German": "Ferienhausagentur Flaschenpost (FHA)"
     },
     "dj k.k. concert": {
       "English": "DJ K.K. concert",
       "English (Europe)": "DJ K.K. concert",
+      "French": "Concert de Kéké",
       "German": "Musikfestival (FHA)"
     },
     "saharah's co-op": {
@@ -16683,11 +16793,13 @@
     "dj kk concert": {
       "English": "DJ KK concert",
       "English (Europe)": "DJ KK concert",
+      "French": "Concert de Kéké",
       "German": "Musikfestival (FHA)"
     },
     "hhp apparel shop": {
       "English": "HHP Apparel Shop",
       "English (Europe)": "HHP Apparel Shop",
+      "French": "Boutique HHP",
       "German": "FHA Boutique "
     }
   },
@@ -17245,6 +17357,7 @@
     "available from nook's cranny;": {
       "English": "Available from Nook's Cranny;",
       "English (Europe)": "Available from Nook's Cranny;",
+      "French": "Disponible à la boutique Nook;",
       "German": "Erhältlich in Nooks Laden"
     },
     "available from tom nook during countdown": {
@@ -18261,6 +18374,7 @@
     "received after doing your 50th group stretch": {
       "English": "Received after doing your 50th group stretch",
       "English (Europe)": "Received after doing your 50th group stretch",
+      "French": "Obtenu après avoir fait 50 séances d'aérobique",
       "German": "Erhältlich nach der 50. Gruppengymnastik-Teilnahme"
     },
     "available during dj kk festival": {
@@ -18276,6 +18390,7 @@
     "obtain turkey day recipes from franklin or buy it from nook's cranny": {
       "English": "Obtain Turkey Day Recipes from Franklin or buy it from Nook's Cranny",
       "English (Europe)": "Obtain Turkey Day Recipes from Franklin or buy it from Nook's Cranny",
+      "French": "Obtenez les recettes Fête du partage soit depuis la boutique Nook, soit depuis Dindou",
       "German": "Hole dir die Rezepte für den Schlmmertag von Gernod oder kaufe sie in Nook's Laden"
     }
   },
@@ -28029,7 +28144,7 @@
     "the walking stick looks just like a twig, does it not? hoo! it even has knots like a real twig would! these bashful bugs mimic plants in this way to hide from predators. a noble goal, you might say. but though the deceptive wretches fool some, they do not fool me! i see these bugs for what they are... monsters, plain and simple! i say, did you know that walking sticks can grow to two feet long?! imagine running into one! surely i would faint.": {
       "English": "The walking stick looks just like a twig, does it not? Hoo! It even has knots like a real twig would! These bashful bugs mimic plants in this way to hide from predators. A noble goal, you might say. But though the deceptive wretches fool some, they do not fool me! I see these bugs for what they are... Monsters, plain and simple! I say, did you know that walking sticks can grow to two feet long?! Imagine running into one! Surely I would faint.",
       "English (Europe)": "The walking stick looks just like a twig, does it not? Hoo! It even has knots like a real twig would! These bashful bugs mimic plants in this way to hide from predators. A noble goal, you might say. But though the deceptive wretches fool some, they do not fool me! I see these bugs for what they are... Monsters, plain and simple! I say, did you know that walking sticks can grow to two feet long?! Imagine running into one! Surely I would faint.",
-      "French": "Le phasme j'ai toujours pensé qu'il ressemblait à une branche. Mais si regarde il en a même les nSuds. Cet insecte pudique imite ainsi la nature qui l'environne afin de se dissimuler aux yeux des prédateurs. Voilà un objectif honorable mais si le phasme berne le prédateur lambda moi je ne suis pas dupe. Je le prends pour ce qu'il est un monstre. Une aberration capable d'atteindre 60 centimètres de long. Imagine que tu tombes un jour nez à nez avec un pareil colosse Moi en tout cas je m'évanouis dans la seconde.",
+      "French": "Le phasme j'ai toujours pensé qu'il ressemblait à une branche. Mais si, regarde, il en a même les noeuds. Cet insecte pudique imite ainsi la nature qui l'environne afin de se dissimuler aux yeux des prédateurs. Voilà un objectif honorable, mais si le phasme berne le prédateur lambda, moi, je ne suis pas dupe ! Je le prends pour ce qu'il est : un monstre ! Une aberration capable d'atteindre 60 centimètres de long ! Imagine que tu tombes un jour nez à nez avec un pareil colosse. Moi, en tout cas, je m'évanouis dans la seconde.",
       "French (US)": "Le phasme j'ai toujours pensé qu'il ressemblait à une branche. Mais si regarde il en a même les nSuds. Cet insecte pudique imite ainsi la nature qui l'environne afin de se dissimuler aux yeux des prédateurs. Voilà un objectif honorable mais si le phasme berne le prédateur lambda moi je ne suis pas dupe. Je le prends pour ce qu'il est un monstre. Une aberration capable d'atteindre 60 centimètres de long. Imagine que tu tombes un jour nez à nez avec un pareil colosse Moi en tout cas je m'évanouis dans la seconde.",
       "German": "Die Stabschrecke sieht ganz wie ein Zweig aus, nicht wahr? Huu! Sie hat sogar Knubbel wie ein echter Zweig! Auf diese Weise versteckt sie sich vor Fressfeinden. Ein hehres Ziel, so könnte man meinen. Diese Verkleidungskünstler mögen manche täuschen, doch nicht mich! Ich durchschaue ihre Tricks… Denn es sind Ungetüme, jawohl! Wussten Sie, dass sie fast 60 Zentimenter lang werden können?! Man stelle sich nur einmal vor, einer auf offener Straße zu begegnen! Mir würden die Sinne schwinden!"
     },
@@ -28983,6 +29098,7 @@
     "dinosaur tracks are fossilized footprints left on the bottom of the sea or on soft earth. from these fossils, we can deduce the creature's territory range as well as its relationship with its herd... it has even become possible to work out the creature's size, distinctive gait, and, shockingly, walking speed! these trace fossils are like social-media feeds, enabling us to follow the daily lives of the dinosaurs!": {
       "English": "Dinosaur tracks are fossilized footprints left on the bottom of the sea or on soft earth. From these fossils, we can deduce the creature's territory range as well as its relationship with its herd... It has even become possible to work out the creature's size, distinctive gait, and, shockingly, walking speed! These trace fossils are like social-media feeds, enabling us to follow the daily lives of the dinosaurs!",
       "English (Europe)": "Dinosaur tracks are fossilized footprints left on the bottom of the sea or on soft earth. From these fossils, we can deduce the creature's territory range as well as its relationship with its herd... It has even become possible to work out the creature's size, distinctive gait, and, shockingly, walking speed! These trace fossils are like social-media feeds, enabling us to follow the daily lives of the dinosaurs!",
+      "French": "Les empreintes de dinosaures nous enseignent bien des choses au sujet de ceux qui nous les ont laissées. On peut ainsi en déduire le territoire de la créature concernée, ainsi que son degré de sociabilité. On parvient même à en inférer la taille de l'animal, sa démarche et, crois-le ou non, sa vitesse ! Ainsi, ce sont autant d'instantanés de la vie des dinosaures, publiés sur le grand réseau social du temps !  ",
       "German": "Dino-Fußabdrücke entstehen, wenn ein Fußabdruck in weicher Erde oder auf dem Meeresboden fossilisiert. Aus diesen Abdrücken kann man auf die Größe des Territoriums oder das Verhältnis zur Herde schließen. Es ist sogar möglich, die Größe der Kreatur zu bestimmen, ihren Gang und sogar ihre Laufgeschwindigkeit! Kurzum, sie sind wie Beiträge in sozialen Medien, durch die wir alles über das Dinosaurierleben erfahren!"
     },
     "good old diplodocus—what would we do without you? this stout fellow embodied all the best in dinosaurs. those sturdy legs, that magnificent tail, and, above all, that extraordinary neck! did you know that its center of gravity was such that sitting up on its hind legs was probably easy? what's more, paired with its long neck, this ability greatly increased its reach for eating plants! best of all, diplodocus probably grew its entire life, having no \"adult size.\" would that we were all so gifted!": {
@@ -29002,6 +29118,7 @@
     "the eusthenopteron is famous for being the link between fish and land animals long before dinosaurs. it seems to have had strong fins capable of pulling it around areas where the water was shallow. when most creatures lived in the sea...they dreamed of land. if not for them, we mightn't be here today! imagine if we'd not left the oceans... how might fashion and music be different in an aquatic world? how would we resolve differences? perhaps some sort of ink-squirting contest of champions?": {
       "English": "The eusthenopteron is famous for being the link between fish and land animals long before dinosaurs. It seems to have had strong fins capable of pulling it around areas where the water was shallow. When most creatures lived in the sea...they dreamed of land. If not for them, we mightn't be here today! Imagine if we'd not left the oceans... How might fashion and music be different in an aquatic world? How would we resolve differences? Perhaps some sort of ink-squirting contest of champions?",
       "English (Europe)": "The eusthenopteron is famous for being the link between fish and land animals long before dinosaurs. It seems to have had strong fins capable of pulling it around areas where the water was shallow. When most creatures lived in the sea...they dreamed of land. If not for them, we mightn't be here today! Imagine if we'd not left the oceans... How might fashion and music be different in an aquatic world? How would we resolve differences? Perhaps some sort of ink-squirting contest of champions?",
+      "French": "L'eusthénoptéron doit sa célébrité à son statut de chaînon entre poissons et créatures terrestres. Attention, je te parle d'un temps que les fossiles de moins de 385 millions d'années ne peuvent pas connaître. Il promenait en effet ses puissantes nageoires en eaux peu profondes bien avant l'époque des dinosaures. Alors que l'immense majorité des créatures vivait sous l'eau, lui ne rêvait que de la terre ferme. Sans cette folle ambition, nous ne serions pas là ! S'il n'avait pas eu l'audace de quitter l'océan, à quoi ressembleraient la musique et la mode d'aujourd'hui, dans un monde demeuré aquatique ? Comment résoudrions-nous nos différents ? Peut-être en organisant des championnats de batailles d'encre, qui sait. ",
       "German": "Eusthenopteron ist bekanntlich das Bindeglied zwischen See- und Landtieren, lange vor den Dinosauriern. Seine kräftigen Flossen versetzen ihn in die Lage, sich auch in sehr flachem Wasser zu bewegen. Als die meisten Lebewesen im Meer lebten… träumte er vom Land. Ohne ihn wären wir heute nicht hier! Was, wenn wir die Ozeane niemals verlassen hätten… Wie würde unser Alltag in der Tiefe wohl aussehen? Wie würden wir unsere Freizeit verbringen? Wettschwimmen? Tieftauchen? Tinte verspritzen?"
     },
     "ah, that graceful ballerina of the cretaceous, the iguanodon! when i say it was graceful, i mean by the...ahem...rather low bar set by other large herbivores. apparently it would nimbly dodge the attacks of predators and fight back with its thumb claws! it could even walk on two legs when it wanted to! er...truly it was the most elegant and lithe of dinosaurs.": {
@@ -30681,6 +30798,7 @@
     "i caught a goliath beetle! am i a legend or what?": {
       "English": "I caught a goliath beetle! Am I a legend or what?",
       "English (Europe)": "I caught a goliath beetle! Am I a legend or what?",
+      "French": "Tu as attrapé un scarabée Goliath ! Y a-t-il aussi des scarabée David ? ",
       "German": "Ein Goliathkäfer! Immer noch relativ klein…",
       "Russian": "В сачок попался жук-голиаф! Он заслуживает свое название..."
     },
@@ -31100,6 +31218,7 @@
     "i caught an arowana! i'd make a joke, but i don't 'wana.": {
       "English": "I caught an arowana! I'd make a joke, but I don't 'wana.",
       "English (Europe)": "I caught an arowana! I'd make a joke, but I don't 'wana.",
+      "French": "Tu as pris un arowana ! On dirait un fruit exotique ! ",
       "German": "Ein Arowana! Der Arowahnsinn!",
       "Russian": "На удочку попалась аравана! Меня ждет удача!"
     },
@@ -31122,6 +31241,7 @@
     "i caught a betta! i betta not drop it!": {
       "English": "I caught a betta! I betta not drop it!",
       "English (Europe)": "I caught a betta! I betta not drop it!",
+      "French": "Tu as pris un combattant ! Il cherche la bagarre ?",
       "German": "Ein friedlicher Kampffisch! Da habe ich aber Glück!",
       "Russian": "На удочку попался сиамский петушок! А персидский тоже где-то рядом!"
     },

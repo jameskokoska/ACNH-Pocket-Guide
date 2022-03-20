@@ -17,7 +17,7 @@ export class ExternalLink extends Component {
 export class HeaderNote extends Component {
   render(){
     return (
-      <TextFont style={[{fontSize: 13, marginHorizontal: 30, color:colors.textBlack[global.darkMode]},this.props.style]}>{this.props.children}</TextFont>
+      <TextFont style={[{fontSize: 13, marginHorizontal: 33, color:colors.textBlack[global.darkMode]},this.props.style]}>{this.props.children}</TextFont>
     )
   }
 }

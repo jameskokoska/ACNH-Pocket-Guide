@@ -36,7 +36,7 @@ export default class Wishlist extends Component {
             <Image source={require("../assets/icons/list.png")} style={{opacity:0.6,width:35, height:35, resizeMode:'contain'}}/>
           </View>
         </TouchableNativeFeedback>
-        <WishlistSelectionPopup ref={(popup) => this.popup = popup} selectedList={[this.state.selectedList]} changeSelectedList={this.changeSelectedList} addCustomList={this.addCustomList} showAdd/>
+        <WishlistSelectionPopup showSelectedOriginal ref={(popup) => this.popup = popup} selectedList={[this.state.selectedList]} changeSelectedList={this.changeSelectedList} addCustomList={this.addCustomList} showAdd/>
         <AllItemsPage 
           smallerHeader={this.state.selectedList!==undefined&&this.state.selectedList.length>15?true:false}
           // disableFilters={true}
@@ -96,8 +96,8 @@ export class WishlistSelectionPopup extends Component{
 
   render(){
     let popupChildren = <>
-      <WishlistBox text="Wishlist" showDelete={false} id="" selected={this.state.selectedList?.includes("")} changeSelectedList={this.props.changeSelectedList} setPopupVisible={(visible)=>this.popup?.setPopupVisible(visible)}/>
-      <CustomLists checkListKeyString={this.state.checkListKeyString} showDelete={this.props.showDelete===false?false:true} showAmount={this.props.showAmount===true?true:false} ref={(customLists) => this.customLists = customLists} selectedList={this.state.selectedList} changeSelectedList={this.props.changeSelectedList} setPopupVisible={(visible)=>this.popup?.setPopupVisible(visible)}/>
+      <WishlistBox showSelectedOriginal={this.props.showSelectedOriginal} checkListKeyString={this.state.checkListKeyString} text="Wishlist" showDelete={false} id="" selected={this.state.selectedList?.includes("")} changeSelectedList={this.props.changeSelectedList} setPopupVisible={(visible)=>this.popup?.setPopupVisible(visible)}/>
+      <CustomLists showSelectedOriginal={this.props.showSelectedOriginal} checkListKeyString={this.state.checkListKeyString} showDelete={this.props.showDelete===false?false:true} showAmount={this.props.showAmount===true?true:false} ref={(customLists) => this.customLists = customLists} selectedList={this.state.selectedList} changeSelectedList={this.props.changeSelectedList} setPopupVisible={(visible)=>this.popup?.setPopupVisible(visible)}/>
     </>
     if(this.props.popupBottom===false){
       var buttons = <>
@@ -191,7 +191,7 @@ class CustomLists extends Component{
     if(prevProps.checkListKeyString!==this.props.checkListKeyString){
       this.setState({checkListKeyString:this.props.checkListKeyString})
     }
-    if(prevProps.selectedList!==this.props.selectedList){
+    if(prevProps!==this.props){
       this.setState({selectedList:this.props.selectedList})
     }
   }
@@ -200,7 +200,7 @@ class CustomLists extends Component{
     return <>
       {
         this.state.lists.map((item)=>{
-          return <WishlistBox checkListKeyString={this.state.checkListKeyString} key={item} text={item} showDelete={this.props.showDelete===false?false:true} showAmount={this.props.showAmount===true?true:false} removeCustomList={this.removeCustomList} addCustomList={this.addCustomList} id={item} selected={this.state.selectedList?.includes(item)} changeSelectedList={this.props.changeSelectedList} setPopupVisible={(visible)=>this.props.setPopupVisible(visible)}/>
+          return <WishlistBox showSelectedOriginal={this.props.showSelectedOriginal} checkListKeyString={this.state.checkListKeyString} key={item} text={item} showDelete={this.props.showDelete===false?false:true} showAmount={this.props.showAmount===true?true:false} removeCustomList={this.removeCustomList} addCustomList={this.addCustomList} id={item} selected={this.state.selectedList?.includes(item)} changeSelectedList={this.props.changeSelectedList} setPopupVisible={(visible)=>this.props.setPopupVisible(visible)}/>
         })
       }
       <Popup
@@ -283,8 +283,8 @@ class PopupAddWishlist extends Component{
 class WishlistBox extends Component{
   constructor(props){
     super(props)
-    this.state={image:getCustomListImage(this.props.id), selected:this.props.selected, amount:getCustomListsAmount(this.props.checkListKeyString, this.props.id)}
-  }
+    this.state={image:getCustomListImage(this.props.id), selected:this.props.showSelectedOriginal? this.props.selected : (this.props.id===""?inWishlist(this.props.checkListKeyString):inCustomLists(this.props.checkListKeyString, this.props.id)), amount:getCustomListsAmount(this.props.checkListKeyString, this.props.id)}
+  }  
   setCustomImage = (image) => {
     this.setState({image:image})
     changeCustomListImage(this.props.id, image)

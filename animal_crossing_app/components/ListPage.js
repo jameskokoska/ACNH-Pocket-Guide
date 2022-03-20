@@ -915,23 +915,14 @@ function ListPage(props){
         setWishlistState(inWishlistState)
       }
     }
-    let selectedList = []
-    if(inWishlist(item.checkListKey)){
-      selectedList.push("")
-    }
-    for(let customList of global.customLists){
-      if(inCustomLists(item.checkListKey, customList)){
-        selectedList.push(customList)
-      }
-    }
 
     if(popupBottom){
       //order is important
       customListsPopupBottomRef?.current?.setPopupVisible(true, item.checkListKey, item["NameLanguage"])
-      customListsPopupBottomRef?.current.updateSelectedList(selectedList)
+      customListsPopupBottomRef?.current.updateSelectedList()
     } else {
       customListsPopupRef?.current?.setPopupVisible(true, item.checkListKey, item["NameLanguage"])
-      customListsPopupRef?.current.updateSelectedList(selectedList)
+      customListsPopupRef?.current.updateSelectedList()
     }
 
     runWhenOpen()

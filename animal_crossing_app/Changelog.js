@@ -3,6 +3,11 @@ export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Updated translations
+-Fixed custom lists and custom lists icons for item variations
+-Fixed capitlization on some languages on TV Guide page
+-Fixed UI formatting
+-
 -Added Custom List filtering
 -Fixed Wishlist filtering
 -Wishlist filtering now under Custom Lists subheader
