@@ -261,7 +261,7 @@ class PopupAddWishlist extends Component{
       <PopupChooseIcon moreImages={taskImages} setImage={(image)=>{this.setCustomImage(image)}} ref={(popupChooseIcon) => this.popupChooseIcon = popupChooseIcon}/>
 
       <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{"New List"}</TextFont>
-      <Paragraph styled>This name cannot be changed.</Paragraph>
+      <Paragraph styled style={{textAlign:"center"}}>The name cannot be changed.</Paragraph>
       <View style={{height:10}}/>
       <View style={{flexDirection: 'row'}}>
         <View style={{flex:1, justifyContent:"center", marginHorizontal:5,}}>
