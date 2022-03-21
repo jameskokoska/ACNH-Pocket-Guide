@@ -44,6 +44,7 @@ class CreditsPage extends Component {
       <CreditTextBox text="NoLNoodle"/>
       <CreditTextBox text="Harkken"/>
       <CreditTextBox text="RisingProtostar"/>
+      <CreditTextBox text="Kryptonite"/>
       <View style={{height: 5}}/>
       <View style={{paddingHorizontal: 20}}>
         <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.popupSupport?.setPopupVisible(true)}} text={capitalize(attemptToTranslate("Leave a Tip"))} />
