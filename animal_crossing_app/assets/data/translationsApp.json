@@ -574,7 +574,7 @@
             "English (Europe)": "1135 items",
             "French": "1111 items (24 items missing)",
             "French (US)": "1111 items (24 items missing)",
-            "German": "1123 items (12 items missing)",
+            "German": "1130 items (5 items missing)",
             "Spanish": "1135 items",
             "Spanish (US)": "1107 items (28 items missing)",
             "Russian": "1122 items (13 items missing)",
@@ -11122,7 +11122,7 @@
             "English (Europe)": "An error occurred. Please check your internet connection and try again later.",
             "French": "Une erreur s'est produite. Veuillez vérifier votre connexion Internet et réessayer plus tard.",
             "French (US)": "Une erreur s'est produite. Veuillez vérifier votre connexion Internet et réessayer plus tard.",
-            "German": " ",
+            "German": "Ein Fehler ist aufgetreten. Bitte überprüfe deine Internetverbindung und versuche es später erneut.",
             "Spanish": "Ocurrió un error. Comprueba tu conexión a Internet y vuelve a intentarlo más tarde.",
             "Spanish (US)": "Ocurrió un error. Comprueba tu conexión a Internet y vuelve a intentarlo más tarde.",
             "Russian": "Произошла ошибка. Проверьте подключение к Интернету и повторите попытку позже.",
@@ -13761,36 +13761,43 @@
         {
             "English": "Mario",
             "English (Europe)": "Mario",
+            "German": "Mario",
             "Spanish": "Mario"
         },
         {
             "English": "Cinnamoroll",
             "English (Europe)": "Cinnamoroll",
+            "German": "Cinnamoroll",
             "Spanish": "Cinnamoroll"
         },
         {
             "English": "Hello Kitty",
             "English (Europe)": "Hello Kitty",
+            "German": "Hello Kitty",
             "Spanish": "Hello Kitty"
         },
         {
             "English": "Kerokerokeroppi",
             "English (Europe)": "Kerokerokeroppi",
+            "German": "Kerokerokeroppi",
             "Spanish": "Kerokerokeroppi"
         },
         {
             "English": "Kiki & Lala",
             "English (Europe)": "Kiki & Lala",
+            "German": "Kiki & Lala",
             "Spanish": "Kiki & Lala"
         },
         {
             "English": "My Melody",
             "English (Europe)": "My Melody",
+            "German": "My Melody",
             "Spanish": "My Melody"
         },
         {
             "English": "Pompompurin",
             "English (Europe)": "Pompompurin",
+            "German": "Pompompurin",
             "Spanish": "Pompompurin"
         },
         {
@@ -13941,7 +13948,7 @@
             "English (Europe)": "Special Cool Nature Walls",
             "French": "Murs spéciaux Cool Nature",
             "French (US)": "Murs spéciaux Cool Nature",
-            "German": "Spezielle coole Naturwände",
+            "German": "Spezielle kalte Naturwände",
             "Spanish": "Paredes naturales frescas especiales",
             "Spanish (US)": "Paredes naturales frescas especiales",
             "Russian": "Специальные крутые стены природы",
@@ -19398,7 +19405,7 @@
             "English (Europe)": "72 items",
             "French": "52 items (20 items missing)",
             "French (US)": "52 items (20 items missing)",
-            "German": "71 items (1 items missing)",
+            "German": "72 items",
             "Spanish": "38 items (34 items missing)",
             "Spanish (US)": "38 items (34 items missing)",
             "Italian": "0 items (72 items missing)",
@@ -20024,7 +20031,8 @@
         },
         {
             "English": "New Year's Eve (Russia)",
-            "English (Europe)": "New Year's Eve (Russia)"
+            "English (Europe)": "New Year's Eve (Russia)",
+            "German": "Neujahresabend (Russland)"
         }
     ],
     "Missing Items": [

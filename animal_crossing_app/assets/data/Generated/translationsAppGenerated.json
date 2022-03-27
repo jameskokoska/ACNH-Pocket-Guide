@@ -12854,36 +12854,43 @@
     "mario": {
       "English": "Mario",
       "English (Europe)": "Mario",
+      "German": "Mario",
       "Spanish": "Mario"
     },
     "cinnamoroll": {
       "English": "Cinnamoroll",
       "English (Europe)": "Cinnamoroll",
+      "German": "Cinnamoroll",
       "Spanish": "Cinnamoroll"
     },
     "hello kitty": {
       "English": "Hello Kitty",
       "English (Europe)": "Hello Kitty",
+      "German": "Hello Kitty",
       "Spanish": "Hello Kitty"
     },
     "kerokerokeroppi": {
       "English": "Kerokerokeroppi",
       "English (Europe)": "Kerokerokeroppi",
+      "German": "Kerokerokeroppi",
       "Spanish": "Kerokerokeroppi"
     },
     "kiki & lala": {
       "English": "Kiki & Lala",
       "English (Europe)": "Kiki & Lala",
+      "German": "Kiki & Lala",
       "Spanish": "Kiki & Lala"
     },
     "my melody": {
       "English": "My Melody",
       "English (Europe)": "My Melody",
+      "German": "My Melody",
       "Spanish": "My Melody"
     },
     "pompompurin": {
       "English": "Pompompurin",
       "English (Europe)": "Pompompurin",
+      "German": "Pompompurin",
       "Spanish": "Pompompurin"
     },
     "office": {
@@ -13034,7 +13041,7 @@
       "English (Europe)": "Special Cool Nature Walls",
       "French": "Murs spéciaux Cool Nature",
       "French (US)": "Murs spéciaux Cool Nature",
-      "German": "Spezielle coole Naturwände",
+      "German": "Spezielle kalte Naturwände",
       "Spanish": "Paredes naturales frescas especiales",
       "Spanish (US)": "Paredes naturales frescas especiales",
       "Russian": "Специальные крутые стены природы",
@@ -19009,7 +19016,8 @@
     },
     "new year's eve (russia)": {
       "English": "New Year's Eve (Russia)",
-      "English (Europe)": "New Year's Eve (Russia)"
+      "English (Europe)": "New Year's Eve (Russia)",
+      "German": "Neujahresabend (Russland)"
     }
   },
   "Missing Items": {

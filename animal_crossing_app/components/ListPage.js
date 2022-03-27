@@ -734,7 +734,12 @@ function ListPage(props){
               textB = "zzzzzzzzzzzzzz"
             }
           }
-          return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+          if(textB==="zzzzzzzzzzzzzz"){
+            return -1
+          } else if (textA==="zzzzzzzzzzzzzz"){
+            return -1
+          }
+          return (textA.localeCompare(textB));
         });
       }
 

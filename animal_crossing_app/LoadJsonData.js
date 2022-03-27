@@ -208,7 +208,7 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
         // if(!customDatabase){
         //   dataLoading[i]["NameLanguage"]=attemptToTranslateItem(dataLoading[i]["Name"]);
         // }else{
-          if(checkListKey[dataSet][0]==="villagerCheckList"){
+          if(checkListKey[dataSet][0]==="villagerCheckList" || (checkListKey[dataSet][0]!==undefined && checkListKey[dataSet][0].includes("amiiboCheckList"))){
             dataLoading[i]["NameLanguage"]=attemptToTranslateSpecial(dataLoading[i]["Name"],"villagers")
           } else {
             //handle special case where there are multiple items with same name
