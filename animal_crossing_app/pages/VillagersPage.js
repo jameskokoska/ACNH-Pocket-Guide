@@ -12,7 +12,7 @@ class VillagersPage extends Component {
   async componentDidMount(){
     setTimeout(async ()=>{
       let response = await getStorage("villagersPageAddPopup","")
-      if(response === ""){
+      if(response === "" || (this.props.propsPassed !== undefined && this.props.propsPassed==="show popup")){
         this.addVillagersPopup?.setPopupVisible(true)
         await AsyncStorage.setItem("villagersPageAddPopup", "true");
       }
@@ -31,6 +31,7 @@ class VillagersPage extends Component {
         tabs={false}
         subHeader="Tap the Heart to add villagers currently in your town."
         subHeader2="Tap the [?] in the top right corner for more information."
+        currentSetFilters={["Sort-Collected"]}
         extraInfo={
           {
             type:"guideRedirect",

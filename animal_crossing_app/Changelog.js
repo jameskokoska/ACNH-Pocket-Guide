@@ -3,13 +3,23 @@ export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added ability to mass check off items!
+- Tap the 3 dot menu in the top right corner of the header of any list page for options
+-Added NPCs to Paradise Planning page
+-Added Change Villagers button in profile
+-Villagers in your town are automatically at the top
+-Villager heart icon shows up properly on Everything page
+-Fixed capitalizations in some languages
+-Fixed loading animation scaling in different orientations/screen sizes
+-Increased check mark hit-box
+-
 -Fixed translation of Amiibo cards
 -Fixed alphabetical sorting in some languages
 -Updated translations
 -
 -Updated translations
 -Fixed custom lists and custom lists icons for item variations
--Fixed capitlization on some languages on TV Guide page
+-Fixed capitalization on some languages on TV Guide page
 -Fixed UI formatting
 -
 -Can specify to include Villagers or Recipes when importing data on the Catalog page

@@ -2,7 +2,7 @@ import React, {Component, useState, useRef, useEffect} from 'react';
 import {TouchableOpacity, View, Animated,StyleSheet,RefreshControl} from 'react-native';
 import Header, {HeaderLoading, HeaderActive} from './Header';
 import ListItem from './ListItem';
-import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters, isInteger, attemptToTranslate, checkOff, inCustomLists, getCustomListsAmount} from "../LoadJsonData"
+import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters, isInteger, attemptToTranslate, checkOff, inCustomLists, getCustomListsAmount, collectionListSave} from "../LoadJsonData"
 import {Dimensions } from "react-native";
 import {Variations,Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from './BottomSheetComponents';
 import colors from "../Colors.js"
@@ -89,7 +89,7 @@ function ListPage(props){
       popUpCornerImageLabelProperty={props.popUpCornerImageLabelProperty}
       popUpPhraseProperty={props.popUpPhraseProperty}
       popUpContainer={props.popUpContainer}
-      checkType={props.checkType}
+      checkType={(item["Data Category"]!==undefined && item["Data Category"]==="Villagers") ? "heart" : props.checkType}
       leaveWarning={props.leaveWarning}
       title={props.title}
       customTapFunction={props.customTapFunction}
@@ -940,6 +940,40 @@ function ListPage(props){
   //   bottomSheetTopPadding = 70;
   // }
 
+  const checkAllItemsListed = async () => {
+    for(let item of data){
+      if(item.checkListKey!==undefined){
+        checkOff(item.checkListKey, false, "", "", false, false)
+      }
+    }
+    await collectionListSave()
+    setRefresh(true)
+  }
+
+  const unCheckAllItemsListed = async () => {
+    for(let item of data){
+      if(item.checkListKey!==undefined){
+        checkOff(item.checkListKey, true, "", "", false, false)
+      }
+    }
+    await collectionListSave()
+    setRefresh(true)
+  }
+
+  const invertCheckItemsListed = async () => {
+    for(let item of data){
+      if(item.checkListKey!==undefined){
+        if(inChecklist(item.checkListKey)){
+          checkOff(item.checkListKey, true, "", "", false, false)
+        } else {
+          checkOff(item.checkListKey, false, "", "", false, false)
+        }
+      }
+    }
+    await collectionListSave()
+    setRefresh(true)
+  }
+
   const springConfig = {
       damping: 20,
       mass: 1,
@@ -958,7 +992,7 @@ function ListPage(props){
           width: Dimensions.get('window').width, 
           height: Dimensions.get('window').height, position:"absolute"}} 
         pointerEvents="none"> */}
-        <Header currentSearch={props.currentSearch!==undefined?props.currentSearch:""} setPage={props.setPage} extraInfo={props.extraInfo} smallerHeader={props.smallerHeader} disableFilters={props.disableFilters} customHeader={props.customHeader} disableSearch={props.disableSearch} subHeader={props.subHeader} subHeader2={props.subHeader2} searchFilters={searchFilters} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
+        <Header invertCheckItemsListed={()=>{invertCheckItemsListed()}} unCheckAllItemsListed={()=>{unCheckAllItemsListed()}} checkAllItemsListed={()=>{checkAllItemsListed()}} currentSearch={props.currentSearch!==undefined?props.currentSearch:""} setPage={props.setPage} extraInfo={props.extraInfo} smallerHeader={props.smallerHeader} disableFilters={props.disableFilters} customHeader={props.customHeader} disableSearch={props.disableSearch} subHeader={props.subHeader} subHeader2={props.subHeader2} searchFilters={searchFilters} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
         {/* </Animated.View> */}
       </Animated.View>
 
@@ -1233,7 +1267,7 @@ class BottomSheetRender extends Component{
       rightCornerCheck = <RightCornerCheck
         item={this.state.item}
         updateCheckChildFunction={this.updateCheckChildFunction}
-        checkType={this.props.checkType}
+        checkType={(this.state.item["Data Category"]!==undefined && this.state.item["Data Category"]==="Villagers") ? "heart" : this.props.checkType}
         updateVariations={this.updateVariations}
         ref={(rightCornerCheck) => this.rightCornerCheck = rightCornerCheck}
       />

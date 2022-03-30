@@ -17,13 +17,14 @@ import TextFont from '../components/TextFont';
 export default class ParadisePlanningPage extends Component {
   constructor(props){
     super(props);
-    this.data = require("../assets/data/DataCreated/Paradise Planning.json");
+    this.data = [...require("../assets/data/DataCreated/Paradise Planning.json"),...require("../assets/data/DataCreated/Special NPCs.json")];
     this.filterTypes = ["none","checked","not checked"]
     this.state = {
       selectedAchievement:"",
-      data: require("../assets/data/DataCreated/Paradise Planning.json"),
+      data: [...require("../assets/data/DataCreated/Paradise Planning.json"),...require("../assets/data/DataCreated/Special NPCs.json")],
       loaded: false,
       setFilter: 0,
+      update: false
     }
   }
 
@@ -75,7 +76,7 @@ export default class ParadisePlanningPage extends Component {
     } else {
       var outputData = [];
       this.data.map( (request, index)=>{
-        let requestRequest = request["Request"];
+        let requestRequest = request["Request"]!==undefined ? request["Request"] : "";
         let skip=false
 
         //handle filters
@@ -91,7 +92,11 @@ export default class ParadisePlanningPage extends Component {
         if(!skip){
           if(removeAccents(requestRequest.toString().toLowerCase()).includes(removeAccents(text.toString().toLowerCase()))){
             outputData.push(request);
-          } else if (request["Name"] !==undefined && attemptToTranslateSpecial(request["Name"], "villagers")!==undefined && attemptToTranslateSpecial(request["Name"], "villagers").toString().toLowerCase().includes(text.toString().toLowerCase())){
+          } else if (request["Name"] !==undefined && (requestRequest!=="" ? 
+              (attemptToTranslateSpecial(request["Name"], "villagers")!==undefined && attemptToTranslateSpecial(request["Name"], "villagers").toString().toLowerCase().includes(text.toString().toLowerCase()))
+              :
+              (attemptToTranslate(request["Name"])!==undefined && attemptToTranslate(request["Name"]).toString().toLowerCase().includes(text.toString().toLowerCase()))
+            )){
             outputData.push(request);
           }
         }
@@ -102,6 +107,44 @@ export default class ParadisePlanningPage extends Component {
     }
   }
 
+  checkAllItemsListed = async () => {
+    var oldList = this.paradiseChecklist;
+    for(let item of this.state.data){
+      if(item["Name"]!==undefined){
+        let id = item["Name"]
+        if(oldList.includes(id) === false){
+          oldList.push(id);
+        }
+      }
+    }
+    await this.saveList(oldList);
+    this.paradiseChecklist = oldList
+    this.setState({update: !this.state.update})
+  }
+
+  unCheckAllItemsListed = async () => {
+    var oldList = this.paradiseChecklist;
+    for(let item of this.state.data){
+      if(item["Name"]!==undefined){
+        let id = item["Name"]
+        if(oldList.includes(id)){
+          oldList = oldList.filter(item2 => item2 !== id)
+        }
+      }
+    }
+    await this.saveList(oldList);
+    this.paradiseChecklist = oldList
+    this.setState({update: !this.state.update})
+  }
+
+  invertCheckItemsListed = async () => {
+    for(let item of this.state.data){
+      if(item["Name"]!==undefined){
+        this.checkOffItem(item["Name"])
+      }
+    }
+    this.setState({update: !this.state.update})
+  }
   
   cycleFilter = () => {
     if(this.state.setFilter+1 >= this.filterTypes.length){
@@ -132,7 +175,7 @@ export default class ParadisePlanningPage extends Component {
     return <>
       <Animated.View style={{width:Dimensions.get('window').width,position:"absolute", zIndex:1, transform: [{ translateY: this.translateY }]}}>
         <View style={{backgroundColor: colors.background[global.darkMode], flex: 1,justifyContent: 'flex-end',height:this.headerHeight,}}>
-          <Header customButton={<CycleCheckListFilter setFilter={this.state.setFilter} cycleFilter={this.cycleFilter}/>} disableFilters={true} disableSearch={false} title={"Paradise Planning"} headerHeight={this.headerHeight} updateSearch={this.handleSearch} appBarColor={colors.paradisePlansAppBar[global.darkMode]} searchBarColor={colors.searchbarBG[global.darkMode]} titleColor={colors.textBlack[global.darkMode]}/>
+          <Header invertCheckItemsListed={()=>{this.invertCheckItemsListed()}} unCheckAllItemsListed={()=>{this.unCheckAllItemsListed()}} checkAllItemsListed={()=>{this.checkAllItemsListed()}} customButton={<CycleCheckListFilter setFilter={this.state.setFilter} cycleFilter={this.cycleFilter}/>} disableFilters={true} disableSearch={false} title={"Paradise Planning"} headerHeight={this.headerHeight} updateSearch={this.handleSearch} appBarColor={colors.paradisePlansAppBar[global.darkMode]} searchBarColor={colors.searchbarBG[global.darkMode]} titleColor={colors.textBlack[global.darkMode]}/>
         </View>
       </Animated.View>
       <FadeInOut duration={500} delay={0} startValue={0} endValue={1} fadeIn={true} maxFade={0.8}>
@@ -143,7 +186,7 @@ export default class ParadisePlanningPage extends Component {
           onScroll={Animated.event([{ nativeEvent: {contentOffset: {y: this.scrollY}}}],{useNativeDriver: true,},)}
           data={this.state.data}
           renderItem={({item, index}) => {
-              return(<Request request={item} checkOffItem={this.checkOffItem} paradiseChecklist={this.paradiseChecklist}/>)
+              return(<Request update={this.state.update} request={item} checkOffItem={this.checkOffItem} paradiseChecklist={this.paradiseChecklist}/>)
           }}
           keyExtractor={(item, index) => `list-item-${index}-${item["Name"]}`}
           contentContainerStyle={{paddingBottom:Dimensions.get('window').height/3}}
@@ -177,20 +220,43 @@ class CycleCheckListFilter extends Component{
 class Request extends React.PureComponent{
   constructor(props){
     super(props);
-    this.villagerObject = findObject(this.props.request["Name"], "Name", "Villagers")
+    if(this.props.request["Request"]===undefined){ //this means it's a special NPC from the list, fill in info from Special NPCs JSON object
+      this.villagerObject = {
+        "NameLanguage": attemptToTranslate(this.props.request["Name"]),
+        "Request": "Special NPC",
+        "Icon Image": this.props.request["Icon Image"]
+      }
+    } else {
+      this.villagerObject = findObject(this.props.request["Name"], "Name", "Villagers")
+    }
+
     this.state = {checked:this.props.paradiseChecklist.includes(this.props.request["Name"])}
   }
   componentDidMount(){
     this.setState({checked:this.props.paradiseChecklist.includes(this.props.request["Name"])})
   }
+  componentDidUpdate(prevProps){
+    if(this.props!==prevProps){
+      this.setState({checked:this.props.paradiseChecklist.includes(this.props.request["Name"])})
+    }
+  }
   render(){
+    let thoughtBubble =""
+    let request = ""
+    if(this.props.request["Request"]===undefined){ //this means it's a special NPC from the list, fill in info from Special NPCs JSON object
+      request = "Special NPC character"
+      thoughtBubble = "There is no special request for special NPC characters."
+    } else {
+      thoughtBubble = this.props.request["Thought bubble"]
+      request = this.props.request["Request"]
+    }
     return <>
       <TouchableOpacity activeOpacity={0.7} onPress={()=>{RootNavigation.navigate('36', {propsPassed:this.props.request});}}>
       <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
         <View style={{paddingRight:40}}>
           <SubHeader style={{fontSize: 28,}}>{this.villagerObject["NameLanguage"]}</SubHeader>
-          <SubHeader style={{fontSize: 19,}}>{this.props.request["Request"]}</SubHeader>
-          <Paragraph style={{marginTop:3}} translate={false} styled={true}>{attemptToTranslateAchievement(this.props.request["Thought bubble"])}</Paragraph>
+          <SubHeader style={{fontSize: 19,}}>{request}</SubHeader>
+          <Paragraph style={{marginTop:3}} translate={false} styled={true}>{thoughtBubble}</Paragraph>
         </View>
         <FastImage source={{uri:this.villagerObject["Icon Image"]}} cacheKey={this.villagerObject["Icon Image"]} style={{position:"absolute", right:13, top:13, height: 60, width: 60, resizeMode:'contain'}}/>
         <View style={{position:'absolute', right: 3, bottom: 0, zIndex:10}}>

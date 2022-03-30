@@ -6,6 +6,8 @@ import LottieView from 'lottie-react-native';
 import DelayInput from "react-native-debounce-input";
 import {capitalize, getSettingsString, attemptToTranslate, findItemCheckListKey, commas} from "../LoadJsonData"
 import GuideRedirectButton from "./PopupGuideRedirectButton"
+import { DropdownMenu } from './Dropdown';
+import Popup from './Popup';
 
 const Header = (props) => {
   var filterImage;
@@ -32,10 +34,48 @@ const Header = (props) => {
   }
   let clearImage = <Image style={{width:25,height:25, margin: 10, marginTop: 12, opacity: 0.35, resizeMode:"contain",}} source={require("../assets/icons/exit.png")}/>
   const textInput = React.useRef(null);
+  const popupCheckAllRef = React.useRef(null);
+  const popupUncheckAllRef = React.useRef(null);
+  const popupInvertCheckRef = React.useRef(null);
+  let moreMenu = <></>
+  if(props.checkAllItemsListed!==undefined && props.unCheckAllItemsListed!==undefined && props.invertCheckItemsListed!==undefined){
+    moreMenu = <>
+      <View style={{position:"absolute", padding:0, top:2, right:-2, zIndex: 100}}>
+        <DropdownMenu
+          style={{padding:15, paddingHorizontal: 5}}
+          width={120}
+          items={[
+            {label:"Check all", value:"Check all", highlighted: false},
+            {label:"Uncheck all", value:"Uncheck all", highlighted: false},
+            {label:"Invert check marks", value:"Invert check", highlighted: false}
+          ]}
+          defaultValue={""}
+          onChangeItem={
+            (item)=>{
+              console.log(item.value)
+              if(item.value==="Check all"){
+                popupCheckAllRef.current.setPopupVisible(true)
+              }else if(item.value==="Uncheck all"){
+                popupUncheckAllRef.current.setPopupVisible(true)
+              }else if(item.value==="Invert check"){
+                popupInvertCheckRef.current.setPopupVisible(true)
+              }
+            }
+          }
+        >
+          <Image style={{opacity: 0.5, width:21,height:21,resizeMode:'contain',}} source={global.darkMode ? require("../assets/icons/menuDotsWhite.png") : require("../assets/icons/menuDots.png")} />
+        </DropdownMenu>
+      </View>
+      <Popup ref={popupCheckAllRef} accentCancel={true} text="Check All?" textLower={attemptToTranslate("Check all the items currently listed?") + "\n" + attemptToTranslate("This action cannot be undone.")} button1={"Cancel"} button1Action={()=>{}} button2={"Check All"} button2Action={props.checkAllItemsListed}/>
+      <Popup ref={popupUncheckAllRef} accentCancel={true} text="Uncheck All?" textLower={attemptToTranslate("Uncheck all the items currently listed?") + "\n" + attemptToTranslate("This action cannot be undone.")} button1={"Cancel"} button1Action={()=>{}} button2={"Uncheck All"} button2Action={props.unCheckAllItemsListed}/>
+      <Popup ref={popupInvertCheckRef} accentCancel={true} text="Invert Check Marks?" textLower={attemptToTranslate("Invert the check mark of all the items currently listed?") + "\n" + attemptToTranslate("This action cannot be undone.")} button1={"Cancel"} button1Action={()=>{}} button2={"Invert Checks"} button2Action={props.invertCheckItemsListed}/>
+    </>
+  }
   return (
     <>
-      <GuideRedirectButton style={{position:"absolute", padding:15, right:0}} extraInfo={props.extraInfo} setPage={props.setPage}/>
-      {props.title==="Wishlist"?<WishListShareButton style={{position:"absolute", padding:15, right:0}}/>:<View/>}
+      <GuideRedirectButton style={{position:"absolute", padding:15, right:10}} extraInfo={props.extraInfo} setPage={props.setPage}/>
+      {props.title==="Wishlist"?<WishListShareButton style={{position:"absolute", padding:15, right:10, top: 2.5}}/>:<View/>}
+      {moreMenu}
       <ImageBackground source={props.appBarImage} style={{width:"100%", backgroundColor: props.appBarColor}}>
         <View style={[styles.topSpace, {height: props.headerHeight / 1.5 + 10,}]}>
         </View>
@@ -118,6 +158,8 @@ export const HeaderLoading = (props) => {
   );
 };
 
+
+//deprecated
 export const HeaderActive = (props) => {
   var filterImage;
   if(props.searchFilters.constructor===Array && props.searchFilters.length>=1){
@@ -192,7 +234,7 @@ export class WishListShareButton extends Component{
   render(){
     return <View>
       <TouchableOpacity style={[this.props.style,{zIndex:5}]} onPress={()=>{this.shareWishlist()}}>
-        <Image style={{width:25,height:25,opacity: 0.35, resizeMode:"contain"}} source={global.darkMode?require("../assets/icons/shareIconWhite.png"):require("../assets/icons/shareIcon.png")}/>
+        <Image style={{width:20,height:20,opacity: 0.35, resizeMode:"contain"}} source={global.darkMode?require("../assets/icons/shareIconWhite.png"):require("../assets/icons/shareIcon.png")}/>
       </TouchableOpacity>
     </View>
   }

@@ -106,7 +106,7 @@ export class PopupAmountEntry extends Component {
   setPopupVisible = (visible) => {
     this.popup?.setPopupVisible(true);
     this.amount = 0
-    setTimeout(()=>{this.textInput.focus()},150)
+    setTimeout(()=>{this.textInput?.focus()},150)
   }
 
   render(){
