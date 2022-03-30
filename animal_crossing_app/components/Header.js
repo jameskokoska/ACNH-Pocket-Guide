@@ -37,7 +37,16 @@ const Header = (props) => {
   const popupCheckAllRef = React.useRef(null);
   const popupUncheckAllRef = React.useRef(null);
   const popupInvertCheckRef = React.useRef(null);
+  const popupMuseumCheckRef = React.useRef(null);
+  const popupMuseumUncheckRef = React.useRef(null);
   let moreMenu = <></>
+  let museumOptions = []
+  if(props.showMuseumCheckOptions){
+    museumOptions = [
+      {label:"Add all to museum", value:"Museum check", highlighted: false},
+      {label:"Remove all from museum", value:"Museum uncheck", highlighted: false},
+    ]
+  }
   if(props.checkAllItemsListed!==undefined && props.unCheckAllItemsListed!==undefined && props.invertCheckItemsListed!==undefined){
     moreMenu = <>
       <View style={{position:"absolute", padding:0, top:2, right:-2, zIndex: 100}}>
@@ -47,7 +56,8 @@ const Header = (props) => {
           items={[
             {label:"Check all", value:"Check all", highlighted: false},
             {label:"Uncheck all", value:"Uncheck all", highlighted: false},
-            {label:"Invert check marks", value:"Invert check", highlighted: false}
+            {label:"Invert check marks", value:"Invert check", highlighted: false},
+            ...museumOptions
           ]}
           defaultValue={""}
           onChangeItem={
@@ -59,6 +69,10 @@ const Header = (props) => {
                 popupUncheckAllRef.current.setPopupVisible(true)
               }else if(item.value==="Invert check"){
                 popupInvertCheckRef.current.setPopupVisible(true)
+              }else if(item.value==="Museum check"){
+                popupMuseumCheckRef.current.setPopupVisible(true)
+              }else if(item.value==="Museum uncheck"){
+                popupMuseumUncheckRef.current.setPopupVisible(true)
               }
             }
           }
@@ -69,6 +83,8 @@ const Header = (props) => {
       <Popup ref={popupCheckAllRef} accentCancel={true} text="Check All?" textLower={attemptToTranslate("Check all the items currently listed?") + "\n" + attemptToTranslate("This action cannot be undone.")} button1={"Cancel"} button1Action={()=>{}} button2={"Check All"} button2Action={props.checkAllItemsListed}/>
       <Popup ref={popupUncheckAllRef} accentCancel={true} text="Uncheck All?" textLower={attemptToTranslate("Uncheck all the items currently listed?") + "\n" + attemptToTranslate("This action cannot be undone.")} button1={"Cancel"} button1Action={()=>{}} button2={"Uncheck All"} button2Action={props.unCheckAllItemsListed}/>
       <Popup ref={popupInvertCheckRef} accentCancel={true} text="Invert Check Marks?" textLower={attemptToTranslate("Invert the check mark of all the items currently listed?") + "\n" + attemptToTranslate("This action cannot be undone.")} button1={"Cancel"} button1Action={()=>{}} button2={"Invert Checks"} button2Action={props.invertCheckItemsListed}/>
+      <Popup ref={popupMuseumCheckRef} accentCancel={true} text="Add All to Museum?" textLower={attemptToTranslate("Add all items currently listed to the museum?") + "\n" + attemptToTranslate("This action cannot be undone.")} button1={"Cancel"} button1Action={()=>{}} button2={"Add All"} button2Action={props.checkAllMuseum!==undefined ? props.checkAllMuseum : ()=>{}}/>
+      <Popup ref={popupMuseumUncheckRef} accentCancel={true} text="Remove All From Museum?" textLower={attemptToTranslate("Remove all items currently listed from the museum?") + "\n" + attemptToTranslate("This action cannot be undone.")} button1={"Cancel"} button1Action={()=>{}} button2={"Remove All"} button2Action={props.unCheckAllMuseum!==undefined ? props.unCheckAllMuseum : ()=>{}}/>
     </>
   }
   return (

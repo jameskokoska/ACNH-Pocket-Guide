@@ -23,7 +23,7 @@ import PopupFilter from './PopupFilter'
 import TextFont from "./TextFont"
 import {compareItemID, removeAccents,getSettingsString} from "../LoadJsonData"
 import {PopupBottomCustom} from "./Popup"
-import {gameVersion, museumCategories} from "../Changelog"
+import {gameVersion, museumCategories, museumTitles} from "../Changelog"
 import GyroidPopup from '../popups/GyroidPopup';
 import FoodPopup from '../popups/FoodPopup';
 import LottieView from 'lottie-react-native';
@@ -974,13 +974,32 @@ function ListPage(props){
     setRefresh(true)
   }
 
+  const checkAllMuseum = async () => {
+    for(let item of data){
+      if(item.checkListKey!==undefined && museumCategories.includes(item["Data Category"])){
+        checkOff(item.checkListKey, false, "museum");
+      }
+    }
+    await collectionListSave()
+    setRefresh(true)
+  }
+  const unCheckAllMuseum = async () => {
+    for(let item of data){
+      if(item.checkListKey!==undefined && museumCategories.includes(item["Data Category"])){
+        checkOff(item.checkListKey, true, "museum");
+      }
+    }
+    await collectionListSave()
+    setRefresh(true)
+  }
+
   const springConfig = {
-      damping: 20,
-      mass: 1,
-      stiffness: 135,
-      overshootClamping: true,
-      restSpeedThreshold: 0.01,
-      restDisplacementThreshold: 0.001
+    damping: 20,
+    mass: 1,
+    stiffness: 135,
+    overshootClamping: true,
+    restSpeedThreshold: 0.01,
+    restDisplacementThreshold: 0.001
   };
   var header = (<>
       <Animated.View style={[styles.header, {transform: [{translateY}]}]}>
@@ -992,7 +1011,7 @@ function ListPage(props){
           width: Dimensions.get('window').width, 
           height: Dimensions.get('window').height, position:"absolute"}} 
         pointerEvents="none"> */}
-        <Header invertCheckItemsListed={()=>{invertCheckItemsListed()}} unCheckAllItemsListed={()=>{unCheckAllItemsListed()}} checkAllItemsListed={()=>{checkAllItemsListed()}} currentSearch={props.currentSearch!==undefined?props.currentSearch:""} setPage={props.setPage} extraInfo={props.extraInfo} smallerHeader={props.smallerHeader} disableFilters={props.disableFilters} customHeader={props.customHeader} disableSearch={props.disableSearch} subHeader={props.subHeader} subHeader2={props.subHeader2} searchFilters={searchFilters} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
+        <Header showMuseumCheckOptions={museumTitles.includes(props.title) && (props.wishlistItems===undefined || props.wishlistItems===false)} checkAllMuseum={()=>{checkAllMuseum()}} unCheckAllMuseum={()=>{unCheckAllMuseum()}} invertCheckItemsListed={()=>{invertCheckItemsListed()}} unCheckAllItemsListed={()=>{unCheckAllItemsListed()}} checkAllItemsListed={()=>{checkAllItemsListed()}} currentSearch={props.currentSearch!==undefined?props.currentSearch:""} setPage={props.setPage} extraInfo={props.extraInfo} smallerHeader={props.smallerHeader} disableFilters={props.disableFilters} customHeader={props.customHeader} disableSearch={props.disableSearch} subHeader={props.subHeader} subHeader2={props.subHeader2} searchFilters={searchFilters} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
         {/* </Animated.View> */}
       </Animated.View>
 

@@ -1,6 +1,7 @@
 export const gameVersion = ["2.0.0","2.0.4"]
 export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
+export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
 -Added ability to mass check off items!
@@ -9,7 +10,8 @@ export const changelog = `
 -Added Change Villagers button in profile
 -Villagers in your town are automatically at the top
 -Villager heart icon shows up properly on Everything page
-
+-
+-Can add/remove all items to museum in 3 dot menu (only on Museum pages)
 -Fixed collection count (no longer includes items in custom lists)
 -Fixed tapping Special NPC in HHP page leads to error page
 -Tapping Special NPC in HHP page now toggles check
