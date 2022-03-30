@@ -296,7 +296,10 @@ function translateRepeatItem(itemTranslation, language){
 export async function countCollection(checkListKeyStart){
   var count = 0;
   for(var i = 0; i<global.collectionList.length; i++){
-    if(global.collectionList[i].includes(checkListKeyStart) && !global.collectionList[i].includes("wishlist") && !global.collectionList[i].includes("museum")){
+    if(global.collectionList[i].includes("customLists::") || global.collectionList[i].includes("wishlist") || global.collectionList[i].includes("museum")){
+      continue
+    }
+    if(global.collectionList[i].includes(checkListKeyStart)){
       if(checkListKeyStart.includes("artCheckList") && (global.collectionList[i].includes("No") || (global.collectionList[i].includes("0") && global.collectionList[i].includes("Yes")))){
         continue;
       } else if(checkListKeyStart.includes("songCheckList") && global.collectionList[i].includes("Hazure")){

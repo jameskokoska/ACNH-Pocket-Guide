@@ -241,7 +241,7 @@ class ListItem extends React.Component{
               this.props.setUpdateAmountChildFunction((amount)=>{this.setAmount(amount)})
 
             if(global.customLists.length > 0){
-              this.props.selectCustomList(this.props.item, this.setWishlist)
+              this.props.selectCustomList(this.props.item, this.setWishlist, ()=>{}, true, this.props.item[this.props.imageProperty[this.props.item.dataSet]])
             }else{
               checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
               this.setWishlist(this.state.wishlist===true ? false:true);
@@ -328,7 +328,7 @@ class ListItem extends React.Component{
               if(this.props.item.special !== "hourly"){
                 //only can add if not hourly music
                 if(global.customLists.length > 0){
-                  this.props.selectCustomList(this.props.item, this.setWishlist)
+                  this.props.selectCustomList(this.props.item, this.setWishlist, ()=>{}, true, this.props.item[this.props.imageProperty[this.props.item.dataSet]])
                 }else{
                   checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
                   this.setWishlist(this.state.wishlist===true ? false:true);
@@ -399,7 +399,7 @@ class ListItem extends React.Component{
         <View style={styles.gridWrapper}>
           <TouchableNativeFeedback onLongPress={() => {  
             if(global.customLists.length > 0){
-              this.props.selectCustomList(this.props.item, this.setWishlist)
+              this.props.selectCustomList(this.props.item, this.setWishlist, ()=>{}, true, this.props.item[this.props.imageProperty[this.props.item.dataSet]])
             }else{
               checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
               this.setWishlist(this.state.wishlist===true ? false:true);
@@ -482,7 +482,7 @@ class ListItem extends React.Component{
         <View style={styles.gridWrapper}>
           <TouchableNativeFeedback onLongPress={() => {  
             if(global.customLists.length > 0){
-              this.props.selectCustomList(this.props.item, this.setWishlist)
+              this.props.selectCustomList(this.props.item, this.setWishlist, ()=>{}, true, this.props.item[this.props.imageProperty[this.props.item.dataSet]])
             }else{
               checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
               this.setWishlist(this.state.wishlist===true ? false:true);
@@ -558,7 +558,7 @@ class ListItem extends React.Component{
         <View>
           <TouchableNativeFeedback onLongPress={() => {  
             if(global.customLists.length > 0){
-              this.props.selectCustomList(this.props.item, this.setWishlist)
+              this.props.selectCustomList(this.props.item, this.setWishlist, ()=>{}, true, this.props.item[this.props.imageProperty[this.props.item.dataSet]])
             }else{
               checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
               this.setWishlist(this.state.wishlist===true ? false:true);

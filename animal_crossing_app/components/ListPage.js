@@ -908,7 +908,7 @@ function ListPage(props){
   const customListsPopupBottomRef = React.useRef(null);
   let addItemToCustomListFunction = ()=>{}
 
-  let selectCustomList = (item, setWishlistState, runWhenOpen=()=>{}, popupBottom=true) => {
+  let selectCustomList = (item, setWishlistState, runWhenOpen=()=>{}, popupBottom=true, image="") => {
     addItemToCustomListFunction = (listName) => {
       if(listName===""){
         let inWishlistState = inWishlist(item.checkListKey)
@@ -923,10 +923,10 @@ function ListPage(props){
 
     if(popupBottom){
       //order is important
-      customListsPopupBottomRef?.current?.setPopupVisible(true, item.checkListKey, item["NameLanguage"])
+      customListsPopupBottomRef?.current?.setPopupVisible(true, item.checkListKey, item["NameLanguage"], image)
       customListsPopupBottomRef?.current.updateSelectedList()
     } else {
-      customListsPopupRef?.current?.setPopupVisible(true, item.checkListKey, item["NameLanguage"])
+      customListsPopupRef?.current?.setPopupVisible(true, item.checkListKey, item["NameLanguage"], image)
       customListsPopupRef?.current.updateSelectedList()
     }
 

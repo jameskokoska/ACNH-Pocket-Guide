@@ -9,6 +9,16 @@ export const changelog = `
 -Added Change Villagers button in profile
 -Villagers in your town are automatically at the top
 -Villager heart icon shows up properly on Everything page
+
+-Fixed collection count (no longer includes items in custom lists)
+-Fixed tapping Special NPC in HHP page leads to error page
+-Tapping Special NPC in HHP page now toggles check
+-Adjusted font sizes for custom list selection
+-Added item icon when adding to a custom list
+-Adjusted size and position of song wave animation
+-Adjusted size of music buttons on Songs page
+-Increased the length for names of custom lists (to 45 characters)
+-
 -Fixed capitalizations in some languages
 -Fixed loading animation scaling in different orientations/screen sizes
 -Increased check mark hit-box
@@ -18,6 +28,8 @@ export const changelog = `
 -Fixed translation of Amiibo cards
 -Fixed alphabetical sorting in some languages
 -Updated translations
+-
+-Past changes:
 -
 -Updated translations
 -Fixed custom lists and custom lists icons for item variations
@@ -50,8 +62,6 @@ export const changelog = `
 -Added a music player to the Songs page!
 -
 -Fixed source images missing on some items
--
--Past changes:
 -
 -Fixed ToDo list item crash when selecting custom icon that does not exist
 -

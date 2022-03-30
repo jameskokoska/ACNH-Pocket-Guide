@@ -628,7 +628,8 @@ class PopupImage extends Component {
         // this.popup?.setPopupVisible(false);
       },
       //dont popup using bottom sheet
-      false
+      false,
+      this.state.image
     );
   }
   render(){

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Animated,FlatList, Dimensions, TouchableOpacity,StyleSheet, Text, View, Image, Vibration} from 'react-native';
-import {removeAccents,getStorage, findObject, attemptToTranslateItem, getSettingsString, attemptToTranslateSpecial, attemptToTranslate} from "../LoadJsonData"
+import {removeAccents,getStorage, findObject, attemptToTranslateItem, getSettingsString, attemptToTranslateSpecial, attemptToTranslate, checkOff} from "../LoadJsonData"
 import colors from '../Colors'
 import {attemptToTranslateAchievement} from "../LoadJsonData"
 import FastImage from "../components/FastImage"
@@ -240,6 +240,10 @@ class Request extends React.PureComponent{
       this.setState({checked:this.props.paradiseChecklist.includes(this.props.request["Name"])})
     }
   }
+  checkOff = () => {
+    this.props.checkOffItem(this.props.request["Name"]); 
+    this.setState({checked:!this.state.checked})
+  }
   render(){
     let thoughtBubble =""
     let request = ""
@@ -251,7 +255,7 @@ class Request extends React.PureComponent{
       request = this.props.request["Request"]
     }
     return <>
-      <TouchableOpacity activeOpacity={0.7} onPress={()=>{RootNavigation.navigate('36', {propsPassed:this.props.request});}}>
+      <TouchableOpacity activeOpacity={0.7} onPress={()=>{if(this.props.request["Request"]!==undefined) RootNavigation.navigate('36', {propsPassed:this.props.request}); else this.checkOff();}}>
       <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
         <View style={{paddingRight:40}}>
           <SubHeader style={{fontSize: 28,}}>{this.villagerObject["NameLanguage"]}</SubHeader>
@@ -260,7 +264,7 @@ class Request extends React.PureComponent{
         </View>
         <FastImage source={{uri:this.villagerObject["Icon Image"]}} cacheKey={this.villagerObject["Icon Image"]} style={{position:"absolute", right:13, top:13, height: 60, width: 60, resizeMode:'contain'}}/>
         <View style={{position:'absolute', right: 3, bottom: 0, zIndex:10}}>
-          <TouchableOpacity onPress={()=>{this.props.checkOffItem(this.props.request["Name"]); this.setState({checked:!this.state.checked})}}>
+          <TouchableOpacity onPress={()=>{this.checkOff()}}>
             <Check play={this.state.checked} width={80} height={80} disablePopup={true}/>
           </TouchableOpacity>
         </View>
