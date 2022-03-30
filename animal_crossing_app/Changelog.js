@@ -12,6 +12,7 @@ export const changelog = `
 -Fixed capitalizations in some languages
 -Fixed loading animation scaling in different orientations/screen sizes
 -Increased check mark hit-box
+-Tapping K.K. Slider event now brings user to Songs page
 -
 -Fixed translation of Amiibo cards
 -Fixed alphabetical sorting in some languages

@@ -92,6 +92,8 @@ export function EventContainer(props){
           if(eventFilter!==undefined && allCollected!=="no event items found"){
             if(props.event.hasOwnProperty("type") && props.event.type==="villager"){
               props.openVillagerPopup(eventFilter)
+            } else if(props.event.hasOwnProperty("filter") && props.event.filter==="K.K. concert"){
+              props.setPage(4)
             } else {
               // props.setPage(23, true, eventFilter)
               RootNavigation.navigate('23', {propsPassed:eventFilter});
