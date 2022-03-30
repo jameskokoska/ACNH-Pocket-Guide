@@ -13,6 +13,7 @@ export const changelog = `
 -Fixed loading animation scaling in different orientations/screen sizes
 -Increased check mark hit-box
 -Tapping K.K. Slider event now brings user to Songs page
+-Fixed swipe gesture for opening side menu when scrolling
 -
 -Fixed translation of Amiibo cards
 -Fixed alphabetical sorting in some languages
