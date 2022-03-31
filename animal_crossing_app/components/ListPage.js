@@ -1,5 +1,5 @@
 import React, {Component, useState, useRef, useEffect} from 'react';
-import {TouchableOpacity, View, Animated,StyleSheet,RefreshControl} from 'react-native';
+import {TouchableOpacity, View, Animated,StyleSheet,RefreshControl, Platform} from 'react-native';
 import Header, {HeaderLoading, HeaderActive} from './Header';
 import ListItem from './ListItem';
 import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters, isInteger, attemptToTranslate, checkOff, inCustomLists, getCustomListsAmount, collectionListSave} from "../LoadJsonData"
@@ -31,8 +31,6 @@ import { getHourlySongTitle } from '../pages/SongsPage';
 import { WishlistSelectionPopup } from '../pages/WishlistPage';
 
 //use tabs={false} if the page doesn't have  the tab bar
-
-Object.entries(exports).forEach(([name, exported]) => window[name] = exported);
 
 const {diffClamp} = Animated;
 export function calculateHeaderHeight(tabs, increaseFactorBy=0){
@@ -1043,12 +1041,12 @@ function ListPage(props){
         <PopupFilter villagerGifts={props.villagerGifts} disableFilters={props.disableFilters} title={props.title} ref={popupFilter} filterSearchable={props.filterSearchable} updateSearchFilters={updateSearchFilters}/> 
         {/* setFilterPopupState(false) */}
         {loading? <View style={{alignItems:"center", justifyContent:"center", width:"100%", height:"100%"}}>
-        <LottieView 
+        {Platform.OS != 'web' ?<LottieView 
           autoPlay
           loop
           style={{width: 85,zIndex:1,transform: [{ scale: 1.25 },{ rotate: '0deg'},],}}
           source={require('../assets/loading.json')}
-        />
+        /> : null}
         </View>:<Animated.FlatList
           nestedScrollEnabled
           initialNumToRender={4}

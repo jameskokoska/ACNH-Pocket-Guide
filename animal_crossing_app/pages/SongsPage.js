@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Dimensions, TouchableOpacity, BackHandler, Image, Vibration} from 'react-native';
+import {View, Dimensions, TouchableOpacity, BackHandler, Image, Vibration, Platform} from 'react-native';
 import ListPage from '../components/ListPage';
 import LottieView from 'lottie-react-native';
 import colors from '../Colors.js';
@@ -32,7 +32,7 @@ export default class SongsPage extends Component {
             opacity: colors.musicWavesTransparency[global.darkMode],
           }}
         >
-          <LottieView 
+          {Platform.OS != 'web' ? <LottieView 
             autoPlay={getSettingsString("settingsLowEndDevice")==="true"?false:true}
             loop
             style={{
@@ -43,7 +43,7 @@ export default class SongsPage extends Component {
               ],
             }} 
             source={require('../assets/waveAnimation.json')}
-          />
+          /> : null}
         </View>
         <View pointerEvents="none" 
           style={{
@@ -57,7 +57,7 @@ export default class SongsPage extends Component {
             opacity: colors.musicWavesTransparency[global.darkMode],
           }}
         >
-          <LottieView 
+          {Platform.OS != 'web' ? <LottieView 
             autoPlay={getSettingsString("settingsLowEndDevice")==="true"?false:true}
             loop
             style={{
@@ -69,7 +69,7 @@ export default class SongsPage extends Component {
               ],
             }} 
             source={require('../assets/waveAnimation.json')}
-          />
+          /> : null}
         </View>
         <ListPage 
           tabs={false}
@@ -415,7 +415,7 @@ class SongContainerRow extends Component {
 }
 
 
-onPlaybackStatusUpdate = playbackStatus => {
+let onPlaybackStatusUpdate = playbackStatus => {
   if (!playbackStatus.isLoaded) {
     if (playbackStatus.error) {
       console.log(`Encountered a fatal error during playback: ${playbackStatus.error}`);

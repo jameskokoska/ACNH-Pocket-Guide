@@ -5,13 +5,14 @@ import {
   Text,
   TouchableOpacity,
   View,
-  TouchableNativeFeedback,
+  
   Image,
   Vibration,
 } from 'react-native';
 import TextFont from './TextFont'
 import {attemptToTranslate, capitalizeFirst, getSettingsString} from "../LoadJsonData"
 import colors from '../Colors.js';
+import { TouchableNativeFeedback2 } from './TouchableNativeFeedback';
 
 class SidebarElement extends Component {
  
@@ -73,8 +74,8 @@ class SidebarElement extends Component {
     if(this.props.editMode || !this.props.disabled){
       return (
         <>
-          <TouchableNativeFeedback 
-            background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode], false)}
+          <TouchableNativeFeedback2 
+            background={(colors.inkWell[global.darkMode], false)}
             onPress={() => {
               if(this.props.editMode && !this.props.cannotDisable){
                 this.props.editSections(this.props.title); 
@@ -88,7 +89,7 @@ class SidebarElement extends Component {
               <Image style={styles.sidebarImage} source={this.props.image}/>
               <TextFont translate={false} bold={true} style={[styles.sidebarTitle,{color:this.props.textColor}]}>{this.props.title==="Emoticons"?"Reactions":capitalizeFirst(attemptToTranslate(this.props.title))}</TextFont>
             </View>
-          </TouchableNativeFeedback>
+          </TouchableNativeFeedback2>
         </>
       );
     } else if (this.props.disabled){

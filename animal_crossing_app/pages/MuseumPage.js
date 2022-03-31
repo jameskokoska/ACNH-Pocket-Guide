@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {Dimensions,} from 'react-native';
-import {View, TabView, SceneMap, TabBar } from 'react-native-tab-view';
+import {Dimensions,View} from 'react-native';
+import {TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import ListPage from '../components/ListPage';
 import colors from '../Colors.js';
 import {attemptToTranslate} from "../LoadJsonData"

@@ -1,0 +1,105 @@
+diff --git a/node_modules/react-native-onboarding-swiper/src/Page.js b/node_modules/react-native-onboarding-swiper/src/Page.js
+index c7e1333..fc46453 100644
+--- a/node_modules/react-native-onboarding-swiper/src/Page.js
++++ b/node_modules/react-native-onboarding-swiper/src/Page.js
+@@ -1,7 +1,13 @@
+-import { Dimensions, Text, View, ViewPropTypes } from 'react-native';
++import { Dimensions, Text, View, } from 'react-native';
+ import PropTypes from 'prop-types';
+ import React from 'react';
+ 
++
++const ViewPropTypes = typeof document !== 'undefined' || Platform.OS === 'web'
++  ? PropTypes.shape({style: PropTypes.object})
++  : require('react-native').ViewPropTypes || View.propTypes;
++
++
+ const Page = ({
+   isLight,
+   image,
+@@ -55,8 +61,8 @@ Page.propTypes = {
+   subtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+     .isRequired,
+   allowFontScaling: PropTypes.bool,
+-  titleStyles: Text.propTypes.style,
+-  subTitleStyles: Text.propTypes.style,
++  titleStyles: Text?.propTypes?.style,
++  subTitleStyles: Text?.propTypes?.style,
+   width: PropTypes.number.isRequired,
+   height: PropTypes.number.isRequired,
+ };
+diff --git a/node_modules/react-native-onboarding-swiper/src/buttons/SymbolButton.js b/node_modules/react-native-onboarding-swiper/src/buttons/SymbolButton.js
+index 4a4310f..4c2d122 100644
+--- a/node_modules/react-native-onboarding-swiper/src/buttons/SymbolButton.js
++++ b/node_modules/react-native-onboarding-swiper/src/buttons/SymbolButton.js
+@@ -1,7 +1,13 @@
+-import { View, TouchableOpacity, Text, ViewPropTypes } from 'react-native';
++import { View, TouchableOpacity, Text, } from 'react-native';
+ import React from 'react';
+ import PropTypes from 'prop-types';
+ 
++
++const ViewPropTypes = typeof document !== 'undefined' || Platform.OS === 'web'
++  ? PropTypes.shape({style: PropTypes.object})
++  : require('react-native').ViewPropTypes || View.propTypes;
++
++
+ const SymbolButton = ({ size, onPress, style, textStyle, children }) => (
+   <View
+     style={{
+@@ -32,7 +38,7 @@ SymbolButton.propTypes = {
+   size: PropTypes.number.isRequired,
+   onPress: PropTypes.func.isRequired,
+   style: ViewPropTypes.style,
+-  textStyle: Text.propTypes.style,
++  textStyle: Text?.propTypes?.style,
+ };
+ 
+ SymbolButton.defaultProps = {
+diff --git a/node_modules/react-native-onboarding-swiper/src/buttons/TextButton.js b/node_modules/react-native-onboarding-swiper/src/buttons/TextButton.js
+index f325891..59b084c 100644
+--- a/node_modules/react-native-onboarding-swiper/src/buttons/TextButton.js
++++ b/node_modules/react-native-onboarding-swiper/src/buttons/TextButton.js
+@@ -17,7 +17,7 @@ const TextButton = ({ size, onPress, textStyle, allowFontScaling, style, childre
+ TextButton.propTypes = {
+   size: PropTypes.number.isRequired,
+   onPress: PropTypes.func.isRequired,
+-  textStyle: Text.propTypes.style,
++  textStyle: Text?.propTypes?.style,
+   allowFontScaling: PropTypes.bool,
+ };
+ 
+diff --git a/node_modules/react-native-onboarding-swiper/src/index.js b/node_modules/react-native-onboarding-swiper/src/index.js
+index 1fd8b02..8064312 100644
+--- a/node_modules/react-native-onboarding-swiper/src/index.js
++++ b/node_modules/react-native-onboarding-swiper/src/index.js
+@@ -5,7 +5,6 @@ import {
+   I18nManager,
+   StatusBar,
+   SafeAreaView,
+-  ViewPropTypes,
+   Text,
+ } from 'react-native';
+ 
+@@ -20,6 +19,10 @@ import SkipButton from './buttons/SkipButton';
+ import NextButton from './buttons/NextButton';
+ import DoneButton from './buttons/DoneButton';
+ 
++const ViewPropTypes = typeof document !== 'undefined' || Platform.OS === 'web'
++  ? PropTypes.shape({style: PropTypes.object})
++  : require('react-native').ViewPropTypes || View.propTypes;
++
+ // hotfix: https://github.com/facebook/react-native/issues/16710
+ const itemVisibleHotfix = { itemVisiblePercentThreshold: 100 };
+ 
+@@ -261,8 +264,8 @@ Onboarding.propTypes = {
+   imageContainerStyles: ViewPropTypes.style,
+   allowFontScalingText: PropTypes.bool,
+   allowFontScalingButtons: PropTypes.bool,
+-  titleStyles: Text.propTypes.style,
+-  subTitleStyles: Text.propTypes.style,
++  titleStyles: Text?.propTypes?.style,
++  subTitleStyles: Text?.propTypes?.style,
+   transitionAnimationDuration: PropTypes.number,
+   skipToPage: PropTypes.number,
+   pageIndexCallback: PropTypes.func,

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Animated, Vibration, Image, Dimensions, TouchableOpacity, TextInput, StyleSheet, Text, View, Keyboard, BackHandler} from 'react-native';
+import {Animated, Vibration, Image, Dimensions, TouchableOpacity, TextInput, StyleSheet, Text, View, Keyboard, BackHandler, Platform} from 'react-native';
 import Clock from '../components/Clock';
 import HomeContentArea from '../components/HomeContentArea';
 import {EventContainer,getEventsDay} from '../components/EventContainer';
@@ -191,12 +191,16 @@ class HomePage extends Component {
   }
 
   render(){
-
-    var landscape = <LottieView autoPlay={getSettingsString("settingsLowEndDevice")==="true"?false:true} loop style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/home.json')}/>
-    if(getCurrentDateObject().getMonth()===11||getCurrentDateObject().getMonth()===0){
-      landscape = <LottieView loop autoPlay={getSettingsString("settingsLowEndDevice")==="true"?false:true} style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeSnow.json')}/>
-    } else if (getCurrentDateObject().getMonth()===7 && getCurrentDateObject().getDay()===0){
-      landscape = <LottieView autoPlay={getSettingsString("settingsLowEndDevice")==="true"?false:true} loop style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeCelebration.json')}/>
+    let landscape = <View/>
+    if(Platform.OS === 'web') {
+      landscape = <View/>
+    } else {
+      landscape = <LottieView autoPlay={getSettingsString("settingsLowEndDevice")==="true"?false:true} loop style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/home.json')}/>
+      if(getCurrentDateObject().getMonth()===11||getCurrentDateObject().getMonth()===0){
+        landscape = <LottieView loop autoPlay={getSettingsString("settingsLowEndDevice")==="true"?false:true} style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeSnow.json')}/>
+      } else if (getCurrentDateObject().getMonth()===7 && getCurrentDateObject().getDay()===0){
+        landscape = <LottieView autoPlay={getSettingsString("settingsLowEndDevice")==="true"?false:true} loop style={{width: 690, height: 232, position:'absolute', top:32, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], }} source={require('../assets/homeCelebration.json')}/>
+      }
     }
     const sections = this.state.sections;
 
@@ -1199,10 +1203,10 @@ export class CollectionProgress extends Component {
         <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("gyroidCount")} keyName="gyroidCount" delay={this.getDelay("gyroidCount")} setPage={this.props.setPage} page={33} tab={""} color={colors.gyroidAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.gyroidPercentage} image={require("../assets/icons/gyroid.png")} text={attemptToTranslate("Gyroids") + " " + this.state.gyroidCount + "/" + this.state.gyroidCountTotal.toString()}/>
         <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("achievementsCount")} keyName="achievementsCount" delay={this.getDelay("achievementsCount")} setPage={this.props.setPage} page={19} tab={""} color={colors.achievementsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.achievementsPercentage} image={require("../assets/icons/achievementIcon.png")} text={attemptToTranslate("Achievements") + " " + this.state.achievementsCount + "/" + this.state.achievementsCountTotal.toString()}/>
         </>:<View style={{justifyContent:"center", alignItems:"center"}}>
-          <LottieView autoPlay loop
+          {Platform.OS != 'web' ? <LottieView autoPlay loop
             style={{width: 90, zIndex:1,}}
             source={require('../assets/loading.json')}
-          />
+          /> : null }
         </View>}
       <View style={{height: 15}}/>
       </>

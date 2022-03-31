@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Animated,FlatList, Dimensions, Vibration,TouchableNativeFeedback,TouchableOpacity,StyleSheet, Text, View, Image} from 'react-native';
+import {Animated,FlatList, Dimensions, Vibration,TouchableOpacity,StyleSheet, Text, View, Image} from 'react-native';
 import TextFont from '../components/TextFont';
 import {removeAccents,getStorage, commas, checkOff} from "../LoadJsonData"
 import colors from '../Colors'
@@ -10,6 +10,7 @@ import Header from "../components/Header"
 import {PopupBottomCustom} from "../components/Popup"
 import FadeInOut from "../components/FadeInOut";
 import { calculateHeaderHeight } from '../components/ListPage';
+import { TouchableNativeFeedback2 } from '../components/TouchableNativeFeedback';
 
 export default class AchievementsPage extends Component {
   constructor(props){
@@ -313,7 +314,7 @@ class AchievementStamp extends Component {
     return (
       <View style={{margin:3}}>
         <TouchableOpacity 
-          background={TouchableNativeFeedback.Ripple(colors.todoColorAccent[global.darkMode], false)}
+          background={(colors.todoColorAccent[global.darkMode], false)}
           onLongPress={() => {  
             this.checkOffItem(this.id); 
           }}

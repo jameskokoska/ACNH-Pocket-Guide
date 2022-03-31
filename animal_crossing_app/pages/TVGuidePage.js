@@ -4,7 +4,6 @@ import {MailLink, ExternalLink, SubHeader, Header, Paragraph} from "../component
 import TextFont from '../components/TextFont'
 import colors from '../Colors.js';
 import {attemptToTranslate, capitalize, capitalizeFirst, getSettingsString} from "../LoadJsonData"
-import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import { getCurrentDateObject, getWeekDay } from '../components/DateFunctions';
 

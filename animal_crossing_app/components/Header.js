@@ -1,5 +1,5 @@
 import React, {useState, Component} from 'react';
-import {Share, Image, TouchableOpacity, ImageBackground, StyleSheet, View, TextInput, Text, Vibration} from 'react-native';
+import {Share, Image, TouchableOpacity, ImageBackground, StyleSheet, View, TextInput, Text, Vibration, Platform} from 'react-native';
 import TextFont from './TextFont'
 import FadeInOut from "./FadeInOut"
 import LottieView from 'lottie-react-native';
@@ -16,17 +16,18 @@ const Header = (props) => {
     filterImage=<View/>
   } else if(props.searchFilters.constructor===Array && props.searchFilters.length>=1){
     filterImage = <>
-      <LottieView 
-          autoPlay
-          loop={false}
-          style={{
-            position:"absolute",
-            top: 0,
-            left: 0,
-            transform: [{ scale: 1.2 },],
-          }}
-          source={require("../assets/emphasis.json")}
-        />
+      {Platform.OS != 'web' ?
+        <LottieView 
+            autoPlay
+            loop={false}
+            style={{
+              position:"absolute",
+              top: 0,
+              left: 0,
+              transform: [{ scale: 1.2 },],
+            }}
+            source={require("../assets/emphasis.json")}
+          /> : null }
       <Image style={{width:25,height:25, margin: 10, marginTop: 12, opacity: 0.7, resizeMode:"contain"}} source={require("../assets/icons/filterApplied.png")}/>
     </>
   } else {
@@ -156,19 +157,20 @@ export const HeaderLoading = (props) => {
         </View> 
       </ImageBackground>
       <View style={{alignItems:"center", justifyContent:"center", width:"100%", height:"50%"}}>
-      <LottieView 
-        autoPlay
-        loop
-        style={{
-          width: 85,
-          zIndex:1,
-          transform: [
-            { scale: 1.25 },
-            { rotate: '0deg'},
-          ],
-        }}
-        source={require('../assets/loading.json')}
-      />
+      {Platform.OS != 'web' ?
+        <LottieView 
+          autoPlay
+          loop
+          style={{
+            width: 85,
+            zIndex:1,
+            transform: [
+              { scale: 1.25 },
+              { rotate: '0deg'},
+            ],
+          }}
+          source={require('../assets/loading.json')}
+        /> : null }
       </View>
     </FadeInOut>
   );
@@ -180,16 +182,17 @@ export const HeaderActive = (props) => {
   var filterImage;
   if(props.searchFilters.constructor===Array && props.searchFilters.length>=1){
     filterImage = <>
-      <LottieView 
-          autoPlay
-          loop={false}
-          style={{
-            position:"absolute",
-            top: -11,
-            left: -11,
-          }}
-          source={require("../assets/emphasis.json")}
-        />
+      {Platform.OS != 'web' ?
+        <LottieView 
+            autoPlay
+            loop={false}
+            style={{
+              position:"absolute",
+              top: -11,
+              left: -11,
+            }}
+            source={require("../assets/emphasis.json")}
+          /> :null }
       <Image style={{width:25,height:25, margin: 10, marginTop: 12, opacity: 0.7, marginRight: 30, resizeMode:"contain"}} source={require("../assets/icons/filterApplied.png")}/>
     </>
   } else {

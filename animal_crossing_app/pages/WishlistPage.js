@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, ScrollView, Dimensions, Text, LogBox, TouchableOpacity, Image, TextInput, TouchableNativeFeedback, Vibration} from 'react-native';
+import {View, ScrollView, Dimensions, Text, LogBox, TouchableOpacity, Image, TextInput,  Vibration} from 'react-native';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import ListPage from '../components/ListPage';
 import colors from '../Colors.js';
@@ -12,6 +12,7 @@ import TextFont from '../components/TextFont';
 import FastImage from '../components/FastImage';
 import { getPhoto } from '../components/GetPhoto';
 import { PopupChooseIcon, taskImages } from '../components/PopupAddTask';
+import { TouchableNativeFeedback2 } from '../components/TouchableNativeFeedback';
 
 export default class Wishlist extends Component {
   constructor() {
@@ -28,14 +29,14 @@ export default class Wishlist extends Component {
   render(){
     return(
       <>
-        <TouchableNativeFeedback 
-          background={TouchableNativeFeedback.Ripple(colors.dateButton[global.darkMode], true, 32)}
+        <TouchableNativeFeedback2 
+          background={(colors.dateButton[global.darkMode], true, 32)}
           onPress={() => {this.popup?.setPopupVisible(true); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}
         >
           <View style={{zIndex:100, backgroundColor:colors.FAB2[global.darkMode], position:"absolute", bottom:getSettingsString("settingsShowFAB")==="true" ? 100 : 20, right: 20, width:64, height:64, borderRadius:500, justifyContent:'center', alignItems:'center'}}>
             <Image source={require("../assets/icons/list.png")} style={{opacity:0.6,width:35, height:35, resizeMode:'contain'}}/>
           </View>
-        </TouchableNativeFeedback>
+        </TouchableNativeFeedback2>
         <WishlistSelectionPopup showSelectedOriginal ref={(popup) => this.popup = popup} selectedList={[this.state.selectedList]} changeSelectedList={this.changeSelectedList} addCustomList={this.addCustomList} showAdd/>
         <AllItemsPage 
           smallerHeader={this.state.selectedList!==undefined&&this.state.selectedList.length>15?true:false}
@@ -349,8 +350,8 @@ class WishlistBox extends Component{
     return <>
       <PopupChooseIcon moreImages={taskImages} setImage={(image)=>{this.setCustomImage(image)}} ref={(popupChooseIcon) => this.popupChooseIcon = popupChooseIcon}/>
 
-      <TouchableNativeFeedback
-        background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode], false)}
+      <TouchableNativeFeedback2
+        background={(colors.inkWell[global.darkMode], false)}
         onPress={()=>{
           if(this.state.amount<=0 && this.state.selected===false){
             setCustomListsAmount(this.props.checkListKeyString, this.props.id, this.state.amount+1)
@@ -421,7 +422,7 @@ class WishlistBox extends Component{
             }
           </View>
         </View>
-      </TouchableNativeFeedback>
+      </TouchableNativeFeedback2>
       <Popup ref={(popupDelete) => this.popupDelete = popupDelete} text="Delete?" textLower={this.props.text + "\n\n" + attemptToTranslate("This will remove all items from the list.")} button1={"Cancel"} button1Action={()=>{}} button2={"Delete"} button2Action={()=>{this.props.removeCustomList(this.props.text)}}/>
     </>
   }

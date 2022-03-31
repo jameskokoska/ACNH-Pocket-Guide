@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Vibration, BackHandler, Dimensions, Text, View, StatusBar, Linking, } from 'react-native';
+import {Platform, Vibration, BackHandler, Dimensions, Text, View, StatusBar, Linking, } from 'react-native';
 import FAB, { FABWrapper } from './components/FAB';
 import CalendarPage from './pages/CalendarPage';
 import SongsPage from './pages/SongsPage';
@@ -71,15 +71,15 @@ import * as Device from 'expo-device';
 import * as ErrorRecovery from 'expo-error-recovery';
 import CrashPage, { EmptyPage } from './pages/CrashPage';
 
-const defaultErrorHandler = ErrorUtils.getGlobalHandler();
+// const defaultErrorHandler = ErrorUtils.getGlobalHandler();
 
-const globalErrorHandler = (error, isFatal) => {
-  console.log("globalErrorHandler called!");
-  ErrorRecovery.setRecoveryProps({ error: error, isFatal: isFatal });
-  defaultErrorHandler(error, isFatal);
-};
+// const globalErrorHandler = (error, isFatal) => {
+//   console.log("globalErrorHandler called!");
+//   ErrorRecovery.setRecoveryProps({ error: error, isFatal: isFatal });
+//   defaultErrorHandler(error, isFatal);
+// };
 
-ErrorUtils.setGlobalHandler(globalErrorHandler);
+// ErrorUtils.setGlobalHandler(globalErrorHandler);
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
@@ -106,15 +106,15 @@ global.versionCode = appInfo["expo"]["android"]["versionCode"];
 const Stack = createNativeStackNavigator();
 
 class App extends Component {
-  constructor() {
-    super();
-    this.lastError = ErrorRecovery.recoveredProps
-  }
-  loadApplication = ()=>{
-    this.lastError = false; 
-    ErrorRecovery.setRecoveryProps({ error: "cleared", isFatal: false });
-    this.forceUpdate();
-  }
+  // constructor() {
+  //   super();
+  //   this.lastError = ErrorRecovery.recoveredProps
+  // }
+  // loadApplication = ()=>{
+  //   this.lastError = false; 
+  //   ErrorRecovery.setRecoveryProps({ error: "cleared", isFatal: false });
+  //   this.forceUpdate();
+  // }
   render(){
     if(this.lastError && this.lastError.error!=="cleared"){
       return <CrashPage lastError={this.lastError} loadApplication={this.loadApplication}/>
@@ -253,11 +253,13 @@ class Main extends Component {
       
       let generated = 0
       for(let generateJSONIndex = 0; generateJSONIndex < this.generateJSON.length; generateJSONIndex++){
-        if((await FileSystem.readDirectoryAsync(FileSystem.documentDirectory)).includes(this.generateJSON[generateJSONIndex]+".json")){
-          console.log("Loaded from memory")
-          generated = generated + 1
-          // let fileURI = `${FileSystem.documentDirectory}${this.generateJSON[generateJSONIndex]+".json"}`;
-          // console.log(JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json")))
+        if(Platform.OS!='web'){
+          if((await FileSystem.readDirectoryAsync(FileSystem.documentDirectory)).includes(this.generateJSON[generateJSONIndex]+".json")){
+            console.log("Loaded from memory")
+            generated = generated + 1
+            // let fileURI = `${FileSystem.documentDirectory}${this.generateJSON[generateJSONIndex]+".json"}`;
+            // console.log(JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json")))
+          }
         }
       }
       if(dataVersionLoaded === "" || dataVersionLoaded !== dataVersion){
@@ -267,8 +269,7 @@ class Main extends Component {
       //Load Settings
       await this.loadSettings();
       this.updateDarkMode();
-
-      if(generated < this.generateJSON.length || dataVersionLoaded === "" || dataVersionLoaded !== dataVersion){
+      if(Platform.OS!='web' && (generated < this.generateJSON.length || dataVersionLoaded === "" || dataVersionLoaded !== dataVersion)){
         let dataVersionLoadedAttempted = await getStorage("dataVersionAttempted","loaded");
 
         if(dataVersionLoadedAttempted==="not loaded"){
@@ -512,7 +513,9 @@ class Main extends Component {
         <View style={{position: "absolute", backgroundColor: colors.background[Appearance.getColorScheme()==="light" ? 0 : 1], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
         <View style={{alignItems:"center", justifyContent:"center",backgroundColor: colors.background[Appearance.getColorScheme()==="light" ? 0 : 1], width:Dimensions.get('window').width, height:Dimensions.get('window').height*0.85}}>
           <FadeInOut fadeIn={true}>
+          {Platform.OS != 'web' ?
             <LottieView autoPlay loop style={{width: maxWidth,zIndex:1,transform: [{ scale: 1.3 },],}} source={chosenSplashScreen}/>
+          : null }
           </FadeInOut>
         </View>
         <PopupRaw ref={(popupGeneratingData) => this.popupGeneratingData = popupGeneratingData} text={attemptToTranslate("Generating Data...")} textLower={attemptToTranslate("This may take a few minutes and is only done once.")} textLower2={attemptToTranslate("If this takes longer than a minute restart the app and select Download data.")}/>

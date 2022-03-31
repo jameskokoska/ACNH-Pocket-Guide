@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
-import {Image, StyleSheet, View, TouchableNativeFeedback} from 'react-native';
+import {Image, StyleSheet, View, } from 'react-native';
 import TextFont from './TextFont'
 import colors from "../Colors"
 import {getCurrentDateObject} from "./DateFunctions"
 import * as RootNavigation from '../RootNavigation.js';
+import { TouchableNativeFeedback2 } from './TouchableNativeFeedback';
 
 class StoreHoursContainer extends Component {
   render(){
@@ -20,8 +21,8 @@ class StoreHoursContainer extends Component {
       backgroundColor=this.props.backgroundColor;
     }
     return(
-      <TouchableNativeFeedback 
-        background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+(this.props.filter===undefined?"00":"AF"), false)}
+      <TouchableNativeFeedback2 
+        background={(colors.inkWell[global.darkMode]+(this.props.filter===undefined?"00":"AF"), false)}
         onPress={()=>{
           if(this.props.filter===undefined){
             return
@@ -36,7 +37,7 @@ class StoreHoursContainer extends Component {
             <TextFont style={[styles.textContainerBottom,{color:colors.textBlack[global.darkMode]}]}>{this.props.textBottom}</TextFont>
           </View>
         </View>
-      </TouchableNativeFeedback>
+      </TouchableNativeFeedback2>
     )
   }
 }
@@ -57,8 +58,8 @@ export class StoreHoursContainerHarvey extends Component{
         backgroundColor = colors.openStore[global.darkMode];
       }
     }
-    return <TouchableNativeFeedback 
-        background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+(this.props.filter===undefined?"00":"AF"), false)}
+    return <TouchableNativeFeedback2 
+        background={(colors.inkWell[global.darkMode]+(this.props.filter===undefined?"00":"AF"), false)}
         onPress={()=>{
           if(this.props.filter===undefined){
             return
@@ -71,7 +72,7 @@ export class StoreHoursContainerHarvey extends Component{
           <TextFont bold={true} style={{color:colors.textBlack[global.darkMode], fontSize: 17}}>{this.props.text}</TextFont>
           {this.props.textBottom?<TextFont style={{color:colors.textBlack[global.darkMode], fontSize: 14}}>{this.props.textBottom}</TextFont>:<View/>}
         </View>
-    </TouchableNativeFeedback>
+    </TouchableNativeFeedback2>
   }
 }
 

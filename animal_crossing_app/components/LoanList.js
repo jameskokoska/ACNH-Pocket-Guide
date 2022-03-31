@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Vibration,TouchableNativeFeedback,TouchableOpacity, View, Image, Animated, BackHandler} from 'react-native';
+import {Vibration,TouchableOpacity, View, Image, Animated, BackHandler} from 'react-native';
 import TextFont from './TextFont';
 import {getStorage, capitalize, commas} from "../LoadJsonData"
 import colors from '../Colors'
@@ -8,6 +8,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {getSettingsString, attemptToTranslate} from "../LoadJsonData"
 import ButtonComponent from "./ButtonComponent";
 import {PopupAmountEntry} from "./PopupAddLoan";
+import { TouchableNativeFeedback2 } from './TouchableNativeFeedback';
 
 export default class LoanList extends Component {
   constructor(props){
@@ -238,11 +239,11 @@ class LoanItem extends Component {
         <View style={{height:((this.props.item?.current/this.props.item?.total)*100).toString()+"%", width: "100%", position:"absolute", backgroundColor:colors.loanProgress[global.darkMode], borderRadius:10, bottom:0}}/>:
         <Animated.View style={{transform: [{ translateY: this.state.animationValue }], width: "100%", position:"absolute", backgroundColor:colors.loanProgress[global.darkMode], height:"100%", borderRadius:10, bottom:0}}/>}
         {this.removeButton(this.props)}
-        <TouchableNativeFeedback onLongPress={() => {  
+        <TouchableNativeFeedback2 onLongPress={() => {  
             this.setState({showRemove:!this.state.showRemove})
             getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(8) : "";
           }}
-          background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"1A", false)}
+          background={(colors.inkWell[global.darkMode]+"1A", false)}
         >
           <View style={{alignItems: 'center'}}>
             <View style={{height:13}}/>
@@ -278,7 +279,7 @@ class LoanItem extends Component {
             </View>
             <View style={{height:13}}/>
           </View>
-        </TouchableNativeFeedback>
+        </TouchableNativeFeedback2>
       </View>
     )
   }

@@ -1,5 +1,6 @@
 import * as Notifications from 'expo-notifications';
 import React, {Component} from 'react';
+import { Platform } from 'react-native';
 import {getSettingsString} from "./LoadJsonData"
 
 // Notifications.setNotificationHandler({
@@ -29,27 +30,29 @@ import {getSettingsString} from "./LoadJsonData"
 //   />
 
 export async function schedulePushNotification(date,time,name,body) {
-  const dateTrigger = new Date(date);
-  const timeChosen = new Date(time)
-  if(time!==""){
-    dateTrigger.setHours(timeChosen.getHours());
-    dateTrigger.setMinutes(timeChosen.getMinutes());
-  } else {
-    dateTrigger.setHours(8);
-    dateTrigger.setMinutes(0);
+  if(Platform.OS!='web'){
+    const dateTrigger = new Date(date);
+    const timeChosen = new Date(time)
+    if(time!==""){
+      dateTrigger.setHours(timeChosen.getHours());
+      dateTrigger.setMinutes(timeChosen.getMinutes());
+    } else {
+      dateTrigger.setHours(8);
+      dateTrigger.setMinutes(0);
+    }
+    
+    const trigger = dateTrigger;
+    // console.log("Schedule notification " + name + " " + body)
+    // console.log("For: " + dateTrigger.getHours() + ":"+dateTrigger.getMinutes() + " " + dateTrigger)
+    await Notifications.scheduleNotificationAsync({
+      content: {
+        title: name,
+        body: body,
+        color : "#6DA864",
+      },
+      trigger,
+    });
   }
-  
-  const trigger = dateTrigger;
-  // console.log("Schedule notification " + name + " " + body)
-  // console.log("For: " + dateTrigger.getHours() + ":"+dateTrigger.getMinutes() + " " + dateTrigger)
-  await Notifications.scheduleNotificationAsync({
-    content: {
-      title: name,
-      body: body,
-      color : "#6DA864",
-    },
-    trigger,
-  });
 }
 
 export async function logNextTriggerDate() {
@@ -65,5 +68,7 @@ export async function logNextTriggerDate() {
 
 export function cancelAllPushNotifications() {
   // console.log("cancelled all subscriptions")
-  Notifications.cancelAllScheduledNotificationsAsync();
+  if(Platform.OS!='web'){
+    Notifications.cancelAllScheduledNotificationsAsync();
+  }
 }

@@ -1,5 +1,5 @@
 import React, {Component, useState, useRef, useEffect} from 'react';
-import {Image, Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text, TouchableNativeFeedback} from 'react-native';
+import {Image, Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text, } from 'react-native';
 import TextFont from './TextFont'
 import {getPhoto} from './GetPhoto'
 import {getWeekDayShort, getMonthShort, getCurrentDateObject, addDays} from './DateFunctions';
@@ -11,6 +11,7 @@ import colors from '../Colors'
 import * as RootNavigation from '../RootNavigation.js';
 import { useFocusEffect } from '@react-navigation/native';
 import Check from './Check';
+import { TouchableNativeFeedback2 } from './TouchableNativeFeedback';
 
 // <EventContainer 
 //  backgroundColor="black" 
@@ -86,8 +87,8 @@ export function EventContainer(props){
     if(eventFilter===undefined || allCollected==="no event items found"){
       return child
     } else {
-      return <TouchableNativeFeedback 
-        background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+(eventFilter===undefined?"00":"AF"), false)}
+      return <TouchableNativeFeedback2 
+        background={(colors.inkWell[global.darkMode]+(eventFilter===undefined?"00":"AF"), false)}
         onPress={()=>{
           if(eventFilter!==undefined && allCollected!=="no event items found"){
             if(props.event.hasOwnProperty("type") && props.event.type==="villager"){
@@ -103,7 +104,7 @@ export function EventContainer(props){
         }}
       >
         {child}
-      </TouchableNativeFeedback>
+      </TouchableNativeFeedback2>
     }
 }
 

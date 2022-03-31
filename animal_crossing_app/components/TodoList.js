@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Dimensions, Linking, TextInput, Vibration,TouchableNativeFeedback,TouchableOpacity,StyleSheet, Text, View, Image, BackHandler} from 'react-native';
+import {Dimensions, Linking, TextInput, Vibration,TouchableOpacity,StyleSheet, Text, View, Image, BackHandler, Platform} from 'react-native';
 import TextFont from './TextFont';
 import {addHours, getCurrentDateObject, getDateStringMonthDay, getMonth, getWeekDayShort} from './DateFunctions';
 import {getStorage, checkOff, capitalize, commas, removeBrackets, attemptToTranslateSpecial} from "../LoadJsonData"
@@ -16,6 +16,7 @@ import * as RootNavigation from '../RootNavigation.js';
 import { DropdownMenu } from './Dropdown';
 import FadeInOut from './FadeInOut';
 import LottieView from 'lottie-react-native';
+import { TouchableNativeFeedback2 } from './TouchableNativeFeedback';
 
 export class TodoList extends Component {
   constructor(props){
@@ -335,10 +336,10 @@ export class TodoList extends Component {
               <Popup ref={(popupDeleteToDo) => this.popupDeleteToDo = popupDeleteToDo} text="Delete?" textLower={this.state.data[this.state.deleteIndex]?.title} button1={"Cancel"} button1Action={()=>{}} button2={"Delete"} button2Action={()=>{this.deleteItemGo()}}/>
             </>
             :
-            <LottieView autoPlay loop
+            Platform.OS != 'web' ? <LottieView autoPlay loop
               style={{width: 90, zIndex:1, transform: [{ scale: 1.1 },{ rotate: '0deg'},],}}
               source={require('../assets/loading.json')}
-            />
+            /> : null
           }
         </View>
       </View>
@@ -644,11 +645,11 @@ class TodoItem extends Component {
     return (
       <View style={{width: Dimensions.get('window').width-20*2}}>
         {this.removeButton(this.props)}
-        <TouchableNativeFeedback onLongPress={() => {  
+        <TouchableNativeFeedback2 onLongPress={() => {  
           this.setState({showRemove:!this.state.showRemove})
           getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(8) : "";
         }}
-        background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"1A", false)}
+        background={(colors.inkWell[global.darkMode]+"1A", false)}
         onPress={()=>{
               this.props.checkOffItem(this.props.index); 
         }}
@@ -668,7 +669,7 @@ class TodoItem extends Component {
               <Check checkType={this.props.checkType} fadeOut={false} play={this.props.item.finished} width={90} height={90} disablePopup={true}/>
             </TouchableOpacity>
           </View>
-        </TouchableNativeFeedback>
+        </TouchableNativeFeedback2>
       </View>
     )
   }
@@ -747,7 +748,7 @@ class TodoItemSmall extends Component {
       <View style={{margin:5, marginTop:8}}>
         {this.removeButton(this.props)}
         <TouchableOpacity 
-          background={TouchableNativeFeedback.Ripple(colors.todoColorAccent[global.darkMode], false)}
+          background={(colors.todoColorAccent[global.darkMode], false)}
           onLongPress={() => {  
             this.setState({showRemove:!this.state.showRemove})
             getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(8) : "";

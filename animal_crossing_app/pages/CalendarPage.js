@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Animated, FlatList, TouchableNativeFeedback, Dimensions, Vibration, Image, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {Animated, FlatList,  Dimensions, Vibration, Image, StyleSheet, Text, View, TouchableOpacity, Platform} from 'react-native';
 import TextFont from '../components/TextFont';
 import colors from '../Colors'
 import {getPhoto} from "../components/GetPhoto"
@@ -14,6 +14,7 @@ import {specialEvents, isDateInRange} from "../components/DateFunctions"
 import * as RootNavigation from '../RootNavigation.js';
 import  {ScrollView} from 'react-native-gesture-handler'
 import LottieView from 'lottie-react-native';
+import { TouchableNativeFeedback2 } from '../components/TouchableNativeFeedback';
 
 //Note: to use Wix Agenda React Native - might to manually install package from repo as some resources may be missing from npm install
 
@@ -289,10 +290,10 @@ class CalendarView extends Component{
             </View>
             <View style={{height:10}}/>
             {this.state.eventColors[0]===undefined?
-              <LottieView autoPlay loop
+              Platform.OS != 'web' ? <LottieView autoPlay loop
                 style={{width: 90, zIndex:1,transform: [{ scale: 1 },{ rotate: '0deg'},],}}
                 source={require('../assets/loading.json')}
-              />:<View/>
+              /> : null :<View/>
             }
             {this.state.eventColors[0]!==undefined?<>
               <View style={{height:20}}/>
@@ -435,8 +436,8 @@ class RenderItemFlatList extends Component{
     
     var eventName = getEventName(item["Name"]);
     return(
-      <TouchableNativeFeedback 
-        background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+(item["Name"]===undefined?"00":"AF"), false)}
+      <TouchableNativeFeedback2 
+        background={(colors.inkWell[global.darkMode]+(item["Name"]===undefined?"00":"AF"), false)}
         onPress={()=>{
           if(item["Name"]!==undefined){
             // this.props.setPage(23, true, item["Name"])
@@ -452,7 +453,7 @@ class RenderItemFlatList extends Component{
             {dateComp}
           </View>
         </View>
-      </TouchableNativeFeedback>
+      </TouchableNativeFeedback2>
     )
   }
   

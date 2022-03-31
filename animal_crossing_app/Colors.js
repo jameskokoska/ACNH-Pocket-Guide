@@ -214,4 +214,4 @@ const colors = {
     popupSuccess : ["#487944","#347030"],
     popupNeutral : ["#DFDFDF","#383838"],
 }
-module.exports = colors;
+export default colors

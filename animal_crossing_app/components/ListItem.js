@@ -4,7 +4,6 @@ import {
   StyleSheet,
   TouchableOpacity,
   View,
-  TouchableNativeFeedback,
   Image,
 } from 'react-native';
 import TextFont from './TextFont';
@@ -20,6 +19,7 @@ import FadeInOut from "../components/FadeInOut";
 import { SubHeader } from './Formattings';
 import { getHourlySongTitle, MusicButtonComponent } from '../pages/SongsPage';
 import { GestureDetector, PanGestureHandler } from 'react-native-gesture-handler';
+import { TouchableNativeFeedback2 } from './TouchableNativeFeedback';
 
 const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 const villagerCategories = ["Villagers"]
@@ -236,7 +236,7 @@ class ListItem extends React.Component{
       return (
         <View style={styles.gridWrapper}>
           
-          <TouchableNativeFeedback onLongPress={() => {
+          <TouchableNativeFeedback2 onLongPress={() => {
             if(this.props.currentCustomList!=="" && this.props.currentCustomList!==undefined)
               this.props.setUpdateAmountChildFunction((amount)=>{this.setAmount(amount)})
 
@@ -247,7 +247,7 @@ class ListItem extends React.Component{
               this.setWishlist(this.state.wishlist===true ? false:true);
             }
           }}
-            background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
+            background={(colors.inkWell[global.darkMode]+"2A", false)}
             onPress={()=>{
               if(disablePopup){
                 checkOff(this.props.item.checkListKeyParent, this.state.collected); 
@@ -318,13 +318,13 @@ class ListItem extends React.Component{
                 {textProperty2Component}
               </View>
             </View>
-          </TouchableNativeFeedback>
+          </TouchableNativeFeedback2>
         </View>
       );
     } else if (this.props.gridType==="songGrid"){
       return( 
         <View style={{marginVertical: 2, alignItems: 'center', flex: 1,}}>
-          <TouchableNativeFeedback onLongPress={() => {  
+          <TouchableNativeFeedback2 onLongPress={() => {  
               if(this.props.item.special !== "hourly"){
                 //only can add if not hourly music
                 if(global.customLists.length > 0){
@@ -335,7 +335,7 @@ class ListItem extends React.Component{
                 }
               }
             }}
-            background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
+            background={(colors.inkWell[global.darkMode]+"2A", false)}
           >
             <View style={{alignItems: "center", justifyContent:"center", paddingVertical: 15, paddingHorizontal: 5, width: "95%", borderRadius:10,elevation: 0,marginVertical: 2, backgroundColor: boxColor}}>
               { ((!this.props.avoidSpoilers||this.state.variationsPercent>0||this.state.collected||this.state.villager||this.state.villagerPhoto) && this.props.item[this.props.imageProperty[this.props.item.dataSet]]!==undefined)?(this.props.item[this.props.imageProperty[this.props.item.dataSet]].toString().startsWith("http") ? 
@@ -391,13 +391,13 @@ class ListItem extends React.Component{
                 <View/>
               }
             </View>
-          </TouchableNativeFeedback>
+          </TouchableNativeFeedback2>
         </View>
       )
     } else if (this.props.gridType==="largeGrid"){
       return( 
         <View style={styles.gridWrapper}>
-          <TouchableNativeFeedback onLongPress={() => {  
+          <TouchableNativeFeedback2 onLongPress={() => {  
             if(global.customLists.length > 0){
               this.props.selectCustomList(this.props.item, this.setWishlist, ()=>{}, true, this.props.item[this.props.imageProperty[this.props.item.dataSet]])
             }else{
@@ -405,7 +405,7 @@ class ListItem extends React.Component{
               this.setWishlist(this.state.wishlist===true ? false:true);
             }
           }}
-          background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
+          background={(colors.inkWell[global.darkMode]+"2A", false)}
           onPress={()=>{
               if(disablePopup){
                 checkOff(this.props.item.checkListKeyParent, this.state.collected); 
@@ -462,7 +462,7 @@ class ListItem extends React.Component{
                 <TextFont translate={false} bold={true} style={{textAlign:'center', color:this.props.labelColor}}>{capitalize(label)}</TextFont>
               </View>
             </View>
-          </TouchableNativeFeedback>
+          </TouchableNativeFeedback2>
         </View>
       )
     } else if (this.props.gridType==="largeGridSmaller"){
@@ -480,7 +480,7 @@ class ListItem extends React.Component{
       }
       return( 
         <View style={styles.gridWrapper}>
-          <TouchableNativeFeedback onLongPress={() => {  
+          <TouchableNativeFeedback2 onLongPress={() => {  
             if(global.customLists.length > 0){
               this.props.selectCustomList(this.props.item, this.setWishlist, ()=>{}, true, this.props.item[this.props.imageProperty[this.props.item.dataSet]])
             }else{
@@ -488,7 +488,7 @@ class ListItem extends React.Component{
               this.setWishlist(this.state.wishlist===true ? false:true);
             }
           }}
-          background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
+          background={(colors.inkWell[global.darkMode]+"2A", false)}
           onPress={()=>{
               if(disablePopup){
                 checkOff(this.props.item.checkListKeyParent, this.state.collected); 
@@ -546,7 +546,7 @@ class ListItem extends React.Component{
                 {priceComponent}
               </View>
             </View>
-          </TouchableNativeFeedback>
+          </TouchableNativeFeedback2>
         </View>
       )
     } else { //Row component
@@ -556,7 +556,7 @@ class ListItem extends React.Component{
       }
       return( 
         <View>
-          <TouchableNativeFeedback onLongPress={() => {  
+          <TouchableNativeFeedback2 onLongPress={() => {  
             if(global.customLists.length > 0){
               this.props.selectCustomList(this.props.item, this.setWishlist, ()=>{}, true, this.props.item[this.props.imageProperty[this.props.item.dataSet]])
             }else{
@@ -564,7 +564,7 @@ class ListItem extends React.Component{
               this.setWishlist(this.state.wishlist===true ? false:true);
             }
           }}
-          background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}
+          background={(colors.inkWell[global.darkMode]+"2A", false)}
           onPress={()=>{
               if(disablePopup){
                 checkOff(this.props.item.checkListKeyParent, this.state.collected); 
@@ -633,7 +633,7 @@ class ListItem extends React.Component{
               <CheckMuseum larger showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
             </View>
-          </TouchableNativeFeedback>
+          </TouchableNativeFeedback2>
         </View>
       )
     }

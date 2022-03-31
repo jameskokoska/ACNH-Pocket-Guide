@@ -9,7 +9,8 @@ import {
   ScrollView,
   Dimensions,
   TouchableOpacity,
-  BackHandler
+  BackHandler,
+  Platform
 } from "react-native";
 import TextFont from "./TextFont";
 import ButtonComponent from "./ButtonComponent";
@@ -106,10 +107,10 @@ class Popup extends Component {
             {this.props.text?<TextFont checkFont={this.props.checkFont} bold={true} style={{fontSize: 25, textAlign:"center", color: colors.textBlack[darkMode]}}>{this.props.text}</TextFont>:<View/>}
             <ScrollView style={{maxHeight:Dimensions.get('window').height*0.75, marginTop:this.props.margin?10:0}}>
               {this.props.textLower===undefined?<View/>:<TextFont checkFont={this.props.checkFont} bold={false} style={{fontSize: 17, textAlign:"center", color: colors.textBlack[darkMode]}}>{this.props.textLower}</TextFont>}
-              {this.props.loading?<LottieView autoPlay loop
+              {this.props.loading? Platform.OS != 'web' ? <LottieView autoPlay loop
                 style={{marginBottom:-10, width: 80, zIndex:1,marginTop:4}}
                 source={require('../assets/loading.json')}
-              />:<View/>}
+              /> : null :<View/>}
             </ScrollView>
             {this.props.mailLink?<View style={{marginVertical:10}}><MailLink/></View>:<View/>}
             {this.props.support?<View style={{marginVertical:10}}><GiveSupport/></View>:<View/>}
@@ -162,10 +163,10 @@ export class PopupRaw extends Component {
                 {this.props.textLower2!==undefined?<TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.props.textLower2}</TextFont>:<View/>}
                 {this.state.text!==undefined?<TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{this.state.text}</TextFont>:<View/>}
                 <View style={{justifyContent:"center", alignItems:"center"}}>
-                  <LottieView autoPlay loop
+                  {Platform.OS != 'web' ?<LottieView autoPlay loop
                     style={{width: this.props.loadingWidth===undefined?90:this.props.loadingWidth, zIndex:1, transform: [{ scale: this.props.loadingScale===undefined?1.1:this.props.loadingScale },{ rotate: '0deg'},],}}
                     source={require('../assets/loading.json')}
-                  />
+                  /> : null}
                 </View>
               </ScrollView>          
             </View>
@@ -247,10 +248,10 @@ export class PopupRawLoading extends Component {
             <View style={[styles.modalView,{backgroundColor: colors.white[Appearance.getColorScheme()==="light" ? 0 : 1]}]}>
               <TextFont bold={true} style={{paddingHorizontal: 20, fontSize: 20, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{attemptToTranslate(this.state.loadingText)+"..."}</TextFont>
               <View style={{justifyContent:"center", alignItems:"center"}}>
-                <LottieView autoPlay loop
+                {Platform.OS != 'web' ?<LottieView autoPlay loop
                   style={{marginBottom: -25, width: 90, zIndex:1, transform: [{ scale: 1 },{ rotate: '0deg'},],}}
                   source={require('../assets/loading.json')}
-                />
+                />: null}
               </View>   
             </View>
           </View>

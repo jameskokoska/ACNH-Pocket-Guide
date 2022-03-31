@@ -1,4 +1,4 @@
-import {Vibration,} from 'react-native';
+import {Platform, Vibration,} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {doWeSwapDate,} from "./components/DateFunctions";
 import {howManyVariationsChecked, getVariations} from "./components/BottomSheetComponents"
@@ -554,6 +554,14 @@ export function removeBrackets(string){
   }
 }
 
+async function readAsStringAsync(file){
+  if(Platform.OS!='web'){
+    return JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + file))
+  } else {
+    return {}
+  }
+}
+
 export async function loadGlobalData(){
   try{
     global.dataLoadedAmiibo = await getStorageData([
@@ -594,11 +602,11 @@ export async function loadGlobalData(){
     global.dataLoadedArt = await getStorageData([[require("./assets/data/DataCreated/Artwork.json"),"Art"]],[["artCheckList","Name","Genuine"]],"false");
     global.dataLoadedVillagers = await getStorageData([[require("./assets/data/DataCreated/Villagers.json"),"Villagers"]],[["villagerCheckList","Name"]],"false");
     global.dataLoadedFurniture = await getStorageData([
-      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json")), "Housewares"],
-      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Miscellaneous.json")), "Miscellaneous"],
+      [await readAsStringAsync("Housewares.json"), "Housewares"],
+      [await readAsStringAsync("Miscellaneous.json"), "Miscellaneous"],
       [require("./assets/data/DataCreated/Wall-mounted.json"), "Wall-mounted"],
       [require("./assets/data/DataCreated/Ceiling Decor.json"), "Ceiling Decor"],
-      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Photos.json")), "Photos"],
+      [await readAsStringAsync("Photos.json"), "Photos"],
       [require("./assets/data/DataCreated/Posters.json"), "Posters"],
     ],
     [
@@ -610,10 +618,10 @@ export async function loadGlobalData(){
       ["furnitureCheckList","Name"],
     ],"false");
     global.dataLoadedClothing = await getStorageData([
-      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Headwear.json")), "Headwear"],
+      [await readAsStringAsync("Headwear.json"), "Headwear"],
       [require("./assets/data/DataCreated/Accessories.json"), "Accessories"],
-      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Tops.json")), "Tops"],
-      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Dress-Up.json")), "Dress-Up"],
+      [await readAsStringAsync("Tops.json"), "Tops"],
+      [await readAsStringAsync("Dress-Up.json"), "Dress-Up"],
       [require("./assets/data/DataCreated/Clothing Other.json"),"Clothing Other"],
       [require("./assets/data/DataCreated/Bottoms.json"),"Bottoms"],
       [require("./assets/data/DataCreated/Socks.json"),"Socks"],
@@ -651,16 +659,16 @@ export async function loadGlobalData(){
     global.dataLoadedGyroids = await getStorageData([[require("./assets/data/DataCreated/Gyroids.json"),"Gyroids"]],[["gyroidCheckList","Name","Variation","Pattern"]],"false");
     global.dataLoadedAll = await getStorageData(
     [
-      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json")), "Housewares"],
-      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Miscellaneous.json")), "Miscellaneous"],
+      [await readAsStringAsync("Housewares.json"), "Housewares"],
+      [await readAsStringAsync("Miscellaneous.json"), "Miscellaneous"],
       [require("./assets/data/DataCreated/Wall-mounted.json"), "Wall-mounted"],
       [require("./assets/data/DataCreated/Ceiling Decor.json"), "Ceiling Decor"],
-      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Photos.json")), "Photos"],
+      [await readAsStringAsync("Photos.json"), "Photos"],
       [require("./assets/data/DataCreated/Posters.json"), "Posters"],
-      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Headwear.json")), "Headwear"],
+      [await readAsStringAsync("Headwear.json"), "Headwear"],
       [require("./assets/data/DataCreated/Accessories.json"), "Accessories"],
-      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Tops.json")), "Tops"],
-      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Dress-Up.json")), "Dress-Up"],
+      [await readAsStringAsync("Tops.json"), "Tops"],
+      [await readAsStringAsync("Dress-Up.json"), "Dress-Up"],
       [require("./assets/data/DataCreated/Clothing Other.json"),"Clothing Other"],
       [require("./assets/data/DataCreated/Bottoms.json"),"Bottoms"],
       [require("./assets/data/DataCreated/Socks.json"),"Socks"],

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Animated, Text, View, Easing } from "react-native";
+import { Animated, Text, View, Easing, Platform } from "react-native";
 import LottieView from 'lottie-react-native';
 import {getSettingsString} from "../LoadJsonData"
 
@@ -73,17 +73,20 @@ class Check extends Component {
       return <View/>
     } else {
       return (
-      <LottieView 
-        autoPlay={false}
-        loop={false}
-        progress={this.state.progress}
-        resizeMode="cover" 
-        style={[this.props.style,{
-          opacity: this.props.play? (global.darkMode?0.95:1) : (global.darkMode?0.7:1),
-          width: this.props.width,
-          height: this.props.height,
-        }]} source={this.checkMarkAnimationJSON}
-      />);
+        Platform.OS != 'web' ?
+          <LottieView 
+            autoPlay={false}
+            loop={false}
+            progress={this.state.progress}
+            resizeMode="cover" 
+            style={[this.props.style,{
+              opacity: this.props.play? (global.darkMode?0.95:1) : (global.darkMode?0.7:1),
+              width: this.props.width,
+              height: this.props.height,
+            }]} source={this.checkMarkAnimationJSON}
+          />
+          : null
+        );
     }
     
   }

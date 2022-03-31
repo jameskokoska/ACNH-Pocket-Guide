@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import {Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text, TouchableNativeFeedback} from 'react-native';
+import {Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text, Platform} from 'react-native';
 import LottieView from 'lottie-react-native';
 import colors from '../Colors'
 import {getSettingsString} from "../LoadJsonData"
+import { TouchableNativeFeedback2 } from './TouchableNativeFeedback';
 
 export class FABWrapper extends Component {
   constructor(props){
@@ -37,24 +38,26 @@ class FAB extends Component {
     if(this.props.offset!==undefined){
       offset = this.props.offset
     }
-    return(<TouchableNativeFeedback 
-      background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode], true, 32)}
-      onPress={() => {this.animation.play(); this.props.openDrawer(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}
+    return(<TouchableNativeFeedback2 
+      background={(colors.inkWell[global.darkMode], true, 32)}
+      onPress={() => {if(Platform.OS!='web')this.animation.play(); this.props.openDrawer(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}
       >
         <View style={[styles.FABShape,{backgroundColor: colors.FAB[global.darkMode], bottom:20+offset}]}>
-            <LottieView 
-              ref={animation => {
-                this.animation = animation;
-              }}
-              loop={false}
-              style={{
-                width: 20,
-                height: 20,
-              }} 
-              source={require('../assets/menu.json')}
-            />
+            
+        {Platform.OS != 'web' ?
+          <LottieView 
+            ref={animation => {
+              this.animation = animation;
+            }}
+            loop={false}
+            style={{
+              width: 20,
+              height: 20,
+            }} 
+            source={require('../assets/menu.json')}
+          /> : null }
         </View>
-      </TouchableNativeFeedback>
+      </TouchableNativeFeedback2>
     )
   }
 }

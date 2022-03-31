@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text, TouchableNativeFeedback} from 'react-native';
+import {Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text, } from 'react-native';
 import TextFont from './TextFont'
 import {getSettingsString} from "../LoadJsonData"
 

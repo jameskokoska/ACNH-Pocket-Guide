@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   View,
   Vibration,
-  Easing, Dimensions
+  Easing, Dimensions, Platform
 } from "react-native";
 import TextFont from "./TextFont";
 import ButtonComponent from "./ButtonComponent";
@@ -47,14 +47,14 @@ class PopupRating extends Component {
             <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Enjoying the app?</TextFont>
             <TextFont bold={false} style={{fontSize: 18, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Consider leaving a rating</TextFont>
             <View style={{height:10}}/>
-            <LottieView 
+            {Platform.OS != 'web' ? <LottieView 
               autoPlay
               loop
               style={{
                 width: 180,
               }}
               source={require('../assets/stars.json')}
-            />
+            /> : null }
             <View style={{height:10}}/>
             <MailLink/>
             <View style={{height:10}}/>

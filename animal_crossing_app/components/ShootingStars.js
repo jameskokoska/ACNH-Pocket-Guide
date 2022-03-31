@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Vibration,TouchableNativeFeedback,TouchableOpacity, View, Image, Animated, Dimensions} from 'react-native';
+import {Vibration,TouchableOpacity, View, Image, Animated, Dimensions} from 'react-native';
 import TextFont from './TextFont';
 import {getStorage, capitalize, commas, findObjectWithGlobal} from "../LoadJsonData"
 import colors from '../Colors'

@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
-import {Image, ScrollView, View, Dimensions, TouchableNativeFeedback} from 'react-native';
+import {Image, ScrollView, View, Dimensions, } from 'react-native';
 import TextFont from './TextFont'
 import colors from '../Colors';
 import { Button, Menu, Divider, Provider } from 'react-native-paper';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { TouchableNativeFeedback2 } from './TouchableNativeFeedback';
 
 function getLabelFromValue(items, value){
   for(let i=0; i<items.length; i++){
@@ -77,7 +78,7 @@ export class DropdownMenu extends Component {
 
 export class DropdownMenuItem extends Component {
   render(){
-    return <TouchableNativeFeedback
+    return <TouchableNativeFeedback2
       onPress={()=>{
         this.props.onPress()
       }}
@@ -96,7 +97,7 @@ export class DropdownMenuItem extends Component {
         }}>
           <TextFont bold={true} style={{color: colors.textBlack[global.darkMode], fontSize:15}}>{this.props.title}</TextFont>
       </View>
-    </TouchableNativeFeedback>
+    </TouchableNativeFeedback2>
   }
 }
 

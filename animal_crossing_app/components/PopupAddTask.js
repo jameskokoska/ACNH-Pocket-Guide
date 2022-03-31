@@ -9,7 +9,6 @@ import {
   Image,
   TouchableOpacity,
   Dimensions,
-  TouchableNativeFeedback,
   ScrollView
 } from "react-native";
 import TextFont from "./TextFont";

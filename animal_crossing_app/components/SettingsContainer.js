@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Image, Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text, TouchableNativeFeedback} from 'react-native';
+import {Image, Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text, } from 'react-native';
 import TextFont from './TextFont';
 import Popup from './Popup';
 import ToggleSwitch from 'toggle-switch-react-native'

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Vibration,TouchableNativeFeedback,TouchableOpacity,View, Image, Animated, Dimensions, BackHandler} from 'react-native';
+import {Vibration,TouchableOpacity,View, Image, Animated, Dimensions, BackHandler} from 'react-native';
 import TextFont from './TextFont';
 import {getStorage, commas,} from "../LoadJsonData"
 import colors from '../Colors'
@@ -8,6 +8,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {getSettingsString} from "../LoadJsonData"
 import ButtonComponent from "./ButtonComponent";
 import FastImage from './FastImage';
+import { TouchableNativeFeedback2 } from './TouchableNativeFeedback';
 // import AnimateNumber from 'react-native-countup'
 
 export default class DurabilityList extends Component {
@@ -241,14 +242,14 @@ export class ToolItem extends Component {
         <View style={{width:((this.props.item?.current/this.props.item?.total)*100).toString()+"%", height:"100%", position:"absolute", backgroundColor:this.props.color!==undefined?this.props.color:colors.toolProgress[global.darkMode], borderRadius:10, bottom:0}}/>:
         <Animated.View style={{transform: [{ translateX: this.state.animationValue }], height:"100%", position:"absolute", backgroundColor:this.props.color!==undefined?this.props.color:colors.toolProgress[global.darkMode], width:"100%", borderRadius:10, bottom:0}}/>}
         {this.removeButton(this.props)}
-        <TouchableNativeFeedback onLongPress={() => {
+        <TouchableNativeFeedback2 onLongPress={() => {
             if(this.props.noLongPress===true){
               return
             }
             this.setState({showRemove:!this.state.showRemove})
             getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(8) : "";
           }}
-          background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"1A", false)}
+          background={(colors.inkWell[global.darkMode]+"1A", false)}
         >
           <View style={{justifyContent:"center", padding:5, paddingVertical:13}}>
             <View style={{flexDirection:"row", justifyContent:"space-around", alignItems:"center"}}>
@@ -308,7 +309,7 @@ export class ToolItem extends Component {
             }
             {this.props.extraComponent!==undefined ? this.props.extraComponent : <View/>}
           </View>
-        </TouchableNativeFeedback>
+        </TouchableNativeFeedback2>
       </View>
     )
   }

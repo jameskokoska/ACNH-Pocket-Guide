@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {TouchableOpacity, ScrollView, View, Dimensions, Text} from 'react-native';
+import {TouchableOpacity, ScrollView, View, Dimensions, Text, Platform} from 'react-native';
 import TextFont from '../components/TextFont'
 import colors from '../Colors'
 import {HeaderNote, SubHeader, Header, Paragraph} from "../components/Formattings"
@@ -114,10 +114,10 @@ export default class VillagersCompatibilityPage extends Component {
       redirectPassBack: "https://docs.google.com/spreadsheets/d/1prjGTzHwlL1jHkMPxIr9BXzJsNMk0Pl0YxkCYIblCIk/edit?usp=sharing"
     }
     let loadingComponent = <View style={{alignItems:"center", justifyContent:"center"}}>
-      <LottieView autoPlay loop
+      {Platform.OS != 'web' ? <LottieView autoPlay loop
         style={{width: 90, zIndex:1, transform: [{ scale: 1.1 },{ rotate: '0deg'},],}}
         source={require('../assets/loading.json')}
-      />
+      /> : null}
     </View>
     return(
       <>

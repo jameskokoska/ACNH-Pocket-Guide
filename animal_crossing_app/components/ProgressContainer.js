@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import {Image, StyleSheet, View, Text, TouchableNativeFeedback, Animated, Dimensions, TouchableOpacity, BackHandler} from 'react-native';
+import {Image, StyleSheet, View, Text,  Animated, Dimensions, TouchableOpacity, BackHandler} from 'react-native';
 import TextFont from './TextFont'
 import colors from "../Colors"
 import { getSettingsString } from '../LoadJsonData';
 import { render } from 'react-dom';
 import LottieView from 'lottie-react-native';
+import { TouchableNativeFeedback2 } from './TouchableNativeFeedback';
 
 export default class ProgressContainerToggle extends Component{
   constructor(props) {
@@ -129,7 +130,7 @@ class ProgressContainer extends Component {
   render(){
     return(
     <View style={{marginHorizontal:30}}>
-      <TouchableNativeFeedback onPress={()=>{this.props.tapAction()}} background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"2A", false)}>
+      <TouchableNativeFeedback2 onPress={()=>{this.props.tapAction()}} background={(colors.inkWell[global.darkMode]+"2A", false)}>
         <View style={[styles.progressContainer,{backgroundColor:this.props.backgroundColor, overflow:"hidden"}]}>
           {getSettingsString("settingsLowEndDevice")==="true"?
           <View style={[styles.progressBar,{width:this.props.percentage.toString()+"%", backgroundColor:this.props.color}]}/>:
@@ -139,7 +140,7 @@ class ProgressContainer extends Component {
             <TextFont style={{fontSize: 18, marginLeft: 10, color:this.props.textColor}}>{this.props.text}</TextFont>
           </View>
         </View>
-      </TouchableNativeFeedback>
+      </TouchableNativeFeedback2>
     </View>
     )
   }

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Button, Image, ScrollView, Dimensions, Text} from 'react-native';
+import {View, Button, Image, ScrollView, Dimensions, Text, Platform} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import LottieView from 'lottie-react-native';
 import TextFont from '../components/TextFont';
@@ -20,7 +20,7 @@ class Onboard extends Component {
         imageContainerStyles = {{paddingBottom:30,}}
         nextLabel= {
           <View style={{transform: [{ rotate: '180deg'}]}}>
-            <LottieView 
+            {Platform.OS != 'web' ? <LottieView 
               autoPlay
               loop
               style={{
@@ -28,7 +28,7 @@ class Onboard extends Component {
                 height: 45,
               }} 
               source={require('../assets/arrow.json')}
-            />
+            /> : null}
           </View>
         }
         onDone={() => {AsyncStorage.setItem("firstLogin", "false"); this.props.setFirstLogin(false);}}
@@ -54,7 +54,7 @@ class Onboard extends Component {
           // },
           {
             backgroundColor: colors.background[global.darkMode],
-            image: <LottieView 
+            image: Platform.OS != 'web' ? <LottieView 
               autoPlay
               loop={true}
               style={{
@@ -65,7 +65,7 @@ class Onboard extends Component {
                 ],
               }} 
               source={require('../assets/balloon.json')}
-            />,
+            /> : null,
             title: <TextFont style={{fontSize: 30, paddingTop: 20, width: "70%", textAlign:'center', color:colors.textBlack[global.darkMode]}} bold={true}>Let's go!</TextFont>,
             subtitle: <>
               <ButtonComponent vibrate={10} color={colors.okButton[global.darkMode]} text="Northern Hemisphere" onPress={() => {
