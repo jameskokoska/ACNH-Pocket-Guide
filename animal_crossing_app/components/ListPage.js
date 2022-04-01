@@ -73,7 +73,9 @@ function ListPage(props){
           props.scrollToEnd();
         }
         //pass in the check mark update function of that current element
-        bottomSheetRenderRef?.current?.update(item, updateCheckChild)
+        setTimeout(()=>{
+          bottomSheetRenderRef?.current?.update(item, updateCheckChild)
+        },0)
         selectedItem = item;
         updateCheckChildFunction = updateCheckChild
         updateWishlistChildFunction = updateWishlistChild

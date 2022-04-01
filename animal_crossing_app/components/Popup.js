@@ -374,6 +374,10 @@ export class PopupBottomCustom extends PureComponent {
   }
 
   setPopupVisible = (visible, showOnceCalculated=false) => {
+    if(Platform.OS==='web'){
+      this.sheetRef?.setPopupVisible(visible)
+      return
+    }
     this.showOnceCalculated = showOnceCalculated
     if(this.mounted){
       this.setState({heightOffset:0})
@@ -456,6 +460,13 @@ export class PopupBottomCustom extends PureComponent {
 
 
   render(){
+    
+    if(Platform.OS==='web'){
+      return <PopupInfoCustom style={{maxWidth: 600}} buttonDisabled ref={(sheetRef) => this.sheetRef = sheetRef}>
+        {this.props.children}
+      </PopupInfoCustom>
+    }
+
     const springConfig = {
         damping: 20,
         mass: 1,
@@ -489,12 +500,12 @@ const styles = StyleSheet.create({
   centeredView: {
     flex: 1,
     justifyContent: "center",
-    paddingTop: "10%",
   },
   modalView: {
     margin: 30,
     borderRadius: 15,
     padding: 20,
-    elevation: 5
+    elevation: 5,
+    alignSelf: 'center',
   },
 });

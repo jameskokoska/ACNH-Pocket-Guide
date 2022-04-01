@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Animated, Text, View, Easing, Platform } from "react-native";
 import LottieView from 'lottie-react-native';
 import {getSettingsString} from "../LoadJsonData"
+import colors from "../Colors";
 
 class Check extends Component {
   constructor(props) {
@@ -85,7 +86,17 @@ class Check extends Component {
               height: this.props.height,
             }]} source={this.checkMarkAnimationJSON}
           />
-          : null
+          : <View
+            style={[this.props.style,{
+              opacity: this.props.play? (global.darkMode?0.95:1) : (global.darkMode?0.7:1),
+              backgroundColor: !this.props.play?colors.checkRed[global.darkMode]:colors.checkGreen[global.darkMode],
+              borderRadius:50,
+              width: this.props.width,
+              height: this.props.height,
+              elevation:5,
+              transform: "scale(0.5)",
+            }]}
+          />
         );
     }
     

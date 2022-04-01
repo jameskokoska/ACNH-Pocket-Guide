@@ -71,15 +71,18 @@ import * as Device from 'expo-device';
 import * as ErrorRecovery from 'expo-error-recovery';
 import CrashPage, { EmptyPage } from './pages/CrashPage';
 
-// const defaultErrorHandler = ErrorUtils.getGlobalHandler();
+if(Platform.OS!='web'){
+  const defaultErrorHandler = ErrorUtils.getGlobalHandler();
 
-// const globalErrorHandler = (error, isFatal) => {
-//   console.log("globalErrorHandler called!");
-//   ErrorRecovery.setRecoveryProps({ error: error, isFatal: isFatal });
-//   defaultErrorHandler(error, isFatal);
-// };
+  const globalErrorHandler = (error, isFatal) => {
+    console.log("globalErrorHandler called!");
+    ErrorRecovery.setRecoveryProps({ error: error, isFatal: isFatal });
+    defaultErrorHandler(error, isFatal);
+  };
 
-// ErrorUtils.setGlobalHandler(globalErrorHandler);
+  ErrorUtils.setGlobalHandler(globalErrorHandler);
+}
+
 
 //expo build:android -t app-bundle
 //expo build:android -t apk
