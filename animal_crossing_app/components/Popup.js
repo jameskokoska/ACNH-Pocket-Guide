@@ -506,6 +506,6 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     padding: 20,
     elevation: 5,
-    alignSelf: 'center',
+    alignSelf: Platform.OS==='web'?'center':'auto',
   },
 });
