@@ -22,7 +22,9 @@ export default class CalendarPage extends Component {
     super(item);
 
     this.state = {
-      viewList: false,
+      loadCalendar: false,
+      loadAll: false,
+      view:"today",
       currentEvents: [{"topHeader":""}],
       currentDay:getCurrentDateObject()
     };
@@ -67,7 +69,7 @@ export default class CalendarPage extends Component {
   setCurrentDay = (date) => {
     getSettingsString("settingsEnableVibrations")==="true"? Vibration.vibrate(5) : "";
     this.currentDayOffset = 0
-    this.setState({currentDay: new Date(date), currentEvents:[{"topHeader":""}], viewList:"today"})
+    this.setState({currentDay: new Date(date), currentEvents:[{"topHeader":""}], view:"today"})
     this.appendEvents(new Date(date),true)
   }
   scrollToTop = () => {
@@ -76,14 +78,17 @@ export default class CalendarPage extends Component {
     },200)
   }
   render() {
-    var viewList = <View/>
-    if(this.state.viewList==="list"){
-      viewList = <AllEventsList setPage={this.props.setPage}/>
-    } else if (this.state.viewList==="calendar"){
-      viewList = <CalendarView scrollToTop={this.scrollToTop} eventSections={this.eventSections} currentDate={getCurrentDateObject()} setCurrentDay={this.setCurrentDay}/>
+    let viewList = <></>
+    if(this.state.view==="list"){
+      viewList =  <AllEventsList setPage={this.props.setPage}/>
+    }
+    let viewCalendar = <></>
+    if(this.state.loadCalendar){
+      viewCalendar = <View style={[(this.state.view==="today" || this.state.view==="list") && {display: 'none'}]}><CalendarView scrollToTop={this.scrollToTop} eventSections={this.eventSections} currentDate={getCurrentDateObject()} setCurrentDay={this.setCurrentDay}/></View>
     }
     return (<>
       <VillagerPopupPopup ref={(villagerPopupPopup) => this.villagerPopupPopup = villagerPopupPopup} setPage={this.props.setPage}/>
+      {viewCalendar}
       {viewList}
       <FlatList
         ref={(flatList) => this.flatList = flatList}
@@ -112,9 +117,9 @@ export default class CalendarPage extends Component {
         onEndReachedThreshold={0.9}
       />
       <BottomBar 
-        viewList={()=>{if(this.mounted){this.setState({viewList:"list"});}}}
-        viewToday={()=>{if(this.mounted){this.setState({viewList:"today"});}}}
-        openCalendar={()=>{if(this.mounted){this.setState({viewList:"calendar"});}}}/>
+        viewList={()=>{if(this.mounted){this.setState({loadAll:true, view:"list"});}}}
+        viewToday={()=>{if(this.mounted){this.setState({loadList:true, view:"today"});}}}
+        openCalendar={()=>{if(this.mounted){this.setState({loadCalendar:true, view:"calendar"});}}}/>
     </>
     );    
   }

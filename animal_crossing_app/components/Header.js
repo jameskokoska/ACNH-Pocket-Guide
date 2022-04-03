@@ -279,10 +279,10 @@ const styles = StyleSheet.create({
     marginLeft: 8,
     width:'100%',
     paddingRight: 25,
-    paddingRight: 73
+    paddingRight: 73,
+    paddingVertical: 8,
   },
   searchBox: {
-    paddingVertical: 8,
     paddingHorizontal: 10,
     marginRight: -50,
     borderRadius: 10,

@@ -14,6 +14,17 @@ import { calculateHeaderHeight } from '../components/ListPage';
 import Toast from "react-native-toast-notifications";
 import TextFont from '../components/TextFont';
 
+export async function countCollectionHHP(){
+  var storageData = JSON.parse(await getStorage("ParadisePlanning"+global.profile,JSON.stringify([])));
+  console.log(storageData)
+  return storageData.length;
+}
+
+export async function countHHP(){
+  let data = [...require("../assets/data/DataCreated/Paradise Planning.json"),...require("../assets/data/DataCreated/Special NPCs.json")];
+  return data.length
+}
+
 export default class ParadisePlanningPage extends Component {
   constructor(props){
     super(props);
@@ -68,18 +79,25 @@ export default class ParadisePlanningPage extends Component {
     this.mounted = false;
   }
 
-  handleSearch = (text, filter=0) => {
-    if(text===""){
-      if(this.mounted){
-        this.setState({data: this.data})
-      }
-    } else {
-      var outputData = [];
-      this.data.map( (request, index)=>{
-        let requestRequest = request["Request"]!==undefined ? request["Request"] : "";
-        let skip=false
+  handleSearch = (text, filter="") => {
+    var outputData = [];
+    console.log(this.filterTypes[this.state.setFilter])
+    this.data.map( (request, index)=>{
+      let requestRequest = request["Request"]!==undefined ? request["Request"] : "";
+      let skip=false
 
-        //handle filters
+      //handle filters
+      if(filter===""){
+        if(this.filterTypes[this.state.setFilter]==="checked"){
+          if(!this.paradiseChecklist.includes(request["Name"])){
+            skip=true
+          }
+        }else if(this.filterTypes[this.state.setFilter]==="not checked"){
+          if(this.paradiseChecklist.includes(request["Name"])){
+            skip=true
+          }
+        }
+      } else {
         if(this.filterTypes[filter]==="checked"){
           if(!this.paradiseChecklist.includes(request["Name"])){
             skip=true
@@ -89,21 +107,24 @@ export default class ParadisePlanningPage extends Component {
             skip=true
           }
         }
-        if(!skip){
-          if(removeAccents(requestRequest.toString().toLowerCase()).includes(removeAccents(text.toString().toLowerCase()))){
-            outputData.push(request);
-          } else if (request["Name"] !==undefined && (requestRequest!=="" ? 
-              (attemptToTranslateSpecial(request["Name"], "villagers")!==undefined && attemptToTranslateSpecial(request["Name"], "villagers").toString().toLowerCase().includes(text.toString().toLowerCase()))
-              :
-              (attemptToTranslate(request["Name"])!==undefined && attemptToTranslate(request["Name"]).toString().toLowerCase().includes(text.toString().toLowerCase()))
-            )){
-            outputData.push(request);
-          }
-        }
-      })
-      if(this.mounted){
-        this.setState({data:outputData});
       }
+      
+      if(!skip){
+        if(text===""){
+          outputData.push(request);
+        } else if(removeAccents(requestRequest.toString().toLowerCase()).includes(removeAccents(text.toString().toLowerCase()))){
+          outputData.push(request);
+        } else if (request["Name"] !==undefined && (requestRequest!=="" ? 
+            (attemptToTranslateSpecial(request["Name"], "villagers")!==undefined && attemptToTranslateSpecial(request["Name"], "villagers").toString().toLowerCase().includes(text.toString().toLowerCase()))
+            :
+            (attemptToTranslate(request["Name"])!==undefined && attemptToTranslate(request["Name"]).toString().toLowerCase().includes(text.toString().toLowerCase()))
+          )){
+          outputData.push(request);
+        }
+      }
+    })
+    if(this.mounted){
+      this.setState({data:outputData});
     }
   }
 
@@ -148,11 +169,11 @@ export default class ParadisePlanningPage extends Component {
   
   cycleFilter = () => {
     if(this.state.setFilter+1 >= this.filterTypes.length){
-      this.handleSearch(" ", 0)
       this.setState({setFilter:0})
+      this.handleSearch("", 0)
     }else {
-      this.handleSearch(" ", this.state.setFilter+1)
       this.setState({setFilter:this.state.setFilter+1})
+      this.handleSearch("", this.state.setFilter+1)
     }
   }
 
