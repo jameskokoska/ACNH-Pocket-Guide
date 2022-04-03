@@ -4,8 +4,8 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
--Fixed special NPCs not showing up when filtering on Paradise Planning page
 -Added Paradise Planning progress to profile
+-Fixed special NPCs not showing up when filtering on Paradise Planning page
 -When browsing the calendar events page, your calendar status is remembered
 -
 -Added ability to mass check off items!
