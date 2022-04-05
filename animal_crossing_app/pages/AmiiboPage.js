@@ -12,7 +12,8 @@ export default class AmiiboPage extends Component {
         title="Amiibo Cards"
         imageProperty={["image","image","image","image","image","image","image","image"]}
         textProperty={["NameLanguage","NameLanguage","NameLanguage","NameLanguage","NameLanguage","NameLanguage","NameLanguage","NameLanguage"]}
-        searchKey={[["NameLanguage"],["NameLanguage"],["NameLanguage"],["NameLanguage"],["NameLanguage"],["NameLanguage"],["NameLanguage"],["NameLanguage"]]}
+        textProperty2={["number","number","number","number","number","number","number","number"]}
+        searchKey={[["NameLanguage","number"],["NameLanguage","number"],["NameLanguage","number"],["NameLanguage","number"],["NameLanguage","number"],["NameLanguage","number"],["NameLanguage","number"],["NameLanguage","number"]]}
         gridType="smallGrid" //smallGrid, largeGrid, row
         dataGlobalName={"dataLoadedAmiibo"}
         appBarColor={colors.amiiboAppBar[global.darkMode]}
