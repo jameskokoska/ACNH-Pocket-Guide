@@ -16,7 +16,6 @@ import TextFont from '../components/TextFont';
 
 export async function countCollectionHHP(){
   var storageData = JSON.parse(await getStorage("ParadisePlanning"+global.profile,JSON.stringify([])));
-  console.log(storageData)
   return storageData.length;
 }
 
