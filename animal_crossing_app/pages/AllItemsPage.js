@@ -339,15 +339,15 @@ class AllItemsPage extends Component {
             "",
             "",
             "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
+            "", //gyroids
+            "number", //amiibo
+            "number",
+            "number",
+            "number",
+            "number",
+            "number",
+            "number",
+            "number",
           ]}
           imageProperty={[
             "Image",
@@ -471,15 +471,15 @@ class AllItemsPage extends Component {
             ["NameLanguage"],
             ["NameLanguage"],
             ["NameLanguage"],
-            ["NameLanguage"],
-            ["NameLanguage"],
-            ["NameLanguage"],
-            ["NameLanguage"],
-            ["NameLanguage"],
-            ["NameLanguage"],
-            ["NameLanguage"],
-            ["NameLanguage"],
-            ["NameLanguage"],
+            ["NameLanguage"], //gyroids
+            ["NameLanguage", "number"],
+            ["NameLanguage", "number"],
+            ["NameLanguage", "number"],
+            ["NameLanguage", "number"],
+            ["NameLanguage", "number"],
+            ["NameLanguage", "number"],
+            ["NameLanguage", "number"],
+            ["NameLanguage", "number"],
           ]}
           dataGlobalName={"dataLoadedAll"}
         />

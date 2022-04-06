@@ -14,9 +14,10 @@ class Check extends Component {
     // } else if(props.fadeOut===false || getSettingsString("settingsShowBlankCheckMarks")==="true"){
     } else if(props.fadeOut===false || true){
       this.checkMarkAnimationJSON = require('../assets/checkAnimationNoFade.json');
-    } else {
-      this.checkMarkAnimationJSON = require('../assets/checkAnimationFade.json');
-    }
+    } 
+    // else {
+    //   this.checkMarkAnimationJSON = require('../assets/checkAnimationFade.json');
+    // }
   }
   componentDidMount(){
     this.mounted=true;

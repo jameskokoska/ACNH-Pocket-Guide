@@ -16,7 +16,7 @@ import { getPhoto } from '../components/GetPhoto';
 
 export default class SongsPage extends Component {
   render(){
-    var animationWidth = 380
+    var animationWidth = 350
     // console.log(-1/(animationWidth/Dimensions.get('window').width)*100+100)
     return(
       <>
@@ -50,7 +50,7 @@ export default class SongsPage extends Component {
             overflow:"hidden",
             zIndex:5,
             position:"absolute",
-            top:-1/(animationWidth/Dimensions.get('window').width)*50+50 - 1,
+            top:-1/(animationWidth/Dimensions.get('window').width)*50+40 - 1,
             transform: [
               { rotate: '0deg'},
             ],
@@ -65,6 +65,7 @@ export default class SongsPage extends Component {
               zIndex:5,
               transform: [
                 { scaleX: 1/(animationWidth/Dimensions.get('window').width)},
+                { scaleY: 1.1},
               ],
             }} 
             source={require('../assets/waveAnimation.json')}
@@ -188,11 +189,11 @@ export class MusicButtonComponent extends Component {
   render(){
     return(
       <TouchableOpacity
-        style={{margin:5, paddingHorizontal:13, paddingVertical:8, borderRadius: 10, backgroundColor: this.props.color,  justifyContent: 'center', alignItems: 'center'}}
+        style={{marginVertical:5, marginTop: 0, marginHorizontal: 3, paddingHorizontal:11, paddingVertical:8, borderRadius: 10, backgroundColor: this.props.color,  justifyContent: 'center', alignItems: 'center'}}
         activeOpacity={0.5}
         onPress={()=> {this.props.onPress(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}
       >
-        <TextFont style={{fontSize: 17, color: "white", textAlign:"center", marginTop:-2}}>{this.props.text}</TextFont>
+        <TextFont style={{fontSize: 15, color: "white", textAlign:"center", marginTop:-2}}>{this.props.text}</TextFont>
       </TouchableOpacity>
     )
   }

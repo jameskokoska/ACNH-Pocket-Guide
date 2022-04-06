@@ -10,6 +10,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 import { Header } from './Formattings';
 import { TodoItemSmallDraggable } from './TodoList';
 
+//deprecated
 export default class DraggableList extends React.Component{
 
   constructor(props) {

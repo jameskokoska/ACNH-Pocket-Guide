@@ -35,6 +35,7 @@ import { calculateHeaderHeight } from '../components/ListPage';
 import * as RootNavigation from '../RootNavigation.js';
 import DurabilityList from '../components/DurabilityList';
 import ShootingStars from '../components/ShootingStars';
+import { countCollectionHHP, countHHP } from './ParadisePlanningPage';
 
 class HomePage extends Component {
   constructor(props){
@@ -777,7 +778,6 @@ export class ConfigureHomePages extends Component {
     }
   }
   render(){
-    console.log("RENDEREDDD")
     const sectionNames = Object.keys(this.state.sections);
     return(<>
       <SubHeader>{this.props.header}</SubHeader>
@@ -1081,6 +1081,14 @@ export class CollectionProgress extends Component {
         achievementsCountTotal = await countAchievements();
         achievementsPercentage = achievementsCount/achievementsCountTotal * 100;
       }
+      let hhpCount = 0
+      let hhpCountTotal = 0
+      let hhpPercentage = 0
+      if(!collectionSectionsDisabled.includes("hhpCount")){
+        hhpCount = await countCollectionHHP();
+        hhpCountTotal = await countHHP();
+        hhpPercentage = hhpCount/hhpCountTotal * 100;
+      }
       this.setState({
         collectionSectionsDisabled:collectionSectionsDisabled,
         fishCount: fishCount,
@@ -1126,6 +1134,9 @@ export class CollectionProgress extends Component {
         achievementsCount: achievementsCount,
         achievementsCountTotal: achievementsCountTotal,
         achievementsPercentage: achievementsPercentage,
+        hhpCount: hhpCount,
+        hhpCountTotal: hhpCountTotal,
+        hhpPercentage: hhpPercentage,
       })
       this.popupLoading?.setPopupVisible(false)
     },0)
@@ -1163,6 +1174,7 @@ export class CollectionProgress extends Component {
       "clothingCount",
       "gyroidCount",
       "achievementsCount",
+      "hhpCount",
     ]
     //subtract the lists
     originalOrder = originalOrder.filter(n => !this.state.collectionSectionsDisabled.includes(n))
@@ -1199,6 +1211,7 @@ export class CollectionProgress extends Component {
         <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("clothingCount")} keyName="clothingCount" delay={this.getDelay("clothingCount")} setPage={this.props.setPage} page={3} tab={1} color={colors.clothingAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.clothingPercentage} image={require("../assets/icons/top.png")} text={attemptToTranslate("Clothing") + " " + this.state.clothingCount + "/" + this.state.clothingCountTotal.toString()}/>
         <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("gyroidCount")} keyName="gyroidCount" delay={this.getDelay("gyroidCount")} setPage={this.props.setPage} page={33} tab={""} color={colors.gyroidAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.gyroidPercentage} image={require("../assets/icons/gyroid.png")} text={attemptToTranslate("Gyroids") + " " + this.state.gyroidCount + "/" + this.state.gyroidCountTotal.toString()}/>
         <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("achievementsCount")} keyName="achievementsCount" delay={this.getDelay("achievementsCount")} setPage={this.props.setPage} page={19} tab={""} color={colors.achievementsAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.achievementsPercentage} image={require("../assets/icons/achievementIcon.png")} text={attemptToTranslate("Achievements") + " " + this.state.achievementsCount + "/" + this.state.achievementsCountTotal.toString()}/>
+        <ProgressContainerToggle saveList={this.saveList} toggleEditMode = {this.toggleEditMode} editMode={this.state.editMode} enabled={!this.state.collectionSectionsDisabled.includes("hhpCount")} keyName="hhpCount" delay={this.getDelay("hhpCount")} setPage={this.props.setPage} page={35} tab={""} color={colors.paradisePlansAppBar[0]} backgroundColor={colors.white[global.darkMode]} textColor={colors.textBlack[global.darkMode]} percentage={this.state.hhpPercentage} image={require("../assets/icons/paradisePlanning.png")} text={attemptToTranslate("Paradise Planning") + " " + this.state.hhpCount + "/" + this.state.hhpCountTotal.toString()}/>
         </>:<View style={{justifyContent:"center", alignItems:"center"}}>
           <LottieView autoPlay loop
             style={{width: 90, zIndex:1,}}

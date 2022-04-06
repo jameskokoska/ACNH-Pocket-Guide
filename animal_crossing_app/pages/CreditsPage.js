@@ -5,8 +5,8 @@ import StoreHoursContainer from '../components/StoreHoursContainer';
 import colors from '../Colors'
 import PopupRating from "../components/PopupRating"
 import ButtonComponent from "../components/ButtonComponent"
-import {MailLink, ExternalLink, SubHeader, Header, Paragraph} from "../components/Formattings"
-import {attemptToTranslate} from "../LoadJsonData"
+import {MailLink, ExternalLink, SubHeader, Header, Paragraph, HeaderNote} from "../components/Formattings"
+import {attemptToTranslate, capitalize} from "../LoadJsonData"
 import {changelog, dataVersion} from "../Changelog"
 import Popup from '../components/Popup';
 import { testNotification } from '../Notifications';
@@ -18,35 +18,40 @@ class CreditsPage extends Component {
     let headerComponent = <View>
       <View style={{height: 100}}/>
       <Header>Credits</Header>
+      <HeaderNote>{attemptToTranslate("Made In Canada") + " " + "🍁"}</HeaderNote>
       <View style={{height: 20}}/>
       <CreditImageContainer image={require("../assets/icons/James.png")} text="James" textBottom="Lead Programmer"/>
       <CreditImageContainer image={require("../assets/icons/Ryan.png")} text="Ryan" textBottom="Lead Graphics"/>
       <View style={{height: 20}}/>
       <SubHeader style={{fontSize: 24}}>Diamond Supporters</SubHeader>
-      <Paragraph style={{marginBottom:6, marginTop:2}}>{attemptToTranslate("Thanks for your support!")}</Paragraph>
+      <SubHeader bold={false} style={{marginBottom:6, marginTop:0, fontSize: 17}}>{attemptToTranslate("Thanks for your support!")}</SubHeader>
       <CreditImageContainer largerImage image={require("../assets/icons/Wheels.png")} text="Wheels" textBottom="Diamond Supporter"/>
       <CreditImageContainer image={require("../assets/icons/smma.png")} text="smma" textBottom="Diamond Supporter"/>
       <CreditImageContainer image={require("../assets/icons/Kalie.png")} text="Kalie" textBottom="Diamond Supporter"/>
       <View style={{height:12}}/>
       <SubHeader style={{fontSize: 24}}>Gold Supporters</SubHeader>
-      <Paragraph style={{marginBottom:6, marginTop:2}}>{attemptToTranslate("Thanks for your support!")}</Paragraph>
+      <SubHeader bold={false} style={{marginBottom:6, marginTop:0, fontSize: 17}}>{attemptToTranslate("Thanks for your support!")}</SubHeader>
       <CreditTextBox text="DeadlySweetz"/>
       <CreditImageContainer image={require("../assets/icons/Frank.png")} text="Frank S." textBottom="Gold Supporter"/>
       <CreditImageContainer image={require("../assets/icons/YvonneDeBusschere.png")} text="YvonneDeBusschere" textBottom="Gold Supporter"/>
       <CreditTextBox text="Hidden Cat"/>
+      <CreditTextBox text="A Thainese Girl"/>
+      <CreditTextBox text="Cindee"/>
       <View style={{height:12}}/>
       <SubHeader style={{fontSize: 24}}>Silver Supporters</SubHeader>
-      <Paragraph style={{marginBottom:6, marginTop:2}}>{attemptToTranslate("Thanks for your support!")}</Paragraph>
+      <SubHeader bold={false} style={{marginBottom:6, marginTop:0, fontSize: 17}}>{attemptToTranslate("Thanks for your support!")}</SubHeader>
       <CreditTextBox text="Nigerski"/>
       <CreditTextBox text="Christina J."/>
       <CreditTextBox text="NoLNoodle"/>
       <CreditTextBox text="Harkken"/>
       <CreditTextBox text="RisingProtostar"/>
+      <CreditTextBox text="Kryptonite"/>
+      <CreditTextBox text="Deanna"/>
       <View style={{height: 5}}/>
       <View style={{paddingHorizontal: 20}}>
-        <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.popupSupport?.setPopupVisible(true)}} text={"Leave a tip"} />
+        <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.popupSupport?.setPopupVisible(true)}} text={capitalize(attemptToTranslate("Leave a Tip"))} />
         <Popup support={true} noDismiss ref={(popupSupport) => this.popupSupport = popupSupport} text="Leave a Tip" button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
-        <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.popupRating?.setPopupVisible(true)}} text={"Leave a rating"} />
+        <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.popupRating?.setPopupVisible(true)}} text={capitalize(attemptToTranslate("Leave a rating"))} />
         <PopupRating ref={(popupRating) => this.popupRating = popupRating}/>
       </View>
       <View style={{height: 20}}/>
@@ -54,12 +59,12 @@ class CreditsPage extends Component {
 
       <View style={{height: 40}}/>
       <SubHeader>Volunteer Translators</SubHeader>
-      <Paragraph>{attemptToTranslate("Thanks for your help!")}</Paragraph>
-      <View style={{height: 10}}/>
+      <SubHeader bold={false} style={{marginBottom:6, marginTop:0, fontSize: 17}}>{attemptToTranslate("Thanks for your help!")}</SubHeader>
       <CreditBox>
         <SubHeader style={{marginBottom:5}}>{attemptToTranslate("French") + ":"}</SubHeader>
         <SubHeader> Christophe Laffitte</SubHeader>
         <SubHeader> Rose Cornette-Lafable</SubHeader>
+        <SubHeader> Zachary Corbeau</SubHeader>
       </CreditBox>
       <CreditBox>
         <SubHeader style={{marginBottom:5}}>{attemptToTranslate("Spanish") + ":"}</SubHeader>

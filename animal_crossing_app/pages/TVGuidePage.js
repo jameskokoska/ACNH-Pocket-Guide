@@ -140,8 +140,8 @@ class ContainerBox extends Component {
       backgroundColor=colors.tvGuideHighlight[global.darkMode]
     }
     return <View style={{paddingHorizontal:20, flexDirection:"row", alignItems:"center",backgroundColor: backgroundColor, borderTopColor: colors.lightDarkAccentHeavy2[global.darkMode],borderTopWidth: 2,}}>
-      <SubHeader margin={false} style={{marginLeft:10,flex:2.25,fontSize:18, marginVertical:10}}>{convert24Hour(this.props.text)}</SubHeader>
-      <SubHeader margin={false} style={{fontSize:18, flexWrap:"wrap", flex:5, marginLeft:10,marginVertical:10}}>{capitalizeFirst(this.props.text2)}</SubHeader>
+      <SubHeader translate={false} margin={false} style={{marginLeft:10,flex:2.25,fontSize:18, marginVertical:10}}>{convert24Hour(this.props.text)}</SubHeader>
+      <SubHeader translate={false} margin={false} style={{fontSize:18, flexWrap:"wrap", flex:5, marginLeft:10,marginVertical:10}}>{capitalizeFirst(attemptToTranslate(this.props.text2))}</SubHeader>
     </View>
   }
 }

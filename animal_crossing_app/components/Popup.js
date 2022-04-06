@@ -65,7 +65,7 @@ class Popup extends Component {
       this.Button2 = <ButtonComponent
         checkFont={this.props.checkFont}
         text={this.props.button2}
-        color={colors.cancelButton[global.darkMode]??colors.okButton[0]}
+        color={this.props.accentCancel===true ? colors.okButton3[global.darkMode] : (colors.cancelButton[global.darkMode]??colors.okButton[0])}
         vibrate={10}
         onPress={() => {
           this.setPopupVisible(!this.state.popupVisible);
@@ -244,8 +244,8 @@ export class PopupRawLoading extends Component {
       >
         <AnimatedPopupWrapper style={[{position:"absolute",bottom:0, width: Dimensions.get('window').width}]}>
           <View style={{alignItems:"center", justifyContent:"center"}}>
-            <View style={[styles.modalView,{width:"90%",backgroundColor: colors.white[Appearance.getColorScheme()==="light" ? 0 : 1]}]}>
-              <TextFont bold={true} style={{fontSize: 20, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{attemptToTranslate(this.state.loadingText)+"..."}</TextFont>
+            <View style={[styles.modalView,{backgroundColor: colors.white[Appearance.getColorScheme()==="light" ? 0 : 1]}]}>
+              <TextFont bold={true} style={{paddingHorizontal: 20, fontSize: 20, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{attemptToTranslate(this.state.loadingText)+"..."}</TextFont>
               <View style={{justifyContent:"center", alignItems:"center"}}>
                 <LottieView autoPlay loop
                   style={{marginBottom: -25, width: 90, zIndex:1, transform: [{ scale: 1 },{ rotate: '0deg'},],}}

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Animated,FlatList, Dimensions, Vibration,TouchableNativeFeedback,TouchableOpacity,StyleSheet, Text, View, Image} from 'react-native';
 import TextFont from '../components/TextFont';
-import {removeAccents,getStorage, commas} from "../LoadJsonData"
+import {removeAccents,getStorage, commas, checkOff} from "../LoadJsonData"
 import colors from '../Colors'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {capitalizeFirst, getSettingsString, attemptToTranslate, attemptToTranslateAchievement} from "../LoadJsonData"
@@ -18,6 +18,7 @@ export default class AchievementsPage extends Component {
     this.state = {
       selectedAchievement:"",
       data: require("../assets/data/DataCreated/Achievements.json"),
+      storageDataUpdate: [],
     }
   }
 
@@ -53,6 +54,54 @@ export default class AchievementsPage extends Component {
     }
   }
 
+  checkAllItemsListed = async () => {
+    var oldList = await JSON.parse(await getStorage("Achievements"+global.profile,JSON.stringify([])));
+    for(let achievement of this.state.data){
+      for(var i = 0; i < achievement["Num of Tiers"]; i++){
+        let id = achievement["Name"]+i.toString()
+        if(!oldList.includes(id)){
+          oldList.push(id);
+        }
+      }
+    }
+    await this.saveList(oldList);
+    this.setState({storageDataUpdate:JSON.parse(await getStorage("Achievements"+global.profile,JSON.stringify([])))})
+  }
+
+  unCheckAllItemsListed = async () => {
+    var oldList = await JSON.parse(await getStorage("Achievements"+global.profile,JSON.stringify([])));
+    for(let achievement of this.state.data){
+      for(var i = 0; i < achievement["Num of Tiers"]; i++){
+        let id = achievement["Name"]+i.toString()
+        if(oldList.includes(id)){
+          oldList = oldList.filter(item => item !== id);
+        }
+      }
+    }
+    await this.saveList(oldList);
+    this.setState({storageDataUpdate:JSON.parse(await getStorage("Achievements"+global.profile,JSON.stringify([])))})
+  }
+
+  invertCheckItemsListed = async () => {
+    var oldList = await JSON.parse(await getStorage("Achievements"+global.profile,JSON.stringify([])));
+    for(let achievement of this.state.data){
+      for(var i = 0; i < achievement["Num of Tiers"]; i++){
+        let id = achievement["Name"]+i.toString()
+        if(oldList.includes(id)){
+          oldList = oldList.filter(item => item !== id);
+        } else {
+          oldList.push(id);
+        }
+      }
+    }
+    await this.saveList(oldList);
+    this.setState({storageDataUpdate:JSON.parse(await getStorage("Achievements"+global.profile,JSON.stringify([])))})
+  }
+
+  saveList = async(data) => {
+    await AsyncStorage.setItem("Achievements"+global.profile, JSON.stringify(data));
+  }
+
   headerHeight = calculateHeaderHeight(true, 0.2);
   scrollY = new Animated.Value(0);
   scrollYClamped = Animated.diffClamp(this.scrollY, 0, this.headerHeight/0.8); //or 1.5
@@ -65,7 +114,7 @@ export default class AchievementsPage extends Component {
     return <>
       <Animated.View style={{width:Dimensions.get('window').width,position:"absolute", zIndex:1, transform: [{ translateY: this.translateY }]}}>
         <View style={{backgroundColor: colors.background[global.darkMode], flex: 1,justifyContent: 'flex-end',height:this.headerHeight,}}>
-          <Header disableFilters={true} disableSearch={false} title={"Achievements"} headerHeight={this.headerHeight} updateSearch={this.handleSearch} appBarColor={colors.achievementsAppBar[global.darkMode]} searchBarColor={colors.searchbarBG[global.darkMode]} titleColor={colors.textBlack[global.darkMode]}/>
+          <Header invertCheckItemsListed={()=>{this.invertCheckItemsListed()}} unCheckAllItemsListed={()=>{this.unCheckAllItemsListed()}} checkAllItemsListed={()=>{this.checkAllItemsListed()}} disableFilters={true} disableSearch={false} title={"Achievements"} headerHeight={this.headerHeight} updateSearch={this.handleSearch} appBarColor={colors.achievementsAppBar[global.darkMode]} searchBarColor={colors.searchbarBG[global.darkMode]} titleColor={colors.textBlack[global.darkMode]}/>
         </View>
       </Animated.View>
       <Animated.FlatList
@@ -73,7 +122,7 @@ export default class AchievementsPage extends Component {
         onScroll={Animated.event([{ nativeEvent: {contentOffset: {y: this.scrollY}}}],{useNativeDriver: true,},)}
         data={this.state.data}
         renderItem={({item}) => {
-          return(<Achievement achievement={item} openPopup={this.openPopup}/>)
+          return(<Achievement achievement={item} openPopup={this.openPopup} storageDataUpdate={this.state.storageDataUpdate}/>)
         }}
         keyExtractor={(item, index) => `list-item-${index}-${item["Name"]}`}
         contentContainerStyle={{paddingBottom:Dimensions.get('window').height/3}}
@@ -162,9 +211,22 @@ class AchievementsPopup extends Component {
 class Achievement extends React.PureComponent{
   constructor(props){
     super(props);
-    this.achievementStamps = [];
+    this.state = {
+      storageDataUpdate: props.storageDataUpdate
+    }
+  }
+  componentDidUpdate(prevProps){
+    if(this.props.storageDataUpdate!==prevProps.storageDataUpdate){
+      this.setState({storageDataUpdate:this.props.storageDataUpdate})
+    }
+  }
+  render(){
+    var name = attemptToTranslateAchievement(this.props.achievement["Name"]);
+    name = name.replace("(island name)", global.islandName)
+    let achievementStamps = []
     for(var i = 0; i < this.props.achievement["Num of Tiers"]; i++){
-      this.achievementStamps.push(<AchievementStamp
+      achievementStamps.push(<AchievementStamp
+        storageDataUpdate={this.state.storageDataUpdate}
         key={this.props.achievement["Name"]+i.toString()}
         id={this.props.achievement["Name"]+i.toString()}
         checkOffItem={this.props.checkOffItem}
@@ -173,17 +235,13 @@ class Achievement extends React.PureComponent{
         index = {i.toString()}
       />)
     }
-  }
-  render(){
-    var name = attemptToTranslateAchievement(this.props.achievement["Name"]);
-    name = name.replace("(island name)", global.islandName)
     return <>
       <TouchableOpacity activeOpacity={0.7} onPress={()=>this.props.openPopup(this.props.achievement)}>
       <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
         <SubHeader>{name}</SubHeader>
         <Paragraph translate={false} styled={true}>{attemptToTranslateAchievement(this.props.achievement["Achievement Criteria"])}</Paragraph>
         <View style={{paddingTop:10, marginHorizontal: 5, flex: 1, flexDirection: 'row', justifyContent:'center',flexWrap:"wrap"}}>
-          {this.achievementStamps}
+          {achievementStamps}
         </View>
       </View>
       </TouchableOpacity>
@@ -209,6 +267,16 @@ class AchievementStamp extends Component {
 
   componentWillUnmount() {
     this.mounted = false;
+  }
+
+  componentDidUpdate(prevProps){
+    if(this.props.storageDataUpdate!==prevProps.storageDataUpdate){
+      if(this.props.storageDataUpdate.includes(this.id) && this.mounted){
+        this.setState({checked:true})
+      }else if(this.mounted){
+        this.setState({checked:false})
+      }
+    }
   }
 
   loadChecked = async() => {

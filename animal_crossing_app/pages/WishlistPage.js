@@ -36,7 +36,7 @@ export default class Wishlist extends Component {
             <Image source={require("../assets/icons/list.png")} style={{opacity:0.6,width:35, height:35, resizeMode:'contain'}}/>
           </View>
         </TouchableNativeFeedback>
-        <WishlistSelectionPopup ref={(popup) => this.popup = popup} selectedList={[this.state.selectedList]} changeSelectedList={this.changeSelectedList} addCustomList={this.addCustomList} showAdd/>
+        <WishlistSelectionPopup showSelectedOriginal ref={(popup) => this.popup = popup} selectedList={[this.state.selectedList]} changeSelectedList={this.changeSelectedList} addCustomList={this.addCustomList} showAdd/>
         <AllItemsPage 
           smallerHeader={this.state.selectedList!==undefined&&this.state.selectedList.length>15?true:false}
           // disableFilters={true}
@@ -86,19 +86,34 @@ export class WishlistSelectionPopup extends Component{
     this.customLists?.removeCustomList(listName)
   }
 
-  setPopupVisible = (visible,checkListKeyString="", subHeader) => {
+  setPopupVisible = (visible,checkListKeyString="", subHeader, image="") => {
     this.popup?.setPopupVisible(visible)
     if(this.props.updateWhenOpen){
       this.customLists?.checkIfNeedsRefresh()
     }
-    this.setState({checkListKeyString:checkListKeyString, subHeader:subHeader})
+    this.setState({checkListKeyString:checkListKeyString, subHeader:subHeader, image: image})
   }
 
   render(){
     let popupChildren = <>
-      <WishlistBox text="Wishlist" showDelete={false} id="" selected={this.state.selectedList?.includes("")} changeSelectedList={this.props.changeSelectedList} setPopupVisible={(visible)=>this.popup?.setPopupVisible(visible)}/>
-      <CustomLists checkListKeyString={this.state.checkListKeyString} showDelete={this.props.showDelete===false?false:true} showAmount={this.props.showAmount===true?true:false} ref={(customLists) => this.customLists = customLists} selectedList={this.state.selectedList} changeSelectedList={this.props.changeSelectedList} setPopupVisible={(visible)=>this.popup?.setPopupVisible(visible)}/>
+      <WishlistBox showSelectedOriginal={this.props.showSelectedOriginal} checkListKeyString={this.state.checkListKeyString} text="Wishlist" showDelete={false} id="" selected={this.state.selectedList?.includes("")} changeSelectedList={this.props.changeSelectedList} setPopupVisible={(visible)=>this.popup?.setPopupVisible(visible)}/>
+      <CustomLists showSelectedOriginal={this.props.showSelectedOriginal} checkListKeyString={this.state.checkListKeyString} showDelete={this.props.showDelete===false?false:true} showAmount={this.props.showAmount===true?true:false} ref={(customLists) => this.customLists = customLists} selectedList={this.state.selectedList} changeSelectedList={this.props.changeSelectedList} setPopupVisible={(visible)=>this.popup?.setPopupVisible(visible)}/>
     </>
+    let imageComponent = <View/>
+    if(this.state.image==="" || this.state.image===undefined){
+      imageComponent = <></>
+    }else if(this.state.image.constructor === String && this.state.image.startsWith("http")){
+      imageComponent = <FastImage
+        style={{width: 75,height: 75,resizeMode:'contain',borderRadius: 5,}}
+        source={{uri:this.state.image}}
+        cacheKey={this.state.image}
+      />
+    }else if (this.state.image){
+      imageComponent = <Image
+        style={{width: 50,height: 50,resizeMode:'contain',borderRadius: 5, }}
+        source={getPhoto(this.state.image)}
+      />
+    }
     if(this.props.popupBottom===false){
       var buttons = <>
         <View style={{flexDirection:"row", justifyContent:"center"}}>
@@ -112,16 +127,25 @@ export class WishlistSelectionPopup extends Component{
           /> 
         </View>
       </>
-      var header = <>
-        <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode],marginBottom:2}}>{"Select a List"}</TextFont>
-        <TextFont bold={true} style={{fontSize: 19, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.state.subHeader}</TextFont>
+      var header = <View>
+        <View style={{flexDirection:"row", alignItems:"center", justifyContent:"space-between", marginLeft:5, marginTop:5}}>
+          <View style={{flexDirection:"column", flex:1}}>
+            <TextFont bold={true} style={{fontSize: 23, textAlign:"left", color: colors.textBlack[global.darkMode],marginBottom:2}}>{"Select A List"}</TextFont>
+            <TextFont bold={false} style={{fontSize: 16, textAlign:"left", color: colors.textBlack[global.darkMode]}}>{capitalize(this.state.subHeader)}</TextFont>
+          </View>
+          <View style={{marginLeft:5}}>
+            {imageComponent}
+          </View>
+        </View>
         <View style={{height:15}}/>
-      </>
+      </View>
       return <>
         <PopupAddWishlist ref={(popupAddWishlist) => this.popupAddWishlist = popupAddWishlist} addCustomList={this.addCustomList}/>
 
         <PopupInfoCustom ref={(popup) => this.popup = popup} buttonDisabled={true} buttons={buttons} header={header}>
-          {popupChildren}
+          <View style={{marginHorizontal: -10}}>
+            {popupChildren}
+          </View>
         </PopupInfoCustom>
       </>
     } else {
@@ -129,10 +153,13 @@ export class WishlistSelectionPopup extends Component{
         <PopupAddWishlist ref={(popupAddWishlist) => this.popupAddWishlist = popupAddWishlist} addCustomList={this.addCustomList}/>
   
         <PopupBottomCustom onClose={this.props.onClose!==undefined?()=>this.props.onClose(this.state.checkListKeyString):()=>{}} ref={(popup) => this.popup = popup}>
-          <View style={{flexDirection:"row", justifyContent:"space-between", marginRight:5}}>
-            <View>
-              <SubHeader style={{fontSize:25, marginLeft:10, marginBottom:3}} margin={false}>{"Select a List"}</SubHeader>
-              {this.state.subHeader!=="" && this.state.subHeader!==undefined ? <SubHeader style={{fontSize:19, marginLeft:10}} margin={false}>{capitalize(this.state.subHeader)}</SubHeader>:<View/>}
+          <View style={{flexDirection:"row", justifyContent:"space-between", flexWrap:"wrap", alignItems:"center"}}>
+            <View style={{flexDirection:"column", flex:1}}>
+              <SubHeader style={{fontSize:25, marginLeft:10, marginBottom:3}} margin={false}>{"Select A List"}</SubHeader>
+              {this.state.subHeader!=="" && this.state.subHeader!==undefined ? <SubHeader bold={false} style={{fontSize:16, marginLeft:10}} margin={false}>{capitalize(this.state.subHeader)}</SubHeader>:<View/>}
+            </View>
+            <View style={{marginLeft:5}}>
+              {imageComponent}
             </View>
             {this.props.showAdd?<TouchableOpacity style={{padding:4,marginTop:-10}} 
               onPress={()=>{
@@ -191,7 +218,7 @@ class CustomLists extends Component{
     if(prevProps.checkListKeyString!==this.props.checkListKeyString){
       this.setState({checkListKeyString:this.props.checkListKeyString})
     }
-    if(prevProps.selectedList!==this.props.selectedList){
+    if(prevProps!==this.props){
       this.setState({selectedList:this.props.selectedList})
     }
   }
@@ -200,7 +227,7 @@ class CustomLists extends Component{
     return <>
       {
         this.state.lists.map((item)=>{
-          return <WishlistBox checkListKeyString={this.state.checkListKeyString} key={item} text={item} showDelete={this.props.showDelete===false?false:true} showAmount={this.props.showAmount===true?true:false} removeCustomList={this.removeCustomList} addCustomList={this.addCustomList} id={item} selected={this.state.selectedList?.includes(item)} changeSelectedList={this.props.changeSelectedList} setPopupVisible={(visible)=>this.props.setPopupVisible(visible)}/>
+          return <WishlistBox showSelectedOriginal={this.props.showSelectedOriginal} checkListKeyString={this.state.checkListKeyString} key={item} text={item} showDelete={this.props.showDelete===false?false:true} showAmount={this.props.showAmount===true?true:false} removeCustomList={this.removeCustomList} addCustomList={this.addCustomList} id={item} selected={this.state.selectedList?.includes(item)} changeSelectedList={this.props.changeSelectedList} setPopupVisible={(visible)=>this.props.setPopupVisible(visible)}/>
         })
       }
       <Popup
@@ -261,12 +288,12 @@ class PopupAddWishlist extends Component{
       <PopupChooseIcon moreImages={taskImages} setImage={(image)=>{this.setCustomImage(image)}} ref={(popupChooseIcon) => this.popupChooseIcon = popupChooseIcon}/>
 
       <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{"New List"}</TextFont>
-      <Paragraph styled>This name cannot be changed.</Paragraph>
+      <Paragraph styled style={{textAlign:"center"}}>The name cannot be changed.</Paragraph>
       <View style={{height:10}}/>
       <View style={{flexDirection: 'row'}}>
         <View style={{flex:1, justifyContent:"center", marginHorizontal:5,}}>
           <TextInput
-            maxLength={30}
+            maxLength={45}
             allowFontScaling={false}
             style={{fontSize: 18, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 10, borderRadius: 5}}
             onChangeText={(text) => {this.listName=text}}
@@ -283,8 +310,8 @@ class PopupAddWishlist extends Component{
 class WishlistBox extends Component{
   constructor(props){
     super(props)
-    this.state={image:getCustomListImage(this.props.id), selected:this.props.selected, amount:getCustomListsAmount(this.props.checkListKeyString, this.props.id)}
-  }
+    this.state={image:getCustomListImage(this.props.id), selected:this.props.showSelectedOriginal? this.props.selected : (this.props.id===""?inWishlist(this.props.checkListKeyString):inCustomLists(this.props.checkListKeyString, this.props.id)), amount:getCustomListsAmount(this.props.checkListKeyString, this.props.id)}
+  }  
   setCustomImage = (image) => {
     this.setState({image:image})
     changeCustomListImage(this.props.id, image)
@@ -344,7 +371,7 @@ class WishlistBox extends Component{
           :<View style={{marginHorizontal:10, paddingLeft:5,marginRight:5}}>
             {imageComponent}
           </View>}
-          <SubHeader margin={false} style={{flex: 1, flexWrap: 'wrap', marginVertical:15, marginRight:10}}>{this.props.text}</SubHeader>
+          <SubHeader margin={false} style={{flex: 1, flexWrap: 'wrap', marginVertical:15, marginRight:10, fontSize: this.props.text!==undefined && this.props.text.length > 13 ? 16 : 18}}>{this.props.text}</SubHeader>
           <View style={{flexDirection:"row"}}>
             {this.props.showDelete?<>
               <TouchableOpacity style={{padding:3}} 

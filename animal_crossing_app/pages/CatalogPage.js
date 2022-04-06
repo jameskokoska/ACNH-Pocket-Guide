@@ -8,6 +8,7 @@ import colors from '../Colors'
 import ButtonComponent from "../components/ButtonComponent"
 import {attemptToTranslate, collectionListSave, checkOff, loadGlobalData, indexCollectionList} from "../LoadJsonData"
 import Popup from '../components/Popup';
+import ToggleSwitch from 'toggle-switch-react-native';
 
 
 class CatalogPage extends Component {
@@ -18,6 +19,8 @@ class CatalogPage extends Component {
     this.totalSuccess = 0;
     this.totalFail = 0;
     this.method = "";
+    this.includeVillagers = true;
+    this.includeRecipes = true;
     this.state = {
       method:"",
       totalSuccess:"",
@@ -53,9 +56,18 @@ class CatalogPage extends Component {
           for(var a = 0; a < global.dataLoadedAll[i].length; a++){
             if(global.dataLoadedAll[i][a]["Name"]!==undefined && global.dataLoadedAll[i][a]["Name"].toString().toLowerCase() === inputList[z].toString().toLowerCase()){
               success = true;
+
+              if(this.includeVillagers===false && global.dataLoadedAll[i][a]["Data Category"]!==undefined && global.dataLoadedAll[i][a]["Data Category"]==="Villagers"){
+                continue
+              }
+
+              if(this.includeRecipes===false && global.dataLoadedAll[i][a]["Data Category"]!==undefined && global.dataLoadedAll[i][a]["Data Category"]==="Recipes"){
+                continue
+              }
+
               this.totalSuccess++;
               if(inputType==="recipes" && global.dataLoadedAll[i][a]["checkListKey"].includes("recipesCheckList")){
-                checkOff(global.dataLoadedAll[i][a]["checkListKey"], false, "", "", false);
+                checkOff(global.dataLoadedAll[i][a]["checkListKey"], false, "", "", false, false);
               } else if(inputType==="recipes" && !global.dataLoadedAll[i][a]["checkListKey"].includes("recipesCheckList")){
                 this.totalSuccess--;
               } else if(inputType==="catalog" && global.dataLoadedAll[i][a]["checkListKey"].includes("recipesCheckList")){
@@ -63,7 +75,7 @@ class CatalogPage extends Component {
               } else if(inputType==="critters" && global.dataLoadedAll[i][a]["checkListKey"].includes("villagerCheckList")){
                 this.totalSuccess--;
               } else {
-                checkOff(global.dataLoadedAll[i][a]["checkListKey"], false, "", "", false);
+                checkOff(global.dataLoadedAll[i][a]["checkListKey"], false, "", "", false, false);
               }
               break;
             } else {
@@ -124,9 +136,9 @@ class CatalogPage extends Component {
             placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
             multiline={false}
           />
-          <View style={{height: 30}}/>
+          <View style={{height: 15}}/>
           <TextFont bold={true} style={{textAlign:"center",fontSize: 15, marginLeft: 30, marginRight: 40, color:colors.textBlack[global.darkMode]}}>{"or..."}</TextFont>
-          <View style={{height: 30}}/>
+          <View style={{height: 15}}/>
           <TextFont bold={true} style={{fontSize: 20, marginLeft: 30, marginRight: 40, color:colors.textBlack[global.darkMode]}}>{"Paste results here and Import"}</TextFont>
           <View style={{height: 15}}/>
           <TextInput
@@ -137,11 +149,14 @@ class CatalogPage extends Component {
             placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
             multiline={true}
           />
-          <View style={{height: 35}}/>
+          <View style={{height: 45}}/>
+          <IncludeSwitch header={"Include Villagers"} text={"Include villagers when importing items. Some villagers have the same name as items."} defaultValue={this.includeVillagers} toggleValue={()=>{this.includeVillagers = !this.includeVillagers}}/>
+          <View style={{height: 5}}/>
+          <IncludeSwitch header={"Include Recipes"} text={"Include recipes when importing items. Recipes and the item counterpart have the same name."} defaultValue={this.includeRecipes} toggleValue={()=>{this.includeRecipes = !this.includeRecipes}}/>
           <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={async ()=>{await this.import(); this.popupWait?.setPopupVisible(false); this.popup?.setPopupVisible(true);}} text={"Import"} />
           <View style={{height: 10}}/>
           <TextFont suffix={"\n"+attemptToTranslate("Please be patient.")} bold={false} style={{fontSize: 13, marginLeft: 30, marginRight: 30, textAlign:"center",color:colors.textBlack[global.darkMode]}}>{"May take a few seconds to complete."}</TextFont>
-          <View style={{height: 50}}/>
+          <View style={{height: 70}}/>
         </ScrollView>
         <Popup 
           ref={(popup) => this.popup = popup}
@@ -162,3 +177,36 @@ class CatalogPage extends Component {
   }
 }
 export default CatalogPage;
+
+
+class IncludeSwitch extends Component{
+  constructor(props){
+    super(props)
+    this.state={value:this.props.defaultValue}
+  }
+  toggleSetting = () => {
+    this.props.toggleValue()
+    this.setState({value:!this.state.value})
+  }
+  render(){
+    return(
+      <TouchableOpacity activeOpacity={0.7} onPress={() => {this.toggleSetting()}}>
+        <View style={{paddingVertical: 10, paddingHorizontal:5, flexDirection:"row",flex:1,alignItems: 'center',marginHorizontal: 15, borderRadius: 10,backgroundColor:colors.white[global.darkMode]}}>
+          <View style={{marginHorizontal: 10,padding:5}}>
+            <TextFont bold={true} style={{fontSize: 18, marginRight: 65,color:colors.textBlack[global.darkMode]}}>{this.props.header}</TextFont>
+            <TextFont style={{fontSize: 12, marginRight: 65,color:colors.textBlack[global.darkMode]}}>{this.props.text}</TextFont>
+          </View>
+          <View style={{position:"absolute", right: 8, transform: [{ scale: 0.75 }]}}>
+            <ToggleSwitch
+              isOn={this.state.value}
+              onColor="#57b849"
+              offColor="#DFDFDF"
+              size="large"
+              onToggle={() => {this.toggleSetting()}}
+            />
+          </View>
+        </View>
+      </TouchableOpacity>
+    )
+  }
+}

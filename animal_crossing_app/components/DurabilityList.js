@@ -292,7 +292,7 @@ export class ToolItem extends Component {
                 <Image source={require("../assets/icons/plus.png")} style={{opacity:global.darkMode===false?0.9:0.8,width:34, height:34, margin:10, marginVertical: 22}}/>
               </TouchableOpacity>
             </View>
-            {this.state.showRemove || this.props.showEdit || (this.props.item.total-this.props.item.current<=0) ?
+            {this.props.noRepairButton!==true && (this.state.showRemove || this.props.showEdit || (this.props.item.total-this.props.item.current<=0)) ?
               <ButtonComponent
                 text={"Repair"}
                 color={colors.okButton3[global.darkMode]}

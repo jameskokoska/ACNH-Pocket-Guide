@@ -208,7 +208,7 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
         // if(!customDatabase){
         //   dataLoading[i]["NameLanguage"]=attemptToTranslateItem(dataLoading[i]["Name"]);
         // }else{
-          if(checkListKey[dataSet][0]==="villagerCheckList"){
+          if(checkListKey[dataSet][0]==="villagerCheckList" || (checkListKey[dataSet][0]!==undefined && checkListKey[dataSet][0].includes("amiiboCheckList"))){
             dataLoading[i]["NameLanguage"]=attemptToTranslateSpecial(dataLoading[i]["Name"],"villagers")
           } else {
             //handle special case where there are multiple items with same name
@@ -296,7 +296,10 @@ function translateRepeatItem(itemTranslation, language){
 export async function countCollection(checkListKeyStart){
   var count = 0;
   for(var i = 0; i<global.collectionList.length; i++){
-    if(global.collectionList[i].includes(checkListKeyStart) && !global.collectionList[i].includes("wishlist") && !global.collectionList[i].includes("museum")){
+    if(global.collectionList[i].includes("customLists::") || global.collectionList[i].includes("wishlist") || global.collectionList[i].includes("museum")){
+      continue
+    }
+    if(global.collectionList[i].includes(checkListKeyStart)){
       if(checkListKeyStart.includes("artCheckList") && (global.collectionList[i].includes("No") || (global.collectionList[i].includes("0") && global.collectionList[i].includes("Yes")))){
         continue;
       } else if(checkListKeyStart.includes("songCheckList") && global.collectionList[i].includes("Hazure")){
@@ -465,9 +468,9 @@ export async function deleteGeneratedData(){
   return [totalFiles, sizeMB];
 }
 
-export function checkOff(checkListKey, collected, type="", indexSpecial="", vibrate=getSettingsString("settingsEnableVibrations")==="true"){
-  console.log(type+checkListKey+indexSpecial);
-  console.log("TYPE"+type)
+export function checkOff(checkListKey, collected, type="", indexSpecial="", vibrate=getSettingsString("settingsEnableVibrations")==="true", save=true){
+  // console.log(type+checkListKey+indexSpecial);
+  // console.log("TYPE"+type)
   if(collected===false){
     vibrate ? Vibration.vibrate([0,10,100,20]) : "";
     global.collectionList.push(type+checkListKey+indexSpecial)
@@ -477,7 +480,9 @@ export function checkOff(checkListKey, collected, type="", indexSpecial="", vibr
     collectionListRemove(type+checkListKey+indexSpecial)
     global.collectionListIndexed[type+checkListKey+indexSpecial]=false
   }
-  collectionListSave();
+  if(save){
+    collectionListSave();
+  }
   //console.log(global.collectionList)
 }
 
@@ -488,14 +493,14 @@ function collectionListRemove(checkListKey){
   }
 }
 
-export function collectionListSave(){
+export async function collectionListSave(){
   var outputString = "";
   for(var i = 0; i<global.collectionList.length; i++){
     outputString += global.collectionList[i];
     outputString += "\n";
   }
   // console.log(outputString)
-  AsyncStorage.setItem("collectedString"+global.profile, outputString);
+  await AsyncStorage.setItem("collectedString"+global.profile, outputString);
 }
 
 export function collectionListRemoveDuplicates(){

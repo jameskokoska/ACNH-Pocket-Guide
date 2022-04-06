@@ -1,8 +1,57 @@
 export const gameVersion = ["2.0.0","2.0.4"]
 export const dataVersion = "5"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
+export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Fixed multiple Amiibo cards showing up in list
+-Added Amiibo number to item label and search property
+-Added Paradise Planning progress to profile
+-Fixed special NPCs not showing up when filtering on Paradise Planning page
+-When browsing the calendar events page, your calendar status is remembered
+-
+-Added ability to mass check off items!
+- Tap the 3 dot menu in the top right corner of the header of any list page for options
+-Added NPCs to Paradise Planning page
+-Added Change Villagers button in profile
+-Villagers in your town are automatically at the top
+-Villager heart icon shows up properly on Everything page
+-
+-Can add/remove all items to museum in 3 dot menu (only on Museum pages)
+-Fixed collection count (no longer includes items in custom lists)
+-Fixed tapping Special NPC in HHP page leads to error page
+-Tapping Special NPC in HHP page now toggles check
+-Adjusted font sizes for custom list selection
+-Added item icon when adding to a custom list
+-Adjusted size and position of song wave animation
+-Adjusted size of music buttons on Songs page
+-Increased the length for names of custom lists (to 45 characters)
+-
+-Fixed capitalizations in some languages
+-Fixed loading animation scaling in different orientations/screen sizes
+-Increased check mark hit-box
+-Tapping K.K. Slider event now brings user to Songs page
+-Fixed swipe gesture for opening side menu when scrolling
+-
+-Fixed translation of Amiibo cards
+-Fixed alphabetical sorting in some languages
+-Updated translations
+-
+-Past changes:
+-
+-Updated translations
+-Fixed custom lists and custom lists icons for item variations
+-Fixed capitalization on some languages on TV Guide page
+-Fixed UI formatting
+-
+-Can specify to include Villagers or Recipes when importing data on the Catalog page
+-Removed Repair Button for Shooting Star counter
+-Other small fixes and UI tweaks
+-
+-Added Custom List filtering
+-Fixed Wishlist filtering
+-Wishlist filtering now under Custom Lists subheader
+-
 -Added popup animation
 -Fixed slide popup animation stutter
 -Fixed Wishlist button when Floating Menu Button hidden in settings
@@ -21,8 +70,6 @@ export const changelog = `
 -Added a music player to the Songs page!
 -
 -Fixed source images missing on some items
--
--Past changes:
 -
 -Fixed ToDo list item crash when selecting custom icon that does not exist
 -

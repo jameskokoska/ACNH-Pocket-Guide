@@ -157,6 +157,8 @@ export default class SideMenu extends Component {
           drawerBackgroundColor="#ddd"
           renderNavigationView={this.renderDrawer}
           onDrawerSlide={(progress)=>this.disableEditMode(progress)}
+          minSwipeDistance={20}
+          useNativeAnimations={true}
         >
             {this.props.children}
         </DrawerLayout>

@@ -27,7 +27,7 @@ export default class CurrentVillagers extends Component {
     
     if(currentVillagers.length===0){
       return(<>
-        <View style={{height:10}}/>
+          <View style={{height:10}}/>
           <TouchableOpacity onPress={() => this.props.setPage(8)}>
             <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"You have no villagers added"}</TextFont>
             <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>Tap here and go add some</TextFont>
@@ -37,27 +37,33 @@ export default class CurrentVillagers extends Component {
       )
     } else {
       return(<>
-      <View style={{height:15}}/>
-      <View style={{flex: 1, flexWrap: 'wrap', flexDirection:"row",justifyContent:"center"}}>
-        {currentVillagers.map( (villager, index)=>{
-          return(
-            <View key={villager["Name"]+index} style={{margin:5}}>
-              <TouchableOpacity 
-                onPress={()=>{
-                  this.props.openVillagerPopup(villager)
-                }}
-              >
-                <View style={{width: 60,height: 60,borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.eventBackground[global.darkMode]}}>
-                  <FastImage
-                    style={{height: 50,width: 50,resizeMode:'contain',}}
-                    source={{uri:villager["Icon Image"]}}
-                    cacheKey={villager["Icon Image"]}
-                  />
-                </View>
-              </TouchableOpacity>
-            </View>
-        )})}
-      </View><View style={{height:15}}/></>)
+        <View style={{height:15}}/>
+        <View style={{flex: 1, flexWrap: 'wrap', flexDirection:"row",justifyContent:"center"}}>
+          {currentVillagers.map( (villager, index)=>{
+            return(
+              <View key={villager["Name"]+index} style={{margin:5}}>
+                <TouchableOpacity 
+                  onPress={()=>{
+                    this.props.openVillagerPopup(villager)
+                  }}
+                >
+                  <View style={{width: 60,height: 60,borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.eventBackground[global.darkMode]}}>
+                    <FastImage
+                      style={{height: 50,width: 50,resizeMode:'contain',}}
+                      source={{uri:villager["Icon Image"]}}
+                      cacheKey={villager["Icon Image"]}
+                    />
+                  </View>
+                </TouchableOpacity>
+              </View>
+          )})}
+        </View>
+        <View style={{height:10}}/>
+        <TouchableOpacity style={{paddingVertical: 15}} onPress={() => this.props.setPage(8, true, "show popup")}>
+          <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"Tap here to add/remove Villagers"}</TextFont>
+        </TouchableOpacity>
+        <View style={{height:5}}/>
+      </>)
     }
     
   }

@@ -19,6 +19,7 @@ import {inMuseum, inVillager, inVillagerPhoto, inWishlist, inChecklist,getSettin
 import FadeInOut from "../components/FadeInOut";
 import { SubHeader } from './Formattings';
 import { getHourlySongTitle, MusicButtonComponent } from '../pages/SongsPage';
+import { GestureDetector, PanGestureHandler } from 'react-native-gesture-handler';
 
 const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 const villagerCategories = ["Villagers"]
@@ -240,7 +241,7 @@ class ListItem extends React.Component{
               this.props.setUpdateAmountChildFunction((amount)=>{this.setAmount(amount)})
 
             if(global.customLists.length > 0){
-              this.props.selectCustomList(this.props.item, this.setWishlist)
+              this.props.selectCustomList(this.props.item, this.setWishlist, ()=>{}, true, this.props.item[this.props.imageProperty[this.props.item.dataSet]])
             }else{
               checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
               this.setWishlist(this.state.wishlist===true ? false:true);
@@ -258,11 +259,15 @@ class ListItem extends React.Component{
           >
             <View style={[styles.gridBox, {backgroundColor:boxColor}]}>
               {missingVariationsIndicator}
-              <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -18, top: -18, zIndex:10}}>
-                <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKeyParent, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
-                  <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
-                </TouchableOpacity>
-              </View>
+              <PanGestureHandler activeOffsetY={100} activeOffsetX={20}>
+                <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -33, top: -33, zIndex:10}}>
+                  <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKeyParent, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
+                    <View style={{padding:15}}>
+                      <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
+                    </View>
+                  </TouchableOpacity>
+                </View>
+              </PanGestureHandler>
               {this.props.currentCustomList!=="" && this.props.currentCustomList!==undefined && this.state.amount>1 ? 
                 <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: 5, bottom: 5, zIndex:10}}>
                   <TextFont translate={false} numberOfLines={2} bold={true} style={{textAlign:'center', color:this.props.labelColor, fontSize:14}}>{commas(this.state.amount)+"x"}</TextFont>
@@ -323,7 +328,7 @@ class ListItem extends React.Component{
               if(this.props.item.special !== "hourly"){
                 //only can add if not hourly music
                 if(global.customLists.length > 0){
-                  this.props.selectCustomList(this.props.item, this.setWishlist)
+                  this.props.selectCustomList(this.props.item, this.setWishlist, ()=>{}, true, this.props.item[this.props.imageProperty[this.props.item.dataSet]])
                 }else{
                   checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
                   this.setWishlist(this.state.wishlist===true ? false:true);
@@ -355,11 +360,16 @@ class ListItem extends React.Component{
                 </View>
               </View>
               {this.props.item.special==="hourly" ? <View/> : 
-              <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -18, top: -18, zIndex:10}}>
-                <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKeyParent, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
-                  <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
-                </TouchableOpacity>
-              </View>}
+                <PanGestureHandler activeOffsetY={100} activeOffsetX={20}>
+                  <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -33, top: -33, zIndex:10}}>
+                    <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKeyParent, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
+                      <View style={{padding:15}}>
+                        <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
+                      </View>
+                    </TouchableOpacity>
+                  </View>
+                </PanGestureHandler>
+              }
               { this.state.wishlist ?
                   <Image 
                     source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} 
@@ -389,7 +399,7 @@ class ListItem extends React.Component{
         <View style={styles.gridWrapper}>
           <TouchableNativeFeedback onLongPress={() => {  
             if(global.customLists.length > 0){
-              this.props.selectCustomList(this.props.item, this.setWishlist)
+              this.props.selectCustomList(this.props.item, this.setWishlist, ()=>{}, true, this.props.item[this.props.imageProperty[this.props.item.dataSet]])
             }else{
               checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
               this.setWishlist(this.state.wishlist===true ? false:true);
@@ -406,11 +416,15 @@ class ListItem extends React.Component{
             }}
           >
             <View style={[styles.gridBoxLarge, {backgroundColor:boxColor}]}>
-              <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -18, top: -18, zIndex:10}}>
-                <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKeyParent, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
-                  <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
-                </TouchableOpacity>
-              </View>
+              <PanGestureHandler activeOffsetY={100} activeOffsetX={20}>
+                <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -33, top: -33, zIndex:10}}>
+                  <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKeyParent, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
+                    <View style={{padding:105}}>
+                      <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
+                    </View>
+                  </TouchableOpacity>
+                </View>
+              </PanGestureHandler>
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
               { this.state.wishlist ?
@@ -468,7 +482,7 @@ class ListItem extends React.Component{
         <View style={styles.gridWrapper}>
           <TouchableNativeFeedback onLongPress={() => {  
             if(global.customLists.length > 0){
-              this.props.selectCustomList(this.props.item, this.setWishlist)
+              this.props.selectCustomList(this.props.item, this.setWishlist, ()=>{}, true, this.props.item[this.props.imageProperty[this.props.item.dataSet]])
             }else{
               checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
               this.setWishlist(this.state.wishlist===true ? false:true);
@@ -485,11 +499,15 @@ class ListItem extends React.Component{
             }}
           >
             <View style={[styles.gridBoxLarge, {backgroundColor:boxColor}]}>
-              <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -18, top: -18, zIndex:10}}>
-                <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKeyParent, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
-                  <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
-                </TouchableOpacity>
-              </View>
+              <PanGestureHandler activeOffsetY={100} activeOffsetX={20}>
+                <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -33, top: -33, zIndex:10}}>
+                  <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKeyParent, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
+                    <View style={{padding:15}}>
+                      <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
+                    </View>
+                  </TouchableOpacity>
+                </View>
+              </PanGestureHandler>
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
               { this.state.wishlist ?
@@ -540,7 +558,7 @@ class ListItem extends React.Component{
         <View>
           <TouchableNativeFeedback onLongPress={() => {  
             if(global.customLists.length > 0){
-              this.props.selectCustomList(this.props.item, this.setWishlist)
+              this.props.selectCustomList(this.props.item, this.setWishlist, ()=>{}, true, this.props.item[this.props.imageProperty[this.props.item.dataSet]])
             }else{
               checkOff(this.props.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
               this.setWishlist(this.state.wishlist===true ? false:true);
@@ -602,14 +620,16 @@ class ListItem extends React.Component{
                 </View>
               </View>
               {fishShadow}
-              <TouchableOpacity style={{position:"absolute", right: -5, bottom: 0}} 
-                activeOpacity={0.6}
-                onPress={() => {  
-                checkOff(this.props.item.checkListKeyParent, this.state.collected); 
-                this.setCollected(this.state.collected===true ? false:true);
-              }}>
-                <Check checkType={this.props.checkType} fadeOut={false} play={this.state.collected} width={90} height={90} disablePopup={disablePopup}/>
-              </TouchableOpacity>
+              <PanGestureHandler activeOffsetY={100} activeOffsetX={20}>
+                <TouchableOpacity style={{position:"absolute", right: -5, bottom: 0}} 
+                  activeOpacity={0.6}
+                  onPress={() => {  
+                  checkOff(this.props.item.checkListKeyParent, this.state.collected); 
+                  this.setCollected(this.state.collected===true ? false:true);
+                }}>
+                  <Check checkType={this.props.checkType} fadeOut={false} play={this.state.collected} width={90} height={90} disablePopup={disablePopup}/>
+                </TouchableOpacity>
+              </PanGestureHandler>
               <CheckMuseum larger showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
             </View>

@@ -472,6 +472,9 @@ class Main extends Component {
   }
 
   setPage(pageNum, previousAdd=true, propsPassed="") {
+    if(propsPassed==="from wishlist page" && this.wishlistPopupInfo){
+      this.wishlistPopupInfo?.setPopupVisible(true)
+    }
     // console.log(this.lastPropsPassed)
     if(this.state.loaded){
       if(this.state.currentPage!==pageNum){
@@ -500,11 +503,16 @@ class Main extends Component {
     if(!this.state.loaded){
       var splashScreens = [require('./assets/airplane.json'),require('./assets/balloon.json')];
       var chosenSplashScreen = splashScreens[Math.floor(this.random * splashScreens.length)];
+      let maxWidth = 10
+      if(Dimensions.get('window').width > Dimensions.get('window').height)
+        maxWidth = Dimensions.get('window').height*0.9
+      else
+        maxWidth = Dimensions.get('window').width*0.9
       return <>
         <View style={{position: "absolute", backgroundColor: colors.background[Appearance.getColorScheme()==="light" ? 0 : 1], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
         <View style={{alignItems:"center", justifyContent:"center",backgroundColor: colors.background[Appearance.getColorScheme()==="light" ? 0 : 1], width:Dimensions.get('window').width, height:Dimensions.get('window').height*0.85}}>
           <FadeInOut fadeIn={true}>
-            <LottieView autoPlay loop style={{width: "95%",zIndex:1,transform: [{ scale: 1.25 },],}} source={chosenSplashScreen}/>
+            <LottieView autoPlay loop style={{width: maxWidth,zIndex:1,transform: [{ scale: 1.3 },],}} source={chosenSplashScreen}/>
           </FadeInOut>
         </View>
         <PopupRaw ref={(popupGeneratingData) => this.popupGeneratingData = popupGeneratingData} text={attemptToTranslate("Generating Data...")} textLower={attemptToTranslate("This may take a few minutes and is only done once.")} textLower2={attemptToTranslate("If this takes longer than a minute restart the app and select Download data.")}/>
@@ -549,7 +557,7 @@ class Main extends Component {
       } else if (this.state.currentPage===7){
         currentPageView = <MysteryIslandsPage/>
       } else if (this.state.currentPage===8){
-        currentPageView = <VillagersPage setPage={this.setPage}/>
+        currentPageView = <VillagersPage setPage={this.setPage} propsPassed={this.state.propsPassed}/>
       } else if (this.state.currentPage===9){
         currentPageView = <ConstructionPage/>
       } else if (this.state.currentPage===10){
@@ -657,6 +665,12 @@ class Main extends Component {
               </NavigationContainer>
             </Provider>
             <PopupInfos setPage={this.setPage}/>
+            <Popup
+              ref={(wishlistPopupInfo) => this.wishlistPopupInfo = wishlistPopupInfo}
+              button1={"OK"}
+              button1Action={()=>{}}
+              textLower={"Long press items to add them to your wishlist."}
+            />
           </SideMenu>
           <FABWrapper ref={(fab) => this.fab = fab} openDrawer={this.openDrawer}/>
         </GestureHandlerRootView>
@@ -673,9 +687,9 @@ class PopupInfos extends Component {
       if(numLoginsOffset[0]===global.version){
         if(numLoginsOffset[1]>=1){
           //can periodically switch this one (ref and storage key)
-          let supportPopupDismissed = await getStorage("supportPopupDismissed5","false");
+          let supportPopupDismissed = await getStorage("supportPopupDismissed3","false");
           if(supportPopupDismissed==="false" && numLogins >= 10){
-            AsyncStorage.setItem("supportPopupDismissed5", "true");
+            AsyncStorage.setItem("supportPopupDismissed3", "true");
             this.popupSupport2?.setPopupVisible(true)
           }
         }
