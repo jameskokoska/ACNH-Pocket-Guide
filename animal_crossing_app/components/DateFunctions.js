@@ -326,7 +326,7 @@ export function isDateInRange(range,rangeYear, date, specialCheck=""){ //startOn
     dateStart.setYear(rangeYear);
     var dateEnd= new Date('January 10, 2000 12:00:00');
     dateEnd.setMonth(getMonthShortFromString(rangeSplit[2]));
-    dateEnd.setDate(parseInt(rangeSplit[3])+1); //ensures the end date is larger so current date is within range
+    dateEnd.setDate(parseInt(rangeSplit[3])); //not needed +1 anymore... ensures the end date is larger so current date is within range
     dateEnd.setYear(rangeYear);
 
     //we have a date Dec-Jan
