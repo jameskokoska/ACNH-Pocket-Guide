@@ -15443,8 +15443,8 @@
     "spring": {
       "English": "Spring",
       "English (Europe)": "Spring",
-      "French": "Le printemps",
-      "French (US)": "Le printemps",
+      "French": "printemps",
+      "French (US)": "printemps",
       "German": "Frühling",
       "Spanish": "Primavera",
       "Spanish (US)": "Primavera",
@@ -15455,8 +15455,8 @@
     "summer": {
       "English": "Summer",
       "English (Europe)": "Summer",
-      "French": "L'été",
-      "French (US)": "L'été",
+      "French": "été",
+      "French (US)": "été",
       "German": "Sommer",
       "Spanish": "El verano",
       "Spanish (US)": "El verano",
@@ -15467,8 +15467,8 @@
     "fall": {
       "English": "Fall",
       "English (Europe)": "Fall",
-      "French": "Tomber",
-      "French (US)": "Tomber",
+      "French": "automne",
+      "French (US)": "automne",
       "German": "Herbst",
       "Spanish": "Otoño",
       "Spanish (US)": "Otoño",
