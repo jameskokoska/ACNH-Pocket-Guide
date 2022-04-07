@@ -4,11 +4,13 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Tasks can now be added to the top of the ToDo list\n(Tap the three dot menu in the To-Do list section of the home screen)
 -Icon changes and improvements
 -Updated Seasons and Events
 -Updated data
 -Events page fixes
 -Updated translations
+-Changelog UI fixes
 -
 -Fixed multiple Amiibo cards showing up in list
 -Added Amiibo number to item label and search property
@@ -16,8 +18,7 @@ export const changelog = `
 -Fixed special NPCs not showing up when filtering on Paradise Planning page
 -When browsing the calendar events page, your calendar status is remembered
 -
--Added ability to mass check off items!
-- Tap the 3 dot menu in the top right corner of the header of any list page for options
+-Added ability to mass check off items!\nTap the 3 dot menu in the top right corner of the header of any list page for options
 -Added NPCs to Paradise Planning page
 -Added Change Villagers button in profile
 -Villagers in your town are automatically at the top
@@ -152,9 +153,7 @@ export const changelog = `
 -Improved speed of opening an item when list page has just loaded
 -Updated translations
 -Older device popup - to improve speed
--Import and Export all app data
-- Useful when switching phones!
-- This is not a replacement for the normal backup
+-Import and Export all app data\nUseful when switching phones!\nThis is not a replacement for the normal backup
 -Fixed restoring turnip log (only restores current profile)
 -Fixed restoring To Do list (only restores current profile)
 -Erase profile data now removes more than just the collection
@@ -186,8 +185,7 @@ export const changelog = `
 -Added entry count to Paradise Planning page
 -
 -Added Tool Durability tracking as Home Page section
--Added Shooting Star counter as Home Page section
-- Tap [Edit Sections] to enable these features
+-Added Shooting Star counter as Home Page section\nTap [Edit Sections] to enable these features
 -Added animations to Collection progress
 -Added animations to Loan Tracking
 -Added filters to Quick Search
@@ -248,8 +246,7 @@ export const changelog = `
 -
 -Added clear input text button to search bar
 -Improved text colors for search
--Improved 'event items' pages
-- Fixed any missing items for events
+-Improved 'event items' pages\nFixed any missing items for events
 -
 -Current villagers sort alphabetically
 -Updated translations
@@ -288,8 +285,7 @@ export const changelog = `
 -Added category info to item popups (housewares, ceiling decor, tops, hats etc.)
 -Fixed keyboard resizing elements on Android
 -
--In the collection progress
-- You can tap each category to go to its page
+-In the collection progress\nYou can tap each category to go to its page
 -Custom time selector now defaults to the last chosen time
 -Added option for ToDo list to reset everyday at 5am
 -Added ToDo list menu
@@ -341,14 +337,12 @@ export const changelog = `
 -Added back animation to Floating Menu Action Button
 -Increased resolution of turnip icon
 -
--Collection totals no longer include variations of items
-- This is because Cyrus can customize anything now
+-Collection totals no longer include variations of items\nThis is because Cyrus can customize anything now
 -Fixed collection totals
 -Added way more ToDo list icons
 -Added more Source icons
 -Collection totals now load properly (might take some time to count)
--Data can now be downloaded instead of generated
-- For those who have issues of infinite data generation
+-Data can now be downloaded instead of generated\nFor those who have issues of infinite data generation
 -Fixed center text
 -Added more help text on villager page
 -Can tap blank space above popup to close it
@@ -381,9 +375,7 @@ export const changelog = `
 -View craftable items only appears if there are items that can be crafted
 -Wishlist should now load almost instantly
 -New Items page loading improvements
--General Performance improvements:
--  Filtering, selecting items and scrolling
--  Switching pages and navigating
+-General Performance improvements:\nFiltering, selecting items and scrolling\nSwitching pages and navigating
 -
 -Added Paradise Planning page 
 -Added gender filters for villagers
@@ -462,8 +454,7 @@ export const changelog = `
 -Decreased left and right padding for lists
 -Added DIY Icon for DIYs (On everything page)
 -Added Pascal, star fragments, mushroom, pine cone, gyroid, and seashells to To-Do list icons
--Added [View Craftable items] button to materials
-- View which items you can craft with that material!
+-Added [View Craftable items] button to materials\nView which items you can craft with that material!
 -Current day is highlighted in Calender View 
 -Enabled filters in Items of Event page
 -Removed Colored lists Setting, always on now
@@ -557,8 +548,7 @@ export const changelog = `
 -Updated and fixed translations (specifically catchphrases)
 -Added Label Themes into filters
 -Added Label icon in clothes popup
--Added the ability to pull down to refresh a list
-- This can be useful if you check something off and have a Collected filter applied, and you want to update the filters applied
+-Added the ability to pull down to refresh a list\nThis can be useful if you check something off and have a Collected filter applied, and you want to update the filters applied
 -
 -Fixed refresh icon colors
 -Fixed icons for events on home page
@@ -569,7 +559,7 @@ export const changelog = `
 -
 -Fixed calendar page again
 -Changed icons for events
-- 
+-
 -Italian translation started
 -Updated translations
 -
@@ -733,8 +723,7 @@ export const changelog = `
 -Fixed painting collection counter
 -Added filters for wishlist
 -Added more translations
--Started German translations
-- Thanks Ännchen!
+-Started German translations\nThanks Ännchen!
 -
 -Significantly improved load times for tabs
 -Improved loading times for filters
@@ -773,15 +762,13 @@ export const changelog = `
 -Fixed the way variations converge - lists should load significantly faster
 -Fixed information button on Obtainable Items page
 -Added pattern name to variation popup (long press a variation)
--Updated French translations
-- Thanks Christophe!
+-Updated French translations\nThanks Christophe!
 -
 -Added sort by Critterpedia option for Museum pages
 -Added villager compatibility - See which villagers get along the best with others
 -Added warning to villager compatibility page - This is not yet confirmed to be accurate and should only be used as a reference
 -Added more information about villagers redirect
--Added more Spanish translations, more coming soon
-- Thanks Vicente, adrisniper7, Robertin, and miyo0i!
+-Added more Spanish translations, more coming soon\nThanks Vicente, adrisniper7, Robertin, and miyo0i!
 -
 -Reworked how translations are handled internally
 -Fixed 24 hour clock display 12 for midnight instead of 0:00

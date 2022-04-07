@@ -26,7 +26,8 @@ export class TodoList extends Component {
       showEdit: false,
       showVillagersTalkList: false,
       deleteIndex: 0,
-      resetEachDay: false
+      resetEachDay: false,
+      addToTop: false,
     }
     this.deleteIndex=-1
   }
@@ -55,15 +56,16 @@ export class TodoList extends Component {
   }
 
   loadList = async() => {
-    var showVillagersTalkList = (await getStorage("showVillagersTalkList"+global.profile,"false"))==="true";
-    var storageData = JSON.parse(await getStorage("ToDoList"+global.profile,JSON.stringify(defaultToDoList())));
-    var resetEachDay = (await getStorage("resetEachDay","false"))==="true";
+    let showVillagersTalkList = (await getStorage("showVillagersTalkList"+global.profile,"false"))==="true";
+    let storageData = JSON.parse(await getStorage("ToDoList"+global.profile,JSON.stringify(defaultToDoList())));
+    let resetEachDay = (await getStorage("resetEachDay","false"))==="true";
+    let addToTop = (await getStorage("addTasksToTop"+global.profile,"true")) === "true";
     if(showVillagersTalkList){
       storageData = [...storageData, ...this.populateDataWithNewVillagers(storageData)];
       await this.saveList(storageData);
     }
     if(this.mounted){
-      this.setState({loaded:true,data:storageData,showVillagersTalkList:showVillagersTalkList, resetEachDay: resetEachDay});
+      this.setState({loaded:true,data:storageData,showVillagersTalkList:showVillagersTalkList, resetEachDay: resetEachDay,addToTop:addToTop});
     }
     if(resetEachDay){
       let dateWithOffset = addHours(getCurrentDateObject(),-5)
@@ -173,7 +175,11 @@ export class TodoList extends Component {
     let tasks = this.state.data;
     if(edit===false){
       tasks = this.state.data;
-      tasks.push(item);
+      if(this.state.addToTop){
+        tasks = [item, ...tasks]
+      } else {
+        tasks.push(item);
+      }
     }
     if(edit!==false){
       tasks[edit] = item;
@@ -233,7 +239,8 @@ export class TodoList extends Component {
           items={[
             {label:this.state.showEdit ? "Disable Edit List" : "Edit List", value:"Edit List", highlighted: this.state.showEdit ? true : false},
             {label:"Uncheck All", value:"Uncheck All",},
-            {label:"Uncheck Each Day (at 5 AM)", value:"Uncheck Each Day", highlighted: this.state.resetEachDay}
+            {label:"Uncheck Each Day (at 5 AM)", value:"Uncheck Each Day", highlighted: this.state.resetEachDay},
+            {label:this.state.addToTop ? "Add New Tasks To Top" : "Add New Tasks To Bottom", value:"Add To Top", highlighted: this.state.addToTop ? true : false},
           ]}
           defaultValue={""}
           onChangeItem={
@@ -253,6 +260,9 @@ export class TodoList extends Component {
                 }
                 await AsyncStorage.setItem("resetEachDay",!this.state.resetEachDay?"true":"false");
                 this.setState({resetEachDay:!this.state.resetEachDay})
+              }else if(item.value==="Add To Top"){
+                await AsyncStorage.setItem("addTasksToTop",!this.state.addToTop?"true":"false");
+                this.setState({addToTop:!this.state.addToTop})
               }
             }
           }
