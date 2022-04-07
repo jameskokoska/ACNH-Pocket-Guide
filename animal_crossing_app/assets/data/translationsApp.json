@@ -570,21 +570,21 @@
     ],
     "Main": [
         {
-            "English": "1150 items",
-            "English (Europe)": "1150 items",
-            "French": "1126 items (24 items missing)",
-            "French (US)": "1126 items (24 items missing)",
-            "German": "1145 items (5 items missing)",
-            "Spanish": "1150 items",
-            "Spanish (US)": "1122 items (28 items missing)",
-            "Russian": "1137 items (13 items missing)",
-            "Italian": "1136 items (14 items missing)",
-            "Dutch": "1081 items (69 items missing)",
-            "Chinese": "903 items (247 items missing)",
-            "Chinese (Traditional)": "7 items (1143 items missing)",
-            "Japanese": "7 items (1143 items missing)",
-            "Korean": "7 items (1143 items missing)",
-            "Portuguese": "1134 items (16 items missing)"
+            "English": "1162 items",
+            "English (Europe)": "1160 items (2 items missing)",
+            "French": "1126 items (36 items missing)",
+            "French (US)": "1126 items (36 items missing)",
+            "German": "1145 items (17 items missing)",
+            "Spanish": "1150 items (12 items missing)",
+            "Spanish (US)": "1122 items (40 items missing)",
+            "Russian": "1137 items (25 items missing)",
+            "Italian": "1136 items (26 items missing)",
+            "Dutch": "1081 items (81 items missing)",
+            "Chinese": "903 items (259 items missing)",
+            "Chinese (Traditional)": "7 items (1155 items missing)",
+            "Japanese": "7 items (1155 items missing)",
+            "Korean": "7 items (1155 items missing)",
+            "Portuguese": "1134 items (28 items missing)"
         },
         {
             "English": "Home",
@@ -16266,6 +16266,52 @@
             "Russian": "Инвертировать чеки",
             "Italian": "Inverti i controlli",
             "Portuguese": "Inverter cheques"
+        },
+        {
+            "English": "Add All to Museum?",
+            "English (Europe)": "Add All to Museum?"
+        },
+        {
+            "English": "Remove All From Museum?",
+            "English (Europe)": "Remove All From Museum?"
+        },
+        {
+            "English": "Add all items currently listed to the museum?",
+            "English (Europe)": "Add all items currently listed to the museum?"
+        },
+        {
+            "English": "Remove all items currently listed from the museum?",
+            "English (Europe)": "Remove all items currently listed from the museum?"
+        },
+        {
+            "English": "Add All",
+            "English (Europe)": "Add All"
+        },
+        {
+            "English": "Remove All",
+            "English (Europe)": "Remove All"
+        },
+        {
+            "English": "Add all to museum",
+            "English (Europe)": "Add all to museum"
+        },
+        {
+            "English": "Remove all from museum",
+            "English (Europe)": "Remove all from museum"
+        },
+        {
+            "English": "Calendar Season",
+            "English (Europe)": "Calendar Season"
+        },
+        {
+            "English": "Basegame Event",
+            "English (Europe)": "Basegame Event"
+        },
+        {
+            "English": "Weeks Before"
+        },
+        {
+            "English": "Days Before"
         }
     ],
     "Sources": [
@@ -19581,21 +19627,21 @@
     ],
     "Event Names": [
         {
-            "English": "72 items",
-            "English (Europe)": "72 items",
-            "French": "52 items (20 items missing)",
-            "French (US)": "52 items (20 items missing)",
-            "German": "72 items",
-            "Spanish": "38 items (34 items missing)",
-            "Spanish (US)": "38 items (34 items missing)",
-            "Italian": "0 items (72 items missing)",
-            "Dutch": "25 items (47 items missing)",
-            "Chinese": "0 items (72 items missing)",
-            "Chinese (Traditional)": "0 items (72 items missing)",
-            "Japanese": "0 items (72 items missing)",
-            "Korean": "0 items (72 items missing)",
-            "Russian": "52 items (20 items missing)",
-            "Portuguese": "0 items (72 items missing)"
+            "English": "85 items",
+            "English (Europe)": "77 items (8 items missing)",
+            "French": "53 items (32 items missing)",
+            "French (US)": "53 items (32 items missing)",
+            "German": "73 items (12 items missing)",
+            "Spanish": "39 items (46 items missing)",
+            "Spanish (US)": "39 items (46 items missing)",
+            "Italian": "1 items (84 items missing)",
+            "Dutch": "26 items (59 items missing)",
+            "Chinese": "1 items (84 items missing)",
+            "Chinese (Traditional)": "1 items (84 items missing)",
+            "Japanese": "1 items (84 items missing)",
+            "Korean": "1 items (84 items missing)",
+            "Russian": "53 items (32 items missing)",
+            "Portuguese": "0 items (85 items missing)"
         },
         {
             "English": "acorns and pine cones",
@@ -20213,6 +20259,62 @@
             "English": "New Year's Eve (Russia)",
             "English (Europe)": "New Year's Eve (Russia)",
             "German": "Neujahresabend (Russland)"
+        },
+        {
+            "English": "Spring (Shopping)",
+            "English (Europe)": "Spring (Shopping)"
+        },
+        {
+            "English": "Summer (Shopping)",
+            "English (Europe)": "Summer (Shopping)"
+        },
+        {
+            "English": "Fall (Shopping)",
+            "English (Europe)": "Fall (Shopping)"
+        },
+        {
+            "English": "Winter (Shopping)",
+            "English (Europe)": "Winter (Shopping)"
+        },
+        {
+            "English": "Azalea"
+        },
+        {
+            "English": "Hydrangea"
+        },
+        {
+            "English": "Plumeria"
+        },
+        {
+            "English": "Hibiscus"
+        },
+        {
+            "English": "Tea Olive"
+        },
+        {
+            "English": "Holly"
+        },
+        {
+            "English": "Nook Friday"
+        },
+        {
+            "English": "Countdown"
+        },
+        {
+            "English": "Bug-Off",
+            "English (Europe)": "Bug-Off",
+            "French": "Insectosafari",
+            "French (US)": "Insectosafari",
+            "German": "Insektikus-Turnier",
+            "Spanish": "Caza de Bichos",
+            "Spanish (US)": "Caza de Insectos",
+            "Italian": "Insettomania",
+            "Dutch": "Beestjesbeker",
+            "Chinese": "捕虫大赛",
+            "Chinese (Traditional)": "捕蟲大會",
+            "Japanese": "ムシとりたいかい大会",
+            "Korean": "곤충채집대회",
+            "Russian": "Турнир «Мастер сачка»"
         }
     ],
     "Missing Items": [

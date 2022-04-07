@@ -15295,6 +15295,52 @@
       "Russian": "Инвертировать чеки",
       "Italian": "Inverti i controlli",
       "Portuguese": "Inverter cheques"
+    },
+    "add all to museum?": {
+      "English": "Add All to Museum?",
+      "English (Europe)": "Add All to Museum?"
+    },
+    "remove all from museum?": {
+      "English": "Remove All From Museum?",
+      "English (Europe)": "Remove All From Museum?"
+    },
+    "add all items currently listed to the museum?": {
+      "English": "Add all items currently listed to the museum?",
+      "English (Europe)": "Add all items currently listed to the museum?"
+    },
+    "remove all items currently listed from the museum?": {
+      "English": "Remove all items currently listed from the museum?",
+      "English (Europe)": "Remove all items currently listed from the museum?"
+    },
+    "add all": {
+      "English": "Add All",
+      "English (Europe)": "Add All"
+    },
+    "remove all": {
+      "English": "Remove All",
+      "English (Europe)": "Remove All"
+    },
+    "add all to museum": {
+      "English": "Add all to museum",
+      "English (Europe)": "Add all to museum"
+    },
+    "remove all from museum": {
+      "English": "Remove all from museum",
+      "English (Europe)": "Remove all from museum"
+    },
+    "calendar season": {
+      "English": "Calendar Season",
+      "English (Europe)": "Calendar Season"
+    },
+    "basegame event": {
+      "English": "Basegame Event",
+      "English (Europe)": "Basegame Event"
+    },
+    "weeks before": {
+      "English": "Weeks Before"
+    },
+    "days before": {
+      "English": "Days Before"
     }
   },
   "Sources": {
@@ -19095,10 +19141,7 @@
       "German": "Shichi-Go-San"
     },
     "nook friday": {
-      "English": "Nook Friday",
-      "English (Europe)": "Nook Friday",
-      "German": "Nook Friday",
-      "Dutch": "Nook Vrijdag"
+      "English": "Nook Friday"
     },
     "winter solstice (northern hemisphere) (2)": {
       "English": "Winter Solstice (northern hemisphere) (2)",
@@ -19160,6 +19203,59 @@
       "English": "New Year's Eve (Russia)",
       "English (Europe)": "New Year's Eve (Russia)",
       "German": "Neujahresabend (Russland)"
+    },
+    "spring (shopping)": {
+      "English": "Spring (Shopping)",
+      "English (Europe)": "Spring (Shopping)"
+    },
+    "summer (shopping)": {
+      "English": "Summer (Shopping)",
+      "English (Europe)": "Summer (Shopping)"
+    },
+    "fall (shopping)": {
+      "English": "Fall (Shopping)",
+      "English (Europe)": "Fall (Shopping)"
+    },
+    "winter (shopping)": {
+      "English": "Winter (Shopping)",
+      "English (Europe)": "Winter (Shopping)"
+    },
+    "azalea": {
+      "English": "Azalea"
+    },
+    "hydrangea": {
+      "English": "Hydrangea"
+    },
+    "plumeria": {
+      "English": "Plumeria"
+    },
+    "hibiscus": {
+      "English": "Hibiscus"
+    },
+    "tea olive": {
+      "English": "Tea Olive"
+    },
+    "holly": {
+      "English": "Holly"
+    },
+    "countdown": {
+      "English": "Countdown"
+    },
+    "bug-off": {
+      "English": "Bug-Off",
+      "English (Europe)": "Bug-Off",
+      "French": "Insectosafari",
+      "French (US)": "Insectosafari",
+      "German": "Insektikus-Turnier",
+      "Spanish": "Caza de Bichos",
+      "Spanish (US)": "Caza de Insectos",
+      "Italian": "Insettomania",
+      "Dutch": "Beestjesbeker",
+      "Chinese": "捕虫大赛",
+      "Chinese (Traditional)": "捕蟲大會",
+      "Japanese": "ムシとりたいかい大会",
+      "Korean": "곤충채집대회",
+      "Russian": "Турнир «Мастер сачка»"
     }
   },
   "Missing Items": {
