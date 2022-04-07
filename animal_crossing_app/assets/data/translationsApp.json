@@ -570,21 +570,21 @@
     ],
     "Main": [
         {
-            "English": "1162 items",
-            "English (Europe)": "1160 items (2 items missing)",
-            "French": "1126 items (36 items missing)",
-            "French (US)": "1126 items (36 items missing)",
-            "German": "1145 items (17 items missing)",
-            "Spanish": "1150 items (12 items missing)",
-            "Spanish (US)": "1122 items (40 items missing)",
-            "Russian": "1137 items (25 items missing)",
-            "Italian": "1136 items (26 items missing)",
-            "Dutch": "1081 items (81 items missing)",
-            "Chinese": "903 items (259 items missing)",
-            "Chinese (Traditional)": "7 items (1155 items missing)",
-            "Japanese": "7 items (1155 items missing)",
-            "Korean": "7 items (1155 items missing)",
-            "Portuguese": "1134 items (28 items missing)"
+            "English": "1166 items",
+            "English (Europe)": "1166 items",
+            "French": "1142 items (24 items missing)",
+            "French (US)": "1142 items (24 items missing)",
+            "German": "1161 items (5 items missing)",
+            "Spanish": "1166 items",
+            "Spanish (US)": "1138 items (28 items missing)",
+            "Russian": "1153 items (13 items missing)",
+            "Italian": "1152 items (14 items missing)",
+            "Dutch": "1081 items (85 items missing)",
+            "Chinese": "903 items (263 items missing)",
+            "Chinese (Traditional)": "7 items (1159 items missing)",
+            "Japanese": "7 items (1159 items missing)",
+            "Korean": "7 items (1159 items missing)",
+            "Portuguese": "1150 items (16 items missing)"
         },
         {
             "English": "Home",
@@ -16269,49 +16269,195 @@
         },
         {
             "English": "Add All to Museum?",
-            "English (Europe)": "Add All to Museum?"
+            "English (Europe)": "Add All to Museum?",
+            "French": "Tout ajouter au musée ?",
+            "French (US)": "Tout ajouter au musée ?",
+            "German": "Alle zum Museum hinzufügen?",
+            "Spanish": "¿Agregar todo al museo?",
+            "Spanish (US)": "¿Agregar todo al museo?",
+            "Russian": "Добавить все в музей?",
+            "Italian": "Aggiungere tutto al museo?",
+            "Portuguese": "Adicionar tudo ao museu?"
         },
         {
             "English": "Remove All From Museum?",
-            "English (Europe)": "Remove All From Museum?"
+            "English (Europe)": "Remove All From Museum?",
+            "French": "Supprimer tout du musée ?",
+            "French (US)": "Supprimer tout du musée ?",
+            "German": "Alle aus dem Museum entfernen?",
+            "Spanish": "¿Quitar todo del museo?",
+            "Spanish (US)": "¿Quitar todo del museo?",
+            "Russian": "Удалить все из музея?",
+            "Italian": "Rimuovere tutto dal museo?",
+            "Portuguese": "Remover tudo do museu?"
         },
         {
             "English": "Add all items currently listed to the museum?",
-            "English (Europe)": "Add all items currently listed to the museum?"
+            "English (Europe)": "Add all items currently listed to the museum?",
+            "French": "Ajouter tous les objets actuellement répertoriés au musée ?",
+            "French (US)": "Ajouter tous les objets actuellement répertoriés au musée ?",
+            "German": "Alle derzeit aufgelisteten Objekte zum Museum hinzufügen?",
+            "Spanish": "¿Agregar todos los elementos actualmente enumerados al museo?",
+            "Spanish (US)": "¿Agregar todos los elementos actualmente enumerados al museo?",
+            "Russian": "Добавить все предметы, перечисленные в настоящее время в музее?",
+            "Italian": "Aggiungere tutti gli oggetti attualmente elencati al museo?",
+            "Portuguese": "Adicionar todos os itens atualmente listados ao museu?"
         },
         {
             "English": "Remove all items currently listed from the museum?",
-            "English (Europe)": "Remove all items currently listed from the museum?"
+            "English (Europe)": "Remove all items currently listed from the museum?",
+            "French": "Supprimer tous les objets actuellement répertoriés du musée ?",
+            "French (US)": "Supprimer tous les objets actuellement répertoriés du musée ?",
+            "German": "Alle aktuell aufgelisteten Objekte aus dem Museum entfernen?",
+            "Spanish": "¿Eliminar todos los elementos enumerados actualmente del museo?",
+            "Spanish (US)": "¿Eliminar todos los elementos enumerados actualmente del museo?",
+            "Russian": "Удалить из музея все предметы, перечисленные в настоящее время?",
+            "Italian": "Rimuovere tutti gli oggetti attualmente elencati dal museo?",
+            "Portuguese": "Remover todos os itens atualmente listados do museu?"
         },
         {
             "English": "Add All",
-            "English (Europe)": "Add All"
+            "English (Europe)": "Add All",
+            "French": "Tout ajouter",
+            "French (US)": "Tout ajouter",
+            "German": "Füge alle Hinzu",
+            "Spanish": "Añadir todo",
+            "Spanish (US)": "Añadir todo",
+            "Russian": "Добавить все",
+            "Italian": "Aggiungi tutto",
+            "Portuguese": "Adicionar tudo"
         },
         {
             "English": "Remove All",
-            "English (Europe)": "Remove All"
+            "English (Europe)": "Remove All",
+            "French": "Enlever tout",
+            "French (US)": "Enlever tout",
+            "German": "Alles entfernen",
+            "Spanish": "Eliminar todo",
+            "Spanish (US)": "Eliminar todo",
+            "Russian": "Убрать все",
+            "Italian": "Rimuovi tutto",
+            "Portuguese": "Deletar tudo"
         },
         {
             "English": "Add all to museum",
-            "English (Europe)": "Add all to museum"
+            "English (Europe)": "Add all to museum",
+            "French": "Tout ajouter au musée",
+            "French (US)": "Tout ajouter au musée",
+            "German": "Alle zum Museum hinzufügen",
+            "Spanish": "Agregar todo al museo",
+            "Spanish (US)": "Agregar todo al museo",
+            "Russian": "Добавить все в музей",
+            "Italian": "Aggiungi tutto al museo",
+            "Portuguese": "Adicionar tudo ao museu"
         },
         {
             "English": "Remove all from museum",
-            "English (Europe)": "Remove all from museum"
+            "English (Europe)": "Remove all from museum",
+            "French": "Supprimer tout du musée",
+            "French (US)": "Supprimer tout du musée",
+            "German": "Alle aus dem Museum entfernen",
+            "Spanish": "Eliminar todo del museo",
+            "Spanish (US)": "Eliminar todo del museo",
+            "Russian": "Удалить все из музея",
+            "Italian": "Rimuovi tutto dal museo",
+            "Portuguese": "Remover tudo do museu"
         },
         {
             "English": "Calendar Season",
-            "English (Europe)": "Calendar Season"
+            "English (Europe)": "Calendar Season",
+            "French": "Calendrier Saison",
+            "French (US)": "Calendrier Saison",
+            "German": "Kalender Saison",
+            "Spanish": "Calendario Temporada",
+            "Spanish (US)": "Calendario Temporada",
+            "Russian": "Календарный сезон",
+            "Italian": "Stagione del calendario",
+            "Portuguese": "Temporada do calendário"
         },
         {
             "English": "Basegame Event",
-            "English (Europe)": "Basegame Event"
+            "English (Europe)": "Basegame Event",
+            "French": "Événement du jeu de base",
+            "French (US)": "Événement du jeu de base",
+            "German": "Basisspiel-Event",
+            "Spanish": "Evento del juego base",
+            "Spanish (US)": "Evento del juego base",
+            "Russian": "Событие основной игры",
+            "Italian": "Evento di base",
+            "Portuguese": "Evento do jogo base"
         },
         {
-            "English": "Weeks Before"
+            "English": "Weeks Before",
+            "English (Europe)": "Weeks Before",
+            "French": "Semaines avant",
+            "French (US)": "Semaines avant",
+            "German": "Wochen vorher",
+            "Spanish": "semanas antes",
+            "Spanish (US)": "semanas antes",
+            "Russian": "За несколько недель до",
+            "Italian": "Settimane prima",
+            "Portuguese": "Semanas antes"
         },
         {
-            "English": "Days Before"
+            "English": "Days Before",
+            "English (Europe)": "Days Before",
+            "French": "Jours avant",
+            "French (US)": "Jours avant",
+            "German": "Tage zuvor",
+            "Spanish": "Días antes",
+            "Spanish (US)": "Días antes",
+            "Russian": "За несколько дней до",
+            "Italian": "Giorni prima",
+            "Portuguese": "Dias antes"
+        },
+        {
+            "English": "Spring",
+            "English (Europe)": "Spring",
+            "French": "Le printemps",
+            "French (US)": "Le printemps",
+            "German": "Frühling",
+            "Spanish": "Primavera",
+            "Spanish (US)": "Primavera",
+            "Russian": "Весна",
+            "Italian": "Primavera",
+            "Portuguese": "Mola"
+        },
+        {
+            "English": "Summer",
+            "English (Europe)": "Summer",
+            "French": "L'été",
+            "French (US)": "L'été",
+            "German": "Sommer",
+            "Spanish": "El verano",
+            "Spanish (US)": "El verano",
+            "Russian": "Лето",
+            "Italian": "Estate",
+            "Portuguese": "Verão"
+        },
+        {
+            "English": "Fall",
+            "English (Europe)": "Fall",
+            "French": "Tomber",
+            "French (US)": "Tomber",
+            "German": "Herbst",
+            "Spanish": "Otoño",
+            "Spanish (US)": "Otoño",
+            "Russian": "Падать",
+            "Italian": "Cade",
+            "Portuguese": "Cair"
+        },
+        {
+            "English": "Winter",
+            "English (Europe)": "Winter",
+            "French": "Hiver",
+            "French (US)": "Hiver",
+            "German": "Winter",
+            "Spanish": "Invierno",
+            "Spanish (US)": "Invierno",
+            "Russian": "Зима",
+            "Italian": "Inverno",
+            "Portuguese": "Inverno"
         }
     ],
     "Sources": [

@@ -252,7 +252,7 @@ export function getEventsDay(date, eventSections, showEventsIfInRange){
           important: isImportant
         });
         if(eventSections["App notifications"]){
-          schedulePushNotification(date,eventSections["Set Notification Time"],capitalize(eventName),attemptToTranslate(event["Type"]));
+          schedulePushNotification(date,eventSections["Set Notification Time"],capitalize(eventName),attemptToTranslate(event["Start Time"]!==undefined && event["End Time"]!==undefined && event["Start Time"]!=="5:00 AM" ? convertTimeTo24Hours(event["Start Time"])+" - "+convertTimeTo24Hours(event["End Time"]) : event["Type"]));
         }
       } else if(eventSections["Show End Day of Events"] && isDateInRange(event[eventDateKey], date.getFullYear(), date, "endOnly")){
         totalEvents.push({

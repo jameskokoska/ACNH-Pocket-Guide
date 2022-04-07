@@ -1788,6 +1788,11 @@ export function convertTimeTo24Hours(time){
       return currentHour + ":" + currentMinutes
     }
   } else {
-    return time
+    let currentHour = time.toString().split(":")[0].toString()
+    let currentMinutes = time.toString().split(":")[1].toString().substring(0,2)
+    let meridian = time.toString().split(":")[1].toString().slice(-2)
+    if(currentMinutes==="00"){
+      return currentHour + " " + meridian
+    }
   }
 }
