@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React, {Component, useEffect, useState} from 'react';
 import {Animated, FlatList, TouchableNativeFeedback, Dimensions, Vibration, Image, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import TextFont from '../components/TextFont';
 import colors from '../Colors'
 import {getPhoto} from "../components/GetPhoto"
 import {doWeSwapDate, getMonthFromString, getCurrentDateObject, addDays, getMonthShort, getDateStringMonthDay, getDateStringWeekMonthDay, getMonth, getWeekDayShort} from "../components/DateFunctions"
-import {getEventName, removeAccents, translateDateRange, attemptToTranslateItem, capitalize, getSettingsString, attemptToTranslate, translateBirthday} from "../LoadJsonData"
-import {EventContainer, getEventsDay, getSpecialOccurrenceDate} from "../components/EventContainer"
+import {getEventName, removeAccents, translateDateRange, attemptToTranslateItem, capitalize, getSettingsString, attemptToTranslate, translateBirthday, allEventItemsCheck, convertTimeTo24Hours} from "../LoadJsonData"
+import {EventContainer, getEventsDay, getSpecialOccurrenceDate, replaceEventNameForFilter} from "../components/EventContainer"
 import FastImage from '../components/FastImage';
 import {Header, MailLink, ExternalLink, SubHeader, Paragraph, HeaderNote} from "../components/Formattings"
 import HeaderFlatList from "../components/Header"
@@ -14,6 +14,8 @@ import {specialEvents, isDateInRange} from "../components/DateFunctions"
 import * as RootNavigation from '../RootNavigation.js';
 import  {ScrollView} from 'react-native-gesture-handler'
 import LottieView from 'lottie-react-native';
+import Check from '../components/Check';
+import { useFocusEffect, useIsFocused } from '@react-navigation/native';
 
 //Note: to use Wix Agenda React Native - might to manually install package from repo as some resources may be missing from npm install
 
@@ -419,46 +421,87 @@ class AllEventsList extends Component{
   }
 }
 
-class RenderItemFlatList extends Component{
-  render(){
-    var item = this.props.item;
-    var image = <View/>
-    image = <Image style={{width: 50, height: 50, resizeMode:'contain',}} source={getPhoto(item["Name"].toString().toLowerCase(), item["Type"].toString().toLowerCase())}/>
-    var date = "";
-    if(item["Dates (Northern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")==="true"){
-      date = item["Dates (Northern Hemisphere)"];
-    } else if (item["Dates (Southern Hemisphere)"]!=="NA" && getSettingsString("settingsNorthernHemisphere")!=="true"){
-      date = item["Dates (Southern Hemisphere)"];
-    } 
-    date = date.replace(/[^\x00-\x7F]/g, "-");
-    date = date.replace("--", "- ");
-    var dateComp;
-    if(date!=="")
-      dateComp = <TextFont style={{marginTop: 3,fontSize: 18,color: colors.textBlack[global.darkMode]}}>{capitalize(translateDateRange(date))}</TextFont>
-    else 
-      dateComp = <View/>
-    
-    var eventName = getEventName(item["Name"]);
-    return(
-      <TouchableNativeFeedback 
-        background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+(item["Name"]===undefined?"00":"AF"), false)}
-        onPress={()=>{
-          if(item["Name"]!==undefined){
-            // this.props.setPage(23, true, item["Name"])
-            RootNavigation.navigate('23', {propsPassed:item["Name"]});
-          }
-        }}
-      >
-        <View style={{width:Dimensions.get('window').width-20, flex: 1, backgroundColor: colors.white[global.darkMode], padding: 20, marginHorizontal: 10, marginVertical: 5,  flexDirection:"row", alignItems: 'center', borderRadius: 10}}>
-          {image}
-          <View style={{flex: 1, marginLeft:15}}>
-            <TextFont bold={true} style={{fontSize: 20,color: colors.textBlack[global.darkMode]}}>{capitalize(eventName)}</TextFont>
-            <TextFont style={{marginTop: 3,fontSize: 18,color: colors.textBlack[global.darkMode]}}>{capitalize(item["Type"])}</TextFont>
-            {dateComp}
-          </View>
-        </View>
-      </TouchableNativeFeedback>
-    )
+
+
+export function RenderItemFlatList(props){
+
+  const [allCollected, setAllCollected] = useState(false);
+  let onlyUpdateMe = false
+  let eventFilter = replaceEventNameForFilter(props.item["Name"])
+
+  useFocusEffect(
+    React.useCallback(() => {
+      if(onlyUpdateMe){
+        setTimeout(()=>{
+          let result = allEventItemsCheck(eventFilter)
+          setAllCollected(result)
+        }, 10);
+        onlyUpdateMe = false
+      }
+    },)
+  );
+
+  useEffect(() => {
+    setTimeout(()=>{
+      let result = allEventItemsCheck(eventFilter)
+      setAllCollected(result)
+    }, 10);
+    onlyUpdateMe = false
+  }, [])
+  
+  var item = props.item;
+  var image = <View/>
+  image = <Image style={{width: 50, height: 50, resizeMode:'contain',}} source={getPhoto(item["Name"].toString().toLowerCase(), item["Type"].toString().toLowerCase())}/>
+  var date = "";
+  if(item[getCurrentDateObject().getFullYear().toString() + " NH"]!=="NA" && getSettingsString("settingsNorthernHemisphere")==="true"){
+    date = item[getCurrentDateObject().getFullYear().toString() + " NH"];
+  } else if (item[getCurrentDateObject().getFullYear().toString() + " SH"]!=="NA" && getSettingsString("settingsNorthernHemisphere")!=="true"){
+    date = item[getCurrentDateObject().getFullYear().toString() + " SH"];
+  } 
+  if(date===undefined){
+    date = ""
   }
+  date = date.replace(/[^\x00-\x7F]/g, "-");
+  date = date.replace("--", "- ");
+  var dateComp;
+  if(date!=="")
+    dateComp = <TextFont style={{marginTop: 2,fontSize: 18,color: colors.textBlack[global.darkMode]}}>{capitalize(translateDateRange(date))}</TextFont>
+  else 
+    dateComp = <View/>
+
+  let timeComp
+  let time = item["Start Time"]!==undefined && item["End Time"]!==undefined && item["Start Time"]!=="5:00 AM" ? convertTimeTo24Hours(item["Start Time"])+" - "+convertTimeTo24Hours(item["End Time"]) : ""
+  if(time!==""){
+    timeComp = <TextFont style={{marginTop: -2,fontSize: 15,color: colors.textBlack[global.darkMode]}}>{time}</TextFont>
+  } else {
+    timeComp = <View/>
+  }
+  
+  var eventName = getEventName(item["Name"]);
+
+  return(
+    <TouchableNativeFeedback 
+      background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+(item["Name"]===undefined?"00":"AF"), false)}
+      onPress={()=>{
+        if(item["Name"]!==undefined){
+          RootNavigation.navigate('23', {propsPassed:replaceEventNameForFilter(item["Name"])});
+          onlyUpdateMe = true
+        }
+      }}
+    >
+      <View style={{width:Dimensions.get('window').width-20, flex: 1, backgroundColor: colors.white[global.darkMode], padding: 20, marginHorizontal: 10, marginVertical: 5,  flexDirection:"row", alignItems: 'center', borderRadius: 10}}>
+        <View style={{position:'absolute', right: -18, top: -18, zIndex:10}}>
+          {allCollected===true?<Check play={allCollected} width={53} height={53}/>:<View/>}
+        </View>
+        {image}
+        <View style={{flex: 1, marginLeft:15}}>
+          <TextFont bold={true} style={{fontSize: 20,color: colors.textBlack[global.darkMode]}}>{capitalize(eventName)}</TextFont>
+          <TextFont style={{marginTop: 3,fontSize: 18,color: colors.textBlack[global.darkMode]}}>{capitalize(item["Type"])}</TextFont>
+          {dateComp}
+          {timeComp}
+        </View>
+      </View>
+    </TouchableNativeFeedback>
+  )
   
 }

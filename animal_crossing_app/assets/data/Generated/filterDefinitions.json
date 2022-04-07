@@ -345,8 +345,8 @@
           "id": "Season/Event:Bunny Day"
         },
         {
-          "name": "Bunny Day (ready days)",
-          "id": "Season/Event:Bunny Day (ready days)"
+          "name": "Bunny Day (days before)",
+          "id": "Season/Event:Bunny Day (days before)"
         },
         {
           "name": "Cancer",
@@ -369,8 +369,8 @@
           "id": "Season/Event:Halloween"
         },
         {
-          "name": "Halloween (ready days)",
-          "id": "Season/Event:Halloween (ready days)"
+          "name": "Halloween (days before)",
+          "id": "Season/Event:Halloween (days before)"
         },
         {
           "name": "Happy Home Paradise",
@@ -387,10 +387,6 @@
         {
           "name": "NA",
           "id": "Season/Event:NA"
-        },
-        {
-          "name": "Nature Day",
-          "id": "Season/Event:Nature Day"
         },
         {
           "name": "Pisces",
@@ -421,8 +417,8 @@
           "id": "Season/Event:Turkey Day"
         },
         {
-          "name": "Turkey Day (shopping days)",
-          "id": "Season/Event:Turkey Day (shopping days)"
+          "name": "Turkey Day (days after)",
+          "id": "Season/Event:Turkey Day (days after)"
         },
         {
           "name": "Virgo",
@@ -4601,16 +4597,28 @@
           "id": "Season/Event:Birthday"
         },
         {
-          "name": "Bug-Off",
-          "id": "Season/Event:Bug-Off"
+          "name": "Bug-Off (1)",
+          "id": "Season/Event:Bug-Off (1)"
+        },
+        {
+          "name": "Bug-Off (2)",
+          "id": "Season/Event:Bug-Off (2)"
+        },
+        {
+          "name": "Bug-Off (3)",
+          "id": "Season/Event:Bug-Off (3)"
+        },
+        {
+          "name": "Bug-Off (4)",
+          "id": "Season/Event:Bug-Off (4)"
         },
         {
           "name": "Bunny Day",
           "id": "Season/Event:Bunny Day"
         },
         {
-          "name": "Bunny Day (ready days)",
-          "id": "Season/Event:Bunny Day (ready days)"
+          "name": "Bunny Day (days before)",
+          "id": "Season/Event:Bunny Day (days before)"
         },
         {
           "name": "Cancer",
@@ -4657,12 +4665,24 @@
           "id": "Season/Event:Festivale"
         },
         {
-          "name": "Festivale (ready days)",
-          "id": "Season/Event:Festivale (ready days)"
+          "name": "Festivale (days before)",
+          "id": "Season/Event:Festivale (days before)"
         },
         {
-          "name": "Fishing Tourney",
-          "id": "Season/Event:Fishing Tourney"
+          "name": "Fishing Tourney (Fall)",
+          "id": "Season/Event:Fishing Tourney (Fall)"
+        },
+        {
+          "name": "Fishing Tourney (Spring)",
+          "id": "Season/Event:Fishing Tourney (Spring)"
+        },
+        {
+          "name": "Fishing Tourney (Summer)",
+          "id": "Season/Event:Fishing Tourney (Summer)"
+        },
+        {
+          "name": "Fishing Tourney (Winter)",
+          "id": "Season/Event:Fishing Tourney (Winter)"
         },
         {
           "name": "Gemini",
@@ -4677,8 +4697,8 @@
           "id": "Season/Event:Halloween"
         },
         {
-          "name": "Halloween (ready days)",
-          "id": "Season/Event:Halloween (ready days)"
+          "name": "Halloween (days before)",
+          "id": "Season/Event:Halloween (days before)"
         },
         {
           "name": "Happy Home Paradise",
@@ -4701,8 +4721,8 @@
           "id": "Season/Event:Libra"
         },
         {
-          "name": "Lunar New Year",
-          "id": "Season/Event:Lunar New Year"
+          "name": "Lunar New Year (Nook Shopping)",
+          "id": "Season/Event:Lunar New Year (Nook Shopping)"
         },
         {
           "name": "Marine Day",
@@ -4713,12 +4733,8 @@
           "id": "Season/Event:May Day"
         },
         {
-          "name": "Moon-Viewing Day (2)",
-          "id": "Season/Event:Moon-Viewing Day (2)"
-        },
-        {
-          "name": "Moon-Viewing Day (3)",
-          "id": "Season/Event:Moon-Viewing Day (3)"
+          "name": "Moon-Viewing Day",
+          "id": "Season/Event:Moon-Viewing Day"
         },
         {
           "name": "Mother's Day",
@@ -4733,32 +4749,72 @@
           "id": "Season/Event:Nanakusa Gayu"
         },
         {
-          "name": "Nature Day (Nook Shopping)",
-          "id": "Season/Event:Nature Day (Nook Shopping)"
+          "name": "Nature Day",
+          "id": "Season/Event:Nature Day"
         },
         {
-          "name": "New Year's Day",
-          "id": "Season/Event:New Year's Day"
+          "name": "New Year's Day (2021)",
+          "id": "Season/Event:New Year's Day (2021)"
         },
         {
-          "name": "New Year's Day (Asia)",
-          "id": "Season/Event:New Year's Day (Asia)"
+          "name": "New Year's Day (2022)",
+          "id": "Season/Event:New Year's Day (2022)"
         },
         {
-          "name": "New Year's Day (Korea)",
-          "id": "Season/Event:New Year's Day (Korea)"
+          "name": "New Year's Day (Nook Shopping)",
+          "id": "Season/Event:New Year's Day (Nook Shopping)"
         },
         {
-          "name": "New Year's Day (World)",
-          "id": "Season/Event:New Year's Day (World)"
+          "name": "New Year's Day (Year of the Dog)",
+          "id": "Season/Event:New Year's Day (Year of the Dog)"
+        },
+        {
+          "name": "New Year's Day (Year of the Dragon)",
+          "id": "Season/Event:New Year's Day (Year of the Dragon)"
+        },
+        {
+          "name": "New Year's Day (Year of the Horse)",
+          "id": "Season/Event:New Year's Day (Year of the Horse)"
+        },
+        {
+          "name": "New Year's Day (Year of the Monkey)",
+          "id": "Season/Event:New Year's Day (Year of the Monkey)"
+        },
+        {
+          "name": "New Year's Day (Year of the Ox)",
+          "id": "Season/Event:New Year's Day (Year of the Ox)"
+        },
+        {
+          "name": "New Year's Day (Year of the Pig)",
+          "id": "Season/Event:New Year's Day (Year of the Pig)"
+        },
+        {
+          "name": "New Year's Day (Year of the Rabbit)",
+          "id": "Season/Event:New Year's Day (Year of the Rabbit)"
+        },
+        {
+          "name": "New Year's Day (Year of the Rat)",
+          "id": "Season/Event:New Year's Day (Year of the Rat)"
+        },
+        {
+          "name": "New Year's Day (Year of the Rooster)",
+          "id": "Season/Event:New Year's Day (Year of the Rooster)"
+        },
+        {
+          "name": "New Year's Day (Year of the Sheep)",
+          "id": "Season/Event:New Year's Day (Year of the Sheep)"
+        },
+        {
+          "name": "New Year's Day (Year of the Snake)",
+          "id": "Season/Event:New Year's Day (Year of the Snake)"
+        },
+        {
+          "name": "New Year's Day (Year of the Tiger)",
+          "id": "Season/Event:New Year's Day (Year of the Tiger)"
         },
         {
           "name": "New Year's Eve",
           "id": "Season/Event:New Year's Eve"
-        },
-        {
-          "name": "New Year's Eve (Russia)",
-          "id": "Season/Event:New Year's Eve (Russia)"
         },
         {
           "name": "Nochevieja",
@@ -4785,20 +4841,8 @@
           "id": "Season/Event:Shamrock Day"
         },
         {
-          "name": "Shōgatsu (1)",
-          "id": "Season/Event:Shōgatsu (1)"
-        },
-        {
-          "name": "Shōgatsu (2)",
-          "id": "Season/Event:Shōgatsu (2)"
-        },
-        {
-          "name": "Shōgatsu (3)",
-          "id": "Season/Event:Shōgatsu (3)"
-        },
-        {
-          "name": "Shōgatsu (4)",
-          "id": "Season/Event:Shōgatsu (4)"
+          "name": "Shōgatsu",
+          "id": "Season/Event:Shōgatsu"
         },
         {
           "name": "Silvester",
@@ -4809,16 +4853,12 @@
           "id": "Season/Event:Singmogil"
         },
         {
-          "name": "Summer Solstice (northern hemisphere) (2)",
-          "id": "Season/Event:Summer Solstice (northern hemisphere) (2)"
+          "name": "Summer (shopping)",
+          "id": "Season/Event:Summer (shopping)"
         },
         {
-          "name": "Summer shopping",
-          "id": "Season/Event:Summer shopping"
-        },
-        {
-          "name": "Super Mario Bros.",
-          "id": "Season/Event:Super Mario Bros."
+          "name": "Summer Solstice",
+          "id": "Season/Event:Summer Solstice"
         },
         {
           "name": "Tanabata",
@@ -4837,20 +4877,20 @@
           "id": "Season/Event:Toy Day (day after)"
         },
         {
-          "name": "Toy Day (ready days phase 1)",
-          "id": "Season/Event:Toy Day (ready days phase 1)"
+          "name": "Toy Day (days before)",
+          "id": "Season/Event:Toy Day (days before)"
         },
         {
-          "name": "Toy Day (ready days phase 2)",
-          "id": "Season/Event:Toy Day (ready days phase 2)"
+          "name": "Toy Day (weeks before)",
+          "id": "Season/Event:Toy Day (weeks before)"
         },
         {
           "name": "Turkey Day",
           "id": "Season/Event:Turkey Day"
         },
         {
-          "name": "Turkey Day (shopping days)",
-          "id": "Season/Event:Turkey Day (shopping days)"
+          "name": "Turkey Day (days after)",
+          "id": "Season/Event:Turkey Day (days after)"
         },
         {
           "name": "Valentine's Day (Nook Shopping)",
@@ -4865,20 +4905,16 @@
           "id": "Season/Event:Wedding Season"
         },
         {
-          "name": "Wedding Season (Nook Shopping 2)",
-          "id": "Season/Event:Wedding Season (Nook Shopping 2)"
+          "name": "Wedding Season (Nook Shopping)",
+          "id": "Season/Event:Wedding Season (Nook Shopping)"
         },
         {
-          "name": "Winter Solstice (northern hemisphere) (2)",
-          "id": "Season/Event:Winter Solstice (northern hemisphere) (2)"
+          "name": "Winter (shopping)",
+          "id": "Season/Event:Winter (shopping)"
         },
         {
-          "name": "Winter Solstice (northern hemisphere) (3)",
-          "id": "Season/Event:Winter Solstice (northern hemisphere) (3)"
-        },
-        {
-          "name": "Winter shopping",
-          "id": "Season/Event:Winter shopping"
+          "name": "Winter Solstice",
+          "id": "Season/Event:Winter Solstice"
         },
         {
           "name": "acorns and pine cones",
@@ -4911,6 +4947,10 @@
         {
           "name": "young spring bamboo",
           "id": "Season/Event:young spring bamboo"
+        },
+        {
+          "name": "Ōmisoka",
+          "id": "Season/Event:Ōmisoka"
         },
         {
           "name": "π Day",
@@ -7195,16 +7235,28 @@
           "id": "Season/Event:Birthday"
         },
         {
-          "name": "Bug-Off",
-          "id": "Season/Event:Bug-Off"
+          "name": "Bug-Off (1)",
+          "id": "Season/Event:Bug-Off (1)"
+        },
+        {
+          "name": "Bug-Off (2)",
+          "id": "Season/Event:Bug-Off (2)"
+        },
+        {
+          "name": "Bug-Off (3)",
+          "id": "Season/Event:Bug-Off (3)"
+        },
+        {
+          "name": "Bug-Off (4)",
+          "id": "Season/Event:Bug-Off (4)"
         },
         {
           "name": "Bunny Day",
           "id": "Season/Event:Bunny Day"
         },
         {
-          "name": "Bunny Day (ready days)",
-          "id": "Season/Event:Bunny Day (ready days)"
+          "name": "Bunny Day (days before)",
+          "id": "Season/Event:Bunny Day (days before)"
         },
         {
           "name": "Carnival of Venice",
@@ -7223,32 +7275,56 @@
           "id": "Season/Event:Cowherd & Weaver Girl Day"
         },
         {
-          "name": "Fall shopping",
-          "id": "Season/Event:Fall shopping"
+          "name": "Fall (shopping)",
+          "id": "Season/Event:Fall (shopping)"
         },
         {
-          "name": "Father's Day (2)",
-          "id": "Season/Event:Father's Day (2)"
+          "name": "Father's Day",
+          "id": "Season/Event:Father's Day"
         },
         {
           "name": "Festivale",
           "id": "Season/Event:Festivale"
         },
         {
-          "name": "Festivale (ready days)",
-          "id": "Season/Event:Festivale (ready days)"
+          "name": "Festivale (days before)",
+          "id": "Season/Event:Festivale (days before)"
         },
         {
-          "name": "Festive shopping",
-          "id": "Season/Event:Festive shopping"
+          "name": "Fireworks Show (1)",
+          "id": "Season/Event:Fireworks Show (1)"
         },
         {
-          "name": "Fireworks Show",
-          "id": "Season/Event:Fireworks Show"
+          "name": "Fireworks Show (2)",
+          "id": "Season/Event:Fireworks Show (2)"
         },
         {
-          "name": "Fishing Tourney",
-          "id": "Season/Event:Fishing Tourney"
+          "name": "Fireworks Show (3)",
+          "id": "Season/Event:Fireworks Show (3)"
+        },
+        {
+          "name": "Fireworks Show (4)",
+          "id": "Season/Event:Fireworks Show (4)"
+        },
+        {
+          "name": "Fireworks Show (5)",
+          "id": "Season/Event:Fireworks Show (5)"
+        },
+        {
+          "name": "Fishing Tourney (Fall)",
+          "id": "Season/Event:Fishing Tourney (Fall)"
+        },
+        {
+          "name": "Fishing Tourney (Spring)",
+          "id": "Season/Event:Fishing Tourney (Spring)"
+        },
+        {
+          "name": "Fishing Tourney (Summer)",
+          "id": "Season/Event:Fishing Tourney (Summer)"
+        },
+        {
+          "name": "Fishing Tourney (Winter)",
+          "id": "Season/Event:Fishing Tourney (Winter)"
         },
         {
           "name": "Grape Harvest Festival",
@@ -7259,8 +7335,8 @@
           "id": "Season/Event:Halloween"
         },
         {
-          "name": "Halloween (ready days)",
-          "id": "Season/Event:Halloween (ready days)"
+          "name": "Halloween (days before)",
+          "id": "Season/Event:Halloween (days before)"
         },
         {
           "name": "Happy Home Paradise",
@@ -7279,40 +7355,28 @@
           "id": "Season/Event:NA"
         },
         {
-          "name": "Prom (2)",
-          "id": "Season/Event:Prom (2)"
-        },
-        {
-          "name": "Prom (Able Sisters)",
-          "id": "Season/Event:Prom (Able Sisters)"
+          "name": "Prom",
+          "id": "Season/Event:Prom"
         },
         {
           "name": "Setsubun (Able Sisters)",
           "id": "Season/Event:Setsubun (Able Sisters)"
         },
         {
-          "name": "Shamrock Day (Able Sisters)",
-          "id": "Season/Event:Shamrock Day (Able Sisters)"
+          "name": "Shamrock Day",
+          "id": "Season/Event:Shamrock Day"
         },
         {
-          "name": "Spring shopping",
-          "id": "Season/Event:Spring shopping"
+          "name": "Spring (shopping)",
+          "id": "Season/Event:Spring (shopping)"
         },
         {
-          "name": "Summer Solstice (northern hemisphere)",
-          "id": "Season/Event:Summer Solstice (northern hemisphere)"
+          "name": "Summer (shopping)",
+          "id": "Season/Event:Summer (shopping)"
         },
         {
-          "name": "Summer Solstice (southern hemisphere)",
-          "id": "Season/Event:Summer Solstice (southern hemisphere)"
-        },
-        {
-          "name": "Summer shopping",
-          "id": "Season/Event:Summer shopping"
-        },
-        {
-          "name": "Super Mario Bros.",
-          "id": "Season/Event:Super Mario Bros."
+          "name": "Summer Solstice",
+          "id": "Season/Event:Summer Solstice"
         },
         {
           "name": "Tomato Festival",
@@ -7327,28 +7391,28 @@
           "id": "Season/Event:Toy Day (day after)"
         },
         {
-          "name": "Toy Day (ready days phase 2)",
-          "id": "Season/Event:Toy Day (ready days phase 2)"
+          "name": "Toy Day (days before)",
+          "id": "Season/Event:Toy Day (days before)"
+        },
+        {
+          "name": "Toy Day (weeks before)",
+          "id": "Season/Event:Toy Day (weeks before)"
         },
         {
           "name": "Wedding Season",
           "id": "Season/Event:Wedding Season"
         },
         {
-          "name": "Wedding Season (Able Sisters)",
-          "id": "Season/Event:Wedding Season (Able Sisters)"
+          "name": "Wedding Season (Nook Shopping)",
+          "id": "Season/Event:Wedding Season (Nook Shopping)"
         },
         {
-          "name": "Winter Solstice (northern hemisphere)",
-          "id": "Season/Event:Winter Solstice (northern hemisphere)"
+          "name": "Winter (shopping)",
+          "id": "Season/Event:Winter (shopping)"
         },
         {
-          "name": "Winter Solstice (southern hemisphere)",
-          "id": "Season/Event:Winter Solstice (southern hemisphere)"
-        },
-        {
-          "name": "Winter shopping",
-          "id": "Season/Event:Winter shopping"
+          "name": "Winter Solstice",
+          "id": "Season/Event:Winter Solstice"
         },
         {
           "name": "acorns and pine cones",
@@ -8145,28 +8209,52 @@
       "id": "Season/Event",
       "children": [
         {
-          "name": "Big Game Celebration (2)",
-          "id": "Season/Event:Big Game Celebration (2)"
+          "name": "Big Game Celebration",
+          "id": "Season/Event:Big Game Celebration"
         },
         {
           "name": "Birthday",
           "id": "Season/Event:Birthday"
         },
         {
-          "name": "Bug-Off",
-          "id": "Season/Event:Bug-Off"
+          "name": "Bug-Off (1)",
+          "id": "Season/Event:Bug-Off (1)"
+        },
+        {
+          "name": "Bug-Off (2)",
+          "id": "Season/Event:Bug-Off (2)"
+        },
+        {
+          "name": "Bug-Off (3)",
+          "id": "Season/Event:Bug-Off (3)"
+        },
+        {
+          "name": "Bug-Off (4)",
+          "id": "Season/Event:Bug-Off (4)"
         },
         {
           "name": "Bunny Day",
           "id": "Season/Event:Bunny Day"
         },
         {
-          "name": "Bunny Day (ready days)",
-          "id": "Season/Event:Bunny Day (ready days)"
+          "name": "Bunny Day (days before)",
+          "id": "Season/Event:Bunny Day (days before)"
         },
         {
-          "name": "Fishing Tourney",
-          "id": "Season/Event:Fishing Tourney"
+          "name": "Fishing Tourney (Fall)",
+          "id": "Season/Event:Fishing Tourney (Fall)"
+        },
+        {
+          "name": "Fishing Tourney (Spring)",
+          "id": "Season/Event:Fishing Tourney (Spring)"
+        },
+        {
+          "name": "Fishing Tourney (Summer)",
+          "id": "Season/Event:Fishing Tourney (Summer)"
+        },
+        {
+          "name": "Fishing Tourney (Winter)",
+          "id": "Season/Event:Fishing Tourney (Winter)"
         },
         {
           "name": "Halloween",
@@ -8185,24 +8273,16 @@
           "id": "Season/Event:NA"
         },
         {
-          "name": "Prom (1)",
-          "id": "Season/Event:Prom (1)"
+          "name": "Prom",
+          "id": "Season/Event:Prom"
         },
         {
           "name": "Shamrock Day",
           "id": "Season/Event:Shamrock Day"
         },
         {
-          "name": "Summer Solstice (northern hemisphere)",
-          "id": "Season/Event:Summer Solstice (northern hemisphere)"
-        },
-        {
-          "name": "Summer Solstice (southern hemisphere)",
-          "id": "Season/Event:Summer Solstice (southern hemisphere)"
-        },
-        {
-          "name": "Super Mario Bros.",
-          "id": "Season/Event:Super Mario Bros."
+          "name": "Summer Solstice",
+          "id": "Season/Event:Summer Solstice"
         },
         {
           "name": "Turkey Day",
@@ -8213,12 +8293,8 @@
           "id": "Season/Event:Wedding Season"
         },
         {
-          "name": "Winter Solstice (northern hemisphere)",
-          "id": "Season/Event:Winter Solstice (northern hemisphere)"
-        },
-        {
-          "name": "Winter Solstice (southern hemisphere)",
-          "id": "Season/Event:Winter Solstice (southern hemisphere)"
+          "name": "Winter Solstice",
+          "id": "Season/Event:Winter Solstice"
         },
         {
           "name": "acorns and pine cones",
@@ -8261,10 +8337,6 @@
         {
           "name": "NA",
           "id": "Season/Event Exclusive:NA"
-        },
-        {
-          "name": "No",
-          "id": "Season/Event Exclusive:No"
         },
         {
           "name": "Yes",
@@ -11189,28 +11261,36 @@
           "id": "Season/Event:Aries"
         },
         {
-          "name": "Big Game Celebration (1)",
-          "id": "Season/Event:Big Game Celebration (1)"
-        },
-        {
-          "name": "Big Game Celebration (2)",
-          "id": "Season/Event:Big Game Celebration (2)"
+          "name": "Big Game Celebration",
+          "id": "Season/Event:Big Game Celebration"
         },
         {
           "name": "Birthday",
           "id": "Season/Event:Birthday"
         },
         {
-          "name": "Bug-Off",
-          "id": "Season/Event:Bug-Off"
+          "name": "Bug-Off (1)",
+          "id": "Season/Event:Bug-Off (1)"
+        },
+        {
+          "name": "Bug-Off (2)",
+          "id": "Season/Event:Bug-Off (2)"
+        },
+        {
+          "name": "Bug-Off (3)",
+          "id": "Season/Event:Bug-Off (3)"
+        },
+        {
+          "name": "Bug-Off (4)",
+          "id": "Season/Event:Bug-Off (4)"
         },
         {
           "name": "Bunny Day",
           "id": "Season/Event:Bunny Day"
         },
         {
-          "name": "Bunny Day (ready days)",
-          "id": "Season/Event:Bunny Day (ready days)"
+          "name": "Bunny Day (days before)",
+          "id": "Season/Event:Bunny Day (days before)"
         },
         {
           "name": "Cancer",
@@ -11261,36 +11341,56 @@
           "id": "Season/Event:Dragon Boat Festival"
         },
         {
-          "name": "Fall shopping",
-          "id": "Season/Event:Fall shopping"
+          "name": "Fall (shopping)",
+          "id": "Season/Event:Fall (shopping)"
         },
         {
           "name": "Father's Day",
           "id": "Season/Event:Father's Day"
         },
         {
-          "name": "Father's Day (2)",
-          "id": "Season/Event:Father's Day (2)"
-        },
-        {
           "name": "Festivale",
           "id": "Season/Event:Festivale"
         },
         {
-          "name": "Festivale (ready days)",
-          "id": "Season/Event:Festivale (ready days)"
+          "name": "Festivale (days before)",
+          "id": "Season/Event:Festivale (days before)"
         },
         {
-          "name": "Festive shopping",
-          "id": "Season/Event:Festive shopping"
+          "name": "Fireworks Show (1)",
+          "id": "Season/Event:Fireworks Show (1)"
         },
         {
-          "name": "Fireworks Show",
-          "id": "Season/Event:Fireworks Show"
+          "name": "Fireworks Show (2)",
+          "id": "Season/Event:Fireworks Show (2)"
         },
         {
-          "name": "Fishing Tourney",
-          "id": "Season/Event:Fishing Tourney"
+          "name": "Fireworks Show (3)",
+          "id": "Season/Event:Fireworks Show (3)"
+        },
+        {
+          "name": "Fireworks Show (4)",
+          "id": "Season/Event:Fireworks Show (4)"
+        },
+        {
+          "name": "Fireworks Show (5)",
+          "id": "Season/Event:Fireworks Show (5)"
+        },
+        {
+          "name": "Fishing Tourney (Fall)",
+          "id": "Season/Event:Fishing Tourney (Fall)"
+        },
+        {
+          "name": "Fishing Tourney (Spring)",
+          "id": "Season/Event:Fishing Tourney (Spring)"
+        },
+        {
+          "name": "Fishing Tourney (Summer)",
+          "id": "Season/Event:Fishing Tourney (Summer)"
+        },
+        {
+          "name": "Fishing Tourney (Winter)",
+          "id": "Season/Event:Fishing Tourney (Winter)"
         },
         {
           "name": "Gemini",
@@ -11309,8 +11409,8 @@
           "id": "Season/Event:Halloween"
         },
         {
-          "name": "Halloween (ready days)",
-          "id": "Season/Event:Halloween (ready days)"
+          "name": "Halloween (days before)",
+          "id": "Season/Event:Halloween (days before)"
         },
         {
           "name": "Happy Home Paradise",
@@ -11345,8 +11445,8 @@
           "id": "Season/Event:Libra"
         },
         {
-          "name": "Lunar New Year",
-          "id": "Season/Event:Lunar New Year"
+          "name": "Lunar New Year (Nook Shopping)",
+          "id": "Season/Event:Lunar New Year (Nook Shopping)"
         },
         {
           "name": "Marine Day",
@@ -11359,14 +11459,6 @@
         {
           "name": "Moon-Viewing Day",
           "id": "Season/Event:Moon-Viewing Day"
-        },
-        {
-          "name": "Moon-Viewing Day (2)",
-          "id": "Season/Event:Moon-Viewing Day (2)"
-        },
-        {
-          "name": "Moon-Viewing Day (3)",
-          "id": "Season/Event:Moon-Viewing Day (3)"
         },
         {
           "name": "Mother's Day",
@@ -11385,32 +11477,68 @@
           "id": "Season/Event:Nature Day"
         },
         {
-          "name": "Nature Day (Nook Shopping)",
-          "id": "Season/Event:Nature Day (Nook Shopping)"
+          "name": "New Year's Day (2021)",
+          "id": "Season/Event:New Year's Day (2021)"
         },
         {
-          "name": "New Year's Day",
-          "id": "Season/Event:New Year's Day"
+          "name": "New Year's Day (2022)",
+          "id": "Season/Event:New Year's Day (2022)"
         },
         {
-          "name": "New Year's Day (Asia)",
-          "id": "Season/Event:New Year's Day (Asia)"
+          "name": "New Year's Day (Nook Shopping)",
+          "id": "Season/Event:New Year's Day (Nook Shopping)"
         },
         {
-          "name": "New Year's Day (Korea)",
-          "id": "Season/Event:New Year's Day (Korea)"
+          "name": "New Year's Day (Year of the Dog)",
+          "id": "Season/Event:New Year's Day (Year of the Dog)"
         },
         {
-          "name": "New Year's Day (World)",
-          "id": "Season/Event:New Year's Day (World)"
+          "name": "New Year's Day (Year of the Dragon)",
+          "id": "Season/Event:New Year's Day (Year of the Dragon)"
+        },
+        {
+          "name": "New Year's Day (Year of the Horse)",
+          "id": "Season/Event:New Year's Day (Year of the Horse)"
+        },
+        {
+          "name": "New Year's Day (Year of the Monkey)",
+          "id": "Season/Event:New Year's Day (Year of the Monkey)"
+        },
+        {
+          "name": "New Year's Day (Year of the Ox)",
+          "id": "Season/Event:New Year's Day (Year of the Ox)"
+        },
+        {
+          "name": "New Year's Day (Year of the Pig)",
+          "id": "Season/Event:New Year's Day (Year of the Pig)"
+        },
+        {
+          "name": "New Year's Day (Year of the Rabbit)",
+          "id": "Season/Event:New Year's Day (Year of the Rabbit)"
+        },
+        {
+          "name": "New Year's Day (Year of the Rat)",
+          "id": "Season/Event:New Year's Day (Year of the Rat)"
+        },
+        {
+          "name": "New Year's Day (Year of the Rooster)",
+          "id": "Season/Event:New Year's Day (Year of the Rooster)"
+        },
+        {
+          "name": "New Year's Day (Year of the Sheep)",
+          "id": "Season/Event:New Year's Day (Year of the Sheep)"
+        },
+        {
+          "name": "New Year's Day (Year of the Snake)",
+          "id": "Season/Event:New Year's Day (Year of the Snake)"
+        },
+        {
+          "name": "New Year's Day (Year of the Tiger)",
+          "id": "Season/Event:New Year's Day (Year of the Tiger)"
         },
         {
           "name": "New Year's Eve",
           "id": "Season/Event:New Year's Eve"
-        },
-        {
-          "name": "New Year's Eve (Russia)",
-          "id": "Season/Event:New Year's Eve (Russia)"
         },
         {
           "name": "Nochevieja",
@@ -11425,16 +11553,8 @@
           "id": "Season/Event:Pisces"
         },
         {
-          "name": "Prom (1)",
-          "id": "Season/Event:Prom (1)"
-        },
-        {
-          "name": "Prom (2)",
-          "id": "Season/Event:Prom (2)"
-        },
-        {
-          "name": "Prom (Able Sisters)",
-          "id": "Season/Event:Prom (Able Sisters)"
+          "name": "Prom",
+          "id": "Season/Event:Prom"
         },
         {
           "name": "Sagittarius",
@@ -11461,28 +11581,12 @@
           "id": "Season/Event:Shamrock Day"
         },
         {
-          "name": "Shamrock Day (Able Sisters)",
-          "id": "Season/Event:Shamrock Day (Able Sisters)"
-        },
-        {
           "name": "Shichi-Go-San",
           "id": "Season/Event:Shichi-Go-San"
         },
         {
-          "name": "Shōgatsu (1)",
-          "id": "Season/Event:Shōgatsu (1)"
-        },
-        {
-          "name": "Shōgatsu (2)",
-          "id": "Season/Event:Shōgatsu (2)"
-        },
-        {
-          "name": "Shōgatsu (3)",
-          "id": "Season/Event:Shōgatsu (3)"
-        },
-        {
-          "name": "Shōgatsu (4)",
-          "id": "Season/Event:Shōgatsu (4)"
+          "name": "Shōgatsu",
+          "id": "Season/Event:Shōgatsu"
         },
         {
           "name": "Silvester",
@@ -11493,28 +11597,16 @@
           "id": "Season/Event:Singmogil"
         },
         {
-          "name": "Spring shopping",
-          "id": "Season/Event:Spring shopping"
+          "name": "Spring (shopping)",
+          "id": "Season/Event:Spring (shopping)"
         },
         {
-          "name": "Summer Solstice (northern hemisphere)",
-          "id": "Season/Event:Summer Solstice (northern hemisphere)"
+          "name": "Summer (shopping)",
+          "id": "Season/Event:Summer (shopping)"
         },
         {
-          "name": "Summer Solstice (northern hemisphere) (2)",
-          "id": "Season/Event:Summer Solstice (northern hemisphere) (2)"
-        },
-        {
-          "name": "Summer Solstice (southern hemisphere)",
-          "id": "Season/Event:Summer Solstice (southern hemisphere)"
-        },
-        {
-          "name": "Summer shopping",
-          "id": "Season/Event:Summer shopping"
-        },
-        {
-          "name": "Super Mario Bros.",
-          "id": "Season/Event:Super Mario Bros."
+          "name": "Summer Solstice",
+          "id": "Season/Event:Summer Solstice"
         },
         {
           "name": "Tanabata",
@@ -11537,20 +11629,20 @@
           "id": "Season/Event:Toy Day (day after)"
         },
         {
-          "name": "Toy Day (ready days phase 1)",
-          "id": "Season/Event:Toy Day (ready days phase 1)"
+          "name": "Toy Day (days before)",
+          "id": "Season/Event:Toy Day (days before)"
         },
         {
-          "name": "Toy Day (ready days phase 2)",
-          "id": "Season/Event:Toy Day (ready days phase 2)"
+          "name": "Toy Day (weeks before)",
+          "id": "Season/Event:Toy Day (weeks before)"
         },
         {
           "name": "Turkey Day",
           "id": "Season/Event:Turkey Day"
         },
         {
-          "name": "Turkey Day (shopping days)",
-          "id": "Season/Event:Turkey Day (shopping days)"
+          "name": "Turkey Day (days after)",
+          "id": "Season/Event:Turkey Day (days after)"
         },
         {
           "name": "Valentine's Day (Nook Shopping)",
@@ -11565,44 +11657,44 @@
           "id": "Season/Event:Wedding Season"
         },
         {
-          "name": "Wedding Season (Able Sisters)",
-          "id": "Season/Event:Wedding Season (Able Sisters)"
+          "name": "Wedding Season (Nook Shopping)",
+          "id": "Season/Event:Wedding Season (Nook Shopping)"
         },
         {
-          "name": "Wedding Season (Nook Shopping 1)",
-          "id": "Season/Event:Wedding Season (Nook Shopping 1)"
+          "name": "Winter (shopping)",
+          "id": "Season/Event:Winter (shopping)"
         },
         {
-          "name": "Wedding Season (Nook Shopping 2)",
-          "id": "Season/Event:Wedding Season (Nook Shopping 2)"
-        },
-        {
-          "name": "Winter Solstice (northern hemisphere)",
-          "id": "Season/Event:Winter Solstice (northern hemisphere)"
-        },
-        {
-          "name": "Winter Solstice (northern hemisphere) (2)",
-          "id": "Season/Event:Winter Solstice (northern hemisphere) (2)"
-        },
-        {
-          "name": "Winter Solstice (northern hemisphere) (3)",
-          "id": "Season/Event:Winter Solstice (northern hemisphere) (3)"
-        },
-        {
-          "name": "Winter Solstice (southern hemisphere)",
-          "id": "Season/Event:Winter Solstice (southern hemisphere)"
-        },
-        {
-          "name": "Winter shopping",
-          "id": "Season/Event:Winter shopping"
+          "name": "Winter Solstice",
+          "id": "Season/Event:Winter Solstice"
         },
         {
           "name": "acorns and pine cones",
           "id": "Season/Event:acorns and pine cones"
         },
         {
+          "name": "azalea",
+          "id": "Season/Event:azalea"
+        },
+        {
+          "name": "camellia",
+          "id": "Season/Event:camellia"
+        },
+        {
           "name": "cherry-blossom petals",
           "id": "Season/Event:cherry-blossom petals"
+        },
+        {
+          "name": "hibiscus",
+          "id": "Season/Event:hibiscus"
+        },
+        {
+          "name": "holly",
+          "id": "Season/Event:holly"
+        },
+        {
+          "name": "hydrangea",
+          "id": "Season/Event:hydrangea"
         },
         {
           "name": "maple leaves",
@@ -11617,6 +11709,10 @@
           "id": "Season/Event:ornaments"
         },
         {
+          "name": "plumeria",
+          "id": "Season/Event:plumeria"
+        },
+        {
           "name": "snowflakes",
           "id": "Season/Event:snowflakes"
         },
@@ -11625,8 +11721,16 @@
           "id": "Season/Event:summer shells"
         },
         {
+          "name": "tea olive",
+          "id": "Season/Event:tea olive"
+        },
+        {
           "name": "young spring bamboo",
           "id": "Season/Event:young spring bamboo"
+        },
+        {
+          "name": "Ōmisoka",
+          "id": "Season/Event:Ōmisoka"
         },
         {
           "name": "π Day",

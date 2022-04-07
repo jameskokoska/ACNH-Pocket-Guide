@@ -1555,8 +1555,21 @@ export function getEventName(eventNameInput){
   // } else {
   //   eventName = attemptToTranslate(attemptToTranslateItem(eventNameInput))
   // }
-  var eventName = attemptToTranslate(eventNameInput, true);
-  return eventName
+  if(eventNameInput!==undefined){
+    var eventName = attemptToTranslate(eventNameInput, true);
+    if(eventName===eventNameInput){
+      var withinBrackets = eventNameInput.match(/\((.*?)\)/);
+      if(withinBrackets){
+        eventName = attemptToTranslate(eventNameInput.replace(" "+withinBrackets[0],""), true) + " (" + attemptToTranslate(withinBrackets[1]) + ")"
+      }
+    }
+    return eventName
+  } else if(global.language==="English"){
+    return eventNameInput;
+  }
+  return ""
+  
+  
 }
 
 export function determineCustomizationString(item){
@@ -1641,12 +1654,17 @@ export function allEventItemsCheck(eventName){
   if(eventName===undefined || eventName.constructor !== String){
     return false
   }
+
   let previousName = ""
   let previousDataCategory = ""
   let foundAnyItem = false
   for(let dataSet = 0; dataSet < global.dataLoadedAll.length; dataSet++){
     for(let i = 0; i < global.dataLoadedAll[dataSet].length; i++){
-      if((global.dataLoadedAll[dataSet][i].hasOwnProperty("Source") && global.dataLoadedAll[dataSet][i]["Source"].toString().toLowerCase().split("; ").includes(eventName.toString().toLowerCase())) || (global.dataLoadedAll[dataSet][i].hasOwnProperty("Season/Event") && global.dataLoadedAll[dataSet][i]["Season/Event"].toString().toLowerCase().split("; ").includes(eventName.toString().toLowerCase()))){
+      if(
+          (global.dataLoadedAll[dataSet][i].hasOwnProperty("Source") && global.dataLoadedAll[dataSet][i]["Source"].toString().toLowerCase().split("; ").includes(eventName.toString().toLowerCase()))
+          ||
+          (global.dataLoadedAll[dataSet][i].hasOwnProperty("Season/Event") && global.dataLoadedAll[dataSet][i]["Season/Event"].toString().toLowerCase().split("; ").includes(eventName.toString().toLowerCase()))
+        ){
         foundAnyItem = true
         if(previousName === global.dataLoadedAll[dataSet][i]["Name"] && previousDataCategory === global.dataLoadedAll[dataSet][i]["Data Category"]){
           continue
@@ -1752,4 +1770,24 @@ export function indexCollectionList(collectionList){
     collectionListOut[entry]=true
   }
   return collectionListOut
+}
+
+//in the format "6:00 PM"
+export function convertTimeTo24Hours(time){
+  var settingsUse24HourClock = getSettingsString("settingsUse24HourClock")==="true";
+  if(time===undefined){
+    return ""
+  }
+  if(settingsUse24HourClock){
+    let currentHour = time.toString().split(":")[0].toString()
+    let currentMinutes = time.toString().split(":")[1].toString().substring(0,2)
+    let meridian = time.toString().split(":")[1].toString().slice(-2)
+    if(meridian.toLowerCase()==="pm"){
+      return (parseInt(currentHour) + 12).toString() + ":" + currentMinutes
+    } else {
+      return currentHour + ":" + currentMinutes
+    }
+  } else {
+    return time
+  }
 }

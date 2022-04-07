@@ -353,12 +353,10 @@ export function getPhoto(name, fallback=""){
     return require("../assets/icons/present.png");
   } else if(name.includes("toy")){
     return require("../assets/icons/santa.png");
-  } else if(name.includes("winter")){
-    return require("../assets/icons/snow.png");
   } else if(name.includes("turkey")){
     return require("../assets/icons/corn.png");
   } else if(name.includes("nook friday")){
-    return require("../assets/icons/bags.png");
+    return require("../assets/icons/pricetag.png");
   } else if(name.includes("lunar")){
     return require("../assets/icons/fullmoon.png");
   } else if(name.includes("new year")){
@@ -379,6 +377,12 @@ export function getPhoto(name, fallback=""){
     return require("../assets/icons/fish.png");
   } else if(name.includes("summer")){
     return require("../assets/icons/sun.png");
+  } else if(name.includes("winter")){
+    return require("../assets/icons/snowy.png");
+  }  else if(name.includes("fall")){
+    return require("../assets/icons/fall.png");
+  }  else if(name.includes("spring")){
+    return require("../assets/icons/flower.png");
   } else if(name.includes("bunny")){
     return require("../assets/icons/bunny.png");
   } else if(name.includes("halloween")){
@@ -518,7 +522,9 @@ export function getPhoto(name, fallback=""){
   } else if(name.includes("recycle")) {
     return require("../assets/icons/recycle.png")
   }
-  if(fallback.includes("season")){
+  if(fallback.includes("blooming season")){
+    return require("../assets/icons/flowerIcon.png");
+  } else if(fallback.includes("season")){
     return require("../assets/icons/season.png");
   } else if(fallback.includes("shopping")){
     return require("../assets/icons/nookShopping.png");
