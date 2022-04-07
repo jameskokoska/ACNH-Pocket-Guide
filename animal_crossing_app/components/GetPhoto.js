@@ -238,8 +238,6 @@ export function getPhoto(name, fallback=""){
       return require("../assets/icons/sparkle.png");
     case "ship.png":
       return require("../assets/icons/ship.png");
-    case "beaver.png":
-      return require("../assets/icons/beaver.png");
     case "flowerIcon.png":
       return require("../assets/icons/flowerIcon.png");
     case "rock.png":

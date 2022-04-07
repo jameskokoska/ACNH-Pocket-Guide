@@ -692,7 +692,7 @@ class PopupImage extends Component {
             textProperty2={["Color 2"]}
           />
           <InfoLine
-            image={require("../assets/icons/pattern2.png")} 
+            image={require("../assets/icons/pattern.png")} 
             item={this.state.item}
             textProperty={["Pattern"]}
             textProperty2={["Pattern Title"]}
