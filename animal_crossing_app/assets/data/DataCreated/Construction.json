@@ -1880,6 +1880,16 @@
     "Unique Entry ID": "roxKGs7uRQw2pw8to"
   },
   {
+    "Name": "gray stone roof",
+    "Image": "https://acnhcdn.com/latest/HouseRoofIcon/HouseRoofPA04StoneA.png",
+    "Buy": "5000",
+    "Category": "Roofing",
+    "Source": "4th House Upgrade (Right Room)",
+    "Filename": "HouseRoofPA04StoneA",
+    "Version Added": "1.0.0",
+    "Unique Entry ID": "ab33Skrb5b7oeha7y"
+  },
+  {
     "Name": "gray thatch roof",
     "Image": "https://acnhcdn.com/latest/HouseRoofIcon/HouseRoofPA04ThatchedE.png",
     "Buy": "5000",
@@ -1918,16 +1928,6 @@
     "Filename": "HouseRoofPA04StandardD",
     "Version Added": "1.0.0",
     "Unique Entry ID": "pEWWGqpXPdLucubvS"
-  },
-  {
-    "Name": "gray stone roof",
-    "Image": "https://acnhcdn.com/latest/HouseRoofIcon/HouseRoofPA04StoneA.png",
-    "Buy": "5000",
-    "Category": "Roofing",
-    "Source": "4th House Upgrade (Right Room)",
-    "Filename": "HouseRoofPA04StoneA",
-    "Version Added": "1.0.0",
-    "Unique Entry ID": "ab33Skrb5b7oeha7y"
   },
   {
     "Name": "orange curved shingles",

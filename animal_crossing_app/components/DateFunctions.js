@@ -163,6 +163,22 @@ function getMonthFromString(currentMonthString, integer=false){
   }
 }
 
+function getMonthShortFromString(currentMonthString, integer=false){
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  for(var i=0; i<months.length; i++){
+    if(months[i].toLowerCase()===currentMonthString.toLowerCase()){
+      if(integer){
+        return i
+      }
+      if(i<10){
+        return "0"+i;
+      } else {
+        return i+"";
+      }
+    }
+  }
+}
+
 function getMonthShort(currentMonth){
   var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan',];
   return months[currentMonth];
@@ -275,7 +291,7 @@ function isActive2(activeTimeInput, currentHour){
   return activeTimeOutput
 }
 
-export {getMonthFromString, getCurrentDateObject, getMonthShort, getMonth, getWeekDay, getWeekDayShort, isActive, isActive2, parseActiveTime};
+export {getMonthFromString, getMonthShortFromString, getCurrentDateObject, getMonthShort, getMonth, getWeekDay, getWeekDayShort, isActive, isActive2, parseActiveTime};
 
 //range >> February 25 – May 21
   //date >> Date object
@@ -288,13 +304,13 @@ export function isDateInRange(range,rangeYear, date, specialCheck=""){ //startOn
   rangeSplit = rangeSplit.split(" ");
   if(specialCheck!==""){
     if(specialCheck==="startOnly"){
-      if(date.getMonth()===parseInt(getMonthFromString(rangeSplit[0], true)) && date.getDate() === parseInt(rangeSplit[1])){
+      if(date.getMonth()===parseInt(getMonthShortFromString(rangeSplit[0], true)) && date.getDate() === parseInt(rangeSplit[1])){
         return true;
       } else {
         return false;
       }
     }else if(rangeSplit.length===4 && specialCheck==="endOnly"){
-      if(date.getMonth()===parseInt(getMonthFromString(rangeSplit[2], true)) && date.getDate() === parseInt(rangeSplit[3])){
+      if(date.getMonth()===parseInt(getMonthShortFromString(rangeSplit[2], true)) && date.getDate() === parseInt(rangeSplit[3])){
         return true;
       } else {
         return false;
@@ -305,16 +321,16 @@ export function isDateInRange(range,rangeYear, date, specialCheck=""){ //startOn
   }
   if(rangeSplit.length===4){
     var dateStart = new Date('January 10, 2000 12:00:00');
-    dateStart.setMonth(getMonthFromString(rangeSplit[0]));
+    dateStart.setMonth(getMonthShortFromString(rangeSplit[0]));
     dateStart.setDate(rangeSplit[1]);
     dateStart.setYear(rangeYear);
     var dateEnd= new Date('January 10, 2000 12:00:00');
-    dateEnd.setMonth(getMonthFromString(rangeSplit[2]));
+    dateEnd.setMonth(getMonthShortFromString(rangeSplit[2]));
     dateEnd.setDate(parseInt(rangeSplit[3])+1); //ensures the end date is larger so current date is within range
     dateEnd.setYear(rangeYear);
 
     //we have a date Dec-Jan
-    if(parseInt(getMonthFromString(rangeSplit[2]))<parseInt(getMonthFromString(rangeSplit[0]))){
+    if(parseInt(getMonthShortFromString(rangeSplit[2]))<parseInt(getMonthShortFromString(rangeSplit[0]))){
       dateEnd.setYear(parseInt(rangeYear)+1);
       if(date>dateStart && date<dateEnd){
         return true;
@@ -334,7 +350,7 @@ export function isDateInRange(range,rangeYear, date, specialCheck=""){ //startOn
       return false;
     }
   } else if(rangeSplit.length===2){
-    if(date.getMonth()===parseInt(getMonthFromString(rangeSplit[0], true)) && date.getDate() === parseInt(rangeSplit[1])){
+    if(date.getMonth()===parseInt(getMonthShortFromString(rangeSplit[0], true)) && date.getDate() === parseInt(rangeSplit[1])){
       return true;
     } else {
       return false;

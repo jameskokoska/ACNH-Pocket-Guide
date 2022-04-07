@@ -624,6 +624,20 @@
     "Unique Entry ID": "KvScWdYZwL2e7kGNn"
   },
   {
+    "Name": "Niko",
+    "Icon Image": "https://acnhcdn.com/latest/NpcIcon/mnc.png",
+    "Photo Image": "https://acnhcdn.com/latest/NpcPoster/NpcSpMnc.png",
+    "Gender": "Male",
+    "Gender (Asia)": "Male",
+    "Version Added": "2.0.0",
+    "NPC ID": "mnc",
+    "Internal ID": "68",
+    "Birthday": "1/11",
+    "Icon Filename": "mnc",
+    "Photo Filename": "NpcSpMnc",
+    "Unique Entry ID": "f2KPY2PxQiHX3ySo4"
+  },
+  {
     "Name": "Orville",
     "Icon Image": "https://acnhcdn.com/latest/NpcIcon/dod.png",
     "Photo Image": "https://acnhcdn.com/latest/NpcPoster/NpcSpDod.png",
@@ -928,6 +942,20 @@
     "Unique Entry ID": "BPPkKQ5BYRSZhk6Bc"
   },
   {
+    "Name": "Wardell",
+    "Icon Image": "https://acnhcdn.com/latest/NpcIcon/man.png",
+    "Photo Image": "https://acnhcdn.com/latest/NpcPoster/NpcSpMan.png",
+    "Gender": "Male",
+    "Gender (Asia)": "Male",
+    "Version Added": "2.0.0",
+    "NPC ID": "man",
+    "Internal ID": "67",
+    "Birthday": "2/7",
+    "Icon Filename": "man",
+    "Photo Filename": "NpcSpMan",
+    "Unique Entry ID": "dWPNFAFQLTh6BBuBa"
+  },
+  {
     "Name": "Wendell",
     "Icon Image": "https://acnhcdn.com/latest/NpcIcon/wrl.png",
     "Photo Image": "https://acnhcdn.com/latest/NpcPoster/NpcSpWrl.png",
@@ -1006,33 +1034,5 @@
     "Icon Filename": "pyn",
     "Photo Filename": "NpcSpPyn",
     "Unique Entry ID": "MxHc7P8664FtCcd2y"
-  },
-  {
-    "Name": "Niko",
-    "Icon Image": "https://acnhcdn.com/latest/NpcIcon/mnc.png",
-    "Photo Image": "https://acnhcdn.com/latest/NpcPoster/NpcSpMnc.png",
-    "Gender": "Male",
-    "Gender (Asia)": "Male",
-    "Version Added": "2.0.0",
-    "NPC ID": "mnc",
-    "Internal ID": "68",
-    "Birthday": "1/11",
-    "Icon Filename": "mnc",
-    "Photo Filename": "NpcSpMnc",
-    "Unique Entry ID": "f2KPY2PxQiHX3ySo4"
-  },
-  {
-    "Name": "Wardell",
-    "Icon Image": "https://acnhcdn.com/latest/NpcIcon/man.png",
-    "Photo Image": "https://acnhcdn.com/latest/NpcPoster/NpcSpMan.png",
-    "Gender": "Male",
-    "Gender (Asia)": "Male",
-    "Version Added": "2.0.0",
-    "NPC ID": "man",
-    "Internal ID": "67",
-    "Birthday": "2/7",
-    "Icon Filename": "man",
-    "Photo Filename": "NpcSpMan",
-    "Unique Entry ID": "dWPNFAFQLTh6BBuBa"
   }
 ]

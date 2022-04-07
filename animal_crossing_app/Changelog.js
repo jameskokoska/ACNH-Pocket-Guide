@@ -1,9 +1,15 @@
 export const gameVersion = ["2.0.0","2.0.4"]
-export const dataVersion = "5"
+export const dataVersion = "6"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Icon changes and improvements
+-Updated Seasons and Events
+-Updated data
+-Events page fixes
+-Updated translations
+-
 -Fixed multiple Amiibo cards showing up in list
 -Added Amiibo number to item label and search property
 -Added Paradise Planning progress to profile
