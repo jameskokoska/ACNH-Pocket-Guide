@@ -47,6 +47,9 @@ export function EventContainer(props){
       if(onlyUpdateMe){
         setTimeout(()=>{
           let result = allEventItemsCheck(eventFilter)
+          if(props.addCalculatedEvent){
+            props.addCalculatedEvent(eventFilter, result)
+          }
           setAllCollected(result)
         }, 10);
         onlyUpdateMe = false
@@ -55,23 +58,46 @@ export function EventContainer(props){
   );
 
   useEffect(() => {
-    setTimeout(()=>{
-      let result = allEventItemsCheck(eventFilter)
-      setAllCollected(result)
-    }, 10);
-    onlyUpdateMe = false
-  }, [])
+    if(allCollected===false){
+      let result = false
+      if(props.getCalculatedEvent){
+        result = props.getCalculatedEvent(eventFilter)
+      }
+      if(result===false){
+        result = allEventItemsCheck(eventFilter)
+        if(props.addCalculatedEvent){
+          props.addCalculatedEvent(eventFilter, result)
+        }
+      }
+      if(result!==false){
+        setAllCollected(result)
+      }
+      onlyUpdateMe = false
+    }
+  })
 
-    var image = <View/>
-    if(props.event.image.startsWith("http")){
+    let image = <View/>
+    if(props.event?.image.startsWith("http")){
       image = <FastImage style={[styles.eventImage]} source={{uri:props.event.image}} cacheKey={props.event.image}/>
     } else {
-      image = <Image style={styles.eventImage} source={getPhoto(props.event.image.toString().toLowerCase(), props.event.time.toString().toLowerCase())}/>
+      let photoGot = getPhoto(props.event.image.toString().toLowerCase(), props.event.time.toString().toLowerCase(), true)
+      if(photoGot===false && props.event?.time.toString().toLowerCase()==="nook shopping event" && allCollected[1]!==false && allCollected[1]!==undefined && allCollected[1]["Image"]!==undefined){
+        image = <FastImage style={{width:65, height:65, resizeMode:'contain', margin:-7.5}} source={{uri:allCollected[1]["Image"]}} cacheKey={allCollected[1]["Image"]}/>
+      } else if(photoGot===false && props.event?.time.toString().toLowerCase()==="nook shopping event" && allCollected[1]!==false && allCollected[1]!==undefined && allCollected[1]["Closet Image"]!==undefined){
+        image = <FastImage style={{width:65, height:65, resizeMode:'contain', margin:-7.5}} source={{uri:allCollected[1]["Closet Image"]}} cacheKey={allCollected[1]["Closet Image"]}/>
+      } else if(photoGot===false && props.event?.time.toString().toLowerCase()==="nook shopping event" && allCollected[1]!==false && allCollected[1]!==undefined && allCollected[1]["Inventory Image"]!==undefined){
+        image = <FastImage style={{width:65, height:65, resizeMode:'contain', margin:-7.5}} source={{uri:allCollected[1]["Inventory Image"]}} cacheKey={allCollected[1]["Inventory Image"]}/>
+      } else {
+        if(photoGot===false){
+          photoGot = getPhoto(props.event.image.toString().toLowerCase(), props.event.time.toString().toLowerCase())
+        }
+        image = <Image style={styles.eventImage} source={photoGot}/>
+      }
     }
     let child = <View style={[styles.eventContainer,{backgroundColor:props.event.color!==undefined?props.event.color:props.backgroundColor, marginHorizontal:props.showDate===false?10:20, paddingHorizontal:props.showDate===false?20:25,}]}>
       {image}
       <View style={{position:'absolute', right: -18, top: -18, zIndex:10}}>
-        {allCollected===true?<Check play={allCollected} width={53} height={53}/>:<View/>}
+        {allCollected[0]===true?<Check play={allCollected[0]} width={53} height={53}/>:<View/>}
       </View>
       <View style={[styles.textContainer,{paddingHorizontal: props.showDate===false?0:7}]}>
         <TextFont translate={false} numberOfLines={3} bold={true} style={[styles.textContainerTop,{color:props.textColor, textAlign:props.showDate===false?"left":"center", marginLeft:props.showDate===false?23:10}]}>{props.event.name}</TextFont>

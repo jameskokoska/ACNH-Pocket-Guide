@@ -22,7 +22,6 @@ import { useFocusEffect, useIsFocused } from '@react-navigation/native';
 export default class CalendarPage extends Component {
   constructor(item) {
     super(item);
-
     this.state = {
       loadCalendar: false,
       loadAll: false,
@@ -30,6 +29,7 @@ export default class CalendarPage extends Component {
       currentEvents: [{"topHeader":""}],
       currentDay:getCurrentDateObject()
     };
+    this.calculatedEvents = {"hello":"hello"}
     this.currentDayOffset = 0;
     this.eventSections = {
       "App notifications" : false,
@@ -79,6 +79,15 @@ export default class CalendarPage extends Component {
       this.flatList?.scrollToOffset({ animated: true, offset: 0 });
     },200)
   }
+  addCalculatedEvent = (id, allEventItemsCheck) => {
+    this.calculatedEvents[id] = allEventItemsCheck
+  }
+  getCalculatedEvent = (id) => {
+    if(this.calculatedEvents[id]===undefined)
+      return false
+    else
+      return this.calculatedEvents[id]
+  }
   render() {
     let viewList = <></>
     if(this.state.view==="list"){
@@ -109,6 +118,9 @@ export default class CalendarPage extends Component {
             textColor={colors.textBlack[global.darkMode]}
             event={item}
             showDate={false}
+            getCalculatedEvent={this.getCalculatedEvent}
+            addCalculatedEvent={this.addCalculatedEvent}
+            key={item.name}
           />
         }}
         windowSize={5}
@@ -361,6 +373,7 @@ class AllEventsList extends Component{
     this.state = {
       searchData: this.data,
     };
+    this.calculatedEvents = {}
   }
 
   componentDidMount() {
@@ -399,6 +412,16 @@ class AllEventsList extends Component{
     outputRange: [0, -(this.headerHeight)],
   });
 
+  addCalculatedEvent = (id, allEventItemsCheck) => {
+    this.calculatedEvents[id] = allEventItemsCheck
+  }
+  getCalculatedEvent = (id) => {
+    if(this.calculatedEvents[id]===undefined)
+      return false
+    else
+      return this.calculatedEvents[id]
+  }
+
   render(){
     return(<>
       <View style={{backgroundColor:colors.background[global.darkMode], height:Dimensions.get('window').height, width:Dimensions.get('window').width}}>
@@ -410,7 +433,7 @@ class AllEventsList extends Component{
         <Animated.FlatList
           onScroll={Animated.event([{ nativeEvent: {contentOffset: {y: this.scrollY}}}],{useNativeDriver: true,},)}
           data={this.state.searchData}
-          renderItem={({ item }) => <RenderItemFlatList item={item} setPage={this.props.setPage}/>}
+          renderItem={({ item }) => <RenderItemFlatList addCalculatedEvent={this.addCalculatedEvent} getCalculatedEvent={this.getCalculatedEvent} item={item} setPage={this.props.setPage} key={item["Unique Entry ID"]}/>}
           keyExtractor={(item, index) => `list-item-${index}-${item["Unique Entry ID"]}`}
           contentContainerStyle={{paddingBottom:Dimensions.get('window').height}}
           style={{paddingTop:this.headerHeight}}
@@ -424,7 +447,6 @@ class AllEventsList extends Component{
 
 
 export function RenderItemFlatList(props){
-
   const [allCollected, setAllCollected] = useState(false);
   let onlyUpdateMe = false
   let eventFilter = replaceEventNameForFilter(props.item["Name"])
@@ -432,26 +454,55 @@ export function RenderItemFlatList(props){
   useFocusEffect(
     React.useCallback(() => {
       if(onlyUpdateMe){
-        setTimeout(()=>{
-          let result = allEventItemsCheck(eventFilter)
-          setAllCollected(result)
-        }, 10);
+        let result = allEventItemsCheck(eventFilter)
+        if(props.addCalculatedEvent){
+          props.addCalculatedEvent(eventFilter, result)
+        }
+        setAllCollected(result)
         onlyUpdateMe = false
       }
     },)
   );
 
   useEffect(() => {
-    setTimeout(()=>{
-      let result = allEventItemsCheck(eventFilter)
-      setAllCollected(result)
-    }, 10);
-    onlyUpdateMe = false
-  }, [])
+    if(allCollected===false){
+      let result = false
+      if(props.getCalculatedEvent){
+        result = props.getCalculatedEvent(eventFilter)
+      }
+      if(result===false){
+        result = allEventItemsCheck(eventFilter)
+        if(props.addCalculatedEvent){
+          props.addCalculatedEvent(eventFilter, result)
+        }
+      }
+      if(result!==false){
+        setAllCollected(result)
+      }
+      onlyUpdateMe = false
+    }
+  })
   
-  var item = props.item;
-  var image = <View/>
-  image = <Image style={{width: 50, height: 50, resizeMode:'contain',}} source={getPhoto(item["Name"].toString().toLowerCase(), item["Type"].toString().toLowerCase())}/>
+  let item = props.item;
+  let image = <View/>
+  if(props.event?.image.startsWith("http")){
+    image = <FastImage style={{width:65, height:65, resizeMode:'contain',}} source={{uri:allCollected[1]["Image"]}} cacheKey={allCollected[1]["Image"]}/>
+  } else {
+    let photoGot = getPhoto(item["Name"].toString().toLowerCase(), item["Type"].toString().toLowerCase(), true)
+    if(photoGot===false && item["Type"]?.toString().toLowerCase()==="nook shopping event" && allCollected[1]!==false && allCollected[1]!==undefined && allCollected[1]["Image"]!==undefined){
+      image = <FastImage style={{width:65, height:65, resizeMode:'contain',}} source={{uri:allCollected[1]["Image"]}} cacheKey={allCollected[1]["Image"]}/>
+    } else if(photoGot===false && item["Type"]?.toString().toLowerCase()==="nook shopping event" && allCollected[1]!==false && allCollected[1]!==undefined && allCollected[1]["Closet Image"]!==undefined){
+      image = <FastImage style={{width:65, height:65, resizeMode:'contain',}} source={{uri:allCollected[1]["Closet Image"]}} cacheKey={allCollected[1]["Closet Image"]}/>
+    } else if(photoGot===false && item["Type"]?.toString().toLowerCase()==="nook shopping event" && allCollected[1]!==false && allCollected[1]!==undefined && allCollected[1]["Inventory Image"]!==undefined){
+      image = <FastImage style={{width:65, height:65, resizeMode:'contain', margin:-7.5}} source={{uri:allCollected[1]["Inventory Image"]}} cacheKey={allCollected[1]["Inventory Image"]}/>
+    } else {
+      if(photoGot===false){
+        photoGot = getPhoto(item["Name"].toString().toLowerCase(), item["Type"].toString().toLowerCase())
+      }
+      image = <Image style={{width: 50, height: 50, resizeMode:'contain', marginHorizontal: 7.5}} source={photoGot}/>
+    }
+  }
+  
   var date = "";
   if(item[getCurrentDateObject().getFullYear().toString() + " NH"]!=="NA" && getSettingsString("settingsNorthernHemisphere")==="true"){
     date = item[getCurrentDateObject().getFullYear().toString() + " NH"];
@@ -491,7 +542,7 @@ export function RenderItemFlatList(props){
     >
       <View style={{width:Dimensions.get('window').width-20, flex: 1, backgroundColor: colors.white[global.darkMode], padding: 20, marginHorizontal: 10, marginVertical: 5,  flexDirection:"row", alignItems: 'center', borderRadius: 10}}>
         <View style={{position:'absolute', right: -18, top: -18, zIndex:10}}>
-          {allCollected===true?<Check play={allCollected} width={53} height={53}/>:<View/>}
+          {allCollected[0]===true?<Check play={allCollected[0]} width={53} height={53}/>:<View/>}
         </View>
         {image}
         <View style={{flex: 1, marginLeft:15}}>

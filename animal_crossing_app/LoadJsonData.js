@@ -1652,12 +1652,14 @@ export function generateMaterialsFilters(materialName){
 
 export function allEventItemsCheck(eventName){
   if(eventName===undefined || eventName.constructor !== String){
+    //it is a birthday object or something else
     return false
   }
 
   let previousName = ""
   let previousDataCategory = ""
   let foundAnyItem = false
+  let firstItemFound = false
   for(let dataSet = 0; dataSet < global.dataLoadedAll.length; dataSet++){
     for(let i = 0; i < global.dataLoadedAll[dataSet].length; i++){
       if(
@@ -1666,11 +1668,14 @@ export function allEventItemsCheck(eventName){
           (global.dataLoadedAll[dataSet][i].hasOwnProperty("Season/Event") && global.dataLoadedAll[dataSet][i]["Season/Event"].toString().toLowerCase().split("; ").includes(eventName.toString().toLowerCase()))
         ){
         foundAnyItem = true
+        if(firstItemFound===false){
+          firstItemFound = global.dataLoadedAll[dataSet][i]
+        }
         if(previousName === global.dataLoadedAll[dataSet][i]["Name"] && previousDataCategory === global.dataLoadedAll[dataSet][i]["Data Category"]){
           continue
         } else {
           if(inChecklist(global.dataLoadedAll[dataSet][i]["checkListKey"])===false){
-            return false
+            return [false, firstItemFound]
           }
           previousName = global.dataLoadedAll[dataSet][i]["Name"]
           previousDataCategory = global.dataLoadedAll[dataSet][i]["Data Category"]
@@ -1679,9 +1684,9 @@ export function allEventItemsCheck(eventName){
     }
   }
   if(foundAnyItem===false){
-    return "no event items found"
+    return ["no event items found", firstItemFound]
   }
-  return true
+  return [true, firstItemFound]
 }
 
 //findItem, getItem

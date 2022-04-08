@@ -4,6 +4,9 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Significantly improved performance on Calendar and Events page
+-Added more icons for Calendar Events
+-All events should now have an icon
 -Fixed [View Craftable Items]
 -Tasks can now be added to the top of the ToDo list\n(Tap the three dot menu in the To-Do list section of the home screen)
 -Icon changes and improvements

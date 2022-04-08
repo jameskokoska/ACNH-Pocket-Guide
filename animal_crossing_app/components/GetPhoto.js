@@ -35,7 +35,7 @@ export function getSizeImage(size){
   }
 }
 
-export function getPhoto(name, fallback=""){
+export function getPhoto(name, fallback="", returnFalse=false){
   if(name===undefined){
     return require("../assets/icons/leaf.png");
   }
@@ -357,7 +357,9 @@ export function getPhoto(name, fallback=""){
     return require("../assets/icons/pricetag.png");
   } else if(name.includes("lunar")){
     return require("../assets/icons/fullmoon.png");
-  } else if(name.includes("new year")){
+  } else if(name.includes("new year's eve") && !name.includes("year of the")) {
+    return require("../assets/icons/popper.png")
+  } else if(name.includes("new year") && !name.includes("year of the")){
     return require("../assets/icons/confettiBall.png");
   } else if(name.includes("big game")){
     return require("../assets/icons/football.png");
@@ -377,7 +379,7 @@ export function getPhoto(name, fallback=""){
     return require("../assets/icons/sun.png");
   } else if(name.includes("winter")){
     return require("../assets/icons/snowy.png");
-  }  else if(name.includes("fall")){
+  } else if(name.includes("fall")){
     return require("../assets/icons/fall.png");
   }  else if(name.includes("spring")){
     return require("../assets/icons/flower.png");
@@ -487,14 +489,38 @@ export function getPhoto(name, fallback=""){
     return require("../assets/icons/harvey.png")
   } else if(name.includes("café")) {
     return require("../assets/icons/cafe.png")
-  } else if(name.includes("new year")) {
-    return require("../assets/icons/popper.png")
   } else if(name.includes("saharah")) {
     return require("../assets/icons/saharah.png")
   } else if(name.includes("balloons")) {
     return require("../assets/icons/balloon.png")
   } else if(name.includes("stars")) {
     return require("../assets/icons/sparkle.png")
+  } else if(name.includes("prom")) {
+    return require("../assets/icons/sparkle.png")
+  } else if(name.includes("singmogil")) {
+    return require("../assets/icons/forest.png")
+  } else if(name.includes("children")) {
+    return require("../assets/icons/toys.png")
+  } else if(name.includes("mother")) {
+    return require("../assets/icons/blossom.png")
+  } else if(name.includes("cheese")) {
+    return require("../assets/icons/cheese.png")
+  } else if(name.includes("father")) {
+    return require("../assets/icons/tie.png")
+  } else if(name.includes("marine")) {
+    return require("../assets/icons/shipWheel.png")
+  } else if(name.includes("tomato")) {
+    return require("../assets/icons/tomato.png")
+  } else if(name.includes("moon")) {
+    return require("../assets/icons/fullmoon.png")
+  } else if(name.includes("cowboy")) {
+    return require("../assets/icons/cowboy.png")
+  } else if(name.includes("grape")) {
+    return require("../assets/icons/grapes.png")
+  } else if(name.includes("lantern")) {
+    return require("../assets/icons/lantern.png")
+  } else if(name.includes("π")) {
+    return require("../assets/icons/pi.png")
   } else if(name.includes("recipe")) {
     return require("../assets/icons/crafting.png")
   } else if(name.includes("diy")) {
@@ -525,7 +551,11 @@ export function getPhoto(name, fallback=""){
   } else if(fallback.includes("season")){
     return require("../assets/icons/season.png");
   } else if(fallback.includes("shopping")){
-    return require("../assets/icons/nookShopping.png");
+    if(returnFalse){
+      return false
+    } else {
+      return require("../assets/icons/nookShopping.png");
+    }
   }
   return require("../assets/icons/leaf.png");
 }
@@ -541,7 +571,7 @@ export function getPhotoCorner(name){
   else if(name.includes("pier"))
     return <Image source={require("../assets/icons/pier.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>;
   else if(name.includes("underwater"))
-    return <Image source={require("../assets/icons/underwater.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/underwater.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
   else if(name.includes("river"))
     return <Image source={require("../assets/icons/riverIcon.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>;
   else if(name.includes("pond") || name.includes("water"))

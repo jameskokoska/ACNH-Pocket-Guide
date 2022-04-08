@@ -121,7 +121,7 @@ class CreditsPage extends Component {
       <ExternalLink link="https://twemoji.twitter.com/"/>
       <Paragraph>Font Awesome icons:</Paragraph>
       <ExternalLink link="https://fontawesome.com/license"/>
-      <Paragraph>FlatIcons: from 'Freepik' and 'Pixel perfect' and 'Vitaly Gorbachev':</Paragraph>
+      <Paragraph>FlatIcons: from 'Freepik' and 'Pixel perfect' and 'Vitaly Gorbachev' and 'Smashicons':</Paragraph>
       <ExternalLink link="https://www.flaticon.com/"/>
       <Paragraph>All game data sourced from the community created spreadsheet. Thank you everyone for all the hard work and for making the spreadsheet!</Paragraph>
       <ExternalLink link="https://tinyurl.com/acnh-sheet"/>
