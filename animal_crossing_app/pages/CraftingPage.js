@@ -7,6 +7,8 @@ class CraftingPage extends Component {
     super();
   }
   render(){
+    console.log("MATERIAL CRAFT")
+    console.log(this.props.showCraftableFromMaterial)
     return(
       <ListPage 
         title={this.props.title===undefined?"Recipes":this.props.title}

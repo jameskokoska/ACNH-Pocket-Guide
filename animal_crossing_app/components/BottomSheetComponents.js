@@ -614,7 +614,6 @@ class PopupImage extends Component {
   }
 
   addToWishlist = () => {
-    console.log("adwjawjdkjkdwakjdajk")
     // checkOff(this.state.item.checkListKey, this.state.wishlist, "wishlist"); //true to vibrate and wishlist
     this.props.selectCustomList(
       this.state.item, 
@@ -737,7 +736,7 @@ class PopupImageSource extends Component {
         maxWidth = Dimensions.get('window').width*0.6
     }
     let imageComp = <Image
-      style={{height: maxWidth,width: maxWidth,resizeMode:'contain',}}
+      style={{height: maxWidth,width: maxWidth,resizeMode:'contain',borderRadius:5}}
       source={this.state.image}
     />
     return(

@@ -629,9 +629,7 @@ function ListPage(props){
                       break;
                     } 
                   }
-                  break;
-                }
-                if(props.wishlistItems || searchActual.includes("Wishlist")){
+                }else if(props.wishlistItems || searchActual.includes("Wishlist")){
                   // if(global.collectionList.includes("wishlist"+item["checkListKey"])){
                     item.dataSet = j;
                     item.index = i;

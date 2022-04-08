@@ -183,7 +183,6 @@ export class ClothingRouteClass extends React.PureComponent{
         subHeader={subHeader}
         villagerGifts={villagerGifts}
         villagerGiftsFilters={villagerGiftsFilters}
-        filterSearchable = {true}
         title={title}
         imageProperty={[
           "Closet Image",
