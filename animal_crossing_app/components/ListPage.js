@@ -360,7 +360,7 @@ function ListPage(props){
             //Check category
             var searchCategory = true;
             for(var y = 0; y < searchActual.length; y++){
-              if(searchActual[y].includes("Data Category")){
+              if(searchActual[y].includes("Data Category") && !searchActual[y].includes("Sort-Data Category")){
                 //Category selected
                 if(item[searchActual[y].split(":")[0]]!==undefined && item[searchActual[y].split(":")[0]].toString().toLowerCase()===searchActual[y].split(":")[1].toString().toLowerCase()){
                   //Item in selected category

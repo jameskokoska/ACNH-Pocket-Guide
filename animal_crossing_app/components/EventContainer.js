@@ -174,9 +174,11 @@ export function getEventsDay(date, eventSections, showEventsIfInRange){
           schedulePushNotification(date,eventSections["Set Notification Time"],"🎂 " + capitalize(translateBirthday(attemptToTranslateItem(villager["Name"]))),attemptToTranslateItem("All day"));
         }
       } else if (eventSections["All Villager's Birthdays"]){
+        const difference = date.getTime() - getCurrentDateObject().getTime();
+        const days = Math.ceil(difference / (1000 * 3600 * 24));
         totalEvents.push({
           name: capitalize(translateBirthday(attemptToTranslateItem(villager["NameLanguage"]))),
-          time: "All day",
+          time: days===1 ? attemptToTranslate("Tomorrow") : (days===0 ? attemptToTranslate("Today") : attemptToTranslate("In") + " "  + days + " " + attemptToTranslate("days")),
           image: villager["Icon Image"],
           day:date.getDate(),
           weekday:date.getDay(),

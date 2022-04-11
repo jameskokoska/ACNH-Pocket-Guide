@@ -16,6 +16,11 @@ import SectionedMultiSelect from 'react-native-sectioned-multi-select';
 import {MaterialIcons} from '@expo/vector-icons';
 import { AnimatedPopupWrapper } from "./PopupAnimatedWrapper";
 
+function addNewFilter(filterObject, newFilter){
+  filterObject[0].children.push(newFilter)
+  return filterObject
+}
+
 class PopupFilter extends Component {
   constructor(props) {
     super(props);
@@ -124,6 +129,7 @@ class PopupFilter extends Component {
         ]
       },
     ]
+    this.sortByDataCategoryFilter = {name:"Type category", id:"Sort-Data Category"}
     this.invertFilters = [
       {
         "name": "Invert Filters...",
@@ -163,6 +169,7 @@ class PopupFilter extends Component {
       ]
     }]
     if(this.props.title==="Amiibo Cards"){
+      const sortByNumberFilter = {name:"Number", id:"Sort-number"}
       const categories = [{
         "name": "Type Categories",
         "id": "Type Categories",
@@ -209,14 +216,14 @@ class PopupFilter extends Component {
           {"name": "No","id": "Villager:No"},
         ]
       }]
-      this.possibleFilters = [...this.sortByFiltersCollectedOnly, ...this.possibleFilters, ...categories, ...handSigns, ...personality, ...isVillager];
+      this.possibleFilters = [...(addNewFilter(addNewFilter(this.sortByFiltersCollectedOnly, this.sortByDataCategoryFilter), sortByNumberFilter)), ...this.possibleFilters, ...categories, ...handSigns, ...personality, ...isVillager];
     } else if(this.props.title==="Active Creatures"){
       const categories = [{
         "name": "Type Categories",
         "id": "Type Categories",
         "children": [{"name":"Fish","id":"Data Category:Fish"},{"name":"Bugs","id":"Data Category:Insects"},{"name":"Sea Creatures","id":"Data Category:Sea Creatures"}]
       }]
-      this.possibleFilters = [...this.sortByFiltersReduced,...this.possibleFilters, ...this.museumFilters, ...categories];
+      this.possibleFilters = [...(addNewFilter(this.sortByFiltersReduced, this.sortByDataCategoryFilter)),...this.possibleFilters, ...this.museumFilters, ...categories];
     } else if(this.props.title==="Fish"){
       this.possibleFilters = [...this.sortByFiltersReduced,...this.possibleFilters, ...this.museumFilters, ...activeFilters, ...filterDefinitions["Fish"], ...this.invertFilters];
     } else if(this.props.title==="Bugs"){
@@ -277,9 +284,9 @@ class PopupFilter extends Component {
         "id": "Type Categories",
         "children": [{"name":"Counter","id":"Tag:Counter"},{"name":"Pillar","id":"Tag:Pillar"},{"name":"Fencing","id":"Data Category:Fencing"},{"name":"Bridge","id":"Category:Bridge"},{"name":"Incline","id":"Category:Incline"},{"name":"Doors","id":"Category:Door"},{"name":"Roofing","id":"Category:Roofing"},{"name":"Siding","id":"Category:Siding"},{"name":"Mailbox","id":"Category:Mailbox"}]
       }]
-      this.possibleFilters = [...this.sortByFiltersReduced,...this.possibleFilters,...categories, ...this.invertFilters]
+      this.possibleFilters = [...(addNewFilter(this.sortByFiltersReduced, this.sortByDataCategoryFilter)),...this.possibleFilters,...categories, ...this.invertFilters]
     } else if(this.props.title==="Tools"){
-      this.possibleFilters = [...this.sortByFiltersReducedWithColor,...this.possibleFilters, ...this.invertFilters];
+      this.possibleFilters = [...(addNewFilter(this.sortByFiltersReducedWithColor, this.sortByDataCategoryFilter)),...this.possibleFilters, ...this.invertFilters];
     } else if(this.props.title==="Music"){
       this.possibleFilters = [...this.sortByFiltersCollectedOnly, ...this.possibleFilters, ...filterDefinitions["Music"], ...this.invertFilters]
     } else if(this.props.villagerGifts===true){

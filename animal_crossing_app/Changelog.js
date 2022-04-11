@@ -4,6 +4,12 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added sort by Amiibo number
+-Added sort by Amiibo category
+-Added sort by Type Category for Active Creatures
+-Added days until villager birthday on home page
+-Fixed sorting by Type Category
+-
 -Significantly improved performance on Calendar and Events page
 -Added more icons for Calendar Events
 -All events should now have an icon
