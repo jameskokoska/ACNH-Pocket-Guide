@@ -335,6 +335,7 @@ class Main extends Component {
 
     //load home screen sections
     const defaultSections = {
+      "Time Travel" : false,
       "Events" : true,   
       "To-Do" : true,
       "Turnip Log" : true,
@@ -349,6 +350,7 @@ class Main extends Component {
     }
     this.sections = await this.loadSections("Sections", defaultSections);
     const defaultSectionsOrder = [
+      {"name":"Time Travel"},
       {"name":"Events"},
       {"name":"To-Do"},
       {"name":"Turnip Log"},
@@ -472,6 +474,15 @@ class Main extends Component {
   }
 
   setPage(pageNum, previousAdd=true, propsPassed="") {
+    if(propsPassed==="force refresh"){
+      if(previousAdd){
+        this.lastPage.push(this.state.currentPage);
+        this.lastPropsPassed.push(this.state.propsPassed);
+      }
+      if(this.lastPage.length>1){
+        this.setState({currentPage: pageNum, propsPassed: propsPassed});
+      }
+    }
     if(propsPassed==="from wishlist page" && this.wishlistPopupInfo){
       this.wishlistPopupInfo?.setPopupVisible(true)
     }

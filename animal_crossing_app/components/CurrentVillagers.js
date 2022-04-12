@@ -28,10 +28,17 @@ export default class CurrentVillagers extends Component {
     if(currentVillagers.length===0){
       return(<>
           <View style={{height:10}}/>
-          <TouchableOpacity onPress={() => this.props.setPage(8)}>
-            <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"You have no villagers added"}</TextFont>
-            <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>Tap here and go add some</TextFont>
-          </TouchableOpacity>
+          <View style={{alignItems:"center",justifyContent:"center", flexDirection:"column"}}>
+            <TouchableOpacity onPress={() => this.props.setPage(8)}>
+              <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"You have no villagers added"}</TextFont>
+              <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>Tap here and go add some</TextFont>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => this.props.setPage(8, true, "show popup")}>
+              <View style={{margin:7.5, marginTop: 18, borderStyle:"dashed", borderWidth:1.2, borderRadius:100, width:55, height:55, borderColor: colors.textLight[global.darkMode], alignItems:"center", justifyContent:"center", textAlign:"center",}}>
+                <TextFont bold={true} style={{fontSize:25,color:colors.textLight[global.darkMode]}}>+</TextFont>
+              </View>
+            </TouchableOpacity>
+          </View>
           <View style={{height:30}}/>
         </>
       )
@@ -57,11 +64,16 @@ export default class CurrentVillagers extends Component {
                 </TouchableOpacity>
               </View>
           )})}
+          <TouchableOpacity onPress={() => this.props.setPage(8, true, "show popup")}>
+            <View style={{margin:7.5, borderStyle:"dashed", borderWidth:1.2, borderRadius:100, width:55, height:55, borderColor: colors.textLight[global.darkMode], alignItems:"center", justifyContent:"center", textAlign:"center"}}>
+              <TextFont bold={true} style={{fontSize:25,color:colors.textLight[global.darkMode]}}>+</TextFont>
+            </View>
+          </TouchableOpacity>
         </View>
         <View style={{height:10}}/>
-        <TouchableOpacity style={{paddingVertical: 15}} onPress={() => this.props.setPage(8, true, "show popup")}>
+        {/* <TouchableOpacity style={{paddingVertical: 15}} onPress={() => this.props.setPage(8, true, "show popup")}>
           <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"Tap here to add/remove Villagers"}</TextFont>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
         <View style={{height:5}}/>
       </>)
     }

@@ -36,6 +36,7 @@ import * as RootNavigation from '../RootNavigation.js';
 import DurabilityList from '../components/DurabilityList';
 import ShootingStars from '../components/ShootingStars';
 import { countCollectionHHP, countHHP } from './ParadisePlanningPage';
+import TimeTravel from '../components/TimeTravel';
 
 class HomePage extends Component {
   constructor(props){
@@ -422,6 +423,18 @@ class HomePage extends Component {
             return sections["Star Counter"]===true?<HomeContentArea index={index} key={"Star Counter"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.shootingStarsColor[global.darkMode]} title="Star Counter" titleColor={colors.shootingStarsColor[global.darkModeReverse]}>
               <View style={{height: 15}}/>
               <ShootingStars setPage={this.props.setPage}/>
+              <View style={{height: 15}}/>
+            </HomeContentArea>:<View/>
+          }else if(section["name"]==="Time Travel"){
+            if(this.state.editOrder){
+              let name = "Time Travel"
+              return <HomeContentArea index={index} key={name+"edit"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.timeTravelStarsColor[global.darkMode]} title={name} titleColor={colors.timeTravelStarsColor[global.darkModeReverse]}>
+                <View style={{height:10}}/><ConfigureHomePageSettingContainer key={name+index.toString()} title={name} defaultValue={this.state.sections[name]} onCheck={(check)=>{this.setPages(check,name)}}/><View style={{height:10}}/>
+              </HomeContentArea>
+            }
+            return sections["Time Travel"]===true?<HomeContentArea index={index} key={"Time Travel"} editOrder={this.state.editOrder} reorderItem={this.reorderItem} backgroundColor={backgroundColor} accentColor={colors.timeTravelStarsColor[global.darkMode]} title="Time Travel" titleColor={colors.timeTravelStarsColor[global.darkModeReverse]}>
+              <View style={{height: 15}}/>
+              <TimeTravel setPage={this.props.setPage}/>
               <View style={{height: 15}}/>
             </HomeContentArea>:<View/>
           }else if(section["name"]==="Store Hours"){
@@ -857,7 +870,7 @@ export class ConfigureHomePageSettingContainer extends Component {
   render(){
     return(
       <TouchableOpacity activeOpacity={0.65} onPress={()=>this.toggle()}>
-        <View style={[styles.settingsContainer,{backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
+        <View style={[styles.settingsContainer,{backgroundColor:this.props.backgroundColor===undefined ? colors.lightDarkAccent[global.darkMode] : this.props.backgroundColor}]}>
             <View style={styles.textContainer}>
               <TextFont bold={true} style={[styles.textContainerTop,{color:colors.textBlack[global.darkMode]}]}>{this.props.title}</TextFont>
             </View>

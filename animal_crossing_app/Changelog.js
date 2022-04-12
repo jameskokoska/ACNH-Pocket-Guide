@@ -4,6 +4,8 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-You can now set the custom date from the home screen!\nTo enable this, tap Edit Sections on the home page and enable the [Time Travel] section
+-Tap the new (+) button to add/remove villagers to your profile\nIn the Villagers page
 -Added sort by Amiibo number
 -Added sort by Amiibo category
 -Added sort by Type Category for Active Creatures

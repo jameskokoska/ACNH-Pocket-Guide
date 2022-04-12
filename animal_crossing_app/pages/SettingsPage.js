@@ -176,19 +176,19 @@ export class CustomDatePicker extends Component{
       timePickerVisible: false,
     }
   }
-  setCustomTime = () => {
+  setCustomTime = (finalSet=false) => {
     var date = this.state.date;
     date.setMinutes(this.state.time.getMinutes());
     date.setHours(this.state.time.getHours()); 
     if(date!==undefined){
       var timeOffset = date.getTime() - new Date().getTime();
-      this.props.setDateOffset(timeOffset)
+      this.props.setDateOffset(timeOffset, finalSet)
     }
   }
   setDate = (event, selectedDate) => {
     if(selectedDate!==undefined){
       this.setState({date:selectedDate,datePickerVisible:false})
-      this.setCustomTime();
+      this.setCustomTime(true);
     } else {
       this.setState({datePickerVisible:false})
     }

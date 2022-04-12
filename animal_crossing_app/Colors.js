@@ -108,6 +108,7 @@ const colors = {
     loanTrackingColor : ["#E99298","#333333"],
     toolTrackingColor : ["#DF91D2","#333333"],
     shootingStarsColor : ["#FFDE98","#333333"],
+    timeTravelStarsColor : ["#CFFF98","#333333"],
     turnipColor : ["#A0C988","#333333"],
     visitorsColor : ["#98C4C3","#333333"],
     storeHoursColor : ["#9ECDF7","#333333"],
