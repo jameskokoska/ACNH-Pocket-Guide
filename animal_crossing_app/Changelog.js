@@ -12,6 +12,7 @@ export const changelog = `
 -Food is no longer apart of Furniture collection progress
 -Villager count added to collection progress
 -Trailing spaces are no longer considered when searching for items
+-Fixed trailing space when searching on home page using quick search
 -Fixed adding different amounts of items when using different profiles
 -Fixed some items not showing up when you search for them - if they have the same name as others, they were hidden\nSuch as Bamboo Wand (recipe and tool), one would be hidden
 -Fixed spacing for tree landscape on home screen

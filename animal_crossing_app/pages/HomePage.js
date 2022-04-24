@@ -276,8 +276,10 @@ class HomePage extends Component {
                 this.closeSearch()
                 this.searchRef.clear()
                 this.searchText = ""
-                if(event.nativeEvent.text!==""){
-                  RootNavigation.navigate('GlobalSearchPage', {propsPassed:event.nativeEvent.text});
+                let text = event.nativeEvent.text
+                if(text!==""){
+                  text = text.trim()
+                  RootNavigation.navigate('GlobalSearchPage', {propsPassed:text});
                 }
               }}
             />
