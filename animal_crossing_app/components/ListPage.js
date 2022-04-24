@@ -171,6 +171,7 @@ function ListPage(props){
     setTimeout(async () => {
       var dataUpdated = [];
       var previousVariation = "";
+      var previousDataCategory = "";
       var item;
       var dataLoaded2D = determineDataGlobal(props.dataGlobalName);
       if(props.title==="Music"){
@@ -613,8 +614,9 @@ function ListPage(props){
               //   previousVariation = item.[props.textProperty[j]];
 
               //keep variations
-              if((props.showAllVariations===false || props.showAllVariations===undefined) && item["Name"]===previousVariation && !item["checkListKey"].includes("recipesCheckList") && !item["checkListKey"].includes("amiiboCheckList") && !item["checkListKey"].includes("constructionCheckList") && !item["checkListKey"].includes("fenceCheckList") && !item["checkListKey"].includes("interiorStructuresCheckList")){
+              if((props.showAllVariations===false || props.showAllVariations===undefined) && item["Name"]===previousVariation && item["Data Category"]===previousDataCategory && !item["checkListKey"].includes("recipesCheckList") && !item["checkListKey"].includes("amiiboCheckList") && !item["checkListKey"].includes("constructionCheckList") && !item["checkListKey"].includes("fenceCheckList") && !item["checkListKey"].includes("interiorStructuresCheckList")){
                 previousVariation = item["Name"];
+                previousDataCategory = item["Data Category"]
               } else {
                 //the final filter to check
 
@@ -643,6 +645,7 @@ function ListPage(props){
                     item.index = i;
                     dataUpdated.push(item)
                     previousVariation = item["Name"];
+                    previousDataCategory = item["Data Category"]
                     // previousVariation = item.[props.textProperty[j]];
                     // previousVariation = item["Name"];
                   } 
@@ -653,6 +656,7 @@ function ListPage(props){
                     dataUpdated.push(item)
                     // previousVariation = item.[props.textProperty[j]];
                     previousVariation = item["Name"];
+                    previousDataCategory = item["Data Category"]
                   } 
                 } else if(searchActual.includes("Not Museum")){
                   if(item["Data Category"]!==undefined && museumCategories.includes(item["Data Category"]) && !global.collectionListIndexed["museum"+item["checkListKey"]]===true){
@@ -661,6 +665,7 @@ function ListPage(props){
                     dataUpdated.push(item)
                     // previousVariation = item.[props.textProperty[j]];
                     previousVariation = item["Name"];
+                    previousDataCategory = item["Data Category"]
                   } 
                 } else if(searchActual.includes("Old Resident")){
                   if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && global.collectionListIndexed["oldResident"+item["checkListKey"]]===true){
@@ -669,6 +674,7 @@ function ListPage(props){
                     dataUpdated.push(item)
                     // previousVariation = item.[props.textProperty[j]];
                     previousVariation = item["Name"];
+                    previousDataCategory = item["Data Category"]
                   } 
                 } else if(searchActual.includes("Not Old Resident")){
                   if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && !global.collectionListIndexed["oldResident"+item["checkListKey"]]===true){
@@ -677,6 +683,7 @@ function ListPage(props){
                     dataUpdated.push(item)
                     // previousVariation = item.[props.textProperty[j]];
                     previousVariation = item["Name"];
+                    previousDataCategory = item["Data Category"]
                   } 
                 } else if(searchActual.includes("Have villager photo")){
                   if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && global.collectionListIndexed["havePhoto"+item["checkListKey"]]===true){
@@ -685,6 +692,7 @@ function ListPage(props){
                     dataUpdated.push(item)
                     // previousVariation = item.[props.textProperty[j]];
                     previousVariation = item["Name"];
+                    previousDataCategory = item["Data Category"]
                   } 
                 } else if(searchActual.includes("Do not have villager photo")){
                   if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && !global.collectionListIndexed["havePhoto"+item["checkListKey"]]===true){
@@ -693,6 +701,7 @@ function ListPage(props){
                     dataUpdated.push(item)
                     // previousVariation = item.[props.textProperty[j]];
                     previousVariation = item["Name"];
+                    previousDataCategory = item["Data Category"]
                   } 
                 }else {
                   item.dataSet = j;
@@ -701,6 +710,7 @@ function ListPage(props){
                   // dataUpdated = [...dataUpdated, item];
                   // previousVariation = item.[props.textProperty[j]];
                   previousVariation = item["Name"];
+                  previousDataCategory = item["Data Category"]
                 }
                 
               }
@@ -873,6 +883,18 @@ function ListPage(props){
           var textB = b["Version Added"];
           return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
         });
+      }
+
+      if(props.sortItemsBasedOnIDOrder){
+        let dataCopy = [...dataUpdated]
+        dataUpdated = []
+        for(let value of props.sortItemsBasedOnIDOrder){
+          for(let datum of dataCopy){
+            if(value === datum["Internal ID"]){
+              dataUpdated.push(datum)
+            }
+          }
+        }
       }
 
       setData(dataUpdated)

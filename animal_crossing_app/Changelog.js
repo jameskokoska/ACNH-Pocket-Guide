@@ -4,6 +4,18 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added recently added items tab to New items page
+-New items page remembers your last selected tab
+-Collection progress color tweaks
+-Photos and Posters are separate progress collections
+-Food collection progress added
+-Food is no longer apart of Furniture collection progress
+-Villager count added to collection progress
+-Trailing spaces are no longer considered when searching for items
+-Fixed adding different amounts of items when using different profiles
+-Fixed some items not showing up when you search for them - if they have the same name as others, they were hidden\nSuch as Bamboo Wand (recipe and tool), one would be hidden
+-Fixed spacing for tree landscape on home screen
+-
 -You can now set the custom date from the home screen!\nTo enable this, tap Edit Sections on the home page and enable the [Time Travel] section
 -Tap the new (+) button to add/remove villagers to your profile\nIn the Villagers page
 -Added sort by Amiibo number
@@ -23,6 +35,8 @@ export const changelog = `
 -Events page fixes
 -Updated translations
 -Changelog UI fixes
+-
+-Past changes:
 -
 -Fixed multiple Amiibo cards showing up in list
 -Added Amiibo number to item label and search property
@@ -55,8 +69,6 @@ export const changelog = `
 -Fixed translation of Amiibo cards
 -Fixed alphabetical sorting in some languages
 -Updated translations
--
--Past changes:
 -
 -Updated translations
 -Fixed custom lists and custom lists icons for item variations

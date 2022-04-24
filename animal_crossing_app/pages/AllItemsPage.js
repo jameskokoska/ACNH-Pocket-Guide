@@ -91,8 +91,13 @@ class AllItemsPage extends Component {
     if(this.props.currentCustomList !==undefined){
       currentCustomList = this.props.currentCustomList;
     }
+    var sortItemsBasedOnIDOrder = undefined;
+    if(this.props.sortItemsBasedOnIDOrder !==undefined){
+      sortItemsBasedOnIDOrder = this.props.sortItemsBasedOnIDOrder;
+    }
     return(
         <ListPage
+          sortItemsBasedOnIDOrder={sortItemsBasedOnIDOrder}
           currentCustomList={currentCustomList}
           currentSearch={currentSearch}
           noStackFilters={noStackFilters}

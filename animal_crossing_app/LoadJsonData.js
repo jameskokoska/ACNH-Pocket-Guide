@@ -75,7 +75,7 @@ export function getCustomListsAmount(checkListKeyString, name){
 
 export function setCustomListsAmount(checkListKeyString, name, amount){
   global.collectionListIndexedAmount["customLists::"+name+checkListKeyString] = amount;
-  AsyncStorage.setItem("collectionListIndexedAmount", JSON.stringify(global.collectionListIndexedAmount));
+  AsyncStorage.setItem("collectionListIndexedAmount" + global.profile, JSON.stringify(global.collectionListIndexedAmount));
 }
 
 export function setLastSelectedListPage(name){
@@ -260,6 +260,9 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
         dataLoading[i]["NameLanguage"]=dataLoading[i]["Name"];
       }
       dataLoading[i]["Data Category"]=inputData[dataSet][1];
+      if(determineFoodItem(dataLoading[i])){
+        dataLoading[i]["Data Category 2"] = "Food"
+      }
       dataLoading[i]["checkListKeyParent"]=currentParentKey
     }
     dataLoadingTotal.push(dataLoading);
@@ -312,23 +315,54 @@ export async function countCollection(checkListKeyStart){
   return count;
 }
 
-export async function countCollectionSpecial(datakeyName){
+export async function countCollectionSpecial(datakeyName, dataCategoriesSkip=[], dataCategoriesOnly=[], alsoInVillager=false){
   let database = determineDataGlobal(datakeyName)
   let count = 0;
   let total = 0;
   let previousVariation = "";
   for(let i = 0; i<database.length; i++){
     for(let k = 0; k<database[i].length; k++){
+
+      let found = false
+      for(const dataCategorySkip of dataCategoriesSkip){
+        if(database[i][k]["Data Category"] === dataCategorySkip || database[i][k]["Data Category 2"] === dataCategorySkip){
+          found = true
+          break
+        }
+      }
+      if(found) break
+
       if(previousVariation===database[i][k]["Name"]){
         continue
       } else {
-        total++
         previousVariation=database[i][k]["Name"]
+
+        if(dataCategoriesOnly.length > 0){
+          for(const dataCategoryOnly of dataCategoriesOnly){
+            if(database[i][k]["Data Category"] === dataCategoryOnly || database[i][k]["Data Category 2"] === dataCategoryOnly){
+              total++
+              if(global.collectionListIndexed[database[i][k]["checkListKey"]]===true){
+                count++
+              } else if (alsoInVillager==true && inVillager(database[i][k]["checkListKey"], true)===true){
+                count++
+              }
+              break
+            }
+          }
+          continue
+        }
+
+        total++
         if(global.collectionListIndexed[database[i][k]["checkListKey"]]===true){
+          count++
+        } else if (alsoInVillager==true && inVillager(database[i][k]["checkListKey"], true)===true){
           count++
         }
       }
     }
+  }
+  if(total===0){
+    total++
   }
   return [count, total];
 }
@@ -406,12 +440,19 @@ function getFoodItems(){
     var dataLoaded = dataLoaded2D[j];
     for(let i = 0; i < dataLoaded.length; i++){
       item = dataLoaded[i];
-      if(item["Tag"]!==undefined && (item["Tag"]==="DishFood"||item["Tag"]==="DishDrink")){
+      if(determineFoodItem(item)){
         outputItems.push(item)
       }
     }
   }
   return [outputItems]
+}
+
+export function determineFoodItem(item){
+  if(item["Tag"]!==undefined && (item["Tag"]==="DishFood"||item["Tag"]==="DishDrink")){
+    return true
+  }
+  return false
 }
 
 export async function resetFilters(){
@@ -1534,7 +1575,7 @@ export function compareItemID(itemIDs, currentItem){
     return false;
   }
   for(var i=0; i<itemIDs.length; i++){
-    if(currentItem["checkListKey"].includes(itemIDs[i]["key"])){
+    if(currentItem["checkListKey"].includes(itemIDs[i]["key"]) || itemIDs[i]["key"]===undefined){
       for(var x=0; x<itemIDs[i]["list"].length; x++){
         if((itemIDs[i]["list"][x].toString()===currentItem["Name"].toString()||itemIDs[i]["list"][x].toString()===currentItem["Internal ID"].toString())){
           return true;
@@ -1690,10 +1731,10 @@ export function allEventItemsCheck(eventName){
 }
 
 //findItem, getItem
-export function findObject(string, paramToSearch, dataCategory){
+export function findObject(string, paramToSearch, dataCategory=""){
   for(var dataSet = 0; dataSet < global.dataLoadedAll.length; dataSet++){
     for(var i = 0; i < global.dataLoadedAll[dataSet].length; i++){
-      if(global.dataLoadedAll[dataSet][i]["Data Category"]===dataCategory){
+      if(global.dataLoadedAll[dataSet][i]["Data Category"]===dataCategory || dataCategory===""){
         if(global.dataLoadedAll[dataSet][i].hasOwnProperty(paramToSearch) && global.dataLoadedAll[dataSet][i][paramToSearch].toString()===string){
           return global.dataLoadedAll[dataSet][i];
         }
@@ -1744,6 +1785,17 @@ export function findMultipleObjectWithGlobal(strings, paramToSearch, globalCateg
     return outputObjects2
   }
   return outputObjects
+}
+
+export function getRecentItemObjectsList(){
+  let objectKeyList = []
+  for(let itemCheckListKey of global.collectionList.slice(-50).reverse()){
+    let object = findObject(itemCheckListKey, "checkListKey")
+    if(object!==false && object["Internal ID"]!==undefined){
+      objectKeyList.push(object["Internal ID"])
+    }
+  }
+  return objectKeyList
 }
 
 //find if any item is craftable given a material

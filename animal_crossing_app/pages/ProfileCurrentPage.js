@@ -6,7 +6,7 @@ import ButtonComponent from "../components/ButtonComponent"
 import HomeContentArea from '../components/HomeContentArea';
 import {MailLink, ExternalLink, SubHeader, Header, Paragraph} from "../components/Formattings"
 import {attemptToTranslate, getStorage} from "../LoadJsonData"
-import {Profile, VillagerPopupPopup, CollectionProgress} from "./HomePage"
+import {Profile, VillagerPopupPopup} from "./HomePage"
 import CurrentVillagers from "../components/CurrentVillagers"
 import * as ImagePicker from 'expo-image-picker';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -15,8 +15,9 @@ import {SelectionImage} from "../components/Selections"
 import {taskImages} from "../components/PopupAddTask"
 import FastImage from "../components/FastImage"
 import {getPhoto} from "../components/GetPhoto"
+import { CollectionProgress } from './CollectionProgress';
 
-export default class CreditsPage extends Component {
+export default class ProfileCurrentPage extends Component {
   constructor(props) {
     super(props);
   }

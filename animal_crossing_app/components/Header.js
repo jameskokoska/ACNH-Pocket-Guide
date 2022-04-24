@@ -110,7 +110,17 @@ const Header = (props) => {
                   allowFontScaling={false}
                   placeholder={attemptToTranslate("Search")}
                   style={styles.searchText}
-                  onChangeText={function(text){if(textInput.current.isFocused() || !emptySearch) props.updateSearch(text); if(text===""){setEmptySearch(true)} else {if(textInput.current.isFocused()) setEmptySearch(false)}}} 
+                  onChangeText={function(text){
+                    if(textInput.current.isFocused() || !emptySearch){
+                      text = text.trim()
+                      props.updateSearch(text); 
+                    }
+                    if(text===""){
+                      setEmptySearch(true)
+                    } else {
+                      if(textInput.current.isFocused()) setEmptySearch(false)
+                    }
+                  }} 
                   onFocus={() => {getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(15) : "";}}
                   minLength={1}
                   delayTimeout={400}
