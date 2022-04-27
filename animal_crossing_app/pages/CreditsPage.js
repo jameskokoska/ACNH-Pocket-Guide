@@ -28,6 +28,7 @@ class CreditsPage extends Component {
       <CreditImageContainer largerImage image={require("../assets/icons/Wheels.png")} text="Wheels" textBottom="Diamond Supporter"/>
       <CreditImageContainer image={require("../assets/icons/smma.png")} text="smma" textBottom="Diamond Supporter"/>
       <CreditImageContainer image={require("../assets/icons/Kalie.png")} text="Kalie" textBottom="Diamond Supporter"/>
+      <CreditTextBox text="Spockslefteyebrow"/>
       <View style={{height:12}}/>
       <SubHeader style={{fontSize: 24}}>Gold Supporters</SubHeader>
       <SubHeader bold={false} style={{marginBottom:6, marginTop:0, fontSize: 17}}>{attemptToTranslate("Thanks for your support!")}</SubHeader>
