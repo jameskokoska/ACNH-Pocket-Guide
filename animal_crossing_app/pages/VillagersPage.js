@@ -24,7 +24,7 @@ class VillagersPage extends Component {
         ref={(addVillagersPopup) => this.addVillagersPopup = addVillagersPopup}
         button1={"OK"}
         button1Action={()=>{}}
-        textLower={"Tap the Heart to add villagers currently in your town."}
+        textLower={"Tap the Heart to add/remove villagers currently in your town."}
       />
       <ListPage 
         setPage={this.props.setPage}

@@ -70,6 +70,7 @@ import { useAndroidBackHandler } from "react-navigation-backhandler";
 import * as Device from 'expo-device';
 import * as ErrorRecovery from 'expo-error-recovery';
 import CrashPage, { EmptyPage } from './pages/CrashPage';
+import VillagerPhotoPoster from './pages/VillagerPhotoPoster';
 
 const defaultErrorHandler = ErrorUtils.getGlobalHandler();
 
@@ -625,6 +626,8 @@ class Main extends Component {
         currentPageView = <ParadisePlanningPage/>
       } else if (this.state.currentPage===36){
         currentPageView = <VillagerFurnitureParadisePlanning request={this.state.propsPassed}/>
+      } else if (this.state.currentPage===37){
+        currentPageView = <VillagerPhotoPoster villager={this.state.propsPassed}/>
       } else {
         currentPageView = <Text>Default</Text>
       }
@@ -638,6 +641,7 @@ class Main extends Component {
       const NavigatorVillagerPresentsPage = ({route, navigation})=>{return <VillagerPresentsPage setPage={this.setPage} villager={route.params.propsPassed}/>}
       const NavigatorCustomFiltersPage = ({route, navigation})=>{return <CustomFiltersPage currentFiltersSearchFor={route.params.propsPassed} titlePassed={route.params.propsPassed} setPage={this.setPage}/>}
       const NavigatorVillagerFurniture = ({route, navigation})=>{return <VillagerFurniture villager={route.params.propsPassed}/>}
+      const NavigatorVillagerPhotoPoster = ({route, navigation})=>{return <VillagerPhotoPoster villager={route.params.propsPassed}/>}
       const NavigatorCraftableItemsPage = ({route, navigation})=>{return <CraftableItemsPage material={route.params.propsPassed}/>}
       const NavigatorVillagerFurnitureParadisePlanning = ({route, navigation})=>{return <VillagerFurnitureParadisePlanning request={route.params.propsPassed}/>}
       const NavigatorBrowserPage = ({route, navigation})=>{return <BrowserPage page={route.params.propsPassed} languageMessage={"You can change the language at the bottom of the page, by tapping Language"} splashImage={require('./assets/icons/turnip.png')} splashText={"Turnip Prophet"} splashCredits={"By mikebryant"}/>}
@@ -667,6 +671,7 @@ class Main extends Component {
                   <Stack.Screen name="Home" component={NavigatorHomePage} />
                   <Stack.Screen name="20" component={NavigatorVillagerPresentsPage}/>
                   <Stack.Screen name="22" component={NavigatorVillagerFurniture}/>
+                  <Stack.Screen name="37" component={NavigatorVillagerPhotoPoster}/>
                   <Stack.Screen name="23" component={NavigatorCustomFiltersPage}/>
                   <Stack.Screen name="34" component={NavigatorCraftableItemsPage}/>
                   <Stack.Screen name="36" component={NavigatorVillagerFurnitureParadisePlanning}/>

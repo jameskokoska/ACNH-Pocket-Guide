@@ -1564,6 +1564,25 @@ export function findItemCheckListKey(checkListKey){
   }
 }
 
+export function findPhotoAndPoster(villagerName){
+  let photoName = villagerName + "'s photo"
+  let posterName = villagerName + "'s poster"
+  let outputIds = []
+  for(var dataSet = 0; dataSet < global.dataLoadedFurniture.length; dataSet++){
+    for(var i = 0; i < global.dataLoadedFurniture[dataSet].length; i++){
+      if(global.dataLoadedFurniture[dataSet][i]["Data Category"] !== "Photos" && global.dataLoadedFurniture[dataSet][i]["Data Category"] !== "Posters"){
+        break
+      }
+      if(global.dataLoadedFurniture[dataSet][i].hasOwnProperty("Internal ID") && global.dataLoadedAll[dataSet][i]["Name"]===photoName){
+        outputIds.push(global.dataLoadedFurniture[dataSet][i]["Internal ID"]);
+      } else if(global.dataLoadedFurniture[dataSet][i].hasOwnProperty("Internal ID") && global.dataLoadedAll[dataSet][i]["Name"]===posterName){
+        outputIds.push(global.dataLoadedFurniture[dataSet][i]["Internal ID"]);
+      }
+    }
+  }
+  return outputIds
+}
+
 // itemIDs={[
 //   {
 //     list:[...this.props.villager["Furniture List"].split(";"), ...this.props.villager["Kitchen Equipment"].split(',')[0], ...this.props.villager["DIY Workbench"].split(',')[0],],

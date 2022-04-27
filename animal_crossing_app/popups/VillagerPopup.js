@@ -57,6 +57,15 @@ class VillagerPopup extends Component {
         textProperty={["Favorite Saying"]}
       />
       <ButtonComponent
+        text={"View Photo and Poster"}
+        color={colors.okButton[global.darkMode]}
+        vibrate={5}
+        onPress={() => {
+          // this.props.setPage(37, true, this.props.item)
+          RootNavigation.navigate('37', {propsPassed:this.props.item});
+      }}/>
+      <View style={{height:5}}/>
+      <ButtonComponent
         text={"View Gifts"}
         color={colors.okButton[global.darkMode]}
         vibrate={5}
@@ -64,7 +73,7 @@ class VillagerPopup extends Component {
           // this.props.setPage(20, true, this.props.item);
           RootNavigation.navigate('20', {propsPassed:this.props.item});
         }}/>
-      <TouchableOpacity style={{paddingTop:5}} onPress={()=>{this.popup?.setPopupVisible(true);}}>
+      <TouchableOpacity style={{paddingTop:0}} onPress={()=>{this.popup?.setPopupVisible(true);}}>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, padding:8}}>{"What are villager gifts?"}</TextFont>
       </TouchableOpacity>
       {this.props.item["Furniture List"]?<ButtonComponent

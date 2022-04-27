@@ -7,7 +7,7 @@ import StoreHoursContainer, { StoreHoursContainerHarvey } from '../components/St
 import ProgressContainerToggle from '../components/ProgressContainer';
 import LottieView from 'lottie-react-native';
 import colors from '../Colors'
-import {setSettingsString, getCurrentVillagerNamesString, getInverseVillagerFilters, capitalize,countCollection,getStorage, countCollectionSpecial, collectionListRemoveDuplicates, countCollectionAchievements, countAchievements} from "../LoadJsonData"
+import {setSettingsString, getCurrentVillagerNamesString, getInverseVillagerFilters, capitalize,countCollection,getStorage, countCollectionSpecial, collectionListRemoveDuplicates, countCollectionAchievements, countAchievements, inChecklist} from "../LoadJsonData"
 import TextFont from "../components/TextFont"
 import ActiveCreatures from "../components/ActiveCreatures"
 import CurrentVillagers from "../components/CurrentVillagers"
@@ -921,6 +921,19 @@ export class VillagerPopupPopup extends Component {
         :
         <>
           <TextFont bold={true} style={{textAlign:"center",fontSize: 30, marginTop: 0, marginBottom: 5, color:colors.fishText[global.darkMode]}}>{this.state.item["NameLanguage"]}</TextFont>
+          <TouchableOpacity activeOpacity={0.9} style={{position:"absolute", right:-5,top:-5}} onPress={()=>{if(this.props.setPage!==undefined) this.props.setPage(8, true, "show popup")}}>
+          <LottieView 
+            progress={inChecklist(this.state.item["checkListKey"]!==undefined ? this.state.item["checkListKey"] : "") ? 1 : 0}
+            loop={false}
+            resizeMode="cover" 
+            style={{
+              opacity: (global.darkMode?0.95:1),
+              width: 110,
+              height: 110,
+            }}
+            source={require('../assets/heartAnimationNoFade.json')}
+          />
+          </TouchableOpacity>
           {villagerPopup}
         </>}
       </PopupBottomCustom>
