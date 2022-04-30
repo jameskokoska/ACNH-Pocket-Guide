@@ -4,6 +4,8 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added category separators to ToDo list
+-
 -Fixed Songs page images when Avoid Spoilers setting enabled
 -Added information if Villager's name not found when searching for Villagers, try changing to European English language
 -Added view Villager's Photo and Poster button to Villager popup
