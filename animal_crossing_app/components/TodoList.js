@@ -6,7 +6,7 @@ import {getStorage, checkOff, capitalize, commas, removeBrackets, attemptToTrans
 import {getPhoto} from "./GetPhoto"
 import Check from './Check';
 import colors from '../Colors'
-import PopupAddTask from "./PopupAddTask"
+import PopupAddTask, { PopupAddTaskBreak } from "./PopupAddTask"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {getSettingsString, attemptToTranslate, getCurrentVillagerObjects, getCurrentVillagerNamesString} from "../LoadJsonData"
 import FastImage from "./FastImage"
@@ -237,6 +237,7 @@ export class TodoList extends Component {
           style={{padding:10, paddingLeft:0}}
           width={120}
           items={[
+            {label:"Add Category Separator", value:"Add Category Separator", highlighted: false},
             {label:this.state.showEdit ? "Disable Edit List" : "Edit List", value:"Edit List", highlighted: this.state.showEdit ? true : false},
             {label:"Uncheck All", value:"Uncheck All",},
             {label:"Uncheck Each Day (at 5 AM)", value:"Uncheck Each Day", highlighted: this.state.resetEachDay},
@@ -245,7 +246,10 @@ export class TodoList extends Component {
           defaultValue={""}
           onChangeItem={
             async (item)=>{
-              if(item.value==="Edit List"){
+              if(item.value==="Add Category Separator"){
+                this.popupAddTaskBreak?.setPopupVisible(true)
+                getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+              }else if(item.value==="Edit List"){
                 this.setState({showEdit:!this.state.showEdit});
                 getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
               }else if(item.value==="Uncheck All"){
@@ -285,7 +289,7 @@ export class TodoList extends Component {
                     deleteItem={this.deleteItem}
                     reorderItem={this.reorderItem}
                     showEdit={this.state.showEdit}
-                    editTask={()=>{this.popupAddTask?.setPopupVisible(true, item, index);}}
+                    editTask={()=>{item.picture==="breakerSeparator" ?  this.popupAddTaskBreak?.setPopupVisible(true, item, index) : this.popupAddTask?.setPopupVisible(true, item, index);}}
                   />
                 }else if(item.small){
                   return(
@@ -297,7 +301,7 @@ export class TodoList extends Component {
                       deleteItem={this.deleteItem}
                       reorderItem={this.reorderItem}
                       showEdit={this.state.showEdit}
-                      editTask={()=>{this.popupAddTask?.setPopupVisible(true, item, index);}}
+                      editTask={()=>{item.picture==="breakerSeparator" ?  this.popupAddTaskBreak?.setPopupVisible(true, item, index) : this.popupAddTask?.setPopupVisible(true, item, index);}}
                     />
                   )
                 } else {
@@ -310,7 +314,7 @@ export class TodoList extends Component {
                       deleteItem={this.deleteItem}
                       reorderItem={this.reorderItem}
                       showEdit={this.state.showEdit}
-                      editTask={()=>{this.popupAddTask?.setPopupVisible(true, item, index);}}
+                      editTask={()=>{item.picture==="breakerSeparator" ?  this.popupAddTaskBreak?.setPopupVisible(true, item, index) : this.popupAddTask?.setPopupVisible(true, item, index);}}
                     />
                   )
                 }
@@ -336,6 +340,7 @@ export class TodoList extends Component {
                 </TouchableOpacity>
               </View>
               <PopupAddTask ref={(popupAddTask) => this.popupAddTask = popupAddTask} addItem={this.addItem}/>
+              <PopupAddTaskBreak ref={(popupAddTaskBreak) => this.popupAddTaskBreak = popupAddTaskBreak} addItem={this.addItem}/>
               <PopupInfoCustom header={<TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>You do not have any villagers added!</TextFont>} ref={(popup) => this.popup = popup} buttonText={"Dismiss"}>
                 <TouchableOpacity style={{paddingVertical:20,}} onPress={() => this.props.setPage(8)}>
                   <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, textAlign:"center"}}>{"Tap here and go add some!"}</TextFont>
@@ -638,6 +643,25 @@ class TodoItem extends Component {
       )
   }
   render(){
+    if(this.props.item.picture === "breakerSeparator")
+      return (
+        <View style={{width: Dimensions.get('window').width-20*2}}>
+        {this.removeButton(this.props)}
+        <TouchableNativeFeedback onLongPress={() => {  
+          this.setState({showRemove:!this.state.showRemove})
+          getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(8) : "";
+        }}
+        background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"1A", false)}
+        >
+          <View>
+          <View style={{padding:5, paddingVertical:20, paddingBottom:0, paddingLeft:12}}>
+            <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:22, color:colors.fishText[global.darkMode]}}>{this.props.item.title}</TextFont>
+          </View>
+          </View>
+        </TouchableNativeFeedback>
+        <View style={{height:2, borderRadius: 100, backgroundColor:colors.fishText[global.darkMode], marginBottom:4, marginHorizontal:-5}}/>
+      </View>
+    )
     var imageComp = <View/>
     if(this.props.item.picture && this.props.item.picture?.startsWith("http")){
       imageComp = <FastImage
@@ -807,6 +831,47 @@ class TodoItemEdit extends Component {
     }
   }
   render(){
+    if(this.props.item.picture === "breakerSeparator")
+      return (
+        <View style={{width: Dimensions.get('window').width-20*2}}>
+        {this.removeButton(this.props)}
+        <TouchableNativeFeedback onLongPress={() => {  
+          this.setState({showRemove:!this.state.showRemove})
+          getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(8) : "";
+        }}
+        background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"1A", false)}
+        >
+          <View style={{paddingVertical:11}}>
+            <View style={{padding:5, paddingVertical:20, paddingBottom:0, paddingLeft:12}}>
+              <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:22, color:colors.fishText[global.darkMode]}}>{this.props.item.title}</TextFont>
+            </View>
+            <View style={{flexDirection:"column",zIndex:10, position:"absolute",right:10}}>
+              <TouchableOpacity style={{padding:4, paddingTop:10}} 
+                onPress={()=>{
+                  this.props.reorderItem(this.props.index, -1); 
+              }}>
+                <Image source={require("../assets/icons/upArrow.png")} style={{opacity:0.5,width:25, height:25, borderRadius:100,}}/>
+              </TouchableOpacity>
+              <TouchableOpacity style={{padding:4, paddingBottom:10}} 
+                onPress={()=>{
+                  this.props.reorderItem(this.props.index, 1); 
+              }}>
+                <Image source={require("../assets/icons/downArrow.png")} style={{opacity:0.5,width:25, height:25, borderRadius:100,}}/>
+              </TouchableOpacity>
+            </View>
+            <View style={{position:'absolute',zIndex:10, right:35, top: 17}}>
+              <TouchableOpacity style={{padding:9}} 
+                onPress={()=>{
+                  this.props.editTask(); 
+              }}>
+                <Image source={require("../assets/icons/pencil.png")} style={{opacity:0.5,width:25, height:25, borderRadius:100,}}/>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </TouchableNativeFeedback>
+        <View style={{height:2, borderRadius: 100, backgroundColor:colors.fishText[global.darkMode], marginBottom:4, marginHorizontal:-5}}/>
+      </View>
+    )
     var imageComp = <View/>
     if(this.props.item.picture && this.props.item.picture?.startsWith("http")){
       imageComp = <FastImage

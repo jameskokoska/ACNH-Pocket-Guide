@@ -281,6 +281,85 @@ class PopupAddTask extends Component {
 }
 export default PopupAddTask;
 
+
+export class PopupAddTaskBreak extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      popupVisible: false,
+      title: "",
+      images:taskImages
+    };
+    this.task = {title: "", picture:"breakerSeparator", finished: false, small:false};
+    this.edit=false;
+  }
+
+  setPopupVisible = (visible, item=false, index=-1) => {
+    this.popup?.setPopupVisible(true);
+    if(item===false){
+      this.setState({title:"",selectedImage: "breakerSeparator", popupTitle:"Add Category Separator"})
+      this.task = {title: "", picture:"breakerSeparator", finished: false, small:false};
+      this.edit = false;
+    } else {
+      this.setState({title:item.title,selectedImage: item.picture, popupTitle:"Edit Category Separator", smallToggle: item.small})
+      this.task = {title: item.title, picture:"breakerSeparator", finished: item.finished, small:false};
+      this.edit = index;
+    }
+  }
+
+  render(){
+    var buttons = <>
+      <View style={{flexDirection:"row", justifyContent:"center"}}>
+        <ButtonComponent
+          text={"Cancel"}
+          color={colors.cancelButton[global.darkMode]}
+          vibrate={8}
+          onPress={() => {
+            this.popup?.setPopupVisible(false);
+          }}
+        /> 
+        <ButtonComponent
+          text={"Done"}
+          color={colors.okButton[global.darkMode]}
+          vibrate={15}
+          onPress={() => {
+            console.log(this.task)
+            if(this.edit===false || this.edit===-1){
+              this.props.addItem(this.task);
+            } else {
+              this.props.addItem(this.task, this.edit);
+            }
+            this.popup?.setPopupVisible(false);
+          }}
+        /> 
+      </View>
+    </>
+    var header = <>
+      <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{this.state.popupTitle}</TextFont>
+      <View style={{height:10}}/>
+      <View style={{flexDirection: 'row'}}>
+        <View style={{flex:1, justifyContent:"center", marginHorizontal:5,}}>
+          <TextInput
+            allowFontScaling={false}
+            style={{fontSize: 18, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 10, borderRadius: 5}}
+            onChangeText={(text) => {this.task.title=text; this.setState({title:text})}}
+            placeholder={attemptToTranslate("Separator Name")}
+            placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+            value={this.state.title}
+          />
+        </View>
+      </View>
+      <View style={{height:10}}/>
+    </>
+    return (
+      <>
+        <PopupInfoCustom ref={(popup) => this.popup = popup} buttonDisabled={true} buttons={buttons} header={header}>
+        </PopupInfoCustom>
+      </>
+    )
+  }
+}
+
 export class PopupChooseIcon extends Component{
   constructor(props) {
     super(props);
