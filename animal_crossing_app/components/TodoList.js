@@ -142,7 +142,7 @@ export class TodoListWrapped extends Component {
   }
 
   checkOffItem = (index, value) => {
-    console.log(value)
+    // console.log(value)
     const newTaskList=this.state.data;
     newTaskList[index].finished = value;
     // this.setState({data:newTaskList})
