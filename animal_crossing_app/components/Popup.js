@@ -83,15 +83,30 @@ class Popup extends Component {
   //     this.setPopupVisible(this.props.popupVisible);
   // }
 
-  setPopupVisible = (visible) => {
+  setPopupVisible = (visible, text="", textLower="") => {
     if(this.mounted){
-      this.setState({popupVisible:visible});
+      this.setState({popupVisible:visible, text:text, textLower:textLower});
     }
   }
 
   render(){
     let darkMode = this.props.darkMode ? this.props.darkMode : global.darkMode
     const backgroundStyle = {position:"absolute", left:-100, top:-100, width: Dimensions.get('window').width+200, height: Dimensions.get('window').height+200, backgroundColor: "black", opacity: 0.6}
+    
+
+    let text = <View/>
+    if(this.state.text!==undefined && this.state.text!==""){
+      text = <TextFont checkFont={this.props.checkFont} bold={true} style={{fontSize: 25, textAlign:"center", color: colors.textBlack[darkMode]}}>{this.state.text}</TextFont>
+    } else if(this.props.text!==undefined){
+      text = <TextFont checkFont={this.props.checkFont} bold={true} style={{fontSize: 25, textAlign:"center", color: colors.textBlack[darkMode]}}>{this.props.text}</TextFont>
+    }
+    let textLower = <View/>
+    if(this.state.textLower!==undefined && this.state.textLower!==""){
+      textLower = <TextFont checkFont={this.props.checkFont} bold={false} style={{fontSize: 17, textAlign:"center", color: colors.textBlack[darkMode]}}>{this.state.textLower}</TextFont>
+    } else if(this.props.textLower!==undefined){
+      textLower = <TextFont checkFont={this.props.checkFont} bold={false} style={{fontSize: 17, textAlign:"center", color: colors.textBlack[darkMode]}}>{this.props.textLower}</TextFont>
+    }
+    
     return (
       <Modal
         animationType="fade"
@@ -103,9 +118,9 @@ class Popup extends Component {
         <AnimatedPopupWrapper style={[styles.centeredView,{padding:this.props.centerPadding}]} disableAnimations={getSettingsString("settingsLowEndDevice")==="true"}>
           {(this.props.button1===undefined && this.props.button2===undefined) || this.props.noDismiss===true ? <View style={backgroundStyle}/> : <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} activeOpacity={0.55} style={backgroundStyle}/>}
           <View style={[styles.modalView,{backgroundColor: colors.white[darkMode], justifyContent:"center", alignItems:"center"}]}>
-            {this.props.text?<TextFont checkFont={this.props.checkFont} bold={true} style={{fontSize: 25, textAlign:"center", color: colors.textBlack[darkMode]}}>{this.props.text}</TextFont>:<View/>}
+            {text}
             <ScrollView style={{maxHeight:Dimensions.get('window').height*0.75, marginTop:this.props.margin?10:0}}>
-              {this.props.textLower===undefined?<View/>:<TextFont checkFont={this.props.checkFont} bold={false} style={{fontSize: 17, textAlign:"center", color: colors.textBlack[darkMode]}}>{this.props.textLower}</TextFont>}
+              {textLower}
               {this.props.loading?<LottieView autoPlay loop
                 style={{marginBottom:-10, width: 80, zIndex:1,marginTop:4}}
                 source={require('../assets/loading.json')}

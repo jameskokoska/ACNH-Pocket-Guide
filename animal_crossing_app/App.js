@@ -71,6 +71,7 @@ import * as Device from 'expo-device';
 import * as ErrorRecovery from 'expo-error-recovery';
 import CrashPage, { EmptyPage } from './pages/CrashPage';
 import VillagerPhotoPoster from './pages/VillagerPhotoPoster';
+import TodoReorderPage from './pages/TodoReorderPage';
 
 const defaultErrorHandler = ErrorUtils.getGlobalHandler();
 
@@ -628,6 +629,8 @@ class Main extends Component {
         currentPageView = <VillagerFurnitureParadisePlanning request={this.state.propsPassed}/>
       } else if (this.state.currentPage===37){
         currentPageView = <VillagerPhotoPoster villager={this.state.propsPassed}/>
+      } else if (this.state.currentPage===38){
+        currentPageView = <TodoReorderPage todos={this.state.propsPassed}/>
       } else {
         currentPageView = <Text>Default</Text>
       }
@@ -646,7 +649,8 @@ class Main extends Component {
       const NavigatorVillagerFurnitureParadisePlanning = ({route, navigation})=>{return <VillagerFurnitureParadisePlanning request={route.params.propsPassed}/>}
       const NavigatorBrowserPage = ({route, navigation})=>{return <BrowserPage page={route.params.propsPassed} languageMessage={"You can change the language at the bottom of the page, by tapping Language"} splashImage={require('./assets/icons/turnip.png')} splashText={"Turnip Prophet"} splashCredits={"By mikebryant"}/>}
       const NavigatorGlobalSearchPage = ({route, navigation})=>{return <GlobalSearchPage currentSearch={route.params.propsPassed} setPage={this.setPage}/>}
-      
+      const NavigatorTodoReorderPage = ({route, navigation})=>{return <TodoReorderPage todos={route.params.propsPassed}/>}
+
       console.log("Current page: " + this.state.currentPage)
 
       let theme = {
@@ -675,6 +679,7 @@ class Main extends Component {
                   <Stack.Screen name="23" component={NavigatorCustomFiltersPage}/>
                   <Stack.Screen name="34" component={NavigatorCraftableItemsPage}/>
                   <Stack.Screen name="36" component={NavigatorVillagerFurnitureParadisePlanning}/>
+                  <Stack.Screen name="38" component={NavigatorTodoReorderPage}/>
                   <Stack.Screen name="BrowserPage" component={NavigatorBrowserPage}/>
                   <Stack.Screen name="GlobalSearchPage" component={NavigatorGlobalSearchPage}/>
                 </Stack.Navigator>
@@ -703,9 +708,9 @@ class PopupInfos extends Component {
       if(numLoginsOffset[0]===global.version){
         if(numLoginsOffset[1]>=1){
           //can periodically switch this one (ref and storage key)
-          let supportPopupDismissed = await getStorage("supportPopupDismissed6","false");
+          let supportPopupDismissed = await getStorage("supportPopupDismissed1","false");
           if(supportPopupDismissed==="false" && numLogins >= 12){
-            AsyncStorage.setItem("supportPopupDismissed6", "true");
+            AsyncStorage.setItem("supportPopupDismissed1", "true");
             this.popupSupport2?.setPopupVisible(true)
           }
         }

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, useRef} from 'react';
 import {Dimensions, Linking, TextInput, Vibration,TouchableNativeFeedback,TouchableOpacity,StyleSheet, Text, View, Image, BackHandler} from 'react-native';
 import TextFont from './TextFont';
 import {addHours, getCurrentDateObject, getDateStringMonthDay, getMonth, getWeekDayShort} from './DateFunctions';
@@ -16,8 +16,31 @@ import * as RootNavigation from '../RootNavigation.js';
 import { DropdownMenu } from './Dropdown';
 import FadeInOut from './FadeInOut';
 import LottieView from 'lottie-react-native';
+import { useFocusEffect } from '@react-navigation/native';
 
-export class TodoList extends Component {
+export function TodoList(props){
+  let onlyUpdateMe = false
+  
+  useFocusEffect(
+    React.useCallback(() => {
+      if(onlyUpdateMe){
+        if(todoListWrapped!==undefined){
+          todoListWrapped?.current.loadList(true)
+        }
+      }
+    },)
+  );
+
+  const setOnlyUpdateMe = (value) => {
+    onlyUpdateMe = value
+  }
+
+  const todoListWrapped = useRef(undefined)
+
+  return <TodoListWrapped {...props} setOnlyUpdateMe={setOnlyUpdateMe} ref={todoListWrapped}/>
+}
+
+export class TodoListWrapped extends Component {
   constructor(props){
     super(props);
     this.state = {
@@ -25,7 +48,6 @@ export class TodoList extends Component {
       loaded:false,
       showEdit: false,
       showVillagersTalkList: false,
-      deleteIndex: 0,
       resetEachDay: false,
       addToTop: false,
     }
@@ -55,7 +77,9 @@ export class TodoList extends Component {
     }
   }
 
-  loadList = async() => {
+  loadList = async(showLoading=false) => {
+    if(showLoading)
+      this.setState({loaded:false})
     let showVillagersTalkList = (await getStorage("showVillagersTalkList"+global.profile,"false"))==="true";
     let storageData = JSON.parse(await getStorage("ToDoList"+global.profile,JSON.stringify(defaultToDoList())));
     let resetEachDay = (await getStorage("resetEachDay","false"))==="true";
@@ -117,12 +141,15 @@ export class TodoList extends Component {
     await AsyncStorage.setItem("ToDoList"+global.profile, JSON.stringify(data));
   }
 
-  checkOffItem = (index) => {
+  checkOffItem = (index, value) => {
+    console.log(value)
     const newTaskList=this.state.data;
-    newTaskList[index].finished = !this.state.data[index].finished;
-    this.setState({data:newTaskList})
-    if(newTaskList[index].finished!==false){
+    newTaskList[index].finished = value;
+    // this.setState({data:newTaskList})
+    if(value!==false && newTaskList[index].small !== true){
       getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10,220,20]) : "";
+    } else if(value!==false && newTaskList[index].small === true){
+      getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10,20,20]) : "";
     } else {
       getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
     }
@@ -131,8 +158,7 @@ export class TodoList extends Component {
 
   deleteItem = (index) => {
     this.deleteIndex = index
-    this.setState({deleteIndex: index})
-    this.popupDeleteToDo?.setPopupVisible(true)
+    this.popupDeleteToDo?.setPopupVisible(true, "", this.state.data[index]?.title)
   }
 
   deleteItemGo = () => {
@@ -174,7 +200,6 @@ export class TodoList extends Component {
   addItem = (item, edit=false) => {
     let tasks = this.state.data;
     if(edit===false){
-      tasks = this.state.data;
       if(this.state.addToTop){
         tasks = [item, ...tasks]
       } else {
@@ -233,12 +258,19 @@ export class TodoList extends Component {
         }}>
           <Image source={require("../assets/icons/addIcon.png")} style={{width:25, height:25, borderRadius:100,}}/>
         </TouchableOpacity>
+        <TouchableOpacity style={{marginLeft:2, padding:10, paddingRight:0, marginRight:-5}} 
+            onPress={()=>{
+              this.props.setOnlyUpdateMe(true)
+              RootNavigation.navigate('38', {propsPassed:{todos:this.state.data, addToTop: this.state.addToTop}});
+          }}>
+            <Image source={require("../assets/icons/pencil.png")} style={{opacity:global.darkMode?1:0.7, width:25, height:25, borderRadius:100,}}/>
+          </TouchableOpacity>
         <DropdownMenu
           style={{padding:10, paddingLeft:0}}
           width={120}
           items={[
             {label:"Add Category Separator", value:"Add Category Separator", highlighted: false},
-            {label:this.state.showEdit ? "Disable Edit List" : "Edit List", value:"Edit List", highlighted: this.state.showEdit ? true : false},
+            // {label:this.state.showEdit ? "Disable Edit List" : "Edit List", value:"Edit List", highlighted: this.state.showEdit ? true : false},
             {label:"Uncheck All", value:"Uncheck All",},
             {label:"Uncheck Each Day (at 5 AM)", value:"Uncheck Each Day", highlighted: this.state.resetEachDay},
             {label:this.state.addToTop ? "Add New Tasks To Top" : "Add New Tasks To Bottom", value:"Add To Top", highlighted: this.state.addToTop ? true : false},
@@ -250,8 +282,10 @@ export class TodoList extends Component {
                 this.popupAddTaskBreak?.setPopupVisible(true)
                 getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
               }else if(item.value==="Edit List"){
-                this.setState({showEdit:!this.state.showEdit});
+                // this.setState({showEdit:!this.state.showEdit});
+                this.props.setOnlyUpdateMe(true)
                 getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+                RootNavigation.navigate('38', {propsPassed:{todos:this.state.data, addToTop: this.state.addToTop}});
               }else if(item.value==="Uncheck All"){
                 this.uncheckAll(); 
               }else if(item.value==="Uncheck Each Day"){
@@ -285,10 +319,8 @@ export class TodoList extends Component {
                     key={item+index.toString()}
                     item={item}
                     index={index}
-                    checkOffItem={this.checkOffItem}
                     deleteItem={this.deleteItem}
-                    reorderItem={this.reorderItem}
-                    showEdit={this.state.showEdit}
+                    showEdit={true}
                     editTask={()=>{item.picture==="breakerSeparator" ?  this.popupAddTaskBreak?.setPopupVisible(true, item, index) : this.popupAddTask?.setPopupVisible(true, item, index);}}
                   />
                 }else if(item.small){
@@ -347,7 +379,7 @@ export class TodoList extends Component {
                 </TouchableOpacity>
               </PopupInfoCustom>
               <Popup ref={(popupRemoveTalkVillagers) => this.popupRemoveTalkVillagers = popupRemoveTalkVillagers} text={attemptToTranslate("Hide talk to villagers list")+"?"} button1={"Cancel"} button1Action={()=>{}} button2={"Yes"} button2Action={()=>{this.toggleVillagerTalk()}}/>
-              <Popup ref={(popupDeleteToDo) => this.popupDeleteToDo = popupDeleteToDo} text="Delete?" textLower={this.state.data[this.state.deleteIndex]?.title} button1={"Cancel"} button1Action={()=>{}} button2={"Delete"} button2Action={()=>{this.deleteItemGo()}}/>
+              <Popup ref={(popupDeleteToDo) => this.popupDeleteToDo = popupDeleteToDo} text="Delete?" button1={"Cancel"} button1Action={()=>{}} button2={"Delete"} button2Action={()=>{this.deleteItemGo()}}/>
             </>
             :
             <LottieView autoPlay loop
@@ -591,12 +623,16 @@ class TodoItem extends Component {
   constructor() {
     super();
     this.state = {
-      showRemove:false
+      showRemove:false,
+      checked:false
     }
+  }
+  componentDidMount(){
+    this.setState({showRemove:false, checked:this.props.item!==undefined ? this.props.item.finished : false})
   }
   componentDidUpdate(prevProps){
     if(prevProps!==this.props){
-      this.setState({showRemove:false})
+      this.setState({showRemove:false, checked:this.props.item!==undefined ? this.props.item.finished : false})
     }
   }
   removeButton = (props)=>{
@@ -643,6 +679,22 @@ class TodoItem extends Component {
       )
   }
   render(){
+    if(this.props.item.picture === "breakerSeparator" && this.props.item.title==="")
+      return (
+        <View style={{width: Dimensions.get('window').width-20*2,}}>
+        {this.removeButton(this.props)}
+        <TouchableNativeFeedback onLongPress={() => {  
+            this.setState({showRemove:!this.state.showRemove})
+            getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(8) : "";
+          }}
+          background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"1A", false)}
+        >
+          <View style={{height:45, justifyContent:"center"}}>
+            <View style={{marginTop: 10, height:2, borderRadius: 100, backgroundColor:colors.fishText[global.darkMode], marginHorizontal:-5}}/>
+          </View>
+        </TouchableNativeFeedback>
+      </View>
+    )
     if(this.props.item.picture === "breakerSeparator")
       return (
         <View style={{width: Dimensions.get('window').width-20*2}}>
@@ -684,7 +736,8 @@ class TodoItem extends Component {
         }}
         background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"1A", false)}
         onPress={()=>{
-              this.props.checkOffItem(this.props.index); 
+          this.props.checkOffItem(this.props.index, !this.state.checked); 
+          this.setState({checked:!this.state.checked})
         }}
         >
           <View style={[styles.row,{backgroundColor:colors.eventBackground[global.darkMode]}]}>
@@ -697,9 +750,10 @@ class TodoItem extends Component {
             <TouchableOpacity style={{position:"absolute", right: -5}} 
               activeOpacity={0.6}
               onPress={() => {  
-              this.props.checkOffItem(this.props.index); 
+                this.props.checkOffItem(this.props.index, !this.state.checked); 
+                this.setState({checked:!this.state.checked})
             }}>
-              <Check checkType={this.props.checkType} fadeOut={false} play={this.props.item.finished} width={90} height={90} disablePopup={true}/>
+              <Check checkType={this.props.checkType} fadeOut={false} play={this.state.checked} width={90} height={90} disablePopup={true}/>
             </TouchableOpacity>
           </View>
         </TouchableNativeFeedback>
@@ -712,12 +766,16 @@ class TodoItemSmall extends Component {
   constructor() {
     super();
     this.state = {
-      showRemove:false
+      showRemove:false,
+      checked:false
     }
+  }
+  componentDidMount(){
+    this.setState({showRemove:false, checked:this.props.item!==undefined ? this.props.item.finished : false})
   }
   componentDidUpdate(prevProps){
     if(prevProps!==this.props){
-      this.setState({showRemove:false})
+      this.setState({showRemove:false, checked:this.props.item!==undefined ? this.props.item.finished : false})
     }
   }
   removeButton = (props)=>{
@@ -787,10 +845,11 @@ class TodoItemSmall extends Component {
             getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(8) : "";
           }}
           onPress={()=>{
-            this.props.checkOffItem(this.props.index); 
+            this.props.checkOffItem(this.props.index, !this.state.checked); 
+            this.setState({checked:!this.state.checked})
           }}
         >
-          <View style={[styles.rowImageBackground,{borderWidth: 2, borderColor: this.props.item.finished ? colors.checkGreen[global.darkMode] : colors.eventBackground[global.darkMode], backgroundColor:colors.eventBackground[global.darkMode]}]}>
+          <View style={[styles.rowImageBackground,{borderWidth: 2, borderColor: this.state.checked ? colors.checkGreen[global.darkMode] : colors.eventBackground[global.darkMode], backgroundColor:colors.eventBackground[global.darkMode]}]}>
             {imageComp}
           </View>
         </TouchableOpacity>
@@ -800,7 +859,7 @@ class TodoItemSmall extends Component {
   }
 }
 
-class TodoItemEdit extends Component {
+export class TodoItemEdit extends Component {
   constructor(){
     super()
     this.state={fadeRefresh:true}
@@ -834,41 +893,25 @@ class TodoItemEdit extends Component {
     if(this.props.item.picture === "breakerSeparator")
       return (
         <View style={{width: Dimensions.get('window').width-20*2}}>
-        {this.removeButton(this.props)}
-        <TouchableNativeFeedback onLongPress={() => {  
-          this.setState({showRemove:!this.state.showRemove})
-          getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(8) : "";
-        }}
-        background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"1A", false)}
-        >
-          <View style={{paddingVertical:11}}>
+          {this.removeButton(this.props)}
+          <View style={{paddingVertical:0}}>
             <View style={{padding:5, paddingVertical:20, paddingBottom:0, paddingLeft:12}}>
               <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:22, color:colors.fishText[global.darkMode]}}>{this.props.item.title}</TextFont>
             </View>
-            <View style={{flexDirection:"column",zIndex:10, position:"absolute",right:10}}>
-              <TouchableOpacity style={{padding:4, paddingTop:10}} 
-                onPress={()=>{
-                  this.props.reorderItem(this.props.index, -1); 
-              }}>
-                <Image source={require("../assets/icons/upArrow.png")} style={{opacity:0.5,width:25, height:25, borderRadius:100,}}/>
-              </TouchableOpacity>
-              <TouchableOpacity style={{padding:4, paddingBottom:10}} 
-                onPress={()=>{
-                  this.props.reorderItem(this.props.index, 1); 
-              }}>
-                <Image source={require("../assets/icons/downArrow.png")} style={{opacity:0.5,width:25, height:25, borderRadius:100,}}/>
-              </TouchableOpacity>
-            </View>
-            <View style={{position:'absolute',zIndex:10, right:35, top: 17}}>
-              <TouchableOpacity style={{padding:9}} 
-                onPress={()=>{
-                  this.props.editTask(); 
-              }}>
-                <Image source={require("../assets/icons/pencil.png")} style={{opacity:0.5,width:25, height:25, borderRadius:100,}}/>
-              </TouchableOpacity>
+            <View style={{position:'absolute',zIndex:10, right:14, top: 17, flexDirection:"row",zIndex:10, alignItems:"center", justifyContent:"center"}}>
+                <Image
+                  style={{width:18,height:18,resizeMode:'contain', opacity:0.3}}
+                  source={global.darkMode ? require("../assets/icons/menuIconWhite.png") : require("../assets/icons/menuIcon.png")}
+                />
+                <View style={{width:11}}/>
+                <TouchableOpacity
+                  onPress={()=>{
+                    this.props.editTask(); 
+                }}>
+                  <Image source={require("../assets/icons/pencil.png")} style={{opacity:0.5,width:25, height:25, borderRadius:100,}}/>
+                </TouchableOpacity>
             </View>
           </View>
-        </TouchableNativeFeedback>
         <View style={{height:2, borderRadius: 100, backgroundColor:colors.fishText[global.darkMode], marginBottom:4, marginHorizontal:-5}}/>
       </View>
     )
@@ -896,22 +939,13 @@ class TodoItemEdit extends Component {
               <View style={styles.rowTextTop}>
                 <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:20, color:colors.textBlack[global.darkMode]}}>{this.props.item.title}</TextFont>
               </View>
-              <View style={{flexDirection:"column",zIndex:10, position:"absolute",right:10}}>
-                <TouchableOpacity style={{padding:4, paddingTop:10}} 
-                  onPress={()=>{
-                    this.props.reorderItem(this.props.index, -1); 
-                }}>
-                  <Image source={require("../assets/icons/upArrow.png")} style={{opacity:0.5,width:25, height:25, borderRadius:100,}}/>
-                </TouchableOpacity>
-                <TouchableOpacity style={{padding:4, paddingBottom:10}} 
-                  onPress={()=>{
-                    this.props.reorderItem(this.props.index, 1); 
-                }}>
-                  <Image source={require("../assets/icons/downArrow.png")} style={{opacity:0.5,width:25, height:25, borderRadius:100,}}/>
-                </TouchableOpacity>
-              </View>
-              <View style={{position:'absolute',zIndex:10, right:35}}>
-                <TouchableOpacity style={{padding:9}} 
+              <View style={{flexDirection:"row",zIndex:10, position:"absolute",right:14, alignItems:"center", justifyContent:"center"}}>
+                <Image
+                  style={{width:18,height:18,resizeMode:'contain', opacity:0.3}}
+                  source={global.darkMode ? require("../assets/icons/menuIconWhite.png") : require("../assets/icons/menuIcon.png")}
+                />
+                <View style={{width:11}}/>
+                <TouchableOpacity
                   onPress={()=>{
                     this.props.editTask(); 
                 }}>

@@ -179,7 +179,7 @@ class PopupAddTask extends Component {
       this.task = {title: "", picture:this.state.selectedImage, finished: false, small:this.state.smallToggle};
       this.edit = false;
     } else {
-      this.setState({title:item.title,selectedImage: item.picture, popupTitle:"Edit Task", smallToggle: item.small})
+      this.setState({title:item.title,selectedImage: item.picture, selectedImageInitial: item.picture, popupTitle:"Edit Task", smallToggle: item.small})
       this.task = {title: item.title, picture:item.picture, finished: item.finished, small:item.small};
       this.edit = index;
     }

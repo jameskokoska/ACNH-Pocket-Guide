@@ -4,7 +4,14 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-New ToDo list edit page\nEasily sort and edit all your tasks in once page
+-Added drag and drop to reorder ToDo tasks in the edit page
 -Added category separators to ToDo list
+-Added special centered separator when no text entered
+-Increased performance for large ToDo lists
+-Changed vibration pattern for small tasks
+-Fix: When editing a task, the original icon is selected by default
+-Updated translations
 -
 -Fixed Songs page images when Avoid Spoilers setting enabled
 -Added information if Villager's name not found when searching for Villagers, try changing to European English language
