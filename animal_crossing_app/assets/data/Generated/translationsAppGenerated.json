@@ -9838,6 +9838,8 @@
     "label themes": {
       "English": "Label Themes",
       "English (Europe)": "Label Themes",
+      "French": "Thèmes de Tiquette",
+      "French (US)": "Thèmes de Tiquette",
       "German": "Minna Themen",
       "Spanish": "Etiquetar temas",
       "Russian": "Темы ярлыков",
@@ -9849,6 +9851,8 @@
     "everyday": {
       "English": "Everyday",
       "English (Europe)": "Everyday",
+      "French": "De tous les jours",
+      "French (US)": "De tous les jours",
       "German": "Alltag",
       "Spanish": "Cada dia",
       "Russian": "Ежедневный",
@@ -9860,6 +9864,8 @@
     "comfy": {
       "English": "Comfy",
       "English (Europe)": "Comfy",
+      "French": "De détente",
+      "French (US)": "De détente",
       "German": "Freizeit",
       "Spanish": "Confortable",
       "Russian": "Удобный",
@@ -9871,6 +9877,8 @@
     "formal": {
       "English": "Formal",
       "English (Europe)": "Formal",
+      "French": "Officielle",
+      "French (US)": "Officielle",
       "German": "Formell",
       "Spanish": "Formal",
       "Russian": "Формальный",
@@ -9882,6 +9890,8 @@
     "work": {
       "English": "Work",
       "English (Europe)": "Work",
+      "French": "Professionnelle",
+      "French (US)": "Professionnelle",
       "German": "Arbeit",
       "Spanish": "Trabajo",
       "Russian": "Рабочий",
@@ -9893,6 +9903,8 @@
     "theatrical": {
       "English": "Theatrical",
       "English (Europe)": "Theatrical",
+      "French": "De scène",
+      "French (US)": "De scène",
       "German": "Bühne",
       "Spanish": "Teatral",
       "Russian": "Театральный",
@@ -9904,6 +9916,8 @@
     "outdoorsy": {
       "English": "Outdoorsy",
       "English (Europe)": "Outdoorsy",
+      "French": "D'extérieur",
+      "French (US)": "D'extérieur",
       "German": "Outdoor",
       "Spanish": "Exterior",
       "Russian": "Уличный",
@@ -9915,6 +9929,8 @@
     "sporty": {
       "English": "Sporty",
       "English (Europe)": "Sporty",
+      "French": "Sportive",
+      "French (US)": "Sportive",
       "German": "Sport",
       "Spanish": "Deportivo",
       "Russian": "Спортивный",
@@ -9926,6 +9942,8 @@
     "vacation": {
       "English": "Vacation",
       "English (Europe)": "Vacation",
+      "French": "De vacances",
+      "French (US)": "De vacances",
       "German": "Urlaub",
       "Spanish": "Vacaciones",
       "Russian": "Отпуск",
@@ -9937,6 +9955,8 @@
     "goth": {
       "English": "Goth",
       "English (Europe)": "Goth",
+      "French": "Effrayante",
+      "French (US)": "Effrayante",
       "German": "Horror",
       "Spanish": "Horror",
       "Russian": "Готический",
@@ -10088,6 +10108,8 @@
     "gyroids": {
       "English": "Gyroids",
       "English (Europe)": "Gyroids",
+      "French": "Gyroïdes",
+      "French (US)": "Gyroïdes",
       "German": "Gyroiden",
       "Spanish": "Giroides",
       "Russian": "Гироиды",
@@ -12300,6 +12322,8 @@
     "poki": {
       "English": "poki",
       "English (Europe)": "poki",
+      "French": "Poki",
+      "French (US)": "Poki",
       "German": "Poki",
       "Spanish": "pokémon"
     },
@@ -12852,42 +12876,56 @@
     "mario": {
       "English": "Mario",
       "English (Europe)": "Mario",
+      "French": "Mario",
+      "French (US)": "Mario",
       "German": "Mario",
       "Spanish": "Mario"
     },
     "cinnamoroll": {
       "English": "Cinnamoroll",
       "English (Europe)": "Cinnamoroll",
+      "French": "Cinnamoroll",
+      "French (US)": "Cinnamoroll",
       "German": "Cinnamoroll",
       "Spanish": "Cinnamoroll"
     },
     "hello kitty": {
       "English": "Hello Kitty",
       "English (Europe)": "Hello Kitty",
+      "French": "Hello Kitty",
+      "French (US)": "Hello Kitty",
       "German": "Hello Kitty",
       "Spanish": "Hello Kitty"
     },
     "kerokerokeroppi": {
       "English": "Kerokerokeroppi",
       "English (Europe)": "Kerokerokeroppi",
+      "French": "Kerokerokeroppi",
+      "French (US)": "Kerokerokeroppi",
       "German": "Kerokerokeroppi",
       "Spanish": "Kerokerokeroppi"
     },
     "kiki & lala": {
       "English": "Kiki & Lala",
       "English (Europe)": "Kiki & Lala",
+      "French": "Kiki & Lala",
+      "French (US)": "Kiki & Lala",
       "German": "Kiki & Lala",
       "Spanish": "Kiki & Lala"
     },
     "my melody": {
       "English": "My Melody",
       "English (Europe)": "My Melody",
+      "French": "My Melody",
+      "French (US)": "My Melody",
       "German": "My Melody",
       "Spanish": "My Melody"
     },
     "pompompurin": {
       "English": "Pompompurin",
       "English (Europe)": "Pompompurin",
+      "French": "Pompompurin",
+      "French (US)": "Pompompurin",
       "German": "Pompompurin",
       "Spanish": "Pompompurin"
     },
@@ -17174,6 +17212,8 @@
     "notavailable": {
       "English": "NotAvailable",
       "English (Europe)": "NotAvailable",
+      "French": "Indisponible",
+      "French (US)": "Indisponible",
       "German": "Nicht verfügbar",
       "Dutch": "Niet Beschikbaar"
     },

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Image, Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text, TouchableNativeFeedback} from 'react-native';
 import TextFont from './TextFont'
 import colors from "../Colors"
-import {getMaterialImage} from "./GetPhoto"
+import {getMaterialImage, getToolPhoto} from "./GetPhoto"
 import { checkOff, getFlowerChecklistKey, inChecklist } from '../LoadJsonData';
 import Check from './Check';
 
@@ -15,6 +15,8 @@ class FlowerContainer extends Component {
       imagePathSpecial1 = <Image style={styles.flowerImageCorner} source={require("../assets/icons/star.png")}/>
     } else if(imagePathSpecial1 !== ""){
       imagePathSpecial1 = <Image style={styles.flowerImageCorner} source={{uri:imagePathSpecial1}}/>
+    } else if(this.props.flowerInfo.parent1Special === "golden watering can"){
+      imagePathSpecial1 = <Image style={[styles.flowerImageCorner, {transform: [{ scale: 1.2 },],}]} source={require("../assets/icons/goldenCan.png")}/>
     } else {
       imagePathSpecial1 = <View/>
     }
@@ -25,6 +27,8 @@ class FlowerContainer extends Component {
       imagePathSpecial2 = <Image style={styles.flowerImageCorner} source={require("../assets/icons/star.png")}/>
     } else if(imagePathSpecial2 !== ""){
       imagePathSpecial2 = <Image style={styles.flowerImageCorner} source={{uri:imagePathSpecial2}}/>
+    } else if(this.props.flowerInfo.parent2Special === "golden watering can"){
+      imagePathSpecial2 = <Image style={[styles.flowerImageCorner, {transform: [{ scale: 1.2 },],}]} source={require("../assets/icons/goldenCan.png")}/>
     } else {
       imagePathSpecial2 = <View/>
     }
@@ -56,7 +60,6 @@ class FlowerContainer extends Component {
             </View>
           <View>
           <TextFont bold={true} style={{paddingTop: 20, textAlign:"center",fontSize: 25, color:colors.textBlack[global.darkMode]}}>=</TextFont>
-          <TextFont bold={true} style={{textAlign:"center",fontSize: 16, color:colors.textBlack[global.darkMode]}}>{this.props.flowerInfo.percentage+"%"}</TextFont>
           </View>
           <View>
             <TouchableOpacity style={{position:"absolute", zIndex:5, top:-5, left:-5}} onPress={()=>{checkOff(this.props.childCheckListKey, inChecklist(this.props.childCheckListKey)); this.props.refresh();}}>

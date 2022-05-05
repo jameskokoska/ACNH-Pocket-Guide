@@ -572,8 +572,8 @@
         {
             "English": "1179 items",
             "English (Europe)": "1179 items",
-            "French": "1155 items (24 items missing)",
-            "French (US)": "1155 items (24 items missing)",
+            "French": "1174 items (5 items missing)",
+            "French (US)": "1174 items (5 items missing)",
             "German": "1174 items (5 items missing)",
             "Spanish": "1179 items",
             "Spanish (US)": "1151 items (28 items missing)",
@@ -10609,6 +10609,8 @@
         {
             "English": "Label Themes",
             "English (Europe)": "Label Themes",
+            "French": "Thèmes de Tiquette",
+            "French (US)": "Thèmes de Tiquette",
             "German": "Minna Themen",
             "Spanish": "Etiquetar temas",
             "Russian": "Темы ярлыков",
@@ -10620,6 +10622,8 @@
         {
             "English": "Everyday",
             "English (Europe)": "Everyday",
+            "French": "De tous les jours",
+            "French (US)": "De tous les jours",
             "German": "Alltag",
             "Spanish": "Cada dia",
             "Russian": "Ежедневный",
@@ -10631,6 +10635,8 @@
         {
             "English": "Comfy",
             "English (Europe)": "Comfy",
+            "French": "De détente",
+            "French (US)": "De détente",
             "German": "Freizeit",
             "Spanish": "Confortable",
             "Russian": "Удобный",
@@ -10642,6 +10648,8 @@
         {
             "English": "Formal",
             "English (Europe)": "Formal",
+            "French": "Officielle",
+            "French (US)": "Officielle",
             "German": "Formell",
             "Spanish": "Formal",
             "Russian": "Формальный",
@@ -10653,6 +10661,8 @@
         {
             "English": "Work",
             "English (Europe)": "Work",
+            "French": "Professionnelle",
+            "French (US)": "Professionnelle",
             "German": "Arbeit",
             "Spanish": "Trabajo",
             "Russian": "Рабочий",
@@ -10664,6 +10674,8 @@
         {
             "English": "Theatrical",
             "English (Europe)": "Theatrical",
+            "French": "De scène",
+            "French (US)": "De scène",
             "German": "Bühne",
             "Spanish": "Teatral",
             "Russian": "Театральный",
@@ -10675,6 +10687,8 @@
         {
             "English": "Outdoorsy",
             "English (Europe)": "Outdoorsy",
+            "French": "D'extérieur",
+            "French (US)": "D'extérieur",
             "German": "Outdoor",
             "Spanish": "Exterior",
             "Russian": "Уличный",
@@ -10686,6 +10700,8 @@
         {
             "English": "Sporty",
             "English (Europe)": "Sporty",
+            "French": "Sportive",
+            "French (US)": "Sportive",
             "German": "Sport",
             "Spanish": "Deportivo",
             "Russian": "Спортивный",
@@ -10697,6 +10713,8 @@
         {
             "English": "Vacation",
             "English (Europe)": "Vacation",
+            "French": "De vacances",
+            "French (US)": "De vacances",
             "German": "Urlaub",
             "Spanish": "Vacaciones",
             "Russian": "Отпуск",
@@ -10708,6 +10726,8 @@
         {
             "English": "Goth",
             "English (Europe)": "Goth",
+            "French": "Effrayante",
+            "French (US)": "Effrayante",
             "German": "Horror",
             "Spanish": "Horror",
             "Russian": "Готический",
@@ -10859,6 +10879,8 @@
         {
             "English": "Gyroids",
             "English (Europe)": "Gyroids",
+            "French": "Gyroïdes",
+            "French (US)": "Gyroïdes",
             "German": "Gyroiden",
             "Spanish": "Giroides",
             "Russian": "Гироиды",
@@ -13196,6 +13218,8 @@
         {
             "English": "poki",
             "English (Europe)": "poki",
+            "French": "Poki",
+            "French (US)": "Poki",
             "German": "Poki",
             "Spanish": "pokémon"
         },
@@ -13761,42 +13785,56 @@
         {
             "English": "Mario",
             "English (Europe)": "Mario",
+            "French": "Mario",
+            "French (US)": "Mario",
             "German": "Mario",
             "Spanish": "Mario"
         },
         {
             "English": "Cinnamoroll",
             "English (Europe)": "Cinnamoroll",
+            "French": "Cinnamoroll",
+            "French (US)": "Cinnamoroll",
             "German": "Cinnamoroll",
             "Spanish": "Cinnamoroll"
         },
         {
             "English": "Hello Kitty",
             "English (Europe)": "Hello Kitty",
+            "French": "Hello Kitty",
+            "French (US)": "Hello Kitty",
             "German": "Hello Kitty",
             "Spanish": "Hello Kitty"
         },
         {
             "English": "Kerokerokeroppi",
             "English (Europe)": "Kerokerokeroppi",
+            "French": "Kerokerokeroppi",
+            "French (US)": "Kerokerokeroppi",
             "German": "Kerokerokeroppi",
             "Spanish": "Kerokerokeroppi"
         },
         {
             "English": "Kiki & Lala",
             "English (Europe)": "Kiki & Lala",
+            "French": "Kiki & Lala",
+            "French (US)": "Kiki & Lala",
             "German": "Kiki & Lala",
             "Spanish": "Kiki & Lala"
         },
         {
             "English": "My Melody",
             "English (Europe)": "My Melody",
+            "French": "My Melody",
+            "French (US)": "My Melody",
             "German": "My Melody",
             "Spanish": "My Melody"
         },
         {
             "English": "Pompompurin",
             "English (Europe)": "Pompompurin",
+            "French": "Pompompurin",
+            "French (US)": "Pompompurin",
             "German": "Pompompurin",
             "Spanish": "Pompompurin"
         },
@@ -16620,8 +16658,8 @@
         {
             "English": "161 items",
             "English (Europe)": "161 items",
-            "French": "157 items (4 items missing)",
-            "French (US)": "139 items (22 items missing)",
+            "French": "158 items (3 items missing)",
+            "French (US)": "140 items (21 items missing)",
             "German": "161 items",
             "Spanish": "95 items (66 items missing)",
             "Spanish (US)": "50 items (111 items missing)",
@@ -18162,6 +18200,8 @@
         {
             "English": "NotAvailable",
             "English (Europe)": "NotAvailable",
+            "French": "Indisponible",
+            "French (US)": "Indisponible",
             "German": "Nicht verfügbar",
             "Dutch": "Niet Beschikbaar"
         },

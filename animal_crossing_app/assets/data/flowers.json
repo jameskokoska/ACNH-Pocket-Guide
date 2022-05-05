@@ -71,6 +71,14 @@
       "parent2Special" : true,
       "child" : "blue roses",
       "childSpecial" : true 
+    },
+    {
+      "parent1" : "black roses",
+      "parent1Special" : "golden watering can",
+      "parent2" : "black roses",
+      "parent2Special" : "golden watering can",
+      "child" : "gold roses",
+      "childSpecial" : false
     }
   ],
   "pansies" : [
