@@ -1,9 +1,12 @@
-import {Vibration,} from 'react-native';
+import {Vibration,Clipboard,Linking, View} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {doWeSwapDate,} from "./components/DateFunctions";
 import {howManyVariationsChecked, getVariations} from "./components/BottomSheetComponents"
 import * as Localization from 'expo-localization';
 import * as FileSystem from 'expo-file-system'
+import Toast from "react-native-toast-notifications";
+import TextFont from './components/TextFont';
+import colors from './Colors.js';
 
 export async function getStorage(storageKey, defaultValue){
   const valueReturned = await AsyncStorage.getItem(storageKey);
@@ -1870,5 +1873,36 @@ export function convertTimeTo24Hours(time){
     if(currentMinutes==="00"){
       return currentHour + " " + meridian
     }
+  }
+}
+
+export function openURL(url){
+  try{
+    Linking.openURL(url)
+  }catch(e){
+    try{
+      Clipboard.setString(url);
+    }catch(e){
+      if(toast)
+        toast.show("", {type:"success",
+          renderType:{
+            success: (toast) => (
+              <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 12, borderRadius: 5, backgroundColor: colors.popupSuccess[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+                <TextFont translate={false} style={{color:"white", fontSize: 15}}>{"There was an error opening the external link."}</TextFont>
+              </View>
+            ),
+          }
+        })
+    }
+    if(toast)
+      toast.show("", {type:"success",
+        renderType:{
+          success: (toast) => (
+            <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 12, borderRadius: 5, backgroundColor: colors.popupSuccess[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+              <TextFont translate={false} style={{color:"white", fontSize: 15}}>{"Copied to clipboard."}</TextFont>
+            </View>
+          ),
+        }
+      })
   }
 }

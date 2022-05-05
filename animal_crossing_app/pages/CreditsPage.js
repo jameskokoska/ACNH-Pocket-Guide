@@ -6,7 +6,7 @@ import colors from '../Colors'
 import PopupRating from "../components/PopupRating"
 import ButtonComponent from "../components/ButtonComponent"
 import {MailLink, ExternalLink, SubHeader, Header, Paragraph, HeaderNote} from "../components/Formattings"
-import {attemptToTranslate, capitalize} from "../LoadJsonData"
+import {attemptToTranslate, capitalize, openURL} from "../LoadJsonData"
 import {changelog, dataVersion} from "../Changelog"
 import Popup from '../components/Popup';
 import { testNotification } from '../Notifications';
@@ -52,7 +52,7 @@ class CreditsPage extends Component {
       <View style={{height: 5}}/>
       <View style={{paddingHorizontal: 20}}>
         <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.popupSupport?.setPopupVisible(true)}} text={capitalize(attemptToTranslate("Leave a Tip"))} />
-        <Popup support={true} noDismiss ref={(popupSupport) => this.popupSupport = popupSupport} text="Leave a Tip" button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
+        <Popup support={true} noDismiss ref={(popupSupport) => this.popupSupport = popupSupport} text="Leave a Tip" button1={"Sure!"} button1Action={()=>{openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
         <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.popupRating?.setPopupVisible(true)}} text={capitalize(attemptToTranslate("Leave a rating"))} />
         <PopupRating ref={(popupRating) => this.popupRating = popupRating}/>
       </View>

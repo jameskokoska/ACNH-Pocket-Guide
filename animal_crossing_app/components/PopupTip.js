@@ -17,6 +17,7 @@ import LottieView from 'lottie-react-native';
 import Popup from "./Popup";
 import {MailLink, GiveSupport} from "./Formattings";
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { openURL } from "../LoadJsonData";
 
 // <Popup 
 //  button1={"OK"} 
@@ -73,7 +74,7 @@ class PopupTip extends Component {
                 vibrate={5}
                 onPress={() => {
                   this.setState({popupVisible:false, open2:true})
-                  Linking.openURL(
+                  openURL(
                     "https://ko-fi.com/dapperappdeveloper"
                   );
                   AsyncStorage.setItem("tipDismissed", "true");

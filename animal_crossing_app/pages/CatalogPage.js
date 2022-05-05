@@ -6,7 +6,7 @@ import TextFont from '../components/TextFont'
 import StoreHoursContainer from '../components/StoreHoursContainer';
 import colors from '../Colors'
 import ButtonComponent from "../components/ButtonComponent"
-import {attemptToTranslate, collectionListSave, checkOff, loadGlobalData, indexCollectionList} from "../LoadJsonData"
+import {attemptToTranslate, collectionListSave, checkOff, loadGlobalData, indexCollectionList, openURL} from "../LoadJsonData"
 import Popup from '../components/Popup';
 import ToggleSwitch from 'toggle-switch-react-native';
 
@@ -119,7 +119,7 @@ class CatalogPage extends Component {
           <View style={{height: 100}}/>
           <TextFont bold={true} style={{fontSize: 37, marginLeft: 30, marginRight: 40, color:colors.textBlack[global.darkMode]}}>Catalog Import</TextFont>
           <View style={{height: 50}}/>
-          <TouchableOpacity onPress={() => Linking.openURL('https://nook.lol/') }>
+          <TouchableOpacity onPress={() => openURL('https://nook.lol/') }>
             <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 17, marginLeft: 30, marginRight: 30, textAlign:"center"}}>{"Visit https://nook.lol/ for more information"}</TextFont>
           </TouchableOpacity>
           <View style={{height: 50}}/>
