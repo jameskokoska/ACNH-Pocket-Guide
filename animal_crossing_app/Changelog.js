@@ -4,6 +4,13 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Tap an items title to view detailed information and properties\nUseful when applying detailed filters
+-Changes to format of item popup
+-Catchphrase now below item name
+-Toast message now shown at top of application\nMenu button can now be pressed when message shown
+-Added more loading texts\nFeel free to suggest some on email/Ko-Fi
+-Fix: Last selected Wishlist now saved when using a different profile
+-
 -Added gold roses to Flowers page
 -New ToDo list edit page\nEasily sort and edit all your tasks in one page
 -Added drag and drop to reorder ToDo tasks in the edit page

@@ -463,10 +463,10 @@ async function playSong(url){
     global.playback.setOnPlaybackStatusUpdate(onPlaybackStatusUpdate);
   } catch (e) {
     toast.show(attemptToTranslate("An error occurred. Please check your internet connection and try again later.") + "\n" + e.message, {type:"danger",
-      placement:'bottom',
+      placement:'top',
       renderType:{
         success: (toast) => (
-          <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 5, borderRadius: 5, backgroundColor: colors.popupDanger[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+          <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, borderRadius: 5, backgroundColor: colors.popupDanger[global.darkMode], alignItems:"center", justifyContent:"center"}}>
             <TextFont translate={false} style={{color:"white", fontSize: 15, textAlign:"center"}}>{toast.message}</TextFont>
           </View>
         ),
@@ -532,7 +532,7 @@ async function addSongToQueue(url, song, liveMusic){
       placement:'top',
       renderType:{
         success: (toast) => (
-          <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 5, borderRadius: 5, backgroundColor: colors.popupNeutral[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+          <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, borderRadius: 5, backgroundColor: colors.popupNeutral[global.darkMode], alignItems:"center", justifyContent:"center"}}>
             <TextFont translate={false} style={{color:colors.textBlack[global.darkMode], fontSize: 15, textAlign:"center"}}>{toast.message}</TextFont>
           </View>
         ),

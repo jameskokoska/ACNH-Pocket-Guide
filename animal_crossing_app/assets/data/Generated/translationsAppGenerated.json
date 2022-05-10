@@ -15681,6 +15681,78 @@
       "Russian": "Перетащите, чтобы изменить порядок элементов.",
       "Italian": "Trascina e rilascia per riordinare gli articoli.",
       "Portuguese": "Arraste e solte para reordenar os itens."
+    },
+    "looking for flick to sell your critters": {
+      "English": "Looking for Flick to sell your critters",
+      "English (Europe)": "Looking for Flick to sell your critters",
+      "French": "Vous cherchez Flick pour vendre vos bestioles",
+      "French (US)": "Vous cherchez Flick pour vendre vos bestioles",
+      "German": "Auf der Suche nach Flick, um Ihre Viecher zu verkaufen",
+      "Spanish": "Busco Flick para vender tus bichos",
+      "Spanish (US)": "Busco Flick para vender tus bichos",
+      "Russian": "Ищу Flick, чтобы продать ваших тварей",
+      "Italian": "Cerco Flick per vendere le tue creature",
+      "Portuguese": "Procurando Flick para vender seus bichos"
+    },
+    "looking for cj to sell your fish": {
+      "English": "Looking for CJ to sell your fish",
+      "English (Europe)": "Looking for CJ to sell your fish",
+      "French": "Vous cherchez CJ pour vendre votre poisson",
+      "French (US)": "Vous cherchez CJ pour vendre votre poisson",
+      "German": "Auf der Suche nach CJ, um Ihren Fisch zu verkaufen",
+      "Spanish": "Buscando a CJ para vender tu pescado",
+      "Spanish (US)": "Buscando a CJ para vender tu pescado",
+      "Russian": "Ищу CJ для продажи вашей рыбы",
+      "Italian": "Cerco CJ per vendere il tuo pesce",
+      "Portuguese": "Procurando CJ para vender seu peixe"
+    },
+    "looking for celeste to get a magical diy": {
+      "English": "Looking for Celeste to get a magical DIY",
+      "English (Europe)": "Looking for Celeste to get a magical DIY",
+      "French": "A la recherche de Celeste pour réaliser un DIY magique",
+      "French (US)": "A la recherche de Celeste pour réaliser un DIY magique",
+      "German": "Auf der Suche nach Celeste für ein magisches DIY",
+      "Spanish": "Buscando a Celeste para hacerte un DIY mágico",
+      "Spanish (US)": "Buscando a Celeste para hacerte un DIY mágico",
+      "Russian": "Ищу Селесту, чтобы сделать волшебный DIY",
+      "Italian": "Cerco Celeste per avere un magico fai da te",
+      "Portuguese": "Procurando Celeste para fazer um DIY mágico"
+    },
+    "looking for sahara to buy mystery wallpapers": {
+      "English": "Looking for Sahara to buy mystery wallpapers",
+      "English (Europe)": "Looking for Sahara to buy mystery wallpapers",
+      "French": "Vous cherchez Sahara pour acheter des fonds d'écran mystérieux",
+      "French (US)": "Vous cherchez Sahara pour acheter des fonds d'écran mystérieux",
+      "German": "Auf der Suche nach Sahara, um mysteriöse Hintergrundbilder zu kaufen",
+      "Spanish": "Buscando Sahara para comprar fondos de pantalla misteriosos",
+      "Spanish (US)": "Buscando Sahara para comprar fondos de pantalla misteriosos",
+      "Russian": "Ищу Сахару, чтобы купить загадочные обои",
+      "Italian": "Alla ricerca del Sahara per acquistare sfondi misteriosi",
+      "Portuguese": "Procurando Sahara para comprar papéis de parede misteriosos"
+    },
+    "looking for daisy mae to buy turnips": {
+      "English": "Looking for Daisy Mae to buy Turnips",
+      "English (Europe)": "Looking for Daisy Mae to buy Turnips",
+      "French": "À la recherche de Daisy Mae pour acheter des navets",
+      "French (US)": "À la recherche de Daisy Mae pour acheter des navets",
+      "German": "Auf der Suche nach Daisy Mae, um Rüben zu kaufen",
+      "Spanish": "Buscando a Daisy Mae para comprar nabos",
+      "Spanish (US)": "Buscando a Daisy Mae para comprar nabos",
+      "Russian": "Ищу Дейзи Мэй, чтобы купить репу",
+      "Italian": "Cerco Daisy Mae per comprare le rape",
+      "Portuguese": "Procurando Daisy Mae para comprar nabos"
+    },
+    "this will remove all items from the list.": {
+      "English": "This will remove all items from the list.",
+      "English (Europe)": "This will remove all items from the list.",
+      "French": "Cela supprimera tous les éléments de la liste.",
+      "French (US)": "Cela supprimera tous les éléments de la liste.",
+      "German": "Dadurch werden alle Elemente aus der Liste entfernt.",
+      "Spanish": "Esto eliminará todos los elementos de la lista.",
+      "Spanish (US)": "Esto eliminará todos los elementos de la lista.",
+      "Russian": "Это удалит все элементы из списка.",
+      "Italian": "Questo rimuoverà tutti gli elementi dall'elenco.",
+      "Portuguese": "Isso removerá todos os itens da lista."
     }
   },
   "Sources": {

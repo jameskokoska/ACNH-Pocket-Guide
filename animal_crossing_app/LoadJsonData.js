@@ -83,7 +83,7 @@ export function setCustomListsAmount(checkListKeyString, name, amount){
 
 export function setLastSelectedListPage(name){
   global.lastSelectedListPage = name
-  AsyncStorage.setItem("lastSelectedListPage", name);
+  AsyncStorage.setItem("lastSelectedListPage"+global.profile, name);
 }
 
 export function inWishlist(checkListKeyString){
@@ -1236,7 +1236,7 @@ export function attemptToTranslateMuseumDescription(text){
   return attemptToTranslateFromDatabases(text, [museumDescriptionTranslations])
 }
 
-export function attemptToTranslate(text, forcedTranslation=false){
+export function attemptToTranslate(text, forcedTranslation=false, ){
   if(text===undefined){
     return "";
   } else if(global.language==="English"){
@@ -1885,9 +1885,10 @@ export function openURL(url){
     }catch(e){
       if(toast)
         toast.show("", {type:"success",
+          placement:'top',
           renderType:{
             success: (toast) => (
-              <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 12, borderRadius: 5, backgroundColor: colors.popupSuccess[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+              <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, borderRadius: 5, backgroundColor: colors.popupSuccess[global.darkMode], alignItems:"center", justifyContent:"center"}}>
                 <TextFont translate={false} style={{color:"white", fontSize: 15}}>{"There was an error opening the external link."}</TextFont>
               </View>
             ),
@@ -1896,9 +1897,10 @@ export function openURL(url){
     }
     if(toast)
       toast.show("", {type:"success",
+        placement:'top',
         renderType:{
           success: (toast) => (
-            <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 12, borderRadius: 5, backgroundColor: colors.popupSuccess[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+            <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, borderRadius: 5, backgroundColor: colors.popupSuccess[global.darkMode], alignItems:"center", justifyContent:"center"}}>
               <TextFont translate={false} style={{color:"white", fontSize: 15}}>{"Copied to clipboard."}</TextFont>
             </View>
           ),

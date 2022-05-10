@@ -172,9 +172,11 @@ class ProfilesComponent extends Component{
               setSettingsString("settingsUseCustomDate",this.customDateSetting?"true":"false");
               this.props.loadProfileData(this.profile);
               toast.show(attemptToTranslate(this.displayProfile) + " " + attemptToTranslate("loaded."), {type:"success",
+              placement:'top',
+              duration: 4000, 
               renderType:{
                 success: (toast) => (
-                  <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 12, borderRadius: 5, backgroundColor: colors.popupSuccess[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+                  <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10,  marginLeft:15, marginVertical: 5, borderRadius: 5, backgroundColor: colors.popupSuccess[global.darkMode], alignItems:"center", justifyContent:"center"}}>
                     <TextFont translate={false} style={{color:"white", fontSize: 15}}>{toast.message}</TextFont>
                   </View>
                 ),

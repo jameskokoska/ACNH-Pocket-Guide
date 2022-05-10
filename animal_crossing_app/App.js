@@ -451,14 +451,16 @@ class Main extends Component {
     }
     if(toast){
       toast.show(result[0], {type:result[1]===false?"success":"danger", 
+        placement:'top',
+        duration: result[1]===false?2000:5000, 
         renderType:{
           success: (toast) => (
-            <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 12, marginRight: needsPadding?100:20, borderRadius: 5, backgroundColor: colors.popupSuccess[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+            <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, marginRight: 20, borderRadius: 5, backgroundColor: colors.popupSuccess[global.darkMode], alignItems:"center", justifyContent:"center"}}>
               <TextFont translate={false} style={{color:"white", fontSize: 15}}>{toast.message}</TextFont>
             </View>
           ),
           danger: (toast) => (
-            <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 12, marginRight: needsPadding?100:20, borderRadius: 5, backgroundColor: colors.popupDanger[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+            <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, marginRight: 20, borderRadius: 5, backgroundColor: colors.popupDanger[global.darkMode], alignItems:"center", justifyContent:"center"}}>
               <TextFont translate={false} style={{color:"white", fontSize: 15}}>{toast.message}</TextFont>
             </View>
           )
@@ -667,7 +669,6 @@ class Main extends Component {
       }
       return (
         <GestureHandlerRootView style={{flex:1,backgroundColor: "#000000"}}>
-          <Toast ref={(ref) => global['toast'] = ref} />
           <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage} sideMenuSections={this.sideMenuSections} sideMenuSectionsDisabled={this.sideMenuSectionsDisabled}>
             <Provider theme={theme}>
               <NavigationContainer ref={navigationRef} theme={{colors: {background: colors.background[global.darkMode],},}}>
@@ -694,6 +695,7 @@ class Main extends Component {
             />
           </SideMenu>
           <FABWrapper ref={(fab) => this.fab = fab} openDrawer={this.openDrawer}/>
+          <Toast ref={(ref) => global['toast'] = ref} />
         </GestureHandlerRootView>
       );
     }
