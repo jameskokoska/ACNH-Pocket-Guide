@@ -292,6 +292,30 @@ export function getPhoto(name, fallback="", returnFalse=false){
       return require("../assets/icons/cafe.png");
     case "hospital-building.png":
       return require("../assets/icons/hospital-building.png");
+    case "nookOwner.png":
+      return require("../assets/icons/nookOwner.png");
+    case "sable.png":
+      return require("../assets/icons/sable.png");
+    case "label.png":
+      return require("../assets/icons/label.png");
+    case "mabel.png":
+      return require("../assets/icons/mabel.png");
+    case "kk.png":
+      return require("../assets/icons/kk.png");
+    case "blathers.png":
+      return require("../assets/icons/blathers.png");
+    case "celeste.png":
+      return require("../assets/icons/celeste.png");
+    case "isabelle.png":
+      return require("../assets/icons/isabelle.png");
+    case "reese.png":
+      return require("../assets/icons/reese.png");
+    case "tommy.png":
+      return require("../assets/icons/tommy.png");
+    case "rover.png":
+      return require("../assets/icons/rover.png");
+    case "gulliver.png":
+      return require("../assets/icons/gulliver.png");
   }
   if(name.includes("bamboo")){
     return require("../assets/icons/bamboo.png");
@@ -437,8 +461,10 @@ export function getPhoto(name, fallback="", returnFalse=false){
     return require("../assets/icons/snow.png")
   } else if(name.includes("snowboy")) {
     return require("../assets/icons/snowman.png")
-  } else if(name.includes("villagers") || name.includes("rover")) {
+  } else if(name.includes("villagers")) {
     return require("../assets/icons/cat.png")
+  } else if(name.includes("rover")) {
+    return require("../assets/icons/rover.png")
   } else if(name.includes("fossil") || name.includes("dig") || name.includes("plant")) {
     return require("../assets/icons/digIcon.png")
   } else if(name.includes("able")) {
@@ -598,8 +624,10 @@ export function getPhotoCorner(name){
     return <Image source={require("../assets/icons/snow.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
   else if(name.includes("snowboy"))
     return <Image source={require("../assets/icons/snowman.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
-  else if(name.includes("villagers") || name.includes("rover"))
+  else if(name.includes("villagers"))
     return <Image source={require("../assets/icons/cat.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+  else if(name.includes("rover"))
+    return <Image source={require("../assets/icons/rover.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
   else if(name.includes("fossil") || name.includes("dig") || name.includes("plant"))
     return <Image source={require("../assets/icons/digIcon.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
   else if(name.includes("able"))

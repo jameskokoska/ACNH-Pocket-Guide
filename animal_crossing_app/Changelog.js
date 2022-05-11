@@ -4,7 +4,11 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
--Tap an items title to view detailed information and properties\nUseful when applying detailed filters
+-Added and sorted more Special NPC icons for ToDo list
+-K.K. Slider Concert event will show completed if all songs collected
+-Increased size of Villager icon for Villager's birthday calendar event
+-
+-Tap an item's title to view detailed information and properties\nUseful when applying detailed filters
 -Changes to format of item popup
 -Catchphrase now below item name
 -Toast message now shown at top of application\nMenu button can now be pressed when message shown
@@ -660,7 +664,7 @@ export const changelog = `
 -Fixed issue with ghost touches when loading - more items are initially loaded before rendered (unfortunately slight increase in load times)
 -Fixed dream address starting with DW instead of DA
 -
--Added filtering in vilager gift guide pages
+-Added filtering in villager gift guide pages
 -Added Collected/Wishlist/Sorting filters
 -
 -Added Russian translations, thanks Alex!

@@ -78,7 +78,7 @@ export function EventContainer(props){
 
     let image = <View/>
     if(props.event?.image.startsWith("http")){
-      image = <FastImage style={[styles.eventImage]} source={{uri:props.event.image}} cacheKey={props.event.image}/>
+      image = <FastImage style={[styles.eventImage,{width:55, height:55}]} source={{uri:props.event.image}} cacheKey={props.event.image}/>
     } else {
       let photoGot = getPhoto(props.event.image.toString().toLowerCase(), props.event.time.toString().toLowerCase(), true)
       if(photoGot===false && props.event?.time.toString().toLowerCase()==="nook shopping event" && allCollected[1]!==false && allCollected[1]!==undefined && allCollected[1]["Image"]!==undefined){

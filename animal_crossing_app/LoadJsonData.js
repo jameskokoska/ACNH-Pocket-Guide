@@ -299,7 +299,7 @@ function translateRepeatItem(itemTranslation, language){
   return ""
 }
 
-export async function countCollection(checkListKeyStart){
+export function countCollection(checkListKeyStart){
   var count = 0;
   for(var i = 0; i<global.collectionList.length; i++){
     if(global.collectionList[i].includes("customLists::") || global.collectionList[i].includes("wishlist") || global.collectionList[i].includes("museum")){
@@ -1718,6 +1718,14 @@ export function allEventItemsCheck(eventName){
     //it is a birthday object or something else
     return false
   }
+
+  if(eventName==="K.K. concert"){
+    let musicCount = countCollection("songCheckList");
+    let musicCountTotal = global.dataLoadedMusic[0].length - 3; //there are 3 Hazure songs
+    let musicPercentage = musicCount/musicCountTotal * 100;
+    return [musicPercentage === 100]
+  }
+  // console.log(eventName)
 
   let previousName = ""
   let previousDataCategory = ""
