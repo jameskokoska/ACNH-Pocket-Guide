@@ -118,11 +118,9 @@ class CatalogPage extends Component {
         <ScrollView>
           <View style={{height: 100}}/>
           <TextFont bold={true} style={{fontSize: 37, marginLeft: 30, marginRight: 40, color:colors.textBlack[global.darkMode]}}>Catalog Import</TextFont>
-          <View style={{height: 50}}/>
           <TouchableOpacity onPress={() => openURL('https://nook.lol/') }>
-            <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 17, marginLeft: 30, marginRight: 30, textAlign:"center"}}>{"Visit https://nook.lol/ for more information"}</TextFont>
+            <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 17, marginLeft: 10, marginRight: 10, textAlign:"center", marginVertical:50}}>{"Visit https://nook.lol/ for more information"}</TextFont>
           </TouchableOpacity>
-          <View style={{height: 50}}/>
           <TextFont bold={true} style={{fontSize: 20, marginLeft: 30, marginRight: 40, color:colors.textBlack[global.darkMode]}}>{"Paste nook.lol link and Import"}</TextFont>
           <View style={{height: 15}}/>
           <TextInput
