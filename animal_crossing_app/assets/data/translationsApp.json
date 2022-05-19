@@ -22077,8 +22077,8 @@
             "Spanish (US)": "0 items (923 items missing)",
             "Italian": "0 items (923 items missing)",
             "Dutch": "249 items (674 items missing)",
-            "Chinese": "75 items (848 items missing)",
-            "Chinese (Traditional)": "0 items (923 items missing)",
+            "Chinese": "96 items (827 items missing)",
+            "Chinese (Traditional)": "21 items (902 items missing)",
             "Japanese": "0 items (923 items missing)",
             "Korean": "0 items (923 items missing)",
             "Russian": "0 items (923 items missing)",
@@ -22381,7 +22381,9 @@
             "French (US)": "Décorateur décoré",
             "German": "Innenausstatter",
             "Spanish": "Con-decoracion",
-            "Dutch": "Inrichtingsgenie"
+            "Dutch": "Inrichtingsgenie",
+            "Chinese": "建造房间高手！",
+            "Chinese (Traditional)": "建造房间高手！"
         },
         {
             "English": "Hoard Reward",
@@ -22610,7 +22612,9 @@
             "French (US)": "Souvenirs et mues",
             "German": "Sommerandenken",
             "Spanish": "Atesorar para el invierno",
-            "Dutch": "Zoete zomerherinnering"
+            "Dutch": "Zoete zomerherinnering",
+            "Chinese": "得到夏日的回忆！",
+            "Chinese (Traditional)": "得到夏日的回忆！"
         },
         {
             "English": "Netting Better!",
@@ -22619,7 +22623,9 @@
             "French (US)": "Les belles guêpes !",
             "German": "Wespenbändiger",
             "Spanish": "Red avispada",
-            "Dutch": "Geen steek laten vallen"
+            "Dutch": "Geen steek laten vallen",
+            "Chinese": "捉黄蜂名人！",
+            "Chinese (Traditional)": "捉黄蜂名人！"
         },
         {
             "English": "Pit-y Party",
@@ -22657,7 +22663,9 @@
             "French (US)": "Au fond du trou",
             "German": "Unverhoffter Sturz",
             "Spanish": "Los tropiezos del camino",
-            "Dutch": "In de val gelopen"
+            "Dutch": "In de val gelopen",
+            "Chinese": "落入陷阱狸！",
+            "Chinese (Traditional)": "落入陷阱狸！"
         },
         {
             "English": "Faked Out!",
@@ -22706,7 +22714,9 @@
             "French (US)": "Artiste en neige",
             "German": "Schneekünstler",
             "Spanish": "Arte efímero",
-            "Dutch": "Koud kunstje"
+            "Dutch": "Koud kunstje",
+            "Chinese": "雪人专家",
+            "Chinese (Traditional)": "雪人专家"
         },
         {
             "English": "Wishes Come True",
@@ -22825,7 +22835,9 @@
             "French (US)": "Joyeux anniversaire !",
             "German": "Herzlichen Glückwunsch!",
             "Spanish": "Regalo de cumpleaños",
-            "Dutch": "Verjaardagscadeautje"
+            "Dutch": "Verjaardagscadeautje",
+            "Chinese": "生日快乐！",
+            "Chinese (Traditional)": "生日快乐！"
         },
         {
             "English": "Fishing Tourney!",
@@ -22834,7 +22846,9 @@
             "French (US)": "Tournoi de pêche !",
             "German": "Angelturnier!",
             "Spanish": "Torneo de Pesca",
-            "Dutch": "Vistournooi"
+            "Dutch": "Vistournooi",
+            "Chinese": "乐享！钓鱼大赛",
+            "Chinese (Traditional)": "乐享！钓鱼大赛"
         },
         {
             "English": "Bug-Off!",
@@ -22843,7 +22857,9 @@
             "French (US)": "Insectosafari !",
             "German": "Insektikus-Turnier!",
             "Spanish": "Caza de Bichos",
-            "Dutch": "Beestjesbeker"
+            "Dutch": "Beestjesbeker",
+            "Chinese": "忙碌！捕虫大赛",
+            "Chinese (Traditional)": "忙碌！捕虫大赛"
         },
         {
             "English": "Countdown Celebration",
@@ -22851,7 +22867,9 @@
             "French": "Nouvel an, nouveaux miles",
             "French (US)": "Nouvel an, nouveaux miles",
             "German": "Countdown-Feier",
-            "Spanish": "El final de la cuenta atrás"
+            "Spanish": "El final de la cuenta atrás",
+            "Chinese": "跨年倒计时吧！",
+            "Chinese (Traditional)": "跨年倒计时吧！"
         },
         {
             "English": "Making a Change",
@@ -22860,7 +22878,9 @@
             "French (US)": "Armoire à mode",
             "German": "Schrank-Modenschau",
             "Spanish": "Fondo de armario",
-            "Dutch": "Modeshow"
+            "Dutch": "Modeshow",
+            "Chinese": "衣柜里的时尚秀",
+            "Chinese (Traditional)": "衣柜里的时尚秀"
         },
         {
             "English": "First Custom Design!",
@@ -22909,7 +22929,9 @@
             "French (US)": "Des outils en or",
             "German": "Goldwerkzeuge",
             "Spanish": "La edad de oro",
-            "Dutch": "Gouden mijlpaal"
+            "Dutch": "Gouden mijlpaal",
+            "Chinese": "金光闪闪的道具是一流的证明",
+            "Chinese (Traditional)": "金光闪闪的道具是一流的证明"
         },
         {
             "English": "Island and Yourland",
@@ -22928,7 +22950,9 @@
             "French (US)": "Promouvoir son île",
             "German": "Größter Gastgeber",
             "Spanish": "La hospitalidad local",
-            "Dutch": "Lokale gastvrijheid"
+            "Dutch": "Lokale gastvrijheid",
+            "Chinese": "增加岛上游客大作战",
+            "Chinese (Traditional)": "增加岛上游客大作战"
         },
         {
             "English": "Active Island Resident",
@@ -28261,7 +28285,9 @@
             "English": "Writing a Cookbook?",
             "English (Europe)": "Writing a Cookbook?",
             "French": "Les recettes du bonheur",
-            "German": "Rezeptsammler"
+            "German": "Rezeptsammler",
+            "Chinese": "增加料理手册吧！",
+            "Chinese (Traditional)": "增加料理手册吧！"
         },
         {
             "English": "The recipes in your collection could stretch for miles, so allow me to present you with these...miles! Delight the eyes and stomachs of your neighbors with all your delicious creations, hm?",
@@ -28304,7 +28330,9 @@
             "English (Europe)": "Mmm-Mmm-Miles!",
             "French": "Délices de miles",
             "French (US)": "Délices de miles",
-            "German": "Mmm-Mmm-Meilen!"
+            "German": "Mmm-Mmm-Meilen!",
+            "Chinese": "咝咝的煎锅！轰鸣的炉灶！",
+            "Chinese (Traditional)": "咝咝的煎锅！轰鸣的炉灶！"
         },
         {
             "English": "Gathering ingredients and creating delicious treats is great fun, is it not? Yes, yes, I do believe our chefs out there deserve miles for all the times they've prepared something delicious!",
@@ -28381,7 +28409,9 @@
             "English (Europe)": "Nice to Meet You, Gyroid!",
             "French": "Oh, un gyroïde !",
             "French (US)": "Oh, un gyroïde !",
-            "German": "Guck mal, ein Gyroid!"
+            "German": "Guck mal, ein Gyroid!",
+            "Chinese": "陶俑，你好啊！",
+            "Chinese (Traditional)": "陶俑，你好啊！"
         },
         {
             "English": "You've discovered your first gyroid! This special occasion deserves miles, yes, yes. I hope you feel inspired to collect all sorts of different, wonderful gyroids now.",
@@ -28400,7 +28430,9 @@
             "English (Europe)": "Gyroid Getter",
             "French": "À la chasse aux gyroïdes",
             "French (US)": "À la chasse aux gyroïdes",
-            "German": "Gyroiden-Greifer"
+            "German": "Gyroiden-Greifer",
+            "Chinese": "岛民啊，拥抱陶俑吧！",
+            "Chinese (Traditional)": "岛民啊，拥抱陶俑吧！"
         },
         {
             "English": "Collect different kinds of gyroids, and earn miles in return! I suspect once you experience life in their presence, you'll find it hard to resist hunting for more, hm?",
@@ -28448,7 +28480,9 @@
             "English (Europe)": "Sprout Out Loud",
             "French": "Retour à la terre",
             "French (US)": "Retour à la terre",
-            "German": "Kraft der Landwirtschaft"
+            "German": "Kraft der Landwirtschaft",
+            "Chinese": "种植蔬菜，新鲜生活！",
+            "Chinese (Traditional)": "种植蔬菜，新鲜生活！"
         },
         {
             "English": "Plant your produce starts across the whole island for a fresh, bounteous crop! Whether it's a small home garden or a full-on field, support Nook Inc. with all your produce-planting power! Yes, yes!",
@@ -28516,7 +28550,9 @@
             "English (Europe)": "Executive Producer",
             "French": "Frais les légumes",
             "French (US)": "Frais les légumes",
-            "German": "Erntedank"
+            "German": "Erntedank",
+            "Chinese": "收获新鲜蔬菜吧！",
+            "Chinese (Traditional)": "收获新鲜蔬菜吧！"
         },
         {
             "English": "Nothing feels quite like harvesting produce that you grew by the sweat of your brow, yes, yes! Now go enjoy the fruits of your labor—and the pumpkins, carrots, sugarcane, and potatoes too!",
@@ -28586,7 +28622,9 @@
             "English (Europe)": "Set Sail for Adventure",
             "French": "Larguez les amarres",
             "French (US)": "Larguez les amarres",
-            "German": "Kurs auf Abenteuer"
+            "German": "Kurs auf Abenteuer",
+            "Chinese": "听着船歌出发",
+            "Chinese (Traditional)": "听着船歌出发"
         },
         {
             "English": "Rare items and exciting adventures are yours when you head out on a special tour with a veteran sailor, yes, yes!",
@@ -28645,7 +28683,9 @@
             "English (Europe)": "Come Home to the Roost",
             "French": "Un café et ça repart",
             "French (US)": "Un café et ça repart",
-            "German": "Kaffee im Taubenschlag"
+            "German": "Kaffee im Taubenschlag",
+            "Chinese": "在“鸽巢”喝咖啡吧",
+            "Chinese (Traditional)": "在“鸽巢”喝咖啡吧"
         },
         {
             "English": "The Roost, located on the second floor of the museum, is quite picky about the coffee they serve, yes, yes! Do stop in to enjoy a cup and earn some dark-roasted miles!",
@@ -28705,7 +28745,9 @@
             "English": "Stretch to Refresh!",
             "English (Europe)": "Stretch to Refresh!",
             "French": "1, 2, 3, on se bouge !",
-            "German": "Dehnen macht munter!"
+            "German": "Dehnen macht munter!",
+            "Chinese": "做广播体操抖擞精神！",
+            "Chinese (Traditional)": "做广播体操抖擞精神！"
         },
         {
             "English": "The health of our residents is a top priority, yes, yes! So we're holding group-stretching sessions in the plaza. I'll provide miles once per day for participating, and there will be a tape deck for music. I hope I see you there!",
