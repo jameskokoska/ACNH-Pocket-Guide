@@ -4,6 +4,7 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added paradise planning to villager's popup
 -Crash fixes
 -
 -TurnipProphet, Guide + FAQ, MeteoNook now follow app's dark mode/light mode theme

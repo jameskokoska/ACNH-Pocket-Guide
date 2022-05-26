@@ -1916,3 +1916,13 @@ export function openURL(url){
       })
   }
 }
+
+export function findVillagersParadisePlanning(villagersName){
+  let dataSet = require("./assets/data/DataCreated/Paradise Planning.json")
+  for(let i = 0; i < dataSet.length; i++){
+    if(dataSet[i]["Name"]===villagersName){
+      return dataSet[i]
+    }
+  }
+  return false
+}

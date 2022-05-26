@@ -237,7 +237,7 @@ class CycleCheckListFilter extends Component{
   }
 }
 
-class Request extends React.PureComponent{
+export class Request extends React.PureComponent{
   constructor(props){
     super(props);
     if(this.props.request["Request"]===undefined){ //this means it's a special NPC from the list, fill in info from Special NPCs JSON object
@@ -247,7 +247,11 @@ class Request extends React.PureComponent{
         "Icon Image": this.props.request["Icon Image"]
       }
     } else {
-      this.villagerObject = findObject(this.props.request["Name"], "Name", "Villagers")
+      if(this.props.villagerObject!==undefined){
+        this.villagerObject = this.props.villagerObject
+      } else {
+        this.villagerObject = findObject(this.props.request["Name"], "Name", "Villagers")
+      }
     }
 
     this.state = {checked:this.props.paradiseChecklist.includes(this.props.request["Name"])}
@@ -257,6 +261,9 @@ class Request extends React.PureComponent{
   }
   componentDidUpdate(prevProps){
     if(this.props!==prevProps){
+      if(this.props.villagerObject){
+        this.villagerObject = this.props.villagerObject
+      }
       this.setState({checked:this.props.paradiseChecklist.includes(this.props.request["Name"])})
     }
   }
@@ -276,7 +283,7 @@ class Request extends React.PureComponent{
     }
     return <>
       <TouchableOpacity activeOpacity={0.7} onPress={()=>{if(this.props.request["Request"]!==undefined) RootNavigation.navigate('36', {propsPassed:this.props.request}); else this.checkOff();}}>
-      <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
+      <View style={{backgroundColor: this.props.darkerBackground ? colors.lightDarkAccent[global.darkMode] : colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: this.props.lessMargin ? 10 : 20, marginVertical: 5,  borderRadius: 10}}>
         <View style={{paddingRight:40}}>
           <SubHeader style={{fontSize: 28,}}>{this.villagerObject["NameLanguage"]}</SubHeader>
           <SubHeader style={{fontSize: 19,}}>{request}</SubHeader>
