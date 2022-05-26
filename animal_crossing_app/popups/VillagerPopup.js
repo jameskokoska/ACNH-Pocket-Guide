@@ -110,7 +110,7 @@ class VillagerPopup extends Component {
         <Paragraph styled={true}>[View Gifts] will show you all clothing of their preferred color and style.</Paragraph>
         <Paragraph styled={true}>Additionally, you can choose to filter out if the villager will wear this item or not when gifted.</Paragraph>
         <Paragraph styled={true}>You can read more details about gifts by visiting the guide page</Paragraph>
-        <TouchableOpacity onPress={() => this.props.setPage(15, true, "giftsRedirect")}>
+        <TouchableOpacity onPress={() => this.props.setPage!==undefined ? this.props.setPage(15, true, "giftsRedirect") : ""}>
           <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", padding:10, marginTop:10}}>{"Tap here to read more about gifting"}</TextFont>
         </TouchableOpacity>
       </PopupInfoCustom> 
