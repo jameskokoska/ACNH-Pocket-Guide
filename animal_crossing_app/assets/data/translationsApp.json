@@ -570,21 +570,21 @@
     ],
     "Main": [
         {
-            "English": "1185 items",
-            "English (Europe)": "1185 items",
-            "French": "1180 items (5 items missing)",
-            "French (US)": "1180 items (5 items missing)",
-            "German": "1180 items (5 items missing)",
-            "Spanish": "1185 items",
-            "Spanish (US)": "1157 items (28 items missing)",
-            "Russian": "1172 items (13 items missing)",
-            "Italian": "1171 items (14 items missing)",
-            "Dutch": "1081 items (104 items missing)",
-            "Chinese": "903 items (282 items missing)",
-            "Chinese (Traditional)": "7 items (1178 items missing)",
-            "Japanese": "7 items (1178 items missing)",
-            "Korean": "7 items (1178 items missing)",
-            "Portuguese": "1169 items (16 items missing)"
+            "English": "1187 items",
+            "English (Europe)": "1187 items",
+            "French": "1182 items (5 items missing)",
+            "French (US)": "1182 items (5 items missing)",
+            "German": "1180 items (7 items missing)",
+            "Spanish": "1185 items (2 items missing)",
+            "Spanish (US)": "1157 items (30 items missing)",
+            "Russian": "1172 items (15 items missing)",
+            "Italian": "1171 items (16 items missing)",
+            "Dutch": "1081 items (106 items missing)",
+            "Chinese": "903 items (284 items missing)",
+            "Chinese (Traditional)": "7 items (1180 items missing)",
+            "Japanese": "7 items (1180 items missing)",
+            "Korean": "7 items (1180 items missing)",
+            "Portuguese": "1169 items (18 items missing)"
         },
         {
             "English": "Home",
@@ -16724,6 +16724,18 @@
             "Russian": "Это удалит все элементы из списка.",
             "Italian": "Questo rimuoverà tutti gli elementi dall'elenco.",
             "Portuguese": "Isso removerá todos os itens da lista."
+        },
+        {
+            "English": "Planting pitfalls",
+            "English (Europe)": "Planting pitfalls",
+            "French": "Planter des pièges",
+            "French (US)": "Planter des pièges"
+        },
+        {
+            "English": "Watch out for pitfalls",
+            "English (Europe)": "Planting pitfalls",
+            "French": "Attention aux pièges",
+            "French (US)": "Attention aux pièges"
         }
     ],
     "Sources": [

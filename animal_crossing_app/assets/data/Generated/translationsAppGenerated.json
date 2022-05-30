@@ -15753,6 +15753,18 @@
       "Russian": "Это удалит все элементы из списка.",
       "Italian": "Questo rimuoverà tutti gli elementi dall'elenco.",
       "Portuguese": "Isso removerá todos os itens da lista."
+    },
+    "planting pitfalls": {
+      "English": "Planting pitfalls",
+      "English (Europe)": "Planting pitfalls",
+      "French": "Planter des pièges",
+      "French (US)": "Planter des pièges"
+    },
+    "watch out for pitfalls": {
+      "English": "Watch out for pitfalls",
+      "English (Europe)": "Planting pitfalls",
+      "French": "Attention aux pièges",
+      "French (US)": "Attention aux pièges"
     }
   },
   "Sources": {

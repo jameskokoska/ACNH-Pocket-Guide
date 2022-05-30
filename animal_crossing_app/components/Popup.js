@@ -231,7 +231,9 @@ export class PopupRawLoading extends Component {
       "Looking for CJ to sell your fish",
       "Looking for Celeste to get a magical DIY",
       "Looking for Sahara to buy mystery wallpapers",
-      "Looking for Daisy Mae to buy Turnips"
+      "Looking for Daisy Mae to buy Turnips",
+      "Planting pitfalls",
+      "Watch out for pitfalls"
     ]
     let loadingText = this.allLoadingTexts[Math.floor(Math.random()*this.allLoadingTexts.length)]
     this.state = {
