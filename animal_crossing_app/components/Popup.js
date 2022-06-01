@@ -19,7 +19,7 @@ import Animated from 'react-native-reanimated';
 import FadeInOut from "./FadeInOut"
 import { GiveSupport, HeaderNote, MailLink, SubHeader } from "./Formattings";
 import * as RootNavigation from '../RootNavigation.js';
-import { Appearance } from 'react-native-appearance';
+import { Appearance } from 'react-native';
 import LottieView from 'lottie-react-native';
 import { attemptToTranslate, getSettingsString } from "../LoadJsonData";
 import { AnimatedPopupWrapper } from "./PopupAnimatedWrapper";

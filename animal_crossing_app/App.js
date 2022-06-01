@@ -26,7 +26,8 @@ import Onboard from './pages/Onboard';
 import colors from './Colors.js';
 import * as Font from 'expo-font';
 import PopupRating from './components/PopupRating'
-import { Appearance } from 'react-native-appearance';
+import { Appearance } from 'react-native';
+
 import SideMenu, { sideSections } from './components/SideMenu'
 import GuidePage from './pages/GuidePage';
 import MeteoNookPage from './pages/MeteoNookPage';

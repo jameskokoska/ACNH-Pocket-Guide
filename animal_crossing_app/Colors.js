@@ -1,4 +1,3 @@
-import { Appearance } from 'react-native-appearance';
 
 const colors = {
     //Use global.darkMode or global.darkModeReverse
