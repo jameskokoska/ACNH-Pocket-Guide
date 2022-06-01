@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Vibration, BackHandler, Dimensions, Text, View, StatusBar, Linking, } from 'react-native';
+import {Vibration, BackHandler, Dimensions, Text, View, StatusBar, Linking, LogBox } from 'react-native';
 import FAB, { FABWrapper } from './components/FAB';
 import CalendarPage from './pages/CalendarPage';
 import SongsPage from './pages/SongsPage';
@@ -73,6 +73,21 @@ import * as ErrorRecovery from 'expo-error-recovery';
 import CrashPage, { EmptyPage } from './pages/CrashPage';
 import VillagerPhotoPoster from './pages/VillagerPhotoPoster';
 import TodoReorderPage from './pages/TodoReorderPage';
+
+const backup = console.warn;
+
+console.warn = function filterWarnings(log) {
+  const warningsToIgnore = ["ViewPropTypes"];
+
+  if (!warningsToIgnore.some(msg => log.includes(msg))) {
+    backup.apply(console, arguments);
+  }
+};
+
+LogBox.ignoreLogs([
+  "ViewPropTypes will be removed",
+  "ColorPropType will be removed",
+])
 
 const defaultErrorHandler = ErrorUtils.getGlobalHandler();
 

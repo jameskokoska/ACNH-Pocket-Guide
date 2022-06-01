@@ -115,7 +115,7 @@ export class PopupBottomMusicWrapper extends Component {
       // interruptionModeIOS: Audio.INTERRUPTION_MODE_IOS_DUCK_OTHERS,
       // playsInSilentModeIOS: true,
       shouldDuckAndroid: true,
-      interruptionModeAndroid: Audio.INTERRUPTION_MODE_ANDROID_DUCK_OTHERS,
+      // interruptionModeAndroid: Audio.INTERRUPTION_MODE_ANDROID_DUCK_OTHERS,
       playThroughEarpieceAndroid: false
    });
   }
