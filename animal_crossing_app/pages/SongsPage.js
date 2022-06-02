@@ -128,7 +128,7 @@ export class PopupBottomMusicWrapper extends Component {
       console.log(songID)
       liveMusic = "Hourly Music"
     }else if(liveMusic===true){
-      link = "https://cdn.acnhapi.com/music/BgmLive/"
+      link = "https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/Media/live/"
     } else {
       link = "https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/Media/kk/"
     }
