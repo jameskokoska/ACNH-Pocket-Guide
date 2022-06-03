@@ -4,6 +4,7 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Fixed hourly songs showing up when using Collected/Not Collected filters
 -Fixed missing Live K.K. sounds
 -Updated developer backend (SDK)
 -Fixed missing songs when playing a sound from Song page

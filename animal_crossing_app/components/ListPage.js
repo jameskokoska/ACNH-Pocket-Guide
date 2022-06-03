@@ -379,6 +379,9 @@ function ListPage(props){
             //If property is Collected
             var searchCollected = true;
             if(searchActual.includes("Collected") || props.filterCollectedOnly){
+              if(item["checkListKey"]!==undefined && item["checkListKey"]===""){
+                break
+              }
               searchCollected = false;
               if(global.collectionListIndexed[item["checkListKey"]]===true){
                 searchCollected = true;
@@ -393,6 +396,9 @@ function ListPage(props){
                 }
               }
             } else if(searchActual.includes("Not Collected")){
+              if(item["checkListKey"]!==undefined && item["checkListKey"]===""){
+                break
+              }
               searchCollected = false;
               //Not collected: remove variations (use only base item)
               //Don't need to check data type because each type will be looped through and then move on to another data set type
@@ -412,6 +418,9 @@ function ListPage(props){
                 }
               }
             } else if(searchActual.includes("Not Collected (Keep variations)")){
+              if(item["checkListKey"]!==undefined && item["checkListKey"]===""){
+                break
+              }
               searchCollected = false;
               //Not collected: remove variations (use only base item)
               if(!global.collectionListIndexed[item["checkListKey"]]===true){
