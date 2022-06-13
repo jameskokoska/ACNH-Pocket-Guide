@@ -16,7 +16,7 @@ import colors from "../Colors";
 import LottieView from 'lottie-react-native';
 import Popup from "./Popup";
 import {MailLink} from "./Formattings";
-import { getSettingsString } from "../LoadJsonData";
+import { getSettingsString, openURL } from "../LoadJsonData";
 import { AnimatedPopupWrapper } from "./PopupAnimatedWrapper";
 
 class PopupRating extends Component {
@@ -73,7 +73,7 @@ class PopupRating extends Component {
                 vibrate={5}
                 onPress={() => {
                   this.setState({popupVisible:false})
-                  Linking.openURL(
+                  openURL(
                     "https://play.google.com/store/apps/details?id=com.acnh.pocket_guide&showAllReviews=true"
                   );
                 }}

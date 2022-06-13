@@ -21,16 +21,16 @@ export default class VisitorList extends Component {
       data: {},
     }
     this.characterList = [
-      {name: "Saharah", picture:"https://acnhcdn.com/latest/NpcIcon/cml.png"},
-      {name: "Leif", picture:"https://acnhcdn.com/latest/NpcIcon/slo.png"},
-      {name: "Kicks", picture:"https://acnhcdn.com/latest/NpcIcon/skk.png"},
+      {name: "Saharah", picture:require("../assets/icons/saharah.png")},
+      {name: "Leif", picture:require("../assets/icons/leif.png")},
+      {name: "Kicks", picture:require("../assets/icons/kicks.png")},
       {name: "Whisp", picture:require("../assets/icons/whisp.png")},
-      {name: "Celeste", picture:"https://acnhcdn.com/latest/NpcIcon/ows.png"},
-      {name: "Redd", picture:"https://acnhcdn.com/latest/NpcIcon/fox.png"},
-      {name: "Label", picture:"https://acnhcdn.com/latest/NpcIcon/hgc.png"},
+      {name: "Celeste", picture:require("../assets/icons/celeste.png")},
+      {name: "Redd", picture:require("../assets/icons/redd.png")},
+      {name: "Label", picture:require("../assets/icons/label.png")},
       {name: "C.J.", picture:require("../assets/icons/cj.png")},
       {name: "Flick", picture:require("../assets/icons/flick.png")},
-      {name: "Gulliver", picture:"https://acnhcdn.com/latest/NpcIcon/gul.png"},
+      {name: "Gulliver", picture:require("../assets/icons/gulliver.png")},
       {name: "Gullivarrr", picture:require("../assets/icons/gulivarrr.png")},
     ]
     this.days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday', 'Sunday', 'None'];
@@ -195,7 +195,7 @@ class CharacterItem extends Component {
         style={styles.rowImage}
       />
     }else{
-      if(this.props.character?.name!==undefined && (this.props.character.name==="C.J." || this.props.character.name==="Flick")){
+      if(this.props.character?.name!==undefined && (this.props.character.name==="C.J." || this.props.character.name==="Flick" || this.props.character.name==="Celeste" || this.props.character.name==="Leif" || this.props.character.name==="Label" || this.props.character.name==="Saharah")){
         imageComponent = <Image
           style={[styles.rowImage,{width:40, height:40}]}
           source={this.props.character.picture}

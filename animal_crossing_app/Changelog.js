@@ -8,6 +8,30 @@ export const changelog = `
 -Name of languages are no longer translated
 -Language names are native to the language of origin
 -
+-Fixed hourly songs showing up when using Collected/Not Collected filters
+-Fixed missing Live K.K. sounds
+-Updated developer backend (SDK)
+-Fixed missing songs when playing a sound from Song page
+-Improvements to performance and bug fixes
+-
+-Added loading text about pitfalls
+-
+-Added paradise planning to villager's popup
+-Crash fixes
+-
+-TurnipProphet, Guide + FAQ, MeteoNook now follow app's dark mode/light mode theme
+-Added and sorted more Special NPC icons for ToDo list
+-K.K. Slider Concert event will show completed if all songs collected
+-Increased size of Villager icon for Villager's birthday calendar event
+-
+-Tap an item's title to view detailed information and properties\nUseful when applying detailed filters
+-Changes to format of item popup
+-Catchphrase now below item name
+-Toast message now shown at top of application\nMenu button can now be pressed when message shown
+-Added more loading texts\nFeel free to suggest some on email/Ko-Fi
+-Fix: Last selected Wishlist now saved when using a different profile
+-
+-Added gold roses to Flowers page
 -New ToDo list edit page\nEasily sort and edit all your tasks in one page
 -Added drag and drop to reorder ToDo tasks in the edit page
 -Added category separators to ToDo list
@@ -15,6 +39,7 @@ export const changelog = `
 -Increased performance for large ToDo lists
 -Changed vibration pattern for small tasks
 -Fix: When editing a task, the original icon is selected by default
+-Updated star icon
 -Updated translations
 -
 -Fixed Songs page images when Avoid Spoilers setting enabled
@@ -655,7 +680,7 @@ export const changelog = `
 -Fixed issue with ghost touches when loading - more items are initially loaded before rendered (unfortunately slight increase in load times)
 -Fixed dream address starting with DW instead of DA
 -
--Added filtering in vilager gift guide pages
+-Added filtering in villager gift guide pages
 -Added Collected/Wishlist/Sorting filters
 -
 -Added Russian translations, thanks Alex!

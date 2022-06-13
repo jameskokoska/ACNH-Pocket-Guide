@@ -51,7 +51,7 @@ class GuidePage extends Component {
       </View>
       <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
         <WebView
-          forceDarkOn
+          forceDarkOn={global.darkMode===1}
           ref={(webView) => this.webView = webView}
           source={{ uri: this.state.currentURL }}
           style={{width:Dimensions.get('window').width,height:Dimensions.get('window').height }}

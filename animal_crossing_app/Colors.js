@@ -1,4 +1,3 @@
-import { Appearance } from 'react-native-appearance';
 
 const colors = {
     //Use global.darkMode or global.darkModeReverse
@@ -220,7 +219,7 @@ const colors = {
     toolProgress : ["#EAD0FF","#422C4D"],
     starProgress : ["#FDEBB3","#464023"],
     popupDanger : ["#AF5858","#A86B6B"],
-    popupSuccess : ["#487944","#347030"],
+    popupSuccess : ["#60A860","#51914B"],
     popupNeutral : ["#DFDFDF","#383838"],
 }
 module.exports = colors;

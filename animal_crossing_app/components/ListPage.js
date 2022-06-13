@@ -30,6 +30,7 @@ import LottieView from 'lottie-react-native';
 import { getHourlySongTitle } from '../pages/SongsPage';
 import { WishlistSelectionPopup } from '../pages/WishlistPage';
 import { BlueText } from './Formattings';
+import PopupRawData from './PopupRawData';
 
 //use tabs={false} if the page doesn't have  the tab bar
 
@@ -378,6 +379,9 @@ function ListPage(props){
             //If property is Collected
             var searchCollected = true;
             if(searchActual.includes("Collected") || props.filterCollectedOnly){
+              if(item["checkListKey"]!==undefined && item["checkListKey"]===""){
+                break
+              }
               searchCollected = false;
               if(global.collectionListIndexed[item["checkListKey"]]===true){
                 searchCollected = true;
@@ -392,6 +396,9 @@ function ListPage(props){
                 }
               }
             } else if(searchActual.includes("Not Collected")){
+              if(item["checkListKey"]!==undefined && item["checkListKey"]===""){
+                break
+              }
               searchCollected = false;
               //Not collected: remove variations (use only base item)
               //Don't need to check data type because each type will be looped through and then move on to another data set type
@@ -411,6 +418,9 @@ function ListPage(props){
                 }
               }
             } else if(searchActual.includes("Not Collected (Keep variations)")){
+              if(item["checkListKey"]!==undefined && item["checkListKey"]===""){
+                break
+              }
               searchCollected = false;
               //Not collected: remove variations (use only base item)
               if(!global.collectionListIndexed[item["checkListKey"]]===true){
@@ -1115,7 +1125,7 @@ function ListPage(props){
             }else if (props.title === "Villagers" && data.length===0 && (global.language==="English" || global.language==="English (Europe)")){
               return <>
                 <View style={{height:100}}/>
-                  <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode], marginHorizontal: 20}}>Different regions have different vilager names.</TextFont>
+                  <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode], marginHorizontal: 20}}>Different regions have different Villager names.</TextFont>
                   <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode], marginHorizontal: 20, marginTop:10}}>{"If a Villager is not listed, try changing the Language to " + (global.language==="English" ? "English (Europe)." : "English.")}</TextFont>
                   <TouchableOpacity onPress={()=>{props.setPage(13)}} style={{padding:20}}><BlueText>Tap here to change Language in Settings</BlueText></TouchableOpacity>
                 <View style={{height:30}}/>
@@ -1189,7 +1199,7 @@ function ListPage(props){
     <WishlistSelectionPopup
       popupBottom={true}
       onClose={(checkListKeyString)=>{
-        if(checkListKeyString && checkListKeyString!=null && checkListKeyString!=undefined && props.currentCustomList!=="" && props.currentCustomList!==undefined)
+        if(checkListKeyString && checkListKeyString!=null && checkListKeyString!=undefined && props.currentCustomList!=="" && props.currentCustomList!==undefined && updateAmountChildFunction!==undefined)
           !updateAmountChildFunction(getCustomListsAmount(checkListKeyString, props.currentCustomList));
       }}
       updateWhenOpen 
@@ -1254,6 +1264,7 @@ class BottomSheetRender extends Component{
         accentColor={this.props.accentColor}
         popUpCornerImageProperty={this.props.popUpCornerImageProperty}
         popUpCornerImageLabelProperty={this.props.popUpCornerImageLabelProperty}
+        showLabel={false}
       />
     }else{
       leftCornerImage = <View/>
@@ -1273,37 +1284,36 @@ class BottomSheetRender extends Component{
     
     //Add popup classes here
     var popUpContainer = <View/>
-    var marginHorizontal = 0;
+    let onlyOneLine = false
     if(this.props.popUpContainer!==undefined && this.props.popUpContainer.hasOwnProperty(this.state.item.dataSet) && this.state.item.dataSet!==undefined){
       if(this.props.popUpContainer[this.state.item.dataSet][0]==="FishPopup"){
         popUpContainer = <FishPopup item={this.state.item}/>
+        onlyOneLine = true
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="SeaPopup"){
         popUpContainer = <SeaPopup item={this.state.item}/>
+        onlyOneLine = true
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="FossilPopup"){
         popUpContainer = <FossilPopup item={this.state.item}/>
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="BugPopup"){
         popUpContainer = <BugPopup item={this.state.item}/>
+        onlyOneLine = true
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="ArtPopup"){
         popUpContainer = <ArtPopup item={this.state.item}/>
+        onlyOneLine = true
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="VillagerPopup"){
         popUpContainer = <VillagerPopup item={this.state.item} setPage={this.props.setPage}/>
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="ClothingPopup"){
         popUpContainer = <ClothingPopup item={this.state.item} setPage={this.props.setPage}/>
-        marginHorizontal = 60;
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="FurniturePopup"){
         popUpContainer = <FurniturePopup item={this.state.item}/>
-        marginHorizontal = 60;
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="FoodPopup"){
         popUpContainer = <FoodPopup item={this.state.item}/>
-        marginHorizontal = 60;
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="FloorWallsPopup"){
         popUpContainer = <FloorWallsPopup item={this.state.item}/>
-        marginHorizontal = 60;
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="ToolsPopup"){
         popUpContainer = <ToolsPopup item={this.state.item}/>
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="RecipesPopup"){
         popUpContainer = <RecipesPopup item={this.state.item}/>
-        marginHorizontal = 60;
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="MaterialsPopup"){
         popUpContainer = <MaterialsPopup item={this.state.item}/>
       } else if(this.props.popUpContainer[this.state.item.dataSet][0]==="GyroidPopup"){
@@ -1342,13 +1352,16 @@ class BottomSheetRender extends Component{
             {leftCornerImage}
             {rightCornerCheck}
             <View style={{height: 60}}/>
+            <TouchableOpacity onPress={()=>{this.popupRawData?.setPopupVisible(true, this.state.item)}} activeOpacity={0.7}>
+              <Title
+                item={this.state.item}
+                textProperty={this.props.textProperty}
+                popUpPhraseProperty={this.props.popUpPhraseProperty}
+                marginHorizontal={10}
+                // onlyOneLine={onlyOneLine}
+              />
+            </TouchableOpacity>
             {phrase}
-            <Title
-              item={this.state.item}
-              textProperty={this.props.textProperty}
-              popUpPhraseProperty={this.props.popUpPhraseProperty}
-              marginHorizontal={marginHorizontal}
-            />
             <Variations 
               selectCustomList={this.props.selectCustomList}
               updateRightCornerCheck={this.updateRightCornerCheck}
@@ -1362,6 +1375,7 @@ class BottomSheetRender extends Component{
             {this.props.tabs===false ? <View style={{height:50}}/> : (getSettingsString("settingsLargerItemPreviews")==="false"?<View style={{height:50}}/>:<View style={{height:50}}/>)}
         </View>
       </View>
+      <PopupRawData ref={(popupRawData) => this.popupRawData = popupRawData}></PopupRawData>
     </View>
   }
 }

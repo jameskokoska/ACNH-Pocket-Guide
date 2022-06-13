@@ -62,7 +62,7 @@ export class LeftCornerImage extends Component {
         <View style={{backgroundColor:this.props.accentColor,width: 75, height: 75, borderRadius: 100, justifyContent: 'center', alignItems: 'center' }}>
           {photo}
         </View>
-        <TextFont numberOfLines={4} style={[styles.cornerImageLabel,{color:colors.textLight[global.darkMode]}]}>{label}</TextFont>
+        {this.props.showLabel!==false?<TextFont numberOfLines={4} style={[styles.cornerImageLabel,{color:colors.textLight[global.darkMode]}]}>{label}</TextFont>:<View/>}
       </TouchableOpacity>
       <PopupImageSource ref={(popupImageSource) => this.popupImageSource = popupImageSource}/>
     </View>
@@ -157,10 +157,42 @@ export class Phrase extends Component {
 export class Title extends Component {
   render() {
     if(this.props.item[this.props.textProperty[this.props.item.dataSet]]!==undefined){
+      let title = this.props.item[this.props.textProperty[this.props.item.dataSet]]
+      const numberOfLettersForTop = 11
+      let topTitleComponent = <View style={{height:20}}/>
+      let bottomTitleComponent = <View/>
+      if(title.length < numberOfLettersForTop || this.props.onlyOneLine === true){
+        topTitleComponent = <TextFont style={[styles.title,{color: colors.textBlack[global.darkMode]}]} bold={true}>
+            {capitalize(title)}
+          </TextFont>
+      } else {
+        let splitString = " "
+        if(!(title.split(splitString)[0]!==undefined && title.split(" ")[0].length < numberOfLettersForTop)){
+          splitString = "-"
+        }
+
+        if(title.split(splitString)[0]!==undefined && title.split(splitString)[0].length < numberOfLettersForTop){
+          topTitleComponent = <TextFont style={[styles.title,{color: colors.textBlack[global.darkMode]}]} bold={true}>
+              {capitalize(title.split(splitString)[0]) + (splitString===" " ? "" : splitString)}
+            </TextFont>
+        }
+        if(title.split(splitString)[0]!==undefined && title.split(splitString)[0].length < numberOfLettersForTop){
+          bottomTitleComponent = <TextFont style={[styles.title,{color: colors.textBlack[global.darkMode]}]} bold={true}>
+              {capitalize(title.split(splitString).slice(1).join(splitString))}
+            </TextFont>
+        } else {
+          topTitleComponent = <View style={{height:20}}/>
+          bottomTitleComponent = <TextFont style={[styles.title,{color: colors.textBlack[global.darkMode]}]} bold={true}>
+              {capitalize(title)}
+            </TextFont>
+        }
+      }
+
+      
+
       return <View style={[styles.titleContainer,{marginHorizontal: this.props.marginHorizontal!==undefined?this.props.marginHorizontal:50}]}>
-        <TextFont style={[styles.title,{color: colors.textBlack[global.darkMode]}]} bold={true}>
-          {capitalize(this.props.item[this.props.textProperty[this.props.item.dataSet]])}
-        </TextFont>
+        {topTitleComponent}
+        {bottomTitleComponent}
       </View>
     } else {
       return <View/>;
@@ -917,9 +949,10 @@ const styles = StyleSheet.create({
   phrase:{
     fontSize: 16,
     textAlign: "center",
-    paddingLeft: 85,
-    paddingRight: 85,
-    padding: 5,
+    paddingLeft: 5,
+    paddingRight: 5,
+    padding: 0,
+    paddingBottom: 8
   },
   titleContainer:{
     paddingBottom: 10,

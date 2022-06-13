@@ -263,7 +263,7 @@ export class WishListShareButton extends Component{
     }
     var listString = "";
     for(var i = 0; i<list.length; i++){
-      if(list[i].hasOwnProperty("NameLanguage")){
+      if(list[i]!==undefined && list[i].hasOwnProperty("NameLanguage")){
         listString = listString+list[i]["NameLanguage"];
         if(list[i].hasOwnProperty("Variation") && list[i]["Variation"]!=="NA"){
           listString = listString + " - " + list[i]["Variation"];

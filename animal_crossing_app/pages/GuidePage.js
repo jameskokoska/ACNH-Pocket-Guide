@@ -78,10 +78,11 @@ class GuidePage extends Component {
       </View>
       <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
         <WebView
+          forceDarkOn={global.darkMode===1}
           ref={(webView) => this.webView = webView}
           source={{ uri: this.state.currentURL }}
           style={{width:Dimensions.get('window').width,height:Dimensions.get('window').height }}
-          injectedJavaScript={"document.body.style.userSelect = 'none';"}
+          injectedJavaScript={"document.body.style.userSelect = 'none';" + (global.darkMode===1 ? "" : "jtd.setTheme('light'); sessionStorage.setItem('theme', 'light');") + "document.getElementById('theme-toggle').innerHTML = 'Light and Dark Theme managed by ACNH Pocket Guide settings';"}
           onError={() => {
             this.popup?.setPopupVisible(true);
           }}

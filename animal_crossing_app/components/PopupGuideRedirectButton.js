@@ -15,6 +15,7 @@ import colors from "../Colors";
 import FadeInOut from "./FadeInOut"
 import {PopupInfoCustom} from "./Popup"
 import {SubHeader, Paragraph} from "./Formattings"
+import { openURL } from "../LoadJsonData";
 
 //  <GuideRedirectButton style={{position:"absolute", padding:15, right:0}} extraInfo={extraInfo} setPage={this.props.setPage}/>
 // icon={"i"}
@@ -65,7 +66,7 @@ export default class GuideRedirectButton extends Component {
             <Paragraph styled={true}>{this.props.extraInfo.content}</Paragraph>
             {this.props.extraInfo.content2!==undefined?<Paragraph styled={true}>{this.props.extraInfo.content2}</Paragraph>:<View/>}
             {this.props.extraInfo.content3!==undefined?<Paragraph styled={true}>{this.props.extraInfo.content3}</Paragraph>:<View/>}
-            {this.props.extraInfo.type==="externalRedirect"?<TouchableOpacity onPress={() => Linking.openURL(this.props.extraInfo.redirectPassBack)}>
+            {this.props.extraInfo.type==="externalRedirect"?<TouchableOpacity onPress={() => openURL(this.props.extraInfo.redirectPassBack)}>
               <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", padding:10, marginTop:10}}>{this.props.extraInfo.linkText}</TextFont>
             </TouchableOpacity>:<TouchableOpacity onPress={() => this.props.setPage(15, true, this.props.extraInfo.redirectPassBack)}>
               <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center", padding:10, marginTop:10}}>{this.props.extraInfo.linkText}</TextFont>

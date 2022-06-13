@@ -19,7 +19,7 @@ import Animated from 'react-native-reanimated';
 import FadeInOut from "./FadeInOut"
 import { GiveSupport, HeaderNote, MailLink, SubHeader } from "./Formattings";
 import * as RootNavigation from '../RootNavigation.js';
-import { Appearance } from 'react-native-appearance';
+import { Appearance } from 'react-native';
 import LottieView from 'lottie-react-native';
 import { attemptToTranslate, getSettingsString } from "../LoadJsonData";
 import { AnimatedPopupWrapper } from "./PopupAnimatedWrapper";
@@ -226,11 +226,19 @@ export class PopupRawLoading extends Component {
       "Visiting Harv",
       "Finding Gyroids",
       "Catching butterflies",
-      "Visiting Isabelle"
+      "Visiting Isabelle",
+      "Looking for Flick to sell your critters",
+      "Looking for CJ to sell your fish",
+      "Looking for Celeste to get a magical DIY",
+      "Looking for Sahara to buy mystery wallpapers",
+      "Looking for Daisy Mae to buy Turnips",
+      "Planting pitfalls",
+      "Watch out for pitfalls"
     ]
+    let loadingText = this.allLoadingTexts[Math.floor(Math.random()*this.allLoadingTexts.length)]
     this.state = {
       popupVisible: false,
-      loadingText: this.allLoadingTexts[Math.floor(Math.random()*this.allLoadingTexts.length)]
+      loadingText: loadingText
     };
   }
 
@@ -249,6 +257,13 @@ export class PopupRawLoading extends Component {
   }
 
   render(){
+    let NPCNames = ["Flick", "CJ", "Celeste", "Sahara", "Daisy Mae", "Isabelle", "Brewster", "Orville", "Gulliver", "Redd", "Harv", "Harvey"]
+    let loadingText = attemptToTranslate(this.state.loadingText, true)
+    for(let name of NPCNames){
+      loadingText = loadingText.replace(" " + name + " ", " " + attemptToTranslate(name, true) + " ")
+      loadingText = loadingText.replace(name + " ", attemptToTranslate(name, true) + " ")
+      loadingText = loadingText.replace(" " + name, " " + attemptToTranslate(name, true) + " ")
+    }
     return (
       <Modal
         animationType="fade"
@@ -260,7 +275,7 @@ export class PopupRawLoading extends Component {
         <AnimatedPopupWrapper style={[{position:"absolute",bottom:0, width: Dimensions.get('window').width}]}>
           <View style={{alignItems:"center", justifyContent:"center"}}>
             <View style={[styles.modalView,{backgroundColor: colors.white[Appearance.getColorScheme()==="light" ? 0 : 1]}]}>
-              <TextFont bold={true} style={{paddingHorizontal: 20, fontSize: 20, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{attemptToTranslate(this.state.loadingText)+"..."}</TextFont>
+              <TextFont translate={false} bold={true} style={{paddingHorizontal: 20, fontSize: 20, textAlign:"center", color: colors.textBlack[Appearance.getColorScheme()==="light" ? 0 : 1]}}>{loadingText+"..."}</TextFont>
               <View style={{justifyContent:"center", alignItems:"center"}}>
                 <LottieView autoPlay loop
                   style={{marginBottom: -25, width: 90, zIndex:1, transform: [{ scale: 1 },{ rotate: '0deg'},],}}

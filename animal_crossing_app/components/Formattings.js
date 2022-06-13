@@ -2,12 +2,12 @@ import React, {Component} from 'react';
 import {Linking, TouchableOpacity,View, Text,} from 'react-native';
 import colors from '../Colors'
 import TextFont from './TextFont'
-import {attemptToTranslate} from "../LoadJsonData"
+import {attemptToTranslate, openURL} from "../LoadJsonData"
 
 export class ExternalLink extends Component {
   render(){
     return(
-      <TouchableOpacity onPress={() => Linking.openURL(this.props.link) }>
+      <TouchableOpacity onPress={() => openURL(this.props.link) }>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, marginLeft: 30, marginRight: 30, }}>{this.props.link}</TextFont>
       </TouchableOpacity>
     )
@@ -25,7 +25,7 @@ export class HeaderNote extends Component {
 export class MailLink extends Component {
   render(){
     return(
-        <TouchableOpacity onPress={() => Linking.openURL('mailto:dapperappdeveloper@gmail.com') }>
+        <TouchableOpacity onPress={() => openURL('mailto:dapperappdeveloper@gmail.com') }>
           <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"Suggestions, bugs or concerns?"}</TextFont>
           <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"Send me an email!"}</TextFont>
           <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>dapperappdeveloper@gmail.com</TextFont>
@@ -38,7 +38,7 @@ export class MailLink extends Component {
 export class GiveSupport extends Component {
   render(){
     return(
-      <TouchableOpacity style={[this.props.style,{marginHorizontal:15, padding: 15}]} onPress={() => Linking.openURL('https://ko-fi.com/dapperappdeveloper')}>
+      <TouchableOpacity style={[this.props.style,{marginHorizontal:15, padding: 15}]} onPress={() => openURL('https://ko-fi.com/dapperappdeveloper')}>
         <TextFont translate={false} bold={false} style={{color: this.props.blueText===true?colors.fishText[global.darkMode]:colors.textBlack[global.darkMode], fontSize: 18, textAlign:"center"}}>{attemptToTranslate("If you enjoy this free app, consider supporting the developer") + " 😊"}</TextFont>
         {this.props.tapHere?<TextFont bold={false} style={{color: this.props.blueText===true?colors.fishText[global.darkMode]:colors.textBlack[global.darkMode], fontSize: 18, textAlign:"center", marginTop: 5}}>{"Tap here!"}</TextFont>:<View/>}
         <TextFont bold={false} style={{marginTop:10, color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>Thank you!</TextFont>

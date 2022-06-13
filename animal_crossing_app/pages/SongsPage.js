@@ -110,12 +110,12 @@ export class PopupBottomMusicWrapper extends Component {
       this.setGlobalVariableCheck()
     }
     Audio.setAudioModeAsync({
-      allowsRecordingIOS: false,
+      // allowsRecordingIOS: false,
       staysActiveInBackground: true,
-      interruptionModeIOS: Audio.INTERRUPTION_MODE_IOS_DUCK_OTHERS,
-      playsInSilentModeIOS: true,
+      // interruptionModeIOS: Audio.INTERRUPTION_MODE_IOS_DUCK_OTHERS,
+      // playsInSilentModeIOS: true,
       shouldDuckAndroid: true,
-      interruptionModeAndroid: Audio.INTERRUPTION_MODE_ANDROID_DUCK_OTHERS,
+      // interruptionModeAndroid: Audio.INTERRUPTION_MODE_ANDROID_DUCK_OTHERS,
       playThroughEarpieceAndroid: false
    });
   }
@@ -123,13 +123,14 @@ export class PopupBottomMusicWrapper extends Component {
   addSongToQueue = async (song, songID, liveMusic=false) => {
     let link = ""
     if(song["special"]!==undefined && song["special"]==="hourly"){
-      link = "https://cdn.acnhapi.com/music/Hourly/"
+      link = "https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/Media/hourly/"
       songID = song["Filename"] + "_" + song["hour"] + "_" + capitalizeFirst(song["weather"]) 
+      console.log(songID)
       liveMusic = "Hourly Music"
     }else if(liveMusic===true){
-      link = "https://cdn.acnhapi.com/music/BgmLive/"
+      link = "https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/Media/live/"
     } else {
-      link = "https://cdn.acnhapi.com/music/BgmHifi/"
+      link = "https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/Media/kk/"
     }
     if(this.state.song===undefined){
       this.setGlobalVariableCheck()
@@ -463,10 +464,10 @@ async function playSong(url){
     global.playback.setOnPlaybackStatusUpdate(onPlaybackStatusUpdate);
   } catch (e) {
     toast.show(attemptToTranslate("An error occurred. Please check your internet connection and try again later.") + "\n" + e.message, {type:"danger",
-      placement:'bottom',
+      placement:'top',
       renderType:{
         success: (toast) => (
-          <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 5, borderRadius: 5, backgroundColor: colors.popupDanger[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+          <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, borderRadius: 5, backgroundColor: colors.popupDanger[global.darkMode], alignItems:"center", justifyContent:"center"}}>
             <TextFont translate={false} style={{color:"white", fontSize: 15, textAlign:"center"}}>{toast.message}</TextFont>
           </View>
         ),
@@ -532,7 +533,7 @@ async function addSongToQueue(url, song, liveMusic){
       placement:'top',
       renderType:{
         success: (toast) => (
-          <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 5, borderRadius: 5, backgroundColor: colors.popupNeutral[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+          <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, borderRadius: 5, backgroundColor: colors.popupNeutral[global.darkMode], alignItems:"center", justifyContent:"center"}}>
             <TextFont translate={false} style={{color:colors.textBlack[global.darkMode], fontSize: 15, textAlign:"center"}}>{toast.message}</TextFont>
           </View>
         ),

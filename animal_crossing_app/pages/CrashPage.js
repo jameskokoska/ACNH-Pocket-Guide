@@ -5,7 +5,7 @@ import colors from '../Colors'
 import FadeInOut from "../components/FadeInOut";
 import {SubHeader, MailLink} from "../components/Formattings"
 import ButtonComponent from '../components/ButtonComponent';
-import { attemptToTranslate, getDefaultLanguage, getStorage } from '../LoadJsonData';
+import { attemptToTranslate, getDefaultLanguage, getStorage, openURL } from '../LoadJsonData';
 import * as ErrorRecovery from 'expo-error-recovery';
 import BackupPage from './BackupPage';
 import { ExportFile } from '../components/LoadFile';
@@ -38,12 +38,12 @@ export default class CrashPage extends Component {
           <Image source={require("../assets/icons/loid.png")} style={{width:75, height: 100, resizeMode:"contain", marginBottom:15}}/>
           <Text style={{textAlign:'center', fontSize:17, fontWeight: "bold", color: textWhite}}>{attemptToTranslate("It seems like the app has just crashed.")}</Text>
           <Text style={{textAlign:'center', fontSize:13, color: textWhite, marginTop: 10}}>{attemptToTranslate("If the app keeps crashing upon reload, please make a backup of your data, reinstall the application, and restore in the [Backup + Restore] page by selecting [Import Data] under Files.")}</Text>
-          <TouchableOpacity onPress={() => Linking.openURL('mailto:dapperappdeveloper@gmail.com') }>
+          <TouchableOpacity onPress={() => openURL('mailto:dapperappdeveloper@gmail.com') }>
             <Text style={{textAlign:'center', fontSize:13, color: textWhite, marginTop: 10}}>{attemptToTranslate("If you have any questions please email")}</Text>
             <Text style={{textAlign:'center', fontSize:13, color: textBlue, marginTop: 0}}>dapperappdeveloper@gmail.com</Text>
           </TouchableOpacity>
           <Text style={{textAlign:'center',  fontSize:15, color: textWhite, marginTop: 10}}>{attemptToTranslate("Please report the error so I can get it fixed.")}</Text>
-          <ButtonComponent text={attemptToTranslate("Report Error to Developer")} color={button2} onPress={() => Linking.openURL('mailto:dapperappdeveloper@gmail.com?subject=Error Report&body=' + "Fatal? : " + (this.props.lastError.isFatal ? "Yes" : "No") + "\n" + "Error : " + JSON.stringify(this.props.lastError.error))}/>
+          <ButtonComponent text={attemptToTranslate("Report Error to Developer")} color={button2} onPress={() => openURL('mailto:dapperappdeveloper@gmail.com?subject=Error Report&body=' + "Fatal? : " + (this.props.lastError.isFatal ? "Yes" : "No") + "\n" + "Error : " + JSON.stringify(this.props.lastError.error))}/>
           <ExportFile darkMode={darkMode} checkFont={true} color={button2} label={attemptToTranslate("Export and Backup Data")}/>
           <ButtonComponent onPress={()=>{this.props.loadApplication()}} text={attemptToTranslate("Load Application")} color={button3}/>
           <View style={{height:40}}/>

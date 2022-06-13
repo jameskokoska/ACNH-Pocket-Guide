@@ -1,9 +1,12 @@
-import {Vibration,} from 'react-native';
+import {Vibration,Clipboard,Linking, View} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {doWeSwapDate,} from "./components/DateFunctions";
 import {howManyVariationsChecked, getVariations} from "./components/BottomSheetComponents"
 import * as Localization from 'expo-localization';
 import * as FileSystem from 'expo-file-system'
+import Toast from "react-native-toast-notifications";
+import TextFont from './components/TextFont';
+import colors from './Colors.js';
 
 export async function getStorage(storageKey, defaultValue){
   const valueReturned = await AsyncStorage.getItem(storageKey);
@@ -80,7 +83,7 @@ export function setCustomListsAmount(checkListKeyString, name, amount){
 
 export function setLastSelectedListPage(name){
   global.lastSelectedListPage = name
-  AsyncStorage.setItem("lastSelectedListPage", name);
+  AsyncStorage.setItem("lastSelectedListPage"+global.profile, name);
 }
 
 export function inWishlist(checkListKeyString){
@@ -296,7 +299,7 @@ function translateRepeatItem(itemTranslation, language){
   return ""
 }
 
-export async function countCollection(checkListKeyStart){
+export function countCollection(checkListKeyStart){
   var count = 0;
   for(var i = 0; i<global.collectionList.length; i++){
     if(global.collectionList[i].includes("customLists::") || global.collectionList[i].includes("wishlist") || global.collectionList[i].includes("museum")){
@@ -1233,7 +1236,7 @@ export function attemptToTranslateMuseumDescription(text){
   return attemptToTranslateFromDatabases(text, [museumDescriptionTranslations])
 }
 
-export function attemptToTranslate(text, forcedTranslation=false){
+export function attemptToTranslate(text, forcedTranslation=false, ){
   if(text===undefined){
     return "";
   } else if(global.language==="English"){
@@ -1716,6 +1719,14 @@ export function allEventItemsCheck(eventName){
     return false
   }
 
+  if(eventName==="K.K. concert"){
+    let musicCount = countCollection("songCheckList");
+    let musicCountTotal = global.dataLoadedMusic[0].length - 3; //there are 3 Hazure songs
+    let musicPercentage = musicCount/musicCountTotal * 100;
+    return [musicPercentage === 100]
+  }
+  // console.log(eventName)
+
   let previousName = ""
   let previousDataCategory = ""
   let foundAnyItem = false
@@ -1871,4 +1882,47 @@ export function convertTimeTo24Hours(time){
       return currentHour + " " + meridian
     }
   }
+}
+
+export function openURL(url){
+  try{
+    Linking.openURL(url)
+  }catch(e){
+    try{
+      Clipboard.setString(url);
+    }catch(e){
+      if(toast)
+        toast.show("", {type:"success",
+          placement:'top',
+          renderType:{
+            success: (toast) => (
+              <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, borderRadius: 5, backgroundColor: colors.popupSuccess[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+                <TextFont translate={false} style={{color:"white", fontSize: 15}}>{"There was an error opening the external link."}</TextFont>
+              </View>
+            ),
+          }
+        })
+    }
+    if(toast)
+      toast.show("", {type:"success",
+        placement:'top',
+        renderType:{
+          success: (toast) => (
+            <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, borderRadius: 5, backgroundColor: colors.popupSuccess[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+              <TextFont translate={false} style={{color:"white", fontSize: 15}}>{"Copied to clipboard."}</TextFont>
+            </View>
+          ),
+        }
+      })
+  }
+}
+
+export function findVillagersParadisePlanning(villagersName){
+  let dataSet = require("./assets/data/DataCreated/Paradise Planning.json")
+  for(let i = 0; i < dataSet.length; i++){
+    if(dataSet[i]["Name"]===villagersName){
+      return dataSet[i]
+    }
+  }
+  return false
 }

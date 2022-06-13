@@ -542,7 +542,7 @@ export class TurnipLog extends Component {
         )}
         <TouchableOpacity style={{marginVertical:8, backgroundColor:colors.eventBackground[global.darkMode], padding: 10, borderRadius: 10}} 
           onPress={()=>{
-            // Linking.openURL(
+            // openURL(
             //   this.turnipLink,
             // );
             RootNavigation.navigate('BrowserPage', {propsPassed:this.getTurnipLink()});

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Vibration, BackHandler, Dimensions, Text, View, StatusBar, Linking, } from 'react-native';
+import {Vibration, BackHandler, Dimensions, Text, View, StatusBar, Linking, LogBox } from 'react-native';
 import FAB, { FABWrapper } from './components/FAB';
 import CalendarPage from './pages/CalendarPage';
 import SongsPage from './pages/SongsPage';
@@ -21,12 +21,13 @@ import LottieView from 'lottie-react-native';
 import CreditsPage from './pages/CreditsPage';
 import FlowerPage from './pages/FlowerPage';
 import CardsPage from './pages/CardsPage';
-import {getDefaultLanguage, getStorage,getSettingsString, settings, loadGlobalData, attemptToTranslate, indexCollectionList, setSettingsString} from './LoadJsonData';
+import {getDefaultLanguage, getStorage,getSettingsString, settings, loadGlobalData, attemptToTranslate, indexCollectionList, setSettingsString, openURL} from './LoadJsonData';
 import Onboard from './pages/Onboard';
 import colors from './Colors.js';
 import * as Font from 'expo-font';
 import PopupRating from './components/PopupRating'
-import { Appearance } from 'react-native-appearance';
+import { Appearance } from 'react-native';
+
 import SideMenu, { sideSections } from './components/SideMenu'
 import GuidePage from './pages/GuidePage';
 import MeteoNookPage from './pages/MeteoNookPage';
@@ -72,6 +73,21 @@ import * as ErrorRecovery from 'expo-error-recovery';
 import CrashPage, { EmptyPage } from './pages/CrashPage';
 import VillagerPhotoPoster from './pages/VillagerPhotoPoster';
 import TodoReorderPage from './pages/TodoReorderPage';
+
+const backup = console.warn;
+
+console.warn = function filterWarnings(log) {
+  const warningsToIgnore = ["ViewPropTypes"];
+
+  if (!warningsToIgnore.some(msg => log.includes(msg))) {
+    backup.apply(console, arguments);
+  }
+};
+
+LogBox.ignoreLogs([
+  "ViewPropTypes will be removed",
+  "ColorPropType will be removed",
+])
 
 const defaultErrorHandler = ErrorUtils.getGlobalHandler();
 
@@ -451,14 +467,16 @@ class Main extends Component {
     }
     if(toast){
       toast.show(result[0], {type:result[1]===false?"success":"danger", 
+        placement:'top',
+        duration: result[1]===false?2000:5000, 
         renderType:{
           success: (toast) => (
-            <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 12, marginRight: needsPadding?100:20, borderRadius: 5, backgroundColor: colors.popupSuccess[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+            <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, marginRight: 20, borderRadius: 5, backgroundColor: colors.popupSuccess[global.darkMode], alignItems:"center", justifyContent:"center"}}>
               <TextFont translate={false} style={{color:"white", fontSize: 15}}>{toast.message}</TextFont>
             </View>
           ),
           danger: (toast) => (
-            <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 12, marginRight: needsPadding?100:20, borderRadius: 5, backgroundColor: colors.popupDanger[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+            <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, marginRight: 20, borderRadius: 5, backgroundColor: colors.popupDanger[global.darkMode], alignItems:"center", justifyContent:"center"}}>
               <TextFont translate={false} style={{color:"white", fontSize: 15}}>{toast.message}</TextFont>
             </View>
           )
@@ -667,7 +685,6 @@ class Main extends Component {
       }
       return (
         <GestureHandlerRootView style={{flex:1,backgroundColor: "#000000"}}>
-          <Toast ref={(ref) => global['toast'] = ref} />
           <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage} sideMenuSections={this.sideMenuSections} sideMenuSectionsDisabled={this.sideMenuSectionsDisabled}>
             <Provider theme={theme}>
               <NavigationContainer ref={navigationRef} theme={{colors: {background: colors.background[global.darkMode],},}}>
@@ -694,6 +711,7 @@ class Main extends Component {
             />
           </SideMenu>
           <FABWrapper ref={(fab) => this.fab = fab} openDrawer={this.openDrawer}/>
+          <Toast ref={(ref) => global['toast'] = ref} />
         </GestureHandlerRootView>
       );
     }
@@ -708,9 +726,9 @@ class PopupInfos extends Component {
       if(numLoginsOffset[0]===global.version){
         if(numLoginsOffset[1]>=1){
           //can periodically switch this one (ref and storage key)
-          let supportPopupDismissed = await getStorage("supportPopupDismissed11","false");
+          let supportPopupDismissed = await getStorage("supportPopupDismissed22","false");
           if(supportPopupDismissed==="false" && numLogins >= 12){
-            AsyncStorage.setItem("supportPopupDismissed11", "true");
+            AsyncStorage.setItem("supportPopupDismissed22", "true");
             this.popupSupport2?.setPopupVisible(true)
           }
         }
@@ -721,14 +739,14 @@ class PopupInfos extends Component {
       
       // let backupPopupDismissed = await getStorage("backupPopupDismissed","false");
       let backupPopupDismissed = await getStorage("backupPopupDismissed","false");
-      if(backupPopupDismissed==="false" && numLogins >= 8){
+      if(backupPopupDismissed==="false" && numLogins >= 9){
         AsyncStorage.setItem("backupPopupDismissed", "true");
         this.popupBackup?.setPopupVisible(true)
       }
       let supportPopupDismissed = await getStorage("supportPopupDismissed","false");
-      if(supportPopupDismissed==="false" && numLogins >= 6){
+      if(supportPopupDismissed==="false" && numLogins >= 7){
         AsyncStorage.setItem("supportPopupDismissed", "true");
-        this.popupSupport2?.setPopupVisible(true)
+        this.popupSupport?.setPopupVisible(true)
       }
       // let supportPopupDismissed2 = await getStorage("supportPopupDismissed2","false");
       // if(supportPopupDismissed2==="false" && numLogins >= 6){
@@ -768,11 +786,11 @@ class PopupInfos extends Component {
       <PopupRating ref={(popupRating) => this.popupRating = popupRating}/>
       <Popup ref={(popupImprovePerformance) => this.popupImprovePerformance = popupImprovePerformance} text="Improve Performance" textLower="To increase app performance, consider enabling the [Battery saver / Increase performance] setting." button1={"Enable"} button1Action={()=>{setSettingsString("settingsLowEndDevice","true");}} button2={"Not now"} button2Action={()=>{}}/>
       <Popup mailLink={true} ref={(popupBackup) => this.popupBackup = popupBackup} text="Data Backup" textLower="You can now backup your data to the cloud and enable auto backups in the settings." button1={"Go to page"} button1Action={()=>{this.props.setPage(30)}} button2={"Cancel"} button2Action={()=>{}}/>
-      <Popup support={true} noDismiss ref={(popupSupport) => this.popupSupport = popupSupport} text="Leave a Tip" button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
-      <Popup margin support2={true} noDismiss ref={(popupSupport2) => this.popupSupport2 = popupSupport2} text="Buy me a Coffee" textLower={attemptToTranslate("If you enjoy this free app, buy the developer a coffee!") + " ☕"} button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
-      {/* <Popup margin support2={true} noDismiss ref={(popupSupport3) => this.popupSupport3 = popupSupport3} text="Happy Holidays!" textLower={attemptToTranslate("Support the app to keep it ad free for all") + " 😄"} button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>*/}
-      <Popup margin support2={true} noDismiss ref={(popupSupport3) => this.popupSupport3 = popupSupport3} text="Support the App" textLower={attemptToTranslate("Support the app to keep it ad free for all") + " 😄"} button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
-      {/* <Popup margin support2={true} noDismiss ref={(popupSupport4) => this.popupSupport4 = popupSupport4} text="Happy New Year!" textLower={attemptToTranslate("Consider supporting this ad free app") + " 🙂"} button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>  */}
+      <Popup support={true} noDismiss ref={(popupSupport) => this.popupSupport = popupSupport} text="Leave a Tip" button1={"Sure!"} button1Action={()=>{openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
+      <Popup margin support2={true} noDismiss ref={(popupSupport2) => this.popupSupport2 = popupSupport2} text="Buy me a Coffee" textLower={attemptToTranslate("If you enjoy this free app, buy the developer a coffee!") + " ☕"} button1={"Sure!"} button1Action={()=>{openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
+      {/* <Popup margin support2={true} noDismiss ref={(popupSupport3) => this.popupSupport3 = popupSupport3} text="Happy Holidays!" textLower={attemptToTranslate("Support the app to keep it ad free for all") + " 😄"} button1={"Sure!"} button1Action={()=>{openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>*/}
+      <Popup margin support2={true} noDismiss ref={(popupSupport3) => this.popupSupport3 = popupSupport3} text="Support the App" textLower={attemptToTranslate("Support the app to keep it ad free for all") + " 😄"} button1={"Sure!"} button1Action={()=>{openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
+      {/* <Popup margin support2={true} noDismiss ref={(popupSupport4) => this.popupSupport4 = popupSupport4} text="Happy New Year!" textLower={attemptToTranslate("Consider supporting this ad free app") + " 🙂"} button1={"Sure!"} button1Action={()=>{openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>  */}
     </>
   }
 }

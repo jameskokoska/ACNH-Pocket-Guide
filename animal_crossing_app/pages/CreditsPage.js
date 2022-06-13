@@ -6,7 +6,7 @@ import colors from '../Colors'
 import PopupRating from "../components/PopupRating"
 import ButtonComponent from "../components/ButtonComponent"
 import {MailLink, ExternalLink, SubHeader, Header, Paragraph, HeaderNote} from "../components/Formattings"
-import {attemptToTranslate, capitalize} from "../LoadJsonData"
+import {attemptToTranslate, capitalize, openURL} from "../LoadJsonData"
 import {changelog, dataVersion} from "../Changelog"
 import Popup from '../components/Popup';
 import { testNotification } from '../Notifications';
@@ -38,6 +38,7 @@ class CreditsPage extends Component {
       <CreditTextBox text="Hidden Cat"/>
       <CreditImageContainer image={require("../assets/icons/Tida.png")} text="Tida" textBottom="Gold Supporter"/>
       <CreditTextBox text="Cindee"/>
+      <CreditTextBox text="Jennifer R."/>
       <View style={{height:12}}/>
       <SubHeader style={{fontSize: 24}}>Silver Supporters</SubHeader>
       <SubHeader bold={false} style={{marginBottom:6, marginTop:0, fontSize: 17}}>{attemptToTranslate("Thanks for your support!")}</SubHeader>
@@ -49,10 +50,12 @@ class CreditsPage extends Component {
       <CreditTextBox text="Kryptonite"/>
       <CreditTextBox text="Deanna"/>
       <CreditTextBox text="Tee"/>
+      <CreditTextBox text="Jacqueline D. (Quinn)"/>
+      <CreditTextBox text="nojinmyname"/>
       <View style={{height: 5}}/>
       <View style={{paddingHorizontal: 20}}>
         <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.popupSupport?.setPopupVisible(true)}} text={capitalize(attemptToTranslate("Leave a Tip"))} />
-        <Popup support={true} noDismiss ref={(popupSupport) => this.popupSupport = popupSupport} text="Leave a Tip" button1={"Sure!"} button1Action={()=>{Linking.openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
+        <Popup support={true} noDismiss ref={(popupSupport) => this.popupSupport = popupSupport} text="Leave a Tip" button1={"Sure!"} button1Action={()=>{openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
         <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.popupRating?.setPopupVisible(true)}} text={capitalize(attemptToTranslate("Leave a rating"))} />
         <PopupRating ref={(popupRating) => this.popupRating = popupRating}/>
       </View>
