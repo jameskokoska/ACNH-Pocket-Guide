@@ -4,6 +4,10 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added hemisphere toggle in 3-dot-menu of active creature page
+-Name of languages are no longer translated
+-Language names are native to the language of origin
+-
 -New ToDo list edit page\nEasily sort and edit all your tasks in one page
 -Added drag and drop to reorder ToDo tasks in the edit page
 -Added category separators to ToDo list

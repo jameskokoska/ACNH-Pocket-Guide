@@ -269,6 +269,7 @@ export class LanguagePicker extends Component{
     return(<>
       <View style={{marginTop:5, marginBottom:8, marginHorizontal:20, justifyContent:"center"}}>
         <DropdownMenu 
+          translate={false}
           width={Dimensions.get('window').width-83}
           selection={true}
           items={languages}

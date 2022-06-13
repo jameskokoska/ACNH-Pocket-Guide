@@ -4,12 +4,15 @@ import TextFont from './TextFont'
 import FadeInOut from "./FadeInOut"
 import LottieView from 'lottie-react-native';
 import DelayInput from "react-native-debounce-input";
-import {capitalize, getSettingsString, attemptToTranslate, findItemCheckListKey, commas} from "../LoadJsonData"
+import {capitalize, getSettingsString, attemptToTranslate, findItemCheckListKey, commas, setSettingsString} from "../LoadJsonData"
 import GuideRedirectButton from "./PopupGuideRedirectButton"
 import { DropdownMenu } from './Dropdown';
 import Popup from './Popup';
+import colors from '../Colors.js';
+import Toast from "react-native-toast-notifications";
 
 const Header = (props) => {
+  console.log(props.showHemisphereSwitcherOption)
   var filterImage;
   const [emptySearch, setEmptySearch] = useState(props.currentSearch==="" || props.currentSearch===undefined)
   if(props.disableFilters){
@@ -47,6 +50,10 @@ const Header = (props) => {
       {label:"Remove all from museum", value:"Museum uncheck", highlighted: false},
     ]
   }
+  let hemisphereToggle = []
+  if(props.showHemisphereSwitcherOption===true){
+    hemisphereToggle = [{label:(getSettingsString("settingsNorthernHemisphere") === "true" ? "Northern Hemisphere" : "Southern Hemisphere"), value:"Hemisphere switch", highlighted: false}]
+  }
   if(props.checkAllItemsListed!==undefined && props.unCheckAllItemsListed!==undefined && props.invertCheckItemsListed!==undefined){
     moreMenu = <>
       <View style={{position:"absolute", padding:0, top:2, right:-2, zIndex: 100}}>
@@ -57,7 +64,8 @@ const Header = (props) => {
             {label:"Check all", value:"Check all", highlighted: false},
             {label:"Uncheck all", value:"Uncheck all", highlighted: false},
             {label:"Invert check marks", value:"Invert check", highlighted: false},
-            ...museumOptions
+            ...museumOptions,
+            ...hemisphereToggle
           ]}
           defaultValue={""}
           onChangeItem={
@@ -73,6 +81,20 @@ const Header = (props) => {
                 popupMuseumCheckRef.current.setPopupVisible(true)
               }else if(item.value==="Museum uncheck"){
                 popupMuseumUncheckRef.current.setPopupVisible(true)
+              }else if(item.value==="Hemisphere switch"){
+                setSettingsString("settingsNorthernHemisphere",getSettingsString("settingsNorthernHemisphere") === "true"? "false" : "true");
+                toast.show(attemptToTranslate("Hemisphere changed to") + " " + attemptToTranslate(getSettingsString("settingsNorthernHemisphere") === "true" ? "Northern Hemisphere" : "Southern Hemisphere"), {type:"success",
+                  duration: 1300,
+                  placement:'top',
+                  renderType:{
+                    success: (toast) => (
+                      <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 20, marginVertical: 5, borderRadius: 5, backgroundColor: colors.popupNeutral[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+                        <TextFont translate={false} style={{color:colors.textBlack[global.darkMode], fontSize: 15, textAlign:"center"}}>{toast.message}</TextFont>
+                      </View>
+                    ),
+                  }
+                })
+                props.runOnShowHemisphereSwitcherOption()
               }
             }
           }

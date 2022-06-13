@@ -65,7 +65,7 @@ export class DropdownMenu extends Component {
         >
           <ScrollView style={{maxHeight:maxHeight, backgroundColor:colors.lightDarkAccentHeavyBackground[global.darkMode], borderRadius:10, marginVertical:-15}}>
             {this.props.items.map((item)=>{
-              return <DropdownMenuItem highlighted={item.highlighted} width={this.props.width} key={item.value} selectedTitle={this.state.selectedTitle} onPress={()=>{this.setState({visible:false}); this.props.onChangeItem(item); if(this.props.selection) this.setState({selectedTitle:item.label})}} title={item.label}/>
+              return <DropdownMenuItem translate={this.props.translate} highlighted={item.highlighted} width={this.props.width} key={item.value} selectedTitle={this.state.selectedTitle} onPress={()=>{this.setState({visible:false}); this.props.onChangeItem(item); if(this.props.selection) this.setState({selectedTitle:item.label})}} title={item.label}/>
             })}
           </ScrollView>
         </Menu>
@@ -94,7 +94,7 @@ export class DropdownMenuItem extends Component {
           backgroundColor: this.props.selectedTitle===this.props.title || this.props.highlighted ? colors.lightDarkAccentHeavy[global.darkMode] : "#FFFFFF00",
           width: this.props.width+43,
         }}>
-          <TextFont bold={true} style={{color: colors.textBlack[global.darkMode], fontSize:15}}>{this.props.title}</TextFont>
+          <TextFont translate={this.props.translate} bold={true} style={{color: colors.textBlack[global.darkMode], fontSize:15}}>{this.props.title}</TextFont>
       </View>
     </TouchableNativeFeedback>
   }

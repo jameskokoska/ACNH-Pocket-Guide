@@ -28,6 +28,8 @@ export default class ActiveCreaturesPage extends Component {
         />
         <ListPage 
           title="Active Creatures"
+          showHemisphereSwitcherOption={true}
+          runOnShowHemisphereSwitcherOption={()=>{this.setState({})}}
           // leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
           subHeader = {"Creatures that can currently be caught"}
           extraInfo={
