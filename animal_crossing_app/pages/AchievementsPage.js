@@ -238,8 +238,7 @@ class Achievement extends React.PureComponent{
     super(props);
     this.state = {
       storageDataUpdate: props.storageDataUpdate,
-      hidden: undefined,
-      neverHidden: undefined,
+      hidden:0,
     }
   }
   componentDidUpdate(prevProps){
@@ -247,20 +246,16 @@ class Achievement extends React.PureComponent{
       this.setState({storageDataUpdate:this.props.storageDataUpdate})
     }
     if(this.props.currentFilter!==prevProps.currentFilter){
-      this.setState({hidden: undefined, neverHidden: undefined})
+      this.setState({hidden: 0})
     }
   }
-  setHidden = (value) => {
-    this.setState({hidden: value})
-  }
-  setNeverHidden = (value) => {
-    this.setState({neverHidden: value})
+  setHidden = () => {
+    this.setState({hidden: this.state.hidden+1})
   }
   render(){
     var name = attemptToTranslateAchievement(this.props.achievement["Name"]);
     name = name.replace("(island name)", global.islandName)
     let achievementStamps = []
-    let hidden = (this.state.neverHidden===undefined || this.state.neverHidden===false) && this.state.hidden === true
     for(var i = 0; i < this.props.achievement["Num of Tiers"]; i++){
       achievementStamps.push(<AchievementStamp
         storageDataUpdate={this.state.storageDataUpdate}
@@ -271,12 +266,12 @@ class Achievement extends React.PureComponent{
         reward = {this.props.achievement["Tier "+(i+1).toString() + " Reward"]}
         index = {i.toString()}
         setHidden={this.setHidden}
-        setNeverHidden={this.setNeverHidden}
         currentFilter={this.props.currentFilter}
-        hidden = {hidden}
+        hidden = {this.props.currentFilter==="not checked" && ((this.state.hidden))>=parseInt(this.props.achievement["Num of Tiers"])}
       />)
     }
-    if(hidden){
+
+    if(this.props.currentFilter==="not checked" && ((this.state.hidden))>=parseInt(this.props.achievement["Num of Tiers"])){
       return <View>{achievementStamps}</View> 
     }
     return <>
@@ -316,15 +311,15 @@ class AchievementStamp extends Component {
   componentDidUpdate(prevProps){
     if(this.props.currentFilter!==prevProps.currentFilter){
       setTimeout(()=>{
-        this.checkHide(this.state.checked)
+        this.checkHide()
       }, 0)
     }else if(this.props.storageDataUpdate!==prevProps.storageDataUpdate){
       if(this.props.storageDataUpdate.includes(this.id) && this.mounted){
         this.setState({checked:true})
-        this.checkHide(true)
+        this.checkHide()
       }else if(this.mounted){
         this.setState({checked:false})
-        this.checkHide(false)
+        this.checkHide()
       }
     }
   }
@@ -333,18 +328,17 @@ class AchievementStamp extends Component {
     var storageData = JSON.parse(await getStorage("Achievements"+global.profile,JSON.stringify([])));
     if(storageData.includes(this.id) && this.mounted){
       this.setState({checked:true})
-      this.checkHide(true)
+      this.checkHide()
     }
   }
 
   checkHide = (checked) => {
     if(this.props.currentFilter==="none"){
-      this.props.setHidden(false)
+      this.props.setHidden()
     } if(this.props.currentFilter==="not checked"){
       if(this.state.checked===false){
-        this.props.setNeverHidden(true)
       } else {
-        this.props.setHidden(true)
+        this.props.setHidden()
       }
     } 
   }
