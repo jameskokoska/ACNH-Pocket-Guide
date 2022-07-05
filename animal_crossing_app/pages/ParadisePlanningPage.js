@@ -31,7 +31,7 @@ export default class ParadisePlanningPage extends Component {
     this.filterTypes = ["none","checked","not checked"]
     this.state = {
       selectedAchievement:"",
-      data: [...require("../assets/data/DataCreated/Paradise Planning.json"),...require("../assets/data/DataCreated/Special NPCs.json")],
+      data: this.sortAlphabetically(this.createNameLanguage([...require("../assets/data/DataCreated/Paradise Planning.json"),...require("../assets/data/DataCreated/Special NPCs.json")])),
       loaded: false,
       setFilter: 0,
       update: false
@@ -111,20 +111,62 @@ export default class ParadisePlanningPage extends Component {
       if(!skip){
         if(text===""){
           outputData.push(request);
+        } else if (request["NameLanguage"] !==undefined & request["NameLanguage"].toString().toLowerCase().includes(text.toString().toLowerCase())){
+          outputData.push(request);
         } else if(removeAccents(requestRequest.toString().toLowerCase()).includes(removeAccents(text.toString().toLowerCase()))){
           outputData.push(request);
-        } else if (request["Name"] !==undefined && (requestRequest!=="" ? 
-            (attemptToTranslateSpecial(request["Name"], "villagers")!==undefined && attemptToTranslateSpecial(request["Name"], "villagers").toString().toLowerCase().includes(text.toString().toLowerCase()))
-            :
-            (attemptToTranslate(request["Name"])!==undefined && attemptToTranslate(request["Name"]).toString().toLowerCase().includes(text.toString().toLowerCase()))
-          )){
-          outputData.push(request);
-        }
+        } 
       }
     })
     if(this.mounted){
-      this.setState({data:outputData});
+      this.setState({data:this.sortAlphabetically(outputData)});
     }
+  }
+
+  createNameLanguage = (data) => {
+    for(let datum of data){
+      if(datum["Request"]===undefined){ //this means it's a special NPC from the list, fill in info from Special NPCs JSON object
+        datum["NameLanguage"] = attemptToTranslate(datum["Name"]).toString()
+      }else if (datum["Name"] !==undefined){
+        datum["NameLanguage"] = attemptToTranslateSpecial(datum["Name"], "villagers").toString()
+      } else {
+        datum["NameLanguage"] = "";
+      }
+    }
+    return data;
+  }
+
+  sortAlphabetically = (data) => {
+    //Sort alphabetically
+    if(getSettingsString("settingsSortAlphabetically")==="true"){
+      data.sort(function(a, b) {
+        var textA
+        var textB
+        if(a===undefined || a.NameLanguage===undefined){
+          textA = "zzzzzzzzzzzzzz"
+        } else {
+          textA = removeAccents(a.NameLanguage.toUpperCase()).replace("-"," ");
+          if(textA===""){
+            textA = "zzzzzzzzzzzzzz"
+          }
+        }
+        if(b===undefined || b.NameLanguage===undefined){
+          textB = "zzzzzzzzzzzzzz"
+        } else {
+          textB = removeAccents(b.NameLanguage.toUpperCase()).replace("-"," ");
+          if(textB===""){
+            textB = "zzzzzzzzzzzzzz"
+          }
+        }
+        if(textB==="zzzzzzzzzzzzzz"){
+          return -1
+        } else if (textA==="zzzzzzzzzzzzzz"){
+          return -1
+        }
+        return (textA.localeCompare(textB));
+      });
+    }
+    return data
   }
 
   checkAllItemsListed = async () => {
@@ -221,7 +263,7 @@ export default class ParadisePlanningPage extends Component {
 
 class CycleCheckListFilter extends Component{
   render(){
-    console.log("Paradise planning page filter state: "+this.props.setFilter)
+    // console.log("Paradise planning page filter state:  "+this.props.setFilter)
     return <TouchableOpacity style={{width:70, height:63}} activeOpacity={0.7} onPress={()=>{this.props.cycleFilter()}}>
       {this.props.setFilter===0
         ?

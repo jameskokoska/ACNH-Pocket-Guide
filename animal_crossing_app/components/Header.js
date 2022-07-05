@@ -111,6 +111,7 @@ const Header = (props) => {
   }
   return (
     <>
+      <TextFont style={{position:"absolute",color: props.titleColor, zIndex:10, top:7, left:11, opacity: 0.3, fontSize: 12}}>{props.searchResultCountString}</TextFont>
       <GuideRedirectButton style={{position:"absolute", padding:15, right:10}} extraInfo={props.extraInfo} setPage={props.setPage}/>
       {props.title==="Wishlist"?<WishListShareButton style={{position:"absolute", padding:15, right:10, top: 2.5}}/>:<View/>}
       {moreMenu}

@@ -109,12 +109,6 @@ function ListPage(props){
     outputRange: [0, -(headerHeight)],
   });
 
-  // const translateYNumber = useRef();
-
-  // translateY.addListener(({value}) => {
-  //   translateYNumber.current = value;
-  // });
-
   const handleScroll = Animated.event(
     [
       {
@@ -1045,7 +1039,7 @@ function ListPage(props){
           width: Dimensions.get('window').width, 
           height: Dimensions.get('window').height, position:"absolute"}} 
         pointerEvents="none"> */}
-        <Header runOnShowHemisphereSwitcherOption={props.runOnShowHemisphereSwitcherOption} showHemisphereSwitcherOption={props.showHemisphereSwitcherOption} showMuseumCheckOptions={museumTitles.includes(props.title) && (props.wishlistItems===undefined || props.wishlistItems===false)} checkAllMuseum={()=>{checkAllMuseum()}} unCheckAllMuseum={()=>{unCheckAllMuseum()}} invertCheckItemsListed={()=>{invertCheckItemsListed()}} unCheckAllItemsListed={()=>{unCheckAllItemsListed()}} checkAllItemsListed={()=>{checkAllItemsListed()}} currentSearch={props.currentSearch!==undefined?props.currentSearch:""} setPage={props.setPage} extraInfo={props.extraInfo} smallerHeader={props.smallerHeader} disableFilters={props.disableFilters} customHeader={props.customHeader} disableSearch={props.disableSearch} subHeader={props.subHeader} subHeader2={props.subHeader2} searchFilters={searchFilters} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
+        <Header runOnShowHemisphereSwitcherOption={props.runOnShowHemisphereSwitcherOption} showHemisphereSwitcherOption={props.showHemisphereSwitcherOption} showMuseumCheckOptions={museumTitles.includes(props.title) && (props.wishlistItems===undefined || props.wishlistItems===false)} checkAllMuseum={()=>{checkAllMuseum()}} unCheckAllMuseum={()=>{unCheckAllMuseum()}} invertCheckItemsListed={()=>{invertCheckItemsListed()}} unCheckAllItemsListed={()=>{unCheckAllItemsListed()}} checkAllItemsListed={()=>{checkAllItemsListed()}} currentSearch={props.currentSearch!==undefined?props.currentSearch:""} setPage={props.setPage} extraInfo={props.extraInfo} smallerHeader={props.smallerHeader} disableFilters={props.disableFilters} customHeader={props.customHeader} disableSearch={props.disableSearch} subHeader={props.subHeader} subHeader2={props.subHeader2} searchFilters={searchFilters} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage} searchResultCountString={data!==undefined ? data.length+" "+(data.length!==1?attemptToTranslate("entries."):attemptToTranslate("entry.")) : ""}/>
         {/* </Animated.View> */}
       </Animated.View>
 

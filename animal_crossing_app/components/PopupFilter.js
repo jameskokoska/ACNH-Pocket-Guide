@@ -4,7 +4,8 @@ import {
   StyleSheet,
   TouchableOpacity,
   View,
-  Dimensions
+  Dimensions,
+  Image
 } from "react-native";
 import TextFont from "./TextFont";
 import ButtonComponent from "./ButtonComponent";
@@ -28,6 +29,7 @@ class PopupFilter extends Component {
       popupVisible: false,
       selectedItems: []
     };
+    this.savedItems = []
     this.openFirst = true;
 
     var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH ";
@@ -463,6 +465,25 @@ class PopupFilter extends Component {
                 searchTextFontFamily={{fontFamily:"ArialRounded"}}
                 confirmFontFamily={{fontFamily:"ArialRoundedBold"}}
                 confirmText={attemptToTranslate("Confirm")}
+                customChipsRenderer = {(props) => {
+                  if(!props.selectedItems){
+                    return <View/>
+                  }
+                  return (
+                    <View style={{display:"flex", flexDirection:"row", flexWrap:"wrap"}}>
+                      {this.state.selectedItems.map((singleSelectedItem,index) => {
+                        if(!singleSelectedItem) return <View></View>
+                        const item = this.SectionedMultiSelect?._findItem(singleSelectedItem)
+                        if (!item || !item[props.displayKey]) return this.savedItems[index]
+                        this.savedItems[index] = (<TouchableOpacity key={item[props.uniqueKey]} onPress={() => { this.SectionedMultiSelect._removeItem(item) }} style={{borderRadius: 10, paddingHorizontal:15, paddingVertical:5, marginHorizontal:5, marginVertical:5, paddingBottom: 8, backgroundColor:colors.lightDarkAccent[global.darkMode], flexDirection:"row", alignItems:"center"}}>
+                          <TextFont style={{fontSize: 18, color:colors.textBlack[global.darkMode],}}>{item[props.displayKey]}</TextFont>
+                          <Image style={{width:16,height:16, marginTop: 4, marginLeft:5, marginRight:-5, opacity: 0.35, resizeMode:"contain",}} source={require("../assets/icons/exit.png")}/>
+                        </TouchableOpacity>)
+                        return this.savedItems[index]
+                      })} 
+                    </View>
+                  )
+                }}
               />
               
               <View style={{position:"absolute", bottom: 20}}>

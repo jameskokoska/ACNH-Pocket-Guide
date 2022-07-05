@@ -1,6 +1,6 @@
 import * as Font from 'expo-font';
 import React, {Component} from 'react';
-import {TouchableOpacity, Dimensions, Image, View, Text} from 'react-native';
+import {TouchableOpacity, Dimensions, Image, View, Text, Vibration} from 'react-native';
 import {InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
 import colors from "../Colors"
 import {getPhotoShadow} from "../components/GetPhoto"

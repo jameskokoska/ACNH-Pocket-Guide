@@ -215,7 +215,25 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
             dataLoading[i]["NameLanguage"]=attemptToTranslateSpecial(dataLoading[i]["Name"],"villagers")
           } else {
             //handle special case where there are multiple items with same name
-            if(global.language!=="English" && dataLoading[i]["Name"]==="tank" ){
+            if(global.language!=="English" && dataLoading[i]["Name"]==="ant" ){
+              let currentTranslation = {
+                "CNzh": "蚂蚁",
+                "EUde": "Ameise",
+                "EUen": "ant",
+                "EUes": "hormiga",
+                "EUfr": "fourmi",
+                "EUit": "formica",
+                "EUnl": "mier",
+                "EUru": "муравей",
+                "JPja": "アリ",
+                "KRko": "개미",
+                "TWzh": "螞蟻",
+                "USen": "ant",
+                "USes": "hormiga",
+                "USfr": "fourmi"
+              }
+              dataLoading[i]["NameLanguage"]=translateRepeatItem(currentTranslation,global.language)
+            }else if(global.language!=="English" && dataLoading[i]["Name"]==="tank" ){
               // inputData[dataSet][1] is DataCategory
               if(inputData[dataSet][1] === "Housewares"){
                 let currentTranslation = {
@@ -267,6 +285,12 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
         dataLoading[i]["Data Category 2"] = "Food"
       }
       dataLoading[i]["checkListKeyParent"]=currentParentKey
+
+      // duplicate key fix for amiibo card
+      if(dataLoading[i]["checkListKey"]==="amiiboCheckListSeries5Tom Nook"){
+        dataLoading[i]["checkListKey"] = dataLoading[i]["checkListKey"]+dataLoading[i]["number"]
+        dataLoading[i]["checkListKeyParent"] = dataLoading[i]["checkListKeyParent"]+dataLoading[i]["number"]
+      }
     }
     dataLoadingTotal.push(dataLoading);
   }
@@ -513,7 +537,7 @@ export async function deleteGeneratedData(){
 }
 
 export function checkOff(checkListKey, collected, type="", indexSpecial="", vibrate=getSettingsString("settingsEnableVibrations")==="true", save=true){
-  // console.log(type+checkListKey+indexSpecial);
+  console.log(type+checkListKey+indexSpecial);
   // console.log("TYPE"+type)
   if(collected===false){
     vibrate ? Vibration.vibrate([0,10,100,20]) : "";

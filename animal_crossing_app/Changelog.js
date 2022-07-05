@@ -4,6 +4,15 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added incomplete achievement filters for Nook Miles Achievements page
+-Number of items now displayed in top left corner of every page
+-Filter label chips - tap anywhere to remove that filter
+-Filter label chips larger and more uniform design
+-Paradise planning list now in alphabetical order
+-Fixed vibration missing on Villager Popup page
+-Fixed translations for critters
+-Fixed Tom Nook amiibo card duplicated key
+-
 -Added hemisphere toggle in 3-dot-menu of active creature page
 -Name of languages are no longer translated
 -Language names are native to the language of origin
