@@ -166,14 +166,14 @@ class CreditsPage extends Component {
 
     return(
       <FlatList
-        initialNumToRender={10}
+        initialNumToRender={100}
         data={changelogText}
         renderItem={(item, index)=>{return <TextFont key={item.item+index} bold={false} style={{marginLeft: 30, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 14,}}>{item.item}</TextFont>}}
         keyExtractor={(item, index) => `list-item-${index}-${item}`}
         ListHeaderComponent={()=>{
           return headerComponent
         }}
-        windowSize={15}
+        windowSize={100}
       />
       
     )
