@@ -33,6 +33,7 @@ class CatalogPage extends Component {
       totalFail:"",
       totalErrorItems: "",
       currentItemIndex: 0,
+      noMoreMessage:"",
     }
   }
 
@@ -115,7 +116,7 @@ class CatalogPage extends Component {
       if(this.selectVariations){
         this.setState({currentItemIndex:-1, currentItemVariation: this.importedItems[0]})
         this.popupSelectVariations?.setPopupVisible(true);
-        this.nextVariationsButton(true)
+        this.nextVariationsButton()
       }
     } catch(err){
       this.setState({
@@ -126,9 +127,9 @@ class CatalogPage extends Component {
     }
   }
 
-  nextVariationsButton = (firstNext) => {
+  nextVariationsButton = () => {
     if(this.state.currentItemIndex+1 >= this.importedItems.length){
-      this.popupSelectVariations?.setPopupVisible(false)
+      this.setState({noMoreMessage:"There are no more variations. Press 'Done' when complete."})
     } else {
       let amountToSkip = 0
       for(let index = this.state.currentItemIndex+1; index < this.importedItems.length; index++){
@@ -139,9 +140,30 @@ class CatalogPage extends Component {
         amountToSkip++
       }
       if(this.state.currentItemIndex+1+amountToSkip >= this.importedItems.length){
-        this.popupSelectVariations?.setPopupVisible(false)
+        this.setState({noMoreMessage:"There are no more variations. Press 'Done' when complete."})
       } else {
-        this.setState({currentItemVariation:this.importedItems[this.state.currentItemIndex+1+amountToSkip], currentItemIndex:this.state.currentItemIndex+=1+amountToSkip})
+        this.setState({noMoreMessage:"",currentItemVariation:this.importedItems[this.state.currentItemIndex+1+amountToSkip], currentItemIndex:this.state.currentItemIndex+=1+amountToSkip})
+      }
+    }
+  }
+
+  prevVariationsButton = () => {
+    if(this.state.currentItemIndex <= 0 ){
+      this.setState({noMoreMessage:"There are no more previous variations. Press 'Done' when complete."})
+      return
+    } else {
+      let amountToSkip = 0
+      for(let index = this.state.currentItemIndex-1; index < this.importedItems.length; index--){
+        const item = this.importedItems[index]
+        if((item.hasOwnProperty("Variation") && item["Variation"]!=="NA") || item.hasOwnProperty("Pattern") && item["Pattern"]!=="NA"){
+          break
+        }
+        amountToSkip++
+      }
+      if(this.state.currentItemIndex-amountToSkip <= 0){
+        this.setState({noMoreMessage:"There are no more previous variations. Press 'Done' when complete."})
+      } else {
+        this.setState({noMoreMessage:"",currentItemVariation:this.importedItems[this.state.currentItemIndex-1-amountToSkip], currentItemIndex:this.state.currentItemIndex-1-amountToSkip})
       }
     }
   }
@@ -164,6 +186,9 @@ class CatalogPage extends Component {
             onChangeText={(text) => {
               this.linkInput = text.replace("https://","")
               this.linkInput = "https://" + this.linkInput
+              if(text===""){
+                this.linkInput = ""
+              }
             }}
             placeholder={"https://nook.lol/abc123"}
             placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
@@ -217,20 +242,30 @@ class CatalogPage extends Component {
               })
             }
           </View>
-          <View style={{display:"flex", flexDirection:"row", justifyContent:"center"}}>
+          <View style={{display:"flex", flexDirection:"row", justifyContent:"center", flexWrap:"wrap"}}>
             <ButtonComponent
-              text={"Done"}
-              color={colors.okButton[global.darkMode]}
+              text={"Previous"}
+              color={colors.okButton3[global.darkMode]}
               vibrate={5}
               onPress={() => {
-                this.popupSelectVariations?.setPopupVisible(false)
+                this.prevVariationsButton()
             }}/>
             <ButtonComponent
               text={"Next"}
               color={colors.okButton3[global.darkMode]}
               vibrate={5}
               onPress={() => {
-                this.nextVariationsButton(false)
+                this.nextVariationsButton()
+            }}/>
+          </View>
+          {this.state.noMoreMessage===""?<></>:<TextFont style={{fontSize: 15, marginHorizontal: 20, marginVertical:10, textAlign:"center", color:colors.textBlack[global.darkMode]}}>{this.state.noMoreMessage}</TextFont>}
+          <View style={{display:"flex", flexDirection:"row", justifyContent:"center", flexWrap:"wrap"}}>
+            <ButtonComponent
+              text={"Done"}
+              color={colors.okButton[global.darkMode]}
+              vibrate={5}
+              onPress={() => {
+                this.popupSelectVariations?.setPopupVisible(false)
             }}/>
           </View>
         </PopupInfoCustom>
@@ -277,13 +312,13 @@ export class VariationItemCatalog extends Component{
         <View style={[{borderWidth: 2, borderColor: this.state.checked ? colors.checkGreen[global.darkMode] : colors.eventBackground[global.darkMode], marginHorizontal:3, marginVertical: 2, padding: 5, borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
           {itemImage!==undefined&&itemImage.startsWith("http")?
           <FastImage
-            style={{height: getSettingsString("settingsLargerItemPreviews")==="false"?53:70, width: getSettingsString("settingsLargerItemPreviews")==="false"?53:70, resizeMode:'contain',}}
+            style={{height: getSettingsString("settingsLargerItemPreviews")==="false"?63:80, width: getSettingsString("settingsLargerItemPreviews")==="false"?53:70, resizeMode:'contain',}}
             source={{
               uri: itemImage,
             }}
             cacheKey={itemImage}
           />:<Image
-            style={{height: getSettingsString("settingsLargerItemPreviews")==="false"?53:70, width: getSettingsString("settingsLargerItemPreviews")==="false"?53:70, resizeMode:'contain',}}
+            style={{height: getSettingsString("settingsLargerItemPreviews")==="false"?63:80, width: getSettingsString("settingsLargerItemPreviews")==="false"?53:70, resizeMode:'contain',}}
             source={getPhoto(itemImage!==undefined?itemImage.toString().toLowerCase():"")}
           />}
         </View>
