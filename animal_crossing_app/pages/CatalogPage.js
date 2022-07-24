@@ -1,14 +1,16 @@
 import React, {Component} from 'react';
-import {TextInput, Linking, TouchableOpacity, ScrollView, View, Dimensions, Text} from 'react-native';
+import {TextInput, Linking, TouchableOpacity, ScrollView, View, Dimensions, Text, Image} from 'react-native';
 import ListPage from '../components/ListPage';
 import LottieView from 'lottie-react-native';
 import TextFont from '../components/TextFont'
 import StoreHoursContainer from '../components/StoreHoursContainer';
 import colors from '../Colors'
 import ButtonComponent from "../components/ButtonComponent"
-import {attemptToTranslate, collectionListSave, checkOff, loadGlobalData, indexCollectionList, openURL} from "../LoadJsonData"
-import Popup from '../components/Popup';
+import {attemptToTranslate, collectionListSave, checkOff, loadGlobalData, indexCollectionList, openURL, getSettingsString, capitalize} from "../LoadJsonData"
+import Popup, { PopupInfoCustom } from '../components/Popup';
 import ToggleSwitch from 'toggle-switch-react-native';
+import FastImage from '../components/FastImage';
+import { getVariations, VariationItem, Variations } from '../components/BottomSheetComponents';
 
 
 class CatalogPage extends Component {
@@ -21,16 +23,22 @@ class CatalogPage extends Component {
     this.method = "";
     this.includeVillagers = true;
     this.includeRecipes = true;
+    this.selectVariations = true;
+    this.importedItems = [];
+    this.importedItemsIndices = [];
     this.state = {
       method:"",
       totalSuccess:"",
       totalFail:"",
       totalErrorItems: "",
+      currentItemIndex: 0,
     }
   }
 
   import = async () =>{
     try{
+      this.importedItems = []
+      this.importedItemsIndices = []
       this.popupWait?.setPopupVisible(true);
       var inputList = [];
       var inputType = "";
@@ -76,6 +84,8 @@ class CatalogPage extends Component {
                 this.totalSuccess--;
               } else {
                 checkOff(global.dataLoadedAll[i][a]["checkListKey"], false, "", "", false, false);
+                this.importedItems.push(global.dataLoadedAll[i][a])
+                this.importedItemsIndices.push(a)
               }
               break;
             } else {
@@ -101,6 +111,11 @@ class CatalogPage extends Component {
         totalSuccess: this.totalSuccess,
         totalErrorItems: totalErrorItems.join("\n")
       })
+      if(this.selectVariations){
+        this.setState({currentItemIndex:0, currentItemVariation: this.importedItems[0]})
+        this.popupSelectVariations?.setPopupVisible(true);
+        this.nextVariationsButton()
+      }
     } catch(err){
       this.setState({
         method: attemptToTranslate("Attempted:") + "\n"+ this.method + "\n"+attemptToTranslate("There was an error, please check the link and try again...") +"\n\n" + err + "\n",
@@ -108,7 +123,26 @@ class CatalogPage extends Component {
         totalSuccess: 0
       })
     }
-    
+  }
+
+  nextVariationsButton = () => {
+    if(this.state.currentItemIndex+1 >= this.importedItems.length){
+      this.popupSelectVariations?.setPopupVisible(false)
+    } else {
+      let amountToSkip = 0
+      for(let index = this.state.currentItemIndex+1; index < this.importedItems.length; index++){
+        const item = this.importedItems[index]
+        if((item.hasOwnProperty("Variation") && item["Variation"]!=="NA") || item.hasOwnProperty("Pattern") && item["Pattern"]!=="NA"){
+          break
+        }
+        amountToSkip++
+      }
+      if(this.state.currentItemIndex+1+amountToSkip >= this.importedItems.length){
+        this.popupSelectVariations?.setPopupVisible(false)
+      } else {
+        this.setState({currentItemVariation:this.importedItems[this.state.currentItemIndex+1+amountToSkip], currentItemIndex:this.state.currentItemIndex+=1+amountToSkip})
+      }
+    }
   }
 
 
@@ -148,6 +182,8 @@ class CatalogPage extends Component {
             multiline={true}
           />
           <View style={{height: 45}}/>
+          <IncludeSwitch header={"Select Variations"} text={"Open a popup to select variations of the item when importing. Only the items with variations will create a popup."} defaultValue={this.selectVariations} toggleValue={()=>{this.selectVariations = !this.selectVariations}}/>
+          <View style={{height: 5}}/>
           <IncludeSwitch header={"Include Villagers"} text={"Include villagers when importing items. Some villagers have the same name as items."} defaultValue={this.includeVillagers} toggleValue={()=>{this.includeVillagers = !this.includeVillagers}}/>
           <View style={{height: 5}}/>
           <IncludeSwitch header={"Include Recipes"} text={"Include recipes when importing items. Recipes and the item counterpart have the same name."} defaultValue={this.includeRecipes} toggleValue={()=>{this.includeRecipes = !this.includeRecipes}}/>
@@ -170,12 +206,90 @@ class CatalogPage extends Component {
           textLower={"Please wait"}
           loading
         />
+        <PopupInfoCustom ref={(popup) => this.popupSelectVariations = popup} buttonDisabled noDismiss>
+          <TextFont bold translate={false} style={{color:colors.textBlack[global.darkMode], fontSize: 25, textAlign:"center", marginBottom: 0}}>{this.state.currentItemVariation!==undefined ? capitalize(this.state.currentItemVariation["NameLanguage"]) : ""}</TextFont>
+          <TextFont translate={true} style={{color:colors.textBlack[global.darkMode], fontSize: 14, textAlign:"center", marginBottom: 5}}>{"Select the variations you want to check off. The main item has already been marked as collected."}</TextFont>
+          <View style={{flexWrap: 'wrap', flexDirection:"row",justifyContent:"center"}}>
+            {
+              getVariations(this.state.currentItemVariation!==undefined?this.state.currentItemVariation["Name"]:"", global.dataLoadedAll, this.state.currentItemVariation!==undefined?this.state.currentItemVariation["checkListKey"]:"", this.importedItemsIndices[this.state.currentItemIndex]!==undefined ? this.importedItemsIndices[this.state.currentItemIndex]:0).map((item, index)=>{
+                return <VariationItemCatalog index={index} key={item["Unique Entry ID"]!==undefined?item["Unique Entry ID"]:itemImage} item={item}/>
+              })
+            }
+          </View>
+          <View style={{display:"flex", flexDirection:"row", justifyContent:"center"}}>
+            <ButtonComponent
+              text={"Done"}
+              color={colors.okButton[global.darkMode]}
+              vibrate={5}
+              onPress={() => {
+                this.popupSelectVariations?.setPopupVisible(false)
+            }}/>
+            <ButtonComponent
+              text={"Next"}
+              color={colors.okButton3[global.darkMode]}
+              vibrate={5}
+              onPress={() => {
+                this.nextVariationsButton()
+            }}/>
+          </View>
+        </PopupInfoCustom>
      </View>
     )
   }
 }
 export default CatalogPage;
 
+
+export class VariationItemCatalog extends Component{
+  constructor(props) {
+    super(props);
+    this.extraIndex = this.props.index===0 ? "0":"";
+    this.state = {
+      checked: global.collectionListIndexed[this.props.item["checkListKey"]+this.extraIndex]===true,
+    }
+  }
+  componentDidUpdate(prevProps){
+    if(prevProps!==this.props){
+      if(this.props.item.checkListKey+this.extraIndex === this.props.updateKey){
+        this.setState({
+          checked: !this.props.updateChecked,
+        })
+      }
+    }
+  }
+  render(){
+    var item=this.props.item;
+    var dataSet=this.props.dataSet;
+    var itemImage = item["Image"]
+    if(itemImage===undefined){
+      itemImage = item["Closet Image"]
+    }
+    if(itemImage===undefined){
+      return <></>
+    }
+    return(
+      <TouchableOpacity 
+        onPress={()=>{ 
+          checkOff(item.checkListKey, this.state.checked, "", this.extraIndex); 
+          this.setState({checked: !this.state.checked})
+        }}>
+        <View style={[{borderWidth: 2, borderColor: this.state.checked ? colors.checkGreen[global.darkMode] : colors.eventBackground[global.darkMode], marginHorizontal:3, marginVertical: 2, padding: 5, borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
+          {itemImage!==undefined&&itemImage.startsWith("http")?
+          <FastImage
+            style={{height: getSettingsString("settingsLargerItemPreviews")==="false"?53:70, width: getSettingsString("settingsLargerItemPreviews")==="false"?53:70, resizeMode:'contain',}}
+            source={{
+              uri: itemImage,
+            }}
+            cacheKey={itemImage}
+          />:<Image
+            style={{height: getSettingsString("settingsLargerItemPreviews")==="false"?53:70, width: getSettingsString("settingsLargerItemPreviews")==="false"?53:70, resizeMode:'contain',}}
+            source={getPhoto(itemImage!==undefined?itemImage.toString().toLowerCase():"")}
+          />}
+        </View>
+      </TouchableOpacity>
+    )
+  }
+}
 
 class IncludeSwitch extends Component{
   constructor(props){

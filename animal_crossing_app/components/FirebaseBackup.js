@@ -220,7 +220,7 @@ export default class FirebaseBackup extends Component {
       />
       <TextInput
         allowFontScaling={false}
-        style={{fontSize: 18, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.white[global.darkMode], padding: 15, borderRadius: 5, marginHorizontal:30}}
+        style={{borderRadius: 10, paddingVertical: 10, paddingHorizontal: 20, marginHorizontal: 20, fontSize: 18, backgroundColor:colors.white[global.darkMode], color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
         onChangeText={(text) => {AsyncStorage.setItem("loginEmail", text.replace(/ /g, "")); this.setState({email:text.replace(/ /g, "")})}}
         placeholder={attemptToTranslate("Email")}
         placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
@@ -232,8 +232,7 @@ export default class FirebaseBackup extends Component {
       <View style={{height: 10}}/>
       <TextInput
         allowFontScaling={false}
-        style={{fontSize: 18, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.white[global.darkMode], padding: 15, borderRadius: 5, marginHorizontal:30}}
-        onChangeText={(text) => {AsyncStorage.setItem("loginPassword", text); this.setState({password:text})}}
+        style={{borderRadius: 10, paddingVertical: 10, paddingHorizontal: 20, marginHorizontal: 20, fontSize: 18, backgroundColor:colors.white[global.darkMode], color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}        onChangeText={(text) => {AsyncStorage.setItem("loginPassword", text); this.setState({password:text})}}
         placeholder={attemptToTranslate("Password")}
         placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
         autoCorrect={false}

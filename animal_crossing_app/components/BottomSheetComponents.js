@@ -550,7 +550,7 @@ export function howManyVariationsChecked(allVariations){
   return totalChecked;
 }
 
-class VariationItem extends Component{
+export class VariationItem extends Component{
   constructor(props) {
     super(props);
     this.extraIndex = this.props.index===0 ? "0":"";
