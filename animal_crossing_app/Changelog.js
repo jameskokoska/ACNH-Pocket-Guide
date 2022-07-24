@@ -4,7 +4,11 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added ability to mass check off items with variations\nTap the 3 dot menu in the top right corner of the header of any list page for options
 -Select and import item variations on catalog page
+-More ToDo list icons
+-Bug fixes with catalog scanning page
+-Other UI improvements
 -
 -Fixed missing Amiibo images
 -

@@ -168,6 +168,8 @@ export const taskImages = [
       "weather.png",
       "recycle.png",
       "dice.png",
+      "envelope.png",
+      "mailbox.png",
     ];
 
 class PopupAddTask extends Component {

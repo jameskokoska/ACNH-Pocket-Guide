@@ -11,6 +11,7 @@ import Popup, { PopupInfoCustom } from '../components/Popup';
 import ToggleSwitch from 'toggle-switch-react-native';
 import FastImage from '../components/FastImage';
 import { getVariations, VariationItem, Variations } from '../components/BottomSheetComponents';
+import { getPhoto } from '../components/GetPhoto';
 
 
 class CatalogPage extends Component {
@@ -112,9 +113,9 @@ class CatalogPage extends Component {
         totalErrorItems: totalErrorItems.join("\n")
       })
       if(this.selectVariations){
-        this.setState({currentItemIndex:0, currentItemVariation: this.importedItems[0]})
+        this.setState({currentItemIndex:-1, currentItemVariation: this.importedItems[0]})
         this.popupSelectVariations?.setPopupVisible(true);
-        this.nextVariationsButton()
+        this.nextVariationsButton(true)
       }
     } catch(err){
       this.setState({
@@ -125,7 +126,7 @@ class CatalogPage extends Component {
     }
   }
 
-  nextVariationsButton = () => {
+  nextVariationsButton = (firstNext) => {
     if(this.state.currentItemIndex+1 >= this.importedItems.length){
       this.popupSelectVariations?.setPopupVisible(false)
     } else {
@@ -229,7 +230,7 @@ class CatalogPage extends Component {
               color={colors.okButton3[global.darkMode]}
               vibrate={5}
               onPress={() => {
-                this.nextVariationsButton()
+                this.nextVariationsButton(false)
             }}/>
           </View>
         </PopupInfoCustom>

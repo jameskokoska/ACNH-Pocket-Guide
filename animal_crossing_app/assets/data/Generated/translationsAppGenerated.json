@@ -15758,13 +15758,121 @@
       "English": "Planting pitfalls",
       "English (Europe)": "Planting pitfalls",
       "French": "Planter des pièges",
-      "French (US)": "Planter des pièges"
+      "French (US)": "Planter des pièges",
+      "German": "Fallstricke pflanzen",
+      "Spanish": "trampas de plantación",
+      "Spanish (US)": "trampas de plantación",
+      "Russian": "Подводные камни посадки",
+      "Italian": "Piantare insidie",
+      "Portuguese": "Armadilhas de plantio"
     },
     "watch out for pitfalls": {
       "English": "Watch out for pitfalls",
       "English (Europe)": "Planting pitfalls",
       "French": "Attention aux pièges",
-      "French (US)": "Attention aux pièges"
+      "French (US)": "Attention aux pièges",
+      "German": "Achten Sie auf Fallstricke",
+      "Spanish": "Cuidado con las trampas",
+      "Spanish (US)": "Cuidado con las trampas",
+      "Russian": "Остерегайтесь подводных камней",
+      "Italian": "Attenzione alle insidie",
+      "Portuguese": "Cuidado com as armadilhas"
+    },
+    "hemisphere changed to": {
+      "English": "Hemisphere changed to",
+      "English (Europe)": "Hemisphere changed to",
+      "French": "Hémisphère remplacé par",
+      "French (US)": "Hémisphère remplacé par",
+      "German": "Hemisphäre geändert zu",
+      "Spanish": "Hemisferio cambiado a",
+      "Spanish (US)": "Hemisferio cambiado a",
+      "Russian": "Полушарие изменилось на",
+      "Italian": "Emisfero cambiato in",
+      "Portuguese": "Hemisfério alterado para"
+    },
+    "select variations": {
+      "English": "Select Variations",
+      "English (Europe)": "Select Variations",
+      "French": "Sélectionnez des variantes",
+      "French (US)": "Sélectionnez des variantes",
+      "German": "Wählen Sie Variationen aus",
+      "Spanish": "Seleccionar variaciones",
+      "Spanish (US)": "Seleccionar variaciones",
+      "Russian": "Выберите варианты",
+      "Italian": "Seleziona Variazioni",
+      "Portuguese": "Selecionar variações"
+    },
+    "select the variations you want to check off. the main item has already been marked as collected.": {
+      "English": "Select the variations you want to check off. The main item has already been marked as collected.",
+      "English (Europe)": "Select the variations you want to check off. The main item has already been marked as collected.",
+      "French": "Sélectionnez les variantes que vous souhaitez cocher. L'élément principal a déjà été marqué comme collecté.",
+      "French (US)": "Sélectionnez les variantes que vous souhaitez cocher. L'élément principal a déjà été marqué comme collecté.",
+      "German": "Wählen Sie die Variationen aus, die Sie abhaken möchten. Der Hauptartikel wurde bereits als abgeholt markiert.",
+      "Spanish": "Seleccione las variaciones que desea marcar. El elemento principal ya se ha marcado como recopilado.",
+      "Spanish (US)": "Seleccione las variaciones que desea marcar. El elemento principal ya se ha marcado como recopilado.",
+      "Russian": "Выберите варианты, которые вы хотите отметить. Основной предмет уже помечен как собранный.",
+      "Italian": "Seleziona le varianti che vuoi spuntare. L'oggetto principale è già stato contrassegnato come ritirato.",
+      "Portuguese": "Selecione as variações que deseja marcar. O item principal já foi marcado como coletado."
+    },
+    "open a popup to select variations of the item when importing. only the items with variations will create a popup.": {
+      "English": "Open a popup to select variations of the item when importing. Only the items with variations will create a popup.",
+      "English (Europe)": "Open a popup to select variations of the item when importing. Only the items with variations will create a popup.",
+      "French": "Ouvre une fenêtre contextuelle pour sélectionner des variantes de l'élément lors de l'importation. Seuls les éléments avec des variantes créeront une fenêtre contextuelle.",
+      "French (US)": "Ouvre une fenêtre contextuelle pour sélectionner des variantes de l'élément lors de l'importation. Seuls les éléments avec des variantes créeront une fenêtre contextuelle.",
+      "German": "Öffnen Sie ein Popup, um Variationen des Artikels beim Importieren auszuwählen. Nur die Artikel mit Variationen erstellen ein Popup.",
+      "Spanish": "Abra una ventana emergente para seleccionar variaciones del artículo al importar. Solo los elementos con variaciones crearán una ventana emergente.",
+      "Spanish (US)": "Abra una ventana emergente para seleccionar variaciones del artículo al importar. Solo los elementos con variaciones crearán una ventana emergente.",
+      "Russian": "Откройте всплывающее окно для выбора вариантов элемента при импорте. Только элементы с вариациями будут создавать всплывающее окно.",
+      "Italian": "Aprire un popup per selezionare le varianti dell'elemento durante l'importazione. Solo gli elementi con variazioni creeranno un popup.",
+      "Portuguese": "Abra um pop-up para selecionar variações do item ao importar. Apenas os itens com variações criarão um pop-up."
+    },
+    "check all? and variations": {
+      "English": "Check All? and variations",
+      "English (Europe)": "Check All? and variations",
+      "French": "Vérifie tout? et variantes",
+      "French (US)": "Vérifie tout? et variantes",
+      "German": "Alle überprüfen? und Variationen",
+      "Spanish": "¿Comprobar todo? y variaciones",
+      "Spanish (US)": "¿Comprobar todo? y variaciones",
+      "Russian": "Проверить все? и вариации",
+      "Italian": "Seleziona tutto? e variazioni",
+      "Portuguese": "Verificar tudo? e variações"
+    },
+    "check all the items currently listed? and variations": {
+      "English": "Check all the items currently listed? and variations",
+      "English (Europe)": "Check all the items currently listed? and variations",
+      "French": "Vérifier tous les articles actuellement répertoriés ? et variantes",
+      "French (US)": "Vérifier tous les articles actuellement répertoriés ? et variantes",
+      "German": "Alle derzeit aufgelisteten Artikel überprüfen? und Variationen",
+      "Spanish": "¿Marcar todos los elementos enumerados actualmente? y variaciones",
+      "Spanish (US)": "¿Marcar todos los elementos enumerados actualmente? y variaciones",
+      "Russian": "Проверить все элементы, перечисленные в настоящее время? и вариации",
+      "Italian": "Controllare tutti gli articoli attualmente elencati? e variazioni",
+      "Portuguese": "Verificar todos os itens listados atualmente? e variações"
+    },
+    "uncheck all? and variations": {
+      "English": "Uncheck All? and variations",
+      "English (Europe)": "Uncheck All? and variations",
+      "French": "Décocher tout? et variantes",
+      "French (US)": "Décocher tout? et variantes",
+      "German": "Alle deaktivieren? und Variationen",
+      "Spanish": "¿Desmarcar todo? y variaciones",
+      "Spanish (US)": "¿Desmarcar todo? y variaciones",
+      "Russian": "Снять все? и вариации",
+      "Italian": "Deseleziona tutto? e variazioni",
+      "Portuguese": "Desmarcar todos? e variações"
+    },
+    "uncheck all the items currently listed? and variations": {
+      "English": "Uncheck all the items currently listed? and variations",
+      "English (Europe)": "Uncheck all the items currently listed? and variations",
+      "French": "Décochez tous les éléments actuellement répertoriés ? et variantes",
+      "French (US)": "Décochez tous les éléments actuellement répertoriés ? et variantes",
+      "German": "Deaktivieren Sie alle derzeit aufgelisteten Elemente? und Variationen",
+      "Spanish": "¿Desmarcar todos los elementos enumerados actualmente? y variaciones",
+      "Spanish (US)": "¿Desmarcar todos los elementos enumerados actualmente? y variaciones",
+      "Russian": "Снять флажки со всех элементов, перечисленных в настоящее время? и вариации",
+      "Italian": "Deselezionare tutti gli articoli attualmente elencati? e variazioni",
+      "Portuguese": "Desmarque todos os itens listados atualmente? e variações"
     }
   },
   "Sources": {

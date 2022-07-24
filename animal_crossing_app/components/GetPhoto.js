@@ -316,6 +316,10 @@ export function getPhoto(name, fallback="", returnFalse=false){
       return require("../assets/icons/rover.png");
     case "gulliver.png":
       return require("../assets/icons/gulliver.png");
+    case "envelope.png":
+      return require("../assets/icons/envelope.png");
+    case "mailbox.png":
+      return require("../assets/icons/mailbox.png");
   }
   if(name.includes("bamboo")){
     return require("../assets/icons/bamboo.png");
