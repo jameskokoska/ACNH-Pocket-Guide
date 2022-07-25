@@ -170,6 +170,12 @@ export const taskImages = [
       "dice.png",
       "envelope.png",
       "mailbox.png",
+      "radio.png",
+      "homeIcon.png",
+      "homeVillager.png",
+      "fence.png",
+      "campingTent.png",
+      "bonfire.png",
     ];
 
 class PopupAddTask extends Component {

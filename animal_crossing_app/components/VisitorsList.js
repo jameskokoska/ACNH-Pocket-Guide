@@ -32,6 +32,8 @@ export default class VisitorList extends Component {
       {name: "Flick", picture:require("../assets/icons/flick.png")},
       {name: "Gulliver", picture:require("../assets/icons/gulliver.png")},
       {name: "Gullivarrr", picture:require("../assets/icons/gulivarrr.png")},
+      {name: "Daisy Mae", picture:require("../assets/icons/daisymae.png")},
+      {name: "K.K.", picture:require("../assets/icons/kk.png")},
     ]
     this.days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday', 'Sunday', 'None'];
     this.currentMondayIndex = getMonday().toISOString().split('T')[0];
