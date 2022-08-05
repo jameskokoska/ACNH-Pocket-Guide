@@ -64,9 +64,9 @@ const Header = (props) => {
           width={120}
           items={[
             {label:"Check all", value:"Check all", highlighted: false},
-            {label:"Check all (and variations)", value:"Check all (and variations)", highlighted: false},
+            ...(props.checkAllItemsListedWithVariations ?  [{label:"Check all (and variations)", value:"Check all (and variations)", highlighted: false}] : []),
             {label:"Uncheck all", value:"Uncheck all", highlighted: false},
-            {label:"Uncheck all (and variations)", value:"Uncheck all (and variations)", highlighted: false},
+            ...(props.unCheckAllItemsListedWithVariations ?  [{label:"Uncheck all (and variations)", value:"Uncheck all (and variations)", highlighted: false}] : []),
             {label:"Invert check marks", value:"Invert check", highlighted: false},
             ...museumOptions,
             ...hemisphereToggle

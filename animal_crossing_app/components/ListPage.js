@@ -1159,6 +1159,14 @@ function ListPage(props){
                   <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Please be patient</TextFont>
                 <View style={{height:30}}/>
               </>
+            }else if(searchFilters.length>0){
+              return <>
+                <View style={{height:100}}/>
+                  <TextFont bold={false} style={{fontSize: 18, textAlign:"center", color: colors.textBlack[global.darkMode], marginHorizontal: 20}}>You have filters enabled.</TextFont>
+                  <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode], marginHorizontal: 20, marginTop:10}}>{"If an item you are looking for is not listed, please configure your filters by tapping the icon in the right of the searchbar."}</TextFont>
+                  <TouchableOpacity onPress={()=>{setSearchFilters([])}} style={{padding:20}}><BlueText>Tap here to clear filters temporarily</BlueText></TouchableOpacity>
+                <View style={{height:30}}/>
+              </>
             }else if (props.title === "Villagers" && data.length===0 && (global.language==="English" || global.language==="English (Europe)")){
               return <>
                 <View style={{height:100}}/>

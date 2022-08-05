@@ -4,7 +4,7 @@ import {removeAccents,getStorage, findObject, attemptToTranslateItem, getSetting
 import colors from '../Colors'
 import {attemptToTranslateAchievement} from "../LoadJsonData"
 import FastImage from "../components/FastImage"
-import {SubHeader, Paragraph} from "../components/Formattings"
+import {SubHeader, Paragraph, BlueText} from "../components/Formattings"
 import Header from "../components/Header"
 import * as RootNavigation from '../RootNavigation.js';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -253,7 +253,12 @@ export default class ParadisePlanningPage extends Component {
           keyExtractor={(item, index) => `list-item-${index}-${item["Name"]}`}
           contentContainerStyle={{paddingBottom:Dimensions.get('window').height/3}}
           ListFooterComponent={()=>{
-            return <TextFont style={{marginTop:10, marginBottom:10, textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{this.state.data.length+" "+(this.state.data.length!==1?attemptToTranslate("entries."):attemptToTranslate("entry."))}</TextFont>
+            return this.state.data.length <= 0 && (global.language==="English" || global.language==="English (Europe)") ? <><View style={{height:100}}/>
+              <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode], marginHorizontal: 20}}>Different regions have different Villager names.</TextFont>
+              <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode], marginHorizontal: 20, marginTop:10}}>{"If a Villager is not listed, try changing the Language to " + (global.language==="English" ? "English (Europe)." : "English.")}</TextFont>
+              <TouchableOpacity onPress={()=>{this.props.setPage(13)}} style={{padding:20}}><BlueText>Tap here to change Language in Settings</BlueText></TouchableOpacity>
+            <View style={{height:30}}/></> : 
+            <TextFont style={{marginTop:10, marginBottom:10, textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{this.state.data.length+" "+(this.state.data.length!==1?attemptToTranslate("entries."):attemptToTranslate("entry."))}</TextFont>
           }}
         />
       </FadeInOut>

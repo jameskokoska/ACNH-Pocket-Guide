@@ -809,6 +809,7 @@
       "Spanish (US)": "Desmarcar todo",
       "Russian": "Снять все",
       "Italian": "Deseleziona tutto",
+      "Dutch": "Schakel alles uit",
       "Portuguese": "Desmarcar todos"
     },
     "edit list": {
@@ -14899,13 +14900,13 @@
       "German": "Es scheint, als wäre die App gerade abgestürzt.",
       "Spanish": "Parece que la aplicación acaba de bloquearse.",
       "Spanish (US)": "Parece que la aplicación acaba de bloquearse.",
-      "Russian": "Sembra che l'app si sia appena arrestata in modo anomalo.",
-      "Italian": "Het lijkt erop dat de app zojuist is gecrasht.",
-      "Dutch": "该应用程序似乎刚刚崩溃。",
-      "Chinese": "該應用程序似乎剛剛崩潰。",
-      "Chinese (Traditional)": "アプリがクラッシュしたようです。",
-      "Japanese": "방금 앱이 다운된 것 같습니다.",
-      "Korean": "Похоже, приложение только что вышло из строя.",
+      "Russian": "Похоже, приложение только что вышло из строя.",
+      "Italian": "Sembra che l'app si sia appena arrestata in modo anomalo.",
+      "Dutch": "Het lijkt erop dat de app zojuist is gecrasht.",
+      "Chinese": "该应用程序似乎刚刚崩溃。",
+      "Chinese (Traditional)": "該應用程序似乎剛剛崩潰。",
+      "Japanese": "アプリがクラッシュしたようです。",
+      "Korean": "방금 앱이 다운된 것 같습니다.",
       "Portuguese": "Parece que o app acabou de travar."
     },
     "if the app keeps crashing upon reload, please make a backup of your data, reinstall the application, and restore in the [backup + restore] page by selecting [import data] under files.": {
@@ -14916,13 +14917,13 @@
       "German": "Wenn die App beim Neuladen weiterhin abstürzt, erstellen Sie bitte eine Sicherungskopie Ihrer Daten, installieren Sie die Anwendung neu und stellen Sie sie auf der Seite [Sicherung + Wiederherstellung] wieder her, indem Sie unter Dateien [Daten importieren] auswählen.",
       "Spanish": "Si la aplicación sigue fallando al volver a cargar, haga una copia de seguridad de sus datos, reinstale la aplicación y restaure en la página [Copia de seguridad + Restaurar] seleccionando [Importar datos] en Archivos.",
       "Spanish (US)": "Si la aplicación sigue fallando al volver a cargar, haga una copia de seguridad de sus datos, reinstale la aplicación y restaure en la página [Copia de seguridad + Restaurar] seleccionando [Importar datos] en Archivos.",
-      "Russian": "Se l'app continua a bloccarsi durante il ricaricamento, eseguire un backup dei dati, reinstallare l'applicazione e ripristinare nella pagina [Backup + Ripristino] selezionando [Importa dati] in File.",
-      "Italian": "Als de app blijft crashen bij het opnieuw laden, maak dan een back-up van uw gegevens, installeer de toepassing opnieuw en herstel op de pagina [Back-up + herstellen] door [Gegevens importeren] te selecteren onder Bestanden.",
-      "Dutch": "如果重新加载时应用程序不断崩溃，请备份您的数据，重新安装应用程序，然后在[备份+恢复]页面选择文件下的[导入数据]进行恢复。",
-      "Chinese": "如果重新加載時應用程序不斷崩潰，請備份您的數據，重新安裝應用程序，然後在[備份+恢復]頁面選擇文件下的[導入數據]進行恢復。",
-      "Chinese (Traditional)": "リロード時にアプリがクラッシュし続ける場合は、データのバックアップを作成し、アプリケーションを再インストールして、[ファイル]の下の[データのインポート]を選択して[バックアップ+復元]ページで復元してください。",
-      "Japanese": "앱을 새로고침해도 계속 충돌이 나면 데이터를 백업하고, 애플리케이션을 다시 설치한 후, 파일에서 [데이터 가져오기]를 선택하여 [백업 + 복원] 페이지에서 복원하십시오.",
-      "Korean": "Если приложение продолжает давать сбой при перезагрузке, сделайте резервную копию своих данных, переустановите приложение и восстановите его на странице [Резервное копирование + восстановление], выбрав [Импорт данных] в разделе «Файлы».",
+      "Russian": "Если приложение продолжает давать сбой при перезагрузке, сделайте резервную копию своих данных, переустановите приложение и восстановите его на странице [Резервное копирование + восстановление], выбрав [Импорт данных] в разделе «Файлы».",
+      "Italian": "Se l'app continua a bloccarsi durante il ricaricamento, eseguire un backup dei dati, reinstallare l'applicazione e ripristinare nella pagina [Backup + Ripristino] selezionando [Importa dati] in File.",
+      "Dutch": "Als de app blijft crashen bij het opnieuw laden, maak dan een back-up van uw gegevens, installeer de toepassing opnieuw en herstel op de pagina [Back-up + herstellen] door [Gegevens importeren] te selecteren onder Bestanden.",
+      "Chinese": "如果重新加载时应用程序不断崩溃，请备份您的数据，重新安装应用程序，然后在[备份+恢复]页面选择文件下的[导入数据]进行恢复。",
+      "Chinese (Traditional)": "如果重新加載時應用程序不斷崩潰，請備份您的數據，重新安裝應用程序，然後在[備份+恢復]頁面選擇文件下的[導入數據]進行恢復。",
+      "Japanese": "リロード時にアプリがクラッシュし続ける場合は、データのバックアップを作成し、アプリケーションを再インストールして、[ファイル]の下の[データのインポート]を選択して[バックアップ+復元]ページで復元してください。",
+      "Korean": "앱을 새로고침해도 계속 충돌이 나면 데이터를 백업하고, 애플리케이션을 다시 설치한 후, 파일에서 [데이터 가져오기]를 선택하여 [백업 + 복원] 페이지에서 복원하십시오.",
       "Portuguese": "Se o aplicativo continuar travando ao recarregar, faça um backup de seus dados, reinstale o aplicativo e restaure na página [Backup + Restaurar] selecionando [Importar dados] em Arquivos."
     },
     "if you have any questions please email": {
@@ -14933,13 +14934,13 @@
       "German": "Bei Fragen bitte mailen",
       "Spanish": "Si tiene alguna pregunta, envíe un correo electrónico",
       "Spanish (US)": "Si tiene alguna pregunta, envíe un correo electrónico",
-      "Russian": "In caso di domande, inviare un'e-mail",
-      "Italian": "Als je vragen hebt, stuur dan een e-mail",
-      "Dutch": "如果您有任何问题，请发送电子邮件",
-      "Chinese": "如果您有任何問題，請發送電子郵件",
-      "Chinese (Traditional)": "ご不明な点がございましたらメールでお問い合わせください",
-      "Japanese": "질문이 있으시면 이메일을 보내주십시오",
-      "Korean": "Если у вас есть какие-либо вопросы, пожалуйста, напишите",
+      "Russian": "Если у вас есть какие-либо вопросы, пожалуйста, напишите",
+      "Italian": "In caso di domande, inviare un'e-mail",
+      "Dutch": "Als je vragen hebt, stuur dan een e-mail",
+      "Chinese": "如果您有任何问题，请发送电子邮件",
+      "Chinese (Traditional)": "如果您有任何問題，請發送電子郵件",
+      "Japanese": "ご不明な点がございましたらメールでお問い合わせください",
+      "Korean": "질문이 있으시면 이메일을 보내주십시오",
       "Portuguese": "Se você tiver alguma dúvida, envie um e-mail"
     },
     "please report the error so i can get it fixed.": {
@@ -14950,13 +14951,13 @@
       "German": "Bitte melden Sie den Fehler, damit ich ihn beheben kann.",
       "Spanish": "Por favor, informe el error para que pueda solucionarlo.",
       "Spanish (US)": "Por favor, informe el error para que pueda solucionarlo.",
-      "Russian": "Si prega di segnalare l'errore in modo che possa risolverlo.",
-      "Italian": "Rapporteer de fout zodat ik het kan herstellen.",
-      "Dutch": "请报告错误，以便我修复它。",
-      "Chinese": "請報告錯誤，以便我修復它。",
-      "Chinese (Traditional)": "エラーを報告して、修正できるようにしてください。",
-      "Japanese": "오류를 보고하여 수정할 수 있도록 하십시오.",
-      "Korean": "Пожалуйста, сообщите об ошибке, чтобы я мог ее исправить.",
+      "Russian": "Пожалуйста, сообщите об ошибке, чтобы я мог ее исправить.",
+      "Italian": "Si prega di segnalare l'errore in modo che possa risolverlo.",
+      "Dutch": "Rapporteer de fout zodat ik het kan herstellen.",
+      "Chinese": "请报告错误，以便我修复它。",
+      "Chinese (Traditional)": "請報告錯誤，以便我修復它。",
+      "Japanese": "エラーを報告して、修正できるようにしてください。",
+      "Korean": "오류를 보고하여 수정할 수 있도록 하십시오.",
       "Portuguese": "Por favor, informe o erro para que eu possa corrigi-lo."
     },
     "report error to developer": {
@@ -14967,13 +14968,13 @@
       "German": "Fehler dem Entwickler melden",
       "Spanish": "Informar error al desarrollador",
       "Spanish (US)": "Informar error al desarrollador",
-      "Russian": "Segnala errore allo sviluppatore",
-      "Italian": "Rapporteer fout aan ontwikkelaar",
-      "Dutch": "向开发者报告错误",
-      "Chinese": "向開發者報告錯誤",
-      "Chinese (Traditional)": "開発者にエラーを報告する",
-      "Japanese": "개발자에게 오류 보고",
-      "Korean": "Сообщить об ошибке разработчику",
+      "Russian": "Сообщить об ошибке разработчику",
+      "Italian": "Segnala errore allo sviluppatore",
+      "Dutch": "Rapporteer fout aan ontwikkelaar",
+      "Chinese": "向开发者报告错误",
+      "Chinese (Traditional)": "向開發者報告錯誤",
+      "Japanese": "開発者にエラーを報告する",
+      "Korean": "개발자에게 오류 보고",
       "Portuguese": "Reportar erro ao desenvolvedor"
     },
     "export and backup data": {
@@ -14984,13 +14985,13 @@
       "German": "Daten exportieren und sichern",
       "Spanish": "Exportar y respaldar datos",
       "Spanish (US)": "Exportar y respaldar datos",
-      "Russian": "Esportazione e backup dei dati",
-      "Italian": "Gegevens exporteren en back-uppen",
-      "Dutch": "导出和备份数据",
-      "Chinese": "導出和備份數據",
-      "Chinese (Traditional)": "データのエクスポートとバックアップ",
-      "Japanese": "데이터 내보내기 및 백업",
-      "Korean": "Экспорт и резервное копирование данных",
+      "Russian": "Экспорт и резервное копирование данных",
+      "Italian": "Esportazione e backup dei dati",
+      "Dutch": "Gegevens exporteren en back-uppen",
+      "Chinese": "导出和备份数据",
+      "Chinese (Traditional)": "導出和備份數據",
+      "Japanese": "データのエクスポートとバックアップ",
+      "Korean": "데이터 내보내기 및 백업",
       "Portuguese": "Exportar e fazer backup de dados"
     },
     "load application": {
@@ -15001,13 +15002,13 @@
       "German": "Anwendung laden",
       "Spanish": "Cargar aplicación",
       "Spanish (US)": "Cargar aplicación",
-      "Russian": "Carica applicazione",
-      "Italian": "Toepassing laden",
-      "Dutch": "加载应用程序",
-      "Chinese": "加載應用程序",
-      "Chinese (Traditional)": "アプリケーションのロード",
-      "Japanese": "애플리케이션 로드",
-      "Korean": "Загрузить приложение",
+      "Russian": "Загрузить приложение",
+      "Italian": "Carica applicazione",
+      "Dutch": "Toepassing laden",
+      "Chinese": "加载应用程序",
+      "Chinese (Traditional)": "加載應用程序",
+      "Japanese": "アプリケーションのロード",
+      "Korean": "애플리케이션 로드",
       "Portuguese": "Carregar aplicativo"
     },
     "search for icon": {
@@ -15020,6 +15021,7 @@
       "Spanish (US)": "Buscar icono",
       "Russian": "Поиск значка",
       "Italian": "Cerca icona",
+      "Dutch": "Zoeken naar pictogram",
       "Portuguese": "Pesquisar ícone"
     },
     "show more": {
@@ -15032,6 +15034,7 @@
       "Spanish (US)": "Mostrar más",
       "Russian": "Показать больше",
       "Italian": "Mostra di più",
+      "Dutch": "Laat meer zien",
       "Portuguese": "Mostre mais"
     },
     "search for item": {
@@ -15044,6 +15047,7 @@
       "Spanish (US)": "Buscar artículo",
       "Russian": "Поиск товара",
       "Italian": "Cerca articolo",
+      "Dutch": "Zoeken naar artikel",
       "Portuguese": "Pesquisar item"
     },
     "please choose a different name and try again.": {
@@ -15056,6 +15060,7 @@
       "Spanish (US)": "Elija un nombre diferente y vuelva a intentarlo.",
       "Russian": "Выберите другое имя и повторите попытку.",
       "Italian": "Scegli un nome diverso e riprova.",
+      "Dutch": "Kies een andere naam en probeer het opnieuw.",
       "Portuguese": "Escolha um nome diferente e tente novamente."
     },
     "lists": {
@@ -15068,6 +15073,7 @@
       "Spanish (US)": "Liza",
       "Russian": "Списки",
       "Italian": "Elenchi",
+      "Dutch": "Lijsten",
       "Portuguese": "Listas"
     },
     "new list": {
@@ -15080,6 +15086,7 @@
       "Spanish (US)": "Lista nueva",
       "Russian": "Новый список",
       "Italian": "Nuova lista",
+      "Dutch": "Nieuwe lijst",
       "Portuguese": "Nova lista"
     },
     "the name cannot be changed.": {
@@ -15092,6 +15099,7 @@
       "Spanish (US)": "El nombre no se puede cambiar.",
       "Russian": "Имя нельзя изменить.",
       "Italian": "Il nome non può essere modificato.",
+      "Dutch": "De naam kan niet worden gewijzigd.",
       "Portuguese": "O nome não pode ser alterado."
     },
     "list name": {
@@ -15104,6 +15112,7 @@
       "Spanish (US)": "Lista de nombres",
       "Russian": "Имя списка",
       "Italian": "Lista nome",
+      "Dutch": "Lijstnaam",
       "Portuguese": "Lista de nomes"
     },
     "select a list": {
@@ -15116,6 +15125,7 @@
       "Spanish (US)": "Seleccione una lista",
       "Russian": "Выберите список",
       "Italian": "Seleziona un elenco",
+      "Dutch": "Selecteer een lijst",
       "Portuguese": "Selecione uma lista"
     },
     "custom lists": {
@@ -15128,6 +15138,7 @@
       "Spanish (US)": "Listas personalizadas",
       "Russian": "Пользовательские списки",
       "Italian": "Elenchi personalizzati",
+      "Dutch": "Aangepaste lijsten",
       "Portuguese": "Listas personalizadas"
     },
     "include villagers": {
@@ -15140,6 +15151,7 @@
       "Spanish (US)": "Incluir aldeanos",
       "Russian": "Включить жителей",
       "Italian": "Includi gli abitanti del villaggio",
+      "Dutch": "Inclusief dorpsbewoners",
       "Portuguese": "Incluir aldeões"
     },
     "include villagers when importing items. some villagers have the same name as items.": {
@@ -15152,6 +15164,7 @@
       "Spanish (US)": "Incluya a los aldeanos al importar artículos. Algunos aldeanos tienen el mismo nombre que los artículos.",
       "Russian": "Включайте жителей деревни при импорте предметов. Некоторые жители деревни имеют то же имя, что и предметы.",
       "Italian": "Includere gli abitanti del villaggio durante l'importazione di oggetti. Alcuni abitanti del villaggio hanno lo stesso nome degli oggetti.",
+      "Dutch": "Betrek dorpelingen bij het importeren van items. Sommige dorpelingen hebben dezelfde naam als items.",
       "Portuguese": "Inclua aldeões ao importar itens. Alguns aldeões têm o mesmo nome dos itens."
     },
     "include recipes": {
@@ -15164,6 +15177,7 @@
       "Spanish (US)": "Incluir Recetas",
       "Russian": "Включить рецепты",
       "Italian": "Include Ricette",
+      "Dutch": "Inclusief recepten",
       "Portuguese": "Incluir receitas"
     },
     "include recipes when importing items. recipes and the item counterpart have the same name.": {
@@ -15176,6 +15190,7 @@
       "Spanish (US)": "Incluya recetas al importar artículos. Las recetas y la contrapartida del artículo tienen el mismo nombre.",
       "Russian": "Включайте рецепты при импорте предметов. Рецепты и аналог предмета имеют одно и то же имя.",
       "Italian": "Includi le ricette durante l'importazione di elementi. Le ricette e la controparte dell'articolo hanno lo stesso nome.",
+      "Dutch": "Neem recepten op bij het importeren van artikelen. Recepten en de item-tegenhanger hebben dezelfde naam.",
       "Portuguese": "Inclua receitas ao importar itens. As receitas e a contrapartida do item têm o mesmo nome."
     },
     "made in canada": {
@@ -15188,6 +15203,7 @@
       "Spanish (US)": "Hecho en Canadá",
       "Russian": "Сделано в Канаде",
       "Italian": "Prodotto in Canada",
+      "Dutch": "Gemaakt in Canada",
       "Portuguese": "Feito no Canadá"
     },
     "tap here to add/remove villagers": {
@@ -15200,6 +15216,7 @@
       "Spanish (US)": "Toque aquí para agregar/eliminar aldeanos",
       "Russian": "Нажмите здесь, чтобы добавить/удалить жителей",
       "Italian": "Tocca qui per aggiungere/rimuovere gli abitanti del villaggio",
+      "Dutch": "Tik hier om dorpelingen toe te voegen/te verwijderen",
       "Portuguese": "Toque aqui para adicionar/remover aldeões"
     },
     "there is no special request for special npc characters.": {
@@ -15212,6 +15229,7 @@
       "Spanish (US)": "No hay una solicitud especial para personajes NPC especiales.",
       "Russian": "Специального запроса на специальные персонажи NPC нет.",
       "Italian": "Non ci sono richieste speciali per personaggi NPC speciali.",
+      "Dutch": "Er is geen speciaal verzoek voor speciale NPC-tekens.",
       "Portuguese": "Não há solicitação especial para personagens NPC especiais."
     },
     "special npc character": {
@@ -15224,6 +15242,7 @@
       "Spanish (US)": "Personaje NPC especial",
       "Russian": "Специальный персонаж NPC",
       "Italian": "Personaggio NPC speciale",
+      "Dutch": "Speciaal NPC-teken",
       "Portuguese": "Personagem NPC especial"
     },
     "check all": {
@@ -15236,6 +15255,7 @@
       "Spanish (US)": "Comprobar todo",
       "Russian": "Проверить все",
       "Italian": "Seleziona tutto",
+      "Dutch": "Controleer alles",
       "Portuguese": "Verificar tudo"
     },
     "invert check marks": {
@@ -15248,6 +15268,7 @@
       "Spanish (US)": "Invertir marcas de verificación",
       "Russian": "Инвертировать галочки",
       "Italian": "Inverti i segni di spunta",
+      "Dutch": "Vinkjes omkeren",
       "Portuguese": "Inverter marcas de verificação"
     },
     "check all?": {
@@ -15260,6 +15281,7 @@
       "Spanish (US)": "¿Comprobar todo?",
       "Russian": "Проверить все?",
       "Italian": "Seleziona tutto?",
+      "Dutch": "Alles controleren?",
       "Portuguese": "Verificar tudo?"
     },
     "uncheck all?": {
@@ -15272,6 +15294,7 @@
       "Spanish (US)": "¿Desmarcar todo?",
       "Russian": "Снять все?",
       "Italian": "Deseleziona tutto?",
+      "Dutch": "Alles uitvinken?",
       "Portuguese": "Desmarcar todos?"
     },
     "invert check marks?": {
@@ -15284,6 +15307,7 @@
       "Spanish (US)": "¿Invertir marcas de verificación?",
       "Russian": "Инвертировать галочки?",
       "Italian": "Invertire i segni di spunta?",
+      "Dutch": "Vinkjes omkeren?",
       "Portuguese": "Inverter marcas de verificação?"
     },
     "check all the items currently listed?": {
@@ -15296,6 +15320,7 @@
       "Spanish (US)": "¿Marcar todos los elementos enumerados actualmente?",
       "Russian": "Проверить все элементы, перечисленные в настоящее время?",
       "Italian": "Controllare tutti gli articoli attualmente elencati?",
+      "Dutch": "Alle items controleren die momenteel worden vermeld?",
       "Portuguese": "Verificar todos os itens listados atualmente?"
     },
     "uncheck all the items currently listed?": {
@@ -15308,6 +15333,7 @@
       "Spanish (US)": "¿Desmarcar todos los elementos enumerados actualmente?",
       "Russian": "Снять флажки со всех элементов, перечисленных в настоящее время?",
       "Italian": "Deselezionare tutti gli articoli attualmente elencati?",
+      "Dutch": "Alle items die momenteel worden vermeld uitvinken?",
       "Portuguese": "Desmarque todos os itens listados atualmente?"
     },
     "invert the check mark of all the items currently listed?": {
@@ -15320,6 +15346,7 @@
       "Spanish (US)": "¿Invertir la marca de verificación de todos los elementos enumerados actualmente?",
       "Russian": "Инвертировать галочку всех элементов, перечисленных в настоящее время?",
       "Italian": "Invertire il segno di spunta di tutti gli articoli attualmente elencati?",
+      "Dutch": "Het vinkje van alle items die momenteel worden vermeld omkeren?",
       "Portuguese": "Inverter a marca de verificação de todos os itens listados atualmente?"
     },
     "invert checks": {
@@ -15332,6 +15359,7 @@
       "Spanish (US)": "Invertir cheques",
       "Russian": "Инвертировать чеки",
       "Italian": "Inverti i controlli",
+      "Dutch": "Cheques omkeren",
       "Portuguese": "Inverter cheques"
     },
     "add all to museum?": {
@@ -15344,6 +15372,7 @@
       "Spanish (US)": "¿Agregar todo al museo?",
       "Russian": "Добавить все в музей?",
       "Italian": "Aggiungere tutto al museo?",
+      "Dutch": "Alles toevoegen aan Museum?",
       "Portuguese": "Adicionar tudo ao museu?"
     },
     "remove all from museum?": {
@@ -15356,6 +15385,7 @@
       "Spanish (US)": "¿Quitar todo del museo?",
       "Russian": "Удалить все из музея?",
       "Italian": "Rimuovere tutto dal museo?",
+      "Dutch": "Alles uit het museum verwijderen?",
       "Portuguese": "Remover tudo do museu?"
     },
     "add all items currently listed to the museum?": {
@@ -15368,6 +15398,7 @@
       "Spanish (US)": "¿Agregar todos los elementos actualmente enumerados al museo?",
       "Russian": "Добавить все предметы, перечисленные в настоящее время в музее?",
       "Italian": "Aggiungere tutti gli oggetti attualmente elencati al museo?",
+      "Dutch": "Alle items die momenteel in het museum worden vermeld toevoegen?",
       "Portuguese": "Adicionar todos os itens atualmente listados ao museu?"
     },
     "remove all items currently listed from the museum?": {
@@ -15380,6 +15411,7 @@
       "Spanish (US)": "¿Eliminar todos los elementos enumerados actualmente del museo?",
       "Russian": "Удалить из музея все предметы, перечисленные в настоящее время?",
       "Italian": "Rimuovere tutti gli oggetti attualmente elencati dal museo?",
+      "Dutch": "Alle items die momenteel in het museum worden vermeld verwijderen?",
       "Portuguese": "Remover todos os itens atualmente listados do museu?"
     },
     "add all": {
@@ -15392,6 +15424,7 @@
       "Spanish (US)": "Añadir todo",
       "Russian": "Добавить все",
       "Italian": "Aggiungi tutto",
+      "Dutch": "Voeg alles toe",
       "Portuguese": "Adicionar tudo"
     },
     "remove all": {
@@ -15404,6 +15437,7 @@
       "Spanish (US)": "Eliminar todo",
       "Russian": "Убрать все",
       "Italian": "Rimuovi tutto",
+      "Dutch": "Verwijder alles",
       "Portuguese": "Deletar tudo"
     },
     "add all to museum": {
@@ -15416,6 +15450,7 @@
       "Spanish (US)": "Agregar todo al museo",
       "Russian": "Добавить все в музей",
       "Italian": "Aggiungi tutto al museo",
+      "Dutch": "Alles toevoegen aan museum",
       "Portuguese": "Adicionar tudo ao museu"
     },
     "remove all from museum": {
@@ -15428,6 +15463,7 @@
       "Spanish (US)": "Eliminar todo del museo",
       "Russian": "Удалить все из музея",
       "Italian": "Rimuovi tutto dal museo",
+      "Dutch": "Alles uit museum verwijderen",
       "Portuguese": "Remover tudo do museu"
     },
     "calendar season": {
@@ -15440,6 +15476,7 @@
       "Spanish (US)": "Calendario Temporada",
       "Russian": "Календарный сезон",
       "Italian": "Stagione del calendario",
+      "Dutch": "Kalenderseizoen",
       "Portuguese": "Temporada do calendário"
     },
     "basegame event": {
@@ -15452,6 +15489,7 @@
       "Spanish (US)": "Evento del juego base",
       "Russian": "Событие основной игры",
       "Italian": "Evento di base",
+      "Dutch": "Basisspel Evenement",
       "Portuguese": "Evento do jogo base"
     },
     "weeks before": {
@@ -15464,6 +15502,7 @@
       "Spanish (US)": "semanas antes",
       "Russian": "За несколько недель до",
       "Italian": "Settimane prima",
+      "Dutch": "Weken Voor",
       "Portuguese": "Semanas antes"
     },
     "days before": {
@@ -15476,6 +15515,7 @@
       "Spanish (US)": "Días antes",
       "Russian": "За несколько дней до",
       "Italian": "Giorni prima",
+      "Dutch": "Dagen voor",
       "Portuguese": "Dias antes"
     },
     "spring": {
@@ -15488,6 +15528,7 @@
       "Spanish (US)": "Primavera",
       "Russian": "Весна",
       "Italian": "Primavera",
+      "Dutch": "Lente",
       "Portuguese": "Mola"
     },
     "summer": {
@@ -15500,6 +15541,7 @@
       "Spanish (US)": "El verano",
       "Russian": "Лето",
       "Italian": "Estate",
+      "Dutch": "Zomer",
       "Portuguese": "Verão"
     },
     "fall": {
@@ -15512,6 +15554,7 @@
       "Spanish (US)": "Otoño",
       "Russian": "Падать",
       "Italian": "Cade",
+      "Dutch": "Val",
       "Portuguese": "Cair"
     },
     "winter": {
@@ -15524,6 +15567,7 @@
       "Spanish (US)": "Invierno",
       "Russian": "Зима",
       "Italian": "Inverno",
+      "Dutch": "Winter",
       "Portuguese": "Inverno"
     },
     "add new tasks to top": {
@@ -15536,6 +15580,7 @@
       "Spanish (US)": "Agregar nuevas tareas al principio",
       "Russian": "Добавить новые задачи вверх",
       "Italian": "Aggiungi nuove attività in cima",
+      "Dutch": "Nieuwe taken bovenaan toevoegen",
       "Portuguese": "Adicionar novas tarefas ao topo"
     },
     "add new tasks to bottom": {
@@ -15548,6 +15593,7 @@
       "Spanish (US)": "Agregar nuevas tareas al final",
       "Russian": "Добавить новые задачи внизу",
       "Italian": "Aggiungi nuove attività in fondo",
+      "Dutch": "Nieuwe taken onderaan toevoegen",
       "Portuguese": "Adicionar novas tarefas ao fundo"
     },
     "in": {
@@ -15560,6 +15606,7 @@
       "Spanish (US)": "En",
       "Russian": "В",
       "Italian": "In",
+      "Dutch": "In",
       "Portuguese": "Dentro"
     },
     "days": {
@@ -15572,6 +15619,7 @@
       "Spanish (US)": "Dias",
       "Russian": "Дни",
       "Italian": "Giorni",
+      "Dutch": "dagen",
       "Portuguese": "Dias"
     },
     "time travel": {
@@ -15584,6 +15632,7 @@
       "Spanish (US)": "Viaje en el tiempo",
       "Russian": "Путешествие во времени",
       "Italian": "Viaggio nel tempo",
+      "Dutch": "Tijdreizen",
       "Portuguese": "Viagem no tempo"
     },
     "villager photos": {
@@ -15596,6 +15645,7 @@
       "Spanish (US)": "Aldeano Fotos",
       "Russian": "Фото деревенского жителя",
       "Italian": "Foto degli abitanti del villaggio",
+      "Dutch": "Foto's van dorpsbewoners",
       "Portuguese": "Fotos do aldeão"
     },
     "items that you most recently added to your collection": {
@@ -15608,6 +15658,7 @@
       "Spanish (US)": "Elementos que agregó más recientemente a su colección",
       "Russian": "Элементы, которые вы недавно добавили в свою коллекцию",
       "Italian": "Gli articoli che hai aggiunto più di recente alla tua collezione",
+      "Dutch": "Items die je het laatst aan je collectie hebt toegevoegd",
       "Portuguese": "Itens que você adicionou mais recentemente à sua coleção"
     },
     "view photo and poster": {
@@ -15620,6 +15671,7 @@
       "Spanish (US)": "Ver foto y póster",
       "Russian": "Посмотреть фото и постер",
       "Italian": "Visualizza foto e poster",
+      "Dutch": "Bekijk foto en poster",
       "Portuguese": "Ver foto e pôster"
     },
     "villager's photo and poster": {
@@ -15632,6 +15684,7 @@
       "Spanish (US)": "Foto y afiche del aldeano.",
       "Russian": "Фотография и постер деревенского жителя",
       "Italian": "Foto e poster del paesano",
+      "Dutch": "Dorpsfoto en poster",
       "Portuguese": "Foto e pôster do aldeão"
     },
     "add category separator": {
@@ -15644,6 +15697,7 @@
       "Spanish (US)": "Agregar separador de categoría",
       "Russian": "Добавить разделитель категорий",
       "Italian": "Aggiungi separatore di categoria",
+      "Dutch": "Categoriescheidingsteken toevoegen",
       "Portuguese": "Adicionar separador de categoria"
     },
     "separator name": {
@@ -15656,6 +15710,7 @@
       "Spanish (US)": "Nombre del separador",
       "Russian": "Имя разделителя",
       "Italian": "Nome separatore",
+      "Dutch": "Naam scheidingsteken",
       "Portuguese": "Nome do separador"
     },
     "edit to-do list": {
@@ -15668,6 +15723,7 @@
       "Spanish (US)": "Editar lista de tareas pendientes",
       "Russian": "Изменить список дел",
       "Italian": "Modifica l'elenco delle cose da fare",
+      "Dutch": "Takenlijst bewerken",
       "Portuguese": "Editar lista de tarefas"
     },
     "drag and drop to reorder items.": {
@@ -15680,6 +15736,7 @@
       "Spanish (US)": "Arrastre y suelte para reordenar elementos.",
       "Russian": "Перетащите, чтобы изменить порядок элементов.",
       "Italian": "Trascina e rilascia per riordinare gli articoli.",
+      "Dutch": "Slepen en neerzetten om items opnieuw te ordenen.",
       "Portuguese": "Arraste e solte para reordenar os itens."
     },
     "looking for flick to sell your critters": {
@@ -15692,6 +15749,7 @@
       "Spanish (US)": "Busco Flick para vender tus bichos",
       "Russian": "Ищу Flick, чтобы продать ваших тварей",
       "Italian": "Cerco Flick per vendere le tue creature",
+      "Dutch": "Op zoek naar Flick om je beestjes te verkopen",
       "Portuguese": "Procurando Flick para vender seus bichos"
     },
     "looking for cj to sell your fish": {
@@ -15704,6 +15762,7 @@
       "Spanish (US)": "Buscando a CJ para vender tu pescado",
       "Russian": "Ищу CJ для продажи вашей рыбы",
       "Italian": "Cerco CJ per vendere il tuo pesce",
+      "Dutch": "Op zoek naar CJ om uw vis te verkopen",
       "Portuguese": "Procurando CJ para vender seu peixe"
     },
     "looking for celeste to get a magical diy": {
@@ -15716,6 +15775,7 @@
       "Spanish (US)": "Buscando a Celeste para hacerte un DIY mágico",
       "Russian": "Ищу Селесту, чтобы сделать волшебный DIY",
       "Italian": "Cerco Celeste per avere un magico fai da te",
+      "Dutch": "Op zoek naar Celeste voor een magische DIY",
       "Portuguese": "Procurando Celeste para fazer um DIY mágico"
     },
     "looking for sahara to buy mystery wallpapers": {
@@ -15728,6 +15788,7 @@
       "Spanish (US)": "Buscando Sahara para comprar fondos de pantalla misteriosos",
       "Russian": "Ищу Сахару, чтобы купить загадочные обои",
       "Italian": "Alla ricerca del Sahara per acquistare sfondi misteriosi",
+      "Dutch": "Op zoek naar Sahara om mysterie-achtergronden te kopen",
       "Portuguese": "Procurando Sahara para comprar papéis de parede misteriosos"
     },
     "looking for daisy mae to buy turnips": {
@@ -15740,6 +15801,7 @@
       "Spanish (US)": "Buscando a Daisy Mae para comprar nabos",
       "Russian": "Ищу Дейзи Мэй, чтобы купить репу",
       "Italian": "Cerco Daisy Mae per comprare le rape",
+      "Dutch": "Op zoek naar Daisy Mae om rapen te kopen",
       "Portuguese": "Procurando Daisy Mae para comprar nabos"
     },
     "this will remove all items from the list.": {
@@ -15752,6 +15814,7 @@
       "Spanish (US)": "Esto eliminará todos los elementos de la lista.",
       "Russian": "Это удалит все элементы из списка.",
       "Italian": "Questo rimuoverà tutti gli elementi dall'elenco.",
+      "Dutch": "Hiermee worden alle items uit de lijst verwijderd.",
       "Portuguese": "Isso removerá todos os itens da lista."
     },
     "planting pitfalls": {
@@ -15764,6 +15827,7 @@
       "Spanish (US)": "trampas de plantación",
       "Russian": "Подводные камни посадки",
       "Italian": "Piantare insidie",
+      "Dutch": "Valkuilen planten",
       "Portuguese": "Armadilhas de plantio"
     },
     "watch out for pitfalls": {
@@ -15776,6 +15840,7 @@
       "Spanish (US)": "Cuidado con las trampas",
       "Russian": "Остерегайтесь подводных камней",
       "Italian": "Attenzione alle insidie",
+      "Dutch": "Pas op voor valkuilen",
       "Portuguese": "Cuidado com as armadilhas"
     },
     "hemisphere changed to": {
@@ -15788,6 +15853,7 @@
       "Spanish (US)": "Hemisferio cambiado a",
       "Russian": "Полушарие изменилось на",
       "Italian": "Emisfero cambiato in",
+      "Dutch": "Halfrond veranderd in",
       "Portuguese": "Hemisfério alterado para"
     },
     "select variations": {
@@ -15800,6 +15866,7 @@
       "Spanish (US)": "Seleccionar variaciones",
       "Russian": "Выберите варианты",
       "Italian": "Seleziona Variazioni",
+      "Dutch": "Variaties selecteren",
       "Portuguese": "Selecionar variações"
     },
     "select the variations you want to check off. the main item has already been marked as collected.": {
@@ -15812,6 +15879,7 @@
       "Spanish (US)": "Seleccione las variaciones que desea marcar. El elemento principal ya se ha marcado como recopilado.",
       "Russian": "Выберите варианты, которые вы хотите отметить. Основной предмет уже помечен как собранный.",
       "Italian": "Seleziona le varianti che vuoi spuntare. L'oggetto principale è già stato contrassegnato come ritirato.",
+      "Dutch": "Selecteer de variaties die u wilt afvinken. Het hoofdartikel is al gemarkeerd als verzameld.",
       "Portuguese": "Selecione as variações que deseja marcar. O item principal já foi marcado como coletado."
     },
     "open a popup to select variations of the item when importing. only the items with variations will create a popup.": {
@@ -15824,6 +15892,7 @@
       "Spanish (US)": "Abra una ventana emergente para seleccionar variaciones del artículo al importar. Solo los elementos con variaciones crearán una ventana emergente.",
       "Russian": "Откройте всплывающее окно для выбора вариантов элемента при импорте. Только элементы с вариациями будут создавать всплывающее окно.",
       "Italian": "Aprire un popup per selezionare le varianti dell'elemento durante l'importazione. Solo gli elementi con variazioni creeranno un popup.",
+      "Dutch": "Open een pop-up om variaties van het item te selecteren tijdens het importeren. Alleen de items met variaties zullen een pop-up maken.",
       "Portuguese": "Abra um pop-up para selecionar variações do item ao importar. Apenas os itens com variações criarão um pop-up."
     },
     "check all? and variations": {
@@ -15836,6 +15905,7 @@
       "Spanish (US)": "¿Comprobar todo? y variaciones",
       "Russian": "Проверить все? и вариации",
       "Italian": "Seleziona tutto? e variazioni",
+      "Dutch": "Alles controleren? en variaties",
       "Portuguese": "Verificar tudo? e variações"
     },
     "check all the items currently listed? and variations": {
@@ -15848,6 +15918,7 @@
       "Spanish (US)": "¿Marcar todos los elementos enumerados actualmente? y variaciones",
       "Russian": "Проверить все элементы, перечисленные в настоящее время? и вариации",
       "Italian": "Controllare tutti gli articoli attualmente elencati? e variazioni",
+      "Dutch": "Alle items controleren die momenteel worden vermeld? en variaties",
       "Portuguese": "Verificar todos os itens listados atualmente? e variações"
     },
     "uncheck all? and variations": {
@@ -15860,6 +15931,7 @@
       "Spanish (US)": "¿Desmarcar todo? y variaciones",
       "Russian": "Снять все? и вариации",
       "Italian": "Deseleziona tutto? e variazioni",
+      "Dutch": "Alles uitvinken? en variaties",
       "Portuguese": "Desmarcar todos? e variações"
     },
     "uncheck all the items currently listed? and variations": {
@@ -15872,7 +15944,73 @@
       "Spanish (US)": "¿Desmarcar todos los elementos enumerados actualmente? y variaciones",
       "Russian": "Снять флажки со всех элементов, перечисленных в настоящее время? и вариации",
       "Italian": "Deselezionare tutti gli articoli attualmente elencati? e variazioni",
+      "Dutch": "Alle items die momenteel worden vermeld uitvinken? en variaties",
       "Portuguese": "Desmarque todos os itens listados atualmente? e variações"
+    },
+    "there are no more variations. press 'done' when complete.": {
+      "English": "There are no more variations. Press 'Done' when complete.",
+      "English (Europe)": "There are no more variations. Press 'Done' when complete.",
+      "French": "Il n'y a plus de variantes. Appuyez sur \"Terminé\" lorsque vous avez terminé.",
+      "French (US)": "Il n'y a plus de variantes. Appuyez sur \"Terminé\" lorsque vous avez terminé.",
+      "German": "Es gibt keine Variationen mehr. Drücken Sie „Fertig“, wenn Sie fertig sind.",
+      "Spanish": "No hay más variaciones. Presiona 'Listo' cuando hayas terminado.",
+      "Spanish (US)": "No hay más variaciones. Presiona 'Listo' cuando hayas terminado.",
+      "Russian": "Вариаций больше нет. Нажмите «Готово», когда закончите.",
+      "Italian": "Non ci sono più varianti. Premi \"Fatto\" una volta completato.",
+      "Dutch": "Er zijn geen varianten meer. Druk op 'Gereed' als u klaar bent.",
+      "Portuguese": "Não há mais variações. Pressione 'Concluído' quando terminar."
+    },
+    "there are no more previous variations. press 'done' when complete.": {
+      "English": "There are no more previous variations. Press 'Done' when complete.",
+      "English (Europe)": "There are no more previous variations. Press 'Done' when complete.",
+      "French": "Il n'y a plus de variantes précédentes. Appuyez sur \"Terminé\" lorsque vous avez terminé.",
+      "French (US)": "Il n'y a plus de variantes précédentes. Appuyez sur \"Terminé\" lorsque vous avez terminé.",
+      "German": "Es gibt keine früheren Variationen mehr. Drücken Sie „Fertig“, wenn Sie fertig sind.",
+      "Spanish": "No hay más variaciones anteriores. Presiona 'Listo' cuando hayas terminado.",
+      "Spanish (US)": "No hay más variaciones anteriores. Presiona 'Listo' cuando hayas terminado.",
+      "Russian": "Предыдущих вариаций больше нет. Нажмите «Готово», когда закончите.",
+      "Italian": "Non ci sono più variazioni precedenti. Premi \"Fatto\" una volta completato.",
+      "Dutch": "Er zijn geen eerdere varianten meer. Druk op 'Gereed' als u klaar bent.",
+      "Portuguese": "Não há mais variações anteriores. Pressione 'Concluído' quando terminar."
+    },
+    "you have filters enabled.": {
+      "English": "You have filters enabled.",
+      "English (Europe)": "You have filters enabled.",
+      "French": "Vous avez des filtres activés.",
+      "French (US)": "Vous avez des filtres activés.",
+      "German": "Sie haben Filter aktiviert.",
+      "Spanish": "Tienes filtros activados.",
+      "Spanish (US)": "Tienes filtros activados.",
+      "Russian": "У вас включены фильтры.",
+      "Italian": "Hai i filtri abilitati.",
+      "Dutch": "Je hebt filters ingeschakeld.",
+      "Portuguese": "Você tem filtros ativados."
+    },
+    "if an item you are looking for is not listed, please configure your filters by tapping the icon in the right of the searchbar.": {
+      "English": "If an item you are looking for is not listed, please configure your filters by tapping the icon in the right of the searchbar.",
+      "English (Europe)": "If an item you are looking for is not listed, please configure your filters by tapping the icon in the right of the searchbar.",
+      "French": "Si un article que vous recherchez n'est pas répertorié, veuillez configurer vos filtres en appuyant sur l'icône à droite de la barre de recherche.",
+      "French (US)": "Si un article que vous recherchez n'est pas répertorié, veuillez configurer vos filtres en appuyant sur l'icône à droite de la barre de recherche.",
+      "German": "Wenn ein Artikel, nach dem Sie suchen, nicht aufgeführt ist, konfigurieren Sie bitte Ihre Filter, indem Sie auf das Symbol rechts neben der Suchleiste tippen.",
+      "Spanish": "Si un elemento que está buscando no aparece en la lista, configure sus filtros tocando el ícono a la derecha de la barra de búsqueda.",
+      "Spanish (US)": "Si un elemento que está buscando no aparece en la lista, configure sus filtros tocando el ícono a la derecha de la barra de búsqueda.",
+      "Russian": "Если предмета, который вы ищете, нет в списке, настройте фильтры, нажав значок справа от панели поиска.",
+      "Italian": "Se un articolo che stai cercando non è presente nell'elenco, configura i filtri toccando l'icona a destra della barra di ricerca.",
+      "Dutch": "Als een item dat u zoekt niet in de lijst staat, configureer dan uw filters door op het pictogram rechts van de zoekbalk te tikken.",
+      "Portuguese": "Se um item que você está procurando não estiver listado, configure seus filtros tocando no ícone à direita da barra de pesquisa."
+    },
+    "tap here to clear filters temporarily": {
+      "English": "Tap here to clear filters temporarily",
+      "English (Europe)": "Tap here to clear filters temporarily",
+      "French": "Appuyez ici pour effacer temporairement les filtres",
+      "French (US)": "Appuyez ici pour effacer temporairement les filtres",
+      "German": "Tippen Sie hier, um Filter vorübergehend zu löschen",
+      "Spanish": "Toque aquí para borrar los filtros temporalmente",
+      "Spanish (US)": "Toque aquí para borrar los filtros temporalmente",
+      "Russian": "Нажмите здесь, чтобы временно очистить фильтры",
+      "Italian": "Tocca qui per cancellare temporaneamente i filtri",
+      "Dutch": "Tik hier om filters tijdelijk te wissen",
+      "Portuguese": "Toque aqui para limpar os filtros temporariamente"
     }
   },
   "Sources": {
