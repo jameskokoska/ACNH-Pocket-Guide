@@ -166,6 +166,8 @@ export async function importAllData(text){
                 if(item["title"]===currentItem["title"] && item["picture"]===currentItem["picture"]){
                   if(item["finished"]===true && currentItem["finished"]===false){
                     currentItem.finished = true
+                  } else if (item["finished"]===false && currentItem["finished"]===true) {
+                    currentItem.finished = false
                   }
                   isInCurrent = true
                 }

@@ -6,7 +6,7 @@ import TextFont from '../components/TextFont'
 import StoreHoursContainer from '../components/StoreHoursContainer';
 import colors from '../Colors'
 import ButtonComponent from "../components/ButtonComponent"
-import {attemptToTranslate, collectionListSave, checkOff, loadGlobalData, indexCollectionList, openURL, getSettingsString, capitalize} from "../LoadJsonData"
+import {attemptToTranslate, collectionListSave, checkOff, loadGlobalData, indexCollectionList, openURL, getSettingsString, capitalize, attemptToTranslateSpecial} from "../LoadJsonData"
 import Popup, { PopupInfoCustom } from '../components/Popup';
 import ToggleSwitch from 'toggle-switch-react-native';
 import FastImage from '../components/FastImage';
@@ -312,16 +312,21 @@ export class VariationItemCatalog extends Component{
         <View style={[{borderWidth: 2, borderColor: this.state.checked ? colors.checkGreen[global.darkMode] : colors.eventBackground[global.darkMode], marginHorizontal:3, marginVertical: 2, padding: 5, borderRadius: 100,justifyContent: "center",alignItems: "center",backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
           {itemImage!==undefined&&itemImage.startsWith("http")?
           <FastImage
-            style={{height: getSettingsString("settingsLargerItemPreviews")==="false"?63:80, width: getSettingsString("settingsLargerItemPreviews")==="false"?53:70, resizeMode:'contain',}}
+            style={{height: getSettingsString("settingsLargerItemPreviews")==="false"?67:80, width: getSettingsString("settingsLargerItemPreviews")==="false"?53:70, resizeMode:'contain',}}
             source={{
               uri: itemImage,
             }}
             cacheKey={itemImage}
           />:<Image
-            style={{height: getSettingsString("settingsLargerItemPreviews")==="false"?63:80, width: getSettingsString("settingsLargerItemPreviews")==="false"?53:70, resizeMode:'contain',}}
+            style={{height: getSettingsString("settingsLargerItemPreviews")==="false"?67:80, width: getSettingsString("settingsLargerItemPreviews")==="false"?53:70, resizeMode:'contain',}}
             source={getPhoto(itemImage!==undefined?itemImage.toString().toLowerCase():"")}
           />}
         </View>
+        {item?.["Color 1"]==="NA" ? <></> : <TextFont style={{color:colors.textBlack[global.darkMode], fontSize: 13, textAlign:"center"}}>{attemptToTranslateSpecial(item?.["Color 1"], "variants")}</TextFont>}
+        {item?.["Color 2"]==="NA" ? <></> : <TextFont style={{color:colors.textBlack[global.darkMode], fontSize: 13, textAlign:"center"}}>{attemptToTranslateSpecial(item?.["Color 2"], "variants")}</TextFont>}
+        {item?.["Pattern"]==="NA" ? <></> : <TextFont style={{color:colors.textBlack[global.darkMode], fontSize: 13, textAlign:"center"}}>{attemptToTranslateSpecial(item?.["Pattern"], "variants")}</TextFont>}
+        {item?.["Pattern Title"]==="NA" ? <></> : <TextFont style={{color:colors.textBlack[global.darkMode], fontSize: 13, textAlign:"center"}}>{attemptToTranslateSpecial(item?.["Pattern Title"], "variants")}</TextFont>}
+        <View style={{height:5}}/>
       </TouchableOpacity>
     )
   }

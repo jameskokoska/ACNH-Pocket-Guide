@@ -9,6 +9,11 @@ export const changelog = `
 -Warning message when searching Paradise Planning and no results - Language warning about villagers having different names in different regions
 -Removed Check/Uncheck all options from pages that didn't support this would cause a crash
 -
+-Added Daisy Mae, K.K. Slider to visitor list
+-ToDo list now syncs unchecked items
+-Added variants label to catalog scanner variations selector
+-Added more ToDo list icons
+-
 -Added ability to mass check off items with variations\nTap the 3 dot menu in the top right corner of the header of any list page for options
 -Select and import item variations on catalog page
 -More ToDo list icons

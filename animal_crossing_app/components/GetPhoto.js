@@ -320,6 +320,20 @@ export function getPhoto(name, fallback="", returnFalse=false){
       return require("../assets/icons/envelope.png");
     case "mailbox.png":
       return require("../assets/icons/mailbox.png");
+    case "mailbox.png":
+      return require("../assets/icons/mailbox.png");
+    case "radio.png":
+      return require("../assets/icons/radio.png");
+    case "homeIcon.png":
+      return require("../assets/icons/homeIcon.png");
+    case "homeVillager.png":
+      return require("../assets/icons/homeVillager.png");
+    case "fence.png":
+      return require("../assets/icons/fence.png");
+    case "campingTent.png":
+      return require("../assets/icons/campingTent.png");
+    case "bonfire.png":
+      return require("../assets/icons/bonfire.png");
   }
   if(name.includes("bamboo")){
     return require("../assets/icons/bamboo.png");
