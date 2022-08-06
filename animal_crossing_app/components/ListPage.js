@@ -1159,12 +1159,22 @@ function ListPage(props){
                   <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Please be patient</TextFont>
                 <View style={{height:30}}/>
               </>
-            }else if(searchFilters.length>0){
+            }else if(searchFilters.length>0 && data.length===0){
               return <>
-                <View style={{height:100}}/>
-                  <TextFont bold={false} style={{fontSize: 18, textAlign:"center", color: colors.textBlack[global.darkMode], marginHorizontal: 20}}>You have filters enabled.</TextFont>
+                <TextFont style={{marginTop:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{data.length+" "+(data.length!==1?attemptToTranslate("entries."):attemptToTranslate("entry."))}</TextFont>
+                {searchFilters.length===0 ? <></>:<TextFont style={{marginBottom:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{searchFilters.length+" "+(searchFilters.length!==1?attemptToTranslate("filters set."):attemptToTranslate("filter set."))}</TextFont>}
+                <View style={{height:60}}/>
+                  <TextFont bold={false} style={{fontSize: 18, textAlign:"center", color: colors.textBlack[global.darkMode], marginHorizontal: 20}}>No items found.</TextFont>
                   <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode], marginHorizontal: 20, marginTop:10}}>{"If an item you are looking for is not listed, please configure your filters by tapping the icon in the right of the searchbar."}</TextFont>
                   <TouchableOpacity onPress={()=>{setSearchFilters([])}} style={{padding:20}}><BlueText>Tap here to clear filters temporarily</BlueText></TouchableOpacity>
+                <View style={{height:30}}/>
+              </>
+            }else if(data.length===0){
+              return <>
+                <TextFont style={{marginTop:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{data.length+" "+(data.length!==1?attemptToTranslate("entries."):attemptToTranslate("entry."))}</TextFont>
+                {searchFilters.length===0 ? <></>:<TextFont style={{marginBottom:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{searchFilters.length+" "+(searchFilters.length!==1?attemptToTranslate("filters set."):attemptToTranslate("filter set."))}</TextFont>}
+                <View style={{height:80}}/>
+                  <TextFont bold={false} style={{fontSize: 18, textAlign:"center", color: colors.textBlack[global.darkMode], marginHorizontal: 20}}>No items found.</TextFont>
                 <View style={{height:30}}/>
               </>
             }else if (props.title === "Villagers" && data.length===0 && (global.language==="English" || global.language==="English (Europe)")){
@@ -1176,7 +1186,10 @@ function ListPage(props){
                 <View style={{height:30}}/>
               </>
             }
-            return <TextFont style={{marginTop:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{data.length+" "+(data.length!==1?attemptToTranslate("entries."):attemptToTranslate("entry."))}</TextFont>
+            return <>
+              <TextFont style={{marginTop:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{data.length+" "+(data.length!==1?attemptToTranslate("entries."):attemptToTranslate("entry."))}</TextFont>
+              {searchFilters.length===0 ? <></>:<TextFont style={{marginBottom:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{searchFilters.length+" "+(searchFilters.length!==1?attemptToTranslate("filters set."):attemptToTranslate("filter set."))}</TextFont>}
+              </>
           }}
           windowSize={getSettingsString("settingsLowEndDevice")==="true"?3:4}
           refreshControl={

@@ -4,6 +4,10 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Filter warning only shows up when no items found
+-Wording of filters warning tweaked to be less confusing
+-Added no items found warning
+-
 -Updated translations
 -Warning message when searching and no results when a filter set 
 -Warning message when searching Paradise Planning and no results - Language warning about villagers having different names in different regions

@@ -16011,6 +16011,45 @@
       "Italian": "Tocca qui per cancellare temporaneamente i filtri",
       "Dutch": "Tik hier om filters tijdelijk te wissen",
       "Portuguese": "Toque aqui para limpar os filtros temporariamente"
+    },
+    "no items found.": {
+      "English": "No items found.",
+      "English (Europe)": "No items found.",
+      "French": "Aucun élément trouvé.",
+      "French (US)": "Aucun élément trouvé.",
+      "German": "Keine Elemente gefunden.",
+      "Spanish": "No se encontraron artículos.",
+      "Spanish (US)": "No se encontraron artículos.",
+      "Russian": "Ничего не найдено.",
+      "Italian": "Nessun articolo trovato.",
+      "Dutch": "Geen items gevonden.",
+      "Portuguese": "Nenhum item encontrado."
+    },
+    "filter set.": {
+      "English": "filter set.",
+      "English (Europe)": "filter set.",
+      "French": "jeu de filtres.",
+      "French (US)": "jeu de filtres.",
+      "German": "Filtersatz.",
+      "Spanish": "conjunto de filtros",
+      "Spanish (US)": "conjunto de filtros",
+      "Russian": "набор фильтров.",
+      "Italian": "set di filtri.",
+      "Dutch": "filterset.",
+      "Portuguese": "conjunto de filtros."
+    },
+    "filters set.": {
+      "English": "filters set.",
+      "English (Europe)": "filters set.",
+      "French": "ensemble de filtres.",
+      "French (US)": "ensemble de filtres.",
+      "German": "Filter eingestellt.",
+      "Spanish": "conjunto de filtros.",
+      "Spanish (US)": "conjunto de filtros.",
+      "Russian": "набор фильтров.",
+      "Italian": "filtri impostati.",
+      "Dutch": "filters ingesteld.",
+      "Portuguese": "filtros definidos."
     }
   },
   "Sources": {

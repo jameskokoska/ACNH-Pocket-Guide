@@ -16,6 +16,8 @@
             "Korean": "0 items",
             "Russian": "39 items",
             "Portuguese": "39 items",
+            "Czech": "0 items (39 items missing)",
+            "Slovak": "0 items (39 items missing)",
             "undefined": "0 items"
         },
         {
@@ -570,21 +572,23 @@
     ],
     "Main": [
         {
-            "English": "1200 items",
-            "English (Europe)": "1200 items",
-            "French": "1195 items (5 items missing)",
-            "French (US)": "1195 items (5 items missing)",
-            "German": "1195 items (5 items missing)",
-            "Spanish": "1200 items",
-            "Spanish (US)": "1172 items (28 items missing)",
-            "Russian": "1187 items (13 items missing)",
-            "Italian": "1186 items (14 items missing)",
-            "Dutch": "1161 items (39 items missing)",
-            "Chinese": "903 items (297 items missing)",
-            "Chinese (Traditional)": "7 items (1193 items missing)",
-            "Japanese": "7 items (1193 items missing)",
-            "Korean": "7 items (1193 items missing)",
-            "Portuguese": "1184 items (16 items missing)"
+            "English": "1203 items",
+            "English (Europe)": "1203 items",
+            "French": "1198 items (5 items missing)",
+            "French (US)": "1198 items (5 items missing)",
+            "German": "1198 items (5 items missing)",
+            "Spanish": "1203 items",
+            "Spanish (US)": "1175 items (28 items missing)",
+            "Russian": "1190 items (13 items missing)",
+            "Italian": "1189 items (14 items missing)",
+            "Dutch": "1164 items (39 items missing)",
+            "Chinese": "903 items (300 items missing)",
+            "Chinese (Traditional)": "7 items (1196 items missing)",
+            "Japanese": "7 items (1196 items missing)",
+            "Korean": "7 items (1196 items missing)",
+            "Portuguese": "1187 items (16 items missing)",
+            "Czech": "0 items (1203 items missing)",
+            "Slovak": "0 items (1203 items missing)"
         },
         {
             "English": "Home",
@@ -16984,6 +16988,45 @@
             "Italian": "Tocca qui per cancellare temporaneamente i filtri",
             "Dutch": "Tik hier om filters tijdelijk te wissen",
             "Portuguese": "Toque aqui para limpar os filtros temporariamente"
+        },
+        {
+            "English": "No items found.",
+            "English (Europe)": "No items found.",
+            "French": "Aucun élément trouvé.",
+            "French (US)": "Aucun élément trouvé.",
+            "German": "Keine Elemente gefunden.",
+            "Spanish": "No se encontraron artículos.",
+            "Spanish (US)": "No se encontraron artículos.",
+            "Russian": "Ничего не найдено.",
+            "Italian": "Nessun articolo trovato.",
+            "Dutch": "Geen items gevonden.",
+            "Portuguese": "Nenhum item encontrado."
+        },
+        {
+            "English": "filter set.",
+            "English (Europe)": "filter set.",
+            "French": "jeu de filtres.",
+            "French (US)": "jeu de filtres.",
+            "German": "Filtersatz.",
+            "Spanish": "conjunto de filtros",
+            "Spanish (US)": "conjunto de filtros",
+            "Russian": "набор фильтров.",
+            "Italian": "set di filtri.",
+            "Dutch": "filterset.",
+            "Portuguese": "conjunto de filtros."
+        },
+        {
+            "English": "filters set.",
+            "English (Europe)": "filters set.",
+            "French": "ensemble de filtres.",
+            "French (US)": "ensemble de filtres.",
+            "German": "Filter eingestellt.",
+            "Spanish": "conjunto de filtros.",
+            "Spanish (US)": "conjunto de filtros.",
+            "Russian": "набор фильтров.",
+            "Italian": "filtri impostati.",
+            "Dutch": "filters ingesteld.",
+            "Portuguese": "filtros definidos."
         }
     ],
     "Sources": [
@@ -17002,7 +17045,9 @@
             "Japanese": "0 items (161 items missing)",
             "Korean": "0 items (161 items missing)",
             "Russian": "99 items (62 items missing)",
-            "Portuguese": "99 items (62 items missing)"
+            "Portuguese": "99 items (62 items missing)",
+            "Czech": "0 items (161 items missing)",
+            "Slovak": "0 items (161 items missing)"
         },
         {
             "English": "Nook Shopping Seasonal",
@@ -18676,7 +18721,9 @@
             "Japanese": "0 items (175 items missing)",
             "Korean": "0 items (175 items missing)",
             "Russian": "10 items (165 items missing)",
-            "Portuguese": "151 items (24 items missing)"
+            "Portuguese": "151 items (24 items missing)",
+            "Czech": "0 items (175 items missing)",
+            "Slovak": "0 items (175 items missing)"
         },
         {
             "English": "Available in Nook's Cranny (either upgrade tier) in the unique furniture slot",
@@ -20315,7 +20362,9 @@
             "Japanese": "1 items (84 items missing)",
             "Korean": "1 items (84 items missing)",
             "Russian": "53 items (32 items missing)",
-            "Portuguese": "0 items (85 items missing)"
+            "Portuguese": "0 items (85 items missing)",
+            "Czech": "0 items (85 items missing)",
+            "Slovak": "0 items (85 items missing)"
         },
         {
             "English": "acorns and pine cones",
@@ -21007,7 +21056,9 @@
             "Japanese": "25 items (41 items missing)",
             "Korean": "25 items (41 items missing)",
             "Russian": "66 items",
-            "Portuguese": "0 items (66 items missing)"
+            "Portuguese": "0 items (66 items missing)",
+            "Czech": "0 items (66 items missing)",
+            "Slovak": "0 items (66 items missing)"
         },
         {
             "English": "coral Nook Inc. aloha shirt",
@@ -21881,7 +21932,7 @@
     "Special Translations": [
         {
             "Special translations that need to be implemented at the code level, no special formatting needed, just used for reference": "English",
-            "undefined": "Portuguese"
+            "undefined": "Slovak"
         },
         {
             "Special translations that need to be implemented at the code level, no special formatting needed, just used for reference": "[Villager]'s Birthday",
@@ -21927,7 +21978,9 @@
             "Japanese": "0 items (36 items missing)",
             "Korean": "0 items (36 items missing)",
             "Russian": "36 items",
-            "Portuguese": "36 items"
+            "Portuguese": "36 items",
+            "Czech": "0 items (36 items missing)",
+            "Slovak": "0 items (36 items missing)"
         },
         {
             "English": "Island #0",
@@ -22342,7 +22395,9 @@
             "Japanese": "0 items (923 items missing)",
             "Korean": "0 items (923 items missing)",
             "Russian": "0 items (923 items missing)",
-            "Portuguese": "0 items (923 items missing)"
+            "Portuguese": "0 items (923 items missing)",
+            "Czech": "0 items (923 items missing)",
+            "Slovak": "0 items (923 items missing)"
         },
         {
             "English": "(island name) Miles!",
@@ -29132,7 +29187,9 @@
             "Japanese": "0 items (76 items missing)",
             "Korean": "0 items (76 items missing)",
             "Russian": "0 items (76 items missing)",
-            "Portuguese": "0 items (76 items missing)"
+            "Portuguese": "0 items (76 items missing)",
+            "Czech": "0 items (76 items missing)",
+            "Slovak": "0 items (76 items missing)"
         },
         {
             "English": "Acorn card",
@@ -29692,7 +29749,9 @@
             "Japanese": "0 items (277 items missing)",
             "Korean": "0 items (277 items missing)",
             "Russian": "0 items (277 items missing)",
-            "Portuguese": "0 items (277 items missing)"
+            "Portuguese": "0 items (277 items missing)",
+            "Czech": "0 items (277 items missing)",
+            "Slovak": "0 items (277 items missing)"
         },
         {
             "English": "Some say the agrias butterfly is one of the most beautiful butterflies in the world. Bah, I say! BAH! They may have brightly colored wings, but the way they flutter and flitter...SO FOUL! In fact, the agrias butterfly flies so fast, it is quite a feat to catch one. I suppose I should congratulate you on your good fortune... But catching any bug seems a misfortune to me.",
@@ -31707,7 +31766,9 @@
             "Chinese (Traditional)": "62 items",
             "Japanese": "62 items",
             "Korean": "62 items",
-            "Russian": "62 items"
+            "Russian": "62 items",
+            "Czech": "0 items (62 items missing)",
+            "Slovak": "0 items (62 items missing)"
         },
         {
             "English": "Cyrus",
@@ -32717,7 +32778,9 @@
             "Chinese": "0 items",
             "Chinese (Traditional)": "0 items",
             "Japanese": "0 items",
-            "Korean": "0 items"
+            "Korean": "0 items",
+            "Czech": "0 items (205 items missing)",
+            "Slovak": "0 items (205 items missing)"
         },
         {
             "English": "I caught an agrias butterfly! I wonder if it finds me disagrias-able?",
