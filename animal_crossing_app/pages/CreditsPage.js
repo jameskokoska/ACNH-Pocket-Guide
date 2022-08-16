@@ -114,6 +114,14 @@ class CreditsPage extends Component {
         <SubHeader> MarvelousBi</SubHeader>
         <SubHeader> Annelie</SubHeader>
       </CreditBox>
+      <CreditBox>
+        <SubHeader style={{marginBottom:5}}>{attemptToTranslate("Czech") + ":"}</SubHeader>
+        <SubHeader> SirDave</SubHeader>
+      </CreditBox>
+      <CreditBox>
+        <SubHeader style={{marginBottom:5}}>{attemptToTranslate("Slovak") + ":"}</SubHeader>
+        <SubHeader> SirDave</SubHeader>
+      </CreditBox>
       
       {/* <PopupTip show={this.state.show2} noShow={()=>{this.setState({show2:false})}}/>
       <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.setState({show2:true})}} text={"Give a tip"} /> */}

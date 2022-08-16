@@ -4,6 +4,8 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added Czech and Slovak languages (Work in progress - thank you SirDave for assisting with the translations!)
+-
 -Updated translations
 -Filter warning only shows up when no items found
 -Wording of filters warning tweaked to be less confusing

@@ -726,10 +726,10 @@ class PopupInfos extends Component {
       if(numLoginsOffset[0]===global.version){
         if(numLoginsOffset[1]>=1){
           //can periodically switch this one (ref and storage key)
-          let supportPopupDismissed = await getStorage("supportPopupDismissed10","false");
+          let supportPopupDismissed = await getStorage("supportPopupDismissed1011","false");
           if(supportPopupDismissed==="false" && numLogins >= 12){
-            AsyncStorage.setItem("supportPopupDismissed10", "true");
-            this.popupSupport2?.setPopupVisible(true)
+            AsyncStorage.setItem("supportPopupDismissed1011", "true");
+            this.popupSupport4?.setPopupVisible(true)
           }
         }
         AsyncStorage.setItem("numLoginsOffset", JSON.stringify([global.version,numLoginsOffset[1]+1]));
@@ -790,6 +790,7 @@ class PopupInfos extends Component {
       <Popup margin support2={true} noDismiss ref={(popupSupport2) => this.popupSupport2 = popupSupport2} text="Buy me a Coffee" textLower={attemptToTranslate("If you enjoy this free app, buy the developer a coffee!") + " ☕"} button1={"Sure!"} button1Action={()=>{openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
       {/* <Popup margin support2={true} noDismiss ref={(popupSupport3) => this.popupSupport3 = popupSupport3} text="Happy Holidays!" textLower={attemptToTranslate("Support the app to keep it ad free for all") + " 😄"} button1={"Sure!"} button1Action={()=>{openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>*/}
       <Popup margin support2={true} noDismiss ref={(popupSupport3) => this.popupSupport3 = popupSupport3} text="Support the App" textLower={attemptToTranslate("Support the app to keep it ad free for all") + " 😄"} button1={"Sure!"} button1Action={()=>{openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
+      <Popup margin support2={true} noDismiss ref={(popupSupport4) => this.popupSupport4 = popupSupport4} text="Support the Developer" textLower={attemptToTranslate("Support the app and the developer's post secondary education tuition") + " 🎓😄"} button1={"Sure!"} button1Action={()=>{openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
       {/* <Popup margin support2={true} noDismiss ref={(popupSupport4) => this.popupSupport4 = popupSupport4} text="Happy New Year!" textLower={attemptToTranslate("Consider supporting this ad free app") + " 🙂"} button1={"Sure!"} button1Action={()=>{openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>  */}
     </>
   }

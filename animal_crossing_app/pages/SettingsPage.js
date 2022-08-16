@@ -249,12 +249,14 @@ export class LanguagePicker extends Component{
       {label: "Deutsch", value: "German",},
       {label: "Русский", value: "Russian",},
       {label: "Italiano", value: "Italian",},
-      {label: "Dutch", value: "Dutch",},
-      {label: "Chinese (Simplified)", value: "Chinese",},
-      {label: "Portuguêse" + " " + attemptToTranslate("(Items not translated)"), value: "Portuguese",},
-      {label: "Chinese (Traditional) (Not fully supported)", value: "Chinese (Traditional)",},
-      {label: "Japanese (Not fully supported)", value: "Japanese",},
-      {label: "Korean (Not fully supported)", value: "Korean",},
+      {label: "Nederlandse", value: "Dutch",},
+      {label: "简体中文", value: "Chinese",},
+      {label: "Português" + " " + attemptToTranslate("(Items not translated)"), value: "Portuguese",},
+      {label: "Čeština" + " " + attemptToTranslate("(Items not translated)"), value: "Czech",},
+      {label: "Slovenčina" + " " + attemptToTranslate("(Items not translated)"), value: "Slovak",},
+      {label: "中國傳統的" + " " + attemptToTranslate("(Not fully supported)"), value: "Chinese (Traditional)",},
+      {label: "日本語" + " " + attemptToTranslate("(Not fully supported)"), value: "Japanese",},
+      {label: "한국어" + " " + attemptToTranslate("(Not fully supported)"), value: "Korean",},
     ]
     let pass = false
     for(let i = 0; i < languages.length; i++){

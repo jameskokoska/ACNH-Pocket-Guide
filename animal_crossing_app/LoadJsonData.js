@@ -207,7 +207,7 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
             dataLoading[i][hemispherePre[hemispherePreIndex]+"time"] = "All day"
         }
       }
-      if(global.language!=="English" && global.language!=="Portuguese"){
+      if(global.language!=="English" && global.language!=="Portuguese" && global.language!=="Czech" && global.language!=="Slovak"){
         // if(!customDatabase){
         //   dataLoading[i]["NameLanguage"]=attemptToTranslateItem(dataLoading[i]["Name"]);
         // }else{
@@ -1235,6 +1235,8 @@ export function attemptToTranslateSpecial(text, type){
       return text
     }
     if(translated.hasOwnProperty(text)){
+      if(translated[text][global.language]===undefined)
+        return text
       return(translated[text][global.language])
     }
   }
@@ -1429,7 +1431,7 @@ export function translateIslandNameInputLabel2(){
 }
 
 export function getDefaultLanguage(){
-  //var languages = ["English", "English (Europe)","German","Spanish","Spanish (US)","French","French (US)","Italian","Dutch","Chinese","Chinese (Traditional)","Japanese","Korean","Russian","Portuguese"]
+  //var languages = ["English", "English (Europe)","German","Spanish","Spanish (US)","French","French (US)","Italian","Dutch","Chinese","Chinese (Traditional)","Japanese","Korean","Russian","Portuguese","Czech", "Slovak"]
 
   var defaultLanguage = "English";
   if(Localization.locale.includes("en")){
@@ -1454,6 +1456,10 @@ export function getDefaultLanguage(){
     defaultLanguage = "Dutch";
   } else if(Localization.locale.includes("pt")){
     defaultLanguage = "Portuguese";
+  } else if(Localization.locale.includes("cs")){
+    defaultLanguage = "Czech";
+  } else if(Localization.locale.includes("sk")){
+    defaultLanguage = "Slovak";
   }
   return defaultLanguage;
 }
