@@ -472,8 +472,8 @@ export class Variations extends Component {
     this.state = {
       updateChecked:"",
       updateKey:"",
-      wishlistItems:this.getWishlistItems(getVariations(this.props.item["Name"],this.props.globalDatabase,this.props.item["checkListKey"], this.props.item.index)),
-      variations:getVariations(this.props.item["Name"],this.props.globalDatabase,this.props.item["checkListKey"], this.props.item.index)
+      wishlistItems:this.getWishlistItems(getVariations(this.props.item["Name"],this.props.globalDatabase,this.props.item["checkListKey"], this.props.item.indexOriginal ? this.props.item.indexOriginal : this.props.item.index)),
+      variations:getVariations(this.props.item["Name"],this.props.globalDatabase,this.props.item["checkListKey"], this.props.item.indexOriginal ? this.props.item.indexOriginal : this.props.item.index)
     }
   }
   updateVariations(key,checked){
@@ -481,7 +481,7 @@ export class Variations extends Component {
   }
   componentDidUpdate(prevProps) {
     if(this.props!==prevProps){
-      this.setState({wishlistItems:this.getWishlistItems(getVariations(this.props.item["Name"],this.props.globalDatabase,this.props.item["checkListKey"], this.props.item.index)), updateChecked:!inChecklist(this.props.item.checkListKey), updateKey:this.props.item.checkListKey, variations:getVariations(this.props.item["Name"],this.props.globalDatabase,this.props.item["checkListKey"], this.props.item.index)});
+      this.setState({wishlistItems:this.getWishlistItems(getVariations(this.props.item["Name"],this.props.globalDatabase,this.props.item["checkListKey"], this.props.item.indexOriginal ? this.props.item.indexOriginal : this.props.item.index)), updateChecked:!inChecklist(this.props.item.checkListKey), updateKey:this.props.item.checkListKey, variations:getVariations(this.props.item["Name"],this.props.globalDatabase,this.props.item["checkListKey"], this.props.item.indexOriginal ? this.props.item.indexOriginal : this.props.item.index)});
     }
   }
   getWishlistItems = (variations) => {

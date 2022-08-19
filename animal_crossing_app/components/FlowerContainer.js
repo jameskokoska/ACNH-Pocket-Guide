@@ -58,8 +58,9 @@ class FlowerContainer extends Component {
               <Image style={styles.flowerImage} source={{uri:getMaterialImage(this.props.flowerInfo.parent2)}}/>
               {imagePathSpecial2}
             </View>
-          <View>
-          <TextFont bold={true} style={{paddingTop: 20, textAlign:"center",fontSize: 25, color:colors.textBlack[global.darkMode]}}>=</TextFont>
+          <View style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
+            <TextFont bold={true} style={{paddingTop: 20, textAlign:"center",fontSize: 25, color:colors.textBlack[global.darkMode]}}>=</TextFont>
+            {this.props.flowerInfo?.percentage == undefined ? <></> : <TextFont style={{paddingTop: 0, textAlign:"center",fontSize: 14, color:colors.textLight[global.darkMode], marginLeft:8}}>{this.props.flowerInfo?.percentage + "%"}</TextFont>}
           </View>
           <View>
             <TouchableOpacity style={{position:"absolute", zIndex:5, top:-5, left:-5}} onPress={()=>{checkOff(this.props.childCheckListKey, inChecklist(this.props.childCheckListKey)); this.props.refresh();}}>

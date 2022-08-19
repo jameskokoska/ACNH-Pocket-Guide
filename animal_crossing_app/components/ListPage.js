@@ -2,7 +2,7 @@ import React, {Component, useState, useRef, useEffect} from 'react';
 import {TouchableOpacity, View, Animated,StyleSheet,RefreshControl} from 'react-native';
 import Header, {HeaderLoading, HeaderActive} from './Header';
 import ListItem from './ListItem';
-import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters, isInteger, attemptToTranslate, checkOff, inCustomLists, getCustomListsAmount, collectionListSave} from "../LoadJsonData"
+import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters, isInteger, attemptToTranslate, checkOff, inCustomLists, getCustomListsAmount, collectionListSave, determineFoodItem} from "../LoadJsonData"
 import {Dimensions } from "react-native";
 import {Variations,Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title, getVariations} from './BottomSheetComponents';
 import colors from "../Colors.js"

@@ -665,8 +665,8 @@
             "Japanese": "9 items (1202 items missing)",
             "Korean": "9 items (1202 items missing)",
             "Portuguese": "1188 items (23 items missing)",
-            "Czech": "242 items (969 items missing)",
-            "Slovak": "242 items (969 items missing)"
+            "Czech": "295 items (916 items missing)",
+            "Slovak": "295 items (916 items missing)"
         },
         {
             "English": "Home",
@@ -3336,8 +3336,8 @@
             "Dutch": "items",
             "Chinese": "项目",
             "Portuguese": "Itens",
-            "Czech": "Předměty:",
-            "Slovak": "Položky:"
+            "Czech": "Předměty",
+            "Slovak": "Položky"
         },
         {
             "English": "Using list of results to import data",
@@ -9655,7 +9655,9 @@
             "Italian": "Articoli per la casa",
             "Dutch": "Huishoudelijke artikelen",
             "Chinese": "家庭用品",
-            "Portuguese": "Utilidades domésticas"
+            "Portuguese": "Utilidades domésticas",
+            "Czech": "Domácí Potřeby",
+            "Slovak": "Domáce Potreby"
         },
         {
             "English": "Miscellaneous",
@@ -9669,7 +9671,9 @@
             "Italian": "Miscellanea",
             "Dutch": "Diversen",
             "Chinese": "杂项",
-            "Portuguese": "Diversos"
+            "Portuguese": "Diversos",
+            "Czech": "Různé",
+            "Slovak": "Rôzne"
         },
         {
             "English": "Wall-mounted",
@@ -9683,7 +9687,9 @@
             "Italian": "A muro",
             "Dutch": "Op de muur gemonteerd",
             "Chinese": "壁挂式",
-            "Portuguese": "Montado na parede"
+            "Portuguese": "Montado na parede",
+            "Czech": "Nástěnné",
+            "Slovak": "Nástenné"
         },
         {
             "English": "Photos",
@@ -9697,7 +9703,9 @@
             "Italian": "Foto",
             "Dutch": "Foto's",
             "Chinese": "照片",
-            "Portuguese": "Fotos"
+            "Portuguese": "Fotos",
+            "Czech": "Fotografie",
+            "Slovak": "Fotografie"
         },
         {
             "English": "Posters",
@@ -9711,7 +9719,9 @@
             "Italian": "Posters",
             "Dutch": "Affiches",
             "Chinese": "海报",
-            "Portuguese": "Pôsteres"
+            "Portuguese": "Pôsteres",
+            "Czech": "Plakáty",
+            "Slovak": "Plagáty"
         },
         {
             "English": "Headwear",
@@ -9725,7 +9735,9 @@
             "Italian": "Cappelli",
             "Dutch": "hoofddeksels",
             "Chinese": "头饰",
-            "Portuguese": "Chapéu"
+            "Portuguese": "Chapéu",
+            "Czech": "Pokrývky hlavy",
+            "Slovak": "Pokrývky hlavy"
         },
         {
             "English": "Accessories",
@@ -9739,7 +9751,9 @@
             "Italian": "Accessori",
             "Dutch": "Accessoires",
             "Chinese": "饰品",
-            "Portuguese": "Acessórios"
+            "Portuguese": "Acessórios",
+            "Czech": "Příslušenství",
+            "Slovak": "Príslušenstvo"
         },
         {
             "English": "Tops",
@@ -9753,7 +9767,9 @@
             "Italian": "Top",
             "Dutch": "Topjes",
             "Chinese": "上衣",
-            "Portuguese": "Tops"
+            "Portuguese": "Tops",
+            "Czech": "Topy",
+            "Slovak": "Vrchné diely"
         },
         {
             "English": "Dress-Up",
@@ -9767,7 +9783,9 @@
             "Italian": "Travestimento",
             "Dutch": "Aankleden",
             "Chinese": "打扮",
-            "Portuguese": "Vestir"
+            "Portuguese": "Vestir",
+            "Czech": "Dresy",
+            "Slovak": "Oblečenie"
         },
         {
             "English": "Clothing Other",
@@ -9781,7 +9799,9 @@
             "Italian": "Altro abbigliamento",
             "Dutch": "Kleding Overig",
             "Chinese": "服装 其他",
-            "Portuguese": "Outras roupas"
+            "Portuguese": "Outras roupas",
+            "Czech": "Oblečení Ostatní",
+            "Slovak": "Oblečenie Ostatné"
         },
         {
             "English": "Bottoms",
@@ -9795,7 +9815,9 @@
             "Italian": "Parte inferiore",
             "Dutch": "Bodems",
             "Chinese": "下装",
-            "Portuguese": "Partes inferiores"
+            "Portuguese": "Partes inferiores",
+            "Czech": "Spodky",
+            "Slovak": "Spodky"
         },
         {
             "English": "Socks",
@@ -9809,7 +9831,9 @@
             "Italian": "Calzini",
             "Dutch": "Sokken",
             "Chinese": "袜子",
-            "Portuguese": "Meias"
+            "Portuguese": "Meias",
+            "Czech": "Ponožky",
+            "Slovak": "Ponožky"
         },
         {
             "English": "Shoes",
@@ -9823,7 +9847,9 @@
             "Italian": "Scarpe",
             "Dutch": "Schoenen",
             "Chinese": "鞋类",
-            "Portuguese": "Sapato"
+            "Portuguese": "Sapato",
+            "Czech": "Boty",
+            "Slovak": "Topánky"
         },
         {
             "English": "Bags",
@@ -9837,7 +9863,9 @@
             "Italian": "Borse",
             "Dutch": "Tassen",
             "Chinese": "箱包",
-            "Portuguese": "Bolsas"
+            "Portuguese": "Bolsas",
+            "Czech": "Tašky",
+            "Slovak": "Tašky"
         },
         {
             "English": "Umbrellas",
@@ -9851,7 +9879,9 @@
             "Italian": "Ombrelli",
             "Dutch": "Paraplu's",
             "Chinese": "雨伞",
-            "Portuguese": "Guarda-chuva"
+            "Portuguese": "Guarda-chuva",
+            "Czech": "Deštníky",
+            "Slovak": "Dáždniky"
         },
         {
             "English": "Floors",
@@ -9865,7 +9895,9 @@
             "Italian": "Pavimenti",
             "Dutch": "vloeren",
             "Chinese": "地板",
-            "Portuguese": "Piso"
+            "Portuguese": "Piso",
+            "Czech": "Podlahy",
+            "Slovak": "Podlahy"
         },
         {
             "English": "Rugs",
@@ -9879,7 +9911,9 @@
             "Italian": "Tappeti",
             "Dutch": "Tapijten",
             "Chinese": "地毯",
-            "Portuguese": "Tapete"
+            "Portuguese": "Tapete",
+            "Czech": "Koberce",
+            "Slovak": "Koberce"
         },
         {
             "English": "Wallpaper",
@@ -9893,7 +9927,9 @@
             "Italian": "Carta da parati",
             "Dutch": "Behang",
             "Chinese": "墙纸",
-            "Portuguese": "Papel de parede"
+            "Portuguese": "Papel de parede",
+            "Czech": "Tapety",
+            "Slovak": "Tapety"
         },
         {
             "English": "Insects",
@@ -9907,7 +9943,9 @@
             "Italian": "Insetti",
             "Dutch": "insecten",
             "Chinese": "昆虫",
-            "Portuguese": "Insetos"
+            "Portuguese": "Insetos",
+            "Czech": "Hmyz",
+            "Slovak": "Hmyz"
         },
         {
             "English": "Fencing",
@@ -9921,7 +9959,9 @@
             "Italian": "Recinzioni",
             "Dutch": "schermen",
             "Chinese": "栅栏",
-            "Portuguese": "Cercas"
+            "Portuguese": "Cercas",
+            "Czech": "Ploty",
+            "Slovak": "Oplotenie"
         },
         {
             "English": "Other",
@@ -9935,7 +9975,9 @@
             "Italian": "Altro ",
             "Dutch": "Ander",
             "Chinese": "其他",
-            "Portuguese": "Outros"
+            "Portuguese": "Outros",
+            "Czech": "Ostatní",
+            "Slovak": "Iné"
         },
         {
             "English": "Close",
@@ -9949,7 +9991,9 @@
             "Italian": "Chiudere",
             "Dutch": "Dichtbij",
             "Chinese": "关闭",
-            "Portuguese": "Fechar"
+            "Portuguese": "Fechar",
+            "Czech": "Zavřít",
+            "Slovak": "Zatvoriť"
         },
         {
             "English": "Leave a tip?",
@@ -9963,7 +10007,9 @@
             "Italian": "Lasceresti una donazione?",
             "Dutch": "Laat een fooi achter?",
             "Chinese": "打赏？",
-            "Portuguese": "Deixe uma dica?"
+            "Portuguese": "Deixe uma dica?",
+            "Czech": "Zanechat dýško?",
+            "Slovak": "Zanechať prepitné?"
         },
         {
             "English": "If you enjoy this app, consider supporting it by tapping here",
@@ -10131,7 +10177,9 @@
             "Italian": "Carica profilo",
             "Dutch": "Laad profiel",
             "Chinese": "加载配置文件",
-            "Portuguese": "Carregar perfil"
+            "Portuguese": "Carregar perfil",
+            "Czech": "Načtení Profil",
+            "Slovak": "Načítať Profil"
         },
         {
             "English": "Main",
@@ -10145,7 +10193,9 @@
             "Italian": "Principale",
             "Dutch": "Hoofd",
             "Chinese": "主页",
-            "Portuguese": "Principal"
+            "Portuguese": "Principal",
+            "Czech": "Hlavní Profil",
+            "Slovak": "Hlavný Profil"
         },
         {
             "English": "Profile 1",
@@ -10159,7 +10209,9 @@
             "Italian": "Profilo 1",
             "Dutch": "Profiel 1",
             "Chinese": "配置文件1",
-            "Portuguese": "Perfil 1"
+            "Portuguese": "Perfil 1",
+            "Czech": "Profil 1",
+            "Slovak": "Profil 1"
         },
         {
             "English": "Profile 2",
@@ -10173,7 +10225,9 @@
             "Italian": "Profilo 2",
             "Dutch": "Profiel 2",
             "Chinese": "配置文件2",
-            "Portuguese": "Perfil 2"
+            "Portuguese": "Perfil 2",
+            "Czech": "Profil 2",
+            "Slovak": "Profil 2"
         },
         {
             "English": "Profile 3",
@@ -10187,7 +10241,9 @@
             "Italian": "Profilo 3",
             "Dutch": "Profiel 3",
             "Chinese": "配置文件3",
-            "Portuguese": "Perfil 3"
+            "Portuguese": "Perfil 3",
+            "Czech": "Profil 3",
+            "Slovak": "Profil 3"
         },
         {
             "English": "Profile 4",
@@ -10201,7 +10257,9 @@
             "Italian": "Profilo 4",
             "Dutch": "Profiel 4",
             "Chinese": "配置文件4",
-            "Portuguese": "Perfil 4"
+            "Portuguese": "Perfil 4",
+            "Czech": "Profil 4",
+            "Slovak": "Profil 4"
         },
         {
             "English": "Add Loan",
@@ -10397,7 +10455,9 @@
             "Italian": "Sasso",
             "Dutch": "Steen",
             "Chinese": "岩石",
-            "Portuguese": "Pedra"
+            "Portuguese": "Pedra",
+            "Czech": "Kámen",
+            "Slovak": "Kameň"
         },
         {
             "English": "Paper",
@@ -10411,7 +10471,9 @@
             "Italian": "Carta ",
             "Dutch": "Papier",
             "Chinese": "纸牌",
-            "Portuguese": "Papel"
+            "Portuguese": "Papel",
+            "Czech": "Papír",
+            "Slovak": "Papier"
         },
         {
             "English": "Scissors",
@@ -10425,7 +10487,9 @@
             "Italian": "Forbici",
             "Dutch": "Schaar",
             "Chinese": "剪刀",
-            "Portuguese": "Tesoura"
+            "Portuguese": "Tesoura",
+            "Czech": "Nůžky",
+            "Slovak": "Nožnice"
         },
         {
             "English": "Series 1",
@@ -10439,7 +10503,9 @@
             "Italian": "Serie 1",
             "Dutch": "Serie 1",
             "Chinese": "第一弹",
-            "Portuguese": "Séries 1"
+            "Portuguese": "Séries 1",
+            "Czech": "Série 1",
+            "Slovak": "Séria 1"
         },
         {
             "English": "Series 2",
@@ -10453,7 +10519,9 @@
             "Italian": "Serie 2",
             "Dutch": "Serie 2",
             "Chinese": "第二弹",
-            "Portuguese": "Séries 2"
+            "Portuguese": "Séries 2",
+            "Czech": "Série 2",
+            "Slovak": "Séria 2"
         },
         {
             "English": "Series 3",
@@ -10467,7 +10535,9 @@
             "Italian": "Serie 3",
             "Dutch": "Serie 3",
             "Chinese": "第三弹",
-            "Portuguese": "Séries 3"
+            "Portuguese": "Séries 3",
+            "Czech": "Série 3",
+            "Slovak": "Séria 3"
         },
         {
             "English": "Series 4",
@@ -10481,7 +10551,9 @@
             "Italian": "Serie 4",
             "Dutch": "Serie 4",
             "Chinese": "第四弹",
-            "Portuguese": "Séries 4"
+            "Portuguese": "Séries 4",
+            "Czech": "Série 4",
+            "Slovak": "Séria 4"
         },
         {
             "English": "Series 5",
@@ -10495,7 +10567,9 @@
             "Italian": "Serie 5",
             "Dutch": "Serie 5",
             "Chinese": "第五弹",
-            "Portuguese": "Séries 5"
+            "Portuguese": "Séries 5",
+            "Czech": "Série 5",
+            "Slovak": "Séria 5"
         },
         {
             "English": "Welcome Amiibo Series",
@@ -10831,7 +10905,9 @@
             "Italian": "Inglese",
             "Dutch": "Engels",
             "Chinese": "English",
-            "Portuguese": "English"
+            "Portuguese": "English",
+            "Czech": "Angličtina",
+            "Slovak": "Angličtina"
         },
         {
             "English": "English (Europe)",
@@ -10845,7 +10921,9 @@
             "Italian": "Inglese (Europa)",
             "Dutch": "Engels (Europa)",
             "Chinese": "English (Europe)",
-            "Portuguese": "English (Europe)"
+            "Portuguese": "English (Europe)",
+            "Czech": "Angličtina (Evropa)",
+            "Slovak": "Angličtina (Európa)"
         },
         {
             "English": "French",
@@ -10859,7 +10937,9 @@
             "Italian": "Francese",
             "Dutch": "Frans",
             "Chinese": "French",
-            "Portuguese": "French"
+            "Portuguese": "French",
+            "Czech": "Francouzština",
+            "Slovak": "Francúzština"
         },
         {
             "English": "French (Québec)",
@@ -10873,7 +10953,9 @@
             "Italian": "Francese (Québec)",
             "Dutch": "Frans (Québec)",
             "Chinese": "French (Québec)",
-            "Portuguese": "French (Québec)"
+            "Portuguese": "French (Québec)",
+            "Czech": "Francouzština (Québec)",
+            "Slovak": "Francúzština (Québec)"
         },
         {
             "English": "Spanish",
@@ -10887,7 +10969,9 @@
             "Italian": "Spagnolo",
             "Dutch": "Spaans",
             "Chinese": "Spanish",
-            "Portuguese": "Spanish"
+            "Portuguese": "Spanish",
+            "Czech": "Španělština",
+            "Slovak": "Španielčina"
         },
         {
             "English": "Spanish (US)",
@@ -10901,7 +10985,9 @@
             "Italian": "Spagnolo (US)",
             "Dutch": "Spaans (VS)",
             "Chinese": "Spanish (US)",
-            "Portuguese": "Spanish (US)"
+            "Portuguese": "Spanish (US)",
+            "Czech": "Španělština (USA)",
+            "Slovak": "Španielčina (USA)"
         },
         {
             "English": "German",
@@ -10915,7 +11001,9 @@
             "Italian": "Tedesco",
             "Dutch": "Duitse",
             "Chinese": "German",
-            "Portuguese": "German"
+            "Portuguese": "German",
+            "Czech": "Němčina",
+            "Slovak": "Nemčina"
         },
         {
             "English": "Russian",
@@ -10929,7 +11017,9 @@
             "Italian": "Russo",
             "Dutch": "Russisch",
             "Chinese": "Russian",
-            "Portuguese": "Russian"
+            "Portuguese": "Russian",
+            "Czech": "Ruština",
+            "Slovak": "Ruština"
         },
         {
             "English": "Dutch",
@@ -10942,35 +11032,51 @@
             "Russian": "Голландский",
             "Italian": "Olandese",
             "Dutch": "Nederlands",
-            "Chinese": "Dutch"
+            "Chinese": "Dutch",
+            "Czech": "Nizozemština",
+            "Slovak": "Holandčina"
         },
         {
             "English": "Chinese",
-            "English (Europe)": "Chinese"
+            "English (Europe)": "Chinese",
+            "Czech": "Čínština",
+            "Slovak": "Čínština"
         },
         {
             "English": "Chinese (Traditional)",
-            "English (Europe)": "Chinese (Traditional)"
+            "English (Europe)": "Chinese (Traditional)",
+            "Czech": "Čínština (tradiční)",
+            "Slovak": "Čínština (tradičná)"
         },
         {
             "English": "Japanese",
-            "English (Europe)": "Japanese"
+            "English (Europe)": "Japanese",
+            "Czech": "Japonština",
+            "Slovak": "Japončina"
         },
         {
             "English": "Korean",
-            "English (Europe)": "Korean"
+            "English (Europe)": "Korean",
+            "Czech": "Korejština",
+            "Slovak": "Kórejčina"
         },
         {
             "English": "Portuguese",
-            "English (Europe)": "Portuguese"
+            "English (Europe)": "Portuguese",
+            "Czech": "Portugalština",
+            "Slovak": "Portugalčina"
         },
         {
             "English": "Czech",
-            "English (Europe)": "Czech"
+            "English (Europe)": "Czech",
+            "Czech": "Čeština",
+            "Slovak": "Čeština"
         },
         {
             "English": "Slovak",
-            "English (Europe)": "Slovak"
+            "English (Europe)": "Slovak",
+            "Czech": "Slovenština",
+            "Slovak": "Slovenčina"
         },
         {
             "English": "Favorite villagers who like this item as a gift",

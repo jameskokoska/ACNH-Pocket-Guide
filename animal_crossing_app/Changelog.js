@@ -4,6 +4,10 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Fixed variations on Food item page
+-Fixed cosmos hybrid guide
+-Added percentage into hybrid flower guide
+-Updated translations
 -Added Czech and Slovak languages (Work in progress - thank you SirDave for assisting with the translations!)
 -
 -Updated translations

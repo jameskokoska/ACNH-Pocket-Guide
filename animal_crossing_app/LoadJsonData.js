@@ -467,11 +467,14 @@ function getFoodItems(){
     var dataLoaded = dataLoaded2D[j];
     for(let i = 0; i < dataLoaded.length; i++){
       item = dataLoaded[i];
+      item.indexOriginal = i;
+      item.dataSetOriginal = j;
       if(determineFoodItem(item)){
         outputItems.push(item)
       }
     }
   }
+
   return [outputItems]
 }
 
