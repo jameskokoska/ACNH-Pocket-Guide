@@ -4,6 +4,11 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Improved catalog scanning variations
+-Catalog scanning can now skip completed variations items
+-Fixed crashes for translations and catalog scanning
+-Added more translations
+-
 -Fixed variations on Food item page
 -Fixed cosmos hybrid guide
 -Added percentage into hybrid flower guide

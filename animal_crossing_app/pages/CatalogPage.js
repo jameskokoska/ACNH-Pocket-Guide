@@ -6,7 +6,7 @@ import TextFont from '../components/TextFont'
 import StoreHoursContainer from '../components/StoreHoursContainer';
 import colors from '../Colors'
 import ButtonComponent from "../components/ButtonComponent"
-import {attemptToTranslate, collectionListSave, checkOff, loadGlobalData, indexCollectionList, openURL, getSettingsString, capitalize, attemptToTranslateSpecial} from "../LoadJsonData"
+import {attemptToTranslate, collectionListSave, checkOff, loadGlobalData, indexCollectionList, openURL, getSettingsString, capitalize, attemptToTranslateSpecial, variationsCheckedPercent} from "../LoadJsonData"
 import Popup, { PopupInfoCustom } from '../components/Popup';
 import ToggleSwitch from 'toggle-switch-react-native';
 import FastImage from '../components/FastImage';
@@ -25,6 +25,7 @@ class CatalogPage extends Component {
     this.includeVillagers = true;
     this.includeRecipes = true;
     this.selectVariations = true;
+    this.skipCompletedVariations = true;
     this.importedItems = [];
     this.importedItemsIndices = [];
     this.state = {
@@ -134,10 +135,17 @@ class CatalogPage extends Component {
       let amountToSkip = 0
       for(let index = this.state.currentItemIndex+1; index < this.importedItems.length; index++){
         const item = this.importedItems[index]
-        if((item.hasOwnProperty("Variation") && item["Variation"]!=="NA") || item.hasOwnProperty("Pattern") && item["Pattern"]!=="NA"){
+        if(item === undefined){
+          amountToSkip++
+        } else if (item?.checkListKey.includes("fenceCheckList")){
+          amountToSkip++
+        } else if(this.skipCompletedVariations === true && variationsCheckedPercent(item, this.importedItemsIndices[this.state.currentItemIndex+1+amountToSkip]) === 1){
+          amountToSkip++
+        } else if((item.hasOwnProperty("Variation") && item["Variation"]!=="NA") || item.hasOwnProperty("Pattern") && item["Pattern"]!=="NA"){
           break
+        } else{
+          amountToSkip++
         }
-        amountToSkip++
       }
       if(this.state.currentItemIndex+1+amountToSkip >= this.importedItems.length){
         this.setState({noMoreMessage:"There are no more variations. Press 'Done' when complete."})
@@ -155,10 +163,18 @@ class CatalogPage extends Component {
       let amountToSkip = 0
       for(let index = this.state.currentItemIndex-1; index < this.importedItems.length; index--){
         const item = this.importedItems[index]
-        if((item.hasOwnProperty("Variation") && item["Variation"]!=="NA") || item.hasOwnProperty("Pattern") && item["Pattern"]!=="NA"){
+        if(item === undefined){
+          amountToSkip++
           break
+        } else if (item?.checkListKey.includes("fenceCheckList")){
+          amountToSkip++
+        } else if(this.skipCompletedVariations === true && variationsCheckedPercent(item, this.importedItemsIndices[this.state.currentItemIndex-1-amountToSkip]) === 1){
+          amountToSkip++
+        } else if((item.hasOwnProperty("Variation") && item["Variation"]!=="NA") || item.hasOwnProperty("Pattern") && item["Pattern"]!=="NA"){
+          break
+        } else {
+          amountToSkip++
         }
-        amountToSkip++
       }
       if(this.state.currentItemIndex-amountToSkip <= 0){
         this.setState({noMoreMessage:"There are no more previous variations. Press 'Done' when complete."})
@@ -210,6 +226,8 @@ class CatalogPage extends Component {
           <View style={{height: 45}}/>
           <IncludeSwitch header={"Select Variations"} text={"Open a popup to select variations of the item when importing. Only the items with variations will create a popup."} defaultValue={this.selectVariations} toggleValue={()=>{this.selectVariations = !this.selectVariations}}/>
           <View style={{height: 5}}/>
+          <IncludeSwitch header={"Skip Completed Variations"} text={"Don't show variation selection for items you've already collected all the variations for. This option is only used when 'Select Variations' is enabled."} defaultValue={this.skipCompletedVariations} toggleValue={()=>{this.skipCompletedVariations = !this.skipCompletedVariations}}/>
+          <View style={{height: 5}}/>
           <IncludeSwitch header={"Include Villagers"} text={"Include villagers when importing items. Some villagers have the same name as items."} defaultValue={this.includeVillagers} toggleValue={()=>{this.includeVillagers = !this.includeVillagers}}/>
           <View style={{height: 5}}/>
           <IncludeSwitch header={"Include Recipes"} text={"Include recipes when importing items. Recipes and the item counterpart have the same name."} defaultValue={this.includeRecipes} toggleValue={()=>{this.includeRecipes = !this.includeRecipes}}/>
@@ -232,8 +250,38 @@ class CatalogPage extends Component {
           textLower={"Please wait"}
           loading
         />
-        <PopupInfoCustom ref={(popup) => this.popupSelectVariations = popup} buttonDisabled noDismiss>
-          <TextFont bold translate={false} style={{color:colors.textBlack[global.darkMode], fontSize: 25, textAlign:"center", marginBottom: 0}}>{this.state.currentItemVariation!==undefined ? capitalize(this.state.currentItemVariation["NameLanguage"]) : ""}</TextFont>
+        <PopupInfoCustom alwaysMaxHeight ref={(popup) => this.popupSelectVariations = popup} buttonDisabled noDismiss 
+          header = { <TextFont bold translate={false} style={{color:colors.textBlack[global.darkMode], fontSize: 25, textAlign:"center", marginBottom: 5}}>{this.state.currentItemVariation!==undefined ? capitalize(this.state.currentItemVariation["NameLanguage"]) : ""}</TextFont> }
+          buttons={
+            <>
+              <View style={{display:"flex", flexDirection:"row", justifyContent:"center", flexWrap:"wrap", marginTop: -5}}>
+                <ButtonComponent
+                  text={"Previous"}
+                  color={colors.okButton3[global.darkMode]}
+                  vibrate={5}
+                  onPress={() => {
+                    this.prevVariationsButton()
+                }}/>
+                <ButtonComponent
+                  text={"Next"}
+                  color={colors.okButton3[global.darkMode]}
+                  vibrate={5}
+                  onPress={() => {
+                    this.nextVariationsButton()
+                }}/>
+              </View>
+              {this.state.noMoreMessage===""?<></>:<TextFont style={{fontSize: 15, marginHorizontal: 20, marginVertical:10, textAlign:"center", color:colors.textBlack[global.darkMode]}}>{this.state.noMoreMessage}</TextFont>}
+              <View style={{display:"flex", flexDirection:"row", justifyContent:"center", flexWrap:"wrap", marginTop:-5, marginBottom: -8}}>
+                <ButtonComponent
+                  text={"Done"}
+                  color={colors.okButton[global.darkMode]}
+                  vibrate={5}
+                  onPress={() => {
+                    this.popupSelectVariations?.setPopupVisible(false)
+                }}/>
+              </View>
+            </>
+          }>
           <TextFont translate={true} style={{color:colors.textBlack[global.darkMode], fontSize: 14, textAlign:"center", marginBottom: 5}}>{"Select the variations you want to check off. The main item has already been marked as collected."}</TextFont>
           <View style={{flexWrap: 'wrap', flexDirection:"row",justifyContent:"center"}}>
             {
@@ -242,32 +290,7 @@ class CatalogPage extends Component {
               })
             }
           </View>
-          <View style={{display:"flex", flexDirection:"row", justifyContent:"center", flexWrap:"wrap"}}>
-            <ButtonComponent
-              text={"Previous"}
-              color={colors.okButton3[global.darkMode]}
-              vibrate={5}
-              onPress={() => {
-                this.prevVariationsButton()
-            }}/>
-            <ButtonComponent
-              text={"Next"}
-              color={colors.okButton3[global.darkMode]}
-              vibrate={5}
-              onPress={() => {
-                this.nextVariationsButton()
-            }}/>
-          </View>
-          {this.state.noMoreMessage===""?<></>:<TextFont style={{fontSize: 15, marginHorizontal: 20, marginVertical:10, textAlign:"center", color:colors.textBlack[global.darkMode]}}>{this.state.noMoreMessage}</TextFont>}
-          <View style={{display:"flex", flexDirection:"row", justifyContent:"center", flexWrap:"wrap"}}>
-            <ButtonComponent
-              text={"Done"}
-              color={colors.okButton[global.darkMode]}
-              vibrate={5}
-              onPress={() => {
-                this.popupSelectVariations?.setPopupVisible(false)
-            }}/>
-          </View>
+          
         </PopupInfoCustom>
      </View>
     )

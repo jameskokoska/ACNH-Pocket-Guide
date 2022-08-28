@@ -328,6 +328,7 @@ export class PopupInfoCustom extends Component {
     var header = <View onLayout={(event) => {var {x, y, width, height} = event.nativeEvent.layout;if(this.mounted){this.setState({headerHeight:height});}}}>{this.props.header}</View>
     var buttons = <View onLayout={(event) => {var {x, y, width, height} = event.nativeEvent.layout;if(this.mounted){this.setState({buttonHeight:height});}}}>{this.props.buttons}</View>
     const backgroundStyle = {position:"absolute", left:-100, top:-100, width: Dimensions.get('window').width+200, height: Dimensions.get('window').height+200, backgroundColor: "black", opacity: 0.6}
+    const maxHeight = Dimensions.get('window').height*0.7-this.state.headerHeight-this.state.buttonHeight
     return (
         <Modal
           animationType="fade"
@@ -340,7 +341,7 @@ export class PopupInfoCustom extends Component {
           {this.props.noDismiss===true ? <View style={backgroundStyle}/> : <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} activeOpacity={0.55} style={backgroundStyle}/>}
           <View style={[styles.modalView,this.props.style,{backgroundColor: colors.white[global.darkMode]}]}>
             {this.props.header===undefined ? <View/> : header}
-            <ScrollView style={{maxHeight:Dimensions.get('window').height*0.7-this.state.headerHeight-this.state.buttonHeight}}>
+            <ScrollView style={this.props.alwaysMaxHeight===true ? {maxHeight:maxHeight, height: maxHeight} : {maxHeight:maxHeight}}>
               {this.props.children}
             </ScrollView>
             <View style={{flexDirection:"row", justifyContent:"center"}}>

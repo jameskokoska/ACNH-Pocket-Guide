@@ -1786,7 +1786,8 @@
       "Italian": "Mare",
       "Dutch": "Zee",
       "Chinese": "海洋",
-      "Portuguese": "Mar"
+      "Portuguese": "Mar",
+      "Czech": "Moře"
     },
     "music": {
       "English": "Music",
@@ -3687,7 +3688,9 @@
       "Italian": "Prezzi delle rape",
       "Dutch": "Knollen prijzen",
       "Chinese": "大头菜价格",
-      "Portuguese": "Preço Turnips"
+      "Portuguese": "Preço Turnips",
+      "Czech": "Ceny Řepy",
+      "Slovak": "Ceny Repy"
     },
     "water flowers": {
       "English": "Water Flowers",
@@ -3701,7 +3704,9 @@
       "Italian": "Innaffiare i fiori",
       "Dutch": "Bloemen water geven",
       "Chinese": "浇花",
-      "Portuguese": "Molhar Flores"
+      "Portuguese": "Molhar Flores",
+      "Czech": "Vodní Květiny",
+      "Slovak": "Vodné Kvety"
     },
     "talk to villagers": {
       "English": "Talk To Villagers",
@@ -3715,7 +3720,9 @@
       "Italian": "Parlare agli abitanti",
       "Dutch": "Met bewoners praten",
       "Chinese": "与岛民交谈",
-      "Portuguese": "Falar com Moradores"
+      "Portuguese": "Falar com Moradores",
+      "Czech": "Povídání s Vesničany",
+      "Slovak": "Porozprávajte sa s Dedinčanmi"
     },
     "dig fossils": {
       "English": "Dig Fossils",
@@ -3729,7 +3736,9 @@
       "Italian": "Scavare i fossili",
       "Dutch": "Fossielen opgraven",
       "Chinese": "挖掘化石",
-      "Portuguese": "Cavar Fósseis"
+      "Portuguese": "Cavar Fósseis",
+      "Czech": "Kopat Fosilie",
+      "Slovak": "Kopanie Fosílií"
     },
     "rock": {
       "English": "Rock",
@@ -3759,7 +3768,9 @@
       "Italian": "Stelline",
       "Dutch": "Klingels",
       "Chinese": "铃钱",
-      "Portuguese": "bells"
+      "Portuguese": "bells",
+      "Czech": "zvonky",
+      "Slovak": "zvony"
     },
     "miles": {
       "English": "miles",
@@ -3773,7 +3784,9 @@
       "Italian": "Miglia",
       "Dutch": "Miles",
       "Chinese": "里数",
-      "Portuguese": "miles"
+      "Portuguese": "miles",
+      "Czech": "míle",
+      "Slovak": "miles"
     },
     "nook points": {
       "English": "nook points",
@@ -3787,7 +3800,9 @@
       "Italian": "Punti Nook",
       "Dutch": "Nook punten",
       "Chinese": "nook点数",
-      "Portuguese": "nook points"
+      "Portuguese": "nook points",
+      "Czech": "nook body",
+      "Slovak": "nook body"
     },
     "heart crystals": {
       "English": "heart crystals",
@@ -3801,7 +3816,9 @@
       "Italian": "Cristalli di cuore",
       "Dutch": "Kristal harten",
       "Chinese": "心形水晶",
-      "Portuguese": "heart crystals"
+      "Portuguese": "heart crystals",
+      "Czech": "srdeční krystaly",
+      "Slovak": "srdcové kryštály"
     },
     "diy": {
       "English": "DIY",
@@ -3815,7 +3832,9 @@
       "Italian": "Ricette",
       "Dutch": "DIY",
       "Chinese": "DIY",
-      "Portuguese": "DIY"
+      "Portuguese": "DIY",
+      "Czech": "DIY",
+      "Slovak": "DIY"
     },
     "durability": {
       "English": "durability",
@@ -3842,7 +3861,9 @@
       "Italian": "Dimensione pila",
       "Dutch": "stapelgrootte",
       "Chinese": "堆叠尺寸",
-      "Portuguese": "tamanho da pilha"
+      "Portuguese": "tamanho da pilha",
+      "Czech": "velikost hromady",
+      "Slovak": "veľkosť hromady"
     },
     "all day": {
       "English": "All day",
@@ -3856,7 +3877,9 @@
       "Italian": "Tutto il giorno",
       "Dutch": "Hele dag",
       "Chinese": "全天候",
-      "Portuguese": "Dia todo"
+      "Portuguese": "Dia todo",
+      "Czech": "Celý den",
+      "Slovak": "Celý deň"
     },
     "today": {
       "English": "Today",
@@ -3870,7 +3893,9 @@
       "Italian": "Oggi",
       "Dutch": "Vandaag",
       "Chinese": "今天",
-      "Portuguese": "Hoje"
+      "Portuguese": "Hoje",
+      "Czech": "Dnes",
+      "Slovak": "Dnes"
     },
     "crafting season": {
       "English": "Crafting Season",
@@ -3884,7 +3909,9 @@
       "Italian": "Stagione del Fai-da-te",
       "Dutch": "Knutsel seizoen",
       "Chinese": "手工制作季节",
-      "Portuguese": "Temporada de Artesanato"
+      "Portuguese": "Temporada de Artesanato",
+      "Czech": "Sezóna Řemesel",
+      "Slovak": "Sezóna Remesiel"
     },
     "zodiac season": {
       "English": "Zodiac Season",
@@ -3898,7 +3925,9 @@
       "Italian": "Stagione dello Zodiaco",
       "Dutch": "Sterrenbeeld seizoen",
       "Chinese": "十二生肖季节",
-      "Portuguese": "Temporada do Zodíaco"
+      "Portuguese": "Temporada do Zodíaco",
+      "Czech": "Zvěrokruhová Sezóna",
+      "Slovak": "Zodiakálna Sezóna"
     },
     "shopping season": {
       "English": "Shopping Season",
@@ -3912,7 +3941,9 @@
       "Italian": "Stagione dello Shopping",
       "Dutch": "Winkel seizoen",
       "Chinese": "购物季",
-      "Portuguese": "Temporada de Compras"
+      "Portuguese": "Temporada de Compras",
+      "Czech": "Nákupní Sezóna",
+      "Slovak": "Nákupná Sezóna"
     },
     "special event": {
       "English": "Special Event",
@@ -3926,7 +3957,9 @@
       "Italian": "Evento Speciale",
       "Dutch": "Speciaal evenement",
       "Chinese": "特别活动",
-      "Portuguese": "Evento Especial"
+      "Portuguese": "Evento Especial",
+      "Czech": "Speciální Událost",
+      "Slovak": "Špeciálna Udalosť"
     },
     "nook shopping event": {
       "English": "Nook Shopping Event",
@@ -3940,7 +3973,9 @@
       "Italian": "Evento Shopping Nook",
       "Dutch": "Nook Shopping Evenement",
       "Chinese": "Nook购物活动",
-      "Portuguese": "Evento Nook Shopping"
+      "Portuguese": "Evento Nook Shopping",
+      "Czech": "Nákupní Akce Nook",
+      "Slovak": "Nákupná Akcia Nook"
     },
     "visit https://nook.lol/ for more information": {
       "English": "Visit https://nook.lol/ for more information",
@@ -3954,7 +3989,9 @@
       "Italian": "Visita https://nook.lol/ per maggiori informazioni",
       "Dutch": "Bezoek https://nook.lol/ voor meer informatie",
       "Chinese": "请访问 https://nook.lol/ 获取更多信息",
-      "Portuguese": "Visite https://nook.lo/ para obter mais informações"
+      "Portuguese": "Visite https://nook.lo/ para obter mais informações",
+      "Czech": "Více informací naleznete na https://nook.lol/",
+      "Slovak": "Ďalšie informácie nájdete na stránke https://nook.lol/"
     },
     "what's new?": {
       "English": "What's New?",
@@ -3968,7 +4005,9 @@
       "Italian": "Cosa c'è di nuovo?",
       "Dutch": "Wat is er nieuw?",
       "Chinese": "有什么新消息？",
-      "Portuguese": "O que há de novo?"
+      "Portuguese": "O que há de novo?",
+      "Czech": "Co je nového?",
+      "Slovak": "Čo je nového?"
     },
     "let's go!": {
       "English": "Let's go!",
@@ -3982,7 +4021,9 @@
       "Italian": "Andiamo!",
       "Dutch": "Laten we beginnen!",
       "Chinese": "出发!",
-      "Portuguese": "Vamos lá!"
+      "Portuguese": "Vamos lá!",
+      "Czech": "Jdeme na to!",
+      "Slovak": "Ideme na to!"
     },
     "volunteer translators": {
       "English": "Volunteer Translators",
@@ -3996,7 +4037,9 @@
       "Italian": "Traduttori Volontari",
       "Dutch": "Vrijwillige vertalers",
       "Chinese": "志愿翻译人员",
-      "Portuguese": "Tradutores Voluntários"
+      "Portuguese": "Tradutores Voluntários",
+      "Czech": "Dobrovolní Překladatelé",
+      "Slovak": "Dobrovoľní Prekladatelia"
     },
     "thanks for your help!": {
       "English": "Thanks for your help!",
@@ -4010,7 +4053,9 @@
       "Italian": "Grazie per l'aiuto!",
       "Dutch": "Bedankt voor alle hulp!",
       "Chinese": "感谢你的帮助!",
-      "Portuguese": "Obrigado pela ajuda!"
+      "Portuguese": "Obrigado pela ajuda!",
+      "Czech": "Děkujeme za Vaši Pomoc!",
+      "Slovak": "Ďakujeme za Vašu Pomoc!"
     },
     "all events": {
       "English": "All Events",
@@ -4024,7 +4069,9 @@
       "Italian": "Tutti gli eventi",
       "Dutch": "Alle evenementen",
       "Chinese": "所有活动",
-      "Portuguese": "Todos Eventos"
+      "Portuguese": "Todos Eventos",
+      "Czech": "Všechny Události",
+      "Slovak": "Všetky Podujatia"
     },
     "skip": {
       "English": "Skip",
@@ -4038,7 +4085,9 @@
       "Italian": "Salta",
       "Dutch": "Overslaan",
       "Chinese": "跳过",
-      "Portuguese": "Pular"
+      "Portuguese": "Pular",
+      "Czech": "Přeskočit",
+      "Slovak": "Preskočiť"
     },
     "download images": {
       "English": "Download images",
@@ -4052,7 +4101,9 @@
       "Italian": "Scarica Immagini",
       "Dutch": "Download afbeeldingen",
       "Chinese": "下载图片",
-      "Portuguese": "Baixar imagens"
+      "Portuguese": "Baixar imagens",
+      "Czech": "Stáhnout Obrázky",
+      "Slovak": "Stiahnuť Obrázky"
     },
     "save images locally for offline use once viewed. if disabled, can save storage space, but always requires an internet connection to view images.": {
       "English": "Save images locally for offline use once viewed. If disabled, can save storage space, but always requires an internet connection to view images.",
@@ -4066,7 +4117,9 @@
       "Italian": "Salva le immagini in locale per usarle offline una volta visualizzate. Se disabilitata, può salvare spazio nella memoria, ma si avrà sempre bisogno di una connessione ad internet per visualizzare le immagini.",
       "Dutch": "Sla afbeeldingen na bekijken lokaal op voor offline gebruik. Indien uitgeschakeld scheelt het opslagruimte, maar wordt een internetverbinding vereist voor het bekijken van afbeeldingen.  ",
       "Chinese": "将图像保存在本地，以便在浏览后离线使用。如果禁用，可以节省存储空间，但需要互联网连接来查看图像。",
-      "Portuguese": "Salve imagens localmente para uso offline, uma vez visualizadas. Se desativado, pode economizar espaço de armazenamento, mas sempre requer uma conexão com a Internet para visualizar as imagens."
+      "Portuguese": "Salve imagens localmente para uso offline, uma vez visualizadas. Se desativado, pode economizar espaço de armazenamento, mas sempre requer uma conexão com a Internet para visualizar as imagens.",
+      "Czech": "Obrázky můžete po zobrazení uložit lokálně pro použití offline. Pokud je tato funkce vypnutá, může ušetřit místo v úložišti, ale k prohlížení snímků je vždy nutné připojení k internetu.",
+      "Slovak": "Obrázky po zobrazení sa uložia lokálne na použitie offline. Ak je vypnuté, môže ušetriť miesto v úložisku, ale na zobrazenie obrázkov je vždy potrebné pripojenie na internet."
     },
     "error backing up. please enable the permissions and try again...": {
       "English": "Error backing up. Please enable the permissions and try again...",
@@ -4080,7 +4133,9 @@
       "Italian": "Errore nel backup. Si prega di concedere di nuovo i permessi e riprovare.",
       "Dutch": "Fout bij het maken van back-up. Schakel de rechten in en probeer opnieuw...",
       "Chinese": "备份错误。请启用权限并再次尝试...",
-      "Portuguese": "Erro ao fazer backup. Ative as permissões e tente novamente ..."
+      "Portuguese": "Erro ao fazer backup. Ative as permissões e tente novamente ...",
+      "Czech": "Chybné zálohování. Povolte prosím oprávnění a zkuste to znovu...",
+      "Slovak": "Chyba pri zálohovaní. Povoľte oprávnenia a skúste to znova..."
     },
     "cancel": {
       "English": "Cancel",
@@ -4094,7 +4149,8 @@
       "Italian": "Cancellare",
       "Dutch": "Annuleren",
       "Chinese": "取消",
-      "Portuguese": "Cancelar"
+      "Portuguese": "Cancelar",
+      "Czech": "Zrušit"
     },
     "done": {
       "English": "Done",
@@ -4108,7 +4164,8 @@
       "Italian": "Fatto",
       "Dutch": "Klaar",
       "Chinese": "完成",
-      "Portuguese": "Feito"
+      "Portuguese": "Feito",
+      "Czech": "Hotovo"
     },
     "ok": {
       "English": "OK",
@@ -4122,7 +4179,8 @@
       "Italian": "OK",
       "Dutch": "OK",
       "Chinese": "好的",
-      "Portuguese": "OK"
+      "Portuguese": "OK",
+      "Czech": "OK"
     },
     "flying near flowers": {
       "English": "Flying Near Flowers",
@@ -4136,7 +4194,8 @@
       "Italian": "Vola vicino ai fiori",
       "Dutch": "Vliegend in de buurt van bloemen",
       "Chinese": "在花丛中飞舞",
-      "Portuguese": "Voando perto de flores"
+      "Portuguese": "Voando perto de flores",
+      "Czech": "Létající v Blízkosti Květin"
     },
     "on rotten turnips or candy": {
       "English": "On Rotten Turnips Or Candy",
@@ -4150,7 +4209,8 @@
       "Italian": "Sulle rape/caramelle marce",
       "Dutch": "Bij rottende knollen of snoep",
       "Chinese": "在腐烂的大头菜或糖果上",
-      "Portuguese": "Em Turnips Podres Ou Doces"
+      "Portuguese": "Em Turnips Podres Ou Doces",
+      "Czech": "Na Shnilé Řepě nebo Cukroví"
     },
     "on trees": {
       "English": "On Trees",
@@ -4164,7 +4224,8 @@
       "Italian": "Sugli alberi",
       "Dutch": "Op bomen",
       "Chinese": "在树上",
-      "Portuguese": "Em Árvores "
+      "Portuguese": "Em Árvores ",
+      "Czech": "Na Stromech"
     },
     "shaking trees": {
       "English": "Shaking trees",
@@ -4192,7 +4253,8 @@
       "Italian": "Vola vicino all'acqua",
       "Dutch": "Vliegend in de buurt van water",
       "Chinese": "在水边飞行",
-      "Portuguese": "Voando Perto da Água "
+      "Portuguese": "Voando Perto da Água ",
+      "Czech": "Poletující v Blízkosti Vody"
     },
     "on the ground": {
       "English": "On The Ground",
@@ -4206,7 +4268,8 @@
       "Italian": "Per terra",
       "Dutch": "Op de grond",
       "Chinese": "在地面上",
-      "Portuguese": "No chão"
+      "Portuguese": "No chão",
+      "Czech": "Na Zemi"
     },
     "on palm trees": {
       "English": "On Palm Trees",
@@ -4220,7 +4283,8 @@
       "Italian": "Sulle palme",
       "Dutch": "Op palmbomen",
       "Chinese": "在棕榈树上",
-      "Portuguese": "Em palmeiras"
+      "Portuguese": "Em palmeiras",
+      "Czech": "Na Palmách"
     },
     "on hardwood/cedar trees": {
       "English": "On Hardwood/cedar Trees",
@@ -4234,7 +4298,8 @@
       "Italian": "Sui pini/cedri",
       "Dutch": "Op Hardwood/Cedar-bomen",
       "Chinese": "在硬木/雪松树上",
-      "Portuguese": "Em Árvores de Hardwood/Cedar"
+      "Portuguese": "Em Árvores de Hardwood/Cedar",
+      "Czech": "Na Tvrdém Dřevě/Cedru"
     },
     "on tree stumps": {
       "English": "On Tree Stumps",
@@ -4248,7 +4313,8 @@
       "Italian": "Sui ceppi d'albero",
       "Dutch": "Op boomstronken",
       "Chinese": "在树桩上",
-      "Portuguese": "Em Tocos de Árvores"
+      "Portuguese": "Em Tocos de Árvores",
+      "Czech": "Na Pařezech"
     },
     "flying": {
       "English": "Flying",
@@ -4262,7 +4328,8 @@
       "Italian": "Volano",
       "Dutch": "Vliegend",
       "Chinese": "飞舞",
-      "Portuguese": "Voando"
+      "Portuguese": "Voando",
+      "Czech": "Létající"
     },
     "on rivers/ponds": {
       "English": "On Rivers/ponds",
@@ -4276,7 +4343,8 @@
       "Italian": "Su fiumi/laghi",
       "Dutch": "In rivieren/vijvers",
       "Chinese": "在河流/池塘上",
-      "Portuguese": "Em Rios/Lagoas"
+      "Portuguese": "Em Rios/Lagoas",
+      "Czech": "Na Řekách/Rybnících"
     },
     "on villagers": {
       "English": "On Villagers",
@@ -4290,7 +4358,8 @@
       "Italian": "Sugli abitanti",
       "Dutch": "Op dorpelingen",
       "Chinese": "在岛民身上",
-      "Portuguese": "Em Moradores"
+      "Portuguese": "Em Moradores",
+      "Czech": "Na Vesničanech"
     },
     "flying near trash or rotten turnips": {
       "English": "Flying Near Trash or Rotten Turnips",
@@ -4304,7 +4373,8 @@
       "Italian": "Volano vicino alla spazzatura o alle rape marce",
       "Dutch": "Vliegend in de buurt van afval of rottende knollen",
       "Chinese": "在垃圾或腐烂的大头菜附近飞行",
-      "Portuguese": "Voando Perto do Lixo ou Turnips Podres"
+      "Portuguese": "Voando Perto do Lixo ou Turnips Podres",
+      "Czech": "Létající v Blízkosti Odpadků nebo Shnilé Řepy"
     },
     "disguised on shoreline": {
       "English": "Disguised On Shoreline",
@@ -4318,7 +4388,8 @@
       "Italian": "Nascosti sulla spiaggia",
       "Dutch": "Vermomd bij de kustlijn",
       "Chinese": "伪装在海岸线上",
-      "Portuguese": "Disfarçado na linha costeira"
+      "Portuguese": "Disfarçado na linha costeira",
+      "Czech": "Maskované na Břehu"
     },
     "on flowers": {
       "English": "On Flowers",
@@ -4332,7 +4403,8 @@
       "Italian": "Sui fiori",
       "Dutch": "Op bloemen",
       "Chinese": "在花上",
-      "Portuguese": "Em Flores"
+      "Portuguese": "Em Flores",
+      "Czech": "Na Květinách"
     },
     "underground": {
       "English": "Underground",
@@ -4346,7 +4418,8 @@
       "Italian": "Per terra",
       "Dutch": "Ondergronds",
       "Chinese": "在地下",
-      "Portuguese": "Debaixo da Terra"
+      "Portuguese": "Debaixo da Terra",
+      "Czech": "Pod Zemí"
     },
     "flying near light sources": {
       "English": "Flying Near Light Sources",
@@ -4360,7 +4433,8 @@
       "Italian": "Volano vicine a delle fonti di luce",
       "Dutch": "Vliegend in de buurt van lichtbronnen",
       "Chinese": "在光源附近飞行",
-      "Portuguese": "Voando Perto de Luzes"
+      "Portuguese": "Voando Perto de Luzes",
+      "Czech": "Létající v Blízkosti Zdrojů Světla"
     },
     "on white flowers": {
       "English": "On White Flowers",
@@ -4374,7 +4448,8 @@
       "Italian": "Sui fiori bianchi",
       "Dutch": "Op witte bloemen",
       "Chinese": "在白色的花上",
-      "Portuguese": "Em Flores Brancas"
+      "Portuguese": "Em Flores Brancas",
+      "Czech": "Na Bílých Květinách"
     },
     "flying near blue/purple/black flowers": {
       "English": "Flying Near Blue/purple/black Flowers",
@@ -4388,7 +4463,8 @@
       "Italian": "Volano vicino ai fiori neri/viola/blu",
       "Dutch": "Vliegend in de buurt van blauwe/paarse/zwarte bloemen",
       "Chinese": "在蓝色/紫色/黑色花朵附近飞行",
-      "Portuguese": "Voando Perto de Flores Azuis/Roxas/Pretas"
+      "Portuguese": "Voando Perto de Flores Azuis/Roxas/Pretas",
+      "Czech": "Létající v Blízkosti Modrých/Fialových/Černých květů"
     },
     "from hitting rocks": {
       "English": "From Hitting Rocks",
@@ -4402,7 +4478,8 @@
       "Italian": "Colpendo le rocce",
       "Dutch": "Door het raken van stenen",
       "Chinese": "敲击岩石后",
-      "Portuguese": "De Bater nas Pedras"
+      "Portuguese": "De Bater nas Pedras",
+      "Czech": "Ze Zásahu Kamene"
     },
     "on rocks/bushes": {
       "English": "On Rocks/bushes",
@@ -4416,7 +4493,8 @@
       "Italian": "Su rocce/cespugli",
       "Dutch": "Op stenen/bosjes",
       "Chinese": "岩石/灌木上",
-      "Portuguese": "Em Pedras/Arbustos"
+      "Portuguese": "Em Pedras/Arbustos",
+      "Czech": "Na Kamenech/Keřích"
     },
     "disguised under trees": {
       "English": "Disguised Under Trees",
@@ -4430,7 +4508,8 @@
       "Italian": "Nascosti sotto gli alberi",
       "Dutch": "Vermomd onder bomen",
       "Chinese": "伪装在树下",
-      "Portuguese": "Disfarçado Sob as Árvores "
+      "Portuguese": "Disfarçado Sob as Árvores ",
+      "Czech": "Maskovaný pod Stromy"
     },
     "on beach rocks": {
       "English": "On Beach Rocks",
@@ -4444,7 +4523,8 @@
       "Italian": "Sulle rocce in spiaggia",
       "Dutch": "Op stenen op het strand",
       "Chinese": "在海滩岩石上",
-      "Portuguese": "Em Pedras da Praia"
+      "Portuguese": "Em Pedras da Praia",
+      "Czech": "Na Plážových Skalách"
     },
     "river": {
       "English": "River",
@@ -4458,7 +4538,8 @@
       "Italian": "Fiume",
       "Dutch": "Rivier",
       "Chinese": "河流",
-      "Portuguese": "Rio"
+      "Portuguese": "Rio",
+      "Czech": "Řeka"
     },
     "pier": {
       "English": "Pier",
@@ -4472,7 +4553,8 @@
       "Italian": "Molo",
       "Dutch": "Steiger",
       "Chinese": "码头",
-      "Portuguese": "Pier"
+      "Portuguese": "Pier",
+      "Czech": "Molo"
     },
     "pond": {
       "English": "Pond",
@@ -4486,7 +4568,8 @@
       "Italian": "Lago",
       "Dutch": "Vijver",
       "Chinese": "池塘",
-      "Portuguese": "Lago"
+      "Portuguese": "Lago",
+      "Czech": "Rybník"
     },
     "selected language not supported": {
       "English": "Selected language not supported",
@@ -4500,7 +4583,9 @@
       "Italian": "Selezione lingua non supportata",
       "Dutch": "Geselecteerde taal wordt niet ondersteund",
       "Chinese": "不支持所选语言",
-      "Portuguese": "O idioma selecionado não é compatível"
+      "Portuguese": "O idioma selecionado não é compatível",
+      "Czech": "Vybraný jazyk není podporován",
+      "Slovak": "Vybraný jazyk nie je podporovaný"
     },
     "this online guide is only available in english.": {
       "English": "This online guide is only available in English.",
@@ -4514,7 +4599,9 @@
       "Italian": "Questa guida online è disponibile solo in inglese.",
       "Dutch": "Deze online handleiding is alleen beschikbaar in het Engels.",
       "Chinese": "本在线指南只有英文版本。",
-      "Portuguese": "Este guia online está disponível apenas em inglês."
+      "Portuguese": "Este guia online está disponível apenas em inglês.",
+      "Czech": "Tato online příručka je k dispozici pouze v angličtině.",
+      "Slovak": "Táto online príručka je k dispozícii len v angličtine."
     },
     "remove customizable variations in lists": {
       "English": "Remove customizable variations in lists",
@@ -4527,7 +4614,9 @@
       "Russian": "Убрать настраиваемые вариации из списков",
       "Italian": "Rimuovi variazioni personalizzate nelle liste",
       "Chinese": "移除列表中可定制的变化",
-      "Portuguese": "Remova variações personalizáveis nas listas"
+      "Portuguese": "Remova variações personalizáveis nas listas",
+      "Czech": "Odstranění přizpůsobitelných variant v seznamech",
+      "Slovak": "Odstránenie prispôsobiteľných variantov v zoznamoch"
     },
     "remove variations that you can obtain through customization. useful to keep track of furniture types that has not been purchased.": {
       "English": "Remove variations that you can obtain through customization. Useful to keep track of furniture types that has not been purchased.",
@@ -4540,7 +4629,9 @@
       "Russian": "Убрать вариации, которые вы можете получить с помощью кастомизации. Это полезно, если вы хотите отслеживать мебель, которая не была куплена.",
       "Italian": "Rimuovi variazioni che puoi ottenere attraverso la personalizzazione. Utile per tenere traccia dei tipi di mobili che non sono stati ancora comprati.",
       "Chinese": "移除你可以通过定制获得的变化。有助于跟踪尚未购买的家具类型。",
-      "Portuguese": "Remova as variações que você pode obter por meio da personalização. Útil para controlar os tipos de móveis que não foram comprados."
+      "Portuguese": "Remova as variações que você pode obter por meio da personalização. Útil para controlar os tipos de móveis que não foram comprados.",
+      "Czech": "Odstraňte variace, které můžete získat pomocí přizpůsobení. Užitečné pro sledování typů nábytku, který nebyl zakoupen.",
+      "Slovak": "Odstráňte variácie, ktoré môžete získať prostredníctvom prispôsobenia. Užitočné na sledovanie typov nábytku, ktorý nebol zakúpený."
     },
     "new items": {
       "English": "New Items",
@@ -4554,7 +4645,9 @@
       "Italian": "Nuovi oggetti",
       "Dutch": "Nieuwe items",
       "Chinese": "新项目",
-      "Portuguese": "Novos itens"
+      "Portuguese": "Novos itens",
+      "Czech": "Nové Předměty",
+      "Slovak": "Nové Predmety"
     },
     "peppy": {
       "English": "Peppy",
@@ -4567,7 +4660,9 @@
       "Russian": "Бодрый",
       "Italian": "Solare",
       "Chinese": "元气",
-      "Portuguese": "Peppy"
+      "Portuguese": "Peppy",
+      "Czech": "Peppy",
+      "Slovak": "Peppy"
     },
     "peppy villagers": {
       "English": "Peppy villagers",
@@ -4580,7 +4675,9 @@
       "Russian": "Бодрые жители",
       "Italian": "Abitanti Solari",
       "Chinese": "充满元气的岛民",
-      "Portuguese": "Peppy villagers"
+      "Portuguese": "Peppy villagers",
+      "Czech": "Peppy vesničané",
+      "Slovak": "Peppy dedinčania"
     },
     "cranky": {
       "English": "Cranky",
@@ -4593,7 +4690,9 @@
       "Russian": "Капризный",
       "Italian": "Bisbetico",
       "Chinese": "暴躁",
-      "Portuguese": "Cranky"
+      "Portuguese": "Cranky",
+      "Czech": "Mrzutý",
+      "Slovak": "Mrzutý"
     },
     "cranky villagers": {
       "English": "Cranky villagers",
@@ -4606,7 +4705,9 @@
       "Russian": "Капризные жители",
       "Italian": "Abitanti Bisbetici",
       "Chinese": "脾气暴躁的岛民",
-      "Portuguese": "Cranky villagers"
+      "Portuguese": "Cranky villagers",
+      "Czech": "Mrzutí vesničané",
+      "Slovak": "Mrzutí dedinčania"
     },
     "snooty": {
       "English": "Snooty",
@@ -4619,7 +4720,9 @@
       "Russian": "Высокомерный",
       "Italian": "Snob",
       "Chinese": "成熟",
-      "Portuguese": "Snooty"
+      "Portuguese": "Snooty",
+      "Czech": "Snooty",
+      "Slovak": "Snoby"
     },
     "snooty villagers": {
       "English": "Snooty villagers",
@@ -4632,7 +4735,9 @@
       "Russian": "Высокомерные жители",
       "Italian": "Abitanti Snob",
       "Chinese": "成熟的岛民",
-      "Portuguese": "Snooty villagers"
+      "Portuguese": "Snooty villagers",
+      "Czech": "Snobští vesničané",
+      "Slovak": "Snobskí dedinčania"
     },
     "big sister": {
       "English": "Big Sister",
@@ -4645,7 +4750,9 @@
       "Russian": "Заботливый",
       "Italian": "Gentile",
       "Chinese": "大姐姐",
-      "Portuguese": "Big Sister"
+      "Portuguese": "Big Sister",
+      "Czech": "Velká sestra",
+      "Slovak": "Veľká Sestra"
     },
     "big sister villagers": {
       "English": "Big Sister villagers",
@@ -4658,7 +4765,9 @@
       "Russian": "Заботливые жители",
       "Italian": "Abitanti Gentili",
       "Chinese": "大姐姐岛民",
-      "Portuguese": "Big Sister villagers"
+      "Portuguese": "Big Sister villagers",
+      "Czech": "Velká sestra vesničané",
+      "Slovak": "Veľká Sestra dedinčania"
     },
     "lazy": {
       "English": "Lazy",
@@ -4671,7 +4780,9 @@
       "Russian": "Ленивый",
       "Italian": "Pigro",
       "Chinese": "悠闲",
-      "Portuguese": "Lazy"
+      "Portuguese": "Lazy",
+      "Czech": "Líní",
+      "Slovak": "Lenivý"
     },
     "lazy villagers": {
       "English": "Lazy villagers",
@@ -4684,7 +4795,9 @@
       "Russian": "Ленивые жители",
       "Italian": "Abitanti Pigri",
       "Chinese": "悠闲的岛民",
-      "Portuguese": "Lazy villagers"
+      "Portuguese": "Lazy villagers",
+      "Czech": "Líní vesničané",
+      "Slovak": "Leniví dedinčania"
     },
     "normal": {
       "English": "Normal",
@@ -4697,7 +4810,9 @@
       "Russian": "Нормальный",
       "Italian": "Normale",
       "Chinese": "普通",
-      "Portuguese": "Normal"
+      "Portuguese": "Normal",
+      "Czech": "Normální",
+      "Slovak": "Normálni"
     },
     "normal villagers": {
       "English": "Normal villagers",
@@ -4710,7 +4825,9 @@
       "Russian": "Нормальные жители",
       "Italian": "Abitanti Normali",
       "Chinese": "普通的岛民",
-      "Portuguese": "Normal villagers"
+      "Portuguese": "Normal villagers",
+      "Czech": "Normální vesničané",
+      "Slovak": "Normálni dedinčania"
     },
     "all villagers": {
       "English": "All villagers",
@@ -4723,7 +4840,9 @@
       "Russian": "Все жители",
       "Italian": "Tutti gli abitanti",
       "Chinese": "所有岛民",
-      "Portuguese": "Todos moradores"
+      "Portuguese": "Todos moradores",
+      "Czech": "Všichni vesničané",
+      "Slovak": "Všetci obyvatelia"
     },
     "jock": {
       "English": "Jock",
@@ -4736,7 +4855,9 @@
       "Russian": "Спортивный",
       "Italian": "Sportivo",
       "Chinese": "运动",
-      "Portuguese": "Jock"
+      "Portuguese": "Jock",
+      "Czech": "Sportovci",
+      "Slovak": "Športovci"
     },
     "jock villagers": {
       "English": "Jock villagers",
@@ -4749,7 +4870,9 @@
       "Russian": "Спортивные жители",
       "Italian": "Abitanti Sportivi",
       "Chinese": "热爱运动的岛民",
-      "Portuguese": "Jock villagers"
+      "Portuguese": "Jock villagers",
+      "Czech": "Sportovní vesničané",
+      "Slovak": "Športivý dedinčania"
     },
     "smug": {
       "English": "Smug",
@@ -4762,7 +4885,9 @@
       "Russian": "Самодовольный",
       "Italian": "Spavaldo",
       "Chinese": "自恋",
-      "Portuguese": "Smug"
+      "Portuguese": "Smug",
+      "Czech": "Samolibý",
+      "Slovak": "Samoľúby"
     },
     "smug villagers": {
       "English": "Smug villagers",
@@ -4775,7 +4900,9 @@
       "Russian": "Самодовольные жители",
       "Italian": "Abitanti Spavaldi",
       "Chinese": "自恋的岛民",
-      "Portuguese": "Smug villagers"
+      "Portuguese": "Smug villagers",
+      "Czech": "Samolibí vesničané",
+      "Slovak": "Samoľúbi dedinčania"
     },
     "any except rain": {
       "English": "Any except rain",
@@ -4909,7 +5036,9 @@
       "Italian": "Questa applicazione è stata creata usando React Native, con l'app originale programmata in Flutter. Questa applicazione e il suo contenuto NON è affiliata a Nintendo. Tutto il materiale illustrativo è ricreato/autorizzato. Questa applicazione non è ad uso commerciale, ed è fornita al prezzo di 0$ (gratis) su Google Play Store senza pubblicità. Tutto il codice sorgente dell’applicazione è di proprietà dei rispettivi proprietari/contributori elencati nella pagina Crediti e/o delle licenze associate all’interno di specifici pacchetti/librerie all’interno di questa applicazione.",
       "Dutch": "Deze app is gemaakt met React Native en geprogrammeerd in Flutter. De app en de inhoud zijn NIET verwant aan Nintendo. Alle illustraties zijn gerecreëerd/gelicenseerd. De app is niet gemaakt voor commerciële doeleinden en wordt gratis aangeboden in de Google Play Store zonder reclames. Al het gecodeerde materiaal is eigendom van de respectievelijke eigenaren/bijdragers die vermeld zijn op de Credit-pagina en/of licenties die met specifieke gedeelten van deze app geassocieerd worden. ",
       "Chinese": "这个应用程序是使用React Native创建的，原始应用程序是用Flutter编程的。此应用程序和内容与任天堂无关。所有本地艺术作品都是重新创作/许可的。本应用程序不用于商业用途，并在Google Play商店以0美元（免费）的价格提供，没有广告。所有应用程序的源代码都属于在Credits页面上列出的各自所有者/贡献者的财产，和/或在本应用程序的特定包/库中的相关许可证。",
-      "Portuguese": "Este aplicativo foi criado usando React Native, com o aplicativo original programado em Flutter. Este aplicativo e conteúdo NÃO são afiliados à Nintendo. Todas as obras de arte locais recriadas / licenciadas. Este aplicativo não é feito para uso comercial e é fornecido a um preço de 0 $ (grátis) na Google Play Store sem anúncios. Todo o código-fonte do aplicativo é de propriedade dos respectivos proprietários / contribuidores listados na página Créditos e / ou licenças associadas a pacotes / bibliotecas específicos dentro deste aplicativo."
+      "Portuguese": "Este aplicativo foi criado usando React Native, com o aplicativo original programado em Flutter. Este aplicativo e conteúdo NÃO são afiliados à Nintendo. Todas as obras de arte locais recriadas / licenciadas. Este aplicativo não é feito para uso comercial e é fornecido a um preço de 0 $ (grátis) na Google Play Store sem anúncios. Todo o código-fonte do aplicativo é de propriedade dos respectivos proprietários / contribuidores listados na página Créditos e / ou licenças associadas a pacotes / bibliotecas específicos dentro deste aplicativo.",
+      "Czech": "Tato aplikace byla vytvořena pomocí React Native, přičemž původní aplikace byla naprogramována ve Flutteru. Tato aplikace ani její obsah NENÍ spojen se společností Nintendo. Veškerá místní umělecká díla jsou znovu vytvořena/licencována. Tato aplikace není vytvořena pro komerční použití a je poskytována za cenu 0 USD (zdarma) v obchodě Google Play bez reklam. Veškerý zdrojový kód aplikace je majetkem příslušných vlastníků/přispěvatelů uvedených na stránce s kredity a/nebo licencemi přidruženými v rámci konkrétních balíčků/knihoven v této aplikaci.",
+      "Slovak": "Táto aplikácia bola vytvorená pomocou React Native, pričom pôvodná aplikácia bola naprogramovaná vo Flutteri. Táto aplikácia a jej obsah NIE sú spojené so spoločnosťou Nintendo. Všetky miestne umelecké diela boli vytvorené nanovo/pod licenciou. Táto aplikácia nie je vytvorená na komerčné použitie a v obchode Google Play sa poskytuje za cenu 0 USD (zadarmo) bez reklám. Všetky zdrojové kódy aplikácie sú majetkom príslušných vlastníkov/spoluvlastníkov uvedených na stránke s titulmi a/alebo licenciami súvisiacimi s konkrétnymi balíkmi/knižnicami v rámci tejto aplikácie."
     },
     "the copyright of assets is likely to be held by the publisher where applicable. with limited number of low-resolution images for identification, critical commentary and information, the copyrighted content depicted in question qualifies as fair use under united states copyright law and therefore does not significantly impede the right of the copyright holder, since in this context the material is not being used to turn a profit and presents ideas that cannot be exhibited otherwise.": {
       "English": "The copyright of assets is likely to be held by the publisher where applicable. With limited number of low-resolution images for identification, critical commentary and information, the copyrighted content depicted in question qualifies as fair use under United States copyright law and therefore does not significantly impede the right of the copyright holder, since in this context the material is not being used to turn a profit and presents ideas that cannot be exhibited otherwise.",
@@ -4922,7 +5051,9 @@
       "Russian": "Авторские права на активы, вероятно, принадлежат издателю, если это применимо. Имея ограниченное количество изображений с низким разрешением для идентификации, критических комментариев и информации, защищенный авторским правом контент, о котором идет речь, квалифицируется как добросовестное использование в соответствии с законодательством США об авторском праве и, следовательно, не нарушает существенно права правообладателя, поскольку в этом контексте материал не используется для получения прибыли и представляет идеи, которые нельзя представить иначе.",
       "Italian": "Il diritto d’autore sui beni è detenuto dagli sviluppatori, dove applicabile. Con un numero limitato di immagini a bassa risoluzione per l’identificazione, il commento critico e l’informazione, i contenuti protetti da copyright in questione sono considerati fair use ai sensi della legge statunitense sul copyright e pertanto non ostacolano in modo significativo il diritto del titolare del copyright, poiché in questo contesto il materiale non viene utilizzato a scopo di lucro e presenta idee altrimenti impossibili da esporre.",
       "Chinese": "资产的版权可能由出版商持有（如适用）。在有限的低分辨率图像的识别、批判性评论和信息的情况下，所描述的版权内容符合美国版权法规定的合理使用，因此不会严重妨碍版权人的权利，因为在这种情况下，材料不是用来盈利的，而且提出了无法以其他方式展示的想法。",
-      "Portuguese": "Os direitos autorais dos ativos provavelmente serão mantidos pelo editor, quando aplicável. Com um número limitado de imagens de baixa resolução para identificação, comentários críticos e informações, o conteúdo protegido por direitos autorais retratado em questão se qualifica como uso justo sob a lei de direitos autorais dos Estados Unidos e, portanto, não impede significativamente o direito do detentor dos direitos autorais, uma vez que, neste contexto, o material não está sendo usado para obter lucro e apresenta ideias que não podem ser exibidas de outra forma."
+      "Portuguese": "Os direitos autorais dos ativos provavelmente serão mantidos pelo editor, quando aplicável. Com um número limitado de imagens de baixa resolução para identificação, comentários críticos e informações, o conteúdo protegido por direitos autorais retratado em questão se qualifica como uso justo sob a lei de direitos autorais dos Estados Unidos e, portanto, não impede significativamente o direito do detentor dos direitos autorais, uma vez que, neste contexto, o material não está sendo usado para obter lucro e apresenta ideias que não podem ser exibidas de outra forma.",
+      "Czech": "Autorská práva k aktivům pravděpodobně vlastní vydavatel, je-li to relevantní. Při omezeném počtu obrázků s nízkým rozlišením pro identifikaci, kritické komentáře a informace se daný zobrazený obsah chráněný autorským právem kvalifikuje jako spravedlivé užití podle autorského práva Spojených států, a proto významně nezasahuje do práv držitele autorských práv, protože v tomto kontextu není materiál používán za účelem dosažení zisku a prezentuje myšlenky, které nelze vystavit jinak.",
+      "Slovak": "Autorské práva na majetok pravdepodobne vlastní vydavateľ, ak je to vhodné. Pri obmedzenom počte obrázkov s nízkym rozlíšením na účely identifikácie, kritických komentárov a informácií sa predmetný zobrazený obsah chránený autorským právom kvalifikuje ako spravodlivé použitie podľa autorského práva Spojených štátov, a preto významne nezasahuje do práva držiteľa autorských práv, keďže v tomto kontexte sa materiál nepoužíva na dosiahnutie zisku a prezentuje myšlienky, ktoré nemožno vystaviť inak."
     },
     "all game data sourced from the community created spreadsheet. thank you everyone for all the hard work and for making the spreadsheet!": {
       "English": "All game data sourced from the community created spreadsheet. Thank you everyone for all the hard work and for making the spreadsheet!",
@@ -4936,7 +5067,9 @@
       "Italian": "Tutti i dati di gioco sono provenienti dal foglio di calcolo creato dalla comunità. Grazie a tutti per tutto il duro lavoro e per aver fatto il foglio di calcolo!",
       "Dutch": "Alle spelgegevens zijn afkomstig van een gemeenschappelijke spreadsheet. Bedankt aan iedereen voor het harde werk en voor het creëeren van de spreadsheet. ",
       "Chinese": "所有游戏数据都来自于社区创建的电子表格。感谢大家的辛勤工作，感谢大家制作电子表格",
-      "Portuguese": "Todos os dados do jogo são provenientes da planilha criada pela comunidade. Obrigado a todos por todo o trabalho árduo e por fazerem a planilha!"
+      "Portuguese": "Todos os dados do jogo são provenientes da planilha criada pela comunidade. Obrigado a todos por todo o trabalho árduo e por fazerem a planilha!",
+      "Czech": "Všechna herní data pocházejí z tabulky vytvořené komunitou. Děkujeme všem za tvrdou práci a za vytvoření tabulky!",
+      "Slovak": "Všetky údaje o hre pochádzajú z tabuľky vytvorenej komunitou. Ďakujeme všetkým za tvrdú prácu a za vytvorenie tabuľky!"
     },
     "translations sourced from the community spreadsheet. thank you everyone for translating!": {
       "English": "Translations sourced from the community spreadsheet. Thank you everyone for translating!",
@@ -4950,7 +5083,9 @@
       "Italian": "Le traduzioni sono provenienti dal foglio di calcolo creato dalla comunità. Grazie a tutti per le traduzioni!",
       "Dutch": "Vertalingen komen van de gemeenschappelijke spreadsheet. Iedereen hartelijk bedankt voor het vertalen!",
       "Chinese": "翻译来自于社区电子表格。感谢大家的翻译!",
-      "Portuguese": "Traduções obtidas na planilha da comunidade. Obrigado a todos pela tradução!"
+      "Portuguese": "Traduções obtidas na planilha da comunidade. Obrigado a todos pela tradução!",
+      "Czech": "Překlady pocházejí z tabulky vytvořené komunitou. Děkujeme všem za překlady!",
+      "Slovak": "Preklady pochádzajú z tabuľky vytvorenej komunitou. Ďakujeme všetkým za preklady!"
     },
     "and thank you for downloading this application and showing your support.": {
       "English": "And thank YOU for downloading this application and showing your support.",
@@ -4964,7 +5099,9 @@
       "Italian": "e grazie a TE per aver scaricato l'applicazione ed aver mostrato il tuo supporto.",
       "Dutch": "BEDANKT voor het downloaden en waarderen van deze app.",
       "Chinese": "谢谢你下载这个应用程序并表示你的支持。",
-      "Portuguese": "E obrigado por baixar este aplicativo e mostrar seu apoio."
+      "Portuguese": "E obrigado por baixar este aplicativo e mostrar seu apoio.",
+      "Czech": "A děkujeme VÁM za stažení této aplikace a projevení podpory.",
+      "Slovak": "A ďakujeme VÁM, že ste si stiahli túto aplikáciu a prejavili jej podporu."
     },
     "squirrel": {
       "English": "Squirrel",
@@ -16656,6 +16793,32 @@
       "Portuguese": "Apoie o aplicativo e as mensalidades do ensino médio do desenvolvedor",
       "Czech": "Podporujte aplikaci a vývojářské postsekundární vzdělávání",
       "Slovak": "Podporte aplikáciu a postsekundárne vzdelávanie vývojára"
+    },
+    "skip completed variations": {
+      "English": "Skip Completed Variations",
+      "English (Europe)": "Skip Completed Variations",
+      "French": "Ignorer les variantes terminées",
+      "French (US)": "Ignorer les variantes terminées",
+      "German": "Abgeschlossene Variationen überspringen",
+      "Spanish": "Omitir variaciones completadas",
+      "Spanish (US)": "Omitir variaciones completadas",
+      "Russian": "Пропустить завершенные варианты",
+      "Italian": "Salta le variazioni completate",
+      "Dutch": "Voltooide variaties overslaan",
+      "Portuguese": "Pular variações concluídas"
+    },
+    "don't show variation selection for items you've already collected all the variations for. this option is only used when 'select variations' is enabled.": {
+      "English": "Don't show variation selection for items you've already collected all the variations for. This option is only used when 'Select Variations' is enabled.",
+      "English (Europe)": "Don't show variation selection for items you've already collected all the variations for. This option is only used when 'Select Variations' is enabled.",
+      "French": "Ne pas afficher la sélection de variantes pour les articles pour lesquels vous avez déjà collecté toutes les variantes. Cette option n'est utilisée que lorsque 'Sélectionner des variantes' est activé.",
+      "French (US)": "Ne pas afficher la sélection de variantes pour les articles pour lesquels vous avez déjà collecté toutes les variantes. Cette option n'est utilisée que lorsque 'Sélectionner des variantes' est activé.",
+      "German": "Zeigen Sie keine Variationsauswahl für Artikel an, für die Sie bereits alle Variationen gesammelt haben. Diese Option wird nur verwendet, wenn „Variationen auswählen“ aktiviert ist.",
+      "Spanish": "No muestre la selección de variaciones para los artículos para los que ya ha recopilado todas las variaciones. Esta opción solo se usa cuando 'Seleccionar variaciones' está habilitado.",
+      "Spanish (US)": "No muestre la selección de variaciones para los artículos para los que ya ha recopilado todas las variaciones. Esta opción solo se usa cuando 'Seleccionar variaciones' está habilitado.",
+      "Russian": "Не показывать выбор вариантов для элементов, для которых вы уже собрали все варианты. Этот параметр используется только при включенном параметре «Выбрать варианты».",
+      "Italian": "Non mostrare la selezione delle varianti per gli articoli per i quali hai già raccolto tutte le varianti. Questa opzione viene utilizzata solo quando 'Seleziona variazioni' è abilitato.",
+      "Dutch": "Geen variatieselectie weergeven voor items waarvoor u al alle variaties heeft verzameld. Deze optie wordt alleen gebruikt als 'Select Variations' is ingeschakeld.",
+      "Portuguese": "Não mostre a seleção de variação para itens para os quais você já coletou todas as variações. Esta opção só é usada quando 'Selecionar Variações' está habilitado."
     }
   },
   "Sources": {

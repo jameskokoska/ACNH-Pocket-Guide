@@ -125,12 +125,16 @@ export default class ParadisePlanningPage extends Component {
 
   createNameLanguage = (data) => {
     for(let datum of data){
-      if(datum["Request"]===undefined && datum["Name"]!==undefined){ //this means it's a special NPC from the list, fill in info from Special NPCs JSON object
-        datum["NameLanguage"] = attemptToTranslate(datum["Name"].toString()).toString()
-      }else if (datum["Name"] !==undefined){
-        datum["NameLanguage"] = attemptToTranslateSpecial(datum["Name"].toString(), "villagers").toString()
-      } else {
-        datum["NameLanguage"] = "";
+      try{
+        if(datum["Request"]===undefined && datum["Name"]!==undefined){ //this means it's a special NPC from the list, fill in info from Special NPCs JSON object
+          datum["NameLanguage"] = attemptToTranslate(datum["Name"].toString()).toString()
+        }else if (datum["Name"] !==undefined){
+          datum["NameLanguage"] = attemptToTranslateSpecial(datum["Name"].toString(), "villagers").toString()
+        } else {
+          datum["NameLanguage"] = "";
+        }
+      } catch(e) {
+          datum["NameLanguage"] = "";
       }
     }
     return data;

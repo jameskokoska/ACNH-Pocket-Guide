@@ -726,9 +726,9 @@ class PopupInfos extends Component {
       if(numLoginsOffset[0]===global.version){
         if(numLoginsOffset[1]>=1){
           //can periodically switch this one (ref and storage key)
-          let supportPopupDismissed = await getStorage("supportPopupDismissed1011","false");
+          let supportPopupDismissed = await getStorage("supportPopupDismissed10111","false");
           if(supportPopupDismissed==="false" && numLogins >= 12){
-            AsyncStorage.setItem("supportPopupDismissed1011", "true");
+            AsyncStorage.setItem("supportPopupDismissed10111", "true");
             this.popupSupport4?.setPopupVisible(true)
           }
         }
