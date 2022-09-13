@@ -650,23 +650,23 @@
     ],
     "Main": [
         {
-            "English": "1213 items",
-            "English (Europe)": "1213 items",
-            "French": "1201 items (12 items missing)",
-            "French (US)": "1201 items (12 items missing)",
-            "German": "1201 items (12 items missing)",
-            "Spanish": "1206 items (7 items missing)",
-            "Spanish (US)": "1178 items (35 items missing)",
-            "Russian": "1193 items (20 items missing)",
-            "Italian": "1192 items (21 items missing)",
-            "Dutch": "1167 items (46 items missing)",
-            "Chinese": "904 items (309 items missing)",
-            "Chinese (Traditional)": "9 items (1204 items missing)",
-            "Japanese": "9 items (1204 items missing)",
-            "Korean": "9 items (1204 items missing)",
-            "Portuguese": "1190 items (23 items missing)",
-            "Czech": "381 items (832 items missing)",
-            "Slovak": "351 items (862 items missing)"
+            "English": "1215 items",
+            "English (Europe)": "1215 items",
+            "French": "1203 items (12 items missing)",
+            "French (US)": "1203 items (12 items missing)",
+            "German": "1203 items (12 items missing)",
+            "Spanish": "1208 items (7 items missing)",
+            "Spanish (US)": "1180 items (35 items missing)",
+            "Russian": "1195 items (20 items missing)",
+            "Italian": "1194 items (21 items missing)",
+            "Dutch": "1169 items (46 items missing)",
+            "Chinese": "904 items (311 items missing)",
+            "Chinese (Traditional)": "9 items (1206 items missing)",
+            "Japanese": "9 items (1206 items missing)",
+            "Korean": "9 items (1206 items missing)",
+            "Portuguese": "1192 items (23 items missing)",
+            "Czech": "381 items (834 items missing)",
+            "Slovak": "351 items (864 items missing)"
         },
         {
             "English": "Home",
@@ -17911,6 +17911,32 @@
             "Italian": "Non mostrare la selezione delle varianti per gli articoli per i quali hai già raccolto tutte le varianti. Questa opzione viene utilizzata solo quando 'Seleziona variazioni' è abilitato.",
             "Dutch": "Geen variatieselectie weergeven voor items waarvoor u al alle variaties heeft verzameld. Deze optie wordt alleen gebruikt als 'Select Variations' is ingeschakeld.",
             "Portuguese": "Não mostre a seleção de variação para itens para os quais você já coletou todas as variações. Esta opção só é usada quando 'Selecionar Variações' está habilitado."
+        },
+        {
+            "English": "Short header",
+            "English (Europe)": "Short header",
+            "French": "En-tête court",
+            "French (US)": "En-tête court",
+            "German": "Kurze Überschrift",
+            "Spanish": "Encabezado corto",
+            "Spanish (US)": "Encabezado corto",
+            "Russian": "Короткий заголовок",
+            "Italian": "Intestazione corta",
+            "Dutch": "Korte koptekst",
+            "Portuguese": "Cabeçalho curto"
+        },
+        {
+            "English": "The header will take up less room on item list pages and provide more space for the items to be displayed.",
+            "English (Europe)": "The header will take up less room on item list pages and provide more space for the items to be displayed.",
+            "French": "L'en-tête prendra moins de place sur les pages de liste d'articles et fournira plus d'espace pour les articles à afficher.",
+            "French (US)": "L'en-tête prendra moins de place sur les pages de liste d'articles et fournira plus d'espace pour les articles à afficher.",
+            "German": "Die Kopfzeile nimmt auf den Artikellistenseiten weniger Platz ein und bietet mehr Platz für die anzuzeigenden Artikel.",
+            "Spanish": "El encabezado ocupará menos espacio en las páginas de lista de elementos y proporcionará más espacio para que se muestren los elementos.",
+            "Spanish (US)": "El encabezado ocupará menos espacio en las páginas de lista de elementos y proporcionará más espacio para que se muestren los elementos.",
+            "Russian": "Заголовок займет меньше места на страницах списка элементов и предоставит больше места для отображения элементов.",
+            "Italian": "L'intestazione occuperà meno spazio nelle pagine dell'elenco degli elementi e fornirà più spazio per gli elementi da visualizzare.",
+            "Dutch": "De koptekst neemt minder ruimte in beslag op pagina's met itemlijst en biedt meer ruimte voor de items die moeten worden weergegeven.",
+            "Portuguese": "O cabeçalho ocupará menos espaço nas páginas da lista de itens e fornecerá mais espaço para os itens a serem exibidos."
         }
     ],
     "Sources": [

@@ -4,6 +4,10 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added short header option
+-Enable this new setting to reduce the amount of space taken by the searchbar header
+-Translation updates
+-
 -Improved catalog scanning variations
 -Catalog scanning can now skip completed variations items
 -Fixed crashes for translations and catalog scanning

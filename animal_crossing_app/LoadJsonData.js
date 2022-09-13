@@ -992,6 +992,16 @@ export const settings = [
     "displayName" : "Dark mode",
     "description" : "Toggle dark mode, ensure auto dark mode is off to use this",
   },
+  {
+    "keyName" : "smallHeader",
+    "defaultValue" : "false",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/header.png"),
+    "displayName" : "Short header",
+    "description" : "The header will take up less room on item list pages and provide more space for the items to be displayed.",
+    "displayPicture1" : require("./assets/icons/settingsScreenshots/screenshotNormalHeader.jpg"),
+    "displayPicture2" : require("./assets/icons/settingsScreenshots/screenshotSmallHeader.jpg"),
+  },
   // {
   //   "keyName" : "settingsColorLists",
   //   "defaultValue" : "true",

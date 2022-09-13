@@ -40,11 +40,11 @@ const {diffClamp} = Animated;
 export function calculateHeaderHeight(tabs, increaseFactorBy=0){
   // console.log(tabs)
   var headerHeight = tabs || tabs===undefined ? Dimensions.get('window').height*(0.28+increaseFactorBy)-30 : Dimensions.get('window').height*(0.29+increaseFactorBy);
-  var maxHeight = 845.7*0.3;
+  var maxHeight = getSettingsString("smallHeader")==="true" ? 505.7*0.3 : 845.7*0.3;
   if(headerHeight > maxHeight){
     headerHeight = maxHeight;
   }
-  var minHeight = 451*0.3;
+  var minHeight = getSettingsString("smallHeader")==="true" ? 400.7*0.3 : 451*0.3;
   if(headerHeight < minHeight){
     headerHeight = minHeight
   }
@@ -156,6 +156,7 @@ function ListPage(props){
   const popupFilter = React.useRef(null);
 
   const componentIsMounted = useRef(true);
+
   useEffect(() => {
     return () => {
       componentIsMounted.current = false

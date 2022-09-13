@@ -16819,6 +16819,32 @@
       "Italian": "Non mostrare la selezione delle varianti per gli articoli per i quali hai già raccolto tutte le varianti. Questa opzione viene utilizzata solo quando 'Seleziona variazioni' è abilitato.",
       "Dutch": "Geen variatieselectie weergeven voor items waarvoor u al alle variaties heeft verzameld. Deze optie wordt alleen gebruikt als 'Select Variations' is ingeschakeld.",
       "Portuguese": "Não mostre a seleção de variação para itens para os quais você já coletou todas as variações. Esta opção só é usada quando 'Selecionar Variações' está habilitado."
+    },
+    "short header": {
+      "English": "Short header",
+      "English (Europe)": "Short header",
+      "French": "En-tête court",
+      "French (US)": "En-tête court",
+      "German": "Kurze Überschrift",
+      "Spanish": "Encabezado corto",
+      "Spanish (US)": "Encabezado corto",
+      "Russian": "Короткий заголовок",
+      "Italian": "Intestazione corta",
+      "Dutch": "Korte koptekst",
+      "Portuguese": "Cabeçalho curto"
+    },
+    "the header will take up less room on item list pages and provide more space for the items to be displayed.": {
+      "English": "The header will take up less room on item list pages and provide more space for the items to be displayed.",
+      "English (Europe)": "The header will take up less room on item list pages and provide more space for the items to be displayed.",
+      "French": "L'en-tête prendra moins de place sur les pages de liste d'articles et fournira plus d'espace pour les articles à afficher.",
+      "French (US)": "L'en-tête prendra moins de place sur les pages de liste d'articles et fournira plus d'espace pour les articles à afficher.",
+      "German": "Die Kopfzeile nimmt auf den Artikellistenseiten weniger Platz ein und bietet mehr Platz für die anzuzeigenden Artikel.",
+      "Spanish": "El encabezado ocupará menos espacio en las páginas de lista de elementos y proporcionará más espacio para que se muestren los elementos.",
+      "Spanish (US)": "El encabezado ocupará menos espacio en las páginas de lista de elementos y proporcionará más espacio para que se muestren los elementos.",
+      "Russian": "Заголовок займет меньше места на страницах списка элементов и предоставит больше места для отображения элементов.",
+      "Italian": "L'intestazione occuperà meno spazio nelle pagine dell'elenco degli elementi e fornirà più spazio per gli elementi da visualizzare.",
+      "Dutch": "De koptekst neemt minder ruimte in beslag op pagina's met itemlijst en biedt meer ruimte voor de items die moeten worden weergegeven.",
+      "Portuguese": "O cabeçalho ocupará menos espaço nas páginas da lista de itens e fornecerá mais espaço para os itens a serem exibidos."
     }
   },
   "Sources": {
