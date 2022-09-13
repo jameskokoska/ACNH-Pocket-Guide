@@ -6,7 +6,7 @@ import TextFont from '../components/TextFont'
 import StoreHoursContainer from '../components/StoreHoursContainer';
 import colors from '../Colors'
 import ButtonComponent from "../components/ButtonComponent"
-import {attemptToTranslate, collectionListSave, checkOff, loadGlobalData, indexCollectionList, openURL, getSettingsString, capitalize, attemptToTranslateSpecial, variationsCheckedPercent} from "../LoadJsonData"
+import {attemptToTranslate, collectionListSave, checkOff, loadGlobalData, indexCollectionList, openURL, getSettingsString, capitalize, attemptToTranslateSpecial, variationsCheckedPercent, getStorage} from "../LoadJsonData"
 import Popup, { PopupInfoCustom } from '../components/Popup';
 import ToggleSwitch from 'toggle-switch-react-native';
 import FastImage from '../components/FastImage';
@@ -228,9 +228,9 @@ class CatalogPage extends Component {
           <View style={{height: 5}}/>
           <IncludeSwitch header={"Skip Completed Variations"} text={"Don't show variation selection for items you've already collected all the variations for. This option is only used when 'Select Variations' is enabled."} defaultValue={this.skipCompletedVariations} toggleValue={()=>{this.skipCompletedVariations = !this.skipCompletedVariations}}/>
           <View style={{height: 5}}/>
-          <IncludeSwitch header={"Include Villagers"} text={"Include villagers when importing items. Some villagers have the same name as items."} defaultValue={this.includeVillagers} toggleValue={()=>{this.includeVillagers = !this.includeVillagers}}/>
+          <IncludeSwitch header={"Include Villagers"} text={"Include villagers when importing items. Some villagers have the same name as items. (Does not apply to Nook.lol imports)"} defaultValue={this.includeVillagers} toggleValue={()=>{this.includeVillagers = !this.includeVillagers}}/>
           <View style={{height: 5}}/>
-          <IncludeSwitch header={"Include Recipes"} text={"Include recipes when importing items. Recipes and the item counterpart have the same name."} defaultValue={this.includeRecipes} toggleValue={()=>{this.includeRecipes = !this.includeRecipes}}/>
+          <IncludeSwitch header={"Include Recipes"} text={"Include recipes when importing items. Recipes and the item counterpart have the same name. (Does not apply to Nook.lol imports)"} defaultValue={this.includeRecipes} toggleValue={()=>{this.includeRecipes = !this.includeRecipes}}/>
           <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={async ()=>{await this.import(); this.popupWait?.setPopupVisible(false); this.popup?.setPopupVisible(true);}} text={"Import"} />
           <View style={{height: 10}}/>
           <TextFont suffix={"\n"+attemptToTranslate("Please be patient.")} bold={false} style={{fontSize: 13, marginLeft: 30, marginRight: 30, textAlign:"center",color:colors.textBlack[global.darkMode]}}>{"May take a few seconds to complete."}</TextFont>
@@ -239,11 +239,12 @@ class CatalogPage extends Component {
         <Popup 
           ref={(popup) => this.popup = popup}
           button1={"OK"}
-          button1Action={()=>{}}
+          button1Action={async ()=>{if(this.selectVariations===false && await getStorage("loginEmail","")==="") this.popupBackup?.setPopupVisible(true)}}
           text={"Import Results"}
           textLower={this.state.method + "\n"+attemptToTranslate("Imported:") + " " + this.state.totalSuccess + " " + attemptToTranslate("items") +"\n" + attemptToTranslate("Errors:") + " " + this.state.totalFail + " " + attemptToTranslate("items") + "\n" + this.state.totalErrorItems}
         />
-        <Popup 
+        <Popup ref={(popupBackup) => this.popupBackup = popupBackup} text="Data Backup" textLower="Don't forget to backup your data!" button1={"Go to page"} button1Action={()=>{this.props.setPage(30)}} button2={"Cancel"} button2Action={()=>{}}/>
+        <Popup
           ref={(popupWait) => this.popupWait = popupWait}
           button1Action={()=>{}}
           text={"Importing..."}
@@ -276,8 +277,10 @@ class CatalogPage extends Component {
                   text={"Done"}
                   color={colors.okButton[global.darkMode]}
                   vibrate={5}
-                  onPress={() => {
+                  onPress={async () => {
                     this.popupSelectVariations?.setPopupVisible(false)
+                    if(await getStorage("loginEmail","")==="")
+                      this.popupBackup?.setPopupVisible(true)
                 }}/>
               </View>
             </>

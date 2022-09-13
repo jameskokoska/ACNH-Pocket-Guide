@@ -15859,18 +15859,18 @@
       "Dutch": "Inclusief dorpsbewoners",
       "Portuguese": "Incluir aldeões"
     },
-    "include villagers when importing items. some villagers have the same name as items.": {
-      "English": "Include villagers when importing items. Some villagers have the same name as items.",
-      "English (Europe)": "Include villagers when importing items. Some villagers have the same name as items.",
-      "French": "Inclure les villageois lors de l'importation d'articles. Certains villageois portent le même nom que des objets.",
-      "French (US)": "Inclure les villageois lors de l'importation d'articles. Certains villageois portent le même nom que des objets.",
-      "German": "Beziehe die Dorfbewohner beim Importieren von Gegenständen mit ein. Einige Dorfbewohner haben denselben Namen wie Gegenstände.",
-      "Spanish": "Incluya a los aldeanos al importar artículos. Algunos aldeanos tienen el mismo nombre que los artículos.",
-      "Spanish (US)": "Incluya a los aldeanos al importar artículos. Algunos aldeanos tienen el mismo nombre que los artículos.",
-      "Russian": "Включайте жителей деревни при импорте предметов. Некоторые жители деревни имеют то же имя, что и предметы.",
-      "Italian": "Includere gli abitanti del villaggio durante l'importazione di oggetti. Alcuni abitanti del villaggio hanno lo stesso nome degli oggetti.",
-      "Dutch": "Betrek dorpelingen bij het importeren van items. Sommige dorpelingen hebben dezelfde naam als items.",
-      "Portuguese": "Inclua aldeões ao importar itens. Alguns aldeões têm o mesmo nome dos itens."
+    "include villagers when importing items. some villagers have the same name as items. (does not apply to nook.lol imports)": {
+      "English": "Include villagers when importing items. Some villagers have the same name as items. (Does not apply to Nook.lol imports)",
+      "English (Europe)": "Include villagers when importing items. Some villagers have the same name as items. (Does not apply to Nook.lol imports)",
+      "French": "Inclure les villageois lors de l'importation d'articles. Certains villageois portent le même nom que des objets. (Ne s'applique pas aux importations Nook.lol)",
+      "French (US)": "Inclure les villageois lors de l'importation d'articles. Certains villageois portent le même nom que des objets. (Ne s'applique pas aux importations Nook.lol)",
+      "German": "Beziehe die Dorfbewohner beim Importieren von Gegenständen mit ein. Einige Dorfbewohner haben denselben Namen wie Gegenstände. (Gilt nicht für Nook.lol-Importe)",
+      "Spanish": "Incluya a los aldeanos al importar artículos. Algunos aldeanos tienen el mismo nombre que los artículos. (No se aplica a las importaciones de Nook.lol)",
+      "Spanish (US)": "Incluya a los aldeanos al importar artículos. Algunos aldeanos tienen el mismo nombre que los artículos. (No se aplica a las importaciones de Nook.lol)",
+      "Russian": "Включайте жителей деревни при импорте предметов. Некоторые жители деревни имеют то же имя, что и предметы. (Не относится к импорту Nook.lol)",
+      "Italian": "Includere gli abitanti del villaggio durante l'importazione di oggetti. Alcuni abitanti del villaggio hanno lo stesso nome degli oggetti. (Non si applica alle importazioni Nook.lol)",
+      "Dutch": "Betrek dorpelingen bij het importeren van items. Sommige dorpelingen hebben dezelfde naam als items. (Niet van toepassing op Nook.lol-import)",
+      "Portuguese": "Inclua aldeões ao importar itens. Alguns aldeões têm o mesmo nome dos itens. (Não se aplica às importações do Nook.lol)"
     },
     "include recipes": {
       "English": "Include Recipes",
@@ -15885,18 +15885,18 @@
       "Dutch": "Inclusief recepten",
       "Portuguese": "Incluir receitas"
     },
-    "include recipes when importing items. recipes and the item counterpart have the same name.": {
-      "English": "Include recipes when importing items. Recipes and the item counterpart have the same name.",
-      "English (Europe)": "Include recipes when importing items. Recipes and the item counterpart have the same name.",
-      "French": "Inclure des recettes lors de l'importation d'articles. Les recettes et l'équivalent de l'objet portent le même nom.",
-      "French (US)": "Inclure des recettes lors de l'importation d'articles. Les recettes et l'équivalent de l'objet portent le même nom.",
-      "German": "Schließen Sie beim Importieren von Artikeln Rezepte ein. Rezepte und das Artikelgegenstück haben denselben Namen.",
-      "Spanish": "Incluya recetas al importar artículos. Las recetas y la contrapartida del artículo tienen el mismo nombre.",
-      "Spanish (US)": "Incluya recetas al importar artículos. Las recetas y la contrapartida del artículo tienen el mismo nombre.",
-      "Russian": "Включайте рецепты при импорте предметов. Рецепты и аналог предмета имеют одно и то же имя.",
-      "Italian": "Includi le ricette durante l'importazione di elementi. Le ricette e la controparte dell'articolo hanno lo stesso nome.",
-      "Dutch": "Neem recepten op bij het importeren van artikelen. Recepten en de item-tegenhanger hebben dezelfde naam.",
-      "Portuguese": "Inclua receitas ao importar itens. As receitas e a contrapartida do item têm o mesmo nome."
+    "include recipes when importing items. recipes and the item counterpart have the same name. (does not apply to nook.lol imports)": {
+      "English": "Include recipes when importing items. Recipes and the item counterpart have the same name. (Does not apply to Nook.lol imports)",
+      "English (Europe)": "Include recipes when importing items. Recipes and the item counterpart have the same name. (Does not apply to Nook.lol imports)",
+      "French": "Inclure des recettes lors de l'importation d'articles. Les recettes et l'équivalent de l'objet portent le même nom. (Ne s'applique pas aux importations Nook.lol)",
+      "French (US)": "Inclure des recettes lors de l'importation d'articles. Les recettes et l'équivalent de l'objet portent le même nom. (Ne s'applique pas aux importations Nook.lol)",
+      "German": "Schließen Sie beim Importieren von Artikeln Rezepte ein. Rezepte und das Artikelgegenstück haben denselben Namen. (Gilt nicht für Nook.lol-Importe)",
+      "Spanish": "Incluya recetas al importar artículos. Las recetas y la contrapartida del artículo tienen el mismo nombre. (No se aplica a las importaciones de Nook.lol)",
+      "Spanish (US)": "Incluya recetas al importar artículos. Las recetas y la contrapartida del artículo tienen el mismo nombre. (No se aplica a las importaciones de Nook.lol)",
+      "Russian": "Включайте рецепты при импорте предметов. Рецепты и аналог предмета имеют одно и то же имя. (Не относится к импорту Nook.lol)",
+      "Italian": "Includi le ricette durante l'importazione di elementi. Le ricette e la controparte dell'articolo hanno lo stesso nome. (Non si applica alle importazioni Nook.lol)",
+      "Dutch": "Neem recepten op bij het importeren van artikelen. Recepten en de item-tegenhanger hebben dezelfde naam. (Niet van toepassing op Nook.lol-import)",
+      "Portuguese": "Inclua receitas ao importar itens. As receitas e a contrapartida do item têm o mesmo nome. (Não se aplica às importações do Nook.lol)"
     },
     "made in canada": {
       "English": "Made in Canada",
@@ -16845,6 +16845,32 @@
       "Italian": "L'intestazione occuperà meno spazio nelle pagine dell'elenco degli elementi e fornirà più spazio per gli elementi da visualizzare.",
       "Dutch": "De koptekst neemt minder ruimte in beslag op pagina's met itemlijst en biedt meer ruimte voor de items die moeten worden weergegeven.",
       "Portuguese": "O cabeçalho ocupará menos espaço nas páginas da lista de itens e fornecerá mais espaço para os itens a serem exibidos."
+    },
+    "music box": {
+      "English": "Music Box",
+      "English (Europe)": "Music Box",
+      "French": "Boîte à musique",
+      "French (US)": "Boîte à musique",
+      "German": "Musikbox",
+      "Spanish": "Caja de música",
+      "Spanish (US)": "Caja de música",
+      "Russian": "Музыкальная шкатулка",
+      "Italian": "Carillon",
+      "Dutch": "Muziekdoos",
+      "Portuguese": "Caixa de música"
+    },
+    "don't forget to backup your data!": {
+      "English": "Don't forget to backup your data!",
+      "English (Europe)": "Don't forget to backup your data!",
+      "French": "N'oubliez pas de sauvegarder vos données !",
+      "French (US)": "N'oubliez pas de sauvegarder vos données !",
+      "German": "Vergessen Sie nicht, Ihre Daten zu sichern!",
+      "Spanish": "¡No olvides hacer una copia de seguridad de tus datos!",
+      "Spanish (US)": "¡No olvides hacer una copia de seguridad de tus datos!",
+      "Russian": "Не забудьте сделать резервную копию ваших данных!",
+      "Italian": "Non dimenticare di eseguire il backup dei tuoi dati!",
+      "Dutch": "Vergeet niet een back-up van uw gegevens te maken!",
+      "Portuguese": "Não se esqueça de fazer backup de seus dados!"
     }
   },
   "Sources": {

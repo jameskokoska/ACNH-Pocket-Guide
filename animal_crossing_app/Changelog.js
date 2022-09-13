@@ -4,8 +4,11 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added music box songs! Listen to them on the Songs page
 -Added short header option
 -Enable this new setting to reduce the amount of space taken by the searchbar header
+-Backup reminder after catalog import
+-Notes on which options apply for nook.lol catalog importing on Catalog Scanner page
 -Translation updates
 -
 -Improved catalog scanning variations

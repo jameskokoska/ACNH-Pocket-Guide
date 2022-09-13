@@ -120,7 +120,7 @@ export class PopupBottomMusicWrapper extends Component {
    });
   }
 
-  addSongToQueue = async (song, songID, liveMusic=false) => {
+  addSongToQueue = async (song, songID, liveMusic=false,) => {
     let link = ""
     if(song["special"]!==undefined && song["special"]==="hourly"){
       link = "https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/Media/hourly/"
@@ -129,6 +129,8 @@ export class PopupBottomMusicWrapper extends Component {
       liveMusic = "Hourly Music"
     }else if(liveMusic===true){
       link = "https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/Media/live/"
+    } else if(liveMusic==="Music Box"){
+      link = "https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/Media/musicbox/"
     } else {
       link = "https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/Media/kk/"
     }
@@ -325,7 +327,7 @@ class NowPlayingSmall extends Component {
       <View style={{flexDirection:"column", justifyContent:"center", marginLeft:20, }}>
         <SubHeader bold={false} margin={false} style={{fontSize:13}}>{"Now Playing..."}</SubHeader>
         <SubHeader margin={false} style={{fontSize:20}}>{this.props.song["NameLanguage"]}</SubHeader>
-        <SubHeader margin={false} style={{fontSize:17,}}>{this.props.song.special==="hourly" ? "Hourly Music" : (this.props.song["liveMusic"] === true ? "Live" : "Aircheck")}</SubHeader>
+        <SubHeader margin={false} style={{fontSize:17,}}>{this.props.song.special==="hourly" ? "Hourly Music" : (this.props.song["liveMusic"] === "Music Box" ? "Music Box" : this.props.song["liveMusic"] ? "Live" : "Aircheck")}</SubHeader>
       </View>
     </View>
   }

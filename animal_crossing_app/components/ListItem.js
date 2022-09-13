@@ -361,6 +361,7 @@ class ListItem extends React.Component{
                 {this.props.item.special==="hourly" ?  <MusicButtonComponent color={colors.okButton4[global.darkMode]} text={"Play"} onPress={()=>{this.props.customTapFunction(this.props.item,false)}}/> : <>
                     <MusicButtonComponent color={colors.okButton3[global.darkMode]} text={"Aircheck"} onPress={()=>{this.props.customTapFunction(this.props.item,false)}}/>
                     <MusicButtonComponent color={colors.okButton3[global.darkMode]} text={"Live"} onPress={()=>{this.props.customTapFunction(this.props.item,true)}}/>
+                    <MusicButtonComponent color={colors.okButton3[global.darkMode]} text={"Music Box"} onPress={()=>{this.props.customTapFunction(this.props.item,"Music Box")}}/>
                   </>
                 }
                 </View>

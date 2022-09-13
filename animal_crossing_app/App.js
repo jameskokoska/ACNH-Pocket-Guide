@@ -596,7 +596,7 @@ class Main extends Component {
       } else if (this.state.currentPage===11){
         currentPageView = <CardsPage/>
       } else if (this.state.currentPage===12){
-        currentPageView = <CatalogPage/>
+        currentPageView = <CatalogPage setPage={this.setPage}/>
       } else if (this.state.currentPage===13){
         currentPageView = <SettingsPage updateSettings={this.updateSettings} setPage={this.setPage}/>
       } else if (this.state.currentPage===14){
