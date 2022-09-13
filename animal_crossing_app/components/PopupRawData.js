@@ -85,6 +85,8 @@ export default class PopupRawData extends Component {
       "SH Oct":require("../assets/icons/alarmClock.png"),
       "SH Nov":require("../assets/icons/alarmClock.png"),
       "SH Dec":require("../assets/icons/alarmClock.png"),
+      "NH time":require("../assets/icons/customTime.png"),
+      "SH time":require("../assets/icons/customTime.png"),
       "NH Jan Active":require("../assets/icons/calendar.png"),
       "NH Feb Active":require("../assets/icons/calendar.png"),
       "NH Jan Active":require("../assets/icons/calendar.png"),
