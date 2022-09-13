@@ -361,7 +361,7 @@ class NowPlayingLarge extends Component {
         }
         <View style={{marginHorizontal: 10}}>
           <SubHeader translate={false} margin={false} style={{fontSize:24, textAlign:"center", marginTop: 15}}>{this.props.song["NameLanguage"]}</SubHeader>
-          <SubHeader margin={false} style={{fontSize:20, textAlign:"center", marginTop: 5}}>{this.props.song.special==="hourly" ? "Hourly Music" : (this.props.song["liveMusic"] === true ? "Live" : "Aircheck")}</SubHeader>
+          <SubHeader margin={false} style={{fontSize:20, textAlign:"center", marginTop: 5}}>{this.props.song.special==="hourly" ? "Hourly Music" : (this.props.song["liveMusic"] === "Music Box" ? "Music Box" : this.props.song["liveMusic"] ? "Live" : "Aircheck")}</SubHeader>
         </View>
         <View style={{flexDirection:"row", justifyContent:'center', marginTop: 10}}>
           <TouchableOpacity onPress={()=>{loopSong(!global.songLooping); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
@@ -383,7 +383,7 @@ class NowPlayingLarge extends Component {
       </View>
       <SubHeader bold={false} margin={false} style={{fontSize:20, marginTop: 15, marginLeft: 20, marginBottom: 10,}}>{"Up Next"}</SubHeader>
       {global.songQueue.slice(1).map((item,index)=>{
-        return(<SongContainerRow removeSong={(index)=>this.props.removeSong(index)} index={index} song={item} key={item["Name"]+index} text={item["NameLanguage"]} text2={item.special==="hourly" ? "Hourly Music" : (item["liveMusic"] === true ? "Live" : "Aircheck")} image={item["Album Image"]}/>)
+        return(<SongContainerRow removeSong={(index)=>this.props.removeSong(index)} index={index} song={item} key={item["Name"]+index} text={item["NameLanguage"]} text2={item.special==="hourly" ? "Hourly Music" : (item["liveMusic"] === "Music Box" ? "Music Box" : item["liveMusic"] ? "Live" : "Aircheck")} image={item["Album Image"]}/>)
       })}
       <View style={{borderTopColor: colors.lightDarkAccentHeavy2[global.darkMode],borderTopWidth: 2,}}/>
     </>
