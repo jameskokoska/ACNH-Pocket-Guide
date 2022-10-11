@@ -1,3 +1,13 @@
+<h1 align="center" style="font-size:28px; line-height:1"><b>ACNH Pocket Guide</b></h1>
+
+
+<div align="center" style="font-size:18px">
+
+| 150K+ Downloads | 4K+ Reviews | 4.9+ Stars |
+| :---: | :---: | :---: |
+
+</div>
+
 <a href="https://play.google.com/store/apps/details?id=com.acnh.pocket_guide">
   <div align="center">
     <img alt="Icon" src="Promotional/icon.png" width="200px">
@@ -9,14 +19,9 @@
   </div>
 </a>
 
-<h2 align="center" style="font-size:28px; line-height:1"><b>ACNH Pocket Guide</b></h2>
 
-<div align="center" style="font-size:18px">
 
-| 150K+ Downloads | 4K+ Reviews | 4.9+ Stars |
-| :---: | :---: | :---: |
 
-</div>
 
 With a modern and well polished design, ACNH Pocket Guide is the best guide for tracking your collection as you progress through the game. View information on collectibles and creatures, as well as upcoming in game events. With the latest game information, this is the one stop for all your ACNH needs!
 
