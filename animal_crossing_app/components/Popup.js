@@ -260,9 +260,9 @@ export class PopupRawLoading extends Component {
     let NPCNames = ["Flick", "CJ", "Celeste", "Sahara", "Daisy Mae", "Isabelle", "Brewster", "Orville", "Gulliver", "Redd", "Harv", "Harvey"]
     let loadingText = attemptToTranslate(this.state.loadingText, true)
     for(let name of NPCNames){
-      loadingText = loadingText.replace(" " + name + " ", " " + attemptToTranslate(name, true) + " ")
-      loadingText = loadingText.replace(name + " ", attemptToTranslate(name, true) + " ")
-      loadingText = loadingText.replace(" " + name, " " + attemptToTranslate(name, true) + " ")
+      loadingText = loadingText.replace(" " + name + " ", " " + attemptToTranslate(name, true) + " ").replace("  ", " ")
+      loadingText = loadingText.replace(name + " ", attemptToTranslate(name, true) + " ").replace("  ", " ")
+      loadingText = loadingText.replace(" " + name, " " + attemptToTranslate(name, true) + " ").replace("  ", " ")
     }
     return (
       <Modal

@@ -241,6 +241,8 @@ export async function importAllData(text){
               global.customTimeOffset=importEntry
             } else if (key[1]==="ordinance"&&currentProfile===global.profile) {
               global.ordinance=importEntry
+            } else if (key[1]==="extraItemInfo"&&currentProfile===global.profile) {
+              global.extraItemInfo=importEntry
             }
           }
         }
@@ -316,34 +318,34 @@ export async function getAllData(){
   try{
     var dataTotal = "---ACNH Pocket Guide Backup---\n"
     for(var i = 0; i<profileNames.length; i++){
-      var profile = profileNames[i]
-      var data = await getStorage("collectedString"+profile,"");
-    
+      let profile = profileNames[i]
+      let data = await getStorage("collectedString"+profile,"");
       // data2 = uniq = [...new Set(data2)]
       // console.log("Achievements"+profile)
       // console.log(await getStorage("Achievements"+profile,"[]"))
-      var data3 = "\n{name}" + (await getStorage("name"+profile,""))
-      var data4 = "\n{islandName}" + (await getStorage("islandName"+profile,""))
-      var data5 = "\n{dreamAddress}" + (await getStorage("dreamAddress"+profile,""))
-      var data6 = "\n{friendCode}" + (await getStorage("friendCode"+profile,""))
-      var data7 = "\n{creatorCode}" + (await getStorage("creatorCode"+profile,""))
-      var data8 = "\n{HHPCode}" + (await getStorage("HHPCode"+profile,""))
-      var data9 = "\n{selectedFruit}" + (await getStorage("selectedFruit"+profile,""))
-      var data10 = "\n{settingsNorthernHemisphereSaved}" + (await getStorage("settingsNorthernHemisphereSaved"+profile,""))
-      var data11 = "\n{settingsUseCustomDateSaved}" + (await getStorage("settingsUseCustomDateSaved"+profile,""))
-      var data12 = "\n{Achievements}" + [...new Set(JSON.parse(await getStorage("Achievements"+profile,"[]")))].join("\n{Achievements}");
-      var data13 = "\n{HHP}" + [...new Set(JSON.parse(await getStorage("ParadisePlanning"+profile,"[]")))].join("\n{HHP}");
-      var data14 = "\n{ToDoList}" + (await getStorage("ToDoList"+profile,JSON.stringify(defaultToDoList())))
-      var data15 = "\n{TurnipList}" + (await getStorage("TurnipList"+profile,JSON.stringify(defaultTurnipList())))
-      var data16 = "\n{TurnipListLastPattern}" + (await getStorage("TurnipListLastPattern"+profile,"-1"))
-      var data17 = "\n{TurnipListFirstTime}" + (await getStorage("TurnipListFirstTime"+profile,"false"))
-      var data18 = "\n{customDateOffset}" + (await getStorage("customDateOffset"+profile,"0"))
-      var data19 = "\n{showVillagersTalkList}" + (await getStorage("showVillagersTalkList"+profile,"false"))
-      var data20 = "\n{CustomLists}" + [...new Set(JSON.parse(await getStorage("customLists"+profile,"[]")))].join("\n{CustomLists}");
-      var data21 = "\n{CustomListsAmount}" + (await getStorage("collectionListIndexedAmount"+profile,JSON.stringify({})))
-      var data22 = "\n{CustomListsImages}" + (await getStorage("customListsImagesIndexed"+profile,JSON.stringify({})))
-      var data23 = "\n{ordinance}" + (await getStorage("ordinance"+profile,""))
-      dataTotal = dataTotal + "{Profile}"+profile +"\n" + data + data3 + data4 + data5 + data6 + data7 + data8 + data9 + data10 + data11 + data12 + data13 + data14 + data15 + data16 + data17 + data18 + data19 + data20 + data21 + data22 + data23 + "\n" + "---END---" + "\n"
+      let data3 = "\n{name}" + (await getStorage("name"+profile,""))
+      let data4 = "\n{islandName}" + (await getStorage("islandName"+profile,""))
+      let data5 = "\n{dreamAddress}" + (await getStorage("dreamAddress"+profile,""))
+      let data6 = "\n{friendCode}" + (await getStorage("friendCode"+profile,""))
+      let data7 = "\n{creatorCode}" + (await getStorage("creatorCode"+profile,""))
+      let data8 = "\n{HHPCode}" + (await getStorage("HHPCode"+profile,""))
+      let data9 = "\n{selectedFruit}" + (await getStorage("selectedFruit"+profile,""))
+      let data10 = "\n{settingsNorthernHemisphereSaved}" + (await getStorage("settingsNorthernHemisphereSaved"+profile,""))
+      let data11 = "\n{settingsUseCustomDateSaved}" + (await getStorage("settingsUseCustomDateSaved"+profile,""))
+      let data12 = "\n{Achievements}" + [...new Set(JSON.parse(await getStorage("Achievements"+profile,"[]")))].join("\n{Achievements}");
+      let data13 = "\n{HHP}" + [...new Set(JSON.parse(await getStorage("ParadisePlanning"+profile,"[]")))].join("\n{HHP}");
+      let data14 = "\n{ToDoList}" + (await getStorage("ToDoList"+profile,JSON.stringify(defaultToDoList())))
+      let data15 = "\n{TurnipList}" + (await getStorage("TurnipList"+profile,JSON.stringify(defaultTurnipList())))
+      let data16 = "\n{TurnipListLastPattern}" + (await getStorage("TurnipListLastPattern"+profile,"-1"))
+      let data17 = "\n{TurnipListFirstTime}" + (await getStorage("TurnipListFirstTime"+profile,"false"))
+      let data18 = "\n{customDateOffset}" + (await getStorage("customDateOffset"+profile,"0"))
+      let data19 = "\n{showVillagersTalkList}" + (await getStorage("showVillagersTalkList"+profile,"false"))
+      let data20 = "\n{CustomLists}" + [...new Set(JSON.parse(await getStorage("customLists"+profile,"[]")))].join("\n{CustomLists}");
+      let data21 = "\n{CustomListsAmount}" + (await getStorage("collectionListIndexedAmount"+profile,JSON.stringify({})))
+      let data22 = "\n{CustomListsImages}" + (await getStorage("customListsImagesIndexed"+profile,JSON.stringify({})))
+      let data23 = "\n{ordinance}" + (await getStorage("ordinance"+profile,""))
+      let data24 = "\n{extraItemInfo}" + (await getStorage("extraItemInfo"+profile,""))
+      dataTotal = dataTotal + "{Profile}"+profile +"\n" + data + data3 + data4 + data5 + data6 + data7 + data8 + data9 + data10 + data11 + data12 + data13 + data14 + data15 + data16 + data17 + data18 + data19 + data20 + data21 + data22 + data23 + data24 + "\n" + "---END---" + "\n"
     }
     let settingsOutput = ""
     for(let setting of settings){

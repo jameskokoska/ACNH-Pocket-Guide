@@ -5,7 +5,7 @@ import {
 import TextFont from "./TextFont";
 import colors from "../Colors";
 import { PopupInfoCustom } from "./Popup";
-import { attemptToTranslate, capitalize } from "../LoadJsonData";
+import { attemptToTranslate, capitalize, commas } from "../LoadJsonData";
 import FastImage from "./FastImage";
 import { getMaterialImage, getPhoto, getPhotoCorner, getSizeImage } from "./GetPhoto";
 
@@ -142,7 +142,7 @@ export default class PopupRawData extends Component {
               source={{uri:this.state.item[key]}}
               cacheKey={this.state.item[key]}
             /></View> : <View/>}
-            <TextFont translate={false} style={{paddingBottom:2, fontSize: 15, color: colors.textBlack[global.darkMode]}}>{attemptToTranslate(this.state.item[key], true)}</TextFont>
+            <TextFont translate={false} style={{paddingBottom:2, fontSize: 15, color: colors.textBlack[global.darkMode]}}>{commas(attemptToTranslate(this.state.item[key], true))}</TextFont>
           </View>
         })}
       </>

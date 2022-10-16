@@ -61,6 +61,8 @@ class SettingsPage extends Component {
           <View style={{height:4}}/>
           <SettingsDivider text={"Island ordinance"}/>
           <OrdinancePicker setPage={this.props.setPage}/>
+          <SettingsDivider text={"Extra Information"}/>
+          <ExtraInfoPicker/>
           <View style={{height:5}}/>
           {global.settingsCurrent.map( (setting, index)=>
             {
@@ -311,6 +313,35 @@ export class OrdinancePicker extends Component{
       <TouchableOpacity onPress={() => this.props.setPage(15, true, "ordinanceRedirect")}>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 13, textAlign:"center", padding:4,}}>{"You can read about Ordinances by tapping here."}</TextFont>
       </TouchableOpacity>
+    </>
+    )
+  }
+}
+
+class ExtraInfoPicker extends Component {
+  render(){
+    let extraInfo = [
+      {label: "None", value: "",},
+      {label: "Sell Price", value: "Sell",},
+      {label: "Buy Price", value: "Buy",},
+      {label: "Tag", value: "Tag",},
+      {label: "Color 1", value: "Color 1",},
+      {label: "Color 2", value: "Color 2",},
+      {label: "Size", value: "Size",},
+      {label: "Variation", value: "Variation",},
+    ]
+    return(<>
+      <View style={{marginTop:5, marginBottom:2, marginHorizontal:20, justifyContent:"center"}}>
+        <DropdownMenu 
+          width={Dimensions.get('window').width-83}
+          selection={true}
+          items={extraInfo}
+          defaultValue={global.extraItemInfo}
+          onChangeItem={
+            async (item)=>{global.extraItemInfo=item.value, await AsyncStorage.setItem("extraItemInfo"+global.profile, item.value); 
+        }}/>
+      </View>
+      <TextFont bold={false} style={{color: colors.textBlack[global.darkMode], fontSize: 13, textAlign:"center", padding:4,}}>{"Add extra information under each item in the list."}</TextFont>
     </>
     )
   }

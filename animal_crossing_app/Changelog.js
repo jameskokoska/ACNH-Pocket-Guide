@@ -4,6 +4,10 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Add extra information under each item such as Sell Price, Buy Price, Tag, Color etc. (configure in the Settings page)
+-Useful when comparing items at a glance
+-Fixed loading page translations
+-
 -Added music box songs! Listen to them on the Songs page
 -Added short header option
 -Enable this new setting to reduce the amount of space taken by the searchbar header

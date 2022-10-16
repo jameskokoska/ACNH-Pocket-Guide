@@ -200,6 +200,7 @@ class Main extends Component {
     global.selectedFruit = await getStorage("selectedFruit"+global.profile,"");
     global.customTimeOffset = await getStorage("customDateOffset"+global.profile,"0");
     global.ordinance = await getStorage("ordinance"+global.profile,"");
+    global.extraItemInfo = await getStorage("extraItemInfo"+global.profile,"");
     global.customLists = JSON.parse(await getStorage("customLists"+global.profile,"[]"));
     let lastSelectedListPage = await getStorage("lastSelectedListPage"+global.profile,"");
     if(lastSelectedListPage!=="" && customLists!==undefined && customLists.includes(lastSelectedListPage)){

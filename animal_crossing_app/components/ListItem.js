@@ -10,8 +10,8 @@ import {
 import TextFont from './TextFont';
 import Check from './Check';
 import FastImage from './FastImage';
-import {checkOff, capitalize, commas, removeBrackets, inCustomLists, getCustomListsAmount, getCustomListsIcon} from "../LoadJsonData"
-import {getPhoto, getPhotoShadow} from "./GetPhoto"
+import {checkOff, capitalize, commas, removeBrackets, inCustomLists, getCustomListsAmount, getCustomListsIcon, attemptToTranslate} from "../LoadJsonData"
+import {getPhoto, getPhotoShadow, getSizeImage} from "./GetPhoto"
 import {getMonthShort, swapDateCards} from "./DateFunctions"
 import colors from "../Colors"
 import {getCurrentDateObject, parseActiveTime} from "./DateFunctions"
@@ -233,6 +233,53 @@ class ListItem extends React.Component{
       } else if (this.checkMuseumButton() || this.checkVillagerPhotoButton()){
         lowerWishlistIcon = true
       }
+
+      let labelsAndImages = {
+        "Sell" : require("../assets/icons/coin.png"),
+        "Buy" : require("../assets/icons/bellBag.png"),
+        "Miles" : require("../assets/icons/miles.png"),
+        "Nook Points": require("../assets/icons/nookLinkCoin.png"),
+        "Heart Crystals":require("../assets/icons/crystal.png"),
+        "Color 1" : require("../assets/icons/colorPalette.png"),
+        "Color 2" : require("../assets/icons/colorPalette.png"),
+        "Tag":require("../assets/icons/tag.png"),
+        "Size":this.props.item["Size"]!==undefined ? getSizeImage(this.props.item["Size"]) : require("../assets/icons/leaf.png"),    
+        "Variation" : require("../assets/icons/pattern.png"),
+      }
+
+      let extraText = capitalize(commas(this.props.item[global.extraItemInfo]));
+      let ending = "";
+      let imageSource = global.extraItemInfo;
+      if(global.extraItemInfo==="Buy"){
+        let currencyBells = false;
+        if(this.props.item["Exchange Currency"]!==undefined && this.props.item["Exchange Currency"].toString().toLowerCase().includes("miles")){
+          ending= " " + attemptToTranslate("miles");
+          imageSource = "Miles"
+        } else if(this.props.item["Exchange Currency"]!==undefined && this.props.item["Exchange Currency"].toString().toLowerCase().includes("nook points")){
+          ending= " " + attemptToTranslate("Nook points");
+          imageSource = "Nook Points";
+        } else if(this.props.item["Exchange Currency"]!==undefined && this.props.item["Exchange Currency"].toString().toLowerCase().includes("heart crystals")){
+          ending= " " + attemptToTranslate("heart crystals");
+          imageSource = "Heart Crystals";
+        } else if( this.props.item["Buy"]!=="NFS" ){
+          ending = " " + attemptToTranslate("bells");
+          imageSource = "Buy"
+          currencyBells = true;
+        } else {
+          ending = "";
+        }
+        if(this.props.item["Buy"]!==undefined && this.props.item["Buy"]==="NFS" && this.props.item["Exchange Price"] !==undefined && this.props.item["Exchange Price"] !=="NA"){
+          if(currencyBells && global.ordinance === "Bell Boom" && this.props.item["Buy"]!==undefined){
+            extraText = commas(parseInt(this.props.item["Buy"])*1.2) + ending
+          } else if(currencyBells && this.props.item["Buy"]!==undefined){
+            extraText = commas(parseInt(this.props.item["Buy"])) + ending
+          } else {
+            extraText = commas(this.props.item["Exchange Price"]) + ending;
+          }
+        }
+      }
+    
+
       return (
         <View style={styles.gridWrapper}>
           
@@ -257,7 +304,7 @@ class ListItem extends React.Component{
               }
             }}
           >
-            <View style={[styles.gridBox, {backgroundColor:boxColor}]}>
+            <View style={[styles.gridBox, {backgroundColor:boxColor, height:global.extraInfo !== "" ? 160 : 150}]}>
               {missingVariationsIndicator}
               <PanGestureHandler activeOffsetY={100} activeOffsetX={20}>
                 <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -33, top: -33, zIndex:10}}>
@@ -316,6 +363,14 @@ class ListItem extends React.Component{
               <View style={styles.gridBoxText}>
                 <TextFont translate={false} numberOfLines={2} bold={true} style={{textAlign:'center', color:this.props.labelColor, fontSize:12}}>{capitalize(label)}</TextFont>
                 {textProperty2Component}
+                {this.props.item[global.extraItemInfo]!==undefined && this.props.item[global.extraItemInfo]!=="NA" && this.props.item[global.extraItemInfo]!=="" ? <View style={{display:"flex", flexDirection:"row", alignItems:"center", justifyContent:"center", marginBottom:-5, flexWrap:"wrap", marginHorizontal:10}}>
+                  {labelsAndImages[global.extraItemInfo]!==undefined ? <Image
+                      style={{width:15, height:15, resizeMode:"contain", marginRight: 4, marginTop:3}}
+                      source={labelsAndImages[imageSource]}
+                    /> : <View/>
+                  }
+                  <TextFont translate={false} numberOfLines={2} bold={true} style={{textAlign:'left', color:this.props.labelColor, fontSize:11, marginTop: 3}}>{extraText}</TextFont>
+                </View> : <></>}
               </View>
             </View>
           </TouchableNativeFeedback>
