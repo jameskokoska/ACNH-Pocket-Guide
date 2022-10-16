@@ -82,6 +82,7 @@ class CreditsPage extends Component {
         <SubHeader> Jorge Abraham</SubHeader>
         <SubHeader> Lizbeth Salazar Zetina</SubHeader>
         <SubHeader> SakerMaker</SubHeader>
+        <SubHeader> David</SubHeader>
       </CreditBox>
       <CreditBox>
         <SubHeader style={{marginBottom:5}}>{attemptToTranslate("German") + ":"}</SubHeader>

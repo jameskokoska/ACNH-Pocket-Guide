@@ -364,7 +364,7 @@ class ListItem extends React.Component{
                 {textProperty2Component}
                 {this.props.item[global.extraItemInfo]!==undefined && this.props.item[global.extraItemInfo]!=="NA" && this.props.item[global.extraItemInfo]!=="" ? <View style={{display:"flex", flexDirection:"row", alignItems:"center", justifyContent:"center", marginBottom:-5, flexWrap:"wrap", marginHorizontal:10}}>
                   {labelsAndImages[global.extraItemInfo]!==undefined ? <Image
-                      style={{width:15, height:15, resizeMode:"contain", marginRight: 4, marginTop:3}}
+                      style={{width:14, height:14, resizeMode:"contain", marginRight: 4, marginTop:3}}
                       source={labelsAndImages[imageSource]}
                     /> : <View/>
                   }
