@@ -59,6 +59,7 @@ This application uses Expo and React Native. Install expo. Navigate into the ```
 - All data backup and restore
 - Cache images during runtime to allow efficient scrolling
 - Multiple island profiles
+- Customize event notifications
 - Custom collection lists
 - Custom app global time setting offset
 
@@ -69,6 +70,7 @@ This application uses Expo and React Native. Install expo. Navigate into the ```
 - Intuitive gesture actions and UI layout
 - Upcoming events list + Villager birthdays
 - Calendar and events list and visuals
+- Event notifications
 - Store hours
 - Wishlist and custom collection lists
 - Islander info profile
