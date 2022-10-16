@@ -279,7 +279,6 @@ class ListItem extends React.Component{
         }
       }
     
-
       return (
         <View style={styles.gridWrapper}>
           
@@ -304,7 +303,7 @@ class ListItem extends React.Component{
               }
             }}
           >
-            <View style={[styles.gridBox, {backgroundColor:boxColor, height:global.extraInfo !== "" ? 160 : 150}]}>
+            <View style={[styles.gridBox, {backgroundColor:boxColor, height:(global.extraInfo !== "" && global.extraInfo !== undefined ? 160 : 150)}]}>
               {missingVariationsIndicator}
               <PanGestureHandler activeOffsetY={100} activeOffsetX={20}>
                 <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -33, top: -33, zIndex:10}}>
