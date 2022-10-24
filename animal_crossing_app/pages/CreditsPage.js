@@ -40,7 +40,7 @@ class CreditsPage extends Component {
       <CreditTextBox text="Cindee"/>
       <CreditTextBox text="Jennifer R."/>
       <CreditTextBox text="SavannahLynn"/>
-      <CreditTextBox text="Ari K."/>
+      <CreditImageContainer image={require("../assets/icons/Ari.png")} text="Ari K." textBottom="Gold Supporter"/>
       <View style={{height:12}}/>
       <SubHeader style={{fontSize: 24}}>Silver Supporters</SubHeader>
       <SubHeader bold={false} style={{marginBottom:6, marginTop:0, fontSize: 17}}>{attemptToTranslate("Thanks for your support!")}</SubHeader>
