@@ -73,7 +73,8 @@ export default class PopupChangelog extends Component {
         <>
           <PopupBottomCustom ref={(popup) => this.popup = popup} onClose={async () => {await AsyncStorage.setItem("changelog", global.version)}}>
             <TextFont bold={true} style={{fontSize: 28, textAlign:"center",color: colors.textBlack[global.darkMode],}}>{"What's New?"}</TextFont>
-            {this.numLogins>3?<GiveSupport tapHere blueText style={{marginBottom:-20}}/>:<View/>}
+            {/* Support */}
+            {/* {this.numLogins>5?<GiveSupport tapHere blueText style={{marginBottom:-20}}/>:<View/>} */}
             {
               changelogText.map((point, index) => {
                 return(<TextFont key={index} bold={false} style={{marginBottom:4, fontSize: 18, color: colors.textBlack[global.darkMode]}}>{point}</TextFont>)

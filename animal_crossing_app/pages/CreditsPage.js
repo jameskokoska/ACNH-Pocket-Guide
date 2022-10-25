@@ -57,8 +57,10 @@ class CreditsPage extends Component {
       <CreditTextBox text="LunaKat"/>
       <View style={{height: 5}}/>
       <View style={{paddingHorizontal: 20}}>
-        <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.popupSupport?.setPopupVisible(true)}} text={capitalize(attemptToTranslate("Leave a Tip"))} />
-        <Popup support={true} noDismiss ref={(popupSupport) => this.popupSupport = popupSupport} text="Leave a Tip" button1={"Sure!"} button1Action={()=>{openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
+        {/* Support */}
+        {/* <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.popupSupport?.setPopupVisible(true)}} text={capitalize(attemptToTranslate("Leave a Tip"))} /> */}
+        {/* <Popup support={true} noDismiss ref={(popupSupport) => this.popupSupport = popupSupport} text="Leave a Tip" button1={"Sure!"} button1Action={()=>{openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/> */}
+        {/* <TextFont bold={true} style={{textAlign:"center", fontSize: 16, color: colors.dateButton[global.darkMode], marginVertical: 10}}>If you enjoy this free app, you can support dapperappdeveloper on KoFi!</TextFont> */}
         <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.popupRating?.setPopupVisible(true)}} text={capitalize(attemptToTranslate("Leave a rating"))} />
         <PopupRating ref={(popupRating) => this.popupRating = popupRating}/>
       </View>
