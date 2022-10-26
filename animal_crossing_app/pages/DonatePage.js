@@ -47,13 +47,15 @@ export default class DonatePage extends Component {
       if (responseCode === InAppPurchases.IAPResponseCode.OK) {
         results.forEach(async (purchase) => {
           if (!purchase.acknowledged) {
-            await InAppPurchases.finishTransactionAsync(purchase, true);
-
+            await new Promise(resolve => setTimeout(resolve, 500));
             if(["silver"].includes(purchase["productId"])){
+              await InAppPurchases.finishTransactionAsync(purchase, false);
               this.popupUsername?.setPopupVisible(true)
             } else if(["gold","diamond"].includes(purchase["productId"])){
+              await InAppPurchases.finishTransactionAsync(purchase, false);
               this.popupUsernameIcon?.setPopupVisible(true)
             } else {
+              await InAppPurchases.finishTransactionAsync(purchase, true);
               toast.show("Thank you for your support!", {type:"success", 
                 placement:'top',
                 duration: 5000, 
@@ -112,7 +114,6 @@ export default class DonatePage extends Component {
           color={colors.okButton[global.darkMode]}
           vibrate={15}
           onPress={() => {
-            openURL('mailto:dapperappdeveloper@gmail.com')
             toast.show("Thank you for your support!", {type:"success", 
               placement:'top',
               duration: 5000, 
@@ -124,6 +125,9 @@ export default class DonatePage extends Component {
                 ),
               }
             })
+            this.popupUsername?.setPopupVisible(false);
+            this.popupUsernameIcon?.setPopupVisible(false);
+            openURL('mailto:dapperappdeveloper@gmail.com')
           }}
         /> 
       </View>
@@ -141,14 +145,14 @@ export default class DonatePage extends Component {
 
         {this.state.products!=={} ? <>
         
-        <SupportOption label="Coffee" id="coffee" image={require("../assets/icons/coffee3.png")} price={this.state.products["coffee"]?.price} descriptionShort={"Caffeine to stay awake!"}/>
-        <SupportOption label="Cake" id="cake" image={require("../assets/icons/cupcake.png")} price={this.state.products["cake"]?.price} descriptionShort={"Something sweet to eat!"}/>
-        <SupportOption label="Meal" id="meal" image={require("../assets/icons/meal.png")} price={this.state.products["meal"]?.price} descriptionShort={"Very yummy and filling!"}/>     
+        {this.state.products["coffee"]?.price === undefined ? <></> : <SupportOption label="Coffee" id="coffee" image={require("../assets/icons/coffee3.png")} price={this.state.products["coffee"]?.price} descriptionShort={"Caffeine to stay awake!"}/>}
+        {this.state.products["cake"]?.price === undefined ? <></> : <SupportOption label="Cake" id="cake" image={require("../assets/icons/cupcake.png")} price={this.state.products["cake"]?.price} descriptionShort={"Something sweet to eat!"}/>}
+        {this.state.products["meal"]?.price === undefined ? <></> : <SupportOption label="Meal" id="meal" image={require("../assets/icons/meal.png")} price={this.state.products["meal"]?.price} descriptionShort={"Very yummy and filling!"}/>}
 
         <SubHeader style={{marginTop: 20, fontSize:23, marginBottom: 4, marginLeft: 25}}>Supporter Tiers</SubHeader>
-        <SupportOption label="Silver" id="silver" image={require("../assets/icons/silver-medal.png")} price={this.state.products["silver"]?.price+"/"+attemptToTranslate("month")} description="Get your name in the About page of the app!"/>
-        <SupportOption label="Gold" id="gold" image={require("../assets/icons/gold-medal.png")} price={this.state.products["gold"]?.price+"/"+attemptToTranslate("month")} description="Get your name and custom player avatar in the About page of the app!"/>
-        <SupportOption label="Diamond" id="diamond" image={require("../assets/icons/diamond-medal.png")} price={this.state.products["diamond"]?.price+"/"+attemptToTranslate("month")} description="Get your name and custom player avatar in the About page of the app!"/>
+        {this.state.products["silver"]?.price === undefined ? <></> : <SupportOption label="Silver" id="silver" image={require("../assets/icons/silver-medal.png")} price={this.state.products["silver"]?.price+"/"+attemptToTranslate("month")} description="Get your name in the About page of the app!"/>}
+        {this.state.products["gold"]?.price === undefined ? <></> : <SupportOption label="Gold" id="gold" image={require("../assets/icons/gold-medal.png")} price={this.state.products["gold"]?.price+"/"+attemptToTranslate("month")} description="Get your name and custom player avatar in the About page of the app!"/>}
+        {this.state.products["diamond"]?.price === undefined ? <></> : <SupportOption label="Diamond" id="diamond" image={require("../assets/icons/diamond-medal.png")} price={this.state.products["diamond"]?.price+"/"+attemptToTranslate("month")} description="Get your name and custom player avatar in the About page of the app!"/>}
         
         </>
         :

@@ -2,6 +2,9 @@ import * as Notifications from 'expo-notifications';
 import React, {Component} from 'react';
 import {getSettingsString} from "./LoadJsonData"
 
+// Notification icons and color
+// https://github.com/expo/expo/tree/master/packages/expo-notifications#configure-for-android
+
 // Notifications.setNotificationHandler({
 //   handleNotification: async () => ({
 //     shouldShowAlert: true,

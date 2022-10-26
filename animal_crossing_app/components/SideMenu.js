@@ -104,7 +104,8 @@ export default class SideMenu extends Component {
             {
               if(section["pageNum"]!="breaker"){
                 let disabled = this.state.sideMenuSectionsDisabled.includes(section["displayName"])
-                return <SidebarElement 
+                return <SidebarElement
+                  containerWidth={this.maxWidth}
                   key={section["pageNum"].toString()+index.toString()}
                   image={this.getSectionPictureFix(section.displayName)} 
                   title={section.displayName}
@@ -114,7 +115,7 @@ export default class SideMenu extends Component {
                   currentPage={this.props.currentPage} 
                   backgroundColor={colors[this.getSectionColorFix(section.displayName)][global.darkMode]}
                   textColor={colors.textBlack[global.darkMode]} 
-                  unselectedColor={this.state.editMode&&!section.cannotDisable?colors.inkWell[global.darkMode]+(disabled?"1F":"8F"):colors.textWhite[global.darkMode]}
+                  unselectedColor={this.state.editMode&&!section.cannotDisable?colors.inkWell[global.darkMode]+(disabled?"1F":"8F"):"transparent"}
                   editMode={this.state.editMode}
                   editSections={this.editSections}
                   index={index}
