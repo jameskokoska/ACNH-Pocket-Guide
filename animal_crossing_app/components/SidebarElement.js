@@ -86,7 +86,7 @@ class SidebarElement extends Component {
               {!this.props.disabled?removeButton:addButton}
               {changeOrderButtons}
               <Image style={styles.sidebarImage} source={this.props.image}/>
-              <TextFont translate={false} bold={true} style={[styles.sidebarTitle,{color:this.props.textColor}]}>{this.props.title==="Emoticons"?"Reactions":capitalizeFirst(attemptToTranslate(this.props.title))}</TextFont>
+              <TextFont translate={false} bold={true} style={[styles.sidebarTitle,{color:this.props.textColor}]}>{this.props.displayName==="Emoticons"?"Reactions":capitalizeFirst(attemptToTranslate(this.props.displayName))}</TextFont>
             </View>
           </TouchableNativeFeedback>
         </>

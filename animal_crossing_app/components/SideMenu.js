@@ -108,6 +108,7 @@ export default class SideMenu extends Component {
                   key={section["pageNum"].toString()+index.toString()}
                   image={this.getSectionPictureFix(section.displayName)} 
                   title={section.displayName}
+                  displayName={section.displayName === "Buy Me a Coffee" ? ["Buy Me a Coffee", "Support the App", "Support the Developer"][Math.floor(global.randomGlobal * 3)] : section.displayName}
                   pageNum={section.pageNum} 
                   setPage={this.props.setPage} 
                   currentPage={this.props.currentPage} 

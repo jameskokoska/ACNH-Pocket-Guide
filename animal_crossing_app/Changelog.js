@@ -4,6 +4,11 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Support page!
+-Major package and backend changes
+-Library upgrades
+-Stability improvements
+-
 -Play Store policy compliances
 -Translation updates
 -Add extra information under each item such as Sell Price, Buy Price, Tag, Color etc. (configure in the Settings page)

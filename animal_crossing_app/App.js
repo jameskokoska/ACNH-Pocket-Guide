@@ -123,6 +123,7 @@ const appInfo = require("./app.json");
 global.version = appInfo["expo"]["version"];
 global.versionCode = appInfo["expo"]["android"]["versionCode"];
 const Stack = createNativeStackNavigator();
+global.randomGlobal = 0
 
 class App extends Component {
   constructor() {
@@ -152,6 +153,7 @@ class Main extends Component {
     this.setFirstLogin = this.setFirstLogin.bind(this);
     this.handleBackButton = this.handleBackButton.bind(this);
     this.random = Math.random();
+    global.randomGlobal = Math.random();
     this.state = {
       loaded: false,
       currentPage:0,

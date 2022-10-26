@@ -47,10 +47,12 @@ export default class DonatePage extends Component {
       if (responseCode === InAppPurchases.IAPResponseCode.OK) {
         results.forEach(async (purchase) => {
           if (!purchase.acknowledged) {
+            await InAppPurchases.finishTransactionAsync(purchase, true);
+
             if(["silver"].includes(purchase["productId"])){
-              this.popupUsername.setPopupVisible(true)
+              this.popupUsername?.setPopupVisible(true)
             } else if(["gold","diamond"].includes(purchase["productId"])){
-              this.popupUsernameIcon.setPopupVisible(true)
+              this.popupUsernameIcon?.setPopupVisible(true)
             } else {
               toast.show("Thank you for your support!", {type:"success", 
                 placement:'top',
@@ -64,7 +66,6 @@ export default class DonatePage extends Component {
                 }
               })
             }
-            InAppPurchases.finishTransactionAsync(purchase, true);
           }
         });
       } else {
