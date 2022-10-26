@@ -492,7 +492,7 @@ class HomePage extends Component {
           />
         </View>
       </View>
-      <View style={{position:"absolute", zIndex:-5, top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'flex-end', alignItems: 'center',overflow: "hidden" }}>
+      <View style={{position:"absolute", zIndex:-1, top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'flex-end', alignItems: 'center',overflow: "hidden" }}>
         <Image style={{top:0, width:Dimensions.get('window').width, height:Dimensions.get('window').height-298, resizeMode:"stretch",zIndex:10, backgroundColor:colors.grassColor[global.darkMode]}} source={global.darkMode===1 ? require("../assets/icons/cliffDark.png") : require("../assets/icons/cliff.png")} />
       </View>
       <VillagerPopupPopup ref={(villagerPopupPopup) => this.villagerPopupPopup = villagerPopupPopup} setPage={this.props.setPage}/>

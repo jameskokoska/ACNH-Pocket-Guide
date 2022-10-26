@@ -311,7 +311,7 @@ export class OrdinancePicker extends Component{
         }}/>
       </View>
       <TouchableOpacity onPress={() => this.props.setPage(15, true, "ordinanceRedirect")}>
-        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 13, textAlign:"center", padding:4,}}>{"You can read about Ordinances by tapping here."}</TextFont>
+        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 13, textAlign:"center", padding:4, marginHorizontal: 20}}>{"You can read about Ordinances by tapping here."}</TextFont>
       </TouchableOpacity>
     </>
     )
@@ -341,7 +341,7 @@ class ExtraInfoPicker extends Component {
             async (item)=>{global.extraItemInfo=item.value, await AsyncStorage.setItem("extraItemInfo"+global.profile, item.value); 
         }}/>
       </View>
-      <TextFont bold={false} style={{color: colors.textBlack[global.darkMode], fontSize: 13, textAlign:"center", padding:4,}}>{"Add extra information under each item in the list."}</TextFont>
+      <TextFont bold={false} style={{color: colors.textBlack[global.darkMode], fontSize: 13, textAlign:"center", padding:4, marginHorizontal: 20}}>{"Add extra information under each item in the list."}</TextFont>
     </>
     )
   }
