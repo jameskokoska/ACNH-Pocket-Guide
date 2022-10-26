@@ -23,38 +23,7 @@ class CreditsPage extends Component {
       <CreditImageContainer image={require("../assets/icons/James.png")} text="James" textBottom="Lead Programmer"/>
       <CreditImageContainer image={require("../assets/icons/Ryan.png")} text="Ryan" textBottom="Lead Graphics"/>
       <View style={{height: 20}}/>
-      <SubHeader style={{fontSize: 24}}>Diamond Supporters</SubHeader>
-      <SubHeader bold={false} style={{marginBottom:6, marginTop:0, fontSize: 17}}>{attemptToTranslate("Thanks for your support!")}</SubHeader>
-      <CreditImageContainer largerImage image={require("../assets/icons/Wheels.png")} text="Wheels" textBottom="Diamond Supporter"/>
-      <CreditImageContainer image={require("../assets/icons/smma.png")} text="smma" textBottom="Diamond Supporter"/>
-      <CreditImageContainer image={require("../assets/icons/Kalie.png")} text="Kalie" textBottom="Diamond Supporter"/>
-      <CreditTextBox text="Spockslefteyebrow"/>
-      <View style={{height:12}}/>
-      <SubHeader style={{fontSize: 24}}>Gold Supporters</SubHeader>
-      <SubHeader bold={false} style={{marginBottom:6, marginTop:0, fontSize: 17}}>{attemptToTranslate("Thanks for your support!")}</SubHeader>
-      <CreditTextBox text="DeadlySweetz"/>
-      <CreditImageContainer image={require("../assets/icons/Frank.png")} text="Frank S." textBottom="Gold Supporter"/>
-      <CreditImageContainer image={require("../assets/icons/YvonneDeBusschere.png")} text="YvonneDeBusschere" textBottom="Gold Supporter"/>
-      <CreditTextBox text="Hidden Cat"/>
-      <CreditImageContainer image={require("../assets/icons/Tida.png")} text="Tida" textBottom="Gold Supporter"/>
-      <CreditTextBox text="Cindee"/>
-      <CreditTextBox text="Jennifer R."/>
-      <CreditTextBox text="SavannahLynn"/>
-      <CreditImageContainer image={require("../assets/icons/Ari.png")} text="Ari K." textBottom="Gold Supporter"/>
-      <View style={{height:12}}/>
-      <SubHeader style={{fontSize: 24}}>Silver Supporters</SubHeader>
-      <SubHeader bold={false} style={{marginBottom:6, marginTop:0, fontSize: 17}}>{attemptToTranslate("Thanks for your support!")}</SubHeader>
-      <CreditTextBox text="Nigerski"/>
-      <CreditTextBox text="Christina J."/>
-      <CreditTextBox text="NoLNoodle"/>
-      <CreditTextBox text="Harkken"/>
-      <CreditTextBox text="RisingProtostar"/>
-      <CreditTextBox text="Kryptonite"/>
-      <CreditTextBox text="Deanna"/>
-      <CreditTextBox text="Tee"/>
-      <CreditTextBox text="Jacqueline D. (Quinn)"/>
-      <CreditTextBox text="nojinmyname"/>
-      <CreditTextBox text="LunaKat"/>
+      <Supporters/>
       <View style={{height: 5}}/>
       <View style={{paddingHorizontal: 20}}>
         {/* Support */}
@@ -219,6 +188,45 @@ class CreditBox extends Component{
   render(){
     return <View style={{backgroundColor: colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
       {this.props.children}
+    </View>
+  }
+}
+
+export class Supporters extends Component{
+  render(){
+    return <View>
+      <SubHeader style={{fontSize: 24}}>Diamond Supporters</SubHeader>
+      <SubHeader bold={false} style={{marginBottom:6, marginTop:0, fontSize: 17}}>{attemptToTranslate("Thanks for your support!")}</SubHeader>
+      <CreditImageContainer largerImage image={require("../assets/icons/Wheels.png")} text="Wheels" textBottom="Diamond Supporter"/>
+      <CreditImageContainer image={require("../assets/icons/smma.png")} text="smma" textBottom="Diamond Supporter"/>
+      <CreditImageContainer image={require("../assets/icons/Kalie.png")} text="Kalie" textBottom="Diamond Supporter"/>
+      <CreditTextBox text="Spockslefteyebrow"/>
+      <View style={{height:12}}/>
+      <SubHeader style={{fontSize: 24}}>Gold Supporters</SubHeader>
+      <SubHeader bold={false} style={{marginBottom:6, marginTop:0, fontSize: 17}}>{attemptToTranslate("Thanks for your support!")}</SubHeader>
+      <CreditTextBox text="DeadlySweetz"/>
+      <CreditImageContainer image={require("../assets/icons/Frank.png")} text="Frank S." textBottom="Gold Supporter"/>
+      <CreditImageContainer image={require("../assets/icons/YvonneDeBusschere.png")} text="YvonneDeBusschere" textBottom="Gold Supporter"/>
+      <CreditTextBox text="Hidden Cat"/>
+      <CreditImageContainer image={require("../assets/icons/Tida.png")} text="Tida" textBottom="Gold Supporter"/>
+      <CreditTextBox text="Cindee"/>
+      <CreditTextBox text="Jennifer R."/>
+      <CreditTextBox text="SavannahLynn"/>
+      <CreditImageContainer image={require("../assets/icons/Ari.png")} text="Ari K." textBottom="Gold Supporter"/>
+      <View style={{height:12}}/>
+      <SubHeader style={{fontSize: 24}}>Silver Supporters</SubHeader>
+      <SubHeader bold={false} style={{marginBottom:6, marginTop:0, fontSize: 17}}>{attemptToTranslate("Thanks for your support!")}</SubHeader>
+      <CreditTextBox text="Nigerski"/>
+      <CreditTextBox text="Christina J."/>
+      <CreditTextBox text="NoLNoodle"/>
+      <CreditTextBox text="Harkken"/>
+      <CreditTextBox text="RisingProtostar"/>
+      <CreditTextBox text="Kryptonite"/>
+      <CreditTextBox text="Deanna"/>
+      <CreditTextBox text="Tee"/>
+      <CreditTextBox text="Jacqueline D. (Quinn)"/>
+      <CreditTextBox text="nojinmyname"/>
+      <CreditTextBox text="LunaKat"/>
     </View>
   }
 }
