@@ -169,6 +169,13 @@ export default class SideMenu extends Component {
 
 export const sideSections = [
   {
+    "pageNum" : 39,
+    "picture" : require("../assets/icons/coffee2.png"),
+    "displayName" : "Buy Me a Coffee",
+    "color": "selectHome",
+    "cannotDisable":false,
+  },
+  {
     "pageNum" : 0,
     "picture" : require("../assets/icons/homeIcon.png"),
     "displayName" : "Home",

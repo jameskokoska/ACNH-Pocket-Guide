@@ -73,6 +73,7 @@ import * as ErrorRecovery from 'expo-error-recovery';
 import CrashPage, { EmptyPage } from './pages/CrashPage';
 import VillagerPhotoPoster from './pages/VillagerPhotoPoster';
 import TodoReorderPage from './pages/TodoReorderPage';
+import DonatePage from './pages/DonatePage';
 
 const backup = console.warn;
 
@@ -99,7 +100,14 @@ const globalErrorHandler = (error, isFatal) => {
 
 ErrorUtils.setGlobalHandler(globalErrorHandler);
 
-//eas build --platform android
+// Production build
+// eas build --platform android
+
+// Development build with native code:
+// Read more: https://docs.expo.dev/development/getting-started/
+// eas build --profile development --platform android
+// npx expo start --dev-client
+
 
 Sentry.init({
   dsn: sentryConfig["dsn"],
@@ -643,6 +651,8 @@ class Main extends Component {
         currentPageView = <VillagerPhotoPoster villager={this.state.propsPassed}/>
       } else if (this.state.currentPage===38){
         currentPageView = <TodoReorderPage todos={this.state.propsPassed}/>
+      } else if (this.state.currentPage===39){
+        currentPageView = <DonatePage />
       } else {
         currentPageView = <Text>Default</Text>
       }
