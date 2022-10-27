@@ -669,11 +669,11 @@ export async function loadGlobalData(){
     global.dataLoadedArt = await getStorageData([[require("./assets/data/DataCreated/Artwork.json"),"Art"]],[["artCheckList","Name","Genuine"]],"false");
     global.dataLoadedVillagers = await getStorageData([[require("./assets/data/DataCreated/Villagers.json"),"Villagers"]],[["villagerCheckList","Name"]],"false");
     global.dataLoadedFurniture = await getStorageData([
-      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json")), "Housewares"],
-      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Miscellaneous.json")), "Miscellaneous"],
+      [require("./assets/data/DataCreated/Housewares.json"), "Housewares"],
+      [require("./assets/data/DataCreated/Miscellaneous.json"), "Miscellaneous"],
       [require("./assets/data/DataCreated/Wall-mounted.json"), "Wall-mounted"],
       [require("./assets/data/DataCreated/Ceiling Decor.json"), "Ceiling Decor"],
-      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Photos.json")), "Photos"],
+      [require("./assets/data/DataCreated/Photos.json"), "Photos"],
       [require("./assets/data/DataCreated/Posters.json"), "Posters"],
     ],
     [
@@ -685,10 +685,10 @@ export async function loadGlobalData(){
       ["furnitureCheckList","Name"],
     ],"false");
     global.dataLoadedClothing = await getStorageData([
-      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Headwear.json")), "Headwear"],
+      [require("./assets/data/DataCreated/Headwear.json"), "Headwear"],
       [require("./assets/data/DataCreated/Accessories.json"), "Accessories"],
-      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Tops.json")), "Tops"],
-      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Dress-Up.json")), "Dress-Up"],
+      [require("./assets/data/DataCreated/Tops.json"), "Tops"],
+      [require("./assets/data/DataCreated/Dress-Up.json"), "Dress-Up"],
       [require("./assets/data/DataCreated/Clothing Other.json"),"Clothing Other"],
       [require("./assets/data/DataCreated/Bottoms.json"),"Bottoms"],
       [require("./assets/data/DataCreated/Socks.json"),"Socks"],
@@ -726,16 +726,16 @@ export async function loadGlobalData(){
     global.dataLoadedGyroids = await getStorageData([[require("./assets/data/DataCreated/Gyroids.json"),"Gyroids"]],[["gyroidCheckList","Name","Variation","Pattern"]],"false");
     global.dataLoadedAll = await getStorageData(
     [
-      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json")), "Housewares"],
-      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Miscellaneous.json")), "Miscellaneous"],
+      [require("./assets/data/DataCreated/Housewares.json"), "Housewares"],
+      [require("./assets/data/DataCreated/Miscellaneous.json"), "Miscellaneous"],
       [require("./assets/data/DataCreated/Wall-mounted.json"), "Wall-mounted"],
       [require("./assets/data/DataCreated/Ceiling Decor.json"), "Ceiling Decor"],
-      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Photos.json")), "Photos"],
+      [require("./assets/data/DataCreated/Photos.json"), "Photos"],
       [require("./assets/data/DataCreated/Posters.json"), "Posters"],
-      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Headwear.json")), "Headwear"],
+      [require("./assets/data/DataCreated/Headwear.json"), "Headwear"],
       [require("./assets/data/DataCreated/Accessories.json"), "Accessories"],
-      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Tops.json")), "Tops"],
-      [JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Dress-Up.json")), "Dress-Up"],
+      [require("./assets/data/DataCreated/Tops.json"), "Tops"],
+      [require("./assets/data/DataCreated/Dress-Up.json"), "Dress-Up"],
       [require("./assets/data/DataCreated/Clothing Other.json"),"Clothing Other"],
       [require("./assets/data/DataCreated/Bottoms.json"),"Bottoms"],
       [require("./assets/data/DataCreated/Socks.json"),"Socks"],

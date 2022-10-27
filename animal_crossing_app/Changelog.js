@@ -1,10 +1,12 @@
 export const gameVersion = ["2.0.0","2.0.4"]
-export const dataVersion = "6"
+export const dataVersion = "7"
 export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
 -Support page!
+-Data is now bundled directly into the app
+-Data generation no longer occurs
 -Major package and backend changes
 -Library upgrades
 -Stability improvements

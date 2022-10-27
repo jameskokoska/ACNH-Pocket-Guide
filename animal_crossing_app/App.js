@@ -21,7 +21,7 @@ import LottieView from 'lottie-react-native';
 import CreditsPage from './pages/CreditsPage';
 import FlowerPage from './pages/FlowerPage';
 import CardsPage from './pages/CardsPage';
-import {getDefaultLanguage, getStorage,getSettingsString, settings, loadGlobalData, attemptToTranslate, indexCollectionList, setSettingsString, openURL} from './LoadJsonData';
+import {getDefaultLanguage, getStorage,getSettingsString, settings, loadGlobalData, attemptToTranslate, indexCollectionList, setSettingsString, openURL, deleteGeneratedData} from './LoadJsonData';
 import Onboard from './pages/Onboard';
 import colors from './Colors.js';
 import * as Font from 'expo-font';
@@ -107,6 +107,9 @@ ErrorUtils.setGlobalHandler(globalErrorHandler);
 // Read more: https://docs.expo.dev/development/getting-started/
 // eas build --profile development --platform android
 // npx expo start --dev-client
+
+// Develop internal preview build
+// eas build --profile preview --platform android 
 
 
 Sentry.init({
@@ -273,69 +276,80 @@ class Main extends Component {
 
       let dataVersionLoaded = await getStorage("dataVersion","");
       
-      let generated = 0
-      for(let generateJSONIndex = 0; generateJSONIndex < this.generateJSON.length; generateJSONIndex++){
-        if((await FileSystem.readDirectoryAsync(FileSystem.documentDirectory)).includes(this.generateJSON[generateJSONIndex]+".json")){
-          console.log("Loaded from memory")
-          generated = generated + 1
-          // let fileURI = `${FileSystem.documentDirectory}${this.generateJSON[generateJSONIndex]+".json"}`;
-          // console.log(JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json")))
-        }
-      }
-      if(dataVersionLoaded === "" || dataVersionLoaded !== dataVersion){
-        console.log("New data version")
-      }
+      // let generated = 0
+      // for(let generateJSONIndex = 0; generateJSONIndex < this.generateJSON.length; generateJSONIndex++){
+      //   if((await FileSystem.readDirectoryAsync(FileSystem.documentDirectory)).includes(this.generateJSON[generateJSONIndex]+".json")){
+      //     console.log("Loaded from memory")
+      //     generated = generated + 1
+      //     // let fileURI = `${FileSystem.documentDirectory}${this.generateJSON[generateJSONIndex]+".json"}`;
+      //     // console.log(JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json")))
+      //   }
+      // }
+      // if(dataVersionLoaded === "" || dataVersionLoaded !== dataVersion){
+      //   console.log("New data version")
+      // }
 
       //Load Settings
       await this.loadSettings();
       this.updateDarkMode();
 
-      if(generated < this.generateJSON.length || dataVersionLoaded === "" || dataVersionLoaded !== dataVersion){
-        let dataVersionLoadedAttempted = await getStorage("dataVersionAttempted","loaded");
+      this.popupLoading?.setPopupVisible(true)
+      await this.continueMountingGenerate(false)
 
-        if(dataVersionLoadedAttempted==="not loaded"){
-          this.popupGenerateMenu?.setPopupVisible(true)
-        }else{
-          await AsyncStorage.setItem("dataVersionAttempted", "not loaded");
-          await this.continueMountingGenerate(true)
-        }
-      }else{
-        this.popupLoading?.setPopupVisible(true)
-        await this.continueMountingGenerate(false)
+      if(dataVersionLoaded !== "" && dataVersionLoaded !== dataVersion){
+        this.popupGeneratingData?.setPopupVisible(true)
+        await deleteGeneratedData()
+        this.popupGeneratingData?.setPopupVisible(false)
       }
+
+      // if(generated < this.generateJSON.length || dataVersionLoaded === "" || dataVersionLoaded !== dataVersion){
+      //   let dataVersionLoadedAttempted = await getStorage("dataVersionAttempted","loaded");
+
+      //   if(dataVersionLoadedAttempted==="not loaded"){
+      //     this.popupGenerateMenu?.setPopupVisible(true)
+      //   }else{
+      //     await AsyncStorage.setItem("dataVersionAttempted", "not loaded");
+      //     await this.continueMountingGenerate(true)
+      //   }
+      // }else{
+      //   this.popupLoading?.setPopupVisible(true)
+      //   await this.continueMountingGenerate(false)
+      // }
     }, 10);
   }
 
   continueMountingGenerate = async(generate) => {
-    if(generate===true){
-      this.popupGeneratingData?.setPopupVisible(true)
-      console.log("Generating into memory")
-      const [{ localUri }] = await Asset.loadAsync(require("./assets/data/dataGenerate.zip"));
-      console.log(localUri)
+    await this.continueMountingFinish()
 
-      let b64 = await FileSystem.readAsStringAsync(localUri, {encoding: FileSystem.EncodingType.Base64})
-      this.popupGeneratingData?.setPopupText(attemptToTranslate("Almost done!"))
-      let excel = await XLSX.read(b64, {type: "base64"})
-      this.popupGeneratingData?.setPopupText(attemptToTranslate("A few more seconds!"))
-      for(let generateJSONIndex = 0; generateJSONIndex < this.generateJSON.length; generateJSONIndex++){
-        let parsed =  JSON.stringify(await XLSX.utils.sheet_to_json(excel.Sheets[this.generateJSON[generateJSONIndex]]))
+    // if(generate===true){
+    //   this.popupGeneratingData?.setPopupVisible(true)
+    //   console.log("Generating into memory")
+    //   const [{ localUri }] = await Asset.loadAsync(require("./assets/data/dataGenerate.zip"));
+    //   console.log(localUri)
+
+    //   let b64 = await FileSystem.readAsStringAsync(localUri, {encoding: FileSystem.EncodingType.Base64})
+    //   this.popupGeneratingData?.setPopupText(attemptToTranslate("Almost done!"))
+    //   let excel = await XLSX.read(b64, {type: "base64"})
+    //   this.popupGeneratingData?.setPopupText(attemptToTranslate("A few more seconds!"))
+    //   for(let generateJSONIndex = 0; generateJSONIndex < this.generateJSON.length; generateJSONIndex++){
+    //     let parsed =  JSON.stringify(await XLSX.utils.sheet_to_json(excel.Sheets[this.generateJSON[generateJSONIndex]]))
         
-        let fileURI = `${FileSystem.documentDirectory}${this.generateJSON[generateJSONIndex]+".json"}`;
-        await FileSystem.writeAsStringAsync(fileURI, parsed)
-      }
-      this.popupGeneratingData?.setPopupText(attemptToTranslate("Loading app..."))
-      await this.continueMountingFinish()
-    } else if(generate==="online") {
-      this.popupDownload?.startDownload()
-    } else {
-      await this.continueMountingFinish()
-    }
+    //     let fileURI = `${FileSystem.documentDirectory}${this.generateJSON[generateJSONIndex]+".json"}`;
+    //     await FileSystem.writeAsStringAsync(fileURI, parsed)
+    //   }
+    //   this.popupGeneratingData?.setPopupText(attemptToTranslate("Loading app..."))
+    //   await this.continueMountingFinish()
+    // } else if(generate==="online") {
+    //   this.popupDownload?.startDownload()
+    // } else {
+    //   await this.continueMountingFinish()
+    // }
   // console.log(await FileSystem.readDirectoryAsync(FileSystem.documentDirectory))
   }
 
   continueMountingFinish = async() => {
-    await AsyncStorage.setItem("dataVersion", dataVersion);
-    await AsyncStorage.setItem("dataVersionAttempted", "loaded");
+    // await AsyncStorage.setItem("dataVersion", dataVersion);
+    // await AsyncStorage.setItem("dataVersionAttempted", "loaded");
 
     this.backHandler = BackHandler.addEventListener(
       "hardwareBackPress",
