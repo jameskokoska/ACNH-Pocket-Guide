@@ -27,7 +27,6 @@ import colors from './Colors.js';
 import * as Font from 'expo-font';
 import PopupRating from './components/PopupRating'
 import { Appearance } from 'react-native';
-
 import SideMenu, { sideSections } from './components/SideMenu'
 import GuidePage from './pages/GuidePage';
 import MeteoNookPage from './pages/MeteoNookPage';
@@ -47,18 +46,15 @@ import TVGuidePage from './pages/TVGuidePage';
 import OrdinancePage from './pages/OrdinancePage';
 import GyroidsPage from './pages/GyroidsPage';
 import { autoBackup } from './components/FirebaseBackup';
-import Popup, { PopupInfoCustom, PopupRaw, PopupRawLoading } from './components/Popup';
+import Popup, { PopupRawLoading } from './components/Popup';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { navigationRef } from './RootNavigation';
 import * as RootNavigation from './RootNavigation.js';
 import CraftableItemsPage from './pages/CraftableItemsPage';
-import XLSX from 'xlsx';
-import { Asset } from 'expo-asset';
-import * as FileSystem from 'expo-file-system'
 import {dataVersion} from "./Changelog"
 import ParadisePlanningPage from './pages/ParadisePlanningPage';
-import { DownloadDatabase } from './components/DownloadDatabase';
+// import { DownloadDatabase } from './components/DownloadDatabase';
 import BrowserPage from './pages/BrowserPage';
 import Toast from "react-native-toast-notifications";
 import TextFont from './components/TextFont';
@@ -67,13 +63,11 @@ import GlobalSearchPage from './pages/GlobalSearchPage';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import * as Sentry from 'sentry-expo';
 import {sentryConfig} from './sentryConfig'
-import { useAndroidBackHandler } from "react-navigation-backhandler";
 import * as Device from 'expo-device';
-import * as ErrorRecovery from 'expo-error-recovery';
-import CrashPage, { EmptyPage } from './pages/CrashPage';
 import VillagerPhotoPoster from './pages/VillagerPhotoPoster';
 import TodoReorderPage from './pages/TodoReorderPage';
 import DonatePage from './pages/DonatePage';
+import 'expo-dev-client';
 
 const backup = console.warn;
 
@@ -90,23 +84,13 @@ LogBox.ignoreLogs([
   "ColorPropType will be removed",
 ])
 
-const defaultErrorHandler = ErrorUtils.getGlobalHandler();
-
-const globalErrorHandler = (error, isFatal) => {
-  console.log("globalErrorHandler called!");
-  ErrorRecovery.setRecoveryProps({ error: error, isFatal: isFatal });
-  defaultErrorHandler(error, isFatal);
-};
-
-ErrorUtils.setGlobalHandler(globalErrorHandler);
-
 // Production build
 // eas build --platform android
 
 // Development build with native code:
 // Read more: https://docs.expo.dev/development/getting-started/
 // eas build --profile development --platform android
-// npx expo start --dev-client
+// npx expo start --dev-client --tunnel
 
 // Develop internal preview build
 // eas build --profile preview --platform android 
@@ -131,26 +115,6 @@ global.randomGlobal = 0
 class App extends Component {
   constructor() {
     super();
-    this.lastError = ErrorRecovery.recoveredProps
-  }
-  loadApplication = ()=>{
-    this.lastError = false; 
-    ErrorRecovery.setRecoveryProps({ error: "cleared", isFatal: false });
-    this.forceUpdate();
-  }
-  render(){
-    if(this.lastError && this.lastError.error!=="cleared"){
-      return <CrashPage lastError={this.lastError} loadApplication={this.loadApplication}/>
-    } else {
-      return <Main/>
-    }
-  }
-}
-
-
-class Main extends Component {
-  constructor() {
-    super();
     this.openDrawer = this.openDrawer.bind(this);
     this.setPage = this.setPage.bind(this);
     this.setFirstLogin = this.setFirstLogin.bind(this);
@@ -165,16 +129,16 @@ class Main extends Component {
     }
     this.lastPage = [0];
     this.lastPropsPassed = [];
-    this.generateJSONLinks = {
-      //https://drive.google.com/uc?export=download&id=1VoGYele5FbcmOWNHbGUe4KeaIeH1Gva_
-      "Housewares":"https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/DataCreated/Housewares.json",
-      "Miscellaneous":"https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/DataCreated/Miscellaneous.json",
-      "Photos":"https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/DataCreated/Photos.json",
-      "Tops":"https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/DataCreated/Tops.json",
-      "Dress-Up":"https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/DataCreated/Dress-Up.json",
-      "Headwear":"https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/DataCreated/Headwear.json",
-    }
-    this.generateJSON = Object.keys(this.generateJSONLinks)
+    // this.generateJSONLinks = {
+    //   //https://drive.google.com/uc?export=download&id=1VoGYele5FbcmOWNHbGUe4KeaIeH1Gva_
+    //   "Housewares":"https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/DataCreated/Housewares.json",
+    //   "Miscellaneous":"https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/DataCreated/Miscellaneous.json",
+    //   "Photos":"https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/DataCreated/Photos.json",
+    //   "Tops":"https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/DataCreated/Tops.json",
+    //   "Dress-Up":"https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/DataCreated/Dress-Up.json",
+    //   "Headwear":"https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/DataCreated/Headwear.json",
+    // }
+    // this.generateJSON = Object.keys(this.generateJSONLinks)
 
     Dimensions.addEventListener('change', () => {
       this.forceUpdate()
@@ -297,9 +261,9 @@ class Main extends Component {
       await this.continueMountingGenerate(false)
 
       if(dataVersionLoaded !== "" && dataVersionLoaded !== dataVersion){
-        this.popupGeneratingData?.setPopupVisible(true)
+        // this.popupGeneratingData?.setPopupVisible(true)
         await deleteGeneratedData()
-        this.popupGeneratingData?.setPopupVisible(false)
+        // this.popupGeneratingData?.setPopupVisible(false)
       }
 
       // if(generated < this.generateJSON.length || dataVersionLoaded === "" || dataVersionLoaded !== dataVersion){
@@ -360,12 +324,13 @@ class Main extends Component {
     await this.loadProfileData(global.profile);
     
     //Load Global Data
-    let loadResult = await loadGlobalData();
-    if(loadResult === false){
-      this.setState({loaded:false})
-      this.popupGenerateMenu?.setPopupVisible(true)
-      return
-    }
+    await loadGlobalData();
+    // let loadResult = await loadGlobalData();
+    // if(loadResult === false){
+    //   this.setState({loaded:false})
+    //   this.popupGenerateMenu?.setPopupVisible(true)
+    //   return
+    // }
 
     this.updateSettings();
 
@@ -545,12 +510,27 @@ class Main extends Component {
     return true;
   }
 
-
-
   setFirstLogin(firstLogin){
     this.setState({firstLogin: firstLogin});
     this.loadSettings();
   }
+  /* <PopupRaw ref={(popupGeneratingData) => this.popupGeneratingData = popupGeneratingData} text={attemptToTranslate("Generating Data...")} textLower={attemptToTranslate("This may take a few minutes and is only done once.")} textLower2={attemptToTranslate("If this takes longer than a minute restart the app and select Download data.")}/> */
+  /* <Popup
+    ref={(popupGenerateMenu) => this.popupGenerateMenu = popupGenerateMenu}
+    button1={"Download"}
+    button1Action={async ()=>{
+      await this.continueMountingGenerate("online");
+    }}
+    button2={"Generate"}
+    button2Action={async ()=>{
+      await this.continueMountingGenerate(true);
+    }}
+    text={"Generate Data"}
+    textLower={"It seems generating data may have had some issues. If generating data fails or takes too long, select [Download]."}
+    mailLink
+    noDismiss
+  /> */
+  /* <DownloadDatabase ref={(popupDownload) => this.popupDownload = popupDownload} generateJSONLinks={this.generateJSONLinks} continueMountingFinish={async () => {await this.continueMountingFinish()}}/> */
   render(){
     if(!this.state.loaded){
       var splashScreens = [require('./assets/airplane.json'),require('./assets/balloon.json')];
@@ -567,23 +547,6 @@ class Main extends Component {
             <LottieView autoPlay loop style={{width: maxWidth,zIndex:1,transform: [{ scale: 1.3 },],}} source={chosenSplashScreen}/>
           </FadeInOut>
         </View>
-        <PopupRaw ref={(popupGeneratingData) => this.popupGeneratingData = popupGeneratingData} text={attemptToTranslate("Generating Data...")} textLower={attemptToTranslate("This may take a few minutes and is only done once.")} textLower2={attemptToTranslate("If this takes longer than a minute restart the app and select Download data.")}/>
-        <Popup
-          ref={(popupGenerateMenu) => this.popupGenerateMenu = popupGenerateMenu}
-          button1={"Download"}
-          button1Action={async ()=>{
-            await this.continueMountingGenerate("online");
-          }}
-          button2={"Generate"}
-          button2Action={async ()=>{
-            await this.continueMountingGenerate(true);
-          }}
-          text={"Generate Data"}
-          textLower={"It seems generating data may have had some issues. If generating data fails or takes too long, select [Download]."}
-          mailLink
-          noDismiss
-        />
-        <DownloadDatabase ref={(popupDownload) => this.popupDownload = popupDownload} generateJSONLinks={this.generateJSONLinks} continueMountingFinish={async () => {await this.continueMountingFinish()}}/>
         <PopupRawLoading ref={(popupLoading) => this.popupLoading = popupLoading}/>
       </>
     } else if (this.state.firstLogin==="true"){
@@ -595,8 +558,8 @@ class Main extends Component {
           button1Action={async ()=>{
             this.popupCrashWarning?.setPopupVisible(false);
           }}
-          text={"First Launch"}
-          textLower={"If the app crashes or closes on first launch, please restart it. The developer is aware of the issue and looking for a fix."}
+          text={"First Launch Bug"}
+          textLower={attemptToTranslate("If the app crashes or closes on first launch, please restart it.") + "\n" + attemptToTranslate("The developer is aware of the issue and looking for a fix.")}
           noDismiss
         />
       </GestureHandlerRootView>

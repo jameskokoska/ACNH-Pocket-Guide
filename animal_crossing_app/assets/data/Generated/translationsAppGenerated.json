@@ -17219,6 +17219,51 @@
       "Portuguese": "Por favor, remova todos os acessórios (óculos são bons) se enviar o personagem do seu jogador ACNH.",
       "Czech": "Pokud posíláte postavu hráče ACNH, odstraňte prosím veškeré příslušenství (brýle jsou v pořádku).",
       "Slovak": "Ak posielate postavu hráča ACNH, odstráňte všetko príslušenstvo (okuliare sú v poriadku)."
+    },
+    "first launch bug": {
+      "English": "First Launch Bug",
+      "English (Europe)": "First Launch Bug",
+      "French": "Premier bogue de lancement",
+      "French (US)": "Premier bogue de lancement",
+      "German": "Erster Startfehler",
+      "Spanish": "Primer error de lanzamiento",
+      "Spanish (US)": "Primer error de lanzamiento",
+      "Russian": "Ошибка первого запуска",
+      "Italian": "Primo bug di avvio",
+      "Dutch": "Eerste lanceringsfout",
+      "Portuguese": "Bug do primeiro lançamento",
+      "Czech": "Chyba při prvním spuštění",
+      "Slovak": "Chyba pri prvom spustení"
+    },
+    "if the app crashes or closes on first launch, please restart it.": {
+      "English": "If the app crashes or closes on first launch, please restart it.",
+      "English (Europe)": "If the app crashes or closes on first launch, please restart it.",
+      "French": "Si l'application se bloque ou se ferme au premier lancement, veuillez la redémarrer.",
+      "French (US)": "Si l'application se bloque ou se ferme au premier lancement, veuillez la redémarrer.",
+      "German": "Wenn die App beim ersten Start abstürzt oder geschlossen wird, starten Sie sie bitte neu.",
+      "Spanish": "Si la aplicación falla o se cierra en el primer lanzamiento, reiníciela.",
+      "Spanish (US)": "Si la aplicación falla o se cierra en el primer lanzamiento, reiníciela.",
+      "Russian": "Если приложение вылетает или закрывается при первом запуске, перезапустите его.",
+      "Italian": "Se l'app si arresta in modo anomalo o si chiude al primo avvio, riavviala.",
+      "Dutch": "Als de app crasht of sluit bij de eerste keer opstarten, start hem dan opnieuw op.",
+      "Portuguese": "Se o aplicativo travar ou fechar na primeira inicialização, reinicie-o.",
+      "Czech": "Pokud aplikace spadne nebo se zavře při prvním spuštění, restartujte ji.",
+      "Slovak": "Ak aplikácia zlyhá alebo sa zatvorí pri prvom spustení, reštartujte ju."
+    },
+    "the developer is aware of the issue and looking for a fix.": {
+      "English": "The developer is aware of the issue and looking for a fix.",
+      "English (Europe)": "The developer is aware of the issue and looking for a fix.",
+      "French": "Le développeur est conscient du problème et cherche une solution.",
+      "French (US)": "Le développeur est conscient du problème et cherche une solution.",
+      "German": "Der Entwickler ist sich des Problems bewusst und sucht nach einer Lösung.",
+      "Spanish": "El desarrollador es consciente del problema y busca una solución.",
+      "Spanish (US)": "El desarrollador es consciente del problema y busca una solución.",
+      "Russian": "Разработчик знает о проблеме и ищет решение.",
+      "Italian": "Lo sviluppatore è a conoscenza del problema e sta cercando una soluzione.",
+      "Dutch": "De ontwikkelaar is op de hoogte van het probleem en zoekt naar een oplossing.",
+      "Portuguese": "O desenvolvedor está ciente do problema e procurando uma correção.",
+      "Czech": "Vývojář o problému ví a hledá řešení.",
+      "Slovak": "Vývojár si je vedomý problému a hľadá riešenie."
     }
   },
   "Sources": {
