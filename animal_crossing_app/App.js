@@ -355,9 +355,6 @@ class Main extends Component {
       this.handleBackButton,
     );
     const firstLogin = await getStorage("firstLogin","true");
-    if(firstLogin==="true"){
-      this.popupCrashWarning?.setPopupVisible(true)
-    }
 
     global.profile = await getStorage("selectedProfile","");
     await this.loadProfileData(global.profile);
@@ -431,6 +428,9 @@ class Main extends Component {
       firstLogin: firstLogin,
       loaded:true,
     });
+    if(firstLogin==="true"){
+      this.popupCrashWarning?.setPopupVisible(true)
+    }
     if(getSettingsString("settingsAutoBackup")==="true"){
       this.startAutoBackup();
     }
@@ -583,6 +583,12 @@ class Main extends Component {
           mailLink
           noDismiss
         />
+        <DownloadDatabase ref={(popupDownload) => this.popupDownload = popupDownload} generateJSONLinks={this.generateJSONLinks} continueMountingFinish={async () => {await this.continueMountingFinish()}}/>
+        <PopupRawLoading ref={(popupLoading) => this.popupLoading = popupLoading}/>
+      </>
+    } else if (this.state.firstLogin==="true"){
+      return <GestureHandlerRootView style={{flex:1,backgroundColor: "#000000"}}>
+        <Onboard setFirstLogin={this.setFirstLogin}/>
         <Popup
           ref={(popupCrashWarning) => this.popupCrashWarning = popupCrashWarning}
           button1={"OK"}
@@ -593,12 +599,6 @@ class Main extends Component {
           textLower={"If the app crashes or closes on first launch, please restart it. The developer is aware of the issue and looking for a fix."}
           noDismiss
         />
-        <DownloadDatabase ref={(popupDownload) => this.popupDownload = popupDownload} generateJSONLinks={this.generateJSONLinks} continueMountingFinish={async () => {await this.continueMountingFinish()}}/>
-        <PopupRawLoading ref={(popupLoading) => this.popupLoading = popupLoading}/>
-      </>
-    } else if (this.state.firstLogin==="true"){
-      return <GestureHandlerRootView style={{flex:1,backgroundColor: "#000000"}}>
-        <Onboard setFirstLogin={this.setFirstLogin}/>
       </GestureHandlerRootView>
     } else {
       var currentPageView;
