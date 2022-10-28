@@ -320,7 +320,6 @@ class Main extends Component {
 
   continueMountingGenerate = async(generate) => {
     await this.continueMountingFinish()
-
     // if(generate===true){
     //   this.popupGeneratingData?.setPopupVisible(true)
     //   console.log("Generating into memory")
@@ -356,6 +355,10 @@ class Main extends Component {
       this.handleBackButton,
     );
     const firstLogin = await getStorage("firstLogin","true");
+    if(firstLogin==="true"){
+      this.popupCrashWarning?.setPopupVisible(true)
+    }
+
     global.profile = await getStorage("selectedProfile","");
     await this.loadProfileData(global.profile);
     
@@ -578,6 +581,16 @@ class Main extends Component {
           text={"Generate Data"}
           textLower={"It seems generating data may have had some issues. If generating data fails or takes too long, select [Download]."}
           mailLink
+          noDismiss
+        />
+        <Popup
+          ref={(popupCrashWarning) => this.popupCrashWarning = popupCrashWarning}
+          button1={"OK"}
+          button1Action={async ()=>{
+            this.popupCrashWarning?.setPopupVisible(false);
+          }}
+          text={"First Launch"}
+          textLower={"If the app crashes or closes on first launch, please restart it. The developer is aware of the issue and looking for a fix."}
           noDismiss
         />
         <DownloadDatabase ref={(popupDownload) => this.popupDownload = popupDownload} generateJSONLinks={this.generateJSONLinks} continueMountingFinish={async () => {await this.continueMountingFinish()}}/>
