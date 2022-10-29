@@ -280,6 +280,14 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
       } else {
         dataLoading[i]["NameLanguage"]=dataLoading[i]["Name"];
       }
+      
+      if(dataLoading[i]["NameLanguage"]===undefined || dataLoading[i]["NameLanguage"]===""){
+        dataLoading[i]["SortString"]="zzzzzzzzzzzzzz"
+      } else {
+        const output = removeAccents(dataLoading[i]["NameLanguage"].toUpperCase()).replace("-"," ")
+        dataLoading[i]["SortString"]= output===undefined ? dataLoading[i]["NameLanguage"] : output;
+      }
+
       dataLoading[i]["Data Category"]=inputData[dataSet][1];
       if(determineFoodItem(dataLoading[i])){
         dataLoading[i]["Data Category 2"] = "Food"

@@ -31,6 +31,7 @@ import { getHourlySongTitle } from '../pages/SongsPage';
 import { WishlistSelectionPopup } from '../pages/WishlistPage';
 import { BlueText } from './Formattings';
 import PopupRawData from './PopupRawData';
+import {sortBy} from 'lodash';
 
 //use tabs={false} if the page doesn't have  the tab bar
 
@@ -732,36 +733,69 @@ function ListPage(props){
 
       //Sort alphabetically
       if(getSettingsString("settingsSortAlphabetically")==="true"){
-        dataUpdated.sort(function(a, b) {
-          var textA
-          var textB
-          if(a===undefined || a.NameLanguage===undefined){
-            textA = "zzzzzzzzzzzzzz"
-          } else {
-            textA = removeAccents(a.NameLanguage.toUpperCase()).replace("-"," ");
-            if(textA===""){
-              textA = "zzzzzzzzzzzzzz"
-            }
-          }
-          if(b===undefined || b.NameLanguage===undefined){
-            textB = "zzzzzzzzzzzzzz"
-          } else {
-            textB = removeAccents(b.NameLanguage.toUpperCase()).replace("-"," ");
-            if(textB===""){
-              textB = "zzzzzzzzzzzzzz"
-            }
-          }
-          if(textB==="zzzzzzzzzzzzzz"){
-            return -1
-          } else if (textA==="zzzzzzzzzzzzzz"){
-            return -1
-          }
-          return (textA.localeCompare(textB));
+        // dataUpdated = sortBy(dataUpdated, 'SortString');
+        dataUpdated.sort((a, b)=> {
+          return (a.SortString < b.SortString) ? -1 : (a.SortString > b.SortString) ? 1 : 0;
         });
+        // dataUpdated.sort((a,b)=>(a.SortString??"").localeCompare((b.SortString??"")))
+        // dataUpdated = dataUpdated.slice().sort((a, b) => {
+        //   let textA
+        //   let textB
+        //   if(a===undefined || a.NameLanguage===undefined){
+        //     textA = "zzzzzzzzzzzzzz"
+        //   } else {
+        //     textA = removeAccents(a.NameLanguage.toUpperCase()).replace("-"," ");
+        //     if(textA===""){
+        //       textA = "zzzzzzzzzzzzzz"
+        //     }
+        //   }
+        //   if(b===undefined || b.NameLanguage===undefined){
+        //     textB = "zzzzzzzzzzzzzz"
+        //   } else {
+        //     textB = removeAccents(b.NameLanguage.toUpperCase()).replace("-"," ");
+        //     if(textB===""){
+        //       textB = "zzzzzzzzzzzzzz"
+        //     }
+        //   }
+        //   if(textB==="zzzzzzzzzzzzzz"){
+        //     return -1
+        //   } else if (textA==="zzzzzzzzzzzzzz"){
+        //     return -1
+        //   }
+        //   return (textA.localeCompare(textB));
+        // });
+
+        // dataUpdated.sort(function(a, b) {
+        //   var textA
+        //   var textB
+        //   if(a===undefined || a.NameLanguage===undefined){
+        //     textA = "zzzzzzzzzzzzzz"
+        //   } else {
+        //     textA = removeAccents(a.NameLanguage.toUpperCase()).replace("-"," ");
+        //     if(textA===""){
+        //       textA = "zzzzzzzzzzzzzz"
+        //     }
+        //   }
+        //   if(b===undefined || b.NameLanguage===undefined){
+        //     textB = "zzzzzzzzzzzzzz"
+        //   } else {
+        //     textB = removeAccents(b.NameLanguage.toUpperCase()).replace("-"," ");
+        //     if(textB===""){
+        //       textB = "zzzzzzzzzzzzzz"
+        //     }
+        //   }
+        //   if(textB==="zzzzzzzzzzzzzz"){
+        //     return -1
+        //   } else if (textA==="zzzzzzzzzzzzzz"){
+        //     return -1
+        //   }
+        //   return (textA.localeCompare(textB));
+        // });
       }
 
       //Sort based on critterpedia entry number
       if(getSettingsString("settingsSortCritterpedia")==="true" && (props.title==="Fish" || props.title==="Bugs" || props.title==="Sea Creatures")){
+        // dataUpdated = sortBy(dataUpdated, '#');
         dataUpdated.sort(function(a, b) {
           var textA = parseInt(a["#"]);
           var textB = parseInt(b["#"]);

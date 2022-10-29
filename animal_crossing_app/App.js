@@ -90,7 +90,10 @@ LogBox.ignoreLogs([
 // Development build with native code:
 // Read more: https://docs.expo.dev/development/getting-started/
 // eas build --profile development --platform android
+// install build and run:
 // npx expo start --dev-client --tunnel
+// or
+// expo start --dev-client
 
 // Develop internal preview build
 // eas build --profile preview --platform android 
@@ -393,9 +396,6 @@ class App extends Component {
       firstLogin: firstLogin,
       loaded:true,
     });
-    if(firstLogin==="true"){
-      this.popupCrashWarning?.setPopupVisible(true)
-    }
     if(getSettingsString("settingsAutoBackup")==="true"){
       this.startAutoBackup();
     }
@@ -552,16 +552,6 @@ class App extends Component {
     } else if (this.state.firstLogin==="true"){
       return <GestureHandlerRootView style={{flex:1,backgroundColor: "#000000"}}>
         <Onboard setFirstLogin={this.setFirstLogin}/>
-        <Popup
-          ref={(popupCrashWarning) => this.popupCrashWarning = popupCrashWarning}
-          button1={"OK"}
-          button1Action={async ()=>{
-            this.popupCrashWarning?.setPopupVisible(false);
-          }}
-          text={"First Launch Bug"}
-          textLower={attemptToTranslate("If the app crashes or closes on first launch, please restart it.") + "\n" + attemptToTranslate("The developer is aware of the issue and looking for a fix.")}
-          noDismiss
-        />
       </GestureHandlerRootView>
     } else {
       var currentPageView;

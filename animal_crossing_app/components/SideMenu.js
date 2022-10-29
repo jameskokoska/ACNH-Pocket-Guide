@@ -86,6 +86,7 @@ export default class SideMenu extends Component {
   }
   nonTabbedPages = []; //can be 0 as the home page so you can swipe from anywhere, but now only edge
   renderDrawer = () => {
+    console.log("render")
     return (
       <View style={{width: "100%", height:"100%", backgroundColor:colors.textWhite[global.darkMode]}}>
         <ScrollView overScrollMode={"never"} ref={(scrollView) => this.scrollView = scrollView}>
@@ -160,7 +161,8 @@ export default class SideMenu extends Component {
           renderNavigationView={this.renderDrawer}
           onDrawerSlide={(progress)=>this.disableEditMode(progress)}
           minSwipeDistance={20}
-          useNativeAnimations={true}
+          useNativeAnimations={false}
+          
         >
             {this.props.children}
         </DrawerLayout>
