@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import {Vibration, Dimensions, View,TouchableOpacity} from 'react-native'
-import  {DrawerLayout, ScrollView} from 'react-native-gesture-handler'
+import  {ScrollView} from 'react-native-gesture-handler'
 import SidebarElement from './SidebarElement';
 import colors from '../Colors.js';
 import TextFont from './TextFont';
 import {attemptToTranslate, getSettingsString, getStorage} from '../LoadJsonData';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {ProfileIcon} from "../pages/ProfileCurrentPage"
+import {DrawerLayout} from './BetterDrawer'
 
 export default class SideMenu extends Component {
   constructor(props){
@@ -24,10 +25,10 @@ export default class SideMenu extends Component {
     }
   }
   openDrawer = () => {
-    this.drawer.openDrawer();
+    this.drawer.open();
   }
   closeDrawer = () => {
-    this.drawer.closeDrawer()
+    this.drawer.close()
   }
   editSections = async (name) => {
     let sideSectionsDisabled = this.state.sideMenuSectionsDisabled
@@ -86,7 +87,6 @@ export default class SideMenu extends Component {
   }
   nonTabbedPages = []; //can be 0 as the home page so you can swipe from anywhere, but now only edge
   renderDrawer = () => {
-    console.log("render")
     return (
       <View style={{width: "100%", height:"100%", backgroundColor:colors.textWhite[global.darkMode]}}>
         <ScrollView overScrollMode={"never"} ref={(scrollView) => this.scrollView = scrollView}>
@@ -155,14 +155,13 @@ export default class SideMenu extends Component {
           ref={(drawer) => this.drawer = drawer }
           edgeWidth={this.nonTabbedPages.includes(this.props.currentPage) ? Dimensions.get('window').width : Dimensions.get('window').width*0.17}
           drawerWidth={this.maxWidth}
-          drawerPosition={DrawerLayout.positions.Left}
+          drawerPosition='left'
           drawerType="slide"
           drawerBackgroundColor="#ddd"
           renderNavigationView={this.renderDrawer}
-          onDrawerSlide={(progress)=>this.disableEditMode(progress)}
+          onDrawerSlide={(progress)=>{this.disableEditMode(progress)}}
           minSwipeDistance={20}
           useNativeAnimations={false}
-          
         >
             {this.props.children}
         </DrawerLayout>

@@ -10,6 +10,7 @@ import { attemptToTranslate, capitalize, capitalizeFirst, openURL } from '../Loa
 import Popup, { PopupInfoCustom } from '../components/Popup';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import ButtonComponent from '../components/ButtonComponent';
+import Animated, { FadeIn } from "react-native-reanimated";
 
 export default class DonatePage extends Component {
   constructor() {
@@ -133,8 +134,8 @@ export default class DonatePage extends Component {
       </View>
     </>
     // console.log(this.state.products)
-    return <ScrollView>
-      <FadeInOut fadeIn={true} duration={1000}>
+    return <Animated.View entering={FadeIn.duration(1000)}>
+      <ScrollView>
         <View style={{flexDirection:"row", justifyContent:"space-between", alignItems:"flex-end", marginRight: 25, marginTop: 30}}>
           <SubHeader style={{marginTop: 20}}>About the Developer</SubHeader>
           <Image source={require("../assets/icons/James.png")} style={{width: 70, height: 70, resizeMode:"contain"}}></Image>
@@ -182,9 +183,8 @@ export default class DonatePage extends Component {
             </TouchableOpacity>
           </View>
         </PopupInfoCustom>
-
-      </FadeInOut>
-    </ScrollView>
+      </ScrollView>
+    </Animated.View>
   }
 }
 

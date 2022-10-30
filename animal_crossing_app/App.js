@@ -132,16 +132,6 @@ class App extends Component {
     }
     this.lastPage = [0];
     this.lastPropsPassed = [];
-    // this.generateJSONLinks = {
-    //   //https://drive.google.com/uc?export=download&id=1VoGYele5FbcmOWNHbGUe4KeaIeH1Gva_
-    //   "Housewares":"https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/DataCreated/Housewares.json",
-    //   "Miscellaneous":"https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/DataCreated/Miscellaneous.json",
-    //   "Photos":"https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/DataCreated/Photos.json",
-    //   "Tops":"https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/DataCreated/Tops.json",
-    //   "Dress-Up":"https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/DataCreated/Dress-Up.json",
-    //   "Headwear":"https://raw.githubusercontent.com/jameskokoska/AnimalCrossingNH-App-React/main/animal_crossing_app/assets/data/DataCreated/Headwear.json",
-    // }
-    // this.generateJSON = Object.keys(this.generateJSONLinks)
 
     Dimensions.addEventListener('change', () => {
       this.forceUpdate()
@@ -243,19 +233,6 @@ class App extends Component {
 
       let dataVersionLoaded = await getStorage("dataVersion","");
       
-      // let generated = 0
-      // for(let generateJSONIndex = 0; generateJSONIndex < this.generateJSON.length; generateJSONIndex++){
-      //   if((await FileSystem.readDirectoryAsync(FileSystem.documentDirectory)).includes(this.generateJSON[generateJSONIndex]+".json")){
-      //     console.log("Loaded from memory")
-      //     generated = generated + 1
-      //     // let fileURI = `${FileSystem.documentDirectory}${this.generateJSON[generateJSONIndex]+".json"}`;
-      //     // console.log(JSON.parse(await FileSystem.readAsStringAsync(FileSystem.documentDirectory + "Housewares.json")))
-      //   }
-      // }
-      // if(dataVersionLoaded === "" || dataVersionLoaded !== dataVersion){
-      //   console.log("New data version")
-      // }
-
       //Load Settings
       await this.loadSettings();
       this.updateDarkMode();
@@ -264,59 +241,17 @@ class App extends Component {
       await this.continueMountingGenerate(false)
 
       if(dataVersionLoaded !== "" && dataVersionLoaded !== dataVersion){
-        // this.popupGeneratingData?.setPopupVisible(true)
         await deleteGeneratedData()
-        // this.popupGeneratingData?.setPopupVisible(false)
       }
 
-      // if(generated < this.generateJSON.length || dataVersionLoaded === "" || dataVersionLoaded !== dataVersion){
-      //   let dataVersionLoadedAttempted = await getStorage("dataVersionAttempted","loaded");
-
-      //   if(dataVersionLoadedAttempted==="not loaded"){
-      //     this.popupGenerateMenu?.setPopupVisible(true)
-      //   }else{
-      //     await AsyncStorage.setItem("dataVersionAttempted", "not loaded");
-      //     await this.continueMountingGenerate(true)
-      //   }
-      // }else{
-      //   this.popupLoading?.setPopupVisible(true)
-      //   await this.continueMountingGenerate(false)
-      // }
     }, 10);
   }
 
   continueMountingGenerate = async(generate) => {
     await this.continueMountingFinish()
-    // if(generate===true){
-    //   this.popupGeneratingData?.setPopupVisible(true)
-    //   console.log("Generating into memory")
-    //   const [{ localUri }] = await Asset.loadAsync(require("./assets/data/dataGenerate.zip"));
-    //   console.log(localUri)
-
-    //   let b64 = await FileSystem.readAsStringAsync(localUri, {encoding: FileSystem.EncodingType.Base64})
-    //   this.popupGeneratingData?.setPopupText(attemptToTranslate("Almost done!"))
-    //   let excel = await XLSX.read(b64, {type: "base64"})
-    //   this.popupGeneratingData?.setPopupText(attemptToTranslate("A few more seconds!"))
-    //   for(let generateJSONIndex = 0; generateJSONIndex < this.generateJSON.length; generateJSONIndex++){
-    //     let parsed =  JSON.stringify(await XLSX.utils.sheet_to_json(excel.Sheets[this.generateJSON[generateJSONIndex]]))
-        
-    //     let fileURI = `${FileSystem.documentDirectory}${this.generateJSON[generateJSONIndex]+".json"}`;
-    //     await FileSystem.writeAsStringAsync(fileURI, parsed)
-    //   }
-    //   this.popupGeneratingData?.setPopupText(attemptToTranslate("Loading app..."))
-    //   await this.continueMountingFinish()
-    // } else if(generate==="online") {
-    //   this.popupDownload?.startDownload()
-    // } else {
-    //   await this.continueMountingFinish()
-    // }
-  // console.log(await FileSystem.readDirectoryAsync(FileSystem.documentDirectory))
-  }
+    }
 
   continueMountingFinish = async() => {
-    // await AsyncStorage.setItem("dataVersion", dataVersion);
-    // await AsyncStorage.setItem("dataVersionAttempted", "loaded");
-
     this.backHandler = BackHandler.addEventListener(
       "hardwareBackPress",
       this.handleBackButton,
@@ -328,12 +263,6 @@ class App extends Component {
     
     //Load Global Data
     await loadGlobalData();
-    // let loadResult = await loadGlobalData();
-    // if(loadResult === false){
-    //   this.setState({loaded:false})
-    //   this.popupGenerateMenu?.setPopupVisible(true)
-    //   return
-    // }
 
     this.updateSettings();
 
@@ -350,7 +279,6 @@ class App extends Component {
       "Tool Durability" : false,
       "Star Counter" : false,
       "Store Hours" : true,
-      // "Active Creatures" : true,
     }
     this.sections = await this.loadSections("Sections", defaultSections);
     const defaultSectionsOrder = [
@@ -503,7 +431,9 @@ class App extends Component {
           this.setState({currentPage: pageNum, propsPassed: propsPassed});
         }
       }
-      this.sideMenu?.closeDrawer();
+      setTimeout(()=>{
+        this.sideMenu?.closeDrawer();
+      },2)
       this.fab?.updateFAB(pageNum)
     }
     RootNavigation.navigate("Home");
@@ -514,23 +444,7 @@ class App extends Component {
     this.setState({firstLogin: firstLogin});
     this.loadSettings();
   }
-  /* <PopupRaw ref={(popupGeneratingData) => this.popupGeneratingData = popupGeneratingData} text={attemptToTranslate("Generating Data...")} textLower={attemptToTranslate("This may take a few minutes and is only done once.")} textLower2={attemptToTranslate("If this takes longer than a minute restart the app and select Download data.")}/> */
-  /* <Popup
-    ref={(popupGenerateMenu) => this.popupGenerateMenu = popupGenerateMenu}
-    button1={"Download"}
-    button1Action={async ()=>{
-      await this.continueMountingGenerate("online");
-    }}
-    button2={"Generate"}
-    button2Action={async ()=>{
-      await this.continueMountingGenerate(true);
-    }}
-    text={"Generate Data"}
-    textLower={"It seems generating data may have had some issues. If generating data fails or takes too long, select [Download]."}
-    mailLink
-    noDismiss
-  /> */
-  /* <DownloadDatabase ref={(popupDownload) => this.popupDownload = popupDownload} generateJSONLinks={this.generateJSONLinks} continueMountingFinish={async () => {await this.continueMountingFinish()}}/> */
+ 
   render(){
     if(!this.state.loaded){
       var splashScreens = [require('./assets/airplane.json'),require('./assets/balloon.json')];

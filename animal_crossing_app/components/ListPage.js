@@ -153,7 +153,6 @@ function ListPage(props){
 
   const [loading, setLoading] = useState(false)
   const [data, setData] = useState("empty")
-  const [possibleFiltersState, setPossibleFilters] = useState("empty")
   const popupFilter = React.useRef(null);
 
   const componentIsMounted = useRef(true);
@@ -210,10 +209,6 @@ function ListPage(props){
       var searchActual = searchFilters;
       if(props.filterCollectedOnly){
         searchActual = ["Collected"];
-      // } else if (props.newItems){
-      //   searchActual = ["New version"];
-      // } else if (props.wishlistItems){
-      //   searchActual = ["Wishlist",...searchFilters]; //todo add wishlist filtering eventually
       } else if (props.villagerGifts) {
         searchActual = [...props.villagerGiftsFilters,...searchActual];
       } else if (props.itemIDs!==undefined && props.itemIDs!=="") {
@@ -253,7 +248,6 @@ function ListPage(props){
         }
       }
       // console.log(filters)
-      
 
       for(var j = 0; j < dataLoaded2D.length; j++){
         var dataLoaded = dataLoaded2D[j];
@@ -327,13 +321,6 @@ function ListPage(props){
           var showUncraftableVar = true;
           var showPartiallyFoundOnly = true;
           for(var z = 0; z < searchActual.length; z++){
-            // if(searchActual.includes("New version") && props.newItems && item["Version Added"] !==undefined && item["Version Added"] !=="NA" && item["Version Added"]===gameVersion){
-            //   filterFound = true;
-            //   break;
-            // } else if (searchActual.includes("New version") && props.newItems){
-            //   filterFound = false;
-            //   break;
-            // }
             if(searchActual.includes("Wishlist") && props.wishlistItems && props.currentCustomList!=="" && inCustomLists(item["checkListKey"],props.currentCustomList)===true){
               filterFound = true;
               break;
@@ -556,22 +543,6 @@ function ListPage(props){
               } else if (searchActual.includes("Show craftable item variations") && item["Kit Cost"]===undefined){
                 showUncraftableVar = false;
               }
-              // if( item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].toString().toLowerCase()===searchActual[z].split(":")[1].toString().toLowerCase()){
-              //   filterFound = true;
-              // } else if (item.[searchActual[z].split(":")[0]]!==undefined && item.[searchActual[z].split(":")[0]].includes("; ")){
-              //   var allEntries = item.[searchActual[z].split(":")[0]].split("; ")
-              //   for(var o = 0; o<allEntries.length; o++){
-              //     if(allEntries[o]!==undefined && allEntries[o].toString().toLowerCase()===searchActual[z].split(":")[1].toString().toLowerCase()){
-              //       filterFound = true;
-              //     } 
-              //   }
-              // } else if (searchActual[z].includes(":")){
-              //   filterFound = false;
-              //   break;
-              // }
-              // if(filterFound){
-              //   break;
-              // }
             }
             // }
           }
@@ -591,7 +562,6 @@ function ListPage(props){
               break
             }
           }
-          //&&((!props.wishlistItems&&!props.filterCollectedOnly&&!props.newItems)||searchFound)
           if(showPartiallyFoundOnly && showUncraftableVar && (search==="" || searchFound) && (filterFound || searchActual.length === 0)){
             //Search result found...
               //If recipes item page, and its not DIY, remove
@@ -608,18 +578,6 @@ function ListPage(props){
                   continue;
                 }
               }
-              //If list only active creatures for the month, don't add it if === NA
-              //This is now done through filtering
-              // if(props.activeCreaturesMonth && getSettingsString("settingsListOnlyActiveCreatures") === "true"){
-              //   var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH "
-              //   var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
-              //   if(item[hemispherePre+currentMonthShort]==="NA"){
-              //     continue;
-              //   }
-              // }
-              // if(item.[props.textProperty[j]]===previousVariation){
-              //   previousVariation = item.[props.textProperty[j]];
-
               //keep variations
               if((props.showAllVariations===false || props.showAllVariations===undefined) && item["Name"]===previousVariation && item["Data Category"]===previousDataCategory && !item["checkListKey"].includes("recipesCheckList") && !item["checkListKey"].includes("amiiboCheckList") && !item["checkListKey"].includes("constructionCheckList") && !item["checkListKey"].includes("fenceCheckList") && !item["checkListKey"].includes("interiorStructuresCheckList")){
                 previousVariation = item["Name"];
@@ -639,13 +597,9 @@ function ListPage(props){
                     } 
                   }
                 }else if(props.wishlistItems || searchActual.includes("Wishlist")){
-                  // if(global.collectionList.includes("wishlist"+item["checkListKey"])){
-                    item.dataSet = j;
-                    item.index = i;
-                    dataUpdated.push(item)
-                    // previousVariation = item.[props.textProperty[j]];
-                    // previousVariation = item["Name"];
-                  // } 
+                  item.dataSet = j;
+                  item.index = i;
+                  dataUpdated.push(item)
                 } else if(props.newItems){
                   if(item["Version Added"] !==undefined && item["Version Added"] !=="NA" && gameVersion.includes(item["Version Added"])){
                     item.dataSet = j;
@@ -653,15 +607,12 @@ function ListPage(props){
                     dataUpdated.push(item)
                     previousVariation = item["Name"];
                     previousDataCategory = item["Data Category"]
-                    // previousVariation = item.[props.textProperty[j]];
-                    // previousVariation = item["Name"];
                   } 
                 } else if(searchActual.includes("Museum")){
                   if(item["Data Category"]!==undefined && museumCategories.includes(item["Data Category"]) && global.collectionListIndexed["museum"+item["checkListKey"]]===true){
                     item.dataSet = j;
                     item.index = i;
                     dataUpdated.push(item)
-                    // previousVariation = item.[props.textProperty[j]];
                     previousVariation = item["Name"];
                     previousDataCategory = item["Data Category"]
                   } 
@@ -670,7 +621,6 @@ function ListPage(props){
                     item.dataSet = j;
                     item.index = i;
                     dataUpdated.push(item)
-                    // previousVariation = item.[props.textProperty[j]];
                     previousVariation = item["Name"];
                     previousDataCategory = item["Data Category"]
                   } 
@@ -679,7 +629,6 @@ function ListPage(props){
                     item.dataSet = j;
                     item.index = i;
                     dataUpdated.push(item)
-                    // previousVariation = item.[props.textProperty[j]];
                     previousVariation = item["Name"];
                     previousDataCategory = item["Data Category"]
                   } 
@@ -688,7 +637,6 @@ function ListPage(props){
                     item.dataSet = j;
                     item.index = i;
                     dataUpdated.push(item)
-                    // previousVariation = item.[props.textProperty[j]];
                     previousVariation = item["Name"];
                     previousDataCategory = item["Data Category"]
                   } 
@@ -697,7 +645,6 @@ function ListPage(props){
                     item.dataSet = j;
                     item.index = i;
                     dataUpdated.push(item)
-                    // previousVariation = item.[props.textProperty[j]];
                     previousVariation = item["Name"];
                     previousDataCategory = item["Data Category"]
                   } 
@@ -706,7 +653,6 @@ function ListPage(props){
                     item.dataSet = j;
                     item.index = i;
                     dataUpdated.push(item)
-                    // previousVariation = item.[props.textProperty[j]];
                     previousVariation = item["Name"];
                     previousDataCategory = item["Data Category"]
                   } 
@@ -714,83 +660,20 @@ function ListPage(props){
                   item.dataSet = j;
                   item.index = i;
                   dataUpdated.push(item)
-                  // dataUpdated = [...dataUpdated, item];
-                  // previousVariation = item.[props.textProperty[j]];
                   previousVariation = item["Name"];
                   previousDataCategory = item["Data Category"]
                 }
                 
               }
-            // } else {
-            //   item.dataSet = j;
-            //   item.index = i;
-            //   dataUpdated = [...dataUpdated, item];
-            //   break;
-            // }
           }
         }
       }
 
       //Sort alphabetically
       if(getSettingsString("settingsSortAlphabetically")==="true"){
-        // dataUpdated = sortBy(dataUpdated, 'SortString');
         dataUpdated.sort((a, b)=> {
           return (a.SortString < b.SortString) ? -1 : (a.SortString > b.SortString) ? 1 : 0;
         });
-        // dataUpdated.sort((a,b)=>(a.SortString??"").localeCompare((b.SortString??"")))
-        // dataUpdated = dataUpdated.slice().sort((a, b) => {
-        //   let textA
-        //   let textB
-        //   if(a===undefined || a.NameLanguage===undefined){
-        //     textA = "zzzzzzzzzzzzzz"
-        //   } else {
-        //     textA = removeAccents(a.NameLanguage.toUpperCase()).replace("-"," ");
-        //     if(textA===""){
-        //       textA = "zzzzzzzzzzzzzz"
-        //     }
-        //   }
-        //   if(b===undefined || b.NameLanguage===undefined){
-        //     textB = "zzzzzzzzzzzzzz"
-        //   } else {
-        //     textB = removeAccents(b.NameLanguage.toUpperCase()).replace("-"," ");
-        //     if(textB===""){
-        //       textB = "zzzzzzzzzzzzzz"
-        //     }
-        //   }
-        //   if(textB==="zzzzzzzzzzzzzz"){
-        //     return -1
-        //   } else if (textA==="zzzzzzzzzzzzzz"){
-        //     return -1
-        //   }
-        //   return (textA.localeCompare(textB));
-        // });
-
-        // dataUpdated.sort(function(a, b) {
-        //   var textA
-        //   var textB
-        //   if(a===undefined || a.NameLanguage===undefined){
-        //     textA = "zzzzzzzzzzzzzz"
-        //   } else {
-        //     textA = removeAccents(a.NameLanguage.toUpperCase()).replace("-"," ");
-        //     if(textA===""){
-        //       textA = "zzzzzzzzzzzzzz"
-        //     }
-        //   }
-        //   if(b===undefined || b.NameLanguage===undefined){
-        //     textB = "zzzzzzzzzzzzzz"
-        //   } else {
-        //     textB = removeAccents(b.NameLanguage.toUpperCase()).replace("-"," ");
-        //     if(textB===""){
-        //       textB = "zzzzzzzzzzzzzz"
-        //     }
-        //   }
-        //   if(textB==="zzzzzzzzzzzzzz"){
-        //     return -1
-        //   } else if (textA==="zzzzzzzzzzzzzz"){
-        //     return -1
-        //   }
-        //   return (textA.localeCompare(textB));
-        // });
       }
 
       //Sort based on critterpedia entry number

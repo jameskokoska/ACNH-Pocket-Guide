@@ -5,6 +5,7 @@ export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
 -New Gold supporter: everstar! Thank you!
+-Side menu is more responsive and faster
 -Fixed first launch crash
 -Optimized loading time
 -Improved sorting algorithm
