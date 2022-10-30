@@ -650,7 +650,7 @@ class PopupInfos extends Component {
           setTimeout(async ()=>{
             const purchases = await this.getPurchases()
           
-            if((numLogins+1) % 10 === 0 && purchases.length <= 0){
+            if((numLogins+1) % 15 === 0 && purchases.length <= 0){
               if(Math.floor(global.randomGlobal * 3)===0){
                 this.popupSupport1?.setPopupVisible(true)
               } else if (Math.floor(global.randomGlobal * 3)===1){
@@ -661,10 +661,10 @@ class PopupInfos extends Component {
             } else {
               let ratingDismissed = await getStorage("ratingDismissed","false");
               let backupPopupDismissed2 = await getStorage("backupPopupDismissed2","false");
-              if(ratingDismissed==="false" && numLogins >= 31){
+              if(ratingDismissed==="false" && numLogins >= 28){
                 AsyncStorage.setItem("ratingDismissed", "true");
                 this.popupRating?.setPopupVisible(true)
-              } else if(backupPopupDismissed2==="false" && numLogins >= 17){
+              } else if(backupPopupDismissed2==="false" && numLogins >= 14){
                 AsyncStorage.setItem("backupPopupDismissed2", "true");
                 this.popupBackup2?.setPopupVisible(true)
               }

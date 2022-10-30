@@ -173,13 +173,13 @@ export default class DonatePage extends Component {
         
         {this.state.purchased.includes("silver") ? <>
           <TouchableOpacity onPress={() => openURL('mailto:dapperappdeveloper@gmail.com') } style={{marginTop:15}}>
-            <TextFont bold={false} translate={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, textAlign:"center"}}>{attemptToTranslate("Please email me your username so I can include it in the app")}</TextFont>
+            <TextFont bold={false} translate={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, textAlign:"center", marginHorizontal: 20}}>{attemptToTranslate("Please email me your username so I can include it in the app")+"!"}</TextFont>
             <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>dapperappdeveloper@gmail.com</TextFont>
           </TouchableOpacity>
         </>: <></>}
         {this.state.purchased.includes("gold") || this.state.purchased.includes("diamond") ? <>
           <TouchableOpacity onPress={() => openURL('mailto:dapperappdeveloper@gmail.com') } style={{marginTop:15}}>
-            <TextFont bold={false} translate={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, textAlign:"center"}}>{attemptToTranslate("Please email me your username and character screenshot so I can include it in the app")}</TextFont>
+            <TextFont bold={false} translate={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, textAlign:"center", marginHorizontal: 20}}>{attemptToTranslate("Please email me your username and character screenshot so I can include it in the app")+"!"}</TextFont>
             <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>dapperappdeveloper@gmail.com</TextFont>
           </TouchableOpacity>
         </>: <></>}
