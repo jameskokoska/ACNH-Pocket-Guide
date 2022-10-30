@@ -222,15 +222,17 @@ class SupportOption extends Component{
     const purchased = this.props.purchased.includes(this.props.id)
     return <TouchableNativeFeedback onPress={()=>InAppPurchases.purchaseItemAsync(this.props.id, {accountIdentifiers: {obfuscatedAccountId: null,obfuscatedProfileId: null,},})}>
       <View style={{backgroundColor:purchased ? colors.purchaseSuccess[global.darkMode] : (global.darkMode ? colors.lightDarkAccentHeavy2[global.darkMode] : colors.textWhite[global.darkMode]), padding: 20, borderRadius: 15, marginHorizontal: 20, marginTop: 10, }}>
-        <View style={{flexDirection:"row", alignItems:"center",justifyContent:"space-between"}}>
-          <View style={{flexDirection:"row", justifyContent:"center", alignItems:"center"}}>
+        <View style={{flexDirection:"row", alignItems:"center",justifyContent:"space-between", flexWrap:"wrap"}}>
+          <View style={{flexDirection:"row", alignItems:"center", flexWrap:"wrap"}}>
             <Image source={this.props.image} style={{width: 30, height: 30, resizeMode:"contain"}}></Image>
             <View style={{flexDirection:"column"}}>
               <TextFont bold={true} translate={false} style={{color:colors.textBlack[global.darkMode], marginLeft:15, fontSize: 20}}>{capitalizeFirst(attemptToTranslate(this.props.label))}</TextFont>
               {this.props.descriptionShort ? <TextFont bold={true} style={{color:colors.textBlack[global.darkMode], marginLeft:15, fontSize: 12, width: 180}}>{this.props.descriptionShort}</TextFont> : <></>}
             </View>
           </View>
-          <TextFont bold={true} style={{color:colors.textBlack[global.darkMode], marginLeft:5, fontSize: 20, marginRight: 3}}>{this.props.price}</TextFont>
+          <View style={{flexGrow:1}}> 
+            <TextFont bold={true} style={{color:colors.textBlack[global.darkMode], marginLeft:3, fontSize: 20, marginRight: 3, textAlign:"right"}}>{this.props.price}</TextFont>
+          </View>
         </View>
         {this.props.description ? <TextFont bold={true} style={{color:colors.textBlack[global.darkMode], marginLeft:45, fontSize: 13, marginTop: 3}}>{this.props.description}</TextFont> : <></>}
       </View>
