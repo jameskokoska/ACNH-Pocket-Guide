@@ -666,7 +666,7 @@ class PopupInfos extends Component {
                 this.popupRating?.setPopupVisible(true)
               } else if(backupPopupDismissed2==="false" && numLogins >= 17){
                 AsyncStorage.setItem("backupPopupDismissed2", "true");
-                this.popupBackup?.setPopupVisible(true)
+                this.popupBackup2?.setPopupVisible(true)
               }
             }
           }, 2)
@@ -700,8 +700,8 @@ class PopupInfos extends Component {
     return <>
       <PopupRating ref={(popupRating) => this.popupRating = popupRating}/>
       <Popup ref={(popupImprovePerformance) => this.popupImprovePerformance = popupImprovePerformance} text="Improve Performance" textLower="To increase app performance, consider enabling the [Battery saver / Increase performance] setting." button1={"Enable"} button1Action={()=>{setSettingsString("settingsLowEndDevice","true");}} button2={"Not now"} button2Action={()=>{}}/>
-      <Popup mailLink={true} ref={(popupBackup) => this.popupBackup = popupBackup} text="Data Backup" textLower="You can now backup your data to the cloud and enable auto backups in the settings." button1={"Go to page"} button1Action={()=>{this.props.setPage(39)}} button2={"Cancel"} button2Action={()=>{}}/>
-      <Popup mailLink={true} ref={(popupBackup) => this.popupBackup = popupBackup} text="Data Backup" textLower="Don't forget to keep periodic backups of your data!" button1={"Go to page"} button1Action={()=>{this.props.setPage(39)}} button2={"Cancel"} button2Action={()=>{}}/>
+      <Popup mailLink={true} ref={(popupBackup) => this.popupBackup = popupBackup} text="Data Backup" textLower="You can now backup your data to the cloud and enable auto backups in the settings." button1={"Go to page"} button1Action={()=>{this.props.setPage(30)}} button2={"Cancel"} button2Action={()=>{}}/>
+      <Popup mailLink={true} ref={(popupBackup2) => this.popupBackup2 = popupBackup2} text="Data Backup" textLower="Don't forget to keep periodic backups of your data!" button1={"Go to page"} button1Action={()=>{this.props.setPage(30)}} button2={"Cancel"} button2Action={()=>{}}/>
       <Popup margin support2={true} noDismiss ref={(popupSupport1) => this.popupSupport1 = popupSupport1} text="Buy me a Coffee" textLower={attemptToTranslate("If you enjoy this free app, buy the developer a coffee!") + " ☕"} button1={"Sure!"} button1Action={()=>{this.props.setPage(39)}} button2={"No Thanks"} button2Action={()=>{}}/>
       <Popup margin support2={true} noDismiss ref={(popupSupport2) => this.popupSupport2 = popupSupport2} text="Leave a Tip" textLower={attemptToTranslate("Support the app to keep it ad free for all") + " 😄"} button1={"Sure!"} button1Action={()=>{this.props.setPage(39)}} button2={"No Thanks"} button2Action={()=>{}}/>
       <Popup margin support2={true} noDismiss ref={(popupSupport3) => this.popupSupport3 = popupSupport3} text="Support the Developer" textLower={attemptToTranslate("Support the app and the developer's post secondary education tuition") + " 🎓😄"} button1={"Sure!"} button1Action={()=>{this.props.setPage(39)}} button2={"No Thanks"} button2Action={()=>{}}/>
