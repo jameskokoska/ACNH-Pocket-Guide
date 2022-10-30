@@ -6,6 +6,7 @@ export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 export const changelog = `
 -New Gold supporter: everstar! Thank you!
 -Side menu is more responsive and faster
+-Fixed calendar previous month button
 -Fixed first launch crash
 -Optimized loading time
 -Improved sorting algorithm
