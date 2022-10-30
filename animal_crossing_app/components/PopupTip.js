@@ -15,7 +15,7 @@ import ButtonComponent from "./ButtonComponent";
 import colors from "../Colors";
 import LottieView from 'lottie-react-native';
 import Popup from "./Popup";
-import {MailLink, GiveSupport} from "./Formattings";
+import {MailLink} from "./Formattings";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { openURL } from "../LoadJsonData";
 
@@ -57,7 +57,6 @@ class PopupTip extends Component {
           <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
             <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Leave a tip?</TextFont>
             <View style={{height:10}}/>
-            <GiveSupport/>
             <View style={{flexDirection:"row"}}>
               <ButtonComponent
                 text={"No thanks"}
@@ -74,9 +73,6 @@ class PopupTip extends Component {
                 vibrate={5}
                 onPress={() => {
                   this.setState({popupVisible:false, open2:true})
-                  openURL(
-                    "https://ko-fi.com/dapperappdeveloper"
-                  );
                   AsyncStorage.setItem("tipDismissed", "true");
                 }}
               />

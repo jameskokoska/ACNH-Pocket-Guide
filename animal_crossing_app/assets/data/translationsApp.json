@@ -650,23 +650,23 @@
     ],
     "Main": [
         {
-            "English": "1244 items",
-            "English (Europe)": "1244 items",
-            "French": "1232 items (12 items missing)",
-            "French (US)": "1232 items (12 items missing)",
-            "German": "1244 items",
-            "Spanish": "1237 items (7 items missing)",
-            "Spanish (US)": "1209 items (35 items missing)",
-            "Russian": "1224 items (20 items missing)",
-            "Italian": "1223 items (21 items missing)",
-            "Dutch": "1198 items (46 items missing)",
-            "Chinese": "904 items (340 items missing)",
-            "Chinese (Traditional)": "9 items (1235 items missing)",
-            "Japanese": "9 items (1235 items missing)",
-            "Korean": "9 items (1235 items missing)",
-            "Portuguese": "1221 items (23 items missing)",
-            "Czech": "406 items (838 items missing)",
-            "Slovak": "376 items (868 items missing)"
+            "English": "1246 items",
+            "English (Europe)": "1246 items",
+            "French": "1234 items (12 items missing)",
+            "French (US)": "1234 items (12 items missing)",
+            "German": "1246 items",
+            "Spanish": "1239 items (7 items missing)",
+            "Spanish (US)": "1211 items (35 items missing)",
+            "Russian": "1226 items (20 items missing)",
+            "Italian": "1225 items (21 items missing)",
+            "Dutch": "1200 items (46 items missing)",
+            "Chinese": "904 items (342 items missing)",
+            "Chinese (Traditional)": "9 items (1237 items missing)",
+            "Japanese": "9 items (1237 items missing)",
+            "Korean": "9 items (1237 items missing)",
+            "Portuguese": "1223 items (23 items missing)",
+            "Czech": "408 items (838 items missing)",
+            "Slovak": "378 items (868 items missing)"
         },
         {
             "English": "Home",
@@ -18376,6 +18376,36 @@
             "Portuguese": "O desenvolvedor está ciente do problema e procurando uma correção.",
             "Czech": "Vývojář o problému ví a hledá řešení.",
             "Slovak": "Vývojár si je vedomý problému a hľadá riešenie."
+        },
+        {
+            "English": "Buy something for the developer",
+            "English (Europe)": "Buy something for the developer",
+            "French": "Achetez quelque chose pour le développeur",
+            "French (US)": "Achetez quelque chose pour le développeur",
+            "German": "Kaufen Sie etwas für den Entwickler",
+            "Spanish": "Compra algo para el desarrollador",
+            "Spanish (US)": "Compra algo para el desarrollador",
+            "Russian": "Купить что-нибудь для разработчика",
+            "Italian": "Compra qualcosa per lo sviluppatore",
+            "Dutch": "Koop iets voor de ontwikkelaar",
+            "Portuguese": "Compre algo para o desenvolvedor",
+            "Czech": "Kupte něco pro vývojáře",
+            "Slovak": "Kúpte niečo pre vývojárov"
+        },
+        {
+            "English": "Don't forget to keep periodic backups of your data!",
+            "English (Europe)": "Don't forget to keep periodic backups of your data!",
+            "French": "N'oubliez pas de conserver des sauvegardes périodiques de vos données !",
+            "French (US)": "N'oubliez pas de conserver des sauvegardes périodiques de vos données !",
+            "German": "Vergessen Sie nicht, regelmäßige Backups Ihrer Daten zu erstellen!",
+            "Spanish": "¡No olvide mantener copias de seguridad periódicas de sus datos!",
+            "Spanish (US)": "¡No olvide mantener copias de seguridad periódicas de sus datos!",
+            "Russian": "Не забывайте делать периодические резервные копии ваших данных!",
+            "Italian": "Non dimenticare di mantenere backup periodici dei tuoi dati!",
+            "Dutch": "Vergeet niet om periodieke back-ups van uw gegevens te maken!",
+            "Portuguese": "Não se esqueça de manter backups periódicos de seus dados!",
+            "Czech": "Nezapomeňte si pravidelně zálohovat svá data!",
+            "Slovak": "Nezabudnite si pravidelne zálohovať svoje dáta!"
         }
     ],
     "Sources": [
@@ -36218,8 +36248,8 @@
             "French (US)": "Waouh ! Tu as pris un requin-baleine ! Ça, c'est un poisson et c'est assez !",
             "German": "Ein Walhai!\nIst das hier deine Walhaimat?",
             "Russian": "Ух ты! На удочку попалась китовая акула! Или это акулий кит?",
-            "Czech": "Tady fouká! Chytil jsem žraloka velrybího! Říkám vám, byl tak velký!",
-            "Slovak": "Tá fúka! Chytil som žraloka veľrybieho! Hovorím vám, bol tiiiiiiiiiiiiiiiiiiiiiis veľký!"
+            "Czech": "Tady fouká! Chytil jsem žraloka velrybího! Říkám vám, byl taaaak velký!",
+            "Slovak": "Tá fúka! Chytil som žraloka veľrybieho! Hovorím vám, bol taaak veľký!"
         },
         {
             "English": "I caught a yellow perch! Those yellow birds have to sit somewhere!",

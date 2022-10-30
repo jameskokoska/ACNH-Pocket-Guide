@@ -10,6 +10,7 @@ import { DropdownMenu } from './Dropdown';
 import Popup from './Popup';
 import colors from '../Colors.js';
 import Toast from "react-native-toast-notifications";
+import Animated, { FadeIn } from "react-native-reanimated";
 
 const Header = (props) => {
   console.log(props.showHemisphereSwitcherOption)
@@ -130,13 +131,13 @@ const Header = (props) => {
         </View>
         <View style={{height: props.headerHeight / 2}}>
           <View style={styles.subHeader}>
-            <FadeInOut fadeIn={true}>
+            <Animated.View entering={FadeIn.duration(400)}>
               <TextFont style={[styles.title, {fontSize: props.smallerHeader?28:38, color: props.titleColor}]} bold={true}>{props.title}</TextFont>
               {props.customHeader}
               {props.subHeader!==undefined&&props.subHeader!=="" ? <TextFont numberOfLines={4} style={[styles.title, {paddingBottom:5, marginTop: -5, fontSize: 13, color: props.titleColor}]}>{props.subHeader}</TextFont> : <View/>}
               {props.subHeader2!==undefined&&props.subHeader2!=="" ? <TextFont numberOfLines={4} style={[styles.title, {paddingBottom:5, marginTop: -10, fontSize: 13, color: props.titleColor}]}>{props.subHeader2}</TextFont> : <View/>}
               {getSettingsString("settingsHideImages")==="true"?<TextFont numberOfLines={4} style={[styles.title, {paddingBottom:3, marginTop: -7, fontSize: 8, color: props.titleColor}]}>{"Note: You have images hidden to avoid spoilers. Disable this in the Settings page to view all images."}</TextFont>:<View/>}
-            </FadeInOut>
+            </Animated.View>
             {!props.disableSearch ? <View style={{flexDirection: 'row'}}>
               <View style={[styles.searchBox, {backgroundColor:props.searchBarColor}]}>
                 <DelayInput
@@ -186,7 +187,7 @@ export const HeaderLoading = (props) => {
     dropDownPickerOpacity = 0.7
   }
   return (
-    <FadeInOut fadeIn={true}>
+    <Animated.View entering={FadeIn.duration(400)}>
       <ImageBackground source={props.appBarImage} style={{width:"100%", backgroundColor: props.appBarColor}}>
         <View style={[styles.topSpace, {height: props.headerHeight / 1.5 + 10,}]}>
         </View>
@@ -213,7 +214,7 @@ export const HeaderLoading = (props) => {
         source={require('../assets/loading.json')}
       />
       </View>
-    </FadeInOut>
+    </Animated.View>
   );
 };
 

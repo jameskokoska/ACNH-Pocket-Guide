@@ -34,19 +34,6 @@ export class MailLink extends Component {
   }
 }
 
-
-export class GiveSupport extends Component {
-  render(){
-    return(
-      <TouchableOpacity style={[this.props.style,{marginHorizontal:15, padding: 15}]} onPress={() => openURL('https://ko-fi.com/dapperappdeveloper')}>
-        <TextFont translate={false} bold={false} style={{color: this.props.blueText===true?colors.fishText[global.darkMode]:colors.textBlack[global.darkMode], fontSize: 18, textAlign:"center"}}>{attemptToTranslate("If you enjoy this free app, consider supporting the developer") + " 😊"}</TextFont>
-        {this.props.tapHere?<TextFont bold={false} style={{color: this.props.blueText===true?colors.fishText[global.darkMode]:colors.textBlack[global.darkMode], fontSize: 18, textAlign:"center", marginTop: 5}}>{"Tap here!"}</TextFont>:<View/>}
-        <TextFont bold={false} style={{marginTop:10, color: colors.fishText[global.darkMode], fontSize: 15, textAlign:"center"}}>Thank you!</TextFont>
-      </TouchableOpacity>
-    )
-  }
-}
-
 export class SubHeader extends Component {
   render(){
     return(

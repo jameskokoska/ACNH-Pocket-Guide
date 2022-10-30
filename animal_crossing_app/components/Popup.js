@@ -17,7 +17,7 @@ import colors from "../Colors";
 import BottomSheet from 'reanimated-bottom-sheet';
 import Animated from 'react-native-reanimated';
 import FadeInOut from "./FadeInOut"
-import { GiveSupport, HeaderNote, MailLink, SubHeader } from "./Formattings";
+import { HeaderNote, MailLink, SubHeader } from "./Formattings";
 import * as RootNavigation from '../RootNavigation.js';
 import { Appearance } from 'react-native';
 import LottieView from 'lottie-react-native';
@@ -127,7 +127,6 @@ class Popup extends Component {
               />:<View/>}
             </ScrollView>
             {this.props.mailLink?<View style={{marginVertical:10}}><MailLink/></View>:<View/>}
-            {this.props.support?<View style={{marginVertical:10}}><GiveSupport/></View>:<View/>}
             {this.props.support2?<View style={{marginVertical:10}}><HeaderNote style={{textAlign:'center'}}>If you already supported, thank you!!</HeaderNote></View>:<View/>}
             <View style={{flexDirection:"row", justifyContent:"center"}}>
               {this.Button2}

@@ -1,15 +1,12 @@
 import React, {Component} from 'react';
-import {Button, Linking, ScrollView, View, Image, FlatList} from 'react-native';
+import {View, Image, FlatList} from 'react-native';
 import TextFont from '../components/TextFont'
-import StoreHoursContainer from '../components/StoreHoursContainer';
 import colors from '../Colors'
 import PopupRating from "../components/PopupRating"
 import ButtonComponent from "../components/ButtonComponent"
 import {MailLink, ExternalLink, SubHeader, Header, Paragraph, HeaderNote} from "../components/Formattings"
 import {attemptToTranslate, capitalize, openURL} from "../LoadJsonData"
 import {changelog, dataVersion} from "../Changelog"
-import Popup from '../components/Popup';
-import { testNotification } from '../Notifications';
 
 class CreditsPage extends Component {
   render(){
@@ -97,8 +94,6 @@ class CreditsPage extends Component {
         <SubHeader> SirDave</SubHeader>
       </CreditBox>
       
-      {/* <PopupTip show={this.state.show2} noShow={()=>{this.setState({show2:false})}}/>
-      <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.setState({show2:true})}} text={"Give a tip"} /> */}
       <View style={{height:30}}/>
       <SubHeader>Additional Information</SubHeader>
       <Paragraph>This application was created using React Native, with the original App programmed in Flutter. This application and contents are NOT affiliated with Nintendo. All local artwork recreated/licensed. This application is not made for commercial use, and is provided at a price of 0$ (free) on the Google Play Store with no advertisements. All application source code is of property to respective owners/contributors listed on the Credits page and/or licenses associated within specific packages/libraries within this application.</Paragraph>

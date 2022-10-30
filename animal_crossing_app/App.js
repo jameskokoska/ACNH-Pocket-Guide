@@ -15,7 +15,6 @@ import ItemsPage from './pages/ItemsPage';
 import AllItemsPage from './pages/AllItemsPage';
 import ProfilesPage from './pages/ProfilesPage';
 import CraftingPage from './pages/CraftingPage';
-import FadeInOut from './components/FadeInOut';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import LottieView from 'lottie-react-native';
 import CreditsPage from './pages/CreditsPage';
@@ -68,6 +67,8 @@ import VillagerPhotoPoster from './pages/VillagerPhotoPoster';
 import TodoReorderPage from './pages/TodoReorderPage';
 import DonatePage from './pages/DonatePage';
 import 'expo-dev-client';
+import * as InAppPurchases from 'expo-in-app-purchases';
+import Animated, { FadeIn } from "react-native-reanimated";
 
 const backup = console.warn;
 
@@ -457,9 +458,9 @@ class App extends Component {
       return <>
         <View style={{position: "absolute", backgroundColor: colors.background[Appearance.getColorScheme()==="light" ? 0 : 1], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
         <View style={{alignItems:"center", justifyContent:"center",backgroundColor: colors.background[Appearance.getColorScheme()==="light" ? 0 : 1], width:Dimensions.get('window').width, height:Dimensions.get('window').height*0.85}}>
-          <FadeInOut fadeIn={true}>
+          <Animated.View entering={FadeIn.duration(400)}>
             <LottieView autoPlay loop style={{width: maxWidth,zIndex:1,transform: [{ scale: 1.3 },],}} source={chosenSplashScreen}/>
-          </FadeInOut>
+          </Animated.View>
         </View>
         <PopupRawLoading ref={(popupLoading) => this.popupLoading = popupLoading}/>
       </>
@@ -470,7 +471,7 @@ class App extends Component {
     } else {
       var currentPageView;
       if (this.state.currentPage===0){
-        currentPageView = <FadeInOut fadeIn={true}><HomePage sections={this.sections} sectionsOrder={this.sectionsOrder} eventSections={this.eventSections} setPage={this.setPage}/></FadeInOut>
+        currentPageView = <Animated.View entering={FadeIn.duration(400)}><HomePage sections={this.sections} sectionsOrder={this.sectionsOrder} eventSections={this.eventSections} setPage={this.setPage}/></Animated.View>
       } else if (this.state.currentPage===1){
         currentPageView = <AllItemsPage setPage={this.setPage}/>
       } else if(this.state.currentPage===2){
@@ -619,19 +620,57 @@ class App extends Component {
 }
 
 class PopupInfos extends Component {
+  getPurchases = async () => {
+    const { responseCode, results } = await InAppPurchases.getPurchaseHistoryAsync()
+    if (responseCode === InAppPurchases.IAPResponseCode.OK) {
+      const output = []
+      for(let result of results){
+        output.push(result["productId"])
+      }
+      return output
+    } else {
+      return []
+    }
+  }
+
   async componentDidMount(){
+    try {
+      await InAppPurchases.connectAsync();
+    } catch (e) {
+      console.log(e.toString())
+    }
+  
     setTimeout(async ()=>{
       const numLogins = parseInt(await getStorage("numLogins","0"))+1;
       const numLoginsOffset = JSON.parse(await getStorage("numLoginsOffset",JSON.stringify([global.version,1])));
       if(numLoginsOffset[0]===global.version){
         if(numLoginsOffset[1]>=1){
-          //can periodically switch this one (ref and storage key)
-          {/* Support */}
-          // let supportPopupDismissed = await getStorage("supportPopupDismissed15","false");
-          // if(supportPopupDismissed==="false" && numLogins >= 12){
-          //   AsyncStorage.setItem("supportPopupDismissed15", "true");
-          //   this.popupSupport2?.setPopupVisible(true)
-          // }
+          console.log("num logins:"+numLogins.toString())
+          
+          setTimeout(async ()=>{
+            const purchases = await this.getPurchases()
+          
+            if((numLogins+1) % 10 === 0 && purchases.length <= 0){
+              if(Math.floor(global.randomGlobal * 3)===0){
+                this.popupSupport1?.setPopupVisible(true)
+              } else if (Math.floor(global.randomGlobal * 3)===1){
+                this.popupSupport2?.setPopupVisible(true)
+              } else if (Math.floor(global.randomGlobal * 3)===2){
+                this.popupSupport3?.setPopupVisible(true)
+              }
+            } else {
+              let ratingDismissed = await getStorage("ratingDismissed","false");
+              let backupPopupDismissed2 = await getStorage("backupPopupDismissed2","false");
+              if(ratingDismissed==="false" && numLogins >= 31){
+                AsyncStorage.setItem("ratingDismissed", "true");
+                this.popupRating?.setPopupVisible(true)
+              } else if(backupPopupDismissed2==="false" && numLogins >= 17){
+                AsyncStorage.setItem("backupPopupDismissed2", "true");
+                this.popupBackup?.setPopupVisible(true)
+              }
+            }
+          }, 2)
+          
         }
         AsyncStorage.setItem("numLoginsOffset", JSON.stringify([global.version,numLoginsOffset[1]+1]));
       } else {
@@ -644,32 +683,6 @@ class PopupInfos extends Component {
         AsyncStorage.setItem("backupPopupDismissed", "true");
         this.popupBackup?.setPopupVisible(true)
       }
-      let supportPopupDismissed = await getStorage("supportPopupDismissed","false");
-      {/* Support */}
-      // if(supportPopupDismissed==="false" && numLogins >= 9){
-      //   AsyncStorage.setItem("supportPopupDismissed", "true");
-      //   this.popupSupport?.setPopupVisible(true)
-      // }
-      // let supportPopupDismissed2 = await getStorage("supportPopupDismissed2","false");
-      // if(supportPopupDismissed2==="false" && numLogins >= 6){
-      //   AsyncStorage.setItem("supportPopupDismissed2", "true");
-      //   this.popupSupport2?.setPopupVisible(true)
-      // }
-      // let supportPopupDismissed3 = await getStorage("supportPopupDismissed3","false");
-      // if(supportPopupDismissed3==="false" && numLogins >= 6){
-      //   AsyncStorage.setItem("supportPopupDismissed3", "true");
-      //   this.popupSupport3?.setPopupVisible(true)
-      // }
-      // let supportPopupDismissed4 = await getStorage("supportPopupDismissed4","false");
-      // if(supportPopupDismissed4==="false" && numLogins >= 6){
-      //   AsyncStorage.setItem("supportPopupDismissed4", "true");
-      //   this.popupSupport4?.setPopupVisible(true)
-      // }
-      // let updatePopupDismissed = await getStorage("updatePopupDismissed","false");
-      // if(updatePopupDismissed==="false" && numLogins >= 1){
-      //   AsyncStorage.setItem("updatePopupDismissed", "true");
-      //   this.popupUpdate?.setPopupVisible(true)
-      // }
       if(numLogins===4){
         this.popupRating?.setPopupVisible(true)
       }
@@ -687,13 +700,11 @@ class PopupInfos extends Component {
     return <>
       <PopupRating ref={(popupRating) => this.popupRating = popupRating}/>
       <Popup ref={(popupImprovePerformance) => this.popupImprovePerformance = popupImprovePerformance} text="Improve Performance" textLower="To increase app performance, consider enabling the [Battery saver / Increase performance] setting." button1={"Enable"} button1Action={()=>{setSettingsString("settingsLowEndDevice","true");}} button2={"Not now"} button2Action={()=>{}}/>
-      <Popup mailLink={true} ref={(popupBackup) => this.popupBackup = popupBackup} text="Data Backup" textLower="You can now backup your data to the cloud and enable auto backups in the settings." button1={"Go to page"} button1Action={()=>{this.props.setPage(30)}} button2={"Cancel"} button2Action={()=>{}}/>
-      <Popup support={true} noDismiss ref={(popupSupport) => this.popupSupport = popupSupport} text="Leave a Tip" button1={"Sure!"} button1Action={()=>{openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
-      <Popup margin support2={true} noDismiss ref={(popupSupport2) => this.popupSupport2 = popupSupport2} text="Buy me a Coffee" textLower={attemptToTranslate("If you enjoy this free app, buy the developer a coffee!") + " ☕"} button1={"Sure!"} button1Action={()=>{openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
-      {/* <Popup margin support2={true} noDismiss ref={(popupSupport3) => this.popupSupport3 = popupSupport3} text="Happy Holidays!" textLower={attemptToTranslate("Support the app to keep it ad free for all") + " 😄"} button1={"Sure!"} button1Action={()=>{openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>*/}
-      <Popup margin support2={true} noDismiss ref={(popupSupport3) => this.popupSupport3 = popupSupport3} text="Support the App" textLower={attemptToTranslate("Support the app to keep it ad free for all") + " 😄"} button1={"Sure!"} button1Action={()=>{openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
-      <Popup margin support2={true} noDismiss ref={(popupSupport4) => this.popupSupport4 = popupSupport4} text="Support the Developer" textLower={attemptToTranslate("Support the app and the developer's post secondary education tuition") + " 🎓😄"} button1={"Sure!"} button1Action={()=>{openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>
-      {/* <Popup margin support2={true} noDismiss ref={(popupSupport4) => this.popupSupport4 = popupSupport4} text="Happy New Year!" textLower={attemptToTranslate("Consider supporting this ad free app") + " 🙂"} button1={"Sure!"} button1Action={()=>{openURL('https://ko-fi.com/dapperappdeveloper')}} button2={"No Thanks"} button2Action={()=>{}}/>  */}
+      <Popup mailLink={true} ref={(popupBackup) => this.popupBackup = popupBackup} text="Data Backup" textLower="You can now backup your data to the cloud and enable auto backups in the settings." button1={"Go to page"} button1Action={()=>{this.props.setPage(39)}} button2={"Cancel"} button2Action={()=>{}}/>
+      <Popup mailLink={true} ref={(popupBackup) => this.popupBackup = popupBackup} text="Data Backup" textLower="Don't forget to keep periodic backups of your data!" button1={"Go to page"} button1Action={()=>{this.props.setPage(39)}} button2={"Cancel"} button2Action={()=>{}}/>
+      <Popup margin support2={true} noDismiss ref={(popupSupport1) => this.popupSupport1 = popupSupport1} text="Buy me a Coffee" textLower={attemptToTranslate("If you enjoy this free app, buy the developer a coffee!") + " ☕"} button1={"Sure!"} button1Action={()=>{this.props.setPage(39)}} button2={"No Thanks"} button2Action={()=>{}}/>
+      <Popup margin support2={true} noDismiss ref={(popupSupport2) => this.popupSupport2 = popupSupport2} text="Leave a Tip" textLower={attemptToTranslate("Support the app to keep it ad free for all") + " 😄"} button1={"Sure!"} button1Action={()=>{this.props.setPage(39)}} button2={"No Thanks"} button2Action={()=>{}}/>
+      <Popup margin support2={true} noDismiss ref={(popupSupport3) => this.popupSupport3 = popupSupport3} text="Support the Developer" textLower={attemptToTranslate("Support the app and the developer's post secondary education tuition") + " 🎓😄"} button1={"Sure!"} button1Action={()=>{this.props.setPage(39)}} button2={"No Thanks"} button2Action={()=>{}}/>
     </>
   }
 }

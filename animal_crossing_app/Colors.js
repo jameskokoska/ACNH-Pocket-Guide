@@ -221,5 +221,6 @@ const colors = {
     popupDanger : ["#AF5858","#A86B6B"],
     popupSuccess : ["#60A860","#51914B"],
     popupNeutral : ["#DFDFDF","#383838"],
-}
+    purchaseSuccess : ["#C2E3FF","#336E85"],
+  }
 module.exports = colors;
