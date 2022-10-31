@@ -4,7 +4,8 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
--New Gold supporter: everstar! Thank you!
+-New Monthly Gold Supporter: everstar! Thank you!
+-Improved side menu closing touch interaction
 -Side menu is more responsive and faster
 -Fixed calendar previous month button
 -Fixed first launch crash

@@ -26,15 +26,16 @@ import Animated, {
 } from 'react-native-reanimated';
 
 function Overlay(props) {
+  // Subtract 0.15 so the overlay disappears a bit earlier to allow touch interaction when menu still closing
   const overlayStyle = useAnimatedStyle(() => ({
     backgroundColor: props.color,
-    opacity: props.progress.value,
+    opacity: props.progress.value-0.15,
     transform: [
       {
         translateX:
           // when the overlay should not be visible move it off the screen
           // to prevent it from intercepting touch events on Android
-          props.progress.value === 0
+          props.progress.value <= 0.15
             ? 10000
             : 0,
       },
