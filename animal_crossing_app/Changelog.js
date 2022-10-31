@@ -5,6 +5,10 @@ export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
 -New Monthly Gold Supporter: everstar! Thank you!
+-
+-Fixed calendar events dates
+-UI fixes on Paradise Planning and Achievements page
+-
 -Improved side menu closing touch interaction
 -Side menu is more responsive and faster
 -Fixed calendar previous month button

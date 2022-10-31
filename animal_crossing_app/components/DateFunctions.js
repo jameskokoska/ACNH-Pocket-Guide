@@ -320,15 +320,15 @@ export function isDateInRange(range,rangeYear, date, specialCheck=""){ //startOn
     }
   }
   if(rangeSplit.length===4){
-    var dateStart = new Date('January 10, 2000 12:00:00');
-    dateStart.setMonth(getMonthShortFromString(rangeSplit[0]));
-    dateStart.setDate(rangeSplit[1]);
+    let dateStart = new Date(`2000-01-01`);
+    dateStart.setUTCMonth(getMonthShortFromString(rangeSplit[0], true));
+    dateStart.setUTCDate(parseInt(rangeSplit[1]));
     dateStart.setYear(rangeYear);
-    var dateEnd= new Date('January 10, 2000 12:00:00');
-    dateEnd.setMonth(getMonthShortFromString(rangeSplit[2]));
-    dateEnd.setDate(parseInt(rangeSplit[3])); //not needed +1 anymore... ensures the end date is larger so current date is within range
+    let dateEnd= new Date(`2000-01-01`);
+    dateEnd.setUTCMonth(parseInt(getMonthShortFromString(rangeSplit[2], true)));
+    dateEnd.setUTCDate(parseInt(rangeSplit[3])); //not needed +1 anymore... ensures the end date is larger so current date is within range
     dateEnd.setYear(rangeYear);
-
+  
     //we have a date Dec-Jan
     if(parseInt(getMonthShortFromString(rangeSplit[2]))<parseInt(getMonthShortFromString(rangeSplit[0]))){
       dateEnd.setYear(parseInt(rangeYear)+1);

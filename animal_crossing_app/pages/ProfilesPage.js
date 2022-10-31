@@ -128,7 +128,7 @@ class ProfilesComponent extends Component{
       time = h + time.substr(hourEnd, 3) + ampm;
     }
     return(
-      <View style={{backgroundColor: this.selected?colors.selectedProfile[global.darkMode]:colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 10}}>
+      <View style={{backgroundColor: this.selected?colors.selectedProfile[global.darkMode]:colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: 20, marginVertical: 5,  borderRadius: 15}}>
         <View style={{height:5}}/>
         <View style={{marginHorizontal:20, flexDirection:"row", alignItems:"center"}}>
           <ProfileIcon profile={this.props.profile}/>

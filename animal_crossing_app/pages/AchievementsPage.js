@@ -125,11 +125,7 @@ export default class AchievementsPage extends Component {
   
   render(){
     return <>
-      <Animated.View style={{width:Dimensions.get('window').width,position:"absolute", zIndex:1, transform: [{ translateY: this.translateY }]}}>
-        <View style={{backgroundColor: colors.background[global.darkMode], flex: 1,justifyContent: 'flex-end',height:this.headerHeight,}}>
-          <Header customButton={<CycleCheckListFilter setFilter={this.state.setFilter} cycleFilter={this.cycleFilter}/>} invertCheckItemsListed={()=>{this.invertCheckItemsListed()}} unCheckAllItemsListed={()=>{this.unCheckAllItemsListed()}} checkAllItemsListed={()=>{this.checkAllItemsListed()}} disableFilters={true} disableSearch={false} title={"Achievements"} headerHeight={this.headerHeight} updateSearch={this.handleSearch} appBarColor={colors.achievementsAppBar[global.darkMode]} searchBarColor={colors.searchbarBG[global.darkMode]} titleColor={colors.textBlack[global.darkMode]}/>
-        </View>
-      </Animated.View>
+      
       <Animated.FlatList
         style={{paddingTop:this.headerHeight+5}}
         onScroll={Animated.event([{ nativeEvent: {contentOffset: {y: this.scrollY}}}],{useNativeDriver: true,},)}
@@ -140,6 +136,11 @@ export default class AchievementsPage extends Component {
         keyExtractor={(item, index) => `list-item-${index}-${item["Name"]}`}
         contentContainerStyle={{paddingBottom:Dimensions.get('window').height/3}}
       />
+      <Animated.View style={{width:Dimensions.get('window').width,position:"absolute", zIndex:1, transform: [{ translateY: this.translateY }]}}>
+        <View style={{backgroundColor: colors.background[global.darkMode], flex: 1,justifyContent: 'flex-end',height:this.headerHeight,}}>
+          <Header customButton={<CycleCheckListFilter setFilter={this.state.setFilter} cycleFilter={this.cycleFilter}/>} invertCheckItemsListed={()=>{this.invertCheckItemsListed()}} unCheckAllItemsListed={()=>{this.unCheckAllItemsListed()}} checkAllItemsListed={()=>{this.checkAllItemsListed()}} disableFilters={true} disableSearch={false} title={"Achievements"} headerHeight={this.headerHeight} updateSearch={this.handleSearch} appBarColor={colors.achievementsAppBar[global.darkMode]} searchBarColor={colors.searchbarBG[global.darkMode]} titleColor={colors.textBlack[global.darkMode]}/>
+        </View>
+      </Animated.View>
       <AchievementsPopup ref={(popup) => this.popup = popup}/>
     </>
   }
