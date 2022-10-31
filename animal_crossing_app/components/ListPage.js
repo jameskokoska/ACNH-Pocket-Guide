@@ -1028,7 +1028,7 @@ function ListPage(props){
     return (<>
     {data!=="empty"?
       <View style={{backgroundColor:props.backgroundColor}} >
-        {header}
+        
         <PopupFilter villagerGifts={props.villagerGifts} disableFilters={props.disableFilters} title={props.title} ref={popupFilter} filterSearchable={props.filterSearchable} updateSearchFilters={updateSearchFilters}/> 
         {/* setFilterPopupState(false) */}
         {loading? <View style={{alignItems:"center", justifyContent:"center", width:"100%", height:"100%"}}>
@@ -1120,6 +1120,7 @@ function ListPage(props){
             />
           }
         />}
+        {header}
       </View>
     :
       <HeaderLoading disableSearch={props.disableSearch} title={props.title} headerHeight={headerHeight} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
