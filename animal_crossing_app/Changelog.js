@@ -6,6 +6,8 @@ export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 export const changelog = `
 -New Monthly Gold Supporter: everstar! Thank you!
 -
+-Songs page overlay fixed
+-When keyboard minimized, search bar loses focus
 -Fixed searchbar text entry
 -Fixed calendar events dates
 -UI fixes on Paradise Planning and Achievements page

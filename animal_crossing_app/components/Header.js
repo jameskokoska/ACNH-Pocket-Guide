@@ -1,5 +1,5 @@
-import React, {useState, Component} from 'react';
-import {Share, Image, TouchableOpacity, ImageBackground, StyleSheet, View, TextInput, Text, Vibration} from 'react-native';
+import React, {useState, Component, useEffect} from 'react';
+import {Share, Image, TouchableOpacity, ImageBackground, StyleSheet, View, TextInput, Text, Vibration, Keyboard} from 'react-native';
 import TextFont from './TextFont'
 import FadeInOut from "./FadeInOut"
 import LottieView from 'lottie-react-native';
@@ -13,7 +13,19 @@ import Toast from "react-native-toast-notifications";
 import Animated, { FadeIn } from "react-native-reanimated";
 
 const Header = (props) => {
-  console.log(props.showHemisphereSwitcherOption)
+  // console.log(props.showHemisphereSwitcherOption)
+  
+  useEffect(() => {
+    const keyboardDidHideListener = Keyboard.addListener(
+      'keyboardDidHide',
+      () => {
+        textInput?.current.blur()
+      }
+    );
+    return () => {
+      keyboardDidHideListener.remove();
+    };
+  }, []);
   var filterImage;
   const [emptySearch, setEmptySearch] = useState(props.currentSearch==="" || props.currentSearch===undefined)
   if(props.disableFilters){
