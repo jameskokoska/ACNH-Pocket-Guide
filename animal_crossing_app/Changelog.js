@@ -6,9 +6,11 @@ export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 export const changelog = `
 -New Monthly Gold Supporter: everstar! Thank you!
 -
+-Long press an event to view its dates
+-Fixed To-Do list edit icons
+-
 -Custom wishlist page fixes
 -Item amount for custom lists shown on every page
--Fixed To-Do list icons
 -Songs page overlay fixed
 -When keyboard minimized, search bar loses focus
 -Fixed searchbar text entry
@@ -41,6 +43,8 @@ export const changelog = `
 -Backup reminder after catalog import
 -Notes on which options apply for nook.lol catalog importing on Catalog Scanner page
 -Translation updates
+-
+-Past changes:
 -
 -Improved catalog scanning variations
 -Catalog scanning can now skip completed variations items
@@ -163,8 +167,6 @@ export const changelog = `
 -Events page fixes
 -Updated translations
 -Changelog UI fixes
--
--Past changes:
 -
 -Fixed multiple Amiibo cards showing up in list
 -Added Amiibo number to item label and search property

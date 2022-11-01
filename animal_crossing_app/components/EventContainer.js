@@ -3,7 +3,7 @@ import {Image, Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, Vie
 import TextFont from './TextFont'
 import {getPhoto} from './GetPhoto'
 import {getWeekDayShort, getMonthShort, getCurrentDateObject, addDays} from './DateFunctions';
-import {getEventName, attemptToTranslate, capitalize, getSettingsString, translateBirthday, attemptToTranslateItem, allEventItemsCheck, convertTimeTo24Hours} from "../LoadJsonData"
+import {getEventName, attemptToTranslate, capitalize, getSettingsString, translateBirthday, attemptToTranslateItem, allEventItemsCheck, convertTimeTo24Hours, translateDateRange} from "../LoadJsonData"
 import FastImage from './FastImage';
 import {schedulePushNotification} from "../Notifications"
 import {specialEvents, isDateInRange} from "./DateFunctions"
@@ -128,6 +128,34 @@ export function EventContainer(props){
               onlyUpdateMe = true
             }
           }
+        }}
+        onLongPress={()=>{
+          let date = props.event.dateRangeString
+          if(date===undefined){
+            date = ""
+          }
+          
+          let dateTranslated;
+          if(date!==""){
+            date = date.replace(/[^\x00-\x7F]/g, "-");
+            date = date.replace("--", "- ");
+            dateTranslated = capitalize(translateDateRange(date))
+          }else{
+            dateTranslated = ""
+          }
+
+          if(dateTranslated!=="")
+            toast.show(props.event.name + ": " + dateTranslated, {type:"success", 
+              placement:'top',
+              duration: 3000, 
+              renderType:{
+                success: (toast) => (
+                  <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, marginRight: 20, borderRadius: 5, backgroundColor: colors.popupNeutral[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+                    <TextFont translate={false} style={{color:"white", fontSize: 15}}>{toast.message}</TextFont>
+                  </View>
+                ),
+              }
+            })
         }}
       >
         {child}
@@ -277,7 +305,8 @@ export function getEventsDay(date, eventSections, showEventsIfInRange){
           colorHeavy:isImportant ? colors.specialEventBackgroundHeavy[global.darkMode]:colors.startEventBackgroundHeavy[global.darkMode],
           type:"filter",
           filter: event["Name"],
-          important: isImportant
+          important: isImportant,
+          dateRangeString: event[eventDateKey],
         });
         if(eventSections["App notifications"]){
           schedulePushNotification(date,eventSections["Set Notification Time"],capitalize(eventName),attemptToTranslate(event["Start Time"]!==undefined && event["End Time"]!==undefined && event["Start Time"]!=="5:00 AM" ? convertTimeTo24Hours(event["Start Time"])+" - "+convertTimeTo24Hours(event["End Time"]) : event["Type"]));
@@ -292,7 +321,8 @@ export function getEventsDay(date, eventSections, showEventsIfInRange){
           color:colors.warningEventBackground[global.darkMode],
           colorHeavy:colors.warningEventBackgroundHeavy[global.darkMode],
           type:"filter",
-          filter:event["Name"]
+          filter:event["Name"],
+          dateRangeString: event[eventDateKey],
         });
         if(eventSections["App notifications"]){
           schedulePushNotification(date,eventSections["Set Notification Time"],attemptToTranslate("Last day!") + " " + capitalize(eventName),attemptToTranslate(capitalize(event["Type"])));
@@ -305,7 +335,8 @@ export function getEventsDay(date, eventSections, showEventsIfInRange){
           day:date.getDate(),
           weekday:date.getDay(),
           type:"filter",
-          filter:event["Name"]
+          filter:event["Name"],
+          dateRangeString: event[eventDateKey],
         });
       }  
       

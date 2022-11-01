@@ -108,9 +108,15 @@ class ListItem extends React.Component{
   setWishlist(wishlist){
     if(this.mounted){
       const currentCustomListName = getCustomListsFirst(this.props.item.checkListKey)
+      let customListsIconValue
+      if(currentCustomListName===undefined || currentCustomListName===""){
+        customListsIconValue = wishlist ? "" : undefined
+      } else {
+        customListsIconValue = wishlist ? "" : getCustomListsIconQuick(currentCustomListName)
+      }
       this.setState({
         wishlist: wishlist,
-        customListsIcon: wishlist? "" : getCustomListsIconQuick(currentCustomListName),
+        customListsIcon: customListsIconValue,
         currentCustomList: currentCustomListName,
       })
       this.setAmount(this.props.item.checkListKey, currentCustomListName)

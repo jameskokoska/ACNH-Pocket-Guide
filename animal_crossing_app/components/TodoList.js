@@ -698,7 +698,6 @@ class TodoItem extends Component {
     if(this.props.item.picture === "breakerSeparator")
       return (
         <View style={{width: Dimensions.get('window').width-20*2}}>
-        {this.removeButton(this.props)}
         <TouchableNativeFeedback onLongPress={() => {  
           this.setState({showRemove:!this.state.showRemove})
           getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(8) : "";
@@ -712,6 +711,7 @@ class TodoItem extends Component {
           </View>
         </TouchableNativeFeedback>
         <View style={{height:2, borderRadius: 100, backgroundColor:colors.fishText[global.darkMode], marginBottom:4, marginHorizontal:-5}}/>
+        {this.removeButton(this.props)}
       </View>
     )
     var imageComp = <View/>
@@ -729,7 +729,6 @@ class TodoItem extends Component {
     }
     return (
       <View style={{width: Dimensions.get('window').width-20*2}}>
-        {this.removeButton(this.props)}
         <TouchableNativeFeedback onLongPress={() => {  
           this.setState({showRemove:!this.state.showRemove})
           getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(8) : "";
@@ -757,6 +756,7 @@ class TodoItem extends Component {
             </TouchableOpacity>
           </View>
         </TouchableNativeFeedback>
+        {this.removeButton(this.props)}
       </View>
     )
   }
@@ -837,7 +837,6 @@ class TodoItemSmall extends Component {
     }
     return (
       <View style={{margin:5, marginTop:8}}>
-        {this.removeButton(this.props)}
         <TouchableOpacity 
           background={TouchableNativeFeedback.Ripple(colors.todoColorAccent[global.darkMode], false)}
           onLongPress={() => {  
@@ -854,6 +853,7 @@ class TodoItemSmall extends Component {
           </View>
         </TouchableOpacity>
         {this.props.item.title==="" ? <View/> : <TextFont translate={false} numberOfLines={2} bold={false} style={{width: 60, marginTop: 3, color: colors.textBlack[global.darkMode], fontSize: 12, textAlign:"center"}}>{this.props.item.title}</TextFont>}
+        {this.removeButton(this.props)}
       </View>
     )
   }
@@ -893,7 +893,6 @@ export class TodoItemEdit extends Component {
     if(this.props.item.picture === "breakerSeparator")
       return (
         <View style={{width: Dimensions.get('window').width-20*2}}>
-          {this.removeButton(this.props)}
           <View style={{paddingVertical:0}}>
             <View style={{padding:5, paddingVertical:20, paddingBottom:0, paddingLeft:12}}>
               <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:22, color:colors.fishText[global.darkMode]}}>{this.props.item.title}</TextFont>
@@ -912,6 +911,7 @@ export class TodoItemEdit extends Component {
                 </TouchableOpacity>
             </View>
           </View>
+          {this.removeButton(this.props)}
         <View style={{height:2, borderRadius: 100, backgroundColor:colors.fishText[global.darkMode], marginBottom:4, marginHorizontal:-5}}/>
       </View>
     )
@@ -931,28 +931,28 @@ export class TodoItemEdit extends Component {
     return (
       <FadeInOut fadeIn={this.state.fadeRefresh} duration={150}>
         <View style={{width: Dimensions.get('window').width-20*2}}>
-          {this.removeButton(this.props)}
-            <View style={[styles.row,{backgroundColor:colors.eventBackground[global.darkMode]}]}>
-              <View style={[styles.rowImageBackground,{backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
-                {imageComp}
-              </View>
-              <View style={styles.rowTextTop}>
-                <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:20, color:colors.textBlack[global.darkMode]}}>{this.props.item.title}</TextFont>
-              </View>
-              <View style={{flexDirection:"row",zIndex:10, position:"absolute",right:14, alignItems:"center", justifyContent:"center"}}>
-                <Image
-                  style={{width:18,height:18,resizeMode:'contain', opacity:0.3}}
-                  source={global.darkMode ? require("../assets/icons/menuIconWhite.png") : require("../assets/icons/menuIcon.png")}
-                />
-                <View style={{width:11}}/>
-                <TouchableOpacity
-                  onPress={()=>{
-                    this.props.editTask(); 
-                }}>
-                  <Image source={require("../assets/icons/pencil.png")} style={{opacity:0.5,width:25, height:25, borderRadius:100,}}/>
-                </TouchableOpacity>
-              </View>
+          <View style={[styles.row,{backgroundColor:colors.eventBackground[global.darkMode]}]}>
+            <View style={[styles.rowImageBackground,{backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
+              {imageComp}
             </View>
+            <View style={styles.rowTextTop}>
+              <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:20, color:colors.textBlack[global.darkMode]}}>{this.props.item.title}</TextFont>
+            </View>
+            <View style={{flexDirection:"row",zIndex:10, position:"absolute",right:14, alignItems:"center", justifyContent:"center"}}>
+              <Image
+                style={{width:18,height:18,resizeMode:'contain', opacity:0.3}}
+                source={global.darkMode ? require("../assets/icons/menuIconWhite.png") : require("../assets/icons/menuIcon.png")}
+              />
+              <View style={{width:11}}/>
+              <TouchableOpacity
+                onPress={()=>{
+                  this.props.editTask(); 
+              }}>
+                <Image source={require("../assets/icons/pencil.png")} style={{opacity:0.5,width:25, height:25, borderRadius:100,}}/>
+              </TouchableOpacity>
+            </View>
+          </View>
+          {this.removeButton(this.props)}
         </View>
       </FadeInOut>
     )

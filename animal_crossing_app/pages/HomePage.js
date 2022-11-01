@@ -203,7 +203,7 @@ class HomePage extends Component {
     const sections = this.state.sections;
 
     return <View style={{height:"100%",width:"100%"}}>
-      <PopupChangelog/>
+      <PopupChangelog setPage={this.props.setPage}/>
       {/* <PopupBottomCustom ref={(popupSettings) => this.popupSettings = popupSettings} onClose={()=>{}}>
         <ConfigureHomePages 
           header={"Select Homepage Sections"} 

@@ -650,23 +650,23 @@
     ],
     "Main": [
         {
-            "English": "1246 items",
-            "English (Europe)": "1246 items",
-            "French": "1234 items (12 items missing)",
-            "French (US)": "1234 items (12 items missing)",
-            "German": "1246 items",
-            "Spanish": "1239 items (7 items missing)",
-            "Spanish (US)": "1211 items (35 items missing)",
-            "Russian": "1226 items (20 items missing)",
-            "Italian": "1225 items (21 items missing)",
-            "Dutch": "1200 items (46 items missing)",
-            "Chinese": "904 items (342 items missing)",
-            "Chinese (Traditional)": "9 items (1237 items missing)",
-            "Japanese": "9 items (1237 items missing)",
-            "Korean": "9 items (1237 items missing)",
-            "Portuguese": "1223 items (23 items missing)",
-            "Czech": "408 items (838 items missing)",
-            "Slovak": "378 items (868 items missing)"
+            "English": "1247 items",
+            "English (Europe)": "1247 items",
+            "French": "1235 items (12 items missing)",
+            "French (US)": "1235 items (12 items missing)",
+            "German": "1247 items",
+            "Spanish": "1240 items (7 items missing)",
+            "Spanish (US)": "1212 items (35 items missing)",
+            "Russian": "1227 items (20 items missing)",
+            "Italian": "1226 items (21 items missing)",
+            "Dutch": "1201 items (46 items missing)",
+            "Chinese": "904 items (343 items missing)",
+            "Chinese (Traditional)": "9 items (1238 items missing)",
+            "Japanese": "9 items (1238 items missing)",
+            "Korean": "9 items (1238 items missing)",
+            "Portuguese": "1224 items (23 items missing)",
+            "Czech": "409 items (838 items missing)",
+            "Slovak": "379 items (868 items missing)"
         },
         {
             "English": "Home",
@@ -18406,6 +18406,21 @@
             "Portuguese": "Não se esqueça de manter backups periódicos de seus dados!",
             "Czech": "Nezapomeňte si pravidelně zálohovat svá data!",
             "Slovak": "Nezabudnite si pravidelne zálohovať svoje dáta!"
+        },
+        {
+            "English": "Recent Items",
+            "English (Europe)": "Recent Items",
+            "French": "Articles récents",
+            "French (US)": "Articles récents",
+            "German": "Letzte Artikel",
+            "Spanish": "Artículos recientes",
+            "Spanish (US)": "Artículos recientes",
+            "Russian": "Последние элементы",
+            "Italian": "Oggetti recenti",
+            "Dutch": "Recente items",
+            "Portuguese": "Itens recentes",
+            "Czech": "Poslední položky",
+            "Slovak": "Najnovšie položky"
         }
     ],
     "Sources": [
