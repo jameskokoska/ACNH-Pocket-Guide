@@ -8,6 +8,7 @@ export const changelog = `
 -
 -Custom wishlist page fixes
 -Item amount for custom lists shown on every page
+-Fixed To-Do list icons
 -Songs page overlay fixed
 -When keyboard minimized, search bar loses focus
 -Fixed searchbar text entry

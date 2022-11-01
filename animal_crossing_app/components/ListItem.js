@@ -46,6 +46,14 @@ class ListItem extends React.Component{
       amount = getCustomListsFirstAmountQuick(this.props.item.checkListKey, currentCustomListName)
     }
     const inWishlistVal = inWishlist(this.props.item.checkListKey)
+    let customListsIconValue = inWishlistVal? "" : getCustomListsIconQuick(currentCustomListName)
+    if(currentCustomListName===undefined || currentCustomListName===""){
+      amount = 0
+      customListsIconValue = inWishlistVal? "" : undefined
+    } else {
+      customListsIconValue = inWishlistVal? "" : getCustomListsIconQuick(currentCustomListName)
+    }
+
     this.state = {
       collected: inChecklist(this.props.item.checkListKeyParent),
       wishlist: inWishlistVal,
@@ -54,7 +62,7 @@ class ListItem extends React.Component{
       villagerPhoto: inVillagerPhoto(this.props.item.checkListKey, this.checkVillagerPhotoButton()),
       variationsPercent: variationsCheckedPercent(this.props.item, this.props.item.index),
       amount:amount,
-      customListsIcon: inWishlistVal? "" : getCustomListsIconQuick(currentCustomListName),
+      customListsIcon: customListsIconValue,
       currentCustomList: currentCustomListName
     }
   }
@@ -292,7 +300,7 @@ class ListItem extends React.Component{
           }
         }
       }
-    
+
       return (
         <View style={styles.gridWrapper}>
           

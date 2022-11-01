@@ -681,8 +681,7 @@ class TodoItem extends Component {
   render(){
     if(this.props.item.picture === "breakerSeparator" && this.props.item.title==="")
       return (
-        <View style={{width: Dimensions.get('window').width-20*2,}}>
-        {this.removeButton(this.props)}
+      <View style={{width: Dimensions.get('window').width-20*2,}}>
         <TouchableNativeFeedback onLongPress={() => {  
             this.setState({showRemove:!this.state.showRemove})
             getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(8) : "";
@@ -693,6 +692,7 @@ class TodoItem extends Component {
             <View style={{marginTop: 10, height:2, borderRadius: 100, backgroundColor:colors.fishText[global.darkMode], marginHorizontal:-5}}/>
           </View>
         </TouchableNativeFeedback>
+        {this.removeButton(this.props)}
       </View>
     )
     if(this.props.item.picture === "breakerSeparator")
