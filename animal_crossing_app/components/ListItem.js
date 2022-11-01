@@ -10,7 +10,7 @@ import {
 import TextFont from './TextFont';
 import Check from './Check';
 import FastImage from './FastImage';
-import {checkOff, capitalize, commas, removeBrackets, inCustomLists, getCustomListsAmount, getCustomListsIcon, attemptToTranslate} from "../LoadJsonData"
+import {checkOff, capitalize, commas, removeBrackets, inCustomLists, getCustomListsAmount, getCustomListsIcon, attemptToTranslate, getCustomListsFirstAmount, getCustomListsFirstAmountQuick, getCustomListsIconQuick, getCustomListsFirst} from "../LoadJsonData"
 import {getPhoto, getPhotoShadow, getSizeImage} from "./GetPhoto"
 import {getMonthShort, swapDateCards} from "./DateFunctions"
 import colors from "../Colors"
@@ -37,9 +37,13 @@ class ListItem extends React.Component{
     this.showMuseumButton = true
     this.showVillagerButton = true
     this.showVillagerPhotoButton = true
+    let currentCustomListName = getCustomListsFirst(this.props.item.checkListKey)
     let amount = 0
-    if(this.props.currentCustomList!==""){
+    if(this.props.currentCustomList!==undefined && this.props.currentCustomList!==""){
       amount = getCustomListsAmount(this.props.item.checkListKey, this.props.currentCustomList)
+      currentCustomListName = this.props.currentCustomList
+    } else {
+      amount = getCustomListsFirstAmountQuick(this.props.item.checkListKey, currentCustomListName)
     }
     const inWishlistVal = inWishlist(this.props.item.checkListKey)
     this.state = {
@@ -50,7 +54,8 @@ class ListItem extends React.Component{
       villagerPhoto: inVillagerPhoto(this.props.item.checkListKey, this.checkVillagerPhotoButton()),
       variationsPercent: variationsCheckedPercent(this.props.item, this.props.item.index),
       amount:amount,
-      customListsIcon: inWishlistVal? "" : getCustomListsIcon(this.props.item.checkListKey),
+      customListsIcon: inWishlistVal? "" : getCustomListsIconQuick(currentCustomListName),
+      currentCustomList: currentCustomListName
     }
   }
 
@@ -94,16 +99,25 @@ class ListItem extends React.Component{
   }
   setWishlist(wishlist){
     if(this.mounted){
+      const currentCustomListName = getCustomListsFirst(this.props.item.checkListKey)
       this.setState({
         wishlist: wishlist,
-        customListsIcon: wishlist? "" : getCustomListsIcon(this.props.item.checkListKey),
+        customListsIcon: wishlist? "" : getCustomListsIconQuick(currentCustomListName),
+        currentCustomList: currentCustomListName,
       })
+      this.setAmount(this.props.item.checkListKey, currentCustomListName)
     }
   }
 
-  setAmount(amount){
-    if(this.mounted && this.props.currentCustomList!==""){
-      this.setState({amount:amount})
+  setAmount(checkListKeyString, currentCustomListName=this.state.currentCustomList){
+    if(this.mounted && currentCustomListName!==undefined && currentCustomListName!==""){
+      if(this.props.currentCustomList!==undefined && this.props.currentCustomList!==""){
+        const amountLocal = getCustomListsAmount(checkListKeyString, this.props.currentCustomList)
+        this.setState({amount:amountLocal})
+      } else {
+        const amountLocal = getCustomListsAmount(checkListKeyString, currentCustomListName)
+        this.setState({amount:amountLocal})
+      }
     }
   }
 
@@ -283,8 +297,7 @@ class ListItem extends React.Component{
         <View style={styles.gridWrapper}>
           
           <TouchableNativeFeedback onLongPress={() => {
-            if(this.props.currentCustomList!=="" && this.props.currentCustomList!==undefined)
-              this.props.setUpdateAmountChildFunction((amount)=>{this.setAmount(amount)})
+            this.props.setUpdateAmountChildFunction((amount)=>{this.setAmount(amount)})
 
             if(global.customLists.length > 0){
               this.props.selectCustomList(this.props.item, this.setWishlist, ()=>{}, true, this.props.item[this.props.imageProperty[this.props.item.dataSet]])
@@ -314,7 +327,7 @@ class ListItem extends React.Component{
                   </TouchableOpacity>
                 </View>
               </PanGestureHandler>
-              {this.props.currentCustomList!=="" && this.props.currentCustomList!==undefined && this.state.amount>1 ? 
+              {this.state.amount>1 && this.state.currentCustomList !== undefined && this.state.currentCustomList !== "" ? 
                 <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: 5, bottom: 5, zIndex:10}}>
                   <TextFont translate={false} numberOfLines={2} bold={true} style={{textAlign:'center', color:this.props.labelColor, fontSize:14}}>{commas(this.state.amount)+"x"}</TextFont>
                 </View>
@@ -383,6 +396,8 @@ class ListItem extends React.Component{
       return( 
         <View style={{marginVertical: 2, alignItems: 'center', flex: 1,}}>
           <TouchableNativeFeedback onLongPress={() => {  
+              this.props.setUpdateAmountChildFunction((amount)=>{this.setAmount(amount)})
+
               if(this.props.item.special !== "hourly"){
                 //only can add if not hourly music
                 if(global.customLists.length > 0){
@@ -431,6 +446,13 @@ class ListItem extends React.Component{
                   </View>
                 </PanGestureHandler>
               }
+              {this.state.amount>1 && this.state.currentCustomList !== undefined && this.state.currentCustomList !== "" ? 
+                <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: 5, bottom: 5, zIndex:10}}>
+                  <TextFont translate={false} numberOfLines={2} bold={true} style={{textAlign:'center', color:this.props.labelColor, fontSize:14}}>{commas(this.state.amount)+"x"}</TextFont>
+                </View>
+                :
+                <View/>
+              }
               { this.state.wishlist ?
                   <Image 
                     source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} 
@@ -459,6 +481,8 @@ class ListItem extends React.Component{
       return( 
         <View style={styles.gridWrapper}>
           <TouchableNativeFeedback onLongPress={() => {  
+            this.props.setUpdateAmountChildFunction((amount)=>{this.setAmount(amount)})
+
             if(global.customLists.length > 0){
               this.props.selectCustomList(this.props.item, this.setWishlist, ()=>{}, true, this.props.item[this.props.imageProperty[this.props.item.dataSet]])
             }else{
@@ -488,6 +512,13 @@ class ListItem extends React.Component{
               </PanGestureHandler>
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
+              {this.state.amount>1 && this.state.currentCustomList !== undefined && this.state.currentCustomList !== "" ? 
+                <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: 5, bottom: 5, zIndex:10}}>
+                  <TextFont translate={false} numberOfLines={2} bold={true} style={{textAlign:'center', color:this.props.labelColor, fontSize:14}}>{commas(this.state.amount)+"x"}</TextFont>
+                </View>
+                :
+                <View/>
+              }
               { this.state.wishlist ?
                   <Image 
                     source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} 
@@ -542,6 +573,8 @@ class ListItem extends React.Component{
       return( 
         <View style={styles.gridWrapper}>
           <TouchableNativeFeedback onLongPress={() => {  
+            this.props.setUpdateAmountChildFunction((amount)=>{this.setAmount(amount)})
+
             if(global.customLists.length > 0){
               this.props.selectCustomList(this.props.item, this.setWishlist, ()=>{}, true, this.props.item[this.props.imageProperty[this.props.item.dataSet]])
             }else{
@@ -571,6 +604,13 @@ class ListItem extends React.Component{
               </PanGestureHandler>
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
+              {this.state.amount>1 && this.state.currentCustomList !== undefined && this.state.currentCustomList !== "" ? 
+                <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: 5, bottom: 5, zIndex:10}}>
+                  <TextFont translate={false} numberOfLines={2} bold={true} style={{textAlign:'center', color:this.props.labelColor, fontSize:14}}>{commas(this.state.amount)+"x"}</TextFont>
+                </View>
+                :
+                <View/>
+              }
               { this.state.wishlist ?
                   <Image 
                     source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} 
@@ -618,6 +658,8 @@ class ListItem extends React.Component{
       return( 
         <View>
           <TouchableNativeFeedback onLongPress={() => {  
+            this.props.setUpdateAmountChildFunction((amount)=>{this.setAmount(amount)})
+
             if(global.customLists.length > 0){
               this.props.selectCustomList(this.props.item, this.setWishlist, ()=>{}, true, this.props.item[this.props.imageProperty[this.props.item.dataSet]])
             }else{
@@ -636,6 +678,13 @@ class ListItem extends React.Component{
             }}
           >
             <View style={[styles.row,{backgroundColor:boxColor}]}>
+              {this.state.amount>1 && this.state.currentCustomList !== undefined && this.state.currentCustomList !== "" ? 
+                <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: 5, bottom: 5, zIndex:10}}>
+                  <TextFont translate={false} numberOfLines={2} bold={true} style={{textAlign:'center', color:this.props.labelColor, fontSize:14}}>{commas(this.state.amount)+"x"}</TextFont>
+                </View>
+                :
+                <View/>
+              }
               { this.state.wishlist ?
                   <Image 
                     source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} 

@@ -94,6 +94,24 @@ export function inWishlist(checkListKeyString){
   }
 }
 
+export function getCustomListsFirst(checkListKey){
+  if(global.collectionListIndexed!==undefined && global.customListsImagesIndexed!==undefined){
+    for(let list of global.customLists){
+      if(inCustomLists(checkListKey, list)){
+        return list
+      }
+    }
+  }
+  return ""
+}
+
+export function getCustomListsIconQuick(list){
+  if(global.collectionListIndexed!==undefined && global.customListsImagesIndexed!==undefined){
+    return global.customListsImagesIndexed[list]
+  }
+  return ""
+}
+
 export function getCustomListsIcon(checkListKey){
   if(global.collectionListIndexed!==undefined && global.customListsImagesIndexed!==undefined){
     for(let list of global.customLists){
@@ -103,6 +121,24 @@ export function getCustomListsIcon(checkListKey){
     }
   }
   return ""
+}
+
+export function getCustomListsFirstAmountQuick(checkListKey, list){
+  if(global.collectionListIndexed!==undefined && global.customListsImagesIndexed!==undefined){
+    return getCustomListsAmount(checkListKey, list)
+  }
+  return 0
+}
+
+export function getCustomListsFirstAmount(checkListKey){
+  if(global.collectionListIndexed!==undefined && global.customListsImagesIndexed!==undefined){
+    for(let list of global.customLists){
+      if(inCustomLists(checkListKey, list)){
+        return getCustomListsAmount(checkListKey, list)
+      }
+    }
+  }
+  return 0
 }
 
 export function inChecklist(checkListKeyString){

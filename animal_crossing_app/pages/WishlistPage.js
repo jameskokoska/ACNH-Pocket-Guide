@@ -28,15 +28,7 @@ export default class Wishlist extends Component {
   render(){
     return(
       <>
-        <TouchableNativeFeedback 
-          background={TouchableNativeFeedback.Ripple(colors.dateButton[global.darkMode], true, 32)}
-          onPress={() => {this.popup?.setPopupVisible(true); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}
-        >
-          <View style={{zIndex:100, backgroundColor:colors.FAB2[global.darkMode], position:"absolute", bottom:getSettingsString("settingsShowFAB")==="true" ? 100 : 20, right: 20, width:64, height:64, borderRadius:500, justifyContent:'center', alignItems:'center'}}>
-            <Image source={require("../assets/icons/list.png")} style={{opacity:0.6,width:35, height:35, resizeMode:'contain'}}/>
-          </View>
-        </TouchableNativeFeedback>
-        <WishlistSelectionPopup showSelectedOriginal ref={(popup) => this.popup = popup} selectedList={[this.state.selectedList]} changeSelectedList={this.changeSelectedList} addCustomList={this.addCustomList} showAdd/>
+        
         <AllItemsPage 
           smallerHeader={this.state.selectedList!==undefined&&this.state.selectedList.length>15?true:false}
           // disableFilters={true}
@@ -48,6 +40,17 @@ export default class Wishlist extends Component {
           accentColor = {colors.wishlistAccent[global.darkMode]}
           currentCustomList = {this.state.selectedList}
         />
+        
+        <TouchableNativeFeedback 
+          style={{zIndex:0}}
+          background={TouchableNativeFeedback.Ripple(colors.dateButton[global.darkMode], true, 32)}
+          onPress={() => {this.popup?.setPopupVisible(true); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}
+        >
+          <View style={{zIndex:1, backgroundColor:colors.FAB2[global.darkMode], position:"absolute", bottom:20, right: getSettingsString("settingsShowFAB")==="true" ? 95 : 20, width:64, height:64, borderRadius:500, justifyContent:'center', alignItems:'center'}}>
+            <Image source={require("../assets/icons/list.png")} style={{opacity:0.6,width:35, height:35, resizeMode:'contain'}}/>
+          </View>
+        </TouchableNativeFeedback>
+        <WishlistSelectionPopup showSelectedOriginal ref={(popup) => this.popup = popup} selectedList={[this.state.selectedList]} changeSelectedList={this.changeSelectedList} addCustomList={this.addCustomList} showAdd/>
       </>
     )
   }

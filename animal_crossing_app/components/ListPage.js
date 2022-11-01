@@ -1176,8 +1176,9 @@ function ListPage(props){
     <WishlistSelectionPopup
       popupBottom={true}
       onClose={(checkListKeyString)=>{
-        if(checkListKeyString && checkListKeyString!=null && checkListKeyString!=undefined && props.currentCustomList!=="" && props.currentCustomList!==undefined && updateAmountChildFunction!==undefined)
-          !updateAmountChildFunction(getCustomListsAmount(checkListKeyString, props.currentCustomList));
+        if(checkListKeyString && checkListKeyString!=null && checkListKeyString!=undefined && updateAmountChildFunction!==undefined){
+          !updateAmountChildFunction(checkListKeyString);
+        }
       }}
       updateWhenOpen 
       showAmount

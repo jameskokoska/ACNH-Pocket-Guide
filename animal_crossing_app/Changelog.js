@@ -6,6 +6,8 @@ export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 export const changelog = `
 -New Monthly Gold Supporter: everstar! Thank you!
 -
+-Custom wishlist page fixes
+-Item amount for custom lists shown on every page
 -Songs page overlay fixed
 -When keyboard minimized, search bar loses focus
 -Fixed searchbar text entry
