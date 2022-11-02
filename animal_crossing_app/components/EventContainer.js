@@ -150,8 +150,8 @@ export function EventContainer(props){
               duration: 3000, 
               renderType:{
                 success: (toast) => (
-                  <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, marginRight: 20, borderRadius: 5, backgroundColor: colors.popupNeutral[global.darkMode], alignItems:"center", justifyContent:"center"}}>
-                    <TextFont translate={false} style={{color:"white", fontSize: 15}}>{toast.message}</TextFont>
+                  <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, borderRadius: 5, backgroundColor: colors.popupNeutral[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+                    <TextFont translate={false} style={{color:colors.textBlack[global.darkMode], fontSize: 15, textAlign:"center"}}>{toast.message}</TextFont>
                   </View>
                 ),
               }

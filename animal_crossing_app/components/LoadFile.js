@@ -115,6 +115,7 @@ export async function importAllData(text){
     var currentCollectionList = (await getStorage("collectedString"+currentProfile,"")).split("\n");
     var currentAchievementsList = JSON.parse(await getStorage("Achievements"+profile,"[]"));
     var currentHHPList = JSON.parse(await getStorage("ParadisePlanning"+profile,"[]"));
+    global.loadNewHHPList = true
     var currentCustomLists = JSON.parse(await getStorage("customLists"+global.profile,"[]"));
 
     for(var i = 0; i<totalImport.length; i++){

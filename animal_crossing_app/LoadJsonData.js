@@ -94,6 +94,74 @@ export function inWishlist(checkListKeyString){
   }
 }
 
+
+export async function initializeParadisePlanningGlobal(){
+  if(global.paradisePlanningListIndexed===undefined || global.loadNewHHPList===true){
+    console.log("Loading HHP list into memory")
+    global.loadNewHHPList = false
+    var storageData = JSON.parse(await getStorage("ParadisePlanning"+global.profile,JSON.stringify([])));
+    if(storageData.constructor!==Array || storageData === undefined){
+      storageData=[];
+    }
+    global.paradisePlanningListIndexed = {}
+    for(const item of storageData){
+      global.paradisePlanningListIndexed[item] = true
+      
+    }
+  }
+}
+
+export async function removeAndSaveParadisePlanning(id){
+  global.paradisePlanningListIndexed[id] = false
+  let storageData = JSON.parse(await getStorage("ParadisePlanning"+global.profile,JSON.stringify([])));
+  storageData = storageData.filter(item => item !== id)
+  await AsyncStorage.setItem("ParadisePlanning"+global.profile, JSON.stringify(storageData));
+}
+
+export async function addAndSaveParadisePlanning(id){
+  global.paradisePlanningListIndexed[id] = true
+  let storageData = JSON.parse(await getStorage("ParadisePlanning"+global.profile,JSON.stringify([])));
+  storageData.push(id)
+  await AsyncStorage.setItem("ParadisePlanning"+global.profile, JSON.stringify(storageData));
+}
+
+export async function addAndSaveParadisePlanningList(items, key){
+  let storageData = JSON.parse(await getStorage("ParadisePlanning"+global.profile,JSON.stringify([])));
+  for(const item of items){
+    const id = item[key]
+    global.paradisePlanningListIndexed[id] = true
+    storageData.push(id)
+  }
+  await AsyncStorage.setItem("ParadisePlanning"+global.profile, JSON.stringify(storageData));
+}
+
+export async function removeAndSaveParadisePlanningList(items, key){
+  let storageData = JSON.parse(await getStorage("ParadisePlanning"+global.profile,JSON.stringify([])));
+  for(const item of items){
+    const id = item[key]
+    if(inVillagerParadise(id, true)){
+      storageData = storageData.filter(item2 => item2 !== id)
+      global.paradisePlanningListIndexed[id] = false
+    }
+  }
+  await AsyncStorage.setItem("ParadisePlanning"+global.profile, JSON.stringify(storageData));
+}
+
+export async function invertAndSaveParadisePlanningList(items, key){
+  let storageData = JSON.parse(await getStorage("ParadisePlanning"+global.profile,JSON.stringify([])));
+  for(const item of items){
+    const id = item[key]
+    if(inVillagerParadise(id, true)){
+      storageData = storageData.filter(item2 => item2 !== id)
+      global.paradisePlanningListIndexed[id] = false
+    } else {
+      storageData.push(id)
+      global.paradisePlanningListIndexed[id] = true
+    }
+  }
+  await AsyncStorage.setItem("ParadisePlanning"+global.profile, JSON.stringify(storageData));
+}
+
 export function getCustomListsFirst(checkListKey){
   if(global.collectionListIndexed!==undefined && global.customListsImagesIndexed!==undefined){
     for(let list of global.customLists){
@@ -167,6 +235,14 @@ export function inVillager(checkListKeyString, shouldCheck){
 
 export function inVillagerPhoto(checkListKeyString, shouldCheck){
   if(shouldCheck && global.collectionListIndexed["havePhoto"+checkListKeyString]===true){
+    return true;
+  } else {
+    return false
+  }
+}
+
+export function inVillagerParadise(id, shouldCheck){
+  if(shouldCheck && global.paradisePlanningListIndexed && global.paradisePlanningListIndexed[id]===true){
     return true;
   } else {
     return false

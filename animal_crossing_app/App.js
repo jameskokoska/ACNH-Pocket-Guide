@@ -173,6 +173,8 @@ class App extends Component {
       global.lastSelectedListPage = ""
     }
     global.customListsImagesIndexed = JSON.parse(await getStorage("customListsImagesIndexed"+global.profile,"{}"));
+    global.paradisePlanningListIndexed = undefined
+    global.loadNewHHPList = false
     // console.log(global.collectionList)
   }
 

@@ -97,6 +97,7 @@ class AllItemsPage extends Component {
     }
     return(
         <ListPage
+          canContainVillagers={true}
           sortItemsBasedOnIDOrder={sortItemsBasedOnIDOrder}
           currentCustomList={currentCustomList}
           currentSearch={currentSearch}

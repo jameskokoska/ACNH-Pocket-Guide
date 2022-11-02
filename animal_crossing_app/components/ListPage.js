@@ -2,7 +2,7 @@ import React, {Component, useState, useRef, useEffect} from 'react';
 import {TouchableOpacity, View, Animated,StyleSheet,RefreshControl} from 'react-native';
 import Header, {HeaderLoading, HeaderActive} from './Header';
 import ListItem from './ListItem';
-import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters, isInteger, attemptToTranslate, checkOff, inCustomLists, getCustomListsAmount, collectionListSave, determineFoodItem} from "../LoadJsonData"
+import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters, isInteger, attemptToTranslate, checkOff, inCustomLists, getCustomListsAmount, collectionListSave, determineFoodItem, initializeParadisePlanningGlobal, inVillagerParadise} from "../LoadJsonData"
 import {Dimensions } from "react-native";
 import {Variations,Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title, getVariations} from './BottomSheetComponents';
 import colors from "../Colors.js"
@@ -58,6 +58,7 @@ function ListPage(props){
   var updateCheckChildFunction;
   var updateWishlistChildFunction;
   var updateAmountChildFunction;
+  var updateParadisePlanningChildFunction;
   let avoidSpoilers = getSettingsString("settingsHideImages")==="true"
   const renderItem = (({ item }) =>
     <ListItem
@@ -71,8 +72,8 @@ function ListPage(props){
       gridType={props.gridType}
       key={item.checkListKeyString}
       dataGlobalName={props.dataGlobalName}
-      openBottomSheet={(updateCheckChild, updateWishlistChild)=>{
-        sheetRef.current.setPopupVisible(true, true); 
+      openBottomSheet={(updateCheckChild, updateWishlistChild, updateParadisePlanningChild)=>{
+        sheetRef.current.setPopupVisible(true, true, item.checkListKeyString); 
         if(props.activeCreatures && props.activeCreaturesPage===false){
           // console.log(props.scrollViewRef)
           props.scrollToEnd();
@@ -82,6 +83,7 @@ function ListPage(props){
         selectedItem = item;
         updateCheckChildFunction = updateCheckChild
         updateWishlistChildFunction = updateWishlistChild
+        updateParadisePlanningChildFunction = updateParadisePlanningChild
       }}
       setUpdateAmountChildFunction={(updateAmountChild)=>{updateAmountChildFunction = updateAmountChild; console.log(updateAmountChild)}}
       boxColor={props.boxColor}
@@ -158,6 +160,9 @@ function ListPage(props){
   const componentIsMounted = useRef(true);
 
   useEffect(() => {
+    if(props.canContainVillagers===true || props.title==="Everything" || props.title==="Villagers" || props.title==="Recent Items" || props.title==="New Items"){
+      initializeParadisePlanningGlobal()
+    }
     return () => {
       componentIsMounted.current = false
     }
@@ -1133,10 +1138,11 @@ function ListPage(props){
       invisible={true}
       restrictSize={false}
       onClose={()=>{
-        console.log(selectedItem); 
+        // console.log(selectedItem); 
         if(selectedItem!=null && selectedItem!=undefined){
           !updateCheckChildFunction(inChecklist(selectedItem.checkListKeyParent));
           !updateWishlistChildFunction(inWishlist(selectedItem.checkListKey));
+          if(updateParadisePlanningChildFunction!==undefined) !updateParadisePlanningChildFunction(inVillagerParadise(selectedItem["Name"], true))
         }
       }}
     >
@@ -1161,6 +1167,7 @@ function ListPage(props){
         checkType={props.checkType}
         tabs={props.tabs}
         selectCustomList={selectCustomList}
+        title={props.title}
       />
     </PopupBottomCustom>
     <WishlistSelectionPopup
@@ -1306,7 +1313,7 @@ class BottomSheetRender extends Component{
       rightCornerCheck = <RightCornerCheck
         item={this.state.item}
         updateCheckChildFunction={this.updateCheckChildFunction}
-        checkType={(this.state.item["Data Category"]!==undefined && this.state.item["Data Category"]==="Villagers") ? "heart" : this.props.checkType}
+        checkType={(this.state.item["Data Category"]!==undefined && this.state.item["Data Category"]==="Villagers" && this.props.title==="Villagers") ? "heart" : this.props.checkType}
         updateVariations={this.updateVariations}
         ref={(rightCornerCheck) => this.rightCornerCheck = rightCornerCheck}
       />

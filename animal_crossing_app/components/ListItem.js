@@ -6,11 +6,12 @@ import {
   View,
   TouchableNativeFeedback,
   Image,
+  Vibration,
 } from 'react-native';
 import TextFont from './TextFont';
 import Check from './Check';
 import FastImage from './FastImage';
-import {checkOff, capitalize, commas, removeBrackets, inCustomLists, getCustomListsAmount, getCustomListsIcon, attemptToTranslate, getCustomListsFirstAmount, getCustomListsFirstAmountQuick, getCustomListsIconQuick, getCustomListsFirst} from "../LoadJsonData"
+import {checkOff, capitalize, commas, removeBrackets, inCustomLists, getCustomListsAmount, getCustomListsIcon, attemptToTranslate, getCustomListsFirstAmount, getCustomListsFirstAmountQuick, getCustomListsIconQuick, getCustomListsFirst, inVillagerParadise, removeAndSaveParadisePlanning, addAndSaveParadisePlanning} from "../LoadJsonData"
 import {getPhoto, getPhotoShadow, getSizeImage} from "./GetPhoto"
 import {getMonthShort, swapDateCards} from "./DateFunctions"
 import colors from "../Colors"
@@ -24,6 +25,7 @@ import { GestureDetector, PanGestureHandler } from 'react-native-gesture-handler
 const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art"]
 const villagerCategories = ["Villagers"]
 const villagerPhotoCategories = ["Villagers"]
+const villagerParadiseCategories = ["Villagers"]
 
 class ListItem extends React.Component{
   constructor(props) {
@@ -33,10 +35,12 @@ class ListItem extends React.Component{
     this.setMuseum = this.setMuseum.bind(this);
     this.setVillager = this.setVillager.bind(this);
     this.setVillagerPhoto = this.setVillagerPhoto.bind(this);
+    this.setVillagerParadise = this.setVillagerParadise.bind(this);
     // this.showMuseumButton = getSettingsString("settingsShowMuseumButton")==="true"
     this.showMuseumButton = true
     this.showVillagerButton = true
     this.showVillagerPhotoButton = true
+    this.showVillagerParadiseButton = true
     let currentCustomListName = getCustomListsFirst(this.props.item.checkListKey)
     let amount = 0
     if(this.props.currentCustomList!==undefined && this.props.currentCustomList!==""){
@@ -60,6 +64,7 @@ class ListItem extends React.Component{
       museum: inMuseum(this.props.item.checkListKey, this.checkMuseumButton()),
       villager: inVillager(this.props.item.checkListKey, this.checkVillagerButton()),
       villagerPhoto: inVillagerPhoto(this.props.item.checkListKey, this.checkVillagerPhotoButton()),
+      villagerParadise: inVillagerParadise(this.props.item["Name"], this.checkVillagerParadiseButton()),
       variationsPercent: variationsCheckedPercent(this.props.item, this.props.item.index),
       amount:amount,
       customListsIcon: customListsIconValue,
@@ -153,6 +158,12 @@ class ListItem extends React.Component{
     }
   }
 
+  setVillagerParadise(villagerParadise){
+    if(this.mounted && this.checkVillagerParadiseButton()){
+      this.setState({villagerParadise: villagerParadise})
+    }
+  }
+
   checkMuseumButton = () => {
     return museumCategories.includes(this.props.item["Data Category"])
   }
@@ -163,6 +174,10 @@ class ListItem extends React.Component{
 
   checkVillagerPhotoButton = () => {
     return villagerPhotoCategories.includes(this.props.item["Data Category"])
+  }
+
+  checkVillagerParadiseButton = () => {
+    return villagerParadiseCategories.includes(this.props.item["Data Category"])
   }
 
   render(){
@@ -326,16 +341,16 @@ class ListItem extends React.Component{
                 checkOff(this.props.item.checkListKeyParent, this.state.collected); 
                 this.setCollected(this.state.collected===true ? false:true);
               } else {
-                this.props.openBottomSheet(this.setCollected, this.setWishlist);
+                this.props.openBottomSheet(this.setCollected, this.setWishlist, this.setVillagerParadise);
               }
             }}
           >
             <View style={[styles.gridBox, {backgroundColor:boxColor, height:(global.extraInfo !== "" && global.extraInfo !== undefined ? 160 : 150)}]}>
               {missingVariationsIndicator}
               <PanGestureHandler activeOffsetY={100} activeOffsetX={20}>
-                <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -33, top: -33, zIndex:10}}>
+                <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -26, top: -26, zIndex:10}}>
                   <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKeyParent, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
-                    <View style={{padding:15}}>
+                    <View style={{padding:8, paddingLeft: 15, paddingBottom: 15}}>
                       <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
                     </View>
                   </TouchableOpacity>
@@ -355,6 +370,7 @@ class ListItem extends React.Component{
               <CheckMuseum showMuseumButton={this.showMuseumButton} setCollected={this.setCollected} collected={this.state.collected} setMuseum={this.setMuseum} item={this.props.item} museum={this.state.museum} museumPage={this.checkMuseumButton()}/>
               <CheckVillager showVillagerButton={this.showVillagerButton} setCollected={this.setCollected} collected={this.state.collected} setVillager={this.setVillager} item={this.props.item} villager={this.state.villager} villagerPage={this.checkVillagerButton()}/>
               <CheckVillagerPhoto showVillagerPhotoButton={this.showVillagerPhotoButton} setCollected={this.setCollected} collected={this.state.collected} setVillagerPhoto={this.setVillagerPhoto} item={this.props.item} villager={this.state.villagerPhoto} villagerPage={this.checkVillagerPhotoButton()}/>
+              <CheckVillagerParadise showVillagerParadiseButton={this.showVillagerParadiseButton} setCollected={this.setCollected} collected={this.state.collected} setVillagerParadise={this.setVillagerParadise} item={this.props.item} villager={this.state.villagerParadise} villagerPage={this.checkVillagerParadiseButton()}/>
               { this.state.wishlist ?
                   <Image 
                     source={global.darkMode ? require("../assets/icons/shareWhite.png") : require("../assets/icons/share.png")} 
@@ -510,7 +526,7 @@ class ListItem extends React.Component{
                 checkOff(this.props.item.checkListKeyParent, this.state.collected); 
                 this.setCollected(this.state.collected===true ? false:true);
               } else {
-                this.props.openBottomSheet(this.setCollected, this.setWishlist);
+                this.props.openBottomSheet(this.setCollected, this.setWishlist, this.setVillagerParadise);
               }
             }}
           >
@@ -602,7 +618,7 @@ class ListItem extends React.Component{
                 checkOff(this.props.item.checkListKeyParent, this.state.collected); 
                 this.setCollected(this.state.collected===true ? false:true);
               } else {
-                this.props.openBottomSheet(this.setCollected, this.setWishlist);
+                this.props.openBottomSheet(this.setCollected, this.setWishlist, this.setVillagerParadise);
               }
             }}
           >
@@ -687,7 +703,7 @@ class ListItem extends React.Component{
                 checkOff(this.props.item.checkListKeyParent, this.state.collected); 
                 this.setCollected(this.state.collected===true ? false:true);
               } else {
-                this.props.openBottomSheet(this.setCollected, this.setWishlist);
+                this.props.openBottomSheet(this.setCollected, this.setWishlist, this.setVillagerParadise);
               }
             }}
           >
@@ -809,12 +825,26 @@ class CheckVillager extends Component {
     }
     return(
       <>
-      {this.props.villagerPage?<TouchableOpacity style={{zIndex:10, position:"absolute", left: -10, bottom: -10, padding:15}} 
+      {this.props.villagerPage?<TouchableOpacity style={{zIndex:10, position:"absolute", left: -5, bottom: 34, padding:10, paddingBottom: 5, paddingHorizontal: 10}} 
         activeOpacity={0.6}
         onPress={() => {  
-        checkOff(this.props.item.checkListKey, this.props.villager, "oldResident");
-        this.props.setVillager(this.props.villager===true ? false:true);
-      }}>
+          checkOff(this.props.item.checkListKey, this.props.villager, "oldResident");
+          this.props.setVillager(this.props.villager===true ? false:true);
+        }}
+        onLongPress={()=>{
+          toast.show(this.props.villager?"Old villager resident":"Not an old villager resident", {type:"success", 
+            placement:'top',
+            duration: 3000, 
+            renderType:{
+              success: (toast) => (
+                <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, borderRadius: 5, backgroundColor: colors.popupNeutral[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+                  <TextFont translate={false} style={{color:colors.textBlack[global.darkMode], fontSize: 15, textAlign:"center"}}>{toast.message}</TextFont>
+                </View>
+              ),
+            }
+          })
+        }}
+      >
         {this.props.villager?
           <FadeInOut duration={200} startValue={0} endValue={1} fadeIn={true} fadeInOut={true} scaleInOut={true} maxFade={0.8} minScale={0.2}>
             <View style={{width: 28,height: 28,borderRadius: 100,justifyContent: "center",alignItems: "center", opacity: 0.9, borderWidth: 1.3, borderColor: colors.checkPurple[global.darkMode], backgroundColor:colors.checkPurple2[global.darkMode]}}>
@@ -840,12 +870,26 @@ class CheckVillagerPhoto extends Component {
     }
     return(
       <>
-      {this.props.villagerPage?<TouchableOpacity style={{zIndex:10, position:"absolute", left: -10, top: -10, padding:15}} 
+      {this.props.villagerPage?<TouchableOpacity style={{zIndex:10, position:"absolute", left: -1, top: -1, padding:6, paddingRight: 10, paddingBottom: 10}} 
         activeOpacity={0.6}
         onPress={() => {  
-        checkOff(this.props.item.checkListKey, this.props.villager, "havePhoto");
-        this.props.setVillagerPhoto(this.props.villager===true ? false:true);
-      }}>
+          checkOff(this.props.item.checkListKey, this.props.villager, "havePhoto");
+          this.props.setVillagerPhoto(this.props.villager===true ? false:true);
+        }}
+        onLongPress={()=>{
+          toast.show(this.props.villager?"Have villager photo":"Do not have villager photo", {type:"success", 
+            placement:'top',
+            duration: 3000, 
+            renderType:{
+              success: (toast) => (
+                <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, borderRadius: 5, backgroundColor: colors.popupNeutral[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+                  <TextFont translate={false} style={{color:colors.textBlack[global.darkMode], fontSize: 15, textAlign:"center"}}>{toast.message}</TextFont>
+                </View>
+              ),
+            }
+          })
+        }}
+      >
         {this.props.villager?
           <FadeInOut duration={200} startValue={0} endValue={1} fadeIn={true} fadeInOut={true} scaleInOut={true} maxFade={0.8} minScale={0.2}>
             <View style={{width: 30,height: 30,borderRadius: 100,justifyContent: "center",alignItems: "center", opacity: 0.9, borderWidth: 1.3, borderColor: colors.checkBlue[global.darkMode], backgroundColor:colors.checkBlue2[global.darkMode]}}>
@@ -863,6 +907,55 @@ class CheckVillagerPhoto extends Component {
   }
 }
 
+class CheckVillagerParadise extends Component {
+  render(){
+    if(this.props.showVillagerParadiseButton!==true){
+      return <View/>
+    }
+    return(
+      <>
+      {this.props.villagerPage?<TouchableOpacity style={{zIndex:10, position:"absolute", left: -5, bottom: -5, padding:10, paddingTop: 7}} 
+        activeOpacity={0.6}
+        onPress={async () => {  
+          if(this.props.villager===true){
+            await removeAndSaveParadisePlanning(this.props.item["Name"])
+            getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+          } else {
+            await addAndSaveParadisePlanning(this.props.item["Name"])
+            getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10,100,20]) : "";
+          }
+          this.props.setVillagerParadise(this.props.villager===true ? false:true);
+        }}
+        onLongPress={()=>{
+          toast.show("Paradise Planning", {type:"success", 
+            placement:'top',
+            duration: 3000, 
+            renderType:{
+              success: (toast) => (
+                <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, borderRadius: 5, backgroundColor: colors.popupNeutral[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+                  <TextFont translate={false} style={{color:colors.textBlack[global.darkMode], fontSize: 15, textAlign:"center"}}>{toast.message}</TextFont>
+                </View>
+              ),
+            }
+          })
+        }}
+      >
+        {this.props.villager?
+          <FadeInOut duration={200} startValue={0} endValue={1} fadeIn={true} fadeInOut={true} scaleInOut={true} maxFade={0.8} minScale={0.2}>
+            <View style={{width: 30,height: 30,borderRadius: 100,justifyContent: "center",alignItems: "center", opacity: 0.9, borderWidth: 1.3, borderColor: colors.checkBlue[global.darkMode], backgroundColor:colors.checkBlue2[global.darkMode]}}>
+              <Image style={{resizeMode:'contain',width:20, height:20}} source={require("../assets/icons/paradisePlanning.png")}/>
+            </View>
+          </FadeInOut>
+          :
+          <View style={{width: 30,height: 30,borderRadius: 100,justifyContent: "center",alignItems: "center",  opacity: 0.4, borderWidth: 1.3, borderColor: colors.lightDarkAccentHeavy[global.darkMode], backgroundColor:colors.lightDarkAccent2[global.darkMode]}}>
+            <Image style={{resizeMode:'contain',width:20, height:20}} source={require("../assets/icons/paradisePlanning.png")}/>
+          </View>
+        }
+      </TouchableOpacity>:<View/>}
+      </>
+    )
+  }
+}
 
 
 const styles = StyleSheet.create({

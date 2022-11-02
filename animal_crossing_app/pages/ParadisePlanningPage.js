@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Animated,FlatList, Dimensions, TouchableOpacity,StyleSheet, Text, View, Image, Vibration} from 'react-native';
-import {removeAccents,getStorage, findObject, attemptToTranslateItem, getSettingsString, attemptToTranslateSpecial, attemptToTranslate, checkOff} from "../LoadJsonData"
+import {removeAccents,getStorage, findObject, attemptToTranslateItem, getSettingsString, attemptToTranslateSpecial, attemptToTranslate, checkOff, removeAndSaveParadisePlanningList, addAndSaveParadisePlanningList, addAndSaveParadisePlanning, removeAndSaveParadisePlanning, initializeParadisePlanningGlobal, invertAndSaveParadisePlanningList, inVillagerParadise} from "../LoadJsonData"
 import colors from '../Colors'
 import {attemptToTranslateAchievement} from "../LoadJsonData"
 import FastImage from "../components/FastImage"
@@ -39,35 +39,22 @@ export default class ParadisePlanningPage extends Component {
   }
 
   loadList = async() => {
-    var storageData = JSON.parse(await getStorage("ParadisePlanning"+global.profile,JSON.stringify([])));
-    if(storageData.constructor!==Array || storageData === undefined){
-      storageData=[];
-    }
-    this.paradiseChecklist = storageData
+    await initializeParadisePlanningGlobal()
     this.setState({loaded: true})
   }
 
   checkOffItem = (id) => {
     try {
-      var oldList = this.paradiseChecklist;
-      if(oldList.includes(id)){
-        oldList = oldList.filter(item => item !== id)
-        this.saveList(oldList);
-        this.paradiseChecklist = oldList
+      if(inVillagerParadise(id, true)){
+        removeAndSaveParadisePlanning(id)
         getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
       } else {
-        oldList.push(id);
-        this.saveList(oldList);
-        this.paradiseChecklist = oldList
-        getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,20,220,20]) : "";
+        addAndSaveParadisePlanning(id)
+        getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate([0,10,100,20]) : "";
       }
     } catch (e){
       toast.show("Please report this error to dapperappdeveloper@gmail.com : \n" + e.toString(), {type:"danger"})
     }
-  }
-
-  saveList = async(checklist) => {
-    await AsyncStorage.setItem("ParadisePlanning"+global.profile, JSON.stringify(checklist));
   }
 
   async componentDidMount(){
@@ -88,21 +75,21 @@ export default class ParadisePlanningPage extends Component {
       //handle filters
       if(filter===""){
         if(this.filterTypes[this.state.setFilter]==="checked"){
-          if(!this.paradiseChecklist.includes(request["Name"])){
+          if(inVillagerParadise(request["Name"], true)===false){
             skip=true
           }
         }else if(this.filterTypes[this.state.setFilter]==="not checked"){
-          if(this.paradiseChecklist.includes(request["Name"])){
+          if(inVillagerParadise(request["Name"], true)===true){
             skip=true
           }
         }
       } else {
         if(this.filterTypes[filter]==="checked"){
-          if(!this.paradiseChecklist.includes(request["Name"])){
+          if(inVillagerParadise(request["Name"], true)===false){
             skip=true
           }
         }else if(this.filterTypes[filter]==="not checked"){
-          if(this.paradiseChecklist.includes(request["Name"])){
+          if(inVillagerParadise(request["Name"], true)===true){
             skip=true
           }
         }
@@ -174,42 +161,18 @@ export default class ParadisePlanningPage extends Component {
   }
 
   checkAllItemsListed = async () => {
-    var oldList = this.paradiseChecklist;
-    for(let item of this.state.data){
-      if(item["Name"]!==undefined){
-        let id = item["Name"]
-        if(oldList.includes(id) === false){
-          oldList.push(id);
-        }
-      }
-    }
-    await this.saveList(oldList);
-    this.paradiseChecklist = oldList
-    this.setState({update: !this.state.update})
+    addAndSaveParadisePlanningList(this.state.data, "Name")
+    setTimeout(()=>{this.setState({update: !this.state.update})}, 100)
   }
 
   unCheckAllItemsListed = async () => {
-    var oldList = this.paradiseChecklist;
-    for(let item of this.state.data){
-      if(item["Name"]!==undefined){
-        let id = item["Name"]
-        if(oldList.includes(id)){
-          oldList = oldList.filter(item2 => item2 !== id)
-        }
-      }
-    }
-    await this.saveList(oldList);
-    this.paradiseChecklist = oldList
-    this.setState({update: !this.state.update})
+    removeAndSaveParadisePlanningList(this.state.data, "Name")
+    setTimeout(()=>{this.setState({update: !this.state.update})}, 100)
   }
 
   invertCheckItemsListed = async () => {
-    for(let item of this.state.data){
-      if(item["Name"]!==undefined){
-        this.checkOffItem(item["Name"])
-      }
-    }
-    this.setState({update: !this.state.update})
+    invertAndSaveParadisePlanningList(this.state.data, "Name")
+    setTimeout(()=>{this.setState({update: !this.state.update})}, 100)
   }
   
   cycleFilter = () => {
@@ -247,7 +210,7 @@ export default class ParadisePlanningPage extends Component {
           onScroll={Animated.event([{ nativeEvent: {contentOffset: {y: this.scrollY}}}],{useNativeDriver: true,},)}
           data={this.state.data}
           renderItem={({item, index}) => {
-              return(<Request update={this.state.update} request={item} checkOffItem={this.checkOffItem} paradiseChecklist={this.paradiseChecklist}/>)
+              return(<Request update={this.state.update} request={item} checkOffItem={this.checkOffItem}/>)
           }}
           keyExtractor={(item, index) => `list-item-${index}-${item["Name"]}`}
           contentContainerStyle={{paddingBottom:Dimensions.get('window').height/3}}
@@ -304,18 +267,17 @@ export class Request extends React.PureComponent{
         this.villagerObject = findObject(this.props.request["Name"], "Name", "Villagers")
       }
     }
-
-    this.state = {checked:this.props.paradiseChecklist.includes(this.props.request["Name"])}
+    this.state = {checked:inVillagerParadise(this.props.request["Name"], true)===true}
   }
   componentDidMount(){
-    this.setState({checked:this.props.paradiseChecklist.includes(this.props.request["Name"])})
+    this.setState({checked:inVillagerParadise(this.props.request["Name"], true)===true})
   }
   componentDidUpdate(prevProps){
     if(this.props!==prevProps){
       if(this.props.villagerObject){
         this.villagerObject = this.props.villagerObject
       }
-      this.setState({checked:this.props.paradiseChecklist.includes(this.props.request["Name"])})
+      this.setState({checked:inVillagerParadise(this.props.request["Name"], true)===true})
     }
   }
   checkOff = () => {

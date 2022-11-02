@@ -43,14 +43,17 @@ class SpecificFlowerPage extends Component {
   setCurrentlyCheckedFlowers = () => {
     let currentCheck = []
     for(let i = 0; i < this.props.loadedData[this.props.flowerGroup].length; i++){
-      if(inChecklist(this.props.loadedData[this.props.flowerGroup][i].parent1CheckListKey)){
-        currentCheck.push(this.props.loadedData[this.props.flowerGroup][i].parent1CheckListKey)
+      let checkListKey = this.props.loadedData[this.props.flowerGroup][i].parent1CheckListKey + (this.props.loadedData[this.props.flowerGroup][i].parent1Special===false ? "" : this.props.loadedData[this.props.flowerGroup][i].parent1Special?.toString())
+      if(inChecklist(checkListKey)){
+        currentCheck.push(checkListKey)
       }
-      if(inChecklist(this.props.loadedData[this.props.flowerGroup][i].parent2CheckListKey)){
-        currentCheck.push(this.props.loadedData[this.props.flowerGroup][i].parent2CheckListKey)
+      checklistKey = this.props.loadedData[this.props.flowerGroup][i].parent2CheckListKey + (this.props.loadedData[this.props.flowerGroup][i].parent2Special===false ? "" : this.props.loadedData[this.props.flowerGroup][i].parent2Special?.toString())
+      if(inChecklist(checklistKey)){
+        currentCheck.push(checklistKey)
       }
-      if(inChecklist(this.props.loadedData[this.props.flowerGroup][i].childCheckListKey)){
-        currentCheck.push(this.props.loadedData[this.props.flowerGroup][i].childCheckListKey)
+      checklistKey = this.props.loadedData[this.props.flowerGroup][i].childCheckListKey  + (this.props.loadedData[this.props.flowerGroup][i].childSpecial===false ? "" : this.props.loadedData[this.props.flowerGroup][i].childSpecial?.toString())
+      if(inChecklist(checklistKey)){
+        currentCheck.push(checklistKey)
       }
     }
     this.setState({currentCheckedFlowers: currentCheck})
@@ -76,9 +79,9 @@ class SpecificFlowerPage extends Component {
       {
         data[this.props.flowerGroup].map(flower=> (
           <FlowerContainer 
-            childCheckListKey = {getFlowerChecklistKey(flower.child)}
-            parent1CheckListKey = {getFlowerChecklistKey(flower.parent1)}
-            parent2CheckListKey = {getFlowerChecklistKey(flower.parent2)}
+            childCheckListKey = {getFlowerChecklistKey(flower.child) + (flower.childSpecial===false ? "" : flower.childSpecial?.toString())}
+            parent1CheckListKey = {getFlowerChecklistKey(flower.parent1) + (flower.parent1Special===false ? "" : flower.parent1Special?.toString())}
+            parent2CheckListKey = {getFlowerChecklistKey(flower.parent2) + (flower.parent2Special===false ? "" : flower.parent2Special?.toString())}
             refresh={this.setCurrentlyCheckedFlowers} currentCheckedFlowers={this.state.currentCheckedFlowers} flowerInfo={flower} key={flower.parent1+flower.paren2+flower.child+flower.percentage+flower.parent1Special}/>
         ))
       }

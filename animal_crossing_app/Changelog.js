@@ -6,7 +6,11 @@ export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 export const changelog = `
 -New Monthly Gold Supporter: everstar! Thank you!
 -
+-Paradise Planning indicator button added to villagers
+-Changes to hybrid flowers checklist
+-Paradise Planning optimizations
 -Long press an event to view its dates
+-Date information color fixes
 -Fixed To-Do list edit icons
 -
 -Custom wishlist page fixes

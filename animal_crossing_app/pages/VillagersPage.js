@@ -27,6 +27,7 @@ class VillagersPage extends Component {
         textLower={"Tap the Heart to add/remove villagers currently in your town."}
       />
       <ListPage 
+        canContainVillagers={true}
         setPage={this.props.setPage}
         tabs={false}
         subHeader="Tap the Heart to add villagers currently in your town."

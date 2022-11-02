@@ -100,10 +100,10 @@ class SidebarElement extends Component {
                         top: -7,
                       }} 
                       source={require('../assets/starsAnimation1.json')}
-                      duration={3500}
+                      speed={1}
                     />
                     <LottieView
-                      duration={3900}
+                      speed={0.96}
                       autoPlay={getSettingsString("settingsLowEndDevice")==="true"?false:true}
                       loop
                       style={{

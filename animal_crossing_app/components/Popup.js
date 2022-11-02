@@ -373,6 +373,7 @@ export class PopupBottomCustom extends PureComponent {
     this.bottomSheetCallback = new Animated.Value(1);
     this.showOnceCalculated = false
     this.height = Dimensions.get('window').height
+    this.oldKey = ""
   }
 
   componentDidMount() {
@@ -402,7 +403,7 @@ export class PopupBottomCustom extends PureComponent {
     }
   }
 
-  setPopupVisible = (visible, showOnceCalculated=false) => {
+  setPopupVisible = (visible, showOnceCalculated=false, oldKey="") => {
     this.showOnceCalculated = showOnceCalculated
     if(this.mounted){
       this.setState({heightOffset:0})
@@ -420,6 +421,7 @@ export class PopupBottomCustom extends PureComponent {
           }
         },100)
       }
+      this.oldKey = oldKey
     }
   }
   
