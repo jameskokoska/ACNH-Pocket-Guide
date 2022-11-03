@@ -16,20 +16,31 @@ const Header = (props) => {
   // console.log(props.showHemisphereSwitcherOption)
   
   useEffect(() => {
-    if(getSettingsString("settingsUseOldKeyboardBehaviour")===true){
+    if(getSettingsString("settingsUseOldKeyboardBehaviour")==="true"){
       return
     }
     const keyboardDidHideListener = Keyboard.addListener(
       'keyboardDidHide',
       () => {
-        textInput?.current.blur()
+        if(keyboardShown){
+          textInput?.current.blur()
+          keyboardShown = false
+        }
       }
+    );
+    const keyboardDidShowListener = Keyboard.addListener(
+      'keyboardDidShow',
+      () => {
+        keyboardShown = true
+      },
     );
     return () => {
       keyboardDidHideListener.remove();
+      keyboardDidShowListener.remove();
     };
   }, []);
   var filterImage;
+  let keyboardShown = false;
   const [emptySearch, setEmptySearch] = useState(props.currentSearch==="" || props.currentSearch===undefined)
   if(props.disableFilters){
     filterImage=<View/>

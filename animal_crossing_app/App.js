@@ -473,7 +473,7 @@ class App extends Component {
     } else {
       var currentPageView;
       if (this.state.currentPage===0){
-        currentPageView = <Animated.View entering={FadeIn.duration(400)}><HomePage sections={this.sections} sectionsOrder={this.sectionsOrder} eventSections={this.eventSections} setPage={this.setPage}/></Animated.View>
+        currentPageView = <Animated.View entering={FadeIn.duration(400)}><HomePage propsPassed={this.state.propsPassed} sections={this.sections} sectionsOrder={this.sectionsOrder} eventSections={this.eventSections} setPage={this.setPage}/></Animated.View>
       } else if (this.state.currentPage===1){
         currentPageView = <AllItemsPage setPage={this.setPage}/>
       } else if(this.state.currentPage===2){

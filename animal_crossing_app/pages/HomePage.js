@@ -54,7 +54,7 @@ class HomePage extends Component {
       eventSections:props.eventSections,
       sectionsOrder:this.props.sectionsOrder, 
       sections:props.sections, 
-      editOrder:false,
+      editOrder:this.props.propsPassed === "editSections" ? true : false,
     }
   }
   
@@ -69,6 +69,9 @@ class HomePage extends Component {
       "hardwareBackPressHome",
       this.handleBackButton,
     );
+    if(this.props.propsPassed === "editNotifications"){
+      this.popupEventsSettings?.setPopupVisible(true)
+    }
   }
     
   componentWillUnmount(){

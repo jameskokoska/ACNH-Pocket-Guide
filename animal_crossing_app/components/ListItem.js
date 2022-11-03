@@ -838,7 +838,7 @@ class CheckVillager extends Component {
             renderType:{
               success: (toast) => (
                 <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, borderRadius: 5, backgroundColor: colors.popupNeutral[global.darkMode], alignItems:"center", justifyContent:"center"}}>
-                  <TextFont translate={false} style={{color:colors.textBlack[global.darkMode], fontSize: 15, textAlign:"center"}}>{toast.message}</TextFont>
+                  <TextFont style={{color:colors.textBlack[global.darkMode], fontSize: 15, textAlign:"center"}}>{toast.message}</TextFont>
                 </View>
               ),
             }
@@ -883,7 +883,7 @@ class CheckVillagerPhoto extends Component {
             renderType:{
               success: (toast) => (
                 <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, borderRadius: 5, backgroundColor: colors.popupNeutral[global.darkMode], alignItems:"center", justifyContent:"center"}}>
-                  <TextFont translate={false} style={{color:colors.textBlack[global.darkMode], fontSize: 15, textAlign:"center"}}>{toast.message}</TextFont>
+                  <TextFont style={{color:colors.textBlack[global.darkMode], fontSize: 15, textAlign:"center"}}>{toast.message}</TextFont>
                 </View>
               ),
             }
@@ -927,13 +927,13 @@ class CheckVillagerParadise extends Component {
           this.props.setVillagerParadise(this.props.villager===true ? false:true);
         }}
         onLongPress={()=>{
-          toast.show("Paradise Planning", {type:"success", 
+          toast.show(this.props.villager?"Completed Paradise Planning":"Incomplete Paradise Planning", {type:"success", 
             placement:'top',
             duration: 3000, 
             renderType:{
               success: (toast) => (
                 <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, borderRadius: 5, backgroundColor: colors.popupNeutral[global.darkMode], alignItems:"center", justifyContent:"center"}}>
-                  <TextFont translate={false} style={{color:colors.textBlack[global.darkMode], fontSize: 15, textAlign:"center"}}>{toast.message}</TextFont>
+                  <TextFont style={{color:colors.textBlack[global.darkMode], fontSize: 15, textAlign:"center"}}>{toast.message}</TextFont>
                 </View>
               ),
             }

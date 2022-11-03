@@ -65,7 +65,7 @@ class PopupFilter extends Component {
       "name": "Villagers",
       "id": "VillagerFilters",
       "children": [
-        {name:"Old villager resident", id:"Old Resident"},{name:"Not an old villager resident", id:"Not Old Resident"},{name:"Have villager photo", id:"Have villager photo"},{name:"Do not have villager photo", id:"Do not have villager photo"}
+        {name:"Completed Paradise Planning", id:"Completed Paradise Planning"},{name:"Incomplete Paradise Planning", id:"Incomplete Paradise Planning"},{name:"Old villager resident", id:"Old Resident"},{name:"Not an old villager resident", id:"Not Old Resident"},{name:"Have villager photo", id:"Have villager photo"},{name:"Do not have villager photo", id:"Do not have villager photo"}
       ]
     }]
     this.genderFilters = [{

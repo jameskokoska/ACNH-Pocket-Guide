@@ -629,6 +629,22 @@ function ListPage(props){
                     previousVariation = item["Name"];
                     previousDataCategory = item["Data Category"]
                   } 
+                } else if(searchActual.includes("Completed Paradise Planning")){
+                  if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && inVillagerParadise(item["Name"],true)===true){
+                    item.dataSet = j;
+                    item.index = i;
+                    dataUpdated.push(item)
+                    previousVariation = item["Name"];
+                    previousDataCategory = item["Data Category"]
+                  } 
+                } else if(searchActual.includes("Incomplete Paradise Planning")){
+                  if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && !inVillagerParadise(item["Name"],true)===true){
+                    item.dataSet = j;
+                    item.index = i;
+                    dataUpdated.push(item)
+                    previousVariation = item["Name"];
+                    previousDataCategory = item["Data Category"]
+                  } 
                 } else if(searchActual.includes("Old Resident")){
                   if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && global.collectionListIndexed["oldResident"+item["checkListKey"]]===true){
                     item.dataSet = j;

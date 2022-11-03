@@ -16,15 +16,26 @@ class SettingsContainer extends Component {
     }
   }
   render(){
+    const hideSwitch = this.props.keyName==="settingsEditHomePage" || this.props.keyName==="settingsEditNotifications"
     return(
-      <TouchableOpacity activeOpacity={0.7} onPress={() => {this.props.openPopup(this.props.setting);}}>
+      <TouchableOpacity activeOpacity={0.7} onPress={() => {
+        if(!hideSwitch){
+          this.props.openPopup(this.props.setting);
+        }else {
+          if(this.props.keyName==="settingsEditHomePage"){
+            this.props.setPage(0, true, "editSections")
+          } else if(this.props.keyName==="settingsEditNotifications"){
+            this.props.setPage(0, true, "editNotifications")
+          }
+        }
+      }}>
         <View style={[styles.settingsContainer,{backgroundColor:this.props.backgroundColor}]}>
           <Image style={styles.settingsImage} source={this.props.setting.picture}/>
           <View style={styles.textContainer}>
             <TextFont bold={true} style={[styles.textContainerTop,{color:this.props.textColor}]}>{this.props.setting.displayName}</TextFont>
           </View>
           <View style={{position:"absolute", right: 8, transform: [{ scale: 0.75 }]}}>
-            <ToggleSwitch
+            {!hideSwitch ? <ToggleSwitch
               isOn={this.state.toggle}
               onColor="#57b849"
               offColor="#DFDFDF"
@@ -55,7 +66,11 @@ class SettingsContainer extends Component {
                   cancelAllPushNotifications();
                 }
               }}
-            />
+            /> : <Image
+                style={{width:35,height:35,resizeMode:'contain',marginRight:5}}
+                source={global.darkMode ? require("../assets/icons/rightArrowWhite.png") : require("../assets/icons/rightArrow.png")}
+              />
+            }
           </View>
         </View>
       </TouchableOpacity>

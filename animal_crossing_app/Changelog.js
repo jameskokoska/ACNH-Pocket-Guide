@@ -4,9 +4,17 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Edit home page setting
+-Edit event notifications setting
+-Current profile displayed in sidebar
+-Old keyboard behaviour extra settings
+-Reorder ToDo list key fixes
+-Currency label removed (since icon is present) for extra item info
+-
 -New Monthly Gold Supporter: everstar! Thank you!
 -
 -Paradise Planning indicator button added to villagers
+-Added Paradise Planning filters
 -Changes to hybrid flowers checklist
 -Paradise Planning optimizations
 -Long press an event to view its dates

@@ -64,6 +64,7 @@ class SettingsPage extends Component {
                   return <></>
                 }
                 return <SettingsContainer 
+                  setPage={this.props.setPage}
                   updateSettings={this.props.updateSettings}
                   updatePage={this.forceUpdatePage}
                   key={setting["keyName"]+index.toString()} 
@@ -79,7 +80,7 @@ class SettingsPage extends Component {
                 />
               } else {
                 if(setting["hidden"]===true && this.state.showHiddenSettings===false){
-                  return <TouchableOpacity onPress={() => this.setState({showHiddenSettings:true})}>
+                  return <TouchableOpacity key={setting["keyName"]+index.toString()} onPress={() => this.setState({showHiddenSettings:true})}>
                     <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 13, textAlign:"center", padding:4, marginHorizontal: 20}}>{"Show more hidden settings..."}</TextFont>
                   </TouchableOpacity>
                 }

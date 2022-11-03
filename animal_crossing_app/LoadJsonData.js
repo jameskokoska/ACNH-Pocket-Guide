@@ -998,6 +998,14 @@ export const settings = [
     "description" : "Set your hemisphere, north or south. This will change the data displayed for creatures and events.",
   },
   {
+    "keyName" : "settingsEditHomePage",
+    "defaultValue" : "true",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/homeIcon.png"),
+    "displayName" : "Edit home page",
+    "description" : "Tap here to edit sections on your home page.",
+  },
+  {
     "keyName" : "settingsAutoBackup",
     "defaultValue" : "false",
     "currentValue" : "",
@@ -1042,6 +1050,14 @@ export const settings = [
     "picture" : require("./assets/icons/bell.png"),
     "displayName" : "App notifications",
     "description" : "This will enable/disable notifications. You can select event notifications under the [Edit Events] of the [Events] section on the homepage.",
+  },
+  {
+    "keyName" : "settingsEditNotifications",
+    "defaultValue" : "true",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/calendar.png"),
+    "displayName" : "Edit event notifications",
+    "description" : "Tap here to edit sections on your home page.",
   },
   // {
   //   "keyName" : "settingsShowVariation",

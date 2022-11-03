@@ -143,7 +143,7 @@ export default function TodoReorderPage(props) {
       <DraggableFlatList
         data={data}
         onDragEnd={({ data }) => {setData(data); saveList(data);}}
-        keyExtractor={(item) => item.key}
+        keyExtractor={(item, index) => item.key+index.toString()}
         renderItem={renderItem}
         ListHeaderComponent={headerComponent}
         ListFooterComponent={footerComponent}
