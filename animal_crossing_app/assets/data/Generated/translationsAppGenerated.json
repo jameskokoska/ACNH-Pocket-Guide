@@ -17309,6 +17309,36 @@
       "Portuguese": "Itens recentes",
       "Czech": "Poslední položky",
       "Slovak": "Najnovšie položky"
+    },
+    "completed paradise planning": {
+      "English": "Completed Paradise Planning",
+      "English (Europe)": "Completed Paradise Planning",
+      "French": "Planification paradisiaque terminée",
+      "French (US)": "Planification paradisiaque terminée",
+      "German": "Paradiesplanung abgeschlossen",
+      "Spanish": "Planificación del paraíso completada",
+      "Spanish (US)": "Planificación del paraíso completada",
+      "Russian": "Завершено Планирование рая",
+      "Italian": "Hai completato la pianificazione del paradiso",
+      "Dutch": "Paradijsplanning voltooid",
+      "Portuguese": "Planejamento do paraíso concluído",
+      "Czech": "Dokončeno plánování ráje",
+      "Slovak": "Dokončené plánovanie raja"
+    },
+    "incomplete paradise planning": {
+      "English": "Incomplete Paradise Planning",
+      "English (Europe)": "Incomplete Paradise Planning",
+      "French": "Planification paradisiaque incomplète",
+      "French (US)": "Planification paradisiaque incomplète",
+      "German": "Unvollständige Paradiesplanung",
+      "Spanish": "Planificación incompleta del paraíso",
+      "Spanish (US)": "Planificación incompleta del paraíso",
+      "Russian": "Незавершенное планирование рая",
+      "Italian": "Pianificazione incompleta del paradiso",
+      "Dutch": "Onvolledige paradijsplanning",
+      "Portuguese": "Planejamento Incompleto do Paraíso",
+      "Czech": "Neúplné plánování ráje",
+      "Slovak": "Neúplné plánovanie raja"
     }
   },
   "Sources": {

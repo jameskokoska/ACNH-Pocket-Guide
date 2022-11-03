@@ -7,6 +7,7 @@ export const changelog = `
 -New Monthly Gold Supporter: everstar! Thank you!
 -
 -Paradise Planning indicator button added to villagers
+-Added Paradise Planning filters
 -Changes to hybrid flowers checklist
 -Paradise Planning optimizations
 -Long press an event to view its dates
