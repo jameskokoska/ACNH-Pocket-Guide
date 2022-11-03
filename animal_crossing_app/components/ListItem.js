@@ -296,16 +296,16 @@ class ListItem extends React.Component{
       if(global.extraItemInfo==="Buy"){
         let currencyBells = false;
         if(this.props.item["Exchange Currency"]!==undefined && this.props.item["Exchange Currency"].toString().toLowerCase().includes("miles")){
-          ending= " " + attemptToTranslate("miles");
+          // ending= " " + attemptToTranslate("miles");
           imageSource = "Miles"
         } else if(this.props.item["Exchange Currency"]!==undefined && this.props.item["Exchange Currency"].toString().toLowerCase().includes("nook points")){
-          ending= " " + attemptToTranslate("Nook points");
+          // ending= " " + attemptToTranslate("Nook points");
           imageSource = "Nook Points";
         } else if(this.props.item["Exchange Currency"]!==undefined && this.props.item["Exchange Currency"].toString().toLowerCase().includes("heart crystals")){
-          ending= " " + attemptToTranslate("heart crystals");
+          // ending= " " + attemptToTranslate("heart crystals");
           imageSource = "Heart Crystals";
         } else if( this.props.item["Buy"]!=="NFS" ){
-          ending = " " + attemptToTranslate("bells");
+          // ending = " " + attemptToTranslate("bells");
           imageSource = "Buy"
           currencyBells = true;
         } else {

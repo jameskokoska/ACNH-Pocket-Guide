@@ -18,7 +18,8 @@ class SettingsPage extends Component {
   constructor(props){
     super(props);
     this.state = {
-      deletedInfo: ["0","0"]
+      deletedInfo: ["0","0"],
+      showHiddenSettings:false,
     }
   }
   
@@ -28,14 +29,6 @@ class SettingsPage extends Component {
     this.setState({deletedInfo:deletedInfo});
     this.popupDeleteSavedPhotosWait?.setPopupVisible(false);
     this.popupDeleteSavedPhotos?.setPopupVisible(true);
-  }
-
-  deleteGeneratedData = async () =>{
-    this.popupDeleteSavedPhotosWait?.setPopupVisible(true);
-    const deletedInfo = await deleteGeneratedData();
-    this.setState({deletedInfo:deletedInfo});
-    this.popupDeleteSavedPhotosWait?.setPopupVisible(false);
-    this.popupDeleteGeneratedData?.setPopupVisible(true);
   }
 
   setDateOffset = (timeOffset) => {
@@ -67,6 +60,9 @@ class SettingsPage extends Component {
           {global.settingsCurrent.map( (setting, index)=>
             {
               if(setting["keyName"]!="breaker"){
+                if(setting["hidden"]===true && this.state.showHiddenSettings===false){
+                  return <></>
+                }
                 return <SettingsContainer 
                   updateSettings={this.props.updateSettings}
                   updatePage={this.forceUpdatePage}
@@ -82,6 +78,11 @@ class SettingsPage extends Component {
                   popupAutoBackups={()=>{this.popupAutoBackups?.setPopupVisible(true)}}
                 />
               } else {
+                if(setting["hidden"]===true && this.state.showHiddenSettings===false){
+                  return <TouchableOpacity onPress={() => this.setState({showHiddenSettings:true})}>
+                    <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 13, textAlign:"center", padding:4, marginHorizontal: 20}}>{"Show more hidden settings..."}</TextFont>
+                  </TouchableOpacity>
+                }
                 return <SettingsDivider
                   text={setting["text"]}
                   keyName={setting["keyName"]}
@@ -113,8 +114,6 @@ class SettingsPage extends Component {
           <ButtonComponent text="Delete Downloaded Images" onPress={async () => {this.deleteSavedPhotos()}} vibrate={70} color={colors.filtersResetButton[global.darkMode]}/>
           <Popup ref={(popupDeleteSavedPhotos) => this.popupDeleteSavedPhotos = popupDeleteSavedPhotos} text={"Deleted Downloaded Images"} textLower={attemptToTranslate("All downloaded photos have been removed. A restart may be required to load back images.") + "\n" + attemptToTranslate("Deleted:") + " " +this.state.deletedInfo[0] + "\n" + attemptToTranslate("Storage cleared:") + " " +parseInt(this.state.deletedInfo[1]) + " MB"} button1={"OK"} button1Action={()=>{console.log("")}}/>
           <Popup ref={(popupDeleteSavedPhotosWait) => this.popupDeleteSavedPhotosWait = popupDeleteSavedPhotosWait} text="Deleting..." textLower="Please wait"/>
-          <ButtonComponent text="Delete Generated Internal Data" onPress={async () => {this.deleteGeneratedData()}} vibrate={70} color={colors.filtersResetButton[global.darkMode]}/>
-          <Popup ref={(popupDeleteGeneratedData) => this.popupDeleteGeneratedData = popupDeleteGeneratedData} text={"Deleted Generated Data"} textLower={attemptToTranslate("All generated data has been removed. Restart to regenerate the data.") + "\n" + attemptToTranslate("Deleted:") + " " +this.state.deletedInfo[0] + "\n" + attemptToTranslate("Storage cleared:") + " " +parseInt(this.state.deletedInfo[1]) + " MB"} button1={"OK"} button1Action={()=>{console.log("")}}/>
           
           <View style={{height: 20}}/>
           <ButtonComponent text="Reset Data" onPress={() => {this.popupWarning?.setPopupVisible(true)}} vibrate={100} color={colors.cancelButton[global.darkMode]}/>

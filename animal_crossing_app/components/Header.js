@@ -16,6 +16,9 @@ const Header = (props) => {
   // console.log(props.showHemisphereSwitcherOption)
   
   useEffect(() => {
+    if(getSettingsString("settingsUseOldKeyboardBehaviour")===true){
+      return
+    }
     const keyboardDidHideListener = Keyboard.addListener(
       'keyboardDidHide',
       () => {

@@ -91,6 +91,7 @@ export default class SideMenu extends Component {
       <View style={{width: "100%", height:"100%", backgroundColor:colors.textWhite[global.darkMode]}}>
         <ScrollView overScrollMode={"never"} ref={(scrollView) => this.scrollView = scrollView}>
           <View style={{backgroundColor: colors.topSidebar[global.darkMode], marginBottom: 10}}>
+            <TextFont translate={true} bold={true} style={{fontSize: 13, position:"absolute",top:10, left:10, color: colors.textBlack[global.darkMode]}}>{global.profile}</TextFont>
             <View style={{height:45}}/>
             <View style={{flexDirection:"row", width:this.maxWidth-10}}>
               <ProfileIcon onPress={()=>{this.props.setPage(26)}} profile={global.profile} style={{marginLeft:20}}/>
@@ -162,6 +163,7 @@ export default class SideMenu extends Component {
           onDrawerSlide={(progress)=>{this.disableEditMode(progress)}}
           minSwipeDistance={20}
           useNativeAnimations={false}
+          keyboardDismissMode={"on-drag"}
         >
             {this.props.children}
         </DrawerLayout>

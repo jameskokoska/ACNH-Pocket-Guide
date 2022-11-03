@@ -1253,6 +1253,20 @@ export const settings = [
   // },
   {
     "keyName" : "breaker",
+    "text" : "Extra Settings",
+    "hidden":true,
+  },
+  {
+    "keyName" : "settingsUseOldKeyboardBehaviour",
+    "defaultValue" : "false",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/keyboard.png"),
+    "displayName" : "Use old keyboard behviour",
+    "description" : "Uses the old keyboard behaviour. The text entry does not lose focus when the keyboard is minimized.",
+    "hidden":true,
+  },
+  {
+    "keyName" : "breaker",
     "text" : "Custom dates",
   },
   {
@@ -1262,7 +1276,7 @@ export const settings = [
     "picture" : require("./assets/icons/customTime.png"),
     "displayName" : "Use a custom date",
     "description" : "Use any date you want, in case you are one of those time travellers",
-  },
+  },  
 ]
 
 //How translations are handled
