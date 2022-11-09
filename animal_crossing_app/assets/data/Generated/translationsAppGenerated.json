@@ -17429,6 +17429,32 @@
       "Portuguese": "Mostrar mais configurações ocultas...",
       "Czech": "Zobrazit další skrytá nastavení...",
       "Slovak": "Zobraziť ďalšie skryté nastavenia..."
+    },
+    "remove alphabetical sorting": {
+      "English": "Remove Alphabetical Sorting",
+      "English (Europe)": "Remove Alphabetical Sorting",
+      "French": "Supprimer le tri alphabétique",
+      "French (US)": "Supprimer le tri alphabétique",
+      "German": "Entfernen Sie die alphabetische Sortierung",
+      "Spanish": "Eliminar la clasificación alfabética",
+      "Spanish (US)": "Eliminar la clasificación alfabética",
+      "Russian": "Удалить алфавитную сортировку",
+      "Italian": "Rimuovere l'ordinamento alfabetico",
+      "Dutch": "Alfabetische sortering verwijderen",
+      "Portuguese": "Remover classificação alfabética"
+    },
+    "alphabetical": {
+      "English": "Alphabetical",
+      "English (Europe)": "Alphabetical",
+      "French": "Alphabétique",
+      "French (US)": "Alphabétique",
+      "German": "Alphabetisch",
+      "Spanish": "Alfabético",
+      "Spanish (US)": "Alfabético",
+      "Russian": "Алфавитный",
+      "Italian": "Alfabetico",
+      "Dutch": "Alfabetisch",
+      "Portuguese": "Alfabética"
     }
   },
   "Sources": {

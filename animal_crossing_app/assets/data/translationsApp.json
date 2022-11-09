@@ -650,23 +650,23 @@
     ],
     "Main": [
         {
-            "English": "1255 items",
-            "English (Europe)": "1255 items",
-            "French": "1243 items (12 items missing)",
-            "French (US)": "1243 items (12 items missing)",
-            "German": "1255 items",
-            "Spanish": "1248 items (7 items missing)",
-            "Spanish (US)": "1220 items (35 items missing)",
-            "Russian": "1235 items (20 items missing)",
-            "Italian": "1234 items (21 items missing)",
-            "Dutch": "1209 items (46 items missing)",
-            "Chinese": "904 items (351 items missing)",
-            "Chinese (Traditional)": "9 items (1246 items missing)",
-            "Japanese": "9 items (1246 items missing)",
-            "Korean": "9 items (1246 items missing)",
-            "Portuguese": "1232 items (23 items missing)",
-            "Czech": "417 items (838 items missing)",
-            "Slovak": "387 items (868 items missing)"
+            "English": "1257 items",
+            "English (Europe)": "1257 items",
+            "French": "1245 items (12 items missing)",
+            "French (US)": "1245 items (12 items missing)",
+            "German": "1257 items",
+            "Spanish": "1250 items (7 items missing)",
+            "Spanish (US)": "1222 items (35 items missing)",
+            "Russian": "1237 items (20 items missing)",
+            "Italian": "1236 items (21 items missing)",
+            "Dutch": "1211 items (46 items missing)",
+            "Chinese": "904 items (353 items missing)",
+            "Chinese (Traditional)": "9 items (1248 items missing)",
+            "Japanese": "9 items (1248 items missing)",
+            "Korean": "9 items (1248 items missing)",
+            "Portuguese": "1234 items (23 items missing)",
+            "Czech": "417 items (840 items missing)",
+            "Slovak": "387 items (870 items missing)"
         },
         {
             "English": "Home",
@@ -18541,6 +18541,32 @@
             "Portuguese": "Mostrar mais configurações ocultas...",
             "Czech": "Zobrazit další skrytá nastavení...",
             "Slovak": "Zobraziť ďalšie skryté nastavenia..."
+        },
+        {
+            "English": "Remove Alphabetical Sorting",
+            "English (Europe)": "Remove Alphabetical Sorting",
+            "French": "Supprimer le tri alphabétique",
+            "French (US)": "Supprimer le tri alphabétique",
+            "German": "Entfernen Sie die alphabetische Sortierung",
+            "Spanish": "Eliminar la clasificación alfabética",
+            "Spanish (US)": "Eliminar la clasificación alfabética",
+            "Russian": "Удалить алфавитную сортировку",
+            "Italian": "Rimuovere l'ordinamento alfabetico",
+            "Dutch": "Alfabetische sortering verwijderen",
+            "Portuguese": "Remover classificação alfabética"
+        },
+        {
+            "English": "Alphabetical",
+            "English (Europe)": "Alphabetical",
+            "French": "Alphabétique",
+            "French (US)": "Alphabétique",
+            "German": "Alphabetisch",
+            "Spanish": "Alfabético",
+            "Spanish (US)": "Alfabético",
+            "Russian": "Алфавитный",
+            "Italian": "Alfabetico",
+            "Dutch": "Alfabetisch",
+            "Portuguese": "Alfabética"
         }
     ],
     "Sources": [

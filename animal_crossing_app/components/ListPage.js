@@ -691,7 +691,7 @@ function ListPage(props){
       }
 
       //Sort alphabetically
-      if(getSettingsString("settingsSortAlphabetically")==="true"){
+      if(!searchActual.includes("Sort-RemoveAlphabetical") && (getSettingsString("settingsSortAlphabetically")==="true" || searchActual.includes("Sort-Alphabetical"))){
         dataUpdated.sort((a, b)=> {
           return (a.SortString < b.SortString) ? -1 : (a.SortString > b.SortString) ? 1 : 0;
         });

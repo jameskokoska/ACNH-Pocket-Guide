@@ -223,7 +223,13 @@ class CatalogPage extends Component {
             placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
             multiline={true}
           />
-          <View style={{height: 45}}/>
+          <View style={{height: 20}}/>
+          <View style={{marginHorizontal: 10}}>
+            <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={async ()=>{await this.import(); this.popupWait?.setPopupVisible(false); this.popup?.setPopupVisible(true);}} text={"Import"}/>
+          </View>
+          <View style={{height: 10}}/>
+          <TextFont suffix={"\n"+attemptToTranslate("Please be patient.")} bold={false} style={{fontSize: 13, marginLeft: 30, marginRight: 30, textAlign:"center",color:colors.textBlack[global.darkMode]}}>{"May take a few seconds to complete."}</TextFont>
+          <View style={{height: 25}}/>
           <IncludeSwitch header={"Select Variations"} text={"Open a popup to select variations of the item when importing. Only the items with variations will create a popup."} defaultValue={this.selectVariations} toggleValue={()=>{this.selectVariations = !this.selectVariations}}/>
           <View style={{height: 5}}/>
           <IncludeSwitch header={"Skip Completed Variations"} text={"Don't show variation selection for items you've already collected all the variations for. This option is only used when 'Select Variations' is enabled."} defaultValue={this.skipCompletedVariations} toggleValue={()=>{this.skipCompletedVariations = !this.skipCompletedVariations}}/>
@@ -231,10 +237,7 @@ class CatalogPage extends Component {
           <IncludeSwitch header={"Include Villagers"} text={"Include villagers when importing items. Some villagers have the same name as items. (Does not apply to Nook.lol imports)"} defaultValue={this.includeVillagers} toggleValue={()=>{this.includeVillagers = !this.includeVillagers}}/>
           <View style={{height: 5}}/>
           <IncludeSwitch header={"Include Recipes"} text={"Include recipes when importing items. Recipes and the item counterpart have the same name. (Does not apply to Nook.lol imports)"} defaultValue={this.includeRecipes} toggleValue={()=>{this.includeRecipes = !this.includeRecipes}}/>
-          <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={async ()=>{await this.import(); this.popupWait?.setPopupVisible(false); this.popup?.setPopupVisible(true);}} text={"Import"} />
-          <View style={{height: 10}}/>
-          <TextFont suffix={"\n"+attemptToTranslate("Please be patient.")} bold={false} style={{fontSize: 13, marginLeft: 30, marginRight: 30, textAlign:"center",color:colors.textBlack[global.darkMode]}}>{"May take a few seconds to complete."}</TextFont>
-          <View style={{height: 70}}/>
+          <View style={{height: 90}}/>
         </ScrollView>
         <Popup 
           ref={(popup) => this.popup = popup}

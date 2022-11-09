@@ -83,6 +83,7 @@ class PopupFilter extends Component {
           {name:"Reverse sorting direction", id:"Reverse direction"},
           {name:"", id:"break"},
           {name:"Collected", id:"Sort-Collected"},
+          {name:getSettingsString("settingsSortAlphabetically")==="true" ? "Remove Alphabetical Sorting" : "Alphabetical", id:getSettingsString("settingsSortAlphabetically")==="true" ? "Sort-RemoveAlphabetical" : "Sort-Alphabetical"},
         ]
       },
     ]
@@ -100,6 +101,7 @@ class PopupFilter extends Component {
           {name:"Color 1", id:"Sort-Color 1"},
           {name:"Color 2", id:"Sort-Color 2"},
           {name:"Furniture tag", id:"Sort-Tag"},
+          {name:getSettingsString("settingsSortAlphabetically")==="true" ? "Remove Alphabetical Sorting" : "Alphabetical", id:getSettingsString("settingsSortAlphabetically")==="true" ? "Sort-RemoveAlphabetical" : "Sort-Alphabetical"},
         ]
       },
     ]
@@ -115,6 +117,7 @@ class PopupFilter extends Component {
           {name:"Buy price", id:"SortInt-Buy"},
           {name:"Color 1", id:"Sort-Color 1"},
           {name:"Color 2", id:"Sort-Color 2"},
+          {name:getSettingsString("settingsSortAlphabetically")==="true" ? "Remove Alphabetical Sorting" : "Alphabetical", id:getSettingsString("settingsSortAlphabetically")==="true" ? "Sort-RemoveAlphabetical" : "Sort-Alphabetical"},
         ]
       },
     ]
@@ -128,6 +131,7 @@ class PopupFilter extends Component {
           {name:"Collected", id:"Sort-Collected"},
           {name:"Sell price", id:"SortInt-Sell"},
           {name:"Buy price", id:"SortInt-Buy"},
+          {name:getSettingsString("settingsSortAlphabetically")==="true" ? "Remove Alphabetical Sorting" : "Alphabetical", id:getSettingsString("settingsSortAlphabetically")==="true" ? "Sort-RemoveAlphabetical" : "Sort-Alphabetical"},
         ]
       },
     ]

@@ -619,6 +619,38 @@ export async function resetFilters(){
   }
 }
 
+export async function resetAlphabeticalFilters(){
+  var allFilterKeys = await AsyncStorage.getAllKeys();
+  var filterKeys = []
+  for(var x =0; x < allFilterKeys.length; x++){
+    if(allFilterKeys[x].includes("Filters")){
+      filterKeys.push(allFilterKeys[x])
+    }
+  }
+  for(var i =0; i < filterKeys.length; i++){
+    let defaultValuesStored = await getStorage(filterKeys[i], "")
+    // console.log(defaultValuesStored)
+
+    defaultValuesStored = defaultValuesStored.replace("Sort-RemoveAlphabetical,","")
+    defaultValuesStored = defaultValuesStored.replace("Sort-RemoveAlphabetical","")
+    defaultValuesStored = defaultValuesStored.replace("Sort-Alphabetical,","")
+    defaultValuesStored = defaultValuesStored.replace("Sort-Alphabetical","")
+    // let newOutput = []
+    // if(defaultValuesStored!==""){
+    //   for(var i = 0; i<defaultValuesStored.split(",").length; i++){
+    //     if(defaultValuesStored.split(",")[i]==="Sort-RemoveAlphabetical" || defaultValuesStored.split(",")[i]==="Sort-Alphabetical"){
+    //       continue
+    //     }
+    //     newOutput.push(i)
+    //   }
+    //   console.log(newOutput)
+    //   AsyncStorage.setItem(filterKeys[i], newOutput.toString());
+    // }
+    // console.log(defaultValuesStored)
+    await AsyncStorage.setItem(filterKeys[i], defaultValuesStored);
+  }
+}
+
 export function getSpecificFilters(searchFor){
   if(searchFor===undefined){
     return [];

@@ -5,7 +5,7 @@ import Popup from './Popup';
 import ToggleSwitch from 'toggle-switch-react-native'
 import colors from "../Colors"
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {getSettingsString,getStorage} from "../LoadJsonData"
+import {getSettingsString,getStorage, resetAlphabeticalFilters} from "../LoadJsonData"
 import {cancelAllPushNotifications} from "../Notifications"
 
 class SettingsContainer extends Component {
@@ -64,6 +64,9 @@ class SettingsContainer extends Component {
                 }
                 if(this.props.keyName==="settingsNotifications" && this.state.toggle === false){
                   cancelAllPushNotifications();
+                }
+                if(this.props.keyName==="settingsSortAlphabetically"){
+                  resetAlphabeticalFilters();
                 }
               }}
             /> : <Image
