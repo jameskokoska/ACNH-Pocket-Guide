@@ -121,12 +121,6 @@ export default class VillagersCompatibilityPage extends Component {
     </View>
     return(
       <>
-        <VillagerPopupPopup ref={(villagerPopupPopup) => this.villagerPopupPopup = villagerPopupPopup} setPage={this.props.setPage}/>
-        <PopupInfoCustom header={<TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>You do not have any villagers added!</TextFont>} ref={(popup) => this.popup = popup} buttonText={"Dismiss"}>
-          <TouchableOpacity style={{paddingVertical:20,}} onPress={() => this.props.setPage(8)}>
-            <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, textAlign:"center"}}>{"Tap here and go add some!"}</TextFont>
-          </TouchableOpacity>
-        </PopupInfoCustom> 
         <ScrollView>
           <View>
             <GuideRedirectButton icon={"i"} style={{position:"absolute", padding:15, right:0}} extraInfo={extraInfo} setPage={this.props.setPage}/>
@@ -139,6 +133,12 @@ export default class VillagersCompatibilityPage extends Component {
             <View style={{height: 100}}/>
           </View>
         </ScrollView>
+        <VillagerPopupPopup ref={(villagerPopupPopup) => this.villagerPopupPopup = villagerPopupPopup} setPage={this.props.setPage}/>
+        <PopupInfoCustom header={<TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>You do not have any villagers added!</TextFont>} ref={(popup) => this.popup = popup} buttonText={"Dismiss"}>
+          <TouchableOpacity style={{paddingVertical:20,}} onPress={() => this.props.setPage(8)}>
+            <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, textAlign:"center"}}>{"Tap here and go add some!"}</TextFont>
+          </TouchableOpacity>
+        </PopupInfoCustom> 
       </>
     )
   }

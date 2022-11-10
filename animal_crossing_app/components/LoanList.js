@@ -237,7 +237,6 @@ class LoanItem extends Component {
         {getSettingsString("settingsLowEndDevice")==="true"?
         <View style={{height:((this.props.item?.current/this.props.item?.total)*100).toString()+"%", width: "100%", position:"absolute", backgroundColor:colors.loanProgress[global.darkMode], borderRadius:10, bottom:0}}/>:
         <Animated.View style={{transform: [{ translateY: this.state.animationValue }], width: "100%", position:"absolute", backgroundColor:colors.loanProgress[global.darkMode], height:"100%", borderRadius:10, bottom:0}}/>}
-        {this.removeButton(this.props)}
         <TouchableNativeFeedback onLongPress={() => {  
             this.setState({showRemove:!this.state.showRemove})
             getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(8) : "";
@@ -279,6 +278,7 @@ class LoanItem extends Component {
             <View style={{height:13}}/>
           </View>
         </TouchableNativeFeedback>
+        {this.removeButton(this.props)}
       </View>
     )
   }

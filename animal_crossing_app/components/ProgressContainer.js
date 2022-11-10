@@ -82,8 +82,8 @@ export default class ProgressContainerToggle extends Component{
       </TouchableOpacity>
     </View>
       return <View style={{opacity:this.state.enabled?1:0.5}}>
-        {this.state.editMode?(this.state.enabled?removeButton:addButton):<View/>}
         {progressContainer}
+        {this.state.editMode?(this.state.enabled?removeButton:addButton):<View/>}
       </View>
     } else {
       return <View/>

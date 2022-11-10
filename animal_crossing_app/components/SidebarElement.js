@@ -84,8 +84,6 @@ class SidebarElement extends Component {
               }
           }}>
               <View style={[styles.sidebarBox, {opacity:this.props.disabled?0.7:1,backgroundColor: backgroundColor,elevation: elevation}]}>
-                {!this.props.disabled?removeButton:addButton}
-                {changeOrderButtons}
                 <Image style={styles.sidebarImage} source={this.props.image}/>
                 <TextFont translate={false} bold={true} style={[styles.sidebarTitle,{color:this.props.textColor}]}>{this.props.displayName==="Emoticons"?"Reactions":capitalizeFirst(attemptToTranslate(this.props.displayName))}</TextFont>
                 {this.props.title!=="Buy Me a Coffee" ? <></> :
@@ -117,6 +115,8 @@ class SidebarElement extends Component {
                     />
                   </View>
                 }
+                {!this.props.disabled?removeButton:addButton}
+                {changeOrderButtons}
               </View>
           </TouchableNativeFeedback>
         </>

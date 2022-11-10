@@ -289,8 +289,9 @@ export function getEventsDay(date, eventSections, showEventsIfInRange){
       eventSections["Event Ready Days"] && event["Name"].toLowerCase().includes("weeks before") || 
       eventSections["Nook Shopping Events"] && event["Type"].toLowerCase()===("nook shopping event") || 
       eventSections["Zodiac Seasons"] && event["Type"].toLowerCase()===("zodiac season") || 
-      eventSections["Shopping Seasons"] && event["Type"].toLowerCase()===("shopping season") || 
-      (event["Type"].toLowerCase()==="calendar season" && event["Name"].toLowerCase().includes("shopping"))
+      eventSections["Shopping Seasons"] && event["Name"].toLowerCase().includes("shopping") || 
+      eventSections["Calendar Seasons"] && event["Type"].toLowerCase().includes("calendar season") || 
+      eventSections["Blooming Seasons"] && event["Type"].toLowerCase().includes("blooming season")
     ){
       if(isDateInRange(event[eventDateKey], date.getFullYear(), date, "startOnly")){
         let isImportant = (event["Type"].toLowerCase()==="special event" && !event["Name"].includes("days before") && !event["Name"].includes("weeks before")) || 
@@ -298,7 +299,7 @@ export function getEventsDay(date, eventSections, showEventsIfInRange){
         totalEvents.push({
           name: capitalize(eventName),
           time: event["Start Time"]!==undefined && event["End Time"]!==undefined && event["Start Time"]!=="5:00 AM" ? convertTimeTo24Hours(event["Start Time"])+" - "+convertTimeTo24Hours(event["End Time"]) : event["Type"],
-          image: event["Display Name"]!==undefined?event["Display Name"]:event["Name"],
+          image: event["Name"],
           day:date.getDate(),
           weekday:date.getDay(),
           color:isImportant ? colors.specialEventBackground[global.darkMode]:colors.startEventBackground[global.darkMode],
@@ -315,7 +316,7 @@ export function getEventsDay(date, eventSections, showEventsIfInRange){
         totalEvents.push({
           name: capitalize(eventName) + " " + attemptToTranslate("End"),
           time: event["Type"],
-          image: event["Display Name"]!==undefined?event["Display Name"]:event["Name"],
+          image: event["Name"],
           day:date.getDate(),
           weekday:date.getDay(),
           color:colors.warningEventBackground[global.darkMode],
@@ -331,7 +332,7 @@ export function getEventsDay(date, eventSections, showEventsIfInRange){
         totalEvents.push({
           name: capitalize(eventName),
           time: event["Type"],
-          image: event["Display Name"]!==undefined?event["Display Name"]:event["Name"],
+          image: event["Name"],
           day:date.getDate(),
           weekday:date.getDay(),
           type:"filter",

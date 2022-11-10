@@ -240,7 +240,6 @@ export class ToolItem extends Component {
         {getSettingsString("settingsLowEndDevice")==="true"?
         <View style={{width:((this.props.item?.current/this.props.item?.total)*100).toString()+"%", height:"100%", position:"absolute", backgroundColor:this.props.color!==undefined?this.props.color:colors.toolProgress[global.darkMode], borderRadius:10, bottom:0}}/>:
         <Animated.View style={{transform: [{ translateX: this.state.animationValue }], height:"100%", position:"absolute", backgroundColor:this.props.color!==undefined?this.props.color:colors.toolProgress[global.darkMode], width:"100%", borderRadius:10, bottom:0}}/>}
-        {this.removeButton(this.props)}
         <TouchableNativeFeedback onLongPress={() => {
             if(this.props.noLongPress===true){
               return
@@ -309,6 +308,7 @@ export class ToolItem extends Component {
             {this.props.extraComponent!==undefined ? this.props.extraComponent : <View/>}
           </View>
         </TouchableNativeFeedback>
+        {this.removeButton(this.props)}
       </View>
     )
   }

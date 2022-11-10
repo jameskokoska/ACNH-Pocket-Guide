@@ -17481,6 +17481,32 @@
       "Italian": "Visualizza elementi ingrediente",
       "Dutch": "Ingrediënten bekijken",
       "Portuguese": "Ver itens de ingredientes"
+    },
+    "blooming seasons": {
+      "English": "Blooming Seasons",
+      "English (Europe)": "Blooming Seasons",
+      "French": "Saisons de floraison",
+      "French (US)": "Saisons de floraison",
+      "German": "Blühende Jahreszeiten",
+      "Spanish": "Temporadas florecientes",
+      "Spanish (US)": "Temporadas florecientes",
+      "Russian": "Сезоны цветения",
+      "Italian": "Stagioni di fioritura",
+      "Dutch": "Bloeiende seizoenen",
+      "Portuguese": "Estações de florescimento"
+    },
+    "calendar seasons": {
+      "English": "Calendar Seasons",
+      "English (Europe)": "Calendar Seasons",
+      "French": "Saisons du calendrier",
+      "French (US)": "Saisons du calendrier",
+      "German": "Kalender Jahreszeiten",
+      "Spanish": "Calendario Temporadas",
+      "Spanish (US)": "Calendario Temporadas",
+      "Russian": "Календарь сезонов",
+      "Italian": "Stagioni del calendario",
+      "Dutch": "Kalender Seizoenen",
+      "Portuguese": "Temporadas do Calendário"
     }
   },
   "Sources": {

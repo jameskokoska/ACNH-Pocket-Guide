@@ -650,23 +650,23 @@
     ],
     "Main": [
         {
-            "English": "1259 items",
-            "English (Europe)": "1259 items",
-            "French": "1247 items (12 items missing)",
-            "French (US)": "1247 items (12 items missing)",
-            "German": "1259 items",
-            "Spanish": "1252 items (7 items missing)",
-            "Spanish (US)": "1224 items (35 items missing)",
-            "Russian": "1239 items (20 items missing)",
-            "Italian": "1238 items (21 items missing)",
-            "Dutch": "1213 items (46 items missing)",
-            "Chinese": "904 items (355 items missing)",
-            "Chinese (Traditional)": "9 items (1250 items missing)",
-            "Japanese": "9 items (1250 items missing)",
-            "Korean": "9 items (1250 items missing)",
-            "Portuguese": "1236 items (23 items missing)",
-            "Czech": "417 items (842 items missing)",
-            "Slovak": "387 items (872 items missing)"
+            "English": "1261 items",
+            "English (Europe)": "1261 items",
+            "French": "1249 items (12 items missing)",
+            "French (US)": "1249 items (12 items missing)",
+            "German": "1261 items",
+            "Spanish": "1254 items (7 items missing)",
+            "Spanish (US)": "1226 items (35 items missing)",
+            "Russian": "1241 items (20 items missing)",
+            "Italian": "1240 items (21 items missing)",
+            "Dutch": "1215 items (46 items missing)",
+            "Chinese": "904 items (357 items missing)",
+            "Chinese (Traditional)": "9 items (1252 items missing)",
+            "Japanese": "9 items (1252 items missing)",
+            "Korean": "9 items (1252 items missing)",
+            "Portuguese": "1238 items (23 items missing)",
+            "Czech": "417 items (844 items missing)",
+            "Slovak": "387 items (874 items missing)"
         },
         {
             "English": "Home",
@@ -18593,6 +18593,32 @@
             "Italian": "Visualizza elementi ingrediente",
             "Dutch": "Ingrediënten bekijken",
             "Portuguese": "Ver itens de ingredientes"
+        },
+        {
+            "English": "Blooming Seasons",
+            "English (Europe)": "Blooming Seasons",
+            "French": "Saisons de floraison",
+            "French (US)": "Saisons de floraison",
+            "German": "Blühende Jahreszeiten",
+            "Spanish": "Temporadas florecientes",
+            "Spanish (US)": "Temporadas florecientes",
+            "Russian": "Сезоны цветения",
+            "Italian": "Stagioni di fioritura",
+            "Dutch": "Bloeiende seizoenen",
+            "Portuguese": "Estações de florescimento"
+        },
+        {
+            "English": "Calendar Seasons",
+            "English (Europe)": "Calendar Seasons",
+            "French": "Saisons du calendrier",
+            "French (US)": "Saisons du calendrier",
+            "German": "Kalender Jahreszeiten",
+            "Spanish": "Calendario Temporadas",
+            "Spanish (US)": "Calendario Temporadas",
+            "Russian": "Календарь сезонов",
+            "Italian": "Stagioni del calendario",
+            "Dutch": "Kalender Seizoenen",
+            "Portuguese": "Temporadas do Calendário"
         }
     ],
     "Sources": [
