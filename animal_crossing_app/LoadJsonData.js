@@ -1828,7 +1828,6 @@ export function findIngredients(baseItem){
     (baseItem["Material 9"] ?? "").toLowerCase(),
     (baseItem["Material 10"] ?? "").toLowerCase(),
   ]
-  console.log(ingredients)
   let outputIds = []
   for(var dataSet = 0; dataSet < global.dataLoadedAll.length; dataSet++){
     for(var i = 0; i < global.dataLoadedAll[dataSet].length; i++){
@@ -1853,11 +1852,6 @@ export function findIngredients(baseItem){
         global.dataLoadedAll[dataSet][i]["Data Category"] === "Sanrio Series"     
       ){
         break
-      }
-      if(global.dataLoadedAll[dataSet][i]["Name"]==="acorn"){
-        console.log("ACORN")
-        console.log(ingredients.includes((global.dataLoadedAll[dataSet][i]["Name"] ?? "").toLowerCase()))
-        console.log(ingredients.includes("acorn"))
       }
       if(global.dataLoadedAll[dataSet][i].hasOwnProperty("Internal ID") && ingredients.includes((global.dataLoadedAll[dataSet][i]["Name"] ?? "").toLowerCase())){
         outputIds.push(global.dataLoadedAll[dataSet][i]["Internal ID"]);
