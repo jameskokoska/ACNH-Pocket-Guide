@@ -495,6 +495,8 @@ export function RenderItemFlatList(props){
       image = <FastImage style={{width:65, height:65, resizeMode:'contain',}} source={{uri:allCollected[1]["Closet Image"]}} cacheKey={allCollected[1]["Closet Image"]}/>
     } else if(photoGot===false && item["Type"]?.toString().toLowerCase()==="nook shopping event" && allCollected[1]!==false && allCollected[1]!==undefined && allCollected[1]["Inventory Image"]!==undefined){
       image = <FastImage style={{width:65, height:65, resizeMode:'contain', margin:-7.5}} source={{uri:allCollected[1]["Inventory Image"]}} cacheKey={allCollected[1]["Inventory Image"]}/>
+    } else if(photoGot===false && item["Type"].toString().toLowerCase().includes("blooming season") && allCollected[1]!==false && allCollected[1]!==undefined && allCollected[1]["Inventory Image"]!==undefined){
+      image = <FastImage style={{width:65, height:65, resizeMode:'contain', margin:-7.5}} source={{uri:allCollected[1]["Inventory Image"]}} cacheKey={allCollected[1]["Inventory Image"]}/>
     } else {
       if(photoGot===false){
         photoGot = getPhoto(item["Name"].toString().toLowerCase(), item["Type"].toString().toLowerCase())

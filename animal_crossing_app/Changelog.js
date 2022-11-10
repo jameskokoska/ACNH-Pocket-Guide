@@ -7,6 +7,7 @@ export const changelog = `
 -Added new event icons
 -Fixed Shopping Events selection on events list
 -Added Blooming Seasons and Calendar Seasons to events list on home page
+-Blooming seasons show corresponding plant
 -Fixed UI layering
 -
 -Tap ingredients to view the ingredient items in a recipe popup

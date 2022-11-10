@@ -613,7 +613,11 @@ export function getPhoto(name, fallback="", returnFalse=false){
     return require("../assets/icons/dragon-boat.png")
   }
   if(fallback.includes("blooming season")){
-    return require("../assets/icons/flowerIcon.png");
+    if(returnFalse){
+      return false
+    } else {
+      return require("../assets/icons/flowerIcon.png");
+    }
   } else if(fallback.includes("season")){
     return require("../assets/icons/season.png");
   } else if(fallback.includes("shopping")){
