@@ -650,23 +650,23 @@
     ],
     "Main": [
         {
-            "English": "1257 items",
-            "English (Europe)": "1257 items",
-            "French": "1245 items (12 items missing)",
-            "French (US)": "1245 items (12 items missing)",
-            "German": "1257 items",
-            "Spanish": "1250 items (7 items missing)",
-            "Spanish (US)": "1222 items (35 items missing)",
-            "Russian": "1237 items (20 items missing)",
-            "Italian": "1236 items (21 items missing)",
-            "Dutch": "1211 items (46 items missing)",
-            "Chinese": "904 items (353 items missing)",
-            "Chinese (Traditional)": "9 items (1248 items missing)",
-            "Japanese": "9 items (1248 items missing)",
-            "Korean": "9 items (1248 items missing)",
-            "Portuguese": "1234 items (23 items missing)",
-            "Czech": "417 items (840 items missing)",
-            "Slovak": "387 items (870 items missing)"
+            "English": "1259 items",
+            "English (Europe)": "1259 items",
+            "French": "1247 items (12 items missing)",
+            "French (US)": "1247 items (12 items missing)",
+            "German": "1259 items",
+            "Spanish": "1252 items (7 items missing)",
+            "Spanish (US)": "1224 items (35 items missing)",
+            "Russian": "1239 items (20 items missing)",
+            "Italian": "1238 items (21 items missing)",
+            "Dutch": "1213 items (46 items missing)",
+            "Chinese": "904 items (355 items missing)",
+            "Chinese (Traditional)": "9 items (1250 items missing)",
+            "Japanese": "9 items (1250 items missing)",
+            "Korean": "9 items (1250 items missing)",
+            "Portuguese": "1236 items (23 items missing)",
+            "Czech": "417 items (842 items missing)",
+            "Slovak": "387 items (872 items missing)"
         },
         {
             "English": "Home",
@@ -18567,6 +18567,32 @@
             "Italian": "Alfabetico",
             "Dutch": "Alfabetisch",
             "Portuguese": "Alfabética"
+        },
+        {
+            "English": "Ingredients to craft this item",
+            "English (Europe)": "Ingredients to craft this item",
+            "French": "Ingrédients pour fabriquer cet objet",
+            "French (US)": "Ingrédients pour fabriquer cet objet",
+            "German": "Zutaten zur Herstellung dieses Gegenstands",
+            "Spanish": "Ingredientes para fabricar este artículo",
+            "Spanish (US)": "Ingredientes para fabricar este artículo",
+            "Russian": "Ингредиенты для изготовления этого предмета",
+            "Italian": "Ingredienti per creare questo oggetto",
+            "Dutch": "Ingrediënten om dit item te maken",
+            "Portuguese": "Ingredientes para criar este item"
+        },
+        {
+            "English": "View Ingredient Items",
+            "English (Europe)": "View Ingredient Items",
+            "French": "Afficher les ingrédients",
+            "French (US)": "Afficher les ingrédients",
+            "German": "Zutaten anzeigen",
+            "Spanish": "Ver artículos de ingredientes",
+            "Spanish (US)": "Ver artículos de ingredientes",
+            "Russian": "Посмотреть ингредиенты",
+            "Italian": "Visualizza elementi ingrediente",
+            "Dutch": "Ingrediënten bekijken",
+            "Portuguese": "Ver itens de ingredientes"
         }
     ],
     "Sources": [

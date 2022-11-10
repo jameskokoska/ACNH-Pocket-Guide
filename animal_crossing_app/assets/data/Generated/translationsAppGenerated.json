@@ -17455,6 +17455,32 @@
       "Italian": "Alfabetico",
       "Dutch": "Alfabetisch",
       "Portuguese": "Alfabética"
+    },
+    "ingredients to craft this item": {
+      "English": "Ingredients to craft this item",
+      "English (Europe)": "Ingredients to craft this item",
+      "French": "Ingrédients pour fabriquer cet objet",
+      "French (US)": "Ingrédients pour fabriquer cet objet",
+      "German": "Zutaten zur Herstellung dieses Gegenstands",
+      "Spanish": "Ingredientes para fabricar este artículo",
+      "Spanish (US)": "Ingredientes para fabricar este artículo",
+      "Russian": "Ингредиенты для изготовления этого предмета",
+      "Italian": "Ingredienti per creare questo oggetto",
+      "Dutch": "Ingrediënten om dit item te maken",
+      "Portuguese": "Ingredientes para criar este item"
+    },
+    "view ingredient items": {
+      "English": "View Ingredient Items",
+      "English (Europe)": "View Ingredient Items",
+      "French": "Afficher les ingrédients",
+      "French (US)": "Afficher les ingrédients",
+      "German": "Zutaten anzeigen",
+      "Spanish": "Ver artículos de ingredientes",
+      "Spanish (US)": "Ver artículos de ingredientes",
+      "Russian": "Посмотреть ингредиенты",
+      "Italian": "Visualizza elementi ingrediente",
+      "Dutch": "Ingrediënten bekijken",
+      "Portuguese": "Ver itens de ingredientes"
     }
   },
   "Sources": {

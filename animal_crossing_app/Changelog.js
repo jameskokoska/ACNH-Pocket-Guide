@@ -4,6 +4,7 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Tap ingredients to view the ingredient items in a recipe popup
 -Enable/Disable alphabetical filters (quickly disable alphabetical sorting on a per page basis)
 -Alphabetical sorting filters perform the opposite action to what is set in Settings
 -Tap profile indicator in sidebar navigates to profiles page

@@ -1805,10 +1805,62 @@ export function findPhotoAndPoster(villagerName){
       if(global.dataLoadedFurniture[dataSet][i]["Data Category"] !== "Photos" && global.dataLoadedFurniture[dataSet][i]["Data Category"] !== "Posters"){
         break
       }
-      if(global.dataLoadedFurniture[dataSet][i].hasOwnProperty("Internal ID") && global.dataLoadedAll[dataSet][i]["Name"]===photoName){
+      if(global.dataLoadedFurniture[dataSet][i].hasOwnProperty("Internal ID") && global.dataLoadedFurniture[dataSet][i]["Name"]===photoName){
         outputIds.push(global.dataLoadedFurniture[dataSet][i]["Internal ID"]);
-      } else if(global.dataLoadedFurniture[dataSet][i].hasOwnProperty("Internal ID") && global.dataLoadedAll[dataSet][i]["Name"]===posterName){
+      } else if(global.dataLoadedFurniture[dataSet][i].hasOwnProperty("Internal ID") && global.dataLoadedFurniture[dataSet][i]["Name"]===posterName){
         outputIds.push(global.dataLoadedFurniture[dataSet][i]["Internal ID"]);
+      }
+    }
+  }
+  return outputIds
+}
+
+export function findIngredients(baseItem){
+  let ingredients = [
+    (baseItem["Material 1"] ?? "").toLowerCase(),
+    (baseItem["Material 2"] ?? "").toLowerCase(),
+    (baseItem["Material 3"] ?? "").toLowerCase(),
+    (baseItem["Material 4"] ?? "").toLowerCase(),
+    (baseItem["Material 5"] ?? "").toLowerCase(),
+    (baseItem["Material 6"] ?? "").toLowerCase(),
+    (baseItem["Material 7"] ?? "").toLowerCase(),
+    (baseItem["Material 8"] ?? "").toLowerCase(),
+    (baseItem["Material 9"] ?? "").toLowerCase(),
+    (baseItem["Material 10"] ?? "").toLowerCase(),
+  ]
+  console.log(ingredients)
+  let outputIds = []
+  for(var dataSet = 0; dataSet < global.dataLoadedAll.length; dataSet++){
+    for(var i = 0; i < global.dataLoadedAll[dataSet].length; i++){
+      if(
+        global.dataLoadedAll[dataSet][i]["Data Category"] === "Photos" ||
+        global.dataLoadedAll[dataSet][i]["Data Category"] === "Posters" ||
+        global.dataLoadedAll[dataSet][i]["Data Category"] === "Villagers" ||
+        global.dataLoadedAll[dataSet][i]["Data Category"] === "Recipes" ||
+        global.dataLoadedAll[dataSet][i]["Data Category"] === "Music" ||
+        global.dataLoadedAll[dataSet][i]["Data Category"] === "Reactions" ||
+        global.dataLoadedAll[dataSet][i]["Data Category"] === "Construction" ||
+        global.dataLoadedAll[dataSet][i]["Data Category"] === "Fencing" ||
+        global.dataLoadedAll[dataSet][i]["Data Category"] === "Interior" ||
+        global.dataLoadedAll[dataSet][i]["Data Category"] === "Gyroids" ||
+        global.dataLoadedAll[dataSet][i]["Data Category"] === "Series 1" ||
+        global.dataLoadedAll[dataSet][i]["Data Category"] === "Series 2" ||
+        global.dataLoadedAll[dataSet][i]["Data Category"] === "Series 3" || 
+        global.dataLoadedAll[dataSet][i]["Data Category"] === "Series 4" ||
+        global.dataLoadedAll[dataSet][i]["Data Category"] === "Series 5" ||
+        global.dataLoadedAll[dataSet][i]["Data Category"] === "Promos" || 
+        global.dataLoadedAll[dataSet][i]["Data Category"] === "Welcome Amiibo Series" ||
+        global.dataLoadedAll[dataSet][i]["Data Category"] === "Sanrio Series"     
+      ){
+        break
+      }
+      if(global.dataLoadedAll[dataSet][i]["Name"]==="acorn"){
+        console.log("ACORN")
+        console.log(ingredients.includes((global.dataLoadedAll[dataSet][i]["Name"] ?? "").toLowerCase()))
+        console.log(ingredients.includes("acorn"))
+      }
+      if(global.dataLoadedAll[dataSet][i].hasOwnProperty("Internal ID") && ingredients.includes((global.dataLoadedAll[dataSet][i]["Name"] ?? "").toLowerCase())){
+        outputIds.push(global.dataLoadedAll[dataSet][i]["Internal ID"]);
       }
     }
   }

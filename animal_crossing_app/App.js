@@ -69,6 +69,7 @@ import DonatePage from './pages/DonatePage';
 import 'expo-dev-client';
 import * as InAppPurchases from 'expo-in-app-purchases';
 import Animated, { FadeIn } from "react-native-reanimated";
+import IngredientsPage from './pages/IngredientsPage';
 
 const backup = console.warn;
 
@@ -552,6 +553,8 @@ class App extends Component {
         currentPageView = <TodoReorderPage todos={this.state.propsPassed}/>
       } else if (this.state.currentPage===39){
         currentPageView = <DonatePage />
+      } else if (this.state.currentPage===40){
+        currentPageView = <IngredientsPage baseItem={this.state.propsPassed}/>
       } else {
         currentPageView = <Text>Default</Text>
       }
@@ -571,6 +574,7 @@ class App extends Component {
       const NavigatorBrowserPage = ({route, navigation})=>{return <BrowserPage page={route.params.propsPassed} languageMessage={"You can change the language at the bottom of the page, by tapping Language"} splashImage={require('./assets/icons/turnip.png')} splashText={"Turnip Prophet"} splashCredits={"By mikebryant"}/>}
       const NavigatorGlobalSearchPage = ({route, navigation})=>{return <GlobalSearchPage currentSearch={route.params.propsPassed} setPage={this.setPage}/>}
       const NavigatorTodoReorderPage = ({route, navigation})=>{return <TodoReorderPage todos={route.params.propsPassed}/>}
+      const NavigatorIngredientsPage = ({route, navigation})=>{return <IngredientsPage baseItem={route.params.propsPassed}/>}
 
       console.log("Current page: " + this.state.currentPage)
 
@@ -600,6 +604,7 @@ class App extends Component {
                   <Stack.Screen name="34" component={NavigatorCraftableItemsPage}/>
                   <Stack.Screen name="36" component={NavigatorVillagerFurnitureParadisePlanning}/>
                   <Stack.Screen name="38" component={NavigatorTodoReorderPage}/>
+                  <Stack.Screen name="40" component={NavigatorIngredientsPage}/>
                   <Stack.Screen name="BrowserPage" component={NavigatorBrowserPage}/>
                   <Stack.Screen name="GlobalSearchPage" component={NavigatorGlobalSearchPage}/>
                 </Stack.Navigator>
