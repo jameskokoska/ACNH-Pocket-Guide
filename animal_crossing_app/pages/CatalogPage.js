@@ -201,7 +201,7 @@ class CatalogPage extends Component {
             style={{borderRadius: 10, paddingVertical: 10, paddingHorizontal: 20, marginHorizontal: 20, fontSize: 18, backgroundColor:colors.white[global.darkMode], color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
             onChangeText={(text) => {
               this.linkInput = text.replace("https://","")
-              this.linkInput = "https://" + this.linkInput
+              this.linkInput = "https://" + this.linkInput.replace(/ /g,'')
               if(text===""){
                 this.linkInput = ""
               }
