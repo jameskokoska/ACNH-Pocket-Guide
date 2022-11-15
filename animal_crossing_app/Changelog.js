@@ -4,7 +4,9 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
--Reoved white space in catalog scanner links
+-New Monthly Diamond Supporter: Nym! Thank you!
+-
+-Removed white space in catalog scanner links
 -Added new event icons
 -Fixed Shopping Events selection on events list
 -Added Blooming Seasons and Calendar Seasons to events list on home page
