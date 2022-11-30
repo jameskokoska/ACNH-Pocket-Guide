@@ -68,7 +68,7 @@ First, create a development build of the application. More information can be fo
 
 Second, install the development build on your device.
 
-Third, Run `expo start --dev-client` within the `animal_crossing_app` folder (using `cd .\animal_crossing_app\` in the repositories root location).
+Third, navigate into the `animal_crossing_app` folder (using `cd .\animal_crossing_app\` in the repositories root location). Then install dependencies using `npm install`. Run `expo start --dev-client` within the `animal_crossing_app` folder.
 
 Fourth, type the IP address into the development build running on your device.
 
