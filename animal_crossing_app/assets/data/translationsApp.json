@@ -665,8 +665,8 @@
             "Japanese": "9 items (1252 items missing)",
             "Korean": "9 items (1252 items missing)",
             "Portuguese": "1238 items (23 items missing)",
-            "Czech": "417 items (844 items missing)",
-            "Slovak": "387 items (874 items missing)"
+            "Czech": "489 items (772 items missing)",
+            "Slovak": "489 items (772 items missing)"
         },
         {
             "English": "Home",
@@ -4984,7 +4984,8 @@
             "Dutch": "Annuleren",
             "Chinese": "取消",
             "Portuguese": "Cancelar",
-            "Czech": "Zrušit"
+            "Czech": "Zrušit",
+            "Slovak": "Zrušiť"
         },
         {
             "English": "Done",
@@ -4999,7 +5000,8 @@
             "Dutch": "Klaar",
             "Chinese": "完成",
             "Portuguese": "Feito",
-            "Czech": "Hotovo"
+            "Czech": "Hotovo",
+            "Slovak": "Hotovo"
         },
         {
             "English": "OK",
@@ -5014,7 +5016,8 @@
             "Dutch": "OK",
             "Chinese": "好的",
             "Portuguese": "OK",
-            "Czech": "OK"
+            "Czech": "OK",
+            "Slovak": "OK"
         },
         {
             "English": "Flying Near Flowers",
@@ -5029,7 +5032,8 @@
             "Dutch": "Vliegend in de buurt van bloemen",
             "Chinese": "在花丛中飞舞",
             "Portuguese": "Voando perto de flores",
-            "Czech": "Létající v Blízkosti Květin"
+            "Czech": "Létající v Blízkosti Květin",
+            "Slovak": "Lietajúce v Blízkosti Kvetov"
         },
         {
             "English": "On Rotten Turnips Or Candy",
@@ -5044,7 +5048,8 @@
             "Dutch": "Bij rottende knollen of snoep",
             "Chinese": "在腐烂的大头菜或糖果上",
             "Portuguese": "Em Turnips Podres Ou Doces",
-            "Czech": "Na Shnilé Řepě nebo Cukroví"
+            "Czech": "Na Shnilé Řepě nebo Cukroví",
+            "Slovak": "Na Zhnitej Repe alebo Cukríkoch"
         },
         {
             "English": "On Trees",
@@ -5059,7 +5064,8 @@
             "Dutch": "Op bomen",
             "Chinese": "在树上",
             "Portuguese": "Em Árvores ",
-            "Czech": "Na Stromech"
+            "Czech": "Na Stromech",
+            "Slovak": "Na Stromoch"
         },
         {
             "English": "Shaking Trees",
@@ -5074,7 +5080,8 @@
             "Dutch": "Schudden van bomen",
             "Chinese": "摇晃树木",
             "Portuguese": "Sacudindo Árvores",
-            "Czech": "Třesení Stromů"
+            "Czech": "Třesení Stromů",
+            "Slovak": "Otriasanie Stromov"
         },
         {
             "English": "Flying Near Water",
@@ -5089,7 +5096,8 @@
             "Dutch": "Vliegend in de buurt van water",
             "Chinese": "在水边飞行",
             "Portuguese": "Voando Perto da Água ",
-            "Czech": "Poletující v Blízkosti Vody"
+            "Czech": "Poletující v Blízkosti Vody",
+            "Slovak": "Lietajúce v Blízkosti Vody"
         },
         {
             "English": "On The Ground",
@@ -5104,7 +5112,8 @@
             "Dutch": "Op de grond",
             "Chinese": "在地面上",
             "Portuguese": "No chão",
-            "Czech": "Na Zemi"
+            "Czech": "Na Zemi",
+            "Slovak": "Na Zemi"
         },
         {
             "English": "On Palm Trees",
@@ -5119,7 +5128,8 @@
             "Dutch": "Op palmbomen",
             "Chinese": "在棕榈树上",
             "Portuguese": "Em palmeiras",
-            "Czech": "Na Palmách"
+            "Czech": "Na Palmách",
+            "Slovak": "Na Palmách"
         },
         {
             "English": "On Hardwood/cedar Trees",
@@ -5134,7 +5144,8 @@
             "Dutch": "Op Hardwood/Cedar-bomen",
             "Chinese": "在硬木/雪松树上",
             "Portuguese": "Em Árvores de Hardwood/Cedar",
-            "Czech": "Na Tvrdém Dřevě/Cedru"
+            "Czech": "Na Tvrdém Dřevě/Cedru",
+            "Slovak": "Na Stromoch z Tvrdého Dreva/Cédra"
         },
         {
             "English": "On Tree Stumps",
@@ -5149,7 +5160,8 @@
             "Dutch": "Op boomstronken",
             "Chinese": "在树桩上",
             "Portuguese": "Em Tocos de Árvores",
-            "Czech": "Na Pařezech"
+            "Czech": "Na Pařezech",
+            "Slovak": "Na Pňoch Stromov"
         },
         {
             "English": "Flying",
@@ -5164,7 +5176,8 @@
             "Dutch": "Vliegend",
             "Chinese": "飞舞",
             "Portuguese": "Voando",
-            "Czech": "Létající"
+            "Czech": "Létající",
+            "Slovak": "Lietajúce"
         },
         {
             "English": "On Rivers/ponds",
@@ -5179,7 +5192,8 @@
             "Dutch": "In rivieren/vijvers",
             "Chinese": "在河流/池塘上",
             "Portuguese": "Em Rios/Lagoas",
-            "Czech": "Na Řekách/Rybnících"
+            "Czech": "Na Řekách/Rybnících",
+            "Slovak": "Na Riekach/Rybníkoch"
         },
         {
             "English": "On Villagers",
@@ -5194,7 +5208,8 @@
             "Dutch": "Op dorpelingen",
             "Chinese": "在岛民身上",
             "Portuguese": "Em Moradores",
-            "Czech": "Na Vesničanech"
+            "Czech": "Na Vesničanech",
+            "Slovak": "Na Dedinčanoch"
         },
         {
             "English": "Flying Near Trash or Rotten Turnips",
@@ -5209,7 +5224,8 @@
             "Dutch": "Vliegend in de buurt van afval of rottende knollen",
             "Chinese": "在垃圾或腐烂的大头菜附近飞行",
             "Portuguese": "Voando Perto do Lixo ou Turnips Podres",
-            "Czech": "Létající v Blízkosti Odpadků nebo Shnilé Řepy"
+            "Czech": "Létající v Blízkosti Odpadků nebo Shnilé Řepy",
+            "Slovak": "Lietajúce v Blízkosti Odpadkov alebo Zhnitej Repy"
         },
         {
             "English": "Disguised On Shoreline",
@@ -5224,7 +5240,8 @@
             "Dutch": "Vermomd bij de kustlijn",
             "Chinese": "伪装在海岸线上",
             "Portuguese": "Disfarçado na linha costeira",
-            "Czech": "Maskované na Břehu"
+            "Czech": "Maskované na Břehu",
+            "Slovak": "Skryté na Pobreží"
         },
         {
             "English": "On Flowers",
@@ -5239,7 +5256,8 @@
             "Dutch": "Op bloemen",
             "Chinese": "在花上",
             "Portuguese": "Em Flores",
-            "Czech": "Na Květinách"
+            "Czech": "Na Květinách",
+            "Slovak": "Na Kvetoch"
         },
         {
             "English": "Underground",
@@ -5254,7 +5272,8 @@
             "Dutch": "Ondergronds",
             "Chinese": "在地下",
             "Portuguese": "Debaixo da Terra",
-            "Czech": "Pod Zemí"
+            "Czech": "Pod Zemí",
+            "Slovak": "Pod Zemou"
         },
         {
             "English": "Flying Near Light Sources",
@@ -5269,7 +5288,8 @@
             "Dutch": "Vliegend in de buurt van lichtbronnen",
             "Chinese": "在光源附近飞行",
             "Portuguese": "Voando Perto de Luzes",
-            "Czech": "Létající v Blízkosti Zdrojů Světla"
+            "Czech": "Létající v Blízkosti Zdrojů Světla",
+            "Slovak": "Lietajúce v Blízkosti Zdrojov Svetla"
         },
         {
             "English": "On White Flowers",
@@ -5284,7 +5304,8 @@
             "Dutch": "Op witte bloemen",
             "Chinese": "在白色的花上",
             "Portuguese": "Em Flores Brancas",
-            "Czech": "Na Bílých Květinách"
+            "Czech": "Na Bílých Květinách",
+            "Slovak": "Na Bielych Kvetoch"
         },
         {
             "English": "Flying Near Blue/purple/black Flowers",
@@ -5299,7 +5320,8 @@
             "Dutch": "Vliegend in de buurt van blauwe/paarse/zwarte bloemen",
             "Chinese": "在蓝色/紫色/黑色花朵附近飞行",
             "Portuguese": "Voando Perto de Flores Azuis/Roxas/Pretas",
-            "Czech": "Létající v Blízkosti Modrých/Fialových/Černých květů"
+            "Czech": "Létající v Blízkosti Modrých/Fialových/Černých květů",
+            "Slovak": "Lietajúce v Blízkosti Modrých/Fialových/Čiernych Kvetov"
         },
         {
             "English": "From Hitting Rocks",
@@ -5314,7 +5336,8 @@
             "Dutch": "Door het raken van stenen",
             "Chinese": "敲击岩石后",
             "Portuguese": "De Bater nas Pedras",
-            "Czech": "Ze Zásahu Kamene"
+            "Czech": "Ze Zásahu Kamene",
+            "Slovak": "Zo Zásahu do Kameňov"
         },
         {
             "English": "On Rocks/bushes",
@@ -5329,7 +5352,8 @@
             "Dutch": "Op stenen/bosjes",
             "Chinese": "岩石/灌木上",
             "Portuguese": "Em Pedras/Arbustos",
-            "Czech": "Na Kamenech/Keřích"
+            "Czech": "Na Kamenech/Keřích",
+            "Slovak": "Na Skalách/Kríkoch"
         },
         {
             "English": "Disguised Under Trees",
@@ -5344,7 +5368,8 @@
             "Dutch": "Vermomd onder bomen",
             "Chinese": "伪装在树下",
             "Portuguese": "Disfarçado Sob as Árvores ",
-            "Czech": "Maskovaný pod Stromy"
+            "Czech": "Maskovaný pod Stromy",
+            "Slovak": "Skryté pod Stromami"
         },
         {
             "English": "On Beach Rocks",
@@ -5359,7 +5384,8 @@
             "Dutch": "Op stenen op het strand",
             "Chinese": "在海滩岩石上",
             "Portuguese": "Em Pedras da Praia",
-            "Czech": "Na Plážových Skalách"
+            "Czech": "Na Plážových Skalách",
+            "Slovak": "Na Plážových Kameňoch"
         },
         {
             "English": "Sea",
@@ -5374,7 +5400,8 @@
             "Dutch": "Zee",
             "Chinese": "海洋",
             "Portuguese": "Mar",
-            "Czech": "Moře"
+            "Czech": "Moře",
+            "Slovak": "More"
         },
         {
             "English": "River",
@@ -5389,7 +5416,8 @@
             "Dutch": "Rivier",
             "Chinese": "河流",
             "Portuguese": "Rio",
-            "Czech": "Řeka"
+            "Czech": "Řeka",
+            "Slovak": "Rieka"
         },
         {
             "English": "Pier",
@@ -5404,7 +5432,8 @@
             "Dutch": "Steiger",
             "Chinese": "码头",
             "Portuguese": "Pier",
-            "Czech": "Molo"
+            "Czech": "Molo",
+            "Slovak": "Mólo"
         },
         {
             "English": "Pond",
@@ -5419,7 +5448,8 @@
             "Dutch": "Vijver",
             "Chinese": "池塘",
             "Portuguese": "Lago",
-            "Czech": "Rybník"
+            "Czech": "Rybník",
+            "Slovak": "Rybník"
         },
         {
             "English": "Selected language not supported",
@@ -5765,7 +5795,9 @@
             "Russian": "Любая кроме дождя",
             "Italian": "Tutti eccetto la pioggia",
             "Chinese": "除下雨外的任何情况",
-            "Portuguese": "Sempre exceto na chuva"
+            "Portuguese": "Sempre exceto na chuva",
+            "Czech": "Všechny kromě Deště",
+            "Slovak": "Všetky okrem Dažďa"
         },
         {
             "English": "Seasonal decor",
@@ -5778,7 +5810,9 @@
             "Russian": "Сезонное украшение",
             "Italian": "Decoro stagionale",
             "Chinese": "季节性装饰",
-            "Portuguese": "Decoração sazonal"
+            "Portuguese": "Decoração sazonal",
+            "Czech": "Sezónní Výzdoba",
+            "Slovak": "Sezónny Dizajn"
         },
         {
             "English": "Wishlist",
@@ -5792,7 +5826,9 @@
             "Italian": "Lista dei desideri",
             "Dutch": "Verlanglijstje",
             "Chinese": "愿望清单",
-            "Portuguese": "Lista de Desejos"
+            "Portuguese": "Lista de Desejos",
+            "Czech": "Seznam Přání",
+            "Slovak": "Zoznam Želaní"
         },
         {
             "English": "Long press items to add/remove from your wishlist",
@@ -5805,7 +5841,9 @@
             "Russian": "Долгое нажатие на предмет добавит или исключит его из списка желаемого",
             "Italian": "Premi a lungo per aggiungere/rimuovere oggetti dalla lista dei desideri",
             "Chinese": "长按以添加/删除您的愿望清单中的项目",
-            "Portuguese": "Pressione longamente os itens para adicionar / remover da sua lista de desejos"
+            "Portuguese": "Pressione longamente os itens para adicionar / remover da sua lista de desejos",
+            "Czech": "Dlouhým stisknutím položky přidáte/odstraníte ze seznamu přání",
+            "Slovak": "Dlhým stlačením položky pridáte/odstránite zo zoznamu želaní"
         },
         {
             "English": "You have no wishlist items.",
@@ -5818,7 +5856,9 @@
             "Russian": "У вас нет желаемых предметов",
             "Italian": "Non hai oggetti nella lista desideri.",
             "Chinese": "你没有愿望清单上的物品。",
-            "Portuguese": "Você não tem itens da lista de desejos."
+            "Portuguese": "Você não tem itens da lista de desejos.",
+            "Czech": "Nemáte žádné položky na seznamu přání.",
+            "Slovak": "Nemáte žiadne položky na zozname želaní."
         },
         {
             "English": "Long press items to add them to your wishlist.",
@@ -5831,7 +5871,9 @@
             "Russian": "Долгое нажатие на предмет добавит его в список желаемого",
             "Italian": "Premi a lungo per aggiungerli nella tua lista desideri.",
             "Chinese": "长按物品可将其添加到您的愿望清单中。",
-            "Portuguese": "Pressione os itens por alguns segundos para adicioná-los à sua lista de desejos."
+            "Portuguese": "Pressione os itens por alguns segundos para adicioná-los à sua lista de desejos.",
+            "Czech": "Dlouhým stisknutím položky přidáte do seznamu přání.",
+            "Slovak": "Dlhým stlačením položky pridáte do zoznamu želaní."
         },
         {
             "English": "Items that have been added from the most recent update",
@@ -5844,7 +5886,9 @@
             "Russian": "Предметы, которые были добавлены из самого последнего обновления",
             "Italian": "Gli oggetti sono stati aggiunti nell'aggiornamento più recente.",
             "Chinese": "在最近的更新中添加的物品",
-            "Portuguese": "Itens que foram adicionados a partir da atualização mais recente"
+            "Portuguese": "Itens que foram adicionados a partir da atualização mais recente",
+            "Czech": "Položky, které byly přidány z poslední aktualizace",
+            "Slovak": "Položky, ktoré boli pridané z poslednej aktualizácie"
         },
         {
             "English": "All Year",
@@ -5858,7 +5902,9 @@
             "Italian": "Tutto l'anno",
             "Dutch": "Het hele jaar",
             "Chinese": "所有年份",
-            "Portuguese": "Todo o Ano"
+            "Portuguese": "Todo o Ano",
+            "Czech": "Celý Rok",
+            "Slovak": "Celý Rok"
         },
         {
             "English": "Additional Information",
@@ -5872,7 +5918,9 @@
             "Italian": "Informazioni aggiuntive",
             "Dutch": "Extra informatie",
             "Chinese": "其他信息",
-            "Portuguese": "Informações adicionais"
+            "Portuguese": "Informações adicionais",
+            "Czech": "Další Informace",
+            "Slovak": "Ďalšie Informácie"
         },
         {
             "English": "This application was created using React Native, with the original App programmed in Flutter. This application and contents are NOT affiliated with Nintendo. All local artwork recreated/licensed. This application is not made for commercial use, and is provided at a price of 0$ (free) on the Google Play Store with no advertisements. All application source code is of property to respective owners/contributors listed on the Credits page and/or licenses associated within specific packages/libraries within this application.",
@@ -5965,7 +6013,9 @@
             "Italian": "Scoiattolo",
             "Dutch": "Eekhoorn",
             "Chinese": "松鼠",
-            "Portuguese": "Esquilo"
+            "Portuguese": "Esquilo",
+            "Czech": "Veverka",
+            "Slovak": "Veverička"
         },
         {
             "English": "Pig",
@@ -5979,7 +6029,9 @@
             "Italian": "Maiale",
             "Dutch": "Varken",
             "Chinese": "猪",
-            "Portuguese": "Porco"
+            "Portuguese": "Porco",
+            "Czech": "Prase",
+            "Slovak": "Prasa"
         },
         {
             "English": "Gorilla",
@@ -5993,7 +6045,9 @@
             "Italian": "Gorilla",
             "Dutch": "Gorilla",
             "Chinese": "大猩猩",
-            "Portuguese": "Gorila"
+            "Portuguese": "Gorila",
+            "Czech": "Gorila",
+            "Slovak": "Gorila"
         },
         {
             "English": "Alligator",
@@ -6007,7 +6061,9 @@
             "Italian": "Alligatore",
             "Dutch": "Alligator",
             "Chinese": "鳄鱼",
-            "Portuguese": "Jacaré "
+            "Portuguese": "Jacaré ",
+            "Czech": "Aligátor",
+            "Slovak": "Aligátor"
         },
         {
             "English": "Eagle",
@@ -6021,7 +6077,9 @@
             "Italian": "Aquila",
             "Dutch": "Adelaar",
             "Chinese": "鹰",
-            "Portuguese": "Águia"
+            "Portuguese": "Águia",
+            "Czech": "Orel",
+            "Slovak": "Orol"
         },
         {
             "English": "Anteater",
@@ -6035,7 +6093,9 @@
             "Italian": "Formichiere",
             "Dutch": "Miereneter",
             "Chinese": "食蚁兽",
-            "Portuguese": "Tamanduá"
+            "Portuguese": "Tamanduá",
+            "Czech": "Mravenečník",
+            "Slovak": "Mravenečník"
         },
         {
             "English": "Bull",
@@ -6049,7 +6109,9 @@
             "Italian": "Toro",
             "Dutch": "Stier",
             "Chinese": "牛",
-            "Portuguese": "Touro"
+            "Portuguese": "Touro",
+            "Czech": "Býk",
+            "Slovak": "Býk"
         },
         {
             "English": "Mouse",
@@ -6063,7 +6125,9 @@
             "Italian": "Topo",
             "Dutch": "Muis",
             "Chinese": "老鼠",
-            "Portuguese": "Rato"
+            "Portuguese": "Rato",
+            "Czech": "Myš",
+            "Slovak": "Myš"
         },
         {
             "English": "Horse",
@@ -6077,7 +6141,9 @@
             "Italian": "Cavallo",
             "Dutch": "Paard",
             "Chinese": "马",
-            "Portuguese": "Cavalo"
+            "Portuguese": "Cavalo",
+            "Czech": "Kůň",
+            "Slovak": "Kôň"
         },
         {
             "English": "Cub",
@@ -6091,7 +6157,9 @@
             "Italian": "Cucciolo",
             "Dutch": "Welp",
             "Chinese": "幼兽",
-            "Portuguese": "Filhote"
+            "Portuguese": "Filhote",
+            "Czech": "Mládě",
+            "Slovak": "Mláďa"
         },
         {
             "English": "Deer",
@@ -6105,7 +6173,9 @@
             "Italian": "Cervo",
             "Dutch": "Hert",
             "Chinese": "鹿",
-            "Portuguese": "Veado"
+            "Portuguese": "Veado",
+            "Czech": "Jelen",
+            "Slovak": "Jeleň"
         },
         {
             "English": "Rabbit",
@@ -6119,7 +6189,9 @@
             "Italian": "Coniglio",
             "Dutch": "Konijn",
             "Chinese": "兔子",
-            "Portuguese": "Coelho"
+            "Portuguese": "Coelho",
+            "Czech": "Králík",
+            "Slovak": "Králik"
         },
         {
             "English": "Kangaroo",
@@ -6133,7 +6205,9 @@
             "Italian": "Canguro",
             "Dutch": "Kangoeroe",
             "Chinese": "袋鼠",
-            "Portuguese": "Canguru"
+            "Portuguese": "Canguru",
+            "Czech": "Klokan",
+            "Slovak": "Klokan"
         },
         {
             "English": "Wolf",
@@ -6147,7 +6221,9 @@
             "Italian": "Lupo",
             "Dutch": "Wolf",
             "Chinese": "狼",
-            "Portuguese": "Lobo"
+            "Portuguese": "Lobo",
+            "Czech": "Vlk",
+            "Slovak": "Vlk"
         },
         {
             "English": "Penguin",
@@ -6161,7 +6237,9 @@
             "Italian": "Pinguino",
             "Dutch": "Pinguïn",
             "Chinese": "企鹅",
-            "Portuguese": "Pinguim"
+            "Portuguese": "Pinguim",
+            "Czech": "Tučňák",
+            "Slovak": "Tučniak"
         },
         {
             "English": "Chicken",
@@ -6175,7 +6253,9 @@
             "Italian": "Pollo",
             "Dutch": "Kip",
             "Chinese": "鸡",
-            "Portuguese": "Galinha"
+            "Portuguese": "Galinha",
+            "Czech": "Slepice",
+            "Slovak": "Sliepka"
         },
         {
             "English": "Elephant",
@@ -6189,7 +6269,9 @@
             "Italian": "Elefante",
             "Dutch": "Olifant",
             "Chinese": "大象",
-            "Portuguese": "Elefante"
+            "Portuguese": "Elefante",
+            "Czech": "Slon",
+            "Slovak": "Slon"
         },
         {
             "English": "Dog",
@@ -6203,7 +6285,9 @@
             "Italian": "Cane",
             "Dutch": "Hond",
             "Chinese": "狗",
-            "Portuguese": "Cachorro"
+            "Portuguese": "Cachorro",
+            "Czech": "Pes",
+            "Slovak": "Pes"
         },
         {
             "English": "Bear",
@@ -6217,7 +6301,9 @@
             "Italian": "Orso",
             "Dutch": "Beer",
             "Chinese": "熊",
-            "Portuguese": "Urso"
+            "Portuguese": "Urso",
+            "Czech": "Medvěd",
+            "Slovak": "Medveď"
         },
         {
             "English": "Hippo",
@@ -6231,7 +6317,9 @@
             "Italian": "Ippopotamo",
             "Dutch": "Nijlpaard",
             "Chinese": "河马",
-            "Portuguese": "Hipopótamo"
+            "Portuguese": "Hipopótamo",
+            "Czech": "Hroch",
+            "Slovak": "Hroch"
         },
         {
             "English": "Duck",
@@ -6245,7 +6333,9 @@
             "Italian": "Papera",
             "Dutch": "Eend",
             "Chinese": "鸭子",
-            "Portuguese": "Pato"
+            "Portuguese": "Pato",
+            "Czech": "Kachna",
+            "Slovak": "Kačka"
         },
         {
             "English": "Goat",
@@ -6259,7 +6349,9 @@
             "Italian": "Capra",
             "Dutch": "Geit",
             "Chinese": "山羊",
-            "Portuguese": "Bode"
+            "Portuguese": "Bode",
+            "Czech": "Koza",
+            "Slovak": "Koza"
         },
         {
             "English": "Ostrich",
@@ -6273,7 +6365,9 @@
             "Italian": "Struzzo",
             "Dutch": "Struisvogel",
             "Chinese": "鸵鸟",
-            "Portuguese": "Avestruz"
+            "Portuguese": "Avestruz",
+            "Czech": "Pštros",
+            "Slovak": "Pštros"
         },
         {
             "English": "Sheep",
@@ -6287,7 +6381,9 @@
             "Italian": "Pecora",
             "Dutch": "Schaap",
             "Chinese": "绵羊",
-            "Portuguese": "Ovelha"
+            "Portuguese": "Ovelha",
+            "Czech": "Ovce",
+            "Slovak": "Ovca"
         },
         {
             "English": "Monkey",
@@ -6301,7 +6397,9 @@
             "Italian": "Scimmia",
             "Dutch": "Aap",
             "Chinese": "猴子",
-            "Portuguese": "Macaco"
+            "Portuguese": "Macaco",
+            "Czech": "Opice",
+            "Slovak": "Opica"
         },
         {
             "English": "Rhino",
@@ -6315,7 +6413,9 @@
             "Italian": "Rinoceronte",
             "Dutch": "Neushoorn",
             "Chinese": "犀牛",
-            "Portuguese": "Rinoceronte"
+            "Portuguese": "Rinoceronte",
+            "Czech": "Nosorožec",
+            "Slovak": "Nosorožec"
         },
         {
             "English": "Cow",
@@ -6329,7 +6429,9 @@
             "Italian": "Mucca",
             "Dutch": "Koe",
             "Chinese": "牛",
-            "Portuguese": "Vaca"
+            "Portuguese": "Vaca",
+            "Czech": "Kráva",
+            "Slovak": "Krava"
         },
         {
             "English": "Bird",
@@ -6343,7 +6445,9 @@
             "Italian": "Uccello",
             "Dutch": "Vogel",
             "Chinese": "鸟类",
-            "Portuguese": "Passarinho"
+            "Portuguese": "Passarinho",
+            "Czech": "Pták",
+            "Slovak": "Vták"
         },
         {
             "English": "Koala",
@@ -6357,7 +6461,9 @@
             "Italian": "Koala",
             "Dutch": "Koala",
             "Chinese": "考拉",
-            "Portuguese": "Coala"
+            "Portuguese": "Coala",
+            "Czech": "Koala",
+            "Slovak": "Koala"
         },
         {
             "English": "Cat",
@@ -6371,7 +6477,9 @@
             "Italian": "Gatto",
             "Dutch": "Kat",
             "Chinese": "猫",
-            "Portuguese": "Gato"
+            "Portuguese": "Gato",
+            "Czech": "Kočka",
+            "Slovak": "Mačka"
         },
         {
             "English": "Lion",
@@ -6385,7 +6493,9 @@
             "Italian": "Leone",
             "Dutch": "Leeuw",
             "Chinese": "狮子",
-            "Portuguese": "Leão "
+            "Portuguese": "Leão ",
+            "Czech": "Lev",
+            "Slovak": "Lev"
         },
         {
             "English": "Frog",
@@ -6399,7 +6509,9 @@
             "Italian": "Rana",
             "Dutch": "Kikker",
             "Chinese": "青蛙",
-            "Portuguese": "Sapo"
+            "Portuguese": "Sapo",
+            "Czech": "Žába",
+            "Slovak": "Žaba"
         },
         {
             "English": "Arch",
@@ -6413,7 +6525,9 @@
             "Italian": "Arco",
             "Dutch": "Boog",
             "Chinese": "拱门",
-            "Portuguese": "Arco"
+            "Portuguese": "Arco",
+            "Czech": "Oblouk",
+            "Slovak": "Oblúk"
         },
         {
             "English": "Musical Instrument",
@@ -6427,7 +6541,9 @@
             "Italian": "Strumento Musicale",
             "Dutch": "Muziekinstrument",
             "Chinese": "乐器",
-            "Portuguese": "Instrumento Musical"
+            "Portuguese": "Instrumento Musical",
+            "Czech": "Hudební Nástroj",
+            "Slovak": "Hudobný Nástroj"
         },
         {
             "English": "Fan",
@@ -6441,7 +6557,9 @@
             "Italian": "Ventilatore",
             "Dutch": "ventilator",
             "Chinese": "扇子",
-            "Portuguese": "Ventilador"
+            "Portuguese": "Ventilador",
+            "Czech": "Vějíř",
+            "Slovak": "Ventilátor"
         },
         {
             "English": "Hospital",
@@ -6455,7 +6573,9 @@
             "Italian": "Ospedale",
             "Dutch": "Ziekenhuis",
             "Chinese": "医院",
-            "Portuguese": "Hospital"
+            "Portuguese": "Hospital",
+            "Czech": "Nemocnice",
+            "Slovak": "Nemocnica"
         },
         {
             "English": "Seaside",
@@ -6469,7 +6589,9 @@
             "Italian": "Mare",
             "Dutch": "Strand",
             "Chinese": "海滨",
-            "Portuguese": "Beira-mar"
+            "Portuguese": "Beira-mar",
+            "Czech": "Pobřeží Moře",
+            "Slovak": "Pobrežie"
         },
         {
             "English": "Vehicle",
@@ -6483,7 +6605,9 @@
             "Italian": "Veicolo",
             "Dutch": "Voertuig",
             "Chinese": "汽车",
-            "Portuguese": "Veículo"
+            "Portuguese": "Veículo",
+            "Czech": "Vozidlo",
+            "Slovak": "Vozidlo"
         },
         {
             "English": "Bed",
@@ -6497,7 +6621,9 @@
             "Italian": "Letto",
             "Dutch": "Bed",
             "Chinese": "床",
-            "Portuguese": "Cama"
+            "Portuguese": "Cama",
+            "Czech": "Postel",
+            "Slovak": "Posteľ"
         },
         {
             "English": "Desk",
@@ -6511,7 +6637,9 @@
             "Italian": "Scrivania",
             "Dutch": "Bureau",
             "Chinese": "桌子",
-            "Portuguese": "Escrivaninha"
+            "Portuguese": "Escrivaninha",
+            "Czech": "Psací Stůl",
+            "Slovak": "Pracovný Stôl"
         },
         {
             "English": "Chair",
@@ -6525,7 +6653,9 @@
             "Italian": "Sedia",
             "Dutch": "Stoel",
             "Chinese": "椅子",
-            "Portuguese": "Cadeira"
+            "Portuguese": "Cadeira",
+            "Czech": "Židle",
+            "Slovak": "Stolička"
         },
         {
             "English": "Clock",
@@ -6539,7 +6669,9 @@
             "Italian": "Orologio",
             "Dutch": "Klok",
             "Chinese": "钟表",
-            "Portuguese": "Relógio "
+            "Portuguese": "Relógio ",
+            "Czech": "Hodiny",
+            "Slovak": "Hodiny"
         },
         {
             "English": "Table",
@@ -6553,7 +6685,9 @@
             "Italian": "Tavolo",
             "Dutch": "Tafel",
             "Chinese": "桌子",
-            "Portuguese": "Mesa"
+            "Portuguese": "Mesa",
+            "Czech": "Stůl",
+            "Slovak": "Stôl"
         },
         {
             "English": "Dresser",
@@ -6567,7 +6701,9 @@
             "Italian": "Armadio",
             "Dutch": "Dressoir",
             "Chinese": "梳妆台",
-            "Portuguese": "Cômoda"
+            "Portuguese": "Cômoda",
+            "Czech": "Prádelník",
+            "Slovak": "Skrinka"
         },
         {
             "English": "Chest",
@@ -6581,7 +6717,9 @@
             "Italian": "Cesta",
             "Dutch": "Borst",
             "Chinese": "柜子",
-            "Portuguese": "Baú "
+            "Portuguese": "Baú ",
+            "Czech": "Komoda",
+            "Slovak": "Komoda"
         },
         {
             "English": "Bathroom Things",
@@ -6595,7 +6733,9 @@
             "Italian": "Cose da bagno",
             "Dutch": "Badkamer Dingen",
             "Chinese": "浴室用品",
-            "Portuguese": "Banheiro"
+            "Portuguese": "Banheiro",
+            "Czech": "Věci do Koupelny",
+            "Slovak": "Veci do Kúpeľne"
         },
         {
             "English": "Toy",
@@ -6609,7 +6749,9 @@
             "Italian": "Giocattolo",
             "Dutch": "Speelgoed",
             "Chinese": "玩具",
-            "Portuguese": "Brinquedo"
+            "Portuguese": "Brinquedo",
+            "Czech": "Hračky",
+            "Slovak": "Hračky"
         },
         {
             "English": "Ranch",
@@ -6623,7 +6765,9 @@
             "Italian": "Ranch",
             "Dutch": "Boerderij",
             "Chinese": "牧场",
-            "Portuguese": "Rancho"
+            "Portuguese": "Rancho",
+            "Czech": "Ranč",
+            "Slovak": "Ranč"
         },
         {
             "English": "Home Appliances",
@@ -6637,7 +6781,9 @@
             "Italian": "Elettrodomestici",
             "Dutch": "Huishoudelijke apparaten",
             "Chinese": "家用电器",
-            "Portuguese": "Eletrodomésticos"
+            "Portuguese": "Eletrodomésticos",
+            "Czech": "Domácí Spotřebiče",
+            "Slovak": "Domáce Spotrebiče"
         },
         {
             "English": "Japanese Style",
@@ -6651,7 +6797,9 @@
             "Italian": "Stile giapponese",
             "Dutch": "Japanse stijl",
             "Chinese": "日式风格",
-            "Portuguese": "Estilo japonês"
+            "Portuguese": "Estilo japonês",
+            "Czech": "Japonský Styl",
+            "Slovak": "Japonský Štýl"
         },
         {
             "English": "Sofa",
@@ -6665,7 +6813,9 @@
             "Italian": "Divano",
             "Dutch": "Bank",
             "Chinese": "沙发",
-            "Portuguese": "Sofá"
+            "Portuguese": "Sofá",
+            "Czech": "Pohovka",
+            "Slovak": "Pohovka"
         },
         {
             "English": "Lamp",
@@ -6679,7 +6829,9 @@
             "Italian": "Lampada",
             "Dutch": "Lamp",
             "Chinese": "灯具",
-            "Portuguese": "Luminária"
+            "Portuguese": "Luminária",
+            "Czech": "Lampa",
+            "Slovak": "Lampa"
         },
         {
             "English": "Screen",
@@ -6693,7 +6845,9 @@
             "Italian": "Schermo",
             "Dutch": "Scherm",
             "Chinese": "屏风",
-            "Portuguese": "Tela"
+            "Portuguese": "Tela",
+            "Czech": "Obrazovka",
+            "Slovak": "Obrazovka"
         },
         {
             "English": "Shelf",
@@ -6707,7 +6861,9 @@
             "Italian": "Mensola",
             "Dutch": "Plank",
             "Chinese": "货架",
-            "Portuguese": "Prateleira"
+            "Portuguese": "Prateleira",
+            "Czech": "Police",
+            "Slovak": "Polička"
         },
         {
             "English": "Audio",
@@ -6721,7 +6877,9 @@
             "Italian": "Suono",
             "Dutch": "Audio",
             "Chinese": "音响",
-            "Portuguese": "Áudio"
+            "Portuguese": "Áudio",
+            "Czech": "Audio",
+            "Slovak": "Audio"
         },
         {
             "English": "Outdoors Decor",
@@ -6735,7 +6893,9 @@
             "Italian": "Arredamento da esterni",
             "Dutch": "Buitendecoratie",
             "Chinese": "室外装饰",
-            "Portuguese": "Decoração Ar livre"
+            "Portuguese": "Decoração Ar livre",
+            "Czech": "Venkovní Dekorace",
+            "Slovak": "Vonkajší Výzdoba"
         },
         {
             "English": "Fireplace",
@@ -6749,7 +6909,9 @@
             "Italian": "Camino",
             "Dutch": "Haard",
             "Chinese": "壁炉",
-            "Portuguese": "Lareira"
+            "Portuguese": "Lareira",
+            "Czech": "Krb",
+            "Slovak": "Krb"
         },
         {
             "English": "Plants",
@@ -6763,7 +6925,9 @@
             "Italian": "Piante",
             "Dutch": "Planten",
             "Chinese": "植物",
-            "Portuguese": "Plantas"
+            "Portuguese": "Plantas",
+            "Czech": "Rostliny",
+            "Slovak": "Rastliny"
         },
         {
             "English": "Compass",
@@ -6777,7 +6941,9 @@
             "Italian": "Compasso",
             "Dutch": "Kompas",
             "Chinese": "指南针",
-            "Portuguese": "Bússola"
+            "Portuguese": "Bússola",
+            "Czech": "Kompas",
+            "Slovak": "Kompas"
         },
         {
             "English": "Easter",
@@ -6791,7 +6957,9 @@
             "Italian": "Pasqua",
             "Dutch": "Pasen",
             "Chinese": "复活节",
-            "Portuguese": "Páscoa"
+            "Portuguese": "Páscoa",
+            "Czech": "Velikonoce",
+            "Slovak": "Veľká Noc"
         },
         {
             "English": "Kitchen Things",
@@ -6805,7 +6973,9 @@
             "Italian": "Cose da cucina",
             "Dutch": "Keuken Dingen",
             "Chinese": "厨房用品",
-            "Portuguese": "Cozinha"
+            "Portuguese": "Cozinha",
+            "Czech": "Věci do Kuchyně",
+            "Slovak": "Veci do Kuchyne"
         },
         {
             "English": "Bathtub",
@@ -6819,7 +6989,9 @@
             "Italian": "Vasca da bagno",
             "Dutch": "Bad",
             "Chinese": "浴缸",
-            "Portuguese": "Banheira"
+            "Portuguese": "Banheira",
+            "Czech": "Vana",
+            "Slovak": "Vaňa"
         },
         {
             "English": "Supplies",
@@ -6833,7 +7005,9 @@
             "Italian": "Provviste",
             "Dutch": "Benodigdheden",
             "Chinese": "耗材",
-            "Portuguese": "Suprimentos"
+            "Portuguese": "Suprimentos",
+            "Czech": "Zásoby",
+            "Slovak": "Zásoby"
         },
         {
             "English": "Work Bench",

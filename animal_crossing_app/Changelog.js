@@ -5,6 +5,7 @@ export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
 -Fix: couldn't switch months on calendar page occasionally
+-Translation updates
 -New Monthly Diamond Supporter: Nym! Thank you!
 -
 -Removed white space in catalog scanner links
