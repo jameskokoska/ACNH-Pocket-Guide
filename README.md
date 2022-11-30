@@ -2,7 +2,7 @@
 
 <div align="center" style="font-size:18px">
 
-| 150K+ Downloads | 4K+ Reviews | 4.9+ Stars |
+| 170K+ Downloads | 4.5K+ Reviews | 4.9+ Stars |
 | :-------------: | :---------: | :--------: |
 
 </div>
@@ -20,6 +20,9 @@
 
 With a modern and well polished design, ACNH Pocket Guide is the best guide for tracking your collection as you progress through the game. View information on collectibles and creatures, as well as upcoming in game events. With the latest game information, this is the one stop for all your ACNH needs!
 
+## Official Website
+The official website can be found here: https://acnh-pocket.web.app/. The repository of this website is open source and can be found here: https://github.com/jameskokoska/ACNH-Pocket-Guide-Website.
+
 ## Motivation
 
 This application is a rewrite of the <a href=https://github.com/jameskokoska/AnimalCrossingNH-App>original</a> from scratch in React Native.
@@ -35,6 +38,25 @@ Many applications already existing provide a lack of features and intuitive UI l
 All translations have been created from the help of volunteers listed within the application.
 
 The list of translations can be seen here: https://docs.google.com/spreadsheets/d/1ZslDgBkPNj2kBDnSLFNl7FIFCX3_R29UMCVoC_WuzOM/edit?usp=sharing
+
+Supported Languages:
+* English
+* English (Europe)
+* French
+* French (Quebec)
+* Spanish
+* Spanish (US)
+* German
+* Russian
+* Italian
+* Dutch
+* Chinese
+* Portuguese (Items not translated) 
+* Czech (Items not translated)
+* Slovak (Items not translated)
+* Chinese (Traditional) (Not fully supported, incomplete)
+* Korean (Not fully supported, incomplete)
+* Japanese (Not fully supported, incomplete)
 
 ## Install and Run Application Locally
 
