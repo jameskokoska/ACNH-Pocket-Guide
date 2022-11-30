@@ -246,6 +246,7 @@ class CalendarView extends Component{
           <View style={{height:Dimensions.get('window').height/6-80}}/>
           <View style={{justifyContent:"center", alignItems:'center'}}>
             <View style={{alignItems:"center", marginTop: 100, flexDirection:"row",justifyContent:"space-between", width:windowWidth-marginHorizontal*2}}>
+              <Header style={{marginHorizontal:0, fontSize: 28,position:"absolute", textAlign:"center", width:"100%", zIndex: 0}}>{attemptToTranslate(getMonth(this.state.currentDate.getMonth())) + " " + currentYear.toString()}</Header>
               <TouchableOpacity style={{zIndex:5, justifyContent:"center", alignItems:"center",padding:10, borderRadius:8, backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode]}} activeOpacity={0.6} 
                 onPress={()=>{
                   if(this.state.eventColors[0]!==undefined){
@@ -259,7 +260,6 @@ class CalendarView extends Component{
                   source={global.darkMode ? require("../assets/icons/leftArrowWhite.png") : require("../assets/icons/leftArrow.png")}
                 />
               </TouchableOpacity>
-              <Header style={{marginHorizontal:0, fontSize: 28,position:"absolute", textAlign:"center", width:"100%", zIndex: 0}}>{attemptToTranslate(getMonth(this.state.currentDate.getMonth())) + " " + currentYear.toString()}</Header>
               <TouchableOpacity style={{zIndex:5, justifyContent:"center", alignItems:"center",padding:10, borderRadius:8, backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode]}} activeOpacity={0.6} 
                 onPress={()=>{
                   if(this.state.eventColors[0]!==undefined){
