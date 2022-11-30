@@ -5,7 +5,7 @@ import colors from '../Colors.js';
 import AllItemsPage from "./AllItemsPage"
 import ErrorPage from "../pages/ErrorPage"
 import * as RootNavigation from '../RootNavigation.js';
-import { AndroidBackHandler } from "react-navigation-backhandler";
+import { AndroidBackHandler } from '../components/BackHandler.js';
 
 export default class VillagerFurniture extends Component {
   constructor() {

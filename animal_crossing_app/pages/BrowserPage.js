@@ -7,7 +7,7 @@ import {getSettingsString} from "../LoadJsonData"
 import Popup from "../components/Popup"
 import FadeInOut from "../components/FadeInOut"
 import * as RootNavigation from '../RootNavigation.js';
-import { AndroidBackHandler } from "react-navigation-backhandler";
+import { AndroidBackHandler } from '../components/BackHandler';
 
 export default class BrowserPage extends Component {
   constructor(props) {

@@ -4,7 +4,7 @@ import {getEventName, capitalize, getSettingsString,getSpecificFilters} from "..
 import AllItemsPage from "./AllItemsPage"
 import ErrorPage from "../pages/ErrorPage"
 import * as RootNavigation from '../RootNavigation.js';
-import { AndroidBackHandler } from "react-navigation-backhandler";
+import { AndroidBackHandler } from '../components/BackHandler.js';
 
 export default class GlobalSearchPage extends Component {
   constructor() {

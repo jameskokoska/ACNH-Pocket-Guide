@@ -8,7 +8,7 @@ import CraftingPage from "./CraftingPage"
 import {InfoLineBeside, InfoLine} from '../components/BottomSheetComponents';
 import ErrorPage from "../pages/ErrorPage"
 import * as RootNavigation from '../RootNavigation.js';
-import { AndroidBackHandler } from "react-navigation-backhandler";
+import { AndroidBackHandler } from '../components/BackHandler';
 
 export default class CraftableItemsPage extends Component {
   constructor() {

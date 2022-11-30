@@ -8,8 +8,8 @@ import CraftingPage from "./CraftingPage"
 import {InfoLineBeside, InfoLine} from '../components/BottomSheetComponents';
 import ErrorPage from "../pages/ErrorPage"
 import * as RootNavigation from '../RootNavigation.js';
-import { AndroidBackHandler } from "react-navigation-backhandler";
 import AllItemsPage from './AllItemsPage';
+import { AndroidBackHandler } from '../components/BackHandler';
 
 export default class IngredientsPage extends Component {
   constructor() {

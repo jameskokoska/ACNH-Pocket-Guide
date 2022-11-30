@@ -7,8 +7,8 @@ import {getSettingsString} from "../LoadJsonData"
 import {ClothingRouteClass} from "./ItemsPage"
 import {InfoLineBeside, InfoLine} from '../components/BottomSheetComponents';
 import ErrorPage from "../pages/ErrorPage"
-import { AndroidBackHandler } from "react-navigation-backhandler";
 import * as RootNavigation from '../RootNavigation.js';
+import { AndroidBackHandler } from '../components/BackHandler';
 
 export default class VillagerPresentsPage extends Component {
   constructor() {
