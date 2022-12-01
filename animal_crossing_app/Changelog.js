@@ -4,6 +4,10 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-New Monthly Silver Supporter: Fye! Thank you!
+-Fences no longer show under partially completed variations filter
+-Themed icon for Android 13+
+-
 -Fix: couldn't switch months on calendar page occasionally
 -Translation updates
 -New Monthly Diamond Supporter: Nym! Thank you!

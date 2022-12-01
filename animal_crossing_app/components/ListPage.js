@@ -311,6 +311,10 @@ function ListPage(props){
           if(item["Name"]!==undefined && item["Name"].includes("Hazure")){
             continue;
           }
+          // Remove fences if using partially ompleted variations filter
+          if(item?.checkListKey.includes("fenceCheckList") && searchActual.includes("Partially collected variations")){
+            continue;
+          }
           //Filter Recipe DIYs
           if((searchActual.includes("Filter Cooking DIY") || searchActual.includes("Filter Crafting DIY")) && item["Data Category"]!==undefined && item["Data Category"]==="Recipes" && item["Image"]!==undefined){
             if(searchActual.includes("Filter Cooking DIY") && !item["Image"].includes("Cooking")){
