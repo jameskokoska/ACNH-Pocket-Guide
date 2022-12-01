@@ -6,7 +6,7 @@ export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 export const changelog = `
 -New Monthly Silver Supporter: Fye! Thank you!
 -Fences no longer show under partially completed variations filter
--Themed icon for Android 13+
+-Themed icon for Android 13\+
 -
 -Fix: couldn't switch months on calendar page occasionally
 -Translation updates
