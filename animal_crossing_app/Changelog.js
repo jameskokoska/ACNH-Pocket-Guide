@@ -4,6 +4,13 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Separate page for photos and posters (originally in the furniture section)
+-Photos and posters will remain in furniture section as well
+-Fixed Turnips not showing up on ingredient items page
+-When checking/unchecking all items listed, loading popup now shows
+-Color tweaks
+-Fixed layering of popup centered image
+-
 -Fix: couldn't switch months on calendar page occasionally
 -Translation updates
 -New Monthly Diamond Supporter: Nym! Thank you!

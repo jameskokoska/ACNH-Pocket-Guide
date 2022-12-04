@@ -22,7 +22,7 @@ import MaterialsPopup from "../popups/MaterialsPopup"
 import PopupFilter from './PopupFilter'
 import TextFont from "./TextFont"
 import {compareItemID, removeAccents,getSettingsString} from "../LoadJsonData"
-import {PopupBottomCustom} from "./Popup"
+import {PopupBottomCustom, PopupOnlyLoading} from "./Popup"
 import {gameVersion, museumCategories, museumTitles} from "../Changelog"
 import GyroidPopup from '../popups/GyroidPopup';
 import FoodPopup from '../popups/FoodPopup';
@@ -156,6 +156,7 @@ function ListPage(props){
   const [loading, setLoading] = useState(false)
   const [data, setData] = useState("empty")
   const popupFilter = React.useRef(null);
+  const popupOnlyLoading = React.useRef(null);
 
   const componentIsMounted = useRef(true);
 
@@ -908,99 +909,127 @@ function ListPage(props){
   // }
 
   const checkAllItemsListed = async () => {
-    for(let item of data){
-      if(item.checkListKey!==undefined){
-        checkOff(item.checkListKey, false, "", "", false, false)
-      }
-    }
-    await collectionListSave()
-    setRefresh(true)
-  }
-
-  const checkAllItemsListedWithVariations = async () => {
-    for(let item of data){
-      if(item.checkListKey!==undefined){
-        checkOff(item.checkListKey, false, "", "", false, false)
-        if((item.hasOwnProperty("Variation") && item["Variation"]!=="NA") || item.hasOwnProperty("Pattern") && item["Pattern"]!=="NA"){
-          const variations = getVariations(item["Name"],global.dataLoadedAll,item["checkListKey"], item["index"]);
-          console.log(variations)
-          for(let variationItem of variations){
-            let extraIndex = variationItem["index"]=== variationItem["variationIndex"] ? "0":"";
-            checkOff(variationItem.checkListKey + extraIndex, false, "", "", false, false)
-          }
-        }      
-      }
-    }
-    // Clear the bottom sheet
-    bottomSheetRenderRef?.current?.update("item", ()=>{})
-    
-    await collectionListSave()
-    setRefresh(true)
-  }
-
-  const unCheckAllItemsListed = async () => {
-    for(let item of data){
-      if(item.checkListKey!==undefined){
-        checkOff(item.checkListKey, true, "", "", false, false)
-      }
-    }
-    await collectionListSave()
-    setRefresh(true)
-  }
-
-  const unCheckAllItemsListedWithVariations = async () => {
-    for(let item of data){
-      if(item.checkListKey!==undefined){
-        checkOff(item.checkListKey, true, "", "", false, false)
-        if((item.hasOwnProperty("Variation") && item["Variation"]!=="NA") || item.hasOwnProperty("Pattern") && item["Pattern"]!=="NA"){
-          const variations = getVariations(item["Name"],global.dataLoadedAll,item["checkListKey"], item["index"]);
-          console.log(variations)
-          for(let variationItem of variations){
-            console.log("UNCHECKING")
-            let extraIndex = variationItem["index"]=== variationItem["variationIndex"] ? "0":"";
-            checkOff(variationItem.checkListKey + extraIndex, true, "", "", false, false)
-          }
-        }      
-      }
-    }
-    // Clear the bottom sheet
-    bottomSheetRenderRef?.current?.update("item", ()=>{})
-    
-    await collectionListSave()
-    setRefresh(true)
-  }
-
-  const invertCheckItemsListed = async () => {
-    for(let item of data){
-      if(item.checkListKey!==undefined){
-        if(inChecklist(item.checkListKey)){
-          checkOff(item.checkListKey, true, "", "", false, false)
-        } else {
+    popupOnlyLoading?.current?.setPopupVisible(true)
+    await setTimeout(()=>{
+      for(let item of data){
+        if(item.checkListKey!==undefined){
           checkOff(item.checkListKey, false, "", "", false, false)
         }
       }
-    }
+    },10)
     await collectionListSave()
     setRefresh(true)
+    popupOnlyLoading?.current?.setPopupVisible(false)
+  }
+
+  const checkAllItemsListedWithVariations = async () => {
+    popupOnlyLoading?.current?.setPopupVisible(true)
+    await setTimeout(()=>{
+      for(let item of data){
+        if(item.checkListKey!==undefined){
+          checkOff(item.checkListKey, false, "", "", false, false)
+          if((item.hasOwnProperty("Variation") && item["Variation"]!=="NA") || item.hasOwnProperty("Pattern") && item["Pattern"]!=="NA"){
+            const variations = getVariations(item["Name"],global.dataLoadedAll,item["checkListKey"], item["index"]);
+            console.log(variations)
+            for(let variationItem of variations){
+              let extraIndex = variationItem["index"]=== variationItem["variationIndex"] ? "0":"";
+              checkOff(variationItem.checkListKey + extraIndex, false, "", "", false, false)
+            }
+          }      
+        }
+      }
+    },10)
+    // Clear the bottom sheet
+    bottomSheetRenderRef?.current?.update("item", ()=>{})
+    
+    await collectionListSave()
+    setRefresh(true)
+    popupOnlyLoading?.current?.setPopupVisible(false)
+  }
+
+  const unCheckAllItemsListed = async () => {
+    popupOnlyLoading?.current?.setPopupVisible(true)
+    await setTimeout(()=>{
+      for(let item of data){
+        if(item.checkListKey!==undefined){
+          checkOff(item.checkListKey, true, "", "", false, false)
+        }
+      }
+    },10)
+    await collectionListSave()
+    setRefresh(true)
+    popupOnlyLoading?.current?.setPopupVisible(false)
+  }
+
+  const unCheckAllItemsListedWithVariations = async () => {
+    popupOnlyLoading?.current?.setPopupVisible(true)
+    await setTimeout(()=>{
+      for(let item of data){
+        if(item.checkListKey!==undefined){
+          checkOff(item.checkListKey, true, "", "", false, false)
+          if((item.hasOwnProperty("Variation") && item["Variation"]!=="NA") || item.hasOwnProperty("Pattern") && item["Pattern"]!=="NA"){
+            const variations = getVariations(item["Name"],global.dataLoadedAll,item["checkListKey"], item["index"]);
+            console.log(variations)
+            for(let variationItem of variations){
+              console.log("UNCHECKING")
+              let extraIndex = variationItem["index"]=== variationItem["variationIndex"] ? "0":"";
+              checkOff(variationItem.checkListKey + extraIndex, true, "", "", false, false)
+            }
+          }      
+        }
+      }
+    }, 10)
+    // Clear the bottom sheet
+    bottomSheetRenderRef?.current?.update("item", ()=>{})
+    
+    await collectionListSave()
+    setRefresh(true)
+    popupOnlyLoading?.current?.setPopupVisible(false)
+  }
+
+  const invertCheckItemsListed = async () => {
+    popupOnlyLoading?.current?.setPopupVisible(true)
+    await setTimeout(()=>{
+      for(let item of data){
+        if(item.checkListKey!==undefined){
+          if(inChecklist(item.checkListKey)){
+            checkOff(item.checkListKey, true, "", "", false, false)
+          } else {
+            checkOff(item.checkListKey, false, "", "", false, false)
+          }
+        }
+      }
+    },10)
+    await collectionListSave()
+    setRefresh(true)
+    popupOnlyLoading?.current?.setPopupVisible(false)
   }
 
   const checkAllMuseum = async () => {
-    for(let item of data){
-      if(item.checkListKey!==undefined && museumCategories.includes(item["Data Category"])){
-        checkOff(item.checkListKey, false, "museum");
+    popupOnlyLoading?.current?.setPopupVisible(true)
+    await setTimeout(()=>{
+      for(let item of data){
+        if(item.checkListKey!==undefined && museumCategories.includes(item["Data Category"])){
+          checkOff(item.checkListKey, false, "museum");
+        }
       }
-    }
+    },10)
     await collectionListSave()
     setRefresh(true)
+    popupOnlyLoading?.current?.setPopupVisible(false)
   }
   const unCheckAllMuseum = async () => {
-    for(let item of data){
-      if(item.checkListKey!==undefined && museumCategories.includes(item["Data Category"])){
-        checkOff(item.checkListKey, true, "museum");
+    popupOnlyLoading?.current?.setPopupVisible(true)
+    await setTimeout(()=>{
+      for(let item of data){
+        if(item.checkListKey!==undefined && museumCategories.includes(item["Data Category"])){
+          checkOff(item.checkListKey, true, "museum");
+        }
       }
-    }
+    },10)
     await collectionListSave()
     setRefresh(true)
+    popupOnlyLoading?.current?.setPopupVisible(false)
   }
 
   const springConfig = {
@@ -1049,7 +1078,7 @@ function ListPage(props){
     return (<>
     {data!=="empty"?
       <View style={{backgroundColor:props.backgroundColor}} >
-        
+        <PopupOnlyLoading ref={popupOnlyLoading}/>
         <PopupFilter villagerGifts={props.villagerGifts} disableFilters={props.disableFilters} title={props.title} ref={popupFilter} filterSearchable={props.filterSearchable} updateSearchFilters={updateSearchFilters}/> 
         {/* setFilterPopupState(false) */}
         {loading? <View style={{alignItems:"center", justifyContent:"center", width:"100%", height:"100%"}}>
@@ -1336,12 +1365,7 @@ class BottomSheetRender extends Component{
     }
     return <View>
       <View>
-        <CircularImage 
-          item={this.state.item}
-          imageProperty={this.props.imageProperty}
-          accentColor={this.props.accentColor}
-          showLargerPopupImage={()=>{this.variations?.showPopupImage(true)}}
-        />
+        <View style={{height:(getSettingsString("settingsLargerItemPreviews")==="false" ? 105 : 180)+35}}/>
         <View
           style={{
             borderTopLeftRadius: 50,
@@ -1375,6 +1399,12 @@ class BottomSheetRender extends Component{
             {popUpContainer}
             {this.props.tabs===false ? <View style={{height:50}}/> : (getSettingsString("settingsLargerItemPreviews")==="false"?<View style={{height:50}}/>:<View style={{height:50}}/>)}
         </View>
+        <CircularImage 
+          item={this.state.item}
+          imageProperty={this.props.imageProperty}
+          accentColor={this.props.accentColor}
+          showLargerPopupImage={()=>{this.variations?.showPopupImage(true)}}
+        />
       </View>
       <PopupRawData ref={(popupRawData) => this.popupRawData = popupRawData}></PopupRawData>
     </View>

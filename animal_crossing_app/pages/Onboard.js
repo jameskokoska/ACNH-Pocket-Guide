@@ -17,17 +17,12 @@ class Onboard extends Component {
         transitionAnimationDuration={400}
         showDone={false}
         skipLabel= {<TextFont style={{fontSize: 20, color:"gray"}}>Skip</TextFont>}
-        imageContainerStyles = {{paddingBottom:30,}}
+        imageContainerStyles = {{paddingBottom:30, marginTop:-70}}
         nextLabel= {
-          <View style={{transform: [{ rotate: '180deg'}]}}>
-            <LottieView 
-              autoPlay
-              loop
-              style={{
-                width: 45,
-                height: 45,
-              }} 
-              source={require('../assets/arrow.json')}
+          <View>
+            <Image
+              style={{width:27,height:37, resizeMode:"contain"}}
+              source={require("../assets/icons/rightArrow.png")}
             />
           </View>
         }

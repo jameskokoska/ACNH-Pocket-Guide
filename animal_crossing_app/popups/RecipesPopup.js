@@ -116,6 +116,7 @@ class RecipesPopup extends Component {
         onPress={() => {
           RootNavigation.navigate('40', {propsPassed:this.props.item});
       }}/>
+      <View style={{height:10}}/>
       <InfoLine
         image={require("../assets/icons/magnifyingGlass.png")} 
         item={this.props.item}

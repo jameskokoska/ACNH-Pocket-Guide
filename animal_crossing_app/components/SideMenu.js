@@ -179,7 +179,7 @@ export const sideSections = [
     "pageNum" : 39,
     "picture" : require("../assets/icons/coffee2.png"),
     "displayName" : "Buy Me a Coffee",
-    "color": "selectHome",
+    "color": "selectSupport",
     "cannotDisable":false,
   },
   {
@@ -257,6 +257,12 @@ export const sideSections = [
     "picture" : require("../assets/icons/cat.png"),
     "displayName" : "Villagers",
     "color": "selectVillagers",
+  },
+  {
+    "pageNum" : 41,
+    "picture" : require("../assets/icons/portrait.png"),
+    "displayName" : "Photos + Posters",
+    "color": "selectPhotos",
   },
   {
     "pageNum" : 9,

@@ -31,6 +31,8 @@ class GuidePage extends Component {
       currentURL = "https://chibisnorlax.github.io/acnhfaq/island-dev/#what-are-ordinances"
     } else if (props.propsPassed==="shootingStarsRedirect"){
       currentURL = "https://chibisnorlax.github.io/acnhfaq/island-life/stars/#when-will-i-see-meteor-showers"
+    }  else if (props.propsPassed==="photosRedirect"){
+      currentURL = "https://chibisnorlax.github.io/acnhfaq/villagers/gifting/#how-do-i-get-a-villagers-framed-photo"
     } 
     this.state = {
       canGoBack: false,

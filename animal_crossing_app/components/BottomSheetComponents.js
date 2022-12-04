@@ -18,7 +18,7 @@ export class CircularImage extends Component {
       return <View/>
     }
     //the width of the TouchableOpacity is used in PopupBottomCustom in Popup.js
-    return <View style={{width:"100%", alignItems:'center', justifyContent:'center'}}>
+    return <View style={{width:"100%", alignItems:'center', justifyContent:'center', position:"absolute"}}>
     <TouchableOpacity
       activeOpacity={0.9}
       onPress={() => {  

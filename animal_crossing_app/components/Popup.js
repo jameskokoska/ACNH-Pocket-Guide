@@ -190,6 +190,45 @@ export class PopupRaw extends Component {
   }
 }
 
+export class PopupOnlyLoading extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      popupVisible: false,
+    };
+  }
+
+  setPopupVisible = (visible) => {
+    this.setState({popupVisible:visible});
+  }
+
+  render(){
+    return (
+      <Modal
+        animationType="fade"
+        transparent={true}
+        visible={this.state.popupVisible}
+        statusBarTranslucent
+        onRequestClose={()=>{this.props.button1===undefined && this.props.button2===undefined ? 0 : this.setPopupVisible(false);}}
+      >
+        <AnimatedPopupWrapper style={[styles.centeredView, {width: Dimensions.get('window').width}]}>
+          <View style={{alignItems:"center", justifyContent:"center"}}>
+            <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
+              <TextFont translate={false} bold={true} style={{paddingHorizontal: 20, fontSize: 20, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{attemptToTranslate("Please wait")+"..."}</TextFont>
+              <View style={{justifyContent:"center", alignItems:"center"}}>
+                <LottieView autoPlay loop
+                  style={{marginBottom: -25, width: 90, zIndex:1, transform: [{ scale: 1 },{ rotate: '0deg'},],}}
+                  source={require('../assets/loading.json')}
+                />
+              </View>   
+            </View>
+          </View>
+        </AnimatedPopupWrapper>
+      </Modal>
+    )
+  }
+}
+
 export class PopupRawLoading extends Component {
   intervalID = 0;
 

@@ -70,6 +70,7 @@ import 'expo-dev-client';
 import * as InAppPurchases from 'expo-in-app-purchases';
 import Animated, { FadeIn } from "react-native-reanimated";
 import IngredientsPage from './pages/IngredientsPage';
+import PhotosPostersPage from './pages/PhotosPostersPage';
 
 const backup = console.warn;
 
@@ -557,6 +558,8 @@ class App extends Component {
         currentPageView = <DonatePage />
       } else if (this.state.currentPage===40){
         currentPageView = <IngredientsPage baseItem={this.state.propsPassed}/>
+      }  else if (this.state.currentPage===41){
+        currentPageView = <PhotosPostersPage setPage={this.setPage}/>
       } else {
         currentPageView = <Text>Default</Text>
       }

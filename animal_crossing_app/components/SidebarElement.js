@@ -21,7 +21,7 @@ class SidebarElement extends Component {
     var elevation;
     if(this.props.currentPage===this.props.pageNum){
       backgroundColor=this.props.backgroundColor;
-      elevation = 4;
+      elevation = 0;
     } else {
       backgroundColor=this.props.unselectedColor;
       elevation = 0;

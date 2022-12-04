@@ -535,6 +535,8 @@ export async function countCollectionAchievements(){
 export function determineDataGlobal(datakeyName){
   if(datakeyName==="dataLoadedAmiibo")
     return global.dataLoadedAmiibo;
+  if(datakeyName==="dataLoadedPhotosPosters")
+    return global.dataLoadedPhotosPosters;
   else if(datakeyName==="dataLoadedReactions")
     return global.dataLoadedReactions;
   else if(datakeyName==="dataLoadedArt")
@@ -802,6 +804,13 @@ export async function loadGlobalData(){
       ["amiiboCheckListSeriesWelcomeamiiboseries","Name"],
       ["amiiboCheckListSeriesSanrioseries","Name"],
     ], "false")
+    global.dataLoadedPhotosPosters = await getStorageData([
+      [require("./assets/data/DataCreated/Photos.json"), "Photos"],
+      [require("./assets/data/DataCreated/Posters.json"), "Posters"],
+    ],[
+      ["furnitureCheckList","Name","Variation","Pattern"],
+      ["furnitureCheckList","Name"],
+    ],"false");
     global.dataLoadedReactions = await getStorageData([[require("./assets/data/DataCreated/Reactions.json"),"Reactions"]],[["emojiCheckList","Name"]],"false");
     global.dataLoadedMusic = await getStorageData([[require("./assets/data/DataCreated/Music.json"),"Music"]],[["songCheckList","Name"]],"false");
     global.dataLoadedConstruction = await getStorageData([[require("./assets/data/DataCreated/Construction.json"),"Construction"],[require("./assets/data/DataCreated/Fencing.json"),"Fencing"],[require("./assets/data/DataCreated/Interior Structures.json"),"Interior Structures"]],[["constructionCheckList","Name"],["fenceCheckList","Name"],["interiorStructuresCheckList","Name","Color 1","Color 2"]],"false");
@@ -1828,6 +1837,9 @@ export function findIngredients(baseItem){
     (baseItem["Material 9"] ?? "").toLowerCase(),
     (baseItem["Material 10"] ?? "").toLowerCase(),
   ]
+  if(ingredients.includes("10 turnips")){
+    ingredients.push("turnips")
+  }
   let outputIds = []
   for(var dataSet = 0; dataSet < global.dataLoadedAll.length; dataSet++){
     for(var i = 0; i < global.dataLoadedAll[dataSet].length; i++){
