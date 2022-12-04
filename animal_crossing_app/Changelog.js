@@ -10,6 +10,7 @@ export const changelog = `
 -When checking/unchecking all items listed, loading popup now shows
 -Color tweaks
 -Fixed layering of popup centered image
+-Updated translations
 -
 -New Monthly Silver Supporter: Fye! Thank you!
 -Fences no longer show under partially completed variations filter

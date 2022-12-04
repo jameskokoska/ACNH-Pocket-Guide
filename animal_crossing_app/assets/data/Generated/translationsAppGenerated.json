@@ -17737,6 +17737,36 @@
       "Portuguese": "Fotos + Pôsteres",
       "Czech": "Fotografie + Plakáty",
       "Slovak": "Fotografie + Plagáty"
+    },
+    "check all (and variations)": {
+      "English": "Check all (and variations)",
+      "English (Europe)": "Check all (and variations)",
+      "French": "Cocher tout (et variantes)",
+      "French (US)": "Cocher tout (et variantes)",
+      "German": "Überprüfen Sie alle (und Variationen)",
+      "Spanish": "Ver todos (y variaciones)",
+      "Spanish (US)": "Ver todos (y variaciones)",
+      "Russian": "Проверить все (и варианты)",
+      "Italian": "Controlla tutto (e varianti)",
+      "Dutch": "Bekijk alle (en variaties)",
+      "Portuguese": "Confira tudo (e variações)",
+      "Czech": "Zkontrolujte vše (a varianty)",
+      "Slovak": "Skontrolujte všetko (a variácie)"
+    },
+    "uncheck all (and variations)": {
+      "English": "Uncheck all (and variations)",
+      "English (Europe)": "Uncheck all (and variations)",
+      "French": "Décochez tout (et les variantes)",
+      "French (US)": "Décochez tout (et les variantes)",
+      "German": "Deaktivieren Sie alle (und Variationen)",
+      "Spanish": "Desmarque todo (y variaciones)",
+      "Spanish (US)": "Desmarque todo (y variaciones)",
+      "Russian": "Снимите все (и варианты)",
+      "Italian": "Deseleziona tutto (e varianti)",
+      "Dutch": "Schakel alle (en variaties) uit",
+      "Portuguese": "Desmarque todos (e variações)",
+      "Czech": "Zrušte zaškrtnutí všech (a variant)",
+      "Slovak": "Zrušte začiarknutie všetkých (a variácií)"
     }
   },
   "Sources": {
