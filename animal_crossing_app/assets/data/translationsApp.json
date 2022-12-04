@@ -650,23 +650,23 @@
     ],
     "Main": [
         {
-            "English": "1261 items",
-            "English (Europe)": "1261 items",
-            "French": "1249 items (12 items missing)",
-            "French (US)": "1249 items (12 items missing)",
-            "German": "1261 items",
-            "Spanish": "1254 items (7 items missing)",
-            "Spanish (US)": "1226 items (35 items missing)",
-            "Russian": "1241 items (20 items missing)",
-            "Italian": "1240 items (21 items missing)",
-            "Dutch": "1215 items (46 items missing)",
-            "Chinese": "904 items (357 items missing)",
-            "Chinese (Traditional)": "9 items (1252 items missing)",
-            "Japanese": "9 items (1252 items missing)",
-            "Korean": "9 items (1252 items missing)",
-            "Portuguese": "1238 items (23 items missing)",
-            "Czech": "489 items (772 items missing)",
-            "Slovak": "489 items (772 items missing)"
+            "English": "1264 items",
+            "English (Europe)": "1264 items",
+            "French": "1252 items (12 items missing)",
+            "French (US)": "1252 items (12 items missing)",
+            "German": "1264 items",
+            "Spanish": "1257 items (7 items missing)",
+            "Spanish (US)": "1229 items (35 items missing)",
+            "Russian": "1244 items (20 items missing)",
+            "Italian": "1243 items (21 items missing)",
+            "Dutch": "1218 items (46 items missing)",
+            "Chinese": "904 items (360 items missing)",
+            "Chinese (Traditional)": "9 items (1255 items missing)",
+            "Japanese": "9 items (1255 items missing)",
+            "Korean": "9 items (1255 items missing)",
+            "Portuguese": "1241 items (23 items missing)",
+            "Czech": "498 items (766 items missing)",
+            "Slovak": "498 items (766 items missing)"
         },
         {
             "English": "Home",
@@ -18727,7 +18727,9 @@
             "Russian": "Удалить алфавитную сортировку",
             "Italian": "Rimuovere l'ordinamento alfabetico",
             "Dutch": "Alfabetische sortering verwijderen",
-            "Portuguese": "Remover classificação alfabética"
+            "Portuguese": "Remover classificação alfabética",
+            "Czech": "Odebrat abecední řazení",
+            "Slovak": "Odstrániť abecedné triedenie"
         },
         {
             "English": "Alphabetical",
@@ -18740,7 +18742,9 @@
             "Russian": "Алфавитный",
             "Italian": "Alfabetico",
             "Dutch": "Alfabetisch",
-            "Portuguese": "Alfabética"
+            "Portuguese": "Alfabética",
+            "Czech": "Abecední",
+            "Slovak": "Abecedne"
         },
         {
             "English": "Ingredients to craft this item",
@@ -18753,7 +18757,9 @@
             "Russian": "Ингредиенты для изготовления этого предмета",
             "Italian": "Ingredienti per creare questo oggetto",
             "Dutch": "Ingrediënten om dit item te maken",
-            "Portuguese": "Ingredientes para criar este item"
+            "Portuguese": "Ingredientes para criar este item",
+            "Czech": "Ingredience pro výrobu této položky",
+            "Slovak": "Ingrediencie na výrobu tejto položky"
         },
         {
             "English": "View Ingredient Items",
@@ -18766,7 +18772,9 @@
             "Russian": "Посмотреть ингредиенты",
             "Italian": "Visualizza elementi ingrediente",
             "Dutch": "Ingrediënten bekijken",
-            "Portuguese": "Ver itens de ingredientes"
+            "Portuguese": "Ver itens de ingredientes",
+            "Czech": "Zobrazit položky ingrediencí",
+            "Slovak": "Zobraziť zložky"
         },
         {
             "English": "Blooming Seasons",
@@ -18779,7 +18787,9 @@
             "Russian": "Сезоны цветения",
             "Italian": "Stagioni di fioritura",
             "Dutch": "Bloeiende seizoenen",
-            "Portuguese": "Estações de florescimento"
+            "Portuguese": "Estações de florescimento",
+            "Czech": "Kvetoucí období",
+            "Slovak": "Kvitnúce ročné obdobia"
         },
         {
             "English": "Calendar Seasons",
@@ -18792,7 +18802,54 @@
             "Russian": "Календарь сезонов",
             "Italian": "Stagioni del calendario",
             "Dutch": "Kalender Seizoenen",
-            "Portuguese": "Temporadas do Calendário"
+            "Portuguese": "Temporadas do Calendário",
+            "Czech": "Kalendář ročních období",
+            "Slovak": "Kalendár ročných období"
+        },
+        {
+            "English": "You can read more about villager photos by visiting the guide page",
+            "English (Europe)": "You can read more about villager photos by visiting the guide page",
+            "French": "Vous pouvez en savoir plus sur les photos de villageois en visitant la page du guide",
+            "French (US)": "Vous pouvez en savoir plus sur les photos de villageois en visitant la page du guide",
+            "German": "Sie können mehr über Dorfbewohnerfotos lesen, indem Sie die Leitfadenseite besuchen",
+            "Spanish": "Puedes leer más sobre las fotos de los aldeanos visitando la página de la guía",
+            "Spanish (US)": "Puedes leer más sobre las fotos de los aldeanos visitando la página de la guía",
+            "Russian": "Вы можете узнать больше о фотографиях деревенских жителей, посетив страницу руководства.",
+            "Italian": "Puoi leggere di più sulle foto dei villici visitando la pagina della guida",
+            "Dutch": "U kunt meer lezen over foto's van dorpelingen door de gidspagina te bezoeken",
+            "Portuguese": "Você pode ler mais sobre as fotos dos aldeões visitando a página do guia",
+            "Czech": "Více o fotografiích vesničanů si můžete přečíst na stránce průvodce",
+            "Slovak": "Viac o fotografiách dedinčanov si môžete prečítať na stránke sprievodcu"
+        },
+        {
+            "English": "Tap here to read about villager photos",
+            "English (Europe)": "Tap here to read about villager photos",
+            "French": "Appuyez ici pour en savoir plus sur les photos de villageois",
+            "French (US)": "Appuyez ici pour en savoir plus sur les photos de villageois",
+            "German": "Tippen Sie hier, um mehr über Dorfbewohnerfotos zu erfahren",
+            "Spanish": "Toca aquí para leer sobre las fotos de los aldeanos.",
+            "Spanish (US)": "Toca aquí para leer sobre las fotos de los aldeanos.",
+            "Russian": "Нажмите здесь, чтобы прочитать о фотографиях деревенских жителей",
+            "Italian": "Tocca qui per leggere le foto degli abitanti del villaggio",
+            "Dutch": "Tik hier om meer te lezen over foto's van dorpelingen",
+            "Portuguese": "Toque aqui para ler sobre as fotos dos aldeões",
+            "Czech": "Klepnutím sem si přečtete o fotografiích vesničanů",
+            "Slovak": "Klepnutím sem si prečítajte o fotografiách dedinčanov"
+        },
+        {
+            "English": "Photos + Posters",
+            "English (Europe)": "Photos + Posters",
+            "French": "Photos + Affiches",
+            "French (US)": "Photos + Affiches",
+            "German": "Fotos + Plakate",
+            "Spanish": "Fotos + Pósters",
+            "Spanish (US)": "Fotos + Pósters",
+            "Russian": "Фото + Плакаты",
+            "Italian": "Foto + poster",
+            "Dutch": "Foto's + Affiches",
+            "Portuguese": "Fotos + Pôsteres",
+            "Czech": "Fotografie + Plakáty",
+            "Slovak": "Fotografie + Plagáty"
         }
     ],
     "Sources": [
