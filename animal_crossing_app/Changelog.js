@@ -11,6 +11,10 @@ export const changelog = `
 -Color tweaks
 -Fixed layering of popup centered image
 -
+-New Monthly Silver Supporter: Fye! Thank you!
+-Fences no longer show under partially completed variations filter
+-Themed icon for Android 13\+
+-
 -Fix: couldn't switch months on calendar page occasionally
 -Translation updates
 -New Monthly Diamond Supporter: Nym! Thank you!
