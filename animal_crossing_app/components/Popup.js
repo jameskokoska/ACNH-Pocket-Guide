@@ -203,6 +203,7 @@ export class PopupOnlyLoading extends Component {
   }
 
   render(){
+    const backgroundStyle = {position:"absolute", left:-100, top:-100, width: Dimensions.get('window').width+200, height: Dimensions.get('window').height+200, backgroundColor: "black", opacity: 0.6}
     return (
       <Modal
         animationType="fade"
@@ -211,7 +212,8 @@ export class PopupOnlyLoading extends Component {
         statusBarTranslucent
         onRequestClose={()=>{this.props.button1===undefined && this.props.button2===undefined ? 0 : this.setPopupVisible(false);}}
       >
-        <AnimatedPopupWrapper style={[styles.centeredView, {width: Dimensions.get('window').width}]}>
+        <View style={backgroundStyle}/>
+        <AnimatedPopupWrapper style={[styles.centeredView, {width: Dimensions.get('window').width}]} disableAnimations={getSettingsString("settingsLowEndDevice")==="true"}>
           <View style={{alignItems:"center", justifyContent:"center"}}>
             <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
               <TextFont translate={false} bold={true} style={{paddingHorizontal: 20, fontSize: 20, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{attemptToTranslate("Please wait")+"..."}</TextFont>
