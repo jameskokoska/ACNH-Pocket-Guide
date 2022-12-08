@@ -39,7 +39,7 @@ class CatalogPage extends Component {
   }
 
   import = async () =>{
-    this.popupOnlyLoading?.setPopupVisible(true)
+    this.popupWait?.setPopupVisible(true)
     await setTimeout(async ()=>{
       try{
         this.importedItems = []
@@ -130,7 +130,6 @@ class CatalogPage extends Component {
       }
       this.popupWait?.setPopupVisible(false); 
       this.popup?.setPopupVisible(true);
-      this.popupOnlyLoading?.setPopupVisible(false)
     },10)
   }
 
@@ -194,7 +193,6 @@ class CatalogPage extends Component {
   render(){
     return(
       <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
-        <PopupOnlyLoading ref={(popupOnlyLoading) => this.popupOnlyLoading = popupOnlyLoading}/>
         <ScrollView>
           <View style={{height: 100}}/>
           <TextFont bold={true} style={{fontSize: 37, marginLeft: 30, marginRight: 40, color:colors.textBlack[global.darkMode]}}>Catalog Import</TextFont>
