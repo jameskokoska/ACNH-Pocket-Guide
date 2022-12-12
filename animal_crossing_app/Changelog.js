@@ -4,6 +4,14 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Fixed loading screen of integrated web tools
+-Added ability to hide language warning popup for integrated web tools
+-Added warning if leaving any integrated website tool
+-Play store compliances for web tool support and info popups
+-Swapped home and menu buttons on guide page
+-Added translations
+-About page tweaks
+-
 -Loading progress when importing a catalog
 -Catalog import: removed error when importing blank entry
 -Loading popup background changes

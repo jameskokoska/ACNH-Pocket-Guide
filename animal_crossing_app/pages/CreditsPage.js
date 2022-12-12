@@ -19,17 +19,17 @@ class CreditsPage extends Component {
       <View style={{height: 20}}/>
       <CreditImageContainer image={require("../assets/icons/James.png")} text="James" textBottom="Lead Programmer"/>
       <CreditImageContainer image={require("../assets/icons/Ryan.png")} text="Ryan" textBottom="Lead Graphics"/>
-      <View style={{height: 20}}/>
+      <View style={{height: 15}}/>
+      <MailLink/>
+      <View style={{height: 25}}/>
       <Supporters/>
       <View style={{height: 5}}/>
-      <View style={{paddingHorizontal: 20}}>
+      {/* <View style={{paddingHorizontal: 20}}>
         <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={()=>{this.popupRating?.setPopupVisible(true)}} text={capitalize(attemptToTranslate("Leave a rating"))} />
         <PopupRating ref={(popupRating) => this.popupRating = popupRating}/>
-      </View>
-      <View style={{height: 20}}/>
-      <MailLink/>
+      </View> */}
 
-      <View style={{height: 40}}/>
+      <View style={{height: 20}}/>
       <SubHeader>Volunteer Translators</SubHeader>
       <SubHeader bold={false} style={{marginBottom:6, marginTop:0, fontSize: 17}}>{attemptToTranslate("Thanks for your help!")}</SubHeader>
       <CreditBox>

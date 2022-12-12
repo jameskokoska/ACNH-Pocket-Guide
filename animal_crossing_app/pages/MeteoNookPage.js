@@ -3,15 +3,17 @@ import {Share, ActivityIndicator, BackHandler, Image, TouchableNativeFeedback, V
 import TextFont from '../components/TextFont'
 import colors from '../Colors'
 import { WebView } from 'react-native-webview';
-import {getSettingsString} from "../LoadJsonData"
+import {getSettingsString, getStorage, openURL} from "../LoadJsonData"
 import Popup from "../components/Popup"
 import FadeInOut from "../components/FadeInOut"
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 class GuidePage extends Component {
   constructor(props) {
     super(props);
     this.handleBackButton = this.handleBackButton.bind(this);
     var currentURL = "https://wuffs.org/acnh/weather/"
+    this.redirectUrl = "";
     this.state = {
       canGoBack: false,
       canGoForward: false,
@@ -25,10 +27,12 @@ class GuidePage extends Component {
       return true;
   };
 
-  componentDidMount() {
+  async componentDidMount() {
     this.mounted = true;
     if(!global.language.includes("English")){
-      this.popupLanguage?.setPopupVisible(true);
+      let hide = await getStorage("hideMeteoNookLanguagePopup","false");
+      if(hide==="false")
+        this.popupLanguage?.setPopupVisible(true);
     }
     BackHandler.addEventListener("hardwareBackPress", this.handleBackButton);
   }
@@ -40,22 +44,14 @@ class GuidePage extends Component {
  
   render(){
     return(<>
-      <View style={{zIndex:50, position:"absolute"}} pointerEvents="none">
-      <FadeInOut fadeIn={true} delay={700} duration={300} startValue={1} endValue={0}>
-        <View style={{alignItems:"center", justifyContent:"center", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: colors.lightDarkAccent[global.darkMode]}}>
-          <Image style={{width: "60%", height:"40%", resizeMode:"contain"}} source={require('../assets/icons/meteonookIcon.png')}/>
-          <TextFont bold={true} style={{marginBottom: 10, fontSize:23, color:colors.textBlack[global.darkMode]}}>{"MeteoNook"}</TextFont>
-          <TextFont bold={false} style={{marginBottom: 10, fontSize:15, color:colors.textBlack[global.darkMode]}}>{"By Ash Wolf @_Ninji"}</TextFont>
-        </View>
-      </FadeInOut>
-      </View>
       <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
         <WebView
           forceDarkOn={global.darkMode===1}
           ref={(webView) => this.webView = webView}
           source={{ uri: this.state.currentURL }}
           style={{width:Dimensions.get('window').width,height:Dimensions.get('window').height }}
-          injectedJavaScript={"document.body.style.userSelect = 'none';"}
+          injectedJavaScript={"document.body.style.userSelect = 'none';" + "\
+          document.getElementsByClassName('mb-2')[2].innerHTML = 'To support MeteoNook and its creator, please do so outside of ACNH Pocket Guide as it violates the TOS of Google Play.';"}
           onError={() => {
             this.popup?.setPopupVisible(true);
           }}
@@ -79,6 +75,15 @@ class GuidePage extends Component {
                 currentURL: navState.url
               })
             }
+            if(navState.url.includes("paypal") || navState.url.includes("ko-fi") || navState.url.includes("monzo")){
+              this.webView.goBack();
+              this.popupSupportWarn?.setPopupVisible(true)
+            }
+            if(!navState.url.includes("wuffs.org") && !navState.url.includes("chibisnorlax.github.io") && !navState.url.includes("turnipprophet.io") && !navState.url.includes(".png")){
+              this.webView.goBack();
+              this.redirectUrl = navState.url;
+              this.popupRedirectWarn?.setPopupVisible(true);
+            }
           }}
         />
         {/* openMenu={()=>this.props.openMenu()}  */}
@@ -90,10 +95,20 @@ class GuidePage extends Component {
           currentURL = {this.state.currentURL}
         />
         <Popup ref={(popup) => this.popup = popup} button1={"OK"} button1Action={()=>{return}} text={"Error"} textLower={"There was an error loading. Note that this feature needs an internet connection."}/>
-        <Popup ref={(popupLanguage) => this.popupLanguage = popupLanguage} button1={"OK"} button1Action={()=>{return}} text={"Language"} textLower={"You can change the language in the top right corner, by tapping Settings"}/>
-     </View>
-     </>
-    )
+        <Popup ref={(popupLanguage) => this.popupLanguage = popupLanguage} button1={"OK"} button1Action={()=>{return}} button2={"Hide"} button2Action={()=>{AsyncStorage.setItem("hideMeteoNookLanguagePopup", "true");}} text={"Language"} textLower={"You can change the language in the top right corner, by tapping Settings"}/>
+        <Popup ref={(popupSupportWarn) => this.popupSupportWarn = popupSupportWarn} button1={"OK"} button1Action={()=>{return}} text={"Support External Tool"} textLower={"To support this external tool, please do so outside of ACNH Pocket Guide, as using it within the app would violate the terms of service of Google Play."}/>
+        <Popup ref={(popupRedirectWarn) => this.popupRedirectWarn = popupRedirectWarn} button1={"OK"} button1Action={()=>{openURL(this.redirectUrl)}} button2={"Cancel"} button2Action={()=>{return}} text={"Leave MeteoNook?"} textLower={"You are about to leave MeteoNook."}/>
+      </View>
+      <View style={{zIndex:50, position:"absolute"}} pointerEvents="none">
+      <FadeInOut fadeIn={true} delay={700} duration={300} startValue={1} endValue={0}>
+        <View style={{alignItems:"center", justifyContent:"center", width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: colors.lightDarkAccent[global.darkMode]}}>
+          <Image style={{width: "60%", height:"40%", resizeMode:"contain"}} source={require('../assets/icons/meteonookIcon.png')}/>
+          <TextFont bold={true} style={{marginBottom: 10, fontSize:23, color:colors.textBlack[global.darkMode]}}>{"MeteoNook"}</TextFont>
+          <TextFont bold={false} style={{marginBottom: 10, fontSize:15, color:colors.textBlack[global.darkMode]}}>{"By Ash Wolf @_Ninji"}</TextFont>
+        </View>
+      </FadeInOut>
+      </View>
+    </>)
   }
 }
 export default GuidePage;
