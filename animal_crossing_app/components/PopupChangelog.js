@@ -12,10 +12,11 @@ import {
 import TextFont from "./TextFont";
 import colors from "../Colors";
 import {PopupBottomCustom} from "./Popup"
-import {getStorage} from "../LoadJsonData"
+import {getStorage, openURL} from "../LoadJsonData"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {GiveSupport, MailLink} from "./Formattings";
 import {changelog} from "../Changelog"
+import { CatalogScannerApp } from "../pages/CatalogPage";
 
 export default class PopupChangelog extends Component {
   constructor(props){
@@ -74,6 +75,10 @@ export default class PopupChangelog extends Component {
           <PopupBottomCustom ref={(popup) => this.popup = popup} onClose={async () => {await AsyncStorage.setItem("changelog", global.version)}}>
             <TextFont bold={true} style={{fontSize: 28, textAlign:"center",color: colors.textBlack[global.darkMode],}}>{"What's New?"}</TextFont>
             {this.numLogins>3?<GiveSupport tapHere blueText style={{marginBottom:-20}} setPage={this.props.setPage}/>:<View/>}
+
+            <View style={{height:30}}/>
+            <CatalogScannerApp/>
+
             {
               changelogText.map((point, index) => {
                 return(<TextFont key={index} bold={false} style={{marginBottom:4, fontSize: 18, color: colors.textBlack[global.darkMode]}}>{point}</TextFont>)

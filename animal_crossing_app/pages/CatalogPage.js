@@ -12,6 +12,7 @@ import ToggleSwitch from 'toggle-switch-react-native';
 import FastImage from '../components/FastImage';
 import { getVariations, VariationItem, Variations } from '../components/BottomSheetComponents';
 import { getPhoto } from '../components/GetPhoto';
+import { TabBar, TabView } from 'react-native-tab-view';
 
 
 class CatalogPage extends Component {
@@ -22,10 +23,6 @@ class CatalogPage extends Component {
     this.totalSuccess = 0;
     this.totalFail = 0;
     this.method = "";
-    this.includeVillagers = true;
-    this.includeRecipes = true;
-    this.selectVariations = true;
-    this.skipCompletedVariations = true;
     this.importedItems = [];
     this.importedItemsIndices = [];
     this.state = {
@@ -35,25 +32,63 @@ class CatalogPage extends Component {
       totalErrorItems: "",
       currentItemIndex: 0,
       noMoreMessage:"",
+      index: 0,
+      includeVillagers: false,
+      includeRecipes: true,
+      selectVariations: true,
+      skipCompletedVariations: true,
+      routes: [
+        { key: 'Catalog Scanner', title: attemptToTranslate('Catalog Scanner App') },
+        { key: 'Nook.lol', title: attemptToTranslate('Nook.lol') },
+      ],
     }
   }
 
-  import = async () =>{
+  import = async (type) =>{
     this.popupWait?.setPopupVisible(true)
     await setTimeout(async ()=>{
       try{
+        if((this.linkInput==="") && type=="nook.lol"){
+          toast.show(attemptToTranslate("Please enter a link"), {type:"danger",
+            placement:'top',
+            duration: 4000, 
+            renderType:{
+              danger: (toast) => (
+                <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, marginRight: 20, borderRadius: 5, backgroundColor: colors.popupDanger[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+                  <TextFont translate={false} style={{color:"white", fontSize: 15}}>{toast.message}</TextFont>
+                </View>
+              ),
+            }
+          })
+          this.popupWait?.setPopupVisible(false)
+          return
+        } else if ((this.input==="") && type=="catalogScanner"){
+          toast.show(attemptToTranslate("Please paste entries"), {type:"danger",
+            placement:'top',
+            duration: 4000, 
+            renderType:{
+              danger: (toast) => (
+                <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, marginRight: 20, borderRadius: 5, backgroundColor: colors.popupDanger[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+                  <TextFont translate={false} style={{color:"white", fontSize: 15}}>{toast.message}</TextFont>
+                </View>
+              ),
+            }
+          })
+          this.popupWait?.setPopupVisible(false)
+          return
+        }
         this.importedItems = []
         this.importedItemsIndices = []
         var inputList = [];
         var inputType = "";
-        if(this.linkInput!=="" || this.input==""){
-          this.method = attemptToTranslate("Using nook.lol link to import data")+"\n"+ attemptToTranslate("(First option)")+"\n";
+        if((this.linkInput!=="") && type=="nook.lol"){
+          this.method = attemptToTranslate("Using nook.lol link to import data")+"\n";
           var responseJSON = await (await fetch(this.linkInput+"/json?locale=en-us")).json();
           inputType = responseJSON["type"];
           inputList = responseJSON["data"];
           this.method = this.method + "\nImport type: " + inputType;
-        } else {
-          this.method = attemptToTranslate("Using list of results to import data")+"\n"+attemptToTranslate("(Second option)")+"\n";
+        } else if (this.input!=="" && type=="catalogScanner"){
+          this.method = attemptToTranslate("Using list of results to import data")+"\n";
           inputList = this.input.split("\n");
         }
         if(inputList===undefined)
@@ -70,11 +105,11 @@ class CatalogPage extends Component {
               if(global.dataLoadedAll[i][a]["Name"]!==undefined && global.dataLoadedAll[i][a]["Name"].toString().toLowerCase() === inputList[z].toString().toLowerCase()){
                 success = true;
 
-                if(this.includeVillagers===false && global.dataLoadedAll[i][a]["Data Category"]!==undefined && global.dataLoadedAll[i][a]["Data Category"]==="Villagers"){
+                if(this.state.includeVillagers===false && global.dataLoadedAll[i][a]["Data Category"]!==undefined && global.dataLoadedAll[i][a]["Data Category"]==="Villagers"){
                   continue
                 }
 
-                if(this.includeRecipes===false && global.dataLoadedAll[i][a]["Data Category"]!==undefined && global.dataLoadedAll[i][a]["Data Category"]==="Recipes"){
+                if(this.state.includeRecipes===false && global.dataLoadedAll[i][a]["Data Category"]!==undefined && global.dataLoadedAll[i][a]["Data Category"]==="Recipes"){
                   continue
                 }
 
@@ -116,7 +151,7 @@ class CatalogPage extends Component {
           totalSuccess: this.totalSuccess,
           totalErrorItems: totalErrorItems.join("\n")
         })
-        if(this.selectVariations){
+        if(this.state.selectVariations){
           this.setState({currentItemIndex:-1, currentItemVariation: this.importedItems[0]})
           this.popupSelectVariations?.setPopupVisible(true);
           this.nextVariationsButton()
@@ -144,7 +179,7 @@ class CatalogPage extends Component {
           amountToSkip++
         } else if (item?.checkListKey.includes("fenceCheckList")){
           amountToSkip++
-        } else if(this.skipCompletedVariations === true && variationsCheckedPercent(item, this.importedItemsIndices[this.state.currentItemIndex+1+amountToSkip]) === 1){
+        } else if(this.state.skipCompletedVariations === true && variationsCheckedPercent(item, this.importedItemsIndices[this.state.currentItemIndex+1+amountToSkip]) === 1){
           amountToSkip++
         } else if((item.hasOwnProperty("Variation") && item["Variation"]!=="NA") || item.hasOwnProperty("Pattern") && item["Pattern"]!=="NA"){
           break
@@ -173,7 +208,7 @@ class CatalogPage extends Component {
           break
         } else if (item?.checkListKey.includes("fenceCheckList")){
           amountToSkip++
-        } else if(this.skipCompletedVariations === true && variationsCheckedPercent(item, this.importedItemsIndices[this.state.currentItemIndex-1-amountToSkip]) === 1){
+        } else if(this.state.skipCompletedVariations === true && variationsCheckedPercent(item, this.importedItemsIndices[this.state.currentItemIndex-1-amountToSkip]) === 1){
           amountToSkip++
         } else if((item.hasOwnProperty("Variation") && item["Variation"]!=="NA") || item.hasOwnProperty("Pattern") && item["Pattern"]!=="NA"){
           break
@@ -189,35 +224,28 @@ class CatalogPage extends Component {
     }
   }
 
-
-  render(){
-    return(
-      <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
+  renderScene = ({ route }) => {
+    switch (route.key) {
+      case 'Catalog Scanner':
+        return <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
         <ScrollView>
           <View style={{height: 100}}/>
-          <TextFont bold={true} style={{fontSize: 37, marginLeft: 30, marginRight: 40, color:colors.textBlack[global.darkMode]}}>Catalog Import</TextFont>
-          <TouchableOpacity onPress={() => openURL('https://nook.lol/') }>
-            <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 17, marginLeft: 10, marginRight: 10, textAlign:"center", marginVertical:50}}>{"Visit https://nook.lol/ for more information"}</TextFont>
-          </TouchableOpacity>
-          <TextFont bold={true} style={{fontSize: 20, marginLeft: 30, marginRight: 40, color:colors.textBlack[global.darkMode]}}>{"Paste nook.lol link and Import"}</TextFont>
-          <View style={{height: 15}}/>
-          <TextInput
-            allowFontScaling={false}
-            style={{borderRadius: 10, paddingVertical: 10, paddingHorizontal: 20, marginHorizontal: 20, fontSize: 18, backgroundColor:colors.white[global.darkMode], color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
-            onChangeText={(text) => {
-              this.linkInput = text.replace("https://","")
-              this.linkInput = "https://" + this.linkInput.replace(/ /g,'')
-              if(text===""){
-                this.linkInput = ""
-              }
-            }}
-            placeholder={"https://nook.lol/abc123"}
-            placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
-            multiline={false}
-          />
-          <View style={{height: 15}}/>
-          <TextFont bold={true} style={{textAlign:"center",fontSize: 15, marginLeft: 30, marginRight: 40, color:colors.textBlack[global.darkMode]}}>{"or..."}</TextFont>
-          <View style={{height: 15}}/>
+          <TextFont bold={true} style={{fontSize: 37, marginLeft: 30, marginRight: 30, color:colors.textBlack[global.darkMode]}}>Catalog Import</TextFont>
+          <TextFont bold={true} style={{fontSize: 17, marginLeft: 30, marginRight: 30, color:colors.textBlack[global.darkMode]}}>With the catalog scanner app</TextFont>
+          <View style={{height: 35}}/>
+          <CatalogScannerApp/>
+          {global.language!=="English (Europe)" && global.language!=="English" ? <View style={{marginTop:10}}>
+            <View style={{height: 10}}/>
+            <View style={{backgroundColor: colors.popupDanger[global.darkMode]}}>
+              <View style={{height: 10}}/>
+              <TextFont bold={true} style={{fontSize: 16, marginRight: 20, color:colors.textWhite[0], alignSelf: 'flex-start', padding:5, paddingHorizontal:10, marginHorizontal: 20, borderRadius:10}}>{"For other languages other than English items please use nook.lol"}</TextFont>
+              <TextFont bold={true} style={{fontSize: 16, marginRight: 20, color:colors.textWhite[0], alignSelf: 'flex-start', padding:5, paddingHorizontal:10, marginHorizontal: 20, borderRadius:10}}>{"This can be found on the second tab of this page above."}</TextFont>
+              <View style={{height: 10}}/>
+            </View>
+            </View> : 
+          <View/>}
+          <View style={{height: 25}}/>
+          
           <TextFont bold={true} style={{fontSize: 20, marginLeft: 30, marginRight: 40, color:colors.textBlack[global.darkMode]}}>{"Paste results here and Import"}</TextFont>
           <View style={{height: 15}}/>
           <TextInput
@@ -228,26 +256,85 @@ class CatalogPage extends Component {
             placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
             multiline={true}
           />
-          <View style={{height: 20}}/>
+          <View style={{height: 10}}/>
           <View style={{marginHorizontal: 10}}>
-            <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={async ()=>{await this.import();}} text={"Import"}/>
+            <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={async ()=>{await this.import("catalogScanner");}} text={"Import"}/>
           </View>
           <View style={{height: 10}}/>
           <TextFont suffix={"\n"+attemptToTranslate("Please be patient.")} bold={false} style={{fontSize: 13, marginLeft: 30, marginRight: 30, textAlign:"center",color:colors.textBlack[global.darkMode]}}>{"May take a few seconds to complete."}</TextFont>
           <View style={{height: 25}}/>
-          <IncludeSwitch header={"Select Variations"} text={"Open a popup to select variations of the item when importing. Only the items with variations will create a popup."} defaultValue={this.selectVariations} toggleValue={()=>{this.selectVariations = !this.selectVariations}}/>
+          <IncludeSwitch header={"Select Variations"} text={"Open a popup to select variations of the item when importing. Only the items with variations will create a popup."} value={this.state.selectVariations} toggleValue={()=>{this.setState({selectVariations:!this.state.selectVariations})}}/>
           <View style={{height: 5}}/>
-          <IncludeSwitch header={"Skip Completed Variations"} text={"Don't show variation selection for items you've already collected all the variations for. This option is only used when 'Select Variations' is enabled."} defaultValue={this.skipCompletedVariations} toggleValue={()=>{this.skipCompletedVariations = !this.skipCompletedVariations}}/>
+          <IncludeSwitch header={"Skip Completed Variations"} text={"Don't show variation selection for items you've already collected all the variations for. This option is only used when 'Select Variations' is enabled."} value={this.state.skipCompletedVariations} toggleValue={()=>{this.setState({skipCompletedVariations:!this.state.skipCompletedVariations})}}/>
           <View style={{height: 5}}/>
-          <IncludeSwitch header={"Include Villagers"} text={"Include villagers when importing items. Some villagers have the same name as items. (Does not apply to Nook.lol imports)"} defaultValue={this.includeVillagers} toggleValue={()=>{this.includeVillagers = !this.includeVillagers}}/>
+          <IncludeSwitch header={"Include Recipes"} text={"Include recipes when importing items. Recipes and the item counterpart have the same name."} value={this.state.includeRecipes} toggleValue={()=>{this.setState({includeRecipes:!this.state.includeRecipes})}}/>
           <View style={{height: 5}}/>
-          <IncludeSwitch header={"Include Recipes"} text={"Include recipes when importing items. Recipes and the item counterpart have the same name. (Does not apply to Nook.lol imports)"} defaultValue={this.includeRecipes} toggleValue={()=>{this.includeRecipes = !this.includeRecipes}}/>
+          <IncludeSwitch header={"Include Villagers"} text={"Include villagers when importing items. Some villagers have the same name as items."} value={this.state.includeVillagers} toggleValue={()=>{this.setState({includeVillagers:!this.state.includeVillagers})}}/>
           <View style={{height: 90}}/>
         </ScrollView>
+      </View>;
+      case 'Nook.lol':
+        return <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
+          <ScrollView>
+            <View style={{height: 100}}/>
+            <TextFont bold={true} style={{fontSize: 37, marginLeft: 30, marginRight: 30, color:colors.textBlack[global.darkMode]}}>Catalog Import</TextFont>
+            <TextFont bold={true} style={{fontSize: 17, marginLeft: 30, marginRight: 30, color:colors.textBlack[global.darkMode]}}>With nook.lol</TextFont>
+            <View style={{height: 45}}/>
+            <TextFont bold={true} style={{fontSize: 20, marginLeft: 30, marginRight: 40, color:colors.textBlack[global.darkMode]}}>{"Paste nook.lol link and Import"}</TextFont>
+            <View style={{height: 15}}/>
+            <TextInput
+              allowFontScaling={false}
+              style={{borderRadius: 10, paddingVertical: 10, paddingHorizontal: 20, marginHorizontal: 20, fontSize: 18, backgroundColor:colors.white[global.darkMode], color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
+              onChangeText={(text) => {
+                this.linkInput = text.replace("https://","")
+                this.linkInput = "https://" + this.linkInput.replace(/ /g,'')
+                if(text===""){
+                  this.linkInput = ""
+                }
+              }}
+              placeholder={"https://nook.lol/abc123"}
+              placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+              multiline={false}
+            />
+            <TouchableOpacity onPress={() => openURL('https://nook.lol/') }>
+              <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 17, marginLeft: 10, marginRight: 10, textAlign:"center", marginVertical:10}}>{"Visit https://nook.lol/ for more information"}</TextFont>
+            </TouchableOpacity>
+            <View style={{height: 10}}/>
+            <View style={{marginHorizontal: 10}}>
+              <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={async ()=>{await this.import("nook.lol");}} text={"Import"}/>
+            </View>
+            <View style={{height: 10}}/>
+            <TextFont suffix={"\n"+attemptToTranslate("Please be patient.")} bold={false} style={{fontSize: 13, marginLeft: 30, marginRight: 30, textAlign:"center",color:colors.textBlack[global.darkMode]}}>{"May take a few seconds to complete."}</TextFont>
+            <View style={{height: 25}}/>
+            <IncludeSwitch header={"Select Variations"} text={"Open a popup to select variations of the item when importing. Only the items with variations will create a popup."} value={this.state.selectVariations} toggleValue={()=>{this.setState({selectVariations:!this.state.selectVariations})}}/>
+            <View style={{height: 5}}/>
+            <IncludeSwitch header={"Skip Completed Variations"} text={"Don't show variation selection for items you've already collected all the variations for. This option is only used when 'Select Variations' is enabled."} value={this.state.skipCompletedVariations} toggleValue={()=>{this.setState({skipCompletedVariations:!this.state.skipCompletedVariations})}}/>
+            <View style={{height: 90}}/>
+          </ScrollView>
+        </View>;
+      default:
+        return <View/>;
+    }
+  };
+
+  handleIndexChange = index => this.setState({index});
+
+  render(){
+    return(
+      <>
+        <TabView
+          lazy
+          gestureHandlerProps={{ failOffsetX: this.state.index === 0 ? 1 : 100}}
+          navigationState={this.state}
+          renderScene={this.renderScene}
+          onIndexChange={(this.handleIndexChange)}
+          initialLayout={{ width: Dimensions.get('window').width }}
+          renderTabBar={renderTabBar}
+        />
         <Popup 
           ref={(popup) => this.popup = popup}
           button1={"OK"}
-          button1Action={async ()=>{if(this.selectVariations===false && await getStorage("loginEmail","")==="") this.popupBackup?.setPopupVisible(true)}}
+          button1Action={async ()=>{if(this.state.selectVariations===false && await getStorage("loginEmail","")==="") this.popupBackup?.setPopupVisible(true)}}
           text={"Import Results"}
           textLower={this.state.method + "\n"+attemptToTranslate("Imported:") + " " + this.state.totalSuccess + " " + attemptToTranslate("items") +"\n" + attemptToTranslate("Errors:") + " " + this.state.totalFail + " " + attemptToTranslate("items") + "\n" + this.state.totalErrorItems}
         />
@@ -301,9 +388,8 @@ class CatalogPage extends Component {
               })
             }
           </View>
-          
         </PopupInfoCustom>
-     </View>
+      </>
     )
   }
 }
@@ -369,15 +455,10 @@ export class VariationItemCatalog extends Component{
 class IncludeSwitch extends Component{
   constructor(props){
     super(props)
-    this.state={value:this.props.defaultValue}
-  }
-  toggleSetting = () => {
-    this.props.toggleValue()
-    this.setState({value:!this.state.value})
   }
   render(){
     return(
-      <TouchableOpacity activeOpacity={0.7} onPress={() => {this.toggleSetting()}}>
+      <TouchableOpacity activeOpacity={0.7} onPress={() => {this.props.toggleValue()}}>
         <View style={{paddingVertical: 10, paddingHorizontal:5, flexDirection:"row",flex:1,alignItems: 'center',marginHorizontal: 15, borderRadius: 10,backgroundColor:colors.white[global.darkMode]}}>
           <View style={{marginHorizontal: 10,padding:5}}>
             <TextFont bold={true} style={{fontSize: 18, marginRight: 65,color:colors.textBlack[global.darkMode]}}>{this.props.header}</TextFont>
@@ -385,15 +466,56 @@ class IncludeSwitch extends Component{
           </View>
           <View style={{position:"absolute", right: 8, transform: [{ scale: 0.75 }]}}>
             <ToggleSwitch
-              isOn={this.state.value}
+              isOn={this.props.value}
               onColor="#57b849"
               offColor="#DFDFDF"
               size="large"
-              onToggle={() => {this.toggleSetting()}}
+              onToggle={() => {this.props.toggleValue()}}
             />
           </View>
         </View>
       </TouchableOpacity>
     )
+  }
+}
+
+const renderTabBar = props => (
+  <TabBar
+    {...props}
+    indicatorStyle={{ backgroundColor: colors.lightDarkAccentHeavy[global.darkMode], height:'100%', opacity: 0.6, borderRadius: 10 }}
+    style={{ backgroundColor: colors.white[global.darkMode]}}
+    activeColor={colors.textBlack[global.darkMode]}
+    inactiveColor={colors.textBlack[global.darkMode]}
+    getLabelText={({ route }) => route.title}
+    renderLabel={({ route, focused, color }) => (
+      <TextFont style={{ color, textAlign:"center", fontSize: 14}}>
+        {route.title}
+      </TextFont>
+    )}
+  />
+);
+
+export class CatalogScannerApp extends Component{
+  render(){
+    return <TouchableOpacity onPress={()=>{openURL("https://play.google.com/store/apps/details?id=com.acnh.catalog_scanner")}} activeOpacity={0.6}>
+      <View style={{flexDirection:"row", alignContent:"center", justifyContent:"center", marginHorizontal: 40}}>
+        <Image 
+          source={require("../assets/icons/acnh-scanner-app-icon.png")} 
+          style={{width:85, height:85, resizeMode:"contain",borderColor: colors.lightDarkAccent[global.darkMode],borderWidth: 2, borderRadius: 18}}
+        />
+        <View style={{marginLeft: 10, alignContent:'center', justifyContent:"center"}}>
+          <TextFont translate={false} bold={true} style={{fontSize: 18, color:colors.textBlack[global.darkMode]}}>{"Catalog Scanner App"}</TextFont>
+          <TextFont translate={false} bold={false} style={{fontSize: 14, marginLeft:2, color:colors.textBlack[global.darkMode]}}>{"For ACNH Pocket Guide"}</TextFont>
+          <View style={{height: 5}}/> 
+          <View style={{alignContent:"flex-end", justifyContent:"space-between",flexDirection:"row"}}>
+          <TextFont bold={true} style={{fontSize: 16, marginRight: 20, color:colors.textWhite[0], backgroundColor:colors.popupSuccess[global.darkMode], alignSelf: 'flex-start', padding:5, paddingHorizontal:10, marginTop:3, borderRadius:10}}>{"Free"}</TextFont>
+          <Image 
+            source={require("../assets/icons/google-play-badge.png")} 
+            style={{width:145, height:60, resizeMode:"contain",}}
+          />
+          </View>
+        </View>
+      </View>
+    </TouchableOpacity>
   }
 }
