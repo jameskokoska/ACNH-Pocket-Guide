@@ -6,6 +6,7 @@ export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 export const changelog = `
 -New catalog scanner!
 -More information on the Catalog Scanner Page
+-New Monthly Gold Supporter: Utumno! Thank you!
 -
 -Fixed loading screen of integrated web tools
 -Added ability to hide language warning popup for integrated web tools
