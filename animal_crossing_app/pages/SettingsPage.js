@@ -251,7 +251,7 @@ export class LanguagePicker extends Component{
       {label: "Deutsch", value: "German",},
       {label: "Русский", value: "Russian",},
       {label: "Italiano", value: "Italian",},
-      {label: "Nederlandse", value: "Dutch",},
+      {label: "Nederlands", value: "Dutch",},
       {label: "简体中文", value: "Chinese",},
       {label: "Português" + " " + attemptToTranslate("(Items not translated)"), value: "Portuguese",},
       {label: "Čeština" + " " + attemptToTranslate("(Items not translated)"), value: "Czech",},
