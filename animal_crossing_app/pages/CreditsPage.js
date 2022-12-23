@@ -89,6 +89,10 @@ class CreditsPage extends Component {
         <SubHeader style={{marginBottom:5}}>{attemptToTranslate("Slovak") + ":"}</SubHeader>
         <SubHeader> SirDave</SubHeader>
       </CreditBox>
+      <CreditBox>
+        <SubHeader style={{marginBottom:5}}>{attemptToTranslate("Korean") + ":"}</SubHeader>
+        <SubHeader> Hwaryu</SubHeader>
+      </CreditBox>
       
       <View style={{height:30}}/>
       <SubHeader>Additional Information</SubHeader>

@@ -13,6 +13,7 @@
       "Italian": "Home",
       "Dutch": "Beginpagina",
       "Chinese": "主页",
+      "Korean": "홈페이지",
       "Portuguese": "Início ",
       "Czech": "Domů",
       "Slovak": "Domov"
@@ -29,6 +30,7 @@
       "Italian": "Tutto",
       "Dutch": "Alles",
       "Chinese": "全类目",
+      "Korean": "전부",
       "Portuguese": "Tudo",
       "Czech": "Všechno",
       "Slovak": "Všetko"
@@ -45,6 +47,7 @@
       "Italian": "Creature + Museo",
       "Dutch": "Insecten en Museum",
       "Chinese": "生物+博物馆",
+      "Korean": "생물 + 박물관",
       "Portuguese": "Criaturas + Museu",
       "Czech": "Tvorové + Muzeum",
       "Slovak": "Tvori + Múzeum"
@@ -61,6 +64,7 @@
       "Italian": "Museo",
       "Dutch": "Museum",
       "Chinese": "博物馆",
+      "Korean": "박물관",
       "Portuguese": "Museu",
       "Czech": "Muzeum",
       "Slovak": "Múzeum"
@@ -93,6 +97,7 @@
       "Italian": "Canzoni",
       "Dutch": "Liedjes",
       "Chinese": "歌曲",
+      "Korean": "노래",
       "Portuguese": "Canções ",
       "Czech": "Písně",
       "Slovak": "Piesne"
@@ -141,6 +146,7 @@
       "Italian": "Abitanti",
       "Dutch": "Bewoners",
       "Chinese": "岛民",
+      "Korean": "주민",
       "Portuguese": "Moradores",
       "Czech": "Vesničané",
       "Slovak": "Dedinčania"
@@ -157,6 +163,7 @@
       "Italian": "Costruzione",
       "Dutch": "Bouwmogelijkheden",
       "Chinese": "建筑",
+      "Korean": "건축",
       "Portuguese": "Construções ",
       "Czech": "Stavebnictví",
       "Slovak": "Stavebníctvo"
@@ -269,6 +276,7 @@
       "Italian": "Impostazioni",
       "Dutch": "Instellingen",
       "Chinese": "设置",
+      "Korean": "설정",
       "Portuguese": "Configurações ",
       "Czech": "Nastavení",
       "Slovak": "Nastavenia"
@@ -317,6 +325,7 @@
       "Italian": "Domani",
       "Dutch": "Morgen",
       "Chinese": "明天",
+      "Korean": "내일",
       "Portuguese": "Amanhã",
       "Czech": "Zítra",
       "Slovak": "Zajtra"
@@ -333,6 +342,7 @@
       "Italian": "Questa Settimana",
       "Dutch": "Deze week",
       "Chinese": "本周",
+      "Korean": "이주",
       "Portuguese": "Esta Semana",
       "Czech": "Tento týden",
       "Slovak": "Tento týždeň"
@@ -365,6 +375,7 @@
       "Italian": "Gennaio",
       "Dutch": "Januari",
       "Chinese": "一月",
+      "Korean": "1월",
       "Portuguese": "Janeiro",
       "Czech": "Leden",
       "Slovak": "Január"
@@ -381,6 +392,7 @@
       "Italian": "Febbraio",
       "Dutch": "Februari",
       "Chinese": "二月",
+      "Korean": "2월",
       "Portuguese": "Fevereiro",
       "Czech": "Únor",
       "Slovak": "Február"
@@ -397,6 +409,7 @@
       "Italian": "Marzo",
       "Dutch": "Maart",
       "Chinese": "三月",
+      "Korean": "3월",
       "Portuguese": "Março ",
       "Czech": "Březen",
       "Slovak": "Marec"
@@ -413,6 +426,7 @@
       "Italian": "Aprile",
       "Dutch": "April",
       "Chinese": "四月",
+      "Korean": "4웧",
       "Portuguese": "Abril",
       "Czech": "Duben",
       "Slovak": "Apríl"
@@ -429,6 +443,7 @@
       "Italian": "Magg",
       "Dutch": "Mei",
       "Chinese": "五月",
+      "Korean": "5월",
       "Portuguese": "Maio",
       "Czech": "Květ",
       "Slovak": "Máj"
@@ -445,6 +460,7 @@
       "Italian": "Giugno",
       "Dutch": "Juni",
       "Chinese": "六月",
+      "Korean": "6월",
       "Portuguese": "Junho",
       "Czech": "Červen",
       "Slovak": "Jún"
@@ -461,6 +477,7 @@
       "Italian": "Luglio",
       "Dutch": "Juli",
       "Chinese": "七月",
+      "Korean": "7월",
       "Portuguese": "Julho",
       "Czech": "Červenec",
       "Slovak": "Júl"
@@ -477,6 +494,7 @@
       "Italian": "Agosto",
       "Dutch": "Augustus",
       "Chinese": "八月",
+      "Korean": "8월",
       "Portuguese": "Agosto",
       "Czech": "Srpen",
       "Slovak": "August"
@@ -493,6 +511,7 @@
       "Italian": "Settembre",
       "Dutch": "September",
       "Chinese": "九月",
+      "Korean": "9월",
       "Portuguese": "Setembro ",
       "Czech": "Září",
       "Slovak": "September"
@@ -509,6 +528,7 @@
       "Italian": "Ottobre",
       "Dutch": "Oktober",
       "Chinese": "十月",
+      "Korean": "10월",
       "Portuguese": "Outubro",
       "Czech": "Říjen",
       "Slovak": "Október"
@@ -525,6 +545,7 @@
       "Italian": "Novembre",
       "Dutch": "November",
       "Chinese": "十一月",
+      "Korean": "11월",
       "Portuguese": "Novembro",
       "Czech": "Listopad",
       "Slovak": "November"
@@ -541,6 +562,7 @@
       "Italian": "Dicembre",
       "Dutch": "December",
       "Chinese": "十二月",
+      "Korean": "12월",
       "Portuguese": "Dezembro",
       "Czech": "Prosinec",
       "Slovak": "December"
@@ -557,6 +579,7 @@
       "Italian": "Genn",
       "Dutch": "Jan",
       "Chinese": "一月",
+      "Korean": "1월",
       "Portuguese": "Jan",
       "Czech": "Led",
       "Slovak": "Jan"
@@ -573,6 +596,7 @@
       "Italian": "Febbr",
       "Dutch": "Feb",
       "Chinese": "二月",
+      "Korean": "2월",
       "Portuguese": "Fev",
       "Czech": "Únor",
       "Slovak": "Feb"
@@ -589,6 +613,7 @@
       "Italian": "Mar",
       "Dutch": "Mar",
       "Chinese": "三月",
+      "Korean": "3월",
       "Portuguese": "Mar",
       "Czech": "Břez",
       "Slovak": "Mar"
@@ -605,6 +630,7 @@
       "Italian": "Apr",
       "Dutch": "Apr",
       "Chinese": "四月",
+      "Korean": "4웧",
       "Portuguese": "Abr",
       "Czech": "Dub",
       "Slovak": "Apr"
@@ -621,6 +647,7 @@
       "Italian": "Giu",
       "Dutch": "Jun",
       "Chinese": "六月",
+      "Korean": "6월",
       "Portuguese": "Jun",
       "Czech": "Červen",
       "Slovak": "Jún"
@@ -637,6 +664,7 @@
       "Italian": "Lug",
       "Dutch": "Jul",
       "Chinese": "七月",
+      "Korean": "7월",
       "Portuguese": "Jul",
       "Czech": "Červenec",
       "Slovak": "Júl"
@@ -653,6 +681,7 @@
       "Italian": "Ag",
       "Dutch": "Aug",
       "Chinese": "八月",
+      "Korean": "8월",
       "Portuguese": "Ago",
       "Czech": "Srp",
       "Slovak": "Aug"
@@ -669,6 +698,7 @@
       "Italian": "Sett",
       "Dutch": "Sep",
       "Chinese": "九月",
+      "Korean": "9월",
       "Portuguese": "Set",
       "Czech": "Září",
       "Slovak": "Sep"
@@ -685,6 +715,7 @@
       "Italian": "Ott",
       "Dutch": "Okt",
       "Chinese": "十月",
+      "Korean": "10월",
       "Portuguese": "Out",
       "Czech": "Říj",
       "Slovak": "Okt"
@@ -701,6 +732,7 @@
       "Italian": "Nov",
       "Dutch": "Nov",
       "Chinese": "十一月",
+      "Korean": "11월",
       "Portuguese": "Nov",
       "Czech": "List",
       "Slovak": "Nov"
@@ -717,6 +749,7 @@
       "Italian": "Dic",
       "Dutch": "Dec",
       "Chinese": "十二月",
+      "Korean": "12월",
       "Portuguese": "Dez",
       "Czech": "Pros",
       "Slovak": "Dec"
@@ -733,6 +766,7 @@
       "Italian": "Lun",
       "Dutch": "Ma",
       "Chinese": "周一",
+      "Korean": "월",
       "Portuguese": "Seg",
       "Czech": "Pon",
       "Slovak": "Pon"
@@ -749,6 +783,7 @@
       "Italian": "Mart",
       "Dutch": "Dins",
       "Chinese": "周二",
+      "Korean": "화",
       "Portuguese": "Terç",
       "Czech": "Úterý",
       "Slovak": "Utorok"
@@ -765,6 +800,7 @@
       "Italian": "Mart",
       "Dutch": "Di",
       "Chinese": "周二",
+      "Korean": "화",
       "Portuguese": "Terç",
       "Czech": "Úte",
       "Slovak": "Uto"
@@ -781,6 +817,7 @@
       "Italian": "Mer",
       "Dutch": "Woe",
       "Chinese": "周三",
+      "Korean": "수",
       "Portuguese": "Qua",
       "Czech": "Stř",
       "Slovak": "Str"
@@ -797,6 +834,7 @@
       "Italian": "Gio",
       "Dutch": "Don",
       "Chinese": "周四",
+      "Korean": "목",
       "Portuguese": "Qui",
       "Czech": "Čtvrtek",
       "Slovak": "Štvrtok"
@@ -813,6 +851,7 @@
       "Italian": "Gio",
       "Dutch": "Do",
       "Chinese": "周四",
+      "Korean": "목",
       "Portuguese": "Qui",
       "Czech": "Čtvr",
       "Slovak": "Štr"
@@ -829,6 +868,7 @@
       "Italian": "Ven",
       "Dutch": "Vrij",
       "Chinese": "周五",
+      "Korean": "금",
       "Portuguese": "Sx",
       "Czech": "Pát",
       "Slovak": "Pia"
@@ -845,6 +885,7 @@
       "Italian": "Sab",
       "Dutch": "Za",
       "Chinese": "周六",
+      "Korean": "토",
       "Portuguese": "Sab",
       "Czech": "Sob",
       "Slovak": "Sob"
@@ -861,6 +902,7 @@
       "Italian": "Dom",
       "Dutch": "Zo",
       "Chinese": "周日",
+      "Korean": "일",
       "Portuguese": "Dom",
       "Czech": "Ned",
       "Slovak": "Ned"
@@ -877,6 +919,7 @@
       "Italian": "AM",
       "Dutch": "AM",
       "Chinese": "上午",
+      "Korean": "AM",
       "Portuguese": "AM",
       "Czech": "AM",
       "Slovak": "AM"
@@ -893,6 +936,7 @@
       "Italian": "PM",
       "Dutch": "PM",
       "Chinese": "下午",
+      "Korean": "PM",
       "Portuguese": "PM",
       "Czech": "PM",
       "Slovak": "PM"
@@ -909,6 +953,7 @@
       "Italian": "Da Fare",
       "Dutch": "Nog te doen",
       "Chinese": "待办",
+      "Korean": "할 일",
       "Portuguese": "Coisas a fazer",
       "Czech": "To-Do",
       "Slovak": "To-Do"
@@ -1146,6 +1191,7 @@
       "Italian": "Sì",
       "Dutch": "Ja",
       "Chinese": "是",
+      "Korean": "네",
       "Portuguese": "Sim",
       "Czech": "Ano",
       "Slovak": "Áno"
@@ -1162,6 +1208,7 @@
       "Italian": "No",
       "Dutch": "Nee",
       "Chinese": "否",
+      "Korean": "아니",
       "Portuguese": "Não ",
       "Czech": "Ne",
       "Slovak": "Nie"
@@ -1210,6 +1257,7 @@
       "Italian": "Lunedì",
       "Dutch": "Maandag",
       "Chinese": "周一",
+      "Korean": "월요일",
       "Portuguese": "Segunda",
       "Czech": "Pondělí",
       "Slovak": "Pondelok"
@@ -1226,6 +1274,7 @@
       "Italian": "Martedì",
       "Dutch": "Dinsdag",
       "Chinese": "周二",
+      "Korean": "화요일",
       "Portuguese": "Terça ",
       "Czech": "Úterý",
       "Slovak": "Utorok"
@@ -1242,6 +1291,7 @@
       "Italian": "Mercoledì",
       "Dutch": "Woensdag",
       "Chinese": "周三",
+      "Korean": "수요일",
       "Portuguese": "Quarta ",
       "Czech": "Středa",
       "Slovak": "Streda"
@@ -1258,6 +1308,7 @@
       "Italian": "Giovedì",
       "Dutch": "Donderdag",
       "Chinese": "周四",
+      "Korean": "목요일",
       "Portuguese": "Quinta",
       "Czech": "Čtvrtek",
       "Slovak": "Štvrtok"
@@ -1274,6 +1325,7 @@
       "Italian": "Venerdì",
       "Dutch": "Vrijdag",
       "Chinese": "周五",
+      "Korean": "금요일",
       "Portuguese": "Sexta",
       "Czech": "Pátek",
       "Slovak": "Piatok"
@@ -1290,6 +1342,7 @@
       "Italian": "Sabato",
       "Dutch": "Zaterdag",
       "Chinese": "周六",
+      "Korean": "토요일",
       "Portuguese": "Sábado ",
       "Czech": "Sobota",
       "Slovak": "Sobota"
@@ -1306,6 +1359,7 @@
       "Italian": "Domenica ",
       "Dutch": "Zondag",
       "Chinese": "周日",
+      "Korean": "일요일",
       "Portuguese": "Domingo",
       "Czech": "Neděle",
       "Slovak": "Nedeľa"
@@ -1370,6 +1424,7 @@
       "Italian": "Pesci ",
       "Dutch": "Vissen",
       "Chinese": "鱼类",
+      "Korean": "물고기",
       "Portuguese": "Peixes",
       "Czech": "Ryby",
       "Slovak": "Ryby"
@@ -1386,6 +1441,7 @@
       "Italian": "Creature Marine",
       "Dutch": "Zeewezens",
       "Chinese": "海洋生物",
+      "Korean": "해산물",
       "Portuguese": "Criaturas do Mar",
       "Czech": "Mořští Živočichové",
       "Slovak": "Morské Živočíchy"
@@ -1402,6 +1458,7 @@
       "Italian": "Insetti ",
       "Dutch": "Insecten",
       "Chinese": "虫子",
+      "Korean": "곤층",
       "Portuguese": "Insetos",
       "Czech": "Hmyz",
       "Slovak": "Hmyz"
@@ -1418,6 +1475,7 @@
       "Italian": "Fossili",
       "Dutch": "Fossielen",
       "Chinese": "化石",
+      "Korean": "화석",
       "Portuguese": "Fósseis ",
       "Czech": "Fosílie",
       "Slovak": "Fosílie"
@@ -1434,6 +1492,7 @@
       "Italian": "Arte",
       "Dutch": "Kunst",
       "Chinese": "艺术品",
+      "Korean": "미술품",
       "Portuguese": "Artes",
       "Czech": "Umění",
       "Slovak": "Umenie"
@@ -1450,6 +1509,7 @@
       "Italian": "Emozioni",
       "Dutch": "Emoties",
       "Chinese": "反应",
+      "Korean": "리액션",
       "Portuguese": "Emotes",
       "Czech": "Emoty",
       "Slovak": "Emoty"
@@ -1482,6 +1542,7 @@
       "Italian": "Nome",
       "Dutch": "Naam",
       "Chinese": "姓名",
+      "Korean": "이름",
       "Portuguese": "Nome",
       "Czech": "Jméno",
       "Slovak": "Meno"
@@ -1498,6 +1559,7 @@
       "Italian": "Isola",
       "Dutch": "Eiland",
       "Chinese": "岛屿名称",
+      "Korean": "섬",
       "Portuguese": "Ilha",
       "Czech": "Ostrov",
       "Slovak": "Ostrov"
@@ -1514,6 +1576,7 @@
       "Italian": "Emisfero Nord",
       "Dutch": "Noordelijk Halfrond",
       "Chinese": "北半球",
+      "Korean": "북반구",
       "Portuguese": "Hemisfério norte",
       "Czech": "Severní Hemisféra",
       "Slovak": "Severná Hemisféra"
@@ -1530,6 +1593,7 @@
       "Italian": "Emisfero Sud",
       "Dutch": "Zuidelijk Halfrond",
       "Chinese": "南半球",
+      "Korean": "남반구",
       "Portuguese": "Hemisfério sul",
       "Czech": "Jižní Hemisféra",
       "Slovak": "Južná Hemisféra"
@@ -1594,6 +1658,7 @@
       "Italian": "Bottega di Nook",
       "Dutch": "Nook's Hoek",
       "Chinese": "Nook商店",
+      "Korean": "너굴상점",
       "Portuguese": "Nook's Cranny",
       "Czech": "Nook's Cranny",
       "Slovak": "Nook's Cranny"
@@ -1610,6 +1675,7 @@
       "Italian": "Sorelle Ago & Filo",
       "Dutch": "Able Sisters",
       "Chinese": "裁缝屋",
+      "Korean": "에이블 시스터즈",
       "Portuguese": "Able Sisters",
       "Czech": "Able Sisters",
       "Slovak": "Able Sisters"
@@ -1642,6 +1708,7 @@
       "Italian": "Creature catturabili ora",
       "Dutch": "Dieren die te vangen zijn",
       "Chinese": "目前可以捕获的生物",
+      "Korean": "현재 잡을 수 있는 생물",
       "Portuguese": "Criaturas que atualmente podem ser capturadas",
       "Czech": "Živočichové, která lze aktuálně chytit",
       "Slovak": "Živočíchy, ktoré sa dajú v súčasnosti chytiť"
@@ -1674,6 +1741,7 @@
       "Italian": "Cerca",
       "Dutch": "Zoeken",
       "Chinese": "搜索",
+      "Korean": "검색",
       "Portuguese": "Procurar",
       "Czech": "Vyhledávání",
       "Slovak": "Vyhľadávanie"
@@ -1786,6 +1854,7 @@
       "Italian": "Mare",
       "Dutch": "Zee",
       "Chinese": "海洋",
+      "Korean": "바다",
       "Portuguese": "Mar",
       "Czech": "Moře",
       "Slovak": "More"
@@ -1802,6 +1871,7 @@
       "Italian": "Musica",
       "Dutch": "Muziek",
       "Chinese": "音乐",
+      "Korean": "음악",
       "Portuguese": "Músicas ",
       "Czech": "Hudba",
       "Slovak": "Hudba"
@@ -1818,6 +1888,7 @@
       "Italian": "Ricette",
       "Dutch": "DIY's",
       "Chinese": "DIY手册+",
+      "Korean": "레시피",
       "Portuguese": "Receitas",
       "Czech": "Recepty",
       "Slovak": "Recepty"
@@ -1834,6 +1905,7 @@
       "Italian": "Ricette (DIYs)",
       "Dutch": "DIY's",
       "Chinese": "DIY手册+",
+      "Korean": "레시피 (DIY)",
       "Czech": "Recepty (DIY)",
       "Slovak": "Recepty (DIY)"
     },
@@ -1849,6 +1921,7 @@
       "Italian": "Strumenti",
       "Dutch": "Gereedschappen",
       "Chinese": "工具",
+      "Korean": "도구",
       "Portuguese": "Ferramentas",
       "Czech": "Nástroje",
       "Slovak": "Nástroje"
@@ -1865,6 +1938,7 @@
       "Italian": "Arredamento",
       "Dutch": "Meubels",
       "Chinese": "家具",
+      "Korean": "가구",
       "Portuguese": "Móveis ",
       "Czech": "Nábytek",
       "Slovak": "Nábytok"
@@ -1881,6 +1955,7 @@
       "Italian": "Abbigliamento",
       "Dutch": "Kleding",
       "Chinese": "服装",
+      "Korean": "옷",
       "Portuguese": "Roupas",
       "Czech": "Oblečení",
       "Slovak": "Oblečenie"
@@ -1897,6 +1972,7 @@
       "Italian": "Pavimento & Muri",
       "Dutch": "Vloeren & Behang",
       "Chinese": "地板和墙面",
+      "Korean": "벽지와 바닥",
       "Portuguese": "Pisos e paredes",
       "Czech": "Podlahy a Stěny",
       "Slovak": "Podlahy a Steny"
@@ -1929,6 +2005,7 @@
       "Italian": "Materiali",
       "Dutch": "Materialen",
       "Chinese": "材料",
+      "Korean": "재료",
       "Portuguese": "Materiais",
       "Czech": "Materiály",
       "Slovak": "Materiály"
@@ -1961,6 +2038,7 @@
       "Italian": "Rose",
       "Dutch": "Rozen",
       "Chinese": "玫瑰花",
+      "Korean": "장미",
       "Portuguese": "Roses",
       "Czech": "Růže",
       "Slovak": "Ruže"
@@ -1977,6 +2055,7 @@
       "Italian": "Viole",
       "Dutch": "Viooltjes",
       "Chinese": "三色堇",
+      "Korean": "팬지",
       "Portuguese": "Pansies",
       "Czech": "Macešky",
       "Slovak": "Sirôtky"
@@ -1993,6 +2072,7 @@
       "Italian": "Anemoni",
       "Dutch": "Anemonen",
       "Chinese": "风灯花",
+      "Korean": "아네모네",
       "Portuguese": "Windflowers",
       "Czech": "Windflowers",
       "Slovak": "Windflowers"
@@ -2009,6 +2089,7 @@
       "Italian": "Giacinti",
       "Dutch": "Hyacinten",
       "Chinese": "风信子",
+      "Korean": "하이신스",
       "Portuguese": "Hyacinths",
       "Czech": "Hyacinty",
       "Slovak": "Hyacinty"
@@ -2025,6 +2106,7 @@
       "Italian": "Gigli",
       "Dutch": "Lelies",
       "Chinese": "百合花",
+      "Korean": "백합",
       "Portuguese": "Lillies",
       "Czech": "Lilie",
       "Slovak": "Ľalie"
@@ -2041,6 +2123,7 @@
       "Italian": "Cosmee",
       "Dutch": "Cosmea",
       "Chinese": "波斯菊",
+      "Korean": "코스모스",
       "Portuguese": "Cosmos",
       "Czech": "Kosmos",
       "Slovak": "Kozmos"
@@ -2057,6 +2140,7 @@
       "Italian": "Crisantemi",
       "Dutch": "Chrysanten",
       "Chinese": "梅花",
+      "Korean": "국화",
       "Portuguese": "Mums",
       "Czech": "Chryzantémy",
       "Slovak": "Chryzantémy"
@@ -2073,6 +2157,7 @@
       "Italian": "Tulipani",
       "Dutch": "Tulpen",
       "Chinese": "郁金香",
+      "Korean": "튤립",
       "Portuguese": "Tulips",
       "Czech": "Tulipány",
       "Slovak": "Tulipány"
@@ -2121,6 +2206,7 @@
       "Italian": "Guarda Oggi",
       "Dutch": "Bekijk vandaag",
       "Chinese": "查看今天",
+      "Korean": "오늘 보기",
       "Portuguese": "Veja Hoje",
       "Czech": "Zobrazit Dnes",
       "Slovak": "Zobraziť Dnes"
@@ -2137,6 +2223,7 @@
       "Italian": "Apri Calendario",
       "Dutch": "Kalender openen",
       "Chinese": "打开日历",
+      "Korean": "달력 열기",
       "Portuguese": "Abrir Calendário ",
       "Czech": "Otevřít Kalendář",
       "Slovak": "Otvoriť Kalendár"
@@ -2153,6 +2240,7 @@
       "Italian": "Visualizza Tutto",
       "Dutch": "Alles bekijken",
       "Chinese": "查看全部",
+      "Korean": "전부 보기",
       "Portuguese": "Ver tudo",
       "Czech": "Zobrazit Vše",
       "Slovak": "Zobraziť Všetko"
@@ -2185,6 +2273,7 @@
       "Italian": "Municipio, Asta da salto, Scala",
       "Dutch": "Gemeentehuis, Polstok, Ladder",
       "Chinese": "市政厅，撑杆跳竿子，梯子",
+      "Korean": "안내소, 높이뛰기 장대, 사다리",
       "Portuguese": "Town Hall, Vaulting Pole, Ladder",
       "Czech": "Radnice, Skokanský Můstek, Žebřík",
       "Slovak": "Radnica, Skokanský Mostík, Rebrík"
@@ -2201,6 +2290,7 @@
       "Italian": "Scala",
       "Dutch": "Ladder",
       "Chinese": "梯子",
+      "Korean": "사다리",
       "Portuguese": "Ladder",
       "Czech": "Žebřík",
       "Slovak": "Rebrík"
@@ -2217,6 +2307,7 @@
       "Italian": "Asta da salto",
       "Dutch": "Polstok",
       "Chinese": "撑杆跳竿子",
+      "Korean": "높이뛰기 장대",
       "Portuguese": "Vaulting Pole",
       "Czech": "Skokanský Můstek",
       "Slovak": "Skokanský Mostík"
@@ -2233,6 +2324,7 @@
       "Italian": "Municipio, Scala",
       "Dutch": "Gemeentehuis, Ladder",
       "Chinese": "服务处, 梯子",
+      "Korean": "안내소, 사다리",
       "Portuguese": "Town Hall, Ladder",
       "Czech": "Radnice, Žebřík",
       "Slovak": "Radnica, Rebrík"
@@ -2249,6 +2341,7 @@
       "Italian": "Municipio, Asta da salto",
       "Dutch": "Gemeentehuis, Polstok",
       "Chinese": "服务处，撑杆跳竿子",
+      "Korean": "안내소, 높이뛰기 장대",
       "Portuguese": "Town Hall, Vaulting Pole",
       "Czech": "Radnice, Skokanský Můstek",
       "Slovak": "Radnica, Skokanský Mostík"
@@ -2297,6 +2390,7 @@
       "Italian": "Attendere prego",
       "Dutch": "Even wachten aub",
       "Chinese": "请等待",
+      "Korean": "기다려 주세요",
       "Portuguese": "Por favor, espere",
       "Czech": "Počkejte prosím!",
       "Slovak": "Počkajte, prosím!"
@@ -3641,6 +3735,7 @@
       "Italian": "Seleziona lingua",
       "Dutch": "Selecteer je taal",
       "Chinese": "选择语言",
+      "Korean": "언어 선택",
       "Portuguese": "Selecione o idioma",
       "Czech": "Zvolte Jazyk",
       "Slovak": "Vyberte Jazyk"
@@ -3657,6 +3752,7 @@
       "Italian": "Lingua di gioco",
       "Dutch": "Game taal",
       "Chinese": "游戏语言",
+      "Korean": "개임 언어",
       "Portuguese": "Lingua do jogo",
       "Czech": "Jazyk Hry",
       "Slovak": "Jazyk Hry"
@@ -3753,6 +3849,7 @@
       "Italian": "Sasso",
       "Dutch": "Steen",
       "Chinese": "岩石",
+      "Korean": "보",
       "Portuguese": "Pedra",
       "Czech": "Kámen",
       "Slovak": "Kameň"
@@ -3769,6 +3866,7 @@
       "Italian": "Stelline",
       "Dutch": "Klingels",
       "Chinese": "铃钱",
+      "Korean": "벨",
       "Portuguese": "bells",
       "Czech": "zvonky",
       "Slovak": "zvony"
@@ -3785,6 +3883,7 @@
       "Italian": "Miglia",
       "Dutch": "Miles",
       "Chinese": "里数",
+      "Korean": "마일",
       "Portuguese": "miles",
       "Czech": "míle",
       "Slovak": "miles"
@@ -3817,6 +3916,7 @@
       "Italian": "Cristalli di cuore",
       "Dutch": "Kristal harten",
       "Chinese": "心形水晶",
+      "Korean": "사랑의 결정",
       "Portuguese": "heart crystals",
       "Czech": "srdeční krystaly",
       "Slovak": "srdcové kryštály"
@@ -3833,6 +3933,7 @@
       "Italian": "Ricette",
       "Dutch": "DIY",
       "Chinese": "DIY",
+      "Korean": "DIY",
       "Portuguese": "DIY",
       "Czech": "DIY",
       "Slovak": "DIY"
@@ -3878,6 +3979,7 @@
       "Italian": "Tutto il giorno",
       "Dutch": "Hele dag",
       "Chinese": "全天候",
+      "Korean": "종일",
       "Portuguese": "Dia todo",
       "Czech": "Celý den",
       "Slovak": "Celý deň"
@@ -3894,6 +3996,7 @@
       "Italian": "Oggi",
       "Dutch": "Vandaag",
       "Chinese": "今天",
+      "Korean": "오늘",
       "Portuguese": "Hoje",
       "Czech": "Dnes",
       "Slovak": "Dnes"
@@ -4022,6 +4125,7 @@
       "Italian": "Andiamo!",
       "Dutch": "Laten we beginnen!",
       "Chinese": "出发!",
+      "Korean": "가자!",
       "Portuguese": "Vamos lá!",
       "Czech": "Jdeme na to!",
       "Slovak": "Ideme na to!"
@@ -4038,6 +4142,7 @@
       "Italian": "Traduttori Volontari",
       "Dutch": "Vrijwillige vertalers",
       "Chinese": "志愿翻译人员",
+      "Korean": "번역 자원봉사",
       "Portuguese": "Tradutores Voluntários",
       "Czech": "Dobrovolní Překladatelé",
       "Slovak": "Dobrovoľní Prekladatelia"
@@ -4086,6 +4191,7 @@
       "Italian": "Salta",
       "Dutch": "Overslaan",
       "Chinese": "跳过",
+      "Korean": "건너뛰기",
       "Portuguese": "Pular",
       "Czech": "Přeskočit",
       "Slovak": "Preskočiť"
@@ -4150,6 +4256,7 @@
       "Italian": "Cancellare",
       "Dutch": "Annuleren",
       "Chinese": "取消",
+      "Korean": "취소",
       "Portuguese": "Cancelar",
       "Czech": "Zrušit",
       "Slovak": "Zrušiť"
@@ -4166,6 +4273,7 @@
       "Italian": "Fatto",
       "Dutch": "Klaar",
       "Chinese": "完成",
+      "Korean": "완료",
       "Portuguese": "Feito",
       "Czech": "Hotovo",
       "Slovak": "Hotovo"
@@ -4182,6 +4290,7 @@
       "Italian": "OK",
       "Dutch": "OK",
       "Chinese": "好的",
+      "Korean": "OK",
       "Portuguese": "OK",
       "Czech": "OK",
       "Slovak": "OK"
@@ -4198,6 +4307,7 @@
       "Italian": "Vola vicino ai fiori",
       "Dutch": "Vliegend in de buurt van bloemen",
       "Chinese": "在花丛中飞舞",
+      "Korean": "꽃 주변",
       "Portuguese": "Voando perto de flores",
       "Czech": "Létající v Blízkosti Květin",
       "Slovak": "Lietajúce v Blízkosti Kvetov"
@@ -4214,6 +4324,7 @@
       "Italian": "Sulle rape/caramelle marce",
       "Dutch": "Bij rottende knollen of snoep",
       "Chinese": "在腐烂的大头菜或糖果上",
+      "Korean": "썩은 무/사탕",
       "Portuguese": "Em Turnips Podres Ou Doces",
       "Czech": "Na Shnilé Řepě nebo Cukroví",
       "Slovak": "Na Zhnitej Repe alebo Cukríkoch"
@@ -4230,6 +4341,7 @@
       "Italian": "Sugli alberi",
       "Dutch": "Op bomen",
       "Chinese": "在树上",
+      "Korean": "나무",
       "Portuguese": "Em Árvores ",
       "Czech": "Na Stromech",
       "Slovak": "Na Stromoch"
@@ -4260,6 +4372,7 @@
       "Italian": "Vola vicino all'acqua",
       "Dutch": "Vliegend in de buurt van water",
       "Chinese": "在水边飞行",
+      "Korean": "물가",
       "Portuguese": "Voando Perto da Água ",
       "Czech": "Poletující v Blízkosti Vody",
       "Slovak": "Lietajúce v Blízkosti Vody"
@@ -4276,6 +4389,7 @@
       "Italian": "Per terra",
       "Dutch": "Op de grond",
       "Chinese": "在地面上",
+      "Korean": "땅 위",
       "Portuguese": "No chão",
       "Czech": "Na Zemi",
       "Slovak": "Na Zemi"
@@ -4292,6 +4406,7 @@
       "Italian": "Sulle palme",
       "Dutch": "Op palmbomen",
       "Chinese": "在棕榈树上",
+      "Korean": "야자수",
       "Portuguese": "Em palmeiras",
       "Czech": "Na Palmách",
       "Slovak": "Na Palmách"
@@ -4324,6 +4439,7 @@
       "Italian": "Sui ceppi d'albero",
       "Dutch": "Op boomstronken",
       "Chinese": "在树桩上",
+      "Korean": "그루터기",
       "Portuguese": "Em Tocos de Árvores",
       "Czech": "Na Pařezech",
       "Slovak": "Na Pňoch Stromov"
@@ -4340,6 +4456,7 @@
       "Italian": "Volano",
       "Dutch": "Vliegend",
       "Chinese": "飞舞",
+      "Korean": "공중",
       "Portuguese": "Voando",
       "Czech": "Létající",
       "Slovak": "Lietajúce"
@@ -4356,6 +4473,7 @@
       "Italian": "Su fiumi/laghi",
       "Dutch": "In rivieren/vijvers",
       "Chinese": "在河流/池塘上",
+      "Korean": "강/연못 위",
       "Portuguese": "Em Rios/Lagoas",
       "Czech": "Na Řekách/Rybnících",
       "Slovak": "Na Riekach/Rybníkoch"
@@ -4372,6 +4490,7 @@
       "Italian": "Sugli abitanti",
       "Dutch": "Op dorpelingen",
       "Chinese": "在岛民身上",
+      "Korean": "주민의 몸",
       "Portuguese": "Em Moradores",
       "Czech": "Na Vesničanech",
       "Slovak": "Na Dedinčanoch"
@@ -4388,6 +4507,7 @@
       "Italian": "Volano vicino alla spazzatura o alle rape marce",
       "Dutch": "Vliegend in de buurt van afval of rottende knollen",
       "Chinese": "在垃圾或腐烂的大头菜附近飞行",
+      "Korean": "쓰레기/썩은 무\n",
       "Portuguese": "Voando Perto do Lixo ou Turnips Podres",
       "Czech": "Létající v Blízkosti Odpadků nebo Shnilé Řepy",
       "Slovak": "Lietajúce v Blízkosti Odpadkov alebo Zhnitej Repy"
@@ -4404,6 +4524,7 @@
       "Italian": "Nascosti sulla spiaggia",
       "Dutch": "Vermomd bij de kustlijn",
       "Chinese": "伪装在海岸线上",
+      "Korean": "해변 (소라껍데기로 위장)",
       "Portuguese": "Disfarçado na linha costeira",
       "Czech": "Maskované na Břehu",
       "Slovak": "Skryté na Pobreží"
@@ -4420,6 +4541,7 @@
       "Italian": "Sui fiori",
       "Dutch": "Op bloemen",
       "Chinese": "在花上",
+      "Korean": "꽃 위",
       "Portuguese": "Em Flores",
       "Czech": "Na Květinách",
       "Slovak": "Na Kvetoch"
@@ -4436,6 +4558,7 @@
       "Italian": "Per terra",
       "Dutch": "Ondergronds",
       "Chinese": "在地下",
+      "Korean": "땅 속",
       "Portuguese": "Debaixo da Terra",
       "Czech": "Pod Zemí",
       "Slovak": "Pod Zemou"
@@ -4452,6 +4575,7 @@
       "Italian": "Volano vicine a delle fonti di luce",
       "Dutch": "Vliegend in de buurt van lichtbronnen",
       "Chinese": "在光源附近飞行",
+      "Korean": "불빛 근처",
       "Portuguese": "Voando Perto de Luzes",
       "Czech": "Létající v Blízkosti Zdrojů Světla",
       "Slovak": "Lietajúce v Blízkosti Zdrojov Svetla"
@@ -4468,6 +4592,7 @@
       "Italian": "Sui fiori bianchi",
       "Dutch": "Op witte bloemen",
       "Chinese": "在白色的花上",
+      "Korean": "흰 꽃 위",
       "Portuguese": "Em Flores Brancas",
       "Czech": "Na Bílých Květinách",
       "Slovak": "Na Bielych Kvetoch"
@@ -4484,6 +4609,7 @@
       "Italian": "Volano vicino ai fiori neri/viola/blu",
       "Dutch": "Vliegend in de buurt van blauwe/paarse/zwarte bloemen",
       "Chinese": "在蓝色/紫色/黑色花朵附近飞行",
+      "Korean": "검정/파랑/보라색 꽃 주변",
       "Portuguese": "Voando Perto de Flores Azuis/Roxas/Pretas",
       "Czech": "Létající v Blízkosti Modrých/Fialových/Černých květů",
       "Slovak": "Lietajúce v Blízkosti Modrých/Fialových/Čiernych Kvetov"
@@ -4500,6 +4626,7 @@
       "Italian": "Colpendo le rocce",
       "Dutch": "Door het raken van stenen",
       "Chinese": "敲击岩石后",
+      "Korean": "바위치기",
       "Portuguese": "De Bater nas Pedras",
       "Czech": "Ze Zásahu Kamene",
       "Slovak": "Zo Zásahu do Kameňov"
@@ -4516,6 +4643,7 @@
       "Italian": "Su rocce/cespugli",
       "Dutch": "Op stenen/bosjes",
       "Chinese": "岩石/灌木上",
+      "Korean": "바위/묘목",
       "Portuguese": "Em Pedras/Arbustos",
       "Czech": "Na Kamenech/Keřích",
       "Slovak": "Na Skalách/Kríkoch"
@@ -4532,6 +4660,7 @@
       "Italian": "Nascosti sotto gli alberi",
       "Dutch": "Vermomd onder bomen",
       "Chinese": "伪装在树下",
+      "Korean": "나무 밑 (가구로 위장)",
       "Portuguese": "Disfarçado Sob as Árvores ",
       "Czech": "Maskovaný pod Stromy",
       "Slovak": "Skryté pod Stromami"
@@ -4548,6 +4677,7 @@
       "Italian": "Sulle rocce in spiaggia",
       "Dutch": "Op stenen op het strand",
       "Chinese": "在海滩岩石上",
+      "Korean": "해변 암반",
       "Portuguese": "Em Pedras da Praia",
       "Czech": "Na Plážových Skalách",
       "Slovak": "Na Plážových Kameňoch"
@@ -4564,6 +4694,7 @@
       "Italian": "Fiume",
       "Dutch": "Rivier",
       "Chinese": "河流",
+      "Korean": "강",
       "Portuguese": "Rio",
       "Czech": "Řeka",
       "Slovak": "Rieka"
@@ -4580,6 +4711,7 @@
       "Italian": "Molo",
       "Dutch": "Steiger",
       "Chinese": "码头",
+      "Korean": "부둣가",
       "Portuguese": "Pier",
       "Czech": "Molo",
       "Slovak": "Mólo"
@@ -4596,6 +4728,7 @@
       "Italian": "Lago",
       "Dutch": "Vijver",
       "Chinese": "池塘",
+      "Korean": "연못",
       "Portuguese": "Lago",
       "Czech": "Rybník",
       "Slovak": "Rybník"
@@ -4674,6 +4807,7 @@
       "Italian": "Nuovi oggetti",
       "Dutch": "Nieuwe items",
       "Chinese": "新项目",
+      "Korean": "새로운 물건",
       "Portuguese": "Novos itens",
       "Czech": "Nové Předměty",
       "Slovak": "Nové Predmety"
@@ -4689,6 +4823,7 @@
       "Russian": "Бодрый",
       "Italian": "Solare",
       "Chinese": "元气",
+      "Korean": "아이돌",
       "Portuguese": "Peppy",
       "Czech": "Peppy",
       "Slovak": "Peppy"
@@ -4704,6 +4839,7 @@
       "Russian": "Бодрые жители",
       "Italian": "Abitanti Solari",
       "Chinese": "充满元气的岛民",
+      "Korean": "아이돌 주민",
       "Portuguese": "Peppy villagers",
       "Czech": "Peppy vesničané",
       "Slovak": "Peppy dedinčania"
@@ -4719,6 +4855,7 @@
       "Russian": "Капризный",
       "Italian": "Bisbetico",
       "Chinese": "暴躁",
+      "Korean": "무뚝뚝",
       "Portuguese": "Cranky",
       "Czech": "Mrzutý",
       "Slovak": "Mrzutý"
@@ -4734,6 +4871,7 @@
       "Russian": "Капризные жители",
       "Italian": "Abitanti Bisbetici",
       "Chinese": "脾气暴躁的岛民",
+      "Korean": "무뚝뚝 주민",
       "Portuguese": "Cranky villagers",
       "Czech": "Mrzutí vesničané",
       "Slovak": "Mrzutí dedinčania"
@@ -4749,6 +4887,7 @@
       "Russian": "Высокомерный",
       "Italian": "Snob",
       "Chinese": "成熟",
+      "Korean": "성숙함",
       "Portuguese": "Snooty",
       "Czech": "Snooty",
       "Slovak": "Snoby"
@@ -4764,6 +4903,7 @@
       "Russian": "Высокомерные жители",
       "Italian": "Abitanti Snob",
       "Chinese": "成熟的岛民",
+      "Korean": "성숙함 주민",
       "Portuguese": "Snooty villagers",
       "Czech": "Snobští vesničané",
       "Slovak": "Snobskí dedinčania"
@@ -4779,6 +4919,7 @@
       "Russian": "Заботливый",
       "Italian": "Gentile",
       "Chinese": "大姐姐",
+      "Korean": "단순활발",
       "Portuguese": "Big Sister",
       "Czech": "Velká sestra",
       "Slovak": "Veľká Sestra"
@@ -4794,6 +4935,7 @@
       "Russian": "Заботливые жители",
       "Italian": "Abitanti Gentili",
       "Chinese": "大姐姐岛民",
+      "Korean": "단순활발 주민",
       "Portuguese": "Big Sister villagers",
       "Czech": "Velká sestra vesničané",
       "Slovak": "Veľká Sestra dedinčania"
@@ -4809,6 +4951,7 @@
       "Russian": "Ленивый",
       "Italian": "Pigro",
       "Chinese": "悠闲",
+      "Korean": "먹보",
       "Portuguese": "Lazy",
       "Czech": "Líní",
       "Slovak": "Lenivý"
@@ -4824,6 +4967,7 @@
       "Russian": "Ленивые жители",
       "Italian": "Abitanti Pigri",
       "Chinese": "悠闲的岛民",
+      "Korean": "먹보 주민",
       "Portuguese": "Lazy villagers",
       "Czech": "Líní vesničané",
       "Slovak": "Leniví dedinčania"
@@ -4839,6 +4983,7 @@
       "Russian": "Нормальный",
       "Italian": "Normale",
       "Chinese": "普通",
+      "Korean": "친절함",
       "Portuguese": "Normal",
       "Czech": "Normální",
       "Slovak": "Normálni"
@@ -4854,6 +4999,7 @@
       "Russian": "Нормальные жители",
       "Italian": "Abitanti Normali",
       "Chinese": "普通的岛民",
+      "Korean": "친절함 주민",
       "Portuguese": "Normal villagers",
       "Czech": "Normální vesničané",
       "Slovak": "Normálni dedinčania"
@@ -4869,6 +5015,7 @@
       "Russian": "Все жители",
       "Italian": "Tutti gli abitanti",
       "Chinese": "所有岛民",
+      "Korean": "모든 주민",
       "Portuguese": "Todos moradores",
       "Czech": "Všichni vesničané",
       "Slovak": "Všetci obyvatelia"
@@ -4884,6 +5031,7 @@
       "Russian": "Спортивный",
       "Italian": "Sportivo",
       "Chinese": "运动",
+      "Korean": "운동광",
       "Portuguese": "Jock",
       "Czech": "Sportovci",
       "Slovak": "Športovci"
@@ -4899,6 +5047,7 @@
       "Russian": "Спортивные жители",
       "Italian": "Abitanti Sportivi",
       "Chinese": "热爱运动的岛民",
+      "Korean": "운동광 주민",
       "Portuguese": "Jock villagers",
       "Czech": "Sportovní vesničané",
       "Slovak": "Športivý dedinčania"
@@ -4914,6 +5063,7 @@
       "Russian": "Самодовольный",
       "Italian": "Spavaldo",
       "Chinese": "自恋",
+      "Korean": "느끼함",
       "Portuguese": "Smug",
       "Czech": "Samolibý",
       "Slovak": "Samoľúby"
@@ -4929,6 +5079,7 @@
       "Russian": "Самодовольные жители",
       "Italian": "Abitanti Spavaldi",
       "Chinese": "自恋的岛民",
+      "Korean": "느끼함 주민",
       "Portuguese": "Smug villagers",
       "Czech": "Samolibí vesničané",
       "Slovak": "Samoľúbi dedinčania"
@@ -5051,6 +5202,7 @@
       "Italian": "Tutto l'anno",
       "Dutch": "Het hele jaar",
       "Chinese": "所有年份",
+      "Korean": "1년 내내",
       "Portuguese": "Todo o Ano",
       "Czech": "Celý Rok",
       "Slovak": "Celý Rok"
@@ -5162,6 +5314,7 @@
       "Italian": "Scoiattolo",
       "Dutch": "Eekhoorn",
       "Chinese": "松鼠",
+      "Korean": "다람쥐",
       "Portuguese": "Esquilo",
       "Czech": "Veverka",
       "Slovak": "Veverička"
@@ -5178,6 +5331,7 @@
       "Italian": "Maiale",
       "Dutch": "Varken",
       "Chinese": "猪",
+      "Korean": "돼지",
       "Portuguese": "Porco",
       "Czech": "Prase",
       "Slovak": "Prasa"
@@ -5194,6 +5348,7 @@
       "Italian": "Gorilla",
       "Dutch": "Gorilla",
       "Chinese": "大猩猩",
+      "Korean": "고릴라",
       "Portuguese": "Gorila",
       "Czech": "Gorila",
       "Slovak": "Gorila"
@@ -5210,6 +5365,7 @@
       "Italian": "Alligatore",
       "Dutch": "Alligator",
       "Chinese": "鳄鱼",
+      "Korean": "악어",
       "Portuguese": "Jacaré ",
       "Czech": "Aligátor",
       "Slovak": "Aligátor"
@@ -5226,6 +5382,7 @@
       "Italian": "Aquila",
       "Dutch": "Adelaar",
       "Chinese": "鹰",
+      "Korean": "독수리",
       "Portuguese": "Águia",
       "Czech": "Orel",
       "Slovak": "Orol"
@@ -5242,6 +5399,7 @@
       "Italian": "Formichiere",
       "Dutch": "Miereneter",
       "Chinese": "食蚁兽",
+      "Korean": "개미핥기",
       "Portuguese": "Tamanduá",
       "Czech": "Mravenečník",
       "Slovak": "Mravenečník"
@@ -5258,6 +5416,7 @@
       "Italian": "Toro",
       "Dutch": "Stier",
       "Chinese": "牛",
+      "Korean": "수소",
       "Portuguese": "Touro",
       "Czech": "Býk",
       "Slovak": "Býk"
@@ -5274,6 +5433,7 @@
       "Italian": "Topo",
       "Dutch": "Muis",
       "Chinese": "老鼠",
+      "Korean": "생쥐",
       "Portuguese": "Rato",
       "Czech": "Myš",
       "Slovak": "Myš"
@@ -5290,6 +5450,7 @@
       "Italian": "Cavallo",
       "Dutch": "Paard",
       "Chinese": "马",
+      "Korean": "말",
       "Portuguese": "Cavalo",
       "Czech": "Kůň",
       "Slovak": "Kôň"
@@ -5306,6 +5467,7 @@
       "Italian": "Cucciolo",
       "Dutch": "Welp",
       "Chinese": "幼兽",
+      "Korean": "꼬마곰",
       "Portuguese": "Filhote",
       "Czech": "Mládě",
       "Slovak": "Mláďa"
@@ -5322,6 +5484,7 @@
       "Italian": "Cervo",
       "Dutch": "Hert",
       "Chinese": "鹿",
+      "Korean": "사슴",
       "Portuguese": "Veado",
       "Czech": "Jelen",
       "Slovak": "Jeleň"
@@ -5338,6 +5501,7 @@
       "Italian": "Coniglio",
       "Dutch": "Konijn",
       "Chinese": "兔子",
+      "Korean": "토끼",
       "Portuguese": "Coelho",
       "Czech": "Králík",
       "Slovak": "Králik"
@@ -5354,6 +5518,7 @@
       "Italian": "Canguro",
       "Dutch": "Kangoeroe",
       "Chinese": "袋鼠",
+      "Korean": "캥거루",
       "Portuguese": "Canguru",
       "Czech": "Klokan",
       "Slovak": "Klokan"
@@ -5370,6 +5535,7 @@
       "Italian": "Lupo",
       "Dutch": "Wolf",
       "Chinese": "狼",
+      "Korean": "늑대",
       "Portuguese": "Lobo",
       "Czech": "Vlk",
       "Slovak": "Vlk"
@@ -5386,6 +5552,7 @@
       "Italian": "Pinguino",
       "Dutch": "Pinguïn",
       "Chinese": "企鹅",
+      "Korean": "펭귄",
       "Portuguese": "Pinguim",
       "Czech": "Tučňák",
       "Slovak": "Tučniak"
@@ -5402,6 +5569,7 @@
       "Italian": "Pollo",
       "Dutch": "Kip",
       "Chinese": "鸡",
+      "Korean": "닭",
       "Portuguese": "Galinha",
       "Czech": "Slepice",
       "Slovak": "Sliepka"
@@ -5418,6 +5586,7 @@
       "Italian": "Elefante",
       "Dutch": "Olifant",
       "Chinese": "大象",
+      "Korean": "코끼리",
       "Portuguese": "Elefante",
       "Czech": "Slon",
       "Slovak": "Slon"
@@ -5434,6 +5603,7 @@
       "Italian": "Cane",
       "Dutch": "Hond",
       "Chinese": "狗",
+      "Korean": "개",
       "Portuguese": "Cachorro",
       "Czech": "Pes",
       "Slovak": "Pes"
@@ -5450,6 +5620,7 @@
       "Italian": "Orso",
       "Dutch": "Beer",
       "Chinese": "熊",
+      "Korean": "곰",
       "Portuguese": "Urso",
       "Czech": "Medvěd",
       "Slovak": "Medveď"
@@ -5466,6 +5637,7 @@
       "Italian": "Ippopotamo",
       "Dutch": "Nijlpaard",
       "Chinese": "河马",
+      "Korean": "하마",
       "Portuguese": "Hipopótamo",
       "Czech": "Hroch",
       "Slovak": "Hroch"
@@ -5482,6 +5654,7 @@
       "Italian": "Papera",
       "Dutch": "Eend",
       "Chinese": "鸭子",
+      "Korean": "오리",
       "Portuguese": "Pato",
       "Czech": "Kachna",
       "Slovak": "Kačka"
@@ -5498,6 +5671,7 @@
       "Italian": "Capra",
       "Dutch": "Geit",
       "Chinese": "山羊",
+      "Korean": "염소",
       "Portuguese": "Bode",
       "Czech": "Koza",
       "Slovak": "Koza"
@@ -5514,6 +5688,7 @@
       "Italian": "Struzzo",
       "Dutch": "Struisvogel",
       "Chinese": "鸵鸟",
+      "Korean": "타조",
       "Portuguese": "Avestruz",
       "Czech": "Pštros",
       "Slovak": "Pštros"
@@ -5530,6 +5705,7 @@
       "Italian": "Pecora",
       "Dutch": "Schaap",
       "Chinese": "绵羊",
+      "Korean": "양",
       "Portuguese": "Ovelha",
       "Czech": "Ovce",
       "Slovak": "Ovca"
@@ -5546,6 +5722,7 @@
       "Italian": "Scimmia",
       "Dutch": "Aap",
       "Chinese": "猴子",
+      "Korean": "원숭이",
       "Portuguese": "Macaco",
       "Czech": "Opice",
       "Slovak": "Opica"
@@ -5562,6 +5739,7 @@
       "Italian": "Rinoceronte",
       "Dutch": "Neushoorn",
       "Chinese": "犀牛",
+      "Korean": "코뿔소",
       "Portuguese": "Rinoceronte",
       "Czech": "Nosorožec",
       "Slovak": "Nosorožec"
@@ -5578,6 +5756,7 @@
       "Italian": "Mucca",
       "Dutch": "Koe",
       "Chinese": "牛",
+      "Korean": "암소",
       "Portuguese": "Vaca",
       "Czech": "Kráva",
       "Slovak": "Krava"
@@ -5594,6 +5773,7 @@
       "Italian": "Uccello",
       "Dutch": "Vogel",
       "Chinese": "鸟类",
+      "Korean": "새",
       "Portuguese": "Passarinho",
       "Czech": "Pták",
       "Slovak": "Vták"
@@ -5610,6 +5790,7 @@
       "Italian": "Koala",
       "Dutch": "Koala",
       "Chinese": "考拉",
+      "Korean": "코알라",
       "Portuguese": "Coala",
       "Czech": "Koala",
       "Slovak": "Koala"
@@ -5626,6 +5807,7 @@
       "Italian": "Gatto",
       "Dutch": "Kat",
       "Chinese": "猫",
+      "Korean": "고양이",
       "Portuguese": "Gato",
       "Czech": "Kočka",
       "Slovak": "Mačka"
@@ -5642,6 +5824,7 @@
       "Italian": "Leone",
       "Dutch": "Leeuw",
       "Chinese": "狮子",
+      "Korean": "사자",
       "Portuguese": "Leão ",
       "Czech": "Lev",
       "Slovak": "Lev"
@@ -5658,6 +5841,7 @@
       "Italian": "Rana",
       "Dutch": "Kikker",
       "Chinese": "青蛙",
+      "Korean": "개구리",
       "Portuguese": "Sapo",
       "Czech": "Žába",
       "Slovak": "Žaba"
@@ -6464,6 +6648,7 @@
       "Italian": "Colore 1",
       "Dutch": "Kleur 1",
       "Chinese": "颜色1",
+      "Korean": "색상 1",
       "Portuguese": "Cor 1"
     },
     "color 2": {
@@ -6478,6 +6663,7 @@
       "Italian": "Colore 2",
       "Dutch": "Kleur 2",
       "Chinese": "颜色2",
+      "Korean": "색상 2",
       "Portuguese": "Cor 2"
     },
     "can catch in january": {
@@ -6492,6 +6678,7 @@
       "Italian": "Può essere catturato a Gennaio",
       "Dutch": "Kan vangen in januari",
       "Chinese": "可在一月份捕获",
+      "Korean": "1월에 잡을 수 있다",
       "Portuguese": "Pode pegar em Janeiro"
     },
     "can catch in february": {
@@ -6506,6 +6693,7 @@
       "Italian": "Può essere catturato a Febbraio",
       "Dutch": "Kan vangen in februari",
       "Chinese": "可在二月份捕获",
+      "Korean": "2월에 잡을 수 있다",
       "Portuguese": "Pode pegar em Fevereiro"
     },
     "can catch in march": {
@@ -6520,6 +6708,7 @@
       "Italian": "Può essere catturato a Marzo",
       "Dutch": "Kan vangen in maart",
       "Chinese": "可在三月份捕获",
+      "Korean": "3월에 잡을 수 있다",
       "Portuguese": "Pode pegar em Março"
     },
     "can catch in april": {
@@ -6534,6 +6723,7 @@
       "Italian": "Può essere catturato ad Aprile",
       "Dutch": "Kan vangen in april",
       "Chinese": "可在四月份捕获",
+      "Korean": "4월에 잡을 수 있다",
       "Portuguese": "Pode pegar em Abril"
     },
     "can catch in may": {
@@ -6548,6 +6738,7 @@
       "Italian": "Può essere catturato a Maggio",
       "Dutch": "Kan vangen in mei",
       "Chinese": "可在五月份捕获",
+      "Korean": "5월에 잡을 수 있다",
       "Portuguese": "Pode pegar em Maio"
     },
     "can catch in june": {
@@ -6562,6 +6753,7 @@
       "Italian": "Può essere catturato a Giugno",
       "Dutch": "Kan vangen in juni",
       "Chinese": "可在六月份捕获",
+      "Korean": "6월에 잡을 수 있다",
       "Portuguese": "Pode pegar em Junho"
     },
     "can catch in july": {
@@ -6576,6 +6768,7 @@
       "Italian": "Può essere catturato a Luglio",
       "Dutch": "Kan vangen in juli",
       "Chinese": "可在七月份捕获",
+      "Korean": "7월에 잡을 수 있다",
       "Portuguese": "Pode pegar em Julho"
     },
     "can catch in august": {
@@ -6590,6 +6783,7 @@
       "Italian": "Può essere catturato ad Agosto",
       "Dutch": "Kan vangen in augustus",
       "Chinese": "可在八月份捕获",
+      "Korean": "8월에 잡을 수 있다",
       "Portuguese": "Pode pegar em Agosto"
     },
     "can catch in september": {
@@ -6604,6 +6798,7 @@
       "Italian": "Può essere catturato a Settembre",
       "Dutch": "Kan vangen in september",
       "Chinese": "可在九月份捕获",
+      "Korean": "9월에 잡을 수 있다",
       "Portuguese": "Pode pegar em Setembro"
     },
     "can catch in october": {
@@ -6618,6 +6813,7 @@
       "Italian": "Può essere catturato ad Ottobre",
       "Dutch": "Kan vangen in oktober",
       "Chinese": "可在十月份捕获",
+      "Korean": "10월에 잡을 수 있다",
       "Portuguese": "Pode pegar em Outubro"
     },
     "can catch in november": {
@@ -6632,6 +6828,7 @@
       "Italian": "Può essere catturato a Novembre",
       "Dutch": "Kan vangen in november",
       "Chinese": "可在十一月份捕获",
+      "Korean": "11월에 잡을 수 있다",
       "Portuguese": "Pode pegar em Novembro"
     },
     "can catch in december": {
@@ -6646,6 +6843,7 @@
       "Italian": "Può essere catturato a Dicembre",
       "Dutch": "Kan vangen in december",
       "Chinese": "可在十二月份捕获",
+      "Korean": "12월에 잡을 수 있다",
       "Portuguese": "Pode pegar em Dezembro"
     },
     "where/how": {
@@ -6660,6 +6858,7 @@
       "Italian": "Dove/Come",
       "Dutch": "Waar hoe",
       "Chinese": "哪里/如何",
+      "Korean": "장소/잡을 방법",
       "Portuguese": "Onde/Como"
     },
     "source": {
@@ -7107,6 +7306,7 @@
       "Italian": "Stagione",
       "Dutch": "Seizoen",
       "Chinese": "季节",
+      "Korean": "계절",
       "Portuguese": "Sazonal"
     },
     "event exclusive": {
@@ -7638,6 +7838,7 @@
       "Italian": "Compleanni di tutti gli abitanti",
       "Dutch": "Alle verjaardagen van dorpelingen",
       "Chinese": "所有岛民的生日",
+      "Korean": "모든 주민의 생일",
       "Portuguese": "Aniversário de Todos"
     },
     "crafting seasons": {
@@ -7736,6 +7937,7 @@
       "Italian": "Ultimo giorno!",
       "Dutch": "Laatste dag!",
       "Chinese": "最后一天!",
+      "Korean": "마지막 날!",
       "Portuguese": "Último dia!"
     },
     "end": {
@@ -7750,6 +7952,7 @@
       "Italian": "Fine",
       "Dutch": "Einde",
       "Chinese": "结束",
+      "Korean": "끝",
       "Portuguese": "Fim"
     },
     "notifications are created based on the categories you select. they are only loaded one week into the future and are set according to your phone time.": {
@@ -7918,6 +8121,7 @@
       "Italian": "Seleziona data",
       "Dutch": "Selecteer een datum",
       "Chinese": "选择日期",
+      "Korean": "날짜 선택",
       "Portuguese": "Selecionar Data"
     },
     "no history yet, waiting for the week to end.": {
@@ -8057,6 +8261,7 @@
       "Italian": "Fiume (altura)",
       "Dutch": "Rivier (klip)",
       "Chinese": "河流(崖顶)",
+      "Korean": "강 (절벽)",
       "Portuguese": "Rio (penhasco)"
     },
     "sea (rainy days)": {
@@ -8071,6 +8276,7 @@
       "Italian": "Mare (giorni di pioggia)",
       "Dutch": "Zee (regenachtige dagen)",
       "Chinese": "海 (雨天)",
+      "Korean": "바다 (비 올 때)",
       "Portuguese": "Mar (dias chuvosos)"
     },
     "river (mouth)": {
@@ -8085,6 +8291,7 @@
       "Italian": "Fiume (inizio)",
       "Dutch": "Riviermonding)",
       "Chinese": "河流(河口)",
+      "Korean": "강 (하구)",
       "Portuguese": "Rio (começo)"
     },
     "on trees (any kind)": {
@@ -9106,6 +9313,7 @@
       "Italian": "Articoli per la casa",
       "Dutch": "Huishoudelijke artikelen",
       "Chinese": "家庭用品",
+      "Korean": "가구",
       "Portuguese": "Utilidades domésticas",
       "Czech": "Domácí Potřeby",
       "Slovak": "Domáce Potreby"
@@ -9122,6 +9330,7 @@
       "Italian": "Miscellanea",
       "Dutch": "Diversen",
       "Chinese": "杂项",
+      "Korean": "잡화",
       "Portuguese": "Diversos",
       "Czech": "Různé",
       "Slovak": "Rôzne"
@@ -9138,6 +9347,7 @@
       "Italian": "A muro",
       "Dutch": "Op de muur gemonteerd",
       "Chinese": "壁挂式",
+      "Korean": "벽걸이",
       "Portuguese": "Montado na parede",
       "Czech": "Nástěnné",
       "Slovak": "Nástenné"
@@ -9154,6 +9364,7 @@
       "Italian": "Foto",
       "Dutch": "Foto's",
       "Chinese": "照片",
+      "Korean": "사진",
       "Portuguese": "Fotos",
       "Czech": "Fotografie",
       "Slovak": "Fotografie"
@@ -9183,6 +9394,7 @@
       "Italian": "Cappelli",
       "Dutch": "hoofddeksels",
       "Chinese": "头饰",
+      "Korean": "머리 장식",
       "Portuguese": "Chapéu",
       "Czech": "Pokrývky hlavy",
       "Slovak": "Pokrývky hlavy"
@@ -9199,6 +9411,7 @@
       "Italian": "Accessori",
       "Dutch": "Accessoires",
       "Chinese": "饰品",
+      "Korean": "액세서리",
       "Portuguese": "Acessórios",
       "Czech": "Příslušenství",
       "Slovak": "Príslušenstvo"
@@ -9215,6 +9428,7 @@
       "Italian": "Top",
       "Dutch": "Topjes",
       "Chinese": "上衣",
+      "Korean": "상의",
       "Portuguese": "Tops",
       "Czech": "Topy",
       "Slovak": "Vrchné diely"
@@ -9231,6 +9445,7 @@
       "Italian": "Travestimento",
       "Dutch": "Aankleden",
       "Chinese": "打扮",
+      "Korean": "원피스",
       "Portuguese": "Vestir",
       "Czech": "Dresy",
       "Slovak": "Oblečenie"
@@ -9247,6 +9462,7 @@
       "Italian": "Altro abbigliamento",
       "Dutch": "Kleding Overig",
       "Chinese": "服装 其他",
+      "Korean": "기타",
       "Portuguese": "Outras roupas",
       "Czech": "Oblečení Ostatní",
       "Slovak": "Oblečenie Ostatné"
@@ -9263,6 +9479,7 @@
       "Italian": "Parte inferiore",
       "Dutch": "Bodems",
       "Chinese": "下装",
+      "Korean": "하의",
       "Portuguese": "Partes inferiores",
       "Czech": "Spodky",
       "Slovak": "Spodky"
@@ -9279,6 +9496,7 @@
       "Italian": "Calzini",
       "Dutch": "Sokken",
       "Chinese": "袜子",
+      "Korean": "양말",
       "Portuguese": "Meias",
       "Czech": "Ponožky",
       "Slovak": "Ponožky"
@@ -9295,6 +9513,7 @@
       "Italian": "Scarpe",
       "Dutch": "Schoenen",
       "Chinese": "鞋类",
+      "Korean": "신발",
       "Portuguese": "Sapato",
       "Czech": "Boty",
       "Slovak": "Topánky"
@@ -9311,6 +9530,7 @@
       "Italian": "Borse",
       "Dutch": "Tassen",
       "Chinese": "箱包",
+      "Korean": "가방",
       "Portuguese": "Bolsas",
       "Czech": "Tašky",
       "Slovak": "Tašky"
@@ -9327,6 +9547,7 @@
       "Italian": "Ombrelli",
       "Dutch": "Paraplu's",
       "Chinese": "雨伞",
+      "Korean": "우산",
       "Portuguese": "Guarda-chuva",
       "Czech": "Deštníky",
       "Slovak": "Dáždniky"
@@ -9343,6 +9564,7 @@
       "Italian": "Pavimenti",
       "Dutch": "vloeren",
       "Chinese": "地板",
+      "Korean": "바닥",
       "Portuguese": "Piso",
       "Czech": "Podlahy",
       "Slovak": "Podlahy"
@@ -9359,6 +9581,7 @@
       "Italian": "Tappeti",
       "Dutch": "Tapijten",
       "Chinese": "地毯",
+      "Korean": "러그",
       "Portuguese": "Tapete",
       "Czech": "Koberce",
       "Slovak": "Koberce"
@@ -9375,6 +9598,7 @@
       "Italian": "Carta da parati",
       "Dutch": "Behang",
       "Chinese": "墙纸",
+      "Korean": "벽지",
       "Portuguese": "Papel de parede",
       "Czech": "Tapety",
       "Slovak": "Tapety"
@@ -9391,6 +9615,7 @@
       "Italian": "Insetti",
       "Dutch": "insecten",
       "Chinese": "昆虫",
+      "Korean": "곤충",
       "Portuguese": "Insetos",
       "Czech": "Hmyz",
       "Slovak": "Hmyz"
@@ -9407,6 +9632,7 @@
       "Italian": "Recinzioni",
       "Dutch": "schermen",
       "Chinese": "栅栏",
+      "Korean": "울타리",
       "Portuguese": "Cercas",
       "Czech": "Ploty",
       "Slovak": "Oplotenie"
@@ -9423,6 +9649,7 @@
       "Italian": "Altro ",
       "Dutch": "Ander",
       "Chinese": "其他",
+      "Korean": "기타",
       "Portuguese": "Outros",
       "Czech": "Ostatní",
       "Slovak": "Iné"
@@ -9439,6 +9666,7 @@
       "Italian": "Chiudere",
       "Dutch": "Dichtbij",
       "Chinese": "关闭",
+      "Korean": "닫기",
       "Portuguese": "Fechar",
       "Czech": "Zavřít",
       "Slovak": "Zatvoriť"
@@ -9513,6 +9741,7 @@
       "Italian": "Conferma",
       "Dutch": "Bevestigen",
       "Chinese": "确认",
+      "Korean": "확인",
       "Portuguese": "Confirme"
     },
     "collected/not collected": {
@@ -9903,6 +10132,7 @@
       "Italian": "Carta ",
       "Dutch": "Papier",
       "Chinese": "纸牌",
+      "Korean": "바위",
       "Portuguese": "Papel",
       "Czech": "Papír",
       "Slovak": "Papier"
@@ -9919,6 +10149,7 @@
       "Italian": "Forbici",
       "Dutch": "Schaar",
       "Chinese": "剪刀",
+      "Korean": "가위",
       "Portuguese": "Tesoura",
       "Czech": "Nůžky",
       "Slovak": "Nožnice"
@@ -10337,6 +10568,7 @@
       "Italian": "Inglese",
       "Dutch": "Engels",
       "Chinese": "English",
+      "Korean": "영어",
       "Portuguese": "English",
       "Czech": "Angličtina",
       "Slovak": "Angličtina"
@@ -10353,6 +10585,7 @@
       "Italian": "Inglese (Europa)",
       "Dutch": "Engels (Europa)",
       "Chinese": "English (Europe)",
+      "Korean": "영어 (유럽)",
       "Portuguese": "English (Europe)",
       "Czech": "Angličtina (Evropa)",
       "Slovak": "Angličtina (Európa)"
@@ -10369,6 +10602,7 @@
       "Italian": "Francese",
       "Dutch": "Frans",
       "Chinese": "French",
+      "Korean": "프랑스어",
       "Portuguese": "French",
       "Czech": "Francouzština",
       "Slovak": "Francúzština"
@@ -10385,6 +10619,7 @@
       "Italian": "Francese (Québec)",
       "Dutch": "Frans (Québec)",
       "Chinese": "French (Québec)",
+      "Korean": "프랑스어 (퀘벡)",
       "Portuguese": "French (Québec)",
       "Czech": "Francouzština (Québec)",
       "Slovak": "Francúzština (Québec)"
@@ -10401,6 +10636,7 @@
       "Italian": "Spagnolo",
       "Dutch": "Spaans",
       "Chinese": "Spanish",
+      "Korean": "스페인어",
       "Portuguese": "Spanish",
       "Czech": "Španělština",
       "Slovak": "Španielčina"
@@ -10417,6 +10653,7 @@
       "Italian": "Spagnolo (US)",
       "Dutch": "Spaans (VS)",
       "Chinese": "Spanish (US)",
+      "Korean": "스페인어 (미국)",
       "Portuguese": "Spanish (US)",
       "Czech": "Španělština (USA)",
       "Slovak": "Španielčina (USA)"
@@ -10433,6 +10670,7 @@
       "Italian": "Tedesco",
       "Dutch": "Duitse",
       "Chinese": "German",
+      "Korean": "독일어",
       "Portuguese": "German",
       "Czech": "Němčina",
       "Slovak": "Nemčina"
@@ -10449,6 +10687,7 @@
       "Italian": "Russo",
       "Dutch": "Russisch",
       "Chinese": "Russian",
+      "Korean": "러시아어",
       "Portuguese": "Russian",
       "Czech": "Ruština",
       "Slovak": "Ruština"
@@ -10465,6 +10704,7 @@
       "Italian": "Olandese",
       "Dutch": "Nederlands",
       "Chinese": "Dutch",
+      "Korean": "네덜란드어",
       "Czech": "Nizozemština",
       "Slovak": "Holandčina"
     },
@@ -10472,6 +10712,7 @@
       "English": "Chinese",
       "English (Europe)": "Chinese",
       "German": "Chinesische",
+      "Korean": "중국어 (간체)",
       "Czech": "Čínština",
       "Slovak": "Čínština"
     },
@@ -10479,6 +10720,7 @@
       "English": "Chinese (Traditional)",
       "English (Europe)": "Chinese (Traditional)",
       "German": "Chinesisch (Traditionell)",
+      "Korean": "중국어 (번체)",
       "Czech": "Čínština (tradiční)",
       "Slovak": "Čínština (tradičná)"
     },
@@ -10499,6 +10741,7 @@
       "English": "Korean",
       "English (Europe)": "Korean",
       "German": "Koreanisch",
+      "Korean": "한국어",
       "Czech": "Korejština",
       "Slovak": "Kórejčina"
     },
@@ -10506,6 +10749,7 @@
       "English": "Portuguese",
       "English (Europe)": "Portuguese",
       "German": "Portugiesisch",
+      "Korean": "포르투갈어",
       "Czech": "Portugalština",
       "Slovak": "Portugalčina"
     },
@@ -10513,6 +10757,7 @@
       "English": "Czech",
       "English (Europe)": "Czech",
       "German": "Tschechisch",
+      "Korean": "체코어",
       "Czech": "Čeština",
       "Slovak": "Čeština"
     },
@@ -10520,6 +10765,7 @@
       "English": "Slovak",
       "English (Europe)": "Slovak",
       "German": "Slowenisch",
+      "Korean": "슬로바키아어",
       "Czech": "Slovenština",
       "Slovak": "Slovenčina"
     },
@@ -10717,6 +10963,7 @@
       "Italian": "Lingua",
       "Dutch": "Taal",
       "Chinese": "语言",
+      "Korean": "언어",
       "Portuguese": "Língua"
     },
     "you can change the language in the top right corner, by tapping settings": {
@@ -10757,6 +11004,7 @@
       "Italian": "Da tutti i giorni",
       "Dutch": "Elke dag",
       "Chinese": "每天",
+      "Korean": "데일리",
       "Portuguese": "Todo dia"
     },
     "comfy": {
@@ -10770,6 +11018,7 @@
       "Italian": "Confortevole",
       "Dutch": "Comfortabel",
       "Chinese": "舒适的",
+      "Korean": "릴랙스",
       "Portuguese": "Confortável"
     },
     "formal": {
@@ -10783,6 +11032,7 @@
       "Italian": "Formale",
       "Dutch": "Formeel",
       "Chinese": "正式的",
+      "Korean": "포멀",
       "Portuguese": "Formal"
     },
     "work": {
@@ -10796,6 +11046,7 @@
       "Italian": "Da lavoro",
       "Dutch": "Werk",
       "Chinese": "工作",
+      "Korean": "비즈니스",
       "Portuguese": "Trabalho"
     },
     "theatrical": {
@@ -10809,6 +11060,7 @@
       "Italian": "Da fiaba",
       "Dutch": "theatraal",
       "Chinese": "戏剧性",
+      "Korean": "스테이지",
       "Portuguese": "Teatral"
     },
     "outdoorsy": {
@@ -10822,6 +11074,7 @@
       "Italian": "Da aria aperta",
       "Dutch": "buiten",
       "Chinese": "户外运动",
+      "Korean": "아웃도어",
       "Portuguese": "Ao ar livre"
     },
     "sporty": {
@@ -10835,6 +11088,7 @@
       "Italian": "Sportivo",
       "Dutch": "Sportief",
       "Chinese": "运动型",
+      "Korean": "스포츠",
       "Portuguese": "Desportivo"
     },
     "vacation": {
@@ -10848,6 +11102,7 @@
       "Italian": "Da vacanza",
       "Dutch": "Vakantie",
       "Chinese": "假期",
+      "Korean": "바캉스",
       "Portuguese": "Férias "
     },
     "goth": {
@@ -10861,6 +11116,7 @@
       "Italian": "Goth",
       "Dutch": "gotisch",
       "Chinese": "哥特人",
+      "Korean": "호러",
       "Portuguese": "Gótico"
     },
     "old villager resident": {
@@ -11012,7 +11268,8 @@
       "Spanish": "Giroides",
       "Russian": "Гироиды",
       "Dutch": "Gyroids",
-      "Chinese": "陶俑"
+      "Chinese": "陶俑",
+      "Korean": "토용"
     },
     "coming soon": {
       "English": "Coming soon",
@@ -12496,6 +12753,7 @@
       "Italian": "Grazie!",
       "Dutch": "Bedankt!",
       "Chinese": "谢谢你!",
+      "Korean": "감사합니다!",
       "Portuguese": "Obrigado!"
     },
     "paradise planning": {
@@ -13223,7 +13481,8 @@
       "French": "Poki",
       "French (US)": "Poki",
       "German": "Poki",
-      "Spanish": "pokémon"
+      "Spanish": "pokémon",
+      "Korean": "푸키"
     },
     "sound type": {
       "English": "Sound Type",
@@ -18022,6 +18281,13 @@
       "Portuguese": "Isso pode ser encontrado na segunda guia desta página acima.",
       "Czech": "To lze nalézt na druhé záložce této stránky výše.",
       "Slovak": "To možno nájsť na druhej karte tejto stránky vyššie."
+    },
+    "free": {
+      "English": "Free",
+      "English (Europe)": "Free"
+    },
+    "catalog scanner": {
+      "English": "Catalog Scanner"
     }
   },
   "Sources": {
@@ -18379,6 +18645,7 @@
       "French (US)": "Evolution du Bureau des Résidents",
       "German": "Servicecenter Ausbau",
       "Italian": "Aggiornamento del Municipio",
+      "Korean": "안내소 업그레이드",
       "Russian": "Улучшение услуг жителей",
       "Portuguese": "Atualização de serviços de residentes",
       "Czech": "Vylepšení Resident Services"
@@ -18577,6 +18844,7 @@
       "Spanish (US)": "Manzano",
       "Italian": "Melo",
       "Dutch": "Appelboom",
+      "Korean": "사과 나무",
       "Russian": "Яблоня",
       "Portuguese": "Árvore de maçã",
       "Czech": "Jablečný strom"
@@ -18591,6 +18859,7 @@
       "Spanish (US)": "Plantar una manzana",
       "Italian": "Piantare una mela",
       "Dutch": "Een appel planten",
+      "Korean": "사과 심기",
       "Russian": "Посадить яблоню",
       "Portuguese": "Plantando uma maçã",
       "Czech": "Sázení jabloně"
@@ -23428,7 +23697,8 @@
       "German": "(Inselname) in Sicht!",
       "Spanish": "Millas Nook de Bienvenida",
       "Dutch": "(Eilandnaam)miles",
-      "Chinese": "欢迎来到(island name)岛！"
+      "Chinese": "欢迎来到(island name)岛！",
+      "Korean": "[Island Name] 마일!"
     },
     "angling for perfection!": {
       "English": "Angling for Perfection!",
@@ -23438,7 +23708,8 @@
       "German": "Angelmeister",
       "Spanish": "Toda la pesca",
       "Dutch": "Vissen voor beginners",
-      "Chinese": "目标是成为垂钓高手"
+      "Chinese": "目标是成为垂钓高手",
+      "Korean": "낚시의 달인이 되자"
     },
     "island ichthyologist": {
       "English": "Island Ichthyologist",
@@ -23448,7 +23719,8 @@
       "German": "Ichthyologe",
       "Spanish": "Ictiología avanzada",
       "Dutch": "Vis, ik heb je",
-      "Chinese": "成为鱼类博士吧"
+      "Chinese": "成为鱼类博士吧",
+      "Korean": "물고기 박사가 되어보자"
     },
     "island togetherness": {
       "English": "Island Togetherness",
@@ -23458,7 +23730,8 @@
       "German": "Soziales Tier",
       "Spanish": "De flor en flor",
       "Dutch": "Sociaal dier",
-      "Chinese": "打招呼是一切的基础！"
+      "Chinese": "打招呼是一切的基础！",
+      "Korean": "기본은 인사부터!"
     },
     "you've got the bug": {
       "English": "You've Got the Bug",
@@ -23468,7 +23741,8 @@
       "German": "Insektenjäger",
       "Spanish": "¿Y a ti qué te pica?",
       "Dutch": "Beestjesboel",
-      "Chinese": "迈向虫类猎人之路"
+      "Chinese": "迈向虫类猎人之路",
+      "Korean": "곤층 헌터를 향한 길"
     },
     "bugs don't bug me": {
       "English": "Bugs Don't Bug Me",
@@ -23478,7 +23752,8 @@
       "German": "Entomologe",
       "Spanish": "¡Bichos a mí!",
       "Dutch": "Twee vliegen in één klap",
-      "Chinese": "能成为虫类博士吗？！"
+      "Chinese": "能成为虫类博士吗？！",
+      "Korean": "곤층 박사가 될 수 있을까?!"
     },
     "have a nice diy!": {
       "English": "Have a Nice DIY!",
@@ -23488,7 +23763,8 @@
       "German": "Selbst ist der Bewohner",
       "Spanish": "El saber no ocupa lugar",
       "Dutch": "Doe-het-zelf kennis",
-      "Chinese": "增加DIY的手册吧！"
+      "Chinese": "增加DIY的手册吧！",
+      "Korean": "DIY 레시피를 늘리자!"
     },
     "deep dive": {
       "English": "Deep Dive",
@@ -23498,7 +23774,8 @@
       "German": "Tiefseetaucher",
       "Spanish": "Millas submarinas",
       "Dutch": "Duik in het diepe",
-      "Chinese": "潜入海里吧，潜水健将！"
+      "Chinese": "潜入海里吧，潜水健将！",
+      "Korean": "뛰어들어라, 다이버여!"
     },
     "underwater understudy": {
       "English": "Underwater Understudy",
