@@ -542,8 +542,8 @@ export class Variations extends Component {
 export function howManyVariationsChecked(allVariations){
   var totalChecked = 0;
   for(var i=0; i<allVariations.length; i++){
-    var extraIndex = i===0 ? "0":"";
-    if(global.collectionListIndexed[allVariations[i]["checkListKey"]+extraIndex]===true){
+    var extraIndex = i===0 || allVariations[i]["checkListKeyParent"]===allVariations[i]["checkListKey"] ? "0":"";
+    if(global.collectionListIndexed[allVariations[i]["checkListKey"]+extraIndex]===true || global.collectionListIndexed[allVariations[i]["checkListKey"]+"0"]===true){
       totalChecked++
     }
   }

@@ -2,9 +2,9 @@ import React, {Component, useState, useRef, useEffect} from 'react';
 import {TouchableOpacity, View, Animated,StyleSheet,RefreshControl} from 'react-native';
 import Header, {HeaderLoading, HeaderActive} from './Header';
 import ListItem from './ListItem';
-import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters, isInteger, attemptToTranslate, checkOff, inCustomLists, getCustomListsAmount, collectionListSave, determineFoodItem, initializeParadisePlanningGlobal, inVillagerParadise} from "../LoadJsonData"
+import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters, isInteger, attemptToTranslate, checkOff, inCustomLists, getCustomListsAmount, collectionListSave, determineFoodItem, initializeParadisePlanningGlobal, inVillagerParadise, variationsCheckedPercent} from "../LoadJsonData"
 import {Dimensions } from "react-native";
-import {Variations,Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title, getVariations} from './BottomSheetComponents';
+import {Variations,Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title, getVariations, howManyVariationsChecked} from './BottomSheetComponents';
 import colors from "../Colors.js"
 import {getCurrentDateObject, getMonthShort, isActive2} from "./DateFunctions"
 import FishPopup from "../popups/FishPopup"
@@ -135,8 +135,11 @@ function ListPage(props){
 
   const refreshFiltersArray = [
     "Collected",
-    "Partially collected variations",
     "Not Collected",
+    "Fully Collected Variations",
+    "Partially Collected Variations",
+    "Missing All Variations",
+    "Incomplete Items",
     "Wishlist",
     "Museum",
     "Not Museum",
@@ -213,9 +216,7 @@ function ListPage(props){
       }
 
       var searchActual = searchFilters;
-      if(props.filterCollectedOnly){
-        searchActual = ["Collected"];
-      } else if (props.villagerGifts) {
+      if (props.villagerGifts) {
         searchActual = [...props.villagerGiftsFilters,...searchActual];
       } else if (props.itemIDs!==undefined && props.itemIDs!=="") {
         searchActual = ["SearchIDs"]
@@ -329,7 +330,6 @@ function ListPage(props){
           var searchFound = false;
           var filterFound = false;
           var showUncraftableVar = true;
-          var showPartiallyFoundOnly = true;
           for(var z = 0; z < searchActual.length; z++){
             if(searchActual.includes("Wishlist") && props.wishlistItems && props.currentCustomList!=="" && inCustomLists(item["checkListKey"],props.currentCustomList)===true){
               filterFound = true;
@@ -371,73 +371,79 @@ function ListPage(props){
             // if(props.searchKey[j].includes(search[z].split("-")[0])){
             //If property is Collected
             var searchCollected = true;
-            if(searchActual.includes("Collected") || props.filterCollectedOnly){
+            if(searchActual.includes("Collected")){
               if(item["checkListKey"]!==undefined && item["checkListKey"]===""){
                 break
               }
               searchCollected = false;
-              if(global.collectionListIndexed[item["checkListKey"]]===true){
+              if(global.collectionListIndexed[item["checkListKeyParent"]]===true){
                 searchCollected = true;
-                if(searchActual.length===1 || props.filterCollectedOnly){
-                  filterFound = true;
-                  //Only check collected filter
-                  if(searchCollected && props.filterCollectedOnly){
-                    filterFound = true;
-                    break;
-                  }
-                  break;
-                }
+              } else {
+                break
               }
             } else if(searchActual.includes("Not Collected")){
               if(item["checkListKey"]!==undefined && item["checkListKey"]===""){
                 break
               }
               searchCollected = false;
-              //Not collected: remove variations (use only base item)
-              //Don't need to check data type because each type will be looped through and then move on to another data set type
-              if(!global.collectionListIndexed[item["checkListKey"]]===true && i-1 >= 0 && dataLoaded[i-1]["Name"]!==item["Name"]){
+              if(!global.collectionListIndexed[item["checkListKeyParent"]]===true){
                 searchCollected = true;
-                if(searchActual.length===1){
-                  filterFound = true;
-                  break;
-                }
-              } else if (i-1<0) {
-                if(!global.collectionListIndexed[item["checkListKey"]]===true){
-                  searchCollected = true;
-                  if(searchActual.length===1){
-                    filterFound = true;
-                    break;
-                  }
-                }
+              } else {
+                break
               }
-            } else if(searchActual.includes("Not Collected (Keep variations)")){
+            } else if(searchActual.includes("Fully Collected Variations")){
               if(item["checkListKey"]!==undefined && item["checkListKey"]===""){
                 break
               }
               searchCollected = false;
-              //Not collected: remove variations (use only base item)
-              if(!global.collectionListIndexed[item["checkListKey"]]===true){
+              const variationsPercent = variationsCheckedPercent(item, item.index)
+              if(variationsPercent===1){
                 searchCollected = true;
-                if(searchActual.length===1){
-                  filterFound = true;
-                  break;
+              } else {
+                break
+              }
+            } else if (searchActual.includes("Partially Collected Variations")){
+              if(item["checkListKey"]!==undefined && item["checkListKey"]===""){
+                break
+              }
+              searchCollected = false;
+              if(allVariationsChecked(item, item.index)){
+                break
+              } else {
+                searchCollected = true;
+              }
+            } else if (searchActual.includes("Missing All Variations")){
+              if(item["checkListKey"]!==undefined && item["checkListKey"]===""){
+                break
+              }
+              searchCollected = false;
+              if(!global.collectionListIndexed[item["checkListKey"]]===true){
+                const variationsPercent = variationsCheckedPercent(item, item.index)
+                if(variationsPercent===0){
+                  searchCollected = true;
+                } else {
+                  break
                 }
               }
-            }
-            if(searchActual.includes("Collected")&&(searchActual.includes("Not Collected")||searchActual.includes("Not Collected (Keep variations)"))){
-              searchCollected=true;
-            }
-            if (searchActual.includes("Partially collected variations")){
+            } else if (searchActual.includes("Incomplete Items")){
+              if(item["checkListKey"]!==undefined && item["checkListKey"]===""){
+                break
+              }
+              searchCollected = false;
               if(allVariationsChecked(item, item.index)){
-                showPartiallyFoundOnly = false;
+                if(!global.collectionListIndexed[item["checkListKey"]]===true){
+                  const variationsPercent = variationsCheckedPercent(item, item.index)
+                  if(variationsPercent===0){
+                    searchCollected = true;
+                  } else {
+                    break
+                  }
+                }
               } else {
-                showPartiallyFoundOnly = true;
                 searchCollected = true;
               }
-              if((searchActual.includes("Collected")||searchActual.includes("Not Collected")) && searchCollected){
-                showPartiallyFoundOnly = true;
-              }
             }
+            
 
             //special case for categories
             if(props.title==="Obtainable DIYs" || props.title==="Obtainable Reactions" || props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions"){
@@ -572,7 +578,7 @@ function ListPage(props){
               break
             }
           }
-          if(showPartiallyFoundOnly && showUncraftableVar && (search==="" || searchFound) && (filterFound || searchActual.length === 0)){
+          if(showUncraftableVar && (search==="" || searchFound) && (filterFound || searchActual.length === 0)){
             //Search result found...
               //If recipes item page, and its not DIY, remove
               if(props.recipes){

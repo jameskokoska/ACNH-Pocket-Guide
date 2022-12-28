@@ -42,7 +42,7 @@ class PopupFilter extends Component {
       "name": "Collected/Not Collected",
       "id": "Collected/Not Collected",
       "children": [
-        {name:"Collected", id:"Collected"},{name:"Partially collected variations", id:"Partially collected variations"},{name:"Not Collected", id:"Not Collected"},{name:"Not Collected (Keep variations)", id:"Not Collected (Keep variations)"},
+        {name:"Collected", id:"Collected"},{name:"Not Collected", id:"Not Collected"},{name:"", id:"break10"},{name:"Fully Collected Variations", id:"Fully Collected Variations"},{name:"Partially Collected Variations", id:"Partially Collected Variations"},{name:"Missing All Variations", id:"Missing All Variations"},{name:"Incomplete Items", id:"Incomplete Items"}
       ]
     },
     {

@@ -1950,7 +1950,11 @@ export function variationsCheckedPercent(item, index){
   if((item.hasOwnProperty("Variation") && item["Variation"]!=="NA") || item.hasOwnProperty("Pattern") && item["Pattern"]!=="NA"){
     const variations = getVariations(item["Name"],global.dataLoadedAll,item["checkListKey"], index);
     const howManyVariations = howManyVariationsChecked(variations)
+    
     if(howManyVariations<1){
+      if(variations.length===0){
+        return false
+      }
       return 0;
     }
     return howManyVariations/variations.length;

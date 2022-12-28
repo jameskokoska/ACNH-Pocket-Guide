@@ -4,6 +4,15 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Updated Collected/Not Collected filters
+-There are 6 filters:
+-Collected (If the large green checkbox is selected)
+-Not Collected (If the large green checkbox is not selected)
+-Fully Collected Variations (If all variations are selected)
+-Partially Collected Variations (If some of the variations are selected, not 0)
+-Missing All Variations (If 0 variations selected)
+-Incomplete Items (If 0 or some variations selected, not all)
+-
 -Happy holidays!
 -Added catalog scanner to onboarding page
 -New Korean translations added. Thanks Hwaryu!
