@@ -456,12 +456,12 @@ class HomePage extends Component {
               <View style={{height: 5}}/>
               <View style={{flexDirection:"row", flexWrap:"wrap", justifyContent:"center"}}>
                 <StoreHoursContainerHarvey filter={"Katrina's Cleansing Service"} image={require("../assets/icons/katrina.png")} text="Katrina" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 1:00" : "5 AM - 1 AM"} openHour={5} closeHour={1}/>
-                <StoreHoursContainerHarvey filter={"Saharah's Co-op"} image={require("../assets/icons/saharah.png")} text="Saharah" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 24:00" : "5 AM - 12 AM"} openHour={5} closeHour={24}/>
+                <StoreHoursContainerHarvey filter={"Saharah's Co-op"} image={require("../assets/icons/saharah.png")} text="Saharah" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 0:00" : "5 AM - 12 AM"} openHour={5} closeHour={24}/>
                 <StoreHoursContainerHarvey image={require("../assets/icons/tortimer.png")} text="Tortimer" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 23:00" : "5 AM - 11 PM"} openHour={5} closeHour={23}/>
-                <StoreHoursContainerHarvey image={require("../assets/icons/cyrus.png")} text="Cyrus" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 24:00" : "5 AM - 12 AM"} openHour={5} closeHour={24}/>
+                <StoreHoursContainerHarvey image={require("../assets/icons/cyrus.png")} text="Cyrus" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 0:00" : "5 AM - 12 AM"} openHour={5} closeHour={24}/>
                 <StoreHoursContainerHarvey filter={"Leif"} image={require("../assets/icons/leif.png")} text="Leif" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 23:00" : "5 AM - 11 PM"} openHour={5} closeHour={23}/>
                 <StoreHoursContainerHarvey filter={"Redd's Co-op Raffle"} image={require("../assets/icons/redd.png")} text="Redd" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 1:00" : "5 AM - 1 AM"} openHour={5} closeHour={1}/>
-                <StoreHoursContainerHarvey filter={"Kicks' Co-op"} image={require("../assets/icons/kicks.png")} text="Kicks" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 24:00" : "5 AM - 12 AM"} openHour={5} closeHour={24}/>
+                <StoreHoursContainerHarvey filter={"Kicks' Co-op"} image={require("../assets/icons/kicks.png")} text="Kicks" textBottom={getSettingsString("settingsUse24HourClock") === "true" ? "5:00 - 0:00" : "5 AM - 12 AM"} openHour={5} closeHour={24}/>
               </View>
               <View style={{height: 15}}/>
             </HomeContentArea>:<View/>

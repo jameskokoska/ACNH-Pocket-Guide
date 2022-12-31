@@ -399,7 +399,7 @@ export function getEventsDay(date, eventSections, showEventsIfInRange){
       filter:"K.K. concert"
     });
     if(eventSections["App notifications"]){
-      schedulePushNotification(date,eventSections["Set Notification Time"],"🎵 " + attemptToTranslate("K.K. Slider"),getSettingsString("settingsUse24HourClock") === "true" ? "6:00 - 24:00" : "6 PM - 12 AM");
+      schedulePushNotification(date,eventSections["Set Notification Time"],"🎵 " + attemptToTranslate("K.K. Slider"),getSettingsString("settingsUse24HourClock") === "true" ? "6:00 - 0:00" : "6 PM - 12 AM");
     }
   }
 
