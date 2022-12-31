@@ -7,6 +7,9 @@ export const changelog = `
 -Happy New Year!
 -Fixed 24 hour clock times for shop hours
 
+-New Monthly Diamond Supporter: Patrick! Thank you!
+-Updated translations
+-
 -Updated Collected/Not Collected filters
 -There are 6 filters:
 -Collected (If the large green checkbox is selected)
