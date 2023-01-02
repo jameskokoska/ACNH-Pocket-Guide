@@ -50,18 +50,25 @@ for sheet in data:
         totalPercent = int(currentIndex / totalCount*100)
         currentIndex+=1
         if("Name" in datum):
-            outSet[upperName(datum["Name"])] = {"english":upperName(datum["Name"])}
+            outSet[upperName(datum["Name"])] = {"n":upperName(datum["Name"])}
             if datum["Name"] in translations:
                 for language in translations[datum["Name"]]:
                     if language in supportedLanguages:
-                        outSet[upperName(translations[datum["Name"]][language])] = {"english":upperName(datum["Name"])}
+                        outSet[upperName(translations[datum["Name"]][language])] = {"n":upperName(datum["Name"])}
             else:
                 itemTranslations = getItemTranslation(datum["Name"])
                 for itemTranslation in itemTranslations:
-                    outSet[upperName(itemTranslation)] = {"english":upperName(datum["Name"])}
+                    outSet[upperName(itemTranslation)] = {"n":upperName(datum["Name"])}
 # for out in outSet:
 #     print(out)
+print("Writing...")
+onlyOutSet = set()
+for out in outSet:
+    onlyOutSet.add(out)
 f = open('DataCreated/'+"dataSet.dart", "w", encoding="utf-8")
-f.write("Map<dynamic, dynamic> dataset=" + str(outSet)+";")
+f.write("Set<String> dataset=" + str(onlyOutSet)+";")
+f.close()
+f = open('DataCreated/'+"dataSetTranslations.dart", "w", encoding="utf-8")
+f.write("Map<dynamic, dynamic> translationDataset=" + str(outSet)+";")
 f.close()
 input("Done!")
