@@ -62,13 +62,7 @@ for sheet in data:
 # for out in outSet:
 #     print(out)
 print("Writing...")
-onlyOutSet = set()
-for out in outSet:
-    onlyOutSet.add(out)
-f = open('DataCreated/'+"dataSet.dart", "w", encoding="utf-8")
-f.write("Set<String> dataset=" + str(onlyOutSet)+";")
-f.close()
-f = open('DataCreated/'+"dataSetTranslations.dart", "w", encoding="utf-8")
-f.write("Map<dynamic, dynamic> translationDataset=" + str(outSet)+";")
-f.close()
+
+with open('DataScanner/'+'dataSetTranslations.json', 'w', encoding='utf8') as json_file:
+    json.dump(outSet, json_file, ensure_ascii=False,indent=2)
 input("Done!")
