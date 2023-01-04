@@ -8,12 +8,12 @@ import ButtonComponent from '../components/ButtonComponent'
 import colors from '../Colors'
 import {LanguagePicker} from "./SettingsPage"
 import {setSettingsString} from "../LoadJsonData"
-import { CatalogScannerApp } from './CatalogPage';
+import { CatalogScannerApp, supportCatalogScanner } from './CatalogPage';
 
 class Onboard extends Component {
   render(){
     let catalogScanning = []
-    if(global.language==="English (Europe)" || global.language==="English"){
+    if(supportCatalogScanner()){
       catalogScanning.push({
         backgroundColor: colors.background[global.darkMode],
         image: <View style={{marginTop:10}}>

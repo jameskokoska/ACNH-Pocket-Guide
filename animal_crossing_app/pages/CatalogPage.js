@@ -234,7 +234,7 @@ class CatalogPage extends Component {
           <TextFont bold={true} style={{fontSize: 17, marginLeft: 30, marginRight: 30, color:colors.textBlack[global.darkMode]}}>With the catalog scanner app</TextFont>
           <View style={{height: 35}}/>
           <CatalogScannerApp/>
-          {global.language!=="English (Europe)" && global.language!=="English" ? <View style={{marginTop:10}}>
+          {!supportCatalogScanner() ? <View style={{marginTop:10}}>
             <View style={{height: 10}}/>
             <View style={{backgroundColor: colors.popupDanger[global.darkMode]}}>
               <View style={{height: 10}}/>
@@ -297,7 +297,7 @@ class CatalogPage extends Component {
               multiline={false}
             />
             <TouchableOpacity onPress={() => openURL('https://nook.lol/') }>
-              <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 17, marginLeft: 10, marginRight: 10, textAlign:"center", marginVertical:10}}>{"Visit https://nook.lol/ for more information"}</TextFont>
+              <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 17, marginLeft: 10, marginRight: 10, textAlign:"center", marginVertical:10, paddingHorizontal: 15}}>{"Visit https://nook.lol/ for more information"}</TextFont>
             </TouchableOpacity>
             <View style={{height: 10}}/>
             <View style={{marginHorizontal: 10}}>
@@ -495,6 +495,10 @@ const renderTabBar = props => (
   />
 );
 
+export function supportCatalogScanner(){
+  return global.language==="English (Europe)" || global.language==="English" || global.language==="French" || global.language==="French (US)" || global.language==="Spanish" || global.language==="Spanish (US)" || global.language==="German" || global.language==="Italian" || global.language==="Dutch" || global.language==="Portuguese"
+}
+
 export class CatalogScannerApp extends Component{
   render(){
     return <TouchableOpacity onPress={()=>{openURL("https://play.google.com/store/apps/details?id=com.acnh.catalog_scanner")}} activeOpacity={0.6}>
@@ -504,8 +508,8 @@ export class CatalogScannerApp extends Component{
           style={{width:85, height:85, resizeMode:"contain",borderColor: colors.lightDarkAccent[global.darkMode],borderWidth: 2, borderRadius: 18}}
         />
         <View style={{marginLeft: 10, alignContent:'center', justifyContent:"center"}}>
-          <TextFont translate={false} bold={true} style={{fontSize: 18, color:colors.textBlack[global.darkMode]}}>{"Catalog Scanner App"}</TextFont>
-          <TextFont translate={false} bold={false} style={{fontSize: 14, marginLeft:2, color:colors.textBlack[global.darkMode]}}>{"For ACNH Pocket Guide"}</TextFont>
+          <TextFont bold={true} style={{fontSize: 18, color:colors.textBlack[global.darkMode]}}>{"Catalog Scanner App"}</TextFont>
+          <TextFont bold={false} style={{fontSize: 14, marginLeft:2, color:colors.textBlack[global.darkMode]}}>{"For ACNH Pocket Guide"}</TextFont>
           <View style={{height: 5}}/> 
           <View style={{alignContent:"flex-end", justifyContent:"space-between",flexDirection:"row"}}>
           <TextFont bold={true} style={{fontSize: 16, marginRight: 20, color:colors.textWhite[0], backgroundColor:colors.popupSuccess[global.darkMode], alignSelf: 'flex-start', padding:5, paddingHorizontal:10, marginTop:3, borderRadius:10}}>{"Free"}</TextFont>

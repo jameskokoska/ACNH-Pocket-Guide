@@ -16,7 +16,7 @@ import {getStorage, openURL} from "../LoadJsonData"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {GiveSupport, MailLink} from "./Formattings";
 import {changelog} from "../Changelog"
-import { CatalogScannerApp } from "../pages/CatalogPage";
+import { CatalogScannerApp, supportCatalogScanner } from "../pages/CatalogPage";
 
 export default class PopupChangelog extends Component {
   constructor(props){
@@ -77,7 +77,7 @@ export default class PopupChangelog extends Component {
             {this.numLogins>3?<GiveSupport tapHere blueText style={{marginBottom:-20}} setPage={this.props.setPage}/>:<View/>}
 
             <View style={{height:30}}/>
-            <CatalogScannerApp/>
+            {supportCatalogScanner() ? <CatalogScannerApp/> : <View/>}
 
             {
               changelogText.map((point, index) => {

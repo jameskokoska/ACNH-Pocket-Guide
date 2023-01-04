@@ -1531,6 +1531,7 @@
       "Italian": "Profilo",
       "Dutch": "Profiel",
       "Chinese": "配置文件",
+      "Korean": "프로파일",
       "Portuguese": "Perfil",
       "Czech": "Profil",
       "Slovak": "Profil"
@@ -6365,7 +6366,9 @@
       "Italian": "Banco da lavoro",
       "Dutch": "Werkbank",
       "Chinese": "工作椅",
-      "Portuguese": "Bancada de Trabalho"
+      "Portuguese": "Bancada de Trabalho",
+      "Czech": "Pracovní Stůl",
+      "Slovak": "Pracovná Doska"
     },
     "facility decor": {
       "English": "Facility Decor",
@@ -6379,7 +6382,9 @@
       "Italian": "Arredamento della struttura",
       "Dutch": "Faciliteit Inrichting",
       "Chinese": "设施装饰",
-      "Portuguese": "Decoração de Instalações"
+      "Portuguese": "Decoração de Instalações",
+      "Czech": "Dekorace Preváckárne",
+      "Slovak": "Dekorácie Prevádzkarne"
     },
     "playground": {
       "English": "Playground",
@@ -6393,7 +6398,9 @@
       "Italian": "Parco giochi",
       "Dutch": "Speelplaats",
       "Chinese": "游乐场",
-      "Portuguese": "Parquinho"
+      "Portuguese": "Parquinho",
+      "Czech": "Dětské Hřiště",
+      "Slovak": "Detské Ihrisko"
     },
     "insect": {
       "English": "Insect",
@@ -6407,7 +6414,9 @@
       "Italian": "Insetto",
       "Dutch": "Insect",
       "Chinese": "昆虫",
-      "Portuguese": "Inseto"
+      "Portuguese": "Inseto",
+      "Czech": "Hmyz",
+      "Slovak": "Hmyz"
     },
     "tv": {
       "English": "TV",
@@ -6421,7 +6430,9 @@
       "Italian": "TV",
       "Dutch": "TV",
       "Chinese": "电视机",
-      "Portuguese": "Tv"
+      "Portuguese": "Tv",
+      "Czech": "TV",
+      "Slovak": "TV"
     },
     "zen-style": {
       "English": "Zen-style",
@@ -6435,7 +6446,9 @@
       "Italian": "Stile Zen",
       "Dutch": "Zen-stijl",
       "Chinese": "禅宗风格",
-      "Portuguese": "Estilo Zen"
+      "Portuguese": "Estilo Zen",
+      "Czech": "Zen-styl",
+      "Slovak": "Zen-štýl"
     },
     "folk craft decor": {
       "English": "Folk Craft Decor",
@@ -6449,7 +6462,9 @@
       "Italian": "Arredamento Artigianale",
       "Dutch": "Folk Craft Decor",
       "Chinese": "民间工艺装饰",
-      "Portuguese": "Decoração Folk Craft"
+      "Portuguese": "Decoração Folk Craft",
+      "Czech": "Dekorace Lidových Řemesel",
+      "Slovak": "Dekorácie Ľudových Remesiel"
     },
     "sewing table": {
       "English": "Sewing Table",
@@ -6463,7 +6478,9 @@
       "Italian": "Tavolo da cucito",
       "Dutch": "Naaitafel",
       "Chinese": "缝纫台",
-      "Portuguese": "Mesa de Costura"
+      "Portuguese": "Mesa de Costura",
+      "Czech": "Šicí Stůl",
+      "Slovak": "Šijací Stôl"
     },
     "heating": {
       "English": "Heating",
@@ -6477,7 +6494,9 @@
       "Italian": "Riscaldamento",
       "Dutch": "Verwarming",
       "Chinese": "暖气",
-      "Portuguese": "Aquecimento"
+      "Portuguese": "Aquecimento",
+      "Czech": "Vyhřívání",
+      "Slovak": "Kúrenie"
     },
     "beauty": {
       "English": "Beauty",
@@ -6491,7 +6510,9 @@
       "Italian": "Bellezza",
       "Dutch": "Schoonheid",
       "Chinese": "美术",
-      "Portuguese": "Beleza"
+      "Portuguese": "Beleza",
+      "Czech": "Kosmetika",
+      "Slovak": "Kozmetika"
     },
     "game console": {
       "English": "Game Console",
@@ -6505,7 +6526,9 @@
       "Italian": "Console da gioco",
       "Dutch": "Spelcomputer",
       "Chinese": "游戏机",
-      "Portuguese": "Videogame"
+      "Portuguese": "Videogame",
+      "Czech": "Herní Konzole",
+      "Slovak": "Herná Konzola"
     },
     "special insect": {
       "English": "Special Insect",
@@ -6519,7 +6542,9 @@
       "Italian": "Insetto speciale",
       "Dutch": "Speciaal Insect",
       "Chinese": "特殊昆虫",
-      "Portuguese": "Inseto Especial"
+      "Portuguese": "Inseto Especial",
+      "Czech": "Speciální Hmyz",
+      "Slovak": "Špeciálny Hmyz"
     },
     "dining": {
       "English": "Dining",
@@ -6533,7 +6558,9 @@
       "Italian": "Pranzo",
       "Dutch": "Dineren",
       "Chinese": "饮食",
-      "Portuguese": "Jantar"
+      "Portuguese": "Jantar",
+      "Czech": "Jídelna",
+      "Slovak": "Jedáleň"
     },
     "special fish": {
       "English": "Special Fish",
@@ -6547,7 +6574,9 @@
       "Italian": "Pesce speciale",
       "Dutch": "Speciale vis",
       "Chinese": "特殊鱼类",
-      "Portuguese": "Peixe Especial"
+      "Portuguese": "Peixe Especial",
+      "Czech": "Speciální Ryby",
+      "Slovak": "Špeciálne Ryby"
     },
     "air conditioning": {
       "English": "Air Conditioning",
@@ -6561,7 +6590,9 @@
       "Italian": "Aria condizionata",
       "Dutch": "Airconditioning",
       "Chinese": "空调",
-      "Portuguese": "Ar condicionado"
+      "Portuguese": "Ar condicionado",
+      "Czech": "Klimatizace",
+      "Slovak": "Klimatizácia"
     },
     "house door decor": {
       "English": "House Door Decor",
@@ -6575,7 +6606,9 @@
       "Italian": "Decoro per porta d'ingresso",
       "Dutch": "Huis Deur Decor",
       "Chinese": "房屋门饰",
-      "Portuguese": "Decoração de portas de casa"
+      "Portuguese": "Decoração de portas de casa",
+      "Czech": "Dekorace Dveří",
+      "Slovak": "Dekorácia Dverí"
     },
     "not in catalog": {
       "English": "Not in catalog",
@@ -6589,7 +6622,9 @@
       "Italian": "Non in catalogo",
       "Dutch": "Niet in catalogus",
       "Chinese": "不在目录中",
-      "Portuguese": "Não está no catálogo"
+      "Portuguese": "Não está no catálogo",
+      "Czech": "Není v katalogu",
+      "Slovak": "Nie je v katalógu"
     },
     "not for sale": {
       "English": "Not for sale",
@@ -6603,7 +6638,9 @@
       "Italian": "Non in vendita",
       "Dutch": "Niet te koop",
       "Chinese": "非卖品",
-      "Portuguese": "Não está a venda"
+      "Portuguese": "Não está a venda",
+      "Czech": "Není na prodej",
+      "Slovak": "Nie je na predaj"
     },
     "catalog": {
       "English": "Catalog",
@@ -6617,7 +6654,9 @@
       "Italian": "Catalogo",
       "Dutch": "Catalogus",
       "Chinese": "产品目录",
-      "Portuguese": "Catálogo"
+      "Portuguese": "Catálogo",
+      "Czech": "Katalog",
+      "Slovak": "Katalóg"
     },
     "for sale": {
       "English": "For sale",
@@ -6631,7 +6670,9 @@
       "Italian": "In vendita",
       "Dutch": "Te koop",
       "Chinese": "用于销售",
-      "Portuguese": "À venda"
+      "Portuguese": "À venda",
+      "Czech": "Na prodej",
+      "Slovak": "Na predaj"
     },
     "none": {
       "English": "None",
@@ -6660,7 +6701,9 @@
       "Dutch": "Kleur 1",
       "Chinese": "颜色1",
       "Korean": "색상 1",
-      "Portuguese": "Cor 1"
+      "Portuguese": "Cor 1",
+      "Czech": "Barva 1",
+      "Slovak": "Farba 1"
     },
     "color 2": {
       "English": "Color 2",
@@ -6675,7 +6718,9 @@
       "Dutch": "Kleur 2",
       "Chinese": "颜色2",
       "Korean": "색상 2",
-      "Portuguese": "Cor 2"
+      "Portuguese": "Cor 2",
+      "Czech": "Barva 2",
+      "Slovak": "Farba 2"
     },
     "can catch in january": {
       "English": "Can catch in January",
@@ -6690,7 +6735,9 @@
       "Dutch": "Kan vangen in januari",
       "Chinese": "可在一月份捕获",
       "Korean": "1월에 잡을 수 있다",
-      "Portuguese": "Pode pegar em Janeiro"
+      "Portuguese": "Pode pegar em Janeiro",
+      "Czech": "Lze chytit v lednu",
+      "Slovak": "Možno chytiť v januári"
     },
     "can catch in february": {
       "English": "Can catch in February",
@@ -6705,7 +6752,9 @@
       "Dutch": "Kan vangen in februari",
       "Chinese": "可在二月份捕获",
       "Korean": "2월에 잡을 수 있다",
-      "Portuguese": "Pode pegar em Fevereiro"
+      "Portuguese": "Pode pegar em Fevereiro",
+      "Czech": "Lze chytit v únoru",
+      "Slovak": "Možno chytiť vo februári"
     },
     "can catch in march": {
       "English": "Can catch in March",
@@ -6720,7 +6769,9 @@
       "Dutch": "Kan vangen in maart",
       "Chinese": "可在三月份捕获",
       "Korean": "3월에 잡을 수 있다",
-      "Portuguese": "Pode pegar em Março"
+      "Portuguese": "Pode pegar em Março",
+      "Czech": "Lze chytat v březnu",
+      "Slovak": "Možno chytiť v marci"
     },
     "can catch in april": {
       "English": "Can catch in April",
@@ -6735,7 +6786,9 @@
       "Dutch": "Kan vangen in april",
       "Chinese": "可在四月份捕获",
       "Korean": "4월에 잡을 수 있다",
-      "Portuguese": "Pode pegar em Abril"
+      "Portuguese": "Pode pegar em Abril",
+      "Czech": "Lze chytit v dubnu",
+      "Slovak": "Možno chytiť v apríli"
     },
     "can catch in may": {
       "English": "Can catch in May",
@@ -6750,7 +6803,9 @@
       "Dutch": "Kan vangen in mei",
       "Chinese": "可在五月份捕获",
       "Korean": "5월에 잡을 수 있다",
-      "Portuguese": "Pode pegar em Maio"
+      "Portuguese": "Pode pegar em Maio",
+      "Czech": "Lze chytit v květnu",
+      "Slovak": "Možno chytiť v máji"
     },
     "can catch in june": {
       "English": "Can catch in June",
@@ -6765,7 +6820,9 @@
       "Dutch": "Kan vangen in juni",
       "Chinese": "可在六月份捕获",
       "Korean": "6월에 잡을 수 있다",
-      "Portuguese": "Pode pegar em Junho"
+      "Portuguese": "Pode pegar em Junho",
+      "Czech": "Může chytit v červnu",
+      "Slovak": "Možno chytiť v júni"
     },
     "can catch in july": {
       "English": "Can catch in July",
@@ -6780,7 +6837,9 @@
       "Dutch": "Kan vangen in juli",
       "Chinese": "可在七月份捕获",
       "Korean": "7월에 잡을 수 있다",
-      "Portuguese": "Pode pegar em Julho"
+      "Portuguese": "Pode pegar em Julho",
+      "Czech": "Může chytit v červenci",
+      "Slovak": "Možno chytiť v júli"
     },
     "can catch in august": {
       "English": "Can catch in August",
@@ -6795,7 +6854,9 @@
       "Dutch": "Kan vangen in augustus",
       "Chinese": "可在八月份捕获",
       "Korean": "8월에 잡을 수 있다",
-      "Portuguese": "Pode pegar em Agosto"
+      "Portuguese": "Pode pegar em Agosto",
+      "Czech": "Může chytit v srpnu",
+      "Slovak": "Možno chytiť v auguste"
     },
     "can catch in september": {
       "English": "Can catch in September",
@@ -6810,7 +6871,9 @@
       "Dutch": "Kan vangen in september",
       "Chinese": "可在九月份捕获",
       "Korean": "9월에 잡을 수 있다",
-      "Portuguese": "Pode pegar em Setembro"
+      "Portuguese": "Pode pegar em Setembro",
+      "Czech": "Může chytat v září",
+      "Slovak": "Možno chytiť v septembri"
     },
     "can catch in october": {
       "English": "Can catch in October",
@@ -6825,7 +6888,9 @@
       "Dutch": "Kan vangen in oktober",
       "Chinese": "可在十月份捕获",
       "Korean": "10월에 잡을 수 있다",
-      "Portuguese": "Pode pegar em Outubro"
+      "Portuguese": "Pode pegar em Outubro",
+      "Czech": "Může chytat v říjnu",
+      "Slovak": "Možno chytiť v októbri"
     },
     "can catch in november": {
       "English": "Can catch in November",
@@ -6840,7 +6905,9 @@
       "Dutch": "Kan vangen in november",
       "Chinese": "可在十一月份捕获",
       "Korean": "11월에 잡을 수 있다",
-      "Portuguese": "Pode pegar em Novembro"
+      "Portuguese": "Pode pegar em Novembro",
+      "Czech": "Může chytit v listopadu",
+      "Slovak": "Možno chytiť v novembri"
     },
     "can catch in december": {
       "English": "Can catch in December",
@@ -6855,7 +6922,9 @@
       "Dutch": "Kan vangen in december",
       "Chinese": "可在十二月份捕获",
       "Korean": "12월에 잡을 수 있다",
-      "Portuguese": "Pode pegar em Dezembro"
+      "Portuguese": "Pode pegar em Dezembro",
+      "Czech": "Může chytit v prosinci",
+      "Slovak": "Možno chytiť v decembri"
     },
     "where/how": {
       "English": "Where/How",
@@ -6870,7 +6939,9 @@
       "Dutch": "Waar/Hoe",
       "Chinese": "哪里/如何",
       "Korean": "장소/잡을 방법",
-      "Portuguese": "Onde/Como"
+      "Portuguese": "Onde/Como",
+      "Czech": "Kde/Jak",
+      "Slovak": "Kde/Ako"
     },
     "source": {
       "English": "Source",
@@ -6884,7 +6955,9 @@
       "Italian": "Fonte",
       "Dutch": "Bron",
       "Chinese": "来源",
-      "Portuguese": "Fonte"
+      "Portuguese": "Fonte",
+      "Czech": "Zdroj",
+      "Slovak": "Zdroj"
     },
     "tag": {
       "English": "Tag",
@@ -6898,7 +6971,9 @@
       "Italian": "Tag",
       "Dutch": "Label",
       "Chinese": "标签",
-      "Portuguese": "Marcação"
+      "Portuguese": "Marcação",
+      "Czech": "Štítek",
+      "Slovak": "Značka"
     },
     "category": {
       "English": "Category",
@@ -6912,7 +6987,9 @@
       "Italian": "Categoria",
       "Dutch": "Categorie",
       "Chinese": "类别",
-      "Portuguese": "Categoria"
+      "Portuguese": "Categoria",
+      "Czech": "Kategorie",
+      "Slovak": "Kategória"
     },
     "season/event exclusive": {
       "English": "Season/Event Exclusive",
@@ -6926,7 +7003,9 @@
       "Italian": "Esclusiva stagionale/evento",
       "Dutch": "Exclusief seizoen/evenement",
       "Chinese": "季节/事件专用",
-      "Portuguese": "Sazonal /Evento Exclusivo"
+      "Portuguese": "Sazonal /Evento Exclusivo",
+      "Czech": "Exkluzivní Sezóna/Akce",
+      "Slovak": "Sezóna/Podujatie Exkluzívne"
     },
     "variation": {
       "English": "Variation",
@@ -6940,7 +7019,9 @@
       "Italian": "Variazioni",
       "Dutch": "Variatie",
       "Chinese": "变化",
-      "Portuguese": "Variação"
+      "Portuguese": "Variação",
+      "Czech": "Varianta",
+      "Slovak": "Variácia"
     },
     "hha concept 1": {
       "English": "HHA Concept 1",
@@ -6954,7 +7035,9 @@
       "Italian": "Concept Accademia delle Belle Case 1",
       "Dutch": "HHA-concept 1",
       "Chinese": "快乐家协会概念1",
-      "Portuguese": "Conceito HHA 1"
+      "Portuguese": "Conceito HHA 1",
+      "Czech": "HHA Koncept 1",
+      "Slovak": "HHA Koncept 1"
     },
     "hha concept 2": {
       "English": "HHA Concept 2",
@@ -6968,7 +7051,9 @@
       "Italian": "Concept Accademia delle Belle Case 2",
       "Dutch": "HHA-concept 2",
       "Chinese": "快乐家协会概念2",
-      "Portuguese": "Conceito HHA 2"
+      "Portuguese": "Conceito HHA 2",
+      "Czech": "HHA Koncept 2",
+      "Slovak": "HHA Koncept 2"
     },
     "hha series": {
       "English": "HHA Series",
@@ -6982,7 +7067,9 @@
       "Italian": "Serie Accademia delle Belle Case",
       "Dutch": "HHA-serie",
       "Chinese": "快乐家协会系列",
-      "Portuguese": "HHA Series"
+      "Portuguese": "HHA Series",
+      "Czech": "HHA Série",
+      "Slovak": "HHA Séria"
     },
     "hha category": {
       "English": "HHA Category",
@@ -6996,7 +7083,9 @@
       "Italian": "Categoria Accademia delle Belle Case",
       "Dutch": "HHA-categorie",
       "Chinese": "快乐家协会类别",
-      "Portuguese": "Categoria HHA"
+      "Portuguese": "Categoria HHA",
+      "Czech": "HHA Kategorie",
+      "Slovak": "HHA Kategória"
     },
     "hha set": {
       "English": "HHA Set",
@@ -7010,7 +7099,9 @@
       "Italian": "Set Accademia delle Belle Case",
       "Dutch": "HHA-set",
       "Chinese": "快乐家协会套装",
-      "Portuguese": "Conjunto HHA"
+      "Portuguese": "Conjunto HHA",
+      "Czech": "HHA Sada",
+      "Slovak": "HHA Súbor"
     },
     "hobby": {
       "English": "Hobby",
@@ -7024,7 +7115,9 @@
       "Italian": "Hobby",
       "Dutch": "Hobby",
       "Chinese": "兴趣爱好",
-      "Portuguese": "Passatempo"
+      "Portuguese": "Passatempo",
+      "Czech": "Hobby",
+      "Slovak": "Hobby"
     },
     "style 1": {
       "English": "Style 1",
@@ -7038,7 +7131,9 @@
       "Italian": "Stile 1",
       "Dutch": "Stijl 1",
       "Chinese": "风格1",
-      "Portuguese": "Estilo 1"
+      "Portuguese": "Estilo 1",
+      "Czech": "Styl 1",
+      "Slovak": "Štýl 1"
     },
     "style 2": {
       "English": "Style 2",
@@ -7052,7 +7147,9 @@
       "Italian": "Stile 2",
       "Dutch": "Stijl 2",
       "Chinese": "风格2",
-      "Portuguese": "Estilo 2"
+      "Portuguese": "Estilo 2",
+      "Czech": "Styl 2",
+      "Slovak": "Štýl 2"
     },
     "sort lists in alphabetical order": {
       "English": "Sort lists in alphabetical order",
@@ -9710,7 +9807,9 @@
       "Italian": "Se ti piace l'app, considera di supportarci premendo qui",
       "Dutch": "Als je deze app leuk vindt, overweeg dan om deze te ondersteunen door hier te tikken",
       "Chinese": "如果你喜欢这个应用程序，请点击这里支持它",
-      "Portuguese": "Se você gosta deste aplicativo, considere apoiá-lo tocando aqui"
+      "Portuguese": "Se você gosta deste aplicativo, considere apoiá-lo tocando aqui",
+      "Czech": "Pokud se vám tato aplikace líbí, zvažte její podporu klepnutím sem.",
+      "Slovak": "Ak sa vám táto aplikácia páči, podporte ju klepnutím sem"
     },
     "give a tip": {
       "English": "Give a tip",
@@ -9724,7 +9823,9 @@
       "Italian": "Lascia una donazione",
       "Dutch": "Geef een fooi",
       "Chinese": "打赏",
-      "Portuguese": "Dê uma dica"
+      "Portuguese": "Dê uma dica",
+      "Czech": "Darujte dýško",
+      "Slovak": "Darujte prepitné"
     },
     "select filters": {
       "English": "Select Filters",
@@ -9738,7 +9839,9 @@
       "Italian": "Seleziona filtri",
       "Dutch": "Selecteer filters",
       "Chinese": "选择过滤器",
-      "Portuguese": "Selecione Filtros"
+      "Portuguese": "Selecione Filtros",
+      "Czech": "Vybrat Filtry",
+      "Slovak": "Vybrať Filtre"
     },
     "confirm": {
       "English": "Confirm",
@@ -9753,7 +9856,9 @@
       "Dutch": "Bevestigen",
       "Chinese": "确认",
       "Korean": "확인",
-      "Portuguese": "Confirme"
+      "Portuguese": "Confirme",
+      "Czech": "Potvrdit",
+      "Slovak": "Potvrďte"
     },
     "collected/not collected": {
       "English": "Collected/Not Collected",
@@ -9767,7 +9872,9 @@
       "Italian": "Collezionato/Non Collezionato",
       "Dutch": "Verzameld/niet verzameld",
       "Chinese": "已收集/未收集",
-      "Portuguese": "Coletados/Não Coletados"
+      "Portuguese": "Coletados/Não Coletados",
+      "Czech": "Shromážděno/Neshromážděno",
+      "Slovak": "Zozbierané/Nezozbierané"
     },
     "type categories": {
       "English": "Type Categories",
@@ -9781,7 +9888,9 @@
       "Italian": "Tipo di categorie",
       "Dutch": "Type categorieën",
       "Chinese": "类型分类",
-      "Portuguese": "Tipo de Categorias"
+      "Portuguese": "Tipo de Categorias",
+      "Czech": "Kategorie - Typy",
+      "Slovak": "Kategórie - Typy"
     },
     "uncraftable item variations filter": {
       "English": "Uncraftable Item Variations Filter",
@@ -9795,7 +9904,9 @@
       "Italian": "Filtro per le variazioni non costruibili",
       "Dutch": "Filter voor niet-bewerkbare itemvariaties",
       "Chinese": "无法制作的物品变体过滤器",
-      "Portuguese": "Filtro de Variações de Itens Não Construtiveis"
+      "Portuguese": "Filtro de Variações de Itens Não Construtiveis",
+      "Czech": "Filtr Varianty Nevyrobitelných Předmětů",
+      "Slovak": "Filter Varianty Nevyrábateľných Predmetov"
     },
     "active times filters": {
       "English": "Active Times Filters",
@@ -9809,7 +9920,9 @@
       "Italian": "Attiva filtri tempo",
       "Dutch": "Actieve tijden-filters",
       "Chinese": "活动时间过滤器",
-      "Portuguese": "Filtros de Tempos Ativos"
+      "Portuguese": "Filtros de Tempos Ativos",
+      "Czech": "Filtr Aktivních Časů",
+      "Slovak": "Filter Aktívnych Časov"
     },
     "profiles/islands": {
       "English": "Profiles/Islands",
@@ -9823,7 +9936,9 @@
       "Italian": "Profili/Isole",
       "Dutch": "Profielen/eilanden",
       "Chinese": "配置文件/岛屿",
-      "Portuguese": "Perfis/Ilhas"
+      "Portuguese": "Perfis/Ilhas",
+      "Czech": "Profily/Ostrovy",
+      "Slovak": "Profily/Islandy"
     },
     "profiles": {
       "English": "Profiles",
@@ -9837,7 +9952,9 @@
       "Italian": "Profili",
       "Dutch": "Profielen",
       "Chinese": "配置文件",
-      "Portuguese": "Profiles"
+      "Portuguese": "Profiles",
+      "Czech": "Profily",
+      "Slovak": "Profily"
     },
     "profiles allow you to have multiple different islands/users to track different things. load a profile to load the current saved settings and collection.": {
       "English": "Profiles allow you to have multiple different islands/users to track different things. Load a profile to load the current saved settings and collection.",
@@ -9851,7 +9968,9 @@
       "Italian": "I profili ti permettono di avere più isole/utenti per tenere traccia di cose differenti. Carica un profilo per caricare le impostazioni correnti salvate e la corrispettiva collezione.",
       "Dutch": "Met profielen kun je meerdere verschillende eilanden/gebruikers hebben om verschillende dingen te volgen. Laad een profiel om de huidige opgeslagen instellingen en verzameling te laden.",
       "Chinese": "配置文件允许你有多个不同的岛屿/用户来追踪不同的东西。加载一个配置文件来加载当前保存的设置和收藏。",
-      "Portuguese": "Os perfis permitem que você tenha várias ilhas / usuários diferentes para marcar coisas diferentes. Carregue um perfil para carregar as configurações e coleção salvas no momento."
+      "Portuguese": "Os perfis permitem que você tenha várias ilhas / usuários diferentes para marcar coisas diferentes. Carregue um perfil para carregar as configurações e coleção salvas no momento.",
+      "Czech": "Profily umožňují mít více různých ostrovů/uživatelů pro sledování různých věcí. Načtením profilu načtete aktuální uložené nastavení a sbírku.",
+      "Slovak": "Profily umožňujú mať viacero rôznych ostrovov/užívateľov na sledovanie rôznych vecí. Načítaním profilu načítate aktuálne uložené nastavenia a zbierku."
     },
     "load profile": {
       "English": "Load Profile",
@@ -9961,7 +10080,9 @@
       "Italian": "Aggiungi mutuo",
       "Dutch": "Lening toevoegen",
       "Chinese": "添加贷款",
-      "Portuguese": "Add Empréstimo a Pagar"
+      "Portuguese": "Add Empréstimo a Pagar",
+      "Czech": "Přidat Úvěr",
+      "Slovak": "Pridať Úver"
     },
     "loan name": {
       "English": "Loan Name",
@@ -9975,7 +10096,9 @@
       "Italian": "Nome mutuo",
       "Dutch": "Lening naam",
       "Chinese": "贷款名称",
-      "Portuguese": "Nome do Empréstimo"
+      "Portuguese": "Nome do Empréstimo",
+      "Czech": "Název Úvěru",
+      "Slovak": "Názov Úveru"
     },
     "total cost": {
       "English": "Total Cost",
@@ -9989,7 +10112,9 @@
       "Italian": "Costo totale",
       "Dutch": "Totale prijs",
       "Chinese": "总成本",
-      "Portuguese": "Custo total"
+      "Portuguese": "Custo total",
+      "Czech": "Celkové Náklady",
+      "Slovak": "Celkové Náklady"
     },
     "bells remaining": {
       "English": "bells remaining",
@@ -10003,7 +10128,9 @@
       "Italian": "Stelline rimanenti",
       "Dutch": "klingels over",
       "Chinese": "剩余时间",
-      "Portuguese": "bells restantes"
+      "Portuguese": "bells restantes",
+      "Czech": "zbývající zvony",
+      "Slovak": "zostávajúce zvony"
     },
     "pay": {
       "English": "Pay",
@@ -10017,7 +10144,9 @@
       "Italian": "Paga",
       "Dutch": "Betalen",
       "Chinese": "支付",
-      "Portuguese": "Pagar"
+      "Portuguese": "Pagar",
+      "Czech": "Zaplatit",
+      "Slovak": "Zaplatiť"
     },
     "edit": {
       "English": "Edit",
@@ -10031,7 +10160,9 @@
       "Italian": "Modifica",
       "Dutch": "Bewerking",
       "Chinese": "编辑",
-      "Portuguese": "Editar"
+      "Portuguese": "Editar",
+      "Czech": "Upravit",
+      "Slovak": "Upraviť"
     },
     "edit pages": {
       "English": "Edit Pages",
@@ -10045,7 +10176,9 @@
       "Italian": "Modifica Pagine",
       "Dutch": "Pagina's bewerken",
       "Chinese": "编辑页面",
-      "Portuguese": "Editar Páginas "
+      "Portuguese": "Editar Páginas ",
+      "Czech": "Upravit Stránky",
+      "Slovak": "Upraviť Stránky"
     },
     "disable edit pages": {
       "English": "Disable Edit Pages",
@@ -10059,7 +10192,9 @@
       "Italian": "Disabilita Modifica pagine",
       "Dutch": "Pagina's bewerken uitschakelen",
       "Chinese": "禁用编辑页面",
-      "Portuguese": "Desabilitar Editar Páginas"
+      "Portuguese": "Desabilitar Editar Páginas",
+      "Czech": "Zakázat Úpravu Stránek",
+      "Slovak": "Zakázať Úpravu Stránok"
     },
     "islander info": {
       "English": "Islander Info",
@@ -10073,7 +10208,9 @@
       "Italian": "Informazioni isolano",
       "Dutch": "Informatie over eilandbewoners",
       "Chinese": "岛民信息",
-      "Portuguese": "Informações Habitante"
+      "Portuguese": "Informações Habitante",
+      "Czech": "Informace o dědinčanoch",
+      "Slovak": "Informácie o dedinčanoch"
     },
     "select icon": {
       "English": "Select Icon",
@@ -10087,7 +10224,9 @@
       "Italian": "Seleziona icona",
       "Dutch": "Selecteer Icoon",
       "Chinese": "选择图标",
-      "Portuguese": "Selecione Icone"
+      "Portuguese": "Selecione Icone",
+      "Czech": "Vybrat Ikonu",
+      "Slovak": "Vyberte Ikonu"
     },
     "custom image": {
       "English": "Custom Image",
@@ -10101,7 +10240,9 @@
       "Italian": "Immagine personalizzata",
       "Dutch": "Aangepaste afbeelding",
       "Chinese": "自定义图像",
-      "Portuguese": "Imagem Personalizada"
+      "Portuguese": "Imagem Personalizada",
+      "Czech": "Vlastní Obrázek",
+      "Slovak": "Vlastný Obrázok"
     },
     "amiibo cards": {
       "English": "Amiibo Cards",
@@ -10115,7 +10256,9 @@
       "Italian": "Carte amiibo",
       "Dutch": "Amiibo-kaarten",
       "Chinese": "Amiibo卡",
-      "Portuguese": "Cartas Amiibo"
+      "Portuguese": "Cartas Amiibo",
+      "Czech": "Karty Amiibo",
+      "Slovak": "Karty Amiibo"
     },
     "hand sign": {
       "English": "Hand Sign",
@@ -10129,7 +10272,9 @@
       "Italian": "Segno con la mano",
       "Dutch": "Handgebaar",
       "Chinese": "手牌",
-      "Portuguese": "Sinal de Mão"
+      "Portuguese": "Sinal de Mão",
+      "Czech": "Znak ruky",
+      "Slovak": "Znak ruky"
     },
     "paper": {
       "English": "Paper",
@@ -17261,7 +17406,9 @@
       "Russian": "Пропустить завершенные варианты",
       "Italian": "Salta le variazioni completate",
       "Dutch": "Voltooide Variaties Overslaan",
-      "Portuguese": "Pular variações concluídas"
+      "Portuguese": "Pular variações concluídas",
+      "Czech": "Přeskočit Dokončené Varianty",
+      "Slovak": "Preskočiť Dokončené Varianty"
     },
     "don't show variation selection for items you've already collected all the variations for. this option is only used when 'select variations' is enabled.": {
       "English": "Don't show variation selection for items you've already collected all the variations for. This option is only used when 'Select Variations' is enabled.",
@@ -17274,7 +17421,9 @@
       "Russian": "Не показывать выбор вариантов для элементов, для которых вы уже собрали все варианты. Этот параметр используется только при включенном параметре «Выбрать варианты».",
       "Italian": "Non mostrare la selezione delle varianti per gli articoli per i quali hai già raccolto tutte le varianti. Questa opzione viene utilizzata solo quando 'Seleziona variazioni' è abilitato.",
       "Dutch": "Geen variatieselectie weergeven voor items waarvoor je al alle variaties heeft verzameld. Deze optie wordt alleen gebruikt als 'Selecteer Variaties' is ingeschakeld.",
-      "Portuguese": "Não mostre a seleção de variação para itens para os quais você já coletou todas as variações. Esta opção só é usada quando 'Selecionar Variações' está habilitado."
+      "Portuguese": "Não mostre a seleção de variação para itens para os quais você já coletou todas as variações. Esta opção só é usada quando 'Selecionar Variações' está habilitado.",
+      "Czech": "Nezobrazujte výběr variant pro položky, pro které jste již shromáždili všechny varianty. Tato možnost se používá pouze tehdy, když je povolena možnost \"Vybrat Varianty\".",
+      "Slovak": "Nezobrazujte výber variantov pre položky, pre ktoré ste už zhromaždili všetky varianty. Táto možnosť sa používa len vtedy, keď je povolená možnosť \"Vybrať Variácie\"."
     },
     "short header": {
       "English": "Short header",
@@ -17287,7 +17436,9 @@
       "Russian": "Короткий заголовок",
       "Italian": "Intestazione corta",
       "Dutch": "Korte koptekst",
-      "Portuguese": "Cabeçalho curto"
+      "Portuguese": "Cabeçalho curto",
+      "Czech": "Krátké záhlaví",
+      "Slovak": "Krátke záhlavie"
     },
     "the header will take up less room on item list pages and provide more space for the items to be displayed.": {
       "English": "The header will take up less room on item list pages and provide more space for the items to be displayed.",
@@ -17300,7 +17451,9 @@
       "Russian": "Заголовок займет меньше места на страницах списка элементов и предоставит больше места для отображения элементов.",
       "Italian": "L'intestazione occuperà meno spazio nelle pagine dell'elenco degli elementi e fornirà più spazio per gli elementi da visualizzare.",
       "Dutch": "De koptekst neemt minder ruimte in beslag op pagina's met itemlijst en biedt meer ruimte voor de items die moeten worden weergegeven.",
-      "Portuguese": "O cabeçalho ocupará menos espaço nas páginas da lista de itens e fornecerá mais espaço para os itens a serem exibidos."
+      "Portuguese": "O cabeçalho ocupará menos espaço nas páginas da lista de itens e fornecerá mais espaço para os itens a serem exibidos.",
+      "Czech": "Záhlaví zabere méně místa na stránkách seznamu položek a poskytne více prostoru pro zobrazení položek.",
+      "Slovak": "Záhlavie zaberie menej miesta na stránkach zoznamu položiek a poskytne viac priestoru na zobrazenie položiek."
     },
     "music box": {
       "English": "Music Box",
@@ -17313,7 +17466,9 @@
       "Russian": "Музыкальная шкатулка",
       "Italian": "Carillon",
       "Dutch": "Muziekdoos",
-      "Portuguese": "Caixa de música"
+      "Portuguese": "Caixa de música",
+      "Czech": "Hudební Box",
+      "Slovak": "Hudobný Box"
     },
     "don't forget to backup your data!": {
       "English": "Don't forget to backup your data!",
@@ -17326,7 +17481,9 @@
       "Russian": "Не забудьте сделать резервную копию ваших данных!",
       "Italian": "Non dimenticare di eseguire il backup dei tuoi dati!",
       "Dutch": "Vergeet niet een back-up van je gegevens te maken!",
-      "Portuguese": "Não se esqueça de fazer backup de seus dados!"
+      "Portuguese": "Não se esqueça de fazer backup de seus dados!",
+      "Czech": "Nezapomeňte zálohovat svá data!",
+      "Slovak": "Nezabudnite zálohovať svoje údaje!"
     },
     "add extra information under each item in the list.": {
       "English": "Add extra information under each item in the list.",
@@ -17339,7 +17496,9 @@
       "Russian": "Добавьте дополнительную информацию под каждым элементом в списке.",
       "Italian": "Aggiungi informazioni extra sotto ogni elemento nell'elenco.",
       "Dutch": "Voeg extra informatie toe onder elk item in de lijst.",
-      "Portuguese": "Adicione informações extras em cada item da lista."
+      "Portuguese": "Adicione informações extras em cada item da lista.",
+      "Czech": "Přidejte další informace pod každou položku v seznamu.",
+      "Slovak": "Pridajte ďalšie informácie pod každú položku v zozname."
     },
     "extra information": {
       "English": "Extra Information",
@@ -17352,7 +17511,9 @@
       "Russian": "Дополнительная информация",
       "Italian": "Ulteriori informazioni",
       "Dutch": "Extra informatie",
-      "Portuguese": "Informação extra"
+      "Portuguese": "Informação extra",
+      "Czech": "Dodatečné Informace",
+      "Slovak": "Dodatočné Informácie"
     },
     "about the developer": {
       "English": "About the Developer",
@@ -18026,8 +18187,8 @@
       "Italian": "Controlla tutto (e varianti)",
       "Dutch": "Vink alles (en variaties) aan",
       "Portuguese": "Confira tudo (e variações)",
-      "Czech": "Zkontrolujte vše (a varianty)",
-      "Slovak": "Skontrolujte všetko (a variácie)"
+      "Czech": "Odškrtnout vše (i varianty)",
+      "Slovak": "Odškrtnúť Všetko (aj variácie)"
     },
     "uncheck all (and variations)": {
       "English": "Uncheck all (and variations)",
@@ -18041,8 +18202,8 @@
       "Italian": "Deseleziona tutto (e varianti)",
       "Dutch": "Vink alles (en variaties) uit",
       "Portuguese": "Desmarque todos (e variações)",
-      "Czech": "Zrušte zaškrtnutí všech (a variant)",
-      "Slovak": "Zrušte začiarknutie všetkých (a variácií)"
+      "Czech": "Zrušte zaškrtnutí všech (i variant)",
+      "Slovak": "Zrušte začiarknutie všetkých (aj variácií)"
     },
     "photos & posters": {
       "English": "Photos & Posters",
@@ -18212,17 +18373,13 @@
     "catalog scanner app": {
       "English": "Catalog Scanner App",
       "English (Europe)": "Catalog Scanner App",
-      "French": "Application de numérisation de catalogue",
-      "French (US)": "Application de numérisation de catalogue",
-      "German": "Katalog-Scanner-App",
-      "Spanish": "Aplicación de escáner de catálogo",
-      "Spanish (US)": "Aplicación de escáner de catálogo",
-      "Russian": "Приложение для сканирования каталогов",
-      "Italian": "App per la scansione del catalogo",
-      "Dutch": "Catalog Scanner-app",
-      "Portuguese": "Aplicativo de Scanner de Catálogo",
-      "Czech": "Aplikace Skener katalogu",
-      "Slovak": "Aplikácia Skener katalógu"
+      "French": "Scanner de Catalogue",
+      "French (US)": "Scanner de Catalogue",
+      "German": "Katalog-Scanner",
+      "Spanish": "Escáner de Catálogo",
+      "Spanish (US)": "Escáner de Catálogo",
+      "Italian": "Scanner Catalogo",
+      "Dutch": "Catalogusscanner"
     },
     "with nook.lol": {
       "English": "With nook.lol",
@@ -18373,6 +18530,47 @@
       "Portuguese": "Itens Incompletos",
       "Czech": "Nekompletní položky",
       "Slovak": "Nekompletné položky"
+    },
+    "import your acnh collection automatically": {
+      "English": "Import your ACNH collection automatically",
+      "English (Europe)": "Import your ACNH collection automatically",
+      "French": "Importez votre collection ACNH automatiquement",
+      "French (US)": "Importez votre collection ACNH automatiquement",
+      "German": "Importieren Sie Ihre ACNH-Sammlung automatisch",
+      "Spanish": "Importa tu colección ACNH automáticamente",
+      "Spanish (US)": "Importa tu colección ACNH automáticamente",
+      "Russian": "Автоматически импортируйте свою коллекцию ACNH",
+      "Italian": "Importa automaticamente la tua collezione ACNH",
+      "Dutch": "Importeer uw ACNH-collectie automatisch",
+      "Portuguese": "Importe sua coleção ACNH automaticamente",
+      "Czech": "Importujte svou sbírku ACNH automaticky",
+      "Slovak": "Importujte svoju zbierku ACNH automaticky"
+    },
+    "tap above to download the catalog scanner application or visit the catalog scanner page for more information.": {
+      "English": "Tap above to download the catalog scanner application or visit the Catalog Scanner page for more information.",
+      "English (Europe)": "Tap above to download the catalog scanner application or visit the Catalog Scanner page for more information.",
+      "French": "Appuyez ci-dessus pour télécharger l'application du scanner de catalogue ou visitez la page du scanner de catalogue pour plus d'informations.",
+      "French (US)": "Appuyez ci-dessus pour télécharger l'application du scanner de catalogue ou visitez la page du scanner de catalogue pour plus d'informations.",
+      "German": "Tippen Sie oben, um die Katalog-Scanner-Anwendung herunterzuladen, oder besuchen Sie die Seite „Katalog-Scanner“, um weitere Informationen zu erhalten.",
+      "Spanish": "Toque arriba para descargar la aplicación de escáner de catálogo o visite la página de escáner de catálogo para obtener más información.",
+      "Spanish (US)": "Toque arriba para descargar la aplicación de escáner de catálogo o visite la página de escáner de catálogo para obtener más información.",
+      "Russian": "Нажмите выше, чтобы загрузить приложение сканера каталогов, или посетите страницу сканера каталогов для получения дополнительной информации.",
+      "Italian": "Tocca sopra per scaricare l'applicazione di scansione del catalogo o visita la pagina Scanner del catalogo per ulteriori informazioni.",
+      "Dutch": "Tik hierboven om de catalogusscannertoepassing te downloaden of bezoek de Catalogusscannerpagina voor meer informatie.",
+      "Portuguese": "Toque acima para baixar o aplicativo do scanner de catálogo ou visite a página Scanner de Catálogo para obter mais informações.",
+      "Czech": "Klepnutím na výše stáhněte aplikaci pro skenování katalogu nebo navštivte stránku Skener katalogu pro více informací.",
+      "Slovak": "Klepnutím vyššie si stiahnete aplikáciu na skenovanie katalógu alebo navštívte stránku Skener katalógu, kde nájdete ďalšie informácie."
+    },
+    "for acnh pocket guide": {
+      "English": "For ACNH Pocket Guide",
+      "English (Europe)": "For ACNH Pocket Guide",
+      "French": "Pour le ACNH Pocket Guide",
+      "French (US)": "Pour le ACNH Pocket Guide",
+      "German": "Für ACNH Pocket Guide",
+      "Spanish": "Para la ACNH Pocket Guide",
+      "Spanish (US)": "Para la ACNH Pocket Guide",
+      "Italian": "Per la ACNH Pocket Guide",
+      "Dutch": "Voor ACNH Pocket Guide"
     }
   },
   "Sources": {
@@ -30828,7 +31026,7 @@
       "German": "Kaffee im Taubenschlag",
       "Chinese": "在“鸽巢”喝咖啡吧",
       "Chinese (Traditional)": "在“鸽巢”喝咖啡吧",
-      "Korean": "비둘기 둥지'에서 커피 한 잔"
+      "Korean": "'비둘기 둥지'에서 커피 한 잔"
     },
     "the roost, located on the second floor of the museum, is quite picky about the coffee they serve, yes, yes! do stop in to enjoy a cup and earn some dark-roasted miles!": {
       "English": "The Roost, located on the second floor of the museum, is quite picky about the coffee they serve, yes, yes! Do stop in to enjoy a cup and earn some dark-roasted miles!",
