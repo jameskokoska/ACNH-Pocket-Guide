@@ -411,6 +411,10 @@ export async function getStorageData(data, checkListKey, defaultValue, debug){
         dataLoading[i]["checkListKey"] = dataLoading[i]["checkListKey"]+dataLoading[i]["number"]
         dataLoading[i]["checkListKeyParent"] = dataLoading[i]["checkListKeyParent"]+dataLoading[i]["number"]
       }
+      if(dataLoading[i]["checkListKey"]==="amiiboCheckListSeries5Isabelle"){
+        dataLoading[i]["checkListKey"] = dataLoading[i]["checkListKey"]+dataLoading[i]["number"]
+        dataLoading[i]["checkListKeyParent"] = dataLoading[i]["checkListKeyParent"]+dataLoading[i]["number"]
+      }
     }
     dataLoadingTotal.push(dataLoading);
   }
