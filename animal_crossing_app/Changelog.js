@@ -4,6 +4,7 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-New Monthly Gold Supporter: Lou Johnson! Thank you!
 -New Monthly Silver Supporter: Tschitscho! Thank you!
 -Fixed duplicate key for amiibo series 5 Isabelle
 -
