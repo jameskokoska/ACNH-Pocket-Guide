@@ -1041,6 +1041,24 @@ export const settings = [
     "picture" : require("./assets/icons/earth.png"),
     "displayName" : "Northern Hemisphere",
     "description" : "Set your hemisphere, north or south. This will change the data displayed for creatures and events.",
+    "dropdownValues" : ["Northern Hemisphere", "Southern Hemisphere"],
+    "onChangeItem": async (item)=>{
+      await AsyncStorage.setItem("settingsNorthernHemisphere", item.value==="Northern Hemisphere" === true ? "true" : "false");
+      let index = 0;
+      for(let setting of global.settingsCurrent){
+        if(setting.keyName==="settingsNorthernHemisphere"){break}
+        index++
+      }
+      global.settingsCurrent[index]["currentValue"] = item.value==="Northern Hemisphere" === true ? "true" : "false";
+      
+    },
+    "getDefaultValue": ()=>{
+      if(getSettingsString("settingsNorthernHemisphere") === "true"){
+        return "Northern Hemisphere"
+      } else {
+        return "Southern Hemisphere"
+      }
+    }
   },
   {
     "keyName" : "settingsEditHomePage",
@@ -1166,8 +1184,46 @@ export const settings = [
     "defaultValue" : "true",
     "currentValue" : "",
     "picture" : require("./assets/icons/autoMode.png"),
-    "displayName" : "Dark mode - follow system",
+    "displayName" : "Theme mode",
     "description" : "Dark mode will follow system default, if your Android version does not support system dark mode, disable this and use the setting below.",
+    "dropdownValues" : ["Light mode", "Dark mode", "Follow system"],
+    "onChangeItem": async (item, updateSettings)=>{
+      let indexDark = 0;
+      for(let setting of global.settingsCurrent){
+        if(setting.keyName==="settingsDarkMode"){break}
+        indexDark++
+      }
+      let indexDarkAuto = 0;
+      for(let setting of global.settingsCurrent){
+        if(setting.keyName==="settingsAutoDarkMode"){break}
+        indexDarkAuto++
+      }
+      if(item.value==="Light mode"){
+        await AsyncStorage.setItem("settingsDarkMode", "false");
+        global.settingsCurrent[indexDark]["currentValue"] = "false";
+        await AsyncStorage.setItem("settingsAutoDarkMode", "false");
+        global.settingsCurrent[indexDarkAuto]["currentValue"] = "false";
+      } else if (item.value==="Dark mode") {
+        await AsyncStorage.setItem("settingsDarkMode", "true");
+        global.settingsCurrent[indexDark]["currentValue"] = "true";
+        await AsyncStorage.setItem("settingsAutoDarkMode", "false");
+        global.settingsCurrent[indexDarkAuto]["currentValue"] = "false";
+      } else { //auto
+        await AsyncStorage.setItem("settingsDarkMode", "false");
+        global.settingsCurrent[indexDark]["currentValue"] = "false";
+        await AsyncStorage.setItem("settingsAutoDarkMode", "true");
+        global.settingsCurrent[indexDarkAuto]["currentValue"] = "true";
+      }      
+    },
+    "getDefaultValue": ()=>{
+      if(getSettingsString("settingsAutoDarkMode") === "true"){
+        return "Follow system"
+      } else if (getSettingsString("settingsDarkMode")==="true"){
+        return "Dark mode"
+      } else {
+        return "Light mode"
+      }
+    }
   },
   {
     "keyName" : "settingsDarkMode",
@@ -1176,6 +1232,7 @@ export const settings = [
     "picture" : require("./assets/icons/darkMode.png"),
     "displayName" : "Dark mode",
     "description" : "Toggle dark mode, ensure auto dark mode is off to use this",
+    "hidden": true,
   },
   {
     "keyName" : "smallHeader",

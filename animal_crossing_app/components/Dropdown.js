@@ -42,7 +42,7 @@ export class DropdownMenu extends Component {
     let button = <></>
     if(this.props.selection===true){
       button = <TouchableOpacity activeOpacity={0.7} onPress={this.state.canOpen?()=>{this.openMenu()}:()=>{}}>
-        <DropdownMenuPicker width={this.props.width} title={this.state.selectedTitle}/>
+        <DropdownMenuPicker paddingHorizontal={this.props.paddingHorizontal} padding={this.props.padding} fontSize={this.props.fontSize} width={this.props.width} title={this.state.selectedTitle}/>
       </TouchableOpacity>
     } else {
       button = <TouchableOpacity style={this.props.style} activeOpacity={0.7} onPress={this.state.canOpen?()=>{this.openMenu()}:()=>{}}>
@@ -110,13 +110,13 @@ export class DropdownMenuPicker extends Component {
         borderTopRightRadius: 8,
         borderBottomLeftRadius: 8, 
         borderBottomRightRadius: 8,
-        padding: 15,
-        paddingHorizontal: 18,
+        padding: this.props.padding ? this.props.padding : 15,
+        paddingHorizontal: this.props.paddingHorizontal ? this.props.paddingHorizontal :18,
         flexDirection: "row",
         alignItems:"center",
         justifyContent:"space-between",
       }}>
-        <TextFont bold={true} style={{color: colors.textBlack[global.darkMode], fontSize:15, width: this.props.width-10}}>{this.props.title}</TextFont>
+        <TextFont bold={true} style={{color: colors.textBlack[global.darkMode], fontSize:this.props.fontSize?this.props.fontSize:15, width: this.props.width-10}}>{this.props.title}</TextFont>
         <Image style={{width:11,height:11,resizeMode:'contain',marginLeft:10,}} source={global.darkMode ? require("../assets/icons/dropDownWhite.png") : require("../assets/icons/dropDown.png")} />
     </View>
   }
