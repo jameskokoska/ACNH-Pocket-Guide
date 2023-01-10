@@ -18379,7 +18379,10 @@
       "Spanish": "Escáner de Catálogo",
       "Spanish (US)": "Escáner de Catálogo",
       "Italian": "Scanner Catalogo",
-      "Dutch": "Catalogusscanner"
+      "Dutch": "Catalogusscanner",
+      "Portuguese": "Aplicativo de Scanner de Catálogo",
+      "Czech": "Aplikace Skener katalogu",
+      "Slovak": "Aplikácia Skener katalógu"
     },
     "with nook.lol": {
       "English": "With nook.lol",
@@ -18570,7 +18573,40 @@
       "Spanish": "Para la ACNH Pocket Guide",
       "Spanish (US)": "Para la ACNH Pocket Guide",
       "Italian": "Per la ACNH Pocket Guide",
-      "Dutch": "Voor ACNH Pocket Guide"
+      "Dutch": "Voor ACNH Pocket Guide",
+      "Portuguese": "Para ACNH Guia de Bolso",
+      "Czech": "Pro kapesního průvodce ACNH",
+      "Slovak": "Pre vreckového sprievodcu ACNH"
+    },
+    "light mode": {
+      "English": "Light mode",
+      "English (Europe)": "Light mode",
+      "French": "Mode lumière",
+      "French (US)": "Mode lumière",
+      "German": "Lichtmodus",
+      "Spanish": "Modo de luz",
+      "Spanish (US)": "Modo de luz",
+      "Russian": "Легкий режим",
+      "Italian": "Modalità luce",
+      "Dutch": "Lichte modus",
+      "Portuguese": "Modo de luz",
+      "Czech": "Světelný režim",
+      "Slovak": "Svetelný režim"
+    },
+    "follow system": {
+      "English": "Follow system",
+      "English (Europe)": "Follow system",
+      "French": "Suivre le système",
+      "French (US)": "Suivre le système",
+      "German": "System folgen",
+      "Spanish": "Seguir sistema",
+      "Spanish (US)": "Seguir sistema",
+      "Russian": "Следуйте системе",
+      "Italian": "Segui il sistema",
+      "Dutch": "Systeem volgen",
+      "Portuguese": "Siga o sistema",
+      "Czech": "Sledujte systém",
+      "Slovak": "Postupujte podľa systému"
     }
   },
   "Sources": {

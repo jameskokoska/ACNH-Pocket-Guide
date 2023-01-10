@@ -650,23 +650,23 @@
     ],
     "Main": [
         {
-            "English": "1292 items",
-            "English (Europe)": "1292 items",
-            "French": "1280 items (12 items missing)",
-            "French (US)": "1280 items (12 items missing)",
-            "German": "1292 items",
-            "Spanish": "1285 items (7 items missing)",
-            "Spanish (US)": "1257 items (35 items missing)",
-            "Russian": "1270 items (22 items missing)",
-            "Italian": "1271 items (21 items missing)",
-            "Dutch": "1259 items (33 items missing)",
-            "Chinese": "904 items (388 items missing)",
-            "Chinese (Traditional)": "9 items (1283 items missing)",
-            "Japanese": "9 items (1283 items missing)",
-            "Korean": "287 items (1005 items missing)",
-            "Portuguese": "1267 items (25 items missing)",
-            "Czech": "605 items (687 items missing)",
-            "Slovak": "605 items (687 items missing)"
+            "English": "1294 items",
+            "English (Europe)": "1294 items",
+            "French": "1282 items (12 items missing)",
+            "French (US)": "1282 items (12 items missing)",
+            "German": "1294 items",
+            "Spanish": "1287 items (7 items missing)",
+            "Spanish (US)": "1259 items (35 items missing)",
+            "Russian": "1272 items (22 items missing)",
+            "Italian": "1273 items (21 items missing)",
+            "Dutch": "1261 items (33 items missing)",
+            "Chinese": "904 items (390 items missing)",
+            "Chinese (Traditional)": "9 items (1285 items missing)",
+            "Japanese": "9 items (1285 items missing)",
+            "Korean": "287 items (1007 items missing)",
+            "Portuguese": "1271 items (23 items missing)",
+            "Czech": "609 items (685 items missing)",
+            "Slovak": "609 items (685 items missing)"
         },
         {
             "English": "Home",
@@ -19703,7 +19703,10 @@
             "Spanish": "Escáner de Catálogo",
             "Spanish (US)": "Escáner de Catálogo",
             "Italian": "Scanner Catalogo",
-            "Dutch": "Catalogusscanner"
+            "Dutch": "Catalogusscanner",
+            "Portuguese": "Aplicativo de Scanner de Catálogo",
+            "Czech": "Aplikace Skener katalogu",
+            "Slovak": "Aplikácia Skener katalógu"
         },
         {
             "English": "For ACNH Pocket Guide",
@@ -19714,7 +19717,40 @@
             "Spanish": "Para la ACNH Pocket Guide",
             "Spanish (US)": "Para la ACNH Pocket Guide",
             "Italian": "Per la ACNH Pocket Guide",
-            "Dutch": "Voor ACNH Pocket Guide"
+            "Dutch": "Voor ACNH Pocket Guide",
+            "Portuguese": "Para ACNH Guia de Bolso",
+            "Czech": "Pro kapesního průvodce ACNH",
+            "Slovak": "Pre vreckového sprievodcu ACNH"
+        },
+        {
+            "English": "Light mode",
+            "English (Europe)": "Light mode",
+            "French": "Mode lumière",
+            "French (US)": "Mode lumière",
+            "German": "Lichtmodus",
+            "Spanish": "Modo de luz",
+            "Spanish (US)": "Modo de luz",
+            "Russian": "Легкий режим",
+            "Italian": "Modalità luce",
+            "Dutch": "Lichte modus",
+            "Portuguese": "Modo de luz",
+            "Czech": "Světelný režim",
+            "Slovak": "Svetelný režim"
+        },
+        {
+            "English": "Follow system",
+            "English (Europe)": "Follow system",
+            "French": "Suivre le système",
+            "French (US)": "Suivre le système",
+            "German": "System folgen",
+            "Spanish": "Seguir sistema",
+            "Spanish (US)": "Seguir sistema",
+            "Russian": "Следуйте системе",
+            "Italian": "Segui il sistema",
+            "Dutch": "Systeem volgen",
+            "Portuguese": "Siga o sistema",
+            "Czech": "Sledujte systém",
+            "Slovak": "Postupujte podľa systému"
         }
     ],
     "Sources": [
