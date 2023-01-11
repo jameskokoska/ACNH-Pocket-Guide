@@ -1,4 +1,4 @@
-import React, {useState, Component, useEffect} from 'react';
+import React, {useState, Component, useEffect, forwardRef, useImperativeHandle} from 'react';
 import {Share, Image, TouchableOpacity, ImageBackground, StyleSheet, View, TextInput, Text, Vibration, Keyboard} from 'react-native';
 import TextFont from './TextFont'
 import FadeInOut from "./FadeInOut"
@@ -7,14 +7,24 @@ import DelayInput from "react-native-debounce-input";
 import {capitalize, getSettingsString, attemptToTranslate, findItemCheckListKey, commas, setSettingsString} from "../LoadJsonData"
 import GuideRedirectButton from "./PopupGuideRedirectButton"
 import { DropdownMenu } from './Dropdown';
-import Popup from './Popup';
+import Popup, { PopupInfoCustom } from './Popup';
 import colors from '../Colors.js';
 import Toast from "react-native-toast-notifications";
 import Animated, { FadeIn } from "react-native-reanimated";
+import TotalBuySellPrice from './TotalBuySellPrice';
 
-const Header = (props) => {
+const Header = forwardRef((props, ref) => {
   // console.log(props.showHemisphereSwitcherOption)
-  
+  const [searchResultCount, setSearchResultCount] = useState(0)
+  useImperativeHandle(ref, () => ({
+    setSearchResultCountDifference: (difference) => {
+      setSearchResultCount(searchResultCount+difference)
+    },
+    setSearchResultCount: (count) => {
+      setSearchResultCount(count)
+    },
+  }));
+
   useEffect(() => {
     if(getSettingsString("settingsUseOldKeyboardBehaviour")==="true"){
       return
@@ -71,6 +81,7 @@ const Header = (props) => {
   const popupInvertCheckRef = React.useRef(null);
   const popupMuseumCheckRef = React.useRef(null);
   const popupMuseumUncheckRef = React.useRef(null);
+  const popupItemStatisticsRef = React.useRef(null);
   let moreMenu = <></>
   let museumOptions = []
   if(props.showMuseumCheckOptions){
@@ -81,8 +92,9 @@ const Header = (props) => {
   }
   let hemisphereToggle = []
   if(props.showHemisphereSwitcherOption===true){
-    hemisphereToggle = [{label:(getSettingsString("settingsNorthernHemisphere") === "true" ? "Northern Hemisphere" : "Southern Hemisphere"), value:"Hemisphere switch", highlighted: false}]
+    hemisphereToggle = [{label:(getSettingsString("settingsNorthernHemisphere") === "true" ? "Northern Hemisphere" : "Southern Hemisphere"), value:"Hemisphere toggle", highlighted: false}]
   }
+  let itemStatistics = [{label:"Item statistics", value:"Item statistics", highlighted: false}]
   if(props.checkAllItemsListed!==undefined && props.unCheckAllItemsListed!==undefined && props.invertCheckItemsListed!==undefined){
     moreMenu = <>
       <View style={{position:"absolute", padding:0, top:2, right:-2, zIndex: 100}}>
@@ -96,7 +108,8 @@ const Header = (props) => {
             ...(props.unCheckAllItemsListedWithVariations ?  [{label:"Uncheck all (and variations)", value:"Uncheck all (and variations)", highlighted: false}] : []),
             {label:"Invert check marks", value:"Invert check", highlighted: false},
             ...museumOptions,
-            ...hemisphereToggle
+            ...hemisphereToggle,
+            ...itemStatistics,
           ]}
           defaultValue={""}
           onChangeItem={
@@ -116,7 +129,7 @@ const Header = (props) => {
                 popupMuseumCheckRef.current.setPopupVisible(true)
               }else if(item.value==="Museum uncheck"){
                 popupMuseumUncheckRef.current.setPopupVisible(true)
-              }else if(item.value==="Hemisphere switch"){
+              }else if(item.value==="Hemisphere toggle"){
                 setSettingsString("settingsNorthernHemisphere",getSettingsString("settingsNorthernHemisphere") === "true"? "false" : "true");
                 toast.show(attemptToTranslate("Hemisphere changed to") + " " + attemptToTranslate(getSettingsString("settingsNorthernHemisphere") === "true" ? "Northern Hemisphere" : "Southern Hemisphere"), {type:"success",
                   duration: 1300,
@@ -130,6 +143,8 @@ const Header = (props) => {
                   }
                 })
                 props.runOnShowHemisphereSwitcherOption()
+              } else if(item.value==="Item statistics"){
+                popupItemStatisticsRef.current.setPopupVisible(true)
               }
             }
           }
@@ -144,11 +159,15 @@ const Header = (props) => {
       <Popup ref={popupInvertCheckRef} accentCancel={true} text="Invert Check Marks?" textLower={attemptToTranslate("Invert the check mark of all the items currently listed?") + "\n" + attemptToTranslate("This action cannot be undone.")} button1={"Cancel"} button1Action={()=>{}} button2={"Invert Checks"} button2Action={props.invertCheckItemsListed}/>
       <Popup ref={popupMuseumCheckRef} accentCancel={true} text="Add All to Museum?" textLower={attemptToTranslate("Add all items currently listed to the museum?") + "\n" + attemptToTranslate("This action cannot be undone.")} button1={"Cancel"} button1Action={()=>{}} button2={"Add All"} button2Action={props.checkAllMuseum!==undefined ? props.checkAllMuseum : ()=>{}}/>
       <Popup ref={popupMuseumUncheckRef} accentCancel={true} text="Remove All From Museum?" textLower={attemptToTranslate("Remove all items currently listed from the museum?") + "\n" + attemptToTranslate("This action cannot be undone.")} button1={"Cancel"} button1Action={()=>{}} button2={"Remove All"} button2Action={props.unCheckAllMuseum!==undefined ? props.unCheckAllMuseum : ()=>{}}/>
+      <PopupInfoCustom ref={popupItemStatisticsRef} buttonText={"Close"} header={<TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{"Item Statistics"}</TextFont>}>
+        <View style={{height:10}}/>
+        <TotalBuySellPrice includeCollected={true} fontSize={17} data={props.data} currentCustomList={props.currentCustomList}/>
+      </PopupInfoCustom>
     </>
   }
   return (
     <>
-      <TextFont style={{position:"absolute",color: props.titleColor, zIndex:10, top:7, left:11, opacity: 0.3, fontSize: 12}}>{props.searchResultCountString}</TextFont>
+      <TextFont style={{position:"absolute",color: props.titleColor, zIndex:10, top:7, left:11, opacity: 0.3, fontSize: 12}}>{commas(searchResultCount) + " / " + commas(props.data!==undefined ? props.data.length : 0) + " " + attemptToTranslate("collected.")}</TextFont>
       <GuideRedirectButton style={{position:"absolute", padding:15, right:10}} extraInfo={props.extraInfo} setPage={props.setPage}/>
       {props.title==="Wishlist"?<WishListShareButton style={{position:"absolute", padding:15, right:10, top: 2.5}}/>:<View/>}
       {moreMenu}
@@ -205,7 +224,21 @@ const Header = (props) => {
       </ImageBackground>
     </>
   );
-};
+});
+
+export const AmountCollected = forwardRef((props, ref) => {
+  // console.log(props.showHemisphereSwitcherOption)
+  const [searchResultCount, setSearchResultCount] = useState(0)
+  useImperativeHandle(ref, () => ({
+    setSearchResultCountDifference: (difference) => {
+      setSearchResultCount(searchResultCount+difference)
+    },
+    setSearchResultCount: (count) => {
+      setSearchResultCount(count)
+    },
+  }));
+  return <TextFont style={{marginBottom:5, marginTop:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{commas(searchResultCount) + " / " + commas(props.data!==undefined ? props.data.length : 0) + " " + attemptToTranslate("collected.")}</TextFont>
+})
 
 export const HeaderLoading = (props) => {
   var dropDownPickerOpacity = 0

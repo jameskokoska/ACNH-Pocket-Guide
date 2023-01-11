@@ -1,8 +1,8 @@
 import React, {Component, useState, useRef, useEffect} from 'react';
 import {TouchableOpacity, View, Animated,StyleSheet,RefreshControl} from 'react-native';
-import Header, {HeaderLoading, HeaderActive} from './Header';
+import Header, {HeaderLoading, HeaderActive, AmountCollected} from './Header';
 import ListItem from './ListItem';
-import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters, isInteger, attemptToTranslate, checkOff, inCustomLists, getCustomListsAmount, collectionListSave, determineFoodItem, initializeParadisePlanningGlobal, inVillagerParadise, variationsCheckedPercent} from "../LoadJsonData"
+import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters, isInteger, attemptToTranslate, checkOff, inCustomLists, getCustomListsAmount, collectionListSave, determineFoodItem, initializeParadisePlanningGlobal, inVillagerParadise, variationsCheckedPercent, commas} from "../LoadJsonData"
 import {Dimensions } from "react-native";
 import {Variations,Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title, getVariations, howManyVariationsChecked} from './BottomSheetComponents';
 import colors from "../Colors.js"
@@ -31,6 +31,7 @@ import { getHourlySongTitle } from '../pages/SongsPage';
 import { WishlistSelectionPopup } from '../pages/WishlistPage';
 import { BlueText } from './Formattings';
 import PopupRawData from './PopupRawData';
+import TotalBuySellPrice from './TotalBuySellPrice';
 import {sortBy} from 'lodash';
 
 //use tabs={false} if the page doesn't have  the tab bar
@@ -62,6 +63,10 @@ function ListPage(props){
   let avoidSpoilers = getSettingsString("settingsHideImages")==="true"
   const renderItem = (({ item }) =>
     <ListItem
+      setTotalItemsCollected={(itemValue)=>{
+        headerRef?.current?.setSearchResultCountDifference(itemValue);
+        amountCollectedRef?.current?.setSearchResultCountDifference(itemValue);
+      }}
       avoidSpoilers={avoidSpoilers}
       item={item}
       disablePopup={props.disablePopup}
@@ -158,8 +163,11 @@ function ListPage(props){
 
   const [loading, setLoading] = useState(false)
   const [data, setData] = useState("empty")
+  const [totalItemsCollected, setTotalItemsCollected] = useState(0)
   const popupFilter = React.useRef(null);
   const popupOnlyLoading = React.useRef(null);
+  const headerRef = React.useRef(null);
+  const amountCollectedRef = React.useRef(null);
 
   const componentIsMounted = useRef(true);
 
@@ -175,11 +183,12 @@ function ListPage(props){
   useEffect(()=>{
     setLoading(true)
     setTimeout(async () => {
-      var dataUpdated = [];
-      var previousVariation = "";
-      var previousDataCategory = "";
-      var item;
-      var dataLoaded2D = determineDataGlobal(props.dataGlobalName);
+      let itemsCollected = 0
+      let dataUpdated = [];
+      let previousVariation = "";
+      let previousDataCategory = "";
+      let item;
+      let dataLoaded2D = determineDataGlobal(props.dataGlobalName);
       if(props.title==="Music"){
         let otherMusic = require("../assets/data/extraSongs.json")
         for(let song of otherMusic){
@@ -188,16 +197,16 @@ function ListPage(props){
         dataLoaded2D = [dataLoaded2D[0], otherMusic]
       }
 
-      var currentVillagerFilters;
-      var currentVillagerFiltersInverse;
+      let currentVillagerFilters;
+      let currentVillagerFiltersInverse;
       if(props.title==="Obtainable DIYs" || props.title==="Obtainable Reactions" || props.title==="Unobtainable DIYs" || props.title==="Unobtainable Reactions"){
         currentVillagerFilters = getCurrentVillagerFilters();
         currentVillagerFiltersInverse = getInverseVillagerFilters();
       }
       
       // console.log(props.currentSetFilters)
-      var searchCategoryOnly = false;
-      for(var y = 0; y < searchFilters.length; y++){
+      let searchCategoryOnly = false;
+      for(let y = 0; y < searchFilters.length; y++){
         if(searchFilters[y].includes("Data Category")){
           searchCategoryOnly = true;
         } else if (!searchFilters[y].includes("Collected")){
@@ -206,16 +215,16 @@ function ListPage(props){
         }
       }
 
-      var filterOut = false
-      var skip = false
-      for(var y = 0; y < searchFilters.length; y++){
+      let filterOut = false
+      let skip = false
+      for(let y = 0; y < searchFilters.length; y++){
         if(searchFilters[y].includes("Filter Out")){
           filterOut = true;
           break;
         }
       }
 
-      var searchActual = searchFilters;
+      let searchActual = searchFilters;
       if (props.villagerGifts) {
         searchActual = [...props.villagerGiftsFilters,...searchActual];
       } else if (props.itemIDs!==undefined && props.itemIDs!=="") {
@@ -609,6 +618,9 @@ function ListPage(props){
                       item.dataSet = j;
                       item.index = i;
                       dataUpdated = [...dataUpdated, item];
+                      if(item["checkListKey"]!==undefined && inChecklist(item["checkListKey"])===true){
+                        itemsCollected++
+                      }
                       break;
                     } 
                   }
@@ -616,6 +628,9 @@ function ListPage(props){
                   item.dataSet = j;
                   item.index = i;
                   dataUpdated.push(item)
+                  if(item["checkListKey"]!==undefined && inChecklist(item["checkListKey"])===true){
+                    itemsCollected++
+                  }
                 } else if(props.newItems){
                   if(item["Version Added"] !==undefined && item["Version Added"] !=="NA" && gameVersion.includes(item["Version Added"])){
                     item.dataSet = j;
@@ -623,6 +638,9 @@ function ListPage(props){
                     dataUpdated.push(item)
                     previousVariation = item["Name"];
                     previousDataCategory = item["Data Category"]
+                    if(item["checkListKey"]!==undefined && inChecklist(item["checkListKey"])===true){
+                      itemsCollected++
+                    }
                   } 
                 } else if(searchActual.includes("Museum")){
                   if(item["Data Category"]!==undefined && museumCategories.includes(item["Data Category"]) && global.collectionListIndexed["museum"+item["checkListKey"]]===true){
@@ -631,6 +649,9 @@ function ListPage(props){
                     dataUpdated.push(item)
                     previousVariation = item["Name"];
                     previousDataCategory = item["Data Category"]
+                    if(item["checkListKey"]!==undefined && inChecklist(item["checkListKey"])===true){
+                      itemsCollected++
+                    }
                   } 
                 } else if(searchActual.includes("Not Museum")){
                   if(item["Data Category"]!==undefined && museumCategories.includes(item["Data Category"]) && !global.collectionListIndexed["museum"+item["checkListKey"]]===true){
@@ -639,6 +660,9 @@ function ListPage(props){
                     dataUpdated.push(item)
                     previousVariation = item["Name"];
                     previousDataCategory = item["Data Category"]
+                    if(item["checkListKey"]!==undefined && inChecklist(item["checkListKey"])===true){
+                      itemsCollected++
+                    }
                   } 
                 } else if(searchActual.includes("Completed Paradise Planning")){
                   if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && inVillagerParadise(item["Name"],true)===true){
@@ -647,6 +671,9 @@ function ListPage(props){
                     dataUpdated.push(item)
                     previousVariation = item["Name"];
                     previousDataCategory = item["Data Category"]
+                    if(item["checkListKey"]!==undefined && inChecklist(item["checkListKey"])===true){
+                      itemsCollected++
+                    }
                   } 
                 } else if(searchActual.includes("Incomplete Paradise Planning")){
                   if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && !inVillagerParadise(item["Name"],true)===true){
@@ -655,6 +682,9 @@ function ListPage(props){
                     dataUpdated.push(item)
                     previousVariation = item["Name"];
                     previousDataCategory = item["Data Category"]
+                    if(item["checkListKey"]!==undefined && inChecklist(item["checkListKey"])===true){
+                      itemsCollected++
+                    }
                   } 
                 } else if(searchActual.includes("Old Resident")){
                   if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && global.collectionListIndexed["oldResident"+item["checkListKey"]]===true){
@@ -663,6 +693,9 @@ function ListPage(props){
                     dataUpdated.push(item)
                     previousVariation = item["Name"];
                     previousDataCategory = item["Data Category"]
+                    if(item["checkListKey"]!==undefined && inChecklist(item["checkListKey"])===true){
+                      itemsCollected++
+                    }
                   } 
                 } else if(searchActual.includes("Not Old Resident")){
                   if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && !global.collectionListIndexed["oldResident"+item["checkListKey"]]===true){
@@ -671,6 +704,9 @@ function ListPage(props){
                     dataUpdated.push(item)
                     previousVariation = item["Name"];
                     previousDataCategory = item["Data Category"]
+                    if(item["checkListKey"]!==undefined && inChecklist(item["checkListKey"])===true){
+                      itemsCollected++
+                    }
                   } 
                 } else if(searchActual.includes("Have villager photo")){
                   if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && global.collectionListIndexed["havePhoto"+item["checkListKey"]]===true){
@@ -679,6 +715,9 @@ function ListPage(props){
                     dataUpdated.push(item)
                     previousVariation = item["Name"];
                     previousDataCategory = item["Data Category"]
+                    if(item["checkListKey"]!==undefined && inChecklist(item["checkListKey"])===true){
+                      itemsCollected++
+                    }
                   } 
                 } else if(searchActual.includes("Do not have villager photo")){
                   if(item["Data Category"]!==undefined && item["Data Category"]==="Villagers" && !global.collectionListIndexed["havePhoto"+item["checkListKey"]]===true){
@@ -687,6 +726,9 @@ function ListPage(props){
                     dataUpdated.push(item)
                     previousVariation = item["Name"];
                     previousDataCategory = item["Data Category"]
+                    if(item["checkListKey"]!==undefined && inChecklist(item["checkListKey"])===true){
+                      itemsCollected++
+                    }
                   } 
                 }else {
                   item.dataSet = j;
@@ -694,6 +736,9 @@ function ListPage(props){
                   dataUpdated.push(item)
                   previousVariation = item["Name"];
                   previousDataCategory = item["Data Category"]
+                  if(item["checkListKey"]!==undefined && inChecklist(item["checkListKey"])===true){
+                    itemsCollected++
+                  }
                 }
                 
               }
@@ -855,6 +900,8 @@ function ListPage(props){
       setData(dataUpdated)
       setRefresh(false)
       setLoading(false)
+      headerRef?.current?.setSearchResultCount(itemsCollected)
+      amountCollectedRef?.current?.setSearchResultCount(itemsCollected)
       scrollY.current.setValue(0)
     }, 10)
   }, [props, search, searchFilters, refresh])
@@ -1060,7 +1107,7 @@ function ListPage(props){
           width: Dimensions.get('window').width, 
           height: Dimensions.get('window').height, position:"absolute"}} 
         pointerEvents="none"> */}
-        <Header runOnShowHemisphereSwitcherOption={props.runOnShowHemisphereSwitcherOption} showHemisphereSwitcherOption={props.showHemisphereSwitcherOption} showMuseumCheckOptions={museumTitles.includes(props.title) && (props.wishlistItems===undefined || props.wishlistItems===false)} checkAllMuseum={()=>{checkAllMuseum()}} unCheckAllMuseum={()=>{unCheckAllMuseum()}} invertCheckItemsListed={()=>{invertCheckItemsListed()}} unCheckAllItemsListed={()=>{unCheckAllItemsListed()}} unCheckAllItemsListedWithVariations={()=>{unCheckAllItemsListedWithVariations()}} checkAllItemsListed={()=>{checkAllItemsListed()}} checkAllItemsListedWithVariations={()=>{checkAllItemsListedWithVariations()}} currentSearch={props.currentSearch!==undefined?props.currentSearch:""} setPage={props.setPage} extraInfo={props.extraInfo} smallerHeader={props.smallerHeader} disableFilters={props.disableFilters} customHeader={props.customHeader} disableSearch={props.disableSearch} subHeader={props.subHeader} subHeader2={props.subHeader2} searchFilters={searchFilters} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage} searchResultCountString={data!==undefined ? data.length+" "+(data.length!==1?attemptToTranslate("entries."):attemptToTranslate("entry.")) : ""}/>
+        <Header ref={headerRef} data={data} currentCustomList={props.currentCustomList} runOnShowHemisphereSwitcherOption={props.runOnShowHemisphereSwitcherOption} showHemisphereSwitcherOption={props.showHemisphereSwitcherOption} showMuseumCheckOptions={museumTitles.includes(props.title) && (props.wishlistItems===undefined || props.wishlistItems===false)} checkAllMuseum={()=>{checkAllMuseum()}} unCheckAllMuseum={()=>{unCheckAllMuseum()}} invertCheckItemsListed={()=>{invertCheckItemsListed()}} unCheckAllItemsListed={()=>{unCheckAllItemsListed()}} unCheckAllItemsListedWithVariations={()=>{unCheckAllItemsListedWithVariations()}} checkAllItemsListed={()=>{checkAllItemsListed()}} checkAllItemsListedWithVariations={()=>{checkAllItemsListedWithVariations()}} currentSearch={props.currentSearch!==undefined?props.currentSearch:""} setPage={props.setPage} extraInfo={props.extraInfo} smallerHeader={props.smallerHeader} disableFilters={props.disableFilters} customHeader={props.customHeader} disableSearch={props.disableSearch} subHeader={props.subHeader} subHeader2={props.subHeader2} searchFilters={searchFilters} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage} />
         {/* </Animated.View> */}
       </Animated.View>
 
@@ -1075,7 +1122,7 @@ function ListPage(props){
     paddingTop = 0;
     paddingBottom = 0;
     header = (<>
-        <HeaderActive searchFilters={searchFilters} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
+      <HeaderActive searchFilters={searchFilters} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>
     </>);
   }
   var style= {height: Dimensions.get('window').height, paddingBottom: paddingBottom,marginTop: -10}
@@ -1139,7 +1186,6 @@ function ListPage(props){
               </>
             }else if(searchFilters.length>0 && data.length===0){
               return <>
-                <TextFont style={{marginTop:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{data.length+" "+(data.length!==1?attemptToTranslate("entries."):attemptToTranslate("entry."))}</TextFont>
                 {searchFilters.length===0 ? <></>:<TextFont style={{marginBottom:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{searchFilters.length+" "+(searchFilters.length!==1?attemptToTranslate("filters set."):attemptToTranslate("filter set."))}</TextFont>}
                 <View style={{height:60}}/>
                   <TextFont bold={false} style={{fontSize: 18, textAlign:"center", color: colors.textBlack[global.darkMode], marginHorizontal: 20}}>No items found.</TextFont>
@@ -1149,7 +1195,6 @@ function ListPage(props){
               </>
             }else if(data.length===0){
               return <>
-                <TextFont style={{marginTop:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{data.length+" "+(data.length!==1?attemptToTranslate("entries."):attemptToTranslate("entry."))}</TextFont>
                 {searchFilters.length===0 ? <></>:<TextFont style={{marginBottom:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{searchFilters.length+" "+(searchFilters.length!==1?attemptToTranslate("filters set."):attemptToTranslate("filter set."))}</TextFont>}
                 <View style={{height:80}}/>
                   <TextFont bold={false} style={{fontSize: 18, textAlign:"center", color: colors.textBlack[global.darkMode], marginHorizontal: 20}}>No items found.</TextFont>
@@ -1165,7 +1210,8 @@ function ListPage(props){
               </>
             }
             return <>
-              <TextFont style={{marginTop:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{data.length+" "+(data.length!==1?attemptToTranslate("entries."):attemptToTranslate("entry."))}</TextFont>
+              <AmountCollected ref={amountCollectedRef} data={data} />
+              <TotalBuySellPrice opacity={0.6} data={data} currentCustomList={props.currentCustomList}/>
               {searchFilters.length===0 ? <></>:<TextFont style={{marginBottom:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{searchFilters.length+" "+(searchFilters.length!==1?attemptToTranslate("filters set."):attemptToTranslate("filter set."))}</TextFont>}
               </>
           }}
@@ -1195,7 +1241,7 @@ function ListPage(props){
       onClose={()=>{
         // console.log(selectedItem); 
         if(selectedItem!=null && selectedItem!=undefined){
-          !updateCheckChildFunction(inChecklist(selectedItem.checkListKeyParent));
+          !updateCheckChildFunction(inChecklist(selectedItem.checkListKeyParent), false);
           !updateWishlistChildFunction(inWishlist(selectedItem.checkListKey));
           if(updateParadisePlanningChildFunction!==undefined) !updateParadisePlanningChildFunction(inVillagerParadise(selectedItem["Name"], true))
         }

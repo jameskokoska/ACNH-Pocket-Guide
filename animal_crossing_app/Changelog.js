@@ -4,6 +4,11 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Easily see the amount collected in the top right corner of any list page
+-New item statistics popup in 3 dot menu
+-See your collection progress for the items listed on the page by opening the item statistics popup
+-Added total buy and sell cost of all items in item statistics and at the bottom of a list
+-Fixed bell boom with buy and sell price for extra info on item
 -New hemisphere toggle in settings
 -New light/dark theme mode toggle in settings
 -

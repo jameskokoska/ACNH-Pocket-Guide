@@ -102,12 +102,14 @@ class ListItem extends React.Component{
     this.mounted = false;
   }
   
-  setCollected(collected, updateVariations=false){
+  setCollected(collected, updateGrandTotal=true){
     if(this.mounted){
       //always update variation
       if(true){
         this.setState({variationsPercent: variationsCheckedPercent(this.props.item, this.props.item.index),collected: collected})
-      } 
+      }
+      if(this.props.item.checkListKey!==undefined && updateGrandTotal!==false)
+        this.props.setTotalItemsCollected(collected===true ? 1 : -1)
     }
   }
   setWishlist(wishlist){
@@ -311,13 +313,23 @@ class ListItem extends React.Component{
         } else {
           ending = "";
         }
+        if(currencyBells && global.ordinance === "Bell Boom" && this.props.item["Buy"]!==undefined){
+          extraText = commas(parseInt(this.props.item["Buy"]*1.2)) + ending
+        } 
         if(this.props.item["Buy"]!==undefined && this.props.item["Buy"]==="NFS" && this.props.item["Exchange Price"] !==undefined && this.props.item["Exchange Price"] !=="NA"){
-          if(currencyBells && global.ordinance === "Bell Boom" && this.props.item["Buy"]!==undefined){
-            extraText = commas(parseInt(this.props.item["Buy"])*1.2) + ending
-          } else if(currencyBells && this.props.item["Buy"]!==undefined){
+          if(currencyBells && this.props.item["Buy"]!==undefined){
             extraText = commas(parseInt(this.props.item["Buy"])) + ending
           } else {
             extraText = commas(this.props.item["Exchange Price"]) + ending;
+          }
+        }
+      }
+      if(global.extraItemInfo==="Sell"){
+        if(this.props.item["Sell"]!==undefined){
+          if(global.ordinance === "Bell Boom"){
+            extraText = commas(parseInt(this.props.item["Sell"]*1.2))
+          } else {
+            extraText = commas(parseInt(this.props.item["Sell"]))
           }
         }
       }
