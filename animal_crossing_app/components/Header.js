@@ -167,7 +167,7 @@ const Header = forwardRef((props, ref) => {
   }
   return (
     <>
-      <TextFont style={{position:"absolute",color: props.titleColor, zIndex:10, top:7, left:11, opacity: 0.3, fontSize: 12}}>{commas(searchResultCount) + " / " + commas(props.data!==undefined ? props.data.length : 0) + " " + attemptToTranslate("collected.")}</TextFont>
+      <TextFont style={{position:"absolute",color: props.titleColor, zIndex:10, top:7, left:11, opacity: 0.3, fontSize: 12}}>{commas(searchResultCount) + " / " + commas(props.data!==undefined ? props.data.length : 0) + " " + attemptToTranslate("collected")}</TextFont>
       <GuideRedirectButton style={{position:"absolute", padding:15, right:10}} extraInfo={props.extraInfo} setPage={props.setPage}/>
       {props.title==="Wishlist"?<WishListShareButton style={{position:"absolute", padding:15, right:10, top: 2.5}}/>:<View/>}
       {moreMenu}
@@ -237,7 +237,7 @@ export const AmountCollected = forwardRef((props, ref) => {
       setSearchResultCount(count)
     },
   }));
-  return <TextFont style={{marginBottom:5, marginTop:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{commas(searchResultCount) + " / " + commas(props.data!==undefined ? props.data.length : 0) + " " + attemptToTranslate("collected.")}</TextFont>
+  return <TextFont style={{marginBottom:5, marginTop:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{commas(searchResultCount) + " / " + commas(props.data!==undefined ? props.data.length : 0) + " " + attemptToTranslate("collected")}</TextFont>
 })
 
 export const HeaderLoading = (props) => {

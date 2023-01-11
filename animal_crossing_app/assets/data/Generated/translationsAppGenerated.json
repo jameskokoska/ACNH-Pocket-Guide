@@ -1785,20 +1785,19 @@
       "Slovak": "Vyberte filter..."
     },
     "collected": {
-      "English": "Collected",
-      "English (Europe)": "Collected",
-      "French": "Collecté",
-      "French (US)": "Collecté",
-      "German": "Gesammelt",
-      "Spanish": "Obtenido",
-      "Spanish (US)": "Coleccionado",
-      "Russian": "Собрано",
-      "Italian": "Raccolti",
-      "Dutch": "Verzameld",
-      "Chinese": "已收集",
-      "Portuguese": "Coletados",
-      "Czech": "Sesbírané",
-      "Slovak": "Zozbierané"
+      "English": "collected",
+      "English (Europe)": "collected",
+      "French": "collecté",
+      "French (US)": "collecté",
+      "German": "gesammelt",
+      "Spanish": "recogido",
+      "Spanish (US)": "recogido",
+      "Russian": "собрал",
+      "Italian": "raccolto",
+      "Dutch": "verzameld",
+      "Portuguese": "coletado",
+      "Czech": "shromážděné",
+      "Slovak": "zhromaždené"
     },
     "not collected": {
       "English": "Not Collected",
@@ -18607,6 +18606,21 @@
       "Portuguese": "Siga o sistema",
       "Czech": "Sledujte systém",
       "Slovak": "Postupujte podľa systému"
+    },
+    "item statistics": {
+      "English": "Item statistics",
+      "English (Europe)": "Item statistics",
+      "French": "Statistiques sur les articles",
+      "French (US)": "Statistiques sur les articles",
+      "German": "Artikelstatistik",
+      "Spanish": "Estadísticas de artículos",
+      "Spanish (US)": "Estadísticas de artículos",
+      "Russian": "Статистика предмета",
+      "Italian": "Statistiche articolo",
+      "Dutch": "Artikelstatistieken",
+      "Portuguese": "Estatísticas do item",
+      "Czech": "Statistika položek",
+      "Slovak": "Štatistika položiek"
     }
   },
   "Sources": {
