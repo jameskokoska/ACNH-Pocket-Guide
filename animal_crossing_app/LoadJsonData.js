@@ -1232,7 +1232,7 @@ export const settings = [
     "picture" : require("./assets/icons/darkMode.png"),
     "displayName" : "Dark mode",
     "description" : "Toggle dark mode, ensure auto dark mode is off to use this",
-    "hidden": true,
+    "hideCompletely": true,
   },
   {
     "keyName" : "smallHeader",

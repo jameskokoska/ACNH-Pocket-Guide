@@ -17,7 +17,7 @@ class SettingsContainer extends Component {
     }
   }
   render(){
-    if(this.props.setting.hidden==true){
+    if(this.props.setting.hideCompletely===true){
       return <View/>
     }
     const hideSwitch = this.props.keyName==="settingsEditHomePage" || this.props.keyName==="settingsEditNotifications" || this.props.setting.dropdownValues!==undefined
