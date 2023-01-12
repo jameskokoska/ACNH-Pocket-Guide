@@ -29,7 +29,7 @@ class FishPopup extends Component {
         item1={this.props.item}
         textProperty1={["Shadow"]}
       />
-      <InfoLineBeside
+      <InfoLine
         image={require("../assets/icons/coin.png")} 
         item={this.props.item}
         textProperty={["Sell"]}
