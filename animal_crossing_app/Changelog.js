@@ -12,6 +12,9 @@ export const changelog = `
 -New hemisphere toggle in settings
 -New light/dark theme mode toggle in settings
 -
+-Increased the resolution of some assets
+-Translation updates
+-
 -New Monthly Gold Supporter: Lou Johnson! Thank you!
 -New Monthly Silver Supporter: Tschitscho! Thank you!
 -Fixed duplicate key for amiibo series 5 Isabelle
