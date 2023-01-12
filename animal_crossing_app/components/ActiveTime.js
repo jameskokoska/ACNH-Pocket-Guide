@@ -385,6 +385,7 @@ class ActiveTime extends Component {
           customText={textProperty2Text}
           customColor={!isActiveCurrentHour?colors.redText[global.darkMode]:colors.textBlack[global.darkMode]}
         />
+        <View style={{height:7}}/>
         <View style={{width: Dimensions.get('window').width, marginTop: 0, flexDirection: "row", justifyContent:"space-evenly"}}>
           <View style={{width: 160, height: 160, margin: 7,}}>
             {/* BG Month */}

@@ -28,15 +28,13 @@ class BugPopup extends Component {
         ending={" " + attemptToTranslate("bells")}
         special="Flick"
       />
-      <InfoLine
-        image={require("../assets/icons/weather.png")} 
-        item={this.props.item}
-        textProperty={["Weather"]}
-      />
-      <InfoLine
-        image={require("../assets/icons/hatching.png")} 
-        item={dummyItem}
-        textProperty={["Spawn Rates String"]}
+      <InfoLineBeside
+        image2={require("../assets/icons/location.png")} 
+        item2={this.props.item}
+        textProperty2={["Where/How"]}
+        image1={require("../assets/icons/weather.png")} 
+        item1={this.props.item}
+        textProperty1={["Weather"]}
       />
       <ActiveTime item={this.props.item}/>
       <View style={{marginTop: 30, flexDirection:"row", justifyContent:"space-around",width: Dimensions.get('window').width}}>
@@ -57,6 +55,12 @@ class BugPopup extends Component {
       </View>
       <View style={{height:15}}/>
       <InfoDescription text={this.props.item["Description"]}/>
+      <View style={{height:15}}/>
+      <InfoLine
+        image={require("../assets/icons/hatching.png")} 
+        item={dummyItem}
+        textProperty={["Spawn Rates String"]}
+      />
       <BlueText>Common creatures have higher spawn rates</BlueText>
       {anythingCraftable(this.props.item["Name"])?<ButtonComponent
         text={"View Craftable Items"}

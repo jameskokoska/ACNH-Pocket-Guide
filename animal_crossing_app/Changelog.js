@@ -4,6 +4,9 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added more info on creatures location
+-Added catch location on popup for fish and bugs
+-
 -Easily see the amount collected in the top left corner of any list page
 -New item statistics popup in 3 dot menu
 -See your collection progress for the items listed on the page by opening the item statistics popup

@@ -768,7 +768,7 @@ class ListItem extends React.Component{
                   <TextFont bold={true} numberOfLines={2} style={{fontSize:16, color:redTextProperty2?colors.redText[global.darkMode]:this.props.specialLabelColor}}>{capitalize(removeBrackets(textProperty2Text))}</TextFont>
                 </View>
                 <View style={styles.rowTextBottom}>
-                  <TextFont bold={true} numberOfLines={2} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(removeBrackets(this.props.item[this.props.textProperty3[this.props.item.dataSet]]))}</TextFont>
+                  <TextFont bold={true} numberOfLines={2} style={{fontSize:16, color:this.props.specialLabelColor}}>{capitalize(this.props.item[this.props.textProperty3[this.props.item.dataSet]])}</TextFont>
                 </View>
               </View>
               {fishShadow}

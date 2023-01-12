@@ -22,13 +22,18 @@ class FishPopup extends Component {
     return <View style={{width: "100%", alignItems: "center"}}>
       <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 10, paddingTop: 20, paddingBottom: 20, borderRadius: 15, margin: 20}}><Image style={{width:150,height:35,resizeMode:'contain'}} source={getPhotoShadow(this.props.item,true)}/></View>
       <InfoLineBeside
+        image2={require("../assets/icons/location.png")} 
+        item2={this.props.item}
+        textProperty2={["Where/How"]}
         image1={require("../assets/icons/magnifyingGlass.png")} 
         item1={this.props.item}
         textProperty1={["Shadow"]}
-        image2={require("../assets/icons/coin.png")} 
-        item2={this.props.item}
-        textProperty2={["Sell"]}
-        ending2={" " + attemptToTranslate("bells")}
+      />
+      <InfoLineBeside
+        image={require("../assets/icons/coin.png")} 
+        item={this.props.item}
+        textProperty={["Sell"]}
+        ending={" " + attemptToTranslate("bells")}
       />
       <InfoLine
         image={require("../assets/icons/cj.png")} 
@@ -36,11 +41,6 @@ class FishPopup extends Component {
         textProperty={["Sell"]}
         ending={" " + attemptToTranslate("bells")}
         special="C.J."
-      />
-      <InfoLine
-        image={require("../assets/icons/hatching.png")} 
-        item={dummyItem}
-        textProperty={["Spawn Rates String"]}
       />
       <ActiveTime item={this.props.item}/>
       <View style={{marginTop: 30, flexDirection:"row", justifyContent:"space-around",width: Dimensions.get('window').width}}>
@@ -61,6 +61,12 @@ class FishPopup extends Component {
       </View>
       <View style={{height:15}}/>
       <InfoDescription text={this.props.item["Description"]}/>
+      <View style={{height:15}}/>
+      <InfoLine
+        image={require("../assets/icons/hatching.png")} 
+        item={dummyItem}
+        textProperty={["Spawn Rates String"]}
+      />
       <BlueText>Common creatures have higher spawn rates</BlueText>
       {anythingCraftable(this.props.item["Name"])?<ButtonComponent
         text={"View Craftable Items"}
