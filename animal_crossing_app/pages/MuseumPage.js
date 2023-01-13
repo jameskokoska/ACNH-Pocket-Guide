@@ -36,7 +36,7 @@ class FishRouteClass extends React.PureComponent {
         textProperty={["NameLanguage",]}
         textProperty2={["creatureTime"]}
         textProperty3={["Where/How"]}
-        searchKey={[["NameLanguage","Where/How"]]}
+        searchKey={[global.language==="English" || global.language==="English (Europe)" ? ["NameLanguage","Where/How"] : ["NameLanguage"]]}
         gridType="row" //smallGrid, largeGrid, row
         dataGlobalName={"dataLoadedFish"}
         appBarColor={colors.fishAppBar[global.darkMode]}
@@ -76,7 +76,7 @@ class BugsRouteClass extends React.PureComponent {
         textProperty={["NameLanguage",]}
         textProperty2={["creatureTime"]}
         textProperty3={["Where/How"]}
-        searchKey={[["NameLanguage","Where/How"]]}
+        searchKey={[global.language==="English" || global.language==="English (Europe)" ? ["NameLanguage","Where/How"] : ["NameLanguage"]]}
         gridType="row" //smallGrid, largeGrid, row
         dataGlobalName={"dataLoadedBugs"}
         appBarColor={colors.bugAppBar[global.darkMode]}
