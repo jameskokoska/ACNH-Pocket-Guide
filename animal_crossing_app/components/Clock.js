@@ -7,11 +7,11 @@ import {getSettingsString} from "../LoadJsonData"
 class Clock extends Component {
   constructor(props){
     super(props);
-    var month = getMonth(getCurrentDateObject().getMonth());
-    var dayNum = getCurrentDateObject().getDate().toString();
-    var weekDay = getWeekDayShort(getCurrentDateObject().getDay());
-    var hours = getCurrentDateObject().getHours();
-    var minutes = getCurrentDateObject().getMinutes();
+    var month = getMonth(getCurrentDateObject(true).getMonth());
+    var dayNum = getCurrentDateObject(true).getDate().toString();
+    var weekDay = getWeekDayShort(getCurrentDateObject(true).getDay());
+    var hours = getCurrentDateObject(true).getHours();
+    var minutes = getCurrentDateObject(true).getMinutes();
     var afternoon = false;
     if(hours>=12 && getSettingsString("settingsUse24HourClock")==="false"){
       hours=hours-12;
@@ -40,13 +40,13 @@ class Clock extends Component {
   componentDidMount(){
     this.timeInterval = setInterval(() => {
 
-      var month = getMonth(getCurrentDateObject().getMonth());
-      var dayNum = getCurrentDateObject().getDate().toString();
-      var weekDay = getWeekDayShort(getCurrentDateObject().getDay());
-      var hours = getCurrentDateObject().getHours();
-      var minutes = getCurrentDateObject().getMinutes();
+      var month = getMonth(getCurrentDateObject(true).getMonth());
+      var dayNum = getCurrentDateObject(true).getDate().toString();
+      var weekDay = getWeekDayShort(getCurrentDateObject(true).getDay());
+      var hours = getCurrentDateObject(true).getHours();
+      var minutes = getCurrentDateObject(true).getMinutes();
       var afternoon = false;
-      if(hours>12 && getSettingsString("settingsUse24HourClock")==="false"){
+      if(hours>=12 && getSettingsString("settingsUse24HourClock")==="false"){
         hours=hours-12;
         afternoon=true;
       }

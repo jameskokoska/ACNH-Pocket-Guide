@@ -4,6 +4,11 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added Poki exchange rate to item statistics
+-Days for events now follow ACNH, beginning at 5AM
+-Fixed homepage clock formatting
+-Removed search location in museum pages for non-english languages
+-
 -Added more info on creatures location
 -Added catch location on popup for fish and bugs
 -

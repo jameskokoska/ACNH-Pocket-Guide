@@ -30,7 +30,7 @@ export default class TVGuidePage extends Component {
   constructor() {
     super();
     this.state = {
-      index: (getCurrentDateObject().getDay() >= 0 || getCurrentDateObject().getDay() <=6) ? getCurrentDateObject().getDay() : 0,
+      index: (getCurrentDateObject(true).getDay() >= 0 || getCurrentDateObject(true).getDay() <=6) ? getCurrentDateObject(true).getDay(true) : 0,
       routes: [
         { key: 'Sunday', title: attemptToTranslate('Sunday') },
         { key: 'Monday', title: attemptToTranslate('Monday') },
@@ -136,7 +136,7 @@ class ContainerBox extends Component {
     if(currentHour.charAt(0)==="0"){
       currentHour = currentHour.slice(1)
     }
-    if(getCurrentDateObject().getHours().toString()===currentHour){
+    if(getCurrentDateObject(true).getHours().toString()===currentHour){
       backgroundColor=colors.tvGuideHighlight[global.darkMode]
     }
     return <View style={{paddingHorizontal:20, flexDirection:"row", alignItems:"center",backgroundColor: backgroundColor, borderTopColor: colors.lightDarkAccentHeavy2[global.darkMode],borderTopWidth: 2,}}>

@@ -120,12 +120,12 @@ export function getDateStringWeekMonthDayShort(dateObject){
   return attemptToTranslate(getWeekDayShort(dateObject.getDay())) + ", " + (doWeSwapDate()===false ? month + " " + day : day + " " + month);
 }
 
-function getCurrentDateObject(){
+function getCurrentDateObject(realtime=false){
   if(getSettingsString("settingsUseCustomDate")==="true" && global.customTimeOffset!==undefined){
-    var newDate = new Date(new Date().getTime() + parseInt(global.customTimeOffset));
+    let newDate = new Date(new Date().getTime() + parseInt(global.customTimeOffset) - (realtime===true ? 0 : parseInt(5*60*60*1000)));
     return newDate;
   } else {
-    return new Date();
+    return new Date(new Date().getTime() - (realtime ? 0 : parseInt(5*60*60*1000)));
   }
 }
 

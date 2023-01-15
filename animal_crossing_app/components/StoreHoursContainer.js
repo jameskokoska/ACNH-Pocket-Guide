@@ -8,7 +8,7 @@ import * as RootNavigation from '../RootNavigation.js';
 class StoreHoursContainer extends Component {
   render(){
     var backgroundColor;
-    var currentHour = getCurrentDateObject().getHours();
+    var currentHour = getCurrentDateObject(true).getHours();
     if(currentHour+1===this.props.closeHour){
       backgroundColor = colors.closingSoonStore[global.darkMode]
     } else if(currentHour >= this.props.openHour && currentHour < this.props.closeHour){
@@ -45,7 +45,7 @@ export default StoreHoursContainer;
 export class StoreHoursContainerHarvey extends Component{
   render(){
     let backgroundColor = colors.closedStore[global.darkMode];
-    let currentHour = getCurrentDateObject().getHours();
+    let currentHour = getCurrentDateObject(true).getHours();
     if(currentHour+1===this.props.closeHour){
       backgroundColor = colors.closingSoonStore[global.darkMode]
     } else if(this.props.closeHour < this.props.openHour){

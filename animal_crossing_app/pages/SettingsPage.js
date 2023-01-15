@@ -172,8 +172,8 @@ export class CustomDatePicker extends Component{
   constructor(props){
     super(props);
     this.state = {
-      date:getCurrentDateObject(),
-      time:getCurrentDateObject(),
+      date:getCurrentDateObject(true),
+      time:getCurrentDateObject(true),
       datePickerVisible: false,
       timePickerVisible: false,
     }

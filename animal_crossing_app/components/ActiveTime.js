@@ -253,8 +253,8 @@ class ActiveTime extends Component {
     // gets current time stuff
     var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH ";
     var settingsUse24HourClock = getSettingsString("settingsUse24HourClock")==="true";
-    var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
-    var currentHour = getCurrentDateObject().getHours();
+    var currentMonthShort = getMonthShort(getCurrentDateObject(true).getMonth());
+    var currentHour = getCurrentDateObject(true).getHours();
     var currentTimeRange = this.props.item[hemispherePre+currentMonthShort];
     if(currentTimeRange==="NA"){
       currentTimeRange = this.props.item[hemispherePre+"time"];
@@ -363,7 +363,7 @@ class ActiveTime extends Component {
     }
 
     let isActiveCurrentHour = false
-    if(isActive2(this.props.item[hemispherePre+currentMonthShort],getCurrentDateObject().getHours())){
+    if(isActive2(this.props.item[hemispherePre+currentMonthShort],getCurrentDateObject(true).getHours())){
       isActiveCurrentHour = true
     }
 

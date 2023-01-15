@@ -92,7 +92,7 @@ export class TodoListWrapped extends Component {
       this.setState({loaded:true,data:storageData,showVillagersTalkList:showVillagersTalkList, resetEachDay: resetEachDay,addToTop:addToTop});
     }
     if(resetEachDay){
-      let dateWithOffset = addHours(getCurrentDateObject(),-5)
+      let dateWithOffset = addHours(getCurrentDateObject(true),-5)
       let currentDateString = dateWithOffset.getMonth().toString()+"-"+dateWithOffset.getDate().toString()+"-"+dateWithOffset.getFullYear().toString()
       let lastOpened = await getStorage("lastOpenedDay",currentDateString);
       // console.log(lastOpened)
@@ -291,7 +291,7 @@ export class TodoListWrapped extends Component {
               }else if(item.value==="Uncheck Each Day"){
                 if(!this.state.resetEachDay){
                   //set up first time when enabled
-                  let dateWithOffset = addHours(getCurrentDateObject(),-5)
+                  let dateWithOffset = addHours(getCurrentDateObject(true),-5)
                   let currentDateString = dateWithOffset.getMonth().toString()+"-"+dateWithOffset.getDate().toString()+"-"+dateWithOffset.getFullYear().toString()
                   let lastOpened = await getStorage("lastOpenedDay"+global.profile,currentDateString);
                   console.log("enabled reset tasks")
@@ -578,7 +578,7 @@ class TurnipItem extends Component {
           <TextInput
             allowFontScaling={false}
             keyboardType={"numeric"}
-            style={{textAlign:"center", fontSize: 17, width:"55%", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:(getCurrentDateObject().getDay() === this.props.index && getCurrentDateObject().getHours() < 12) ?colors.highlightTurnipDay[global.darkMode]:colors.lightDarkAccent[global.darkMode], padding: 6, borderRadius: 5}}
+            style={{textAlign:"center", fontSize: 17, width:"55%", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:(getCurrentDateObject(true).getDay() === this.props.index && getCurrentDateObject(true).getHours() < 12) ?colors.highlightTurnipDay[global.darkMode]:colors.lightDarkAccent[global.darkMode], padding: 6, borderRadius: 5}}
             onChangeText={(text) => {item.purchase = text; this.props.updateItem(item,this.props.index)}}
             placeholder={attemptToTranslate("Sunday Price")}
             defaultValue={this.props.item.purchase}
@@ -595,7 +595,7 @@ class TurnipItem extends Component {
           <TextInput
             allowFontScaling={false}
             keyboardType={"numeric"}
-            style={{textAlign:"center", fontSize: 17, width:"25%", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:(getCurrentDateObject().getDay() === this.props.index && getCurrentDateObject().getHours() < 12) ?colors.highlightTurnipDay[global.darkMode]:colors.lightDarkAccent[global.darkMode], padding: 6, borderRadius: 5}}
+            style={{textAlign:"center", fontSize: 17, width:"25%", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:(getCurrentDateObject(true).getDay() === this.props.index && getCurrentDateObject(true).getHours() < 12) ?colors.highlightTurnipDay[global.darkMode]:colors.lightDarkAccent[global.darkMode], padding: 6, borderRadius: 5}}
             onChangeText={(text) => {item.am = text; this.props.updateItem(item,this.props.index)}}
             placeholder={attemptToTranslate("AM")}
             defaultValue={this.props.item.am}
@@ -606,7 +606,7 @@ class TurnipItem extends Component {
           <TextInput
             allowFontScaling={false}
             keyboardType={"numeric"}
-            style={{textAlign:"center", fontSize: 17, width:"25%", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:(getCurrentDateObject().getDay() === this.props.index && getCurrentDateObject().getHours() >= 12) ?colors.highlightTurnipDay[global.darkMode]:colors.lightDarkAccent[global.darkMode], padding: 6, borderRadius: 5}}
+            style={{textAlign:"center", fontSize: 17, width:"25%", color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:(getCurrentDateObject(true).getDay() === this.props.index && getCurrentDateObject(true).getHours() >= 12) ?colors.highlightTurnipDay[global.darkMode]:colors.lightDarkAccent[global.darkMode], padding: 6, borderRadius: 5}}
             onChangeText={(text) => {item.pm = text; this.props.updateItem(item,this.props.index)}}
             placeholder={attemptToTranslate("PM")}
             defaultValue={this.props.item.pm}
