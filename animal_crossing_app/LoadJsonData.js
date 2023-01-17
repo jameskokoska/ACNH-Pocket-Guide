@@ -55,7 +55,12 @@ export function removeCustomList(name){
         checkOff(globalCollectionListCopy[i], true, "", "", false)
       }
     }
-    return true
+    if(global.defaultSelectedList===name){
+      global.defaultSelectedList = ""
+      AsyncStorage.setItem("defaultSelectedList"+global.profile, "");
+      AsyncStorage.setItem("settingsSelectDefaultWishlist"+global.profile, "false");
+    }
+    return true 
   }
   return false
 }
@@ -1067,6 +1072,14 @@ export const settings = [
     "picture" : require("./assets/icons/homeIcon.png"),
     "displayName" : "Edit home page",
     "description" : "Tap here to edit sections on your home page.",
+  },
+  {
+    "keyName" : "settingsSelectDefaultWishlist",
+    "defaultValue" : "false",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/wishlist.png"),
+    "displayName" : "Default wishlist",
+    "description" : "Select the default wishlist when adding items with a long press.",
   },
   {
     "keyName" : "settingsAutoBackup",

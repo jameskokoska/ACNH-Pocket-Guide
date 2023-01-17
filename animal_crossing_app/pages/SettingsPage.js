@@ -13,6 +13,7 @@ import {PopupBottomCustom} from "../components/Popup"
 import { dataVersion } from '../Changelog';
 import { DropdownMenu, } from '../components/Dropdown';
 import { getCurrentDateObject } from '../components/DateFunctions';
+import { WishlistSelectionPopup } from './WishlistPage';
 
 class SettingsPage extends Component {
   constructor(props){
@@ -41,8 +42,15 @@ class SettingsPage extends Component {
   }
   
   render(){
+    console.log(global.customLists)
     return(<>
       <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
+        <WishlistSelectionPopup showSelectedOriginal ref={(popupSelectWishlist) => this.popupSelectWishlist = popupSelectWishlist} selectedList={[global.defaultSelectedList]} changeSelectedList={(list)=>{
+          AsyncStorage.setItem("defaultSelectedList", list);
+          global.defaultSelectedList = list;
+          console.log(global.defaultSelectedList)
+          this.forceUpdatePage()
+        }} addCustomList={()=>{}} showDelete={false}/>
         <SettingsPopup ref={(popup) => this.popup = popup}/>
         <ScrollView>
           <View style={{marginTop: 100}}/>
@@ -77,6 +85,7 @@ class SettingsPage extends Component {
                   deleteSavedPhotos={this.deleteSavedPhotos}
                   popupLoadNotifications={()=>{this.popupLoadNotifications?.setPopupVisible(true)}}
                   popupAutoBackups={()=>{this.popupAutoBackups?.setPopupVisible(true)}}
+                  popupSelectWishlist={()=>{this.popupSelectWishlist?.setPopupVisible(true)}}
                 />
               } else {
                 if(setting["hidden"]===true && this.state.showHiddenSettings===false){
@@ -95,7 +104,6 @@ class SettingsPage extends Component {
           )}
           <Popup ref={(popupLoadNotifications) => this.popupLoadNotifications = popupLoadNotifications} text="Notifications" textLower="You can select event notifications under the [Edit Events] of the [Events] section on the homepage." button1={"Go to page"} button1Action={()=>{this.props.setPage(0)}} button2={"OK"} button2Action={()=>{}}/>
           <Popup ref={(popupAutoBackups) => this.popupAutoBackups = popupAutoBackups} text="Auto Backups" textLower="Make sure your credentials and account is setup on the Backup and Restore page." button1={"Go to page"} button1Action={()=>{this.props.setPage(30)}} button2={"OK"} button2Action={()=>{}}/>
-
           <CustomDatePicker showPopup={true} setDateOffset={this.setDateOffset}/>
           {/* <View style={{height: 50}}/>
           <SettingsDivider text="Data backup" margin="small"/>

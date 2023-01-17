@@ -8,6 +8,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {getSettingsString,getStorage, resetAlphabeticalFilters} from "../LoadJsonData"
 import {cancelAllPushNotifications} from "../Notifications"
 import { DropdownMenu } from './Dropdown';
+import { WishlistSelectionPopup } from '../pages/WishlistPage';
 
 class SettingsContainer extends Component {
   constructor(props){
@@ -18,6 +19,9 @@ class SettingsContainer extends Component {
   }
   render(){
     if(this.props.setting.hideCompletely===true){
+      return <View/>
+    }
+    if(this.props.keyName==="settingsSelectDefaultWishlist" && (global.customLists===undefined || global.customLists.length<=0)){
       return <View/>
     }
     const hideSwitch = this.props.keyName==="settingsEditHomePage" || this.props.keyName==="settingsEditNotifications" || this.props.setting.dropdownValues!==undefined
@@ -93,6 +97,9 @@ class SettingsContainer extends Component {
                 }
                 if(this.props.keyName==="settingsSortAlphabetically"){
                   resetAlphabeticalFilters();
+                }
+                if(this.props.keyName==="settingsSelectDefaultWishlist" && this.state.toggle === true){
+                  this.props.popupSelectWishlist()
                 }
               }}
             /> : this.props.setting.dropdownValues!==undefined ? <View/> : <Image

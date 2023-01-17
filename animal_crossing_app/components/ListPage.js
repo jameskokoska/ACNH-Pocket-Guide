@@ -948,8 +948,14 @@ function ListPage(props){
 
     if(popupBottom){
       //order is important
-      customListsPopupBottomRef?.current?.setPopupVisible(true, item.checkListKey, item["NameLanguage"], image)
-      customListsPopupBottomRef?.current.updateSelectedList()
+      if(props.wishlistItems!==true && getSettingsString("settingsSelectDefaultWishlist")==="true" && global.defaultSelectedList!==undefined){
+        // a default list is selected
+        console.log('a default list was selected')
+        addItemToCustomListFunction(global.defaultSelectedList)
+      } else {
+        customListsPopupBottomRef?.current?.setPopupVisible(true, item.checkListKey, item["NameLanguage"], image)
+        customListsPopupBottomRef?.current.updateSelectedList()
+      }
     } else {
       customListsPopupRef?.current?.setPopupVisible(true, item.checkListKey, item["NameLanguage"], image)
       customListsPopupRef?.current.updateSelectedList()
