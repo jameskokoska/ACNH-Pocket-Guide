@@ -46,7 +46,7 @@ class SettingsPage extends Component {
     return(<>
       <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
         <WishlistSelectionPopup showSelectedOriginal ref={(popupSelectWishlist) => this.popupSelectWishlist = popupSelectWishlist} selectedList={[global.defaultSelectedList]} changeSelectedList={(list)=>{
-          AsyncStorage.setItem("defaultSelectedList", list);
+          AsyncStorage.setItem("defaultSelectedList"+global.profile, list);
           global.defaultSelectedList = list;
           console.log(global.defaultSelectedList)
           this.forceUpdatePage()

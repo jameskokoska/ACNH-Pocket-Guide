@@ -169,6 +169,7 @@ class App extends Component {
     global.extraItemInfo = await getStorage("extraItemInfo"+global.profile,"");
     global.customLists = JSON.parse(await getStorage("customLists"+global.profile,"[]"));
     global.defaultSelectedList = await getStorage("defaultSelectedList"+global.profile,"");
+    console.log(global.defaultSelectedList)
     let lastSelectedListPage = await getStorage("lastSelectedListPage"+global.profile,"");
     if(lastSelectedListPage!=="" && customLists!==undefined && customLists.includes(lastSelectedListPage)){
       global.lastSelectedListPage = lastSelectedListPage
