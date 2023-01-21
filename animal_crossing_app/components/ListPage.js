@@ -599,7 +599,7 @@ function ListPage(props){
               if(props.activeCreatures){
                 var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH "
                 var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
-                if(!isActive2(item[hemispherePre+currentMonthShort],getCurrentDateObject().getHours())){
+                if(!isActive2(item[hemispherePre+currentMonthShort],getCurrentDateObject(true).getHours())){
                   continue;
                 }
               }
