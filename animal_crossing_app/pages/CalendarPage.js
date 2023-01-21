@@ -98,7 +98,6 @@ export default class CalendarPage extends Component {
       viewCalendar = <View style={[(this.state.view==="today" || this.state.view==="list") && {display: 'none'}]}><CalendarView scrollToTop={this.scrollToTop} eventSections={this.eventSections} currentDate={getCurrentDateObject()} setCurrentDay={this.setCurrentDay}/></View>
     }
     return (<>
-      <VillagerPopupPopup ref={(villagerPopupPopup) => this.villagerPopupPopup = villagerPopupPopup} setPage={this.props.setPage}/>
       {viewCalendar}
       {viewList}
       <FlatList
@@ -134,6 +133,7 @@ export default class CalendarPage extends Component {
         viewList={()=>{if(this.mounted){this.setState({loadAll:true, view:"list"});}}}
         viewToday={()=>{if(this.mounted){this.setState({loadList:true, view:"today"});}}}
         openCalendar={()=>{if(this.mounted){this.setState({loadCalendar:true, view:"calendar"});}}}/>
+      <VillagerPopupPopup ref={(villagerPopupPopup) => this.villagerPopupPopup = villagerPopupPopup} setPage={this.props.setPage}/>
     </>
     );    
   }

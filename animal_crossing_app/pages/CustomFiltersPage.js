@@ -26,6 +26,7 @@ export default class CustomFiltersPage extends Component {
       if(filteredFilter.startsWith("STORE HOURS:")){
         filteredFilter = filteredFilter.replace("STORE HOURS:","")
       }
+      let findFilters = getSpecificFilters(filteredFilter)
       return(
         <AndroidBackHandler onBackPress={this.onBackButtonPressAndroid}>
           <AllItemsPage 
@@ -33,7 +34,7 @@ export default class CustomFiltersPage extends Component {
             smallerHeader={this.props.titlePassed!==undefined&&filteredFilter.length>15?true:false}
             // disableFilters={true}
             title={this.props.currentFiltersSearchFor.startsWith("STORE HOURS:")?capitalize(filteredFilter):capitalize(eventName)}
-            currentSetFilters={getSpecificFilters(filteredFilter)}
+            currentSetFilters={findFilters}
             subHeader={this.props.currentFiltersSearchFor.startsWith("STORE HOURS:")?"":"You can get these items from this event"}
             appBarColor = {colors.customFiltersAppBar[global.darkMode]}
             accentColor = {colors.customFiltersAccent[global.darkMode]}
@@ -50,6 +51,7 @@ export default class CustomFiltersPage extends Component {
           />
         </AndroidBackHandler>
       )
+      
     } else {
       return(<ErrorPage/>)
     }

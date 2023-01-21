@@ -4,7 +4,9 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Fixed event items page for Lunar New Year and other events
 -Fixed Active Creatures time offset
+-Fixed villager popup on calendar page
 -
 -New Monthly Gold Supporter: Cathygrace! Thank you!
 -Can select a default list - configure in settings (if using multiple lists, select a default that items will be added to with a long press)

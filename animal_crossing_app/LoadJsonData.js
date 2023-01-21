@@ -662,7 +662,7 @@ export async function resetAlphabeticalFilters(){
   }
 }
 
-export function getSpecificFilters(searchFor){
+export function getSpecificFilters(searchFor, searchingMore = false){
   if(searchFor===undefined){
     return [];
   }
@@ -675,7 +675,12 @@ export function getSpecificFilters(searchFor){
       }
     }
   }
-  // console.log(foundFilters)
+  console.log("FOUND FILTERS")
+  console.log(foundFilters)
+  if(foundFilters.length<=0 && searchingMore===false){
+    console.log("SEARCHING MORE:" + searchFor + " (Nook Shopping)")
+    return getSpecificFilters(searchFor + " (Nook Shopping)", true)
+  }
   return foundFilters;
 }
 
