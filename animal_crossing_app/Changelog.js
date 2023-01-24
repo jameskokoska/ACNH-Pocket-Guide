@@ -4,6 +4,7 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added clear queue button on songs page
 -Fixed event items page for Lunar New Year and other events
 -Fixed Active Creatures time offset
 -Fixed villager popup on calendar page

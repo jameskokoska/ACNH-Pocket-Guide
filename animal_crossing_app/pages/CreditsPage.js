@@ -212,7 +212,7 @@ export class Supporters extends Component{
       <CreditImageContainer image={require("../assets/icons/Ari.png")} text="Ari K." textBottom="Gold Supporter"/>
       <CreditImageContainer image={require("../assets/icons/everstar.png")} text="everstar" textBottom="Gold Supporter"/>
       <CreditTextBox text="Utumno"/>
-      <CreditTextBox text="Lou Johnson"/>
+      <CreditImageContainer image={require("../assets/icons/LouieJohnson.png")} text="helljay1309" textBottom="Gold Supporter"/>
       <CreditImageContainer image={require("../assets/icons/Cathygrace.png")} text="Cathygrace" textBottom="Gold Supporter"/>
       <View style={{height:12}}/>
       <SubHeader style={{fontSize: 24}}>Silver Supporters</SubHeader>

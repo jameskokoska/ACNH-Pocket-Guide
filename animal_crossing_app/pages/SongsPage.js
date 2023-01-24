@@ -381,7 +381,16 @@ class NowPlayingLarge extends Component {
         </View>
         <View style = {{height:Dimensions.get('window').height*0.02}}/>
       </View>
-      <SubHeader bold={false} margin={false} style={{fontSize:20, marginTop: 15, marginLeft: 20, marginBottom: 10,}}>{"Up Next"}</SubHeader>
+      <View style={{justifyContent:"space-between", flexDirection:"row", alignItems:"flex-end", marginTop: 5, marginHorizontal: 20}}>
+        <SubHeader bold={false} margin={false} style={{fontSize:20, marginVertical:10}}>{"Up Next"}</SubHeader>
+        <TouchableOpacity
+          onPress={async()=>{
+            clearQueue();
+            getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+        }}>
+          <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, marginRight:-5, marginVertical:10}}>Clear Queue</TextFont>
+        </TouchableOpacity>
+      </View>
       {global.songQueue.slice(1).map((item,index)=>{
         return(<SongContainerRow removeSong={(index)=>this.props.removeSong(index)} index={index} song={item} key={item["Name"]+index} text={item["NameLanguage"]} text2={item.special==="hourly" ? "Hourly Music" : (item["liveMusic"] === "Music Box" ? "Music Box" : item["liveMusic"] ? "Live" : "Aircheck")} image={item["Album Image"]}/>)
       })}
@@ -514,6 +523,15 @@ async function skipSong(){
     console.log("Done playing Queue")
     global.songQueue = []
     stopSong()
+  }
+}
+
+async function clearQueue(){
+  if(global.songQueue.length > 1){
+    global.songQueue = []
+    skipSong()
+  } else {
+    skipSong()
   }
 }
 
