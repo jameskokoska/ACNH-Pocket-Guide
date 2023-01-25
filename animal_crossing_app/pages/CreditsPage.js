@@ -198,6 +198,7 @@ export class Supporters extends Component{
       <CreditTextBox text="Spockslefteyebrow"/>
       <CreditImageContainer image={require("../assets/icons/Nym.png")} text="Nym" textBottom="Diamond Supporter"/>
       <CreditImageContainer image={require("../assets/icons/Patrick.png")} text="Patrick" textBottom="Diamond Supporter"/>
+      <CreditImageContainer image={require("../assets/icons/SethN.png")} text="Seth N." textBottom="Diamond Supporter"/>
       <View style={{height:12}}/>
       <SubHeader style={{fontSize: 24}}>Gold Supporters</SubHeader>
       <SubHeader bold={false} style={{marginBottom:6, marginTop:0, fontSize: 17}}>{attemptToTranslate("Thanks for your support!")}</SubHeader>

@@ -4,7 +4,8 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
--New Monthly Silver Supporter: 
+-New Monthly Diamond Supporter: Seth N.! Thank you!
+-New Monthly Silver Supporter: Oratoria! Thank you!
 -Added clear queue button on songs page
 -Fixed event items page for Lunar New Year and other events
 -Fixed Active Creatures time offset

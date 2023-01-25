@@ -146,8 +146,8 @@ android {
         applicationId "com.acnh.pocket_guide"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 475
-        versionName "19.1.4"
+        versionCode 479
+        versionName "19.1.6"
         buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
 
         if (isNewArchitectureEnabled()) {
