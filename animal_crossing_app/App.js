@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Vibration, BackHandler, Dimensions, Text, View, StatusBar, Linking, LogBox } from 'react-native';
 import FAB, { FABWrapper } from './components/FAB';
-import CalendarPage from './pages/CalendarPage';
+import CalendarPage, { AllEventsList, CalendarView } from './pages/CalendarPage';
 import SongsPage from './pages/SongsPage';
 import CatalogPage from './pages/CatalogPage';
 import EmoticonsPage from './pages/EmoticonsPage';
@@ -582,6 +582,9 @@ class App extends Component {
       const NavigatorGlobalSearchPage = ({route, navigation})=>{return <GlobalSearchPage currentSearch={route.params.propsPassed} setPage={this.setPage}/>}
       const NavigatorTodoReorderPage = ({route, navigation})=>{return <TodoReorderPage todos={route.params.propsPassed}/>}
       const NavigatorIngredientsPage = ({route, navigation})=>{return <IngredientsPage baseItem={route.params.propsPassed}/>}
+      const NavigatorCalendarPage = ({route, navigation})=>{return <CalendarPage setPage={this.setPage} {...route.params}/>}
+      const NavigatorCalendarView = ({route, navigation})=>{return <CalendarView setPage={this.setPage} {...route.params}/>}
+      const NavigatorAllEventsList = ({route, navigation})=>{return <AllEventsList setPage={this.setPage} {...route.params}/>}
 
       console.log("Current page: " + this.state.currentPage)
 
@@ -614,6 +617,9 @@ class App extends Component {
                   <Stack.Screen name="40" component={NavigatorIngredientsPage}/>
                   <Stack.Screen name="BrowserPage" component={NavigatorBrowserPage}/>
                   <Stack.Screen name="GlobalSearchPage" component={NavigatorGlobalSearchPage}/>
+                  <Stack.Screen name="CalendarPage" component={NavigatorCalendarPage}/>
+                  <Stack.Screen name="CalendarView" component={NavigatorCalendarView}/>
+                  <Stack.Screen name="AllEventsList" component={NavigatorAllEventsList}/>
                 </Stack.Navigator>
               </NavigationContainer>
             </Provider>

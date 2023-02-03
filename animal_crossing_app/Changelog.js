@@ -4,6 +4,10 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Calendar + Events page highlights current tab
+-Improved navigation on Calendar + Events page
+-Removed hemisphere switch from museum pages (not working properly)
+-
 -New Monthly Diamond Supporter: Seth N.! Thank you!
 -New Monthly Silver Supporter: Oratoria! Thank you!
 -Added clear queue button on songs page

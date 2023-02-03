@@ -20,14 +20,11 @@ import { useFocusEffect, useIsFocused } from '@react-navigation/native';
 //Note: to use Wix Agenda React Native - might to manually install package from repo as some resources may be missing from npm install
 
 export default class CalendarPage extends Component {
-  constructor(item) {
-    super(item);
+  constructor(props) {
+    super(props);
     this.state = {
-      loadCalendar: false,
-      loadAll: false,
-      view:"today",
       currentEvents: [{"topHeader":""}],
-      currentDay:getCurrentDateObject()
+      currentDay:props.currentDay!==undefined ? new Date(props.currentDay) : getCurrentDateObject()
     };
     this.calculatedEvents = {"hello":"hello"}
     this.currentDayOffset = 0;
@@ -50,7 +47,7 @@ export default class CalendarPage extends Component {
   }
   componentDidMount() {
     this.mounted = true;
-    this.appendEvents(getCurrentDateObject())
+    this.appendEvents(this.props.currentDay!==undefined ? new Date(this.props.currentDay) : getCurrentDateObject())
   }
   componentWillUnmount() {
     this.mounted = false;
@@ -74,11 +71,6 @@ export default class CalendarPage extends Component {
     this.setState({currentDay: new Date(date), currentEvents:[{"topHeader":""}], view:"today"})
     this.appendEvents(new Date(date),true)
   }
-  scrollToTop = () => {
-    setTimeout(async () => {
-      this.flatList?.scrollToOffset({ animated: true, offset: 0 });
-    },200)
-  }
   addCalculatedEvent = (id, allEventItemsCheck) => {
     this.calculatedEvents[id] = allEventItemsCheck
   }
@@ -89,17 +81,7 @@ export default class CalendarPage extends Component {
       return this.calculatedEvents[id]
   }
   render() {
-    let viewList = <></>
-    if(this.state.view==="list"){
-      viewList =  <AllEventsList setPage={this.props.setPage}/>
-    }
-    let viewCalendar = <></>
-    if(this.state.loadCalendar){
-      viewCalendar = <View style={[(this.state.view==="today" || this.state.view==="list") && {display: 'none'}]}><CalendarView scrollToTop={this.scrollToTop} eventSections={this.eventSections} currentDate={getCurrentDateObject()} setCurrentDay={this.setCurrentDay}/></View>
-    }
     return (<>
-      {viewCalendar}
-      {viewList}
       <FlatList
         ref={(flatList) => this.flatList = flatList}
         data={this.state.currentEvents}
@@ -129,13 +111,15 @@ export default class CalendarPage extends Component {
         onEndReached={()=>{this.appendEvents(this.state.currentDay)}}
         onEndReachedThreshold={0.9}
       />
-      <BottomBar 
-        viewList={()=>{if(this.mounted){this.setState({loadAll:true, view:"list"});}}}
-        viewToday={()=>{if(this.mounted){this.setState({loadList:true, view:"today"});}}}
-        openCalendar={()=>{if(this.mounted){this.setState({loadCalendar:true, view:"calendar"});}}}/>
+      <BottomBar
+        selected={0}
+        viewList={()=>{RootNavigation.navigate('AllEventsList')}}
+        viewToday={()=>{}}
+        openCalendar={()=>{RootNavigation.navigate('CalendarView')}}
+      />
       <VillagerPopupPopup ref={(villagerPopupPopup) => this.villagerPopupPopup = villagerPopupPopup} setPage={this.props.setPage}/>
     </>
-    );    
+    );
   }
 
 }
@@ -146,14 +130,29 @@ function firstDayInMonth(date) {
   return d;
 }
 
-class CalendarView extends Component{
+export class CalendarView extends Component{
   constructor(props) {
     super(props);
-
+    this.eventSections = {
+      "App notifications" : false,
+      "Set Notification Time" : "",
+      "Favorite Villager's Birthdays" : true,
+      "Old Resident Villager's Birthdays" : true,
+      "All Villager's Birthdays" : true,
+      "K.K. Slider" : true,
+      "Daisy Mae" : true,
+      "Crafting Seasons" : true,
+      "Nook Shopping Events" : true,
+      "Shopping Seasons" : true,
+      "Event Ready Days" : true,
+      "Zodiac Seasons" : true,
+      "Break2" : true,
+      "Show End Day of Events" : true,
+    }
     this.state = {
       monthOffset:0,
       allowedToSwipe:true,
-      currentDate:this.props.currentDate,
+      currentDate:getCurrentDateObject(),
       eventColors:[],
       eventColorsHeavy:[],
       importantEvents:[],
@@ -183,7 +182,7 @@ class CalendarView extends Component{
       for(let day = 0; day<amountOfDays+1; day++){
         let currentEventColors = []
         let currentEventColorsHeavy = []
-        let eventsForDay = getEventsDay(addDays(firstDayInMonth(this.state.currentDate),day-1), this.props.eventSections, true)
+        let eventsForDay = getEventsDay(addDays(firstDayInMonth(this.state.currentDate),day-1), this.eventSections, true)
         let currentImportantEvents = false
         let currentTodayDate = false
         if(this.state.currentDate.getMonth() === getCurrentDateObject().getMonth() && currentYear === getCurrentDateObject().getFullYear() && day === getCurrentDateObject().getDate()){
@@ -289,7 +288,9 @@ class CalendarView extends Component{
                         return <View key={item} style={{width:((windowWidth-marginHorizontal*2-70)/7), height: 50, alignItems:"center", justifyContent:"center", margin:5}}>
                         </View>
                       }
-                      return <TouchableOpacity key={item} activeOpacity={0.6} onPress={()=>{this.props.setCurrentDay(new Date(this.state.currentDate).setDate(item)); this.props.scrollToTop()}}>
+                      return <TouchableOpacity key={item} activeOpacity={0.6} onPress={()=>{
+                          RootNavigation.navigate('CalendarPage', {currentDay: new Date(this.state.currentDate).setDate(item)})
+                        }}>
                         <View style={{borderRadius:10,borderWidth: 1.3, borderColor: this.state.todayDate[item] ? colors.textBlack[global.darkMode] : (this.state.importantEvents[item]?(this.state.eventColorsHeavy[item]!==undefined?this.state.eventColorsHeavy[item][0]:"transparent"):"transparent"),backgroundColor:this.state.eventColors[item]!==undefined?this.state.eventColors[item][0]:"transparent", width:((windowWidth-marginHorizontal*2-70)/7), height: 50, alignItems:"center", justifyContent:"center", margin:5}}>
                           <SubHeader margin={false} style={{fontSize:15}}>{item.toString()}</SubHeader>
                           <View style={{flexDirection:"row", position:"absolute", bottom:7}}>
@@ -326,6 +327,12 @@ class CalendarView extends Component{
           </View>
         </View>
       </ScrollView>
+      <BottomBar
+        selected={1}
+        viewList={()=>{RootNavigation.navigate('AllEventsList')}}
+        viewToday={()=>{RootNavigation.navigate('CalendarPage')}}
+        openCalendar={()=>{RootNavigation.navigate('CalendarView')}}
+      />
     </View>
   }
 }
@@ -348,17 +355,17 @@ class BottomBar extends Component {
   render(){
     return <View style={{position:"absolute", zIndex:5, bottom:0, borderTopRightRadius: 10, borderTopLeftRadius: 10, flexDirection: "row", justifyContent:"space-evenly",elevation:5, backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode], width:Dimensions.get('window').width, height:45}}>
       <TouchableOpacity onPress={()=>{this.props.viewToday(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
-        <View style={{paddingHorizontal: 8, borderRadius: 10, borderWidth:3,borderColor:colors.lightDarkAccentHeavy2[global.darkMode],width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
+        <View style={{opacity:(this.props.selected===0 ? 0.7 : 1),paddingHorizontal: 8, borderRadius: 10, borderWidth:3,borderColor:(this.props.selected===0 ? colors.lightDarkAccent2[global.darkMode] : colors.lightDarkAccentHeavy2[global.darkMode]),width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
           <TextFont bold={true} style={{textAlign:"center", fontSize: 12,color: colors.textBlack[global.darkMode]}}>View List</TextFont>
         </View>
       </TouchableOpacity>
       <TouchableOpacity onPress={()=>{this.props.openCalendar(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
-        <View style={{paddingHorizontal: 8, borderRadius: 10, borderWidth:3,borderColor:colors.lightDarkAccentHeavy2[global.darkMode],width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
+        <View style={{opacity:(this.props.selected===1 ? 0.7 : 1),paddingHorizontal: 8, borderRadius: 10, borderWidth:3,borderColor:(this.props.selected===1 ? colors.lightDarkAccent2[global.darkMode] : colors.lightDarkAccentHeavy2[global.darkMode]),width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
           <TextFont bold={true} style={{textAlign:"center", fontSize: 12,color: colors.textBlack[global.darkMode]}}>Open Calendar</TextFont>
         </View>
       </TouchableOpacity>
       <TouchableOpacity onPress={()=>{this.props.viewList(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
-        <View style={{paddingHorizontal: 8, borderRadius: 10, borderWidth:3,borderColor:colors.lightDarkAccentHeavy2[global.darkMode],width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
+        <View style={{opacity:(this.props.selected===2 ? 0.7 : 1), paddingHorizontal: 8, borderRadius: 10, borderWidth:3,borderColor:(this.props.selected===2 ? colors.lightDarkAccent2[global.darkMode] : colors.lightDarkAccentHeavy2[global.darkMode]),width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
           <TextFont bold={true} style={{textAlign:"center", fontSize: 12,color: colors.textBlack[global.darkMode]}}>View All</TextFont>
         </View>
       </TouchableOpacity>
@@ -366,7 +373,7 @@ class BottomBar extends Component {
   }
 }
 
-class AllEventsList extends Component{
+export class AllEventsList extends Component{
   constructor(item) {
     super(item);
     this.data = require("../assets/data/DataCreated/Seasons and Events.json");
@@ -427,7 +434,7 @@ class AllEventsList extends Component{
       <View style={{backgroundColor:colors.background[global.darkMode], height:Dimensions.get('window').height, width:Dimensions.get('window').width}}>
         <Animated.View style={{width:Dimensions.get('window').width,position:"absolute", zIndex:1, transform: [{ translateY: this.translateY }]}}>
           <View style={{backgroundColor: colors.background[global.darkMode], flex: 1,justifyContent: 'flex-end',height:this.headerHeight,}}>
-            <HeaderFlatList disableFilters={true} disableSearch={false} title={"Events"} headerHeight={this.headerHeight} updateSearch={this.handleSearch} appBarColor={colors.background[global.darkMode]} searchBarColor={colors.searchbarBG[global.darkMode]} titleColor={colors.textBlack[global.darkMode]}/>
+            <HeaderFlatList disableCollectedTotal={true} disableFilters={true} disableSearch={false} title={"Events"} headerHeight={this.headerHeight} updateSearch={this.handleSearch} appBarColor={colors.background[global.darkMode]} searchBarColor={colors.searchbarBG[global.darkMode]} titleColor={colors.textBlack[global.darkMode]}/>
           </View>
         </Animated.View>
         <Animated.FlatList
@@ -437,6 +444,12 @@ class AllEventsList extends Component{
           keyExtractor={(item, index) => `list-item-${index}-${item["Unique Entry ID"]}`}
           contentContainerStyle={{paddingBottom:Dimensions.get('window').height}}
           style={{paddingTop:this.headerHeight}}
+        />
+        <BottomBar 
+          selected={2}
+          viewList={()=>{RootNavigation.navigate('AllEventsList')}}
+          viewToday={()=>{RootNavigation.navigate('CalendarPage')}}
+          openCalendar={()=>{RootNavigation.navigate('CalendarView')}}
         />
       </View>
     </>

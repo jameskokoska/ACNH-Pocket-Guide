@@ -29,7 +29,7 @@ class FishRouteClass extends React.PureComponent {
       <ListPage 
         // filterSearchable = {true}
         title="Fish"
-        showHemisphereSwitcherOption={true}
+        // showHemisphereSwitcherOption={true}
         // leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
         leaveWarning = {true}
         imageProperty={["Icon Image"]}
@@ -69,7 +69,7 @@ class BugsRouteClass extends React.PureComponent {
     return(
       <ListPage 
         title="Bugs"
-        showHemisphereSwitcherOption={true}
+        // showHemisphereSwitcherOption={true}
         // leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
         leaveWarning = {true}
         imageProperty={["Icon Image"]}
@@ -109,7 +109,7 @@ class SeaRouteClass extends React.PureComponent {
     return(
       <ListPage 
         title="Sea Creatures"
-        showHemisphereSwitcherOption={true}
+        // showHemisphereSwitcherOption={true}
         // leaveWarning = {getSettingsString("settingsCreaturesLeavingWarning")==="true" ? true : false}
         leaveWarning = {true}
         imageProperty={["Icon Image"]}
