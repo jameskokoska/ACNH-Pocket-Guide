@@ -18,7 +18,7 @@ export class FABWrapper extends Component {
     let fab = <View/>;
     if(global.settingsCurrent!==undefined&&getSettingsString("settingsShowFAB")==="true"){
       if(this.state.currentPage===16){
-        fab = <FAB openDrawer={this.props.openDrawer} offset={30}/>;
+        fab = <FAB openDrawer={this.props.openDrawer} offset={38}/>;
       }else if(this.state.currentPage===15){
         fab = <View/>;
       }else {

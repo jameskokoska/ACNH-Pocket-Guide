@@ -23,6 +23,7 @@ export default class CalendarPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      loading: true,
       currentEvents: [{"topHeader":""}],
       currentDay:props.currentDay!==undefined ? new Date(props.currentDay) : getCurrentDateObject()
     };
@@ -47,13 +48,30 @@ export default class CalendarPage extends Component {
   }
   componentDidMount() {
     this.mounted = true;
-    this.appendEvents(this.props.currentDay!==undefined ? new Date(this.props.currentDay) : getCurrentDateObject())
+    setTimeout(()=>{
+      this.appendEvents(this.props.currentDay!==undefined ? new Date(this.props.currentDay) : getCurrentDateObject())
+    }, 10)
   }
   componentWillUnmount() {
     this.mounted = false;
   }
+  componentDidUpdate(prevProps) {
+    if(prevProps.currentDay!==this.props.currentDay){
+      this.setState({loading:true})
+      setTimeout(()=>{
+        this.setCurrentDay(this.props.currentDay!==undefined ? new Date(this.props.currentDay) : getCurrentDateObject())
+        this.scrollToTop()
+        this.setState({loading:false})
+      }, 1000)
+    }
+  }
   openVillagerPopup = (item) => {
     this.villagerPopupPopup?.setPopupVisible(true, item);
+  }
+  scrollToTop = () => {
+    setTimeout(async () => {
+      this.flatList?.scrollToOffset({ animated: true, offset: 0 });
+    },200)
   }
   appendEvents = (date, reset=false) => {
     let currentEventsStart = this.state.currentEvents
@@ -63,7 +81,7 @@ export default class CalendarPage extends Component {
     let newDate = addDays(date,this.currentDayOffset)
     let currentEvents = [...currentEventsStart, {"dateBreak":getDateStringWeekMonthDay(newDate)},...getEventsDay(newDate, this.eventSections, true)]
     this.currentDayOffset=this.currentDayOffset+1;
-    this.setState({currentEvents:currentEvents})
+    this.setState({currentEvents:currentEvents, loading:false})
   }
   setCurrentDay = (date) => {
     getSettingsString("settingsEnableVibrations")==="true"? Vibration.vibrate(5) : "";
@@ -87,7 +105,15 @@ export default class CalendarPage extends Component {
         data={this.state.currentEvents}
         renderItem={({item}) => {
           if(item["topHeader"]!==undefined){
-            return <Header style={{marginHorizontal:20, marginTop: 100}}>Events</Header>
+            return <>
+              <Header style={{marginHorizontal:20, marginTop: 100}}>Events</Header>
+              {this.state.loading===true?
+                <View style={{display:"flex", justifyContent:"center", alignItems:"center", marginTop: 50,}}><LottieView autoPlay loop
+                  style={{width: 100, zIndex:1,transform: [{ scale: 1 },{ rotate: '0deg'},],}}
+                  source={require('../assets/loading.json')}
+                /></View>:<View/>
+              }
+            </>
           }
           if(item["dateBreak"]!==undefined){
             return <SubHeader margin={false} style={{marginLeft:15, fontSize:25,marginTop:17,marginBottom:8}}>{item["dateBreak"]}</SubHeader>
@@ -239,7 +265,7 @@ export class CalendarView extends Component{
     if(currentDaysList!==[]){
       daysListIn7.push(currentDaysList)
     }
-    return <View style={{backgroundColor:colors.background[global.darkMode], height:Dimensions.get('window').height, width:Dimensions.get('window').width}}>
+    return <View style={{flex:1, backgroundColor:colors.background[global.darkMode]}}>
       <ScrollView>
         <View>
           <View style={{height:Dimensions.get('window').height/6-80}}/>
@@ -351,21 +377,21 @@ class LegendEntry extends Component{
 }
 
 
-class BottomBar extends Component {  
+export class BottomBar extends Component {  
   render(){
-    return <View style={{position:"absolute", zIndex:5, bottom:0, borderTopRightRadius: 10, borderTopLeftRadius: 10, flexDirection: "row", justifyContent:"space-evenly",elevation:5, backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode], width:Dimensions.get('window').width, height:45}}>
+    return <View style={{position:"absolute", zIndex:5, bottom:0, borderTopRightRadius: 10, borderTopLeftRadius: 10, flexDirection: "row", justifyContent:"space-evenly",elevation:5, backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode], width:Dimensions.get('window').width, height:47}}>
       <TouchableOpacity onPress={()=>{this.props.viewToday(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
-        <View style={{opacity:(this.props.selected===0 ? 0.7 : 1),paddingHorizontal: 8, borderRadius: 10, borderWidth:3,borderColor:(this.props.selected===0 ? colors.lightDarkAccent2[global.darkMode] : colors.lightDarkAccentHeavy2[global.darkMode]),width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
+        <View style={{opacity:(this.props.selected===0 ? 0.7 : 1),paddingHorizontal: 8, borderRadius: 10, borderWidth:3,borderColor:(this.props.selected===0 ? colors.lightDarkAccent2[global.darkMode] : colors.lightDarkAccentHeavy2[global.darkMode]),width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:47, justifyContent:"center", alignItems:"center"}}>
           <TextFont bold={true} style={{textAlign:"center", fontSize: 12,color: colors.textBlack[global.darkMode]}}>View List</TextFont>
         </View>
       </TouchableOpacity>
       <TouchableOpacity onPress={()=>{this.props.openCalendar(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
-        <View style={{opacity:(this.props.selected===1 ? 0.7 : 1),paddingHorizontal: 8, borderRadius: 10, borderWidth:3,borderColor:(this.props.selected===1 ? colors.lightDarkAccent2[global.darkMode] : colors.lightDarkAccentHeavy2[global.darkMode]),width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
+        <View style={{opacity:(this.props.selected===1 ? 0.7 : 1),paddingHorizontal: 8, borderRadius: 10, borderWidth:3,borderColor:(this.props.selected===1 ? colors.lightDarkAccent2[global.darkMode] : colors.lightDarkAccentHeavy2[global.darkMode]),width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:47, justifyContent:"center", alignItems:"center"}}>
           <TextFont bold={true} style={{textAlign:"center", fontSize: 12,color: colors.textBlack[global.darkMode]}}>Open Calendar</TextFont>
         </View>
       </TouchableOpacity>
       <TouchableOpacity onPress={()=>{this.props.viewList(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
-        <View style={{opacity:(this.props.selected===2 ? 0.7 : 1), paddingHorizontal: 8, borderRadius: 10, borderWidth:3,borderColor:(this.props.selected===2 ? colors.lightDarkAccent2[global.darkMode] : colors.lightDarkAccentHeavy2[global.darkMode]),width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:45, justifyContent:"center", alignItems:"center"}}>
+        <View style={{opacity:(this.props.selected===2 ? 0.7 : 1), paddingHorizontal: 8, borderRadius: 10, borderWidth:3,borderColor:(this.props.selected===2 ? colors.lightDarkAccent2[global.darkMode] : colors.lightDarkAccentHeavy2[global.darkMode]),width:Dimensions.get('window').width/3, backgroundColor:colors.lightDarkAccent[global.darkMode], height:47, justifyContent:"center", alignItems:"center"}}>
           <TextFont bold={true} style={{textAlign:"center", fontSize: 12,color: colors.textBlack[global.darkMode]}}>View All</TextFont>
         </View>
       </TouchableOpacity>
@@ -378,13 +404,18 @@ export class AllEventsList extends Component{
     super(item);
     this.data = require("../assets/data/DataCreated/Seasons and Events.json");
     this.state = {
-      searchData: this.data,
+      searchData: [],
     };
     this.calculatedEvents = {}
   }
 
   componentDidMount() {
     this.mounted = true;
+    setTimeout(()=>{
+      this.setState({
+        searchData: this.data,
+      })
+    }, 10)
   }
   componentWillUnmount() {
     this.mounted = false;
@@ -431,7 +462,7 @@ export class AllEventsList extends Component{
 
   render(){
     return(<>
-      <View style={{backgroundColor:colors.background[global.darkMode], height:Dimensions.get('window').height, width:Dimensions.get('window').width}}>
+      <View style={{flex:1, backgroundColor:colors.background[global.darkMode],}}>
         <Animated.View style={{width:Dimensions.get('window').width,position:"absolute", zIndex:1, transform: [{ translateY: this.translateY }]}}>
           <View style={{backgroundColor: colors.background[global.darkMode], flex: 1,justifyContent: 'flex-end',height:this.headerHeight,}}>
             <HeaderFlatList disableCollectedTotal={true} disableFilters={true} disableSearch={false} title={"Events"} headerHeight={this.headerHeight} updateSearch={this.handleSearch} appBarColor={colors.background[global.darkMode]} searchBarColor={colors.searchbarBG[global.darkMode]} titleColor={colors.textBlack[global.darkMode]}/>
@@ -444,6 +475,12 @@ export class AllEventsList extends Component{
           keyExtractor={(item, index) => `list-item-${index}-${item["Unique Entry ID"]}`}
           contentContainerStyle={{paddingBottom:Dimensions.get('window').height}}
           style={{paddingTop:this.headerHeight}}
+          ListFooterComponent={this.state.searchData.length<=0?
+            <View style={{display:"flex", justifyContent:"center", alignItems:"center", marginTop: 20,}}><LottieView autoPlay loop
+              style={{width: 100, zIndex:1,transform: [{ scale: 1 },{ rotate: '0deg'},],}}
+              source={require('../assets/loading.json')}
+            /></View>:<View/>
+          }
         />
         <BottomBar 
           selected={2}
