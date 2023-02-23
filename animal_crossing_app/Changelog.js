@@ -4,6 +4,8 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Fixed amount of added item 1 instead of 0 if using default wishlist
+-
 -Improved loading for Calendar + Events tab pages
 -Fixed bottom navigation bar position in Calendar + Events page
 -

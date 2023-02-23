@@ -2,7 +2,7 @@ import React, {Component, useState, useRef, useEffect} from 'react';
 import {TouchableOpacity, View, Animated,StyleSheet,RefreshControl} from 'react-native';
 import Header, {HeaderLoading, HeaderActive, AmountCollected} from './Header';
 import ListItem from './ListItem';
-import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters, isInteger, attemptToTranslate, checkOff, inCustomLists, getCustomListsAmount, collectionListSave, determineFoodItem, initializeParadisePlanningGlobal, inVillagerParadise, variationsCheckedPercent, commas} from "../LoadJsonData"
+import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters, isInteger, attemptToTranslate, checkOff, inCustomLists, getCustomListsAmount, collectionListSave, determineFoodItem, initializeParadisePlanningGlobal, inVillagerParadise, variationsCheckedPercent, commas, setCustomListsAmount} from "../LoadJsonData"
 import {Dimensions } from "react-native";
 import {Variations,Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title, getVariations, howManyVariationsChecked} from './BottomSheetComponents';
 import colors from "../Colors.js"
@@ -951,6 +951,9 @@ function ListPage(props){
       if(props.wishlistItems!==true && getSettingsString("settingsSelectDefaultWishlist")==="true" && global.defaultSelectedList!==undefined){
         // a default list is selected
         console.log('a default list was selected')
+        if(getCustomListsAmount(item.checkListKey, global.defaultSelectedList)<=0 && inCustomLists(global.defaultSelectedList)==false){
+          setCustomListsAmount(item.checkListKey, global.defaultSelectedList, 1)
+        }
         addItemToCustomListFunction(global.defaultSelectedList)
       } else {
         customListsPopupBottomRef?.current?.setPopupVisible(true, item.checkListKey, item["NameLanguage"], image)
