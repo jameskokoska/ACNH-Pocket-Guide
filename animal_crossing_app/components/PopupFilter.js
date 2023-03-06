@@ -38,6 +38,11 @@ class PopupFilter extends Component {
       customListFilters.push({name:customListName, id:"{CustomLists}"+customListName},)
     }
 
+    let removeBuyPriceFilters = false
+    if (this.props.title==="Active Creatures" || this.props.title==="Fish" || this.props.title==="Bugs" || this.props.title==="Sea Creatures" || this.props.title==="Fossils"){
+      removeBuyPriceFilters = true
+    }
+
     this.possibleFilters = [{
       "name": "Collected/Not Collected",
       "id": "Collected/Not Collected",
@@ -97,7 +102,7 @@ class PopupFilter extends Component {
           {name:"Collected", id:"Sort-Collected"},
           {name:"Type category", id:"Sort-Data Category"},
           {name:"Sell price", id:"SortInt-Sell"},
-          {name:"Buy price", id:"SortInt-Buy"},
+          ...(removeBuyPriceFilters ? [] : [{name:"Buy price", id:"SortInt-Buy"}]),
           {name:"Color 1", id:"Sort-Color 1"},
           {name:"Color 2", id:"Sort-Color 2"},
           {name:"Furniture tag", id:"Sort-Tag"},
@@ -114,7 +119,7 @@ class PopupFilter extends Component {
           {name:"", id:"break"},
           {name:"Collected", id:"Sort-Collected"},
           {name:"Sell price", id:"SortInt-Sell"},
-          {name:"Buy price", id:"SortInt-Buy"},
+          ...(removeBuyPriceFilters ? [] : [{name:"Buy price", id:"SortInt-Buy"}]),
           {name:"Color 1", id:"Sort-Color 1"},
           {name:"Color 2", id:"Sort-Color 2"},
           {name:getSettingsString("settingsSortAlphabetically")==="true" ? "Remove Alphabetical Sorting" : "Alphabetical", id:getSettingsString("settingsSortAlphabetically")==="true" ? "Sort-RemoveAlphabetical" : "Sort-Alphabetical"},
@@ -130,7 +135,7 @@ class PopupFilter extends Component {
           {name:"", id:"break"},
           {name:"Collected", id:"Sort-Collected"},
           {name:"Sell price", id:"SortInt-Sell"},
-          {name:"Buy price", id:"SortInt-Buy"},
+          ...(removeBuyPriceFilters ? [] : [{name:"Buy price", id:"SortInt-Buy"}]),
           {name:getSettingsString("settingsSortAlphabetically")==="true" ? "Remove Alphabetical Sorting" : "Alphabetical", id:getSettingsString("settingsSortAlphabetically")==="true" ? "Sort-RemoveAlphabetical" : "Sort-Alphabetical"},
         ]
       },
