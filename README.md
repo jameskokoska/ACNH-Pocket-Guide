@@ -154,3 +154,27 @@ Can be seen here: https://play.google.com/store/apps/details?id=com.acnh.pocket_
 | ------------- | ------------- | ------------- |
 | ![Screenshot 4](Promotional/4.jpg) | ![Screenshot 5](Promotional/5.jpg) | ![Screenshot 6](Promotional/6.jpg) |
 | ![Screenshot 7](Promotional/7.jpg) | ![Screenshot 8](Promotional/8.jpg) | ![Screenshot 9](Promotional/9.jpg) |
+
+## Statistics
+As of 3/13/2023:
+`cloc --exclude-dir=node_modules .`
+| Language     | files | blank | comment | code    |
+|--------------|-------|-------|---------|---------|
+| JSON         | 3003  | 0     | 0       | 7153353 |
+| JavaScript   | 128   | 1412  | 1008    | 29309   |
+| XML          | 125   | 1980  | 990     | 16716   |
+| Text         | 5     | 0     | 0       | 7035    |
+| Python       | 17    | 117   | 56      | 1274    |
+| Java         | 8     | 68    | 95      | 395     |
+| Gradle       | 3     | 44    | 153     | 255     |
+| Markdown     | 3     | 42    | 0       | 142     |
+| C++          | 4     | 25    | 15      | 101     |
+| Bourne Shell | 1     | 27    | 108     | 99      |
+| DOS Batch    | 1     | 21    | 2       | 66      |
+| Properties   | 5     | 11    | 34      | 60      |
+| C/C++ Header | 3     | 21    | 6       | 59      |
+| make         | 1     | 9     | 12      | 27      |
+| Starlark     | 1     | 2     | 1       | 16      |
+| ProGuard     | 1     | 2     | 10      | 2       |
+| SUM:         | 3309  | 3781  | 2490    | 7208909 |
+
