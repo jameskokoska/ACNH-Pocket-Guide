@@ -4,6 +4,8 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-New Monthly Silver Supporter: Nanners! Thank you!
+-
 -Removed buy price sorting for pages that don't have this attribute (i.e. active creatures)
 -
 -Fixed amount of added item 1 instead of 0 if using default wishlist
