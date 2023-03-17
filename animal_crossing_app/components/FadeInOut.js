@@ -20,9 +20,9 @@ class FadeInOut extends Component {
     if(this.props.minScale!==undefined){
       this.minScale = this.props.minScale;
     }
-    this.duration = 400;
+    this.duration = global.reducedMotion ? 0 : 400;
     if(this.props.duration!==undefined){
-      this.duration = this.props.duration;
+      this.duration = global.reducedMotion ? 0 : this.props.duration;
     }
     this.startValue = 0;
     if(this.props.startValue!==undefined){
@@ -70,7 +70,7 @@ class FadeInOut extends Component {
   fadeIn = () => {
     Animated.timing(this.state.fadeAnimationValue, {
       toValue: this.endValue,
-      duration: this.duration,
+      duration: global.reducedMotion ? 0 : this.duration,
       useNativeDriver: true,
       delay:this.delay,
     }).start();
@@ -79,7 +79,7 @@ class FadeInOut extends Component {
   fadeOut = () => {
     Animated.timing(this.state.fadeAnimationValue, {
       toValue: this.endValue-this.maxFade,
-      duration: this.duration,
+      duration: global.reducedMotion ? 0 : this.duration,
       useNativeDriver: true,
       delay:this.delay,
     }).start();
@@ -88,7 +88,7 @@ class FadeInOut extends Component {
   scaleIn = () => {
     Animated.timing(this.state.scaleAnimationValue, {
       toValue: 1,
-      duration: this.duration,
+      duration: global.reducedMotion ? 0 : this.duration,
       useNativeDriver: true,
     }).start();
   };
@@ -96,7 +96,7 @@ class FadeInOut extends Component {
   scaleInOver = () => {
     Animated.timing(this.state.scaleAnimationValue, {
       toValue: 1.1,
-      duration: this.duration+100,
+      duration: global.reducedMotion ? 0 : this.duration+100,
       useNativeDriver: true,
     }).start();
   };
@@ -104,7 +104,7 @@ class FadeInOut extends Component {
   scaleOut = () => {
     Animated.timing(this.state.scaleAnimationValue, {
       toValue: this.minScale,
-      duration: this.duration,
+      duration: global.reducedMotion ? 0 : this.duration,
       useNativeDriver: true,
     }).start();
   };

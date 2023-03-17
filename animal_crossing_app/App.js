@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Vibration, BackHandler, Dimensions, Text, View, StatusBar, Linking, LogBox } from 'react-native';
+import {Vibration, BackHandler, Dimensions, Text, View, StatusBar, Linking, LogBox, AccessibilityInfo } from 'react-native';
 import FAB, { FABWrapper } from './components/FAB';
 import CalendarPage, { AllEventsList, CalendarView } from './pages/CalendarPage';
 import SongsPage from './pages/SongsPage';
@@ -179,6 +179,7 @@ class App extends Component {
     global.customListsImagesIndexed = JSON.parse(await getStorage("customListsImagesIndexed"+global.profile,"{}"));
     global.paradisePlanningListIndexed = undefined
     global.loadNewHHPList = false
+    global.reducedMotion = await AccessibilityInfo.isReduceMotionEnabled()
     // console.log(global.collectionList)
   }
 
@@ -598,14 +599,15 @@ class App extends Component {
           surface:"#00000000",
           backdrop:"#00000000",
           onSurface:"#00000000",
-        }
+        },
+        animation: {scale: global.reducedMotion ? 0 : 1},
       }
       return (
         <GestureHandlerRootView style={{flex:1,backgroundColor: "#000000"}}>
           <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage} sideMenuSections={this.sideMenuSections} sideMenuSectionsDisabled={this.sideMenuSectionsDisabled}>
             <Provider theme={theme}>
               <NavigationContainer ref={navigationRef} theme={{colors: {background: colors.background[global.darkMode],},}}>
-                <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false, headerTransparent: true, }}>
+                <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false, headerTransparent: true, animation: global.reducedMotion==true ? 'fade' : 'default'}}>
                   <Stack.Screen name="Home" component={NavigatorHomePage} />
                   <Stack.Screen name="20" component={NavigatorVillagerPresentsPage}/>
                   <Stack.Screen name="22" component={NavigatorVillagerFurniture}/>
@@ -632,7 +634,7 @@ class App extends Component {
             />
           </SideMenu>
           <FABWrapper ref={(fab) => this.fab = fab} openDrawer={this.openDrawer}/>
-          <Toast ref={(ref) => global['toast'] = ref} />
+          <Toast ref={(ref) => global['toast'] = ref} animationDuration={global.reducedMotion ? 0 : 250}/>
         </GestureHandlerRootView>
       );
     }

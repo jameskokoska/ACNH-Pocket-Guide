@@ -81,6 +81,7 @@ class AutoBackupSwitch extends Component{
           </View>
           <View style={{position:"absolute", right: 8, transform: [{ scale: 0.75 }]}}>
             <ToggleSwitch
+              animationSpeed={global.reducedMotion ? 0 : 250}
               isOn={this.state.value}
               onColor="#57b849"
               offColor="#DFDFDF"

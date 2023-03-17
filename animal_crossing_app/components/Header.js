@@ -177,7 +177,7 @@ const Header = forwardRef((props, ref) => {
         </View>
         <View style={{height: props.headerHeight / 2}}>
           <View style={styles.subHeader}>
-            <Animated.View entering={FadeIn.duration(400)}>
+            <Animated.View entering={FadeIn.duration(global.reducedMotion ? 0 : 400)}>
               <TextFont style={[styles.title, {fontSize: props.smallerHeader?28:38, color: props.titleColor}]} bold={true}>{props.title}</TextFont>
               {props.customHeader}
               {props.subHeader!==undefined&&props.subHeader!=="" ? <TextFont numberOfLines={4} style={[styles.title, {paddingBottom:5, marginTop: -5, fontSize: 13, color: props.titleColor}]}>{props.subHeader}</TextFont> : <View/>}
@@ -209,7 +209,7 @@ const Header = forwardRef((props, ref) => {
                   value={props.currentSearch}
                 />
                 <TouchableOpacity style={{position:"absolute", right:props.disableFilters&&props.customButton===undefined?5:35}} onPress={()=>{textInput.current.clear(); setEmptySearch(true); props.updateSearch(""); textInput.current.focus(); getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";}}>
-                  <FadeInOut fadeIn={!emptySearch} duration={200}>
+                  <FadeInOut fadeIn={!emptySearch} duration={global.reducedMotion ? 0 : 200}>
                     {clearImage}
                   </FadeInOut>
                 </TouchableOpacity>
@@ -247,7 +247,7 @@ export const HeaderLoading = (props) => {
     dropDownPickerOpacity = 0.7
   }
   return (
-    <Animated.View entering={FadeIn.duration(400)}>
+    <Animated.View entering={FadeIn.duration(global.reducedMotion ? 0 : 400)}>
       <ImageBackground source={props.appBarImage} style={{width:"100%", backgroundColor: props.appBarColor}}>
         <View style={[styles.topSpace, {height: props.headerHeight / 1.5 + 10,}]}>
         </View>

@@ -136,6 +136,7 @@ class NewItemsPage2 extends Component {
   render(){
     return(
       <TabView
+        animationEnabled={global.reducedMotion!=true}
         lazy
         gestureHandlerProps={{ failOffsetX: this.state.index === 0 ? 1 : 100}}
         navigationState={this.state}

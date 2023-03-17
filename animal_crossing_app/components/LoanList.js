@@ -217,7 +217,7 @@ class LoanItem extends Component {
     } else {
       Animated.timing(this.state.animationValue, {
         toValue: animateToValue,
-        duration: 400,
+        duration: global.reducedMotion ? 0 : 400,
         useNativeDriver: true,
       }).start();
     }

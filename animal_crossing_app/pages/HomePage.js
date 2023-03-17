@@ -890,6 +890,7 @@ export class ConfigureHomePageSettingContainer extends Component {
               offColor="#DFDFDF"
               size="large"
               onToggle={() => {this.toggle();}}
+              animationSpeed={global.reducedMotion ? 0 : 250}
             />
           </View>
         </View>

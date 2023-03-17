@@ -14,6 +14,7 @@ export class AnimatedPopupWrapper extends Component {
       Animated.spring(this.state.animation, {
         toValue: 1,
         useNativeDriver: true,
+        speed: global.reducedMotion ? 100000000 : 10,
       }).start()
     }
   }

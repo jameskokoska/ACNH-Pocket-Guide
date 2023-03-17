@@ -27,7 +27,7 @@ class Onboard extends Component {
     return(
       <Onboarding
         allowFontScaling={false}
-        transitionAnimationDuration={400}
+        transitionAnimationDuration={global.reducedMotion ? 0 : 400}
         showDone={false}
         skipLabel= {<TextFont style={{fontSize: 20, color:"gray"}}>Skip</TextFont>}
         imageContainerStyles = {{paddingBottom:30, marginTop:-70}}

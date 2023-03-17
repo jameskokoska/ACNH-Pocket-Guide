@@ -86,7 +86,7 @@ export const DrawerLayout = React.forwardRef(
     },
     ref
   ) => {
-    const animationConfig = { damping: 40, stiffness: 350 };
+    const animationConfig = { damping: global.reducedMotion ? 100000 : 40, stiffness: global.reducedMotion ? 1000000 : 350 };
 
     const fromLeft = drawerPosition === 'left';
     const drawerSlide = drawerType !== 'back';

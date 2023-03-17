@@ -81,6 +81,7 @@ export default class TVGuidePage extends Component {
   render(){
     return(
       <TabView
+        animationEnabled={global.reducedMotion!=true}
         lazy
         // tabBarPosition={getSettingsString("settingsTabBarPosition") === "true" ? "bottom" : "top"}
         gestureHandlerProps={{ failOffsetX: this.state.index === 0 ? 1 : 100}}

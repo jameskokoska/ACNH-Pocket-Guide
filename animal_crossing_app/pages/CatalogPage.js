@@ -323,6 +323,7 @@ class CatalogPage extends Component {
     return(
       <>
         <TabView
+          animationEnabled={global.reducedMotion!=true}
           lazy
           gestureHandlerProps={{ failOffsetX: this.state.index === 0 ? 1 : 100}}
           navigationState={this.state}
@@ -466,6 +467,7 @@ class IncludeSwitch extends Component{
           </View>
           <View style={{position:"absolute", right: 8, transform: [{ scale: 0.75 }]}}>
             <ToggleSwitch
+              animationSpeed={global.reducedMotion ? 0 : 250}
               isOn={this.props.value}
               onColor="#57b849"
               offColor="#DFDFDF"

@@ -69,6 +69,7 @@ class SettingsContainer extends Component {
           </View>
           <View style={{position:"absolute", right: 8, transform: [{ scale: 0.75 }]}}>
             {!hideSwitch ? <ToggleSwitch
+              animationSpeed={global.reducedMotion ? 0 : 250}
               isOn={this.state.toggle}
               onColor="#57b849"
               offColor="#DFDFDF"

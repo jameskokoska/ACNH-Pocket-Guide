@@ -223,7 +223,7 @@ export class ToolItem extends Component {
     } else {
       Animated.timing(this.state.animationValue, {
         toValue: animateToValue*-1,
-        duration: 800,
+        duration: global.reducedMotion ? 0 : 800,
         useNativeDriver: true,
       }).start();
     }

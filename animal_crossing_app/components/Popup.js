@@ -531,7 +531,7 @@ export class PopupBottomCustom extends PureComponent {
     const springConfig = {
         damping: 20,
         mass: 1,
-        stiffness: 135,
+        stiffness: global.reducedMotion ? 100000000 : 135,
         overshootClamping: true,
         restSpeedThreshold: 0.01,
         restDisplacementThreshold: 0.001,

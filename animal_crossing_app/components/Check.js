@@ -39,25 +39,25 @@ class Check extends Component {
     }
   }
   animateIn = () => {
-    let duration = 500
+    let duration = global.reducedMotion ? 0 : 500
     if(getSettingsString("settingsLowEndDevice")==="true"){
       duration = 0
     }
     Animated.timing(this.state.progress, {
       toValue: 1,
-      duration: duration,
+      duration: global.reducedMotion ? 0 : duration,
       easing: Easing.linear,
       useNativeDriver: true
     }).start();
   };
   animateOut = () => {
-    let duration = 250
+    let duration = global.reducedMotion ? 0 : 250
     if(getSettingsString("settingsLowEndDevice")==="true"){
       duration = 0
     }
     Animated.timing(this.state.progress, {
       toValue: 0,
-      duration: duration,
+      duration: global.reducedMotion ? 0 : duration,
       easing: Easing.linear,
       useNativeDriver: true
     }).start();

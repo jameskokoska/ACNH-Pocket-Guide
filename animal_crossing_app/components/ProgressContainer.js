@@ -121,7 +121,7 @@ class ProgressContainer extends Component {
       Animated.timing(this.state.animationValue, {
         toValue: animateToValue*-1,
         useNativeDriver: true,
-        duration: 1000,
+        duration: global.reducedMotion ? 0 : 1000,
         delay: this.props.delay!==undefined?this.props.delay*100:0,
       }).start();
     }

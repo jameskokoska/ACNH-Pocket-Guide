@@ -190,6 +190,7 @@ class ObtainableItemsPage extends Component {
           </TouchableOpacity>
         </PopupInfoCustom> 
         <TabView
+          animationEnabled={global.reducedMotion!=true}
           lazy
           // tabBarPosition={getSettingsString("settingsTabBarPosition") === "true" ? "bottom" : "top"}
           gestureHandlerProps={{ failOffsetX: this.state.index === 0 ? 1 : 100}}

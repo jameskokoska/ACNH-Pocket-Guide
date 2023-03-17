@@ -274,6 +274,7 @@ class PopupAddTask extends Component {
                 this.setState({smallToggle:!this.state.smallToggle});
                 getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
               }}
+              animationSpeed={global.reducedMotion ? 0 : 250}
             />
           </View>
         </View>

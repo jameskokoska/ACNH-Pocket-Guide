@@ -150,7 +150,7 @@ export default class DonatePage extends Component {
       </View>
     </>
     // console.log(this.state.products)
-    return <Animated.View entering={FadeIn.duration(1000)}>
+    return <Animated.View entering={FadeIn.duration(global.reducedMotion ? 0 : 1000)}>
       <ScrollView>
         <View style={{flexDirection:"row", justifyContent:"space-between", alignItems:"flex-end", marginRight: 25, marginTop: 30}}>
           <SubHeader style={{marginTop: 20}}>About the Developer</SubHeader>
