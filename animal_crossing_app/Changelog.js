@@ -7,6 +7,8 @@ export const changelog = `
 -App now respects reduce motion accessibility setting
 -Improved animations and fluidity within the application
 -
+-New Monthly Silver Supporter: SalymSkye! Thank you!
+-
 -New Monthly Silver Supporter: Nanners! Thank you!
 -
 -Removed buy price sorting for pages that don't have this attribute (i.e. active creatures)
