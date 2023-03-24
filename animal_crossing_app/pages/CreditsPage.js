@@ -199,6 +199,7 @@ export class Supporters extends Component{
       <CreditImageContainer image={require("../assets/icons/Nym.png")} text="Nym" textBottom="Diamond Supporter"/>
       <CreditImageContainer image={require("../assets/icons/Patrick.png")} text="Patrick" textBottom="Diamond Supporter"/>
       <CreditImageContainer image={require("../assets/icons/SethN.png")} text="Seth N." textBottom="Diamond Supporter"/>
+      <CreditImageContainer image={require("../assets/icons/Ari.png")} text="Ari K." textBottom="Diamond Supporter"/>
       <View style={{height:12}}/>
       <SubHeader style={{fontSize: 24}}>Gold Supporters</SubHeader>
       <SubHeader bold={false} style={{marginBottom:6, marginTop:0, fontSize: 17}}>{attemptToTranslate("Thanks for your support!")}</SubHeader>
@@ -210,7 +211,6 @@ export class Supporters extends Component{
       <CreditTextBox text="Cindee"/>
       <CreditTextBox text="Jennifer R."/>
       <CreditTextBox text="SavannahLynn"/>
-      <CreditImageContainer image={require("../assets/icons/Ari.png")} text="Ari K." textBottom="Gold Supporter"/>
       <CreditImageContainer image={require("../assets/icons/everstar.png")} text="everstar" textBottom="Gold Supporter"/>
       <CreditTextBox text="Utumno"/>
       <CreditImageContainer image={require("../assets/icons/LouieJohnson.png")} text="helljay1309" textBottom="Gold Supporter"/>
