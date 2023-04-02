@@ -179,7 +179,7 @@ class App extends Component {
     global.customListsImagesIndexed = JSON.parse(await getStorage("customListsImagesIndexed"+global.profile,"{}"));
     global.paradisePlanningListIndexed = undefined
     global.loadNewHHPList = false
-    global.reducedMotion = await AccessibilityInfo.isReduceMotionEnabled()
+    global.reducedMotion = await AccessibilityInfo.isReduceMotionEnabled() || getSettingsString("settingsReducedMotionAndAnimations")==="true" ? true : false
     // console.log(global.collectionList)
   }
 

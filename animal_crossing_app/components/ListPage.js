@@ -598,7 +598,7 @@ function ListPage(props){
               //If current active creatures, don't add it if not active
               if(props.activeCreatures){
                 var hemispherePre = getSettingsString("settingsNorthernHemisphere") === "true" ? "NH " : "SH "
-                var currentMonthShort = getMonthShort(getCurrentDateObject().getMonth());
+                var currentMonthShort = getMonthShort(getCurrentDateObject(true).getMonth());
                 if(!isActive2(item[hemispherePre+currentMonthShort],getCurrentDateObject(true).getHours())){
                   continue;
                 }

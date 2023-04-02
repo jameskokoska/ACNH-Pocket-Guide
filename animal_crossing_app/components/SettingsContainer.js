@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Image, Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text, TouchableNativeFeedback, Dimensions} from 'react-native';
+import {AccessibilityInfo, Image, Vibration, TouchableOpacity, StyleSheet, DrawerLayoutAndroid, View, Text, TouchableNativeFeedback, Dimensions} from 'react-native';
 import TextFont from './TextFont';
 import Popup from './Popup';
 import ToggleSwitch from 'toggle-switch-react-native'
@@ -101,6 +101,9 @@ class SettingsContainer extends Component {
                 }
                 if(this.props.keyName==="settingsSelectDefaultWishlist" && this.state.toggle === true){
                   this.props.popupSelectWishlist()
+                }
+                if(this.props.keyName==="settingsReducedMotionAndAnimations"){
+                  global.reducedMotion = await AccessibilityInfo.isReduceMotionEnabled() || this.state.toggle
                 }
               }}
             /> : this.props.setting.dropdownValues!==undefined ? <View/> : <Image

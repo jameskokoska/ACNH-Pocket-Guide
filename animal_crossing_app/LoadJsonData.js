@@ -1402,6 +1402,15 @@ export const settings = [
     "hidden":true,
   },
   {
+    "keyName" : "settingsReducedMotionAndAnimations",
+    "defaultValue" : "false",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/slow-motion.png"),
+    "displayName" : "Reduce motion and animations",
+    "description" : "Reduces the motion and animations of certain actions within the application. If Remove Animations is disabled in the System Settings, it will take precedence over this setting. However, Reduce Motion Setting does not work yet. This is a bug in the React Native SDK and is being fixed: https://github.com/facebook/react-native/issues/31221",
+    "hidden":true,
+  },
+  {
     "keyName" : "breaker",
     "text" : "Custom dates",
   },
