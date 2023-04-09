@@ -236,6 +236,7 @@ export class Supporters extends Component{
       <CreditTextBox text="SalymSkye"/>
       <CreditTextBox text="Earper"/>
       <CreditTextBox text="Strinakken"/>
+      <CreditTextBox text="Jess"/>
     </View>
   }
 }
