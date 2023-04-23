@@ -4,33 +4,27 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Collapse home page sections by tapping its title
+-Supporters list managed separately from internal data
+-
 -New Monthly Silver Supporter: Olivia! Thank you!
--
 -New Monthly Silver Supporter: Lambiepinx! Thank you!
--
 -New Monthly Silver Supporter: Jess! Thank you!
--
 -Added new hidden setting: Reduce motion and animations
 -Active creatures respect the realtime day switchover, not based on the 5AM reset day time
 -New Monthly Silver Supporter: Strinakken! Thank you!
 -New Monthly Silver Supporter: Earper! Thank you!
--
 -New Monthly Diamond Supporter: Ari K.! Thank you!
 -
 -App now respects reduce motion accessibility setting
 -Improved animations and fluidity within the application
 -
 -New Monthly Silver Supporter: SalymSkye! Thank you!
--
 -New Monthly Silver Supporter: Nanners! Thank you!
--
 -Removed buy price sorting for pages that don't have this attribute (i.e. active creatures)
--
 -Fixed amount of added item 1 instead of 0 if using default wishlist
--
 -Improved loading for Calendar + Events tab pages
 -Fixed bottom navigation bar position in Calendar + Events page
--
 -Calendar + Events page highlights current tab
 -Improved navigation on Calendar + Events page
 -Removed hemisphere switch from museum pages (not working properly)

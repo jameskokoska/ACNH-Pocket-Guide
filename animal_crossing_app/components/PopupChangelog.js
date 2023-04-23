@@ -17,29 +17,56 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {GiveSupport, MailLink} from "./Formattings";
 import {changelog} from "../Changelog"
 import { CatalogScannerApp, supportCatalogScanner } from "../pages/CatalogPage";
+import { csvToObject } from "../pages/CreditsPage";
+
+function formatAnnouncements(announcements) {
+  let outputStrings = [];
+  announcements.forEach((announcement) => {
+    outputStrings.push(`${announcement.Announcement}`);
+  });
+  return outputStrings;
+}
 
 export default class PopupChangelog extends Component {
   constructor(props){
     super(props);
     this.state = {
       show: false,
+      supportAnnouncementData: [],
     }
   }
   async componentDidMount(){
-    setTimeout(async ()=>{
-      this.mounted = true;
-      this.openChangelog = await getStorage("changelog","");
-      this.popupVisible = false;
-      this.numLogins = parseInt(await getStorage("numLogins","0"))
-      if((this.openChangelog === "" || this.openChangelog !== global.version) && this.numLogins>0){
-        this.timeoutHandle = setTimeout(()=>{
-          this.popupVisible = true;
-          this.setPopupVisible(true);
-        }, 10);
-      } else {
-        await AsyncStorage.setItem("changelog", global.version);
-      }
-    },0)
+    if(global.checkChangelog)
+      setTimeout(async ()=>{
+        const sheetUrl = "https://docs.google.com/spreadsheets/d/15-J4TVEx1CRJuJJNHuMn64DbrUGbOd2yvnOzzpbstPk/edit#gid=237731685";
+        const csvUrl = sheetUrl.replace('/edit#gid=', '/export?format=csv&gid=');
+        let newSupporter = false
+        try {
+          const response = await fetch(csvUrl);
+          const data = await response.text();
+          const announcementData = csvToObject(data);
+          const announcementStrings = formatAnnouncements(announcementData)
+          lastSupporterChangelog = await getStorage("lastSupporterChangelog","");
+          newSupporter = lastSupporterChangelog !== JSON.stringify(announcementStrings)
+          await AsyncStorage.setItem("lastSupporterChangelog", JSON.stringify(announcementStrings));
+          this.setState({supportAnnouncementData: announcementStrings})
+        } catch (error) {
+          console.log(error);
+        }
+        this.mounted = true;
+        this.openChangelog = await getStorage("changelog","");
+        this.popupVisible = false;
+        this.numLogins = parseInt(await getStorage("numLogins","0"))
+        if((newSupporter || this.openChangelog === "" || this.openChangelog !== global.version) && this.numLogins>0){
+          this.timeoutHandle = setTimeout(()=>{
+            this.popupVisible = true;
+            this.setPopupVisible(true);
+          }, 10);
+        } else {
+          await AsyncStorage.setItem("changelog", global.version);
+        }
+        global.checkChangelog = false
+      },0)
     BackHandler.addEventListener("hardwareBackPress", this.handleBackButton);
   }
 
@@ -78,9 +105,8 @@ export default class PopupChangelog extends Component {
 
             <View style={{height:30}}/>
             {supportCatalogScanner() ? <CatalogScannerApp/> : <View/>}
-
             {
-              changelogText.map((point, index) => {
+              [...this.state.supportAnnouncementData, ...changelogText].map((point, index) => {
                 return(<TextFont key={index} bold={false} style={{marginBottom:4, fontSize: 18, color: colors.textBlack[global.darkMode]}}>{point}</TextFont>)
               })
             }

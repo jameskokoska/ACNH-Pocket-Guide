@@ -180,6 +180,8 @@ class App extends Component {
     global.paradisePlanningListIndexed = undefined
     global.loadNewHHPList = false
     global.reducedMotion = await AccessibilityInfo.isReduceMotionEnabled() || getSettingsString("settingsReducedMotionAndAnimations")==="true" ? true : false
+    global.collapsedHomePageSections = JSON.parse(await getStorage("collapsedHomePageSections"+global.profile,"[]"));
+    global.checkChangelog = true //only check the changelog once
     // console.log(global.collectionList)
   }
 

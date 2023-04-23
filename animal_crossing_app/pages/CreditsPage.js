@@ -5,8 +5,10 @@ import colors from '../Colors'
 import PopupRating from "../components/PopupRating"
 import ButtonComponent from "../components/ButtonComponent"
 import {MailLink, ExternalLink, SubHeader, Header, Paragraph, HeaderNote} from "../components/Formattings"
-import {attemptToTranslate, capitalize, openURL} from "../LoadJsonData"
+import {attemptToTranslate, capitalize, getStorage, openURL} from "../LoadJsonData"
 import {changelog, dataVersion} from "../Changelog"
+import FastImage from '../components/FastImage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 class CreditsPage extends Component {
   render(){
@@ -162,7 +164,7 @@ export default CreditsPage;
 class CreditImageContainer extends Component{
   render(){
     return <View style={{alignItems:"center", justifyContent:"center",backgroundColor:colors.white[global.darkMode], borderRadius: 10, flexDirection:"row", paddingHorizontal:30, paddingRight:20, paddingVertical: this.props.largerImage?17:20, marginHorizontal:20, marginVertical: 5}}>
-      <Image style={{width:75, height:this.props.largerImage?80:70,resizeMode:'contain',}} source={this.props.image}/>
+      <FastImage style={{width:75, height:this.props.largerImage?80:70,resizeMode:'contain',}} source={{uri:this.props.image}} cacheKey={"Supporter"+this.props.text}/>
       <View style={{flex:1, marginLeft:25, justifyContent:'center'}}>
         <TextFont bold={true} style={{color:colors.textBlack[global.darkMode], fontSize: 23}}>{this.props.text}</TextFont>
         {this.props.textBottom?<TextFont style={{color:colors.textBlack[global.darkMode], fontSize: 17}}>{this.props.textBottom}</TextFont>:<View/>}
@@ -188,57 +190,87 @@ class CreditBox extends Component{
 }
 
 export class Supporters extends Component{
+  constructor(){
+    super();
+    this.state = {
+      supporters: {}
+    }
+  }
+  componentDidMount(){
+    const sheetUrl = "https://docs.google.com/spreadsheets/d/15-J4TVEx1CRJuJJNHuMn64DbrUGbOd2yvnOzzpbstPk/edit#gid=0";
+    const csvUrl = sheetUrl.replace('/edit#gid=', '/export?format=csv&gid=');
+    fetch(csvUrl)
+      .then(response => response.text())
+      .then(data => {
+        const supporterData = sortSupportersByType(csvToObject(data))
+        this.setState({supporters: supporterData})
+        // console.log(sortSupportersByType(csvToObject(data)))
+        AsyncStorage.setItem("supportersStoredData", JSON.stringify(supporterData));
+      }).catch(async (error) => {
+        const supporterData = JSON.parse(await getStorage("supportersStoredData","{}"))
+        this.setState({supporters: supporterData})
+        console.log(error)
+      });
+  }
+
   render(){
     return <View>
       <SubHeader style={{fontSize: 24}}>Diamond Supporters</SubHeader>
       <SubHeader bold={false} style={{marginBottom:6, marginTop:0, fontSize: 17}}>{attemptToTranslate("Thanks for your support!")}</SubHeader>
-      <CreditImageContainer largerImage image={require("../assets/icons/Wheels.png")} text="Wheels" textBottom="Diamond Supporter"/>
-      <CreditImageContainer image={require("../assets/icons/smma.png")} text="smma" textBottom="Diamond Supporter"/>
-      <CreditImageContainer image={require("../assets/icons/Kalie.png")} text="Kalie" textBottom="Diamond Supporter"/>
-      <CreditTextBox text="Spockslefteyebrow"/>
-      <CreditImageContainer image={require("../assets/icons/Nym.png")} text="Nym" textBottom="Diamond Supporter"/>
-      <CreditImageContainer image={require("../assets/icons/Patrick.png")} text="Patrick" textBottom="Diamond Supporter"/>
-      <CreditImageContainer image={require("../assets/icons/SethN.png")} text="Seth N." textBottom="Diamond Supporter"/>
-      <CreditImageContainer image={require("../assets/icons/Ari.png")} text="Ari K." textBottom="Diamond Supporter"/>
+      {this.state.supporters["Diamond Supporter"]?.map((supporter)=>{
+        if(supporter["Image"]!==undefined && supporter["Image"]!==""){
+          return <CreditImageContainer key={supporter["Supporter Name"]} image={supporter["Image"]} text={supporter["Supporter Name"]} textBottom={supporter["Supporter Type"]} largerImage={supporter["Larger Image"]==="Yes"}/>
+        }
+        return <CreditTextBox text={supporter["Supporter Name"]} key={supporter["Supporter Name"]}/>
+      })}
       <View style={{height:12}}/>
       <SubHeader style={{fontSize: 24}}>Gold Supporters</SubHeader>
       <SubHeader bold={false} style={{marginBottom:6, marginTop:0, fontSize: 17}}>{attemptToTranslate("Thanks for your support!")}</SubHeader>
-      <CreditTextBox text="DeadlySweetz"/>
-      <CreditImageContainer image={require("../assets/icons/Frank.png")} text="Frank S." textBottom="Gold Supporter"/>
-      <CreditImageContainer image={require("../assets/icons/YvonneDeBusschere.png")} text="YvonneDeBusschere" textBottom="Gold Supporter"/>
-      <CreditTextBox text="Hidden Cat"/>
-      <CreditImageContainer image={require("../assets/icons/Tida.png")} text="Tida" textBottom="Gold Supporter"/>
-      <CreditTextBox text="Cindee"/>
-      <CreditTextBox text="Jennifer R."/>
-      <CreditTextBox text="SavannahLynn"/>
-      <CreditImageContainer image={require("../assets/icons/everstar.png")} text="everstar" textBottom="Gold Supporter"/>
-      <CreditTextBox text="Utumno"/>
-      <CreditImageContainer image={require("../assets/icons/LouieJohnson.png")} text="helljay1309" textBottom="Gold Supporter"/>
-      <CreditImageContainer image={require("../assets/icons/Cathygrace.png")} text="Cathygrace" textBottom="Gold Supporter"/>
+      {this.state.supporters["Gold Supporter"]?.map((supporter)=>{
+        if(supporter["Image"]!==undefined && supporter["Image"]!==""){
+          return <CreditImageContainer key={supporter["Supporter Name"]} image={supporter["Image"]} text={supporter["Supporter Name"]} textBottom={supporter["Supporter Type"]} largerImage={supporter["Larger Image"]==="Yes"}/>
+        }
+        return <CreditTextBox text={supporter["Supporter Name"]} key={supporter["Supporter Name"]}/>
+      })}
       <View style={{height:12}}/>
       <SubHeader style={{fontSize: 24}}>Silver Supporters</SubHeader>
       <SubHeader bold={false} style={{marginBottom:6, marginTop:0, fontSize: 17}}>{attemptToTranslate("Thanks for your support!")}</SubHeader>
-      <CreditTextBox text="Nigerski"/>
-      <CreditTextBox text="Christina J."/>
-      <CreditTextBox text="NoLNoodle"/>
-      <CreditTextBox text="Harkken"/>
-      <CreditTextBox text="RisingProtostar"/>
-      <CreditTextBox text="Kryptonite"/>
-      <CreditTextBox text="Deanna"/>
-      <CreditTextBox text="Tee"/>
-      <CreditTextBox text="Jacqueline D. (Quinn)"/>
-      <CreditTextBox text="nojinmyname"/>
-      <CreditTextBox text="LunaKat"/>
-      <CreditTextBox text="Fye"/>
-      <CreditTextBox text="Tschitscho"/>
-      <CreditTextBox text="Oratoria"/>
-      <CreditTextBox text="Nanners"/>
-      <CreditTextBox text="SalymSkye"/>
-      <CreditTextBox text="Earper"/>
-      <CreditTextBox text="Strinakken"/>
-      <CreditTextBox text="Jess"/>
-      <CreditTextBox text="Lambiepinx"/>
-      <CreditTextBox text="Olivia"/>
+      {this.state.supporters["Silver Supporter"]?.map((supporter)=>{
+        return <CreditTextBox text={supporter["Supporter Name"]} key={supporter["Supporter Name"]}/>
+      })}
     </View>
   }
+}
+
+export function csvToObject(csvString) {
+  var rows = csvString.trim().split('\n');
+  var result = [];
+
+  var headers = rows.shift().split(',');
+
+  for (var i = 0; i < rows.length; i++) {
+    var row = rows[i].split(',');
+    var obj = {};
+
+    for (var j = 0; j < headers.length; j++) {
+      obj[headers[j]] = row[j];
+    }
+
+    result.push(obj);
+  }
+
+  return result;
+}
+
+
+function sortSupportersByType(supporters) {
+  let sortedSupporters = {};
+  supporters.forEach(supporter => {
+    if (sortedSupporters[supporter['Supporter Type']]) {
+      sortedSupporters[supporter['Supporter Type']].push(supporter);
+    } else {
+      sortedSupporters[supporter['Supporter Type']] = [supporter];
+    }
+  });
+  return sortedSupporters;
 }
