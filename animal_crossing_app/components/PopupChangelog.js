@@ -38,11 +38,12 @@ export default class PopupChangelog extends Component {
   async componentDidMount(){
     if(global.checkChangelog)
       setTimeout(async ()=>{
+        global.checkChangelog = false
         this.openChangelog = await getStorage("changelog","");
         this.popupVisible = false;
         this.numLogins = parseInt(await getStorage("numLogins","0"))
         this.mounted = true;
-        if((this.openChangelog === "" || this.openChangelog !== global.version) && this.numLogins>1){
+        if((this.openChangelog === "" || this.openChangelog !== global.version) && this.numLogins>0){
           this.openChangelogPopup()
           return;
           //do not bother checking online changes if we know the app version changes
@@ -75,7 +76,6 @@ export default class PopupChangelog extends Component {
       this.setPopupVisible(true);
     }, 10);
     await AsyncStorage.setItem("changelog", global.version);
-    global.checkChangelog = false
   }
 
   componentWillUnmount() {
