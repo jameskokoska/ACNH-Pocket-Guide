@@ -38,6 +38,15 @@ export default class PopupChangelog extends Component {
   async componentDidMount(){
     if(global.checkChangelog)
       setTimeout(async ()=>{
+        this.openChangelog = await getStorage("changelog","");
+        this.popupVisible = false;
+        this.numLogins = parseInt(await getStorage("numLogins","0"))
+        this.mounted = true;
+        if((this.openChangelog === "" || this.openChangelog !== global.version) && this.numLogins>1){
+          this.openChangelogPopup()
+          return;
+          //do not bother checking online changes if we know the app version changes
+        }
         const sheetUrl = "https://docs.google.com/spreadsheets/d/15-J4TVEx1CRJuJJNHuMn64DbrUGbOd2yvnOzzpbstPk/edit#gid=237731685";
         const csvUrl = sheetUrl.replace('/edit#gid=', '/export?format=csv&gid=');
         let newSupporter = false
@@ -53,20 +62,20 @@ export default class PopupChangelog extends Component {
         } catch (error) {
           console.log(error);
         }
-        this.mounted = true;
-        this.openChangelog = await getStorage("changelog","");
-        this.popupVisible = false;
-        this.numLogins = parseInt(await getStorage("numLogins","0"))
-        if((newSupporter || this.openChangelog === "" || this.openChangelog !== global.version) && this.numLogins>1){
-          this.timeoutHandle = setTimeout(()=>{
-            this.popupVisible = true;
-            this.setPopupVisible(true);
-          }, 10);
-          await AsyncStorage.setItem("changelog", global.version);
+        if((newSupporter) && this.numLogins>1){
+          this.openChangelogPopup()
         }
-        global.checkChangelog = false
       },0)
     BackHandler.addEventListener("hardwareBackPress", this.handleBackButton);
+  }
+
+  openChangelogPopup = async () => {
+    this.timeoutHandle = setTimeout(()=>{
+      this.popupVisible = true;
+      this.setPopupVisible(true);
+    }, 10);
+    await AsyncStorage.setItem("changelog", global.version);
+    global.checkChangelog = false
   }
 
   componentWillUnmount() {

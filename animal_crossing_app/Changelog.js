@@ -5,6 +5,7 @@ export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
 -Collapse home page sections by tapping its title
+-Fixed About page crash
 -Supporters list managed separately from internal data
 -Changelog fixes
 -

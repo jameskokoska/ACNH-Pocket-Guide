@@ -19,8 +19,8 @@ class CreditsPage extends Component {
       <Header>Credits</Header>
       <HeaderNote>{attemptToTranslate("Made In Canada") + " " + "🍁"}</HeaderNote>
       <View style={{height: 20}}/>
-      <CreditImageContainer image={require("../assets/icons/James.png")} text="James" textBottom="Lead Programmer"/>
-      <CreditImageContainer image={require("../assets/icons/Ryan.png")} text="Ryan" textBottom="Lead Graphics"/>
+      <CreditImageContainer localImage image={require("../assets/icons/James.png")} text="James" textBottom="Lead Programmer"/>
+      <CreditImageContainer localImage image={require("../assets/icons/Ryan.png")} text="Ryan" textBottom="Lead Graphics"/>
       <View style={{height: 15}}/>
       <MailLink/>
       <View style={{height: 25}}/>
@@ -164,7 +164,8 @@ export default CreditsPage;
 class CreditImageContainer extends Component{
   render(){
     return <View style={{alignItems:"center", justifyContent:"center",backgroundColor:colors.white[global.darkMode], borderRadius: 10, flexDirection:"row", paddingHorizontal:30, paddingRight:20, paddingVertical: this.props.largerImage?17:20, marginHorizontal:20, marginVertical: 5}}>
-      <FastImage style={{width:75, height:this.props.largerImage?80:70,resizeMode:'contain',}} source={{uri:this.props.image}} cacheKey={"Supporter"+this.props.text}/>
+      {this.props.localImage ? <Image style={{width:75, height:this.props.largerImage?80:70,resizeMode:'contain',}} source={this.props.image}/>
+      : <FastImage style={{width:75, height:this.props.largerImage?80:70,resizeMode:'contain',}} source={{uri:this.props.image}} cacheKey={"Supporter"+this.props.text}/> }
       <View style={{flex:1, marginLeft:25, justifyContent:'center'}}>
         <TextFont bold={true} style={{color:colors.textBlack[global.darkMode], fontSize: 23}}>{this.props.text}</TextFont>
         {this.props.textBottom?<TextFont style={{color:colors.textBlack[global.darkMode], fontSize: 17}}>{this.props.textBottom}</TextFont>:<View/>}
