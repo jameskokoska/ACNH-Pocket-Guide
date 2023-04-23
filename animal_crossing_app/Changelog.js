@@ -6,6 +6,7 @@ export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 export const changelog = `
 -Collapse home page sections by tapping its title
 -Supporters list managed separately from internal data
+-Changelog fixes
 -
 -New Monthly Silver Supporter: Olivia! Thank you!
 -New Monthly Silver Supporter: Lambiepinx! Thank you!

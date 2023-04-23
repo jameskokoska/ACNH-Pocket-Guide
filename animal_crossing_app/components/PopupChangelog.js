@@ -57,12 +57,11 @@ export default class PopupChangelog extends Component {
         this.openChangelog = await getStorage("changelog","");
         this.popupVisible = false;
         this.numLogins = parseInt(await getStorage("numLogins","0"))
-        if((newSupporter || this.openChangelog === "" || this.openChangelog !== global.version) && this.numLogins>0){
+        if((newSupporter || this.openChangelog === "" || this.openChangelog !== global.version) && this.numLogins>1){
           this.timeoutHandle = setTimeout(()=>{
             this.popupVisible = true;
             this.setPopupVisible(true);
           }, 10);
-        } else {
           await AsyncStorage.setItem("changelog", global.version);
         }
         global.checkChangelog = false
