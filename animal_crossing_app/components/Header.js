@@ -118,7 +118,26 @@ const Header = forwardRef((props, ref) => {
               console.log(item.value)
               if(item.value==="Share" && props.data){
                 listString = ""
+                if(props.data.length > 100) {
+                  toast.show(attemptToTranslate("Only sharing the first 1,000 items"), {type:"success",
+                    duration: 1500,  
+                    placement:'top',
+                    renderType:{
+                      success: (toast) => (
+                        <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, borderRadius: 5, backgroundColor: colors.popupNeutral[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+                          <TextFont translate={false} style={{color:colors.textBlack[global.darkMode], fontSize: 15, textAlign:"center"}}>{toast.message}</TextFont>
+                        </View>
+                      ),
+                    }
+                  })
+                }
+                let counter = 0;
                 for(let datum of props.data){
+                  if (counter <= 1000) {
+                    counter++;
+                  } else {
+                    break;
+                  }
                   if(datum["NameLanguage"]){
                     if(inChecklist(datum.checkListKeyParent)){
                       listString = listString + "✅ " + capitalize(datum["NameLanguage"])
@@ -137,7 +156,6 @@ const Header = forwardRef((props, ref) => {
                     listString = listString + extraInfo + "\n"
                   }
                 }
-                
                 setTimeout(()=>{
                   Share.share({
                     message: listString,
