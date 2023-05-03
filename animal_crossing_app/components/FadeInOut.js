@@ -144,14 +144,14 @@ export default FadeInOut ;
 
 export const SpringIn = (props) => {
   const springConfig = {
-    damping: 13,
+    damping: 20,
     mass: 1.7,
-    stiffness: global.reducedMotion ? 100000000 : 300,
+    stiffness: 300,
     overshootClamping: false,
     restSpeedThreshold: 0.01,
     restDisplacementThreshold: 0.001,
   };
-  const animatedValue = useRef(new Animated.Value(0.5)).current;
+  const animatedValue = useRef(new Animated.Value(global.reducedMotion ? 1 : 0.5)).current;
 
   React.useEffect(() => {
     Animated.spring(animatedValue, {
