@@ -4,7 +4,7 @@ import TextFont from './TextFont'
 import FadeInOut from "./FadeInOut"
 import LottieView from 'lottie-react-native';
 import DelayInput from "react-native-debounce-input";
-import {capitalize, getSettingsString, attemptToTranslate, findItemCheckListKey, commas, setSettingsString} from "../LoadJsonData"
+import {capitalize, getSettingsString, attemptToTranslate, findItemCheckListKey, commas, setSettingsString, inChecklist, inWishlist, capitalizeFirst} from "../LoadJsonData"
 import GuideRedirectButton from "./PopupGuideRedirectButton"
 import { DropdownMenu } from './Dropdown';
 import Popup, { PopupInfoCustom } from './Popup';
@@ -102,6 +102,7 @@ const Header = forwardRef((props, ref) => {
           style={{padding:15, paddingHorizontal: 5}}
           width={120}
           items={[
+            ...(props.data ? [{label:"Share Items", value:"Share", highlighted: false}] : []),
             {label:"Check all", value:"Check all", highlighted: false},
             ...(props.checkAllItemsListedWithVariations ?  [{label:"Check all (and variations)", value:"Check all (and variations)", highlighted: false}] : []),
             {label:"Uncheck all", value:"Uncheck all", highlighted: false},
@@ -115,9 +116,36 @@ const Header = forwardRef((props, ref) => {
           onChangeItem={
             (item)=>{
               console.log(item.value)
-              if(item.value==="Check all"){
+              if(item.value==="Share" && props.data){
+                listString = ""
+                for(let datum of props.data){
+                  if(datum["NameLanguage"]){
+                    if(inChecklist(datum.checkListKeyParent)){
+                      listString = listString + "✅ " + capitalize(datum["NameLanguage"])
+                    } else if (inWishlist(datum.checkListKeyParent)){
+                      listString = listString = listString + "🔖 " + capitalize(datum["NameLanguage"])
+                    } else{
+                      listString = listString + "❌ " + capitalize(datum["NameLanguage"])
+                    }
+                    let extraInfo = ""
+                    if(datum.hasOwnProperty("Variation") && datum["Variation"]!=="NA"){
+                      extraInfo = extraInfo + " - " + attemptToTranslate(datum["Variation"]);
+                    }
+                    if(datum.hasOwnProperty("Buy") && datum["Buy"]!=="NA" && datum["Buy"]!=="NFS" && datum.hasOwnProperty("Exchange Currency")){
+                      extraInfo = extraInfo + " - " + commas(datum["Buy"]) + " " + attemptToTranslate(datum["Exchange Currency"]==="NA" ? "Bells" : datum["Exchange Currency"]);
+                    }
+                    listString = listString + extraInfo + "\n"
+                  }
+                }
+                
+                setTimeout(()=>{
+                  Share.share({
+                    message: listString,
+                  });
+                }, 200)
+              }else if(item.value==="Check all"){
                 popupCheckAllRef.current.setPopupVisible(true)
-              }else  if(item.value==="Check all (and variations)"){
+              }else if(item.value==="Check all (and variations)"){
                 popupCheckAllRefWithVariations.current.setPopupVisible(true)
               }else if(item.value==="Uncheck all"){
                 popupUncheckAllRef.current.setPopupVisible(true)

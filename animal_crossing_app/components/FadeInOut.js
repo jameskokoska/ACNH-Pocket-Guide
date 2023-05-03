@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useRef } from "react";
 import { Animated, Text, View, Easing } from "react-native";
 import { getSettingsString } from "../LoadJsonData";
 //<FadeInOut duration={200} delay={2000} startValue={0} endValue={1} fadeIn={true} fadeInOut={true} scaleInOut={true} maxFade={0.8} minScale={0.5}>
@@ -140,3 +140,31 @@ class FadeInOut extends Component {
 }
 
 export default FadeInOut ;
+
+
+export const SpringIn = (props) => {
+  const springConfig = {
+    damping: 13,
+    mass: 1.7,
+    stiffness: global.reducedMotion ? 100000000 : 300,
+    overshootClamping: false,
+    restSpeedThreshold: 0.01,
+    restDisplacementThreshold: 0.001,
+  };
+  const animatedValue = useRef(new Animated.Value(0.5)).current;
+
+  React.useEffect(() => {
+    Animated.spring(animatedValue, {
+      toValue: 1,
+      duration: 100,
+      useNativeDriver: true,
+      ...springConfig,
+    }).start();
+  }, []);
+
+  return (
+    <Animated.View style={{  transform: [{ scale: animatedValue },] }}>
+      {props.children}
+    </Animated.View>
+  );
+};

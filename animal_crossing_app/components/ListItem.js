@@ -17,7 +17,7 @@ import {getMonthShort, swapDateCards} from "./DateFunctions"
 import colors from "../Colors"
 import {getCurrentDateObject, parseActiveTime} from "./DateFunctions"
 import {inMuseum, inVillager, inVillagerPhoto, inWishlist, inChecklist,getSettingsString, variationsCheckedPercent} from "../LoadJsonData"
-import FadeInOut from "../components/FadeInOut";
+import FadeInOut, { SpringIn } from "../components/FadeInOut";
 import { SubHeader } from './Formattings';
 import { getHourlySongTitle, MusicButtonComponent } from '../pages/SongsPage';
 import { GestureDetector, PanGestureHandler } from 'react-native-gesture-handler';
@@ -362,8 +362,22 @@ class ListItem extends React.Component{
               <PanGestureHandler activeOffsetY={100} activeOffsetX={20}>
                 <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -26, top: -26, zIndex:10}}>
                   <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKeyParent, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
-                    <View style={{padding:8, paddingLeft: 15, paddingBottom: 15}}>
-                      <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
+                    <View style={{padding:8, paddingLeft: 15, paddingBottom: 15, opacity: this.state.collected ? (global.darkMode?0.95:1) : (global.darkMode?0.6:1)}}>
+                      {/* <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/> */}
+                      {
+                      this.props.checkType==="heart" && this.state.collected ? 
+                      <SpringIn>
+                        <Image style={{resizeMode:'contain',width:53, height:53}} source={require("../assets/checked/HeartYes.png")}/>
+                      </SpringIn>
+                      : this.props.checkType==="heart" && !this.state.collected ? 
+                      <Image style={{resizeMode:'contain',width:53, height:53}} source={require("../assets/checked/HeartNone.png")}/>
+                      : this.state.collected ? 
+                      <SpringIn>
+                        <Image style={{resizeMode:'contain',width:53, height:53}} source={require("../assets/checked/CheckMarkYes.png")}/>
+                      </SpringIn>
+                      :
+                      <Image style={{resizeMode:'contain',width:53, height:53}} source={require("../assets/checked/CheckMarkNone.png")}/>
+                      }
                     </View>
                   </TouchableOpacity>
                 </View>
@@ -482,7 +496,21 @@ class ListItem extends React.Component{
                   <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -33, top: -33, zIndex:10}}>
                     <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKeyParent, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
                       <View style={{padding:15}}>
-                        <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
+                        {/* <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/> */}
+                        {
+                        this.props.checkType==="heart" && this.state.collected ? 
+                        <SpringIn>
+                          <Image style={{resizeMode:'contain',width:53, height:53}} source={require("../assets/checked/HeartYes.png")}/>
+                        </SpringIn>
+                        : this.props.checkType==="heart" && !this.state.collected ? 
+                        <Image style={{resizeMode:'contain',width:53, height:53}} source={require("../assets/checked/HeartNone.png")}/>
+                        : this.state.collected ? 
+                        <SpringIn>
+                          <Image style={{resizeMode:'contain',width:53, height:53}} source={require("../assets/checked/CheckMarkYes.png")}/>
+                        </SpringIn>
+                        :
+                        <Image style={{resizeMode:'contain',width:53, height:53}} source={require("../assets/checked/CheckMarkNone.png")}/>
+                        }
                       </View>
                     </TouchableOpacity>
                   </View>
@@ -547,7 +575,21 @@ class ListItem extends React.Component{
                 <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -33, top: -33, zIndex:10}}>
                   <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKeyParent, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
                     <View style={{padding:105}}>
-                      <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
+                      {/* <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/> */}
+                      {
+                      this.props.checkType==="heart" && this.state.collected ? 
+                      <SpringIn>
+                        <Image style={{resizeMode:'contain',width:53, height:53}} source={require("../assets/checked/HeartYes.png")}/>
+                      </SpringIn>
+                      : this.props.checkType==="heart" && !this.state.collected ? 
+                      <Image style={{resizeMode:'contain',width:53, height:53}} source={require("../assets/checked/HeartNone.png")}/>
+                      : this.state.collected ? 
+                      <SpringIn>
+                        <Image style={{resizeMode:'contain',width:53, height:53}} source={require("../assets/checked/CheckMarkYes.png")}/>
+                      </SpringIn>
+                      :
+                      <Image style={{resizeMode:'contain',width:53, height:53}} source={require("../assets/checked/CheckMarkNone.png")}/>
+                      }
                     </View>
                   </TouchableOpacity>
                 </View>
@@ -639,7 +681,21 @@ class ListItem extends React.Component{
                 <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -33, top: -33, zIndex:10}}>
                   <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKeyParent, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
                     <View style={{padding:15}}>
-                      <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/>
+                      {/* <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/> */}
+                      {
+                      this.props.checkType==="heart" && this.state.collected ? 
+                      <SpringIn>
+                        <Image style={{resizeMode:'contain',width:53, height:53}} source={require("../assets/checked/HeartYes.png")}/>
+                      </SpringIn>
+                      : this.props.checkType==="heart" && !this.state.collected ? 
+                      <Image style={{resizeMode:'contain',width:53, height:53}} source={require("../assets/checked/HeartNone.png")}/>
+                      : this.state.collected ? 
+                      <SpringIn>
+                        <Image style={{resizeMode:'contain',width:53, height:53}} source={require("../assets/checked/CheckMarkYes.png")}/>
+                      </SpringIn>
+                      :
+                      <Image style={{resizeMode:'contain',width:53, height:53}} source={require("../assets/checked/CheckMarkNone.png")}/>
+                      }
                     </View>
                   </TouchableOpacity>
                 </View>
@@ -793,6 +849,7 @@ class ListItem extends React.Component{
 };
 
 export default ListItem;
+
 
 class CheckMuseum extends Component {
   render(){
