@@ -495,7 +495,7 @@ class ListItem extends React.Component{
                 <PanGestureHandler activeOffsetY={100} activeOffsetX={20}>
                   <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -33, top: -33, zIndex:10}}>
                     <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKeyParent, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
-                      <View style={{padding:15}}>
+                      <View style={{padding:15, opacity: this.state.collected ? (global.darkMode?0.95:1) : (global.darkMode?0.6:1)}}>
                         {/* <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/> */}
                         {
                         this.props.checkType==="heart" && this.state.collected ? 
@@ -574,7 +574,7 @@ class ListItem extends React.Component{
               <PanGestureHandler activeOffsetY={100} activeOffsetX={20}>
                 <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -33, top: -33, zIndex:10}}>
                   <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKeyParent, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
-                    <View style={{padding:105}}>
+                    <View style={{padding:105, opacity: this.state.collected ? (global.darkMode?0.95:1) : (global.darkMode?0.6:1)}}>
                       {/* <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/> */}
                       {
                       this.props.checkType==="heart" && this.state.collected ? 
@@ -680,7 +680,7 @@ class ListItem extends React.Component{
               <PanGestureHandler activeOffsetY={100} activeOffsetX={20}>
                 <View pointerEvents={showBlankCheckMarks?"auto":"none"} style={{position:'absolute', right: -33, top: -33, zIndex:10}}>
                   <TouchableOpacity onPress={()=>{if(showBlankCheckMarks){checkOff(this.props.item.checkListKeyParent, this.state.collected); this.setCollected(this.state.collected===true ? false:true);}}}>
-                    <View style={{padding:15}}>
+                    <View style={{padding:15, opacity: this.state.collected ? (global.darkMode?0.95:1) : (global.darkMode?0.6:1)}}>
                       {/* <Check checkType={this.props.checkType} play={this.state.collected} width={53} height={53} disablePopup={disablePopup}/> */}
                       {
                       this.props.checkType==="heart" && this.state.collected ? 
