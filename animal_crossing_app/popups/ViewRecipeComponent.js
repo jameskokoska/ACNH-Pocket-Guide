@@ -13,13 +13,13 @@ export default class ViewRecipeButton extends Component {
   }
   render(){
     return <>
-      {this.props.item["Source"]!==undefined && (this.props.item["Source"].includes("Crafting") || this.props.item["Source"].includes("Cooking")) ? <ButtonComponent
+      {this.props.item["Source"]!==undefined && (this.props.item["Source"].includes("Crafting") || this.props.item["Source"].includes("Cooking")) ? <View style={{padding:10, marginTop: -15}}><ButtonComponent
         text={"View Recipe"}
-        color={colors.okButton[global.darkMode]}
+        color={colors.okButton3[global.darkMode]}
         vibrate={5}
         onPress={() => {
           this.popupRecipe?.setPopupVisible(true)
-        }}/> : <View/>}
+        }}/></View> : <View/>}
       <PopupInfoCustom ref={(popupRecipe) => this.popupRecipe = popupRecipe} buttonText={"Close"}>
         <View style={{alignItems:"center"}}>
           <SubHeader style={{fontSize:27, marginBottom: 6, textAlign:"center"}}>{capitalize(this.props.item["NameLanguage"])}</SubHeader>

@@ -4,8 +4,10 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-New item popup details layout
 -Share items list on any page (in the header 3-dot menu)
--Significantly improved performance when scrolling through long lists by removing fully animated components (saving memory)
+-Improved performance when scrolling through long lists - removed fully animated components (saving memory)
+-Fixed sharing >1000 items list warning
 -
 -Collapse home page sections by tapping its title
 -Fixed About page crash

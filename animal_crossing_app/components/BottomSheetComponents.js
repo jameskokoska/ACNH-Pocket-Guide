@@ -400,7 +400,7 @@ export class InfoLineDouble extends Component {
 export class InfoDescription extends Component {
   render(){
     return(
-      <View style={{backgroundColor: colors.lightDarkAccentTextBG[global.darkMode], padding:15, paddingHorizontal: 25, marginHorizontal: 10, marginVertical: 5, borderRadius: 8}}>
+      <View style={{backgroundColor: colors.lightDarkAccentTextBG[global.darkMode], padding:15, paddingHorizontal: 25, marginHorizontal: 10, marginVertical: 5, borderRadius: 15}}>
         <TextFont translate={false} style={{lineHeight: 20, fontSize: 16, textAlign:"left", color:colors.textBlack[global.darkMode]}}>{attemptToTranslateMuseumDescription(this.props.text)}</TextFont>
       </View>
     )
@@ -884,8 +884,7 @@ export class VillagersGifts extends Component {
       return <View/>
     else
       return <View>
-        <View style={{height:15}}/>
-        <View style={{flexWrap: 'wrap', flexDirection:"row",justifyContent:"center"}}>
+        <View style={{flexWrap: 'wrap', flexDirection:"row",justifyContent:"center", marginBottom:-5, marginTop:3}}>
           {chosenVillagers.map( (villager, index)=>{
               return(
                 <View key={villager["Name"]+index+this.props.item["Name"]} style={{margin:this.props.compact===true?2:5}}>

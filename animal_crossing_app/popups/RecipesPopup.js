@@ -7,6 +7,7 @@ import {getPhotoShadow} from "../components/GetPhoto"
 import {findItemIDName} from "../LoadJsonData"
 import * as RootNavigation from '../RootNavigation.js';
 import ButtonComponent from '../components/ButtonComponent';
+import PopupSeparator from './PopupSeparator';
 
 class RecipesPopup extends Component {
   constructor(props){
@@ -20,7 +21,8 @@ class RecipesPopup extends Component {
       return <View/>
     }
     return <View style={{width: "100%", alignItems: "center"}}>
-      {this.props.recipeOnly?<View/>:<InfoLineBeside
+      
+      {this.props.recipeOnly?<View/>:<PopupSeparator><InfoLineBeside
         image1={require("../assets/icons/bellBag.png")} 
         image2={require("../assets/icons/coin.png")} 
         item1={this.props.item}
@@ -29,14 +31,26 @@ class RecipesPopup extends Component {
         textProperty2={["Sell"]}
         ending1={"Exchange Currency"}
         ending2={"Exchange Currency"}
-      />}
-      {this.props.recipeOnly?<View/>:<InfoLine
-        image={require("../assets/icons/popper.png")} 
-        item={this.props.item}
-        textProperty={["Season/Event"]}
-      />}
+      /></PopupSeparator>}
+      <PopupSeparator>
+        <InfoLine
+          image={require("../assets/icons/popper.png")} 
+          item={this.props.item}
+          textProperty={["Season/Event"]}
+        />
+        <InfoLine
+          image={require("../assets/icons/magnifyingGlass.png")} 
+          item={this.props.item}
+          textProperty={["Source"]}
+        />
+        <InfoLine
+          image={require("../assets/icons/notes.png")} 
+          item={this.props.item}
+          textProperty={["Source Notes"]}
+        />
+      </PopupSeparator>
       <TouchableNativeFeedback onPress={()=>{RootNavigation.navigate('40', {propsPassed:this.props.item});}}>
-        <View style={{backgroundColor: colors.lightDarkAccentTextBG[global.darkMode], padding:10, paddingHorizontal: 15, marginHorizontal: 5, marginVertical: 10, borderRadius: 8}}>
+        <PopupSeparator>
           <InfoLine
             translateItem={true}
             image={require("../assets/icons/leaf.png")} 
@@ -107,26 +121,18 @@ class RecipesPopup extends Component {
             textProperty={"Material 10"}
             starting={this.props.item["#10"]+ "x "}
           />
-        </View>
+          <View style={{padding:10, marginTop: -15}}>
+            <ButtonComponent
+              text={"View Ingredient Items"}
+              color={colors.okButton3[global.darkMode]}
+              vibrate={5}
+              onPress={() => {
+                RootNavigation.navigate('40', {propsPassed:this.props.item});
+            }}/>
+          </View>
+        </PopupSeparator>
       </TouchableNativeFeedback>
-      <ButtonComponent
-        text={"View Ingredient Items"}
-        color={colors.okButton[global.darkMode]}
-        vibrate={5}
-        onPress={() => {
-          RootNavigation.navigate('40', {propsPassed:this.props.item});
-      }}/>
-      <View style={{height:10}}/>
-      <InfoLine
-        image={require("../assets/icons/magnifyingGlass.png")} 
-        item={this.props.item}
-        textProperty={["Source"]}
-      />
-      <InfoLine
-        image={require("../assets/icons/notes.png")} 
-        item={this.props.item}
-        textProperty={["Source Notes"]}
-      />
+      <View style={{height:5}}/>
     </View>
   }
 }

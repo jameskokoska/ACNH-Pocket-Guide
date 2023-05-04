@@ -4,6 +4,7 @@ import colors from '../Colors.js';
 import {parseActiveTime, isActive, isActive2, getCurrentDateObject, getMonthShort} from "./DateFunctions"
 import {attemptToTranslate, getSettingsString} from "../LoadJsonData";
 import { InfoLine } from "./BottomSheetComponents.js";
+import PopupSeparator from "../popups/PopupSeparator.js";
 
 function getImage(name){
   switch(name){
@@ -375,16 +376,18 @@ class ActiveTime extends Component {
 
     return(
       <>
-        <InfoLine
-          image={require("../assets/icons/calendar.png")} 
-          customText={activeTimeString}
-          customColor={redTextProperty2?colors.redText[global.darkMode]:colors.textBlack[global.darkMode]}
-        />
-        <InfoLine
-          image={require("../assets/icons/alarmClock.png")}
-          customText={textProperty2Text}
-          customColor={!isActiveCurrentHour?colors.redText[global.darkMode]:colors.textBlack[global.darkMode]}
-        />
+        <PopupSeparator>
+          <InfoLine
+            image={require("../assets/icons/calendar.png")} 
+            customText={activeTimeString}
+            customColor={redTextProperty2?colors.redText[global.darkMode]:colors.textBlack[global.darkMode]}
+          />
+          <InfoLine
+            image={require("../assets/icons/alarmClock.png")}
+            customText={textProperty2Text}
+            customColor={!isActiveCurrentHour?colors.redText[global.darkMode]:colors.textBlack[global.darkMode]}
+          />
+        </PopupSeparator>
         <View style={{height:7}}/>
         <View style={{width: Dimensions.get('window').width, marginTop: 0, flexDirection: "row", justifyContent:"space-evenly"}}>
           <View style={{width: 160, height: 160, margin: 7,}}>

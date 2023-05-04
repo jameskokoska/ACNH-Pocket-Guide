@@ -1,7 +1,7 @@
 import * as Font from 'expo-font';
 import React, {Component} from 'react';
 import {TouchableOpacity, StyleSheet, ScrollView, Dimensions, Image, View, Text} from 'react-native';
-import {InfoLinePlain, InfoDescription, InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title} from '../components/BottomSheetComponents';
+import {InfoLinePlain, InfoDescription, InfoLineBeside, InfoLineTriple, InfoLineDouble, InfoLine, Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title, SizeInfo} from '../components/BottomSheetComponents';
 import colors from "../Colors"
 import {getPaintingPhotoFake} from "../components/GetPhoto"
 import {commas, capitalize} from '../LoadJsonData'
@@ -10,6 +10,7 @@ import TextFont from '../components/TextFont'
 import {attemptToTranslate, getArtIdentification} from "../LoadJsonData"
 import {PopupInfoCustom} from "../components/Popup"
 import ImageZoom from 'react-native-image-pan-zoom';
+import PopupSeparator from './PopupSeparator';
 
 class ArtPopup extends Component {
   constructor(props){
@@ -50,26 +51,38 @@ class ArtPopup extends Component {
           item={this.props.item}
           textProperty={["Real Artwork Title"]}
         />
-        <InfoLine
-          image={require("../assets/icons/coin.png")} 
-          item={this.props.item}
-          textProperty={["Sell"]}
-          ending={" " + attemptToTranslate("bells")}
-        />
-        <InfoLine
-          image={require("../assets/icons/bellBag.png")} 
-          item={this.props.item}
-          textProperty={["Buy"]}
-          ending={" " + attemptToTranslate("bells")}
-        />
-        <InfoLine
-          image={require("../assets/icons/colorPalette.png")} 
-          item={this.props.item}
-          textProperty={["Color 1"]}
-          textProperty2={["Color 2"]}
-        />
-        <View style={{height: 20}}/>
+        <PopupSeparator>
+          <InfoLineBeside
+            image1={require("../assets/icons/bellBag.png")} 
+            image2={require("../assets/icons/coin.png")} 
+            item1={this.props.item}
+            item2={this.props.item}
+            textProperty1={["Buy"]}
+            textProperty2={["Sell"]}
+            ending1={"Exchange Currency"}
+            ending2={"Exchange Currency"}
+            translateItem={false}
+          />
+        </PopupSeparator>
+        <PopupSeparator>
+          <InfoLine
+            image={require("../assets/icons/popper.png")} 
+            item={this.props.item}
+            textProperty={["Season/Event"]}
+          />
+          <InfoLine
+            image={require("../assets/icons/magnifyingGlass.png")} 
+            item={this.props.item}
+            textProperty={["Source"]}
+          />
+          <InfoLine
+            image={require("../assets/icons/notes.png")} 
+            item={this.props.item}
+            textProperty={["Source Notes"]}
+          />
+        </PopupSeparator>
         
+        <View style={{height: 15}}/>
         <TouchableOpacity activeOpacity={0.5} style={{width:"100%"}} onPress={()=>{this.popupReal?.setPopupVisible(true)}}>
           {paintingComparisonReal}
         </TouchableOpacity>        
@@ -79,7 +92,35 @@ class ArtPopup extends Component {
         </TouchableOpacity>  
         {paintingComparisonFakeLabel}
         <TextFont style={{fontSize: 18, textAlign:"center", marginHorizontal: 20, color:colors.textBlack[global.darkMode]}}>{getArtIdentification(this.props.item["Name"])}</TextFont>
-        <View style={{height: 20}}/>
+        <View style={{height: 10}}/>
+        <PopupSeparator>
+          <InfoLine
+            image={require("../assets/icons/colorPalette.png")} 
+            item={this.props.item}
+            textProperty={["Color 1"]}
+            textProperty2={["Color 2"]}
+          />
+          <View style={{alignItems: 'center',justifyContent: 'center',flexDirection:"row",flexWrap:"wrap"}}>
+            <InfoLineTriple
+              image={require("../assets/icons/house.png")} 
+              item={this.props.item}
+              textProperty1={"HHA Series"}
+              textProperty2={"HHA Concept 1"}
+              textProperty3={"HHA Concept 2"}
+            />
+            <SizeInfo size={this.props.item["Size"]}/>
+          </View>
+          <InfoLine
+            image={require("../assets/icons/scroll.png")} 
+            item={this.props.item}
+            textProperty={["Data Category"]}
+          />
+          <InfoLine
+            image={require("../assets/icons/tag.png")} 
+            item={this.props.item}
+            textProperty={["Tag"]}
+          />
+        </PopupSeparator>
         <InfoDescription text={this.props.item["Description"]}/>
       </View>
       <PopupInfoCustom style={{padding:0, margin:0, paddingVertical:20}} ref={(popupReal) => this.popupReal = popupReal} buttonText={"Close"}>

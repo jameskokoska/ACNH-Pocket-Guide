@@ -1248,7 +1248,7 @@ function ListPage(props){
       invisible={true}
       restrictSize={false}
       onClose={()=>{
-        // console.log(selectedItem); 
+        console.log(selectedItem); 
         if(selectedItem!=null && selectedItem!=undefined){
           !updateCheckChildFunction(inChecklist(selectedItem.checkListKeyParent), false);
           !updateWishlistChildFunction(inWishlist(selectedItem.checkListKey));

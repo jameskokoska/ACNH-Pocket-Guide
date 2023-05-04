@@ -13,78 +13,86 @@ import * as RootNavigation from '../RootNavigation.js';
 import { addAndSaveParadisePlanning, attemptToTranslateItem, findVillagersParadisePlanning, getSettingsString, getStorage, initializeParadisePlanningGlobal, inVillagerParadise, removeAndSaveParadisePlanning } from '../LoadJsonData';
 import { Request } from '../pages/ParadisePlanningPage';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import PopupSeparator from './PopupSeparator';
 
 class VillagerPopup extends Component {
   render(){
     return <View style={{width: "100%", alignItems: "center"}}>
-      <InfoLine
-        birthday={true}
-        image={require("../assets/icons/birthdayCake.png")} 
-        item={this.props.item}
-        textProperty={["Birthday"]}
-      />
-      <InfoLineBeside
-        image1={require("../assets/icons/cat.png")} 
-        item1={this.props.item}
-        textProperty1={["Species"]}
-        image2={require("../assets/icons/dice.png")} 
-        item2={this.props.item}
-        textProperty2={["Hobby"]}
-      />
-      <InfoLineBeside
-        image1={require("../assets/icons/personalityEmoji.png")} 
-        image2={require("../assets/icons/styleEmoji.png")} 
-        item1={this.props.item}
-        item2={this.props.item}
-        textProperty1={["Personality"]}
-        textProperty2={["Style 1"]}
-        textProperty22={["Style 2"]}
-      />
-      <InfoLine
-        image={require("../assets/icons/colorPalette.png")} 
-        item={this.props.item}
-        textProperty={["Color 1"]}
-        textProperty2={["Color 2"]}
-      />
-      <InfoLine
-        image={require("../assets/icons/music.png")}
-        customText={attemptToTranslateItem(this.props.item["Favorite Song"])}
-      />
-      <InfoLine
-        image={require("../assets/icons/speechBubble.png")} 
-        item={this.props.item}
-        textProperty={["Favorite Saying"]}
-      />
+      <PopupSeparator>
+        <InfoLine
+          birthday={true}
+          image={require("../assets/icons/birthdayCake.png")} 
+          item={this.props.item}
+          textProperty={["Birthday"]}
+        />
+        <InfoLineBeside
+          image1={require("../assets/icons/cat.png")} 
+          item1={this.props.item}
+          textProperty1={["Species"]}
+          image2={require("../assets/icons/dice.png")} 
+          item2={this.props.item}
+          textProperty2={["Hobby"]}
+        />
+        <InfoLineBeside
+          image1={require("../assets/icons/personalityEmoji.png")} 
+          image2={require("../assets/icons/styleEmoji.png")} 
+          item1={this.props.item}
+          item2={this.props.item}
+          textProperty1={["Personality"]}
+          textProperty2={["Style 1"]}
+          textProperty22={["Style 2"]}
+        />
+        <InfoLine
+          image={require("../assets/icons/colorPalette.png")} 
+          item={this.props.item}
+          textProperty={["Color 1"]}
+          textProperty2={["Color 2"]}
+        />
+        <InfoLine
+          image={require("../assets/icons/music.png")}
+          customText={attemptToTranslateItem(this.props.item["Favorite Song"])}
+        />
+      </PopupSeparator>
+      <PopupSeparator>
+        <InfoLine
+          image={require("../assets/icons/speechBubble.png")} 
+          item={this.props.item}
+          textProperty={["Favorite Saying"]}
+        />
+      </PopupSeparator>
       <VillagerParadisePlanningPopupComponent item={this.props.item}/>
-      <ButtonComponent
-        text={"View Photo and Poster"}
-        color={colors.okButton[global.darkMode]}
-        vibrate={5}
-        onPress={() => {
-          // this.props.setPage(37, true, this.props.item)
-          RootNavigation.navigate('37', {propsPassed:this.props.item});
-      }}/>
       <View style={{height:5}}/>
-      <ButtonComponent
-        text={"View Gifts"}
-        color={colors.okButton[global.darkMode]}
-        vibrate={5}
-        onPress={() => {
-          // this.props.setPage(20, true, this.props.item);
-          RootNavigation.navigate('20', {propsPassed:this.props.item});
+      <PopupSeparator>
+        <ButtonComponent
+          text={"View Photo and Poster"}
+          color={colors.okButton3[global.darkMode]}
+          vibrate={5}
+          onPress={() => {
+            // this.props.setPage(37, true, this.props.item)
+            RootNavigation.navigate('37', {propsPassed:this.props.item});
         }}/>
-      <TouchableOpacity style={{paddingTop:0}} onPress={()=>{this.popup?.setPopupVisible(true);}}>
-        <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, padding:8}}>{"What are villager gifts?"}</TextFont>
-      </TouchableOpacity>
-      {this.props.item["Furniture List"]?<ButtonComponent
-        text={"View Furniture"}
-        color={colors.okButton[global.darkMode]}
-        vibrate={5}
-        onPress={() => {
-          // this.props.setPage(22, true, this.props.item)
-          RootNavigation.navigate('22', {propsPassed:this.props.item});
-      }}/>:<View/>}
-      <View style={{height:10}}/>
+        <View style={{height:5}}/>
+        {this.props.item["Furniture List"]?<ButtonComponent
+          text={"View Furniture"}
+          color={colors.okButton3[global.darkMode]}
+          vibrate={5}
+          onPress={() => {
+            // this.props.setPage(22, true, this.props.item)
+            RootNavigation.navigate('22', {propsPassed:this.props.item});
+        }}/>:<View/>}
+        <View style={{height:5}}/>
+        <ButtonComponent
+          text={"View Gifts"}
+          color={colors.okButton3[global.darkMode]}
+          vibrate={5}
+          onPress={() => {
+            // this.props.setPage(20, true, this.props.item);
+            RootNavigation.navigate('20', {propsPassed:this.props.item});
+          }}/>
+        <TouchableOpacity style={{paddingTop:0}} onPress={()=>{this.popup?.setPopupVisible(true);}}>
+          <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 16, padding:8, textAlign:"center"}}>{"What are villager gifts?"}</TextFont>
+        </TouchableOpacity>
+      </PopupSeparator>
       <View style={{alignItems: 'center', width: Dimensions.get('window').width, justifyContent:"center"}}>
         <FastImage
           style={{width: Dimensions.get('window').width*0.8,height:Dimensions.get('window').width*0.8, resizeMode: "contain", borderRadius: 2}}
