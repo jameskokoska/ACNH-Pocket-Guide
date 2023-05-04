@@ -1418,7 +1418,7 @@ export const settings = [
     "keyName" : "settingsUseCustomDate",
     "defaultValue" : "false",
     "currentValue" : "",
-    "picture" : require("./assets/icons/customTime.png"),
+    "picture" : require("./assets/icons/schedule.png"),
     "displayName" : "Use a custom date",
     "description" : "Use any date you want, in case you are one of those time travellers",
   },  

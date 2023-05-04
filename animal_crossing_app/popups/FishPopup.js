@@ -43,7 +43,7 @@ class FishPopup extends Component {
           image2={require("../assets/icons/location.png")} 
           item2={this.props.item}
           textProperty2={["Where/How"]}
-          image1={require("../assets/icons/fishSize.png")} 
+          image1={require("../assets/icons/ruler.png")} 
           item1={this.props.item}
           textProperty1={["Shadow"]}
         />

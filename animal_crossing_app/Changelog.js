@@ -7,7 +7,8 @@ export const changelog = `
 -New item popup details layout
 -Share items list on any page (in the header 3-dot menu)
 -Improved performance when scrolling through long lists - removed fully animated components (saving memory)
--Fixed sharing >1000 items list warning
+-Fixed sharing more than 1000 items list warning
+-Tweaked some icons
 -
 -Collapse home page sections by tapping its title
 -Fixed About page crash

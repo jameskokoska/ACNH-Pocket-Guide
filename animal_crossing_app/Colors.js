@@ -11,7 +11,7 @@ const colors = {
     inkWell : ["#CDD0D3","#737592"],
     shadowPopUp : ["#000000", "#000000"],
     lightDarkAccent : ["#F5F5F5","#1A1A1A"],
-    lightDarkAccentTextBG : ["#F1F1F1","#202020"],
+    lightDarkAccentTextBG : ["#F7F7F7","#202020"],
     lightDarkAccent2 : ["#DADADA","#383838"],
     lightDarkAccentHeavy : ["#bcbfc2","#494c4d"],
     lightDarkAccentHeavy2 : ["#ebebeb","#494c4d"],

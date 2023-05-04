@@ -164,7 +164,7 @@ export default class DonatePage extends Component {
         
         {this.state.products["coffee"]?.price === undefined ? <></> : <SupportOption purchased={this.state.purchased} label="Coffee" id="coffee" image={require("../assets/icons/coffee3.png")} price={this.state.products["coffee"]?.price} descriptionShort={"Caffeine to stay awake!"}/>}
         {this.state.products["cake"]?.price === undefined ? <></> : <SupportOption purchased={this.state.purchased} label="Cake" id="cake" image={require("../assets/icons/cupcake.png")} price={this.state.products["cake"]?.price} descriptionShort={"Something sweet to eat!"}/>}
-        {this.state.products["meal"]?.price === undefined ? <></> : <SupportOption purchased={this.state.purchased} label="Meal" id="meal" image={require("../assets/icons/noodles.png")} price={this.state.products["meal"]?.price} descriptionShort={"Very yummy and filling!"}/>}
+        {this.state.products["meal"]?.price === undefined ? <></> : <SupportOption purchased={this.state.purchased} label="Meal" id="meal" image={require("../assets/icons/meal2.png")} price={this.state.products["meal"]?.price} descriptionShort={"Very yummy and filling!"}/>}
 
         <SubHeader style={{marginTop: 20, fontSize:23, marginBottom: 4, marginLeft: 25}}>Supporter Tiers</SubHeader>
         {this.state.products["silver"]?.price === undefined ? <></> : <SupportOption purchased={this.state.purchased} label="Silver" id="silver" image={require("../assets/icons/silver-medal.png")} price={this.state.products["silver"]?.price+"/"+attemptToTranslate("month")} description="Get your name in the About page of the app!"/>}

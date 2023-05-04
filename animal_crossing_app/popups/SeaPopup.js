@@ -26,7 +26,7 @@ class SeaPopup extends Component {
       </PopupSeparator>
       <PopupSeparator>
         <InfoLineBeside
-          image1={require("../assets/icons/fishSize.png")} 
+          image1={require("../assets/icons/ruler.png")} 
           item1={this.props.item}
           textProperty1={["Shadow"]}
           image2={require("../assets/icons/speed.png")} 
