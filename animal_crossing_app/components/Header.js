@@ -118,7 +118,7 @@ const Header = forwardRef((props, ref) => {
               console.log(item.value)
               if(item.value==="Share" && props.data){
                 listString = ""
-                if(props.data.length > 100) {
+                if(props.data.length > 1000) {
                   toast.show(attemptToTranslate("Only sharing the first 1,000 items"), {type:"success",
                     duration: 1500,  
                     placement:'top',

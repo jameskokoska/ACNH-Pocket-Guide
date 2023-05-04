@@ -68,7 +68,7 @@ class FloorWallsPopup extends Component {
         textProperty={["Season/Event"]}
       />
       <InfoLine
-        image={require("../assets/icons/magnifyingGlass.png")} 
+        image={require("../assets/icons/notes.png")} 
         item={this.props.item}
         textProperty={["Source Notes"]}
       />

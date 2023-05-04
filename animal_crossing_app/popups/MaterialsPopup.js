@@ -39,12 +39,17 @@ class MaterialsPopup extends Component {
         textProperty={["Tag"]}
       />
       <InfoLine
-        image={require("../assets/icons/magnifyingGlass.png")} 
+        image={require("../assets/icons/popper.png")} 
         item={this.props.item}
         textProperty={["Season/Event"]}
       />
       <InfoLine
         image={require("../assets/icons/magnifyingGlass.png")} 
+        item={this.props.item}
+        textProperty={["Source"]}
+      />
+      <InfoLine
+        image={require("../assets/icons/notes.png")} 
         item={this.props.item}
         textProperty={["Source Notes"]}
       />
