@@ -72,6 +72,7 @@ class CreditsPage extends Component {
         <SubHeader> Ilaria Caiazzo</SubHeader>
         <SubHeader> Filip Gavran</SubHeader>
         <SubHeader> Martina Previtera</SubHeader>
+        <SubHeader> Chiara D'Apuzzo</SubHeader>
       </CreditBox>
       <CreditBox>
         <SubHeader style={{marginBottom:5}}>{attemptToTranslate("Portuguese") + ":"}</SubHeader>

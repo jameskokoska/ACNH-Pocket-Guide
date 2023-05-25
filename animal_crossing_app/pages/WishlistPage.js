@@ -134,7 +134,7 @@ export class WishlistSelectionPopup extends Component{
         <View style={{flexDirection:"row", alignItems:"center", justifyContent:"space-between", marginLeft:5, marginTop:5}}>
           <View style={{flexDirection:"column", flex:1}}>
             <TextFont bold={true} style={{fontSize: 23, textAlign:"left", color: colors.textBlack[global.darkMode],marginBottom:2}}>{"Select A List"}</TextFont>
-            <TextFont bold={false} style={{fontSize: 16, textAlign:"left", color: colors.textBlack[global.darkMode]}}>{capitalize(this.state.subHeader)}</TextFont>
+            <TextFont bold={false} style={{fontSize: 16, textAlign:"left", color: colors.textBlack[global.darkMode]}}>{this.props.subHeader!==undefined ? this.props.subHeader : capitalize(this.state.subHeader)}</TextFont>
           </View>
           <View style={{marginLeft:5}}>
             {imageComponent}

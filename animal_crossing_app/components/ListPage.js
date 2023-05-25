@@ -582,6 +582,11 @@ function ListPage(props){
               //Search translations done here
               // searchFound = attemptToTranslateItem(item.[props.searchKey[j][x]]).toString().toLowerCase().includes(search.toString().toLowerCase())
               searchFound = removeAccents(item[props.searchKey[j][x]].toString().toLowerCase()).includes(removeAccents(search.toString().toLowerCase()))
+              if(item[props.searchKey[j][x]].toString().includes("moss")){
+                console.log(removeAccents(item[props.searchKey[j][x]].toString()))
+                console.log(removeAccents(search.toString().toLowerCase()))
+              }
+              
             }
             if(searchFound){
               break
@@ -974,6 +979,42 @@ function ListPage(props){
   //   bottomSheetTopPadding = 70;
   // }
 
+  const addAllItemsListedToList = async (listName) => {
+    popupOnlyLoading?.current?.setPopupVisible(true)
+    await setTimeout(()=>{
+      for(let item of data){
+        if(item.checkListKey!==undefined){
+          if(listName===""){
+            checkOff(item.checkListKey, false, "wishlist", "", false, false);
+          }else{
+            checkOff(item.checkListKey, false, "customLists::"+listName, "", false, false);
+          }
+        }
+      }
+    },10)
+    await collectionListSave()
+    setRefresh(true)
+    popupOnlyLoading?.current?.setPopupVisible(false)
+  }
+
+  const removeAllItemsListedToList = async (listName) => {
+    popupOnlyLoading?.current?.setPopupVisible(true)
+    await setTimeout(()=>{
+      for(let item of data){
+        if(item.checkListKey!==undefined){
+          if(listName===""){
+            checkOff(item.checkListKey, true, "wishlist", "", false, false);
+          }else{
+            checkOff(item.checkListKey, true, "customLists::"+listName, "", false, false);
+          }
+        }
+      }
+    },10)
+    await collectionListSave()
+    setRefresh(true)
+    popupOnlyLoading?.current?.setPopupVisible(false)
+  }
+
   const checkAllItemsListed = async () => {
     popupOnlyLoading?.current?.setPopupVisible(true)
     await setTimeout(()=>{
@@ -1116,7 +1157,7 @@ function ListPage(props){
           width: Dimensions.get('window').width, 
           height: Dimensions.get('window').height, position:"absolute"}} 
         pointerEvents="none"> */}
-        <Header ref={headerRef} data={data} currentCustomList={props.currentCustomList} runOnShowHemisphereSwitcherOption={props.runOnShowHemisphereSwitcherOption} showHemisphereSwitcherOption={props.showHemisphereSwitcherOption} showMuseumCheckOptions={museumTitles.includes(props.title) && (props.wishlistItems===undefined || props.wishlistItems===false)} checkAllMuseum={()=>{checkAllMuseum()}} unCheckAllMuseum={()=>{unCheckAllMuseum()}} invertCheckItemsListed={()=>{invertCheckItemsListed()}} unCheckAllItemsListed={()=>{unCheckAllItemsListed()}} unCheckAllItemsListedWithVariations={()=>{unCheckAllItemsListedWithVariations()}} checkAllItemsListed={()=>{checkAllItemsListed()}} checkAllItemsListedWithVariations={()=>{checkAllItemsListedWithVariations()}} currentSearch={props.currentSearch!==undefined?props.currentSearch:""} setPage={props.setPage} extraInfo={props.extraInfo} smallerHeader={props.smallerHeader} disableFilters={props.disableFilters} customHeader={props.customHeader} disableSearch={props.disableSearch} subHeader={props.subHeader} subHeader2={props.subHeader2} searchFilters={searchFilters} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage} />
+        <Header ref={headerRef} data={data} currentCustomList={props.currentCustomList} runOnShowHemisphereSwitcherOption={props.runOnShowHemisphereSwitcherOption} showHemisphereSwitcherOption={props.showHemisphereSwitcherOption} showMuseumCheckOptions={museumTitles.includes(props.title) && (props.wishlistItems===undefined || props.wishlistItems===false)} checkAllMuseum={()=>{checkAllMuseum()}} unCheckAllMuseum={()=>{unCheckAllMuseum()}} invertCheckItemsListed={()=>{invertCheckItemsListed()}} unCheckAllItemsListed={()=>{unCheckAllItemsListed()}} unCheckAllItemsListedWithVariations={()=>{unCheckAllItemsListedWithVariations()}} checkAllItemsListed={()=>{checkAllItemsListed()}} checkAllItemsListedWithVariations={()=>{checkAllItemsListedWithVariations()}} addAllItemsListedToList={(list)=>{addAllItemsListedToList(list)}} removeAllItemsListedToList={(list)=>{removeAllItemsListedToList(list)}} currentSearch={props.currentSearch!==undefined?props.currentSearch:""} setPage={props.setPage} extraInfo={props.extraInfo} smallerHeader={props.smallerHeader} disableFilters={props.disableFilters} customHeader={props.customHeader} disableSearch={props.disableSearch} subHeader={props.subHeader} subHeader2={props.subHeader2} searchFilters={searchFilters} openPopupFilter={() => {popupFilter.current.setPopupVisible(true)}} title={props.title} headerHeight={headerHeight} updateSearch={updateSearch} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage} />
         {/* </Animated.View> */}
       </Animated.View>
 
@@ -1235,7 +1276,7 @@ function ListPage(props){
             />
           }
         />}
-        {header}
+      {header}
       </View>
     :
       <HeaderLoading disableSearch={props.disableSearch} title={props.title} headerHeight={headerHeight} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>

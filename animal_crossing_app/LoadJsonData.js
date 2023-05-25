@@ -749,7 +749,7 @@ export function collectionListRemoveDuplicates(){
 
 export function removeAccents(text){
   if(text && text.constructor===String)
-    return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace("-"," ")
+    return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/-/g, " ")
   return ""
 }
 

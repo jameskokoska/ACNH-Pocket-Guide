@@ -12,6 +12,7 @@ import colors from '../Colors.js';
 import Toast from "react-native-toast-notifications";
 import Animated, { FadeIn } from "react-native-reanimated";
 import TotalBuySellPrice from './TotalBuySellPrice';
+import { WishlistSelectionPopup } from '../pages/WishlistPage';
 
 const Header = forwardRef((props, ref) => {
   // console.log(props.showHemisphereSwitcherOption)
@@ -82,6 +83,8 @@ const Header = forwardRef((props, ref) => {
   const popupMuseumCheckRef = React.useRef(null);
   const popupMuseumUncheckRef = React.useRef(null);
   const popupItemStatisticsRef = React.useRef(null);
+  const wishlistSelectionPopupRef = React.useRef(null);
+  const wishlistSelectionRemovePopupRef = React.useRef(null);
   let moreMenu = <></>
   let museumOptions = []
   if(props.showMuseumCheckOptions){
@@ -103,14 +106,16 @@ const Header = forwardRef((props, ref) => {
           width={120}
           items={[
             ...(props.data ? [{label:"Share Items", value:"Share", highlighted: false}] : []),
+            ...itemStatistics,
+            ...hemisphereToggle,
             {label:"Check all", value:"Check all", highlighted: false},
             ...(props.checkAllItemsListedWithVariations ?  [{label:"Check all (and variations)", value:"Check all (and variations)", highlighted: false}] : []),
             {label:"Uncheck all", value:"Uncheck all", highlighted: false},
             ...(props.unCheckAllItemsListedWithVariations ?  [{label:"Uncheck all (and variations)", value:"Uncheck all (and variations)", highlighted: false}] : []),
             {label:"Invert check marks", value:"Invert check", highlighted: false},
+            ...(props.addAllItemsListedToList ?  [{label:"Add all to list", value:"Add all to list", highlighted: false}] : []),
+            ...(props.removeAllItemsListedToList ?  [{label:"Remove all from list", value:"Remove all from list", highlighted: false}] : []),
             ...museumOptions,
-            ...hemisphereToggle,
-            ...itemStatistics,
           ]}
           defaultValue={""}
           onChangeItem={
@@ -191,6 +196,12 @@ const Header = forwardRef((props, ref) => {
                 props.runOnShowHemisphereSwitcherOption()
               } else if(item.value==="Item statistics"){
                 popupItemStatisticsRef.current.setPopupVisible(true)
+              } else if(item.value==="Add all to list"){
+                wishlistSelectionPopupRef.current.setPopupVisible(true)
+              } else if(item.value==="Add all to list"){
+                wishlistSelectionRemovePopupRef.current.setPopupVisible(true)
+              } else if(item.value==="Remove all from list"){
+                wishlistSelectionRemovePopupRef.current.setPopupVisible(true)
               }
             }
           }
@@ -198,6 +209,12 @@ const Header = forwardRef((props, ref) => {
           <Image style={{opacity: 0.5, width:21,height:21,resizeMode:'contain',}} source={global.darkMode ? require("../assets/icons/menuDotsWhite.png") : require("../assets/icons/menuDots.png")} />
         </DropdownMenu>
       </View>
+      <WishlistSelectionPopup showSelectedOriginal ref={wishlistSelectionPopupRef} popupBottom={false} changeSelectedList={(list)=>{
+        if(props.addAllItemsListedToList!==undefined){props.addAllItemsListedToList(list)}
+      }} subHeader={"Add all items currently listed to a custom list. This action cannot be undone."} addCustomList={()=>{}} showDelete={false}/>
+      <WishlistSelectionPopup showSelectedOriginal ref={wishlistSelectionRemovePopupRef} popupBottom={false} changeSelectedList={(list)=>{
+        if(props.removeAllItemsListedToList!==undefined){props.removeAllItemsListedToList(list)}
+      }} subHeader={"Add all items currently listed to a custom list. This action cannot be undone."} addCustomList={()=>{}} showDelete={false}/>
       <Popup ref={popupCheckAllRef} accentCancel={true} text="Check All?" textLower={attemptToTranslate("Check all the items currently listed?") + "\n" + attemptToTranslate("This action cannot be undone.")} button1={"Cancel"} button1Action={()=>{}} button2={"Check All"} button2Action={props.checkAllItemsListed}/>
       <Popup ref={popupCheckAllRefWithVariations} accentCancel={true} text="Check All? and variations" textLower={attemptToTranslate("Check all the items currently listed? and variations") + "\n" + attemptToTranslate("This action cannot be undone.")} button1={"Cancel"} button1Action={()=>{}} button2={"Check All"} button2Action={props.checkAllItemsListedWithVariations}/>
       <Popup ref={popupUncheckAllRef} accentCancel={true} text="Uncheck All?" textLower={attemptToTranslate("Uncheck all the items currently listed?") + "\n" + attemptToTranslate("This action cannot be undone.")} button1={"Cancel"} button1Action={()=>{}} button2={"Uncheck All"} button2Action={props.unCheckAllItemsListed}/>
