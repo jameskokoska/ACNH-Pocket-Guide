@@ -4,6 +4,8 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-ToDo list reset at 5 AM fixed for multiple profiles
+-
 -New item popup details layout
 -Share items list on any page (in the header 3-dot menu)
 -Improved performance when scrolling through long lists - removed fully animated components (saving memory)
