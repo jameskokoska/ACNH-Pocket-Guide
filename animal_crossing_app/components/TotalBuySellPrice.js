@@ -65,6 +65,7 @@ export default class TotalBuySellPrice extends Component{
     }
   }
   render(){
+    if(this.props.data==undefined) return <></>
     return <View>
       {this.props.includeCollected===true ? <View style={{marginHorizontal: 6, marginVertical:5, flexDirection:"row", alignItems:"center", justifyContent:"center", marginTop: 3, marginBottom: 10}}><TextFont bold={true} translate={false} style={{textAlign:'center', color:colors.textBlack[global.darkMode], fontSize: this.props.fontSize ? this.props.fontSize + 4 : 13}}>{commas(this.state.totalCollected) + " / " + commas(this.props.data.length) + " " + attemptToTranslate("collected")}</TextFont></View> : <View/>}
       <View style={{display:"flex", flexWrap:"wrap",opacity:this.props.opacity ? this.props.opacity : 1, flexDirection:"row", justifyContent:"center", alignItems:"center", marginHorizontal:40}}>

@@ -97,7 +97,7 @@ const Header = forwardRef((props, ref) => {
   if(props.showHemisphereSwitcherOption===true){
     hemisphereToggle = [{label:(getSettingsString("settingsNorthernHemisphere") === "true" ? "Northern Hemisphere" : "Southern Hemisphere"), value:"Hemisphere toggle", highlighted: false}]
   }
-  let itemStatistics = [{label:"Item statistics", value:"Item statistics", highlighted: false}]
+  let itemStatistics = props.disableItemStats ? [] : [{label:"Item statistics", value:"Item statistics", highlighted: false}]
   if(props.checkAllItemsListed!==undefined && props.unCheckAllItemsListed!==undefined && props.invertCheckItemsListed!==undefined){
     moreMenu = <>
       <View style={{position:"absolute", padding:0, top:2, right:-2, zIndex: 100}}>
@@ -228,6 +228,8 @@ const Header = forwardRef((props, ref) => {
       </PopupInfoCustom>
     </>
   }
+  console.log(props.disableItemStats)
+
   return (
     <>
       {props.disableCollectedTotal === true ? <View/> : 
