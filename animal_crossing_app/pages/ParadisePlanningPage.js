@@ -294,6 +294,9 @@ export class Request extends React.PureComponent{
       thoughtBubble = this.props.request["Thought bubble"]
       request = this.props.request["Request"]
     }
+    if(this.villagerObject["Icon Image"]=="NA"){
+      return <></>
+    }
     return <>
       <TouchableOpacity activeOpacity={0.7} onPress={()=>{if(this.props.request["Request"]!==undefined) RootNavigation.navigate('36', {propsPassed:this.props.request}); else this.checkOff();}}>
       <View style={{backgroundColor: this.props.darkerBackground ? colors.lightDarkAccent[global.darkMode] : colors.white[global.darkMode], paddingVertical: 20, paddingRight: 10, marginHorizontal: this.props.lessMargin ? 10 : 20, marginVertical: 5,  borderRadius: 10}}>
