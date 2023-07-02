@@ -4,6 +4,7 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Fixed adding all items listed to custom list saving
 -Disabled item statistics and item count on pages that don't support it
 -Removed duplicate entry of Wisp in Paradise Planning
 -

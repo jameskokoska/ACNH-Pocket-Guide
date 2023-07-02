@@ -228,7 +228,6 @@ const Header = forwardRef((props, ref) => {
       </PopupInfoCustom>
     </>
   }
-  console.log(props.disableItemStats)
 
   return (
     <>

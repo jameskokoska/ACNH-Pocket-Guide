@@ -582,10 +582,10 @@ function ListPage(props){
               //Search translations done here
               // searchFound = attemptToTranslateItem(item.[props.searchKey[j][x]]).toString().toLowerCase().includes(search.toString().toLowerCase())
               searchFound = removeAccents(item[props.searchKey[j][x]].toString().toLowerCase()).includes(removeAccents(search.toString().toLowerCase()))
-              if(item[props.searchKey[j][x]].toString().includes("moss")){
-                console.log(removeAccents(item[props.searchKey[j][x]].toString()))
-                console.log(removeAccents(search.toString().toLowerCase()))
-              }
+              // if(item[props.searchKey[j][x]].toString().includes("moss")){
+              //   console.log(removeAccents(item[props.searchKey[j][x]].toString()))
+              //   console.log(removeAccents(search.toString().toLowerCase()))
+              // }
               
             }
             if(searchFound){
@@ -992,7 +992,9 @@ function ListPage(props){
         }
       }
     },10)
-    await collectionListSave()
+    await setTimeout(async ()=>{
+      await collectionListSave()
+    },20)
     setRefresh(true)
     popupOnlyLoading?.current?.setPopupVisible(false)
   }
@@ -1010,7 +1012,9 @@ function ListPage(props){
         }
       }
     },10)
-    await collectionListSave()
+    await setTimeout(async ()=>{
+      await collectionListSave()
+    },20)
     setRefresh(true)
     popupOnlyLoading?.current?.setPopupVisible(false)
   }
@@ -1037,7 +1041,7 @@ function ListPage(props){
           checkOff(item.checkListKey, false, "", "", false, false)
           if((item.hasOwnProperty("Variation") && item["Variation"]!=="NA") || item.hasOwnProperty("Pattern") && item["Pattern"]!=="NA"){
             const variations = getVariations(item["Name"],global.dataLoadedAll,item["checkListKey"], item["index"]);
-            console.log(variations)
+            // console.log(variations)
             for(let variationItem of variations){
               let extraIndex = variationItem["index"]=== variationItem["variationIndex"] ? "0":"";
               checkOff(variationItem.checkListKey + extraIndex, false, "", "", false, false)
@@ -1076,9 +1080,9 @@ function ListPage(props){
           checkOff(item.checkListKey, true, "", "", false, false)
           if((item.hasOwnProperty("Variation") && item["Variation"]!=="NA") || item.hasOwnProperty("Pattern") && item["Pattern"]!=="NA"){
             const variations = getVariations(item["Name"],global.dataLoadedAll,item["checkListKey"], item["index"]);
-            console.log(variations)
+            // console.log(variations)
             for(let variationItem of variations){
-              console.log("UNCHECKING")
+              // console.log("UNCHECKING")
               let extraIndex = variationItem["index"]=== variationItem["variationIndex"] ? "0":"";
               checkOff(variationItem.checkListKey + extraIndex, true, "", "", false, false)
             }

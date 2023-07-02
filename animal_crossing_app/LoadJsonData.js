@@ -708,7 +708,7 @@ export async function deleteGeneratedData(){
 }
 
 export function checkOff(checkListKey, collected, type="", indexSpecial="", vibrate=getSettingsString("settingsEnableVibrations")==="true", save=true){
-  console.log(type+checkListKey+indexSpecial);
+  // console.log(type+checkListKey+indexSpecial);
   // console.log("TYPE"+type)
   if(collected===false){
     vibrate ? Vibration.vibrate([0,10,100,20]) : "";
