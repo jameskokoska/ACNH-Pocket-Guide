@@ -10,6 +10,7 @@ export const changelog = `
 -Fixed search keywords parsing
 -Fixed spelling mistakes
 -New and improved translations
+-ToDo list reset at 5 AM fixed for multiple profiles
 -
 -New item popup details layout
 -Share items list on any page (in the header 3-dot menu)

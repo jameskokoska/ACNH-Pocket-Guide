@@ -94,11 +94,11 @@ export class TodoListWrapped extends Component {
     if(resetEachDay){
       let dateWithOffset = addHours(getCurrentDateObject(true),-5)
       let currentDateString = dateWithOffset.getMonth().toString()+"-"+dateWithOffset.getDate().toString()+"-"+dateWithOffset.getFullYear().toString()
-      let lastOpened = await getStorage("lastOpenedDay",currentDateString);
+      let lastOpened = await getStorage("lastOpenedDay"+global.profile,currentDateString);
       // console.log(lastOpened)
       if(lastOpened!==currentDateString){
         this.uncheckAll()
-        await AsyncStorage.setItem("lastOpenedDay", currentDateString);
+        await AsyncStorage.setItem("lastOpenedDay"+global.profile, currentDateString);
       }
       // console.log(currentDateString)
     }
