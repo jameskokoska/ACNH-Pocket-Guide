@@ -2,7 +2,7 @@
 
 <div align="center" style="font-size:18px">
 
-| 220K+ Downloads | 5.9K+ Reviews | 4.9+ Stars |
+| 225K+ Downloads | 6.0K+ Reviews | 4.9+ Stars |
 | :-------------: | :---------: | :--------: |
 
 </div>
