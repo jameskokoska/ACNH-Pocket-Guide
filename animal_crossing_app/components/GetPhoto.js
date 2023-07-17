@@ -630,136 +630,148 @@ export function getPhoto(name, fallback="", returnFalse=false){
   return require("../assets/icons/leaf.png");
 }
 
-export function getPhotoCorner(name){
+export function getPhotoCorner(name, scale=1){
   if(name===undefined){
     return <View/>;
   } else {
     name = name.toString().toLowerCase();
   }
   if(name.includes("sea") && !name.includes("seasonal") || name.includes("shoreline") || name.includes("beach"))
-    return <Image source={require("../assets/icons/oceanIcon.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>
+    return <Image source={require("../assets/icons/oceanIcon.png")} style={{height: scale * 75, width: scale * 75, borderRadius: 100, resizeMode:'contain'}}/>
   else if(name.includes("pier"))
-    return <Image source={require("../assets/icons/pier.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/pier.png")} style={{height: scale * 75, width: scale * 75, borderRadius: 100, resizeMode:'contain'}}/>;
   else if(name.includes("underwater"))
-    return <Image source={require("../assets/icons/underwater.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/underwater.png")} style={{height: scale * 50, width: scale * 50, resizeMode:'contain'}}/>;
   else if(name.includes("river"))
-    return <Image source={require("../assets/icons/riverIcon.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/riverIcon.png")} style={{height: scale * 75, width: scale * 75, borderRadius: 100, resizeMode:'contain'}}/>;
   else if(name.includes("pond") || name.includes("water"))
-    return <Image source={require("../assets/icons/pondIcon.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/pondIcon.png")} style={{height: scale * 75, width: scale * 75, borderRadius: 100, resizeMode:'contain'}}/>;
   else if(name.includes("flying"))
-    return <Image source={require("../assets/icons/butterflies.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/butterflies.png")} style={{height: scale * 50, width: scale * 50, resizeMode:'contain'}}/>;
   else if(name.includes("flowers") || name.includes("breeding") || name.includes("seed"))
-    return <Image source={require("../assets/icons/flowerIcon.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/flowerIcon.png")} style={{height: scale * 50, width: scale * 50, resizeMode:'contain'}}/>;
   else if(name.includes("rock"))
-    return <Image source={require("../assets/icons/rock.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/rock.png")} style={{height: scale * 50, width: scale * 50, resizeMode:'contain'}}/>;
   else if(name.includes("friendship"))
-    return <Image source={require("../assets/icons/heart.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/heart.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>;
   else if(name.includes("turnip"))
-    return <Image source={require("../assets/icons/turnip.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/turnip.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>;
   else if(name.includes("stump"))
-    return <Image source={require("../assets/icons/stump.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/stump.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>;
   else if(name.includes("palm"))
-    return <Image source={require("../assets/icons/palmTree.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/palmTree.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>;
   else if(name.includes("tree"))
-    return <Image source={require("../assets/icons/forest.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/forest.png")} style={{height: scale * 75, width: scale * 75, borderRadius: 100, resizeMode:'contain'}}/>;
   else if(name.includes("ground"))
-    return <Image source={require("../assets/icons/sprout.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/sprout.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>;
   else if(name.includes("snowballs") || name.includes("jingle"))
-    return <Image source={require("../assets/icons/snow.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/snow.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>;
   else if(name.includes("snowboy"))
-    return <Image source={require("../assets/icons/snowman.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/snowman.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>;
   else if(name.includes("villagers"))
-    return <Image source={require("../assets/icons/cat.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/cat.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>;
   else if(name.includes("rover"))
-    return <Image source={require("../assets/icons/rover.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/rover.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>;
   else if(name.includes("fossil") || name.includes("dig") || name.includes("plant"))
-    return <Image source={require("../assets/icons/digIcon.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/digIcon.png")} style={{height: scale * 50, width: scale * 50, resizeMode:'contain'}}/>;
   else if(name.includes("able"))
-    return <Image source={require("../assets/icons/able.png")} style={{height: 60, width: 60, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/able.png")} style={{height: scale * 60, width: scale * 60, resizeMode:'contain'}}/>;
   else if(name.includes("pascal"))
-    return <Image source={require("../assets/icons/pascal.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/pascal.png")} style={{height: scale * 50, width: scale * 50, resizeMode:'contain'}}/>;
   else if(name.includes("nook miles"))
-    return <Image source={require("../assets/icons/miles.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/miles.png")} style={{height: scale * 50, width: scale * 50, resizeMode:'contain'}}/>;
   else if(name.includes("nooklink"))
-    return <Image source={require("../assets/icons/nookLink.png")} style={{height: 56, width: 56, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/nookLink.png")} style={{height: scale * 56, width: scale * 56, resizeMode:'contain'}}/>;
   else if(name.includes("nook shopping"))
-    return <Image source={require("../assets/icons/nookShopping.png")} style={{height: 56, width: 56, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/nookShopping.png")} style={{height: scale * 56, width: scale * 56, resizeMode:'contain'}}/>;
   else if(name.includes("airline"))
-    return <Image source={require("../assets/icons/airplane.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/airplane.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>;
   else if(name.includes("nook"))
-    return <Image source={require("../assets/icons/nook.png")} style={{height: 55, width: 55, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/nook.png")} style={{height: scale * 55, width: scale * 55, resizeMode:'contain'}}/>;
   else if(name.includes("crafting"))
-    return <Image source={require("../assets/icons/crafting.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/crafting.png")} style={{height: scale * 50, width: scale * 50, resizeMode:'contain'}}/>;
   else if(name.includes("cooking"))
-    return <Image source={require("../assets/icons/cooking.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/cooking.png")} style={{height: scale * 50, width: scale * 50, resizeMode:'contain'}}/>;
   else if(name.includes("gulliver"))
-    return <Image source={require("../assets/icons/oceanIcon.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>
+    return <Image source={require("../assets/icons/oceanIcon.png")} style={{height: scale * 75, width: scale * 75, borderRadius: 100, resizeMode:'contain'}}/>
   else if(name.includes("blathers"))
-    return <Image source={require("../assets/icons/museum.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/museum.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>;
   else if(name.includes("brewster"))
-    return <Image source={require("../assets/icons/brewster.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/brewster.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>;
   else if(name.includes("kicks"))
-    return <Image source={require("../assets/icons/kicks.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/kicks.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>;
   else if(name.includes("daisy mae"))
-    return <Image source={require("../assets/icons/daisymae.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/daisymae.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>;
   else if(name.includes("cyrus"))
-    return <Image source={require("../assets/icons/cyrus.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/cyrus.png")} style={{height: scale * 50, width: scale * 50, resizeMode:'contain'}}/>;
   else if(name.includes("k.k."))
-    return <FastImage source={{uri:"https://acnhcdn.com/latest/NpcIcon/tkkA.png"}} cacheKey={"https://acnhcdn.com/latest/NpcIcon/tkkA.png"} style={{height: 50, width: 50, resizeMode:'contain'}}/>;
+    return <FastImage source={{uri:"https://acnhcdn.com/latest/NpcIcon/tkkA.png"}} cacheKey={"https://acnhcdn.com/latest/NpcIcon/tkkA.png"} style={{height: scale * 50, width: scale * 50, resizeMode:'contain'}}/>;
   else if(name.includes("katrina"))
-    return <Image source={require("../assets/icons/katrina.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/katrina.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>;
   else if(name.includes("redd"))
-    return <Image source={require("../assets/icons/redd.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/redd.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>;
   else if(name.includes("lottie") || name.includes("hhp office"))
-    return <Image source={require("../assets/icons/lottie.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/lottie.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>;
   else if(name.includes("leif"))
-    return <Image source={require("../assets/icons/leif.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/leif.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>;
   else if(name.includes("niko"))
-    return <Image source={require("../assets/icons/niko.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/niko.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>;
   else if(name.includes("wardell"))
-    return <Image source={require("../assets/icons/wardell.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/wardell.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>;
   else if(name.includes("harriet"))
-    return <Image source={require("../assets/icons/harriet.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/harriet.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>;
   else if(name.includes("harvey"))
-    return <Image source={require("../assets/icons/harvey.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/harvey.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>;
   else if(name.includes("café"))
-    return <Image source={require("../assets/icons/cafe.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/cafe.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>;
   else if(name.includes("celeste"))
-    return <FastImage source={{uri:"https://acnhcdn.com/latest/NpcIcon/ows.png"}} cacheKey={"https://acnhcdn.com/latest/NpcIcon/ows.png"} style={{height: 55, width: 55, resizeMode:'contain'}}/>;
+    return <FastImage source={{uri:"https://acnhcdn.com/latest/NpcIcon/ows.png"}} cacheKey={"https://acnhcdn.com/latest/NpcIcon/ows.png"} style={{height: scale * 55, width: scale * 55, resizeMode:'contain'}}/>;
   else if(name.includes("new year"))
-    return <Image source={require("../assets/icons/popper.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>
+    return <Image source={require("../assets/icons/popper.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>
   else if(name.includes("saharah"))
-    return <Image source={require("../assets/icons/saharah.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
+    return <Image source={require("../assets/icons/saharah.png")} style={{height: scale * 50, width: scale * 50, resizeMode:'contain'}}/>
   else if(name.includes("balloons"))
-    return <Image source={require("../assets/icons/balloon.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
+    return <Image source={require("../assets/icons/balloon.png")} style={{height: scale * 50, width: scale * 50, resizeMode:'contain'}}/>
   else if(name.includes("stars"))
-    return <Image source={require("../assets/icons/sparkle.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
+    return <Image source={require("../assets/icons/sparkle.png")} style={{height: scale * 50, width: scale * 50, resizeMode:'contain'}}/>
   else if(name.includes("recipe"))
-    return <Image source={require("../assets/icons/crafting.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
+    return <Image source={require("../assets/icons/crafting.png")} style={{height: scale * 50, width: scale * 50, resizeMode:'contain'}}/>
   else if(name.includes("diy"))
-    return <Image source={require("../assets/icons/crafting.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
+    return <Image source={require("../assets/icons/crafting.png")} style={{height: scale * 50, width: scale * 50, resizeMode:'contain'}}/>
   else if(name.includes("jack"))
-    return <Image source={require("../assets/icons/pumpkin.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
+    return <Image source={require("../assets/icons/pumpkin.png")} style={{height: scale * 50, width: scale * 50, resizeMode:'contain'}}/>
   else if(name.includes("zipper"))
-    return <Image source={require("../assets/icons/bunny.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
+    return <Image source={require("../assets/icons/bunny.png")} style={{height: scale * 50, width: scale * 50, resizeMode:'contain'}}/>
   else if(name.includes("treasure trawler"))
-    return <Image source={require("../assets/icons/ship.png")} style={{height: 75, width: 75, borderRadius: 100, resizeMode:'contain'}}/>
+    return <Image source={require("../assets/icons/ship.png")} style={{height: scale * 75, width: scale * 75, borderRadius: 100, resizeMode:'contain'}}/>
   else if(name.includes("c.j."))
-    return <Image source={require("../assets/icons/cj.png")} style={{height: 44, width: 44, resizeMode:'contain'}}/>
+    return <Image source={require("../assets/icons/cj.png")} style={{height: scale * 44, width: scale * 44, resizeMode:'contain'}}/>
   else if(name.includes("flick"))
-    return <Image source={require("../assets/icons/flick.png")} style={{height: 44, width: 44, resizeMode:'contain'}}/>
+    return <Image source={require("../assets/icons/flick.png")} style={{height: scale * 44, width: scale * 44, resizeMode:'contain'}}/>
   else if(name.includes("fish") || name.includes("catching"))
-    return <Image source={require("../assets/icons/fish.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
+    return <Image source={require("../assets/icons/fish.png")} style={{height: scale * 50, width: scale * 50, resizeMode:'contain'}}/>
   else if(name.includes("net"))
-    return <Image source={require("../assets/icons/airIcon.png")} style={{height: 50, width: 50, resizeMode:'contain'}}/>
+    return <Image source={require("../assets/icons/airIcon.png")} style={{height: scale * 50, width: scale * 50, resizeMode:'contain'}}/>
+  else if(name.includes("star"))
+    return <Image source={require("../assets/icons/star.png")} style={{height: scale * 50, width: scale * 50, resizeMode:'contain'}}/>
   else if(name.includes("female"))
-    return <Image source={require("../assets/icons/female.png")} style={{height: 40, width: 40, resizeMode:'contain'}}/>
+    return <Image source={require("../assets/icons/female.png")} style={{height: scale * 40, width: scale * 40, resizeMode:'contain'}}/>
   else if(name.includes("male"))
-    return <Image source={require("../assets/icons/male.png")} style={{height: 37, width: 37, resizeMode:'contain'}}/>
+    return <Image source={require("../assets/icons/male.png")} style={{height: scale * 37, width: scale * 37, resizeMode:'contain'}}/>
   else if(name.includes("recycle"))
-    return <Image source={require("../assets/icons/recycle.png")} style={{height: 40, width: 40, resizeMode:'contain'}}/>
+    return <Image source={require("../assets/icons/recycle.png")} style={{height: scale * 40, width: scale * 40, resizeMode:'contain'}}/>
+  else if(name.includes("bottle"))
+    return <FastImage source={{uri:"https://acnhcdn.com/latest/MenuIcon/BottleRecipe.png"}} cacheKey={"https://acnhcdn.com/latest/MenuIcon/BottleRecipe.png"} style={{height: scale * 60, width: scale * 60, resizeMode:'contain'}}/>;
+  else if(name.includes("kapp'n"))
+    return <FastImage source={{uri:"https://acnhcdn.com/latest/NpcIcon/kpp.png"}} cacheKey={"https://acnhcdn.com/latest/NpcIcon/kpp.png"} style={{height: scale * 55, width: scale * 55, resizeMode:'contain'}}/>;
+  else if(name.includes("axes"))
+    return <FastImage source={{uri:"https://acnhcdn.com/latest/DIYRecipeIcon/ToolAxe.png"}} cacheKey={"https://acnhcdn.com/latest/DIYRecipeIcon/ToolAxe.png"} style={{height: scale * 55, width: scale * 55, resizeMode:'contain'}}/>;
+  else if(name.includes("glowing spot"))
+    return <Image source={require("../assets/icons/glowingHole.png")} style={{height: scale * 50, width: scale * 50, resizeMode:'contain'}}/>
+  else if(name.includes("collecting") && name.includes("eggs"))
+    return <Image source={require("../assets/icons/bunny.png")} style={{height: scale * 50, width: scale * 50, resizeMode:'contain'}}/>
   else
-    return <Image source={require("../assets/icons/leaf.png")} style={{height: 45, width: 45, resizeMode:'contain'}}/>;
+    return <Image source={require("../assets/icons/leaf.png")} style={{height: scale * 45, width: scale * 45, resizeMode:'contain'}}/>;
 }
 
 export function getPhotoCornerSize(name){

@@ -53,10 +53,11 @@ export class LeftCornerImage extends Component {
       photoSource = "Underwater"
     }
     let photo = getPhotoCorner(photoSource)
+    let photoPopup = getPhotoCorner(photoSource, 2.7)
     return <View style={{ zIndex:50, position: "absolute", top:-15, left:-15,margin: 30,}}>
       <TouchableOpacity
         activeOpacity={0.9}
-        onPress={() => {this.popupImageSource?.setPopupVisible(true, getPhoto(photoSource?.toLowerCase()),this.props.item, photoSource)}}
+        onPress={() => {this.popupImageSource?.setPopupVisible(true, photoPopup,this.props.item, photoSource)}}
         style={{alignItems: 'center',}}
       >
         <View style={{backgroundColor:this.props.accentColor,width: 75, height: 75, borderRadius: 100, justifyContent: 'center', alignItems: 'center' }}>
@@ -767,10 +768,7 @@ class PopupImageSource extends Component {
       else
         maxWidth = Dimensions.get('window').width*0.6
     }
-    let imageComp = <Image
-      style={{height: maxWidth,width: maxWidth,resizeMode:'contain',borderRadius:5}}
-      source={this.state.image}
-    />
+    let imageComp = this.state.image ?? <View></View>
     return(
       <PopupInfoCustom ref={(popup) => this.popup = popup} buttonText={"Close"}>
         <View style={{alignItems:"center"}}>
@@ -778,7 +776,7 @@ class PopupImageSource extends Component {
           <TextFont bold style={{color:colors.textBlack[global.darkMode], fontSize:18, textAlign:"center", marginTop: 10}}>{this.state.label}</TextFont>
           {this.state.label===this.state.item["Source"] || this.state.item["Source"]===undefined ? <></> : <TextFont style={{color:colors.textBlack[global.darkMode], fontSize:16, textAlign:"center", marginTop: 10}}>{this.state.item["Source"]}</TextFont>}
           {this.state.item["Source Notes"]===undefined || this.state.item["Source Notes"]==="NA" ? <></> : <TextFont style={{color:colors.textBlack[global.darkMode], fontSize:16, textAlign:"center", marginTop: 10}}>{this.state.item["Source Notes"]}</TextFont>}
-          <View style={{height:15}}/>
+          <View style={{height:5}}/>
         </View>
       </PopupInfoCustom>
     )

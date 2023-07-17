@@ -16,6 +16,7 @@ const filterDefinitions = require("../assets/data/Generated/filterDefinitions.js
 import SectionedMultiSelect from 'react-native-sectioned-multi-select';
 import {MaterialIcons} from '@expo/vector-icons';
 import { AnimatedPopupWrapper } from "./PopupAnimatedWrapper";
+import { ScrollView } from "react-native-gesture-handler";
 
 function addNewFilter(filterObject, newFilter){
   filterObject[0].children.push(newFilter)
@@ -456,87 +457,106 @@ class PopupFilter extends Component {
         >
           <AnimatedPopupWrapper style={styles.centeredView} disableAnimations={getSettingsString("settingsLowEndDevice")==="true"}>
             <TouchableOpacity onPress={()=>{this.setPopupVisible(!this.state.popupVisible);}} activeOpacity={0.55} style={{position:"absolute", left:-100, top:-100, width: Dimensions.get('window').width+200, height: Dimensions.get('window').height+200, backgroundColor: "black", opacity: 0.6}}/>
-            <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode], height:Dimensions.get('window').height*0.75}]}>
-              <TextFont bold={true} style={{fontSize: 22, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Set Filters</TextFont>
-              <View style={{height:10}}/>
-              <SectionedMultiSelect
-                noResultsComponent={<TextFont style={{padding:20, textAlign:"center", fontSize: 20, color:colors.textBlack[global.darkMode]}}>{attemptToTranslate("Not found")}</TextFont>}
-                searchPlaceholderText={attemptToTranslate("Search for an item")}
-                IconRenderer={MaterialIcons}
-                items={filters}
-                uniqueKey="id"
-                subKey="children"
-                selectText=""
-                showDropDowns={true}
-                readOnlyHeadings={true}
-                onSelectedItemsChange={this.onSelectedItemsChange}
-                selectedItems={this.state.selectedItems}
-                ref={SectionedMultiSelect => {this.SectionedMultiSelect = SectionedMultiSelect; if(this.openFirst){SectionedMultiSelect._toggleSelector(true); this.openFirst=false}}}
-                colors={{primary:colors.okButton[global.darkMode], chipColor:colors.selectedText[global.darkMode], text:colors.textBlack[global.darkMode], subText:colors.textBlack[global.darkMode], itemBackground: colors.white[global.darkMode], subItemBackground: colors.white[global.darkMode]}}
-                hideSelect={true}
-                styles={{chipText:{fontFamily:"ArialRoundedBold", fontSize:14, color:colors.textBlack[global.darkMode]},confirmText:{padding:7},container:{backgroundColor:colors.white[global.darkMode], borderRadius:15}, selectedItem:{backgroundColor:colors.lightDarkAccent[global.darkMode], marginHorizontal:5, paddingHorizontal:10, borderRadius:5,}, subItem:{marginHorizontal:5, paddingHorizontal:10, paddingVertical:7}, item:{paddingVertical:12}, searchBar:{backgroundColor:colors.lightDarkAccent2[global.darkMode]}, searchTextInput:{color:colors.textBlack[global.darkMode]}}}
-                modalWithTouchable={true}
-                itemFontFamily={{fontFamily:"ArialRoundedBold"}}
-                subItemFontFamily={{fontFamily:"ArialRounded"}}
-                searchTextFontFamily={{fontFamily:"ArialRounded"}}
-                confirmFontFamily={{fontFamily:"ArialRoundedBold"}}
-                confirmText={attemptToTranslate("Confirm")}
-                customChipsRenderer = {(props) => {
-                  if(!props.selectedItems){
-                    return <View/>
-                  }
-                  return (
-                    <View style={{display:"flex", flexDirection:"row", flexWrap:"wrap"}}>
-                      {this.state.selectedItems.map((singleSelectedItem,index) => {
-                        if(!singleSelectedItem) return <View></View>
-                        const item = this.SectionedMultiSelect?._findItem(singleSelectedItem)
-                        if (!item || !item[props.displayKey]) return this.savedItems[index]
-                        this.savedItems[index] = (<TouchableOpacity key={item[props.uniqueKey]} onPress={() => { this.SectionedMultiSelect._removeItem(item) }} style={{borderRadius: 10, paddingHorizontal:15, paddingVertical:5, marginHorizontal:5, marginVertical:5, paddingBottom: 8, backgroundColor:colors.lightDarkAccent[global.darkMode], flexDirection:"row", alignItems:"center"}}>
-                          <TextFont style={{fontSize: 18, color:colors.textBlack[global.darkMode],}}>{item[props.displayKey]}</TextFont>
-                          <Image style={{width:16,height:16, marginTop: 4, marginLeft:5, marginRight:-5, opacity: 0.35, resizeMode:"contain",}} source={global.darkMode ? require("../assets/icons/exitWhite.png") : require("../assets/icons/exit.png")}/>
-                        </TouchableOpacity>)
-                        return this.savedItems[index]
-                      })} 
-                    </View>
-                  )
-                }}
-              />
-              
-              <View style={{position:"absolute", bottom: 20}}>
-                <ButtonComponent
-                  text={"Select Filters"}
-                  color={colors.dateButton[global.darkMode]}
-                  vibrate={5}
-                  onPress={() => {
-                    this.SectionedMultiSelect._toggleSelector()
-                  }}
-                />
-                <View style={{flexDirection:"row"}}>
-                  <ButtonComponent
-                    text={"Clear Filters"}
-                    color={colors.filtersResetButton[global.darkMode]}
-                    vibrate={5}
-                    onPress={() => {
-
-                      this.setPopupVisible(!this.state.popupVisible);
-                      this.defaultValues=["Check"];
-                      AsyncStorage.setItem(this.props.title+"Filters", "");
-                      if(this.mounted){
-                        this.props.updateSearchFilters(this.defaultValues);
+            <View style={[styles.modalView,{backgroundColor: colors.white[global.darkMode]}]}>
+              <ScrollView>
+                <View style={{paddingHorizontal:20}}>
+                  <View style={{height:20}}/>
+                  <TextFont bold={true} style={{fontSize: 22, textAlign:"center", color: colors.textBlack[global.darkMode]}}>Set Filters</TextFont>
+                  <View style={{height:10}}/>
+                  <SectionedMultiSelect
+                    noResultsComponent={<TextFont style={{padding:20, textAlign:"center", fontSize: 20, color:colors.textBlack[global.darkMode]}}>{attemptToTranslate("Not found")}</TextFont>}
+                    searchPlaceholderText={attemptToTranslate("Search for an item")}
+                    IconRenderer={MaterialIcons}
+                    items={filters}
+                    uniqueKey="id"
+                    subKey="children"
+                    selectText=""
+                    showDropDowns={true}
+                    readOnlyHeadings={true}
+                    onSelectedItemsChange={this.onSelectedItemsChange}
+                    selectedItems={this.state.selectedItems}
+                    ref={SectionedMultiSelect => {this.SectionedMultiSelect = SectionedMultiSelect; if(this.openFirst){SectionedMultiSelect._toggleSelector(true); this.openFirst=false}}}
+                    colors={{primary:colors.okButton[global.darkMode], chipColor:colors.selectedText[global.darkMode], text:colors.textBlack[global.darkMode], subText:colors.textBlack[global.darkMode], itemBackground: colors.white[global.darkMode], subItemBackground: colors.white[global.darkMode]}}
+                    hideSelect={true}
+                    dropDownToggleIconDownComponent={<Image
+                      style={{width:18,height:18,resizeMode:'contain',transform: [{ rotate: '270deg'}], opacity: 0.6}}
+                      source={global.darkMode ? require("../assets/icons/leftArrowWhite.png") : require("../assets/icons/leftArrow.png")}
+                    />}
+                    dropDownToggleIconUpComponent={<Image
+                      style={{width:18,height:18,resizeMode:'contain',transform: [{ rotate: '90deg'}], opacity: 0.6}}
+                      source={global.darkMode ? require("../assets/icons/leftArrowWhite.png") : require("../assets/icons/leftArrow.png")}
+                    />}
+                    styles={{separator:{backgroundColor: colors.lightDarkAccent[global.darkMode], height:2},chipText:{fontFamily:"ArialRoundedBold", fontSize:14, color:colors.textBlack[global.darkMode]},confirmText:{padding:7},container:{backgroundColor:colors.white[global.darkMode], borderRadius:15}, selectedItem:{backgroundColor:colors.lightDarkAccent[global.darkMode], marginHorizontal:5, paddingHorizontal:10, borderRadius:5,}, subItem:{marginHorizontal:5, paddingHorizontal:10, paddingVertical:7, marginBottom:2}, item:{paddingVertical:12}, searchBar:{backgroundColor:colors.lightDarkAccent2[global.darkMode]}, searchTextInput:{color:colors.textBlack[global.darkMode]}}}
+                    modalWithTouchable={true}
+                    itemFontFamily={{fontFamily:"ArialRoundedBold"}}
+                    subItemFontFamily={{fontFamily:"ArialRounded"}}
+                    searchTextFontFamily={{fontFamily:"ArialRounded"}}
+                    confirmFontFamily={{fontFamily:"ArialRoundedBold"}}
+                    confirmText={attemptToTranslate("Confirm")}
+                    customChipsRenderer = {(props) => {
+                      if(!props.selectedItems){
+                        return <View/>
                       }
-                      this.SectionedMultiSelect._removeAllItems()
+                      return (
+                        <View style={{display:"flex", flexDirection:"row", flexWrap:"wrap", justifyContent:"center", alignItems:'center'}}>
+                          {this.state.selectedItems.map((singleSelectedItem,index) => {
+                            if(!singleSelectedItem) return <View></View>
+                            const item = this.SectionedMultiSelect?._findItem(singleSelectedItem)
+                            if (!item || !item[props.displayKey]) return this.savedItems[index]
+                            this.savedItems[index] = (<TouchableOpacity key={item[props.uniqueKey]} onPress={() => { this.SectionedMultiSelect._removeItem(item) }} style={{borderRadius: 10, paddingHorizontal:15, paddingVertical:5, marginHorizontal:5, marginVertical:5, paddingBottom: 8, backgroundColor:colors.lightDarkAccent[global.darkMode], flexDirection:"row", alignItems:"center"}}>
+                              <TextFont style={{fontSize: 18, color:colors.textBlack[global.darkMode],}}>{item[props.displayKey]}</TextFont>
+                              <Image style={{width:16,height:16, marginTop: 4, marginLeft:5, marginRight:-5, opacity: 0.35, resizeMode:"contain",}} source={global.darkMode ? require("../assets/icons/exitWhite.png") : require("../assets/icons/exit.png")}/>
+                            </TouchableOpacity>)
+                            return this.savedItems[index]
+                          })} 
+                        </View>
+                      )
                     }}
                   />
+                  
+                  
                   <ButtonComponent
-                    text={"OK"}
-                    color={colors.okButton[global.darkMode]}
+                    text={"Select Filters"}
+                    color={colors.dateButton[global.darkMode]}
                     vibrate={5}
                     onPress={() => {
-                      this.setPopupVisible(!this.state.popupVisible);
+                      this.SectionedMultiSelect._toggleSelector()
                     }}
+                    marginHorizontal={5}
                   />
+                  
+                  <View style={{width:"100%",flexDirection:"row", alignItems:'center', justifyContent:"center", flex:1}}>
+                    <ButtonComponent
+                      text={"Clear Filters"}
+                      color={colors.filtersResetButton[global.darkMode]}
+                      vibrate={5}
+                      onPress={() => {
+
+                        this.setPopupVisible(!this.state.popupVisible);
+                        this.defaultValues=["Check"];
+                        AsyncStorage.setItem(this.props.title+"Filters", "");
+                        if(this.mounted){
+                          this.props.updateSearchFilters(this.defaultValues);
+                        }
+                        this.SectionedMultiSelect._removeAllItems()
+                      }}
+                      marginHorizontal={5}
+                      style={{ flex: 1, opacity: this.state.selectedItems!=undefined && this.state.selectedItems?.length <= 0 ? 0.3 : 1 }}
+                    />
+                    <ButtonComponent
+                      text={"OK"}
+                      color={colors.okButton[global.darkMode]}
+                      vibrate={5}
+                      onPress={() => {
+                        this.setPopupVisible(!this.state.popupVisible);
+                      }}
+                      marginHorizontal={5}
+                      style={{ flex: 1,  }}
+                    />
+                  </View>
+                  <View style={{height:20}}/>
                 </View>
-              </View>
+              </ScrollView>
             </View>
           </AnimatedPopupWrapper>
         </Modal>
@@ -552,11 +572,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     paddingHorizontal: 20,
     backgroundColor:"rgba(0,0,0,0.5)",
+    paddingTop: "10%",
   },
   modalView: {
     margin: 10,
     borderRadius: 10,
-    padding: 20,
     alignItems: "center",
     elevation: 5
   },
