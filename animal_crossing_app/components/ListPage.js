@@ -1028,7 +1028,9 @@ function ListPage(props){
         }
       }
     },10)
-    await collectionListSave()
+    await setTimeout(async ()=>{
+      await collectionListSave()
+    },20)
     setRefresh(true)
     popupOnlyLoading?.current?.setPopupVisible(false)
   }
@@ -1053,7 +1055,9 @@ function ListPage(props){
     // Clear the bottom sheet
     bottomSheetRenderRef?.current?.update("item", ()=>{})
     
-    await collectionListSave()
+    await setTimeout(async ()=>{
+      await collectionListSave()
+    },20)
     setRefresh(true)
     popupOnlyLoading?.current?.setPopupVisible(false)
   }
@@ -1067,7 +1071,9 @@ function ListPage(props){
         }
       }
     },10)
-    await collectionListSave()
+    await setTimeout(async ()=>{
+      await collectionListSave()
+    },20)
     setRefresh(true)
     popupOnlyLoading?.current?.setPopupVisible(false)
   }
@@ -1093,7 +1099,9 @@ function ListPage(props){
     // Clear the bottom sheet
     bottomSheetRenderRef?.current?.update("item", ()=>{})
     
-    await collectionListSave()
+    await setTimeout(async ()=>{
+      await collectionListSave()
+    },20)
     setRefresh(true)
     popupOnlyLoading?.current?.setPopupVisible(false)
   }
@@ -1111,7 +1119,9 @@ function ListPage(props){
         }
       }
     },10)
-    await collectionListSave()
+    await setTimeout(async ()=>{
+      await collectionListSave()
+    },20)
     setRefresh(true)
     popupOnlyLoading?.current?.setPopupVisible(false)
   }
@@ -1125,7 +1135,9 @@ function ListPage(props){
         }
       }
     },10)
-    await collectionListSave()
+    await setTimeout(async ()=>{
+      await collectionListSave()
+    },20)
     setRefresh(true)
     popupOnlyLoading?.current?.setPopupVisible(false)
   }
@@ -1138,7 +1150,9 @@ function ListPage(props){
         }
       }
     },10)
-    await collectionListSave()
+    await setTimeout(async ()=>{
+      await collectionListSave()
+    },20)
     setRefresh(true)
     popupOnlyLoading?.current?.setPopupVisible(false)
   }

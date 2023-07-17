@@ -7,6 +7,7 @@ export const changelog = `
 -Improved layout and popup when using filters
 -Added more icons indicating the source of the item
 -Source icon popup is consistent with original source icon
+-Fixed saving of collection when checking/unchecking in bulk
 -
 -New Gold Supporter: Fishy McChicken! Thank you!
 -New Silver Supporter: gilgatex! Thank you!
