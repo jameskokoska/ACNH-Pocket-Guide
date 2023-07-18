@@ -4,6 +4,10 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Support for new catalog scanner website
+-Improved catalog scanning page and site cards
+-Primitive translations for all languages
+-
 -Improved layout and popup when using filters
 -Added more icons indicating the source of the item
 -Source icon popup is consistent with original source icon

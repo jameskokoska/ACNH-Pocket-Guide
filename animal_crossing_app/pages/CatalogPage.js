@@ -7,12 +7,14 @@ import StoreHoursContainer from '../components/StoreHoursContainer';
 import colors from '../Colors'
 import ButtonComponent from "../components/ButtonComponent"
 import {attemptToTranslate, collectionListSave, checkOff, loadGlobalData, indexCollectionList, openURL, getSettingsString, capitalize, attemptToTranslateSpecial, variationsCheckedPercent, getStorage} from "../LoadJsonData"
-import Popup, { PopupInfoCustom, PopupOnlyLoading } from '../components/Popup';
+import Popup, { PopupBottomCustom, PopupInfoCustom, PopupOnlyLoading } from '../components/Popup';
 import ToggleSwitch from 'toggle-switch-react-native';
 import FastImage from '../components/FastImage';
 import { getVariations, VariationItem, Variations } from '../components/BottomSheetComponents';
 import { getPhoto } from '../components/GetPhoto';
 import { TabBar, TabView } from 'react-native-tab-view';
+import { MailLink, SubHeader } from '../components/Formattings';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 class CatalogPage extends Component {
@@ -38,10 +40,21 @@ class CatalogPage extends Component {
       selectVariations: true,
       skipCompletedVariations: true,
       routes: [
-        { key: 'Catalog Scanner', title: attemptToTranslate('Catalog Scanner App') },
+        { key: 'Catalog Scanner App', title: attemptToTranslate('Catalog Scanner App') },
+        { key: 'Catalog Scanner Website', title: attemptToTranslate('Catalog Scanner Website') },
         { key: 'Nook.lol', title: attemptToTranslate('Nook.lol') },
       ],
     }
+  }
+
+  async componentDidMount(){
+    setTimeout(async ()=>{
+      let response = await getStorage("catalogScannerInfoPopup","")
+      if(response === ""){
+        this.popupCatalogScannerInfo?.setPopupVisible(true)
+        await AsyncStorage.setItem("catalogScannerInfoPopup", "true");
+      }
+    },0)
   }
 
   import = async (type) =>{
@@ -224,62 +237,98 @@ class CatalogPage extends Component {
     }
   }
 
+  infoButton = () => {
+    const icon = global.darkMode?require("../assets/icons/infoWhite.png"):require("../assets/icons/info.png");
+    return (
+      <>
+        <TouchableOpacity style={{zIndex:5, position:"absolute", padding:15, right:0}} onPress={()=>{this.popupCatalogScannerInfo?.setPopupVisible(true)}}>
+          <Image style={{width:25,height:25,opacity: 0.35, resizeMode:"contain"}} source={icon}/>
+        </TouchableOpacity>
+      </>
+    )
+  }
+
+  catalogScannerAppWeb = ({banner, subtitle}) => {
+    return <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
+      <ScrollView>
+        {this.infoButton()}
+        <View style={{height: 100}}/>
+        <TextFont bold={true} style={{fontSize: 37, marginLeft: 30, marginRight: 30, color:colors.textBlack[global.darkMode]}}>Catalog Import</TextFont>
+        <TextFont bold={true} style={{fontSize: 17, marginLeft: 30, marginRight: 30, color:colors.textBlack[global.darkMode]}}>{subtitle}</TextFont>
+        {banner}
+        {!supportCatalogScanner() ? <View style={{marginTop:0, marginBottom: 20}}>
+          <View style={{height: 10}}/>
+          <View style={{backgroundColor: colors.popupDanger[global.darkMode]}}>
+            <View style={{height: 10}}/>
+            <TextFont bold={true} style={{fontSize: 16, marginRight: 20, color:colors.textWhite[0], alignSelf: 'flex-start', padding:5, paddingHorizontal:10, marginHorizontal: 20, borderRadius:10}}>{"For other languages other than English items please use nook.lol"}</TextFont>
+            <TextFont bold={true} style={{fontSize: 16, marginRight: 20, color:colors.textWhite[0], alignSelf: 'flex-start', padding:5, paddingHorizontal:10, marginHorizontal: 20, borderRadius:10}}>{"This can be found on the third tab of this page above."}</TextFont>
+            <View style={{height: 10}}/>
+          </View>
+          </View> : 
+        <View/>}
+        <TextFont bold={true} style={{fontSize: 20, marginLeft: 30, marginRight: 40, color:colors.textBlack[global.darkMode]}}>{"Paste results here and Import"}</TextFont>
+        <View style={{height: 15}}/>
+        <TextInput
+          allowFontScaling={false}
+          style={{borderRadius: 10, maxHeight: 130, paddingVertical: 10, paddingHorizontal: 20, marginHorizontal: 20, fontSize: 18, backgroundColor:colors.white[global.darkMode], color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
+          onChangeText={(text) => {this.input = text}}
+          placeholder={"Abstract wall\nBackyard-fence wall\nGo K.K. Rider\n..."}
+          placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+          multiline={true}
+        />
+        <View style={{height: 10}}/>
+        <View style={{marginHorizontal: 10}}>
+          <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={async ()=>{await this.import("catalogScanner");}} text={"Import"}/>
+        </View>
+        <View style={{height: 10}}/>
+        <TextFont suffix={"\n"+attemptToTranslate("Please be patient.")} bold={false} style={{fontSize: 13, marginLeft: 30, marginRight: 30, textAlign:"center",color:colors.textBlack[global.darkMode]}}>{"May take a few seconds to complete."}</TextFont>
+        <View style={{height: 25}}/>
+        <IncludeSwitch header={"Select Variations"} text={"Open a popup to select variations of the item when importing. Only the items with variations will create a popup."} value={this.state.selectVariations} toggleValue={()=>{this.setState({selectVariations:!this.state.selectVariations})}}/>
+        <View style={{height: 5}}/>
+        <IncludeSwitch header={"Skip Completed Variations"} text={"Don't show variation selection for items you've already collected all the variations for. This option is only used when 'Select Variations' is enabled."} value={this.state.skipCompletedVariations} toggleValue={()=>{this.setState({skipCompletedVariations:!this.state.skipCompletedVariations})}}/>
+        <View style={{height: 5}}/>
+        <IncludeSwitch header={"Include Recipes"} text={"Include recipes when importing items. Recipes and the item counterpart have the same name."} value={this.state.includeRecipes} toggleValue={()=>{this.setState({includeRecipes:!this.state.includeRecipes})}}/>
+        <View style={{height: 5}}/>
+        <IncludeSwitch header={"Include Villagers"} text={"Include villagers when importing items. Some villagers have the same name as items."} value={this.state.includeVillagers} toggleValue={()=>{this.setState({includeVillagers:!this.state.includeVillagers})}}/>
+        <View style={{height: 90}}/>
+      </ScrollView>
+    </View>;
+  }
+
+  nookLolWebsiteCard = () => {
+    return <WebsiteCard previewHeight={90} backgroundColor={"#46392F"} bannerSrc={require("../assets/icons/nooklol-banner.png")} url={'https://nook.lol/'} description={"A simple bot for extracting your ACNH catalog items, DIY recipes, critters and more."} title={"nook.lol"}/>
+  }
+
+  scannerAppCard = () => {
+    return <>
+      <TouchableOpacity activeOpacity={0.6} onPress={()=>{openURL("https://play.google.com/store/apps/details?id=com.acnh.catalog_scanner")}} style={{backgroundColor: colors.white[global.darkMode], marginHorizontal: 15, borderColor: colors.lightDarkAccentHeavy[global.darkMode], borderStyle: 'solid', borderWidth: 1.5, borderRadius: 15, marginVertical: 25, paddingTop: 15, paddingBottom: 5}}>
+        <CatalogScannerApp/>
+      </TouchableOpacity>
+    </>
+  }
+
+  scannerWebsiteCard = () => {
+    return <WebsiteCard backgroundColor={"#fff563"} bannerSrc={require("../assets/icons/catalog-scanner-banner.png")} url={'https://acnh-scanner.web.app/'} description={"Scan your ACNH collection with ease!"} title={"ACNH Catalog Scanner"}/>
+  }
+
   renderScene = ({ route }) => {
     switch (route.key) {
-      case 'Catalog Scanner':
-        return <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
-        <ScrollView>
-          <View style={{height: 100}}/>
-          <TextFont bold={true} style={{fontSize: 37, marginLeft: 30, marginRight: 30, color:colors.textBlack[global.darkMode]}}>Catalog Import</TextFont>
-          <TextFont bold={true} style={{fontSize: 17, marginLeft: 30, marginRight: 30, color:colors.textBlack[global.darkMode]}}>With the catalog scanner app</TextFont>
-          <View style={{height: 35}}/>
-          <CatalogScannerApp/>
-          {!supportCatalogScanner() ? <View style={{marginTop:10}}>
-            <View style={{height: 10}}/>
-            <View style={{backgroundColor: colors.popupDanger[global.darkMode]}}>
-              <View style={{height: 10}}/>
-              <TextFont bold={true} style={{fontSize: 16, marginRight: 20, color:colors.textWhite[0], alignSelf: 'flex-start', padding:5, paddingHorizontal:10, marginHorizontal: 20, borderRadius:10}}>{"For other languages other than English items please use nook.lol"}</TextFont>
-              <TextFont bold={true} style={{fontSize: 16, marginRight: 20, color:colors.textWhite[0], alignSelf: 'flex-start', padding:5, paddingHorizontal:10, marginHorizontal: 20, borderRadius:10}}>{"This can be found on the second tab of this page above."}</TextFont>
-              <View style={{height: 10}}/>
-            </View>
-            </View> : 
-          <View/>}
-          <View style={{height: 25}}/>
-          
-          <TextFont bold={true} style={{fontSize: 20, marginLeft: 30, marginRight: 40, color:colors.textBlack[global.darkMode]}}>{"Paste results here and Import"}</TextFont>
-          <View style={{height: 15}}/>
-          <TextInput
-            allowFontScaling={false}
-            style={{borderRadius: 10, maxHeight: 130, paddingVertical: 10, paddingHorizontal: 20, marginHorizontal: 20, fontSize: 18, backgroundColor:colors.white[global.darkMode], color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold"}}
-            onChangeText={(text) => {this.input = text}}
-            placeholder={"Abstract wall\nBackyard-fence wall\nGo K.K. Rider\n..."}
-            placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
-            multiline={true}
-          />
-          <View style={{height: 10}}/>
-          <View style={{marginHorizontal: 10}}>
-            <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={async ()=>{await this.import("catalogScanner");}} text={"Import"}/>
-          </View>
-          <View style={{height: 10}}/>
-          <TextFont suffix={"\n"+attemptToTranslate("Please be patient.")} bold={false} style={{fontSize: 13, marginLeft: 30, marginRight: 30, textAlign:"center",color:colors.textBlack[global.darkMode]}}>{"May take a few seconds to complete."}</TextFont>
-          <View style={{height: 25}}/>
-          <IncludeSwitch header={"Select Variations"} text={"Open a popup to select variations of the item when importing. Only the items with variations will create a popup."} value={this.state.selectVariations} toggleValue={()=>{this.setState({selectVariations:!this.state.selectVariations})}}/>
-          <View style={{height: 5}}/>
-          <IncludeSwitch header={"Skip Completed Variations"} text={"Don't show variation selection for items you've already collected all the variations for. This option is only used when 'Select Variations' is enabled."} value={this.state.skipCompletedVariations} toggleValue={()=>{this.setState({skipCompletedVariations:!this.state.skipCompletedVariations})}}/>
-          <View style={{height: 5}}/>
-          <IncludeSwitch header={"Include Recipes"} text={"Include recipes when importing items. Recipes and the item counterpart have the same name."} value={this.state.includeRecipes} toggleValue={()=>{this.setState({includeRecipes:!this.state.includeRecipes})}}/>
-          <View style={{height: 5}}/>
-          <IncludeSwitch header={"Include Villagers"} text={"Include villagers when importing items. Some villagers have the same name as items."} value={this.state.includeVillagers} toggleValue={()=>{this.setState({includeVillagers:!this.state.includeVillagers})}}/>
-          <View style={{height: 90}}/>
-        </ScrollView>
-      </View>;
+      case 'Catalog Scanner App':
+        return this.catalogScannerAppWeb({subtitle: "With the catalog scanner app", 
+        banner: this.scannerAppCard()
+      })
+      case 'Catalog Scanner Website':
+        return this.catalogScannerAppWeb({subtitle: "With the catalog scanner website", 
+        banner: this.scannerWebsiteCard()
+      })
       case 'Nook.lol':
         return <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
           <ScrollView>
+            {this.infoButton()}
             <View style={{height: 100}}/>
             <TextFont bold={true} style={{fontSize: 37, marginLeft: 30, marginRight: 30, color:colors.textBlack[global.darkMode]}}>Catalog Import</TextFont>
             <TextFont bold={true} style={{fontSize: 17, marginLeft: 30, marginRight: 30, color:colors.textBlack[global.darkMode]}}>With nook.lol</TextFont>
-            <View style={{height: 45}}/>
+            {this.nookLolWebsiteCard()}
             <TextFont bold={true} style={{fontSize: 20, marginLeft: 30, marginRight: 40, color:colors.textBlack[global.darkMode]}}>{"Paste nook.lol link and Import"}</TextFont>
             <View style={{height: 15}}/>
             <TextInput
@@ -296,9 +345,6 @@ class CatalogPage extends Component {
               placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
               multiline={false}
             />
-            <TouchableOpacity onPress={() => openURL('https://nook.lol/') }>
-              <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 17, marginLeft: 10, marginRight: 10, textAlign:"center", marginVertical:10, paddingHorizontal: 15}}>{"Visit https://nook.lol/ for more information"}</TextFont>
-            </TouchableOpacity>
             <View style={{height: 10}}/>
             <View style={{marginHorizontal: 10}}>
               <ButtonComponent vibrate={10} color={colors.dateButton[global.darkMode]} onPress={async ()=>{await this.import("nook.lol");}} text={"Import"}/>
@@ -347,6 +393,22 @@ class CatalogPage extends Component {
           textLower={"Please wait"}
           loading
         />
+        <PopupBottomCustom ref={(popupCatalogScannerInfo) => this.popupCatalogScannerInfo = popupCatalogScannerInfo} onClose={()=>{}}>
+          <SubHeader style={{marginLeft: 10}}>{"Supported Tools"}</SubHeader>
+          <TextFont style={{fontSize: 17, marginLeft: 10, marginRight: 10, color:colors.textBlack[global.darkMode]}}>There are 3 supported tools. If one does not work/is not supported on your device, switch to another by using the tabs at the top.</TextFont>
+          <View style={{height:15}}/>
+          <View style={{marginVertical:-20, marginHorizontal: -20, marginBottom: -10}}>
+            {this.scannerAppCard()}
+          </View>
+          <View style={{marginVertical:-20, marginHorizontal: -20, marginBottom: -10}}>
+            {this.scannerWebsiteCard()}
+          </View>
+          <View style={{marginVertical:-20, marginHorizontal: -20}}>
+            {this.nookLolWebsiteCard()}
+          </View>
+          <View style={{height:20}}/>
+          <MailLink/>
+        </PopupBottomCustom>
         <PopupInfoCustom alwaysMaxHeight ref={(popup) => this.popupSelectVariations = popup} buttonDisabled noDismiss 
           header = { <TextFont bold translate={false} style={{color:colors.textBlack[global.darkMode], fontSize: 25, textAlign:"center", marginBottom: 5}}>{this.state.currentItemVariation!==undefined ? capitalize(this.state.currentItemVariation["NameLanguage"]) : ""}</TextFont> }
           buttons={
@@ -524,4 +586,16 @@ export class CatalogScannerApp extends Component{
       </View>
     </TouchableOpacity>
   }
+}
+
+export const WebsiteCard = ({bannerSrc, url, title, description, backgroundColor, previewHeight}) => {
+  return <TouchableOpacity activeOpacity={0.6} onPress={() => openURL(url) } style={{backgroundColor: colors.white[global.darkMode], marginHorizontal: 30, borderColor: colors.lightDarkAccentHeavy[global.darkMode], borderStyle: 'solid', borderWidth: 1.5, borderRadius: 15, marginVertical: 20, }}>
+    <Image source={bannerSrc} style={{resizeMode:'contain', width:"100%", height:previewHeight ?? 120, backgroundColor:backgroundColor, borderTopLeftRadius: 15, borderTopRightRadius: 15}}/>
+    <View style={{height:2, backgroundColor:colors.lightDarkAccentHeavy[global.darkMode]}}/>
+    <View style={{paddingHorizontal: 20, paddingVertical: 10}}>
+      <TextFont bold={true} style={{color:colors.textBlack[global.darkMode], fontSize: 18}}>{title}</TextFont>
+      <TextFont style={{color:colors.textBlack[global.darkMode], fontSize: 15, opacity: 0.7}}>{description}</TextFont>
+      <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 15, opacity: 0.8}}>{url}</TextFont>
+    </View>
+  </TouchableOpacity>
 }
