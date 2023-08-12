@@ -95,9 +95,9 @@ export class SelectFilterPresetButton extends Component {
     }
   }
 
-  refreshList = () => {
-    getFilterPresets()
-    this.setState({})
+  refreshList = async () => {
+    await this.getFilterPresets()
+    console.log("Refreshed filters list")
   }
 
   async componentDidMount(){

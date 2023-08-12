@@ -539,7 +539,6 @@ class PopupFilter extends Component {
                     onPress={() => {
                       if(this.state.selectedItems===undefined || (this.state.selectedItems!=undefined && this.state.selectedItems?.length <= 0)) return
                       this.popupAddFilterPreset?.setPopupVisible(true)
-                      this.props.refreshFilterPresetList();
                     }}
                     marginHorizontal={5}
                     style={{ flex: 1, opacity: this.state.selectedItems!=undefined && this.state.selectedItems?.length <= 0 ? 0.3 : 1 }}
@@ -560,6 +559,7 @@ class PopupFilter extends Component {
                           }
                         })
                       this.setPopupVisible(!this.state.popupVisible);
+                      this.props.refreshFilterPresetList();
                     }}
                   />
                   
