@@ -25720,6 +25720,26 @@
       "Czech": "Uložit předvolbu filtru",
       "Slovak": "Uložiť predvoľbu filtra",
       "Polish": "Zapisz ustawienie wstępne filtra"
+    },
+    "delete": {
+      "English": "Delete",
+      "English (Europe)": "Delete",
+      "French (US)": "Supprimer",
+      "German": "Löschen",
+      "Spanish": "Borrar",
+      "Spanish (US)": "Borrar",
+      "Russian": "Удалить",
+      "Italian": "Eliminare",
+      "French": "Supprimer",
+      "Dutch": "Verwijderen",
+      "Chinese": "删除",
+      "Chinese (Traditional)": "刪除",
+      "Japanese": "消去",
+      "Korean": "삭제",
+      "Portuguese": "Excluir",
+      "Czech": "Vymazat",
+      "Slovak": "Odstrániť",
+      "Polish": "Usuwać"
     }
   },
   "Sources": {
