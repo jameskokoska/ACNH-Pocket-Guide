@@ -530,11 +530,11 @@ class EventSection extends Component {
 
   refreshEvents = () => {
     cancelAllPushNotifications();
-    let todayEvents = getEventsDay(getCurrentDateObject(), this.state.eventSections,this.state.eventSections["Show All Events Happening Today"]);
-    let tomorrowEvents = getEventsDay(addDays(getCurrentDateObject(), 1), this.state.eventSections);
+    let todayEvents = getEventsDay(getCurrentDateObject(), this.state.eventSections,this.state.eventSections["Show All Events Happening Today"], true);
+    let tomorrowEvents = getEventsDay(addDays(getCurrentDateObject(), 1), this.state.eventSections, false, true);
     let thisWeekEvents = [];
     for(var i=2; i<7; i++){
-      thisWeekEvents = thisWeekEvents.concat(getEventsDay(addDays(getCurrentDateObject(), i), this.state.eventSections));
+      thisWeekEvents = thisWeekEvents.concat(getEventsDay(addDays(getCurrentDateObject(), i), this.state.eventSections, false, true));
     }
     this.todayEventsComponent = todayEvents.map( (event, index)=>
       <EventContainer 

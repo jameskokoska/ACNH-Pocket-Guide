@@ -10,13 +10,14 @@ import {
 import TextFont from "./TextFont";
 import ButtonComponent from "./ButtonComponent";
 import colors from "../Colors";
-import {translateFilters, getStorage, attemptToTranslate, getSettingsString} from '../LoadJsonData';
+import {translateFilters, getStorage, attemptToTranslate, getSettingsString, addFilterPreset} from '../LoadJsonData';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 const filterDefinitions = require("../assets/data/Generated/filterDefinitions.json");
 import SectionedMultiSelect from 'react-native-sectioned-multi-select';
 import {MaterialIcons} from '@expo/vector-icons';
 import { AnimatedPopupWrapper } from "./PopupAnimatedWrapper";
-import { ScrollView } from "react-native-gesture-handler";
+import { ScrollView, TextInput } from "react-native-gesture-handler";
+import { PopupInfoCustom } from "./Popup";
 
 function addNewFilter(filterObject, newFilter){
   filterObject[0].children.push(newFilter)
@@ -28,7 +29,7 @@ class PopupFilter extends Component {
     super(props);
     this.state = {
       popupVisible: false,
-      selectedItems: []
+      selectedItems: [],
     };
     this.savedItems = []
     this.openFirst = true;
@@ -332,7 +333,17 @@ class PopupFilter extends Component {
     if(this.props.disableFilters){
       return;
     }
-    var defaultValuesStored = await getStorage(this.props.title+"Filters","");
+    await this.initializeFilters();
+  }
+
+  initializeFilters = async (customFilters=undefined) => {
+    this.savedItems = []
+    let defaultValuesStored
+    if(customFilters==undefined){
+      defaultValuesStored = await getStorage(this.props.title+"Filters","");
+    } else {
+      defaultValuesStored = customFilters.join(",")
+    }
     // console.log(this.possibleFilters)
     
     //Check for filters selected that don't exist, could cause errors, then reset them
@@ -351,12 +362,12 @@ class PopupFilter extends Component {
           }
         }
         if(errors){
-          if(errors){
-            await AsyncStorage.setItem(this.props.title+"Filters", "");
-            this.setState({selectedItems:[""]})
-            this.setFilters();
-            return;
-          }
+          console.log("A filter that was previously set no longer exists. Clearing...")
+          await AsyncStorage.setItem(this.props.title+"Filters", "");
+          this.setState({selectedItems:[""]})
+          this.setFilters();
+          this.props.setRefresh(true)
+          return;
         }
       }
     }
@@ -365,9 +376,8 @@ class PopupFilter extends Component {
     this.mounted=true;
     if(defaultValuesStored!==""){
       this.setState({selectedItems:defaultValuesStored.split(",")})
-      this.setFilters();
+      this.setFiltersWithValue(defaultValuesStored.split(","));
     }
-
     // console.log(defaultValuesStored.split(","))
 
     // //Check for filters selected that don't exist, could cause errors, then reset them
@@ -400,8 +410,6 @@ class PopupFilter extends Component {
     //     }
     //   }.bind(this), 0);
     // }
-    
-    
   }
 
   setPopupVisible = async (visible) => {
@@ -410,12 +418,21 @@ class PopupFilter extends Component {
       await AsyncStorage.setItem(this.props.title+"Filters", this.state.selectedItems.toString());
       console.log(this.props.title+"Filters")
       this.setFilters();
+    } else if(this.mounted){
+      // Needed to refresh the chips shown when filter preset loaded
+      setTimeout(()=>{this.setState({}); console.log("Refreshed filter popup")}, 50)
     }
   }
 
   setFilters = () =>{
     if(this.mounted){
       this.props.updateSearchFilters(this.state.selectedItems); 
+    }
+  }
+
+  setFiltersWithValue = (value) =>{
+    if(this.mounted){
+      this.props.updateSearchFilters(value); 
     }
   }
 
@@ -502,6 +519,7 @@ class PopupFilter extends Component {
                           {this.state.selectedItems.map((singleSelectedItem,index) => {
                             if(!singleSelectedItem) return <View></View>
                             const item = this.SectionedMultiSelect?._findItem(singleSelectedItem)
+                            // console.log(item)
                             if (!item || !item[props.displayKey]) return this.savedItems[index]
                             this.savedItems[index] = (<TouchableOpacity key={item[props.uniqueKey]} onPress={() => { this.SectionedMultiSelect._removeItem(item) }} style={{borderRadius: 10, paddingHorizontal:15, paddingVertical:5, marginHorizontal:5, marginVertical:5, paddingBottom: 8, backgroundColor:colors.lightDarkAccent[global.darkMode], flexDirection:"row", alignItems:"center"}}>
                               <TextFont style={{fontSize: 18, color:colors.textBlack[global.darkMode],}}>{item[props.displayKey]}</TextFont>
@@ -514,6 +532,36 @@ class PopupFilter extends Component {
                     }}
                   />
                   
+                  {this.props.title!==undefined && this.props.title==="Everything" ? <ButtonComponent
+                    text={"Save Filter Preset"}
+                    color={colors.okButton3[global.darkMode]}
+                    vibrate={5}
+                    onPress={() => {
+                      if(this.state.selectedItems===undefined || (this.state.selectedItems!=undefined && this.state.selectedItems?.length <= 0)) return
+                      this.popupAddFilterPreset?.setPopupVisible(true)
+                      this.props.refreshFilterPresetList();
+                    }}
+                    marginHorizontal={5}
+                    style={{ flex: 1, opacity: this.state.selectedItems!=undefined && this.state.selectedItems?.length <= 0 ? 0.3 : 1 }}
+                  /> : <View></View>}
+                  <PopupAddFilterPreset 
+                    ref={(popupAddFilterPreset) => this.popupAddFilterPreset = popupAddFilterPreset}
+                    addCustomFilterPreset={async (presetName)=>{
+                      await addFilterPreset(presetName, this.state.selectedItems)
+                      if(toast)
+                        toast.show("", {type:"success",
+                          placement:'top',
+                          renderType:{
+                            success: (toast) => (
+                              <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, borderRadius: 5, backgroundColor: colors.popupSuccess[global.darkMode], alignItems:"center", justifyContent:"center"}}>
+                                <TextFont translate={false} style={{color:"white", fontSize: 15}}>{"Added Filter Preset"}</TextFont>
+                              </View>
+                            ),
+                          }
+                        })
+                      this.setPopupVisible(!this.state.popupVisible);
+                    }}
+                  />
                   
                   <ButtonComponent
                     text={"Select Filters"}
@@ -531,7 +579,6 @@ class PopupFilter extends Component {
                       color={colors.filtersResetButton[global.darkMode]}
                       vibrate={5}
                       onPress={() => {
-
                         this.setPopupVisible(!this.state.popupVisible);
                         this.defaultValues=["Check"];
                         AsyncStorage.setItem(this.props.title+"Filters", "");
@@ -564,6 +611,58 @@ class PopupFilter extends Component {
     )
   }
 }
+
+
+class PopupAddFilterPreset extends Component{
+  constructor(){
+    super();
+    this.presetName="";
+  }
+  setPopupVisible = () => {
+    this.popup?.setPopupVisible(true)
+  }
+  render(){
+    var buttons = <>
+      <View style={{flexDirection:"row", justifyContent:"center"}}>
+        <ButtonComponent
+          text={"Cancel"}
+          color={colors.cancelButton[global.darkMode]}
+          vibrate={8}
+          onPress={() => {
+            this.popup?.setPopupVisible(false);
+          }}
+        /> 
+        <ButtonComponent
+          text={"Done"}
+          color={colors.okButton[global.darkMode]}
+          vibrate={15}
+          onPress={() => {
+            this.props.addCustomFilterPreset(this.presetName)
+            this.popup?.setPopupVisible(false);
+          }}
+        /> 
+      </View>
+    </>
+    var header = <>
+      <TextFont bold={true} style={{fontSize: 28, textAlign:"center", color: colors.textBlack[global.darkMode]}}>{"New Filter Preset"}</TextFont>
+      <View style={{height:10}}/>
+      <View style={{flexDirection: 'row'}}>
+        <View style={{flex:1, justifyContent:"center", marginHorizontal:5,}}>
+          <TextInput
+            maxLength={45}
+            allowFontScaling={false}
+            style={{fontSize: 18, color:colors.textBlack[global.darkMode], fontFamily: "ArialRoundedBold", backgroundColor:colors.lightDarkAccent[global.darkMode], padding: 10, borderRadius: 5}}
+            onChangeText={(text) => {this.presetName=text}}
+            placeholder={attemptToTranslate("Filter Preset Name")}
+            placeholderTextColor={colors.lightDarkAccentHeavy[global.darkMode]}
+          />
+        </View>
+      </View>
+    </>
+    return <PopupInfoCustom ref={(popup) => this.popup = popup} buttonDisabled={true} buttons={buttons} header={header}/>
+  }
+}
+
 export default PopupFilter;
 
 const styles = StyleSheet.create({

@@ -244,7 +244,7 @@ class CustomLists extends Component{
   }
 }
 
-class PopupAddWishlist extends Component{
+export class PopupAddWishlist extends Component{
   constructor(){
     super();
     this.listName="";
@@ -310,7 +310,7 @@ class PopupAddWishlist extends Component{
   }
 }
 
-class WishlistBox extends Component{
+export class WishlistBox extends Component{
   constructor(props){
     super(props)
     this.state={image:getCustomListImage(this.props.id), selected:this.props.showSelectedOriginal? this.props.selected : (this.props.id===""?inWishlist(this.props.checkListKeyString):inCustomLists(this.props.checkListKeyString, this.props.id)), amount:getCustomListsAmount(this.props.checkListKeyString, this.props.id)}

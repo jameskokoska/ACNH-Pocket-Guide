@@ -1,8 +1,8 @@
 import React, {Component, useState, useRef, useEffect} from 'react';
-import {TouchableOpacity, View, Animated,StyleSheet,RefreshControl} from 'react-native';
+import {TouchableOpacity, View, Animated,StyleSheet,RefreshControl, Vibration, TouchableNativeFeedback, Image} from 'react-native';
 import Header, {HeaderLoading, HeaderActive, AmountCollected} from './Header';
 import ListItem from './ListItem';
-import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters, isInteger, attemptToTranslate, checkOff, inCustomLists, getCustomListsAmount, collectionListSave, determineFoodItem, initializeParadisePlanningGlobal, inVillagerParadise, variationsCheckedPercent, commas, setCustomListsAmount} from "../LoadJsonData"
+import {getInverseVillagerFilters, getCurrentVillagerFilters, determineDataGlobal, allVariationsChecked, inChecklist, inWishlist, generateMaterialsFilters, isInteger, attemptToTranslate, checkOff, inCustomLists, getCustomListsAmount, collectionListSave, determineFoodItem, initializeParadisePlanningGlobal, inVillagerParadise, variationsCheckedPercent, commas, setCustomListsAmount, getStorage} from "../LoadJsonData"
 import {Dimensions } from "react-native";
 import {Variations,Phrase, CircularImage, RightCornerCheck, LeftCornerImage, Title, getVariations, howManyVariationsChecked} from './BottomSheetComponents';
 import colors from "../Colors.js"
@@ -33,6 +33,7 @@ import { BlueText } from './Formattings';
 import PopupRawData from './PopupRawData';
 import TotalBuySellPrice from './TotalBuySellPrice';
 import {sortBy} from 'lodash';
+import { FilterPresetSelectionPopup, SelectFilterPresetButton } from './FilterPresets';
 
 //use tabs={false} if the page doesn't have  the tab bar
 
@@ -165,6 +166,7 @@ function ListPage(props){
   const [data, setData] = useState("empty")
   const [totalItemsCollected, setTotalItemsCollected] = useState(0)
   const popupFilter = React.useRef(null);
+  const popupFilterPresets = React.useRef(null);
   const popupOnlyLoading = React.useRef(null);
   const headerRef = React.useRef(null);
   const amountCollectedRef = React.useRef(null);
@@ -183,6 +185,19 @@ function ListPage(props){
   useEffect(()=>{
     setLoading(true)
     setTimeout(async () => {
+      let preLoadedFilters = await getStorage(props.title+"Filters","")
+      console.log(preLoadedFilters)
+      // If data is "empty" it is when the page is first loaded
+      if(searchFilters.length<=0 && data==="empty" && preLoadedFilters!==""){
+        console.log("Avoiding loading items initially, some filters are set in memory because user previously had them set.")
+        setData([])
+        setLoading(true)
+        headerRef?.current?.setSearchResultCount(itemsCollected)
+        amountCollectedRef?.current?.setSearchResultCount(itemsCollected)
+        scrollY.current.setValue(0)
+        firstLoaded=false;
+        return
+      }
       let itemsCollected = 0
       let dataUpdated = [];
       let previousVariation = "";
@@ -908,6 +923,7 @@ function ListPage(props){
       headerRef?.current?.setSearchResultCount(itemsCollected)
       amountCollectedRef?.current?.setSearchResultCount(itemsCollected)
       scrollY.current.setValue(0)
+      firstLoaded=false;
     }, 10)
   }, [props, search, searchFilters, refresh])
   
@@ -1204,7 +1220,7 @@ function ListPage(props){
     {data!=="empty"?
       <View style={{backgroundColor:props.backgroundColor}} >
         <PopupOnlyLoading ref={popupOnlyLoading}/>
-        <PopupFilter villagerGifts={props.villagerGifts} disableFilters={props.disableFilters} title={props.title} ref={popupFilter} filterSearchable={props.filterSearchable} updateSearchFilters={updateSearchFilters}/> 
+        <PopupFilter refreshFilterPresetList={()=>popupFilterPresets?.current?.refreshList()} filterPreset={props.filterPreset} villagerGifts={props.villagerGifts} disableFilters={props.disableFilters} title={props.title} ref={popupFilter} filterSearchable={props.filterSearchable} updateSearchFilters={updateSearchFilters} setRefresh={setRefresh}/> 
         {/* setFilterPopupState(false) */}
         {loading? <View style={{alignItems:"center", justifyContent:"center", width:"100%", height:"100%"}}>
         <LottieView 
@@ -1295,6 +1311,11 @@ function ListPage(props){
           }
         />}
       {header}
+      {loading===false && props.title==="Everything" ? 
+        <>
+          <SelectFilterPresetButton title={props.title} ref={popupFilterPresets} onSelectFilter={(filtersFromPreset)=>{popupFilter.current.initializeFilters(filtersFromPreset)}}/>
+        </>
+         : <></>}
       </View>
     :
       <HeaderLoading disableSearch={props.disableSearch} title={props.title} headerHeight={headerHeight} appBarColor={props.appBarColor} searchBarColor={props.searchBarColor} titleColor={props.titleColor} appBarImage={props.appBarImage}/>

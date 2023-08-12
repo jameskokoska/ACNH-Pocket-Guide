@@ -165,7 +165,7 @@ export function EventContainer(props){
     }
 }
 
-export function getEventsDay(date, eventSections, showEventsIfInRange){
+export function getEventsDay(date, eventSections, showEventsIfInRange, hideCompletedEventsIfEnabled=false){
   const seasonData = require("../assets/data/DataCreated/Seasons and Events.json");
   const villagerData = global.dataLoadedVillagers[0];
   var totalEvents = [];
@@ -401,6 +401,17 @@ export function getEventsDay(date, eventSections, showEventsIfInRange){
     if(eventSections["App notifications"]){
       schedulePushNotification(date,eventSections["Set Notification Time"],"🎵 " + attemptToTranslate("K.K. Slider"),getSettingsString("settingsUse24HourClock") === "true" ? "6:00 - 0:00" : "6 PM - 12 AM");
     }
+  }
+
+  if(hideCompletedEventsIfEnabled===true && eventSections!==undefined && eventSections["Hide Fully Completed Events"]===true){
+    let newTotalEvents = []
+    for(let event of totalEvents){
+      let eventFilter = replaceEventNameForFilter(event.filter)
+      let result = allEventItemsCheck(eventFilter)
+      if(result[0]!==true)
+        newTotalEvents.push(event)
+    }
+    return newTotalEvents
   }
 
   return totalEvents;

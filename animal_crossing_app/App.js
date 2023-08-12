@@ -326,6 +326,7 @@ class App extends Component {
       "Break2" : true,
       "Show End Day of Events" : true,
       "Show All Events Happening Today" : false,
+      "Hide Fully Completed Events" : false,
     }
     this.eventSections = await this.loadSections("EventSections", defaultEventSections);
     

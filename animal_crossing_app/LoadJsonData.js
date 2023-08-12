@@ -2305,3 +2305,22 @@ export function findVillagersParadisePlanning(villagersName){
   }
   return false
 }
+
+export async function addFilterPreset(name, filters) {
+  let filterPresets = JSON.parse(await getStorage("filtersPresets", "{}"))
+  filterPresets[name] = filters;
+  await AsyncStorage.setItem("filtersPresets", JSON.stringify(filterPresets));
+  console.log("Added filter: " + filterPresets)
+}
+
+export async function getFilterPresets(name, filters){
+  let filterPresets = JSON.parse(await getStorage("filtersPresets", "{}"))
+  return filterPresets;
+}
+
+export async function deleteFilterPreset(name){
+  let filterPresets = JSON.parse(await getStorage("filtersPresets", "{}"))
+  delete filterPresets[name];
+  await AsyncStorage.setItem("filtersPresets", JSON.stringify(filterPresets));
+  console.log("Deleted filter: " + filterPresets)
+}

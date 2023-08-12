@@ -4,6 +4,15 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Custom filter presets
+-Quickly load different filter combinations and view the results, on the [Everything] page
+-Ability to hide completed/all collected events on homepage (in [Edit Events])
+-Fix: if filters were once set on a page, the page loads filters directly - faster loading
+-
+-New Gold Supporter: Emily! Thank you!
+-New Silver Supporter: Jomaican J.! Thank you!
+-New Silver Supporter: Stephanie W.! Thank you!
+-
 -Support for new catalog scanner website
 -Improved catalog scanning page and site cards
 -Primitive translations for all languages
