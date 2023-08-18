@@ -45,7 +45,8 @@
       "favicon": "./assets/icon.png"
     },
     "plugins": [
-      "sentry-expo"
+      "sentry-expo",
+      "expo-localization"
     ],
     "hooks": {
       "postPublish": [
