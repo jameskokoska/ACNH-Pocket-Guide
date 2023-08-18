@@ -30,7 +30,6 @@
         "backgroundColor": "#FFFFFF"
       },
       "softwareKeyboardLayoutMode": "pan",
-      "useNextNotificationsApi": true,
       "playStoreUrl": "https://play.google.com/store/apps/details?id=com.acnh.pocket_guide",
       "permissions": [
         "WRITE_EXTERNAL_STORAGE",

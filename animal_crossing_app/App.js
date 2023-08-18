@@ -92,11 +92,14 @@ LogBox.ignoreLogs([
 
 // Development build with native code:
 // Read more: https://docs.expo.dev/development/getting-started/
+// npx expo prebuild 
+// to ensure the native code is freshly synchronized with your local configuration.
+// then create a development runner
 // eas build --profile development --platform android
 // install build and run:
 // npx expo start --dev-client --tunnel
 // or
-// expo start --dev-client
+// npx expo start --dev-client
 
 // Develop internal preview build
 // eas build --profile preview --platform android 

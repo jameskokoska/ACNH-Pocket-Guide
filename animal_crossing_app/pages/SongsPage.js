@@ -209,7 +209,7 @@ class PopupBottomMusic extends Component {
       heightOffset:0,
       openStart:false,
     }
-    this.bottomSheetCallback = new Animated.Value(1);
+    // this.bottomSheetCallback = new Animated.Value(1);
   }
 
   componentDidMount() {
@@ -246,7 +246,7 @@ class PopupBottomMusic extends Component {
   renderContent = () => {
     return(
       <>
-      <View
+      {/* <View
         style={{
           borderTopLeftRadius: 20,
           borderTopRightRadius: 20,
@@ -270,7 +270,7 @@ class PopupBottomMusic extends Component {
           {this.props.children}
         </Animated.View>
         {this.props.invisible===true ? <View/> : <View style={{height:85}}/>}
-      </View>
+      </View> */}
       </>
     )
   }
@@ -288,7 +288,7 @@ class PopupBottomMusic extends Component {
     return (
       <>
         {this.bottomSheetCallback?<Animated.View style={{zIndex:50, backgroundColor: "black", opacity: Animated.multiply(-0.8,Animated.add(-0.7,Animated.multiply(this.bottomSheetCallback,1))), width: Dimensions.get('window').width, height: Dimensions.get('window').height, position:"absolute"}} pointerEvents="none"/>:<View/>}
-        <BottomSheet
+        {/* <BottomSheet
           enabledBottomClamp
           callbackNode={this.bottomSheetCallback}
           ref={(sheetRef) => this.sheetRef = sheetRef}
@@ -301,7 +301,7 @@ class PopupBottomMusic extends Component {
           onCloseEnd={()=>{if(this.mounted){this.visible=false; this.setState({openStart:false}); this.state.heightOffset = 0} this.props.onClose===undefined ? 0 : this.props.onClose();}}
           onOpenStart={()=>{if(this.mounted){this.setState({openStart:true})}}}
           onOpenEnd={()=>{if(this.mounted){this.setState({openStart:true}); this.visible=true}}}
-        />
+        /> */}
       </>
     )
   }

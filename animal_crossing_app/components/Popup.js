@@ -411,134 +411,134 @@ export class PopupBottomCustom extends PureComponent {
       heightOffset:0,
       openStart:false,
     }
-    this.bottomSheetCallback = new Animated.Value(1);
-    this.showOnceCalculated = false
-    this.height = Dimensions.get('window').height
-    this.oldKey = ""
+    // this.bottomSheetCallback = new Animated.Value(1);
+    // this.showOnceCalculated = false
+    // this.height = Dimensions.get('window').height
+    // this.oldKey = ""
   }
 
   componentDidMount() {
-    this.mounted=true;
-    this.visible=false;
-    this.backHandler = BackHandler.addEventListener(
-      "1hardwareBackPressPopup",
-      this.handleBackButton,
-    );
+    // this.mounted=true;
+    // this.visible=false;
+    // this.backHandler = BackHandler.addEventListener(
+    //   "1hardwareBackPressPopup",
+    //   this.handleBackButton,
+    // );
   }
 
   componentWillUnmount() {
     this.mounted=false
-    BackHandler.removeEventListener("1hardwareBackPressPopup", this.handleBackButton);
+    // BackHandler.removeEventListener("1hardwareBackPressPopup", this.handleBackButton);
   }
 
   handleBackButton = () => {
-    if(this.visible===true){
-      this.setPopupVisible(false)
-      return true
-    } else {
-      // RootNavigation.popRoute(1)
-      // if(RootNavigation.getCurrentRoute()==="Home"){
-      //   return true;
-      // }
-      return false
-    }
+    // if(this.visible===true){
+    //   this.setPopupVisible(false)
+    //   return true
+    // } else {
+    //   // RootNavigation.popRoute(1)
+    //   // if(RootNavigation.getCurrentRoute()==="Home"){
+    //   //   return true;
+    //   // }
+    //   return false
+    // }
   }
 
   setPopupVisible = (visible, showOnceCalculated=false, oldKey="") => {
     this.showOnceCalculated = showOnceCalculated
-    if(this.mounted){
-      this.setState({heightOffset:0})
-      if(showOnceCalculated===false || getSettingsString("settingsLowEndDevice")==="true"){
-        visible ? this.sheetRef?.snapTo(0) : this.sheetRef?.snapTo(1)
-        this.visible = visible
-      } else {
-        this.timeOutPopup = setTimeout(()=>{
-          //if it cant calculate the new height in 100ms, force show
-          if(this.showOnceCalculated === true){
-            this.showOnceCalculated = false
-            this.sheetRef?.snapTo(0)
-            this.visible = true
-            // console.log("POP2")
-          }
-        },100)
-      }
-      this.oldKey = oldKey
-    }
+    // if(this.mounted){
+    //   this.setState({heightOffset:0})
+    //   if(showOnceCalculated===false || getSettingsString("settingsLowEndDevice")==="true"){
+    //     visible ? this.sheetRef?.snapTo(0) : this.sheetRef?.snapTo(1)
+    //     this.visible = visible
+    //   } else {
+    //     this.timeOutPopup = setTimeout(()=>{
+    //       //if it cant calculate the new height in 100ms, force show
+    //       if(this.showOnceCalculated === true){
+    //         this.showOnceCalculated = false
+    //         this.sheetRef?.snapTo(0)
+    //         this.visible = true
+    //         // console.log("POP2")
+    //       }
+    //     },100)
+    //   }
+    //   this.oldKey = oldKey
+    // }
   }
   
   renderContent = () => {
-    let overHeight = this.state.heightOffset+Dimensions.get('window').height*0.03+140>Dimensions.get('window').height
-    let offsetTop = Dimensions.get('window').height*0.03+140
-    let itemPopupCompensation = (this.props.itemPopup?(getSettingsString("settingsLargerItemPreviews")==="false"?170:250):0)
-    let touchableDismiss = <TouchableOpacity activeOpacity={1} style={{top:0,bottom:this.state.heightOffset-itemPopupCompensation,zIndex:5,position:"absolute", width:Dimensions.get('window').width}} onPress={()=>{this.setPopupVisible(false);}}/>
-    let touchableDismiss2 = <View/>
-    let touchableDismiss3 = <View/>
+    // let overHeight = this.state.heightOffset+Dimensions.get('window').height*0.03+140>Dimensions.get('window').height
+    // let offsetTop = Dimensions.get('window').height*0.03+140
+    // let itemPopupCompensation = (this.props.itemPopup?(getSettingsString("settingsLargerItemPreviews")==="false"?170:250):0)
+    // let touchableDismiss = <TouchableOpacity activeOpacity={1} style={{top:0,bottom:this.state.heightOffset-itemPopupCompensation,zIndex:5,position:"absolute", width:Dimensions.get('window').width}} onPress={()=>{this.setPopupVisible(false);}}/>
+    // let touchableDismiss2 = <View/>
+    // let touchableDismiss3 = <View/>
     //make a custom cutout for image (image can be tapped for larger preview)
     //image is 130 by 130
     //if larger its 210 by 210
-    if(this.props.itemPopup){
-      let imageWidth = getSettingsString("settingsLargerItemPreviews")==="false"?150:210
-      let middleHeightOffset = getSettingsString("settingsLargerItemPreviews")==="false"?70:150
-      touchableDismiss = <TouchableOpacity activeOpacity={1} style={{left:0, right: Dimensions.get('window').width/2 + imageWidth/2, top:0,bottom:this.state.heightOffset-itemPopupCompensation,zIndex:5,position:"absolute"}} onPress={()=>{this.setPopupVisible(false);}}/>
-      touchableDismiss2 = <TouchableOpacity activeOpacity={1} style={{right:0, left: Dimensions.get('window').width/2 + imageWidth/2, top:0,bottom:this.state.heightOffset-itemPopupCompensation,zIndex:5,position:"absolute"}} onPress={()=>{this.setPopupVisible(false);}}/>
-      touchableDismiss3 = <TouchableOpacity activeOpacity={1} style={{left:Dimensions.get('window').width/2 - imageWidth/2, right: Dimensions.get('window').width/2 - imageWidth/2, top:0,bottom:this.state.heightOffset-itemPopupCompensation+middleHeightOffset,zIndex:5,position:"absolute"}} onPress={()=>{this.setPopupVisible(false);}}/>
-    }
-    return(
-      <>
-      {touchableDismiss}
-      {touchableDismiss2}
-      {touchableDismiss3}
-      <View style={{width:Dimensions.get('window').width,height:Dimensions.get('window').height-this.state.heightOffset}} onPress={()=>{this.setPopupVisible(false);}}/>
-      <View
-        style={{
-          borderTopLeftRadius: 20,
-          borderTopRightRadius: 20,
-          backgroundColor: this.props.invisible===undefined?(this.props.backgroundColor===undefined?colors.white[global.darkMode]:this.props.backgroundColor):"#0000000",
-          padding:this.props.padding===undefined?16:this.props.padding,
-          paddingTop: 12,
-          marginTop: this.props.restrictSize===false ? 0 : overHeight ? offsetTop : 0
-        }}
-        onLayout={(event) => {
-            var {x, y, width, height} = event.nativeEvent.layout;
-            if(this.mounted){
-              this.setState({heightOffset:height});
-              if(this.showOnceCalculated){
-                clearTimeout(this.timeOutPopup)
-                // console.log("POP1")
-                this.sheetRef?.snapTo(0)
-                this.visible = true
-                this.showOnceCalculated = false
-              }
-            }
-          }} 
-      >
-        <FadeInOut fadeIn={this.state.openStart} scaleInOut={true} duration={200} maxFade={0.4} minScale={0.7}>
-          <View style={{width:"100%", alignItems:"center"}}>
-            <View style={{opacity: this.props.invisible===undefined?1:0,backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode], height:5, width: 45, borderRadius:50}}/>
-          </View>
-        </FadeInOut>
-        <View style={{height:20}}/>
-        {this.props.children}
-        {this.props.invisible===true ? <View/> : <View style={{height:85}}/>}
-      </View>
-      </>
+    // if(this.props.itemPopup){
+    //   let imageWidth = getSettingsString("settingsLargerItemPreviews")==="false"?150:210
+    //   let middleHeightOffset = getSettingsString("settingsLargerItemPreviews")==="false"?70:150
+    //   touchableDismiss = <TouchableOpacity activeOpacity={1} style={{left:0, right: Dimensions.get('window').width/2 + imageWidth/2, top:0,bottom:this.state.heightOffset-itemPopupCompensation,zIndex:5,position:"absolute"}} onPress={()=>{this.setPopupVisible(false);}}/>
+    //   touchableDismiss2 = <TouchableOpacity activeOpacity={1} style={{right:0, left: Dimensions.get('window').width/2 + imageWidth/2, top:0,bottom:this.state.heightOffset-itemPopupCompensation,zIndex:5,position:"absolute"}} onPress={()=>{this.setPopupVisible(false);}}/>
+    //   touchableDismiss3 = <TouchableOpacity activeOpacity={1} style={{left:Dimensions.get('window').width/2 - imageWidth/2, right: Dimensions.get('window').width/2 - imageWidth/2, top:0,bottom:this.state.heightOffset-itemPopupCompensation+middleHeightOffset,zIndex:5,position:"absolute"}} onPress={()=>{this.setPopupVisible(false);}}/>
+    // }
+    return( <></>
+      // <>
+      // {touchableDismiss}
+      // {touchableDismiss2}
+      // {touchableDismiss3}
+      // <View style={{width:Dimensions.get('window').width,height:Dimensions.get('window').height-this.state.heightOffset}} onPress={()=>{this.setPopupVisible(false);}}/>
+      // <View
+      //   style={{
+      //     borderTopLeftRadius: 20,
+      //     borderTopRightRadius: 20,
+      //     backgroundColor: this.props.invisible===undefined?(this.props.backgroundColor===undefined?colors.white[global.darkMode]:this.props.backgroundColor):"#0000000",
+      //     padding:this.props.padding===undefined?16:this.props.padding,
+      //     paddingTop: 12,
+      //     marginTop: this.props.restrictSize===false ? 0 : overHeight ? offsetTop : 0
+      //   }}
+      //   onLayout={(event) => {
+      //       var {x, y, width, height} = event.nativeEvent.layout;
+      //       if(this.mounted){
+      //         this.setState({heightOffset:height});
+      //         if(this.showOnceCalculated){
+      //           clearTimeout(this.timeOutPopup)
+      //           // console.log("POP1")
+      //           this.sheetRef?.snapTo(0)
+      //           this.visible = true
+      //           this.showOnceCalculated = false
+      //         }
+      //       }
+      //     }} 
+      // >
+      //   <FadeInOut fadeIn={this.state.openStart} scaleInOut={true} duration={200} maxFade={0.4} minScale={0.7}>
+      //     <View style={{width:"100%", alignItems:"center"}}>
+      //       <View style={{opacity: this.props.invisible===undefined?1:0,backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode], height:5, width: 45, borderRadius:50}}/>
+      //     </View>
+      //   </FadeInOut>
+      //   <View style={{height:20}}/>
+      //   {this.props.children}
+      //   {this.props.invisible===true ? <View/> : <View style={{height:85}}/>}
+      // </View>
+      // </>
 
     )
   }
 
 
   render(){
-    const springConfig = {
-        damping: 20,
-        mass: 1,
-        stiffness: global.reducedMotion ? 100000000 : 135,
-        overshootClamping: true,
-        restSpeedThreshold: 0.01,
-        restDisplacementThreshold: 0.001,
-    };
+    // const springConfig = {
+    //     damping: 20,
+    //     mass: 1,
+    //     stiffness: global.reducedMotion ? 100000000 : 135,
+    //     overshootClamping: true,
+    //     restSpeedThreshold: 0.01,
+    //     restDisplacementThreshold: 0.001,
+    // };
     return (
       <>
-      {this.bottomSheetCallback?<Animated.View style={{zIndex:50, backgroundColor: "black", opacity: Animated.multiply(-0.8,Animated.add(-0.7,Animated.multiply(this.bottomSheetCallback,1))), width: Dimensions.get('window').width, height: Dimensions.get('window').height, position:"absolute"}} pointerEvents="none"/>:<View/>}
+      {/* {this.bottomSheetCallback?<Animated.View style={{zIndex:50, backgroundColor: "black", opacity: Animated.multiply(-0.8,Animated.add(-0.7,Animated.multiply(this.bottomSheetCallback,1))), width: Dimensions.get('window').width, height: Dimensions.get('window').height, position:"absolute"}} pointerEvents="none"/>:<View/>}
       <BottomSheet
         callbackNode={this.bottomSheetCallback}
         ref={(sheetRef) => this.sheetRef = sheetRef}
@@ -551,7 +551,7 @@ export class PopupBottomCustom extends PureComponent {
         onCloseEnd={()=>{if(this.mounted){this.visible=false; this.setState({openStart:false}); this.state.heightOffset = 0} this.props.onClose===undefined ? 0 : this.props.onClose();}}
         onOpenStart={()=>{if(this.mounted){this.setState({openStart:true})}}}
         onOpenEnd={()=>{if(this.mounted){this.setState({openStart:true})}}}
-      />
+      /> */}
       </>
     )
   }
