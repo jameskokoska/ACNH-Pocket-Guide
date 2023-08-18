@@ -11,11 +11,14 @@ local.properties
 *.iml
 *.hprof
 
+<<<<<<< HEAD
 # BUCK
 buck-out/
 \.buckd/
 *.keystore
 !debug.keystore
 
+=======
+>>>>>>> b8ea96c (ejected/entered predeploy expo)
 # Bundle artifacts
 *.jsbundle
