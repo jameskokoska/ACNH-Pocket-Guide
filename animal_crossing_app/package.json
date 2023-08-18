@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@expo/metro-config": "^0.10.7",
+    "@gorhom/bottom-sheet": "github:ororsatti/react-native-bottom-sheet#dynamically-sized-scrollable-drawer",
     "@react-native-async-storage/async-storage": "1.18.2",
     "@react-native-community/datetimepicker": "7.2.0",
     "@react-navigation/native": "^6.0.13",
@@ -29,6 +30,7 @@
     "expo-localization": "~14.3.0",
     "expo-media-library": "~15.4.1",
     "expo-notifications": "~0.20.1",
+    "expo-splash-screen": "~0.20.5",
     "expo-status-bar": "~1.6.0",
     "expo-updates": "~0.18.11",
     "firebase": "9.6.5",
@@ -52,8 +54,7 @@
     "react-native-webview": "13.2.2",
     "reanimated-bottom-sheet": "^1.0.0-alpha.22",
     "sentry-expo": "~7.0.0",
-    "toggle-switch-react-native": "^3.3.0",
-    "expo-splash-screen": "~0.20.5"
+    "toggle-switch-react-native": "^3.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.6"

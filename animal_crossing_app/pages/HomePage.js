@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Animated, Vibration, Image, Dimensions, TouchableOpacity, TextInput, StyleSheet, Text, View, Keyboard, BackHandler} from 'react-native';
+import React, {Component, useCallback, useMemo, useRef, useState} from 'react';
+import {Animated, Vibration, Image, Dimensions, TouchableOpacity, TextInput, StyleSheet, Text, View, Keyboard, BackHandler, Button} from 'react-native';
 import Clock from '../components/Clock';
 import HomeContentArea from '../components/HomeContentArea';
 import {EventContainer,getEventsDay} from '../components/EventContainer';
@@ -17,7 +17,7 @@ import {TodoList, TurnipLog} from '../components/TodoList';
 import VisitorsList from '../components/VisitorsList';
 import {translateDreamAddressBeginning, translateIslandNameInputLabel2, translateIslandNameInputLabel1, getSettingsString, attemptToTranslate} from "../LoadJsonData"
 import { ScrollView } from 'react-native-gesture-handler';
-import Popup, {PopupBottomCustom, PopupRaw} from "../components/Popup"
+import Popup, {DynamicSnapPoint, PopupBottomCustom, PopupRaw} from "../components/Popup"
 import VillagerPopup from "../popups/VillagerPopup"
 import ToggleSwitch from 'toggle-switch-react-native'
 import {SubHeader, Paragraph} from "../components/Formattings"
@@ -207,6 +207,7 @@ class HomePage extends Component {
 
     return <View style={{height:"100%",width:"100%"}}>
       <PopupChangelog setPage={this.props.setPage}/>
+      
       {/* <PopupBottomCustom ref={(popupSettings) => this.popupSettings = popupSettings} onClose={()=>{}}>
         <ConfigureHomePages 
           header={"Select Homepage Sections"} 
@@ -499,6 +500,7 @@ class HomePage extends Component {
         <Image style={{top:0, width:Dimensions.get('window').width, height:Dimensions.get('window').height-298, resizeMode:"stretch",zIndex:10, backgroundColor:colors.grassColor[global.darkMode]}} source={global.darkMode===1 ? require("../assets/icons/cliffDark.png") : require("../assets/icons/cliff.png")} />
       </View>
       <VillagerPopupPopup ref={(villagerPopupPopup) => this.villagerPopupPopup = villagerPopupPopup} setPage={this.props.setPage}/>
+      <DynamicSnapPoint></DynamicSnapPoint>
     </View>
   }
 }
@@ -973,3 +975,4 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
 });
+

@@ -1,4 +1,4 @@
-import React, { Component, PureComponent } from "react";
+import React, { Component, PureComponent, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   Alert,
   Modal,
@@ -14,7 +14,7 @@ import {
 import TextFont from "./TextFont";
 import ButtonComponent from "./ButtonComponent";
 import colors from "../Colors";
-import BottomSheet from 'reanimated-bottom-sheet';
+// import BottomSheet from 'reanimated-bottom-sheet';
 import Animated from 'react-native-reanimated';
 import FadeInOut from "./FadeInOut"
 import { HeaderNote, MailLink, SubHeader } from "./Formattings";
@@ -23,6 +23,7 @@ import { Appearance } from 'react-native';
 import LottieView from 'lottie-react-native';
 import { attemptToTranslate, getSettingsString } from "../LoadJsonData";
 import { AnimatedPopupWrapper } from "./PopupAnimatedWrapper";
+import BottomSheet, {useMaxHeightScrollableBottomSheet, BottomSheetBackdrop, BottomSheetScrollView, useBottomSheet } from '@gorhom/bottom-sheet';
 
 // <Popup 
 //  button1={"OK"} 
@@ -410,6 +411,7 @@ export class PopupBottomCustom extends PureComponent {
     this.state = {
       heightOffset:0,
       openStart:false,
+      popupVisible: false,
     }
     // this.bottomSheetCallback = new Animated.Value(1);
     // this.showOnceCalculated = false
@@ -418,33 +420,35 @@ export class PopupBottomCustom extends PureComponent {
   }
 
   componentDidMount() {
-    // this.mounted=true;
-    // this.visible=false;
-    // this.backHandler = BackHandler.addEventListener(
-    //   "1hardwareBackPressPopup",
-    //   this.handleBackButton,
-    // );
+    this.mounted=true;
+    this.visible=false;
+    this.backHandler = BackHandler.addEventListener(
+      "1hardwareBackPressPopup",
+      this.handleBackButton,
+    );
   }
 
   componentWillUnmount() {
     this.mounted=false
-    // BackHandler.removeEventListener("1hardwareBackPressPopup", this.handleBackButton);
+    BackHandler.removeEventListener("1hardwareBackPressPopup", this.handleBackButton);
   }
 
   handleBackButton = () => {
-    // if(this.visible===true){
-    //   this.setPopupVisible(false)
-    //   return true
-    // } else {
-    //   // RootNavigation.popRoute(1)
-    //   // if(RootNavigation.getCurrentRoute()==="Home"){
-    //   //   return true;
-    //   // }
-    //   return false
-    // }
+    if(this.state.popupVisible===true){
+      this.setPopupVisible(false)
+      return true
+    } else {
+      // RootNavigation.popRoute(1)
+      // if(RootNavigation.getCurrentRoute()==="Home"){
+      //   return true;
+      // }
+      return false
+    }
   }
 
   setPopupVisible = (visible, showOnceCalculated=false, oldKey="") => {
+    this.setState({popupVisible:visible})
+    console.log("Showing popup")
     this.showOnceCalculated = showOnceCalculated
     // if(this.mounted){
     //   this.setState({heightOffset:0})
@@ -538,6 +542,7 @@ export class PopupBottomCustom extends PureComponent {
     // };
     return (
       <>
+      <DynamicSnapPoint visible={this.state.popupVisible} setVisible={(visible)=>{this.setState({visible: visible})}}/>
       {/* {this.bottomSheetCallback?<Animated.View style={{zIndex:50, backgroundColor: "black", opacity: Animated.multiply(-0.8,Animated.add(-0.7,Animated.multiply(this.bottomSheetCallback,1))), width: Dimensions.get('window').width, height: Dimensions.get('window').height, position:"absolute"}} pointerEvents="none"/>:<View/>}
       <BottomSheet
         callbackNode={this.bottomSheetCallback}
@@ -568,5 +573,105 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     padding: 20,
     elevation: 5
+  },
+});
+
+
+export const DynamicSnapPoint = (props) => {
+  const [count, setCount] = useState(500);
+  const [maxHeight, setMaxHeight] = useState("80%");
+  const bottomSheetRef = useRef(null);
+
+  useEffect(() => {
+    console.log(props.visible);
+    if (props.visible === true) {
+      bottomSheetRef.current?.expand();
+    } else {
+      bottomSheetRef.current?.close();
+    }
+  }, [props.visible]);
+
+  const {
+    animatedHandleHeight,
+    animatedSnapPoints,
+    animatedContentHeight,
+    handleContentLayout,
+    innerScrollViewAnimatedStyles,
+  } = useMaxHeightScrollableBottomSheet(maxHeight);
+
+  const handleExpandPress = useCallback(() => {
+    bottomSheetRef.current?.expand();
+  }, []);
+  const handleClosePress = useCallback(() => {
+    bottomSheetRef.current?.close();
+  }, []);
+
+
+  return (
+      <BottomSheet
+        handleIndicatorStyle={{ display: "none" }}
+        ref={bottomSheetRef}
+        snapPoints={animatedSnapPoints}
+        handleHeight={animatedHandleHeight}
+        contentHeight={animatedContentHeight}
+        enablePanDownToClose={true}
+        animateOnMount={false}
+
+        backdropComponent={(props) => <BottomSheetBackdrop
+          { ... props}
+          disappearsOnIndex={-1}
+          appearsOnIndex={0} opacity={0.5}/>
+        }
+      >
+        <BottomSheetScrollView
+          style={innerScrollViewAnimatedStyles}
+          onLayout={handleContentLayout}
+          scrollEnabled={true}
+        >
+          {Array.from({ length: count }).map((_, index) => (
+            <View key={index} style={styles.item}>
+              <Text style={styles2.itemText}>👋 I am a item 👋</Text>
+            </View>
+          ))}
+        </BottomSheetScrollView>
+      </BottomSheet>
+  );
+};
+
+const styles2 = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 24,
+  },
+  contentContainerStyle: {
+    paddingTop: 12,
+    paddingBottom: 6,
+    paddingHorizontal: 24,
+  },
+  item: {
+    alignContent: 'center',
+    height: 50,
+    width: '100%',
+  },
+  itemText: {
+    fontSize: 16,
+    width: '100%',
+    textAlign: 'center',
+  },
+  button: {
+    flex: 1,
+    flexShrink: 1,
+  },
+  buttonGroup: {
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  gap: {
+    width: 12,
+    height: '100%',
+  },
+  actionsContainer: {
+    padding: 12,
   },
 });
