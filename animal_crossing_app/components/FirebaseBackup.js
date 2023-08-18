@@ -9,8 +9,11 @@ import { getAllData, importAllData } from './LoadFile';
 import Popup from './Popup';
 import { attemptToTranslate, getStorage } from '../LoadJsonData';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
+import { getDatabase, ref, set, get } from 'firebase/database';
 
-const auth = app.auth();
+const auth = getAuth(app)
+const db = getDatabase();
 
 export async function autoBackup(){
   let email = await getStorage("loginEmail","")
@@ -19,7 +22,7 @@ export async function autoBackup(){
   let error = false
   try {
     if (email !== '' && password !== '') {
-      await auth.signInWithEmailAndPassword(email, password);
+      await signInWithEmailAndPassword(auth, email, password);
       console.log(auth.currentUser.uid)
     } else {
       throw({"message":attemptToTranslate("The login credentials are not set for cloud backup or are incorrect. Please set them in the Backup + Restore page.")})
@@ -36,19 +39,29 @@ export async function autoBackup(){
     console.log("Backup error. allData appears to be undefined when using autobackup.")
   } else {
     try{
-      await (app.database()).ref('users/' + auth.currentUser.uid).set({data: allData})
-      await (app.database()).ref('users/' + auth.currentUser.uid).once('value').then(async (snapshot) => {
-        if(snapshot.val()===null || snapshot.val()["data"]===undefined){
-          await auth.signOut();
-          console.log("signed out")
-          output = attemptToTranslate("Auto Backups") + ": " + attemptToTranslate("An error occurred. No backup was created.");
-          error = true
-        } else {
-          await auth.signOut();
-          console.log("signed out")
-          output = attemptToTranslate("Auto Backups") + " ("+ email +"): " + attemptToTranslate("There are") + " " + snapshot.val()["data"].split("\n").length.toString() + " " + attemptToTranslate("entries on the server now")
-        }
-      })
+      const user =  auth.currentUser.uid;
+      await set(ref(db, 'users/' + user), {
+        data: allData
+      });
+      
+      const snapshot = await get(ref(db, 'users/' + user));
+      
+      if (
+        snapshot.val() === null ||
+        snapshot.val()["data"] === undefined ||
+        snapshot.val()["data"].length !== allData.length
+      ) {
+        await auth.signOut();
+        console.log("signed out")
+        output = attemptToTranslate("Auto Backups") + ": " + attemptToTranslate("An error occurred. No backup was created.");
+        error = true
+      } else {
+        console.log("length comparison: " + snapshot.val()["data"].length + " " + allData.length);
+        await auth.signOut();
+        console.log("signed out")
+        output = attemptToTranslate("Auto Backups") + " ("+ email +"): " + attemptToTranslate("There are") + " " + snapshot.val()["data"].split("\n").length.toString() + " " + attemptToTranslate("entries on the server now")
+      }
+      
     } catch(error) {
       output = attemptToTranslate("Auto Backups") + ": " + attemptToTranslate("An error occurred. Please check your internet connection and try again later.")
       console.log("Auto backups error: "+ error)
@@ -89,21 +102,40 @@ export default class FirebaseBackup extends Component {
         console.log("Backup error. allData appears to be undefined when storeData(user) is called.")
       } else {
         try{
-          (app.database()).ref('users/' + user).set({
+          await set(ref(db, 'users/' + user), {
             data: allData
-          }).then(()=>{
-            this.setState({messageExport:attemptToTranslate("Verifying data...")});
-            (app.database()).ref('users/' + user).once('value').then(async (snapshot) => {
-              if(snapshot.val()===null || snapshot.val()["data"]===undefined || snapshot.val()["data"].length!==allData.length){
-                this.setState({messageExport:attemptToTranslate("An error occurred. No backup was created.")});
-                return
-              } else {
-                console.log("length comparison:" +  snapshot.val()["data"].length + " " + allData.length)
-                this.setState({messageExport:attemptToTranslate("There are") + " " + snapshot.val()["data"].split("\n").length.toString() + " " + attemptToTranslate("entries on the server now")+"\n" + attemptToTranslate("Exported to user:") + "\n"  + this.state.email + "\n" + user.toString()});
-              }
-            })
           });
+          this.setState({messageExport:attemptToTranslate("Verifying data...")});
+          
+          const snapshot = await get(ref(db, 'users/' + user));
+          
+          if (
+            snapshot.val() === null ||
+            snapshot.val()["data"] === undefined ||
+            snapshot.val()["data"].length !== allData.length
+          ) {
+            this.setState({
+              messageExport: attemptToTranslate("An error occurred. No backup was created.")
+            });
+          } else {
+            console.log("length comparison: " + snapshot.val()["data"].length + " " + allData.length);
+            this.setState({
+              messageExport:
+                attemptToTranslate("There are") +
+                " " +
+                snapshot.val()["data"].split("\n").length.toString() +
+                " " +
+                attemptToTranslate("entries on the server now") +
+                "\n" +
+                attemptToTranslate("Exported to user:") +
+                "\n" +
+                this.state.email +
+                "\n" +
+                user.toString()
+            });
+          }
         }catch(e){
+          console.log(e.toString())
           this.setState({messageExport:e.toString() + " " + attemptToTranslate("An error occurred. Please check your internet connection and try again later.")});
         }
       }
@@ -115,18 +147,20 @@ export default class FirebaseBackup extends Component {
       this.importPopup?.setPopupVisible(true);
       this.setState({messageImport:attemptToTranslate("Please wait")});
       try{
-        (app.database()).ref('users/' + user).once('value').then(async (snapshot) => {
-          if(snapshot.val()===null || snapshot.val()["data"]===undefined){
-            this.setState({messageImport:attemptToTranslate("There are no backups stored. Please Upload one.")});
-            return
-          }
+        const snapshot = await get(ref(db, 'users/' + user));
+  
+        if (snapshot.val() === null || snapshot.val()["data"] === undefined) {
+          this.setState({messageImport:attemptToTranslate("There are no backups stored. Please Upload one.")});
+          return
+        } else {
           let loadedNumber = await importAllData(snapshot.val()["data"])
           this.setState({loadedNumber:loadedNumber})
           console.log("Loaded number:")
           console.log(loadedNumber)
           this.setState({messageImport: attemptToTranslate("Imported:") + " " + this.state.loadedNumber + " " + attemptToTranslate("entires.")})
-        })
+        }
       }catch(e){
+        console.log(e.toString())
         this.setState({messageImport:e.toString() + " " + attemptToTranslate("An error occurred. Please check your internet connection and try again later.")});
       }
     }
@@ -136,13 +170,14 @@ export default class FirebaseBackup extends Component {
     this.setState({secureTextEntry:true})
     try {
       if (this.state.email !== '' && this.state.password !== '') {
-        await auth.signInWithEmailAndPassword(this.state.email, this.state.password);
+        await signInWithEmailAndPassword(auth, this.state.email, this.state.password);
         this.setState({uid:auth.currentUser.uid})
         console.log(auth.currentUser.uid)
       } else {
         this.setState({error:"Please enter an email and password"});
       }
     } catch (error) {
+      console.log(error.toString())
       this.setState({error:error.message});
     }
   };

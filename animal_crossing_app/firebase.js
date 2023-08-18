@@ -1,12 +1,12 @@
-import firebase from 'firebase/app';
+import { initializeApp, getApps } from "firebase/app"
 import 'firebase/auth';
 import 'firebase/database';
 import {firebaseConfig} from './firebaseConfig'
 
 let app;
 
-if (firebase.apps.length === 0) {
-  app = firebase.initializeApp(firebaseConfig);
+if (getApps().length===0) {
+  app = initializeApp(firebaseConfig);
 }
 
 export default app;
