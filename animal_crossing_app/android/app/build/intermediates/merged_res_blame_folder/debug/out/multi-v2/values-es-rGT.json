@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "F:\\Documents\\AppDev\\AnimalCrossingNH-App-React\\animal_crossing_app\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es-rGT\\values-es-rGT.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\james\\.gradle\\caches\\transforms-3\\018695954679ec3c55a7993c01bc8706\\transformed\\jetified-Android-Image-Cropper-4.3.0\\res\\values-es-rGT\\values-es-rGT.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,170,217,273,326,402,474,541,607,660,732",
+                        "endColumns": "114,46,55,52,75,71,66,65,52,71,54",
+                        "endOffsets": "165,212,268,321,397,469,536,602,655,727,782"
+                    }
+                }
+            ]
+        }
+    ]
+}

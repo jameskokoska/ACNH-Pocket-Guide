@@ -1,0 +1,731 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.acnh.pocket_guide"
+4    android:versionCode="369"
+5    android:versionName="18.3.3" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="31" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:3:3-75
+11-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:3:20-73
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:2:3-64
+12-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:2:20-62
+13    <uses-permission android:name="android.permission.VIBRATE" />
+13-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:4:3-63
+13-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:4:20-61
+14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+14-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:5:3-77
+14-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:5:20-75
+15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+15-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:6:3-78
+15-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:6:20-76
+16    <uses-permission android:name="android.permission.BILLING" />
+16-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:7:3-63
+16-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:7:20-61
+17
+18    <queries>
+18-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:8:3-14:13
+19        <intent>
+19-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:9:5-13:14
+20            <action android:name="android.intent.action.VIEW" />
+20-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:10:7-58
+20-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:10:15-56
+21
+22            <category android:name="android.intent.category.BROWSABLE" />
+22-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:11:7-67
+22-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:11:17-65
+23
+24            <data android:scheme="https" />
+24-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:12:7-37
+24-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:12:13-35
+25        </intent>
+26
+27        <package android:name="host.exp.exponent" /> <!-- Query open documents -->
+27-->[:expo-dev-launcher] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-53
+27-->[:expo-dev-launcher] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-50
+28        <intent>
+28-->[:expo-document-picker] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-document-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:9-19:18
+29            <action android:name="android.intent.action.OPEN_DOCUMENT" />
+29-->[:expo-document-picker] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-document-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-74
+29-->[:expo-document-picker] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-document-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:21-71
+30
+31            <category android:name="android.intent.category.DEFAULT" />
+31-->[:expo-dev-launcher] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:17-76
+31-->[:expo-dev-launcher] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:27-73
+32            <category android:name="android.intent.category.OPENABLE" />
+32-->[:expo-document-picker] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-document-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-73
+32-->[:expo-document-picker] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-document-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:23-70
+33
+34            <data android:mimeType="*/*" />
+34-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:12:7-37
+35        </intent> <!-- Query open documents -->
+36        <intent>
+36-->[:expo-file-system] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:9-19:18
+37            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+37-->[:expo-file-system] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-79
+37-->[:expo-file-system] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:21-76
+38        </intent>
+39        <intent>
+39-->[:expo-image-picker] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-20:18
+40
+41            <!-- Required for picking images from the camera roll if targeting API 30 -->
+42            <action android:name="android.media.action.IMAGE_CAPTURE" />
+42-->[:expo-image-picker] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-73
+42-->[:expo-image-picker] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:21-70
+43        </intent>
+44        <intent>
+44-->[:expo-image-picker] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:9-25:18
+45
+46            <!-- Required for picking images from the camera if targeting API 30 -->
+47            <action android:name="android.media.action.ACTION_VIDEO_CAPTURE" />
+47-->[:expo-image-picker] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-80
+47-->[:expo-image-picker] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:21-77
+48        </intent>
+49        <intent>
+49-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\james\.gradle\caches\transforms-3\018695954679ec3c55a7993c01bc8706\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:10:9-16:18
+50            <action android:name="android.intent.action.GET_CONTENT" />
+50-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\james\.gradle\caches\transforms-3\018695954679ec3c55a7993c01bc8706\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:11:13-72
+50-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\james\.gradle\caches\transforms-3\018695954679ec3c55a7993c01bc8706\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:11:21-69
+51
+52            <category android:name="android.intent.category.OPENABLE" />
+52-->[:expo-document-picker] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-document-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-73
+52-->[:expo-document-picker] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-document-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:23-70
+53
+54            <data android:mimeType="*/*" />
+54-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:12:7-37
+55        </intent>
+56    </queries>
+57
+58    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+58-->[com.facebook.flipper:flipper:0.125.0] C:\Users\james\.gradle\caches\transforms-3\0fc98b11c4641f005f09c95af9e0c4a7\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:16:5-76
+58-->[com.facebook.flipper:flipper:0.125.0] C:\Users\james\.gradle\caches\transforms-3\0fc98b11c4641f005f09c95af9e0c4a7\transformed\jetified-flipper-0.125.0\AndroidManifest.xml:16:22-73
+59    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Required for picking images from camera directly -->
+59-->[:sentry_react-native] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\@sentry\react-native\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-79
+59-->[:sentry_react-native] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\@sentry\react-native\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-76
+60    <uses-permission android:name="android.permission.CAMERA" />
+60-->[:expo-image-picker] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-65
+60-->[:expo-image-picker] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-62
+61    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+61-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-81
+61-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:22-78
+62    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+62-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\james\.gradle\caches\transforms-3\f8d31c81e2da04439b82f7d74ab705d7\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:23:5-68
+62-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\james\.gradle\caches\transforms-3\f8d31c81e2da04439b82f7d74ab705d7\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:23:22-65
+63    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+63-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\james\.gradle\caches\transforms-3\f8d31c81e2da04439b82f7d74ab705d7\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:25:5-82
+63-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\james\.gradle\caches\transforms-3\f8d31c81e2da04439b82f7d74ab705d7\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:25:22-79
+64    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+64-->[com.android.installreferrer:installreferrer:1.0] C:\Users\james\.gradle\caches\transforms-3\50a5d4c0f90663da4148b4a9fa69f462\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:5-110
+64-->[com.android.installreferrer:installreferrer:1.0] C:\Users\james\.gradle\caches\transforms-3\50a5d4c0f90663da4148b4a9fa69f462\transformed\jetified-installreferrer-1.0\AndroidManifest.xml:9:22-107
+65    <uses-permission android:name="com.android.vending.BILLING" /> <!-- for android -->
+65-->[com.android.billingclient:billing:4.0.0] C:\Users\james\.gradle\caches\transforms-3\9f9158cc84a30727fa2ae7cec8cff97a\transformed\jetified-billing-4.0.0\AndroidManifest.xml:10:5-67
+65-->[com.android.billingclient:billing:4.0.0] C:\Users\james\.gradle\caches\transforms-3\9f9158cc84a30727fa2ae7cec8cff97a\transformed\jetified-billing-4.0.0\AndroidManifest.xml:10:22-64
+66    <!-- <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/> -->
+67    <!-- <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/> -->
+68    <!-- <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" /> -->
+69    <!-- <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" /> -->
+70    <!-- for Samsung -->
+71    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+71-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:19:5-86
+71-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:19:22-83
+72    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" /> <!-- for htc -->
+72-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:20:5-87
+72-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:20:22-84
+73    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+73-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:23:5-81
+73-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:23:22-78
+74    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" /> <!-- for sony -->
+74-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:24:5-83
+74-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:24:22-80
+75    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+75-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:27:5-88
+75-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:27:22-85
+76    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" /> <!-- for apex -->
+76-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:28:5-92
+76-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:28:22-89
+77    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" /> <!-- for solid -->
+77-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:31:5-84
+77-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:31:22-81
+78    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" /> <!-- for huawei -->
+78-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:34:5-83
+78-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:34:22-80
+79    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+79-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:37:5-91
+79-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:37:22-88
+80    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+80-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:38:5-92
+80-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:38:22-89
+81    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" /> <!-- for ZUK -->
+81-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:39:5-93
+81-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:39:22-90
+82    <uses-permission android:name="android.permission.READ_APP_BADGE" /> <!-- for OPPO -->
+82-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:42:5-73
+82-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:42:22-70
+83    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+83-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:45:5-82
+83-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:45:22-79
+84    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" /> <!-- for EvMe -->
+84-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:46:5-83
+84-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:46:22-80
+85    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
+85-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:49:5-88
+85-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:49:22-85
+86    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
+86-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:50:5-89
+86-->[me.leolin:ShortcutBadger:1.1.22] C:\Users\james\.gradle\caches\transforms-3\c9e3f03a272574d610261a47762cdade\transformed\jetified-ShortcutBadger-1.1.22\AndroidManifest.xml:50:22-86
+87
+88    <application
+88-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:15:3-30:17
+89        android:name="com.acnhpocketguide.MainApplication"
+89-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:15:16-47
+90        android:allowBackup="false"
+90-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:15:162-189
+91        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+91-->[androidx.core:core:1.7.0] C:\Users\james\.gradle\caches\transforms-3\efc5fbdc5cddabff1e6dbe6ad771c56d\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+92        android:debuggable="true"
+93        android:icon="@mipmap/ic_launcher"
+93-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:15:81-115
+94        android:label="@string/app_name"
+94-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:15:48-80
+95        android:roundIcon="@mipmap/ic_launcher_round"
+95-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:15:116-161
+96        android:theme="@style/AppTheme"
+96-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:15:190-221
+97        android:usesCleartextTraffic="true" >
+97-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:15:222-257
+98        <meta-data
+98-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:16:5-142
+99            android:name="expo.modules.updates.EXPO_UPDATE_URL"
+99-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:16:16-67
+100            android:value="https://exp.host/@dapperappdeveloper/animal_crossing_app" />
+100-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:16:68-140
+101        <meta-data
+101-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:17:5-93
+102            android:name="expo.modules.updates.EXPO_SDK_VERSION"
+102-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:17:16-68
+103            android:value="46.0.0" />
+103-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:17:69-91
+104        <meta-data
+104-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:18:5-82
+105            android:name="expo.modules.updates.ENABLED"
+105-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:18:16-59
+106            android:value="true" />
+106-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:18:60-80
+107        <meta-data
+107-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:19:5-105
+108            android:name="expo.modules.updates.EXPO_UPDATES_CHECK_ON_LAUNCH"
+108-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:19:16-80
+109            android:value="ALWAYS" />
+109-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:19:81-103
+110        <meta-data
+110-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:20:5-99
+111            android:name="expo.modules.updates.EXPO_UPDATES_LAUNCH_WAIT_MS"
+111-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:20:16-79
+112            android:value="0" />
+112-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:20:80-97
+113        <meta-data
+113-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:21:5-130
+114            android:name="expo.modules.notifications.default_notification_icon"
+114-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:21:16-83
+115            android:resource="@drawable/ic_notification" />
+115-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:21:84-128
+116        <meta-data
+116-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:22:5-136
+117            android:name="expo.modules.notifications.default_notification_color"
+117-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:22:16-84
+118            android:resource="@color/notification_icon_color" />
+118-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:22:85-134
+119
+120        <activity
+120-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:23:5-28:16
+121            android:name="com.acnhpocketguide.MainActivity"
+121-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:23:15-43
+122            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+122-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:23:77-154
+123            android:exported="true"
+123-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:23:273-296
+124            android:label="@string/app_name"
+124-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:23:44-76
+125            android:launchMode="singleTask"
+125-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:23:155-186
+126            android:theme="@style/Theme.App.SplashScreen"
+126-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:23:227-272
+127            android:windowSoftInputMode="adjustPan" >
+127-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:23:187-226
+128            <intent-filter>
+128-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:24:7-27:23
+129                <action android:name="android.intent.action.MAIN" />
+129-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:25:9-60
+129-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:25:17-58
+130
+131                <category android:name="android.intent.category.LAUNCHER" />
+131-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:26:9-68
+131-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:26:19-66
+132            </intent-filter>
+133        </activity>
+134        <activity
+134-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:29:5-106
+135            android:name="com.facebook.react.devsupport.DevSettingsActivity"
+135-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:29:15-79
+136            android:exported="false" />
+136-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:29:80-104
+137
+138        <meta-data
+138-->[:sentry_react-native] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\@sentry\react-native\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:9-15:37
+139            android:name="io.sentry.auto-init"
+139-->[:sentry_react-native] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\@sentry\react-native\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
+140            android:value="false" />
+140-->[:sentry_react-native] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\@sentry\react-native\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-34
+141
+142        <provider
+142-->[:react-native-webview] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
+143            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
+143-->[:react-native-webview] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-83
+144            android:authorities="com.acnh.pocket_guide.fileprovider"
+144-->[:react-native-webview] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-64
+145            android:exported="false"
+145-->[:react-native-webview] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
+146            android:grantUriPermissions="true" >
+146-->[:react-native-webview] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
+147            <meta-data
+147-->[:react-native-webview] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:63
+148                android:name="android.support.FILE_PROVIDER_PATHS"
+148-->[:react-native-webview] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
+149                android:resource="@xml/file_provider_paths" />
+149-->[:react-native-webview] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-60
+150        </provider>
+151
+152        <meta-data
+152-->[:expo-dev-launcher] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:9-16:37
+153            android:name="expo.modules.updates.AUTO_SETUP"
+153-->[:expo-dev-launcher] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-59
+154            android:value="false" />
+154-->[:expo-dev-launcher] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:13-34
+155
+156        <activity
+156-->[:expo-dev-launcher] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:9-31:20
+157            android:name="expo.modules.devlauncher.launcher.DevLauncherActivity"
+157-->[:expo-dev-launcher] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:13-81
+158            android:exported="true"
+158-->[:expo-dev-launcher] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-36
+159            android:launchMode="singleTask"
+159-->[:expo-dev-launcher] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-44
+160            android:theme="@style/Theme.DevLauncher.LauncherActivity" >
+160-->[:expo-dev-launcher] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-70
+161            <intent-filter>
+161-->[:expo-dev-launcher] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-30:29
+162                <action android:name="android.intent.action.VIEW" />
+162-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:10:7-58
+162-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:10:15-56
+163
+164                <category android:name="android.intent.category.DEFAULT" />
+164-->[:expo-dev-launcher] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:17-76
+164-->[:expo-dev-launcher] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:27-73
+165                <category android:name="android.intent.category.BROWSABLE" />
+165-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:11:7-67
+165-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:11:17-65
+166
+167                <data android:scheme="expo-dev-launcher" />
+167-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:12:7-37
+167-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:12:13-35
+168            </intent-filter>
+169        </activity>
+170        <activity
+170-->[:expo-dev-launcher] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:32:9-35:70
+171            android:name="expo.modules.devlauncher.launcher.errors.DevLauncherErrorActivity"
+171-->[:expo-dev-launcher] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:33:13-93
+172            android:screenOrientation="portrait"
+172-->[:expo-dev-launcher] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:34:13-49
+173            android:theme="@style/Theme.DevLauncher.ErrorActivity" />
+173-->[:expo-dev-launcher] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:35:13-67
+174        <activity
+174-->[:expo-dev-menu] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-23:20
+175            android:name="expo.modules.devmenu.DevMenuActivity"
+175-->[:expo-dev-menu] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-64
+176            android:exported="true"
+176-->[:expo-dev-menu] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-36
+177            android:launchMode="singleTask"
+177-->[:expo-dev-menu] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-44
+178            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar" >
+178-->[:expo-dev-menu] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-75
+179            <intent-filter>
+179-->[:expo-dev-menu] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-menu\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-22:29
+180                <action android:name="android.intent.action.VIEW" />
+180-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:10:7-58
+180-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:10:15-56
+181
+182                <category android:name="android.intent.category.DEFAULT" />
+182-->[:expo-dev-launcher] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:17-76
+182-->[:expo-dev-launcher] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-dev-launcher\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:27-73
+183                <category android:name="android.intent.category.BROWSABLE" />
+183-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:11:7-67
+183-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:11:17-65
+184
+185                <data android:scheme="expo-dev-menu" />
+185-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:12:7-37
+185-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:12:13-35
+186            </intent-filter>
+187        </activity>
+188
+189        <provider
+189-->[:expo-file-system] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:9-32:20
+190            android:name="expo.modules.filesystem.FileSystemFileProvider"
+190-->[:expo-file-system] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-74
+191            android:authorities="com.acnh.pocket_guide.FileSystemFileProvider"
+191-->[:expo-file-system] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:13-74
+192            android:exported="false"
+192-->[:expo-file-system] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-37
+193            android:grantUriPermissions="true" >
+193-->[:expo-file-system] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-file-system\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-47
+194            <meta-data
+194-->[:react-native-webview] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:63
+195                android:name="android.support.FILE_PROVIDER_PATHS"
+195-->[:react-native-webview] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
+196                android:resource="@xml/file_system_provider_paths" />
+196-->[:react-native-webview] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-60
+197        </provider>
+198
+199        <activity
+199-->[:expo-image-picker] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:9-31:59
+200            android:name="com.canhub.cropper.CropImageActivity"
+200-->[:expo-image-picker] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:30:13-64
+201            android:exported="true"
+201-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\james\.gradle\caches\transforms-3\018695954679ec3c55a7993c01bc8706\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:35:13-36
+202            android:theme="@style/Base.Theme.AppCompat" /> <!-- https://developer.android.com/guide/topics/manifest/provider-element.html -->
+202-->[:expo-image-picker] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:31:13-56
+203        <provider
+203-->[:expo-image-picker] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:33:9-41:20
+204            android:name="expo.modules.imagepicker.fileprovider.ImagePickerFileProvider"
+204-->[:expo-image-picker] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:34:13-89
+205            android:authorities="com.acnh.pocket_guide.ImagePickerFileProvider"
+205-->[:expo-image-picker] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:35:13-75
+206            android:exported="false"
+206-->[:expo-image-picker] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:36:13-37
+207            android:grantUriPermissions="true" >
+207-->[:expo-image-picker] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:37:13-47
+208            <meta-data
+208-->[:react-native-webview] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:63
+209                android:name="android.support.FILE_PROVIDER_PATHS"
+209-->[:react-native-webview] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
+210                android:resource="@xml/image_picker_provider_paths" />
+210-->[:react-native-webview] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-60
+211        </provider>
+212
+213        <service
+213-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:9-18:19
+214            android:name="expo.modules.notifications.service.ExpoFirebaseMessagingService"
+214-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-91
+215            android:exported="false" >
+215-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-37
+216            <intent-filter android:priority="-1" >
+216-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:29
+216-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:28-49
+217                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+217-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-78
+217-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:25-75
+218            </intent-filter>
+219        </service>
+220
+221        <receiver
+221-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:9-32:20
+222            android:name="expo.modules.notifications.service.NotificationsService"
+222-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-83
+223            android:enabled="true"
+223-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:13-35
+224            android:exported="false" >
+224-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-37
+225            <intent-filter android:priority="-1" >
+225-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-31:29
+225-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:28-49
+226                <action android:name="expo.modules.notifications.NOTIFICATION_EVENT" />
+226-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:17-88
+226-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:25-85
+227                <action android:name="android.intent.action.BOOT_COMPLETED" />
+227-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:17-79
+227-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:25-76
+228                <action android:name="android.intent.action.REBOOT" />
+228-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:17-71
+228-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:25-68
+229                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+229-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:17-82
+229-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:25-79
+230                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+230-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:17-82
+230-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:25-79
+231                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+231-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:30:17-84
+231-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:30:25-81
+232            </intent-filter>
+233        </receiver>
+234
+235        <activity
+235-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:34:9-41:75
+236            android:name="expo.modules.notifications.service.NotificationForwarderActivity"
+236-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:35:13-92
+237            android:excludeFromRecents="true"
+237-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:36:13-46
+238            android:exported="false"
+238-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:37:13-37
+239            android:launchMode="standard"
+239-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:38:13-42
+240            android:noHistory="true"
+240-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:39:13-37
+241            android:taskAffinity=""
+241-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:40:13-36
+242            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+242-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:41:13-72
+243
+244        <meta-data
+244-->[:expo-modules-core] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-12:89
+245            android:name="org.unimodules.core.AppLoader#react-native-headless"
+245-->[:expo-modules-core] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-79
+246            android:value="expo.modules.adapters.react.apploader.RNHeadlessAppLoader" />
+246-->[:expo-modules-core] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-modules-core\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-86
+247
+248        <provider
+248-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\james\.gradle\caches\transforms-3\018695954679ec3c55a7993c01bc8706\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:23:9-31:20
+249            android:name="com.canhub.cropper.CropFileProvider"
+249-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\james\.gradle\caches\transforms-3\018695954679ec3c55a7993c01bc8706\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:24:13-63
+250            android:authorities="com.acnh.pocket_guide.cropper.fileprovider"
+250-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\james\.gradle\caches\transforms-3\018695954679ec3c55a7993c01bc8706\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:25:13-72
+251            android:exported="false"
+251-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\james\.gradle\caches\transforms-3\018695954679ec3c55a7993c01bc8706\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:26:13-37
+252            android:grantUriPermissions="true" >
+252-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\james\.gradle\caches\transforms-3\018695954679ec3c55a7993c01bc8706\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:27:13-47
+253            <meta-data
+253-->[:react-native-webview] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:63
+254                android:name="android.support.FILE_PROVIDER_PATHS"
+254-->[:react-native-webview] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
+255                android:resource="@xml/library_file_paths" />
+255-->[:react-native-webview] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\react-native-webview\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-60
+256        </provider> <!-- This is here because the library did not update yet to Android 12 so we force the exported value when merging manifests -->
+257        <activity
+257-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\james\.gradle\caches\transforms-3\018695954679ec3c55a7993c01bc8706\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:38:9-45:20
+258            android:name="androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity"
+258-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\james\.gradle\caches\transforms-3\018695954679ec3c55a7993c01bc8706\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:39:13-99
+259            android:exported="true"
+259-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\james\.gradle\caches\transforms-3\018695954679ec3c55a7993c01bc8706\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:40:13-36
+260            android:theme="@android:style/Theme" >
+260-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\james\.gradle\caches\transforms-3\018695954679ec3c55a7993c01bc8706\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:41:13-49
+261            <intent-filter>
+261-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\james\.gradle\caches\transforms-3\018695954679ec3c55a7993c01bc8706\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:42:13-44:29
+262                <action android:name="android.intent.action.MAIN" />
+262-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:25:9-60
+262-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:25:17-58
+263            </intent-filter>
+264        </activity>
+265        <activity
+265-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\james\.gradle\caches\transforms-3\018695954679ec3c55a7993c01bc8706\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:46:9-53:20
+266            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
+266-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\james\.gradle\caches\transforms-3\018695954679ec3c55a7993c01bc8706\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:47:13-95
+267            android:exported="true"
+267-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\james\.gradle\caches\transforms-3\018695954679ec3c55a7993c01bc8706\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:48:13-36
+268            android:theme="@android:style/Theme" >
+268-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\james\.gradle\caches\transforms-3\018695954679ec3c55a7993c01bc8706\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:49:13-49
+269            <intent-filter>
+269-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\james\.gradle\caches\transforms-3\018695954679ec3c55a7993c01bc8706\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:42:13-44:29
+270                <action android:name="android.intent.action.MAIN" />
+270-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:25:9-60
+270-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:25:17-58
+271            </intent-filter>
+272        </activity>
+273        <activity
+273-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\james\.gradle\caches\transforms-3\018695954679ec3c55a7993c01bc8706\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:54:9-61:20
+274            android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
+274-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\james\.gradle\caches\transforms-3\018695954679ec3c55a7993c01bc8706\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:55:13-103
+275            android:exported="true"
+275-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\james\.gradle\caches\transforms-3\018695954679ec3c55a7993c01bc8706\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:56:13-36
+276            android:theme="@android:style/Theme.Dialog" >
+276-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\james\.gradle\caches\transforms-3\018695954679ec3c55a7993c01bc8706\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:57:13-56
+277            <intent-filter>
+277-->[com.github.CanHub:Android-Image-Cropper:4.3.0] C:\Users\james\.gradle\caches\transforms-3\018695954679ec3c55a7993c01bc8706\transformed\jetified-Android-Image-Cropper-4.3.0\AndroidManifest.xml:42:13-44:29
+278                <action android:name="android.intent.action.MAIN" />
+278-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:25:9-60
+278-->F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\android\app\src\main\AndroidManifest.xml:25:17-58
+279            </intent-filter>
+280        </activity>
+281
+282        <service
+282-->[androidx.room:room-runtime:2.4.2] C:\Users\james\.gradle\caches\transforms-3\d8547a169411f6fb7b054c2b1900b4eb\transformed\room-runtime-2.4.2\AndroidManifest.xml:25:9-28:40
+283            android:name="androidx.room.MultiInstanceInvalidationService"
+283-->[androidx.room:room-runtime:2.4.2] C:\Users\james\.gradle\caches\transforms-3\d8547a169411f6fb7b054c2b1900b4eb\transformed\room-runtime-2.4.2\AndroidManifest.xml:26:13-74
+284            android:directBootAware="true"
+284-->[androidx.room:room-runtime:2.4.2] C:\Users\james\.gradle\caches\transforms-3\d8547a169411f6fb7b054c2b1900b4eb\transformed\room-runtime-2.4.2\AndroidManifest.xml:27:13-43
+285            android:exported="false" />
+285-->[androidx.room:room-runtime:2.4.2] C:\Users\james\.gradle\caches\transforms-3\d8547a169411f6fb7b054c2b1900b4eb\transformed\room-runtime-2.4.2\AndroidManifest.xml:28:13-37
+286
+287        <receiver
+287-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\james\.gradle\caches\transforms-3\f8d31c81e2da04439b82f7d74ab705d7\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:28:9-35:20
+288            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+288-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\james\.gradle\caches\transforms-3\f8d31c81e2da04439b82f7d74ab705d7\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:29:13-78
+289            android:exported="true"
+289-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\james\.gradle\caches\transforms-3\f8d31c81e2da04439b82f7d74ab705d7\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:30:13-36
+290            android:permission="com.google.android.c2dm.permission.SEND" >
+290-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\james\.gradle\caches\transforms-3\f8d31c81e2da04439b82f7d74ab705d7\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:31:13-73
+291            <intent-filter>
+291-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\james\.gradle\caches\transforms-3\f8d31c81e2da04439b82f7d74ab705d7\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:32:13-34:29
+292                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+292-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\james\.gradle\caches\transforms-3\f8d31c81e2da04439b82f7d74ab705d7\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:33:17-81
+292-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\james\.gradle\caches\transforms-3\f8d31c81e2da04439b82f7d74ab705d7\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:33:25-78
+293            </intent-filter>
+294        </receiver>
+295        <!--
+296             FirebaseMessagingService performs security checks at runtime,
+297             but set to not exported to explicitly avoid allowing another app to call it.
+298        -->
+299        <service
+299-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\james\.gradle\caches\transforms-3\f8d31c81e2da04439b82f7d74ab705d7\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:41:9-48:19
+300            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+300-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\james\.gradle\caches\transforms-3\f8d31c81e2da04439b82f7d74ab705d7\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:42:13-82
+301            android:directBootAware="true"
+301-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\james\.gradle\caches\transforms-3\f8d31c81e2da04439b82f7d74ab705d7\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:43:13-43
+302            android:exported="false" >
+302-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\james\.gradle\caches\transforms-3\f8d31c81e2da04439b82f7d74ab705d7\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:44:13-37
+303            <intent-filter android:priority="-500" >
+303-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:29
+303-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:28-49
+304                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+304-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-78
+304-->[:expo-notifications] F:\Documents\AppDev\AnimalCrossingNH-App-React\animal_crossing_app\node_modules\expo-notifications\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:25-75
+305            </intent-filter>
+306        </service>
+307        <service
+307-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\james\.gradle\caches\transforms-3\f8d31c81e2da04439b82f7d74ab705d7\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:49:9-55:19
+308            android:name="com.google.firebase.components.ComponentDiscoveryService"
+308-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\james\.gradle\caches\transforms-3\f8d31c81e2da04439b82f7d74ab705d7\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:50:13-84
+309            android:directBootAware="true"
+309-->[com.google.firebase:firebase-common:20.0.0] C:\Users\james\.gradle\caches\transforms-3\0cfd1bf608252d26c0ca0f0d2d7451fd\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:35:13-43
+310            android:exported="false" >
+310-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\james\.gradle\caches\transforms-3\f8d31c81e2da04439b82f7d74ab705d7\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:51:13-37
+311            <meta-data
+311-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\james\.gradle\caches\transforms-3\f8d31c81e2da04439b82f7d74ab705d7\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:52:13-54:85
+312                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+312-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\james\.gradle\caches\transforms-3\f8d31c81e2da04439b82f7d74ab705d7\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:53:17-119
+313                android:value="com.google.firebase.components.ComponentRegistrar" />
+313-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\james\.gradle\caches\transforms-3\f8d31c81e2da04439b82f7d74ab705d7\transformed\jetified-firebase-messaging-22.0.0\AndroidManifest.xml:54:17-82
+314            <meta-data
+314-->[com.google.firebase:firebase-datatransport:18.0.0] C:\Users\james\.gradle\caches\transforms-3\9588486c28faf8252ff26f31f5c22021\transformed\jetified-firebase-datatransport-18.0.0\AndroidManifest.xml:28:13-30:85
+315                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+315-->[com.google.firebase:firebase-datatransport:18.0.0] C:\Users\james\.gradle\caches\transforms-3\9588486c28faf8252ff26f31f5c22021\transformed\jetified-firebase-datatransport-18.0.0\AndroidManifest.xml:29:17-115
+316                android:value="com.google.firebase.components.ComponentRegistrar" />
+316-->[com.google.firebase:firebase-datatransport:18.0.0] C:\Users\james\.gradle\caches\transforms-3\9588486c28faf8252ff26f31f5c22021\transformed\jetified-firebase-datatransport-18.0.0\AndroidManifest.xml:30:17-82
+317            <meta-data
+317-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\james\.gradle\caches\transforms-3\915a87b9188f640be505425471a88226\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:18:13-20:85
+318                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+318-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\james\.gradle\caches\transforms-3\915a87b9188f640be505425471a88226\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:19:17-127
+319                android:value="com.google.firebase.components.ComponentRegistrar" />
+319-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\james\.gradle\caches\transforms-3\915a87b9188f640be505425471a88226\transformed\jetified-firebase-installations-17.0.0\AndroidManifest.xml:20:17-82
+320        </service>
+321        <service
+321-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\james\.gradle\caches\transforms-3\302c251f8de4dfccc3c5efeb00d42aa1\transformed\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:29:9-35:19
+322            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+322-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\james\.gradle\caches\transforms-3\302c251f8de4dfccc3c5efeb00d42aa1\transformed\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:30:13-103
+323            android:exported="false" >
+323-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\james\.gradle\caches\transforms-3\302c251f8de4dfccc3c5efeb00d42aa1\transformed\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:31:13-37
+324            <meta-data
+324-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\james\.gradle\caches\transforms-3\302c251f8de4dfccc3c5efeb00d42aa1\transformed\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:32:13-34:39
+325                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+325-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\james\.gradle\caches\transforms-3\302c251f8de4dfccc3c5efeb00d42aa1\transformed\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:33:17-94
+326                android:value="cct" />
+326-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\james\.gradle\caches\transforms-3\302c251f8de4dfccc3c5efeb00d42aa1\transformed\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:34:17-36
+327        </service>
+328        <service
+328-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\james\.gradle\caches\transforms-3\ed0b0f0e833e5bdd716af9ddece7828f\transformed\jetified-transport-runtime-3.0.0\AndroidManifest.xml:26:9-30:19
+329            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+329-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\james\.gradle\caches\transforms-3\ed0b0f0e833e5bdd716af9ddece7828f\transformed\jetified-transport-runtime-3.0.0\AndroidManifest.xml:27:13-117
+330            android:exported="false"
+330-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\james\.gradle\caches\transforms-3\ed0b0f0e833e5bdd716af9ddece7828f\transformed\jetified-transport-runtime-3.0.0\AndroidManifest.xml:28:13-37
+331            android:permission="android.permission.BIND_JOB_SERVICE" >
+331-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\james\.gradle\caches\transforms-3\ed0b0f0e833e5bdd716af9ddece7828f\transformed\jetified-transport-runtime-3.0.0\AndroidManifest.xml:29:13-69
+332        </service>
+333
+334        <receiver
+334-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\james\.gradle\caches\transforms-3\ed0b0f0e833e5bdd716af9ddece7828f\transformed\jetified-transport-runtime-3.0.0\AndroidManifest.xml:32:9-34:40
+335            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+335-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\james\.gradle\caches\transforms-3\ed0b0f0e833e5bdd716af9ddece7828f\transformed\jetified-transport-runtime-3.0.0\AndroidManifest.xml:33:13-132
+336            android:exported="false" />
+336-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\james\.gradle\caches\transforms-3\ed0b0f0e833e5bdd716af9ddece7828f\transformed\jetified-transport-runtime-3.0.0\AndroidManifest.xml:34:13-37
+337
+338        <provider
+338-->[com.google.firebase:firebase-common:20.0.0] C:\Users\james\.gradle\caches\transforms-3\0cfd1bf608252d26c0ca0f0d2d7451fd\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
+339            android:name="com.google.firebase.provider.FirebaseInitProvider"
+339-->[com.google.firebase:firebase-common:20.0.0] C:\Users\james\.gradle\caches\transforms-3\0cfd1bf608252d26c0ca0f0d2d7451fd\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:27:13-77
+340            android:authorities="com.acnh.pocket_guide.firebaseinitprovider"
+340-->[com.google.firebase:firebase-common:20.0.0] C:\Users\james\.gradle\caches\transforms-3\0cfd1bf608252d26c0ca0f0d2d7451fd\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:28:13-72
+341            android:directBootAware="true"
+341-->[com.google.firebase:firebase-common:20.0.0] C:\Users\james\.gradle\caches\transforms-3\0cfd1bf608252d26c0ca0f0d2d7451fd\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:29:13-43
+342            android:exported="false"
+342-->[com.google.firebase:firebase-common:20.0.0] C:\Users\james\.gradle\caches\transforms-3\0cfd1bf608252d26c0ca0f0d2d7451fd\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:30:13-37
+343            android:initOrder="100" />
+343-->[com.google.firebase:firebase-common:20.0.0] C:\Users\james\.gradle\caches\transforms-3\0cfd1bf608252d26c0ca0f0d2d7451fd\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:31:13-36
+344
+345        <meta-data
+345-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\james\.gradle\caches\transforms-3\da1b97a57b662124da977ff974b52391\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+346            android:name="com.google.android.gms.version"
+346-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\james\.gradle\caches\transforms-3\da1b97a57b662124da977ff974b52391\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+347            android:value="@integer/google_play_services_version" /> <!-- 'android:authorities' must be unique in the device, across all apps -->
+347-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\james\.gradle\caches\transforms-3\da1b97a57b662124da977ff974b52391\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+348        <provider
+348-->[io.sentry:sentry-android-core:6.3.0] C:\Users\james\.gradle\caches\transforms-3\d7eeb953d28611fab77ed3289916d64f\transformed\jetified-sentry-android-core-6.3.0\AndroidManifest.xml:14:9-17:40
+349            android:name="io.sentry.android.core.SentryInitProvider"
+349-->[io.sentry:sentry-android-core:6.3.0] C:\Users\james\.gradle\caches\transforms-3\d7eeb953d28611fab77ed3289916d64f\transformed\jetified-sentry-android-core-6.3.0\AndroidManifest.xml:15:13-69
+350            android:authorities="com.acnh.pocket_guide.SentryInitProvider"
+350-->[io.sentry:sentry-android-core:6.3.0] C:\Users\james\.gradle\caches\transforms-3\d7eeb953d28611fab77ed3289916d64f\transformed\jetified-sentry-android-core-6.3.0\AndroidManifest.xml:16:13-70
+351            android:exported="false" />
+351-->[io.sentry:sentry-android-core:6.3.0] C:\Users\james\.gradle\caches\transforms-3\d7eeb953d28611fab77ed3289916d64f\transformed\jetified-sentry-android-core-6.3.0\AndroidManifest.xml:17:13-37
+352        <provider
+352-->[io.sentry:sentry-android-core:6.3.0] C:\Users\james\.gradle\caches\transforms-3\d7eeb953d28611fab77ed3289916d64f\transformed\jetified-sentry-android-core-6.3.0\AndroidManifest.xml:18:9-22:39
+353            android:name="io.sentry.android.core.SentryPerformanceProvider"
+353-->[io.sentry:sentry-android-core:6.3.0] C:\Users\james\.gradle\caches\transforms-3\d7eeb953d28611fab77ed3289916d64f\transformed\jetified-sentry-android-core-6.3.0\AndroidManifest.xml:19:13-76
+354            android:authorities="com.acnh.pocket_guide.SentryPerformanceProvider"
+354-->[io.sentry:sentry-android-core:6.3.0] C:\Users\james\.gradle\caches\transforms-3\d7eeb953d28611fab77ed3289916d64f\transformed\jetified-sentry-android-core-6.3.0\AndroidManifest.xml:20:13-77
+355            android:exported="false"
+355-->[io.sentry:sentry-android-core:6.3.0] C:\Users\james\.gradle\caches\transforms-3\d7eeb953d28611fab77ed3289916d64f\transformed\jetified-sentry-android-core-6.3.0\AndroidManifest.xml:21:13-37
+356            android:initOrder="200" />
+356-->[io.sentry:sentry-android-core:6.3.0] C:\Users\james\.gradle\caches\transforms-3\d7eeb953d28611fab77ed3289916d64f\transformed\jetified-sentry-android-core-6.3.0\AndroidManifest.xml:22:13-36
+357        <provider
+357-->[androidx.emoji2:emoji2:1.0.0] C:\Users\james\.gradle\caches\transforms-3\a491fe997c62915d8b5e27cb1c7ee888\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+358            android:name="androidx.startup.InitializationProvider"
+358-->[androidx.emoji2:emoji2:1.0.0] C:\Users\james\.gradle\caches\transforms-3\a491fe997c62915d8b5e27cb1c7ee888\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+359            android:authorities="com.acnh.pocket_guide.androidx-startup"
+359-->[androidx.emoji2:emoji2:1.0.0] C:\Users\james\.gradle\caches\transforms-3\a491fe997c62915d8b5e27cb1c7ee888\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+360            android:exported="false" >
+360-->[androidx.emoji2:emoji2:1.0.0] C:\Users\james\.gradle\caches\transforms-3\a491fe997c62915d8b5e27cb1c7ee888\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+361            <meta-data
+361-->[androidx.emoji2:emoji2:1.0.0] C:\Users\james\.gradle\caches\transforms-3\a491fe997c62915d8b5e27cb1c7ee888\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+362                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+362-->[androidx.emoji2:emoji2:1.0.0] C:\Users\james\.gradle\caches\transforms-3\a491fe997c62915d8b5e27cb1c7ee888\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+363                android:value="androidx.startup" />
+363-->[androidx.emoji2:emoji2:1.0.0] C:\Users\james\.gradle\caches\transforms-3\a491fe997c62915d8b5e27cb1c7ee888\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+364            <meta-data
+364-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\james\.gradle\caches\transforms-3\b4f96b26a07681f60e49336d55d7ad7c\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+365                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+365-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\james\.gradle\caches\transforms-3\b4f96b26a07681f60e49336d55d7ad7c\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+366                android:value="androidx.startup" />
+366-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\james\.gradle\caches\transforms-3\b4f96b26a07681f60e49336d55d7ad7c\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+367        </provider>
+368
+369        <meta-data
+369-->[com.android.billingclient:billing:4.0.0] C:\Users\james\.gradle\caches\transforms-3\9f9158cc84a30727fa2ae7cec8cff97a\transformed\jetified-billing-4.0.0\AndroidManifest.xml:13:9-15:37
+370            android:name="com.google.android.play.billingclient.version"
+370-->[com.android.billingclient:billing:4.0.0] C:\Users\james\.gradle\caches\transforms-3\9f9158cc84a30727fa2ae7cec8cff97a\transformed\jetified-billing-4.0.0\AndroidManifest.xml:14:13-73
+371            android:value="4.0.0" />
+371-->[com.android.billingclient:billing:4.0.0] C:\Users\james\.gradle\caches\transforms-3\9f9158cc84a30727fa2ae7cec8cff97a\transformed\jetified-billing-4.0.0\AndroidManifest.xml:15:13-34
+372
+373        <activity
+373-->[com.android.billingclient:billing:4.0.0] C:\Users\james\.gradle\caches\transforms-3\9f9158cc84a30727fa2ae7cec8cff97a\transformed\jetified-billing-4.0.0\AndroidManifest.xml:17:9-21:75
+374            android:name="com.android.billingclient.api.ProxyBillingActivity"
+374-->[com.android.billingclient:billing:4.0.0] C:\Users\james\.gradle\caches\transforms-3\9f9158cc84a30727fa2ae7cec8cff97a\transformed\jetified-billing-4.0.0\AndroidManifest.xml:18:13-78
+375            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+375-->[com.android.billingclient:billing:4.0.0] C:\Users\james\.gradle\caches\transforms-3\9f9158cc84a30727fa2ae7cec8cff97a\transformed\jetified-billing-4.0.0\AndroidManifest.xml:19:13-96
+376            android:exported="false"
+376-->[com.android.billingclient:billing:4.0.0] C:\Users\james\.gradle\caches\transforms-3\9f9158cc84a30727fa2ae7cec8cff97a\transformed\jetified-billing-4.0.0\AndroidManifest.xml:20:13-37
+377            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+377-->[com.android.billingclient:billing:4.0.0] C:\Users\james\.gradle\caches\transforms-3\9f9158cc84a30727fa2ae7cec8cff97a\transformed\jetified-billing-4.0.0\AndroidManifest.xml:21:13-72
+378    </application>
+379
+380</manifest>

@@ -1,0 +1,37 @@
+{
+    "logs": [
+        {
+            "outputFile": "F:\\Documents\\AppDev\\AnimalCrossingNH-App-React\\animal_crossing_app\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "map": [
+                {
+                    "source": "F:\\Documents\\AppDev\\AnimalCrossingNH-App-React\\animal_crossing_app\\node_modules\\@react-native-community\\datetimepicker\\android\\build\\intermediates\\packaged_res\\debug\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,5",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,200",
+                        "endLines": "4,7",
+                        "endColumns": "9,9",
+                        "endOffsets": "195,340"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\james\\.gradle\\caches\\transforms-3\\cb639493d26ebbef6ea66f3ad12dd9d6\\transformed\\appcompat-1.4.2\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593,687",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "120,204,288,384,486,588,682,771"
+                    },
+                    "to": {
+                        "startLines": "8,9,10,11,12,13,14,15",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "345,415,499,583,679,781,883,977",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "410,494,578,674,776,878,972,1061"
+                    }
+                }
+            ]
+        }
+    ]
+}

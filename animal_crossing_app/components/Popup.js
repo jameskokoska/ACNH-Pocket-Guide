@@ -14,7 +14,6 @@ import {
 import TextFont from "./TextFont";
 import ButtonComponent from "./ButtonComponent";
 import colors from "../Colors";
-import BottomSheet from 'reanimated-bottom-sheet';
 import Animated from 'react-native-reanimated';
 import FadeInOut from "./FadeInOut"
 import { HeaderNote, MailLink, SubHeader } from "./Formattings";
@@ -420,28 +419,28 @@ export class PopupBottomCustom extends PureComponent {
   componentDidMount() {
     this.mounted=true;
     this.visible=false;
-    this.backHandler = BackHandler.addEventListener(
-      "1hardwareBackPressPopup",
-      this.handleBackButton,
-    );
+    // this.backHandler = BackHandler.addEventListener(
+    //   "1hardwareBackPressPopup",
+    //   this.handleBackButton,
+    // );
   }
 
   componentWillUnmount() {
     this.mounted=false
-    BackHandler.removeEventListener("1hardwareBackPressPopup", this.handleBackButton);
+    // BackHandler.removeEventListener("1hardwareBackPressPopup", this.handleBackButton);
   }
 
   handleBackButton = () => {
-    if(this.visible===true){
-      this.setPopupVisible(false)
-      return true
-    } else {
-      // RootNavigation.popRoute(1)
-      // if(RootNavigation.getCurrentRoute()==="Home"){
-      //   return true;
-      // }
-      return false
-    }
+    // if(this.visible===true){
+    //   this.setPopupVisible(false)
+    //   return true
+    // } else {
+    //   // RootNavigation.popRoute(1)
+    //   // if(RootNavigation.getCurrentRoute()==="Home"){
+    //   //   return true;
+    //   // }
+    //   return false
+    // }
   }
 
   setPopupVisible = (visible, showOnceCalculated=false, oldKey="") => {
