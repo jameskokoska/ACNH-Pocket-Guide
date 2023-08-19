@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "@expo/metro-config": "^0.10.7",
-    "@gorhom/bottom-sheet": "github:ororsatti/react-native-bottom-sheet#dynamically-sized-scrollable-drawer",
     "@react-native-async-storage/async-storage": "1.18.2",
     "@react-native-community/datetimepicker": "7.2.0",
     "@react-navigation/native": "^6.0.13",
@@ -52,7 +51,6 @@
     "react-native-tab-view": "^3.3.0",
     "react-native-toast-notifications": "^3.3.1",
     "react-native-webview": "13.2.2",
-    "reanimated-bottom-sheet": "^1.0.0-alpha.22",
     "sentry-expo": "~7.0.0",
     "toggle-switch-react-native": "^3.3.0"
   },

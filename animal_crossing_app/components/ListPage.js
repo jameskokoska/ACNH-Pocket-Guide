@@ -85,7 +85,7 @@ function ListPage(props){
           props.scrollToEnd();
         }
         //pass in the check mark update function of that current element
-        bottomSheetRenderRef?.current?.update(item, updateCheckChild)
+        setTimeout(()=>{bottomSheetRenderRef?.current?.update(item, updateCheckChild)}, 0)
         selectedItem = item;
         updateCheckChildFunction = updateCheckChild
         updateWishlistChildFunction = updateWishlistChild
@@ -1326,7 +1326,7 @@ function ListPage(props){
       ref={sheetRef}
       padding={0}
       invisible={true}
-      restrictSize={false}
+      alwaysRender={true}
       onClose={()=>{
         console.log(selectedItem); 
         if(selectedItem!=null && selectedItem!=undefined){
@@ -1408,17 +1408,14 @@ class BottomSheetRender extends Component{
   componentWillUnmount() {
     this.mounted = false;
   }
-  update(item, updateCheckChildFunction){
+  update(itemPassed, updateCheckChildFunction){
     if(this.mounted){
-      this.forceUpdate();
-      this.setState({
-        item:item,
-      })
-      // console.log("item available to popup:")
-      // console.log(item)
-      if(item!==undefined){
+      if(itemPassed!==undefined){
         this.updateCheckChildFunction=updateCheckChildFunction;
       }
+      this.setState({
+        item:itemPassed,
+      })
     }
   }
   updateVariations = (key,checked)=>{
