@@ -88,16 +88,15 @@ LogBox.ignoreLogs([
   "ColorPropType will be removed",
 ])
 
-// Production build
-// eas build --platform android
+// Production build with eas build servers
+// npx eas build --platform android
 
 // Development build with native code:
 // Read more: https://docs.expo.dev/development/getting-started/
 // npx expo prebuild 
 // to ensure the native code is freshly synchronized with your local configuration.
-// If the android folder got replaced, ensure that android\app\src\main\res supports custom icons (might need to pull this from previous version)
 // then create a development runner
-// eas build --profile development --platform android
+// npx eas build --profile development --platform android
 // install build and run:
 // npx expo start --dev-client --tunnel
 // or

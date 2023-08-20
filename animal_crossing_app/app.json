@@ -9,7 +9,12 @@
     "splash": {
       "image": "./assets/palmSplash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#21232E"
+      "backgroundColor": "#F5F5F5",
+      "dark": {
+        "image": "./assets/palmSplash.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#21232E"
+      }
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -27,7 +32,8 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon-adaptive.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#FFFFFF",
+        "monochromeImage": "./assets/icon-monochrome.png"
       },
       "softwareKeyboardLayoutMode": "pan",
       "playStoreUrl": "https://play.google.com/store/apps/details?id=com.acnh.pocket_guide",
@@ -38,7 +44,7 @@
         "READ_EXTERNAL_STORAGE"
       ],
       "package": "com.acnh.pocket_guide",
-      "versionCode": 533
+      "versionCode": 537
     },
     "web": {
       "favicon": "./assets/icon.png"
