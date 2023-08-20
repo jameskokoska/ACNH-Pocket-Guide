@@ -6,6 +6,9 @@ export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 export const changelog = `
 -Major internal upgrades
 -New bottom sheet popup implementation
+-Fixed warning message when searching Villagers and no results - Language warning about villagers having different names in different regions
+-Notification permission request
+-Ability to delete data stored on cloud
 -
 -Custom filter presets
 -Quickly load different filter combinations and view the results, on the [Everything] page

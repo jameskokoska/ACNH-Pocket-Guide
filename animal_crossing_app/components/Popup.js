@@ -23,7 +23,7 @@ import { Appearance } from 'react-native';
 import LottieView from 'lottie-react-native';
 import { attemptToTranslate, getSettingsString } from "../LoadJsonData";
 import { AnimatedPopupWrapper } from "./PopupAnimatedWrapper";
-import BottomSheet, { reachabilityCalculation } from "./BottomSheet";
+import BottomSheet from 'react-native-scrollable-bottom-sheet';
 // <Popup 
 //  button1={"OK"} 
 //  button1Action={()=>{console.log("OK")}}
@@ -450,9 +450,20 @@ export class PopupBottomCustom extends PureComponent {
     let middleHeightOffset = getSettingsString("settingsLargerItemPreviews")==="false"?100:90
     return (
       <>
-        <BottomSheet reachabilityPaddingTop={
-          this.props.fullscreen===true ? reachabilityCalculation(0) : this.props.itemPopup===true ? reachabilityCalculation(0.15) : reachabilityCalculation(0.35)
-        } onClose={this.props.onClose} alwaysRender={this.props.alwaysRender} visible={this.state.popupVisible} setVisible={(value)=>{this.setState({popupVisible: value});}}>
+        <BottomSheet 
+          fullScreenPaddingTop={
+            this.props.fullscreen===true ? reachabilityCalculation(0) : this.props.itemPopup===true ? reachabilityCalculation(0.15) : reachabilityCalculation(0.35)
+          } 
+          visible={this.state.popupVisible} 
+          onVisibilityChange={(value)=>{
+            this.setState({popupVisible: value}); 
+            if(value===false && this.props.onClose!==undefined)this.props.onClose()
+          }}
+          hideSheetBackgroundContainer={true}
+          hideHandle={true}
+          customSheetMass={global.reducedMotion ? 0.00001 : 0.4}
+          swipeDownThreshold={Dimensions.get('window').height * 0.05}
+        >
           <View
             style={{
               borderTopLeftRadius: 20,
@@ -476,6 +487,11 @@ export class PopupBottomCustom extends PureComponent {
       </>
     )
   }
+}
+
+const reachabilityCalculation = (percent) => {
+  const height = Dimensions.get('window').height;
+  return (((height * percent) > 250 ? 250 : (height * percent)) - 30)
 }
 
 const styles = StyleSheet.create({

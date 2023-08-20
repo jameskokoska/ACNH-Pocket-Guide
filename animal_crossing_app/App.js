@@ -71,6 +71,7 @@ import * as InAppPurchases from 'expo-in-app-purchases';
 import Animated, { FadeIn } from "react-native-reanimated";
 import IngredientsPage from './pages/IngredientsPage';
 import PhotosPostersPage from './pages/PhotosPostersPage';
+import { registerForPushNotificationsAsync } from './Notifications';
 
 const backup = console.warn;
 
@@ -94,6 +95,7 @@ LogBox.ignoreLogs([
 // Read more: https://docs.expo.dev/development/getting-started/
 // npx expo prebuild 
 // to ensure the native code is freshly synchronized with your local configuration.
+// If the android folder got replaced, ensure that android\app\src\main\res supports custom icons (might need to pull this from previous version)
 // then create a development runner
 // eas build --profile development --platform android
 // install build and run:
@@ -343,6 +345,10 @@ class App extends Component {
     if(getSettingsString("settingsAutoBackup")==="true"){
       this.startAutoBackup();
     }
+
+    if(firstLogin!=="true"){
+      registerForPushNotificationsAsync()
+    }
   }
 
   componentWillUnmount() {
@@ -459,6 +465,9 @@ class App extends Component {
   setFirstLogin(firstLogin){
     this.setState({firstLogin: firstLogin});
     this.loadSettings();
+    if(firstLogin!=="true"){
+      registerForPushNotificationsAsync()
+    }
   }
  
   render(){
@@ -613,7 +622,7 @@ class App extends Component {
           <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage} sideMenuSections={this.sideMenuSections} sideMenuSectionsDisabled={this.sideMenuSectionsDisabled}>
             <Provider theme={theme}>
               <NavigationContainer ref={navigationRef} theme={{colors: {background: colors.background[global.darkMode],},}}>
-                <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false, headerTransparent: true, animation: global.reducedMotion==true ? 'fade' : 'default'}}>
+                <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false, headerTransparent: true, animation: 'fade'}}>
                   <Stack.Screen name="Home" component={NavigatorHomePage} />
                   <Stack.Screen name="20" component={NavigatorVillagerPresentsPage}/>
                   <Stack.Screen name="22" component={NavigatorVillagerFurniture}/>

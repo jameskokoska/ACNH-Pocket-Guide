@@ -1277,19 +1277,20 @@ function ListPage(props){
                   <TouchableOpacity onPress={()=>{setSearchFilters([])}} style={{padding:20}}><BlueText>Tap here to clear filters temporarily</BlueText></TouchableOpacity>
                 <View style={{height:30}}/>
               </>
-            }else if(data.length===0){
-              return <>
-                {searchFilters.length===0 ? <></>:<TextFont style={{marginBottom:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{searchFilters.length+" "+(searchFilters.length!==1?attemptToTranslate("filters set."):attemptToTranslate("filter set."))}</TextFont>}
-                <View style={{height:80}}/>
-                  <TextFont bold={false} style={{fontSize: 18, textAlign:"center", color: colors.textBlack[global.darkMode], marginHorizontal: 20}}>No items found.</TextFont>
-                <View style={{height:30}}/>
-              </>
-            }else if (props.title === "Villagers" && data.length===0 && (global.language==="English" || global.language==="English (Europe)")){
+            } else if (props.title === "Villagers" && data.length===0 && (global.language==="English" || global.language==="English (Europe)")){
               return <>
                 <View style={{height:100}}/>
                   <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode], marginHorizontal: 20}}>Different regions have different Villager names.</TextFont>
                   <TextFont bold={false} style={{fontSize: 16, textAlign:"center", color: colors.textBlack[global.darkMode], marginHorizontal: 20, marginTop:10}}>{"If a Villager is not listed, try changing the Language to " + (global.language==="English" ? "English (Europe)." : "English.")}</TextFont>
                   <TouchableOpacity onPress={()=>{props.setPage(13)}} style={{padding:20}}><BlueText>Tap here to change Language in Settings</BlueText></TouchableOpacity>
+                <View style={{height:30}}/>
+              </>
+            } else if(data.length===0){
+              console.log(props.title)
+              return <>
+                {searchFilters.length===0 ? <></>:<TextFont style={{marginBottom:20,textAlign:'center', color:colors.lightDarkAccentHeavy[global.darkMode]}} translate={false}>{searchFilters.length+" "+(searchFilters.length!==1?attemptToTranslate("filters set."):attemptToTranslate("filter set."))}</TextFont>}
+                <View style={{height:80}}/>
+                  <TextFont bold={false} style={{fontSize: 18, textAlign:"center", color: colors.textBlack[global.darkMode], marginHorizontal: 20}}>No items found.</TextFont>
                 <View style={{height:30}}/>
               </>
             }
@@ -1326,7 +1327,6 @@ function ListPage(props){
       ref={sheetRef}
       padding={0}
       invisible={true}
-      alwaysRender={true}
       onClose={()=>{
         console.log(selectedItem); 
         if(selectedItem!=null && selectedItem!=undefined){
