@@ -63,7 +63,7 @@ class FastImage extends Component{
   }
 
   render(){
-    if(this.state.imgURI!==""&&this.mounted&&this.state.imgURI!=="undefined"){
+    if(this.state.imgURI!==""&&this.mounted&&this.state.imgURI!=="undefined"&&this.state.imgURI!=null){
       return (
         <Image
           {...this.props}

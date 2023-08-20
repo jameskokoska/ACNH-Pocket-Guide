@@ -9,8 +9,11 @@ import { getAllData, importAllData } from './LoadFile';
 import Popup from './Popup';
 import { attemptToTranslate, getStorage } from '../LoadJsonData';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { createUserWithEmailAndPassword, getAuth, sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth'
+import { getDatabase, ref, set, get } from 'firebase/database';
 
-const auth = app.auth();
+const auth = getAuth(app)
+const db = getDatabase();
 
 export async function autoBackup(){
   let email = await getStorage("loginEmail","")
@@ -19,7 +22,7 @@ export async function autoBackup(){
   let error = false
   try {
     if (email !== '' && password !== '') {
-      await auth.signInWithEmailAndPassword(email, password);
+      await signInWithEmailAndPassword(auth, email, password);
       console.log(auth.currentUser.uid)
     } else {
       throw({"message":attemptToTranslate("The login credentials are not set for cloud backup or are incorrect. Please set them in the Backup + Restore page.")})
@@ -36,19 +39,29 @@ export async function autoBackup(){
     console.log("Backup error. allData appears to be undefined when using autobackup.")
   } else {
     try{
-      await (app.database()).ref('users/' + auth.currentUser.uid).set({data: allData})
-      await (app.database()).ref('users/' + auth.currentUser.uid).once('value').then(async (snapshot) => {
-        if(snapshot.val()===null || snapshot.val()["data"]===undefined){
-          await auth.signOut();
-          console.log("signed out")
-          output = attemptToTranslate("Auto Backups") + ": " + attemptToTranslate("An error occurred. No backup was created.");
-          error = true
-        } else {
-          await auth.signOut();
-          console.log("signed out")
-          output = attemptToTranslate("Auto Backups") + " ("+ email +"): " + attemptToTranslate("There are") + " " + snapshot.val()["data"].split("\n").length.toString() + " " + attemptToTranslate("entries on the server now")
-        }
-      })
+      const user =  auth.currentUser.uid;
+      await set(ref(db, 'users/' + user), {
+        data: allData
+      });
+      
+      const snapshot = await get(ref(db, 'users/' + user));
+      
+      if (
+        snapshot.val() === null ||
+        snapshot.val()["data"] === undefined ||
+        snapshot.val()["data"].length !== allData.length
+      ) {
+        await auth.signOut();
+        console.log("signed out")
+        output = attemptToTranslate("Auto Backups") + ": " + attemptToTranslate("An error occurred. No backup was created.");
+        error = true
+      } else {
+        console.log("length comparison: " + snapshot.val()["data"].length + " " + allData.length);
+        await auth.signOut();
+        console.log("signed out")
+        output = attemptToTranslate("Auto Backups") + " ("+ email +"): " + attemptToTranslate("There are") + " " + snapshot.val()["data"].split("\n").length.toString() + " " + attemptToTranslate("entries on the server now")
+      }
+      
     } catch(error) {
       output = attemptToTranslate("Auto Backups") + ": " + attemptToTranslate("An error occurred. Please check your internet connection and try again later.")
       console.log("Auto backups error: "+ error)
@@ -80,7 +93,7 @@ export default class FirebaseBackup extends Component {
   }
 
   storeData = async (user) => {
-    if (user != "") {
+    if (user !== "") {
       this.exportPopup?.setPopupVisible(true);
       this.setState({messageExport:attemptToTranslate("Please wait")});
       let allData = await getAllData()
@@ -89,21 +102,40 @@ export default class FirebaseBackup extends Component {
         console.log("Backup error. allData appears to be undefined when storeData(user) is called.")
       } else {
         try{
-          (app.database()).ref('users/' + user).set({
+          await set(ref(db, 'users/' + user), {
             data: allData
-          }).then(()=>{
-            this.setState({messageExport:attemptToTranslate("Verifying data...")});
-            (app.database()).ref('users/' + user).once('value').then(async (snapshot) => {
-              if(snapshot.val()===null || snapshot.val()["data"]===undefined || snapshot.val()["data"].length!==allData.length){
-                this.setState({messageExport:attemptToTranslate("An error occurred. No backup was created.")});
-                return
-              } else {
-                console.log("length comparison:" +  snapshot.val()["data"].length + " " + allData.length)
-                this.setState({messageExport:attemptToTranslate("There are") + " " + snapshot.val()["data"].split("\n").length.toString() + " " + attemptToTranslate("entries on the server now")+"\n" + attemptToTranslate("Exported to user:") + "\n"  + this.state.email + "\n" + user.toString()});
-              }
-            })
           });
+          this.setState({messageExport:attemptToTranslate("Verifying data...")});
+          
+          const snapshot = await get(ref(db, 'users/' + user));
+          
+          if (
+            snapshot.val() === null ||
+            snapshot.val()["data"] === undefined ||
+            snapshot.val()["data"].length !== allData.length
+          ) {
+            this.setState({
+              messageExport: attemptToTranslate("An error occurred. No backup was created.")
+            });
+          } else {
+            console.log("length comparison: " + snapshot.val()["data"].length + " " + allData.length);
+            this.setState({
+              messageExport:
+                attemptToTranslate("There are") +
+                " " +
+                snapshot.val()["data"].split("\n").length.toString() +
+                " " +
+                attemptToTranslate("entries on the server now") +
+                "\n" +
+                attemptToTranslate("Exported to user:") +
+                "\n" +
+                this.state.email +
+                "\n" +
+                user.toString()
+            });
+          }
         }catch(e){
+          console.log(e.toString())
           this.setState({messageExport:e.toString() + " " + attemptToTranslate("An error occurred. Please check your internet connection and try again later.")});
         }
       }
@@ -111,23 +143,39 @@ export default class FirebaseBackup extends Component {
   }
 
   getData = async (user) => {
-    if (user != "") {
+    if (user !== "") {
       this.importPopup?.setPopupVisible(true);
       this.setState({messageImport:attemptToTranslate("Please wait")});
       try{
-        (app.database()).ref('users/' + user).once('value').then(async (snapshot) => {
-          if(snapshot.val()===null || snapshot.val()["data"]===undefined){
-            this.setState({messageImport:attemptToTranslate("There are no backups stored. Please Upload one.")});
-            return
-          }
+        const snapshot = await get(ref(db, 'users/' + user));
+  
+        if (snapshot.val() === null || snapshot.val()["data"] === undefined) {
+          this.setState({messageImport:attemptToTranslate("There are no backups stored. Please Upload one.")});
+          return
+        } else {
           let loadedNumber = await importAllData(snapshot.val()["data"])
           this.setState({loadedNumber:loadedNumber})
           console.log("Loaded number:")
           console.log(loadedNumber)
           this.setState({messageImport: attemptToTranslate("Imported:") + " " + this.state.loadedNumber + " " + attemptToTranslate("entires.")})
-        })
+        }
       }catch(e){
+        console.log(e.toString())
         this.setState({messageImport:e.toString() + " " + attemptToTranslate("An error occurred. Please check your internet connection and try again later.")});
+      }
+    }
+  }
+
+  deleteData = async (user) => {
+    if (user !== "") {
+      try{
+        await set(ref(db, 'users/' + user), {
+          data: null
+        });
+        this.deleteResultsPopup?.setPopupVisible(true)
+      }catch(e){
+        console.log(e.toString())
+        this.setState({error:e.toString()});
       }
     }
   }
@@ -136,13 +184,14 @@ export default class FirebaseBackup extends Component {
     this.setState({secureTextEntry:true})
     try {
       if (this.state.email !== '' && this.state.password !== '') {
-        await auth.signInWithEmailAndPassword(this.state.email, this.state.password);
-        this.setState({uid:auth.currentUser.uid})
+        await signInWithEmailAndPassword(auth, this.state.email, this.state.password);
+        this.setState({uid:auth.currentUser.uid, error: ""})
         console.log(auth.currentUser.uid)
       } else {
         this.setState({error:"Please enter an email and password"});
       }
     } catch (error) {
+      console.log(error.toString())
       this.setState({error:error.message});
     }
   };
@@ -151,8 +200,8 @@ export default class FirebaseBackup extends Component {
     this.setState({secureTextEntry:true})
     try {
       if (this.state.email !== '' && this.state.password !== '') {
-        await auth.createUserWithEmailAndPassword(this.state.email, this.state.password);
-        this.setState({uid:auth.currentUser.uid})
+        await createUserWithEmailAndPassword(auth, this.state.email, this.state.password);
+        this.setState({uid:auth.currentUser.uid, error: ""})
         console.log(auth.currentUser.uid)
       } else {
         this.setState({error:"Please enter an email and password"});
@@ -176,15 +225,21 @@ export default class FirebaseBackup extends Component {
   formatError = (errorInput) => {
     let formattedError = errorInput;
     formattedError.replace("email address","username")
-    if(formattedError.includes("The user may have been deleted")){
-      formattedError = formattedError + " Please try to create an account and Sign-up."
+    if(formattedError.includes("user-not-found")){
+      formattedError = "There is no user record corresponding to this identifier. The user may have been deleted. Please try to create an account and Sign-up."
+    } else if (formattedError.includes("wrong-password")){
+      formattedError = "The password is invalid or the user does not have a password."
+    } else if (formattedError.includes("email-already-in-use")){
+      formattedError = "The email address is already in use by another account."
+    } else if (formattedError.includes("invalid-email")){
+      formattedError = "The email address is badly formatted."
     }
     return attemptToTranslate(formattedError)
   }
 
   resetPassword = async () => {
     try {
-      await auth.sendPasswordResetEmail(this.state.email)
+      await sendPasswordResetEmail(auth, this.state.email)
       this.resetPasswordSuccessPopup?.setPopupVisible(true)
     } catch (error) {
       console.log(error)
@@ -217,6 +272,21 @@ export default class FirebaseBackup extends Component {
         button2Action={()=>{}}
         text={attemptToTranslate("Upload Data")+"?"}
         textLower={"Note: Uploading data will replace what is currently backed up in the cloud!"}
+      />
+      <Popup
+        ref={(deletePopup) => this.deletePopup = deletePopup}
+        button1={"Delete"}
+        button1Action={()=>{this.deleteData(this.state.uid)}}
+        button2={"Cancel"}
+        button2Action={()=>{}}
+        text={attemptToTranslate("Delete Cloud Data")+"?"}
+        textLower={"This will delete all data backed up to this account!"}
+      />
+      <Popup
+        ref={(deleteResultsPopup) => this.deleteResultsPopup = deleteResultsPopup}
+        button1={"OK"}
+        button1Action={()=>{}}
+        text={"Deleted"}
       />
       <TextInput
         allowFontScaling={false}
@@ -258,7 +328,7 @@ export default class FirebaseBackup extends Component {
       {this.state.uid!==""?<ButtonComponent
         marginHorizontal={40}
         text={"Sign-out"}
-        color={colors.cancelButton[global.darkMode]}
+        color={colors.filtersResetButton[global.darkMode]}
         vibrate={10}
         onPress={() => {this.onSignOut()}}
       />:<View/>}
@@ -276,11 +346,18 @@ export default class FirebaseBackup extends Component {
         vibrate={10}
         onPress={() => {this.getData(this.state.uid)}}
       />:<View/>}
-      <View style={{height: 2}}/>
       {this.state.uid!=="" ? <TextFont style={{marginVertical:10, textAlign:"center", color:colors.fishText[global.darkMode], marginHorizontal:40}}>{"Note: Uploading data will replace what is currently backed up in the cloud!"}</TextFont>:<View/>}
-      {(this.state.uid===""&&this.state.error!=="") ? <TextFont style={{marginVertical:10, textAlign:"center", color:colors.textError[global.darkMode], marginHorizontal:40}}>{this.formatError(this.state.error)}</TextFont>:<View/>}
       <View style={{height: 2}}/>
-      <TouchableOpacity style={{padding:10}} 
+      {(this.state.error!=="") ? <TextFont style={{marginVertical:10, textAlign:"center", color:colors.textError[global.darkMode], marginHorizontal:40}}>{this.formatError(this.state.error)}</TextFont>:<View/>}
+      <View style={{height: 2}}/>
+      {this.state.uid!==""?<ButtonComponent
+        marginHorizontal={40}
+        text={"Delete Cloud Data"}
+        color={colors.cancelButton[global.darkMode]}
+        vibrate={10}
+        onPress={() => {this.deletePopup?.setPopupVisible(true)}}
+      />:<View/>}
+      {this.state.uid!=="" ? <></> : <TouchableOpacity style={{padding:10}} 
         onPress={()=>{
           if(this.state.email!=undefined && this.state.email.includes("@"))
             this.resetPassPopup?.setPopupVisible(true)
@@ -288,7 +365,7 @@ export default class FirebaseBackup extends Component {
           this.emptyUsernamePopup?.setPopupVisible(true)
         }}>
         <TextFont bold={false} style={{color: colors.fishText[global.darkMode], fontSize: 14, textAlign:"center"}}>{"Forgot Password"}</TextFont>
-      </TouchableOpacity>
+      </TouchableOpacity>}
       <View style={{height: 15}}/>
       <Popup 
         ref={(resetPassPopup) => this.resetPassPopup = resetPassPopup}

@@ -113,7 +113,7 @@ class MysteryIslandsComponent extends Component {
           </TouchableOpacity>
         </View>
         <View style={{width:Dimensions.get('window').width*0.42, borderRadius:9, backgroundColor:colors.white[global.darkMode], padding:10, marginVertical: 6, justifyContent:"center", alignItems:"center",}}>
-          <Image style={{resizeMode:'contain', width:"100%", height: 140, borderRadius:2}} source={this.props.island.picture}/>
+          <Image style={{resizeMode:'contain', width:"100%", height: 140, borderRadius:8, marginBottom: 6}} source={this.props.island.picture}/>
           <TextFont translate={false} bold={true} style={{textAlign:"center",marginHorizontal:5, fontSize: 17, color: colors.textBlack[global.darkMode]}}>{attemptToTranslateMysteryIslands(this.props.island.name)}</TextFont>
         </View>
         </TouchableOpacity>

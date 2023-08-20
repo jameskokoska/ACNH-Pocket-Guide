@@ -45,13 +45,6 @@ class SettingsPage extends Component {
     console.log(global.customLists)
     return(<>
       <View style={{backgroundColor:colors.lightDarkAccent[global.darkMode], height:"100%"}}>
-        <WishlistSelectionPopup showSelectedOriginal ref={(popupSelectWishlist) => this.popupSelectWishlist = popupSelectWishlist} selectedList={[global.defaultSelectedList]} changeSelectedList={(list)=>{
-          AsyncStorage.setItem("defaultSelectedList"+global.profile, list);
-          global.defaultSelectedList = list;
-          console.log(global.defaultSelectedList)
-          this.forceUpdatePage()
-        }} addCustomList={()=>{}} showDelete={false}/>
-        <SettingsPopup ref={(popup) => this.popup = popup}/>
         <ScrollView>
           <View style={{marginTop: 100}}/>
           <Header>Settings</Header>
@@ -136,6 +129,13 @@ class SettingsPage extends Component {
           <TextFont bold={true} style={{marginLeft: 20, marginRight: 30, color: colors.fishText[global.darkMode], fontSize: 12,}}>{"App v" + global.version + " - " + global.versionCode}</TextFont>
           <View style={{height: 15}}/>
         </ScrollView>
+        <WishlistSelectionPopup showSelectedOriginal ref={(popupSelectWishlist) => this.popupSelectWishlist = popupSelectWishlist} selectedList={[global.defaultSelectedList]} changeSelectedList={(list)=>{
+          AsyncStorage.setItem("defaultSelectedList"+global.profile, list);
+          global.defaultSelectedList = list;
+          console.log(global.defaultSelectedList)
+          this.forceUpdatePage()
+        }} addCustomList={()=>{}} showDelete={false}/>
+        <SettingsPopup ref={(popup) => this.popup = popup}/>
      </View>
      </>
     )

@@ -1,6 +1,8 @@
 import * as Notifications from 'expo-notifications';
 import React, {Component} from 'react';
 import {getSettingsString} from "./LoadJsonData"
+import * as Device from 'expo-device';
+import { Platform } from 'react-native';
 
 // Notification icons and color
 // https://github.com/expo/expo/tree/master/packages/expo-notifications#configure-for-android
@@ -69,4 +71,29 @@ export async function logNextTriggerDate() {
 export function cancelAllPushNotifications() {
   // console.log("cancelled all subscriptions")
   Notifications.cancelAllScheduledNotificationsAsync();
+}
+
+export async function registerForPushNotificationsAsync() {
+  if (Platform.OS === 'android') {
+    await Notifications.setNotificationChannelAsync('default', {
+      name: 'default',
+      importance: Notifications.AndroidImportance.MAX,
+      lightColor: "#78BD76",
+    })
+  }
+
+  if (Device.isDevice) {
+    const { status: existingStatus } = await Notifications.getPermissionsAsync();
+    let finalStatus = existingStatus
+    if (existingStatus !== 'granted') {
+      const { status } = await Notifications.requestPermissionsAsync();
+      finalStatus = status
+    }
+    if (finalStatus !== 'granted') {
+      return false
+    }
+    return true
+  } else {
+    console.log('Must use physical device for Push Notifications');
+  }
 }

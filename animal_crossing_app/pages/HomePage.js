@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Animated, Vibration, Image, Dimensions, TouchableOpacity, TextInput, StyleSheet, Text, View, Keyboard, BackHandler} from 'react-native';
+import React, {Component, useCallback, useMemo, useRef, useState} from 'react';
+import {Animated, Vibration, Image, Dimensions, TouchableOpacity, TextInput, StyleSheet, Text, View, Keyboard, BackHandler, Button} from 'react-native';
 import Clock from '../components/Clock';
 import HomeContentArea from '../components/HomeContentArea';
 import {EventContainer,getEventsDay} from '../components/EventContainer';
@@ -206,24 +206,32 @@ class HomePage extends Component {
     const sections = this.state.sections;
 
     return <View style={{height:"100%",width:"100%"}}>
-      <PopupChangelog setPage={this.props.setPage}/>
-      {/* <PopupBottomCustom ref={(popupSettings) => this.popupSettings = popupSettings} onClose={()=>{}}>
-        <ConfigureHomePages 
-          header={"Select Homepage Sections"} 
-          refreshEvents={()=>{this.refreshEvents()}} 
-          setPages={(checked,name)=>this.setPages(checked,name)} 
-          sections={this.state.sections}
-        />
-      </PopupBottomCustom> */}
-      {sections["Events"]===true?<PopupBottomConfigureHomePages 
-        ref={(popupEventsSettings) => this.popupEventsSettings = popupEventsSettings}
-        setPage={(page)=>this.props.setPage(page)} 
-        header={"Select Events"} 
-        refreshEvents={()=>{this.eventSection?.refreshEvents()}} 
-        setPages={(checked,name)=>this.setEventPages(checked,name)} 
-        sections={this.state.eventSections}
-      />:<View/>}
+      
+      <View style={{position:"absolute", zIndex:0, top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center',overflow: "hidden" }}>
+        {landscape}
+      </View>
+      <View style={{position:"absolute", width: "100%", height:"100%", zIndex:0, top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center',overflow: "hidden" }}>
+        <View style={{width:695, height: "100%", zIndex:1, position:'absolute', overflow: "hidden", }}>
+          <LinearGradient
+            colors={[colors.skyColor[global.darkMode], 'transparent']}
+            style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: "100%", zIndex: 50}}
+            start={{x:1.0, y:0}}
+            end={{x: 0.9, y: 0}}
+          />
+          <LinearGradient
+            colors={[colors.skyColor[global.darkMode], 'transparent']}
+            style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: "100%", zIndex: 50}}
+            start={{x: 0, y:0}}
+            end={{x: 0.1, y: 0}}
+          />
+        </View>
+      </View>
+      <View style={{position:"absolute", zIndex:0, top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'flex-end', alignItems: 'center',overflow: "hidden" }}>
+        <Image style={{top:0, width:Dimensions.get('window').width, height:Dimensions.get('window').height-298, resizeMode:"stretch",zIndex:10, backgroundColor:colors.grassColor[global.darkMode]}} source={global.darkMode===1 ? require("../assets/icons/cliffDark.png") : require("../assets/icons/cliff.png")} />
+      </View>
+
       <ScrollView
+        style={{zIndex: 10}}
         onMomentumScrollEnd={this.handleSnap}
         ref={(scrollViewRef) => this.scrollViewRef = scrollViewRef}
         onScroll={(event)=>{
@@ -476,29 +484,25 @@ class HomePage extends Component {
         <View style={{height: 75}}/>
       </ScrollView>
       
-      <View style={{position:"absolute", zIndex:-5, top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center',overflow: "hidden" }}>
-        {landscape}
-      </View>
-      <View style={{position:"absolute", width: "100%", height:"100%", zIndex:-5, top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center',overflow: "hidden" }}>
-        <View style={{width:695, height: "100%", zIndex:1, position:'absolute', overflow: "hidden", }}>
-          <LinearGradient
-            colors={[colors.skyColor[global.darkMode], 'transparent']}
-            style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: "100%", zIndex: 50}}
-            start={{x:1.0, y:0}}
-            end={{x: 0.9, y: 0}}
-          />
-          <LinearGradient
-            colors={[colors.skyColor[global.darkMode], 'transparent']}
-            style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: "100%", zIndex: 50}}
-            start={{x: 0, y:0}}
-            end={{x: 0.1, y: 0}}
-          />
-        </View>
-      </View>
-      <View style={{position:"absolute", zIndex:-1, top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'flex-end', alignItems: 'center',overflow: "hidden" }}>
-        <Image style={{top:0, width:Dimensions.get('window').width, height:Dimensions.get('window').height-298, resizeMode:"stretch",zIndex:10, backgroundColor:colors.grassColor[global.darkMode]}} source={global.darkMode===1 ? require("../assets/icons/cliffDark.png") : require("../assets/icons/cliff.png")} />
-      </View>
       <VillagerPopupPopup ref={(villagerPopupPopup) => this.villagerPopupPopup = villagerPopupPopup} setPage={this.props.setPage}/>
+      <PopupChangelog setPage={this.props.setPage}/>
+      
+      {/* <PopupBottomCustom ref={(popupSettings) => this.popupSettings = popupSettings} onClose={()=>{}}>
+        <ConfigureHomePages 
+          header={"Select Homepage Sections"} 
+          refreshEvents={()=>{this.refreshEvents()}} 
+          setPages={(checked,name)=>this.setPages(checked,name)} 
+          sections={this.state.sections}
+        />
+      </PopupBottomCustom> */}
+      {sections["Events"]===true?<PopupBottomConfigureHomePages 
+        ref={(popupEventsSettings) => this.popupEventsSettings = popupEventsSettings}
+        setPage={(page)=>this.props.setPage(page)} 
+        header={"Select Events"} 
+        refreshEvents={()=>{this.eventSection?.refreshEvents()}} 
+        setPages={(checked,name)=>this.setEventPages(checked,name)} 
+        sections={this.state.eventSections}
+      />:<View/>}
     </View>
   }
 }
@@ -973,3 +977,4 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
 });
+

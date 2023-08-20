@@ -6,13 +6,13 @@ import colors from '../Colors.js';
 import { attemptToTranslate, capitalizeFirst, getSettingsString } from '../LoadJsonData';
 import TextFont from '../components/TextFont';
 import FadeInOut from '../components/FadeInOut.js';
-import BottomSheet from 'reanimated-bottom-sheet';
 import Animated from 'react-native-reanimated';
 import FastImage from '../components/FastImage';
 import { SubHeader } from '../components/Formattings';
 import { Audio } from 'expo-av';
 import Toast from "react-native-toast-notifications";
 import { getPhoto } from '../components/GetPhoto';
+import { PopupBottomCustom } from '../components/Popup';
 
 export default class SongsPage extends Component {
   render(){
@@ -20,10 +20,31 @@ export default class SongsPage extends Component {
     // console.log(-1/(animationWidth/Dimensions.get('window').width)*100+100)
     return(
       <>
+        
+        <ListPage 
+          tabs={false}
+          disablePopup={[true, true]}
+          title="Music"
+          imageProperty={["Album Image","Album Image"]}
+          textProperty={["NameLanguage","NameLanguage"]}
+          searchKey={[["NameLanguage",],["NameLanguage",]]}
+          gridType="songGrid" //smallGrid, largeGrid, row
+          dataGlobalName={"dataLoadedMusic"}
+          appBarColor={colors.musicAppBar[global.darkMode]}
+          titleColor={colors.textWhite[0]}
+          searchBarColor={colors.searchbarBG[global.darkMode]}
+          backgroundColor={colors.lightDarkAccent[global.darkMode]}
+          boxColor={false}
+          labelColor={colors.textBlack[global.darkMode]}
+          accentColor={colors.musicAccent[global.darkMode]}
+          customTapFunction={(item, liveMusic)=>{this.popupBottomMusicWrapper?.addSongToQueue(item,item["Filename"], liveMusic)}}
+          showAllVariations={true}
+        />
+
         <View pointerEvents="none" 
           style={{
             overflow:"hidden",
-            zIndex:5,
+            zIndex:50,
             position:"absolute",
             bottom:-1/(animationWidth/Dimensions.get('window').width)*50+50 + 100 - 20,
             transform: [
@@ -48,7 +69,7 @@ export default class SongsPage extends Component {
         <View pointerEvents="none" 
           style={{
             overflow:"hidden",
-            zIndex:5,
+            zIndex:50,
             position:"absolute",
             top:-1/(animationWidth/Dimensions.get('window').width)*50+40 - 1,
             transform: [
@@ -71,25 +92,6 @@ export default class SongsPage extends Component {
             source={require('../assets/waveAnimation.json')}
           />
         </View>
-        <ListPage 
-          tabs={false}
-          disablePopup={[true, true]}
-          title="Music"
-          imageProperty={["Album Image","Album Image"]}
-          textProperty={["NameLanguage","NameLanguage"]}
-          searchKey={[["NameLanguage",],["NameLanguage",]]}
-          gridType="songGrid" //smallGrid, largeGrid, row
-          dataGlobalName={"dataLoadedMusic"}
-          appBarColor={colors.musicAppBar[global.darkMode]}
-          titleColor={colors.textWhite[0]}
-          searchBarColor={colors.searchbarBG[global.darkMode]}
-          backgroundColor={colors.lightDarkAccent[global.darkMode]}
-          boxColor={false}
-          labelColor={colors.textBlack[global.darkMode]}
-          accentColor={colors.musicAccent[global.darkMode]}
-          customTapFunction={(item, liveMusic)=>{this.popupBottomMusicWrapper?.addSongToQueue(item,item["Filename"], liveMusic)}}
-          showAllVariations={true}
-        />
         <PopupBottomMusicWrapper ref={(popupBottomMusicWrapper) => this.popupBottomMusicWrapper = popupBottomMusicWrapper}/>
       </>
     )
@@ -203,119 +205,32 @@ export class MusicButtonComponent extends Component {
 }
 
 class PopupBottomMusic extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      heightOffset:0,
-      openStart:false,
-    }
-    this.bottomSheetCallback = new Animated.Value(1);
-  }
-
-  componentDidMount() {
-    this.mounted=true;
-    this.visible=false;
-    this.backHandler = BackHandler.addEventListener(
-      "1hardwareBackPressPopup",
-      this.handleBackButton,
-    );
-  }
-
-  componentWillUnmount() {
-    this.mounted=false
-    BackHandler.removeEventListener("1hardwareBackPressPopup", this.handleBackButton);
-  }
-
-  handleBackButton = () => {
-    if(this.visible===true){
-      this.setPopupVisible(false)
-      return true
-    } else {
-      return false
-    }
-  }
 
   setPopupVisible = (visible) => {
-    if(this.mounted){
-      this.setState({heightOffset:0})
-      visible ? this.sheetRef?.snapTo(0) : this.sheetRef?.snapTo(1)
-    }
-    this.visible = visible
+    console.log("OK")
+    this.popup?.setPopupVisible(visible)
   }
   
-  renderContent = () => {
-    return(
-      <>
-      <View
-        style={{
-          borderTopLeftRadius: 20,
-          borderTopRightRadius: 20,
-          backgroundColor: this.props.invisible===undefined?colors.white[global.darkMode]:"#0000000",
-          paddingTop: 8,
-          marginTop: 0,
-          minHeight:Dimensions.get('window').height,
-        }}
-      >
-        <FadeInOut fadeIn={this.state.openStart} scaleInOut={true} duration={200} maxFade={0.4} minScale={0.7}>
-          <View style={{width:"100%", alignItems:"center"}}>
-            <View style={{opacity: this.props.invisible===undefined?1:0,backgroundColor:colors.lightDarkAccentHeavy2[global.darkMode], height:5, width: 45, borderRadius:50}}/>
-          </View>
-        </FadeInOut>
-        <TouchableOpacity activeOpacity={0.8} style={{position:"absolute",top:12, zIndex:5}} onPress={()=>{this.sheetRef?.snapTo(0);}}>
-          <Animated.View style={{opacity: Animated.multiply(1,this.bottomSheetCallback)}}>
-            {this.props.smallChild}
-          </Animated.View>
-        </TouchableOpacity>
-        <Animated.View style={{opacity: Animated.add(1,Animated.multiply(-1,this.bottomSheetCallback))}}>
-          {this.props.children}
-        </Animated.View>
-        {this.props.invisible===true ? <View/> : <View style={{height:85}}/>}
-      </View>
-      </>
-    )
-  }
-
-
   render(){
-    const springConfig = {
-        damping: 20,
-        mass: 1,
-        stiffness: global.reducedMotion ? 100000000 : 135,
-        overshootClamping: true,
-        restSpeedThreshold: 0.01,
-        restDisplacementThreshold: 0.001,
-    };
-    return (
-      <>
-        {this.bottomSheetCallback?<Animated.View style={{zIndex:50, backgroundColor: "black", opacity: Animated.multiply(-0.8,Animated.add(-0.7,Animated.multiply(this.bottomSheetCallback,1))), width: Dimensions.get('window').width, height: Dimensions.get('window').height, position:"absolute"}} pointerEvents="none"/>:<View/>}
-        <BottomSheet
-          enabledBottomClamp
-          callbackNode={this.bottomSheetCallback}
-          ref={(sheetRef) => this.sheetRef = sheetRef}
-          snapPoints={[Dimensions.get('window').height, 100]}
-          initialSnap={1}
-          renderContent={this.renderContent}
-          springConfig={springConfig}
-          enabledContentTapInteraction={false}
-          onCloseStart={()=>{if(this.mounted){this.setState({openStart:false})}}}
-          onCloseEnd={()=>{if(this.mounted){this.visible=false; this.setState({openStart:false}); this.state.heightOffset = 0} this.props.onClose===undefined ? 0 : this.props.onClose();}}
-          onOpenStart={()=>{if(this.mounted){this.setState({openStart:true})}}}
-          onOpenEnd={()=>{if(this.mounted){this.setState({openStart:true}); this.visible=true}}}
-        />
-      </>
-    )
+    return <>
+      <TouchableOpacity activeOpacity={0.85} onPress={()=>{this.setPopupVisible(true)}} style={{backgroundColor:colors.white[global.darkMode], bottom: 0, position:"absolute", zIndex: 60, borderTopLeftRadius: 20, borderTopRightRadius: 20,}}>
+        {this.props.smallChild}
+      </TouchableOpacity>
+      <PopupBottomCustom ref={(popup) => this.popup = popup} fullscreen>
+        {this.props.children}
+      </PopupBottomCustom>
+    </>
   }
 }
 
 class NowPlayingSmall extends Component {
   render(){
     if(this.props.song===undefined){
-      return <View style={{height:75, paddingHorizontal:30, flexDirection:"row", alignItems:"center", width:Dimensions.get('window').width}}>
+      return <View style={{height:100, paddingHorizontal:30, flexDirection:"row", alignItems:"center", width:Dimensions.get('window').width}}>
         <SubHeader bold={false} margin={false} style={{fontSize:16}}>{"No song playing"}</SubHeader>
       </View>
     }
-    return <View style={{height:75, paddingHorizontal:30, flexDirection:"row", alignItems:"center",}}>
-      
+    return <View style={{height:100, paddingHorizontal:30, flexDirection:"row", alignItems:"center", width:Dimensions.get('window').width}}>
       {this.props.song.special==="hourly"?
         <Image style={{marginTop:0, padding:0, height:65, width:65, resizeMode:"contain", transform:[{scale:0.9}]}} source={getPhoto(this.props.song.weather)}/>
         :<FastImage
