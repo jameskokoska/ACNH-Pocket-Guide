@@ -3,21 +3,13 @@
     "jsEngine": "hermes",
     "name": "ACNH Pocket Guide",
     "slug": "animal_crossing_app",
-    "version": "20.0.1",
+    "version": "20.0.4",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/palmSplash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#F5F5F5",
-      "dark": {
-        "image": "./assets/palmSplash.png",
-        "resizeMode": "contain",
-        "backgroundColor": "#21232E"
-      }
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
+      "backgroundColor": "#21232E"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -27,7 +19,10 @@
       "color": "#78BD76"
     },
     "ios": {
-      "supportsTablet": false
+      "supportsTablet": false,
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -44,7 +39,8 @@
         "READ_EXTERNAL_STORAGE"
       ],
       "package": "com.acnh.pocket_guide",
-      "versionCode": 537
+      "versionCode": 550,
+      "runtimeVersion": "1.0.0"
     },
     "web": {
       "favicon": "./assets/icon.png"
@@ -69,6 +65,10 @@
       "eas": {
         "projectId": "68c90e78-1471-485c-acdd-a0b2fafd3c74"
       }
+    },
+    "updates": {
+      "enabled": false,
+      "url": "https://u.expo.dev/68c90e78-1471-485c-acdd-a0b2fafd3c74"
     }
   }
 }

@@ -31,7 +31,6 @@
     "expo-notifications": "~0.20.1",
     "expo-splash-screen": "~0.20.5",
     "expo-status-bar": "~1.6.0",
-    "expo-updates": "~0.18.11",
     "firebase": "9.6.5",
     "lottie-react-native": "5.1.6",
     "react": "18.2.0",
@@ -52,8 +51,9 @@
     "react-native-tab-view": "^3.3.0",
     "react-native-toast-notifications": "^3.3.1",
     "react-native-webview": "13.2.2",
-    "sentry-expo": "~7.0.0",
-    "toggle-switch-react-native": "^3.3.0"
+    "sentry-expo": "^7.0.1",
+    "toggle-switch-react-native": "^3.3.0",
+    "expo-updates": "~0.18.11"
   },
   "devDependencies": {
     "@babel/core": "^7.18.6"

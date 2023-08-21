@@ -61,17 +61,20 @@ import { DefaultTheme, Provider } from 'react-native-paper';
 import GlobalSearchPage from './pages/GlobalSearchPage';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import * as Sentry from 'sentry-expo';
-import {sentryConfig} from './sentryConfig'
+import {sentryConfig} from './sentryConfig.js'
 import * as Device from 'expo-device';
 import VillagerPhotoPoster from './pages/VillagerPhotoPoster';
 import TodoReorderPage from './pages/TodoReorderPage';
 import DonatePage from './pages/DonatePage';
 import 'expo-dev-client';
 import * as InAppPurchases from 'expo-in-app-purchases';
-import Animated, { FadeIn } from "react-native-reanimated";
+import Animated, { FadeIn, FadeOut } from "react-native-reanimated";
 import IngredientsPage from './pages/IngredientsPage';
 import PhotosPostersPage from './pages/PhotosPostersPage';
 import { registerForPushNotificationsAsync } from './Notifications';
+import * as SplashScreen from 'expo-splash-screen';
+
+SplashScreen.hideAsync()
 
 const backup = console.warn;
 
@@ -89,7 +92,8 @@ LogBox.ignoreLogs([
 ])
 
 // Production build with eas build servers
-// npx eas build --platform android
+// eas build --platform android
+// If production crashing, run: eas update:configure
 
 // Development build with native code:
 // Read more: https://docs.expo.dev/development/getting-started/
@@ -478,17 +482,14 @@ class App extends Component {
         maxWidth = Dimensions.get('window').height*0.9
       else
         maxWidth = Dimensions.get('window').width*0.9
-      return <>
-        <View style={{position: "absolute", backgroundColor: colors.background[Appearance.getColorScheme()==="light" ? 0 : 1], width:Dimensions.get('window').width, height:Dimensions.get('window').height}}/>
-        <View style={{alignItems:"center", justifyContent:"center",backgroundColor: colors.background[Appearance.getColorScheme()==="light" ? 0 : 1], width:Dimensions.get('window').width, height:Dimensions.get('window').height*0.85}}>
-          <Animated.View entering={FadeIn.duration(400)}>
-            <LottieView autoPlay loop style={{width: maxWidth,zIndex:1,transform: [{ scale: 1.3 },],}} source={chosenSplashScreen}/>
-          </Animated.View>
-        </View>
+      return <GestureHandlerRootView style={{flex:1}}>
+        <Animated.View exiting={FadeOut.duration(300)} style={{flex: 1, alignItems:"center", justifyContent:"center",backgroundColor: colors.background[Appearance.getColorScheme()==="light" ? 0 : 1]}}>
+          <LottieView autoPlay loop style={{width: maxWidth,zIndex:1,transform: [{ scale: 1.3 },], marginTop: -(Dimensions.get('window').height*0.04) }} source={chosenSplashScreen}/>
+        </Animated.View>
         <PopupRawLoading ref={(popupLoading) => this.popupLoading = popupLoading}/>
-      </>
+      </GestureHandlerRootView>
     } else if (this.state.firstLogin==="true"){
-      return <GestureHandlerRootView style={{flex:1,backgroundColor: "#000000"}}>
+      return <GestureHandlerRootView style={{flex:1}}>
         <Onboard setFirstLogin={this.setFirstLogin}/>
       </GestureHandlerRootView>
     } else {
@@ -617,7 +618,7 @@ class App extends Component {
         animation: {scale: global.reducedMotion ? 0 : 1},
       }
       return (
-        <GestureHandlerRootView style={{flex:1,backgroundColor: "#000000"}}>
+        <GestureHandlerRootView style={{flex:1}}>
           <SideMenu ref={(sideMenu) => this.sideMenu = sideMenu} setPage={this.setPage} currentPage={this.state.currentPage} sideMenuSections={this.sideMenuSections} sideMenuSectionsDisabled={this.sideMenuSectionsDisabled}>
             <Provider theme={theme}>
               <NavigationContainer ref={navigationRef} theme={{colors: {background: colors.background[global.darkMode],},}}>

@@ -205,8 +205,7 @@ class HomePage extends Component {
     }
     const sections = this.state.sections;
 
-    return <View style={{height:"100%",width:"100%"}}>
-      
+    return <View>
       <View style={{position:"absolute", zIndex:0, top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center',overflow: "hidden" }}>
         {landscape}
       </View>
