@@ -74,7 +74,7 @@ import PhotosPostersPage from './pages/PhotosPostersPage';
 import { registerForPushNotificationsAsync } from './Notifications';
 import * as SplashScreen from 'expo-splash-screen';
 
-SplashScreen.hideAsync()
+SplashScreen.preventAutoHideAsync();
 
 const backup = console.warn;
 
@@ -482,7 +482,7 @@ class App extends Component {
         maxWidth = Dimensions.get('window').height*0.9
       else
         maxWidth = Dimensions.get('window').width*0.9
-      return <GestureHandlerRootView style={{flex:1}}>
+      return <GestureHandlerRootView style={{flex:1}} onLayout={(event)=>{SplashScreen.hideAsync();}}>
         <Animated.View exiting={FadeOut.duration(300)} style={{flex: 1, alignItems:"center", justifyContent:"center",backgroundColor: colors.background[Appearance.getColorScheme()==="light" ? 0 : 1]}}>
           <LottieView autoPlay loop style={{width: maxWidth,zIndex:1,transform: [{ scale: 1.3 },], marginTop: -(Dimensions.get('window').height*0.04) }} source={chosenSplashScreen}/>
         </Animated.View>
