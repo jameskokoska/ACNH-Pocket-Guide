@@ -437,7 +437,7 @@ export class PopupBottomCustom extends PureComponent {
     }
   }
 
-  setPopupVisible = (visible, showOnceCalculated=false, oldKey="") => {
+  setPopupVisible = (visible, children) => {
     this.setState({popupVisible:visible})
     setTimeout(()=>{
       this.setState({popupVisible:visible})
@@ -451,6 +451,7 @@ export class PopupBottomCustom extends PureComponent {
     return (
       <>
         <BottomSheet 
+          useEnteringAndExitingAnimations={false}
           fullScreenPaddingTop={
             this.props.fullscreen===true ? reachabilityCalculation(0) : this.props.itemPopup===true ? reachabilityCalculation(0.15) : reachabilityCalculation(0.35)
           } 
