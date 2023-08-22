@@ -270,6 +270,8 @@ class App extends Component {
     }
 
   continueMountingFinish = async() => {
+    SplashScreen.hideAsync();
+    
     this.backHandler = BackHandler.addEventListener(
       "hardwareBackPress",
       this.handleBackButton,

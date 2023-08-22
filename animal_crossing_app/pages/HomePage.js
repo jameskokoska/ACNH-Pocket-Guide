@@ -118,8 +118,12 @@ class HomePage extends Component {
   setEventPages = async (checked,name) =>{
     var eventSections = this.state.eventSections;
     eventSections[name] = checked;
-    this.setState({eventSections:eventSections});
     await AsyncStorage.setItem("EventSections", JSON.stringify(eventSections));
+  }
+
+  refreshEventPages = () => {
+    // Is this needed? The events update in the UI already!
+    // this.setState({eventSections:this.state.eventSections});
   }
 
   setLoadedToDo = (status) => {
@@ -501,6 +505,7 @@ class HomePage extends Component {
         refreshEvents={()=>{this.eventSection?.refreshEvents()}} 
         setPages={(checked,name)=>this.setEventPages(checked,name)} 
         sections={this.state.eventSections}
+        refreshEventPages={this.refreshEventPages}
       />:<View/>}
     </View>
   }
@@ -773,7 +778,12 @@ export class PopupBottomConfigureHomePages extends Component {
     this.popupEventsSettings?.setPopupVisible(visible)
   }
   render(){
-    return <PopupBottomCustom ref={(popupEventsSettings) => this.popupEventsSettings = popupEventsSettings} onClose={()=>{}}>
+    return <PopupBottomCustom 
+      onClose={()=>{
+        this.props.refreshEventPages();
+      }} 
+      ref={(popupEventsSettings) => this.popupEventsSettings = popupEventsSettings}
+    >
       {this.state.visible?<ConfigureHomePages 
         setPage={this.props.setPage} 
         header={this.props.header} 

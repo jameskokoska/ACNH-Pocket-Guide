@@ -430,6 +430,7 @@ export class PopupBottomCustom extends PureComponent {
 
   handleBackButton = () => {
     if(this.state.popupVisible===true){
+      if(this.props.onClose!==undefined)this.props.onClose()
       this.setPopupVisible(false)
       return true
     } else {

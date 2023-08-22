@@ -9,6 +9,7 @@ export const changelog = `
 -Fixed warning message when searching Villagers and no results - Language warning about villagers having different names in different regions
 -Notification permission request
 -Ability to delete data stored on cloud
+-Fixed popup position refreshed when editing Events
 -
 -Custom filter presets
 -Quickly load different filter combinations and view the results, on the [Everything] page
