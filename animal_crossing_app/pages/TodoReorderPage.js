@@ -40,8 +40,8 @@ export default function TodoReorderPage(props) {
     await AsyncStorage.setItem("ToDoList"+global.profile, JSON.stringify(data));
   }
 
-  const addItem = (item, edit=false) => {
-    let tasks = data;
+  const addItem = async (item, edit=false) => {
+    let tasks = [...data];
     if(edit===false){
       if(props.todos.addToTop){
         tasks = [item, ...tasks]
@@ -52,8 +52,8 @@ export default function TodoReorderPage(props) {
     if(edit!==false){
       tasks[edit] = item;
     }
+    await saveList(tasks)
     setData([...createInitialData(tasks)])
-    saveList(tasks)
   }
 
   const addItemPopup = (open) => {
@@ -68,7 +68,8 @@ export default function TodoReorderPage(props) {
   const popupAddTaskBreak = useRef()
   const popupAddTask= useRef()
 
-  const renderItem = ({ item, index, drag, isActive }) => {
+  const renderItem = ({ item, getIndex, drag, isActive }) => {
+    let index = getIndex()
     return (
       <TouchableOpacity
         onLongPress={()=>{
@@ -97,36 +98,6 @@ export default function TodoReorderPage(props) {
     );
   };
 
-  const headerComponent = <View style={{marginBottom: 15}}>
-    <Header style={{marginTop: 120}}>Edit To-Do List</Header>
-    <HeaderNote>Drag and drop to reorder items.</HeaderNote>
-    <TouchableOpacity style={{padding:10, paddingRight:0, position:"absolute", right:15, top: 5}} 
-      onPress={()=>{
-        addItemPopup(true); 
-    }}>
-      <Image source={require("../assets/icons/addIcon.png")} style={{width:30, height:30, borderRadius:100,}}/>
-    </TouchableOpacity>
-    <TouchableOpacity style={{padding:10, paddingRight:0, position:"absolute", right:55, top: 5}} 
-      onPress={()=>{
-        popupAddTaskBreak?.current.setPopupVisible(true)
-        getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
-    }}>
-      <Image source={require("../assets/icons/separatorIcon.png")} style={{width:30, height:30, borderRadius:100,}}/>
-    </TouchableOpacity>
-    
-    <TouchableOpacity style={{padding:10, paddingRight:0, position:"absolute", left:5, top: 5}} 
-      onPress={()=>{
-        RootNavigation.popRoute(1)
-    }}>
-      <Image
-        style={{width:30,height:30,resizeMode:'contain', opacity:0.5}}
-        source={global.darkMode ? require("../assets/icons/leftArrowWhite.png") : require("../assets/icons/leftArrow.png")}
-      />
-    </TouchableOpacity>
-  </View>
-
-  const footerComponent = <View style={{marginBottom: 125}}></View>
-
   return (
     <>
       <PopupAddTask ref={popupAddTask} addItem={addItem}/>
@@ -145,8 +116,37 @@ export default function TodoReorderPage(props) {
         onDragEnd={({ data }) => {setData(data); saveList(data);}}
         keyExtractor={(item, index) => item.key+index.toString()}
         renderItem={renderItem}
-        ListHeaderComponent={headerComponent}
-        ListFooterComponent={footerComponent}
+        // ListHeaderComponent={headerComponent}
+        // ListFooterComponent={footerComponent}
+        ListHeaderComponent={()=><View style={{marginBottom: 15}}>
+          <Header style={{marginTop: 120}}>Edit To-Do List</Header>
+          <HeaderNote>Drag and drop to reorder items.</HeaderNote>
+          <TouchableOpacity style={{padding:10, paddingRight:0, position:"absolute", right:15, top: 5}} 
+            onPress={()=>{
+              addItemPopup(true); 
+          }}>
+            <Image source={require("../assets/icons/addIcon.png")} style={{width:30, height:30, borderRadius:100,}}/>
+          </TouchableOpacity>
+          <TouchableOpacity style={{padding:10, paddingRight:0, position:"absolute", right:55, top: 5}} 
+            onPress={()=>{
+              popupAddTaskBreak?.current.setPopupVisible(true)
+              getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+          }}>
+            <Image source={require("../assets/icons/separatorIcon.png")} style={{width:30, height:30, borderRadius:100,}}/>
+          </TouchableOpacity>
+          
+          <TouchableOpacity style={{padding:10, paddingRight:0, position:"absolute", left:5, top: 5}} 
+            onPress={()=>{
+              RootNavigation.popRoute(1)
+          }}>
+            <Image
+              style={{width:30,height:30,resizeMode:'contain', opacity:0.5}}
+              source={global.darkMode ? require("../assets/icons/leftArrowWhite.png") : require("../assets/icons/leftArrow.png")}
+            />
+          </TouchableOpacity>
+        </View>
+        }
+        ListFooterComponent={()=><View style={{height:125}}/>}
       />
     </>
   );

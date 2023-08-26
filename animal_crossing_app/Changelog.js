@@ -4,6 +4,9 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Fixed ToDo list edit page
+-New Silver Supporter: Fifou! Thank you!
+-
 -Major internal upgrades
 -New bottom sheet popup implementation
 -Fixed warning message when searching Villagers and no results - Language warning about villagers having different names in different regions

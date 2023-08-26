@@ -236,6 +236,7 @@ class PopupAddTask extends Component {
           color={colors.okButton[global.darkMode]}
           vibrate={15}
           onPress={() => {
+            // console.log(this.task)
             if(this.edit===false || this.edit===-1){
               this.props.addItem(this.task);
             } else {
