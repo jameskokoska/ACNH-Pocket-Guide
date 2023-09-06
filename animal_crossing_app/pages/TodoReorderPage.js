@@ -93,6 +93,7 @@ export default function TodoReorderPage(props) {
           showEdit={true}
           deleteItem={deleteItem}
           editTask={()=>{item.picture==="breakerSeparator" ?  popupAddTaskBreak?.current.setPopupVisible(true, item, index) : popupAddTask?.current.setPopupVisible(true, item, index);}}
+          compactUI={props.todos.compactUI}
         />
       </TouchableOpacity>
     );

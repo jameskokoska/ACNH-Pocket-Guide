@@ -185,6 +185,7 @@ class App extends Component {
       global.lastSelectedListPage = ""
     }
     global.customListsImagesIndexed = JSON.parse(await getStorage("customListsImagesIndexed"+global.profile,"{}"));
+    global.customListsNicknamesIndexed = JSON.parse(await getStorage("customListsNicknamesIndexed"+global.profile,"{}"));
     global.paradisePlanningListIndexed = undefined
     global.loadNewHHPList = false
     global.reducedMotion = await AccessibilityInfo.isReduceMotionEnabled() || getSettingsString("settingsReducedMotionAndAnimations")==="true" ? true : false

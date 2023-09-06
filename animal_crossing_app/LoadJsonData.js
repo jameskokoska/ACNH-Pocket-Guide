@@ -17,9 +17,9 @@ export async function getStorage(storageKey, defaultValue){
   return valueReturned;
 }
 
-export function changeCustomListImage(name,image){
+export async function changeCustomListImage(name,image){
   global.customListsImagesIndexed[name]=image
-  AsyncStorage.setItem("customListsImagesIndexed"+global.profile, JSON.stringify(global.customListsImagesIndexed));
+  await AsyncStorage.setItem("customListsImagesIndexed"+global.profile, JSON.stringify(global.customListsImagesIndexed));
 }
 
 export function getCustomListImage(name){
@@ -27,6 +27,19 @@ export function getCustomListImage(name){
     return global.customListsImagesIndexed[name]
   } else {
     return "leaf.png"
+  }
+}
+
+export async function changeCustomListNickname(name,nickname){
+  global.customListsNicknamesIndexed[name]=nickname
+  await AsyncStorage.setItem("customListsNicknamesIndexed"+global.profile, JSON.stringify(global.customListsNicknamesIndexed));
+}
+
+export function getCustomListNickname(name){
+  if(global.customListsNicknamesIndexed[name]){
+    return global.customListsNicknamesIndexed[name]
+  } else {
+    return ""
   }
 }
 
@@ -40,13 +53,32 @@ export function addCustomList(name){
   }
 }
 
-export function removeCustomList(name){
+export function reorderCustomList(listName, direction) {
+  const newList = [...global.customLists];
+  const currentIndex = newList.indexOf(listName);
+
+  if (currentIndex !== -1) {
+    const newIndex = currentIndex + direction;
+
+    if (newIndex >= 0 && newIndex < newList.length) {
+      const [movedItem] = newList.splice(currentIndex, 1);
+      newList.splice(newIndex, 0, movedItem);
+    }
+  }
+
+  global.customLists = newList;
+  AsyncStorage.setItem("customLists" + global.profile, JSON.stringify(global.customLists));
+  return [...newList];
+}
+
+
+export async function removeCustomList(name){
   if(global.customLists.includes(name)){
     const oldList = [...global.customLists]
     let indexToDelete = oldList.indexOf(name);
     const newList = oldList.filter((index,i) => i!=indexToDelete);
     global.customLists = newList
-    AsyncStorage.setItem("customLists"+global.profile, JSON.stringify(global.customLists));
+    await AsyncStorage.setItem("customLists"+global.profile, JSON.stringify(global.customLists));
 
     let checkListKeyStart = "customLists::"+name
     const globalCollectionListCopy = [...global.collectionList]
@@ -57,8 +89,10 @@ export function removeCustomList(name){
     }
     if(global.defaultSelectedList===name){
       global.defaultSelectedList = ""
-      AsyncStorage.setItem("defaultSelectedList"+global.profile, "");
-      AsyncStorage.setItem("settingsSelectDefaultWishlist"+global.profile, "false");
+      await AsyncStorage.setItem("defaultSelectedList"+global.profile, "");
+      await AsyncStorage.setItem("settingsSelectDefaultWishlist"+global.profile, "false");
+      await changeCustomListImage(name, "leaf.png")
+      await changeCustomListNickname(name, "")
     }
     return true 
   }

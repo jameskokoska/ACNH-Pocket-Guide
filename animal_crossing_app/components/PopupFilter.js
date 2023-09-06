@@ -553,7 +553,7 @@ class PopupFilter extends Component {
                           renderType:{
                             success: (toast) => (
                               <View style={{paddingHorizontal: 15, paddingVertical: 10, marginHorizontal: 10, marginLeft:15, marginVertical: 5, borderRadius: 5, backgroundColor: colors.popupSuccess[global.darkMode], alignItems:"center", justifyContent:"center"}}>
-                                <TextFont translate={false} style={{color:"white", fontSize: 15}}>{"Added Filter Preset"}</TextFont>
+                                <TextFont style={{color:"white", fontSize: 15}}>{"Added Filter Preset"}</TextFont>
                               </View>
                             ),
                           }

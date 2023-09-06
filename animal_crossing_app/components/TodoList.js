@@ -50,6 +50,7 @@ export class TodoListWrapped extends Component {
       showVillagersTalkList: false,
       resetEachDay: false,
       addToTop: false,
+      compactUI: false,
     }
     this.deleteIndex=-1
   }
@@ -84,12 +85,13 @@ export class TodoListWrapped extends Component {
     let storageData = JSON.parse(await getStorage("ToDoList"+global.profile,JSON.stringify(defaultToDoList())));
     let resetEachDay = (await getStorage("resetEachDay","false"))==="true";
     let addToTop = (await getStorage("addTasksToTop"+global.profile,"true")) === "true";
+    let compactUI = (await getStorage("compactToDoListUI"+global.profile,"true")) === "true";
     if(showVillagersTalkList){
       storageData = [...storageData, ...this.populateDataWithNewVillagers(storageData)];
       await this.saveList(storageData);
     }
     if(this.mounted){
-      this.setState({loaded:true,data:storageData,showVillagersTalkList:showVillagersTalkList, resetEachDay: resetEachDay,addToTop:addToTop});
+      this.setState({loaded:true,data:storageData,showVillagersTalkList:showVillagersTalkList, resetEachDay: resetEachDay,addToTop:addToTop,compactUI:compactUI});
     }
     if(resetEachDay){
       let dateWithOffset = addHours(getCurrentDateObject(true),-5)
@@ -261,7 +263,7 @@ export class TodoListWrapped extends Component {
         <TouchableOpacity style={{marginLeft:2, padding:10, paddingRight:0, marginRight:-5}} 
             onPress={()=>{
               this.props.setOnlyUpdateMe(true)
-              RootNavigation.navigate('38', {propsPassed:{todos:this.state.data, addToTop: this.state.addToTop}});
+              RootNavigation.navigate('38', {propsPassed:{todos:this.state.data, addToTop: this.state.addToTop, compactUI: this.state.compactUI}});
           }}>
             <Image source={require("../assets/icons/pencil.png")} style={{opacity:global.darkMode?1:0.7, width:25, height:25, borderRadius:100,}}/>
           </TouchableOpacity>
@@ -274,6 +276,7 @@ export class TodoListWrapped extends Component {
             {label:"Uncheck All", value:"Uncheck All",},
             {label:"Uncheck Each Day (at 5 AM)", value:"Uncheck Each Day", highlighted: this.state.resetEachDay},
             {label:this.state.addToTop ? "Add New Tasks To Top" : "Add New Tasks To Bottom", value:"Add To Top", highlighted: this.state.addToTop ? true : false},
+            {label:"Compact List", value:"Compact List", highlighted: this.state.compactUI ? true : false},
           ]}
           defaultValue={""}
           onChangeItem={
@@ -299,8 +302,11 @@ export class TodoListWrapped extends Component {
                 await AsyncStorage.setItem("resetEachDay",!this.state.resetEachDay?"true":"false");
                 this.setState({resetEachDay:!this.state.resetEachDay})
               }else if(item.value==="Add To Top"){
-                await AsyncStorage.setItem("addTasksToTop",!this.state.addToTop?"true":"false");
+                await AsyncStorage.setItem("addTasksToTop"+global.profile,!this.state.addToTop?"true":"false");
                 this.setState({addToTop:!this.state.addToTop})
+              }else if(item.value==="Compact List"){
+                await AsyncStorage.setItem("compactToDoListUI"+global.profile,!this.state.compactUI?"true":"false");
+                this.setState({compactUI:!this.state.compactUI})
               }
             }
           }
@@ -326,6 +332,7 @@ export class TodoListWrapped extends Component {
                 }else if(item.small){
                   return(
                     <TodoItemSmall
+                      compactUI={this.state.compactUI}
                       key={item+index.toString()}
                       item={item}
                       index={index}
@@ -339,6 +346,7 @@ export class TodoListWrapped extends Component {
                 } else {
                   return(
                     <TodoItem
+                      compactUI={this.state.compactUI}
                       key={item+index.toString()}
                       item={item}
                       index={index}
@@ -704,10 +712,8 @@ class TodoItem extends Component {
         }}
         background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"1A", false)}
         >
-          <View>
-          <View style={{padding:5, paddingVertical:20, paddingBottom:0, paddingLeft:12}}>
-            <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:22, color:colors.fishText[global.darkMode]}}>{this.props.item.title}</TextFont>
-          </View>
+          <View style={{padding:5, paddingVertical:this.props.compactUI ? 16 : 20, paddingBottom:0, paddingLeft:12}}>
+            <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:this.props.compactUI ? 18 : 22, color:colors.fishText[global.darkMode]}}>{this.props.item.title}</TextFont>
           </View>
         </TouchableNativeFeedback>
         <View style={{height:2, borderRadius: 100, backgroundColor:colors.fishText[global.darkMode], marginBottom:4, marginHorizontal:-5}}/>
@@ -717,13 +723,13 @@ class TodoItem extends Component {
     var imageComp = <View/>
     if(this.props.item.picture && this.props.item.picture?.startsWith("http")){
       imageComp = <FastImage
-        style={{height: 45,width: 45,resizeMode:'contain',}}
+        style={{height: this.props.compactUI ? 33 : 45,width: this.props.compactUI ? 33 : 45,resizeMode:'contain',}}
         source={{uri:this.props.item.picture}}
         cacheKey={this.props.item.picture}
       />
     } else {
       imageComp = <Image
-        style={{height: 35,width: 35,resizeMode:'contain',}}
+        style={{height: this.props.compactUI ? 25 : 35,width: this.props.compactUI ? 25 : 35,resizeMode:'contain',}}
         source={getPhoto(this.props.item.picture)}
       />
     }
@@ -739,12 +745,25 @@ class TodoItem extends Component {
           this.setState({checked:!this.state.checked})
         }}
         >
-          <View style={[styles.row,{backgroundColor:colors.eventBackground[global.darkMode]}]}>
-            <View style={[styles.rowImageBackground,{backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
+          <View style={[styles.row,
+            {
+              padding: this.props.compactUI ? 8 : 13,
+              height: this.props.compactUI ? 60 : 80,
+              backgroundColor:colors.eventBackground[global.darkMode]
+            }]}>
+            <View style={[styles.rowImageBackground,
+              {
+                width: this.props.compactUI ? 47 : 60,
+                height: this.props.compactUI ? 47 : 60,
+                backgroundColor:colors.lightDarkAccent[global.darkMode]
+              }]}>
               {imageComp}
             </View>
-            <View style={styles.rowTextTop}>
-              <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:20, color:colors.textBlack[global.darkMode]}}>{this.props.item.title}</TextFont>
+            <View style={[styles.rowTextTop, {
+              marginLeft: this.props.compactUI ? 7 : 10,
+              marginRight: this.props.compactUI ? 110 : 125,
+            }]}>
+              <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:this.props.compactUI ? 16 : 20, color:colors.textBlack[global.darkMode]}}>{this.props.item.title}</TextFont>
             </View>
             <TouchableOpacity style={{position:"absolute", right: -5}} 
               activeOpacity={0.6}
@@ -752,7 +771,7 @@ class TodoItem extends Component {
                 this.props.checkOffItem(this.props.index, !this.state.checked); 
                 this.setState({checked:!this.state.checked})
             }}>
-              <Check checkType={this.props.checkType} fadeOut={false} play={this.state.checked} width={90} height={90} disablePopup={true}/>
+              <Check checkType={this.props.checkType} fadeOut={false} play={this.state.checked} width={this.props.compactUI ? 70 : 90} height={this.props.compactUI ? 70 : 90} disablePopup={true}/>
             </TouchableOpacity>
           </View>
         </TouchableNativeFeedback>
@@ -825,18 +844,18 @@ class TodoItemSmall extends Component {
     var imageComp = <View/>
     if(this.props.item.picture && this.props.item.picture?.startsWith("http")){
       imageComp = <FastImage
-        style={{height: 45,width: 45,resizeMode:'contain',}}
+        style={{height: this.props.compactUI ? 33 : 45,width: this.props.compactUI ? 33 : 45,resizeMode:'contain',}}
         source={{uri:this.props.item.picture}}
         cacheKey={this.props.item.picture}
       />
     } else {
       imageComp = <Image
-        style={{height: 35,width: 35,resizeMode:'contain',}}
+        style={{height: this.props.compactUI ? 25 : 35,width: this.props.compactUI ? 25 : 35,resizeMode:'contain',}}
         source={getPhoto(this.props.item.picture)}
       />
     }
     return (
-      <View style={{margin:5, marginTop:8}}>
+      <View style={{margin: this.props.compactUI ? 4 : 5, marginTop:8}}>
         <TouchableOpacity 
           background={TouchableNativeFeedback.Ripple(colors.todoColorAccent[global.darkMode], false)}
           onLongPress={() => {  
@@ -848,11 +867,18 @@ class TodoItemSmall extends Component {
             this.setState({checked:!this.state.checked})
           }}
         >
-          <View style={[styles.rowImageBackground,{borderWidth: 2, borderColor: this.state.checked ? colors.checkGreen[global.darkMode] : colors.eventBackground[global.darkMode], backgroundColor:colors.eventBackground[global.darkMode]}]}>
+          <View style={[styles.rowImageBackground,
+          {
+            width: this.props.compactUI ? 47 : 60,
+            height: this.props.compactUI ? 47 : 60,
+            borderWidth: 2, 
+            borderColor: this.state.checked ? colors.checkGreen[global.darkMode] : colors.eventBackground[global.darkMode], 
+            backgroundColor:colors.eventBackground[global.darkMode]
+          }]}>
             {imageComp}
           </View>
         </TouchableOpacity>
-        {this.props.item.title==="" ? <View/> : <TextFont translate={false} numberOfLines={2} bold={false} style={{width: 60, marginTop: 3, color: colors.textBlack[global.darkMode], fontSize: 12, textAlign:"center"}}>{this.props.item.title}</TextFont>}
+        {this.props.item.title==="" ? <View/> : <TextFont translate={false} numberOfLines={2} bold={false} style={{width: this.props.compactUI ? 47 : 60, marginTop: 3, color: colors.textBlack[global.darkMode], fontSize: this.props.compactUI ? 10 : 12, textAlign:"center"}}>{this.props.item.title}</TextFont>}
         {this.removeButton(this.props)}
       </View>
     )
@@ -918,25 +944,31 @@ export class TodoItemEdit extends Component {
     var imageComp = <View/>
     if(this.props.item.picture && this.props.item.picture?.startsWith("http")){
       imageComp = <FastImage
-        style={{height: 45,width: 45,resizeMode:'contain',}}
+        style={{height: this.props.compactUI ? 33 : 45,width: this.props.compactUI ? 33 : 45,resizeMode:'contain',}}
         source={{uri:this.props.item.picture}}
         cacheKey={this.props.item.picture}
       />
     } else {
       imageComp = <Image
-        style={{height: 35,width: 35,resizeMode:'contain',}}
+        style={{height: this.props.compactUI ? 25 : 35,width: this.props.compactUI ? 25 : 35,resizeMode:'contain',}}
         source={getPhoto(this.props.item.picture)}
       />
     }
     return (
       <FadeInOut fadeIn={this.state.fadeRefresh} duration={150}>
         <View style={{width: Dimensions.get('window').width-20*2}}>
-          <View style={[styles.row,{backgroundColor:colors.eventBackground[global.darkMode]}]}>
-            <View style={[styles.rowImageBackground,{backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
+          <View style={[styles.row,{padding: this.props.compactUI ? 8 : 13, height: this.props.compactUI ? 60 : 80, backgroundColor:colors.eventBackground[global.darkMode]}]}>
+            <View style={[styles.rowImageBackground,{
+              width: this.props.compactUI ? 47 : 60,
+              height: this.props.compactUI ? 47 : 60,
+              backgroundColor:colors.lightDarkAccent[global.darkMode]}]}>
               {imageComp}
             </View>
-            <View style={styles.rowTextTop}>
-              <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:20, color:colors.textBlack[global.darkMode]}}>{this.props.item.title}</TextFont>
+            <View style={[styles.rowTextTop, {
+              marginLeft: this.props.compactUI ? 7 : 10,
+              marginRight: this.props.compactUI ? 110 : 125,
+            }]}>
+              <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:this.props.compactUI ? 16 : 20, color:colors.textBlack[global.darkMode]}}>{this.props.item.title}</TextFont>
             </View>
             <View style={{flexDirection:"row",zIndex:10, position:"absolute",right:14, alignItems:"center", justifyContent:"center"}}>
               <Image
