@@ -83,10 +83,12 @@ export class WishlistSelectionPopup extends Component{
 
   addCustomList = (listName) => {
     this.customLists?.addCustomList(listName)
+    this.setState({})
   }
 
   removeCustomList = (listName) => {
     this.customLists?.removeCustomList(listName)
+    this.setState({})
   }
 
   setPopupVisible = (visible,checkListKeyString="", subHeader, image="") => {
@@ -169,7 +171,7 @@ export class WishlistSelectionPopup extends Component{
             <View style={{marginLeft:5}}>
               {imageComponent}
             </View>
-            {this.props.showEdit ?<TouchableOpacity style={{padding:4,marginTop:-10,opacity: this.state.editMode==true ? 0.2 : 1}} 
+            {this.props.showEdit&&global.customLists.length>0 ?<TouchableOpacity style={{padding:4,marginTop:-10,opacity: this.state.editMode==true ? 0.2 : 1}} 
               onPress={()=>{
                 this.setState({editMode: !this.state.editMode})
                 getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";

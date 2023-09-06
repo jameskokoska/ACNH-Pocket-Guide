@@ -87,12 +87,12 @@ export async function removeCustomList(name){
         checkOff(globalCollectionListCopy[i], true, "", "", false)
       }
     }
+    await changeCustomListImage(name, "leaf.png")
+    await changeCustomListNickname(name, "")
     if(global.defaultSelectedList===name){
       global.defaultSelectedList = ""
       await AsyncStorage.setItem("defaultSelectedList"+global.profile, "");
       await AsyncStorage.setItem("settingsSelectDefaultWishlist"+global.profile, "false");
-      await changeCustomListImage(name, "leaf.png")
-      await changeCustomListNickname(name, "")
     }
     return true 
   }
