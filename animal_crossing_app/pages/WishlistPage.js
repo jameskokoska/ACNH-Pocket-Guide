@@ -172,11 +172,13 @@ export class WishlistSelectionPopup extends Component{
             {this.props.showEdit ?<TouchableOpacity style={{padding:4,marginTop:-10,opacity: this.state.editMode==true ? 0.2 : 1}} 
               onPress={()=>{
                 this.setState({editMode: !this.state.editMode})
+                getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
             }}>
               <Image source={require("../assets/icons/pencil.png")} style={{opacity:0.8,width:27, height:27, borderRadius:100,}}/>
             </TouchableOpacity>:<View/>}
             {this.props.showAdd?<TouchableOpacity style={{padding:4,marginTop:-10}} 
               onPress={()=>{
+                getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
                 this.setState({editMode:false})
                 this.popupAddWishlist?.setPopupVisible(true)
             }}>
@@ -198,7 +200,7 @@ class CustomLists extends Component{
     this.state = {
       checkListKeyString:this.props.checkListKeyString!==undefined?this.props.checkListKeyString : "",
       lists: [...global.customLists],
-      selectedList:this.props.selectedList
+      selectedList:this.props.selectedList,
     }
   }
 
@@ -330,7 +332,7 @@ export class PopupAddWishlist extends Component{
 export class WishlistBox extends Component{
   constructor(props){
     super(props)
-    this.state={image:getCustomListImage(this.props.id), selected:this.props.showSelectedOriginal? this.props.selected : (this.props.id===""?inWishlist(this.props.checkListKeyString):inCustomLists(this.props.checkListKeyString, this.props.id)), amount:getCustomListsAmount(this.props.checkListKeyString, this.props.id)}
+    this.state={image:getCustomListImage(this.props.id), selected:this.props.showSelectedOriginal? this.props.selected : (this.props.id===""?inWishlist(this.props.checkListKeyString):inCustomLists(this.props.checkListKeyString, this.props.id)), amount:getCustomListsAmount(this.props.checkListKeyString, this.props.id), editModeLocal: false}
   }  
   setCustomImage = (image) => {
     this.setState({image:image})
@@ -346,6 +348,9 @@ export class WishlistBox extends Component{
     }
     if(prevProps.checkListKeyString!==this.props.checkListKeyString){
       this.setState({amount:getCustomListsAmount(this.props.checkListKeyString, this.props.id)})
+    }
+    if(prevProps.editMode!==this.props.editMode){
+      this.setState({editModeLocal:false})
     }
   }
   render(){
@@ -384,9 +389,15 @@ export class WishlistBox extends Component{
           this.props.setPopupVisible(false)
           getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
         }}
+        onLongPress={()=>{
+          if(this.props.id!==""){
+            getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+            this.setState({editModeLocal: !this.state.editModeLocal})
+          }
+        }}
       >
         <View style={{flexDirection:"row", alignItems:"center", justifyContent:"space-between",backgroundColor: this.state.selected ? colors.lightDarkAccentHeavy[global.darkMode] : colors.lightDarkAccent[global.darkMode],paddingRight: 15, marginHorizontal: 10, marginVertical: 4,  borderRadius: 10}}>
-          {this.props.showDelete?
+          {this.props.showDelete||this.state.editModeLocal?
           <TouchableOpacity onPress={()=>{this.props.id!==""?this.popupChooseIcon?.setPopupVisible(true):""}}>
             <View style={{marginHorizontal:10, paddingLeft:5,marginRight:5}}>
               {imageComponent}
@@ -397,42 +408,6 @@ export class WishlistBox extends Component{
           </View>}
           <SubHeader margin={false} style={{flex: 1, flexWrap: 'wrap', marginVertical:15, marginRight:10, fontSize: this.props.text!==undefined && (getCustomListNickname(this.props.text)===""?this.props.text:getCustomListNickname(this.props.text)).length>13 ? 16 : 18}}>{getCustomListNickname(this.props.text) === "" ? this.props.text : getCustomListNickname(this.props.text)}</SubHeader>
           <View style={{flexDirection:"row"}}>
-            {this.props.showDelete && this.props.editMode?<View style={{flexDirection:"row", alignItems:"center", justifyContent:"center",}}>
-              {global.customLists.length <= 1 ? <View/> : <View style={{flexDirection:"column", alignItems:"center", justifyContent:"center" }}>
-                <TouchableOpacity style={{padding:3}} 
-                  onPress={()=>{
-                    if(this.props.reorderCustomList!==undefined){
-                      this.props.reorderCustomList(this.props.text, -1)
-                    }
-                }}>
-                  <Image source={require("../assets/icons/upArrow.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
-                </TouchableOpacity>
-                <TouchableOpacity style={{padding:3}} 
-                  onPress={()=>{
-                    if(this.props.reorderCustomList!==undefined){
-                      this.props.reorderCustomList(this.props.text, 1)
-                    }
-                }}>
-                  <Image source={require("../assets/icons/downArrow.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
-                </TouchableOpacity>
-              </View>}
-              <View style={{flexDirection:"column", alignItems:"center", justifyContent:"center" }}>
-                <TouchableOpacity style={{padding:3}} 
-                  onPress={()=>{
-                    this.popupChangeWishlistName?.setPopupVisible(true)
-                }}>
-                  <Image source={require("../assets/icons/pencil.png")} style={{opacity:0.5,width:20, height:20, borderRadius:100,}}/>
-                </TouchableOpacity>
-                <TouchableOpacity style={{padding:3}} 
-                  onPress={()=>{
-                    this.popupDelete?.setPopupVisible(true)
-                    getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
-                }}>
-                  <Image source={require("../assets/icons/deleteIcon.png")} style={{opacity:0.6,width:22, height:22, borderRadius:100,}}/>
-                </TouchableOpacity>
-              </View>
-              </View>
-            : <View/>}
             {this.props.showAmount?<View style={{justifyContent:"center", flexDirection:"row", alignItems:"center", marginRight: -15,}}>
               <TouchableOpacity
                 activeOpacity={0.6}
@@ -469,10 +444,49 @@ export class WishlistBox extends Component{
               </TouchableOpacity>
             </View> : <View/>
             }
+            {(this.props.showDelete && this.props.editMode)||this.state.editModeLocal?<View style={{flexDirection:"row", alignItems:"center", justifyContent:"center",}}>
+              {global.customLists.length <= 1 ? <View/> : <View style={{flexDirection:"column", alignItems:"center", justifyContent:"center" }}>
+                <TouchableOpacity style={{padding:3}} 
+                  onPress={()=>{
+                    if(this.props.reorderCustomList!==undefined){
+                      this.props.reorderCustomList(this.props.text, -1)
+                      getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+                    }
+                }}>
+                  <Image source={require("../assets/icons/upArrow.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
+                </TouchableOpacity>
+                <TouchableOpacity style={{padding:3}} 
+                  onPress={()=>{
+                    if(this.props.reorderCustomList!==undefined){
+                      this.props.reorderCustomList(this.props.text, 1)
+                      getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+                    }
+                }}>
+                  <Image source={require("../assets/icons/downArrow.png")} style={{opacity:0.5,width:15, height:15, borderRadius:100,}}/>
+                </TouchableOpacity>
+              </View>}
+              <View style={{flexDirection:"column", alignItems:"center", justifyContent:"center" }}>
+                <TouchableOpacity style={{padding:3}} 
+                  onPress={()=>{
+                    this.popupChangeWishlistName?.setPopupVisible(true)
+                    getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+                }}>
+                  <Image source={require("../assets/icons/pencil.png")} style={{opacity:0.5,width:20, height:20, borderRadius:100,}}/>
+                </TouchableOpacity>
+                {this.props.showDelete ? <TouchableOpacity style={{padding:3}} 
+                  onPress={()=>{
+                    this.popupDelete?.setPopupVisible(true)
+                    getSettingsString("settingsEnableVibrations")==="true" ? Vibration.vibrate(10) : "";
+                }}>
+                  <Image source={require("../assets/icons/deleteIcon.png")} style={{opacity:0.6,width:22, height:22, borderRadius:100,}}/>
+                </TouchableOpacity> : <View/>}
+              </View>
+              </View>
+            : <View/>}
           </View>
         </View>
       </TouchableNativeFeedback>
-      <Popup ref={(popupDelete) => this.popupDelete = popupDelete} text="Delete?" textLower={this.props.text + "\n\n" + attemptToTranslate("This will remove all items from the list.")} button1={"Cancel"} button1Action={()=>{}} button2={"Delete"} button2Action={()=>{this.props.removeCustomList(this.props.text)}}/>
+      <Popup ref={(popupDelete) => this.popupDelete = popupDelete} text="Delete?" textLower={getCustomListNickname(this.props.text)===""?this.props.text:getCustomListNickname(this.props.text) + "\n\n" + attemptToTranslate("This will remove all items from the list.")} button1={"Cancel"} button1Action={()=>{}} button2={"Delete"} button2Action={()=>{this.props.removeCustomList(this.props.text)}}/>
       <PopupChangeWishlistName ref={(popupChangeWishlistName) => this.popupChangeWishlistName = popupChangeWishlistName} listName={this.props.text} setCustomNickname={this.setCustomNickname}/>
     </>
   }

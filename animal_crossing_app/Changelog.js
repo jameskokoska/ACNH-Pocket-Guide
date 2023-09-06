@@ -4,6 +4,10 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Long press wishlist entry to edit
+-Hidden setting to hide homepage clock
+-Haptic feedback for wishlist actions
+-
 -Compact ToDo list layout (in three dot menu)
 -Rename and reorder wishlists
 -Edit wishlists in add wishlist popup

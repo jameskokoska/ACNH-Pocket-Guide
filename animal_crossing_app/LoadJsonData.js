@@ -1445,6 +1445,15 @@ export const settings = [
     "hidden":true,
   },
   {
+    "keyName" : "settingsHideHomePageClock",
+    "defaultValue" : "false",
+    "currentValue" : "",
+    "picture" : require("./assets/icons/fancyClock.png"),
+    "displayName" : "Hide home page clock",
+    "description" : "Hides the clock on the home page.",
+    "hidden":true,
+  },
+  {
     "keyName" : "breaker",
     "text" : "Custom dates",
   },

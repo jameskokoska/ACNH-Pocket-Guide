@@ -206,6 +206,8 @@ class HomePage extends Component {
       landscape = <LottieView loop autoPlay={getSettingsString("settingsLowEndDevice")==="true"?false:true} style={{width: 690, height: 232, position:'absolute', top:29, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], backgroundColor:colors.skyColor[global.darkMode]}} source={require('../assets/homeSnow.json')}/>
     } else if (getCurrentDateObject().getMonth()===7 && getCurrentDateObject().getDay()===0){
       landscape = <LottieView autoPlay={getSettingsString("settingsLowEndDevice")==="true"?false:true} loop style={{width: 690, height: 232, position:'absolute', top:29, transform: [ { scale: 1.25 }, { rotate: '0deg'}, ], backgroundColor:colors.skyColor[global.darkMode]}} source={require('../assets/homeCelebration.json')}/>
+    } else if (getSettingsString("settingsHideHomePageClock")==="true"){
+      lanscape = <View/>
     }
     const sections = this.state.sections;
 
@@ -229,10 +231,12 @@ class HomePage extends Component {
           />
         </View>
       </View>
-      <View style={{position:"absolute", zIndex:0, top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'flex-end', alignItems: 'center',overflow: "hidden" }}>
-        <Image style={{top:0, width:Dimensions.get('window').width, height:Dimensions.get('window').height-298, resizeMode:"stretch",zIndex:10, backgroundColor:colors.grassColor[global.darkMode]}} source={global.darkMode===1 ? require("../assets/icons/cliffDark.png") : require("../assets/icons/cliff.png")} />
-      </View>
-
+      {
+        getSettingsString("settingsHideHomePageClock")==="true" ? <View/> :
+        <View style={{position:"absolute", zIndex:0, top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'flex-end', alignItems: 'center',overflow: "hidden" }}>
+          <Image style={{top:0, width:Dimensions.get('window').width, height:Dimensions.get('window').height-298, resizeMode:"stretch",zIndex:10, backgroundColor:colors.grassColor[global.darkMode]}} source={global.darkMode===1 ? require("../assets/icons/cliffDark.png") : require("../assets/icons/cliff.png")} />
+        </View>
+      }
       <ScrollView
         style={{zIndex: 10}}
         onMomentumScrollEnd={this.handleSnap}
@@ -314,10 +318,18 @@ class HomePage extends Component {
             </TouchableOpacity>
           </View>
         </FadeInOut>
-
-        <View style={{height:55}}/>
-        <Clock swapDate={doWeSwapDate()}/>
-        <View style={{height:125}}/>
+        
+        {
+          getSettingsString("settingsHideHomePageClock")==="true" ? 
+            <View style={{height:30}}/>
+          :
+          <>
+            <View style={{height:55}}/>
+            <Clock swapDate={doWeSwapDate()}/>
+            <View style={{height:125}}/>
+          </>
+        }
+        
         <View style={{height:40}}>
           <View style={{padding:10, paddingVertical:12, position:"absolute",right:0, top: -15}}>
             <View style={{flexDirection:"row"}}>

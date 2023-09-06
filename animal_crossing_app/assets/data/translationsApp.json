@@ -651,24 +651,24 @@
     ],
     "Main": [
         {
-            "English": "1326 items",
-            "English (Europe)": "1326 items",
-            "French (US)": "1326 items",
-            "German": "1326 items",
-            "Spanish": "1326 items",
-            "Spanish (US)": "1326 items",
-            "Russian": "1326 items",
-            "Italian": "1326 items",
-            "French": "1326 items",
-            "Dutch": "1326 items",
-            "Chinese": "1326 items",
-            "Chinese (Traditional)": "1326 items",
-            "Japanese": "1326 items",
-            "Korean": "1326 items",
-            "Portuguese": "1326 items",
-            "Czech": "1326 items",
-            "Slovak": "1326 items",
-            "Polish": "1326 items"
+            "English": "1328 items",
+            "English (Europe)": "1328 items",
+            "French (US)": "1328 items",
+            "German": "1328 items",
+            "Spanish": "1328 items",
+            "Spanish (US)": "1328 items",
+            "Russian": "1328 items",
+            "Italian": "1328 items",
+            "French": "1328 items",
+            "Dutch": "1328 items",
+            "Chinese": "1328 items",
+            "Chinese (Traditional)": "1328 items",
+            "Japanese": "1328 items",
+            "Korean": "1328 items",
+            "Portuguese": "1328 items",
+            "Czech": "1328 items",
+            "Slovak": "1328 items",
+            "Polish": "1328 items"
         },
         {
             "English": "Home",
@@ -2048,7 +2048,7 @@
             "Portuguese": "Pequeno pico",
             "Czech": "Malá Špička",
             "Slovak": "Malá špička",
-            "Polish": "Mały kolc"
+            "Polish": "Mały kolca"
         },
         {
             "English": "Large spike",
@@ -2348,7 +2348,7 @@
             "Portuguese": "Veja em turnipprophet.io",
             "Czech": "Zobrazit na turnipprophet.io",
             "Slovak": "Zobraziť na turnipprophet.io",
-            "Polish": "Widok na TurnipProphet.io"
+            "Polish": "Widok na Turnipprophet.io"
         },
         {
             "English": "(Price calculator and predictor)",
@@ -3568,7 +3568,7 @@
             "Portuguese": "Town Hall, Vaulting Pole, Ladder",
             "Czech": "Radnice, Skokanský Můstek, Žebřík",
             "Slovak": "Radnica, Skokanský Mostík, Rebrík",
-            "Polish": "Ratusz, słupek sklepienia, drabina"
+            "Polish": "Ratusz, sklepienie, drabina"
         },
         {
             "English": "Ladder",
@@ -3603,7 +3603,7 @@
             "Dutch": "Polstok",
             "Chinese": "撑杆跳竿子",
             "Chinese (Traditional)": "拱形桿",
-            "Japanese": "ボールディングポール",
+            "Japanese": "ボールトポール",
             "Korean": "높이뛰기 장대",
             "Portuguese": "Vaulting Pole",
             "Czech": "Skokanský Můstek",
@@ -3643,7 +3643,7 @@
             "Dutch": "Gemeentehuis, Polstok",
             "Chinese": "服务处，撑杆跳竿子",
             "Chinese (Traditional)": "市政廳，拱形桿",
-            "Japanese": "市庁舎、金庫のポール",
+            "Japanese": "市庁舎、ボールトポール",
             "Korean": "안내소, 높이뛰기 장대",
             "Portuguese": "Town Hall, Vaulting Pole",
             "Czech": "Radnice, Skokanský Můstek",
@@ -4968,7 +4968,7 @@
             "Portuguese": "Mostre as guias de categoria na parte inferior ou superior da tela em páginas de lista com várias categorias.",
             "Czech": "Zobrazení záložek kategorií ve spodní části nebo v horní části obrazovky na stránkách se seznamem s více kategoriemi.",
             "Slovak": "Zobrazenie štítkov kategórií v spodnej alebo hornej časti obrazovky na stránkach so zoznamom s viacerými kategóriami.",
-            "Polish": "Pokaż zakładki kategorii na dole lub górna część ekranu na stronach listy z wieloma kategoriami."
+            "Polish": "Pokaż zakładki kategorii na dole lub górna część ekranu na stronach z listy z wieloma kategoriami."
         },
         {
             "English": "Use a custom date",
@@ -5288,7 +5288,7 @@
             "Portuguese": "Está gostando do app?",
             "Czech": "Líbí se vám aplikace?",
             "Slovak": "Páči sa vám aplikácia?",
-            "Polish": "Podoba ci się aplikacja?"
+            "Polish": "Ciesz się aplikacją?"
         },
         {
             "English": "Consider leaving a rating",
@@ -5388,7 +5388,7 @@
             "Portuguese": "Rastreie suas criaturas, coleção e eventos de jogo",
             "Czech": "Sledujte své zvířata, kolekce a herní události",
             "Slovak": "Sledujte svoje zvieratá, kolekcie a herné udalosti",
-            "Polish": "Śledź swoje stworzenia, kolekcja i wydarzenia w grze"
+            "Polish": "Śledź swoje stworzenia, kolekcje i wydarzenia w grze"
         },
         {
             "English": "Designed with a user friendly and modern interface and experience.",
@@ -6348,7 +6348,7 @@
             "Portuguese": "Em Moradores",
             "Czech": "Na Vesničanech",
             "Slovak": "Na Dedinčanoch",
-            "Polish": "O wieśniakach"
+            "Polish": "Na wieśniakach"
         },
         {
             "English": "Flying Near Trash or Rotten Turnips",
@@ -6803,7 +6803,7 @@
             "Dutch": "Chagrijnig",
             "Chinese": "暴躁",
             "Chinese (Traditional)": "胡思亂想",
-            "Japanese": "クランキー",
+            "Japanese": "不機嫌",
             "Korean": "무뚝뚝",
             "Portuguese": "Cranky",
             "Czech": "Mrzutý",
@@ -7080,7 +7080,7 @@
             "Russian": "Самодовольные жители",
             "Italian": "Abitanti Spavaldi",
             "French": "Villageois chics",
-            "Dutch": "Zondere dorpelingen",
+            "Dutch": "Zonderenige dorpelingen",
             "Chinese": "自恋的岛民",
             "Chinese (Traditional)": "自鳴得意的村民",
             "Japanese": "独善的な村人",
@@ -7108,7 +7108,7 @@
             "Portuguese": "Sempre exceto na chuva",
             "Czech": "Všechny kromě Deště",
             "Slovak": "Všetky okrem Dažďa",
-            "Polish": "Dowolny oprócz deszczu"
+            "Polish": "Dowolne oprócz deszczu"
         },
         {
             "English": "Seasonal decor",
@@ -7303,7 +7303,7 @@
             "Dutch": "Het auteursrechten van activa zal waarschijnlijk worden gehouden door de uitgever waar van toepassing. Met een beperkt aantal afbeeldingen met lage resolutie voor identificatie, kritisch commentaar en informatie, kwalificeert de auteursrechtelijk beschermde inhoud die in kwestie wordt weergegeven als redelijk gebruik onder de Amerikaanse auteursrechtwetgeving en belemmert daarom het recht van de auteursrechthouder niet significant, omdat in deze context het materiaal wordt niet gebruikt om winst te maken en presenteert ideeën die niet anders kunnen worden tentoongesteld.",
             "Chinese": "资产的版权可能由出版商持有（如适用）。在有限的低分辨率图像的识别、批判性评论和信息的情况下，所描述的版权内容符合美国版权法规定的合理使用，因此不会严重妨碍版权人的权利，因为在这种情况下，材料不是用来盈利的，而且提出了无法以其他方式展示的想法。",
             "Chinese (Traditional)": "資產版權很可能在適用的情況下由出版商持有。由於有限數量的低分辨率圖像用於識別，關鍵評論和信息，根據美國版權法所描述的版權所有的受版權保護的內容符合公平用途，因此並沒有大大阻礙版權持有人的權利，因為在這種情況下，材料材料不是被用來賺取利潤，並提出了否則無法展示的想法。",
-            "Japanese": "資産の著作権は、該当する場合は出版社によって保持される可能性があります。識別、批判的な解説、情報のための低解像度画像の数が限られているため、問題に描かれた著作権で保護されたコンテンツは、米国の著作権法に基づく公正使用として適格であるため、この文脈では著作権所有者の権利を大幅に妨げません。利益を上げるために使用されておらず、そうでないことを示すことができないアイデアを提示しています。",
+            "Japanese": "資産の著作権は、該当する場合は出版社によって保持される可能性があります。識別、批判的な解説、情報のための低解像度画像の数が限られているため、問題に描かれている著作権で保護されたコンテンツは、米国の著作権法に基づく公正使用として適格であり、したがって、この文脈では著作権所有者の権利を大幅に妨げません。利益を上げるために使用されておらず、そうでないことを示すことができないアイデアを提示しています。",
             "Korean": "자산의 저작권은 해당되는 경우 게시자가 보유 할 수 있습니다. 식별, 비판적 논평 및 정보에 대한 저해상도 이미지가 제한되어 있으므로, 문제에 묘사 된 저작권이있는 컨텐츠는 미국 저작권법에 따라 공정한 사용으로 자격이 있으므로 저작권 보유자의 권리를 크게 방해하지 않습니다. 이익을 돌리는 데 익숙하지 않으며 그렇지 않으면 전시 할 수없는 아이디어를 제시합니다.",
             "Portuguese": "Os direitos autorais dos ativos provavelmente serão mantidos pelo editor, quando aplicável. Com um número limitado de imagens de baixa resolução para identificação, comentários críticos e informações, o conteúdo protegido por direitos autorais retratado em questão se qualifica como uso justo sob a lei de direitos autorais dos Estados Unidos e, portanto, não impede significativamente o direito do detentor dos direitos autorais, uma vez que, neste contexto, o material não está sendo usado para obter lucro e apresenta ideias que não podem ser exibidas de outra forma.",
             "Czech": "Autorská práva k aktivům pravděpodobně vlastní vydavatel, je-li to relevantní. Při omezeném počtu obrázků s nízkým rozlišením pro identifikaci, kritické komentáře a informace se daný zobrazený obsah chráněný autorským právem kvalifikuje jako spravedlivé užití podle autorského práva Spojených států, a proto významně nezasahuje do práv držitele autorských práv, protože v tomto kontextu není materiál používán za účelem dosažení zisku a prezentuje myšlenky, které nelze vystavit jinak.",
@@ -8283,7 +8283,7 @@
             "Dutch": "Badkamer Dingen",
             "Chinese": "浴室用品",
             "Chinese (Traditional)": "浴室的東西",
-            "Japanese": "バスルーム",
+            "Japanese": "バスルームのもの",
             "Korean": "욕실 물건",
             "Portuguese": "Banheiro",
             "Czech": "Věci do Koupelny",
@@ -9083,7 +9083,7 @@
             "Dutch": "Kleur 2",
             "Chinese": "颜色2",
             "Chinese (Traditional)": "顏色2",
-            "Japanese": "カラー2",
+            "Japanese": "色2",
             "Korean": "색상 2",
             "Portuguese": "Cor 2",
             "Czech": "Barva 2",
@@ -9488,7 +9488,7 @@
             "Portuguese": "Conceito HHA 2",
             "Czech": "HHA Koncept 2",
             "Slovak": "HHA Koncept 2",
-            "Polish": "Koncepcja HHA 2"
+            "Polish": "HHA Concept 2"
         },
         {
             "English": "HHA Series",
@@ -9928,7 +9928,7 @@
             "Portuguese": "Além disso, você pode escolher filtrar se o morador usará este item ou não quando for presenteado.",
             "Czech": "Kromě toho se můžete rozhodnout odfiltrovat, pokud vesničan bude nosit tuto položku nebo ne, když je nadaný.",
             "Slovak": "Okrem toho si môžete zvoliť odfiltrovanie, ak dedinčan bude nosiť túto položku alebo nie, keď je nadaný.",
-            "Polish": "Dodatkowo możesz wybrać filtrowanie, jeśli wieśniak będzie nosił ten przedmiot, czy nie, gdy zostanie podarowany."
+            "Polish": "Dodatkowo możesz wybrać filtrowanie, jeśli wieśniak będzie nosił ten przedmiot, czy nie po uzyskiwaniu."
         },
         {
             "English": "Villager can wear",
@@ -10002,7 +10002,7 @@
             "French": "Exclusif à l'évènement",
             "Dutch": "Exclusief voor evenement",
             "Chinese": "活动专属",
-            "Chinese (Traditional)": "事件獨家",
+            "Chinese (Traditional)": "活動獨家",
             "Japanese": "イベント専用",
             "Korean": "이벤트 독점",
             "Portuguese": "Exclusivo Evento",
@@ -10048,7 +10048,7 @@
             "Portuguese": "Desativar Editar Seções",
             "Czech": "Zakázat úpravy sekcí",
             "Slovak": "Zakázať úpravy sekcií",
-            "Polish": "Wyłącz edytuj sekcje"
+            "Polish": "Wyłącz sekcje edycji"
         },
         {
             "English": "Select Homepage Sections",
@@ -10087,7 +10087,7 @@
             "Korean": "모든 DIY와 반응을 얻을 수있는 모든 성격 유형이있는 것이 좋습니다.",
             "Portuguese": "Recomenda-se que você tenha todos os tipos de personalidade para poder obter todos os DIYs e Reações.",
             "Czech": "Doporučuje se, abyste měli všechny typy osobnosti, abyste mohli získat všechna diys a reakce.",
-            "Slovak": "Odporúča sa, aby ste mali všetky typy osobnosti, aby ste mohli získať všetky DIS a reakcie.",
+            "Slovak": "Odporúča sa, aby ste mali všetky typy osobnosti, aby ste mohli získať všetky domáce zvieratá a reakcie.",
             "Polish": "Zaleca się, aby mieć wszystkie typy osobowości, aby móc uzyskać wszystkie DIYS i reakcje."
         },
         {
@@ -10127,7 +10127,7 @@
             "Korean": "얻을 수있는 DIY",
             "Portuguese": "DIYs Obtiveis",
             "Czech": "Dosažitelné diys",
-            "Slovak": "Získajúca diys",
+            "Slovak": "Získateľné dizy",
             "Polish": "Możliwe do uzyskania DIYS"
         },
         {
@@ -10242,7 +10242,7 @@
             "French": "Vous pouvez tout obtenir puisque vous avez tous les types de personnalité !",
             "Dutch": "Je kunt alles krijgen omdat je alle persoonlijkheidstypes hebt!",
             "Chinese": "你可以得到所有的东西，因为你有所有的性格类型!",
-            "Chinese (Traditional)": "由於您擁有所有個性類型，因此您可以得到一切！",
+            "Chinese (Traditional)": "您可以獲得所有個性類型，因此您可以得到一切！",
             "Japanese": "あなたはすべての性格タイプを持っているので、あなたはすべてを得ることができます！",
             "Korean": "모든 성격 유형이 있기 때문에 모든 것을 얻을 수 있습니다!",
             "Portuguese": "Você pode obter tudo desde que tenha todos os tipos de personalidade!",
@@ -10287,7 +10287,7 @@
             "Korean": "이 DIY는 당신의 마을 사람들에 의해 당신에게 주어질 것입니다.",
             "Portuguese": "Esses DIYs SERÃO dados a você por seus moradores:",
             "Czech": "Tato diys vám dáte vaši vesničané:",
-            "Slovak": "Tieto dedinčania vám poskytnú tieto domáce zvieratá:",
+            "Slovak": "Tieto dedinčania vám poskytnú tieto domácich majstrov:",
             "Polish": "Te DIY zostaną ci przekazane przez waszego wieśniaków:"
         },
         {
@@ -10348,7 +10348,7 @@
             "Portuguese": "Estas reações NÃO serão fornecidas a você por seus moradores:",
             "Czech": "Tyto reakce vám nebudou dány vaši vesničané:",
             "Slovak": "Tieto reakcie vám nebudú poskytnuté vaši dedinčania:",
-            "Polish": "Te reakcje nie zostaną wam przez waszych wieśniaków:"
+            "Polish": "Te reakcje nie zostaną wam przez twoich wieśniaków:"
         },
         {
             "English": "Dismiss",
@@ -10367,7 +10367,7 @@
             "Korean": "해고하다",
             "Portuguese": "Despedir",
             "Czech": "Zavrhnout",
-            "Slovak": "Prepustiť",
+            "Slovak": "Prerušiť",
             "Polish": "Odrzucać"
         },
         {
@@ -10388,7 +10388,7 @@
             "Portuguese": "Toque aqui e adicione alguns!",
             "Czech": "Klepněte sem a jděte přidat nějaké!",
             "Slovak": "Klepnite sem a choďte pridať nejaké!",
-            "Polish": "Stuknij tutaj i idź dodać trochę!"
+            "Polish": "Stuknij tutaj i dodaj trochę!"
         },
         {
             "English": "You do not have any villagers added!",
@@ -10607,7 +10607,7 @@
             "Korean": "친구 코드",
             "Portuguese": "Friend Code",
             "Czech": "Kód přítele",
-            "Slovak": "Kód",
+            "Slovak": "Kódex",
             "Polish": "Kod przyjaciela"
         },
         {
@@ -10623,7 +10623,7 @@
             "Dutch": "Makercode",
             "Chinese": "创造者代码",
             "Chinese (Traditional)": "創建者代碼",
-            "Japanese": "作成者コード",
+            "Japanese": "クリエーターコード",
             "Korean": "제작자 코드",
             "Portuguese": "Creator Code",
             "Czech": "Kód tvůrce",
@@ -10808,7 +10808,7 @@
             "Portuguese": "Temporada de Compras",
             "Czech": "Nákupní období",
             "Slovak": "Nákupné obdobia",
-            "Polish": "Sezony zakupów"
+            "Polish": "Sezony zakupowe"
         },
         {
             "English": "Event Ready Days",
@@ -10947,7 +10947,7 @@
             "Korean": "이벤트 편집",
             "Portuguese": "Editar Eventos",
             "Czech": "Upravit události",
-            "Slovak": "Upraviť udalosti",
+            "Slovak": "Upraviť",
             "Polish": "Edytuj wydarzenia"
         },
         {
@@ -11047,7 +11047,7 @@
             "Korean": "역사를 봅니다",
             "Portuguese": "Ver Histórico",
             "Czech": "Zobrazit historii",
-            "Slovak": "History",
+            "Slovak": "Zobrazenie histórie",
             "Polish": "Zobacz historię"
         },
         {
@@ -11163,7 +11163,7 @@
             "Dutch": "Nog geen geschiedenis, wachtend op het einde van de week.",
             "Chinese": "还没有历史记录，等待该周结束。",
             "Chinese (Traditional)": "還沒有歷史，等待一周結束。",
-            "Japanese": "今週が終わるのを待っている歴史はまだありません。",
+            "Japanese": "歴史はまだありません。週が終わるのを待っています。",
             "Korean": "일주일이 끝나기를 기다리는 역사는 아직 없습니다.",
             "Portuguese": "Sem histórico ainda, esperando o fim da semana.",
             "Czech": "Zatím žádná historie, čekání na skončení týdne.",
@@ -11206,7 +11206,7 @@
             "Japanese": "村人のデフォルトの家の家具と衣類",
             "Korean": "마을의 기본 하우스 가구와 의류",
             "Portuguese": "Móveis e roupas padrão da casa do morador",
-            "Czech": "Výchozí nábytek a oblečení vesnice vesnického domu",
+            "Czech": "Výchozí nábytek a oblečení veletového domu",
             "Slovak": "Predvolený domový nábytok a oblečenie dediny",
             "Polish": "Domyślne meble i odzież domowych wieśniaków"
         },
@@ -11247,7 +11247,7 @@
             "Korean": "모든 마을 사람들 (찌르는 동안)",
             "Portuguese": "Todos moradores (enquanto picados)",
             "Czech": "Všichni vesničané (zatímco zasahují)",
-            "Slovak": "Všetci dedinčania (zatiaľ čo bodli)",
+            "Slovak": "Všetci dedinčania (zatiaľ čo bodnutí)",
             "Polish": "Wszyscy wieśniacy (w pobycie kęt)"
         },
         {
@@ -11327,7 +11327,7 @@
             "Korean": "나무 나 삼나무 나무를 흔들립니다",
             "Portuguese": "Sacudindo uma árvore hardwood ou cedar",
             "Czech": "Třesení tvrdého dřeva nebo cedrového stromu",
-            "Slovak": "Triasanie tvrdého dreva alebo cédrového stromu",
+            "Slovak": "Potriasanie tvrdého dreva alebo cédrového stromu",
             "Polish": "Wstrząsanie drewna lub drzewa cedrowego"
         },
         {
@@ -11487,7 +11487,7 @@
             "Korean": "지하 (소음이 가장 큰 곳)",
             "Portuguese": "Subterrâneo (cave onde o ruído é mais alto)",
             "Czech": "Underground (kopat tam, kde je hluk nejhlasitější)",
-            "Slovak": "Podzemné (vykopajte, kde je hluk najhlasnejší)",
+            "Slovak": "Pod zemou (vykopajte, kde je hluk najhlasnejší)",
             "Polish": "Pod ziemią (kopa hałasu jest najgłośniejsza)"
         },
         {
@@ -11622,7 +11622,7 @@
             "French": "Minuscule",
             "Dutch": "X-Small",
             "Chinese": "XS",
-            "Chinese (Traditional)": "X-SMALL",
+            "Chinese (Traditional)": "X-Small",
             "Japanese": "X-Small",
             "Korean": "X-Small",
             "Portuguese": "X-Pequeno",
@@ -12022,7 +12022,7 @@
             "French": "Vous pouvez en savoir plus sur les fleurs et leur croisement en visitant la page du guide",
             "Dutch": "U kunt meer details over bloemen en veredeling lezen door naar de gidspagina te gaan",
             "Chinese": "你可以通过访问指南页来阅读更多关于花和繁殖的细节。",
-            "Chinese (Traditional)": "您可以通過訪問指南來閱讀有關花和育種的更多詳細信息",
+            "Chinese (Traditional)": "您可以通過訪問指南來閱讀有關鮮花和繁殖的更多詳細信息",
             "Japanese": "ガイドページにアクセスして、花と繁殖の詳細を読むことができます",
             "Korean": "가이드 페이지를 방문하여 꽃과 번식에 대한 자세한 내용을 읽을 수 있습니다.",
             "Portuguese": "Você pode ler mais detalhes sobre flores e reprodução visitando a página do guia",
@@ -12042,12 +12042,12 @@
             "French": "Appuyez ici pour en savoir plus sur les fleurs et les croisements",
             "Dutch": "Tik hier om meer te lezen over bloemen en veredeling",
             "Chinese": "点击这里阅读更多关于花和繁殖的信息",
-            "Chinese (Traditional)": "點擊此處以了解有關花和繁殖的更多信息",
+            "Chinese (Traditional)": "點擊這里以了解有關花和繁殖的更多信息",
             "Japanese": "ここをタップして、花と繁殖の詳細を読んでください",
             "Korean": "꽃과 번식에 대한 자세한 내용을 읽으려면 여기를 탭하십시오",
             "Portuguese": "Toque aqui para ler mais sobre flores e reprodução",
             "Czech": "Klepnutím zde přečtěte více o květinách a chovu",
-            "Slovak": "Klepnite sem a prečítajte si viac informácií o kvetoch a šľachtení",
+            "Slovak": "Klepnutím sem nájdete viac informácií o kvetoch a šľachtení",
             "Polish": "Stuknij tutaj, aby przeczytać więcej o kwiatach i hodowli"
         },
         {
@@ -12063,7 +12063,7 @@
             "Dutch": "Je kunt meer lezen over de nieuwe game-update door de gidspagina te bezoeken",
             "Chinese": "你可以通过访问指南页面来阅读更多关于新游戏更新的信息",
             "Chinese (Traditional)": "您可以通過訪問指南頁面閱讀有關新遊戲更新的更多信息",
-            "Japanese": "ガイドページにアクセスして、新しいゲームの更新の詳細を読むことができます",
+            "Japanese": "ガイドページにアクセスして、新しいゲームアップデートの詳細を読むことができます",
             "Korean": "가이드 페이지를 방문하여 새로운 게임 업데이트에 대한 자세한 내용을 읽을 수 있습니다.",
             "Portuguese": "Você pode ler mais sobre a nova atualização do jogo visitando a página do guia",
             "Czech": "Více o nové aktualizaci hry si můžete přečíst na stránce průvodce",
@@ -12123,10 +12123,10 @@
             "Dutch": "Tik hier om meer te lezen over cadeaus geven",
             "Chinese": "点这里阅读更多关于礼物的信息",
             "Chinese (Traditional)": "點擊此處閱讀有關禮物的更多信息",
-            "Japanese": "ここをタップして、ギフトの詳細をご覧ください",
+            "Japanese": "ここをタップして、Giftingの詳細をご覧ください",
             "Korean": "선물에 대한 자세한 내용을 보려면 여기를 탭하십시오",
             "Portuguese": "Toque aqui para ler mais sobre presentes",
-            "Czech": "Klepnutím na adresu přečtěte více o nadání",
+            "Czech": "Klepnutím na adresu přečtěte si více o nadání",
             "Slovak": "Klepnutím sem nájdete viac informácií o darovaní",
             "Polish": "Stuknij tutaj, aby przeczytać więcej o obdarowaniu"
         },
@@ -12566,7 +12566,7 @@
             "Japanese": "村人の詳細については、こちらをタップしてください",
             "Korean": "마을 사람들에 대한 자세한 내용을 보려면 여기를 탭하십시오",
             "Portuguese": "Toque aqui para ler mais sobre os moradores",
-            "Czech": "Klepnutím zde si přečtěte více o vesničanech",
+            "Czech": "Klepnutím na adresu přečtěte více o vesničanech",
             "Slovak": "Klepnutím sem nájdete viac informácií o dedinčanoch",
             "Polish": "Stuknij tutaj, aby przeczytać więcej o wieśniakach"
         },
@@ -12708,7 +12708,7 @@
             "Portuguese": "Nota: Se 0 entradas importadas, verifique se você copiou o conteúdo correto criado a partir da exportação para a área de transferência.",
             "Czech": "POZNÁMKA: Pokud to importovalo 0 úprav, dvakrát zkontrolujte, zda jste zkopírovali správný obsah vytvořený z export do schránky.",
             "Slovak": "Poznámka: Ak to importovalo 0 čelí, dvakrát skontrolujte, či ste skopírovali správny obsah vytvorený z exportu do schránky.",
-            "Polish": "Uwaga: Jeśli to zaimportowało 0 całości, sprawdź dokładnie, że skopiowałeś poprawną zawartość utworzoną z eksportu do schowka."
+            "Polish": "Uwaga: Jeśli zaimportowało to 0 całości, sprawdź dokładnie, że skopiowałeś poprawną zawartość utworzoną z eksportu do schowka."
         },
         {
             "English": "Import Data from Clipboard",
@@ -12743,7 +12743,7 @@
             "Dutch": "Gegevens exporteren naar klembord",
             "Chinese": "导出数据到剪贴板",
             "Chinese (Traditional)": "將數據導出到剪貼板",
-            "Japanese": "データをクリップボードにエクスポートします",
+            "Japanese": "クリップボードにデータをエクスポートします",
             "Korean": "클립 보드로 데이터를 내 보냅니다",
             "Portuguese": "Exportar Dados da Área de Transferência",
             "Czech": "Exportovat data do schránky",
@@ -12843,11 +12843,11 @@
             "Dutch": "De achtergrond is rood als dit de laatste maand is dat je dit wezen kunt vangen voordat je weer moet wachten.",
             "Chinese": "如果这是你在需要再次等待之前能够抓到这个生物的最后一个月，则背景为红色。",
             "Chinese (Traditional)": "背景是紅色的，如果這是上個月，您可以在需要再次等待之前捕獲該生物。",
-            "Japanese": "これが最後の月である場合、背景は赤いです。再び待つ必要がある前にこの生き物を捕まえることができます。",
+            "Japanese": "これが最後の月である場合、背景は赤です。再び待つ必要がある前にこの生き物を捕まえることができます。",
             "Korean": "마지막 달이라면 다시 기다리기 전에이 생물을 잡을 수 있다면 배경은 빨간색입니다.",
             "Portuguese": "O fundo é vermelho se este for o último mês em que você conseguiu capturar esta criatura antes de precisar esperar novamente.",
             "Czech": "Pozadí je červené, pokud se jedná o poslední měsíc, můžete toto stvoření chytit, než budete muset znovu počkat.",
-            "Slovak": "Pozadie je červené, ak je to posledný mesiac, ktorý dokážete zachytiť toto stvorenie skôr, ako budete potrebovať znova počkať.",
+            "Slovak": "Pozadie je červené, ak je to posledný mesiac, ktorý dokážete chytiť toto stvorenie skôr, ako budete musieť počkať znova.",
             "Polish": "Tło jest czerwone, jeśli jest to ostatni miesiąc, który możesz złapać to stworzenie, zanim będziesz musiał ponownie poczekać."
         },
         {
@@ -12868,7 +12868,7 @@
             "Portuguese": "Utilidades domésticas",
             "Czech": "Domácí Potřeby",
             "Slovak": "Domáce Potreby",
-            "Polish": "Artykuły domowe"
+            "Polish": "Artykuły gospodarstwa domowego"
         },
         {
             "English": "Miscellaneous",
@@ -13322,7 +13322,7 @@
             "French": "Si vous appréciez cette application, pensez à la soutenir en appuyant ici",
             "Dutch": "Als je deze app leuk vindt, overweeg dan om deze te ondersteunen door hier te tikken",
             "Chinese": "如果你喜欢这个应用程序，请点击这里支持它",
-            "Chinese (Traditional)": "如果您喜歡這個應用程序，請考慮通過在此處敲擊來支持它",
+            "Chinese (Traditional)": "如果您喜歡此應用，請考慮通過在此處敲擊來支持它",
             "Japanese": "このアプリを楽しんでいる場合は、こちらをタップしてサポートすることを検討してください",
             "Korean": "이 앱을 즐기는 경우 여기에서 탭하여 지원하는 것을 고려하십시오.",
             "Portuguese": "Se você gosta deste aplicativo, considere apoiá-lo tocando aqui",
@@ -14146,9 +14146,9 @@
             "Japanese": "村人リストにトークを隠す",
             "Korean": "숨어 마을 사람들과 대화하십시오",
             "Portuguese": "Esconder conversa com a lista de moradores",
-            "Czech": "Skrýt se seznam vesničanů",
+            "Czech": "Skrýt se seznamem vesničanů",
             "Slovak": "Skryť zoznam s dedinčanmi",
-            "Polish": "Ukryj listę z wieśniakami"
+            "Polish": "Ukryj list rozmów z wieśniakami"
         },
         {
             "English": "Talk to",
@@ -14408,7 +14408,7 @@
             "Portuguese": "Não doado ao museu",
             "Czech": "Ne darováno muzeu",
             "Slovak": "Nie je darovaný múzeu",
-            "Polish": "Nie przekazane muzeum"
+            "Polish": "Nie darowizny na Muzeum"
         },
         {
             "English": "Show donated to museum button",
@@ -14447,7 +14447,7 @@
             "Korean": "기부 버튼을 보여줍니다. 기부 버튼은 박물관에 기증 한 경우 추적하는 데 사용할 수있는 기부 버튼을 보여줍니다.",
             "Portuguese": "Mostra um botão de doação que pode ser usado para marcar se você doou ao museu, além de coletá-lo.",
             "Czech": "Zobrazuje tlačítko pro darování, které lze použít ke sledování, pokud jste jej darovali muzeu kromě jeho shromažďování.",
-            "Slovak": "Zobrazuje tlačidlo darovania, ktoré je možné použiť na sledovanie, ak ste ho darovali aj múzeu okrem jeho zberu.",
+            "Slovak": "Zobrazuje tlačidlo darovania, ktoré je možné použiť na sledovanie, ak ste ho okrem jeho zberu darovali múzeu.",
             "Polish": "Pokazuje przycisk darowizny, który można użyć do śledzenia, jeśli podarowałeś go muzeum, oprócz go zebrania."
         },
         {
@@ -14467,7 +14467,7 @@
             "Korean": "[정보] 페이지에서 Changelog를 다시 읽을 수 있습니다.",
             "Portuguese": "Você pode reler o changelog na página [Sobre]",
             "Czech": "Můžete si přečíst ChangeLog na stránce [About]",
-            "Slovak": "Môžete si prečítať changelog na stránke [About]",
+            "Slovak": "Na stránke [About] si môžete prečítať Changelog na stránke [About]",
             "Polish": "Możesz ponownie przeczytać Changelog na stronie [o]"
         },
         {
@@ -14527,7 +14527,7 @@
             "Korean": "Amiibo 카드에 대해 읽으려면 여기를 탭하십시오",
             "Portuguese": "Toque aqui para ler sobre os cartões Amiibo",
             "Czech": "Klepnutím zde si přečtěte o kartách Amiibo",
-            "Slovak": "Klepnutím sem prečítate o kartách Amiibo",
+            "Slovak": "Klepnutím sem čítate o kartách Amiibo",
             "Polish": "Stuknij tutaj, aby przeczytać o kartach amiibo"
         },
         {
@@ -14947,7 +14947,7 @@
             "Korean": "사용자 정의 키트로 사용자 정의 할 수 있습니다",
             "Portuguese": "Pode ser personalizado",
             "Czech": "lze přizpůsobit pomocí souprav přizpůsobení",
-            "Slovak": "dá sa prispôsobiť súpravami na prispôsobenie",
+            "Slovak": "je možné prispôsobiť súpravami na prispôsobenie",
             "Polish": "można dostosować do zestawów dostosowywania"
         },
         {
@@ -15168,7 +15168,7 @@
             "Portuguese": "Temas Label",
             "Czech": "Témata štítků",
             "Slovak": "Témy",
-            "Polish": "Etykiety motywów"
+            "Polish": "Tematy etykiet"
         },
         {
             "English": "Everyday",
@@ -15447,7 +15447,7 @@
             "Korean": "데이터 관리",
             "Portuguese": "Gerenciar dados",
             "Czech": "Správa dat",
-            "Slovak": "Riadiť údaje",
+            "Slovak": "Spravovať údaje",
             "Polish": "Zarządzaj danymi"
         },
         {
@@ -15467,7 +15467,7 @@
             "Korean": "백업 + 복원",
             "Portuguese": "Backup + Restaurar",
             "Czech": "Zálohování + obnovení",
-            "Slovak": "Zálohovanie + Obnoviť",
+            "Slovak": "Zálohovanie + obnovenie",
             "Polish": "Backup + przywracaj"
         },
         {
@@ -15887,7 +15887,7 @@
             "Korean": "데이터를 다운로드하고 가져옵니다",
             "Portuguese": "Baixar e importar dados",
             "Czech": "Stáhnout a importovat data",
-            "Slovak": "Stiahnite si a importovať údaje",
+            "Slovak": "Stiahnite si a importujte údaje",
             "Polish": "Pobierz i importowanie danych"
         },
         {
@@ -15923,7 +15923,7 @@
             "Dutch": "vermeldingen op de server nu",
             "Chinese": "个条目",
             "Chinese (Traditional)": "現在服務器上的條目",
-            "Japanese": "サーバー上のエントリは今",
+            "Japanese": "今すぐサーバー上のエントリ",
             "Korean": "지금 서버의 항목",
             "Portuguese": "entradas no servidor",
             "Czech": "Položky na serveru nyní",
@@ -16047,7 +16047,7 @@
             "Korean": "참고 : 데이터 업로드 데이터는 현재 클라우드에서 백업 된 것을 대체합니다!",
             "Portuguese": "Nota: O upload de dados substituirá o que está atualmente em backup na nuvem!",
             "Czech": "Poznámka: Nahrávání dat nahraje to, co je aktuálně zálohováno v cloudu!",
-            "Slovak": "Poznámka: Nahrávanie údajov nahradí to, čo je momentálne zálohované v cloude!",
+            "Slovak": "Poznámka: Nahrávanie údajov nahradia to, čo je momentálne zálohované v cloude!",
             "Polish": "Uwaga: Przesłanie danych zastąpi to, co jest aktualnie zapasowe w chmurze!"
         },
         {
@@ -16063,7 +16063,7 @@
             "Dutch": "Automatische back-ups",
             "Chinese": "自动备份",
             "Chinese (Traditional)": "自動備份",
-            "Japanese": "オートバックアップ",
+            "Japanese": "自動バックアップ",
             "Korean": "자동 백업",
             "Portuguese": "Backups automáticos",
             "Czech": "Automatické zálohy",
@@ -16604,7 +16604,7 @@
             "Chinese": "荧光灯",
             "Chinese (Traditional)": "熒光",
             "Japanese": "蛍光",
-            "Korean": "형광등",
+            "Korean": "형광",
             "Portuguese": "Fluorescente",
             "Czech": "Fluorescenční",
             "Slovak": "Fluorescenčný",
@@ -16707,7 +16707,7 @@
             "Korean": "이벤트가 시작됩니다",
             "Portuguese": "Início do evento",
             "Czech": "Událost začíná",
-            "Slovak": "Udalosť začína",
+            "Slovak": "Začína sa udalosť",
             "Polish": "Wydarzenie się zaczyna"
         },
         {
@@ -16944,7 +16944,7 @@
             "Chinese": "加载应用程序...",
             "Chinese (Traditional)": "加載應用...",
             "Japanese": "ロードアプリ...",
-            "Korean": "앱로드 ...",
+            "Korean": "로드 앱 ...",
             "Portuguese": "Carregando aplicativo ...",
             "Czech": "Načítání aplikace ...",
             "Slovak": "Aplikácia načítania ...",
@@ -16986,7 +16986,7 @@
             "Japanese": "建物博物館",
             "Korean": "건축 박물관",
             "Portuguese": "Museu do Edifício",
-            "Czech": "Muzeum budovy",
+            "Czech": "Building Museum",
             "Slovak": "Budova múzea",
             "Polish": "Muzeum Building"
         },
@@ -17147,7 +17147,7 @@
             "Korean": "터지는 풍선",
             "Portuguese": "Balões estourando",
             "Czech": "Praskající balónky",
-            "Slovak": "Búdacie balóniky",
+            "Slovak": "Búdacie balóny",
             "Polish": "Wystrzępione balony"
         },
         {
@@ -17168,7 +17168,7 @@
             "Portuguese": "Elaborando DIYs",
             "Czech": "Crafting Diys",
             "Slovak": "Remeselník",
-            "Polish": "Rzemieślnicze DIYS"
+            "Polish": "Tworzenie majsterkowania"
         },
         {
             "English": "Selling turnips",
@@ -17288,7 +17288,7 @@
             "Portuguese": "Fazendo sinos",
             "Czech": "Výroba zvonů",
             "Slovak": "Výroba zvonov",
-            "Polish": "Robienie dzwonów"
+            "Polish": "Robienie dzwonków"
         },
         {
             "English": "Watering flowers",
@@ -17348,7 +17348,7 @@
             "Portuguese": "Acordando Gulliver",
             "Czech": "Probuzení Gulliveru",
             "Slovak": "Prebudenie Gulliver",
-            "Polish": "Budząc się Gulliver"
+            "Polish": "Budząc się Guliwer"
         },
         {
             "English": "Buying art from Redd",
@@ -17503,7 +17503,7 @@
             "Dutch": "Gyroïden vinden",
             "Chinese": "寻找陶俑",
             "Chinese (Traditional)": "尋找能力",
-            "Japanese": "ガロイドを見つける",
+            "Japanese": "ガイロイドを見つける",
             "Korean": "자궁종 찾기",
             "Portuguese": "Encontrando Gyroids",
             "Czech": "Nalezení gyroidů",
@@ -17787,7 +17787,7 @@
             "Korean": "실버 지지자",
             "Portuguese": "Apoiadores de prata",
             "Czech": "Příznivci stříbra",
-            "Slovak": "Priaznivci striebra",
+            "Slovak": "Podporovatelia striebra",
             "Polish": "Srebrni zwolennicy"
         },
         {
@@ -17847,8 +17847,8 @@
             "Korean": "귀하의 이메일은 사용자 이름으로 만 사용되며 분실 된 비밀번호에 대한 ID를 확인합니다.",
             "Portuguese": "Seu e-mail é usado apenas como um nome de usuário e para verificar a identidade de uma senha perdida.",
             "Czech": "Váš e -mail se používá pouze jako uživatelské jméno a pro ověření identity pro ztracené heslo.",
-            "Slovak": "Váš e -mail sa používa iba ako užívateľské meno a na overenie identity pre stratené heslo.",
-            "Polish": "Twój e -mail jest używany tylko jako nazwa użytkownika i weryfikacji tożsamości utraconego hasła."
+            "Slovak": "Váš e -mail sa používa iba ako používateľské meno a na overenie identity pre stratené heslo.",
+            "Polish": "Twój e -mail jest używany tylko jako nazwa użytkownika i weryfikacja tożsamości utraconego hasła."
         },
         {
             "English": "Construction + Tools",
@@ -17887,7 +17887,7 @@
             "Korean": "내부 구조",
             "Portuguese": "Estruturas Interiores",
             "Czech": "Vnitřní struktury",
-            "Slovak": "Vnútorné štruktúry",
+            "Slovak": "Interiérová štruktúra",
             "Polish": "Struktury wewnętrzne"
         },
         {
@@ -18063,11 +18063,11 @@
             "Dutch": "Markeer van welke dorpelingen je foto's hebt door op het fotopictogram te tikken.",
             "Chinese": "点击照片图标，标记你有哪些岛民的照片。",
             "Chinese (Traditional)": "標記您通過敲擊照片圖標來拍攝照片的村民。",
-            "Japanese": "写真のアイコンをタップすることで、どの村人が写真を持っているかをマークします。",
+            "Japanese": "写真アイコンをタップすることで、どの村人が写真を持っているかをマークします。",
             "Korean": "사진 아이콘을 탭하여 사진이있는 마을 사람들을 표시하십시오.",
             "Portuguese": "Marque de quais aldeões você tem fotos tocando no ícone da foto.",
             "Czech": "Označte, které vesničany máte fotografie klepnutím na ikonu fotografií.",
-            "Slovak": "Označte, ktorí dedinčania máte fotografie, klepnutím na ikonu fotografií.",
+            "Slovak": "Označte, ktorí dedinčania máte fotografie klepnutím na ikonu fotografií.",
             "Polish": "Zaznacz, z którymi wieśniakami masz zdjęcia, stukając ikonę zdjęcia."
         },
         {
@@ -18347,7 +18347,7 @@
             "Korean": "레시피 제작 (DIY)",
             "Portuguese": "Crafting Recipes (DIY)",
             "Czech": "Crafting Receptes (DIY)",
-            "Slovak": "Recepty na tvorbu (domácich majstrov)",
+            "Slovak": "Recepty na tvorbu (DIY)",
             "Polish": "Przepisy na rzemieślnictwo (majsterkowanie)"
         },
         {
@@ -18442,13 +18442,13 @@
             "French": "Pensez à laisser un pourboire pour que l'application reste sans publicité pour tous",
             "Dutch": "Overweeg een tip achter te laten om de app voor iedereen gratis te houden",
             "Chinese": "考虑打赏以保持该应用程序对所有人都是无广告的",
-            "Chinese (Traditional)": "考慮留下小費以使所有人免費應用廣告免費",
+            "Chinese (Traditional)": "考慮留下小費以使所有人免費應用廣告",
             "Japanese": "すべての人にアプリ広告を無料に保つためにヒントを残すことを検討してください",
             "Korean": "앱 광고를 모두 무료로 유지하기 위해 팁을 남기는 것을 고려하십시오.",
             "Portuguese": "Considere deixar uma dica para manter o anúncio do aplicativo gratuito para todos",
             "Czech": "Zvažte ponechání tipu, abyste udrželi reklamu na aplikaci zdarma",
             "Slovak": "Zvážte zanechanie tipu, aby ste si udržali reklamu na aplikáciu zadarmo pre všetkých",
-            "Polish": "Zastanów się nad pozostawieniem wskazówki, aby zapewnić bezpłatne reklamę aplikacji"
+            "Polish": "Zastanów się nad pozostawieniem wskazówki, aby aplikacja była bezpłatna dla wszystkich"
         },
         {
             "English": "If you already supported, thank you!!",
@@ -18488,7 +18488,7 @@
             "Portuguese": "Recolher automaticamente quando doado ao Museu",
             "Czech": "Automaticky sbírejte, když je darován muzeu",
             "Slovak": "Pri darovaní múzeu automaticky zbierajte",
-            "Polish": "Automatycznie zbieraj po podarowaniu muzeum"
+            "Polish": "Automatycznie zbieraj, gdy przekazano muzeum"
         },
         {
             "English": "Automatically check off the item as collected when the donated to museum button is checked.",
@@ -18507,8 +18507,8 @@
             "Korean": "기증 된 박물관 버튼을 확인할 때 수집 된대로 품목을 자동으로 확인하십시오.",
             "Portuguese": "Marque automaticamente o item conforme coletado quando o botão doado ao museu for selecionado.",
             "Czech": "Při zaškrtnutí tlačítka darované na muzeum automaticky zkontrolujte položku.",
-            "Slovak": "Automaticky skontrolujte položku, ktorá sa zbierala, keď je skontrolované tlačidlo darovaného do múzea.",
-            "Polish": "Automatycznie sprawdzaj przedmiot zebrany po sprawdzeniu przycisku Muzeum."
+            "Slovak": "Automaticky skontrolujte položku, ktorá sa zbierala, keď sa skontroluje tlačidlo darovaného na múzeum.",
+            "Polish": "Automatycznie sprawdzaj przedmiot zebrany po sprawdzeniu podarowanego przycisku muzeum."
         },
         {
             "English": "Counting Collection...",
@@ -18683,7 +18683,7 @@
             "Dutch": "Fijne vakantie!",
             "Chinese": "节日快乐!",
             "Chinese (Traditional)": "節日快樂！",
-            "Japanese": "幸せな休日！",
+            "Japanese": "ハッピーホリデー！",
             "Korean": "행복한 휴일!",
             "Portuguese": "Boas festas!",
             "Czech": "Šťastné svátky!",
@@ -18868,7 +18868,7 @@
             "Portuguese": "Teto etc",
             "Czech": "Strop",
             "Slovak": "Strop",
-            "Polish": "CEICHINGETC"
+            "Polish": "CEILIINGETC"
         },
         {
             "English": "CeilingLamp",
@@ -19246,7 +19246,7 @@
             "Japanese": "スターカウンター",
             "Korean": "스타 카운터",
             "Portuguese": "Contador de estrelas",
-            "Czech": "Hvězdné čítač",
+            "Czech": "Hvězdný čítač",
             "Slovak": "Pult",
             "Polish": "Star Counter"
         },
@@ -19267,7 +19267,7 @@
             "Korean": "가이드 페이지를 방문하여 스타 촬영에 대한 자세한 내용을 읽을 수 있습니다.",
             "Portuguese": "Você pode ler mais detalhes sobre estrelas cadentes visitando a página do guia.",
             "Czech": "Více podrobností o střelbě hvězd si můžete přečíst na stránce průvodce.",
-            "Slovak": "Viac podrobností o snímaní hviezd na stretnutí nájdete na stránke Sprievodca.",
+            "Slovak": "Viac podrobností o fotografovaní hviezd na stretnutí na stránke Sprievodca.",
             "Polish": "Możesz przeczytać więcej szczegółów na temat Shooting Stars, odwiedzając stronę przewodnika."
         },
         {
@@ -19326,7 +19326,7 @@
             "Japanese": "ハッピーホームネットワークID",
             "Korean": "행복한 홈 네트워크 ID",
             "Portuguese": "Happy Home Network ID",
-            "Czech": "Šťastné ID sítě domácí sítě",
+            "Czech": "Happy ID domácí sítě",
             "Slovak": "Šťastná domáca sieť ID",
             "Polish": "Happy Home Network ID"
         },
@@ -19366,7 +19366,7 @@
             "Japanese": "バッテリーセーバー /パフォーマンスの向上",
             "Korean": "배터리 절약 / 성능 향상",
             "Portuguese": "Economizador de bateria / Aumente o desempenho",
-            "Czech": "Spořič baterie / zvýšení výkonu",
+            "Czech": "Výkonnost baterie / zvýšení výkonu",
             "Slovak": "Saver batérie / zvýšenie výkonu",
             "Polish": "Oszczędzanie / zwiększenie akumulatora"
         },
@@ -19387,7 +19387,7 @@
             "Korean": "일부 앱 데이터의 애니메이션 및 사전로드를 비활성화하여 이전 장치의 성능 및로드 시간을 늘리십시오.",
             "Portuguese": "Desative as animações e o pré-carregamento de alguns dados do aplicativo para aumentar o desempenho e os tempos de carregamento em dispositivos mais antigos.",
             "Czech": "Zakázat animace a předběžné načtení některých dat aplikací pro zvýšení doby výkonu a načítání na starších zařízeních.",
-            "Slovak": "Zakážte animácie a predpätie niektorých údajov o aplikáciách na zvýšenie výkonu a časov načítania starších zariadení.",
+            "Slovak": "Zakážte animácie a predbežné načítanie niektorých údajov o aplikáciách, aby ste zvýšili výkon a čas načítania na starších zariadeniach.",
             "Polish": "Wyłącz animacje i wstępne ładowanie niektórych danych aplikacji, aby zwiększyć wydajność i czas ładowania na starszych urządzeniach."
         },
         {
@@ -19546,9 +19546,9 @@
             "Japanese": "アプリのパフォーマンスを向上させるには、[バッテリーセーバー /パフォーマンスの増加]設定を有効にすることを検討してください。",
             "Korean": "앱 성능을 높이려면 [배터리 세이버 / 증가 성능] 설정을 활성화하십시오.",
             "Portuguese": "Para aumentar o desempenho do aplicativo, considere ativar a configuração [Economia de bateria/Aumentar desempenho].",
-            "Czech": "Chcete -li zvýšit výkon aplikace, zvažte povolení nastavení [Saver / Zvýšení baterie].",
+            "Czech": "Chcete -li zvýšit výkonnost aplikace, zvažte povolení nastavení [Saktora baterie / zvýšení výkonu].",
             "Slovak": "Ak chcete zvýšiť výkon aplikácie, zvážte povolenie nastavenia [Saver / zvýšenie výkonu batérie].",
-            "Polish": "Aby zwiększyć wydajność aplikacji, rozważ włączenie ustawienia [Saver / zwiększenie akumulatora]."
+            "Polish": "Aby zwiększyć wydajność aplikacji, rozważ włączenie ustawienia [Saver / Zwiększenie akumulatora]."
         },
         {
             "English": "Enable",
@@ -19708,7 +19708,7 @@
             "Portuguese": "Você precisa selecionar o arquivo que foi exportado usando [Exportar todos os dados].",
             "Czech": "Musíte vybrat soubor, který byl exportován pomocí [exportovat všechna data].",
             "Slovak": "Musíte vybrať súbor, ktorý bol exportovaný pomocou [Export všetkých údajov].",
-            "Polish": "Musisz wybrać plik, który został wyeksportowany przy użyciu [Eksportuj wszystkie dane]."
+            "Polish": "Musisz wybrać plik, który został wyeksportowany za pomocą [Eksportuj wszystkie dane]."
         },
         {
             "English": "Wrong file, it seems you have not selected a backup that was created using [Export All Data]",
@@ -19783,7 +19783,7 @@
             "Dutch": "Het importeren van alle gegevens zal alle huidige gegevens vervangen, niet samenvoegen!",
             "Chinese": "导入所有数据将替换任何当前数据，而不是合并！",
             "Chinese (Traditional)": "導入所有數據將替換任何當前數據，而不是合併！",
-            "Japanese": "すべてのデータをインポートすると、マージではなく現在のデータを置き換えます！",
+            "Japanese": "すべてのデータをインポートすると、マージではなく現在のデータが置き換えられます！",
             "Korean": "모든 데이터를 가져 오면 병합이 아닌 현재 데이터를 대체합니다!",
             "Portuguese": "A importação de todos os dados substituirá todos os dados atuais, não mesclará!",
             "Czech": "Import všech dat nahradí všechna aktuální data, ne sloučit!",
@@ -20066,7 +20066,7 @@
             "Japanese": "布の壁",
             "Korean": "천 벽",
             "Portuguese": "Paredes de pano",
-            "Czech": "Tkaninové stěny",
+            "Czech": "Látkové stěny",
             "Slovak": "Hrebeň",
             "Polish": "Ściany tkaniny"
         },
@@ -20103,7 +20103,7 @@
             "Dutch": "Fruit Muren",
             "Chinese": "水果墙",
             "Chinese (Traditional)": "水果牆",
-            "Japanese": "果物の壁",
+            "Japanese": "果実の壁",
             "Korean": "과일 벽",
             "Portuguese": "Paredes de frutas",
             "Czech": "Ovocné stěny",
@@ -20267,7 +20267,7 @@
             "Korean": "아르 데코 벽",
             "Portuguese": "Paredes Art Déco",
             "Czech": "Art Deco Walls",
-            "Slovak": "Múry",
+            "Slovak": "Múry art deco",
             "Polish": "Ściany Art Deco"
         },
         {
@@ -20466,7 +20466,7 @@
             "Japanese": "マナーウォール",
             "Korean": "매너 벽",
             "Portuguese": "Muralhas da Mansão",
-            "Czech": "Zdi panské",
+            "Czech": "Změny panství",
             "Slovak": "Kaštieľ",
             "Polish": "Murowe ściany"
         },
@@ -20826,8 +20826,8 @@
             "Japanese": "サンリオの壁",
             "Korean": "산리오 벽",
             "Portuguese": "Sanrio Walls",
-            "Czech": "Stěny Sanrio",
-            "Slovak": "Steny",
+            "Czech": "Sanrio stěny",
+            "Slovak": "Múry",
             "Polish": "Ściany Sanrio"
         },
         {
@@ -21726,7 +21726,7 @@
             "Japanese": "floorsimpleglodsilverbronze",
             "Korean": "floorimpleglodsilverbronze",
             "Portuguese": "PisoSimplesGlodSilverBronze",
-            "Czech": "Podlahy SimpleglodSilverbronze",
+            "Czech": "Podlahy SimpleglodSilverBronze",
             "Slovak": "Podlažia",
             "Polish": "Podłogi Sympleglodsilverbronze"
         },
@@ -21987,7 +21987,7 @@
             "Korean": "로즈 러그",
             "Portuguese": "Tapete Rosa",
             "Czech": "Rose Rug",
-            "Slovak": "Ružový koberec",
+            "Slovak": "Koberec",
             "Polish": "Dywan różany"
         },
         {
@@ -22107,7 +22107,7 @@
             "Korean": "조각품",
             "Portuguese": "Escultura",
             "Czech": "Sochařství",
-            "Slovak": "Vyrezávanie",
+            "Slovak": "Sochárstvo",
             "Polish": "Rzeźba"
         },
         {
@@ -22167,7 +22167,7 @@
             "Korean": "불필요한",
             "Portuguese": "Desnecessário",
             "Czech": "Zbytečné",
-            "Slovak": "Zbytočný",
+            "Slovak": "Nepotrebný",
             "Polish": "Niepotrzebny"
         },
         {
@@ -22177,7 +22177,7 @@
             "German": "Unanalysiertes Fossil",
             "Spanish": "FosilDesconocido",
             "Spanish (US)": "Fosilunknown",
-            "Russian": "Ископаемый",
+            "Russian": "Fossilunknown",
             "Italian": "Fossile sconosciuto",
             "French": "Fossilunknown",
             "Dutch": "Fossilunknown",
@@ -22203,7 +22203,7 @@
             "Dutch": "Fieldweedlight",
             "Chinese": "野外灯",
             "Chinese (Traditional)": "野外燈",
-            "Japanese": "fieldweedlight",
+            "Japanese": "FieldWeedlight",
             "Korean": "Fieldweedlight",
             "Portuguese": "Fieldweedlight",
             "Czech": "Fieldweedlight",
@@ -22220,7 +22220,7 @@
             "Russian": "Ханивап",
             "Italian": "Frammento di Haniwa",
             "French": "Haniwapiece",
-            "Dutch": "Haniwapite",
+            "Dutch": "Haniwapiece",
             "Chinese": "Haniwapiece",
             "Chinese (Traditional)": "Haniwapiece",
             "Japanese": "ハニワピース",
@@ -22328,7 +22328,7 @@
             "Portuguese": "show de variedades",
             "Czech": "varieté",
             "Slovak": "rozmanitosť",
-            "Polish": "pokaz różnorodności"
+            "Polish": "Różnorodność"
         },
         {
             "English": "music program",
@@ -22783,7 +22783,7 @@
             "Dutch": "Als je deze gratis app leuk vindt, koop dan een kopje koffie voor de ontwikkelaar!",
             "Chinese": "如果您喜欢这个免费的应用程序，请给开发人员喝咖啡！",
             "Chinese (Traditional)": "如果您喜歡這個免費的應用程序，請給開發人員喝咖啡！",
-            "Japanese": "この無料アプリを楽しむなら、開発者にコーヒーを購入してください！",
+            "Japanese": "この無料アプリを楽しむ場合は、開発者にコーヒーを購入してください！",
             "Korean": "이 무료 앱을 즐기면 개발자에게 커피를 구입하십시오!",
             "Portuguese": "Se você gosta deste aplicativo gratuito, compre um café para o desenvolvedor!",
             "Czech": "Pokud se vám tato aplikace zdarma líbí, kupte si vývojáře kávu!",
@@ -22967,7 +22967,7 @@
             "Korean": "큐에 추가되었습니다",
             "Portuguese": "adicionado à fila",
             "Czech": "přidáno do fronty",
-            "Slovak": "Pridané do frontu",
+            "Slovak": "pridané do frontu",
             "Polish": "Dodano do kolejki"
         },
         {
@@ -23067,7 +23067,7 @@
             "Korean": "방금 앱이 다운된 것 같습니다.",
             "Portuguese": "Parece que o app acabou de travar.",
             "Czech": "Vypadá to, že aplikace právě havarovala.",
-            "Slovak": "Vyzerá to, že aplikácia práve havarovala.",
+            "Slovak": "Zdá sa, že aplikácia práve havarovala.",
             "Polish": "Wygląda na to, że aplikacja właśnie się rozbiła."
         },
         {
@@ -23406,7 +23406,7 @@
             "Japanese": "村人を含めます",
             "Korean": "마을을 포함시킵니다",
             "Portuguese": "Incluir aldeões",
-            "Czech": "Zahrnujte vesničany",
+            "Czech": "Zahrnout vesničany",
             "Slovak": "Zahrňte dedinčania",
             "Polish": "Obejmują wieśniacy"
         },
@@ -23668,7 +23668,7 @@
             "Portuguese": "Inverter marcas de verificação?",
             "Czech": "Invertovat kontrolní značky?",
             "Slovak": "Invert kontrolné značky?",
-            "Polish": "Odwrócone oceny kontrolne?"
+            "Polish": "Odwrócone znaki kontrolne?"
         },
         {
             "English": "Check all the items currently listed?",
@@ -23946,7 +23946,7 @@
             "Japanese": "博物館からすべてを削除します",
             "Korean": "박물관에서 모두 제거하십시오",
             "Portuguese": "Remover tudo do museu",
-            "Czech": "Odstraňte vše z muzea",
+            "Czech": "Odstraňte všechny z muzea",
             "Slovak": "Odstráňte všetko z múzea",
             "Polish": "Usuń wszystko z muzeum"
         },
@@ -24307,7 +24307,7 @@
             "Korean": "카테고리 분리기를 추가하십시오",
             "Portuguese": "Adicionar separador de categoria",
             "Czech": "Přidat oddělení kategorie",
-            "Slovak": "Pridať oddeľovač kategórií",
+            "Slovak": "Pridať oddeľovač kategórie",
             "Polish": "Dodaj separator kategorii"
         },
         {
@@ -24327,7 +24327,7 @@
             "Korean": "분리기 이름",
             "Portuguese": "Nome do separador",
             "Czech": "Jméno separátoru",
-            "Slovak": "Odlučovač",
+            "Slovak": "Názov odlučovača",
             "Polish": "Nazwa separatora"
         },
         {
@@ -24387,7 +24387,7 @@
             "Korean": "동물을 팔기 위해 영화를 찾고 있습니다",
             "Portuguese": "Procurando Flick para vender seus bichos",
             "Czech": "Hledáte švihnutí pro prodej vašich tvorů",
-            "Slovak": "Hľadáte švihnutie na predaj vašich zvieratkov",
+            "Slovak": "Hľadáte švihnutie, aby ste predali svoje tvory",
             "Polish": "Szukam Flick, który sprzedałby swoje stworzenia"
         },
         {
@@ -24401,7 +24401,7 @@
             "Italian": "Cerco CJ per vendere il tuo pesce",
             "French": "Vous cherchez CJ pour vendre votre poisson",
             "Dutch": "Op zoek naar CJ om je vissen te verkopen",
-            "Chinese": "寻找CJ出售您的鱼",
+            "Chinese": "寻找CJ卖给您的鱼",
             "Chinese (Traditional)": "尋找CJ出售您的魚",
             "Japanese": "あなたの魚を売るためのCJを探しています",
             "Korean": "물고기를 팔기 위해 CJ를 찾고 있습니다",
@@ -24428,7 +24428,7 @@
             "Portuguese": "Procurando Celeste para fazer um DIY mágico",
             "Czech": "Hledáte Celeste, aby získal magický kutilství",
             "Slovak": "Hľadáte Celeste, aby ste získali magické majstrov",
-            "Polish": "Szukam Celeste, aby uzyskać magiczny majsterkowicz"
+            "Polish": "Szukam Celeste, aby zdobyć magiczny majsterkowicz"
         },
         {
             "English": "Looking for Sahara to buy mystery wallpapers",
@@ -24446,7 +24446,7 @@
             "Japanese": "ミステリーの壁紙を買うためのサハラを探しています",
             "Korean": "미스터리 월페이퍼를 구매할 사하라를 찾고 있습니다",
             "Portuguese": "Procurando Sahara para comprar papéis de parede misteriosos",
-            "Czech": "Hledáte Saharu na nákup tajemných tapet",
+            "Czech": "Hledáte Saharu koupit tajemné tapety",
             "Slovak": "Hľadáte Saharu na kúpu tajomných tapiet",
             "Polish": "Szukam Sahary, aby kupić tajemnicze tapety"
         },
@@ -24743,7 +24743,7 @@
             "Dutch": "Je hebt filters ingeschakeld.",
             "Chinese": "您启用了过滤器。",
             "Chinese (Traditional)": "您啟用了過濾器。",
-            "Japanese": "フィルターを有効にしています。",
+            "Japanese": "フィルターが有効になっています。",
             "Korean": "필터가 활성화되어 있습니다.",
             "Portuguese": "Você tem filtros ativados.",
             "Czech": "Máte povoleny filtry.",
@@ -24968,7 +24968,7 @@
             "Portuguese": "O cabeçalho ocupará menos espaço nas páginas da lista de itens e fornecerá mais espaço para os itens a serem exibidos.",
             "Czech": "Záhlaví zabere méně místa na stránkách seznamu položek a poskytne více prostoru pro zobrazení položek.",
             "Slovak": "Záhlavie zaberie menej miesta na stránkach zoznamu položiek a poskytne viac priestoru na zobrazenie položiek.",
-            "Polish": "Nagłówek zajmie mniej miejsca na stronach listy przedmiotów i zapewni więcej miejsca dla wyświetlania elementów."
+            "Polish": "Nagłówek zajmie mniej miejsca na stronach listy przedmiotów i zapewni więcej miejsca na wyświetlenie elementów."
         },
         {
             "English": "Music Box",
@@ -25483,7 +25483,7 @@
             "Dutch": "Verwijder alle accessoires (bril is prima) als je het personage van je ACNH-speler stuurt.",
             "Chinese": "如果发送ACNH播放器的角色，请删除所有配件（眼镜很好）。",
             "Chinese (Traditional)": "如果發送ACNH播放器的角色，請刪除所有配件（眼鏡很好）。",
-            "Japanese": "ACNHプレーヤーのキャラクターを送信する場合は、すべてのアクセサリー（メガネは問題ありません）を削除してください。",
+            "Japanese": "ACNHプレーヤーのキャラクターを送信する場合は、すべてのアクセサリ（メガネは問題ありません）を削除してください。",
             "Korean": "ACNH 플레이어의 캐릭터를 보내는 경우 모든 액세서리 (안경이 좋습니다)를 제거하십시오.",
             "Portuguese": "Por favor, remova todos os acessórios (óculos são bons) se enviar o personagem do seu jogador ACNH.",
             "Czech": "Pokud posíláte postavu hráče ACNH, odstraňte prosím veškeré příslušenství (brýle jsou v pořádku).",
@@ -25522,13 +25522,13 @@
             "French": "Si l'application se bloque ou se ferme au premier lancement, veuillez la redémarrer.",
             "Dutch": "Als de app crasht of sluit bij de eerste keer opstarten, start hem dan opnieuw op.",
             "Chinese": "如果该应用在第一次启动时崩溃或关闭，请重新启动。",
-            "Chinese (Traditional)": "如果應用程序在第一次啟動時崩潰或關閉，請重新啟動。",
+            "Chinese (Traditional)": "如果該應用在第一次啟動時崩潰或關閉，請重新啟動。",
             "Japanese": "アプリが最初の起動時にクラッシュまたは閉じる場合は、再起動してください。",
             "Korean": "앱이 첫 번째 출시시 중단되거나 닫히면 다시 시작하십시오.",
             "Portuguese": "Se o aplicativo travar ou fechar na primeira inicialização, reinicie-o.",
             "Czech": "Pokud aplikace spadne nebo se zavře při prvním spuštění, restartujte ji.",
             "Slovak": "Ak aplikácia zlyhá alebo sa zatvorí pri prvom spustení, reštartujte ju.",
-            "Polish": "Jeśli aplikacja zawiedzie się lub zamknie podczas pierwszego uruchomienia, ponownie ją uruchom."
+            "Polish": "Jeśli aplikacja zawiedzie się lub zamknie podczas pierwszego uruchomienia, uruchom ją ponownie."
         },
         {
             "English": "The developer is aware of the issue and looking for a fix.",
@@ -25643,7 +25643,7 @@
             "Dutch": "Onvolledige paradijsplanning",
             "Chinese": "不完整的天堂计划",
             "Chinese (Traditional)": "不完整的天堂計劃",
-            "Japanese": "不完全な楽園計画",
+            "Japanese": "不完全な楽園の計画",
             "Korean": "불완전한 낙원 계획",
             "Portuguese": "Planejamento Incompleto do Paraíso",
             "Czech": "Neúplné plánování ráje",
@@ -26083,7 +26083,7 @@
             "Dutch": "MeteoNook verlaten?",
             "Chinese": "离开meteonook？",
             "Chinese (Traditional)": "離開meteonook？",
-            "Japanese": "Meteonookを離れますか？",
+            "Japanese": "メテオノックを離れますか？",
             "Korean": "Meteonook를 떠나?",
             "Portuguese": "Sair do MeteoNook?",
             "Czech": "Opustit MeteoNook?",
@@ -26301,8 +26301,8 @@
             "Italian": "Per altre lingue diverse dall'inglese, utilizzare nook.lol",
             "French": "Pour les autres langues que l'anglais, veuillez utiliser nook.lol",
             "Dutch": "Gebruik nook.lol voor andere talen dan Engelse items",
-            "Chinese": "对于其他语言，请使用Nook.lol",
-            "Chinese (Traditional)": "對於其他英語項目以外的其他語言，請使用nook.lol",
+            "Chinese": "对于其他英语项目以外的其他语言，请使用nook.lol",
+            "Chinese (Traditional)": "對於其他語言，請使用Nook.lol",
             "Japanese": "英語以外の言語については、nook.lolを使用してください",
             "Korean": "영어 항목 이외의 다른 언어는 Nook.lol을 사용하십시오.",
             "Portuguese": "Para outros idiomas além do inglês, use nook.lol",
@@ -26622,7 +26622,7 @@
             "French": "Sélectionnez la liste de souhaits par défaut lors de l'ajout d'éléments avec un appui long.",
             "Dutch": "Selecteer de standaard verlanglijst bij het toevoegen van items door lang te drukken.",
             "Chinese": "在长时间添加项目时，选择默认的愿望清单。",
-            "Chinese (Traditional)": "使用長按添加項目時，選擇默認的願望清單。",
+            "Chinese (Traditional)": "在長時間添加項目時，選擇默認的願望清單。",
             "Japanese": "長いプレスでアイテムを追加するときに、デフォルトのウィッシュリストを選択します。",
             "Korean": "긴 프레스로 항목을 추가 할 때 기본 위시리스트를 선택하십시오.",
             "Portuguese": "Selecione a lista de desejos padrão ao adicionar itens com um toque longo.",
@@ -26806,7 +26806,7 @@
             "Japanese": "ACNHカタログスキャナー",
             "Korean": "ACNH 카탈로그 스캐너",
             "Portuguese": "ACNH Catalog Scanner",
-            "Czech": "ACNH katalogový skener",
+            "Czech": "ACNH katalogové skener",
             "Slovak": "Skener ACNH",
             "Polish": "Skaner katalogu ACNH"
         },
@@ -26866,7 +26866,7 @@
             "Japanese": "ACNHカタログアイテム、DIYレシピ、生き物などを抽出するためのシンプルなボット。",
             "Korean": "ACNH 카탈로그 항목, DIY 레시피, 동물 등을 추출하기위한 간단한 봇.",
             "Portuguese": "Um bot simples para extrair seus itens de catálogo ACNH, receitas de bricolage, criaturas e muito mais.",
-            "Czech": "Jednoduchý bot pro extrakci vašich katalogových položek ACNH, recepty pro kutily, tvory a další.",
+            "Czech": "Jednoduchý bot pro extrahování vašich katalogových předmětů ACNH, recepty pro kutily, tvory a další.",
             "Slovak": "Jednoduchý robot na extrahovanie vašich položiek ACNH katalógu, receptov pre domácich majstrov, tvorov a ďalších.",
             "Polish": "Prosty bot do wydobywania przedmiotów katalogu ACNH, przepisów DIY, stworzeń i innych."
         },
@@ -26894,7 +26894,7 @@
             "English": "Supported Tools",
             "English (Europe)": "Supported Tools",
             "French (US)": "Outils pris en charge",
-            "German": "Unterstützte Tools",
+            "German": "Unterstützte Werkzeuge",
             "Spanish": "Herramientas compatibles",
             "Spanish (US)": "Herramientas compatibles",
             "Russian": "Поддерживаемые инструменты",
@@ -26948,7 +26948,7 @@
             "Portuguese": "Ocultar eventos totalmente concluídos",
             "Czech": "Skrýt plně dokončené události",
             "Slovak": "Skryť plne dokončené udalosti",
-            "Polish": "Ukryj w pełni ukończone wydarzenia"
+            "Polish": "Ukryj w pełni ukończone zdarzenia"
         },
         {
             "English": "New Filter Preset",
@@ -26974,7 +26974,7 @@
             "English": "Filter Preset Name",
             "English (Europe)": "Filter Preset Name",
             "French (US)": "Nom préréglé de filtre",
-            "German": "FILTER PREE STARTSNAME",
+            "German": "Filter -Voreinstellung Name",
             "Spanish": "Filtro Nombre preestablecido",
             "Spanish (US)": "Filtro Nombre preestablecido",
             "Russian": "Фильтруя предустановленное имя",
@@ -27047,7 +27047,7 @@
             "Korean": "필터 사전 설정을 저장하십시오",
             "Portuguese": "Salvar predefinição do filtro",
             "Czech": "Uložit předvolbu filtru",
-            "Slovak": "Uložiť predvolenú filtra",
+            "Slovak": "Uložiť predvolený filter",
             "Polish": "Zapisz ustawienie filtra"
         },
         {
@@ -27078,7 +27078,7 @@
             "Spanish": "¡Esto eliminará todos los datos respaldados a esta cuenta!",
             "Spanish (US)": "¡Esto eliminará todos los datos respaldados a esta cuenta!",
             "Russian": "Это удалит все данные, подтвержденные этой учетной записью!",
-            "Italian": "Questo eliminerà tutti i dati eseguiti il ​​backup su questo account!",
+            "Italian": "Questo eliminerà tutti i dati eseguiti il ​​backup di questo account!",
             "French": "Cela supprimera toutes les données sauvegardées sur ce compte!",
             "Dutch": "Dit verwijdert alle gegevens die zijn ondersteund door dit account!",
             "Chinese": "这将删除所有备份到此帐户的数据！",
@@ -27088,7 +27088,7 @@
             "Portuguese": "Isso excluirá todos os dados para esta conta!",
             "Czech": "Tím se odstraní všechna data zálohovaná až k tomuto účtu!",
             "Slovak": "Tým sa odstránia všetky údaje zálohované na tento účet!",
-            "Polish": "To usunie wszystkie dane zapasowe na to konto!"
+            "Polish": "To usunę wszystkie dane zapasowe na to konto!"
         },
         {
             "English": "Delete Cloud Data",
@@ -27155,8 +27155,8 @@
             "English (Europe)": "Edit List Name",
             "French (US)": "Modifier le nom de la liste",
             "German": "Listename bearbeiten",
-            "Spanish": "Editar Nombre de la lista",
-            "Spanish (US)": "Editar Nombre de la lista",
+            "Spanish": "Editar nombre de lista",
+            "Spanish (US)": "Editar nombre de lista",
             "Russian": "Редактировать имя списка",
             "Italian": "Modifica il nome dell'elenco",
             "French": "Modifier le nom de la liste",
@@ -27189,6 +27189,46 @@
             "Czech": "Kompaktní seznam",
             "Slovak": "Kompaktný zoznam",
             "Polish": "Kompaktowa lista"
+        },
+        {
+            "English": "Hide home page clock",
+            "English (Europe)": "Hide home page clock",
+            "French (US)": "Masquer l'horloge de la page d'accueil",
+            "German": "Startuhr ausblenden",
+            "Spanish": "Ocultar el reloj de la página de inicio",
+            "Spanish (US)": "Ocultar el reloj de la página de inicio",
+            "Russian": "Скрыть часы домашней страницы",
+            "Italian": "Nascondere l'orologio della home page",
+            "French": "Masquer l'horloge de la page d'accueil",
+            "Dutch": "Home Page Clock verbergen",
+            "Chinese": "隐藏主页时钟",
+            "Chinese (Traditional)": "隱藏主頁時鐘",
+            "Japanese": "ホームページの時計を非表示にします",
+            "Korean": "홈페이지 시계를 숨기십시오",
+            "Portuguese": "Esconder o relógio da página inicial",
+            "Czech": "Skrýt hodiny domovské stránky",
+            "Slovak": "Skryť hodiny domovskej stránky",
+            "Polish": "Ukryj zegar strony głównej"
+        },
+        {
+            "English": "Hides the clock on the home page.",
+            "English (Europe)": "Hides the clock on the home page.",
+            "French (US)": "Cache l'horloge sur la page d'accueil.",
+            "German": "Versteckt die Uhr auf der Startseite.",
+            "Spanish": "Oculta el reloj en la página de inicio.",
+            "Spanish (US)": "Oculta el reloj en la página de inicio.",
+            "Russian": "Укрывает часы на домашней странице.",
+            "Italian": "Nasconde l'orologio sulla home page.",
+            "French": "Cache l'horloge sur la page d'accueil.",
+            "Dutch": "Verbergt de klok op de startpagina.",
+            "Chinese": "将时钟隐藏在主页上。",
+            "Chinese (Traditional)": "將時鐘隱藏在主頁上。",
+            "Japanese": "ホームページに時計を隠します。",
+            "Korean": "홈페이지의 시계를 숨 깁니다.",
+            "Portuguese": "Esconde o relógio na página inicial.",
+            "Czech": "Skryje hodiny na domovské stránce.",
+            "Slovak": "Skryje hodiny na domovskej stránke.",
+            "Polish": "Ukrywa zegar na stronie głównej."
         }
     ],
     "Sources": [
