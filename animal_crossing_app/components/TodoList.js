@@ -713,7 +713,7 @@ class TodoItem extends Component {
         background={TouchableNativeFeedback.Ripple(colors.inkWell[global.darkMode]+"1A", false)}
         >
           <View style={{padding:5, paddingVertical:this.props.compactUI ? 16 : 20, paddingBottom:0, paddingLeft:12}}>
-            <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:this.props.compactUI ? 18 : 22, color:colors.fishText[global.darkMode]}}>{this.props.item.title}</TextFont>
+            <TextFont translate={false} bold={true} style={{fontSize:this.props.compactUI ? 18 : 22, color:colors.fishText[global.darkMode]}}>{this.props.item.title}</TextFont>
           </View>
         </TouchableNativeFeedback>
         <View style={{height:2, borderRadius: 100, backgroundColor:colors.fishText[global.darkMode], marginBottom:4, marginHorizontal:-5}}/>
@@ -748,7 +748,7 @@ class TodoItem extends Component {
           <View style={[styles.row,
             {
               padding: this.props.compactUI ? 8 : 13,
-              height: this.props.compactUI ? 60 : 80,
+              paddingVertical: this.props.compactUI ? 6 : 8,
               backgroundColor:colors.eventBackground[global.darkMode]
             }]}>
             <View style={[styles.rowImageBackground,
@@ -763,7 +763,7 @@ class TodoItem extends Component {
               marginLeft: this.props.compactUI ? 7 : 10,
               marginRight: this.props.compactUI ? 110 : 125,
             }]}>
-              <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:this.props.compactUI ? 16 : 20, color:colors.textBlack[global.darkMode]}}>{this.props.item.title}</TextFont>
+              <TextFont translate={false} bold={true} style={{fontSize:this.props.compactUI ? 16 : 20, color:colors.textBlack[global.darkMode]}}>{this.props.item.title}</TextFont>
             </View>
             <TouchableOpacity style={{position:"absolute", right: -5}} 
               activeOpacity={0.6}
@@ -878,7 +878,7 @@ class TodoItemSmall extends Component {
             {imageComp}
           </View>
         </TouchableOpacity>
-        {this.props.item.title==="" ? <View/> : <TextFont translate={false} numberOfLines={2} bold={false} style={{width: this.props.compactUI ? 47 : 60, marginTop: 3, color: colors.textBlack[global.darkMode], fontSize: this.props.compactUI ? 10 : 12, textAlign:"center"}}>{this.props.item.title}</TextFont>}
+        {this.props.item.title==="" ? <View/> : <TextFont translate={false} bold={false} style={{width: this.props.compactUI ? 47 : 60, marginTop: 3, color: colors.textBlack[global.darkMode], fontSize: this.props.compactUI ? 10 : 12, textAlign:"center"}}>{this.props.item.title}</TextFont>}
         {this.removeButton(this.props)}
       </View>
     )
@@ -921,7 +921,7 @@ export class TodoItemEdit extends Component {
         <View style={{width: Dimensions.get('window').width-20*2}}>
           <View style={{paddingVertical:0}}>
             <View style={{padding:5, paddingVertical:20, paddingBottom:0, paddingLeft:12}}>
-              <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:22, color:colors.fishText[global.darkMode]}}>{this.props.item.title}</TextFont>
+              <TextFont translate={false} bold={true} style={{fontSize:22, color:colors.fishText[global.darkMode]}}>{this.props.item.title}</TextFont>
             </View>
             <View style={{position:'absolute',zIndex:10, right:14, top: 17, flexDirection:"row",zIndex:10, alignItems:"center", justifyContent:"center"}}>
                 <Image
@@ -957,7 +957,7 @@ export class TodoItemEdit extends Component {
     return (
       <FadeInOut fadeIn={this.state.fadeRefresh} duration={150}>
         <View style={{width: Dimensions.get('window').width-20*2}}>
-          <View style={[styles.row,{padding: this.props.compactUI ? 8 : 13, height: this.props.compactUI ? 60 : 80, backgroundColor:colors.eventBackground[global.darkMode]}]}>
+          <View style={[styles.row,{padding: this.props.compactUI ? 8 : 13, paddingVertical: this.props.compactUI ? 6 : 8, backgroundColor:colors.eventBackground[global.darkMode]}]}>
             <View style={[styles.rowImageBackground,{
               width: this.props.compactUI ? 47 : 60,
               height: this.props.compactUI ? 47 : 60,
@@ -968,7 +968,7 @@ export class TodoItemEdit extends Component {
               marginLeft: this.props.compactUI ? 7 : 10,
               marginRight: this.props.compactUI ? 110 : 125,
             }]}>
-              <TextFont translate={false} bold={true} numberOfLines={2} style={{fontSize:this.props.compactUI ? 16 : 20, color:colors.textBlack[global.darkMode]}}>{this.props.item.title}</TextFont>
+              <TextFont translate={false} bold={true} numberOfLines={5} style={{fontSize:this.props.compactUI ? 16 : 20, color:colors.textBlack[global.darkMode]}}>{this.props.item.title}</TextFont>
             </View>
             <View style={{flexDirection:"row",zIndex:10, position:"absolute",right:14, alignItems:"center", justifyContent:"center"}}>
               <Image
@@ -1016,7 +1016,6 @@ const styles = StyleSheet.create({
     padding: 13,
     alignItems: 'center',
     flexDirection:"row",
-    height: 80,
     borderRadius:10,
     elevation: 0,
     marginTop: 7,

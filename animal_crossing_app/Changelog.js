@@ -7,6 +7,7 @@ export const changelog = `
 -Long press wishlist entry to edit
 -Hidden setting to hide homepage clock
 -Haptic feedback for wishlist actions
+-Improved formatting of checklist
 -
 -Compact ToDo list layout (in three dot menu)
 -Rename and reorder wishlists

@@ -90,8 +90,8 @@ android {
         applicationId 'com.acnh.pocket_guide'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 565
-        versionName "20.2.3"
+        versionCode 567
+        versionName "20.2.4"
 
         buildConfigField("boolean", "REACT_NATIVE_UNSTABLE_USE_RUNTIME_SCHEDULER_ALWAYS", (findProperty("reactNative.unstable_useRuntimeSchedulerAlways") ?: true).toString())
     }
