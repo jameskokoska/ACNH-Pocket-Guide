@@ -218,6 +218,52 @@ export function getPhoto(name, fallback="", returnFalse=false){
       return require("../assets/icons/coffee.png");
     case "kapp.png":
       return require("../assets/icons/kapp.png");
+    case "kpgCropped.png":
+      return require("../assets/icons/kpgCropped.png");
+    case "kpsCropped.png":
+      return require("../assets/icons/kpsCropped.png");
+    case "kpmCropped.png":
+      return require("../assets/icons/kpmCropped.png");
+    case "lomCropped.png":
+      return require("../assets/icons/lomCropped.png");
+    case "mnkCropped.png":
+      return require("../assets/icons/mnkCropped.png");
+    case "boaCropped.png":
+      return require("../assets/icons/boaCropped.png");
+    case "pckCropped.png":
+      return require("../assets/icons/pckCropped.png");
+    case "chmCropped.png":
+      return require("../assets/icons/chmCropped.png");
+    case "bevCropped.png":
+      return require("../assets/icons/bevCropped.png");
+    case "upaCropped.png":
+      return require("../assets/icons/upaCropped.png");
+    case "tapCropped.png":
+      return require("../assets/icons/tapCropped.png");
+    case "grfCropped.png":
+      return require("../assets/icons/grfCropped.png");
+    case "fslCropped.png":
+      return require("../assets/icons/fslCropped.png");
+    case "reiCropped.png":
+      return require("../assets/icons/reiCropped.png");
+    case "pynCropped.png":
+      return require("../assets/icons/pynCropped.png");
+    case "pknCropped.png":
+      return require("../assets/icons/pknCropped.png");
+    case "dodCropped.png":
+      return require("../assets/icons/dodCropped.png");
+    case "docCropped.png":
+      return require("../assets/icons/docCropped.png");
+    case "ploCropped.png":
+      return require("../assets/icons/ploCropped.png");
+    case "plkCropped.png":
+      return require("../assets/icons/plkCropped.png");
+    case "plmCropped.png":
+      return require("../assets/icons/plmCropped.png");
+    case "dgbCropped.png":
+      return require("../assets/icons/dgbCropped.png");
+    case "dgaCropped.png":
+      return require("../assets/icons/dgaCropped.png");      
     case "harvey.png":
       return require("../assets/icons/harvey.png");
     case "brewster.png":
@@ -308,6 +354,8 @@ export function getPhoto(name, fallback="", returnFalse=false){
       return require("../assets/icons/celeste.png");
     case "isabelle.png":
       return require("../assets/icons/isabelle.png");
+    case "szoCropped.png":
+      return require("../assets/icons/szoCropped.png");
     case "reese.png":
       return require("../assets/icons/reese.png");
     case "tommy.png":

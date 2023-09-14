@@ -85,7 +85,7 @@ export class TodoListWrapped extends Component {
     let storageData = JSON.parse(await getStorage("ToDoList"+global.profile,JSON.stringify(defaultToDoList())));
     let resetEachDay = (await getStorage("resetEachDay","false"))==="true";
     let addToTop = (await getStorage("addTasksToTop"+global.profile,"true")) === "true";
-    let compactUI = (await getStorage("compactToDoListUI"+global.profile,"true")) === "true";
+    let compactUI = (await getStorage("compactToDoListUI"+global.profile,"false")) === "true";
     if(showVillagersTalkList){
       storageData = [...storageData, ...this.populateDataWithNewVillagers(storageData)];
       await this.saveList(storageData);
