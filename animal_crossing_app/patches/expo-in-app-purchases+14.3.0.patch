@@ -1,0 +1,35 @@
+diff --git a/node_modules/expo-in-app-purchases/android/build.gradle b/node_modules/expo-in-app-purchases/android/build.gradle
+index d5c40dd..9c39c40 100644
+--- a/node_modules/expo-in-app-purchases/android/build.gradle
++++ b/node_modules/expo-in-app-purchases/android/build.gradle
+@@ -89,7 +89,7 @@ allprojects {
+ dependencies {
+   implementation 'androidx.annotation:annotation:1.1.0'
+   implementation project(':expo-modules-core')
+-  api 'com.android.billingclient:billing:4.0.0'
++  api 'com.android.billingclient:billing:5.0.0'
+ 
+   implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${getKotlinVersion()}"
+ }
+diff --git a/node_modules/expo-in-app-purchases/android/src/main/java/expo/modules/inapppurchases/BillingManager.java b/node_modules/expo-in-app-purchases/android/src/main/java/expo/modules/inapppurchases/BillingManager.java
+index d5d6d45..7f9d694 100644
+--- a/node_modules/expo-in-app-purchases/android/src/main/java/expo/modules/inapppurchases/BillingManager.java
++++ b/node_modules/expo-in-app-purchases/android/src/main/java/expo/modules/inapppurchases/BillingManager.java
+@@ -141,7 +141,6 @@ public class BillingManager implements PurchasesUpdatedListener {
+     ReadableArguments d = details != null ? details : new MapArguments();
+     String oldPurchaseToken = d.getString("oldPurchaseToken");
+     ReadableArguments accountIdentifiers = d.getArguments("accountIdentifiers");
+-    Boolean isVrPurchaseFlow = d.getBoolean("isVrPurchaseFlow");
+ 
+     Runnable purchaseFlowRequest = new Runnable() {
+       @Override
+@@ -173,9 +172,6 @@ public class BillingManager implements PurchasesUpdatedListener {
+           }
+         }
+ 
+-        // false will be the default, unless true is passed
+-        purchaseParams.setVrPurchaseFlow(isVrPurchaseFlow);
+-
+         mBillingClient.launchBillingFlow(mActivity, purchaseParams.build());
+       }
+     };
