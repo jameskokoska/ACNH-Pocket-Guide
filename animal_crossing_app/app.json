@@ -3,7 +3,7 @@
     "jsEngine": "hermes",
     "name": "ACNH Pocket Guide",
     "slug": "animal_crossing_app",
-    "version": "20.2.6",
+    "version": "20.2.7",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "splash": {
@@ -39,7 +39,7 @@
         "READ_EXTERNAL_STORAGE"
       ],
       "package": "com.acnh.pocket_guide",
-      "versionCode": 572,
+      "versionCode": 574,
       "runtimeVersion": "1.0.0"
     },
     "web": {

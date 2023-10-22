@@ -2367,3 +2367,7 @@ export async function deleteFilterPreset(name){
   await AsyncStorage.setItem("filtersPresets", JSON.stringify(filterPresets));
   console.log("Deleted filter: " + filterPresets)
 }
+
+export function isNonCraftableVariation(item){
+  return item["Body Customize"] !==undefined && item["Body Customize"] ==="No" && item["Variation"] !==undefined && item["Variation"] !=="NA"
+}

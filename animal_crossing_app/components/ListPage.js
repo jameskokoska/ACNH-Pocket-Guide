@@ -1303,7 +1303,7 @@ function ListPage(props){
           windowSize={getSettingsString("settingsLowEndDevice")==="true"?3:4}
           refreshControl={
             <RefreshControl
-              onRefresh={()=>{if(props.wishlistItems||searchFilters.some((item)=>{return(refreshFiltersArray.includes(item) || item.includes("{CustomLists}"))}))setRefresh(true)}} //only refresh if the order has the possibility of changing
+              onRefresh={()=>{if(props.title==="Villagers"||props.wishlistItems||searchFilters.some((item)=>{return(refreshFiltersArray.includes(item) || item.includes("{CustomLists}"))}))setRefresh(true)}} //only refresh if the order has the possibility of changing
               refreshing={refresh}
               progressViewOffset={headerHeight+50}
               progressBackgroundColor={colors.lightDarkAccentHeavy2[global.darkMode]}

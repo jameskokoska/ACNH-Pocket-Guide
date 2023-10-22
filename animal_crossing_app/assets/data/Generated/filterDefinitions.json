@@ -5829,6 +5829,20 @@
           "id": "Lighting Type:Spotlight"
         }
       ]
+    },
+    {
+      "name": "Surface",
+      "id": "Surface",
+      "children": [
+        {
+          "name": "No",
+          "id": "Surface:No"
+        },
+        {
+          "name": "Yes",
+          "id": "Surface:Yes"
+        }
+      ]
     }
   ],
   "Clothing": [
@@ -16877,6 +16891,20 @@
         {
           "name": "Spotlight",
           "id": "Lighting Type:Spotlight"
+        }
+      ]
+    },
+    {
+      "name": "Surface",
+      "id": "Surface",
+      "children": [
+        {
+          "name": "No",
+          "id": "Surface:No"
+        },
+        {
+          "name": "Yes",
+          "id": "Surface:Yes"
         }
       ]
     },

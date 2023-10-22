@@ -6,7 +6,7 @@ import TextFont from '../components/TextFont'
 import StoreHoursContainer from '../components/StoreHoursContainer';
 import colors from '../Colors'
 import ButtonComponent from "../components/ButtonComponent"
-import {attemptToTranslate, collectionListSave, checkOff, loadGlobalData, indexCollectionList, openURL, getSettingsString, capitalize, attemptToTranslateSpecial, variationsCheckedPercent, getStorage} from "../LoadJsonData"
+import {attemptToTranslate, collectionListSave, checkOff, loadGlobalData, indexCollectionList, openURL, getSettingsString, capitalize, attemptToTranslateSpecial, variationsCheckedPercent, getStorage, isNonCraftableVariation} from "../LoadJsonData"
 import Popup, { PopupBottomCustom, PopupInfoCustom, PopupOnlyLoading } from '../components/Popup';
 import ToggleSwitch from 'toggle-switch-react-native';
 import FastImage from '../components/FastImage';
@@ -39,6 +39,7 @@ class CatalogPage extends Component {
       includeRecipes: true,
       selectVariations: true,
       skipCompletedVariations: true,
+      selectNonCraftableVariationsOnly: false,
       routes: [
         { key: 'Catalog Scanner App', title: attemptToTranslate('Catalog Scanner App') },
         { key: 'Catalog Scanner Website', title: attemptToTranslate('Catalog Scanner Website') },
@@ -194,6 +195,8 @@ class CatalogPage extends Component {
           amountToSkip++
         } else if(this.state.skipCompletedVariations === true && variationsCheckedPercent(item, this.importedItemsIndices[this.state.currentItemIndex+1+amountToSkip]) === 1){
           amountToSkip++
+        } else if(this.state.selectNonCraftableVariationsOnly === true && isNonCraftableVariation(item)===false){
+          amountToSkip++
         } else if((item.hasOwnProperty("Variation") && item["Variation"]!=="NA") || item.hasOwnProperty("Pattern") && item["Pattern"]!=="NA"){
           break
         } else{
@@ -222,6 +225,8 @@ class CatalogPage extends Component {
         } else if (item?.checkListKey.includes("fenceCheckList")){
           amountToSkip++
         } else if(this.state.skipCompletedVariations === true && variationsCheckedPercent(item, this.importedItemsIndices[this.state.currentItemIndex-1-amountToSkip]) === 1){
+          amountToSkip++
+        } else if(this.state.selectNonCraftableVariationsOnly === true && isNonCraftableVariation(item)===false){
           amountToSkip++
         } else if((item.hasOwnProperty("Variation") && item["Variation"]!=="NA") || item.hasOwnProperty("Pattern") && item["Pattern"]!=="NA"){
           break
@@ -286,6 +291,8 @@ class CatalogPage extends Component {
         <IncludeSwitch header={"Select Variations"} text={"Open a popup to select variations of the item when importing. Only the items with variations will create a popup."} value={this.state.selectVariations} toggleValue={()=>{this.setState({selectVariations:!this.state.selectVariations})}}/>
         <View style={{height: 5}}/>
         <IncludeSwitch header={"Skip Completed Variations"} text={"Don't show variation selection for items you've already collected all the variations for. This option is only used when 'Select Variations' is enabled."} value={this.state.skipCompletedVariations} toggleValue={()=>{this.setState({skipCompletedVariations:!this.state.skipCompletedVariations})}}/>
+        <View style={{height: 5}}/>
+        <IncludeSwitch header={"Select Only Non-Craftable Variations"} text={"Only enable the variation selection for items without a craftable variation."} value={this.state.selectNonCraftableVariationsOnly} toggleValue={()=>{this.setState({selectNonCraftableVariationsOnly:!this.state.selectNonCraftableVariationsOnly})}}/>
         <View style={{height: 5}}/>
         <IncludeSwitch header={"Include Recipes"} text={"Include recipes when importing items. Recipes and the item counterpart have the same name."} value={this.state.includeRecipes} toggleValue={()=>{this.setState({includeRecipes:!this.state.includeRecipes})}}/>
         <View style={{height: 5}}/>
@@ -355,6 +362,8 @@ class CatalogPage extends Component {
             <IncludeSwitch header={"Select Variations"} text={"Open a popup to select variations of the item when importing. Only the items with variations will create a popup."} value={this.state.selectVariations} toggleValue={()=>{this.setState({selectVariations:!this.state.selectVariations})}}/>
             <View style={{height: 5}}/>
             <IncludeSwitch header={"Skip Completed Variations"} text={"Don't show variation selection for items you've already collected all the variations for. This option is only used when 'Select Variations' is enabled."} value={this.state.skipCompletedVariations} toggleValue={()=>{this.setState({skipCompletedVariations:!this.state.skipCompletedVariations})}}/>
+            <View style={{height: 5}}/>
+            <IncludeSwitch header={"Select Only Non-Craftable Variations"} text={"Only enable the variation selection for items without a craftable variation."} value={this.state.selectNonCraftableVariationsOnly} toggleValue={()=>{this.setState({selectNonCraftableVariationsOnly:!this.state.selectNonCraftableVariationsOnly})}}/>
             <View style={{height: 90}}/>
           </ScrollView>
         </View>;

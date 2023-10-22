@@ -4,6 +4,11 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Added surface filter
+-When importing items in the catalog scanning page, added "Select Only Non-Craftable Variations" option
+-Fixed refresh on Villagers page
+-Fixed filter active animation playing when something marked as collected
+-
 -Added more NPC ToDo list icons
 -
 -Long press wishlist entry to edit

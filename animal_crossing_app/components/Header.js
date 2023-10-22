@@ -16,13 +16,13 @@ import { WishlistSelectionPopup } from '../pages/WishlistPage';
 
 const Header = forwardRef((props, ref) => {
   // console.log(props.showHemisphereSwitcherOption)
-  const [searchResultCount, setSearchResultCount] = useState(0)
+  const collectionHeaderNumberRef = React.useRef(null);
   useImperativeHandle(ref, () => ({
     setSearchResultCountDifference: (difference) => {
-      setSearchResultCount(searchResultCount+difference)
+      collectionHeaderNumberRef?.current?.setSearchResultCountDifference(difference)
     },
     setSearchResultCount: (count) => {
-      setSearchResultCount(count)
+      collectionHeaderNumberRef?.current?.setSearchResultCount(count)
     },
   }));
 
@@ -232,7 +232,7 @@ const Header = forwardRef((props, ref) => {
   return (
     <>
       {props.disableCollectedTotal === true ? <View/> : 
-      searchResultCount===undefined ? <></> : <TextFont style={{position:"absolute",color: props.titleColor, zIndex:10, top:7, left:11, opacity: 0.3, fontSize: 12}}>{commas(searchResultCount) + " / " + commas(props.data!==undefined ? props.data.length : 0) + " " + attemptToTranslate("collected")}</TextFont>}
+      <CollectionHeaderNumber ref={collectionHeaderNumberRef} data={props.data} titleColor={props.titleColor}/>}
       <GuideRedirectButton style={{position:"absolute", padding:15, right:10}} extraInfo={props.extraInfo} setPage={props.setPage}/>
       {props.title==="Wishlist"?<WishListShareButton style={{position:"absolute", padding:15, right:10, top: 2.5}}/>:<View/>}
       {moreMenu}
@@ -290,6 +290,19 @@ const Header = forwardRef((props, ref) => {
     </>
   );
 });
+
+const CollectionHeaderNumber = forwardRef((props, ref) => {
+  const [searchResultCount, setSearchResultCount] = useState(0)
+  useImperativeHandle(ref, () => ({
+    setSearchResultCountDifference: (difference) => {
+      setSearchResultCount(searchResultCount+difference)
+    },
+    setSearchResultCount: (count) => {
+      setSearchResultCount(count)
+    },
+  }));
+  return searchResultCount===undefined ? <View/> : <TextFont style={{position:"absolute",color: props.titleColor, zIndex:10, top:7, left:11, opacity: 0.3, fontSize: 12}}>{commas(searchResultCount) + " / " + commas(props.data!==undefined ? props.data.length : 0) + " " + attemptToTranslate("collected")}</TextFont>
+})
 
 export const AmountCollected = forwardRef((props, ref) => {
   // console.log(props.showHemisphereSwitcherOption)

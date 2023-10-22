@@ -36,7 +36,7 @@ filters = [
             data["Photos"],
             data["Posters"]
         ],
-        ["Tag", "Catalog", "Color 1","Color 2","Variation","Source", "DIY", "Size", "Exchange Currency", "Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category", "Speaker Type", "Lighting Type"]
+        ["Tag", "Catalog", "Color 1","Color 2","Variation","Source", "DIY", "Size", "Exchange Currency", "Season/Event", "Season/Event Exclusive", "HHA Concept 1", "HHA Concept 2", "HHA Series", "HHA Set", "HHA Category", "Speaker Type", "Lighting Type", "Surface"]
     ],
     [
         "Clothing",
@@ -161,6 +161,7 @@ filters = [
             "Speaker Type",
             "Sound Type",
             "Lighting Type",
+            "Surface",
             "Version Added"
         ]
     ]

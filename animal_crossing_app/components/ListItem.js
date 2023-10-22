@@ -11,7 +11,7 @@ import {
 import TextFont from './TextFont';
 import Check from './Check';
 import FastImage from './FastImage';
-import {checkOff, capitalize, commas, removeBrackets, inCustomLists, getCustomListsAmount, getCustomListsIcon, attemptToTranslate, getCustomListsFirstAmount, getCustomListsFirstAmountQuick, getCustomListsIconQuick, getCustomListsFirst, inVillagerParadise, removeAndSaveParadisePlanning, addAndSaveParadisePlanning} from "../LoadJsonData"
+import {checkOff, capitalize, commas, removeBrackets, inCustomLists, getCustomListsAmount, getCustomListsIcon, attemptToTranslate, getCustomListsFirstAmount, getCustomListsFirstAmountQuick, getCustomListsIconQuick, getCustomListsFirst, inVillagerParadise, removeAndSaveParadisePlanning, addAndSaveParadisePlanning, isNonCraftableVariation} from "../LoadJsonData"
 import {getPhoto, getPhotoShadow, getSizeImage} from "./GetPhoto"
 import {getMonthShort, swapDateCards} from "./DateFunctions"
 import colors from "../Colors"
@@ -197,7 +197,7 @@ class ListItem extends React.Component{
     }
 
     var boxColor = colors.white[global.darkMode];
-    if(getSettingsString("settingsHighlightNotCraftableVariations") === "true" && this.props.item["Body Customize"] !==undefined && this.props.item["Body Customize"] ==="No" && this.props.item["Variation"] !==undefined && this.props.item["Variation"] !=="NA"){
+    if(getSettingsString("settingsHighlightNotCraftableVariations") === "true" && isNonCraftableVariation(this.props.item)){
       boxColor = colors.highlightNonCustomizableItems[global.darkMode];
     // } else if(this.props.boxColor===true && getSettingsString("settingsColorLists")==="true"){
     } else if(this.props.boxColor===true){
