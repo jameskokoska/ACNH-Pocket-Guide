@@ -4,6 +4,13 @@ export const museumCategories = ["Fish","Insects","Sea Creatures","Fossils","Art
 export const museumTitles = ["Fish","Bugs","Sea Creatures","Fossils","Art"]
 //-If you would like to help translate the app, feel free to get in touch via email!
 export const changelog = `
+-Thank you for your continued support, I really appreciate it!
+-Bug fixes:
+-Fixed importing data file
+-Fixed scroll when selecting icon
+-Removed unsupported profile image picker
+-Fixed content getting cut-off in info boxes - mainly when multiple active month periods for creatures
+-
 -Added surface filter
 -When importing items in the catalog scanning page, added "Select Only Non-Craftable Variations" option
 -Fixed refresh on Villagers page

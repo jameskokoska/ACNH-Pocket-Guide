@@ -373,11 +373,11 @@ class ActiveTime extends Component {
     // console.log(currentTimeImage);
     // console.log(activeTimeImages);
     // console.log(this.props.item["Name"]);
-
     return(
       <>
         <PopupSeparator>
           <InfoLine
+            print
             image={require("../assets/icons/calendar.png")} 
             customText={activeTimeString}
             customColor={redTextProperty2?colors.redText[global.darkMode]:colors.textBlack[global.darkMode]}

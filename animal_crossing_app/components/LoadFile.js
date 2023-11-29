@@ -27,16 +27,16 @@ class LoadFile extends Component {
           ref={(loadPopup) => this.loadPopup = loadPopup}
           button1={"OK"}
           button1Action={async ()=>{
-            var document = await DocumentPicker.getDocumentAsync();
-            console.log("Loading file with URI: " + document.uri)
+            var document = (await DocumentPicker.getDocumentAsync())["assets"][0];
+            console.log("Loading file with URI: " + document["uri"])
             this.popupWait?.setPopupVisible(true)
-            if(document===undefined||document.uri===undefined){
+            if(document===undefined||document["uri"]===undefined){
               this.setState({loadedNumber:"\n\nFailed to load file. Please enable file permissions or ensure you selected a file and try again.\n\n"}) 
               this.popupWait?.setPopupVisible(false)
               this.loadPopupResults?.setPopupVisible(true);
               console.log("Failed to load backup file from storage - document not selected or undefined")
             } else {
-              fetch(document.uri)
+              fetch(document["uri"])
               .then( file => file.text() )
               .then( async (text) => {
                 if(this.props.experimental===true){

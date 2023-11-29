@@ -71,6 +71,8 @@ export class ProfileIcon extends Component{
       mediaTypes: ImagePicker.MediaTypeOptions.All,
     });
 
+    console.log(result);
+
     if (!result.cancelled) {
       this.setState({profileIcon: result.uri, customProfileIcon:true});
       await AsyncStorage.setItem("profileIcon"+this.props.profile, result.uri);
@@ -117,14 +119,14 @@ export class ProfileIcon extends Component{
       />
     }
     var buttons = <>
-      <ButtonComponent
+      {/* <ButtonComponent
         text={"Custom Image"}
         color={colors.dateButton[global.darkMode]}
         vibrate={8}
         onPress={() => {
           this.pickImage()
         }}
-      /> 
+      />  */}
       <View style={{flexDirection:"row", justifyContent:"center"}}>
         <ButtonComponent
           text={"Cancel"}

@@ -6,7 +6,6 @@ import {
   Text,
   View,
   Vibration,
-  ScrollView,
   Dimensions,
   TouchableOpacity,
   BackHandler,
@@ -24,6 +23,8 @@ import LottieView from 'lottie-react-native';
 import { attemptToTranslate, getSettingsString } from "../LoadJsonData";
 import { AnimatedPopupWrapper } from "./PopupAnimatedWrapper";
 import BottomSheet from 'react-native-scrollable-bottom-sheet';
+import { ScrollView } from 'react-native-gesture-handler';
+
 // <Popup 
 //  button1={"OK"} 
 //  button1Action={()=>{console.log("OK")}}
@@ -365,8 +366,8 @@ export class PopupInfoCustom extends Component {
   }
 
   render(){
-    var header = <View onLayout={(event) => {var {x, y, width, height} = event.nativeEvent.layout;if(this.mounted){this.setState({headerHeight:height});}}}>{this.props.header}</View>
-    var buttons = <View onLayout={(event) => {var {x, y, width, height} = event.nativeEvent.layout;if(this.mounted){this.setState({buttonHeight:height});}}}>{this.props.buttons}</View>
+    var header = <View onLayout={(event) => {var {x, y, width, height} = event.nativeEvent.layout;if(this.mounted&&this.state.headerHeight==0){this.setState({headerHeight:height});}}}>{this.props.header}</View>
+    var buttons = <View onLayout={(event) => {var {x, y, width, height} = event.nativeEvent.layout;if(this.mounted&&this.state.buttonHeight==0){this.setState({buttonHeight:height});}}}>{this.props.buttons}</View>
     const backgroundStyle = {position:"absolute", left:-100, top:-100, width: Dimensions.get('window').width+200, height: Dimensions.get('window').height+200, backgroundColor: "black", opacity: 0.6}
     const maxHeight = Dimensions.get('window').height*0.7-this.state.headerHeight-this.state.buttonHeight
     return (

@@ -918,7 +918,6 @@ const styles = StyleSheet.create({
   infoLineTitle:{
     fontSize: 18.5,
     marginLeft: 7,
-    maxWidth: "85%",
   },
   infoLineTitleDouble:{
     fontSize: 15.5,
